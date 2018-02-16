@@ -90,7 +90,7 @@ featureFlags:
         </ul>
     </div>
     <div class="container">
-        <h1 class="screenReader">Microsoft Azure Documentation</h1>
+        <h1 class="screenReader">Microsoft Xamarin Documentation</h1>
         <ul class="pivots">
             <li>
                 <a href="#platforms">Platforms</a>
