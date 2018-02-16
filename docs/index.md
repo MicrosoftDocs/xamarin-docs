@@ -105,7 +105,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-cross-platform-get-started.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-cross-platform-get-started.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -124,7 +124,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-cross-platform-fundamentals.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-cross-platform-fundamentals.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -143,7 +143,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-cross-platform-deployment.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-cross-platform-deployment.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -162,7 +162,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-cross-platform-advanced-topics.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-cross-platform-advanced-topics.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -186,7 +186,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-android-get-started.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-android-get-started.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -205,7 +205,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-android-fundamentals.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-android-fundamentals.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -224,7 +224,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-android-ui.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-android-ui.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -243,7 +243,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-android-platform-features.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-android-platform-features.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -262,7 +262,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-cross-platform-deployment.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-cross-platform-deployment.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -281,7 +281,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-android-data-cloud.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-android-data-cloud.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -300,7 +300,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-cross-platform-advanced-topics.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-cross-platform-advanced-topics.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -319,7 +319,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-android-internals.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-android-internals.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -362,7 +362,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-ios-get-started.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-ios-get-started.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -381,7 +381,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-ios-fundamentals.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-ios-fundamentals.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -400,7 +400,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-ios-ui.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-ios-ui.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -419,7 +419,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-ios-features.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-ios-features.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -438,7 +438,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-cross-platform-deployment.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-cross-platform-deployment.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -457,7 +457,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-ios-data-cloud.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-ios-data-cloud.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -476,7 +476,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-cross-platform-advanced-topics.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-cross-platform-advanced-topics.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -495,7 +495,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-ios-internals.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-ios-internals.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -514,7 +514,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-ios-watchos.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-ios-watchos.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -533,7 +533,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-ios-tvos.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-ios-tvos.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -557,7 +557,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-mac-get-started.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-mac-get-started.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -576,7 +576,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-mac-fundamentals.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-mac-fundamentals.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -595,11 +595,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-mac-ui.svg" data-linktype="external">
                                                     </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>User Interface</h3>
                                                     <p>Learn about the complete set of AppKit controls available on macOS.</p>
                                                 </div>
                                             </div>
@@ -614,7 +610,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-mac-platform-features.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-mac-platform-features.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -633,7 +629,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-cross-platform-deployment.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-cross-platform-deployment.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -652,7 +648,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-mac-data-cloud.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-mac-data-cloud.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -671,7 +667,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-cross-platform-advanced-topics.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-cross-platform-advanced-topics.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -690,7 +686,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-mac-internals.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-mac-internals.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -714,7 +710,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-cross-platform-get-started.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-cross-platform-get-started.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -733,7 +729,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-forms-fundamentals.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-forms-fundamentals.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -752,7 +748,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-forms-ui.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-forms-ui.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -771,7 +767,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-forms-platform-features.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-forms-platform-features.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -790,7 +786,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-cross-platform-deployment.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-cross-platform-deployment.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -809,7 +805,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-forms-data-cloud.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-forms-data-cloud.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -828,7 +824,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-cross-platform-advanced-topics.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-cross-platform-advanced-topics.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -847,7 +843,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-forms-internals.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-forms-internals.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -866,7 +862,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-forms-xaml.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-forms-xaml.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -885,7 +881,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-forms-ebook.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-forms-ebook.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -904,7 +900,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="" src="media/index/xamarin-forms-enterprise.svg" data-linktype="external">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-forms-enterprise.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -933,7 +929,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="media/index/xamarin-graphics-skia.svg" alt="" />
+                                                        <img src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-graphics-skia.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -952,7 +948,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="media/index/xamarin-graphics-urhosharp.svg" alt="" />
+                                                        <img src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-graphics-urhosharp.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -971,7 +967,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="media/index/xamarin-graphics-cocos.svg" alt="" />
+                                                        <img src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-graphics-cocos.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -990,7 +986,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="media/index/xamarin-graphics-monogame.svg" alt="" />
+                                                        <img src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-graphics-monogame.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -1019,7 +1015,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="media/index/xamarin-tools-live-player.svg" alt="" />
+                                                        <img src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-tools-live-player.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -1038,7 +1034,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="media/index/xamarin-tools-windows-simulator.svg" alt="" />
+                                                        <img src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-tools-windows-simulator.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -1057,7 +1053,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="media/index/xamarin-tools-inspector.svg" alt="" />
+                                                        <img src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-tools-inspector.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -1076,7 +1072,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="media/index/xamarin-tools-profiler.svg" alt="" />
+                                                        <img src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-tools-profiler.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -1093,11 +1089,6 @@ featureFlags:
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
-                                                <!--div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="media/index/" alt="" />
-                                                    </div>
-                                                </div-->
                                                 <div class="cardText">
                                                     <h3>Xamarin Workbooks</h3>
                                                     <p>Learn C# and the Xamarin platform interactively.</p>
