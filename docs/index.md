@@ -595,7 +595,11 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
+                                                        <img alt="" src="https://review.docs.microsoft.com/en-us/media/hubs/xamarin/xamarin-mac-ui.svg?branch=master" data-linktype="external">
                                                     </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>User Interface</h3>
                                                     <p>Learn about the complete set of AppKit controls available on macOS.</p>
                                                 </div>
                                             </div>
@@ -1089,6 +1093,11 @@ featureFlags:
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="https://review.docs.microsoft.com/en-us//media/illustrations/dynamics-resource-library.svg?branch=master" alt="" />
+                                                    </div>
+                                                </div>
                                                 <div class="cardText">
                                                     <h3>Xamarin Workbooks</h3>
                                                     <p>Learn C# and the Xamarin platform interactively.</p>
