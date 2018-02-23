@@ -1,0 +1,116 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Cross-Platform Guidance
+metadata:
+  description: Cross-platform guidance for mobile developers.
+  author: conceptdev
+  ms.author: crdun
+  ms.date: 02/17/2018
+  ms.topic: landing-page
+abstract:
+  description: Xamarin provides a platform for cross-platform development for mobile, tablet, and desktop applications.
+  menu:
+    items:
+    - href: ~/cross-platform/samples/
+      text: Xamarin Samples
+    - href: /visualstudio/
+      text: Visual Studio 
+    - href: /visualstudio/mac/
+      text: Visual Studio for Mac
+
+sections:
+- title: Get Started
+  items:
+  - type: paragraph
+    text: Learn how to build your first apps with Xamarin and C#, for Android, iOS, macOS, UWP, and more.
+  - type: list
+    style: icon48
+    items:
+    - image:
+        src: https://docs.microsoft.com/media/common/i_setup.svg
+      text: Requirements
+      href: ~/cross-platform/get-started/index.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
+      text: Getting Started
+      href: ~/cross-platform/get-started/index.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
+      text: Multi-screen Apps
+      href: ~/cross-platform/index.md
+- title: Guides
+  items:
+  - type: grid
+    style: columns
+    className: column50
+    items:
+    - type: list
+      style: cards
+      className: cardsB
+      items:
+      - href: ~/cross-platform/get-started/index.md
+        html: Tutorials to get you up and running with Xamarin. Make sure everything is installed correctly, and build your first apps.
+        image:
+          src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+          href: ~/cross-platform/get-started/index.md
+        title: Getting Started
+      - href: ~/cross-platform/user-interface
+        html: Learn about the different user interface toolkits on each platform.
+        image:
+          src: ~/media/icons/i_user-interface.svg
+          href: ~/cross-platform/user-interface/
+        title: User Interface
+      - href: ~/cross-platform/data-cloud/
+        html: Local and remote data storage and retrieval, and other cloud-based services.
+        image:
+          src: ~/media/icons/i_data-cloud.svg
+          href: ~/cross-platform/data-cloud/
+        title: Data & Cloud Services
+      - href: ~/cross-platform/macios/
+        html: Common features of the iOS, watchOS, tvOS, and macOS SDKs.
+        image:
+          src: https://docs.microsoft.com/media/logos/logo_xcode.svg
+          href: ~/cross-platform/macios/
+        title: Apple Platform (Mac & iOS)
+    - type: list
+      style: cards
+      className: cardsB
+      items:
+      - href: ~/cross-platform/app-fundamentals/
+        html: Everything you need to know to build apps.
+        image:
+          src: ~/media/icons/i_app-build.svg
+          href: ~/cross-platform/app-fundamentals/
+        title: Application Fundamentals
+      - href: ~/
+        html: Working with platform features.
+        image:
+          src: ~/media/icons/i_platform.svg
+          href: ~/
+        title: Platform Features
+      - href: ~/cross-platform/deploy-test/
+        html: Instructions for building and deploying your apps, and tips for testing them beforehand!
+        image:
+          src: ~/media/icons/i_deploy-test.svg
+          href: ~/cross-platform/deploy-test/
+        title: Deployment and Testing
+      - href: ~/cross-platform/internals/
+        html: Additional information about cross-platform mobile, tablet, and desktop development.
+        image:
+          src: https://docs.microsoft.com/en-us/media/common/i_advanced.svg
+          href: ~/cross-platform/internals/
+        title: Advanced Concepts & Internals
+- title: Platforms
+  items:
+  - type: list
+    style: cards
+    className: cardsD
+    items:
+    - title: Xamarin.Forms
+      html: <p><a href="~/xamarin-forms/">Get Started</a></p>
+    - title: Android
+      html: <p><a href="~/android/">Get Started</a></p>
+    - title: iOS
+      html: <p><a href="~/ios/">Get Started</a></p>
+    - title: Mac
+      html: <p><a href="~/mac/">Get Started</a></p>

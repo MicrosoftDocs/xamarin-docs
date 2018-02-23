@@ -1,0 +1,54 @@
+---
+title: "Deprecated Notification Technologies"
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 20C4F6E5-56DF-4A85-BBF0-E38C88586307
+ms.technology: xamarin-ios
+author: bradumbaugh
+ms.author: brumbaug
+ms.date: 10/07/2016
+---
+
+# Deprecated Notification Technologies
+
+This section shows how to implement local and push notifications
+  in Xamarin.iOS. It will explain the various UI elements of an
+  iOS notification and discuss the API's involved with creating
+  and displaying a notification.
+
+> [!IMPORTANT]
+> **NOTE:** The information in this section pertains to iOS 9 and prior, it has been left here to support older iOS versions. For iOS 10 and later, please see the [User Notification Framework guide](~/ios/platform/user-notifications/index.md) for supporting both Local and Remote Notification on an iOS device.
+
+
+
+
+## Sections
+
+<a name="Local Notifications In iOS" />
+
+##  [Local Notifications in iOS](local-notifications-in-ios.md)
+
+This section will discuss how to implement local notifications in Xamarin.iOS. It will
+    explain the various
+    UI elements of an iOS notification and discuss the API's involved with creating and displaying a notification.
+
+<a name="Local Notifications Walkthrough" />
+
+##  [Walkthrough - Using Local Notifications in Xamarin.iOS](local-notifications-in-ios-walkthrough.md)
+
+In this section we'll walk through how to use local notifications in a
+    Xamarin.iOS application. It will
+    demonstrate the basics of creating and publishing a notification that will pop
+    up an alert when received by the app.
+
+<a name="Remote Notifications In iOS" />
+
+##  [Remote Notifications in iOS](remote-notifications-in-ios.md)
+
+This section will cover push notifications in iOS. It introduces the Apple Push
+    Notifications Gateway Service (APNS) and the role it plays in publishing notifications to iOS applications. It will explain how to create the security certificates
+    necessary to enable push notifications and discuss. Finally this section will discuss some of the housekeeping tasks that application servers must perform to keep track of the client mobile devices.
+
+## Related Links
+
+- [Notifications (sample)](https://developer.xamarin.com/samples/monotouch/Notifications/)

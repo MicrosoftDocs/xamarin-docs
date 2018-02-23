@@ -1,0 +1,247 @@
+---
+title: "Installation and Requirements"
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
+ms.technology: xamarin-cross-platform
+author: topgenorth
+ms.author: toopge
+---
+
+# Installation and Requirements
+
+<script>
+var inspectorOnLoad = function () {
+  var primaryTextBase = "Xamarin Workbooks for";
+  var secondaryTextBase = "or download for";
+  var inspectorDownloadUrlMac = "https://dl.xamarin.com/interactive/XamarinInteractive.pkg";
+  var inspectorDownloadUrlWin = "https://dl.xamarin.com/interactive/XamarinInteractive.msi";
+
+  var aPrimary = document.getElementById("inspector-download-primary");
+  var aSecondary = document.getElementById("inspector-download-secondary");
+
+  var aMac = aPrimary;
+  var aWin = aSecondary;
+  var macTextBase = primaryTextBase;
+  var winTextBase = secondaryTextBase;
+
+  if (/win/i.test(navigator.platform.toLowerCase())) {
+    aMac = aSecondary;
+    aWin = aPrimary;
+    macTextBase = secondaryTextBase;
+    winTextBase = primaryTextBase;
+  }
+
+  aMac.href = inspectorDownloadUrlMac;
+  aMac.text = macTextBase + " Mac";
+  aWin.href = inspectorDownloadUrlWin;
+  aWin.text = winTextBase + " Windows";
+};
+
+document.addEventListener("DOMContentLoaded", inspectorOnLoad);
+</script>
+
+<a name="install" />
+
+## Download and Install
+
+<ol>
+  <li>Check the <a href="#Requirements">
+requirements</a> below.</li>
+  <li>Download and install
+  <a href="https://dl.xamarin.com/interactive/XamarinInteractive.pkg" id="inspector-download-primary">Xamarin Workbooks for Mac</a>
+  (<a href="https://dl.xamarin.com/interactive/XamarinInteractive.msi" id="inspector-download-secondary">or download for Windows</a>).
+  </li>
+  <li>Start <a href="~/tools/workbooks/workbook.md">
+  playing around</a> with workbooks or try out the <a href="https://developer.xamarin.com/workbooks/">samples</a>.
+	</li>
+</ol>
+
+## Requirements
+
+#### Supported Operating Systems
+
+- **Mac** - OS X 10.11 or greater
+- **Windows** - Windows 7 or greater (with Internet Explorer 11 or greater and
+  .NET 4.6.1 or greater)
+
+#### Supported App Platforms
+
+<table>
+<thead>
+  <tr>
+    <th>App Platform</th>
+    <th>OS Support</th>
+    <th>Notes</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Mac (Unified)</td>
+    <td>Only supported on Mac</td>
+    <td/>
+  </tr>
+  <tr>
+    <td>iOS (Unified)</td>
+    <td>Supported on Mac and Windows</td>
+    <td>
+      <ul>
+        <li>Xamarin.iOS 11.0 and Xcode 9.0 or greater must be installed on Mac.</li>
+        <li>Running iOS workbooks on Windows requires a Mac build host running all of the above, and the <a href="~/tools/ios-simulator.md">Remoted iOS Simulator</a>
+        installed on Windows.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Android</td>
+    <td>Supported on Mac and Windows</td>
+    <td>Must use Google, Visual Studio or Xamarin Android emulator, with a virtual device >= 5.0</td>
+  </tr>
+  <tr>
+    <td>WPF</td>
+    <td>Only supported on Windows</td>
+    <td/>
+  </tr>
+  <tr>
+    <td>Console (.NET Framework)</td>
+    <td>Supported on Mac and Windows</td>
+    <td/>
+  </tr>
+  <tr>
+    <td>Console (.NET Core)</td>
+    <td>Supported on Mac and Windows</td>
+    <td/>
+  </tr>
+</tbody>
+</table>
+
+## Reporting Bugs
+
+Please [report issues on GitHub][bugs], and include all of the following information:
+
+### Log Files
+
+Always attach Workbooks client log files:
+
+- Mac: `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
+- Windows: `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
+
+1.4.x also features the ability to select the log file in Finder (macOS) or
+Explorer (Windows) directly from the main menu:
+
+- **Help → Reveal Log File**
+
+#### Log paths for Workbooks 1.3 and earlier:
+
+- Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
+- Windows: `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
+
+### Platform Version Information
+
+It is very helpful to know details about your Operating System and installed Xamarin products.
+
+From the main menu in Workbooks:
+
+* **Help → Copy Version Information**
+
+#### Instructions for Workbooks 1.3 and earlier:
+
+Visual Studio For Mac
+
+- **Visual Studio → About Visual Studio → Show Details → Copy Information**
+- Paste into bug report
+
+Visual Studio
+
+- **Help → About Visual Studio → Copy Info**
+- Let us know your Operating System version and whether you are running 32-bit or 64-bit Windows.
+
+### Samples
+
+If you can attach or link to the `.workbooks` file you are having trouble with,
+that might help solve your bug more quickly.
+
+### Devices
+
+If you are having trouble connecting your iOS or Android workbook, and have
+already checked [our troubleshooting page](~/tools/workbooks/troubleshooting/index.md),
+we'll need to know:
+
+- Name of device you are trying to connect to
+- OS version of your device
+- Android: Verify that you are using an x86 emulator
+- Android: What emulator platform are you using? Google Emulator?
+  Visual Studio Android Emulator? Xamarin Android Player?
+- iOS on Windows: What version of the Xamarin Remote iOS Simulator do you have
+  installed (check `Add/Remove Programs` in `Control Panel`)?
+- iOS on Windows: Please also provide Platform Version Information for your Mac
+  build host
+- Does the device have network connectivity (check via web browser)?
+
+[bugs]: https://github.com/Microsoft/workbooks/issues/new
+
+## Uninstall
+
+### Windows
+
+Depending on how you acquired Workbooks & Inspector, you may have to perform
+two uninstallation procedures. Please check both of these to completely
+uninstall the software.
+
+#### Visual Studio Installer
+
+If you have Visual Studio 2017, open **Visual Studio Installer**, and look in
+**Individual Components** for **Xamarin Workbooks**. If it is checked, uncheck it
+and then click **Modify** to uninstall.
+
+#### System Uninstall
+
+If you installed Workbooks & Inspector yourself with a downloaded installer,
+it will need to be uninstalled via the **Apps & features**
+system settings page on Windows 10 or via **Add/Remove Programs** in the
+Control Panel on older versions of Windows.
+
+> **Start → Settings → System → Apps & features**
+
+![](install-images/windows-remove.png "Xamarin Workbooks and Inspector as listed in &quot;Apps &amp; features&quot;")
+
+**You should still follow the procedure for the Visual Studio Installer to make
+sure Workbooks & Inspector does not get reinstalled without your knowledge.**
+
+<a name="uninstall-macos" />
+
+### macOS
+
+Starting with [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/),
+Xamarin Workbooks & Inspector can be uninstalled from a terminal by running:
+
+```bash
+sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
+```
+
+The uninstaller will detail the files and directories it will remove and
+ask for confirmation before proceeding.
+
+Pass the `-help` argument to the `uninstall` script for more advanced
+scenarios.
+
+For older versions, you will need to manually remove the following:
+
+1. Delete the Workbooks app at `"/Applications/Xamarin Workbooks.app"`
+2. Delete the Inspector app at `"Applications/Xamarin Inspector.app"`
+2. Delete the add-ins: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` and `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+3. Delete Inspector and supporting files here: `/Library/Frameworks/Xamarin.Interactive.framework` and `/Library/Frameworks/Xamarin.Inspector.framework`
+
+## Downgrading
+
+The bundle identifier for `/Applications/Xamarin Workbooks.app` changed from
+`com.xamarin.Inspector` to `com.xamarin.Workbooks` in the 1.4 release to
+facilitate a future splitting of the Xamarin Workbooks & Inspector installers.
+
+Because of a bug in older installers, it is not possible to downgrade 1.4 or
+newer releases using the 1.3.2 or older installers.
+
+To downgrade from 1.4 or newer to 1.3.2 or older:
+
+1. [Uninstall Workbooks & Inspector manually](#macOS)
+2. Run the 1.3.2 or older `.pkg` installer

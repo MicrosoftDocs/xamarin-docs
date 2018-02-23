@@ -1,0 +1,85 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Xamarin Tools
+metadata:
+  description: Tools to help make your Xamarin development experience better.
+  author: conceptdev
+  ms.author: crdun
+  ms.date: 02-17-2018
+  ms.topic: landing-page
+abstract:
+  description: Tools to help make your Xamarin development experience better.
+  menu:
+    items:
+    - href: https://visualstudio.com/
+      text: Visual Studio
+    - href: https://developer.xamarin.com/releases/#mac
+      text: Release Notes
+sections:
+- title: Tools
+  items:
+  - type: list
+    style: cards
+    className: cardsC
+    items:
+    - href: ~/tools/live-player/index.md
+      html: Get started with Xamarin in minutes using the Live Player app with Visual Studio.
+      image:
+        src: ~/media/index/xamarin-tools-live-player.svg?branch=master
+        href: ~/tools/live-player/index.md
+      title: Xamarin Live Player
+    - href: ~/tools/inspector/index.md
+      html: Understand and debug your user interface.
+      image:
+        src: ~/media/index/xamarin-tools-inspector.svg?branch=master
+        href: ~/tools/inspector/index.md
+      title: Xamarin Inspector
+    - href: ~/tools/workbooks/index.md
+      html: Learn C# and the Xamarin platform interactively.
+      image:
+        src: https://review.docs.microsoft.com/en-us//media/illustrations/dynamics-resource-library.svg?branch=master
+        href: ~/tools/workbooks/index.md
+      title: Xamarin Workbooks
+    - href: ~/tools/ios-simulator.md
+      html: Interact with the iOS Simulator using Visual Studio on Windows.
+      image:
+        src: ~/media/index/xamarin-tools-windows-simulator.svg?branch=master
+        href: ~/tools/ios-simulator.md
+      title: iOS Simulator for Windows
+    - href: ~/tools/profiler/index.md
+      html: Identify and fix performance issues. 
+      image:
+        src: ~/media/index/xamarin-tools-profiler.svg?branch=master
+        href: ~/tools/profiler/index.md
+      title: Xamarin Profiler
+    - href: ~/tools/dotnet-embedding/index.md
+      html: Allows your existing .NET code to be consumed from other programming languages.
+      image:
+        src: https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-settings-8.svg
+        href: ~/tools/dotnet-embedding/index.md
+      title: .NET Embedding
+    - href: https://developer.xamarin.com/testcloud/
+      html: Test your app on any device.
+      image:
+        src: https://docs.microsoft.com/en-us/media/illustrations/team-services-agile-track.svg
+        href: https://developer.xamarin.com/testcloud/
+      title: Xamarin Test Cloud
+      
+- title: Platforms
+  items:
+  - type: list
+    style: cards
+    className: cardsD
+    items:
+    - title: Xamarin.Forms
+      href: ~/xamarin-forms/index.md
+      html: <p><a href="~/xamarin-forms/get-started/index.md">Get Started</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/xamarin-forms/user-interface/index.md">User Interface</a><br /><a href="~/xamarin-forms/platform/index.md">Platform Features</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/xamarin-forms/internals/index.md">Advanced Concepts & Internals</a></p>
+    - title: Android
+      href: ~/android/index.md
+      html: <p><a href="~/android/get-started/index.md">Get Started</a><br /><a href="~/android/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/android/user-interface/index.md">User Interface</a><br /><a href="~/android/platform/index.md">Platform Features</a><br /><a href="~/android/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/android/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/android/internals/index.md">Advanced Concepts & Internals</a></p>
+    - title: iOS
+      href: ~/ios/index.md
+      html: <p><a href="~/ios/get-started/index.md">Get Started</a><br /><a href="~/ios/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/ios/user-interface/index.md">User Interface</a><br /><a href="~/ios/platform/index.md">Platform Features</a><br /><a href="~/ios/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/ios/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/ios/internals/index.md">Advanced Concepts & Internals</a></p>
+    - title: Mac
+      href: ~/mac/index.md
+      html: <p><a href="~/mac/get-started/index.md">Get Started</a><br /><a href="~/mac/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/mac/user-interface/index.md">User Interface</a><br /><a href="~/mac/platform/index.md">Platform Features</a><br /><a href="~/mac/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/mac/internals/index.md">Advanced Concepts & Internals</a></p>

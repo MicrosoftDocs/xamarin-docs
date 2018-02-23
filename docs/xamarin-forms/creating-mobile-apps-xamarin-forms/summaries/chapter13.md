@@ -1,0 +1,191 @@
+---
+title: "Summary of Chapter 13. Bitmaps"
+ms.topic: article
+ms.prod: xamarin
+ms.technology: xamarin-forms
+author: charlespetzold
+ms.author: chape
+ms.date: 11/07/2017
+---
+
+# Summary of Chapter 13. Bitmaps
+
+The Xamarin.Forms [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) element displays a bitmap. All the Xamarin.Forms platforms support the JPEG, PNG, GIF, and BMP file formats.
+
+Bitmaps in Xamarin.Forms come from four places:
+
+- Over the web as specified by a URL
+- Embedded as a resource in the common Portable Class Library
+- Embedded as a resource in the platform application projects
+- From anywhere that can be referenced by a .NET `Stream` object, including `MemoryStream`
+
+Bitmap resources in the PCL are platform-independent, while bitmap resources in the platform projects are platform-specific.
+
+The bitmap is specified by setting the [`Source`](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Source/) property of `Image` to an object of type [`ImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageSource/), an abstract class with three derivatives:
+
+- [`UriImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.UriImageSource/) for accessing a bitmap over the web based on a `Uri` object set to its [`Uri`](https://developer.xamarin.com/api/property/Xamarin.Forms.UriImageSource.Uri/) property
+- [`FileImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.FileImageSource/) for accessing a bitmap stored in a platform application project based on a folder and file path set to its [`File`](https://developer.xamarin.com/api/property/Xamarin.Forms.FileImageSource.File/) property
+- [`StreamImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.StreamImageSource/) for loading a bitmap using a .NET `Stream` object specified by returning a `Stream` from a `Func` set to its [`Stream`](https://developer.xamarin.com/api/property/Xamarin.Forms.StreamImageSource.Stream/) property
+
+Alternatively (and more commonly) you can use the following static methods of the `ImageSource` class, all of which return `ImageSource` objects:
+
+- [`ImageSource.FromUri`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromUri/p/System.Uri/) for accessing a bitmap over the web based on a `Uri` object
+- [`ImageSource.FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) for accessing a bitmap stored as an embedded resource in the application PCL, or [`ImageSource.FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/System.Type/) or [`ImageSource.FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/System.Reflection.Assembly/) to access a bitmap in another source assembly
+- [`ImageSource.FromFile`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromFile/p/System.String/) for accessing a bitmap from a platform application project
+- [`ImageSource.FromStream`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromStream/p/System.Func%7BSystem.IO.Stream%7D/) for loading a bitmap based on a `Stream` object
+
+There is no class equivalent of the `Image.FromResource` methods. The `UriImageSource` class is useful if you need to control caching. The `FileImageSource` class is useful in XAML. `StreamImageSource` is useful for the asynchronous loading of `Stream` objects, whereas `ImageSource.FromStream` is synchronous.
+
+## Platform-independent Bitmaps
+
+The [**WebBitmapCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapCode) project loads a bitmap over the web using `ImageSource.FromUri`. The `Image` element is set to the `Content` property of the `ContentPage`, so it is constrained to the size of the page. Regardless of the bitmap's size, a constrained `Image` element is stretched to the size of its container, and the bitmap is displayed in its maximum size within the `Image` element while maintaining the bitmap's aspect ratio. Areas of the `Image` beyond the bitmap can be colored with [`BackgroundColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/).
+
+The [**WebBitmapXaml**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapXaml) sample is similar but simply sets the `Source` property to the URL. The conversion is handled by the [`ImageSourceConverter`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageSourceConverter/) class.
+
+### Fit and fill
+
+You can control how the bitmap is stretched by setting the [`Aspect`](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Aspect/) property of the `Image` to one of the following members of the [`Aspect`](https://developer.xamarin.com/api/type/Xamarin.Forms.Aspect/) enumeration:
+
+- [`AspectFit`](https://developer.xamarin.com/api/field/Xamarin.Forms.Aspect.AspectFit/): respects aspect ratio (default)
+- [`Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.Aspect.Fill/): fills area, does not respect aspect ratio
+- [`AspectFill`](https://developer.xamarin.com/api/type/Xamarin.Forms.Aspect.AspectFill/): fills area but respects aspect ratio, accomplished by cropping part of the bitmap
+
+### Embedded resources
+
+You can add a bitmap file to a PCL, or to a folder in the PCL. Give it a **Build Action** of **EmbeddedResource**. The [**ResourceBitmapCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ResourceBitmapCode) sample demonstrates how to use `ImageSource.FromResource` to load the file. The resource name passed to the method consists of the assembly name, followed by a dot, followed by the optional folder name and a dot, followed by the filename.
+
+The program sets the `VerticalOptions` and `HorizontalOptions` properties of the `Image` to `LayoutOptions.Center`, which makes the `Image` element unconstrained. The `Image` and the bitmap are the same size:
+
+- On iOS and Android, the `Image` is the pixel size of the bitmap. There is a one-to-one mapping between bitmap pixels and screen pixels.
+- On the Windows Runtime platforms, the `Image` is the pixel size of the bitmap in device-independent units. On most devices, each bitmap pixel occupies multiple screen pixels.
+
+The [**StackedBitmap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/StackedBitmap) sample puts an `Image` in a vertical `StackLayout` in XAML. A markup extension named  [`ImageResourceExtension`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter13/StackedBitmap/StackedBitmap/StackedBitmap/ImageResourceExtension.cs) helps to reference the embedded resource in XAML. This class only loads resources from the assembly in which it's located, so it can't be placed in a library.
+
+### More on sizing
+
+It's often desirable to size bitmaps consistently among all the platforms.
+Experimenting with **StackedBitmap**, you can set a `WidthRequest` on the `Image` element in a vertical `StackLayout` to make the size consistent among the platforms, but you can only reduce the size using this technique.
+
+You can also set the `HeightRequest` to make the image sizes consistent on the platforms, but the constrained width of the bitmap will limit the versatility of this technique. For an image in a vertical `StackLayout`, `HeightRequest` should be avoided.
+
+The best approach is to begin with a bitmap wider than the phone width in device-independent units and set `WidthRequest` to a desired width in device-independent units. This is demonstrated in the [**DeviceIndBitmapSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/DeviceIndBitmapSize) sample.
+
+The [**MadTeaParty**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/MadTeaParty) displays Chapter 7 of Lewis Carroll's *Alice's Adventures in Wonderland* with the original illustrations by John Tenniel:
+
+[![Triple screenshot of mad tea party](images/ch13fg16-small.png "Mad Hatters Tea Party Book Text")](images/ch13fg16-large.png "Mad Hatters Tea Party Book Text")
+
+### Browsing and waiting
+
+The [**ImageBrowser**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) sample allows the user to browse through stock images stored on the Xamarin web site. It uses the .NET `WebRequest` class to download a JSON file with the list of bitmaps.
+
+The program uses an [`ActivityIndicator`](https://developer.xamarin.com/api/type/Xamarin.Forms.ActivityIndicator/) to indicate that something's going on. As each bitmap is loading, the read-only [`IsLoading`](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.IsLoading/) property of `Image` is `true`. The `IsLoading` property is backed by a bindable property, so a `PropertyChanged` event is fired when that property changes. The program attaches a handler to this event, and uses the current setting of `IsLoaded` to set the [`IsRunning`](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) property of the `ActivityIndicator`.
+
+## Streaming bitmaps
+
+The `ImageSource.FromStream` method creates an `ImageSource` based on a .NET `Stream`. The method must be passed a `Func` object that returns a `Stream` object.
+
+### Accessing the streams
+
+The [**BitmapStreams**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/BitmapStreams) sample demonstrates how to use the `ImaageSource.FromStream` method to load a bitmap stored as an embedded resource, and to load a bitmap across the web.
+
+### Generating bitmaps at run time
+
+All the Xamarin.Forms platforms support the uncompressed BMP file format, which is easy to construct in code and then store in a `MemoryStream`. This technique allows algorithmically creating bitmaps at runtime, as implemented in the [`BmpMaker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BmpMaker.cs) class in the **Xamrin.FormsBook.Toolkit** library.
+
+The "Do It Yourself" [**DiyGradientBitmap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/DiyGradientBitmap) sample demonstrates the use of `BmpMaker` to create a bitmap with a gradient image.
+
+## Platform-specific bitmaps
+
+All the Xamarin.Forms platforms allow storing bitmaps in the platform application assemblies. When retrieved by a Xamarin.Forms application, these platform bitmaps are of type [`FileImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.FileImageSource/). You use them for:
+
+- the [`Icon`](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Icon/) property of [`MenuItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/)
+- the [`Icon`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Icon/) property of [`ToolbarItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/)
+- the [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) property of `Button`
+
+The platform assemblies already contain bitmaps for icons and splash screens:
+
+- In the iOS project, in the **Resources** folder
+- In the Android project, in subfolders of the **Resources** folder
+- In the Windows projects, in the **Assets** folder (although the Windows platforms do not restrict bitmaps to that folder)
+
+The [**PlatformBitmaps**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/PlatformBitmaps) sample uses code to display an icon from the platform application projects.
+
+### Bitmap resolutions
+
+All the platforms allow storing multiple versions of bitmap images for different device resolutions. At runtime, the proper version is loaded based on the device resolution of the screen.
+
+On iOS, these bitmaps are differentiated by a suffix on the filename:
+
+- No suffix for 160 DPI devices (1 pixel to the device-independent unit)
+- '@2x' suffix for 320 DPI devices (2 pixels to the DIU)
+- '@3x' suffix for 480 DPI devices (3 pixels to the DIU)
+
+A bitmap intended to be displayed as one-inch square would exist in three versions:
+
+- MyImage.jpg at 160 pixels square
+- MyImage@2x.jpg at 320 pixels square
+- MyImage@3x.jpg at 480 pixels square
+
+The program would refer to this bitmap as MyImage.jpg, but the proper version is retrieved at runtime based on the resolution of the screen. When unconstrained, the bitmap will always render at 160 device-independent units.
+
+For Android, bitmaps are stored in various subfolders of the **Resources** folder:
+
+- drawable-ldpi (low DPI) for 120 DPI devices (0.75 pixels to the DIU)
+- drawable-mdpi (medium) for 160 DPI devices (1 pixel to the DIU)
+- drawable-hdpi (high) for 240 DPI devices (1.5 pixels to the DIU)
+- drawable-xhdpi (extra high) for 320 DPI devices (2 pixels to the DIU)
+- drawable-xxhdpi (extra extra high) for 480 DPI devices (3 pixels to the DIU)
+- drawable-xxxhdpi (three extra highs) for 640 DPI devices (4 pixels to the DIU)
+
+For a bitmap intended to be rendered at one square inch, the various versions of the bitmap will have the same name but a different size, and be stored in these folders:
+
+- drawable-ldpi/MyImage.jpg at 120 pixels square
+- drawable-mdpi/MyImage.jpg at 160 pixels square
+- drawable-hdpi/MyImage.jpg at 240 pixels square
+- drawable-xhdpi/MyImage.jpg at 320 pixels square
+- drawable-xxhdpi/MyImage.jpg at 480 pixels square
+- drawable-xxxhdpi/MyImage.jpg at 640 pixels square
+
+The bitmap will always render at 160 device-independent units. (The standard Xamarin.Forms solution template only includes the hdpi, xhdpi, and xxhdpi folders.)
+
+The Windows Runtime projects support a bitmap naming scheme that consists of a scaling factor in pixels per device-independent unit as a percentage, for example:
+
+- MyImage.scale-200.jpg at 320 pixels square
+
+Only some percentages are valid. The sample programs for this book include only images with **scale-200** suffixes, but current Xamarin.Forms solution templates include **scale-100**, **scale-125**, **scale-150**, and **scale-400**. 
+
+When adding bitmaps to the platform projects, the **Build Action** should be:
+
+- iOS: **BundleResource**
+- Android: **AndroidResource**
+- Windows Runtime: **Content**
+
+The [**ImageTap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageTap) sample creates two button-like objects consisting of `Image` elements with a `TapGestureRecognizer` installed. It is intended that the objects be one-inch square. The `Source` property of `Image` is set using `OnPlatform` and `On` objects to reference potentially different filenames on the platforms. The bitmap images include numbers indicating their pixel size, so you can see which size bitmap is retrieved and rendered.
+
+### Toolbars and their icons
+
+One of the primary uses of platform-specific bitmaps is the Xamarin.Forms toolbar, which is constructed by adding [`ToolbarItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/) objects to the [`ToolbarItems`](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.ToolbarItems/) collection defined by `Page`. `ToobarItem` derives from [`MenuItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/) from which it inherits some properties.
+
+The most important `ToolbarItem` properties are:
+
+- [`Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Text/) for text that might appear depending on platform and `Order`
+- [`Icon`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Icon/) of type `FileImageSource` for the image that might appear depending on platform and `Order`
+- [`Order`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Order/) of type [`ToolbarItemOrder`](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItemOrder/), an enumeration with three members, [`Default`](https://developer.xamarin.com/api/field/Xamarin.Forms.ToolbarItemOrder.Default/), [`Primary`](https://developer.xamarin.com/api/field/Xamarin.Forms.ToolbarItemOrder.Primary/), and [`Secondary`](https://developer.xamarin.com/api/field/Xamarin.Forms.ToolbarItemOrder.Secondary/).
+
+The number of `Primary` items should be limited to three or four. You should include a `Text` setting for all items. For most platforms, only the `Primary` items require an `Icon` but Windows 8.1 requires an `Icon` for all items. The icons should be 32 device-independent units square. The `FileImageSource` type indicates that they are platform-specific.
+
+The `ToolbarItem` fires a [`Clicked`](https://developer.xamarin.com/api/event/Xamarin.Forms.MenuItem.Clicked/) event when tapped, much like a `Button`. `ToolbarItem` also supports [`Command`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Command/) and [`CommandParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.CommandParameter/) properties often used in connection with MVVM. (See [Chapter 18, MVVM](chapter18.md)).
+
+Both iOS and Android require that a page that displays a toolbar be a [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) or a page navigated to by a `NavigationPage`. The [**ToolbarDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) program sets the `MainPage` property of its `App` class to the [`NavigationPage` constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.NavigationPage.NavigationPage/p/Xamarin.Forms.Page/) with a `ContentPage` argument, and demonstrates the construction and event handler of a toolbar.
+
+### Button images
+
+You can also use platform-specific bitmaps to set the [`Image`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Image/) property of `Button` to a bitmap of 32 device-independent units square, as demonstrated by the [**ButtonImage**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage) sample.
+
+
+
+## Related Links
+
+- [Chapter 13 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf)
+- [Chapter 13 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
+- [Working with Images](~/xamarin-forms/user-interface/images.md)

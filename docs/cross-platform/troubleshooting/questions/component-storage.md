@@ -1,0 +1,21 @@
+---
+title: "Where are the components stored on my machine?"
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 5EBB49EE-39E5-428B-866F-9FC1BB215B31
+ms.technology: xamarin-cross-platform
+author: asb3993
+ms.author: amburns
+---
+
+# Where are the components stored on my machine?
+
+Whenever you install a Xamarin component into an App project, it gets placed in two places:
+
+1. In a Components folder at the root level of your Solution folder. If you remove the Component from all projects in the solution, it will get removed from this folder as well.
+
+2. A copy is also stored in the following locations:
+    - Windows: `%LocalAppData%\Xamarin\Cache\Components`
+    - Mac: `~/Library/Caches/Xamarin/Components`
+
+So to remove a component completely from your system, delete it from your projects/solutions and from the cache folder above.
