@@ -1,0 +1,48 @@
+---
+title: "SkiaSharp Drawing Basics"
+description: "Learn the basics of SkiaSharp graphics concepts and coordinates"
+ms.topic: article
+ms.prod: xamarin
+ms.technology: xamarin-forms
+author: charlespetzold
+ms.author: chape
+ms.date: 03/10/2017
+---
+
+# SkiaSharp Drawing Basics
+
+_Learn the basics of SkiaSharp graphics concepts and coordinates_
+
+After you have added the SkiaSharp NuGet package to your Xamarin.Forms application, you can begin using SkiaSharp graphics. The [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) solution includes several pages that demonstrate SkiaSharp programming techniques in progressively more advanced lessons.
+
+All the sample programs in this section appear under the heading **SkiaSharp Basics** in the home page of the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) program, and in the [**Basics**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics) folder of the solution.
+
+## [Drawing a Simple Circle](circle.md)
+
+Learn the basics of SkiaSharp drawing, including canvases and paint.
+
+## [Integrating with Xamarin.Forms](integration.md)
+
+Create interactive SkiaSharp graphics by responding to touch input and integrating with Xamarin.Forms elements.
+
+## [Pixels and Device-Independent Units](pixels.md)
+
+Explore the differences between SkiaSharp coordinates and Xamarin.Forms coordinates.
+
+## [Basic Animation](animation.md)
+
+Discover how to animate your SkiaSharp graphics.
+
+## [Integrating Text and Graphics](text.md)
+
+See how to determine the size of rendered text strings to integrate text with SkiaSharp graphics.
+
+## [Bitmap Basics](bitmaps.md)
+
+Load bitmaps from various sources and display them.
+
+
+## Related Links
+
+- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)

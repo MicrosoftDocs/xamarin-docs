@@ -1,0 +1,110 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Xamarin.Android
+metadata:
+  description: Xamarin.Android exposes the complete Android SDK for .NET developers.
+  author: conceptdev
+  ms.author: crdun
+  ms.date: 02/17/2018
+  ms.topic: landing-page
+abstract:
+  description: Xamarin.Android exposes the complete Android SDK for .NET developers. Build fully native Android apps using C# or F# in Visual Studio.
+  menu:
+    items:
+    - href: ~/android/samples/
+      text: Android Samples
+    - href: https://developer.xamarin.com/releases/android/
+      text: Release Notes
+    - href: https://developers.google.com/
+      text: Googles's Developer Documentation
+    - href: /visualstudio/
+      text: Visual Studio 
+sections:
+- title: Get Started
+  items:
+  - type: paragraph
+    text: Learn how to build your first Android app with Xamarin and C#.
+  - type: list
+    style: icon48
+    items:
+    - image:
+        src: https://docs.microsoft.com/media/common/i_setup.svg
+      text: Setup
+      href: ~/android/get-started/installation/index.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
+      text: Hello, Android
+      href: ~/android/get-started/hello-android/hello-android-quickstart.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
+      text: Multi-screen Apps
+      href: ~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
+- title: Guides
+  items:
+  - type: grid
+    style: columns
+    className: column50
+    items:
+    - type: list
+      style: cards
+      className: cardsB
+      items:
+      - href: ~/android/get-started/index.md
+        html: Tutorials to get you up and running with Xamarin.Android. Make sure everything is installed correctly, and build your first Mac apps.
+        image:
+          src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+          href: ~/android/get-started/index.md
+        title: Getting Started
+      - href: ~/android/user-interface
+        html: Learn about the complete set of user interface control widgets available for Android.
+        image:
+          src: ~/media/icons/i_user-interface.svg
+          href: ~/android/user-interface/
+        title: User Interface
+      - href: ~/android/deploy-test/
+        html: Instructions for building and deploying your apps to Google Play, and tips for testing them beforehand!
+        image:
+          src: ~/media/icons/i_deploy-test.svg
+          href: ~/android/deploy-test/
+        title: Deployment and Testing
+      - href: ~/android/wear/
+        html: Building apps for Android Wear.
+        image:
+          src: ~/media/icons/i_android-wear.svg
+          href: ~/android/wear/
+        title: Android Wear
+    - type: list
+      style: cards
+      className: cardsB
+      items:
+      - href: ~/android/app-fundamentals/
+        html: Everything you need to know to build Android apps, such as working with files, images, databases, and more.
+        image:
+          src: ~/media/icons/i_app-build.svg
+          href: ~/android/app-fundamentals/
+        title: Application Fundamentals
+      - href: ~/android/platform/
+        html: Working with Android platform features, such as fingerprint authentication, and the newest features in Android 8.0 Oreo.
+        image:
+          src: ~/media/icons/i_platform.svg
+          href: ~/android/platform/
+        title: Platform Features
+      - href: ~/android/internals/
+        html: Additional information about Xamarin.Android internals and assistance with features like localization and accessibility.
+        image:
+          src: https://docs.microsoft.com/en-us/media/common/i_advanced.svg
+          href: ~/android/internals/
+        title: Advanced Concepts & Internals
+- title: Reference
+  items:
+  - type: list
+    style: cards
+    className: cardsD
+    items:
+    - title: API
+      html: <p><a href="https://developer.xamarin.com/api/root/monodroi-lib/">Android API docs</a></p><p><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=xamarinandroid-7.1">Base Class Library</a></p>
+    - title: Samples
+      html: <p><a href="https://developer.xamarin.com/samples/android/all/">Android Samples</a></p>
+    - title: Workbooks
+      html: <p><a href="https://developer.xamarin.com/workbooks#android">Android Workbooks</a></p>
+    

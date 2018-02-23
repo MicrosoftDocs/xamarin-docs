@@ -1,0 +1,52 @@
+---
+title: "Custom Document Icons"
+description: "This article covers including and managing an image asset in a Xamarin.iOS app to be used as a Custom Document Type Icon."
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
+ms.technology: xamarin-ios
+author: bradumbaugh
+ms.author: brumbaug
+ms.date: 05/23/2017
+---
+
+# Custom Document Icons
+
+_This article covers including and managing an image asset in a Xamarin.iOS app to be used as a Custom Document Type Icon._
+
+If a Xamarin.iOS app supports loading a particular document type, the developer can provide icons that the system will use when it encounters that document type, such as when a user holds down an attachment in the *Mail Application* as shown here:
+
+ [ ![](custom-document-types-images/17.png "An example of document type icons")](custom-document-types-images/17.png)
+
+The developer can add document type information for a file format the app is capable of opening by including dictionary entries for the `CFBundleTypeName` string and `LSItemContentTypes` array in the app's `Info.plist`. The icons for the document type go in the `CFBundleTypeIconFiles` array. If a document icon isn't provided, iOS will derive one from the app icon.
+Icons can be supplied for several sizes, optimized for the various device resolutions. 
+
+# [Visual Studio for Mac](#tab/vsmac)
+
+To assign these values in Visual Studio for Mac, use the **Document Types** section under the **Advanced** tab on the `Info.plist`
+editor to add the document type and assign image icons to it. For
+example, here is a screenshot showing registration for PDF support:
+
+ [ ![](custom-document-types-images/18.png "The Document Types section under the Advanced tab on the `Info.plist` editor")](custom-document-types-images/18.png)
+ 
+# [Visual Studio](#tab/vswin)
+
+To assign these values in Visual Studio, use the **Document Types** section under the **Advanced** tab on the `Info.plist`:
+
+ ![](custom-document-types-images/doc01w.png "Open the Document Types section under the Advanced tab")
+
+Click the **Add Document Type** button and fill in the required fields:
+
+![](custom-document-types-images/doc02w.png "The Add Document Type form")
+
+-----
+
+
+For more information about document types, see Apple’s [Uniform Type Identifiers Reference](http://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) and [Document Interaction Programming Topics for iOS](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
+
+
+## Related Links
+
+- [Working with Images (sample)](https://developer.xamarin.com/samples/WorkingWithImages/)
+- [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
+- [Custom Icon and Image Creation Guidelines](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

@@ -1,0 +1,78 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Xamarin.Android Samples
+metadata:
+  description: Xamarin.Android sample apps for mobile developers.
+  author: conceptdev
+  ms.author: crdun
+  ms.date: 02/20/2018
+  ms.topic: article
+abstract:
+  description: Xamarin Android sample apps and code demos to help you get started building mobile apps with C# and Xamarin.
+  menu:
+    items:
+    - href: https://developer.xamarin.com/samples/android/all/
+      text: All Xamarin.Android Samples
+sections:
+- title: 
+  items:
+   - type: list
+     style: cards
+     className: cardsW
+     items:
+     - href: https://developer.xamarin.com/samples/monodroid/android5.0/GoogleIO2014Master/
+       html: This sample demonstrates the new Material Design APIs introduced in Android Lollipop.
+       image:
+         src: images/material-design.png
+         href: https://developer.xamarin.com/samples/monodroid/android5.0/GoogleIO2014Master/
+       title: Material Design
+     - href: https://developer.xamarin.com/samples/monodroid/GooglePlayServices/
+       html: This solution uses the Xamarin Google Play Services NuGet to demonstrate a few uses of the maps API.
+       image:
+         src: images/gps.png
+         href: https://developer.xamarin.com/samples/monodroid/GooglePlayServices/
+       title: Google Play Services
+     - href: https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager/
+       html: This sample demonstrates how to use ViewPager and PagerTabStrip together to implement an app that presents a series of math problems on flash cards.
+       image:
+         src: images/flash.png
+         href: https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager/
+       title: Flash Card Pager
+     - href: https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/
+       html: Fragments are self-contained, modular components that are used to help address the complexity of writing applications that may run on screens of different sizes.
+       image:
+         src: images/fragments.png
+         href: https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/
+       title: Fragments
+     - href: https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/
+       html: Colorful finger-painting app using multi-touch tracking on Android.
+       image:
+         src: images/fingerpaint.png
+         href: https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/
+       title: Finger Paint
+     - href: https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/
+       html: Use this sample to learn how to use the new CardView and RecyclerView widgets introduced with Android 5.0 Lollipop.
+       image:
+         src: images/recycler.png
+         href: https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/
+       title: RecyclerViewer
+     - href: https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/
+       html: Android sample replacing the ActionBar with the new ToolBar in Android 5.0 Lollipop.
+       image:
+         src: images/toolbar.png
+         href: https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/
+       title: Toolbar
+     - href: https://developer.xamarin.com/samples/monodroid/wear/WatchFace/
+       html: How to implement a custom Android Wear watch face.
+       image:
+         src: images/watchface.png
+         href: https://developer.xamarin.com/samples/monodroid/wear/WatchFace/
+       title: WatchFace
+
+
+     - href: https://developer.xamarin.com/samples/android/all/
+       html: Access a the complete set of Xamarin.Android sample apps and code demos.
+       image: 
+         src: ~/media/shared/sample-download.svg
+         href: https://developer.xamarin.com/samples/android/all/
+       title: All Xamarin.Android samples

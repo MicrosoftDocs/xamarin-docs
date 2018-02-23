@@ -1,0 +1,15 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Xamarin.iOS Samples
+metadata:
+  description: Cross-platform Xamarin.iOS sample apps for mobile developers.
+  author: conceptdev
+  ms.author: crdun
+  ms.date: 02/17/2018
+  ms.topic: article
+abstract:
+  description: Xamarin cross-platform sample apps and code demos to help you get started building mobile apps with C# and Xamarin.
+  menu:
+    items:
+    - href: https://developer.xamarin.com/samples/ios/all/
+      text: All Xamarin.iOS Samples

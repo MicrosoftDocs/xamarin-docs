@@ -1,0 +1,81 @@
+---
+title: "tvOS Internals"
+description: "Xamarin.tvOS shares the same DNA as our Xamarin.iOS product, so the advanced documents that we have produced for our iOS product are nearly identical to our tvOS product."
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: B245062F-1DD9-4BE5-8E11-728BA3C8AD4C
+ms.technology: xamarin-ios
+author: bradumbaugh
+ms.author: brumbaug
+ms.date: 06/07/2016
+---
+
+# tvOS Internals
+
+_Xamarin.tvOS shares the same DNA as our Xamarin.iOS product, so the advanced documents that we have produced for our iOS product are nearly identical to our tvOS product._
+
+
+##  [Assemblies](~/ios/tvos/internals/assemblies.md)
+
+List of the assemblies supported by Xamarin for your Xamarin.tvOS applications.
+
+##  [Target Frameworks](~/ios/tvos/internals/frameworks.md)
+
+This article covers the types of Target Frameworks (Base Class Libraries) that are available in Xamarin.tvOS and the implications of selecting a specific target for your Xamarin.tvOS application.
+
+## Related iOS Articles
+
+The following articles are specific to iOS but relevant to tvOS (since tvOS 9 is a subset of iOS 9).
+
+###  [Unified API](~/cross-platform/macios/unified/index.md)
+
+Introduces the new Unified APIs which allow for simpler code sharing between Apple TV and iOS codebases as well as introducing support for 64-bit APIs and 64-bit compilation.  
+
+###  [API Design](~/ios/internals/api-design/index.md)
+
+Explains the design principles behind the API Binding.
+
+###  [Limitations](~/ios/internals/limitations.md)
+
+This section illustrates pitfalls and limitations to be aware of with regards Xamarin.iOS, many of which are applicable to Xamarin.tvOS.
+
+###  [Linker](~/ios/deploy-test/linker.md)
+
+Explains how the linker works to ensure the smallest possible application package, as well as how to modify it's settings and usage.
+
+###  [Localization and Internationalization](~/ios/app-fundamentals/localization/index.md)
+
+This guide covers the the addition of encodings to a Xamarin.iOS application to support internationalization.
+
+###  [mtouch](~/ios/deploy-test/mtouch.md)
+
+Notes and information on mtouch.exe, the command line tool that builds your project into an application usable by iOS.
+
+###  [Linking Native Libraries](~/ios/platform/native-interop.md)
+
+Xamarin.iOS supports linking with both native C libraries and Objective-C libraries. This document discusses how to link your native C libraries with your Xamarin.iOS project. For information on doing the same for Objective-C libraries, see the&nbsp; [Binding Objective-C Types](~/ios/platform/binding-objective-c/index.md)&nbsp;document.
+
+##  [Objective-C Selectors](~/ios/internals/objective-c-selectors.md)
+
+Notes and usage for calling Objective-C Selectors (methods) directly.
+
+###  [System.Data](~/ios/data-cloud/system.data.md)
+
+Information and instructions on using System.Data to access the built-in SQLite Database system.
+
+###  [Threading](~/ios/app-fundamentals/threading.md)
+
+Notes on using threading within Xamarin.iOS applications.
+
+###  [XIB Code Generation](~/ios/internals/xib-code-generation.md)
+
+How Visual Studio for Mac integrates with Xcode's Interface Builder to allow you to use Interface Builder to design UI.
+
+
+
+## Related Links
+
+- [tvOS Samples](https://developer.xamarin.com/samples/tvos/all/)
+- [tvOS](https://developer.apple.com/tvos/)
+- [tvOS Human Interface Guides](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [App Programming Guide for tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
