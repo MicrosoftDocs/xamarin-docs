@@ -31,7 +31,7 @@
         "exclude": [
           "**/obj/**",
           "_themes/**",
-          "_themes.pdf/**"
+          "_themes.pdf/**",
           "**/includes/**"
         ]
       }
