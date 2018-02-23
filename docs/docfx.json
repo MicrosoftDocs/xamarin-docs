@@ -4,7 +4,8 @@
       {
         "files": [
           "**/*.md",
-          "**/*.yml"
+          "**/*.yml",
+          "**/*.html"
         ],
         "exclude": [
           "**/obj/**",
@@ -22,21 +23,33 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.jpeg",
+          "**/*.gif",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**",
           "_themes/**",
           "_themes.pdf/**"
+          "**/includes/**"
         ]
       }
     ],
+    "markdownEngineName": "markdig",
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId":"MSDocsHeader-Xamarin",
       "breadcrumb_path": "/xamarin/breadcrumb/toc.json",
-      "extendBreadcrumb": true
+      "titleSuffix": "Xamarin",
+      "extendBreadcrumb": true,
+      "manager": "crdun",
+      "audience": "developer",
+      "ms.topic": "article",
+      "ms.technology": "xamarin",
+      "ms.prod": "xamarin",
+      "searchScope": ["Xamarin"]
     },
     "fileMetadata": {},
     "template": [],
