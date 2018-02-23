@@ -1,0 +1,77 @@
+---
+title: "Xamarin.Mac Extension Support"
+description: "This article covers extension support in Xamarin.Mac version 2.10 (and greater)."
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 4148F1BE-DFA0-46B6-9FCD-425A6541F510
+ms.technology: xamarin-mac
+author: bradumbaugh
+ms.author: brumbaug
+ms.date: 03/14/2017
+---
+
+# Contents
+
+This article will cover the following topics in detail:
+
+- [Xamarin.Mac-Extension-Support](#About_OpenTK)
+- [Limitations and Known Issues](#Limitations-and-Known-Issues)
+- [Tips](#Tips)
+- [Walkthrough and Sample App](#Walkthrough-and-Sample-App)
+
+<a name="Xamarin.Mac-Extension-Support" />
+
+# Xamarin.Mac Extension Support
+
+In Xamarin.Mac 2.10 preview support was added for multiple macOS extension points:
+
+- Finder
+- Share
+- Today
+
+<a name="Limitations-and-Known-Issues" />
+
+# Limitations and Known Issues
+
+The following are the limitations and know issues that can occur when developing extensions in Xamarin.Mac:
+
+* There is currently no debugging support in Visual Studio for Mac. All debugging will need to be done via **NSLog** and the **Console**. See the tips section below for details.
+* Extensions must be contained in a host application, which when run one time with register with the system. They must then be enabled in the **Extension** section of **System Preferences**. 
+* Some extension crashes may destabilize the host application and cause strange behavior. In particular, **Finder** and the the **Today** section of the **Notification Center** may become “jammed” and become unresponsive. This has been experienced in extension projects in Xcode as well, and currently appears unrelated to Xamarin.Mac. Often this can be seen in the system log (via **Console**, see Tips for details) printing repeated error messages. Restarting macOS appears to fix this.
+
+<a name="Tips" />
+
+# Tips
+
+The following tips can be helpful when working with extensions in Xamarin.Mac:
+
+- As Xamarin.Mac currently does not support debugging extensions, the debugging experience will primarily depend on execution and `printf` like statements. However, extensions run in a sandbox process, thus `Console.WriteLine` will not act as it does in other Xamarin.Mac applications. Invoking [`NSLog` directly](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554) will output debugging messages to the System Log.
+- Any uncaught exceptions will crash the extension process, providing only a small amount of useful information in the **System Log**. Wrapping troublesome code in a `try/catch` (Exception) block that `NSLog`’s before re-throwing may be useful.
+- The **System Log** can be accessed from the **Console** app under **Applications** > **Utilities**:
+
+	[ ![](extensions-images/extension02.png "The system log")](extensions-images/extension02.png)
+- As noted above, running the extension host application will register it with the system. Deleting the application bundle with unregister it. 
+- If “stray” versions of an app's extensions are registered, use the following command to locate them (so they can be deleted): `plugin kit -mv`
+
+
+<a name="Walkthrough-and-Sample-App" />
+
+# Walkthrough and Sample App
+
+Since the developer will create and work with Xamarin.Mac extensions in the same way as Xamarin.iOS extensions, please refer to our [Introduction to Extensions](~/ios/platform/extensions.md) documentation for more details.
+
+An example Xamarin.Mac project containing small, working samples of each extension type can be found [here](https://developer.xamarin.com/samples/mac/ExtensionSamples/).
+
+<a name="Summary" />
+
+# Summary
+
+This article has taken a quick look at working with extensions in a Xamarin.Max version 2.10 (and greater) app.
+
+
+
+## Related Links
+
+- [Hello, Mac](~/mac/get-started/hello-mac.md)
+- [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
+- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

@@ -1,0 +1,36 @@
+---
+title: "Xamarin Inspector"
+description: "Visualize and debug your live app"
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
+ms.technology: xamarin-cross-platform
+author: topgenorth
+ms.author: toopge
+ms.date: 03/29/2017
+---
+
+# Xamarin Inspector
+
+
+Xamarin Workbooks & Inspector bring an interactive C# console with tools to
+users. The Inspector integrates with the app debugging workflow of your IDE,
+serving as a debugging or diagnostics aid when inspecting your running app.
+
+Live app inspection is available for enterprise customers. Let us know if
+you [run into any bugs](~/tools/inspector/install.md#reporting-bugs). We have a
+[forum](https://forums.xamarin.com/categories/inspector) too!
+
+[ ![](images/interactive-1.0.0-bike-inspect-3d-small.png "Live app inspection is available for enterprise customers")](images/interactive-1.0.0-bike-inspect-3d.png)
+
+## [Installation and Requirements](~/tools/inspector/install.md)
+
+Information on getting Xamarin Workbooks & Inspector installed on your Mac or
+Windows computer.
+
+## [Inspecting Live Applications](~/tools/inspector/inspect.md)
+
+Discusses how to use the Inspector to attach to a app while it is being run from
+the IDE, allowing its state to be explored and manipulated without pausing.
+
+

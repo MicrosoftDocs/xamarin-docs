@@ -1,0 +1,196 @@
+---
+title: "Shared Projects"
+description: "Shared Projects let you write common code that is referenced by a number of different application projects. The code is compiled as part of each referencing project and can include compiler directives to help incorporate platform-specific functionality into the shared code base."
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
+ms.technology: xamarin-cross-platform
+author: asb3993
+ms.author: amburns
+ms.date: 03/23/2017
+---
+
+# Shared Projects
+
+_Shared Projects let you write common code that is referenced by a number of different application projects. The code is compiled as part of each referencing project and can include compiler directives to help incorporate platform-specific functionality into the shared code base._
+
+Shared Projects (also sometimes called Shared Asset Projects) let you write code that is shared between multiple target projects including Xamarin applications.
+
+They support compiler directives so that you can conditionally include platform-specific code to be compiled into a subset of the projects that are referencing the Shared Project. There is also IDE support to help manage the compiler directives and visualize how the code will look in each application.
+
+If you have used file-linking in the past to share code between projects, Shared Projects works in a similar way but with much improved IDE support.
+
+
+# Requirements
+
+Shared Project support was added in Xamarin Studio 5 and Visual Studio 2013 Update 2 (see note).
+
+> [!IMPORTANT]
+>  Microsoft released this new project type - **Shared Projects ([download Visual Studio extension preview](http://visualstudiogallery.msdn.microsoft.com/315c13a7-2787-4f57-bdf7-adae6ed54450))** - for Visual Studio 2013 Update 2 (April 2014). Refer to Microsoft's [Windows Phone 8.1](http://blogs.msdn.com/b/visualstudio/archive/2014/04/08/building-windows-phone-8-1-apps-in-html.aspx) and [Microsoft Store](http://msdn.microsoft.com/en-us/library/windows/apps/dn609832.aspx#CrossPlatform) docs for more details on how it works with those platforms.
+
+
+
+
+ <a name="Walkthrough" />
+
+
+# What is a Shared Project?
+
+Unlike most other project types a shared project does not have any output (in DLL form), instead the code is compiled into each project that references it. This is illustrated in the diagram below - conceptually the entire contents of the Shared Project is "copied into" each referencing project and compiled as though it was a part of them.
+
+ ![](shared-projects-images/sharedassetproject.png "Shared Project architecture")
+
+The code in a Shared Project can contain compiler directives that will enable or disable sections of code depending on which application project is using the code, which is suggested by the colored platform boxes in the diagram.
+
+A Shared Project does not get compiled on its own, it exists purely as a grouping of source code files that can be included in other projects. When referenced by another project, the code is effectively compiled as *part* of that project. Shared Projects cannot reference any other project type (including other Shared Projects).
+
+Note that Android application projects cannot reference other Android application projects - for example, an Android unit test project cannot reference an Android application project. For more information about this limitation, see this [forum discussion](http://forums.xamarin.com/discussion/comment/98092/).
+
+# [Visual Studio for Mac](#tab/vsmac)
+
+
+
+<a name="Xamarin_Studio_Walkthrough" />
+
+# Visual Studio for Mac Walkthrough
+
+
+This section walks through how to create and use a Shared Project using Visual Studio for Mac. Refer the to [Shared Project Example](#Shared_Project_Example) section for a complete example.
+
+
+## Creating a Shared Project
+
+
+To create a new Shared Project navigate to **File > New Solution...** and choose a name.
+
+
+![](shared-projects-images/xs-newsolution.png "New Solution")
+
+
+You can also add a new Shared Project to a solution by right-clicking on the solution file and choosing **Add > Add New Project...**. A new Shared Project looks as shown below - notice there are no References or Component nodes; these are not supported for Shared Projects.
+
+
+![](shared-projects-images/xs-empty.png "Empty Shared Project")
+
+
+For a Shared Project to be useful, it needs to be referenced by at least one build-able project (such as an iOS or Android application or library, or a PCL project). A Shared Project does not get compiled when it has nothing referencing it, so syntax (or any other) errors will not be highlighted until it has been referenced by something else.
+
+
+
+Adding a reference to a Shared Project is done the same way as referencing a regular Library project. This screenshot shows a Xamarin.iOS project referencing a Shared Project.
+
+
+![](shared-projects-images/xs-reference.png "Project reference to Shared Project")
+
+
+Once the Shared Project is referenced by another library or application you can build the solution and view any errors in the code. When the Shared Project is referenced by _two-or-more_ other projects, a menu appears in the top-left of the source code editor that shows choose which projects reference this file.
+
+
+
+## Shared Project Options
+
+
+When you right-click on a Shared Project and choose **Options** there fewer settings than other project types. Because Shared Projects are not compiled (on their own), you cannot set output or compiler options, project configurations, assembly signing, or custom commands. The code in a Shared Project effectively inherits these values from whatever is referencing them.
+
+
+
+The **Options** screen is shown below - the Project **Name** and the **Default Namespace** are the only two settings that you will generally change.
+
+
+![](shared-projects-images/xs-sharedprojectoptions.png "Shared Project Options")
+
+
+
+# [Visual Studio](#tab/vswin)
+
+
+
+<a name="Visual_Studio_Walkthrough" />
+
+# Visual Studio Walkthrough
+
+
+This section walks through how to create and use a Shared Project using Visual Studio. Refer the to [Shared Project Example](#Shared_Project_Example) section for a complete implementation.
+
+
+## Creating a Shared Project
+
+
+To create a new Shared Project navigate to **File > New Solution...** and choose a name for the project and solution.
+
+
+![](shared-projects-images/vs-newsolution.png "New Solution")
+
+
+You can also add a new Shared Project to a solution by right-clicking on the solution file and choosing **Add > New Project...**. A new Shared Project looks as shown below (after a class file has been added) - notice there are no References or Component nodes; these are not supported for Shared Projects.
+
+
+![](shared-projects-images/vs-empty.png "Empty Shared Project")
+
+
+For a Shared Project to be useful, it needs to be referenced by at least one build-able project (such as an iOS or Android application or library, or a PCL project). A Shared Project does not get compiled when it has nothing referencing it, so syntax (or any other) errors will not be highlighted until it has been referenced by something else.
+
+
+
+Adding a reference to a Shared Project is done the same way as referencing a regular Library project. This screenshot shows a Xamarin.iOS project referencing a Shared Project.
+
+
+![](shared-projects-images/vs-reference.png "Project reference to Shared Project")
+
+
+Once the Shared Project is referenced by another library or application you can build the solution and view any errors in the code. When the Shared Project is referenced by _two-or-more_ other projects, a menu appears in the top-left of the source code editor to see which projects reference the current code file.
+
+
+## Shared Project Properties
+
+
+When you select a Shared Project there fewer settings in the Properties panel than other project types. Because Shared Projects are not compiled (on their own), you cannot set output or compiler options, project configurations, assembly signing, or custom commands. The code in a Shared Project effectively inherits these values from whatever is referencing them.
+
+
+
+The **Properties** panel is shown below - the **Root Namespace** is the only setting that you can change.
+
+
+![](shared-projects-images/vs-sharedprojectproperties.png "Shared Project Properties")
+
+
+
+-----
+
+ <a name="Shared_Project_Example" />
+
+
+# Shared Project Example
+
+The [Tasky](https://github.com/xamarin/mobile-samples/tree/master/Tasky) example uses a Shared Project to contain the common code used by both the iOS, Android and Windows Phone applications. Both the `SQLite.cs` and `TaskRepository.cs` source code files utilise compiler directives (eg. `#if __ANDROID__`) to produce different output for each of the applications that reference them.
+
+The complete solution structure is shown below (in Visual Studio for Mac and Visual Studio respectively):
+
+# [Visual Studio for Mac](#tab/vsmac)
+
+ ![](shared-projects-images/xs-examplesolution.png "Visual Studio for Mac solution")
+
+# [Visual Studio](#tab/vswin)
+
+ ![](shared-projects-images/vs-examplesolution.png "Visual Studio solution")
+
+-----
+
+The Windows Phone project can be navigated from within Visual Studio for Mac, even though that project type is not supported for compilation in Visual Studio for Mac.
+
+The running applications are shown below.
+
+ ![](shared-projects-images/example.png "iOS, Android, Windows Phone examples")
+
+ <a name="Summary" />
+
+
+# Summary
+
+This document described how Shared Projects work, how they can be created and used in both Visual Studio for Mac and Visual Studio, and introduced a simple sample application that demonstrates a Shared Project in action.
+
+## Related Links
+
+- [Tasky Sample App](https://github.com/xamarin/mobile-samples/tree/master/Tasky)
+- [Portable Class Libraries (sample)](~/cross-platform/app-fundamentals/pcl.md)
+- [Sharing Code Options (sample)](~/cross-platform/app-fundamentals/code-sharing.md)

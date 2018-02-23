@@ -1,0 +1,140 @@
+---
+title: "Working with Icons"
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
+ms.technology: xamarin-ios
+author: bradumbaugh
+ms.author: brumbaug
+---
+
+# Working with Icons
+
+Apple Watch solutions require two sets of icons:
+
+* The iOS app icons that will appear on the iPhone.
+* Apple Watch icons that will be rendered in a circle
+  on the watch menu and in notification screens. The watch
+  app icon also appears in the [Apple Watch](~/ios/watchos/app-fundamentals/settings.md)
+  iOS app.
+
+## Apple Watch Icons
+
+<table align="center" border="1" cellpadding="1" cellspacing="1">
+    <tr>
+      <td valign="top">
+        <b>iOS App Icon</b>
+      </td>
+      <td valign="top">
+        Appears on the iPhone and starts the Parent app
+      </td>
+      <td>
+        <img src="icons-images/icon-ios.png" class="tableimg">
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" rowspan="3">
+        <b>Watch App Icon</b>
+      </td>
+      <td valign="top">
+        Appears on the Apple Watch home screen
+      </td>
+      <td>
+        <img src="icons-images/icon-home.png" class="tableimg" />
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        Appears on Watch notifications
+      </td>
+      <td>
+        <img src="icons-images/notification-icon.png" class="tableimg" />
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        Appears in the <a href="~/ios/watchos/app-fundamentals/settings.md">iOS Apple Watch App</a>
+      </td>
+      <td>
+        <a href="icons-images/watch-app.png">
+          <img src="icons-images/watch-app-sml.png" class="tableimg">
+        </a>
+      </td>
+    </tr>
+    <tbody>
+</table>
+
+
+
+## Configuring Your Solution
+
+To ensure your iOS app and watch app both show the correct
+  name and icon, follow these instructions for each project:
+
+### iOS App
+
+Refer to the [iOS Application Icons guide](~/ios/app-fundamentals/images-icons/app-icons.md)
+  to ensure your iOS app's icons are correctly configured.
+
+#### Info.plist
+
+The string that appears next to your watch app in the [Apple Watch settings app](~/ios/watchos/app-fundamentals/settings.md) is configured in the
+**iOS app's Info.plist**.
+
+Confirm that your **Info.plist** has a `CFBundleName` key and value (note:
+  this is different to the `CFBundleDisplayName`, you can have both):
+
+```xml
+<key>CFBundleName</key>
+<string>Your App Name</string>
+```
+
+### Apple Watch App
+
+Once your [Parent app](~/ios/watchos/app-fundamentals/parent-app.md) has
+  its icons configured, you need to add an application icon
+  asset catalog to the watch app.
+
+1. Right-click on the Watch App Project and select
+  **File > Add > New File... > iOS > Asset Catalog** to add an
+  asset catalog to the project.
+
+ ![](icons-images/newasset.png "Add an asset catalog to the project")
+
+2. Double-click on the **AppIcons.appiconset/Contents.json** file
+
+  ![](icons-images/xcassets-iconset-sml.png "The AppIcons contents")
+
+3. Add all the watchOS images, as shown in this screenshot:
+
+  [ ![](icons-images/appicons-sml.png "Add all the watchOS images, as shown in this screenshot")](icons-images/appicons.png)
+
+  Refer to [Apple's icon guidelines](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/IconandImageSizes.html) for the required sizes
+  (the dimensions are also shown on the screen). Remember
+  that these icons will be automatically clipped to render
+  in a circle.
+
+  Your icon list should look something like this:
+
+  ![](icons-images/xcassets-complete-sml.png "The icon list in the Solution Explorer")
+
+4. To ensure the asset catalog is included in the app, add
+  the following key and value to the **Watch App's Info.plist**:
+
+```xml
+<key>XSAppIconAssets</key>
+<string>Images.xcassets/AppIcons.appiconset</string>
+```
+
+You can verify the icons are configured correct by checking
+  the [Apple Watch settings app](~/ios/watchos/app-fundamentals/settings.md)
+  in the iPhone Simulator, or generating a [notification](~/ios/watchos/platform/notifications.md)
+  and confirming the icon appears on the notification screen.
+
+> [!NOTE]
+> **Note**: Icons cannot have an alpha channel (the app will be rejected during App Store submission if an alpha channel is present). You can check if an alpha channel exists and remove it [using the Preview app on Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
+
+
+## Related Links
+
+- [Apple's Icon & Images guide](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/IconandImageSizes.html)

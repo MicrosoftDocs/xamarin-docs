@@ -1,0 +1,132 @@
+---
+title: "Frequently Asked Questions"
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
+ms.technology: xamarin-android
+author: mgmclemore
+ms.author: mamcle
+ms.date: 02/16/2018
+---
+
+# Frequently Asked Questions
+
+## Installation & Setup
+
+### [Which Android SDK packages should I install?](install-android-sdk-packages.md)
+
+Installing the Android SDK doesn't automatically include all the
+minimum required packages for developing. While individual developer
+needs vary, this guide discusses the packages that will generally be
+required for developing with Xamarin.Android.
+
+### [Where can I set my Android SDK locations?](android-sdk-location.md)
+
+This guide describes both the default settings of the Android SDK,
+which should work for most setups; and how to change these defaults in
+Visual Studio for Mac or Visual Studio if needed.
+
+### [How do I update the Java Development Kit (JDK) version?](update-jdk.md)
+
+This article illustrates how to update the Java Development Kit (JDK)
+version on Windows and Mac.
+
+### [Can I use Java Development Kit (JDK) version 9?](jdk9-errors.md)
+
+Xamarin.Android requires JDK 8 rather than JDK 9. This article lists
+some common error messages that you may see if JDK 9 is installed,
+along with instructions for checking the JDK version.
+
+
+### [How can I manually install the Android Support libraries required by the Xamarin.Android.Support packages?](install-android-support-library.md)
+
+This guide provides example steps for installing the
+`Xamarin.Android.Support.v4` support library on Windows & Mac.
+
+### [How do I install Google Play Services in an emulator?](install-gps.md)
+
+This guide links to information on installing Google Play Services in
+Visual Studio's Android emulator.
+
+### [What USB drivers do I need to debug Android on Windows?](android-drivers-debug-windows.md)
+
+To debug on an Android device when developing in Windows; you need to
+install a compatible USB driver. The Android SDK Manager includes the
+"Google USB Driver" by default, which adds support for Nexus devices.
+Other devices require USB drivers specifically published by the device
+manufacturer. This guide provides information on finding these drivers
+as well as alternative testing methods.
+
+### [Is it possible to connect to Android emulators running on a Mac from a Windows VM?](connect-android-emulator-mac-windows.md)
+
+This guide covers methods when using a Google Android emulator.
+
+## General Questions
+
+### [How do I automate an Android NUnit Test project?](automate-android-nunit-test.md)
+
+This guide covers steps for setting up an Android NUnit test project,
+_not_ a Xamarin.UITest project. Xamarin.UITest guides can be found
+[here](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
+
+### [How do I enable Intellisense in Android .axml files?](enable-axml-intellisense.md)
+
+This guide describes how to activate Visual Studio's Intellisense for
+Android .axml files.
+
+### [Why can't my Android release build connect to the Internet?](android-internet.md)
+
+The most common cause of this issue is that the **INTERNET** permission
+is automatically included in a debug build, but must be set manually
+for a release build. This guide describes how to enable the permission
+on release builds.
+
+### [Smarter Xamarin Android Support v4 / v13 NuGet Packages](android-support-v4v13-libraries.md)
+
+`Support-v4` and `Support-v13` can not be used together in the same
+app, that is, they are mutually exclusive. This is because
+`Support-v13` actually contains all of the types and implementation of
+`Support-v4`. If you try and reference both in the same project you
+will encounter duplicate type errors.
+
+
+## Deprecated
+
+> [!NOTE]
+> **Note:** The articles below apply to issues that have been
+resolved in recent versions of Xamarin. However, if the issue occurs on
+the latest version of the software, please file a
+[new bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md)
+with your full versioning information and full build log output.
+
+### [What version of Xamarin.Android added Lollipop support?](xa-lollipop.md)
+
+This guide was originally written for the Android L
+preview.Xamarin.Android 4.17 added Android L Preview Support &
+Xamarin.Android 4.20 added Android Lollipop Support.
+
+### [Android.Support.v7.AppCompat - No resource found that matches the given name: attr 'android:actionModeShareDrawable'](missing-action-mode-share-drawable.md)
+
+This error may occur in older versions of Xamarin if some of the
+required Android SDK pacakages are missing.
+
+### [Adjusting Java memory parameters for the Android designer](android-designer-java-memory.md)
+
+The default memory parameters that are used when starting the `java`
+process for the Android designer might be incompatible with some system
+configurations. Starting with Xamarin Studio 5.7.2.7 and Xamarin for
+Visual Studio 3.9.344 these settings can be customized on a per-project
+basis.
+
+### [My Android Resource.designer.cs file will not update](resource-designer-wont-update.md)
+
+A bug in Xamarin.Studio 5.1 previously corrupted .csproj files by
+partially or completely deleting the xml code in the .csproj file. This
+would cause important parts of the Android build system (such as
+updating the Android Resource.designer.cs) to fail. As of the 5.1.4
+stable release on July 15th, this bug has been fixed; but in many cases
+the project file has to be repaired manually, as described in this
+guide.
+
+
+

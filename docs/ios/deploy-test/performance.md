@@ -1,0 +1,275 @@
+---
+title: "Xamarin.iOS Performance"
+description: "There are many techniques for increasing the performance of applications built with Xamarin.iOS. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application. This article describes and discusses these techniques."
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
+ms.technology: xamarin-ios
+author: bradumbaugh
+ms.author: brumbaug
+ms.date: 01/29/2016
+---
+
+# Xamarin.iOS Performance
+
+_There are many techniques for increasing the performance of applications built with Xamarin.iOS. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application. This article describes and discusses these techniques._
+
+Poor application performance presents itself in many ways. It can make an application seem unresponsive, can cause slow scrolling, and can reduce battery life. However, optimizing performance involves more than just implementing efficient code. The user's experience of application performance must also be considered. For example, ensuring that operations execute without blocking the user from performing other activities can help to improve the user's experience.
+
+There are a number of techniques for increasing the performance, and perceived performance, of applications built with Xamarin.iOS. They include:
+
+- [Avoid Strong Reference Cycles](#avoidcircularreferences)
+- [Optimize Table Views](#optimizetableviews)
+- [Use Opaque Views](#opaqueviews)
+- [Avoid FAT XIBs](#avoidfatxibs)
+- [Optimize Image Resources](#optimizeimages)
+- [Test on Devices](#testondevices)
+- [Synchronize Animations with the Display Refresh](#synchronizeanimations)
+- [Avoid Core Animation Transparency](#avoidtransparency)
+- [Avoid Code Generation](#avoidcodegeneration)
+
+> [!NOTE]
+> Before reading this article you should first read [Cross-Platform Performance](~/cross-platform/deploy-test/memory-perf-best-practices.md), which discusses non-platform specific techniques to improve the memory usage and performance of applications built using the Xamarin platform.
+
+<a name="avoidcircularreferences" />
+
+## Avoid Strong Circular References
+
+In some situations it's possible to create strong reference cycles that could prevent objects from having their memory reclaimed by the garbage collector. For example, consider the case where an [`NSObject`](https://developer.xamarin.com/api/type/Foundation.NSObject/)-derived subclass, such as a class that inherits from [`UIView`](https://developer.xamarin.com/api/type/UIKit.UIView/), is added to an `NSObject`-derived container and is strongly referenced from Objective-C, as shown in the following code example:
+
+```csharp
+class Container : UIView
+{
+    public void Poke ()
+    {
+	// Call this method to poke this object
+    }
+}
+
+class MyView : UIView
+{
+    Container parent;
+    public MyView (Container parent)
+    {
+        this.parent = parent;
+    }
+
+    void PokeParent ()
+    {
+        parent.Poke ();
+    }
+}
+
+var container = new Container ();
+container.AddSubview (new MyView (container));
+```
+
+When this code creates the `Container` instance, the C# object will have a strong reference to an Objective-C object. Similarly, the `MyView` instance will also have a strong reference to an Objective-C object.
+
+In addition, the call to `container.AddSubview` will increase the reference count on the unmanaged `MyView` instance. When this happens, the Xamarin.iOS runtime creates a `GCHandle` instance to keep the `MyView` object in managed code alive, because there is no guarantee that any managed objects will keep a reference to it. From a managed code perspective, the `MyView` object would be reclaimed after the [`AddSubview`](https://developer.xamarin.com/api/member/UIKit.UIView.AddSubview/p/UIKit.UIView/) call were it not for the `GCHandle`.
+
+The unmanaged `MyView` object will have a `GCHandle` pointing to the managed object, known as a *strong link*. The managed object will contain a reference to the `Container` instance. In turn the `Container` instance will have a managed reference to the `MyView` object.
+
+In circumstances where a contained object keeps a link to its container, there are several options available to deal with the circular reference:
+
+-  Manually break the cycle by setting the link to the container to `null`.
+-  Manually remove the contained object from the container.
+-  Call `Dispose` on the objects.
+-  Avoid the circular reference keeping a weak reference to the container. For more information about weak references.
+
+### Using WeakReferences
+
+One way of preventing a cycle is to use a weak references from the
+child to the parent, for example, the above code could be written like
+this:
+
+```csharp
+class Container : UIView
+{
+    public void Poke ()
+    {
+	// Call this method to poke this object
+    }
+}
+
+class MyView : UIView
+{
+    WeakReference<Container> weakParent;
+    public MyView (Container parent)
+    {
+        this.weakParent = new WeakReference<Container> (parent);
+    }
+
+    void PokeParent ()
+    {
+        if (weakParent.TryGetTarget (out var parent))
+            parent.Poke ();
+    }
+}
+
+var container = new Container ();
+container.AddSubview (new MyView (container));
+```
+
+This means that the contained object will not keep the parent alive,
+only the parent keeps the child alive through the call done to
+`container.AddSubView`.
+
+This idiom also happens in iOS APIs that use the delegate or data
+source pattern, where a peer class will contain the implementation,
+for example when setting the
+[`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/)
+property or the
+[`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/)
+in the [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/) class.
+
+In the case of classes that are created purely for the sake of
+implementing a protocol, for example the
+[`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/),
+what you can do is instead of creating a subclass, you can just
+implement the interface in the class and override the method, and
+assign the `DataSource` property to `this`.
+
+### Disposing of Objects with Strong References
+
+If a strong reference exists and it's difficult to remove the dependency, make a `Dispose` method clear the parent pointer.
+
+For containers, override the `Dispose` method to remove the contained objects, as shown in the following code example:
+
+```csharp
+class MyContainer : UIView
+{
+    public override void Dispose ()
+    {
+        // Brute force, remove everything
+        foreach (var view in Subviews)
+        {
+              view.RemoveFromSuperview ();
+        }
+        base.Dispose ();
+    }
+}
+```
+
+For a child object that keeps strong reference to its parent, clear the reference to the parent in the `Dispose` implementation:
+
+```csharp
+    class MyChild : UIView {
+    MyContainer container;
+    public MyChild (MyContainer container)
+    {
+        this.container = container;
+    }
+    public override void Dispose ()
+    {
+        container = null;
+    }
+}
+```
+
+For more information about releasing strong references, see
+[Release IDisposable Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable).
+There's also a good discussion in this blog post:
+[Xamarin.iOS, the garbage collector and me](http://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/).
+
+### More Information
+
+For more information, see [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) on Cocoa With Love, [Is this a bug in MonoTouch GC](http://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) on StackOverflow, and [Why can't MonoTouch GC kill managed objects with refcount > 1?](http://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) on StackOverflow.
+
+
+<a name="optimizetableviews" />
+
+## Optimize Table Views
+
+Users expect smooth scrolling and fast load times for [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/) instances. However, scrolling performance can suffer when cells contain deeply nested view hierarchies, or when cells contain complex layouts. However, there are techniques that can be used to avoid poor `UITableView` performance:
+
+- Reuse cells. For more information, see [Reuse Cells](#reusecells).
+- Reduce the number of subviews.
+- Cache cell content that is retrieved from a web service.
+- Cache the height of any rows if they aren't identical.
+- Make the cell, and any other views, opaque.
+- Avoid image scaling and gradients.
+
+Collectively these techniques can help to keep [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/) instances scrolling smoothly.
+
+<a name="reusecells" />
+
+### Reuse Cells
+
+When displaying hundreds of rows in a [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/), it would be a waste of memory to create hundreds of [`UITableViewCell`](https://developer.xamarin.com/api/type/UIKit.UITableViewCell/) objects when only a small number of them are displayed on screen at once. Instead, only the cells visible on screen can be loaded into memory, with the **content** being loaded into these reused cells. This prevents the instantiation of hundreds of additional objects, saving time and memory.
+
+Therefore, when a cell disappears from the screen its view can be placed in a queue for reuse, as shown in the following code example:
+
+```csharp
+class MyTableSource : UITableViewSource
+{
+    public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
+    {
+        // iOS will create a cell automatically if one isn't available in the reuse pool
+        var cell = (MyCell) tableView.DequeueReusableCell (MyCellId, indexPath);
+
+        // Perform required cell actions
+        return cell;
+    }
+}
+```
+
+As the user scrolls, the [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/) calls the `GetCell` override to request new views to display. This override then calls the [`DequeueReusableCell`](https://developer.xamarin.com/api/member/UIKit.UITableView.DequeueReusableCell/p/Foundation.NSString/) method and if a cell is available for reuse it will be returned.
+
+For more information, see [Cell Reuse](~/ios/user-interface/controls/tables/populating-a-table-with-data.md) in [Populating a Table with Data](~/ios/user-interface/controls/tables/populating-a-table-with-data.md).
+
+<a name="opaqueviews" />
+
+## Use Opaque Views
+
+Ensure that any views that have no transparency defined have their [`Opaque`](https://developer.xamarin.com/api/property/UIKit.UIView.Opaque/) property set. This will ensure that the views are optimally rendered by the drawing system. This is particularly important when a view is embedded in a [`UIScrollView`](https://developer.xamarin.com/api/type/UIKit.UIScrollView/), or is part of a complex animation. Otherwise the drawing system will composite the views with other content, which can noticeably impact on performance.
+
+<a name="avoidfatxibs" />
+
+## Avoid FAT XIBs
+
+Although XIBs have largely been replaced by storyboards, there are some circumstances where XIBs may still be used. When a XIB is loaded into memory, all of its contents are loaded into memory, including any images. If the XIB contains a view that's not immediately being used, then memory is being wasted. Therefore, when using XIBs ensure that there is only one XIB per view controller, and if possible, separate the view controller's view hierarchy into separate XIBs.
+
+<a name="optimizeimages" />
+
+## Optimize Image Resources
+
+Images are some of the most expensive resources that applications use, and are often captured at high resolutions. Therefore, when displaying an image from the app's bundle in a [`UIImageView`](https://developer.xamarin.com/api/type/UIKit.UIImageView/), ensure that the image and `UIImageView` are identically sized. Scaling images at runtime can be an expensive operation, particularly if the `UIImageView` is embedded in a [`UIScrollView`](https://developer.xamarin.com/api/type/UIKit.UIScrollView/).
+
+For more information, see [Optimize Image Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages) in the [Cross-Platform Performance](~/cross-platform/deploy-test/memory-perf-best-practices.md) guide.
+
+<a name="testondevices" />
+
+## Test on Devices
+
+Begin deploying and testing an application on a physical device as early as possible. Simulators do not perfectly match the behaviors and limitations of devices and so it is important to test in a real-world device scenario as early as possible.
+
+In particular the simulator does not in any way simulate the memory or CPU restrictions of a physical device.
+
+<a name="synchronizeanimations" />
+
+## Synchronize Animations with the Display Refresh
+
+Games tend to have tight loops to run the game logic and update the screen. Typical frame rates range from thirty to sixty frames per second. Some developers feel that they should update the screen as many times as possible per second, combining their game simulation with updates to the screen and might be tempted to go beyond sixty frames per second.
+
+However, the display server performs screen updates at an upper limit of sixty times per second. Therefore, attempting to update the screen faster than this limit can lead to screen tearing and micro-stuttering. It's best to structure code so that screen updates are synchronized with the display update. This can be achieved by using the [`CoreAnimation.CADisplayLink`](https://developer.xamarin.com/api/type/CoreAnimation.CADisplayLink/) class, which is a timer suitable for visualization and games that runs at sixty frames per second.
+
+<a name="avoidtransparency" />
+
+## Avoid Core Animation transparency
+
+Avoiding core animation transparency improve bitmap compositing performance. In general, avoid transparent layers and blurred borders if possible.
+
+<a name="avoidcodegeneration" />
+
+## Avoid Code Generation
+
+Generating code dynamically with `System.Reflection.Emit` or the *Dynamic Language Runtime* must be avoided because the iOS kernel prevents dynamic code execution.
+
+## Summary
+
+This article described and discussed techniques for increasing the performance of applications built with Xamarin.iOS. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application.
+
+## Related Links
+
+- [Cross-Platform Performance](~/cross-platform/deploy-test/memory-perf-best-practices.md)

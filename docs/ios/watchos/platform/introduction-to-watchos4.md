@@ -1,0 +1,36 @@
+---
+title: "Introduction to watchOS 4"
+description: "New features available to developers using Xamarin for watchOS 4."
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
+ms.technology: xamarin-ios
+author: bradumbaugh
+ms.author: brumbaug
+ms.date: 10/07/2017
+---
+
+# Introduction to watchOS 4
+
+_New features available to developers using Xamarin for watchOS 4._
+
+Access new features of watchOS 4 in your apps:
+
+* Read barometric altimeter data in the new Apple Watch Series 3.
+* Connect directly to network resources with cellular data available on some Apple Watch Series 3 models.
+* Core Bluetooth can connect directly to accessories.
+* New background modes for workout and audio apps.
+* New SiriKit intents for [lists and notes](~/ios/platform/introduction-to-ios11/sirikit.md).
+
+Changes since watchOS 3:
+
+* App code and UI run in a single process.
+* Location permission can be granted on the watch (no need to ask the user to accept on their phone).
+
+
+## Related Links
+
+- [watchOS Samples](https://developer.xamarin.com/samples/watchos/all/)
+- [What's new in watchOS 4](https://developer.apple.com/watchos/)
+- [WatchKit (Apple)](https://developer.apple.com/documentation/watchkit)
+- [What's new in watchOS 4 (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/205/)
