@@ -10,6 +10,7 @@ ms.author: amburns
 ms.date: 02/18/2018
 ---
 
+# Building HTML views using Razor Templates
 
 In the mobile development world the term “hybrid app” typically refers to an application that presents some (or all) of its screens as HTML pages inside a hosted web viewer control.
 

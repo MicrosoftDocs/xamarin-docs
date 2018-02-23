@@ -31,7 +31,7 @@ separate projects for very large applications) as well as logically separate
  <a name="Typical_Application_Layers" />
 
 
-# Typical Application Layers
+## Typical Application Layers
 
 Throughout this document and the case studies we refer to the following six
 application layers:
@@ -52,7 +52,7 @@ Access Layer because the operations are extremely basic.
  <a name="Common_Mobile_Software_Patterns" />
 
 
-# Common Mobile Software Patterns
+## Common Mobile Software Patterns
 
 Patterns are an established way to capture recurring solutions to common
 problems. There are a few key patterns that are useful to understand in building

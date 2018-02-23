@@ -16,7 +16,7 @@ _The latest version of the C# language – version 5 – introduced two new keyw
 
 Xamarin's Async support is built on the Mono 3.0 foundation and upgrades the API profile from the being a Mobile-friendly version of Silverlight to be a mobile-friendly version of .NET 4.5.
 
-# Overview
+## Overview
 
 This document introduces the new async and await keywords then walks through some simple examples implementing asynchronous methods in Xamarin.iOS and Xamarin.Android.
 
@@ -28,11 +28,11 @@ The sample application makes a simple asynchronous web request (without blocking
 
 Xamarin's async support is built on the Mono 3.0 foundation and upgrades the API profile from the being a mobile-friendly version of Silverlight to be a mobile-friendly version of .NET 4.5.
 
-# Requirements
+## Requirements
 
 C# 5 features require Mono 3.0 that is included in Xamarin.iOS 6.4 and Xamarin.Android 4.8. You will be prompted to upgrade your Mono, Xamarin.iOS, Xamarin.Android and Xamarin.Mac to take advantage of it.
 
-# Using async &amp; await
+## Using async &amp; await
 
  `async` and `await` are new C# language features that work in conjunction with the Task Parallel Library to make it easy to write threaded code to perform long-running tasks without blocking the main thread of your application.
 
@@ -183,7 +183,7 @@ Some important points:
 -  When the asynchronous method completes and returns, execution resumes at the  `await` which means the integer result is returned and then rendered in a UI widget.
 
 
-# Summary
+## Summary
 
 Using async and await greatly simplifies the code required to spawn long-running operations on background threads without blocking the main thread. They also make it easy to access the results when the task has completed.
 

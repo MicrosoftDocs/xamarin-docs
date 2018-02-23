@@ -18,7 +18,7 @@ _This section provides an overview of installation and setup practices that can 
 
 This article explains how to install Xamarin for Visual Studio on Windows computer.
 
-##  [Installing Visual Studio for Mac](mac.md)
+##  [Installing Visual Studio for Mac](/visualstudio/mac/installation/)
 
 This article explains how to install Visual Studio for Mac.
 

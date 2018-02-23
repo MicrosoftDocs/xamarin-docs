@@ -24,7 +24,7 @@ built in APIs that help developers build accessible apps, such as
 [Google TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) and
 [Apple's VoiceOver](http://www.apple.com/accessibility/ios/voiceover/).
 
-# Platform-Specific APIs
+## Platform-Specific APIs
 
 To implement the guidelines in this document, use the APIs provided
 by each platform:
@@ -36,7 +36,7 @@ by each platform:
 
 <a name="checklist" />
 
-# Accessibility Checklist
+## Accessibility Checklist
 
 Follow these tips to ensure that your apps are accessible to
 the widest audience possible. Check out the [Android Accessibility Testing Checklist](http://developer.android.com/training/accessibility/testing.html)

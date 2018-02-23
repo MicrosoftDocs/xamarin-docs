@@ -14,9 +14,6 @@ ms.date: 02/17/2018
 
 _This walkthrough covers how a mobile application built with Xamarin can consume a WCF web service using the BasicHttpBinding class._
 
-<a name="Overview" />
-
-# Overview
 
 It is a common requirement for mobile applications to be able to communicate with backend systems. There are many choices and options for backend frameworks, one of which is [Windows Communication Foundation](http://msdn.microsoft.com/en-us/library/ms731082.aspx) (WCF). This walkthrough will provide an example of how a Xamarin mobile application can consume a WCF service using the `BasicHttpBinding` class. The walkthrough includes the following topics:
 
@@ -26,13 +23,13 @@ It is a common requirement for mobile applications to be able to communicate wit
 
 <a name="Requirements" />
 
-# Requirements
+## Requirements
 
 This walkthrough assumes that you have some familiarity with creating and using WCF services.
 
 <a name="Creating_a_WCF_Service" />
 
-# Creating a WCF Service
+## Creating a WCF Service
 
 The first task before us is to create a WCF service for a mobile applications to communicate with.
 
@@ -201,7 +198,7 @@ You have created a very basic WCF service hosted in IIS Express that will accept
 
 To allow IIS Express to keep running and serving the service, turn off the **Edit and Continue** option in *Project Properties > Web >Debuggers*.
 
-# Creating a Proxy for the Web Service
+## Creating a Proxy for the Web Service
 
 A web service proxy must be created for the WCF service, before an application can consume the service. This can be accomplished as follows:
 
@@ -218,7 +215,7 @@ A web service proxy must be created for the WCF service, before an application c
 
 <a name="Creating_a_Xamarin_Android_Application" />
 
-# Creating a Xamarin.Android Application
+## Creating a Xamarin.Android Application
 
 The WCF service proxy can be consumed by a Xamarin.Android application, as follows:
 
@@ -385,7 +382,7 @@ The WCF service proxy can be consumed by a Xamarin.Android application, as follo
 
 <a name="Creating_a_Xamarin_iOS_Application" />
 
-# Creating a Xamarin.iOS Application
+## Creating a Xamarin.iOS Application
 
 The WCF service proxy can be consumed by a Xamarin.iOS application, as follows:
 
@@ -518,7 +515,7 @@ The WCF service proxy can be consumed by a Xamarin.iOS application, as follows:
 
 <a name="Summary" />
 
-# Summary
+## Summary
 
 This tutorial covered how to work with a WCF service in a mobile application using Xamarin.Android and Xamarin.iOS. It showed how to create a WCF service and explained how to configure Windows 10 and IIS Express to accept connections from remote devices. It then explained how to generate a WCF proxy client and demonstrated how to use the proxy client in both Xamarin.Android and Xamarin.iOS applications.
 

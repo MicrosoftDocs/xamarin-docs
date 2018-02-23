@@ -10,6 +10,8 @@ ms.author: amburns
 ms.date: 03/23/2017
 ---
 
+# Xamarin.Forms using Visual Basic.NET
+
 Xamarin does not support Visual Basic directly - follow the instructions on
 this page to create a C# Xamarin.Forms PCL solution and then replace the
 common code PCL project with Visual Basic.

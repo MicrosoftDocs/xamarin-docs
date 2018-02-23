@@ -10,6 +10,8 @@ ms.author: amburns
 ms.date: 03/23/2017
 ---
 
+# Portable Visual Basic.NET
+
 Xamarin iOS and Android projects do not natively support Visual Basic; however developers can use Portable Class Libraries to migrate existing Visual Basic code to iOS and Android, or to write significant portion of their application logic in Visual Basic. Xamarin.Forms applications can be created entirely in Visual Basic (excluding custom renderers, dependency services, and XAML codebehind).
 
 ## Requirements

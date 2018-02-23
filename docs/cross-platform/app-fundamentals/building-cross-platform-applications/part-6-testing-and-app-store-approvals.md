@@ -1,4 +1,4 @@
----
+#---
 title: "Part 6 - Testing and App Store Approvals"
 ms.topic: article
 ms.prod: xamarin
@@ -14,7 +14,7 @@ ms.date: 03/23/2017
 <a name="Testing" />
 
 
-# Testing
+## Testing
 
 Many apps (even Android apps, on some stores) will have to pass an approval
 process before they are published; so testing is critical to ensure your app
@@ -25,7 +25,7 @@ wide variety of hardware.
  <a name="Test_on_All_Platforms" />
 
 
-## Test on All Platforms
+### Test on All Platforms
 
 There are slight differences between what .NET supports on Windows
 phone, tablet, and desktop devices, as well as limitations on iOS that prevent dynamic code to
@@ -43,7 +43,7 @@ can.
  <a name="Devices_in_cloud" />
 
 
-### Devices in cloud
+#### Devices in cloud
 
 The mobile phone and tablet ecosystem is growing all the time, making it
 impossible to test on the ever-increasing number of devices available. To solve
@@ -57,7 +57,7 @@ to test iOS and Android applications on hundreds of different devices.
  <a name="Test_Management" />
 
 
-## Test Management
+### Test Management
 
 When testing applications within your organization or managing a beta program
 with external users, there are two challenges:
@@ -79,7 +79,7 @@ usage information.
  <a name="Test_Automation" />
 
 
-## Test Automation
+### Test Automation
 
 Xamarin [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) can be used to create automated
 user interface test scripts that can be run locally or uploaded to
@@ -94,7 +94,7 @@ user interface test scripts that can be run locally or uploaded to
  <a name="Touch.Unit" />
 
 
-### Touch.Unit
+#### Touch.Unit
 
 Xamarin.iOS includes a unit-testing framework called Touch.Unit which follows
 the JUnit/NUnit style writing tests.
@@ -105,7 +105,7 @@ running Touch.Unit.
  <a name="Andr.Unit" />
 
 
-### Andr.Unit
+#### Andr.Unit
 
 There is an open-source equivalent of Touch.Unit for Android called
 Andr.Unit. You can download it from [github](https://github.com/spouliot/Andr.Unit) and read
@@ -114,7 +114,7 @@ about the tool on [@spouliot's blog](http://spouliot.wordpress.com/2011/10/30/an
  <a name="Windows_Phone" />
 
 
-### Windows Phone
+#### Windows Phone
 
 Here are some links to help setup unit testing for Windows Phone:
 
@@ -129,7 +129,7 @@ Here are some links to help setup unit testing for Windows Phone:
  <a name="App_Store_Approvals" />
 
 
-# App Store Approvals
+## App Store Approvals
 
 Apple and Microsoft operate the only store on their platforms: the App Store
 and Marketplace respectively. Both lock-down their devices and implement a
@@ -152,7 +152,7 @@ app is finally approved.
  <a name="Be_prepared" />
 
 
-## Be prepared
+### Be prepared
 
 The first piece of advice: plan your app’s launch well in advance and make
 allowances for a possible rejection and re-submission. Each store requires you
@@ -177,7 +177,7 @@ consideration to ensure your app is approved without any hiccups.
  <a name="Quality" />
 
 
-## Quality
+### Quality
 
 It sounds obvious, but applications will often get rejected because they do
 not meet a certain level of quality: after all, this is the reason why the
@@ -206,7 +206,7 @@ and once again, get rejected.
  <a name="Check_Your_Edge_Cases" />
 
 
-## Check Your Edge Cases
+### Check Your Edge Cases
 
 A common trap for developers is failing to address edge-cases, especially
 those that require re-configuring their simulator or device to test properly. It
@@ -228,7 +228,7 @@ might have been missed:
  <a name="Guidelines_are_more_than_just_a_‘guide’" />
 
 
-## Guidelines are more than just a ‘guide’
+### Guidelines are more than just a ‘guide’
 
 Apple is famous for being strict about adherence to their Human Interface
 Guidelines as one of the key strengths of their platform is consistency (and the
@@ -255,7 +255,7 @@ platform.
  <a name="Implementing_Platform-Specific_Features" />
 
 
-## Implementing Platform-Specific Features
+### Implementing Platform-Specific Features
 
 Things are a little stricter when it comes to implementing platform-specific
 services, especially on iOS. To avoid automatic-rejection by Apple, there are
@@ -270,7 +270,7 @@ some rules to follow with the following iOS features:
  <a name="Manage_Your_Metadata" />
 
 
-## Manage Your Metadata
+### Manage Your Metadata
 
 In addition to the obvious technical issues that can result in an application
 being rejected, there are some more subtle aspects of your submission that could
@@ -290,7 +290,7 @@ it is worthwhile taking the time to get it right.
  <a name="App_Stores:_Not_For_Everyone" />
 
 
-## App Stores: Not For Everyone
+### App Stores: Not For Everyone
 
 The primary focus of the stores on each platform is consumer distribution -
 the ability to reach as many customers as possible. However not all applications
@@ -316,7 +316,7 @@ distribution to other closed groups of customers or suppliers. [Enterprise (and 
  <a name="App_Store_Summary" />
 
 
-## App Store Summary
+### App Store Summary
 
 The review process can be daunting, but like the rest of the development
 lifecycle you can help ensure success with some planning and attention to

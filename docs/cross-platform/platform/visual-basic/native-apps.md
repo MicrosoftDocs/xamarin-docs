@@ -10,6 +10,8 @@ ms.author: amburns
 ms.date: 03/23/2017
 ---
 
+# Visual Basic.NET in Xamarin iOS and Android
+
 The [TaskyPortable](/samples/mobile/VisualBasic/TaskyPortableVB/) sample application demonstrates how Visual Basic code compiled into a Portable Class Library can be used with Xamarin. Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone:
 
  [ ![](native-apps-images/image5.png "iOS, Android, and Windows phones running an app built with Visual Basic")](native-apps-images/image5.png)

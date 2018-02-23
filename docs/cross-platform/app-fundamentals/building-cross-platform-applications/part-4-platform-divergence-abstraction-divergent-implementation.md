@@ -192,12 +192,12 @@ cross-platform functionality:
  <a name="Divergent_Implementation" />
 
 
-# Divergent Implementation
+## Divergent Implementation
 
  <a name="Conditional_Compilation" />
 
 
-## Conditional Compilation
+### Conditional Compilation
 
 There are some situations where your shared code will still need to work
 differently on each platform, possibly accessing classes or features that behave
@@ -217,7 +217,7 @@ these symbols).
 
 <a name="iOS" />
 
-### iOS
+#### iOS
 
 Xamarin.iOS defines `__IOS__` which you can use to detect iOS devices.
 
@@ -241,7 +241,7 @@ There are also Watch- and TV-specific symbols:
 
 <a name="Android" />
 
-### Android
+#### Android
 
 Code that should only be compiled into Xamarin.Android applications can use
 the following
@@ -264,7 +264,7 @@ will be sufficient.
 #endif
 ```
 
-### Mac
+#### Mac
 
 There is not currently a built-in symbol for Xamarin.Mac, but you can
 add your own in the Mac app project **Options > Build > Compiler** in the
@@ -277,7 +277,7 @@ example `__MAC__`)
 
 <a name="Windows_Phone" />
 
-### Windows Phone
+#### Windows Phone
 
 Windows Phone apps defines two symbols – `WINDOWS_PHONE` and `SILVERLIGHT` – that can be used to target code to the
 platform. These don't have the underscores surrounding them like the Xamarin

@@ -26,13 +26,13 @@ This guide will discuss how to downgrade NUnit 3.0 to NUnit 2.6.4 using NuGet in
 
 -----
 
-# Requirements
+## Requirements
 
 This guide assumes that there is an existing solution with a mobile app project and a test project.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-# Installing NUnit 2.6.4 in Visual Studio for Mac
+## Installing NUnit 2.6.4 in Visual Studio for Mac
 
 The following steps describe how to install NUnit 2.6.4.
 
@@ -50,14 +50,14 @@ It is possible to confirm that NUnit 2.6.4 has been installed by inspecting the 
 
 [![](installing-nunit-using-nuget-images/nunit-2-6-4-installed.png "Inspect the version number of the NUnit package in the Solution Pad")](installing-nunit-using-nuget-images/nunit-2-6-4-installed.png)
 
-# Summary
+## Summary
 
 This guide discussed how to downgrade NUnit 3.0 to NUnit 2.6.4 in Visual Studio for Mac using the Package Manager Console.
 
 
 # [Visual Studio](#tab/vswin)
 
-# Installing NUnit 2.6.4 in Visual Studio
+## Installing NUnit 2.6.4 in Visual Studio
 
 This section will focus on using the _NuGet Package Manager Console_ in Visual Studio 2015 to uninstall NUnit 3.0 and install NUnit 2.6.4.
 
@@ -99,7 +99,7 @@ If you see NUnit 3.0 or higher, then you must downgrade to NUnit 2.6.4.
 		Added package 'NUnit.2.6.4' to 'packages.config'
 		Successfully installed 'NUnit 2.6.4' to <TEST PROJECT NAME>
 	
-# Summary
+## Summary
 
 This guide discussed how to downgrade NUnit 3.0 to NUnit 2.6.4 in Visual Studio 2015 using the Package Manager Console.
 

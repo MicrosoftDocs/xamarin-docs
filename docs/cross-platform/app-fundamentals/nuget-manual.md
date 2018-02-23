@@ -1,4 +1,4 @@
- ---
+---
 title: "Manually Creating NuGet Packages for Xamarin"
 description: "This page contains some tips to help build NuGet packages that target the Xamarin platform."
 ms.topic: article
@@ -20,8 +20,8 @@ _This page contains some tips to help build NuGet packages that target the Xamar
 > Refer to the [Multiplatform Libraries for Code Sharing](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)
 > guide for more details.
 
-NuGet Package Xamarin Profiles
-==============================
+## NuGet Package Xamarin Profiles
+
 
 The NuGet website's [Supporting Multiple .NET Framework Versions and Profiles](https://docs.nuget.org/create/enforced-package-conventions)
 discusses how to support different Microsoft frameworks and profiles
@@ -74,8 +74,7 @@ To clarify:
 - **Xamarin.iOS1.0** also matches Xamarin.iOS 1.0 and newer
 
 
-PCL NuGets with Platform Dependencies
-=====================================
+## PCL NuGets with Platform Dependencies
 
 PCL Profiles are limited in what .NET framework APIs they can access,
 and they certainly can't access platform-specific code. These 3rd-party links
@@ -89,8 +88,7 @@ and native APIs to provide compatibility for Xamarin and other platforms:
 This external [list of PCL Profiles with their NuGet target name](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY)
 is also a useful reference.
 
-Examples
-========
+## Examples
 
 Some open-source examples that you can refer to:
 

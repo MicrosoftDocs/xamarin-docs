@@ -18,14 +18,14 @@ _Documentation and sample code downloads for Azure._
 
 [Evolve 2016: Developing Connected Apps Using Azure and Xamarin](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
-# Connected Services in Visual Studio for Mac
+## Connected Services in Visual Studio for Mac
 
 The new [Connected Services](connected-services.md) feature of Visual Studio for Mac
   helps developers to quickly and easily add Azure functionality to
   mobile applications from within the IDE. Currently available for testing in the Alpha channel.
 
 
-# Azure App Services
+## Azure App Services
 
 There is a collection of [Azure Mobile Apps documentation](~/cross-platform/data-cloud/mobile-apps.md)
   that guides you through the process of implementing
@@ -37,14 +37,14 @@ Configure your apps on the [Azure App Services portal](https://portal.azure.com/
   to access Mobile Apps, Web APIs, Storage, and much more. Learn about [how app services are different](http://azure.microsoft.com/en-us/updates/whats-new-with-azure-app-service/) and watch in
   [these videos from Microsoft](http://azure.microsoft.com/en-us/campaigns/azure-march-announcement/).
 
-# Active Directory Authentication
+## Active Directory Authentication
 
 [Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md)
   can be used to login users in Xamarin apps via the
   [Xamarin.Auth Component](https://www.nuget.org/packages/Xamarin.Auth/).
   The apps can then access additional services like Office 365.
 
-# WebAPI
+## WebAPI
 
 Microsoft's Web API exposes a REST-like interface
   that can be easily consumed by Xamarin applications.
@@ -53,7 +53,7 @@ Microsoft's Web API exposes a REST-like interface
   apps.
 
 
-##  [Introduction To Web Services](~/cross-platform/data-cloud/web-services/index.md)
+###  [Introduction To Web Services](~/cross-platform/data-cloud/web-services/index.md)
 
 This tutorial introduces how to integrate REST, WCF and SOAP web service
   technologies with Xamarin mobile applications. It examines various service
@@ -62,7 +62,7 @@ This tutorial introduces how to integrate REST, WCF and SOAP web service
   provides a basic overview of creating a RESTful web service for consumption
   with a Xamarin mobile application.
 
-# Samples
+## Samples
 
 In addition to the [documentation samples](https://github.com/xamarin/mobile-samples/tree/master/Azure),
 the following complete applications demonstrate various Azure features

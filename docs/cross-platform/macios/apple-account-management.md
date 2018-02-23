@@ -29,7 +29,7 @@ You can also use the iOS Bundle Signing tools to do the following:
 
 For more information on using these features, refer to the [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide.
 ️
-# Requirements
+## Requirements
 
 Apple account management is available on Visual Studio for Mac. It is not currently available on Visual Studio for Windows.
 
@@ -66,7 +66,7 @@ You must have an Apple Developer account to use this feature. More information o
 
 <a name="managing">
     
-# Managing Signing Identities and Provisioning Profiles
+## Managing Signing Identities and Provisioning Profiles
 
 The team details dialog displays a list of Signing Identities, organized by type. The **Status** column advises you if the certificate is: 
 
@@ -80,7 +80,7 @@ The team details dialog displays a list of Signing Identities, organized by type
 
   ![](apple-account-management-images/image7.png)
 
-## Create a Signing Identities
+### Create a Signing Identities
 
 To create a new signing identity, select the **Create new Certificate** drop-down button and select the type that you require. If you have the correct permissions a new signing identity will appear after a few seconds.
 
@@ -88,18 +88,18 @@ If an option in the drop-down is greyed out and unselected, as illustrated below
 
 ![](apple-account-management-images/image8.png)
 
-## Download Provisioning Profiles
+### Download Provisioning Profiles
 
 The team details dialog also displays a list of all provisioning profiles connected to your developer account. You can download all provisioning profiles to your local machine by pressing the **Download all Profiles** button
 
 ![](apple-account-management-images/image9.png)
 
-# iOS Bundle Signing
+## iOS Bundle Signing
 
 For information on deploying your app to a device, refer to the [device provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide.
 
 
-# Troubleshooting
+## Troubleshooting
 
 #### View Details dialog is empty
 

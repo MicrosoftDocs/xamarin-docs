@@ -34,7 +34,7 @@ for each language and bundling them with the internationalize app.
 Internationalization it is often shortened to i18n – shorthand for 18 letters
 between "i" and "n". Localization is similarly shortened to L10n – for 10 letters between "L" and "n".
 
-# Overview
+## Overview
 
 This document introduces the concepts associated with internationalization and
 localization, and how they apply to mobile application development in general.
@@ -52,13 +52,13 @@ Regardless of which mobile platforms your app targets these tips will help you
 build a high-quality localized app.
 
 
-# Design Considerations
+## Design Considerations
 
 Architecting an application so that it is possible to localize its content is called internationalization. Doing internationalization properly is more than just allowing for different language strings to be loaded at runtime – a well-designed app should allow for all resources to be changed based on language and locale (including images, sounds and videos) and can adapt formatting and layout to cope with different sized strings.
 
 This section discusses some design considerations to be taken into account when building an internationalized application.
 
-## Layouts and string length
+### Layouts and string length
 
 Chinese and Japanese strings can be very short – sometimes one or two characters can be meaningful enough for an input field label.
 
@@ -74,7 +74,7 @@ Layouts where the display label and input field are side-by-side are difficult t
 
 As a general rule, if you are building fixed layouts (especially side-by-side elements) allow at least 50% more width than your English strings require for labels and text. This won’t solve every problem but will provide a buffer that will work in many cases.
 
-## Input validation
+### Input validation
 
 Beware of assumptions when writing validation rules. It might seem valid to require a text field input to "require" at least three characters in English, since a single letter very rarely has any meaning. In Chinese and Japanese however a single character might be a valid input, and a validation message "at least 3 characters is required" does not make sense for those languages.
 
@@ -82,7 +82,7 @@ Other seemingly simple tasks like validating an email address or website URL bec
 
 Write your validation rules with internationalization in mind – either choose the least restrictive rules, or write the logic so that it works differently for each language.
 
-## Images and Color
+### Images and Color
 
 Not every image needs to change based on a user’s language choice. Many icons or photos will be suitable for all users, not matter what language they speak.
 Some resources make sense to localize though, such as:
@@ -92,7 +92,7 @@ Some resources make sense to localize though, such as:
  - Colors – Some cultures understand colors differently – red might mean warning in one region, but good luck in another. Check with native speakers when designing your app to determine whether you should be building a mechanism to localize colors.
 
 
-## Videos and Sound
+### Videos and Sound
 
 Videos and sound present special challenges when localizing an application, because while it’s relatively easy to get strings translated, recording multiple voiceover tracks or video clips can be both expensive and difficult.
 
@@ -101,7 +101,7 @@ Multiple copies of video and sound files may also significantly increase the siz
 There are often multiple ways to solve localization issues – the most important thing is to consider them up-front and ensure your application is designed to take care of them.
 
 
-## Dates, Times, Numbers and Currency
+### Dates, Times, Numbers and Currency
 
 If you’re using .NET formatting functions, remember to specify the culture so that decimal separators are parsed correctly (and avoid conversion exceptions being thrown). For example both 1.99 and 1,99 are valid decimal representations depending on your locale.
 
@@ -121,7 +121,7 @@ See the [Parsing Numeric Strings](http://msdn.microsoft.com/en-us/library/xbtzcc
 
 <a name="rtl" />
 
-## Right-to-left (RTL) Languages
+### Right-to-left (RTL) Languages
 
 Some languages, such as Arabic, Hebrew, and Urdu (for example), are read from right to left.
 Applications that support these languages should use screen designs that adapt for
@@ -137,7 +137,7 @@ Both iOS and Android support right-to-left layouts and font rendering, with
 built-in features that help to make the above adjustments. Xamarin.Forms does not
 currently automatically support RTL rendering.
 
-## Sorting
+### Sorting
 
 Different languages define the sort order of their alphabets differently, even when they use the same character set.
 
@@ -145,7 +145,7 @@ See the [Detail of String Comparison](http://msdn.microsoft.com/en-us/library/dd
 
 It’s unlikely the built-in database capabilities on the mobile platforms will support language-specific sort ordering so you may be required to implement additional code in your business logic.
 
-## Text search
+### Text search
 
 Ensure you write and test your search algorithm with multiple languages in mind. Things to consider include:
 
@@ -155,7 +155,7 @@ Ensure you write and test your search algorithm with multiple languages in mind.
  - Sorting – make sure the results are sorted correctly (see above).
 
 
-## Data from external sources
+### Data from external sources
 
 Many applications download data from external sources, from Twitter and RSS feeds to weather, news, or stock prices. When displaying this to a user you need to consider the possibility that you will display a screen of irrelevant or unreadable information to them.
 
@@ -168,7 +168,7 @@ There are few strategies you can use to try and ensure your app displays data re
 This could also affect external links to audio tracks or videos – when designing your application be sure to plan ahead for sourcing translated content or ensuring that users are adequately informed by the user interface when content will not be presented in their language.
 
 
-## Don’t over-translate
+### Don’t over-translate
 
 Some strings in your app might not need translating, or at the very least need special attention by the translator. Examples might include:
 
@@ -180,13 +180,13 @@ Some strings in your app might not need translating, or at the very least need s
 Finally, be sure to include detailed instructions for the translator if certain strings require special treatment.
 
 
-## Formatted text
+### Formatted text
 
 Not usually a problem with mobile apps because strings generally aren’t richly formatted. However if rich text (such as bold or italic formatting) is required in your app ensure the translator knows how to input the formatting, your strings files store it correctly and it is formatted properly before being displayed to the user (ie. don’t accidentally let the formatting codes themselves be presented to the user).
 
 
 
-# Translation Tips
+## Translation Tips
 
 Translating the strings used by an application is considered to be part of the localization process. Typically this task will be outsourced to a translation service and performed by multilingual staff that may not know your application or your business.
 
@@ -194,7 +194,7 @@ The following tips will help you produce strings that are easier to translate ac
 
 
 
-## Localize complete strings, not words
+### Localize complete strings, not words
 
 Sometimes developers take the approach of trying to specify single words or sentence 'snippets' so that they can re-use them throughout the application. For example, for the text "You have 5 messages." they might specify the following strings for translation
 
@@ -219,7 +219,7 @@ and then attempt to create the correct phrase on-the-fly in code using string co
 **This is discouraged** because it will not necessarily work for all languages and will be difficult for the translator to understand the context of each short segment. It also leads to re-use of translated strings, which can cause problems later if they are used in different contexts (and then get updated).
 
 
-## Allow for parameter re-ordering
+### Allow for parameter re-ordering
 
 Some programming languages require extra syntax to specify the order of parameters in a string, however .NET already supports the concept of numbered placeholders, so
 
@@ -238,7 +238,7 @@ could be translated the following (where the position and order of the placehold
 and the tokens will be ordered as the translator intended. Be sure to include an explanation of what each placeholder contains when sending the string to a translator.
 
 
-## Use multiple strings for cardinality
+### Use multiple strings for cardinality
 
 Avoid strings like `"You have {0} message/s."`
 Use specific strings for each state to provide a better user experience:
@@ -255,7 +255,7 @@ Use specific strings for each state to provide a better user experience:
 You will have to write code in your app to evaluate the number being displayed and choose the appropriate string. Some platforms (including iOS and Android) have built-in features to automatically choose the best plural string based on the preferences for the current language/locale.
 
 
-## Allowing for gender
+### Allowing for gender
 
 Latin-based languages sometimes use different words depending on the gender of the subject. If your app knows about gender, you should allow the translated strings to reflect this.
 
@@ -269,7 +269,7 @@ There is also the more obvious case even in English, where strings refer to a sp
 "{0} commented on their post"
 ```
 
-## Don’t reuse strings
+### Don’t reuse strings
 
 Or more accurately, don’t reuse strings just because they are similar when the string itself has a different purpose or meaning.
 
@@ -346,9 +346,9 @@ Refer to Microsoft’s instructions for [How to test region settings for Windows
 -->
 
 
-## Translation Services
+### Translation Services
 
-### Machine translation
+#### Machine translation
 
 For testing purposes it is can help to use one of the many online translation tools to include some localized text in your app during development.
 
@@ -358,14 +358,14 @@ For testing purposes it is can help to use one of the many online translation to
 
 There are many others available. The quality of machine translation generally isn't considered good enough to release an application without first being reviewed and tested by professional translators or native speakers.
 
-### Professional translation
+#### Professional translation
 
 There are also professional translation services that will take your strings and distribute them to their own translators, providing you with finished translations for a fee.
 
 One of the best-known services is [LionBridge](http://www.lionbridge.com/). Most professional services support all the common file types including strings, XML, RESX and POT/PO.
 
 
-# Summary
+## Summary
 
 This article introduced some of the concepts that you should be familiar with before internationalizing your app and then localizing your resources, and also covered how to change language preferences for each platform.
 

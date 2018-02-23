@@ -36,7 +36,7 @@ Examples of different services you can access include:
 - Office365
 
 
-#Conclusion
+## Conclusion
 
 Using the steps above you can authenticate your mobile apps against
   Azure Active Directory. The Active Directory

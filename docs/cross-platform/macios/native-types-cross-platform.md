@@ -14,13 +14,12 @@ ms.date: 04/07/2016
 
 _This article covers using the new iOS Unified API Native types (nint, nuint, nfloat) in a cross-platform application where code is shared with non-iOS devices such as Android or Windows Phone OSes._
 
-#Overview
 
 The 64-types native types work with the iOS and Mac APIs. If you are writing shared code that runs on Android or Windows as well, you'll need to manage the conversion of Unified types into regular .NET types that you can share.
 
 This document discusses different ways to interoperate with the Unified API from your shared/common code.
 
-# When to Use the Native Types
+## When to Use the Native Types
 
 Xamarin.iOS and Xamarin.Mac Unified APIs still include the `int`, `uint` and `float` data types, as well as the `RectangleF`, `SizeF` and `PointF` types. These existing data types should continue to be used in any shared, cross-platform code. The new Native data types should only be used when making a call to a Mac or iOS API where support for architecture-aware types are required.
 
@@ -28,11 +27,11 @@ Depending on the nature of the code being shared, there might be times where cro
 
 How these changes are handled depends on the size and complexity of the application and the form of code sharing that has been used, as we will see in the follow sections.
 
-# Code Sharing Considerations
+## Code Sharing Considerations
 
 As stated in the [Sharing Code Options](~/cross-platform/app-fundamentals/code-sharing.md) document, there are two main ways to sharing code between cross-platform projects: Shared Projects and Portable Class Libraries. Which of the two types has been used, will limit the options we have when handling the Native data types in cross-platform code.
 
-## Portable Class Library Projects
+### Portable Class Library Projects
 
 A Portable Class Library (PCL) allows you to targeting the platforms you wish to support, and use Interfaces to provide platform-specific functionality.
 
@@ -46,7 +45,7 @@ CGRect rect = new CGRect (0, 0, 200, 200);
 Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((RectangleF)rect));
 ```
 
-## Shared Projects
+### Shared Projects
 
 The Shared Asset Project type allows you to organize your source code in a separate project that then gets included and compiled into the individual platform-specific front end apps, and use `#if` compiler directives as required to manage platform-specific requirements.
 
@@ -54,7 +53,7 @@ The size and complexity of the front end mobile applications that are consuming 
 
 Based on these factors, the following types of solutions might be implemented using the `if __UNIFIED__ ... #endif` compiler directives to handle the Unified API specific changes to the code.
 
-### Using Duplicate Methods
+#### Using Duplicate Methods
 
 Take the example of a library that is doing transformations on rectangular data given above. If the library only contains one or two very simple methods, you might choose to create duplicate versions of those methods for Xamarin.iOS and Xamarin.Android. For example:
 
@@ -99,7 +98,7 @@ namespace NativeShared
 
 In the above code, since the `CalculateArea` routine is very simple, we have used conditional compilation and created a separate, Unified API version of the method. On the other hand, if the library contained many routines or several complex routines, this solution would not be feasible, as it would present an issue keeping all of the methods in sync for modifications or bug fixes.
 
-### Using Method Overloads
+#### Using Method Overloads
 
 In that case, the solution might be to create an overload version of the methods using 32 bit data types so that they now take `CGRect` as parameter and/or return value, convert that value to a `RectangleF` (knowing that converting from `nfloat` to `float` is a lossy conversion), and call the original version of the routine to do the actual work. For example:
 
@@ -146,7 +145,7 @@ namespace NativeShared
 
 Again, this is a good solution as long as the loss of precision doesn't affect the results for your application's specific needs.
 
-### Using Alias Directives
+#### Using Alias Directives
 
 For areas where the loss of precision is an issue, another possible solution is to use `using` directives to create an alias for Native and CoreGraphics data types by including the following code to the top of the shared source code files and converting any needed `int`, `uint` or `float` values to `nint`, `nuint` or `nfloat`:
 
@@ -210,7 +209,7 @@ Note that here we have changed the `CalculateArea` method return a `nfloat` inst
 If the code is compiled and run on a non Unified API device, the `using nfloat = global::System.Single;` maps the `nfloat` to a `Single` which will implicitly convert to a `float` allowing the consuming front-end application to call the `CalculateArea` method without modification.
 
 
-### Using Type Conversions in the Front End App
+#### Using Type Conversions in the Front End App
 
 In the event that your front end applications only make a handful of calls to your shared code library, another solution could be to leave the library unchanged and do type casting in the Xamarin.iOS or Xamarin.Mac application when calling the existing routine. For Example:
 
@@ -227,7 +226,7 @@ If the consuming application makes hundreds of calls to the shared code library,
 Based on our application's architecture, we might end up using one or more of the above solutions to support Native Data Types (where required) in our cross-platform code.
 
 
-# Xamarin.Forms Applications
+## Xamarin.Forms Applications
 
 The following is required to use Xamarin.Forms for cross-platform UIs that will also be shared with a Unified API application:
 
@@ -238,7 +237,7 @@ As in a standard cross-platform application, the existing 32 bit data types shou
 
 For more details, see our [Updating Existing Xamarin.Forms Apps](http://developer.xamarin.com/guides/cross-platform/macios/updating-xamarin-forms-apps/) documentation.
 
-# Summary
+## Summary
 
 In this article we have see when we should use the Native Data Types in a Unified API application and their implications cross-platform. We have presented several solutions that can be used in situations where the new Native Data Types must be used in cross-platform libraries. And we've seen a quick guide to supporting Unified APIs in Xamarin.Forms cross-platform applications.
 

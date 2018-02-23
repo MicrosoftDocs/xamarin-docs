@@ -15,15 +15,15 @@ It is very common for modern solutions developed in Visual Studio for Mac to hav
 
 This guide will discuss some of the changes made to Visual Studio for Mac to support debugging multiple processes, how to configure solutions to debug multiple processes, and how to attach to existing processes with Visual Studio for Mac.
 
-# Requirements
+## Requirements
 
 Debugging multiple processes requires Visual Studio for Mac.
 
-# IDE Changes
+## IDE Changes
 
 To help developers with multi-process debugging, Visual Studio for Mac has undergone some changes to its user interface. Visual Studio for Mac has an updated **Debug toolbar**, and  a new **Solutions Configuration** section in the **Solution Options** folder. In addition, the **Threads Pad** will now display running processes and the threads for each process. Visual Studio for Mac will also display multiple debug pads, one for each process, for certain things like **Application Output**.
 
-## Solution Configurations
+### Solution Configurations
 
 By default, Visual Studio for Mac will display an individual project in the **Solution Configuration** area of the debug toolbar. When a debugging session is initiated, this is the project that Visual Studio for Mac will start and attach the debugger to.
 
@@ -31,7 +31,7 @@ To start and debug multiple processes in Visual Studio for Mac, it is necessary 
 
 ![](multi-process-debugging-images/mpd01-xs.png "A solution with multiple solution configurations")
 
-## Parts of the Debug Toolbar
+### Parts of the Debug Toolbar
 
 The debug toolbar has changed to allow a solution configuration to be selected via a popup menu. This screenshot shows the parts of the Debug toolbar:
 
@@ -46,13 +46,13 @@ The debug toolbar has changed to allow a solution configuration to be selected v
 
     ![](multi-process-debugging-images/mpd04-xs.png "Popup showing the devices for a project")
 
-## Multiple Debug Pads
+### Multiple Debug Pads
 
 When the multi-solution configuration is started, some of the Visual Studio for Mac pads will appear multiple times, one for each process. For example, the following screenshot shows two **Application Output** pads for a solution that is running two projects:
 
 ![](multi-process-debugging-images/mpd05-xs.png "Output Pad for a solution configuration")
 
-## Multiple Processes and the _Active Thread_
+### Multiple Processes and the _Active Thread_
 
 When a breakpoint is encountered in one process, that process will pause execution, while the other processes continue running. In a single process scenario, Visual Studio for Mac can easily display information such as threads, local variables, application output in a single set of pads. However, when there are multiple processes with multiple breakpoints, and potentially multiple threads, it can prove overwhelming to the developer to cope with the information from a debugging session that is trying to display all information from all threads (and processes) at once.
 
@@ -66,7 +66,7 @@ The threads are grouped by the process that is hosting them. The project name an
 
 When debugging multiple processes, it is possible to switch the active thread to see debug information for that process (or thread) by using the **Thread Pad**. To switch the active thread, select the desired thread in the **Thread Pad** and then double click on it.
 
-### Stepping through Code When Multiple Projects Are Stopped
+#### Stepping through Code When Multiple Projects Are Stopped
 
 When two (or more) projects have break points, Visual Studio for Mac will pause both processes. It is only possible to **Step Over** code in the active thread. The other process will be paused until a scope change makes it possible for the debugger to switch focus from the active thread. For example, consider the following screenshot of Visual Studio for Mac debugging two projects:
 
@@ -80,7 +80,7 @@ Using the previous screenshot as an example, when the `for` loop finished, Visua
 
 If only one of the projects had a break point set, then only that process would be paused. The other project would continue to run until paused by the developer or a breakpoint was added.
 
-## Pausing and Resuming a Processes
+### Pausing and Resuming a Processes
 
 It is possible to pause or resume a process by right-clicking on the process and selecting **Pause** or **Resume** from the context menu:
 
@@ -92,13 +92,13 @@ The appearance of the debug toolbar will change depending on the state of the pr
 
 Clicking the **Pause** button in the **Debug toolbar** will pause all processes that are being debugged, while clicking the **Resume** buttons will resume all paused processes.
 
-## Debugging a Second Project
+### Debugging a Second Project
 
 It is also possible to debug a second project once the first project is started by Visual Studio for Mac. Once the first project is started, **Right Click* on the project in the **Solution Pad** and select **Start Debugging Item**:
 
 ![](multi-process-debugging-images/mpd13-xs.png  "Start Debugging Item")
 
-# Creating a Solution Configuration
+## Creating a Solution Configuration
 
 A _solution configuration_ tells Visual Studio for Mac what project to run when a debugging session is intiated with the **Start** button. There can be more than one solution configuration per solution. This makes it possible to specify what projects are run when debugging the project.
 
@@ -118,7 +118,7 @@ To create a new solution configuration in Xamaring Studio:
 
 The **MultipleProjects** solution configuration will now appear in the **Debug toolbar**, making it possible for a developer to simultaneously debug the two projects.
 
-# Summary
+## Summary
 
 This guide discussed debugging multiple process in Visual Studio for Mac. It covered some of the changes to the IDE to support multi-process debugging and described some of the associated  behaviour.
 

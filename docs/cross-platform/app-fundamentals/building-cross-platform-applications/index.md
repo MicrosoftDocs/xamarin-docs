@@ -16,7 +16,7 @@ There are two options for sharing code between cross-platform mobile application
 
 <a name="Sections" />
 
-# Building Cross Platform Mobile Apps
+## Building Cross Platform Mobile Apps
 
  [Overview](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-0-overview.md)
 
@@ -35,7 +35,7 @@ There are two options for sharing code between cross-platform mobile application
  <a name="Cross-Platform_Mobile_Application_Case_Studies" />
 
 
-# Case Studies
+## Case Studies
 
 The principles outlined in this document are put into practice in the sample
 application *Tasky*, as well as [pre-built applications](https://xamarin.com/prebuilt)
@@ -44,7 +44,7 @@ like [Xamarin CRM](https://xamarin.com/prebuilt/#xamarincrm).
  <a name="Tasky" />
 
 
-## Tasky
+### Tasky
 
 Tasky is a simple to-do list application for iOS, Android and Windows Phone.
 It demonstrates the basics of creating a cross-platform application with Xamarin
@@ -55,7 +55,7 @@ and uses a local SQLite database.
 Read the [Tasky Case Study](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md).
 
 
-# Summary
+## Summary
 
 This section introduces Xamarin’s application development tools and
 discusses how to build applications that target multiple mobile platforms.

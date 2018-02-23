@@ -16,9 +16,9 @@ _A list of hosts that you need to whitelist in your firewall to allow Xamarin’
 
 In order for Xamarin products to install and work properly, certain endpoints must be accessible to download the required tools and updates for your software. If you or your company have strict firewall settings, you may experience issues with installation, licensing, components, and more. This document outlines some of the known endpoints that need to be whitelisted in your firewall in order for Xamarin to work. This list does not include the endpoints required for any third-party tools included in the download. If you are still experiencing trouble after going through this list, refer to the Apple or Android installation troubleshooting guides.
 
-# Endpoints to Whitelist
+## Endpoints to Whitelist
 
-## Xamarin Installer
+### Xamarin Installer
 
 The following known addresses will need to be added in order for the software to install properly when using the latest release of the Xamarin installer:
 
@@ -33,7 +33,7 @@ The following known addresses will need to be added in order for the software to
 If you are using a Mac and are encountering Xamarin.Android install issues, please ensure that macOS is able to download Java.
 
 
-## Components Store and NuGet (including Xamarin.Forms)
+### Components Store and NuGet (including Xamarin.Forms)
 
 The following addresses will need to be added to access the Xamarin Component Store
   or NuGet (Xamarin.Forms is packaged as a NuGet):
@@ -45,7 +45,7 @@ The following addresses will need to be added to access the Xamarin Component St
 -  dl-ssl.google.com (Google components)
 
 
-## Software Updates
+### Software Updates
 
 The following addresses will need to be added to ensure that software updates can download properly:
 
@@ -53,17 +53,17 @@ The following addresses will need to be added to ensure that software updates ca
 -  download.visualstudio.microsoft.com
 -  dl.xamarin.com
 
-## Xamarin Insights
+### Xamarin Insights
 
 The following addresses will need to be added to ensure that activity reaches the Xamarin Insights server:
 
 * https://xaapi.xamarin.com
 
 
-# Xamarin Mac Agent
+## Xamarin Mac Agent
 
 To connect Visual Studio to a Mac build host using the Xamarin Mac Agent requires the SSH port to be open. By default this is **Port 22**.
 
-# Summary
+## Summary
 
 This guide covered the endpoints to whitelist to allow Xamarin products to install and update properly on your machine.

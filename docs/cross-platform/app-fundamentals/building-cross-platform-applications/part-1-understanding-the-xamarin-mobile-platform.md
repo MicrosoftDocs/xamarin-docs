@@ -27,7 +27,7 @@ Phone.
  <a name="Under_the_Hood" />
 
 
-# Under the Hood
+## Under the Hood
 
 Although Xamarin allows you to write apps in C#, and share the same code
 across multiple platforms, the actual implementation on each system is very
@@ -85,7 +85,7 @@ platform-specific user interfaces that look and perform as  native applications.
  <a name="Integrated_Development_Environment_(IDE)_Availability" />
 
 
-# Integrated Development Environment (IDE) Availability
+## Integrated Development Environment (IDE) Availability
 
 Xamarin development can be done in Visual Studio on either Mac or Windows. The
 IDE you choose will be determined by the platforms you wish to target.
@@ -102,7 +102,7 @@ in the [Requirement](~/cross-platform/get-started/requirements.md) guide.
 
 <a name="iOS" />
 
-## iOS
+### iOS
 
 Developing iOS applications requires a Mac computer, running macOS. You can also use Visual Studio to write and deploy iOS applications with Xamarin in Visual Studio. However, a Mac is still needed for build and licensing purposes.
 
@@ -122,7 +122,7 @@ detailed instructions on getting set up.
 
 <a name="Android" />
 
-## Android
+### Android
 
 Android application development requires the Java and Android SDKs to be
 installed. These provide the compiler, emulator and other tools required for
@@ -146,7 +146,7 @@ have an approval process similar to Apple’s.
  <a name="Windows_Phone" />
 
 
-## Windows
+### Windows
 
 Windows apps (WinForms, WPF, or UWP) are built with Visual Studio. They do not use Xamarin directly. However, C# code can
 be shared across Windows, iOS and Android.
@@ -155,7 +155,7 @@ Visit Microsoft’s [Dev Center](https://developer.microsoft.com/) to learn abou
  <a name="Creating_the_User_Interface_(UI)" />
 
 
-# Creating the User Interface (UI)
+## Creating the User Interface (UI)
 
 A key benefit of using Xamarin is that the application user interface uses
 native controls on each platform, creating apps that are indistinguishable from an
@@ -169,7 +169,7 @@ platform.
  <a name="Programmatically_Create_Controls" />
 
 
-## Create Controls Programmatically
+### Create Controls Programmatically
 
 Each platform allows user interface controls to be added to a screen using
 code. This can be very time-consuming as it can be difficult to visualize the
@@ -183,7 +183,7 @@ iPad screen sizes.
  <a name="Visual_Designer" />
 
 
-## Visual Designer
+### Visual Designer
 
 Each platform has a different method for visually laying out screens:
 
@@ -203,7 +203,7 @@ code.
  <a name="User_Interface_Considerations" />
 
 
-## User Interface Considerations
+### User Interface Considerations
 
 A key benefit of using Xamarin to build cross platform applications is that
 they can take advantage of native UI toolkits to present a familiar interface to
@@ -231,7 +231,7 @@ platforms you are targeting:
  <a name="Library_and_Code_Re-use" />
 
 
-# Library and Code Re-Use
+## Library and Code Re-Use
 
 The Xamarin platform allows re-use of existing C# code across all platforms
 as well as the integration of libraries written natively for each platform.
@@ -239,7 +239,7 @@ as well as the integration of libraries written natively for each platform.
  <a name="C#_Source_and_Libraries" />
 
 
-## C# Source and Libraries
+### C# Source and Libraries
 
 Because Xamarin products use C# and the .NET framework, lots of existing
 source code (both open source and in-house projects) can be re-used in Xamarin.iOS
@@ -253,7 +253,7 @@ include: SQLite-NET, NewtonSoft.JSON and SharpZipLib.
  <a name="Objective-C_Bindings_+_Binding_Projects" />
 
 
-## Objective-C Bindings + Binding Projects
+### Objective-C Bindings + Binding Projects
 
 Xamarin provides a tool called *btouch* that helps create bindings
 that allow Objective-C libraries to be used in Xamarin.iOS projects. Refer to the [Binding Objective-C Types documentation](~/cross-platform/macios/binding/binding-types-reference.md) for details on how this is done.
@@ -265,7 +265,7 @@ bindings are available on [github](https://github.com/mono/monotouch-bindings).
  <a name=".jar_Bindings_+_Binding_Projects" />
 
 
-## .jar Bindings + Binding Projects
+### .jar Bindings + Binding Projects
 
 Xamarin supports using existing Java libraries in Xamarin.Android. Refer to
 the [Binding a Java Library documentation](~/android/platform/binding-java-library/index.md) for details on how to use a .JAR file
@@ -276,7 +276,7 @@ Open-source Xamarin.Android bindings are available on [github](https://github.co
  <a name="C_via_PInvoke" />
 
 
-## C via PInvoke
+### C via PInvoke
 
 "Platform Invoke" technology (P/Invoke) allows managed code (C#) to call
 methods in native libraries as well as support for native libraries to call back
@@ -297,7 +297,7 @@ documentation for [linking native libraries](~/ios/platform/native-interop.md) i
  <a name="C++_via_Cxxi" />
 
 
-## C++ via CppSharp
+### C++ via CppSharp
 
 Miguel explains CXXI (now called [CppSharp](https://github.com/mono/CppSharp)) on his [blog](http://tirania.org/blog/archive/2011/Dec-19.html). An
 alternative to binding to a C++ library directly is to create a C wrapper and

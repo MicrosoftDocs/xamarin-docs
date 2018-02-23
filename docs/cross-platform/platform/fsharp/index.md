@@ -27,8 +27,7 @@ F# is now available "out of the box" as a programming language to Xamarin
 - [Getting Started with F#](overview.md)
 - [F# Samples](samples.md)
 
-F# Features in Visual Studio for Mac
-=======================
+## F# Features in Visual Studio for Mac
 
 There are a number of [new F# features](https://developer.xamarin.com/releases/studio/xamarin.studio_6.0/xamarin.studio_6.0/#F_Enhancements)
 available in Visual Studio for Mac, including:

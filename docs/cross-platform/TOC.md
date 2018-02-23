@@ -3,7 +3,7 @@
 ### [Requirements](get-started/requirements.md)
 ### [Installation](get-started/installation/index.md)
 #### [Installing Xamarin in Visual Studio on Windows](get-started/installation/windows.md)
-#### [Installing Visual Studio for Mac](get-started/installation/mac.md)
+#### [Installing Visual Studio for Mac](/visualstudio/mac/installation/)
 #### [Xamarin Firewall Configuration Instructions](get-started/installation/firewall.md)
 #### [Uninstalling Xamarin](get-started/installation/uninstalling-xamarin.md)
 ### [Introduction to Mobile Development](get-started/introduction-to-mobile-development.md)

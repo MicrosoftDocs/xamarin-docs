@@ -24,7 +24,7 @@ Xamarin.Mac applications can be compiled in three modes: one that uses Xamarin's
  
 In addition to the iOS, Android, and Mac bindings, Xamarin platforms can consume [.NET Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md).
 
-# Supported Assemblies
+## Supported Assemblies
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}

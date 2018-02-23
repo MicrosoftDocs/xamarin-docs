@@ -25,7 +25,7 @@ building cross platform mobile apps.
  <a name="Sharing_Code" />
 
 
-# Sharing Code
+## Sharing Code
 
 Refer to the [Code Sharing Options](~/cross-platform/app-fundamentals/code-sharing.md) document for a detailed description of how to implement
 code-sharing across platforms.
@@ -33,7 +33,7 @@ code-sharing across platforms.
  <a name="Shared_Asset_Projects" />
 
 
-## Shared Projects
+### Shared Projects
 
 The simplest approach to sharing code files is use a [Shared Project](~/cross-platform/app-fundamentals/shared-projects.md).
 
@@ -44,7 +44,7 @@ paths.
  <a name="Portable_Class_Libraries" />
 
 
-## Portable Class Libraries (PCL)
+### Portable Class Libraries (PCL)
 
 Historically a .NET project file (and the resulting assembly) has been
 targeted to a specific framework version. This prevents the project or the
@@ -59,7 +59,7 @@ targeted.
 You can read more about Xamarin's [support for Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md) and follow the instructions there to see how the [TaskyPortable sample](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable) works.
 
 
-## .NET Standard
+### .NET Standard
 
 Introduced in 2016, [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)
 projects provide an easy way to share code across platforms, producing assemblies
@@ -74,7 +74,7 @@ and each version is backwards-compatible with lower version numbers.
  <a name="Populating_the_Solution" />
 
 
-# Populating the Solution
+## Populating the Solution
 
 Regardless of which method is used to share code, the overall solution
 structure should implement a layered architecture that encourages code sharing.
@@ -87,7 +87,7 @@ The Xamarin approach is to group code into two project types:
  <a name="Core_Project" />
 
 
-## Core Project
+### Core Project
 
 Shared code projects should only reference assemblies that are available
 across all platforms – ie. the common framework namespaces like `System`, `System.Core` and `System.Xml`.
@@ -104,7 +104,7 @@ which could include the following layers:
  <a name="Platform-Specific_Application_Projects" />
 
 
-## Platform-Specific Application Projects
+### Platform-Specific Application Projects
 
 Platform-specific projects must reference the assemblies required to bind to
 each platform’s SDK (Xamarin.iOS, Xamarin.Android, Xamarin.Mac, or Windows) as well as
@@ -119,7 +119,7 @@ The platform-specific projects should implement:
 <a name="Example" />
 
 
-## Example
+### Example
 
 The application architecture is illustrated in this diagram:
 
@@ -134,7 +134,7 @@ Android application projects. The Shared Project contains code relating to each 
  <a name="Project_References" />
 
 
-# Project References
+## Project References
 
 Project references reflect the dependencies for a project. Core projects
 limit their references to common assemblies so that the code is easy to share.
@@ -154,12 +154,12 @@ studies.
  <a name="Adding_Files" />
 
 
-# Adding Files
+## Adding Files
 
  <a name="Build_Action" />
 
 
-## Build Action
+### Build Action
 
 It is important to set the correct build-action for certain file types. This
 list shows the build action for some common file types:
@@ -178,7 +178,7 @@ action.
  <a name="Case_Sensitivity" />
 
 
-## Case Sensitivity
+### Case Sensitivity
 
 Finally, remember that some platforms have case-sensitive file systems (eg.
 iOS and Android) so be sure to use a consistent file naming standard and make

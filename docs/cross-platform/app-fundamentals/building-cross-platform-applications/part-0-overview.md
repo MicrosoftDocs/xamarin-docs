@@ -70,7 +70,7 @@ Some of these components are implemented in the *Tasky* case study.
  <a name="Separate_Reusable_Code_into_a_Core_Library" />
 
 
-### Separate Reusable Code into a Core Library
+## Separate Reusable Code into a Core Library
 
 By following the principle of separation of responsibility by layering your application architecture and then moving core functionality that is platform agnostic into a reusable core library, you can maximize code sharing across platforms, as the figure below illustrates:
 
@@ -79,7 +79,7 @@ By following the principle of separation of responsibility by layering your appl
  <a name="Case_Studies" />
 
 
-### Case Studies
+## Case Studies
 
 There is one case study that accompanies this document – *Tasky Pro*. Each case study discusses the
 implementation of the concepts outlined in this document in a real-world

@@ -37,7 +37,7 @@ also contains useful tips for designing Xamarin apps.
 
 <a name="profiler" />
 
-# Use the Profiler
+## Use the Profiler
 
 When developing an application, it's important to only attempt to optimize code once it has been profiled. Profiling is a technique for determining where code optimizations will have the greatest effect in reducing performance problems. The profiler tracks the application's memory usage, and records the running time of methods in the application. This data helps to navigate through the execution paths of the application, and the execution cost of the code, so that the best opportunities for optimization can be discovered.
 
@@ -51,7 +51,7 @@ The following best practices are recommended when profiling an app:
 
 <a name="idisposable" />
 
-# Release IDisposable Resources
+## Release IDisposable Resources
 
 The `IDisposable` interface provides a mechanism for releasing resources. It provides a `Dispose` method that should be implemented to explicitly release resources. `IDisposable` is not a destructor, and should only be implemented in the following circumstances:
 
@@ -63,7 +63,7 @@ Type consumers can then call the `IDisposable.Dispose` implementation to free re
 - By wrapping the `IDisposable` object in a `using` statement.
 - By wrapping the call to `IDisposable.Dispose` in a `try`/`finally` block.
 
-## Wrapping the IDisposable Object in a using Statement
+### Wrapping the IDisposable Object in a using Statement
 
 The following code example shows how to wrap an `IDisposable` object in a `using` statement:
 
@@ -81,7 +81,7 @@ public void ReadText (string filename)
 
 The `StreamReader` class implements `IDisposable`, and the `using` statement provides a convenient syntax that calls the `StreamReader.Dispose` method on the `StreamReader` object prior to it going out of scope. Within the `using` block, the `StreamReader` object is read-only and cannot be reassigned. The `using` statement also ensures that the `Dispose` method is called even if an exception occurs, as the compiler implements the intermediate language (IL) for a `try`/`finally` block.
 
-## Wrapping the Call to IDisposable.Dispose in a Try/Finally Block
+### Wrapping the Call to IDisposable.Dispose in a Try/Finally Block
 
 The following code example shows how to wrap the call to `IDisposable.Dispose` in a `try`/`finally` block:
 
@@ -109,7 +109,7 @@ For more information, see [IDisposable Interface](https://developer.xamarin.com/
 
 <a name="events" />
 
-# Unsubscribe from Events
+## Unsubscribe from Events
 
 To prevent memory leaks, events should be unsubscribed from before the subscriber object is disposed of. Until the event is unsubscribed from, the delegate for the event in the publishing object has a reference to the delegate that encapsulates the subscriber's event handler. As long as the publishing object holds this reference, garbage collection will not reclaim the subscriber object memory.
 
@@ -180,7 +180,7 @@ The `handler` field maintains the reference to the anonymous method, and is used
 
 <a name="weakreferences" />
 
-# Use Weak References to Prevent Immortal Objects
+## Use Weak References to Prevent Immortal Objects
 
 > [!NOTE]
 > iOS developers should review the documentation on
@@ -189,7 +189,7 @@ The `handler` field maintains the reference to the anonymous method, and is used
 
 <a name="lazy" />
 
-# Delay the Cost of Creating Objects
+## Delay the Cost of Creating Objects
 
 Lazy initialization can be used to defer the creation of an object until it's first used. This technique is primarily used to improve performance, avoid computation, and reduce memory requirements.
 
@@ -232,7 +232,7 @@ For more information about lazy initialization, see [Lazy Initialization](https:
 
 <a name="async" />
 
-# Implement Asynchronous Operations
+## Implement Asynchronous Operations
 
 .NET provides asynchronous versions of many of its APIs. Unlike synchronous APIs, the asynchronous APIs ensure that the active execution thread never blocks the calling thread for a significant amount of time. Therefore, when calling an API from the UI thread, use the asynchronous API if it's available. This will keep the UI thread unblocked, which will help to improve the user's experience with the application.
 
@@ -273,7 +273,7 @@ For more information, see [Async Support Overview](~/cross-platform/platform/asy
 
 <a name="sgen" />
 
-# Use the SGen Garbage Collector
+## Use the SGen Garbage Collector
 
 Managed languages such as C# use garbage collection to reclaim memory that is allocated to objects that are no longer in use. The two garbage collectors used by the Xamarin platform are:
 
@@ -288,7 +288,7 @@ SGen utilizes one of three heaps to allocate space for objects:
 
 One of the advantages of SGen is that the time it takes to perform a minor garbage collection is proportional to the number of new live objects that were created since the last minor garbage collection. This will reduce the impact of garbage collection on the performance of an application, as these minor garbage collections will take less time than a major garbage collection. Major garbage collections will still occur, but less frequently.
 
-## Reducing Pressure on the Garbage Collector
+### Reducing Pressure on the Garbage Collector
 
 When SGen starts a garbage collection, it will stop the application’s threads while it reclaims memory. While memory is being reclaimed, the application may experience a brief pause or stutter in the UI. How perceptible this pause is depends on two factors:
 
@@ -305,7 +305,7 @@ To reduce pressure on the garbage collector, follow these guidelines:
 
 <a name="linker" />
 
-# Reduce the Size of the Application
+## Reduce the Size of the Application
 
 It's important to understand the compilation process on each platform, to understand where an applications executable size comes from:
 
@@ -342,7 +342,7 @@ For instance, it may be necessary to preserve the default constructors of types 
 
 For more information, see [Linker for iOS](~/ios/deploy-test/linker.md) and [Linker for Android](~/android/deploy-test/linker.md).
 
-## Additional Size Reduction Techniques
+### Additional Size Reduction Techniques
 
 There are a wide variety of CPU architectures that power mobile devices. Therefore, Xamarin.iOS and Xamarin.Android produce *fat binaries* that contain a compiled version of the application for each CPU architecture. This ensures that a mobile application can run on a device regardless of the CPU architecture.
 
@@ -359,7 +359,7 @@ Learn more in this blog post:
 
 <a name="optimizeimages" />
 
-# Optimize Image Resources
+## Optimize Image Resources
 
 Images are some of the most expensive resources that applications use, and are often captured at high resolutions. While this creates vibrant images full of detail, applications that display such images typically require more CPU usage to decode the image and more memory to store the decoded image. It is wasteful to decode a high resolution image in memory when it will be scaled down to a smaller size for display. Instead, reduce the CPU usage and memory footprint by creating multiple resolution versions of stored images that are close to the predicted display sizes. For example, an image displayed in a list view should most likely be a lower resolution than an image displayed at full-screen. In addition, scaled down versions of high resolution images can be loaded to efficiently display them with minimal memory impact. For more information, see [Load Large Bitmaps Efficiently](https://developer.xamarin.com/recipes/android/resources/general/load_large_bitmaps_efficiently/).
 
@@ -367,7 +367,7 @@ Regardless of the image resolution, displaying image resources can greatly incre
 
 <a name="activationperiod" />
 
-# Reduce the Application Activation Period
+## Reduce the Application Activation Period
 
 All applications have an *activation period*, which is the time between when the application is started and when the application is ready to use. This activation period provides users with their first impression of the application, and so it's important to reduce the activation period and the users perception of it, in order for them to gain a favorable first impression of the application.
 
@@ -377,7 +377,7 @@ During the activation period, applications execute activation logic, which often
 
 <a name="webservicecommunication" />
 
-# Reduce Web Service Communication
+## Reduce Web Service Communication
 
 Connecting to a web service from an application can have an impact on application performance. For example, an increased use of network bandwidth will result in an increased usage of the device's battery. In addition, users may be using the application in a bandwidth limited environment. Therefore, it's sensible to limit the bandwidth utilization between an application and a web service.
 
@@ -389,7 +389,7 @@ It's recommended to use data transfer objects (DTOs) when transferring data betw
 
 Data retrieved from the web service should be cached locally, with the cached data being utilized rather than repeatedly retrieved from the web service. However, when adopting this approach a suitable caching strategy should also be implemented to update data in the local cache if it changes in the web service.
 
-# Summary
+## Summary
 
 This article described and discussed techniques for increasing the performance of applications built using the Xamarin platform. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application.
 
