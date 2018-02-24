@@ -564,7 +564,7 @@ The initial value for the entry
  <a name="Radio_Elements" />
 
 
-# Radio Elements
+## Radio Elements
 
 Radio elements have type `"radio"`. The item that is selected
 is picked by the `radioselected` property on its containing root element.
@@ -574,7 +574,7 @@ radio button belongs to that group.
  <a name="Date_and_Time_Elements" />
 
 
-# Date and Time Elements
+## Date and Time Elements
 
 The element types `"datetime"`, `"date"` and `"time"` are used to render dates with times, dates or times. These
 elements take as parameters a caption and a value. The value can be written in

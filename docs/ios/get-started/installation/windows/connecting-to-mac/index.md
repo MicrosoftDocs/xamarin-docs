@@ -54,7 +54,7 @@ workflow:
 > one MSBuild process. For the simplicity of this diagram, all the
 > connections are simply represented by one arrow.
 
-# Requirements
+## Requirements
 
 Xamarin.iOS for Visual Studio accomplishes an amazing feat: it lets
 developers create, build, and debug iOS applications on a Windows computer
@@ -66,12 +66,12 @@ networked Mac OS X computer (which is refered to as the *host* or *build
 host*) to perform these tasks for you. Once configured, Xamarin’s tools will
 make the process as seamless as possible.
 
-## System Requirements
+### System Requirements
 
 The system requirements can be found in the [Installing Xamarin.iOS on Windows](~/ios/get-started/installation/windows/index.md#system-requirements) guide
 
 
-### Compatibility
+#### Compatibility
 
 > [!IMPORTANT]
 >  The Windows machine must be using the same version of Xamarin.iOS as
@@ -90,9 +90,9 @@ The system requirements can be found in the [Installing Xamarin.iOS on Windows](
 >   That will be checked by the build agent, resulting in build errors; and
 >   by the iOS Designer agent, resulting in designer errors.
 
-## Connecting to the Mac
+### Connecting to the Mac
 
-### Mac Setup
+#### Mac Setup
 
 To set up the Mac host, you must enable communication between the Xamarin
 extension for Visual Studio and your Mac. To do this, allow **Remote Login**
@@ -124,12 +124,12 @@ discoverable by Visual Studio if it's on the same network.
 Visual Studio will start and stop the agent on your Mac, so there is nothing
 else that you, as a user, need to run.
 
-## Windows Setup
+### Windows Setup
 
 Make sure to [install](~/ios/get-started/installation/windows/index.md)
 Xamarin tools on your Windows machine.
 
-## Connecting to the Mac build host
+### Connecting to the Mac build host
 
 There are two ways to connect to the Mac build host:
 
@@ -190,7 +190,7 @@ credentials to connect to it again.
 
 <a name="manual-add"/>
 
-## Manually adding a Mac
+### Manually adding a Mac
 
 In certain circumstances, you may wish to manually add a Mac if you cannot
 see its mDNS name listed in the Host Selection dialog. To do this, follow
@@ -226,7 +226,7 @@ SSH and will add this Mac as a known machine.
 
 <a name="commandline"/>
 
-## Command Line Support
+### Command Line Support
 
 The agent also supports building a Xamarin.iOS configuration from the
 command line.  To use it, you will need to pass the following required
@@ -256,13 +256,13 @@ with password **mypassword** is shown below:
 C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamUser /p:Platform=iPhoneSimulator /p:ServerPassword=mypassword
 ```
 
-## Summary
+### Summary
 
 This article explored connection between Visual Studio and the iOS build and
 designer tools on the Mac, allowing you to build Xamarin.iOS apps using
 Visual Studio.
 
-## Related Links
+### Related Links
 
 - [Installation](~/ios/get-started/installation/windows/index.md)
 - [Connection Troubleshooting](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.md)

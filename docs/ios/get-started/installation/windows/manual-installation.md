@@ -14,7 +14,7 @@ ms.date: 03/19/2017
 > [!WARNING]
 > This information has been deprecated for Visual Studio 2017. To install all required components for developing Xamarin.iOS applications in Visual Studio 2017 refer to the [Windows Installation](~/ios/get-started/installation/windows/index.md#windowsinstallation) guide.
 
-# Install Xamarin.iOS for Windows
+## Install Xamarin.iOS for Windows
 
 If you are using Visual Studio 2015, you can also enable Xamarin for Visual Studio 2015 in the setup program by following the steps [here](https://msdn.microsoft.com/en-us/library/mt488769.aspx#Anchor_4).
 

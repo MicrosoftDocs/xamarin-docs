@@ -728,7 +728,7 @@ Server.PostEventResponse += (response) {
 
 <a name="Summary" />
 
-# Summary
+## Summary
 
 This article has taken an advanced look at using the new User Notification framework in a Xamarin.iOS app. It covered adding Media Attachments to both Local and Remote Notification and it covered using the new User Notification UI to create custom Notification UIs.
 

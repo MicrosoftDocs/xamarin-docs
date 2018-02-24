@@ -45,7 +45,7 @@ Do the following:
 
 <a name="Modifying-the-Info.plist-File" />
 
-# Modifying the Info.plist File
+## Modifying the Info.plist File
 
 With the required images added to the **Resources** folder, the [CFBundleAlternateIcons](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/TP40009249-SW13) key will need to be added to the project's **Info.plist** file. This key will define the name of the new icon and the images that compose it.
 

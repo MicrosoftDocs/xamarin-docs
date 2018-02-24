@@ -10,6 +10,8 @@ ms.author: brumbaug
 ms.date: 03/20/2017
 ---
 
+# Touch ID
+
 Touch ID was introduced in iOS 7 as a means of authenticating the user - similar to a passcode. However, it was limited to unlocking the device, using the App Store, using iTunes and authenticating the iCloud keychain only.
 
 There are now two ways to use Touch ID as an authentication mechanism in an iOS 8 application using the Local Authentication API. It is currently not possible to use Local Authentication to authenticate remotely.
