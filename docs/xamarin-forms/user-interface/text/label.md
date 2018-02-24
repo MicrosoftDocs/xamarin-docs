@@ -24,6 +24,8 @@ The `Label` view is used for displaying text, both single and multi-line. Labels
 
 The following sections cover setting properties of `Label` manually on a per-instance basis. Note that sets of properties can be grouped into one style that is consistently applied to one or many views. This can increase readability of code and make design changes easier to implement. See [Styles](~/xamarin-forms/user-interface/text/styles.md) for more information.
 
+<a name="Truncation_and_Wrapping" />
+
 ## Truncation and Wrapping
 
 Labels can be set to handle text that can't fit on one line in one of several ways, exposed by the `LineBreakMode` property. [`LineBreakMode`](https://developer.xamarin.com/api/type/Xamarin.Forms.LineBreakMode/) is an enumeration of the following options:

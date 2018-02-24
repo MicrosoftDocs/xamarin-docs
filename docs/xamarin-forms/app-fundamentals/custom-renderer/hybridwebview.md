@@ -30,6 +30,8 @@ Each item will now be discussed in turn to implement a `HybridWebView` renderer 
 
 For more information about the process for invoking C# from JavaScript, see [Invoking C# from JavaScript](#Invoking_C_from_JavaScript). For more information about the HTML page, see [Creating the Web Page](#Creating_the_Web_Page).
 
+<a name="Creating_the_HybridWebView" />
+
 ## Creating the HybridWebView
 
 The `HybridWebView` custom control can be created by subclassing the [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) class, as shown in the following code example:
@@ -75,6 +77,8 @@ The `HybridWebView` custom control is created in the portable class library (PCL
 - A `RegisterAction` method that registers an `Action` with the control. The registered action will be invoked from JavaScript contained in the HTML file referenced through the `Uri` property.
 - A `CleanUp` method that removes the reference to the registered `Action`.
 - An `InvokeAction` method that invokes the registered `Action`. This method will be called from a custom renderer in each platform-specific project.
+
+<a name="Consuming_the_HybridWebView" />
 
 ## Consuming the HybridWebView
 
@@ -132,6 +136,8 @@ This action calls the [`DisplayAlert`](https://developer.xamarin.com/api/member/
 
 A custom renderer can now be added to each application project to enhance the platform-specific web controls by allowing C# code to be invoked from JavaScript.
 
+<a nane="Creating_the_Custom_Renderer_on_each_Platform" />
+
 ## Creating the Custom Renderer on each Platform
 
 The process for creating the custom renderer class is as follows:
@@ -183,6 +189,8 @@ Each custom renderer class is decorated with an `ExportRenderer` attribute that 
 
 The following sections discuss the structure of the web page loaded by each native web control, the process for invoking C# from JavaScript, and the implementation of this in each platform-specific custom renderer class.
 
+<a name="Creating_the_Web_Page" />
+
 ### Creating the Web Page
 
 The following code example shows the web page that will be displayed by the `HybridWebView` custom control:
@@ -225,6 +233,8 @@ The web page allows a user to enter their name in an `input` element, and provid
 - The `invokeCSCode` function calls the `log` function to display the data it is sending to the C# `Action`. It then calls the `invokeCSharpAction` method to invoke the C# `Action`, passing the parameter received from the `input` element.
 
 The `invokeCSharpAction` JavaScript function is not defined in the web page, and will be injected into it by each custom renderer.
+
+<a name="Invoking_C_from_JavaScript" />
 
 ### Invoking C# from JavaScript
 

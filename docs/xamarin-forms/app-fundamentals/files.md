@@ -28,8 +28,7 @@ A third-party component call **PCLStorage** can also be used to read and write f
 
 For information on handling image files, refer to the [Working with Images](~/xamarin-forms/user-interface/images.md) page.
 
- <a name="Loading_Files_Embedded_as_Resources" />
-
+<a name="Loading_Files_Embedded_as_Resources" />
 
 ## Loading Files Embedded as Resources
 
@@ -76,8 +75,7 @@ listView.ItemsSource = monkeys;
 
  [ ![Xml file embedded in PCL, displayed in ListView](files-images/pclxml-sml.png "Embedded XML File in PCL Displayed in ListView")](files-images/pclxml.png "Embedded XML File in PCL Displayed in ListView")
 
- <a name="Embedding_in_Shared_Projects" />
-
+<a name="Embedding_in_Shared_Projects" />
 
 ### Embedding in Shared Projects
 
@@ -117,8 +115,7 @@ The above examples assume that the file is embedded in the root of the PCL proje
 
 It is possible to organize embedded resources in folders. When an embedded resource is placed in a folder, the folder name becomes part of the resource ID (separated by periods), so that the resource ID format becomes **Namespace.Folder.Filename.Extension**. Placing the files used in the sample app into a folder **MyFolder** would make the corresponding resource IDs `WorkingWithFiles.MyFolder.PCLTextResource.txt` and `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
 
- <a name="Debugging_Embedded_Resources" />
-
+<a name="Debugging_Embedded_Resources" />
 
 ### Debugging Embedded Resources
 
@@ -229,8 +226,7 @@ namespace WindowsApp
 ```
 
 
- <a name="Saving_and_Loading_in_Shared_Projects" />
-
+<a name="Saving_and_Loading_in_Shared_Projects" />
 
 ### Saving and Loading in Shared Projects
 

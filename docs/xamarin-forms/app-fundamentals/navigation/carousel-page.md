@@ -46,6 +46,8 @@ With both approaches, the `CarouselPage` will then display each page in turn, wi
 > [!NOTE]
 > **Note**: A [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) can only be populated with [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instances, or `ContentPage` derivatives.
 
+<a name="Populating_a_CarouselPage_with_a_Page_Collection" />
+
 ### Populating a CarouselPage with a Page Collection
 
 The following XAML code example shows a [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) that displays three [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instances:
@@ -140,6 +142,8 @@ Each [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.Conten
 If a [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) is embedded into the [`Detail`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) page of a [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/), the [`MasterDetailPage.IsGestureEnabled`](https://developer.xamarin.com/api/field/Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty/) property should be set to `false` to prevent gesture conflicts between the `CarouselPage` and the `MasterDetailPage`.
 
 For more information about the [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/), see [Chapter 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) of Charles Petzold's Xamarin.Forms book.
+
+<a name="Populating_a_CarouselPage_with_a_Template" />
 
 ### Populating a CarouselPage with a Template
 

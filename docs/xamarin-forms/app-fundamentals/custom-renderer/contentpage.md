@@ -28,6 +28,8 @@ The rendering process can be taken advantage of to implement platform-specific c
 
 Each item will now be discussed in turn, to implement a `CameraPage` that provides a live camera feed and the ability to capture a photo.
 
+<a name="Creating_the_Xamarin.Forms_Page" />
+
 ## Creating the Xamarin.Forms Page
 
 An unaltered [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) can be added to the shared Xamarin.Forms project, as shown in the following XAML code example:
@@ -67,6 +69,8 @@ public class CameraPageCS : ContentPage
 
 An instance of the `CameraPage` will be used to display the live camera feed on each platform. Customization of the control will be carried out in the custom renderer, so no additional implementation is required in the `CameraPage` class.
 
+<a name="Consuming_the_Xamarin.Forms_Page" />
+
 ## Consuming the Xamarin.Forms Page
 
 The empty `CameraPage` must be displayed by the Xamarin.Forms application. This occurs when a button on the `MainPage` instance is tapped, which in turn executes the `OnTakePhotoButtonClicked` method, as shown in the following code example:
@@ -79,6 +83,8 @@ async void OnTakePhotoButtonClicked (object sender, EventArgs e)
 ```
 
 This code simply navigates to the `CameraPage`, on which custom renderers will customize the page's appearance on each platform.
+
+<a name="Creating_the_Page_Renderer_on_each_Platform" />
 
 ## Creating the Page Renderer on each Platform
 

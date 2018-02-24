@@ -28,6 +28,8 @@ The rendering process can be taken advantage of to implement platform-specific c
 
 Each item will now be discussed in turn, to implement a `NativeListView` renderer that takes advantage of platform-specific list controls and native cell layouts. This scenario is useful when porting an existing native app that contains list and cell code that can be re-used. In addition, it allows detailed customization of list control features that can affect performance, such as data virtualization.
 
+<a name="Creating_the_Custom_ListView_Control" />
+
 ## Creating the Custom ListView Control
 
 A custom [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) control can be created by subclassing the `ListView` class, as shown in the following code example:
@@ -55,6 +57,8 @@ public class NativeListView : ListView
 ```
 
 The `NativeListView` is created in the portable class library (PCL) project and defines the API for the custom control. This control exposes an `Items` property that is used for populating the `ListView` with data, and which can be data bound to for display purposes. It also exposes an `ItemSelected` event that will be fired whenever an item is selected in a platform-specific native list control. For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+
+<a name="Consuming_the_Custom_Control" />
 
 ## Consuming the Custom Control
 
@@ -129,6 +133,8 @@ The `NativeListView` custom control uses platform-specific custom renderers to d
 > Because the `NativeListView` custom control will be rendered using platform-specific list controls that include scrolling ability, the custom control should not be hosted in scrollable layout controls such as the [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/).
 
 A custom renderer can now be added to each application project to create platform-specific list controls and native cell layouts.
+
+<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## Creating the Custom Renderer on each Platform
 

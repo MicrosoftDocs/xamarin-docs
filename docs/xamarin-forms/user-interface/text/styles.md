@@ -25,6 +25,7 @@ This article covers the following topics:
 - **[Applying Styles](#Applying_Styles)** &ndash; apply both custom and built-in styles to your views.
 - **[Accessibility](#Accessibility)** &ndash; ensure that text respects accessibility settings.
 
+<a name="Built-In_Styles" />
 
 ## Built-In Styles
 
@@ -50,6 +51,8 @@ label.Style = Device.Styles.TitleStyle;
 ```
 
 ![](styles-images/builtinstyles.png "Device Styles Example")
+
+<a name="Custom_Styles" />
 
 ## Custom Styles
 
@@ -91,6 +94,7 @@ Note that resources (including all styles) are defined within `ContentPage.Resou
 
 ![](styles-images/customstyle.png "Custom Styles Example")
 
+<a name="Applying_Styles" />
 
 ## Applying Styles
 

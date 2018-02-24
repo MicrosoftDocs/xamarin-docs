@@ -53,6 +53,8 @@ With both approaches, the [`TabbedPage`](https://developer.xamarin.com/api/type/
 > [!NOTE]
 > It's recommended that a [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) should be populated with [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) and [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)instances only. This will help to ensure a consistent user experience across all platforms.
 
+<a name="Populating_a_TabbedPage_with_a_Page_Collection" />
+
 ### Populating a TabbedPage with a Page Collection
 
 The following XAML code example shows a [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) constructed by populating it with a collection of child [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) objects:
@@ -123,6 +125,8 @@ This causes the `UpcomingAppointmentsPage` instance to be pushed onto the naviga
 ![](tabbed-page-images/navigationpage.png "Navigation Inside a Tab")
 
 For more information about performing navigation using the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) class, see [Hierarchical Navigation](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
+
+<a name="Populating_a_TabbedPage_with_a_Template" />
 
 ### Populating a TabbedPage with a Template
 

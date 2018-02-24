@@ -39,6 +39,8 @@ This article will cover:
 
 Unlike traditional tables, `Grid` does not infer the number and sizes of rows and columns from the content. Instead, `Grid` has `RowDefinitions` and `ColumnDefinitions` collections. These hold definitions of how many rows and columns will be laid out. Views are added to `Grid` with specified row and column indices, which identify which row and column a view should be placed in.
 
+<a name="Rows_and_Columns" />
+
 ### Rows and Columns
 
 Row and column information is stored in `Grid`'s `RowDefinitions` & `ColumnDefinitions` properties, which are each collections of [`RowDefinition`](https://developer.xamarin.com/api/type/Xamarin.Forms.RowDefinition/) and [`ColumnDefinition`](https://developer.xamarin.com/api/type/Xamarin.Forms.ColumnDefinition/) objects, respectively. `RowDefinition` has a single property, `Height`, and `ColumnDefinition` has a single property, `Width`. The options for height and width are as follows:
@@ -77,6 +79,8 @@ grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUni
 grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength(200)});
 grid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (200) });
 ```
+
+<a name="Placing_Views" />
 
 ### Placing Views in a Grid
 

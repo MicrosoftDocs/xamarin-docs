@@ -17,6 +17,8 @@ The `Application` base class offers the following features:
 * [Lifecycle methods](#Lifecycle_Methods) `OnStart`, `OnSleep`, and `OnResume`.
 * [Modal navigation events](#modal) `ModalPushing`, `ModalPushed`, `ModalPopping`, and `ModalPopped`.
 
+<a name="Lifecycle_Methods" />
+
 ## Lifecycle Methods
 
 The `Application` class contains three virtual methods that

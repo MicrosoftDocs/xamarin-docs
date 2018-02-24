@@ -31,7 +31,7 @@ Also note that a ListView is best suited for homogeneous data &ndash; that is, a
 ## Components
 ListView has a number of components available to exercise the native functionality of each platform. Each of these components is described below:
 
-- **[Headers and Footers](customizing-list-appearance.md#headers-footers)** &ndash; Text or view to display at the beginning and end of a list, separate from list's data. Headers and footers can be bound to a data source independently from the ListView's data source.
+- **[Headers and Footers](customizing-list-appearance.md#Headers_and_Footers)** &ndash; Text or view to display at the beginning and end of a list, separate from list's data. Headers and footers can be bound to a data source independently from the ListView's data source.
 - **[Groups](customizing-list-appearance.md#Grouping)** &ndash; Data in a ListView can be grouped for easier navigation. Groups are typically data bound:
 
 ![](images/grouping-depth.png "ListView with Grouped Data")
@@ -50,7 +50,7 @@ To learn more about customizing cells in a ListView, see [Customizing ListView C
 ListView supports a number of interaction styles, including:
 
 - **[Pull-to-Refresh](interactivity.md#Pull_to_Refresh)** &ndash; ListView supports pull-to-refresh on each platform.
-- **[Context Actions](interactivity.md#contextactions)** &ndash; ListView supports taking action on individual items in a list. For example, you can implement swipe-to-action on iOS, or long-tap actions on Android and Windows Phone.
+- **[Context Actions](interactivity.md#Context_Actions)** &ndash; ListView supports taking action on individual items in a list. For example, you can implement swipe-to-action on iOS, or long-tap actions on Android and Windows Phone.
 - **[Selection](interactivity.md#selectiontaps)** &ndash; You can listen for selections and deselections to take action when a row is tapped.
 
 ![](images/context-default.png "ListView with Context Actions")

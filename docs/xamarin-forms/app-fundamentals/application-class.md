@@ -70,6 +70,7 @@ public class App : Xamarin.Forms.Application
 }
 ```
 
+<a name="Properties_Dictionary" />
 
 ## Properties Dictionary
 

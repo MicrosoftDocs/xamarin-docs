@@ -28,6 +28,8 @@ The rendering process can be used to implement platform-specific customizations 
 
 Each item will now be discussed in turn, to implement a `CameraPreview` renderer that displays a preview video stream from the device's camera. Tapping on the video stream will stop and start it.
 
+<a name="Creating_the_Custom_Control" />
+
 ## Creating the Custom Control
 
 A custom control can be created by subclassing the [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) class, as shown in the following code example:
@@ -49,6 +51,8 @@ public class CameraPreview : View
 ```
 
 The `CameraPreview` custom control is created in the portable class library (PCL) project and defines the API for the control. The custom control exposes a `Camera` property that's used for controlling whether the video stream should be displayed from the front or rear camera on the device. If a value isn't specified for the `Camera` property when the control is created, it defaults to specifying the rear camera.
+
+<a name="Consuming_the_Custom_Control" />
 
 ## Consuming the Custom Control
 
@@ -95,6 +99,8 @@ public class MainPageCS : ContentPage
 An instance of the `CameraPreview` custom control will be used to display the preview video stream from the device's camera. Aside from optionally specifying a value for the `Camera` property, customization of the control will be carried out in the custom renderer.
 
 A custom renderer can now be added to each application project to create platform-specific camera preview controls.
+
+<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## Creating the Custom Renderer on each Platform
 

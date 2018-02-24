@@ -27,6 +27,8 @@ When completed, the application using `DependencyService` will have the followin
 
 ![](battery-info-images/battery-diagram.png "DependencyService Application Structure")
 
+<a name="Creating_the_Interface" />
+
 ## Creating the Interface
 
 First, create an interface in shared code that expresses the desired functionality. In the case of a battery checking application, the relevant information is the percentage of the battery remaining, whether the device is charging or not, and how the device is receiving power:
@@ -65,6 +67,8 @@ Coding against this interface in the shared code will allow the Xamarin.Forms ap
 
 > [!NOTE]
 > **Note**: Classes implementing the Interface must have a parameterless constructor to work with the `DependencyService`. Constructors can't be defined by interfaces.
+
+<a name="iOS_Implementation" />
 
 ## iOS Implementation
 
@@ -146,6 +150,8 @@ namespace DependencyServiceSample.iOS
 ```
 
 This attribute registers the class as an implementation of the `IBattery` interface, which means that `DependencyService.Get<IBattery>` can be used in  shared code to create an instance of it:
+
+<a name="Android_Implementation" />
 
 ## Android Implementation
 
@@ -301,6 +307,8 @@ namespace DependencyServiceSample.Droid
 ```
 
 This attribute registers the class as an implementation of the `IBattery` interface, which means that `DependencyService.Get<IBattery>` can be used in the shared code can create an instance of it.
+
+<a name="Windows_Phone_Implementation" />
 
 ## Windows Phone Implementation
 
@@ -467,6 +475,8 @@ namespace DependencyServiceSample.UWP
 ```
 
 The `[assembly]` attribute above the namespace declaration registers the class as an implementation of the `IBattery` interface, which means that `DependencyService.Get<IBattery>` can be used in shared code to create an instance of it.
+
+<a name="Implementing_in_Shared_Code" />
 
 ## Implementing in Shared Code
 

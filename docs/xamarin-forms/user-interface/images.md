@@ -47,7 +47,7 @@ The [`Aspect`](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.As
 
 Images can be loaded from a [local file](#Local_Images_in_Xaml), an [embedded resource](#embedded_images), or [downloaded](#Downloading_Images).
 
-<a name="Local_Images_in_Xaml" />
+<a name="Local_Images" />
 
 ## Local Images
 

@@ -28,7 +28,8 @@ The accompanying [sample application](https://github.com/xamarin/xamarin-forms-s
 
 This section shows how to add the SQLite.Net NuGet packages to a Xamarin.Forms solution, write methods to perform database operations, and use the [`DependencyService`](~/xamarin-forms/app-fundamentals/dependency-service/index.md) to determine a location to store the database on each platform.
 
-<a name="XamarinForms_PCL_Project" /
+<a name="XamarinForms_PCL_Project" />
+
 ### Xamarins.Forms PCL Project
 
 To add SQLite support to a Xamarin.Forms PCL project, use NuGet's search function to find **sqlite-net-pcl** and install the package:

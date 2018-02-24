@@ -378,6 +378,8 @@ public class PlatformCulture
 }
 ```
 
+<a name="Platform-specific_Code" />
+
 ### Platform-Specific Code
 
 The code to detect which language to display must be platform-specific because
