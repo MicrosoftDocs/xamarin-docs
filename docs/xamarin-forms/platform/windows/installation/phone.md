@@ -6,6 +6,7 @@ ms.assetid: B598FA9D-6818-4CC9-8191-838C156DB9DA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 02/16/2016
 ---
 
 # Adding a Windows Phone App

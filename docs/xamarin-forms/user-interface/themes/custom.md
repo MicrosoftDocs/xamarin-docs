@@ -6,6 +6,7 @@ ms.assetid: 4FE08ADC-093F-47FA-B33C-20CF08B5D7E0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 09/01/2017
 ---
 
 # Creating a Custom Theme

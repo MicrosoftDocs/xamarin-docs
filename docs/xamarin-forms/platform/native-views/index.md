@@ -7,6 +7,7 @@ ms.assetid: 2294a023-d763-41de-a9da-c2bfc239a132
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 11/24/2016
 ---
 
 # Native Views

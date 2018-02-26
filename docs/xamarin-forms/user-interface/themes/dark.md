@@ -6,6 +6,7 @@ ms.assetid: 43A3798D-6F05-4734-AF5E-97235B46D9B9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 09/01/2017
 ---
 
 # Dark Theme

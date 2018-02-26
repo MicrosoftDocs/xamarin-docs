@@ -6,6 +6,7 @@ ms.assetid: cab2eefb-c52f-4d81-866e-8f1feabbdd64
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 04/25/2017
 ---
 
 # Why doesn't the Visual Studio XAML designer work for Xamarin.Forms XAML files?

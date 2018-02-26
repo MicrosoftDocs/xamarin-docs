@@ -7,6 +7,7 @@ ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 07/01/2016
 ---
 
 # MessagingCenter

@@ -7,6 +7,7 @@ ms.assetid: 167ec01a-fb9e-431e-a44d-a10eaf62bf39
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
+ms.date: 02/01/2018
 ---
 
 # Graphics

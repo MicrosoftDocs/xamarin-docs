@@ -7,6 +7,7 @@ ms.assetid: 6AF9D016-F693-44B8-B279-7AFDA5504634
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 11/17/2017
 ---
 
 # Consuming Platform-Specifics

@@ -7,6 +7,7 @@ ms.assetid: B5571660-1E82-4379-95C3-0725288CF5D9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 03/08/2016
 ---
 
 # ListView Data Sources

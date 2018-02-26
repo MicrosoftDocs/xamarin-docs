@@ -7,6 +7,7 @@ ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 12/07/2017
 ---
 
 # User Interface

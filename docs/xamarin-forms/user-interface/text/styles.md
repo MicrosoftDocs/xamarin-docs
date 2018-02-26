@@ -7,6 +7,7 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 05/22/2017
 ---
 
 # Styles

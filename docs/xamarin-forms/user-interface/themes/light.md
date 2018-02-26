@@ -6,6 +6,7 @@ ms.assetid: D5D16AE3-F51F-4359-B37A-E1087ECE512B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 09/01/2017
 ---
 
 # Light Theme

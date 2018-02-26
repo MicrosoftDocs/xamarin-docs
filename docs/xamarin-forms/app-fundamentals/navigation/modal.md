@@ -7,6 +7,7 @@ ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 12/01/2017
 ---
 
 # Modal Pages

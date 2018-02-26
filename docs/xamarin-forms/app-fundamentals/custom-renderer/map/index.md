@@ -7,6 +7,7 @@ ms.assetid: CAF389DD-7AA8-4065-B56E-239A7E01CD1F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 11/29/2017
 ---
 
 # Customizing a Map

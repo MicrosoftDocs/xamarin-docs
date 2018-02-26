@@ -7,6 +7,7 @@ ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 03/08/2016
 ---
 
 # ListView Interactivity

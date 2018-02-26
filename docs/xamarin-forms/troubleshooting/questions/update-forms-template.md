@@ -6,6 +6,7 @@ ms.assetid: 160FBE13-26EB-4B4F-9248-A5CBE58FDD7F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 04/25/2017
 ---
 
 # Can I update the Xamarin.Forms default template to a newer NuGet package?

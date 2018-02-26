@@ -6,6 +6,7 @@ ms.assetid: 3DFB7C55-69F6-4980-A501-588719143482
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 09/01/2017
 ---
 
 # Themes

@@ -7,6 +7,7 @@ ms.assetid: 0891F0D5-25C7-4D64-B39B-00D2C613CE05
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 12/05/2016
 ---
 
 # Searching Data in the Cloud

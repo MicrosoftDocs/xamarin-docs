@@ -7,6 +7,7 @@ ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 05/22/2017
 ---
 
 # Text

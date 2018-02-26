@@ -7,6 +7,7 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 05/22/2017
 ---
 
 # Entry
