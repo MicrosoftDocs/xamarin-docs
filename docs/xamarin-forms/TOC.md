@@ -257,7 +257,7 @@
 ## [Deployment & Testing](deploy-test/index.md)
 ### [Performance](deploy-test/performance.md)
 ### [Xamarin.UITest and Test Cloud](deploy-test/uitest-and-test-cloud.md)
-## [Under the Hood](internals/index.md)
+## [Advanced Concepts and Internals](internals/index.md)
 ### [Fast Renderers](internals/fast-renderers.md)
 ### [.NET Standard](internals/net-standard.md)
 ## [Troubleshooting](troubleshooting/index.md)
