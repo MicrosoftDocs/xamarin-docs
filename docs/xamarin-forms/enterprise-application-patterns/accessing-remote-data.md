@@ -22,7 +22,7 @@ Representational State Transfer (REST) is an architectural style for building di
 The REST model uses a navigational scheme to represent objects and services over a network, referred to as resources. Systems that implement REST typically use the HTTP protocol to transmit requests to access these resources. In such systems, a client app submits a request in the form of a URI that identifies a resource, and an HTTP method (such as GET, POST, PUT, or DELETE) that indicates the operation to be performed on that resource. The body of the HTTP request contains any data required to perform the operation.
 
 > [!NOTE]
-> **Note:** REST defines a stateless request model. Therefore, HTTP requests must be independent and might occur in any order.
+> REST defines a stateless request model. Therefore, HTTP requests must be independent and might occur in any order.
 
 The response from a REST request makes use of standard HTTP status codes. For example, a request that returns valid data should include the HTTP response code 200 (OK), while a request that fails to find or delete a specified resource should return a response that includes the HTTP status code 404 (Not Found).
 
@@ -66,13 +66,13 @@ public override async Task InitializeAsync(object navigationData)
 This method calls the `GetCatalogAsync` method of the `CatalogService` instance that was injected into the `CatalogViewModel` by Autofac. The following code example shows the `GetCatalogAsync` method:
 
 ```csharp
-public async Task&lt;ObservableCollection&lt;CatalogItem&gt;&gt; GetCatalogAsync()  
+public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
 {  
     UriBuilder builder = new UriBuilder(GlobalSetting.Instance.CatalogEndpoint);  
     builder.Path = "api/v1/catalog/items";  
     string uri = builder.ToString();  
 
-    CatalogRoot catalog = await _requestProvider.GetAsync&lt;CatalogRoot&gt;(uri);  
+    CatalogRoot catalog = await _requestProvider.GetAsync<CatalogRoot>(uri);  
     ...  
     return catalog?.Data.ToObservableCollection();            
 }
@@ -83,7 +83,7 @@ This method builds the URI that identifies the resource the request will be sent
 The following code example shows the `GetAsync` method in the `RequestProvider` class:
 
 ```csharp
-public async Task&lt;TResult&gt; GetAsync&lt;TResult&gt;(string uri, string token = "")  
+public async Task<TResult> GetAsync<TResult>(string uri, string token = "")  
 {  
     HttpClient httpClient = CreateHttpClient(token);  
     HttpResponseMessage response = await httpClient.GetAsync(uri);  
@@ -91,8 +91,8 @@ public async Task&lt;TResult&gt; GetAsync&lt;TResult&gt;(string uri, string
     await HandleResponse(response);  
     string serialized = await response.Content.ReadAsStringAsync();  
 
-    TResult result = await Task.Run(() =&gt;   
-        JsonConvert.DeserializeObject&lt;TResult&gt;(serialized, _serializerSettings));  
+    TResult result = await Task.Run(() =>   
+        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
 
     return result;  
 }
@@ -125,20 +125,20 @@ When the `GetAsync` method in the `RequestProvider` class calls `HttpClient.GetA
 ```csharp
 [HttpGet]  
 [Route("[action]")]  
-public async Task&lt;IActionResult&gt; Items(  
+public async Task<IActionResult> Items(  
     [FromQuery]int pageSize = 10, [FromQuery]int pageIndex = 0)  
 {  
     var totalItems = await _catalogContext.CatalogItems  
         .LongCountAsync();  
 
     var itemsOnPage = await _catalogContext.CatalogItems  
-        .OrderBy(c=&gt;c.Name)  
+        .OrderBy(c=>c.Name)  
         .Skip(pageSize * pageIndex)  
         .Take(pageSize)  
         .ToListAsync();  
 
     itemsOnPage = ComposePicUri(itemsOnPage);  
-    var model = new PaginatedItemsViewModel&lt;CatalogItem&gt;(  
+    var model = new PaginatedItemsViewModel<CatalogItem>(  
         pageIndex, pageSize, totalItems, itemsOnPage);             
 
     return Ok(model);  
@@ -174,7 +174,7 @@ private async Task ReCalculateTotalAsync()
 This method calls the `UpdateBasketAsync` method of the `BasketService` instance that was injected into the `BasketViewModel` by Autofac. The following method shows the `UpdateBasketAsync` method:
 
 ```csharp
-public async Task&lt;CustomerBasket&gt; UpdateBasketAsync(CustomerBasket customerBasket, string token)  
+public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerBasket, string token)  
 {  
     UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
     string uri = builder.ToString();  
@@ -188,7 +188,7 @@ This method builds the URI that identifies the resource the request will be sent
 The following code example shows one of the `PostAsync` methods in the `RequestProvider` class:
 
 ```csharp
-public async Task&lt;TResult&gt; PostAsync&lt;TResult&gt;(  
+public async Task<TResult> PostAsync<TResult>(  
     string uri, TResult data, string token = "", string header = "")  
 {  
     HttpClient httpClient = CreateHttpClient(token);  
@@ -200,8 +200,8 @@ public async Task&lt;TResult&gt; PostAsync&lt;TResult&gt;(
     await HandleResponse(response);  
     string serialized = await response.Content.ReadAsStringAsync();  
 
-    TResult result = await Task.Run(() =&gt;  
-        JsonConvert.DeserializeObject&lt;TResult&gt;(serialized, _serializerSettings));  
+    TResult result = await Task.Run(() =>  
+        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
 
     return result;  
 }
@@ -213,7 +213,7 @@ When the `PostAsync` method in the `RequestProvider` class calls `HttpClient.Pos
 
 ```csharp
 [HttpPost]  
-public async Task&lt;IActionResult&gt; Post([FromBody]CustomerBasket value)  
+public async Task<IActionResult> Post([FromBody]CustomerBasket value)  
 {  
     var basket = await _repository.UpdateBasketAsync(value);  
     return Ok(basket);  
@@ -285,7 +285,8 @@ The performance of an app can be improved by caching frequently accessed data to
 
 The most common form of caching is read-through caching, where an app retrieves data by referencing the cache. If the data isn't in the cache, it's retrieved from the data store and added to the cache. Apps can implement read-through caching with the cache-aside pattern. This pattern determines whether the item is currently in the cache. If the item isn't in the cache, it's read from the data store and added to the cache. For more information, see the [Cache-Aside](https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside) pattern on Microsoft Docs.
 
->💡 **Tip:** Cache data that's read frequently and that changes infrequently. This data can be added to the cache on demand the first time it is retrieved by an app. This means that the app needs to fetch the data only once from the data store, and that subsequent access can be satisfied by using the cache.
+> [!TIP]
+> Cache data that's read frequently and that changes infrequently. This data can be added to the cache on demand the first time it is retrieved by an app. This means that the app needs to fetch the data only once from the data store, and that subsequent access can be satisfied by using the cache.
 
 Distributed applications, such as the eShopOnContainers reference application, should provide either or both of the following caches:
 
@@ -294,13 +295,15 @@ Distributed applications, such as the eShopOnContainers reference application, s
 
 The eShopOnContainers mobile app uses a private cache, where data is held locally on the device that's running an instance of the app. For information about the cache used by the eShopOnContainers reference application, see [.NET Microservices: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook).
 
->💡 **Tip:** Think of the cache as a transient data store that could disappear at any time. Ensure that data is maintained in the original data store as well as the cache. The chances of losing data are then minimized if the cache becomes unavailable.
+> [!TIP]
+> Think of the cache as a transient data store that could disappear at any time. Ensure that data is maintained in the original data store as well as the cache. The chances of losing data are then minimized if the cache becomes unavailable.
 
 ### Managing Data Expiration
 
 It's impractical to expect that cached data will always be consistent with the original data. Data in the original data store might change after it's been cached, causing the cached data to become stale. Therefore, apps should implement a strategy that helps to ensure that the data in the cache is as up-to-date as possible, but can also detect and handle situations that arise when the data in the cache has become stale. Most caching mechanisms enable the cache to be configured to expire data, and hence reduce the period for which data might be out of date.
 
->💡 **Tip:** Set a default expiration time when configuring a cache. Many caches implement expiration, which invalidates data and removes it from the cache if it's not accessed for a specified period. However, care must be taken when choosing the expiration period. If it's made too short, data will expire too quickly and the benefits of caching will be reduced. If it's made too long, the data risks becoming stale. Therefore, the expiration time should match the pattern of access for apps that use the data.
+> [!TIP]
+> Set a default expiration time when configuring a cache. Many caches implement expiration, which invalidates data and removes it from the cache if it's not accessed for a specified period. However, care must be taken when choosing the expiration period. If it's made too short, data will expire too quickly and the benefits of caching will be reduced. If it's made too long, the data risks becoming stale. Therefore, the expiration time should match the pattern of access for apps that use the data.
 
 When cached data expires, it should be removed from the cache, and the app must retrieve the data from the original data store and place it back into the cache.
 
@@ -363,11 +366,12 @@ If an app detects a failure when it tries to send a request to a remote service,
 The retry strategy should be tuned to match the business requirements of the app. For example, it's important to optimize the retry count and retry interval to the operation being attempted. If the operation is part of a user interaction, the retry interval should be short and only a few retries attempted to avoid making users wait for a response. If the operation is part of a long running workflow, where cancelling or restarting the workflow is expensive or time-consuming, it's appropriate to wait longer between attempts and to retry more times.
 
 > [!NOTE]
-> **Note:** An aggressive retry strategy with minimal delay between attempts, and a large number of retries, could degrade a remote service that's running close to or at capacity. In addition, such a retry strategy could also affect the responsiveness of the app if it's continually trying to perform a failing operation.
+> An aggressive retry strategy with minimal delay between attempts, and a large number of retries, could degrade a remote service that's running close to or at capacity. In addition, such a retry strategy could also affect the responsiveness of the app if it's continually trying to perform a failing operation.
 
 If a request still fails after a number of retries, it's better for the app to prevent further requests going to the same resource and to report a failure. Then, after a set period, the app can make one or more requests to the resource to see if they're successful. For more information, see [Circuit Breaker Pattern](#circuit_breaker_pattern).
 
->💡 **Tip:** Never implement an endless retry mechanism. Use a finite number of retries, or implement the [Circuit Breaker](https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker) pattern to allow a service to recover.
+> [!TIP]
+> Never implement an endless retry mechanism. Use a finite number of retries, or implement the [Circuit Breaker](https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker) pattern to allow a service to recover.
 
 The eShopOnContainers mobile app does not currently implement the retry pattern when making RESTful web requests. However, the `CachedImage` control, provided by the [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) library supports transient fault handling by retrying image loading. If image loading fails, further attempts will be made. The number of attempts is specified by the `RetryCount` property, and retries will occur after a delay specified by the `RetryDelay` property. If these property values aren't explicitly set, their default values are applied – 3 for the `RetryCount` property, and 250ms for the `RetryDelay` property. For more information about the `CachedImage` control, see [Caching Images](#caching_images).
 
@@ -384,13 +388,14 @@ In some situations, faults can occur due to anticipated events that take longer 
 The circuit breaker pattern can prevent an app from repeatedly trying to execute an operation that's likely to fail, while also enabling the app to detect whether the fault has been resolved.
 
 > [!NOTE]
-> **Note:** The purpose of the circuit breaker pattern is different from the retry pattern. The retry pattern enables an app to retry an operation in the expectation that it'll succeed. The circuit breaker pattern prevents an app from performing an operation that's likely to fail.
+> The purpose of the circuit breaker pattern is different from the retry pattern. The retry pattern enables an app to retry an operation in the expectation that it'll succeed. The circuit breaker pattern prevents an app from performing an operation that's likely to fail.
 
 A circuit breaker acts as a proxy for operations that might fail. The proxy should monitor the number of recent failures that have occurred, and use this information to decide whether to allow the operation to proceed, or to return an exception immediately.
 
 The eShopOnContainers mobile app does not currently implement the circuit breaker pattern. However, the eShopOnContainers does. For more information, see [.NET Microservices: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook).
 
->💡 **Tip:** Combine the retry and circuit breaker patterns. An app can combine the retry and circuit breaker patterns by using the retry pattern to invoke an operation through a circuit breaker. However, the retry logic should be sensitive to any exceptions returned by the circuit breaker and abandon retry attempts if the circuit breaker indicates that a fault is not transient.
+> [!TIP]
+> Combine the retry and circuit breaker patterns. An app can combine the retry and circuit breaker patterns by using the retry pattern to invoke an operation through a circuit breaker. However, the retry logic should be sensitive to any exceptions returned by the circuit breaker and abandon retry attempts if the circuit breaker indicates that a fault is not transient.
 
 For more information about the circuit breaker pattern, see the [Circuit Breaker](https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker) pattern on Microsoft Docs.
 
