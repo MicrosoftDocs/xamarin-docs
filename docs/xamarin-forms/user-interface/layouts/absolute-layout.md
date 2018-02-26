@@ -207,6 +207,7 @@ In C#:
 var label = new Label {Text = "I'm centered on iPhone 4 but no other device."};
 AbsoluteLayout.SetLayoutBounds(label, new Rectangle(115,150,100,100));
 ```
+
 ## Exploring a Complex Layout
 
 Each of the layouts have strengths and weaknesses for creating particular layouts. Throughout this series of layout articles, a sample app has been created with the same page layout implemented using three different layouts.
