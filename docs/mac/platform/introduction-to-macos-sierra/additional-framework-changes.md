@@ -1,5 +1,5 @@
 ---
-title: "Additional macOS Sierra Frameworks Changes"
+title: "Additional macOS Sierra Framework Changes"
 description: "This article covers additional, minor changes or enhancements to existing frameworks for macOS Sierra."
 ms.topic: article
 ms.prod: xamarin
@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Additional macOS Sierra Frameworks Changes
+# Additional macOS Sierra Framework Changes
 
 _This article covers additional, minor changes or enhancements to existing frameworks for macOS Sierra._
 

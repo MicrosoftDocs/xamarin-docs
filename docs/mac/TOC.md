@@ -31,7 +31,7 @@
 ## [Platform Features](platform/index.md)
 ### [Introduction to macOS Sierra](platform/introduction-to-macos-sierra/index.md)
 #### [Building Modern macOS Apps](platform/introduction-to-macos-sierra/modern-cocoa-apps.md)
-#### [Additional iOS 10 Framework Changes](platform/introduction-to-macos-sierra/additional-framework-changes.md)
+#### [Additional macOS Sierra Framework Changes](platform/introduction-to-macos-sierra/additional-framework-changes.md)
 #### [Troubleshooting](platform/introduction-to-macos-sierra/troubleshooting.md)
 ### [Binding Mac libraries](platform/binding.md)
 ### [Introduction to OpenTK](platform/opentk.md)
