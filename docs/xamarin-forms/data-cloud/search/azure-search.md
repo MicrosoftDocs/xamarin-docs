@@ -25,8 +25,8 @@ Each request made to Azure Search  must include the name of the service, and an 
 
 The most common request to Azure Search is to execute a query. There are two types of query that can be submitted:
 
-- A *search* query searches for one or more items in all searchable fields in an index. Search queries are built using the simplified syntax, or the Lucene query syntax. For more information, see [Simple query syntax in Azure Search](https://docs.microsoft.com/en-us/rest/api/searchservice/Simple-query-syntax-in-Azure-Search/), and [Lucene query syntax in Azure Search](https://docs.microsoft.com/en-us/rest/api/searchservice/Lucene-query-syntax-in-Azure-Search/) on the Microsoft Documentation Portal.
-- A *filter* query evaluates a boolean expression over all filterable fields in an index. Filter queries are built using a subset of the OData filter language. For more information, see [OData Expression Syntax for Azure Search](https://docs.microsoft.com/en-us/rest/api/searchservice/OData-Expression-Syntax-for-Azure-Search/) on the Microsoft Documentation Portal.
+- A *search* query searches for one or more items in all searchable fields in an index. Search queries are built using the simplified syntax, or the Lucene query syntax. For more information, see [Simple query syntax in Azure Search](/rest/api/searchservice/Simple-query-syntax-in-Azure-Search/), and [Lucene query syntax in Azure Search](/rest/api/searchservice/Lucene-query-syntax-in-Azure-Search/).
+- A *filter* query evaluates a boolean expression over all filterable fields in an index. Filter queries are built using a subset of the OData filter language. For more information, see [OData Expression Syntax for Azure Search](/rest/api/searchservice/OData-Expression-Syntax-for-Azure-Search/).
 
 Search queries and filter queries can be used separately or together. When used together, the filter query is applied first to the entire index, and then the search query is performed on the results of the filter query.
 
@@ -36,7 +36,7 @@ Azure Search also supports retrieving suggestions based on search input. For mor
 
 The process for integrating Azure Search into a Xamarin.Forms application is as follows:
 
-1. Create an Azure Search service. For more information, see [Create an Azure Search service using the Azure Portal](https://docs.microsoft.com/en-us/azure/search/search-create-service-portal) on the Microsoft Documentation Portal.
+1. Create an Azure Search service. For more information, see [Create an Azure Search service using the Azure Portal](/azure/search/search-create-service-portal/).
 1. Remove Silverlight as a target framework from the Xamarin.Forms solution Portable Class Library (PCL). This can be accomplished by changing the PCL profile to any profile that supports cross-platform development, but doesn't support Silverlight, such as profile 151 or profile 92.
 1. Add the [Microsoft Azure Search Library](https://www.nuget.org/packages/Microsoft.Azure.Search) NuGet package to the PCL project in the Xamarin.Forms solution.
 
@@ -101,7 +101,7 @@ After creating the `Index` object, the index is created by calling `Indexes.Crea
 > [!NOTE]
 > When creating an index from an application that must be kept responsive, use the `Indexes.CreateAsync` method.
 
-For more information, see [Create an Azure Search index using the .NET SDK](https://docs.microsoft.com/en-us/azure/search/search-create-index-dotnet) on the Microsoft Documentation Portal.
+For more information, see [Create an Azure Search index using the .NET SDK](/azure/search/search-create-index-dotnet/).
 
 ## Deleting the Azure Search Index
 
@@ -150,14 +150,14 @@ static void UploadDataToSearchIndex()
 }
 ```
 
-Data to be imported into the index is packaged as an `IndexBatch` object, which encapsulates a collection of `IndexAction` objects. Each `IndexAction` instance contains a document, and a property that tells Azure Search which action to perform on the document. In the code example above, the `IndexAction.Upload` action is specified, which results in the document being inserted into the index if it's new, or replaced if it already exists. The `IndexBatch` object is then sent to the index by calling the `Documents.Index` method on the `SearchIndexClient` object. For information about other indexing actions, see [Decide which indexing action to use](https://docs.microsoft.com/en-us/azure/search/search-import-data-dotnet#ii-decide-which-indexing-action-to-use) on the Microsoft Documentation Portal.
+Data to be imported into the index is packaged as an `IndexBatch` object, which encapsulates a collection of `IndexAction` objects. Each `IndexAction` instance contains a document, and a property that tells Azure Search which action to perform on the document. In the code example above, the `IndexAction.Upload` action is specified, which results in the document being inserted into the index if it's new, or replaced if it already exists. The `IndexBatch` object is then sent to the index by calling the `Documents.Index` method on the `SearchIndexClient` object. For information about other indexing actions, see [Decide which indexing action to use](/azure/search/search-import-data-dotnet#ii-decide-which-indexing-action-to-use).
 
 > [!NOTE]
 > Only 1000 documents can be included in a single indexing request.
 
 Note that in the code example above, the `monkeyList` collection is created as an anonymous object from a collection of `Monkey` objects. This creates data for the `id` field, and resolves the mapping of Pascal case `Monkey` property names to camel case search index field names. Alternatively, this mapping can also be accomplished by adding the `[SerializePropertyNamesAsCamelCase]` attribute to the `Monkey` class.
 
-For more information, see [Upload data to Azure Search using the .NET SDK](https://docs.microsoft.com/en-us/azure/search/search-import-data-dotnet) on the Microsoft Documentation Portal.
+For more information, see [Upload data to Azure Search using the .NET SDK](/azure/search/search-import-data-dotnet/).
 
 ## Querying the Azure Search Index
 
@@ -212,7 +212,7 @@ The `SearchAsync` method returns a `DocumentSearchResult` object that contains t
 
 ![](azure-search-images/search.png "Search Results")
 
-For more information about searching and filtering, see [Query your Azure Search index using the .NET SDK](https://docs.microsoft.com/en-us/azure/search/search-query-dotnet) on the Microsoft Documentation Portal.
+For more information about searching and filtering, see [Query your Azure Search index using the .NET SDK](/azure/search/search-query-dotnet/).
 
 <a name="suggestions" />
 
@@ -274,5 +274,5 @@ This article demonstrated how to use the Microsoft Azure Search Library to integ
 ## Related Links
 
 - [Azure Search (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureSearch/)
-- [Azure Search Documentation](https://docs.microsoft.com/en-us/azure/search/)
+- [Azure Search Documentation](/azure/search/)
 - [Microsoft Azure Search Library](https://www.nuget.org/packages/Microsoft.Azure.Search/)

@@ -42,7 +42,7 @@ On the iOS platform, there's no additional setup required to use this functional
 On the Android platform, there are a number of prerequisites that must be met to use application indexing and deep linking functionality:
 
 1. A version of your application must be live on Google Play.
-1. A companion website must be registered against the application in Google's Developer Console. Once the application is associated with a website, URLs can be indexed that work for both the website and the application, which can then be served in Search results. For more information, see [App Indexing on Google Search](https://support.google.com/googleplay/android-developer/answer/6041489?hl=en-GB) on Google's website.
+1. A companion website must be registered against the application in Google's Developer Console. Once the application is associated with a website, URLs can be indexed that work for both the website and the application, which can then be served in Search results. For more information, see [App Indexing on Google Search](https://support.google.com/googleplay/android-developer/answer/6041489) on Google's website.
 1. Your application must support HTTP URL intents on the `MainActivity` class, which tell application indexing what types of URL data schemes the application can respond to. For more information, see [Configuring the Intent Filter](~/android/platform/app-linking.md#configure-intent-filter).
 
 Once these prerequisites are met, the following additional setup is required to use Xamarin.Forms application indexing and deep linking on the Android platform:

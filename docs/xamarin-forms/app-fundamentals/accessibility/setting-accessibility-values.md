@@ -32,7 +32,7 @@ Each platform has a different screen reader to narrate the accessibility values:
 
 - iOS has VoiceOver. For more information, see [Test Accessibility on Your Device with VoiceOver](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html) on developer.apple.com.
 - Android has TalkBack. For more information, see [Testing Your App's Accessibility](https://developer.android.com/training/accessibility/testing.html#talkback) on developer.android.com.
-- Windows has Narrator. For more information, see [Verify main app scenarios by using Narrator](https://docs.microsoft.com/en-us/windows/uwp/accessibility/accessibility-testing#verify-main-app-scenarios-by-using-narrator) on docs.microsoft.com.
+- Windows has Narrator. For more information, see [Verify main app scenarios by using Narrator](/windows/uwp/accessibility/accessibility-testing#verify-main-app-scenarios-by-using-narrator/).
 
 However, the exact behavior of a screen reader depends on the software and on the user's configuration of it. For example, most screen readers read the text associated with a control when it receives focus, enabling users to orient themselves as they move among the controls on the page. Some screen readers also read the entire application user interface when a page appears, which enables the user to receive all of the page's available informational content before attempting to navigate it.
 

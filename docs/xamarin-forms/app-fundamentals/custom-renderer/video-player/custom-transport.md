@@ -125,7 +125,7 @@ namespace FormsVideoLibrary.Droid
                 args.NewElement.PauseRequested += OnPauseRequested;
                 args.NewElement.StopRequested += OnStopRequested;
             }
-            
+
             if (args.OldElement != null)
             {
                 ···
@@ -255,13 +255,13 @@ namespace FormsVideoLibrary
 }
 ```
 
-Usually, a read-only bindable property would have a private `set` accessor on the `Status` property to allow it to be set from within the class. For a `View` derivative supported by renderers, however, the property must be set from outside the class, but only by the platform renderer. 
+Usually, a read-only bindable property would have a private `set` accessor on the `Status` property to allow it to be set from within the class. For a `View` derivative supported by renderers, however, the property must be set from outside the class, but only by the platform renderer.
 
 For this reason, another property is defined with the name `IVideoPlayerController.Status`. This is an explicit interface implementation, and is made possible by the `IVideoPlayerController` interface that the `VideoPlayer` class implements:
 
 ```csharp
 namespace FormsVideoLibrary
-{ 
+{
     public interface IVideoPlayerController
     {
         VideoStatus Status { set; get; }
@@ -271,7 +271,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-This is similar to how the [`WebView`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) control uses the [`IWebViewController`](https://developer.xamarin.com/api/type/Xamarin.Forms.IWebViewController/) interface to implement the `CanGoBack` and `CanGoForward` properties. (See the source code of [`WebView`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/WebView.cs) and its renderers for details.) 
+This is similar to how the [`WebView`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) control uses the [`IWebViewController`](https://developer.xamarin.com/api/type/Xamarin.Forms.IWebViewController/) interface to implement the `CanGoBack` and `CanGoForward` properties. (See the source code of [`WebView`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/WebView.cs) and its renderers for details.)
 
 This makes it possible for a class external to `VideoPlayer` to set the `Status` property by referencing the `IVideoPlayerController` interface. (You'll see the code shortly.) The property can be set from other classes as well, but it's unlikely to be set inadvertently. Most importantly, the `Status` property cannot be set through a data binding.
 
@@ -444,7 +444,7 @@ namespace FormsVideoLibrary.Droid
 
 ### The UWP status setting
 
-The UWP `VideoPlayerRenderer` makes use of the `UpdateStatus` event, but it does not need it for setting the `Status` property. The `MediaElement` defines a [`CurrentStateChanged`](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_CurrentStateChanged) event that allows the renderer to be notified when the [`CurrentState`](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_CurrentState) property has changed. The property is detached in the `Dispose` override:
+The UWP `VideoPlayerRenderer` makes use of the `UpdateStatus` event, but it does not need it for setting the `Status` property. The `MediaElement` defines a [`CurrentStateChanged`](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_CurrentStateChanged) event that allows the renderer to be notified when the [`CurrentState`](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_CurrentState) property has changed. The property is detached in the `Dispose` override:
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -482,7 +482,7 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-The `CurrentState` property is of type [`MediaElementState`](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.mediaelementstate), and maps easily into `VideoStatus`:
+The `CurrentState` property is of type [`MediaElementState`](/uwp/api/windows.ui.xaml.media.mediaelementstate), and maps easily into `VideoStatus`:
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -517,7 +517,7 @@ namespace FormsVideoLibrary.UWP
 
 Using Unicode characters for symbolic **Play**, **Pause**, and **Stop** images is problematic. The [Miscellaneous Technical](https://unicode-table.com/en/blocks/miscellaneous-technical/) section of the Unicode standard defines three symbol characters seemingly appropriate for this purpose. These are:
 
-- 0x23F5 (black medium right-pointing triangle) or &#x23F5; for **Play** 
+- 0x23F5 (black medium right-pointing triangle) or &#x23F5; for **Play**
 - 0x23F8 (double vertical bar) or &#x23F8; for **Pause**
 - 0x23F9 (black square) or &#x23F9; for **Stop**
 
@@ -525,13 +525,13 @@ Regardless how these symbols appear in your browser (and different browsers hand
 
 For that reason, the 0x23F5 codepoint can't be used for **Play**. A good substitute is:
 
-- 0x25B6 (black right-pointing triangle) or &#x25B6; for **Play** 
+- 0x25B6 (black right-pointing triangle) or &#x25B6; for **Play**
 
 This is supported by all three platforms except that it's a plain black triangle that does not resemble the 3D appearance of **Pause** and **Stop**. One possibility is to follow the 0x25B6 codepoint with a variant code:
 
 - 0x25B6 followed by 0xFE0F (variant 16) or &#x25B6;&#xFE0F; for **Play**
 
-This is what's used in the markup shown below. On iOS, it gives the **Play** symbol the same 3D appearance as the **Pause** and **Stop** buttons, but the variant doesn't work on Android and the UWP. 
+This is what's used in the markup shown below. On iOS, it gives the **Play** symbol the same 3D appearance as the **Pause** and **Stop** buttons, but the variant doesn't work on Android and the UWP.
 
 The **Custom Transport** page sets the **AreTransportControlsEnabled** property to **false** and includes an `ActivityIndicator` displayed when the video is loading, and two buttons. `DataTrigger` objects are used to enable and disable the `ActivityIndicator` and the buttons, and to switch the first button between **Play** and **Pause**:
 
@@ -549,7 +549,7 @@ The **Custom Transport** page sets the **AreTransportControlsEnabled** property 
 
         <video:VideoPlayer x:Name="videoPlayer"
                            Grid.Row="0"
-                           AutoPlay="False" 
+                           AutoPlay="False"
                            AreTransportControlsEnabled="False"
                            Source="{StaticResource BigBuckBunny}" />
 
@@ -558,7 +558,7 @@ The **Custom Transport** page sets the **AreTransportControlsEnabled** property 
                            IsVisible="False">
             <ActivityIndicator.Triggers>
                 <DataTrigger TargetType="ActivityIndicator"
-                             Binding="{Binding Source={x:Reference videoPlayer}, 
+                             Binding="{Binding Source={x:Reference videoPlayer},
                                                Path=Status}"
                              Value="{x:Static video:VideoStatus.NotReady}">
                     <Setter Property="IsVisible" Value="True" />
@@ -603,7 +603,7 @@ The **Custom Transport** page sets the **AreTransportControlsEnabled** property 
             </Button>
         </StackLayout>
     </Grid>
-</ContentPage> 
+</ContentPage>
 ```
 
 Data triggers are described in detail in the article [Data Triggers](~/xamarin-forms/app-fundamentals/triggers.md#data).

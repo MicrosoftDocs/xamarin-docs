@@ -19,7 +19,7 @@ The `SKPath` class supports the definition of entire path objects from text stri
 
 SVG is an XML-based graphics programming language for web pages. Because SVG must allow paths to be defined in markup rather than a series of function calls, the SVG standard includes an extremely concise way of specifying an entire graphics path as a text string.
 
-Within SkiaSharp, this format is referred to as "SVG path-data." The format is also supported in Windows XAML-based programming environments, including the Windows Presentation Foundation and the Universal Windows Platform, where it is known as the [Path Markup Syntax](https://msdn.microsoft.com/en-us/library/ms752293%28v=vs.110%29.aspx) or the [Move and draw commands syntax](https://docs.microsoft.com/en-us/windows/uwp/xaml-platform/move-draw-commands-syntax). It can also serve as an exchange format for vector graphics images, particularly in text-based files such as XML.
+Within SkiaSharp, this format is referred to as "SVG path-data." The format is also supported in Windows XAML-based programming environments, including the Windows Presentation Foundation and the Universal Windows Platform, where it is known as the [Path Markup Syntax](https://msdn.microsoft.com/library/ms752293%28v=vs.110%29.aspx) or the [Move and draw commands syntax](/windows/uwp/xaml-platform/move-draw-commands-syntax/). It can also serve as an exchange format for vector graphics images, particularly in text-based files such as XML.
 
 SkiaSharp defines two methods with the words `SvgPathData` in their names:
 

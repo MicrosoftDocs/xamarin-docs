@@ -645,7 +645,7 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 
 This method opens a web browser and navigates to the address stored in the `Url` property of the `CustomPin` instance. Note that the address was defined when creating the `CustomPin` collection in the PCL project.
 
-For more information about customizing a `MapControl` instance, see [Maps and Location Overview](https://msdn.microsoft.com/en-us/library/windows/apps/mt219699.aspx) on MSDN.
+For more information about customizing a `MapControl` instance, see [Maps and Location Overview](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx) on MSDN.
 
 ## Summary
 

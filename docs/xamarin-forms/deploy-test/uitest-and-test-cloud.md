@@ -16,12 +16,12 @@ _Xamarin UITest component can be used with Xamarin.Forms to write UI tests to ru
 
 ## Overview
 
-**[App Center Test](https://docs.microsoft.com/appcenter/test-cloud/)** allows developers to write automated user interface tests for iOS and Android apps. With some minor tweaks, Xamarin.Forms apps can be tested using Xamarin.UITest, including sharing the same test code. This article introduces specific tips to get Xamarin.UITest working with Xamarin.Forms.
+**[App Center Test](/appcenter/test-cloud/)** allows developers to write automated user interface tests for iOS and Android apps. With some minor tweaks, Xamarin.Forms apps can be tested using Xamarin.UITest, including sharing the same test code. This article introduces specific tips to get Xamarin.UITest working with Xamarin.Forms.
 
 This guide does assume that familiarity with Xamarin.UITest. The following guides are recommended for gaining familiarity with Xamarin.UITest:
 
-- [Introduction to App Center Test](https://docs.microsoft.com/appcenter/test-cloud/)
-- [Introduction to UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest)
+- [Introduction to App Center Test](/appcenter/test-cloud/)
+- [Introduction to UITest](/appcenter/test-cloud/preparing-for-upload/uitest/)
 
 Once a UITest project has been added to a Xamarin.Forms solution, the steps for writing and and running the tests for a Xamarin.Forms application are the same as for a Xamarin.Android or Xamarin.iOS application.
 
@@ -92,7 +92,7 @@ Unlike iOS, Android projects do not need any special startup code.
 
 ## Writing UITests
 
-For information about writing UITests, see [UITest documentation](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest). The steps below are a summary, specifically describing how the [Xamarin.Forms demo **UsingUITest**](https://developer.xamarin.com/samples/xamarin-forms/UsingUITest/) is built.
+For information about writing UITests, see [UITest documentation](/appcenter/test-cloud/preparing-for-upload/uitest/). The steps below are a summary, specifically describing how the [Xamarin.Forms demo **UsingUITest**](https://developer.xamarin.com/samples/xamarin-forms/UsingUITest/) is built.
 
 ### Use AutomationId in the Xamarin.Forms UI
 
@@ -209,7 +209,7 @@ After adding Xamarin.UITest to the Xamarin.Forms solution, it's possible to crea
 
 Xamarin.Forms applications can be easily tested with **Xamarin.UITest** using a simple mechanism to expose the `AutomationId` as a unique view identifier for test automation. Once a UITest project has been added to a Xamarin.Forms solution, the steps for writing and and running the tests for a Xamarin.Forms application are the same as for a Xamarin.Android or Xamarin.iOS application.
 
-For information about how to submit tests to App Center Test, see [Submitting UITests](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest). For more information about UITest, see [App Center Test documentation](https://docs.microsoft.com/appcenter/test-cloud/).
+For information about how to submit tests to App Center Test, see [Submitting UITests](/appcenter/test-cloud/preparing-for-upload/uitest/). For more information about UITest, see [App Center Test documentation](/appcenter/test-cloud/).
 
 
 ## Related Links

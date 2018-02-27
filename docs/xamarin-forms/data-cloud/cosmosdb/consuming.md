@@ -22,20 +22,20 @@ An Azure Cosmos DB document database may contain zero or more document collectio
 
 Each document collection consists of zero or more JSON documents. Documents in a collection are schema-free, and so do not need to share the same structure or fields. As documents are added to a document collection, Cosmos DB automatically indexes them and they become available to be queried.
 
-For development purposes, a document database can also be consumed through an emulator. Using the emulator, applications can be developed and tested locally, without creating an Azure subscription or incurring any costs. For more information about the emulator, see [Developing locally with the Azure Cosmos DB Emulator](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator) on [Microsoft Docs](https://docs.microsoft.com/).
+For development purposes, a document database can also be consumed through an emulator. Using the emulator, applications can be developed and tested locally, without creating an Azure subscription or incurring any costs. For more information about the emulator, see [Developing locally with the Azure Cosmos DB Emulator](/azure/cosmos-db/local-emulator/).
 
 This article, and accompanying sample application, demonstrates a Todo list application where the tasks are stored in an Azure Cosmos DB document database. For more information about the sample application, see [Understanding the sample](~/xamarin-forms/data-cloud/walkthrough.md).
 
 > [!NOTE]
 > The DocumentDB Client Library is currently not compatible with Universal Windows Platform (UWP) applications. However, an Azure Cosmos DB document database can be used from a UWP application by creating a middle-tier web service which uses the DocumentDB Client Library, and invoking this service from the UWP application.
 
-For more information about Azure Cosmos DB, see the [Azure Cosmos DB Documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/) on [Microsoft Docs](https://docs.microsoft.com/).
+For more information about Azure Cosmos DB, see the [Azure Cosmos DB Documentation](/azure/cosmos-db/).
 
 ## Setup
 
 The process for integrating an Azure Cosmos DB document database into a Xamarin.Forms application is as follows:
 
-1. Create a Cosmos DB account. For more information, see [Create a Cosmos DB account](https://docs.microsoft.com/en-us/azure/cosmos-db/documentdb-dotnetcore-get-started#step-1-create-a-documentdb-account) on [Microsoft Docs](https://docs.microsoft.com/).
+1. Create a Cosmos DB account. For more information, see [Create a Cosmos DB account](/azure/cosmos-db/documentdb-dotnetcore-get-started#step-1-create-a-documentdb-account).
 1. Add the [DocumentDB Client Library](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) NuGet package to the platform projects in the Xamarin.Forms solution.
 1. Add `using` directives for the `Microsoft.Azure.Documents`, `Microsoft.Azure.Documents.Client`, and `Microsoft.Azure.Documents.Linq` namespaces to classes that will access the Cosmos DB account.
 
@@ -52,7 +52,7 @@ The `DocumentClient` type encapsulates the endpoint, credentials, and connection
 DocumentClient client = new DocumentClient(new Uri(Constants.EndpointUri), Constants.PrimaryKey);
 ```
 
-The Cosmos DB Uri and primary key must be provided to the `DocumentClient` constructor. These can be obtained from the Azure Portal. For more information, see [Connect to a Azure Cosmos DB account](https://docs.microsoft.com/en-us/azure/cosmos-db/documentdb-dotnetcore-get-started#a-idconnectastep-3-connect-to-an-azure-cosmos-db-account) on [Microsoft Docs](https://docs.microsoft.com/).
+The Cosmos DB Uri and primary key must be provided to the `DocumentClient` constructor. These can be obtained from the Azure Portal. For more information, see [Connect to a Azure Cosmos DB account](/azure/cosmos-db/documentdb-dotnetcore-get-started#a-idconnectastep-3-connect-to-an-azure-cosmos-db-account).
 
 ### Creating a Database
 
@@ -225,6 +225,6 @@ This article explained how to use the Microsoft Azure DocumentDB Client Library 
 ## Related Links
 
 - [TodoDocumentDB (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDB/)
-- [Cosmos DB Documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/)
+- [Cosmos DB Documentation](/azure/cosmos-db/)
 - [DocumentDB Client Library](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
 - [Azure Cosmos DB API](https://msdn.microsoft.com/library/azure/dn948556.aspx)

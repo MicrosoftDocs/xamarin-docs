@@ -30,7 +30,7 @@ A RESTful web API exposes a set of connected resources, and provides the core op
 
 The data included by a client app in an HTTP request, and the corresponding response messages from the web server, could be presented in a variety of formats, known as media types. When a client app sends a request that returns data in the body of a message, it can specify the media types it can handle in the `Accept` header of the request. If the web server supports this media type, it can reply with a response that includes the `Content-Type` header that specifies the format of the data in the body of the message. It's then the responsibility of the client app to parse the response message and interpret the results in the message body appropriately.
 
-For more information about REST, see [API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design) and [API implementation](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-implementation) on Microsoft Docs.
+For more information about REST, see [API design](/azure/architecture/best-practices/api-design/) and [API implementation](/azure/architecture/best-practices/api-implementation/).
 
 ## Consuming RESTful APIs
 
@@ -283,7 +283,7 @@ This method uses an instance of the `RedisBasketRepository` class to delete the 
 
 The performance of an app can be improved by caching frequently accessed data to fast storage that's located close to the app. If the fast storage is located closer to the app than the original source, then caching can significantly improve response times when retrieving data.
 
-The most common form of caching is read-through caching, where an app retrieves data by referencing the cache. If the data isn't in the cache, it's retrieved from the data store and added to the cache. Apps can implement read-through caching with the cache-aside pattern. This pattern determines whether the item is currently in the cache. If the item isn't in the cache, it's read from the data store and added to the cache. For more information, see the [Cache-Aside](https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside) pattern on Microsoft Docs.
+The most common form of caching is read-through caching, where an app retrieves data by referencing the cache. If the data isn't in the cache, it's retrieved from the data store and added to the cache. Apps can implement read-through caching with the cache-aside pattern. This pattern determines whether the item is currently in the cache. If the item isn't in the cache, it's read from the data store and added to the cache. For more information, see the [Cache-Aside](/azure/architecture/patterns/cache-aside/) pattern.
 
 > [!TIP]
 > Cache data that's read frequently and that changes infrequently. This data can be added to the cache on demand the first time it is retrieved by an app. This means that the app needs to fetch the data only once from the data store, and that subsequent access can be satisfied by using the cache.
@@ -307,7 +307,7 @@ It's impractical to expect that cached data will always be consistent with the o
 
 When cached data expires, it should be removed from the cache, and the app must retrieve the data from the original data store and place it back into the cache.
 
-It's also possible that a cache might fill up if data is allowed to remain for too long a period. Therefore, requests to add new items to the cache might be required to remove some items in a process known as *eviction*. Caching services typically evict data on a least-recently-used basis. However, there are other eviction policies, including most-recently-used, and first-in-first-out. For more information, see [Caching Guidance](https://docs.microsoft.com/en-us/azure/architecture/best-practices/caching) on Microsoft Docs.
+It's also possible that a cache might fill up if data is allowed to remain for too long a period. Therefore, requests to add new items to the cache might be required to remove some items in a process known as *eviction*. Caching services typically evict data on a least-recently-used basis. However, there are other eviction policies, including most-recently-used, and first-in-first-out. For more information, see [Caching Guidance](/azure/architecture/best-practices/caching/).
 
 <a name="caching_images" />
 
@@ -371,13 +371,13 @@ The retry strategy should be tuned to match the business requirements of the app
 If a request still fails after a number of retries, it's better for the app to prevent further requests going to the same resource and to report a failure. Then, after a set period, the app can make one or more requests to the resource to see if they're successful. For more information, see [Circuit Breaker Pattern](#circuit_breaker_pattern).
 
 > [!TIP]
-> Never implement an endless retry mechanism. Use a finite number of retries, or implement the [Circuit Breaker](https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker) pattern to allow a service to recover.
+> Never implement an endless retry mechanism. Use a finite number of retries, or implement the [Circuit Breaker](/azure/architecture/patterns/circuit-breaker/) pattern to allow a service to recover.
 
 The eShopOnContainers mobile app does not currently implement the retry pattern when making RESTful web requests. However, the `CachedImage` control, provided by the [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) library supports transient fault handling by retrying image loading. If image loading fails, further attempts will be made. The number of attempts is specified by the `RetryCount` property, and retries will occur after a delay specified by the `RetryDelay` property. If these property values aren't explicitly set, their default values are applied – 3 for the `RetryCount` property, and 250ms for the `RetryDelay` property. For more information about the `CachedImage` control, see [Caching Images](#caching_images).
 
 The eShopOnContainers reference application does implement the retry pattern. For more information, including a discussion of how to combine the retry pattern with the `HttpClient` class, see [.NET Microservices: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook).
 
-For more information about the retry pattern, see the [Retry](https://docs.microsoft.com/en-us/azure/architecture/patterns/retry) pattern on Microsoft Docs.
+For more information about the retry pattern, see the [Retry](/azure/architecture/patterns/retry/) pattern.
 
 <a name="circuit_breaker_pattern" />
 
@@ -397,7 +397,7 @@ The eShopOnContainers mobile app does not currently implement the circuit breake
 > [!TIP]
 > Combine the retry and circuit breaker patterns. An app can combine the retry and circuit breaker patterns by using the retry pattern to invoke an operation through a circuit breaker. However, the retry logic should be sensitive to any exceptions returned by the circuit breaker and abandon retry attempts if the circuit breaker indicates that a fault is not transient.
 
-For more information about the circuit breaker pattern, see the [Circuit Breaker](https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker) pattern on Microsoft Docs.
+For more information about the circuit breaker pattern, see the [Circuit Breaker](/azure/architecture/patterns/circuit-breaker/) pattern.
 
 ## Summary
 

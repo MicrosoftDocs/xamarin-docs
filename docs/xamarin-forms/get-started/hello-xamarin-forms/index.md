@@ -28,7 +28,7 @@ The second part of this guide reviews what has been built, to develop an underst
 ## Related Links
 
 - [Introduction to Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [Debugging in Visual Studio](http://msdn.microsoft.com/en-us/library/k0k771bt%28v=vs.90%29.aspx)
+- [Debugging in Visual Studio](http://msdn.microsoft.com/library/k0k771bt%28v=vs.90%29.aspx)
 - [Visual Studio for Mac Recipes - Debugging](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/)
 - [Free Self-Guided Learning (video)](https://university.xamarin.com/self-guided)
 - [Getting Started with Xamarin (video)](https://developer.xamarin.com/videos/)

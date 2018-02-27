@@ -34,7 +34,7 @@ This means you'll need to manually add these project
 
 ## Add a Universal Windows Platform (UWP) app
 
-* Building [UWP](https://msdn.microsoft.com/en-us/library/windows/apps/dn894631.aspx) apps requires Visual Studio 2015 running on Windows 10.
+* Building [UWP](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx) apps requires Visual Studio 2015 running on Windows 10.
 * If you used the PCL template, [update the profile](#pcl), then
 * [Add a Universal Windows Platform app](~/xamarin-forms/platform/windows/installation/universal.md)
 
@@ -66,4 +66,3 @@ This equates to **Profile 111** if you are configuring your PCL
 the PCL should be set to Profile 259. Windows Phone 8 Silverlight
 support is being deprecated, so it is recommended that you replace
 it with the project types shown on this page.
-

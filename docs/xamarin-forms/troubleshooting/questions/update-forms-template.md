@@ -24,10 +24,10 @@ This guide uses the Xamarin.Forms PCL template as an example, but the same gener
     *   `FormsTemplate.Android\FormsTemplate.Android.vstemplate`
     *   `FormsTemplate.WinPhone\FormsTemplate.WinPhone.vstemplate`
     *   `FormsTemplate.iOS\FormsTemplate.iOS.vstemplate`
-    
+
     Example: `<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`
 
-4.  Change the "name" element of the main [multi-project template file](http://msdn.microsoft.com/en-us/library/ms185308.aspx) (`Xamarin.Forms.PCL.vstemplate`) to make it unique. For example:
+4.  Change the "name" element of the main [multi-project template file](http://msdn.microsoft.com/library/ms185308.aspx) (`Xamarin.Forms.PCL.vstemplate`) to make it unique. For example:
     > <Name>Blank App (Xamarin.Forms Portable) - 2.1.0.6529</Name>
 
 5.  Re-zip the whole template folder. Make sure to match the original file structure of the `.zip` file. The `Xamarin.Forms.PCL.vstemplate` file should be at the top of the `.zip` file, not within any folders.

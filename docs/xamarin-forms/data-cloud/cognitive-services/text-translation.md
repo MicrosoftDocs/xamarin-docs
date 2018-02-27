@@ -25,7 +25,7 @@ This article focuses on translating text from one language to another using the 
 
 An API key must be obtained to use the Text Translation API. This can be obtained by following the instructions at [Getting Started](http://docs.microsofttranslator.com/text-translate.html) on [docs.microsofttranslator.com](http://docs.microsofttranslator.com/).
 
-For more information about the Microsoft Translator API, see [Microsoft Translator Documentation](https://www.microsoft.com/cognitive-services/en-us/translator-api/documentation/TranslatorInfo/overview) on microsoft.com.
+For more information about the Microsoft Translator API, see [Microsoft Translator Documentation](https://www.microsoft.com/cognitive-services/translator-api/documentation/TranslatorInfo/overview) on microsoft.com.
 
 ## Authentication
 
@@ -96,7 +96,7 @@ string GenerateRequestUri(string endpoint, string text, string to)
 }
 ```
 
-This method sets the text to be translated, and the language to translate the text to. For a list of the languages supported by Microsoft Translator, see [Languages](https://www.microsoft.com/en-us/translator/languages.aspx) on microsoft.com.
+This method sets the text to be translated, and the language to translate the text to. For a list of the languages supported by Microsoft Translator, see [Languages](https://www.microsoft.com/translator/languages.aspx) on microsoft.com.
 
 > [!NOTE]
 > If an application needs to know what language the text is in, the `Detect` API can be called to detect the language of the text string.
@@ -143,7 +143,7 @@ This article explained how to use the Microsoft Text Translation API to translat
 
 ## Related Links
 
-- [Microsoft Translator Documentation](https://www.microsoft.com/cognitive-services/en-us/translator-api/documentation/TranslatorInfo/overview)
+- [Microsoft Translator Documentation](https://www.microsoft.com/cognitive-services/translator-api/documentation/TranslatorInfo/overview)
 - [Consuming a RESTful Web Service](~/xamarin-forms/data-cloud/consuming/rest.md)
 - [Todo Cognitive Services (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
 - [Text Translation API](http://docs.microsofttranslator.com/text-translate.html)

@@ -409,7 +409,7 @@ The class must derive from `Java.Lang.Object`, and methods that are exposed to J
 > [!NOTE]
 > **Note**: Projects that use the `[Export]` attribute must include a reference to `Mono.Android.Export`, or a compiler error will result.
 
-Note that the `JSBridge` class maintains a `WeakReference` to the `HybridWebViewRenderer` class. This is to avoid creating a circular reference between the two classes. For more information see [Weak References](https://msdn.microsoft.com/en-us/library/ms404247(v=vs.110).aspx) on MSDN.
+Note that the `JSBridge` class maintains a `WeakReference` to the `HybridWebViewRenderer` class. This is to avoid creating a circular reference between the two classes. For more information see [Weak References](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx) on MSDN.
 
 > [!IMPORTANT]
 > On Android Oreo ensure that the Android manifest sets the **Target Android version** to **Automatic**. Otherwise, running this code will result in the error message "invokeCSharpAction is not defined".

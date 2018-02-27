@@ -131,7 +131,7 @@ The **Build Action** can be viewed and changed in the
 In this example the resource ID is **WorkingWithImages.beach.jpg**.
 The IDE has generated this default by concatenating the **Default Namespace**
 for this project with the filename, using a period (.) between each value.
-<!-- https://msdn.microsoft.com/en-us/library/ms950960.aspx -->
+<!-- https://msdn.microsoft.com/library/ms950960.aspx -->
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -306,13 +306,13 @@ Setting icons and splashscreens for Xamarin.Forms apps is done in each of the ap
 
 ## Icons
 
-See the [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md), [Google Iconography](http://developer.android.com/design/style/iconography.html), and [Guidelines for tile and icon assets](https://docs.microsoft.com/en-us/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets) for more information on creating these application resources.
+See the [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md), [Google Iconography](http://developer.android.com/design/style/iconography.html), and [Guidelines for tile and icon assets](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) for more information on creating these application resources.
 
 ## Splashscreens
 
 Only iOS and UWP applications require a splashscreen (also called a startup screen or default image).
 
-Refer to the documentation for [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md) and [Splash screens](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/splash-screens) on the Windows Dev Center.
+Refer to the documentation for [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md) and [Splash screens](/windows/uwp/launch-resume/splash-screens/) on the Windows Dev Center.
 
 ## Summary
 
@@ -326,4 +326,4 @@ Application icon and splashscreen images are set-up and configured as for non-Xa
 - [WorkingWithImages (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/)
 - [iOS Working with Images](https://developer.xamarin.com~/ios/application_fundamentals/working_with_images/)
 - [Android Iconography](http://developer.android.com/design/style/iconography.html)
-- [Guidelines for tile and icon assets](https://docs.microsoft.com/en-us/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets)
+- [Guidelines for tile and icon assets](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/)

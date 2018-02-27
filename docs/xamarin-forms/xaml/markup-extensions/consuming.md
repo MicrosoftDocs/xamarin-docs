@@ -112,7 +112,7 @@ This allows the `Label` font size to be set to the static field `Math.PI`. That 
 ```xaml
 <Label Text="&#x03C0; &#x00D7; E sized text"
        FontSize="{x:Static sys:Math.PI}"
-       Scale="{x:Static sys:Math.E}" 
+       Scale="{x:Static sys:Math.E}"
        HorizontalOptions="Center" />
 ```
 
@@ -151,9 +151,9 @@ The **x:Reference Demo** page shows two uses of `x:Reference` with data bindings
              x:Class="MarkupExtensions.ReferenceDemoPage"
              x:Name="page"
              Title="x:Reference Demo">
-    
+
     <StackLayout Margin="10, 0">
-        
+
         <Label Text="{Binding Source={x:Reference page},
                               StringFormat='The type of this page is {0}'}"
                FontSize="18"
@@ -170,7 +170,7 @@ The **x:Reference Demo** page shows two uses of `x:Reference` with data bindings
                FontSize="24"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand" />
-        
+
     </StackLayout>
 </ContentPage>
 ```
@@ -183,7 +183,7 @@ Both `x:Reference` expressions use the abbreviated version of the `ReferenceExte
 
 ## x:Type Markup Extension
 
-The `x:Type` markup extension is the XAML equivalent of the C# [`typeof`](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/typeof) keyword. It is supported by the [`TypeExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.TypeExtension/) class, which defines one property named [`TypeName`](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.TypeExtension.TypeName/) of type `string` that is set to a class or structure name. The `x:Type` markup extension returns the [`System.Type`](https://developer.xamarin.com/api/type/System.Type/) object of that class or structure. `TypeName` is the content property of `TypeExtension`, so `TypeName=` is not required when `x:Type` appears with curly braces. 
+The `x:Type` markup extension is the XAML equivalent of the C# [`typeof`](/dotnet/csharp/language-reference/keywords/typeof/) keyword. It is supported by the [`TypeExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.TypeExtension/) class, which defines one property named [`TypeName`](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.TypeExtension.TypeName/) of type `string` that is set to a class or structure name. The `x:Type` markup extension returns the [`System.Type`](https://developer.xamarin.com/api/type/System.Type/) object of that class or structure. `TypeName` is the content property of `TypeExtension`, so `TypeName=` is not required when `x:Type` appears with curly braces.
 
 Within Xamarin.Forms, there are several properties that have arguments of type `Type`. Examples include the [`TargetType`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/) property of `Style`, and the [x:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) attribute used to specify arguments in generic classes. However, the XAML parser performs the `typeof` operation automatically, and the `x:Type` markup extension is not used in these cases.
 
@@ -227,7 +227,7 @@ This is how the navigation menu in `MainPage` in the **Markup Extensions** progr
 
         </TableRoot>
     </TableView>
-</ContentPage> 
+</ContentPage>
 ```
 
 Here's the opening main page in **Markup Extensions**:
@@ -265,10 +265,10 @@ The **x:Type Demo** page uses a similar technique to instantiate Xamarin.Forms e
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MarkupExtensions.TypeDemoPage"
              Title="x:Type Demo">
-    
+
     <StackLayout x:Name="stackLayout"
                  Padding="10, 0">
-        
+
         <Button Text="Create a Slider"
                 HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand"
@@ -321,12 +321,12 @@ The method that is executed when a `Button` is pressed creates a new instance of
 
 ## x:Array Markup Extension
 
-The `x:Array` markup extension allows you to define an array in markup. It is supported by the [`ArrayExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.ArrayExtension/) class, which defines two properties: 
+The `x:Array` markup extension allows you to define an array in markup. It is supported by the [`ArrayExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.ArrayExtension/) class, which defines two properties:
 
 - `Type` of type `Type`, which indicates the type of the elements in the array.
 - `Items` of type `IList`, which is a collection of the items themselves. This is the content property of `ArrayExtension`.
 
-The `x:Array` markup extension itself never appears in curly braces. Instead, `x:Array` start and end tags delimit the list of items. Set the `Type` property to an `x:Type` markup extension. 
+The `x:Array` markup extension itself never appears in curly braces. Instead, `x:Array` start and end tags delimit the list of items. Set the `Type` property to an `x:Type` markup extension.
 
 The **x:Array Demo** page shows how to use `x:Array` to add items to a `ListView` by setting the `ItemsSource` property to an array:
 
@@ -357,7 +357,7 @@ The **x:Array Demo** page shows how to use `x:Array` to add items to a `ListView
                 <Color>Yellow</Color>
             </x:Array>
         </ListView.ItemsSource>
-            
+
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
@@ -398,7 +398,7 @@ When defining arrays of common types like strings or numbers, use the tags liste
 
 ## x:Null Markup Extension
 
-The `x:Null` markup extension is supported by the [`NullExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.NullExtension/) class. It has no properties and is simply the XAML equivalent of the C# [`null`](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null) keyword.
+The `x:Null` markup extension is supported by the [`NullExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.NullExtension/) class. It has no properties and is simply the XAML equivalent of the C# [`null`](/dotnet/csharp/language-reference/keywords/null/) keyword.
 
 The `x:Null` markup extension is rarely needed and seldom used, but if you do find a need for it, you'll be glad that it exists.
 
@@ -425,7 +425,7 @@ The **x:Null Demo** page illustrates one scenario when `x:Null` might be conveni
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <ContentPage.Content>
         <StackLayout Padding="10, 0">
             <Label Text="Text 1" />

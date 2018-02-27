@@ -136,7 +136,7 @@ The last two are required because applications
 
 ### Windows Runtime and Universal Windows Platform
 
-To use maps on the Windows Runtime and the Universal Windows Platform you must generate an authorization token. For more information, see [Request a maps authentication key](https://msdn.microsoft.com/en-us/library/windows/apps/mt219694.aspx) on MSDN.
+To use maps on the Windows Runtime and the Universal Windows Platform you must generate an authorization token. For more information, see [Request a maps authentication key](https://msdn.microsoft.com/library/windows/apps/mt219694.aspx) on MSDN.
 
 The authentication token should then be specified in the `FormsMaps.Init("AUTHORIZATION_TOKEN")` method call, to authenticate the app with Bing Maps.
 

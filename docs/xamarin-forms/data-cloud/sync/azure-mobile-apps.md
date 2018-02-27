@@ -22,7 +22,7 @@ To support offline sync, the Azure Mobile Client SDK supports *sync tables*, whi
 
 Offline sync also includes support for detecting conflicts when the same record has changed in both the local store and in the Azure Mobile Apps instance, and custom conflict resolution. Conflicts can either be handled in the local store, or in the Azure Mobile Apps instance.
 
-For more information about offline sync, see [Offline Data Sync in Azure Mobile Apps](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-offline-data-sync) and [Enable offline sync for your Xamarin.Forms mobile app](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-offline-data) on Microsoft Docs.
+For more information about offline sync, see [Offline Data Sync in Azure Mobile Apps](/azure/app-service-mobile/app-service-mobile-offline-data-sync/) and [Enable offline sync for your Xamarin.Forms mobile app](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-offline-data/).
 
 ## Setup
 
@@ -133,7 +133,7 @@ Pull is performed by the `IMobileServiceSyncTable.PullAsync` method on a single 
 
 The `SyncAsync` method also includes a basic implementation for handling conflicts when the same record has changed in both the local store and in the Azure Mobile Apps instance. When the conflict is that data has been updated both in the local store and in the Azure Mobile Apps instance, the `SyncAsync` method updates the data in the local store from the data stored in the Azure Mobile Apps instance. When any other conflict occurs, the `SyncAsync` method discards the local change. This handles the scenario where a local change exists for data that's been deleted from the Azure Mobile Apps instance.
 
-In a production application, developers should write a custom `IMobileServiceSyncHandler` conflict-handling implementation that's suited to their use case. For more information, see [Use Optimistic Concurrency for conflict resolution](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-dotnet-how-to-use-client-library/#optimisticconcurrency) on the Azure portal, and [Deep dive on the offline support in the managed client SDK](https://blogs.msdn.microsoft.com/azuremobile/2014/04/07/deep-dive-on-the-offline-support-in-the-managed-client-sdk/) on MSDN blogs.
+In a production application, developers should write a custom `IMobileServiceSyncHandler` conflict-handling implementation that's suited to their use case. For more information, see [Use Optimistic Concurrency for conflict resolution](https://azure.microsoft.com/documentation/articles/app-service-mobile-dotnet-how-to-use-client-library/#optimisticconcurrency) on the Azure portal, and [Deep dive on the offline support in the managed client SDK](https://blogs.msdn.microsoft.com/azuremobile/2014/04/07/deep-dive-on-the-offline-support-in-the-managed-client-sdk/) on MSDN blogs.
 
 ## Purging Data
 
@@ -177,4 +177,4 @@ This article explained how to add offline sync functionality to a Xamarin.Forms 
 - [Consuming an Azure Mobile App](~/xamarin-forms/data-cloud/consuming/azure.md)
 - [Authenticating Users with Azure Mobile Apps](~/xamarin-forms/data-cloud/authentication/azure.md)
 - [Azure Mobile Client SDK](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)
-- [MobileServiceClient](https://msdn.microsoft.com/en-us/library/azure/microsoft.windowsazure.mobileservices.mobileserviceclient(v=azure.10).aspx)
+- [MobileServiceClient](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.mobileservices.mobileserviceclient(v=azure.10).aspx)

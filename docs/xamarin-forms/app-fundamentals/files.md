@@ -139,7 +139,7 @@ Because Xamarin.Forms runs on multiple platforms, each with its own filesystem, 
 
  [ ![Saving and loading text](files-images/saveandload-sml.png "Saving and Loading Files in App")](files-images/saveandload.png "Saving and Loading Files in App")
 
-Each platform has a slightly different directory structure, and different filesystem capabilities - for example Xamarin.iOS and Xamarin.Android support most `System.IO` functionality but Windows Phone only supports `IsolatedStorage` and [ `Windows.Storage`](http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj681698(v=vs.105).aspx) APIs.
+Each platform has a slightly different directory structure, and different filesystem capabilities - for example Xamarin.iOS and Xamarin.Android support most `System.IO` functionality but Windows Phone only supports `IsolatedStorage` and [ `Windows.Storage`](http://msdn.microsoft.com/library/windowsphone/develop/jj681698(v=vs.105).aspx) APIs.
 
 To get around this problem, the sample app defines an Interface in the Xamarin.Forms PCL to load and save files. It provides a simple API to load and save text files that will be stored on the device.
 
@@ -190,7 +190,7 @@ namespace WorkingWithFiles {
 ### Universal Windows Platform (UWP), Windows 8.1 and Windows Phone 8.1
 
 These platforms have a different filesystem API –
-[`Windows.Storage`](https://docs.microsoft.com/en-us/windows/uwp/files/quickstart-reading-and-writing-files) – that is used to save and load files.
+[`Windows.Storage`](/windows/uwp/files/quickstart-reading-and-writing-files/) – that is used to save and load files.
 The `ISaveAndLoad` interface can be implemented as shown below:
 
 ```csharp
@@ -205,7 +205,7 @@ using Xamarin.Forms;
 
 namespace WindowsApp
 {
-    // https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh758325.aspx
+    // https://msdn.microsoft.com/library/windows/apps/xaml/hh758325.aspx
     public class SaveAndLoad_WinApp : ISaveAndLoad
     {
         public async Task SaveTextAsync(string filename, string text)
@@ -252,6 +252,6 @@ This document has shown some simple file operations for loading embedded resourc
 ## Related Links
 
 - [FilesSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
-- [Create, write, and read a file (UWP)](https://docs.microsoft.com/en-us/windows/uwp/files/quickstart-reading-and-writing-files)
+- [Create, write, and read a file (UWP)](/windows/uwp/files/quickstart-reading-and-writing-files/)
 - [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples)
 - [Files Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/application-fundamentals/files/files.workbook)

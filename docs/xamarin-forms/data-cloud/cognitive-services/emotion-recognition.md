@@ -21,13 +21,13 @@ _The Emotion API takes a facial expression in an image as an input, and returns 
 
 ## Overview
 
-The Emotion API can detect anger, contempt, disgust, fear, happiness, neutral, sadness, and surprise, in a facial expression. These emotions are universally and cross-culturally communicated via the same basic facial expressions. As well as returning an emotion result for a facial expression, the Emotion API also returns a bounding box for detected faces using the Face API. If a user has already called the Face API, they can submit the face rectangle as an optional input. Note that an API key must be obtained to use the Emotion API. This can be obtained at [Getting started for free](https://www.microsoft.com/cognitive-services/en-US/sign-up) on microsoft.com.
+The Emotion API can detect anger, contempt, disgust, fear, happiness, neutral, sadness, and surprise, in a facial expression. These emotions are universally and cross-culturally communicated via the same basic facial expressions. As well as returning an emotion result for a facial expression, the Emotion API also returns a bounding box for detected faces using the Face API. If a user has already called the Face API, they can submit the face rectangle as an optional input. Note that an API key must be obtained to use the Emotion API. This can be obtained at [Getting started for free](https://www.microsoft.com/cognitive-services/sign-up) on microsoft.com.
 
 Emotion recognition can be performed via a client library, and via a REST API. This article focuses on performing emotion recognition via the [Microsoft.ProjectOxford.Emotion](https://www.nuget.org/packages/Microsoft.ProjectOxford.Emotion/) client library, which can be downloaded from NuGet.
 
-The Emotion API can also be used to recognize the facial expressions of people in video, and returns a summary of their emotions. For more information, see [Emotion in Video](https://www.microsoft.com/cognitive-services/en-us/emotion-api/documentation#emotion-in-video) on microsoft.com.
+The Emotion API can also be used to recognize the facial expressions of people in video, and returns a summary of their emotions. For more information, see [Emotion in Video](https://www.microsoft.com/cognitive-services/emotion-api/documentation#emotion-in-video) on microsoft.com.
 
-For more information about the Emotion API, see [Emotion API Documentation](https://www.microsoft.com/cognitive-services/en-us/emotion-api/documentation) on microsoft.com.
+For more information about the Emotion API, see [Emotion API Documentation](https://www.microsoft.com/cognitive-services/emotion-api/documentation) on microsoft.com.
 
 ## Performing Emotion Recognition
 
@@ -71,7 +71,7 @@ This article explained how to use the Emotion API to recognize emotion, to rate 
 
 ## Related Links
 
-- [Emotion API Documentation](https://www.microsoft.com/cognitive-services/en-us/emotion-api/documentation)
+- [Emotion API Documentation](https://www.microsoft.com/cognitive-services/emotion-api/documentation)
 - [Todo Cognitive Services (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
 - [Microsoft.ProjectOxford.Emotion](https://www.nuget.org/packages/Microsoft.ProjectOxford.Emotion/)
 - [Emotion API](https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89/operations/563b31ea778daf121cc3a5fa)

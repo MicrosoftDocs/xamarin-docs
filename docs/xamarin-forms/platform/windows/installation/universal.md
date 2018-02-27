@@ -15,7 +15,7 @@ ms.date: 02/16/2016
 _This article explains how to add a UWP app project to a Xamarin.Forms solution that was created in Visual Studio for Mac._
 
 You should be running **Visual Studio 2017** on **Windows 10** to build
-UWP apps. For more information about the Universal Windows Platform, see [Intro to the Universal Windows Platform](https://docs.microsoft.com/en-gb/windows/uwp/get-started/universal-application-platform-guide).
+UWP apps. For more information about the Universal Windows Platform, see [Intro to the Universal Windows Platform](/windows/uwp/get-started/universal-application-platform-guide/).
 
 UWP is available in Xamarin.Forms 2.1 and later, and Xamarin.Forms.Maps is supported in Xamarin.Forms 2.2 and later.
 
