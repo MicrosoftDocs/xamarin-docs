@@ -10,15 +10,6 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Contents
-
-This article will cover the following topics in detail:
-
-- [Code Signing Options](#Code_Signing_Options)
-- [Build](#Build)
-
-<a name="Sign_with_Developer_ID" />
-
 # Sign with Developer ID
 
 If the developer plans to distribute an app directly to macOS
@@ -27,8 +18,6 @@ users, Apple recommends that they code-sign it with their Developer ID so that i
 Read more about [Developer ID and GateKeeper](https://developer.apple.com/resources/developer-id/) and [Distributing Outside the Mac App Store](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html) on Apple’s
 website.
 
-<a name="Code_Signing_Options" />
-
 ## Code Signing Options
 
 To build an app for deployment directly to users (NOT via the Mac App
@@ -36,7 +25,6 @@ Store) set the **Signing Settings** to use the **Developer ID**. Ensure to edit 
 
  [ ![](signing-images/config02.png "The Mac Signing options")](signing-images/config02.png)
 
-<a name="Build" />
 
 ## Build
 
@@ -55,7 +43,6 @@ installer for the application, so it can be distributed to any macOS user
 for installation.
 
  [ ![](signing-images/image59.png "Selecting the app package in Finder")](signing-images/image59.png)
-
 
 ## Related Links
 

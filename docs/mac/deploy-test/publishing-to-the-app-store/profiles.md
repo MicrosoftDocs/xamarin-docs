@@ -1,5 +1,5 @@
 ---
-title: "Create Provisioning Profile"
+title: "Provisioning Profiles"
 description: "This guide walks through creating the necessary Provisioning Profiles that will be required to publish a Xamarin.Mac app."
 ms.topic: article
 ms.prod: xamarin
@@ -10,16 +10,7 @@ ms.author: brumbaug
 ms.date: 04/12/2017
 ---
 
-# Contents
-
-This article will cover the following topics in detail:
-
-- [Development Provisioning Profile](#Development_Provisioning_Profile)
-- [Production Provisioning Profile](#Production_Provisioning_Profile)
-
-<a name="Create_Provisioning_Profile" />
-
-# Create Provisioning Profile
+# Provisioning Profiles
 
 Provisioning profiles allow a developer to incorporate several macOS (formerly known as Mac OS X) specific features (such as iCloud and Push Notifications) into their Xamarin.Mac apps. They must create, download and install a Mac Provisioning Profile for each application they are developing that use these features.
 
@@ -32,8 +23,7 @@ Provisioning profiles allow a developer to incorporate several macOS (formerly k
 A Development Provisioning Profile allows a Mac App Store-targeted app to be tested on the specific computers that have been set-up in the profile. This is particularly relevant when using macOS features like iCloud and Push Notifications.
 
 > [!NOTE]
-> **Note**: The developer must have already created a Mac Development Certificate before they can create a Development Provisioning Profile. Complete the details as shown on this screenshot to generate a **Development Provisioning Profile** that can be used to create builds. There must be a valid Mac Development Certificate available for selection in the **Certificate** box, and at least one system registered for
-testing.
+> The developer must have already created a Mac Development Certificate before they can create a Development Provisioning Profile. Complete the details as shown on this screenshot to generate a **Development Provisioning Profile** that can be used to create builds. There must be a valid Mac Development Certificate available for selection in the **Certificate** box, and at least one system registered for testing.
 
 Do the following:
 
@@ -51,12 +41,10 @@ Do the following:
 	 [ ![](profiles-images/certif17.png "Selecting the allowed computers")](profiles-images/certif17.png)
 5. Now, enter a **Profile Name** and click the **Generate** button: 
 
-	
- [ ![](profiles-images/certif18.png "Generating the profile")](profiles-images/certif18.png)
+	 [ ![](profiles-images/certif18.png "Generating the profile")](profiles-images/certif18.png)
 6. Click the **Download** button to download the new profile: 
 
-	
- [ ![](profiles-images/certif19.png "Downloading the profile")](profiles-images/certif19.png)
+	 [ ![](profiles-images/certif19.png "Downloading the profile")](profiles-images/certif19.png)
 7. Development provisioning profiles are installed to the Profiles Preferences pane of the Mac's **System Preferences** application: 
 
 	 [ ![](profiles-images/certif20.png "Installing the profile")](profiles-images/certif20.png)
@@ -95,14 +83,13 @@ Do the following:
 	[ ![](profiles-images/certif25.png "Downloading the profile")](profiles-images/certif25.png)
 6. Drag it into the **Xcode Organizer** or double-click it to install. The profile will then appear in the Xcode Organizer: 
 
-	 [ ![](profiles-images/image51.png "Installing the profile")](profiles-images/image51.png)
+	[ ![](profiles-images/image51.png "Installing the profile")](profiles-images/image51.png)
 7. The provisioning profile will also appear in the list: 
 
-	 [ ![](profiles-images/certif26.png "Showing the installed profiles")](profiles-images/certif26.png)
+	[ ![](profiles-images/certif26.png "Showing the installed profiles")](profiles-images/certif26.png)
 
 
 If the developer ever changes the features being used by an App ID (eg. enabling iCloud or push notifications) then they should re-create the provision profiles for that App ID.
-
 
 ## Related Links
 

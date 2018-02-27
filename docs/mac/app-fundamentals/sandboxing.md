@@ -138,7 +138,7 @@ Let do the following:
 11. Click the **Done** button.
 
 > [!IMPORTANT]
-> **NOTE:** In some instances you might need to download the new Provisioning Profile from Apple's Developer Portal directly and double-click it to install. You might also need to stop and restart Visual Studio for Mac before it will be able to access the new profile.
+> In some instances you might need to download the new Provisioning Profile from Apple's Developer Portal directly and double-click it to install. You might also need to stop and restart Visual Studio for Mac before it will be able to access the new profile.
 
 Next, we need to load the new App ID and Profile on the development machine. Let's do the following:
 

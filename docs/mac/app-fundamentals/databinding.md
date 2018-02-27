@@ -735,7 +735,7 @@ If we run the application, the outline will be populated with our array of `Pers
 Data binding with a Collection View is very much like binding with a Table View, as an Array Controller is used to provide data for the collection. Since the collection view doesn't have a preset display format, more work is required to provide user interaction feedback and to track user selection.
 
 > [!IMPORTANT]
-> **NOTE:** Due to an issue in Xcode 7 and macOS 10.11 (and greater), Collection Views are unable to be used inside of a Storyboard (.storyboard) files. As a result, you will need to continue to use .xib files to define your Collection Views for your Xamarin.Mac apps. Please see our [Collection Views](~/mac/user-interface/collection-view.md) documentation for more information.
+> Due to an issue in Xcode 7 and macOS 10.11 (and greater), Collection Views are unable to be used inside of a Storyboard (.storyboard) files. As a result, you will need to continue to use .xib files to define your Collection Views for your Xamarin.Mac apps. Please see our [Collection Views](~/mac/user-interface/collection-view.md) documentation for more information.
 
 <!--KKM 012/16/2015 - Once Apple fixes the issue with Xcode and Collection Views in Storyboards, we can uncomment this section.
 

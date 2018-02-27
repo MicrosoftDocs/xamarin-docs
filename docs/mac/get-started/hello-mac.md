@@ -10,39 +10,7 @@ ms.author: brumbaug
 ms.date: 03/23/2017
 ---
 
-# Contents
-
-This article will cover the following topics in detail:
-
-- [Overview](#Overview)
-- [Requirements](#Requirements)
-- [Starting a new Xamarin.Mac App in Visual Studio for Mac](#Starting_a_new_Xamarin.Mac_App_in_Xamarin_Studio)
-- [Anatomy of a Xamarin.Mac Application](#The_Project)
-	- [Main.cs](#Main_cs)
-	- [AppDelegate.cs](#AppDelegate_cs)
-	- [ViewController.cs](#ViewController_cs)
-	- [ViewController.Designer.cs](#ViewController_Designer_cs)
-	- [Info.plist](#Info_plist)
-- [Introduction to Xcode and Interface Builder](#Introduction_to_Xcode_and_Interface_Builder)
-	- [Components of Xcode](#Components_of_Xcode)
-		- [Project Navigation](#Project_Navigation)
-		- [Interface Hierarchy](#Interface_Hierarchy)
-		- [Interface Editor](#Interface_Editor)
-		- [Properties & Utilities](#Properties_Utilities)
-	- [Creating the Interface](#Creating_the_Interface)
-	- [Outlets and Actions](#Outlets_and_Actions)
-		- [Adding an Outlet](#Adding_an_Outlet)
-		- [Adding an Action](#Adding_an_Action)
-	- [Synchronizing Changes with Xcode](#Synchronizing_Changes_with_Xcode)
-- [Writing the Code](#Writing_the_Code)
-- [Testing the Application](#Testing_the_Application)
-	- [Building the Application](#Building_the_Application)
-	- [Running the Application](#Running_the_Application)
-- [Where to Next](#Where_to_Next)
-
-<a name="Overview" />
-
-# Overview
+# Hello, Mac
 
 Xamarin.Mac allows for the development of fully native Mac apps in C# and .NET using the same OS X libraries and interface controls that are used when developing in *Objective-C* and *Xcode*. Because Xamarin.Mac integrates directly with Xcode, the developer can use Xcode's _Interface Builder_ to create an app's User Interfaces (or optionally create them directly in C# code).
 
@@ -63,7 +31,7 @@ The following concepts will be covered:
 
 <a name="Requirements" />
 
-# Requirements
+## Requirements
 
 The following is required to develop a macOS application with Xamarin.Mac:
 
@@ -77,7 +45,7 @@ Running Mac applications created with Xamarin.Mac have the following system requ
 
 <a name="Starting_a_new_Xamarin.Mac_App_in_Xamarin_Studio" />
 
-# Starting a new Xamarin.Mac App in Visual Studio for Mac
+## Starting a new Xamarin.Mac App in Visual Studio for Mac
 
 As stated above, this guide will walk through the steps to create a Mac app called `Hello_Mac` that adds a single button and label to the main window. When the button is clicked, the label will display the number of times it has been clicked.
 
@@ -115,7 +83,7 @@ If desired, the developer could create one or more code library projects that co
 
 <a name="The_Project" />
 
-# Anatomy of a Xamarin.Mac Application
+## Anatomy of a Xamarin.Mac Application
 
 If familiar with iOS programming, there are a lot of similarities here. In fact, iOS uses the CocoaTouch framework, which is a slimmed-down version of Cocoa, used by Mac, so a lot of concepts will cross over.
 
@@ -133,7 +101,7 @@ The following sections, will take a quick look through some of these files. Late
 
 <a name="Main_cs" />
 
-## Main.cs
+### Main.cs
 
 The **Main.cs** file is very simple. It contains a static `Main` method which creates a new Xamarin.Mac app instance and passes the name of the class that will handle OS events, which in this case is the `AppDelegate` class:
 
@@ -159,7 +127,7 @@ namespace Hello_Mac
 
 <a name="AppDelegate_cs" />
 
-## AppDelegate.cs
+### AppDelegate.cs
 
 The `AppDelegate.cs` file contains an `AppDelegate` class, which is responsible for creating windows and listening to OS events:
 
@@ -197,7 +165,7 @@ The `WillTerminate` method will be called when the user or the system has instan
 
 <a name="ViewController_cs" />
 
-## ViewController.cs
+### ViewController.cs
 
 Cocoa (and by derivation, CocoaTouch) uses what’s known as the *Model View Controller* (MVC) pattern. The `ViewController` declaration represents the object controls the actual app window. Generally, for every window created (and for many other things within windows), there is a controller, which is responsible for the window’s life cycle, such as showing it, adding new views (controls) to it, etc.
 
@@ -270,7 +238,7 @@ With the Xamarin.Mac app project created and a basic understanding of its compon
 
 <a name="Info_plist" />
 
-## Info.plist
+### Info.plist
 
 The `Info.plist` file contains information about the Xamarin.Mac app such as its **Name** and **Bundle Identifier**:
 
@@ -278,7 +246,7 @@ The `Info.plist` file contains information about the Xamarin.Mac app such as its
 
 And defines the _Storyboard_ that will be used to display the User Interface for the Xamarin.Mac app under the **Main Interface** dropdown. In the case of the example above, `Main` in the dropdown relates to the `Main.storyboard` in the Project's Source Tree in the **Solution Explorer**. It also defines the App's Icons by specifying the *Asset Catalog* that contains them (AppIcons in this case).
 
-## Entitlements.plist
+### Entitlements.plist
 
 The app's `Entitlements.plist` file controls entitlements that the Xamarin.Mac app has such as **Sandboxing** and **iCloud**:
 
@@ -288,7 +256,7 @@ For the Hello World example, no entitlements will be required. The next section 
 
 <a name="Introduction_to_Xcode_and_Interface_Builder" />
 
-# Introduction to Xcode and Interface Builder
+## Introduction to Xcode and Interface Builder
 
 As part of Xcode, Apple has created a tool called Interface Builder, which allows a developer to create a User Interface visually in a designer. Xamarin.Mac integrates fluently with Interface Builder, allowing UI to be created with the same tools as Objective-C users.
 
@@ -303,12 +271,12 @@ This should launch Xcode and look something like the following:
 Before starting to design the interface, take a quick overview of Xcode to orient with the main features that will be used.
 
 > [!NOTE]
-> **Note:** The developer doesn't have to use Xcode and Interface Builder to create the User Interface for a Xamarin.Mac app, the UI can be created directly from C# code but that is beyond the scope of this article. For the sake of simplicity, it will be using Interface Builder to create the User Interface throughout the rest of this tutorial.
+> The developer doesn't have to use Xcode and Interface Builder to create the User Interface for a Xamarin.Mac app, the UI can be created directly from C# code but that is beyond the scope of this article. For the sake of simplicity, it will be using Interface Builder to create the User Interface throughout the rest of this tutorial.
 
 
 <a name="Components_of_Xcode" />
 
-## Components of Xcode
+### Components of Xcode
 
 When opening a `.storyboard` file in Xcode from Visual Studio for Mac, it opens with a **Project Navigator** on the left, the **Interface Hierarchy** and **Interface Editor** in the middle, and a **Properties & Utilities** section on the right:
 
@@ -318,7 +286,7 @@ The following sections take a look at what each of these Xcode features do and h
 
 <a name="Project_Navigation" />
 
-###Project Navigation
+### Project Navigation
 
 When opening a `.storyboard` file for editing in Xcode, Visual Studio for Mac creates a *Xcode Project File* in the background to communicate changes between itself and Xcode. Later, when the developer switches back to Visual Studio for Mac from Xcode, any changes made to this project are synchronized with the Xamarin.Mac project by Visual Studio for Mac.
 
@@ -326,19 +294,19 @@ The **Project Navigation** section allows the developer to navigate between all 
 
 <a name="Interface_Hierarchy" />
 
-###Interface Hierarchy
+### Interface Hierarchy
 
 The **Interface Hierarchy** section allows the developer to easily access several key properties of the User Interface such as it's **Placeholders** and main **Window**. This section can be used to access the individual elements (views) that make up the user interface and the adjust the way that they are nested by dragging them around within the hierarchy.
 
 <a name="Interface_Editor" />
 
-###Interface Editor
+### Interface Editor
 
 The **Interface Editor** section provides the surface on which the User Interface is graphically laid out. Drag elements from the **Library** section of the **Properties & Utilities** section to create the design. As user interface elements (views) are added to the design surface, they will be added to the **Interface Hierarchy** section in the order that they appear in the **Interface Editor**.
 
 <a name="Properties_Utilities" />
 
-###Properties & Utilities
+### Properties & Utilities
 
 The **Properties & Utilities** section is divided into two main sections, **Properties** (also called Inspectors) and the **Library**:
 
@@ -352,7 +320,7 @@ Within the **Properties** section, there are 8 different *Inspector Tabs*, as sh
 
 <a name="Properties_Utility_Types" />
 
-###Properties & Utility Types
+### Properties & Utility Types
 
 From left-to-right, these tabs are:
 
@@ -433,7 +401,7 @@ With the User Interface created, the developer will need to expose the UI items 
 
 <a name="Outlets_and_Actions" />
 
-## Outlets and Actions
+### Outlets and Actions
 
 So what are **Outlets** and **Actions**? In traditional .NET User Interface programming, a control in the User Interface is automatically exposed as a property when it’s added. Things work differently in Mac, simply adding a control to a view doesn’t make it accessible to code. The developer must explicitly expose the UI element to code. In order do this, Apple provides two options:
 
@@ -450,7 +418,7 @@ This stub `.h` file mirrors the `ViewController.designer.cs` that is automatical
 
 <a name="Adding_an_Outlet" />
 
-### Adding an Outlet
+#### Adding an Outlet
 
 With a basic understanding of what **Outlets** and **Actions** are,  create an **Outlet** to expose the Label created to our C# code.
 
@@ -490,7 +458,7 @@ Do the following:
 
 <a name="Adding_an_Action" />
 
-### Adding an Action
+#### Adding an Action
 
 Next, expose the button to C# code. Just like the Label above, the developer could wire the button up to an **Outlet**. Since we only want to respond to the button being clicked, use an **Action** instead.
 
@@ -518,11 +486,11 @@ Do the following:
 With the User Interface wired-up and exposed to C# code, switch back to Visual Studio for Mac and let it synchronize the changes made in Xcode and Interface Builder.
 
 > [!NOTE]
-> **NOTE:** It probably took a long time to create the User Interface and **Outlets** and **Actions** for this first app, and it may seem like a lot of work, but a lot of new concepts were introduced and a lot of time was spent covering new ground. After practicing for a while working with Interface Builder, this interface and all its **Outlets** and **Actions** can be created in just a minute or two.
+> It probably took a long time to create the User Interface and **Outlets** and **Actions** for this first app, and it may seem like a lot of work, but a lot of new concepts were introduced and a lot of time was spent covering new ground. After practicing for a while working with Interface Builder, this interface and all its **Outlets** and **Actions** can be created in just a minute or two.
 
 <a name="Synchronizing_Changes_with_Xcode" />
 
-## Synchronizing Changes with Xcode
+### Synchronizing Changes with Xcode
 
 When the developer switches back to Visual Studio for Mac from Xcode, any changes that they have made in Xcode will automatically be synchronized with the Xamarin.Mac project.
 
@@ -552,11 +520,11 @@ Visual Studio for Mac listens for changes to the **.h** file, and then automatic
 Normally, the developer will never need to open the **ViewController.designer.cs**, it was presented here for educational purposes only.
 
 > [!NOTE]
-> **NOTE:** In most situations, Visual Studio for Mac will automatically see any changes made in Xcode and sync them to the Xamarin.Mac project. In the off occurrence that synchronization doesn't automatically happen, switch back to Xcode and them back to Visual Studio for Mac again. This will normally kick off a synchronization cycle.
+> In most situations, Visual Studio for Mac will automatically see any changes made in Xcode and sync them to the Xamarin.Mac project. In the off occurrence that synchronization doesn't automatically happen, switch back to Xcode and them back to Visual Studio for Mac again. This will normally kick off a synchronization cycle.
 
 <a name="Writing_the_Code" />
 
-# Writing the Code
+## Writing the Code
 
 With the User Interface created and it's UI elements exposed to code via **Outlets** and **Actions**, we are finally ready to write the code to bring the program to life.
 
@@ -604,7 +572,7 @@ This code attaches to the **Action** created in Xcode and Interface Builder and 
 
 <a name="Testing_the_Application" />
 
-# Testing the Application
+## Testing the Application
 
 It’s time to build and run the app to make sure it runs as expected. The developer can build and run all in one step, or they can build it without running it.
 
@@ -645,7 +613,7 @@ If the button is clicked a few times, the label should be updated with the count
 
 <a name="Where_to_Next" />
 
-# Where to Next
+## Where to Next
 
 With the basics of working with a Xamarin.Mac application down, take a look at the following documents to get a deeper understanding:
 
@@ -667,11 +635,9 @@ For an example of a complete Xamarin.Mac app that includes many of the features 
 
 The SourceWriter code has been fully commented and, where available, links have be provided from key technologies or methods to relevant information in the Xamarin.Mac Guides Documentation.
 
-
-# Summary
+## Summary
 
 This article covered the basics of a standard Xamarin.Mac app. It covered creating a new app in Visual Studio for Mac, designing the user interface in Xcode and Interface Builder, exposing UI elements to C# code using **Outlets** and **Actions**, adding code to work with the UI elements and finally, building and testing a Xamarin.Mac app.
-
 
 ## Related Links
 

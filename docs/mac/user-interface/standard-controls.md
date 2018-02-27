@@ -14,10 +14,6 @@ ms.date: 03/14/2017
 
 _This article covers working with the standard AppKit controls such as buttons, labels, text fields, check boxes, and segmented controls in a Xamarin.Mac application. It describes adding them to an interface with Interface Builder and interacting with them in code._
 
-<a name="Overview" />
-
-# Overview
-
 When working with C# and .NET in a Xamarin.Mac application, you have access to the same AppKit Controls that a developer working in in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Appkit Controls (or optionally create them directly in C# code).
 
 AppKit Controls are the UI Elements that are used to create the User Interface of your Xamarin.Mac application. They consist of elements such as Buttons, Labels, Text Fields, Check Boxes and Segmented Controls and cause instant actions or visible results when a user manipulates them.
@@ -30,7 +26,7 @@ You may want to take a look at the [Exposing C# classes / methods to Objective-C
 
 <a name="Introduction_to_Controls_and_Views" />
 
-# Introduction to Controls and Views
+## Introduction to Controls and Views
 
 macOS (formerly known as Mac OS X) provides a standard set of User Interface controls via the AppKit Framework. They consist of elements such as Buttons, Labels, Text Fields, Check Boxes and Segmented Controls and cause instant actions or visible results when a user manipulates them.
 
@@ -47,7 +43,7 @@ For more information, pleas see the [About Controls and Views](https://developer
 
 <a name="Using_Controls_in_a_Window_Frame" />
 
-## Using Controls in a Window Frame
+### Using Controls in a Window Frame
 
 There are a subset of AppKit Controls that include a display style that allows them to be include in a Window's Frame area. For an example, see the Mail app's toolbar:
 
@@ -69,7 +65,7 @@ For more information, pleas see the [About Controls and Views](https://developer
 
 <a name="Creating_a_User_Interface_in_Interface_Builder" />
 
-# Creating a User Interface in Interface Builder
+## Creating a User Interface in Interface Builder
 
 When you create a new Xamarin.Mac Cocoa application, you get a standard blank, window by default. This windows is defined in a `.storyboard` file automatically included in the project. To edit your windows design, in the **Solution Explorer**, double click the `Main.storyboard` file:
 
@@ -87,7 +83,7 @@ For more information on creating a User Interface in Interface Builder, please s
 
 <a name="Sizing_and_Positioning" />
 
-## Sizing and Positioning
+### Sizing and Positioning
 
 Once a control has been included in the User Interface, use the **Constraint editor** to set its location and size by entering values manually and control how the control is automatically positioned and sized when the parent Window or View is resized:
 
@@ -108,15 +104,11 @@ You can also control the alignment of elements with constraints using the **Alig
 [ ![](standard-controls-images/edit07.png "The Alignment Editor")](standard-controls-images/edit07.png)
 
 > [!IMPORTANT]
-> **NOTE:** Unlike iOS where (0,0) is the upper left hand corner of the screen, in macOS (0,0) is the lower left hand corner. This is because macOS uses a mathematical coordinate system with the number values increasing in value upward and to the right. You need to take this into consideration when placing AppKit controls on a User Interface.
-
-
-
-
+> Unlike iOS where (0,0) is the upper left hand corner of the screen, in macOS (0,0) is the lower left hand corner. This is because macOS uses a mathematical coordinate system with the number values increasing in value upward and to the right. You need to take this into consideration when placing AppKit controls on a User Interface.
 
 <a name="Setting_a_Custom_Class" />
 
-## Setting a Custom Class
+### Setting a Custom Class
 
 There are times when working with AppKit Controls that you will need to subclass and existing control and create you own custom version of that class. For example, defining a custom version of the Source List:
 
@@ -205,7 +197,7 @@ With the above code in place, you can drag an AppKit Control, of the base type t
 
 <a name="Exposing_Outlets_and_Actions" />
 
-## Exposing Outlets and Actions
+### Exposing Outlets and Actions
 
 Before an AppKit Control can be accessed in C# code, it needs to be exposed as either an **Outlet** or and **Action**. To do this select the given control in either the **Interface Hierarchy** or the **Interface Editor** and switch to the **Assistant View** (ensure that you have the `.h` of your Window selected for editing):
 
@@ -224,7 +216,7 @@ For more information on working with **Outlets** and **Actions**, please see the
 
 <a name="Synchronizing_Changes_with_Xcode" />
 
-## Synchronizing Changes with Xcode
+### Synchronizing Changes with Xcode
 
 When you switch back to Visual Studio for Mac from Xcode, any changes that you have made in Xcode will automatically be synchronized with your Xamarin.Mac project.
 
@@ -266,14 +258,11 @@ As you can see, Visual Studio for Mac listens for changes to the `.h` file, and 
 You normally will never need to open the `SplitViewController.designer.cs` yourself, it was presented here for educational purposes only.
 
 > [!IMPORTANT]
-> **NOTE:** In most situations, Visual Studio for Mac will automatically see any changes made in Xcode and sync them to your Xamarin.Mac project. In the off occurrence that synchronization doesn't automatically happen, switch back to Xcode and them back to Visual Studio for Mac again. This will normally kick off a synchronization cycle.
-
-
-
+> In most situations, Visual Studio for Mac will automatically see any changes made in Xcode and sync them to your Xamarin.Mac project. In the off occurrence that synchronization doesn't automatically happen, switch back to Xcode and them back to Visual Studio for Mac again. This will normally kick off a synchronization cycle.
 
 <a name="Working_with_Buttons" />
 
-# Working with Buttons
+## Working with Buttons
 
 AppKit provides several types of button that can be used in your User Interface Design. For more information, please see the [Buttons](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
@@ -312,7 +301,7 @@ Where `NSCellStateValue` can be:
 
 <a name="Mark-a-Button-as-Default-and-Set-Key-Equivalent" />
 
-## Mark a Button as Default and Set Key Equivalent
+### Mark a Button as Default and Set Key Equivalent
 
 For any button that you have added to a user interface design, you can mark that button as the _Default_ button that will be activated when the user presses the **Return/Enter** key on the keyboard. In macOS, this button will receive a blue background color by default.
 
@@ -326,7 +315,7 @@ When the app is run and the Window with the Button is Key and Focused, if the us
 
 <a name="Working_with_Checkboxes_and_Radio_Buttons" />
 
-# Working with Checkboxes and Radio Buttons
+## Working with Checkboxes and Radio Buttons
 
 AppKit provides several types of Checkboxes and Radio Button Groups that can be used in your User Interface Design. For more information, please see the [Buttons](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
@@ -378,7 +367,7 @@ You can use the `Tag` property to see which radio button was selected.
 
 <a name="Working_with_Menu_Controls" />
 
-# Working with Menu Controls
+## Working with Menu Controls
 
 AppKit provides several types of Menu Controls that can be used in your User Interface Design. For more information, please see the [Menu Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlswithMenus.html#//apple_ref/doc/uid/20000957-CH100-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
@@ -386,13 +375,13 @@ AppKit provides several types of Menu Controls that can be used in your User Int
 
 <a name="Providing-Menu-Control-Data" />
 
-## Providing Menu Control Data
+### Providing Menu Control Data
 
 The Menu Controls available to macOS can be set to populate the dropdown list either from an internal list (that can be pre-defined in Interface Builder or populated via code) or by providing your own custom, external data source.
 
 <a name="Working-with-Internal-Data" />
 
-### Working with Internal Data
+#### Working with Internal Data
 
 In addition to defining items in Interface Builder, Menu Controls (such as `NSComboBox`), provide a complete set of methods that allow you to Add, Edit or Delete the items from the internal list that they maintain:
 
@@ -406,14 +395,11 @@ In addition to defining items in Interface Builder, Menu Controls (such as `NSCo
 - `Count` - Returns the number of items in the list.
 
 > [!IMPORTANT]
-> **NOTE:** If you are using an Extern Data Source (`UsesDataSource = true`), calling any of the above methods will throw an exception.
-
-
-
+> If you are using an Extern Data Source (`UsesDataSource = true`), calling any of the above methods will throw an exception.
 
 <a name="Working-with-an-External-Data-Source" />
 
-### Working with an External Data Source
+#### Working with an External Data Source
 
 Instead of using the built-in Internal Data to provide the rows for your Menu Control, you can optionally use an External Data Source and provide your own backing store for the items (such as a SQLite database).
 
@@ -428,7 +414,7 @@ Please see the [Databases and ComboBoxes](~/mac/app-fundamentals/databases.md#Da
 
 <a name="Adjusting-the-Lists-Appearance" />
 
-## Adjusting the List's Appearance
+### Adjusting the List's Appearance
 
 The following methods are available to adjust the Menu Control's appearance:
 
@@ -449,7 +435,7 @@ DropDownSelected.Title = "Item 1";
 
 <a name="Manipulating-the-Selected-Items" />
 
-## Manipulating the Selected Items
+### Manipulating the Selected Items
 
 The following methods and properties allow you to manipulate the selected items in the Menu Control's list:
 
@@ -463,7 +449,7 @@ Use the `ScrollItemAtIndexToTop` to present the item at the given index at the t
 
 <a name="Responding to Events" />
 
-## Responding to Events
+### Responding to Events
 
 Menu Controls provide the following events to respond to user interaction:
 
@@ -487,7 +473,7 @@ For more information on working with Menus and Menu Controls, please see our [Me
 
 <a name="Working_with_Selection_Controls" />
 
-# Working with Selection Controls
+## Working with Selection Controls
 
 AppKit provides several types of Selection Controls that can be used in your User Interface Design. For more information, please see the [Selection Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsSelection.html#//apple_ref/doc/uid/20000957-CH49-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
@@ -532,7 +518,7 @@ The `NSDatePicker` has the following properties for working directly with Date a
 
 <a name="Working_with_Indicator_Controls" />
 
-# Working with Indicator Controls
+## Working with Indicator Controls
 
 AppKit provides several types of Indicator Controls that can be used in your User Interface Design. For more information, please see the [Indicator Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsIndicators.html#//apple_ref/doc/uid/20000957-CH50-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
@@ -563,7 +549,7 @@ Calling the `StopAnimation` method will stop the animation.
 
 <a name="Working_with_Text_Controls" />
 
-# Working with Text Controls
+## Working with Text Controls
 
 AppKit provides several types of Text Controls that can be used in your User Interface Design. For more information, please see the [Text Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsText.html#//apple_ref/doc/uid/20000957-CH51-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
@@ -595,7 +581,7 @@ The SourceWriter code has been fully commented and, where available, links have 
 
 <a name="Working_with_Content_Views" />
 
-# Working with Content Views
+## Working with Content Views
 
 AppKit provides several types of Content Views that can be used in your User Interface Design. For more information, please see the [Content Views](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 
@@ -603,7 +589,7 @@ AppKit provides several types of Content Views that can be used in your User Int
 
 <a name="Popovers" />
 
-## Popovers
+### Popovers
 
 A popover is a transient UI element that provides functionality that is directly related to a specific a control or an onscreen area. A popover floats above the window that contains the control or area that it’s related to, and its border includes an arrow to indicate the point from which it emerged.
 
@@ -626,7 +612,7 @@ To create a popover, do the following:
 
 <a name="Tab_Views" />
 
-## Tab Views
+### Tab Views
 
 Tab Views consists of a Tab List (which looks similar to a Segmented Control) combined with a set of views that are called _Panes_. When the user selects a new Tab, the Pane that is attached to it will be displayed. Each Pane contains its own set of controls.
 
@@ -640,7 +626,7 @@ Select each Tab in the **Interface Hierarchy** to set its **Title** and add UI E
 
 <a name="Data_Binding_AppKit_Controls" />
 
-# Data Binding AppKit Controls
+## Data Binding AppKit Controls
 
 By using Key-Value Coding and Data Binding techniques in your Xamarin.Mac application, you can greatly decrease the amount of code that you have to write and maintain to populate and work with UI elements. You also have the benefit of further decoupling your backing data (_Data Model_) from your front end User Interface (_Model-View-Controller_), leading to easier to maintain, more flexible application design.
 
@@ -651,10 +637,9 @@ For more information, please see the [Simple Data Binding](~/mac/app-fundamental
 
 <a name="Summary" />
 
-# Summary
+## Summary
 
 This article has taken a detailed look at working with the standard AppKit controls such as Buttons, Labels, Text Fields, Check Boxes and Segmented Controls in a Xamarin.Mac application. It covered adding them to a User Interface Design in Xcode's Interface Builder, exposing them to code through Outlets and Actions and working with AppKit Controls in C# Code.
-
 
 ## Related Links
 

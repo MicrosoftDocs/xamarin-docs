@@ -12,41 +12,19 @@ ms.date: 03/14/2017
 
 # Introduction to macOS Sierra
 
-_This article introduces all of the new and modified APIs and features available in macOS Sierra for Xamarin.Mac developers._
-
-This document will cover the following topics in detail:
-
-- [Introducing macOS Sierra](#Introducing-macOS-Sierra)
-- [What's New in macOS Sierra](#Whats-New-in-macOS-Sierra)
-	- [Apple File System](#Apple-File-System) provides a modern file system for iOS, macOS, tvOS and watchOS.
-	- [Apple Pay Enhancements](#Apple-Pay-Enhancements) in macOS Sierra allow users to make secure payments from websites.
-	- [Building Modern macOS Apps](#Building-Modern-macOS-Apps) covers several tips, features and techniques a developer can use to build a modern macOS app in Xamarin.Mac.
-	- [CloudKit Data Sharing](#CloudKit-Data-Sharing) allows users to easily share records from within their private databases.
-	- [Safari App Extensions Support](#Safari-App-Extensions-Support) allows the app to extend the behavior of Safari with being tightly integrated with macOS.
-	- [Security and Privacy Enhancements](#Security-and-Privacy-Enhancements) have been made in macOS Sierra that improve the security of the code and ensure user privacy.
-	- [Smart Card Driver Extension Support](#Smart-Card-Driver-Extension-Support) allows the app to access content from certain types of smart cards.
-	- [Unified Logging](#Unified-Logging) provides a single, unified messaging API across all levels of the system.
-	- [Wide Color](#Wide-Color) extends the support for extended-range pixel formats and wide-gamut color spaces throughout the system.
-- [Additional Framework Changes](#Additional-Framework-Changes) have been made throughout macOS Sierra.
-- [Deprecated APIs](#Deprecated-APIs) in macOS Sierra.
-
-<a name="Introducing-macOS-Sierra" />
-
-# Introducing macOS Sierra
-
 With the new macOS Sierra, the developer can take advantage of new APIs that allow the end user to interact with their apps and websites in previously unavailable ways. For example, Apple now allows websites to give customers the option of paying securely via Apple Pay and enhancements to the Metal framework boost an app's graphics and computing potential. 
 
 For more information on macOS Sierra, please see Apple's [macOS + Apps](https://developer.apple.com/macos/) documentation.
 
 <a name="Whats-New-in-macOS-Sierra" />
 
-# What's New in macOS Sierra
+## What's New in macOS Sierra
 
 Apple has added several new APIs and services in macOS Sierra along with many enhancements to existing features, including:
 
 <a name="Apple-File-System" />
 
-## Apple File System
+### Apple File System
 
 With macOS Sierra, Apple has released the new Apple File System as a modern file system for iOS, macOS, tvOS and watchOS. The Apple File System was optimized for Flash and SSD storage and provides the following features: strong encryption, copy-on-write metadata, space sharing, cloning for files and directories, snapshots, fast directory sizing and atomic safe-save primitives.
 
@@ -54,7 +32,7 @@ For more information, please see Apple's [Apple File System Guide](https://devel
 
 <a name="Apple-Pay-Enhancements" />
 
-## Apple Pay Enhancements
+### Apple Pay Enhancements
 
 Apple has made several enhancements to Apple Pay in macOS Sierra that allow the user to make secure payments from websites.
 
@@ -66,7 +44,7 @@ For more information, please see Apple's [ApplePay JS Framework](https://develop
 
 <a name="Building-Modern-macOS-Apps" />
 
-## Building Modern macOS Apps
+### Building Modern macOS Apps
 
 Modern macOS apps such as Apple's Safari web browser, Pages word processor and Numbers spread sheet use many new technologies to present a unified, context sensitive User Interface that does away with traditional UI elements such as floating panels and multiple open windows.
 
@@ -76,7 +54,7 @@ Our [Building Modern macOS Apps](~/mac/platform/introduction-to-macos-sierra/mod
 
 <a name="CloudKit-Data-Sharing" />
 
-## CloudKit Data Sharing
+### CloudKit Data Sharing
 
 The CloudKit framework has been expanded in macOS Sierra to allow user to quickly and easily share records or record sets from their private iCloud databases.
 
@@ -88,7 +66,7 @@ For more information, please see Apple's [CloudKit Framework Reference](https://
 
 <a name="Safari-App-Extensions-Support" />
 
-## Safari App Extensions Support
+### Safari App Extensions Support
 
 Safari App Extensions allow the app to extend the behavior of the Safari web browser while being tightly integrated with macOS Sierra. Since macOS Safari App Extensions work similar to iOS Safari App Extensions, they are easy to port from one system to another.
 
@@ -96,7 +74,7 @@ For more information, please see Apple's [Safari App Extension Programming Guide
 
 <a name="Security-and-Privacy-Enhancements" />
 
-## Security and Privacy Enhancements
+### Security and Privacy Enhancements
 
 Apple has made several enhancements to both security and privacy in macOS Sierra that will help the app improve the security of the app and ensure the end user's privacy including the following:
 
@@ -114,7 +92,7 @@ Since macOS Sierra shares these changes with iOS 10, please see our iOS 10 [Secu
 
 <a name="Smart-Card-Driver-Extension-Support" />
 
-## Smart Card Driver Extension Support
+### Smart Card Driver Extension Support
 
 With macOS Sierra, the app can create `NSExtension` based smart card drivers that allows read-only access to the content from certain types of smart cards. This information is then presented inside the system keychain (replacing the deprecated Common Data Security Architecture method).
 
@@ -122,7 +100,7 @@ for more information, Pleas see Apple's [CryptoTokenKit Framework Reference](htt
 
 <a name="Unified-Logging" />
 
-## Unified Logging
+### Unified Logging
 
 Unified Logging provides the app with a single API for efficient messaging across all levels of the system. With Unified Logging the app has fine-grained control over multiple levels of logging that include privacy controls and activity tracking for easier debugging. 
 
@@ -136,7 +114,7 @@ For more information, please see Apple's [Logging Reference](https://developer.a
 
 <a name="Wide-Color" />
 
-## Wide Color
+### Wide Color
 
 macOS Sierra extends the support for extended-range pixel formats and wide-gamut color spaces throughout the system including frameworks such as Core Graphics, Core Image, Metal and AVFoundation. Support for devices with wide color displays is further eased by providing this behavior throughout the entire graphics stack.
 
@@ -152,7 +130,7 @@ To find out more, please see our [Introduction to Wide Color](~/ios/platform/wid
 
 <a name="Additional-Framework-Changes" />
 
-# Additional Framework Changes
+## Additional Framework Changes
 
 In addition to the major framework changes and additions listed above, Apple has made many additional minor framework changes in macOS Sierra.
 
@@ -160,15 +138,13 @@ To find out more, please see our [Additional Framework Changes](~/mac/platform/i
 
 <a name="Deprecated-APIs" />
 
-# Deprecated APIs
+## Deprecated APIs
 
 The following APIs have been deprecated in macOS Sierra:
 
 - The HFS Standard File System is no longer supported.
 
 See Apple's [OS X v10.12 API Diffs](https://developer.apple.com/library/prerelease/content/releasenotes/Miscellaneous/APIDiffsMacOS10_12/index.html) documentation for a complete list of deprecations and changes.
-
-
 
 ## Related Links
 

@@ -102,7 +102,7 @@ From here you can work with the collection in the same way as the default **Asse
 ### Adding images to resources
 
 > [!IMPORTANT]
-> **NOTE:** This method of working with images in a macOS app has been deprecated by Apple. You should use [Asset Catalog Image Sets](#asset-catalogs) to manager your app's images instead.
+> This method of working with images in a macOS app has been deprecated by Apple. You should use [Asset Catalog Image Sets](#asset-catalogs) to manager your app's images instead.
 
 Before you can use an Image file in your Xamarin.Mac application (either in C# code or from Interface Builder) it needs to be included in the project's **Resources** folder as a **Bundle Resource**. To add a file to a project, do the following:
 
@@ -123,8 +123,7 @@ Before you can use an Image file in your Xamarin.Mac application (either in C# c
 You can use any png, jpg, or pdf file as a source image in your Xamarin.Mac application. In the next section, we'll look at adding High Resolution versions of our Images and Icons to support Retina based Macs.
 
 > [!IMPORTANT]
-> **NOTE:** If you are adding Images to the **Resources** folder, you can leave the **Override build action** set to **Default**. The default Build Action for this folder is `BundleResource`.
-
+> If you are adding Images to the **Resources** folder, you can leave the **Override build action** set to **Default**. The default Build Action for this folder is `BundleResource`.
 
 ## Provide high-resolution versions of all app graphics resources
 
@@ -134,7 +133,7 @@ Any graphic asset that you add to a Xamarin.Mac application (icons, custom contr
 ### Adopt the @2x naming convention
 
 > [!IMPORTANT]
-> **NOTE:** This method of working with images in a macOS app has been deprecated by Apple. You should use [Asset Catalog Image Sets](#asset-catalogs) to manager your app's images instead.
+> This method of working with images in a macOS app has been deprecated by Apple. You should use [Asset Catalog Image Sets](#asset-catalogs) to manager your app's images instead.
 
 When you create the standard and high-resolution versions of an image, follow this naming convention for the image pair when including them in your Xamarin.Mac project:
 
@@ -176,8 +175,7 @@ To use an image in interface builder, do the following:
 The above steps work for any UI element that allows their image property to be set in the **Attribute Inspector**. Again, if you have included a **@2x** version of your image file, it will automatically be used on Retina Display based Macs.
 
 > [!IMPORTANT]
-> **NOTE:** If the Image isn't available in the **Image Name** dropdown, close your .storyboard project in Xcode and reopen it from Visual Studio for Mac. If the image still isn't available, ensure that its **Build Action** is `BundleResource` and that the image has been added to the **Resources** folder.
-
+> If the Image isn't available in the **Image Name** dropdown, close your .storyboard project in Xcode and reopen it from Visual Studio for Mac. If the image still isn't available, ensure that its **Build Action** is `BundleResource` and that the image has been added to the **Resources** folder.
 
 ## Using images in C# code
 

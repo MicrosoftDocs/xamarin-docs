@@ -15,8 +15,7 @@ ms.date: 03/14/2017
 _This article covers working with .xib files created in Xcode's Interface Builder to create and maintain user interfaces for a Xamarin.Mac application._
 
 > [!NOTE]
-> **NOTE:** The preferred way to create a user interface for a Xamarin.Mac app is with storyboards. This documentation has been left in place for historical reasons and for working with older Xamarin.Mac projects. For more information, please see our [Introduction to Storyboards](~/mac/platform/storyboards/index.md) documentation.
-
+> The preferred way to create a user interface for a Xamarin.Mac app is with storyboards. This documentation has been left in place for historical reasons and for working with older Xamarin.Mac projects. For more information, please see our [Introduction to Storyboards](~/mac/platform/storyboards/index.md) documentation.
 
 ## Overview
 
@@ -358,7 +357,7 @@ public override void AwakeFromNib ()
 Note that the `NSLabel` is accessed in C# by the direct name that you assigned it in Xcode when you created its outlet in Xcode, in this case, it's called `ClickedLabel`. You can access any method or property of the exposed object the same way you would any normal C# class.
 
 > [!IMPORTANT]
-> **NOTE:** You need to use `AwakeFromNib`, instead of another method such as `Initialize`, because `AwakeFromNib` is called _after_ the OS has loaded and instantiated the User Interface from the .xib file. If you tried to access the label control before the .xib file has been fully loaded and instantiated, you’d get a `NullReferenceException` error because the label control would not be created yet.
+> You need to use `AwakeFromNib`, instead of another method such as `Initialize`, because `AwakeFromNib` is called _after_ the OS has loaded and instantiated the User Interface from the .xib file. If you tried to access the label control before the .xib file has been fully loaded and instantiated, you’d get a `NullReferenceException` error because the label control would not be created yet.
 
 Next, add the following partial class to the `MainWindow` class:
 
@@ -428,7 +427,7 @@ As you can see, Visual Studio for Mac listens for changes to the .h file, and th
 You normally will never need to open the **MainWindow.designer.cs** yourself, it was presented here for educational purposes only.
 
 > [!IMPORTANT]
-> **NOTE:** In most situations, Visual Studio for Mac will automatically see any changes made in Xcode and sync them to your Xamarin.Mac project. In the off occurrence that synchronization doesn't automatically happen, switch back to Xcode and them back to Visual Studio for Mac again. This will normally kick off a synchronization cycle.
+> In most situations, Visual Studio for Mac will automatically see any changes made in Xcode and sync them to your Xamarin.Mac project. In the off occurrence that synchronization doesn't automatically happen, switch back to Xcode and them back to Visual Studio for Mac again. This will normally kick off a synchronization cycle.
 
 
 ## Adding a new window to a project

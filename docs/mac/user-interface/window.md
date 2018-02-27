@@ -14,10 +14,6 @@ ms.date: 03/14/2017
 
 _This article covers working with windows and panels in a Xamarin.Mac application. It describes creating windows and panels in Xcode and Interface Builder, loading them from storyboards and .xib files, and working with them programmatically._
 
-<a name="Overview" />
-
-# Overview
-
 When working with C# and .NET in a Xamarin.Mac application, you have access to the same Windows and Panels that a developer working in in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Windows and Panels (or optionally create them directly in C# code).
 
 Based on it's purpose, a Xamarin.Mac application can present one or more Window on screen to manage and coordinate the information it displays and works with. The principal functions of a windows are:
@@ -37,7 +33,7 @@ You may want to take a look at the [Exposing C# classes / methods to Objective-C
 
 <a name="Introduction_to_Windows" />
 
-# Introduction to Windows
+## Introduction to Windows
 
 As stated above, a Window provides an area in which Views and Controls can be placed and managed and responds to events based on user interaction (either via keyboard or mouse).
 
@@ -53,7 +49,7 @@ For more information, see the [About Windows](https://developer.apple.com/librar
 
 <a name="Main_Key_and_Inactive_Windows" />
 
-## Main, Key, and Inactive Windows
+### Main, Key, and Inactive Windows
 
 Windows in a Xamarin.Mac application can look and behave differently based on how the user is currently interacting with them. The foremost Document or App Window that is currently focus of the user’s attention is called the _Main Window_. In most instances this Window will also be the _Key Window_ (the window that is currently accepting user input). But this isn't always the case, for example, a Color Picker could be open and be the Key window that the user is interacting with to change the state of an item in the Document Window (which would still be the Main Window).
 
@@ -63,7 +59,7 @@ For more information, see the [About Windows](https://developer.apple.com/librar
 
 <a name="Naming_Windows" />
 
-## Naming Windows
+### Naming Windows
 
 A Window can display a Title Bar and when the Title is displayed, it's usually the name of the application, the name of the document being worked on or the function of the window (such as Inspector). Some applications don't display a Title Bar because they are recognizable by sight and don't work with documents.
 
@@ -76,7 +72,7 @@ For more information, see the [Naming Windows](https://developer.apple.com/libra
 
 <a name="Full-Screen_Windows" />
 
-## Full-Screen Windows
+### Full-Screen Windows
 
 In macOS, an application's window can go full screen hiding everything including the Application Menu Bar (which can be revealed by moving the cursor to the top of the screen) to provide distraction free interaction with it's content.
 
@@ -92,7 +88,7 @@ For more information, see the [Full-Screen Windows](https://developer.apple.com/
 
 <a name="Panels" />
 
-## Panels
+### Panels
 
 A Panel is an auxiliary window that contains controls and options that affect the active document or selection (such as the system Color Picker):
 
@@ -108,7 +104,7 @@ Apple suggests the following guidelines:
 - Panels should always include title bar.
 - Panels should not include an active minimize button.
 
-### Inspectors
+#### Inspectors
 
 Most modern macOS applications present auxiliary controls and options that affect the active document or selection as _Inspectors_ that are part of the Main Window (like the **Pages** app shown below), instead of using Panel Windows:
 
@@ -118,7 +114,7 @@ For more information, see the [Panels](https://developer.apple.com/library/mac/d
 
 <a name="Creating_and_Maintaining_Windows_in_Xcode" />
 
-# Creating and Maintaining Windows in Xcode
+## Creating and Maintaining Windows in Xcode
 
 When you create a new Xamarin.Mac Cocoa application, you get a standard blank, window by default. This windows is defined in a `.storyboard` file automatically included in the project. To edit your windows design, in the **Solution Explorer**, double click the `Main.storyboard` file:
 
@@ -156,7 +152,7 @@ See Apple's [Introduction to Windows](https://developer.apple.com/library/mac/do
 
 <a name="Setting_the_Default_Size_and_Location" />
 
-## Setting the Default Size and Location
+### Setting the Default Size and Location
 
 To set the initial position of your window and to control it's size, switch to the **Size Inspector**:
 
@@ -166,7 +162,7 @@ From here you can set the initial size of the window, give it a minimum and maxi
 
 <a name="Setting-a-Custom-Main-Window-Controller" />
 
-## Setting a Custom Main Window Controller
+### Setting a Custom Main Window Controller
 
 To be able to create Outlets and Actions to expose UI elements to C# code, the Xamarin.Mac app will need to be using a Custom Window Controller.
 
@@ -188,7 +184,7 @@ Do the following:
 
 <a name="Adding_UI_Elements" />
 
-## Adding UI Elements
+### Adding UI Elements
 
 To define the content of a window, drag controls from the **Library Inspector** onto the **Interface Editor**. Please see our [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) documentation for more information about using Interface Builder to create and enable controls.
 
@@ -216,7 +212,7 @@ For more information about working with **Outlets** and **Actions**, please see 
 
 <a name="Standard_Window_Workflow" />
 
-## Standard Window Workflow
+### Standard Window Workflow
 
 For any window that you create and work with in your Xamarin.Mac application, the process is basically the same as what we have just done above:
 
@@ -233,7 +229,7 @@ Now that we have a basic window created, we'll look at the typical processes a X
 
 <a name="Displaying_the_Default_Window" />
 
-# Displaying the Default Window
+## Displaying the Default Window
 
 By default, a new Xamarin.Mac application will automatically display the window defined in the `MainWindow.xib` file when it is started:
 
@@ -262,20 +258,17 @@ public override void ViewWillAppear ()
 ```	
 
 > [!NOTE]
-> **NOTE:** We are setting the value of the Window's `Title` property in the `ViewWillAppear` method instead of the `ViewDidLoad` method because, while the view might be loaded into memory, it is not yet fully instantiated. If we tried to access the `Title` property in the `ViewDidLoad` method we would get a `null` exception since the Window hasn't been constructed and wired-up to the property yet.
-
-
-
+> We are setting the value of the Window's `Title` property in the `ViewWillAppear` method instead of the `ViewDidLoad` method because, while the view might be loaded into memory, it is not yet fully instantiated. If we tried to access the `Title` property in the `ViewDidLoad` method we would get a `null` exception since the Window hasn't been constructed and wired-up to the property yet.
 
 <a name="Programmatically_Closing_a_Window" />
 
-# Programmatically Closing a Window
+## Programmatically Closing a Window
 
 There might be times that you wish to programmatically close a window in a Xamarin.Mac application, other than having the user click the window's **Close** button or using a menu item. macOS provides two different ways to close an `NSWindow` programmatically: `PerformClose` and `Close`.
 
 <a name="PerformClose" />
 
-## PerformClose
+### PerformClose
 
 Calling the `PerformClose` method of an `NSWindow` simulates the user clicking the window's **Close** button by momentarily highlighting the button and then closing the window.
 
@@ -291,7 +284,7 @@ Would attempt to close the `MyWindow` `NSWindow` instance. If it was successful,
 
 <a name="Close" />
 
-## Close
+### Close
 
 Calling the `Close` method of an `NSWindow` does not simulates the user clicking the window's **Close** button by momentarily highlighting the button, it simply closes the window.
 
@@ -312,7 +305,7 @@ Would to close the `MyWindow` `NSWindow` instance.
 
 <a name="Modified-Windows-Content" />
 
-# Modified Windows Content
+## Modified Windows Content
 
 In macOS, Apple has provided a way to inform the user that the contents of a Window (`NSWindow`) has been modified by the user and needs to be saved. If the Window contains modified content, a small black dot will be displayed in it's **Close** widget:
 
@@ -322,7 +315,7 @@ If the user attempts to close the Window or quit the Mac App while there are uns
 
 [ ![](window-images/close02.png "A save sheet being shown when the window is closed")](window-images/close02.png)
 
-## Marking a Window as Modified
+### Marking a Window as Modified
 
 To mark a Window as having modified content, use the following code:
 
@@ -338,7 +331,7 @@ And once the change has been saved, clear the modified flag using:
 Window.DocumentEdited = false;
 ```
 
-## Saving Changes Before Closing a Window
+### Saving Changes Before Closing a Window
 
 To watch for the user closing a Window and allowing them to save modified content beforehand, you will need to create a subclass of `NSWindowDelegate` and override its `WindowShouldClose` method. For example:
 
@@ -433,7 +426,7 @@ Use the following code to attach an instance of this delegate to your window:
 Window.Delegate = new EditorWidowDelegate(Window);
 ```
 
-## Saving Changes Before Closing the App
+### Saving Changes Before Closing the App
 
 Finally, your Xamarin.Mac App should check to see if any of its Windows contain modified content and allow the user to save the changes before quitting. To do this, edit your `AppDelegate.cs` file, override the `ApplicationShouldTerminate` method and make it look like the following:
 
@@ -455,7 +448,7 @@ public override NSApplicationTerminateReply ApplicationShouldTerminate (NSApplic
 
 <a name="Working_with_Multiple_Windows" />
 
-# Working with Multiple Windows
+## Working with Multiple Windows
 
 Most document based Mac applications can edit multiple documents at the same time. For example, a text editor can have multiple text files open for edit at the same time. By default, our new Xamarin.Mac application has a **File** menu with a **New** item automatically wired-up to the `newDocument:` **Action**.
 
@@ -498,7 +491,7 @@ For more information on working with Menus in a Xamarin.Mac application, please 
 
 <a name="Getting_the_Currently_Active_Window" />
 
-## Getting the Currently Active Window
+### Getting the Currently Active Window
 
 In a Xamarin.Mac application that can open multiple windows (documents), there are times when you will need to get the current, topmost window (the key window). The following code will return the key window:
 
@@ -510,7 +503,7 @@ It can be called in any class or method that needs to access the current, key wi
 
 <a name="Accessing-All-App-Windows" />
 
-## Accessing All App Windows
+### Accessing All App Windows
 
 There might be times where you need to access all of the windows that your Xamarin.Mac app currently has open. For example, to see if a file that the user wants to open is already open in an exiting window.
 
@@ -532,7 +525,7 @@ In the example code we are casting each returned window to the custom `ViewContr
 
 <a name="Adjusting_the_Window_Size_in_Code" />
 
-# Adjusting the Window Size in Code
+## Adjusting the Window Size in Code
 
 There are times when the application needs to resize a window in code. To resize and reposition a window, you adjust it's `Frame` property. When adjusting a window's size, you usually need to also adjust it's origin, to keep the window in the same location because of macOS's coordinate system.
 
@@ -552,11 +545,11 @@ SetFrame (frame, true);
 ```
 
 > [!IMPORTANT]
-> **NOTE:** When you adjust a windows size and location in code, you need to make sure you respect the minimum and maximum sizes that you have set in Interface Builder. This will not be automatically honored and you will be able to make the window bigger or smaller than these limits.
+> When you adjust a windows size and location in code, you need to make sure you respect the minimum and maximum sizes that you have set in Interface Builder. This will not be automatically honored and you will be able to make the window bigger or smaller than these limits.
 
 <a name="Monitoring-Window-Size-Changes" />
 
-# Monitoring Window Size Changes
+## Monitoring Window Size Changes
 
 There might be times where you need to monitor changes in a Window's size inside of your Xamarin.Mac app. For example, to redraw content to fit the new size.
 
@@ -593,7 +586,7 @@ public override void WindowDidLoad ()
 
 <a name="Setting_a_Window’s_Title_and_Represented_File" />
 
-# Setting a Window’s Title and Represented File
+## Setting a Window’s Title and Represented File
 
 When working with windows that represent documents, `NSWindow` has a `DocumentEdited` property that if set to `true` displays a small dot in the Close Button to give the user an indication that the file has been modified and should be saved before closing.
 
@@ -701,7 +694,7 @@ The file will be displayed and the title will be set with the icon of the file:
 
 <a name="Adding_a_New_Window_to_a_Project" />
 
-# Adding a New Window to a Project
+## Adding a New Window to a Project
 
 Aside from the main document window, a Xamarin.Mac application might need to display other types of windows to the user, such as Preferences or Inspector Panels.
 
@@ -729,7 +722,7 @@ If we run the code and select the **Preferences...** from the **Application Menu
 
 <a name="Working_with_Panels" />
 
-# Working with Panels
+## Working with Panels
 
 As stated at the start of this article, a panel floats above other windows and provides tools or controls that users can work with while documents are open. 
 
@@ -794,14 +787,13 @@ If we run our application, the panel will be displayed:
 [ ![](window-images/panels04.png "The panel in a running app")](window-images/panels04.png)
 
 > [!IMPORTANT]
-> **NOTE:** Panel Windows have been deprecated by Apple and should be replaced with **Inspector Interfaces**. For a full example of creating an **Inspector** in a Xamarin.Mac app, please see our [MacInspector](https://developer.xamarin.com/samples/mac/MacInspector/) sample app.
+> Panel Windows have been deprecated by Apple and should be replaced with **Inspector Interfaces**. For a full example of creating an **Inspector** in a Xamarin.Mac app, please see our [MacInspector](https://developer.xamarin.com/samples/mac/MacInspector/) sample app.
 
 <a name="Summary" />
 
-# Summary
+## Summary
 
 This article has taken a detailed look at working with Windows and Panels in a Xamarin.Mac application. We saw the different types and uses of Windows and Panels, how to create and maintain Windows and Panels in Xcode's Interface Builder and how to work with Windows and Panels in C# code.
-
 
 ## Related Links
 

@@ -22,13 +22,13 @@ This article will provide an introduction to using Storyboards to define a Xamar
 
 <a name="What-are-Storyboards" />
 
-# What are Storyboards?
+## What are Storyboards?
 
 By using Storyboards, all of a Xamarin.Mac app's UI can be defined in a single location with all of the navigation between its individual elements and user interfaces. Storyboards for Xamarin.Mac, work in a very similar fashion to Storyboards for Xamarin.iOS. However, they contain a different set of _Segue Types_ because of the different interface idioms.
 
 <a name="Working-with-Scenes" />
 
-## Working with Scenes
+### Working with Scenes
 
 As stated above, a Storyboard defines all of the UI for a given app broken down into a functional overview of its _View Controllers_. In Xcode's Interface Builder, each of these controllers lives in its own _Scene_.
 
@@ -42,7 +42,7 @@ The most important thing to note is that each Segue represents the flow of some 
 
 <a name="Working-with-View-Controllers" />
 
-## Working with View Controllers
+### Working with View Controllers
 
 View Controllers define the relationships between a given View of information within a Mac app and the data model that provides that information. Each top level scene in the Storyboard represents one View Controller in the Xamarin.Mac app's code.
 
@@ -58,7 +58,7 @@ Within a given Scene, you can do all of the things that would normally have been
 
 <a name="Working-with-Segues" />
 
-## Working with Segues
+### Working with Segues
 
 As stated above, Segues provide the relationships between all of the Scenes that define your app's UI. If you are familiar with working in Storyboards in iOS, you know that Segues for iOS usually define transitions between full screen views. This differs from macOS, when Segues usually define "containment" (where one Scene is the child of a parent Scene).
 
@@ -70,7 +70,7 @@ When using Presentation Segues, you can override the `PrepareForSegue` method of
 
 <a name="Design-and-Run-Times" />
 
-## Design and Run Times
+### Design and Run Times
 
 At Design time (when layout out the UI in Xcode's Interface Builder), each element of the app's UI is broken down into it's constituent items:
 
@@ -84,19 +84,19 @@ By defining each element in this way, it allows for the lazy-loading of each ele
 
 <a name="Storyboard-Quick-Start" />
 
-# Storyboard Quick Start
+## Storyboard Quick Start
 
 In the [Storyboard Quick Start](~/mac/platform/storyboards/quickstart.md) guide, we'll create a simple Xamarin.Mac app that introduces the key concepts of working with storyboards to create a User Interface. The sample app will consist of a Spilt View containing a _Content Area_ and an _Inspector Area_ and it will present a simple Preferences Dialog window. We'll be using Segues to tie all of the User Interface elements together.
 
 <a name="Working-with-Storyboards" />
 
-# Working with Storyboards
+## Working with Storyboards
 
 This section covers the in-depth details of [Working with Storyboards](~/mac/platform/storyboards/indepth.md) in a Xamarin.Mac app. We take an in-depth look at Scenes and how they are composed of View Controllers and View. Then, we'll take a look at how Scenes are tied together with Segues. Finally, we'll take a look at working with custom Segue types. 
 
 <a name="Complex-Storyboard-Example" />
 
-# Complex Storyboard Example
+## Complex Storyboard Example
 
 For an example of a complex example of working with Storyboards in a Xamarin.Mac app, please see the [SourceWriter Sample App](https://developer.xamarin.com/samples/mac/SourceWriter/). SourceWriter is a simple source code editor that provides support for code completion and simple syntax highlighting.
 
@@ -104,7 +104,7 @@ The SourceWriter code has been fully commented and, where available, links have 
 
 <a name="Summary" />
 
-# Summary
+## Summary
 
 This article has taken a quick look at working with Storyboards in a Xamarin.Mac app. We saw how to create a new app using storyboards and how to define a user interface. We also saw how to navigate between different windows and view states using segues.
 
