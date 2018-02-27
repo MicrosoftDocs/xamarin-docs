@@ -43,7 +43,7 @@ In the eShopOnContainers mobile app,[`MessagingCenter`](https://developer.xamari
 > [!TIP]
 > Marshal to the UI thread when performing UI updates. If a message that's sent from a background thread is required to update the UI, process the message on the UI thread in the subscriber by invoking the [`Device.BeginInvokeOnMainThread`](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/) method.
 
-For more information about [`MessagingCenter`](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/), see [MessagingCenter](https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/messaging-center/) on the Xamarin Developer Center.
+For more information about [`MessagingCenter`](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/), see [MessagingCenter](~/xamarin-forms/app-fundamentals/messaging-center.md).
 
 ## Defining a Message
 

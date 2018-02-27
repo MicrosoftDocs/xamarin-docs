@@ -130,7 +130,7 @@ To configure the iOS application, add the same NuGet package to the iOS project 
 
 ![](databases-images/vsmac-sqlite-nuget.png "Add NuGet SQLite.NET PCL Package")
 
-The only code required is the `IFileHelper` implementation that determines the data file path. The following code places the SQLite database file in the **Library/Databases** folder within the application's sandbox. See the [iOS Working with the File System](http://developer.xamarin.com/guides/ios/application_fundamentals/working_with_the_file_system/) documentation for more information on the different directories that are available for storage.
+The only code required is the `IFileHelper` implementation that determines the data file path. The following code places the SQLite database file in the **Library/Databases** folder within the application's sandbox. See the [iOS Working with the File System](~/ios/app-fundamentals/file-system.md) documentation for more information on the different directories that are available for storage.
 
 ```csharp
 [assembly: Dependency(typeof(FileHelper))]

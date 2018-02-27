@@ -103,7 +103,7 @@ The `ViewModelBase` class stores the `NavigationService` instance in a `Navigati
 
 ### Handling Navigation Requests
 
-Xamarin.Forms provides the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) class, which implements a hierarchical navigation experience in which the user is able to navigate through pages, forwards and backwards, as desired. For more information about hierarchical navigation, see [Hierarchical Navigation](https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/navigation/hierarchical/) on the Xamarin Developer Center.
+Xamarin.Forms provides the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) class, which implements a hierarchical navigation experience in which the user is able to navigate through pages, forwards and backwards, as desired. For more information about hierarchical navigation, see [Hierarchical Navigation](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
 Rather than use the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) class directly, the eShopOnContainers app wraps the `NavigationPage` class in the `CustomNavigationView` class, as shown in the following code example:
 

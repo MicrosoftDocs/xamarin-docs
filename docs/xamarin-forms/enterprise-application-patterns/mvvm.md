@@ -351,7 +351,7 @@ The `EventToCommandBehavior` is particularly useful for attaching a command to a
 
 At runtime, the `EventToCommandBehavior` will respond to interaction with the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/). When an item is selected in the `ListView`, the [`ItemTapped`](https://developer.xamarin.com/api/event/Xamarin.Forms.ListView.ItemTapped/) event will fire, which will execute the `OrderDetailCommand` in the `ProfileViewModel`. By default, the event arguments for the event are passed to the command. This data is converted as it's passed between source and target by the converter specified in the `EventArgsConverter` property, which returns the [`Item`](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemTappedEventArgs.Item/) of the `ListView` from the [`ItemTappedEventArgs`](https://developer.xamarin.com/api/type/Xamarin.Forms.ItemTappedEventArgs/). Therefore, when the `OrderDetailCommand` is executed, the selected `Order` is passed as a parameter to the registered Action.
 
-For more information about behaviors, see [Behaviors](https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/behaviors/) on the Xamarin Developer Center.
+For more information about behaviors, see [Behaviors](~/xamarin-forms/app-fundamentals/behaviors/index.md).
 
 ## Summary
 

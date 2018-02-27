@@ -23,7 +23,7 @@ XAML—the eXtensible Application Markup Language—allows developers to define 
 * [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
 * [Part 5. From Data Binding to MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
 
-In addition to these XAML Basics articles, you can download chapters of the book [Creating Mobile Apps with Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md): 
+In addition to these XAML Basics articles, you can download chapters of the book [Creating Mobile Apps with Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md):
 
 [![](images/cover-sml.png "Book Cover")](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
 
@@ -60,6 +60,8 @@ XAML topics are covered in more depth in many chapters of the book, including:
 </table>
 
 These chapters can be [downloaded for free](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md).
+
+<a name="Overview" />
 
 ## Overview
 

@@ -27,7 +27,7 @@ Once a UITest project has been added to a Xamarin.Forms solution, the steps for 
 
 ## Requirements
 
-Refer to the [UITest Requirements](https://developer.xamarin.com/guides/testcloud/uitest/intro-to-uitest/#requirements) to confirm your project is ready for automated UI testing.
+Refer to the [Xamarin.UITest](/appcenter/test-cloud/uitest/) to confirm your project is ready for automated UI testing.
 
 ## Adding UITest Support to Xamarin.Forms Apps
 
@@ -216,6 +216,6 @@ For information about how to submit tests to App Center Test, see [Submitting UI
 
 - [UITestSample](https://developer.xamarin.com/samples/xamarin-forms/UsingUITest/)
 - [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples)
-- [Introduction to Test Cloud (sample)](https://developer.xamarin.com~/testcloud/introduction-to-test-cloud/)
-- [Introduction to UITest (sample)](https://developer.xamarin.com~/testcloud/uitest/intro-to-uitest/)
+- [App Center Test](/appcenter/test-cloud/)
+- [Xamarin.UITest](/appcenter/test-cloud/uitest/)
 - [NUnit](http://www.nunit.org)

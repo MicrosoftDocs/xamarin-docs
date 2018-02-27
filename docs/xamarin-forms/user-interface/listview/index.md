@@ -23,7 +23,7 @@ ListView is a view for presenting lists of data, especially long lists that requ
 ## Use Cases
 Make sure ListView is the right control for your needs. ListView can be used in any situation where you are displaying scrollable lists of data. ListViews support context actions and data binding.
 
-ListView should not be confused with [TableView](http://developer.xamarin.com/guides/xamarin-forms/working-with/tableview/). The TableView control is a better option whenever you have a non-bound list of options or data. For example, the iOS settings app, which has a mostly predefined set of options, is better suited to use TableView than ListView.
+ListView should not be confused with [TableView](~/xamarin-forms/user-interface/tableview.md). The TableView control is a better option whenever you have a non-bound list of options or data. For example, the iOS settings app, which has a mostly predefined set of options, is better suited to use TableView than ListView.
 
 Also note that a ListView is best suited for homogeneous data &ndash; that is, all data should be of the same type. This is because only one type of cell can be used for each row in the list. TableViews can support multiple cell types, so they are a better option when you need to mix views.
 

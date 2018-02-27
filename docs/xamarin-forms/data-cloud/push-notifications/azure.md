@@ -193,7 +193,7 @@ For more information about Firebase Cloud Messaging, see [Firebase Cloud Messagi
 
 #### Registering with Firebase Cloud Messaging
 
-Before an Android application can receive push notifications, it must register with FCM, which will generate a registration token and return it to the application. For more information about registration tokens, see [Registration with FCM](https://developer.xamarin.com/guides/android/application_fundamentals/notifications/firebase-cloud-messaging/#registration).
+Before an Android application can receive push notifications, it must register with FCM, which will generate a registration token and return it to the application. For more information about registration tokens, see [Registration with FCM](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md#registration).
 
 This is accomplished by:
 

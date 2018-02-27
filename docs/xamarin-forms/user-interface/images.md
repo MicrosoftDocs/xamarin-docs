@@ -324,6 +324,6 @@ Application icon and splashscreen images are set-up and configured as for non-Xa
 ## Related Links
 
 - [WorkingWithImages (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/)
-- [iOS Working with Images](https://developer.xamarin.com~/ios/application_fundamentals/working_with_images/)
+- [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md)
 - [Android Iconography](http://developer.android.com/design/style/iconography.html)
 - [Guidelines for tile and icon assets](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/)

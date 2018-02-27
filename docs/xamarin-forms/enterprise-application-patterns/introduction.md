@@ -106,7 +106,7 @@ The eShopOnContainers mobile app exercises the following Xamarin.Forms functiona
 -   MessagingCenter
 -   Custom Controls
 
-For more information about this functionality, see the [Xamarin.Forms documentation](https://developer.xamarin.com/guides/xamarin-forms/) on the Xamarin Developer Center, and [Creating Mobile Apps with Xamarin.Forms](https://aka.ms/xamebook).
+For more information about this functionality, see the [Xamarin.Forms documentation](~/xamarin-forms/index.yml), and [Creating Mobile Apps with Xamarin.Forms](https://aka.ms/xamebook).
 
 In addition, unit tests are provided for some of the classes in the eShopOnContainers mobile app.
 
