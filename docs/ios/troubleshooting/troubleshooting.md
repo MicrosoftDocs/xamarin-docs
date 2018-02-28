@@ -291,7 +291,7 @@ Snow Leopard if the iPhone Simulator is running at installation time.
 
 Make sure you quit the iPhone simulator and retry the installation.
 
-<a name="trampolines">
+<a name="trampolines"/>
 
 ## Ran out of trampolines of type 0
 

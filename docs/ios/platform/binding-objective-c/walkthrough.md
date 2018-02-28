@@ -49,6 +49,8 @@ documentation. Additionally, the following is required to complete the steps pre
 -  **The latest version of Objective Sharpie** - A current copy of the Objective Sharpie tool
 	downloaded from [here](~/cross-platform/macios/binding/objective-sharpie/get-started.md). If you already have Objective Sharpie installed, you can update it to the latest version by using the `sharpie update`
 
+<a name="Installing_the_Xcode_Command_Line_Tools"/>
+
 ## Installing the Xcode Command Line Tools
 
 # [Visual Studio for Mac](#tab/vsmac)
@@ -99,6 +101,8 @@ In this walkthrough, we'll cover the following steps:
 - **[Use the Binding Library](#Using_the_Binding)** - Finally, we'll create a Xamarin.iOS application to show how to use our newly created binding project.
 
 Now that we understand what steps are involved, let's move on to the rest of the walkthrough.
+
+<a name="Creating_A_Static_Library"/>
 
 ## Creating A Static Library
 
@@ -214,7 +218,6 @@ Enter the **Makefile** commands in the plain text editor of your choosing, and u
 
 Save the file with the name **Makefile** to the same location as the InfColorPicker Xcode Static Library we created above:
 
-
 [ ![](walkthrough-images/lib00.png "Save the file with the name Makefile")](walkthrough-images/lib00.png)
 
 Open the Terminal Application on your Mac and navigate to the location of your Makefile. Type `make` into the Terminal, press **Enter** and the **Makefile** will be executed:
@@ -238,6 +241,8 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 ```
 
 At this point, we've completed the first step of our iOS binding by creating a static library using Xcode and the Xcode Command Line tools `make` and `lipo`. Let's move to the next step and use **Objective-Sharpie** to automate the creation of the API bindings for us.
+
+<a name="Create_a_Xamarin.iOS_Binding_Project"/>
 
 ## Create a Xamarin.iOS Binding Project
 
@@ -346,6 +351,8 @@ The `LinkWith` attribute identifies the static library for the project and some 
 
 
 The next thing we need to do is to create the API definitions for the InfColorPicker project. For the purposes of this walkthrough, we will use Objective Sharpie to generate the file **ApiDefinition.cs**.
+
+<a name="Using_Objective_Sharpie"/>
 
 ## Using Objective Sharpie
 
@@ -475,6 +482,8 @@ Open both of these files in the Binding project that we created above. Copy the 
 
 -----
 
+<a name="Normalize_the_API_Definitions"/>
+
 ## Normalize the API Definitions
 
 Objective Sharpie sometimes has an issue translating `Delegates`, so we will need to modify the definition of the `InfColorPickerControllerDelegate` interface and replace the `[Protocol, Model]` line with the following:
@@ -508,6 +517,8 @@ At this point, our binding project should be complete and ready to build. Let's 
 
 
 -----
+
+<a name="Using_the_Binding"/>
 
 ## Using the Binding
 

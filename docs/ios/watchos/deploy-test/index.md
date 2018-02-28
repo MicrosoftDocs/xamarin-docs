@@ -20,7 +20,7 @@ Whether you are deploying to a test Watch, or uploading to the App Store,
 - In the **iOS Dev Center**:
   - [App IDs](#App_IDs) have been created.
   - [App Groups](#App_Groups) configured (if required).
-  - [*Distribution* Provisioning Profile(s)](#Provisioning_Profiles) created.
+  - Distribution Provisioning Profile(s) created
 
 - In your solution:
 
@@ -33,6 +33,7 @@ Whether you are deploying to a test Watch, or uploading to the App Store,
   - [Deploy to an Apple Watch for testing](~/ios/watchos/deploy-test/device.md), or
   - [Upload to the App Store](~/ios/watchos/deploy-test/appstore.md).
 
+<a name="App_IDs"/>
 
 ## App IDs
 
@@ -73,7 +74,7 @@ Note that some features cannot be used with a wildcard
 For distribution, you'll only need to create one
   Distribution Provisioning Profile for the wildcard App ID.
 
-<a name="app-groups" />
+<a name="App_Groups" />
 
 ## App Groups
 
@@ -120,8 +121,6 @@ Some app features (eg. App Groups) require you to set your entitlements.
 
 Do **not** enable entitlements in the Watch App project. It is not
   required to be enabled on the watch itself.
-
-
 
 ## Related Links
 

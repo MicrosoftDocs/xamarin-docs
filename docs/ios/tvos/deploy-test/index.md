@@ -10,7 +10,9 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# [App Distribution](~/ios/tvos/deploy-test/app-distribution/index.md)
+# Deployment and Testing
+
+## [App Distribution](~/ios/tvos/deploy-test/app-distribution/index.md)
 
 This article shows how to configure, build, and publish a Xamarin.tvOS app for distribution through various different means, including:
 
@@ -19,8 +21,6 @@ This article shows how to configure, build, and publish a Xamarin.tvOS app for d
 - Ad Hoc Distribution.
 
 If you are having issues submitting your Xamarin.tvOS app to the Apple TV App Store, please see our [Troubleshooting](~/ios/tvos/troubleshooting.md) guide. It contains several known issues that you might encounter and how to solve them in the Xamarin.tvOS.
-
-
 
 ## Related Links
 

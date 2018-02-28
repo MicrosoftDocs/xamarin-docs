@@ -28,7 +28,7 @@ iTunes Connect can be used for the following:
 - Select a sale price or specify that the application will be released for free.
 - Configure optional App Store technologies such as Game Center and In-App Purchase.
 
-In addition, the app should also have attractive, high-resolution artwork available in case Apple decides to feature it in the App Store. For more information, please see Apple's [iTunes Connect Developer Guide](#https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/About.html#//apple_ref/doc/uid/TP40011225-CH1-SW1).
+In addition, the app should also have attractive, high-resolution artwork available in case Apple decides to feature it in the App Store. For more information, please see Apple's [iTunes Connect Developer Guide](https://developer.apple.com/support/itunes-connect/).
 
 ## Managing Agreements, Tax and Banking
 

@@ -231,6 +231,8 @@ To perform a local search, an application must follow these steps:
 
 The local search API itself provides no user interface. It doesn’t even require a map to be used. However, to make practical use of local search, an application needs to provide some way to specify a search query and display results. Additionally, since the results will contain location data, it will often make sense to show them on a map.
 
+<a name="Adding_a_Local_Search_UI"/>
+
 ### Adding a Local Search UI
 
 One way to accept search input is with a `UISearchBar`, which provided by a `UISearchController` and will display results in a table.

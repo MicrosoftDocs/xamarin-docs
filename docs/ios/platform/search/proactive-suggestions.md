@@ -59,7 +59,7 @@ Allows the app's contacts (and contact related information) to appear in the **C
 
 ## Ride Sharing Based Suggestions
 
-If a ride-sharing app uses the [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API, iOS 10 will present it as an option in the app switcher at times when the user is likely to want a ride. The app must also be registered as a ride-sharing app by specifying the `MKDirectionsModeRideShare` for the [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW33) key in its `Info.plist` file.
+If a ride-sharing app uses the [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API, iOS 10 will present it as an option in the app switcher at times when the user is likely to want a ride. The app must also be registered as a ride-sharing app by specifying the `MKDirectionsModeRideShare` for the [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) key in its `Info.plist` file.
 
 If the app only supports ride sharing, the system suggestion would begin with *"Get a ride to..."*, if other types of routing direction (such as Walking or Bike) are supported, the system will use *"Get directions to..."*
 
@@ -445,7 +445,7 @@ Some Schema.org background:
 - There are over 500 schemas representing various concepts available.
 - By implementing it on the website, the developer can acquire some of the benefits of using `NSUserActivity` in a native app.
 
-The schemas are arranged in a tree like structure, where specific types such as *Restaurant*, inherit from more generic types such as *Local Business*. For more information, please see [Schema.org](#http://schema.org).
+The schemas are arranged in a tree like structure, where specific types such as *Restaurant*, inherit from more generic types such as *Local Business*. For more information, please see [Schema.org](http://schema.org).
 
 For example, if the web page included the following data:
 

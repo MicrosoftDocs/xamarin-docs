@@ -16,14 +16,6 @@ swipe-to-delete gesture that can be implemented with a single method override.
 More complex editing (including moving rows) can be done with the table in edit
 mode.
 
-This guide looks at the following:
-
-- [Swipe to delete](#Swipe_to_Delete)
-- [Edit Mode](#Edit_Mode)
-- [Row Insertion editing style](#row_insertion_editing_style)
-
-<a name="Swipe_to_delete" />
-
 ## Swipe to Delete
 
 The swipe to delete feature is a natural gesture in iOS that users expect. 
@@ -66,7 +58,6 @@ public override string TitleForDeleteConfirmation (UITableView tableView, NSInde
 
 For this example the `UITableViewSource` has been updated to use a `List<TableItem>` (instead of a string array) as the data source because it supports adding and deleting items from the collection.
 
-<a name="Edit_mode" />
 
 ## Edit Mode
 
@@ -147,7 +138,6 @@ button should turn editing mode off:
 table.SetEditing (false, true);
 ```
 
-<a name="Edit_mode_–_row_insertion_editing_style" />
 
 ## Row Insertion Editing Style
 

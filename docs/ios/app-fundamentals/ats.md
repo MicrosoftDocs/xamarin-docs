@@ -69,7 +69,7 @@ For more information about working with iOS internet communication classes, plea
 
 Because ATS is enabled by default in iOS 9 and OS X El Capitan, if your Xamarin.iOS app or any library or service it is using makes connection to the internet, you'll need to take some action or your connections will result in an exception being thrown.
 
-For an existing app, Apple suggests you support the `HTTPS` protocol as soon as possible. If you either can't because you are connecting to a 3rd party web service that doesn't support `HTTPS` or if supporting `HTTPS` would be impractical, you can opt-out of ATS. See the [Opting-Out of ATS](#Opting-Out-of-ATS) section below for more details.
+For an existing app, Apple suggests you support the `HTTPS` protocol as soon as possible. If you either can't because you are connecting to a 3rd party web service that doesn't support `HTTPS` or if supporting `HTTPS` would be impractical, you can opt-out of ATS. See the [Opting-Out of ATS](#optout) section below for more details.
 
 For a new Xamarin.iOS app, you should use `HTTPS` exclusively when communicating with internet resources. Again, there might be situations (like using a 3rd party web service) where this isn't possible and you'll need to opt-out of ATS.
 
@@ -144,7 +144,7 @@ In iOS9, App Transport Security (ATS) enforces secure connections between intern
 
 Since ATS is enabled by default in apps built for iOS 9 and OS X 10.11 (El Capitan), all connections using `NSURLConnection`, `CFURL` or `NSURLSession` will be subject to ATS security requirements. If your connections do not meet these requirement, they will fail with an exception.
 
-Apple also provides the [TLSTool Sample App](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) that can be compiled (or optionally transcoded to Xamarin and C#) and used to diagnose ATS/TLS issues. Please see the [Opting-Out of ATS](#Opting-Out_of_ATS) section below for information on how to solve this issue.
+Apple also provides the [TLSTool Sample App](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) that can be compiled (or optionally transcoded to Xamarin and C#) and used to diagnose ATS/TLS issues. Please see the [Opting-Out of ATS](#optout) section below for information on how to solve this issue.
 
 
 <a name="config" />

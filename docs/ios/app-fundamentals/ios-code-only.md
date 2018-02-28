@@ -242,6 +242,8 @@ namespace CodeOnlyDemo
 }
 ```
 
+<a name="Initializing_the_View"/>
+
 ## Initializing the View
 
 `UIViewController` contains a method called `ViewDidLoad` that is called when the View controller is first loaded into memory. This is an appropriate place to do initialization of the view, such as setting it's properties.

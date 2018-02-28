@@ -30,6 +30,8 @@ the different types of touch events available in iOS. Alternatively, open the
 [finished sample](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final) to
 see everything working.
 
+<a name="Touch_Samples"/>
+
 ## Touch Samples
 
 In this sample, we will demonstrate some of the touch APIs. Follow these steps
@@ -321,6 +323,8 @@ The following screenshot is one example of these interactions:
 	[![](ios-touch-walkthrough-images/image7.png "This screenshot shows a drag interaction")](ios-touch-walkthrough-images/image7.png)
 
 
+
+<a name="Custom_Gesture_Recognizer"/>
 
 ## Custom Gesture Recognizer
 

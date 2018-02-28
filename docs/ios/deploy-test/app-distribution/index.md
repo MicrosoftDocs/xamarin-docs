@@ -28,6 +28,8 @@ Apple provides the following ways to distribute an iOS application, which are su
 
 All these scenarios require that applications be provisioned using the appropriate *provisioning profile*. Provisioning profiles are files that contain code signing information, as well as the identity of the application and the intended distribution mechanism. For the non-App Store distribution they also contain information about what devices the app can be deployed to.
 
+<a name="App_Store_Distribution"/>
+
 ## App Store Distribution
 
 This is the main way that iOS applications are distributed to consumers on iOS devices. All apps submitted to the App Store require approval by Apple.
@@ -38,12 +40,15 @@ It is important to note that only developers who belong to the **Apple Developer
 
 For more information, please visit the [App Store Distribution](~/ios/deploy-test/app-distribution/app-store-distribution/index.md) guide.
 
+<a name="In-House_Distribution"/>
+
 ## In-House Distribution
 
 Sometimes called *Enterprise Distribution*, in-house distribution allows members of the **Apple Developer Enterprise Program** to distribute apps internally to other members of the same organization. In-house distribution has the advantages of not requiring an App Store review, and having no limit on the number of devices on which an application can be installed. However, it is important to note that **Apple Developer Enterprise Program** members do **not** have access to iTunes Connect, and therefore the licensee is responsible for distributing the app.
 
 For more information on getting set-up and how to distribute an application In-House, please refer to the [In-House Distribution guide](~/ios/deploy-test/app-distribution/in-house-distribution.md).
 
+<a name="Ad_Hoc_Distribution"/>
 
 ## Ad Hoc Distribution
 

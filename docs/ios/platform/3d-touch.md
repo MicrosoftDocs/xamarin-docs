@@ -33,7 +33,7 @@ is exerting and respond to the different pressure levels.
 - [Peek and Pop](#Peek-and-Pop) - Your app can now let the user interact with its
   data without having to navigate out of their current context. By pressing hard on the screen the screen, they can peek at the item they are interested in
   (like previewing a message). By pressing harder, they can pop into the item.
-- [Quick Actions](#Quick-Action) - Think of Quick Actions like the contextual menus
+- [Quick Actions](#Quick-Actions) - Think of Quick Actions like the contextual menus
   that can be popped-up when a user right-clicks on an item in a desktop app.
   Using Quick Actions, you can add shortcuts
   to functions in your app directly from the app icon on the Home screen.
@@ -222,7 +222,6 @@ of your app.
 
 [ ![](3d-touch-images/quickactions01.png "An example of a Quick Actions menu")](3d-touch-images/quickactions01.png)
 
-<a name="Defining-Static-Quick-Actions" />
 
 ### Defining Static Quick Actions
 
@@ -299,7 +298,6 @@ Here we are defining two static Quick Action items with the following keys:
 
 
 
-<a name="Identifying-Quick-Action-Items" />
 
 ### Identifying Quick Action Items
 
@@ -401,7 +399,6 @@ Next, we override the `OnActivated` method and pass any selected Quick Launch it
 
 Finally, if your app was already running, the `PerformActionForShortcutItem` method would be called to handle the Quick Action item so we need to override it and call our `HandleShortcutItem` method here as well.
 
-<a name="Creating-Dynamic-Quick-Action-Items" />
 
 ### Creating Dynamic Quick Action Items
 

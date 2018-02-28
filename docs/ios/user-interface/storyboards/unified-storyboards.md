@@ -370,7 +370,7 @@ When the developer presents a View Controller using the `PresentViewController` 
 
 With a custom presentation style, developers have the option to use a custom Presentation Controller. This custom controller can be used to modify the appearance and behavior of the View it is allied to.
 
-<a name="size-classes">
+<a name="size-classes"/>
 
 ## Working with Size Classes
 

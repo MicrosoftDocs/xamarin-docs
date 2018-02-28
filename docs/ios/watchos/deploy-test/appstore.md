@@ -73,6 +73,8 @@ The **Provisioning Profile** list will show all matching
 
 ![](appstore-images/options-selectprofile-sml.png "The iOS Bundle Signing dialog")
 
+<a name="iTunes_Connect"/>
+
 ## iTunes Connect
 
 Follow the [app distribution overview](~/ios/deploy-test/app-distribution/index.md), in particular:

@@ -83,6 +83,7 @@ There are a few things to be aware of when replying to users:
 
 For more information, see Apple's [Responding to Reviews](https://developer.apple.com/app-store/responding-to-reviews/) page.
 
+<a name="Phased_Release"/>
 
 ## Phased Release
 

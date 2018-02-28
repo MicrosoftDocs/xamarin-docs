@@ -67,7 +67,7 @@ networked Mac OS X computer to perform these tasks. Once configured,
 Xamarin’s tools will make the process as seamless as possible.
 
 
-<a name="system-requirements">
+<a name="system-requirements"/>
 
 ### System Requirements
 
@@ -99,8 +99,6 @@ to lack of plug-in support. Xamarin is supported in Visual Studio Community.
 
 **The Windows computer must be able to reach the Mac via the network.**
 
-<a name="appleaccount" />
-
 ### Apple Developer Account
 
 To deploy applications to a device or to submit them to the App Store, an
@@ -110,8 +108,6 @@ before Xamarin.iOS for Visual Studio can work. See the [Device
 Provisioning](~/ios/get-started/installation/device-provisioning/index.md)
 article for steps to obtain a development certificate and to provision a
 device.
-
-<a name="features" />
 
 ## Features 
 
@@ -140,6 +136,7 @@ features:
 
 ## Configuring your Mac
 
+<a name="installation"/>
 
 ### Installation
 
@@ -209,7 +206,7 @@ Xamarin:
 
 Once your Mac is configured, it’s time to set up your Windows computer.
 
-<a name="windowsinstallation">
+<a name="windowsinstallation"/>
 
 ## Windows Installation
 
@@ -226,8 +223,8 @@ required to get everything working:
 - [Connect Visual Studio to the Mac](#connectingtomac) – Visual Studio
   must be connected to the Mac build host before it can build Xamarin.iOS
   projects.
-- [Configure the Visual Studio Toolbar](#Visual_Studio_Toolbar_Overview) –
-  This will let you easily access Xamarin.iOS features in Visual Studio.
+- [Configure the Visual Studio Toolbar](#toolbar) – This will let you easily 
+  access Xamarin.iOS features in Visual Studio.
 
 <a name="connectingtomac" /> 
 

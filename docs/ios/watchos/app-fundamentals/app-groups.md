@@ -48,7 +48,7 @@ As well as configuring the provisioning profile,
 ### Deployment
 
 Ensure you configure the App Group correctly
-  in your [deployment](~/ios/watchos/deploy-test/index.md#app-groups)
+  in your [deployment](~/ios/watchos/deploy-test/index.md#App_Groups)
   provisioning.
 
 

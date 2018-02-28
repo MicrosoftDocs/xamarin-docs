@@ -10,7 +10,6 @@ ms.author: brumbaug
 
 # watchOS Application Fundamentals
 
-
 ##  [Parent Application](~/ios/watchos/app-fundamentals/parent-app.md)
 
 Watch apps can communicate with their parent app running on iOS.

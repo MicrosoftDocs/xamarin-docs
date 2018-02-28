@@ -76,7 +76,7 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
 
 		ssh amyb@10.1.8.95
 
-<a name="stepnine">
+<a name="stepnine"/>
 
 9. If **step 8 succeeds**, you can try running a simple command like `ls` over the connection:
 
@@ -125,7 +125,7 @@ Known cause:
 
 - **Bug [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** – This problem can happen on Xamarin 4.1 if the **Login shell** in the **Advanced Options** context menu for the Mac user in **System Preferences &gt; Users &amp; Groups** is set to a value other than **/bin/bash**. (Starting with Xamarin 4.2, this scenario instead leads to the "Couldn't connect" error message.) **Workaround**: Change the **Login shell** back to the original default of **/bin/bash**.
 
-<a name="tryagain">
+<a name="tryagain"/>
 
 ### "Couldn't connect to MacBuildHost.local. Please try again."
 
@@ -167,7 +167,7 @@ Reported causes:
 
 	9. Disable and re-enable **Remote Login** under **System Preferences &gt; Sharing &gt; Remote Login** to restart the SSH server.
 
-<a name="clearing">
+<a name="clearing"/>
 
 ### Clearing the Broker, IDB, Build, and Designer Agents on the Mac
 
@@ -319,7 +319,7 @@ This issue may happen when Visual Studio fails to refresh the MEF component cach
 
 This will clear the Visual Studio MEF component cache to fix issues with cache corruption.
 
-<a name="errors">
+<a name="errors"/>
 
 ### Errors due to existing Build Host Processes on the Mac
 

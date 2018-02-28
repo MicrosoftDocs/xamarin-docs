@@ -42,6 +42,8 @@ implement them in a Xamarin.iOS app.
 
 The Contacts Framework provides Xamarin.iOS access to the user's contact information. Because most apps only require read-only access, this framework has been optimized for thread safe, read-only access.
 
+<a name="Contact_Objects" />
+
 ### Contact Objects
 
 The `CNContact` class provides thread safe, read-only access to a contact's properties such as Name, Address or Phone Numbers. `CNContact` functions like a `NSDictionary` and contains multiple, read-only collections of properties (such as addresses or phone numbers):

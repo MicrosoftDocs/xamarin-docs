@@ -14,7 +14,9 @@ ms.date: 01/18/2018
 The SQLite.NET library that Xamarin recommends is a basic ORM that lets you  store and retrieve objects in the local SQLite database on an iOS device.
 ORM stands for Object Relational Mapping – an API that lets you save and retrieve “objects” from a database without writing SQL statements.
 
-## Using SQLite.NET
+<a name="Usage"/>
+
+## Usage
 
 Add the [SQLite.net PCL NuGet package](https://www.nuget.org/packages/sqlite-net-pcl/),
   to your project - it supports a variety of platforms including iOS, Android, and Windows.
@@ -65,7 +67,7 @@ You’ll need to include these namespaces:
 using SQLite; // from the github SQLite.cs class
 ```
 
-This requires that you have added SQLite to your project, as highlighted [here](#Using_SQLite.NET). Note that the SQLite database table is defined by adding attributes to a class (the `Stock` class) rather than a CREATE TABLE command.
+This requires that you have added SQLite to your project, as highlighted [here](#Usage). Note that the SQLite database table is defined by adding attributes to a class (the `Stock` class) rather than a CREATE TABLE command.
 
 ```csharp
 [Table("Items")]
