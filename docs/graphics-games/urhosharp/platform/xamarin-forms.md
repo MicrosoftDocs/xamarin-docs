@@ -1,6 +1,6 @@
 ---
 title: "UrhoSharp Xamarin.Forms Support"
-description: "Xamarin.Forms-specific setup"
+description: "Xamarin.Forms-specific setup for UrhoSharp."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: B630B8BE-3D8D-4CDB-BDB0-9709052AA46C

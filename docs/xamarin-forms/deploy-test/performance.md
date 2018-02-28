@@ -14,9 +14,9 @@ ms.date: 11/29/2017
 
 _There are many techniques for increasing the performance of Xamarin.Forms applications. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application. This article describes and discusses these techniques._
 
-[ ![](performance-images/evolve-jason-perf-sml.png "Optimizing App Performance with Xamarin.Forms")](https://evolve.xamarin.com/session/56e205b0bad314273ca4d817)
+> [!VIDEO https://youtube.com/embed/RZvdql3Ev0E]
 
-[Evolve 2016: Optimizing App Performance with Xamarin.Forms](https://evolve.xamarin.com/session/56e205b0bad314273ca4d817)
+**Evolve 2016: Optimizing App Performance with Xamarin.Forms**
 
 ## Overview
 

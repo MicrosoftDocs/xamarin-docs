@@ -24,25 +24,25 @@ sections:
     items:
     - href: ~/graphics-games/skiasharp/index.md
       image:
-        src: ~/media/index/xamarin-graphics-skia.svg?branch=master
+        src: ~/media/index/xamarin-graphics-skia.svg
         href: ~/graphics-games/skiasharp/index.md
       title: SkiaSharp
       html: Cross-platform 2D graphics for mobile and desktop.
     - href: ~/graphics-games/urhosharp/index.md
       image:
-        src: ~/media/index/xamarin-graphics-urhosharp.svg?branch=master
+        src: ~/media/index/xamarin-graphics-urho.svg
         href: ~/graphics-games/urhosharp/index.md
       title: UrhoSharp
       html: Cross-platform 3D graphics and games.
     - href: ~/graphics-games/cocossharp/index.md
       image:
-        src: ~/media/index/xamarin-graphics-cocos.svg?branch=master
+        src: ~/media/index/xamarin-graphics-cocos.svg
         href: ~/graphics-games/cocossharp/index.md
       title: CocosSharp
       html: Build cross-platform 2D games for mobile devices.
     - href: ~/graphics-games/monogame/index.md
       image:
-        src: ~/media/index/xamarin-graphics-monogame.svg?branch=master
+        src: ~/media/index/xamarin-graphics-monogame.svg
         href: ~/graphics-games/monogame/index.md
       title: MonoGame
       html: Build desktop, mobile, and console games with C#.

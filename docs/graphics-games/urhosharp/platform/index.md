@@ -25,9 +25,9 @@ Android setup instructions and features.
 
 iOS and tvOS setup instructions and features.
 
-## [MacOS X](~/graphics-games/urhosharp/platform/mac.md)
+## [macOS](~/graphics-games/urhosharp/platform/mac.md)
 
-Mac OS X setup instructions and features.
+macOS setup instructions and features.
 
 ## [Windows](~/graphics-games/urhosharp/platform/windows.md)
 

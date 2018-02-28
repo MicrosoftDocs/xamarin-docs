@@ -26,11 +26,11 @@ sections:
          src: images/todo.png
          href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
        title: Todo
-     - href: https://github.com/jamesmontemagno/MyShoppe
+     - href: https://github.com/xamarinhq/app-myshoppe
        html: Demo app that empowers salespeople to track their sales performance, manage leads, view their contacts, manage orders, and browse the product catalog.
        image:
          src: images/myshoppe.png
-         href: https://github.com/jamesmontemagno/MyShoppe
+         href: https://github.com/xamarinhq/app-myshoppe
        title: My Shoppe
      - href: https://github.com/xamarin/app-crm
        html: Demo app that empowers salespeople to track their sales performance, manage leads, view their contacts, manage orders, and browse the product catalog.

@@ -18,7 +18,7 @@ CocosSharp is an easy to use library for 2D games using C# and F#. It is a .NET 
 
 This hands-on video shows how to create a simple cross-platform CocosSharp game.
 
-<iframe src="//channel9.msdn.com/Shows/Visual-Studio-Toolbox/Developing-Cross-platform-2D-Games-in-C-and-CocosSharp/player" width="800" height="450" allowFullScreen frameBorder="0"></iframe>
+> [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Developing-Cross-platform-2D-Games-in-C-and-CocosSharp/player]
 
 ###  [Introduction to Game Development with CocosSharp](~/graphics-games/cocossharp/first-game/index.md)
 

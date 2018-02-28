@@ -1,6 +1,6 @@
 ---
 title: "UrhoSharp Android Support"
-description: "Android Specific Setup and Features"
+description: "Android Specific Setup and Features for UrhoSharp."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
@@ -21,11 +21,11 @@ cases, you will want to take advantage of platform specific features.
 In the pages below, assume that `MyGame` is a subclass of the
 `Application` class.
 
-# Architectures
+## Architectures
 
 **Supported architectures**: x86, armeabi, armeabi-v7a
 
-# Create a Project
+## Create a Project
 
 Create an Android project, and add the UrhoSharp NuGet package.
 
@@ -33,7 +33,7 @@ Add Data containing your assets to the **Assets** directory and make sure all fi
 
 ![Project Setup](android-images/image-3.png "Add Data containing the assets to the Assets directory")
 
-# Configure and Launching Urho
+## Configure and Launching Urho
 
 Add using statements for the `Urho` and `Urho.Android` namespaces, and
 then add this code for initializing Urho, as well as launching your
@@ -48,7 +48,7 @@ UrhoSurface.RunInActivity<MyGame>();
 
 This will open a fullscreen activity with the game as a content.
 
-# Custom Embedding of Urho
+## Custom Embedding of Urho
 
 You can alternatively to having Urho take over the entire application
 screen, and to use it as a component of your application, you can
