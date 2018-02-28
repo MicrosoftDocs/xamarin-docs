@@ -81,7 +81,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 The `NumericValidationBehavior` derives from the [`Behavior<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/) class, where `T` is an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/). The [`OnAttachedTo`](https://developer.xamarin.com/api/member/Xamarin.Forms.Behavior%3CT%3E.OnAttachedTo/p/Xamarin.Forms.BindableObject/) method registers an event handler for the [`TextChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.Entry.TextChanged/) event, with the [`OnDetachingFrom`](https://developer.xamarin.com/api/member/Xamarin.Forms.Behavior%3CT%3E.OnDetachingFrom/p/Xamarin.Forms.BindableObject/) method de-registering the `TextChanged` event to prevent memory leaks. The core functionality of the behavior is provided by the `OnEntryTextChanged` method, which parses the value entered by the user into the `Entry`, and sets the [`TextColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.TextColor/) property to red if the value isn't a `double`.
 
 > [!NOTE]
-> **Note**: Xamarin.Forms does not set the `BindingContext` of a behavior, because behaviors can be shared and applied to multiple controls through styles.
+> Xamarin.Forms does not set the `BindingContext` of a behavior, because behaviors can be shared and applied to multiple controls through styles.
 
 ## Consuming a Xamarin.Forms Behavior
 
@@ -107,7 +107,7 @@ At runtime the behavior will respond to interaction with the control, according 
 [ ![](creating-images/screenshots-sml.png "Sample Application with Xamarin.Forms Behavior")](creating-images/screenshots.png "Sample Application with Xamarin.Forms Behavior")
 
 > [!NOTE]
-> **Note**: Behaviors are written for a specific control type (or a superclass that can apply to many controls), and they should only be added to a compatible control. Attempting to attach a behavior to an incompatible control will result in an exception being thrown.
+> Behaviors are written for a specific control type (or a superclass that can apply to many controls), and they should only be added to a compatible control. Attempting to attach a behavior to an incompatible control will result in an exception being thrown.
 
 ### Consuming a Xamarin.Forms Behavior with a Style
 
@@ -177,7 +177,7 @@ The [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) can b
 For more information about styles, see [Styles](~/xamarin-forms/user-interface/styles/index.md).
 
 > [!NOTE]
-> **Note**: While you can add bindable properties to a behavior that is set or queried in XAML, if you do create behaviors that have state they should not be shared between controls in a `Style` in a `ResourceDictionary`.
+> While you can add bindable properties to a behavior that is set or queried in XAML, if you do create behaviors that have state they should not be shared between controls in a `Style` in a `ResourceDictionary`.
 
 ### Removing a Behavior from a Control
 

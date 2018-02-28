@@ -72,7 +72,7 @@ Note the following aspects of the above layout:
 - The box's `y` coordinate is defined as half the height of the parent, -100.
 
 > [!NOTE]
-> **Note**: Because of the way constraints are defined, it is possible to make more complex layouts in C# than can be specified with XAML.
+> Because of the way constraints are defined, it is possible to make more complex layouts in C# than can be specified with XAML.
 
 Both of the examples above define constraints as `RelativeToParent` &ndash; that is, their values are relative to the parent element. It is also possible to define constraints as relative to another view. This allows for more intuitive (to the developer) layouts and can make the intent of your layout code more readily apparent.
 

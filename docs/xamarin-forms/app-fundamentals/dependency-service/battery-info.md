@@ -66,7 +66,7 @@ namespace DependencyServiceSample
 Coding against this interface in the shared code will allow the Xamarin.Forms app to access the power management APIs on each platform.
 
 > [!NOTE]
-> **Note**: Classes implementing the Interface must have a parameterless constructor to work with the `DependencyService`. Constructors can't be defined by interfaces.
+> Classes implementing the Interface must have a parameterless constructor to work with the `DependencyService`. Constructors can't be defined by interfaces.
 
 <a name="iOS_Implementation" />
 

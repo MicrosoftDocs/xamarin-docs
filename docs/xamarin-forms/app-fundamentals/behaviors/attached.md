@@ -100,7 +100,7 @@ At runtime, the behavior will respond to interaction with the control, according
 [ ![](attached-images/screenshots-sml.png "Sample Application with Attached Behavior")](attached-images/screenshots.png "Sample Application with Attached Behavior")
 
 > [!NOTE]
-> **Note**: Attached behaviors are written for a specific control type (or a superclass that can apply to many controls), and they should only be added to a compatible control. Attempting to attach a behavior to an incompatible control will result in unknown behavior, and depends on the behavior implementation.
+> Attached behaviors are written for a specific control type (or a superclass that can apply to many controls), and they should only be added to a compatible control. Attempting to attach a behavior to an incompatible control will result in unknown behavior, and depends on the behavior implementation.
 
 ### Removing an Attached Behavior from a Control
 

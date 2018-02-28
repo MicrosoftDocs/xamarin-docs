@@ -36,7 +36,7 @@ Forms.SetFlags("FastRenderers_Experimental");
 ```
 
 > [!NOTE]
-> **Note**: Fast renderers are only applicable to the app compat Android backend, so this setting will be ignored on pre-app compat activities.
+> Fast renderers are only applicable to the app compat Android backend, so this setting will be ignored on pre-app compat activities.
 
 Performance improvements will vary for each application, depending upon the complexity of the layout. For example, performance improvements of x2 are possible when scrolling through a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) containing thousands of rows of data, where the cells in each row are made of controls that use fast renderers, which results in visibly smoother scrolling.
 

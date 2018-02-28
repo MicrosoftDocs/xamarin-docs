@@ -179,7 +179,7 @@ The result is that page content can be positioned on an area of the screen that 
 [![](ios-images/safe-area-layout.png "Safe Area Layout Guide")](ios-images/safe-area-layout-large.png "Safe Area Layout Guide")
 
 > [!NOTE]
-> **Note**: The safe area defined by Apple is used in Xamarin.Forms to set the [`Page.Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Padding/) property, and will override any previous values of this property that have been set.
+> The safe area defined by Apple is used in Xamarin.Forms to set the [`Page.Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Padding/) property, and will override any previous values of this property that have been set.
 
 The safe area can be customized by retrieving its [`Thickness`](https://developer.xamarin.com/api/type/Xamarin.Forms.Thickness/) value with the `Page.SafeAreaInsets` method from the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) namespace. It can then be modified as required and re-assigned to the `Padding` property in the page constructor or [`OnAppearing`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnAppearing()/) override:
 

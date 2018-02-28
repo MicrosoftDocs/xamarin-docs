@@ -110,7 +110,7 @@ After following those instructions, paste the API key in the
 Without a valid API key the maps control will display as a grey box on Android.
 
 > [!NOTE]
-> **Note**: Remember to generate another key using the keystore file that is used to sign the Release version of any application that is uploaded to the Google Play store. The key you generate for development and debugging will not work and the app downloaded from Google Play will have broken map display. Also remember to regenerate the key if the app's **Package Name** changes.
+> Remember to generate another key using the keystore file that is used to sign the Release version of any application that is uploaded to the Google Play store. The key you generate for development and debugging will not work and the app downloaded from Google Play will have broken map display. Also remember to regenerate the key if the app's **Package Name** changes.
 
 You'll also need to enable appropriate permissions by
   right-clicking on the Android project and selecting

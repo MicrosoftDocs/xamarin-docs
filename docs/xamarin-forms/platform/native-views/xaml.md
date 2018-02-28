@@ -183,7 +183,7 @@ The [`Typeface.Create`](https://developer.xamarin.com/api/member/Android.Graphic
 The [`FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.fontfamily) constructor is used to set the [`TextBlock.FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.fontfamily) property to a new `FontFamily` on the Universal Windows Platform (UWP). The `FontFamily` name is specified by the method argument that is a child of the `x:Arguments` attribute.
 
 > [!NOTE]
-> **Note**: Arguments must match the types required by the constructor or factory method.
+> Arguments must match the types required by the constructor or factory method.
 
 The following screenshots show the result of specifying factory method and constructor arguments to set the font on different native views:
 

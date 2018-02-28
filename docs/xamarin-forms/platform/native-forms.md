@@ -27,7 +27,7 @@ The process for consuming a Xamarin.Forms [`ContentPage`](https://developer.xama
 Xamarin.Forms must be initialized by calling the `Forms.Init` method before a native project can construct a [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derived page. Choosing when to do this primarily depends on when it's most convenient in your application flow – it could be performed at application startup, or just before the `ContentPage`-derived page is constructed. In this article, and the accompanying sample applications, the `Forms.Init` method is called at application startup.
 
 > [!NOTE]
-> **Note**: The **NativeForms** sample application solution does not contain any Xamarin.Forms projects. Instead, it consists of a Xamarin.iOS project, a Xamarin.Android project, and a UWP project. Each project is a native project that uses Native Forms to consume [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derived pages. However, there's no reason why the native projects couldn't consume `ContentPage`-derived pages from a PCL, .NET Standard Library, or Shared Project.
+> The **NativeForms** sample application solution does not contain any Xamarin.Forms projects. Instead, it consists of a Xamarin.iOS project, a Xamarin.Android project, and a UWP project. Each project is a native project that uses Native Forms to consume [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derived pages. However, there's no reason why the native projects couldn't consume `ContentPage`-derived pages from a PCL, .NET Standard Library, or Shared Project.
 
 When using Native Forms, Xamarin.Forms features such as [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/), [`MessagingCenter`](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/), and the data binding engine, all still work.
 
@@ -153,7 +153,7 @@ The `OnCreate` method performs the following tasks:
 For more information about Fragments, see [Fragments](~/android/platform/fragments/index.md).
 
 > [!NOTE]
-> **Note**: In addition to the `CreateFragment` extension method, Xamarin.Forms also includes a `CreateSupportFragment` method. The `CreateFragment` method creates a `Android.App.Fragment` that can be used in applications that target API 11 and greater. The `CreateSupportFragment` method creates a `Android.Support.V4.App.Fragment` that can be used in applications that target API versions prior to 11.
+> In addition to the `CreateFragment` extension method, Xamarin.Forms also includes a `CreateSupportFragment` method. The `CreateFragment` method creates a `Android.App.Fragment` that can be used in applications that target API 11 and greater. The `CreateSupportFragment` method creates a `Android.Support.V4.App.Fragment` that can be used in applications that target API versions prior to 11.
 
 Once the `OnCreate` method has executed, the UI defined in the Xamarin.Forms `PhonewordPage` class will be displayed, as shown in the following screenshot:
 

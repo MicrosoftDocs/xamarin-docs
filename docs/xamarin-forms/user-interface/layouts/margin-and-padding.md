@@ -59,7 +59,7 @@ var stackLayout = new StackLayout {
 ```
 
 > [!NOTE]
-> **Note**: `Thickness` values can be negative, which typically clips or overdraws the content.
+> `Thickness` values can be negative, which typically clips or overdraws the content.
 
 ## Summary
 

@@ -126,7 +126,7 @@ The following screenshots show the translation in progress on each platform:
 ![](simple-images/translateto.png "Translation Animation")
 
 > [!NOTE]
-> **Note**: If an element is initially laid out off screen and then translated onto the screen, after translation the element's input layout remains off screen and the user can't interact with it. Therefore, it's recommended that a view should be laid out in its final position, and then any required translations performed.
+> If an element is initially laid out off screen and then translated onto the screen, after translation the element's input layout remains off screen and the user can't interact with it. Therefore, it's recommended that a view should be laid out in its final position, and then any required translations performed.
 
 ### Fading
 

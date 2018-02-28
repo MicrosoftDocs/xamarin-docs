@@ -17,7 +17,7 @@ _Azure Active Directory B2C is a cloud identity management solution for consumer
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
 > [!NOTE]
-> **Note**: The [Microsoft Authentication Library](https://www.nuget.org/packages/Microsoft.Identity.Client) is still in preview, but is suitable for use in a production environment. However, there may be breaking changes to the API, internal cache format, and other mechanisms of the library, which may impact your application.
+> The [Microsoft Authentication Library](https://www.nuget.org/packages/Microsoft.Identity.Client) is still in preview, but is suitable for use in a production environment. However, there may be breaking changes to the API, internal cache format, and other mechanisms of the library, which may impact your application.
 
 ## Overview
 
@@ -34,12 +34,12 @@ The process for integrating the Azure Active Directory B2C identity management s
 1. Use the [Microsoft Authentication Library](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) in your mobile application to initiate an authentication workflow with your Azure Active Directory B2C tenant.
 
 > [!NOTE]
-> **Note**: As well as integrating Azure Active Directory B2C identity management into mobile applications, MSAL can also be used to integrate Azure Active Directory identity management into mobile applications. This can be accomplished by registering a mobile application with Azure Active Directory at the [Application Registration Portal](https://apps.dev.microsoft.com/). The registration process assigns an **Application ID** that uniquely identifies your application, which should be specified when using MSAL. For more information, see [How to register an app with the v2.0 endpoint](/azure/active-directory/develop/active-directory-v2-app-registration/), and [Authenticate Your Mobile Apps Using Microsoft Authentication Library](https://blog.xamarin.com/authenticate-mobile-apps-using-microsoft-authentication-library/) on the Xamarin blog.
+> As well as integrating Azure Active Directory B2C identity management into mobile applications, MSAL can also be used to integrate Azure Active Directory identity management into mobile applications. This can be accomplished by registering a mobile application with Azure Active Directory at the [Application Registration Portal](https://apps.dev.microsoft.com/). The registration process assigns an **Application ID** that uniquely identifies your application, which should be specified when using MSAL. For more information, see [How to register an app with the v2.0 endpoint](/azure/active-directory/develop/active-directory-v2-app-registration/), and [Authenticate Your Mobile Apps Using Microsoft Authentication Library](https://blog.xamarin.com/authenticate-mobile-apps-using-microsoft-authentication-library/) on the Xamarin blog.
 
 MSAL uses the device's web browser to perform authentication. This improves the usability of an application, as users only need to sign-in once per device, improving conversion rates of sign-in and authorization flows in the application. The device browser also provides improved security. After the user completes the authentication process, control will return to the application from the web browser tab. This is achieved by registering a custom URL scheme for the redirect URL that's returned from the authentication process, and then detecting and handling the custom URL once it's sent. For more information about choosing a custom URL scheme, see [Choosing a native app redirect URI](/azure/active-directory-b2c/active-directory-b2c-app-registration#choosing-a-native-app-redirect-uri/).
 
 > [!NOTE]
-> **Note**: The mechanism for registering a custom URL scheme with the operating system and handling the scheme is specific to each platform.
+> The mechanism for registering a custom URL scheme with the operating system and handling the scheme is specific to each platform.
 
 Each request that is sent to an Azure Active Directory B2C tenant specifies a *policy*. Policies describe consumer identity experiences such as sign-up, or sign-in. For example, a sign-up policy allows the behavior of the Azure Active Directory B2C tenant to be configured through the following settings:
 

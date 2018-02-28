@@ -39,7 +39,7 @@ If you have installed the correct development options in Visual Studio,
 
 
 > [!NOTE]
-> **Note:** Xamarin.Forms 1.x and 2.x support _Windows Phone 8 Silverlight_
+> Xamarin.Forms 1.x and 2.x support _Windows Phone 8 Silverlight_
 > application development, however this project type has been deprecated.
 
 

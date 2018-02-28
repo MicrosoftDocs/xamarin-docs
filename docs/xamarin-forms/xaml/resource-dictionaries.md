@@ -82,7 +82,7 @@ The first [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)
 [![](resource-dictionaries-images/screenshots-sml.png "Consuming ResourceDictionary Resources")](resource-dictionaries-images/screenshots.png "Consuming ResourceDictionary Resources")
 
 > [!NOTE]
-> **Note**: Resources that are specific to a single page shouldn't be included in an application level resource dictionary, as such resources will then be parsed at application startup instead of when required by a page. For more information, see [Reduce the Application Resource Dictionary Size](~/xamarin-forms/deploy-test/performance.md).
+> Resources that are specific to a single page shouldn't be included in an application level resource dictionary, as such resources will then be parsed at application startup instead of when required by a page. For more information, see [Reduce the Application Resource Dictionary Size](~/xamarin-forms/deploy-test/performance.md).
 
 ## Overriding Resources
 
@@ -171,7 +171,7 @@ When merged [`ResourceDictionary`](https://developer.xamarin.com/api/type/Xamari
 1. The resources contained in the resource dictionaries that were merged via the `MergedDictionaries` collection, in the order they are listed in the `MergedDictionaries` property.
 
 > [!NOTE]
-> **Note**: Searching resource dictionaries can be a computationally intensive task if an application contains multiple, large resource dictionaries. Therefore, ensure that each page in an application only uses resource dictionaries that are appropriate to the page, to avoid unnecessary searching.
+> Searching resource dictionaries can be a computationally intensive task if an application contains multiple, large resource dictionaries. Therefore, ensure that each page in an application only uses resource dictionaries that are appropriate to the page, to avoid unnecessary searching.
 
 ## Summary
 

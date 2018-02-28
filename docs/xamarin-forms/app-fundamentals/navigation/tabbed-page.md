@@ -94,7 +94,7 @@ The [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPa
 [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instance, and the second tab is a [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) containing a `ContentPage` instance.
 
 > [!NOTE]
-> **Note**: The [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) does not support UI virtualization. Therefore, performance may be affected if the `TabbedPage` contains too many child elements.
+> The [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) does not support UI virtualization. Therefore, performance may be affected if the `TabbedPage` contains too many child elements.
 
 The following screenshots show the `TodayPage` [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instance, which is shown on the *Today* tab:
 

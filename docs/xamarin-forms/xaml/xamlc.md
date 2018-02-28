@@ -54,7 +54,7 @@ In this example, compile-time checking of the XAML for the `HomePage`
 class will be performed and errors reported as part of the compilation process.
 
 > [!NOTE]
-> **Note**: The `XamlCompilation` attribute and the `XamlCompilationOptions` enumeration reside in the `Xamarin.Forms.Xaml0` namespace, which must be imported to use them.
+> The `XamlCompilation` attribute and the `XamlCompilationOptions` enumeration reside in the `Xamarin.Forms.Xaml0` namespace, which must be imported to use them.
 
 
 ## Related Links

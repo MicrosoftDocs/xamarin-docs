@@ -129,7 +129,7 @@ The `IMobileServiceSyncTable.PushAsync` method operates on the sync context, rat
 Pull is performed by the `IMobileServiceSyncTable.PullAsync` method on a single table. The first parameter to the `PullAsync` method is a query name that is used only on the mobile device. Providing a non-null query name results in the Azure Mobile Client SDK performing an *incremental sync*, where each time a pull operation returns results, the latest `updatedAt` timestamp from the results is stored in the local system tables. Subsequent pull operations then only retrieve records after that timestamp. Alternatively, *full sync* can be achieved by passing `null` as the query name, which results in all records being retrieved on each pull operation. Following any sync operation, received data is inserted into the local store.
 
 > [!NOTE]
-> **Note**: If a pull is executed against a table that has pending local updates, the pull will first execute a push on the sync context. This minimizes conflicts between changes that are already queued and new data from the Azure Mobile Apps instance.
+> If a pull is executed against a table that has pending local updates, the pull will first execute a push on the sync context. This minimizes conflicts between changes that are already queued and new data from the Azure Mobile Apps instance.
 
 The `SyncAsync` method also includes a basic implementation for handling conflicts when the same record has changed in both the local store and in the Azure Mobile Apps instance. When the conflict is that data has been updated both in the local store and in the Azure Mobile Apps instance, the `SyncAsync` method updates the data in the local store from the data stored in the Azure Mobile Apps instance. When any other conflict occurs, the `SyncAsync` method discards the local change. This handles the scenario where a local change exists for data that's been deleted from the Azure Mobile Apps instance.
 
@@ -146,7 +146,7 @@ await todoTable.PurgeAsync(todoTable.Where(item => item.Done));
 A call to `PurgeAsync` also triggers a push operation. Therefore, any items that are marked as complete locally will be sent to the Azure Mobile Apps instance before being removed from the local store. However, if there are operations pending synchronization with the Azure Mobile Apps instance, the purge will throw an `InvalidOperationException` unless the `force` parameter is set to `true`. An alternative strategy is to examine the `IMobileServiceSyncContext.PendingOperations` property, which returns the number of pending operations that haven't been pushed to the Azure Mobile Apps instance, and only perform the purge if the property is zero.
 
 > [!NOTE]
-> **Note**: Invoking `PurgeAsync` with the `force` parameter set to `true` will lose any pending changes.
+> Invoking `PurgeAsync` with the `force` parameter set to `true` will lose any pending changes.
 
 ## Initiating Synchronization
 

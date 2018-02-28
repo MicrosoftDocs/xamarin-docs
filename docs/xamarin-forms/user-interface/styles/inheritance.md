@@ -61,7 +61,7 @@ The `baseStyle` targets [`View`](https://developer.xamarin.com/api/type/Xamarin.
 [![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png)
 
 > [!NOTE]
-> **Note**: An implicit style can be derived from an explicit style, but an explicit style can't be derived from an implicit style.
+> An implicit style can be derived from an explicit style, but an explicit style can't be derived from an implicit style.
 
 ### Respecting the Inheritance Chain
 

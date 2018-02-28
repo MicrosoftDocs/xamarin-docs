@@ -27,7 +27,7 @@ This article will guide you through creating apps that take advantage of device 
 When using Xamarin.Forms, the supported method of controlling device orientation is to use the settings for each individual project.
 
 > [!NOTE]
-> **Note**: As of Xamarin.Forms 1.5.0 there is a bug which prevents custom renderer-based attempts to control orientation to fail. See [this discussion](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)this discussion in the Xamarin forums for more information.
+> As of Xamarin.Forms 1.5.0 there is a bug which prevents custom renderer-based attempts to control orientation to fail. See [this discussion](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)this discussion in the Xamarin forums for more information.
 
 ### iOS
 
@@ -119,7 +119,7 @@ Note that Windows Phone supports landscape views in both (as seen from portrait)
 Xamarin.Forms does not offer any native events for notifying your app of orientation changes in shared code. However, the `SizeChanged` event of the `Page` fires when either the width or height of the `Page` changes. When the width of the `Page` is greater than the height, the device is in landscape mode. For more information, see [Display an Image based on Screen Orientation](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/).
 
 > [!NOTE]
-> **Note**: There is an existing, free NuGet package for receiving notifications of orientation changes in shared code. See the [GitHub repo](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) for more information.
+> There is an existing, free NuGet package for receiving notifications of orientation changes in shared code. See the [GitHub repo](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) for more information.
 
 Alternatively, it's possible to override the [`OnSizeAllocated`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnSizeAllocated(System.Double,System.Double)/) method on a `Page`, inserting any layout change logic there. The `OnSizeAllocated` method is called whenever a `Page` is allocated a new size, which happens whenver the device is rotated. Note that the base implementation of `OnSizeAllocated` performs important layout functions, so it is important to call the base implementation in the override:
 
@@ -172,7 +172,7 @@ It is possible to design interfaces using the built-in layouts so that they tran
 The above rules also apply when implementing interfaces for multiple screen sizes and are generally considered best-practice. The rest of this guide will explain specific examples of responsive layouts using each of the primary layouts in Xamarin.Forms.
 
 > [!NOTE]
-> **Note**:  For clarity, the following sections demonstrate how to implement responsive layouts using just one type of `Layout` at a time. In practice, it is often simpler to mix `Layout`s to achieve a desired layout using the simpler or most intuitive `Layout` for each component.
+> For clarity, the following sections demonstrate how to implement responsive layouts using just one type of `Layout` at a time. In practice, it is often simpler to mix `Layout`s to achieve a desired layout using the simpler or most intuitive `Layout` for each component.
 
 ### StackLayout
 

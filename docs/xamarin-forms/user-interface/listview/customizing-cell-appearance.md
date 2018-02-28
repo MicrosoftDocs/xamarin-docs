@@ -226,7 +226,7 @@ The [`OnBindingContextChanged`](https://developer.xamarin.com/api/member/Xamarin
 Alternatively, UI controls can bind to the [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) instances to display their values, which removes the need to override the `OnBindingContextChanged` method.
 
 > [!NOTE]
-> **Note**: When overriding `OnBindingContextChanged`, ensure that the base class's `OnBindingContextChanged` method is called so that registered delegates receive the `BindingContextChanged` event.
+> When overriding `OnBindingContextChanged`, ensure that the base class's `OnBindingContextChanged` method is called so that registered delegates receive the `BindingContextChanged` event.
 
 In XAML, binding the custom cell type to data can be achieved as shown in the following code example:
 

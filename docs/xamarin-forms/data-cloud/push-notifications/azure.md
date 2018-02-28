@@ -114,7 +114,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 When an iOS application registers with APNS it must specify the types of push notifications it would like to receive. The `RegisterUserNotificationSettings` method registers the types of notifications the application can receive, with the `RegisterForRemoteNotifications` method registering to receive push notifications from APNS.
 
 > [!NOTE]
-> **Note**: Failing to call the `RegisterUserNotificationSettings` method will result in push notifications being silently received by the application.
+> Failing to call the `RegisterUserNotificationSettings` method will result in push notifications being silently received by the application.
 
 <a name="ios_registration_response" />
 
@@ -142,7 +142,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
 This method creates a simple notification message template as JSON, and registers the device to receive template notifications from the notification hub.
 
 > [!NOTE]
-> **Note**: The `FailedToRegisterForRemoteNotifications` override should be implemented to handle situations such as no network connection. This is important because users might start the application while offline.
+> The `FailedToRegisterForRemoteNotifications` override should be implemented to handle situations such as no network connection. This is important because users might start the application while offline.
 
 <a name="ios_process_incoming" />
 
@@ -173,7 +173,7 @@ public override void DidReceiveRemoteNotification(
 The `userInfo` dictionary contains the `aps` key, whose value is the `alert` dictionary with the remaining notification data. This dictionary is retrieved, with the `string` notification message being displayed in a dialog box.
 
 > [!NOTE]
-> **Note**: If an application isn't running when a push notification arrives, the application will be launched but the `DidReceiveRemoteNotification` method won't process the notification. Instead, get the notification payload and respond appropriately from the `WillFinishLaunching` or `FinishedLaunching` overrides.
+> If an application isn't running when a push notification arrives, the application will be launched but the `DidReceiveRemoteNotification` method won't process the notification. Instead, get the notification payload and respond appropriately from the `WillFinishLaunching` or `FinishedLaunching` overrides.
 
 For more information about APNS, see [Push Notifications in iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md).
 

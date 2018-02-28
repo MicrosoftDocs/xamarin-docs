@@ -156,7 +156,7 @@ The process for creating the custom renderer class is as follows:
 1. Add an `ExportRenderer` attribute to the custom renderer class to specify that it will be used to render the Xamarin.Forms custom cell. This attribute is used to register the custom renderer with Xamarin.Forms.
 
 > [!NOTE]
-> **Note**: For most Xamarin.Forms elements, it is optional to provide a custom renderer in each platform project. If a custom renderer isn't registered, then the default renderer for the control's base class will be used. However, custom renderers are required in each platform project when rendering a [ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) element.
+> For most Xamarin.Forms elements, it is optional to provide a custom renderer in each platform project. If a custom renderer isn't registered, then the default renderer for the control's base class will be used. However, custom renderers are required in each platform project when rendering a [ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) element.
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 

@@ -40,7 +40,7 @@ public interface ITextToSpeech
 Coding against this interface in the shared code will allow the Xamarin.Forms app to access the speech APIs on each platform.
 
 > [!NOTE]
-> **Note**: Classes implementing the interface must have a parameterless constructor to work with the `DependencyService`.
+> Classes implementing the interface must have a parameterless constructor to work with the `DependencyService`.
 
 <a name="iOS_Implementation" />
 

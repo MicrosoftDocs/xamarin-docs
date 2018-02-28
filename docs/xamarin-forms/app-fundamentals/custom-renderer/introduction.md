@@ -48,7 +48,7 @@ The `MyEntry` control is an `Entry` control where the `BackgroundColor` is set t
 The `local` namespace prefix can be anything. However, the `namespace` and `assembly` values must match the details of the custom control. Once the namespace is declared, the prefix is used to reference the custom control.
 
 > [!NOTE]
-> **Note**: Defining the `xmlns` is much simpler in PCLs than Shared Projects. A PCL is compiled into an assembly so it's easy to determine what the `assembly=CustomRenderer` value should be. When using Shared Projects, all the shared assets (including the XAML) are compiled into each of the referencing projects, which means that if the iOS, Android, and Windows Phone projects have their own *assembly names* it is impossible to to write the `xmlns` declaration because the value needs to be different for each application. Custom controls in XAML for Shared Projects will require every application project to be configured with the same assembly name.
+> Defining the `xmlns` is much simpler in PCLs than Shared Projects. A PCL is compiled into an assembly so it's easy to determine what the `assembly=CustomRenderer` value should be. When using Shared Projects, all the shared assets (including the XAML) are compiled into each of the referencing projects, which means that if the iOS, Android, and Windows Phone projects have their own *assembly names* it is impossible to to write the `xmlns` declaration because the value needs to be different for each application. Custom controls in XAML for Shared Projects will require every application project to be configured with the same assembly name.
 
 The `MyEntry` custom control is then rendered on each platform, with a gray background, as shown in the following screenshots:
 
@@ -65,7 +65,7 @@ The process for creating a custom renderer class is as follows:
 1. Add an `ExportRenderer` attribute to the custom renderer class to specify that it will be used to render the Xamarin.Forms control. This attribute is used to register the custom renderer with Xamarin.Forms.
 
 > [!NOTE]
-> **Note**: For most Xamarin.Forms elements, it is optional to provide a custom renderer in each platform project. If a custom renderer isn't registered, then the default renderer for the control's base class will be used. However, custom renderers are required in each platform project when rendering a [View](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) or [ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) element.
+> For most Xamarin.Forms elements, it is optional to provide a custom renderer in each platform project. If a custom renderer isn't registered, then the default renderer for the control's base class will be used. However, custom renderers are required in each platform project when rendering a [View](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) or [ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) element.
 
 The topics in this series will provide demonstrations and explanations of this process for different Xamarin.Forms elements.
 

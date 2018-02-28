@@ -68,7 +68,7 @@ in a Xamarin.Forms `ContentPage`:
 ```
 
 > [!NOTE]
-> **Note:** requiring the xmlns `a:` prefix on the XAML Standard controls is a limitation of the current preview.
+> Requiring the xmlns `a:` prefix on the XAML Standard controls is a limitation of the current preview.
 
 
 ## Related Links

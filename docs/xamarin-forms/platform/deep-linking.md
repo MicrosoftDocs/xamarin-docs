@@ -27,7 +27,7 @@ Each `TodoItem` instance created by the user is indexed. Platform-specific searc
 For more information about using an SQLite database, see [Working with a Local Database](~/xamarin-forms/app-fundamentals/databases.md).
 
 > [!NOTE]
-> **Note**: Xamarin.Forms application indexing and deep linking functionality is only available on the iOS and Android platforms, and requires iOS 9 and API 23 respectively.
+> Xamarin.Forms application indexing and deep linking functionality is only available on the iOS and Android platforms, and requires iOS 9 and API 23 respectively.
 
 ## Setup
 
@@ -102,7 +102,7 @@ Application.Current.AppLinks.RegisterLink (appLink);
 This adds the [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance to the application's [`AppLinks`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) collection.
 
 > [!NOTE]
-> **Note**: The `RegisterLink` method can also be used to update the content that's been indexed for a page.
+> The `RegisterLink` method can also be used to update the content that's been indexed for a page.
 
 Once an [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance has been registered for indexing, it can appear in search results. The following screenshot shows indexed content appearing in search results on the iOS platform:
 
@@ -119,7 +119,7 @@ Application.Current.AppLinks.DeregisterLink (appLink);
 This removes the [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance from the application's [`AppLinks`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) collection.
 
 > [!NOTE]
-> **Note**: On Android it's not possible to remove indexed content from search results.
+> On Android it's not possible to remove indexed content from search results.
 
 <a name="responding" />
 
@@ -207,7 +207,7 @@ In addition, values for the following keys can be specified:
 - `shouldAddToPublicIndex` – a `string` of either `true` or `false` that controls whether or not to add the indexed content to Apple's public cloud index, which can then be presented to users who haven't installed the application on their iOS device. However, just because content has been set for public indexing, it doesn't mean that it will be automatically added to Apple's public cloud index. For more information, see [Public Search Indexing](~/ios/platform/search/nsuseractivity.md). Note that this key should be set to `false` when adding personal data to the [`KeyValues`](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.KeyValues/) collection.
 
 > [!NOTE]
-> **Note**: The `KeyValues` collection isn't used on the Android platform.
+> The `KeyValues` collection isn't used on the Android platform.
 
 For more information about Handoff, see [Introduction to Handoff](~/ios/platform/handoff.md).
 

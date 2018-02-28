@@ -96,7 +96,7 @@ This method replaces the active [`ControlTemplate`](https://developer.xamarin.co
 ![](creating-images/aqua-theme.png "Aqua Control Template")
 
 > [!NOTE]
-> **Note**: On a `ContentPage`, the `Content` property can be assigned and the `ControlTemplate` property can also be set. When this occurs, if the `ControlTemplate` contains a `ContentPresenter` instance, the content assigned to the `Content` property will be presented by the `ContentPresenter` within the `ControlTemplate`.
+> On a `ContentPage`, the `Content` property can be assigned and the `ControlTemplate` property can also be set. When this occurs, if the `ControlTemplate` contains a `ContentPresenter` instance, the content assigned to the `Content` property will be presented by the `ContentPresenter` within the `ControlTemplate`.
 
 ### Setting a ControlTemplate with a Style
 

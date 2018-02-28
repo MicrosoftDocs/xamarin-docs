@@ -137,7 +137,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 The `SelectAsync` method accepts a `SelectRequest` instance as a parameter, which specifies a `Select` query expression in it's `SelectExpression` property. The format of the query expression is similar to the format of the standard SQL `SELECT` statement. For more information about the query expression, see [Using Select to Create Amazon SimpleDB Queries](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/UsingSelect.html) on Amazon's website.
 
 > [!NOTE]
-> **Note**: Be careful to follow the quoting rules when constructing the query expression. For more information, see [Select Quoting Rules](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html) on Amazon's website.
+> Be careful to follow the quoting rules when constructing the query expression. For more information, see [Select Quoting Rules](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html) on Amazon's website.
 
 The `SelectAsync` method returns a response containing a collection of items and associated attributes that match the query expression. This collection is then converted to a `List` of `TodoItem` instances for display.
 

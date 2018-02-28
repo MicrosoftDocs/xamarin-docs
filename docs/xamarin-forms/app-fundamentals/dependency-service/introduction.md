@@ -136,7 +136,7 @@ The [sample UsingDependencyService solution](https://developer.xamarin.com/sampl
  [ ![iOS and Android solution](introduction-images/solution-sml.png "DependencyService Sample Solution Structure")](introduction-images/solution.png "DependencyService Sample Solution Structure")
 
 > [!NOTE]
-> **Note:** You **must** provide an implementation in every platform project. If no Interface implementation is registered, then the `DependencyService` will be unable to resolve the `Get<T>()` method at runtime.
+> You **must** provide an implementation in every platform project. If no Interface implementation is registered, then the `DependencyService` will be unable to resolve the `Get<T>()` method at runtime.
 
 
 ## Related Links

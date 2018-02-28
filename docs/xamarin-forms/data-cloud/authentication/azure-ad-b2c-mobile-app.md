@@ -17,7 +17,7 @@ _Azure Active Directory B2C is a cloud identity management solution for consumer
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
 > [!NOTE]
-> **Note**: The [Microsoft Authentication Library](https://www.nuget.org/packages/Microsoft.Identity.Client) is still in preview, but is suitable for use in a production environment. However, there may be breaking changes to the API, internal cache format, and other mechanisms of the library, which may impact your application.
+> The [Microsoft Authentication Library](https://www.nuget.org/packages/Microsoft.Identity.Client) is still in preview, but is suitable for use in a production environment. However, there may be breaking changes to the API, internal cache format, and other mechanisms of the library, which may impact your application.
 
 ## Overview
 

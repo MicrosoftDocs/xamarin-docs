@@ -101,9 +101,9 @@ if (Application.Current.Properties.ContainsKey("id"))
 Always check for the presence of the key before accessing it to prevent unexpected errors.
 
 > [!NOTE]
-> **Note:** the `Properties` dictionary can only serialize
->primitive types for storage. Attempting to store other types (such as
->`List<string>`) can fail silently.
+> The `Properties` dictionary can only serialize
+> primitive types for storage. Attempting to store other types (such as
+> `List<string>`) can fail silently.
 
 <!-- bugzilla 28657 -->
 
@@ -212,7 +212,7 @@ public class MainActivity :
 ```
 
 > [!NOTE]
-> **Note:** There is a newer [`FormsAppCompatActivity`](~/xamarin-forms/platform/android/appcompat.md)
+> There is a newer [`FormsAppCompatActivity`](~/xamarin-forms/platform/android/appcompat.md)
 > base class that can be used to better support Android Material Design.
 > This will become the default Android template in future, but you can follow
 > [these instructions](~/xamarin-forms/platform/android/appcompat.md)

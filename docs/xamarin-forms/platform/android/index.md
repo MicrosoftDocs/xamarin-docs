@@ -38,7 +38,7 @@ And this is the same code after upgrading the project to use `FormsAppCompatActi
 [ ![](images/post-appcompat-sml.png "Todo Sample Application With AppCompat and Theming")](images/post-appcompat.png "Todo Sample Application With AppCompat and Theming")
 
 > [!NOTE]
-> **Note**: When using `FormsAppCompatActivity`, the [base classes for some Android custom renderers](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) will be different.
+> When using `FormsAppCompatActivity`, the [base classes for some Android custom renderers](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) will be different.
 
 
 ## Related Links

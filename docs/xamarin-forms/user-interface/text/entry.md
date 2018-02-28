@@ -39,7 +39,7 @@ var text = MyEntry.Text;
 ```
 
 > [!NOTE]
-> **Note**: The width of an `Entry` can be defined by setting its `WidthRequest` property. Do not depend on the width of an `Entry` being defined based on the value of its `Text` property.
+> The width of an `Entry` can be defined by setting its `WidthRequest` property. Do not depend on the width of an `Entry` being defined based on the value of its `Text` property.
 
 ### Keyboards
 
