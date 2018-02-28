@@ -30,11 +30,6 @@ There are three major approaches to code sharing that address this problem: **.N
 This page explains how to create a **PCL** project that targets a specific profile,
 which can then be referenced by multiple platform-specific projects.
 
-## Requirements
-
-Portable Library projects are automatically enabled in Visual Studio for Mac on macOS,
-and are built-in to Visual Studio 2013 and later.
-
 
 ## What is a Portable Class Library?
 
@@ -174,7 +169,7 @@ The table below shows some of the features that vary by .NET platform. To write 
   </tbody>
 </table>
 
-The Xamarin column reflects the fact that Xamarin.iOS and Xamarin.Android supports all the profiles shipped with Visual Studio 2013 and above, and the availability of features in any libraries you create will only be limited by the other platforms you choose to support.
+The Xamarin column reflects the fact that Xamarin.iOS and Xamarin.Android supports all the profiles shipped with Visual Studio, and the availability of features in any libraries you create will only be limited by the other platforms you choose to support.
 
 This includes profiles that are combinations of:
 

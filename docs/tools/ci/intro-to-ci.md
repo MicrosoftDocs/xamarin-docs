@@ -68,7 +68,7 @@ A complete summary of all Application Lifecycle Management (ALM) features of Vis
 
 Git can operate entirely through a web browsers, or through [GUI clients](http://git-scm.com/downloads/guis) that run on Linux, Mac OSX, and Windows. It is free for public repositories; private repositories require a [paid plan](https://github.com/pricing).
 
-Visual Studio 2015 and Visual Studio for Mac provide native support for Git; for Visual Studio 2013 and earlier,  Microsoft provides a [downloadable extension for Git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c). As noted above, Visual Studio Team Services and TFS can use Git for version control instead of TFVC.
+Visual Studio 2015 and Visual Studio for Mac provide native support for Git; for older versions, Microsoft provides a [downloadable extension for Git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c). As noted above, Visual Studio Team Services and TFS can use Git for version control instead of TFVC.
 
 
 ### Subversion

@@ -86,7 +86,7 @@ however you can switch back to the managed code if required for compatibility re
 >
 > The Native option is recommended.
 
-# Platform-Specific Details
+## Platform-Specific Details
 
 The above summary explains the project-level settings for HttpClient
 and SSL/TLS implementation in Xamarin Projects. The HttpClient implementation
@@ -97,7 +97,7 @@ native options to choose from.
 - [**iOS and Mac**](~/cross-platform/macios/http-stack.md)
 
 
-# Summary
+## Summary
 
 Applications should use Transport Layer Security (TLS) 1.2 wherever possible.
 New apps now default to this configuration, however you may need to update

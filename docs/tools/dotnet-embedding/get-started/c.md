@@ -20,7 +20,7 @@ To use .NET Embedding with C you'll need a Mac or Windows machine running:
 * Xcode 8.3.2 or later
 
 * Windows 7, 8, 10 or later
-* Visual Studio 2013 or later
+* Visual Studio 2015 or later
 
 * [Mono](http://www.mono-project.com/download/)
 
