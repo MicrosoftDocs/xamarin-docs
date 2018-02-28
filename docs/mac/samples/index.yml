@@ -2,14 +2,60 @@
 documentType: LandingData
 title: Xamarin.Mac Samples
 metadata:
-  description: Cross-platform Xamarin.Android sample apps for mobile developers.
+  description: Cross-platform Xamarin.Mac sample apps for mobile developers.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 02/27/2018
   ms.topic: article
 abstract:
-  description: Xamarin cross-platform sample apps and code demos to help you get started building mobile apps with C# and Xamarin.
+  description: Xamarin.Mac sample apps and code demos to help you get started building mobile apps with C# and Xamarin.
   menu:
     items:
     - href: https://developer.xamarin.com/samples/mac/all/
       text: All Xamarin.Mac Samples
+sections:
+- title: 
+  items:
+   - type: list
+     style: cards
+     className: cardsW
+     items:
+     - href: https://developer.xamarin.com/samples/mac/Hello_Mac/
+       html: Hello World app to get started with Mac development.
+       image:
+         src: images/hellomac.png
+         href: https://developer.xamarin.com/samples/mac/Hello_Mac/
+       title: "Hello, Mac"
+     - href: https://developer.xamarin.com/samples/mac/MacControls/
+       html: UI control examples for Mac apps.
+       image:
+         src: images/controls.png
+         href: https://developer.xamarin.com/samples/mac/MacControls/
+       title: "MacControls"
+     - href: https://developer.xamarin.com/samples/mac/MacImages/
+       html: UI control examples for Mac apps.
+       image:
+         src: images/images.png
+         href: https://developer.xamarin.com/samples/mac/MacImages/
+       title: "MacImages"
+
+
+     - href: https://developer.xamarin.com/samples/mac/SourceWriter/
+       html: Simple editor that provides support for code completion and syntax highlighting.
+       image:
+         src: images/sourcewriter.png
+         href: https://developer.xamarin.com/samples/mac/SourceWriter/
+       title: "SourceWriter"
+
+
+
+
+
+
+
+     - href: https://developer.xamarin.com/samples/mac/all/
+       html: The complete set of Xamarin.Mac sample apps and code demos.
+       image: 
+         src: ~/media/shared/sample-download.svg
+         href: https://developer.xamarin.com/samples/mac/all/
+       title: All Xamarin.Mac samples
