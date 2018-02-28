@@ -10,17 +10,6 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Contents
-
-This article will cover the following topics in detail:
-
-- [Xamarin.Mac-Extension-Support](#About_OpenTK)
-- [Limitations and Known Issues](#Limitations-and-Known-Issues)
-- [Tips](#Tips)
-- [Walkthrough and Sample App](#Walkthrough-and-Sample-App)
-
-<a name="Xamarin.Mac-Extension-Support" />
-
 # Xamarin.Mac Extension Support
 
 In Xamarin.Mac 2.10 preview support was added for multiple macOS extension points:
@@ -31,7 +20,7 @@ In Xamarin.Mac 2.10 preview support was added for multiple macOS extension point
 
 <a name="Limitations-and-Known-Issues" />
 
-# Limitations and Known Issues
+## Limitations and Known Issues
 
 The following are the limitations and know issues that can occur when developing extensions in Xamarin.Mac:
 
@@ -41,7 +30,7 @@ The following are the limitations and know issues that can occur when developing
 
 <a name="Tips" />
 
-# Tips
+## Tips
 
 The following tips can be helpful when working with extensions in Xamarin.Mac:
 
@@ -56,7 +45,7 @@ The following tips can be helpful when working with extensions in Xamarin.Mac:
 
 <a name="Walkthrough-and-Sample-App" />
 
-# Walkthrough and Sample App
+## Walkthrough and Sample App
 
 Since the developer will create and work with Xamarin.Mac extensions in the same way as Xamarin.iOS extensions, please refer to our [Introduction to Extensions](~/ios/platform/extensions.md) documentation for more details.
 
@@ -64,11 +53,9 @@ An example Xamarin.Mac project containing small, working samples of each extensi
 
 <a name="Summary" />
 
-# Summary
+## Summary
 
 This article has taken a quick look at working with extensions in a Xamarin.Max version 2.10 (and greater) app.
-
-
 
 ## Related Links
 

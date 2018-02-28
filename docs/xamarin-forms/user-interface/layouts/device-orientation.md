@@ -20,6 +20,8 @@ This article will guide you through creating apps that take advantage of device 
 - **[Reacting to Changes in Orientation](#Reacting_to_Changes_in_Orientation)** &ndash; learn how to be notified of, and react to, changes in orientation.
 - **[Responsive Layout](#Responsive_Layout)** &ndash; learn how to create layouts that automatically work across landscape and portrait orientations.
 
+<a name="Controlling_Orientation" />
+
 ## Controlling Orientation
 
 When using Xamarin.Forms, the supported method of controlling device orientation is to use the settings for each individual project.
@@ -110,7 +112,7 @@ SupportedOrientations = SupportedPageOrientation.Landscape; // landscape only
 
 Note that Windows Phone supports landscape views in both (as seen from portrait) left-to-right and right-to-left orientations. It is not possible to specify which is used.
 
-<a name="changes-in-orientation" />
+<a name="Reacting_to_Changes_in_Orientation" />
 
 ## Reacting to Changes in Orientation
 
@@ -157,6 +159,8 @@ and landscape:
 ![](device-orientation-images/calculator-landscape.png "Calculator Application in Landscape")
 
 Notice that the apps take advantage of the available space by adding more functionality in landscape.
+
+<a name="Responsive_Layout" />
 
 ## Responsive Layout
 

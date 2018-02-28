@@ -6,6 +6,7 @@ ms.assetid: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 12/01/2017
 ---
 
 # DataPages

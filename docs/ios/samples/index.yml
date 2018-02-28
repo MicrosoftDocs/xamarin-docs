@@ -8,8 +8,62 @@ metadata:
   ms.date: 02/17/2018
   ms.topic: article
 abstract:
-  description: Xamarin cross-platform sample apps and code demos to help you get started building mobile apps with C# and Xamarin.
+  description: Xamarin.iOS sample apps and code demos to help you get started building mobile apps with C# and Xamarin.
   menu:
     items:
     - href: https://developer.xamarin.com/samples/ios/all/
       text: All Xamarin.iOS Samples
+sections:
+- title: 
+  items:
+   - type: list
+     style: cards
+     className: cardsW
+     items:
+     - href: https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/
+       html: ARKit augmented reality demo to place objects on detected surfaces.
+       image:
+         src: images/arkit.png
+         href: https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/
+       title: "ARKit (iOS 11)"
+     - href: https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/
+       html: "New iOS 11 features in MapKit: grouping and splitting markers based on zoom-level."
+       image:
+         src: images/mapkit.png
+         href: https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/
+       title: "MapKit (iOS 11)"
+     - href: https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel/
+       html: "iOS 11 Vision framework and CoreML, using a model trained with Azure's Custom Vision Service."
+       image:
+         src: images/coremlazure.png
+         href: https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel/
+       title: "CoreML & Azure (iOS 11)"
+     - href: https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/
+       html: "How to use ContactsUI view controllers and properties."
+       image:
+         src: images/contacts.png
+         href: https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/
+       title: "QuickContacts"
+
+     - href: https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/
+       html: "UI control suite available in watchOS."
+       image:
+         src: images/watchos.png
+         href: https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/
+       title: "WatchKit Catalog"
+     - href: https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/
+       html: "Demonstrates how to use many views and controls in the UIKit framework on tvOS."
+       image:
+         src: images/tvosui.png
+         href: https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/
+       title: "tvOS UI Catalog"
+
+
+
+
+     - href: https://developer.xamarin.com/samples/ios/all/
+       html: The complete set of Xamarin.iOS sample apps and code demos.
+       image: 
+         src: ~/media/shared/sample-download.svg
+         href: https://developer.xamarin.com/samples/ios/all/
+       title: All Xamarin.iOS samples

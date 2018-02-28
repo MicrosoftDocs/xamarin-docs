@@ -64,7 +64,7 @@ In client-managed authentication, a Xamarin.Forms mobile application contacts an
 For a client-managed authentication workflow, the Azure Active Directory B2C tenant should be configured as follows:
 
 - Include a native client.
-- Set the Custom Redirect URI to a URL scheme that uniquely identifies the mobile application, followed by `://auth/`. For more information about choosing a custom URL scheme, see [Choosing a native app redirect URI](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-app-registration#choosing-a-native-app-redirect-uri) on Microsoft Docs.
+- Set the Custom Redirect URI to a URL scheme that uniquely identifies the mobile application, followed by `://auth/`. For more information about choosing a custom URL scheme, see [Choosing a native app redirect URI](/azure/active-directory-b2c/active-directory-b2c-app-registration#choosing-a-native-app-redirect-uri).
 
 The following screenshot demonstrates this configuration:
 

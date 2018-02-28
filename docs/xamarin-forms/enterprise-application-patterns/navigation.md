@@ -23,7 +23,7 @@ Xamarin.Forms includes support for page navigation, which typically results from
 This chapter addresses these challenges by presenting a `NavigationService` class that's used to perform view model-first page navigation.
 
 > [!NOTE]
-> **Note:** The `NavigationService` used by the app is designed only to perform hierarchical navigation between ContentPage instances. Using the service to navigate between other page types might result in unexpected behavior.
+> The `NavigationService` used by the app is designed only to perform hierarchical navigation between ContentPage instances. Using the service to navigate between other page types might result in unexpected behavior.
 
 ## Navigating Between Pages
 
@@ -38,8 +38,8 @@ public interface INavigationService
 {  
     ViewModelBase PreviousPageViewModel { get; }  
     Task InitializeAsync();  
-    Task NavigateToAsync&lt;TViewModel&gt;() where TViewModel : ViewModelBase;  
-    Task NavigateToAsync&lt;TViewModel&gt;(object parameter) where TViewModel : ViewModelBase;  
+    Task NavigateToAsync<TViewModel>() where TViewModel : ViewModelBase;  
+    Task NavigateToAsync<TViewModel>(object parameter) where TViewModel : ViewModelBase;  
     Task RemoveLastFromBackStackAsync();  
     Task RemoveBackStackAsync();  
 }
@@ -60,11 +60,11 @@ This interface specifies that an implementing class must provide the following m
 <td>Performs navigation to one of two pages when the app is launched.</td>
 </tr>
 <tr class="even">
-<td><code>NavigateToAsync&lt;T&gt;</code></td>
+<td><code>NavigateToAsync<T></code></td>
 <td>Performs hierarchical navigation to a specified page.</td>
 </tr>
 <tr class="odd">
-<td><code>NavigateToAsync&lt;T&gt;(parameter)</code></td>
+<td><code>NavigateToAsync<T>(parameter)</code></td>
 <td>Performs hierarchical navigation to a specified page, passing a parameter.</td>
 </tr>
 <tr class="even">
@@ -81,20 +81,20 @@ This interface specifies that an implementing class must provide the following m
 In addition, the `INavigationService` interface specifies that an implementing class must provide a `PreviousPageViewModel` property. This property returns the view model type associated with the previous page in the navigation stack.
 
 > [!NOTE]
-> **Note:** An `INavigationService` interface would usually also specify a `GoBackAsync` method, which is used to programmatically return to the previous page in the navigation stack. However, this method is missing from the eShopOnContainers mobile app because it's not required.
+> An `INavigationService` interface would usually also specify a `GoBackAsync` method, which is used to programmatically return to the previous page in the navigation stack. However, this method is missing from the eShopOnContainers mobile app because it's not required.
 
 ### Creating the NavigationService Instance
 
 The `NavigationService` class, which implements the `INavigationService` interface, is registered as a singleton with the Autofac dependency injection container, as demonstrated in the following code example:
 
 ```csharp
-builder.RegisterType&lt;NavigationService&gt;().As&lt;INavigationService&gt;().SingleInstance();
+builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
 ```
 
 The `INavigationService` interface is resolved in the `ViewModelBase` class constructor, as demonstrated in the following code example:
 
 ```csharp
-NavigationService = ViewModelLocator.Resolve&lt;INavigationService&gt;();
+NavigationService = ViewModelLocator.Resolve<INavigationService>();
 ```
 
 This returns a reference to the `NavigationService` object that's stored in the Autofac dependency injection container, which is created by the `InitNavigation` method in the `App` class. For more information, see [Navigating When the App is Launched](#navigating_when_the_app_is_launched).
@@ -103,7 +103,7 @@ The `ViewModelBase` class stores the `NavigationService` instance in a `Navigati
 
 ### Handling Navigation Requests
 
-Xamarin.Forms provides the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) class, which implements a hierarchical navigation experience in which the user is able to navigate through pages, forwards and backwards, as desired. For more information about hierarchical navigation, see [Hierarchical Navigation](https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/navigation/hierarchical/) on the Xamarin Developer Center.
+Xamarin.Forms provides the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) class, which implements a hierarchical navigation experience in which the user is able to navigate through pages, forwards and backwards, as desired. For more information about hierarchical navigation, see [Hierarchical Navigation](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
 Rather than use the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) class directly, the eShopOnContainers app wraps the `NavigationPage` class in the `CustomNavigationView` class, as shown in the following code example:
 
@@ -127,18 +127,18 @@ The purpose of this wrapping is for ease of styling the [`NavigationPage`](https
 Navigation is performed inside view model classes by invoking one of the `NavigateToAsync` methods, specifying the view model type for the page being navigated to, as demonstrated in the following code example:
 
 ```csharp
-await NavigationService.NavigateToAsync&lt;MainViewModel&gt;();
+await NavigationService.NavigateToAsync<MainViewModel>();
 ```
 
 The following code example shows the `NavigateToAsync` methods provided by the `NavigationService` class:
 
 ```csharp
-public Task NavigateToAsync&lt;TViewModel&gt;() where TViewModel : ViewModelBase  
+public Task NavigateToAsync<TViewModel>() where TViewModel : ViewModelBase  
 {  
     return InternalNavigateToAsync(typeof(TViewModel), null);  
 }  
 
-public Task NavigateToAsync&lt;TViewModel&gt;(object parameter) where TViewModel : ViewModelBase  
+public Task NavigateToAsync<TViewModel>(object parameter) where TViewModel : ViewModelBase  
 {  
     return InternalNavigateToAsync(typeof(TViewModel), parameter);  
 }
@@ -207,7 +207,8 @@ When a view is instantiated, it's associated with its corresponding view model. 
 
 If the view being created is a `LoginView`, it's wrapped inside a new instance of the `CustomNavigationView` class and assigned to the [`Application.Current.MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) property. Otherwise, the `CustomNavigationView` instance is retrieved, and provided that it isn't null, the [`PushAsync`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) method is invoked to push the view being created onto the navigation stack. However, If the retrieved `CustomNavigationView` instance is `null`, the view being created is wrapped inside a new instance of the `CustomNavigationView` class and assigned to the `Application.Current.MainPage` property. This mechanism ensures that during navigation, pages are added correctly to the navigation stack both when it's empty, and when it contains data.
 
->💡 **Tip:** Consider caching pages. Page caching results in memory consumption for views that are not currently displayed. However, without page caching it does mean that XAML parsing and construction of the page and its view model will occur every time a new page is navigated to, which can have a performance impact for a complex page. For a well-designed page that does not use an excessive number of controls, the performance should be sufficient. However, page caching might help if slow page loading times are encountered.
+> [!TIP]
+> Consider caching pages. Page caching results in memory consumption for views that are not currently displayed. However, without page caching it does mean that XAML parsing and construction of the page and its view model will occur every time a new page is navigated to, which can have a performance impact for a complex page. For a well-designed page that does not use an excessive number of controls, the performance should be sufficient. However, page caching might help if slow page loading times are encountered.
 
 After the view is created and navigated to, the `InitializeAsync` method of the view's associated view model is executed. For more information, see [Passing Parameters During Navigation](#passing_parameters_during_navigation).
 
@@ -220,7 +221,7 @@ When the app is launched, the `InitNavigation` method in the `App` class is invo
 ```csharp
 private Task InitNavigation()  
 {  
-    var navigationService = ViewModelLocator.Resolve&lt;INavigationService&gt;();  
+    var navigationService = ViewModelLocator.Resolve<INavigationService>();  
     return navigationService.InitializeAsync();  
 }
 ```
@@ -228,7 +229,7 @@ private Task InitNavigation()
 The method creates a new `NavigationService` object in the Autofac dependency injection container, and returns a reference to it, before invoking its `InitializeAsync` method.
 
 > [!NOTE]
-> **Note:** When the `INavigationService` interface is resolved by the `ViewModelBase` class, the container returns a reference to the `NavigationService` object that was created when the InitNavigation method is invoked.
+> When the `INavigationService` interface is resolved by the `ViewModelBase` class, the container returns a reference to the `NavigationService` object that was created when the InitNavigation method is invoked.
 
 The following code example shows the `NavigationService` `InitializeAsync` method:
 
@@ -236,9 +237,9 @@ The following code example shows the `NavigationService` `InitializeAsync` metho
 public Task InitializeAsync()  
 {  
     if (string.IsNullOrEmpty(Settings.AuthAccessToken))  
-        return NavigateToAsync&lt;LoginViewModel&gt;();  
+        return NavigateToAsync<LoginViewModel>();  
     else  
-        return NavigateToAsync&lt;MainViewModel&gt;();  
+        return NavigateToAsync<MainViewModel>();  
 }
 ```
 
@@ -257,7 +258,7 @@ For example, the `ProfileViewModel` class contains an `OrderDetailCommand` that'
 ```csharp
 private async Task OrderDetailAsync(Order order)  
 {  
-    await NavigationService.NavigateToAsync&lt;OrderDetailViewModel&gt;(order);  
+    await NavigationService.NavigateToAsync<OrderDetailViewModel>(order);  
 }
 ```
 
@@ -286,15 +287,15 @@ This method retrieves the `Order` instance that was passed into the view model d
 
 Navigation is usually triggered from a view by a user interaction. For example, the `LoginView` performs navigation following successful authentication. The following code example shows how the navigation is invoked by a behavior:
 
-```csharp
-&lt;WebView ...&gt;  
-    &lt;WebView.Behaviors&gt;  
-        &lt;behaviors:EventToCommandBehavior  
+```xaml
+<WebView ...>  
+    <WebView.Behaviors>  
+        <behaviors:EventToCommandBehavior  
             EventName="Navigating"  
             EventArgsConverter="{StaticResource WebNavigatingEventArgsConverter}"  
-            Command="{Binding NavigateCommand}" /&gt;  
-    &lt;/WebView.Behaviors&gt;  
-&lt;/WebView&gt;
+            Command="{Binding NavigateCommand}" />  
+    </WebView.Behaviors>  
+</WebView>
 ```
 
 At runtime, the `EventToCommandBehavior` will respond to interaction with the [`WebView`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/). When the `WebView` navigates to a web page, the [`Navigating`](https://developer.xamarin.com/api/event/Xamarin.Forms.WebView.Navigating/) event will fire, which will execute the `NavigateCommand` in the `LoginViewModel`. By default, the event arguments for the event are passed to the command. This data is converted as it's passed between source and target by the converter specified in the `EventArgsConverter` property, which returns the [`Url`](https://developer.xamarin.com/api/property/Xamarin.Forms.WebNavigationEventArgs.Url/) from the [`WebNavigatingEventArgs`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebNavigatingEventArgs/). Therefore, when the `NavigationCommand` is executed, the Url of the web page is passed as a parameter to the registered `Action`.
@@ -305,7 +306,7 @@ In turn, the `NavigationCommand` executes the `NavigateAsync` method, which is s
 private async Task NavigateAsync(string url)  
 {  
     ...          
-    await NavigationService.NavigateToAsync&lt;MainViewModel&gt;();  
+    await NavigationService.NavigateToAsync<MainViewModel>();  
     await NavigationService.RemoveLastFromBackStackAsync();  
     ...  
 }

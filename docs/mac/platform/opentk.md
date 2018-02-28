@@ -10,28 +10,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Contents
-
-This article will cover the following topics in detail:
-
-- [About OpenTK](#About_OpenTK)
-- [OpenTK Quickstart](#OpenTK_Quickstart)
-	- [Starting a New Project](#Starting_a_New_Project)
-	- [Including OpenTK](#Including_OpenTK)
-	- [Using OpenTK](#Using_OpenTK)
-	- [Required APIs](#Required_APIs)
-	- [Adding the Game View](#Adding_the_Game_View) 
-	- [Responding to Events](#Responding_to_Events)
-		- [The Load Event](#The_Load_Event)
-		- [The Resize Events](#The_Resize_Events)
-		- [The UpdateFrame Event](#The_UpdateFrame_Event)
-		- [The RenderFrame Event](#The_RenderFrame_Event)
-	- [Running the Game View](#Running_the_Game_View)
-- [Where to Next?](#Where_to_Next)
-
-<a name="Overview" />
-
-# Overview
+# Introduction to OpenTK
 
 OpenTK (The Open Toolkit) is an advanced, low-level C# library that makes working with OpenGL, OpenCL and OpenAL easier. OpenTK can be used for games, scientific applications or other projects that require 3D graphics, audio or computational functionality. This article gives a brief introduction to using OpenTK in a Xamarin.Mac app.
 
@@ -43,7 +22,7 @@ You may want to take a look at the [Exposing C# classes / methods to Objective-C
 
 <a name="About_OpenTK" />
 
-# About OpenTK
+## About OpenTK
 
 As stated above, OpenTK (The Open Toolkit) is an advanced, low-level C# library that makes working with OpenGL, OpenCL and OpenAL easier. Using OpenTK in a Xamarin.Mac app provides the following features:
 
@@ -61,13 +40,13 @@ For more information, please see [The Open Toolkit](http://www.opentk.com) websi
 
 <a name="OpenTK_Quickstart" />
 
-# OpenTK Quickstart
+## OpenTK Quickstart
 
 As a quick introduction to using OpenTK in a Xamarin.Mac app, we are going to create a simple application that opens a Game View, renders a simple triangle in that view and attachs the Game View to the Mac app's Main Window to display the triangle to the user.
 
 <a name="Starting_a_New_Project" />
 
-## Starting a New Project
+### Starting a New Project
 
 Start Visual Studio for Mac and create a new Xamarin.Mac solution. Select **Mac** > **App** > **General** > **Cocoa App**:
 
@@ -81,7 +60,7 @@ Click the **Create** button to build the new project.
 
 <a name="Including_OpenTK" />
 
-## Including OpenTK
+### Including OpenTK
 
 Before you can use Open TK in a Xamarin.Mac application, you need to include a reference to the OpenTK assembly. In the **Solution Explorer**, right-click the **References** folder and select **Edit References...**.
 
@@ -91,7 +70,7 @@ Place a check by `OpenTK` and click the **OK** button:
 
 <a name="Using_OpenTK" />
 
-## Using OpenTK
+### Using OpenTK
 
 With the new project created, double-click the `MainWindow.cs` file in the **Solution Explorer** to open it for editing. Make the `MainWindow` class look like the following:
 
@@ -183,7 +162,7 @@ Let's go over this code in detail below.
 
 <a name="Required_APIs" />
 
-## Required APIs
+### Required APIs
 
 Several references are required to use OpenTK in a Xamarin.Mac class. At the start of the definition we have included the following `using` statements:
 
@@ -201,7 +180,7 @@ This minimal set will be required for any class using OpenTK.
 
 <a name="Adding_the_Game_View" />
 
-## Adding the Game View
+### Adding the Game View
 
 Next we need to create a Game View to contain all of our interaction with OpenTK and display the results. We used the following code:
 
@@ -218,7 +197,7 @@ Here we've made the Game View the same size as our Main Mac Window and replaced 
 
 <a name="Responding_to_Events" />
 
-## Responding to Events
+### Responding to Events
 
 There are several default events that each Game View should respond to. In this section will cover the main events required.
 
@@ -263,10 +242,7 @@ Game.UpdateFrame += (sender, e) =>
 ```
 
 > [!IMPORTANT]
-> **NOTE:** The Xamarin.Mac implementation of OpenTK does not include the `Input API`, so you will need to use the Apple provided APIs to add keyboard and Mouse support. Optionally you can create a custom instance of the `MonoMacGameView` and override the `KeyDown` and `KeyUp` methods.
-
-
-
+> The Xamarin.Mac implementation of OpenTK does not include the `Input API`, so you will need to use the Apple provided APIs to add keyboard and Mouse support. Optionally you can create a custom instance of the `MonoMacGameView` and override the `KeyDown` and `KeyUp` methods.
 
 <a name="The_RenderFrame_Event" />
 
@@ -299,14 +275,11 @@ Game.RenderFrame += (sender, e) =>
 Typically the render code will being with a call to `GL.Clear` to remove any existing elements before drawn the new elements.
 
 > [!IMPORTANT]
-> **NOTE:** For the Xamarin.Mac version of OpenTK **do not** call the `SwapBuffers` method of your `MonoMacGameView` instance at the end of your rendering code. Doing so will cause the Game View to strobe rapidly instead of displaying your rendered view.
-
-
-
+> For the Xamarin.Mac version of OpenTK **do not** call the `SwapBuffers` method of your `MonoMacGameView` instance at the end of your rendering code. Doing so will cause the Game View to strobe rapidly instead of displaying your rendered view.
 
 <a name="Running_the_Game_View" />
 
-## Running the Game View
+### Running the Game View
 
 With all of the required events define and the Game View attached to the Main Mac Window of our app, we are read to run the Game View and display our graphics. Use the following code:
 
@@ -325,7 +298,7 @@ If we resize our window, the Game View will also be reside and the triangle will
 
 <a name="Where_to_Next" />
 
-# Where to Next?
+### Where to Next?
 
 With the basics of working with OpenTk in a Xamarin.mac application done, here are some suggestions of what to try out next:
 
@@ -341,11 +314,9 @@ For a more complex Xamarin.Mac example of an OpenTK implementation, please see o
 
 <a name="Summary" />
 
-# Summary
+## Summary
 
 This article has taken a quick look at working with OpenTK in a Xamarin.Mac application. We saw how to create a Game Window, how to attach the Game Window to a Mac Window and how to render a simple shape in the Game Window.
-
-
 
 ## Related Links
 

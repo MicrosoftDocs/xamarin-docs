@@ -42,15 +42,15 @@ The sample application demonstrates a todo list application whose data is stored
 
 [![](azure-images/screenshots.png "Sample Application Receiving a Push Notification")](azure-images/screenshots-large.png "Sample Application Receiving a Push Notification")
 
-For more information about Azure Notification Hubs, see [Azure Notification Hubs](https://azure.microsoft.com/en-us/documentation/articles/notification-hubs-push-notification-overview/) and [Add push notifications to your Xamarin.Forms app](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push) on Microsoft Docs.
+For more information about Azure Notification Hubs, see [Azure Notification Hubs](https://azure.microsoft.com/documentation/articles/notification-hubs-push-notification-overview/) and [Add push notifications to your Xamarin.Forms app](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push/).
 
 ## Azure and Platform Notification System Setup
 
 The process for integrating an Azure Notification Hub into an Azure Mobile Apps instance is as follows:
 
 1. Create an Azure Mobile Apps instance. For more information, see [Consuming an Azure Mobile App](~/xamarin-forms/data-cloud/consuming/azure.md).
-1. Configure a notification hub. For more information, see [Configure a notification hub](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#create-hub) on Microsoft Docs.
-1. Update the Azure Mobile Apps instance to send push notifications. For more information, see [Update the server project to send push notifications](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#update-the-server-project-to-send-push-notifications) on the Microsoft Docs.
+1. Configure a notification hub. For more information, see [Configure a notification hub](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#create-hub).
+1. Update the Azure Mobile Apps instance to send push notifications. For more information, see [Update the server project to send push notifications](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#update-the-server-project-to-send-push-notifications).
 1. Register with each PNS.
 1. Configure the notification hub to communicate with each PNS.
 
@@ -60,25 +60,25 @@ The following sections provide additional setup instructions for each platform.
 
 The following additional steps must be carried out to use Apple Push Notification Service (APNS) from an Azure Notification Hub:
 
-1. Generate a certificate signing request for the push certificate with the Keychain Access tool. For more information, see [Generate the Certificate Signing Request file for the push certificate](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#generate-the-certificate-signing-request-file-for-the-push-certificate) on the Azure Documentation Center.
-1. Register the Xamarin.Forms application for push notification support on the Apple Developer Center. For more information, see [Register your app for push notifications](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#register-your-app-for-push-notifications) on the Azure Documentation Center.
-1. Create a push notifications enabled provisioning profile for the Xamarin.Forms application on the Apple Developer Center. For more information, see [Create a provisioning profile for the app](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#create-a-provisioning-profile-for-the-app) on the Azure Documentation Center.
-1. Configure the notification hub to communicate with APNS. For more information, see [Configure the notification hub for APNS](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#configure-the-notification-hub-for-apns).
-1. Configure the Xamarin.Forms application to use the new App ID and provisioning profile. For more information, see [Configuring the iOS project in Xamarin Studio](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#configuring-the-ios-project-in-xamarin-studio) or [Configuring the iOS project in Visual Studio](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#configuring-the-ios-project-in-visual-studio) on the Azure Documentation Center.
+1. Generate a certificate signing request for the push certificate with the Keychain Access tool. For more information, see [Generate the Certificate Signing Request file for the push certificate](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#generate-the-certificate-signing-request-file-for-the-push-certificate) on the Azure Documentation Center.
+1. Register the Xamarin.Forms application for push notification support on the Apple Developer Center. For more information, see [Register your app for push notifications](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#register-your-app-for-push-notifications) on the Azure Documentation Center.
+1. Create a push notifications enabled provisioning profile for the Xamarin.Forms application on the Apple Developer Center. For more information, see [Create a provisioning profile for the app](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#create-a-provisioning-profile-for-the-app) on the Azure Documentation Center.
+1. Configure the notification hub to communicate with APNS. For more information, see [Configure the notification hub for APNS](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#configure-the-notification-hub-for-apns).
+1. Configure the Xamarin.Forms application to use the new App ID and provisioning profile. For more information, see [Configuring the iOS project in Xamarin Studio](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#configuring-the-ios-project-in-xamarin-studio) or [Configuring the iOS project in Visual Studio](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#configuring-the-ios-project-in-visual-studio) on the Azure Documentation Center.
 
 ### Android
 
 The following additional steps must be carried out to use Firebase Cloud Messaging (FCM) from an Azure Notification Hub:
 
-1. Register for FCM. A Server API key and a Client ID are automatically generated, and packed in a `google-services.json` file that is downloaded. For more information, see [Enable Firebase Cloud Messaging (FCM)](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#enable-firebase-cloud-messaging-fcm) on Microsoft Docs.
-1. Configure the notification hub to communicate with FCM. For more information, see [Configure the Mobile Apps back end to send push requests by using FCM](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#configure-the-mobile-apps-back-end-to-send-push-requests-by-using-fcm) on Microsoft Docs.
+1. Register for FCM. A Server API key and a Client ID are automatically generated, and packed in a `google-services.json` file that is downloaded. For more information, see [Enable Firebase Cloud Messaging (FCM)](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#enable-firebase-cloud-messaging-fcm).
+1. Configure the notification hub to communicate with FCM. For more information, see [Configure the Mobile Apps back end to send push requests by using FCM](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#configure-the-mobile-apps-back-end-to-send-push-requests-by-using-fcm).
 
 ### Universal Windows Platform
 
 The following additional steps must be carried out to use the Windows Notification Service (WNS) from an Azure Notification Hub:
 
-1. Register for the Windows Notification Service (WNS). For more information, see [Register your Windows app for push notifications with WNS](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#register-your-windows-app-for-push-notifications-with-wns) on the Azure Documentation Center.
-1. Configure the notification hub to communicate with WNS. For more information, see [Configure the notification hub for WNS](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#configure-the-notification-hub-for-wns) on the Azure Documentation Center.
+1. Register for the Windows Notification Service (WNS). For more information, see [Register your Windows app for push notifications with WNS](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#register-your-windows-app-for-push-notifications-with-wns) on the Azure Documentation Center.
+1. Configure the notification hub to communicate with WNS. For more information, see [Configure the notification hub for WNS](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/#configure-the-notification-hub-for-wns) on the Azure Documentation Center.
 
 ## Adding Push Notification Support to the Xamarin.Forms Application
 
@@ -193,7 +193,7 @@ For more information about Firebase Cloud Messaging, see [Firebase Cloud Messagi
 
 #### Registering with Firebase Cloud Messaging
 
-Before an Android application can receive push notifications, it must register with FCM, which will generate a registration token and return it to the application. For more information about registration tokens, see [Registration with FCM](https://developer.xamarin.com/guides/android/application_fundamentals/notifications/firebase-cloud-messaging/#registration).
+Before an Android application can receive push notifications, it must register with FCM, which will generate a registration token and return it to the application. For more information about registration tokens, see [Registration with FCM](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md#registration).
 
 This is accomplished by:
 
@@ -411,8 +411,8 @@ This article demonstrated how to use Azure Notification Hubs to send push notifi
 ## Related Links
 
 - [Consuming an Azure Mobile App](~/xamarin-forms/data-cloud/consuming/azure.md)
-- [Azure Notification Hubs](https://azure.microsoft.com/en-us/documentation/articles/notification-hubs-push-notification-overview/)
-- [Add push notifications to your Xamarin.Forms app](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/)
+- [Azure Notification Hubs](https://azure.microsoft.com/documentation/articles/notification-hubs-push-notification-overview/)
+- [Add push notifications to your Xamarin.Forms app](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/)
 - [Push Notifications in iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md)
 - [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md)
 - [TodoAzurePush (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzurePush/)

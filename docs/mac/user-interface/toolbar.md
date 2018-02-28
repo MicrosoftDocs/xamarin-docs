@@ -14,8 +14,6 @@ ms.date: 03/14/2017
 
 _This article describes working with toolbars in a Xamarin.Mac application. It covers creating and maintaining toolbars in Xcode and Interface Builder, exposing them to code, and working with them programmatically._
 
-## Overview
-
 Xamarin.Mac developers working with Visual Studio for Mac have access to the same UI controls available to macOS developers working with Xcode, including the toolbar control. Because Xamarin.Mac integrates directly with Xcode, it's possible to use Xcode's Interface Builder to create and maintain toolbar items. These toolbar items can also be created in C#.
 
 Toolbars in macOS are added to the top section of a window and provide easy access to commands related to its functionality. Toolbars can be hidden, shown, or customized by an application's users, and they can present toolbar items in various ways.
@@ -142,7 +140,7 @@ The following toolbar items can be added:
      ![The font selector](toolbar-images/edit08.png "The font selector")
 
 > [!IMPORTANT]
-> **NOTE:** As will be seen later, many standard Cocoa UI controls such as search fields, segmented controls, and horizontal sliders can also be added to a toolbar.
+> As will be seen later, many standard Cocoa UI controls such as search fields, segmented controls, and horizontal sliders can also be added to a toolbar.
 
 ### Adding an item to a toolbar
 
@@ -170,7 +168,7 @@ The following properties are available:
 - **Selectable** - If checked, the item will act like an on/off button.
 
 > [!IMPORTANT]
-> **NOTE:** Add an item to the **Allowed Toolbar Items** area but not the default toolbar to provide customization options for users. 
+> Add an item to the **Allowed Toolbar Items** area but not the default toolbar to provide customization options for users. 
 
 ### Adding other UI controls to a toolbar
 

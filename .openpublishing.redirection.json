@@ -1,0 +1,9 @@
+{
+    "redirections": [
+      {
+          "source_path": "docs/cross-platform/getting-started/index.md",
+          "redirect_url": "/xamarin/cross-platform/get-started"
+      }
+    ]
+  }
+  

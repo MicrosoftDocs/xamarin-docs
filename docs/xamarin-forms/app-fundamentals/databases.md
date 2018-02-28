@@ -28,7 +28,8 @@ The accompanying [sample application](https://github.com/xamarin/xamarin-forms-s
 
 This section shows how to add the SQLite.Net NuGet packages to a Xamarin.Forms solution, write methods to perform database operations, and use the [`DependencyService`](~/xamarin-forms/app-fundamentals/dependency-service/index.md) to determine a location to store the database on each platform.
 
-<a name="XamarinForms_PCL_Project" /
+<a name="XamarinForms_PCL_Project" />
+
 ### Xamarins.Forms PCL Project
 
 To add SQLite support to a Xamarin.Forms PCL project, use NuGet's search function to find **sqlite-net-pcl** and install the package:
@@ -129,7 +130,7 @@ To configure the iOS application, add the same NuGet package to the iOS project 
 
 ![](databases-images/vsmac-sqlite-nuget.png "Add NuGet SQLite.NET PCL Package")
 
-The only code required is the `IFileHelper` implementation that determines the data file path. The following code places the SQLite database file in the **Library/Databases** folder within the application's sandbox. See the [iOS Working with the File System](http://developer.xamarin.com/guides/ios/application_fundamentals/working_with_the_file_system/) documentation for more information on the different directories that are available for storage.
+The only code required is the `IFileHelper` implementation that determines the data file path. The following code places the SQLite database file in the **Library/Databases** folder within the application's sandbox. See the [iOS Working with the File System](~/ios/app-fundamentals/file-system.md) documentation for more information on the different directories that are available for storage.
 
 ```csharp
 [assembly: Dependency(typeof(FileHelper))]

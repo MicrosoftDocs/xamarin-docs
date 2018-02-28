@@ -23,6 +23,8 @@ This page briefly discusses:
 * the supported [device types](#Device_Types), and
 * how to [optimize](#optimize) layouts for tablets versus phones.
 
+<a name="Device_Types" />
+
 ## Device Types
 
 Larger screen devices are available for all of the platforms

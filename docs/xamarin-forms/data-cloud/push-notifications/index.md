@@ -7,6 +7,7 @@ ms.assetid: F58D2D81-FFAF-43DD-8A9B-3684DFEAA99D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 11/02/2017
 ---
 
 # Sending Push Notifications

@@ -7,6 +7,7 @@ ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 03/06/2017
 ---
 
 # Introduction to DependencyService

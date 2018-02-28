@@ -25,13 +25,19 @@ This article will cover:
   - **[Proportional Values](#Proportional_Values)** &ndash; understand how proportional values work.
 	- **[Absolute Values](#Absolute_Values)** &ndash; understand how absolute values work.
 
+<a name="Purpose" />
+
 ## Purpose
 
 Because of the positioning model of `AbsoluteLayout`, the layout makes it relatively straightforward to position elements so that they are flush with any side of the layout, or centered. With proportional sizes and positions, elements in an `AbsoluteLayout` can scale automatically to any view size. For items where only the position but not the size should scale, absolute and proportional values can be mixed.
 
 `AbsoluteLayout` could be used anywhere elements need to be positioned within a view and is especially useful when aligning elements to edges.
 
+<a name="Usage" />
+
 ## Usage
+
+<a name="Proportional_Layouts" />
 
 ### Proportional Layouts
 
@@ -47,6 +53,8 @@ Note in the following screenshot, the anchor of the box is a white dot. Notice t
 ![](absolute-layout-images/anchor-start.png "Anchor at Start")
 ![](absolute-layout-images/anchor-center.png "Anchor at Center")
 ![](absolute-layout-images/anchor-end.png "Anchor at End")
+
+<a name="Specifying_Values" />
 
 ### Specifying Values
 
@@ -151,6 +159,7 @@ public class AbsoluteLayoutExplorationCode : ContentPage
 	}
 }
 ```
+<a name="Proportional_Values" />
 
 ### Proportional Values
 
@@ -174,6 +183,9 @@ var label = new Label {Text = "I'm bottom center on every device."};
 AbsoluteLayout.SetLayoutBounds(label, new Rectangle(.5,1,.5,.1));
 AbsoluteLayout.SetLayoutFlags(label, AbsoluteLayoutFlags.All);
 ```
+
+<a name="Absolute_Values" />
+
 ### Absolute Values
 
 Absolute values explicitly define where views should be positioned within the layout. Unlike proportional values, absolute values are capable of positioning and sizing a view that does not fit within the bounds of the layout.
@@ -195,6 +207,7 @@ In C#:
 var label = new Label {Text = "I'm centered on iPhone 4 but no other device."};
 AbsoluteLayout.SetLayoutBounds(label, new Rectangle(115,150,100,100));
 ```
+
 ## Exploring a Complex Layout
 
 Each of the layouts have strengths and weaknesses for creating particular layouts. Throughout this series of layout articles, a sample app has been created with the same page layout implemented using three different layouts.

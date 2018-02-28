@@ -342,7 +342,7 @@ void OnNavigated(object sender, NavigationEventArgs e)
 
 The `OnNavigated` event handler, which is executed in response to the `Navigated` event firing, updates the visibility of the title bar back button when page navigation occurs. This ensures that the title bar back button is visible if the in-app back stack is not empty, or removed from the title bar if the in-app back stack is empty.
 
-For more information about back navigation support on UWP, see [Navigation history and backwards navigation for UWP apps](https://docs.microsoft.com/en-us/windows/uwp/design/basics/navigation-history-and-backwards-navigation).
+For more information about back navigation support on UWP, see [Navigation history and backwards navigation for UWP apps](/windows/uwp/design/basics/navigation-history-and-backwards-navigation/).
 
 ## Summary
 

@@ -14,10 +14,6 @@ ms.date: 03/14/2017
 
 _This article covers working with alerts in a Xamarin.Mac application. It describes creating and displaying alerts from C# code and responding to user interactions._
 
-<a name="Overview" />
-
-# Overview
-
 When working with C# and .NET in a Xamarin.Mac application, you have access to the same Alerts that a developer working in in *Objective-C* and *Xcode* does. 
 
 An alert is a special type of dialog that appears when a serious problem occurs (such as an error) or as a warning (such as preparing to delete a file). Because an alert is a dialog, it also requires a user response before it can be closed.
@@ -28,7 +24,7 @@ In this article, we'll cover the basics of working with Alerts in a Xamarin.Mac 
 
 <a name="Introduction_to_Alerts" />
 
-# Introduction to Alerts
+## Introduction to Alerts
 
 An alert is a special type of dialog that appears when a serious problem occurs (such as an error) or as a warning (such as preparing to delete a file). Because Alerts disrupt the user since they must be dismissed before the user can continue on with their task, avoid displaying an alert unless it’s absolutely necessary.
 
@@ -45,7 +41,7 @@ For more information, see the [Alerts](https://developer.apple.com/library/mac/d
 
 <a name="Anatomy_of_an_Alert" />
 
-# Anatomy of an Alert
+## Anatomy of an Alert
 
 As stated above, alerts should be shown to your application's user when a serious problem occurs or as a warning to potential data loss (such as closing an unsaved file). In Xamarin.Mac, an alert is created in C# code, for example:
 
@@ -78,7 +74,7 @@ Apple provides several properties that can be used to customize an alert:
 
 <a name="Displaying_an_Alert" />
 
-# Displaying an Alert
+## Displaying an Alert
 
 There are two different ways that an alert can be displayed, Free-Floating or as a Sheet. The following code displays an alert as free-floating:
 
@@ -112,7 +108,7 @@ If this code is run, the following will be displayed:
 
 <a name="Working_with_Alert_Buttons" />
 
-# Working with Alert Buttons
+## Working with Alert Buttons
 
 By default, an Alert displays only the **OK** button. However, you are not limited to that, you can create extra buttons by appending them to the **Buttons** collection. The following code creates a free-floating alert with a **OK**, **Cancel** and **Maybe** button:
 
@@ -158,14 +154,11 @@ If this code is run, the following will be displayed:
 [ ![](alert-images/alert05.png "A three button alert displayed as a sheet")](alert-images/alert05.png)
 
 > [!IMPORTANT]
-> **NOTE:** You should never add more than three buttons to an alert.
-
-
-
+> You should never add more than three buttons to an alert.
 
 <a name="Showing_the_Suppress_Button" />
 
-#Showing the Suppress Button
+## Showing the Suppress Button
 
 If the Alert's `ShowSuppressButton` property is `true`, the alert displays a checkbox that the user can use to suppress the alert for subsequent occurrences of the event that triggered it. The following code displays a free-floating alert with a suppress button:
 
@@ -212,7 +205,7 @@ If this code is run, the following will be displayed:
 
 <a name="Adding_a_Custom_SubView" />
 
-# Adding a Custom SubView
+## Adding a Custom SubView
 
 Alerts have an `AccessoryView` property that can be used to customize the alert further and add things like a **Text Field** for user input. The following code creates a free-floating alert with an added text input field:
 
@@ -267,12 +260,9 @@ If we run this code, the following will be displayed:
 
 <a name="Summary" />
 
-# Summary
+## Summary
 
 This article has taken a detailed look at working with Alerts in a Xamarin.Mac application. We saw the different types and uses of Alerts, how to create and customize Alerts and how to work with Alerts in C# code.
-
-
-
 
 ## Related Links
 

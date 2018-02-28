@@ -30,7 +30,7 @@ There are two types of storage accounts:
 
 This article, and accompanying sample application, demonstrates uploading image and text files to blob storage, and downloading them. In addition, it also demonstrates retrieving a list of files from blob storage, and deleting files.
 
-For more information about Azure Storage, see [Introduction to Storage](https://azure.microsoft.com/en-gb/documentation/articles/storage-introduction/).
+For more information about Azure Storage, see [Introduction to Storage](https://azure.microsoft.com/documentation/articles/storage-introduction/).
 
 ## Introduction to Blob Storage
 
@@ -59,7 +59,7 @@ The URL for accessing an object in a storage account is built by appending the o
 
 The process for integrating an Azure Storage account into a Xamarin.Forms application is as follows:
 
-1. Create a storage account. For more information, see [Create a storage account](https://azure.microsoft.com/en-gb/documentation/articles/storage-create-storage-account/#create-a-storage-account).
+1. Create a storage account. For more information, see [Create a storage account](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account).
 1. Add the [Azure Storage Client Library](https://www.nuget.org/packages/WindowsAzure.Storage/) to the Xamarin.Forms application.
 1. Configure the storage connection string. For more information, see [Connecting to Azure Storage](#connecting).
 1. Add `using` directives for the `Microsoft.WindowsAzure.Storage` and `Microsoft.WindowsAzure.Storage.Blob` namespaces to classes that will access Azure Storage.
@@ -91,7 +91,7 @@ The following connection string should be used to connect to the Azure Storage e
 UseDevelopmentStorage=true
 ```
 
-For more information about the Azure Storage Emulator, see [Use the Azure Storage Emulator for Development and testing](https://azure.microsoft.com/en-gb/documentation/articles/storage-use-emulator/).
+For more information about the Azure Storage Emulator, see [Use the Azure Storage Emulator for Development and testing](https://azure.microsoft.com/documentation/articles/storage-use-emulator/).
 
 ### Connecting to Azure Storage Using a Shared Key
 
@@ -117,7 +117,7 @@ The following connection string format should be used to connect to Azure Storag
 > [!NOTE]
 > SAS authentication is recommended for production applications. However, in a production application the SAS should be retrieved from a backend service on-demand, rather than being bundled with the application.
 
-For more information about Shared Access Signatures, see [Using Shared Access Signatures (SAS)](https://azure.microsoft.com/en-gb/documentation/articles/storage-dotnet-shared-access-signature-part-1/).
+For more information about Shared Access Signatures, see [Using Shared Access Signatures (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).
 
 ## Creating a Container
 
@@ -149,7 +149,7 @@ The `CloudBlobContainer` instance can then be used to create a container if it d
 await container.CreateIfNotExistsAsync();
 ```
 
-By default, a newly created container is private. This means that a storage access key must be specified to retrieve blobs from the container. For information about making blobs within a container public, see [Create a container](https://azure.microsoft.com/en-gb/documentation/articles/storage-dotnet-how-to-use-blobs/#create-a-container).
+By default, a newly created container is private. This means that a storage access key must be specified to retrieve blobs from the container. For information about making blobs within a container public, see [Create a container](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-blobs/#create-a-container).
 
 ## Uploading Data to a Container
 
@@ -265,7 +265,7 @@ This article demonstrated how to use Xamarin.Forms to store text and binary data
 ## Related Links
 
 - [Azure Storage (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
-- [Introduction to Storage](https://azure.microsoft.com/en-gb/documentation/articles/storage-introduction/)
-- [How to use Blob Storage from Xamarin](https://azure.microsoft.com/en-gb/documentation/articles/storage-xamarin-blob-storage/)
-- [Using Shared Access Signatures (SAS)](https://azure.microsoft.com/en-gb/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
+- [Introduction to Storage](https://azure.microsoft.com/documentation/articles/storage-introduction/)
+- [How to use Blob Storage from Xamarin](https://azure.microsoft.com/documentation/articles/storage-xamarin-blob-storage/)
+- [Using Shared Access Signatures (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
 - [Windows Azure Storage](https://www.nuget.org/packages/WindowsAzure.Storage/)

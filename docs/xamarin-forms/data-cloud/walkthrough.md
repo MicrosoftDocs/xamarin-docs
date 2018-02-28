@@ -7,6 +7,7 @@ ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 02/28/2017
 ---
 
 # Understanding the Sample

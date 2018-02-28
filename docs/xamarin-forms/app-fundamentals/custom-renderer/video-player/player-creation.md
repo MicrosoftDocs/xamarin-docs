@@ -32,11 +32,11 @@ namespace FormsVideoLibrary
 
 The members of this class (and the `IVideoPlayerController` interface) are described in the articles that follow.
 
-Each of the three platforms contains a class named `VideoPlayerRenderer` that contains the platform-specific code to implement a video player. The primary task of this renderer is to create a video player for that platform. 
+Each of the three platforms contains a class named `VideoPlayerRenderer` that contains the platform-specific code to implement a video player. The primary task of this renderer is to create a video player for that platform.
 
 ### The iOS player view controller
 
-Several classes are involved when implementing a video player in iOS. The application first creates an [`AVPlayerViewController`](https://developer.xamarin.com/api/type/AVKit.AVPlayerViewController/) and then sets the [`Player`](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.Player/) property to an object of type [`AVPlayer`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayer/). Additional classes are required when the player is assigned a video source. 
+Several classes are involved when implementing a video player in iOS. The application first creates an [`AVPlayerViewController`](https://developer.xamarin.com/api/type/AVKit.AVPlayerViewController/) and then sets the [`Player`](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.Player/) property to an object of type [`AVPlayer`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayer/). Additional classes are required when the player is assigned a video source.
 
 Like all renderers, the iOS [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/VideoPlayerRenderer.cs) contains an `ExportRenderer` attribute that identifies the `VideoPlayer` view with the renderer:
 
@@ -54,7 +54,7 @@ using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(FormsVideoLibrary.VideoPlayer), 
+[assembly: ExportRenderer(typeof(FormsVideoLibrary.VideoPlayer),
                           typeof(FormsVideoLibrary.iOS.VideoPlayerRenderer))]
 
 namespace FormsVideoLibrary.iOS
@@ -113,7 +113,7 @@ Generally the `Control` property of the renderer class thereafter refers to the 
 
 ### The Android video view
 
-The Android renderer for `VideoPlayer` is based on the Android [`VideoView`](https://developer.xamarin.com/api/type/Android.Widget.VideoView/) class. However, if `VideoView` is used by itself to play a video in a Xamarin.Forms application, the video fills the area alloted for the `VideoPlayer` without maintaining the correct aspect ratio. For this reason (as you'll see shortly), the `VideoView` is made a child of an Android `RelativeLayout`. A `using` directive defines `ARelativeLayout` to distinguish it from the Xamarin.Forms `RelativeLayout`, and that's the second generic argument in the `ViewRenderer`: 
+The Android renderer for `VideoPlayer` is based on the Android [`VideoView`](https://developer.xamarin.com/api/type/Android.Widget.VideoView/) class. However, if `VideoView` is used by itself to play a video in a Xamarin.Forms application, the video fills the area alloted for the `VideoPlayer` without maintaining the correct aspect ratio. For this reason (as you'll see shortly), the `VideoView` is made a child of an Android `RelativeLayout`. A `using` directive defines `ARelativeLayout` to distinguish it from the Xamarin.Forms `RelativeLayout`, and that's the second generic argument in the `ViewRenderer`:
 
 ```csharp
 using System;
@@ -213,7 +213,7 @@ A handler for the `Prepared` event is attached in this method and detached in th
 
 ### The UWP media element
 
-In the Universal Windows Platform (UWP), the most common video player is [`MediaElement`](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.MediaElement). That documentation of `MediaElement` indicates that the [`MediaPlayerElement`](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.mediaplayerelement) should be used instead when it's only necessary to support versions of Windows 10 beginning with build 1607.
+In the Universal Windows Platform (UWP), the most common video player is [`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/). That documentation of `MediaElement` indicates that the [`MediaPlayerElement`](/uwp/api/windows.ui.xaml.controls.mediaplayerelement/) should be used instead when it's only necessary to support versions of Windows 10 beginning with build 1607.
 
 The `OnElementChanged` override needs to create a `MediaElement`, set a couple of event handlers, and pass the `MediaElement` object to `SetNativeControl`:
 
@@ -299,9 +299,9 @@ namespace FormsVideoLibrary
 }
 ```
 
-Although this property has both `set` and `get` accessors, the renderer has to handle cases only when the property is set. The `get` accessor simply returns the current value of the property. 
+Although this property has both `set` and `get` accessors, the renderer has to handle cases only when the property is set. The `get` accessor simply returns the current value of the property.
 
-Properties such as `AreTransportControlsEnabled` are handled in platform renderers in two ways: 
+Properties such as `AreTransportControlsEnabled` are handled in platform renderers in two ways:
 
 - The first time is when Xamarin.Forms creates a `VideoPlayer` element. This is indicated in the `OnElementChanged` override of the renderer when the `NewElement` property is not `null`. At this time, the renderer can set is own platform video player from the property's initial value as defined in the `VideoPlayer`.
 
@@ -417,7 +417,7 @@ namespace FormsVideoLibrary.Droid
 
 ### The UWP Transport Controls property
 
-The UWP `MediaElement` defines a property named [`AreTransportControlsEnabled`](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_AreTransportControlsEnabled), so that property is set from the `VideoPlayer` property of the same name:
+The UWP `MediaElement` defines a property named [`AreTransportControlsEnabled`](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_AreTransportControlsEnabled), so that property is set from the `VideoPlayer` property of the same name:
 
 ```csharp
 namespace FormsVideoLibrary.UWP

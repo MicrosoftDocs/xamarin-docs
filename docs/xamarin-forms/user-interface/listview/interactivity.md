@@ -7,6 +7,7 @@ ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 03/08/2016
 ---
 
 # ListView Interactivity
@@ -51,7 +52,7 @@ With selection enabled:
 
 Note that on Windows Phone, some cells, including `SwitchCell` don't update their visual state in response to selection.
 
-<a name="contextactions" />
+<a name="Context_Actions" />
 
 ## Context Actions
 Often, users will want to take action on an item in a `ListView`. For example, consider a list of emails in the Mail app. On iOS, you can swipe to delete a message and on Windows Phone, you can long-press a message and then delete it:

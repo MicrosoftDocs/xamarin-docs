@@ -498,7 +498,7 @@ public void ArcTo (SKPoint r, Single xAxisRotate, SKPathArcSize largeArc, SKPath
 public void ArcTo (Single rx, Single ry, Single xAxisRotate, SKPathArcSize largeArc, SKPathDirection sweep, Single x, Single y)
 ```
 
-The elliptical arc is consistent with the [elliptical arc](http://www.w3.org/TR/SVG11/paths.html#PathDataEllipticalArcCommands) included in Scalable Vector Graphics (SVG) and the Universal Windows Platform [`ArcSegment`](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Media.ArcSegment) class.
+The elliptical arc is consistent with the [elliptical arc](http://www.w3.org/TR/SVG11/paths.html#PathDataEllipticalArcCommands) included in Scalable Vector Graphics (SVG) and the Universal Windows Platform [`ArcSegment`](/uwp/api/Windows.UI.Xaml.Media.ArcSegment/) class.
 
 These `ArcTo` methods draw an arc between two points, which is the current point of the contour, and the last parameter to the `ArcTo` method (the `xy` parameter or the separate `x` and `y` parameters):
 

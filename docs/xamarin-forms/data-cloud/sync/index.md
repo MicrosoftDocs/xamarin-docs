@@ -7,6 +7,7 @@ ms.assetid: 8A7794BB-F21D-49BF-92F0-76383BBED791
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 06/16/2017
 ---
 
 # Synchronizing Data with Web Services

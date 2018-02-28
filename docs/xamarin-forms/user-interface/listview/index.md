@@ -23,7 +23,7 @@ ListView is a view for presenting lists of data, especially long lists that requ
 ## Use Cases
 Make sure ListView is the right control for your needs. ListView can be used in any situation where you are displaying scrollable lists of data. ListViews support context actions and data binding.
 
-ListView should not be confused with [TableView](http://developer.xamarin.com/guides/xamarin-forms/working-with/tableview/). The TableView control is a better option whenever you have a non-bound list of options or data. For example, the iOS settings app, which has a mostly predefined set of options, is better suited to use TableView than ListView.
+ListView should not be confused with [TableView](~/xamarin-forms/user-interface/tableview.md). The TableView control is a better option whenever you have a non-bound list of options or data. For example, the iOS settings app, which has a mostly predefined set of options, is better suited to use TableView than ListView.
 
 Also note that a ListView is best suited for homogeneous data &ndash; that is, all data should be of the same type. This is because only one type of cell can be used for each row in the list. TableViews can support multiple cell types, so they are a better option when you need to mix views.
 
@@ -31,7 +31,7 @@ Also note that a ListView is best suited for homogeneous data &ndash; that is, a
 ## Components
 ListView has a number of components available to exercise the native functionality of each platform. Each of these components is described below:
 
-- **[Headers and Footers](customizing-list-appearance.md#headers-footers)** &ndash; Text or view to display at the beginning and end of a list, separate from list's data. Headers and footers can be bound to a data source independently from the ListView's data source.
+- **[Headers and Footers](customizing-list-appearance.md#Headers_and_Footers)** &ndash; Text or view to display at the beginning and end of a list, separate from list's data. Headers and footers can be bound to a data source independently from the ListView's data source.
 - **[Groups](customizing-list-appearance.md#Grouping)** &ndash; Data in a ListView can be grouped for easier navigation. Groups are typically data bound:
 
 ![](images/grouping-depth.png "ListView with Grouped Data")
@@ -50,7 +50,7 @@ To learn more about customizing cells in a ListView, see [Customizing ListView C
 ListView supports a number of interaction styles, including:
 
 - **[Pull-to-Refresh](interactivity.md#Pull_to_Refresh)** &ndash; ListView supports pull-to-refresh on each platform.
-- **[Context Actions](interactivity.md#contextactions)** &ndash; ListView supports taking action on individual items in a list. For example, you can implement swipe-to-action on iOS, or long-tap actions on Android and Windows Phone.
+- **[Context Actions](interactivity.md#Context_Actions)** &ndash; ListView supports taking action on individual items in a list. For example, you can implement swipe-to-action on iOS, or long-tap actions on Android and Windows Phone.
 - **[Selection](interactivity.md#selectiontaps)** &ndash; You can listen for selections and deselections to take action when a row is tapped.
 
 ![](images/context-default.png "ListView with Context Actions")

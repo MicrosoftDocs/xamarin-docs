@@ -14,10 +14,6 @@ ms.date: 03/14/2017
 
 _This article covers working with source lists in a Xamarin.Mac application. It describes creating and maintaining source lists in Xcode and Interface Builder and interacting with them in C# code._
 
-<a name="Overview" />
-
-# Overview
-
 When working with C# and .NET in a Xamarin.Mac application, you have access to the same Source Lists that a developer working in in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Source Lists (or optionally create them directly in C# code).
 
 A Source List is a special type of Outline View used to show the source of an action, like the side bar in Finder or iTunes.
@@ -30,7 +26,7 @@ You may want to take a look at the [Exposing C# classes / methods to Objective-C
 
 <a name="Introduction_to_Outline_Views" />
 
-# Introduction to Source Lists
+## Introduction to Source Lists
 
 As stated above, a Source List is a special type of Outline View used to show the source of an action, like the side bar in Finder or iTunes. A Source List is a type of Table that allows the user expand or collapse rows of hierarchical data. Unlike a Table View, items in an Source List are not in a flat list, they are organized in a hierarchy, like files and folders on a hard drive. If an item in an Source List contains other items, it can be expanded or collapsed by the user.
 
@@ -44,7 +40,7 @@ Since a Source List shares much of it's behavior and functionality with a Table 
 
 <a name="Working_with_Source_Lists" />
 
-# Working with Source Lists
+## Working with Source Lists
 
 A Source List is a special type of Outline View used to show the source of an action, like the side bar in Finder or iTunes. Unlike Outline Views, before we define our Source List in Interface Builder, let's create the backing classes in Xamarin.Mac.
 
@@ -528,7 +524,7 @@ This creates a custom, reusable subclass of `NSOutlineView` (`SourceListView`) t
 
 <a name="Creating_and_Maintaining_Source_Lists_in_Xcode" />
 
-# Creating and Maintaining Source Lists in Xcode
+## Creating and Maintaining Source Lists in Xcode
 
 Now, let's design our Source List in Interface Builder. Double-click the `Main.storyboard` file to open it for editing in Interface Builder and drag a Split View from the **Library Inspector**, add it to the View Controller and set it to resize with the View in the **Constraints Editor**:
 
@@ -550,7 +546,7 @@ Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
 <a name="Populating the Source List" />
 
-# Populating the Source List
+## Populating the Source List
 
 Let's edit the `RotationWindow.cs` file in Visual Studio for Mac and make it's `AwakeFromNib` method look like the following:
 
@@ -618,12 +614,9 @@ If we run our application, the following will be displayed:
 
 <a name="Summary" />
 
-# Summary
+## Summary
 
 This article has taken a detailed look at working with Source Lists in a Xamarin.Mac application. We saw how to create and maintain Source Lists in Xcode's Interface Builder and how to work with Source Lists in C# code.
-
-
-
 
 ## Related Links
 

@@ -7,6 +7,7 @@ ms.assetid: F4180997-BA21-453A-9958-D1E2940DF050
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 01/12/2016
 ---
 
 # Xamarin.Forms Layouts

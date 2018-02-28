@@ -14,7 +14,7 @@ ms.date: 01/05/2018
 
 Data bindings usually transfer data from a source property to a target property, and in some cases from the target property to the source property. This transfer is straightforward when the source and target properties are of the same type, or when one type can be converted to the other type through an implicit conversion. When that is not the case, a type conversion must take place.
 
-In the [**String Formatting**](string-formatting.md) article, you saw how you can use the `StringFormat` property of a data binding to convert any type into a string. For other types of conversions, you need to write some specialized code in a class that implements the [`IValueConverter`](https://developer.xamarin.com/api/type/Xamarin.Forms.IValueConverter/) interface. (The Universal Windows Platform contains a similar class named [`IValueConverter`](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Data.IValueConverter) in the `Windows.UI.Xaml.Data` namespace, but this `IValueConverter` is in the `Xamarin.Forms` namespace.) Classes that implement `IValueConverter` are called *value converters*, but they are also often referred to as *binding converters* or *binding value converters*.
+In the [**String Formatting**](string-formatting.md) article, you saw how you can use the `StringFormat` property of a data binding to convert any type into a string. For other types of conversions, you need to write some specialized code in a class that implements the [`IValueConverter`](https://developer.xamarin.com/api/type/Xamarin.Forms.IValueConverter/) interface. (The Universal Windows Platform contains a similar class named [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/) in the `Windows.UI.Xaml.Data` namespace, but this `IValueConverter` is in the `Xamarin.Forms` namespace.) Classes that implement `IValueConverter` are called *value converters*, but they are also often referred to as *binding converters* or *binding value converters*.
 
 ## The IValueConverter Interface
 
@@ -37,9 +37,9 @@ public class IntToBoolConverter : IValueConverter
 }
 ```
 
-You set an instance of this class to the [`Converter`](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Converter/) property of the `Binding` class or to the [`Converter`](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Converter/) property of the `Binding` markup extension. This class becomes part of the data binding. 
+You set an instance of this class to the [`Converter`](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Converter/) property of the `Binding` class or to the [`Converter`](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Converter/) property of the `Binding` markup extension. This class becomes part of the data binding.
 
-The `Convert` method is called when data moves from the source to the target in `OneWay` or `TwoWay` bindings. The `value` parameter is the object or value from the data-binding source. The method must return a value of the type of the data-binding target. The method shown here casts the `value` parameter to an `int` and then compares it with 0 for a `bool` return value. 
+The `Convert` method is called when data moves from the source to the target in `OneWay` or `TwoWay` bindings. The `value` parameter is the object or value from the data-binding source. The method must return a value of the type of the data-binding target. The method shown here casts the `value` parameter to an `int` and then compares it with 0 for a `bool` return value.
 
 The `ConvertBack` method is called when data moves from the target to the source in `TwoWay` or `OneWayToSource` bindings. `ConvertBack` performs the opposite conversion: It assumes the `value` parameter is a `bool` from the target, and converts it to an `int` return value for the source.
 
@@ -58,7 +58,7 @@ The **Enable Buttons** page in the [**Data Binding Demos**](https://developer.xa
             <local:IntToBoolConverter x:Key="intToBool" />
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout Padding="10, 0">
         <Entry x:Name="entry1"
                Text=""
@@ -93,11 +93,11 @@ The **Enable Buttons** page demonstrates a common need when a `Button` performs 
 
 [![Enable Buttons](converters-images/enablebuttons-small.png "Enable Buttons")](converters-images/enablebuttons-large.png "Enable Buttons")
 
-Notice that the `Text` property in each `Entry` is initialized to an empty string. The `Text` property is `null` by default, and the data binding will not work in that case. 
+Notice that the `Text` property in each `Entry` is initialized to an empty string. The `Text` property is `null` by default, and the data binding will not work in that case.
 
 Some value converters are written specifically for particular applications, while others are generalized. If you know that a value converter will only be used in `OneWay` bindings, then the `ConvertBack` method can simply return `null`.
 
-The `Convert` method shown above implicitly assumes that the `value` argument is of type `int` and the return value must be of type `bool`. Similarly, the `ConvertBack` method assumes that the `value` argument is of type `bool` and the return value is `int`. If that is not the case, a runtime exception will occur. 
+The `Convert` method shown above implicitly assumes that the `value` argument is of type `int` and the return value must be of type `bool`. Similarly, the `ConvertBack` method assumes that the `value` argument is of type `bool` and the return value is `int`. If that is not the case, a runtime exception will occur.
 
 You can write value converters to be more generalized and to accept several different types of data. The `Convert` and `ConvertBack` methods can use the `as` or `is` operators with the `value` parameter, or can call `GetType` on that parameter to determine its type, and then do something appropriate. The expected type of each method's return value is given by the `targetType` parameter. Sometimes, value converters are used with data bindings of different target types; the value converter can use the `targetType` argument to perform a conversion for the correct type.
 
@@ -146,7 +146,7 @@ The **Switch Indicators** page demonstrates how it can be used to display the va
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout Padding="10, 0">
         <StackLayout Orientation="Horizontal"
                      VerticalOptions="CenterAndExpand">
@@ -246,7 +246,7 @@ The use of `ConverterParameter` is demonstrated with a color-selection program. 
 public class RgbColorViewModel : INotifyPropertyChanged
 {
     Color color;
-    string name; 
+    string name;
 
     public event PropertyChangedEventHandler PropertyChanged;
 
@@ -259,7 +259,7 @@ public class RgbColorViewModel : INotifyPropertyChanged
                 Color = new Color(value, color.G, color.B);
             }
         }
-        get 
+        get
         {
             return color.R;
         }
@@ -334,7 +334,7 @@ public class RgbColorViewModel : INotifyPropertyChanged
 }
 ```
 
-The `Red`, `Green`, and `Blue` properties range between 0 and 1. However, you might prefer that the components be displayed as two-digit hexadecimal values. 
+The `Red`, `Green`, and `Blue` properties range between 0 and 1. However, you might prefer that the components be displayed as two-digit hexadecimal values.
 
 To display these as hexadecimal values in XAML, they must be multiplied by 255, converted to an integer, and then formatted with a specification of "X2" in the `StringFormat` property. The first two tasks (multiplying by 255 and converting to an integer) can be handled by the value converter. To make the value converter as generalized as possible, the multiplication factor can be specified with the `ConverterParameter` property, which means that it enters the `Convert` and `ConvertBack` methods as the `parameter` argument:
 
@@ -380,7 +380,7 @@ The `ConverterParameter` property is of type `Object`, so the C# compiler interp
 In XAML, however, the `ConverterParameter` is likely to be set like this:
 
 ```xaml
-<Label Text="{Binding Red, 
+<Label Text="{Binding Red,
                       Converter={StaticResource doubleToInt},
                       ConverterParameter=255,
                       StringFormat='Red = {0:X2}'}" />
@@ -411,7 +411,7 @@ The **RGB Color Selector** page instantiates `DoubleToIntConverter` in its resou
             <local:DoubleToIntConverter x:Key="doubleToInt" />
         </ResourceDictionary>
     </ContentPage.Resources>
-        
+
     <StackLayout>
         <StackLayout.BindingContext>
             <local:RgbColorViewModel Color="Gray" />
@@ -424,13 +424,13 @@ The **RGB Color Selector** page instantiates `DoubleToIntConverter` in its resou
             <Label Text="{Binding Name}" />
 
             <Slider Value="{Binding Red}" />
-            <Label Text="{Binding Red, 
+            <Label Text="{Binding Red,
                                   Converter={StaticResource doubleToInt},
                                   ConverterParameter=255,
                                   StringFormat='Red = {0:X2}'}" />
 
             <Slider Value="{Binding Green}" />
-            <Label Text="{Binding Green, 
+            <Label Text="{Binding Green,
                                   Converter={StaticResource doubleToInt},
                                   ConverterParameter=255,
                                   StringFormat='Green = {0:X2}'}" />
@@ -452,7 +452,7 @@ The **RGB Color Selector** page instantiates `DoubleToIntConverter` in its resou
 </ContentPage>    
 ```
 
-The values of the `Red` and `Green` properties are displayed with a `Binding` markup extension. The `Blue` property, however, instantiates the `Binding` class to demonstrate how an explicit `double` value can be set to `ConverterParameter` property. 
+The values of the `Red` and `Green` properties are displayed with a `Binding` markup extension. The `Blue` property, however, instantiates the `Binding` class to demonstrate how an explicit `double` value can be set to `ConverterParameter` property.
 
 Here's the result:
 

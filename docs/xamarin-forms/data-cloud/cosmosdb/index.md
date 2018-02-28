@@ -7,6 +7,7 @@ ms.assetid: F050E9D0-8CC3-4E75-8960-0D8273769E7C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 06/16/2017
 ---
 
 # Storing Data in a Document Database

@@ -7,6 +7,7 @@ ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 07/01/2016
 ---
 
 # Triggers

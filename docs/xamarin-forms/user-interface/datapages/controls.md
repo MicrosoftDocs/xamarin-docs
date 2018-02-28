@@ -6,6 +6,7 @@ ms.assetid: 891615D0-E8BD-4ACC-A7F0-4C3725FBCC31
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 12/01/2017
 ---
 
 # DataPages Controls Reference

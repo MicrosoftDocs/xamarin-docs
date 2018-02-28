@@ -10,16 +10,6 @@ ms.author: brumbaug
 ms.date: 05/02/2017
 ---
 
-# Contents
-
-This article will cover the following topics in detail:
-
-- [Starting a New Storyboard Based Project](#Starting-a-New-Storyboard-Based-Project)
-- [Defining a Presentation Segue](#Defining-a-Presentation-Segue)
-- [Creating App Preferences](#Creating-App-Preferences)
-
-<a name="Starting-a-New-Storyboard-Based-Project" />
-
 # Starting a New Storyboard Based Project
 
 As a quick introduction to using Storyboards to define a Xamarin.Mac app's User Interface, let's start a new Xamarin.Mac project. Select **Mac** > **App** > **Cocoa App** and click the **Next** button:
@@ -80,7 +70,7 @@ If we return to Visual Studio for Mac and run the project now, notice that the r
 
 <a name="Defining-a-Presentation-Segue" />
 
-# Defining a Presentation Segue
+## Defining a Presentation Segue
 
 We are going to layout the right hand side of the Split View to act as an Inspector for the selected text's properties. We'll drag some controls onto the bottom view to layout the UI of the inspector. For the last control, we want to display a popover that allows the user to select from four preset character styles.
 
@@ -102,7 +92,7 @@ If we return to Visual Studio for Mac, run the app and click on the **None** but
 
 <a name="Creating-App-Preferences" />
 
-# Creating App Preferences
+## Creating App Preferences
 
 Most standard macOS apps provide a _Preference Dialog_ that allows the user to define several options that control various aspects of the app, such as appearance or user accounts.
 
@@ -141,8 +131,6 @@ If we save our changes, return to Visual Studio for Mac, run the app and select 
 [ ![](quickstart-images/qs25.png "An example of the running preferences window")](quickstart-images/qs25.png)
 
 For more information, please see our [Working with Images](~/mac/app-fundamentals/image.md), [Menus](~/mac/user-interface/menu.md), [Windows](~/mac/user-interface/window.md) and [Dialogs](~/mac/user-interface/dialog.md) documentation.
-
-
 
 ## Related Links
 

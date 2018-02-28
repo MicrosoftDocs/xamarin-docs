@@ -51,7 +51,7 @@ Like the `Status` property described in the [previous article](custom-transport.
 
 ```csharp
 namespace FormsVideoLibrary
-{ 
+{
     public interface IVideoPlayerController
     {
         VideoStatus Status { set; get; }
@@ -63,7 +63,7 @@ namespace FormsVideoLibrary
 
 Also notice the property-changed handler that calls a method named `SetTimeToEnd` that is described later in this article.
 
-The duration of a video is *not* available immediately after the `Source` property of `VideoPlayer` is set. The video file must be partially downloaded before the underlying video player can determine its duration. 
+The duration of a video is *not* available immediately after the `Source` property of `VideoPlayer` is set. The video file must be partially downloaded before the underlying video player can determine its duration.
 
 Here's how each of the platform renderers obtains the video's duration:
 
@@ -163,7 +163,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-The `get` accessor returns the current position of the video as it is playing, but the `set` accessor is intended to respond to the user's manipulation of the position bar by moving the video position forwards or backwards. 
+The `get` accessor returns the current position of the video as it is playing, but the `set` accessor is intended to respond to the user's manipulation of the position bar by moving the video position forwards or backwards.
 
 In iOS and Android, the property that obtains the current position has only a `get` accessor, and a `Seek` method is available to perform this second task. If you think about it, a separate `Seek` method seems to be a more sensible approach than a single `Position` property. A single `Position` property has an inherent problem: As the video plays, the `Position` property must be continually updated to reflect the new position. But you don't want most changes to the `Position` property to cause the video player to move to a new position in the video. If that happens, the video player would respond by seeking to the last value of the `Position` property, and the video wouldn't advance.
 
@@ -242,7 +242,7 @@ namespace FormsVideoLibrary.Droid
         ···
     }
 }
-``` 
+```
 
 Also, just as in the iOS renderer, the Android renderer calls the `SeekTo` method of `VideoView` when the `Position` property has changed, but only when the change is more than one second different from the `CurrentPosition` value of `VideoView`:
 
@@ -347,7 +347,7 @@ namespace FormsVideoLibrary
                                     propertyChanged: (bindable, oldValue, newValue) =>
                                     {
                                         double seconds = ((TimeSpan)newValue).TotalSeconds;
-                                        ((PositionSlider)bindable).Maximum = seconds <= 0 ? 1 : seconds; 
+                                        ((PositionSlider)bindable).Maximum = seconds <= 0 ? 1 : seconds;
                                     });
 
         public TimeSpan Duration
@@ -405,9 +405,9 @@ if (newPosition.Seconds != Position.Seconds)
 
 However, the Android implementation of `Slider` has only 1,000 discrete steps regardless of the `Minimum` and `Maximum` settings. It the length of a video is greater than 1,000 seconds, then two different `Position` values would correspond to the same `Value` setting of the `Slider`, and this `if` statement would trigger a false positive for a user manipulation of the `Slider`. It's safer to instead check that the new position and existing position are greater than one-hundredth of the overall duration.
 
-## Using the PositionSlider 
+## Using the PositionSlider
 
-Documentation for the UWP [`MediaElement`](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.MediaElement) warns about binding to the `Position` property because the property frequently updates. The documentation recommends that a timer be used to query the `Position` property.
+Documentation for the UWP [`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/) warns about binding to the `Position` property because the property frequently updates. The documentation recommends that a timer be used to query the `Position` property.
 
 That's a good recommendation, but the three `VideoPlayerRenderer` classes are already indirectly using a timer to update the `Position` property. The `Position` property is changed in a handler for the `UpdateStatus` event, which is fired only 10 times a second.
 
@@ -432,7 +432,7 @@ Therefore, the `Position` property of the `VideoPlayer` can be bound to the `Pos
                            Source="{StaticResource ElephantsDream}" />
 
         ···
- 
+
         <StackLayout Grid.Row="1"
                      Orientation="Horizontal"
                      Margin="10, 0"
@@ -441,7 +441,7 @@ Therefore, the `Position` property of the `VideoPlayer` can be bound to the `Pos
             <Label Text="{Binding Path=Position,
                                   StringFormat='{0:hh\\:mm\\:ss}'}"
                    VerticalOptions="Center"/>
- 
+
             ···
 
             <Label Text="{Binding Path=TimeToEnd,

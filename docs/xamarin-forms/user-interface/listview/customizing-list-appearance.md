@@ -164,7 +164,7 @@ x:Class="DemoListView.GroupingViewPage">
 </ContentPage>
 ```
 
-<a name="headers-footers" />
+<a name="Headers_and_Footers" />
 
 ## Headers and Footers
 It is possible for a ListView to present a header and footer that scroll with the elements of the list. The header and footer can be strings of text or a more complicated layout. Note that this is separate from [section groups](#Grouping).
@@ -212,6 +212,8 @@ To create a customized header and footer, define the Header and Footer views:
 ```
 
 ![](customizing-list-appearance-images/header-custom.png "ListView with Customized Header and Footer")
+
+<a name="Row_Separators" />
 
 ## Row Separators
 Separator lines are displayed between `ListView` elements by default on iOS and Android. Windows Phone does not support separator lines, per that platforms UX guidelines. If you'd prefer to hide the separator lines on iOS and Android, set the `SeparatorVisibility` property on your ListView. The options for `SeparatorVisibility` are:
@@ -269,6 +271,8 @@ XAML:
 
 **NOTE**: setting either of these properties on Android after
   loading the `ListView` incurs a large performance penalty.
+
+<a name="Row_Heights" />
 
 ## Row Heights
 All rows in a ListView have the same height by default. ListView has two properties that can be used to change that behavior:

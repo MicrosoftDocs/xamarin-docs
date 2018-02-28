@@ -152,5 +152,5 @@ The sample application invokes the following Microsoft Cognitive Services:
 
 ## Related Links
 
-- [Microsoft Cognitive Services Documentation](https://www.microsoft.com/cognitive-services/en-us/documentation)
+- [Microsoft Cognitive Services Documentation](https://www.microsoft.com/cognitive-services/documentation)
 - [Todo Cognitive Services (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)

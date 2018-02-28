@@ -24,6 +24,8 @@ The application using `DependencyService` will have the following structure:
 
 ![](text-to-speech-images/tts-diagram.png "DependencyService Application Structure")
 
+<a name="Creating_the_Interface" />
+
 ## Creating the Interface
 
 First, create an interface in the shared code that expresses the functionality you plan to implement. For this example, the interface contains a single method, `Speak`:
@@ -39,6 +41,8 @@ Coding against this interface in the shared code will allow the Xamarin.Forms ap
 
 > [!NOTE]
 > **Note**: Classes implementing the interface must have a parameterless constructor to work with the `DependencyService`.
+
+<a name="iOS_Implementation" />
 
 ## iOS Implementation
 
@@ -71,6 +75,8 @@ namespace DependencyServiceSample.iOS
 ```
 
 The `[assembly]` attribute registers the class as an implementation of the `ITextToSpeech` interface, which means that `DependencyService.Get<ITextToSpeech>()` can be used in the shared code to create an instance of it.
+
+<a name="Android_Implementation" />
 
 ## Android Implementation
 
@@ -137,6 +143,8 @@ public class TextToSpeechImplementation : ITextToSpeech
 ```
 
 The `[assembly]` attribute registers the class as an implementation of the `ITextToSpeech` interface, which means that `DependencyService.Get<ITextToSpeech>()` can be used in the shared code to create an instance of it.
+
+<a name="Implementing_in_Shared_Code" />
 
 ## Implementing in Shared Code
 

@@ -7,6 +7,7 @@ ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 12/01/2017
 ---
 
 # Modal Pages
@@ -28,6 +29,8 @@ To return to the previous page the application will pop the current page from th
 
 ![](modal-images/popping.png "Popping a Page from the Modal Stack")
 
+<a name="Performing_Navigation" />
+
 ## Performing Navigation
 
 Modal navigation methods are exposed by the [`Navigation`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Navigation/) property on any [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) derived types. These methods provide the ability to [push modal pages](#Pushing_Pages_to_the_Modal_Stack) onto the modal stack, and [pop modal pages](#Popping_Pages_from_the_Modal_Stack) from the modal stack.
@@ -36,6 +39,8 @@ The [`Navigation`](https://developer.xamarin.com/api/property/Xamarin.Forms.Visu
 
 > [!NOTE]
 > A [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) instance is not required for performing modal page navigation.
+
+<a name="Pushing_Pages_to_the_Modal_Stack" />
 
 ### Pushing Pages to the Modal Stack
 
@@ -66,6 +71,8 @@ However, the precise order that these events occur is platform dependent. For mo
 
 > [!NOTE]
 > Calls to the [`OnDisappearing`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnDisappearing/) and [`OnAppearing`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnAppearing/) overrides cannot be treated as guaranteed indications of page navigation. For example, on iOS, the `OnDisappearing` override is called on the active page when the application terminates.
+
+<a name="Popping_Pages_from_the_Modal_Stack" />
 
 ### Popping Pages from the Modal Stack
 
@@ -111,6 +118,8 @@ async void OnDismissButtonClicked (object sender, EventArgs args)
 ```
 
 Setting the `boolean` parameter to `false` disables the page-transition animation, while setting the parameter to `true` enables the page-transition animation, provided that it is supported by the underlying platform. However, the push and pop methods that lack this parameter enable the animation by default.
+
+<a name="Passing_Data_when_Navigating" />
 
 ## Passing Data when Navigating
 

@@ -7,6 +7,7 @@ ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 01/12/2016
 ---
 
 # Xamarin.Forms Cells

@@ -10,25 +10,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Contents
-
-This article will cover the following topics in detail:
-
-- [Introduction to Dialogs](#Introduction_to_Dialogs)
-- [Adding a Modal Window to a Project](#Adding_a_Modal_Window_to_a_Project)
-- [Creating a Custom Sheet](#Creating_a_Custom_Sheet)
-- [Creating a Preferences Dialog](#Creating_a_Preferences_Dialog)
-	- [Saving and Loading Preferences](#Saving-and-Loading-Preferences)
-	- [Wiring Preferences to Preference Views](#Wiring-Preferences-to-Preference-Views)
-	- [Applying Preference Changes to All Open Windows](#Applying-Preference-Changes-to-All-Open-Windows) 
-- [The Open Dialog](#The_Open_Dialog)
-- [The Print and Page Setup Dialogs](#The_Print_and_Page_Setup_Dialogs)
-- [The Save Dialog](#The_Save_Dialog)
-
-
-<a name="Overview" />
-
-# Overview
+# Dialogs
 
 When working with C# and .NET in a Xamarin.Mac application, you have access to the same Dialogs and Modal Windows that a developer working in in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Modal Windows (or optionally create them directly in C# code).
 
@@ -44,7 +26,7 @@ You may want to take a look at the [Exposing C# classes / methods to Objective-C
 
 <a name="Introduction_to_Dialogs" />
 
-# Introduction to Dialogs
+## Introduction to Dialogs
 
 A dialog appears in response to a user action (such as saving a file) and provides a way for users to complete that action. A dialog requires a response from the user before it can be closed.
 
@@ -54,32 +36,32 @@ According to Apple, there are three ways to present a Dialog:
 - **App Modal** - An App Modal dialog prevents the user from interacting with the application until it is dismissed.
 - **Modeless** A Modeless Dialog enables users to change settings in the dialog while still interacting with the document window.
 
-## Modal Window
+### Modal Window
 
 Any standard `NSWindow` can be used as a customized dialog by displaying it modally:
 
 [ ![](dialog-images/modal01.png "An example modal window")](dialog-images/modal01.png)
 
-## Document Modal Dialog Sheets
+### Document Modal Dialog Sheets
 
 A _Sheet_ is a modal dialog that is attached to a given document window, preventing users from interacting with the window until they dismiss the dialog. A Sheet is attached to the window from which it emerges and only one sheet can be open for a window at any one time.
 
 [ ![](dialog-images/sheet08.png "An example modal sheet")](dialog-images/sheet08.png)
 
-## Preferences Windows
+### Preferences Windows
 
 A Preferences Window is a modeless dialog that contains the application's settings that the user changes infrequently. Preferences Windows often include a Toolbar that allows the user to switch between different groups of settings:
 
 [ ![](dialog-images/dialog02.png "An example preference window")](dialog-images/dialog02.png)
 
-## Open Dialog
+### Open Dialog
 
 The Open Dialog gives users a consistent way to find and open an item in an application:
 
 [ ![](dialog-images/dialog03.png "A open dialog box")](dialog-images/dialog03.png)
 
 
-## Print and Page Setup Dialogs
+### Print and Page Setup Dialogs
 
 macOS provides standard Print and Page Setup Dialogs that your application can display so that users can have a consistent printing experience in every application they use.
 
@@ -99,7 +81,7 @@ Or it can be displayed as a Sheet:
 
 [ ![](dialog-images/print04.png "A page setup sheet")](dialog-images/print04.png)
 
-## Save Dialogs
+### Save Dialogs
 
 The Save Dialog gives users a consistent way to save an item in an application. The Save Dialog has two states: **Minimal** (also known as Collapsed):
 
@@ -121,7 +103,7 @@ For more information, see the [Dialogs](https://developer.apple.com/library/mac/
 
 <a name="Adding_a_Modal_Window_to_a_Project" />
 
-# Adding a Modal Window to a Project
+## Adding a Modal Window to a Project
 
 Aside from the main document window, a Xamarin.Mac application might need to display other types of windows to the user, such as Preferences or Inspector Panels.
 
@@ -269,7 +251,7 @@ For more information about using windows in a Xamarin.Mac application, please se
 
 <a name="Creating_a_Custom_Sheet" />
 
-# Creating a Custom Sheet
+## Creating a Custom Sheet
 
 A _Sheet_ is a modal dialog that is attached to a given document window, preventing users from interacting with the window until they dismiss the dialog. A Sheet is attached to the window from which it emerges and only one sheet can be open for a window at any one time. 
 
@@ -425,7 +407,7 @@ If we run our application and open the Sheet, it will be attached to the window:
 
 <a name="Creating_a_Preferences_Dialog" />
 
-# Creating a Preferences Dialog
+## Creating a Preferences Dialog
 
 Before we lay out the Preference View in Interface Builder, we'll need to add a custom segue type to handle switching out the preferences. Add a new class to your project and call it `ReplaceViewSeque `. Edit the class and make it look like the following:
 
@@ -530,7 +512,7 @@ For more information on working with Windows and Toolbars, please see our [Windo
 
 <a name="Saving-and-Loading-Preferences" />
 
-## Saving and Loading Preferences
+### Saving and Loading Preferences
 
 In a typical macOS App, when the user makes changes to any of the App's User Preferences, those changes are saved automatically. The easiest way to handle this in a Xamarin.Mac app, is to create a single class to manage all of the user's preferences and share it system-wide.
 
@@ -729,7 +711,7 @@ namespace SourceWriter
 
 <a name="Wiring-Preferences-to-Preference-Views" />
 
-## Wiring Preferences to Preference Views
+### Wiring Preferences to Preference Views
 
 Next, connect Preference class to UI elements on the Preference Window and Views created above. In Interface Builder, select a Preference View Controller and switch to the **Identity Inspector**, create a custom class for the controller: 
 
@@ -778,7 +760,7 @@ Repeat the above steps for all of the panels (View Controllers) and Preference P
 
 <a name="Applying-Preference-Changes-to-All-Open-Windows" />
 
-## Applying Preference Changes to All Open Windows
+### Applying Preference Changes to All Open Windows
 
 As stated above, in a typical macOS App, when the user makes changes to any of the App's User Preferences, those changes are saved automatically and applied to any windows the user might have open in the application.
 
@@ -921,7 +903,7 @@ With all these changes in place, if the user edits the App's Preferences and clo
 
 <a name="The_Open_Dialog" />
 
-# The Open Dialog
+## The Open Dialog
 
 The Open Dialog gives users a consistent way to find and open an item in an application. To display an Open Dialog in a Xamarin.Mac application, use the following code:
 
@@ -972,7 +954,7 @@ If we run the program and select the **Open...** item from the **File** menu, th
 
 <a name="The_Print_and_Page_Setup_Dialogs" />
 
-#The Print and Page Setup Dialogs
+## The Print and Page Setup Dialogs
 
 macOS provides standard Print and Page Setup Dialogs that your application can display so that users can have a consistent printing experience in every application they use.
 
@@ -1046,7 +1028,7 @@ For more information about working with the Print and Page Setup Dialogs, please
 
 <a name="The_Save_Dialog" />
 
-# The Save Dialog
+## The Save Dialog
 
 The Save Dialog gives users a consistent way to save an item in an application.
 
@@ -1108,11 +1090,9 @@ For more more information on working with the Save Dialog, please see Apple's [N
 
 <a name="Summary" />
 
-# Summary
+## Summary
 
 This article has taken a detailed look at working with Modal Windows, Sheets and the standard system Dialog Boxes in a Xamarin.Mac application. We saw the different types and uses of Modal Windows, Sheets and Dialogs, how to create and maintain Modal Windows and Sheets in Xcode's Interface Builder and how to work with Modal Windows, Sheets and Dialogs in C# code.
-
-
 
 ## Related Links
 

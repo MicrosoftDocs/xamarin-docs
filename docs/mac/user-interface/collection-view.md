@@ -14,10 +14,6 @@ ms.date: 05/24/2017
 
 _This article describes working with collection views in a Xamarin.Mac app. It covers creating and maintaining collection views in Xcode and Interface Builder and working with them programmatically._
 
-<a name="Overview"/>
-
-# Overview
-
 When working with C# and .NET in a Xamarin.Mac app, the developer has access to the same AppKit Collection View controls that a developer working in in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, the developer uses Xcode's _Interface Builder_ to create and maintain Collection Views.
 
 A `NSCollectionView` displays a grid of subviews organized using a `NSCollectionViewLayout`. Each subview in the grid is represented by a `NSCollectionViewItem` which manages the loading of the view’s content from a `.xib` file.
@@ -30,7 +26,7 @@ You may want to take a look at the [Exposing C# classes / methods to Objective-C
 
 <a name="About_Collection_Views"/>
 
-# About Collection Views
+## About Collection Views
 
 The main goal of a Collection View (`NSCollectionView`) is to visually arrange a group of objects in an organized fashion using a Collection View Layout (`NSCollectionViewLayout`), with each individual object (`NSCollectionViewItem`) getting its own View in the larger collection. Collection Views work via Data Binding and Key-Value Coding techniques and as such, you should read the [Data Binding and Key-Value Coding](~/mac/app-fundamentals/databinding.md) documentation before continuing with this article.
 
@@ -40,7 +36,7 @@ Because the developer is responsible for the look and feel of a Collection View 
 
 <a name="Defining_your_Data_Model"/>
 
-# Defining the Data Model
+## Defining the Data Model
 
 Before Data Binding a Collection View in Interface Builder, a Key-Value Coding (KVC)/Key-Value Observing (KVO) compliant class must be defined in the Xamarin.Mac app to act as the _Data Model_ for the binding. The Data Model provides all of the data that will be displayed in the collection and receives any modifications to the data that the user makes in the UI while running the application.
 
@@ -187,13 +183,13 @@ The `PersonModel` Data Model will be used throughout the rest of this article.
 
 <a name="Working_with_a_Collection_View"/>
 
-# Working with a Collection View
+## Working with a Collection View
 
 Data Binding with a Collection View is very much like binding with a Table View, as `NSCollectionViewDataSource` is used to provide data for the collection. Since the collection view doesn't have a preset display format, more work is required to provide user interaction feedback and to track user selection.
 
 <a name="Creating-the-Cell-Prototype"/>
 
-## Creating the Cell Prototype
+### Creating the Cell Prototype
 
 Since the Collection View does not include a default cell prototype, the developer will need to add one or more `.xib` files to the Xamarin.Mac app to define the layout and content of the individual cells.
 
@@ -371,7 +367,7 @@ public override bool Selected
 
 <a name="Creating-the-Collection-View-Data-Source"/>
 
-## Creating the Collection View Data Source
+### Creating the Collection View Data Source
 
 A Collection View Data Source (`NSCollectionViewDataSource`) provides all of the data for a Collection View and creates and populates a Collection View Cell (using the `.xib` prototype) as required for each item in the collection.
 
@@ -490,7 +486,7 @@ The **Identifier** (`EmployeeCell`) used in the `MakeItem` call _must_ match the
 
 <a name="Handling-Item-Selection"/>
 
-## Handling Item Selection
+### Handling Item Selection
 
 To handle the selection and deselection of items in the collection, a `NSCollectionViewDelegate` will be required. Since this example will be using the built in `NSCollectionViewFlowLayout` layout type, a `NSCollectionViewDelegateFlowLayout` specific version of this delegate will be required.
 
@@ -569,7 +565,7 @@ The `ItemsSelected` and `ItemsDeselected` methods are overridden and used to set
 
 <a name="Creating-the-Collection-View-in-Interface-Builder"/>
 
-## Creating the Collection View in Interface Builder
+### Creating the Collection View in Interface Builder
 
 With all of the required supporting pieces in place, the main storyboard can be edited and a Collection View added to it.
 
@@ -589,7 +585,7 @@ Do the following:
 
 <a name="Bringing-it-all-Together"/>
 
-# Bringing it all Together
+## Bringing it all Together
 
 All of the supporting pieces have now been put into place with a class to act as the data model (`PersonModel`), a `NSCollectionViewDataSource` has been added to supply data, a `NSCollectionViewDelegateFlowLayout` was created to handle item selection and a `NSCollectionView` was added to the Main Storyboard and exposed as an Outlet (`EmployeeCollection`).
 
@@ -811,10 +807,9 @@ public override void ViewDidLoad()
 
 <a name="Summary"/>
 
-# Summary
+## Summary
 
 This article has taken a detailed look at working with Collection Views in a Xamarin.Mac application. First, it looked at exposing a C# class to Objective-C by using Key-Value Coding (KVC) and Key-Value Observing (KVO). Next, it showed how to use a KVO compliant class and Data Bind it to Collection Views in Xcode's Interface Builder. Finally, it showed how to interact with Collection Views in C# code.
-
 
 ## Related Links
 

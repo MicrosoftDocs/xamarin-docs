@@ -31,6 +31,8 @@ Each item will now be discussed in turn, to implement a `CustomMap` renderer tha
 > [!NOTE]
 > [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) must be initialized and configured before use. For more information, see [`Maps Control`](~/xamarin-forms/user-interface/map.md).
 
+<a name="Creating_the_Custom_Map" />
+
 ## Creating the Custom Map
 
 A custom map control can be created by subclassing the [`Map`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) class, as shown in the following code example:
@@ -53,6 +55,8 @@ public class CustomPin : Pin
 ```
 
 This class defines a `CustomPin` as inheriting the properties of the [`Pin`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Pin/) class, and adding `Id`, and `Url` properties.
+
+<a name="Consuming_the_Custom_Map" />
 
 ## Consuming the Custom Map
 
@@ -117,6 +121,8 @@ public MapPage ()
 This initialization adds a custom pin and positions the map's view with the [`MoveToRegion`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Map.MoveToRegion(Xamarin.Forms.Maps.MapSpan)/) method, which changes the position and zoom level of the map by creating a [`MapSpan`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapSpan/) from a [`Position`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Position/) and a [`Distance`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Distance/).
 
 A custom renderer can now be added to each application project to customize the native map controls.
+
+<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## Creating the Custom Renderer on each Platform
 
@@ -219,6 +225,8 @@ The `OnElementChanged` method performs the following configuration of the [`MKMa
 - The [`GetViewForAnnotation`](https://developer.xamarin.com/api/property/MapKit.MKMapView.GetViewForAnnotation/) property is set to the `GetViewForAnnotation` method. This method is called when the [location of the annotation becomes visible on the map](#Displaying_the_Annotation), and is used to customize the annotation prior to display.
 - Event handlers for the `CalloutAccessoryControlTapped`, `DidSelectAnnotationView`, and `DidDeselectAnnotationView` events are registered. These events fire when the user [taps the right accessory in the callout](#Tapping_on_the_Right_Callout_Accessory_View), and when the user [selects](#Selecting_the_Annotation) and [deselects](#Deselecting_the_Annotation) the annotation, respectively. The events are unsubscribed from only when the element the renderer is attached to changes.
 
+<a name="Displaying_the_Annotation" />
+
 #### Displaying the Annotation
 
 The `GetViewForAnnotation` method is called when the location of the annotation becomes visible on the map, and is used to customize the annotation prior to display. An annotation has two parts:
@@ -271,6 +279,8 @@ This method ensures that the annotation will be displayed as a custom image, rat
 1. The [`MKAnnotationView.CanShowCallout`](https://developer.xamarin.com/api/property/MapKit.MKAnnotationView.CanShowCallout/) property is set to `true` so that the callout is displayed when the annotation is tapped.
 1. The annotation is returned for display on the map.
 
+<a name="Selecting_the_Annotation" />
+
 #### Selecting the Annotation
 
 When the user taps on the annotation, the `DidSelectAnnotationView` event fires, which in turn executes the `OnDidSelectAnnotationView` method:
@@ -294,6 +304,8 @@ void OnDidSelectAnnotationView (object sender, MKAnnotationViewEventArgs e)
 
 This method extends the existing callout (that contains left and right accessory views) by adding a `UIView` instance to it that contains an image of the Xamarin logo, provided that the selected annotation has its `Id` property set to `Xamarin`. This allows for scenarios where different callouts can be displayed for different annotations. The `UIView` instance will be displayed centered above the existing callout.
 
+<a name="Tapping_on_the_Right_Callout_Accessory_View" />
+
 #### Tapping on the Right Callout Accessory View
 
 When the user taps on the *Information* button in the right callout accessory view, the `CalloutAccessoryControlTapped` event fires, which in turn executes the `OnCalloutAccessoryControlTapped` method:
@@ -309,6 +321,8 @@ void OnCalloutAccessoryControlTapped (object sender, MKMapViewAccessoryTappedEve
 ```
 
 This method opens a web browser and navigates to the address stored in the `CustomMKAnnotationView.Url` property. Note that the address was defined when creating the `CustomPin` collection in the PCL project.
+
+<a name="Deselecting_the_Annotation" />
 
 #### Deselecting the Annotation
 
@@ -409,6 +423,8 @@ This method creates a new `MarkerOption` instance for each `Pin` instance. After
 
 For more information about using the `BitmapDescriptorFactory` class to customize a marker, see [Customizing a Marker](~/android/platform/maps-and-location/maps/maps-api.md).
 
+<a name="Customizing_the_Info_Window" />
+
 #### Customizing the Info Window
 
 When a user taps on the marker, the `GetInfoContents` method is executed, provided that the `GetInfoWindow` method returns `null`. The following code example shows the `GetInfoContents` method:
@@ -457,6 +473,8 @@ This method returns a `View` containing the contents of the info window. This is
 
 > [!NOTE]
 > An info window is not a live `View`. Instead, Android will convert the `View` to a static bitmap and display that as an image. This means that while an info window can respond to a click event, it cannot respond to any touch events or gestures, and the individual controls in the info window cannot respond to their own click events.
+
+<a name="Clicking_on_the_Info_Window" />
 
 #### Clicking on the Info Window
 
@@ -627,7 +645,7 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 
 This method opens a web browser and navigates to the address stored in the `Url` property of the `CustomPin` instance. Note that the address was defined when creating the `CustomPin` collection in the PCL project.
 
-For more information about customizing a `MapControl` instance, see [Maps and Location Overview](https://msdn.microsoft.com/en-us/library/windows/apps/mt219699.aspx) on MSDN.
+For more information about customizing a `MapControl` instance, see [Maps and Location Overview](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx) on MSDN.
 
 ## Summary
 

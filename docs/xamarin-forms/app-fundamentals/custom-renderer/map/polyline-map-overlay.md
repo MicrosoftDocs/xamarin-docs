@@ -31,6 +31,8 @@ When a [`Map`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) c
 
 For information about customizing a map using a custom renderer, see [Customizing a Map Pin](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
 
+<a name="Creating_the_Custom_Map" />
+
 ### Creating the Custom Map
 
 Create a subclass of the [`Map`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) class, that adds a `RouteCoordinates` property:
@@ -48,6 +50,8 @@ public class CustomMap : Map
 ```
 
 The `RouteCoordinates` property will store a collection of coordinates that define the route to be highlighted.
+
+<a name="Consuming_the_Custom_Map" />
 
 ### Consuming the Custom Map
 
@@ -101,6 +105,8 @@ public partial class MapPage : ContentPage
 ```
 
 This initialization specifies a series of latitude and longitude coordinates, to define the route on the map to be highlighted. It then positions the map's view with the [`MoveToRegion`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Map.MoveToRegion(Xamarin.Forms.Maps.MapSpan)/) method, which changes the position and zoom level of the map by creating a [`MapSpan`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapSpan/) from a [`Position`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Position/) and a [`Distance`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Distance/).
+
+<a name="Customizing_the_Map" />
 
 ### Customizing the Map
 

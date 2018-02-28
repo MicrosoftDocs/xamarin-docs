@@ -80,7 +80,7 @@ The
 
 ### Accommodating Windows Runtime file I/O
 
-Programs running under the Windows Runtime use classes in the [`Windows.Storage`](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.aspx) and [`Windows.Storage.Streams`](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.streams.aspx) namespaces for file I/O, including application local storage. Because Microsoft determined that any operation requiring more than 50 milliseconds should be asynchronous to avoid blocking the UI thread, these file I/O methods are mostly asynchronous.
+Programs running under the Windows Runtime use classes in the [`Windows.Storage`](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) and [`Windows.Storage.Streams`](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.aspx) namespaces for file I/O, including application local storage. Because Microsoft determined that any operation requiring more than 50 milliseconds should be asynchronous to avoid blocking the UI thread, these file I/O methods are mostly asynchronous.
 
 The code demonstrating this new approach will be in a library so that it can be used by other applications.
 

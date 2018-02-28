@@ -28,7 +28,7 @@ Property change notification is provided by the `ExtendedBindableObject` class, 
 Validation rules are specified by creating a class that derives from the `IValidationRule<T>` interface, which is shown in the following code example:
 
 ```csharp
-public interface IValidationRule&lt;T&gt;  
+public interface IValidationRule<T>  
 {  
     string ValidationMessage { get; set; }  
     bool Check(T value);  
@@ -40,7 +40,7 @@ This interface specifies that a validation rule class must provide a `boolean` `
 The following code example shows the `IsNotNullOrEmptyRule<T>` validation rule, which is used to perform validation of the username and password entered by the user on the `LoginView` when using mock services in the eShopOnContainers mobile app:
 
 ```csharp
-public class IsNotNullOrEmptyRule&lt;T&gt; : IValidationRule&lt;T&gt;  
+public class IsNotNullOrEmptyRule<T> : IValidationRule<T>  
 {  
     public string ValidationMessage { get; set; }  
 
@@ -62,7 +62,7 @@ The `Check` method returns a `boolean` indicating whether the value argument is 
 Although not used by the eShopOnContainers mobile app, the following code example shows a validation rule for validating email addresses:
 
 ```csharp
-public class EmailRule&lt;T&gt; : IValidationRule&lt;T&gt;  
+public class EmailRule<T> : IValidationRule<T>  
 {  
     public string ValidationMessage { get; set; }  
 
@@ -85,14 +85,14 @@ public class EmailRule&lt;T&gt; : IValidationRule&lt;T&gt;
 The `Check` method returns a `boolean` indicating whether or not the value argument is a valid email address. This is achieved by searching the value argument for the first occurrence of the regular expression pattern specified in the `Regex` constructor. Whether the regular expression pattern has been found in the input string can be determined by checking the value of the `Match` object's `Success` property.
 
 > [!NOTE]
-> **Note:** Property validation can sometimes involve dependent properties. An example of dependent properties is when the set of valid values for property A depends on the particular value that has been set in property B. To check that the value of property A is one of the allowed values would involve retrieving the value of property B. In addition, when the value of property B changes, property A would need to be revalidated.
+> Property validation can sometimes involve dependent properties. An example of dependent properties is when the set of valid values for property A depends on the particular value that has been set in property B. To check that the value of property A is one of the allowed values would involve retrieving the value of property B. In addition, when the value of property B changes, property A would need to be revalidated.
 
 ## Adding Validation Rules to a Property
 
 In the eShopOnContainers mobile app, view model properties that require validation are declared to be of type `ValidatableObject<T>`, where `T` is the type of the data to be validated. The following code example shows an example of two such properties:
 
 ```csharp
-public ValidatableObject&lt;string&gt; UserName  
+public ValidatableObject<string> UserName  
 {  
     get  
     {  
@@ -101,11 +101,11 @@ public ValidatableObject&lt;string&gt; UserName
     set  
     {  
         _userName = value;  
-        RaisePropertyChanged(() =&gt; UserName);  
+        RaisePropertyChanged(() => UserName);  
     }  
 }  
 
-public ValidatableObject&lt;string&gt; Password  
+public ValidatableObject<string> Password  
 {  
     get  
     {  
@@ -114,7 +114,7 @@ public ValidatableObject&lt;string&gt; Password
     set  
     {  
         _password = value;  
-        RaisePropertyChanged(() =&gt; Password);  
+        RaisePropertyChanged(() => Password);  
     }  
 }
 ```
@@ -124,11 +124,11 @@ For validation to occur, validation rules must be added to the `Validations` col
 ```csharp
 private void AddValidations()  
 {  
-    _userName.Validations.Add(new IsNotNullOrEmptyRule&lt;string&gt;   
+    _userName.Validations.Add(new IsNotNullOrEmptyRule<string>   
     {   
         ValidationMessage = "A username is required."   
     });  
-    _password.Validations.Add(new IsNotNullOrEmptyRule&lt;string&gt;   
+    _password.Validations.Add(new IsNotNullOrEmptyRule<string>   
     {   
         ValidationMessage = "A password is required."   
     });  
@@ -171,9 +171,9 @@ public bool Validate()
 {  
     Errors.Clear();  
 
-    IEnumerable&lt;string&gt; errors = _validations  
-        .Where(v =&gt; !v.Check(Value))  
-        .Select(v =&gt; v.ValidationMessage);  
+    IEnumerable<string> errors = _validations  
+        .Where(v => !v.Check(Value))  
+        .Select(v => v.ValidationMessage);  
 
     Errors = errors.ToList();  
     IsValid = !Errors.Any();  
@@ -188,15 +188,15 @@ This method clears the `Errors` collection, and then retrieves any validation ru
 
 Validation is also automatically triggered whenever a bound property changes. For example, when a two-way binding in the `LoginView` sets the `UserName` or `Password` property, validation is triggered. The following code example demonstrates how this occurs:
 
-```csharp
-&lt;Entry Text="{Binding UserName.Value, Mode=TwoWay}"&gt;  
-    &lt;Entry.Behaviors&gt;  
-        &lt;behaviors:EventToCommandBehavior  
+```xaml
+<Entry Text="{Binding UserName.Value, Mode=TwoWay}">  
+    <Entry.Behaviors>  
+        <behaviors:EventToCommandBehavior  
             EventName="TextChanged"  
-            Command="{Binding ValidateUserNameCommand}" /&gt;  
-    &lt;/Entry.Behaviors&gt;  
+            Command="{Binding ValidateUserNameCommand}" />  
+    </Entry.Behaviors>  
     ...  
-&lt;/Entry&gt;
+</Entry>
 ```
 
 The [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control binds to the `UserName.Value` property of the `ValidatableObject<T>` instance, and the control's `Behaviors` collection has an `EventToCommandBehavior` instance added to it. This behavior executes the `ValidateUserNameCommand` in response to the [`TextChanged`] event firing on the `Entry`, which is raised when the text in the `Entry` changes. In turn, the `ValidateUserNameCommand` delegate executes the `ValidateUserName` method, which executes the `Validate` method on the `ValidatableObject<T>` instance. Therefore, every time the user enters a character in the `Entry` control for the username, validation of the entered data is performed.
@@ -231,19 +231,19 @@ The `LineColorBehavior` attached behavior is used to highlight [`Entry`](https:/
 
 The [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control consumes an explicit style, which is shown in the following code example:
 
-```csharp
-&lt;Style x:Key="EntryStyle"  
-       TargetType="{x:Type Entry}"&gt;  
+```xaml
+<Style x:Key="EntryStyle"  
+       TargetType="{x:Type Entry}">  
     ...  
-    &lt;Setter Property="behaviors:LineColorBehavior.ApplyLineColor"  
-            Value="True" /&gt;  
-    &lt;Setter Property="behaviors:LineColorBehavior.LineColor"  
-            Value="{StaticResource BlackColor}" /&gt;  
+    <Setter Property="behaviors:LineColorBehavior.ApplyLineColor"  
+            Value="True" />  
+    <Setter Property="behaviors:LineColorBehavior.LineColor"  
+            Value="{StaticResource BlackColor}" />  
     ...  
-&lt;/Style&gt;
+</Style>
 ```
 
-This style sets the `ApplyLineColor` and `LineColor` attached properties of the `LineColorBehavior` attached behavior on the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control. For more information about styles, see [Styles](https://developer.xamarin.com/guides/xamarin-forms/user-interface/styles/) on the Xamarin Developer Center.
+This style sets the `ApplyLineColor` and `LineColor` attached properties of the `LineColorBehavior` attached behavior on the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control. For more information about styles, see [Styles](~/xamarin-forms/user-interface/styles/index.md).
 
 When the value of the `ApplyLineColor` attached property is set, or changes, the `LineColorBehavior` attached behavior executes the `OnApplyLineColorChanged` method, which is shown in the following code example:
 
@@ -268,7 +268,7 @@ public static class LineColorBehavior
         else  
         {  
             var entryLineColorEffectToRemove =   
-                    view.Effects.FirstOrDefault(e =&gt; e is EntryLineColorEffect);  
+                    view.Effects.FirstOrDefault(e => e is EntryLineColorEffect);  
             if (entryLineColorEffectToRemove != null)  
             {  
                 view.Effects.Remove(entryLineColorEffectToRemove);  
@@ -345,7 +345,7 @@ namespace eShopOnContainers.iOS.Effects
 
         private void UpdateLineColor()  
         {  
-            BorderLineLayer lineLayer = control.Layer.Sublayers.OfType&lt;BorderLineLayer&gt;()  
+            BorderLineLayer lineLayer = control.Layer.Sublayers.OfType<BorderLineLayer>()  
                                                              .FirstOrDefault();  
 
             if (lineLayer == null)  
@@ -369,7 +369,7 @@ namespace eShopOnContainers.iOS.Effects
 }
 ```
 
-The `OnAttached` method retrieves the native control for the Xamarin.Forms [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control, and updates the line color by calling the `UpdateLineColor` method. The `OnElementPropertyChanged` override responds to bindable property changes on the `Entry` control by updating the line color if the attached `LineColor` property changes, or the [`Height`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) property of the `Entry` changes. For more information about effects, see [Effects](https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/effects/) on the Xamarin Developer Center.
+The `OnAttached` method retrieves the native control for the Xamarin.Forms [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control, and updates the line color by calling the `UpdateLineColor` method. The `OnElementPropertyChanged` override responds to bindable property changes on the `Entry` control by updating the line color if the attached `LineColor` property changes, or the [`Height`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) property of the `Entry` changes. For more information about effects, see [Effects](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 When valid data is entered in the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control, it will apply a black line to the bottom of the control, to indicate that there is no validation error. Figure 6-3 shows an example of this.
 
@@ -379,19 +379,19 @@ When valid data is entered in the [`Entry`](https://developer.xamarin.com/api/ty
 
 The [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control also has a [`DataTrigger`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTrigger/) added to its [`Triggers`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Triggers/) collection. The following code example shows the `DataTrigger`:
 
-```csharp
-&lt;Entry Text="{Binding UserName.Value, Mode=TwoWay}"&gt;  
+```xaml
+<Entry Text="{Binding UserName.Value, Mode=TwoWay}">  
     ...  
-    &lt;Entry.Triggers&gt;  
-        &lt;DataTrigger   
+    <Entry.Triggers>  
+        <DataTrigger   
             TargetType="Entry"  
             Binding="{Binding UserName.IsValid}"  
-            Value="False"&gt;  
-            &lt;Setter Property="behaviors:LineColorBehavior.LineColor"   
-                    Value="{StaticResource ErrorColor}" /&gt;  
-        &lt;/DataTrigger&gt;  
-    &lt;/Entry.Triggers&gt;  
-&lt;/Entry&gt;
+            Value="False">  
+            <Setter Property="behaviors:LineColorBehavior.LineColor"   
+                    Value="{StaticResource ErrorColor}" />  
+        </DataTrigger>  
+    </Entry.Triggers>  
+</Entry>
 ```
 
 This [`DataTrigger`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTrigger/) monitors the `UserName.IsValid` property, and if it's value becomes `false`, it executes the [`Setter`](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/), which changes the `LineColor` attached property of the `LineColorBehavior` attached behavior to red. Figure 6-4 shows an example of this.
@@ -402,15 +402,15 @@ This [`DataTrigger`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTr
 
 The line in the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control will remain red while the entered data is invalid, otherwise it will change to black to indicate that the entered data is valid.
 
-For more information about Triggers, see [Triggers](https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/triggers/) on the Xamarin Developer Center.
+For more information about Triggers, see [Triggers](~/xamarin-forms/app-fundamentals/triggers.md).
 
 ### Displaying Error Messages
 
 The UI displays validation error messages in Label controls below each control whose data failed validation. The following code example shows the [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) that displays a validation error message if the user has not entered a valid username:
 
-```csharp
-&lt;Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}"  
-       Style="{StaticResource ValidationErrorLabelStyle}" /&gt;
+```xaml
+<Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}"  
+       Style="{StaticResource ValidationErrorLabelStyle}" />
 ```
 
 Each [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) binds to the `Errors` property of the view model object that's being validated. The `Errors` property is provided by the `ValidatableObject<T>` class, and is of type `List<string>`. Because the `Errors` property can contain multiple validation errors, the `FirstValidationErrorConverter` instance is used to retrieve the first error from the collection for display.

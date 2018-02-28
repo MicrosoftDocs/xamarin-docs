@@ -28,6 +28,8 @@ The rendering process can be taken advantage of to implement platform-specific c
 
 Each item will now be discussed in turn, to implement an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control that has a different background color on each platform.
 
+<a name="Creating_the_Custom_Entry_Control" />
+
 ## Creating the Custom Entry Control
 
 A custom [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control can be created by subclassing the `Entry` control, as shown in the following code example:
@@ -39,6 +41,8 @@ public class MyEntry : Entry
 ```
 
 The `MyEntry` control is created in the portable class library (PCL) project and is simply an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control. Customization of the control will be carried out in the custom renderer, so no additional implementation is required in the `MyEntry` control.
+
+<a name="Consuming_the_Custom_Control" />
 
 ## Consuming the Custom Control
 
@@ -82,6 +86,8 @@ public class MainPage : ContentPage
 This code instantiates a new [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) object that will display a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) and `MyEntry` control centered both vertically and horizontally on the page.
 
 A custom renderer can now be added to each application project to customize the control's appearance on each platform.
+
+<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## Creating the Custom Renderer on each Platform
 

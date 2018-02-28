@@ -28,6 +28,8 @@ The rendering process can be used to implement platform-specific customizations 
 
 Each item will now be discussed in turn, to implement a `CameraPreview` renderer that displays a preview video stream from the device's camera. Tapping on the video stream will stop and start it.
 
+<a name="Creating_the_Custom_Control" />
+
 ## Creating the Custom Control
 
 A custom control can be created by subclassing the [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) class, as shown in the following code example:
@@ -49,6 +51,8 @@ public class CameraPreview : View
 ```
 
 The `CameraPreview` custom control is created in the portable class library (PCL) project and defines the API for the control. The custom control exposes a `Camera` property that's used for controlling whether the video stream should be displayed from the front or rear camera on the device. If a value isn't specified for the `Camera` property when the control is created, it defaults to specifying the rear camera.
+
+<a name="Consuming_the_Custom_Control" />
 
 ## Consuming the Custom Control
 
@@ -95,6 +99,8 @@ public class MainPageCS : ContentPage
 An instance of the `CameraPreview` custom control will be used to display the preview video stream from the device's camera. Aside from optionally specifying a value for the `Camera` property, customization of the control will be carried out in the custom renderer.
 
 A custom renderer can now be added to each application project to create platform-specific camera preview controls.
+
+<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## Creating the Custom Renderer on each Platform
 
@@ -308,7 +314,7 @@ namespace CustomRenderer.WinPhone81
 Provided that the `Control` property is `null`, a new `CaptureElement` is instantiated and the `InitializeAsync` method is called, which uses the `MediaCapture` API to provide the preview stream from the camera. The `SetNativeControl` method is then called to assign a reference to the `CaptureElement` instance to the `Control` property. The `CaptureElement` control exposes a `Tapped` event that's handled by the `OnCameraPreviewTapped` method to stop and start the video preview when it's tapped. The `Tapped` event is subscribed to when the custom renderer is attached to a new Xamarin.Forms element, and unsubscribed from only when the element the renderer is attached to changes.
 
 > [!NOTE]
-> **Note**: It's important to stop and dispose of the objects that provide access to the camera in a Windows Phone or UWP application. Failure to do so can interfere with other applications that attempt to access the device's camera. For more information, see and [Quickstart: Capturing video by using the MediaCapture API](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn642092.aspx) for Windows Runtime applications, and [Display the camera preview](https://msdn.microsoft.com/en-gb/windows/uwp/audio-video-camera/simple-camera-preview-access) for UWP applications.
+> **Note**: It's important to stop and dispose of the objects that provide access to the camera in a Windows Phone or UWP application. Failure to do so can interfere with other applications that attempt to access the device's camera. For more information, see and [Quickstart: Capturing video by using the MediaCapture API](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) for Windows Runtime applications, and [Display the camera preview](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) for UWP applications.
 
 ## Summary
 

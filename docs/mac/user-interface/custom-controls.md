@@ -10,13 +10,9 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Creating custom controls
+# Creating Custom Controls
 
 _This article describes how to create custom controls and work with them in Interface Builder._
-
-<a name="Overview" />
-
-# Overview
 
 When working with C# and .NET in a Xamarin.Mac application, you have access to the same User Controls that a developer working in in *Objective-C*, *Swift* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your User Controls (or optionally create them directly in C# code).
 
@@ -30,7 +26,7 @@ You may want to take a look at the [Exposing C# classes / methods to Objective-C
 
 <a name="Introduction-to-Outline-Views" />
 
-# Introduction to Custom Controls
+## Introduction to Custom Controls
 
 As stated above, there might be times when you need to create a reusable, Custom User Interface Control to provide unique functionality for your Xamarin.Mac app's UI or to create a custom UI theme (such as a game interface).
 
@@ -44,7 +40,7 @@ In this article will, create a custom Flip Switch component that provides a uniq
 
 <a name="Building-the-Custom-Control" />
 
-# Building the Custom Control
+## Building the Custom Control
 
 Since the custom control we are creating will be responding to user input (left mouse button clicks), we are going to inherit from `NSControl`. In this way, our custom control will automatically have all of the standard features that a built-in User Interface Control has and respond like a standard macOS control.
 
@@ -139,7 +135,7 @@ In the following sections, we'll take a look at the rest of the above code in de
 
 <a name="Tracking-the-Controls-State" />
 
-## Tracking the Control's State
+### Tracking the Control's State
 
 Since our Custom Control is a switch, we need a way to track the On/Off state of the switch. We handle that with the following code in `NSFlipSwitch`:
 
@@ -174,7 +170,7 @@ Later, we'll expand this helper class to inform the caller when the switches sta
 
 <a name="Drawing-the-Controls-Interface" />
 
-## Drawing the Control's Interface
+### Drawing the Control's Interface
 
 We are going to use Core Graphic drawing routines to draw our custom control's User Interface at runtime. Before we can do this, we need to turn on layers for our control. We do this with the following private method:
 
@@ -212,19 +208,16 @@ We'll be adjusting the visual representation for the control when its state chan
 
 <a name="Responding-to-User-Input" />
 
-## Responding to User Input
+### Responding to User Input
 
 There are two basic way that we can add user input to our custom control: **Override Mouse Handling Routines** or **Gesture Recognizers**. Which method we use, will be based on the functionality required by our control.
 
 > [!IMPORTANT]
-> **NOTE:** For any custom control you create, you should use either **Override Methods** _or_ **Gesture Recognizers**, but not both at the same time as they can conflict with each other.
-
-
-
+> For any custom control you create, you should use either **Override Methods** _or_ **Gesture Recognizers**, but not both at the same time as they can conflict with each other.
 
 <a name="Summary" />
 
-### Handling User Input with Override Methods
+#### Handling User Input with Override Methods
 
 Objects that inherit from `NSControl` (or `NSView`) have several override methods for handling mouse or keyboard input. For our example control, we want to flip the state of the switch between **On** and **Off** when the user clicks on the control with the left mouse button. We can add the following override methods to the `NSFliwSwitch` class to handle this:
 
@@ -255,14 +248,14 @@ public override void MouseMoved (NSEvent theEvent)
 {
 	base.MouseMoved (theEvent);
 }
-#endregion
+## endregion
 ```
 
 In the above code, we call the `FlipSwitchState` method (defined above) to flip the On/Off state of the switch in the `MouseDown` method. This will also force the control to be redrawn to reflect the current state.
 
 <a name="Handling-User-Input-with-Gesture-Recognizers" />
 
-### Handling User Input with Gesture Recognizers
+#### Handling User Input with Gesture Recognizers
 
 Optionally, you can use Gesture Recognizers to handle the user interacting with the control. Remove the overrides added above, edit the `Initialize` method and make it look like the following:
 
@@ -288,7 +281,7 @@ Again, which method we use depends on what we are trying to accomplish with our 
 
 <a name="Responding-to-State-Change-Events" />
 
-## Responding to State Change Events
+### Responding to State Change Events
 
 When the user changes the state of our custom control, we need a way to respond to the state change in code (such as doing something when clicks on a custom button). 
 
@@ -307,7 +300,7 @@ internal void RaiseValueChanged() {
 	if (this.Action !=null) 
 		NSApplication.SharedApplication.SendAction (this.Action, this.Target, this);
 }
-#endregion
+## endregion
 ```
 
 Next, edit the `FlipSwitchState` method and make it look like the following:
@@ -333,7 +326,7 @@ First, we check to see if an **Action** has been assigned to the control. Next, 
 
 <a name="Using-the-Custom-Control" />
 
-# Using the Custom Control
+## Using the Custom Control
 
 With our custom control fully defined, we can either add it to our Xamarin.Mac app's UI using C# code or in Xcode's Interface Builder.
 
@@ -384,19 +377,13 @@ partial void OptionTwoFlipped (Foundation.NSObject sender) {
 ```
 
 > [!IMPORTANT]
-> **NOTE:** You should use either the **Event** or define an **Action** in Interface Builder, but you should not use both methods at the same time or they can conflict with each other.
-
-
-
+> You should use either the **Event** or define an **Action** in Interface Builder, but you should not use both methods at the same time or they can conflict with each other.
 
 <a name="Summary" />
 
-# Summary
+## Summary
 
 This article has taken a detailed look at creating a reusable Custom User Interface Control in a Xamarin.Mac application. We saw how to draw the custom controls UI, the two main ways to respond to mouse and user input and how to expose the new control to Actions in Xcode's Interface Builder.
-
-
-
 
 ## Related Links
 

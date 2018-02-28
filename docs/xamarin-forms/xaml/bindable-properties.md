@@ -121,7 +121,7 @@ listView.Behaviors.Add (new EventToCommandBehavior {
 
 When creating a [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) instance, there are a number of optional parameters that can be set to enable advanced bindable property scenarios. This section explores these scenarios.
 
-<a name="propertychanged" />
+<a name="propertychanges" />
 
 ### Detecting Property Changes
 

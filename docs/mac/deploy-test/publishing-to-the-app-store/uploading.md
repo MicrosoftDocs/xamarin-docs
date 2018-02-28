@@ -14,10 +14,6 @@ ms.date: 03/14/2017
 
 _This guide walks through uploading a Xamarin.Mac app for publication to the Mac App Store._
 
-<a name="Upload_to_Mac_App_Store" />
-
-# Upload to Mac App Store
-
 Applications are submitted for Mac App Store approval via [iTunes Connect](http://itunesconnect.apple.com/).
 
 1. Choose a **macOS App** to create: 
@@ -95,14 +91,15 @@ Binary** status and click **Next**:
 
 	[ ![](uploading-images/image80.png "Selecting the file to upload")](uploading-images/image80.png)
 
-13) Press **Send**: 
+13. Press **Send**: 
+
 	[ ![](uploading-images/image81.png "Sending the app")](uploading-images/image81.png)
 
-14) The package will be validated and any errors reported. Fix these errors and re-upload. When the upload is successfully completed, the app will be automatically submitted for review by the App Store team: 
+14. The package will be validated and any errors reported. Fix these errors and re-upload. When the upload is successfully completed, the app will be automatically submitted for review by the App Store team: 
+
 	[ ![](uploading-images/image82.png "An example of upload errors")](uploading-images/image82.png)
 
 When the application has been approved, it will be available for download or purchase from the Mac App Store.
-
 
 ## Related Links
 

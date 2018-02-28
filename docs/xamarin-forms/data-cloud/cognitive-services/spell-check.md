@@ -21,9 +21,9 @@ The Bing Spell Check REST API has two operating modes, and a mode must be specif
 - `Spell` corrects short text (up to 9 words) without any casing changes.
 - `Proof` corrects long text, provides casing corrections and basic punctuation, and suppresses aggressive corrections.
 
-An API key must be obtained to use the Bing Spell Check API. This can be obtained at [Getting started for free](https://www.microsoft.com/cognitive-services/en-US/sign-up?ReturnUrl=/cognitive-services/en-us/subscriptions?productId=%2fproducts%2fBing.Speech.Preview) on microsoft.com.
+An API key must be obtained to use the Bing Spell Check API. This can be obtained at [Getting started for free](https://www.microsoft.com/cognitive-services/sign-up?ReturnUrl=/cognitive-services/subscriptions?productId=%2fproducts%2fBing.Speech.Preview) on microsoft.com.
 
-For a list of the languages supported by the Bing Spell Check API, see [Language support](https://www.microsoft.com/cognitive-services/en-us/Bing-Spell-check-API/documentation#language-support) on microsoft.com. For more information about the Bing Spell Check API, see [Bing Spell Check API](https://www.microsoft.com/cognitive-services/en-us/bing-spell-check-api/documentation) on microsoft.com.
+For a list of the languages supported by the Bing Spell Check API, see [Language support](https://www.microsoft.com/cognitive-services/Bing-Spell-check-API/documentation#language-support) on microsoft.com. For more information about the Bing Spell Check API, see [Bing Spell Check API](https://www.microsoft.com/cognitive-services/bing-spell-check-api/documentation) on microsoft.com.
 
 ## Authentication
 
@@ -162,7 +162,7 @@ This article explained how to use the Bing Spell Check REST API to correct spell
 
 ## Related Links
 
-- [Bing Spell Check Documentation](https://www.microsoft.com/cognitive-services/en-us/bing-spell-check-api/documentation)
+- [Bing Spell Check Documentation](https://www.microsoft.com/cognitive-services/bing-spell-check-api/documentation)
 - [Consuming a RESTful Web Service](~/xamarin-forms/data-cloud/consuming/rest.md)
 - [Todo Cognitive Services (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
 - [Bing Spell Check API](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/57855119bca1df1c647bc358)

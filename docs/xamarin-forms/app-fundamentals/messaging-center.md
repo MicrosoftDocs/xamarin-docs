@@ -7,6 +7,7 @@ ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 07/01/2016
 ---
 
 # MessagingCenter
@@ -15,13 +16,11 @@ _Xamarin.Forms includes a simple messaging service to send and receive messages.
 
 <a name="Overview" />
 
-
 ## Overview
 
 Xamarin.Forms `MessagingCenter` enables view models and other components to communicate with without having to know anything about each other besides a simple Message contract.
 
- <a name="How_the_MessagingCenter_Works" />
-
+<a name="How_the_MessagingCenter_Works" />
 
 ## How the MessagingCenter Works
 
@@ -47,8 +46,7 @@ The API for `MessagingCenter` is simple:
 
 These methods are explained below.
 
- <a name="Using_the_MessagingCenter" />
-
+<a name="Using_the_MessagingCenter" />
 
 ## Using the MessagingCenter
 
@@ -100,8 +98,7 @@ MessagingCenter.Unsubscribe<MainPage> (this, "Hi");
 MessagingCenter.Unsubscribe<MainPage, string> (this, "Hi");
 ```
 
- <a name="Summary" />
-
+<a name="Summary" />
 
 ## Summary
 

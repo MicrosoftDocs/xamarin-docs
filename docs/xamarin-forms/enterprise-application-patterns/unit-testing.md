@@ -18,7 +18,7 @@ A unit test takes a small unit of the app, typically a method, isolates it from 
 Unit testing has the greatest effect on code quality when it's an integral part of the software development workflow. As soon as a method has been written, unit tests should be written that verify the behavior of the method in response to standard, boundary, and incorrect cases of input data, and that check any explicit or implicit assumptions made by the code. Alternatively, with test driven development, unit tests are written before the code. In this scenario, unit tests act as both design documentation and functional specifications.
 
 > [!NOTE]
-> **Note:** Unit tests are very effective against regression – that is, functionality that used to work but has been disturbed by a faulty update.
+> Unit tests are very effective against regression – that is, functionality that used to work but has been disturbed by a faulty update.
 
 Unit tests typically use the arrange-act-assert pattern:
 
@@ -57,7 +57,8 @@ This approach allows the `OrderService` object to be passed into the `OrderDetai
 
 Testing models and view models from MVVM applications is identical to testing any other classes, and the same tools and techniques – such as unit testing and mocking, can be used. However, there are some patterns that are typical to model and view model classes, that can benefit from specific unit testing techniques.
 
->💡 **Tip:** Test one thing with each unit test. Don't be tempted to make a unit test exercise more than one aspect of the unit's behavior. Doing so leads to tests that are difficult to read and update. It can also lead to confusion when interpreting a failure.
+> [!TIP]
+> Test one thing with each unit test. Don't be tempted to make a unit test exercise more than one aspect of the unit's behavior. Doing so leads to tests that are difficult to read and update. It can also lead to confusion when interpreting a failure.
 
 The eShopOnContainers mobile app uses [xUnit](https://xunit.github.io/) to perform unit testing, which supports two different types of unit tests:
 
@@ -67,7 +68,7 @@ The eShopOnContainers mobile app uses [xUnit](https://xunit.github.io/) to perfo
 The unit tests included with the eShopOnContainers mobile app are fact tests, and so each unit test method is decorated with the `[Fact]` attribute.
 
 > [!NOTE]
-> **Note:** xUnit tests are executed by a test runner. To execute the test runner, run the eShopOnContainers.TestRunner project for the required platform.
+> xUnit tests are executed by a test runner. To execute the test runner, run the eShopOnContainers.TestRunner project for the required platform.
 
 ### Testing Asynchronous Functionality
 
@@ -105,7 +106,7 @@ public async Task SettingOrderPropertyShouldRaisePropertyChanged()
     var orderService = new OrderMockService();  
     var orderViewModel = new OrderDetailViewModel(orderService);  
 
-    orderViewModel.PropertyChanged += (sender, e) =&gt;  
+    orderViewModel.PropertyChanged += (sender, e) =>  
     {  
         if (e.PropertyName.Equals("Order"))  
             invoked = true;  
@@ -131,8 +132,8 @@ public void AddCatalogItemCommandSendsAddProductMessageTest()
     var catalogService = new CatalogMockService();  
     var catalogViewModel = new CatalogViewModel(catalogService);  
 
-    Xamarin.Forms.MessagingCenter.Subscribe&lt;CatalogViewModel, CatalogItem&gt;(  
-        this, MessageKeys.AddProduct, (sender, arg) =&gt;  
+    Xamarin.Forms.MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
+        this, MessageKeys.AddProduct, (sender, arg) =>  
     {  
         messageReceived = true;  
     });  
@@ -158,7 +159,7 @@ public void InvalidEventNameShouldThrowArgumentExceptionText()
     };  
     var listView = new ListView();  
 
-    Assert.Throws&lt;ArgumentException&gt;(() =&gt; listView.Behaviors.Add(behavior));  
+    Assert.Throws<ArgumentException>(() => listView.Behaviors.Add(behavior));  
 }
 ```
 

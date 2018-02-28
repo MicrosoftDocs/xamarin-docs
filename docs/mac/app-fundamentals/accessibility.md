@@ -40,8 +40,8 @@ when a control is selected on the design surface (as shown in the screenshot bel
 
 ### Code
 
-**NOTE:** Xamarin.Mac does not currently expose as `AccessibilityLabel` setter.
-Add the following helper method to set the accessibility label:
+Xamarin.Mac does not currently expose as `AccessibilityLabel` setter.  Add 
+the following helper method to set the accessibility label:
 
 ```csharp
 public static class AccessibilityHelper

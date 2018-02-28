@@ -180,7 +180,7 @@ The [`UIFont.FromName`](https://developer.xamarin.com/api/member/UIKit.UIFont.Fr
 
 The [`Typeface.Create`](https://developer.xamarin.com/api/member/Android.Graphics.Typeface.Create/p/System.String/Android.Graphics.TypefaceStyle/) factory method is used to set the [`TextView.Typeface`](https://developer.xamarin.com/api/property/Android.Widget.TextView.Typeface/) property to a new [`Typeface`](https://developer.xamarin.com/api/type/Android.Graphics.Typeface/) on Android. The `Typeface` family name and style are specified by the method arguments that are children of the `x:Arguments` attribute.
 
-The [`FontFamily`](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.fontfamily) constructor is used to set the [`TextBlock.FontFamily`](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.fontfamily) property to a new `FontFamily` on the Universal Windows Platform (UWP). The `FontFamily` name is specified by the method argument that is a child of the `x:Arguments` attribute.
+The [`FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.fontfamily) constructor is used to set the [`TextBlock.FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.fontfamily) property to a new `FontFamily` on the Universal Windows Platform (UWP). The `FontFamily` name is specified by the method argument that is a child of the `x:Arguments` attribute.
 
 > [!NOTE]
 > **Note**: Arguments must match the types required by the constructor or factory method.

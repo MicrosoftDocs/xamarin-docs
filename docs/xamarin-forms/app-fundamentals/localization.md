@@ -16,7 +16,7 @@ _Xamarin.Forms apps can be localized using .NET resources files._
 
 ## Overview
 
-The built-in mechanism for localizing .NET applications uses [RESX files](http://msdn.microsoft.com/en-us/library/ekyft91f(v=vs.90).aspx) and the classes in the `System.Resources` and `System.Globalization` namespaces. The RESX files containing translated strings are embedded in the Xamarin.Forms assembly, along with a compiler-generated class that provides strongly-typed access to the translations. The translation text can then be retrieved in code.
+The built-in mechanism for localizing .NET applications uses [RESX files](http://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx) and the classes in the `System.Resources` and `System.Globalization` namespaces. The RESX files containing translated strings are embedded in the Xamarin.Forms assembly, along with a compiler-generated class that provides strongly-typed access to the translations. The translation text can then be retrieved in code.
 
 This document contains the following sections:
 
@@ -377,6 +377,8 @@ public class PlatformCulture
 	}
 }
 ```
+
+<a name="Platform-specific_Code" />
 
 ### Platform-Specific Code
 
@@ -1002,5 +1004,5 @@ Images are generally handled in a platform-specific way to take advantage of the
 - [Cross-Platform Localization](~/cross-platform/app-fundamentals/localization.md)
 - [iOS Localization](~/ios/app-fundamentals/localization/index.md)
 - [Android Localization](~/android/app-fundamentals/localization.md)
-- [Using the CultureInfo class (MSDN)](http://msdn.microsoft.com/en-us/library/87k6sx8t%28v=vs.90%29.aspx)
-- [Locating and Using Resources for a Specific Culture (MSDN)](http://msdn.microsoft.com/en-us/library/s9ckwb4b%28v=vs.90%29.aspx)
+- [Using the CultureInfo class (MSDN)](http://msdn.microsoft.com/library/87k6sx8t%28v=vs.90%29.aspx)
+- [Locating and Using Resources for a Specific Culture (MSDN)](http://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)

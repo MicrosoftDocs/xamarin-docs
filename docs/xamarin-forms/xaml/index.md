@@ -14,9 +14,9 @@ ms.date: 10/24/2016
 
 _XAML is a declarative markup language that can be used to define user interfaces. The user interface is defined in an XML file using the XAML syntax, while runtime behavior is defined in a separate code-behind file._
 
-[ ![Evolve 2016: Becoming a XAML Master](images/evolve-petzold-xaml-sml.png "Becoming a XAML Master Presentation")](https://evolve.xamarin.com/session/56e201d2bad314273ca4d813)
+> [!VIDEO https://youtube.com/embed/H6UOrSyhTEE]
 
-[Evolve 2016: Becoming a XAML Master](https://evolve.xamarin.com/session/56e201d2bad314273ca4d813)
+**Evolve 2016: Becoming a XAML Master**
 
 > [!NOTE]
 > Try out the [XAML Standard Preview](standard/index.md)

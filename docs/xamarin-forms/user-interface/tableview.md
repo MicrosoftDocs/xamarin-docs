@@ -7,6 +7,7 @@ ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 03/08/2016
 ---
 
 # TableView
@@ -23,6 +24,8 @@ This guide is composed of the following sections:
 
 ![](tableview-images/tableview-all-sml.png "TableView Example")
 
+<a name="Use_Cases" />
+
 ## Use Cases
 
 TableView is useful when:
@@ -32,6 +35,8 @@ TableView is useful when:
 - showing data that is presented differently from row to row (e.g. numbers, percentages and images).
 
 TableView handles scrolling and laying out rows in attractive sections, a common need for the above scenarios. The `TableView` control uses each platform's underlying equivalent view when available, creating a native look for each platform.
+
+<a name="TableView_Structure" />
 
 ## TableView Structure
 
@@ -68,6 +73,8 @@ To accomplish the same layout as above in XAML:
 </TableView>
 ```
 
+<a name="TableView_Appearance" />
+
 ## TableView Appearance
 
 TableView exposes the `Intent` property, which is an enumeration of the following options:
@@ -78,6 +85,8 @@ TableView exposes the `Intent` property, which is an enumeration of the followin
 - **Settings** &ndash; for use when displaying a list of configuration settings.
 
 The `TableIntent` you choose may impact how the `TableView` appears on each platform. Even if there are not clear differences, it is a best practice to select the `TableIntent` that most closely matches how you intend to use the table.
+
+<a name="Built-In_Cells" />
 
 ## Built-In Cells
 
@@ -117,6 +126,8 @@ Note that the `SwitchCell` exposes the `OnChanged` event, allowing you to respon
 Note that `EntryCell` exposes the `Completed` event, which is fired when the user hits 'done' on the keyboard while editing text.
 
 ![](tableview-images/entry-cell.png "EntryCell Example")
+
+<a name="Custom_Cells" />
 
 ## Custom Cells
 When the built-in cells aren't enough, custom cells can be used to present and capture data in the way that makes sense for your app. For example, you may want to present a slider to allow a user to choose the opacity of an image.

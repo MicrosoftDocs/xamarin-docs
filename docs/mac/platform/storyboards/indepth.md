@@ -47,13 +47,13 @@ It's marked by the **Storyboard Entry Point** and the open ended arrow above.
 
 <a name="View-Controllers" />
 
-# View Controllers
+## View Controllers
 
 View Controllers define the relationships between a given View of information within a Mac app and the data model that provides that information. Each top level scene in the Storyboard represents one View Controller in the Xamarin.Mac app's code.
 
 <a name="The-View-Controller-Lifecycle" />
 
-## The View Controller Lifecycle
+### The View Controller Lifecycle
 
 Several new methods have been added to the `NSViewController` class to support Storyboards in macOS. Most importantly are the follow methods use to respond to the lifecycle of the View being controlled by the given View Controller:
 
@@ -68,7 +68,7 @@ Several new methods have been added to the `NSViewController` class to support S
 
 <a name="The-Responder-Chain" />
 
-## The Responder Chain
+### The Responder Chain
 
 Additionally, `NSViewControllers` are now part of the Window's _Responder Chain_:
 
@@ -78,7 +78,7 @@ And as such they are wired-up to receive and respond to events such as Cut, Copy
 
 <a name="Containment" />
 
-## Containment
+### Containment
 
 In Storyboards, View Controllers (such as the Split View Controller and the Tab View Controller) can now implement _Containment_, such that they can "contain" other sub View Controllers:
 
@@ -94,7 +94,7 @@ The Collection View Controller contains an array of Collection View Items, each 
 
 <a name="Segues" />
 
-# Segues
+## Segues
 
 Segues provide the relationships between all of the Scenes that define your app's UI. If you are familiar with working in Storyboards in iOS, you know that Segues for iOS usually define transitions between full screen views. This differs from macOS, when Segues usually define "[Containment](#Containment)", where one Scene is the child of a parent Scene.
 
@@ -102,7 +102,7 @@ In macOS, most apps tend to group their views together within the same window us
 
 <a name="Presentation-Segues" />
 
-## Presentation Segues
+### Presentation Segues
 
 Given macOS's tendencies towards containment, there are situations where _Presentation Segues_ are used, such as Modal Windows, Sheet Views and Popovers. macOS Provides the following built-in segue types:
 
@@ -116,7 +116,7 @@ When using Presentation Segues, you can override the `PrepareForSegue` method of
 
 <a name="Triggered-Segues" />
 
-## Triggered Segues
+### Triggered Segues
 
 Triggered Segues allow you to specify named Segues (via their **Identifier** property in Interface Builder) and have them triggered by events such as the user clicking a button or by calling the `PerformSegue` method in code:
 
@@ -150,7 +150,7 @@ Optionally, you can override the `ShouldPerfromSegue` method and control whether
 
 <a name="Creating-Custom-Segues" />
 
-## Creating Custom Segues
+### Creating Custom Segues
 
 There might be times when your app requires a Segue type not provided by the build-in Segues defined in macOS. If this is the case, you can create a Custom Segue that can be assigned in Xcode's Interface Builder when laying out your app's UI.
 
@@ -215,7 +215,7 @@ To use this new Segue type in Xcode's Interface Builder, we need to compile the 
 
 <a name="Triggered-Segues" />
 
-# Window Controllers
+## Window Controllers
 
 Window Controllers contain and control the different Window types that your macOS app can create. For Storyboards, they have the following features:
 
@@ -233,7 +233,7 @@ Window Controller are responsible for the following features of a macOS app:
 
 <a name="Gesture-Recognizers" />
 
-# Gesture Recognizers
+## Gesture Recognizers
 
 Gesture Recognizers for macOS are nearly identical to their counterparts in iOS and allow the developer to easily add gestures (such as clicking a mouse button) to elements in your app's UI.
 
@@ -253,7 +253,7 @@ The following Gesture Recognizers are available in macOS:
 
 <a name="Using-Storyboard-References" />
 
-# Using Storyboard References
+## Using Storyboard References
 
 A Storyboard Reference allows you to take a large, complex Storyboard design and break it into smaller Storyboards that get referenced from the original, thus removing removing complexity and making the resulting individual Storyboards easier to design and maintain.
 
@@ -261,7 +261,7 @@ Additionally, a Storyboard Reference can provide an _anchor_ to another scene wi
 
 <a name="Referencing-an-External-Storyboard" />
 
-## Referencing an External Storyboard
+### Referencing an External Storyboard
 
 To add a reference to an external Storyboard, do the following:
 
@@ -289,7 +289,7 @@ When the app is run and the user clicks on the UI element that you created the S
 
 <a name="Referencing-a-Specific-Scene-in-an-External-Storyboard" />
 
-## Referencing a Specific Scene in an External Storyboard
+### Referencing a Specific Scene in an External Storyboard
 
 To add a reference to a specific Scene an external Storyboard (and not the Initial Window Controller), do the following:
 
@@ -317,7 +317,7 @@ When the app is run and the user clicks on the UI element that you created the S
 
 <a name="Referencing-a-Specific-Scene-in-the-Same-Storyboard" />
 
-## Referencing a Specific Scene in the Same Storyboard
+### Referencing a Specific Scene in the Same Storyboard
 
 To add a reference to a specific Scene the same Storyboard, do the following:
 
@@ -344,12 +344,11 @@ When the app is run and the user clicks on the UI element that you created the S
 
 <a name="Complex-Storyboard-Example" />
 
-# Complex Storyboard Example
+## Complex Storyboard Example
 
 For a complex example of working with Storyboards in a Xamarin.Mac app, please see the [SourceWriter Sample App](https://developer.xamarin.com/samples/mac/SourceWriter/). SourceWriter is a simple source code editor that provides support for code completion and simple syntax highlighting.
 
 The SourceWriter code has been fully commented and, where available, links have be provided from key technologies or methods to relevant information in the Xamarin.Mac Guides Documentation.
-
 
 ## Related Links
 

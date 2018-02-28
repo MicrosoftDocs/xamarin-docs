@@ -93,4 +93,4 @@ This article demonstrated how to add basic authentication to web requests made b
 
 - [TodoREST (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST/)
 - [Consuming a RESTful web service](~/xamarin-forms/data-cloud/consuming/rest.md)
-- [HttpClient](https://msdn.microsoft.com/en-us/library/system.net.http.httpclient(v=vs.110).aspx)
+- [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

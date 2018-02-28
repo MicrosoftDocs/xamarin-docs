@@ -28,8 +28,7 @@ A third-party component call **PCLStorage** can also be used to read and write f
 
 For information on handling image files, refer to the [Working with Images](~/xamarin-forms/user-interface/images.md) page.
 
- <a name="Loading_Files_Embedded_as_Resources" />
-
+<a name="Loading_Files_Embedded_as_Resources" />
 
 ## Loading Files Embedded as Resources
 
@@ -76,8 +75,7 @@ listView.ItemsSource = monkeys;
 
  [ ![Xml file embedded in PCL, displayed in ListView](files-images/pclxml-sml.png "Embedded XML File in PCL Displayed in ListView")](files-images/pclxml.png "Embedded XML File in PCL Displayed in ListView")
 
- <a name="Embedding_in_Shared_Projects" />
-
+<a name="Embedding_in_Shared_Projects" />
 
 ### Embedding in Shared Projects
 
@@ -117,8 +115,7 @@ The above examples assume that the file is embedded in the root of the PCL proje
 
 It is possible to organize embedded resources in folders. When an embedded resource is placed in a folder, the folder name becomes part of the resource ID (separated by periods), so that the resource ID format becomes **Namespace.Folder.Filename.Extension**. Placing the files used in the sample app into a folder **MyFolder** would make the corresponding resource IDs `WorkingWithFiles.MyFolder.PCLTextResource.txt` and `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
 
- <a name="Debugging_Embedded_Resources" />
-
+<a name="Debugging_Embedded_Resources" />
 
 ### Debugging Embedded Resources
 
@@ -142,7 +139,7 @@ Because Xamarin.Forms runs on multiple platforms, each with its own filesystem, 
 
  [ ![Saving and loading text](files-images/saveandload-sml.png "Saving and Loading Files in App")](files-images/saveandload.png "Saving and Loading Files in App")
 
-Each platform has a slightly different directory structure, and different filesystem capabilities - for example Xamarin.iOS and Xamarin.Android support most `System.IO` functionality but Windows Phone only supports `IsolatedStorage` and [ `Windows.Storage`](http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj681698(v=vs.105).aspx) APIs.
+Each platform has a slightly different directory structure, and different filesystem capabilities - for example Xamarin.iOS and Xamarin.Android support most `System.IO` functionality but Windows Phone only supports `IsolatedStorage` and [ `Windows.Storage`](http://msdn.microsoft.com/library/windowsphone/develop/jj681698(v=vs.105).aspx) APIs.
 
 To get around this problem, the sample app defines an Interface in the Xamarin.Forms PCL to load and save files. It provides a simple API to load and save text files that will be stored on the device.
 
@@ -193,7 +190,7 @@ namespace WorkingWithFiles {
 ### Universal Windows Platform (UWP), Windows 8.1 and Windows Phone 8.1
 
 These platforms have a different filesystem API –
-[`Windows.Storage`](https://docs.microsoft.com/en-us/windows/uwp/files/quickstart-reading-and-writing-files) – that is used to save and load files.
+[`Windows.Storage`](/windows/uwp/files/quickstart-reading-and-writing-files/) – that is used to save and load files.
 The `ISaveAndLoad` interface can be implemented as shown below:
 
 ```csharp
@@ -208,7 +205,7 @@ using Xamarin.Forms;
 
 namespace WindowsApp
 {
-    // https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh758325.aspx
+    // https://msdn.microsoft.com/library/windows/apps/xaml/hh758325.aspx
     public class SaveAndLoad_WinApp : ISaveAndLoad
     {
         public async Task SaveTextAsync(string filename, string text)
@@ -229,8 +226,7 @@ namespace WindowsApp
 ```
 
 
- <a name="Saving_and_Loading_in_Shared_Projects" />
-
+<a name="Saving_and_Loading_in_Shared_Projects" />
 
 ### Saving and Loading in Shared Projects
 
@@ -256,6 +252,6 @@ This document has shown some simple file operations for loading embedded resourc
 ## Related Links
 
 - [FilesSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
-- [Create, write, and read a file (UWP)](https://docs.microsoft.com/en-us/windows/uwp/files/quickstart-reading-and-writing-files)
+- [Create, write, and read a file (UWP)](/windows/uwp/files/quickstart-reading-and-writing-files/)
 - [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples)
 - [Files Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/application-fundamentals/files/files.workbook)

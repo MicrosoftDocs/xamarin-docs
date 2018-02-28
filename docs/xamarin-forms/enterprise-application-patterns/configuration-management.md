@@ -17,12 +17,12 @@ App settings are data that an app creates and manages. It can include data such 
 
 User settings are the customizable settings of an app that affect the behavior of the app and don't require frequent re-adjustment. For example, an app might let the user specify where to retrieve data from, and how to display it on the screen.
 
-Xamarin.Forms includes a persistent dictionary that can be used to store settings data. This dictionary can be accessed using the [`Application.Current.Properties`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.Properties/) property, and any data that's placed into it is saved when the app goes into a sleep state, and is restored when the app resumes or starts up again. In addition, the [`Application`](https://developer.xamarin.com/api/type/Xamarin.Forms.Application/) class also has a [`SavePropertiesAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.Application.SavePropertiesAsync()/) method that allows an app to have its settings saved when required. For more information about this dictionary, see [Properties Dictionary](https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/application-class/#Properties_Dictionary) on the Xamarin Developer Center.
+Xamarin.Forms includes a persistent dictionary that can be used to store settings data. This dictionary can be accessed using the [`Application.Current.Properties`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.Properties/) property, and any data that's placed into it is saved when the app goes into a sleep state, and is restored when the app resumes or starts up again. In addition, the [`Application`](https://developer.xamarin.com/api/type/Xamarin.Forms.Application/) class also has a [`SavePropertiesAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.Application.SavePropertiesAsync()/) method that allows an app to have its settings saved when required. For more information about this dictionary, see [Properties Dictionary](~/xamarin-forms/app-fundamentals/application-class.md#Properties_Dictionary).
 
 A downside to storing data using the Xamarin.Forms persistent dictionary is that it's not easily data bound to. Therefore, the eShopOnContainers mobile app uses the Xam.Plugins.Settings library, available from [NuGet](https://www.nuget.org/packages/Xam.Plugins.Settings/). This library provides a consistent, type-safe, cross-platform approach for persisting and retrieving app and user settings, while using the native settings management provided by each platform. In addition, it's straightforward to use data binding to access settings data exposed by the library.
 
 > [!NOTE]
-> **Note:** While the Xam.Plugin.Settings library can store both app and user settings, it makes no distinction between the two.
+> While the Xam.Plugin.Settings library can store both app and user settings, it makes no distinction between the two.
 
 ## Creating a Settings Class
 
@@ -45,7 +45,7 @@ public static class Settings
 Settings can be read and written through the `ISettings` API, which is provided by the Xam.Plugins.Settings library. This library provides a singleton that can be used to access the API, `CrossSettings.Current`, and an app's settings class should expose this singleton via an `ISettings` property.
 
 > [!NOTE]
-> **Note:** Using directives for the Plugin.Settings and Plugin.Settings.Abstractions namespaces should be added to a class that requires access to the Xam.Plugins.Settings library types.
+> Using directives for the Plugin.Settings and Plugin.Settings.Abstractions namespaces should be added to a class that requires access to the Xam.Plugins.Settings library types.
 
 ## Adding a Setting
 
@@ -63,11 +63,11 @@ public static class Settings
     {  
         get  
         {  
-            return AppSettings.GetValueOrDefault&lt;string&gt;(IdUrlBase, UrlBaseDefault);  
+            return AppSettings.GetValueOrDefault<string>(IdUrlBase, UrlBaseDefault);  
         }  
         set  
         {  
-            AppSettings.AddOrUpdateValue&lt;string&gt;(IdUrlBase, value);  
+            AppSettings.AddOrUpdateValue<string>(IdUrlBase, value);  
         }  
     }  
 }
@@ -124,8 +124,8 @@ Data binding can be used to retrieve and set settings exposed by the `Settings` 
 
 The following code example shows the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control from the `SettingsView` that allows the user to enter a base endpoint URL for the containerized microservices:
 
-```csharp
-&lt;Entry Text="{Binding Endpoint, Mode=TwoWay}" /&gt;
+```xaml
+<Entry Text="{Binding Endpoint, Mode=TwoWay}" />
 ```
 
 This [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control binds to the `Endpoint` property of the `SettingsViewModel` class, using a two-way binding. The following code example shows the Endpoint property:
@@ -143,7 +143,7 @@ public string Endpoint
             UpdateEndpoint(_endpoint);  
         }  
 
-        RaisePropertyChanged(() =&gt; Endpoint);  
+        RaisePropertyChanged(() => Endpoint);  
     }  
 }
 ```

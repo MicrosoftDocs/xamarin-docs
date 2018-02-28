@@ -40,7 +40,7 @@ The resource token broker is a mid-tier Web API service, hosted in Azure App Ser
 > [!NOTE]
 > When the resource token expires, subsequent document database requests will receive a 401 unauthorized exception. At this point, Xamarin.Forms applications should re-establish the identity and request a new resource token.
 
-For more information about Cosmos DB partitioning, see [How to partition and scale in Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data) on [Microsoft Docs](https://docs.microsoft.com/). For more information about Cosmos DB access control, see [Securing access to Cosmos DB data](https://docs.microsoft.com/en-us/azure/cosmos-db/secure-access-to-data) and [Access control in the DocumentDB API](https://docs.microsoft.com/en-us/rest/api/documentdb/access-control-on-documentdb-resources) on [Microsoft Docs](https://docs.microsoft.com/).
+For more information about Cosmos DB partitioning, see [How to partition and scale in Azure Cosmos DB](/azure/cosmos-db/partition-data/). For more information about Cosmos DB access control, see [Securing access to Cosmos DB data](/azure/cosmos-db/secure-access-to-data/) and [Access control in the DocumentDB API](/rest/api/documentdb/access-control-on-documentdb-resources/).
 
 ## Setup
 
@@ -58,7 +58,7 @@ The process for integrating the resource token broker into a Xamarin.Forms appli
 
 The process for creating a Cosmos DB account that will use access control is as follows:
 
-1. Create a Cosmos DB account. For more information, see [Create a Cosmos DB account](https://docs.microsoft.com/en-us/azure/cosmos-db/documentdb-dotnetcore-get-started#step-1-create-a-documentdb-account) on the Microsoft Documentation Portal.
+1. Create a Cosmos DB account. For more information, see [Create a Cosmos DB account](/azure/cosmos-db/documentdb-dotnetcore-get-started#step-1-create-a-documentdb-account).
 1. In the Cosmos DB account, create a new collection named `UserItems`, specifying a partition key of `/userid`.
 
 <a name="app_service_configuration" />
@@ -67,7 +67,7 @@ The process for creating a Cosmos DB account that will use access control is as 
 
 The process for hosting the resource token broker in Azure App Service is as follows:
 
-1. In the Azure portal, create a new App Service web app. For more information, see [Create a web app in an App Service Environment](https://docs.microsoft.com/en-us/azure/app-service-web/app-service-web-how-to-create-a-web-app-in-an-ase).
+1. In the Azure portal, create a new App Service web app. For more information, see [Create a web app in an App Service Environment](/azure/app-service-web/app-service-web-how-to-create-a-web-app-in-an-ase/).
 1. In the Azure portal, open the App Settings blade for the web app, and add the following settings:
     - `accountUrl` – the value should be the Cosmos DB account URL from the Keys blade of the Cosmos DB account.
     - `accountKey` – the value should be the Cosmos DB master key (primary or secondary) from the Keys blade of the Cosmos DB account.
@@ -98,7 +98,7 @@ The process for creating a Facebook app to perform authentication is as follows:
 
   ![](authentication-images/facebook-oauth-settings.png "Facebook Login OAuth Settings")
 
-For more information, see [Register your application with Facebook](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-nameregister-aregister-your-application-with-facebook) on [Microsoft Docs](https://docs.microsoft.com/).
+For more information, see [Register your application with Facebook](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-nameregister-aregister-your-application-with-facebook).
 
 <a name="app_service_authentication_configuration" />
 
@@ -115,7 +115,7 @@ The process for configuring App Service easy authentication is as follows:
 
   [![](authentication-images/app-service-authentication-settings.png "App Service Web App Authentication Settings")](authentication-images/app-service-authentication-settings-large.png "App Service Web App Authentication Settings")
 
-The App Service web app should also be configured to communicate with the Facebook app to enable the authentication flow. This can be accomplished by selecting the Facebook identity provider, and entering the **App ID** and **App Secret** values from the Facebook app settings on the Facebook Developer Center. For more information, see [Add Facebook information to your application](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application) on [Microsoft Docs](https://docs.microsoft.com/).
+The App Service web app should also be configured to communicate with the Facebook app to enable the authentication flow. This can be accomplished by selecting the Facebook identity provider, and entering the **App ID** and **App Secret** values from the Facebook app settings on the Facebook Developer Center. For more information, see [Add Facebook information to your application](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application).
 
 <a name="forms_application_configuration" />
 
@@ -267,8 +267,8 @@ This article explained how to combine access control with partitioned collection
 
 - [TodoDocumentDBAuth (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
 - [Consuming an Azure Cosmos DB Document Database](~/xamarin-forms/data-cloud/cosmosdb/consuming.md)
-- [Securing access to Azure Cosmos DB data](https://docs.microsoft.com/azure/cosmos-db/secure-access-to-data)
-- [Access control in the DocumentDB API](https://docs.microsoft.com/resthttps://developer.xamarin.com/api/documentdb/access-control-on-documentdb-resources)
-- [How to partition and scale in Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/partition-data)
+- [Securing access to Azure Cosmos DB data](/azure/cosmos-db/secure-access-to-data/)
+- [Access control in the DocumentDB API](/rest/api/documentdb/access-control-on-documentdb-resources/).
+- [How to partition and scale in Azure Cosmos DB](/azure/cosmos-db/partition-data/)
 - [DocumentDB Client Library](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
 - [Azure Cosmos DB API](https://msdn.microsoft.com/library/azure/dn948556.aspx)

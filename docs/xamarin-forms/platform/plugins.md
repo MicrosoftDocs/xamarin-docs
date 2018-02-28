@@ -28,7 +28,7 @@ Xamarin.Forms - a large collection can be found at:
 [**Xamarin Plugins**](https://github.com/xamarin/plugins)
 
 For a guide to adding NuGet packages to your project, see our walkthrough on
-[including a NuGet package in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+[including a NuGet package in your project](/visualstudio/mac/nuget-walkthrough/).
 
 
 ## Creating plugins

@@ -82,7 +82,7 @@ For each call to *BeginOperationName*, the application should also call *EndOper
 
 The Task Parallel Library (TPL) can simplify the process of consuming an APM begin/end method pair by encapsulating the asynchronous operations in the same `Task` object. This encapsulation is provided by multiple overloads of the `TaskFactory.FromAsync` method.
 
-For more information about APM see [Asynchronous Programming Model](https://msdn.microsoft.com/en-us/library/ms228963(v=vs.110).aspx) and [TPL and Traditional .NET Framework Asynchronous Programming](https://msdn.microsoft.com/en-us/library/dd997423(v=vs.110).aspx) on MSDN.
+For more information about APM see [Asynchronous Programming Model](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) and [TPL and Traditional .NET Framework Asynchronous Programming](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) on MSDN.
 
 ### Creating the TodoService Object
 
@@ -240,4 +240,4 @@ This article demonstrated how to consume an ASMX web service from a Xamarin.Form
 ## Related Links
 
 - [TodoASMX (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoASMX/)
-- [IAsyncResult](https://msdn.microsoft.com/en-us/library/system.iasyncresult(v=vs.110).aspx)
+- [IAsyncResult](https://msdn.microsoft.com/library/system.iasyncresult(v=vs.110).aspx)

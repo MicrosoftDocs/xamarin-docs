@@ -14,8 +14,6 @@ ms.date: 03/14/2017
 
 _This article covers working with menus in a Xamarin.Mac application. It describes creating and maintaining menus and menu items in Xcode and Interface Builder and working with them programmatically._
 
-## Overview
-
 When working with C# and .NET in a Xamarin.Mac application, you have access to the same Cocoa menus that a developer working in Objective-C and Xcode does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's Interface Builder to create and maintain your menu bars, menus, and menu items (or optionally create them directly in C# code).
 
 Menus are an integral part of a Mac application's user experience and commonly appear in various parts of the user interface:
@@ -121,7 +119,7 @@ By default, every time a user event occurs, `NSMenu` automatically enables and d
 To choose a system, set the `AutoEnablesItems` property of a `NSMenu`. `true` is automatic (the default behavior) and `false` is manual. 
 
 > [!IMPORTANT]
-> **NOTE:** If you choose to use manual menu enabling, none of the menu items, even those controlled by AppKit classes like `NSTextView`, are updated automatically. You will be responsible for enabling and disabling all items by hand in code.
+> If you choose to use manual menu enabling, none of the menu items, even those controlled by AppKit classes like `NSTextView`, are updated automatically. You will be responsible for enabling and disabling all items by hand in code.
 
 #### Using validateMenuItem
 

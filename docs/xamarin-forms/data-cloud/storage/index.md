@@ -7,6 +7,7 @@ ms.assetid: 2C0EDFCE-6DB4-4BF6-B978-E64614AC9DB6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 06/16/2017
 ---
 
 # Storing Files in the Cloud

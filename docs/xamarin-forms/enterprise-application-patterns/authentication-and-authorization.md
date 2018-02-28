@@ -26,7 +26,7 @@ For authentication scenarios that make use of a local user data store, and that 
 [IdentityServer 4](https://github.com/IdentityServer/IdentityServer4) is an open source OpenID Connect and OAuth 2.0 framework for ASP.NET Core, which can be used for many authentication and authorization scenarios including issuing security tokens for local ASP.NET Core Identity users.
 
 > [!NOTE]
-> **Note:** OpenID Connect and OAuth 2.0 are very similar, while having different responsibilities.
+> OpenID Connect and OAuth 2.0 are very similar, while having different responsibilities.
 
 OpenID Connect is an authentication layer on top of the OAuth 2.0 protocol. OAuth 2 is a protocol that allows applications to request access tokens from a security token service and use them to communicate with APIs. This delegation reduces complexity in both client applications and APIs since authentication and authorization can be centralized.
 
@@ -72,16 +72,16 @@ IdentityServer should be configured in the `ConfigureServices` method in the web
 public void ConfigureServices(IServiceCollection services)  
 {  
     ...  
-    services.AddIdentityServer(x =&gt; x.IssuerUri = "null")  
+    services.AddIdentityServer(x => x.IssuerUri = "null")  
         .AddSigningCredential(Certificate.Get())                 
-        .AddAspNetIdentity&lt;ApplicationUser&gt;()  
-        .AddConfigurationStore(builder =&gt;  
-            builder.UseSqlServer(connectionString, options =&gt;  
+        .AddAspNetIdentity<ApplicationUser>()  
+        .AddConfigurationStore(builder =>  
+            builder.UseSqlServer(connectionString, options =>  
                 options.MigrationsAssembly(migrationsAssembly)))  
-        .AddOperationalStore(builder =&gt;  
-            builder.UseSqlServer(connectionString, options =&gt;  
+        .AddOperationalStore(builder =>  
+            builder.UseSqlServer(connectionString, options =>  
                 options.MigrationsAssembly(migrationsAssembly)))  
-        .Services.AddTransient&lt;IProfileService, ProfileService&gt;();  
+        .Services.AddTransient<IProfileService, ProfileService>();  
 }
 ```
 
@@ -101,9 +101,9 @@ For information about configuring IdentityServer to use ASP.NET Core Identity, s
 When configuring API resources, the `AddInMemoryApiResources` method expects an `IEnumerable<ApiResource>` collection. The following code example shows the `GetApis` method that provides this collection in the eShopOnContainers reference application:
 
 ```csharp
-public static IEnumerable&lt;ApiResource&gt; GetApis()  
+public static IEnumerable<ApiResource> GetApis()  
 {  
-    return new List&lt;ApiResource&gt;  
+    return new List<ApiResource>  
     {  
         new ApiResource("orders", "Orders Service"),  
         new ApiResource("basket", "Basket Service")  
@@ -118,9 +118,9 @@ This method specifies that IdentityServer should protect the orders and basket A
 When configuring identity resources, the `AddInMemoryIdentityResources` method expects an `IEnumerable<IdentityResource>` collection. Identity resources are data such as user ID, name, or email address. Each identity resource has a unique name, and arbitrary claim types can be assigned to it, which will then be included in the identity token for the user. The following code example shows the `GetResources` method that provides this collection in the eShopOnContainers reference application:
 
 ```csharp
-public static IEnumerable&lt;IdentityResource&gt; GetResources()  
+public static IEnumerable<IdentityResource> GetResources()  
 {  
-    return new List&lt;IdentityResource&gt;  
+    return new List<IdentityResource>  
     {  
         new IdentityResources.OpenId(),  
         new IdentityResources.Profile()  
@@ -131,7 +131,7 @@ public static IEnumerable&lt;IdentityResource&gt; GetResources()
 The OpenID Connect specification specifies some [standard identity resources](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims). The minimum requirement is that support is provided for emitting a unique ID for users. This is achieved by exposing the `IdentityResources.OpenId` identity resource.
 
 > [!NOTE]
-> **Note:** The `IdentityResources` class supports all of the scopes defined in the OpenID Connect specification (openid, email, profile, telephone, and address).
+> The `IdentityResources` class supports all of the scopes defined in the OpenID Connect specification (openid, email, profile, telephone, and address).
 
 IdentityServer also supports defining custom identity resources. For more information, see [Defining custom identity resources](https://identityserver4.readthedocs.io/en/release/topics/resources.html#defining-custom-identity-resources) in the IdentityServer documentation. For more information about the `IdentityResource` type, see [Identity Resource](https://identityserver4.readthedocs.io/en/release/reference/identity_resource.html) in the IdentityServer 4 documentation.
 
@@ -206,7 +206,8 @@ The authentication flow between a client and IdentityServer can be configured by
 -   Authorization code. This flow provides the ability to retrieve tokens on a back channel, as opposed to the browser front channel, while also supporting client authentication.
 -   Hybrid. This flow is a combination of the implicit and authorization code grant types. The identity token is transmitted via the browser channel and contains the signed protocol response along with other artifacts such as the authorization code. After successful validation of the response, the back channel should be used to retrieve the access and refresh token.
 
->💡 **Tip:** Use the hybrid authentication flow. The hybrid authentication flow mitigates a number of attacks that apply to the browser channel, and is the recommended flow for native applications that want to retrieve access tokens (and possibly refresh tokens).
+> [!TIP]
+> Use the hybrid authentication flow. The hybrid authentication flow mitigates a number of attacks that apply to the browser channel, and is the recommended flow for native applications that want to retrieve access tokens (and possibly refresh tokens).
 
 For more information about authentication flows, see [Grant Types](https://identityserver4.readthedocs.io/en/release/topics/grant_types.html) in the IdentityServer 4 documentation.
 
@@ -276,7 +277,7 @@ public string CreateAuthorizationRequest()
 This method creates the URI for IdentityServer's [authorization endpoint](https://identityserver4.readthedocs.io/en/release/endpoints/authorize.html), with the required parameters. The authorization endpoint is at `/connect/authorize` on port 5105 of the base endpoint exposed as a user setting. For more information about user settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
 > [!NOTE]
-> **Note:** The attack surface of the eShopOnContainers mobile app is reduced by implementing the Proof Key for Code Exchange (PKCE) extension to OAuth. PKCE protects the authorization code from being used if it’s intercepted. This is achieved by the client generating a secret verifier, a hash of which is passed in the authorization request, and which is presented unhashed when redeeming the authorization code. For more information about PKCE, see [Proof Key for Code Exchange by OAuth Public Clients](https://tools.ietf.org/html/rfc7636) on the Internet Engineering Task Force web site.
+> The attack surface of the eShopOnContainers mobile app is reduced by implementing the Proof Key for Code Exchange (PKCE) extension to OAuth. PKCE protects the authorization code from being used if it’s intercepted. This is achieved by the client generating a secret verifier, a hash of which is passed in the authorization request, and which is presented unhashed when redeeming the authorization code. For more information about PKCE, see [Proof Key for Code Exchange by OAuth Public Clients](https://tools.ietf.org/html/rfc7636) on the Internet Engineering Task Force web site.
 
 The returned URI is stored in the `LoginUrl` property of the `LoginViewModel` class. When the `IsLogin` property becomes `true`, the [`WebView`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) in the `LoginView` becomes visible. The `WebView` data binds its [`Source`](https://developer.xamarin.com/api/property/Xamarin.Forms.WebView.Source/) property to the `LoginUrl` property of the `LoginViewModel` class, and so makes a sign-in request to IdentityServer when the `LoginUrl` property is set to IdentityServer's authorization endpoint. When IdentityServer receives this request and the user isn't authenticated, the `WebView` will be redirected to the configured login page, which is shown in Figure 9-4.
 
@@ -301,7 +302,7 @@ private async Task NavigateAsync(string url)
             Settings.AuthAccessToken = accessToken;  
             Settings.AuthIdToken = authResponse.IdentityToken;  
 
-            await NavigationService.NavigateToAsync&lt;MainViewModel&gt;();  
+            await NavigationService.NavigateToAsync<MainViewModel>();  
             await NavigationService.RemoveLastFromBackStackAsync();  
         }  
     }  
@@ -318,7 +319,7 @@ If the token endpoint receives a valid authorization code and PKCE secret verifi
 For information about page navigation, see [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md). For information about how [`WebView`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) navigation causes a view model method to be executed, see [Invoking Navigation using Behaviors](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors). For information about application settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
 > [!NOTE]
-> **Note:** The eShopOnContainers also allows a mock sign-in when the app is configured to use mock services in the `SettingsView`. In this mode, the app doesn't communicate with IdentityServer, instead allowing the user to sign-in using any credentials.
+> The eShopOnContainers also allows a mock sign-in when the app is configured to use mock services in the `SettingsView`. In this mode, the app doesn't communicate with IdentityServer, instead allowing the user to sign-in using any credentials.
 
 #### Signing-out
 
@@ -377,7 +378,7 @@ This method clears both the identity token and the access token from application
 For information about page navigation, see [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md). For information about how [`WebView`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) navigation causes a view model method to be executed, see [Invoking Navigation using Behaviors](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors). For information about application settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
 > [!NOTE]
-> **Note:** The eShopOnContainers also allows a mock sign-out when the app is configured to use mock services in the SettingsView. In this mode, the app doesn't communicate with IdentityServer, and instead clears any stored tokens from application settings.
+> The eShopOnContainers also allows a mock sign-out when the app is configured to use mock services in the SettingsView. In this mode, the app doesn't communicate with IdentityServer, and instead clears any stored tokens from application settings.
 
 <a name="authorization" />
 
@@ -398,7 +399,7 @@ public class BasketController : Controller
 If an unauthorized user attempts to access a controller or action that's marked with the `Authorize` attribute, the MVC framework returns a 401 (unauthorized) HTTP status code.
 
 > [!NOTE]
-> **Note:** Parameters can be specified on the `Authorize` attribute to restrict an API to specific users. For more information, see [Authorization](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/introduction) on the Microsoft Documentation Center.
+> Parameters can be specified on the `Authorize` attribute to restrict an API to specific users. For more information, see [Authorization](/aspnet/core/security/authorization/introduction/).
 
 IdentityServer can be integrated into the authorization workflow so that the access tokens it provides control authorization. This approach is shown in Figure 9-5.
 
@@ -415,7 +416,7 @@ To perform authorization with IdentityServer, its authorization middleware must 
 ```csharp
 protected virtual void ConfigureAuth(IApplicationBuilder app)  
 {  
-    var identityUrl = Configuration.GetValue&lt;string&gt;("IdentityUrl");  
+    var identityUrl = Configuration.GetValue<string>("IdentityUrl");  
     app.UseIdentityServerAuthentication(new IdentityServerAuthenticationOptions  
     {  
         Authority = identityUrl.ToString(),  
@@ -428,7 +429,7 @@ protected virtual void ConfigureAuth(IApplicationBuilder app)
 This method ensures that the API can only be accessed with a valid access token. The middleware validates the incoming token to ensure that it's sent from a trusted issuer, and validates that the token is valid to be used with the API that receives it. Therefore, browsing to the ordering or basket controller will return a 401 (unauthorized) HTTP status code, indicating that an access token is required.
 
 > [!NOTE]
-> **Note:** IdentityServer's authorization middleware must be added to the web application's HTTP request pipeline before adding MVC with `app.UseMvc()` or `app.UseMvcWithDefaultRoute()`.
+> IdentityServer's authorization middleware must be added to the web application's HTTP request pipeline before adding MVC with `app.UseMvc()` or `app.UseMvcWithDefaultRoute()`.
 
 ### Making Access Requests to APIs
 

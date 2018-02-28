@@ -28,6 +28,8 @@ The rendering process can be taken advantage of to implement platform-specific c
 
 Each item will now be discussed in turn, to implement a `NativeCell` renderer that takes advantage of a platform-specific layout for each cell hosted inside a Xamarin.Forms [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) control. This stops the Xamarin.Forms layout calculations from being repeatedly called during `ListView` scrolling.
 
+<a name="Creating_the_Custom_Cell" />
+
 ## Creating the Custom Cell
 
 A custom cell control can be created by subclassing the [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) class, as shown in the following code example:
@@ -61,6 +63,8 @@ public class NativeCell : ViewCell
 }
 ```
 The `NativeCell` class is created in the portable class library (PCL) project and defines the API for the custom cell. The custom cell exposes `Name`, `Category`, and `ImageFilename` properties that can be displayed through data binding. For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+
+<a name="Consuming_the_Custom_Cell" />
 
 ## Consuming the Custom Cell
 
@@ -140,6 +144,8 @@ A Xamarin.Forms [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Form
 Each row in the list contains three items of data – a name, a category, and an image filename. The layout of each row in the list is defined by the `DataTemplate` that's referenced through the [`ListView.ItemTemplate`](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%601.ItemTemplate/) bindable property. The `DataTemplate` defines that each row of data in the list will be a `NativeCell` that displays its `Name`, `Category`, and `ImageFilename` properties through data binding. For more information about the `ListView` control, see [ListView](~/xamarin-forms/user-interface/listview/index.md).
 
 A custom renderer can now be added to each application project to customize the platform-specific layout for each cell.
+
+<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## Creating the Custom Renderer on each Platform
 

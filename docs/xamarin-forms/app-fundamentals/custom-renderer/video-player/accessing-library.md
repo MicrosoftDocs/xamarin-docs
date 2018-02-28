@@ -29,7 +29,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-Each of the three platforms contains a class named `VideoPicker` that implements this interface. 
+Each of the three platforms contains a class named `VideoPicker` that implements this interface.
 
 ### The iOS video picker
 
@@ -97,7 +97,7 @@ namespace FormsVideoLibrary.iOS
 
 ### The Android video picker
 
-The Android implementation of `IVideoPicker` requires a callback method that is part of the application's activity. For that reason, the `MainActivity` class defines two properties, a field, and a callback method: 
+The Android implementation of `IVideoPicker` requires a callback method that is part of the application's activity. For that reason, the `MainActivity` class defines two properties, a field, and a callback method:
 
 ```csharp
 namespace VideoPlayerDemos.Droid
@@ -110,7 +110,7 @@ namespace VideoPlayerDemos.Droid
             Current = this;
             ···
         }
-        
+
         // Field, properties, and method for Video Picker
         public static MainActivity Current { private set; get; }
 
@@ -185,7 +185,7 @@ The additions to the `MainActivity` object are the only code in the [**VideoPlay
 
 ### The UWP video picker
 
-The UWP implementation of the `IVideoPicker` interface uses the UWP [`FileOpenPicker`](https://docs.microsoft.com/en-us/uwp/api/Windows.Storage.Pickers.FileOpenPicker). It begins the file search with the pictures library, and restricts the file types to MP4 and WMV (Windows Media Video):
+The UWP implementation of the `IVideoPicker` interface uses the UWP [`FileOpenPicker`](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/). It begins the file search with the pictures library, and restricts the file types to MP4 and WMV (Windows Media Video):
 
 ```csharp
 using System;
@@ -212,7 +212,7 @@ namespace FormsVideoLibrary.UWP
             openPicker.FileTypeFilter.Add(".wmv");
             openPicker.FileTypeFilter.Add(".mp4");
 
-            // Get a file and return the path 
+            // Get a file and return the path
             StorageFile storageFile = await openPicker.PickSingleFileAsync();
             return storageFile?.Path;
         }

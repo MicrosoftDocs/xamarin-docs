@@ -70,7 +70,7 @@ This creates `libMyLibrary.a` which will be a universal (fat) library which
 will be suitable to use for all iOS development targets.
 
 
-## Missing Required Architecture i386
+### Missing Required Architecture i386
 
 If you are getting a `does not implement methodSignatureForSelector` or `does not implement doesNotRecognizeSelector` message in your Runtime Output when trying to consume an Objective-C library in the iOS Simulator, your library probably was not compiled for the i386 architecture (see the [Building Universal Native Libraries](#building_native) section above).
 
@@ -84,7 +84,7 @@ Where `/full/path/to/` is the full path to the library being consumed and `libra
 
 If you have the source to the library, you'll need to compile and bundle it for the i386 architecture as well, if you want to test your app on the iOS simulator.
 
-## Linking Your Library
+### Linking Your Library
 
 Any third-party library that you consume needs to be statically linked with
 your application. 
@@ -134,7 +134,7 @@ C++ the previous options would look like:
 
 <a name="Accessing_C_Methods_from_C#" />
 
-# Accessing C Methods from C&#35;
+## Accessing C Methods from C&#35;
 
 There are two kinds of native libraries available on iOS:
 
@@ -178,7 +178,7 @@ different name in C#, the shorter RectFrameUsingBlendMode.
 
 <a name="Accessing_C_Dylibs" />
 
-## Accessing C Dylibs
+### Accessing C Dylibs
 
 If you have the need to consume a C Dylib in your Xamarin.iOS application, there is a bit of extra setup that is required before calling the `DllImport` attribute.
 
@@ -206,7 +206,7 @@ public static extern double AnimalLibraryVersion();
 
 <a name="Static_Libraries" />
 
-## Static Libraries
+### Static Libraries
 
 Since you can only use static libraries on iOS, there is no external shared
 library to link with, so the path parameter in the DllImport attribute needs to

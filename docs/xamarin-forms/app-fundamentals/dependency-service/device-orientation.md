@@ -27,6 +27,8 @@ The application using `DependencyService` will have the following structure:
 > [!NOTE]
 > **Note:** It is possible to detect whether the device is in portrait or landscape orientation in shared code, as demonstrated in [Device Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation). The method described in this article uses native features to get more information about orientation, including whether the device is upside down.
 
+<a name="Creating_the_Interface" />
+
 ## Creating the Interface
 
 First, create an interface in the shared code that expresses the functionality you plan to implement. For this example, the interface contains a single method:
@@ -52,6 +54,8 @@ Coding against this interface in the shared code will allow the Xamarin.Forms ap
 
 > [!NOTE]
 > **Note**: Classes implementing the interface must have a parameterless constructor to work with the `DependencyService`.
+
+<a name="iOS_Implementation" />
 
 ## iOS Implementation
 
@@ -92,6 +96,8 @@ namespace DependencyServiceSample.iOS {
 ```
 
 This attribute registers the class as an implementation of the `IDeviceOrientation` Interface, which means that `DependencyService.Get<IDeviceOrientation>` can be used in the shared code to create an instance of it.
+
+<a name="Android_Implementation" />
 
 ## Android Implementation
 
@@ -172,6 +178,8 @@ namespace DependencyServiceSample.WindowsPhone {
 ```
 
 This attribute registers the class as an implementation of the `DeviceOrientationImplementation` Interface, which means that `DependencyService.Get<IDeviceOrientation>` can be used in the shared code can create an instance of it.
+
+<a name="Implementing_in_Shared_Code" />
 
 ## Implementing in Shared Code
 

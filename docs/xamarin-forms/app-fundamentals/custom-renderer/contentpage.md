@@ -28,6 +28,8 @@ The rendering process can be taken advantage of to implement platform-specific c
 
 Each item will now be discussed in turn, to implement a `CameraPage` that provides a live camera feed and the ability to capture a photo.
 
+<a name="Creating_the_Xamarin.Forms_Page" />
+
 ## Creating the Xamarin.Forms Page
 
 An unaltered [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) can be added to the shared Xamarin.Forms project, as shown in the following XAML code example:
@@ -67,6 +69,8 @@ public class CameraPageCS : ContentPage
 
 An instance of the `CameraPage` will be used to display the live camera feed on each platform. Customization of the control will be carried out in the custom renderer, so no additional implementation is required in the `CameraPage` class.
 
+<a name="Consuming_the_Xamarin.Forms_Page" />
+
 ## Consuming the Xamarin.Forms Page
 
 The empty `CameraPage` must be displayed by the Xamarin.Forms application. This occurs when a button on the `MainPage` instance is tapped, which in turn executes the `OnTakePhotoButtonClicked` method, as shown in the following code example:
@@ -79,6 +83,8 @@ async void OnTakePhotoButtonClicked (object sender, EventArgs e)
 ```
 
 This code simply navigates to the `CameraPage`, on which custom renderers will customize the page's appearance on each platform.
+
+<a name="Creating_the_Page_Renderer_on_each_Platform" />
 
 ## Creating the Page Renderer on each Platform
 
@@ -238,7 +244,7 @@ On the Windows Phone platform, a typed reference to the native page being used o
 When implementing a custom renderer that derives from `PageRenderer` on the Windows Runtime, the `ArrangeOverride` method should also be implemented to arrange the page controls, because the base renderer doesn't know what to do with them. Otherwise, a blank page results. Therefore, in this example the `ArrangeOverride` method calls the `Arrange` method on the `Page` instance.
 
 > [!NOTE]
-> **Note**: It's important to stop and dispose of the objects that provide access to the camera in a Windows Phone 8.1 WinRT application. Failure to do so can interfere with other applications that attempt to access the device's camera. For more information, see the `CleanUpCaptureResourcesAsync` method in the Windows Phone project in the sample solution, and [Quickstart: Capturing video by using the MediaCapture API](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn642092.aspx).
+> **Note**: It's important to stop and dispose of the objects that provide access to the camera in a Windows Phone 8.1 WinRT application. Failure to do so can interfere with other applications that attempt to access the device's camera. For more information, see the `CleanUpCaptureResourcesAsync` method in the Windows Phone project in the sample solution, and [Quickstart: Capturing video by using the MediaCapture API](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx).
 
 ### Creating the Page Renderer on UWP
 
@@ -287,7 +293,7 @@ The call to the base class's `OnElementChanged` method instantiates a `Framework
 When implementing a custom renderer that derives from `PageRenderer` on UWP, the `ArrangeOverride` method should also be implemented to arrange the page controls, because the base renderer doesn't know what to do with them. Otherwise, a blank page results. Therefore, in this example the `ArrangeOverride` method calls the `Arrange` method on the `Page` instance.
 
 > [!NOTE]
-> **Note**: It's important to stop and dispose of the objects that provide access to the camera in a UWP application. Failure to do so can interfere with other applications that attempt to access the device's camera. For more information, see [Display the camera preview](https://msdn.microsoft.com/en-gb/windows/uwp/audio-video-camera/simple-camera-preview-access).
+> **Note**: It's important to stop and dispose of the objects that provide access to the camera in a UWP application. Failure to do so can interfere with other applications that attempt to access the device's camera. For more information, see [Display the camera preview](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access).
 
 ## Summary
 

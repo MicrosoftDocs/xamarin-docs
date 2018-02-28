@@ -28,9 +28,9 @@ The Bing Speech API has two components:
 
 This article focuses on performing speech recognition via the REST API. While the client and service libraries support returning partial results, the REST API can only return a single recognition result, without any partial results.
 
-An API key must be obtained to use the Bing Speech Recognition API. This can be obtained at [Getting started for free](https://www.microsoft.com/cognitive-services/en-US/sign-up?ReturnUrl=/cognitive-services/en-us/subscriptions?productId=%2fproducts%2fBing.Speech.Preview) on microsoft.com.
+An API key must be obtained to use the Bing Speech Recognition API. This can be obtained at [Getting started for free](https://www.microsoft.com/cognitive-services/sign-up?ReturnUrl=/cognitive-services/subscriptions?productId=%2fproducts%2fBing.Speech.Preview) on microsoft.com.
 
-For more information about the Bing Speech API, see [Bing Speech Documentation](https://www.microsoft.com/cognitive-services/en-us/Speech-api/documentation/overview) on microsoft.com.
+For more information about the Bing Speech API, see [Bing Speech Documentation](https://www.microsoft.com/cognitive-services/Speech-api/documentation/overview) on microsoft.com.
 
 ## Authentication
 
@@ -71,7 +71,7 @@ Failure to pass a valid access token to the Bing Speech Recognition REST API wil
 
 Speech recognition is achieved by making a POST request to `recognize` API at `https://speech.platform.bing.com/recognize`. A single request can't contain more than 10 seconds of audio, and the total request duration can't exceed 14 seconds.
 
-Audio content must be placed in the POST body of the request in wav format. For information about supported codecs, see [Supported Codecs](https://www.microsoft.com/cognitive-services/en-us/Speech-api/documentation/API-Reference-REST/BingVoiceRecognition#supported-codecs) on microsoft.com.
+Audio content must be placed in the POST body of the request in wav format. For information about supported codecs, see [Supported Codecs](https://www.microsoft.com/cognitive-services/Speech-api/documentation/API-Reference-REST/BingVoiceRecognition#supported-codecs) on microsoft.com.
 
 In the sample application, the `RecognizeSpeechAsync` method invokes the speech recognition process:
 
@@ -117,9 +117,9 @@ string GenerateRequestUri(string speechEndpoint)
 }
 ```
 
-The main configuration performed by the `GenerateRequestUri` method is to set the locale of the audio content. For a list of the supported locales, see [Supported Locales ](https://www.microsoft.com/cognitive-services/en-us/Speech-api/documentation/API-Reference-REST/BingVoiceRecognition#supported-locales) on microsoft.com.
+The main configuration performed by the `GenerateRequestUri` method is to set the locale of the audio content. For a list of the supported locales, see [Supported Locales ](https://www.microsoft.com/cognitive-services/Speech-api/documentation/API-Reference-REST/BingVoiceRecognition#supported-locales) on microsoft.com.
 
-For more information about the possible values for the compulsory parameters, see [Required Parameters](https://www.microsoft.com/cognitive-services/en-us/Speech-api/documentation/API-Reference-REST/BingVoiceRecognition#required-parameters) on microsoft.com. For information about the optional parameters, see [Optional Parameters](https://www.microsoft.com/cognitive-services/en-us/Speech-api/documentation/API-Reference-REST/BingVoiceRecognition) on microsoft.com.
+For more information about the possible values for the compulsory parameters, see [Required Parameters](https://www.microsoft.com/cognitive-services/Speech-api/documentation/API-Reference-REST/BingVoiceRecognition#required-parameters) on microsoft.com. For information about the optional parameters, see [Optional Parameters](https://www.microsoft.com/cognitive-services/Speech-api/documentation/API-Reference-REST/BingVoiceRecognition) on microsoft.com.
 
 ### Sending the Request
 
@@ -149,7 +149,7 @@ This method builds the POST request by:
 
 The POST request is then sent to `recognize` API. The response is then read and returned to the calling method.
 
-The `recognize` API will send HTTP status code 200 (OK) in the response, provided that the request is valid, which indicates that the request succeeded and that the requested information is in the response. For a list of possible error responses, see [Error Responses](https://www.microsoft.com/cognitive-services/en-us/Speech-api/documentation/API-Reference-REST/BingVoiceRecognition#error-responses) on microsoft.com.
+The `recognize` API will send HTTP status code 200 (OK) in the response, provided that the request is valid, which indicates that the request succeeded and that the requested information is in the response. For a list of possible error responses, see [Error Responses](https://www.microsoft.com/cognitive-services/Speech-api/documentation/API-Reference-REST/BingVoiceRecognition#error-responses) on microsoft.com.
 
 ### Processing the Response
 
@@ -186,7 +186,7 @@ In the sample application, the JSON response is deserialized into a `SpeechResul
 
 ![](speech-recognition-images/speech-recognition.png "Speech Recognition")
 
-For information about the values of each JSON tag, see [Speech Recognition Responses](https://www.microsoft.com/cognitive-services/en-us/Speech-api/documentation/API-Reference-REST/BingVoiceRecognition#speech-recognition-responses) on microsoft.com.
+For information about the values of each JSON tag, see [Speech Recognition Responses](https://www.microsoft.com/cognitive-services/Speech-api/documentation/API-Reference-REST/BingVoiceRecognition#speech-recognition-responses) on microsoft.com.
 
 ## Summary
 
@@ -196,7 +196,7 @@ This article explained how to use the Bing Speech Recognition REST API to conver
 
 ## Related Links
 
-- [Bing Speech Documentation](https://www.microsoft.com/cognitive-services/en-us/Speech-api/documentation/overview)
+- [Bing Speech Documentation](https://www.microsoft.com/cognitive-services/Speech-api/documentation/overview)
 - [Consuming a RESTful Web Service](~/xamarin-forms/data-cloud/consuming/rest.md)
 - [Todo Cognitive Services (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
-- [Bing Speech Recognition REST API](https://www.microsoft.com/cognitive-services/en-us/Speech-api/documentation/API-Reference-REST/BingVoiceRecognition)
+- [Bing Speech Recognition REST API](https://www.microsoft.com/cognitive-services/Speech-api/documentation/API-Reference-REST/BingVoiceRecognition)

@@ -100,7 +100,7 @@ The routing table contains a route template, and when the Web API framework rece
 - To find the action, Web API looks at the HTTP method and looks at controller actions that are decorated with the same HTTP method as an attribute.
 - The *{id}* placeholder variable is mapped to an action parameter.
 
-The REST service uses basic authentication. For more information see [Authenticating a RESTful web service](~/xamarin-forms/data-cloud/authentication/rest.md). For more information about ASP.NET Web API routing, see [Routing in ASP.NET Web API](http://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api) on the ASP.NET website. For more information about building the REST service using ASP.NET Core, see [Creating Backend Services for Native Mobile Applications](https://docs.microsoft.com/en-us/aspnet/core/mobile/native-mobile-backend) on Microsoft Docs.
+The REST service uses basic authentication. For more information see [Authenticating a RESTful web service](~/xamarin-forms/data-cloud/authentication/rest.md). For more information about ASP.NET Web API routing, see [Routing in ASP.NET Web API](http://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api) on the ASP.NET website. For more information about building the REST service using ASP.NET Core, see [Creating Backend Services for Native Mobile Applications](/aspnet/core/mobile/native-mobile-backend/).
 
 > [!NOTE]
 > The sample application consumes the Xamarin-hosted REST service that provides read-only access to the web service. Therefore, the operations that create, update, and delete data will not alter the data consumed in the application. However, a hostable version of the REST service is available in the **TodoRESTService** folder in the accompanying
@@ -243,6 +243,6 @@ This article examined how to consume a RESTful web service from a Xamarin.Forms 
 
 ## Related Links
 
-- [Creating Backend Services for Native Mobile Applications](https://docs.microsoft.com/en-us/aspnet/core/mobile/native-mobile-backend)
+- [Creating Backend Services for Native Mobile Applications](/aspnet/core/mobile/native-mobile-backend/)
 - [TodoREST (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST/)
-- [HttpClient](https://msdn.microsoft.com/en-us/library/system.net.http.httpclient(v=vs.110).aspx)
+- [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

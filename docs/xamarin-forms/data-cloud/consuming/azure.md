@@ -14,7 +14,7 @@ ms.date: 09/20/2016
 
 _Azure Mobile Apps allow you to develop apps with scalable backends hosted in Azure App Service, with support for mobile authentication, offline sync, and push notifications. This article, which is only applicable to Azure Mobile Apps that use a Node.js backend, explains how to query, insert, update, and delete data stored in a table in an Azure Mobile Apps instance._
 
-For information on how to create an Azure Mobile Apps instance that can be consumed by Xamarin.Forms, see [Create a Xamarin.Forms app](https://azure.microsoft.com/en-gb/documentation/articles/app-service-mobile-xamarin-forms-get-started/). After following these instructions, the downloadable sample application can be configured to consume the Azure Mobile Apps instance by setting the `Constants.ApplicationURL` to the URL of the Azure Mobile Apps instance. Then, when the sample application is run it will connect to the Azure Mobile Apps instance, as shown in the following screenshot:
+For information on how to create an Azure Mobile Apps instance that can be consumed by Xamarin.Forms, see [Create a Xamarin.Forms app](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started/). After following these instructions, the downloadable sample application can be configured to consume the Azure Mobile Apps instance by setting the `Constants.ApplicationURL` to the URL of the Azure Mobile Apps instance. Then, when the sample application is run it will connect to the Azure Mobile Apps instance, as shown in the following screenshot:
 
 ![](azure-images/portal.png "Sample Application")
 
@@ -116,6 +116,6 @@ This article explained how to use the [Azure Mobile Client SDK](https://www.nuge
 ## Related Links
 
 - [TodoAzure (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzure/)
-- [Create a Xamarin.Forms app](https://azure.microsoft.com/en-gb/documentation/articles/app-service-mobile-xamarin-forms-get-started/)
+- [Create a Xamarin.Forms app](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started/)
 - [Azure Mobile Client SDK](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)
-- [MobileServiceClient](https://msdn.microsoft.com/en-us/library/azure/microsoft.windowsazure.mobileservices.mobileserviceclient(v=azure.10).aspx)
+- [MobileServiceClient](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.mobileservices.mobileserviceclient(v=azure.10).aspx)

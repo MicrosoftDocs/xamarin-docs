@@ -7,6 +7,7 @@ ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 08/15/2017
 ---
 
 # Colors

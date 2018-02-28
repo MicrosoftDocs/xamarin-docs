@@ -1,5 +1,5 @@
 ---
-title: "Additional macOS Sierra Frameworks Changes"
+title: "Additional macOS Sierra Framework Changes"
 description: "This article covers additional, minor changes or enhancements to existing frameworks for macOS Sierra."
 ms.topic: article
 ms.prod: xamarin
@@ -10,30 +10,13 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Additional macOS Sierra Frameworks Changes
+# Additional macOS Sierra Framework Changes
 
 _This article covers additional, minor changes or enhancements to existing frameworks for macOS Sierra._
 
-In addition to the major changes to macOS Sierra, Apple has made modifications and improvements to several existing frameworks in macOS including the following:
-
-- [Accelerate Framework Enhancements](#Accelerate-Framework-Enhancements)
-- [Appkit Framework Enhancements](#Appkit-Framework-Enhancements)
-- [AVFoundation Framework Enhancements](#AVFoundation-Framework-Enhancements)
-- [Core Data Framework Enhancements](#Core-Data-Framework-Enhancements)
-- [Core Image Framework Enhancements](#Core-Image-Framework-Enhancements)
-- [Foundation Framework Enhancements](#Foundation-Framework-Enhancements)
-- [GameKit Framework Enhancements](#GameKit-Framework-Enhancements)
-- [GamePlayKit Framework Enhancements](#GamePlayKit-Framework-Enhancements)
-- [Metal Framework Enhancements](#Metal-Framework-Enhancements)
-- [Model I/O Framework Enhancements](#ModelIO-Framework-Enhancements)
-- [Photos Framework Enhancements](#Photos-Framework-Enhancements)
-- [Security Framework Enhancements](#Security-Framework-Enhancements)
-- [SpriteKit Framework Enhancements](#SpriteKit-Framework-Enhancements)
-- [New Frameworks](#New-Frameworks)
-
 <a name="Accelerate-Framework-Enhancements" />
 
-# Accelerate Framework Enhancements
+## Accelerate Framework Enhancements
 
 The following enhancement have been made to the Accelerate Framework for macOS Sierra:
 
@@ -43,7 +26,7 @@ The following enhancement have been made to the Accelerate Framework for macOS S
 
 <a name="AppKit-Framework-Enhancements" />
 
-# Appkit Framework Enhancements
+## Appkit Framework Enhancements
 
 The following enhancement have been made to the AppKit Framework for macOS Sierra:
 
@@ -63,7 +46,7 @@ The following enhancement have been made to the AppKit Framework for macOS Sierr
 
 <a name="AVFoundation-Framework-Enhancements" />
 
-# AVFoundation Framework Enhancements
+## AVFoundation Framework Enhancements
 
 The following enhancement have been made to the AVFoundation Framework for macOS Sierra:
 
@@ -73,7 +56,7 @@ The following enhancement have been made to the AVFoundation Framework for macOS
 
 <a name="Core-Data-Framework-Enhancements" />
 
-# Core Data Framework Enhancements
+## Core Data Framework Enhancements
 
 The following enhancement have been made to the Core Data Framework for macOS Sierra:
 
@@ -87,7 +70,7 @@ For more information, please see Apple's [Core Data Framework Reference](https:/
 
 <a name="Core-Image-Framework-Enhancements" />
 
-# Core Image Framework Enhancements
+## Core Image Framework Enhancements
 
 The following enhancement have been made to the Core Image Framework for macOS Sierra:
 
@@ -98,7 +81,7 @@ The following enhancement have been made to the Core Image Framework for macOS S
 
 <a name="Foundation-Framework-Enhancements" />
 
-# Foundation Framework Enhancements
+## Foundation Framework Enhancements
 
 The following enhancement have been made to the Foundation Framework for macOS Sierra:
 
@@ -112,7 +95,7 @@ For more information, please see Apple's [Foundation Release Notes for OS X v10.
 
 <a name="GameKit-Framework-Enhancements" />
 
-# GameKit Framework Enhancements
+## GameKit Framework Enhancements
 
 The following enhancement have been made to the GameKit Framework for macOS Sierra:
 
@@ -122,7 +105,7 @@ The following enhancement have been made to the GameKit Framework for macOS Sier
 
 <a name="GamePlayKit-Framework-Enhancements" />
 
-# GamePlayKit Framework Enhancements
+## GamePlayKit Framework Enhancements
 
 The following enhancement have been made to the GamePlayKit Framework for macOS Sierra:
 
@@ -136,7 +119,7 @@ The following enhancement have been made to the GamePlayKit Framework for macOS 
 
 <a name="Metal-Framework-Enhancements" />
 
-# Metal Framework Enhancements
+## Metal Framework Enhancements
 
 The following enhancement have been made to the Metal Framework for macOS Sierra:
 
@@ -148,7 +131,7 @@ To learn more, please see Apple's [Metal Programming Guide](https://developer.ap
 
 <a name="ModelIO-Framework-Enhancements" />
 
-# Model I/O Framework Enhancements
+## Model I/O Framework Enhancements
 
 The following enhancement have been made to the Model I/O Framework for macOS Sierra:
 
@@ -159,7 +142,7 @@ The following enhancement have been made to the Model I/O Framework for macOS Si
 
 <a name="Photos-Framework-Enhancements" />
 
-# Photos Framework Enhancements
+## Photos Framework Enhancements
 
 The following enhancement have been made to the Photos Framework for macOS Sierra:
 
@@ -170,7 +153,7 @@ The following enhancement have been made to the Photos Framework for macOS Sierr
 
 <a name="SceneKit-Framework-Enhancements" />
 
-# SceneKit Framework Enhancements
+## SceneKit Framework Enhancements
 
 The following enhancement have been made to the SceneKit Framework for macOS Sierra:
 
@@ -188,7 +171,7 @@ The following enhancement have been made to the SceneKit Framework for macOS Sie
 
 <a name="Security-Framework-Enhancements" />
 
-# Security Framework Enhancements
+## Security Framework Enhancements
 
 The following enhancement have been made to the Security Framework for macOS Sierra:
 
@@ -196,7 +179,7 @@ The following enhancement have been made to the Security Framework for macOS Sie
 
 <a name="SpriteKit-Framework-Enhancements" />
 
-# SpriteKit Framework Enhancements
+## SpriteKit Framework Enhancements
 
 The following enhancement have been made to the SpriteKit Framework for macOS Sierra:
 
@@ -207,16 +190,12 @@ The following enhancement have been made to the SpriteKit Framework for macOS Si
 
 <a name="New-Frameworks" />
 
-# New Frameworks
+## New Frameworks
 
 The following frameworks have been added to macOS Sierra:
 
 - **Intents Framework** - This framework allow the app to examine interactions (such as location or user actions), and take action based on that information.
 - **SafariServices Framework** - This framework allow the app to develop app extensions for Safari (such as content blockers) for both macOS and iOS.
-
-
-
-
 
 ## Related Links
 

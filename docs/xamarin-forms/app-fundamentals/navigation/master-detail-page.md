@@ -241,6 +241,8 @@ The following screenshots show the `ContactPage` detail page, which is shown aft
 
 ![](master-detail-page-images/detailpage.png "Detail Page Example")
 
+<a name="Controlling_the_Detail_Page_Display_Behavior" />
+
 ### Controlling the Detail Page Display Behavior
 
 How the [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) manages the master and detail pages depends on whether the application is running on a phone or tablet, the orientation of the device, and the value of the [`MasterBehavior`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.MasterBehavior/) property. This property determines how the detail page will be displayed. It's possible values are:

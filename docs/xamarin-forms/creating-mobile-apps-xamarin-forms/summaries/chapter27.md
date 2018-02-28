@@ -45,7 +45,7 @@ The Android [`ViewRenderer<TView, TNativeView>`](https://github.com/xamarin/Xama
 The Windows Runtime [`ViewRenderer<TElement, TNativeElement>`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.WinRT/ViewRenderer.cs#L12) has differently named generic arguments:
 
 - `TElement` constrained to [`Xamarin.Forms.View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)
-- `TNativeElement` constrained to [`Windows.UI.Xaml.FrameworkElement`](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.frameworkelement.aspx)
+- `TNativeElement` constrained to [`Windows.UI.Xaml.FrameworkElement`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx)
 
 When writing a renderer, you will be deriving a class from `View`, and then writing multiple `ViewRenderer` classes, one for each supported platform. Each platform-specific implementation will reference a native class that derives from the type you specify as the `TNativeView` or `TNativeElement` parameter.
 
@@ -82,7 +82,7 @@ The `OnElementPropertyChanged` override can therefore transfer the `Color` value
 
 - iOS: [`EllipseViewRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/EllipseViewRenderer.cs), which uses an [`EllipseUIView`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/EllipseUIView.cs) class for the ellipse.
 - Android: [`EllipseViewRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/EllipseViewRenderer.cs), which uses an [`EllipseDrawableView`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/EllipseDrawableView.cs) class for the ellipse.
-- Windows Runtime: [`EllipseViewRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/EllipseViewRenderer.cs), which can use the native Windows [`Ellipse`](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.ellipse.aspx) class.
+- Windows Runtime: [`EllipseViewRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/EllipseViewRenderer.cs), which can use the native Windows [`Ellipse`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.ellipse.aspx) class.
 
 The [**EllipseDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/EllipseDemo) class displays several of these `EllipseView` objects:
 

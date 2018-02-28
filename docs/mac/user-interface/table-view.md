@@ -14,10 +14,6 @@ ms.date: 03/14/2017
 
 _This article covers working with table views in a Xamarin.Mac application. It describes creating table views in Xcode and Interface Builder and interacting with them in code._
 
-<a name="Overview" />
-
-# Overview
-
 When working with C# and .NET in a Xamarin.Mac application, you have access to the same Table Views that a developer working in in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Table Views (or optionally create them directly in C# code).
 
 A Table View displays data in a tabular format containing one or more columns of information in multiple rows. Based on the type of Table View being created, the user can sort by column, reorganize columns, add columns, remove columns or edit the data contained within the table.
@@ -30,7 +26,7 @@ You may want to take a look at the [Exposing C# classes / methods to Objective-C
 
 <a name="Introduction_to_Table_Views" />
 
-# Introduction to Table Views
+## Introduction to Table Views
 
 A Table View displays data in a tabular format containing one or more columns of information in multiple rows. Table Views are displayed inside of Scroll Views (`NSScrollView`) and starting with macOS 10.7, you can use any `NSView` instead of Cells (`NSCell`) to display both rows and columns. That said, you can still use `NSCell` however, you'll typically subclass `NSTableCellView` and create your custom rows and columns.
 
@@ -47,7 +43,7 @@ For more information, please see the [Content Views](https://developer.apple.com
 
 <a name="Creating-and-Maintaining-Table-Views-in-Xcode" />
 
-# Creating and Maintaining Table Views in Xcode
+## Creating and Maintaining Table Views in Xcode
 
 When you create a new Xamarin.Mac Cocoa application, you get a standard blank, window by default. This windows is defined in a `.storyboard` file automatically included in the project. To edit your windows design, in the **Solution Explorer**, double click the `Main.storyboard` file:
 
@@ -93,10 +89,7 @@ Select the Table View in the **Interface Hierarchy** and the following propertie
 - **Truncates Last Visible Line** - If `true`, the cell will be truncated in the data can not fit inside it's bounds.
 
 > [!IMPORTANT]
-> **NOTE:** Unless you are maintaining a legacy Xamarin.Mac application, `NSView` based Table Views should be used over `NSCell` based Table Views. `NSCell` is considered legacy and may not be supported going forward.
-
-
-
+> Unless you are maintaining a legacy Xamarin.Mac application, `NSView` based Table Views should be used over `NSCell` based Table Views. `NSCell` is considered legacy and may not be supported going forward.
 
 Select a Table Column in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
@@ -150,7 +143,7 @@ This allows you to edit the Table Cell View used as the base _Pattern_ for all c
 
 <a name="Adding_Actions_and_Outlets" />
 
-## Adding Actions and Outlets
+### Adding Actions and Outlets
 
 Just like any other Cocoa UI control, we need to expose our Table View and it's columns and cells to C# code using **Actions** and **Outlets** (based on the functionality required).
 
@@ -172,7 +165,7 @@ Next, we'll write the code display some data for the table when the application 
 
 <a name="Populating_the_Table_View" />
 
-# Populating the Table View
+## Populating the Table View
 
 With our Table View designed in Interface Builder and exposed via an **Outlet**, next we need to create the C# code to populate it.
 
@@ -340,7 +333,7 @@ If we run the application, the following is displayed:
 
 <a name="Sorting_by_Column" />
 
-# Sorting by Column
+## Sorting by Column
 
 Let's allow the user to sort the data in the table by clicking on a Column Header. First, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the `Product` column, enter `Title` for the **Sort Key**, `compare:` for the **Selector** and select `Ascending` for the **Order**:
 
@@ -402,7 +395,7 @@ If we run the application and click in the Column Headers, the rows will be sort
 
 <a name="Row_Selection" />
 
-# Row Selection
+## Row Selection
 
 If you want to allow the user to select a single row, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Table View in the **Interface Hierarchy** and uncheck the **Multiple** checkbox in the **Attribute Inspector**:
 
@@ -431,7 +424,7 @@ The Table View (`NSTableView`) contains the following methods for working with r
 
 <a name="Multiple_Row_Selection" />
 
-# Multiple Row Selection
+## Multiple Row Selection
 
 If you want to allow the user to select a multiple rows, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Table View in the **Interface Hierarchy** and check the **Multiple** checkbox in the **Attribute Inspector**:
 
@@ -465,7 +458,7 @@ The Table View (`NSTableView`) contains the following methods for working with r
 
 <a name="Type_to_Select_Row" />
 
-# Type to Select Row
+## Type to Select Row
 
 If you want to allow the user to type a character with the Table View selected and select the first row that has that character, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Table View in the **Interface Hierarchy** and check the **Type Select** checkbox in the **Attribute Inspector**:
 
@@ -499,7 +492,7 @@ If we run the application and type a character, a row is selected:
 
 <a name="Reordering_Columns" />
 
-# Reordering Columns
+## Reordering Columns
 
 If you want to allow the user to drag reorder columns in the Table View, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Table View in the **Interface Hierarchy** and check the **Reordering** checkbox in the **Attribute Inspector**:
 
@@ -526,7 +519,7 @@ If we run the application, we can drag Column Headers around to reorder our colu
 
 <a name="Editing_Cells" />
 
-# Editing Cells
+## Editing Cells
 
 If you want to allow the user to edit the values for a given cell, edit the `ProductTableDelegate.cs` file and change the `GetViewForItem` method as follows:
 
@@ -582,7 +575,7 @@ Now if we run the application, the user can edit the cells in the Table View:
 
 <a name="Using_Images_in_Table_Views" />
 
-# Using Images in Table Views
+## Using Images in Table Views
 
 To include an image as part of the cell in a `NSTableView`, you'll need to change how the data is returned by the Table View's `NSTableViewDelegate's` `GetViewForItem` method to use a `NSTableCellView` instead of the typical `NSTextField`. For example:
 
@@ -647,7 +640,7 @@ For more information, please see the [Using Images with Table Views](~/mac/app-f
 
 <a name="Adding-a-Delete-Button-to-a-Row" />
 
-# Adding a Delete Button to a Row
+## Adding a Delete Button to a Row
 
 Based on the requirements of your app, there might be occasions where you need to supply an action button for each row in the table. As an example of this, let's expand the Table View example created above to include a **Delete** button on each row.
 
@@ -912,7 +905,7 @@ If the user chooses delete, the row will be removed and the table will be redraw
 
 <a name="Data_Binding_Table_Views" />
 
-# Data Binding Table Views
+## Data Binding Table Views
 
 By using Key-Value Coding and Data Binding techniques in your Xamarin.Mac application, you can greatly decrease the amount of code that you have to write and maintain to populate and work with UI elements. You also have the benefit of further decoupling your backing data (_Data Model_) from your front end User Interface (_Model-View-Controller_), leading to easier to maintain, more flexible application design.
 
@@ -922,10 +915,9 @@ For more information, please see the [Table View Data Binding](~/mac/app-fundame
 
 <a name="Summary" />
 
-# Summary
+## Summary
 
 This article has taken a detailed look at working with Table Views in a Xamarin.Mac application. We saw the different types and uses of Table Views, how to create and maintain Table Views in Xcode's Interface Builder and how to work with Table Views in C# code.
-
 
 ## Related Links
 

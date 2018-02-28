@@ -7,6 +7,7 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
+ms.date: 05/22/2017
 ---
 
 # Label
@@ -23,6 +24,8 @@ The `Label` view is used for displaying text, both single and multi-line. Labels
 ## Styling Label
 
 The following sections cover setting properties of `Label` manually on a per-instance basis. Note that sets of properties can be grouped into one style that is consistently applied to one or many views. This can increase readability of code and make design changes easier to implement. See [Styles](~/xamarin-forms/user-interface/text/styles.md) for more information.
+
+<a name="Truncation_and_Wrapping" />
 
 ## Truncation and Wrapping
 

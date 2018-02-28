@@ -14,7 +14,7 @@ ms.date: 01/05/2018
 
 Sometimes it's convenient to use data bindings to display the string representation of an object or value. For example, you might want to use a `Label` to display the current value of a `Slider`. In this data binding, the `Slider` is the source, and the target is the `Text` property of the `Label`.
 
-When displaying strings in code, the most powerful tool is the static [`String.Format`](https://developer.xamarin.com/api/member/System.String.Format/p/System.String/System.Object/) method. The formatting string includes formatting codes specific to various types of objects, and you can include other text along with the values being formatted. See the [Formatting Types in .NET](https://docs.microsoft.com/en-us/dotnet/standard/base-types/formatting-types) article for more information on string formatting.
+When displaying strings in code, the most powerful tool is the static [`String.Format`](https://developer.xamarin.com/api/member/System.String.Format/p/System.String/System.Object/) method. The formatting string includes formatting codes specific to various types of objects, and you can include other text along with the values being formatted. See the [Formatting Types in .NET](/dotnet/standard/base-types/formatting-types/) article for more information on string formatting.
 
 ## The StringFormat Property
 
@@ -41,7 +41,7 @@ The **String Formatting** page illustrates several uses of the `StringFormat` pr
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="DataBindingDemos.StringFormattingPage"
              Title="String Formatting">
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">
@@ -55,13 +55,13 @@ The **String Formatting** page illustrates several uses of the `StringFormat` pr
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout Margin="10">
         <Slider x:Name="slider" />
         <Label Text="{Binding Source={x:Reference slider},
                               Path=Value,
                               StringFormat='The slider value is {0:F2}'}" />
-        
+
         <BoxView />
 
         <TimePicker x:Name="timePicker" />
@@ -72,7 +72,7 @@ The **String Formatting** page illustrates several uses of the `StringFormat` pr
         <BoxView />
 
         <Entry x:Name="entry" />
-        <Label Text="{Binding Source={x:Reference entry}, 
+        <Label Text="{Binding Source={x:Reference entry},
                               Path=Text,
                               StringFormat='The Entry text is &quot;{0}&quot;'}" />
 
@@ -80,7 +80,7 @@ The **String Formatting** page illustrates several uses of the `StringFormat` pr
 
         <StackLayout BindingContext="{x:Static sys:DateTime.Now}">
             <Label Text="{Binding}" />
-            <Label Text="{Binding Path=Ticks, 
+            <Label Text="{Binding Path=Ticks,
                                   StringFormat='{0:N0} ticks since 1/1/1'}" />
             <Label Text="{Binding StringFormat='The {{0:MMMM}} specifier produces {0:MMMM}'}" />
             <Label Text="{Binding StringFormat='The long date is {0:D}'}" />
@@ -143,7 +143,7 @@ This approach is shown in the **Better Color Selector** sample, which uses the s
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-        
+
     <StackLayout>
         <StackLayout.BindingContext>
             <local:HslColorViewModel Color="Sienna" />
@@ -172,9 +172,9 @@ There are now three pairs of `Slider` and `Label` elements that are bound to the
 
 [![Better Color Selector](string-formatting-images/bettercolorselector-small.png "Better Color Selector")](string-formatting-images/bettercolorselector-large.png "Better Color Selector")
 
-You might be wondering how you could display RGB (red, green, blue) values in traditional two-digit hexadecimal format. Those integer values aren't directly available from the `Color` structure. One solution would be to calculate integer values of the color components within the ViewModel and expose them as properties. You could then format them using the `X2` formatting specification. 
+You might be wondering how you could display RGB (red, green, blue) values in traditional two-digit hexadecimal format. Those integer values aren't directly available from the `Color` structure. One solution would be to calculate integer values of the color components within the ViewModel and expose them as properties. You could then format them using the `X2` formatting specification.
 
-Another approach is more general: You can write a *binding value converter* as discussed in the later article, [**Binding Value Converters**](converters.md). 
+Another approach is more general: You can write a *binding value converter* as discussed in the later article, [**Binding Value Converters**](converters.md).
 
 The next article, however, explores the [**Binding Path**](binding-path.md) in more detail, and show how you can use it to reference sub-properties and items in collections.
 

@@ -52,7 +52,7 @@ The projects are:
 
 ## Introduction to Visual Studio for Mac
 
-Visual Studio for Mac is a free, open-source IDE similar to Visual Studio. It features a fully integrated visual designer, a text editor complete with refactoring tools, an assembly browser, source code integration, and more. For more information about Visual Studio for Mac, see [Introducing Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/).
+Visual Studio for Mac is a free, open-source IDE similar to Visual Studio. It features a fully integrated visual designer, a text editor complete with refactoring tools, an assembly browser, source code integration, and more. For more information about Visual Studio for Mac, see [Introducing Visual Studio for Mac](/visualstudio/mac/).
 
 Visual Studio for Mac follows the Visual Studio practice of organizing code into *Solutions* and *Projects*. A Solution is a container that can hold one or more Projects. A Project can be an application, a supporting library, a test application, and more. The Phoneword application consists of one solution containing three projects, as shown in the following screenshot.
 
@@ -84,9 +84,9 @@ The following screenshot shows the contents of the Phoneword PCL project in Visu
 
 The project consists of three folders:
 
-- **References** – Contains the assemblies required to build and run the application. Expanding the .NET Portable Subset folder reveals references to .NET assemblies such as [System](http://msdn.microsoft.com/en-us/library/system%28v=vs.110%29.aspx), System.Core, and [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml%28v=vs.110%29.aspx). Expanding the **From Packages** folder reveals references to the Xamarin.Forms assemblies.
+- **References** – Contains the assemblies required to build and run the application. Expanding the .NET Portable Subset folder reveals references to .NET assemblies such as [System](http://msdn.microsoft.com/library/system%28v=vs.110%29.aspx), System.Core, and [System.Xml](http://msdn.microsoft.com/library/system.xml%28v=vs.110%29.aspx). Expanding the **From Packages** folder reveals references to the Xamarin.Forms assemblies.
 - **Packages** – The Packages directory houses [NuGet](https://www.nuget.org) packages that simplify the process of using third party libraries in your application. These packages can be updated to the latest releases by right-clicking the folder and selecting the update option in the pop-up menu.
-- **Properties** – Contains **AssemblyInfo.cs**, a .NET assembly metadata file. It is good practice to fill this file with some basic information about your application. For more information about this file, see [AssemblyInfo Class](http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.applicationservices.assemblyinfo(v=vs.110).aspx) on MSDN.
+- **Properties** – Contains **AssemblyInfo.cs**, a .NET assembly metadata file. It is good practice to fill this file with some basic information about your application. For more information about this file, see [AssemblyInfo Class](http://msdn.microsoft.com/library/microsoft.visualbasic.applicationservices.assemblyinfo(v=vs.110).aspx) on MSDN.
 
 -----
 

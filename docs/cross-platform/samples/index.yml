@@ -5,7 +5,7 @@ metadata:
   description: Cross-platform Xamarin sample apps for mobile developers.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 02/26/2018
   ms.topic: article
 abstract:
   description: Xamarin cross-platform sample apps and code demos to help you get started building mobile apps with C# and Xamarin.
@@ -14,50 +14,73 @@ abstract:
     - href: https://developer.xamarin.com/samples/
       text: All Xamarin Samples
 sections:
-- title: 
+- title: Get Started
   items:
    - type: list
      style: cards
      className: cardsW
      items:
      - href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
-       html: This sample demonstrates a Todo list application where the data is stored and accessed in a local SQLite database.
+       html: This sample demonstrates a Todo list application where the data is stored and accessed in a local SQLite database, built with Xamarin.Forms.
        image:
          src: images/todo.png
          href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
        title: Todo
-     - href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
-       html: This is a familiar game with a new twist. Ten bugs are hidden in a 9-by-9 grid of tiles. To win, you must find and flag all ten bugs.
+     - href: https://github.com/jamesmontemagno/MyShoppe
+       html: Demo app that empowers salespeople to track their sales performance, manage leads, view their contacts, manage orders, and browse the product catalog.
        image:
-         src: images/bugsweeper.png
-         href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
-       title: BugSweeper
-     - href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
-       html: An RPN (Reverse Polish Notation) calculator allows numbers and operations to be entered without parentheses or an equal key.
+         src: images/myshoppe.png
+         href: https://github.com/jamesmontemagno/MyShoppe
+       title: My Shoppe
+     - href: https://github.com/xamarin/app-crm
+       html: Demo app that empowers salespeople to track their sales performance, manage leads, view their contacts, manage orders, and browse the product catalog.
        image:
-         src: images/rpncalc.png
-         href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
-       title: RPN Calculator
-     - href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
-       html: The program simulates a revolving disk that you can paint on by touching and moving your fingers. SpinPaint responds to touch by painting a line under your finger, but it also duplicates that line in three mirror images in the other three quadrants of the disk.
+         src: images/crm.png
+         href: https://github.com/xamarin/app-crm
+       title: Xamarin CRM
+
+- title: Azure & Enterprise
+  items:
+   - type: list
+     style: cards
+     className: cardsW
+     items:
+     - href: https://github.com/xamarinhq/app-acquaint/
+       html: Contact list app with a detail & edit screen. Source code is available in both Xamarin.Forms and Xamarin native implementations.
        image:
-         src: images/spinpaint.png
-         href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
-       title: SpinPaint
-     - href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
-       html: XAML—the eXtensible Application Markup Language—allows developers to define user interfaces in Xamarin.Forms applications using markup rather than code.
+         src: images/acquaint.jpg
+         href: https://github.com/xamarinhq/app-acquaint
+       title: Acquaint
+
+     - href: https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps
+       html: Connect 2017 demo building an app suite including Xamarin & Azure.
        image:
-         src: images/xaml.png
-         href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
-       title: XAML Samples
-     - href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
-       html: XAML—the eXtensible Application Markup Language—allows developers to define user interfaces in Xamarin.Forms applications using markup rather than code.
+         src: images/smarthotel360.png
+         href: https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps
+       title: SmartHotel360
+     - href: https://github.com/Microsoft/BikeSharing360_MobileApps
+       html: Connect 2016 demo building an app suite including Xamarin & Azure.
        image:
-         src: images/xuzzle.png
-         href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
-       title: Xuzzle
+         src: images/bikesharing360.png
+         href: https://github.com/Microsoft/BikeSharing360_MobileApps
+       title: BikeSharing360
+
+     - href: https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile
+       html: Enterprise architecture guidance for building apps using containers on Azure.
+       image:
+         src: images/eshop.png
+         href: https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile
+       title: eShop
+
+
+- title: All Samples
+  items:
+   - type: list
+     style: cards
+     className: cardsW
+     items:
      - href: https://developer.xamarin.com/samples/
-       html: Access a the complete set of Xamarin cross-platform sample apps and code demos.
+       html: The complete set of Xamarin cross-platform sample apps and code demos.
        image: 
          src: ~/media/shared/sample-download.svg
          href: https://developer.xamarin.com/samples/
