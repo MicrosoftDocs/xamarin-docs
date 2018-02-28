@@ -952,7 +952,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-graphics-urhosharp.svg?branch=master" alt="UrhoSharp" />
+                                                        <img src="~/media/index/xamarin-graphics-urho.svg?branch=master" alt="UrhoSharp" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
