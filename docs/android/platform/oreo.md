@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: EAEF7341-7A00-4439-9FAF-43882637BEF8
 ms.technology: xamarin-android
+ms.custom: video
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
@@ -591,6 +592,11 @@ advantage of Android Oreo features:
     device's location using a bound and started foreground service.
 
 
+## Video
+
+> [!VIDEO https://youtube.com/embed/OuvEcaMO-Ho]
+
+**Android 8.0 Oreo development with C#**
 
 <a name="summary" />
 

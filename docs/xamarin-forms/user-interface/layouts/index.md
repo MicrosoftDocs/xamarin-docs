@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
@@ -12,7 +13,13 @@ ms.date: 10/26/2017
 
 # Layouts
 
-Xamarin.Forms has several layouts and features for organizing content on screen. Each layout control is described below, as well as details on how to handle screen orientation changes:
+Xamarin.Forms has several layouts and features for organizing content on screen. 
+
+> [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
+
+**Xamarin.Forms Layouts, by [Xamarin University](https://university.xamarin.com/)**
+
+Each layout control is described below, as well as details on how to handle screen orientation changes:
 
 * **[StackLayout](stack-layout.md)** &ndash; used to arrange views linearly, either horizontally or vertically. Views in a StackLayout can be aligned to the center, left or right of the layout.
 * **[AbsoluteLayout](absolute-layout.md)** &ndash; used to arrange views by setting coordinates & size in terms of absolute values or ratios. AbsoluteLayout can be used to layer views as well as anchor them to the left, right or center.

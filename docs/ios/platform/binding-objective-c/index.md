@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
@@ -44,7 +45,11 @@ view controller that allow the user to select a color based on its HSB
 representation, making color selection more user-friendly.
 Objective Sharpie will be used to assist in the binding process.
 
+## Xamarin University Lightning Lecture
 
+> [!VIDEO https://youtube.com/embed/ZUoPLcmnf1o]
+
+**iOS Bindings in C/C++, by [Xamarin University](https://university.xamarin.com/)**
 
 ## Related Links
 

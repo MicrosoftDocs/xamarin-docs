@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: EEC549E0-F182-4F9C-B2BA-B31D19569AA5
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
@@ -16,6 +17,10 @@ ms.date: 05/03/2017
 
 Before you start, create (or use an existing) Xamarin.Forms project.
 You can only add Mac apps using Visual Studio for Mac.
+
+> [!VIDEO https://youtube.com/embed/mvQ7jzaNseM]
+
+**Adding a macOS project to Xamarin.Forms, by [Xamarin University](https://university.xamarin.com/)**
 
 ## Adding a Mac App
 

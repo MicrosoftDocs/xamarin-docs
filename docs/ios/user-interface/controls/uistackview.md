@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
@@ -31,6 +32,10 @@ the subviews either inside a Storyboard in the iOS Designer, or by adding and re
 
 This document consists of two parts: a quick start to help you implement your
 first stack view, and then some more technical details about how it works.
+
+> [!VIDEO https://youtube.com/embed/p3po6507Ip8]
+
+**UIStackView, by [Xamarin University](https://university.xamarin.com/)**
 
 ## UIStackView Quickstart
 

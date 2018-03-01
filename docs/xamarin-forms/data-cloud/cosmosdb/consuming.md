@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
@@ -14,7 +15,9 @@ ms.date: 06/16/2017
 
 _An Azure Cosmos DB document database is a NoSQL database that provides low latency access to JSON documents, offering a fast, highly available, scalable database service for applications that require seamless scale and global replication. This article explains how to use the Microsoft Azure DocumentDB Client Library to integrate an Azure Cosmos DB document database into a Xamarin.Forms application._
 
-## Overview
+> [!VIDEO https://youtube.com/embed/BoVH12igmbg]
+
+**Microsoft Azure Cosmos DB, by [Xamarin University](https://university.xamarin.com/)**
 
 An Azure Cosmos DB document database account can be provisioned using an Azure subscription. Each database account can have zero or more databases. A document database in Azure Cosmos DB is a logical container for document collections and users.
 

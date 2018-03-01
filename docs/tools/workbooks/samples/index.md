@@ -4,6 +4,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: DE1609F8-0D39-4EA0-8666-0468FCF77ACC
 ms.technology: xamarin-cross-platform
+ms.custom: xamu-video
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
@@ -26,8 +27,13 @@ open source [wiki](https://github.com/ssloy/tinyrenderer/wiki/).
 
 [](tinyrenderer.md)
 
+## [UrhoTest](https://github.com/Krumelur/UrhoTest)
 
+ > [!VIDEO https://youtube.com/embed/zGTfboTQLfo]
 
+**Physics and collision detection in UrhoSharp, by [Xamarin University](https://university.xamarin.com)**
+
+The video covers the creation of a simple 3D scene, shows how to assign physical aspects to objects and how to visualize them, using these [UrhoTest workbooks](https://github.com/Krumelur/UrhoTest). It also explains the techniques required to detect collisions between objects and how to run asynchronous animations.
 
 ## [PropertyAnimation.workbook](https://developer.xamarin.com/workbooks/android/user-interface/PropertyAnimation.workbook)
 

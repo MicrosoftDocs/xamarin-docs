@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
@@ -13,6 +14,10 @@ ms.date: 03/22/2017
 # iOS Extensions
 
 _Introduced in iOS 8, Extensions are widgets that are presented by iOS in standard  contexts, such as within the Notification Center, when the user requests a custom keyboard, or when they are photo editing. All Extensions are installed in conjunction with a Container app and are activated from a particular Extension Point in a Host app._
+
+> [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
+
+**Creating Extensions in iOS, by [Xamarin University](https://university.xamarin.com/)**
 
 Extensions, as introduced in iOS 8, are specialized `UIViewControllers` that are presented by iOS inside standard contexts such as within the **Notification Center**, as custom keyboard types requested by the user to perform specialized input or other contexts like editing a photo where the Extension can provide special effect filters.
 

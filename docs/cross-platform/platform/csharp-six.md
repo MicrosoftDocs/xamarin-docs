@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.technology: xamarin-cross-platform
+ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
@@ -22,7 +23,11 @@ This article includes brief snippets of the C# 6 code that illustrate basic use.
 The sample application is a command-line program that runs across all Xamarin target
 platforms and exercises the various features.
 
-# Requirements
+
+> [!VIDEO https://youtube.com/embed/7UdV7zGPfMU]
+
+**What's new in C# 6, by [Xamarin University](https://university.xamarin.com/)**
+
 
 ## Development Environment
 
@@ -34,8 +39,7 @@ platforms and exercises the various features.
 
 ### Windows
 
-* **Visual Studio 2015 and 2017** and above have full support for C# 6. Earlier versions of Visual Studio (eg. 2013, 2012)
-    will not support C# 6.
+* **Visual Studio 2015 and 2017** and above have full support for C# 6. Earlier versions of Visual Studio will not support C# 6.
 
 * **Xamarin Studio for Windows** does not support C# 6 features
   in the editor.
@@ -54,15 +58,15 @@ to compile C# 6 code (even if you choose Xamarin Studio for Windows as your IDE)
 ^ or *[Microsoft Build Tools 2015](http://www.microsoft.com/en-us/download/details.aspx?id=48159)*
 for command line compilation or build servers, for example.
 
-# Using C# 6
+## Using C# 6
 
 The C# 6 compiler is used in all recent versions of Visual Studio for Mac.
 Those using command-line compilers should confirm that `mcs --version` returns 4.0 or higher.
 Visual Studio for Mac users can check if they have Mono 4 (or newer) installed by referring to
 **About Visual Studio for Mac > Visual Studio for Mac > Show Details**.
 
-# Less Boilerplate
-## using static
+## Less Boilerplate
+### using static
 Enumerations, and certain classes such as `System.Math`, are primarily holders of static values and functions. In C# 6, you can import all static members of a type with a single `using static` statement. Compare a typical trigonometric function in C# 5 and C# 6:
 
     // Classic C#
@@ -91,7 +95,7 @@ Enumerations, and certain classes such as `System.Math`, are primarily holders o
 
     for (var angle = 0.0; angle <= Math.PI * 2.0; angle += Math.PI / 8) ... //PI is const, not static, so requires Math.PI
 
-## using static with Extension Methods
+### using static with Extension Methods
 
 The `using static` facility operates a little differently with  extension methods. Although extension methods are written using `static`, they don’t make sense without an instance on which to operate. So when `using static` is used with a type that defines extension methods, the extension methods become available on their target type (the method's `this` type). For instance, `using static System.Linq.Enumerable` can be used to extend the API of `IEnumerable<T>` objects without bringing in all of the LINQ types:
 
@@ -110,7 +114,7 @@ The `using static` facility operates a little differently with  extension method
 
 The previous example demonstrates the difference in behavior: the extension method `Enumerable.Where` is associated with the array, while the static method `String.Join` can be called without reference to the `String` type.
 
-## nameof Expressions
+### nameof Expressions
 Sometimes, you want to refer to the name you’ve given a variable or field. In C# 6, `nameof(someVariableOrFieldOrType)` will return the string `"someVariableOrFieldOrType"`. For instance, when throwing an `ArgumentException` you’re very likely to want to name which argument is invalid:
 
     throw new ArgumentException ("Problem with " + nameof(myInvalidArgument))
@@ -134,7 +138,7 @@ Although you can pass a qualified name to `nameof`, only the final element (afte
 
 The two calls to `SetBinding` are passing identical values: `nameof(ReactiveType.StringField)` is `"StringField"`, not `"ReactiveType.StringField"` as you might initially expect.
 
-# Null-conditional Operator
+## Null-conditional Operator
 Earlier updates to C# introduced the concepts of nullable types and the null-coalescing operator `??` to reduce the amount of boilerplate code when handling nullable values. C# 6 continues this theme with the "null-conditional operator" `?.`. When used on an object on the right-hand side of an expression, the null-conditional operator returns the member value if the object is not `null` and `null` otherwise:
 
     var ss = new string[] { "Foo", null };
@@ -162,7 +166,7 @@ However, `Invoke` can be used to separate the `?` from the argument list and is 
     }
 
 
-# String Interpolation
+## String Interpolation
 The `String.Format` function has traditionally used indices as placeholders in the format string, e.g., `String.Format("Expected: {0} Received: {1}.", expected, received`). Of course, adding a new value has always involved an annoying little task of counting up arguments, renumbering placeholders, and inserting the new argument in the right sequence in the argument list.
 
 C# 6's new string interpolation feature greatly improves upon `String.Format`. Now, you can directly name variables in a string prefixed with a `$`. For instance:
@@ -212,10 +216,12 @@ In the common use-case of building function arguments with string interpolation,
 	Console.WriteLine ($"Today is: {DateTime.Now}"); //"21.05.2015 13:52:51"
 	Console.WriteLine ($"Today is: {DateTime.Now.ToString(CultureInfo.InvariantCulture)}"); //"05/21/2015 13:52:51"
 
-# Initialization
+## Initialization
+
 C# 6 provides a number of concise ways to specify properties, fields, and members.
 
-## Auto-property Initialization
+### Auto-property Initialization
+
 Auto-properties can now be initialized in the same concise manner as fields. Immutable auto-properties can be written with only a getter:
 
     class ToDo
@@ -238,7 +244,8 @@ In the constructor, you can set the value of a getter-only auto-property:
 
 This initialization of auto-properties is both a general space-saving feature and a boon to developers wishing to emphasize immutability in their objects.
 
-## Index Initializers
+### Index Initializers
+
 C# 6 introduces index initializers, which allow you to set both the key and value in types that have an indexer. Typically, this is for `Dictionary`-style data structures:
 
 	partial void ActivateHandoffClicked (WatchKit.WKInterfaceButton sender)
@@ -252,7 +259,8 @@ C# 6 introduces index initializers, which allow you to set both the key and valu
 		statusLabel.SetText ("Check phone");
 	}
 
-## Expression-bodied Function Members
+### Expression-bodied Function Members
+
 Lambda functions have several benefits, one of which is simply saving space. Similarly, expression-bodied class members allow small functions to be expressed a little more succinctly than was possible in previous versions of C# 6.
 
 Expression-bodied function members use the lambda arrow syntax  rather than the traditional block syntax:
@@ -271,10 +279,12 @@ Expression-bodied members are still subject to the rule that `async` is supporte
     public async Task<int> LeisureHours => await Task.FromResult<char> (DateTime.Now.DayOfWeek.ToString().First()) == 'S' ? 16 : 5;
 
 
-# Exceptions
+## Exceptions
+
 There's no two ways about it: exception-handling is hard to get right. New features in C# 6 make exception-handling more flexible and consistent.
 
-## Exception Filters
+### Exception Filters
+
 By definition, exceptions occur in unusual circumstances, and it can be very difficult to reason and code about *all* the ways an exception of a particular type might occur. C# 6 introduces the ability to guard an execution handler with a runtime-evaluated filter. This is done by adding a `when (bool)` pattern after the normal `catch(ExceptionType)` declaration. In the following, a filter distinguishes a parse error relating to the `date` parameter as opposed to other parsing errors.
 
     public void ExceptionFilters(string aFloat, string date, string anInt)
@@ -291,7 +301,8 @@ By definition, exceptions occur in unusual circumstances, and it can be very dif
         }
     }
 
-## await in catch...finally…
+### await in catch...finally…
+
 The `async` capabilities introduced in C# 5 have been a game-changer for the language. In C# 5, `await` was not allowed in `catch` and `finally` blocks, an annoyance given the value of the `async/await` capability. C# 6 removes this limitation, allowing asynchronous results to be awaited consistently through the program as shown in the following snippet:
 
     async void SomeMethod()
@@ -307,7 +318,7 @@ The `async` capabilities introduced in C# 5 have been a game-changer for the lan
     }
 
 
-# Summary
+## Summary
 
 The C# language continues to evolve to make developers more productive while also promoting good practices and supporting tooling. This document has given an overview of the new language features in C# 6 and has briefly demonstrated how they are used.
 

@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
@@ -31,6 +32,11 @@ There are a number of things to consider when [supporting multitasking in your a
 As an app developer you can also [opt-out of multitasking](#Opting-Out-of-Multitasking), including [disabling PIP Video Playback](#Disabling-PIP-Video-Playback).
 
 This article will cover the steps required to ensure that your Xamarin.iOS app runs correctly in a multitasking environment or how to opt out of multitasking if it is not a good fit for your app.
+
+> [!VIDEO https://youtube.com/embed/GctYAozoLr8]
+
+**Multitasking for iPad, by [Xamarin University](https://university.xamarin.com)**
+
 
 <a name="Multitasking-QuickStart" />
 

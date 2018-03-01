@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 14345503-1742-41F5-B2EF-EE31AB7C3516
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
@@ -19,6 +20,10 @@ Apple has released the 5th generation of the Apple TV hardware, the Apple TV 4K,
 The Apple TV platform is open to developers, allowing them to create rich, immersive apps and release them through the Apple TV's built-in App Store.
 
 For more information on tvOS, please see the [Getting Started](~/ios/tvos/get-started/index.md) document.
+
+> [!VIDEO https://youtube.com/embed/Q04oIYymfGM]
+
+**tvOS with Xamarin, by [Xamarin University](https://university.xamarin.com/)**
 
 ## Documentation
 
