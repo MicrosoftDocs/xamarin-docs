@@ -14,8 +14,6 @@ ms.date: 01/12/2016
 
 _Xamarin.Forms cells can be added to ListViews and TableViews._
 
-<style>.tableimg { max-width: none !important;}</style>
-
 ## Cells
 
 A Cell is a specialized element used for items in a table and describes
@@ -26,74 +24,19 @@ A Cell is a specialized element used for items in a table and describes
   elements designed to be added to [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)
   or [`TableView`](https://developer.xamarin.com/api/type/Xamarin.Forms.TableView/) controls.
 
-To learn how to use and customize cells, refer to the [ListView](~/xamarin-forms/user-interface/listview/index.md)
- and [TableView](~/xamarin-forms/user-interface/tableview.md) documentation.
+To learn how to use and customize cells, refer to the [`ListView`](~/xamarin-forms/user-interface/listview/index.md)
+ and [`TableView`](~/xamarin-forms/user-interface/tableview.md) documentation.
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-<thead>
-    <th>
-      <strong>Type</strong>
-    </th>
-    <th>
-      <strong>Description</strong>
-    </th>
-    <th style="min-width:400px">
-      <strong>Screenshot</strong>
-    </th>
-  </thead>
-  <tbody>
-    <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell/">EntryCell</a>
-    </td>
-    <td valign="top">
-    A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/">Xamarin.Forms.Cell</a> with a label and a single line text entry field.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/EntryDemoPage.cs"><img src="cells-images/EntryCell.png" title="EntryCell Example" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.SwitchCell/">SwitchCell</a>
-    </td>
-    <td valign="top">
-    A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/">Xamarin.Forms.Cell</a> with a label and an on/off switch.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/SwitchCellDemoPage.cs"><img src="cells-images/SwitchCell.png" title="SwitchCell Example" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/">TextCell</a>
-    </td>
-    <td valign="top">
-    A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/">Xamarin.Forms.Cell</a> with primary and secondary text.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/TextCellDemoPage.cs"><img src="cells-images/TextCell.png" title="TextCell Example" class="tableimg">
-    </a></td>
-  </tr>
-      <tr>
-    <td>
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/">ImageCell</a>
-    </td>
-    <td valign="top">
-    A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/">Text Cell</a> that also includes an image.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/ImageCellDemoPage.cs"><img src="cells-images/ImageCell.png" title="ImageCell Example" class="tableimg">
-    </a></td>
-  </tr>
-  </tbody>
-</table>
-
-
+| Type | Description | Screenshot |
+| ---- | ----------- | ---------- |
+| [`EntryCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell) | A [`Cell`](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) with a label and a single line text entry field. | [![EntryCell Example](cells-images/EntryCell.png "EntryCell Example")](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EntryCellDemoPage.cs) |
+| [`SwitchCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.SwitchCell) | A [`Cell`](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) with a label and an on/off switch. | [![SwitchCell Example](cells-images/SwitchCell.png "SwitchCell Example")](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchCellDemoPage.cs) |
+| [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell) | A [`Cell`](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) with primary and secondary text. | [![TextCell Example](cells-images/TextCell.png "TextCell Example")](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TextCellDemoPage.cs) |
+| [`ImageCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell) | A [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) that also includes an image. | [![ImageCell Example](cells-images/ImageCell.png "ImageCell Example")](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageCellDemoPage.cs) |
 
 ## Related Links
 
 - [Introduction To Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [Xamarin.Forms Gallery (sample)](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+- [Xamarin.Forms FormsGallery sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 - [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/)
-- [Xamarin.Forms API Documentation](https://developer.xamarin.com/api/namespace/Xamarin.Forms/)
+- [Xamarin.Forms API Documentation](https://developer.xamarin.com/api/root/Xamarin.Forms/)

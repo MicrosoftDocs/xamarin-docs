@@ -41,5 +41,5 @@ This section serves as a reference showing many of
 ## Related Links
 
 - [Introduction To Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [Xamarin.Forms Gallery (sample)](https://developer.xamarin.com/samples/FormsGallery/)
-- [API Documentation](https://developer.xamarin.com/api/namespace/Xamarin.Forms/)
+- [Xamarin.Forms FormsGallery sample](https://developer.xamarin.com/samples/FormsGallery/)
+- [API Documentation](https://developer.xamarin.com/api/root/Xamarin.Forms/)
