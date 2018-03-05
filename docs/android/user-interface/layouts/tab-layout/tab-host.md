@@ -14,7 +14,6 @@ ms.date: 10/25/2017
 
 _This article will provide a high level overview of the the TabHost, an older API used to create tabbed layouts in a Xamarin.Android application._
 
-<a name="Overview" />
 
 ## Overview
 
@@ -66,7 +65,6 @@ Activities require system resources but allow for a more modular
 approach with the logic for each tab encapsulated in it's own distinct
 class.
 
-<a name="Summary" />
 
 ## Summary
 

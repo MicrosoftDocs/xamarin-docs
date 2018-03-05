@@ -12,7 +12,6 @@ ms.date: 08/23/2017
 
 # Tabbed Layouts
 
-<a name="Overview" />
 
 ## Overview
 
@@ -70,7 +69,6 @@ Developers are discouraged from using this API and should favour the newer
 ActionBar for their Xamarin.Android applications. 
 
 
-<a name="Introducing_ActionBarSherlock" />
 
 ## ActionBarSherlock
 

@@ -7,14 +7,12 @@ ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/24/2018
+ms.date: 03/01/2018
 ---
 
 # Setup and Installation
 
 _This article walks through the installation steps and configuration details required to prepare your computer and devices for Android Wear development. By the end of this article, you'll have a working Xamarin.Android Wear installation integrated into Visual Studio for Mac and/or Microsoft Visual Studio, and you'll be ready to start building your first Xamarin.Android Wear application._
-
-<a name="requirements" />
 
 ## Requirements
 
@@ -42,8 +40,6 @@ if you are developing specifically for API level 23 or earlier.
 > [!IMPORTANT]
 > **Note:** Xamarin.Android does not support JDK 9.
 
-<a name="installation" />
-
 ## Installation
 
 After you have installed Xamarin.Android, perform the following steps 
@@ -55,7 +51,6 @@ so that you're ready to build and test Android Wear apps:
 
 These steps are described in the following sections.
 
-<a name="sdktools" />
 
 ### Install Android SDK and tools 
 

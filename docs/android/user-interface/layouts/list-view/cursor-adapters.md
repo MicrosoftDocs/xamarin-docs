@@ -11,7 +11,6 @@ ms.date: 10/25/2017
 
 # Using CursorAdapters
 
-<a name="overview" />
 
 ## Overview
 
@@ -29,7 +28,6 @@ of data that are stored in SQLite. The consuming code must define an SQL query
 in a `Cursor` object and then describe how to create and
 populate the views for each row.
 
-<a name="Creating_an_SQLite_Database" />
 
 ## Creating an SQLite Database
 
@@ -76,7 +74,6 @@ integer in the `RawQuery` that makes up the cursor. Refer to the
 [Android docs](https://developer.xamarin.com/api/type/Android.Widget.CursorAdapter/)
 for further information.
 
-<a name="Creating_the_Cursor" />
 
 ### Creating the Cursor
 
@@ -108,7 +105,6 @@ Once an application has a SQLite database available and has created a
 cursor object as shown, it can utilize either a `SimpleCursorAdapter`
 or a subclass of `CusorAdapter` to display rows in a `ListView`.
 
-<a name="Using_SimpleCursorAdapter" />
 
 ## Using SimpleCursorAdapter
 
@@ -156,7 +152,6 @@ values to display controls, it does not allow you to change other
 aspects of the row layout (for example, showing/hiding controls or
 changing properties).
 
-<a name="Subclassing_CursorAdapter" />
 
 ## Subclassing CursorAdapter
 
@@ -186,7 +181,6 @@ re-use. This is in contrast to a regular adapter where it’s possible
 to ignore the `convertView` parameter of the `BaseAdapter.GetView`
 method.
 
-<a name="Implementing_the_CursorAdapter" />
 
 ### Implementing the CursorAdapter
 
@@ -215,7 +209,6 @@ public class HomeScreenCursorAdapter : CursorAdapter {
 }
 ```
 
-<a name="Assigning_the_CursorAdapter" />
 
 ### Assigning the CursorAdapter
 

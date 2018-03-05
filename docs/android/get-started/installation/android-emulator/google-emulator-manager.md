@@ -7,7 +7,7 @@ ms.assetid: 0C0BBEC0-C84A-4558-B905-4EF81FCD62F9
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 12/22/2017
+ms.date: 03/01/2018
 ---
 
 # Google Emulator Manager
@@ -23,7 +23,6 @@ devices for use by the Android SDK Emulator.
 > [!NOTE]
 > **Note:** If you are targeting Android 8.0 Oreo, you must use the [Xamarin Android Device Manager](~/android/get-started/installation/android-emulator/xamarin-device-manager.md) to create and configure virtual devices.
 
-<a name="sysimg" />
 
 ## Installing System Images
 
@@ -90,8 +89,6 @@ CPU/ABI choices during virtual device configuration (this is described
 next).
 
 
-<a name="virtualdevice" />
-
 ## Configuring Virtual Devices
 
 # [Visual Studio](#tab/vswin)
@@ -135,7 +132,6 @@ You can create new virtual device images with different device
 characteristics and API levels &ndash; the next section explains how to
 create custom device definitions and virtual devices.
 
-<a name="custom-def" />
 
 ### Creating a Custom Device Definition
 
@@ -235,7 +231,6 @@ menu:
 -----
 
 
-<a name="cloning" />
 
 ### Cloning a Device Definition
 

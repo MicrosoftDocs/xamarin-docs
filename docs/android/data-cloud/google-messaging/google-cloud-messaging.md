@@ -21,7 +21,6 @@ Messaging routes messages between your app and an app server, and it
 provides a step-by-step procedure for acquiring credentials so that
 your app can use GCM services.
 
-<a name="overview" />
 
 ## Overview
 
@@ -44,7 +43,6 @@ For information about implementing an app server for GCM, see
 [About GCM Connection Server](https://developers.google.com/cloud-messaging/server).
 
 
-<a name="inaction" />
 
 ## Google Cloud Messaging in Action
 
@@ -100,7 +98,6 @@ The following sections explain how these credentials are used when
 client apps communicate with app servers through GCM.
 
 
-<a name="registration" />
 
 ### Registration with GCM
 
@@ -137,7 +134,6 @@ unregistration and unsubscription, and it describes the process of
 unregistration when a client app is uninstalled.
 
 
-<a name="downstream" />
 
 ### Downstream Messaging
 
@@ -166,8 +162,6 @@ downstream GCM messages on Android, see
 [Remote Notifications](~/android/data-cloud/google-messaging/remote-notifications-with-gcm.md).
 
 
-<a name="topic" />
-
 #### Topic Messaging
 
 *Topic Messaging* is a type of downstream messaging where the app
@@ -182,7 +176,6 @@ explains how to send messages from an app server to multiple devices
 that subscribe to a particular topic.
 
 
-<a name="group" />
 
 #### Group Messaging
 
@@ -196,8 +189,6 @@ limited to a maximum of 20 members. Google's
 explains how app servers can send a single message to multiple client
 app instances running on devices that belong to a group.
 
-
-<a name="upstream" />
 
 ### Upstream Messaging
 
@@ -236,7 +227,6 @@ credentials for access to Google's GCM servers. The following sections
 describe the steps required to complete this process:
 
 
-<a name="googleservices" />
 
 ### Enable Google Services for Your App
 
@@ -277,7 +267,6 @@ describe the steps required to complete this process:
     provides useful guidelines for protecting your API Key.
 
 
-<a name="projectsettings" />
 
 ### View Your Project Settings
 
@@ -296,7 +285,6 @@ To view the **API key**, click **API Manager** and then click **Credentials**:
 [![Viewing the API key](google-cloud-messaging-images/11-view-credentials-sml.png)](google-cloud-messaging-images/11-view-credentials.png)
 
 
-<a name="furtherreading" />
 
 ## For Further Reading
 
@@ -310,7 +298,6 @@ To view the **API key**, click **API Manager** and then click **Credentials**:
     the Extensible Messaging and Presence Protocol (XMPP).
 
 
-<a name="summary" />
 
 ## Summary
 

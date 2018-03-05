@@ -8,7 +8,7 @@ ms.technology: xamarin-android
 ms.custom: video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Oreo Features
@@ -34,8 +34,6 @@ Android 8.0 Oreo, with links to sample apps that illustrate how to use
 Android Oreo features in Xamarin.Android apps.
 
 
-<a name="requirements" />
-
 ## Requirements
 
 The following is required to use Android Oreo features in Xamarin-based
@@ -53,7 +51,6 @@ apps:
     installed via the Android SDK Manager.
 
 
-<a name="gettingstarted" />
 
 ## Getting Started
 
@@ -73,7 +70,6 @@ Android Oreo project:
 Each of these steps is explained in the following sections:
 
 
-<a name="updates" />
 
 ### Update Visual Studio and Xamarin.Android
 
@@ -108,7 +104,6 @@ For more information about Xamarin support for Android Oreo, see the
 [Xamarin.Android 8.0 release notes](https://developer.xamarin.com/releases/android/xamarin.android_8/xamarin.android_8.0/).
 
 
-<a name="sdk" />
 
 ### Install the Android SDK
 
@@ -153,7 +148,6 @@ later.
 -----
 
 
-<a name="xaproject" />
 
 ### Start a Xamarin.Android Project
 
@@ -170,7 +164,6 @@ recommended that you also set your target framework level to API 26 or
 later. For more about configuring Android API level levels, see
 [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).
 
-<a name="emudev" />
 
 ### Configure an Emulator or Device
 
@@ -289,7 +282,6 @@ more information about manually updating your device to Android Oreo,
 see [Factory Images for Nexus and Pixel Devices](https://developers.google.com/android/images).
 
 
-<a name="newfeatures" />
 
 ## New Features
 
@@ -300,7 +292,6 @@ following sections highlight these features and provide links to help
 you get started using them in your app.
 
 
-<a name="notifchan" />
 
 ### Notification Channels
 
@@ -321,7 +312,6 @@ sample; this sample app manages two channels and sets additional
 notification options.
 
 
-<a name="notifbadge" />
 
 ### Notification Badges
 
@@ -343,7 +333,6 @@ Developer
 topic.
 
 
-<a name="customfonts" />
 
 ### Custom Fonts in XML
 
@@ -381,7 +370,6 @@ the Android Developer
 [Fonts in XML](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html)
 topic.
 
-<a name="dlfonts" />
 
 ### Downloadable Fonts
 
@@ -426,7 +414,6 @@ For more information about downloading fonts, see the Android Developer
 topic.
 
 
-<a name="autofill" />
 
 ### Autofill
 
@@ -449,7 +436,6 @@ your app for autofill, see the Android Developer
 topic.
 
 
-<a name="pip" />
 
 ### Picture in Picture (PIP)
 
@@ -486,7 +472,6 @@ continues uninterrupted while switching back and forth between display
 modes or other activities.
 
 
-<a name="other" />
 
 ### Other Features
 
@@ -499,7 +484,6 @@ Android Developer
 [Android Oreo Features and APIs](https://developer.android.com/about/versions/oreo/android-8.0.html) topic.
 
 
-<a name="behavior" />
 
 ## Behavior Changes
 
@@ -507,7 +491,6 @@ Android Oreo includes a variety of system and API behavior changes that can
 have an impact on the functionality of existing apps. These changes
 are described as follows.
 
-<a name="bgsl" />
 
 ### Background Execution Limits
 
@@ -535,7 +518,6 @@ Android Developer
 [Background Execution Limits](https://developer.android.com/about/versions/oreo/background.html)
 topic.
 
-<a name="breaking" />
 
 ### Breaking Changes
 
@@ -553,7 +535,6 @@ the following changes, where applicable:
   background. If you are targeting Android Oreo, you should use
   [PendingIntent.GetBroadcast](https://developer.xamarin.com/api/member/Android.App.PendingIntent.GetBroadcast/p/Android.Content.Context/System.Int32/Android.Content.Intent/Android.App.PendingIntentFlags/) instead.  
 
-<a name="sample_code" />
 
 ## Sample Code
 
@@ -598,7 +579,6 @@ advantage of Android Oreo features:
 
 **Android 8.0 Oreo development with C#**
 
-<a name="summary" />
 
 ## Summary
 

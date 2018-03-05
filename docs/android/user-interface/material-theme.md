@@ -7,14 +7,10 @@ ms.assetid: DC4CDBD0-3DF9-4B7E-B876-29128985E2A7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/22/2018
+ms.date: 03/01/2018
 ---
 
 # Material Theme
-
-<a name="overview" />
-
-## Overview
 
 *Material Theme* is a user interface style that determines the look and
 feel of views and activities starting with Android 5.0 (Lollipop). Material Theme
@@ -60,7 +56,6 @@ gracefully fall back to an earlier theme when it runs on older versions
 of Android (see the
 [Compatibility](#compatibility) section of this article for details).
 
-<a name="requirements" />
 
 ## Requirements
 
@@ -80,7 +75,6 @@ features in Xamarin-based apps:
 To learn how to configure an Android 5.0 app project, 
 see [Setting Up an Android 5.0 Project](~/android/platform/lollipop.md).
 
-<a name="builtinthemes" />
 
 ## Using the Built-in Themes
 
@@ -94,7 +88,6 @@ same theme across all activities, or you can assign different themes to
 different activities. The following sections explain how to configure
 themes at the app level and at the activity level.
 
-<a name="themeanapp" />
 
 ### Theming an Application
 
@@ -128,7 +121,6 @@ When the application theme is set to
 `@android:style/Theme.Material.Light`, every activity in *MyApp* will be
 displayed using `Theme.Material.Light`.
 
-<a name="activitytheme" />
 
 ### Theming an Activity
 
@@ -185,7 +177,6 @@ you can set it to `@android:color/transparent` to make the status bar
 transparent. The navigation bar can also be made transparent by setting
 `navigationBarColor` to `@android:color/transparent`.
 
-<a name="customapptheme" />
 
 ### Creating a Custom App Theme
 
@@ -318,7 +309,6 @@ on the right):
 In this example, the custom `CardView` is displayed with the 
 background color `my_blue` and an 18dp corner radius.
 
-<a name="compatibility" />
 
 ## Compatibility
 

@@ -11,7 +11,6 @@ ms.date: 02/06/2018
 
 # ActionBar
 
-<a name="overview" />
 
 ## Overview
 
@@ -22,7 +21,6 @@ the `TabActivity` class itself has been deprecated in 4.0. A new way to
 create a tabbed interface has been introduced that uses the Action Bar,
 which we'll discuss next.
 
-<a name="Action_Bar_Tabs" />
 
 ## Action Bar Tabs
 
@@ -100,7 +98,6 @@ this.ActionBar.AddTab (tab);
 For the complete example, see the *HelloTabsICS* project in the sample
 code for this document.
 
-<a name="ShareActionProvider" />
 
 ## ShareActionProvider
 
@@ -111,7 +108,6 @@ the previously used applications for easy access to them later from the
 Action Bar. This allows applications to share data via a user
 experience that's consistent throughout Android.
 
-<a name="Image_Sharing_Example" />
 
 ### Image Sharing Example
 
@@ -132,7 +128,6 @@ contains the shared image is launched, as shown below:
 
 [![Screenshot of messaging app displaying monkey image](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png)
 
-<a name="Specifying_the_action_Provider_Class" />
 
 ### Specifying the action Provider Class
 
@@ -150,7 +145,6 @@ follows:
 </menu>
 ```
 
-<a name="Inflating_the_Menu" />
 
 ### Inflating the Menu
 
@@ -172,7 +166,6 @@ public override bool OnCreateOptionsMenu (IMenu menu)
 }
 ```
 
-<a name="Creating_the_Intent" />
 
 ### Creating the Intent
 

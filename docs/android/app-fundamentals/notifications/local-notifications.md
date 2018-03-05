@@ -47,7 +47,6 @@ Android notifications use two types of layouts:
 Each of these layout types (and how to create them) is explained in the
 following sections.
 
-<a name="base-layout" />
 
 ### Base Layout
 
@@ -125,7 +124,6 @@ types of notification metadata:
 with Android 8.0, [notification channels](#notif-chan) are used to
 control how notifications are presented to the user.
 
-<a name="expanded-layouts" />
 
 ### Expanded Layouts
 
@@ -158,7 +156,6 @@ notifications:
 in this article) explains how to create *Big Text*, *Inbox*, and
 *Image* notifications.
 
-<a name="notification-creation" />
 
 ## Notification Creation
 
@@ -201,7 +198,6 @@ class, which is responsible for publishing notifications and displaying
 them to the user. A reference to this class can be obtained from any
 context, such as an activity or a service.
 
-<a name="how-to-generate" />
 
 ### How to Generate a Notification
 
@@ -292,7 +288,6 @@ example sets the timestamp to the current time:
 ```csharp
 builder.SetWhen (Java.Lang.JavaSystem.CurrentTimeMillis());
 ```
-<a name="sound-and-vibr" />
 
 ### Enabling Sound and Vibration
 
@@ -410,7 +405,6 @@ A notification remains visible until one of three things happens:
 For more about updating Android notifications, see
 [Modify a Notification](http://developer.android.com/training/notify-user/managing.html#Updating).
 
-<a name="starting-an-activity" />
 
 ### Starting an Activity from a Notification
 
@@ -629,7 +623,6 @@ notification on Oreo devices. If you don't target Android 8.0, your app
 will still run on Android 8.0, but with the same notification behavior
 as it would exhibit when running on Android 7.1 or earlier.
 
-<a name="notif-chan-create" />
 
 ### Creating a Notification Channel
 
@@ -680,7 +673,6 @@ To create a notification channel, do the following:
     notificationManager.CreateNotificationChannel (chan);
     ```
 
-<a name="notif-chan-post" />
 
 ### Posting to a Notifications Channel
 
@@ -775,7 +767,6 @@ resizing operations that could delay the posting of the notification.
 For more about notification icon sizes in Android, see
 [Notification Icons](http://developer.android.com/design/style/iconography.html#notification).
 
-<a name="big-text-style" />
 
 ### Big Text Style
 
@@ -824,7 +815,6 @@ In this example, the message text and summary text are stored in the
 `BigTextStyle` object (`textStyle`) before it is passed to
 `Notification.Builder.`
 
-<a name="image-style" />
 
 ### Image Style
 
@@ -923,7 +913,6 @@ be thrown if the image is too large for Android to resize.
 For more about loading and decoding large bitmap images, see
 [Load Large Bitmaps Efficiently](https://developer.xamarin.com/recipes/android/resources/general/load_large_bitmaps_efficiently).
 
-<a name="inbox-style" />
 
 ### Inbox Style
 
@@ -980,7 +969,6 @@ generate a continuous stream of new, mostly similar notifications. For
 more information about this approach, see
 [Summarize your notifications](http://developer.android.com/design/patterns/notifications.html#summarize_your_notifications).
 
-<a name="configuring-metadata" />
 
 ## Configuring Metadata
 
@@ -990,7 +978,6 @@ category. Android uses this information &mdash; along with user
 preference settings &mdash; to determine how and when to display
 notifications.
 
-<a name="priority-settings" />
 
 ### Priority Settings
 
@@ -1061,7 +1048,6 @@ notification:
 Because the "Thought for the day" notification is a low-priority
 notification, Android will not display it in Heads-up format.
 
-<a name="visibility-settings" />
 
 ### Visibility Settings
 
@@ -1104,7 +1090,6 @@ lockscreen is secure (i.e., secured via PIN, pattern, or password)
 &ndash; if the lockscreen is not secure, the full content of the
 notification is available on the lockscreen.
 
-<a name="category-settings" />
 
 ### Category Settings
 
@@ -1217,7 +1202,6 @@ activity from a notification. This sample code is explained in the
 [Using Local Notifications in Xamarin.Android](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md)
 walkthrough.
 
-<a name="notification-styles" />
 
 ### Notification Styles
 
@@ -1237,7 +1221,6 @@ Similarly, your app can use `NotificationCompat.InboxStyle` and
 `NotificationCompat.BigPictureStyle` for *Inbox* and *Image* styles,
 respectively.
 
-<a name="priority-and-category" />
 
 ### Notification Priority and Category
 
@@ -1265,7 +1248,6 @@ this example code will call `SetCategory` only when it is available
 &ndash; it will not call `SetCategory` when the API level is less than
 21.
 
-<a name="lockscreen-visibility" />
 
 ### Lockscreen Visibility
 
@@ -1281,7 +1263,6 @@ if ((int) Android.OS.Build.Version.SdkInt >= 21) {
 }
 ```
 
-<a name="summary" />
 
 ## Summary
 

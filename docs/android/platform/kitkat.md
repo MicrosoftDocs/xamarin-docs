@@ -7,7 +7,7 @@ ms.assetid: D3FDEA1C-F076-406F-BCC3-2A55D2C6ADEE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/07/2018
+ms.date: 03/01/2018
 ---
 
 # KitKat Features
@@ -914,8 +914,7 @@ or check to ensure the returned value of `GetDefaultSensor` isn't
 `null`.
 
 
- <a name="developer_tools" />
-
+<a name="developer_tools" />
 
 ## Developer Tools
 
@@ -947,7 +946,6 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 You can find your video on your device - it will appear in your Gallery
 when the recording is complete.
 
-<a name="other_kitkat_additions" />
 
 ## Other KitKat Additions
 

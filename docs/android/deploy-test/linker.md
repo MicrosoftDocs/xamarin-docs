@@ -60,7 +60,6 @@ For example, the [Hello, Android](https://developer.xamarin.com/samples/HelloM4A
 Linking results in a package that is 30% the size of the original
 (unlinked) package in 1.2.0, and 18% of the unlinked package in 4.0.1.
 
- <a name="Control" />
 
 
 ## Control
@@ -86,7 +85,6 @@ public class MyActivity {
 }
 ```
 
-<a name="Linker_Behavior" />
 
 ### Linker Behavior
 
@@ -132,7 +130,6 @@ E/mono    (17755):   at Android.App.Activity.n_OnCreate_Landroid_os_Bundle_ (Int
 E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-ca83a5d7a124 (intptr,intptr,intptr)
 ```
 
-<a name="PreserveAttribute" />
 
 ### Preserving Code
 
@@ -213,7 +210,6 @@ namespace Android.Runtime
 ```
 
 
-<a name="falseflag" />
 
 ### falseflag
 
@@ -241,7 +237,6 @@ class MyActivity {
 ```
 
 
-<a name="linkskip" />
 
 ### linkskip
 
@@ -254,7 +249,6 @@ be linked at all, while allowing other user assemblies to be skipped with the *L
 </PropertyGroup>
 ```
 
-<a name="LinkDescription" />
 
 ### LinkDescription
 
@@ -265,7 +259,6 @@ file. Custom linker configuration files may be required to preserve
 `internal` or `private` members that need to be preserved.
 
 
-<a name="Custom_Attributes" />
 
 ### Custom Attributes
 

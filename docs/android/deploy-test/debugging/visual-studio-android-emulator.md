@@ -7,7 +7,7 @@ ms.assetid: CD128CB9-499F-4558-B49F-77248824EFDF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Visual Studio Android Emulator
@@ -32,8 +32,6 @@ profiles* (similar to device definitions in the default Android SDK
 emulator) to simulate different types of Android devices. Finally, a
 troubleshooting section explains common pitfalls and workarounds.
 
-<a name="requirements" />
-
 ## Requirements
 
 To run the emulator, the computer must meet the requirements to run
@@ -48,8 +46,6 @@ Emulator) while Hyper-V is enabled. For more about the limitations and
 potential problems with HAXM, see
 [HAXM Virtualization Conflicts](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#virt-conflicts).
 
-
-<a name="launching" />
 
 ## Running the Emulator
 
@@ -154,7 +150,6 @@ For more information about how to use these features, see
 [Introducing Visual Studio's Emulator for Android](https://blogs.msdn.microsoft.com/visualstudioalm/2014/11/12/introducing-visual-studios-emulator-for-android/).
 
 
-<a name="device_profiles" />
 
 ## Configuring Device Profiles
 
@@ -200,8 +195,6 @@ This list can be shortened by clicking **Uninstall this profile** in the
 currently no way to create a customized device profile in this emulator.
 
 
-<a name="troubleshooting" />
-
 ## Troubleshooting
 
 This section describes some common errors and workarounds when using the
@@ -236,7 +229,6 @@ Use the following steps to make this change:
 4.  Click **OK** and close the Hyper-V Manager window.
 
 
-<a name="app_fail" />
 
 ### App deploys and starts but fails immediately
 
@@ -247,7 +239,6 @@ processor and the Hyper-V virtual machine. To resolve this error,
 follow the instructions in
 [The Emulator will not start](#cant_connect) (above).
 
-<a name="mscorlib" />
 
 ### Emulator stops with the diagnostic message: **libaot-mscorlib.dll.so not found**
 
@@ -262,7 +253,6 @@ To resolve this error, use the following steps to disable fast deployment:
     [ ![Use Fast Deployment option unchecked](visual-studio-android-emulator-images/18-fast-deployment-vs-sml.png)](visual-studio-android-emulator-images/18-fast-deployment-vs.png)
 
 
-<a name="dragndrop" />
 
 ### Drag and Drop does not work
 
@@ -272,7 +262,6 @@ with Administrator privilege), drag and drop of .APK or .ZIP files may
 not work. To work around this problem, run *Visual Studio Emulator for
 Android* without elevated permissions (i.e., not as Administrator).
 
-<a name="other" />
 
 ### Other errors
 
@@ -282,7 +271,6 @@ complete guide to Visual Studio Android Emulator troubleshooting, see
 [Troubleshooting the Visual Studio Emulator for Android](https://msdn.microsoft.com/en-us/library/mt228282.aspx).
 
 
-<a name="summary" />
 
 ## Summary
 

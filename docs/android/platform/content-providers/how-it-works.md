@@ -27,7 +27,6 @@ underlying SQL. Queries are done via a Uri using constants to reference
 column names (to reduce dependencies on the underlying data structure),
 and an `ICursor` is returned for the consuming code to iterate over.
 
-<a name="Consuming_a_ContentProvider" />
 
 ## Consuming a ContentProvider
 
@@ -41,7 +40,6 @@ structure in the
 [`Android.Providers`](https://developer.xamarin.com/api/namespace/Android.Provider/) namespace.
 
 
-<a name="Built-In_Providers" />
 
 ### Built-In Providers
 
@@ -66,7 +64,6 @@ Android offers access to a wide range of system and user data using `ContentProv
 - *Voicemail* &ndash; history of voicemail messages.
 
 
-<a name="Classes_Overview" />
 
 ## Classes Overview
 

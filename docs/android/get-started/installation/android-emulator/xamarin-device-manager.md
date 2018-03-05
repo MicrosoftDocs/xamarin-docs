@@ -7,7 +7,7 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/25/2018
+ms.date: 03/01/2018
 ---
 
 # Xamarin Android Device Manager
@@ -16,7 +16,6 @@ _The Xamarin Android Device Manager, currently in preview, replaces Google's leg
 
 ![Currently in preview](~/media/shared/preview.png)
 
-<a name="overview" />
  
 ## Overview
 
@@ -74,9 +73,6 @@ resolution), to enable/disable simulated sensors such as accelerometer,
 GPS, orientation, and light sensor, and to configure the type of
 hardware acceleration used by that virtual device.
 
-
-<a name="requirements" />
-
 ## Requirements
 
 # [Visual Studio](#tab/vswin)
@@ -133,7 +129,6 @@ Use the following steps to install the Xamarin Android Device Manager:
 
 -----
 
-<a name="dev-manager" /> 
  
 ## Launching the Device Manager
 
@@ -212,7 +207,6 @@ and re-launch the Android Device Manager.
 
 -----
 
-<a name="devices" />
  
 ## Main Screen
 
@@ -271,7 +265,6 @@ the emulator:
  
 -----
 
-<a name="device-new" />
  
 ### New Device
 
@@ -472,7 +465,6 @@ For more information about changing virtual device properties, see
 [Profile Properties](#properties) later in this guide.
 
 
-<a name="addopt" />
  
 ### Additional Options
 
@@ -696,7 +688,6 @@ please file a bug report by clicking **Help > Generate Bug Report**:
 -----
 
  
-<a name="summary" />
  
 ## Summary
 

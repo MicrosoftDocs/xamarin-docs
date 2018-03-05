@@ -11,7 +11,6 @@ ms.date: 02/16/2018
 
 # Preparing an Application for Release
 
-<a name="Compile_the_Application_for_Release" />
 
 After an application has been coded and tested, it is necessary to
 prepare a package for distribution. The first task in preparing 
@@ -143,7 +142,6 @@ bytecode*. The build process first uses the Xamarin.Android linker to
 optimize the app at the managed code (C#) level, and then it later uses
 ProGuard (if enabled) to optimize the APK at the Java bytecode level.
 
-<a name="Configure_the_Linker" />
 
 ### Configure the Linker
 
@@ -210,7 +208,6 @@ The options for controlling the linker are as follows:
 Linking can produce some unintended side effects, so it is important
 that an application be re-tested in Release mode on a physical device.
 
-<a name="proguard" />
 
 ### ProGuard
 
@@ -382,7 +379,6 @@ configured for Release mode, and it is disabled by default. For more
 information about AOT Compilation, see
 [AOT](http://www.mono-project.com/docs/advanced/aot/).
 
-<a name="llvm" />
 
 #### LLVM Optimizing Compiler
 
@@ -425,7 +421,6 @@ that determine how the app is
 [how it is protected from tampering](#protect_app), and how it can be
 packaged to support different architectures and size restrictions.
 
-<a name="Specify_Supported_Architectures" />
 
 ### Specify Supported Architectures
 
@@ -435,7 +430,6 @@ contain machine code to support multiple, different architectures. See
 [CPU Architectures](~/android/app-fundamentals/cpu-architectures.md)
 for details about supporting multiple CPU architectures.
 
-<a name="multiabi" />
 
 ### Generate One Package (.APK) per Selected ABI
 
@@ -446,7 +440,6 @@ rather than a single, large APK for all supported ABI's. This option is
 available only when the project is configured for Release mode, and it
 is disabled by default.
 
-<a name="multidex" />
 
 ### Multi-Dex
 

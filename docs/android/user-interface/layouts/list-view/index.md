@@ -14,7 +14,6 @@ ms.date: 02/06/2018
 
 _ListView is an important UI component of Android applications; it is used everywhere from short lists of menu options to long lists of contacts or internet favorites. It provides a simple way to present a scrolling list of rows that can either be formatted with a built-in style or customized extensively._
 
-<a name="overview" />
 
 ## Overview
 
@@ -51,7 +50,6 @@ more information, see
 [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md).
 
 
-<a name="tutorial" />
 
 ## ListView Tutorial
 
@@ -251,7 +249,6 @@ string[] countries = Resources.GetStringArray (Resource.Array.countries_array);
 ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countries);
 ```
 
-<a name="going_further" />
 
 ## Going Further with ListView
 
@@ -292,7 +289,6 @@ progressively more complex examples of how to use it.
 -   [Using a ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
 -   [ListView and the Activity Lifecycle](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
-<a name="summary" />
 
 ## Summary
 

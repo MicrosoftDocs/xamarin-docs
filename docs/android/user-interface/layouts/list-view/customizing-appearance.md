@@ -11,7 +11,6 @@ ms.date: 02/06/2018
 
 # Customizing a ListView's Appearance
 
-<a name="overview" />
 
 ## Overview
 
@@ -19,7 +18,6 @@ The appearance of a ListView is dictated by the layout of the rows being
 displayed. To change the appearance of a `ListView`, use a
 different row layout.
 
-<a name="Built-in_Row_Views" />
 
 ## Built-in Row Views
 
@@ -114,7 +112,6 @@ can be configured for one line (SimpleExpandableListItem1), or both
 group view and child view can have the same number of lines. 
 
 
-<a name="Accessories" />
 
 ## Accessories
 
@@ -150,7 +147,6 @@ selection mode with `Checked` and `SingleChoice` accessories and the
 `Multiple` mode with the `MultipleChoice` style. The selection mode is
 controlled by the `ChoiceMode` property of the `ListView`.
 
-<a name="Handling_API_Level" />
 
 ### Handling API Level
 
@@ -180,7 +176,6 @@ lv.ChoiceMode = Android.Widget.ChoiceMode.Single; // Single
 */
 ```
 
-<a name="Selecting_Items_Programmatically" />
 
 ### Selecting Items Programmatically
 
@@ -217,7 +212,6 @@ for (var i = 0; i < sparseArray.Size(); i++ )
 Console.WriteLine();
 ```
 
-<a name="Creating_Custom_Row_Layouts" />
 
 ## Creating Custom Row Layouts
 
@@ -260,7 +254,6 @@ These changes are detailed below, starting with creating the activity's
 view and the custom row view and then covering the modifications to the
 Adapter and Activity to render them.
 
-<a name="Adding_a_ListView_to_an_Activity_Layout" />
 
 ### Adding a ListView to an Activity Layout
 
@@ -299,7 +292,6 @@ The benefit of using an `Activity` with a custom layout (instead of a
 `ListActivity`) lies in being able to add additional controls to the
 screen, such as the heading `TextView` in this example.
 
-<a name="Creating_a_Custom_Row_Layout" />
 
 ### Creating a Custom Row Layout
 
@@ -354,7 +346,6 @@ images (especially if they have to be loaded over the network). See
 Google's article for more information on addressing scrolling
 performance issues.
 
-<a name="Referencing_a_Custom_Row_View" />
 
 ### Referencing a Custom Row View
 
@@ -400,7 +391,6 @@ public class HomeScreenAdapter : BaseAdapter<TableItem> {
 }
 ```
 
-<a name="Referencing_the_Custom_ListView_in_the_Activity" />
 
 ### Referencing the Custom ListView in the Activity
 
@@ -443,7 +433,6 @@ The resulting screen looks like this:
 [![Screenshot of the resulting CustomRowView](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png)
 
 
-<a name="Customizing_the_Row_Selector_Color" />
 
 ### Customizing the Row Selector Color
 
@@ -497,7 +486,6 @@ this:
 [![A selected row in orange, with Toast message displaying name of selected row](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png)
 
 
-<a name="Preventing_Flickering_on_Custom_Layouts" />
 
 ### Preventing Flickering on Custom Layouts
 

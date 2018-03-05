@@ -7,7 +7,7 @@ ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Remote Notifications with Firebase Cloud Messaging
@@ -635,7 +635,7 @@ the device (or emulator) and repeat the above steps.
 
 
 > [!NOTE]
-> **Note:** if you force-close the app, FCM will stop delivering
+> If you force-close the app, FCM will stop delivering
 > notifications. Android prevents background service broadcasts from
 > inadvertently or unnecessarily launching components of stopped
 > applications. (For more information about this behavior, see
@@ -822,7 +822,7 @@ Log.Debug(TAG, "Notification Message Body: " + message.GetNotification().Body);
 ```
 
 > [!NOTE]
-> **Note:** If you set breakpoints in `FirebaseMessagingService`,
+> If you set breakpoints in `FirebaseMessagingService`,
 > your debugging session may or may not hit these breakpoints because of
 > how FCM delivers messages.
  

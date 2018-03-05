@@ -23,7 +23,6 @@ must remain consistent with these changes. In the following sections,
 you'll learn how to handle item-click events and update `RecyclerView`
 when the underlying data source changes.
 
-<a name="itemclick" />
 
 ### Handling Item-Click Events
 

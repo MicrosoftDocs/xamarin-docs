@@ -23,7 +23,6 @@ can read from by your application using
 In this simple demo, we are going to add a text file asset to our
 project, read it using `AssetManager`, and display it in a TextView.
 
-<a name="Add_Asset_to_Project" />
 
 ## Add Asset to Project
 
@@ -50,7 +49,6 @@ Visual Studio for Mac should have set the **Build Action** for this file to
 Selecting the correct **BuildAction** ensures that the file will be
 packaged into the APK at compile time.
 
-<a name="Reading_Assets" />
 
 ## Reading Assets
 
@@ -84,7 +82,6 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-<a name="Running_the_Application" />
 
 ## Running the Application
 

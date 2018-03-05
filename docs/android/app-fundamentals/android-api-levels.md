@@ -7,14 +7,13 @@ ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Understanding Android API Levels
 
 _Xamarin.Android has several Android API level settings that determine your app's compatibility with multiple versions of Android. This guide explains what these settings mean, how to configure them, and what effect they have on your app at run time._
 
-<a name="quick" />
 
 ## Quick Start
 
@@ -109,7 +108,6 @@ details). If you are consuming or creating a library, see
 configuring API level settings for libraries.
 
 
-<a name="verslevels" />
 
 ## Android Versions and API Levels
 
@@ -120,7 +118,6 @@ single Android API Level. Because users install apps on older as well
 as the most recent versions of Android, real-world Android apps must be
 designed to work with multiple Android API levels.
 
-<a name="versions" />
 
 ### Android Versions
 
@@ -201,7 +198,6 @@ of older and newer Android versions. How can you guarantee that your
 app will run consistently and reliably on so many different versions of
 Android? Android's API levels can help you manage this problem.
 
-<a name="apilevels" />
 
 ### Android API Levels
 
@@ -230,7 +226,6 @@ example, if the API level of an Android device is lower than the
 minimum API level that you specify for your app, the Android device
 will prevent the user from installing your app.
 
-<a name="settings" />
 
 ## Project API Level Settings
 
@@ -240,7 +235,6 @@ followed by detailed explanations of how to configure *Target
 Framework*, *Minimum Android version*, and *Target Android version*
 settings in Xamarin.Android.
 
-<a name="sdk" />
 
 ### Android SDK Platforms
 
@@ -284,7 +278,7 @@ app to be compiled at that support library's minimum API level or
 greater. 
 
 > [!NOTE]
-> **Note:** Beginning in August 2018, the Google Play Console
+> Beginning in August 2018, the Google Play Console
 will require that new apps target API level 26 (Android 8.0) or higher.
 Existing apps will be required to target API level 26 or higher
 beginning in November 2018. For more information, see

@@ -11,7 +11,6 @@ ms.date: 02/06/2018
 
 # Calendar
 
-<a name="Calendar_API" />
 
 ## Calendar API
 
@@ -23,7 +22,6 @@ attendees, and reminders. By using the calendar provider in your
 application, data you add through the API will appear in the built-in
 calendar app that comes with Android 4.
 
-<a name="Adding_Permissions" />
 
 ## Adding Permissions
 
@@ -34,7 +32,6 @@ manifest. The permissions you need to add are
 `android.permission.WRITE_CALENDAR`, depending on whether you are
 reading and/or writing calendar data.
 
-<a name="Using_the_Calendar_Contract" />
 
 ## Using the Calendar Contract
 
@@ -50,7 +47,6 @@ Let's look at an example that uses the Calendar API. In this example,
 we'll examine how to enumerate calendars and their events, as well as
 how to add a new event to a calendar.
 
-<a name="Listing_Calendars" />
 
 ## Listing Calendars
 
@@ -168,7 +164,6 @@ displayed in the `ListView`:
 [![CalendarDemo running in emulator, displaying two calendar entries](calendar-images/11-calendar.png)](calendar-images/11-calendar.png)
 
 
-<a name="Listing_Calendar_Events" />
 
 ## Listing Calendar Events
 
@@ -287,7 +282,6 @@ This displays a list of events as shown below:
 [![Screenshot of example app displaying three calendar events](calendar-images/12-events.png)](calendar-images/12-events.png)
 
 
-<a name="Adding_a_Calendar_Event" />
 
 ## Adding a Calendar Event
 

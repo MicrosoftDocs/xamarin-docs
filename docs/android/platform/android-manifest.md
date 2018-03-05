@@ -11,7 +11,6 @@ ms.date: 02/05/2018
 
 # Working with the Android Manifest
 
-<a name="Overview" />
 
 ## Overview
 
@@ -33,7 +32,6 @@ code to generate XML elements, and *inserts* those elements into
 **AndroidManifest.xml**. 
 
 
-<a name="The_Basics" />
 
 ## The Basics
 
@@ -77,7 +75,6 @@ The `[Activity]` attribute has no effect on `abstract`
 types; `abstract` types are ignored.
 
 
-<a name="Activity_Name" />
 
 ### Activity Name
 
@@ -112,7 +109,6 @@ the class name, see
 [Android Callable Wrapper Naming](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Android_Callable_Wrapper_Naming) 
 for tips on maintaining compatibility. 
 
-<a name="Activity_Title_Bar" />
 
 ### Activity Title Bar
 
@@ -137,7 +133,6 @@ This example produces the following xml fragment:
           android:name="md5a7a3c803e481ad8926683588c7e9031b.MainActivity" />
 ```
 
-<a name="Launchable_from_Application_Chooser" />
 
 ### Launchable from Application Chooser
 
@@ -168,7 +163,6 @@ This example produces the following xml fragment:
 ```
 
 
-<a name="Activity_Icon" />
 
 ### Activity Icon
 
@@ -197,7 +191,6 @@ This example produces the following xml fragment:
 </activity>
 ```
 
-<a name="Permissions" />
 
 ### Permissions
 
@@ -236,11 +229,9 @@ in Visual Studio).
 
 
 
-<a name="Advanced_Features" />
 
 ## Advanced Features
 
-<a name="Intent_Actions_and_Features" />
 
 ### Intent Actions and Features
 
@@ -285,7 +276,6 @@ This example produces the following xml fragment:
 </activity>
 ```
 
-<a name="Application_Element" />
 
 ### Application Element
 
@@ -341,7 +331,6 @@ section of
 [ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/). 
 
 
-<a name="List_of_Custom_Attributes" />
 
 ## List of Custom Attributes
 

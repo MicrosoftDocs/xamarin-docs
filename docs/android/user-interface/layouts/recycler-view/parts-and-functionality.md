@@ -6,7 +6,7 @@ ms.assetid: 54F999BE-2732-4BC7-A466-D17373961C48
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 03/01/2018
 ---
 
 # RecyclerView Parts and Functionality
@@ -136,7 +136,6 @@ inflated item-layout file. These references are used to load new data
 into the views every time the layout is recycled to show new data.
  
 
-<a name="layoutmanager" />
 
 ### The Layout Manager
 
@@ -176,7 +175,6 @@ predefined layout manager by default.
 For more information about the layout manager, see the
 [RecyclerView.LayoutManager class reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html).
 
-<a name="viewholder" />
 
 ### The View Holder
 
@@ -196,7 +194,6 @@ A detailed example of a `ViewHolder` implementation is presented in
 For more information about `RecyclerView.ViewHolder`, see the
 [RecyclerView.ViewHolder class reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
 
-<a name="adapter" />
 
 ### The Adapter
 
@@ -239,7 +236,6 @@ The layout manager calls these methods while it is positioning items
 within the `RecyclerView`. 
 
 
-<a name="datachanges" />
 
 ### Notifying RecyclerView of Data Changes
 

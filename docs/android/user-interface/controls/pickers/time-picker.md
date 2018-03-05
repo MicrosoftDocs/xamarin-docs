@@ -88,7 +88,6 @@ This sample will use the third technique, which requires that the
 Activity supply an `Action<DateTime>` handler to the `DialogFragment`.
 
 
-<a name="start" />
 
 ## Start an App Project
 
@@ -178,7 +177,6 @@ Clicking the **PICK TIME** button does nothing because the
 The next step is to create this `DialogFragment`.
 
 
-<a name="extend_dialogfragment" />
 
 ## Extending DialogFragment
 
@@ -222,7 +220,6 @@ public class TimePickerFragment : DialogFragment, TimePickerDialog.IOnTimeSetLis
 This `TimePickerFragment` class is broken down into smaller pieces and
 explained in the next section.
 
-<a name="details" />
 
 ### DialogFragment Implementation
 
@@ -304,7 +301,6 @@ required by `TimePickerDialog.IOnTimeSetListener`.
     ```
 
 
-<a name="time_picker_fragment" />
 
 ## Displaying the TimePickerFragment
 
@@ -345,7 +341,6 @@ When the **PICK TIME** button is clicked, `TimeSelectOnClick` will be
 invoked to display the `TimePicker` dialog fragment to the user.
 
 
-<a name="try-it" />
 
 ## Try It!
 
@@ -381,7 +376,6 @@ to print the time to the Activity's `TextView`, the time is still printed
 in the default 12-hour AM/PM format.
 
 
-<a name="summary" />
 
 ## Summary
 

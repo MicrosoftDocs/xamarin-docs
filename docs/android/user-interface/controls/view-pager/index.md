@@ -7,14 +7,13 @@ ms.assetid: D42896C0-DE7C-4818-B171-CB2D5E5DD46A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
+ms.date: 03/01/2018
 ---
 
 # ViewPager
 
 _ViewPager is a layout manager that lets you implement gestural navigation. Gestural navigation allows the user to swipe left and right to step through pages of data. This guide explains how to implement gestural navigation with ViewPager, with and without Fragments. It also describes how to add page indicators using PagerTitleStrip and PagerTabStrip._
 
-<a name="overview" />
  
 ## Overview
 
@@ -61,7 +60,6 @@ This guide demonstrates both approaches:
     with `Fragment`s to build an app that presents math 
     problems as flash cards and responds to user input. 
 
-<a name="requirements" />
 
 ## Requirements
 
@@ -70,7 +68,6 @@ To use `ViewPager` in your app project, you must install the
 package. For more information about installing NuGet packages, see
 [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
-<a name="architecture" />
  
 ## Architecture
 
@@ -84,7 +81,6 @@ with `ViewPager`:
 Each of these components is summarized below.
 
 
-<a name="viewpager" />
 
 ### ViewPager
 
@@ -96,8 +92,6 @@ one image to the next in response to a user gesture:
 
 [![Closeup of TreePager app displaying a transition between Views](images/02-transition-sml.png)](images/02-transition.png)
 
-
-<a name="adapter" />
 
 ### Adapter
 
@@ -114,7 +108,6 @@ In this particular example, each `View` is constructed from a tree
 image and a tree name before it is passed to the `ViewPager`. 
 
 
-<a name="indicator" />
 
 ### Pager Indicator
 

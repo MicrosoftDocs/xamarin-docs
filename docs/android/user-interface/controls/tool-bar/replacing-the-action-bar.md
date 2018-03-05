@@ -11,7 +11,6 @@ ms.date: 02/06/2018
 
 # Replacing the Action Bar
 
-<a name="overview" />
 
 ## Overview
 
@@ -42,7 +41,6 @@ The following sections explain this process in detail. A simple app is
 created and its action bar is replaced with a customized `Toolbar`. 
 
 
-<a name="start_project" />
 
 ## Start an App Project
 
@@ -59,7 +57,6 @@ as seen in this screenshot:
 [![Screenshot of default action bar](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png)
 
 
-<a name="custom_theme" />
 
 ## Create a Custom Theme
 
@@ -111,7 +108,6 @@ For more information about applying a custom theme to an app, see
 [Using Custom Themes](~/android/user-interface/material-theme.md#customtheme). 
 
 
-<a name="toolbar_layout" />
 
 ## Define a Toolbar Layout
 
@@ -159,7 +155,6 @@ This setting is used so that menu items contrast with the darker
 background color.
 
 
-<a name="include_layout" />
 
 ## Include the Toolbar Layout
 
@@ -188,7 +183,6 @@ uses a `RelativeLayout` to specify that the `Toolbar` is to be
 placed at the very top of the UI (above the button). 
 
 
-<a name="activate_toolbar" />
 
 ## Find and Activate the Toolbar
 
@@ -221,7 +215,6 @@ Notice that the `Toolbar` is styled independently of the
 the remainder of the app. 
 
 
-<a name="main_menus" />
  
 ## Add Menu Items 
 
@@ -249,7 +242,6 @@ The following sections demonstrate this process in detail by adding
 **Edit** and **Save** menu items to the customized `Toolbar`. 
 
 
-<a name="menu_icons" />
 
 ### Install Menu Icons
 
@@ -259,7 +251,6 @@ Copy the contents of the extracted *mipmap-* folders to the project *mipmap-*
 folders under **ToolbarFun/Resources** and include each added icon
 file in the project.
 
-<a name="menu_resource" />
 
 ### Define a Menu Resource
 
@@ -304,7 +295,6 @@ them to be displayed. The **Preferences** menu item sets
 `showAsAction` to `never` &ndash; this causes the **Preferences** 
 menu to appear in the *overflow* menu (three vertical dots). 
 
-<a name="on_create_options_menu" />
 
 ### Implement OnCreateOptionsMenu
 
@@ -325,7 +315,6 @@ code causes the new **Edit**, **Save**, and **Preferences** menu
 items to appear in the `Toolbar`. 
 
 
-<a name="on_options_item_selected" />
 
 ### Implement OnOptionsItemSelected
 

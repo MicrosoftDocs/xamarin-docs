@@ -46,7 +46,6 @@ take a look at the key points that must be addressed before we can
 trigger Android Beam. First, we’ll work with the callback style of
 creating an `NdefMessage`.
 
-<a name="Creating_a_Message" />
 
 ## Creating a Message
 
@@ -89,7 +88,6 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 }
 ```
 
-<a name="Receiving_a_Message" />
 
 ## Receiving a Message
 

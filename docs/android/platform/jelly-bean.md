@@ -7,14 +7,13 @@ ms.assetid: 23F57634-2EF9-5C15-C710-B3E19A5AF7E1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/14/2017
+ms.date: 03/01/2018
 ---
 
 # Jelly Bean Features
 
 _This document will provide a high level overview of the new features for developers that were introduced in Android 4.1. These features include: enhanced notifications, updates to Android Beam to share large files, updates to multimedia, peer-to-peer network discovery, animations, new permissions._
 
-<a name="Overview" />
 
 
 ## Overview
@@ -36,7 +35,6 @@ have formatted text, action buttons and large images.
 
 Finally several new permissions have been added in Android 4.1.
 
- <a name="Requirements" />
 
 
 ## Requirements
@@ -47,12 +45,10 @@ Android SDK Manager as shown in the following screen shot:
 
 [![Selecting Android 4.1 in the Android SDK Manager](jelly-bean-images/image1.png)](jelly-bean-images/image1.png)
 
- <a name="What's_New" />
 
 
 ## What's New
 
- <a name="Animations" />
 
 
 ### Animations
@@ -93,7 +89,6 @@ As the `TimeAnimator` instance is running, it will invoke `ITimeAnimator.ITimeLi
 animator has been running and how long it as been since the last time the method
 has been invoked.
 
- <a name="Application_Stack_Navigation" />
 
 
 ### Application Stack Navigation
@@ -127,7 +122,6 @@ stack:
 -   `OnCreateNavigateUpTaskStack` – This method is overridden when it is necessary to have complete control over how the synthetic stack is created.
 
 
- <a name="Camera" />
 
 
 ### Camera
@@ -183,12 +177,10 @@ button.Click += (sender, args) => mediaActionPlayer.Play(MediaActionSoundType.Sh
 mediaActionPlayer.Release();
 ```
 
- <a name="Connectivity" />
 
 
 ### Connectivity
 
- <a name="Android_Beam" />
 
 
 #### Android Beam
@@ -198,7 +190,6 @@ communicate with each other. Android 4.1 provides better support for the
 transfer of large files. When using the new method `NfcAdapter.SetBeamPushUris()` Android will switch between alternate
 transport mechanisms (such as Bluetooth) to achieve a fast transfer speed.
 
- <a name="Network_Services_Discovery" />
 
 
 #### Network Services Discovery
@@ -213,7 +204,6 @@ registration and to unregister the service.
 
 To discover services on the network, and implementation of `Nsd.DiscoveryListener` passed to `NsdManager.discoverServices()`.
 
- <a name="Network_Usage" />
 
 
 #### Network Usage
@@ -223,7 +213,6 @@ a device to check if it is connected to a metered network. This method can be
 used to help manage data usage by accurately informing users that there might be
 expensive charges for data operations.
 
- <a name="WiFi_Direct_Service_Discovery" />
 
 
 #### WiFi Direct Service Discovery
@@ -246,7 +235,6 @@ service discovery:
 -   `SetUpnpServiceResponseListener()` – This method is used to register callbacks to be invoked on receiving a response to discovery requests Upnp.
 
 
- <a name="Content_Providers" />
 
 
 ### Content Providers
@@ -262,7 +250,6 @@ when interacting with content providers from other applications – it is less
 likely that buggy code from another application will affect another
 application.
 
- <a name="Copy_and_Paste_With_Intents" />
 
 
 ### Copy and Paste With Intents
@@ -278,7 +265,6 @@ following types:
 -   **Uri** – This can be any URI, such as an HTTP bookmark or the URI to a content provider.
 
 
- <a name="Isolated_Services" />
 
 
 ### Isolated Services
@@ -288,8 +274,6 @@ has no permissions of its own. The only communication with the service is when
 starting up the service and binding to it via the Service API. It is possible to
 declare a service as isolated by setting the property `IsolatedProcess="true"` in the `ServiceAttribute` that
 adorns a service class.
-
- <a name="Media" />
 
 
 ### Media
@@ -320,7 +304,6 @@ where media will be played:
 -   `MediaRouterActionProvider` and  `MediaRouteButton` – These classes help provide a consistent UI for selecting and playing media.
 
 
- <a name="Notifications" />
 
 
 ### Notifications
@@ -356,7 +339,6 @@ The `Notification` class has received new constants that allow a
 developer to specify one of five priority levels for a notification. These can
 be set on a notification using the `Priority` property.
 
- <a name="Permissions" />
 
 
 ### Permissions
@@ -375,7 +357,6 @@ this permission is automatically granted by Android. Future versions of Android
 will require an application to request this permission before granted the
 permission.
 
- <a name="Summary" />
 
 
 ## Summary

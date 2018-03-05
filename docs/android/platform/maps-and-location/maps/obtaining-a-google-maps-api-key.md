@@ -23,7 +23,6 @@ Obtaining a Maps API v2 key involves the following steps:
 2.  Create a project in the Google APIs console.
 3.  Obtaining the API key.
 
-<a name="Step_1_-_Obtaining_your_Signing_Key_Fingerprint" />
 
 ## Obtaining your Signing Key Fingerprint
 
@@ -123,7 +122,6 @@ Certificate fingerprints:
 You will use the SHA-1 fingerprint (listed after **SHA1**) later in
 this guide.
 
-<a name="Step_2_-Create_an_API_project" />
 
 ## Creating an API project
 
@@ -161,7 +159,6 @@ in your project until you create credentials for it. Next we will look
 at how to create an API key and white-list a Xamarin.Android
 application so that it is authorized to use this key.
 
-<a name="Obtaining_the_API_Key" />
 
 ## Obtaining the API Key
 
@@ -228,7 +225,6 @@ v2.
    [![XamarinMapsDemoKey is shown in the API keys list](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs-sml.png)](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs.png)
 
 
-<a name="Adding_the_Key" />
 
 ## Adding the Key to Your Project
 

@@ -36,7 +36,6 @@ remember to release those resources in the complementary method to
 where they were instantiated (eg. objects created in `OnStart` can be
 disposed of in `OnStop`).
 
-<a name="Configuration_Changes" />
 
 ## Configuration Changes
 

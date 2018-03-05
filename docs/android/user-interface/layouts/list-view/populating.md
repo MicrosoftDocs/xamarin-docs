@@ -11,7 +11,6 @@ ms.date: 08/21/2017
 
 # Populating a ListView With Data
 
-<a name="overview" />
 
 ## Overview
 
@@ -27,7 +26,6 @@ The built-in adapters take a view resource ID as a parameter that gets
 used for each row. You can use built-in resources such as those in
 `Android.Resource.Layout` so you don't need to write your own.
 
-<a name="Using_ListActivity_and_ArrayAdapterString" />
 
 ## Using ListActivity and ArrayAdapter&lt;String&gt;
 
@@ -48,7 +46,6 @@ public class HomeScreen : ListActivity {
 }
 ```
 
-<a name="Handling_Row_Clicks" />
 
 ### Handling Row Clicks
 
@@ -72,7 +69,6 @@ Now the user can touch a row and a `Toast` alert will appear:
 
 [![Screenshot of Toast that appears when a row is touched](populating-images/basictable2.png)](populating-images/basictable2.png)
 
-<a name="Implementing_a_ListAdapter" />
 
 ## Implementing a ListAdapter
 
@@ -129,7 +125,6 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 }
 ```
 
-<a name="Using_a_Custom_Adapter" />
 
 ### Using a Custom Adapter
 
@@ -143,7 +138,6 @@ ListAdapter = new HomeScreenAdapter(this, items);
 Because this example uses the same row layout (`SimpleListItem1`) the
 resulting application will look identical to the previous example.
 
-<a name="Row_View_Re-Use" />
 
 ### Row View Re-Use
 
@@ -184,7 +178,6 @@ and `BindView` which enforce row re-use by separating the
 responsibilities of `GetView` into two methods. There is a
 `CursorAdapter` example later in the document.
 
-<a name="Enabling_Fast_Scrolling" />
 
 ## Enabling Fast Scrolling
 
@@ -201,7 +194,6 @@ Causing the fast scrolling handle to appear is as simple as setting the
 ListView.FastScrollEnabled = true;
 ```
 
-<a name="Adding_a_Section_Index" />
 
 ### Adding a Section Index
 

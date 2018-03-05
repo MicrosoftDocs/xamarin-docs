@@ -6,7 +6,7 @@ ms.assetid: 405A1FA0-4EFA-4AEB-B672-F36307B9CF16
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Touch in Android
@@ -51,7 +51,7 @@ respond to a touch event:
 
 
 > [!NOTE]
-> **Note:** Not all Android devices support touch screens. 
+> Not all Android devices support touch screens. 
 
 Adding the following tag to your manifest file causes Google Play to
 only display your app to those devices that are touch enabled:

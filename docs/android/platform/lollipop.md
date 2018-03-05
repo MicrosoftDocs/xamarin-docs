@@ -87,8 +87,6 @@ You can continue to use
 if you are developing specifically for API level 23 or earlier.
 
 
-<a name="settingup" />
-
 ## Setting Up an Android 5.0 Project
 
 To create an Android 5.0 project, you must install the latest tools and
@@ -147,16 +145,11 @@ the Android L Preview, you must update the **Target
 Framework** and **Android version** to the
 values described above.
 
-
-<a name="changes" />
-
 ## Important Changes
 
 Previously published Android apps could be affected by changes
 in Android 5.0. In particular, Android 5.0 uses a new runtime and a
 significantly changed notification format.
-
-<a name="runtime" />
 
 ### Android Runtime
 
@@ -181,7 +174,6 @@ that exploit techniques unique to the previous Dalvik runtime, which may not
 work under ART. For more information about these changes, 
 see [Verifying App Behavior on the Android Runtime (ART)](http://developer.android.com/guide/practices/verifying-apps-art.html).
 
-<a name="notifchanges" />
 
 ### Notification Changes
 
@@ -230,7 +222,6 @@ The [Compatibility](~/android/app-fundamentals/notifications/local-notifications
 section of this article explains how to create notifications that are 
 downward-compatible with earlier versions of Android.
 
-<a name="materialtheme" />
 
 ## Material Theme
 
@@ -258,7 +249,6 @@ app: the `Theme.Material` dark theme (the default), the
 For more about using Material Theme features in Xamarin.Android apps, see 
 [Material Theme](~/android/user-interface/material-theme.md).
 
-<a name="animations" />
 
 ## Animations
 
@@ -268,7 +258,6 @@ more intuitive to use. Also, Android 5.0 apps can use *reveal effect*
 animations to hide or reveal views. You can use *curved motion* settings
 to configure how quickly or slowly animations are rendered.
 
-<a name="touchanim" />
 
 ### Touch Feedback Animations
 
@@ -294,7 +283,6 @@ time.
 For more on touch feedback animations in Android 5.0, 
 see [Customize Touch Feedback](http://developer.android.com/training/material/animations.html#Touch).
 
-<a name="activityanim" />
 
 ### Activity Transition Animations
 
@@ -352,7 +340,6 @@ Shared element transitions support multiple types of animations, such as:
 For more about activity transition animations in Android 5.0, see 
 [Customize Activity Transitions](http://developer.android.com/training/material/animations.html#Transitions).
 
-<a name="viewstate" />
 
 ### View State Transition Animations
 
@@ -371,7 +358,6 @@ following techniques:
 For more about view state transition animations in 
 Android 5.0, see [Animate View State Changes](http://developer.android.com/training/material/animations.html#ViewState).
 
-<a name="reveal" />
 
 ### Reveal Effect
 
@@ -394,7 +380,6 @@ shrink to hide the view rather than enlarge to reveal the view.
 For more information on the Android 5.0 reveal effect in, 
 see [Use the Reveal Effect](http://developer.android.com/training/material/animations.html#Reveal).
 
-<a name="curvedmotion" />
 
 ### Curved Motion
 
@@ -419,7 +404,6 @@ according to specified control points and motion curves. For more information ab
 how to specify curved motion settings in Android 5.0, 
 see [Use Curved Motion](http://developer.android.com/training/material/animations.html#CurvedMotion).
 
-<a name="viewshadows" />
 
 ## View Shadows & Elevation
 
@@ -445,7 +429,6 @@ can set through a `ViewPropertyAnimator` method call.
 For more about view shadows in Android 5.0, 
 see [Defining Shadows and Clipping Views](http://developer.android.com/training/material/shadows-clipping.html).
 
-<a name="colorfeatures" />
 
 ## Color Features
 
@@ -458,7 +441,6 @@ Android 5.0 provides two new features for managing color in apps:
     customize your app's color theme to coordinate with the color palette of
     a displayed image.
 
-<a name="tinting" />
 
 ### Drawable Tinting
 
@@ -485,7 +467,6 @@ set to a light gray:
 For more about drawable tinting in Android 5.0, 
 see [Drawable Tinting](http://developer.android.com/training/material/drawables.html#DrawableTint).
 
-<a name="colorextract" />
 
 ### Prominent Color Extraction
 
@@ -522,7 +503,6 @@ extracted from the image.
 For more about color extraction in Android 5.0, 
 see [Extracting Prominent Colors from an Image](http://developer.android.com/training/material/drawables.html#ColorExtract).
 
-<a name="newuiwidgets" />
 
 ## New UI Widgets
 
@@ -544,7 +524,6 @@ The screenshot on the left is an example of `RecyclerView` as used in an
 email app, and the screenshot on the right is an example of `CardView`
 as used in a travel reservation app.
 
-<a name="recyclerview" />
 
 ### RecyclerView
 
@@ -579,7 +558,6 @@ in this sequence of screenshots:
 For more about `RecyclerView`, 
 see [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md).
 
-<a name="cardview" />
 
 ### CardView
 
@@ -596,7 +574,6 @@ background color is set via the `cardBackgroundColor` attribute.
 For more about `CardView`, 
 see [CardView](~/android/user-interface/controls/card-view.md).
 
-<a name="enhanced" />
 
 ## Enhanced Notifications
 
@@ -658,7 +635,6 @@ For detailed information about creating and launching notifications
 with the latest Android 5.0 features, see
 [Local Notifications](~/android/app-fundamentals/notifications/local-notifications.md).
 
-<a name="newapis" />
 
 ## New APIs
 

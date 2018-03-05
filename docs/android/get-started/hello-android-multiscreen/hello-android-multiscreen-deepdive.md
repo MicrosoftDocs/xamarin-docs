@@ -41,7 +41,6 @@ into Android architecture expands your understanding of how Android
 applications are constructed by introducing the Android Application
 Building Blocks and their functions.
 
-<a name="AndroidApplicationBlocks" />
 
 ### Android Application Blocks
 
@@ -101,7 +100,6 @@ sending Intents back and forth, you can get Blocks to coordinate complex
 actions such as launching the camera app to take and save, gathering
 location information, or navigating from one screen to the next.
 
-<a name="AndroidManifestXML" />
 
 ### AndroidManifest.XML
 

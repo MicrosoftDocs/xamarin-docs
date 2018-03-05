@@ -252,7 +252,6 @@ Run the application; the toast should look like this:
 [![Example of planet selection displaying temperature](spinner-images/03-keyvalue-example-sml.png)](spinner-images/03-keyvalue-example.png)
    
   
-<a name="Resources" />
 
 ## Resources
 

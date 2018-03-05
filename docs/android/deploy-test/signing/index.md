@@ -139,7 +139,6 @@ For more information about the keystore, see
 -----
 
 <a name="signapkvs" />
-<a name="signingxs" />
 
 ## Sign the APK
 
@@ -226,7 +225,6 @@ for more information about publishing an *ad-hoc* APK.
 -----
 
 
-<a name="nextsteps" />
 
 ## Next Steps
 

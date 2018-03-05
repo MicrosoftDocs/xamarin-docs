@@ -39,7 +39,6 @@ class is available through the ContactsContract provider. The `ContactsContact.P
 the owner of a device, which includes contact data such as the device owner’s
 name and phone number.
 
-<a name="Required_Permissions" />
 
 ## Required Permissions
 
@@ -48,7 +47,6 @@ respectively. Additionally, to read and edit the user profile, applications must
 request the `Read_Profile` and `Write_Profile`
 permissions.
 
-<a name="Updating_Profile_Data" />
 
 ## Updating Profile Data
 
@@ -68,7 +66,6 @@ ContentResolver.Update (ContactsContract.Profile.ContentRawContactsUri,
     values, null, null);
 ```
 
-<a name="Reading_Profile_Data" />
 
 ## Reading Profile Data
 
@@ -88,7 +85,6 @@ if (cursor.MoveToFirst ()) {
 }
 ```
 
-<a name="Navigating_to_the_People_App" />
 
 ## Navigating to the People App
 

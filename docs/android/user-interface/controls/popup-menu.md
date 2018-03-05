@@ -30,7 +30,6 @@ is displayed as shown below:
 
  [ ![Example of app running in an emulator with button and 3-item pop-up menu](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png)
 
-<a name="Creating_a_Popup_Menu" />
 
 ## Creating a Popup Menu
 
@@ -75,7 +74,6 @@ showPopupMenu.Click += (s, arg) => {
 In the code above, after inflating the menu we simply call `menu.Show`
 to display it on the screen.
 
-<a name="Handling_Menu_Events" />
 
 ## Handling Menu Events
 

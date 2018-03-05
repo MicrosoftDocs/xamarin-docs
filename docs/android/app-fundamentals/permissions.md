@@ -6,12 +6,11 @@ ms.assetid: 3C440714-43E3-4D31-946F-CA59DAB303E8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Permissions In Xamarin.Android
 
-<a name="overview" />
 
 ## Overview
 
@@ -46,7 +45,7 @@ This document will discuss how to add permissions to a Xamarin.Android applicati
 
 
 > [!NOTE]
-> **Note:** It is possible that permissions for hardware may affect how the app is filtered by Google Play. For example, if the app requires permission for the camera, then Google Play will not show the app in the Google Play Store on a device that does not have a camera installed.
+> It is possible that permissions for hardware may affect how the app is filtered by Google Play. For example, if the app requires permission for the camera, then Google Play will not show the app in the Google Play Store on a device that does not have a camera installed.
 
 
 <a name="requirements" />
@@ -55,7 +54,6 @@ This document will discuss how to add permissions to a Xamarin.Android applicati
 
 It is strongly recommended that Xamarin.Android projects include the [Xamarin.Android.Support.Compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) NuGet package. This package will backport permission specific APIs to older versions of Android, providing one common interface without the need to constantly check the version of Android that the app is running on.
 
-<a name="requesting_permissions" />
 
 ## Requesting System Permissions
 
@@ -64,9 +62,8 @@ The first step in working with Android permissions is to declare the permissions
 Apps that target Android 6.0 or higher cannot assume that because the user granted permission at some point in the past, that the permission will  be valid the next time. An app that targets Android 6.0 must always perform a runtime permission check. Apps that target Android 5.1 or lower do not need to perform a run-time permission check.
 
 > [!NOTE]
-> **Note:** Applications should only request the permissions that they require.
+> Applications should only request the permissions that they require.
 
-<a name="declaring_permissions_in_the_manifest" />
 
 ### Declaring Permissions in the Manifest
 
@@ -115,7 +112,6 @@ Xamarin.Android will automatically add some permissions at build time to Debug b
 
 For apps that target Android 5.1(API level 22) or lower, there is nothing more that needs to be done. Apps that will run on Android 6.0 (API 23 level 23) or higher should proceed on to the next section on how to perform run time permission checks. 
 
-<a name="run_time_permission_checks" />
 
 ### Runtime Permission Checks in Android 6.0
 
@@ -209,7 +205,6 @@ public override void OnRequestPermissionsResult(int requestCode, string[] permis
 }
 ```  
 
-<a name="summary" />
 
 ## Summary
 

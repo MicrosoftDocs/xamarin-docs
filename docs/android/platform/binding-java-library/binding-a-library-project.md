@@ -7,14 +7,13 @@ ms.assetid: CEE90F8A-164B-4155-813A-7537A665A7E7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/14/2017
+ms.date: 03/01/2018
 ---
 
 # Binding an Eclipse Library Project
 
 _This walkthrough explains how to use Xamarin.Android project templates to bind an Eclipse Android library project._
 
-<a name=overview />
 
 ## Overview
 
@@ -40,7 +39,6 @@ binding for an Android library project is slightly different than
 creating a binding for a Java .JAR or .AAR file.
 
 
-<a name="Walkthrough" />
 
 ## Walkthrough
 
@@ -88,7 +86,6 @@ be used as described earlier on in this document.
 > [!NOTE]
 > **Note**: Compiling the Android library projects in other IDEs is not supported at this time. Other IDEs may not create the same directory structure or files in the **bin** folder as Eclipse. 
 
-<a name="Summary" /> 
 
 ## Summary
 

@@ -21,7 +21,6 @@ application. Instead, your application will launch the maps application
 and load the map externally. The next section examines how to use
 Xamarin.Android to launch maps like the one above.
 
-<a name="Creating_the_Intent" />
 
 ## Creating the Intent
 
@@ -40,7 +39,6 @@ This code is all that is needed to launch the map shown in the previous
 screenshot. In addition to specifying latitude and longitude, the URI
 scheme for maps supports several other options.
 
-<a name="Geo_Uri_Scheme" />
 
 ## Geo URI Scheme
 
@@ -70,7 +68,6 @@ that is then displayed on the map. For example, the URI
 [![Example screenshot showing Google Maps with a search term](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png)
 
 
-<a name="Street_View" />
 
 For more information about geo URI schemes, see
 [Show a location on a map](http://developer.android.com/guide/components/intents-common.html#Maps).

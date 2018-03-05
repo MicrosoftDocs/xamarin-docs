@@ -59,7 +59,6 @@ script these steps using
 [Rake](http://martinfowler.com/articles/rake.html).
 
 
-<a name="Setting_android_versionCode" />
 
 ### Creating the Version Code for the APK
 
@@ -127,7 +126,6 @@ the developer. The process of calculating the correct
 An example of how to do so will be covered in the walkthrough at the
 end of this document.
 
-<a name="CreatingAndroidManifest" />
 
 ### Create A Temporary AndroidManifest.XML
 
@@ -183,7 +181,6 @@ The following list explains each command line parameter:
     the Xamarin.Android project.
 
 
-<a name="SignAndZipAlign" />
 
 ### Sign and Zipalign The APK
 
@@ -203,7 +200,6 @@ run on a device. This is the format of the command line to use:
 zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 ```
 
-<a name="Automating_APK_Creation_With_Rake" />
 
 ## Automating APK Creation With Rake
 

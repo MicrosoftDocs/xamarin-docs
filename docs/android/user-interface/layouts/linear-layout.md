@@ -155,7 +155,6 @@ document for more about how
 [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
 handles the `android:layout_weight` attribute.
 
-<a name="References" />
 
 ## References
 

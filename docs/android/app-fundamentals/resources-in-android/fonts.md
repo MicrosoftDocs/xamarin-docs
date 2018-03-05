@@ -6,12 +6,11 @@ ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA$
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/30/2018
+ms.date: 03/01/2018
 ---
 
 # Fonts
 
-<a name="overview" />
 
 ## Overview
 
@@ -56,7 +55,6 @@ As long as fonts are provided to an Android application in a proper way, they ca
 
 This guide will first discuss how to use fonts as an Android resource, and then move on to discuss how to download fonts at runtime.
 
-<a name="fonts_as_a_resource" />
 
 ## Fonts as a Resource
 
@@ -135,7 +133,6 @@ Once a font family has been defined, it can be used declaratively by setting the
     />
 ```
 
-<a name="programatically_assigning_fonts" />
 
 ### Programmatically Assigning Fonts
 
@@ -154,7 +151,6 @@ var typeface = Typeface.Create("<FONT FAMILY NAME>", Android.Graphics.TypefaceSt
 textView1.Typeface = typeface;
 ```
 
-<a name="downloading_fonts" />
 
 ## Downloading Fonts
 
@@ -198,7 +194,6 @@ The `font-family` element contains the following attributes, declaring the infor
 
 Once the fonts are defined, it may be necessary to provide information about the _font certificates_ involved with the download.
 
-<a name="font_certificates" />
 
 ### Font Certificates
 
@@ -228,7 +223,6 @@ For example, the following XML is named **Resources/values/fonts_cert.xml** and 
 
 With these resource files in place, the app is capable of downloading the fonts.
 
-<a name="downloadable_font_resource_declaration" />
 
 ### Declaring Downloadable Fonts as Resources
 
@@ -249,7 +243,6 @@ To download these fonts, they have to be declared in **AndroidManifest.XML** by 
 <meta-data android:name="downloadable_fonts" android:resource="@array/downloadable_fonts" />
 ```
 
-<a name="programatically_downloading_fonts" />
 
 ### Downloading a Font with the Font APIs
 
@@ -322,10 +315,6 @@ public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
     }
 }
 
-
-/// <summary>
-/// EventArg when a font has been downloaded. 
-/// </summary>
 public class FontDownloadEventArg : EventArgs
 {
     public FontDownloadEventArg(Android.Graphics.Typeface typeface)
@@ -356,7 +345,6 @@ fontHelper.FontDownloaded += (object sender, FontDownloadEventArg e) =>
 fontHelper.DownloadFonts(this); // this is an Android Context instance.
 ```
 
-<a name="summary" />
 
 ## Summary
 

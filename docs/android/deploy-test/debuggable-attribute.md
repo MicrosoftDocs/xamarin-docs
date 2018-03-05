@@ -11,7 +11,6 @@ ms.date: 02/05/2018
 
 # Debuggable Attribute
 
-<a name="Overview" />
 
 
 To make debugging possible, Android supports the Java Debug Wire Protocol (JDWP). This is a technology that allows tools such as ADB to communicate with a JVM. While JDWP is important during development, it should be disabled prior to the applicaiton being published.

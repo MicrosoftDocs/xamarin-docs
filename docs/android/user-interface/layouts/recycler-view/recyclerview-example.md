@@ -27,7 +27,6 @@ of `RecyclerView`'s performance advantages, this sample app is able
 to quickly scroll through a large collection of photos smoothly and
 without noticeable delays.
 
-<a name="datasource" />
 
 ### An Example Data Source
 
@@ -66,7 +65,6 @@ presented here. The source code to `PhotoAlbum` is available at
 [PhotoAlbum.cs](https://github.com/xamarin/monodroid-samples/blob/master/android5.0/RecyclerViewer/RecyclerViewer/PhotoAlbum.cs)
  in the [RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/) sample app.
 
-<a name="preliminaries" />
 
 ### Layout and Initialization
 
@@ -246,7 +244,6 @@ The layout manager calls these methods while it is positioning items
 within the `RecyclerView`. The implementation of these methods is
 examined in the following sections.
 
-<a name="oncreateviewholder" />
 
 #### OnCreateViewHolder
 
@@ -323,7 +320,6 @@ public override RecyclerView.ViewHolder
 The resulting view holder instance, `vh`, is returned back to the
 caller (the layout manager).
 
-<a name="onbindviewholder" />
 
 #### OnBindViewHolder
 
@@ -365,7 +361,6 @@ the position can be used as an array index into the photo album;
 however, more complex data sources may require extra code to establish
 such a mapping.
 
-<a name="itemcount" />
 
 #### ItemCount
 
@@ -383,7 +378,6 @@ public override int ItemCount
 For more information about `RecyclerView.Adapter`, see the
 [RecyclerView.Adapter class reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html).
 
-<a name="together" />
 
 ### Putting it All Together
 
@@ -482,7 +476,6 @@ respond to item-touch events, nor does it handle changes in the
 underlying data. This functionality is added in
 [Extending the RecyclerView Example](~/android/user-interface/layouts/recycler-view/extending-the-example.md).
 
-<a name="layoutmanagerchange" />
 
 ### Changing the LayoutManager
 

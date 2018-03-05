@@ -7,14 +7,13 @@ ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
+ms.date: 03/01/2018
 ---
 
 # CardView
 
 _The Cardview widget is a UI component that presents text and image content in views that resemble cards. This guide explains how to use and customize CardView in Xamarin.Android applications while maintaining backward compatibility with earlier versions of Android._
 
-<a name="overview" />
 
 ## Overview
 
@@ -82,7 +81,6 @@ see [Setting Up an Android 5.0 Project](~/android/platform/lollipop.md).
 For more information about installing NuGet packages, see
 [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
-<a name="basic" />
 
 ## Introducing CardView
 
@@ -131,7 +129,6 @@ easier to see. For more information about theming Android 5.0 apps, see
 the next section, we'll learn how to customize `CardView` for an
 application.
 
-<a name="customizing" />
 
 ## Customizing CardView
 
@@ -230,7 +227,6 @@ arranged vertically, you can also arrange them horizontally (see
 [Creating a Custom View Style](~/android/user-interface/material-theme.md#customview)
 for an example screenshot).
 
-<a name="layout" />
 
 ### CardView Layout Options
 
@@ -248,7 +244,6 @@ color) accept a dimension value, which is a decimal number followed by
 the unit. For example, `11.5dp` specifies 11.5 density-independent
 pixels.
 
-<a name="padding" />
 
 #### Padding
 `
@@ -282,7 +277,6 @@ viewing app, the `CardView` would crop both the image and the text shown
 on the card.
 
 
-<a name="elevation" />
 
 #### Elevation
 
@@ -307,7 +301,6 @@ The `cardMaxElevation` setting is useful for when your app changes
 elevation dynamically &ndash; it prevents the shadow from extending
 past the limit that you define with this setting.
 
-<a name="radius" />
 
 #### Corner Radius and Background Color
 
@@ -326,8 +319,6 @@ These attributes are explained as follows:
 In this diagram, `cardCornerRadius` is set to a more rounded 10dp and
 `cardBackgroundColor` is set to `"#FFFFCC"` (light yellow).
 
-
-<a name="compatibility" />
 
 ## Compatibility
 
@@ -368,7 +359,6 @@ layout:
 For more information about maintaining compatibility with earlier versions of Android, see
 [Maintaining Compatibility](https://developer.android.com/training/material/compatibility.html).
 
-<a name="summary" />
 
 ## Summary
 

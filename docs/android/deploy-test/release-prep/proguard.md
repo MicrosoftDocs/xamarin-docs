@@ -7,14 +7,13 @@ ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # ProGuard
 
 _ProGuard is a Java class file shrinker, optimizer, obfuscator, and pre-verifier. It detects and removes unused code, analyzes and optimizes bytecode, then obfuscates classes and class members. This guide explains how ProGuard works, how to enable it in your project, and how to configure it. It also provides several examples of ProGuard configurations._
 
-<a name="overview" />
 
 ## Overview
 
@@ -52,7 +51,6 @@ section, Xamarin.Android ProGuard uses only a subset of these
 steps. 
 
 
-<a name="xa_proguard" />
 
 ## ProGuard in Xamarin.Android
 
@@ -75,7 +73,6 @@ two separate steps:
 Each of these steps is described next.
 
 
-<a name="linker" />
 
 ### Linker Step
 
@@ -95,7 +92,6 @@ in Xamarin.Android, see
 [Linking on Android](~/android/deploy-test/linker.md).)
 
 
-<a name="proguard_step" />
 
 ### ProGuard Step
 
@@ -103,7 +99,6 @@ After the linker step completes successfully, ProGuard is run to remove
 unused Java bytecode. This is the step that optimizes the APK. 
 
 
-<a name="using" />
 
 ## Using ProGuard
 
@@ -113,7 +108,6 @@ ProGuard configuration file, or you can create your own custom
 configuration file for ProGuard to use. 
 
 
-<a name="enabling" />
 
 ### Enabling ProGuard
 
@@ -138,7 +132,6 @@ section describes how to create a customized ProGuard configuration
 file. 
 
 
-<a name="customizing" />
 
 ### Customizing ProGuard
 
@@ -208,8 +201,6 @@ the `[Register]` custom attribute, see
 [Working with JNI](~/android/platform/java-integration/working-with-jni.md).
 
 
-<a name="options" />
-
 ### ProGuard Options
 
 ProGuard offers a number of options that you can configure to provide 
@@ -251,7 +242,6 @@ The following options are *ignored* by Xamarin.Android:
 -    [Preverification Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#preverificationoptions)
 
 
-<a name="nougat" />
 
 ## ProGuard and Android Nougat
 
@@ -269,7 +259,6 @@ You can find all versions of ProGuard at the
 [SourceForge page](https://sourceforge.net/projects/proguard/files/). 
 
 
-<a name="examples" />
 
 ## Example ProGuard Configurations
 
@@ -339,7 +328,6 @@ Android app:
     public static <fields>;
     }
 
-<a name="build" />
 
 ## ProGuard and the Xamarin.Android Build Process
 
@@ -400,12 +388,7 @@ from the IDE:
 C:\Program Files (x86)\Java\jdk1.8.0_92\\bin\java.exe -jar C:\Android\android-sdk\tools\proguard\lib\proguard.jar -include obj\Release\proguard\proguard_xamarin.cfg -include obj\Release\proguard\proguard_project_references.cfg -include obj\Release\proguard\proguard_project_primary.cfg "-injars 'obj\Release\proguard\__proguard_input__.jar';'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v7.0\mono.android.jar'" "-libraryjars 'C:\Android\android-sdk\platforms\android-25\android.jar'" -outjars "obj\Release\proguard\__proguard_output__.jar" -optimizations !code/allocation/variable
 ```
 
-
-<a name="troubleshoot" />
-
 ## Troubleshooting
-
-<a name="files" />
 
 ### File Issues
 
@@ -437,15 +420,12 @@ text editor that allows you to omit the BOM.
 -----
 
 
-<a name="other" />
-
 ### Other Issues
 
 The ProGuard 
 [Troubleshooting](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/index.html#manual/troubleshooting.html) 
 page discusses common issues you may encounter (and solutions) when using ProGuard.
 
-<a name="summary" />
 
 ## Summary
 

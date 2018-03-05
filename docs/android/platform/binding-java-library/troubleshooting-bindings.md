@@ -7,14 +7,13 @@ ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
+ms.date: 03/01/2018
 ---
 
 # Troubleshooting Bindings
 
 _This article summarizes serveral common errors that may occur when generating bindings, along with possible causes and suggested ways to resolve them._
 
-<a name="OVERVIEW" />
 
 ## Overview
 
@@ -57,7 +56,6 @@ It can also prove helpful to decompile the Android library and examine
 the types and methods that Xamarin.Android is trying to bind. This is
 covered in more detail later on in this guide.
 
-<a name="DECOMPILING_AN_ANDROID_LIBRARY" />
 
 ## Decompiling an Android Library
 
@@ -96,7 +94,6 @@ which the Java library was published. If necessary, enlist the services
 of a legal professional before attempting to decompile a Java library
 and inspect the source code.
 
-<a name="INSPECTING_API_XML" />
 
 ## Inspect API.XML
 
@@ -113,14 +110,12 @@ be causing any binding problems. For example, **api.xml** might reveal
 that a property is returning an inappropriate type, or that there are
 two types that share the same managed name.
 
-<a name="KNOWN_ISSUES" />
 
 ## Known Issues
 
 This section will list some of the common error messages or symptoms
 that my occur when trying to bind an Android library.
 
-<a name="PROBLEM_JAVA_VERSION_MISMATCH" />
 
 ### Problem: Java Version Mismatch
 
@@ -130,7 +125,6 @@ to what the library was compiled with. Recompile the Android library
 with the same version of the JDK that your Xamarin.Android project 
 is using.
 
-<a name="PROBLEM_AT_LEAST_ONE_JAVA_LIBRARY_IS_REQUIRED" />
 
 ### Problem: At least one Java library is required
 
@@ -146,7 +140,6 @@ generator cannot automatically guess which one to use by default. For
 more information about build actions, see
 [Build Actions](~/android/platform/binding-java-library/index.md).
 
-<a name="PROBLEM_BINDING_TOOLS_CANNOT_LOAD_THE_JAR_LIBRARY" />
 
 ### Problem: Binding tools cannot load the .JAR library
 
@@ -162,7 +155,6 @@ runtime tools may pass. The workaround for this is to hand-bind these
 libraries instead of using the binding generator.
 
 
-<a name="PROBLEM_MISSING_C_TYPES_IN_GENERATED_OUTPUT_" />
 
 ### Problem: Missing C# types in generated output.
 
@@ -386,8 +378,6 @@ before using the shared library) will load the **.so** library:
 ```csharp
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 ```
-
-<a name=summary />
 
 ## Summary
 

@@ -7,7 +7,7 @@ ms.assetid: 05B34788-F2D2-4347-B66B-40AFD7B1D167
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 02/28/2018
 ---
 
 # Activity Lifecycle
@@ -370,7 +370,6 @@ three options for storing instance state during the Activity lifecycle:
 
 This guide covers the first two options.
 
- <a name="Bundle_State" />
 
 
 ### Bundle State
@@ -469,7 +468,6 @@ c = bundle.GetInt ("counter", -1);
 > `OnSaveInstanceState` so that the state of the view hierarchy can also be saved.
 
 
-<a name="View_State" />
 
 ##### View State
 
@@ -524,8 +522,6 @@ For an example of saving state using a `Bundle`, refer to the
 [Walkthrough - Saving the Activity state](saving-state.md).
 
 
-<a name="Bundle_Limitations" />
-
 #### Bundle Limitations
 
 Although `OnSaveInstanceState` makes it easy to save transient
@@ -552,7 +548,6 @@ gets saved in an object as needed. The next section introduces
 `OnRetainNonConfigurationInstance` as a way of preserving more complex
 data types through configuration changes.
 
-<a name="Persisting_Complex_Data" />
 
 ### Persisting Complex Data
 

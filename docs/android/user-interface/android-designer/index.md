@@ -13,7 +13,6 @@ ms.author: mamcle
 
 _This article covers the features of the Xamarin.Android Designer. It covers designer basics, showing how to use the Designer to lay out widgets visually and how to edit properties. It also shows how to use the Designer to work with user interfaces and resources across various configurations, such as themes, languages, and device configurations, as well as how to design for alternative views like landscape and portrait._
 
-<a name="Overview" />
 
 ## Overview
 
@@ -38,7 +37,6 @@ explains:
 9.  How to use Material Design tools to build Material Design-compliant apps.
 
 
-<a name="Sections" />
 
 ## Sections
 
@@ -53,7 +51,6 @@ explains:
  [Material Design Features](~/android/user-interface/android-designer/material-design-features.md)
 
 
-<a name="Summary" />
 
 ## Summary
 

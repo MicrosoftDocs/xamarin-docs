@@ -49,7 +49,6 @@ Resources folder:
    Java would have. It is automatically created by the Xamarin.Android
    tools and will be regenerated from time to time.
 
-<a name="Creating_and_Accessing_Resources" />
 
 ## Creating and Accessing Resources
 
@@ -87,7 +86,6 @@ Once resources have been added to a project, there are two ways to use
 them in an application &ndash; programmatically (inside code) or from
 XML files.
 
-<a name="Referencing_Resources_Programmatically" />
 
 ## Referencing Resources Programmatically
 
@@ -149,7 +147,6 @@ syntax:
    (without the extension) or the value of the android:name attribute
    for resources that are in an XML element.
 
-<a name="Referencing_Resources_from_XML" />
 
 ## Referencing Resources from XML
 

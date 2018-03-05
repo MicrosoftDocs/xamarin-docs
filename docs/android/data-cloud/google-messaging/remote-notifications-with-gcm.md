@@ -843,7 +843,6 @@ build **MessageSender** and open a console window where we can
 run it from the command line.
 
 
-<a name="tryit" />
 
 ### Try It!
 

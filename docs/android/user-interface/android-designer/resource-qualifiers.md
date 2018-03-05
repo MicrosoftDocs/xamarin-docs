@@ -14,7 +14,6 @@ ms.date: 01/29/2018
 
 _This topic explains how to define resources that will be used only when some qualifier values are matched. A simple example is a language-qualified string resource. A string resource can be defined as the default, with other alternative resources defined to be used for additional languages. All resource types can be qualified, including the layout itself._
 
-<a name="Custom_Device_Configurations" />
 
 ## Custom Device Configurations
 
@@ -138,7 +137,6 @@ the customizations created earlier (in this case, landscape-only mode):
 -----
 
 
-<a name="resource_qualifier_options" />
 
 ## Resource Qualifier Options
 
@@ -171,7 +169,6 @@ can select and configure resource qualifiers (as explained
 next).
 
 
-<a name="Language_and_Region" />
 
 ### Language
 
@@ -229,7 +226,6 @@ for it, the added language will no longer be shown the next time you
 open the project.
 
 
-<a name="ui_mode" />
 
 ### UI Mode
 
@@ -275,7 +271,6 @@ screens** (for use with Android Wear) or **Rectangular screens**:
 -----
 
 
-<a name="Action_Bar" />
 
 ## Action Bar Settings
 
@@ -308,7 +303,6 @@ three Action Bar modes:
     activity.
 
 
-<a name="Themes" />
 
 ## Themes
 
@@ -344,7 +338,6 @@ as shown below:
 -----
 
 
-<a name="Android_Version" />
 
 ## Android Version
 

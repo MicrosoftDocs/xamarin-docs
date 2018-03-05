@@ -16,7 +16,6 @@ section covers the steps involved with the public distribution of an application
 created with Xamarin.Android via channels such as e-mail, a private web server,
 Google Play, or the Amazon App Store for Android.
 
-<a name="Overview" />
 
 ## Overview
 

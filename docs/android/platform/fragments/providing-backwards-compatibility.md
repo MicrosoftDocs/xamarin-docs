@@ -28,7 +28,6 @@ that enables devices running Android 1.6 (API level 4) to Android
 > the `PreferenceFragment,` are supported in the Android Support Package. 
 > They will not work in pre-Android 3.0 applications. 
 
-<a name="Adding_the_Support_Package" /> 
 
 ## Adding the Support Package
 

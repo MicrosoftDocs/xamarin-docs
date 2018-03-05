@@ -14,7 +14,6 @@ ms.date: 06/20/2017
 
 _This article explains how to recover parameter names in an Java Binding Project by using Javadoc generated from the Java project._
 
-<a name="Overview" />
 
 ## Overview
 
@@ -46,7 +45,6 @@ output. The .JAR binding toolchain does not support every single
 possible permutation and consequently some parameter may not be
 properly named.
 
-<a name="Summary" />
 
 ## Summary
 

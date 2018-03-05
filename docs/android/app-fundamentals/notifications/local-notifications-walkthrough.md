@@ -14,7 +14,6 @@ ms.date: 01/30/2018
 
 _This walkthrough demonstrates how to use local notifications in Xamarin.Android applications. It demonstrates the basics of creating and publishing a local notification. When the user clicks the notification in the notification area, it starts up a second Activity._
 
-<a name="overview" />
 
 ## Overview
 
@@ -29,7 +28,6 @@ The following screenshots illustrate some examples of this application:
 [![Example screenshots with notification](local-notifications-walkthrough-images/1-overview-sml.png)](local-notifications-walkthrough-images/1-overview.png)
 
 
-<a name="walkthrough" />
 
 ## Walkthrough
 
@@ -38,7 +36,6 @@ template. Let's call this project **LocalNotifications**. (If you are
 not familiar with creating Xamarin.Android projects, see
 [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).)
 
-<a name="add-v4-support" />
 
 ### Add the Android.Support.V4.App Component
 
@@ -66,7 +63,6 @@ any ambiguity:
 using TaskStackBuilder = Android.Support.V4.App.TaskStackBuilder;
 ```
 
-<a name="define-id" />
 
 ### Define the Notification ID
 
@@ -78,7 +74,6 @@ the `MainActivity` class:
 private static readonly int ButtonClickNotificationId = 1000;
 ```
 
-<a name="add-code" />
 
 ### Add Code to Generate the Notification
 
@@ -135,7 +130,6 @@ provided by the template):
 button.Click += ButtonOnClick;
 ```
 
-<a name="second-activity" />
 
 ### Create a Second Activity
 
@@ -197,7 +191,6 @@ We must also create a resource layout for **SecondActivity**. Add a new
 </LinearLayout>
 ```
 
-<a name="add-icon" />
 
 ### Add a Notification Icon
 
@@ -209,7 +202,6 @@ create your own custom icon. We'll name the icon file
 **Resources/drawable** folder. Remember to use **Add > Existing Item ...**
 to include this icon file in your project.
 
-<a name="run-app" />
 
 ### Run the Application
 
@@ -244,7 +236,6 @@ and the Android
 design guide.
 
 
-<a name="summary" />
 
 ## Summary
 

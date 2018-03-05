@@ -77,7 +77,6 @@ date to the hosting activity:
    `DialogFragment`.
 
 
-<a name="extending_dialogfragment" />
 
 ### Extending DialogFragment
 
@@ -141,7 +140,6 @@ object and initialize it with the current date and the callback object
 > will be in the range of 1 to 31 (depending on which month was selected).
 
 
-<a name="date_picker_fragment" />
 
 ### Showing the DatePickerFragment
 
@@ -181,7 +179,6 @@ public class MainActivity : Activity
 }
 ```
 
-<a name="summary" />
 
 ## Summary
 

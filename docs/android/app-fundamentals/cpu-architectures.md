@@ -7,7 +7,7 @@ ms.assetid: D4BC889D-9164-49BB-9B7B-F6C4E4E109F1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # CPU Architectures
@@ -108,7 +108,7 @@ the [Nexus 9](http://www.google.com/nexus/9/)) can run apps configured for
 make it possible for your app to address more memory.
 
 > [!NOTE]
-> **Note:**: 64-bit runtime support is currently an experimental
+> 64-bit runtime support is currently an experimental
 > feature. Remember that 64-bit runtimes are *not* required to run your app on 64-bit devices. 
 
 ## Additional Information

@@ -13,7 +13,6 @@ ms.author: mamcle
 
 _If you are a Java developer, you are well on your way to leveraging your skills and existing code on the Xamarin platform while reaping the code reuse benefits of C#. You will find that C# syntax is very similar to Java syntax, and that both languages provide very similar features. In addition, you'll discover features unique to C# that will make your development life easier._
 
-<a name="overview" />
 
 ## Overview
 
@@ -150,7 +149,6 @@ between C# and Java; a later section describes the object-oriented
 differences between these languages.
 
 
-<a name="assemblies" />
 
 ### Libraries vs. Assemblies
 
@@ -165,7 +163,6 @@ For more information about assemblies, see the MSDN
 [Assemblies and the Global Assembly Cache](https://msdn.microsoft.com/en-us/library/ms173099.aspx)
 topic.
 
-<a name="namespaces" />
 
 ### Packages vs. Namespaces
 
@@ -181,7 +178,6 @@ namespace WeatherApp
     ...
 ```
 
-<a name="imports" />
 
 ### Importing Types
 
@@ -223,7 +219,6 @@ These statements import functionality from the `System`, `Android.App`,
 `Android.Content`, etc. namespaces.
 
 
-<a name="generics" />
 
 ### Generics
 
@@ -308,7 +303,6 @@ However, there are also some important differences:
     Java where an explicit call to `super.finalize` is used.)
 
 
-<a name="inheritance" />
 
 ### Class Inheritance
 
@@ -405,7 +399,6 @@ For more information about C# properties, see the MSDN
 topic.
 
 
-<a name="basemethods" />
 
 ### Calling Base Class Methods
 
@@ -454,7 +447,6 @@ In this case, the `OnCreate` method defined by the derived class
 (`Activity`).
 
 
-<a name="accessmodifiers" />
 
 ### Access Modifiers
 
@@ -474,7 +466,6 @@ For more information about C# access modifiers, see the MSDN
 topic.
 
 
-<a name="virtualoverride" />
 
 ### Virtual and Override Methods
 
@@ -1099,7 +1090,6 @@ For more information about these techniques, see
 [Java Integration Overview](~/android/platform/java-integration/index.md).
 
 
-<a name="further" />
 
 ## For Further Reading
 
@@ -1124,7 +1114,6 @@ advance your understanding of the fundamentals of Android application
 development with Xamarin.
 
 
-<a name="summary" />
 
 ## Summary
 

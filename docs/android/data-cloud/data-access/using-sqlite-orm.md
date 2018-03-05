@@ -237,7 +237,7 @@ foreach (var s in stocksStartingWithA) {
 ```
 
 > [!NOTE]
-> **Note:** When writing SQL statements directly you create a
+> When writing SQL statements directly you create a
 > dependency on the names of tables and columns in your database, which
 > have been generated from your classes and their attributes. If you
 > change those names in your code you must remember to update any

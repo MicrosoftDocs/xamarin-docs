@@ -30,7 +30,6 @@ Therefore, it is necessary to meet some mandatory prerequisites before
 it is possible to use the Google Maps Android API in a Xamarin.Android
 application.
 
-<a name="Configuring_Maps_API_Prerequisites" />
 
 ## Google Maps API Prerequisites
 
@@ -42,7 +41,6 @@ Several items need to be configured before you can use the Maps API, including:
 -  Specify the required permissions
 
 
-<a name="Google_APIs_Add-On" />
 
 ### Install the Google Play Services SDK
 
@@ -74,7 +72,6 @@ services client can be found:
 > that may not be present on all devices. If it is not installed, then
 > Google Maps will not work on the device.
 
-<a name="Binding_Google_Play_Services" />
 
 #### Binding Google Play Services
 
@@ -98,7 +95,6 @@ accomplish this:
    [Maps and Location Demo v3 sample](https://github.com/xamarin/monodroid-samples/tree/master/MapsAndLocationDemo_v3)
    on Github.
 
-<a name="Adding_the_Google_Play_Services_Component" />
 
 #### Adding the Google Play Services Map Package
 
@@ -122,7 +118,6 @@ Notice that the following dependency packages are also installed:
 -   **Xamarin.GooglePlayServices.Tasks**
 
 
-<a name="Creating_an_Emulator_with_Google_APIs" />
 
 ### Create an Emulator with Google APIs
 
@@ -134,7 +129,6 @@ screenshot, an emulator image is configured for API Level 19:
 ![Android Emulator Manager with an AVD configured for API Level 19](maps-api-images/image04.png)
 
 
-<a name="apikey" />
 
 ### Obtain a Google Maps API Key
 
@@ -144,7 +138,6 @@ how to obtain and use the API key with Xamarin.Android, see
 [Obtaining A Google Maps API Key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
  
 
-<a name="Specify_Permissions" />
 
 ### Specify the Required Permissions
 
@@ -224,7 +217,6 @@ to **AndroidManifest.XML**:
 </manifest>
 ```
 
-<a name="The_GoogleMap" />
 
 ## The GoogleMap Class
 
@@ -265,7 +257,6 @@ instance of `GoogleMap`. Preference should be given to the
 class as it is a simpler API that reduces the amount boilerplate code
 that a developer must manually implement.
 
-<a name="Adding_GoogleMap_To_An_Activity" />
 
 ### Adding a MapFragment to an Activity
 
@@ -352,7 +343,6 @@ complete code example, see
 [SimpleMapDemo](https://github.com/xamarin/monodroid-samples/tree/master/MapsAndLocationDemo_v3/SimpleMapDemo).
 
 
-<a name="Map_Types" />
 
 ### Map Types
 
@@ -392,7 +382,6 @@ if (_map != null) {
 }
 ```
 
-<a name="GoogleMap_Properties" />
 
 ### GoogleMap Properties
 
@@ -430,7 +419,6 @@ if (_map != null) {
 }
 ```
 
-<a name="Interacting_with_the_Map" />
 
 ## Interacting with the Map
 
@@ -514,7 +502,6 @@ the preceding code:
 
 [![Example Google Map showing a specified location with a tilted viewing angle](maps-api-images/image06-sml.png)](maps-api-images/image06.png)
 
-<a name="Adding_Overlays_to_a_Map" />
 
 ### Drawing on the Map
 
@@ -526,7 +513,6 @@ The Android Maps API provides API's for drawing the following items on a map:
 
 -  **Lines, Polygons, and Circles** - These are APIs that allow Activities to add shapes to a map.
 
-<a name="markers" />
 
 #### Markers
 
@@ -537,7 +523,6 @@ map. By default they use a standard icon provided by Google Maps. It is
 possible to customize the appearance of a marker and to respond to user
 clicks.
 
-<a name="AddingAMarker" />
 
 ##### Adding a Marker
 
@@ -566,7 +551,6 @@ marker looks like:
 
 [![Example Google Map with a marker and an info window for Vimy Ridge](maps-api-images/image07-sml.png)](maps-api-images/image07.png)
 
-<a name="Customizing_A_Marker" />
 
 ##### Customizing A Marker
 
@@ -610,7 +594,6 @@ if (_map != null)
 }
 ```
 
-<a name="Info_Windows" />
 
 #### Info Windows
 
@@ -650,7 +633,6 @@ image on the right has it's window and contents customized:
 
 ![Example marker windows for Melbourne, including icon and population. The right window has rounded corners.](maps-api-images/marker-infowindows.png)
 
-<a name="Adding_an_overlay" />
 
 #### Ground Overlays
 
@@ -659,7 +641,6 @@ Unlike markers, which identify a specific location on a map, a
 is an image that used to identify a collection of locations or an area
 on the map.
 
-<a name="AddingAGroundOverlay" />
 
 ##### Adding a GroundOverlay
 
@@ -683,7 +664,6 @@ The following screenshot shows this overlay on a map:
 
 [![Example map with an overlayed image of a polar bear](maps-api-images/image09-sml.png)](maps-api-images/image09.png)
 
-<a name="Lines_Circles_and_Polygons" />
 
 #### Lines, Circles, and Polygons
 
@@ -697,7 +677,6 @@ There are three simple types of geometric figures that can be added to a map:
 -  **Circle** - This will draw a circle on the map.
 
 
-<a name="Polylines" />
 
 ##### Polylines
 
@@ -718,7 +697,6 @@ rectOptions.Add(new LatLng(37.35, -122.0)); // close the polyline - this makes a
 myMap.AddPolyline(rectOptions);
 ```
 
-<a name="Polygons" />
 
 ##### Polygons
 
@@ -744,7 +722,6 @@ rectOptions.Add(new LatLng(37.35, -122.2));
 myMap.AddPolygon(rectOptions);
 ```
 
-<a name="Circles" />
 
 ##### Circles
 
@@ -762,7 +739,6 @@ circleOptions.InvokeRadius (1000);
 _map.AddCircle (CircleOptions);
 ```
 
-<a name="RespondingToClicks" />
 
 ## Responding To Events
 
@@ -776,7 +752,6 @@ There are three types of interactions a user may have with a map:
 
 Each of these events will be discussed in more detail below.
 
-<a name="Marker_Click_Events" />
 
 ### Marker Click Events
 
@@ -812,7 +787,6 @@ private void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs mark
 }
 ```
 
-<a name="Marker_Drag_Events" />
 
 ### Marker Drag Events
 
@@ -841,7 +815,6 @@ for a draggable marker:
 Each of the `EventArgs` contains a single property called `P0` that is a
 reference to the `Marker` object being dragged.
 
-<a name="Info_Window_Click_Events" />
 
 ### Info Window Click Events
 

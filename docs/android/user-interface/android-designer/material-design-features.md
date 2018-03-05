@@ -48,7 +48,6 @@ We'll have look at each of these features and provide examples of how
 to use them.
 
 
-<a name="material_grid" />
 
 ## Material Design Grid
 
@@ -194,7 +193,6 @@ theme:
 -----
 
 
-<a name="theme_editor" />
 
 ## Theme Editor
 
@@ -250,7 +248,6 @@ following tabs to help you edit that color:
 Let's look at each one of these tabs in detail.
 
 
-<a name="theme_edit_inherit_tab" />
 
 ### Inherit Tab
 
@@ -274,7 +271,6 @@ For more information about style inheritance, see
 [Styles and Themes](http://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 
-<a name="theme_edit_color_picker" />
 
 ### Color Picker
 
@@ -302,7 +298,6 @@ value through various means:
 The color you choose in the Color Picker is *not* restricted to
 Material Design guidelines or to the set of available color resources.
 
-<a name="theme_edit_resources" />
 
 ### Resources
 
@@ -326,7 +321,6 @@ the UI may "run together" (because they have the same color) and become
 difficult for the user to distinguish.
 
 
-<a name="theme_edit_material_pallette" />
 
 ### Material Palette
 
@@ -370,7 +364,6 @@ Design guidelines.
 -----
 
 
-<a name="theme_create" />
 
 ### Creating a New Theme
 
@@ -452,7 +445,6 @@ in the creation of a new theme called **Custom**:
 Because the currently-selected theme is not a project theme, there is
 no dialog to update the selected theme or to specify a new location.
 
-<a name="summary" />
 
 ## Summary
 

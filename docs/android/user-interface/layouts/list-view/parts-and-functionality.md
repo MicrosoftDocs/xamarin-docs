@@ -11,7 +11,6 @@ ms.date: 08/21/2017
 
 # ListView Parts and Functionality
 
-<a name="overview" />
 
 ## Overview
 
@@ -37,7 +36,6 @@ show how Fast Scrolling and Section Index are rendered:
 The elements that make up a `ListView` are described in
 more detail below:
 
-<a name="Rows" />
 
 ## Rows
 
@@ -47,7 +45,6 @@ use the same view layout or they can all be different. There are
 examples in this document of using built-in layouts and others
 explaining how to define custom layouts.
 
-<a name="Adapter" />
 
 ## Adapter
 
@@ -55,7 +52,6 @@ The `ListView` control requires an `Adapter` to supply the formatted
 `View` for each row. Android has built-in Adapters and Views that can
 be used, or custom classes can be created.
 
-<a name="Fast_Scrolling" />
 
 ## Fast Scrolling
 
@@ -64,7 +60,6 @@ enabled to help the user navigate to any part of the list. The
 fast-scrolling 'scroll bar' can be optionally enabled (and customized
 in API level 11 and higher).
 
-<a name="Section_Index" />
 
 ## Section Index
 
@@ -73,7 +68,6 @@ the user with feedback on what part of the list they are currently
 viewing. It is only appropriate on long lists, typically in conjunction
 with fast scrolling.
 
-<a name="Classes_Overview" />
 
 ## Classes Overview
 

@@ -7,7 +7,7 @@ ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/24/2018
+ms.date: 03/01/2018
 ---
 
 # Android SDK Setup
@@ -49,8 +49,6 @@ the Android SDK. Therefore, if you update to SDK Tools version 26.0.1
 to manage the Android SDK via a UI interface, you must use the Xamarin
 Android SDK Manager.
 
-<a name="requirements" />
-
 ## Requirements
 
 # [Visual Studio](#tab/vswin)
@@ -86,8 +84,6 @@ if you are developing specifically for API level 23 or earlier.
 > **Note:** Xamarin.Android does not support JDK 9.
 
 
-<a name="installation" />
-
 # [Visual Studio](#tab/vswin)
 
 ## Installation
@@ -118,7 +114,6 @@ outside of Visual Studio to manage the Android SDK.
  
 -----
 
-<a name="sdk-manager" /> 
  
 ## SDK Manager 
 
@@ -155,7 +150,6 @@ following sections.
 -----
 
 
-<a name="sdkmanager-locations" /> 
 
 # [Visual Studio](#tab/vswin)
 
@@ -208,7 +202,6 @@ C++.
 
 -----
 
-<a name="sdkmanager-tools" /> 
 
 ### Tools Tab
 
@@ -256,7 +249,6 @@ progress. After the installation completes, the **Tools** tab will show
 that the selected tools and extras were installed.
 
 
-<a name="xvs-platforms" /> 
 
 ### Platforms Tab
 
@@ -363,7 +355,6 @@ Now you're ready to develop your app for the latest, greatest Android
 API level!
 
 
-<a name="summary" />
  
 ## Summary
 

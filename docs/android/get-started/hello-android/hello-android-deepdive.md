@@ -552,7 +552,6 @@ This launches the application on the device:
 
 [![Enter Phoneword](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png)
 
-<a name="densities" />
 
 ### Set Icons for Different Screen Densities
 

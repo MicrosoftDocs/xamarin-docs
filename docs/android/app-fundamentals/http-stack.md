@@ -7,7 +7,7 @@ ms.assetid: D7ABAFAB-5CA2-443D-B902-2C7F3AD69CE2
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # HttpClient Stack and SSL/TLS Implementation Selector for Android
@@ -16,37 +16,49 @@ _The HttpClient Stack and SSL/TLS Implementation selectors determine the HttpCli
 
 ## Overview
 
-Xamarin.Android provides two combo boxes that will control the TLS settings for an Android app. One combo box will identify which `HttpMessageHandler` will use when instantiating an `HttpClient` object, while the other identifies which TLS implementation will be used by web requests.
+Xamarin.Android provides two combo boxes that will control the TLS
+settings for an Android app. One combo box will identify which
+`HttpMessageHandler` will use when instantiating an `HttpClient`
+object, while the other identifies which TLS implementation will be
+used by web requests.
 
 > [!NOTE]
-> **Note:** Projects must reference the **System.Net.Http** assembly.
+> Projects must reference the **System.Net.Http** assembly.
 
 # [Visual Studio](#tab/vswin)
 
-The settings for the HttpClient stack are found in the Project Options for a Xamarin.Android project. Click on the **Android Options** tab, and then click on the **Advanced Options** button. This will display the **Advanced Android Options** dialog which has two combo boxes, one for the HttpClient implementation and one for the SSL/TLS implementation:
+The settings for the HttpClient stack are found in the Project Options
+for a Xamarin.Android project. Click on the **Android Options** tab,
+and then click on the **Advanced Options** button. This will display
+the **Advanced Android Options** dialog which has two combo boxes, one
+for the HttpClient implementation and one for the SSL/TLS
+implementation:
 
 
 [ ![Visual Studio Android Options](http-stack-images/tls07-vs-sml.png)](http-stack-images/tls07-vs.png)
 
-
-# [Visual Studio for Mac](#tab/vsmac)
-
-The settings for the HttpClient stack are found in the Project Options for a Xamarin.Android Project. Click on the **Build > Android Build** settings and click on the **General** tab:
-
-[ ![Visual Studio for Mac Android Options](http-stack-images/tls07-xs-sml.png)](http-stack-images/tls07-xs.png)
-
-
------
-
 ## HttpClient Stack Selector
 
-This project option controls which `HttpMessageHandler` implementation will be used each time an `HttpClient` object is instantiated. By default, this is the managed `HttpClientHandler`.
-
-# [Visual Studio](#tab/vswin)
+This project option controls which `HttpMessageHandler` implementation
+will be used each time an `HttpClient` object is instantiated. By
+default, this is the managed `HttpClientHandler`.
 
 [ ![Android HttpClient implementation combo box in Visual Studio](http-stack-images/tls04-vs-sml.png)](http-stack-images/tls04-vs.png) 
 
+
 # [Visual Studio for Mac](#tab/vsmac)
+
+The settings for the HttpClient stack are found in the Project Options
+for a Xamarin.Android Project. Click on the **Build > Android Build**
+settings and click on the **General** tab:
+
+[ ![Visual Studio for Mac Android Options](http-stack-images/tls07-xs-sml.png)](http-stack-images/tls07-xs.png)
+
+## HttpClient Stack Selector
+
+This project option controls which `HttpMessageHandler` implementation
+will be used each time an `HttpClient` object is instantiated. By
+default, this is the managed `HttpClientHandler`.
 
 ![Android HttpClient implementation combo box in Visual Studio for Mac](http-stack-images/tls04-xs.png )
 
@@ -85,9 +97,14 @@ Java/OS code instead of implementing everything in managed code.
 
 ### Programatically Using `AndroidClientHandler`
 
-The `Xamarin.Android.Net.AndroidClientHandler` is an `HttpMessageHandler` implementation specifically for Xamarin.Android. Instances of this class will use the native `java.net.URLConnection` implementation for all HTTP connections. This will theoretically provide an increase in HTTP performance and smaller APK sizes.
+The `Xamarin.Android.Net.AndroidClientHandler` is an
+`HttpMessageHandler` implementation specifically for Xamarin.Android.
+Instances of this class will use the native `java.net.URLConnection`
+implementation for all HTTP connections. This will theoretically
+provide an increase in HTTP performance and smaller APK sizes.
 
-This code snippet is an example of how to explicitly for a single instance of the `HttpClient` class:
+This code snippet is an example of how to explicitly for a single
+instance of the `HttpClient` class:
 
 ```csharp
 // Android 5.0 or higher, Xamarin.Android 6.1 or higher
@@ -95,12 +112,14 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 ```
 
 > [!NOTE]
->  **Note**: The underlying Android device must support TLS 1.2 (ie. Android 5.0 and later)
+> The underlying Android device must support TLS 1.2 (ie. Android 5.0 and later)
 
 
 ## SSL/TLS implementation build option
 
-This project option controls what underlying TLS library will be used by all web request, both `HttpClient` and `WebRequest`. By default, TLS 1.2 is selected:
+This project option controls what underlying TLS library will be used
+by all web request, both `HttpClient` and `WebRequest`. By default, TLS
+1.2 is selected:
 
 # [Visual Studio](#tab/vswin)
 
@@ -118,9 +137,16 @@ For example:
 var client = new HttpClient();
 ```
 
-If the HttpClient implementation was set to **Managed** and the TLS implementation was set to **Native TLS 1.2+**, then the `client` object would automatically use the managed `HttpClientHandler` and TLS 1.2 (provided by the BoringSSL library) for its HTTP requests.
+If the HttpClient implementation was set to **Managed** and the TLS
+implementation was set to **Native TLS 1.2+**, then the `client` object
+would automatically use the managed `HttpClientHandler` and TLS 1.2
+(provided by the BoringSSL library) for its HTTP requests.
 
-However, if the **HttpClient implementation** is set to `AndroidHttpClient`, then all `HttpClient` objects will use the underlying Java class `java.net.URLConnection` and will be unaffected by the **TLS/SSL implementation** value. `WebRequest` objects would use the BoringSSL library.
+However, if the **HttpClient implementation** is set to
+`AndroidHttpClient`, then all `HttpClient` objects will use the
+underlying Java class `java.net.URLConnection` and will be unaffected
+by the **TLS/SSL implementation** value. `WebRequest` objects would use
+the BoringSSL library.
 
 ## Other ways to control SSL/TLS configuration
 
@@ -130,8 +156,11 @@ There are three ways that a Xamarin.Android application can control the TLS sett
 2. Programatically using `Xamarin.Android.Net.AndroidClientHandler`.
 3. Declare environment variables (optional).
 
-Of the three choices, the recommended approach is to use the Xamarin.Android project options to declare the default `HttpMessageHandler` and TLS for the entire app. Then, if necessary, programmatically instantiate `Xamarin.Android.Net.AndroidClientHandler` objects.
-These options are described above.
+Of the three choices, the recommended approach is to use the
+Xamarin.Android project options to declare the default
+`HttpMessageHandler` and TLS for the entire app. Then, if necessary,
+programmatically instantiate `Xamarin.Android.Net.AndroidClientHandler`
+objects. These options are described above.
 
 The third option &ndash; using environment variables &ndash; is explained below.
 

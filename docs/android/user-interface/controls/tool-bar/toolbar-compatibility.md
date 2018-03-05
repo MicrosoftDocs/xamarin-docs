@@ -11,7 +11,6 @@ ms.date: 02/15/2018
 
 # Toolbar Compatibility
 
-<a name="overview" />
 
 ## Overview
 
@@ -43,7 +42,6 @@ To modify an app to use the AppCompat version of Toolbar:
 Each of these steps is explained in detail in the following sections.
 
 
-<a name="android_version" />
 
 ## Set the Minimum and Target Android Version
 
@@ -62,7 +60,6 @@ Android API levels, see
 In the `ToolbarFun` example, the Minimum Android Version is set to 
 KitKat (API Level 4.4). 
 
-<a name="install_nuget" />
 
 ## Install the AppCompat NuGet Package
 
@@ -84,7 +81,6 @@ installed if not already present (such as
 about installing NuGet packages, see 
 [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
-<a name="appcompat_theme" />
 
 ## Use an AppCompat Theme and Toolbar
 
@@ -99,7 +95,6 @@ available on versions of Android earlier than Lollipop, we must use the
 AppCompat version of `Toolbar`. Therefore, layouts must use 
 `android.support.v7.widget.Toolbar` instead of `Toolbar`. 
 
-<a name="update_layouts" />
 
 ### Update Layouts
 
@@ -141,7 +136,6 @@ the `android:theme` attribute is set to a theme in the AppCompat
 library &ndash; the `ThemeOverlay.AppCompat.Dark.ActionBar` theme is 
 used here rather than `ThemeOverlay.Material.Dark.ActionBar`. 
 
-<a name="update_style" />
 
 ### Update the Style
 
@@ -167,7 +161,6 @@ Also, the parent theme is changed to the AppCompat version of
 `Light.DarkActionBar`. 
 
 
-<a name="update_menus" />
 
 ### Update Menus
 
@@ -248,7 +241,6 @@ attribute on Android versions prior to API Level 11? The custom
 attribute `showAsAction` and all of its possible values are included in 
 the app when the AppCompat NuGet is installed. 
 
-<a name="subclass" />
 
 ## Subclass AppCompatActivity
 

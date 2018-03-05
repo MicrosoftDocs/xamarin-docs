@@ -14,7 +14,6 @@ ms.date: 01/18/2017
 
 _The Java ecosystem includes a diverse and immense collection of components. Many of these components can be used to reduce the time it takes to develop an Android application. This document will introduce and provide a high-level overview of some of the ways that developers can use these existing Java components to improve their Xamarin.Android application development experience._
 
-<a name="Overview" />
 
 ## Overview
 
@@ -65,7 +64,6 @@ that effort with the help of a tool called *Sharpen*. Sharpen is an
 open source tool that is a Java-to-C# converter. 
 
 
-<a name="Summary" />
 
 ## Summary
 

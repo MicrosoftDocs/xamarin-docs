@@ -20,7 +20,6 @@ application on Android 2.3 devices, as shown by the following screens:
 
 ![Details Activity screenshot](supporting-pre-honeycomb-images/01.png)
 
-<a name="Adding_the_Support_Package" />
 
 ## Adding the Support Package
 
@@ -45,7 +44,6 @@ Also, ensure that the minimum Android version targets the same API level:
 ![Screenshot of setting the Minimum Android version](supporting-pre-honeycomb-images/04.png)
 
 
-<a name="Change_MainActivity_to_derive_from_FragmentActivity" />
 
 ### Change MainActivity to derive from FragmentActivity
 
@@ -68,7 +66,6 @@ public class MainActivity : Android.Support.V4.App.FragmentActivity
 }
 ```
 
-<a name="Change_DetailsActivity_to_derive_from_FragmentActivity" />
 
 ### Change DetailsActivity to derive from FragmentActivity
 

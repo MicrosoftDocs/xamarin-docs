@@ -7,7 +7,7 @@ ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Walkthrough - Saving the Activity state
@@ -73,7 +73,7 @@ When we click the **Back** button, *Activity B* is destroyed and
 
 Next, we're going to change the application so that we have a button 
 that counts and displays the number of times it is clicked. First, 
-let's add a `_counter` instance variable to `MainActivity`: 
+let's add a `_counter` instance variable to `MainActivity`:
 
 ```csharp
 int _counter = 0;

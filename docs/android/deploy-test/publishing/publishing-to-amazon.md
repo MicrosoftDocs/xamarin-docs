@@ -21,7 +21,6 @@ Amazon does not limit the size of APKs. However, if an APK is larger than
 30MB, then it will use FTP for distribution rather than the Amazon Mobile App
 Distribution Portal.
 
-<a name="Submitting_Apps:_Binary_Info" />
 
 ## Submitting Apps: Binary Info
 
@@ -36,7 +35,6 @@ by Amazon require the following assets:
 -  Updates to five videos may be provided.
 
 
-<a name="Approval_Process" />
 
 ## Approval Process
 

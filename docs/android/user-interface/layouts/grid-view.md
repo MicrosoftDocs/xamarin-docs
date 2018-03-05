@@ -221,7 +221,6 @@ elements by adjusting their properties. For example, instead of using
 [`LayoutParams`](https://developer.xamarin.com/api/property/Android.Views.View.LayoutParameters/) try using
 [`SetAdjustViewBounds()`](https://developer.xamarin.com/api/member/Android.Widget.ImageView.SetAdjustViewBounds/).
 
-<a name="References" />
 
 ## References
 

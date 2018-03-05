@@ -24,7 +24,6 @@ without requiring that any intermediate views provide a table structure, such as
 seen in the table rows used in the TableLayout. By maintaining a flat hierarchy, *GridLayout* is able to more swiftly layout its child views. Let’s take
 a look at an example to illustrate what this concept actually means in code.
 
-<a name="Creating_a_Grid_Layout" />
 
 ## Creating a Grid Layout
 
@@ -61,7 +60,6 @@ This results in the following user interface when run in an application:
 
  [ ![Screenshot of GridLayoutDemo app displaying four cells](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png)
 
- <a name="Specifying_Orientation" />
 
 
 ## Specifying Orientation
@@ -91,7 +89,6 @@ This results in the following user interface at runtime:
 
  [ ![Screenshot of GridLayoutDemo with cells positioned in vertical orientation](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png)
 
- <a name="Specifying_Explicit_Position" />
 
 
 ### Specifying Explicit Position
@@ -130,7 +127,6 @@ the orientation.
 </GridLayout>
 ```
 
- <a name="Specifying_spacing" />
 
 
 ### Specifying spacing
@@ -196,7 +192,6 @@ This XML creates spacing in the `GridLayout` as shown below:
 The benefit of using the new `Space` view is that it allows for
 spacing and doesn’t require us to set attributes on every child view.
 
- <a name="Spanning_Columns_and_Rows" />
 
 
 ### Spanning Columns and Rows

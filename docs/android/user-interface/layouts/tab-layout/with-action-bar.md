@@ -14,7 +14,6 @@ ms.date: 02/06/2018
 
 _This guide introduces and explains how to use the ActionBar APIs to create a tabbed user interface in a Xamarin.Android application._
 
-<a name="Overview" />
 
 ## Overview
 
@@ -35,7 +34,6 @@ replace `ActionBar`). For more information, see
 [Toolbar](~/android/user-interface/controls/tool-bar/index.md). 
 
 
-<a name="Requirements" />
 
 ## Requirements
 
@@ -51,7 +49,6 @@ which is made available to Xamarin.Android apps via the
 package.
 
 
-<a name="Introducing_tabs_in_the_ActionBar" />
 
 ## Introducing Tabs in the ActionBar
 
@@ -99,7 +96,6 @@ more of these events. There are three events (one for each method in
 -  TabUnselected
 
 
-<a name="Adding_Tabs_to_the_ActionBar" />
 
 ### Adding Tabs to the ActionBar
 
@@ -157,7 +153,6 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-<a name="Event_Handlers_vs_ActionBar.ITabListener" />
 
 #### Event Handlers vs ActionBar.ITabListener
 
@@ -177,7 +172,6 @@ This will reduce the number of GREF's that a Xamarin.Android
 application is using. 
 
 
-<a name="Backwards_Compatibility_for_Older_Devices" />
 
 ### Backwards Compatibility for Older Devices
 
@@ -242,7 +236,6 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 }
 ```
 
-<a name="Summary" />
 
 ## Summary
 

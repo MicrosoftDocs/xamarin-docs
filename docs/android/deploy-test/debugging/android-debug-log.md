@@ -46,7 +46,6 @@ device selection, a way to clear log entries, a search box, and
 play/stop/pause buttons. 
 
 
-<a name="Accessing_from_the_Command_Line" />
 
 ## Accessing from the Command Line
 
@@ -67,7 +66,6 @@ only emulator running.
 
 More commands can be found by just running **adb**.
 
-<a name="Writing_to_the_Debug_Log" />
 
 
 ## Writing to the Debug Log
@@ -91,7 +89,6 @@ W/myapp   (11103): this is a warning message
 E/myapp   (11103): this is an error message
 ```
 
-<a name="Interesting_Messages" />
 
 ## Interesting Messages
 

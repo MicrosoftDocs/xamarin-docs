@@ -34,7 +34,6 @@ in general (with a basic code example), see
 > [!IMPORTANT]
 > A binding project can only include one .AAR file. If the .AAR dependencies on other .AAR, then those dependencies should be contained in their own binding project and then referenced. See [Bug 44573](https://bugzilla.xamarin.com/show_bug.cgi?id=44573).
 
-<a name="walkthrough" />
 
 ## Walkthrough
 
@@ -88,7 +87,6 @@ This image resource resides at **res/drawable/monkey.png**
 in **textanalyzer.aar**.
 
 
-<a name="creating" />
 
 ### Creating the Bindings Library
 
@@ -145,7 +143,6 @@ Before commencing with the steps below, please download the example
     location: **AarBinding/bin/Debug/AarBinding.dll**
 
 
-<a name="using" />
 
 ### Using the Bindings Library
 
@@ -191,7 +188,6 @@ example app will call: `NumConsonants` (which wraps the underlying Java
 Java `numVowels` method).
 
 
-<a name="accessing_types" />
 
 ### Accessing .AAR Types
 
@@ -336,7 +332,6 @@ line of text and tap these buttons again to test for different vowel
 and consonant counts.
 
 
-<a name="accessing_resources" />
 
 ### Accessing .AAR Resources
 
@@ -393,7 +388,6 @@ results are displayed as shown on the right:
 Congratulations! You've successfully bound a Java library .AAR!
 
 
-<a name="summary" />
 
 ## Summary
 

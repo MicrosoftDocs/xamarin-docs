@@ -17,7 +17,6 @@ acceleration, Intel's HAXM (Hardware Accelerated Execution Manager) is
 the recommended way to drastically improve the performance of the
 Android SDK Emulator.
 
-<a name="haxm-overview" />
 
 ## HAXM Overview
 
@@ -43,7 +42,6 @@ Emulator.
 > [!NOTE]
 > **Note:** You cannot run HAXM on a virtual machine.
 
-<a name="verify-haxm" />
 
 ## Verifying HAXM Installation
 

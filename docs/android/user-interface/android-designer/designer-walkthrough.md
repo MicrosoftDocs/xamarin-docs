@@ -14,7 +14,6 @@ ms.date: 01/29/2018
 
 _This topic is a walkthrough of the Xamarin.Android Designer. It demonstrates how to create a user interface for a small color browser app; this user interface is created entirely in the Designer._
 
-<a name="Overview" />
 
 ## Overview
 
@@ -29,7 +28,6 @@ tremendously. In this article, we present a walkthrough that shows how
 to use the Xamarin.Android Designer to visually create a user
 interface.
 
-<a name="Walkthrough" />
 
 ## Walkthrough
 
@@ -44,7 +42,6 @@ the app.
 
 Let's get started!
 
-<a name="Creating_a_New_Project" />
 
 ### Creating a New Project
 
@@ -84,7 +81,6 @@ In the next dialog screen, click **Create**.
 -----
 
 
-<a name="Adding_a_Layout" />
 
 ### Adding a Layout
 
@@ -138,7 +134,6 @@ the right, it shows that the layout currently contains a single
 -----
 
 
-<a name="Creating_the_List_Item_User_Interface" />
 
 ### Creating the List Item User Interface
 
@@ -258,7 +253,6 @@ them so they appear as shown in the previous screenshot (indented under
 `linearLayout1`).
 
 
-<a name="Arranging_The_User_Interface" />
 
 ### Arranging the User Interface
 
@@ -339,7 +333,6 @@ At this point, the Designer should resemble the following screenshot:
 
 -----
 
-<a name="Modifying_the_Spacing" />
 
 ### Modifying the Spacing
 
@@ -416,7 +409,6 @@ respectively:
 -----
 
 
-<a name="Removing_the_Default_Image" />
 
 ### Removing the Default Image
 
@@ -445,7 +437,6 @@ images), let's remove the default image source added by the template.
 
 -----
 
-<a name="Adding_a_ListView" />
 
 ### Adding a ListView Container
 
@@ -484,7 +475,6 @@ Open the **Widget** tab under **Properties** and change the `Id` to
 At this point, our user interface is ready to use.
 
 
-<a name="Running_the_Application" />
 
 ### Running the Application
 
@@ -587,7 +577,6 @@ app appears when running on a device:
 [ ![Final screenshot](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png)
 
 
-<a name="Summary" />
 
 ## Summary
 

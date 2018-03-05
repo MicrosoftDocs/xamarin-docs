@@ -6,7 +6,7 @@ ms.assetid: 157F0899-4E3E-4538-90AF-B59B8A871204
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/31/2018
+ms.date: 02/28/2018
 ---
 
 # Accessibility on Android
@@ -197,7 +197,6 @@ translations of the file can be provided in your app. See the
 [Android localization guide](~/android/app-fundamentals/localization.md)
 to learn how add localized string files to an application project.
 
-<a name="testing" />
 
 ## Testing Accessibility
 
@@ -206,7 +205,6 @@ to enable TalkBack and Explore by Touch to test accessibility on Android devices
 
 You may need to install [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)
 from Google Play if it does not appear in **Settings > Accessibility**.
-
 
 
 ## Related Links

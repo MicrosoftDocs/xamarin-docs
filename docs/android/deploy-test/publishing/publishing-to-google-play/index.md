@@ -22,7 +22,6 @@ and advertise your application, guidelines for rating your application on Google
 Play, and using filters to restrict the deployment of an application to certain
 devices.
 
-<a name="Requirements"  />
 
 ## Requirements
 
@@ -44,7 +43,6 @@ Google Play is not globally available. Some locations may not be supported
 for the distribution of applications.
 
 
-<a name="Becoming_a_Publisher"  />
 
 ## Becoming a Publisher
 
@@ -67,7 +65,6 @@ lists of countries can be found in the following links:
 1.  [Supported Locations for distribution to Google Play users](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294) &ndash; This is a list of all countries where applications may be distributed.
 
 
-<a name="Preparing_Promotional_Assets"  />
 
 ### Preparing Promotional Assets
 
@@ -77,7 +74,6 @@ graphics, and video to be submitted. Google Play will then use those assets to
 advertise and promote the application.
 
 
-<a name="Launcher_Icons"  />
 
 #### Launcher Icons
 
@@ -110,7 +106,6 @@ Tips for Launcher Icons:
     alpha channel, and should not be full-framed images.
 
 
-<a name="High_Resolution_Application_Icon"  />
 
 #### High Resolution Application Icons
 
@@ -128,7 +123,6 @@ is a helpful tool for creating suitable launcher icons and the
 high-resolution application icon.
 
 
-<a name="Screen_shots"  />
 
 #### Screen Shots
 
@@ -142,7 +136,6 @@ The specs for screen shots are:
 1.  320w x 480h or 480w x 800h or 480w x 854h. Landscaped images will be cropped.
 
 
-<a name="Promotional_Graphic" />
 
 #### Promotional Graphic
 
@@ -152,7 +145,6 @@ This is an optional image used by Google Play:
 1.  No border in art.
 
 
-<a name="Feature_Graphic" />
 
 #### Feature Graphic
 
@@ -164,7 +156,6 @@ alone without an application icon.
 1.  This graphic may be scaled down: use large text and keep graphics simple.
 
 
-<a name="Video_Link" />
 
 #### Video Link
 
@@ -173,7 +164,6 @@ be 30 seconds to 2 minutes in length and showcase the best parts of your
 application.
 
 
-<a name="pubgp" />
 
 ### Publishing to Google Play
 

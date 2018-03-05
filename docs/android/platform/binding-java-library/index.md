@@ -71,7 +71,6 @@ When binding an existing Android library, it is necessary to keep the following 
 
 * **What version of the JDK was used to compile the library?** &ndash; Binding errors may occur if the Android library was built with a different version of JDK than in use by Xamarin.Android. If possible, recompile the Android library using the same version of the JDK that is used by your installation of Xamarin.Android.
 
-<a name="BUILD_ACTIONS" />
 
 ## Build Actions
 
@@ -125,7 +124,6 @@ The Xamarin.Android Binding Generator will change some Java idioms and patterns 
 -   An _Inner class_ in Java is a _Nested class_ with an instance constructor in C#.
 
 
-<a name="BINDING_SCENARIOS" />
 
 ## Binding Scenarios
 

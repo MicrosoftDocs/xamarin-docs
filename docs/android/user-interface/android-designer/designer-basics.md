@@ -7,14 +7,13 @@ ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 03/01/2018
 ---
 
 # Designer Basics
 
 _This topic introduces Designer features, explains how to launch the Designer, describes the Design Surface, and details how to use the Properties pane to edit widget properties._
 
-<a name="Launching_the_Designer" />
 
 ## Launching the Designer
 
@@ -53,7 +52,6 @@ folder in the **Solution Pad** and selecting **Add > New File > Android > Layout
 This creates a new .axml file and loads it onto the Design Surface.
 
 
-<a name="Designer_Features" />
 
 ## Designer Features
 
@@ -120,7 +118,6 @@ to create and shape your design:
 -----
 
 
-<a name="Toolbar" />
 
 ## Toolbar
 
@@ -185,7 +182,6 @@ explains how to use the **Alternative Layout Selector**.
 provides a comprehensive overview of the **Theme Editor** and the **Material Design Grid**.
 
 
-<a name="Design_Surface" />
 
 ## Design Surface
 
@@ -210,7 +206,6 @@ Additionally, widgets can be copied: you can use copy and paste to copy
 a widget, or you can drag and drop an existing widget while pressing the
 <kbd>Ctrl</kbd> key.
 
-<a name="Context_Menu_Commands" />
 
 ### Context Menu Commands
 
@@ -261,7 +256,6 @@ provides several options:
     right-clicked `TextView`.
 
 
-<a name="Zoom_Controls" />
 
 ### Zoom Controls
 
@@ -300,7 +294,6 @@ interface in the Designer:
 Note that the chosen zoom setting does not affect the user interface of
 the application at runtime.
 
-<a name="property_pad" />
 
 # [Visual Studio](#tab/vswin)
 
@@ -318,7 +311,6 @@ depending on which widget is selected in the Designer surface. When the
 
 -----
 
-<a name="Property_Pad_Sections" />
 
 # [Visual Studio](#tab/vswin)
 
@@ -357,7 +349,6 @@ of interest:
 -----
 
 
-<a name="Default_Values" />
 
 ### Default Values
 
@@ -379,7 +370,6 @@ theme.
 
 -----
 
-<a name="Referencing_resources" />
 
 ### Referencing Resources
 
@@ -423,7 +413,6 @@ property of an `ImageView`:
 -----
 
 
-<a name="Boolean_Property_References" />
 
 ### Boolean Property References
 
@@ -448,7 +437,6 @@ value manually.
 
 [![Example of setting boolean properties](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png)
 
-<a name="Grouped_Properties" />
 
 ## Grouped Properties
 
@@ -462,7 +450,6 @@ properties can be edited directly in the grouped row, such as the
 
 -----
 
-<a name="Editing_Properties_Inline" />
 
 ## Editing Properties Inline
 
@@ -470,8 +457,6 @@ The Android Designer supports direct editing of certain properties on
 the Design Surface (so you don't have to search for these properties in
 the property list). Properties that can be directly edited include
 text, margin, and size.
-
-<a name="Text" />
 
 ### Text
 
@@ -509,7 +494,6 @@ When you key in a new text string, you can press <kbd>Shift</kbd> +
 <kbd>Enter</kbd> to automatically link the entered text to a new
 resource.
 
-<a name="Margin" />
 
 ### Margin
 
@@ -547,7 +531,6 @@ indicating the space that the margin occupies:
 -----
 
 
-<a name="Size" />
 
 ### Size
 
@@ -617,7 +600,6 @@ the resize handles do not appear:
 -----
 
 
-<a name="Outline_View" />
 
 ## Document Outline
 

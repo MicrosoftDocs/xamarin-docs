@@ -7,7 +7,7 @@ ms.assetid: E5314D7F-2AAC-40DA-BEBA-27C834F078DD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/29/2017
+ms.date: 03/01/2018
 ---
 
 # Firebase Cloud Messaging
@@ -22,7 +22,6 @@ server, and it provides a step-by-step procedure for acquiring
 credentials so that your app can use FCM services.
 
 
-<a name="overview" />
 
 ## Overview
 
@@ -49,7 +48,6 @@ information about the different types of Firebase messages, see
 [About FCM Messages](https://firebase.google.com/docs/cloud-messaging/concept-options).
 
 
-<a name="inaction" />
 
 ## Firebase Cloud Messaging in Action
 
@@ -144,7 +142,6 @@ detects this and automatically notifies the app server to delete the
 registration token.
 
 
-<a name="downstream" />
 
 ### Downstream Messaging
 
@@ -176,9 +173,6 @@ single client app), messages can be up to 4kB in length.
 For detailed information about receiving downstream FCM messages on
 Android, see
 [Remote Notifications with FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
-
-
-<a name="topic" />
 
 ### Topic Messaging
 
@@ -262,7 +256,6 @@ project to receive FCM push notification messages on Android, see
 [Remote Notifications with FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
 
 
-<a name="furtherreading" />
 
 ## For Further Reading
 
@@ -278,7 +271,6 @@ project to receive FCM push notification messages on Android, see
     explain and define the Extensible Messaging and Presence Protocol (XMPP).
 
 
-<a name="summary" />
 
 ## Summary
 

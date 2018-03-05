@@ -7,14 +7,13 @@ ms.assetid: A417DEE9-7B7B-4E35-A79C-284739E3838E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
+ms.date: 03/01/2018
 ---
 
 # Working With JNI
 
 _Xamarin.Android permits writing Android apps within C# instead of Java. Several assemblies are provided with Xamarin.Android which provide bindings for Java libraries, including Mono.Android.dll and Mono.Android.GoogleMaps.dll. However, bindings are not provided for every possible Java library, and the bindings that are provided may not bind every Java type and member. To use unbound Java types and members, the Java Native Interface (JNI) may be used. This article illustrates how to use JNI to interact with Java types and members from Xamarin.Android applications._
 
-<a name="_Overview" />
 
 ## Overview
 
@@ -48,7 +47,6 @@ This document explains:
 -  How to expose interfaces.
 
 
-<a name="_Requirements" />
 
 ## Requirements
 
@@ -57,7 +55,6 @@ JNI, as exposed through the
 is available in every version of Xamarin.Android.
 To bind Java types and interfaces, you must use Xamarin.Android 4.0 or later.
 
-<a name="_Managed_Callable_Wrappers" />
 
 ## Managed Callable Wrappers
 
@@ -82,7 +79,6 @@ members. Sub-classing and interface implementation requires the use of
 managed callable wrappers.
 
 
-<a name="_Android_Callable_Wrappers" />
 
 ## Android Callable Wrappers
 
@@ -110,7 +106,6 @@ generated for all types that (directly or indirectly) inherit
 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/).
 
 
-<a name="_Implementing_Interfaces" />
 
 ### Implementing Interfaces
 
@@ -138,7 +133,6 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 }
 ```
 
-<a name="_Implementation_Details" />
 
 ### Implementation Details
 
@@ -207,7 +201,6 @@ Notice that the base class is preserved, and native method declarations are
 provided for each method that is overridden within managed code.
 
 
-<a name="_ExportAttribute_and_ExportFieldAttribute" />
 
 ### ExportAttribute and ExportFieldAttribute
 
@@ -256,7 +249,6 @@ attributes reside in the `Java.Interop` namespace:
 The [ExportAttribute](https://developer.xamarin.com/samples/monodroid/ExportAttribute/) sample
 project illustrates how to use these attributes.
 
-<a name="_Troubleshooting_ExportAttribute_and_ExportFieldAttribute" />
 
 #### Troubleshooting ExportAttribute and ExportFieldAttribute
 
@@ -272,7 +264,6 @@ project illustrates how to use these attributes.
     Export methods. (This issue is fixed in the latest version of Xamarin.Android.)
 
 
-<a name="_ExportParameterAttribute" />
 
 ### ExportParameterAttribute
 
@@ -294,7 +285,6 @@ When types such as these are needed for exported methods, the
 `ExportParameterAttribute` must be used to explicitly give the corresponding
 parameter or return value a type.
 
- <a name="_Annotation_Attribute" />
 
 
 ### Annotation Attribute
@@ -342,7 +332,6 @@ Additionally the following limitations apply:
     property getter or setter instead.
 
 
-<a name="_Class_Binding" />
 
 ## Class Binding
 
@@ -368,7 +357,6 @@ A binding typically contains the following items:
    [RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/) set to `true`.
 
 
-<a name="_Declaring_Type_Handle" />
 
 ### Declaring Type Handle
 
@@ -383,7 +371,6 @@ static IntPtr class_ref = JNIEnv.FindClass(CLASS);
 See the [JNI Type References](#_JNI_Type_References) section for details about
 the `CLASS` token.
 
-<a name="_Binding_Fields" />
 
 ### Binding Fields
 
@@ -437,7 +424,6 @@ reference into a `System.IO.Stream` instance, and we're using `JniHandleOwnershi
 Many of the [Android.Runtime](https://developer.xamarin.com/api/namespace/Android.Runtime/) types have `FromJniHandle`
 methods which will convert a JNI reference into the desired type.
 
- <a name="_Method_Binding" />
 
 
 ### Method Binding
@@ -478,8 +464,7 @@ and non-final methods) or implemented (for interface methods). The
 [Supporting Inheritance, Interfaces](#_Supporting_Inheritance,_Interfaces_1) section covers the
 complexities of supporting virtual methods and interface methods.
 
- <a name="_Static_Methods" />
-
+<a name="_Static_Methods" />
 
 #### Static Methods
 
@@ -518,7 +503,6 @@ an `IntPtr` which contains the handle of the returned Java instance.
 is used to convert the Java handle into a strongly typed object
 instance.
 
- <a name="_Non-virtual_Instance_Method_Binding" />
 
 
 #### Non-virtual Instance Method Binding
@@ -553,7 +537,6 @@ an `IntPtr` which contains the handle of the returned Java instance.
 is used to convert the Java handle into a strongly typed object
 instance.
 
-<a name="_Binding_Constructors" />
 
 ### Binding Constructors
 
@@ -679,8 +662,7 @@ methods are helpers to perform a `JNIEnv.FindClass`,
 `JNIEnv.DeleteGlobalReference` on the value returned from
 `JNIEnv.FindClass`. See the next section for details.
 
- <a name="_Supporting_Inheritance,_Interfaces" />
-
+<a name="_Supporting_Inheritance,_Interfaces" />
 
 ### Supporting Inheritance, Interfaces
 
@@ -751,7 +733,6 @@ the Xamarin.Android build process would have generated a new
 errors, as the `mono.android.test.Adder` type would be present twice,
 in two separate files.
 
- <a name="_Binding_Virtual_Methods" />
 
 
 ### Binding Virtual Methods
@@ -768,7 +749,6 @@ categories:
 
 1.  **Method Registration**
 
-<a name="_Method_Binding" />
 
 #### Method Binding
 
@@ -850,7 +830,6 @@ implementation will only be invoked if the subclass invoked
 `ThresholdClass` comes in. `ThresholdClass` specifies which Java class
 will provide the implementation of the method to invoke.
 
- <a name="_Method_Registration" />
 
 
 #### Method Registration
@@ -983,7 +962,6 @@ a Java instance. Treating them as a local reference (and thus calling
 `JNIEnv.DeleteLocalRef`) will break managed -&gt; Java -&gt; managed stack
 transitions.
 
- <a name="_Complete_Adder_Binding" />
 
 
 ### Complete Adder Binding
@@ -1046,7 +1024,6 @@ public class Adder : Java.Lang.Object {
 }
 ```
 
- <a name="_Restrictions" />
 
 
 ### Restrictions
@@ -1072,7 +1049,6 @@ If the type must contain an instance field that can refer to a
 `System.WeakReference` or `GCHandle`.
 
 
- <a name="_Binding_Abstract_Methods" />
 
 ## Binding Abstract Methods
 
@@ -1123,7 +1099,6 @@ partial class AdderInvoker : Adder {
 The `Invoker` type is only necessary when obtaining JNI references to
 Java-created instances.
 
- <a name="_Binding_Interfaces" />
 
 ## Binding Interfaces
 
@@ -1142,7 +1117,6 @@ Interface bindings have two parts: the C# interface definition, and an
 Invoker definition for the interface.
 
 
-<a name="_Interface_Definition" />
 
 ### Interface Definition
 
@@ -1198,7 +1172,6 @@ This isn't necessary: we could have bound it to a C# `int[]`, or an
 `Invoker` needs to be able to translate it into a Java `int[]` type for
 invocation.
 
-<a name="_Invoker_Definition" />
 
 ### Invoker Definition
 
@@ -1251,7 +1224,6 @@ method, the `ThresholdType` and `ThresholdClass` members, the
 `GetObject` method, interface method implementation, and the connector
 method implementation.
 
- <a name="_Constructor" />
 
 
 #### Constructor
@@ -1276,7 +1248,6 @@ Note: The `Handle` property must be used within the constructor body,
 and not the `handle` parameter, as on Android v4.0 the `handle`
 parameter may be invalid after the base constructor finishes executing.
 
-<a name="_Dispose_Method" />
 
 #### Dispose Method
 
@@ -1295,7 +1266,6 @@ partial class IAdderProgressInvoker {
 }
 ```
 
-<a name="_ThresholdType_and_ThresholdClass" />
 
 #### ThresholdType and ThresholdClass
 
@@ -1317,7 +1287,6 @@ partial class IAdderProgressInvoker {
 }
 ```
 
-<a name="_GetObject_Method" />
 
 #### GetObject Method
 
@@ -1333,7 +1302,6 @@ partial class IAdderProgressInvoker {
 }
 ```
 
-<a name="_Interface_Methods" />
 
 #### Interface Methods
 
@@ -1352,7 +1320,6 @@ partial class IAdderProgressInvoker {
 }
 ```
 
- <a name="_Connector_Methods" />
 
 
 #### Connector Methods
@@ -1395,7 +1362,6 @@ Note, however, that `JNIEnv.GetArray` copies the entire array between
 VMs, so for large arrays this could result in lots of added GC
 pressure.
 
-<a name="_Complete_Invoker_Definition" />
 
 ### Complete Invoker Definition
 
@@ -1469,7 +1435,6 @@ new JValue (currentSum));
 }
 ```
 
- <a name="_JNI_Object_References" />
 
 
 ## JNI Object References
@@ -1515,7 +1480,6 @@ Weak global references are only available on Android v2.2 (Froyo) and
 later. Weak global references can be deleted with
 [JNIEnv.DeleteWeakGlobalRef](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.DeleteWeakGlobalRef/(System.IntPtr)).
 
-<a name="_Dealing_With_JNI_Local_References" />
 
 ### Dealing With JNI Local References
 
@@ -1535,7 +1499,6 @@ dealt with: explicitly deleting them, creating a `Java.Lang.Object`
 instance to hold them, and using `Java.Lang.Object.GetObject<T>()` to
 create a managed callable wrapper around them.
 
- <a name="_Explicitly_Deleting_Local_References" />
 
 
 ### Explicitly Deleting Local References
@@ -1556,7 +1519,6 @@ finally {
 }
 ```
 
- <a name="_Wrapping_with_Java.Lang.Object" />
 
 
 ### Wrapping with Java.Lang.Object
@@ -1604,7 +1566,6 @@ using (var value = new Java.Lang.Object (lref, JniHandleOwnership.TransferLocalR
 }
 ```
 
- <a name="_Using_Java.Lang.Object.GetObject&lt;T&gt;()" />
 
 
 ### Using Java.Lang.Object.GetObject&lt;T&gt;()
@@ -1674,7 +1635,6 @@ There are two sets of methods for manipulating instance fields: one for
 reading instance fields and one for writing instance fields. All sets
 of methods require a field ID to read or write the field value.
 
-<a name="_Reading_Instance_Field_Values" />
 
 ### Reading Instance Field Values
 
@@ -1717,7 +1677,6 @@ where `*` is the type of the field:
 
 
 
- <a name="_Writing_Instance_Field_Values" />
 
 
 ### Writing Instance Field Values
@@ -1780,7 +1739,6 @@ There are two sets of methods for manipulating static fields: one for
 reading instance fields and one for writing instance fields. All sets
 of methods require a field ID to read or write the field value.
 
-<a name="_Reading_Static_Field_Values" />
 
 ### Reading Static Field Values
 
@@ -1820,7 +1778,6 @@ where `*` is the type of the field:
     &ndash; Read the value of `double` static fields.
 
 
-<a name="_Writing_Static_Field_Values" />
 
 ### Writing Static Field Values
 
@@ -1892,7 +1849,6 @@ for more details.
 Any method declared in the class or any base class or implemented interface
 can be looked up.
 
-<a name="_Virtual_Method_Invocation" />
 
 ### Virtual Method Invocation
 
@@ -1932,7 +1888,6 @@ where `*` is the return type of the method.
     &ndash; Invoke a method which returns a `double` value.
 
 
-<a name="_Non-virtual_Method_Invocation" />
 
 ### Non-virtual Method Invocation
 
@@ -1973,7 +1928,7 @@ invocation is usually used to invoke the base method of a virtual method.
     &ndash; Non-virtually invoke a method which returns a `double` value.
 
 
- <a name="_Static_Methods" />
+<a name="_Static_Methods" />
 
 ## Static Methods
 
@@ -1987,7 +1942,6 @@ Method IDs do not need to be freed, and are valid as long as the
 corresponding Java type is loaded. (Android does not currently support class
 unloading.)
 
- <a name="_Static_Method_Invocation" />
 
 
 ### Static Method Invocation
@@ -2028,8 +1982,7 @@ where `*` is the return type of the method.
     &ndash; Invoke a static method which returns a `double` value.
 
 
- <a name="_JNI_Type_Signatures" />
-
+<a name="_JNI_Type_Signatures" />
 
 ## JNI Type Signatures
 
@@ -2077,9 +2030,6 @@ There are four types of JNI type references:
 -  **array**
 
 
- <a name="_Built-in_Type_References" />
-
-
 ### Built-in Type References
 
 Built-in type references are a single character, used to reference built-in
@@ -2096,8 +2046,7 @@ value types. The mapping is as follows:
 -  `"V"` for  `void` method return types.
 
 
- <a name="_Simplified_Type_References" />
-
+<a name="_Simplified_Type_References" />
 
 ### Simplified Type References
 
@@ -2116,7 +2065,6 @@ Either of the two will result in the Java type
 [java.lang.Thread.State](http://developer.android.com/reference/java/lang/Thread.State.html)
 being mapped to the simplified type reference `java/lang/Thread$State`.
 
-<a name="_Type_References" />
 
 ### Type References
 
@@ -2167,7 +2115,6 @@ static {};
 Ljava/lang/Thread$State;.
 
 
-<a name="_Array_Type_References" />
 
 ### Array Type References
 
@@ -2176,7 +2123,6 @@ Simplified type references cannot be used when specifying arrays.
 
 For example, `int[]` is `"[I"`, `int[][]` is `"[[I"`, and `java.lang.Object[]` is `"[Ljava/lang/Object;"`.
 
-<a name="_Java_Generics_and_Type_Erasure" />
 
 
 ## Java Generics and Type Erasure
@@ -2192,7 +2138,6 @@ the generic type
 is also the "raw" generic type `java.lang.Class`, both of which have
 the same simplified type reference, `"java/lang/Class"`.
 
-<a name="Java_Native_Interface_Support" />
 
 ## Java Native Interface Support
 
@@ -2273,7 +2218,6 @@ Activity mapActivity = Java.Lang.Object.GetObject<Activity>(lrefActivity, JniHan
 Furthermore, all of the JNI functions have been modified by removing
 the `JNIEnv*` parameter present in every JNI function.
 
-<a name="_Summary" />
 
 ## Summary
 

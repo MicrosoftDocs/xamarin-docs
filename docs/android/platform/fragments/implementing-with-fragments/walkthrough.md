@@ -207,7 +207,6 @@ into the `FrameLayout` on the Activity. For other devices that do not
 have a large display &ndash; phones, for example &ndash; `isDualPane`
 will be set to `false` so a new `DetailsActivity` will be started.
 
-<a name="5. Create_the_DetailsActivity" />
 
 ## 5. Create the DetailsActivity
 
@@ -241,7 +240,6 @@ root view has the special ID `Android.Resource.Id.Content`. A new
 of a `FragmentTransaction` that is created by the Activity's
 `FragmentManager`.
 
-<a name="6. Create_the_DetailsFragment" />
 
 ## 6. Create the DetailsFragment
 

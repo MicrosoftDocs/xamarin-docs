@@ -14,7 +14,6 @@ ms.date: 08/21/2017
 
 _This topic explains how layouts can be versioned by using resource qualifiers. For example, there can be a version of a layout that is only used when the device is in landscape mode and a layout version that is only for portrait mode._
 
-<a name="creating_alternative_layouts" />
 
 ## Creating Alternative Layouts
 
@@ -81,7 +80,6 @@ screenshot:
 -----
 
 
-<a name="editing_alternative_layouts" />
 
 ## Editing Alternative Layouts
 
@@ -147,7 +145,6 @@ layout will be propagated to other layout but not to the **large-land**
 layout. 
 
 
-<a name="multi_edit_example" />
 
 ### Multi-Edit Example 
 
@@ -188,7 +185,6 @@ other layouts)? To do this, you must unlink the layout that you want to
 change before you modify it, as explained next. 
 
 
-<a name="making_local_changes" />
 
 ### Making Local Changes 
 
@@ -217,7 +213,6 @@ When you click the **Default** layout to view it, the `TextView` text
 string is still set to `Portrait`. 
 
 
-<a name="handling_conflicts" />
 
 ## Handling Conflicts 
 
@@ -251,7 +246,6 @@ change to this widget as well as to the counterpart widget in the linked
 **Default** layout. If all property changes are applied, the conflict 
 is automatically discarded. 
 
-<a name="view_group_conflicts" />
 
 ### View Group Conflicts 
 
@@ -337,7 +331,6 @@ have a red change marker because only the `LinearLayout` has changes that
 were applied in the **large-land** layout.
 
 
-<a name="Conflict_Persistence" />
 
 ### Conflict Persistence
 

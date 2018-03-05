@@ -100,7 +100,6 @@ Picasso.With (this)
 
 ```
 
-<a name="creating" />
 
 ### Creating the Bindings Library
 
@@ -174,7 +173,6 @@ the Bindings Library project should build successfully and produce an output .DL
 at the following location: **JarBinding/bin/Debug/JarBinding.dll**
     
 
-<a name="using" />
 
 ### Using the Bindings Library
 
@@ -265,7 +263,6 @@ the following screenshot:
 Congratulations! You've successfully bound a Java library .JAR and used it in your 
 Xamarin.Android app.
  
-<a name="summary" />
  
 ## Summary
 

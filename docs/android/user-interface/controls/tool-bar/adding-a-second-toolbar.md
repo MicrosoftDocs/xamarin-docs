@@ -11,7 +11,6 @@ ms.date: 02/15/2018
 
 # Adding a Second Toolbar
 
-<a name="overview" />
 
 ## Overview 
 
@@ -22,7 +21,6 @@ a partial width of the screen. The examples below illustrate how to
 create a second `Toolbar` and place it at the bottom of the screen. 
 This `Toolbar` implements **Copy**, **Cut**, and **Paste** menu items. 
 
-<a name="define_second" />
 
 ## Define the Second Toolbar 
 
@@ -93,7 +91,6 @@ the app displays a blank second toolbar at the bottom of the screen:
 [![Screenshot of app with yellow second toolbar at the bottom of the screen](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png)
 
 
-<a name="second_menus" />
  
 ## Add Edit Menu Items 
 
@@ -117,7 +114,6 @@ The following sections demonstrate this process in detail: **Cut**,
 **Copy**, and **Paste** menu items are added to the bottom `Toolbar`. 
 
 
-<a name="second_resource" />
 
 ### Define the Edit Menu Resource
 
@@ -151,7 +147,6 @@ icons that were added to the `mipmap-` folders in
 [Replacing the Action Bar](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
 
 
-<a name="inflate_menus" />
 
 ### Inflate the Menus
 
@@ -187,7 +182,6 @@ Tapping menu items on either toolbar displays the resulting toasts:
 [![Screenshots of Toasts for Save, Copy, and Paste menu items being tapped](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png)
 
 
-<a name="up_button" />
 
 ## The Up Button 
 

@@ -33,7 +33,6 @@ create:
 
 ![Example screenshot of the app with multiple tabs](creating-a-tabbed-ui-images/image02.png)
 
-<a name="Creating_the_Application" />
 
 ## Creating the Application
 
@@ -249,7 +248,6 @@ That's it! We have created a tabbed application which gives the user an
 easy way navigate to different parts of an application.
 
 
-<a name="Summary" />
 
 ## Summary
 

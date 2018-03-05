@@ -7,7 +7,7 @@ ms.assetid: 2AE68ACE-8496-445D-BF17-5E4097D4AE35
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Resolving Library Installation Errors
@@ -25,7 +25,6 @@ provides the steps to work around these issues and get your app project
 building again. 
 
  
-<a name="m2repository" />
  
 ## Errors While Downloading m2Repository
 
@@ -42,7 +41,6 @@ same error message for a different version such as
 **android\_m2repository\_r18** or **android\_m2repository\_r25**. 
 
 
-<a name="automatic" /> 
 
 ### Automatic Recovery from m2repository Errors 
 
@@ -85,7 +83,6 @@ you must manually download and install the **android\_m2repository\_r_nn_.zip**
 file as described in the next section. 
 
 
-<a name="download" /> 
 
 ### Manually Downloading m2repository
 
@@ -187,8 +184,6 @@ manually download the **android\_m2repository\_r_nn_.zip** file,
 unzip it, and install its contents as described in the next section. 
 
 
-<a name="install" /> 
-
 ### Manually Downloading and Installing m2repository Files
 
 The fully manual process for recovering from **m2repository** errors entails 
@@ -259,7 +254,6 @@ that you have installed its contents in the correct locations as
 described in the above steps. 
 
 
-<a name="summary" /> 
 
 ## Summary 
 

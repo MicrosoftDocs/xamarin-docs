@@ -7,7 +7,7 @@ ms.assetid: E4D6F183-98D2-460A-9D65-937639A899E0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Nougat Features
@@ -19,7 +19,6 @@ Nougat, explains how to prepare Xamarin.Android for Android Nougat
 development, and provides links to sample applications that illustrate
 how to use Android Nougat features in Xamarin.Android apps.
 
-<a name="overview" />
 
 ## Overview
 
@@ -67,8 +66,6 @@ Nougat to try out the new features and plan migration or feature work
 to target the new Android Nougat platform.
 
 
-<a name="requirements" />
-
 ## Requirements
 
 The following is required to use the new Android Nougat features in
@@ -102,7 +99,6 @@ existing apps using libraries such as **Mono.Data.Sqlite.dll** may
 crash when running on Android Nougat if they are not properly rebuilt.
 
 
-<a name="gettingstarted" />
 
 ## Getting Started
 
@@ -120,7 +116,6 @@ create an Android Nougat project:
 
 Each of these steps is explained in the following sections:
 
-<a name="updates" />
 
 ### Install Xamarin Updates
 
@@ -134,7 +129,6 @@ updates (releases) channel, see
 [Changing the Updates Channel](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/).
 
 
-<a name="sdk" />
 
 ### Install the Android SDK
 
@@ -168,7 +162,6 @@ later. You must also install the latest **Android SDK Tools**:
     click **Preferences > Projects > SDK Locations > Android**.
 
 
-<a name="xaproject" />
 
 ### Start a Xamarin.Android Project
 
@@ -192,7 +185,6 @@ version** to **Android 7.0 (API 24 - Nougat)** to deploy your
 app to Android Nougat devices or emulators.
 
 
-<a name="emudev" />
 
 ### Configure an Emulator or Device
 
@@ -216,7 +208,6 @@ see [OTA Images for Nexus Devices](https://developers.google.com/android/nexus/o
 Note that Nexus 5 devices are not supported by Android Nougat.
 
 
-<a name="newfeatures" />
 
 ## New Features
 
@@ -226,7 +217,6 @@ Saver. The following sections highlight these features and provide
 links to help you get started using them in your app.
 
 
-<a name="multiwindow" />
 
 ### Multi-Window Mode
 
@@ -264,7 +254,6 @@ For more information about multi-window mode, see the
 [Multi-Window Support](https://developer.android.com/guide/topics/ui/multi-window.html).
 
 
-<a name="enhanced_notifications" />
 
 ### Enhanced Notifications
 
@@ -277,7 +266,6 @@ received. Also, developers can customize notification views, leverage
 system decorations in notifications, and take advantage of new
 notification templates when generating notifications.
 
-<a name="direct_reply" />
 
 #### Direct Reply
 
@@ -335,7 +323,6 @@ the Android
 [Replying to Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct)
 topic.
 
-<a name="bundled_notifications" />
 
 #### Bundled Notifications
 
@@ -355,7 +342,6 @@ bundled notification groups in Android N, see the Android
 [Bundling Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#bundle)
 topic.
 
-<a name="custom_views" />
 
 #### Custom Views
 
@@ -367,7 +353,6 @@ views in Android Nougat, see the Android
 topic.
 
 
-<a name="datasaver" />
 
 ### Data Saver
 
@@ -385,7 +370,6 @@ see the Android
 topic.
 
 
-<a name="app_shortcuts" />
 
 ### App Shortcuts
 
@@ -402,7 +386,6 @@ For more information about the new App Shortcuts feature in Android 7.1,
 see the Android [App Shortcuts](https://developer.android.com/guide/topics/ui/shortcuts.html)
 topic.
 
-<a name="sample_code" />
 
 ### Sample Code
 
@@ -434,7 +417,6 @@ advantage of Android Nougat features:
     while the device is booted both before and after any user credentials(PIN/Pattern/Password)
     are entered.
 
-<a name="summary" />
 
 ## Summary
 

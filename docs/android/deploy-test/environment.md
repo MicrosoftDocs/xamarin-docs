@@ -57,7 +57,6 @@ Xamarin.Android supports the `XA_HTTP_CLIENT_HANDLER_TYPE` variable,
 which may be set either via `adb shell setprop debug.mono.env` or via
 the `$(AndroidEnvironment)` Build action.
 
-<a name="XA_HTTP_CLIENT_HANDLER_TYPE" />
 
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 

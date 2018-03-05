@@ -137,7 +137,6 @@ Run the application. You should see the following:
 [![Example screenshot of TableLayout app displaying multiple table rows](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png)
 
 
-<a name="References" />
 
 ## References
 
