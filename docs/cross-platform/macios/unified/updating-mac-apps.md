@@ -122,7 +122,7 @@ Until that time, just like the components, you'll need to switch any NuGet Packa
 
 # Enabling 64 Bit Builds of Xamarin.Mac Apps
 
-For a Xamarin.Mac mobile application that has been converted to the Unified API, the developer still needs to enable the building of the application for 64 bit machines from the app's Options. Please see the **Enabling 64 Bit Builds of Xamarin.Mac Apps** of the [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64.md) document for detailed instructions on enabling 64 bit builds.
+For a Xamarin.Mac mobile application that has been converted to the Unified API, the developer still needs to enable the building of the application for 64 bit machines from the app's Options. Please see the **Enabling 64 Bit Builds of Xamarin.Mac Apps** of the [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md) document for detailed instructions on enabling 64 bit builds.
 	
 # Finishing Up
 

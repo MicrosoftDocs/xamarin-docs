@@ -130,7 +130,7 @@ Do the following:
 4. Linking reduces the overall size of your application's distributable by stripping out unused Methods, Properties, Classes, etc. and in most cases should be left to the default value of **Link SDK assemblies only**. In some situations, such as when using some specific 3rd party libraries, you may be forced to set this value to **Don't link** to keep required elements from being removed. For more information, refer to the [iOS Build Mechanics](~/ios/deploy-test/ios-build-mechanics.md) guide.
 5. The **Optimize PNG image files for iOS** checkbox should be checked as this will help to further decrease your application's deliverable size.
 6. Debugging should _not_ be enabled as it will make the build unnecessarily large.
-8. For iOS 11, you'll need to select one of the device architectures that supports **ARM64**. For more information on building for 64 bit iOS devices, please see the **Enabling 64 Bit Builds of Xamarin.iOS Apps** section of the [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64.md) documentation.
+8. For iOS 11, you'll need to select one of the device architectures that supports **ARM64**. For more information on building for 64 bit iOS devices, please see the **Enabling 64 Bit Builds of Xamarin.iOS Apps** section of the [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md) documentation.
 9. You may wish to optionally use the **LLVM** compiler which creates smaller and faster code, however it will take longer to compile.
 10. Based on your application's needs, you may also wish to adjust the type of **Garbage Collection** being used and setup for **Internationalization**.
 11. Save your changes to the build configuration.
@@ -154,7 +154,7 @@ Do the following:
 
 	![](publishing-to-the-app-store-images/configurevs02.png "The Advanced tab")
 
-8. If your Xamarin.iOS application is targeting iOS 8 and 64 bit iOS devices, you'll need to select one of the device architectures that supports **ARM64**. For more information on building for 64 bit iOS devices, please see the **Enabling 64 Bit Builds of Xamarin.iOS Apps** section of the [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64.md) documentation.
+8. If your Xamarin.iOS application is targeting iOS 8 and 64 bit iOS devices, you'll need to select one of the device architectures that supports **ARM64**. For more information on building for 64 bit iOS devices, please see the **Enabling 64 Bit Builds of Xamarin.iOS Apps** section of the [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md) documentation.
 9. You may wish to optionally use the **LLVM** compiler which creates smaller and faster code, however it will take longer to compile.
 10. Based on your application's needs, you may also wish to adjust the type of **Garbage Collection** being used and setup for **Internationalization**.
 11. Save your changes to the build configuration.

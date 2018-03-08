@@ -57,7 +57,7 @@ using ObjCRuntime;
 
 Again, we will need to do this for any `.cs` file in our binding project. With this change in place, the next step is to update our binding project to use the new Native Data Types.
 
-For more information on the Unified API, please see the [Unified API](~/cross-platform/macios/unified/index.md) documentation. For more background on supporting 32 and 64 bit applications and information about frameworks see the [32 and 64 bit Platform Considerations](~/cross-platform/macios/32-and-64.md) documentation.
+For more information on the Unified API, please see the [Unified API](~/cross-platform/macios/unified/index.md) documentation. For more background on supporting 32 and 64 bit applications and information about frameworks see the [32 and 64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md) documentation.
 
 #Update to Native Data Types
 
@@ -213,7 +213,7 @@ In this article we have shown the changes that need to be made to an existing Xa
 
 - [Mac and iOS](~/cross-platform/macios/index.md)
 - [Unified API](~/cross-platform/macios/nativetypes.md)
-- [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64.md)
+- [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md)
 - [Upgrading Existing iOS Apps](~/cross-platform/macios/unified/updating-ios-apps.md)
 - [Unified API](~/cross-platform/macios/unified/index.md)
 - [BindingSample](https://developer.xamarin.com/samples/monotouch/BindingSample/)

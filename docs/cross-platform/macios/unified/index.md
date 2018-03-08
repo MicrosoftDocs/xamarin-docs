@@ -51,7 +51,7 @@ to help you successfully update to the Unified API.
 # The Road to 64 Bits
 
 For background on supporting 32 and 64 bit applications and
-	information about frameworks see the [32 and 64 bit Platform Considerations](~/cross-platform/macios/32-and-64.md).
+	information about frameworks see the [32 and 64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md).
 
  <a name="new-data-types" />
 
@@ -200,7 +200,7 @@ The Unified API introduces a new platform identifier for compatible packages -
 # The Road to 64 Bits
 
 For background on supporting 32 and 64 bit applications and
-	information about frameworks see the [32 and 64 bit Platform Considerations](~/cross-platform/macios/32-and-64.md).
+	information about frameworks see the [32 and 64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md).
 
  <a name="new-data-types" />
 
