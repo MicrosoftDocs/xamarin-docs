@@ -80,15 +80,12 @@ The `[assembly]` attribute registers the class as an implementation of the `ITex
 
 ## Android Implementation
 
-The Android code is more complex than the iOS version: it requires the implementing class to inherit from Android-specific `Java.Lang.Object` and to implement the `IOnInitListener` interface as well.
-
-Xamarin.Forms also provides the `Forms.Context` object, which is an instance of the current Android context. Many Android SDK methods require this, a good example being the ability to call `StartActivity()`.
+The Android code is more complex than the iOS version: it requires the implementing class to inherit from Android-specific `Java.Lang.Object` and to implement the `IOnInitListener` interface as well. It also requires access to the current Android context, which is exposed by the `MainActivity.Instance` property.
 
 ```csharp
 [assembly: Dependency(typeof(TextToSpeechImplementation))]
 namespace DependencyServiceSample.Droid
 {
-
     public class TextToSpeechImplementation : Java.Lang.Object, ITextToSpeech, TextToSpeech.IOnInitListener
     {
         TextToSpeech speaker;
@@ -99,7 +96,7 @@ namespace DependencyServiceSample.Droid
             toSpeak = text;
             if (speaker == null)
             {
-                speaker = new TextToSpeech(Forms.Context, this);
+                speaker = new TextToSpeech(MainActivity.Instance, this);
             }
             else
             {

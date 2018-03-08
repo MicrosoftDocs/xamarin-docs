@@ -60,7 +60,7 @@ The example assumes that the `stackLayout` and `contentView` instances have prev
 The following code example demonstrates how to add a `TextView` to a [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) and a [`ContentView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/):
 
 ```csharp
-var textView = new TextView (Forms.Context) { Text = originalText, TextSize = 14 };
+var textView = new TextView (MainActivity.Instance) { Text = originalText, TextSize = 14 };
 stackLayout.Children.Add (textView);
 contentView.Content = textView.ToView();
 ```
@@ -184,7 +184,7 @@ public class CustomControl : TextView
 An instance of this view is added to a [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), as demonstrated in the following code example:
 
 ```csharp
-var customControl = new CustomControl (Forms.Context) {
+var customControl = new CustomControl (MainActivity.Instance) {
   Text = "This control has incorrect sizing - it doesn't occupy the available width of the device.",
   TextSize = 14
 };

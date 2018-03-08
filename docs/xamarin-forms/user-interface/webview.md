@@ -219,10 +219,10 @@ namespace WorkingWithWebview.Android {
 }
 ```
 
-On Android, files in the **Assets** folder can also be accessed through the `Forms.Context.Assets` property, as demonstrated in the following code example:
+On Android, files in the **Assets** folder can also be accessed through the current Android context, which is exposed by the `MainActivity.Instance` property:
 
 ```csharp
-var assetManager = Xamarin.Forms.Forms.Context.Assets;
+var assetManager = MainActivity.Instance.Assets;
 using (var streamReader = new StreamReader (assetManager.Open ("local.html"))) {
   var html = streamReader.ReadToEnd ();
 }
