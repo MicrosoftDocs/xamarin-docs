@@ -23,7 +23,7 @@ In this article we will be covering the two main ways to use the pasteboard in a
 1. **Standard Data Types** - Since pasteboard operations are typically carried out between two unrelated apps, neither app knows the types of data that the other supports. To maximize the potential for sharing, the pasteboard can hold multiple representations of a given item (using a standard set of common data types), this allow the consuming app to pick the version that is best suited for its needs.
 2. **Custom Data** - To support the copying and pasting of complex data within your Xamarin.Mac you can define a custom data type that will be handled by the pasteboard. For example, a vector drawing app that allows the user to copy and paste complex shapes that are composed of multiple data types and points.
 
-[![Example of the running app](copy-paste-images/intro01.png "Example of the running app")](copy-paste-images/intro01-large.png)
+[![Example of the running app](copy-paste-images/intro01.png "Example of the running app")](copy-paste-images/intro01-large.png#lightbox)
 
 In this article, we'll cover the basics of working with the pasteboard in a Xamarin.Mac application to support copy and paste operations. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
@@ -46,14 +46,14 @@ Do the following:
 1. Start Visual Studio for Mac and click the **New Project...** link.
 2. Select **Mac** > **App** > **Cocoa App**, then click the **Next** button: 
 
-	[![Creating a new Cocoa app project](copy-paste-images/sample01.png "Creating a new Cocoa app project")](copy-paste-images/sample01-large.png)
+	[![Creating a new Cocoa app project](copy-paste-images/sample01.png "Creating a new Cocoa app project")](copy-paste-images/sample01-large.png#lightbox)
 3. Enter `MacCopyPaste` for the **Project Name** and keep everything else as default. Click Next: 
 
-	[![Setting the name of the project](copy-paste-images/sample01a.png "Setting the name of the project")](copy-paste-images/sample01a-large.png)
+	[![Setting the name of the project](copy-paste-images/sample01a.png "Setting the name of the project")](copy-paste-images/sample01a-large.png#lightbox)
 
 4. Click the **Create** button: 
 
-	[![Confirming the new project settings](copy-paste-images/sample02.png "Confirming the new project settings")](copy-paste-images/sample02-large.png)
+	[![Confirming the new project settings](copy-paste-images/sample02.png "Confirming the new project settings")](copy-paste-images/sample02-large.png#lightbox)
 
 ### Add an NSDocument
 
@@ -261,7 +261,7 @@ With this document in place, we'll create the user interface for the Xamarin.Mac
 
 Double-click the **Main.storyboard** file to open it in Xcode. Next, add a toolbar and an image well and configure them as follows:
 
-[![Editing the toolbar](copy-paste-images/sample04.png "Editing the toolbar")](copy-paste-images/sample04-large.png)
+[![Editing the toolbar](copy-paste-images/sample04.png "Editing the toolbar")](copy-paste-images/sample04-large.png#lightbox)
 
 Add a copy and paste **Image Toolbar Item** to the left side of the toolbar. We'll be using those as shortcuts to copy and paste from the Edit menu. Next, add four **Image Toolbar Items** to the right side of the toolbar. We'll use these to populate the image well with some default images.
 
@@ -269,7 +269,7 @@ For more information on working with toolbars, please see our [Toolbars](~/mac/u
 
 Next, let's expose the following outlets and actions for our toolbar items and the image well:
 
-[![Creating outlets and actions](copy-paste-images/sample05.png "Creating outlets and actions")](copy-paste-images/sample05-large.png)
+[![Creating outlets and actions](copy-paste-images/sample05.png "Creating outlets and actions")](copy-paste-images/sample05-large.png#lightbox)
 
 For more information on working with outlets and actions, please see the [Outlets and Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) section of our [Hello, Mac](~/mac/get-started/hello-mac.md) documentation.
 

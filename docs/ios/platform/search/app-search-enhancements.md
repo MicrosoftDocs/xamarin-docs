@@ -52,13 +52,13 @@ To implement this feature, edit the app's `Info.plist` file, add the `CoreSpotli
 
 [[ide name="xs]]
 
-[ ![](app-search-enhancements-images/search01.png "Editing CoreSpotlightContinuation in the Info.plist file")](app-search-enhancements-images/search01.png)
+[![](app-search-enhancements-images/search01.png "Editing CoreSpotlightContinuation in the Info.plist file")](app-search-enhancements-images/search01.png#lightbox)
 
 [[/ide]]
 
 [[ide name="vs]]
 
-[ ![](app-search-enhancements-images/searchw01.png "Editing CoreSpotlightContinuation in the Info.plist file")](app-search-enhancements-images/search01.png)
+[![](app-search-enhancements-images/searchw01.png "Editing CoreSpotlightContinuation in the Info.plist file")](app-search-enhancements-images/search01.png#lightbox)
 
 [[/ide]]
 

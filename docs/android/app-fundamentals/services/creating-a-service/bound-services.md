@@ -32,7 +32,7 @@ This diagram illustrates how the Activity, service connection, binder, and servi
 
 This guide will discuss how to extend the `Service` class to implement a bound service. It will also cover implementing `IServiceConnection` and extending `Binder` to allow a client to communicate with the service. A sample app accompanies this guide, which contain a solution with a single Xamarin.Android project called **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** . This is a very basic application which demonstrates how to implement a service and how to bind an activity to it. The bound service has a very simple API with only one method, `GetFormattedTimestamp`, which returns a string that tells the user when the service has started and how long it has been running. The app also allows the user to manually unbind and bind to the service.
 
-[![Screenshot of the application running on an Android phone](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png)
+[![Screenshot of the application running on an Android phone](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
 
 ## Implementing and Consuming a Bound Service
 

@@ -109,7 +109,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Following that, the remainder of the method is straight-forward. It creates another `SKPaint` object for the borders and calls `DrawRoundRect` twice. The second call uses a rectangle inflated by another 10 pixels. The first call specifies a corner radius of 20 pixels; the second has a corner radius of 30 pixels, so they seem to be parallel:
 
- [![](text-images/framedtext-small.png "Triple screenshot of the Framed Text page")](text-images/framedtext-large.png "Triple screenshot of the Framed Text page")
+ [![](text-images/framedtext-small.png "Triple screenshot of the Framed Text page")](text-images/framedtext-large.png#lightbox "Triple screenshot of the Framed Text page")
 
 You can turn your phone or simulator sideways to see the text and frame increase in size.
 
@@ -117,7 +117,7 @@ If you only need to center some text on the screen, you can do it approximately 
 
 Text itself can be treated much like a graphical option. One simple option is to display the outline of the text characters rather than the normal filled display:
 
-[![](text-images/outlinedtext-small.png "Triple screen shot of the Outlined Text page")](text-images/outlinedtext-large.png "Triple screen shot of the Outlined Text page")
+[![](text-images/outlinedtext-small.png "Triple screen shot of the Outlined Text page")](text-images/outlinedtext-large.png#lightbox "Triple screen shot of the Outlined Text page")
 
 This is done simply by changing the normal `Style` property of the `SKPaint` object from its default setting of `SKPaintStyle.Fill` to `SKPaintStyle.Stroke` and by specifying a stroke width. The `PaintSurface` handler of the **Outlined Text** page shows how it's done:
 

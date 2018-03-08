@@ -16,7 +16,7 @@ _In this walkthrough, we use the Background Transfer Service and NSURLSession AP
 
 A background transfer is initiated by configuring a background `NSURLSession` and enqueuing upload or download tasks. If tasks complete while the application is backgrounded, suspended, or terminated, iOS will notify the application by calling the completion handler in the application's *AppDelegate*. The following diagram demonstrates this in action:
 
- [ ![](background-transfer-walkthrough-images/transfer.png "A background transfer is initiated by configuring a background NSURLSession and enqueuing upload or download tasks")](background-transfer-walkthrough-images/transfer.png)
+ [![](background-transfer-walkthrough-images/transfer.png "A background transfer is initiated by configuring a background NSURLSession and enqueuing upload or download tasks")](background-transfer-walkthrough-images/transfer.png#lightbox)
 
 Let's see what this looks like in code.
 

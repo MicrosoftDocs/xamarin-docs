@@ -21,7 +21,7 @@ When working with C# and .NET in a Xamarin.Mac application, you have access to t
 
 You also have the option of creating some or all of your Xamarin.Mac application's UI directly in C# code. In this article, we'll cover the basics of creating user interfaces and UI elements in C# code.
 
-[![The Visual Studio for Mac code editor](xibless-ui-images/intro01.png "The Visual Studio for Mac code editor")](xibless-ui-images/intro01-large.png)
+[![The Visual Studio for Mac code editor](xibless-ui-images/intro01.png "The Visual Studio for Mac code editor")](xibless-ui-images/intro01-large.png#lightbox)
 
 <a name="Switching_a_Window_to_use_Code" />
 

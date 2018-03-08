@@ -26,7 +26,7 @@ You can specify the `Value` setting using the property element `<Setter.Value>`.
 
 The [**BasicStyle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyle) program demonstrates the basic syntax and shows how to reference the `Style` with a `StaticResource` markup extension:
 
-[![Triple screenshot of basic style](images/ch12fg01-small.png "Basic Styles")](images/ch12fg01-large.png "Basic Styles")
+[![Triple screenshot of basic style](images/ch12fg01-small.png "Basic Styles")](images/ch12fg01-large.png#lightbox "Basic Styles")
 
 The `Style` object and any object created in the `Style` object as a `Value` setting are shared among all views referencing that `Style`. The `Style` cannot contain anything that cannot be shared, such as a `View` derivative.
 

@@ -13,7 +13,7 @@ ms.date: 02/06/2018
 
 This quickstart demonstrates how to extend the Phoneword application by adding a second screen to keep track of the call history for the application. The final application is shown below:
 
-[![](quickstart-images/intro-app-examples-sml.png "Phoneword Application")](quickstart-images/intro-app-examples.png "Phoneword Application")
+[![](quickstart-images/intro-app-examples-sml.png "Phoneword Application")](quickstart-images/intro-app-examples.png#lightbox "Phoneword Application")
 
 Extend the Phoneword application as follows:
 

@@ -46,7 +46,7 @@ installing NuGet packages, see
 [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). 
 Find and install **Android Support Library v4**: 
 
-[![Screenshot of Support v4 Nuget selected in the NuGet Package Manager](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png)
+[![Screenshot of Support v4 Nuget selected in the NuGet Package Manager](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
 
 This will also install any additional packages reaquired by **Android Support Library v4**.
 
@@ -138,7 +138,7 @@ This code does the following:
 When you build and run this code, you should see a display that 
 resembles the following screenshot: 
 
-[![Screenshot of app displaying an empty ViewPager](viewpager-and-views-images/02-initial-screen-sml.png)](viewpager-and-views-images/02-initial-screen.png)
+[![Screenshot of app displaying an empty ViewPager](viewpager-and-views-images/02-initial-screen-sml.png)](viewpager-and-views-images/02-initial-screen.png#lightbox)
 
 At this point, the `ViewPager` is empty because it is lacking an 
 adapter for accessing the content in **TreeCatalog**. In the next 
@@ -386,7 +386,7 @@ You should see the first image of the tree catalog appear on the screen
 as shown on the left in the next screenshot. Swipe left to see more 
 tree views, then swipe right to move back through the tree catalog: 
 
-[![Screenshots of TreePager app swiping through tree images](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png)
+[![Screenshots of TreePager app swiping through tree images](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png#lightbox)
 
 
 
@@ -428,7 +428,7 @@ will automatically find the `PagerTabStrip` and connect it to the
 adapter. When you build and run the app, you should see the empty 
 `PagerTabStrip` displayed at the top of each screen: 
 
-[![Closeup screenshot of an empty PagerTabStrip](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png)
+[![Closeup screenshot of an empty PagerTabStrip](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
 
 
 
@@ -453,7 +453,7 @@ returns it to the `ViewPager`. When you run the app with this new
 method, each page displays the tree caption in the `PagerTabStrip`. You 
 should see the tree name at the top of the screen without an underline: 
 
-[![Screenshots of pages with text-filled PagerTabStrip tabs](viewpager-and-views-images/05-final-pagetabstrip-sml.png)](viewpager-and-views-images/05-final-pagetabstrip.png)
+[![Screenshots of pages with text-filled PagerTabStrip tabs](viewpager-and-views-images/05-final-pagetabstrip-sml.png)](viewpager-and-views-images/05-final-pagetabstrip.png#lightbox)
 
 You can swipe back and forth to view each captioned tree image in the 
 catalog. 
@@ -467,7 +467,7 @@ catalog.
 can replace `PagerTabStrip` with `PagerTitleStrip` in the above layout 
 and run the app again to see how it looks with `PagerTitleStrip`: 
 
-[![PagerTitleStrip with underlines removed from text](viewpager-and-views-images/06-pagetitlestrip-example-sml.png)](viewpager-and-views-images/06-pagetitlestrip-example.png)
+[![PagerTitleStrip with underlines removed from text](viewpager-and-views-images/06-pagetitlestrip-example-sml.png)](viewpager-and-views-images/06-pagetitlestrip-example.png#lightbox)
 
 Note that the underline is removed when you convert to 
 `PagerTitleStrip`. 

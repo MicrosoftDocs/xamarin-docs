@@ -23,7 +23,7 @@ app will utilize fragments so that we can define our UI components in one place,
 but then use them on different form factors. For example, the following screen
 shots show the application running on a 10" tablet, as well as on a phone:
 
-[![Screenshots of example app running on tablet and phone](images/intro-screenshot-sml.png)](images/intro-screenshot.png)
+[![Screenshots of example app running on tablet and phone](images/intro-screenshot-sml.png)](images/intro-screenshot.png#lightbox)
 
 This section will cover the following topics:
 

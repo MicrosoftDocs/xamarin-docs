@@ -230,7 +230,7 @@ In the HSV model, pure colors result when both the Saturation and Value are 100.
 
 But the best way to get a feel for the two models is to experiment with them yourself:
 
-[![](integration-images/colorexplore-large.png "Triple screenshot of the Color Explore page")](integration-images/colorexplore-small.png "Triple screenshot of the Color Explore page")
+[![](integration-images/colorexplore-large.png "Triple screenshot of the Color Explore page")](integration-images/colorexplore-small.png#lightbox "Triple screenshot of the Color Explore page")
 
 
 ## Related Links

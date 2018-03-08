@@ -20,7 +20,7 @@ Xamarin.Forms applications can use the [SQLite.NET PCL NuGet](https://www.nuget.
 
 The accompanying [sample application](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) is a simple Todo-list application. The following screenshots show how the sample appears on each platform:
 
-[ ![Xamarin.Forms database example screenshots](databases-images/todo-list-sml.png "TodoList First Page Screenshots")](databases-images/todo-list.png "TodoList First Page Screenshots") [ ![Xamarin.Forms database example screenshots](databases-images/todo-detail-sml.png "TodoList Second Page Screenshots")](databases-images/todo-detail.png "TodoList Second Page Screenshots")
+[![Xamarin.Forms database example screenshots](databases-images/todo-list-sml.png "TodoList First Page Screenshots")](databases-images/todo-list.png#lightbox "TodoList First Page Screenshots") [![Xamarin.Forms database example screenshots](databases-images/todo-list-sml.png "TodoList First Page Screenshots")](databases-images/todo-list.png#lightbox "TodoList First Page Screenshots")
 
 <a name="Using_SQLite_with_PCL" />
 

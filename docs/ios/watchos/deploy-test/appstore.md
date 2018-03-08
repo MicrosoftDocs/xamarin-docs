@@ -145,7 +145,7 @@ Xcode will automatically show archives created in Visual Studio for Mac.
   your app's configuration page and choose **Prerelease** from the top
   menu to see the **Builds** list:
 
-  [ ![](appstore-images/itc-prerelease-sml.png "The apps configuration page in iTunes Connect")](appstore-images/itc-prerelease.png)
+  [![](appstore-images/itc-prerelease-sml.png "The apps configuration page in iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
 
 You can then submit the app for approval on the **Versions** page. Refer to the
  [iOS app distribution overview](~/ios/deploy-test/app-distribution/index.md)

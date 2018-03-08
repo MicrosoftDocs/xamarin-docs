@@ -366,7 +366,7 @@ listView.Adapter = adapter;
 
 The resulting application looks like this:
 
-[![Screenshot of app listing Vegetables, Fruits, Flower Buds, Legumes, Bulbs, Tubers](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png)
+[![Screenshot of app listing Vegetables, Fruits, Flower Buds, Legumes, Bulbs, Tubers](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png#lightbox)
 
 
 

@@ -149,7 +149,7 @@ This code does the following:
 When you build and run this code, you should see a display that 
 resembles the following screenshot: 
 
-[![Screenshot of FlashCardPager app with empty ViewPager](viewpager-and-fragments-images/01-initial-screen-sml.png)](viewpager-and-fragments-images/01-initial-screen.png)
+[![Screenshot of FlashCardPager app with empty ViewPager](viewpager-and-fragments-images/01-initial-screen-sml.png)](viewpager-and-fragments-images/01-initial-screen.png#lightbox)
 
 At this point, the `ViewPager` is empty because it is lacking the 
 fragments that are used populate the `ViewPager`, and it is lacking an 
@@ -486,7 +486,7 @@ You should see the first image of the flash card deck appear on the screen
 as shown on the left in the next screenshot. Swipe left to see more
 flash cards, then swipe right to move back through the flash card deck:
 
-[![Example screenshots of FlashCardPager app without pager indicators](viewpager-and-fragments-images/02-example-views-sml.png)](viewpager-and-fragments-images/02-example-views.png)
+[![Example screenshots of FlashCardPager app without pager indicators](viewpager-and-fragments-images/02-example-views-sml.png)](viewpager-and-fragments-images/02-example-views.png#lightbox)
 
 
 
@@ -522,7 +522,7 @@ Open **Resources/layout/Main.axml** and add a `PagerTabStrip` to the layout:
 When you build and run the app, you should see the empty 
 `PagerTabStrip` displayed at the top of each flash card: 
 
-[![Closeup of PagerTabStrip without text](viewpager-and-fragments-images/03-empty-pagetabstrip-sml.png)](viewpager-and-fragments-images/03-empty-pagetabstrip.png)
+[![Closeup of PagerTabStrip without text](viewpager-and-fragments-images/03-empty-pagetabstrip-sml.png)](viewpager-and-fragments-images/03-empty-pagetabstrip.png#lightbox)
 
 
 
@@ -546,7 +546,7 @@ number. The resulting string is converted into a Java `String` that is
 returned to the `ViewPager`. When you run the app with this new method, 
 each page displays the problem number in the `PagerTabStrip`: 
 
-[![Screenshots of FlashCardPager with the problem number displayed above each page](viewpager-and-fragments-images/04-pagetabstrip-sml.png)](viewpager-and-fragments-images/04-pagetabstrip.png)
+[![Screenshots of FlashCardPager with the problem number displayed above each page](viewpager-and-fragments-images/04-pagetabstrip-sml.png)](viewpager-and-fragments-images/04-pagetabstrip.png#lightbox)
 
 You can swipe back and forth to see the problem number in the flash card 
 deck that is displayed at the top of each flash card. 
@@ -578,7 +578,7 @@ earlier when state information was read from the Bundle that was passed
 to `OnCreateView`. Build and run the app, then tap the problem text on 
 each flash card to see the answer: 
 
-[![Screenshots of FlashCardPager app Toasts when math problem is tapped](viewpager-and-fragments-images/05-answer-sml.png)](viewpager-and-fragments-images/05-answer.png)
+[![Screenshots of FlashCardPager app Toasts when math problem is tapped](viewpager-and-fragments-images/05-answer-sml.png)](viewpager-and-fragments-images/05-answer.png#lightbox)
 
 The **FlashCardPager** presented in this walkthrough uses a 
 `MainActivity` derived from `FragmentActivity`, but you can also derive 

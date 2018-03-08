@@ -60,11 +60,11 @@ There are twelve built-in Views that can be referenced using
 Each built-in row view has a built in style associated with it. These
 screenshots show how each view appears:
 
-[![Screenshots of TestListItem, SimpleSelectableListItem, SimpleListitem1, and SimpleListItem2](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png)
+[![Screenshots of TestListItem, SimpleSelectableListItem, SimpleListitem1, and SimpleListItem2](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png#lightbox)
 
-[![Screenshots of SimpleListItemActivated1, SimpleListItemActivated2, SimpleListItemChecked, and SimpleListItemMultipleChecked](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png)
+[![Screenshots of SimpleListItemActivated1, SimpleListItemActivated2, SimpleListItemChecked, and SimpleListItemMultipleChecked](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png#lightbox)
 
-[![Screenshots of SimpleListItemSingleChoice, TwoLineListItem, ActivityListItem, and SimpleExpandableListItem](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png)
+[![Screenshots of SimpleListItemSingleChoice, TwoLineListItem, ActivityListItem, and SimpleExpandableListItem](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png#lightbox)
 
 The **BuiltInViews/HomeScreenAdapter.cs** sample file (in the
 **BuiltInViews** solution) contains the code to produce the
@@ -130,7 +130,7 @@ indicate selection state:
 The aforementioned accessories are illustrated in the following
 screens, in their respective order:
 
-[![Screenshots of SimpleListItemChecked, SimpleListItemSingleChoice, and SimpleListItemMultipleChoice with accessories](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png)
+[![Screenshots of SimpleListItemChecked, SimpleListItemSingleChoice, and SimpleListItemMultipleChoice with accessories](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png#lightbox)
 
 To display one of these accessories pass the required layout resource ID to
 the adapter then manually set the selection state for the required rows. This
@@ -430,7 +430,7 @@ void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 
 The resulting screen looks like this:
 
-[![Screenshot of the resulting CustomRowView](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png)
+[![Screenshot of the resulting CustomRowView](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png#lightbox)
 
 
 
@@ -483,7 +483,7 @@ android:background="@drawable/CustomSelector"
 A selected row and the corresponding `Toast` message now looks like
 this:
 
-[![A selected row in orange, with Toast message displaying name of selected row](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png)
+[![A selected row in orange, with Toast message displaying name of selected row](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png#lightbox)
 
 
 

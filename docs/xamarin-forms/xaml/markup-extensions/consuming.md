@@ -133,7 +133,7 @@ The final example displays the `Device.RuntimePlatform` value. The `Environment.
 
 Here's the sample running on all three platforms:
 
-[![x:Static Demo](consuming-images/staticdemo-small.png "x:Static Demo")](consuming-images/staticdemo-large.png "x:Static Demo")
+[![x:Static Demo](consuming-images/staticdemo-small.png "x:Static Demo")](consuming-images/staticdemo-large.png#lightbox "x:Static Demo")
 
 <a name="reference" />
 
@@ -177,7 +177,7 @@ The **x:Reference Demo** page shows two uses of `x:Reference` with data bindings
 
 Both `x:Reference` expressions use the abbreviated version of the `ReferenceExtension` class name and eliminate the `Name=` part of the expression. In the first example, the `x:Reference` markup extension is embedded in the `Binding` markup extension. Notice that the `Source` and `StringFormat` settings are separated by commas. Here's the program running on all three platforms:
 
-[![x:Reference Demo](consuming-images/referencedemo-small.png "x:Reference Demo")](consuming-images/referencedemo-large.png "x:Reference Demo")
+[![x:Reference Demo](consuming-images/referencedemo-small.png "x:Reference Demo")](consuming-images/referencedemo-large.png#lightbox "x:Reference Demo")
 
 <a name="type" />
 
@@ -232,7 +232,7 @@ This is how the navigation menu in `MainPage` in the **Markup Extensions** progr
 
 Here's the opening main page in **Markup Extensions**:
 
-[![Main Page](consuming-images/mainpage-small.png "Main Page")](consuming-images/mainpage-large.png "Main Page")
+[![Main Page](consuming-images/mainpage-small.png "Main Page")](consuming-images/mainpage-large.png#lightbox "Main Page")
 
 Each `CommandParameter` property is set to an `x:Type` markup extension that references one of the other pages. The `Command` property is bound to a property named `NavigateCommand`. This property is defined in the `MainPage` code-behind file:
 
@@ -315,7 +315,7 @@ public partial class TypeDemoPage : ContentPage
 
 The method that is executed when a `Button` is pressed creates a new instance of the argument, sets its `VerticalOptions` property, and adds it to the `StackLayout`. The three `Button` elements then share the page with dynamically created views:
 
-[![x:Type Demo](consuming-images/typedemo-small.png "x:Type Demo")](consuming-images/typedemo-large.png "x:Type Demo")
+[![x:Type Demo](consuming-images/typedemo-small.png "x:Type Demo")](consuming-images/typedemo-large.png#lightbox "x:Type Demo")
 
 <a name="array" />
 
@@ -372,7 +372,7 @@ The **x:Array Demo** page shows how to use `x:Array` to add items to a `ListView
 
 The `ViewCell` creates a simple `BoxView` for each color entry:
 
-[![x:Array Demo](consuming-images/arraydemo-small.png "x:Array Demo")](consuming-images/arraydemo-large.png "x:Array Demo")
+[![x:Array Demo](consuming-images/arraydemo-small.png "x:Array Demo")](consuming-images/arraydemo-large.png#lightbox "x:Array Demo")
 
 There are several ways to specify the individual `Color` items in this array. You can use an `x:Static` markup extension:
 
@@ -445,7 +445,7 @@ Then you discover that for one of the `Label` elements, you want all the propert
 
 Here's the program running on the three platforms:
 
-[![x:Null Demo](consuming-images/nulldemo-small.png "x:Null Demo")](consuming-images/nulldemo-large.png "x:Null Demo")
+[![x:Null Demo](consuming-images/nulldemo-small.png "x:Null Demo")](consuming-images/nulldemo-large.png#lightbox "x:Null Demo")
 
 Notice that four of the `Label` elements have a serif font, but the center `Label` has the  default sans-serif font.
 

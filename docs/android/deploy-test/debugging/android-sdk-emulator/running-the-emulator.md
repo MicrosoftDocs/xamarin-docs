@@ -31,7 +31,7 @@ the device drop-down menu. For example, in the following Visual Studio
 
 -   **VisualStudio\_android-23\_x86\_tablet** 
 
-[ ![Virtual devices](running-the-emulator-images/win/01-virtual-devices-sml.png)](running-the-emulator-images/win/01-virtual-devices.png)
+[![Virtual devices](running-the-emulator-images/win/01-virtual-devices-sml.png)](running-the-emulator-images/win/01-virtual-devices.png#lightbox)
 
 Typically, you would select the **VisualStudio\_android-23\_x86\_phone**
 virtual device to test and debug a phone app. If one of these
@@ -49,7 +49,7 @@ For example, the following project has a Target Framework set to
 **Android 7.1 Nougat (API 25)**, which is incompatible with the
 **Android 6.0** virtual devices that are provided by default:
 
-[ ![Incompatible virtual device](running-the-emulator-images/win/02-incompatible-level-sml.png)](running-the-emulator-images/win/02-incompatible-level.png)
+[![Incompatible virtual device](running-the-emulator-images/win/02-incompatible-level-sml.png)](running-the-emulator-images/win/02-incompatible-level.png#lightbox)
 
 You can click **Change Minimum Android Target** to change the project's
 Minimum Android Version so that it matches the API level of the
@@ -71,7 +71,7 @@ screenshot, two pre-configured virtual devices are available:
 
 -   **Android\_ARMv7a**
 
-[ ![Virtual devices](running-the-emulator-images/mac/01-virtual-devices-sml.png)](running-the-emulator-images/mac/01-virtual-devices.png)
+[![Virtual devices](running-the-emulator-images/mac/01-virtual-devices-sml.png)](running-the-emulator-images/mac/01-virtual-devices.png#lightbox)
 
 Typically, you would select the **Android\_Accelerated\_x86**
 virtual device to test and debug a phone app. If this
@@ -110,11 +110,11 @@ button to run the application:
 
 # [Visual Studio](#tab/vswin)
 
-[![Debug and Release modes, Play button](running-the-emulator-images/win/17-debug-release-sml.png)](running-the-emulator-images/win/17-debug-release.png)
+[![Debug and Release modes, Play button](running-the-emulator-images/win/17-debug-release-sml.png)](running-the-emulator-images/win/17-debug-release.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Debug and Release modes, Play button](running-the-emulator-images/mac/16-debug-release-sml.png)](running-the-emulator-images/mac/16-debug-release.png)
+[![Debug and Release modes, Play button](running-the-emulator-images/mac/16-debug-release-sml.png)](running-the-emulator-images/mac/16-debug-release.png#lightbox)
 
 -----
 

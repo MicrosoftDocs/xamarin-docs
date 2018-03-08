@@ -50,7 +50,7 @@ To correctly configure an application to access iCloud:
 
 -   **Create a new App ID** - To create an App ID, follow the steps outlined in the  [Provisioning for Store Technologies section of the Device Provisioning guide](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md), and be sure to check **iCloud** as an allowed service:
 
- [ ![](introduction-to-icloud-images/icloud-sml.png "Check iCloud as an allowed service")](introduction-to-icloud-images/icloud.png)
+ [![](introduction-to-icloud-images/icloud-sml.png "Check iCloud as an allowed service")](introduction-to-icloud-images/icloud.png#lightbox)
 
 - **Create a new Provisioning Profile** - To create a Provisioning Profile, follow the steps outlined in the  [Device Provisioning guide](~/ios/get-started/installation/device-provisioning/index.md#Provisioning_Profile) .
 
@@ -101,7 +101,7 @@ of the screen and updated in the input fields.
 
 
 
- [ ![](introduction-to-icloud-images/icloud-kv-arrows.png "The flow of messages between devices")](introduction-to-icloud-images/icloud-kv-arrows.png)
+ [![](introduction-to-icloud-images/icloud-kv-arrows.png "The flow of messages between devices")](introduction-to-icloud-images/icloud-kv-arrows.png#lightbox)
 
 ### Setting and retrieving data
 
@@ -190,7 +190,7 @@ UbiquityContainer must be done via FilePresenter/FileCoordinator to prevent
 concurrent access. The `UIDocument` class implements those for you; this
 example shows how to use UIDocument.
 
- [ ![](introduction-to-icloud-images/icloud-overview.png "The document storage overview")](introduction-to-icloud-images/icloud-overview.png)
+ [![](introduction-to-icloud-images/icloud-overview.png "The document storage overview")](introduction-to-icloud-images/icloud-overview.png#lightbox)
 
 The iCloudUIDoc example implements a simple `UIDocument` subclass that
 contains a single text field. The text is rendered in a `UITextView` and
@@ -202,7 +202,7 @@ This screenshot shows the sample application - after changing the text and
 pressing **UpdateChangeCount** the document is synchronized via
 iCloud to other devices.
 
- [ ![](introduction-to-icloud-images/iclouduidoc.png "This screenshot shows the sample application after changing the text and pressing UpdateChangeCount")](introduction-to-icloud-images/iclouduidoc.png)
+ [![](introduction-to-icloud-images/iclouduidoc.png "This screenshot shows the sample application after changing the text and pressing UpdateChangeCount")](introduction-to-icloud-images/iclouduidoc.png#lightbox)
 
 There are five parts to the iCloudUIDoc sample:
 
@@ -492,7 +492,7 @@ the file list and swipe to delete. Application code should be able to handle the
 situation where documents are deleted by the user. Do not store internal
 application data in the **Documents** directory.
 
- [ ![](introduction-to-icloud-images/icloudstorage.png "Managing iCloud Documents workflow")](introduction-to-icloud-images/icloudstorage.png)
+ [![](introduction-to-icloud-images/icloudstorage.png "Managing iCloud Documents workflow")](introduction-to-icloud-images/icloudstorage.png#lightbox)
 
 
 
@@ -500,9 +500,9 @@ Users will also receive different warnings when they attempt to remove an
 iCloud-enabled application from their device, to inform them of the status of
 iCloud documents related to that application.
 
- [ ![](introduction-to-icloud-images/icloud-delete1.png "Sample dialog when the user attempts to remove an iCloud-enabled application from their device")](introduction-to-icloud-images/icloud-delete1.png)
+ [![](introduction-to-icloud-images/icloud-delete1.png "Sample dialog when the user attempts to remove an iCloud-enabled application from their device")](introduction-to-icloud-images/icloud-delete1.png#lightbox)
 
- [ ![](introduction-to-icloud-images/icloud-delete2.png "Sample dialog when the user attempts to remove an iCloud-enabled application from their device")](introduction-to-icloud-images/icloud-delete2.png)
+ [![](introduction-to-icloud-images/icloud-delete2.png "Sample dialog when the user attempts to remove an iCloud-enabled application from their device")](introduction-to-icloud-images/icloud-delete2.png#lightbox)
 
 ## iCloud Backup
 

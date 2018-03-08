@@ -158,7 +158,7 @@ If it is not already the Startup Project,
 
 1. Press the **Debug** button to trigger a build and simulator launch.
 
-	[ ![](hello-watch-images/readytodebug-sml.png "The Visual Studio interface elements")](hello-watch-images/readytodebug.png)
+	[![](hello-watch-images/readytodebug-sml.png "The Visual Studio interface elements")](hello-watch-images/readytodebug.png#lightbox)
 
 When the Simulator launches, press the button to increment the label.
   Congratulations, you’ve got yourself a Watch App!

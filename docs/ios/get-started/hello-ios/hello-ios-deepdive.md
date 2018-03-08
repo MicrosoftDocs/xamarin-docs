@@ -98,7 +98,7 @@ Before an iOS application can load a user interface, two things need to be in pl
 
 This section studies the relationships illustrated in the following diagram:
 
-[ ![](hello-ios-deepdive-images/image32.png "The Architecture and App Fundamentals relationships are illustrated in this diagram")](hello-ios-deepdive-images/image32.png)
+[![](hello-ios-deepdive-images/image32.png "The Architecture and App Fundamentals relationships are illustrated in this diagram")](hello-ios-deepdive-images/image32.png#lightbox)
 
 Let's start at the beginning and learn what happens at application startup.
 
@@ -193,7 +193,7 @@ The _View_ can be selected by clicking inside the white part of the Scene. The V
 
 To the left of the Scene is a gray arrow with a flag icon, as illustrated by the screenshot below:
 
- [ ![](hello-ios-deepdive-images/image37.png "A gray arrow with a flag icon")](hello-ios-deepdive-images/image37.png)
+ [![](hello-ios-deepdive-images/image37.png "A gray arrow with a flag icon")](hello-ios-deepdive-images/image37.png#lightbox)
 
 The gray arrow represents a Storyboard transition called a *Segue* (pronounced “seg-way”). Since this Segue has no origin, it is called a *Sourceless Segue*. A Sourceless Segue points to the first Scene whose Views gets loaded into our application's Window at application startup. The Scene and the Views inside it will be the first thing that the user sees when the app loads.
 
@@ -239,7 +239,7 @@ The next section breaks down the Content View Hierarchy represented by this Scen
 
 A _Content View Hierarchy_ is a stack of Views and Subviews managed by a single View Controller, as illustrated by the diagram below:
 
- [ ![](hello-ios-deepdive-images/image41.png "The Content View Hierarchy")](hello-ios-deepdive-images/image41.png)
+ [![](hello-ios-deepdive-images/image41.png "The Content View Hierarchy")](hello-ios-deepdive-images/image41.png#lightbox)
 
 We can make the Content View Hierarchy of our `ViewController` easier to see by temporarily changing the background color of the root View to yellow in the View section of the **Properties Pad**, as illustrated by the screenshot below:
 
@@ -255,7 +255,7 @@ We can make the Content View Hierarchy of our `ViewController` easier to see by 
 
 The diagram below illustrates the relationships between the Window, Views, Subviews, and View Controller that bring the user interface to the device screen:
 
- [ ![](hello-ios-deepdive-images/image43.png "The relationships between the Window, Views, Subviews, and View Controller")](hello-ios-deepdive-images/image43.png)
+ [![](hello-ios-deepdive-images/image43.png "The relationships between the Window, Views, Subviews, and View Controller")](hello-ios-deepdive-images/image43.png#lightbox)
 
 In the next section discusses how to work with Views in code and learn to program for user interaction using View Controllers and the View Lifecycle.
 
@@ -327,7 +327,7 @@ The most important role of the View Controller is responding to user interaction
 Now that there is have a deeper understanding of Views and View Controllers, let's explore how this works.
 In the `Phoneword_iOS` Project, a button was added called `TranslateButton` to the Content View Hierarchy:
 
- [ ![](hello-ios-deepdive-images/image1.png "A button was added called TranslateButton to the Content View Hierarchy")](hello-ios-deepdive-images/image1.png)
+ [![](hello-ios-deepdive-images/image1.png "A button was added called TranslateButton to the Content View Hierarchy")](hello-ios-deepdive-images/image1.png#lightbox)
 
 When a **Name** is assigned to the **Button** control in the **Properties Pad**, the iOS designer automatically mapped it to a control in the **ViewController.designer.cs**, making the `TranslateButton` available inside the `ViewController` class. Controls first become available in the `ViewDidLoad` stage of the View Lifecycle, so this lifecycle method is used to respond to the user's touch:
 
@@ -432,7 +432,7 @@ Once the device is provisioned, you can deploy to it by plugging it in, changing
 
 The app will deploy to the iOS device:
 
-[ ![](hello-ios-deepdive-images/image1.png "The app will deploy to the iOS device and run")](hello-ios-deepdive-images/image1.png)
+[![](hello-ios-deepdive-images/image1.png "The app will deploy to the iOS device and run")](hello-ios-deepdive-images/image1.png#lightbox)
 
 ### Generate Custom Icons and Launch Images
 

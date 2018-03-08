@@ -22,7 +22,7 @@ MT.D supports the full range of features that are available in the Elements
 API when using JSON. For example, the application in the following screenshot is
 completely declared using JSON:
 
-[ ![](json-element-walkthrough-images/01-load-from-file.png "For example, the application in this screenshot is completely declared using JSON")](json-element-walkthrough-images/01-load-from-file.png) [ ![](json-element-walkthrough-images/02-load-from-file-details.png "For example, the application in this screenshot is completely declared using JSON")](json-element-walkthrough-images/02-load-from-file-details.png)
+[![](json-element-walkthrough-images/01-load-from-file.png "For example, the application in this screenshot is completely declared using JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox) [![](json-element-walkthrough-images/01-load-from-file.png "For example, the application in this screenshot is completely declared using JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
 Let’s revisit the example from the [Elements API Walkthrough](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) tutorial, showing how to add a task detail screen using
 JSON.
@@ -32,7 +32,7 @@ JSON.
 The example for this walkthrough allows tasks to be created. When a task is
 selected on the first screen, a detail screen is presented as shown:
 
- [ ![](json-element-walkthrough-images/03-task-list.png "When a task is selected on the first screen, a detail screen is presented as shown")](json-element-walkthrough-images/03-task-list.png)
+ [![](json-element-walkthrough-images/03-task-list.png "When a task is selected on the first screen, a detail screen is presented as shown")](json-element-walkthrough-images/03-task-list.png#lightbox)
 
 ## Creating the JSON
 
@@ -190,7 +190,7 @@ _rootElement = new RootElement ("Json Example"){
 At runtime, the file will be retrieved and parsed by MT.D when the user
 navigates to the second view, as shown in the screenshot below:
 
- [ ![](json-element-walkthrough-images/04-json-web-example.png "The file will be retrieved and parsed by MT.D when the user navigates to the second view")](json-element-walkthrough-images/04-json-web-example.png)
+ [![](json-element-walkthrough-images/04-json-web-example.png "The file will be retrieved and parsed by MT.D when the user navigates to the second view")](json-element-walkthrough-images/04-json-web-example.png#lightbox)
 
  <a name="Summary" />
 

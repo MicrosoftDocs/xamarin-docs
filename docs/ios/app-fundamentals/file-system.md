@@ -34,7 +34,7 @@ This article discusses the features and restrictions of the iOS file system
 in detail, and includes a sample application that demonstrates how to use
 Xamarin.iOS to execute some simple file system operations:
 
- [ ![](file-system-images/05-sampleapp.png "A sample of iOS executing some simple file system operations")](file-system-images/05-sampleapp.png)
+ [![](file-system-images/05-sampleapp.png "A sample of iOS executing some simple file system operations")](file-system-images/05-sampleapp.png#lightbox)
 
  <a name="General_File_Access" />
 
@@ -128,7 +128,7 @@ For more information about the System.IO namespace, see the [MSDN Documentation]
 
 Working with Json data in a Xamarin.iOS application is very easy using the [Json.NET](http://www.newtonsoft.com/json) high-performance JSON framework for .NET NuGet Package. Simply add the NuGet package to your application's project: 
 
-[ ![](file-system-images/json01.png "Adding the NuGet package to the applications project")](file-system-images/json01.png)
+[![](file-system-images/json01.png "Adding the NuGet package to the applications project")](file-system-images/json01.png#lightbox)
 
 Next, add a class to act as the data model for serialization/deserialization (in this case `Account.cs`):
 
@@ -267,13 +267,13 @@ project in Visual Studio for Mac and select **Open Containing Folder**. Then
 navigate to **bin/Debug/** where you should find an application
 icon (similar to the screenshot below).
 
- [ ![](file-system-images/40-bundle.png "Navigate to bin/Debug to find an application icon similar to this screenshot")](file-system-images/40-bundle.png)
+ [![](file-system-images/40-bundle.png "Navigate to bin/Debug to find an application icon similar to this screenshot")](file-system-images/40-bundle.png#lightbox)
 
 Right-click on this icon and choose **View Package Contents** to
 browse the contents of the Application Bundle directory. The contents appear
 just like the contents of a regular directory, as shown here:
 
- [ ![](file-system-images/45-bundle.png "The contents of the app bundle")](file-system-images/45-bundle.png)
+ [![](file-system-images/45-bundle.png "The contents of the app bundle")](file-system-images/45-bundle.png#lightbox)
 
 The Application Bundle is what’s installed on the simulator or on your
 device during testing, and ultimately it is what’s submitted to Apple for
@@ -413,7 +413,7 @@ downloaded again if they are required in the future).</p>
 
 This screenshot shows the directory structure in a Finder window:
 
- [ ![](file-system-images/08-library-directory.png "This screenshot shows the directory structure in a Finder window")](file-system-images/08-library-directory.png)
+ [![](file-system-images/08-library-directory.png "This screenshot shows the directory structure in a Finder window")](file-system-images/08-library-directory.png#lightbox)
 
  <a name="Accessing_Other_Directories_Programmatically" />
 
@@ -456,14 +456,14 @@ var tmp = Path.Combine (documents, "..", "tmp");
 Users can access the files in your application’s Documents directory by editing `Info.plist` and
 creating a **Application supports iTunes sharing** (`UIFileSharingEnabled`) entry in the **Source** view, as shown here:
 
- [ ![](file-system-images/09-uifilesharingenabled-plist.png "Adding the Application supports iTunes sharing property")](file-system-images/09-uifilesharingenabled-plist.png)
+ [![](file-system-images/09-uifilesharingenabled-plist.png "Adding the Application supports iTunes sharing property")](file-system-images/09-uifilesharingenabled-plist.png#lightbox)
 
 These files can be accessed in iTunes when the device is connected and the
 user chooses the `Apps` tab. For example, the following screenshot
 shows the files in selected app shared
 via iTunes:
 
- [ ![](file-system-images/10-itunes-file-sharing.png "This screenshot shows the files in selected app shared via iTunes")](file-system-images/10-itunes-file-sharing.png)
+ [![](file-system-images/10-itunes-file-sharing.png "This screenshot shows the files in selected app shared via iTunes")](file-system-images/10-itunes-file-sharing.png#lightbox)
 
 Users can only access the top-level items in this directory via iTunes. They
 cannot see the contents of any subdirectories (although they can copy them to
@@ -479,7 +479,7 @@ The sample code for this article creates both a file and a folder in the
 Documents folder (in **SampleCode.cs**) and enables file sharing in the **Info.plist**
 file. This screenshot shows how these appear in iTunes:
 
- [ ![](file-system-images/15-itunes-file-sharing-example.png "This screenshot shows how the files appear in iTunes")](file-system-images/15-itunes-file-sharing-example.png)
+ [![](file-system-images/15-itunes-file-sharing-example.png "This screenshot shows how the files appear in iTunes")](file-system-images/15-itunes-file-sharing-example.png#lightbox)
 
 Refer to the [Working with Images](~/ios/app-fundamentals/images-icons/index.md) article for information about how to set icons for the application
 and for any custom document types you create.

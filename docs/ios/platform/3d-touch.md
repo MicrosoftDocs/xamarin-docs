@@ -14,7 +14,7 @@ ms.date: 03/19/2017
 
 _This article covers using the new iPhone 6s and iPhone 6s Plus 3D Touch gestures in your app._
 
-[ ![](3d-touch-images/info01.png "Examples of 3D Touch enabled apps")](3d-touch-images/info01.png)
+[![](3d-touch-images/info01.png "Examples of 3D Touch enabled apps")](3d-touch-images/info01.png#lightbox)
 
 This article will provide and introduction to using the new 3D Touch APIs to add
 pressure sensitive gestures to your Xamarin.iOS apps that are running on the new
@@ -45,7 +45,7 @@ is exerting and respond to the different pressure levels.
 
 As stated above, by using new properties of the [UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/) class you can measure the amount of pressure the user is applying to the iOS device's screen and use this information in your user interface. For example, making a brush stroke more translucent or opaque based on the amount of pressure.
 
-[ ![](3d-touch-images/pressure01.png "A brush stroke rendered as more translucent or opaque based on the amount of pressure")](3d-touch-images/pressure01.png)
+[![](3d-touch-images/pressure01.png "A brush stroke rendered as more translucent or opaque based on the amount of pressure")](3d-touch-images/pressure01.png#lightbox)
 
 As a result of 3D Touch, if your app is running on iOS 9 (or greater) and the iOS device is capable of supporting 3D Touch, changes in pressure will cause the `TouchesMoved` event to be raised.
 
@@ -87,7 +87,7 @@ sample app and [UITouch Class Reference](https://developer.apple.com/library/pre
 
 For example, if your app is displaying a table of messages, the user can press hard on on an item to preview its content in an overlay view (which Apple refers to as a *Peek*).
 
-[ ![](3d-touch-images/peekandpop01.png "An example of Peeking at content")](3d-touch-images/peekandpop01.png)
+[![](3d-touch-images/peekandpop01.png "An example of Peeking at content")](3d-touch-images/peekandpop01.png#lightbox)
 
 If the user presses harder, they will enter the regular message view (which is referred to as *Pop*-ping into the view).
 
@@ -220,7 +220,7 @@ can be popped-up when a user right-clicks on an item in a desktop app. You shoul
 use Quick Actions to provide shortcuts to the most common functions or features
 of your app.
 
-[ ![](3d-touch-images/quickactions01.png "An example of a Quick Actions menu")](3d-touch-images/quickactions01.png)
+[![](3d-touch-images/quickactions01.png "An example of a Quick Actions menu")](3d-touch-images/quickactions01.png#lightbox)
 
 
 ### Defining Static Quick Actions
@@ -451,7 +451,7 @@ When using the latest version of Xcode and the iOS Simulator on a compatible Mac
 
 To enable this functionality, run any app in simulated iPhone hardware that supports 3D Touch (iPhone 6s and greater). Next, select the **Hardware** menu in the iOS Simulator and enable the **Use Trackpad Force for 3D touch** menu item:
 
-[ ![](3d-touch-images/simulator01.png "Select the Hardware menu in the iOS Simulator and enable the Use Trackpad Force for 3D touch menu item")](3d-touch-images/simulator01.png)
+[![](3d-touch-images/simulator01.png "Select the Hardware menu in the iOS Simulator and enable the Use Trackpad Force for 3D touch menu item")](3d-touch-images/simulator01.png#lightbox)
 
 With this feature active, you can press harder on the Mac's trackpad to enable 3D Touch just like you would on real iPhone hardware.
 

@@ -23,7 +23,7 @@ In the first part of this tutorial, you'll create a simple spinner
 widget that displays a list of planets. When a planet is selected, a
 toast message displays the selected item:
 
-[![Example screenshots of HelloSpinner app](spinner-images/01-example-screenshots-sml.png)](spinner-images/01-example-screenshots.png)
+[![Example screenshots of HelloSpinner app](spinner-images/01-example-screenshots-sml.png)](spinner-images/01-example-screenshots.png#lightbox)
 
 Start a new project named **HelloSpinner**.
 
@@ -167,7 +167,7 @@ a
 
 Run the application; it should look like this:
 
-[![Screenshot example of Spinner with Mars selected as the planet](spinner-images/02-basic-example-sml.png)](spinner-images/02-basic-example.png)
+[![Screenshot example of Spinner with Mars selected as the planet](spinner-images/02-basic-example-sml.png)](spinner-images/02-basic-example.png#lightbox)
 
 ## Spinner Using Key/Value Pairs
 
@@ -249,7 +249,7 @@ private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventAr
 
 Run the application; the toast should look like this:
 
-[![Example of planet selection displaying temperature](spinner-images/03-keyvalue-example-sml.png)](spinner-images/03-keyvalue-example.png)
+[![Example of planet selection displaying temperature](spinner-images/03-keyvalue-example-sml.png)](spinner-images/03-keyvalue-example.png#lightbox)
    
   
 

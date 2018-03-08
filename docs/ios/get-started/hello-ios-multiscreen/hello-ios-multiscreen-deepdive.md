@@ -26,7 +26,7 @@ In the [Hello, iOS](~/ios/get-started/hello-ios/index.md) tutorial, we learned t
 Phoneword walkthrough, we added a second screen to our application and passed some data – a list of phone numbers –
 between the two screens, as illustrated by the diagram below:
 
- [ ![](hello-ios-multiscreen-deepdive-images/08.png "This diagram illustrates passing data between two screens")](hello-ios-multiscreen-deepdive-images/08.png)
+ [![](hello-ios-multiscreen-deepdive-images/08.png "This diagram illustrates passing data between two screens")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
 In our example, data was collected in the first screen, passed from the first View Controller to the second, and displayed by
 the second screen. This separation of screens, View Controllers, and data follows the *Model, View, Controller (MVC)* pattern. In
@@ -39,7 +39,7 @@ architecture for applications with a *Graphical User Interface (GUI)*. It assign
 the *Model* (data or application logic), the *View* (user interface), and the *Controller* (code behind). The diagram
 below illustrates the relationships between the three pieces of the MVC pattern and the user:
 
- [ ![](hello-ios-multiscreen-deepdive-images/00.png "This diagram illustrates the relationships between the three pieces of the MVC pattern and the user")](hello-ios-multiscreen-deepdive-images/00.png)
+ [![](hello-ios-multiscreen-deepdive-images/00.png "This diagram illustrates the relationships between the three pieces of the MVC pattern and the user")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 
 The MVC pattern is useful because it provides logical separation between different parts of a GUI application and makes it easier for us to
 reuse code and views. Let’s jump in and take a look at each of the three roles in more detail.
@@ -92,23 +92,23 @@ toolbar that includes a title, back button, and other optional features.
 The Navigation Controller is common in iOS applications and provides navigation for staple iOS applications like the **Settings** app,
 as illustrated by the screenshot below:
 
- [ ![](hello-ios-multiscreen-deepdive-images/01.png "The Navigation Controller provides navigation for iOS applications like the Settings app shown here")](hello-ios-multiscreen-deepdive-images/01.png)
+ [![](hello-ios-multiscreen-deepdive-images/01.png "The Navigation Controller provides navigation for iOS applications like the Settings app shown here")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
 
 The Navigation Controller serves three primary functions:
 
 -  **Provides Hooks for Forward Navigation** – The Navigation Controller uses a hierarchal navigation metaphor where Content View Hierarchies are  *pushed* onto a  *navigation stack* . You can think of a navigation stack as a stack of playing cards, in which only the top most card is visible, as illustrated by the diagram below:  
 
-	[ ![](hello-ios-multiscreen-deepdive-images/02.png "This diagram illustrates navigation as a stack of cards")](hello-ios-multiscreen-deepdive-images/02.png)
+	[![](hello-ios-multiscreen-deepdive-images/02.png "This diagram illustrates navigation as a stack of cards")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
 
 -  **Optionally Provides a Back Button** - When we push a new item onto the navigation stack, the title bar can automatically display a  *back button* that allows the user to navigate backwards. Pressing the back button  *pops* the current View Controller off the navigation stack, and loads the previous Content View Hierarchy into the Window:  
 
-	[ ![](hello-ios-multiscreen-deepdive-images/03.png "This diagram illustrates 'popping' a card off the stack")](hello-ios-multiscreen-deepdive-images/03.png)
+	[![](hello-ios-multiscreen-deepdive-images/03.png "This diagram illustrates 'popping' a card off the stack")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
 -  **Provides a Title Bar** – The top portion of the  **Navigation Controller** is called the  *Title Bar* . It’s responsible for displaying the View Controller title, as illustrated by the diagram below:  
 
-	[ ![](hello-ios-multiscreen-deepdive-images/04.png "The Title Bar is responsible for displaying the View Controller title")](hello-ios-multiscreen-deepdive-images/04.png)
+	[![](hello-ios-multiscreen-deepdive-images/04.png "The Title Bar is responsible for displaying the View Controller title")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
 
 
@@ -118,14 +118,14 @@ The Navigation Controller serves three primary functions:
 A **Navigation Controller** doesn’t manage a Content View Hierarchy, so it has nothing to display on its own.
 Instead, a **Navigation Controller** is paired with a *Root View Controller*:
 
- [ ![](hello-ios-multiscreen-deepdive-images/05.png "A Navigation Controller is paired with a Root View Controller")](hello-ios-multiscreen-deepdive-images/05.png)
+ [![](hello-ios-multiscreen-deepdive-images/05.png "A Navigation Controller is paired with a Root View Controller")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
 The Root View Controller represents the first View Controller in the **Navigation Controller’s** stack, and the Root View Controller’s
 Content View Hierarchy is the first Content View Hierarchy to be loaded into the Window. If we want to put our entire application on the
 Navigation Controller’s stack, we can move the Sourceless Segue to the **Navigation Controller** and set our first screen’s View Controller as the
 Root View Controller, like we did in the Phoneword app:
 
- [ ![](hello-ios-multiscreen-deepdive-images/06.png "The Sourceless Segue sets the first screens View Controller as the Root View Controller")](hello-ios-multiscreen-deepdive-images/06.png)
+ [![](hello-ios-multiscreen-deepdive-images/06.png "The Sourceless Segue sets the first screens View Controller as the Root View Controller")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### Additional Navigation Options
 
@@ -144,7 +144,7 @@ then programmatically. Let’s explore both these options in more detail.
 When we add a Segue with a **Show** action to the Storyboard, we instruct iOS to push the second View Controller onto the
 Navigation Controller’s stack:
 
- [ ![](hello-ios-multiscreen-deepdive-images/09.png "Setting the segue type from a dropdown list")](hello-ios-multiscreen-deepdive-images/09.png)
+ [![](hello-ios-multiscreen-deepdive-images/09.png "Setting the segue type from a dropdown list")](hello-ios-multiscreen-deepdive-images/09.png#lightbox)
 
 Adding a Segue to the Storyboard is enough to create a simple transition between screens. If we want to pass data between View Controllers,
 we have to override the `PrepareForSegue` method and handle the data ourselves:

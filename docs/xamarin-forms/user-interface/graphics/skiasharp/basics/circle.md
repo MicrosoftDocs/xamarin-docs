@@ -135,7 +135,7 @@ This time, the `DrawCircle` call fills the circle using the new properties of th
 
 Here's the program running on iOS, Android, and the Universal Windows Platform:
 
-[![](circle-images/simplecircle-small.png "Triple screenshot of the Simple Circle page")](circle-images/simplecircle-large.png "Triple screenshot of the Simple Circle page")
+[![](circle-images/simplecircle-small.png "Triple screenshot of the Simple Circle page")](circle-images/simplecircle-large.png#lightbox "Triple screenshot of the Simple Circle page")
 
 When running the program yourself, you can turn the phone or simulator sideways to see how the graphic is redrawn. Each time the graphic needs to be redrawn, the `PaintSurface` event handler is called again.
 

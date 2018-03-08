@@ -33,7 +33,7 @@ an Android application. It covers the following steps:
 3.  Adding a new Activity to the application that will be used as the
     splash screen defined by the theme created in the previous step.
 
-[![Example Xamarin logo splash screen followed by app screen](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png)
+[![Example Xamarin logo splash screen followed by app screen](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
 
 ## Requirements

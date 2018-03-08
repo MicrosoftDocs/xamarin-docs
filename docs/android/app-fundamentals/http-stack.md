@@ -35,7 +35,7 @@ for the HttpClient implementation and one for the SSL/TLS
 implementation:
 
 
-[ ![Visual Studio Android Options](http-stack-images/tls07-vs-sml.png)](http-stack-images/tls07-vs.png)
+[![Visual Studio Android Options](http-stack-images/tls07-vs-sml.png)](http-stack-images/tls07-vs.png#lightbox)
 
 ## HttpClient Stack Selector
 
@@ -43,7 +43,7 @@ This project option controls which `HttpMessageHandler` implementation
 will be used each time an `HttpClient` object is instantiated. By
 default, this is the managed `HttpClientHandler`.
 
-[ ![Android HttpClient implementation combo box in Visual Studio](http-stack-images/tls04-vs-sml.png)](http-stack-images/tls04-vs.png) 
+[![Android HttpClient implementation combo box in Visual Studio](http-stack-images/tls04-vs-sml.png)](http-stack-images/tls04-vs.png#lightbox) 
 
 
 # [Visual Studio for Mac](#tab/vsmac)
@@ -52,7 +52,7 @@ The settings for the HttpClient stack are found in the Project Options
 for a Xamarin.Android Project. Click on the **Build > Android Build**
 settings and click on the **General** tab:
 
-[ ![Visual Studio for Mac Android Options](http-stack-images/tls07-xs-sml.png)](http-stack-images/tls07-xs.png)
+[![Visual Studio for Mac Android Options](http-stack-images/tls07-xs-sml.png)](http-stack-images/tls07-xs.png#lightbox)
 
 ## HttpClient Stack Selector
 
@@ -123,11 +123,11 @@ by all web request, both `HttpClient` and `WebRequest`. By default, TLS
 
 # [Visual Studio](#tab/vswin)
 
-[ ![TLS/SSL implementation combo box in Visual Studio](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png)
+[![TLS/SSL implementation combo box in Visual Studio](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![TLS/SSL implementation combo box in Visual Studio for Mac](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png)
+[![TLS/SSL implementation combo box in Visual Studio for Mac](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png#lightbox)
 
 -----
 

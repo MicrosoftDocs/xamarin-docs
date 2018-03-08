@@ -45,7 +45,7 @@ minimum, to the Android version that has all of the features you need).
 In the following screenshot, the Target Framework is set to
 **Android 7.1 (API Level 25 - Nougat)**:
 
-[![Target Framework version defaults to Compile using Android version](android-api-levels-images/vs-defaults-sml.png)](android-api-levels-images/vs-defaults.png)
+[![Target Framework version defaults to Compile using Android version](android-api-levels-images/vs-defaults-sml.png)](android-api-levels-images/vs-defaults.png#lightbox)
 
 On the **Android Manifest** page, set the Minimum Android version to
 **Use Compile using SDK version** and set the Target Android version to
@@ -53,7 +53,7 @@ the same value as the Target Framework version (in the following
 screenshot, the Target Android Framework is set to **Android 7.1
 (Nougat)**):
 
-[![Minimum and Target Android versions set to Target Framework version](android-api-levels-images/vs-manifest-defaults-sml.png)](android-api-levels-images/vs-manifest-defaults.png)
+[![Minimum and Target Android versions set to Target Framework version](android-api-levels-images/vs-manifest-defaults-sml.png)](android-api-levels-images/vs-manifest-defaults.png#lightbox)
 
 If you want to maintain backward compatibility with an earlier version
 of Android, set **Minimum Android version to target** to the oldest
@@ -63,7 +63,7 @@ Level 14 is the minimum API level required for
 The following example configuration supports Android versions from API
 Level 14 thru API level 25:
 
-[![Compile using API level 25 Nougat, Minimum Android version set to API level 14](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png)
+[![Compile using API level 25 Nougat, Minimum Android version set to API level 14](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -74,7 +74,7 @@ need). To set the **Target framework**, navigate to **Build > General**
 in the **Project Options**. In the following screenshot, the Target
 Framework is set to **Use the latest installed platform (8.0)**:
 
-[![Target framework defaulting to Use latest installed platform](android-api-levels-images/xs-default-target-sml.png)](android-api-levels-images/xs-default-target.png)
+[![Target framework defaulting to Use latest installed platform](android-api-levels-images/xs-default-target-sml.png)](android-api-levels-images/xs-default-target.png#lightbox)
 
 The Minimum and Target Android version settings can be found under
 **Build > Android Application** in **Project Options**. Set the Minimum
@@ -84,7 +84,7 @@ version. In the following screenshot, the Target Android Framework is
 set to **Android 8.0 (API level 26)** to match the Target Framework
 setting above:
 
-[![Setting the target and framework levels in Project Options](android-api-levels-images/xs-default-app-sml.png)](android-api-levels-images/xs-default-app.png)
+[![Setting the target and framework levels in Project Options](android-api-levels-images/xs-default-app-sml.png)](android-api-levels-images/xs-default-app.png#lightbox)
 
 If you want to maintain backward compatibility with an earlier version
 of Android, change **Minimum Android version** to the oldest version of
@@ -94,7 +94,7 @@ the minimum API level required for
 For example, the following configuration supports Android versions as
 early as API Level 14:
 
-[ ![Minimum and Target versions set to Automatic - use target framework version](android-api-levels-images/xs-minimum-sml.png)](android-api-levels-images/xs-minimum.png)
+[![Minimum and Target versions set to Automatic - use target framework version](android-api-levels-images/xs-minimum-sml.png)](android-api-levels-images/xs-minimum.png#lightbox)
 
 -----
 
@@ -291,7 +291,7 @@ To access the Target Framework setting in Visual Studio, open the
 project properties in **Solution Explorer** and select the
 **Application** page:
 
-[![Application page of project Properties](android-api-levels-images/vs-target-framework-sml.png)](android-api-levels-images/vs-target-framework.png)
+[![Application page of project Properties](android-api-levels-images/vs-target-framework-sml.png)](android-api-levels-images/vs-target-framework.png#lightbox)
 
 Set the Target Framework by selecting an API level in the drop-down
 menu under **Compile using Android version** as shown above.
@@ -303,7 +303,7 @@ right-click the project name and select **Options**; this opens the
 **Project Options** dialog. In this dialog, navigate to **Build >
 General** as shown here:
 
-[![Build General section of the Project Options page](android-api-levels-images/xs-target-framework-sml.png)](android-api-levels-images/xs-target-framework.png)
+[![Build General section of the Project Options page](android-api-levels-images/xs-target-framework-sml.png)](android-api-levels-images/xs-target-framework.png#lightbox)
 
 Set the Target Framework by selecting an API level in the drop-down
 menu to the right of **Target framework** as shown above.
@@ -348,7 +348,7 @@ the project properties in **Solution Explorer** and select the
 Android version** you can select the Minimum Android version for your
 application:
 
-[![Minimum Android to target option set to Compile using SDK version](android-api-levels-images/vs-minimum-version-sml.png)](android-api-levels-images/vs-minimum-version.png)
+[![Minimum Android to target option set to Compile using SDK version](android-api-levels-images/vs-minimum-version-sml.png)](android-api-levels-images/vs-minimum-version.png#lightbox)
 
 If you select **Use Compile using SDK version**, the Minimum
 Android version will be the same as the Target Framework setting.
@@ -361,7 +361,7 @@ right-click the project name and select **Options**; this opens the
 Using the drop-down menu to the right of **Minimum Android version**,
 you can set the Minimum Android version for your application:
 
-[ ![Minimum Android version set to Automatic - use target framework version](android-api-levels-images/xs-minimum-version-sml.png)](android-api-levels-images/xs-minimum-version.png)
+[![Minimum Android version set to Automatic - use target framework version](android-api-levels-images/xs-minimum-version-sml.png)](android-api-levels-images/xs-minimum-version.png#lightbox)
 
 If you select **Automatic &ndash; use target framework version**, the
 Minimum Android version will be the same as the Target Framework
@@ -396,7 +396,7 @@ To access this setting in Visual Studio, open the project properties in
 drop-down menu under **Target Android version** you can select the
 Target Android version for your application:
 
-[![Target Android version set to Compile using SDK version](android-api-levels-images/vs-target-version-sml.png)](android-api-levels-images/vs-target-version.png)
+[![Target Android version set to Compile using SDK version](android-api-levels-images/vs-target-version-sml.png)](android-api-levels-images/vs-target-version.png#lightbox)
 
 We recommend that you explicitly set the Target Android version to the
 latest version of Android that you use to test your app. Ideally,
@@ -413,7 +413,7 @@ right-click the project name and select **Options**; this opens the
 Using the drop-down menu to the right of **Target Android version**,
 you can set the Target Android version for your application:
 
-[![Target Android version set to Automatic - use target framework version](android-api-levels-images/xs-target-version-sml.png)](android-api-levels-images/xs-target-version.png)
+[![Target Android version set to Automatic - use target framework version](android-api-levels-images/xs-target-version-sml.png)](android-api-levels-images/xs-target-version.png#lightbox)
 
 We recommend that you explicitly set the Target Android version to the
 latest version of Android that you use to test your app. Ideally, it
@@ -525,7 +525,7 @@ Framework setting &ndash; the Minimum Android version and the Target
 Android version settings are not available. That is because there is no
 **Android Manifest** page:
 
-[![Only the Compile using Android version option is available](android-api-levels-images/vs-library-options-sml.png)](android-api-levels-images/vs-library-options.png)
+[![Only the Compile using Android version option is available](android-api-levels-images/vs-library-options-sml.png)](android-api-levels-images/vs-library-options.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -535,7 +535,7 @@ Android version and the Target Android version &ndash; the Minimum
 Android version and Target Android version settings are not available.
 That is because there is no **Build > Android Application** page):
 
-[ ![Build General page without Minimum and Target version options](android-api-levels-images/xs-library-options-sml.png)](android-api-levels-images/xs-library-options.png)
+[![Build General page without Minimum and Target version options](android-api-levels-images/xs-library-options-sml.png)](android-api-levels-images/xs-library-options.png#lightbox)
 
 -----
 

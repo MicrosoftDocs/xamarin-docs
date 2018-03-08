@@ -18,7 +18,7 @@ via the **Project Options** window:
 
 2. Go to the **NuGet Package > Metadata** section and enter all the [required information](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) in the **General** tab:
 
-  [ ![](existing-library-images/existing-metadata-sml.png "Enter required metadata")](existing-library-images/existing-metadata.png)
+  [![](existing-library-images/existing-metadata-sml.png "Enter required metadata")](existing-library-images/existing-metadata.png#lightbox)
 
 3. Optionally, [add additional metadata](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)
   in the **Details** tab.
@@ -29,7 +29,7 @@ via the **Project Options** window:
 
 5. To create the NuGet package on _every_ build or deploy, go to the **NuGet Package > Build** section and tick **Create a NuGet Package when building the project**:
 
-    [ ![](existing-library-images/existing-tickbox-sml.png "Tick to create a NuGet package")](existing-library-images/existing-tickbox.png)
+    [![](existing-library-images/existing-tickbox-sml.png "Tick to create a NuGet package")](existing-library-images/existing-tickbox.png#lightbox)
 
 > [!NOTE]
 > Building the NuGet package can slow down the build process. If this box is not ticked,

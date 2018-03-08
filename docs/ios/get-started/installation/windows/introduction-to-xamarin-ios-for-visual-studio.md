@@ -53,16 +53,16 @@ will **not work** with Express Editions of Visual Studio, as they do not support
 
 You can connect to your Mac build host either via the icon on the Visual Studio toolbar (providing an iOS application is open):
 
-[ ![](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png "Connect to Mac icon")](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png "Connect to Mac icon")](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png#lightbox)
 
 Or by browsing to **Tools > Options** in Visual Studio and selecting **Xamarin > iOS Settings**:
 
- [ ![](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png "iOS option")](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png)
+ [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png "iOS option")](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png#lightbox)
 
 You can change the Mac Build Host by clicking the **Find Xamarin Mac Agent** button. The following screen is
 displayed to update the Mac Build Host:
 
-  [ ![](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png "Xamarin Mac Agent Dialog")](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png "Xamarin Mac Agent Dialog")](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png#lightbox)
 
 
 ## Visual Studio Toolbar Overview
@@ -76,7 +76,7 @@ The functions of these toolbars are explained below.
 
 The controls relevant to Xamarin iOS development are circled in red:
 
- [ ![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "The controls relevant to Xamarin iOS development are circled in red")](introduction-to-xamarin-ios-for-visual-studio-images/03.png "The controls relevant to Xamarin iOS development are circled in red")
+ [![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "The controls relevant to Xamarin iOS development are circled in red")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "The controls relevant to Xamarin iOS development are circled in red")
 
 -  **Start** - Starts debugging or running the application on the selected platform. There must be a connected Mac (see the status indicator in the iOS toolbar).
 -  **Solution Configurations** – Allows you to select the configuration to use (e.g., Debug, Release).
@@ -87,7 +87,7 @@ The controls relevant to Xamarin iOS development are circled in red:
 
 The iOS Toolbar in Visual Studio looks similar in each version of Visual Studio. These are all shown below:
 
-[ ![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "iOS Toolbar")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "iOS Toolbar")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png#lightbox)
 
 Each item is explained below:
 
@@ -106,25 +106,25 @@ There are options in the *Output* pane that you can view to discover build, depl
 
 The screenshot below shows the available output windows, which may differ depending on your project type:
 
-[ ![](introduction-to-xamarin-ios-for-visual-studio-images/output-sml.png "The available output windows")](introduction-to-xamarin-ios-for-visual-studio-images/output-large.png)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/output-sml.png "The available output windows")](introduction-to-xamarin-ios-for-visual-studio-images/output-large.png#lightbox)
 
 - **Xamarin** – This contains information relating solely to Xamarin, such as the connection to the Mac and activation status.
 
-	[ ![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Information relating solely to Xamarin, such as the connection to the Mac and activation status")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png)
+	[![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Information relating solely to Xamarin, such as the connection to the Mac and activation status")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 - **Xamarin Diagnostics** – This shows more detailed information about your Xamarin project, such as the interaction with and for Android.
 
-	[ ![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Detailed information about the Xamarin project")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png)
+	[![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Detailed information about the Xamarin project")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 Other default Visual Studio Output panes like Debug and Build are still available inside the Output view and are used for Debugging Output and MSBuild Output:
 
 -  **Debug**
 
-	[ ![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Debugging Output")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png)
+	[![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Debugging Output")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
 
 - **Build** & **Build Order**
 
-	[ ![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "MSBuild Output")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png)
+	[![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "MSBuild Output")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
 
 ## iOS Project Properties

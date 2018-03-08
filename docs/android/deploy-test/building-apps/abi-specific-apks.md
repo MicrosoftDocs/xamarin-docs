@@ -91,7 +91,7 @@ following list explains this eight digit version code format
 The following diagram illustrates the position of each code described
 in the above list:
 
-[![Diagram of eight-digit version code format, coded by color](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png)
+[![Diagram of eight-digit version code format, coded by color](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png#lightbox)
 
 
 Google Play will ensure that the correct APK is delivered to the device
@@ -250,7 +250,7 @@ Once the rake task has completed, there will be three `bin` folders
 with the file `xamarin.helloworld.apk`. The next screenshot shows each
 of these folders with their contents:
 
-[![Locations of platform-specific folders containing xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png)
+[![Locations of platform-specific folders containing xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
 
 > [!NOTE]

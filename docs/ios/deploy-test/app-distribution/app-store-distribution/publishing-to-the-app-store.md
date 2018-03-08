@@ -348,16 +348,16 @@ Submitting your application to Apple for review is done by using the Application
 
 1. Select *Deliver Your App* and click the *Choose* button:
 
-	[ ![](publishing-to-the-app-store-images/publishvs01.png "Select Deliver Your App")](publishing-to-the-app-store-images/publishvs01.png)
+	[![](publishing-to-the-app-store-images/publishvs01.png "Select Deliver Your App")](publishing-to-the-app-store-images/publishvs01.png#lightbox)
 
 2. Select the zip or IPA file you created above and click the **OK** button.
 
 3. The Application Loader will validate the file:
 
-	[ ![](publishing-to-the-app-store-images/publishvs02.png "The validation screen")](publishing-to-the-app-store-images/publishvs02.png)
+	[![](publishing-to-the-app-store-images/publishvs02.png "The validation screen")](publishing-to-the-app-store-images/publishvs02.png#lightbox)
 4. Click the *Next* button and the application will be validated against the App Store:
 
-	[ ![](publishing-to-the-app-store-images/publishvs03.png "Validating against the App Store")](publishing-to-the-app-store-images/publishvs03.png)
+	[![](publishing-to-the-app-store-images/publishvs03.png "Validating against the App Store")](publishing-to-the-app-store-images/publishvs03.png#lightbox)
 5. Click the **Send** button to send the application to Apple for review.
 6. The Application Loader will inform you when the file has been successfully uploaded.
 
@@ -365,7 +365,7 @@ Submitting your application to Apple for review is done by using the Application
 
 If you log back into iTunes Connect and select your application from the list of available apps, the status in iTunes Connect should now show that it is **Waiting for Review** (it may temporarily read **Upload Received** while it is processed):
 
-[ ![](publishing-to-the-app-store-images/image21.png "The status in iTunes Connect should now show that it is Waiting for Review")](publishing-to-the-app-store-images/image21.png)
+[![](publishing-to-the-app-store-images/image21.png "The status in iTunes Connect should now show that it is Waiting for Review")](publishing-to-the-app-store-images/image21.png#lightbox)
 
 ## Summary
 

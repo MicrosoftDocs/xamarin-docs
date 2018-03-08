@@ -30,12 +30,12 @@ To add Material Design themes to your Xamarin.Forms Android project, follow the
 
 Here is the **Todo** sample with the default `FormsApplicationActivity`:
 
-[ ![](images/before-appcompat-sml.png "Todo Sample Application Without AppCompat")](images/before-appcompat.png "Todo Sample Application Without AppCompat")
+[![](images/before-appcompat-sml.png "Todo Sample Application Without AppCompat")](images/before-appcompat.png#lightbox "Todo Sample Application Without AppCompat")
 
 And this is the same code after upgrading the project to use `FormsAppCompatActivity`
 (and adding the additional theme information):
 
-[ ![](images/post-appcompat-sml.png "Todo Sample Application With AppCompat and Theming")](images/post-appcompat.png "Todo Sample Application With AppCompat and Theming")
+[![](images/post-appcompat-sml.png "Todo Sample Application With AppCompat and Theming")](images/post-appcompat.png#lightbox "Todo Sample Application With AppCompat and Theming")
 
 > [!NOTE]
 > When using `FormsAppCompatActivity`, the [base classes for some Android custom renderers](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) will be different.

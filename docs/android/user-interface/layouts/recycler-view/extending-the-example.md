@@ -123,7 +123,7 @@ Now when you build and run the sample photo-viewing app, tapping a photo
 in the display will cause a toast to appear that reports which
 photograph was touched:
 
-[ ![Example Toast that appears when a photo Card is tapped](extending-the-example-images/01-photo-selected-sml.png)](extending-the-example-images/01-photo-selected.png)
+[![Example Toast that appears when a photo Card is tapped](extending-the-example-images/01-photo-selected-sml.png)](extending-the-example-images/01-photo-selected.png#lightbox)
 
 This example demonstrates just one approach for implementing event
 handlers with `RecyclerView`. Another approach that could be used
@@ -221,7 +221,7 @@ Now, when the **Random Pick** button is tapped, `RecyclerView` updates
 the display to show that a photo further down in the collection has
 been swapped with the first photo in the collection:
 
-[ ![First screenshot before swap, second screenshot after swap](extending-the-example-images/02-random-pick-sml.png)](extending-the-example-images/02-random-pick.png)
+[![First screenshot before swap, second screenshot after swap](extending-the-example-images/02-random-pick-sml.png)](extending-the-example-images/02-random-pick.png#lightbox)
 
 Of course, `NotifyDataSetChanged` could have been called instead of
 making the two calls to `NotifyItemChanged`, but doing so would force

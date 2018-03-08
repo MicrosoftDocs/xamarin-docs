@@ -275,7 +275,7 @@ Here's how it works: The user first presses the **New** button. This enables the
 
 The iOS screen at the left shows the layout before a valid age is entered. The Android and UWP screens show the **Submit** button enabled after an age has been set:
 
-[![Person Entry](commanding-images/personentry-small.png "Person Entry")](commanding-images/personentry-large.png "Person Entry")
+[![Person Entry](commanding-images/personentry-small.png "Person Entry")](commanding-images/personentry-large.png#lightbox "Person Entry")
 
 The program does not have any facility for editing existing entries, and does not save the entries when you navigate away from the page.
 
@@ -527,7 +527,7 @@ The 11 buttons for the 10 digits and the decimal point share a binding to `Digit
 
 Here's the program in action:
 
-[![Decimal Keyboard](commanding-images/decimalkeyboard-small.png "Decimal Keyboard")](commanding-images/decimalkeyboard-large.png "Decimal Keyboard")
+[![Decimal Keyboard](commanding-images/decimalkeyboard-small.png "Decimal Keyboard")](commanding-images/decimalkeyboard-large.png#lightbox "Decimal Keyboard")
 
 Notice that the button for the decimal point in all three screenshots is disabled because the entered number already contains a decimal point. 
 

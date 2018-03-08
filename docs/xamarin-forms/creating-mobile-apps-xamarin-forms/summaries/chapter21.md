@@ -46,7 +46,7 @@ The [**TranslationDemo**](https://github.com/xamarin/xamarin-forms-book-samples/
 
 One common use of the translation properties is to offset slightly the rendering of text. This is demonstrated in the [**TextOffsets**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/TextOffsets) sample:
 
-[![Triple screenshot of Text Offsets](images/ch21fg03-small.png "Text Offsets")](images/ch21fg03-large.png "Text Offsets")
+[![Triple screenshot of Text Offsets](images/ch21fg03-small.png "Text Offsets")](images/ch21fg03-large.png#lightbox "Text Offsets")
 
 Another effect is to render multiple copies of a `Label` to resemble a 3D block, such as demonstrated in the [**BlockText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BlockText) sample.
 
@@ -101,7 +101,7 @@ The [**MinimalBoxViewClock**](https://github.com/xamarin/xamarin-forms-book-samp
 
 The [**BoxViewClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BoxViewClock) uses `BoxView` for more extensive graphics, including tick marks around the face of the clock, and hands that rotate a little distance from their ends:
 
-[![Triple screenshot of BoxView Clock](images/ch21fg17-small.png "Analog Clock Face")](images/ch21fg17-large.png "Analog Clock Face")
+[![Triple screenshot of BoxView Clock](images/ch21fg17-small.png "Analog Clock Face")](images/ch21fg17-large.png#lightbox "Analog Clock Face")
 
 In addition a [`SecondBackEaseConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondBackEaseConverter.cs) class in **Xamarin.FormsBook.Toolkit** causes the second hand to appear to pull back a little before jumping ahead, and then to move back into its correct position.
 

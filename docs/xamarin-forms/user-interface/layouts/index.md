@@ -41,7 +41,7 @@ to meet specific requirements.
 
 The following graphic visualizes the layout controls:
 
-[ ![](images/layouts-sml.png "Xamarin.Forms Layouts")](images/layouts.png "Xamarin.Forms Layouts")
+[![](images/layouts-sml.png "Xamarin.Forms Layouts")](images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 ## Choosing the Right Layout
 

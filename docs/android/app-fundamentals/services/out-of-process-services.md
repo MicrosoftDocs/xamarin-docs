@@ -496,7 +496,7 @@ Then, the **AndroidManifest.xml** of the client APK must explicitly request this
 
 To view the permissions that an application has been granted, open the Android Settings app, and select **Apps**. Find and select the application in the list. From the **App Info** screen, tap **Permissions** which will bring up a view that shows all the permissions granted to the app:
 
-[![Screenshots from an Android device showing how to find the permissions granted to an application](out-of-process-services-images/ipc-06-sml.png)](out-of-process-services-images/ipc-06.png)
+[![Screenshots from an Android device showing how to find the permissions granted to an application](out-of-process-services-images/ipc-06-sml.png)](out-of-process-services-images/ipc-06.png#lightbox)
 
 ## Summary
 

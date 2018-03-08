@@ -22,7 +22,7 @@ For example, the image below shows the same application running in
 three different device locales, but the text displayed in each button
 is specific to the locale that each device is set to:
 
-[![Examples of three different locales](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png)
+[![Examples of three different locales](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png#lightbox)
 
 In this example, the contents of a layout file, **Main.axml** looks
 something like this:

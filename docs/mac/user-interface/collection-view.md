@@ -18,7 +18,7 @@ When working with C# and .NET in a Xamarin.Mac app, the developer has access to 
 
 A `NSCollectionView` displays a grid of subviews organized using a `NSCollectionViewLayout`. Each subview in the grid is represented by a `NSCollectionViewItem` which manages the loading of the view’s content from a `.xib` file.
 
-[ ![An example app run](collection-view-images/intro01.png)](collection-view-images/intro01.png)
+[![An example app run](collection-view-images/intro01.png)](collection-view-images/intro01.png#lightbox)
 
 This article covers the basics of working with Collection Views in a Xamarin.Mac app. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, as it covers key concepts and techniques that are used throughout this article.
 

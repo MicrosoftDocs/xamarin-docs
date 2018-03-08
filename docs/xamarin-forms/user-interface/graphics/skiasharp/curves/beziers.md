@@ -84,7 +84,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here it is running on all three platforms:
 
-[![](beziers-images/beziercurve-small.png "Triple screenshot of the Bezier Curve page")](beziers-images/beziercurve-large.png "Triple screenshot of the Bezier Curve page")
+[![](beziers-images/beziercurve-small.png "Triple screenshot of the Bezier Curve page")](beziers-images/beziercurve-large.png#lightbox "Triple screenshot of the Bezier Curve page")
 
 Mathematically, the curve is a cubic polynomial. The curve intersects a straight line at three points at most. At the start point, the curve is always tangent to, and in the same direction as, a straight line from the start point to the first control point. At the end point, the curve is always tangent to, and in the same direction as, a straight line from the second control point to the end point.
 
@@ -202,7 +202,7 @@ The start and end points (`point0` and `point3`) are calculated based on the nor
 
 Here's the program running on the three platforms with three different angles:
 
-[![](beziers-images/beziercirculararc-small.png "Triple screenshot of the Bezier Circular Arc page")](beziers-images/beziercirculararc-large.png "Triple screenshot of the Bezier Circular Arc page")
+[![](beziers-images/beziercirculararc-small.png "Triple screenshot of the Bezier Circular Arc page")](beziers-images/beziercirculararc-large.png#lightbox "Triple screenshot of the Bezier Circular Arc page")
 
 Look closely at the Windows Mobile screen, and you'll see that the Bézier curve notably deviates from a semicircle when the angle is 180 degrees, but the iOS screen shows that it seems to fit a quarter-circle just fine when the angle is 90 degrees.
 
@@ -284,7 +284,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The points are interpolated based on a sinusoidally oscillating value of `t`. The interpolated points are then used to construct a series of four connected Bézier curves. Here's the animation running on the three platforms showing the progress from a circle to a square:
 
-[![](beziers-images/squaringthecircle-small.png "Triple screenshot of the Squaring the Circle page")](beziers-images/squaringthecircle-large.png "Triple screenshot of the Squaring the Circle page")
+[![](beziers-images/squaringthecircle-small.png "Triple screenshot of the Squaring the Circle page")](beziers-images/squaringthecircle-large.png#lightbox "Triple screenshot of the Squaring the Circle page")
 
 Such an animation would be impossible without curves that are algorithmically flexible enough to be rendered as both circular arcs and straight lines.
 
@@ -333,7 +333,7 @@ It might be a good exercise to plot these coordinates on graph paper to see how 
 
 Here's the infinity sign on all three platforms:
 
-[![](beziers-images/bezierinfinity-small.png "Triple screenshot of the Bézier Infinity page")](beziers-images/bezierinfinity-large.png "Triple screenshot of the Bézier Infinity page")
+[![](beziers-images/bezierinfinity-small.png "Triple screenshot of the Bézier Infinity page")](beziers-images/bezierinfinity-large.png#lightbox "Triple screenshot of the Bézier Infinity page")
 
 It is somewhat smoother towards the center than the infinity sign rendered by the **Arc Infinity** page from the [**Three Ways to Draw an Arc**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) article.
 
@@ -396,7 +396,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 And here it is running on all three platforms:
 
-[![](beziers-images/quadraticcurve-small.png "Triple screenshot of the Quadratic Curve page")](beziers-images/quadraticcurve-large.png "Triple screenshot of the Quadratic Curve page")
+[![](beziers-images/quadraticcurve-small.png "Triple screenshot of the Quadratic Curve page")](beziers-images/quadraticcurve-large.png#lightbox "Triple screenshot of the Quadratic Curve page")
 
 The dotted lines are tangent to the curve at the start point and end point, and meet at the control point.
 
@@ -474,7 +474,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here it is running on all three platforms:
 
-[![](beziers-images/coniccurve-small.png "Triple screenshot of the Conic Curve page")](beziers-images/coniccurve-large.png "Triple screenshot of the Conic Curve page")
+[![](beziers-images/coniccurve-small.png "Triple screenshot of the Conic Curve page")](beziers-images/coniccurve-large.png#lightbox "Triple screenshot of the Conic Curve page")
 
 As you can see, the control point seems to pull the curve towards it more when the weight is higher. When the weight is zero, the curve becomes a straight line from the start point to the end point.
 
@@ -538,7 +538,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 As you can see, there is no visual difference between the `ConicTo` path shown in red and the underlying circle displayed for reference:
 
-[![](beziers-images/coniccirculararc-small.png "Triple screenshot of the Conic Circular Arc page")](beziers-images/coniccirculararc-large.png "Triple screenshot of the Conic Circular Arc page")
+[![](beziers-images/coniccirculararc-small.png "Triple screenshot of the Conic Circular Arc page")](beziers-images/coniccirculararc-large.png#lightbox "Triple screenshot of the Conic Circular Arc page")
 
 But set the angle to 180 degrees, and the mathematics fail.
 

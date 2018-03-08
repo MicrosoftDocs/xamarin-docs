@@ -36,7 +36,7 @@ in a `DialogFragment`. The sample application will display the
 an Activity. When the date is set by the user, a `TextView` will update
 with the date that was selected.
 
-[![Screenshot of Pick Date button followed by Date Picker dialog](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png)
+[![Screenshot of Pick Date button followed by Date Picker dialog](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png#lightbox)
 
 ## Requirements
 

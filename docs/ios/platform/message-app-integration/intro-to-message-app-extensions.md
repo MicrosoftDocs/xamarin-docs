@@ -117,13 +117,13 @@ To creating a Custom Sticker Experience, do the following:
 2. Open the solution to add a Message App Extension to. 
 3. Select **iOS** > **Extensions** > **iMessage Extension** and click the **Next** button: 
 
-	[ ![](intro-to-message-app-extensions-images/message01.png "Select iMessage Extension")](intro-to-message-app-extensions-images/message01.png)
+	[![](intro-to-message-app-extensions-images/message01.png "Select iMessage Extension")](intro-to-message-app-extensions-images/message01.png#lightbox)
 4. Enter an **Extension Name** and click the **Next** button: 
 
-	[ ![](intro-to-message-app-extensions-images/message02.png "Enter an Extension Name")](intro-to-message-app-extensions-images/message02.png)
+	[![](intro-to-message-app-extensions-images/message02.png "Enter an Extension Name")](intro-to-message-app-extensions-images/message02.png#lightbox)
 5. Click the **Create** button to build the Extension: 
 
-	[ ![](intro-to-message-app-extensions-images/message03.png "Click the Create button")](intro-to-message-app-extensions-images/message03.png)
+	[![](intro-to-message-app-extensions-images/message03.png "Click the Create button")](intro-to-message-app-extensions-images/message03.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
@@ -131,7 +131,7 @@ To creating a Custom Sticker Experience, do the following:
 2. Open the solution to add a Message App Extension to. 
 3. Select **iOS** > **Extensions** > **iMessage Extension** and click the **Next** button: 
 
-	[ ![](intro-to-message-app-extensions-images/message01w.png "Select iMessage Extension")](intro-to-message-app-extensions-images/message01.png)
+	[![](intro-to-message-app-extensions-images/message01w.png "Select iMessage Extension")](intro-to-message-app-extensions-images/message01.png#lightbox)
 4. Enter an **Extension Name** and click the **OK** button
 
 -----
@@ -155,7 +155,7 @@ Do the following:
 1. In the **Solution Pad**, right-click on the Extension's project name and select **Add** > **New File...** > **iOS | Apple Watch** > **Interface Controller**.
 2. Enter `StickerBrowserViewController` for the **Name** and click the **New** button: 
 
-	[ ![](intro-to-message-app-extensions-images/browser01.png "Enter StickerBrowserViewController for the Name")](intro-to-message-app-extensions-images/browser01.png)
+	[![](intro-to-message-app-extensions-images/browser01.png "Enter StickerBrowserViewController for the Name")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. Open the `StickerBrowserViewController.cs` file for editing.
 
 # [Visual Studio](#tab/vswin)
@@ -163,7 +163,7 @@ Do the following:
 1. In the **Solution Explorer**, right-click on the Extension's project name and select **Add** > **New File...** > **iOS | Apple Watch** > **Interface Controller**.
 2. Enter `StickerBrowserViewController` for the **Name** and click the **New** button: 
 
-	[ ![](intro-to-message-app-extensions-images/browser01w.png "Enter StickerBrowserViewController for the Name")](intro-to-message-app-extensions-images/browser01.png)
+	[![](intro-to-message-app-extensions-images/browser01w.png "Enter StickerBrowserViewController for the Name")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. Open the `StickerBrowserViewController.cs` file for editing.
 
 -----

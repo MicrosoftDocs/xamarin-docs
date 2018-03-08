@@ -58,7 +58,7 @@ and rebuilding according to these steps:
    message. For example, the library and version folder for the above
    error message is located at **Android.Support.v4\\22.2.1**:
 
-    [![Example folder location for 22.2.1 support library](resolving-library-installation-errors-images/01-example-location.png)](resolving-library-installation-errors-images/01-example-location.png)
+    [![Example folder location for 22.2.1 support library](resolving-library-installation-errors-images/01-example-location.png)](resolving-library-installation-errors-images/01-example-location.png#lightbox)
 
 3. Delete the contents of the version folder. Be sure to remove the
    **.zip** file as well as the **content** and **embedded**
@@ -67,7 +67,7 @@ and rebuilding according to these steps:
    (**content**, **embedded**, and **android_m2repository_r16.zip**)
    are to be deleted:
 
-    [![Example contents of 22.2.1 support library folder](resolving-library-installation-errors-images/02-example-folder-vs.png)](resolving-library-installation-errors-images/02-example-folder-vs.png)
+    [![Example contents of 22.2.1 support library folder](resolving-library-installation-errors-images/02-example-folder-vs.png)](resolving-library-installation-errors-images/02-example-folder-vs.png#lightbox)
 
    Note that it is important to delete the *entire* contents of this
    folder. Although this folder may initially contain the "missing"
@@ -176,7 +176,7 @@ but you are able to download the archive using a different computer.
     **android\_m2repository\_r16.zip** is downloaded and renamed to the MD5 hash
     of its download URL on Windows:
 
-    [![Example of the r16.zip repository being renamed to 0595E577D19D31708195A83087881EE6.zip](resolving-library-installation-errors-images/03-md5-rename-vs.png)](resolving-library-installation-errors-images/03-md5-rename-vs.png)
+    [![Example of the r16.zip repository being renamed to 0595E577D19D31708195A83087881EE6.zip](resolving-library-installation-errors-images/03-md5-rename-vs.png)](resolving-library-installation-errors-images/03-md5-rename-vs.png#lightbox)
 
 
 If this procedure does not resolve the build error, you must 
@@ -206,7 +206,7 @@ its contents:
     As described earlier, you must delete the entire contents of this 
     directory:
 
-    [![Deleting content, embedded, and android_m2repository folders from the 23.1.1.0 folder](resolving-library-installation-errors-images/04-delete-contents-vs.png)](resolving-library-installation-errors-images/04-delete-contents-vs.png)
+    [![Deleting content, embedded, and android_m2repository folders from the 23.1.1.0 folder](resolving-library-installation-errors-images/04-delete-contents-vs.png)](resolving-library-installation-errors-images/04-delete-contents-vs.png#lightbox)
 
 2.  Download the **android\_m2repository\_r_nn_.zip** file from Google that 
     corresponds to the error message (see the table in the previous section
@@ -217,7 +217,7 @@ its contents:
     name of the **.zip** archive. Within this directory, you should 
     find a subdirectory called **m2repository**: 
 
-    [![m2repository folder found in extracted zip archive](resolving-library-installation-errors-images/05-m2repository-vs.png)](resolving-library-installation-errors-images/05-m2repository-vs.png)
+    [![m2repository folder found in extracted zip archive](resolving-library-installation-errors-images/05-m2repository-vs.png)](resolving-library-installation-errors-images/05-m2repository-vs.png#lightbox)
 
 4.  In the versioned library directory that you purged in step 1, 
     re-create the **content** and **embedded** subdirectories. For 
@@ -225,23 +225,23 @@ its contents:
     **embedded** subdirectories being created in the **23.1.1.0** folder 
     for **android\_m2repository\_r25.zip**: 
 
-    [![Create content and embedded folders in the 23.1.1.0 folder](resolving-library-installation-errors-images/06-recreate-folders-vs.png)](resolving-library-installation-errors-images/06-recreate-folders-vs.png)
+    [![Create content and embedded folders in the 23.1.1.0 folder](resolving-library-installation-errors-images/06-recreate-folders-vs.png)](resolving-library-installation-errors-images/06-recreate-folders-vs.png#lightbox)
 
 5.  Copy **m2repository** from the extracted **.zip** into the **content** directory
     that you created in the previous step: 
 
-    [![Screenshot of m2repository copied to 23.1.1.0/content folder](resolving-library-installation-errors-images/07-copied-m2repository-vs.png)](resolving-library-installation-errors-images/07-copied-m2repository-vs.png)
+    [![Screenshot of m2repository copied to 23.1.1.0/content folder](resolving-library-installation-errors-images/07-copied-m2repository-vs.png)](resolving-library-installation-errors-images/07-copied-m2repository-vs.png#lightbox)
 
 6.  In the extracted **.zip** directory, browse to 
     **m2repository\\com\\android\\support\\support-v4** and open the folder corresponding
     the version number created above (in this example, **23.1.1**):
 
-    [![Example listing of files contained in the support-v4/23.1.1 folder](resolving-library-installation-errors-images/08-zip-contents-vs.png)](resolving-library-installation-errors-images/08-zip-contents-vs.png)
+    [![Example listing of files contained in the support-v4/23.1.1 folder](resolving-library-installation-errors-images/08-zip-contents-vs.png)](resolving-library-installation-errors-images/08-zip-contents-vs.png#lightbox)
 
 7.  Copy all of the files in this folder to the **embedded** directory created in 
     step 4:
 
-    [![Example of files copied to the 23.1.1.0/embedded folder](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png)
+    [![Example of files copied to the 23.1.1.0/embedded folder](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png#lightbox)
 
 8.  Verify that all files are copied over. The **embedded** directory should now contain
     files such as **.jar**, **.aar**, and **.pom**.

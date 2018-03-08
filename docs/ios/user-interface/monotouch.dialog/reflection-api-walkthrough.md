@@ -36,7 +36,7 @@ Using the Reflection API is as simple as:
 Let’s look at an example to illustrate how to use the Reflection API. In
 this example, we’ll build a simple data entry screen as shown below:
 
- [ ![](reflection-api-walkthrough-images/01-expense-entry.png "In this example, we'll build a simple data entry screen as shown here")](reflection-api-walkthrough-images/01-expense-entry.png)
+ [![](reflection-api-walkthrough-images/01-expense-entry.png "In this example, we'll build a simple data entry screen as shown here")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
 
  <a name="Creating_a_Class_with_MT.D_Attributes" />
 
@@ -138,7 +138,7 @@ window.RootViewController = nav;
 Now when we run the application, the title appears in the `UINavigationController’s` navigation bar as the screenshot below
 shows:
 
- [ ![](reflection-api-walkthrough-images/02-create-task.png "Now when we run the application, the title appears in the UINavigationControllers navigation bar")](reflection-api-walkthrough-images/02-create-task.png)
+ [![](reflection-api-walkthrough-images/02-create-task.png "Now when we run the application, the title appears in the UINavigationControllers navigation bar")](reflection-api-walkthrough-images/02-create-task.png#lightbox)
 
 By including a `UINavigationController`, we can now take advantage
 of other features of MT.D for which navigation is necessary. For example, we can
@@ -166,12 +166,12 @@ public class Expense
 Running the application now results in a new row in the table for the
 category as shown:
 
- [ ![](reflection-api-walkthrough-images/03-set-details.png "Running the application now results in a new row in the table for the category as shown")](reflection-api-walkthrough-images/03-set-details.png)
+ [![](reflection-api-walkthrough-images/03-set-details.png "Running the application now results in a new row in the table for the category as shown")](reflection-api-walkthrough-images/03-set-details.png#lightbox)
 
 Selecting the row results in the application navigating to a new screen with
 rows corresponding to the enumeration, as shown below:
 
- [ ![](reflection-api-walkthrough-images/04-set-category.png "Selecting the row results in the application navigating to a new screen with rows corresponding to the enumeration")](reflection-api-walkthrough-images/04-set-category.png)
+ [![](reflection-api-walkthrough-images/04-set-category.png "Selecting the row results in the application navigating to a new screen with rows corresponding to the enumeration")](reflection-api-walkthrough-images/04-set-category.png#lightbox)
 
  <a name="Summary" />
 

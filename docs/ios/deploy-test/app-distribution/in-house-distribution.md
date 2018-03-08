@@ -52,15 +52,15 @@ It is important to note that expired certificates cannot be renewed, and instead
 3. Click the **+** button to create a new Certificate.
 4. Under the *Production* heading, select **In-House and Ad Hoc**:
 
-   [ ![](in-house-distribution-images/createcertmanually01.png "Select In-House and Ad Hoc")](in-house-distribution-images/createcertmanually01.png)
+   [![](in-house-distribution-images/createcertmanually01.png "Select In-House and Ad Hoc")](in-house-distribution-images/createcertmanually01.png#lightbox)
 
 5. Click Continue, and follow the instructions to create a Certificate Signing Request via Keychain Access:
 
-   [ ![](in-house-distribution-images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](in-house-distribution-images/createcertmanually02.png)
+   [![](in-house-distribution-images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](in-house-distribution-images/createcertmanually02.png#lightbox)
 
 6. Once you have created your CSR as instructed, click Continue, and upload your CSR to the Member Center:
 
-   [ ![](in-house-distribution-images/createcertmanually03.png "Upload the CSR to the Member Center")](in-house-distribution-images/createcertmanually03.png)
+   [![](in-house-distribution-images/createcertmanually03.png "Upload the CSR to the Member Center")](in-house-distribution-images/createcertmanually03.png#lightbox)
 
 7. Click Generate to create your certificate.
 8. Download the completed certificate and double-click on the file to install it.
@@ -70,15 +70,15 @@ Alternatively, it is possible to request a Certificate via the Preferences dialo
 
 1. Select your team, and click *View Details*:
 
-	[ ![](in-house-distribution-images/selectteam.png "Select your team")](in-house-distribution-images/selectteam.png)
+	[![](in-house-distribution-images/selectteam.png "Select your team")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Next, click the **Create** button next to **iOS Distribution Certificate**:
 
-   [ ![](in-house-distribution-images/selectcert.png "Create the iOS Distribution Certificate")](in-house-distribution-images/selectcert.png)
+   [![](in-house-distribution-images/selectcert.png "Create the iOS Distribution Certificate")](in-house-distribution-images/selectcert.png#lightbox)
 
 2.   Next, click the **plus (+)** button and select **iOS App Store**:
 
-   [ ![](in-house-distribution-images/selectcert.png "Select iOS App Store")](in-house-distribution-images/selectcert.png)
+   [![](in-house-distribution-images/selectcert.png "Select iOS App Store")](in-house-distribution-images/selectcert.png#lightbox)
 
 <a name="profile" />
 
@@ -101,23 +101,23 @@ Once you have the required components needed for creating a Distribution Profile
 
 1. Return to the Apple Provisioning Portal and select **Provisioning** > **Distribution**:
 
-   [![](in-house-distribution-images/distribute01.png "Select Provisioning > Distribution")](in-house-distribution-images/distribute01.png)
+   [![](in-house-distribution-images/distribute01.png "Select Provisioning > Distribution")](in-house-distribution-images/distribute01.png#lightbox)
 
 2. Click the **+** button and select the type of Distribution Profile that you want to create as **In-House**:
 
-   [![](in-house-distribution-images/distribute02.png "Create an In-House Distribution Profile")](in-house-distribution-images/distribute02.png)
+   [![](in-house-distribution-images/distribute02.png "Create an In-House Distribution Profile")](in-house-distribution-images/distribute02.png#lightbox)
 
 3. Click the **Continue** button and select App ID from the dropdown list that you want to create a Distribution Profile for:
 
-   [![](in-house-distribution-images/distribute03.png "Select App ID from the dropdown list")](in-house-distribution-images/distribute03.png)
+   [![](in-house-distribution-images/distribute03.png "Select App ID from the dropdown list")](in-house-distribution-images/distribute03.png#lightbox)
 
 4. Click the **Continue** button and select distribution certificate required to sign the application:
 
-   [![](in-house-distribution-images/distribute04.png "Select distribution certificate required to sign the application")](in-house-distribution-images/distribute04.png)
+   [![](in-house-distribution-images/distribute04.png "Select distribution certificate required to sign the application")](in-house-distribution-images/distribute04.png#lightbox)
 
 6. Click the **Continue** button and enter a **Name** for the new Distribution Profile:
 
-   [![](in-house-distribution-images/distribute06.png "Enter a Name for the new Distribution Profile")](in-house-distribution-images/distribute06.png)
+   [![](in-house-distribution-images/distribute06.png "Enter a Name for the new Distribution Profile")](in-house-distribution-images/distribute06.png#lightbox)
 
 7. Click the **Generate** button to create the new profile and finalize the process.
 

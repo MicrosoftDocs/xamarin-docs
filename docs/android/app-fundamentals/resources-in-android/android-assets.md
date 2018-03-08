@@ -42,7 +42,7 @@ Visual Studio should have set the **Build Action** for this file to
 Visual Studio for Mac should have set the **Build Action** for this file to
 **AndroidAsset**:
 
-[![Setting the build action to AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png)
+[![Setting the build action to AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
 
 -----
 

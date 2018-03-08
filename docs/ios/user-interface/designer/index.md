@@ -17,13 +17,13 @@ _The Xamarin Designer for iOS is a visual designer for the iOS Storyboard and In
 # [Visual Studio for Mac](#tab/vsmac)
 
 
-[![](images/designer-new1.png "The iOS Designer")](images/designer-new1.png)
+[![](images/designer-new1.png "The iOS Designer")](images/designer-new1.png#lightbox)
 
 
 # [Visual Studio](#tab/vswin)
 
 
-[![](images/designer-vs.png "The iOS Designer")](images/designer-vs.png)
+[![](images/designer-vs.png "The iOS Designer")](images/designer-vs.png#lightbox)
 
 
 -----

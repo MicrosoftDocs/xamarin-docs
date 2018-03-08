@@ -63,7 +63,7 @@ The [`HelloViewRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/
 
 All the `ViewRenderer` derivatives contain an `ExportRenderer` attribute on the assembly level that associates the `HelloView` class with the particular `HelloViewRenderer` class. This is how Xamarin.Forms locates renderers in the individual platform projects:
 
-[![Triple screenshot of Hello View](images/ch27fg02-small.png "Custom Renderers")](images/ch27fg02-large.png "Custom Renderers")
+[![Triple screenshot of Hello View](images/ch27fg02-small.png "Custom Renderers")](images/ch27fg02-large.png#lightbox "Custom Renderers")
 
 ## Renderers and properties
 
@@ -86,7 +86,7 @@ The `OnElementPropertyChanged` override can therefore transfer the `Color` value
 
 The [**EllipseDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/EllipseDemo) class displays several of these `EllipseView` objects:
 
-[![Triple screenshot of Ellipse Demo](images/ch27fg03-small.png "EllipseView Custom Renderers")](images/ch27fg03-large.png "EllipseView Custom Renderers")
+[![Triple screenshot of Ellipse Demo](images/ch27fg03-small.png "EllipseView Custom Renderers")](images/ch27fg03-large.png#lightbox "EllipseView Custom Renderers")
 
 The [**BouncingBall**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/BouncingBall) bounces an `EllipseView` off the sides of the screen.
 

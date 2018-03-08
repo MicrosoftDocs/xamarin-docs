@@ -78,7 +78,7 @@ To expose UI elements to C# code through outlets and actions, the Xamarin.Mac ap
 2. Select the window controller on the design surface.
 3. Switch to the **Identity Inspector** and enter "WindowController" as the **Class Name**: 
 
-    [![Setting a custom class name for the window controller](toolbar-images/windowcontroller01.png "Setting a custom class name for the window controller")](toolbar-images/windowcontroller01-large.png) 
+    [![Setting a custom class name for the window controller](toolbar-images/windowcontroller01.png "Setting a custom class name for the window controller")](toolbar-images/windowcontroller01-large.png#lightbox) 
 
 4. Save your changes and return to Visual Studio for Mac to sync.
 5. A **WindowController.cs** file will be added to your project in the **Solution Pad** in Visual Studio for Mac: 
@@ -88,7 +88,7 @@ To expose UI elements to C# code through outlets and actions, the Xamarin.Mac ap
 6. Reopen the storyboard in Xcode's Interface Builder.
 7. The **WindowController.h** file will be available for use: 
 
-    [![The WindowController.h file](toolbar-images/windowcontroller03.png "The WindowController.h file")](toolbar-images/windowcontroller03-large.png)
+    [![The WindowController.h file](toolbar-images/windowcontroller03.png "The WindowController.h file")](toolbar-images/windowcontroller03-large.png#lightbox)
 
 ## Creating and maintaining toolbars in Xcode
 
@@ -184,7 +184,7 @@ From here, use Interface Builder to configure the search field and expose it to 
 
 Several Cocoa UI elements interact with standard toolbar items by default. For example, drag a **Text View** onto the application's window and position it to fill the content area:
 
-[![Adding a text view to the application](toolbar-images/edit09.png "Adding a text view to the application")](toolbar-images/edit09-large.png)
+[![Adding a text view to the application](toolbar-images/edit09.png "Adding a text view to the application")](toolbar-images/edit09-large.png#lightbox)
 
 Save the document, return to Visual Studio for Mac to sync with Xcode, run the application, enter some text, select it, and click the **Colors** toolbar item. Notice that the text view automatically works with the color picker:
 
@@ -197,7 +197,7 @@ Using an **Image Toolbar Item**, any bitmap image added to the **Resources** fol
 1. In Visual Studio for Mac, in the **Solution Pad**, right-click the **Resources** folder and select **Add** > **Add Files**.
 2. From the **Add Files** dialog box, navigate to the desired images, select them and click the **Open** button: 
 
-    [![Selecting images to add](toolbar-images/edit11.png "Selecting images to add")](toolbar-images/edit11-large.png)
+    [![Selecting images to add](toolbar-images/edit11.png "Selecting images to add")](toolbar-images/edit11-large.png#lightbox)
 
 3. Select **Copy**, check **Use the same action for all selected files**, and click **OK**:
 
@@ -221,7 +221,7 @@ Using an **Image Toolbar Item**, any bitmap image added to the **Resources** fol
 
 9. Drag a **Separator Toolbar Item** from the **Library Inspector** to the toolbar's **Allowed Toolbar Items** area: 
 
-    [![A Separator Toolbar Item added to the Allowed Toolbar Items area](toolbar-images/edit17.png "A Separator Toolbar Item added to the Allowed Toolbar Items area")](toolbar-images/edit17-large.png)
+    [![A Separator Toolbar Item added to the Allowed Toolbar Items area](toolbar-images/edit17.png "A Separator Toolbar Item added to the Allowed Toolbar Items area")](toolbar-images/edit17-large.png#lightbox)
 
 10. Drag the separator item and the "Trash" item to the **Default Toolbar Items** area and set the order of the toolbar items from left to right as follows (Colors, Fonts, Separator, Trash, Flexible Space, Print): 
 
@@ -240,7 +240,7 @@ To access a toolbar or toolbar item in code, it must be attached to an outlet or
 1. In the **Solution Pad**, double-click **Main.storyboard** to open it in Xcode.
 2. Ensure that the custom class "WindowController" has been assigned to the main window controller in the **Identity Inspector**:
 
-    [![Using the Identity Inspector to set a custom class for the window controller](toolbar-images/edit20a.png "Using the Identity Inspector to set a custom class for the window controller")](toolbar-images/edit20a-large.png)
+    [![Using the Identity Inspector to set a custom class for the window controller](toolbar-images/edit20a.png "Using the Identity Inspector to set a custom class for the window controller")](toolbar-images/edit20a-large.png#lightbox)
 
 3. Next, select the toolbar item in the **Interface Hierarchy**: 
 
@@ -249,11 +249,11 @@ To access a toolbar or toolbar item in code, it must be attached to an outlet or
 4. Open the **Assistant View**, select the **WindowController.h** file, and control-drag from the toolbar item to the **WindowController.h** file.
 5. Set the **Connection** type to **Action**, enter "trashDocument" for the **Name**, and click the **Connect** button: 
 
-    [![Configuring an action for a toolbar item](toolbar-images/edit23.png "Configuring an action for a toolbar item")](toolbar-images/edit23-large.png)
+    [![Configuring an action for a toolbar item](toolbar-images/edit23.png "Configuring an action for a toolbar item")](toolbar-images/edit23-large.png#lightbox)
 
 6. Expose the **Text View** as an outlet called "documentEditor" in the **ViewController.h** file: 
 
-    [![Configuring an outlet for the text view](toolbar-images/edit24.png "Configuring an outlet for the text view")](toolbar-images/edit24-large.png)
+    [![Configuring an outlet for the text view](toolbar-images/edit24.png "Configuring an outlet for the text view")](toolbar-images/edit24-large.png#lightbox)
 
 7. Save your changes and return to Visual Studio for Mac to sync with Xcode.
 

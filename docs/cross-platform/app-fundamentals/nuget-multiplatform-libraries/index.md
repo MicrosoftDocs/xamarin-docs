@@ -24,7 +24,7 @@ To use the Nugetizer 3000 in Visual Studio, please [download and run the VSIX in
 
 
 
-[ ![](images/mulitplatform-library-sml.png "Create new Multiplatform Library window")](images/mulitplatform-library.png)
+[![](images/mulitplatform-library-sml.png "Create new Multiplatform Library window")](images/mulitplatform-library.png#lightbox)
 
 Once configured, every build of the project outputs a complete NuGet package, which
 can be used to share code internally with other apps or uploaded to [NuGet.org](https://www.nuget.org).

@@ -27,11 +27,11 @@ Xamarin iOS and Android projects.
 
 2. Choose **Multiplatform Library** from the **Multiplatform > Library** section:
 
-  [ ![](platform-specific-images/mulitplatform-library-sml.png "Configure multi-platform library for a single code base")](platform-specific-images/multiplatform-library.png)
+  [![](platform-specific-images/mulitplatform-library-sml.png "Configure multi-platform library for a single code base")](platform-specific-images/multiplatform-library.png#lightbox)
 
 3. Enter a **Name** and **Description**, and choose **Platform specific**:
 
-  [ ![](platform-specific-images/specific-configure-sml.png "Configure platform-specific library for iOS and Android")](platform-specific-images/specific-configure.png)
+  [![](platform-specific-images/specific-configure-sml.png "Configure platform-specific library for iOS and Android")](platform-specific-images/specific-configure.png#lightbox)
 
 4. Complete the wizard. The following projects are added to the solution:
 
@@ -43,7 +43,7 @@ Xamarin iOS and Android projects.
 5. Right-click on the NuGet project and choose **Options**, then open the **NuGet Package > Metadata** section and enter the [required metadata](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)
   (as well as any optional metadata):
 
-  [ ![](platform-specific-images/specific-metadata-sml.png "Enter required metadata")](platform-specific-images/specific-metadata.png)
+  [![](platform-specific-images/specific-metadata-sml.png "Enter required metadata")](platform-specific-images/specific-metadata.png#lightbox)
 
 6. Also in the **Project Options** window, open the **Reference Assemblies** section and choose
   which PCL profiles the shared library will support via "bait and switch":

@@ -24,7 +24,7 @@ Start by reading
 to determine whether your app is suitable for a complication. There are 5 `CLKComplicationFamily` types
 of display to choose from:
 
-[ ![](complications-images/all-complications-sml.png "The 5 CLKComplicationFamily types available: Circular Small, Modular Small, Modular Large, Utilitarian Small, Utilitarian Large")](complications-images/all-complications.png)
+[![](complications-images/all-complications-sml.png "The 5 CLKComplicationFamily types available: Circular Small, Modular Small, Modular Large, Utilitarian Small, Utilitarian Large")](complications-images/all-complications.png#lightbox)
 
 Apps can implement just one style, or all five, depending on the data being displayed.
 You can also support Time Travel, providing values
@@ -91,7 +91,7 @@ The watch extension's **Info.plist** file should specify the name of the
 `CLKComplicationDataSource` and which complication families you wish to
 support:
 
-[ ![](complications-images/complications-config-sml.png "The complication family types")](complications-images/complications-config.png)
+[![](complications-images/complications-config-sml.png "The complication family types")](complications-images/complications-config.png#lightbox)
 
 The **Data Source Class** entry list will show class names that subclass
 `CLKComplicationDataSource` subclass that includes your complication logic.

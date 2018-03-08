@@ -16,7 +16,7 @@ attached to a particular view. The following illustration shows a popup
 menu presented from a button, with the second item highlighted just as
 it is selected:
 
- [ ![Example of a PopopMenu with three three items](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png)
+ [![Example of a PopopMenu with three three items](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png#lightbox)
 
 Android 4 added a couple of new features to `PopupMenu` that make
 it a bit easier to work with, namely:
@@ -28,7 +28,7 @@ Let's take a look at these improvements. In this example, we have a single
 Activity that contains a button. When the user clicks the button, a popup menu
 is displayed as shown below:
 
- [ ![Example of app running in an emulator with button and 3-item pop-up menu](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png)
+ [![Example of app running in an emulator with button and 3-item pop-up menu](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png#lightbox)
 
 
 ## Creating a Popup Menu

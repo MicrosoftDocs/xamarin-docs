@@ -34,15 +34,15 @@ A view controller has two parts: a visual representation in the iOS Designer and
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![A view controller in the iOS Designer](introduction-images/1-storyboardwithviewcontroller-vsmac.png "A view controller in the iOS Designer")](introduction-images/1-storyboardwithviewcontroller-vsmac-large.png)
+[![A view controller in the iOS Designer](introduction-images/1-storyboardwithviewcontroller-vsmac.png "A view controller in the iOS Designer")](introduction-images/1-storyboardwithviewcontroller-vsmac-large.png#lightbox)
 
-[![The code for a view controller](introduction-images/2-viewcontrollercode-vsmac.png "The code for a view controller")](introduction-images/2-viewcontrollercode-vsmac-large.png)
+[![The code for a view controller](introduction-images/2-viewcontrollercode-vsmac.png "The code for a view controller")](introduction-images/2-viewcontrollercode-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[![A view controller in the iOS Designer](introduction-images/1-storyboardwithviewcontroller-vs.png "A view controller in the iOS Designer")](introduction-images/1-storyboardwithviewcontroller-vs-large.png)
+[![A view controller in the iOS Designer](introduction-images/1-storyboardwithviewcontroller-vs.png "A view controller in the iOS Designer")](introduction-images/1-storyboardwithviewcontroller-vs-large.png#lightbox)
 
-[![The code for a view controller](introduction-images/2-viewcontrollercode-vs.png "The code for a view controller")](introduction-images/2-viewcontrollercode-vs-large.png)
+[![The code for a view controller](introduction-images/2-viewcontrollercode-vs.png "The code for a view controller")](introduction-images/2-viewcontrollercode-vs-large.png#lightbox)
 
 -----
 
@@ -50,11 +50,11 @@ In its default state, a view controller doesn't provide any functionality; it mu
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![A view controller containing a button](introduction-images/3-viewcontrollerwithbutton-vsmac.png "A view controller containing a button")](introduction-images/3-viewcontrollerwithbutton-vsmac-large.png)
+[![A view controller containing a button](introduction-images/3-viewcontrollerwithbutton-vsmac.png "A view controller containing a button")](introduction-images/3-viewcontrollerwithbutton-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[![A view controller containing a button](introduction-images/3-viewcontrollerwithbutton-vs.png "A view controller containing a button")](introduction-images/3-viewcontrollerwithbutton-vs-large.png)
+[![A view controller containing a button](introduction-images/3-viewcontrollerwithbutton-vs.png "A view controller containing a button")](introduction-images/3-viewcontrollerwithbutton-vs-large.png#lightbox)
 
 -----
 
@@ -64,13 +64,13 @@ Some controls, such as labels containing static text, can be added to the view c
 
 In order to access and manipulate the button in code, it must have a unique identifier. Provide a unique identifier by selecting the button, opening the **Properties Pad**, and setting its **Name** field to a value such as "SubmitButton":
 
-[![Setting a button's name in the Properties Pad](introduction-images/4-settingbuttonname-vsmac.png "Setting a button's name in the Properties Pad")](introduction-images/4-settingbuttonname-vsmac-large.png)
+[![Setting a button's name in the Properties Pad](introduction-images/4-settingbuttonname-vsmac.png "Setting a button's name in the Properties Pad")](introduction-images/4-settingbuttonname-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
 In order to access and manipulate the button in code, it must have a unique identifier. Provide a unique identifier by selecting the button, opening the **Properties Window**, and setting its **Name** field to a value such as "SubmitButton":
 
-[![Setting a button's name in the Properties Window](introduction-images/4-settingbuttonname-vs.png "Setting a button's name in the Properties Window")](introduction-images/4-settingbuttonname-vs-large.png)
+[![Setting a button's name in the Properties Window](introduction-images/4-settingbuttonname-vs.png "Setting a button's name in the Properties Window")](introduction-images/4-settingbuttonname-vs-large.png#lightbox)
 
 -----
 
@@ -80,13 +80,13 @@ Now that the button has a name, it can be accessed in code. But how does this wo
 
 In the **Solution Pad**, navigating to **ViewController.cs** and clicking on the disclosure indicator reveals that the view controller's `ViewController` class definition spans two files, each of which contains a [partial class](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) definition:
 
-[![The two files that make up the ViewController class: ViewController.cs and ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "The two files that make up the ViewController class: ViewController.cs and ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png)
+[![The two files that make up the ViewController class: ViewController.cs and ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "The two files that make up the ViewController class: ViewController.cs and ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
 In the **Solution Explorer**, navigating to **ViewController.cs** and clicking on the disclosure indicator reveals that the view controller's `ViewController` class definition spans two files, each of which contains a [partial class](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) definition:
 
-[![The two files that make up the ViewController class: ViewController.cs and ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "The two files that make up the ViewController class: ViewController.cs and ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png)
+[![The two files that make up the ViewController class: ViewController.cs and ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "The two files that make up the ViewController class: ViewController.cs and ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
 
 -----
 
@@ -121,11 +121,11 @@ The following screenshot illustrates that IntelliSense now recognizes the `Submi
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![IntelliSense recognizing the SubmitButton reference](introduction-images/6-submitbuttonintellisense-vsmac.png "IntelliSense recognizing the SubmitButton reference")](introduction-images/6-submitbuttonintellisense-vsmac-large.png)
+[![IntelliSense recognizing the SubmitButton reference](introduction-images/6-submitbuttonintellisense-vsmac.png "IntelliSense recognizing the SubmitButton reference")](introduction-images/6-submitbuttonintellisense-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[![IntelliSense recognizing the SubmitButton reference](introduction-images/6-submitbuttonintellisense-vs.png "IntelliSense recognizing the SubmitButton reference")](introduction-images/6-submitbuttonintellisense-vs-large.png)
+[![IntelliSense recognizing the SubmitButton reference](introduction-images/6-submitbuttonintellisense-vs.png "IntelliSense recognizing the SubmitButton reference")](introduction-images/6-submitbuttonintellisense-vs-large.png#lightbox)
 
 -----
 
@@ -143,13 +143,13 @@ This section introduces the parts of the iOS Designer and provides a tour of its
 
 Xamarin.iOS projects created with Visual Studio for Mac include a storyboard. To view the contents of a storyboard, double-click the .storyboard file in the **Solution Pad**:
 
-[![A storyboard open in the iOS Designer](introduction-images/7-storyboardopen-vsmac.png "A storyboard open in the iOS Designer")](introduction-images/7-storyboardopen-vsmac-large.png)
+[![A storyboard open in the iOS Designer](introduction-images/7-storyboardopen-vsmac.png "A storyboard open in the iOS Designer")](introduction-images/7-storyboardopen-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
 Most Xamarin.iOS projects created with Visual Studio 2015 or 2017 include a storyboard. To view the contents of a storyboard, double-click the .storyboard file in the **Solution Explorer**:
 
-[![A storyboard open in the iOS Designer](introduction-images/7-storyboardopen-vs.png "A storyboard open in the iOS Designer")](introduction-images/7-storyboardopen-vs-large.png)
+[![A storyboard open in the iOS Designer](introduction-images/7-storyboardopen-vs.png "A storyboard open in the iOS Designer")](introduction-images/7-storyboardopen-vs-large.png#lightbox)
 
 -----
 
@@ -161,7 +161,7 @@ The iOS Designer has six primary sections:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Sections of the iOS Designer](introduction-images/8-sixpartsofiosdesigner-vsmac.png "Sections of the iOS Designer")](introduction-images/8-sixpartsofiosdesigner-vsmac-large.png)
+[![Sections of the iOS Designer](introduction-images/8-sixpartsofiosdesigner-vsmac.png "Sections of the iOS Designer")](introduction-images/8-sixpartsofiosdesigner-vsmac-large.png#lightbox)
 
 1. **Design Surface** – The iOS Designer's primary workspace. Shown in the document area, it enables the visual construction of user interfaces.
 2. **Constraints Toolbar** – Allows for switching between frame editing mode and constraint editing mode, two different ways to position elements in a user interface.
@@ -172,7 +172,7 @@ The iOS Designer has six primary sections:
 
 # [Visual Studio](#tab/vswin)
 
-[![Sections of the iOS Designer](introduction-images/8-sixpartsofiosdesigner-vs.png "Sections of the iOS Designer")](introduction-images/8-sixpartsofiosdesigner-vs-large.png)
+[![Sections of the iOS Designer](introduction-images/8-sixpartsofiosdesigner-vs.png "Sections of the iOS Designer")](introduction-images/8-sixpartsofiosdesigner-vs-large.png#lightbox)
 
 1. **Design Surface** – The iOS Designer's primary workspace. Shown in the document area, it enables the visual construction of user interfaces.
 2. **Constraints Toolbar** – Allows for switching between frame editing mode and constraint editing mode, two different ways to position elements in a user interface.
@@ -207,7 +207,7 @@ The blue dotted line in the example above provides a horizontal center visual al
 
 A context menu is available both on the design surface and in the **Document Outline**. This menu provides commands for the the selected control and its parent, which is helpful when working with views in a nested hierarchy:
 
-[![The context menu on the design surface](introduction-images/10-contextmenudesignsurface-vsmac.png "The context menu on the design surface")](introduction-images/10-contextmenudesignsurface-vsmac-large.png)
+[![The context menu on the design surface](introduction-images/10-contextmenudesignsurface-vsmac.png "The context menu on the design surface")](introduction-images/10-contextmenudesignsurface-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
@@ -217,11 +217,11 @@ A context menu is available both on the design surface and in the **Document Out
 
 # [Visual Studio for Mac](#tab/vsmac)
  
-[![The contraints toolbar](introduction-images/11-constraintstoolbar-vsmac.png "The constraints toolbar")](introduction-images/11-constraintstoolbar-vsmac-large.png)
+[![The contraints toolbar](introduction-images/11-constraintstoolbar-vsmac.png "The constraints toolbar")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[![The contraints toolbar](introduction-images/11-constraintstoolbar-vs.png "The constraints toolbar")](introduction-images/11-constraintstoolbar-vs-large.png)
+[![The contraints toolbar](introduction-images/11-constraintstoolbar-vs.png "The constraints toolbar")](introduction-images/11-constraintstoolbar-vs-large.png#lightbox)
 
 -----
 
@@ -268,11 +268,11 @@ The bottom toolbar provides a way to select the device, orientation, and zoom us
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![The bottom toolbar, used to select a device and orientation for the design surface](introduction-images/13-bottomtoolbar-vsmac.png "The bottom toolbar, used to select a device and orientation for the design surface")](introduction-images/13-bottomtoolbar-vsmac-large.png)
+[![The bottom toolbar, used to select a device and orientation for the design surface](introduction-images/13-bottomtoolbar-vsmac.png "The bottom toolbar, used to select a device and orientation for the design surface")](introduction-images/13-bottomtoolbar-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[![The bottom toolbar, used to select a device and orientation for the design surface](introduction-images/13-bottomtoolbar-vs.png "The bottom toolbar, used to select a device and orientation for the design surface")](introduction-images/13-bottomtoolbar-vs-large.png)
+[![The bottom toolbar, used to select a device and orientation for the design surface](introduction-images/13-bottomtoolbar-vs.png "The bottom toolbar, used to select a device and orientation for the design surface")](introduction-images/13-bottomtoolbar-vs-large.png#lightbox)
 
 -----
 
@@ -282,11 +282,11 @@ When expanded, the bottom toolbar displays all devices, orientations, and/or ada
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![The bottom toolbar, expanded to show devices and orientations](introduction-images/14-bottomtoolbarexpanded-vsmac.png "The bottom toolbar, expanded to show devices and orientations")](introduction-images/14-bottomtoolbarexpanded-vsmac-large.png)
+[![The bottom toolbar, expanded to show devices and orientations](introduction-images/14-bottomtoolbarexpanded-vsmac.png "The bottom toolbar, expanded to show devices and orientations")](introduction-images/14-bottomtoolbarexpanded-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[![The bottom toolbar, expanded to show devices and orientations](introduction-images/14-bottomtoolbarexpanded-vs.png "The bottom toolbar, expanded to show devices and orientations")](introduction-images/14-bottomtoolbarexpanded-vs-large.png)
+[![The bottom toolbar, expanded to show devices and orientations](introduction-images/14-bottomtoolbarexpanded-vs.png "The bottom toolbar, expanded to show devices and orientations")](introduction-images/14-bottomtoolbarexpanded-vs-large.png#lightbox)
 
 -----
 
@@ -299,11 +299,11 @@ When [size classes](~/ios/user-interface/storyboards/unified-storyboards.md#size
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![The bottom toolbar being used to vary an interface by size class](introduction-images/15-edittraitsbutton-vsmac.png "The bottom toolbar being used to vary an interface by size class")](introduction-images/15-edittraitsbutton-vsmac-large.png)
+[![The bottom toolbar being used to vary an interface by size class](introduction-images/15-edittraitsbutton-vsmac.png "The bottom toolbar being used to vary an interface by size class")](introduction-images/15-edittraitsbutton-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[![The bottom toolbar being used to vary an interface by size class](introduction-images/15-edittraitsbutton-vs.png "The bottom toolbar being used to vary an interface by size class")](introduction-images/15-edittraitsbutton-vs-large.png)
+[![The bottom toolbar being used to vary an interface by size class](introduction-images/15-edittraitsbutton-vs.png "The bottom toolbar being used to vary an interface by size class")](introduction-images/15-edittraitsbutton-vs-large.png#lightbox)
 
 -----
 
@@ -336,7 +336,7 @@ These controls adjust the zoom on the design surface. They do not affect the use
 
 Use the **Properties Pad** to edit the identity, visual styles, accessibility, and behavior of a control. The following screenshot illustrates the **Properties Pad** options for a button:
 
-[![The Properties Pad for a button](introduction-images/17-buttonpropertiespad-vsmac.png "The Properties Pad for a button")](introduction-images/17-buttonpropertiespad-vsmac-large.png)
+[![The Properties Pad for a button](introduction-images/17-buttonpropertiespad-vsmac.png "The Properties Pad for a button")](introduction-images/17-buttonpropertiespad-vsmac-large.png#lightbox)
 #### Properties Pad sections
 
 The **Properties Pad** contains three sections:
@@ -347,7 +347,7 @@ The **Properties Pad** contains three sections:
 
 Use the **Properties Window** to edit the identity, visual styles, accessibility, and behavior of a control. The following screenshot illustrates the **Properties Window** options for a button:
 
-[![The Properties Window for a button](introduction-images/17-buttonpropertieswindow-vs.png "The Properties Window for a button")](introduction-images/17-buttonpropertieswindow-vs-large.png)
+[![The Properties Window for a button](introduction-images/17-buttonpropertieswindow-vs.png "The Properties Window for a button")](introduction-images/17-buttonpropertieswindow-vs-large.png#lightbox)
 
 #### Properties Window sections
 
@@ -365,9 +365,9 @@ The **Properties Window** contains three sections:
 
 In addition to visual editing on the design surface, the iOS Designer supports editing properties in the **Properties Pad**. The available properties change based on the selected control, as illustrated by the screenshots below:
 
-[![Button properties](introduction-images/18a-buttonpropertiespad-vsmac.png "Button properties")](introduction-images/18a-buttonpropertiespad-vsmac-large.png)
+[![Button properties](introduction-images/18a-buttonpropertiespad-vsmac.png "Button properties")](introduction-images/18a-buttonpropertiespad-vsmac-large.png#lightbox)
 
-[![View controller properties](introduction-images/18b-viewcontrollerpropertiespad-vsmac.png "View controller properties")](introduction-images/18b-viewcontrollerpropertiespad-vsmac-large.png)
+[![View controller properties](introduction-images/18b-viewcontrollerpropertiespad-vsmac.png "View controller properties")](introduction-images/18b-viewcontrollerpropertiespad-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
@@ -375,9 +375,9 @@ In addition to visual editing on the design surface, the iOS Designer supports e
 
 In addition to visual editing on the design surface, the iOS Designer supports editing properties in the **Properties Window**. The available properties change based on the selected control, as illustrated by the screenshots below:
 
-[![Button properties](introduction-images/18a-buttonpropertieswindow-vs.png "Button properties")](introduction-images/18a-buttonpropertieswindow-vs-large.png)
+[![Button properties](introduction-images/18a-buttonpropertieswindow-vs.png "Button properties")](introduction-images/18a-buttonpropertieswindow-vs-large.png#lightbox)
 
-[![View controller properties](introduction-images/18b-viewcontrollerpropertieswindow-vs.png "View controller properties")](introduction-images/18b-viewcontrollerpropertieswindow-vs-large.png)
+[![View controller properties](introduction-images/18b-viewcontrollerpropertieswindow-vs.png "View controller properties")](introduction-images/18b-viewcontrollerpropertieswindow-vs-large.png#lightbox)
 
 -----
 
@@ -402,13 +402,13 @@ Many properties in the **Properties Window** show no value or a default value. H
 
 To specify custom event handlers for various events, use the **Events** tab of the **Properties Pad**. For example, in the screenshot below, a `HandleClick` method handles the button's **Touch Up Inside** event:
 
-[![The Properties Pad, with an event handler set for a button](introduction-images/19-buttonpropertiespadevents-vsmac.png "The Properties Pad, with an event handler set for a button")](introduction-images/19-buttonpropertiespadevents-vsmac-large.png)
+[![The Properties Pad, with an event handler set for a button](introduction-images/19-buttonpropertiespadevents-vsmac.png "The Properties Pad, with an event handler set for a button")](introduction-images/19-buttonpropertiespadevents-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
 To specify custom event handlers for various events, use the **Events** tab of the **Properties Window**. For example, in the screenshot below, a `HandleClick` method handles the button's **Touch Up Inside** event:
 
-[![The Properties Window, with an event handler set for a button](introduction-images/19-buttonpropertieswindowevents-vs.png "The Properties Window, with an event handler set for a button")](introduction-images/19-buttonpropertieswindowevents-vs-large.png)
+[![The Properties Window, with an event handler set for a button](introduction-images/19-buttonpropertieswindowevents-vs.png "The Properties Window, with an event handler set for a button")](introduction-images/19-buttonpropertieswindowevents-vs-large.png#lightbox)
 
 -----
 
@@ -416,13 +416,13 @@ Once an event handler has been specified, a method of the same name must be adde
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![An unrecognized selector exception](introduction-images/20-unrecognizedselector-vsmac.png "An unrecognized selector exception")](introduction-images/20-unrecognizedselector-vsmac-large.png)
+[![An unrecognized selector exception](introduction-images/20-unrecognizedselector-vsmac.png "An unrecognized selector exception")](introduction-images/20-unrecognizedselector-vsmac-large.png#lightbox)
 
 Note that after an event handler has been specified in the **Properties Pad**, the iOS Designer will immediately open the corresponding code file and offer to insert the method declaration. 
 
 # [Visual Studio](#tab/vswin)
 
-[![An unrecognized selector exception](introduction-images/20-unrecognizedselector-vs.png "An unrecognized selector exception")](introduction-images/20-unrecognizedselector-vs-large.png)
+[![An unrecognized selector exception](introduction-images/20-unrecognizedselector-vs.png "An unrecognized selector exception")](introduction-images/20-unrecognizedselector-vs-large.png#lightbox)
 
 -----
 
@@ -434,11 +434,11 @@ The iOS Designer can also display an interface's hierarchy of controls as an out
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![The Document Outline](introduction-images/21-buttonoutlineview-vsmac.png "The Document Outline")](introduction-images/21-buttonoutlineview-vsmac-large.png)
+[![The Document Outline](introduction-images/21-buttonoutlineview-vsmac.png "The Document Outline")](introduction-images/21-buttonoutlineview-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[![The Document Outline](introduction-images/21-buttonoutlineview-vs.png "The Document Outline")](introduction-images/21-buttonoutlineview-vs-large.png)
+[![The Document Outline](introduction-images/21-buttonoutlineview-vs.png "The Document Outline")](introduction-images/21-buttonoutlineview-vs-large.png#lightbox)
 
 -----
 
@@ -450,7 +450,7 @@ The selected control in the outline view stays in sync with the selected control
 
 It is possible to use the iOS Designer and Xcode Interface Builder interchangeably. To open a storyboard or a .xib file in Xcode Interface Builder, right-click on the file and select **Open With > Xcode Interface Builder**, as illustrated by the screenshot below:
 
-[![Opening a storyboard in Xcode Interface Builder](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "Opening a storyboard in Xcode Interface Builder")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png)
+[![Opening a storyboard in Xcode Interface Builder](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "Opening a storyboard in Xcode Interface Builder")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png#lightbox)
 
 After making edits in Xcode Interface Builder, save the file and return to Visual Studio for Mac. The changes will sync to the Xamarin.iOS project.
 

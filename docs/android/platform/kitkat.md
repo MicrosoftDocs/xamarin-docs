@@ -49,7 +49,7 @@ To develop Xamarin.Android applications using KitKat, you need
 installed via the Android SDK Manager, as illustrated by the following
 screenshot:
 
-[![Selecting Android 4.4 in the Android SDK Manager](kitkat-images/api19.png)](kitkat-images/api19.png)
+[![Selecting Android 4.4 in the Android SDK Manager](kitkat-images/api19.png)](kitkat-images/api19.png#lightbox)
 
 <a name="Migrating_Your_App_to_KitKat" />
 
@@ -225,11 +225,11 @@ for more.
 
 The screenshot below shows the app before the animation:
 
-[![App screenshot before animation starts](kitkat-images/trans-before.png)](kitkat-images/trans-before.png)
+[![App screenshot before animation starts](kitkat-images/trans-before.png)](kitkat-images/trans-before.png#lightbox)
 
 The screenshot below shows the app after the animation:
 
-[![App screenshot after animation completes](kitkat-images/trans-after.png)](kitkat-images/trans-after.png)
+[![App screenshot after animation completes](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
 
 You can get more control over the transition with Scenes, which are covered in the next section.
 
@@ -247,7 +247,7 @@ The static UI element housing the dynamic content is a called a
 *container* or *scene base*. The example below uses the Android
 Designer to create a `RelativeLayout` called `container`:
 
-[![Using the Android Designer to create a RelativeLayout container](kitkat-images/container.png)](kitkat-images/container.png)
+[![Using the Android Designer to create a RelativeLayout container](kitkat-images/container.png)](kitkat-images/container.png#lightbox)
 
 The sample layout also defines a button called `sceneButton` below the
 `container`. This button will trigger the transition.
@@ -335,11 +335,11 @@ sceneButton.Click += (o, e) => {
 
 The screenshot below illustrates the scene before the animation:
 
-[![Screenshot of app before the animation starts](kitkat-images/trans-after.png)](kitkat-images/trans-after.png)
+[![Screenshot of app before the animation starts](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
 
 The screenshot below illustrates the scene after the animation:
 
-[![Screenshot of app after the animation completes](kitkat-images/scene.png)](kitkat-images/scene.png)
+[![Screenshot of app after the animation completes](kitkat-images/scene.png)](kitkat-images/scene.png#lightbox)
 
 
 > [!NOTE]
@@ -357,7 +357,7 @@ A custom transition can be defined in an xml resource file in the
 `transition` directory under `Resources`, as illustrated by the
 screenshot below:
 
-[![Location of transition.xml file under Resources/transition directory](kitkat-images/resources.png)](kitkat-images/resources.png)
+[![Location of transition.xml file under Resources/transition directory](kitkat-images/resources.png)](kitkat-images/resources.png#lightbox)
 
 The following code sample defines a transition that animates for 5
 seconds and uses the
@@ -427,7 +427,7 @@ navigation bars:
 The screenshot below shows the theme above with translucent status and
 navigation bars:
 
-[![Example screenshot of app with translucent status and navigation bars](kitkat-images/theme.png)](kitkat-images/theme.png)
+[![Example screenshot of app with translucent status and navigation bars](kitkat-images/theme.png)](kitkat-images/theme.png#lightbox)
 
 <a name="user_content" />
 
@@ -485,7 +485,7 @@ StartActivityForResult (intent, save_request_code);
 Calling `StartActivityForResult` launches the SAF UI, which the user
 can then browse to choose an image:
 
-[![Example screenshot of an app using the Storage Access Framework for browing to an image](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png)
+[![Example screenshot of an app using the Storage Access Framework for browing to an image](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
 
 After the user has chosen an image, `OnActivityResult` returns the
 `Android.Net.Uri` of the chosen file. The code sample below displays
@@ -521,7 +521,7 @@ StartActivityForResult (intentCreate, write_request_code);
 The above code sample loads the SAF UI, letting the user change the
 file name and select a directory to house the new file:
 
-[![Screenshot of user changing the file name to NewDoc in the Downloads directory](kitkat-images/saf-save.png)](kitkat-images/saf-save.png)
+[![Screenshot of user changing the file name to NewDoc in the Downloads directory](kitkat-images/saf-save.png)](kitkat-images/saf-save.png#lightbox)
 
 When the user presses **Save**, `OnActivityResult` gets passed the
 `Android.Net.Uri` of the newly created file, which can be accessed with
@@ -565,7 +565,7 @@ Print app and the
 they first connect to WiFi. A user can check his or her device's Print
 settings by navigating to **Settings > System > Printing**:
 
-[![Example screenshot of the Print settings screen](kitkat-images/printing.png)](kitkat-images/printing.png)
+[![Example screenshot of the Print settings screen](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
 
 
 > [!NOTE]
@@ -591,7 +591,7 @@ on-screen HTML content.
 
 Note that loading and printing web content requires the Internet permission:
 
-[![Setting Internet permission in the app options](kitkat-images/internet.png)](kitkat-images/internet.png)
+[![Setting Internet permission in the app options](kitkat-images/internet.png)](kitkat-images/internet.png#lightbox)
 
 ##### Print Menu Item
 
@@ -600,7 +600,7 @@ The print option will typically appear in the Activity's
 The options menu lets users perform actions on an Activity. It is in
 the top right corner of the screen, and looks like this:
 
-[![Example screenshot of Print menu item dispalyed in the top right corner of the screen](kitkat-images/menu.png)](kitkat-images/menu.png)
+[![Example screenshot of Print menu item dispalyed in the top right corner of the screen](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
 
 
 Additonal menu items can be defined in the *menu*directory under
@@ -706,9 +706,9 @@ Calling `Print` loads the print UI, which lists options for the print
 job. The UI gives users the option of printing or saving the HTML
 content to a PDF, as illustrated by the screenshots below:
 
-[![Screenshot of PrintHtmlActivity displaying the Print menu](kitkat-images/print1.png)](kitkat-images/print1.png)
+[![Screenshot of PrintHtmlActivity displaying the Print menu](kitkat-images/print1.png)](kitkat-images/print1.png#lightbox)
 
-[![Screenshot of PrintHtmlActivity displaying the Save as PDF menu](kitkat-images/print2.png)](kitkat-images/print2.png)
+[![Screenshot of PrintHtmlActivity displaying the Save as PDF menu](kitkat-images/print2.png)](kitkat-images/print2.png#lightbox)
 
 <a name="hardware" />
 
@@ -736,7 +736,7 @@ registered with the application's `AndroidManifest.xml`:
 <uses-feature android:name="android.hardware.nfc.hce" />
 ```
 
-[![Setting the NFC permission in app options](kitkat-images/nfc.png)](kitkat-images/nfc.png)
+[![Setting the NFC permission in app options](kitkat-images/nfc.png)](kitkat-images/nfc.png#lightbox)
 
 To work, HCE has to be able to run in the background, and it
 has to start when the user makes an NFC transaction, even if the
@@ -836,7 +836,7 @@ steps. These are based on accelerometer and include:
 
 The screenshot below depicts the step counter in action:
 
-[![Screenshot of the SensorsActivity app displaying a step counter](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png)
+[![Screenshot of the SensorsActivity app displaying a step counter](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png#lightbox)
 
 You can create a `SensorManager` by calling
 `GetSystemService(SensorService)` and casting the result as a

@@ -53,7 +53,7 @@ these steps:
 This screenshot shows the **Developer options** screen on a device
 running Android 4.0.3:
 
-[![Developer options](set-up-device-for-development-images/developer-options-sml.png)](set-up-device-for-development-images/developer-options.png)
+[![Developer options](set-up-device-for-development-images/developer-options-sml.png)](set-up-device-for-development-images/developer-options.png#lightbox)
 
 
 ### Android 4.2 and higher
@@ -63,12 +63,12 @@ by default. To make it available, go to **Settings > About phone**, and
 tap the **Build number** item seven times to reveal the **Developer
 Options** tab:
 
-[![Build number item](set-up-device-for-development-images/about-phone-sml.png)](set-up-device-for-development-images/about-phone.png)
+[![Build number item](set-up-device-for-development-images/about-phone-sml.png)](set-up-device-for-development-images/about-phone.png#lightbox)
 
 Once the **Developer Options** tab is available under **Settings >
 System**, open it to reveal developer settings:
 
-[![Developer settings screen](set-up-device-for-development-images/developer3.png)](set-up-device-for-development-images/developer3.png)
+[![Developer settings screen](set-up-device-for-development-images/developer3.png)](set-up-device-for-development-images/developer3.png#lightbox)
 
 This is the place to enable developer options such as USB debugging and
 stay awake mode.
@@ -107,7 +107,7 @@ Install the **Google USB Driver** package by starting the Android SDK
 Manager, and expanding the **Extras** folder, as can be seen in the
 follow screenshot:
 
-[![Google USB Driver Package selected](set-up-device-for-development-images/usbdriverpackage.png)](set-up-device-for-development-images/usbdriverpackage.png)
+[![Google USB Driver Package selected](set-up-device-for-development-images/usbdriverpackage.png)](set-up-device-for-development-images/usbdriverpackage.png#lightbox)
 
 Check the **Google USB Driver** box, and click the **Install** button.
 The driver files are downloaded to the following location:

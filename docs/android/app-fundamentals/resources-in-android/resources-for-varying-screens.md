@@ -97,23 +97,23 @@ To do this in Xamarin.Android, it is necessary to first add an
 
 # [Visual Studio](#tab/vswin)
 
-[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-vs-sml.png)](resources-for-varying-screens-images/01-android-manifest-vs.png)
+[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-vs-sml.png)](resources-for-varying-screens-images/01-android-manifest-vs.png#lightbox)
 
 **AndroidManifest.xml** is added to the **Properties** directory. The file
 is then edited to include
 [supports-screens](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
 
-[![Adding supports-screens](resources-for-varying-screens-images/02-adding-supports-screens-vs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-vs.png)
+[![Adding supports-screens](resources-for-varying-screens-images/02-adding-supports-screens-vs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-xs-sml.png)](resources-for-varying-screens-images/01-android-manifest-xs.png)
+[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-xs-sml.png)](resources-for-varying-screens-images/01-android-manifest-xs.png#lightbox)
 
 **AndroidManifest.xml** is added to the **Properties** directory. The file
 is then edited to include
 [supports-screens](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
 
-[![Adding supports-screens](resources-for-varying-screens-images/02-adding-supports-screens-xs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-xs.png)
+[![Adding supports-screens](resources-for-varying-screens-images/02-adding-supports-screens-xs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-xs.png#lightbox)
 
 -----
 
@@ -226,7 +226,7 @@ tedious. As such, Google has created an online utility which can reduce
 some of the tedium involved with the creation of these bitmaps called the
 [**Android Asset Studio**](https://romannurik.github.io/AndroidAssetStudio/).
 
-[![Android Asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png)
+[![Android Asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
 
 This website will help with creation of bitmaps that target the four
 common screen densities by providing one image. Android Asset Studio

@@ -17,7 +17,7 @@ activities. The first activity will be a menu or a switchboard that
 will launch the other activities to demonstrate the various APIs. The
 following screenshot shows the main activity:
 
-[![Example screenshot with Touch Me button](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png)
+[![Example screenshot with Touch Me button](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png#lightbox)
 
 The first Activity, Touch Sample, will show how to use event handlers
 for touching the Views. The Gesture Recognizer activity will
@@ -34,7 +34,7 @@ up into sections, with each section focusing on one of the Activities.
     behaviour in the activity. If you run the application and click
     **Touch Sample**, the following activity should start up:
 
-    [![Screenshot of activity with Touch Begins displayed](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png)
+    [![Screenshot of activity with Touch Begins displayed](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 -   Now that we have confirmed that the Activity starts up, open the
     file **TouchActivity.cs** and add a handler for the `Touch` event
@@ -80,14 +80,14 @@ Each time the user touches the `ImageView`, the `Touch` event will be
 raised and our handler will display the message **Touch Begins** on the
 screen, as shown in the following screenshot:
 
-[![Screenshot of activity with Touch Begins](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png)
+[![Screenshot of activity with Touch Begins](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 As long as the user is touching the `ImageView`, **Touch Begins** will
 be displayed in the `TextView`. When the user is no longer touching
 the `ImageView`, the message **Touch Ends** will be displayed in the
 `TextView`, as shown in the following screenshot:
 
-[![Screenshot of activity with Touch Ends](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png)
+[![Screenshot of activity with Touch Ends](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png#lightbox)
 
 
 ## Gesture Recognizer Activity
@@ -283,13 +283,13 @@ to implement pinch-to-zoom.
     When it starts the screen should look something like the screenshot
     below:
 
-    [![Gesture Recognizer start screen with Android icon](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png)
+    [![Gesture Recognizer start screen with Android icon](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png#lightbox)
 
 -   Now touch the icon, and drag it around the screen. Try the
     pinch-to-zoom gesture. At some point your screen may look something
     like the following screen shot:
 
-    [![Gestures move icon around the screen](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png)
+    [![Gestures move icon around the screen](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png#lightbox)
 
 At this point you should give yourself a pat on the back: you have just
 implemented pinch-to-zoom in an Android application! Take a quick break
@@ -421,19 +421,19 @@ lets get on with the final Activity in the walkthrough.
 -   Run the application and start up the Custom Gesture Recognizer
     activity. It should look something like the following screenshot:
 
-    [![Screenshot with Check Me image](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png)
+    [![Screenshot with Check Me image](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png#lightbox)
 
     Now draw a checkmark on the screen, and the bitmap being displayed
     should look something like that shown in the next screenshots:
 
-    [![Drawn checkmark](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png)
-    [![Recognized checkmark](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png)
+    [![Drawn checkmark](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
+    [![Recognized checkmark](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
     Finally, draw a scribble on the screen. The checkbox should change
     back to its original image as shown in these screenshots:
 
-    [![Scribble on the screen](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png)
-    [![Original image is displayed](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png)
+    [![Scribble on the screen](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png#lightbox)
+    [![Original image is displayed](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png#lightbox)
 
 You now have an understanding of how to integrate touch and gestures in
 an Android application using Xamarin.Android.

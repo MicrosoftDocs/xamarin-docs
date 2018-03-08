@@ -101,7 +101,7 @@ StartActivity (intent);
 When running the above code, the People app will load to the user profile, as
 shown in the following screenshot:
 
-[![Screenshot of People app displaying the John Doe user profile](user-profile-images/15-people-app.png)](user-profile-images/15-people-app.png)
+[![Screenshot of People app displaying the John Doe user profile](user-profile-images/15-people-app.png)](user-profile-images/15-people-app.png#lightbox)
 
 Working with the user profile is now similar to interacting with other data
 in Android, and offers an additional level of device personalization.

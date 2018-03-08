@@ -40,12 +40,12 @@ of the more secure protocol.
 
 These settings can be found in **Project Options > Android Options** and then clicking on the **Advanced** button: 
 
-[![Configure HttpClient and TLS in Visual Studio](transport-layer-security-images/properties-vs-sml.png)](transport-layer-security-images/properties-vs.png)
+[![Configure HttpClient and TLS in Visual Studio](transport-layer-security-images/properties-vs-sml.png)](transport-layer-security-images/properties-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 These settings can be found in **Project Properties > Build Options > Advanced** tab:
 
-[![Configure HttpClient and TLS in Xamarin Studio and Visual Studio for Mac](transport-layer-security-images/properties-xs-sml.png)](transport-layer-security-images/properties-xs.png)
+[![Configure HttpClient and TLS in Xamarin Studio and Visual Studio for Mac](transport-layer-security-images/properties-xs-sml.png)](transport-layer-security-images/properties-xs.png#lightbox)
 
 -----
 

@@ -21,7 +21,7 @@ ORM stands for Object Relational Mapping – an API that lets you save and retri
 Add the [SQLite.net PCL NuGet package](https://www.nuget.org/packages/sqlite-net-pcl/),
   to your project - it supports a variety of platforms including iOS, Android, and Windows.
 
-  [ ![](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet package")](using-sqlite-orm-images/image1a.png)
+  [![](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet package")](using-sqlite-orm-images/image1a.png#lightbox)
 
 Once you have the SQLite.NET library available, follow these three steps to use it to access a database:
 

@@ -191,7 +191,7 @@ Although you normally don’t need to spend much time with generated code files,
 
 When you compile and run this program, the `Label` element appears in the center of the page as the XAML suggests. The three platforms from left to right are iOS, Android, and Windows 10 Mobile:
 
-[![](get-started-with-xaml-images/xamlsamples.png "Default Xamarin.Forms display")](get-started-with-xaml-images/xamlsamples-large.png "Default Xamarin.Forms display")
+[![](get-started-with-xaml-images/xamlsamples.png "Default Xamarin.Forms display")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "Default Xamarin.Forms display")
 
 For more interesting visuals, all you need is more interesting XAML.
 
@@ -351,7 +351,7 @@ public MainPage()
 
 Setting the `Content` property of the page replaces the setting of the `Content` property in the XAML file. When you compile and deploy the new version of this program, a button appears on the screen. Pressing it navigates to `HelloXamlPage`. Here’s the resultant page on iPhone, Android, and Windows 10 Mobile devices:
 
-[ ![](get-started-with-xaml-images/helloxaml1.png "Rotated Label Text")](get-started-with-xaml-images/helloxaml1-large.png "Rotated Label Text")
+[![](get-started-with-xaml-images/helloxaml1.png "Rotated Label Text")](get-started-with-xaml-images/helloxaml1-large.png#lightbox "Rotated Label Text")
 
 You can navigate back to `MainPage` using the **< Back** button on iOS, using the left arrow at the top of the page or at the bottom of the phone on Android, or using the left arrow at the bottom of the page on Windows 10 Mobile.
 
@@ -361,7 +361,7 @@ Feel free to experiment with the XAML for different ways to render the `Label`. 
 
 Here’s what it looks like:
 
-[ ![](get-started-with-xaml-images/helloxaml2.png "Rotated Label Text with Unicode Characters")](get-started-with-xaml-images/helloxaml2-large.png "Rotated Label Text with Unicode Characters")
+[![](get-started-with-xaml-images/helloxaml2.png "Rotated Label Text with Unicode Characters")](get-started-with-xaml-images/helloxaml2-large.png#lightbox "Rotated Label Text with Unicode Characters")
 
 ## XAML and Code Interactions
 
@@ -389,7 +389,7 @@ The **HelloXamlPage** sample contains only a single `Label` on the page, but thi
 
 This XAML file is syntactically complete, and here’s what it looks like:
 
-[ ![](get-started-with-xaml-images/xamlpluscode1.png "Multiple Controls on a Page")](get-started-with-xaml-images/xamlpluscode1-large.png "Multiple Controls on a Page")
+[![](get-started-with-xaml-images/xamlpluscode1.png "Multiple Controls on a Page")](get-started-with-xaml-images/xamlpluscode1-large.png#lightbox "Multiple Controls on a Page")
 
 However, you are likely to consider this program to be functionally deficient. Perhaps the `Slider` is supposed to cause the `Label` to display the current value, and the `Button` is probably intended to do something within the program.
 
@@ -480,7 +480,7 @@ void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
 
 When you first run the program, the `Label` doesn’t display the `Slider` value because the `ValueChanged` event hasn’t yet fired. But any manipulation of the `Slider` causes the value to be displayed:
 
-[ ![](get-started-with-xaml-images/xamlpluscode2.png "Slider Value Displayed")](get-started-with-xaml-images/xamlpluscode2-large.png "Slider Value Displayed")
+[![](get-started-with-xaml-images/xamlpluscode2.png "Slider Value Displayed")](get-started-with-xaml-images/xamlpluscode2-large.png#lightbox "Slider Value Displayed")
 
 Now for the `Button`. Let’s simulate a response to a `Clicked` event by displaying an alert with the `Text` of the button. The event handler can safely cast the `sender` argument to a `Button` and then access its properties:
 

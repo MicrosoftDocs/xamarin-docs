@@ -179,7 +179,7 @@ widget.
 
 Run the application. As you type, you should see something like this:
 
-[![Example auto-complete screenshot listing names that contain "ca"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png)
+[![Example auto-complete screenshot listing names that contain "ca"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
 
 

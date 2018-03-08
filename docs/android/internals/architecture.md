@@ -33,7 +33,7 @@ in one of the
 or the [Android](https://developer.xamarin.com/api/namespace/Android/).*
 namespaces. The architecture is roughly like this:
 
-[![Diagram of Mono and ART above the kernel and below .NET/Java + bindings](architecture-images/architecture1.png)](architecture-images/architecture1.png)
+[![Diagram of Mono and ART above the kernel and below .NET/Java + bindings](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
 
 Xamarin.Android developers access the various features in the operating
 system either by calling into .NET APIs that they know (for low-level

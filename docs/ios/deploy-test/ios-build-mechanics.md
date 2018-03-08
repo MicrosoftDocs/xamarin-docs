@@ -30,7 +30,7 @@ To enable diagnostic MSBuild output within Visual Studio for Mac:
 1. Click **Visual Studio for Mac > Preferences...**
 2. In the left-hand tree view, select **Projects > Build**
 3. In the right-hand panel, set the Log verbosity drop-down to **Diagnostic**:
-    [ ![](ios-build-mechanics-images/image2.png "Setting the Log verbosity")](ios-build-mechanics-images/image2.png)
+    [![](ios-build-mechanics-images/image2.png "Setting the Log verbosity")](ios-build-mechanics-images/image2.png#lightbox)
 4. Click **OK**
 5. Restart Visual Studio for Mac
 6. Clean and rebuild your package
@@ -44,7 +44,7 @@ To enable diagnostic MSBuild output within Visual Studio:
 1. Click **Tools > Options...**
 2. In the left-hand tree view, select **Projects and Solutions > Build and Run**
 3. In the right-hand panel, set the *MSBuild build output verbosity dropdown* to **Diagnostic**:
-    [ ![](ios-build-mechanics-images/image2-vs.png "Setting the MSBuild build output verbosity")](ios-build-mechanics-images/image2-vs.png)
+    [![](ios-build-mechanics-images/image2-vs.png "Setting the MSBuild build output verbosity")](ios-build-mechanics-images/image2-vs.png#lightbox)
 4. Click **OK**
 5. Clean and rebuild your package.
 6. Diagnostic output is visible in the Output panel.
@@ -100,7 +100,7 @@ While taking into account the information above, the list below gives some infor
 
 The screenshot below illustrates how to set these options for the simulator in your iOS options:
 
-[ ![](ios-build-mechanics-images/image3.png "Setting the options")](ios-build-mechanics-images/image3.png)
+[![](ios-build-mechanics-images/image3.png "Setting the options")](ios-build-mechanics-images/image3.png#lightbox)
 
 ## Device Tricks
 
@@ -154,7 +154,7 @@ Additional tips
 
 The screenshot below illustrates how to set these options for the simulator in your iOS options:
 
-[ ![](ios-build-mechanics-images/image4.png "Setting the options")](ios-build-mechanics-images/image4.png)
+[![](ios-build-mechanics-images/image4.png "Setting the options")](ios-build-mechanics-images/image4.png#lightbox)
 
 ## Using the Linker
 

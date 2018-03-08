@@ -87,7 +87,7 @@ Content = new StackLayout
 
 The code results in the layout shown in the following screenshots:
 
-[![](layout-options-images/alignment.png "Alignment Layout Options")](layout-options-images/alignment-large.png "Alignment Layout Options")
+[![](layout-options-images/alignment.png "Alignment Layout Options")](layout-options-images/alignment-large.png#lightbox "Alignment Layout Options")
 
 <a name="expansion" />
 
@@ -142,7 +142,7 @@ Content = new StackLayout
 
 The code results in the layout shown in the following screenshots:
 
-[![](layout-options-images/expansion.png "Expansion Layout Options")](layout-options-images/expansion-large.png "Expansion Layout Options")
+[![](layout-options-images/expansion.png "Expansion Layout Options")](layout-options-images/expansion-large.png#lightbox "Expansion Layout Options")
 
 Each [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) occupies the same amount of space within the [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/). However, only the final `Label`, which sets its [`VerticalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) property to [`FillAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/) has a different size. In addition, each `Label` is separated by a small red [`BoxView`](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/), which enables the space the `Label` occupies to be easily viewed.
 

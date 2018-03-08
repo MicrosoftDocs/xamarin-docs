@@ -75,7 +75,7 @@ In Visual Studio 2015 and later, specify the application icon through
 the **Android Manifest** section of project **Properties**, as shown in
 the following screenshot:
 
-[ ![Set the application icon](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png)
+[![Set the application icon](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -83,7 +83,7 @@ In Visual Studio for Mac, it is also possible to specify the
 application icon through the **Android Application** section of
 **Project Options**, as shown in the following screenshot:
 
-[ ![Set the application icon](images/xs/01-application-icon-sml.png)](images/xs/01-application-icon.png)
+[![Set the application icon](images/xs/01-application-icon-sml.png)](images/xs/01-application-icon.png#lightbox)
 
 -----
 
@@ -120,14 +120,14 @@ In Visual Studio, these values can be set in the **Android Manifest**
 section of project **Properties**, as shown in the following
 screenshot:
 
-[ ![Set the version number](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png)
+[![Set the version number](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
 These values can be set via the **Build > Android Application** section
 of **Project Options** as shown in the following screenshot:
 
-[ ![Set the version number](images/xs/02-versioning-sml.png)](images/xs/02-versioning.png)
+[![Set the version number](images/xs/02-versioning-sml.png)](images/xs/02-versioning.png#lightbox)
 
 -----
 
@@ -165,7 +165,7 @@ experiences an 83% reduction in the final size of its APK:
 Set linker options through the **Android Options** section of the project
 **Properties**:
 
-[ ![Linker options](images/vs/03-linking-sml.png)](images/vs/03-linking.png)
+[![Linker options](images/vs/03-linking-sml.png)](images/vs/03-linking.png#lightbox)
 
 The **Linking** pull-down menu provides the following options for
 controlling the linker:
@@ -186,7 +186,7 @@ controlling the linker:
 Set linker options through the **Linker** tab in the **Android Build**
 section of **Project Options**, as shown in the following screenshot:
 
-[ ![Linker options](images/xs/03-linking-sml.png)](images/xs/03-linking.png)
+[![Linker options](images/xs/03-linking-sml.png)](images/xs/03-linking.png#lightbox)
 
 The options for controlling the linker are as follows:
 
@@ -235,11 +235,11 @@ it as a build action as shown in this example:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Proguard Build Action](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png)
+[![Proguard Build Action](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Proguard Build Action](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png)
+[![Proguard Build Action](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
 
 -----
 
@@ -402,14 +402,14 @@ first be enabled (on the
 Packaging properties can be set in the **Android Options** section of
 project **Properties**, as shown in the following screenshot:
 
-[ ![Packaging Properties](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png)
+[![Packaging Properties](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
 Packaging properties can be set in the **Project Options**, as shown in
 the following screenshot:
 
-[ ![Packaging Properties](images/xs/04-packaging-sml.png)](images/xs/04-packaging.png)
+[![Packaging Properties](images/xs/04-packaging-sml.png)](images/xs/04-packaging.png#lightbox)
 
 -----
 
@@ -493,38 +493,38 @@ in Release mode. Note that this step does not yet produce an APK.
 To begin the publishing process, right-click the project in **Solution
 Explorer** and select the **Archive...** context menu item:
 
-[ ![Archive app](images/vs/07-archive-for-publishing-sml.png)](images/vs/07-archive-for-publishing.png)
+[![Archive app](images/vs/07-archive-for-publishing-sml.png)](images/vs/07-archive-for-publishing.png#lightbox)
 
 **Archive...** launches the **Archive Manager** and begins the process
 of archiving the App bundle as shown in this screenshot:
 
-[ ![Archive Manager](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png)
+[![Archive Manager](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png#lightbox)
 
 Another way to create an archive is to right-click the Solution in the
 **Solution Explorer** and select **Archive All...**, which builds the
 solution and archives all Xamarin projects that can generate an
 archive:
 
-[ ![Archive All](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png)
+[![Archive All](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
 
 
 Both **Archive** and **Archive All** automatically launch the **Archive
 Manager**. To launch the **Archive Manager** directly, click the
 **Tools > Archive Manager...** menu item:
 
-[ ![Launch Archive Manager](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png)
+[![Launch Archive Manager](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png#lightbox)
 
 The solution's archives at any time by right clicking the **Solution**
 node and selecting **View Archives**:
 
-[ ![View Archives](images/vs/11-view-archives-sml.png)](images/vs/11-view-archives.png)
+[![View Archives](images/vs/11-view-archives-sml.png)](images/vs/11-view-archives.png#lightbox)
 
 ### The Archive Manager
 
 The **Archive Manager** is comprised of a **Solution List** pane, an
 **Archives List**, and a **Details Panel**:
 
-[ ![Archive Manager Panes](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png)
+[![Archive Manager Panes](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png#lightbox)
 
 The **Solution List** displays all solutions having at least one
 archived project. The **Solution List** includes the following
@@ -554,13 +554,13 @@ When an archived version of the application is ready to publish, select
 the archive in the **Archive Manager** and click the **Distribute...**
 button:
 
-[ ![Distribute button](images/vs/13-distribute-sml.png)](images/vs/13-distribute.png)
+[![Distribute button](images/vs/13-distribute-sml.png)](images/vs/13-distribute.png#lightbox)
 
 The **Distribution Channel** dialog shows information about the app, an
 indication of distribution workflow progress, and a choice of
 distribution channels. On the first run, two choices are presented:
 
-[ ![Select Distribution Channel](images/vs/14-distribution-channel-sml.png)](images/vs/14-distribution-channel.png)
+[![Select Distribution Channel](images/vs/14-distribution-channel-sml.png)](images/vs/14-distribution-channel.png#lightbox)
 
 It is possible to choose one of the following distribution channels:
 
@@ -572,14 +572,14 @@ It is possible to choose one of the following distribution channels:
 
 To begin the publishing process, select **Build > Archive for Publishing**:
 
-[ ![Archive for Publishing](images/xs/07-archive-for-publishing-sml.png)](images/xs/07-archive-for-publishing.png)
+[![Archive for Publishing](images/xs/07-archive-for-publishing-sml.png)](images/xs/07-archive-for-publishing.png#lightbox)
 
 **Archive for Publishing** builds the project and bundles it into an
 archive file. The **Archive All** menu choice archives all archivable
 projects in the solution. Both options automatically open the **Archive
 Manager** when the build and bundling operations complete:
 
-[ ![Archive View](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png)
+[![Archive View](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png#lightbox)
 
 In this example, the **Archive Manager** lists only one archived
 application, **MyApp**. Notice that the comment field allows a short
@@ -588,7 +588,7 @@ a Xamarin.Android application, select the app in the **Archive
 Manager** and click **Sign and Distribute...** as shown above. The
 resulting **Sign and Distribute** dialog presents two choices:
 
-[ ![Sign and Distribute](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png)
+[![Sign and Distribute](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 
 
 From here, it is possible to select the distribution channel:

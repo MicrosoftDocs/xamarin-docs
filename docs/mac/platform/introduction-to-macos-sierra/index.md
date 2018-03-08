@@ -48,7 +48,7 @@ For more information, please see Apple's [ApplePay JS Framework](https://develop
 
 Modern macOS apps such as Apple's Safari web browser, Pages word processor and Numbers spread sheet use many new technologies to present a unified, context sensitive User Interface that does away with traditional UI elements such as floating panels and multiple open windows.
 
-[ ![An example of a tabbed Mac window](images/content08.png)](images/content08.png)
+[![An example of a tabbed Mac window](images/content08.png)](images/content08.png#lightbox)
 
 Our [Building Modern macOS Apps](~/mac/platform/introduction-to-macos-sierra/modern-cocoa-apps.md) guide covers several tips, features and techniques a developer can use to build a modern macOS app in Xamarin.Mac.
 

@@ -84,7 +84,7 @@ For information about the implementation of the backend services, see [.NET Micr
 
 This guide focuses on building cross-platform enterprise apps using Xamarin.Forms, and uses the eShopOnContainers mobile app as an example. Figure 1-2 shows the pages from the eShopOnContainers mobile app that provide the functionality outlined earlier.
 
-[![](introduction-images/screenshots.png "The eShopOnContainers mobile app")](introduction-images/screenshots-large.png "The eShopOnContainers mobile app")
+[![](introduction-images/screenshots.png "The eShopOnContainers mobile app")](introduction-images/screenshots-large.png#lightbox "The eShopOnContainers mobile app")
 
 **Figure 1-2**: The eShopOnContainers mobile app
 

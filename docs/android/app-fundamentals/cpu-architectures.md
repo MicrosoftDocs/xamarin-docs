@@ -43,7 +43,7 @@ disabled (turning this off allows you to explicitly select which ABIs
 to support). Click the **Advanced** tab and, under **Advanced
 Properties**, check the architectures that you want to support:
 
-[ ![Selecting armeabi and armeabi-v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png)
+[![Selecting armeabi and armeabi-v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -61,7 +61,7 @@ the gear icon next to your project and select **Options**. In the
 support). Click the **Advanced** tab and, under **Supported ABIs**,
 check the ABIs for the architectures that you want to support:
 
-[ ![Selecting armeabi and armeabi-v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png)
+[![Selecting armeabi and armeabi-v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png#lightbox)
 
 -----
 

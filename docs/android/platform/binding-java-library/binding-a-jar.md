@@ -112,23 +112,23 @@ Bindings Library* template. (The screenshots in this walkthrough
 use Visual Studio, but Visual Studio for Mac is very similar.) Name the 
 Solution **JarBinding**: 
 
-[ ![Create JarBinding library project](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png)
+[![Create JarBinding library project](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png#lightbox)
 
 The template includes a **Jars** folder where you add your .JAR(s) 
 to the Bindings Library project. Right-click the **Jars** folder 
 and select **Add > Existing Item**: 
 
-[ ![Add existing item](binding-a-jar-images/02-add-existing-item-sml.png)](binding-a-jar-images/02-add-existing-item.png)
+[![Add existing item](binding-a-jar-images/02-add-existing-item-sml.png)](binding-a-jar-images/02-add-existing-item.png#lightbox)
 
 Navigate to the **picasso-2.x.x.jar** file downloaded earlier, select it and
 click **Add**: 
 
-[ ![Select jar file and click Add](binding-a-jar-images/03-select-jar-file-sml.png)](binding-a-jar-images/03-select-jar-file.png)
+[![Select jar file and click Add](binding-a-jar-images/03-select-jar-file-sml.png)](binding-a-jar-images/03-select-jar-file.png#lightbox)
 
 Verify that the **picasso-2.x.x.jar** file was successfully added 
 to the project: 
 
-[ ![Jar added to project](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png)
+[![Jar added to project](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png#lightbox)
 
 When you create a Java Bindings library project, you must specify 
 whether the .JAR is to be embedded in the Bindings Library 
@@ -151,7 +151,7 @@ runs your app.
 
 Set the build action to **EmbeddedJar**: 
 
-[ ![Select EmbeddedJar build action](binding-a-jar-images/05-embeddedjar-sml.png)](binding-a-jar-images/05-embeddedjar.png)
+[![Select EmbeddedJar build action](binding-a-jar-images/05-embeddedjar-sml.png)](binding-a-jar-images/05-embeddedjar.png#lightbox)
 
 Next, open the project Properties to configure the *Target 
 Framework*. If the .JAR uses any Android APIs, set the Target 
@@ -165,7 +165,7 @@ in general, see
 Set the target API level for your Bindings Library (in this example, we are using
 API level 19): 
 
-[ ![Target API level set to API 19](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png)
+[![Target API level set to API 19](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
 
 
 Finally, build the Bindings Library. Although some warning messages may be displayed,
@@ -193,21 +193,21 @@ creating this app in the same Solution as the Bindings Library in
 order to simplify this walkthrough; however, the app that consumes
 the Bindings Library could, instead, reside in a different Solution: 
 
-[ ![Add new BindingTest project](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png)
+[![Add new BindingTest project](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png#lightbox)
 
 Right-click the **References** node of the **BindingTest** project and 
 select **Add Reference...**:
 
-[ ![Right Add Reference](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png)
+[![Right Add Reference](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png#lightbox)
 
 Check the **JarBinding** project created earlier and click **OK**:
 
-[ ![Select JarBinding project](binding-a-jar-images/09-choose-jar-binding-sml.png)](binding-a-jar-images/09-choose-jar-binding.png)
+[![Select JarBinding project](binding-a-jar-images/09-choose-jar-binding-sml.png)](binding-a-jar-images/09-choose-jar-binding.png#lightbox)
 
 Open the **References** node of the **BindingTest** project and 
 verify that the **JarBinding** reference is present: 
 
-[ ![JarBinding appears under References](binding-a-jar-images/10-references-shows-jarbinding-sml.png)](binding-a-jar-images/10-references-shows-jarbinding.png)
+[![JarBinding appears under References](binding-a-jar-images/10-references-shows-jarbinding-sml.png)](binding-a-jar-images/10-references-shows-jarbinding.png#lightbox)
 
 Modify the **BindingTest** layout (**Main.axml**) so that it has a single `ImageView`:
 
@@ -258,7 +258,7 @@ Compile and run the **BindingTest** project. The app will startup, and after a s
 (depending on network conditions), it should download and display an image similar to
 the following screenshot:
 
-[ ![Screenshot of BindingTest running](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png)
+[![Screenshot of BindingTest running](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
 
 Congratulations! You've successfully bound a Java library .JAR and used it in your 
 Xamarin.Android app.

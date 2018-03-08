@@ -35,7 +35,7 @@ notification content) and perform any actions associated with the
 notifications. The following screen shot shows a *notification drawer*
 that corresponds to the notification area displayed above:
 
-[![Example notification drawer displaying three notifications](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png)
+[![Example notification drawer displaying three notifications](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
 
 Android notifications use two types of layouts:
 
@@ -66,7 +66,7 @@ at a minimum, includes the following elements:
 
 These elements are displayed as illustrated in the following diagram:
 
-[![Location of notification elements](local-notifications-images/03-notification-callouts-sml.png)](local-notifications-images/03-notification-callouts.png)
+[![Location of notification elements](local-notifications-images/03-notification-callouts-sml.png)](local-notifications-images/03-notification-callouts.png#lightbox)
 
 Base layouts are limited to 64 density-independent pixels (dp) in
 height. Android creates this basic notification style by default.
@@ -81,7 +81,7 @@ displayed as a badge over the large icon:
 Beginning with Android 5.0, notifications can also appear on the
 lockscreen:
 
-[![Example lockscreen notification](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png)
+[![Example lockscreen notification](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
 
 The user can double-tap the lockscreen notification to unlock the
 device and jump to the app that originated that notification, or swipe
@@ -95,7 +95,7 @@ called *Heads-up*. Heads-up notifications slide down from the top of
 the screen for a few seconds and then retreat back up to the
 notification area:
 
-[![Example heads-up notification](local-notifications-images/06-heads-up-notification-sml.png)](local-notifications-images/06-heads-up-notification.png)
+[![Example heads-up notification](local-notifications-images/06-heads-up-notification-sml.png)](local-notifications-images/06-heads-up-notification.png#lightbox)
 
 Heads-up notifications make it possible for the system UI to put
 important information in front of the user without disrupting the state
@@ -578,7 +578,7 @@ The **YouTube** app that is installed with Android Oreo
 lists two notification categories: **Download notifications** and
 **General notifications**:
 
-[![Notification screens for YouTube in Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png)
+[![Notification screens for YouTube in Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
 Each of these categories corresponds to a notification channel. The
 YouTube app implements a **Download notifications** channel and a
@@ -586,7 +586,7 @@ YouTube app implements a **Download notifications** channel and a
 notifications**, which displays the settings screen for the app's
 download notifications channel:
 
-[![Download notifications screen for the YouTube app](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png)
+[![Download notifications screen for the YouTube app](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
 
 In this screen, the user can modify the behavior of the **Download**
 notifications channel by doing the following:
@@ -605,7 +605,7 @@ notifications channel by doing the following:
 
 The **General Notifications** channel has similar settings:
 
-[![General notifications screen for the YouTube app](local-notifications-images/29-yt-general-sml.png)](local-notifications-images/29-yt-general.png)
+[![General notifications screen for the YouTube app](local-notifications-images/29-yt-general-sml.png)](local-notifications-images/29-yt-general.png#lightbox)
 
 Notice that you do not have absolute control over how your notification
 channels interact with the user &ndash; the user can modify the

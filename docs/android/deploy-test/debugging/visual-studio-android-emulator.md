@@ -55,28 +55,28 @@ in the **Debug Target** drop-down menu (as seen in the following screen
 shot). The Microsoft Android Emulator targets are prefaced with **VS
 Emulator**:
 
-[ ![Pre-configured target device profiles](visual-studio-android-emulator-images/01-vs-emulator-defaults-vs-sml.png)](visual-studio-android-emulator-images/01-vs-emulator-defaults-vs.png)
+[![Pre-configured target device profiles](visual-studio-android-emulator-images/01-vs-emulator-defaults-vs-sml.png)](visual-studio-android-emulator-images/01-vs-emulator-defaults-vs.png#lightbox)
 
 When Visual Studio starts a Xamarin.Android application, the emulator is
 launched with the chosen device target and the app is deployed to
 the emulator. A message will appear in the bottom left corner of
 Visual Studio indicating that the emulator is starting:
 
-[ ![Starting VS Emulator](visual-studio-android-emulator-images/02-emulator-starting-vs-sml.png)](visual-studio-android-emulator-images/02-emulator-starting-vs.png)
+[![Starting VS Emulator](visual-studio-android-emulator-images/02-emulator-starting-vs-sml.png)](visual-studio-android-emulator-images/02-emulator-starting-vs.png#lightbox)
 
 After a startup delay, the emulator screen appears as shown on the left
 below. Drag the lock icon on the screen upwards to unlock the device.
 The Xamarin.Android app should then be running in the emulator as
 shown on the right:
 
-[ ![Emulator screenshots](visual-studio-android-emulator-images/03-first-screen-vs-sml.png)](visual-studio-android-emulator-images/03-first-screen-vs.png)
+[![Emulator screenshots](visual-studio-android-emulator-images/03-first-screen-vs-sml.png)](visual-studio-android-emulator-images/03-first-screen-vs.png#lightbox)
 
 As with the default Android SDK emulator, it is possible to set breakpoints in
 the code, inspect variables, and view the call stack. The vertical
 toolbar to the right of the emulator provides access to emulator
 features:
 
-[ ![Buttons on the vertical toolbar](visual-studio-android-emulator-images/04-vertical-toolbar-vs-sml.png)](visual-studio-android-emulator-images/04-vertical-toolbar-vs.png)
+[![Buttons on the vertical toolbar](visual-studio-android-emulator-images/04-vertical-toolbar-vs-sml.png)](visual-studio-android-emulator-images/04-vertical-toolbar-vs.png#lightbox)
 
 The following list summarizes the function of each button on the
 vertical toolbar:
@@ -114,7 +114,7 @@ vertical toolbar:
 The *Additional Tools* button will display a dialog opens that
 displays the extra features of the emulator:
 
-[ ![Additional Tools dialog](visual-studio-android-emulator-images/05-additional-tools-vs-sml.png)](visual-studio-android-emulator-images/05-additional-tools-vs.png)
+[![Additional Tools dialog](visual-studio-android-emulator-images/05-additional-tools-vs-sml.png)](visual-studio-android-emulator-images/05-additional-tools-vs.png#lightbox)
 
 
 Each additional feature is available from a row of tabs at the top of
@@ -162,13 +162,13 @@ KitKat, Lollipop, and Marshmallow.
 The *Emulator Manager* is used to install, uninstall, and start device profiles. From the **Tools** menu, select **Visual Studio Emulator for
 Android...** as indicated in this screenshot:
 
-[ ![Launching the emulator from the Tools menu](visual-studio-android-emulator-images/06-launch-emulator-manager-vs-sml.png)](visual-studio-android-emulator-images/06-launch-emulator-manager-vs.png)
+[![Launching the emulator from the Tools menu](visual-studio-android-emulator-images/06-launch-emulator-manager-vs-sml.png)](visual-studio-android-emulator-images/06-launch-emulator-manager-vs.png#lightbox)
 
 This opens the **Device Profiles** dialog. The installed profiles are
 highlighted at the top of the device profile list. Profiles that are
 not installed (but are available for installation) are grayed out:
 
-[ ![Device profiles icons](visual-studio-android-emulator-images/07-device-profiles-vs-sml.png)](visual-studio-android-emulator-images/07-device-profiles-vs.png)
+[![Device profiles icons](visual-studio-android-emulator-images/07-device-profiles-vs-sml.png)](visual-studio-android-emulator-images/07-device-profiles-vs.png#lightbox)
 
 To install a new profile, click the profile installation icon (a
 downward pointed arrow as shown in the above screenshot). For example,
@@ -176,19 +176,19 @@ when you click the profile installation icon for the **5.7" Marshmallow
 (6.0.0) XHDPI Phone**, the Emulator Manager downloads the profile as
 shown here:
 
-[ ![Example of downloading profiles](visual-studio-android-emulator-images/08-downloading-profile-vs-sml.png)](visual-studio-android-emulator-images/08-downloading-profile-vs.png)
+[![Example of downloading profiles](visual-studio-android-emulator-images/08-downloading-profile-vs-sml.png)](visual-studio-android-emulator-images/08-downloading-profile-vs.png#lightbox)
 
 After the device profile is downloaded, it is highlighted to indicate
 that the profile was installed successfully. Clicking the *Show
 details* icon to will display the platform type, cpu architecture, screen
 size/resolution, and memory available to the device:
 
-[ ![Show Device Profile details](visual-studio-android-emulator-images/09-show-details-vs-sml.png)](visual-studio-android-emulator-images/09-show-details-vs.png)
+[![Show Device Profile details](visual-studio-android-emulator-images/09-show-details-vs-sml.png)](visual-studio-android-emulator-images/09-show-details-vs.png#lightbox)
 
 When the Visual Studio **Debug Target** drop-down menu is opened, the
 newly-installed device profile is now available as a target:
 
-[ ![New profile in target drop-down menu](visual-studio-android-emulator-images/10-debug-target-vs-sml.png)](visual-studio-android-emulator-images/10-debug-target-vs.png)
+[![New profile in target drop-down menu](visual-studio-android-emulator-images/10-debug-target-vs-sml.png)](visual-studio-android-emulator-images/10-debug-target-vs.png#lightbox)
 
 This list can be shortened by clicking **Uninstall this profile** in the
 *Emulator Manager* to remove unused device profiles. Note that there is
@@ -214,17 +214,17 @@ Use the following steps to make this change:
 1.  Click the **Start** button, type in **MMC**, and press **Enter**. Click
     **Hyper-V Manager** as illustrated here:
 
-    [ ![Hyper-V Manager](visual-studio-android-emulator-images/15-launch-hyperv-manager.png)](visual-studio-android-emulator-images/15-launch-hyperv-manager.png)
+    [![Hyper-V Manager](visual-studio-android-emulator-images/15-launch-hyperv-manager.png)](visual-studio-android-emulator-images/15-launch-hyperv-manager.png#lightbox)
 
 2.  In the Hyper-V Manager **Virtual Machines** pane, right click the emulator that
     to edit to use and click **Settings...**":
 
-    [ ![Virtual Machines Settings menu item](visual-studio-android-emulator-images/16-vm-settings.png)](visual-studio-android-emulator-images/16-vm-settings.png)
+    [![Virtual Machines Settings menu item](visual-studio-android-emulator-images/16-vm-settings.png)](visual-studio-android-emulator-images/16-vm-settings.png#lightbox)
 
 3.  In the settings window, locate the **Compatibility** section (under **Hardware > Processor**)
     and enable **Migrate to a physical computer with a different processor version**:
 
-    [ ![Migrate option checked](visual-studio-android-emulator-images/17-set-compatibility-vs-sml.png)](visual-studio-android-emulator-images/17-set-compatibility-vs.png)
+    [![Migrate option checked](visual-studio-android-emulator-images/17-set-compatibility-vs-sml.png)](visual-studio-android-emulator-images/17-set-compatibility-vs.png#lightbox)
 
 4.  Click **OK** and close the Hyper-V Manager window.
 
@@ -250,7 +250,7 @@ To resolve this error, use the following steps to disable fast deployment:
 
 3.  Click **Android Options** and unselect **Use Fast Deployment (debug mode only)**:
 
-    [ ![Use Fast Deployment option unchecked](visual-studio-android-emulator-images/18-fast-deployment-vs-sml.png)](visual-studio-android-emulator-images/18-fast-deployment-vs.png)
+    [![Use Fast Deployment option unchecked](visual-studio-android-emulator-images/18-fast-deployment-vs-sml.png)](visual-studio-android-emulator-images/18-fast-deployment-vs.png#lightbox)
 
 
 

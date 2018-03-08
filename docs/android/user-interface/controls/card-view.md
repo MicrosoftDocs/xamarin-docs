@@ -120,7 +120,7 @@ resources in the previous XML.
 This layout example creates a default `CardView` with a single line of
 text as shown in the following screen shot:
 
-[![Screenshot of CardView with white background and line of text](card-view-images/02-basic-cardview-sml.png)](card-view-images/02-basic-cardview.png)
+[![Screenshot of CardView with white background and line of text](card-view-images/02-basic-cardview-sml.png)](card-view-images/02-basic-cardview.png#lightbox)
 
 In this example, the app style is set to the light Material Theme
 (`Theme.Material.Light`) so that the `CardView` shadows and edges are
@@ -209,7 +209,7 @@ When this layout example is used to display an image in a photo viewing
 app, the `CardView` has the appearance of a photo snapshot, as depicted
 in the following screenshot:
 
-[![CardView with an image and caption below the image](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png)
+[![CardView with an image and caption below the image](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
 
 This screenshot is taken from the
 [RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)
@@ -233,7 +233,7 @@ for an example screenshot).
 `CardView` layouts can be customized by setting one or more attributes
 that affect its padding, elevation, corner radius, and background color:
 
-[![Diagram of CardView attributes](card-view-images/04-attributes-sml.png)](card-view-images/04-attributes.png)
+[![Diagram of CardView attributes](card-view-images/04-attributes-sml.png)](card-view-images/04-attributes.png#lightbox)
 
 Each attribute can also be changed dynamically by calling a
 counterpart `CardView` method (for more information on `CardView`
@@ -251,7 +251,7 @@ CardView` offers five padding attributes to position content within the
 card. You can set them in your layout XML or you can call
 analogous methods in your code:
 
-[![Diagram of CardView padding attributes](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png)
+[![Diagram of CardView padding attributes](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png#lightbox)
 
 The padding attributes are explained as follows:
 
@@ -283,7 +283,7 @@ on the card.
 `CardView` offers two elevation attributes to control its elevation and,
 as a result, the size of its shadow:
 
-[![Diagram of CardView elevation attributes](card-view-images/06-elevation-sml.png)](card-view-images/06-elevation.png)
+[![Diagram of CardView elevation attributes](card-view-images/06-elevation-sml.png)](card-view-images/06-elevation.png#lightbox)
 
 The elevation attributes are explained as follows:
 
@@ -308,7 +308,7 @@ past the limit that you define with this setting.
 corner radius and its background color. These two properties allow
 you change the overall style of the `CardView`:
 
-[![Diagram of CardView corner radious and background color attributes](card-view-images/07-radius-bgcolor-sml.png)](card-view-images/07-radius-bgcolor.png)
+[![Diagram of CardView corner radious and background color attributes](card-view-images/07-radius-bgcolor-sml.png)](card-view-images/07-radius-bgcolor.png#lightbox)
 
 These attributes are explained as follows:
 

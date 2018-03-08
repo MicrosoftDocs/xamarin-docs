@@ -75,7 +75,7 @@ This page contains additional information and workarounds for features
 	file in a text editor and then manually change the `id`
 	element to be unique.
 
-	[ ![](troubleshooting-images/duplicate-id-sml.png "Opening the storyboard file in a text editor and manually change the id element to be unique")](troubleshooting-images/duplicate-id.png)
+	[![](troubleshooting-images/duplicate-id-sml.png "Opening the storyboard file in a text editor and manually change the id element to be unique")](troubleshooting-images/duplicate-id.png#lightbox)
 
 - You may see an error "The application has not been built"
 	when trying to launch the app. This occurs after a **Clean**

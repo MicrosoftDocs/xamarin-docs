@@ -106,7 +106,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The `Length` property of the newly created `SKPathMeasure` object obtains the length of the path. This is divided by the `baseTextWidth` value (which is the width of the text based on a text size of 10) and then multiplied by the base text size of 10. The result is a new text size for displaying the text along that path:
 
-[![](information-images/pathlength-small.png "Triple screenshot of the Path Length page")](information-images/pathlength-large.png "Triple screenshot of the Path Length page")
+[![](information-images/pathlength-small.png "Triple screenshot of the Path Length page")](information-images/pathlength-large.png#lightbox "Triple screenshot of the Path Length page")
 
 As the Bézier curve gets longer or shorter, you can see the text size change.
 
@@ -132,7 +132,7 @@ The [`SKPathMeasureMatrixFlags`](https://developer.xamarin.com/api/type/SkiaShar
 
 The **Unicycle Half-Pipe** page animates a stick figure on a unicycle that seems to ride back and forth along a cubic Bézier curve:
 
-[![](information-images/unicyclehalfpipe-small.png "Triple screenshot of the Unicycle Half-Pipe page")](information-images/unicyclehalfpipe-large.png "Triple screenshot of the Unicycle Half-Pipe page")
+[![](information-images/unicyclehalfpipe-small.png "Triple screenshot of the Unicycle Half-Pipe page")](information-images/unicyclehalfpipe-large.png#lightbox "Triple screenshot of the Unicycle Half-Pipe page")
 
 The `SKPaint` object used for stroking both the half-pipe and the unicycle is defined as a field in the [`UnicycleHalfPipePage`]() class. Also defined is the `SKPath` object for the unicycle:
 
@@ -421,7 +421,7 @@ Notice that the method retains the first point of each contour in the variable c
 
 The **GlobularText** sample uses this extension method to seemingly wrap text around a hemisphere in a 3D effect:
 
-[![](information-images/globulartext-small.png "Triple screenshot of the Globular Text page")](information-images/globulartext-large.png "Triple screenshot of the Globular Text page")
+[![](information-images/globulartext-small.png "Triple screenshot of the Globular Text page")](information-images/globulartext-large.png#lightbox "Triple screenshot of the Globular Text page")
 
 The [`GlobularTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) class constructor performs this transform. It creates an `SKPaint` object for the text, and then obtains an `SKPath` object from the `GetTextPath` method. This is the path passed to the `CloneWithTransform` extension method along with a transform function: 
 

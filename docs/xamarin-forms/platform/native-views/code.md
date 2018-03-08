@@ -20,7 +20,7 @@ Any Xamarin.Forms control that allows `Content` to to be set, or that has a `Chi
 
 The following screenshots demonstrate platform-specific views having been added to a Xamarin.Forms [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/):
 
-[![](code-images/screenshots-sml.png "StackLayout Containing Platform-Specific Views")](code-images/screenshots.png "StackLayout Containing Platform-Specific Views")
+[![](code-images/screenshots-sml.png "StackLayout Containing Platform-Specific Views")](code-images/screenshots.png#lightbox "StackLayout Containing Platform-Specific Views")
 
 The ability to add platform-specific views to a Xamarin.Forms layout is enabled by two extension methods on each platform:
 

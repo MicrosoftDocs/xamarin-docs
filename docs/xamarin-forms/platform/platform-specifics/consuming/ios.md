@@ -176,7 +176,7 @@ The `Page.On<iOS>` method specifies that this platform-specific will only run on
 
 The result is that page content can be positioned on an area of the screen that is safe for all iPhones:
 
-[![](ios-images/safe-area-layout.png "Safe Area Layout Guide")](ios-images/safe-area-layout-large.png "Safe Area Layout Guide")
+[![](ios-images/safe-area-layout.png "Safe Area Layout Guide")](ios-images/safe-area-layout-large.png#lightbox "Safe Area Layout Guide")
 
 > [!NOTE]
 > The safe area defined by Apple is used in Xamarin.Forms to set the [`Page.Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Padding/) property, and will override any previous values of this property that have been set.
@@ -381,7 +381,7 @@ switch (picker.On<iOS>().UpdateMode())
 
 The result is that a specified `UpdateMode` is applied to the [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/), which controls when item selection occurs:
 
-[![](ios-images/picker-updatemode.png "Picker UpdateMode Platform-Specific")](ios-images/picker-updatemode-large.png "Picker UpdateMode Plaform-Specific")
+[![](ios-images/picker-updatemode.png "Picker UpdateMode Platform-Specific")](ios-images/picker-updatemode-large.png#lightbox "Picker UpdateMode Plaform-Specific")
 
 <a name="set_status_bar_visibility" />
 
@@ -464,7 +464,7 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 The result is that a [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) can disable delaying receiving content touches, so that in this scenario the [`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) receives the gesture rather than the [`Detail`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) page of the [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/):
 
-[![](ios-images/scrollview-delay-content-touches.png "ScrollView Delay Content Touches Platform-Specific")](ios-images/scrollview-delay-content-touches-large.png "ScrollView Delay Content Touches Plaform-Specific")
+[![](ios-images/scrollview-delay-content-touches.png "ScrollView Delay Content Touches Platform-Specific")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Plaform-Specific")
 
 ## Summary
 

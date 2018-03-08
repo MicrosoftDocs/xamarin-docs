@@ -64,7 +64,7 @@ The [**TextVariations**](https://github.com/xamarin/xamarin-forms-book-samples/t
 
  When a multiline string is set to the `Text` property, end-of-line characters are converted to space characters, but the end-of-line characters are preserved when a multiline string appears as content of the `Label` or `Label.Text` tags:
 
- [![Triple screenshot of text variations sharing](images/ch07fg03-small.png "Formatted Text Variations")](images/ch07fg03-large.png "Formatted Text Variations")
+ [![Triple screenshot of text variations sharing](images/ch07fg03-small.png "Formatted Text Variations")](images/ch07fg03-large.png#lightbox "Formatted Text Variations")
 
 
 

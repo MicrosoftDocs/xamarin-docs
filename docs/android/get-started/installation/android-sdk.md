@@ -122,13 +122,13 @@ outside of Visual Studio to manage the Android SDK.
 To start the SDK Manager in Visual Studio, click **Tools > Android >
 Android SDK Manager**:
 
-[![Location of the Android SDK Manager menu item](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png)
+[![Location of the Android SDK Manager menu item](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
 
 The **Xamarin Android SDK Manager** opens in the **Android SDKs and
 Tools** screen. This screen has two tabs &ndash; **Platforms** and
 **Tools**:
 
-[![Screenshot of the Android SDK Manager open in the Platforms tab](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png)
+[![Screenshot of the Android SDK Manager open in the Platforms tab](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png#lightbox)
 
 The **Android SDKs and Tools** screen is described in more detail in
 the following sections.
@@ -216,7 +216,7 @@ For example, to download the Google Android Emulator package, click the
 check mark next to **Android Emulator** and click the **Apply Changes**
 button:
 
-[![Installing the Android Emulator from the Tools tab](android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png)
+[![Installing the Android Emulator from the Tools tab](android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -257,7 +257,7 @@ with other resources (like system images) for each platform.
 
 # [Visual Studio](#tab/vswin)
 
-[![Screenshot of the Platforms pane](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png)
+[![Screenshot of the Platforms pane](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -296,7 +296,7 @@ click **Apply Changes**:
 
 # [Visual Studio](#tab/vswin)
 
-[![Example of adding Android 7.1 Nougat components to the Android SDK](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png)
+[![Example of adding Android 7.1 Nougat components to the Android SDK](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -309,7 +309,7 @@ that you need:
 
 # [Visual Studio](#tab/vswin)
 
-[![Example of adding some Android 7.1 components](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png)
+[![Example of adding some Android 7.1 components](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 

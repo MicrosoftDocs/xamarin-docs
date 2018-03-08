@@ -54,13 +54,13 @@ appear in your right-click context menu, and a new **Developer** pane
 will be available in Workbooks preferences. This option allows you to choose if you want
 the developer tools opened at startup:
 
-[![Developer pane](debugging-images/developer-pane-small.png)](debugging-images/developer-pane.png)
+[![Developer pane](debugging-images/developer-pane-small.png)](debugging-images/developer-pane.png#lightbox)
 
 This preference is restart-only as well—you'll need to restart the Workbooks client
 in order for it to take effect on new workbooks. Activating the developer tools via
 the context menu or the preferences will show the familiar Safari UI:
 
-[![Safari dev tools](debugging-images/mac-dev-tools.png)](debugging-images/mac-dev-tools.png)
+[![Safari dev tools](debugging-images/mac-dev-tools.png)](debugging-images/mac-dev-tools.png#lightbox)
 
 For information about using the Safari developer tools, see the
 [WebKit inspector documentation][webkit-docs].
@@ -79,6 +79,6 @@ Run F12 Chooser, and you should see the embedded instance that powers the Workbo
 client surface in the list. Choose it, and the familiar F12 debugging tools from Internet
 Explorer will appear, attached to the client:
 
-[![F12 tools](debugging-images/windows-dev-tools.png)](debugging-images/windows-dev-tools.png)
+[![F12 tools](debugging-images/windows-dev-tools.png)](debugging-images/windows-dev-tools.png#lightbox)
 
 [webkit-docs]: https://trac.webkit.org/wiki/WebInspector

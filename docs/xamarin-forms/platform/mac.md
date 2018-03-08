@@ -94,7 +94,7 @@ Follow these instructions to add a Mac app that will run on macOS Sierra and Mac
 
 9. Double-click **Main.storyboard** to edit in Xcode. Select the **Window** and _uncheck_ the **Is Initial Controller** checkbox (this is because the code above creates a window):
 
-  [ ![Uncheck the Is Initial Controller checkbox in Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png)
+  [![Uncheck the Is Initial Controller checkbox in Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
 
   You can edit the menu system in the storyboard to remove unwanted items.
 

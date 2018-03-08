@@ -65,7 +65,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Values of the `xSkew` argument shift the bottom of the text right for positive values or left for negative values. Values of `ySkew` shift the right of the text down for positive values or up for negative values:
 
-[![](skew-images/skewexperiment-small.png "Triple screenshot of the Skew Experiment page")](skew-images/skewexperiment-large.png "Triple screenshot of the Skew Experiment page")
+[![](skew-images/skewexperiment-small.png "Triple screenshot of the Skew Experiment page")](skew-images/skewexperiment-large.png#lightbox "Triple screenshot of the Skew Experiment page")
 
 If `xSkew` is the negative of `ySkew`, the result is rotation, but also scaled somewhat as the Windows display indicates.
 
@@ -148,7 +148,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 As an angle approaches positive or negative 90 degrees, the tangent approaches infinity, but angles up to about 80 degrees or so are usable:
 
-[![](skew-images/skewangleexperiment-small.png "Triple screenshot of the Skew Angle Experiment page")](skew-images/skewangleexperiment-large.png "Triple screenshot of the Skew Angle Experiment page")
+[![](skew-images/skewangleexperiment-small.png "Triple screenshot of the Skew Angle Experiment page")](skew-images/skewangleexperiment-large.png#lightbox "Triple screenshot of the Skew Angle Experiment page")
 
 A small negative horizontal skew can mimic oblique or italic text, as the **Oblique Text** page demonstrates. The [`ObliqueTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) class shows how it's done:
 
@@ -184,7 +184,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 The `TextAlign` property of `SKPaint` is set to `Center`. Without any transforms, the `DrawText` call with coordinates of (0, 0) would position the text with the horizontal center of the baseline at the upper-left corner. The `SkewDegrees` skews the text horizontally 20 degrees relative to the baseline. The `Translate` call moves the horizontal center of the text's baseline to the center of the canvas:
 
-[![](skew-images/obliquetext-small.png "Triple screenshot of the Oblique Text page")](skew-images/obliquetext-large.png "Triple screenshot of the Oblique Text page")
+[![](skew-images/obliquetext-small.png "Triple screenshot of the Oblique Text page")](skew-images/obliquetext-large.png#lightbox "Triple screenshot of the Oblique Text page")
 
 The **Skew Shadow Text** page demonstrates how to use a combination of a 45-degree skew and vertical scale to make a text shadow that tilts away from the text. Here's the pertinent part of the `PaintSurface` handler:
 
@@ -217,11 +217,11 @@ using (SKPaint textPaint = new SKPaint())
 
 The shadow is displayed first and then the text:
 
-[![](skew-images/skewshadowtext1-small.png "Triple screenshot of the Skew Shadow Text page")](skew-images/skewshadowtext1-large.png "Triple screenshot of the Skew Shadow Text page")
+[![](skew-images/skewshadowtext1-small.png "Triple screenshot of the Skew Shadow Text page")](skew-images/skewshadowtext1-large.png#lightbox "Triple screenshot of the Skew Shadow Text page")
 
 The vertical coordinate passed to the `DrawText` method indicates the position of the text relative to the baseline. That is the same vertical coordinate used for the center of skewing. This technique will not work if the text string contains descenders. For example, subsitute the word "quirky" for "Shadow" and here's the result:
 
-[![](skew-images/skewshadowtext2-small.png "Triple screenshot of the Skew Shadow Text page with an alternative word with descenders")](skew-images/skewshadowtext2-large.png "Triple screenshot of the Skew Shadow Text page with an alternative word with descenders")
+[![](skew-images/skewshadowtext2-small.png "Triple screenshot of the Skew Shadow Text page with an alternative word with descenders")](skew-images/skewshadowtext2-large.png#lightbox "Triple screenshot of the Skew Shadow Text page with an alternative word with descenders")
 
 The shadow and text are still aligned at the baseline, but the effect just looks wrong. To fix it you need to obtain the text bounds:
 
@@ -241,7 +241,7 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 
 Now the shadow extends from the bottom of those descenders:
 
-[![](skew-images/skewshadowtext3-small.png "Triple screenshot of the Skew Shadow Text page with adjustments for descenders")](skew-images/skewshadowtext3-large.png "Triple screenshot of the Skew Shadow Text page with adjustments for descenders")
+[![](skew-images/skewshadowtext3-small.png "Triple screenshot of the Skew Shadow Text page with adjustments for descenders")](skew-images/skewshadowtext3-large.png#lightbox "Triple screenshot of the Skew Shadow Text page with adjustments for descenders")
 
 
 ## Related Links

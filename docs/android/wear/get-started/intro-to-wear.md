@@ -91,7 +91,7 @@ You typically associate the `GridViewPager` with a
 `FragmentGridPagerAdaptor` (or `GridPagerAdaptor`) that lets you 
 represent each row and column cells as a `Fragment`: 
 
-[ ![Wear Navigation](intro-to-wear-images/2d-picker-sml.png "Wear Navigation")](intro-to-wear-images/2d-picker.png)
+[![Wear Navigation](intro-to-wear-images/2d-picker-sml.png "Wear Navigation")](intro-to-wear-images/2d-picker.png#lightbox)
 
 Wear also makes use of action buttons that consist of a big colored circle
 with small description text underneath it (as illustrated above).  The
@@ -206,7 +206,7 @@ To build a Wear 2.0 app with Xamarin.Android, you must add the
 **Xamarin.Android.Wear v2.0** package to your project (click the
 **Browse tab**):
 
-[![Xamarin.Android.Wear v2.0](intro-to-wear-images/wear-nuget-2.0-sml.png "Install the Xamarin.Android.Wear v2.0 NuGet")](intro-to-wear-images/wear-nuget-2.0.png)
+[![Xamarin.Android.Wear v2.0](intro-to-wear-images/wear-nuget-2.0-sml.png "Install the Xamarin.Android.Wear v2.0 NuGet")](intro-to-wear-images/wear-nuget-2.0.png#lightbox)
 
 This NuGet package contains bindings for both the Android Support
 Wearable and Wear Compat libraries.
@@ -214,7 +214,7 @@ Wearable and Wear Compat libraries.
 In addition to **Xamarin.Android.Wear**, we recommend that you install 
 the **Xamarin.GooglePlayServices.Wearable** NuGet: 
 
-[![Xamarin.GooglePlayServices.Wearable](intro-to-wear-images/gpsw-nuget-sml.png "Install the Xamarin.GooglePlayServices.Wearable NuGet")](intro-to-wear-images/gpsw-nuget.png)
+[![Xamarin.GooglePlayServices.Wearable](intro-to-wear-images/gpsw-nuget-sml.png "Install the Xamarin.GooglePlayServices.Wearable NuGet")](intro-to-wear-images/gpsw-nuget.png#lightbox)
 
 
 ### Key Features of Wear 2.0

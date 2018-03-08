@@ -132,7 +132,7 @@ The following screenshot lists the Solution's contents. This is the
 Solution Explorer, which contains the directory structure and all of
 the files associated with the Solution:
 
-[![Solution Explorer](hello-android-deepdive-images/vs/02-solution-structure-sml.png )](hello-android-deepdive-images/vs/02-solution-structure.png)
+[![Solution Explorer](hello-android-deepdive-images/vs/02-solution-structure-sml.png)](hello-android-deepdive-images/vs/02-solution-structure.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -140,7 +140,7 @@ The following screenshot lists the Solution's contents. This is the
 Solution Pad, which contains the directory structure and all of the
 files associated with the Solution:
 
-[![Solution Pad](hello-android-deepdive-images/xs/02-solution-structure-sml.png)](hello-android-deepdive-images/xs/02-solution-structure.png)
+[![Solution Pad](hello-android-deepdive-images/xs/02-solution-structure-sml.png)](hello-android-deepdive-images/xs/02-solution-structure.png#lightbox)
 
 -----
 
@@ -242,7 +242,7 @@ a single application screen, and it is responsible for drawing and
 powering the user interface. When Android creates an application's
 first Activity, it loads the entire application:
 
-[![Activity load](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png)
+[![Activity load](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png#lightbox)
 
 Since there is no linear progression through an Android application
 (you can launch the application from several points), Android has a
@@ -256,7 +256,7 @@ application as a single Activity (screen) and a collection of resource
 and helper files tied together by the Android Manifest file, as
 illustrated by the diagram below:
 
-[![Resource helpers](hello-android-deepdive-images/02-resources-helpers-sml.png)](hello-android-deepdive-images/02-resources-helpers.png)
+[![Resource helpers](hello-android-deepdive-images/02-resources-helpers-sml.png)](hello-android-deepdive-images/02-resources-helpers.png#lightbox)
 
 The next few sections explore the relationships between the various
 parts of the **Phoneword** application; this should provide you with a
@@ -276,11 +276,11 @@ visual editor for Android layout files called the *Android Designer*:
 
 # [Visual Studio](#tab/vswin)
 
-[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png)
+[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Android Designer](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png)
+[![Android Designer](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
 
 -----
 
@@ -289,11 +289,11 @@ In the **Phoneword** app, the **TranslateButton**'s ID is set to
 
 # [Visual Studio](#tab/vswin)
 
-[![TranslateButton id setting](hello-android-deepdive-images/vs/04-translatebutton-sml.png "TranslateButton id setting")](hello-android-deepdive-images/vs/04-translatebutton.png)
+[![TranslateButton id setting](hello-android-deepdive-images/vs/04-translatebutton-sml.png "TranslateButton id setting")](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![TranslateButton id setting](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png)
+[![TranslateButton id setting](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png#lightbox)
 
 -----
 
@@ -318,11 +318,11 @@ of the designer view, as illustrated by the screenshot below:
 
 # [Visual Studio](#tab/vswin)
 
-[![Designer source view](hello-android-deepdive-images/vs/05-source-view-sml.png "Designer source view")](hello-android-deepdive-images/vs/05-source-view.png)
+[![Designer source view](hello-android-deepdive-images/vs/05-source-view-sml.png "Designer source view")](hello-android-deepdive-images/vs/05-source-view.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Designer source view](hello-android-deepdive-images/xs/05-source-view-sml.png)](hello-android-deepdive-images/xs/05-source-view.png)
+[![Designer source view](hello-android-deepdive-images/xs/05-source-view-sml.png)](hello-android-deepdive-images/xs/05-source-view.png#lightbox)
 
 -----
 
@@ -394,7 +394,7 @@ created, started and paused, resumed and destroyed, and so on. The
 in the screen's lifecycle. The following diagram illustrates a typical
 life of an Activity as well as some of the corresponding lifecycle methods:
 
-[![Activity Lifecycle](hello-android-deepdive-images/04-lifecycle-sml.png)](hello-android-deepdive-images/04-lifecycle.png)
+[![Activity Lifecycle](hello-android-deepdive-images/04-lifecycle-sml.png)](hello-android-deepdive-images/04-lifecycle.png#lightbox)
 
 By overriding `Activity` lifecycle methods, you can control how the
 Activity loads, how it reacts to the user, and even what happens after
@@ -544,13 +544,13 @@ After the device is configured, you can deploy to it by plugging it in,
 pressing **Start (Play)**, selecting it from the **Select Device**
 dialog, and pressing **OK**:
 
-[![Select debug device](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png)
+[![Select debug device](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
 
 -----
 
 This launches the application on the device:
 
-[![Enter Phoneword](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png)
+[![Enter Phoneword](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
 
 
 ### Set Icons for Different Screen Densities
@@ -560,7 +560,7 @@ all images look good on all screens. For example, here is a screenshot
 of a low-density icon on a high-density Nexus 5. Notice how blurry it
 is compared to the surrounding icons:
 
-[![Blurry icon](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png)
+[![Blurry icon](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png#lightbox)
 
 To account for this, it is good practice to add icons of different
 resolutions to the **Resources** folder. Android provides different
@@ -575,13 +575,13 @@ screens. Icons of varying sizes are stored in the appropriate
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Mipmap folders](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png)
+[![Mipmap folders](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png#lightbox)
 
 -----
 
 Android will pick the icon with the appropriate density:
 
-[![Icons at appropriate density](hello-android-deepdive-images/07-appropriate-density-sml.png)](hello-android-deepdive-images/07-appropriate-density.png)
+[![Icons at appropriate density](hello-android-deepdive-images/07-appropriate-density-sml.png)](hello-android-deepdive-images/07-appropriate-density.png#lightbox)
 
 ### Generate Custom Icons
 
@@ -654,12 +654,12 @@ To add one or more Google Play Service libraries, right-click the
 **Packages** node in your project tree and click **Add Google Play
 Service...**:
 
-[![Add Google Play Service](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png)
+[![Add Google Play Service](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png#lightbox)
 
 When the **Add Google Play Services** dialog is presented, select the
 packages (nugets) that you want to add to your project:
 
-[![Select packages](hello-android-deepdive-images/xs/09-add-dialog-sml.png)](hello-android-deepdive-images/xs/09-add-dialog.png)
+[![Select packages](hello-android-deepdive-images/xs/09-add-dialog-sml.png)](hello-android-deepdive-images/xs/09-add-dialog.png#lightbox)
 
 When you select a service and click **Add Package**, Visual Studio for Mac downloads and installs
 the package you select as well as any dependent Google Play Services
@@ -667,7 +667,7 @@ packages that it requires. In some cases, you may see a **License
 Acceptance** dialog that requires you to click **Accept** before the
 packages are installed:
 
-[![License acceptance](hello-android-deepdive-images/xs/10-license-acceptance-sml.png)](hello-android-deepdive-images/xs/10-license-acceptance.png)
+[![License acceptance](hello-android-deepdive-images/xs/10-license-acceptance-sml.png)](hello-android-deepdive-images/xs/10-license-acceptance.png#lightbox)
 
 -----
 

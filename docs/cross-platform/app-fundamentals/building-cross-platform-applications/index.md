@@ -50,7 +50,7 @@ Tasky is a simple to-do list application for iOS, Android and Windows Phone.
 It demonstrates the basics of creating a cross-platform application with Xamarin
 and uses a local SQLite database.
 
- [ ![tasky list](images/iphone-list-sml.png)](images/iphone-list.png) [ ![tasky detail](images/iphone-detail-sml.png)](images/iphone-detail.png)
+ [![tasky list](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) [![tasky list](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
 
 Read the [Tasky Case Study](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md).
 

@@ -26,13 +26,13 @@ It is a single library with a uniform API for all .NET Platforms including .NET 
 .NET Standard library projects can be created in Xamarin Studio 6.2, by first
 creating a Portable Library project:
 
-[ ![](net-standard-images/xs01-sml.png "Create a new portable library project")](net-standard-images/xs01.png)
+[![](net-standard-images/xs01-sml.png "Create a new portable library project")](net-standard-images/xs01.png#lightbox)
 
 Once the project has been created, right-click and open the **Project Options** window.
 In the **General** section the project can be converted to .NET Standard and set
 to use a specific version in the **Platform** drop-down list:
 
-[ ![](net-standard-images/xs02-sml.png "Convert to .NET Standard in general options")](net-standard-images/xs02.png)
+[![](net-standard-images/xs02-sml.png "Convert to .NET Standard in general options")](net-standard-images/xs02.png#lightbox)
 
 You can then [create a NuGet package](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/existing-library.md)
 to share the library with other developers.

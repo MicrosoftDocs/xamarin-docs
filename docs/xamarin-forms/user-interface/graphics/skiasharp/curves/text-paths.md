@@ -40,7 +40,7 @@ The `GetTextPath` method is overkill if you merely want to fill or stroke the re
 
 One of these tasks is clipping. The **Clipping Text** page creates a clipping path based on the character outlines of the word "CODE." This path is stretched to the size of the page to clip a bitmap that contains an image of the **Clipping Text** source code:
 
-[![](text-paths-images/clippingtext-small.png "Triple screenshot of the Clipping Text page")](text-paths-images/clippingtext-large.png "Triple screenshot of the Clipping Text page")
+[![](text-paths-images/clippingtext-small.png "Triple screenshot of the Clipping Text page")](text-paths-images/clippingtext-large.png#lightbox "Triple screenshot of the Clipping Text page")
 
 The [`ClippingTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) class constructor loads the bitmap that is stored as an embedded resource in the **Media** folder of the solution:
 
@@ -121,7 +121,7 @@ Once the clipping path is set, the bitmap can be displayed, and it will be clipp
 
 The **Text Path Effect** page converts a single ampersand character to a path to create a 1D path effect. A paint object with this path effect is then used to stroke the outline of a larger version of that same character:
 
-[![](text-paths-images/textpatheffect-small.png "Triple screenshot of the Text Path Effect page")](text-paths-images/textpatheffect-large.png "Triple screenshot of the Text Path Effect page")
+[![](text-paths-images/textpatheffect-small.png "Triple screenshot of the Text Path Effect page")](text-paths-images/textpatheffect-large.png#lightbox "Triple screenshot of the Text Path Effect page")
 
 Much of the work in the [`TextPathEffectPath`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) class occurs in the fields and constructor. The two `SKPaint` objects defined as fields are used for two different purposes: The first (named `textPathPaint`) is used to convert the ampersand with a `TextSize` of 50 to a path for the 1D path effect. The second (`textPaint`) is used to display the larger version of the ampersand with that path effect. For that reason, the `Style` of this second paint object is set to `Stroke`, but the `StrokeWidth` property is not set because that property isn't necessary when using a 1D path effect:
 
@@ -266,7 +266,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The `PaintSurface` handler then creates a new path named `outlinePath`. This becomes the destination path in the call to `GetFillPath`. The `StrokeWidth` property of 25 causes `outlinePath` to describe the outline of a 25-pixel-wide path stroking the text characters. This path is then displayed in red with a stroke width of 5:
 
-[![](text-paths-images/characteroutlineoutlines-small.png "Triple screenshot of the Character Outline Outlines page")](text-paths-images/characteroutlineoutlines-large.png "Triple screenshot of the Character Outline Outlines page")
+[![](text-paths-images/characteroutlineoutlines-small.png "Triple screenshot of the Character Outline Outlines page")](text-paths-images/characteroutlineoutlines-large.png#lightbox "Triple screenshot of the Character Outline Outlines page")
 
 Look closely and you'll see overlaps where the path outline makes a sharp corner. These are normal artifacts of this process.
 
@@ -319,7 +319,7 @@ public class CircularTextPage : ContentPage
 
 The `TextSize` property of `textPaint` is then adjusted so that the text width matches the circumference of the circle:
 
-[![](text-paths-images/circulartext-small.png "Triple screenshot of the Circular Text page")](text-paths-images/circulartext-large.png "Triple screenshot of the Circular Text page")
+[![](text-paths-images/circulartext-small.png "Triple screenshot of the Circular Text page")](text-paths-images/circulartext-large.png#lightbox "Triple screenshot of the Circular Text page")
 
 The text itself was chosen to be somewhat circular as well: The word "circle" is both the subject of the sentence and the object of a prepositional phrase. 
 

@@ -21,11 +21,11 @@ This section describes the basics of building an application for release in the 
 
 Change the **Configuration** to **Release** before updating the code signing and packaging options. The developer needs to make sure that they use their company **Identity** and the provisioning profile that we created above when signing the application for release in the App Store.
 
- [![Editing the code signing options](bundling-images/config02.png "Editing the code signing options")](bundling-images/config02-large.png)
+ [![Editing the code signing options](bundling-images/config02.png "Editing the code signing options")](bundling-images/config02-large.png#lightbox)
 
 Ensure that the option to create an installer package has been checked in the **Mac Build** settings:
 
-[![Editing the build options](bundling-images/config03.png "Editing the build options")](bundling-images/config03-large.png)
+[![Editing the build options](bundling-images/config03.png "Editing the build options")](bundling-images/config03-large.png#lightbox)
 
 ## Build
 

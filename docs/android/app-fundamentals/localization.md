@@ -283,11 +283,11 @@ screens that adapt for RTL readers.
 
 The following screenshot shows the [localized **Tasky** sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in Arabic:
 
-[![Screenshot of Tasky app in Arabic](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png) 
+[![Screenshot of Tasky app in Arabic](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
 
 The next screenshot shows the [localized **Tasky** sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in Hebrew:
 
-[![Screenshot of Tasky app in Hebrew](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png)
+[![Screenshot of Tasky app in Hebrew](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
 
 RTL text is localized using **Strings.xml** files in the same way as
 LTR text.

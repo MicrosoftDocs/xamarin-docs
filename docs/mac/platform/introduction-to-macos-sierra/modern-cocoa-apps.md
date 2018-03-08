@@ -20,7 +20,7 @@ _This article covers several tips, features and techniques a developer can use t
 
 A modern look will include a modern Window and Toolbar appearance such as the example app shown below:
 
-[ ![](modern-cocoa-apps-images/content08.png "An example of a modern Mac app UI")](modern-cocoa-apps-images/content08.png)
+[![](modern-cocoa-apps-images/content08.png "An example of a modern Mac app UI")](modern-cocoa-apps-images/content08.png#lightbox)
 
 <a name="Enabling-Full-Sized-Content-Views" />
 
@@ -60,7 +60,7 @@ namespace MacModern
 
 This feature can also be enabled in Xcode's Interface Builder by selecting the Window and checking **Full Sized Content View**:
 
-[ ![](modern-cocoa-apps-images/content01.png "Editing the main storyboard in Xcode's Interface Builder")](modern-cocoa-apps-images/content01.png)
+[![](modern-cocoa-apps-images/content01.png "Editing the main storyboard in Xcode's Interface Builder")](modern-cocoa-apps-images/content01.png#lightbox)
 
 When using a Full Size Content View, the developer may need to offset the content beneath the title and tool bar areas so that specific content (such as labels) doesn't slide under them.
 
@@ -141,11 +141,11 @@ topConstraint.Active = true;
 
 A normal macOS Window includes a standard Title Bar at runs along to top edge of the Window. If the Window also includes a Tool Bar, it will be displayed under this Title Bar area:
 
-[ ![](modern-cocoa-apps-images/content02.png "A standard Mac Toolbar")](modern-cocoa-apps-images/content02.png)
+[![](modern-cocoa-apps-images/content02.png "A standard Mac Toolbar")](modern-cocoa-apps-images/content02.png#lightbox)
 
 When using a Streamlined Toolbar, the Title Area disappears and the Tool Bar moves up into the Title Bar's position, in-line with the Window Close, Minimize and Maximize buttons:
 
-[ ![](modern-cocoa-apps-images/content03.png "A streamlined Mac Toolbar")](modern-cocoa-apps-images/content03.png)
+[![](modern-cocoa-apps-images/content03.png "A streamlined Mac Toolbar")](modern-cocoa-apps-images/content03.png#lightbox)
 
 The Streamlined Toolbar is enabled by overriding the `ViewWillAppear` method of the `NSViewController` and making it look like the following:
 
@@ -167,7 +167,7 @@ This effect is typically used for _Shoebox Applications_ (one window apps) like 
 
 Depending on the design of the app, the developer might also want to complement the Title Bar area with an Accessory View Controller that appears right below the Title/Tool Bar area to provide context sensitive controls to the user based on the activity they are currently engaged in:
 
-[ ![](modern-cocoa-apps-images/content04.png "An example Accessory View Controller")](modern-cocoa-apps-images/content04.png)
+[![](modern-cocoa-apps-images/content04.png "An example Accessory View Controller")](modern-cocoa-apps-images/content04.png#lightbox)
 
 The Accessory View controller will automatically be blurred and resized by the system without developer intervention.
 
@@ -176,13 +176,13 @@ To add an Accessory View Controller, do the following:
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file to open it for editing.
 2. Drag a **Custom View Controller** into the Window's hierarchy: 
 
-	[ ![](modern-cocoa-apps-images/content05.png "Adding a new Custom View Controller")](modern-cocoa-apps-images/content05.png)
+	[![](modern-cocoa-apps-images/content05.png "Adding a new Custom View Controller")](modern-cocoa-apps-images/content05.png#lightbox)
 3. Layout the Accessory View's UI: 
 
-	[ ![](modern-cocoa-apps-images/content06.png "Designing the new view")](modern-cocoa-apps-images/content06.png)
+	[![](modern-cocoa-apps-images/content06.png "Designing the new view")](modern-cocoa-apps-images/content06.png#lightbox)
 4. Expose the Accessory View as an **Outlet** and any other **Actions** or **Outlets** for its UI: 
 
-	[ ![](modern-cocoa-apps-images/content07.png "Adding the required OUtlet")](modern-cocoa-apps-images/content07.png)
+	[![](modern-cocoa-apps-images/content07.png "Adding the required OUtlet")](modern-cocoa-apps-images/content07.png#lightbox)
 5. Save the changes.
 6. Return to Visual Studio for Mac to sync the changes.
 
@@ -244,7 +244,7 @@ Because macOS is now fully localized, the `Left` and `Right` `NSLayoutAttribute`
 
 Additionally, the macOS system might add Accessory View Controllers to the app's Window. For example, to create Tabbed Windows where several of the App's Windows are merged into one virtual Window:
 
-[ ![](modern-cocoa-apps-images/content08.png "An example of a tabbed Mac Window")](modern-cocoa-apps-images/content08.png)
+[![](modern-cocoa-apps-images/content08.png "An example of a tabbed Mac Window")](modern-cocoa-apps-images/content08.png#lightbox)
 
 Typically, the developer will need to take limited action use Tabbed Windows in their Xamarin.Mac apps, the system will handle them automatically as follows:
 
@@ -426,7 +426,7 @@ Additionally, Apple suggests using Layer Backed Views as opposed to adding a new
 
 Layer Backing can be enabled by setting the `WantsLayer` of a `NSView` to `true` or inside of Xcode's Interface Builder under the **View Effects Inspector** by checking **Core Animation Layer**:
 
-[ ![](modern-cocoa-apps-images/content09.png "The View Effects Inspector")](modern-cocoa-apps-images/content09.png)
+[![](modern-cocoa-apps-images/content09.png "The View Effects Inspector")](modern-cocoa-apps-images/content09.png#lightbox)
 
 <a name="Redrawing-Views-with-Layers" />
 
@@ -788,7 +788,7 @@ Apple suggest doing the following:
 
 Apple has provided several features in Xcode's Interface Builder that the developer can use when designing or editing an app's UI to support localization. The **Text Direction** section of the **Attribute Inspector** allows the developer to provide hints on how direction should be used and updated on a select Text-Based View (such as `NSTextField`):
 
-[ ![](modern-cocoa-apps-images/content10.png "The Text Direction options")](modern-cocoa-apps-images/content10.png)
+[![](modern-cocoa-apps-images/content10.png "The Text Direction options")](modern-cocoa-apps-images/content10.png#lightbox)
 
 There are three possible values for the **Text Direction**:
 
@@ -847,7 +847,7 @@ var button2 = NSButton.CreateButton (myTitle, myImage, () => {
 
 Modern macOS apps can adopt a new Dark Interface Appearance that works well for image creation, editing or presentation apps:
 
-[ ![](modern-cocoa-apps-images/content11.png "An example of a dark Mac Window UI")](modern-cocoa-apps-images/content11.png)
+[![](modern-cocoa-apps-images/content11.png "An example of a dark Mac Window UI")](modern-cocoa-apps-images/content11.png#lightbox)
 
 This can be done by adding one line of code before the Window is presented. For example:
 
@@ -894,7 +894,7 @@ Storyboards allow the developer to not only design the individual elements that 
 
 Controllers allow the developer to collect elements into a unit of composition and Segues abstract and remove the typical "glue code" required to move throughout the View Hierarchy:
 
-[ ![](modern-cocoa-apps-images/content12.png "Editing the UI in Xcode's Interface Builder")](modern-cocoa-apps-images/content12.png)
+[![](modern-cocoa-apps-images/content12.png "Editing the UI in Xcode's Interface Builder")](modern-cocoa-apps-images/content12.png#lightbox)
 
 For more information, please see our [Introduction to Storyboards](~/mac/platform/storyboards/index.md) documentation.
 

@@ -155,7 +155,7 @@ The [`UniformGridLayout`](https://github.com/xamarin/xamarin-forms-book-samples/
 
 The [**PhotoGrid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/PhotoGrid) sample demonstrates `UniformGridLayout`:
 
-[![Triple screenshot of Photo Grid](images/ch26fg08-small.png "Uniform Grid Layout")](images/ch26fg08-large.png "Uniform Grid Layout")
+[![Triple screenshot of Photo Grid](images/ch26fg08-small.png "Uniform Grid Layout")](images/ch26fg08-large.png#lightbox "Uniform Grid Layout")
 
 ### Overlapping children
 
@@ -171,7 +171,7 @@ For overlapping children, children at the end of the collection visually appear 
 The [`OverlapLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/OverlapLayout.cs) class in the [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) library defines an attached property to indicate the render order and thus allow one of its children to be displayed on top of the others. The
 [**StudentCardFile**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/StudentCardFile) sample demonstrates this:
 
-[![Triple screenshot of Student Card File Grid](images/ch26fg10-small.png "Overlapping Layout Children")](images/ch26fg10-large.png "Overlapping Layout Children")
+[![Triple screenshot of Student Card File Grid](images/ch26fg10-small.png "Overlapping Layout Children")](images/ch26fg10-large.png#lightbox "Overlapping Layout Children")
 
 ### More attached bindable properties
 

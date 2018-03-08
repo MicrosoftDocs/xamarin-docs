@@ -54,7 +54,7 @@ about setting Android version levels, see
 When the app is built and run, it displays the default action bar 
 as seen in this screenshot: 
 
-[![Screenshot of default action bar](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png)
+[![Screenshot of default action bar](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
 
 
 
@@ -208,7 +208,7 @@ example, the `ToolBar` can be directly referenced as an action bar.
 Compile and run this app &ndash; the customized `Toolbar` is displayed 
 in place of the default action bar: 
 
-[![Screenshot of customized Toolbar with green color scheme](replacing-the-action-bar-images/02-after-sml.png)](replacing-the-action-bar-images/02-after.png)
+[![Screenshot of customized Toolbar with green color scheme](replacing-the-action-bar-images/02-after-sml.png)](replacing-the-action-bar-images/02-after.png#lightbox)
 
 Notice that the `Toolbar` is styled independently of the 
 `Theme.Material.Light.DarkActionBar` theme that is applied to 
@@ -338,12 +338,12 @@ Build and run `ToolbarFun` to see the new menu items in the toolbar.
 The `Toolbar` now displays three menu icons as seen in this 
 screenshot: 
 
-[![Diagram illustrating locations of Edit, Save, and Overflow menu items](replacing-the-action-bar-images/04-menu-items-sml.png)](replacing-the-action-bar-images/04-menu-items.png)
+[![Diagram illustrating locations of Edit, Save, and Overflow menu items](replacing-the-action-bar-images/04-menu-items-sml.png)](replacing-the-action-bar-images/04-menu-items.png#lightbox)
 
 When a user taps the **Edit** menu item, a toast is displayed to 
 indicate that the `OnOptionsItemSelected` method was called: 
 
-[![Screenshot of Toast displayed when Edit item is tapped](replacing-the-action-bar-images/05-toast-displayed-sml.png)](replacing-the-action-bar-images/05-toast-displayed.png)
+[![Screenshot of Toast displayed when Edit item is tapped](replacing-the-action-bar-images/05-toast-displayed-sml.png)](replacing-the-action-bar-images/05-toast-displayed.png#lightbox)
 
 When a user taps the overflow menu, the **Preferences** menu 
 item is displayed. Typically, less-common actions should be placed 
@@ -351,7 +351,7 @@ in the overflow menu &ndash; this example uses the overflow menu
 for **Preferences** because it is not used as often as **Edit** 
 and **Save**: 
 
-[![Screenshot of Preferences menu item that appears in the Overflow menu](replacing-the-action-bar-images/06-preferences-sml.png)](replacing-the-action-bar-images/06-preferences.png)
+[![Screenshot of Preferences menu item that appears in the Overflow menu](replacing-the-action-bar-images/06-preferences-sml.png)](replacing-the-action-bar-images/06-preferences.png#lightbox)
 
 For more information about Android menus, see the Android Developer 
 [Menus](https://developer.android.com/guide/topics/ui/menus.html) 

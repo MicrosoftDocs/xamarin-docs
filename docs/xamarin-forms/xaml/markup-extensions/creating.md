@@ -113,7 +113,7 @@ The **HSL Color Demo** page shows a variety of ways that `HslColorExtension` can
 
 Notice that when `HslColorExtension` is an XML tag, the four properties are set as attributes, but when it appears between curly braces, the four properties are separated by commas without quotation marks. The default values for `H`, `S`, and `L` are 0, and the default value of `A` is 1, so those properties can be omitted if you want them set to default values. The last example shows an example where the luminosity is 0, which normally results in black, but the alpha channel is 0.5, so it is half transparent and appears gray against the white background of the page:
 
-[![HSL Color Demo](creating-images/hslcolordemo-small.png "HSL Color Demo")](creating-images/hslcolordemo-large.png "HSL Color Demo")
+[![HSL Color Demo](creating-images/hslcolordemo-small.png "HSL Color Demo")](creating-images/hslcolordemo-large.png#lightbox "HSL Color Demo")
 
 ## A Markup Extension for Accessing Bitmaps
 
@@ -176,7 +176,7 @@ Although `ImageResourceExtension` requires the `Source` property to be set, the 
 
 Here's the program running on all three platforms:
 
-[![Image Resource Demo](creating-images/imageresourcedemo-small.png "Image Resource Demo")](creating-images/imageresourcedemo-large.png "Image Resource Demo")
+[![Image Resource Demo](creating-images/imageresourcedemo-small.png "Image Resource Demo")](creating-images/imageresourcedemo-large.png#lightbox "Image Resource Demo")
 
 ## Service Providers
 

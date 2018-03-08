@@ -60,7 +60,7 @@ To achieve this, use the following steps:
 3. Select the **Mobile development with .NET** workload from the
    installation screen: 
 
-    [![Mobile development with .NET selection on the Workloads screen](windows-images/01-mobile-dev-workload-sml.png)](windows-images/01-mobile-dev-workload.png)
+    [![Mobile development with .NET selection on the Workloads screen](windows-images/01-mobile-dev-workload-sml.png)](windows-images/01-mobile-dev-workload.png#lightbox)
 
 4. While **Mobile development with .NET** is selected, have a look at
    the **Summary** panel on the right. Here, you can deselect mobile

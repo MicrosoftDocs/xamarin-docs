@@ -27,7 +27,7 @@ JNI, see [Working with JNI](~/android/platform/java-integration/working-with-jni
 
 Xamarin.Android implements bindings by using *Managed Callable Wrappers* (*MCW*). MCW is a JNI bridge that is used when managed code needs to invoke Java code. Managed callable wrappers also provide support for subclassing Java types and for overriding virtual methods on Java types. Likewise, whenever Android runtime (ART) code wishes to invoke managed code, it does so via another JNI bridge known as Android Callable Wrappers (ACW). This [architecture](~/android/internals/architecture.md) is illustrated in the following diagram:
 
-[ ![Android JNI bridge architecture](images/architecture.png)](images/architecture.png)
+[![Android JNI bridge architecture](images/architecture.png)](images/architecture.png#lightbox)
 
 A Bindings Library is an assembly containing Managed Callable Wrappers for Java types. For example, here is a Java type, `MyClass`, that we want to wrap in a Bindings Library:
 

@@ -225,7 +225,7 @@ public override View GetView (int position, View convertView, ViewGroup parent)
 The image is displayed (if it exists) using the Uri to the image file on the
 device. The application looks like this:
 
-[![Screenshot of app displaying contacts in a ListView; an image is displayed to the left of one entry](contacts-contentprovider-images/contactsprovider.png)](contacts-contentprovider-images/contactsprovider.png)
+[![Screenshot of app displaying contacts in a ListView; an image is displayed to the left of one entry](contacts-contentprovider-images/contactsprovider.png)](contacts-contentprovider-images/contactsprovider.png#lightbox)
 
 Using a similar code pattern, your application can access a wide
 variety of system data including the user's photos, videos and music.

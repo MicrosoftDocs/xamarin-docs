@@ -27,7 +27,7 @@ will automatically render the data, and can be customized using themes.
 To see how the Evolve keynote demo works, check out the
 [getting started guide](get-started.md).
 
-[ ![](images/demo-sml.png "DataPages Sample Application")](images/demo.png "DataPages Sample Application")
+[![](images/demo-sml.png "DataPages Sample Application")](images/demo.png#lightbox "DataPages Sample Application")
 
 ## Introduction
 

@@ -60,7 +60,7 @@ The following code example shows *explicit* styles declared in XAML in a page's 
 
 The [`ResourceDictionary`](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) defines three *explicit* styles that are applied to the page's [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instances. Each `Style` is used to display text in a different color, while also setting the font size and horizontal and vertical layout options. Each `Style` is applied to a different `Label` by setting its [`Style`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) properties using the `StaticResource` markup extension. This results in the appearance shown in the following screenshots:
 
-[![](explicit-images/explicit-styles.png "Explicit Styles Example")](explicit-images/explicit-styles-large.png "Explicit Styles Example")
+[![](explicit-images/explicit-styles.png "Explicit Styles Example")](explicit-images/explicit-styles-large.png#lightbox "Explicit Styles Example")
 
 In addition, the final [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) has a [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) applied to it, but also overrides the [`TextColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/) property to a different `Color` value.
 

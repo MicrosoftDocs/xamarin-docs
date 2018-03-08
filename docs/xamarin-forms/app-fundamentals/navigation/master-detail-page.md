@@ -18,7 +18,7 @@ _The Xamarin.Forms MasterDetailPage is a page that manages two related pages of 
 
 A master page typically displays a list of items, as shown in the following screenshots:
 
-[![](master-detail-page-images/masterpage-components.png "Master Page Components")](master-detail-page-images/masterpage-components-large.png "Master Page Components")
+[![](master-detail-page-images/masterpage-components.png "Master Page Components")](master-detail-page-images/masterpage-components-large.png#lightbox "Master Page Components")
 
 The location of the list of items is identical on each platform, and selecting one of the items will navigate to the corresponding detail page. In addition, the master page also features a navigation bar that contains a button that can be used to navigate to the active detail page:
 

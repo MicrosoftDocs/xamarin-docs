@@ -44,7 +44,7 @@ automatically if they were to crash.
 The diagram below shows a simple overview of the Xamarin.iOS development
 workflow:
 
-[![iOS development workflow](images/xma2.png)](images/xma2.png)
+[![iOS development workflow](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
 >  Visual Studio actually launches a separate MSBuild process to build the
@@ -102,12 +102,12 @@ on your Mac by following the steps below:
    select the *Sharing* result. This will open *System Preferences* at the
    *Sharing* panel:
 
-   [![Spotlight search for remote login](images/spotlight.png)](images/spotlight.png)
+   [![Spotlight search for remote login](images/spotlight.png)](images/spotlight.png#lightbox)
 
 2. Tick the *Remote Login* option in the *Service* list on the left to allow
    Xamarin for Visual Studio to connect to the Mac:
 
-   [![Tick the Remote Login option in the Service list](images/sharing.png)](images/sharing.png)
+   [![Tick the Remote Login option in the Service list](images/sharing.png)](images/sharing.png#lightbox)
 
 3. Make sure that *Remote Login* is set to allow access for *All* users, or
    that your Mac username or group is included in the list of allowed users
@@ -135,18 +135,18 @@ There are two ways to connect to the Mac build host:
 
 On the iOS toolbar:
 
-[![The iOS toolbar](images/image1.png)](images/image1.png)
+[![The iOS toolbar](images/image1.png)](images/image1.png#lightbox)
 
 Or by browsing to **Tools > Options** in Visual Studio, selecting 
 **Xamarin > iOS Settings** and clicking the **Find Xamarin Mac Agent** 
 button:
 
-[![Finding Xamarin Mac Agent](images/image2.png)](images/image2.png)
+[![Finding Xamarin Mac Agent](images/image2.png)](images/image2.png#lightbox)
 
 Navigating either way will lead to the **Mac Agent** dialog, illustrated
 below:
 
-[![The Mac Agent dialog](images/image3.png)](images/image3.png)
+[![The Mac Agent dialog](images/image3.png)](images/image3.png#lightbox)
 
 This will display a list of all the machines that have either been
 previously connected and are stored as known machines, or machines that are
@@ -156,7 +156,7 @@ Select a Mac by double-clicking on it to connect to it. The first time that
 you connect to a Mac, you will be prompted to enter your Mac user
 credentials to allow the remote connection:
 
-[![Enter the Mac user credentials](images/image4.png)](images/image4.png)
+[![Enter the Mac user credentials](images/image4.png)](images/image4.png#lightbox)
 
 The agent will use these credentials to create a new SSH connection to the
 Mac. If it succeeds, an SSH key will be created, and will be
@@ -175,7 +175,7 @@ connect to the most recently connected known build host.
 When a connection has been successfully made, it will display in the Host
 Selection dialog with a **connected** icon next to it, as illustrated below:
 
-[![The Host Selection dialog with a connected icon next to it](images/image6.png)](images/image6.png)
+[![The Host Selection dialog with a connected icon next to it](images/image6.png)](images/image6.png#lightbox)
 
 There can only be one connected Mac at any one time.
 
@@ -183,7 +183,7 @@ Each machine in the list, whether connected or otherwise, will display a
 context menu on right-click, allowing you to **Connect**, **Disconnect**, or
 **Forget the Mac** as needed:
 
-[![The Connect, Disconnect, or Forget this Mac context menus](images/image7.png)](images/image7.png)
+[![The Connect, Disconnect, or Forget this Mac context menus](images/image7.png)](images/image7.png#lightbox)
 
 If you choose to **Forget this Mac**, you will need to re-enter your
 credentials to connect to it again.
@@ -199,27 +199,27 @@ the steps below:
 1. Locate your Mac’s IP address by either browsing to the **System
    Preferences > Sharing > Remote Login** on your Mac:
 
-   [![The Mac's IP address in System Preferences](images/image8.png)](images/image8.png)
+   [![The Mac's IP address in System Preferences](images/image8.png)](images/image8.png#lightbox)
 
    Or, if you prefer to use the command line you can find out your IP
    address by entering `ipconfig getifaddr en0` into Terminal (Note that
    depending on the type of connection the variable might be `en1`, `en2`
    etc.):
 
-   [![The IP address in the Terminal app](images/image9.png)](images/image9.png)
+   [![The IP address in the Terminal app](images/image9.png)](images/image9.png#lightbox)
 
 2. Return to Visual Studio and in the Host Selection dialog, select **Add Mac...**:
 
-   [![The Host Selection dialog](images/image10.png)](images/image10.png)
+   [![The Host Selection dialog](images/image10.png)](images/image10.png#lightbox)
 
 3. Enter the IP address of you Mac into the Add Mac dialog and click **Add**:
 
-   [![Enter the IP address of the Mac into the Add Mac dialog](images/image11.png)](images/image11.png)
+   [![Enter the IP address of the Mac into the Add Mac dialog](images/image11.png)](images/image11.png#lightbox)
 
 4. Finally, enter the username (not full name) of your Mac admin account and
    the corresponding password:
 
-   [![Enter the username and password](images/image12.png)](images/image12.png)
+   [![Enter the username and password](images/image12.png)](images/image12.png#lightbox)
 
 Once you click **Login**, Visual Studio will log into the Mac machine using
 SSH and will add this Mac as a known machine.

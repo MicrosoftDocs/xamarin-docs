@@ -151,7 +151,7 @@ float[] GetPickerArray(Picker picker)
 
 In the following screenshots, the iOS screen on the far left shows a dotted line:
 
-[![](dots-images/dotsanddashes-small.png "Triple screenshot of the Dots and Dashes page")](dots-images/dotsanddashes-large.png "Triple screenshot of the Dots and Dashes page")
+[![](dots-images/dotsanddashes-small.png "Triple screenshot of the Dots and Dashes page")](dots-images/dotsanddashes-large.png#lightbox "Triple screenshot of the Dots and Dashes page")
 
 However, the Android screen is also supposed to show a dotted line using the array { 10, 10 } but instead the line is solid. What happened? The problem is that the Android screen also has a stroke caps setting of `Square`. This extends all the dashes by half the stroke width, causing them to fill up the gaps.
 
@@ -209,7 +209,7 @@ protected override void OnAppearing()
 
 Of course, you'll have to actually run the program to see the animation:
 
-[![](dots-images/animatedspiral-small.png "Triple screenshot of the Animated Spiral page")](dots-images/animatedspiral-large.png "Triple screenshot of the Animated Spiral page")
+[![](dots-images/animatedspiral-small.png "Triple screenshot of the Animated Spiral page")](dots-images/animatedspiral-large.png#lightbox "Triple screenshot of the Animated Spiral page")
 
 You've now seen how to draw lines and to define curves using parametric equations. A  section to be published later will cover the various types of curves that `SKPath` supports.
 

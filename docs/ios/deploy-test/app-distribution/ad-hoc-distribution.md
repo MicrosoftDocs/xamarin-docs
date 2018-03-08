@@ -47,15 +47,15 @@ The next section will describe how to get set up with a Distribution Certificate
 3. Click the **+** button to create a new Certificate.
 4. Under the *Production* heading, select **In-House and Ad Hoc**, or **App Store and Ad Hoc**, depending on your program membership:
 
-  [ ![](ad-hoc-distribution-images/cert-first-small.png "Select In-House and Ad Hoc, or App Store and Ad Hoc")](ad-hoc-distribution-images/cert-first-large.png)
+  [![](ad-hoc-distribution-images/cert-first-small.png "Select In-House and Ad Hoc, or App Store and Ad Hoc")](ad-hoc-distribution-images/cert-first-large.png#lightbox)
 
 5. Click Continue, and follow the instructions to create a Certificate Signing Request via Keychain Access:
 
-  [ ![](ad-hoc-distribution-images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](ad-hoc-distribution-images/createcertmanually02.png)
+  [![](ad-hoc-distribution-images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](ad-hoc-distribution-images/createcertmanually02.png#lightbox)
 
 6. Once you have created the CSR as instructed, click Continue, and upload the CSR to the Member Center:
 
-  [ ![](ad-hoc-distribution-images/createcertmanually03.png "Upload the CSR to the Member Center")](ad-hoc-distribution-images/createcertmanually03.png)
+  [![](ad-hoc-distribution-images/createcertmanually03.png "Upload the CSR to the Member Center")](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
 
 7. Click Generate to create a certificate.
 8. Finally, Download the completed certificate and double-click on the file to install it.
@@ -64,10 +64,10 @@ The next section will describe how to get set up with a Distribution Certificate
 Alternatively, it is possible to request a Certificate via the Preferences dialog in Xcode. To do this, follow the steps below:
 
 1.   Select your team, and click **Manage Certificates…**:
-	[ ![](ad-hoc-distribution-images/selectteam.png "Selecting the team")](ad-hoc-distribution-images/selectteam.png)
+	[![](ad-hoc-distribution-images/selectteam.png "Selecting the team")](ad-hoc-distribution-images/selectteam.png#lightbox)
 
 2.   Next, click the **plus (+)** button and select **iOS App Store**:
-	[ ![](ad-hoc-distribution-images/selectcert.png "Selecting iOS App Store")](ad-hoc-distribution-images/selectcert.png)
+	[![](ad-hoc-distribution-images/selectcert.png "Selecting iOS App Store")](ad-hoc-distribution-images/selectcert.png#lightbox)
 
 <a name="createprofile" />
 
@@ -90,23 +90,23 @@ As with any other Provisioning Profile you create, an App ID will be required to
 Once you have the required components needed for creating a Distribution Profile, follow the steps below to create it:
 
 1. Return to the Apple Provisioning Portal and select **Provisioning > Distribution**:
-	[ ![](ad-hoc-distribution-images/distribute01.png "Select Provisioning > Distribution")](ad-hoc-distribution-images/distribute01.png)
+	[![](ad-hoc-distribution-images/distribute01.png "Select Provisioning > Distribution")](ad-hoc-distribution-images/distribute01.png#lightbox)
 
 2. Click the **+** button and select the type of Distribution Profile that you want to create as **Ad-Hoc**:
 
-	[ ![](ad-hoc-distribution-images/distribute02.png "Create an Ad-Hoc Distribution type")](ad-hoc-distribution-images/distribute02.png)
+	[![](ad-hoc-distribution-images/distribute02.png "Create an Ad-Hoc Distribution type")](ad-hoc-distribution-images/distribute02.png#lightbox)
 
 3. Click the **Continue** button and select App ID from the dropdown list that you want to create a Distribution Profile for:
 
-	[ ![](ad-hoc-distribution-images/distribute03.png "Select App ID from the dropdown list")](ad-hoc-distribution-images/distribute03.png)
+	[![](ad-hoc-distribution-images/distribute03.png "Select App ID from the dropdown list")](ad-hoc-distribution-images/distribute03.png#lightbox)
 
 4. Click the **Continue** button and select distribution certificate required to sign the application:
 
-	[ ![](ad-hoc-distribution-images/distribute04.png "Select distribution certificate required to sign the application")](ad-hoc-distribution-images/distribute04.png)
+	[![](ad-hoc-distribution-images/distribute04.png "Select distribution certificate required to sign the application")](ad-hoc-distribution-images/distribute04.png#lightbox)
 
 6. Click the **Continue** button and enter a **Name** for the new Distribution Profile:
 
-	[ ![](ad-hoc-distribution-images/distribute06.png "Enter a Name for the new Distribution Profile")](ad-hoc-distribution-images/distribute06.png)
+	[![](ad-hoc-distribution-images/distribute06.png "Enter a Name for the new Distribution Profile")](ad-hoc-distribution-images/distribute06.png#lightbox)
 
 7. Click the **Generate** button to create the new profile and finalize the process.
 

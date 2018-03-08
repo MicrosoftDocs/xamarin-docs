@@ -25,7 +25,7 @@ first Activity.
 
 The following screenshots illustrate some examples of this application:
 
-[![Example screenshots with notification](local-notifications-walkthrough-images/1-overview-sml.png)](local-notifications-walkthrough-images/1-overview.png)
+[![Example screenshots with notification](local-notifications-walkthrough-images/1-overview-sml.png)](local-notifications-walkthrough-images/1-overview.png#lightbox)
 
 
 
@@ -208,23 +208,23 @@ to include this icon file in your project.
 Let's build and run the application. You should be presented with the
 first activity, similar to the following screenshot:
 
-[ ![First activity screenshot](local-notifications-walkthrough-images/2-start-screen-sml.png)](local-notifications-walkthrough-images/2-start-screen.png)
+[![First activity screenshot](local-notifications-walkthrough-images/2-start-screen-sml.png)](local-notifications-walkthrough-images/2-start-screen.png#lightbox)
 
 As you click the button, you should notice the small icon for the
 notification appear in the notification area:
 
-[ ![Notification icon appears](local-notifications-walkthrough-images/3-notification-icon-sml.png)](local-notifications-walkthrough-images/3-notification-icon.png)
+[![Notification icon appears](local-notifications-walkthrough-images/3-notification-icon-sml.png)](local-notifications-walkthrough-images/3-notification-icon.png#lightbox)
 
 If you swipe down and expose the notification drawer, you should see
 the notification:
 
-[ ![Notification message](local-notifications-walkthrough-images/4-notifications-sml.png)](local-notifications-walkthrough-images/4-notifications.png)
+[![Notification message](local-notifications-walkthrough-images/4-notifications-sml.png)](local-notifications-walkthrough-images/4-notifications.png#lightbox)
 
 When you click the notification, it should disappear, and our other
 activity should be launched &ndash; looking something like the
 following screenshot:
 
-[ ![Second activity screenshot](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png)
+[![Second activity screenshot](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png#lightbox)
 
 Congratulations! At this point you have completed the Android local
 notification walkthrough and you have a working sample that you can

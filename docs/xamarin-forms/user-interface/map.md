@@ -28,7 +28,7 @@ some configuration for maps to work.
 
 The map control has been used in the [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/) sample, which is shown below.
 
- [ ![Maps in the MobileCRM sample](map-images/maps-zoom-sml.png "Map Control Example")](map-images/maps-zoom.png "Map Control Example")
+ [![Maps in the MobileCRM sample](map-images/maps-zoom-sml.png "Map Control Example")](map-images/maps-zoom.png#lightbox "Map Control Example")
 
 Map functionality can be further enhanced by creating a [map custom renderer](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
 
@@ -198,7 +198,7 @@ slider.ValueChanged += (sender, e) => {
 };
 ```
 
- [ ![Maps with zoom](map-images/maps-zoom-sml.png "Map Control Zoom")](map-images/maps-zoom.png "Map Control Zoom")
+ [![Maps with zoom](map-images/maps-zoom-sml.png "Map Control Zoom")](map-images/maps-zoom.png#lightbox "Map Control Zoom")
 
 ### Map Pins
 

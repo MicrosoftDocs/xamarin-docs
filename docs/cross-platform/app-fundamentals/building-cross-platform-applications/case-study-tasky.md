@@ -83,7 +83,7 @@ Start with a high-level design that can be implemented across the target
 platforms. Take care to note platform-specfic UI constraints. For example, a `TabBarController` in iOS can display more than five buttons, whereas the Windows Phone equivalent can display up to four.
 Draw the screen-flow using the tool of your choice (paper works).
 
- [ ![](case-study-tasky-images/taskydesign.png "Draw the screen-flow using the tool of your choice paper works")](case-study-tasky-images/taskydesign.png)
+ [![](case-study-tasky-images/taskydesign.png "Draw the screen-flow using the tool of your choice paper works")](case-study-tasky-images/taskydesign.png#lightbox)
 
  <a name="Data_Model" />
 
@@ -132,7 +132,7 @@ application code should be broken down into the following parts:
  -   **Platform-specific Code** – platform-specific projects that implement a native UI for each operating system, utilizing the common code as the ‘back end’.
 
 
- [ ![](case-study-tasky-images/taskypro-architecture.png "Platform-specific projects implement a native UI for each operating system, utilizing the common code as the back end")](case-study-tasky-images/taskypro-architecture.png)
+ [![](case-study-tasky-images/taskypro-architecture.png "Platform-specific projects implement a native UI for each operating system, utilizing the common code as the back end")](case-study-tasky-images/taskypro-architecture.png#lightbox)
 
 These two parts are described in the following sections.
 
@@ -154,7 +154,7 @@ The complete PCL project is illustrated below. All of the code in the portable l
 The class diagram below shows the classes grouped by layer. The `SQLiteConnection` class is boilerplate code from the Sqlite-NET package. The rest of the classes are custom code for Tasky. The `TaskItemManager` and `TaskItem` classes represent the API that is
 exposed to the platform-specific applications.
 
- [ ![](case-study-tasky-images/classdiagram-core.png "The TaskItemManager and TaskItem classes represent the API that is exposed to the platform-specific applications")](case-study-tasky-images/classdiagram-core.png)
+ [![](case-study-tasky-images/classdiagram-core.png "The TaskItemManager and TaskItem classes represent the API that is exposed to the platform-specific applications")](case-study-tasky-images/classdiagram-core.png#lightbox)
 
 Using namespaces to separate the layers helps to manage references between
 each layer. The platform-specific projects should only need to include a `using` statement for the Business Layer. The Data Access Layer and
@@ -373,7 +373,7 @@ complete iOS Xamarin.iOS project is shown below:
 
 The classes are shown in this diagram, grouped into layers.
 
- [ ![](case-study-tasky-images/classdiagram-android.png "The classes are shown in this diagram, grouped into layers")](case-study-tasky-images/classdiagram-android.png)
+ [![](case-study-tasky-images/classdiagram-android.png "The classes are shown in this diagram, grouped into layers")](case-study-tasky-images/classdiagram-android.png#lightbox)
 
  <a name="References" />
 
@@ -455,7 +455,7 @@ The Home Screen is a `MonoTouch.Dialog`
 screen that displays a list of tasks from the SQLite database. It inherits from `DialogViewController` and implements code to set the `Root` to contain
 a collection of `TaskItem` objects for display.
 
- [ ![](case-study-tasky-images/ios-taskylist.png "It inherits from DialogViewController and implements code to set the Root to contain a collection of TaskItem objects for display")](case-study-tasky-images/ios-taskylist.png)
+ [![](case-study-tasky-images/ios-taskylist.png "It inherits from DialogViewController and implements code to set the Root to contain a collection of TaskItem objects for display")](case-study-tasky-images/ios-taskylist.png#lightbox)
 
 The two main methods related to displaying and interacting with the task list
 are:
@@ -477,7 +477,7 @@ the Application Layer.
 
 This screenshot shows an empty screen that demonstrates the `Entry` attribute setting the watermark text in the **Name** and **Notes** fields:
 
- [ ![](case-study-tasky-images/ios-taskydetail.png "This screenshot shows an empty screen that demonstrates the Entry attribute setting the watermark text in the Name and Notes fields")](case-study-tasky-images/ios-taskydetail.png)
+ [![](case-study-tasky-images/ios-taskydetail.png "This screenshot shows an empty screen that demonstrates the Entry attribute setting the watermark text in the Name and Notes fields")](case-study-tasky-images/ios-taskydetail.png#lightbox)
 
 The functionality of the **Task Details** screen (such as
 saving or deleting a task) must be implemented in the `HomeScreen`
@@ -501,7 +501,7 @@ The complete Xamarin.Android project is pictured below:
 
 The class diagram, with classes grouped by layer:
 
- [ ![](case-study-tasky-images/classdiagram-android.png "The class diagram, with classes grouped by layer")](case-study-tasky-images/classdiagram-android.png)
+ [![](case-study-tasky-images/classdiagram-android.png "The class diagram, with classes grouped by layer")](case-study-tasky-images/classdiagram-android.png#lightbox)
 
  <a name="References" />
 
@@ -552,7 +552,7 @@ The Home Screen consists of an Activity subclass `HomeScreen` and
 the `HomeScreen.axml` file which defines the layout (position of the
 button and task list). The screen looks like this:
 
- [ ![](case-study-tasky-images/android-taskylist.png "The screen looks like this")](case-study-tasky-images/android-taskylist.png)
+ [![](case-study-tasky-images/android-taskylist.png "The screen looks like this")](case-study-tasky-images/android-taskylist.png#lightbox)
 
 The Home Screen code defines the handlers for clicking the button and
 clicking items in the list, as well as populating the list in the `OnResume` method (so that it reflects changes made in the Task
@@ -568,7 +568,7 @@ The Task Details Screen also consists of an `Activity` subclass and an AXML
 layout file. The layout determines the location of the input controls and the C#
 class defines the behavior to load and save `TaskItem` objects.
 
- [ ![](case-study-tasky-images/android-taskydetail.png "The class defines the behavior to load and save TaskItem objects")](case-study-tasky-images/android-taskydetail.png)
+ [![](case-study-tasky-images/android-taskydetail.png "The class defines the behavior to load and save TaskItem objects")](case-study-tasky-images/android-taskydetail.png#lightbox)
 
 All references to the PCL library are through the `TaskItemManager` class.
 
@@ -582,7 +582,7 @@ The complete Windows Phone project:
 
 The diagram below presents the classes grouped into layers:
 
- [ ![](case-study-tasky-images/classdiagram-wp7.png "This diagram presents the classes grouped into layers")](case-study-tasky-images/classdiagram-wp7.png)
+ [![](case-study-tasky-images/classdiagram-wp7.png "This diagram presents the classes grouped into layers")](case-study-tasky-images/classdiagram-wp7.png#lightbox)
 
  <a name="References" />
 
@@ -663,7 +663,7 @@ The application uses iOS-standard user interface design, such as the
 `UINavigationController` ‘back’ button behavior and supports
 ‘swipe-to-delete’ in the table.
 
- [ ![](case-study-tasky-images/ios-taskylist.png "It also uses the default UINavigationController back button behavior and supports swipe-to-delete in the table")](case-study-tasky-images/ios-taskylist.png) [ ![](case-study-tasky-images/ios-taskydetail.png "It also uses the default UINavigationController back button behavior and supports swipe-to-delete in the table")](case-study-tasky-images/ios-taskydetail.png)
+ [![](case-study-tasky-images/ios-taskylist.png "It also uses the default UINavigationController back button behavior and supports swipe-to-delete in the table")](case-study-tasky-images/ios-taskylist.png#lightbox) [![](case-study-tasky-images/ios-taskylist.png "It also uses the default UINavigationController back button behavior and supports swipe-to-delete in the table")](case-study-tasky-images/ios-taskylist.png#lightbox)
 
  <a name="Android" />
 
@@ -674,7 +674,7 @@ The Android app uses built-in controls including the built-in layout for rows
 that require a ‘tick’ displayed. The hardware/system back behavior is
 supported in addition to an on-screen back button.
 
- [ ![](case-study-tasky-images/android-taskylist.png "The hardware/system back behavior is supported in addition to an on-screen back button")](case-study-tasky-images/android-taskylist.png)[ ![](case-study-tasky-images/android-taskydetail.png "The hardware/system back behavior is supported in addition to an on-screen back button")](case-study-tasky-images/android-taskydetail.png)
+ [![](case-study-tasky-images/android-taskylist.png "The hardware/system back behavior is supported in addition to an on-screen back button")](case-study-tasky-images/android-taskylist.png#lightbox)[![](case-study-tasky-images/android-taskylist.png "The hardware/system back behavior is supported in addition to an on-screen back button")](case-study-tasky-images/android-taskylist.png#lightbox)
 
  <a name="Windows_Phone" />
 
@@ -684,7 +684,7 @@ supported in addition to an on-screen back button.
 The Windows Phone app uses the standard layout, populating the app bar at the bottom
 of the screen instead of a nav bar at the top.
 
- [ ![](case-study-tasky-images/wp-taskylist.png "The Windows Phone app uses the standard layout, populating the app bar at the bottom of the screen instead of a nav bar at the top")](case-study-tasky-images/wp-taskylist.png) [ ![](case-study-tasky-images/wp-taskydetail.png "The Windows Phone app uses the standard layout, populating the app bar at the bottom of the screen instead of a nav bar at the top")](case-study-tasky-images/wp-taskydetail.png)
+ [![](case-study-tasky-images/wp-taskylist.png "The Windows Phone app uses the standard layout, populating the app bar at the bottom of the screen instead of a nav bar at the top")](case-study-tasky-images/wp-taskylist.png#lightbox) [![](case-study-tasky-images/wp-taskylist.png "The Windows Phone app uses the standard layout, populating the app bar at the bottom of the screen instead of a nav bar at the top")](case-study-tasky-images/wp-taskylist.png#lightbox)
 
  <a name="Summary" />
 

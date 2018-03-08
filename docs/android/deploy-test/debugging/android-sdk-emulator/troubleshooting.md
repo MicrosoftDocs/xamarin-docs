@@ -99,7 +99,7 @@ disable them. In Visual Studio, click **Tools > Options > Xamarin >
 Android Settings** and disable the **Warn if AVD acceleration is not
 supported (HAXM)** option:
 
-[![Disabling AVD acceleration warnings](troubleshooting-images/win/06-disable-perf-warnings-sml.png)](troubleshooting-images/win/06-disable-perf-warnings.png)
+[![Disabling AVD acceleration warnings](troubleshooting-images/win/06-disable-perf-warnings-sml.png)](troubleshooting-images/win/06-disable-perf-warnings.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 

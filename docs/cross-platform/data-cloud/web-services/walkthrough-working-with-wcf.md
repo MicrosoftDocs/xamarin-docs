@@ -154,7 +154,7 @@ You will need to know the IP address of your workstation. For the purposes of th
 
 1. Let's begin by configuring IIS Express to listen for external requests. We can do this by editing the configuration file for IIS Express at `[solutiondirectory]\.vs\config\applicationhost.config`, as shown in the following screenshot:
 
-	[![](walkthrough-working-with-wcf-images/image05.png "We can do this by editing the configuration file for IIS Express at solutiondirectory.vsconfigapplicationhost.config, as shown in this screenshot")](walkthrough-working-with-wcf-images/image05.png)
+	[![](walkthrough-working-with-wcf-images/image05.png "We can do this by editing the configuration file for IIS Express at solutiondirectory.vsconfigapplicationhost.config, as shown in this screenshot")](walkthrough-working-with-wcf-images/image05.png#lightbox)
 
 
 	Locate the `site` element with the name `HelloWorldWcfHost`. It should look something like the following XML snippet:
@@ -266,7 +266,7 @@ The WCF service proxy can be consumed by a Xamarin.Android application, as follo
 
 	The following screenshots shows the UI in the designer:
 
-	[![](walkthrough-working-with-wcf-images/image09.png "This is a screenshot of what this UI looks like in the designer")](walkthrough-working-with-wcf-images/image09.png)
+	[![](walkthrough-working-with-wcf-images/image09.png "This is a screenshot of what this UI looks like in the designer")](walkthrough-working-with-wcf-images/image09.png#lightbox)
 
 1. In **Solution Explorer**, open `Resources/values/Strings.xml` and add the following XML:
 
@@ -378,7 +378,7 @@ The WCF service proxy can be consumed by a Xamarin.Android application, as follo
 
 1. Run the application, ensure that the WCF service is running, and click on the two buttons. The application will call the WCF asynchronously, provided that the `Endpoint` field is correctly set:
 
-  [![](walkthrough-working-with-wcf-images/image08.png "Within 30 seconds a response should be received from each WCF method, and our application should look something like this screenshot")](walkthrough-working-with-wcf-images/image08.png)
+  [![](walkthrough-working-with-wcf-images/image08.png "Within 30 seconds a response should be received from each WCF method, and our application should look something like this screenshot")](walkthrough-working-with-wcf-images/image08.png#lightbox)
 
 <a name="Creating_a_Xamarin_iOS_Application" />
 
@@ -424,7 +424,7 @@ The WCF service proxy can be consumed by a Xamarin.iOS application, as follows:
 
 	After adding the controls, the UI should resemble the following screenshot:
 
-	[![](walkthrough-working-with-wcf-images/image12.png "After adding the controls, the UI should resemble this screenshot")](walkthrough-working-with-wcf-images/image12.png)
+	[![](walkthrough-working-with-wcf-images/image12.png "After adding the controls, the UI should resemble this screenshot")](walkthrough-working-with-wcf-images/image12.png#lightbox)
 
 1. In **Solution Explorer**, open `ViewController.cs` and add the following code:
 
@@ -511,7 +511,7 @@ The WCF service proxy can be consumed by a Xamarin.iOS application, as follows:
 
 1. Run the application, ensure that the WCF service is running, and click on the two buttons. The application will call the WCF asynchronously, provided that the `Endpoint` field is correctly set:
 
-	[![](walkthrough-working-with-wcf-images/image10.png "Within 30 seconds a response should be received from each WCF method, and our application should look like this screenshot")](walkthrough-working-with-wcf-images/image10.png)
+	[![](walkthrough-working-with-wcf-images/image10.png "Within 30 seconds a response should be received from each WCF method, and our application should look like this screenshot")](walkthrough-working-with-wcf-images/image10.png#lightbox)
 
 <a name="Summary" />
 

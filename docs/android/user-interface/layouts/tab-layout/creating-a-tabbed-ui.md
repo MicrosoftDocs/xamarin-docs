@@ -72,7 +72,7 @@ following XML:
 
 The following screenshot shows the layout in the Xamarin Designer:
 
-[![Screenshot of the TabHost layout in the Xamarin Designer](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png)
+[![Screenshot of the TabHost layout in the Xamarin Designer](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png#lightbox)
 
 The TabHost must have two child views inside it: a `TabWidget` and a
 `FrameLayout`. To position the `TabWidget` and `FrameLayout` vertically

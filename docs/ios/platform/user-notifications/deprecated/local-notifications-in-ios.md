@@ -44,7 +44,7 @@ var settings = UIUserNotificationSettings.GetSettingsForTypes(
 UIApplication.SharedApplication.RegisterUserNotificationSettings (settings);
 ```
 
-  [ ![](local-notifications-in-ios-images/image0-sml.png "Confirming the ability to send a local notification")](local-notifications-in-ios-images/image0.png)
+  [![](local-notifications-in-ios-images/image0-sml.png "Confirming the ability to send a local notification")](local-notifications-in-ios-images/image0.png#lightbox)
 
 To schedule a local notification you create a `UILocalNotification` object, set the `FireDate`, and schedule it via the `ScheduleLocalNotification` method on the `UIApplication.SharedApplication` object. The following code snippet will show how to schedule a notification that
     will fire one minute in the future, and display an alert with a message:
@@ -60,7 +60,7 @@ UIApplication.SharedApplication.ScheduleLocalNotification(notification);
 
 The following screenshot show what this alert looks like:
 
-  [ ![](local-notifications-in-ios-images/image2-sml.png "An example alert")](local-notifications-in-ios-images/image2.png)
+  [![](local-notifications-in-ios-images/image2-sml.png "An example alert")](local-notifications-in-ios-images/image2.png#lightbox)
 
 Note that if the user chose to *not allow* notifications then nothing will be displayed.
 

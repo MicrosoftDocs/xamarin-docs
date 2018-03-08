@@ -22,7 +22,7 @@ select the time of day in either 24-hour or 12-hour AM/PM mode.
 `TimePickerDialog` is a helper class that encapsulates the `TimePicker`
 in a dialog.
 
-[![Example screenshot of the Time Picker Dialog in action](time-picker-images/01-example-screen-sml.png)](time-picker-images/01-example-screen.png)
+[![Example screenshot of the Time Picker Dialog in action](time-picker-images/01-example-screen-sml.png)](time-picker-images/01-example-screen.png#lightbox)
 
 ## Overview
 
@@ -56,12 +56,12 @@ and displays a `TimePickerDialog`. When the sample app is first
 launched, it displays a **PICK TIME** button above a `TextView` that
 will be used to display the selected time:
 
-[![Initial sample app screen](time-picker-images/02-initial-app-screen-sml.png)](time-picker-images/02-initial-app-screen.png)
+[![Initial sample app screen](time-picker-images/02-initial-app-screen-sml.png)](time-picker-images/02-initial-app-screen.png#lightbox)
 
 When you click the **PICK TIME** button, the example app launches the
 `TimePickerDialog` as seen in this screenshot:
 
-[![Screenshot of default Time Picker dialog displayed by the app](time-picker-images/03-am-pm-time-dialog-sml.png)](time-picker-images/03-am-pm-time-dialog.png)
+[![Screenshot of default Time Picker dialog displayed by the app](time-picker-images/03-am-pm-time-dialog-sml.png)](time-picker-images/03-am-pm-time-dialog.png#lightbox)
 
 In the `TimePickerDialog`, selecting a time and clicking the **OK**
 button causes the `TimePickerDialog` to invoke the method
@@ -170,7 +170,7 @@ namespace TimePickerDemo
 When you build and run this example, you should see an initial screen
 similar to the following screen shot:
 
-[![Initial App screen](time-picker-images/02-initial-app-screen-sml.png)](time-picker-images/02-initial-app-screen.png)
+[![Initial App screen](time-picker-images/02-initial-app-screen-sml.png)](time-picker-images/02-initial-app-screen.png#lightbox)
 
 Clicking the **PICK TIME** button does nothing because the
 `DialogFragment` has not yet been implemented to display the `TimePicker`.
@@ -348,12 +348,12 @@ Build and run the app. When you click the **PICK TIME** button, the
 `TimePickerDialog` is displayed in the default time format for
 the Activity (in this case, 12-hour AM/PM mode):
 
-[![Time Dialog is displayed in AM/PM mode](time-picker-images/03-am-pm-time-dialog-sml.png)](time-picker-images/03-am-pm-time-dialog.png)
+[![Time Dialog is displayed in AM/PM mode](time-picker-images/03-am-pm-time-dialog-sml.png)](time-picker-images/03-am-pm-time-dialog.png#lightbox)
    
 When you click **OK** in the `TimePicker` dialog, the handler updates the
 Activity's `TextView` with the chosen time and then exits:
 
-[![A/M time is displayed in the Activity TextView](time-picker-images/04-after-time-dialog-sml.png)](time-picker-images/04-after-time-dialog.png)
+[![A/M time is displayed in the Activity TextView](time-picker-images/04-after-time-dialog-sml.png)](time-picker-images/04-after-time-dialog.png#lightbox)
 
 Next, add the following line of code to `OnCreateDialog` immediately
 after `is24HourFormat` is declared and initialized:
@@ -368,7 +368,7 @@ of the hosting Activity. When you build and run the app again, click
 the **PICK TIME** button, the `TimePicker` dialog is now displayed in 24
 hour format:
 
-[![TimePicker dialog in 24-Hour format](time-picker-images/05-24hr-time-dialog-sml.png)](time-picker-images/05-24hr-time-dialog.png)
+[![TimePicker dialog in 24-Hour format](time-picker-images/05-24hr-time-dialog-sml.png)](time-picker-images/05-24hr-time-dialog.png#lightbox)
 
 Because the handler calls
 [DateTime.ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring%28v=vs.110%29.aspx)

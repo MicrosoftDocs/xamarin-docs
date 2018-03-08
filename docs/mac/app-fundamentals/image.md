@@ -30,7 +30,7 @@ There are several ways that image assets are used inside a macOS (formerly known
 
 Additionally, macOS provides a set of predefined images that can be used throughout your application.
 
-[![An example run of the app](image-images/intro01.png "An example run of the app")](image-images/intro01-large.png)
+[![An example run of the app](image-images/intro01.png "An example run of the app")](image-images/intro01-large.png#lightbox)
 
 In this article, we'll cover the basics of working with Images and Icons in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
@@ -55,18 +55,18 @@ As stated above, an **Asset Catalogs Image Sets** contain all the versions or re
 	![Selecting the Assets.xcassets](image-images/imageset01.png "Selecting the Assets.xcassets")
 2. Right-click on the **Assets List** and select **New Image Set**: 
 
-	[![Adding a new image set](image-images/imageset02.png "Adding a new image set")](image-images/imageset02-large.png)
+	[![Adding a new image set](image-images/imageset02.png "Adding a new image set")](image-images/imageset02-large.png#lightbox)
 3. Select the new image set and the editor will be displayed: 
 
-	[![Selecting the new image set](image-images/imageset03.png "Selecting the new image set")](image-images/imageset03-large.png)
+	[![Selecting the new image set](image-images/imageset03.png "Selecting the new image set")](image-images/imageset03-large.png#lightbox)
 4. From here we can drag in images for each of the different devices and resolutions required. 
 5. Double-click the new image set's **Name** in the **Assets List** to edit it: 
 
-	[![Editing the image set name](image-images/imageset04.png "Editing the image set name")](image-images/imageset04-large.png)
+	[![Editing the image set name](image-images/imageset04.png "Editing the image set name")](image-images/imageset04-large.png#lightbox)
 	
 A special **Vector** class as been added to **Image Sets** that allows us to include a _PDF_ formatted vector image in the casset instead including individual bitmap files at the different resolutions. Using this method, you supply a single vector file for the **@1x** resolution (formatted as a vector PDF file) and the **@2x** and **@3x** versions of the file will be generated at compile time and included in the application's bundle.
 
-[![The image set editor interface](image-images/imageset05.png "The image set editor interface")](image-images/imageset05-large.png)
+[![The image set editor interface](image-images/imageset05.png "The image set editor interface")](image-images/imageset05-large.png#lightbox)
 
 For example, if you include a `MonkeyIcon.pdf` file as the vector of an Asset Catalog with a resolution of 150px x 150px, the following bitmap assets would be included in the final app bundle when it was compiled:
 
@@ -111,7 +111,7 @@ Before you can use an Image file in your Xamarin.Mac application (either in C# c
 	![Adding a file](image-images/add01.png "Adding a file")
 2. From the **Add Files** dialog box, select the images files to add to the project, select `BundleResource` for the **Override build action** and click the **Open** button:
 
-	[![Selecting the files to add](image-images/add02.png "Selecting the files to add")](image-images/add02-large.png)
+	[![Selecting the files to add](image-images/add02.png "Selecting the files to add")](image-images/add02-large.png#lightbox)
 3. If the files are not already in the **Resources** folder, you'll be asked if you want to **Copy**, **Move** or **Link** the files. Pick which every suits your needs, typically that will be **Copy**:
 
 	![Selecting the add action](image-images/add04.png "Selecting the add action")
@@ -160,13 +160,13 @@ To use an image in interface builder, do the following:
 	 ![An image resource in the Solution Pad](image-images/ib00.png "An image resource in the Solution Pad")
 2. Double-click the **Main.storyboard** file to open it for editing in Interface Builder: 
 
-	 [![Editing the main storyboard](image-images/ib01.png "Editing the main storyboard")](image-images/ib01-large.png)
+	 [![Editing the main storyboard](image-images/ib01.png "Editing the main storyboard")](image-images/ib01-large.png#lightbox)
 3. Drag a UI element that takes images onto the design surface (for example, a **Image Toolbar Item**): 
 
 	 ![Editing a toolbar item](image-images/ib02.png "Editing a toolbar item")
 4. Select the Image that you added to the **Resources** folder in the **Image Name** dropdown: 
 
-	 [![Selecting an image for a toolbar item](image-images/ib03.png "Selecting an image for a toolbar item")](image-images/ib03-large.png)
+	 [![Selecting an image for a toolbar item](image-images/ib03.png "Selecting an image for a toolbar item")](image-images/ib03-large.png#lightbox)
 5. The selected image will be displayed in the design surface: 
 
 	 ![The image being displayed in the Toolbar editor](image-images/ib04.png "The image being displayed in the Toolbar editor")
@@ -201,7 +201,7 @@ Based on the design of your macOS app, there might be times when you need to cus
 
 To achieve this effect, switch the _Render Mode_ of your Image Asset to **Template Image**:
 
-[![Setting a template image](image-images/templateimage01.png "Setting a template image")](image-images/templateimage01-large.png)
+[![Setting a template image](image-images/templateimage01.png "Setting a template image")](image-images/templateimage01-large.png#lightbox)
 
 From the Xcode's Interface Builder, assign the Image Asset to a UI control:
 
@@ -333,7 +333,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 Example output:
 
-[![An example of displaying an image in an app](image-images/tables01.png "An example of displaying an image in an app")](image-images/tables01-large.png)
+[![An example of displaying an image in an app](image-images/tables01.png "An example of displaying an image in an app")](image-images/tables01-large.png#lightbox)
 
 For more information on working with Table Views, please see our [Table Views](~/mac/user-interface/table-view.md) documentation.
 
@@ -436,7 +436,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 Example output:
 
-[![An example of an image being displayed in an Outline View](image-images/outline01.png "An example of an image being displayed in an Outline View")](image-images/outline01-large.png)
+[![An example of an image being displayed in an Outline View](image-images/outline01.png "An example of an image being displayed in an Outline View")](image-images/outline01-large.png#lightbox)
 
 For more information on working with Outline Views, please see our [Outline Views](~/mac/user-interface/outline-view.md) documentation.
 

@@ -26,7 +26,7 @@ by using the `ViewPager` widget, available in
 The `ViewPager` is a layout widget made up of multiple child views where 
 each child view constitutes a page in the layout: 
 
-[![Screenshots of TreePager app with horizontal swipe example](images/01-intro-sml.png)](images/01-intro.png)
+[![Screenshots of TreePager app with horizontal swipe example](images/01-intro-sml.png)](images/01-intro.png#lightbox)
 
 Typically, `ViewPager` is used in conjunction with 
 [Fragments](https://developer.xamarin.com/guides/android/platform_features/fragments/); 
@@ -90,7 +90,7 @@ to the next or previous view as appropriate. For example, the
 screenshot below demonstrates a `ViewPager` making the transition from 
 one image to the next in response to a user gesture: 
 
-[![Closeup of TreePager app displaying a transition between Views](images/02-transition-sml.png)](images/02-transition.png)
+[![Closeup of TreePager app displaying a transition between Views](images/02-transition-sml.png)](images/02-transition.png#lightbox)
 
 
 ### Adapter
@@ -102,7 +102,7 @@ creates and populates `View`s and provides them to the `ViewPager`. As
 the `ViewPager` detects the user's swipe gestures, it asks the adapter 
 to provide the appropriate `View` to display: 
 
-[![Diagram illustrating how the Adapter connects images and names to the ViewPager](images/03-adapter-sml.png)](images/03-adapter.png)
+[![Diagram illustrating how the Adapter connects images and names to the ViewPager](images/03-adapter-sml.png)](images/03-adapter.png#lightbox)
 
 In this particular example, each `View` is constructed from a tree 
 image and a tree name before it is passed to the `ViewPager`. 
@@ -126,7 +126,7 @@ currently-displayed `View`. The difference between them is that
 `PagerTabStrip` includes a visual indicator for the "current" string 
 while `PagerTitleStrip` does not (as shown in these screenshots): 
 
-[![Screenshots of the TreePager app with PagerTitleStrip and PagerTabStrip](images/04-comparison-sml.png)](images/04-comparison.png)
+[![Screenshots of the TreePager app with PagerTitleStrip and PagerTabStrip](images/04-comparison-sml.png)](images/04-comparison.png#lightbox)
 
 This guide demonstrates how to immplement `ViewPager`, adapter, and 
 indicator app components and integrate them to support gestural 

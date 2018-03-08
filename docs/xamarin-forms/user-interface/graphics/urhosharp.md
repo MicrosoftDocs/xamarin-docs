@@ -40,7 +40,7 @@ To begin, right-click on the PCL’s **Packages** folder and select **Add Packag
 Enter the search term **UrhoSharp.Forms**, select **UrhoSharp for Xamarin.Forms**,
 then click **Add Package**.
 
-[ ![](urhosharp-images/add-package-sml.png "Add Packages Dialog")](urhosharp-images/add-package.png "Add Packages Dialog")
+[![](urhosharp-images/add-package-sml.png "Add Packages Dialog")](urhosharp-images/add-package.png#lightbox "Add Packages Dialog")
 
 The UrhoSharp.Forms NuGet package will be added to the project:
 

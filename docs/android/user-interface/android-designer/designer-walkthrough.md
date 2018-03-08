@@ -52,14 +52,14 @@ The first step is to create a new Xamarin.Android project.
 Launch Visual Studio and click **New Project...** then choose the
 **Visual C\# > Android > Blank App (Android)** template:
 
-[ ![Android blank app](designer-walkthrough-images/vs/01-android-app-sml.png)](designer-walkthrough-images/vs/01-android-app.png)
+[![Android blank app](designer-walkthrough-images/vs/01-android-app-sml.png)](designer-walkthrough-images/vs/01-android-app.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
 Launch Visual Studio for Mac and click **New Solution...**. Choose the
 **Android App** template and click **Next**:
 
-[ ![Android blank app](designer-walkthrough-images/xs/01-android-app-sml.png)](designer-walkthrough-images/xs/01-android-app.png)
+[![Android blank app](designer-walkthrough-images/xs/01-android-app-sml.png)](designer-walkthrough-images/xs/01-android-app.png#lightbox)
 
 -----
 
@@ -67,14 +67,14 @@ Launch Visual Studio for Mac and click **New Solution...**. Choose the
 
 Name the new app **DesignerWalkthrough** and click **OK**.
 
-[ ![Name app](designer-walkthrough-images/vs/02-name-app-sml.png)](designer-walkthrough-images/vs/02-name-app.png)
+[![Name app](designer-walkthrough-images/vs/02-name-app-sml.png)](designer-walkthrough-images/vs/02-name-app.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
 Name the new app **DesignerWalkthrough**. Under **Target Platforms**,
 select **Latest and Greatest** and click **Next**:
 
-[ ![Name app](designer-walkthrough-images/xs/02-designer-walkthrough-sml.png)](designer-walkthrough-images/xs/02-designer-walkthrough.png)
+[![Name app](designer-walkthrough-images/xs/02-designer-walkthrough-sml.png)](designer-walkthrough-images/xs/02-designer-walkthrough.png#lightbox)
 
 In the next dialog screen, click **Create**.
 
@@ -94,22 +94,22 @@ Explorer** and select **Add > New Item...**. In the **Add New Item**
 dialog, select **Android Layout**. Name the file **ListItem.axml** and
 click **Add**:
 
-[ ![New layout](designer-walkthrough-images/vs/03-new-layout-sml.png)](designer-walkthrough-images/vs/03-new-layout.png)
+[![New layout](designer-walkthrough-images/vs/03-new-layout-sml.png)](designer-walkthrough-images/vs/03-new-layout.png#lightbox)
 
 The new **ListItem** layout is displayed in the Designer:
 
-[ ![Designer view](designer-walkthrough-images/vs/04-designer-view-sml.png)](designer-walkthrough-images/vs/04-designer-view.png)
+[![Designer view](designer-walkthrough-images/vs/04-designer-view-sml.png)](designer-walkthrough-images/vs/04-designer-view.png#lightbox)
 
 Click the **Source** tab at the bottom of the Designer to view the XML
 source for this layout:
 
-[ ![Designer XML](designer-walkthrough-images/vs/05-designer-xml-sml.png)](designer-walkthrough-images/vs/05-designer-xml.png)
+[![Designer XML](designer-walkthrough-images/vs/05-designer-xml-sml.png)](designer-walkthrough-images/vs/05-designer-xml.png#lightbox)
 
 From the **View** menu, click **Other Windows > Document Outline** to
 open the **Document Outline**. The **Document Outline** shows that the
 layout currently contains a single **LinearLayout** widget:
 
-[ ![Document outline](designer-walkthrough-images/vs/06-document-outline-sml.png)](designer-walkthrough-images/vs/06-document-outline.png)
+[![Document outline](designer-walkthrough-images/vs/06-document-outline-sml.png)](designer-walkthrough-images/vs/06-document-outline.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -118,18 +118,18 @@ pad and select **Add > New File...**. In the **New File** dialog,
 select **Android > Layout**. Name the file **ListItem** and click
 **New**:
 
-[ ![New layout](designer-walkthrough-images/xs/03-new-layout-sml.png)](designer-walkthrough-images/xs/03-new-layout.png)
+[![New layout](designer-walkthrough-images/xs/03-new-layout-sml.png)](designer-walkthrough-images/xs/03-new-layout.png#lightbox)
 
 The new **ListItem** layout is displayed in the Designer:
 
-[ ![Designer view](designer-walkthrough-images/xs/04-designer-view-sml.png)](designer-walkthrough-images/xs/04-designer-view.png)
+[![Designer view](designer-walkthrough-images/xs/04-designer-view-sml.png)](designer-walkthrough-images/xs/04-designer-view.png#lightbox)
 
 Click the **Source** tab at the bottom of the Designer to view the XML
 source for this layout. When you click the **Document Outline** tab on
 the right, it shows that the layout currently contains a single
 **LinearLayout** widget:
 
-[ ![Designer XML](designer-walkthrough-images/xs/05-designer-xml-sml.png)](designer-walkthrough-images/xs/05-designer-xml.png)
+[![Designer XML](designer-walkthrough-images/xs/05-designer-xml-sml.png)](designer-walkthrough-images/xs/05-designer-xml.png#lightbox)
 
 -----
 
@@ -144,11 +144,11 @@ peruse each item until you locate an *ImageView*:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Locate ImageView](designer-walkthrough-images/vs/07-locate-imageview-sml.png)](designer-walkthrough-images/vs/07-locate-imageview.png)
+[![Locate ImageView](designer-walkthrough-images/vs/07-locate-imageview-sml.png)](designer-walkthrough-images/vs/07-locate-imageview.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Locate ImageView](designer-walkthrough-images/xs/06-locate-imageview-sml.png)](designer-walkthrough-images/xs/06-locate-imageview.png)
+[![Locate ImageView](designer-walkthrough-images/xs/06-locate-imageview-sml.png)](designer-walkthrough-images/xs/06-locate-imageview.png#lightbox)
 
 -----
 
@@ -157,11 +157,11 @@ the `ImageView` widget:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![ImageView search](designer-walkthrough-images/vs/08-imageview-search-sml.png)](designer-walkthrough-images/vs/08-imageview-search.png)
+[![ImageView search](designer-walkthrough-images/vs/08-imageview-search-sml.png)](designer-walkthrough-images/vs/08-imageview-search.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![ImageView search](designer-walkthrough-images/xs/07-imageview-search-sml.png)](designer-walkthrough-images/xs/07-imageview-search.png)
+[![ImageView search](designer-walkthrough-images/xs/07-imageview-search-sml.png)](designer-walkthrough-images/xs/07-imageview-search.png#lightbox)
 
 -----
 
@@ -169,11 +169,11 @@ Drag this `ImageView` onto the Design Surface:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![ImageView on canvas](designer-walkthrough-images/vs/09-imageview-on-canvas-sml.png)](designer-walkthrough-images/vs/09-imageview-on-canvas.png)
+[![ImageView on canvas](designer-walkthrough-images/vs/09-imageview-on-canvas-sml.png)](designer-walkthrough-images/vs/09-imageview-on-canvas.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![ImageView on canvas](designer-walkthrough-images/xs/08-imageview-on-canvas-sml.png)](designer-walkthrough-images/xs/08-imageview-on-canvas.png)
+[![ImageView on canvas](designer-walkthrough-images/xs/08-imageview-on-canvas-sml.png)](designer-walkthrough-images/xs/08-imageview-on-canvas.png#lightbox)
 
 -----
 
@@ -187,11 +187,11 @@ directly below `imageView1 (ImageView)`:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Blue outline](designer-walkthrough-images/vs/10-blue-outline-sml.png)](designer-walkthrough-images/vs/10-blue-outline.png)
+[![Blue outline](designer-walkthrough-images/vs/10-blue-outline-sml.png)](designer-walkthrough-images/vs/10-blue-outline.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Blue outline](designer-walkthrough-images/xs/10-blue-outline-sml.png)](designer-walkthrough-images/xs/10-blue-outline.png)
+[![Blue outline](designer-walkthrough-images/xs/10-blue-outline-sml.png)](designer-walkthrough-images/xs/10-blue-outline.png#lightbox)
 
 -----
 
@@ -201,11 +201,11 @@ moves to `imageView1 (ImageView)`:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Select ImageView](designer-walkthrough-images/vs/11-select-imageview-sml.png)](designer-walkthrough-images/vs/11-select-imageview.png)
+[![Select ImageView](designer-walkthrough-images/vs/11-select-imageview-sml.png)](designer-walkthrough-images/vs/11-select-imageview.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Select ImageView](designer-walkthrough-images/xs/11-select-imageview-sml.png)](designer-walkthrough-images/xs/11-select-imageview.png)
+[![Select ImageView](designer-walkthrough-images/xs/11-select-imageview-sml.png)](designer-walkthrough-images/xs/11-select-imageview.png#lightbox)
 
 -----
 
@@ -215,11 +215,11 @@ highlights to indicate where the new widget will be inserted:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Green highlights](designer-walkthrough-images/vs/12-green-highlight-sml.png)](designer-walkthrough-images/vs/12-green-highlight.png)
+[![Green highlights](designer-walkthrough-images/vs/12-green-highlight-sml.png)](designer-walkthrough-images/vs/12-green-highlight.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Green highlights](designer-walkthrough-images/xs/12-green-highlight-sml.png)](designer-walkthrough-images/xs/12-green-highlight.png)
+[![Green highlights](designer-walkthrough-images/xs/12-green-highlight-sml.png)](designer-walkthrough-images/xs/12-green-highlight.png#lightbox)
 
 -----
 
@@ -227,11 +227,11 @@ Next, add a `Text (Small)` widget below the `Text (Large)` widget:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Add small text widget](designer-walkthrough-images/vs/13-add-small-text-sml.png)](designer-walkthrough-images/vs/13-add-small-text.png)
+[![Add small text widget](designer-walkthrough-images/vs/13-add-small-text-sml.png)](designer-walkthrough-images/vs/13-add-small-text.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Add small text widget](designer-walkthrough-images/xs/13-add-small-text-sml.png)](designer-walkthrough-images/xs/13-add-small-text.png)
+[![Add small text widget](designer-walkthrough-images/xs/13-add-small-text-sml.png)](designer-walkthrough-images/xs/13-add-small-text.png#lightbox)
 
 -----
 
@@ -239,11 +239,11 @@ At this point, the Designer should resemble the following screenshot:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Designer layout](designer-walkthrough-images/vs/14-raw-layout-sml.png)](designer-walkthrough-images/vs/14-raw-layout.png)
+[![Designer layout](designer-walkthrough-images/vs/14-raw-layout-sml.png)](designer-walkthrough-images/vs/14-raw-layout.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Designer layout](designer-walkthrough-images/xs/14-raw-layout-sml.png)](designer-walkthrough-images/xs/14-raw-layout.png)
+[![Designer layout](designer-walkthrough-images/xs/14-raw-layout-sml.png)](designer-walkthrough-images/xs/14-raw-layout.png#lightbox)
 
 -----
 
@@ -279,7 +279,7 @@ two `TextView` widgets stacked to the right of the `ImageView`.
 3.  Scroll down to **ViewGroup** and change the `Width` setting to
     `wrap_content`:
 
-[ ![Set wrap content](designer-walkthrough-images/xs/15-wrap-content-sml.png)](designer-walkthrough-images/xs/15-wrap-content.png)
+[![Set wrap content](designer-walkthrough-images/xs/15-wrap-content-sml.png)](designer-walkthrough-images/xs/15-wrap-content.png#lightbox)
 
 -----
 
@@ -287,7 +287,7 @@ Another way to change the `Width` setting is to click the triangle
 on the right-hand side of the widget to toggle its width setting to
 `wrap_content`:
 
-[ ![Drag to set width](designer-walkthrough-images/xs/16-width-arrow-sml.png)](designer-walkthrough-images/xs/16-width-arrow.png)
+[![Drag to set width](designer-walkthrough-images/xs/16-width-arrow-sml.png)](designer-walkthrough-images/xs/16-width-arrow.png#lightbox)
 
 Clicking the triangle again returns the `Width` setting to
 `match_parent`.
@@ -297,11 +297,11 @@ root `LinearLayout`:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Select root LinearLayout](designer-walkthrough-images/vs/16-root-linearlayout-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout.png)
+[![Select root LinearLayout](designer-walkthrough-images/vs/16-root-linearlayout-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Select root LinearLayout](designer-walkthrough-images/xs/17-root-linearlayout-sml.png)](designer-walkthrough-images/xs/17-root-linearlayout.png)
+[![Select root LinearLayout](designer-walkthrough-images/xs/17-root-linearlayout-sml.png)](designer-walkthrough-images/xs/17-root-linearlayout.png#lightbox)
 
 -----
 # [Visual Studio](#tab/vswin)
@@ -317,7 +317,7 @@ window, click the **Alphabetical** sort icon and scroll until you find
 With the root `LinearLayout` selected, return to the **Properties** tab
 and click **Widget**. Change the `Orientation` setting to `horizontal`:
 
-[ ![Select horizontal orientation](designer-walkthrough-images/xs/18-horizontal-orientation-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation.png)
+[![Select horizontal orientation](designer-walkthrough-images/xs/18-horizontal-orientation-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation.png#lightbox)
 
 -----
 
@@ -325,11 +325,11 @@ At this point, the Designer should resemble the following screenshot:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Designer layout](designer-walkthrough-images/vs/18-designer-layout-sml.png)](designer-walkthrough-images/vs/18-designer-layout.png)
+[![Designer layout](designer-walkthrough-images/vs/18-designer-layout-sml.png)](designer-walkthrough-images/vs/18-designer-layout.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Designer layout](designer-walkthrough-images/xs/19-designer-layout-sml.png)](designer-walkthrough-images/xs/19-designer-layout.png)
+[![Designer layout](designer-walkthrough-images/xs/19-designer-layout-sml.png)](designer-walkthrough-images/xs/19-designer-layout.png#lightbox)
 
 -----
 
@@ -346,7 +346,7 @@ down to the **Layout** section. Change the `Min Height` to `70dp`, the
 padding around all sides of the `ImageView` and elongates it
 vertically:
 
-[ ![Set padding](designer-walkthrough-images/vs/19-padding-widths-sml.png)](designer-walkthrough-images/vs/19-padding-widths.png)
+[![Set padding](designer-walkthrough-images/vs/19-padding-widths-sml.png)](designer-walkthrough-images/vs/19-padding-widths.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -357,7 +357,7 @@ the `Min Width` to `50dp`, and the `Min Height` to `70dp`. This applies
 padding around all sides of the `ImageView` and elongates it
 vertically:
 
-[ ![Set padding](designer-walkthrough-images/xs/20-padding-widths-sml.png)](designer-walkthrough-images/xs/20-padding-widths.png)
+[![Set padding](designer-walkthrough-images/xs/20-padding-widths-sml.png)](designer-walkthrough-images/xs/20-padding-widths.png#lightbox)
 
 -----
 
@@ -369,7 +369,7 @@ independently by entering values into the `paddingBottom`,
 For example, set the `paddingLeft` field to `5dp` and the
 `paddingBottom`, `paddingRight`, and `paddingTop` fields to `10dp`:
 
-[ ![Custom padding settings](designer-walkthrough-images/vs/20-custom-padding-sml.png)](designer-walkthrough-images/vs/20-custom-padding.png)
+[![Custom padding settings](designer-walkthrough-images/vs/20-custom-padding-sml.png)](designer-walkthrough-images/vs/20-custom-padding.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -380,7 +380,7 @@ padding value to `5dp` and the `Top`, `Right`, and `Bottom` padding
 values to `10dp`. Note that the `Padding` setting changes to a
 comma-separated list of these values:
 
-[ ![Custom padding settings](designer-walkthrough-images/xs/21-custom-padding-sml.png)](designer-walkthrough-images/xs/21-custom-padding.png)
+[![Custom padding settings](designer-walkthrough-images/xs/21-custom-padding-sml.png)](designer-walkthrough-images/xs/21-custom-padding.png#lightbox)
 
 -----
 
@@ -393,7 +393,7 @@ ViewGroup** section. Set `layout_marginBottom`, `layout_marginLeft`,
 `layout_marginRight`, and `layout_marginTop` to `5dp`, `5dp`, `0dp`,
 and `5dp` respectively:
 
-[ ![Set margins](designer-walkthrough-images/vs/21-margins-sml.png)](designer-walkthrough-images/vs/21-margins.png)
+[![Set margins](designer-walkthrough-images/vs/21-margins-sml.png)](designer-walkthrough-images/vs/21-margins.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -404,7 +404,7 @@ Scroll down to the **ViewGroup** section and set the `Left`, `Top`,
 `Right`, and `Bottom` margins to `5dp`, `5dp`, `0dp`, and `5dp`
 respectively:
 
-[ ![Set margins](designer-walkthrough-images/xs/22-margins-sml.png)](designer-walkthrough-images/xs/22-margins.png)
+[![Set margins](designer-walkthrough-images/xs/22-margins-sml.png)](designer-walkthrough-images/xs/22-margins.png#lightbox)
 
 -----
 
@@ -433,7 +433,7 @@ images), let's remove the default image source added by the template.
 
 3.  Clear the `Src` setting so that it is blank:
 
-[ ![Clear the ImageView src setting](designer-walkthrough-images/xs/23-clear-src-sml.png)](designer-walkthrough-images/xs/23-clear-src.png)
+[![Clear the ImageView src setting](designer-walkthrough-images/xs/23-clear-src-sml.png)](designer-walkthrough-images/xs/23-clear-src.png#lightbox)
 
 -----
 
@@ -454,7 +454,7 @@ correctly:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![New ListView](designer-walkthrough-images/xs/24-new-listview-sml.png)](designer-walkthrough-images/xs/24-new-listview.png)
+[![New ListView](designer-walkthrough-images/xs/24-new-listview-sml.png)](designer-walkthrough-images/xs/24-new-listview.png#lightbox)
 
 -----
 
@@ -468,7 +468,7 @@ Open the **Widget** tab under **Properties** and change the `Id` to
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Rename id to myListView](designer-walkthrough-images/xs/25-change-id-sml.png)](designer-walkthrough-images/xs/25-change-id.png)
+[![Rename id to myListView](designer-walkthrough-images/xs/25-change-id-sml.png)](designer-walkthrough-images/xs/25-change-id.png#lightbox)
 
 -----
 
@@ -574,7 +574,7 @@ adapters, see
 Build and run the application. The following screenshot is an example of how the
 app appears when running on a device:
 
-[ ![Final screenshot](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png)
+[![Final screenshot](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png#lightbox)
 
 
 

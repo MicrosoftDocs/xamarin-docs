@@ -109,7 +109,7 @@ This opens the **NuGet Package Manager**. Click **Browse** and enter
 **Xamarin.GooglePlayServices.Maps** and click **Install**. (If 
 this package had been installed previously, click **Update**.):
 
-[![NuGet Package Manager with Xamarin.GooglePlayServices.Maps package selected](maps-api-images/image03-sml.png)](maps-api-images/image03.png)
+[![NuGet Package Manager with Xamarin.GooglePlayServices.Maps package selected](maps-api-images/image03-sml.png)](maps-api-images/image03.png#lightbox)
 
 Notice that the following dependency packages are also installed:
 
@@ -262,7 +262,7 @@ that a developer must manually implement.
 
 The following screenshot is an example of a very simple `MapFragment`:
 
-[![Screenshot of a device displaying a Map fragment](maps-api-images/image05-sml.png)](maps-api-images/image05.png)
+[![Screenshot of a device displaying a Map fragment](maps-api-images/image05-sml.png)](maps-api-images/image05.png#lightbox)
 
 Similar to other Fragment classes, there are two ways to add this
 `MapFragment` to an Activity:
@@ -367,7 +367,7 @@ API:
 The image below shows three of the different types of of maps, from
 left-to-right (normal, hybrid, terrain):
 
-[![Three map example screenshots: Normal, Hybrid, and Terrain](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png)
+[![Three map example screenshots: Normal, Hybrid, and Terrain](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
 
 The `GoogleMap.MapType` property is used to set or change which type of
 map is displayed. The following code snippet shows how to display a
@@ -500,7 +500,7 @@ viewing angle and is specifies an angle of 25 degrees from the
 vertical. The following screenshot shows the `GoogleMap` after executing
 the preceding code:
 
-[![Example Google Map showing a specified location with a tilted viewing angle](maps-api-images/image06-sml.png)](maps-api-images/image06.png)
+[![Example Google Map showing a specified location with a tilted viewing angle](maps-api-images/image06-sml.png)](maps-api-images/image06.png#lightbox)
 
 
 ### Drawing on the Map
@@ -549,7 +549,7 @@ The title of the marker will be displayed in an *info window* when the
 user taps on the marker. The following screenshot shows what this
 marker looks like:
 
-[![Example Google Map with a marker and an info window for Vimy Ridge](maps-api-images/image07-sml.png)](maps-api-images/image07.png)
+[![Example Google Map with a marker and an info window for Vimy Ridge](maps-api-images/image07-sml.png)](maps-api-images/image07.png#lightbox)
 
 
 ##### Customizing A Marker
@@ -662,7 +662,7 @@ GroundOverlay myOverlay = _map.AddGroundOverlay(groundOverlayOptions);
 
 The following screenshot shows this overlay on a map:
 
-[![Example map with an overlayed image of a polar bear](maps-api-images/image09-sml.png)](maps-api-images/image09.png)
+[![Example map with an overlayed image of a polar bear](maps-api-images/image09-sml.png)](maps-api-images/image09.png#lightbox)
 
 
 #### Lines, Circles, and Polygons

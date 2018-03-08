@@ -12,9 +12,9 @@ ms.author: brumbaug
 
 Refer to the following diagram to choose a backgrounding technique in iOS 6:
 
- [ ![](ios-backgrounding-guidance-images/image10.png "Choose a backgrounding technique in iOS 6")](ios-backgrounding-guidance-images/image10.png)
+ [![](ios-backgrounding-guidance-images/image10.png "Choose a backgrounding technique in iOS 6")](ios-backgrounding-guidance-images/image10.png#lightbox)
 
 Refer to the following diagram to choose a backgrounding technique in iOS 7:
 
- [ ![](ios-backgrounding-guidance-images/image10b.png "Choose a backgrounding technique in iOS 7")](ios-backgrounding-guidance-images/image10b.png)
+ [![](ios-backgrounding-guidance-images/image10b.png "Choose a backgrounding technique in iOS 7")](ios-backgrounding-guidance-images/image10b.png#lightbox)
 

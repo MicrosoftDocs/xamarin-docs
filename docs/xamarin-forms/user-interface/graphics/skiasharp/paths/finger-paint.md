@@ -158,7 +158,7 @@ public partial class FingerPaintPage : ContentPage
 
 Your finger paintings are only limited by your talent:
 
-[![](finger-paint-images/fingerpaint-small.png "Triple screenshot of the Finger Paint page")](finger-paint-images/fingerpaint-large.png "Triple screenshot of the Finger Paint page")
+[![](finger-paint-images/fingerpaint-small.png "Triple screenshot of the Finger Paint page")](finger-paint-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
 
 
 ## Related Links

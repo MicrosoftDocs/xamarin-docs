@@ -39,29 +39,29 @@ To use free provisioning for deploying an application to a device you will use X
 2. Open Xcode and browse to **Xcode > Preferences**.
 3. Under **Accounts**, use the **+** button to add your existing Apple ID. It should look similar to the screenshot below:
 
-  [ ![](free-provisioning-images/launchapp1.png "Xcode Preferences Accounts")](free-provisioning-images/launchapp1.png)
+  [![](free-provisioning-images/launchapp1.png "Xcode Preferences Accounts")](free-provisioning-images/launchapp1.png#lightbox)
 
 4. Plug in the iOS device you wish to deploy to and create a new blank single-view iOS project in Xcode. Set the **Team** drop-down to the Apple ID that you have just added. It should be in a format similar to `your name (Personal Team - your Apple ID)`:
 
-  [ ![](free-provisioning-images/launchapp2.png "Create the Signing Identity")](free-provisioning-images/launchapp2.png)
+  [![](free-provisioning-images/launchapp2.png "Create the Signing Identity")](free-provisioning-images/launchapp2.png#lightbox)
 
 5. Under the **General > Identity** section, make sure that the Bundle Identifier matches _exactly_ the Bundle Identifier of your Xamarin.iOS app and ensure the deployment target matches or is lower than your connected iOS device. This step is extremely important, as Xcode will only create a provisioning profile with an explicit App ID:
 
-  [![](free-provisioning-images/launchapp5.png "Create a provisioning profile with an explicit App ID")](free-provisioning-images/launchapp5.png)
+  [![](free-provisioning-images/launchapp5.png "Create a provisioning profile with an explicit App ID")](free-provisioning-images/launchapp5.png#lightbox)
 
 6. In the Signing section, select **Automatically Manage Signing** and select your team from the drop down list:
 
-  [![](free-provisioning-images/launchapp6.png "Select Automatically Manage Signing and select your team from the drop down list")](free-provisioning-images/launchapp6.png)
+  [![](free-provisioning-images/launchapp6.png "Select Automatically Manage Signing and select your team from the drop down list")](free-provisioning-images/launchapp6.png#lightbox)
 
 7. The previous step will automatically generate a provisioning profile and signing identity for you. You can view this by clicking on the information icon next to provisioning profile:
 
-  [![](free-provisioning-images/launchapp7.png "View the provisioning profile")](free-provisioning-images/launchapp7.png)
+  [![](free-provisioning-images/launchapp7.png "View the provisioning profile")](free-provisioning-images/launchapp7.png#lightbox)
 
 8. To test in Xcode, deploy the blank application to your device by clicking the run button.
 
 9. Return to your IDE, with the same device plugged in, and right-click on your Xamarin.iOS project name to open the **Project Options** dialog. Browse to the iOS Bundle Signing section and explicitly set your signing identity and provisioning profile:
 
-  [![](free-provisioning-images/launchapp8.png "Set the signing identity and provisioning profile")](free-provisioning-images/launchapp8.png)
+  [![](free-provisioning-images/launchapp8.png "Set the signing identity and provisioning profile")](free-provisioning-images/launchapp8.png#lightbox)
 
 If you cannot see your signing identity or the correct provisioning profile in your IDE, you may need to restart it.
 

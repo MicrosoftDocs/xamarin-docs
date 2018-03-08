@@ -541,7 +541,7 @@ public partial class TouchManipulationPage : ContentPage
 
 The `PaintSurface` handler concludes by displaying a `MatrixDisplay` object showing the accumulated touch matrix:
 
-[![](touch-images/touchmanipulation-small.png "Triple screenshot of the Touch Manipulation page")](touch-images/touchmanipulation-large.png "Triple screenshot of the Touch Manipulation page")
+[![](touch-images/touchmanipulation-small.png "Triple screenshot of the Touch Manipulation page")](touch-images/touchmanipulation-large.png#lightbox "Triple screenshot of the Touch Manipulation page")
 
 ## Manipulating Multiple Bitmaps
 
@@ -680,7 +680,7 @@ public partial class BitmapScatterViewPage : ContentPage
 
 The code loops through the collection and displays the pile of bitmaps from the beginning of the collection to the end:
 
-[![](touch-images/bitmapscatterview-small.png "Triple screenshot of the Bitmap Scatter View page")](touch-images/bitmapscatterview-large.png "Triple screenshot of the Bitmap Scatter View page")
+[![](touch-images/bitmapscatterview-small.png "Triple screenshot of the Bitmap Scatter View page")](touch-images/bitmapscatterview-large.png#lightbox "Triple screenshot of the Bitmap Scatter View page")
 
 
 ## Related Links

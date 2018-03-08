@@ -54,7 +54,7 @@ Android SDK Emulator, do the following:
 1. Launch the Android Emulator Manager by clicking **Tools > Android >
    Android Emulator Manager**:
 
-    [![Android Emulator Manager menu item location](hardware-acceleration-images/win/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/win/01-avd-manager-menu-item.png)
+    [![Android Emulator Manager menu item location](hardware-acceleration-images/win/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/win/01-avd-manager-menu-item.png#lightbox)
 
 2. If you see a **Performance Warning** dialog similar to the following, then HAXM is
    not yet installed or configured properly on your computer:
@@ -90,7 +90,7 @@ Android SDK Emulator, do the following:
 1. Launch the Android Emulator Manager by clicking **Tools >
    Google Emulator Manager**:
 
-    [![Android Emulator Manager menu item location](hardware-acceleration-images/mac/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/mac/01-avd-manager-menu-item.png)
+    [![Android Emulator Manager menu item location](hardware-acceleration-images/mac/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/mac/01-avd-manager-menu-item.png#lightbox)
 
 2. If you see a **Performance Warning** dialog similar to the following, then HAXM is
    not yet installed or configured properly on your computer:
@@ -104,7 +104,7 @@ Android SDK Emulator, do the following:
 3. Select the **x86** image (for example, **Android\_Accelerated\_x86**), click **Start**, then
    click **Launch**:
 
-    [![Starting the Android SDK Emulator with a default virtual device image](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png)
+    [![Starting the Android SDK Emulator with a default virtual device image](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png#lightbox)
 
 3. Watch for the **Starting Android Emulator** dialog window while the
    emulator starts up. If HAXM is installed, you will see the message,
@@ -219,7 +219,7 @@ running:
    Virtualization based security** is present and is in the **Running**
    state:
 
-   [![Device Guard is present and running](hardware-acceleration-images/win/09-device-guard-sml.png)](hardware-acceleration-images/win/09-device-guard.png)
+   [![Device Guard is present and running](hardware-acceleration-images/win/09-device-guard-sml.png)](hardware-acceleration-images/win/09-device-guard.png#lightbox)
 
 If Device Guard is enabled, use the following steps to disable it:
 
@@ -233,7 +233,7 @@ If Device Guard is enabled, use the following steps to disable it:
 3. In the **Local Group Policy Editor**, navigate to **Computer
    Configuration > Administrative Templates > System > Device Guard**:
 
-   [![Device Guard in Local Group Policy Editor](hardware-acceleration-images/win/10-group-policy-editor-sml.png)](hardware-acceleration-images/win/10-group-policy-editor.png)
+   [![Device Guard in Local Group Policy Editor](hardware-acceleration-images/win/10-group-policy-editor-sml.png)](hardware-acceleration-images/win/10-group-policy-editor.png#lightbox)
 
 4. Change **Turn On Virtualization Based Security** to **Disabled** (as
    shown above) and exit the **Local Group Policy Editor**.
@@ -278,6 +278,6 @@ you can use a computer that is not domain-joined to use HAXM.
 
 2. Run the HAXM installer. Accept the default values in the installer dialogs:
 
-   [![Intel Hardware Accelerated Execution Manager Setup window](hardware-acceleration-images/mac/05-haxm-installer-sml.png)](hardware-acceleration-images/win/05-haxm-installer.png)
+   [![Intel Hardware Accelerated Execution Manager Setup window](hardware-acceleration-images/mac/05-haxm-installer-sml.png)](hardware-acceleration-images/win/05-haxm-installer.png#lightbox)
 
 -----

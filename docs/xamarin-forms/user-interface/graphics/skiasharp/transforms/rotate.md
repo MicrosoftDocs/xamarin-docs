@@ -53,7 +53,7 @@ using (SKPaint textPaint = new SKPaint
 
 Because rotation is centered around the upper-left corner of the canvas, for most angles set in this program, the text is rotated off the screen:
 
-[![](rotate-images/basicrotate-small.png "Triple screenshot of the Basic Rotate page")](rotate-images/basicrotate-large.png "Triple screenshot of the Basic Rotate page")
+[![](rotate-images/basicrotate-small.png "Triple screenshot of the Basic Rotate page")](rotate-images/basicrotate-large.png#lightbox "Triple screenshot of the Basic Rotate page")
 
 Very often you'll want to rotate something centered around a specified pivot point using these versions of the [`RotateDegrees`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateDegrees/p/System.Single/System.Single/System.Single/) and [`RotateRadians`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateRadians/p/System.Single/System.Single/System.Single/) methods:
 
@@ -81,7 +81,7 @@ using (SKPaint textPaint = new SKPaint
 
 Now the text rotates around the point used to position the text, which is the horizontal center of the text's baseline:
 
-[![](rotate-images/centeredrotate-small.png "Triple screenshot of the Centered Rotate page")](rotate-images/centeredrotate-large.png "Triple screenshot of the Centered Rotate page")
+[![](rotate-images/centeredrotate-small.png "Triple screenshot of the Centered Rotate page")](rotate-images/centeredrotate-large.png#lightbox "Triple screenshot of the Centered Rotate page")
 
 Just as with the centered version of the `Scale` method, the centered version of the `RotateDegrees` call is a shortcut:
 
@@ -135,7 +135,7 @@ Conceptually, the two transforms are applied in the order opposite to how they a
 
 There are usually several ways to combine rotation and translation. The **Rotated Text** page creates the following display:
 
-[![](rotate-images/rotatedtext-small.png "Triple screenshot of the Rotated Text page")](rotate-images/rotatedtext-large.png "Triple screenshot of the Rotated Text page")
+[![](rotate-images/rotatedtext-small.png "Triple screenshot of the Rotated Text page")](rotate-images/rotatedtext-large.png#lightbox "Triple screenshot of the Rotated Text page")
 
 Here's the `PaintSurface` handler of the [`RotatedTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/RotatedTextPage.cs) class:
 
@@ -359,7 +359,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The clock is certainly functional although the hands are rather crude:
 
-[![](rotate-images/uglyanalogclock-small.png "Triple screenshot of the Ugly Analog Clock Text page")](rotate-images/uglyanalogclock-large.png "Triple screenshot of the Ugly Analog page")
+[![](rotate-images/uglyanalogclock-small.png "Triple screenshot of the Ugly Analog Clock Text page")](rotate-images/uglyanalogclock-large.png#lightbox "Triple screenshot of the Ugly Analog page")
 
 
 ## Related Links

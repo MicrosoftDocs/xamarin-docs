@@ -38,7 +38,7 @@ The build server for Xamarin mobile apps is set up very much like a developer’
 
 The following diagram illustrates all of these elements on a typical Jenkins build server:
 
- [ ![](jenkins-walkthrough-images/image1.png "This diagram illustrates all of these elements on a typical Jenkins build server")](jenkins-walkthrough-images/image1.png)
+ [![](jenkins-walkthrough-images/image1.png "This diagram illustrates all of these elements on a typical Jenkins build server")](jenkins-walkthrough-images/image1.png#lightbox)
 
 iOS applications can only be built and signed on a computer running Mac OS X. A Mac Mini is a reasonable lower-cost option, but any computer capable of running OS X 10.10 (Yosemite) or higher is sufficient.
 
@@ -59,38 +59,38 @@ Most traditional continuous integration applications run in the background, eith
 
 Jenkins.App is a handy way to install Jenkins. This is an AppleScript wrapper that simplifies the starting and stopping of a Jenkins server. Instead of running in a bash shell, Jenkins runs as an app with icon in the Dock, as shown in the following screenshot:
 
- [ ![](jenkins-walkthrough-images/image2.png "Instead of running in a bash shell, Jenkins runs as an app with icon in the Dock, as shown in this screenshot")](jenkins-walkthrough-images/image2.png)
+ [![](jenkins-walkthrough-images/image2.png "Instead of running in a bash shell, Jenkins runs as an app with icon in the Dock, as shown in this screenshot")](jenkins-walkthrough-images/image2.png#lightbox)
 
 Starting or stopping Jenkins is as simple as starting or stopping Jenkins.App.
 
 To install Jenkins.App, download the latest version from the project’s download page, pictured in the screenshot below:
 
- [ ![](jenkins-walkthrough-images/image3.png "App, download the latest version from the projects download page, pictured in this screenshot")](jenkins-walkthrough-images/image3.png)
+ [![](jenkins-walkthrough-images/image3.png "App, download the latest version from the projects download page, pictured in this screenshot")](jenkins-walkthrough-images/image3.png#lightbox)
 
 Extract the zip file to the `/Applications` folder on your build server, and start it just like any other OS X application.
 The first time you start up Jenkins.App, it will present a dialog informing you that it will download Jenkins:
 
- [ ![](jenkins-walkthrough-images/image4.png "App, it will present a dialog informing you that it will download Jenkins")](jenkins-walkthrough-images/image4.png)
+ [![](jenkins-walkthrough-images/image4.png "App, it will present a dialog informing you that it will download Jenkins")](jenkins-walkthrough-images/image4.png#lightbox)
 
 Once Jenkins.App has finished its download, it will display another dialog asking you if you would like to customize the Jenkins startup, as seen in the following screenshot:
 
- [ ![](jenkins-walkthrough-images/image5.png "App has finished its download, it will display another dialog asking you if you would like to customize the Jenkins startup, as seen in this screenshot")](jenkins-walkthrough-images/image5.png)
+ [![](jenkins-walkthrough-images/image5.png "App has finished its download, it will display another dialog asking you if you would like to customize the Jenkins startup, as seen in this screenshot")](jenkins-walkthrough-images/image5.png#lightbox)
 
 Customizing Jenkins is optional and does not have to be performed each time the app is started – the default settings for Jenkins will work for most situations.
 
 If it is necessary to customize Jenkins, click on the **Change defaults** button. This will present you with two consecutive dialogs: one that asks for Java command line parameters, and another that asks for Jenkins command line parameters. The following two screenshots show these two dialogs:
 
- [ ![](jenkins-walkthrough-images/image6.png "This screenshot shows the dialogs")](jenkins-walkthrough-images/image6.png)
+ [![](jenkins-walkthrough-images/image6.png "This screenshot shows the dialogs")](jenkins-walkthrough-images/image6.png#lightbox)
 
- [ ![](jenkins-walkthrough-images/image7.png "This screenshot shows the dialogs")](jenkins-walkthrough-images/image7.png)
+ [![](jenkins-walkthrough-images/image7.png "This screenshot shows the dialogs")](jenkins-walkthrough-images/image7.png#lightbox)
 
 Once Jenkins is running, you may want to set it as a login item so that it will start up each time the user logins in to the computer. You can do this by right-clicking on the Jenkins icon in the Dock and choosing **Options…Open at Login**, as shown in the following screenshot:
 
- [ ![](jenkins-walkthrough-images/image8.png "You can do this by right-clicking on the Jenkins icon in the Dock and choosing OptionsOpen at Login, as shown in this screenshot")](jenkins-walkthrough-images/image8.png)
+ [![](jenkins-walkthrough-images/image8.png "You can do this by right-clicking on the Jenkins icon in the Dock and choosing OptionsOpen at Login, as shown in this screenshot")](jenkins-walkthrough-images/image8.png#lightbox)
 
 This will cause Jenkins.App to automatically launch each time the user logs in, but not when the computer boots up. It is possible to specify a user account that OS X will use to automatically login with at boot time. Open the **System Preferences**, and select the **User & Groups** icon as shown in this screenshot:
 
- [ ![](jenkins-walkthrough-images/image9.png "Open the System Preferences, and select the User  Groups icon as shown in this screenshot")](jenkins-walkthrough-images/image9.png)
+ [![](jenkins-walkthrough-images/image9.png "Open the System Preferences, and select the User  Groups icon as shown in this screenshot")](jenkins-walkthrough-images/image9.png#lightbox)
 
 Click on the **Login Options** button, and then choose the account that OS X will use for login at boot time.
 
@@ -101,15 +101,15 @@ At this point Jenkins has been installed. However, if we want to build Xamarin m
 
 When the Jenkins.App installer has completed, it will start Jenkins and launch the web browser with the URL http://localhost:8080, as shown in the screenshot below:
 
- [ ![](jenkins-walkthrough-images/image10.png "8080, as shown in this screenshot")](jenkins-walkthrough-images/image10.png)
+ [![](jenkins-walkthrough-images/image10.png "8080, as shown in this screenshot")](jenkins-walkthrough-images/image10.png#lightbox)
 
 From this page, select **Jenkins > Manage Jenkins > Manage Plugins** from the menu in the upper left hand corner, as shown in the screenshot below:
 
- [ ![](jenkins-walkthrough-images/image11.png "From this page, select Jenkins  Manage Jenkins  Manage Plugins from the menu in the upper left hand corner")](jenkins-walkthrough-images/image11.png)
+ [![](jenkins-walkthrough-images/image11.png "From this page, select Jenkins  Manage Jenkins  Manage Plugins from the menu in the upper left hand corner")](jenkins-walkthrough-images/image11.png#lightbox)
 
 This will display the **Jenkins Plugin Manager** page. If you click on the Available tab, you will see a list of over 600 plugins that can be downloaded and installed. This is pictured in the screenshot below:
 
- [ ![](jenkins-walkthrough-images/image12.png "If you click on the Available tab, you will see a list of over 600 plugins that can be downloaded and installed")](jenkins-walkthrough-images/image12.png)
+ [![](jenkins-walkthrough-images/image12.png "If you click on the Available tab, you will see a list of over 600 plugins that can be downloaded and installed")](jenkins-walkthrough-images/image12.png#lightbox)
 
 Scrolling through all 600 plugins to find a few can be tedious and error prone. Jenkins provides a Filter search field in the upper right-hand corner of the interface. Using this Filter field to search will simplify locating and installed one or all of the following plugins:
 
@@ -121,18 +121,18 @@ Jenkins supports Git without any extra plugins.
 
 After installing all of the plugins, you’ll want to restart Jenkins and configure the global settings for each plugin. The global settings for a plugin can be found by selecting **Jenkins > Manage Jenkins > Configure System** from the upper left hand corner, as shown in the screenshot below:
 
- [ ![](jenkins-walkthrough-images/image13.png "The global settings for a plugin can be found by selecting Jenkins / Manage Jenkins / Configure System from the upper left hand corner")](jenkins-walkthrough-images/image13.png)
+ [![](jenkins-walkthrough-images/image13.png "The global settings for a plugin can be found by selecting Jenkins / Manage Jenkins / Configure System from the upper left hand corner")](jenkins-walkthrough-images/image13.png#lightbox)
 
 When you select this menu option, you will be taken to the **Configure System [Jenkins]** page. This page contains sections to configure Jenkins itself and to set some of the global plugin values.  The screenshot below illustrates an example of this page:
 
- [ ![](jenkins-walkthrough-images/image14.png "This screenshot illustrates an example of this page")](jenkins-walkthrough-images/image14.png)
+ [![](jenkins-walkthrough-images/image14.png "This screenshot illustrates an example of this page")](jenkins-walkthrough-images/image14.png#lightbox)
 
 
 ### Configuring the MSBuild Plugin
 
 The MSBuild plugin must be configured to use **/Library/Frameworks/Mono.framework/Commands/xbuild** to compile Visual Studio for Mac solution and project files. Scroll down the **Configure System [Jenkins]** page until the **Add MSBuild** button appears, as shown in the screenshot below:
 
- [ ![](jenkins-walkthrough-images/image15.png "Scroll down the Configure System Jenkins page until the Add MSBuild button appears")](jenkins-walkthrough-images/image15.png)
+ [![](jenkins-walkthrough-images/image15.png "Scroll down the Configure System Jenkins page until the Add MSBuild button appears")](jenkins-walkthrough-images/image15.png#lightbox)
 
 Click on this button, and fill out the **Name** and **Path** to **MSBuild** fields on the form that appears. The name of your **MSBuild** installation should be something meaningful, while the **Path to MSBuild** should be the path to `xbuild`, which is typically **/Library/Frameworks/Mono.framework/Commands/xbuild**. After we save the changes by clicking the Save or the Apply button at the bottom of the page, Jenkins will be able to use `xbuild` to compile your solutions.
 
@@ -156,7 +156,7 @@ In order for an OS X workstation to interact with a TFS server, Team Explorer Ev
 
 Once the command line client for TFS is installed, Jenkins must be configured with the full path to the `tf` command line client. Scroll down the **Configure System [Jenkins]** page until you find the Team Foundation Server section, as shown in the following screenshot:
 
- [ ![](jenkins-walkthrough-images/image17.png "Scroll down the Configure System Jenkins page until you find the Team Foundation Server section")](jenkins-walkthrough-images/image17.png)
+ [![](jenkins-walkthrough-images/image17.png "Scroll down the Configure System Jenkins page until you find the Team Foundation Server section")](jenkins-walkthrough-images/image17.png#lightbox)
 
 Enter the full path to the `tf` command, and click the **Save** button.
 
@@ -166,19 +166,19 @@ When first installed, Jenkins has security disabled, so it is possible for any u
 
 Security settings can be found by selecting **Jenkins > Manage Jenkins > Configure Global Security**, as shown in this screenshot:
 
- [ ![](jenkins-walkthrough-images/image18.png "Security settings can be found by selecting Jenkins / Manage Jenkins / Configure Global Security")](jenkins-walkthrough-images/image18.png)
+ [![](jenkins-walkthrough-images/image18.png "Security settings can be found by selecting Jenkins / Manage Jenkins / Configure Global Security")](jenkins-walkthrough-images/image18.png#lightbox)
 
 On the **Configure Global Security** page, check the **Enable Security** checkbox and the **Access Control** form should appear, similar to the next screenshot:
 
- [ ![](jenkins-walkthrough-images/image19.png "On the Configure Global Security page, check the Enable Security checkbox and the Access Control form should appear, similar to this screenshot")](jenkins-walkthrough-images/image19.png)
+ [![](jenkins-walkthrough-images/image19.png "On the Configure Global Security page, check the Enable Security checkbox and the Access Control form should appear, similar to this screenshot")](jenkins-walkthrough-images/image19.png#lightbox)
 
 Toggle the radio button for **Jenkins’ own user database** in the **Security Realm Section**, and ensure that **Allow users to sign up** is also checked, as illustrated in the following screenshot:
 
- [ ![](jenkins-walkthrough-images/image20.png "Toggle the radio button for Jenkins own user database in the Security Realm Section, and ensure that Allow users to sign up is also checked")](jenkins-walkthrough-images/image20.png)
+ [![](jenkins-walkthrough-images/image20.png "Toggle the radio button for Jenkins own user database in the Security Realm Section, and ensure that Allow users to sign up is also checked")](jenkins-walkthrough-images/image20.png#lightbox)
 
 Finally, restart Jenkins and create a new account. The first account that is created is the root account, and this account will be automatically promoted to an administrator. Navigate back to the **Configure Global Security** page, and check off the **Matrix-based security** radio button. The root account should be granted full access, and the anonymous account should be given read-only access, as shown in the following screenshot:
 
- [ ![](jenkins-walkthrough-images/image21.png "The root account should be granted full access, and the anonymous account should be given read-only access")](jenkins-walkthrough-images/image21.png)
+ [![](jenkins-walkthrough-images/image21.png "The root account should be granted full access, and the anonymous account should be given read-only access")](jenkins-walkthrough-images/image21.png#lightbox)
 
 Once these settings are saved and Jenkins is restarted, security will be turned on.
 

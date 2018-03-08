@@ -108,7 +108,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The result is also called an *arithmetic spiral* because the offset between each loop is constant:
 
-[![](polylines-images/archimedeanspiral-small.png "Triple screenshot of the Archimedean Spiral page")](polylines-images/archimedeanspiral-large.png "Triple screenshot of the Archimedean Spiral page")
+[![](polylines-images/archimedeanspiral-small.png "Triple screenshot of the Archimedean Spiral page")](polylines-images/archimedeanspiral-large.png#lightbox "Triple screenshot of the Archimedean Spiral page")
 
 Notice that the `SKPath` is created in a `using` block. This `SKPath` consumes more memory than the `SKPath` objects in the previous programs, which suggests that a `using` block is more appropriate to dispose any unmanaged resources.
 

@@ -48,7 +48,7 @@ The `CatalogService` class is used to manage the data retrieval process from the
 
 Figure 10-1 shows the interaction of classes that read catalog data from the catalog microservice for displaying by the `CatalogView`.
 
-[![](accessing-remote-data-images/catalogdata.png "Retrieving data from the catalog microservice")](accessing-remote-data-images/catalogdata-large.png "Retrieving data from the catalog microservice")
+[![](accessing-remote-data-images/catalogdata.png "Retrieving data from the catalog microservice")](accessing-remote-data-images/catalogdata-large.png#lightbox "Retrieving data from the catalog microservice")
 
 **Figure 10-1**: Retrieving data from the catalog microservice
 
@@ -153,7 +153,7 @@ The `BasketService` class is used to manage the data retrieval and update proces
 
 Figure 10-2 shows the interaction of classes that send the basket data displayed by the `BasketView`, to the basket microservice.
 
-[![](accessing-remote-data-images/basketdata.png "Sending data to the basket microservice")](accessing-remote-data-images/basketdata-large.png "Sending data to the basket microservice")
+[![](accessing-remote-data-images/basketdata.png "Sending data to the basket microservice")](accessing-remote-data-images/basketdata-large.png#lightbox "Sending data to the basket microservice")
 
 **Figure 10-2**: Sending data to the basket microservice
 

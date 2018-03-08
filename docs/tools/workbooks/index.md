@@ -28,7 +28,7 @@ Give it a try and let us know what you think, or if
 you [run into any bugs](~/tools/workbooks/install.md#reporting-bugs). We have a
 [forum](https://forums.xamarin.com/categories/inspector) too!
 
-[ ![](images/interactive-1.0.0-urho-planet-earth-small.png "A sample UrhoSharp based workbook")](images/interactive-1.0.0-urho-planet-earth.png)
+[![](images/interactive-1.0.0-urho-planet-earth-small.png "A sample UrhoSharp based workbook")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
 
 ## [Installation and Requirements](install.md)
 

@@ -117,7 +117,7 @@ The last section sets the `BindingContext` to the value of `Math.PI` and display
 
 Here's the program running on all three platforms:
 
-[![String Formatting](string-formatting-images/stringformatting-small.png "String Formatting")](string-formatting-images/stringformatting-large.png "String Formatting")
+[![String Formatting](string-formatting-images/stringformatting-small.png "String Formatting")](string-formatting-images/stringformatting-large.png#lightbox "String Formatting")
 
 ## ViewModels and String Formatting
 
@@ -170,7 +170,7 @@ This approach is shown in the **Better Color Selector** sample, which uses the s
 
 There are now three pairs of `Slider` and `Label` elements that are bound to the same source property in the `HslColorViewModel` object. The only difference is that `Label` has a `StringFormat` property to display each `Slider` value.
 
-[![Better Color Selector](string-formatting-images/bettercolorselector-small.png "Better Color Selector")](string-formatting-images/bettercolorselector-large.png "Better Color Selector")
+[![Better Color Selector](string-formatting-images/bettercolorselector-small.png "Better Color Selector")](string-formatting-images/bettercolorselector-large.png#lightbox "Better Color Selector")
 
 You might be wondering how you could display RGB (red, green, blue) values in traditional two-digit hexadecimal format. Those integer values aren't directly available from the `Color` structure. One solution would be to calculate integer values of the color components within the ViewModel and expose them as properties. You could then format them using the `X2` formatting specification.
 

@@ -106,7 +106,7 @@ The [**CopterAnimation**](https://github.com/xamarin/xamarin-forms-book-samples/
 
 [**RotatingSpokes**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotatingSpokes) revolves `BoxView` spokes around the center of the screen, and then rotates each spoke itself to create interesting patterns:
 
-[![Triple screenshot of Rotating Spokes](images/ch22fg21-small.png "Rotating Spokes")](images/ch22fg21-large.png "Rotating Spokes")
+[![Triple screenshot of Rotating Spokes](images/ch22fg21-small.png "Rotating Spokes")](images/ch22fg21-large.png#lightbox "Rotating Spokes")
 
 However, progressively increasing the `Rotation` property of an element might not work in the long term, as the [**RotationBreakdown**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotationBreakdown) sample demonstrates.
 
@@ -120,7 +120,7 @@ The `LayoutTo` method should be restricted to special purposes. The [**BouncingB
 
 The [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle) sample uses `LayoutTo` to move tiles in an implementation of the classic 15-16 puzzle that displays a scrambled image rather than numbered tiles:
 
-[![Triple screenshot of Xamarin Xuzzle](images/ch22fg26-small.png "Xuzzle Puzzle Game")](images/ch22fg26-large.png "Xuzzle Puzzle Game")
+[![Triple screenshot of Xamarin Xuzzle](images/ch22fg26-small.png "Xuzzle Puzzle Game")](images/ch22fg26-large.png#lightbox "Xuzzle Puzzle Game")
 
 ### Your own awaitable animations
 

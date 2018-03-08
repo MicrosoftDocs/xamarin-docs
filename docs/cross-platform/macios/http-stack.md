@@ -27,7 +27,7 @@ To adjust the HttpClient being used by your app:
 2. Switch to the **Build** settings for your project (for example, **iOS Build** for a Xamarin.iOS app).
 3. From the **HttpClient Implementation** dropdown, select the HttpClient type as one of the following: **Managed**, **CFNetwork** or **NSUrlSession**.
 
-[ ![Choose HttpClient implementation from Managed, CFNetwork, or NSUrlSession](http-stack-images/http-xs-sml.png)](http-stack-images/http-xs.png)
+[![Choose HttpClient implementation from Managed, CFNetwork, or NSUrlSession](http-stack-images/http-xs-sml.png)](http-stack-images/http-xs.png#lightbox)
 
 <a name="Managed" />
 

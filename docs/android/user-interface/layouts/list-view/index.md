@@ -213,7 +213,7 @@ Run the application. You can scroll the list, or type to filter it,
 then click an item to see a message. You should see something like
 this:
 
-[ ![Example screenshot of ListView with country names](images/helloviews6.png)](images/helloviews6.png)
+[![Example screenshot of ListView with country names](images/helloviews6.png)](images/helloviews6.png#lightbox)
 
 Note that using a hard-coded string array is not the best design
 practice. One is used in this tutorial for simplicity, to

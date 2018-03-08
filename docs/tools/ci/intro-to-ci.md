@@ -29,13 +29,13 @@ Again, with continuous integration, the act of committing changes causes the CI 
 
 The following diagram illustrates this process:
 
-[![](intro-to-ci-images/intro01-small.png "This diagram illustrates this process")](intro-to-ci-images/intro01.png)
+[![](intro-to-ci-images/intro01-small.png "This diagram illustrates this process")](intro-to-ci-images/intro01.png#lightbox)
 
 Mobile apps introduce unique challenges for continuous integration. Apps may require sensors such as the GPS or camera that are only available on physical devices. In addition, simulators or emulators are only an approximation of hardware and may conceal or obscure problems. In the end, it's necessary to test a mobile app on real hardware to be confident that it's truly customer-ready.
 
 The [App Center Test](https://docs.microsoft.com/en-us/appcenter/test-cloud) addresses this particular problem by testing apps directly on hundreds of physical devices. Developers write automated acceptances tests, which allow for powerful UI testing. Once these tests are uploaded to App Center, the CI server can run them automatically as part of a CI process as shown in the following diagram:
 
-[![](intro-to-ci-images/intro02-small.png "Once these tests are uploaded to App Center, the CI server can run them automatically as part of a CI process as shown in this diagram")](intro-to-ci-images/intro02.png)
+[![](intro-to-ci-images/intro02-small.png "Once these tests are uploaded to App Center, the CI server can run them automatically as part of a CI process as shown in this diagram")](intro-to-ci-images/intro02.png#lightbox)
 
 # Components of Continuous Integration
 
@@ -98,7 +98,7 @@ With Team Foundation Server, you configure a build machine as follows for specif
 
 The following diagram illustrates this topography:
 
-[![](intro-to-ci-images/intro03-small.png "This diagram illustrates this topography")](intro-to-ci-images/intro03.png)
+[![](intro-to-ci-images/intro03-small.png "This diagram illustrates this topography")](intro-to-ci-images/intro03.png#lightbox)
 
 It is also possible to link a local TFS server to a Visual Studio Team Services project so that VSTS builds are delegated to the local server. For details, see [Deploy and configure a build server](http://msdn.microsoft.com/en-us/library/ms181712.aspx) on MSDN.
 
@@ -106,13 +106,13 @@ It is also possible to link a local TFS server to a Visual Studio Team Services 
 
 If you use Jenkins to build your apps, you can store your code in Visual Studio Team Services or Team Foundation Server and continue to use Jenkins for your CI builds. You can trigger a Jenkins build when you push code to your team project's Git repository or when you check code in to TFVC. For details, see [Jenkins with Visual Studio Team Services](https://www.visualstudio.com/en-us/docs/marketplace/integrate/service-hooks/services/jenkins).
 
-[![](intro-to-ci-images/intro04-small.png "If you use Jenkins to build your apps, you can store your code in Visual Studio Team Services or Team Foundation Server and continue to use Jenkins for your CI builds")](intro-to-ci-images/intro04.png)
+[![](intro-to-ci-images/intro04-small.png "If you use Jenkins to build your apps, you can store your code in Visual Studio Team Services or Team Foundation Server and continue to use Jenkins for your CI builds")](intro-to-ci-images/intro04.png#lightbox)
 
 ### Git And Jenkins
 
 Another common CI environment can be entirely OS X based. This scenario involves using Git for source code control and Jenkins for the build server. Both of these are running on a single Mac OS X computer with Visual Studio for Mac installed. This is very similar to the Visual Studio Team Services + Jenkins environment discussed in the previous section:
 
-[![](intro-to-ci-images/intro05-small.png "This is very similar to the Visual Studio Team Services + Jenkins environment discussed in the previous section")](intro-to-ci-images/intro05.png)
+[![](intro-to-ci-images/intro05-small.png "This is very similar to the Visual Studio Team Services + Jenkins environment discussed in the previous section")](intro-to-ci-images/intro05.png#lightbox)
 
 > [!IMPORTANT]
 > **Note: Jenkins is [not supported by Xamarin](~/cross-platform/troubleshooting/questions/xamarin-jenkins.md).**

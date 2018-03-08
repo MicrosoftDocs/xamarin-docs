@@ -180,7 +180,7 @@ public override void TouchesCancelled(NSSet touches, UIEvent evt)
 
 Altogether, this processing allows the [FingerPaint](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint) program to track individual fingers and draw the results on the screen:
 
-[ ![](touch-tracking-images/image01.png "Tracking individual fingers and drawing the results on the screen")](touch-tracking-images/image01.png)
+[![](touch-tracking-images/image01.png "Tracking individual fingers and drawing the results on the screen")](touch-tracking-images/image01.png#lightbox)
 
 You've now seen how you can track individual fingers on the screen and distinguish among them.
 

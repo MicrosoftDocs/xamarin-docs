@@ -37,7 +37,7 @@ Before requesting one or more permissions, it is a best practice to provide a ra
 
 The whole workflow of checking and requesting permissions is known as a _run-time permissions_ check, and can be summarized in the following diagram: 
 
-[ ![Run-time permission check flow chart](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png)
+[![Run-time permission check flow chart](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
 
 The Android Support Library backports some of the new APIs for permissions to older versions of Android. These backported APIs will automatically check the version of Android on the device so it is not necessary to perform an API level check each time.  
 
@@ -80,15 +80,15 @@ It is possible to declare the permissions using the tool support built into Visu
 
 1. Double-click **Properties** in the **Solution Explorer** and select the **Android Manifest** tab in the Properties window:
 
-    [![Required permissions in the Android Manifest tab](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png)
+    [![Required permissions in the Android Manifest tab](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png#lightbox)
 
 2. If the application does not already have an AndroidManifest.xml, click **No AndroidManifest.xml found. Click to add one** as shown below:
 
-    [![No AndroidManifest.xml message](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png)
+    [![No AndroidManifest.xml message](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png#lightbox)
 
 3. Select any permissions your application needs from the **Required permissions** list and save:
 
-    [![Example CAMERA permissions selected](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png)
+    [![Example CAMERA permissions selected](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -96,15 +96,15 @@ It is possible to declare the permissions using the tool support built into Visu
 
 1. Double-click the project in the **Solution Pad** and select **Options > Build > Android Application**:
 
-    [![Required Permissions section shown](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png)
+    [![Required Permissions section shown](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png#lightbox)
 
 2. Click the **Add Android Manifest** button if the project does not already have an **AndroidManifest.xml**:
 
-    [![The project's Android manifest is missing](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png)
+    [![The project's Android manifest is missing](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png#lightbox)
 
 3. Select any permissions your application needs from the **Required permissions** list and click **OK**:
 
-    [![Example CAMERA permissions selected](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png)
+    [![Example CAMERA permissions selected](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
     
 -----
 

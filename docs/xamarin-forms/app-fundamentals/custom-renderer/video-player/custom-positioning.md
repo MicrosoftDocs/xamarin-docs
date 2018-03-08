@@ -468,7 +468,7 @@ Therefore, the `Position` property of the `VideoPlayer` can be bound to the `Pos
 
 The first ellipsis (···) hides the `ActivityIndicator`; it's the same as in the previous **Custom Transport** page. Notice the two `Label` elements displaying the `Position` and `TimeToEnd` properties. The ellipsis between those two `Label` elements hides the two `Button` elements shown in the **Custom Transport** page for Play, Pause, and Stop. The code-behind logic is also the same as the **Custom Transport** page.
 
-[![Custom Positioning](custom-positioning-images/custompositioning-small.png "Custom Positioning")](custom-positioning-images/custompositioning-large.png "Custom Positioning")
+[![Custom Positioning](custom-positioning-images/custompositioning-small.png "Custom Positioning")](custom-positioning-images/custompositioning-large.png#lightbox "Custom Positioning")
 
 This concludes the discussion of the `VideoPlayer`.
 

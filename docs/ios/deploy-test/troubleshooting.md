@@ -18,7 +18,7 @@ Code Signing & Provisioning with iOS can be quite awkward, and so it is importan
 
 * Large teams should refrain from using the "Fix issue" button in Xcode, illustrated here:
 
-    [![](troubleshooting-images/fixissue.png "The Fix Issues dialog")](troubleshooting-images/fixissue.png)
+    [![](troubleshooting-images/fixissue.png "The Fix Issues dialog")](troubleshooting-images/fixissue.png#lightbox)
 
     This will create new provisioning profiles and certificates. At best this will create a provisioning profile every time a team member clicks it, causing disorganization with profiles. At worst, it will revoke certificates for everyone else in the company, causing their apps to stop working.
 

@@ -23,13 +23,13 @@ A push notification is used to deliver information, such as a message, from a ba
 
 Backend systems send push notifications to mobile devices through Platform Notification Systems (PNS), as shown in the following diagram:
 
-[![](azure-images/pns.png "Platform Notification Systems")](azure-images/pns-large.png "Platform Notification Systems")
+[![](azure-images/pns.png "Platform Notification Systems")](azure-images/pns-large.png#lightbox "Platform Notification Systems")
 
 To send a push notification, the backend system contacts the platform-specific PNS to send a notification to a client application instance. This significantly increases the complexity of the backend when cross-platform push notifications are required, because the backend must use each platform-specific PNS API and protocol.
 
 Azure Notification Hubs eliminate this complexity by abstracting the details of the different platform notification systems, allowing a cross-platform notification to be sent with a single API call, as shown in the following diagram:
 
-[![](azure-images/notification-hub.png)](azure-images/notification-hub-large.png)
+[![](azure-images/notification-hub.png)](azure-images/notification-hub-large.png#lightbox)
 
 To send a push notification, the backend system only contacts the Azure Notification Hub, which in turn communicates with the different platform notification systems, therefore decreasing the complexity of the backend code that sends push notifications.
 
@@ -43,7 +43,7 @@ Azure Mobile Apps have built-in support for push notifications using notificatio
 
 The sample application demonstrates a todo list application whose data is stored in an Azure Mobile Apps instance. Every time a new item is added to the Azure Mobile Apps instance, a push notification is sent to the Xamarin.Forms application. The following screenshots show each platform displaying the received push notification:
 
-[![](azure-images/screenshots.png "Sample Application Receiving a Push Notification")](azure-images/screenshots-large.png "Sample Application Receiving a Push Notification")
+[![](azure-images/screenshots.png "Sample Application Receiving a Push Notification")](azure-images/screenshots-large.png#lightbox "Sample Application Receiving a Push Notification")
 
 For more information about Azure Notification Hubs, see [Azure Notification Hubs](https://azure.microsoft.com/documentation/articles/notification-hubs-push-notification-overview/) and [Add push notifications to your Xamarin.Forms app](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push/).
 

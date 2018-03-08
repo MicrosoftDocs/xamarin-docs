@@ -49,37 +49,37 @@ Each of the environments mentioned in the previous section require their own cer
 
 1.  To create a certificates go to the iOS Provisioning Portal on Apple's website, as shown in the following screenshot (notice the App IDs menu item on the left):
 
-	[ ![](remote-notifications-in-ios-images/image5new.png "The iOS Provisioning Portal on Apples website")](remote-notifications-in-ios-images/image5new.png)
+	[![](remote-notifications-in-ios-images/image5new.png "The iOS Provisioning Portal on Apples website")](remote-notifications-in-ios-images/image5new.png#lightbox)
 
 2.  Next, navigate to the App ID's section and create a new app ID as shown in the following screenshot:
 
-	[ ![](remote-notifications-in-ios-images/image6new.png "Navigate to the App IDs section and create a new app ID")](remote-notifications-in-ios-images/image6new.png)
+	[![](remote-notifications-in-ios-images/image6new.png "Navigate to the App IDs section and create a new app ID")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
 3.  When you click on the **+** button, you will be able to enter the description and a Bundle Identifier for the app ID, as shown in the next screenshot:
 
-	[ ![](remote-notifications-in-ios-images/image7new.png "Enter the description and a Bundle Identifier for the app ID")](remote-notifications-in-ios-images/image7new.png)
+	[![](remote-notifications-in-ios-images/image7new.png "Enter the description and a Bundle Identifier for the app ID")](remote-notifications-in-ios-images/image7new.png#lightbox)
 
 4. Make sure to select **Explicit App ID** and that the Bundle Identifier doesn't end with a  `*` . This will create an identifier that is good for multiple applications, and push notification certificates must be for a single application.
 
 1. Under App Services, select **Push Notifications**:
 
-	[ ![](remote-notifications-in-ios-images/image8new.png "Select Push Notifications")](remote-notifications-in-ios-images/image8new.png)
+	[![](remote-notifications-in-ios-images/image8new.png "Select Push Notifications")](remote-notifications-in-ios-images/image8new.png#lightbox)
 
 2. And press **Submit** to confirm registration of the new App ID:
 
-	[ ![](remote-notifications-in-ios-images/image9new.png "Confirm registration of the new App ID")](remote-notifications-in-ios-images/image9new.png)
+	[![](remote-notifications-in-ios-images/image9new.png "Confirm registration of the new App ID")](remote-notifications-in-ios-images/image9new.png#lightbox)
 
 3.  Next, you must create the certificate for the app ID. In the left hand navigation, browse to **Certificates > All** and select the `+` button, as shown in the following screenshot:
 
-	[ ![](remote-notifications-in-ios-images/image10new.png "Create the certificate for the app ID")](remote-notifications-in-ios-images/image8.png)
+	[![](remote-notifications-in-ios-images/image10new.png "Create the certificate for the app ID")](remote-notifications-in-ios-images/image8.png#lightbox)
 
 4.	Select whether you would like to use a Development or Production certificate:
 
-	[ ![](remote-notifications-in-ios-images/image11new.png "Select a Development or Production certificate")](remote-notifications-in-ios-images/image11new.png)
+	[![](remote-notifications-in-ios-images/image11new.png "Select a Development or Production certificate")](remote-notifications-in-ios-images/image11new.png#lightbox)
 
 5. And then select the new App ID that we have just created:
 
-	[ ![](remote-notifications-in-ios-images/image12new.png "Select the new App ID just created")](remote-notifications-in-ios-images/image12new.png)
+	[![](remote-notifications-in-ios-images/image12new.png "Select the new App ID just created")](remote-notifications-in-ios-images/image12new.png#lightbox)
 
 6.  This will display instructions that will take you through the process of creating a  *Certificate Signing Request* using the  **Keychain Access** application on your Mac.
 
@@ -88,10 +88,10 @@ Each of the environments mentioned in the previous section require their own cer
 8.  To create a development provisioning profile, navigate to the **Provisioning Profiles** section and follow the steps to create it, using the App Id we have just created.
 
 9.  Once you've created the provisioning profile, open up  **Xcode Organizer** and refresh it. If the provisioning profile you created does not appear it may be necessary to download the profile from the iOS Provisioning Portal and manually import it. The following screen shot shows an example of the Organizer with the provision profile added: 
-	[ ![](remote-notifications-in-ios-images/image13new.png "This screen shot shows an example of the Organizer with the provision profile added")](remote-notifications-in-ios-images/image13new.png)
+	[![](remote-notifications-in-ios-images/image13new.png "This screen shot shows an example of the Organizer with the provision profile added")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
 10.  At this point we need to configure the Xamarin.iOS project to use this newly created provisioning profile. This is done from  **Project Options** dialog, under  **iOS Bundle Signing** tab, as showing in the following screenshot: 
-	[ ![](remote-notifications-in-ios-images/image11.png "Configure the Xamarin.iOS project to use this newly created provisioning profile")](remote-notifications-in-ios-images/image11.png)
+	[![](remote-notifications-in-ios-images/image11.png "Configure the Xamarin.iOS project to use this newly created provisioning profile")](remote-notifications-in-ios-images/image11.png#lightbox)
 
 
 

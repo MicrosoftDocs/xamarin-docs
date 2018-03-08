@@ -43,7 +43,7 @@ To develop Xamarin.Android applications using Jelly Bean requires
 Xamarin.Android 4.2.6 or higher and Android 4.1 (API Level 16) be installed via the
 Android SDK Manager as shown in the following screen shot:
 
-[![Selecting Android 4.1 in the Android SDK Manager](jelly-bean-images/image1.png)](jelly-bean-images/image1.png)
+[![Selecting Android 4.1 in the Android SDK Manager](jelly-bean-images/image1.png)](jelly-bean-images/image1.png#lightbox)
 
 
 
@@ -316,24 +316,24 @@ of new three new style to be set on notifications:
 -   `Notification.BigPictureStyle` – This is a helper class that will generate notifications that will have an image in them. The following image shows an example of a notification with a big image:
 
 
- [ ![Example screenshot of a BigPictureStyle notification](jelly-bean-images/image2.png)](jelly-bean-images/image2.png)
+ [![Example screenshot of a BigPictureStyle notification](jelly-bean-images/image2.png)](jelly-bean-images/image2.png#lightbox)
 
 -   `Notification.BigTextStyle` – This is a helper class that will generate notifications that will have multiple lines of text, such as e-mail. An example of this new notification style can be seen in the following screenshot:
 
 
- [ ![Example screenshot of a BigTextStyle notification](jelly-bean-images/image3.png)](jelly-bean-images/image3.png)
+ [![Example screenshot of a BigTextStyle notification](jelly-bean-images/image3.png)](jelly-bean-images/image3.png#lightbox)
 
 -   `Notification.InboxStyle` – This is a helper class that will generate notifications that contain a list of strings, such as snippets from an e-mail message, as shown in this screenshot:
 
 
- [ ![Example screenshot of a Notification.InboxStyle notification](jelly-bean-images/image4.png)](jelly-bean-images/image4.png)
+ [![Example screenshot of a Notification.InboxStyle notification](jelly-bean-images/image4.png)](jelly-bean-images/image4.png#lightbox)
 
 It is possible to add up to two action buttons at the bottom of a
 notification message when the notification is using the normal or larger style.
 An example of this can be seen in the following screenshot, where the action
 buttons are visible at the bottom of the notification:
 
- [ ![Example screenshot of action buttons displayed below a notification message](jelly-bean-images/image5.png)](jelly-bean-images/image5.png)
+ [![Example screenshot of action buttons displayed below a notification message](jelly-bean-images/image5.png)](jelly-bean-images/image5.png#lightbox)
 
 The `Notification` class has received new constants that allow a
 developer to specify one of five priority levels for a notification. These can

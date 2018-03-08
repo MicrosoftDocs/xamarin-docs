@@ -60,7 +60,7 @@ APK. In fact, is not possible to enable obfuscation through ProGuard
 Xamarin.Android's ProGuard performs only the **shrinking** and 
 **optimization** steps: 
 
-[ ![Shrinking and optimization steps](proguard-images/01-xa-chain-sml.png)](proguard-images/01-xa-chain.png)
+[![Shrinking and optimization steps](proguard-images/01-xa-chain-sml.png)](proguard-images/01-xa-chain.png#lightbox)
 
 One important item to know in advance before using ProGuard is how 
 it works within the `Xamarin.Android` build process. This process uses 
@@ -117,12 +117,12 @@ Use the following steps to enable ProGuard in your app project:
     (this is important because the linker must run in order for 
     ProGuard to run): 
 
-    [ ![Select Release configuration](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png)
+    [![Select Release configuration](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png#lightbox)
    
 2.  Enable ProGuard by checking the **Enable ProGuard** option under the 
     **Packaging** tab of **Properties > Android Options**: 
 
-    [ ![Enable Proguard option selected](proguard-images/03-enable-proguard-sml.png)](proguard-images/03-enable-proguard.png)
+    [![Enable Proguard option selected](proguard-images/03-enable-proguard-sml.png)](proguard-images/03-enable-proguard.png#lightbox)
 
 For most Xamarin.Android apps, the default ProGuard configuration file 
 supplied by Xamarin.Android will be sufficient to remove all (and only)
@@ -141,7 +141,7 @@ explicitly tell ProGuard which classes to keep. To do this, create a new
 **.cfg** file and apply the `ProGuardConfiguration` build action in the 
 **Properties** pane of the **Solution Explorer**: 
 
-[ ![ProguardConfiguration build action selected](proguard-images/04-build-action-sml.png)](proguard-images/04-build-action.png)
+[![ProguardConfiguration build action selected](proguard-images/04-build-action-sml.png)](proguard-images/04-build-action.png#lightbox)
 
 Keep in mind that this configuration file does not replace the 
 Xamarin.Android **proguard_xamarin.cfg** file since both are used by 

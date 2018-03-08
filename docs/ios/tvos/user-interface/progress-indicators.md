@@ -17,7 +17,7 @@ _This article covers designing and working with Progress Indicators inside of a 
 
 There might be times when your Xamarin.tvOS app needs to load new content or perform a lengthy processing operation. During these times, you should present either an Activity Indicator or Progress Bar to let the user know that the app is still running and to give them some indication as to the length of the task being run.
 
-[ ![](progress-indicators-images/intro01.png "Sample progress indicators")](progress-indicators-images/intro01.png)
+[![](progress-indicators-images/intro01.png "Sample progress indicators")](progress-indicators-images/intro01.png#lightbox)
 
 <a name="About-Activity-Indicators" />
 
@@ -53,19 +53,19 @@ The easiest way to work with Progress Indicator in a Xamarin.tvOS app is to add 
 1. In the **Solution Pad**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Activity Indicator** from the **Toolbox** and drop it on the View: 
 
-	[ ![](progress-indicators-images/activity01.png "A Activity Indicator")](progress-indicators-images/activity01.png)
+	[![](progress-indicators-images/activity01.png "A Activity Indicator")](progress-indicators-images/activity01.png#lightbox)
 1. In the **Widget Tab** of the **Properties Pad**, you can adjust several properties of the Activity Indicator such as its **Style** and **Behavior**: 
 
-	[ ![](progress-indicators-images/activity02.png "The Widget Tab ")](progress-indicators-images/activity02.png)
+	[![](progress-indicators-images/activity02.png "The Widget Tab ")](progress-indicators-images/activity02.png#lightbox)
 1. Drag a **Progress View** from the **Toolbox** and drop it on the View: 
 
-	[ ![](progress-indicators-images/activity03.png "A Progress View")](progress-indicators-images/activity03.png)
+	[![](progress-indicators-images/activity03.png "A Progress View")](progress-indicators-images/activity03.png#lightbox)
 1. In the **Widget Tab** of the **Property Explorer**, you can adjust several properties of the Progress View such as its **Style** and **Progress** (percent complete): 
 
-	[ ![](progress-indicators-images/activity04.png "The Widget Tab")](progress-indicators-images/activity04.png)
+	[![](progress-indicators-images/activity04.png "The Widget Tab")](progress-indicators-images/activity04.png#lightbox)
 1. Finally, assign **Names** to the controls so that you can respond to them in C# code. For example: 
 
-	[ ![](progress-indicators-images/activity05.png "Assign a name")](progress-indicators-images/activity05.png)
+	[![](progress-indicators-images/activity05.png "Assign a name")](progress-indicators-images/activity05.png#lightbox)
 1. Save your changes.
 
 # [Visual Studio](#tab/vswin)
@@ -73,19 +73,19 @@ The easiest way to work with Progress Indicator in a Xamarin.tvOS app is to add 
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Activity Indicator** from the **Toolbox** and drop it on the View: 
 
-	[ ![](progress-indicators-images/activity01-vs.png "A Activity Indicator")](progress-indicators-images/activity01-vs.png)
+	[![](progress-indicators-images/activity01-vs.png "A Activity Indicator")](progress-indicators-images/activity01-vs.png#lightbox)
 1. In the **Widget Tab** of the **Properties Explorer**, you can adjust several properties of the Activity Indicator such as its **Style** and **Behavior**: 
 
-	[ ![](progress-indicators-images/activity02-vs.png "The Widget Tab")](progress-indicators-images/activity02-vs.png)
+	[![](progress-indicators-images/activity02-vs.png "The Widget Tab")](progress-indicators-images/activity02-vs.png#lightbox)
 1. Drag a **Progress View** from the **Toolbox** and drop it on the View: 
 
-	[ ![](progress-indicators-images/activity03-vs.png "A Progress View")](progress-indicators-images/activity03-vs.png)
+	[![](progress-indicators-images/activity03-vs.png "A Progress View")](progress-indicators-images/activity03-vs.png#lightbox)
 1. In the **Widget Tab** of the **Property Explorer**, you can adjust several properties of the Progress View such as its **Style** and **Progress** (percent complete): 
 
-	[ ![](progress-indicators-images/activity04-vs.png "The Widget Tab")](progress-indicators-images/activity04-vs.png)
+	[![](progress-indicators-images/activity04-vs.png "The Widget Tab")](progress-indicators-images/activity04-vs.png#lightbox)
 1. Finally, assign **Names** to the controls so that you can respond to them in C# code. For example: 
 
-	[ ![](progress-indicators-images/activity05-vs.png "Assign a name")](progress-indicators-images/activity05-vs.png)
+	[![](progress-indicators-images/activity05-vs.png "Assign a name")](progress-indicators-images/activity05-vs.png#lightbox)
 1. Save your changes.
 
 -----

@@ -24,11 +24,11 @@ load the Designer as shown below:
 
 # [Visual Studio](#tab/vswin)
 
-[![Designer screen in Visual Studio](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png)
+[![Designer screen in Visual Studio](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Designer screen in Visual Studio for Mac](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png)
+[![Designer screen in Visual Studio for Mac](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png#lightbox)
 
 -----
 
@@ -38,14 +38,14 @@ load the Designer as shown below:
 Likewise, you can add a new layout by right-clicking the **layout**
 folder in the **Solution Explorer** and selecting **Add > New Item... > Android Layout**:
 
-[![Add New Item dialog](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png)
+[![Add New Item dialog](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
 Likewise, you can add a new layout by right-clicking the **layout**
 folder in the **Solution Pad** and selecting **Add > New File > Android > Layout**:
 
-[![Add New File dialog](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png)
+[![Add New File dialog](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png#lightbox)
 
 -----
 
@@ -60,11 +60,11 @@ features, as shown in the following screenshot:
 
 # [Visual Studio](#tab/vswin)
 
-[![Diagram of Designer panes](designer-basics-images/vs/03-designer-features-sml.png)](designer-basics-images/vs/03-designer-features.png)
+[![Diagram of Designer panes](designer-basics-images/vs/03-designer-features-sml.png)](designer-basics-images/vs/03-designer-features.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Diagram of Designer panes](designer-basics-images/xs/03-designer-features-sml.png)](designer-basics-images/xs/03-designer-features.png)
+[![Diagram of Designer panes](designer-basics-images/xs/03-designer-features-sml.png)](designer-basics-images/xs/03-designer-features.png#lightbox)
 
 -----
 
@@ -126,11 +126,11 @@ configuration selectors and tool menus:
 
 # [Visual Studio](#tab/vswin)
 
-[![Diagram of Designer Toolbar](designer-basics-images/vs/04-toolbar-sml.png)](designer-basics-images/vs/04-toolbar.png)
+[![Diagram of Designer Toolbar](designer-basics-images/vs/04-toolbar-sml.png)](designer-basics-images/vs/04-toolbar.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Diagram of Designer Toolbar](designer-basics-images/xs/04-toolbar-sml.png)](designer-basics-images/xs/04-toolbar.png)
+[![Diagram of Designer Toolbar](designer-basics-images/xs/04-toolbar-sml.png)](designer-basics-images/xs/04-toolbar.png#lightbox)
 
 -----
 
@@ -194,11 +194,11 @@ widget is being dragged to the Design Surface:
 
 # [Visual Studio](#tab/vswin)
 
-[![Example insertion lines on Design Surface](designer-basics-images/vs/05-insertion-points-sml.png)](designer-basics-images/vs/05-insertion-points.png)
+[![Example insertion lines on Design Surface](designer-basics-images/vs/05-insertion-points-sml.png)](designer-basics-images/vs/05-insertion-points.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Example insertion lines on Design Surface](designer-basics-images/xs/05-insertion-points-sml.png)](designer-basics-images/xs/05-insertion-points.png)
+[![Example insertion lines on Design Surface](designer-basics-images/xs/05-insertion-points-sml.png)](designer-basics-images/xs/05-insertion-points.png#lightbox)
 
 -----
 
@@ -217,7 +217,7 @@ select on the Design Surface). Here is an example of a context menu:
 
 # [Visual Studio](#tab/vswin)
 
-[![Example context menu when right-clicking the Design Surface](designer-basics-images/vs/06-context-menu-sml.png)](designer-basics-images/vs/06-context-menu.png)
+[![Example context menu when right-clicking the Design Surface](designer-basics-images/vs/06-context-menu-sml.png)](designer-basics-images/vs/06-context-menu.png#lightbox)
 
 In this example, right-clicking a `TextView` opens a context menu that
 provides several options:
@@ -230,7 +230,7 @@ provides several options:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Example context menu when right-clicking the Design Surface](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png)
+[![Example context menu when right-clicking the Design Surface](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png#lightbox)
 
 In this example, right-clicking a `TextView` opens a context menu that
 provides several options:
@@ -263,11 +263,11 @@ The Design Surface supports zooming via several controls as shown:
 
 # [Visual Studio](#tab/vswin)
 
-[![Diagram of the Design Surface zoom controls](designer-basics-images/vs/07-zoom-controls-sml.png)](designer-basics-images/vs/07-zoom-controls.png)
+[![Diagram of the Design Surface zoom controls](designer-basics-images/vs/07-zoom-controls-sml.png)](designer-basics-images/vs/07-zoom-controls.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Diagram of the Design Surface zoom controls](designer-basics-images/xs/07-zoom-controls-sml.png)](designer-basics-images/xs/07-zoom-controls.png)
+[![Diagram of the Design Surface zoom controls](designer-basics-images/xs/07-zoom-controls-sml.png)](designer-basics-images/xs/07-zoom-controls.png#lightbox)
 
 -----
 
@@ -307,7 +307,7 @@ depending on which widget is selected in the Designer surface. When the
 `Button` in the previous example is selected, the properties for that
 `Button` widget are shown:
 
-[![Screenshot of the Property pad](designer-basics-images/xs/08-property-pad-sml.png)](designer-basics-images/xs/08-property-pad.png)
+[![Screenshot of the Property pad](designer-basics-images/xs/08-property-pad-sml.png)](designer-basics-images/xs/08-property-pad.png#lightbox)
 
 -----
 
@@ -387,7 +387,7 @@ For example, the following screenshot shows the resources available
 when clicking the ellipsis to the right of the text field for a
 `Button` widget in the **Properties** window:
 
-[![Example Resources screenshot with two resources listed](designer-basics-images/vs/09-resources-sml.png)](designer-basics-images/vs/09-resources.png)
+[![Example Resources screenshot with two resources listed](designer-basics-images/vs/09-resources-sml.png)](designer-basics-images/vs/09-resources.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -395,7 +395,7 @@ For example, the following screenshot shows the resources available
 when clicking the ellipsis to the right of the text field for a
 `Button` widget in the **Property Pad**:
 
-[![Example Resources screenshot with two resources listed](designer-basics-images/xs/09-resources-sml.png)](designer-basics-images/xs/09-resources.png)
+[![Example Resources screenshot with two resources listed](designer-basics-images/xs/09-resources-sml.png)](designer-basics-images/xs/09-resources.png#lightbox)
 
 -----
 
@@ -404,11 +404,11 @@ property of an `ImageView`:
 
 # [Visual Studio](#tab/vswin)
 
-[![Resource selector listing icon resource for an ImageView](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png)
+[![Resource selector listing icon resource for an ImageView](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Resource selector listing icon resource for an ImageView](designer-basics-images/xs/10-src-resource-sml.png)](designer-basics-images/xs/10-src-resource.png)
+[![Resource selector listing icon resource for an ImageView](designer-basics-images/xs/10-src-resource-sml.png)](designer-basics-images/xs/10-src-resource.png#lightbox)
 
 -----
 
@@ -435,7 +435,7 @@ such as `true` or `false`. Hovering your mouse over the input brings up
 a small text field icon. You can click on it if you wish to enter the
 value manually.
 
-[![Example of setting boolean properties](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png)
+[![Example of setting boolean properties](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
 
 
 ## Grouped Properties
@@ -446,7 +446,7 @@ the **Property Pad** in a single, expandable row. Some of these
 properties can be edited directly in the grouped row, such as the
 `Padding` property shown below:
 
-[![Example settings for the Padding property](designer-basics-images/xs/13-padding-property-sml.png)](designer-basics-images/xs/13-padding-property.png)
+[![Example settings for the Padding property](designer-basics-images/xs/13-padding-property-sml.png)](designer-basics-images/xs/13-padding-property.png#lightbox)
 
 -----
 
@@ -470,7 +470,7 @@ widget will put it into edit mode, as shown below:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Text resource for the hello string](designer-basics-images/xs/14-text-resource-sml.png)](designer-basics-images/xs/14-text-resource.png)
+[![Text resource for the hello string](designer-basics-images/xs/14-text-resource-sml.png)](designer-basics-images/xs/14-text-resource.png#lightbox)
 
 -----
 
@@ -484,7 +484,7 @@ replaced with the text, `CLICK THIS BUTTON`:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Shift + Enter to automatically link text to a new resource](designer-basics-images/xs/15-shift-enter-resource-sml.png)](designer-basics-images/xs/15-shift-enter-resource.png)
+[![Shift + Enter to automatically link text to a new resource](designer-basics-images/xs/15-shift-enter-resource-sml.png)](designer-basics-images/xs/15-shift-enter-resource.png#lightbox)
 
 -----
 
@@ -513,7 +513,7 @@ below for the `layout_marginLeft` property):
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Screenshot showing margin handles in the Designer](designer-basics-images/xs/16-margin-handles-sml.png)](designer-basics-images/xs/16-margin-handles.png)
+[![Screenshot showing margin handles in the Designer](designer-basics-images/xs/16-margin-handles-sml.png)](designer-basics-images/xs/16-margin-handles.png#lightbox)
 
 -----
 
@@ -526,7 +526,7 @@ indicating the space that the margin occupies:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Example of dotted lines marking space around a button](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png)
+[![Example of dotted lines marking space around a button](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png#lightbox)
 
 -----
 
@@ -544,7 +544,7 @@ set the size for the indicated dimension to `wrap_content`:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Wrap Content and Resize handles](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png)
+[![Wrap Content and Resize handles](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png#lightbox)
 
 -----
 
@@ -563,7 +563,7 @@ size to `match_parent`:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Match parent handle](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png)
+[![Match parent handle](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png#lightbox)
 
 -----
 
@@ -581,7 +581,7 @@ for that dimension:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Circular resize handles](designer-basics-images/xs/20-resize-dp-sml.png)](designer-basics-images/xs/20-resize-dp.png)
+[![Circular resize handles](designer-basics-images/xs/20-resize-dp-sml.png)](designer-basics-images/xs/20-resize-dp.png#lightbox)
 
 -----
 
@@ -595,7 +595,7 @@ the resize handles do not appear:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![No resize handles](designer-basics-images/xs/21-no-resize-handles-sml.png)](designer-basics-images/xs/20-no-resize-handles.png)
+[![No resize handles](designer-basics-images/xs/21-no-resize-handles-sml.png)](designer-basics-images/xs/20-no-resize-handles.png#lightbox)
 
 -----
 
@@ -613,7 +613,7 @@ selected:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Document outline](designer-basics-images/xs/22-outline-view-sml.png)](designer-basics-images/xs/22-outline-view.png)
+[![Document outline](designer-basics-images/xs/22-outline-view-sml.png)](designer-basics-images/xs/22-outline-view.png#lightbox)
 
 -----
 

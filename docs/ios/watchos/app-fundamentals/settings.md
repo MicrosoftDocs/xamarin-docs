@@ -31,7 +31,7 @@ In the **iPhone app** in your solution (*not* the watch app or extension):
 1. Right-click **Add > New File...** and choose **Settings.bundle**
   (you cannot edit the name in the **New File** dialog):
 
-   [ ![](settings-images/settings-add-sml.png "Add a new Settings Bundle")](settings-images/settings-add.png)
+   [![](settings-images/settings-add-sml.png "Add a new Settings Bundle")](settings-images/settings-add.png#lightbox)
 
 2. Change the name to **Settings-Watch.bundle**
   (select and type **Command + R** to rename):
@@ -42,15 +42,14 @@ In the **iPhone app** in your solution (*not* the watch app or extension):
   **Root.plist** with the value set to the app group you've
   configured, (eg. `group.com.xamarin.WatchSettings` in the sample):
 
-   [ ![](settings-images/settings-appgroup-sml.png "Add a ApplicationGroupContainerIdentifier key to the
-  Root.plist")](settings-images/settings-appgroup.png)
+   [ ![](settings-images/settings-appgroup-sml.png "Add a ApplicationGroupContainerIdentifier key to the Root.plist")](settings-images/settings-appgroup.png#lightbox)
 
 4. Edit the **Settings-Watch.bundle/Root.plist** to contain the
   options you wish to use - the template file contains a group.
   textfield, toggle switch and slider by default (which you can
   delete and replace with your own settings):
 
-  [ ![](settings-images/rootplist-sml.png "Edit the Settings-Watch.bundle/Root.plist")](settings-images/rootplist.png)
+  [![](settings-images/rootplist-sml.png "Edit the Settings-Watch.bundle/Root.plist")](settings-images/rootplist.png#lightbox)
 
 
 ## Use Settings in the Watch App
@@ -69,7 +68,7 @@ var userName = shared.StringForKey ("name_preference");
 
 ## Apple Watch App
 
-[ ![](settings-images/settings-app-sml.png "The new Apple Watch app on the iPhone")](settings-images/settings-app.png)
+[![](settings-images/settings-app-sml.png "The new Apple Watch app on the iPhone")](settings-images/settings-app.png#lightbox)
 
 Users will interact with the settings via the new **Apple Watch**
   app on their iPhone. This app allows the user to show/hide

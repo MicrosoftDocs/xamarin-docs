@@ -80,7 +80,7 @@ public class NoStylesPageCS : ContentPage
 
 Each [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instance has identical property values for controlling the appearance of the text displayed by the `Label`. This results in the appearance shown in the following screenshots:
 
-[![](introduction-images/no-styles.png "Label Appearance without Styles")](introduction-images/no-styles-large.png "Label Appearance without Styles")
+[![](introduction-images/no-styles.png "Label Appearance without Styles")](introduction-images/no-styles-large.png#lightbox "Label Appearance without Styles")
 
 Setting the appearance of each individual control can be repetitive and error prone. Instead, a style can be created that defines the appearance, and then applied to the required controls.
 

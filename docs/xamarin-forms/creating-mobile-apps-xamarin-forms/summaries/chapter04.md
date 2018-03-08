@@ -92,7 +92,7 @@ Often, you'll set the the [`WidthRequest`](https://developer.xamarin.com/api/pro
 
 You can use several instances of `StackLayout` to combine a `BoxView` and several `Label` instances in a `Frame` to display a particular color, and then put each of these views in a `StackLayout` in a `ScrollView` to create the attractive list of colors shown in the [**ColorBlocks**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) sample:
 
-[![Triple screenshot of color blocks](images/ch04fg11-small.png "List of Colors")](images/ch04fg11-large.png "List of Colors")
+[![Triple screenshot of color blocks](images/ch04fg11-small.png "List of Colors")](images/ch04fg11-large.png#lightbox "List of Colors")
 
 ## A ScrollView in a StackLayout?
 

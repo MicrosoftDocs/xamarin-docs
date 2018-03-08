@@ -66,7 +66,7 @@ When the plain mode is set, the user can choose:
 - Scribble, or
 - from a pre-defined list that the application supplies.
 
-[ ![](text-input-images/plain-scribble-sml.png "Dictation, Scribble, or from a pre-defined list that the app supplies")](text-input-images/plain-scribble.png)
+[![](text-input-images/plain-scribble-sml.png "Dictation, Scribble, or from a pre-defined list that the app supplies")](text-input-images/plain-scribble.png#lightbox)
 
 The result is always returned as an `NSObject` that can be cast to a `string`.
 

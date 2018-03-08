@@ -81,7 +81,7 @@ The `FinishedLaunching` method performs the following tasks:
 
 Once the `FinishedLaunching` method has executed, the UI defined in the Xamarin.Forms `PhonewordPage` class will be displayed, as shown in the following screenshot:
 
-[![](native-forms-images/ios-phonewordpage.png "iOS PhonewordPage")](native-forms-images/ios-phonewordpage-large.png "iOS PhonewordPage")
+[![](native-forms-images/ios-phonewordpage.png "iOS PhonewordPage")](native-forms-images/ios-phonewordpage-large.png#lightbox "iOS PhonewordPage")
 
 Interacting with the UI, for example by tapping on a [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/), will result in event handlers in the `PhonewordPage` code-behind executing. For example, when a user taps the **Call History** button, the following event handler is executed:
 
@@ -105,7 +105,7 @@ public void NavigateToCallHistoryPage()
 
 The `NavigateToCallHistoryPage` method converts the Xamarin.Forms [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derived page to a `UIViewController` with the `CreateViewController` extension method, and sets the `Title` property of the `UIViewController`. The `UIViewController` is then pushed onto `UINavigationController` by the `PushViewController` method. Therefore, the UI defined in the Xamarin.Forms `CallHistoryPage` class will be displayed, as shown in the following screenshot:
 
-[![](native-forms-images/ios-callhistorypage.png "iOS CallHistoryPage")](native-forms-images/ios-callhistorypage-large.png "iOS CallHistoryPage")
+[![](native-forms-images/ios-callhistorypage.png "iOS CallHistoryPage")](native-forms-images/ios-callhistorypage-large.png#lightbox "iOS CallHistoryPage")
 
 When the `CallHistoryPage` is displayed, tapping the back arrow will pop the `UIViewController` for the `CallHistoryPage` class from the `UINavigationController`, returning the user to the `UIViewController` for the `PhonewordPage` class.
 
@@ -157,7 +157,7 @@ For more information about Fragments, see [Fragments](~/android/platform/fragmen
 
 Once the `OnCreate` method has executed, the UI defined in the Xamarin.Forms `PhonewordPage` class will be displayed, as shown in the following screenshot:
 
-[![](native-forms-images/android-phonewordpage.png "Android PhonewordPage")](native-forms-images/android-phonewordpage-large.png "Android PhonewordPage")
+[![](native-forms-images/android-phonewordpage.png "Android PhonewordPage")](native-forms-images/android-phonewordpage-large.png#lightbox "Android PhonewordPage")
 
 Interacting with the UI, for example by tapping on a [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/), will result in event handlers in the `PhonewordPage` code-behind executing. For example, when a user taps the **Call History** button, the following event handler is executed:
 
@@ -184,7 +184,7 @@ public void NavigateToCallHistoryPage()
 
 The `NavigateToCallHistoryPage` method converts the Xamarin.Forms [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derived page to a `Fragment` with the `CreateFragment` extension method, and adds the `Fragment` to the fragment back stack. Therefore, the UI defined in the Xamarin.Forms `CallHistoryPage` will be displayed, as shown in the following screenshot:
 
-[![](native-forms-images/android-callhistorypage.png "Android CallHistoryPage")](native-forms-images/android-callhistorypage-large.png "Android CallHistoryPage")
+[![](native-forms-images/android-callhistorypage.png "Android CallHistoryPage")](native-forms-images/android-callhistorypage-large.png#lightbox "Android CallHistoryPage")
 
 When the `CallHistoryPage` is displayed, tapping the back arrow will pop the `Fragment` for the `CallHistoryPage` from the fragment back stack, returning the user to the `Fragment` for the `PhonewordPage` class.
 
@@ -267,7 +267,7 @@ The `MainPage` constructor performs the following tasks:
 
 Once the `MainPage` constructor has executed, the UI defined in the Xamarin.Forms `PhonewordPage` class will be displayed, as shown in the following screenshot:
 
-[![](native-forms-images/uwp-phonewordpage.png "UWP PhonewordPage")](native-forms-images/uwp-phonewordpage-large.png "UWP PhonewordPage")
+[![](native-forms-images/uwp-phonewordpage.png "UWP PhonewordPage")](native-forms-images/uwp-phonewordpage-large.png#lightbox "UWP PhonewordPage")
 
 Interacting with the UI, for example by tapping on a [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/), will result in event handlers in the `PhonewordPage` code-behind executing. For example, when a user taps the **Call History** button, the following event handler is executed:
 
@@ -289,7 +289,7 @@ public void NavigateToCallHistoryPage()
 
 Navigation in UWP is typically performed with the `Frame.Navigate` method, which takes a `Page` argument. Xamarin.Forms defines a `Frame.Navigate` extension method that takes a [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derived page instance. Therefore, when the `NavigateToCallHistoryPage` method executes, the UI defined in the Xamarin.Forms `CallHistoryPage` will be displayed, as shown in the following screenshot:
 
-[![](native-forms-images/uwp-callhistorypage.png "UWP CallHistoryPage")](native-forms-images/uwp-callhistorypage-large.png "UWP CallHistoryPage")
+[![](native-forms-images/uwp-callhistorypage.png "UWP CallHistoryPage")](native-forms-images/uwp-callhistorypage-large.png#lightbox "UWP CallHistoryPage")
 
 When the `CallHistoryPage` is displayed, tapping the back arrow will pop the `FrameworkElement` for the `CallHistoryPage` from the in-app back stack, returning the user to the `FrameworkElement` for the `PhonewordPage` class.
 

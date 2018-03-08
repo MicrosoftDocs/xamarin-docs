@@ -90,7 +90,7 @@ the Android SDK. To do this, use the **Android SDK Manager**. You can
 launch the **Android SDK Manager** by clicking **Tools > Android >
 Android SDK Manager**:
 
-[![How to launch the Android SDK Manager](windows-images/08-sdk-manager-sml.png)](windows-images/08-sdk-manager.png)
+[![How to launch the Android SDK Manager](windows-images/08-sdk-manager-sml.png)](windows-images/08-sdk-manager.png#lightbox)
 
 By default, Visual Studio installs the Google Android SDK Manager:
 
@@ -155,7 +155,7 @@ click **Blank App (Android)** in the right pane. Enter a name for
 your app (in the screenshot below, the app is called **MyApp**), then
 click **OK**:
 
-[![Screenshot of New Project dialog, creating a blank Android app](windows-images/11-first-app-sml.png)](windows-images/11-first-app.png)
+[![Screenshot of New Project dialog, creating a blank Android app](windows-images/11-first-app-sml.png)](windows-images/11-first-app.png#lightbox)
 
 That's it! Now you are ready to use Xamarin.Android to create
 Android applications!

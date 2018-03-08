@@ -24,7 +24,7 @@ The watchOS `WKInterfaceTable` control is much simpler than
 Drag the **Table** control into a scene. By default it will look
 	like this (showing a single unspecified row layout):
 
-[ ![](table-images/add-table-sml.png "Adding a table")](table-images/add-table.png)
+[![](table-images/add-table-sml.png "Adding a table")](table-images/add-table.png#lightbox)
 
 Give the table a name in the **Properties** pad's **Name** box, so that
 it can be referred to in code.
@@ -37,7 +37,7 @@ The table automatically includes a single row, represented by a
 To set the **Class** for the row controller, select the row in the
 	**Document Outline** and type a class name in the **Properties** pad:
 
-[ ![](table-images/add-row-controller-sml.png "Entering a class name in the Properties pad")](table-images/add-row-controller.png)
+[![](table-images/add-row-controller-sml.png "Entering a class name in the Properties pad")](table-images/add-row-controller.png#lightbox)
 
 Once the class for the row's controller is set, the IDE will create a
 corresponding C# file in the project. Drag controls (such as labels)

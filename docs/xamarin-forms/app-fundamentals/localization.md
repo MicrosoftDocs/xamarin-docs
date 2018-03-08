@@ -67,7 +67,7 @@ The base resources (RESX) file will contain the default language strings (the sa
 
 Choose a meaningful name such as **AppResources** and press **OK**.
 
-[ ![Add Resource File](localization-images/resx-new-file-sml.png "New File Dialog")](localization-images/resx-new-file.png "New File Dialog")
+[![Add Resource File](localization-images/resx-new-file-sml.png "New File Dialog")](localization-images/resx-new-file.png#lightbox "New File Dialog")
 
 Two files will be added to the project:
 
@@ -90,13 +90,13 @@ shows the **Custom Tool: ResXFileCodeGenerator**.
 
 [[ide name="xs]]
 
-[ ![](localization-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](localization-images/xs-resx-internal.png)
+[![](localization-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](localization-images/xs-resx-internal.png#lightbox)
 
 [[/ide]]
 
 [[ide name="vs]]
 
-[ ![](localization-images/vs-resx-internal-sml.png "Properties Window for AppResources.Resx")](localization-images/vs-resx-internal.png)
+[![](localization-images/vs-resx-internal-sml.png "Properties Window for AppResources.Resx")](localization-images/vs-resx-internal.png#lightbox)
 
 [[/ide]]
 
@@ -107,13 +107,13 @@ as shown in the screenshot below:
 
 [[ide name="xs]]
 
-[ ![](localization-images/xs-resx-public-sml.png "Properties Pad for AppResources.Resx")](localization-images/xs-resx-public.png)
+[![](localization-images/xs-resx-public-sml.png "Properties Pad for AppResources.Resx")](localization-images/xs-resx-public.png#lightbox)
 
 [[/ide]]
 
 [[ide name="vs]]
 
-[ ![](localization-images/vs-resx-public-sml.png "Properties Window for AppResources.Resx")](localization-images/vs-resx-public.png)
+[![](localization-images/vs-resx-public-sml.png "Properties Window for AppResources.Resx")](localization-images/vs-resx-public.png#lightbox)
 
 [[/ide]]
 
@@ -688,13 +688,13 @@ If these settings are not updated the localized RESX resources will not be loade
 
 Right-click on the Windows Phone project and select **Properties**. In the **Application** tab tick the **Supported Cultures** that the application supports:
 
-[ ![](localization-images/winphone-projectproperties-sml.png "Project Properties - Supported Cultures")](localization-images/winphone-projectproperties.png "Project Properties - Supported Cultures")
+[![](localization-images/winphone-projectproperties-sml.png "Project Properties - Supported Cultures")](localization-images/winphone-projectproperties.png#lightbox "Project Properties - Supported Cultures")
 
 ##### WMAppManifest.xml
 
 Expand the Properties node in the Windows Phone project and double-click on the **WMAppManifest.xml** file. Click on the **Packaging** tab and tick all the languages supported by the application.
 
-[ ![](localization-images/winphone-wmappmanifest-sml.png "WMAppManifest.xml - Supported Languages")](localization-images/winphone-wmappmanifest.png "WMAppManifest.xml - Supported Languages")
+[![](localization-images/winphone-wmappmanifest-sml.png "WMAppManifest.xml - Supported Languages")](localization-images/winphone-wmappmanifest.png#lightbox "WMAppManifest.xml - Supported Languages")
 
 ##### AssemblyInfo.cs
 

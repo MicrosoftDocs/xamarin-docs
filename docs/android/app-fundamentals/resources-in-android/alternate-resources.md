@@ -233,7 +233,7 @@ test of rules:
 
 These rules are also illustrated in the following flowchart:
 
-[![Resources flowchart](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png)
+[![Resources flowchart](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png#lightbox)
 
 When the system is looking for density-specific resources and cannot
 find them, it will attempt to locate other density specific resources

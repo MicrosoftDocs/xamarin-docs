@@ -134,13 +134,13 @@ Visual Studio for Mac will display additional options when a
 	Right-click on the watch extension project and choose
 	**Run With > Custom Parameters...**:
 	
-[![](notifications-images/runwith-customparams-sml.png "Running with Custom Properties")](notifications-images/runwith-customparams.png)
+[![](notifications-images/runwith-customparams-sml.png "Running with Custom Properties")](notifications-images/runwith-customparams.png#lightbox)
 	
 This opens the **Execution Arguments** window which contains a **WatchKit**
 	tab. Select **Notification** and provide a JSON
 	payload, then press **Execute** to start the watch app in the simulator:
 	
-[![](notifications-images/runwith-execargs-sml.png "Select Notification Payload Default")](notifications-images/runwith-execargs.png)
+[![](notifications-images/runwith-execargs-sml.png "Select Notification Payload Default")](notifications-images/runwith-execargs.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
@@ -151,7 +151,7 @@ To set the test notification payload in Visual Studio
 	the list (it will automatically list all the JSON
 	files included in the project).
 	
-[![](notifications-images/runwith-execargs-sml-vs.png "Select a notifications JSON file")](notifications-images/runwith-execargs-vs.png)
+[![](notifications-images/runwith-execargs-sml-vs.png "Select a notifications JSON file")](notifications-images/runwith-execargs-vs.png#lightbox)
 
 When the watch extension is the **Startup Project**,
 	Visual Studio will display additional options

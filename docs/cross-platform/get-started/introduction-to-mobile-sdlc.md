@@ -120,7 +120,7 @@ and paper. UX Mockups allow the UX to be designed without having to worry
 about the actual UI design:
 
 
- [ ![](introduction-to-mobile-sdlc-images/balsamiq.png "UX is usually done via wireframes or mockups using tools such as Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png)
+ [![](introduction-to-mobile-sdlc-images/balsamiq.png "UX is usually done via wireframes or mockups using tools such as Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
 
 
@@ -146,7 +146,7 @@ Navigation Controller metaphor:
 Furthermore, form factor also influences UX decisions. A tablet has far more
 real estate, and so can display more information. Often what needs multiple screens on a phone is compressed into one for a tablet:
 
- [ ![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "Often what needs multiple screens on a phone is compressed into one for a tablet")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png)
+ [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "Often what needs multiple screens on a phone is compressed into one for a tablet")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
 
 And due to the myriad of form factors out there, there are often mid-size
 form factors (somewhere between a phone and a tablet) that you may also want to
@@ -166,7 +166,7 @@ professional design.
 As with UX, it’s important to understand that each platform has it’s own
 design language, so a well-designed application may still look different on each platform:
 
- [ ![](introduction-to-mobile-sdlc-images/multiplatform-1.png "A well-designed application may still look different on each platform")](introduction-to-mobile-sdlc-images/multiplatform-1.png)
+ [![](introduction-to-mobile-sdlc-images/multiplatform-1.png "A well-designed application may still look different on each platform")](introduction-to-mobile-sdlc-images/multiplatform-1.png#lightbox)
 
 For good UI design inspiration, check out some of the following sites:
 

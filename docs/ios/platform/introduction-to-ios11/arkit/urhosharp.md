@@ -102,7 +102,7 @@ We will be composing the images being delivered by the camera to us with our 3D 
 
 The following diagram shows what is taking place in the `ArkitApp` class:
 
-[ ![Diagram of classes and screens in the ArkitApp](urhosharp-images/image2.png)](urhosharp-images/image2.png)
+[![Diagram of classes and screens in the ArkitApp](urhosharp-images/image2.png)](urhosharp-images/image2.png#lightbox)
 
 ### Rendering the Frames
 

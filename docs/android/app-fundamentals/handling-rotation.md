@@ -62,7 +62,7 @@ landscape orientation if no additional layout resources are provided
 specifically for landscape. Consider the project structure created by
 the default project template:
 
-[ ![Default project template structure](handling-rotation-images/00.png)](handling-rotation-images/00.png)
+[![Default project template structure](handling-rotation-images/00.png)](handling-rotation-images/00.png#lightbox)
 
 This project creates a single **Main.axml** file in the
 **Resources/layout** folder. When the Activity's `OnCreate` method is
@@ -87,7 +87,7 @@ If the device is rotated to landscape orientation, the Activity's
 `OnCreate` method is called again and the same **Main.axml** file is
 inflated, as shown in the screenshot below:
 
-[ ![Same screen but in landscape orientation](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png)
+[![Same screen but in landscape orientation](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png#lightbox)
 
 
 #### Orientation-Specific Layouts
@@ -133,7 +133,7 @@ version of the code, but uses a different string in the `TextView`):
 Running this code and rotating the device from portrait to landscape
 demonstrates the new XML loading, as shown below:
 
-[ ![Portrait and landscape screenshots printing the portrait mode](handling-rotation-images/02.png)](handling-rotation-images/02.png)
+[![Portrait and landscape screenshots printing the portrait mode](handling-rotation-images/02.png)](handling-rotation-images/02.png#lightbox)
 
 
 ### Drawable Resources
@@ -161,7 +161,7 @@ under **Resources/drawable-land**. Just like with the layout files,
 when the device is rotated, the drawable changes for the given
 orientation, as shown below:
 
-[ ![Different version of Monkey.png shown in portrait and landscape modes](handling-rotation-images/03.png)](handling-rotation-images/03.png)
+[![Different version of Monkey.png shown in portrait and landscape modes](handling-rotation-images/03.png)](handling-rotation-images/03.png#lightbox)
 
 
 ## Handling Rotation Programmatically
@@ -225,7 +225,7 @@ this example. After the `TextView` is created, adding it to the
 `RelativeLayout` and setting the `RelativeLayout` as the content view
 results in the application displaying the `TextView` as shown:
 
-[ ![Increment counter button shown in both portrait and landscape modes](handling-rotation-images/04.png)](handling-rotation-images/04.png)
+[![Increment counter button shown in both portrait and landscape modes](handling-rotation-images/04.png)](handling-rotation-images/04.png#lightbox)
 
 
 ### Detecting Orientation in Code
@@ -280,7 +280,7 @@ This code sets the `TextView` to be positioned 100 pixels from the top
 left of the screen, automatically animating to the new layout, when
 rotated to landscape, as shown here:
 
-[ ![View state is preserved across portrait and landscape modes](handling-rotation-images/05.png)](handling-rotation-images/05.png)
+[![View state is preserved across portrait and landscape modes](handling-rotation-images/05.png)](handling-rotation-images/05.png#lightbox)
 
 
 ### Preventing Activity Restart

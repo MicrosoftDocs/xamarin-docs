@@ -63,13 +63,13 @@ To set the Launch Image for your tvOS project, please do the following:
 
 1. In the **Solution Explorer**, double-click `Assets.xcassets` to open it for editing: 
 
-	[ ![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png)
+	[![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
 2. In the **Asset Editor**, click on the `LaunchImages` asset: 
 
-	[ ![](icons-images-images/asset02.png "The LaunchImages asset")](icons-images-images/asset02.png)
+	[![](icons-images-images/asset02.png "The LaunchImages asset")](icons-images-images/asset02.png#lightbox)
 3. Click on the **1x Apple TV** entry and select the Launch Image or optionally drag a new image in from the file system: 
 
-	[ ![](icons-images-images/asset03.png "Select a Launch Image")](icons-images-images/asset03.png)
+	[![](icons-images-images/asset03.png "Select a Launch Image")](icons-images-images/asset03.png#lightbox)
 4. Save your changes.
 
 <a name="Layered-Images" />
@@ -80,7 +80,7 @@ New to the Apple TV, Layered Images work with the Parallax Effect to produce a 3
 
 Layered Images contain from two (2) to five (5) separate layers that are combined to form a complete image. With the exception of the background layer, each layer uses its Z-order along with transparency to create an illusion of depth. When the user interacts with a Layered Image, higher Z-ordered layers are scaled and overlapped to create this effect.
 
-[ ![](icons-images-images/layered01.png "Layered Images Z-ordered diagram")](icons-images-images/layered01.png)
+[![](icons-images-images/layered01.png "Layered Images Z-ordered diagram")](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
 > **NOTE:** Layered Images are required for your app's icons and are optional for other [Focusable Items](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (such as the Top Shelf Image). However, Apple suggests using Layered Images for any image that can get focus in your app.
@@ -105,7 +105,7 @@ Whenever possible, you should always use the built-in `UIKit` controls to displa
 
 It is important to remember to include a _Safe Zone_ border into each layer that will compose your Layered Image. Because the individual layers can be scaled and cropped during the Parallax Effect, the content of the layers can be cropped off if it is too close to the layer's edge:
 
-[ ![](icons-images-images/layered02.png "35 pixel border")](icons-images-images/layered02.png)
+[![](icons-images-images/layered02.png "35 pixel border")](icons-images-images/layered02.png#lightbox)
 
 <a name="Creating-Layered-Images" />
 
@@ -124,7 +124,7 @@ tvOS works with Layered Images in the following formats:
 
 Apple created the [Parallax Previewer](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) to preview and created Layered Images required for App Icons and optional Focusable Items. The previewer shows every layer that forms the completed Layered Image:
 
-[ ![](icons-images-images/layered03.png "The Parallax Previewer")](icons-images-images/layered03.png)
+[![](icons-images-images/layered03.png "The Parallax Previewer")](icons-images-images/layered03.png#lightbox)
 
 While previewing a Layered Image, you can use the mouse to rotate the image and preview the Parallax Effect. Use the **+** (plus) and **-** (minus) buttons to add and remove layers.
 
@@ -138,7 +138,7 @@ For more information on creating and previewing Layered Images, please see Apple
 
 Your Xamarin.tvOS app will require not only an App Icon for the Apple TV Home screen, but also an icon for the App Store. The App Icon is the your first change to make a great impression on your potential user and should communicate your app's purpose at a glance.
 
-[ ![](icons-images-images/icon01.png "The App Icon")](icons-images-images/icon01.png)
+[![](icons-images-images/icon01.png "The App Icon")](icons-images-images/icon01.png#lightbox)
 
 Every app must supply both a small and a large version of its App Icon. The small icon will be used on the Apple TV Home screen when the app is installed. The large version is used by the App Store. The large App Icon should mimic the look and feel of the small icon version.
 
@@ -198,16 +198,16 @@ To set the App Icons required for your tvOS project, please do the following:
 
 1. In the **Solution Explorer**, double-click `Assets.xcassets` to open it for editing: 
 
-	[ ![](icons-images-images/asset01.png "The Assets.xcassets fileg")](icons-images-images/asset01.png)
+	[![](icons-images-images/asset01.png "The Assets.xcassets fileg")](icons-images-images/asset01.png#lightbox)
 2. In the **Asset Editor**, expand the `App Icon & Top Shelf Image` asset: 
 
-	[ ![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png)
+	[![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
 3. Next, Expand the `App Icon - Small` asset: 
 
-	[ ![](icons-images-images/asset05.png "Expand the App Icon - Small asset")](icons-images-images/asset05.png)
+	[![](icons-images-images/asset05.png "Expand the App Icon - Small asset")](icons-images-images/asset05.png#lightbox)
 4. Then expand the `Back` asset and click on the `Contents` entry: 
 
-	[ ![](icons-images-images/asset06.png "Then expand the Back asset")](icons-images-images/asset06.png)
+	[![](icons-images-images/asset06.png "Then expand the Back asset")](icons-images-images/asset06.png#lightbox)
 5. Click on the **1x Apple TV entry** and select an image file.
 6. Repeat the above steps for the `Front` and `Middle` assets.
 7. Then repeat the same steps to define the `App Icon - Large` asset.
@@ -219,7 +219,7 @@ To set the App Icons required for your tvOS project, please do the following:
 
 If the user has placed your Xamarin.tvOS app on the Top Row on the Apple TV Home screen, a large Top Shelf Image will be displayed when your app is selected by the user. This image should highlight the features of your app or provide direct links to its content.
 
-[ ![](icons-images-images/topshelf01.png "Top Shelf Image example")](icons-images-images/topshelf01.png)
+[![](icons-images-images/topshelf01.png "Top Shelf Image example")](icons-images-images/topshelf01.png#lightbox)
 
 The Top Shelf Image can either be provided as a single static `.png` or `.lsr` file (see [Creating Layered Images](#Creating-Layered-Images)) or it can be dynamically created at runtime as a single row of Focusable Items (see [Dynamic Top Shelf Content](#Dynamic-Top-Shelf-Content) below).
 
@@ -249,13 +249,13 @@ To set the Top Shelf Image required for your tvOS project, please do the followi
 
 1. In the **Solution Explorer**, double-click `Assets.xcassets` to open it for editing: 
 
-	[ ![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png)
+	[![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
 2. In the **Asset Editor**, expand the `App Icon & Top Shelf Image` asset: 
 
-	[ ![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png)
+	[![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
 3. Click on the `Top Shelf Image` asset: 
 
-	[ ![](icons-images-images/asset07.png "The Top Shelf Image asset")](icons-images-images/asset07.png)
+	[![](icons-images-images/asset07.png "The Top Shelf Image asset")](icons-images-images/asset07.png#lightbox)
 5. Click on the **1x Apple TV entry** and select an image file.
 6. Save your changes.
 
@@ -419,10 +419,10 @@ Do the following:
 
 1. In the **Solution Explorer**, double-click the `Info.plist` to open it for editing: 
 
-	[ ![](icons-images-images/info01.png "The Info.plist file")](icons-images-images/info01.png)
+	[![](icons-images-images/info01.png "The Info.plist file")](icons-images-images/info01.png#lightbox)
 2. In the **Info.Plist Editor**, select the Assets Catalog (configured above in the [Setting the App Icons](#Setting-the-App-Icons) section) for the **App Icons**: 
 
-	[ ![](icons-images-images/info02.png "The Info.Plist Editor")](icons-images-images/info02.png)
+	[![](icons-images-images/info02.png "The Info.Plist Editor")](icons-images-images/info02.png#lightbox)
 3. Next, select the Assets Catalog (configured above in the [Setting the Launch Image](#Setting-the-Launch-Image) section) for the **Launch Images**.
 4. Save your changes.
 

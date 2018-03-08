@@ -36,7 +36,7 @@ When you create a Wear virtual device, select an Android Wear device
 profile (such as **Android Wear Square**). For improved performance,
 use the Wear **x86** CPU/ABI as seen in this example:
 
-[![Example Wear virtual device configuration](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png)
+[![Example Wear virtual device configuration](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png#lightbox)
 
 
 ## Launch The Wear Virtual Device 
@@ -48,7 +48,7 @@ pull-down, verify that your project is an Android *Wear* app project
 (not an Android app project) and that its target API level is set to
 the same API level as the virtual device. For example:
 
-[ ![Choosing a Wear AVD in Visual Studio device menu](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png)
+[![Choosing a Wear AVD in Visual Studio device menu](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
 
 After the Android emulator starts, Xamarin.Android will deploy the Wear
 app to the emulator. The emulator runs the app with the configured

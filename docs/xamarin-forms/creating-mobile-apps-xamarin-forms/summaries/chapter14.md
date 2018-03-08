@@ -87,7 +87,7 @@ The [**SimpleOverlay**](https://github.com/xamarin/xamarin-forms-book-samples/tr
 
 The [**DotMatrixClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/DotMatrixClock) sample displays the current time with a simulated 5x7 dot matrix display. Each dot is a `BoxView` (there are 228 of them) sized and positioned on the `AbsoluteLayout`.
 
-[![Triple screenshot of dot matrix clock](images/ch14fg08-small.png "Dot Matrix Clock")](images/ch14fg08-large.png "Dot Matrix Clock")
+[![Triple screenshot of dot matrix clock](images/ch14fg08-small.png "Dot Matrix Clock")](images/ch14fg08-large.png#lightbox "Dot Matrix Clock")
 
 The [**BouncingText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/BouncingText) program animates two `Label` objects to bounce horizontally and vertically across the screen.
 

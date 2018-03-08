@@ -118,7 +118,7 @@ Do the following:
 	![Editing the AppIcons.appiconset](app-icon-images/intro01.png "Editing the AppIcons.appiconset")
 2. For each icon size required, click the icon and select the corresponding image file that were created above: 
 
-	[![Selecting an icon image](app-icon-images/intro02.png "Selecting an icon image")](app-icon-images/intro02-large.png)
+	[![Selecting an icon image](app-icon-images/intro02.png "Selecting an icon image")](app-icon-images/intro02-large.png#lightbox)
 3. Save your changes.
 
 
@@ -131,7 +131,7 @@ Do the following:
 1. Double-click the **Info.plist** in the **Solution Pad** to open the **Project Options**.
 2. In the **Mac OS X Application Target** section and click the **App Icons** to select the `AppIcons.appiconset` file: 
 
-	[![Setting the icon set](app-icon-images/icon01.png "Setting the icon set")](app-icon-images/icon01-large.png)
+	[![Setting the icon set](app-icon-images/icon01.png "Setting the icon set")](app-icon-images/icon01-large.png#lightbox)
 3. Save the changes.
 
 When the app is run, the new icon will be displayed in the dock:

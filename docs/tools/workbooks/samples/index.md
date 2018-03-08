@@ -20,7 +20,7 @@ Some highlights from these samples are listed below:
 
 ## [TinyRenderer](tinyrenderer.md)
 
-[![](images/tinyrenderer-sml.png "A series of workbooks that explain how OpenGL works")](images/tinyrenderer-sml-orig.png)
+[![](images/tinyrenderer-sml.png "A series of workbooks that explain how OpenGL works")](images/tinyrenderer-sml-orig.png#lightbox)
 
 A series of workbooks that explain how OpenGL works, based on this
 open source [wiki](https://github.com/ssloy/tinyrenderer/wiki/).
@@ -37,12 +37,12 @@ The video covers the creation of a simple 3D scene, shows how to assign physical
 
 ## [PropertyAnimation.workbook](https://developer.xamarin.com/workbooks/android/user-interface/PropertyAnimation.workbook)
 
-[![](images/android-property-view-sml.png "Learn the basics of `View` property animation in Xamarin.Android")](images/android-property-view.png)
+[![](images/android-property-view-sml.png "Learn the basics of `View` property animation in Xamarin.Android")](images/android-property-view.png#lightbox)
 
 Learn the basics of `View` property animation in Xamarin.Android.
 
 
-<!--[![](images/skia0-sml.png "Android")](images/skia0.png)
+<!--[![](images/skia0-sml.png "Android")](images/skia0.png#lightbox)
 
 SkiaSharp provides a powerful C# API for doing 2D graphics. See how to use Skia to draw in your apps.-->
 

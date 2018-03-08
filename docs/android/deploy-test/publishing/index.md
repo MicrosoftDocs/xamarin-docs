@@ -34,7 +34,7 @@ their devices, and it involves two essential tasks:
 
 The following diagram illustrates the steps involved with publishing a Xamarin.Android application:
 
-[ ![Build and deploy flowchart](images/build-and-deploy-steps.png)](images/build-and-deploy-steps.png)
+[![Build and deploy flowchart](images/build-and-deploy-steps.png)](images/build-and-deploy-steps.png#lightbox)
 
 As can be seen by the diagram above, the preparation is the same regardless
 of the distribution method that is used. There are several ways that an Android
@@ -74,7 +74,7 @@ sales and market trends and to control which devices and users may download an
 application. A screenshot of Google Play running on an Android device appears
 below:
 
-[ ![Google Play screenshot](images/google-play-app.png)](images/google-play-app.png)
+[![Google Play screenshot](images/google-play-app.png)](images/google-play-app.png#lightbox)
 
 This section shows how to upload the application to a store such as
 Google Play, along with the appropriate promotional materials. APK

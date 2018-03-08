@@ -44,13 +44,13 @@ You can select the same **App ID** and **Devices** that you used for your develo
 3. Click the **+** button to create a new Certificate.
 4. Under the *Production* heading, select **App Store and Ad Hoc**:
 
-	[ ![](images/createcertmanually01.png "Select App Store and Ad Hoc")](images/createcertmanually01.png)
+	[![](images/createcertmanually01.png "Select App Store and Ad Hoc")](images/createcertmanually01.png#lightbox)
 5. Click **Continue**, and follow the instructions to create a Certificate Signing Request via Keychain Access:
 
-	[ ![](images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](images/createcertmanually02.png)
+	[![](images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](images/createcertmanually02.png#lightbox)
 6. Once you have created the CSR as instructed, click **Continue**, and upload the CSR to the Member Center:
 
-	[ ![](images/createcertmanually03.png "Upload the CSR to the Member Center")](images/createcertmanually03.png)
+	[![](images/createcertmanually03.png "Upload the CSR to the Member Center")](images/createcertmanually03.png#lightbox)
 
 7. Click **Generate** to create the certificate.
 8. Finally, **Download** the completed certificate and double-click on the file to install it.
@@ -59,13 +59,13 @@ You can select the same **App ID** and **Devices** that you used for your develo
 Alternatively, it is possible to request a Certificate via the Preferences dialog in Xcode. To do this, follow the steps below:
 
 1.   Select your team, and click **Manage Certificates…**:
-	[ ![](images/selectteam.png "Select the team and View Details")](images/selectteam.png)
+	[![](images/selectteam.png "Select the team and View Details")](images/selectteam.png#lightbox)
 
 2.   Next, click the **Create** button next to **iOS Distribution Certificate**:
-	[ ![](images/selectcert.png "Create an iOS Distribution Certificate")](images/selectcert.png)
+	[![](images/selectcert.png "Create an iOS Distribution Certificate")](images/selectcert.png#lightbox)
 
 3.   Depending on your team privileges, the signing identity will be generated, as shown below, or you may have to wait until a team agent or admin approves it:
-	[ ![](images/generated.png "The signing identity will be generated and a dialog displayed")](images/generated.png)
+	[![](images/generated.png "The signing identity will be generated and a dialog displayed")](images/generated.png#lightbox)
 
 
 <a name="creatingprofile" />
@@ -94,27 +94,27 @@ Once you have the required components needed for creating a Distribution Profile
 
 1. Return to the Apple Provisioning Portal and select **Provisioning** > **Distribution**:
 
-	[ ![](images/distribute01.png "RSelect Provisioning > Distribution")](images/distribute01.png)
+	[![](images/distribute01.png "RSelect Provisioning > Distribution")](images/distribute01.png#lightbox)
 
 2. Click the **+** button and select the type of Distribution Profile that you want to create as **App Store**:
 
-	[ ![](images/distribute02.png "Create an App Store distribution profile")](images/distribute02.png)
+	[![](images/distribute02.png "Create an App Store distribution profile")](images/distribute02.png#lightbox)
 
 3. Click the **Continue** button and select App ID from the dropdown list that you want to create a Distribution Profile for:
 
-	[ ![](images/distribute03.png "Select App ID from the dropdown list")](images/distribute03.png)
+	[![](images/distribute03.png "Select App ID from the dropdown list")](images/distribute03.png#lightbox)
 
 4. Click the **Continue** button and select the certificate required to sign the application:
 
-	[ ![](images/distribute04.png "Select the certificate required to sign the application")](images/distribute04.png)
+	[![](images/distribute04.png "Select the certificate required to sign the application")](images/distribute04.png#lightbox)
 
 5. Click the **Continue** button and select the iOS devices that the Xamarin.iOS application will be allowed to run on:
 
-	[ ![](images/distribute05.png "Select the iOS devices that app will be allowed to run on")](images/distribute05.png)
+	[![](images/distribute05.png "Select the iOS devices that app will be allowed to run on")](images/distribute05.png#lightbox)
 
 6. Click the **Continue** button and enter a **Name** for the new Distribution Profile:
 
-	[ ![](images/distribute06.png "Enter a Name for the new Distribution Profile")](images/distribute06.png)
+	[![](images/distribute06.png "Enter a Name for the new Distribution Profile")](images/distribute06.png#lightbox)
 
 7. Click the **Generate** button to create the new profile and finalize the process.
 

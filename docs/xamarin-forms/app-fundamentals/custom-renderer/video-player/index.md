@@ -23,7 +23,7 @@ In the [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-form
 
 Video players require *transport controls*, which are buttons for playing and pausing the video, and a positioning bar that shows the progress through the video and allows the user to skip quickly to a different location. `VideoPlayer` can use either the transport controls and positioning bar provided by the platform (as shown below), or you can supply custom transport controls and a positioning bar. Here's the program running under iOS, Android, and the Universal Windows Platform:
 
-[![Play Web Video](web-videos-images/playwebvideo-small.png "Play Web Video")](web-videos-images/playwebvideo-large.png "Play Web Video")
+[![Play Web Video](web-videos-images/playwebvideo-small.png "Play Web Video")](web-videos-images/playwebvideo-large.png#lightbox "Play Web Video")
 
 Of course, you can turn the phone sideways for a larger view.
 

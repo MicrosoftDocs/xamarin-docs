@@ -99,7 +99,7 @@ You might wonder: How do the scaling factors affect the value returned from the 
 
 As you can see, everything drawn after the `Scale` call increases proportionally:
 
-[![](scale-images/basicscale-small.png "Triple screenshot of the Basic Scale page")](scale-images/basicscale-large.png "Triple screenshot of the Basic Scale page")
+[![](scale-images/basicscale-small.png "Triple screenshot of the Basic Scale page")](scale-images/basicscale-large.png#lightbox "Triple screenshot of the Basic Scale page")
 
 The text, the width of the dashed line, the length of the dashes in that line, the rounding of the corners, and the 10-pixel margin between the left and top edges of the canvas and the rounded rectangle are all subject to the same scaling factors.
 
@@ -161,7 +161,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The upper-left corner of the rounded rectangle is positioned `margin` pixels from the left of the canvas and `margin` pixels from the top. The last two arguments to the `Scale` method are set to those values plus the width and height of the text, which is also the width and height of the rounded rectangle. This means that all scaling is relative to the center of that rectangle:
 
-[![](scale-images/centeredscale-small.png "Triple screenshot of the Centered Scale page")](scale-images/centeredscale-large.png "Triple screenshot of the Centered Scale page")
+[![](scale-images/centeredscale-small.png "Triple screenshot of the Centered Scale page")](scale-images/centeredscale-large.png#lightbox "Triple screenshot of the Centered Scale page")
 
 The `Slider` elements in this program have a range of &#x2013;10 to 10. As you can see,
 negative values of vertical scaling (such as on the Android screen in the center) cause objects to flip around the horizontal axis that passes through the center of scaling. Negative values of horizontal scaling (such as in the Windows screen on the right) cause objects to flip around the vertical axis that passes through the center of scaling.
@@ -243,7 +243,7 @@ using (SKPaint strokePaint = new SKPaint
 
 The `pathBounds` rectangle is obtained near the top of this code, and then used later with the width and height of the canvas in the `Scale` call. That call by itself will scale the coordinates of the path when it's rendered by the `DrawPath` call but the star will be centered in the upper-right corner of the canvas. It needs to be shifted down and to the left. This is the job of the `Translate` call. Those two properties of `pathBounds` are approximately –100, so the translation factors are about 100. Because the `Translate` call is after the `Scale` call, those values are effectively scaled by the scaling factors, so they move the center of the star to the center of the canvas:
 
-[![](scale-images/anisotropicscaling-small.png "Triple screenshot of the Anisotropic Scaling page")](scale-images/anisotropicscaling-large.png "Triple screenshot of the Anisotropic Scaling page")
+[![](scale-images/anisotropicscaling-small.png "Triple screenshot of the Anisotropic Scaling page")](scale-images/anisotropicscaling-large.png#lightbox "Triple screenshot of the Anisotropic Scaling page")
 
 Another way you can think about the `Scale` and `Translate` calls is to determine the effect in reverse sequence: The `Translate` call shifts the path so it becomes fully visible but oriented in the upper-left corner of the canvas. The `Scale` method then makes that star larger relative to the upper-left corner.
 
@@ -286,7 +286,7 @@ using (SKPaint textPaint = new SKPaint
 
 It's similar logic, and the text expands to the size of the page based on the text bounds rectangle returned from `MeasureText` (which is a little larger than the actual text):
 
-[![](scale-images/anisotropictext-small.png "Triple screenshot of the Anisotropic Test page")](scale-images/anisotropictext-large.png "Triple screenshot of the Anisotropic Test page")
+[![](scale-images/anisotropictext-small.png "Triple screenshot of the Anisotropic Test page")](scale-images/anisotropictext-large.png#lightbox "Triple screenshot of the Anisotropic Test page")
 
 If you need to preserve the aspect ratio of the graphical objects, you'll want to use isotropic scaling. The **Isotropic Scaling** page demonstrates this for the 11-pointed star. Conceptually, the steps for displaying a graphical object in the center of the page with isotropic scaling are:
 
@@ -335,7 +335,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The code also displays the star ten more times, each time decreasing the scaling factor by 10% and progressively changing the color from red to blue:
 
-[![](scale-images/isotropicscaling-small.png "Triple screenshot of the Isotropic Scaling page")](scale-images/isotropicscaling-large.png "Triple screenshot of the Isotropic Scaling page")
+[![](scale-images/isotropicscaling-small.png "Triple screenshot of the Isotropic Scaling page")](scale-images/isotropicscaling-large.png#lightbox "Triple screenshot of the Isotropic Scaling page")
 
 
 ## Related Links

@@ -16,7 +16,7 @@ _This article covers including and managing an image asset in a Xamarin.iOS app 
 
 If a Xamarin.iOS app supports loading a particular document type, the developer can provide icons that the system will use when it encounters that document type, such as when a user holds down an attachment in the *Mail Application* as shown here:
 
- [ ![](custom-document-types-images/17.png "An example of document type icons")](custom-document-types-images/17.png)
+ [![](custom-document-types-images/17.png "An example of document type icons")](custom-document-types-images/17.png#lightbox)
 
 The developer can add document type information for a file format the app is capable of opening by including dictionary entries for the `CFBundleTypeName` string and `LSItemContentTypes` array in the app's `Info.plist`. The icons for the document type go in the `CFBundleTypeIconFiles` array. If a document icon isn't provided, iOS will derive one from the app icon.
 Icons can be supplied for several sizes, optimized for the various device resolutions. 
@@ -27,7 +27,7 @@ To assign these values in Visual Studio for Mac, use the **Document Types** sect
 editor to add the document type and assign image icons to it. For
 example, here is a screenshot showing registration for PDF support:
 
- [ ![](custom-document-types-images/18.png "The Document Types section under the Advanced tab on the `Info.plist` editor")](custom-document-types-images/18.png)
+ [![](custom-document-types-images/18.png "The Document Types section under the Advanced tab on the `Info.plist` editor")](custom-document-types-images/18.png#lightbox)
  
 # [Visual Studio](#tab/vswin)
 
