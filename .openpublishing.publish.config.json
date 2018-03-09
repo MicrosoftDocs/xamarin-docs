@@ -7,7 +7,7 @@
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -19,6 +19,8 @@
   ],
   "notification_subscribers": [],
   "branches_to_filter": [],
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/xamarin-docs",
+  "git_repository_branch_open_to_public_contributors": "live",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "contribution_branch_mappings": {},
@@ -31,5 +33,6 @@
     }
   ],
   "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false
+  "need_generate_pdf_url_template": false,
+  "need_generate_pdf": false
 }
