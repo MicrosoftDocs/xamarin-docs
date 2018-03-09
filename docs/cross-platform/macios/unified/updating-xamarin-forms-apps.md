@@ -14,11 +14,8 @@ ms.date: 03/29/2017
 
 _Follow these steps to update an existing Xamarin.Forms app to use the Unified API and update to version 1.3.1_
 
-
 > [!IMPORTANT]
 > Because Xamarin.Forms 1.3.1 is the first release that supports the Unified API, the entire solution should be updated to use the latest version at the same time as migrating the iOS app to Unified. This means that in addition to updating the iOS project for Unified support, you'll also need to edit code in _all_ the projects in the solution.
-
-
 
 The update is performed in two steps:
 
@@ -40,12 +37,11 @@ The update is performed in two steps:
 
     5. Update the `MainPage` in the Windows Phone project.
 
-
-# 1. iOS App (Unified Migration)
+## 1. iOS App (Unified Migration)
 
 Part of the migration requires upgrading Xamarin.Forms to version 1.3, which supports the Unified API. In order for the correct assembly references to be created, we first need to update the iOS project to use the Unified API.
 
-## Migration Tool
+### Migration Tool
 
 Click on the iOS project so that it's selected, then choose **Project > Migrate to Xamarin.iOS Unified API...** and agree to the warning message that appears.
 
@@ -60,12 +56,11 @@ This will automatically:
 
 **Clean** and **Build** the project to ensure there are no other errors to fix. No further action should be required. These steps are explained in more detail in the [Unified API docs](~/cross-platform/macios/unified/updating-ios-apps.md).
 
-## Update native iOS APIs (if required)
+### Update native iOS APIs (if required)
 
 If you have added additional iOS native code (such as custom renderers or dependency services) you may need to perform additional manual code fixes. Re-compile your app and refer to the [Updating Existing iOS Apps instructions](~/cross-platform/macios/unified/updating-ios-apps.md) for additional information on changes that may be required. [These tips](~/cross-platform/macios/unified/updating-tips.md) will also help identify changes that are required.
 
-
-# 2. Xamarin.Forms 1.3.1 Update
+## 2. Xamarin.Forms 1.3.1 Update
 
 Once the iOS app has been updated to the Unified API, the rest of the solution needs to be updated to Xamarin.Forms version 1.3.1. This includes:
 
@@ -74,22 +69,18 @@ Once the iOS app has been updated to the Unified API, the rest of the solution n
 
 These steps are explained below:
 
-
-## 2.1 Update NuGet in all Projects
+### 2.1 Update NuGet in all Projects
 
 Update Xamarin.Forms to 1.3.1 pre-release using the NuGet Package Manager for all projects in the solution: PCL (if present), iOS, Android, and Windows Phone. It is recommended that you **delete and re-add** the Xamarin.Forms NuGet package to update to version 1.3.
 
 **NOTE:** Xamarin.Forms version 1.3.1 is currently in *pre-release*. This means you must select the **pre-release** option in NuGet (via a tick-box in Visual Studio for Mac or a drop-down-list in Visual Studio) to see the latest pre-release version.
 
-
 > [!IMPORTANT]
 > If you are using Visual Studio, ensure the latest version of the NuGet Package Manager is installed. Older versions of NuGet in Visual Studio will not correctly install the Unified version of Xamarin.Forms 1.3.1. Go to **Tools > Extensions and Updates...** and click on the **Installed** list to check that the **NuGet Package Manager for Visual Studio** is at least version 2.8.5. If it is older, click on the **Updates** list to download the latest version.
 
-
-
 Once you've updated the NuGet package to Xamarin.Forms 1.3.1, make the following changes in each project to upgrade to the new `Xamarin.Forms.Application` class.
 
-## 2.2 Portable Class Library (or Shared Project)
+### 2.2 Portable Class Library (or Shared Project)
 
 Change the **App.cs** file so that:
 
@@ -112,15 +103,12 @@ This new `Application` base class also supports the `OnStart`, `OnSleep`, and `O
 
 The `App` class is then passed to a new `LoadApplication` method in each app project, as described below:
 
-
-## 2.3 iOS App
-
+### 2.3 iOS App
 
 Change the **AppDelegate.cs** file so that:
 
  - The class inherits from `FormsApplicationDelegate` (instead of `UIApplicationDelegate` previously).
  - `LoadApplication` is called with a new instance of `App`.
-
 
 ```csharp
 [Register ("AppDelegate")]
@@ -138,8 +126,7 @@ public partial class AppDelegate :
 }
 ```
 
-
-## 2.3 Android App
+### 2.3 Android App
 
 Change the **MainActivity.cs** file so that:
 
@@ -163,8 +150,7 @@ public class MainActivity :
 }
 ```
 
-
-## 2.4 Windows Phone App
+### 2.4 Windows Phone App
 
 We need to update the **MainPage** - both the XAML and the codebehind.
 
@@ -182,7 +168,6 @@ An updated example is shown below - you should only have to edit these things (t
     ...>
 </winPhone:FormsApplicationPage>
 ```
-
 
 Change the **MainPage.xaml.cs** file so that:
 
@@ -203,7 +188,7 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
  }
 ```
 
-## Troubleshooting
+### Troubleshooting
 
 Occasionally you will see an error similar to this after updating the Xamarin.Forms NuGet package. It occurs when the NuGet updater does not completely remove references to older versions from your **csproj** files.
 
@@ -222,16 +207,15 @@ To fix these errors, open the **csproj** file in a text editor and look for `<Ta
 
 The project should build successfully once these old references are removed.
 
-# Considerations
+## Considerations
 
 The following considerations should be taken into account when converting an existing Xamarin.Forms project from the Classic API to the new Unified API if that app relies on one or more Component or NuGet Package.
 
-## Components
+### Components
 
 Any component that you have included in your application will also need to be updated to the Unified API or you will get a conflict when you try to compile. For any included component, replace the current version with a new version from the Xamarin Component Store that supports the Unified API and do a clean build. Any component that has not yet been converted by the author, will display a 32 bit only warning in the component store.
 
-
-## NuGet Support
+### NuGet Support
 
 While we contributed changes to NuGet to work with the Unified API support, there has not been a new release of NuGet, so we are evaluating how to get NuGet to recognize the new APIs.
 
@@ -240,19 +224,15 @@ Until that time, just like the components, you'll need to switch any NuGet Packa
 > [!IMPORTANT]
 > **NOTE:** If you have an error in the form _"Error 3 Cannot include both 'monotouch.dll' and 'Xamarin.iOS.dll' in the same Xamarin.iOS project - 'Xamarin.iOS.dll' is referenced explicitly, while 'monotouch.dll' is referenced by 'xxx, Version=0.0.000, Culture=neutral, PublicKeyToken=null'"_ after converting your application to the Unified APIs, it is typically due to having either a component or NuGet Package in the project that has not been updated to the Unified API. You'll need to remove the existing component/NuGet, update to a version that supports the Unified APIs and do a clean build.
 
-
-
-
-# Enabling 64 Bit Builds of Xamarin.iOS Apps
+## Enabling 64 Bit Builds of Xamarin.iOS Apps
 
 For a Xamarin.iOS mobile application that has been converted to the Unified API, the developer still needs to enable the building of the application for 64 bit machines from the app's Options. Please see the **Enabling 64 Bit Builds of Xamarin.iOS Apps** of the [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md#enable-64) document for detailed instructions on enabling 64 bit builds.
 
-# Summary
+## Summary
 
 The Xamarin.Forms application should now be updated to version 1.3.1 and the iOS app migrated to the Unified API (which supports 64-bit architectures on the iOS platform).
 
 As noted above, if your Xamarin.Forms app includes native code such as custom renderers or dependency services then these may also need updating to use the new Types [introduced in the Unified API](~/cross-platform/macios/index.md).
-
 
 ## Related Links
 

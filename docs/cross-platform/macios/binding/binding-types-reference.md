@@ -436,7 +436,7 @@ public partial class CBAdvertisement  {
 ```
 
 
-## Model definitions
+## Protocol definitions/Model
 
 Models are typically used by protocol implementation.
 They differ in that the runtime will only register with

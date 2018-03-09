@@ -321,19 +321,19 @@ or
 
 When you are testing on the emulator, you can navigate using the settings app as above, or you can reset the locale using the ADB tool command. Using Command Prompt on Windows or Terminal on OS X, start `adb shell` then send commands to set the emulator’s locale. **adb** can usually be found on the Mac in `/Users/YOURNAME/Library/Developer/Xamarin/android-sdk-mac_x86/platform-tools/adb`
 
-###Spanish (Mexico)
+### Spanish (Mexico)
 setprop persist.sys.language es;setprop persist.sys.country MX;stop;sleep 5;start
 
-###French (France)
+### French (France)
 setprop persist.sys.language fr;setprop persist.sys.country FR;stop;sleep 5;start
 
-###Japanese (Japan)
+### Japanese (Japan)
 setprop persist.sys.language ja;setprop persist.sys.country JP;stop;sleep 5;start
 
-###Portuguese (Brazil)
+### Portuguese (Brazil)
 setprop persist.sys.language pt;setprop persist.sys.country BR;stop;sleep 5;start
 
-###English (USA)
+### English (USA)
 setprop persist.sys.language en;setprop persist.sys.country US;stop;sleep 5;start
 
 **TIP:** the default location of ADB on Mac OS X is

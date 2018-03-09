@@ -82,7 +82,7 @@ sections:
           src: ~/media/icons/i_app-build.svg
           href: ~/cross-platform/app-fundamentals/
         title: Application Fundamentals
-      - href: ~/
+      - href: ~/cross-platform/platform
         html: Working with platform features.
         image:
           src: ~/media/icons/i_platform.svg

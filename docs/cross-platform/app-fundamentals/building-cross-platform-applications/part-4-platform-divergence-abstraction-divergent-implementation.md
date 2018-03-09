@@ -9,7 +9,9 @@ ms.author: amburns
 ms.date: 03/23/2017
 ---
 
-# Handling Platform Divergence &amp; Features
+# Part 4 - Dealing with Multiple Platforms
+
+## Handling Platform Divergence &amp; Features
 
 Divergence isn’t just a ‘cross-platform’ problem; devices on the
 ‘same’ platform have different capabilities (especially the wide variety of
@@ -30,12 +32,12 @@ platforms differ in functionality.
  <a name="Examples_of_Platform_Divergence" />
 
 
-## Examples of Platform Divergence
+### Examples of Platform Divergence
 
  <a name="Fundamental_elements_that_exist_across_platforms" />
 
 
-### Fundamental elements that exist across platforms
+#### Fundamental elements that exist across platforms
 
 There are some characteristics of mobile applications that are universal.
 These are higher-level concepts that are generally true of all devices and can
@@ -54,7 +56,7 @@ experience on these concepts.
  <a name="platform-specific_attributes" />
 
 
-### platform-specific attributes
+#### Platform-specific attributes
 
 In addition to the basic elements that exist on all platforms, you will need
 to address key platform differences in your design. You may need to consider
@@ -70,7 +72,7 @@ to address key platform differences in your design. You may need to consider
  <a name="Device-specific_features" />
 
 
-### Device-specific features
+#### Device-specific features
 
 Determine what the minimum features required for the application must be; or
 when decide what additional features to take advantage of on each platform. Code
@@ -88,7 +90,7 @@ location or choose from a map):
  <a name="Dealing_with_Platform_Divergence" />
 
 
-## Dealing with Platform Divergence
+### Dealing with Platform Divergence
 
 There are two different approaches to supporting multiple platforms from the
 same code-base, each with its own set of benefits and disadvantages.
@@ -100,12 +102,12 @@ same code-base, each with its own set of benefits and disadvantages.
  <a name="Platform_Abstraction" />
 
 
-# Platform Abstraction
+## Platform Abstraction
 
  <a name="Class_Abstraction" />
 
 
-## Class Abstraction
+### Class Abstraction
 
 Using either interfaces or base classes defined in the shared code and
 implemented or extended in platform-specific projects. Writing and extending
@@ -117,7 +119,7 @@ branches.
  <a name="Interfaces" />
 
 
-### Interfaces
+#### Interfaces
 
 Using interfaces allows you to implement platform-specific classes that can
 still be passed into your shared libraries to take advantage of common code.
@@ -144,7 +146,7 @@ be created and set in the shared code somewhere.
  <a name="Inheritance" />
 
 
-### Inheritance
+#### Inheritance
 
 The shared code could implement abstract or virtual classes that could be
 extended in one or more platform-specific projects. This is similar to using
@@ -160,12 +162,12 @@ be optionally extended).
 
 <a name="Xamarin.Forms" />
 
-## Xamarin.Forms
+### Xamarin.Forms
 
 See the [Xamarin.Forms](~/xamarin-forms/get-started/index.md) documentation.
 
 
-## Plug-in Cross-Platform Functionality
+### Plug-in Cross-Platform Functionality
 
 You can also extend cross-platform apps in a consistent way using plugins.
 
@@ -178,7 +180,7 @@ in Xamarin Platform and Xamarin.Forms apps.
 
 <a name="Other_Cross-Platform_Libraries" />
 
-## Other Cross-Platform Libraries
+### Other Cross-Platform Libraries
 
 There are a number of 3rd party libraries available that provide
 cross-platform functionality:
@@ -192,12 +194,12 @@ cross-platform functionality:
  <a name="Divergent_Implementation" />
 
 
-## Divergent Implementation
+### Divergent Implementation
 
  <a name="Conditional_Compilation" />
 
 
-### Conditional Compilation
+#### Conditional Compilation
 
 There are some situations where your shared code will still need to work
 differently on each platform, possibly accessing classes or features that behave
@@ -217,7 +219,7 @@ these symbols).
 
 <a name="iOS" />
 
-#### iOS
+##### iOS
 
 Xamarin.iOS defines `__IOS__` which you can use to detect iOS devices.
 
@@ -241,7 +243,7 @@ There are also Watch- and TV-specific symbols:
 
 <a name="Android" />
 
-#### Android
+##### Android
 
 Code that should only be compiled into Xamarin.Android applications can use
 the following
@@ -264,7 +266,7 @@ will be sufficient.
 #endif
 ```
 
-#### Mac
+##### Mac
 
 There is not currently a built-in symbol for Xamarin.Mac, but you can
 add your own in the Mac app project **Options > Build > Compiler** in the
@@ -277,7 +279,7 @@ example `__MAC__`)
 
 <a name="Windows_Phone" />
 
-#### Windows Phone
+##### Windows Phone
 
 Windows Phone apps defines two symbols – `WINDOWS_PHONE` and `SILVERLIGHT` – that can be used to target code to the
 platform. These don't have the underscores surrounding them like the Xamarin
@@ -286,7 +288,7 @@ platform symbols do.
 
 <a name="Using_Conditional_Compilation" />
 
-### Using Conditional Compilation
+##### Using Conditional Compilation
 
 A simple case-study example of conditional compilation is setting the file
 location for the SQLite database file. The three platforms have slightly

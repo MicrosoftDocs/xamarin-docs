@@ -15,8 +15,6 @@ ms.date: 04/08/2017
 > [!IMPORTANT]
 > This article explains how to uninstall Xamarin Studio or other Xamarin products from a Mac or Windows computer. For information on uninstalling Visual Studio for Mac, refer to the [Uninstall](https://docs.microsoft.com/visualstudio/mac/uninstall) guide on docs.microsoft.com
 
-# Overview
-
 There are a number of Xamarin products that enable cross-platform application development,
 including stand-alone apps like Xamarin Studio, and extensions to other apps like
 the Xamarin support in Visual Studio.
@@ -37,7 +35,7 @@ or from Visual Studio on Windows:
 
 If it is necessary to re-install Xamarin using the Universal Installer, it is always recommended that the computer is rebooted first.
 
-# Uninstalling Xamarin on Mac
+## Uninstalling Xamarin on Mac
 
 This guide can be used to uninstall each product individually by navigating to the relevant section. The entire Xamarin toolset can be uninstalled by following this guide the whole way through.
 
@@ -45,7 +43,7 @@ For help with using the [Uninstall script](http://download.xamarin.com/developer
 
 <a name="uninstallxamarinstudio" />
 
-## Uninstall Xamarin Studio
+### Uninstall Xamarin Studio
 
 The first step in uninstalling Xamarin Studio from a Mac is to locate **Xamarin Studio.app** in the **/Applications** directory and drag it to the **Trash Can**. Alternatively, right-click and select **Move to Trash** as illustrated below:
 
@@ -65,7 +63,7 @@ rm -rf ~/Library/XamarinStudio-*
 
 <a name="uninstallmono" />
 
-## Uninstall Mono SDK (MDK)
+### Uninstall Mono SDK (MDK)
 
 Mono is an open source implementation of Microsoft’s .NET Framework and is used by all Xamarin Products—Xamarin.iOS, Xamarin.Android and Xamarin.Mac to allow development of these platforms in C#.
 
@@ -83,7 +81,7 @@ sudo pkgutil --forget com.xamarin.mono-MDK.pkg
 
 <a name="uninstallandroid" />
 
-## Uninstall Xamarin.Android
+### Uninstall Xamarin.Android
 
 There are a number of items required for the installation and use of Xamarin.Android,
 such as the Android SDK and Java SDK. More information about these
@@ -98,7 +96,7 @@ sudo pkgutil --forget com.xamarin.android.pkg
 sudo rm -rf /Library/Frameworks/Xamarin.Android.framework
 ```
 
-### Uninstall Android SDK and Java SDK
+#### Uninstall Android SDK and Java SDK
 
 The Android SDK is required for development of Android applications. To completely remove all parts of the Android SDK, locate the file at **~/Library/Developer/Xamarin/** and move it to **Trash**, as illustrated below:
 
@@ -108,7 +106,7 @@ The Java SDK (JDK) does not need to be uninstalled, as it is already pre package
 
 <a name="uninstallios" />
 
-## Uninstall Xamarin.iOS
+### Uninstall Xamarin.iOS
 
 Xamarin.iOS allows iOS application development using C# or F# with Xamarin Studio on a Mac.
 The Xamarin Build Host was also installed automatically with earlier versions of Xamarin.iOS to allow for
@@ -124,7 +122,7 @@ sudo pkgutil --forget com.xamarin.monotouch.pkg
 sudo pkgutil --forget com.xamarin.xamarin-ios-build-host.pkg
 ```
 
-### Uninstall the Mac Build Host
+#### Uninstall the Mac Build Host
 
 Note: This may already have been removed if you have already updated to Xamarin 4
 Run the following command in Terminal to remove the Build Host application:
@@ -143,7 +141,7 @@ sudo rm -f /Library/LaunchAgents/com.xamarin.mtvs.buildserver.plist
 
 <a name="uninstallmac" />
 
-## Uninstall Xamarin.Mac
+### Uninstall Xamarin.Mac
 
 Once Xamarin Studio has been successfully uninstalled, Xamarin.Mac can be removed from your machine using the following two commands to eradicate the product and license from your Mac respectively:
 
@@ -154,7 +152,7 @@ rm -rf ~/Library/Xamarin.Mac
 
 <a name="uninstallworkbooks" />
 
-## Uninstall Workbooks and Inspector
+### Uninstall Workbooks and Inspector
 
 The following Bash command will remove the Xamarin Inspector and Workbooks version 1.2.2 and above:
 
@@ -164,7 +162,7 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 For earlier versions, see the [Workbooks](~/tools/workbooks/install.md#uninstall-macos) uninstall guide.
 
-## Uninstall the Xamarin Installer
+### Uninstall the Xamarin Installer
 
 Use the following commands to remove all traces of the Xamarin Universal Installer:
 
@@ -176,7 +174,7 @@ rm -rf ~/Library/Preferences/Xamarin/
 
 <a name="uninstallscript" />
 
-## Using the Uninstall Script
+### Using the Uninstall Script
 
 The [uninstall script](http://download.xamarin.com/developer/cross-platform/xamarin_uninstall.sh) will remove Xamarin from a computer. To use the uninstall script:
 
@@ -196,11 +194,11 @@ At this point, Xamarin should be uninstalled from your computer.
 
 <a name="uninstallwindows" />
 
-# Uninstalling Xamarin on Windows
+## Uninstalling Xamarin on Windows
 
 <a name="uninstallvs2015" />
 
-## Visual Studio 2015 and earlier
+### Visual Studio 2015 and earlier
 
 Xamarin can be uninstalled from a Windows machine through **Control Panel**. Navigate to **Programs and Features** or **Programs > Uninstall a Program** as illustrated below:
 
@@ -234,7 +232,7 @@ To uninstall Visual Studio completely, follow [Microsoft's instructions](https:/
 
 <a name="uninstallvs2017" />
 
-# Visual Studio 2017
+## Visual Studio 2017
 
 Xamarin can be uninstalled from Visual Studio 2017 using the installer app:
 
@@ -283,7 +281,7 @@ three-bar menu next to the **Launch** button.
 
 <a name="uninstallvsmac" />
 
-# Uninstalling Visual Studio for Mac
+## Uninstalling Visual Studio for Mac
 
 To uninstall Visual Studio for Mac but to keep using Xamarin Studio, locate **Visual Studio.app** in the **/Applications** directory and drag it to the Trash Can. Alternatively, right-click and select **Move to Trash** as illustrated below:
 
@@ -291,7 +289,7 @@ To uninstall Visual Studio for Mac but to keep using Xamarin Studio, locate **Vi
 
 To uninstall Xamarin completely from your machine, first delete Visual Studio for Mac, and then follow the steps listed in the [Uninstall Xamarin Studio](#uninstallxamarinstudio) section.
 
-# Summary
+## Summary
 
 In this article we looked at uninstalling Xamarin completely from a Mac
 through the use of Terminal commands, as well as uninstalling Xamarin from

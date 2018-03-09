@@ -10,7 +10,7 @@ ms.author: amburns
 ms.date: 03/24/2017
 ---
 
-# Getting Started with FF&#35;
+# Getting Started with F&#35;
 
 ## Requirements
 
@@ -42,7 +42,7 @@ This opens a new interactive solution. Exploring this is a great way to get to g
 
  [![](overview-images/newtutorial-sml.png "Exploring this is a great way to get to grips with the basics of the language")](overview-images/newtutorial.png#lightbox)
 
-Check out the [list of samples](/guides/cross-platform/fsharp/samples/) to see F# in action.
+Check out the [list of samples](~/cross-platform/platform/fsharp/samples.md) to see F# in action.
 
 ## References
 

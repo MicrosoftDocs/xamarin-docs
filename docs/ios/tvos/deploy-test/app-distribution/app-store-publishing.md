@@ -156,7 +156,7 @@ With your Xamarin.tvOS app properly configured, you are now ready to do the fina
 
 	[![](app-store-publishing-images/buildxs03new.png "The Archives view")](app-store-publishing-images/buildxs03new.png#lightbox)
 
-#3## Sign and Distribute your App
+### Sign and Distribute your App
 
 Each time you build your application for Archive, it will automatically open the *Archives View*, displaying all archived projects; grouped by solution. By default this view only shows the current, open solution. To see all solutions that have archives, click on the **Show all archives** option.
 

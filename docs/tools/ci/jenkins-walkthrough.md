@@ -30,7 +30,7 @@ Once Jenkins is configured and any necessary plugins have been installed, we wil
 
 This guide will walk through how to setup a Jenkins server covering each of these points. By the end of it, we should have a good understanding of how to setup and configure Jenkins to create IPA and APK’s for our Xamarin mobile projects.
 
-# Requirements
+## Requirements
 
 The ideal build server is a stand-alone computer dedicated to the sole purpose of building and possibly testing the application. A dedicated computer ensures that artifacts that might be required for other roles (such as that of a web server) do not contaminate the build. For example, if the build server is also acting as a web server, the web server may require a conflicting version of some common library. Because of this conflict the web server may not function properly or Jenkins may create builds that do not work when deployed to users.
 
@@ -46,7 +46,7 @@ If TFS is being used for source code control, you will want to install [Team Exp
 
 [!include[](~/tools/ci/includes/firewall-information.md)]
 
-# Installing Jenkins
+## Installing Jenkins
 
 The first task to using Jenkins is to install it. There are three ways to run Jenkins on OS X:
 
@@ -97,7 +97,7 @@ Click on the **Login Options** button, and then choose the account that OS X wil
 At this point Jenkins has been installed. However, if we want to build Xamarin mobile applications, we will need to install some plugins.
 
 
-## Installing Plugins
+### Installing Plugins
 
 When the Jenkins.App installer has completed, it will start Jenkins and launch the web browser with the URL http://localhost:8080, as shown in the screenshot below:
 
@@ -128,7 +128,7 @@ When you select this menu option, you will be taken to the **Configure System [J
  [![](jenkins-walkthrough-images/image14.png "This screenshot illustrates an example of this page")](jenkins-walkthrough-images/image14.png#lightbox)
 
 
-### Configuring the MSBuild Plugin
+#### Configuring the MSBuild Plugin
 
 The MSBuild plugin must be configured to use **/Library/Frameworks/Mono.framework/Commands/xbuild** to compile Visual Studio for Mac solution and project files. Scroll down the **Configure System [Jenkins]** page until the **Add MSBuild** button appears, as shown in the screenshot below:
 
@@ -136,7 +136,7 @@ The MSBuild plugin must be configured to use **/Library/Frameworks/Mono.framewor
 
 Click on this button, and fill out the **Name** and **Path** to **MSBuild** fields on the form that appears. The name of your **MSBuild** installation should be something meaningful, while the **Path to MSBuild** should be the path to `xbuild`, which is typically **/Library/Frameworks/Mono.framework/Commands/xbuild**. After we save the changes by clicking the Save or the Apply button at the bottom of the page, Jenkins will be able to use `xbuild` to compile your solutions.
 
-### Configuring the TFS Plugin
+#### Configuring the TFS Plugin
 
 This section is mandatory if you intend to use TFS for your source code control.
 
@@ -160,7 +160,7 @@ Once the command line client for TFS is installed, Jenkins must be configured wi
 
 Enter the full path to the `tf` command, and click the **Save** button.
 
-## Configure Jenkins Security
+### Configure Jenkins Security
 
 When first installed, Jenkins has security disabled, so it is possible for any user to set up and run any kind of job anonymously. This section covers how to configure security using the Jenkins user database to configure authentication and authorization.
 
@@ -183,7 +183,7 @@ Finally, restart Jenkins and create a new account. The first account that is cre
 Once these settings are saved and Jenkins is restarted, security will be turned on.
 
 
-### Disabling Security
+#### Disabling Security
 
 In the event of a forgotten password or Jenkins-wide lockout, it is possible to disable security by following these steps:
 
@@ -194,7 +194,7 @@ In the event of a forgotten password or Jenkins-wide lockout, it is possible to 
 4. Delete the `<authorizationstrategy></authorizationstrategy>` and the `<securityrealm></securityrealm>` elements from the file.
 5. Restart Jenkins.
 
-# Setting up a Job
+## Setting up a Job
 
 At the top level, Jenkins organizes all of the various tasks required to build software into a *job*. A job also has metadata associated with it, providing information about the build such as how to get the source code, how often the build should run, any special variables that are necessary for building, and how to notify developers if the build fails.
 
@@ -222,11 +222,11 @@ Once the initial job has been created, it must be configured with one or more of
  - One or more *build actions* must be added to the project. These are the steps or tasks required to build the application.
  - The job must be assigned one *build trigger* – a set of instructions informing Jenkins how often to retrieve the code and build the final project.
 
-## Configuring Source Code Control
+### Configuring Source Code Control
 
 The first task Jenkins does is retrieve the source code from the source code management system. Jenkins supports many of the popular source code management systems available today. This section covers two popular systems, Git and Team Foundation Server. Each of these source code management systems is discussed in more detail in the sections below.
 
-### Using Git for Source Code Control
+#### Using Git for Source Code Control
 
 If you are using TFS for source code control, [skip](#Using_TFS_for_Source_Code_Management) this section and proceed to the next section using TFS.
 
@@ -236,7 +236,7 @@ Jenkins supports Git out of the box – no extra plugins are necessary. To use G
 
 Once the changes are saved, Git configuration is complete.
 
-### Using TFS for Source Code Management
+#### Using TFS for Source Code Management
 
 This section only applies to TFS users.
 
@@ -249,7 +249,7 @@ Provide the necessary information for TFS. The following screenshot shows an exa
 
 ![](jenkins-walkthrough-images/image27.png "This screenshot shows an example of the completed form")
 
-### Testing The Source Code Control Configuration
+#### Testing The Source Code Control Configuration
 
 Once the appropriate source code control has been configured, click **Save** to save the changes. This will return you to the home page for the job, which will resemble the following screenshot:
 
@@ -269,7 +269,7 @@ To help with troubleshooting problems that might arise as part of the build, Jen
 
 ![](jenkins-walkthrough-images/image31.png "This screenshot shows the Console Output link, as well as some of the output from a successful job")
 
-### Location of Build Artifacts
+#### Location of Build Artifacts
 
 Jenkins will retrieve the entire source code into a special folder called a *workspace*. This directory can be found inside the folder at the following location:
 
@@ -281,7 +281,7 @@ It is possible to browse the workspace folder in Jenkins by navigating to the la
 
 ![](jenkins-walkthrough-images/image32.png "This screenshot shows an example of the workspace for a job named HelloWorld")
 
-## Build Triggers
+### Build Triggers
 
 There are several different strategies for initiating builds in Jenkins – these are known as *build triggers*. A build trigger helps Jenkins decide when to start a job and build the project. Two of the more common build triggers are:
 
@@ -293,7 +293,7 @@ Polling SCM is a popular trigger because it provides quick feedback when a devel
 Periodic builds are often used to create a version of the application that can be distributed to testers. For example, a periodic build might be scheduled for Friday evening so that members of the QA team can test the work of the previous week.
 
 
-## Compiling a Xamarin.iOS Applications
+### Compiling a Xamarin.iOS Applications
 Xamarin.iOS projects can be compiled at the command line using `xbuild` or `msbuild`. The shell command will execute in the context of the user account that is running Jenkins. It is important that the user account has access to the provisioning profile so that the application can be properly packaged for distribution. It is possible to add this shell command to the job configuration page.
 
 Scroll down to the **Build** section. Click the **Add build step** button and select **Execute shell**, as illustrated by the following screenshot:
@@ -303,7 +303,7 @@ Scroll down to the **Build** section. Click the **Add build step** button and se
 
 [!include[](~/tools/ci/includes/commandline-compile-of-xamarin-ios-ipa.md)]
 
-## Building a Xamarin.Android Project
+### Building a Xamarin.Android Project
 
 Building a Xamarin.Android project is very similar in concept to building a Xamarin.iOS project. To create an APK from a Xamarin.Android project, Jenkins must be configured to perform the following two steps:
 
@@ -312,7 +312,7 @@ Building a Xamarin.Android project is very similar in concept to building a Xama
 
 These two steps will be covered in more detail in the next two sections.
 
-## Creating the APK
+### Creating the APK
 
 Click on the **Add build step** button, and select **Build a Visual Studio project or solution using MSBuild**, as shown in the screenshot below:
 
@@ -333,7 +333,7 @@ The following screenshot shows an example of this APK:
 
 This APK is not ready for deployment, as it has not been signed with a private keystore and must be zip aligned.
 
-### Signing and Zipaligning the APK for Release
+#### Signing and Zipaligning the APK for Release
 
 Signing and zipaligning the APK are technically two separate tasks that are performed by two separate command line tools from the Android SDK. However, it is convenient to perform them in one build action. For more information about signing and zipaligning an APK, see Xamarin’s documentation on preparing an Android application for release.
 
@@ -406,12 +406,12 @@ The following screenshot shows an example of how to enter the `jarsigner` and `z
 
 Once all the build actions are in place, it is good practice to trigger a manual build to verify everything is working. If the build fails, the **Console Output** should be reviewed for information on what caused the build to fail.
 
-## Submitting Tests to Test Cloud
+### Submitting Tests to Test Cloud
 
 Automated tests can be submitted to Test Cloud using shell commands. For more information about setting up a Test Run in Xamarin Test Cloud, we have guides for using [Xamarin.UITest](https://developer.xamarin.com/guides/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/) or [Calabash](https://developer.xamarin.com/guides/testcloud/calabash/working-with/submitting-tests-to-xamarin-test-cloud/).
 
 
-#Summary
+## Summary
 
 In this guide we introduced Jenkins as a build server on Mac OS X, and configured it to compile and prepare Xamarin mobile applications for release. We installed Jenkins on a Mac OS X computer along with several plugins to support the build process. We created and configured a job that will pull code from either TFS or Git, and then compile that code into a release ready application. We also explored two different ways to schedule when jobs should be run.
 

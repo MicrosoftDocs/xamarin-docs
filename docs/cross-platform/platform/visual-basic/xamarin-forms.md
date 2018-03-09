@@ -18,7 +18,8 @@ common code PCL project with Visual Basic.
 
 [![](xamarin-forms-images/hero-sml.png "Create a Xamarin.Forms PCL solution and then replace the common code PCL project with Visual Basic")](xamarin-forms-images/hero.png#lightbox)
 
-> ℹ️ **NOTE:** You must use Visual Studio on Windows to program with Visual Basic.
+> [!NOTE]
+> You must use Visual Studio on Windows to program with Visual Basic.
 
 ## Xamarin.Forms with Visual Basic Walkthrough
 
@@ -116,7 +117,7 @@ is shown below:
 
 ## Limitations of Visual Basic in Xamarin.Forms
 
-As stated on the [Portable Visual Basic.NET page](/guides/cross-platform/application_fundamentals/pcl/portable_visual_basic_net/),
+As stated on the [Portable Visual Basic.NET page](~/cross-platform/platform/visual-basic/index.md),
 Xamarin does not support the Visual Basic language. This means there are some limitations
 on where you can use Visual Basic:
 

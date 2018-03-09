@@ -141,6 +141,7 @@ The **Properties** panel is shown below - the **Root Namespace** is the only set
 
 -----
 
+<a name="Shared_Project_Example"/>
 
 ## Shared Project Example
 

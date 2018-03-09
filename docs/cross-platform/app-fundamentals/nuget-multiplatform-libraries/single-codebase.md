@@ -63,7 +63,7 @@ This screenshot shows the contents of a PCL-based NuGet – only a single PCL as
 
 <a name="add-platforms" />
 
-# Adding Platform-Specific Code
+## Adding Platform-Specific Code
 
 PCL-based projects and .NET Standard-based projects cannot contain platform-specific
 references (such as iOS or Android functionality).

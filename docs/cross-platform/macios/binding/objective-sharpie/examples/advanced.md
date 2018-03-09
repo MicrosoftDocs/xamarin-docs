@@ -126,7 +126,7 @@ You will find the `-scope` argument is often optional for cleanly implemented li
 
 Additionally, we specified `-c -Ibuild/headers`. Firstly, the `-c` argument tells Objective Sharpie to stop interpreting command line arguments and pass any subsequent arguments _directly to the clang compiler_. Therefore, `-Ibuild/Headers` is a clang compiler argument that instructs clang to search for includes under `build/Headers`, which is where the POP headers live. Without this argument, clang would not know where to locate the files that `POP.h` is `#import`ing. _Almost all "issues" with using Objective Sharpie boil down to figuring out what to pass to clang_.
 
-###Completing the Binding
+### Completing the Binding
 
 Objective Sharpie has now generated `Binding/ApiDefinitions.cs` and `Binding/StructsAndEnums.cs` files.
 

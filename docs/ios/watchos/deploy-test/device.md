@@ -132,7 +132,7 @@ This will be fixed in a future release, after which incremental builds can be
 re-enabled to take advantage of faster build times.
 
 
-#3# Watch App fails to start while debugging on device
+### Watch App fails to start while debugging on device
 
 When attempting to debug a watch app on a physical device, only the icon & loading
 spinner appear (and eventually time-out). This will be addressed in a future release;

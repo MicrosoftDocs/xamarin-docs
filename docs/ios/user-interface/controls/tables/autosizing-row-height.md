@@ -58,7 +58,7 @@ Finally, to make sure that all expected content is displayed in our label, set t
 
 With the UI defined, let's add the code to enable Auto Row Height Resizing.
 
-##Enabling Auto-Resizing Height
+## Enabling Auto-Resizing Height
 
 In either our Table View's Datasource (`UITableViewDatasource`) or Source (`UITableViewSource`), when we dequeue a Cell we need to use the `Identifier` that we defined in the designer. For example:
 
