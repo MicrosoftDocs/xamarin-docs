@@ -7,7 +7,7 @@
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
-      "open_to_public_contributors": true,
+      "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -33,6 +33,5 @@
     }
   ],
   "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false,
-  "need_generate_pdf": false
+  "need_generate_pdf_url_template": false
 }
