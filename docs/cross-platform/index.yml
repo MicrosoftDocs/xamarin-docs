@@ -54,12 +54,12 @@ sections:
           src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
           href: ~/cross-platform/get-started/index.md
         title: Getting Started
-      - href: ~/cross-platform/user-interface
-        html: Learn about the different user interface toolkits on each platform.
+      - href: ~/cross-platform/platform
+        html: Working with platform features.
         image:
-          src: ~/media/icons/i_user-interface.svg
-          href: ~/cross-platform/user-interface/
-        title: User Interface
+          src: ~/media/icons/i_platform.svg
+          href: ~/
+        title: Platform Features
       - href: ~/cross-platform/data-cloud/
         html: Local and remote data storage and retrieval, and other cloud-based services.
         image:
@@ -82,12 +82,6 @@ sections:
           src: ~/media/icons/i_app-build.svg
           href: ~/cross-platform/app-fundamentals/
         title: Application Fundamentals
-      - href: ~/cross-platform/platform
-        html: Working with platform features.
-        image:
-          src: ~/media/icons/i_platform.svg
-          href: ~/
-        title: Platform Features
       - href: ~/cross-platform/deploy-test/
         html: Instructions for building and deploying your apps, and tips for testing them beforehand!
         image:
@@ -107,10 +101,14 @@ sections:
     className: cardsD
     items:
     - title: Xamarin.Forms
-      html: <p><a href="~/xamarin-forms/">Get Started</a></p>
+      href: ~/xamarin-forms/index.md
+      html: <p><a href="~/xamarin-forms/get-started/index.md">Get Started</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/xamarin-forms/user-interface/index.md">User Interface</a><br /><a href="~/xamarin-forms/platform/index.md">Platform Features</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/xamarin-forms/internals/index.md">Advanced Concepts & Internals</a></p>
     - title: Android
-      html: <p><a href="~/android/">Get Started</a></p>
+      href: ~/android/index.md
+      html: <p><a href="~/android/get-started/index.md">Get Started</a><br /><a href="~/android/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/android/user-interface/index.md">User Interface</a><br /><a href="~/android/platform/index.md">Platform Features</a><br /><a href="~/android/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/android/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/android/internals/index.md">Advanced Concepts & Internals</a></p>
     - title: iOS
-      html: <p><a href="~/ios/">Get Started</a></p>
+      href: ~/ios/index.md
+      html: <p><a href="~/ios/get-started/index.md">Get Started</a><br /><a href="~/ios/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/ios/user-interface/index.md">User Interface</a><br /><a href="~/ios/platform/index.md">Platform Features</a><br /><a href="~/ios/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/ios/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/ios/internals/index.md">Advanced Concepts & Internals</a></p>
     - title: Mac
-      html: <p><a href="~/mac/">Get Started</a></p>
+      href: ~/mac/index.md
+      html: <p><a href="~/mac/get-started/index.md">Get Started</a><br /><a href="~/mac/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/mac/user-interface/index.md">User Interface</a><br /><a href="~/mac/platform/index.md">Platform Features</a><br /><a href="~/mac/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/mac/internals/index.md">Advanced Concepts & Internals</a></p>

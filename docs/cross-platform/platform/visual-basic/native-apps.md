@@ -291,11 +291,11 @@ To ensure your version control system can store the PCL assembly output, you can
 
 1.  Right-click on the project and choose  **Properties > Compile** , then ensure All Configurations is selected in the top-left comb-box. Click the  **Build Events...** button in the bottom right.
 
-  [![](native-apps-images/image6.png "The project properties compile section")](native-apps-images/image6.png#lightbox)
+    [![](native-apps-images/image6.png "The project properties compile section")](native-apps-images/image6.png#lightbox)
 
 1.  Add a post-build script that copies the output DLL from this project into the project root directory (which is outside of  **/bin/** ). Depending on your version control configuration, the DLL should now be able to be added to source control.
 
-  [![](native-apps-images/image7.png "Build events window")](native-apps-images/image7.png#lightbox)
+    [![](native-apps-images/image7.png "Build events window")](native-apps-images/image7.png#lightbox)
 
 #### All Versions
 
@@ -316,15 +316,15 @@ We can still include the Visual Basic PCL assembly DLL in the Xamarin.iOS and Xa
 
 1.  Right-click on the  **References** node and select  **Edit References...**
 
-  [![](native-apps-images/image10.png "Project edit references menu")](native-apps-images/image10.png#lightbox)
+    [![](native-apps-images/image10.png "Project edit references menu")](native-apps-images/image10.png#lightbox)
 
 1.  Select the  **.Net Assembly** tab and navigate to the output DLL in the Visual Basic project directory. Even though Visual Studio for Mac cannot open the project, all the files should be there from source control. Click  **Add** then  **OK** to add this assembly to the iOS and Android applications.
 
-  [![](native-apps-images/image11-sml.png "Click  Add then  OK to add this assembly to the iOS and Android applications")](native-apps-images/image11.png#lightbox)
+    [![](native-apps-images/image11-sml.png "Click  Add then  OK to add this assembly to the iOS and Android applications")](native-apps-images/image11.png#lightbox)
 
 1.  The iOS and Android applications can now include the application logic provided by the Visual Basic Portable Class Library. This screenshot shows an iOS application that references the Visual Basic PCL and has code that uses the functionality from that library.
 
-  [![](native-apps-images/image12-sml.png "Edit references add .NET assembly window")](native-apps-images/image12.png#lightbox)
+    [![](native-apps-images/image12-sml.png "Edit references add .NET assembly window")](native-apps-images/image12.png#lightbox)
 
 
 If changes are made to the Visual Basic project in Visual Studio remember to build the project, store the resulting assembly DLL in source control, and then pull that new DLL from source control onto your Mac so that Visual Studio for Mac builds contain the latest functionality.

@@ -1,5 +1,5 @@
 ---
-title: "Localization"
+title: "Application User Interface Localization"
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
@@ -275,16 +275,16 @@ Or more accurately, don’t reuse strings just because they are similar when the
 
 For example: imagine you have an on/off switch in your app and the switch control needs the text for ‘on’ and ‘off’ to be localized. You also display the value of that setting elsewhere in the app in a text label. You should use different strings for the switch display versus the switch’s status (even if they are the same string in your default language) – for example:
 
-•	"On" – displayed on the switch itself
-•	"Off" – displayed on the switch itself
-•	"On" – displayed in a label
-•	"Off" – displayed in a label
+-	"On" – displayed on the switch itself
+-	"Off" – displayed on the switch itself
+-	"On" – displayed in a label
+-	"Off" – displayed in a label
 
 This provides maximum flexibility for the translator:
 
-•	For design reasons, perhaps the switch itself uses lowercase "on" and "off" but the display label uses upper case "On" and "Off".
-•	Some languages might need the switch value to be abbreviated to fit in the user interface control, while the complete (translated) word can appear in the label.
-•	Alternatively, for some languages the rendering of your switch might be use "I" and "O" for cultural familiarity, but you might still want the label to read "On" or "Off".
+-	For design reasons, perhaps the switch itself uses lowercase "on" and "off" but the display label uses upper case "On" and "Off".
+-	Some languages might need the switch value to be abbreviated to fit in the user interface control, while the complete (translated) word can appear in the label.
+-	Alternatively, for some languages the rendering of your switch might be use "I" and "O" for cultural familiarity, but you might still want the label to read "On" or "Off".
 
 <!--
 # Testing
@@ -339,10 +339,6 @@ setprop persist.sys.language en;setprop persist.sys.country US;stop;sleep 5;star
 **TIP:** the default location of ADB on Mac OS X is
 `/Users/[USERNAME]/Library/Developer/Xamarin/android-sdk-mac_x86/platform-tools/adb shell`
 
-
-## Windows Phone
-
-Refer to Microsoft’s instructions for [How to test region settings for Windows Phone Emulator](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh394014(v=vs.105).aspx).
 -->
 
 
@@ -350,13 +346,16 @@ Refer to Microsoft’s instructions for [How to test region settings for Windows
 
 #### Machine translation
 
-For testing purposes it is can help to use one of the many online translation tools to include some localized text in your app during development.
+To build translation features into your app, consider the [Azure Translator Text API](https://azure.microsoft.com/en-au/services/cognitive-services/translator-text-api/).
 
-- [Bing Translator](https://www.bing.com/translator/) <!--Microsoft's Multilingual Application Toolkit helps you automatically translate strings, and is demonstrated with Xamarin.Forms in [this sample]().-->
+For testing purposes you could use one of the many online translation tools to include some localized text in your app during development:
 
-- [Google Translate](http://translate.google.com)
+- [Bing Translator](https://www.bing.com/translator/)
+- [Google Translate](http://translate.google.com/)
 
 There are many others available. The quality of machine translation generally isn't considered good enough to release an application without first being reviewed and tested by professional translators or native speakers.
+
+ <!--Microsoft's Multilingual Application Toolkit helps you automatically translate strings, and is demonstrated with Xamarin.Forms in [this sample]().-->
 
 #### Professional translation
 

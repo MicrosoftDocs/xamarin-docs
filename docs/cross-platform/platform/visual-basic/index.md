@@ -20,7 +20,8 @@ Portable Class Library Support was added in Xamarin.Android 4.10.1, Xamarin.iOS 
 
 To create and compile Visual Basic Portable Class Libraries you must use Visual Studio on Windows (Visual Studio 2012 or newer).
 
-> ℹ️ **NOTE:** Visual Basic libraries can only be created and compiled using Visual Studio. Xamarin.iOS and Xamarin.Android do not support the Visual Basic language.
+> [!NOTE]
+> Visual Basic libraries can only be created and compiled using Visual Studio. Xamarin.iOS and Xamarin.Android do not support the Visual Basic language.
 >
 > If you work solely in Visual Studio you can reference the Visual Basic project from Xamarin.iOS and Xamarin.Android projects.
 >
@@ -40,15 +41,15 @@ The steps to create a PCL and choose its Profile are:
 
 1.  In the  **New Project** screen, select the  **Visual Basic > Class Library (Portable)** option:
 
-  [![](images/image1-sml.png "Create new Visual Basic Portable Library")](images/image1.png#lightbox)
+    [![](images/image1-sml.png "Create new Visual Basic Portable Library")](images/image1.png#lightbox)
 
 1.  Visual Studio will immediately prompt with the following  **Add Portable Class Library** dialog so that the Profile can be configured. Tick the platforms you need to support and press **OK**.
 
-  [![](images/image2-sml.png "Select PCL Profile by choosing platforms")](images/image2.png#lightbox)
+    [![](images/image2-sml.png "Select PCL Profile by choosing platforms")](images/image2.png#lightbox)
 
 1.  The Visual Basic PCL project will appear as shown in the  **Solution Explorer** like this:
 
-  [![](images/image3-sml.png "Empty Visual Studio PCL project")](images/image3.png#lightbox)
+    [![](images/image3-sml.png "Empty Visual Studio PCL project")](images/image3.png#lightbox)
 
 
 The PCL is now ready for Visual Basic code to be added. PCL projects can be referenced by other projects (Application projects, Library projects and even other PCL projects).

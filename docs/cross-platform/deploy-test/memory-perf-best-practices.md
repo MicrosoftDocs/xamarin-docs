@@ -16,24 +16,6 @@ _There are many techniques for increasing the performance of applications built 
 
 Poor application performance presents itself in many ways. It can make an application seem unresponsive, can cause slow scrolling, and can reduce battery life. However, optimizing performance involves more than just implementing efficient code. The user's experience of application performance must also be considered. For example, ensuring that operations execute without blocking the user from performing other activities can help to improve the user's experience.
 
-There are a number of techniques for increasing the performance, and perceived performance, of applications built with the Xamarin platform. They include:
-
-- [Use the Profiler](#profiler)
-- [Release IDisposable Resources](#idisposable)
-- [Unsubscribe from Events](#events)
-- [Use Weak References to Prevent Immortal Objects](#weakreferences)
-- [Delay the Cost of Creating Objects](#lazy)
-- [Implement Asynchronous Operations](#async)
-- [Use the SGen Garbage Collector](#sgen)
-- [Reduce the Size of the Application](#linker)
-- [Optimize Image Resources](#optimizeimages)
-- [Reduce the Application Activation Period](#activationperiod)
-- [Reduce Web Service Communication](#webservicecommunication)
-
-This free [Xamarin University video](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)
-also contains useful tips for designing Xamarin apps.
-
-[ ![](memory-perf-best-practices-images/clancey-sml.png "Free Xamarin University video on avoiding common pitfalls")](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)
 
 <a name="profiler" />
 
