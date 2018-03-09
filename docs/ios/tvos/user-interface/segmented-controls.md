@@ -53,7 +53,7 @@ Again, you cannot mix both text and icons on a given Segment and you should avoi
 
 The easiest way to work with Segment Controls in a Xamarin.tvOS app is to add them to the app's UI using the iOS Designer.
 
-[[ide name="xs"]]
+# [Visual Studio for Mac](#tab/vsmac)
 
 1. In the **Solution Pad**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Segment Control** from the **Toolbox** and drop it on the View: 
@@ -69,7 +69,7 @@ The easiest way to work with Segment Controls in a Xamarin.tvOS app is to add th
 	[![](segmented-controls-images/segment04.png "Assign a Name")](segmented-controls-images/segment04.png#lightbox)
 1. Save your changes.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio](#tab/vswin)
 	
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Segment Control** from the **Toolbox** and drop it on the View: 

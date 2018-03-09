@@ -88,34 +88,34 @@ Select the **AppResources.resx** file and show the
 **Properties** pad to see where this build tool is configure. The screenshot below
 shows the **Custom Tool: ResXFileCodeGenerator**.
 
-[[ide name="xs]]
 
-[![](localization-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](localization-images/xs-resx-internal.png#lightbox)
-
-[[/ide]]
-
-[[ide name="vs]]
+# [Visual Studio](#tab/vswin)
 
 [![](localization-images/vs-resx-internal-sml.png "Properties Window for AppResources.Resx")](localization-images/vs-resx-internal.png#lightbox)
 
-[[/ide]]
+# [Visual Studio for Mac](#tab/vsmac)
+
+[![](localization-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](localization-images/xs-resx-internal.png#lightbox)
+
+-----
 
 To make the strongly-typed string properties `public`, you must manually
 change the configuration to **Custom Tool: PublicResXFileCodeGenerator**,
 as shown in the screenshot below:
 
 
-[[ide name="xs]]
-
-[![](localization-images/xs-resx-public-sml.png "Properties Pad for AppResources.Resx")](localization-images/xs-resx-public.png#lightbox)
-
-[[/ide]]
-
-[[ide name="vs]]
+# [Visual Studio](#tab/vswin)
 
 [![](localization-images/vs-resx-public-sml.png "Properties Window for AppResources.Resx")](localization-images/vs-resx-public.png#lightbox)
 
-[[/ide]]
+# [Visual Studio for Mac](#tab/vsmac)
+
+[![](localization-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](localization-images/xs-resx-internal.png#lightbox)
+
+
+[![](localization-images/xs-resx-public-sml.png "Properties Pad for AppResources.Resx")](localization-images/xs-resx-public.png#lightbox)
+
+-----
 
 This change is optional, and is only required if you wish to reference
 localized strings across different assemblies (for example, if you put the RESX
