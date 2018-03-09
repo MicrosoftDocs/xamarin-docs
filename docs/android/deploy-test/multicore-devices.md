@@ -64,7 +64,7 @@ there is an `armeabi-v7a` directory present and the device is an
 `armeabi-v7a` device.
 
 > [!NOTE]
-> **Note**: Xamarin.Android will ensure that `.so` are added to the APK in the correct order. This bug should not be an issue for users of Xamarin.Android.
+> Xamarin.Android will ensure that `.so` are added to the APK in the correct order. This bug should not be an issue for users of Xamarin.Android.
 
 
 ### ABI Descriptions
@@ -180,7 +180,7 @@ A quick description of the contents of the `.apk` file:
     compiled into `resources.arsc` .
 
 > [!NOTE]
-> **Note**: The file `libmonodroid.so` is the native library required by all Xamarin.Android applications.
+> The file `libmonodroid.so` is the native library required by all Xamarin.Android applications.
 
 
 

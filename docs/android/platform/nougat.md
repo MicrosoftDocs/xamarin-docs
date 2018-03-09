@@ -90,7 +90,7 @@ Xamarin-based apps:
     Previewer.
 
 > [!IMPORTANT]
-> **Note:** Xamarin.Android does not support JDK 9.
+> Xamarin.Android does not support JDK 9.
 
 Note that apps must be rebuilt with Xamarin C6SR4 or later to
 work reliably with Android Nougat. Because Android Nougat can link only to
@@ -180,7 +180,7 @@ later. For more about configuring Android API level levels, see
 
 
 > [!NOTE]
-> **Note:** Currently you must set the **Minimum Android
+> Currently you must set the **Minimum Android
 version** to **Android 7.0 (API 24 - Nougat)** to deploy your
 app to Android Nougat devices or emulators.
 

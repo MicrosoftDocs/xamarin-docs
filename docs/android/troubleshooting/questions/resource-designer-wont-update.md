@@ -12,7 +12,7 @@ ms.date: 06/19/2017
 # My Android Resource.designer.cs file will not update
 
 > [!NOTE]
-> **Note:** This issue has been resolved in Xamarin Studio 5.1.4 and later versions. However, if the issue occurs in Visual Studio for Mac, please file a [new bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) with your full versioning information and full build log output.
+> This issue has been resolved in Xamarin Studio 5.1.4 and later versions. However, if the issue occurs in Visual Studio for Mac, please file a [new bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) with your full versioning information and full build log output.
 
 A bug in Xamarin.Studio 5.1 previously corrupted .csproj files by partially or completely deleting the xml code in the .csproj file. This would cause important parts of the Android build system (such as updating the Android Resource.designer.cs) to fail. As of the 5.1.4 stable release on July 15th, this bug has been fixed; but in many cases the project file has to be repaired manually, as described below.
 

@@ -134,7 +134,7 @@ object and initialize it with the current date and the callback object
 
 
 > [!NOTE]
-> **Note:** Be aware that the value of the month 
+> Be aware that the value of the month 
 > when `IOnDateSetListener.OnDateSet` is invoked is in the 
 > range of 0 to 11, and not 1 to 12. The day of the month 
 > will be in the range of 1 to 31 (depending on which month was selected).

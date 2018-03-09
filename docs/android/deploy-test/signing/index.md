@@ -89,7 +89,7 @@ key in the following location:
 **C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\chimp\\chimp.keystore**
 
 > [!NOTE]
-> **Note:** Be sure to back up the resulting keystore file in a
+> Be sure to back up the resulting keystore file in a
 > safe place &ndash; it is not included in the Solution. If you lose your
 > keystore file (for example, because you moved to another computer or 
 > reinstalled Windows), you will be unable to
@@ -127,7 +127,7 @@ key in the following location:
 
 
 > [!NOTE]
-> **Note:** Be sure to back up the resulting keystore file in a
+> Be sure to back up the resulting keystore file in a
 > safe place &ndash; it is not included in the Solution. If you lose your
 > keystore file (for example, because you moved to another computer or 
 > reinstalled your Mac), you will be unable to

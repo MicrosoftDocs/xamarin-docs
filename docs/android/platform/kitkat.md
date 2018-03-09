@@ -130,7 +130,7 @@ permission. The two types can be classified as such:
    `WRITE_EXTERNAL_STORAGE` permission.
 
 > [!NOTE]
-> **Note:** `WRITE_EXTERNAL_STORAGE` implies the
+> `WRITE_EXTERNAL_STORAGE` implies the
 `READ_EXTERNAL_STORAGE` permission, so you should only ever need to set
 one permission.
 
@@ -343,7 +343,7 @@ The screenshot below illustrates the scene after the animation:
 
 
 > [!NOTE]
-> **Note:** There is a
+> There is a
 [known bug](https://code.google.com/p/android/issues/detail?id=62450)
 in the Android Transitions library that causes Scenes created using
 `GetSceneForLayout` to break when a user navigates through an Activity
@@ -569,7 +569,7 @@ settings by navigating to **Settings > System > Printing**:
 
 
 > [!NOTE]
-> **Note:** Although the printing APIs are set up to work with
+> Although the printing APIs are set up to work with
 Google Cloud Print by default, Android still lets developers prepare
 print content using the new APIs, and send it to other applications to
 handle printing.
@@ -906,7 +906,7 @@ state of the device.
 
 
 > [!NOTE]
-> **Note:** While the API for the step detection and counting
+> While the API for the step detection and counting
 ships with KitKat, not all phones are outfitted with the sensor. You
 can check if the sensor is available by running
 `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`,

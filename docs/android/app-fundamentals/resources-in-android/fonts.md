@@ -4,9 +4,9 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA$
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 03/01/2018
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
 ---
 
 # Fonts

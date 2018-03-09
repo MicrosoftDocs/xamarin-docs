@@ -30,7 +30,7 @@ Manager for Visual Studio for Mac (or
 [for Windows](?tabs=vswin)).
 
 > [!NOTE]
-> **Note:** This guide applies only to Visual Studio 2017 and Visual Studio for Mac.  
+> This guide applies only to Visual Studio 2017 and Visual Studio for Mac.  
 
 -----
 
@@ -81,7 +81,7 @@ use
 if you are developing specifically for API level 23 or earlier.
 
 > [!IMPORTANT]
-> **Note:** Xamarin.Android does not support JDK 9.
+> Xamarin.Android does not support JDK 9.
 
 
 # [Visual Studio](#tab/vswin)

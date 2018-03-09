@@ -26,7 +26,7 @@ legacy Google Emulator Manager to create virtual devices.
 
 
 > [!NOTE]
-> **Note:** As of Android SDK Tools version **26.0.1** and later, Google has removed support for existing AVD/SDK managers in favor of their new CLI (Command Line Interface) tools. Because of this deprecation change, Xamarin SDK/Device Managers are now used instead of Google SDK/Emulator Managers for Android Tools 26.0.1 and later. (For more information about the Xamarin SDK Manager, see [Android SDK Setup](~/android/get-started/installation/android-sdk.md)).
+> As of Android SDK Tools version **26.0.1** and later, Google has removed support for existing AVD/SDK managers in favor of their new CLI (Command Line Interface) tools. Because of this deprecation change, Xamarin SDK/Device Managers are now used instead of Google SDK/Emulator Managers for Android Tools 26.0.1 and later. (For more information about the Xamarin SDK Manager, see [Android SDK Setup](~/android/get-started/installation/android-sdk.md)).
 
 
 ## Sections

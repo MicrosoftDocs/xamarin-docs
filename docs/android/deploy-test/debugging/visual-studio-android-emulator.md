@@ -41,7 +41,7 @@ about requirements, see
 [System Requirements for the Visual Studio Emulator for Android](https://msdn.microsoft.com/en-us/library/mt228280.aspx).
 
 > [!NOTE]
-> **Note:** You cannot use HAXM (used by the Android SDK
+> You cannot use HAXM (used by the Android SDK
 Emulator) while Hyper-V is enabled. For more about the limitations and
 potential problems with HAXM, see
 [HAXM Virtualization Conflicts](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#virt-conflicts).

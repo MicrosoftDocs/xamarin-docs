@@ -68,7 +68,7 @@ services client can be found:
 ![Google Play Services appears under Extras in the Android SDK Manager](maps-api-images/image01.png)
 
 > [!NOTE]
-> **Note:** The Google Play services APK is a licensed product
+> The Google Play services APK is a licensed product
 > that may not be present on all devices. If it is not installed, then
 > Google Maps will not work on the device.
 

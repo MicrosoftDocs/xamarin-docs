@@ -88,7 +88,7 @@ Once you have decompiled the Android library, examine the source code. Generally
   **ReferenceJar** or **EmbedddedReferenceJar**.
 
 > [!NOTE]
-> **Note:** Decompiling a Java library may be prohibited or
+> Decompiling a Java library may be prohibited or
 subject to legal restrictions based on local laws or the license under
 which the Java library was published. If necessary, enlist the services
 of a legal professional before attempting to decompile a Java library

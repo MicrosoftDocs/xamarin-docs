@@ -5,9 +5,9 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: D7ABAFAB-5CA2-443D-B902-2C7F3AD69CE2
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 03/01/2018
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
 ---
 
 # HttpClient Stack and SSL/TLS Implementation Selector for Android

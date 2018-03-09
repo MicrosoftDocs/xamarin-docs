@@ -195,7 +195,7 @@ XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler
 ```
 
 > [!NOTE]
-> **Note:** The underlying Android device must support TLS 1.2.
+> The underlying Android device must support TLS 1.2.
 Android 5.0 and later support TLS 1.2
 
 

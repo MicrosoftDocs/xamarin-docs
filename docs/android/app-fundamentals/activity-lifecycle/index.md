@@ -464,7 +464,7 @@ c = bundle.GetInt ("counter", -1);
 ```
 
 > [!NOTE]
-> **Note:** It is important to always call the base implementation of
+> It is important to always call the base implementation of
 > `OnSaveInstanceState` so that the state of the view hierarchy can also be saved.
 
 

@@ -22,7 +22,6 @@ that enables devices running Android 1.6 (API level 4) to Android
 2.3.3. (API level 10).
 
 > [!NOTE]
-> **Note**: 
 > Only the `ListFragment` and the `DialogFragment` are available via the 
 > Android Support Package. None of the other Fragment subclasses, such as 
 > the `PreferenceFragment,` are supported in the Android Support Package. 

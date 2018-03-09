@@ -4,9 +4,9 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: C10FD999-7A91-4708-B642-0C1B0901BD24
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 02/16/2018
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
 ---
 
 # Foreground Services

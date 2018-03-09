@@ -51,7 +51,7 @@ Manager for Visual Studio for Mac (or [for Windows](?tabs=vswin)):
 [![Screenshot of the Xamarin Android Device Manager in the Devices tab](xamarin-device-manager-images/mac/01-devices-dialog-sml.png)](xamarin-device-manager-images/mac/01-devices-dialog.png#lightbox)
 
 > [!NOTE]
-> **Note:** This guide applies only to Visual Studio for Mac.
+> This guide applies only to Visual Studio for Mac.
 Xamarin Studio is incompatible with the Xamarin Android Device Manager.
 
 -----

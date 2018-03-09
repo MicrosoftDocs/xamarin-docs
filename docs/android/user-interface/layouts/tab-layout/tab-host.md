@@ -18,7 +18,7 @@ _This article will provide a high level overview of the the TabHost, an older AP
 ## Overview
 
 > [!NOTE]
-> **Note:** `TabHost` is an old API that has been deprecated by Google. Developers are encouraged to
+> `TabHost` is an old API that has been deprecated by Google. Developers are encouraged to
 > build tabbed applications using the [ActionBar](~/android/user-interface/controls/action-bar.md). The
 > `ActionBar` is available in all version of Android. It was first introduced in Android 3.0 (API level 11)
 > and was back ported to Android 2.2 (API level 8) and Android 2.3 (API level 10) in

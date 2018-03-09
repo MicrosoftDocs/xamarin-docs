@@ -403,7 +403,7 @@ interface.
 
 
 > [!NOTE]
-> **Note:** Beginning with Xamarin.Android 1.9, Java interface
+> Beginning with Xamarin.Android 1.9, Java interface
 constants are <em>duplicated</em> in an effort to simplify porting Java
 code. This helps to improve porting Java code that relies on
 [android provider](http://developer.android.com/reference/android/provider/package-summary.html)

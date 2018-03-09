@@ -84,7 +84,7 @@ Once these steps are complete, the Xamarin.Android Java Binding project can
 be used as described earlier on in this document.
 
 > [!NOTE]
-> **Note**: Compiling the Android library projects in other IDEs is not supported at this time. Other IDEs may not create the same directory structure or files in the **bin** folder as Eclipse. 
+> Compiling the Android library projects in other IDEs is not supported at this time. Other IDEs may not create the same directory structure or files in the **bin** folder as Eclipse. 
 
 
 ## Summary

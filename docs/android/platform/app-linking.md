@@ -80,7 +80,7 @@ Android will verify every host that is identified by the intent filters against 
 Android 6.0 app-linking requires that Android verify the association between the application and the website before setting the application as the default handler for the URI. This verification will occur when the application is first installed. The *Digital Assets Links* file is a JSON file that is hosted by the relevant webdomain(s).
 
 > [!NOTE]
-> **Note:** The `android:autoVerify` attribute must be set by the intent filter &ndash; otherwise Android will not perform the verification.
+> The `android:autoVerify` attribute must be set by the intent filter &ndash; otherwise Android will not perform the verification.
 
 The file is placed by the webmaster of the domain at the location **https://domain/.well-known/assetlinks.json**.
 

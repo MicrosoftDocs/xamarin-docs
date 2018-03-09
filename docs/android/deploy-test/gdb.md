@@ -17,7 +17,7 @@ Xamarin.Android 4.10 introduced partial support for using `gdb`
 by using the the `_Gdb` MSBuild target. 
 
 > [!NOTE]
-> **Note:** `gdb` support requires that the
+> `gdb` support requires that the
 Android NDK be installed.
 
 There are three ways to use `gdb`:
@@ -65,7 +65,7 @@ and copy the contents of your target's `/system/lib` and `$APPDIR/lib` directori
 
 
 > [!NOTE]
-> **Note:** The contents of the `gdb-symbols` directory are tied
+> The contents of the `gdb-symbols` directory are tied
 to the Android target you deployed to, and will not be automatically replaced
 should you change the target. (Consider this a bug.) If you change Android target
 devices, you will need to manually delete this directory.

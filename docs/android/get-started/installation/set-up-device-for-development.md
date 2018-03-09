@@ -83,7 +83,7 @@ It may be necessary to install some extra drivers before a Windows
 computer will recognize an Android device connected by USB.
 
 > [!NOTE]
-> **Note:** These are the steps to set up a Google Nexus device
+> These are the steps to set up a Google Nexus device
 > and are provided as a reference. Steps for your specific device may
 > vary, but will follow a similar pattern. Search the internet for your
 > device if you have trouble.

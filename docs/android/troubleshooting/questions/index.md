@@ -93,7 +93,7 @@ will encounter duplicate type errors.
 ## Deprecated
 
 > [!NOTE]
-> **Note:** The articles below apply to issues that have been
+> The articles below apply to issues that have been
 resolved in recent versions of Xamarin. However, if the issue occurs on
 the latest version of the software, please file a
 [new bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md)
