@@ -1,5 +1,6 @@
 ---
 title: "Controls Reference"
+description: "A description of all the visual elements used to construct a Xamarin.Forms application."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
@@ -11,32 +12,20 @@ ms.date: 01/12/2016
 
 # Controls Reference
 
-Xamarin.Forms uses
-  use the native controls of each target platform.
-  This means applications can use [Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md) or [Shared Projects](~/cross-platform/app-fundamentals/shared-projects.md)
-  to house this shared code, and then make platform
-  specific applications that will consume the shared code.
+_A description of all the visual elements used to construct a Xamarin.Forms application._
 
-There are four main control groups used to create the user
-  interface of a Xamarin.Forms application:
+The visual interface of a Xamarin.Forms application is constructed of objects that map to the native controls of each target platform. This allows platform-specific applications for iOS, Android, and the Universal Windows Platform to use Xamarin.Forms code contained in a [Portable Class Library](~/cross-platform/app-fundamentals/pcl.md), a [.NET Standard Library](~/cross-platform/app-fundamentals/net-standard.md), or a [Shared Project](~/cross-platform/app-fundamentals/shared-projects.md).
+
+The four main control groups used to create the user interface of a Xamarin.Forms application are shown in these four articles:
 
 - [**Pages**](pages.md)
 - [**Layouts**](layouts.md)
 - [**Views**](views.md)
 - [**Cells**](cells.md)
 
-At runtime each
-  control will be mapped to its native equivalent,
-  which is what will be rendered.
+A Xamarin.Forms page generally occupies the entire screen. The page usually contains a layout, which contains views and possibly other layouts. Cells are specialized components used in connection with [`TableView`](views.md#tableView) and [`ListView`](views.md#listView).
 
-This section serves as a reference showing many of
-  the UI controls available for use with Xamarin.Forms,
-  and is accompanied by the [FormsGallery sample](https://developer.xamarin.com/samples/FormsGallery/),
-  which demonstrates a basic use of each control.
-  Each description also links to
-  the [API Documentation](https://developer.xamarin.com/api/namespace/Xamarin.Forms/).
-
-
+In the four articles on [**Pages**](pages.md), [**Layouts**](layouts.md), [**Views**](views.md), and [**Cells**](cells.md), each type of control is described with links to its API documentation, an article describing its use (if one exists), and one or more sample programs (if they exist). Each type of control is also accompanied by a screenshot showing a page from the [**FormsGallery**](https://developer.xamarin.com/samples/FormsGallery/) sample running on iOS, Android, and UWP devices. Below each screenshot are links to the source code for the C# page, the equivalent XAML page, and (when appropriate) the C# code-behind file for the XAML page.
 
 ## Related Links
 
