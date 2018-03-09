@@ -7,14 +7,13 @@ ms.assetid: 646ED563-C34E-256D-4B56-29EE99881C27
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 02/28/2018
 ---
 
 # Android Audio
 
 _The Android OS provides extensive support for multimedia, encompassing both audio and video. This guide focuses on audio in Android and covers playing and recording audio using the built-in audio player and recorder classes, as well as the low-level audio API. It also covers working with Audio events broadcast by other applications, so that developers can build well-behaved applications._
 
-<a name="Overview" />
 
 ## Overview
 
@@ -54,7 +53,6 @@ It is necessary to request the `RECORD_AUDIO` permissions in **AndroidManifest.X
 ![Required permissions section of Android Manifest with RECORD\_AUDIO enabled](android-audio-images/image01.png)
 
 
-<a name="Playing_Audio_with_the_MediaPlayer_Class" />
 
 ## Playing Audio with the MediaPlayer Class
 
@@ -67,7 +65,6 @@ thrown. It's important to interact with `MediaPlayer` in the order
 described below to avoid errors.
 
 
-<a name="Initializing_and_Playing" />
 
 ### Initializing and Playing
 
@@ -106,7 +103,6 @@ public void StartPlayer(String  filePath)
 }
 ```
 
-<a name="Suspending_and_Resuming_Playback" />
 
 ### Suspending and Resuming Playback
 
@@ -141,7 +137,6 @@ calling the
 player.Release();
 ```
 
-<a name="Using_the_MediaRecorder_Class_to_Record_Audio" />
 
 
 ## Using the MediaRecorder Class to Record Audio
@@ -154,7 +149,6 @@ order to record audio, the `RECORD_AUDIO` permission must be set. For
 instructions on how to set application permissions see
 [Working with AndroidManifest.xml](~/android/platform/android-manifest.md).
 
-<a name="Initializing_and_Recording" />
 
 ### Initializing and Recording
 
@@ -219,7 +213,6 @@ void RecordAudio (String filePath)
 }
 ```
 
-<a name="Stopping_recording" />
 
 ### Stopping recording
 
@@ -229,7 +222,6 @@ To stop the recording, call the `Stop` method on the `MediaRecorder`:
 recorder.Stop();
 ```
 
-<a name="Cleaning_up" />
 
 
 ### Cleaning up
@@ -251,11 +243,9 @@ method:
 recorder.Release();
 ```
 
-<a name="Managing_Audio_Notifications" />
 
 ## Managing Audio Notifications
 
-<a name="The_AudioManager_Class" />
 
 
 ### The AudioManager Class
@@ -267,7 +257,6 @@ features, such as volume and ringer mode control. The `AudioManager`
 allows an application to handle audio notifications to control audio
 playback.
 
-<a name="Managing_Audio_Focus" />
 
 
 ### Managing Audio Focus
@@ -301,7 +290,6 @@ For more information about audio focus, see
 [Managing Audio Focus](http://developer.android.com/training/managing-audio/audio-focus.html).
 
 
-<a name="Registering_the_Callback_for_Audio_Focus" />
 
 #### Registering the Callback for Audio Focus
 
@@ -325,7 +313,6 @@ the callback. This deregisters the callback and releases the audio
 resources, so that other applications may obtain audio focus.
 
 
-<a name="Requesting_Audio_Focus" />
 
 #### Requesting Audio Focus
 
@@ -368,7 +355,6 @@ Boolean RequestAudioResources(INotificationReceiver parent)
 }
 ```
 
-<a name="Releasing_Audio_Focus" />
 
 #### Releasing Audio Focus
 
@@ -378,7 +364,6 @@ the audio resources of the device. Other applications will receive a
 notification of this audio focus change if they have registered their
 own listeners.
 
-<a name="Low_Level_Audio_API" />
 
 ## Low Level Audio API
 
@@ -394,16 +379,12 @@ approach is preferable. Such scenarios include:
 3.  Audio streaming.
 
 
- <a name="AudioTrack_Class" />
-
-
 ### AudioTrack Class
 
 The [AudioTrack](https://developer.xamarin.com/api/type/Android.Media.AudioTrack/) class uses the
 low-level audio APIs for recording, and is the low-level equivalent of
 the `MediaPlayer` class.
 
-<a name="Initializing_and_Playing" />
 
 #### Initializing and Playing
 
@@ -453,7 +434,6 @@ void PlayAudioTrack(byte[] audioBuffer)
 }
 ```
 
-<a name="Pausing_and_Stopping_the_Playback" />
 
 #### Pausing and Stopping the Playback
 
@@ -473,7 +453,6 @@ terminate the playback permanently:
 audioTrack.Stop();
 ```
 
-<a name="Cleaning_up" />
 
 #### Cleanup
 
@@ -484,7 +463,6 @@ released by calling [Release](https://developer.xamarin.com/api/member/Android.M
 audioTrack.Release();
 ```
 
-<a name="The_AudioRecord_Class" />
 
 ### The AudioRecord Class
 
@@ -493,7 +471,6 @@ equivalent of `AudioTrack` on the recording side. Like `AudioTrack`, it
 uses memory buffers directly, in place of files and URIs. It requires
 that the `RECORD_AUDIO` permission be set in the manifest.
 
-<a name="Initializing_and_Recording" />
 
 #### Initializing and Recording
 
@@ -555,7 +532,6 @@ void RecordAudio()
 }
 ```
 
-<a name="Stopping_the_Recording" />
 
 #### Stopping the Recording
 
@@ -567,7 +543,6 @@ terminates the recording:
 audRecorder.Stop();
 ```
 
-<a name="Clean_Up" />
 
 #### Cleanup
 
@@ -579,7 +554,6 @@ method releases all resources associated with it:
 audRecorder.Release();
 ```
 
-<a name="Summary" />
 
 ## Summary
 

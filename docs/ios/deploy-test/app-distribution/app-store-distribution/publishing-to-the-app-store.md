@@ -130,7 +130,7 @@ Do the following:
 4. Linking reduces the overall size of your application's distributable by stripping out unused Methods, Properties, Classes, etc. and in most cases should be left to the default value of **Link SDK assemblies only**. In some situations, such as when using some specific 3rd party libraries, you may be forced to set this value to **Don't link** to keep required elements from being removed. For more information, refer to the [iOS Build Mechanics](~/ios/deploy-test/ios-build-mechanics.md) guide.
 5. The **Optimize PNG image files for iOS** checkbox should be checked as this will help to further decrease your application's deliverable size.
 6. Debugging should _not_ be enabled as it will make the build unnecessarily large.
-8. For iOS 11, you'll need to select one of the device architectures that supports **ARM64**. For more information on building for 64 bit iOS devices, please see the **Enabling 64 Bit Builds of Xamarin.iOS Apps** section of the [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64.md) documentation.
+8. For iOS 11, you'll need to select one of the device architectures that supports **ARM64**. For more information on building for 64 bit iOS devices, please see the **Enabling 64 Bit Builds of Xamarin.iOS Apps** section of the [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md) documentation.
 9. You may wish to optionally use the **LLVM** compiler which creates smaller and faster code, however it will take longer to compile.
 10. Based on your application's needs, you may also wish to adjust the type of **Garbage Collection** being used and setup for **Internationalization**.
 11. Save your changes to the build configuration.
@@ -154,7 +154,7 @@ Do the following:
 
 	![](publishing-to-the-app-store-images/configurevs02.png "The Advanced tab")
 
-8. If your Xamarin.iOS application is targeting iOS 8 and 64 bit iOS devices, you'll need to select one of the device architectures that supports **ARM64**. For more information on building for 64 bit iOS devices, please see the **Enabling 64 Bit Builds of Xamarin.iOS Apps** section of the [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64.md) documentation.
+8. If your Xamarin.iOS application is targeting iOS 8 and 64 bit iOS devices, you'll need to select one of the device architectures that supports **ARM64**. For more information on building for 64 bit iOS devices, please see the **Enabling 64 Bit Builds of Xamarin.iOS Apps** section of the [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md) documentation.
 9. You may wish to optionally use the **LLVM** compiler which creates smaller and faster code, however it will take longer to compile.
 10. Based on your application's needs, you may also wish to adjust the type of **Garbage Collection** being used and setup for **Internationalization**.
 11. Save your changes to the build configuration.
@@ -348,16 +348,16 @@ Submitting your application to Apple for review is done by using the Application
 
 1. Select *Deliver Your App* and click the *Choose* button:
 
-	[ ![](publishing-to-the-app-store-images/publishvs01.png "Select Deliver Your App")](publishing-to-the-app-store-images/publishvs01.png)
+	[![](publishing-to-the-app-store-images/publishvs01.png "Select Deliver Your App")](publishing-to-the-app-store-images/publishvs01.png#lightbox)
 
 2. Select the zip or IPA file you created above and click the **OK** button.
 
 3. The Application Loader will validate the file:
 
-	[ ![](publishing-to-the-app-store-images/publishvs02.png "The validation screen")](publishing-to-the-app-store-images/publishvs02.png)
+	[![](publishing-to-the-app-store-images/publishvs02.png "The validation screen")](publishing-to-the-app-store-images/publishvs02.png#lightbox)
 4. Click the *Next* button and the application will be validated against the App Store:
 
-	[ ![](publishing-to-the-app-store-images/publishvs03.png "Validating against the App Store")](publishing-to-the-app-store-images/publishvs03.png)
+	[![](publishing-to-the-app-store-images/publishvs03.png "Validating against the App Store")](publishing-to-the-app-store-images/publishvs03.png#lightbox)
 5. Click the **Send** button to send the application to Apple for review.
 6. The Application Loader will inform you when the file has been successfully uploaded.
 
@@ -365,7 +365,7 @@ Submitting your application to Apple for review is done by using the Application
 
 If you log back into iTunes Connect and select your application from the list of available apps, the status in iTunes Connect should now show that it is **Waiting for Review** (it may temporarily read **Upload Received** while it is processed):
 
-[ ![](publishing-to-the-app-store-images/image21.png "The status in iTunes Connect should now show that it is Waiting for Review")](publishing-to-the-app-store-images/image21.png)
+[![](publishing-to-the-app-store-images/image21.png "The status in iTunes Connect should now show that it is Waiting for Review")](publishing-to-the-app-store-images/image21.png#lightbox)
 
 ## Summary
 

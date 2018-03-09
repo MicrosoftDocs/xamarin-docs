@@ -28,7 +28,7 @@ to better understand how software rendering works.
 -    [Lesson 7: Shadow mapping](https://developer.xamarin.com/workbooks/graphics/tiny-renderer/lesson7.workbook)
 -    [Lesson 8: Ambient occlusion](https://developer.xamarin.com/workbooks/graphics/tiny-renderer/lesson8.workbook)
 
-[ ![](tinyrenderer-images/tinyrenderer-sml.png "Wireframe rendering example")](tinyrenderer-images/tinyrenderer.png)
+[![](tinyrenderer-images/tinyrenderer-sml.png "Wireframe rendering example")](tinyrenderer-images/tinyrenderer.png#lightbox)
 
 The C# code in these workbooks is based on this
 open source [C++ code](https://github.com/ssloy/tinyrenderer) and the text is

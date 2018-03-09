@@ -14,7 +14,6 @@ ms.date: 02/16/2018
 
 _This topic describes how to handle device orientation changes in Xamarin.Android. It covers how to work with the Android resource system to automatically load resources for a particular device orientation as well as how to programmatically handle orientation changes._
 
-<a name="Overview" />
 
 ## Overview
 
@@ -40,7 +39,6 @@ This guide examines the following orientation topics:
     programmatically as well as how to handle orientation changes
     manually.
 
-<a name="Handling_Rotation_Declaratively_with_Layouts" />
 
 ## Handling Rotation Declaratively with Layouts
 
@@ -54,7 +52,6 @@ This includes support for:
 -   *Drawable Resources* &ndash; Specifying which drawables are loaded
     for each orientation.
 
-<a name="Layout_Resources" />
 
 ### Layout Resources
 
@@ -65,7 +62,7 @@ landscape orientation if no additional layout resources are provided
 specifically for landscape. Consider the project structure created by
 the default project template:
 
-[ ![Default project template structure](handling-rotation-images/00.png)](handling-rotation-images/00.png)
+[![Default project template structure](handling-rotation-images/00.png)](handling-rotation-images/00.png#lightbox)
 
 This project creates a single **Main.axml** file in the
 **Resources/layout** folder. When the Activity's `OnCreate` method is
@@ -90,9 +87,8 @@ If the device is rotated to landscape orientation, the Activity's
 `OnCreate` method is called again and the same **Main.axml** file is
 inflated, as shown in the screenshot below:
 
-[ ![Same screen but in landscape orientation](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png)
+[![Same screen but in landscape orientation](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png#lightbox)
 
-<a name="Orientation-Specific_Layouts" />
 
 #### Orientation-Specific Layouts
 
@@ -137,9 +133,8 @@ version of the code, but uses a different string in the `TextView`):
 Running this code and rotating the device from portrait to landscape
 demonstrates the new XML loading, as shown below:
 
-[ ![Portrait and landscape screenshots printing the portrait mode](handling-rotation-images/02.png)](handling-rotation-images/02.png)
+[![Portrait and landscape screenshots printing the portrait mode](handling-rotation-images/02.png)](handling-rotation-images/02.png#lightbox)
 
-<a name="Drawable_Resources" />
 
 ### Drawable Resources
 
@@ -166,9 +161,8 @@ under **Resources/drawable-land**. Just like with the layout files,
 when the device is rotated, the drawable changes for the given
 orientation, as shown below:
 
-[ ![Different version of Monkey.png shown in portrait and landscape modes](handling-rotation-images/03.png)](handling-rotation-images/03.png)
+[![Different version of Monkey.png shown in portrait and landscape modes](handling-rotation-images/03.png)](handling-rotation-images/03.png#lightbox)
 
-<a name="Handling_Rotation_Programmatically" />
 
 ## Handling Rotation Programmatically
 
@@ -178,7 +172,6 @@ When we add controls programmatically, an application must manually
 account for device orientation, which is handled automatically when we
 use XML resources.
 
-<a name="Adding_Controls_in_Code" />
 
 ### Adding Controls in Code
 
@@ -232,9 +225,8 @@ this example. After the `TextView` is created, adding it to the
 `RelativeLayout` and setting the `RelativeLayout` as the content view
 results in the application displaying the `TextView` as shown:
 
-[ ![Increment counter button shown in both portrait and landscape modes](handling-rotation-images/04.png)](handling-rotation-images/04.png)
+[![Increment counter button shown in both portrait and landscape modes](handling-rotation-images/04.png)](handling-rotation-images/04.png#lightbox)
 
-<a name="Detecting_Orientation_in_Code" />
 
 ### Detecting Orientation in Code
 
@@ -288,9 +280,8 @@ This code sets the `TextView` to be positioned 100 pixels from the top
 left of the screen, automatically animating to the new layout, when
 rotated to landscape, as shown here:
 
-[ ![View state is preserved across portrait and landscape modes](handling-rotation-images/05.png)](handling-rotation-images/05.png)
+[![View state is preserved across portrait and landscape modes](handling-rotation-images/05.png)](handling-rotation-images/05.png#lightbox)
 
-<a name="Preventing_Activity_Restart" />
 
 ### Preventing Activity Restart
 
@@ -367,7 +358,6 @@ orientation changes. The code still uses the `surfaceOrientartion` in
 When we run the application, Android loads the user interface changes
 as device rotation occurs, and does not restart the Activity.
 
-<a name="Preventing_Activity_Restart_for_Declarative_Layouts" />
 
 ## Preventing Activity Restart for Declarative Layouts
 
@@ -382,7 +372,6 @@ programmatic layout. Simply set `ConfigurationChanges` in the
 code that does need to run for the orientation change can again be
 implemented in the `OnConfigurationChanged` method.
 
-<a name="Maintaining_State_During_Orientation_Changes" />
 
 ## Maintaining State During Orientation Changes
 
@@ -403,7 +392,6 @@ For more information on persisting state in Android, refer to the
 [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md)
 guide.
 
-<a name="Summary" />
 
 ## Summary
 

@@ -7,7 +7,7 @@ ms.assetid: D1277939-A1E8-468E-B136-820D816AF853
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
+ms.date: 03/01/2018
 ---
 
 # Android Localization
@@ -90,7 +90,7 @@ suffixing resource directories with language and culture identifiers.
 ![Screenshot of Resources/drawable and Resources/values folders for multiple cultural identifiers](localization-images/resources.png)
 
 > [!NOTE]
-> **Note:** when specifying a top-level language like `es` only
+> When specifying a top-level language like `es` only
 two characters are required; however when specifying a full locale, the
 directory name format requires a dash and lowercase **r** to separate
 the two parts, for example **pt-rBR** or **zh-rCN**. Compare this to
@@ -191,13 +191,13 @@ In the **Strings.xml**
 
 ```xml
 <plurals name="numberOfTasks">
-		 <!--
-					As a developer, you should always supply "one" and "other"
-					strings. Your translators will know which strings are actually
-					needed for their language.
-			 -->
-		 <item quantity="one">There is %d task left.</item>
-		 <item quantity="other">There are %d tasks still to do.</item>
+   <!--
+      As a developer, you should always supply "one" and "other"
+      strings. Your translators will know which strings are actually
+      needed for their language.
+    -->
+   <item quantity="one">There is %d task left.</item>
+   <item quantity="other">There are %d tasks still to do.</item>
  </plurals>
 ```
 
@@ -283,16 +283,14 @@ screens that adapt for RTL readers.
 
 The following screenshot shows the [localized **Tasky** sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in Arabic:
 
-[![Screenshot of Tasky app in Arabic](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png) 
+[![Screenshot of Tasky app in Arabic](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
 
 The next screenshot shows the [localized **Tasky** sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in Hebrew:
 
-[![Screenshot of Tasky app in Hebrew](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png)
+[![Screenshot of Tasky app in Hebrew](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
 
 RTL text is localized using **Strings.xml** files in the same way as
 LTR text.
-
-<a name="testing" />
 
 ## Testing
 

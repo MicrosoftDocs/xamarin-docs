@@ -21,7 +21,7 @@ alphanumeric phone number (entered by the user) into a numeric phone
 number and display the numeric phone number to the user. The final application looks like
 this:
 
-[![Screenshot of app when it is complete](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png)
+[![Screenshot of app when it is complete](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
 
 
 ## Requirements
@@ -77,7 +77,7 @@ Start Visual Studio.  Click **File > New > Project** to create a new project.
 In the **New Project** dialog, click the **Blank App (Android)** template.
 Name the new project `Phoneword`. Click **OK** to create the new project:
 
-[![New project is Phoneword](hello-android-quickstart-images/vs/02-new-project-name-sml.png)](hello-android-quickstart-images/vs/02-new-project-name.png)
+[![New project is Phoneword](hello-android-quickstart-images/vs/02-new-project-name-sml.png)](hello-android-quickstart-images/vs/02-new-project-name.png#lightbox)
 
 ### Creating the Layout
 
@@ -86,48 +86,48 @@ folder and then the **layout** folder in the **Solution Explorer**.
 Double-click **Main.axml** to open it in the Android Designer. This
 is the layout file for the app's screen:
 
-[![Open Main.axml](hello-android-quickstart-images/vs/04-open-layout-sml.png)](hello-android-quickstart-images/vs/04-open-layout.png)
+[![Open Main.axml](hello-android-quickstart-images/vs/04-open-layout-sml.png)](hello-android-quickstart-images/vs/04-open-layout.png#lightbox)
 
 From the **Toolbox** (the area on the left), enter `text` into the search
 field and drag a **Text (Large)** widget onto the design surface
 (the area in the center):
 
-[![Add large text widget](hello-android-quickstart-images/vs/04-large-text-sml.png)](hello-android-quickstart-images/vs/04-large-text.png)
+[![Add large text widget](hello-android-quickstart-images/vs/04-large-text-sml.png)](hello-android-quickstart-images/vs/04-large-text.png#lightbox)
 
 With the **Text (Large)** control selected on the design surface,
 use the **Properties** pane to change the `text` property of
 the **Text (Large)** widget to `Enter a Phoneword:` as shown here:
 
-[![Set large text properties](hello-android-quickstart-images/vs/05-enter-a-phoneword-sml.png)](hello-android-quickstart-images/vs/05-enter-a-phoneword.png)
+[![Set large text properties](hello-android-quickstart-images/vs/05-enter-a-phoneword-sml.png)](hello-android-quickstart-images/vs/05-enter-a-phoneword.png#lightbox)
 
 Drag a **Plain Text** widget from the **Toolbox** to
 the design surface and place it underneath the **Text (Large)**
 widget:
 
-[![Add plain text widget](hello-android-quickstart-images/vs/06-plain-text-sml.png)](hello-android-quickstart-images/vs/06-plain-text.png)
+[![Add plain text widget](hello-android-quickstart-images/vs/06-plain-text-sml.png)](hello-android-quickstart-images/vs/06-plain-text.png#lightbox)
 
 With the **Plain Text** widget selected on the design surface,
 use the **Properties** pane to change the `id` property of the
 **Plain Text** widget to `@+id/PhoneNumberText` and change the
 `text` property to `1-855-XAMARIN`:
 
-[![Set plain text properties](hello-android-quickstart-images/vs/07-add-properties-sml.png)](hello-android-quickstart-images/vs/07-add-properties.png)
+[![Set plain text properties](hello-android-quickstart-images/vs/07-add-properties-sml.png)](hello-android-quickstart-images/vs/07-add-properties.png#lightbox)
 
 Drag a **Button** from the **Toolbox** to the design
 surface and place it underneath the **Plain Text** widget:
 
-[![Drag translate button to the design](hello-android-quickstart-images/vs/08-drag-button-sml.png)](hello-android-quickstart-images/vs/08-drag-button.png)
+[![Drag translate button to the design](hello-android-quickstart-images/vs/08-drag-button-sml.png)](hello-android-quickstart-images/vs/08-drag-button.png#lightbox)
 
 With the **Button** selected on the design surface, use the
 **Properties** pane to change the `id` property of the **Button**
 to `@+id/TranslateButton` and change the `text` property to
 `Translate`:
 
-[![Set translate button properties](hello-android-quickstart-images/vs/09-translate-button-sml.png)](hello-android-quickstart-images/vs/09-translate-button.png)
+[![Set translate button properties](hello-android-quickstart-images/vs/09-translate-button-sml.png)](hello-android-quickstart-images/vs/09-translate-button.png#lightbox)
 
 Drag a **TextView** from the **Toolbox** to the design surface and place it under the **Button** widget. Set the `id` property of the **TextView** to `@+id/TranslatedPhoneWord` and change the `text` to an empty string:
 
-[![Set the properties on the text view.](hello-android-quickstart-images/vs/10-textview-properties-sml.png)](hello-android-quickstart-images/vs/10-textview-properties.png)    
+[![Set the properties on the text view.](hello-android-quickstart-images/vs/10-textview-properties-sml.png)](hello-android-quickstart-images/vs/10-textview-properties.png#lightbox)    
 
 Save your work by pressing **CTRL+S**.
 
@@ -138,12 +138,12 @@ alphanumeric to numeric. Add a new file to the project by
 right-clicking the **Phoneword** project in the **Solution
 Explorer** pane and choosing **Add > New Item...** as shown below:
 
-[![Add new item](hello-android-quickstart-images/vs/12-add-new-item-sml.png)](hello-android-quickstart-images/vs/12-add-new-item.png)
+[![Add new item](hello-android-quickstart-images/vs/12-add-new-item-sml.png)](hello-android-quickstart-images/vs/12-add-new-item.png#lightbox)
 
 In the **Add New Item** dialog, select **Visual C# > Code**
 and name the new code file **PhoneTranslator.cs**:
 
-[![Add PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-sml.png)](hello-android-quickstart-images/vs/14-add-class.png)
+[![Add PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-sml.png)](hello-android-quickstart-images/vs/14-add-class.png#lightbox)
 
 This creates a new empty C# class. Insert the following code into this file:
 
@@ -310,17 +310,17 @@ namespace Phoneword
 
 Now it's time to set the application icon. By default, Visual Studio will provide a default icon for the project. Let's delete these files from the solution, and replace them with a different icon. Expand the **Resources** folder in the **Solution Pad**. Notice that there are five folders that are prefixed with **mipmap-**, and that each of these folders contains a single **Icon.png** file:
 
-[![mipmap- folders and Icon.png files](hello-android-quickstart-images/vs/21-mipmap-folders-sml.png)](hello-android-quickstart-images/vs/21-mipmap-folders.png)
+[![mipmap- folders and Icon.png files](hello-android-quickstart-images/vs/21-mipmap-folders-sml.png)](hello-android-quickstart-images/vs/21-mipmap-folders.png#lightbox)
 
 It is necessary to delete each of these icon files from the project. Right click on each of **Icon.png** files, and select **Delete** from the context menu:
    
-[![Delete default Icon.png](hello-android-quickstart-images/vs/21-delete-icon-sml.png)](hello-android-quickstart-images/vs/21-delete-icon.png)
+[![Delete default Icon.png](hello-android-quickstart-images/vs/21-delete-icon-sml.png)](hello-android-quickstart-images/vs/21-delete-icon.png#lightbox)
    
 Click on the **Delete** button in the dialog.
 
 Next, download and unzip [Xamarin App Icons set](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true). This zip file holds the icons for the application. Each icon is visually identical but at different resolutions it renders correctly on different devices with different screen densities.  The set of files must be copied into the Xamarin.Android project. In Visual Studio, in the **Solution Explorer**, right-click the **mipmap-hdpi** folder and select **Add > Existing Items**:
 
-[![Add files](hello-android-quickstart-images/vs/22-add-files-sml.png)](hello-android-quickstart-images/vs/22-add-files.png)
+[![Add files](hello-android-quickstart-images/vs/22-add-files-sml.png)](hello-android-quickstart-images/vs/22-add-files.png#lightbox)
 
 From the selection dialog, navigate to the unzipped Xamarin AdApp Icons directory and open the **mipmap-hdpi** folder. Select **Icon.png** and click **Add**.
 
@@ -328,13 +328,13 @@ Repeat these steps for each of the **mipmap-** folders until the contents of the
 
 After all the icons are copied to the Xamarin.Android project, open the **Project Options** dialog by right clicking on the project in the **Solution Pad**. Select **Build > Android Application** and select **@mipmap/icon** from the **Application icon** combo box:
 
-[![Setting the project icon](hello-android-quickstart-images/vs/25-set-project-icon-sml.png)](hello-android-quickstart-images/vs/25-set-project-icon.png)
+[![Setting the project icon](hello-android-quickstart-images/vs/25-set-project-icon-sml.png)](hello-android-quickstart-images/vs/25-set-project-icon.png#lightbox)
 
 ### Running the App
 
 Finally, test the application by running it on an Android device or emulator and translating a Phoneword:
 
-[![Screenshot of app when it is complete](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png)
+[![Screenshot of app when it is complete](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -346,11 +346,11 @@ In the **Choose a template for your new project** dialog, click
 **Android > App** and select the **Android App** template. Click
 **Next**.
 
-[![Choose the Android App template](hello-android-quickstart-images/xs/03-choose-template-sml.png)](hello-android-quickstart-images/xs/03-choose-template.png)
+[![Choose the Android App template](hello-android-quickstart-images/xs/03-choose-template-sml.png)](hello-android-quickstart-images/xs/03-choose-template.png#lightbox)
 
 In the **Configure your Android app** dialog, name the new app `Phoneword` and click **Next**.
 
-[![Configure the Android App](hello-android-quickstart-images/xs/04-configure-android-app-sml.png)](hello-android-quickstart-images/xs/04-configure-android-app.png)
+[![Configure the Android App](hello-android-quickstart-images/xs/04-configure-android-app-sml.png)](hello-android-quickstart-images/xs/04-configure-android-app.png#lightbox)
 
 In the **Configure your new Android App** dialog, leave the Solution
 and Project names set to `Phoneword` and click **Create** to create
@@ -363,49 +363,49 @@ and then the **layout** folder in the **Solution** pad.
 Double-click **Main.axml** to open it in the Android Designer. This
 is the layout file for the screen when it is viewed in the Android Designer:
 
-[![Open Main.axml](hello-android-quickstart-images/xs/05-open-layout-sml.png)](hello-android-quickstart-images/xs/05-open-layout.png)
+[![Open Main.axml](hello-android-quickstart-images/xs/05-open-layout-sml.png)](hello-android-quickstart-images/xs/05-open-layout.png#lightbox)
 
 Select the **Hello World, Click Me!** **Button** on the design
 surface and press the **Delete** key to remove it. 
 
 From the **Toolbox** (the area on the right), enter `text` into the search field and drag a **Text (Large)** widget onto the design surface (the area in the center):
 
-[![Add large text widget](hello-android-quickstart-images/xs/06-large-text-sml.png)](hello-android-quickstart-images/xs/06-large-text.png)
+[![Add large text widget](hello-android-quickstart-images/xs/06-large-text-sml.png)](hello-android-quickstart-images/xs/06-large-text.png#lightbox)
 
 With the **Text (Large)** widget selected on the design surface, you
 can use the **Properties** pad to change the `Text` property of the
 **Text (Large)** widget to `Enter a Phoneword:` as shown below:
 
-[![Set large text widget properties](hello-android-quickstart-images/xs/07-enter-a-phoneword-sml.png)](hello-android-quickstart-images/xs/07-enter-a-phoneword.png)
+[![Set large text widget properties](hello-android-quickstart-images/xs/07-enter-a-phoneword-sml.png)](hello-android-quickstart-images/xs/07-enter-a-phoneword.png#lightbox)
 
 Next, drag a **Plain Text** widget from the **Toolbox** to
 the design surface and place it underneath the **Text (Large)**
 widget. Notice that you can use the search field to help locate
 widgets by name:
 
-[![Add plain text widget](hello-android-quickstart-images/xs/08-plain-text-sml.png)](hello-android-quickstart-images/xs/08-plain-text.png)
+[![Add plain text widget](hello-android-quickstart-images/xs/08-plain-text-sml.png)](hello-android-quickstart-images/xs/08-plain-text.png#lightbox)
 
 With the **Plain Text** widget selected on the design surface, you
 can use the **Properties** pad to change the `Id` property of the
 **Plain Text** widget to `@+id/PhoneNumberText` and change the
 `Text` property to `1-855-XAMARIN`:
 
-[![Set plain text widget properties](hello-android-quickstart-images/xs/09-add-properties-sml.png)](hello-android-quickstart-images/xs/09-add-properties.png)
+[![Set plain text widget properties](hello-android-quickstart-images/xs/09-add-properties-sml.png)](hello-android-quickstart-images/xs/09-add-properties.png#lightbox)
 
 Drag a **Button** from the **Toolbox** to the design surface
 and place it underneath the **Plain Text** widget:
 
-[![Add a button](hello-android-quickstart-images/xs/10-drag-button-sml.png)](hello-android-quickstart-images/xs/10-drag-button.png)
+[![Add a button](hello-android-quickstart-images/xs/10-drag-button-sml.png)](hello-android-quickstart-images/xs/10-drag-button.png#lightbox)
 
 With the **Button** selected on the design surface, you can use the
 **Properties** pad to change the `Id` property of the **Button** to
 `@+id/TranslateButton` and change the `Text` property to `Translate`:
 
-[![Configure as the translate button](hello-android-quickstart-images/xs/11-translate-button-sml.png)](hello-android-quickstart-images/xs/11-translate-button.png)
+[![Configure as the translate button](hello-android-quickstart-images/xs/11-translate-button-sml.png)](hello-android-quickstart-images/xs/11-translate-button.png#lightbox)
 
 Drag a **TextView** from the **Toolbox** to the design surface and place it under the **Button** widget. With the **TextView** selected, set the `id` property of the **TextView** to `@+id/TranslatedPhoneWord` and change the `text` to an empty string:
 
-[![Set the properties on the text view.](hello-android-quickstart-images/xs/12-textview-properties-sml.png)](hello-android-quickstart-images/xs/12-textview-properties.png)    
+[![Set the properties on the text view.](hello-android-quickstart-images/xs/12-textview-properties-sml.png)](hello-android-quickstart-images/xs/12-textview-properties.png#lightbox)    
 
 Save your work by pressing **&#8984; + S**.
 
@@ -416,7 +416,7 @@ alphanumeric to numeric. Add a new file to the project by
 clicking the gear icon next to the **Phoneword** project in the
 **Solution** pad and choosing **Add > New File...**:
 
-[![Add a new file to the project](hello-android-quickstart-images/xs/14-add-new-file-sml.png)](hello-android-quickstart-images/xs/14-add-new-file.png)
+[![Add a new file to the project](hello-android-quickstart-images/xs/14-add-new-file-sml.png)](hello-android-quickstart-images/xs/14-add-new-file.png#lightbox)
 
 In the **New File** dialog, select **General > Empty Class**, name the new file **PhoneTranslator**, and click **New**. This creates a new empty C# class for us.
 
@@ -596,35 +596,35 @@ namespace Phoneword
 
 Now it's time to set the application icon. By default, Visual Studio for Mac will provide a default icon for the project. Let's delete these files from the solution, and replace them with a different icon. Expand the **Resources** folder in the **Solution Pad**. Notice that there are five folders that are prefixed with **mipmap-**, and that each of these folders contains a single **Icon.png** file:
 
-[![mipmap- folders and Icon.png files](hello-android-quickstart-images/xs/23-mipmap-folders-sml.png)](hello-android-quickstart-images/xs/23-mipmap-folders.png)
+[![mipmap- folders and Icon.png files](hello-android-quickstart-images/xs/23-mipmap-folders-sml.png)](hello-android-quickstart-images/xs/23-mipmap-folders.png#lightbox)
 
 It is necessary to delete each of these icon files from the project. Right click on each of **Icon.png** files, and select **Remove** from the context menu:
 
-[![Delete default Icon.png](hello-android-quickstart-images/xs/23-delete-icon-sml.png)](hello-android-quickstart-images/xs/23-delete-icon.png)
+[![Delete default Icon.png](hello-android-quickstart-images/xs/23-delete-icon-sml.png)](hello-android-quickstart-images/xs/23-delete-icon.png#lightbox)
 
 Click on the **Delete** button in the dialog.
 
 Next, download and unzip [Xamarin App Icons set](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true). This zip file holds the icons for the application. Each icon is visually identical but at different resolutions it renders correctly on different devices with different screen densities.  The set of files must be copied into the Xamarin.Android project. In Visual Studio for Mac, in the **Solution Pad**, right-click the **mipmap-hdpi** folder and select **Add > Add Files**:
 
-[![Add files](hello-android-quickstart-images/xs/24-add-files-sml.png)](hello-android-quickstart-images/xs/24-add-files.png)
+[![Add files](hello-android-quickstart-images/xs/24-add-files-sml.png)](hello-android-quickstart-images/xs/24-add-files.png#lightbox)
 
 From the selection dialog, navigate to the unzipped Xamarin AdApp Icons directory and open the **mipmap-hdpi** folder. Select **Icon.png** and click **Open**.
 
 In the **Add File to Folder** dialog box, select **Copy the file into the directory** and click **OK**:
 
-[![Copy the file to the directory dialog](hello-android-quickstart-images/xs/26-copy-to-directory-sml.png)](hello-android-quickstart-images/xs/26-copy-to-directory.png)
+[![Copy the file to the directory dialog](hello-android-quickstart-images/xs/26-copy-to-directory-sml.png)](hello-android-quickstart-images/xs/26-copy-to-directory.png#lightbox)
 
 Repeat these steps for each of the **mipmap-** folders until the contents of the **mipmap-** Xamarin App Icons folders are copied to their counterpart **mipmap-** folders in the **Phoneword** project.
 
 After all the icons are copied to the Xamarin.Android project, open the **Project Options** dialog by right clicking on the project in the **Solution Pad**. Select **Build > Android Application** and select **@mipmap/icon** from the **Application icon** combo box:
 
-[![Setting the project icon](hello-android-quickstart-images/xs/28-set-project-icon-sml.png)](hello-android-quickstart-images/xs/28-set-project-icon.png)
+[![Setting the project icon](hello-android-quickstart-images/xs/28-set-project-icon-sml.png)](hello-android-quickstart-images/xs/28-set-project-icon.png#lightbox)
 
 ### Running the App
 
 Finally, test the application by running it on an Android device or emulator and translating a Phoneword:
 
-[![Screenshot of app when it is complete](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png)
+[![Screenshot of app when it is complete](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
 
 -----
 

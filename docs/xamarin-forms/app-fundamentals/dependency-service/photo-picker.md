@@ -196,25 +196,22 @@ namespace DependencyServiceSample.Droid
             intent.SetType("image/*");
             intent.SetAction(Intent.ActionGetContent);
 
-            // Get the MainActivity instance
-            MainActivity activity = Forms.Context as MainActivity;
-
             // Start the picture-picker activity (resumes in MainActivity.cs)
-            activity.StartActivityForResult(
+            MainActivity.Instance.StartActivityForResult(
                 Intent.CreateChooser(intent, "Select Picture"),
                 MainActivity.PickImageId);
 
             // Save the TaskCompletionSource object as a MainActivity property
-            activity.PickImageTaskCompletionSource = new TaskCompletionSource<Stream>();
+            MainActivity.Instance.PickImageTaskCompletionSource = new TaskCompletionSource<Stream>();
 
             // Return Task object
-            return activity.PickImageTaskCompletionSource.Task;
+            return MainActivity.Instance.PickImageTaskCompletionSource.Task;
         }
     }
 }
 ```
 
-The method accesses the `MainActivity` class for several purposes: for the `PickImageId` field, for the `TaskCompletionSource` property, and to call `StartActivityForResult`. This method is defined by the `FormsApplicationActivity` class that is the base class of `MainActivity`.
+This method accesses the `MainActivity` class for several purposes: for the `Instance` property, for the `PickImageId` field, for the `TaskCompletionSource` property, and to call `StartActivityForResult`. This method is defined by the `FormsApplicationActivity` class that is the base class of `MainActivity`.
 
 <a name="UWP_Implementation" />
 

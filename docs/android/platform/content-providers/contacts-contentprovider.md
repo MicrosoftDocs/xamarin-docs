@@ -56,7 +56,6 @@ Each of these methods has the same basic set of inputs:
 -  **SortOrder** &ndash; Columns to sort by.
 
 
-<a name="Creating_Inputs_for_a_Query" />
 
 ## Creating Inputs for a Query
 
@@ -82,7 +81,6 @@ For this example, the `selection`, `selectionArgs` and `sortOrder` will be ignor
 by setting them to `null`.
 
 
-<a name="Creating_a_Cursor_from_a_Content_Provider_Uri" />
 
 ## Creating a Cursor from a Content Provider Uri
 
@@ -90,7 +88,6 @@ Once the parameter objects have been created, they can be used in one
 of the following three ways:
 
 
-<a name="Using_a_Managed_Query" />
 
 ### Using a Managed Query
 
@@ -104,7 +101,6 @@ var cursor = activity.ManagedQuery(uri, projection, null, null, null);
 This cursor will be managed by Android so you do not need to close it.
 
 
-<a name="Using_ContentResolver" />
 
 ### Using ContentResolver
 
@@ -129,7 +125,6 @@ automatically deactivated and re-queried when Activities are stopped
 and restarted.
 
 
-<a name="Using_CursorLoader" />
 
 ### Using CursorLoader
 
@@ -150,7 +145,6 @@ Earlier Android versions can also use the `CursorLoader` class by using the
 [v4 support libraries](http://developer.android.com/tools/support-library/index.html).
 
 
-<a name="Displaying_the_Cursor_Data_with_a_Custom_Adapter" />
 
 ## Displaying the Cursor Data with a Custom Adapter
 
@@ -231,7 +225,7 @@ public override View GetView (int position, View convertView, ViewGroup parent)
 The image is displayed (if it exists) using the Uri to the image file on the
 device. The application looks like this:
 
-[![Screenshot of app displaying contacts in a ListView; an image is displayed to the left of one entry](contacts-contentprovider-images/contactsprovider.png)](contacts-contentprovider-images/contactsprovider.png)
+[![Screenshot of app displaying contacts in a ListView; an image is displayed to the left of one entry](contacts-contentprovider-images/contactsprovider.png)](contacts-contentprovider-images/contactsprovider.png#lightbox)
 
 Using a similar code pattern, your application can access a wide
 variety of system data including the user's photos, videos and music.
@@ -239,7 +233,6 @@ Some data types require special permissions to be requested in the
 project's **AndroidManifest.xml**.
 
 
-<a name="Displaying_the_Cursor_Data_with_a_SimpleCursorAdapter" />
 
 ## Displaying the Cursor Data with a SimpleCursorAdapter
 

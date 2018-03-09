@@ -7,7 +7,7 @@ ms.assetid: E4D6F183-98D2-460A-9D65-937639A899E0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Nougat Features
@@ -19,7 +19,6 @@ Nougat, explains how to prepare Xamarin.Android for Android Nougat
 development, and provides links to sample applications that illustrate
 how to use Android Nougat features in Xamarin.Android apps.
 
-<a name="overview" />
 
 ## Overview
 
@@ -30,7 +29,7 @@ and later. Android Nougat adds many new APIs for the Nougat features
 described below; these APIs are available to Xamarin.Android apps when
 you use Xamarin.Android 7.0.
 
-[![Hero images of Android tablets and phones running Android Nougat](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png)
+[![Hero images of Android tablets and phones running Android Nougat](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png#lightbox)
 
 For more information about Android 7.x APIs, see
 [Android 7.1 for Developers](http://developer.android.com/preview/api-overview.html).
@@ -67,8 +66,6 @@ Nougat to try out the new features and plan migration or feature work
 to target the new Android Nougat platform.
 
 
-<a name="requirements" />
-
 ## Requirements
 
 The following is required to use the new Android Nougat features in
@@ -102,7 +99,6 @@ existing apps using libraries such as **Mono.Data.Sqlite.dll** may
 crash when running on Android Nougat if they are not properly rebuilt.
 
 
-<a name="gettingstarted" />
 
 ## Getting Started
 
@@ -120,7 +116,6 @@ create an Android Nougat project:
 
 Each of these steps is explained in the following sections:
 
-<a name="updates" />
 
 ### Install Xamarin Updates
 
@@ -134,7 +129,6 @@ updates (releases) channel, see
 [Changing the Updates Channel](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/).
 
 
-<a name="sdk" />
 
 ### Install the Android SDK
 
@@ -148,11 +142,11 @@ later. You must also install the latest **Android SDK Tools**:
 
 2.  Install **Android 7.0 (API 24)** or later:
 
-    [![Selecting Android 7.0 packages in the Android SDK Manager](nougat-images/preview-packages.png)](nougat-images/preview-packages.png)
+    [![Selecting Android 7.0 packages in the Android SDK Manager](nougat-images/preview-packages.png)](nougat-images/preview-packages.png#lightbox)
 
 3.  Install the latest Android SDK tools:
 
-    [![Selecting the latest Android SDK tools in the Android SDK Manager](nougat-images/preview-tools.png)](nougat-images/preview-tools.png)
+    [![Selecting the latest Android SDK tools in the Android SDK Manager](nougat-images/preview-tools.png)](nougat-images/preview-tools.png#lightbox)
 
     You must install Android SDK Tools revision 25.2.2 or later, Android
     SDK Platform tools 24.0.3 or later, and Android SDK Build tools 24.0.2
@@ -161,14 +155,13 @@ later. You must also install the latest **Android SDK Tools**:
 4.  Verify that the **Java Development Kit Location**
     is configured for JDK 1.8:
 
-    [![Configuring the JDK 8 path under Tools options](nougat-images/use-jdk-1.8.png)](nougat-images/use-jdk-1.8.png)
+    [![Configuring the JDK 8 path under Tools options](nougat-images/use-jdk-1.8.png)](nougat-images/use-jdk-1.8.png#lightbox)
 
     To view this setting in Visual Studio, click **Tools > Options >
     Xamarin > Android Settings**. In Visual Studio for Mac,
     click **Preferences > Projects > SDK Locations > Android**.
 
 
-<a name="xaproject" />
 
 ### Start a Xamarin.Android Project
 
@@ -192,7 +185,6 @@ version** to **Android 7.0 (API 24 - Nougat)** to deploy your
 app to Android Nougat devices or emulators.
 
 
-<a name="emudev" />
 
 ### Configure an Emulator or Device
 
@@ -205,7 +197,7 @@ device using the following settings:
 
 For example, this virtual device is configured to emulate a Nexus 6:
 
-[![Configuring an AVD using Nexus 6 device, Android 7.0 target, and Intel Atom x86 CPU/ABI](nougat-images/android-n-avd.png)](nougat-images/android-n-avd.png)
+[![Configuring an AVD using Nexus 6 device, Android 7.0 target, and Intel Atom x86 CPU/ABI](nougat-images/android-n-avd.png)](nougat-images/android-n-avd.png#lightbox)
 
 If you are using a physical device such as a Nexus 5X, 6, or 9, you can
 either update your device through automatic over the air (OTA) updates
@@ -216,7 +208,6 @@ see [OTA Images for Nexus Devices](https://developers.google.com/android/nexus/o
 Note that Nexus 5 devices are not supported by Android Nougat.
 
 
-<a name="newfeatures" />
 
 ## New Features
 
@@ -226,7 +217,6 @@ Saver. The following sections highlight these features and provide
 links to help you get started using them in your app.
 
 
-<a name="multiwindow" />
 
 ### Multi-Window Mode
 
@@ -239,7 +229,7 @@ multi-window mode, the selected activity continues to run while the
 unselected activity is paused but still visible. Multi-window
 mode does not modify the Android activity lifecycle.
 
-[![Example apps running in multi-window mode in both portrait and landscape](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png)
+[![Example apps running in multi-window mode in both portrait and landscape](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png#lightbox)
 
 You can configure how the activities of your Xamarin.Android app
 support multi-window mode. For example, you can configure attributes
@@ -264,7 +254,6 @@ For more information about multi-window mode, see the
 [Multi-Window Support](https://developer.android.com/guide/topics/ui/multi-window.html).
 
 
-<a name="enhanced_notifications" />
 
 ### Enhanced Notifications
 
@@ -277,7 +266,6 @@ received. Also, developers can customize notification views, leverage
 system decorations in notifications, and take advantage of new
 notification templates when generating notifications.
 
-<a name="direct_reply" />
 
 #### Direct Reply
 
@@ -288,7 +276,7 @@ This inline reply feature makes it possible for users to quickly
 respond to an SMS or text message directly within the notification
 interface:
 
-[![Screenshot of a notification with an inline Direct Reply field](nougat-images/notifications-inline-reply-sml.png)](nougat-images/notifications-inline-reply.png)
+[![Screenshot of a notification with an inline Direct Reply field](nougat-images/notifications-inline-reply-sml.png)](nougat-images/notifications-inline-reply.png#lightbox)
 
 To support this feature in your app, you must add *inline reply
 actions* to your app via a
@@ -335,7 +323,6 @@ the Android
 [Replying to Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct)
 topic.
 
-<a name="bundled_notifications" />
 
 #### Bundled Notifications
 
@@ -346,7 +333,7 @@ dismiss or archive a group of notifications in one action. The user
 can slide down to expand the bundle of notifications to view each
 notification in detail:
 
-[![Screenshot example of bundled notifications](nougat-images/bundled-notifications-sml.png)](nougat-images/bundled-notifications.png)
+[![Screenshot example of bundled notifications](nougat-images/bundled-notifications-sml.png)](nougat-images/bundled-notifications.png#lightbox)
 
 To support bundled notifications, your app can use the
 [Builder.SetGroup](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetGroup/p/System.String/)
@@ -355,7 +342,6 @@ bundled notification groups in Android N, see the Android
 [Bundling Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#bundle)
 topic.
 
-<a name="custom_views" />
 
 #### Custom Views
 
@@ -367,7 +353,6 @@ views in Android Nougat, see the Android
 topic.
 
 
-<a name="datasaver" />
 
 ### Data Saver
 
@@ -385,7 +370,6 @@ see the Android
 topic.
 
 
-<a name="app_shortcuts" />
 
 ### App Shortcuts
 
@@ -395,14 +379,13 @@ To activate the menu of shortcuts, the user long-presses the app icon
 for a second or more &ndash; the menu appears with a quick vibration.
 Releasing the press causes the menu to remain:
 
-[![Example screen of an app shortcut menu for a messaging app](nougat-images/app-shortcuts-sml.png)](nougat-images/app-shortcuts.png)
+[![Example screen of an app shortcut menu for a messaging app](nougat-images/app-shortcuts-sml.png)](nougat-images/app-shortcuts.png#lightbox)
 
 This feature is available only API level 25 or higher.
 For more information about the new App Shortcuts feature in Android 7.1,
 see the Android [App Shortcuts](https://developer.android.com/guide/topics/ui/shortcuts.html)
 topic.
 
-<a name="sample_code" />
 
 ### Sample Code
 
@@ -434,7 +417,6 @@ advantage of Android Nougat features:
     while the device is booted both before and after any user credentials(PIN/Pattern/Password)
     are entered.
 
-<a name="summary" />
 
 ## Summary
 

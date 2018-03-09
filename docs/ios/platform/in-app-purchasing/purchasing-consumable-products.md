@@ -23,7 +23,7 @@ the Product IDs are hardcoded into the application because they are tightly
 coupled to the code that ‘unlocks’ the feature after payment. The purchasing
 process can be visualized like this:   
    
-[ ![The purchasing process visualization](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png)     
+[![The purchasing process visualization](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
    
  The basic workflow is:   
    
@@ -63,7 +63,7 @@ balance:
    
    
    
- [ ![Each purchase adds more monkey credits to the users balance](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png)   
+ [![Each purchase adds more monkey credits to the users balance](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
    
    
    
@@ -72,7 +72,7 @@ like this:
    
    
    
- [ ![The interactions between custom classes, StoreKit and the App Store](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png)
+ [![The interactions between custom classes, StoreKit and the App Store](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
 &nbsp;
 
@@ -263,7 +263,7 @@ When the user purchases multiple quantities, the StoreKit confirmation alert
 will reflect the quantity, the unit price and the total price they’ll be
 charged, as shown in the following screenshot:
 
-[ ![Confirming a purchase](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png)
+[![Confirming a purchase](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png#lightbox)
 
 ## Handling Network Outages
 
@@ -402,7 +402,7 @@ disable **In-App Purchases**:
    
    
    
- [ ![Use the Restrictions feature of iOS to disable In-App Purchases](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png)   
+ [![Use the Restrictions feature of iOS to disable In-App Purchases](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)   
    
    
    
@@ -427,7 +427,7 @@ feature is restricted – the purchase buttons are disabled.
    
    
    
- [ ![The application looks like this when the In-App Purchases feature is restricted  the purchase buttons are disabled](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png)   
+ [![The application looks like this when the In-App Purchases feature is restricted  the purchase buttons are disabled](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
    
    
    
@@ -441,7 +441,7 @@ will see a message that **In-app purchases are not allowed**
    
    
    
- [ ![In-app purchases are not allowed](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png)   
+ [![In-app purchases are not allowed](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
    
    
    

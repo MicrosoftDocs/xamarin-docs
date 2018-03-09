@@ -181,7 +181,7 @@ When specifying a custom font face, it is always a good idea to use `OnPlatform`
 
 Using a font other than the built-in typefaces requires some platform-specific coding. This screenshot shows the custom font **Lobster** from [Google's open-source fonts](https://www.google.com/fonts) rendered on iOS, Android and Windows Phone using Xamarin.Forms.
 
- [ ![Custom font on iOS and Android](fonts-images/custom-sml.png "Custom Fonts Example")](fonts-images/custom.png "Custom Fonts Example")
+ [![Custom font on iOS and Android](fonts-images/custom-sml.png "Custom Fonts Example")](fonts-images/custom.png#lightbox "Custom Fonts Example")
 
 The steps required for each platform are outlined below. When including custom font files with an application, be sure to verify that the font's license allows for distribution.
 

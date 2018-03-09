@@ -24,22 +24,22 @@ to a cross-platform Xamarin.Forms Portable Class Library (PCL) application.
   This is a list of all the available services for this application type. Select a service
   (such as **Mobile backend with Azure App Service**) by clicking on it.
 
-  [ ![](connected-services-images/image001-sml.png "Connected Services node in Visual Studio for Mac")](connected-services-images/image001.png)
+  [![](connected-services-images/image001-sml.png "Connected Services node in Visual Studio for Mac")](connected-services-images/image001.png#lightbox)
 
 2. The Service Details Page has a description of the service and the dependencies to be installed.
   Click the **Add** button to add the dependencies to the app:
 
-  [ ![](connected-services-images/image002-sml.png "Mobile backend with Azure")](connected-services-images/image002.png)
+  [![](connected-services-images/image002-sml.png "Mobile backend with Azure")](connected-services-images/image002.png#lightbox)
 
 3. The dependencies need to be added to both the PCL and the platform-specific projects to work.
   Select the checkboxes to add the service to every project that will reference it (either directly or indirectly):
 
-  [ ![](connected-services-images/image003-sml.png "Check all projects that should reference the service")](connected-services-images/image003.png)
+  [![](connected-services-images/image003-sml.png "Check all projects that should reference the service")](connected-services-images/image003.png#lightbox)
 
 4. Choose **Accept** on the **License Acceptance** dialogs for the NuGet packages.
   There may be two dialogs to accept, one for the MobileClient and dependencies, and another for SQLiteStore, which is required for offline data sync:
 
-  [ ![](connected-services-images/image004-sml.png "Accept License Agreements")](connected-services-images/image004.png)
+  [![](connected-services-images/image004-sml.png "Accept License Agreements")](connected-services-images/image004.png#lightbox)
 
   ![](connected-services-images/image005.png "License Acceptance window")
 
@@ -49,7 +49,7 @@ to a cross-platform Xamarin.Forms Portable Class Library (PCL) application.
 
 6. Select an app service from the list. This will fill the template code for the `MobileServiceClient` object with the corresponding URL of the app service on Azure:
 
-  [ ![](connected-services-images/image006-sml.png "Select app service from list")](connected-services-images/image006.png)
+  [![](connected-services-images/image006-sml.png "Select app service from list")](connected-services-images/image006.png#lightbox)
 
   If there are no services listed, click the **New** button (see Step 9.)
 
@@ -60,12 +60,12 @@ to a cross-platform Xamarin.Forms Portable Class Library (PCL) application.
 
 8. Follow the documentation in **Next Steps** to add data, offline sync, authentication, and push notifications to your app:
 
-  [ ![](connected-services-images/image008-sml.png "Review the next steps instructions")](connected-services-images/image008.png)
+  [![](connected-services-images/image008-sml.png "Review the next steps instructions")](connected-services-images/image008.png#lightbox)
 
 10. If you don’t have any existing app services, you can create new services from within Visual Studio for Mac.
   Click the **New** button in the bottom left of the services list to open the **New App Service** dialog:
 
-  [ ![](connected-services-images/image009-sml.png "Create a new app service in Visual Studio for Mac")](connected-services-images/image009.png)
+  [![](connected-services-images/image009-sml.png "Create a new app service in Visual Studio for Mac")](connected-services-images/image009.png#lightbox)
 
 A new service requires the following parameters:
 

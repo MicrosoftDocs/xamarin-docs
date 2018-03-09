@@ -55,7 +55,7 @@ sections:
     - href: ~/tools/dotnet-embedding/index.md
       html: Allows your existing .NET code to be consumed from other programming languages.
       image:
-        src: https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-settings-8.svg
+        src: ~/media/index/xamarin-cross-platform-dotnet-embedding.svg
         href: ~/tools/dotnet-embedding/index.md
       title: .NET Embedding
     - href: https://developer.xamarin.com/testcloud/

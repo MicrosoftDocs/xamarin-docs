@@ -30,11 +30,6 @@ There are three major approaches to code sharing that address this problem: **.N
 This page explains how to create a **PCL** project that targets a specific profile,
 which can then be referenced by multiple platform-specific projects.
 
-## Requirements
-
-Portable Library projects are automatically enabled in Visual Studio for Mac on macOS,
-and are built-in to Visual Studio 2013 and later.
-
 
 ## What is a Portable Class Library?
 
@@ -174,7 +169,7 @@ The table below shows some of the features that vary by .NET platform. To write 
   </tbody>
 </table>
 
-The Xamarin column reflects the fact that Xamarin.iOS and Xamarin.Android supports all the profiles shipped with Visual Studio 2013 and above, and the availability of features in any libraries you create will only be limited by the other platforms you choose to support.
+The Xamarin column reflects the fact that Xamarin.iOS and Xamarin.Android supports all the profiles shipped with Visual Studio, and the availability of features in any libraries you create will only be limited by the other platforms you choose to support.
 
 This includes profiles that are combinations of:
 
@@ -217,7 +212,7 @@ This diagram shows the architecture of a cross-platform application using a Port
 
 
 
-[![](pcl-images/image1.png "This diagram shows the architecture of a cross-platform application using a Portable Class Library to share code, but also using Dependency Injection to pass in platform-dependent features")](pcl-images/image1.png)
+[![](pcl-images/image1.png "This diagram shows the architecture of a cross-platform application using a Portable Class Library to share code, but also using Dependency Injection to pass in platform-dependent features")](pcl-images/image1.png#lightbox)
 
 
 
@@ -259,7 +254,7 @@ To view and change the PCL settings for this project, right-click the project an
 
 
 
-[![](pcl-images/image4.png "To view and change the PCL settings for this project, right-click the project and choose Options  Build  General to see the screen shown here")](pcl-images/image4.png)
+[![](pcl-images/image4.png "To view and change the PCL settings for this project, right-click the project and choose Options  Build  General to see the screen shown here")](pcl-images/image4.png#lightbox)
 
 
 
@@ -272,7 +267,7 @@ Changing any of the `Target Framework` options automatically updates the
 
 
 
-[![](pcl-images/image5.png "Changing any of the Target Framework options automatically updates the Current Profile the screen will also display a warning if incompatible options are selected")](pcl-images/image5.png)
+[![](pcl-images/image5.png "Changing any of the Target Framework options automatically updates the Current Profile the screen will also display a warning if incompatible options are selected")](pcl-images/image5.png#lightbox)
 
 
 
@@ -286,7 +281,7 @@ When code is written in a PCL library, the Visual Studio for Mac editor will rec
 
 
 
-[![](pcl-images/image6.png "IO using the default profile Profile136 used in Visual Studio for Mac  notice the scrollbar which indicates about half of the available classes are displayed in fact there are only 14 classes available")](pcl-images/image6.png)
+[![](pcl-images/image6.png "IO using the default profile Profile136 used in Visual Studio for Mac  notice the scrollbar which indicates about half of the available classes are displayed in fact there are only 14 classes available")](pcl-images/image6.png#lightbox)
 
 
 
@@ -294,7 +289,7 @@ Compare that with the System.IO auto-complete in a Xamarin.iOS or Xamarin.Androi
 
 
 
-[![](pcl-images/image7.png "There are 40 classes available including commonly used classes like File and Directory which are not in any PCL profile")](pcl-images/image7.png)
+[![](pcl-images/image7.png "There are 40 classes available including commonly used classes like File and Directory which are not in any PCL profile")](pcl-images/image7.png#lightbox)
 
 
 
@@ -309,7 +304,7 @@ Once a PCL project has been created, you can add a reference to it from any comp
 
 
 
-[![](pcl-images/image8.png "In Visual Studio for Mac, right-click on the References node and choose Edit References then switch to the Projects tab as shown")](pcl-images/image8.png)
+[![](pcl-images/image8.png "In Visual Studio for Mac, right-click on the References node and choose Edit References then switch to the Projects tab as shown")](pcl-images/image8.png#lightbox)
 
 
 
@@ -317,7 +312,7 @@ The following screenshot shows the Solution pad for the TaskyPortable sample app
 
 
 
-[![](pcl-images/image9.png "The Solution pad for the TaskyPortable sample app")](pcl-images/image9.png)
+[![](pcl-images/image9.png "The Solution pad for the TaskyPortable sample app")](pcl-images/image9.png#lightbox)
 
 
 
@@ -376,7 +371,7 @@ The PCL settings can be viewed and changed by right-clicking on the project and 
 
 
 
-[![](pcl-images/image13.png "The PCL settings can be viewed and changed by right-clicking on the project and choosing Properties  Library , as shown in this screenshot")](pcl-images/image13.png)
+[![](pcl-images/image13.png "The PCL settings can be viewed and changed by right-clicking on the project and choosing Properties  Library , as shown in this screenshot")](pcl-images/image13.png#lightbox)
 
 
 
@@ -391,7 +386,7 @@ When code is written in a PCL library, Visual Studio will recognize the limitati
 
 
 
-[![](pcl-images/image14.png "IO using the default profile Profile136")](pcl-images/image14.png)
+[![](pcl-images/image14.png "IO using the default profile Profile136")](pcl-images/image14.png#lightbox)
 
 
 
@@ -400,7 +395,7 @@ Compare that with the System.IO auto-complete in a regular project – there are
 
 
 
-[![](pcl-images/image15.png "Auto-complete in a regular project")](pcl-images/image15.png)
+[![](pcl-images/image15.png "Auto-complete in a regular project")](pcl-images/image15.png#lightbox)
 
 
 
@@ -415,7 +410,7 @@ Once a PCL project has been created, you can add a reference to it from any comp
 
 
 
-[![](pcl-images/image16.png "Projects tab as shown")](pcl-images/image16.png)
+[![](pcl-images/image16.png "Projects tab as shown")](pcl-images/image16.png#lightbox)
 
 
 
@@ -423,7 +418,7 @@ The following screenshot shows the Solution pane for the TaskyPortable sample ap
 
 
 
-[![](pcl-images/image17.png "The Solution pane for the TaskyPortable sample app")](pcl-images/image17.png)
+[![](pcl-images/image17.png "The Solution pane for the TaskyPortable sample app")](pcl-images/image17.png#lightbox)
 
 
 
@@ -446,7 +441,7 @@ Here are some screenshots of the resulting apps running on iOS, Android and Wind
 
 
 
-[![](pcl-images/image18.png "Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone")](pcl-images/image18.png)
+[![](pcl-images/image18.png "Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone")](pcl-images/image18.png#lightbox)
 
 
 
@@ -460,7 +455,7 @@ The solution structure is shown below (in Visual Studio for Mac and Visual Studi
 
 
 
-[![](pcl-images/image19.png "The solution structure is shown here in Visual Studio for Mac and Visual Studio respectively")](pcl-images/image19.png)
+[![](pcl-images/image19.png "The solution structure is shown here in Visual Studio for Mac and Visual Studio respectively")](pcl-images/image19.png#lightbox)
 
 
 

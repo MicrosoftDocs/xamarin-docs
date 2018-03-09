@@ -36,7 +36,7 @@ Xamarin.Mac uses the Xcode Interface Builder to edit storyboard files.
 Accessibility information can be edited in the **Identity inspector**
 when a control is selected on the design surface (as shown in the screenshot below):
 
-[![Adding accessibility in Xcode's Interface Builder](accessibility-images/xcode.png "Adding accessibility in Xcode's Interface Builder")](accessibility-images/xcode-large.png)
+[![Adding accessibility in Xcode's Interface Builder](accessibility-images/xcode.png "Adding accessibility in Xcode's Interface Builder")](accessibility-images/xcode-large.png#lightbox)
 
 ### Code
 
@@ -100,7 +100,7 @@ the screen. The screenshot below shows the inspector running next to a sample Ma
 is moved over the window, the inspector displays all the accessible properties
 of each control:
 
-[![Example of Accessibility Inspector running](accessibility-images/accessibility-example.png "Example of Accessibility Inspector running")](accessibility-images/accessibility-example-large.png)
+[![Example of Accessibility Inspector running](accessibility-images/accessibility-example.png "Example of Accessibility Inspector running")](accessibility-images/accessibility-example-large.png#lightbox)
 
 For more information, read the [testing accessibility for OS X guide](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html).
 

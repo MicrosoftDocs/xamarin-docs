@@ -42,7 +42,7 @@ To solve this issue, do the following:
 1. In Visual Studio for Mac, right-click on your Xamarin.tvOS Project File in the **Solution Explorer** and select **Options**.
 2. Select **tvOS Build** and ensure that you are on the **Release** configuration: 
 
-	[ ![](troubleshooting-images/ts01.png "Select tvOS Build options")](troubleshooting-images/ts01.png)
+	[![](troubleshooting-images/ts01.png "Select tvOS Build options")](troubleshooting-images/ts01.png#lightbox)
 3. Add `--bitcode=asmonly` to the **Additional mtouch arguments** field and click the **OK** button.
 4. Rebuild your app in the **Release** configuration.
 
@@ -120,7 +120,7 @@ Recompile your app for release and resubmit to iTunes Connect.
 
 If you are using a 3rd party library (such as MonoGame) and your release compile failed with a long series of error messages ending in `Task "MTouch" execution -- FAILED`, try adding `-gcc_flags="-framework OpenAL"` to your **Additional touch arguments**:
 
-[ ![](troubleshooting-images/mtouch01.png "Task MTouch execution")](troubleshooting-images/mtouch01.png)
+[![](troubleshooting-images/mtouch01.png "Task MTouch execution")](troubleshooting-images/mtouch01.png#lightbox)
 
 You should also include `--bitcode=asmonly` in the **Additional touch arguments**, have your linker options set to **Link All** and do a clean compile.
 

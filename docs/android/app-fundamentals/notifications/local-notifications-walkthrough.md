@@ -14,7 +14,6 @@ ms.date: 01/30/2018
 
 _This walkthrough demonstrates how to use local notifications in Xamarin.Android applications. It demonstrates the basics of creating and publishing a local notification. When the user clicks the notification in the notification area, it starts up a second Activity._
 
-<a name="overview" />
 
 ## Overview
 
@@ -26,10 +25,9 @@ first Activity.
 
 The following screenshots illustrate some examples of this application:
 
-[![Example screenshots with notification](local-notifications-walkthrough-images/1-overview-sml.png)](local-notifications-walkthrough-images/1-overview.png)
+[![Example screenshots with notification](local-notifications-walkthrough-images/1-overview-sml.png)](local-notifications-walkthrough-images/1-overview.png#lightbox)
 
 
-<a name="walkthrough" />
 
 ## Walkthrough
 
@@ -38,7 +36,6 @@ template. Let's call this project **LocalNotifications**. (If you are
 not familiar with creating Xamarin.Android projects, see
 [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).)
 
-<a name="add-v4-support" />
 
 ### Add the Android.Support.V4.App Component
 
@@ -66,7 +63,6 @@ any ambiguity:
 using TaskStackBuilder = Android.Support.V4.App.TaskStackBuilder;
 ```
 
-<a name="define-id" />
 
 ### Define the Notification ID
 
@@ -78,7 +74,6 @@ the `MainActivity` class:
 private static readonly int ButtonClickNotificationId = 1000;
 ```
 
-<a name="add-code" />
 
 ### Add Code to Generate the Notification
 
@@ -135,7 +130,6 @@ provided by the template):
 button.Click += ButtonOnClick;
 ```
 
-<a name="second-activity" />
 
 ### Create a Second Activity
 
@@ -197,7 +191,6 @@ We must also create a resource layout for **SecondActivity**. Add a new
 </LinearLayout>
 ```
 
-<a name="add-icon" />
 
 ### Add a Notification Icon
 
@@ -209,30 +202,29 @@ create your own custom icon. We'll name the icon file
 **Resources/drawable** folder. Remember to use **Add > Existing Item ...**
 to include this icon file in your project.
 
-<a name="run-app" />
 
 ### Run the Application
 
 Let's build and run the application. You should be presented with the
 first activity, similar to the following screenshot:
 
-[ ![First activity screenshot](local-notifications-walkthrough-images/2-start-screen-sml.png)](local-notifications-walkthrough-images/2-start-screen.png)
+[![First activity screenshot](local-notifications-walkthrough-images/2-start-screen-sml.png)](local-notifications-walkthrough-images/2-start-screen.png#lightbox)
 
 As you click the button, you should notice the small icon for the
 notification appear in the notification area:
 
-[ ![Notification icon appears](local-notifications-walkthrough-images/3-notification-icon-sml.png)](local-notifications-walkthrough-images/3-notification-icon.png)
+[![Notification icon appears](local-notifications-walkthrough-images/3-notification-icon-sml.png)](local-notifications-walkthrough-images/3-notification-icon.png#lightbox)
 
 If you swipe down and expose the notification drawer, you should see
 the notification:
 
-[ ![Notification message](local-notifications-walkthrough-images/4-notifications-sml.png)](local-notifications-walkthrough-images/4-notifications.png)
+[![Notification message](local-notifications-walkthrough-images/4-notifications-sml.png)](local-notifications-walkthrough-images/4-notifications.png#lightbox)
 
 When you click the notification, it should disappear, and our other
 activity should be launched &ndash; looking something like the
 following screenshot:
 
-[ ![Second activity screenshot](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png)
+[![Second activity screenshot](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png#lightbox)
 
 Congratulations! At this point you have completed the Android local
 notification walkthrough and you have a working sample that you can
@@ -244,7 +236,6 @@ and the Android
 design guide.
 
 
-<a name="summary" />
 
 ## Summary
 

@@ -11,19 +11,12 @@ ms.date: 10/11/2017
 
 # Getting Started
 
-<style type="text/css">
-.terminal-blue { color: rgb(10,96,254); }
-.terminal-green { color: rgb(12,156,26); }
-.terminal-magenta { color: rgb(152,12,103); }
-</style>
-
-
 > [!IMPORTANT]
 > **WARNING:** Objective Sharpie is a tool for experienced Xamarin developers with advanced knowledge of Objective-C (and by extension, C). Before attempting to bind an Objective-C library you should have solid knowledge of how to build the native library on the command line (and a good understanding of how the native library works).
 
 <a name="installing" />
 
-# Installing Objective Sharpie
+## Installing Objective Sharpie
 
 Objective Sharpie is currently a standalone command line tool for Mac OS X 10.10
 and newer, and is _not a fully supported Xamarin product_. It should only be
@@ -37,9 +30,10 @@ Run the installer and follow all of the on-screen prompts from the installation 
   - [Download Latest Release](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
   - [Forum Announcement](https://forums.xamarin.com/discussion/104800/objective-sharpie-3-4)
 
-> 💡 **Tip:** use the `sharpie update` command to update to the latest version.
+> [!TIP]
+> Use the `sharpie update` command to update to the latest version.
 
-# Basic Walkthrough
+## Basic Walkthrough
 
 Objective Sharpie is a command line tool provided by Xamarin that assists in
 creating the definitions required to bind a 3rd party Objective-C library to C#.

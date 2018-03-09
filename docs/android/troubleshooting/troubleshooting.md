@@ -6,12 +6,11 @@ ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Troubleshooting Tips
 
-<a name="Getting_Diagnostic_Information" />
 
 ## Getting Diagnostic Information
 
@@ -23,8 +22,7 @@ These include:
 3.  Android Debug Log Output.
 
 
- <a name="Diagnostic_MSBuild_Output" />
-
+<a name="Diagnostic_MSBuild_Output" />
 
 ## Diagnostic MSBuild Output
 
@@ -52,7 +50,6 @@ To enable diagnostic MSBuild output within Visual Studio for Mac/OS X:
 7.  Diagnostic output is visible within the Errors Pad (**View > Pads > Errors** ), by clicking the Build Output button.
 
 
- <a name="Device_Deployment_Logs" />
 
 
 ## Device Deployment Logs
@@ -73,7 +70,6 @@ day + time that a deployment occurs, for example: **AndroidTools-2012-10-24_12-3
 -  On OS X, log files are written to  `$HOME/Library/Logs/XamarinStudio-{VERSION}`.
 
 
- <a name="Android_Debug_Log_Output" />
 
 
 ## Android Debug Log Output
@@ -93,7 +89,6 @@ System properties are read during process startup, and thus must be
 either set before the application is launched or the application must
 be restarted after the system properties are changed.
 
-<a name="Xamarin.Android_System_Properties" />
 
 
 ### Xamarin.Android System Properties
@@ -145,7 +140,6 @@ This error occurs due to an incompatibility with Visual Studio.
 
 Please choose the correct System.ValueTuple NuGet that corresponds with your Visual Studio 2017 installation.
 
-<a name="GC_Messages" />
 
 ## GC Messages
 
@@ -187,7 +181,6 @@ bridge processing code (which deals with the Java VM). The world is *not* paused
 the more time that the `bridge` collections will take, and the
 larger the `total` time spent collecting will be.
 
- <a name="Global_Reference_Messages" />
 
 
 ## Global Reference Messages
@@ -306,7 +299,6 @@ You can query both the GREF and WREF counts by querying the `JniRuntime` object.
 
 `Java.Interop.JniRuntime.CurrentRuntime.WeakGlobalReferenceCount` - Weak Reference Count
 
- <a name="Offline_Activation" />
 
 
 ## Offline Activation
@@ -314,7 +306,6 @@ You can query both the GREF and WREF counts by querying the `JniRuntime` object.
 If you're unable to activate Xamarin.Android on Windows, or unable to
 install the full version of Xamarin.Android on Mac OS X, please see the [Offline Activation](~/android/get-started/installation/index.md) page.
 
- <a name="Can't_upgrade_to_Indie/Business_from_Trial_Account" />
 
 
 ## Can't upgrade to Indie/Business from Trial Account
@@ -328,7 +319,6 @@ If you recently purchased Xamarin.Android and previously started a Xamarin.Andro
 
 This should get you up and running. If you continue to have problems, you may want to try an [Offline Activation](~/android/get-started/installation/index.md) to complete the activation of your workstation.
 
- <a name="Receiving_'Activation_Incomplete'_Error_Message" />
 
 
 ## Receiving 'Activation Incomplete Error Message
@@ -338,7 +328,6 @@ This issue may occur when using Xamarin.Android for Visual Studio. To resolve th
 -  Log location: **%LocalAppData%\\Xamarin\\Logs**
 
 
- <a name="Receiving_'Error_Retrieving_Update_Information'_Error_Message" />
 
 
 ## Receiving 'Error Retrieving Update Information' Error Message
@@ -368,7 +357,6 @@ To accomplish this, please find your platform of choice below and follow the ste
 If this error message continues to appear, please e-mail **contact@xamarin.com**.
 
 
- <a name="Android_Debug_Logs" />
 
 
 ## Android Debug Logs
@@ -376,7 +364,6 @@ If this error message continues to appear, please e-mail **contact@xamarin.com**
 The [Android Debug Logs](~/android/deploy-test/debugging/android-debug-log.md) may provide additional context regarding any runtime errors you're
 seeing.
 
- <a name="Floating-Point_performance_is_terrible!" />
 
 
 ## Floating-Point performance is terrible!
@@ -404,7 +391,6 @@ If your app requires decent floating-point performance (e.g. games), you
 should enable the *armeabi-v7a* ABI. You may want to only support the *armeabi-v7a* runtime, though this means that older devices which only
 support *armeabi* will be unable to run your app.
 
- <a name="Could_not_locate_Android_SDK" />
 
 
 ## Could not locate Android SDK
@@ -416,9 +402,8 @@ yourself, Xamarin.Android does not know where to look for the SDK. You can tell
 Xamarin.Android where the SDK is in Visual Studio by going to
 **Tools > Options > Xamarin > Android Settings**:
 
-[![Android SDK Location in Xamarin Android Settings](troubleshooting-images/01a.png)]()
+[![Android SDK Location in Xamarin Android Settings](troubleshooting-images/01a.png)](troubleshooting-images/01a.png#lightbox)
 
-<a name="IDE_does_not_display_target_device" />
 
 
 ## IDE does not display target device
@@ -479,7 +464,6 @@ emulator -partition-size 512 -avd MonoDroid
 Ensure you use the correct simulator name, i.e.
 [the name you used when configuring the simulator](~/android/get-started/installation/windows.md#device).
 
-<a name="INSTALL_FAILED_INVALID_APK_when_installing_a_package" />
 
 ## INSTALL\_FAILED\_INVALID\_APK when installing a package
 
@@ -496,7 +480,6 @@ Android package names *must* contain a period ('*.*'). Edit your package name so
     -   Change the Package name field to contain a '.'.
 
 
-<a name="INSTALL_FAILED_MISSING_SHARED_LIBRARY_when_installing_a_package" />
 
 
 ## INSTALL\_FAILED\_MISSING\_SHARED\_LIBRARY when installing a package
@@ -522,7 +505,6 @@ For example, adding an assembly reference to
 *Mono.Android.GoogleMaps.dll* will implicitly add a `<uses-library/>`
 for the Google Maps shared library.
 
-<a name="INSTALL_FAILED_UPDATE_INCOMPATIBLE_when_installing_a_package" />
 
 
 ## INSTALL\_FAILED\_UPDATE\_INCOMPATIBLE when installing a package
@@ -553,7 +535,6 @@ E/PackageManager(  146): Package [PackageName] signatures do not match the previ
 To fix this error, completely remove the application from your device
 before re-installing.
 
-<a name="INSTALL_FAILED_UID_CHANGED_when_installing_a_package" />
 
 ## INSTALL\_FAILED\_UID\_CHANGED when installing a package
 
@@ -581,7 +562,6 @@ $ adb uninstall @PACKAGE_NAME@
 and thus preserve the conflicting UID on the target device.
 
 
-<a name="Release_apps_fail_to_launch_on_device" />
 
 ## Release apps fail to launch on device
 
@@ -737,7 +717,6 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 
 [This will be fixed in a future release](https://bugzilla.xamarin.com/show_bug.cgi?id=5401).
 
-<a name="Unexpected_NullReferenceExceptions" />
 
 ## Unexpected NullReferenceExceptions
 
@@ -775,7 +754,6 @@ from your process similar to:
 E/dalvikvm(  123): VM aborting
 ```
 
-<a name="Abort_due_to_Global_Reference_Exhaustion" />
 
 ## Abort due to Global Reference Exhaustion
 
@@ -881,7 +859,6 @@ You can enable
 [GREF Logging](~/android/troubleshooting/index.md)
 to see when GREFs are created and how many exist.
 
-<a name="Abort_due_to_JNI_type_mismatch" />
 
 ## Abort due to JNI type mismatch
 

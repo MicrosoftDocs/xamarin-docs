@@ -91,7 +91,7 @@ The [**BindingModes**](https://github.com/xamarin/xamarin-forms-book-samples/tre
 
 The [**ReverseBinding**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/ReverseBinding) sample sets the bindings on the `Value` property of the `Slider` referencing the `FontSize` property of each `Label`. This appears to be backwards, but it works better in initialzing the `Slider` elements because the `Value` property of the `Slider` has a `DefaultBindingMode` of `TwoWay`.
 
-[![Triple screenshot of Reverse Binding](images/ch16fg06-small.png "Reverse Binding")](images/ch16fg06-large.png "Reverse Binding")
+[![Triple screenshot of Reverse Binding](images/ch16fg06-small.png "Reverse Binding")](images/ch16fg06-large.png#lightbox "Reverse Binding")
 
 This is analogous to how bindings are defined in MVVM, and you'll use this type of binding frequently.
 

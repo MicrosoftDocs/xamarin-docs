@@ -14,7 +14,6 @@ ms.date: 02/16/2018
 
 _This guide explains how to use the Google Android SDK Emulator with Visual Studio._
 
-<a name="overview" />
 
 ## Overview
 
@@ -24,7 +23,6 @@ configurations is created as a _virtual device_. In this guide, you
 will learn how to launch the emulator from Visual Studio and how to
 troubleshoot common problems.
 
-<a name="sections" />
 
 ## Sections
 
@@ -41,7 +39,6 @@ creating new virtual devices, see
 [Android Emulator Setup](~/android/get-started/installation/android-emulator/index.md).
 
 
-<a name="summary" />
 
 ## Summary
 

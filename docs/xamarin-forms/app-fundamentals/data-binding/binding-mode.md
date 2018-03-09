@@ -41,7 +41,7 @@ At first, this might seem backwards: Now the `Label` is the data-binding source,
 
 As you might expect, the `Slider` is initialized to the value 1 from the initial `Opacity` value of `Label`. This is shown in the iOS screenshot on the left:
 
-[![Reverse Binding](binding-mode-images/reversebinding-small.png "Reverse Binding")](binding-mode-images/reversebinding-large.png "Reverse Binding")
+[![Reverse Binding](binding-mode-images/reversebinding-small.png "Reverse Binding")](binding-mode-images/reversebinding-large.png#lightbox "Reverse Binding")
 
 But you might be surprised that the `Slider` continues to work, as the Android and UWP screenshots demonstrate. This seems to suggest that the data binding works better when the `Slider` is the binding target rather than the `Label` because the initialization works like we might expect.
 
@@ -246,7 +246,7 @@ The `Value` property of the `Slider`, however, is `TwoWay`. This allows each `Sl
 
 When the program is first run, the `BoxView`, `Label`, and three `Slider` elements are all set from the ViewModel based on the initial `Color` property set when the ViewModel was instantiated. This is shown in the iOS screenshot at the left:
 
-[![Simple Color Selector](binding-mode-images/simplecolorselector-small.png "Simple Color Selector")](binding-mode-images/simplecolorselector-large.png "Simple Color Selector")
+[![Simple Color Selector](binding-mode-images/simplecolorselector-small.png "Simple Color Selector")](binding-mode-images/simplecolorselector-large.png#lightbox "Simple Color Selector")
 
 As you manipulate the sliders, the `BoxView` and `Label` are updated accordingly, as illustrated by the Android and UWP screenshots.
 
@@ -657,7 +657,7 @@ public partial class SampleSettingsPage : ContentPage
 
 The iOS screenshot at the left shows the program when it's first run. The constructor in `SampleSettingsViewModel` initializes the background color to white, and that's what's selected in the `ListView`:
 
-[![Sample Settings](binding-mode-images/samplesettings-small.png "Sample Settings")](binding-mode-images/samplesettings-large.png "Sample Settings")
+[![Sample Settings](binding-mode-images/samplesettings-small.png "Sample Settings")](binding-mode-images/samplesettings-large.png#lightbox "Sample Settings")
 
 The other two screenshots show altered settings. When experimenting with this page, remember to put the program to sleep or to terminate it on the device or emulator that it's running. Terminating the program from the Visual Studio debugger will not cause the `OnSleep` override in the `App` class to be called.
 

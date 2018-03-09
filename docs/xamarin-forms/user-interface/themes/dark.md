@@ -50,7 +50,7 @@ and add the required code in the iOS and Android application projects.
 Here is an example of buttons and labels in the dark theme,
 along with the markup that produces them.
 
-[ ![](dark-images/dark-theme-sml.png "Buttons and Labels in the Dark Theme")](dark-images/dark-theme.png "Buttons and Labels in the Dark Theme")
+[![](dark-images/dark-theme-sml.png "Buttons and Labels in the Dark Theme")](dark-images/dark-theme.png#lightbox "Buttons and Labels in the Dark Theme")
 
 ```xaml
 <StackLayout Padding="20">

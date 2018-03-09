@@ -29,13 +29,13 @@ This guide assumes a familiarity with the contents covered in the [Getting Start
 1. Create a new solution from the **iOS > App > Single View Application > C#** template, name it `ScratchTicket`, and continue through the New Project wizard:
 
 
-	[![](ios-designable-controls-walkthrough-images/01new.png "Create a new solution")](ios-designable-controls-walkthrough-images/01new.png)
+	[![](ios-designable-controls-walkthrough-images/01new.png "Create a new solution")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
 
 
 1. Create a new empty class file named `ScratchTicketView`:
 
 
-	[![](ios-designable-controls-walkthrough-images/02new.png "Create a new ScratchTicketView class")](ios-designable-controls-walkthrough-images/02new.png)
+	[![](ios-designable-controls-walkthrough-images/02new.png "Create a new ScratchTicketView class")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
 
 
 1. Add the following code for `ScratchTicketView` class:
@@ -165,62 +165,62 @@ This guide assumes a familiarity with the contents covered in the [Getting Start
 1. Double-click the `Main.storyboard` file to open it in the designer:
 
 	
-	[![](ios-designable-controls-walkthrough-images/03new.png "The iOS Designer")](ios-designable-controls-walkthrough-images/03new.png)
+	[![](ios-designable-controls-walkthrough-images/03new.png "The iOS Designer")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
 
 
 
 1. Drag/drop an **Image View** from the **Toolbox** onto the view in the storyboard.
 
 	
-	[![](ios-designable-controls-walkthrough-images/04new.png "An Image View added to the layout")](ios-designable-controls-walkthrough-images/04new.png)
+	[![](ios-designable-controls-walkthrough-images/04new.png "An Image View added to the layout")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
 
 
 1. Select the **Image View** and change its **Image** property to `Monkey.png`.
 
 	
-	[![](ios-designable-controls-walkthrough-images/05new.png "Setting Image View Image property to Monkey.png")](ios-designable-controls-walkthrough-images/05new.png)
+	[![](ios-designable-controls-walkthrough-images/05new.png "Setting Image View Image property to Monkey.png)](ios-designable-controls-walkthrough-images/05new.png#lightbox)
 
 	
 1. As we are using size classes we'll need to constrain this image view. Click on the image twice to put it into constraint mode. Let's constrain it to the center by clicking the center-pinning handle and align it both vertically and horizontally:
 	
 	
-	[![](ios-designable-controls-walkthrough-images/06new.png "Centering the image")](ios-designable-controls-walkthrough-images/06new.png)
+	[![](ios-designable-controls-walkthrough-images/06new.png "Centering the image")](ios-designable-controls-walkthrough-images/06new.png#lightbox)
 
 	
 1. To constrain the height and width, click on the size-pinning handles (the 'bone' shaped handles) and select width and height respectively:
 
 	
-	[![](ios-designable-controls-walkthrough-images/07new.png "Adding Constraints")](ios-designable-controls-walkthrough-images/07new.png)
+	[![](ios-designable-controls-walkthrough-images/07new.png "Adding Constraints")](ios-designable-controls-walkthrough-images/07new.png#lightbox)
 
 
 1. Update the frame based on constraints by clicking the update button in the toolbar:
 
 
-	[![](ios-designable-controls-walkthrough-images/08new.png "The Constraints toolbar")](ios-designable-controls-walkthrough-images/08new.png)
+	[![](ios-designable-controls-walkthrough-images/08new.png "The Constraints toolbar")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
 
 
 1. Next, build the project so that the **Scratch Ticket View** will appear under **Custom Components** in the Toolbox:
 
 	
-	[![](ios-designable-controls-walkthrough-images/09new.png "The Custom Components toolbox")](ios-designable-controls-walkthrough-images/09new.png)
+	[![](ios-designable-controls-walkthrough-images/09new.png "The Custom Components toolbox")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
 
 
 1. Drag and drop a **Scratch Ticket View** so that it appears over the monkey image. Adjust the drag handles so the Scratch Ticket View covers the monkey completely, as shown below:
 
 	
-	[![](ios-designable-controls-walkthrough-images/10new.png "A Scratch Ticket View over the Image View")](ios-designable-controls-walkthrough-images/10new.png)
+	[![](ios-designable-controls-walkthrough-images/10new.png "A Scratch Ticket View over the Image View")](ios-designable-controls-walkthrough-images/10new.png#lightbox)
 
 
 1. Constrain the Scratch Ticket View to the Image View by drawing a bounding rectangle to select both views. Select the options to constrain it to the Width, Height, Center and Middle and update frames based on constraints, as shown below:
  
  	
-	[![](ios-designable-controls-walkthrough-images/11new.png "Centering and adding Constraints")](ios-designable-controls-walkthrough-images/11new.png)
+	[![](ios-designable-controls-walkthrough-images/11new.png "Centering and adding Constraints")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
 
 
 1. Run the application and “scratch off” the image to reveal the monkey.
 
 
- [ ![](ios-designable-controls-walkthrough-images/10-app.png "A sample app run")](ios-designable-controls-walkthrough-images/10-app.png)
+ [![](ios-designable-controls-walkthrough-images/10-app.png "A sample app run")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## Adding Design-Time Properties
 
@@ -282,7 +282,7 @@ public override void Draw(CGRect rect)
 
 Including an `ExportAttribute` and a `BrowsableAttribute` with the argument set to `true` results in the property being displayed in the designer’s **Property** panel. Changing the property to another image included with the project, such as `FillTexture2.png`, results in the control updating at design time, as shown below:
 
- [ ![](ios-designable-controls-walkthrough-images/11-customproperty.png "Editing Design Time properties")](ios-designable-controls-walkthrough-images/10-app.png)
+ [![](ios-designable-controls-walkthrough-images/11-customproperty.png "Editing Design Time properties")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## Summary
 

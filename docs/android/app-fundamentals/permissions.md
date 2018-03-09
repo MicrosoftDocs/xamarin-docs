@@ -6,12 +6,11 @@ ms.assetid: 3C440714-43E3-4D31-946F-CA59DAB303E8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Permissions In Xamarin.Android
 
-<a name="overview" />
 
 ## Overview
 
@@ -38,7 +37,7 @@ Before requesting one or more permissions, it is a best practice to provide a ra
 
 The whole workflow of checking and requesting permissions is known as a _run-time permissions_ check, and can be summarized in the following diagram: 
 
-[ ![Run-time permission check flow chart](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png)
+[![Run-time permission check flow chart](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
 
 The Android Support Library backports some of the new APIs for permissions to older versions of Android. These backported APIs will automatically check the version of Android on the device so it is not necessary to perform an API level check each time.  
 
@@ -46,7 +45,7 @@ This document will discuss how to add permissions to a Xamarin.Android applicati
 
 
 > [!NOTE]
-> **Note:** It is possible that permissions for hardware may affect how the app is filtered by Google Play. For example, if the app requires permission for the camera, then Google Play will not show the app in the Google Play Store on a device that does not have a camera installed.
+> It is possible that permissions for hardware may affect how the app is filtered by Google Play. For example, if the app requires permission for the camera, then Google Play will not show the app in the Google Play Store on a device that does not have a camera installed.
 
 
 <a name="requirements" />
@@ -55,7 +54,6 @@ This document will discuss how to add permissions to a Xamarin.Android applicati
 
 It is strongly recommended that Xamarin.Android projects include the [Xamarin.Android.Support.Compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) NuGet package. This package will backport permission specific APIs to older versions of Android, providing one common interface without the need to constantly check the version of Android that the app is running on.
 
-<a name="requesting_permissions" />
 
 ## Requesting System Permissions
 
@@ -64,9 +62,8 @@ The first step in working with Android permissions is to declare the permissions
 Apps that target Android 6.0 or higher cannot assume that because the user granted permission at some point in the past, that the permission will  be valid the next time. An app that targets Android 6.0 must always perform a runtime permission check. Apps that target Android 5.1 or lower do not need to perform a run-time permission check.
 
 > [!NOTE]
-> **Note:** Applications should only request the permissions that they require.
+> Applications should only request the permissions that they require.
 
-<a name="declaring_permissions_in_the_manifest" />
 
 ### Declaring Permissions in the Manifest
 
@@ -83,15 +80,15 @@ It is possible to declare the permissions using the tool support built into Visu
 
 1. Double-click **Properties** in the **Solution Explorer** and select the **Android Manifest** tab in the Properties window:
 
-    [![Required permissions in the Android Manifest tab](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png)
+    [![Required permissions in the Android Manifest tab](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png#lightbox)
 
 2. If the application does not already have an AndroidManifest.xml, click **No AndroidManifest.xml found. Click to add one** as shown below:
 
-    [![No AndroidManifest.xml message](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png)
+    [![No AndroidManifest.xml message](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png#lightbox)
 
 3. Select any permissions your application needs from the **Required permissions** list and save:
 
-    [![Example CAMERA permissions selected](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png)
+    [![Example CAMERA permissions selected](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -99,15 +96,15 @@ It is possible to declare the permissions using the tool support built into Visu
 
 1. Double-click the project in the **Solution Pad** and select **Options > Build > Android Application**:
 
-    [![Required Permissions section shown](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png)
+    [![Required Permissions section shown](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png#lightbox)
 
 2. Click the **Add Android Manifest** button if the project does not already have an **AndroidManifest.xml**:
 
-    [![The project's Android manifest is missing](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png)
+    [![The project's Android manifest is missing](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png#lightbox)
 
 3. Select any permissions your application needs from the **Required permissions** list and click **OK**:
 
-    [![Example CAMERA permissions selected](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png)
+    [![Example CAMERA permissions selected](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
     
 -----
 
@@ -115,7 +112,6 @@ Xamarin.Android will automatically add some permissions at build time to Debug b
 
 For apps that target Android 5.1(API level 22) or lower, there is nothing more that needs to be done. Apps that will run on Android 6.0 (API 23 level 23) or higher should proceed on to the next section on how to perform run time permission checks. 
 
-<a name="run_time_permission_checks" />
 
 ### Runtime Permission Checks in Android 6.0
 
@@ -209,7 +205,6 @@ public override void OnRequestPermissionsResult(int requestCode, string[] permis
 }
 ```  
 
-<a name="summary" />
 
 ## Summary
 

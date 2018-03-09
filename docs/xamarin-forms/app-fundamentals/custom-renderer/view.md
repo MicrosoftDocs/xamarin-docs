@@ -111,7 +111,7 @@ The process for creating the custom renderer class is as follows:
 1. Add an `ExportRenderer` attribute to the custom renderer class to specify that it will be used to render the Xamarin.Forms custom control. This attribute is used to register the custom renderer with Xamarin.Forms.
 
 > [!NOTE]
-> **Note**: For most Xamarin.Forms elements, it is optional to provide a custom renderer in each platform project. If a custom renderer isn't registered, then the default renderer for the control's base class will be used. However, custom renderers are required in each platform project when rendering a [View](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) element.
+> For most Xamarin.Forms elements, it is optional to provide a custom renderer in each platform project. If a custom renderer isn't registered, then the default renderer for the control's base class will be used. However, custom renderers are required in each platform project when rendering a [View](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) element.
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
@@ -314,7 +314,7 @@ namespace CustomRenderer.WinPhone81
 Provided that the `Control` property is `null`, a new `CaptureElement` is instantiated and the `InitializeAsync` method is called, which uses the `MediaCapture` API to provide the preview stream from the camera. The `SetNativeControl` method is then called to assign a reference to the `CaptureElement` instance to the `Control` property. The `CaptureElement` control exposes a `Tapped` event that's handled by the `OnCameraPreviewTapped` method to stop and start the video preview when it's tapped. The `Tapped` event is subscribed to when the custom renderer is attached to a new Xamarin.Forms element, and unsubscribed from only when the element the renderer is attached to changes.
 
 > [!NOTE]
-> **Note**: It's important to stop and dispose of the objects that provide access to the camera in a Windows Phone or UWP application. Failure to do so can interfere with other applications that attempt to access the device's camera. For more information, see and [Quickstart: Capturing video by using the MediaCapture API](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) for Windows Runtime applications, and [Display the camera preview](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) for UWP applications.
+> It's important to stop and dispose of the objects that provide access to the camera in a Windows Phone or UWP application. Failure to do so can interfere with other applications that attempt to access the device's camera. For more information, see and [Quickstart: Capturing video by using the MediaCapture API](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) for Windows Runtime applications, and [Display the camera preview](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) for UWP applications.
 
 ## Summary
 

@@ -24,7 +24,7 @@ without prior search implementation experience. Because of this, Apple claims
 that it typically takes a few hours to make an iOS 9 app's content universally
 searchable using App Search.
 
-[ ![](images/intro01.png "An example of iOS 9 app content universally searchable using App Search")](images/intro01.png)
+[![](images/intro01.png "An example of iOS 9 app content universally searchable using App Search")](images/intro01.png#lightbox)
 
 App Search is composed of three separate APIs:
 

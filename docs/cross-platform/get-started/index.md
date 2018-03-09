@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.technology: xamarin-cross-platform
+ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
@@ -44,6 +45,12 @@ This article discusses the software development lifecycle with respect to mobile
 
 This document provides an overview of Visual Studio for Mac, the Integrated Development Environment (IDE).
 
+
+## Xamarin University Video
+
+> [!VIDEO https://youtube.com/embed/NGvn-pGZFPA]
+
+**Building Your First Xamarin.Forms App with Xamarin for Visual Studio, by [Xamarin University](https://university.xamarin.com)**
 
 ## Related Links
 

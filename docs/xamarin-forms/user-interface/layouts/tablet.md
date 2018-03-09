@@ -47,7 +47,7 @@ iPads can now perform [split screen multitasking](~/ios/platform/multitasking.md
 This means your app could take up just a slim column on the side of the screen,
 50% of the width of the screen, or the entire screen.
 
-[ ![](tablet-images/ipad-sml.png "iPad Split Screen Example")](tablet-images/ipad.png "iPad Split Screen Example")
+[![](tablet-images/ipad-sml.png "iPad Split Screen Example")](tablet-images/ipad.png#lightbox "iPad Split Screen Example")
 
 Split-screen functionality means you should design your app to work well
 with as little as 320 pixels wide, or as much as 1366 pixels wide.
@@ -81,7 +81,7 @@ use one of the two supported project types:
 Apps running on Windows tablets and desktops can be resized to arbitrary
 dimensions in addition to running full-screen.
 
-[ ![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png "Windows Split Screen Example")
+[![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
 
 
 <a name="optimize" />

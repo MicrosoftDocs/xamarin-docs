@@ -19,7 +19,7 @@ The [FSSceneKit City](https://developer.xamarin.com/samples/monotouch/ios8/FSSce
 create a randomly generated city using [SceneKit](https://developer.xamarin.com/api/namespace/SceneKit/)
 and F#. There's also an ["Oculus Thrift" (Google Cardboard) Edition](https://developer.xamarin.com/samples/monotouch/ios8/SceneKitFSharp/).
 
-[ ![](samples-images/fxscenekit-sml.png "Theres also an Oculus Thrift Google Cardboard Edition")](samples-images/fxscenekit.png)
+[![](samples-images/fxscenekit-sml.png "Theres also an Oculus Thrift Google Cardboard Edition")](samples-images/fxscenekit.png#lightbox)
 
 [Shallow](https://github.com/dvdsgl/shallow) demonstrates a fun
 swipe-user-interface built with F# for iOS.
@@ -29,7 +29,7 @@ swipe-user-interface built with F# for iOS.
 [FSEvent Watcher](https://developer.xamarin.com/samples/mac/FSEvents/) is a sample Mac OS X app written
 with F#.
 
-[ ![](samples-images/fsevents-sml.png "FSEvent Watcher is a sample Mac OS X app written with F#")](samples-images/fsevents.png)
+[![](samples-images/fsevents-sml.png "FSEvent Watcher is a sample Mac OS X app written with F#")](samples-images/fsevents.png#lightbox)
 
 ## Xamarin.Forms
 

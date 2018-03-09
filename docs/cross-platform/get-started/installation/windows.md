@@ -15,17 +15,9 @@ Because Xamarin is now included with all editions of Visual Studio at
 no extra cost and does not require a separate license, you can use the
 Visual Studio installer to download and install Xamarin tools.
 
--   [Requirements](#requirements)
--   [Installation](#installation)
--   [Adding Xamarin to Visual Studio 2017](#vs2017)
--   [Adding Xamarin to Visual Studio 2015](#vs2015)
--   [Verifying Installation](#verifying)
--   [Next Steps](#nextsteps)
-
-
 <a name="requirements" />
 
-# Requirements
+## Requirements
 
 The following are required for installing Visual Studio tools for Xamarin:
 
@@ -45,7 +37,7 @@ and using Xamarin, see
 
 <a name="installation" />
 
-# Installation
+## Installation
 
 Xamarin can be installed as part of a new Visual Studio installation.
 To achieve this, use the following steps:
@@ -60,7 +52,7 @@ To achieve this, use the following steps:
 3. Select the **Mobile development with .NET** workload from the
    installation screen: 
 
-    [![Mobile development with .NET selection on the Workloads screen](windows-images/01-mobile-dev-workload-sml.png)](windows-images/01-mobile-dev-workload.png)
+    [![Mobile development with .NET selection on the Workloads screen](windows-images/01-mobile-dev-workload-sml.png)](windows-images/01-mobile-dev-workload.png#lightbox)
 
 4. While **Mobile development with .NET** is selected, have a look at
    the **Summary** panel on the right. Here, you can deselect mobile
@@ -91,7 +83,7 @@ To achieve this, use the following steps:
 
 <a name="vs2017" />
 
-## Adding Xamarin to Visual Studio 2017
+### Adding Xamarin to Visual Studio 2017
 
 If Visual Studio 2017 is already installed, you can add Xamarin by
 re-rerunning the Visual Studio installer to modify workloads (see
@@ -104,7 +96,7 @@ For more information about downloading and installing Visual Studio
 
 <a name="vs2015" />
 
-## Adding Xamarin to Visual Studio 2015
+### Adding Xamarin to Visual Studio 2015
 
 To add Xamarin.Android to an existing installation of Visual Studio
 2015, use the following steps:
@@ -127,7 +119,7 @@ To add Xamarin.Android to an existing installation of Visual Studio
 
 <a name="verifying" />
 
-## Verifying Installation
+### Verifying Installation
 
 In Visual Studio 2017, you can verify that Xamarin is installed by 
 clicking the **Help** menu. If Xamarin is installed, you should
@@ -146,11 +138,11 @@ For more information about locating version information, see
 
 <a name="nextsteps" />
 
-# Next Steps
+## Next Steps
 
 Installing Visual Studio Tools for Xamarin allows you to start writing code for your apps, but does require additional setup for building and deploying your apps to simulator, emulator, and device. Visit the following guides to complete your installation and start building cross platform apps.
 
-## iOS
+### iOS
 
 For more detailed information, see the [Installing Xamarin.iOS on Windows](~/ios/get-started/installation/windows/index.md) guide. 
 
@@ -161,7 +153,7 @@ For more detailed information, see the [Installing Xamarin.iOS on Windows](~/ios
 5. [Remoted iOS Simulator](~/tools/ios-simulator.md)
 6. [Introduction to Xamarin.iOS for Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 
-## Android
+### Android
 
 For more detailed information, see the [Installing Xamarin.Android on Windows](~/android/get-started/installation/windows.md) guide.
 

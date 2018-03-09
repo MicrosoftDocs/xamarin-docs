@@ -40,7 +40,7 @@ The current Xamarin.Forms solution templates do not include projects templates f
 
 The bulk of a Xamarin.Forms program exists in a PCL or an SAP. Each of the platforms consists of a small application stub that calls into the PCL. The Xamarin.Forms APIs map to native controls on each platform, so that each platform maintains its characteristic look and feel:
 
-[![Triple screenshot of platform visuals sharing](images/ch01fg03-small.png "Xamarin.Forms Controls on Each Platform")](images/ch01fg03-large.png "Xamarin.Forms Controls on Each Platform")
+[![Triple screenshot of platform visuals sharing](images/ch01fg03-small.png "Xamarin.Forms Controls on Each Platform")](images/ch01fg03-large.png#lightbox "Xamarin.Forms Controls on Each Platform")
 
 The screenshots from left to right show an iPhone, an Android phone, and a Windows 10 Mobile phone. On each screen, the page contains a Xamarin.Forms [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) for displaying text, a [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) for initiating actions, a [`Switch`](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) for choosing an on/off value, and a [`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) for specifying a value within a continuous range. All four of those views are children of a [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) on a [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/).
 

@@ -7,14 +7,13 @@ ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
+ms.date: 03/01/2018
 ---
 
 # CardView
 
 _The Cardview widget is a UI component that presents text and image content in views that resemble cards. This guide explains how to use and customize CardView in Xamarin.Android applications while maintaining backward compatibility with earlier versions of Android._
 
-<a name="overview" />
 
 ## Overview
 
@@ -82,7 +81,6 @@ see [Setting Up an Android 5.0 Project](~/android/platform/lollipop.md).
 For more information about installing NuGet packages, see
 [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
-<a name="basic" />
 
 ## Introducing CardView
 
@@ -122,7 +120,7 @@ resources in the previous XML.
 This layout example creates a default `CardView` with a single line of
 text as shown in the following screen shot:
 
-[![Screenshot of CardView with white background and line of text](card-view-images/02-basic-cardview-sml.png)](card-view-images/02-basic-cardview.png)
+[![Screenshot of CardView with white background and line of text](card-view-images/02-basic-cardview-sml.png)](card-view-images/02-basic-cardview.png#lightbox)
 
 In this example, the app style is set to the light Material Theme
 (`Theme.Material.Light`) so that the `CardView` shadows and edges are
@@ -131,7 +129,6 @@ easier to see. For more information about theming Android 5.0 apps, see
 the next section, we'll learn how to customize `CardView` for an
 application.
 
-<a name="customizing" />
 
 ## Customizing CardView
 
@@ -212,7 +209,7 @@ When this layout example is used to display an image in a photo viewing
 app, the `CardView` has the appearance of a photo snapshot, as depicted
 in the following screenshot:
 
-[![CardView with an image and caption below the image](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png)
+[![CardView with an image and caption below the image](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
 
 This screenshot is taken from the
 [RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)
@@ -230,14 +227,13 @@ arranged vertically, you can also arrange them horizontally (see
 [Creating a Custom View Style](~/android/user-interface/material-theme.md#customview)
 for an example screenshot).
 
-<a name="layout" />
 
 ### CardView Layout Options
 
 `CardView` layouts can be customized by setting one or more attributes
 that affect its padding, elevation, corner radius, and background color:
 
-[![Diagram of CardView attributes](card-view-images/04-attributes-sml.png)](card-view-images/04-attributes.png)
+[![Diagram of CardView attributes](card-view-images/04-attributes-sml.png)](card-view-images/04-attributes.png#lightbox)
 
 Each attribute can also be changed dynamically by calling a
 counterpart `CardView` method (for more information on `CardView`
@@ -248,7 +244,6 @@ color) accept a dimension value, which is a decimal number followed by
 the unit. For example, `11.5dp` specifies 11.5 density-independent
 pixels.
 
-<a name="padding" />
 
 #### Padding
 `
@@ -256,7 +251,7 @@ CardView` offers five padding attributes to position content within the
 card. You can set them in your layout XML or you can call
 analogous methods in your code:
 
-[![Diagram of CardView padding attributes](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png)
+[![Diagram of CardView padding attributes](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png#lightbox)
 
 The padding attributes are explained as follows:
 
@@ -282,14 +277,13 @@ viewing app, the `CardView` would crop both the image and the text shown
 on the card.
 
 
-<a name="elevation" />
 
 #### Elevation
 
 `CardView` offers two elevation attributes to control its elevation and,
 as a result, the size of its shadow:
 
-[![Diagram of CardView elevation attributes](card-view-images/06-elevation-sml.png)](card-view-images/06-elevation.png)
+[![Diagram of CardView elevation attributes](card-view-images/06-elevation-sml.png)](card-view-images/06-elevation.png#lightbox)
 
 The elevation attributes are explained as follows:
 
@@ -307,7 +301,6 @@ The `cardMaxElevation` setting is useful for when your app changes
 elevation dynamically &ndash; it prevents the shadow from extending
 past the limit that you define with this setting.
 
-<a name="radius" />
 
 #### Corner Radius and Background Color
 
@@ -315,7 +308,7 @@ past the limit that you define with this setting.
 corner radius and its background color. These two properties allow
 you change the overall style of the `CardView`:
 
-[![Diagram of CardView corner radious and background color attributes](card-view-images/07-radius-bgcolor-sml.png)](card-view-images/07-radius-bgcolor.png)
+[![Diagram of CardView corner radious and background color attributes](card-view-images/07-radius-bgcolor-sml.png)](card-view-images/07-radius-bgcolor.png#lightbox)
 
 These attributes are explained as follows:
 
@@ -326,8 +319,6 @@ These attributes are explained as follows:
 In this diagram, `cardCornerRadius` is set to a more rounded 10dp and
 `cardBackgroundColor` is set to `"#FFFFCC"` (light yellow).
 
-
-<a name="compatibility" />
 
 ## Compatibility
 
@@ -368,7 +359,6 @@ layout:
 For more information about maintaining compatibility with earlier versions of Android, see
 [Maintaining Compatibility](https://developer.android.com/training/material/compatibility.html).
 
-<a name="summary" />
 
 ## Summary
 

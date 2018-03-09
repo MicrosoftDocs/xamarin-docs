@@ -41,7 +41,7 @@ Windows 10 phones, tablets, and desktops:
  (this probably won't have happened by default). Tick the **Build** and **Deploy**
  boxes for the Universal project:
 
-  [ ![](universal-images/configuration-sml.png "Configuration Manager Window")](universal-images/configuration.png "Configuration Manager Window")
+  [![](universal-images/configuration-sml.png "Configuration Manager Window")](universal-images/configuration.png#lightbox "Configuration Manager Window")
 
  5 . Right-click on the project and select **Add > Reference** and create a
   reference to the Xamarin.Forms application project (PCL, .NET Standard, or Shared Project).

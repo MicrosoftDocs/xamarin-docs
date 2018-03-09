@@ -16,7 +16,7 @@ The `TextureView` class is a view that uses hardware-accelerated
 example, the following screenshot shows the `TextureView` displaying
 a live feed from the device's camera:
 
-[![Example screenshot of a live image from the device's camera](texture-view-images/22-textureviewcamera.png)](texture-view-images/22-textureviewcamera.png)
+[![Example screenshot of a live image from the device's camera](texture-view-images/22-textureviewcamera.png)](texture-view-images/22-textureviewcamera.png#lightbox)
 
 Unlike the `SurfaceView` class, which can also be used to display
 OpenGL or video content, the TextureView is not rendered into a separate window.
@@ -81,7 +81,7 @@ texture. Then we are free to perform normal view-based operations, such
 as setting the `Rotation` and `Alpha`, as in the example above. The
 resulting application, running on a device, is shown below:
 
-[![Example of the app running on a device, displaying an image](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png)
+[![Example of the app running on a device, displaying an image](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
 
 To use the `TextureView`, hardware acceleration must be enabled, which
 it will be by default as of API Level 14. Also, since this example uses

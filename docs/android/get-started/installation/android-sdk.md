@@ -7,7 +7,7 @@ ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/24/2018
+ms.date: 03/01/2018
 ---
 
 # Android SDK Setup
@@ -49,8 +49,6 @@ the Android SDK. Therefore, if you update to SDK Tools version 26.0.1
 to manage the Android SDK via a UI interface, you must use the Xamarin
 Android SDK Manager.
 
-<a name="requirements" />
-
 ## Requirements
 
 # [Visual Studio](#tab/vswin)
@@ -86,8 +84,6 @@ if you are developing specifically for API level 23 or earlier.
 > **Note:** Xamarin.Android does not support JDK 9.
 
 
-<a name="installation" />
-
 # [Visual Studio](#tab/vswin)
 
 ## Installation
@@ -118,7 +114,6 @@ outside of Visual Studio to manage the Android SDK.
  
 -----
 
-<a name="sdk-manager" /> 
  
 ## SDK Manager 
 
@@ -127,13 +122,13 @@ outside of Visual Studio to manage the Android SDK.
 To start the SDK Manager in Visual Studio, click **Tools > Android >
 Android SDK Manager**:
 
-[![Location of the Android SDK Manager menu item](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png)
+[![Location of the Android SDK Manager menu item](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
 
 The **Xamarin Android SDK Manager** opens in the **Android SDKs and
 Tools** screen. This screen has two tabs &ndash; **Platforms** and
 **Tools**:
 
-[![Screenshot of the Android SDK Manager open in the Platforms tab](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png)
+[![Screenshot of the Android SDK Manager open in the Platforms tab](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png#lightbox)
 
 The **Android SDKs and Tools** screen is described in more detail in
 the following sections.
@@ -155,7 +150,6 @@ following sections.
 -----
 
 
-<a name="sdkmanager-locations" /> 
 
 # [Visual Studio](#tab/vswin)
 
@@ -208,7 +202,6 @@ C++.
 
 -----
 
-<a name="sdkmanager-tools" /> 
 
 ### Tools Tab
 
@@ -223,7 +216,7 @@ For example, to download the Google Android Emulator package, click the
 check mark next to **Android Emulator** and click the **Apply Changes**
 button:
 
-[![Installing the Android Emulator from the Tools tab](android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png)
+[![Installing the Android Emulator from the Tools tab](android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -256,7 +249,6 @@ progress. After the installation completes, the **Tools** tab will show
 that the selected tools and extras were installed.
 
 
-<a name="xvs-platforms" /> 
 
 ### Platforms Tab
 
@@ -265,7 +257,7 @@ with other resources (like system images) for each platform.
 
 # [Visual Studio](#tab/vswin)
 
-[![Screenshot of the Platforms pane](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png)
+[![Screenshot of the Platforms pane](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -304,7 +296,7 @@ click **Apply Changes**:
 
 # [Visual Studio](#tab/vswin)
 
-[![Example of adding Android 7.1 Nougat components to the Android SDK](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png)
+[![Example of adding Android 7.1 Nougat components to the Android SDK](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -317,7 +309,7 @@ that you need:
 
 # [Visual Studio](#tab/vswin)
 
-[![Example of adding some Android 7.1 components](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png)
+[![Example of adding some Android 7.1 components](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -363,7 +355,6 @@ Now you're ready to develop your app for the latest, greatest Android
 API level!
 
 
-<a name="summary" />
  
 ## Summary
 

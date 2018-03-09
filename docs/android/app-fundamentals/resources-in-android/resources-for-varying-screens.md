@@ -6,7 +6,7 @@ ms.assetid: 3D17DE45-115C-7192-5685-44F8EEE07DCC
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 10/12/2017
+ms.date: 03/01/2018
 ---
 
 # Creating Resources for Varying Screens
@@ -18,7 +18,6 @@ in a sub-optimal user experience. For example, images may appear blurry, images
 may occupy too much (or not enough) screen space which causes the position of UI
 elements in the layout will overlap or be too far apart.
 
-<a name="Concepts" />
 
 ## Concepts
 
@@ -59,7 +58,6 @@ To help deal with this complexity, the Android framework prefers to use
 independent pixels, UI elements will appear to the user to have the
 same physical size on screens with different densities.
 
-<a name="Supporting_Various_Screen_Sizes_and_Densities" />
 
 ## Supporting Various Screen Sizes and Densities
 
@@ -78,7 +76,6 @@ with the higher resolution or density images and then scale down. This
 will prevent any blurring or distortion that may result from the
 resizing.
 
-<a name="Declare_the_Screen_Size_the_Application_Supports" />
 
 ### Declare the Screen Size the Application Supports
 
@@ -100,31 +97,25 @@ To do this in Xamarin.Android, it is necessary to first add an
 
 # [Visual Studio](#tab/vswin)
 
-[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-vs-sml.png)](resources-for-varying-screens-images/01-android-manifest-vs.png)
-
-# [Visual Studio for Mac](#tab/vsmac)
-
-[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-xs-sml.png)](resources-for-varying-screens-images/01-android-manifest-xs.png)
-
------
-
+[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-vs-sml.png)](resources-for-varying-screens-images/01-android-manifest-vs.png#lightbox)
 
 **AndroidManifest.xml** is added to the **Properties** directory. The file
 is then edited to include
 [supports-screens](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
 
-# [Visual Studio](#tab/vswin)
-
-[![Adding supports-screens](resources-for-varying-screens-images/02-adding-supports-screens-vs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-vs.png)
+[![Adding supports-screens](resources-for-varying-screens-images/02-adding-supports-screens-vs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Adding supports-screens](resources-for-varying-screens-images/02-adding-supports-screens-xs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-xs.png)
+[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-xs-sml.png)](resources-for-varying-screens-images/01-android-manifest-xs.png#lightbox)
+
+**AndroidManifest.xml** is added to the **Properties** directory. The file
+is then edited to include
+[supports-screens](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+
+[![Adding supports-screens](resources-for-varying-screens-images/02-adding-supports-screens-xs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-xs.png#lightbox)
 
 -----
-
-
-<a name="Provide_Alternate_Layouts_for_Different_Screen_Sizes" />
 
 ### Provide Alternate Layouts for Different Screen Sizes
 
@@ -208,7 +199,6 @@ qualifiers as shown in the following screen shot:
 -----
 
 
-<a name="Provide_Different_Bitmaps_for_Different_Screen_Densities" />
 
 ### Provide Different Bitmaps for Different Screen Densities
 
@@ -228,7 +218,6 @@ resources:
 
 ![Screenshots with density-specific resources](resources-for-varying-screens-images/07-density-specific-resources.png)
 
-<a name="Create_Varying_Density_Resources_with_Android_Asset_Studio" />
 
 ### Create Varying Density Resources with Android Asset Studio
 
@@ -237,14 +226,13 @@ tedious. As such, Google has created an online utility which can reduce
 some of the tedium involved with the creation of these bitmaps called the
 [**Android Asset Studio**](https://romannurik.github.io/AndroidAssetStudio/).
 
-[![Android Asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png)
+[![Android Asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
 
 This website will help with creation of bitmaps that target the four
 common screen densities by providing one image. Android Asset Studio
 will then create the bitmaps with some customizations and then allow
 them to be downloaded as a zip file.
 
-<a name="Tips_for_Multiple_Screens" />
 
 ## Tips for Multiple Screens
 
@@ -287,7 +275,6 @@ tips can help minimize the effort necessary to support various devices:
   density-independent units are best reserved for when specifying the
   margins and padding of UI elements.
 
-<a name="Testing_Multiple_Screens" />
 
 ## Testing Multiple Screens
 

@@ -21,12 +21,12 @@ ms.date: 03/23/2017
   section and choose the directory where you want
   to register the application (2)
 
-  [ ![](register-images/01.-active-directory-in-azure-portal-sml.jpg "section and choose the directory where you want to register the application")](register-images/01.-active-directory-in-azure-portal.jpg)
+  [ ![](register-images/01.-active-directory-in-azure-portal-sml.jpg "section and choose the directory where you want to register the application")](register-images/01.-active-directory-in-azure-portal.jpg#lightbox)
 
 3. Click **Add** to create new application, then
   select **Add an application my organization is developing**
 
-  [ ![](register-images/02.-add-new-application-sml.jpg "Add an application my organization is developing")](register-images/02.-add-new-application.jpg)
+  [ ![](register-images/02.-add-new-application-sml.jpg "Add an application my organization is developing")](register-images/02.-add-new-application.jpg#lightbox)
 
 4. On the next screen, give your app a name (eg. XAM-DEMO).
   Make sure you select **Native Client Application** as the type of application.

@@ -43,7 +43,7 @@ var accent = new Label      { Text = "Accent",     BackgroundColor = Color.Accen
 
 These colors are shown on each platform below. Notice the final color - `Accent` - is a blue-ish color for iOS and Android; this value is defined by Xamarin.Forms. On Windows Phone the `Accent` shows as red *because that is the user-selected accent color for that device*; this value changes depending on the user's preferences.
 
- [ ![Color demo](colors-images/colors-sml.png "Color Demo")](colors-images/colors.png "Color Demo")
+ [![Color demo](colors-images/colors-sml.png "Color Demo")](colors-images/colors.png#lightbox "Color Demo")
 
 ## Color.Default
 

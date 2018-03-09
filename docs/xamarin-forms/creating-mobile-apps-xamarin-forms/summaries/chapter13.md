@@ -72,7 +72,7 @@ The best approach is to begin with a bitmap wider than the phone width in device
 
 The [**MadTeaParty**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/MadTeaParty) displays Chapter 7 of Lewis Carroll's *Alice's Adventures in Wonderland* with the original illustrations by John Tenniel:
 
-[![Triple screenshot of mad tea party](images/ch13fg16-small.png "Mad Hatters Tea Party Book Text")](images/ch13fg16-large.png "Mad Hatters Tea Party Book Text")
+[![Triple screenshot of mad tea party](images/ch13fg16-small.png "Mad Hatters Tea Party Book Text")](images/ch13fg16-large.png#lightbox "Mad Hatters Tea Party Book Text")
 
 ### Browsing and waiting
 

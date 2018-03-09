@@ -10,10 +10,6 @@ ms.author: amburns
 
 # What support options are available for Xamarin?
 
-## Overview
-- [Summary of Support Options](#Summary_of_Support_Options)
-- [Detailed Recommendations](#Detailed_Recommendations)
-
 ## Summary of Support Options
 
 As shown on the [Xamarin Support page](https://www.xamarin.com/support), several options are available.  Here are some quick initial recommendations [inspired by Stack Overflow](http://stackoverflow.com/help/product-support) on how to pick the best option:
@@ -42,6 +38,8 @@ As shown on the [Xamarin Support page](https://www.xamarin.com/support), several
 </table>
 
 The Xamarin support team helps monitor each of these options.  We encourage all users to contribute their thoughtful questions and reports to take advantage of and help grow the knowledgeable Xamarin developer community.  For suspected defects, be sure to submit bug reports when possible to ensure that the issues are tracked formally by the Xamarin engineering team.
+
+<a name="Visual_Studio_email_support_incidents_for_Xamarin_topics"/>
 
 ### Visual Studio email support incidents for Xamarin topics
 

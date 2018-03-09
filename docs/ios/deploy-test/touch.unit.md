@@ -135,11 +135,11 @@ or **Run Item**.
 The test runner allows you to see which tests are registered and select
 individually which tests can be executed.
 
-[ ![](touch.unit-images/02.png "The list of registered tests")](touch.unit-images/02.png) 
+[![](touch.unit-images/02.png "The list of registered tests")](touch.unit-images/02.png#lightbox) 
 
-[ ![](touch.unit-images/03.png "An individual text")](touch.unit-images/03.png) 
+[![](touch.unit-images/03.png "An individual text")](touch.unit-images/03.png#lightbox) 
 
-[ ![](touch.unit-images/04.png "The run results")](touch.unit-images/04.png)
+[![](touch.unit-images/04.png "The run results")](touch.unit-images/04.png#lightbox)
 
 You can run individual test fixtures by selecting the text fixture from the
 nested views, or you can run all of your tests with "Run Everything". If you run
@@ -148,7 +148,7 @@ one ignored test. This is what the report looks like, and you can drill down
 directly to the failing tests and find out more information about the
 failure:
 
-[ ![](touch.unit-images/05.png "A sample report")](touch.unit-images/05.png) [ ![](touch.unit-images/06.png "A sample report")](touch.unit-images/06.png) [ ![](touch.unit-images/07.png "A sample report")](touch.unit-images/07.png)
+[![](touch.unit-images/05.png "A sample report")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "A sample report")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "A sample report")](touch.unit-images/05.png#lightbox)
 
 You can also look at the Application Output window in your IDE to see
 which tests are being executed and their current status.

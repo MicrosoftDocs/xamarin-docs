@@ -14,7 +14,6 @@ ms.date: 08/21/2017
 
 _This topic explains how layouts can be versioned by using resource qualifiers. For example, there can be a version of a layout that is only used when the device is in landscape mode and a layout version that is only for portrait mode._
 
-<a name="creating_alternative_layouts" />
 
 ## Creating Alternative Layouts
 
@@ -25,11 +24,11 @@ the **Default** view is presented:
 
 # [Visual Studio](#tab/vswin)
 
-[![Alternate layout view pane](alternative-layout-views-images/vs/01-alt-layout-view-pane-sml.png "Alternate layout view pane")](alternative-layout-views-images/vs/01-alt-layout-view-pane.png)
+[![Alternate layout view pane](alternative-layout-views-images/vs/01-alt-layout-view-pane-sml.png "Alternate layout view pane")](alternative-layout-views-images/vs/01-alt-layout-view-pane.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Alternate layout view pane](alternative-layout-views-images/xs/01-alt-layout-view-pane-sml.png)](alternative-layout-views-images/xs/01-alt-layout-view-pane.png)
+[![Alternate layout view pane](alternative-layout-views-images/xs/01-alt-layout-view-pane-sml.png)](alternative-layout-views-images/xs/01-alt-layout-view-pane.png#lightbox)
 
 -----
 
@@ -39,11 +38,11 @@ resource qualifiers for this layout variation:
 
 # [Visual Studio](#tab/vswin)
 
-[![Create layout variation](alternative-layout-views-images/vs/02-create-layout-variation-sml.png "Create layout variation")](alternative-layout-views-images/vs/02-create-layout-variation.png)
+[![Create layout variation](alternative-layout-views-images/vs/02-create-layout-variation-sml.png "Create layout variation")](alternative-layout-views-images/vs/02-create-layout-variation.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Create layout variation](alternative-layout-views-images/xs/02-create-layout-variation-sml.png)](alternative-layout-views-images/xs/02-create-layout-variation.png)
+[![Create layout variation](alternative-layout-views-images/xs/02-create-layout-variation-sml.png)](alternative-layout-views-images/xs/02-create-layout-variation.png#lightbox)
 
 -----
 
@@ -54,11 +53,11 @@ creates a new layout version named **large-land**:
 
 # [Visual Studio](#tab/vswin)
 
-[![Large-land variation](alternative-layout-views-images/vs/03-large-land-sml.png "Large-land variation")](alternative-layout-views-images/vs/03-large-land.png)
+[![Large-land variation](alternative-layout-views-images/vs/03-large-land-sml.png "Large-land variation")](alternative-layout-views-images/vs/03-large-land.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Large-land variation](alternative-layout-views-images/xs/03-large-land-sml.png)](alternative-layout-views-images/xs/03-large-land.png)
+[![Large-land variation](alternative-layout-views-images/xs/03-large-land-sml.png)](alternative-layout-views-images/xs/03-large-land.png#lightbox)
 
 -----
 
@@ -72,16 +71,15 @@ screenshot:
 
 # [Visual Studio](#tab/vswin)
 
-[![Loaded layout indicator](alternative-layout-views-images/vs/04-new-layout-sml.png "Loaded layout indicator")](alternative-layout-views-images/vs/04-new-layout.png)
+[![Loaded layout indicator](alternative-layout-views-images/vs/04-new-layout-sml.png "Loaded layout indicator")](alternative-layout-views-images/vs/04-new-layout.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Loaded layout indicator](alternative-layout-views-images/xs/04-new-layout-sml.png)](alternative-layout-views-images/xs/04-new-layout.png)
+[![Loaded layout indicator](alternative-layout-views-images/xs/04-new-layout-sml.png)](alternative-layout-views-images/xs/04-new-layout.png#lightbox)
 
 -----
 
 
-<a name="editing_alternative_layouts" />
 
 ## Editing Alternative Layouts
 
@@ -99,11 +97,11 @@ or more layouts. When more than one layout is present, the
 
 # [Visual Studio](#tab/vswin)
 
-[![Multi-edit icon](alternative-layout-views-images/vs/05-multi-layout-icon-sml.png "Multi-edit icon")](alternative-layout-views-images/vs/05-multi-layout-icon.png)
+[![Multi-edit icon](alternative-layout-views-images/vs/05-multi-layout-icon-sml.png "Multi-edit icon")](alternative-layout-views-images/vs/05-multi-layout-icon.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Multi-edit icon](alternative-layout-views-images/xs/05-multi-layout-icon-sml.png)](alternative-layout-views-images/xs/05-multi-layout-icon.png)
+[![Multi-edit icon](alternative-layout-views-images/xs/05-multi-layout-icon-sml.png)](alternative-layout-views-images/xs/05-multi-layout-icon.png#lightbox)
 
 -----
 
@@ -116,11 +114,11 @@ the following screenshot:
 
 # [Visual Studio](#tab/vswin)
 
-[![Unlink all layouts](alternative-layout-views-images/vs/06-multi-linked-sml.png "Unlink all layouts")](alternative-layout-views-images/vs/06-multi-linked.png)
+[![Unlink all layouts](alternative-layout-views-images/vs/06-multi-linked-sml.png "Unlink all layouts")](alternative-layout-views-images/vs/06-multi-linked.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Unlink all layouts](alternative-layout-views-images/xs/06a-linked-sml.png)](alternative-layout-views-images/xs/06a-linked.png)
+[![Unlink all layouts](alternative-layout-views-images/xs/06a-linked-sml.png)](alternative-layout-views-images/xs/06a-linked.png#lightbox)
 
 -----
 
@@ -133,11 +131,11 @@ unlink the middle layout as shown here:
 
 # [Visual Studio](#tab/vswin)
 
-[![Unlink middle layout](alternative-layout-views-images/vs/07-unlink-middle-layout-sml.png "Unlink middle layout")](alternative-layout-views-images/vs/07-unlink-middle-layout.png)
+[![Unlink middle layout](alternative-layout-views-images/vs/07-unlink-middle-layout-sml.png "Unlink middle layout")](alternative-layout-views-images/vs/07-unlink-middle-layout.png#lightbox)
  
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Unlink middle layout](alternative-layout-views-images/xs/06b-multi-linked-sml.png)](alternative-layout-views-images/xs/06b-multi-linked.png)
+[![Unlink middle layout](alternative-layout-views-images/xs/06b-multi-linked-sml.png)](alternative-layout-views-images/xs/06b-multi-linked.png#lightbox)
  
 -----
  
@@ -147,7 +145,6 @@ layout will be propagated to other layout but not to the **large-land**
 layout. 
 
 
-<a name="multi_edit_example" />
 
 ### Multi-Edit Example 
 
@@ -159,11 +156,11 @@ linked layouts. Here is how it looks in the **Default** layout:
 
 # [Visual Studio](#tab/vswin)
 
-[![Add TextView](alternative-layout-views-images/vs/08-add-textview-sml.png "Add TextView")](alternative-layout-views-images/vs/08-add-textview.png)
+[![Add TextView](alternative-layout-views-images/vs/08-add-textview-sml.png "Add TextView")](alternative-layout-views-images/vs/08-add-textview.png#lightbox)
  
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Add TextView](alternative-layout-views-images/xs/07-add-textview-sml.png)](alternative-layout-views-images/xs/07-add-textview.png)
+[![Add TextView](alternative-layout-views-images/xs/07-add-textview-sml.png)](alternative-layout-views-images/xs/07-add-textview.png#lightbox)
  
 -----
  
@@ -173,11 +170,11 @@ it is linked to the **Default** layout:
 
 # [Visual Studio](#tab/vswin)
 
-[![Landscape TextView](alternative-layout-views-images/vs/09-landscape-textview-sml.png "Landscape TextView")](alternative-layout-views-images/vs/09-landscape-textview.png)
+[![Landscape TextView](alternative-layout-views-images/vs/09-landscape-textview-sml.png "Landscape TextView")](alternative-layout-views-images/vs/09-landscape-textview.png#lightbox)
  
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Landscape TextView](alternative-layout-views-images/xs/08-landscape-textview-sml.png)](alternative-layout-views-images/xs/08-landscape-textview.png)
+[![Landscape TextView](alternative-layout-views-images/xs/08-landscape-textview-sml.png)](alternative-layout-views-images/xs/08-landscape-textview.png#lightbox)
  
 -----
  
@@ -188,7 +185,6 @@ other layouts)? To do this, you must unlink the layout that you want to
 change before you modify it, as explained next. 
 
 
-<a name="making_local_changes" />
 
 ### Making Local Changes 
 
@@ -204,11 +200,11 @@ layout and is *not* propagated back to the **Default** layout:
 
 # [Visual Studio](#tab/vswin)
 
-[![Local change](alternative-layout-views-images/vs/10-local-change-sml.png "Local change")](alternative-layout-views-images/vs/10-local-change.png)
+[![Local change](alternative-layout-views-images/vs/10-local-change-sml.png "Local change")](alternative-layout-views-images/vs/10-local-change.png#lightbox)
  
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Local change](alternative-layout-views-images/xs/09-local-change-sml.png)](alternative-layout-views-images/xs/09-local-change.png)
+[![Local change](alternative-layout-views-images/xs/09-local-change-sml.png)](alternative-layout-views-images/xs/09-local-change.png#lightbox)
  
 -----
  
@@ -217,7 +213,6 @@ When you click the **Default** layout to view it, the `TextView` text
 string is still set to `Portrait`. 
 
 
-<a name="handling_conflicts" />
 
 ## Handling Conflicts 
 
@@ -230,11 +225,11 @@ in this alternative layout*.
 
 # [Visual Studio](#tab/vswin)
 
-[![Conflicting change](alternative-layout-views-images/vs/11-conflicting-change-sml.png "Conflicting change")](alternative-layout-views-images/vs/11-conflicting-change.png)
+[![Conflicting change](alternative-layout-views-images/vs/11-conflicting-change-sml.png "Conflicting change")](alternative-layout-views-images/vs/11-conflicting-change.png#lightbox)
  
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Conflicting change](alternative-layout-views-images/xs/10-conflict-sml.png)](alternative-layout-views-images/xs/10-conflict.png)
+[![Conflicting change](alternative-layout-views-images/xs/10-conflict-sml.png)](alternative-layout-views-images/xs/10-conflict.png#lightbox)
  
 -----
  
@@ -242,7 +237,7 @@ in this alternative layout*.
 A *conflict box* is displayed on the right of the widget to explain the 
 conflict: 
 
-[ ![Conflict warning](alternative-layout-views-images/xs/11-warning-sml.png)](alternative-layout-views-images/xs/11-warning.png)
+[![Conflict warning](alternative-layout-views-images/xs/11-warning-sml.png)](alternative-layout-views-images/xs/11-warning.png#lightbox)
 
 The conflict box shows the list of properties that have changed and it 
 lists their values. Clicking **Ignore Conflict** applies the property 
@@ -251,7 +246,6 @@ change to this widget as well as to the counterpart widget in the linked
 **Default** layout. If all property changes are applied, the conflict 
 is automatically discarded. 
 
-<a name="view_group_conflicts" />
 
 ### View Group Conflicts 
 
@@ -264,11 +258,11 @@ moved widget to indicate the conflict:
 
 # [Visual Studio](#tab/vswin)
 
-[![View group conflict](alternative-layout-views-images/vs/12-view-group-conflict-sml.png "View group conflict")](alternative-layout-views-images/vs/12-view-group-conflict.png)
+[![View group conflict](alternative-layout-views-images/vs/12-view-group-conflict-sml.png "View group conflict")](alternative-layout-views-images/vs/12-view-group-conflict.png#lightbox)
  
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![View group conflict](alternative-layout-views-images/xs/12-view-group-conflict-sml.png)](alternative-layout-views-images/xs/12-view-group-conflict.png)
+[![View group conflict](alternative-layout-views-images/xs/12-view-group-conflict-sml.png)](alternative-layout-views-images/xs/12-view-group-conflict.png#lightbox)
  
 -----
  
@@ -283,11 +277,11 @@ layout:
 
 # [Visual Studio](#tab/vswin)
 
-[![Checkbox conflict](alternative-layout-views-images/vs/13-checkbox-conflict-sml.png "Checkbox conflict")](alternative-layout-views-images/vs/13-checkbox-conflict.png)
+[![Checkbox conflict](alternative-layout-views-images/vs/13-checkbox-conflict-sml.png "Checkbox conflict")](alternative-layout-views-images/vs/13-checkbox-conflict.png#lightbox)
  
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Checkbox conflict](alternative-layout-views-images/xs/13-checkbox-conflict-sml.png)](alternative-layout-views-images/xs/13-checkbox-conflict.png)
+[![Checkbox conflict](alternative-layout-views-images/xs/13-checkbox-conflict-sml.png)](alternative-layout-views-images/xs/13-checkbox-conflict.png#lightbox)
  
 -----
  
@@ -298,18 +292,18 @@ in this alternative layout*.
 
 # [Visual Studio](#tab/vswin)
 
-[![Alt layout conflict](alternative-layout-views-images/vs/14-alt-layout-conflict-sml.png "Alt layout conflict")](alternative-layout-views-images/vs/14-alt-layout-conflict.png)
+[![Alt layout conflict](alternative-layout-views-images/vs/14-alt-layout-conflict-sml.png "Alt layout conflict")](alternative-layout-views-images/vs/14-alt-layout-conflict.png#lightbox)
  
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Alt layout conflict](alternative-layout-views-images/xs/14-alt-layout-conflict-sml.png)](alternative-layout-views-images/xs/14-alt-layout-conflict.png)
+[![Alt layout conflict](alternative-layout-views-images/xs/14-alt-layout-conflict-sml.png)](alternative-layout-views-images/xs/14-alt-layout-conflict.png#lightbox)
  
 -----
  
 
 In addition, the conflict box displays the following message:
 
-[ ![Conflict message](alternative-layout-views-images/xs/15-conflict-message-sml.png)](alternative-layout-views-images/xs/15-conflict-message.png)
+[![Conflict message](alternative-layout-views-images/xs/15-conflict-message-sml.png)](alternative-layout-views-images/xs/15-conflict-message.png#lightbox)
 
 Adding the `CheckBox` causes a conflict because the **large-land** layout
 has changes in the `LinearLayout` that contains it. However, in this
@@ -323,11 +317,11 @@ dropped into the layout where the widget is missing (in this case, the
 
 # [Visual Studio](#tab/vswin)
 
-[![Resolved group conflict](alternative-layout-views-images/vs/15-resolved-group-conflict-sml.png "Resolved group conflict")](alternative-layout-views-images/vs/15-resolved-group-conflict.png)
+[![Resolved group conflict](alternative-layout-views-images/vs/15-resolved-group-conflict-sml.png "Resolved group conflict")](alternative-layout-views-images/vs/15-resolved-group-conflict.png#lightbox)
  
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Resolved group conflict](alternative-layout-views-images/xs/16-resolved-group-conflict-sml.png)](alternative-layout-views-images/xs/16-resolved-group-conflict.png)
+[![Resolved group conflict](alternative-layout-views-images/xs/16-resolved-group-conflict-sml.png)](alternative-layout-views-images/xs/16-resolved-group-conflict.png#lightbox)
  
 -----
  
@@ -337,7 +331,6 @@ have a red change marker because only the `LinearLayout` has changes that
 were applied in the **large-land** layout.
 
 
-<a name="Conflict_Persistence" />
 
 ### Conflict Persistence
 

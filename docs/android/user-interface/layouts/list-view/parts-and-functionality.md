@@ -11,7 +11,6 @@ ms.date: 08/21/2017
 
 # ListView Parts and Functionality
 
-<a name="overview" />
 
 ## Overview
 
@@ -32,12 +31,11 @@ A `ListView` consists of the following parts:
 These screenshots use a basic `ListView` control to
 show how Fast Scrolling and Section Index are rendered:
 
-[![Screenshots of apps using Plain old rows, fast scrolling, and section index](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png)
+[![Screenshots of apps using Plain old rows, fast scrolling, and section index](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png#lightbox)
 
 The elements that make up a `ListView` are described in
 more detail below:
 
-<a name="Rows" />
 
 ## Rows
 
@@ -47,7 +45,6 @@ use the same view layout or they can all be different. There are
 examples in this document of using built-in layouts and others
 explaining how to define custom layouts.
 
-<a name="Adapter" />
 
 ## Adapter
 
@@ -55,7 +52,6 @@ The `ListView` control requires an `Adapter` to supply the formatted
 `View` for each row. Android has built-in Adapters and Views that can
 be used, or custom classes can be created.
 
-<a name="Fast_Scrolling" />
 
 ## Fast Scrolling
 
@@ -64,7 +60,6 @@ enabled to help the user navigate to any part of the list. The
 fast-scrolling 'scroll bar' can be optionally enabled (and customized
 in API level 11 and higher).
 
-<a name="Section_Index" />
 
 ## Section Index
 
@@ -73,13 +68,12 @@ the user with feedback on what part of the list they are currently
 viewing. It is only appropriate on long lists, typically in conjunction
 with fast scrolling.
 
-<a name="Classes_Overview" />
 
 ## Classes Overview
 
 The primary classes used to display `ListViews` are shown here:
 
-[![UML diagram illustrating relationships between ListView and associated classes](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png)
+[![UML diagram illustrating relationships between ListView and associated classes](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png#lightbox)
 
 The purpose of each class is described below:
 

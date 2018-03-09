@@ -11,11 +11,7 @@ ms.date: 07/11/2017
 
 # Labels
 
-The `UILabel` control is used for displaying single and multi-line, read only text. This article covers the following topics:
-
-- [Implementing a Label](#Implementing_a_Label)
-- [Truncating and Wrapping](#Truncating_and_Wrapping)
-- [Formatting Text and Label](#Formatting_Text_and_Label)
+The `UILabel` control is used for displaying single and multi-line, read only text. 
 
 ## Implementing a Label
 
@@ -48,6 +44,8 @@ The following properties can be adjusted on the properties pad:
 ## Truncating and Wrapping
 
 For information on using the line breaks in iOS, refer to the [Truncate and Wrap text](https://developer.xamarin.com/recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text/) recipe.
+
+<a name="Formatting_Text_and_Label"/>
 
 ## Formatting Text and Label
 

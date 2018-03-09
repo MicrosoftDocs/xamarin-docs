@@ -41,7 +41,7 @@ This article discusses the fundamentals of the Xamarin.Forms framework, and cove
 
 In Visual Studio for Mac and Visual Studio, the default Xamarin.Forms app template creates the simplest Xamarin.Forms solution possible, which displays text to the user. If you run the application, it should appear similar to the following screenshots:
 
-[ ![](introduction-to-xamarin-forms-images/image05-sml.png "Default Xamarin.Forms Application")](introduction-to-xamarin-forms-images/image05.png "Default Xamarin.Forms Application")
+[![](introduction-to-xamarin-forms-images/image05-sml.png "Default Xamarin.Forms Application")](introduction-to-xamarin-forms-images/image05.png#lightbox "Default Xamarin.Forms Application")
 
 Each screen in the screenshots corresponds to a *Page* in Xamarin.Forms. A [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) represents an *Activity* in Android, a *View Controller* in iOS, or a *Page* in the Windows Universal Platform (UWP). The sample in the screenshots above instantiates a [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) object and uses that to display a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/).
 
@@ -245,7 +245,7 @@ public class StackLayoutExample : ContentPage
 
 By default the [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) assumes a vertical orientation as shown in the following screenshots:
 
-[ ![](introduction-to-xamarin-forms-images/image09-sml.png "Vertical StackLayout")](introduction-to-xamarin-forms-images/image09.png "Vertical StackLayout")
+[![](introduction-to-xamarin-forms-images/image09-sml.png "Vertical StackLayout")](introduction-to-xamarin-forms-images/image09.png#lightbox "Vertical StackLayout")
 
 The orientation of the [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) can be changed to a horizontal orientation, as demonstrated in the following XAML code example:
 
@@ -282,7 +282,7 @@ public class StackLayoutExample: ContentPage
 
 The following screenshots show the resulting layout:
 
-[ ![](introduction-to-xamarin-forms-images/image10-sml.png "Horizontal StackLayout")](introduction-to-xamarin-forms-images/image10.png "Horizontal StackLayout")
+[![](introduction-to-xamarin-forms-images/image10-sml.png "Horizontal StackLayout")](introduction-to-xamarin-forms-images/image10.png#lightbox "Horizontal StackLayout")
 
 The size of controls can be set through the `HeightRequest` and `WidthRequest` properties, as demonstrated in the following XAML code example:
 
@@ -325,7 +325,7 @@ Content = new StackLayout
 
 The following screenshots show the resulting layout:
 
-[ ![](introduction-to-xamarin-forms-images/image11-sml.png "Horizontal StackLayout with LayoutOptions")](introduction-to-xamarin-forms-images/image11.png "Horizontal StackLayout with LayoutOptions")
+[![](introduction-to-xamarin-forms-images/image11-sml.png "Horizontal StackLayout with LayoutOptions")](introduction-to-xamarin-forms-images/image11.png#lightbox "Horizontal StackLayout with LayoutOptions")
 
 For more information about the [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) class, see [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md).
 

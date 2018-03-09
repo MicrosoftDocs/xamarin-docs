@@ -14,9 +14,9 @@ ms.date: 05/03/2016
 
 _CocosSharp can be used to add precise shape, image, and text rendering to an application for advanced visualization_
 
-[ ![Cocos# in Xamarin.Forms](cocossharp-images/evolve-mike-cocossharp-sml.png "CocosSharp in Xamarin.Forms")](https://evolve.xamarin.com/session/56e210d1bad314273ca4d81e)
+> [!VIDEO https://youtube.com/embed/eYCx63FeqVU]
 
-[Evolve 2016: Cocos# in Xamarin.Forms](https://evolve.xamarin.com/session/56e210d1bad314273ca4d81e)
+**Evolve 2016: Cocos# in Xamarin.Forms**
 
 ## Overview
 

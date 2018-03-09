@@ -170,7 +170,7 @@ If the iOS resource is stored in the **Resources** folder, and if the UWP resour
 
 Here's that page running on the three platforms:
 
-[![Play Video Resource](loading-resources-images/playvideoresource-small.png "Play Video Resource")](loading-resources-images/playvideoresource-large.png "Play Video Resource")
+[![Play Video Resource](loading-resources-images/playvideoresource-small.png "Play Video Resource")](loading-resources-images/playvideoresource-large.png#lightbox "Play Video Resource")
 
 You've now seen how to [load videos from a Web URI](web-videos.md) and how to play embedded resources. In addition, you can [load videos from the device's video library](accessing-library.md).
 

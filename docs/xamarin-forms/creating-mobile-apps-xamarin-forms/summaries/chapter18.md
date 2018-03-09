@@ -48,7 +48,7 @@ Properties in a ViewModel can be more interactive, as demonstrated by the [`Simp
 The
 [`ColorViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorViewModel.cs) in the [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) library integrates the RGB and HSL color models. It is demonstrated in the [**HslSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/HslSliders) sample:
 
-[![Triple screenshot of TK](images/ch18fg08-small.png "HSL Color Model")](images/ch18fg08-large.png "HSL Color Model")
+[![Triple screenshot of TK](images/ch18fg08-small.png "HSL Color Model")](images/ch18fg08-large.png#lightbox "HSL Color Model")
 
 ### Streamlining the ViewModel
 

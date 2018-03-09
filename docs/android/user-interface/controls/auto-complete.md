@@ -11,7 +11,6 @@ ms.date: 02/06/2018
 
 # Auto Complete
 
-<a name="Overview" />
 
 ## Overview
 
@@ -49,7 +48,6 @@ is a label that introduces the
 [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
 widget.
 
-<a name="tutorial" />
 
 ## Tutorial
 
@@ -181,10 +179,9 @@ widget.
 
 Run the application. As you type, you should see something like this:
 
-[![Example auto-complete screenshot listing names that contain "ca"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png)
+[![Example auto-complete screenshot listing names that contain "ca"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
 
-<a name="More_Information" />
 
 ## More Information
 
@@ -225,7 +222,6 @@ string[] countries = Resources.GetStringArray (Resource.array.countries_array);
 var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countries);
 ```
 
-<a name="References" />
 
 ### References
 

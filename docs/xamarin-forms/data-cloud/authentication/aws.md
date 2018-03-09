@@ -57,7 +57,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 The `SelectAsync` method returns a response containing a collection of items and associated attributes that match the query expression. The query expression ensures that only items that match the user's email address will be retrieved. For more information about query expressions, see [Using Select to Create Amazon SimpleDB Queries](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/UsingSelect.html) on Amazon's website.
 
 > [!NOTE]
-> **Note**: Be careful to follow the quoting rules when constructing the query expression. For more information, see [Select Quoting Rules](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html) on Amazon's website.
+> Be careful to follow the quoting rules when constructing the query expression. For more information, see [Select Quoting Rules](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html) on Amazon's website.
 
 ## Summary
 

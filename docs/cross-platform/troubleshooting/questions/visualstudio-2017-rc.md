@@ -26,7 +26,7 @@ While the team is currently looking into ways to bypass this expected behavior, 
 
 * Select the **Xamarin** component as part of the new **Visual Studio Installer**
 
-  [ ![](visualstudio-2017-rc-images/install1-sml.png "Visual Studio 2017 RC Installer Screen")](visualstudio-2017-rc-images/install1-orig.png)
+  [![](visualstudio-2017-rc-images/install1-sml.png "Visual Studio 2017 RC Installer Screen")](visualstudio-2017-rc-images/install1-orig.png#lightbox)
 
 This will install the Visual Studio extension for Xamarin.iOS and Xamarin.Android development.
 
@@ -36,29 +36,29 @@ This will install the Visual Studio extension for Xamarin.iOS and Xamarin.Androi
 
 1. Search for the Visual Studio Installer application
 
-  [ ![](visualstudio-2017-rc-images/reinstall1-sml.png "Search Results for Visual Studio Installer Application")](visualstudio-2017-rc-images/reinstall1-orig.png)
+  [![](visualstudio-2017-rc-images/reinstall1-sml.png "Search Results for Visual Studio Installer Application")](visualstudio-2017-rc-images/reinstall1-orig.png#lightbox)
 
 2. Select:
   a. **Mobile development with .NET (Preview)** in the Workloads tab, or
 
-  [ ![](visualstudio-2017-rc-images/reinstall2-sml.png "VS Installer Workloads Tab")](visualstudio-2017-rc-images/reinstall2-orig.png)
+  [![](visualstudio-2017-rc-images/reinstall2-sml.png "VS Installer Workloads Tab")](visualstudio-2017-rc-images/reinstall2-orig.png#lightbox)
   b. **Xamarin** in the **Individual components** tab
 
-  [ ![](visualstudio-2017-rc-images/reinstall3-sml.png "VS Installer Components Tab")](visualstudio-2017-rc-images/reinstall3-orig.png)
+  [![](visualstudio-2017-rc-images/reinstall3-sml.png "VS Installer Components Tab")](visualstudio-2017-rc-images/reinstall3-orig.png#lightbox)
 
 #### Using the Visual Studio Installer within Visual Studio:
 1. Navigate to the Visual Studio 2017 Start Page
 2. Click on **More project templates** under the **New Project** section
 
-	[ ![](visualstudio-2017-rc-images/reinstall4-sml.png "Visual Studio Start Page")](visualstudio-2017-rc-images/reinstall4-orig.png)
+	[![](visualstudio-2017-rc-images/reinstall4-sml.png "Visual Studio Start Page")](visualstudio-2017-rc-images/reinstall4-orig.png#lightbox)
 3. Click on `Open Visual Studio Installer` in the left pane
 
-	[ ![](visualstudio-2017-rc-images/reinstall5-sml.png "New Project Screen")](visualstudio-2017-rc-images/reinstall5-orig.png)
+	[![](visualstudio-2017-rc-images/reinstall5-sml.png "New Project Screen")](visualstudio-2017-rc-images/reinstall5-orig.png#lightbox)
 4. Select:
   	
   	a. **Mobile development with .NET (Preview)** in the Workloads tab, or
 
-  	[ ![](visualstudio-2017-rc-images/reinstall2-sml.png "VS Installer Workloads Tab")](visualstudio-2017-rc-images/reinstall2-orig.png)
+  	[![](visualstudio-2017-rc-images/reinstall2-sml.png "VS Installer Workloads Tab")](visualstudio-2017-rc-images/reinstall2-orig.png#lightbox)
   	b. **Xamarin** in the **Individual components** tab
 
-  	[ ![](visualstudio-2017-rc-images/reinstall3-sml.png "VS Installer Components Tab")](visualstudio-2017-rc-images/reinstall3-orig.png)
+  	[![](visualstudio-2017-rc-images/reinstall3-sml.png "VS Installer Components Tab")](visualstudio-2017-rc-images/reinstall3-orig.png#lightbox)

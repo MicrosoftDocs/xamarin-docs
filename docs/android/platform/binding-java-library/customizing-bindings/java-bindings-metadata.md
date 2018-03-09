@@ -14,7 +14,6 @@ ms.date: 02/15/2018
 
 _C# code in Xamarin.Android calls Java libraries through bindings, which are a mechanism that abstracts the low-level details that are specified in Java Native Interface (JNI). Xamarin.Android provides a tool that generates these bindings. This tooling lets the developer control how a binding is created by using metadata, which allows procedures such as modifying namespaces and renaming members. This document discusses how metadata works, summarizes the attributes that metadata supports, and explains how to resolve binding problems by modifying this metadata._
 
-<a name="Overview" />
 
 ## Overview
 
@@ -96,7 +95,6 @@ allows general-purpose changes to the binding such as:
 
 Lets move on to discuss **Metadata.xml** in more detail.
 
-<a name="Metadata.xml_Transform_File" />
 
 ## Metadata.xml Transform File
 
@@ -148,7 +146,6 @@ the Java API's:
 -   `parameter` &ndash; Identify a parameter for a method. e.g. `/parameter[@name='p0']`
 
 
-<a name="ADDING_TYPES" />
 
 ### Adding Types
 
@@ -166,7 +163,6 @@ constructor and a single field:
 </add-node>
 ```
 
-<a name="REMOVING_TYPES" />
 
 ### Removing Types
 
@@ -178,7 +174,6 @@ ignore a Java type and not bind it. This is done by adding a
 <remove-node path="/api/package[@name='{package_name}']/class[@name='{name}']" />
 ```
 
-<a name="Renaming_Members" />
 
 ### Renaming Members
 
@@ -251,7 +246,6 @@ for the `EventArgs` subclass:
 ```
 
  
-<a name="Supported_Attributes" />
 
 ## Supported Attributes
 
@@ -456,7 +450,6 @@ Xamarin.Android to set the `MeasurementUnit`:
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 ```
 
-<a name="Summary" />
 
 ## Summary
 

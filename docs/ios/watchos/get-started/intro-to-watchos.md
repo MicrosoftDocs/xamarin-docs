@@ -28,12 +28,12 @@ In watchOS 1 apps, the code in the extension runs on the iPhone – the
 Apple Watch is effectively an external display. watchOS 2 and 3 apps run
 entirely on the Apple Watch. This difference is shown in the diagram below:
 
-[ ![](intro-to-watchos-images/arch-sml.png "The difference between watchOS 1 and watchOS 2 (and greater) is shown in this diagram")](intro-to-watchos-images/arch.png)
+[ ![](intro-to-watchos-images/arch-sml.png "The difference between watchOS 1 and watchOS 2 (and greater) is shown in this diagram")](intro-to-watchos-images/arch.png#lightbox)
 
 Regardless of which version of watchOS is targeted, in Visual Studio for Mac’s Solution Pad
 a complete solution will look something like this:
 
-[ ![](intro-to-watchos-images/projectstructure-sml.png "The Solution Pad")](intro-to-watchos-images/projectstructure.png)
+[![](intro-to-watchos-images/projectstructure-sml.png "The Solution Pad")](intro-to-watchos-images/projectstructure.png#lightbox)
 
 The *Parent App* in a watchOS solution is a regular iOS app. This is the only project
 in the solution that is visible **on the phone**. Use-cases for this app would

@@ -7,14 +7,13 @@ ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Introduction to Android Wear
 
 _With the introduction of Google's Android Wear, you are no longer restricted to just phones and tablets when it comes to developing great Android apps. Xamarin.Android's support for Android Wear makes it possible for you to run C# code on your wrist! This introduction provides a basic overview of Android Wear, describes its key features, and offers an overview of the features available in Android Wear 2.0. It lists some of the more popular Android Wear devices, and it provides links to essential Google Android Wear documentation for further reading._
 
-<a name="overview" />
 
 ## Overview
 
@@ -35,8 +34,6 @@ functionality for packaging your Wear apps. NuGet packages are also
 available for Android Wear 2.0 as described later in this guide.
 
 
-<a name="basics" />
-
 ## Android Wear Basics
 
 Android Wear has a user interface paradigm that differs from that of 
@@ -49,7 +46,6 @@ with handheld apps. The following sections describe these usage
 scenarios and outline the essential Android Wear features. 
 
 
-<a name="scenarios" />
 
 ### Usage Scenarios
 
@@ -58,7 +54,6 @@ current handheld applications with enhanced notifications and syncing
 data between the handheld app and the wearable app. Therefore,
 these scenarios are relatively straightforward to implement.
 
-<a name="notifications" />
 
 #### Wearable Notifications
 
@@ -74,7 +69,6 @@ sample provides example code that demonstrates how to send a list
 of notifications to an Android Wear device. 
 
 
-<a name="companion" />
 
 #### Companion Applications
 
@@ -86,7 +80,6 @@ how to create a quiz that runs on a handheld device and asks quiz
 questions on the wearable device. 
 
 
-<a name="ui" />
 
 ### User Interface
 
@@ -98,7 +91,7 @@ You typically associate the `GridViewPager` with a
 `FragmentGridPagerAdaptor` (or `GridPagerAdaptor`) that lets you 
 represent each row and column cells as a `Fragment`: 
 
-[ ![Wear Navigation](intro-to-wear-images/2d-picker-sml.png "Wear Navigation")](intro-to-wear-images/2d-picker.png)
+[![Wear Navigation](intro-to-wear-images/2d-picker-sml.png "Wear Navigation")](intro-to-wear-images/2d-picker.png#lightbox)
 
 Wear also makes use of action buttons that consist of a big colored circle
 with small description text underneath it (as illustrated above).  The
@@ -112,7 +105,6 @@ action buttons to the Wear user interface. For more about Android Wear
 topic. 
 
 
-<a name="comm" />
 
 ### Communications
 
@@ -145,7 +137,6 @@ The [FindMyPhone](https://developer.xamarin.com/samples/monodroid/wear/FindMyPho
 illustrates how to implement a `WearableListenerService`.
 
 
-<a name="deploy" />
 
 ### Deployment
 
@@ -157,7 +148,6 @@ versions of Xamarin.Android earlier than version 5.0.
 explains deployment in more detail. 
 
 
-<a name="further" />
 
 ## Going Further 
 
@@ -197,7 +187,6 @@ stripped down digital watch face service, followed by more code that
 enhances it to an analog-style watch face with extra features. 
 
 
-<a name="wear2" />
 
 ## Android Wear 2.0
 
@@ -210,7 +199,6 @@ app. The following sections highlight these features and provide links
 to help you get started with using them in your app.
 
 
-<a name="install2" />
 
 ### Install Wear 2.0 Packages
 
@@ -218,7 +206,7 @@ To build a Wear 2.0 app with Xamarin.Android, you must add the
 **Xamarin.Android.Wear v2.0** package to your project (click the
 **Browse tab**):
 
-[![Xamarin.Android.Wear v2.0](intro-to-wear-images/wear-nuget-2.0-sml.png "Install the Xamarin.Android.Wear v2.0 NuGet")](intro-to-wear-images/wear-nuget-2.0.png)
+[![Xamarin.Android.Wear v2.0](intro-to-wear-images/wear-nuget-2.0-sml.png "Install the Xamarin.Android.Wear v2.0 NuGet")](intro-to-wear-images/wear-nuget-2.0.png#lightbox)
 
 This NuGet package contains bindings for both the Android Support
 Wearable and Wear Compat libraries.
@@ -226,9 +214,8 @@ Wearable and Wear Compat libraries.
 In addition to **Xamarin.Android.Wear**, we recommend that you install 
 the **Xamarin.GooglePlayServices.Wearable** NuGet: 
 
-[![Xamarin.GooglePlayServices.Wearable](intro-to-wear-images/gpsw-nuget-sml.png "Install the Xamarin.GooglePlayServices.Wearable NuGet")](intro-to-wear-images/gpsw-nuget.png)
+[![Xamarin.GooglePlayServices.Wearable](intro-to-wear-images/gpsw-nuget-sml.png "Install the Xamarin.GooglePlayServices.Wearable NuGet")](intro-to-wear-images/gpsw-nuget.png#lightbox)
 
-<a name="wear2feat" />
 
 ### Key Features of Wear 2.0
 
@@ -237,7 +224,6 @@ initial launch in 2014. The following sections highlight the key
 features of Android Wear 2.0, and links are provided to help you get 
 started using these new features in your app. 
 
-<a name="compl" />
 
 #### Complications
 
@@ -254,7 +240,6 @@ For more about complications, see the Android
 topic. 
 
 
-<a name="drawers" />
 
 #### Navigation and Action Drawers 
 
@@ -272,7 +257,6 @@ Android
 topic. 
 
 
-<a name="curved" />
 
 #### Curved Layouts 
 
@@ -289,7 +273,6 @@ see the Android
 API documentation. 
 
 
-<a name="standalone" />
 
 #### Standalone Apps 
 
@@ -301,7 +284,6 @@ see the Android [Standalone Apps](https://developer.android.com/wear/preview/fea
 topic.
 
 
-<a name="wrist" />
 
 #### Wrist Gestures 
 
@@ -324,7 +306,6 @@ see the Android
 [API Overview](https://developer.android.com/wear/preview/api-overview.html). 
 
 
-<a name="devices" />
 
 ## Devices
 
@@ -338,7 +319,6 @@ Here are some examples of the devices that can run Android Wear:
 * [ASUS ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
 
-<a name="reading" />
 
 ## Further Reading
 
@@ -350,7 +330,6 @@ Check out Google's Android Wear documentation:
 * [Android Wear 2.0](https://developer.android.com/wear/preview/index.html)
 
 
-<a name="summary" />
 
 ## Summary
 

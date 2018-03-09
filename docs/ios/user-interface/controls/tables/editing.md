@@ -16,19 +16,11 @@ swipe-to-delete gesture that can be implemented with a single method override.
 More complex editing (including moving rows) can be done with the table in edit
 mode.
 
-This guide looks at the following:
-
-- [Swipe to delete](#Swipe_to_Delete)
-- [Edit Mode](#Edit_Mode)
-- [Row Insertion editing style](#row_insertion_editing_style)
-
-<a name="Swipe_to_delete" />
-
 ## Swipe to Delete
 
 The swipe to delete feature is a natural gesture in iOS that users expect. 
 
- [ ![](editing-images/image10.png "Example of Swipe to Delete")](editing-images/image10.png)
+ [![](editing-images/image10.png "Example of Swipe to Delete")](editing-images/image10.png#lightbox)
 
 There are three method overrides that affect the swipe gesture to show a **Delete** button in a cell:
 
@@ -66,7 +58,6 @@ public override string TitleForDeleteConfirmation (UITableView tableView, NSInde
 
 For this example the `UITableViewSource` has been updated to use a `List<TableItem>` (instead of a string array) as the data source because it supports adding and deleting items from the collection.
 
-<a name="Edit_mode" />
 
 ## Edit Mode
 
@@ -75,7 +66,7 @@ row, which reveals a Delete button when touched. The table also displays a
 ‘handle’ icon to indicate that the row can be dragged to change the order.
 The **TableEditMode** sample implements these features as shown.
 
- [ ![](editing-images/image11.png "The TableEditMode sample implements these features as shown")](editing-images/image11.png)
+ [![](editing-images/image11.png "The TableEditMode sample implements these features as shown")](editing-images/image11.png#lightbox)
 
 There are a number of different methods on `UITableViewSource`
 that affect a table’s edit mode behavior:
@@ -147,7 +138,6 @@ button should turn editing mode off:
 table.SetEditing (false, true);
 ```
 
-<a name="Edit_mode_–_row_insertion_editing_style" />
 
 ## Row Insertion Editing Style
 
@@ -157,7 +147,7 @@ Contact** screen. This screenshot shows how the row insertion functionality
 works – in edit mode there is an additional row that (when clicked) inserts
 additional rows into the data. When editing is complete, the temporary **(add new)** row is removed.
 
- [ ![](editing-images/image12.png "When editing is complete, the temporary add new row is removed")](editing-images/image12.png)
+ [![](editing-images/image12.png "When editing is complete, the temporary add new row is removed")](editing-images/image12.png#lightbox)
 
 There are a number of different methods on `UITableViewSource`
 that affect a table’s edit mode behavior. These methods have been implemented

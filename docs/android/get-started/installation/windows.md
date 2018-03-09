@@ -7,14 +7,13 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 03/01/2018
 ---
 
 # Windows Installation
 
 _This guide describes the steps for installing Xamarin.Android for Visual Studio on Windows, and it explains how to configure Xamarin.Android for building your first Xamarin.Android application._
 
-<a name="overview" />
 
 ## Overview
 
@@ -47,7 +46,6 @@ Studio on Windows, see the
 [Windows Install](~/cross-platform/get-started/installation/windows.md)
 guide.
 
-<a name="configuration" />
 
 ## Configuration
 
@@ -78,7 +76,6 @@ if you are developing specifically for API level 23 or earlier.
 > [!IMPORTANT]
 > **Note:** Xamarin.Android does not support JDK 9.
 
-<a name="sdk_manager" />
 
 ### Android SDK Manager
 
@@ -93,7 +90,7 @@ the Android SDK. To do this, use the **Android SDK Manager**. You can
 launch the **Android SDK Manager** by clicking **Tools > Android >
 Android SDK Manager**:
 
-[![How to launch the Android SDK Manager](windows-images/08-sdk-manager-sml.png)](windows-images/08-sdk-manager.png)
+[![How to launch the Android SDK Manager](windows-images/08-sdk-manager-sml.png)](windows-images/08-sdk-manager.png#lightbox)
 
 By default, Visual Studio installs the Google Android SDK Manager:
 
@@ -110,7 +107,6 @@ SDK Tools package.
 For more information about using the Xamarin Android SDK Manager, see
 [Android SDK Setup](~/android/get-started/installation/android-sdk.md).
 
-<a name="emulator" />
 
 ### Android Emulator
 
@@ -146,8 +142,6 @@ to configure your Android device for development, then connect it to
 your computer for running and debugging Xamarin.Android applications.
 
 
-<a name="create_app" />
-
 ## Create an Application
 
 Now that you have installed Xamarin.Android, you can launch Visual
@@ -161,13 +155,11 @@ click **Blank App (Android)** in the right pane. Enter a name for
 your app (in the screenshot below, the app is called **MyApp**), then
 click **OK**:
 
-[![Screenshot of New Project dialog, creating a blank Android app](windows-images/11-first-app-sml.png)](windows-images/11-first-app.png)
+[![Screenshot of New Project dialog, creating a blank Android app](windows-images/11-first-app-sml.png)](windows-images/11-first-app.png#lightbox)
 
 That's it! Now you are ready to use Xamarin.Android to create
 Android applications!
 
-
-<a name="summary" />
 
 ## Summary
 

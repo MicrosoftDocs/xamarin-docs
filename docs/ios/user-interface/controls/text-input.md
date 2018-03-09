@@ -15,9 +15,9 @@ Accepting user text input is accomplished with the `UITextField` for single-line
 
 The screenshots below show the icons for these controls, located in the Toolbox Pad in Visual Studio for Mac:
 
- [ ![](text-input-images/image11a.png "UITextField")](text-input-images/image11a.png)
+ [![](text-input-images/image11a.png "UITextField")](text-input-images/image11a.png#lightbox)
 
- [ ![](text-input-images/image13a.png "UITextView")](text-input-images/image13a.png)
+ [![](text-input-images/image13a.png "UITextView")](text-input-images/image13a.png#lightbox)
 
 Once you have named the outlet and saved the Storyboard file, Visual Studio for Mac will update the `.designer.cs` partial class and you can add C# code that references the control to your class file. Each control has its own unique properties and events that can be accessed in your C# code.
 
@@ -28,7 +28,7 @@ Once you have named the outlet and saved the Storyboard file, Visual Studio for 
 
 The `UITextField` control is most often used to accept a single line of text input such as a username or password. Some of the options available for customizing the control are shown here:
 
- [ ![](text-input-images/image15a.png "UITextField Properties")](text-input-images/image15a.png)
+ [![](text-input-images/image15a.png "UITextField Properties")](text-input-images/image15a.png#lightbox)
 
 These controls are explained below:
 
@@ -72,7 +72,7 @@ View.Add(textfield1);
 
 The `UITextView` control can be used to display read-only text or to accept multiple-line text input. It has many of the same options as the `UITextField` (such as Capitalization, Correction, etc).
 
- [ ![](text-input-images/image16a.png "UITextView Properties")](text-input-images/image16a.png)
+ [![](text-input-images/image16a.png "UITextView Properties")](text-input-images/image16a.png#lightbox)
 
 Specific properties include:
 

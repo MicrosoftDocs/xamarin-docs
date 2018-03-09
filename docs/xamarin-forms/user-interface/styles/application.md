@@ -56,7 +56,7 @@ The following code example shows a XAML page applying the `buttonStyle` to the p
 
 This results in the appearance shown in the following screenshots:
 
-[![](application-images/application-styles-1.png "Global Styles Example")](application-images/application-styles-1-large.png "Global Styles Example")
+[![](application-images/application-styles-1.png "Global Styles Example")](application-images/application-styles-1-large.png#lightbox "Global Styles Example")
 
 For information about creating styles in a page's [`ResourceDictionary`](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), see [Explicit Styles](~/xamarin-forms/user-interface/styles/explicit.md) and [Implicit Styles](~/xamarin-forms/user-interface/styles/implicit.md).
 
@@ -94,7 +94,7 @@ Styles lower in the view hierarchy take precedence over those defined higher up.
 
 The original `buttonStyle`, defined at application level, is overridden by the `buttonStyle` instance defined at page level. In addition, the page level style is overridden by the control level `buttonStyle`. Therefore, the [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) instances are displayed with blue text, as shown in the following screenshots:
 
-[![](application-images/application-styles-2.png "Overriding Styles Example")](application-images/application-styles-2-large.png "Overriding Styles Example")
+[![](application-images/application-styles-2.png "Overriding Styles Example")](application-images/application-styles-2-large.png#lightbox "Overriding Styles Example")
 
 ## Creating a Global Style in C&#35;
 

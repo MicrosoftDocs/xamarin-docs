@@ -6,7 +6,7 @@ ms.assetid: 405A1FA0-4EFA-4AEB-B672-F36307B9CF16
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Touch in Android
@@ -51,7 +51,7 @@ respond to a touch event:
 
 
 > [!NOTE]
-> **Note:** Not all Android devices support touch screens. 
+> Not all Android devices support touch screens. 
 
 Adding the following tag to your manifest file causes Google Play to
 only display your app to those devices that are touch enabled:
@@ -137,14 +137,14 @@ allows a developer to create pre-defined gestures that can be embedded
 in an application. The following screen shot shows an example of
 Gestures Builder:
 
-[![Screenshot of Gestures Builder with example gestures](touch-in-android-images/image11.png)](touch-in-android-images/image11.png)
+[![Screenshot of Gestures Builder with example gestures](touch-in-android-images/image11.png)](touch-in-android-images/image11.png#lightbox)
 
 An improved version of this application called Gesture Tool can be
 found Google Play. Gesture Tool is very much like Gestures Builder
 except that it allows you to test gestures after they have been
 created. This next screenshot shows Gestures Builder:
 
-[![Screenshot of Gesture Tool with example gestures](touch-in-android-images/image12.png)](touch-in-android-images/image12.png)
+[![Screenshot of Gesture Tool with example gestures](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
 
 Gesture Tool is a bit more useful for creating custom gestures as it
 allows the gestures to be tested as they are being created and is

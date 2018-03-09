@@ -44,7 +44,6 @@ Google play does not allow an expansion file to be uploaded to an existing APK
 or for existing APKs to be updated. If it is necessary to update an expansion
 file, then a new APK must be uploaded with the  `versionCode` updated.
 
-<a name="Expansion_File_Storage" />
 
 ## Expansion File Storage
 
@@ -80,7 +79,6 @@ zip file, media playback calls may directly use files in the zip
 without having to unpack the zip file. The media files should not be 
 compressed when added to the zip file. 
 
-<a name="FileName_Format" />
 
 ### FileName Format
 
@@ -99,7 +97,6 @@ The three components of this scheme are:
 For example, if the APK version is 21, and the package name is `mono.samples.helloworld`, the
 main expansion file will be named **main.21.mono.samples.helloworld**.
 
-<a name="Download_Process" />
 
 ## Download Process
 
@@ -110,7 +107,7 @@ needs to check to see whether the expansion files exist and then download them,
 if necessary. The following flowchart displays the recommended workflow of this
 process:
 
-[ ![APK expansion flowchart](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png)
+[![APK expansion flowchart](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png#lightbox)
 
 When an application starts up, it should check to see if the 
 appropriate expansion files exist on the current device. If they do 
@@ -141,7 +138,6 @@ download:
 -  Errors that occur during the download are gracefully handled and recoverable.
 
 
-<a name="Architectural_Overview" />
 
 ## Architectural Overview
 

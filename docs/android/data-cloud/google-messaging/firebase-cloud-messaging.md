@@ -7,14 +7,14 @@ ms.assetid: E5314D7F-2AAC-40DA-BEBA-27C834F078DD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/29/2017
+ms.date: 03/01/2018
 ---
 
 # Firebase Cloud Messaging
 
 _Firebase Cloud Messaging (FCM) is a service that facilitates messaging between mobile apps and server applications. This article provides an overview of how FCM works, and it explains how to configure Google Services so that your app can use FCM._
 
-[![Firebase Cloud Messaging hero image](firebase-cloud-messaging-images/preview.png)](firebase-cloud-messaging-images/preview.png)
+[![Firebase Cloud Messaging hero image](firebase-cloud-messaging-images/preview.png)](firebase-cloud-messaging-images/preview.png#lightbox)
 
 This topic provides a high-level overview of how Firebase Cloud
 Messaging routes messages between your Xamarin.Android app and an app
@@ -22,7 +22,6 @@ server, and it provides a step-by-step procedure for acquiring
 credentials so that your app can use FCM services.
 
 
-<a name="overview" />
 
 ## Overview
 
@@ -39,7 +38,7 @@ with through FCM. Unlike GCM, FCM makes it possible for you to send
 messages to client apps directly via the Firebase Console Notifications
 GUI:
 
-[![FCM sits between the client app and an app server](firebase-cloud-messaging-images/01-server-fcm-app-sml.png)](firebase-cloud-messaging-images/01-server-fcm-app.png)
+[![FCM sits between the client app and an app server](firebase-cloud-messaging-images/01-server-fcm-app-sml.png)](firebase-cloud-messaging-images/01-server-fcm-app.png#lightbox)
 
 Using FCM, app servers can send messages to a single device, to a group
 of devices, or to a number of devices that are subscribed to a topic. A
@@ -49,7 +48,6 @@ information about the different types of Firebase messages, see
 [About FCM Messages](https://firebase.google.com/docs/cloud-messaging/concept-options).
 
 
-<a name="inaction" />
 
 ## Firebase Cloud Messaging in Action
 
@@ -117,7 +115,7 @@ A client app must first register with FCM before messaging can take
 place. The client app must complete the registration steps shown in the
 following diagram:
 
-[![App registration steps diagram](firebase-cloud-messaging-images/02-app-registration-sml.png)](firebase-cloud-messaging-images/02-app-registration.png)
+[![App registration steps diagram](firebase-cloud-messaging-images/02-app-registration-sml.png)](firebase-cloud-messaging-images/02-app-registration.png#lightbox)
 
 1.  The client app contacts FCM to obtain a registration token, passing
     the sender ID, API Key, and App ID to FCM.
@@ -144,14 +142,13 @@ detects this and automatically notifies the app server to delete the
 registration token.
 
 
-<a name="downstream" />
 
 ### Downstream Messaging
 
 The following diagram illustrates how Firebase Cloud Messaging stores
 and forwards downstream messages:
 
-[![FCM uses store and forward for downstream messaging](firebase-cloud-messaging-images/03-downstream-sml.png)](firebase-cloud-messaging-images/03-downstream.png)
+[![FCM uses store and forward for downstream messaging](firebase-cloud-messaging-images/03-downstream-sml.png)](firebase-cloud-messaging-images/03-downstream.png#lightbox)
 
 When the app server sends a downstream message to the client app, it
 uses the following steps as enumerated in the above diagram:
@@ -177,9 +174,6 @@ For detailed information about receiving downstream FCM messages on
 Android, see
 [Remote Notifications with FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
 
-
-<a name="topic" />
-
 ### Topic Messaging
 
 *Topic Messaging* makes it possible for an app server to send a message
@@ -189,7 +183,7 @@ Notifications GUI. FCM handles the routing and delivery of topic
 messages to subscribed clients. This feature can be used for messages
 such as weather alerts, stock quotes, and headline news.
 
-[![Topic messaging diagram](firebase-cloud-messaging-images/04-topic-messaging-sml.png)](firebase-cloud-messaging-images/04-topic-messaging.png)
+[![Topic messaging diagram](firebase-cloud-messaging-images/04-topic-messaging-sml.png)](firebase-cloud-messaging-images/04-topic-messaging.png#lightbox)
 
 The following steps are used in topic messaging (after the client app
 obtains a registration token as explained earlier):
@@ -220,7 +214,7 @@ app:
     your Google account (i.e., your Gmail address) and click **CREATE NEW
     PROJECT**:
 
-    [![Create New Project button](firebase-cloud-messaging-images/05-firebase-console-sml.png)](firebase-cloud-messaging-images/05-firebase-console.png)
+    [![Create New Project button](firebase-cloud-messaging-images/05-firebase-console-sml.png)](firebase-cloud-messaging-images/05-firebase-console.png#lightbox)
 
     If you have an existing project, click **import a Google project**.
 
@@ -228,19 +222,19 @@ app:
     and click **CREATE PROJECT**. In the following example, a new
     project called **XamarinFCM** is created:
 
-    [![Create a Project dialog](firebase-cloud-messaging-images/06-create-a-project-sml.png)](firebase-cloud-messaging-images/06-create-a-project.png)
+    [![Create a Project dialog](firebase-cloud-messaging-images/06-create-a-project-sml.png)](firebase-cloud-messaging-images/06-create-a-project.png#lightbox)
 
 3.  In the Firebase Console **Overview**, click **Add Firebase to your
     Android app**:
 
-    [![Add Firebase to your Android app](firebase-cloud-messaging-images/07-add-firebase-sml.png)](firebase-cloud-messaging-images/07-add-firebase.png)
+    [![Add Firebase to your Android app](firebase-cloud-messaging-images/07-add-firebase-sml.png)](firebase-cloud-messaging-images/07-add-firebase.png#lightbox)
 
 4.  In the next screen, enter the package name of your app. In this
     example, the package name is **com.xamarin.fcmexample**. This value
     must match the package name of your Android app. An app nickname
     can also be entered in the **App nickname** field:
 
-    [![Entering FCM Example as the app nickname](firebase-cloud-messaging-images/08-package-name-sml.png)](firebase-cloud-messaging-images/08-package-name.png)
+    [![Entering FCM Example as the app nickname](firebase-cloud-messaging-images/08-package-name-sml.png)](firebase-cloud-messaging-images/08-package-name.png#lightbox)
 
 5.  If your app uses Dynamic links, Invites, or Google Auth, you must
     also enter your debug signing certificate. For more information
@@ -250,7 +244,7 @@ app:
 
 6.  Click **ADD APP**:
 
-    [![Clicking the Add App button](firebase-cloud-messaging-images/09-add-app-sml.png)](firebase-cloud-messaging-images/09-add-app.png)
+    [![Clicking the Add App button](firebase-cloud-messaging-images/09-add-app-sml.png)](firebase-cloud-messaging-images/09-add-app.png#lightbox)
 
     A Server API key and a Client ID are automatically generated for
     the app. This information is packaged in a **google-services.json**
@@ -262,7 +256,6 @@ project to receive FCM push notification messages on Android, see
 [Remote Notifications with FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
 
 
-<a name="furtherreading" />
 
 ## For Further Reading
 
@@ -278,7 +271,6 @@ project to receive FCM push notification messages on Android, see
     explain and define the Extensible Messaging and Presence Protocol (XMPP).
 
 
-<a name="summary" />
 
 ## Summary
 

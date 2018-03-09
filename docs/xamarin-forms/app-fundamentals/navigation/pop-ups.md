@@ -38,7 +38,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 }
 ```
 
-[ ![DisplayAlert](pop-ups-images/alert2-sml.png "Alert Dialog with Two Buttons")](pop-ups-images/alert2.png "Alert Dialog with Two Buttons")
+[![DisplayAlert](pop-ups-images/alert2-sml.png "Alert Dialog with Two Buttons")](pop-ups-images/alert2.png#lightbox "Alert Dialog with Two Buttons")
 
 ## Guiding Users Through Tasks
 
@@ -66,7 +66,7 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 }
 ```
 
-[ ![DisplayActionSheet](pop-ups-images/action2-sml.png "Action Sheet Dialog with Destroy Button")](pop-ups-images/action2.png "Action Sheet Dialog with Destroy Button")
+[![DisplayActionSheet](pop-ups-images/action2-sml.png "Action Sheet Dialog with Destroy Button")](pop-ups-images/action2.png#lightbox "Action Sheet Dialog with Destroy Button")
 
 ## Summary
 

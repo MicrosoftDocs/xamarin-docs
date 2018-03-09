@@ -28,13 +28,13 @@ In the same way that a Xamarin.iOS app can use image assets for UI controls and 
 
 - **Application Icon** - Every iOS app must define an application icon. This is the icon that the user will tap from the iOS home screen to launch the app. Additionally, this icon is used by Game Center, if applicable. Example: 
 
-	[ ![](app-icons-images/000.png "Application Icon")](app-icons-images/000-full.png)
+	[![](app-icons-images/000.png "Application Icon")](app-icons-images/000-full.png#lightbox)
 - **Spotlight Icon** - Whenever the user enters the name of an app in a Spotlight Search, this icon is displayed. Example: 
 
-	[ ![](app-icons-images/000a.png "Spotlight Icon")](app-icons-images/000a-full.png)
+	[![](app-icons-images/000a.png "Spotlight Icon")](app-icons-images/000a-full.png#lightbox)
 - **Settings Icon** - If the user enters the **Settings** app on their iOS device, this icon will be displayed at the end of the **Settings** list for the app. Example: 
 
-	[ ![](app-icons-images/000b.png "Settings Icon")](app-icons-images/000b-full.png)
+	[![](app-icons-images/000b.png "Settings Icon")](app-icons-images/000b-full.png#lightbox)
 
 The following image asset sizes and resolutions will be needed to support all of the icon types required by an Xamarin.iOS app targeting iOS 5 through iOS 9 (or greater):
 

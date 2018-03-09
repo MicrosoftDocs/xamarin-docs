@@ -35,7 +35,6 @@ are generated for all types that (directly or indirectly) inherit
 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/). 
 
 
-<a name="ACW_Naming" />
 
 ## Android Callable Wrapper Naming
 
@@ -102,7 +101,6 @@ information about attribute naming, see
 [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/). 
 
 
-<a name="Implementing_Interfaces" />
 
 ## Implementing Interfaces
 
@@ -134,7 +132,6 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 }
 ```
 
-<a name="Implementation_Details" />
 
 ## Implementation Details
 

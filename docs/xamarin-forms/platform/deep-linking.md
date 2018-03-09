@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2016
@@ -14,7 +15,10 @@ ms.date: 07/11/2016
 
 _Application indexing allows applications that would otherwise be forgotten after a few uses to stay relevant by appearing in search results. Deep linking allows applications to respond to a search result that contains application data, typically by navigating to a page referenced from a deep link. This article demonstrates how to use application indexing and deep linking to make Xamarin.Forms application content searchable on iOS and Android devices._
 
-## Overview
+> [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
+
+**Deep Linking with Xamarin.Forms and Azure, by [Xamarin University](https://university.xamarin.com/)**
+
 
 Xamarin.Forms application indexing and deep linking provide an API for publishing metadata for application indexing as users navigate through applications. Indexed content can then be searched for in Spotlight Search, in Google Search, or in a web search. Tapping on a search result that contains a deep link will fire an event that can be handled by an application, and is typically used to navigate to the page referenced from the deep link.
 
@@ -27,7 +31,7 @@ Each `TodoItem` instance created by the user is indexed. Platform-specific searc
 For more information about using an SQLite database, see [Working with a Local Database](~/xamarin-forms/app-fundamentals/databases.md).
 
 > [!NOTE]
-> **Note**: Xamarin.Forms application indexing and deep linking functionality is only available on the iOS and Android platforms, and requires iOS 9 and API 23 respectively.
+> Xamarin.Forms application indexing and deep linking functionality is only available on the iOS and Android platforms, and requires iOS 9 and API 23 respectively.
 
 ## Setup
 
@@ -102,7 +106,7 @@ Application.Current.AppLinks.RegisterLink (appLink);
 This adds the [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance to the application's [`AppLinks`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) collection.
 
 > [!NOTE]
-> **Note**: The `RegisterLink` method can also be used to update the content that's been indexed for a page.
+> The `RegisterLink` method can also be used to update the content that's been indexed for a page.
 
 Once an [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance has been registered for indexing, it can appear in search results. The following screenshot shows indexed content appearing in search results on the iOS platform:
 
@@ -119,7 +123,7 @@ Application.Current.AppLinks.DeregisterLink (appLink);
 This removes the [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance from the application's [`AppLinks`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) collection.
 
 > [!NOTE]
-> **Note**: On Android it's not possible to remove indexed content from search results.
+> On Android it's not possible to remove indexed content from search results.
 
 <a name="responding" />
 
@@ -207,7 +211,7 @@ In addition, values for the following keys can be specified:
 - `shouldAddToPublicIndex` – a `string` of either `true` or `false` that controls whether or not to add the indexed content to Apple's public cloud index, which can then be presented to users who haven't installed the application on their iOS device. However, just because content has been set for public indexing, it doesn't mean that it will be automatically added to Apple's public cloud index. For more information, see [Public Search Indexing](~/ios/platform/search/nsuseractivity.md). Note that this key should be set to `false` when adding personal data to the [`KeyValues`](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.KeyValues/) collection.
 
 > [!NOTE]
-> **Note**: The `KeyValues` collection isn't used on the Android platform.
+> The `KeyValues` collection isn't used on the Android platform.
 
 For more information about Handoff, see [Introduction to Handoff](~/ios/platform/handoff.md).
 

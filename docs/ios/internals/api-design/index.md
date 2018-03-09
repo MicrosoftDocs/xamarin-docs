@@ -32,7 +32,6 @@ These are some of our design principles for the Xamarin.iOS binding
 (these also apply to Xamarin.Mac, the Mono bindings for Objective-C on
 OS X):
 
-
 - Follow the Framework Design Guidelines
 - Allow developers to subclass Objective-C classes:
 
@@ -94,7 +93,7 @@ information.
 
 ### Major Namespaces 
 
- <a name="MonoTouch.ObjCRuntime" />
+<a name="MonoTouch.ObjCRuntime" />
 
 #### ObjCRuntime
 
@@ -102,8 +101,7 @@ The [ObjCRuntime](https://developer.xamarin.com/api/namespace/ObjCRuntime/)
 namespace allows developers to bridge the worlds between C# and Objective-C.
 This is a new binding, designed specifically for the iOS, based on the experience from Cocoa# and Gtk#.
 
- <a name="MonoTouch.Foundation" />
-
+<a name="MonoTouch.Foundation" />
 
 #### Foundation
 
@@ -126,12 +124,9 @@ underlying types to .NET types. For example:
 
 - Various helper APIs are exposed here to allow developers to bind third party Objective-C APIs, other iOS APIs or APIs that are not currently bound by Xamarin.iOS.
 
-
 For more details on binding APIs, see the [Xamarin.iOS Binding
 Generator](~/cross-platform/macios/binding/binding-types-reference.md)
 section.
-
- <a name="NSObject" />
 
 
 ##### NSObject
@@ -164,7 +159,6 @@ explicitly called Dispose () on the object. If the value is false,
 this means that your Dispose(bool disposing) method is being called
 from the finalizer on the finalizer thread. []()
 
-<a name="Categories" />
 
 ##### Categories
 
@@ -243,7 +237,6 @@ class Rotation_IOS6 {
 }
 ```
 
-<a name="PreserveAttribute" />
 
 ##### PreserveAttribute
 
@@ -259,8 +252,7 @@ You can apply this attribute on every member of a type, or on the type
 itself. If you want to preserve the whole type, you can use the syntax [Preserve
 (AllMembers = true)] on the type.
 
- <a name="MonoTouch.UIKit" />
-
+<a name="MonoTouch.UIKit" />
 
 #### UIKit
 
@@ -271,8 +263,7 @@ conventions used in the C# language.
 
 C# delegates are provided for common operations. See the [delegates](#Delegates) section for more information.
 
- <a name="OpenGLES" />
-
+<a name="OpenGLES" />
 
 #### OpenGLES
 
@@ -290,8 +281,6 @@ type.
 OpenGLES 3.0 functionality is available through the ES30.GL type, documented [here](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES30.GL/)
 type.
 
- <a name="Binding_Design" />
-
 
 ### Binding Design
 
@@ -305,8 +294,6 @@ The discussion in the next few sections is not necessary for users that are
 creating Xamarin.iOS applications, but will help developers understand how things
 are done and will assist them when creating more complicated applications.
 
-
- <a name="Types" />
 
 
 #### Types
@@ -336,16 +323,13 @@ Additionally, in the **Classic API** instead of exposing `CGRect`, `CGPoint` and
 CoreGraphics API, we replaced those with the `System.Drawing` implementations
 `RectangleF`, `PointF` and `SizeF` as they would help developers preserve existing OpenGL code that uses OpenTK. When using the new 64-bit **Unified API**, the CoreGraphics API should be used.
 
- <a name="Inheritance" />
-
+<a name="Inheritance" />
 
 #### Inheritance
 
 The Xamarin.iOS API design allows developers to extend native Objective-C types in the same way that they would extend a C# type, using the "override" keyword on a derived class, as well as chaining up to the base implementation using the "base" C# keyword.
 
 This design allows developers to avoid dealing with Objective-C selectors as part of their development process, because the entire Objective-C system is already wrapped inside the Xamarin.iOS libraries.
-
- <a name="Types_and_Interface_Builder" />
 
 
 #### Types and Interface Builder
@@ -362,8 +346,7 @@ public partial class void MyView : UIView {
 }
 ```
 
-
- <a name="Delegates" />
+<a name="Delegates" />
 
 
 #### Delegates
@@ -396,18 +379,16 @@ In Objective-C classes, you will see that classes that use this programming patt
 In Xamarin.iOS three mutually exclusive mechanisms to bind to these
 delegates are offered:
 
-1.  [Via events](#Events) .
-2.  [Strongly typed via a  `Delegate`property](#StrongDelegate) .
-3.  [Loosely typed via a  `WeakDelegate`property](#WeakDelegate) .
-
+1.  [Via events](#Via_Events).
+2.  [Strongly typed via a `Delegate` property](#StrongDelegate)
+3.  [Loosely typed via a `WeakDelegate` property](#WeakDelegate)
 
 For example, consider the [UIWebView](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html)
 class. This dispatches to a [UIWebViewDelegate](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html)
 instance, which is assigned to the [delegate](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate)
 property.
 
- <a name="Via_Events" />
-
+<a name="Via_Events" />
 
 ##### Via Events
 
@@ -419,7 +400,6 @@ which will forward the `UIWebViewDelegate` calls onto C# events. For
 -  The  [webViewDidFinishLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) method is mapped to the  [UIWebView.LoadFinished](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadFinished/) event.
 -  The  [webView:didFailLoadWithError](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) method is mapped to the  [UIWebView.LoadError](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadError/) event.
 
-
 For example, this simple program records the start and end times when loading a web view:
 
 ```csharp
@@ -428,8 +408,6 @@ var web = new UIWebView (new CGRect (0, 0, 200, 200));
 web.LoadStarted += (o, e) => startTime = DateTime.Now;
 web.LoadFinished += (o, e) => endTime = DateTime.Now;
 ```
-
- <a name="Via_Properties" />
 
 
 ##### Via Properties
@@ -458,6 +436,7 @@ do something with the Return button being pressed. In our method, we return *tru
 to the caller, but we also remove the keyboard from the screen (this happens
 when the textfield calls `ResignFirstResponder`).
 
+<a name="StrongDelegate"/>
 
 ##### Strongly Typed via a Delegate Property
 
@@ -504,8 +483,9 @@ load a page or not.
 The pattern is also used to provide the data on demand for a few controls. For example, the [UITableView](https://developer.xamarin.com/api/type/UIKit.UITableView/)
 control is a powerful table-rendering control – and both the look and the contents are driven by an instance of a [UITableViewDataSource](https://developer.xamarin.com/api/type/UIKit.UITableView/DataSource)
 
+<a name="WeakDelegate"/>
 
-@### Loosely Typed via the WeakDelegate Property
+### Loosely Typed via the WeakDelegate Property
 
 In addition to the strongly typed property, there is also a weak typed
 delegate that allows the developer to bind things differently if desired.
@@ -750,7 +730,7 @@ files to find the selector, the types of the arguments, or the mapping to C#, an
 > [!IMPORTANT]
 > This section explains the IDE integration with outlets when using XIB files. When using the Xamarin Designer for iOS, this is all replaced by entering a name under **Identity > Name** in the Properties section of your IDE, as shown below:
 >
-> [![](images/designeroutlet.png "Entering an item Name in the iOS Designer")](images/designeroutlet.png)
+> [![](images/designeroutlet.png "Entering an item Name in the iOS Designer")](images/designeroutlet.png#lightbox)
 >
 >For more information on the iOS Designer, please review the [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md#how-it-works) document.
 

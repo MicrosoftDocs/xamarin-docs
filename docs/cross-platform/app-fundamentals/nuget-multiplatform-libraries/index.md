@@ -17,14 +17,18 @@ _Automatically create NuGet packages to share code across platforms using the 'N
 It is possible to automatically create NuGet packages to share code across platforms using the _Nugetizer 3000_. This makes is possible to create NuGet packages from existing library projects or by creating a new **Multiplatform Library Project**.
 
 # [Visual Studio for Mac](#tab/vsmac)
+
 The Nugetizer 3000 is included with Visual Studio for Mac 6.2.
+
+[![](images/mulitplatform-library-sml.png "Create new Multiplatform Library window")](images/mulitplatform-library.png#lightbox)
+
 # [Visual Studio](#tab/vswin)
+
 To use the Nugetizer 3000 in Visual Studio, please [download and run the VSIX installer](http://bit.ly/nugetizer-2017).
+
 -----
 
-
-
-[ ![](images/mulitplatform-library-sml.png "Create new Multiplatform Library window")](images/mulitplatform-library.png)
+## Building NuGet packages
 
 Once configured, every build of the project outputs a complete NuGet package, which
 can be used to share code internally with other apps or uploaded to [NuGet.org](https://www.nuget.org).
@@ -47,7 +51,7 @@ Refer to the [Metadata guide](metadata.md) for details on the required and optio
 that must be added to any NuGet package.
 
 
-## Further NuGet Information
+## Further NuGet information
 
 Read more about [manually creating NuGets for Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
 and how to [include a NuGet package in an app](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).

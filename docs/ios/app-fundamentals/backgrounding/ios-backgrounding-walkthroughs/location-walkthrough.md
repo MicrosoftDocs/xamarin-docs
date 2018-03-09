@@ -27,7 +27,7 @@ This walkthrough explains some key backgrounding concepts, including registering
 
 	In Visual Studio for Mac, it will look like something like this:
 
-	[![](location-walkthrough-images/image7.png "Place a check by both the Enable Background Modes and the Location Updates checkboxes")](location-walkthrough-images/image7.png)
+	[![](location-walkthrough-images/image7.png "Place a check by both the Enable Background Modes and the Location Updates checkboxes")](location-walkthrough-images/image7.png#lightbox)
 
 	In Visual Studio, **Info.plist** needs to be updated manually by adding the following key/value pair:
 
@@ -203,7 +203,7 @@ public override void ViewDidLoad ()
 
 Now, when the application is run, it should look something like this:
 
-[![](location-walkthrough-images/image5.png "An example app run")](location-walkthrough-images/image5.png)
+[![](location-walkthrough-images/image5.png "An example app run")](location-walkthrough-images/image5.png#lightbox)
 
 ## Handling Active and Background states
 

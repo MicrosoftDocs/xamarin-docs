@@ -104,7 +104,7 @@ The `ValueChanged` event doesn't fire during `Slider` initialization unless the 
 
 The [**RgbSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/RgbSliders) program contains three `Slider` elements that allow you to interactively select a color by specifying its RGB values:
 
-[![Triple screenshot of R G B sliders](images/ch15fg03-small.png "RGB Sliders")](images/ch15fg03-large.png "RGB Sliders")
+[![Triple screenshot of R G B sliders](images/ch15fg03-small.png "RGB Sliders")](images/ch15fg03-large.png#lightbox "RGB Sliders")
 
 The [**TextFade**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/TextFade) sample uses two `Slider` elements to move two `Label` elements across an `AbsoluteLayout` and fade one into the other.
 

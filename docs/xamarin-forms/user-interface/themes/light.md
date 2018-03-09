@@ -50,7 +50,7 @@ and add the required code in the iOS and Android application projects.
 Here is an example of buttons and labels in the light theme,
 along with the markup that produces them.
 
-[ ![](light-images/light-theme-sml.png "Buttons and Labels in the Light Theme")](light-images/light-theme.png "Buttons and Labels in the Light Theme")
+[![](light-images/light-theme-sml.png "Buttons and Labels in the Light Theme")](light-images/light-theme.png#lightbox "Buttons and Labels in the Light Theme")
 
 ```xaml
 <StackLayout Padding="20">

@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: EEC549E0-F182-4F9C-B2BA-B31D19569AA5
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
@@ -16,6 +17,10 @@ ms.date: 05/03/2017
 
 Before you start, create (or use an existing) Xamarin.Forms project.
 You can only add Mac apps using Visual Studio for Mac.
+
+> [!VIDEO https://youtube.com/embed/mvQ7jzaNseM]
+
+**Adding a macOS project to Xamarin.Forms, by [Xamarin University](https://university.xamarin.com/)**
 
 ## Adding a Mac App
 
@@ -89,7 +94,7 @@ Follow these instructions to add a Mac app that will run on macOS Sierra and Mac
 
 9. Double-click **Main.storyboard** to edit in Xcode. Select the **Window** and _uncheck_ the **Is Initial Controller** checkbox (this is because the code above creates a window):
 
-  [ ![Uncheck the Is Initial Controller checkbox in Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png)
+  [![Uncheck the Is Initial Controller checkbox in Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
 
   You can edit the menu system in the storyboard to remove unwanted items.
 

@@ -89,7 +89,7 @@ The watch app project looks like this after these changes have been made (only
 When you edit the storyboard, select each element and notice the
   **Localization ID** that appears in the **Properties** pad:
 
-  [ ![](localization-images/storyboard-sml.png "The Localization ID that appears in the Properties pad")](localization-images/storyboard.png)
+  [![](localization-images/storyboard-sml.png "The Localization ID that appears in the Properties pad")](localization-images/storyboard.png#lightbox)
 
 In the **Base.lproj** folder, create key-value pairs as shown
   below, where the key is formed by the **Localization ID**

@@ -258,7 +258,7 @@ _Objective-C exception thrown.  Name: NSInternalInconsistencyException Reason: U
 - SiriKit is ticked in **Entitlements.plist**.
 - **Entitlements.plist** is configured in the **Project Options > Build > iOS  Bundle Signing**.
 
-  [![Project options showing Entitlements correctly set](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png)
+  [![Project options showing Entitlements correctly set](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png#lightbox)
 
 - (for device deployment) App ID has SiriKit enabled and provisioning profile downloaded.
 

@@ -27,15 +27,12 @@ of building mobile applications, including:
 1.   **Process** – The process of software development is called the Software Development Lifecycle (SDLC). We’ll examine all phases of the SDLC with respect to mobile application development, including: Inspiration, Design, Development, Stabilization, Deployment, and Maintenance.
 1.   **Considerations** – There are a number of considerations when building mobile applications, especially in contrast to traditional web or desktop applications. We’ll examine these considerations and how they affect mobile development.
 
-
 This document is intended to answer fundamental questions about mobile app
 development, for new and experienced application developers alike. It takes a
 fairly comprehensive approach to introducing most of the concepts you’ll run
 into during the entire Software Development Lifecycle (SDLC). However, this
 document may not be for everyone, if you’re itching to just start building
 applications, we recommend jumping ahead to either the [Introduction to Mobile Development](~/cross-platform/get-started/introduction-to-mobile-development.md), [Hello, Android](~/android/get-started/hello-android/index.md) or [Hello, iPhone](~/ios/get-started/hello-ios/index.md) tutorials, and then coming back to this document later.
-
-
 
 ## Mobile Development SDLC
 
@@ -49,7 +46,6 @@ of the process:
 1.   **Stabilization** – When development is far enough along, QA usually begins to test the application and bugs are fixed. Often times an application will go into a limited beta phase in which a wider user audience is given a chance to use it and provide feedback and inform changes.
 1.  **Deployment**
 
-
 Often many of these pieces are overlapped, for example, it’s common for
 development to be going on while the UI is being finalized, and it may even
 inform the UI design. Additionally, an application may be going into a
@@ -61,10 +57,7 @@ such as Agile, Spiral, Waterfall, etc.
 
 Each of the these phases will be explained in more detail by the following sections.
 
-
-
-
-## Inception
+### Inception
 
 The ubiquity and level of interaction people have with mobile devices means
 that nearly everyone has an idea for a mobile app. Mobile devices open up a
@@ -77,17 +70,14 @@ questions. Here are some things to consider before publishing an app in one of t
 
 -   **Competitive Advantage** – Are there similar apps out there already? If so, how does this application differentiate from others?
 
-
 For apps that will be distributed in an Enterprise:
 
 -   **Infrastructure Integration** – What existing infrastructure will it integrate with or extend?
-
 
 Additionally, apps should be evaluated in the context of the mobile form factor:
 
 -   **Value** – What value does this app bring users? How will they use it?
 -   **Form/Mobility** – How will this app work in a mobile form factor? How can I add value using mobile technologies such as location awareness, the camera, etc.?
-
 
 To help with designing the functionality of an app, it can be useful to
 define Actors and [Use Cases](http://en.wikipedia.org/wiki/Use_case). Actors are roles within
@@ -102,27 +92,18 @@ business entities and logic will need to be developed.
 Once an appropriate number of use cases and actors has been captured, it’s much easier
 to begin designing an application. Development can then focus on how to create the app, rather than what the app is or should do.
 
-
-
-
-## Designing Mobile Applications
+### Designing Mobile Applications
 
 Once the features and functionality of the app have been determined, the next step is
 start trying to solve the User Experience or UX.
 
-
-
-
-### UX Design
+#### UX Design
 
 UX is usually done via wireframes or mockups using tools such as [Balsamiq](http://www.balsamiq.com/), [Mockingbird](https://gomockingbird.com/), [Visio](http://office.microsoft.com/en-us/visio/), or just plain ol’ pen
 and paper. UX Mockups allow the UX to be designed without having to worry
 about the actual UI design:
 
-
- [ ![](introduction-to-mobile-sdlc-images/balsamiq.png "UX is usually done via wireframes or mockups using tools such as Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png)
-
-
+ [![](introduction-to-mobile-sdlc-images/balsamiq.png "UX is usually done via wireframes or mockups using tools such as Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
 When creating UX Mockups, it’s important to consider the Interface
 Guidelines for the various platforms that the app will target. The app should "feel at home" on each platform. The offical design guidelines for each platform are:
@@ -130,7 +111,6 @@ Guidelines for the various platforms that the app will target. The app should "f
 1.   **Apple** -  [Human Interface Guidelines](http://developer.apple.com/library/ios/#DOCUMENTATION/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 1.   **Android** –  [Design Guidelines](http://developer.android.com/design/index.html)
 1.   **Windows Phone** –  [Design library for Windows Phone](http://msdn.microsoft.com/en-US/library/windowsphone/design/fa00461b-abe1-41d1-be87-0b0fe3d3389d(v=vs.105).aspx)
-
 
 For example, each app has a metaphor for switching between sections in an
 application. iOS uses a tab bar at the bottom of the screen, Android uses a tab bar at the top of the screen, and Windows Phone uses the Panorama view:
@@ -146,16 +126,13 @@ Navigation Controller metaphor:
 Furthermore, form factor also influences UX decisions. A tablet has far more
 real estate, and so can display more information. Often what needs multiple screens on a phone is compressed into one for a tablet:
 
- [ ![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "Often what needs multiple screens on a phone is compressed into one for a tablet")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png)
+ [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "Often what needs multiple screens on a phone is compressed into one for a tablet")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
 
 And due to the myriad of form factors out there, there are often mid-size
 form factors (somewhere between a phone and a tablet) that you may also want to
 target.
 
-
-
-
-### User Interface (UI) Design
+#### User Interface (UI) Design
 
 Once the UX is determined, the next step is to
 create the UI design. While UX is typically just black and white mockups, the UI
@@ -166,7 +143,7 @@ professional design.
 As with UX, it’s important to understand that each platform has it’s own
 design language, so a well-designed application may still look different on each platform:
 
- [ ![](introduction-to-mobile-sdlc-images/multiplatform-1.png "A well-designed application may still look different on each platform")](introduction-to-mobile-sdlc-images/multiplatform-1.png)
+ [![](introduction-to-mobile-sdlc-images/multiplatform-1.png "A well-designed application may still look different on each platform")](introduction-to-mobile-sdlc-images/multiplatform-1.png#lightbox)
 
 For good UI design inspiration, check out some of the following sites:
 
@@ -175,15 +152,11 @@ For good UI design inspiration, check out some of the following sites:
 1.   [lovelyui.com](http://lovelyui.com) – (iOS, Android, and Windows Phone)
 1.   [mobiledesignpatterngallery.com](http://mobiledesignpatterngallery.com) – (iOS, Android, and Windows Phone)
 
-
 Additionally, it is possible to view the portfolios of graphic designers at sites such as [Behance.com](http://behance.com) and [Dribbble.com](http://dribbble.com). Designers from all over
 the world can be found there, often times in places where the exchange rate is
 favorable, so good graphic design doesn’t necessarily have to cost a lot.
 
-
-
-
-## Development
+### Development
 
 The development phase usually starts very early. In fact, once an idea has
 some maturation in the conceptual/inspiration phase, often a working prototype
@@ -193,10 +166,7 @@ understanding of the scope of the work.
 In the rest of the tutorials, we’ll focus largely on the development
 phase.
 
-
-
-
-## Stabilization
+### Stabilization
 
 Stabilization is the process of working out the bugs in your app. Not just
 from a functional standpoint, e.g.: “It crashes when I click this button,”
@@ -210,7 +180,6 @@ pattern:
 1.   **Alpha** – Core functionality is generally code-complete (built, but not fully tested). Major bugs are still present, outlying functionality may still not be present.
 1.   **Beta** – Most functionality is now complete and has had at least light testing and bug fixing. Major known issues may still be present.
 1.   **Release Candidate** – All functionality is complete and tested. Barring new bugs, the app is a candidate for release to the wild.
-
 
 It’s never too early to begin testing an application. For example, if a
 major issue is found in the prototype stage, the UX of the app can still be
@@ -238,11 +207,13 @@ Some of the most popular ones are:
 3.   **Vessel (vessel.io)** – A service for iOS and Android that lets you monitor usage, track customers and even do A/B testing from inside your app.
 4.  **hockeyapp.com** - Provides a testing service for iOS, Android and Windows Phone.
 
-## Distribution
+### Distribution
 
 Once the application has been stabilized, it’s time to get it out into the
 wild. There are a number of different distribution options, depending on the
 platform.
+
+#### iOS
 
 Xamarin.iOS and Objective-C apps are distributed in exactly the same way:
 
@@ -250,11 +221,7 @@ Xamarin.iOS and Objective-C apps are distributed in exactly the same way:
 1.   **In-House Deployment** – In-House deployment is meant for internal distribution of corporate applications that aren’t available publicly via the App Store.
 1.   **Ad-Hoc Deployment** – Ad-hoc deployment is intended primarily for development and testing and allows you to deploy to a limited number of properly provisioned devices. When you deploy to a device via Xcode or Visual Studio for Mac, it is known as ad-hoc deployment.
 
-
-
-
-
-### Android
+#### Android
 
 All Android applications must be signed before being distributed. Developers
 sign their applications by using their own certificate protected by a private
@@ -282,33 +249,20 @@ many others. A few popular ones are:
 1.  [Handango](http://www.handango.com/)
 1.  [GetJar](http://www.getjar.com/)
 
-
-
-
-
-## Windows 
+#### Windows 
 
 Windows applications are distributed to users via the Microsoft Store. Developers submit their apps for approval, after which they appear in the
 Store.
 
-
-
-
-# Mobile Development Considerations
+## Mobile Development Considerations
 
 While developing mobile applications isn’t fundamentally different that
 traditional web/desktop development in terms of process or architecture, there
 are some considerations to be aware of.
 
+### Common Considerations
 
-
-
-## Common Considerations
-
-
-
-
-### Multitasking
+#### Multitasking
 
 There are two significant challenges to multitasking (having multiple
 applications running at once) on a mobile device. First, given the limited
@@ -320,9 +274,7 @@ tasks can quickly use up battery power.
 Each platform handles multitasking differently, which we’ll explore in a
 bit.
 
-
-
-### Form Factor
+#### Form Factor
 
 Mobile devices generally fall into two categories, phones and tablets, with a
 few crossover devices in between. Developing for these form factors is generally
@@ -332,10 +284,7 @@ mobile devices with less screen space than even most laptops. Because of this,
 mobile platform UI controls have been designed specifically to be effective on
 smaller form factors.
 
-
-
-
-### Device and OS Fragmentation
+#### Device and OS Fragmentation
 
 It’s important to take into account different devices throughout the entire
 software development lifecycle:
@@ -345,11 +294,7 @@ software development lifecycle:
 1.   **Development** – When using a feature from code, the presence of that feature should always be tested first. For example, before using a device feature, such as a camera, always query the OS for the presence of that feature first. Then, when initializing the feature/device, make sure to request currently supported from the OS about that device and then use those configuration settings.
 1.   **Testing** – It’s incredibly important to test the application early and often on actual devices. Even devices with the same hardware specs can vary widely in their behavior.
 
-
-
-
-
-### Limited Resources
+#### Limited Resources
 
 Mobile devices get more and more powerful all the time, but they are still
 mobile devices that have limited capabilities in comparison to desktop or
@@ -366,25 +311,16 @@ Because of considerations like these, it’s important to code smartly and to
 deploy early and often to actual devices to validate
 responsiveness.
 
+### iOS Considerations
 
-
-
-## iOS Considerations
-
-
-
-
-### Multitasking
+#### Multitasking
 
 Multitasking is very tightly controlled in iOS, and there are a number of
 rules and behaviors that your application must conform to when another
 application comes to the foreground, otherwise your application will be
 terminated by iOS.
 
-
-
-
-### Device-Specific Resources
+#### Device-Specific Resources
 
 Within a particular form factor, hardware can vary greatly between different
 models. For instance, some devices have a rear-facing camera, some also have a
@@ -395,10 +331,7 @@ Some older devices (iPhone 3G and older) don’t even allow multitasking.
 Because of these differences between device models, it’s important to check
 for the presence of a feature before attempting to use it.
 
-
-
-
-### OS Specific Constraints
+#### OS Specific Constraints
 
 To make sure that applications are responsive and secure, iOS
 enforces a number of rules that applications must abide by. In addition to the
@@ -411,15 +344,9 @@ that enforces security constraints that restrict what your app can access. For
 instance, an app can read from and write to its own directory, but if it
 attempts to write to another app directory, it will be terminated.
 
+### Android Considerations
 
-
-
-## Android Considerations
-
-
-
-
-### Multitasking
+#### Multitasking
 
 Multitasking in Android has two components; the first is the activity
 lifecycle. Each screen in an Android application is represented by an Activity,
@@ -434,10 +361,7 @@ are used to execute processes while the application is in the background. For
 more information see the [Creating Services](~/android/app-fundamentals/services/index.md)
 guide.
 
-
-
-
-### Many Devices &amp; Many Form Factors
+#### Many Devices &amp; Many Form Factors
 
 Unlike iOS, which has a small set of devices, or even Windows Phone, which
 only runs on approved devices that meet a minimum set of platform requirements,
@@ -450,10 +374,7 @@ Because of the extreme fragmentation of Android devices, most people choose
 the most popular 5 or 6 devices to design and test for, and prioritize
 those.
 
-
-
-
-### Security Considerations
+#### Security Considerations
 
 Applications in the Android OS all run under a distinct, isolated identity
 with limited permissions. By default, applications can do very little. For
@@ -467,14 +388,9 @@ This is an essential step in the Android distribution model, because of the open
 application store model, since applications are not curated the way they are for
 iOS, for instance. For a list of application permissions, see the [Manifest Permissions](http://developer.android.com/reference/android/Manifest.permission.html) reference article in the Android Documentation.
 
+### Windows Considerations
 
-
-## Windows Considerations
-
-
-
-
-### Multitasking
+#### Multitasking
 
 Multitasking in Windows Phone also has two parts: the lifecycle for pages and
 applications, and background processes. Each screen in an application is an
@@ -485,9 +401,7 @@ inactive (with special rules for handling the inactive state, or being
 The second part is providing background agents for processing tasks even when
 the application is not running in the foreground. 
 
-
-
-### DEVICE Capabilities
+#### DEVICE Capabilities
 
 Although Windows Phone hardware is fairly homogeneous due to the strict
 guidelines provided by Microsoft, there are still components that are optional
@@ -496,10 +410,7 @@ capabilities include the camera, compass and gyroscope. There is also a special
 class of low-memory (256MB) that requires special consideration, or developers
 can opt-out of low-memory support.
 
-
-
-
-### Database
+#### Database
 
 Both iOS and Android include the SQLite database engine that allows for
 sophisticated data storage that also works cross-platform. Windows Phone 7 did
@@ -508,9 +419,7 @@ support Transact-SQL queries. There is an [open-source port of SQLite](http://co
 available that can be added to Windows Phone applications to provide familiar
 Transact-SQL support and cross-platform compatibility.
 
-
-
-### Security Considerations
+#### Security Considerations
 
 Windows Phone applications are run with a restricted set of permissions that
 isolates them from one another and limits the operations they can perform.
@@ -527,8 +436,6 @@ users can see and agree to those permissions and also so that the operating
 system allows access to the APIs. Applications must request access to features
 like the contacts or appointments data, camera, location, media library and
 more. See Microsoft’s [Application Manifest File](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509(v=vs.92).aspx) documentation for additional information.
-
-
 
 ## Summary
 

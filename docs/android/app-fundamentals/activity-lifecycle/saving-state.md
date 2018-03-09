@@ -7,7 +7,7 @@ ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Walkthrough - Saving the Activity state
@@ -23,7 +23,7 @@ two activities to demonstrate the activity lifecycle and how the
 various lifecycle methods are called. When you start the application, 
 the screen of `MainActivity` is displayed: 
 
-[ ![Activity A screen](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png)
+[![Activity A screen](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png#lightbox)
 
 ### Viewing State Transitions
 
@@ -56,7 +56,7 @@ through its state changes:
 As a result, *Activity B* is started and displayed in place of 
 *Activity A*: 
 
-[ ![Activity B screen](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png)
+[![Activity B screen](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png#lightbox)
 
 When we click the **Back** button, *Activity B* is destroyed and 
 *Activity A* is resumed: 
@@ -73,7 +73,7 @@ When we click the **Back** button, *Activity B* is destroyed and
 
 Next, we're going to change the application so that we have a button 
 that counts and displays the number of times it is clicked. First, 
-let's add a `_counter` instance variable to `MainActivity`: 
+let's add a `_counter` instance variable to `MainActivity`:
 
 ```csharp
 int _counter = 0;
@@ -123,11 +123,11 @@ clickbutton.Click += (object sender, System.EventArgs e) =>
 When we build and run the app again, a new button appears that increments 
 and displays the value of `_counter` on each click:
 
-[![Add touch count](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png)
+[![Add touch count](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png#lightbox)
 
 But when we rotate the device to landscape mode, this count is lost:
 
-[ ![Rotating to landscape sets the count back to zero](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png)
+[![Rotating to landscape sets the count back to zero](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png#lightbox)
 
 Examining the application output, we see that *Activity A* 
 was paused, stopped, destroyed, recreated, restarted, then resumed 
@@ -184,7 +184,7 @@ if (bundle != null)
 Build and run the app again, then click the second button a few times. When
 we rotate the device to landscape mode, the count is preserved!
 
-[ ![Rotating the screen shows count of four preserved](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png)
+[![Rotating the screen shows count of four preserved](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png#lightbox)
 
 
 Let's take a look at the output window to see what happened:

@@ -25,7 +25,7 @@ The process for creating effect parameters that respond to runtime property chan
 Parameters can then be passed to the effect by adding the attached properties, and property values, to the appropriate control. In addition, parameters can be changed at runtime by specifying a new attached property value.
 
 > [!NOTE]
-> **Note**: An attached property is a special type of bindable property, defined in one class but attached to other objects, and recognizable in XAML as attributes that contain a class and a property name separated by a period. For more information, see [Attached Properties](~/xamarin-forms/xaml/attached-properties.md).
+> An attached property is a special type of bindable property, defined in one class but attached to other objects, and recognizable in XAML as attributes that contain a class and a property name separated by a period. For more information, see [Attached Properties](~/xamarin-forms/xaml/attached-properties.md).
 
 The sample application demonstrates a `ShadowEffect` that adds a shadow to the text displayed by a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) control. In addition, the color of the shadow can be changed at runtime. The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 

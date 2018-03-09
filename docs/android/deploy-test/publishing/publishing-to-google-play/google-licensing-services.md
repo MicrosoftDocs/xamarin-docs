@@ -36,7 +36,7 @@ service hosted by the Google Play application on the device. Google Play then
 sends this request on to the Google Licensing server, which responds with the
 license status: 
 
-[ ![Licensing server workflow diagram](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png)
+[![Licensing server workflow diagram](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png#lightbox)
 
 The above diagram illustrates this workflow: 
 
@@ -53,7 +53,6 @@ Google Licensing service is also a key component of APK expansion files
 Licensing services to obtain the URLs of the expansion files that will be
 downloaded.
 
-<a name="Requirements" />
 
 ## Requirements
 

@@ -39,7 +39,7 @@ dropdown in **Project Options**. To access
 this double-click on the iOS project and browse to **iOS Build > Linker Options**, as illustrated
 below:
 
-[ ![](linker-images/image1.png "Linker Options")](linker-images/image1.png)
+[![](linker-images/image1.png "Linker Options")](linker-images/image1.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 

@@ -7,14 +7,13 @@ ms.assetid: 62B6286F-3680-48F3-B91B-453692E457E5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 03/01/2018
 ---
 
 # ViewPager with Fragments
 
 _ViewPager is a layout manager that lets you implement gestural navigation. Gestural navigation allows the user to swipe left and right to step through pages of data. This guide explains how to implement a swipeable UI with ViewPager, using Fragments as the data pages._
 
-<a name="overview" />
  
 ## Overview
 
@@ -38,7 +37,6 @@ not yet familiar with fragments in Xamarin.Android, see
 get started with fragments. 
 
 
-<a name="start" />
 
 ## Start an App Project
 
@@ -50,7 +48,6 @@ Find and install the **Xamarin.Android.Support.v4** package as
 explained in [Viewpager and Views](~/android/user-interface/controls/view-pager/viewpager-and-views.md). 
 
 
-<a name="datasource" />
 
 ## Add an Example Data Source
 
@@ -87,7 +84,6 @@ Download this source file (or copy and paste the code into a new
 **FlashCardDeck.cs** file) and add it to your project.
 
 
-<a name="layout" />
 
 ## Create a ViewPager Layout
 
@@ -111,8 +107,6 @@ available only from the
 [Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/);
 it is not available in the Android SDK.
 
-
-<a name="setup" />
 
 ## Set up ViewPager
 
@@ -155,7 +149,7 @@ This code does the following:
 When you build and run this code, you should see a display that 
 resembles the following screenshot: 
 
-[![Screenshot of FlashCardPager app with empty ViewPager](viewpager-and-fragments-images/01-initial-screen-sml.png)](viewpager-and-fragments-images/01-initial-screen.png)
+[![Screenshot of FlashCardPager app with empty ViewPager](viewpager-and-fragments-images/01-initial-screen-sml.png)](viewpager-and-fragments-images/01-initial-screen.png#lightbox)
 
 At this point, the `ViewPager` is empty because it is lacking the 
 fragments that are used populate the `ViewPager`, and it is lacking an 
@@ -168,7 +162,6 @@ created to connect the `ViewPager` to the fragments created from data
 in the `FlashCardDeck`. 
 
 
-<a name="fragment" />
 
 ## Create the Fragment
 
@@ -182,7 +175,6 @@ that uses a `Toast` to display the answer when the user taps the flash
 card question. 
 
 
-<a name="layout" />
 
 ### Create the FlashCardFragment Layout
 
@@ -218,7 +210,6 @@ comprised of a `TextView` that displays a math problem using a large
 flash card. 
 
 
-<a name="fcfclass" />
 
 ### Create the Initial FlashCardFragment Class
 
@@ -275,7 +266,6 @@ inflated view to the view's parent (it will be added when `ViewPager`
 call's the adapter's `GetItem` method later in this walkthrough). 
 
 
-<a name="state" />
 
 ### Add State Code to FlashCardFragment
 
@@ -329,8 +319,6 @@ public override View OnCreateView(LayoutInflater inflater, ViewGroup container, 
 The `answer` variable is not used here, but it will be used later when 
 event handler code is added to this file. 
 
-
-<a name="adapter" />
 
 ## Create the Adapter
 
@@ -394,7 +382,6 @@ the fragment manager to the `FlashCardDeckAdapter`'s base class
 constructor. 
 
 
-<a name="ctor" />
 
 ### Implement the Adapter Constructor
 
@@ -418,7 +405,6 @@ This line of code stores the `FlashCardDeck` instance that the
 `FlashCardDeckAdapter` will use. 
 
 
-<a name="count" />
 
 ### Implement Count
 
@@ -438,7 +424,6 @@ The `NumCards` property of `FlashCardDeck` returns the number of flash
 cards (number of fragments) in the data set. 
 
 
-<a name="getitem" />
 
 ### Implement GetItem
 
@@ -476,7 +461,6 @@ the `TextBox` containing the math problem string residing at `position`
 in the flash card deck. 
 
 
-<a name="addadapter" />
 
 ## Add the Adapter to the ViewPager
 
@@ -502,10 +486,9 @@ You should see the first image of the flash card deck appear on the screen
 as shown on the left in the next screenshot. Swipe left to see more
 flash cards, then swipe right to move back through the flash card deck:
 
-[![Example screenshots of FlashCardPager app without pager indicators](viewpager-and-fragments-images/02-example-views-sml.png)](viewpager-and-fragments-images/02-example-views.png)
+[![Example screenshots of FlashCardPager app without pager indicators](viewpager-and-fragments-images/02-example-views-sml.png)](viewpager-and-fragments-images/02-example-views.png#lightbox)
 
 
-<a name="pagetabstrip" />
 
 ## Add a Pager Indicator
 
@@ -539,10 +522,9 @@ Open **Resources/layout/Main.axml** and add a `PagerTabStrip` to the layout:
 When you build and run the app, you should see the empty 
 `PagerTabStrip` displayed at the top of each flash card: 
 
-[![Closeup of PagerTabStrip without text](viewpager-and-fragments-images/03-empty-pagetabstrip-sml.png)](viewpager-and-fragments-images/03-empty-pagetabstrip.png)
+[![Closeup of PagerTabStrip without text](viewpager-and-fragments-images/03-empty-pagetabstrip-sml.png)](viewpager-and-fragments-images/03-empty-pagetabstrip.png#lightbox)
 
 
-<a name="title" />
 
 ### Display a Title
 
@@ -564,13 +546,12 @@ number. The resulting string is converted into a Java `String` that is
 returned to the `ViewPager`. When you run the app with this new method, 
 each page displays the problem number in the `PagerTabStrip`: 
 
-[![Screenshots of FlashCardPager with the problem number displayed above each page](viewpager-and-fragments-images/04-pagetabstrip-sml.png)](viewpager-and-fragments-images/04-pagetabstrip.png)
+[![Screenshots of FlashCardPager with the problem number displayed above each page](viewpager-and-fragments-images/04-pagetabstrip-sml.png)](viewpager-and-fragments-images/04-pagetabstrip.png#lightbox)
 
 You can swipe back and forth to see the problem number in the flash card 
 deck that is displayed at the top of each flash card. 
 
 
-<a name="userinput" />
 
 ## Handle User Input
 
@@ -597,7 +578,7 @@ earlier when state information was read from the Bundle that was passed
 to `OnCreateView`. Build and run the app, then tap the problem text on 
 each flash card to see the answer: 
 
-[![Screenshots of FlashCardPager app Toasts when math problem is tapped](viewpager-and-fragments-images/05-answer-sml.png)](viewpager-and-fragments-images/05-answer.png)
+[![Screenshots of FlashCardPager app Toasts when math problem is tapped](viewpager-and-fragments-images/05-answer-sml.png)](viewpager-and-fragments-images/05-answer.png#lightbox)
 
 The **FlashCardPager** presented in this walkthrough uses a 
 `MainActivity` derived from `FragmentActivity`, but you can also derive 
@@ -607,7 +588,6 @@ for managing fragments). To view an `AppCompatActivity` example, see
 in the Sample Gallery. 
 
 
-<a name="summary" />
 
 ## Summary
 

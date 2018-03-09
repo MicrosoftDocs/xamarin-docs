@@ -34,19 +34,19 @@ The following core color concepts need to be covered before taking a deeper look
 
 A Color Space is an environment in which colors can be represented and compared. It can be a one to four dimensional space that is defined by the intensity of its color components. 
 
-[ ![](wide-color-images/color00.png "A Color Space")](wide-color-images/color00.png)
+[![](wide-color-images/color00.png "A Color Space")](wide-color-images/color00.png#lightbox)
 
 ### Color Channels
 
 The color components can also be referred to as Color Channels. Some familiar representations would be the RGB Spaces, Gray Spaces, CMYK Spaces or Device Independent Spaces. 
 
-[ ![](wide-color-images/color02.png "The color components can also be referred to as Color Channels")](wide-color-images/color02.png)
+[![](wide-color-images/color02.png "The color components can also be referred to as Color Channels")](wide-color-images/color02.png#lightbox)
 
 ### Color Primaries
 
 Color Primaries provide the coordinate system that is used to compare and compute colors. Color Primaries usually fall at the most intense version of the given color that can be generated within the Color Channel.
 
-[ ![](wide-color-images/color01.png "Color Primaries provide the coordinate system that is used to compare and compute colors")](wide-color-images/color01.png)
+[![](wide-color-images/color01.png "Color Primaries provide the coordinate system that is used to compare and compute colors")](wide-color-images/color01.png#lightbox)
 
 In the case of the RGB Color Space represented above, the Color Primaries are where the `1.0` coordinates are anchored (such as `[1.0, 0.0, 0.0]` for red).
 
@@ -54,7 +54,7 @@ In the case of the RGB Color Space represented above, the Color Primaries are wh
 
 Color Gamut refers to all of the colors that can be defined as a combination of the individual Color Channels within a give Color Space.
 
-[ ![](wide-color-images/color03.png "Color Gamut example")](wide-color-images/color03.png)
+[![](wide-color-images/color03.png "Color Gamut example")](wide-color-images/color03.png#lightbox)
 
 ## What is Wide Color
 
@@ -76,7 +76,7 @@ Users who have been capturing digital images in the RAW format may have images o
 
 In 2015, Apple released new products (iMac and iPad Pro 9.7") that provide the new Display P3 Color Space to handle the issues created by the sRGB Color Space.
 
-[ ![](wide-color-images/color04.png "The new Display P3 Color Space")](wide-color-images/color04.png)
+[![](wide-color-images/color04.png "The new Display P3 Color Space")](wide-color-images/color04.png#lightbox)
 
 The Display P3 Color Space has the following properties:
 
@@ -108,7 +108,7 @@ By allowing for values less than zero and greater than one, the Extended Range s
 
 To see how values outside of zero and one work in the Extended Range sRGB Color Space, take the following example of the of the most saturated red available in the Display P3 Color Space:
 
-[ ![](wide-color-images/color05.png "How values outside of zero and one work in the Extended Range sRGB Color Space")](wide-color-images/color05.png)
+[![](wide-color-images/color05.png "How values outside of zero and one work in the Extended Range sRGB Color Space")](wide-color-images/color05.png#lightbox)
 
 In Display P3, this color would be represented as `[1.0, 0.0, 0.0]` and in Extended Range sRGB it would be `[1.358, -0.074, -0.012]`. Because sRGB values are full contained inside of Display P3 and the Display P3 values lay "outside" of the sRGB ranges.
 

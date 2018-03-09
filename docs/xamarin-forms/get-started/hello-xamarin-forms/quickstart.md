@@ -13,7 +13,7 @@ ms.date: 02/06/2018
 
 This walkthrough demonstrates how to create an application that translates an alphanumeric phone number entered by the user into a numeric phone number, and that calls the number. The final application is shown below:
 
-[![](quickstart-images/intro-app-examples-sml.png "Phoneword Application")](quickstart-images/intro-app-examples.png "Phoneword Application")
+[![](quickstart-images/intro-app-examples-sml.png "Phoneword Application")](quickstart-images/intro-app-examples.png#lightbox "Phoneword Application")
 
 Create the Phoneword application as follows:
 
@@ -109,7 +109,7 @@ Create the Phoneword application as follows:
         }
 
   > [!NOTE]
-> **Note**: Attempting to build the application at this point will result in errors that will be fixed later.
+  > Attempting to build the application at this point will result in errors that will be fixed later.
 
   Save the changes to **MainPage.xaml.cs** by pressing **CTRL+S**, and close the file.
 
@@ -561,7 +561,7 @@ Create the Phoneword application as follows:
         }
 
   > [!NOTE]
-> **Note**: Attempting to build the application at this point will result in errors that will be fixed later.
+  > Attempting to build the application at this point will result in errors that will be fixed later.
 
   Save the changes to **MainPage.xaml.cs** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
 

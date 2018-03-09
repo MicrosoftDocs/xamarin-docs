@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1EF400F-73F4-43E9-A0C3-1569A0F34A3B
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
@@ -14,19 +15,21 @@ ms.date: 11/02/2017
 
 _Azure Notification Hubs provide a scalable push infrastructure for sending mobile push notifications from any backend to any mobile platform, while eliminating the complexity of a backend having to communicate with different platform notification systems. This article explains how to use Azure Notification Hubs to send push notifications from an Azure Mobile Apps instance to a Xamarin.Forms application._
 
-## Overview
+> [!VIDEO https://youtube.com/embed/le2lDY22xwM]
+
+**Azure Push Notification Hub and Xamarin.Forms, by [Xamarin University](https://university.xamarin.com/)**
 
 A push notification is used to deliver information, such as a message, from a backend system to an application on a mobile device to increase application engagement and usage. The notification can be sent at anytime, even when the user is not actively using the targeted application.
 
 Backend systems send push notifications to mobile devices through Platform Notification Systems (PNS), as shown in the following diagram:
 
-[![](azure-images/pns.png "Platform Notification Systems")](azure-images/pns-large.png "Platform Notification Systems")
+[![](azure-images/pns.png "Platform Notification Systems")](azure-images/pns-large.png#lightbox "Platform Notification Systems")
 
 To send a push notification, the backend system contacts the platform-specific PNS to send a notification to a client application instance. This significantly increases the complexity of the backend when cross-platform push notifications are required, because the backend must use each platform-specific PNS API and protocol.
 
 Azure Notification Hubs eliminate this complexity by abstracting the details of the different platform notification systems, allowing a cross-platform notification to be sent with a single API call, as shown in the following diagram:
 
-[![](azure-images/notification-hub.png)](azure-images/notification-hub-large.png)
+[![](azure-images/notification-hub.png)](azure-images/notification-hub-large.png#lightbox)
 
 To send a push notification, the backend system only contacts the Azure Notification Hub, which in turn communicates with the different platform notification systems, therefore decreasing the complexity of the backend code that sends push notifications.
 
@@ -40,7 +43,7 @@ Azure Mobile Apps have built-in support for push notifications using notificatio
 
 The sample application demonstrates a todo list application whose data is stored in an Azure Mobile Apps instance. Every time a new item is added to the Azure Mobile Apps instance, a push notification is sent to the Xamarin.Forms application. The following screenshots show each platform displaying the received push notification:
 
-[![](azure-images/screenshots.png "Sample Application Receiving a Push Notification")](azure-images/screenshots-large.png "Sample Application Receiving a Push Notification")
+[![](azure-images/screenshots.png "Sample Application Receiving a Push Notification")](azure-images/screenshots-large.png#lightbox "Sample Application Receiving a Push Notification")
 
 For more information about Azure Notification Hubs, see [Azure Notification Hubs](https://azure.microsoft.com/documentation/articles/notification-hubs-push-notification-overview/) and [Add push notifications to your Xamarin.Forms app](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push/).
 
@@ -114,7 +117,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 When an iOS application registers with APNS it must specify the types of push notifications it would like to receive. The `RegisterUserNotificationSettings` method registers the types of notifications the application can receive, with the `RegisterForRemoteNotifications` method registering to receive push notifications from APNS.
 
 > [!NOTE]
-> **Note**: Failing to call the `RegisterUserNotificationSettings` method will result in push notifications being silently received by the application.
+> Failing to call the `RegisterUserNotificationSettings` method will result in push notifications being silently received by the application.
 
 <a name="ios_registration_response" />
 
@@ -142,7 +145,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
 This method creates a simple notification message template as JSON, and registers the device to receive template notifications from the notification hub.
 
 > [!NOTE]
-> **Note**: The `FailedToRegisterForRemoteNotifications` override should be implemented to handle situations such as no network connection. This is important because users might start the application while offline.
+> The `FailedToRegisterForRemoteNotifications` override should be implemented to handle situations such as no network connection. This is important because users might start the application while offline.
 
 <a name="ios_process_incoming" />
 
@@ -173,7 +176,7 @@ public override void DidReceiveRemoteNotification(
 The `userInfo` dictionary contains the `aps` key, whose value is the `alert` dictionary with the remaining notification data. This dictionary is retrieved, with the `string` notification message being displayed in a dialog box.
 
 > [!NOTE]
-> **Note**: If an application isn't running when a push notification arrives, the application will be launched but the `DidReceiveRemoteNotification` method won't process the notification. Instead, get the notification payload and respond appropriately from the `WillFinishLaunching` or `FinishedLaunching` overrides.
+> If an application isn't running when a push notification arrives, the application will be launched but the `DidReceiveRemoteNotification` method won't process the notification. Instead, get the notification payload and respond appropriately from the `WillFinishLaunching` or `FinishedLaunching` overrides.
 
 For more information about APNS, see [Push Notifications in iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md).
 
@@ -326,7 +329,7 @@ public class FirebaseNotificationService : FirebaseMessagingService
         intent.AddFlags(ActivityFlags.ClearTop);
         var pendingIntent = PendingIntent.GetActivity(this, 0, intent, PendingIntentFlags.OneShot);
 
-        var notificationBuilder = new Notification.Builder(this)
+        var notificationBuilder = new NotificationCompat.Builder(this)
             .SetSmallIcon(Resource.Drawable.ic_stat_ic_notification)
             .SetContentTitle("New Todo Item")
             .SetContentText(messageBody)

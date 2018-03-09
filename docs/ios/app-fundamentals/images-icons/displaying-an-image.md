@@ -131,11 +131,11 @@ To easily achieve this effect, switch the _Render Mode_ of the Image Asset to **
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![](displaying-an-image-images/templateimage01.png "The Render Mode set to Template Image")](displaying-an-image-images/templateimage01.png)
+[![](displaying-an-image-images/templateimage01.png "The Render Mode set to Template Image")](displaying-an-image-images/templateimage01.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[ ![](displaying-an-image-images/templateimage01vs.png "The Render Mode set to Template")](displaying-an-image-images/templateimage01vs.png)
+[![](displaying-an-image-images/templateimage01vs.png "The Render Mode set to Template")](displaying-an-image-images/templateimage01vs.png#lightbox)
 
 -----
 
@@ -143,11 +143,11 @@ From the iOS Designer, assign the Image Asset to a UI control, then set the **Ti
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![](displaying-an-image-images/templateimage03.png "Set the Tint to colorize the image")](displaying-an-image-images/templateimage03.png)
+[![](displaying-an-image-images/templateimage03.png "Set the Tint to colorize the image")](displaying-an-image-images/templateimage03.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[ ![](displaying-an-image-images/templateimage03vs.png "Set the Tint to colorize the image")](displaying-an-image-images/templateimage03vs.png)
+[![](displaying-an-image-images/templateimage03vs.png "Set the Tint to colorize the image")](displaying-an-image-images/templateimage03vs.png#lightbox)
 
 -----
 

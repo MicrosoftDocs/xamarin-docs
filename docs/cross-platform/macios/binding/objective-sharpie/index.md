@@ -14,12 +14,6 @@ ms.date: 10/11/2017
 
 _This section provides an introduction to Objective Sharpie, Xamarin's command line tool used to automate the process of creating a binding to an Objective-C Library_
 
-<style type="text/css">
-.terminal-blue { color: rgb(10,96,254); }
-.terminal-green { color: rgb(12,156,26); }
-.terminal-magenta { color: rgb(152,12,103); }
-</style>
-
 - [Overview](#overview) & [History](#history)
 - [Getting Started](get-started.md)
 - [Tools & Commands](tools.md)
@@ -28,7 +22,7 @@ _This section provides an introduction to Objective Sharpie, Xamarin's command l
 - [Complete Walkthrough](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Release History](releases.md)
 
-#Overview
+## Overview
 
 Objective Sharpie is a command line tool to help bootstrap the first pass of a binding.
 It works by parsing the header files of a native library to map the public API
@@ -41,7 +35,7 @@ Objective Sharpie uses Clang parse header files, so the binding is as exact and 
 
 
 
-#History
+## History
 
 We have been evolving and using the Objective Sharpie internally at Xamarin for the last three years. As a testament to the power of Objective Sharpie, APIs introduced in Xamarin.iOS and Xamarin.Mac since iOS 8, Mac OS X 10.10, and watchOS 2.0 were bootstrapped entirely with Objective Sharpie. Xamarin relies heavily on Objective Sharpie internally for building its own products.
 

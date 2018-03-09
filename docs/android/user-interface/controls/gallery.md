@@ -180,7 +180,6 @@ Run the application. It should look like the screenshot below:
 ![Screenshot of HelloGallery displaying sample images](gallery-images/hellogallery3.png)
 
 
-<a name="References" />
 
 ## References
 

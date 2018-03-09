@@ -77,7 +77,7 @@ The process for hosting the resource token broker in Azure App Service is as fol
 
     The following screenshot demonstrates this configuration:
 
-    [![](authentication-images/azure-web-app-settings.png "App Service Web App Settings")](authentication-images/azure-web-app-settings-large.png "App Service Web App Settings")
+    [![](authentication-images/azure-web-app-settings.png "App Service Web App Settings")](authentication-images/azure-web-app-settings-large.png#lightbox "App Service Web App Settings")
 
 1. Publish the resource token broker solution to the Azure App Service web app.
 
@@ -113,7 +113,7 @@ The process for configuring App Service easy authentication is as follows:
 
   The following screenshot demonstrates this configuration:
 
-  [![](authentication-images/app-service-authentication-settings.png "App Service Web App Authentication Settings")](authentication-images/app-service-authentication-settings-large.png "App Service Web App Authentication Settings")
+  [![](authentication-images/app-service-authentication-settings.png "App Service Web App Authentication Settings")](authentication-images/app-service-authentication-settings-large.png#lightbox "App Service Web App Authentication Settings")
 
 The App Service web app should also be configured to communicate with the Facebook app to enable the authentication flow. This can be accomplished by selecting the Facebook identity provider, and entering the **App ID** and **App Secret** values from the Facebook app settings on the Facebook Developer Center. For more information, see [Add Facebook information to your application](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application).
 

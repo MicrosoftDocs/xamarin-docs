@@ -22,7 +22,6 @@ occur on a device, it must be
 [setup for development](~/android/get-started/installation/set-up-device-for-development.md)
 and connected to your PC or Mac.
 
-<a name="Debug_Application" />
 
 ## Debug Application
 
@@ -68,7 +67,6 @@ application:
 -----
 
 
-<a name="Summary" />
 
 ## Summary
 

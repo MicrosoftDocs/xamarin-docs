@@ -145,7 +145,7 @@ The process for creating the custom renderer class is as follows:
 1. Add an `ExportRenderer` attribute to the custom renderer class to specify that it will be used to render the Xamarin.Forms custom control. This attribute is used to register the custom renderer with Xamarin.Forms.
 
 > [!NOTE]
-> **Note**: It is optional to provide a custom renderer in each platform project. If a custom renderer isn't registered, then the default renderer for the cell's base class will be used.
+> It is optional to provide a custom renderer in each platform project. If a custom renderer isn't registered, then the default renderer for the cell's base class will be used.
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
@@ -457,7 +457,7 @@ protected override void OnElementPropertyChanged (object sender, System.Componen
   base.OnElementPropertyChanged (sender, e);
 
   if (e.PropertyName == NativeListView.ItemsProperty.PropertyName) {
-    Control.Adapter = new NativeAndroidListViewAdapter (Forms.Context as Android.App.Activity, Element as NativeListView);
+    Control.Adapter = new NativeAndroidListViewAdapter (_context as Android.App.Activity, Element as NativeListView);
   }
 }
 ```

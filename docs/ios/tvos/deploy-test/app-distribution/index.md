@@ -18,7 +18,7 @@ _This document gives an overview of the distribution techniques that are availab
 Once your Xamarin.tvOS app has been developed, the next step in the software development lifecycle is to distribute your app to users, as shown in the highlighted section of the diagram below:
 
 
-[![The software development lifecycle overview](images/publishingdiagram.png)](images/publishingdiagram.png)
+[![The software development lifecycle overview](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
 
 
 Apple provides the following ways to distribute a tvOS app, which are supported by Xamarin.tvOS:
@@ -66,7 +66,7 @@ Sometimes called *Enterprise Distribution*, in-house distribution allows members
 
 For more information on getting set-up and how to distribute your application In-House, please refer to the [In-House Distribution guide](~/ios/deploy-test/app-distribution/in-house-distribution.md). This document is specific to iOS but the same techniques are used for tvOS apps.
 
-<a name="Ad-Hoc-Distribution" />
+<a name="Ad_Hoc_Distribution"/>
 
 ## Ad Hoc Distribution
 

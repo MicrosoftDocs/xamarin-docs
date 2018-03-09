@@ -14,8 +14,6 @@ ms.date: 03/23/2017
 
 _This document compares the different methods of sharing code between cross-platform projects: Shared Projects, Portable Class Libraries, and .NET Standard, including the benefits and disadvantages of each._
 
-## Overview
-
 There are three alternative methods for sharing code between cross-platform applications:
 
 -   [**Shared Projects**](#Shared_Projects) – Use the Shared Asset Project type to organize your source code, and use #if compiler directives as required to manage platform-specific requirements.
@@ -30,9 +28,9 @@ This article compares the three methods to help you choose the right project typ
 
 <a name="Shared_Projects" />
 
-# Shared Projects
+## Shared Projects
 
-The simplest approach to sharing code files is to use a Shared Project (introduced in Xamarin Studio 5 and Visual Studio 2013 Update 2). Shared Projects are [discussed in detail here](~/cross-platform/app-fundamentals/shared-projects.md).
+The simplest approach to sharing code files is to use a [Shared Project](~/cross-platform/app-fundamentals/shared-projects.md).
 
 This screenshot shows a solution file containing three application projects
 (for Android, iOS and Windows Phone), with a **Shared** project that
@@ -46,7 +44,7 @@ project includes all the shared source files:
  ![](code-sharing-images/sharedassetproject.png "Shared project diagram")
 
 
-## Example
+### Example
 
 A cross platform application that supports iOS, Android and Windows Phone
 would require an application project for each platform. The common code lives in
@@ -67,7 +65,7 @@ source code (the C# files in Shared). Any edits to the shared code will be
 shared across all three projects.
 
 
-## Benefits
+### Benefits
 
 -  Allows you to share code across multiple projects.
 -  Shared code can be branched based on the platform using compiler directives (eg. using  `#if __ANDROID__` , as discussed in the  [Building Cross Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) document).
@@ -75,7 +73,7 @@ shared across all three projects.
 
 
 
-## Disadvantages
+### Disadvantages
 
 -  Unlike most other project types, a Shared Project has no 'output' assembly. During compilation, the files are treated as part of the referencing project and compiled into that assembly. If you wish to share your code as a assembly then Portable Class Libraries or .NET Standard are a better solution.
 -  Refactorings that affect code inside 'inactive' compiler directives will not update the code.
@@ -83,14 +81,14 @@ shared across all three projects.
 
  <a name="Shared_Remarks" />
 
-## Remarks
+### Remarks
 
 A good solution for application developers writing code that is only intended for sharing in their app (and not distributing to other developers).
 
  <a name="Portable_Class_Libraries" />
 
 
-# Portable Class Libraries
+## Portable Class Libraries
 
 
 Portable Class Libraries are [discussed in detail here](~/cross-platform/app-fundamentals/pcl.md).
@@ -98,19 +96,19 @@ Portable Class Libraries are [discussed in detail here](~/cross-platform/app-fun
  ![](code-sharing-images/portableclasslibrary.png "Portable class library diagram")
 
 
-## Benefits
+### Benefits
 
 -  Allows you to share code across multiple projects.
 -  Refactoring operations always update all affected references.
 
 
-## Disadvantages
+### Disadvantages
 
 -  Cannot use compiler directives.
 -  Only a subset of the .NET framework is available to use, determined by the profile selected (see the  [Introduction to PCL](~/cross-platform/app-fundamentals/pcl.md) for more info).
 
 
-## Remarks
+### Remarks
 
 A good solution if you plan to share the resulting assembly with other developers.
 
@@ -118,30 +116,30 @@ A good solution if you plan to share the resulting assembly with other developer
 
 <a name="Net_Standard" />
 
-# .NET Standard Libraries
+## .NET Standard Libraries
 
 .NET Standard is [discussed in detail here](~/cross-platform/app-fundamentals/net-standard.md).
 
 ![](code-sharing-images/netstandard.png ".NET Standard diagram")
 
-## Benefits
+### Benefits
 
 -  Allows you to share code across multiple projects.
 -  Refactoring operations always update all affected references.
 -  A larger surface area of the .NET Base Class Library (BCL) is available than PCL profiles.
 
-## Disadvantages
+### Disadvantages
 
  -  Cannot use compiler directives.
 
-## Remarks
+### Remarks
 
 .NET Standard is similar to PCL, but with a simpler model for platform support and
 a greater number of classes from the BCL.
 
 
 
-# Summary
+## Summary
 
 The code sharing strategy you choose will be driven by the platforms you are
 targeting. Choose a method that works best for your project.
@@ -158,4 +156,3 @@ PCL or .NET Standard are good choices for building sharable code libraries (espe
 - [Case Study: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 - [Tasky Sample (github)](https://github.com/xamarin/mobile-samples/tree/master/Tasky)
 - [Tasky Sample using PCL (github)](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable)
-- [Shared Project Reference Manager for Visual Studio 2013](http://visualstudiogallery.msdn.microsoft.com/315c13a7-2787-4f57-bdf7-adae6ed54450)

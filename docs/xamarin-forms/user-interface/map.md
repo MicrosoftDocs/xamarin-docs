@@ -28,7 +28,7 @@ some configuration for maps to work.
 
 The map control has been used in the [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/) sample, which is shown below.
 
- [ ![Maps in the MobileCRM sample](map-images/maps-zoom-sml.png "Map Control Example")](map-images/maps-zoom.png "Map Control Example")
+ [![Maps in the MobileCRM sample](map-images/maps-zoom-sml.png "Map Control Example")](map-images/maps-zoom.png#lightbox "Map Control Example")
 
 Map functionality can be further enhanced by creating a [map custom renderer](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
 
@@ -110,7 +110,7 @@ After following those instructions, paste the API key in the
 Without a valid API key the maps control will display as a grey box on Android.
 
 > [!NOTE]
-> **Note**: Remember to generate another key using the keystore file that is used to sign the Release version of any application that is uploaded to the Google Play store. The key you generate for development and debugging will not work and the app downloaded from Google Play will have broken map display. Also remember to regenerate the key if the app's **Package Name** changes.
+> Remember to generate another key using the keystore file that is used to sign the Release version of any application that is uploaded to the Google Play store. The key you generate for development and debugging will not work and the app downloaded from Google Play will have broken map display. Also remember to regenerate the key if the app's **Package Name** changes.
 
 You'll also need to enable appropriate permissions by
   right-clicking on the Android project and selecting
@@ -198,7 +198,7 @@ slider.ValueChanged += (sender, e) => {
 };
 ```
 
- [ ![Maps with zoom](map-images/maps-zoom-sml.png "Map Control Zoom")](map-images/maps-zoom.png "Map Control Zoom")
+ [![Maps with zoom](map-images/maps-zoom-sml.png "Map Control Zoom")](map-images/maps-zoom.png#lightbox "Map Control Zoom")
 
 ### Map Pins
 

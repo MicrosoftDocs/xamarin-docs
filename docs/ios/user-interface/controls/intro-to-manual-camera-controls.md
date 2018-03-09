@@ -22,7 +22,7 @@ These controls can also be useful when developing scientific or industrial appli
 
 Whether taking video or still images using the camera on an iOS device, the process used to capture those images is largely the same. This is true of applications that use the default automated camera controls or ones that take advantage of the new Manual Camera Controls:
 
- [ ![](intro-to-manual-camera-controls-images/image1.png "AVFoundation Capture Objects overview")](intro-to-manual-camera-controls-images/image1.png)
+ [![](intro-to-manual-camera-controls-images/image1.png "AVFoundation Capture Objects overview")](intro-to-manual-camera-controls-images/image1.png#lightbox)
 
 Input is taken from an `AVCaptureDeviceInput` into an `AVCaptureSession` by way of an `AVCaptureConnection`. The result is either output as a still image or as a video stream. The entire process is controlled by an `AVCaptureDevice`.
 
@@ -276,11 +276,11 @@ By allowing the end user to take controls of the focus directly, an application 
 
 For example, a professional photographer can soften the focus of an image to achieve a [Bokeh Effect](http://en.wikipedia.org/wiki/Bokeh):
 
-[ ![](intro-to-manual-camera-controls-images/image2.png "A Bokeh Effect")](intro-to-manual-camera-controls-images/image2.png)
+[![](intro-to-manual-camera-controls-images/image2.png "A Bokeh Effect")](intro-to-manual-camera-controls-images/image2.png#lightbox)
 
 Or, create a [Focus Pull Effect](http://www.mediacollege.com/video/camera/focus/pull.html), such as:
 
-[ ![](intro-to-manual-camera-controls-images/image3.png "The Focus Pull Effect")](intro-to-manual-camera-controls-images/image3.png)
+[![](intro-to-manual-camera-controls-images/image3.png "The Focus Pull Effect")](intro-to-manual-camera-controls-images/image3.png#lightbox)
 
 For scientists or a writer of medical applications, the application might want to programmatically move the lens around for experiments. Either way the new API allows either the end user or the application to take control over focus at the time the image is taken.
 
@@ -288,7 +288,7 @@ For scientists or a writer of medical applications, the application might want t
 
 Before discussing the details of controlling focus in an IOS 8 application. Let's take a quick look at how focus works in an iOS device:
 
-[ ![](intro-to-manual-camera-controls-images/image4.png "How focus works in an iOS device")](intro-to-manual-camera-controls-images/image4.png)
+[![](intro-to-manual-camera-controls-images/image4.png "How focus works in an iOS device")](intro-to-manual-camera-controls-images/image4.png#lightbox)
 
 Light enters the camera lens on the iOS device and is focused on an image sensor. The distance of the lens from the sensor controls where the Focal Point (the area where the image will appear the sharpest) is, in relationship to the sensor. The farther the lens is from the sensor, distance objects seem sharpest and the closer, near objects seem sharpest.
 
@@ -354,7 +354,7 @@ As seen in the code above, the Capture Device must be locked for configuration b
 
 With the General AV Capture Setup code in place, a `UIViewController` can be added to the application's Storyboard and configured as follows:
 
-[ ![](intro-to-manual-camera-controls-images/image5.png "A UIViewController can be added to the applications Storyboard and configured as shown here")](intro-to-manual-camera-controls-images/image5.png)
+[![](intro-to-manual-camera-controls-images/image5.png "A UIViewController can be added to the applications Storyboard and configured as shown here")](intro-to-manual-camera-controls-images/image5.png#lightbox)
 
 The view contains the following main elements:
 
@@ -487,10 +487,10 @@ Do the following to wire-up the view controller for Manual Focus Control:
   
 1. With the camera in the Auto mode, the slider will move automatically as the camera adjusts focus:
 
-	[![](intro-to-manual-camera-controls-images/image6.png "The slider will move automatically as the camera adjusts focus in this sample app")](intro-to-manual-camera-controls-images/image6.png)
+	[![](intro-to-manual-camera-controls-images/image6.png "The slider will move automatically as the camera adjusts focus in this sample app")](intro-to-manual-camera-controls-images/image6.png#lightbox)
 1. Tap the Locked segment and drag the position slider to adjust the lens position manually:
 
-	[![](intro-to-manual-camera-controls-images/image7.png "Manually adjusting the lens position")](intro-to-manual-camera-controls-images/image7.png)
+	[![](intro-to-manual-camera-controls-images/image7.png "Manually adjusting the lens position")](intro-to-manual-camera-controls-images/image7.png#lightbox)
 1. Stop the application.
 
 
@@ -502,7 +502,7 @@ Exposure refers to the brightness of an image relative to the source brightness,
 
 Using the Manual Exposure Controls, the user can take an image from unrealistically bright to dark and moody:
 
-[ ![](intro-to-manual-camera-controls-images/image8.png "A sample an image showing exposure from unrealistically bright to dark and moody")](intro-to-manual-camera-controls-images/image8.png)
+[![](intro-to-manual-camera-controls-images/image8.png "A sample an image showing exposure from unrealistically bright to dark and moody")](intro-to-manual-camera-controls-images/image8.png#lightbox)
 
 Again, this can be done automatically using programmatic control for scientific applications or via manual controls provided by the applications user interface. Either way, the new iOS 8 Exposure APIs provide fine-grained control over the camera's exposure settings.
 
@@ -510,7 +510,7 @@ Again, this can be done automatically using programmatic control for scientific 
 
 Before discussing the details of controlling exposure in an IOS 8 application. Let's take a quick look at how exposure works:
 
-[ ![](intro-to-manual-camera-controls-images/image9.png "How exposure works")](intro-to-manual-camera-controls-images/image9.png)
+[![](intro-to-manual-camera-controls-images/image9.png "How exposure works")](intro-to-manual-camera-controls-images/image9.png#lightbox)
 
 The three basic elements that come together to control exposure are:
 
@@ -523,7 +523,7 @@ The three basic elements that come together to control exposure are:
 
 Before learning how manual exposure works, it’s a good idea to understand how continuous auto exposure works in an iOS device.
 
-[ ![](intro-to-manual-camera-controls-images/image10.png "How continuous auto exposure works in an iOS device")](intro-to-manual-camera-controls-images/image10.png)
+[![](intro-to-manual-camera-controls-images/image10.png "How continuous auto exposure works in an iOS device")](intro-to-manual-camera-controls-images/image10.png#lightbox)
 
 First is the Auto Exposure Block, it has the job of calculating ideal exposure and is continuously being fed Metering Stats. It uses this information to calculate the optimal mixture of ISO and Shutter Speed to get the scene well lit. This cycle is referred to as the AE Loop.
 
@@ -531,7 +531,7 @@ First is the Auto Exposure Block, it has the job of calculating ideal exposure a
 
 Next, let's examine how locked exposure works in iOS devices.
 
-[ ![](intro-to-manual-camera-controls-images/image11.png "How locked exposure works in iOS devices")](intro-to-manual-camera-controls-images/image11.png)
+[![](intro-to-manual-camera-controls-images/image11.png "How locked exposure works in iOS devices")](intro-to-manual-camera-controls-images/image11.png#lightbox)
 
 Again, you have the Auto Exposure Block that is trying to calculate the optimal iOS and Duration values. However, in this mode the AE Block is disconnected from the Metering Stats engine.
 
@@ -585,7 +585,7 @@ As seen in the code above, the Capture Device must be locked for configuration b
 
 With the General AV Capture Setup code in place, a `UIViewController` can be added to the application's Storyboard and configured as follows:
 
-[ ![](intro-to-manual-camera-controls-images/image12.png "A UIViewController can be added to the applications Storyboard and configured as shown here")](intro-to-manual-camera-controls-images/image12.png)
+[![](intro-to-manual-camera-controls-images/image12.png "A UIViewController can be added to the applications Storyboard and configured as shown here")](intro-to-manual-camera-controls-images/image12.png#lightbox)
 
 The view contains the following main elements:
 
@@ -787,13 +787,13 @@ Do the following to wire-up the view controller for Manual Exposure Control:
   
 1. With the camera in the Auto mode, the sliders will move automatically as the camera adjusts exposure:
 
-	[![](intro-to-manual-camera-controls-images/image13.png "The sliders will move automatically as the camera adjusts exposure")](intro-to-manual-camera-controls-images/image13.png)
+	[![](intro-to-manual-camera-controls-images/image13.png "The sliders will move automatically as the camera adjusts exposure")](intro-to-manual-camera-controls-images/image13.png#lightbox)
 1. Tap the Locked segment and drag the Bias slider to adjust the bias of the automatic exposure manually:
 
-	[![](intro-to-manual-camera-controls-images/image14.png "Adjusting the bias of the automatic exposure manually")](intro-to-manual-camera-controls-images/image14.png)
+	[![](intro-to-manual-camera-controls-images/image14.png "Adjusting the bias of the automatic exposure manually")](intro-to-manual-camera-controls-images/image14.png#lightbox)
 1. Tap the Custom segment and drag the Duration and ISO sliders to manually control exposure:
 
-	[![](intro-to-manual-camera-controls-images/image15.png "Drag the Duration and ISO sliders to manually control exposure")](intro-to-manual-camera-controls-images/image15.png)
+	[![](intro-to-manual-camera-controls-images/image15.png "Drag the Duration and ISO sliders to manually control exposure")](intro-to-manual-camera-controls-images/image15.png#lightbox)
 1. Stop the application.
 
 
@@ -803,7 +803,7 @@ The above code has shown how to monitor the exposure settings when the camera is
 
 White Balance controls allow users to adjust the balance of colosr in an image to make them  look more realistic. Different light sources have different color temperatures, and the camera settings used to capture an image must be adjusted to compensate for these differences. Again, by allowing the user control over the white balance they can make professional adjustments that the automatic routines are incapable of to achieve artistic effects.
 
-[ ![](intro-to-manual-camera-controls-images/image16.png "A sample image showing Manual White Balance adjustments")](intro-to-manual-camera-controls-images/image16.png)
+[![](intro-to-manual-camera-controls-images/image16.png "A sample image showing Manual White Balance adjustments")](intro-to-manual-camera-controls-images/image16.png#lightbox)
 
 For instance, daylight has a blueish cast, whereas tungsten incandescent lights have a warmer, yellow-orange tint. (Confusingly, “cool” colors have higher color temperatures than “warm” colors. Color temperatures are a physical measure, not a perceptual one.)
 
@@ -817,7 +817,7 @@ Before discussing the details of controlling white balance in an IOS 8 applicati
 
 In the study of color perception, the [CIE 1931 RGB color space and CIE 1931 XYZ color space](http://en.wikipedia.org/wiki/CIE_1931_color_space) are the first mathematically defined color spaces. They were created by the International Commission on Illumination (CIE) in 1931.
 
-[ ![](intro-to-manual-camera-controls-images/image17.png "The CIE 1931 RGB color space and CIE 1931 XYZ color space")](intro-to-manual-camera-controls-images/image17.png)
+[![](intro-to-manual-camera-controls-images/image17.png "The CIE 1931 RGB color space and CIE 1931 XYZ color space")](intro-to-manual-camera-controls-images/image17.png#lightbox)
 
 The above chart shows us all of the colors visible to the human eye, from deep blue to bright green to bright red. Any point on the diagram can be plotted with an X and Y value, as shown on the graph above.
 
@@ -896,7 +896,7 @@ The Capture Device must be locked for configuration before a change in White Bal
 
 With the General AV Capture Setup code in place, a `UIViewController` can be added to the application's Storyboard and configured as follows:
 
-[ ![](intro-to-manual-camera-controls-images/image18.png "A UIViewController can be added to the applications Storyboard and configured as shown here")](intro-to-manual-camera-controls-images/image18.png)
+[![](intro-to-manual-camera-controls-images/image18.png "A UIViewController can be added to the applications Storyboard and configured as shown here")](intro-to-manual-camera-controls-images/image18.png#lightbox)
 
 The view contains the following main elements:
 
@@ -1107,13 +1107,13 @@ Do the following to wire-up the view controller for Manual White Balance Control
 1. Save the changes the to code and run the application.
 1. With the camera in the Auto mode, the sliders will move automatically as the camera adjusts white balance:
 
-	[![](intro-to-manual-camera-controls-images/image19.png "The sliders will move automatically as the camera adjusts white balance")](intro-to-manual-camera-controls-images/image19.png)
+	[![](intro-to-manual-camera-controls-images/image19.png "The sliders will move automatically as the camera adjusts white balance")](intro-to-manual-camera-controls-images/image19.png#lightbox)
 1. Tap the Locked segment and drag the Temp and Tint sliders to adjust the white balance manually:
 
-	[![](intro-to-manual-camera-controls-images/image20.png "Drag the Temp and Tint sliders to adjust the white balance manually")](intro-to-manual-camera-controls-images/image20.png)
+	[![](intro-to-manual-camera-controls-images/image20.png "Drag the Temp and Tint sliders to adjust the white balance manually")](intro-to-manual-camera-controls-images/image20.png#lightbox)
 1. With the Locked segment still selected, place a physical gray card in front of the camera and tap the Gray Card button to adjust white balance to the Gray World:
 
-	[![](intro-to-manual-camera-controls-images/image21.png "Tap the Gray Card button to adjust white balance to the Gray World")](intro-to-manual-camera-controls-images/image21.png)
+	[![](intro-to-manual-camera-controls-images/image21.png "Tap the Gray Card button to adjust white balance to the Gray World")](intro-to-manual-camera-controls-images/image21.png#lightbox)
 1. Stop the application.
 
 The above code has shown how to monitor the white balance settings when the camera is in the Automatic mode or use sliders to control the white balance when it is in the Locked mode.
@@ -1124,7 +1124,7 @@ The Bracketed Capture is based on the settings from the Manual Camera Controls p
 
 Simply stated, Bracketed Capture is a burst of still images taken with a variety of settings from picture to picture.
 
-[ ![](intro-to-manual-camera-controls-images/image22.png "How Bracketed Capture works")](intro-to-manual-camera-controls-images/image22.png)
+[![](intro-to-manual-camera-controls-images/image22.png "How Bracketed Capture works")](intro-to-manual-camera-controls-images/image22.png#lightbox)
 
 Using the Bracketed Capture in iOS 8, an application can preset a series of Manual Camera Controls, issue a single command and have the current scene return a series of images for each of the manual presets.
 
@@ -1183,7 +1183,7 @@ With this information in mind, let's take a look at an example of using Brackete
 
 With the General AV Capture Setup code in place, a `UIViewController` can be added to the application's Storyboard and configured as follows:
 
-[ ![](intro-to-manual-camera-controls-images/image23.png "A UIViewController can be added to the applications Storyboard and configured as shown here")](intro-to-manual-camera-controls-images/image23.png)
+[![](intro-to-manual-camera-controls-images/image23.png "A UIViewController can be added to the applications Storyboard and configured as shown here")](intro-to-manual-camera-controls-images/image23.png#lightbox)
 
 The view contains the following main elements:
 
@@ -1341,10 +1341,10 @@ Do the following to wire-up the view controller for Bracketed Capture:
 1. Save the changes the to code and run the application.
 1. Frame a scene and tap the Capture Bracket button:
 
-	[![](intro-to-manual-camera-controls-images/image24.png "Frame a scene and tap the Capture Bracket button")](intro-to-manual-camera-controls-images/image24.png)
+	[![](intro-to-manual-camera-controls-images/image24.png "Frame a scene and tap the Capture Bracket button")](intro-to-manual-camera-controls-images/image24.png#lightbox)
 1. Swipe right to left to see the three images taken by the Bracketed Capture:
 
-	[![](intro-to-manual-camera-controls-images/image25.png "Swipe right to left to see the three images taken by the Bracketed Capture")](intro-to-manual-camera-controls-images/image25.png)
+	[![](intro-to-manual-camera-controls-images/image25.png "Swipe right to left to see the three images taken by the Bracketed Capture")](intro-to-manual-camera-controls-images/image25.png#lightbox)
 1. Stop the application.
 
 

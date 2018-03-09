@@ -6,21 +6,19 @@ ms.assetid: 2E54F1D0-45F4-43A7-B3A3-4F483B7150CB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Notifications in Xamarin.Android
 
-<a name="Overview" />
 
 ## Overview
 
-This section shows how to implement notifications in Xamarin.Android.
-It explains the various UI elements of an Android notification and
-discusses the API's involved with creating and displaying a
-notification.
+This section explains how to implement notifications in
+Xamarin.Android. It describes the various UI elements of an Android
+notification and discusses the API's involved with creating and
+displaying a notification.
 
-<a name="Sections" />
 
 ## Sections
 

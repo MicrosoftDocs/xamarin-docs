@@ -53,7 +53,7 @@ The `VisualElement` class defines a property named [`Resources`](https://develop
 
 In most cases you'll use the [`StaticResource`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.StaticResourceExtension/) markup extension to reference an item from the resource dictionary, as demonstrated by the [**ResourceSharing**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/ResourceSharing) sample. You can use a `StaticResourceExtension` element or `StaticResource` within curly braces:
 
-[![Triple screenshot of resource sharing](images/ch10fg03-small.png "Resource Sharing")](images/ch10fg03-large.png "Resource Sharing")
+[![Triple screenshot of resource sharing](images/ch10fg03-small.png "Resource Sharing")](images/ch10fg03-large.png#lightbox "Resource Sharing")
 
 Do not confuse the `x:Static` markup extension and the `StaticResource` markup extension.
 

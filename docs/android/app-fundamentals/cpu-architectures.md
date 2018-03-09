@@ -7,7 +7,7 @@ ms.assetid: D4BC889D-9164-49BB-9B7B-F6C4E4E109F1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # CPU Architectures
@@ -43,7 +43,7 @@ disabled (turning this off allows you to explicitly select which ABIs
 to support). Click the **Advanced** tab and, under **Advanced
 Properties**, check the architectures that you want to support:
 
-[ ![Selecting armeabi and armeabi-v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png)
+[![Selecting armeabi and armeabi-v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -61,7 +61,7 @@ the gear icon next to your project and select **Options**. In the
 support). Click the **Advanced** tab and, under **Supported ABIs**,
 check the ABIs for the architectures that you want to support:
 
-[ ![Selecting armeabi and armeabi-v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png)
+[![Selecting armeabi and armeabi-v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png#lightbox)
 
 -----
 
@@ -108,7 +108,7 @@ the [Nexus 9](http://www.google.com/nexus/9/)) can run apps configured for
 make it possible for your app to address more memory.
 
 > [!NOTE]
-> **Note:**: 64-bit runtime support is currently an experimental
+> 64-bit runtime support is currently an experimental
 > feature. Remember that 64-bit runtimes are *not* required to run your app on 64-bit devices. 
 
 ## Additional Information

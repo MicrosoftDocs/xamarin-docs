@@ -24,7 +24,7 @@ the lock-screen depending on the date/time or the location of the device.
 This document introduces Wallet, using the Pass Kit API with Xamarin.iOS, and
 discusses how to implement Passes on your server.
 
- [ ![](passkit-images/image1.png "The Wallet stores and organizes all the Passes on a phone")](passkit-images/image1.png)
+ [![](passkit-images/image1.png "The Wallet stores and organizes all the Passes on a phone")](passkit-images/image1.png#lightbox)
 
 
 ## Requirements
@@ -67,7 +67,7 @@ ecosystem of apps, data and services that facilitate the secure sharing and
 management of barcodes and other data. This high level diagram shows the
 different entities that can be involved in creating and using Passes:
 
- [ ![](passkit-images/image2.png "This high level diagram shows the entities involved in creating and using Passes")](passkit-images/image2.png)
+ [![](passkit-images/image2.png "This high level diagram shows the entities involved in creating and using Passes")](passkit-images/image2.png#lightbox)
 
 Each piece of the ecosystem has a clearly defined role:
 
@@ -106,7 +106,7 @@ app by the layout and top edge of the pass:
 The five pass types are shown in this screenshot (in order: coupon, generic,
 store card, boarding pass and event ticket):
 
- [ ![](passkit-images/image3.png "The five pass types are shown in this screenshot")](passkit-images/image3.png)
+ [![](passkit-images/image3.png "The five pass types are shown in this screenshot")](passkit-images/image3.png#lightbox)
 
 ### File Structure
 
@@ -126,7 +126,7 @@ as localized strings (also optional).
 Directory structure of a pass file is shown below (this is the contents of
 the ZIP archive):
 
- [ ![](passkit-images/image4.png "Directory structure of a pass file is shown here")](passkit-images/image4.png)
+ [![](passkit-images/image4.png "Directory structure of a pass file is shown here")](passkit-images/image4.png#lightbox)
 
 ### pass.json
 
@@ -285,10 +285,10 @@ To create a Pass Type ID do the following.
 The first step is to set up a Pass Type ID for each different _type_ of Pass to be supported. The Pass ID (or Pass Type identifier) creates a unique identifier for the Pass. We will use this ID to link the Pass with your developer account using a Certificate.
 
 1. In the  [Certificates, Identifiers, and Profiles section of the iOS Provisioning Portal](https://developer.apple.com/account/overview.action), navigate to  **Identifiers** and select  **Pass Type IDs** . Then select the **+** button to create a new pass type:
-  [ ![](passkit-images/passid.png "Create a new pass type")](passkit-images/passid.png)
+  [![](passkit-images/passid.png "Create a new pass type")](passkit-images/passid.png#lightbox)
 
 2.   Provide a **Description** (name) and **Identifier** (unique string) for the Pass. Note that all Pass Type IDs must begin with the string `pass.` In this example we use `pass.com.xamarin.coupon.banana` :
-  [ ![](passkit-images/register.png "Provide a Description and Identifier")](passkit-images/register.png)
+  [![](passkit-images/register.png "Provide a Description and Identifier")](passkit-images/register.png#lightbox)
 
 
 3.   Confirm the Pass ID by pressing the **Register** button.
@@ -301,11 +301,11 @@ The first step is to set up a Pass Type ID for each different _type_ of Pass to 
 To create a new Certificate for this Pass Type ID, do the following:
 
 1.  Select the newly created Pass ID from the list, and click **Edit** :
-  [ ![](passkit-images/pass-done.png "Select the new Pass ID from the list")](passkit-images/pass-done.png)
+  [![](passkit-images/pass-done.png "Select the new Pass ID from the list")](passkit-images/pass-done.png#lightbox)
 
     Then, select  **Create Certificate…** :
 
-    [ ![](passkit-images/cert-dist.png "Select Create Certificate")](passkit-images/cert-dist.png)
+    [![](passkit-images/cert-dist.png "Select Create Certificate")](passkit-images/cert-dist.png#lightbox)
 
 
 2.  Follow the steps to create a Certificate Signing Request (CSR).
@@ -340,7 +340,7 @@ used to generate a pass. Use the files in the `CouponBanana.raw`
 directory of the CreateAPassManually directory. The following files are
 present:
 
- [ ![](passkit-images/image18.png "These files are present")](passkit-images/image18.png)
+ [![](passkit-images/image18.png "These files are present")](passkit-images/image18.png#lightbox)
 
 Open pass.json and edit the JSON. You must at least update the `passTypeIdentifier` and `teamIdentifer` to match your
 Apple Developer account.
@@ -391,12 +391,12 @@ If you were to examine the output of these tools (by setting the filename to
 .zip and then opening it), you would see the following files (note the addition
 of the `manifest.json` and `signature` files):
 
- [ ![](passkit-images/image19.png "Examining the output of these tools")](passkit-images/image19.png)
+ [![](passkit-images/image19.png "Examining the output of these tools")](passkit-images/image19.png#lightbox)
 
 Once you have signed, ZIPped and renamed the file (eg. to `BananaCoupon.pkpass`) you can drag it into the simulator to test, or
 email it to yourself to retrieve on a real device. You should see a screen to **Add** the pass, like this:
 
- [ ![](passkit-images/image20.png "Add the pass screen")](passkit-images/image20.png)
+ [![](passkit-images/image20.png "Add the pass screen")](passkit-images/image20.png#lightbox)
 
 Normally that process would be automated on a server, however manual pass
 creation might be an option for small businesses that are only creating coupons
@@ -409,7 +409,7 @@ that do not require the support of a back-end server.
 Wallet is the central piece of the Pass Kit ecosystem. This screenshot
 shows the empty Wallet, and how the Pass list and individual Passes look:
 
- [ ![](passkit-images/image21.png "This screenshot shows the empty Wallet, and how the Pass list and individual Passes look")](passkit-images/image21.png)
+ [![](passkit-images/image21.png "This screenshot shows the empty Wallet, and how the Pass list and individual Passes look")](passkit-images/image21.png#lightbox)
 
 Features of Wallet include:
 
@@ -452,9 +452,9 @@ This screenshot shows how **Mail** in iOS 6 recognizes a
 Pass attachment and (when touched) offers to **Add** it to
 Wallet.
 
- [ ![](passkit-images/image22.png "This screenshot shows how Mail in iOS 6 recognizes a Pass attachment")](passkit-images/image22.png)
+ [![](passkit-images/image22.png "This screenshot shows how Mail in iOS 6 recognizes a Pass attachment")](passkit-images/image22.png#lightbox)
 
- [ ![](passkit-images/image23.png "This screenshot shows how Mail offers to Add a Pass attachment to Wallet")](passkit-images/image23.png)
+ [![](passkit-images/image23.png "This screenshot shows how Mail offers to Add a Pass attachment to Wallet")](passkit-images/image23.png#lightbox)
 
 If you are building an app that could be a conduit for Passes, they can be
 recognized by:
@@ -596,7 +596,7 @@ method should always be tested on real devices. This list can be displayed in a
 UITableView, the sample app look like this after two coupons have been
 added:
 
- [ ![](passkit-images/image29.png "The sample app look like this after two coupons have been added")](passkit-images/image29.png)
+ [![](passkit-images/image29.png "The sample app look like this after two coupons have been added")](passkit-images/image29.png#lightbox)
 
 
 ### Displaying Passes
@@ -620,7 +620,7 @@ string passInfo =
 
 This string is shown as an alert in the sample:
 
- [ ![](passkit-images/image30.png "The Coupon Selected alert in the sample")](passkit-images/image30.png)
+ [![](passkit-images/image30.png "The Coupon Selected alert in the sample")](passkit-images/image30.png#lightbox)
 
 You can also use the `LocalizedValueForFieldKey()` method to
 retrieve data from fields in the passes you have designed (since you will know
@@ -646,7 +646,7 @@ NavigationController.PresentModalViewController (pkapvc, true);
 
 The pass is presented with **Add** and **Cancel** options:
 
- [ ![](passkit-images/image20.png "The pass presented with Add and Cancel options")](passkit-images/image20.png)
+ [![](passkit-images/image20.png "The pass presented with Add and Cancel options")](passkit-images/image20.png#lightbox)
 
 ### Replace an Existing Pass
 

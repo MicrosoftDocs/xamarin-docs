@@ -458,7 +458,7 @@ With the implementation of these properties in the three renderers, it's possibl
 
 The `VideoSourceConverter` class converts the string to a `UriVideoSource`. When you navigate to the **Play Web Video** page, the video begins loading and starts playing when a sufficient quantity of data has been downloaded and buffered. The video is about 10 minutes in length:
 
-[![Play Web Video](web-videos-images/playwebvideo-small.png "Play Web Video")](web-videos-images/playwebvideo-large.png "Play Web Video")
+[![Play Web Video](web-videos-images/playwebvideo-small.png "Play Web Video")](web-videos-images/playwebvideo-large.png#lightbox "Play Web Video")
 
 On each of the three platforms, the transport controls fade out if they're not used but can be restored to view by tapping the video.
 

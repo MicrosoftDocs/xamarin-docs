@@ -222,7 +222,7 @@ public partial class TestPerspectivePage : ContentPage
 
 Here are some sample images:
 
-[![](non-affine-images/testperspective-small.png "Triple screenshot of the Test Perspective page")](non-affine-images/testperspective-large.png "Triple screenshot of the Test Perspective page")
+[![](non-affine-images/testperspective-small.png "Triple screenshot of the Test Perspective page")](non-affine-images/testperspective-large.png#lightbox "Triple screenshot of the Test Perspective page")
 
 As you experiment with the sliders, you'll find that values beyond 0.0066 or below –0.0066 cause the image to suddenly become fractured and incoherent. The bitmap being transformed is 300-pixels square. It is transformed relative to its center, so the coordinates of the bitmap range from –150 to 150. Recall that the value of z' is:
 
@@ -386,13 +386,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here are some examples:
 
-[![](non-affine-images/tapertransform-small.png "Triple screenshot of the Taper Transform page")](non-affine-images/tapertransform-large.png "Triple screenshot of the Taper Transform page")
+[![](non-affine-images/tapertransform-small.png "Triple screenshot of the Taper Transform page")](non-affine-images/tapertransform-large.png#lightbox "Triple screenshot of the Taper Transform page")
 
 Another type of generalized non-affine transforms is 3D rotation, which is demonstrated in the next article, [3D Rotations](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md).
 
 The non-affine transform can transform a rectangle into any convex quadrilateral. This is demonstrated by the **Show Non-Affine Matrix** page. It is very similar to the **Show Affine Matrix** page from the [Matrix Transforms](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md) article except that it has a fourth `TouchPoint` object to manipulate the fourth corner of the bitmap:
 
-[![](non-affine-images/shownonaffinematrix-small.png "Triple screenshot of the Show Non-Affine Matrix page")](non-affine-images/shownonaffinematrix-large.png "Triple screenshot of the Show Non-Affine Matrix page")
+[![](non-affine-images/shownonaffinematrix-small.png "Triple screenshot of the Show Non-Affine Matrix page")](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple screenshot of the Show Non-Affine Matrix page")
 
 As long as you don't attempt to make an interior angle of one of the corners of the bitmap greater than 180 degrees, or make two sides cross each other, the program successfully calculates the transform using this method from the [`ShowNonAffineMatrixPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) class:
 

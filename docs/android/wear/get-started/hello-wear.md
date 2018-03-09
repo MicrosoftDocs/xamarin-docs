@@ -26,11 +26,11 @@ Create a new **Android Wear Application**:
 
 # [Visual Studio](#tab/vswin)
 
-[![Creating a new Android Wear Application in the New Project dialog](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png)
+[![Creating a new Android Wear Application in the New Project dialog](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Creating a new Android Wear Application in the New Solution dialog](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png)
+[![Creating a new Android Wear Application in the New Solution dialog](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
@@ -48,13 +48,13 @@ double-check that you have installed a supported Android SDK.
 Ensure that **Minimum Android to target** is set to **Android 5.0 
 (Lollipop)** or later: 
 
-[![Setting the Target Framework to Android 5.0 in Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png)
+[![Setting the Target Framework to Android 5.0 in Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
 Ensure the target framework is set to **Android 5.0 (Lollipop)** or later:
 
-[ ![Setting the Target Framework to Android 5.0 in Visual Studio for Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png)
+[![Setting the Target Framework to Android 5.0 in Visual Studio for Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
@@ -160,11 +160,11 @@ deploy the app to the emulator or device.
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Choosing a Wear AVD in Visual Studio device menu](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png)
+[![Choosing a Wear AVD in Visual Studio device menu](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Choosing a Wear AVD in Visual Studio for Mac device menu](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png)
+[![Choosing a Wear AVD in Visual Studio for Mac device menu](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
@@ -182,12 +182,12 @@ deploy this app to an LG G Watch that is Bluetooth-connected to a Nexus
 After the app successfully deploys, the screen of the Wear device
 should display a screen like the following:
 
-[![Initial screen of Wear app](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png)
+[![Initial screen of Wear app](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
 Tap the **CLICK ME!** button on the face of the Wear device and
 see the count increment with each tap:
 
-[![Screenshot of Wear app after 3 clicks](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png)
+[![Screenshot of Wear app after 3 clicks](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 
 ## Next Steps

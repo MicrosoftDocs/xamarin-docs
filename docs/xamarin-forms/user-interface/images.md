@@ -75,7 +75,7 @@ var image = new Image { Source = "waterfront.jpg" };
 
 The following screenshots show the result of displaying a local image on each platform:
 
-[ ![Local ImageSource](images-images/local-sml.png "Sample Application Displaying a Local Image")](images-images/local.png "Sample Application Displaying a Local Image")
+[![Local ImageSource](images-images/local-sml.png "Sample Application Displaying a Local Image")](images-images/local.png#lightbox "Sample Application Displaying a Local Image")
 
 For more flexibility the `Device.RuntimePlatform` property can be used to select a different image file or path for some or all platforms, as shown in this code example:
 
@@ -99,7 +99,7 @@ Prior to iOS 9, retina versions of the image could be placed in the **Resources*
 
 Android alternate resolution images should be placed in [specially-named directories](http://developer.android.com/guide/practices/screens_support.html) in the Android project, as shown in the following screenshot:
 
-[![Android Multiple-Resolution Image Location](images-images/xs-highdpisolution-sml.png "Android Multiple-Resolution Image Location")](images-images/xs-highdpisolution.png "Android Multiple-Resolution Image Location")
+[![Android Multiple-Resolution Image Location](images-images/xs-highdpisolution-sml.png "Android Multiple-Resolution Image Location")](images-images/xs-highdpisolution.png#lightbox "Android Multiple-Resolution Image Location")
 
 ### Additional Controls that Display Images
 
@@ -163,7 +163,7 @@ Currently there is no implicit conversion for resource identifiers. Instead, you
 
 The following screenshots show the result of displaying an embedded image on each platform:
 
-[ ![ResourceImageSource](images-images/resource-sml.png "Sample Application Displaying an Embedded Image")](images-images/resource.png "Sample Application Displaying an Embedded Image")
+[![ResourceImageSource](images-images/resource-sml.png "Sample Application Displaying an Embedded Image")](images-images/resource.png#lightbox "Sample Application Displaying an Embedded Image")
 
 <a name="Embedded_Images_in_Xaml" />
 
@@ -266,7 +266,7 @@ webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.pn
 
 The following screenshots show the result of displaying a remote image on each platform:
 
-[![Downloaded ImageSource](images-images/download-sml.png "Sample Application Displaying a Downloaded Image")](images-images/download.png "Sample Application Displaying a Downloaded Image")
+[![Downloaded ImageSource](images-images/download-sml.png "Sample Application Displaying a Downloaded Image")](images-images/download.png#lightbox "Sample Application Displaying a Downloaded Image")
 
 <a name="Image_Caching" />
 

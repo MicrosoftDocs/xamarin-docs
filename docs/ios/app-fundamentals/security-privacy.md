@@ -72,7 +72,7 @@ For more information on working with `Info.plist` keys, please see Apple's [Info
 
 Take the following example of accessing HomeKit on iOS 10 (and greater), the developer will need to add the `NSHomeKitUsageDescription` key to the app's `Info.plist` file and provide a string declaring why the app wants to access the user's HomeKit database. This string will be presented to the user the first time they run the app:
 
-[ ![](security-privacy-images/info01.png "An example NSHomeKitUsageDescription alert")](security-privacy-images/info01.png)
+[![](security-privacy-images/info01.png "An example NSHomeKitUsageDescription alert")](security-privacy-images/info01.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
@@ -83,7 +83,7 @@ Xamarin.iOS for Visual Studio current doesn't support editing the security enhan
 3. Add the following node to provide the required description: `<string>Allows the app to control HomeKit enabled devices.</string>`
 4. The `Info.plist` file should look like the following: 
 
-	[ ![](security-privacy-images/info02vs.png "The Info.plist file should look like the following")](security-privacy-images/info02vs.png)
+	[![](security-privacy-images/info02vs.png "The Info.plist file should look like the following")](security-privacy-images/info02vs.png#lightbox)
 4. Save the changes to the file.
 5. Return to Visual Studio and recompile's the app.
 
@@ -96,10 +96,10 @@ To set any of the Privacy keys, do the following:
 3. Add a new **Entry** to the list.
 4. From the dropdown list, select a Privacy key (such as **Privacy - HomeKit Usage Description**): 
 
-	[ ![](security-privacy-images/info02.png "Select a Privacy key")](security-privacy-images/info02.png)
+	[![](security-privacy-images/info02.png "Select a Privacy key")](security-privacy-images/info02.png#lightbox)
 5. Enter a description for why the app wants to access the given feature or user information: 
 
-	[ ![](security-privacy-images/info03.png "Enter a description")](security-privacy-images/info03.png)
+	[![](security-privacy-images/info03.png "Enter a description")](security-privacy-images/info03.png#lightbox)
 6. Save the changes to the file.
 
 -----

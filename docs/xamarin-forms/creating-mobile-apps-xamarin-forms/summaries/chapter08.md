@@ -65,7 +65,7 @@ Any `View` object can obtain touch input and generate events from that input. Th
 
 The [`TapGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) generates [`Tapped`](https://developer.xamarin.com/api/event/Xamarin.Forms.TapGestureRecognizer.Tapped/) events. The [**MonkeyTap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/MonkeyTap) program demonstrates how to attach `TapGestureRecognizer` objects to four `BoxView` elements to create an imitation game:
 
-[![Triple screenshot of monkey tap](images/ch08fg07-small.png "Imitation Game")](images/ch08fg07-large.png "Imitation Game")
+[![Triple screenshot of monkey tap](images/ch08fg07-small.png "Imitation Game")](images/ch08fg07-large.png#lightbox "Imitation Game")
 
 But the **MonkeyTap** program really needs sound. (See [the next chapter](chapter09.md).)
 

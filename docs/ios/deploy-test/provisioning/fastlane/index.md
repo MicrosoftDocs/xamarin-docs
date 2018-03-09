@@ -84,12 +84,12 @@ The content provided can be used as a springboard to aid with app distribution, 
 
 fastlane is a very active open source project that regularly pushes new releases. When a new version of fastlane is available, you will be advised when you run any fastlane command:
 
-[ ![](images/fastlane-image0.png "The fast lane update prompt")](images/fastlane-image0.png)
+[![](images/fastlane-image0.png "The fast lane update prompt")](images/fastlane-image0.png#lightbox)
 
 
 To update to a new version of fastlane, download the latest package from [here](https://download.fastlane.tools) and double-click on the install package to run it:
 
-[ ![](images/fastlane-image0a.png "Running the install package")](images/fastlane-image0a.png)
+[![](images/fastlane-image0a.png "Running the install package")](images/fastlane-image0a.png#lightbox)
 
 
 ## Contents
@@ -108,7 +108,7 @@ Once you have created a signing identity and provisioning profiles with fastlane
 
 To set the code signing options for a Xamarin.iOS application, right-click on the project name, select **Project Options > Build > iOS Bundle Signing** and set the Signing Identity and Provisioning Profile explicitly, as demonstrated below:
 
-[ ![](images/fastlane-image11.png "Set the Signing Identity and Provisioning Profile explicitly")](images/fastlane-image11.png)
+[![](images/fastlane-image11.png "Set the Signing Identity and Provisioning Profile explicitly")](images/fastlane-image11.png#lightbox)
 
 ## Related Links
 

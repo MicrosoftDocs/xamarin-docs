@@ -25,7 +25,7 @@ The process for creating an effect in each platform-specific project is as follo
 The effect can then be consumed by attaching it to the appropriate control.
 
 > [!NOTE]
-> **Note**: It's optional to provide an effect in each platform project. Attempting to use an effect when one isn't registered will return a non-null value that does nothing.
+> It's optional to provide an effect in each platform project. Attempting to use an effect when one isn't registered will return a non-null value that does nothing.
 
 The sample application demonstrates a `FocusEffect` that changes the background color of a control when it gains focus. The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
@@ -191,7 +191,7 @@ The process for consuming an effect from a Xamarin.Forms Portable Class Library 
 1. Attach the effect to the control by adding it to the control's [`Effects`](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/) collection.
 
 > [!NOTE]
-> **Note**: An effect instance can only be attached to a single control. Therefore, an effect must be resolved twice to use it on two controls.
+> An effect instance can only be attached to a single control. Therefore, an effect must be resolved twice to use it on two controls.
 
 ## Consuming the Effect in XAML
 

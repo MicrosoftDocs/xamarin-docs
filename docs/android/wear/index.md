@@ -48,7 +48,6 @@ includes debugging tips and information for how to set up a Bluetooth
 connection between your development computer and an Android device.
 
 
-<a name="Samples" />
 
 ## Samples
 

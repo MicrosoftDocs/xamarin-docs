@@ -7,14 +7,13 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
+ms.date: 03/01/2018
 ---
 
 # Splash Screen
 
 _An Android app takes some time to to start up, especially when the app is first launched on a device. A splash screen may display start up progress to the user or to indicate branding._
 
-<a name="overview" />
 
 ## Overview
 
@@ -34,10 +33,8 @@ an Android application. It covers the following steps:
 3.  Adding a new Activity to the application that will be used as the
     splash screen defined by the theme created in the previous step.
 
-[![Example Xamarin logo splash screen followed by app screen](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png)
+[![Example Xamarin logo splash screen followed by app screen](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
-
-<a name="requirements" />
 
 ## Requirements
 
@@ -51,7 +48,6 @@ All of the code and XML in this guide may be found in the
 [SplashScreen](https://developer.xamarin.com/samples/monodroid/SplashScreen) sample project for this
 guide.
 
-<a name="implement" />
 
 ## Implementing A Splash Screen
 
@@ -66,7 +62,6 @@ branded drawable, performs any initializations, and starts up any
 tasks. Once the app has bootstrapped, the splash screen Activity starts
 the main Activity and removes itself from the application back stack.
 
-<a name="drawable" />
 
 ### Creating a Drawable for the Splash Screen
 
@@ -102,7 +97,6 @@ Place this file in the **Resources/drawable** folder (for example,
 After the splash screen drawable has been created, the next step is to
 create a theme for the splash screen.
 
-<a name="theme" />
 
 ### Implementing a Theme
 
@@ -136,7 +130,6 @@ layout, you can use `windowContentOverlay` rather than
 also modify the **splash_screen.xml** drawable so that it displays an
 emulation of your UI.
 
-<a name="activity" />
 
 ### Create a Splash Activity
 
@@ -209,7 +202,6 @@ public class MainActivity : AppCompatActivity
 }
 ```
 
-<a name="summary" />
 
 ## Summary
 

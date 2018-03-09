@@ -12,13 +12,11 @@ ms.date: 08/03/2016
 
 # Maps and Location
 
-<a name="location" />
 
 ##  [Location Services](~/android/platform/maps-and-location/location.md)
 
 This guide introduces location-awareness in Android applications, and illustrates how to get the user's location using the Android Location Service API, as well as the Fused Location Provider available with the Google Location Services API.
 
- <a name="maps" />
 
 ##  [Maps](~/android/platform/maps-and-location/maps/index.md)
 

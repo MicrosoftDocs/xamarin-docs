@@ -33,7 +33,7 @@ in one of the
 or the [Android](https://developer.xamarin.com/api/namespace/Android/).*
 namespaces. The architecture is roughly like this:
 
-[![Diagram of Mono and ART above the kernel and below .NET/Java + bindings](architecture-images/architecture1.png)](architecture-images/architecture1.png)
+[![Diagram of Mono and ART above the kernel and below .NET/Java + bindings](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
 
 Xamarin.Android developers access the various features in the operating
 system either by calling into .NET APIs that they know (for low-level
@@ -45,7 +45,6 @@ For more information on how the Android classes communicate with the
 Android Runtime classes see the
 [API Design](~/android/internals/api-design.md) document.
 
-<a name="Application_Packages" />
 
 ## Application Packages
 
@@ -78,7 +77,6 @@ Xamarin.Android applications also contain *Android Callable Wrappers*
 to allow Android to call into managed code.
 
 
-<a name="Android_Callable_Wrappers" />
 
 ## Android Callable Wrappers
 
@@ -136,7 +134,6 @@ and not cached instances which may cause accidental instance sharing
 between threads.
 
 
-<a name="Managed_Callable_Wrapper_Subclasses" />
 
 ## Managed Callable Wrapper Subclasses
 
@@ -163,7 +160,6 @@ disposing of such instances, as *Dispose()*ing of the instance will
 break the mapping between the Java instance (an instance of an Android
 Callable Wrapper) and the managed instance.
 
-<a name="Java_Activation" />
 
 ### Java Activation
 
@@ -340,7 +336,6 @@ no instance data and a *(IntPtr, JniHandleOwnership)* constructor has
 been provided.
 
 
-<a name="Application_Startup" />
 
 ## Application Startup
 

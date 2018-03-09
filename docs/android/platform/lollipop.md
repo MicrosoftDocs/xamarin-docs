@@ -87,8 +87,6 @@ You can continue to use
 if you are developing specifically for API level 23 or earlier.
 
 
-<a name="settingup" />
-
 ## Setting Up an Android 5.0 Project
 
 To create an Android 5.0 project, you must install the latest tools and
@@ -106,11 +104,11 @@ that targets Android 5.0:
    Open Android SDK Manager&hellip;**) and install Android SDK Tools
    23.0.5 or later:
 
-    [![Selecting Android SDK tools in the Android SDK Manager](lollipop-images/android-l-tools-sml.png)](lollipop-images/android-l-tools.png)
+    [![Selecting Android SDK tools in the Android SDK Manager](lollipop-images/android-l-tools-sml.png)](lollipop-images/android-l-tools.png#lightbox)
 
    Also, install the latest Android 5.0 SDK packages (API 21 or later):
 
-    [![Installing Android 5.0 SDK packages in the Android SDK Manager](lollipop-images/android-l-sdk-pkgs-sml.png)](lollipop-images/android-l-sdk-pkgs.png)
+    [![Installing Android 5.0 SDK packages in the Android SDK Manager](lollipop-images/android-l-sdk-pkgs-sml.png)](lollipop-images/android-l-sdk-pkgs.png#lightbox)
 
    For more information about using the Android SDK Manager, see
    [SDK Manager](http://developer.android.com/tools/help/sdk-manager.html).
@@ -147,16 +145,11 @@ the Android L Preview, you must update the **Target
 Framework** and **Android version** to the
 values described above.
 
-
-<a name="changes" />
-
 ## Important Changes
 
 Previously published Android apps could be affected by changes
 in Android 5.0. In particular, Android 5.0 uses a new runtime and a
 significantly changed notification format.
-
-<a name="runtime" />
 
 ### Android Runtime
 
@@ -181,7 +174,6 @@ that exploit techniques unique to the previous Dalvik runtime, which may not
 work under ART. For more information about these changes, 
 see [Verifying App Behavior on the Android Runtime (ART)](http://developer.android.com/guide/practices/verifying-apps-art.html).
 
-<a name="notifchanges" />
 
 ### Notification Changes
 
@@ -230,7 +222,6 @@ The [Compatibility](~/android/app-fundamentals/notifications/local-notifications
 section of this article explains how to create notifications that are 
 downward-compatible with earlier versions of Android.
 
-<a name="materialtheme" />
 
 ## Material Theme
 
@@ -239,7 +230,7 @@ feel of the Android UI. Visual elements now use tactile surfaces that
 take on the bold graphics, typography, and bright colors of print-based
 design. Examples of Material Theme are depicted in the following screenshots:
 
-[![Screenshots of Material Theme Home Screen, Apps Screen, and Setting Screen](lollipop-images/android-5-gallery-labeled-sml.png)](lollipop-images/android-5-gallery-labeled.png)
+[![Screenshots of Material Theme Home Screen, Apps Screen, and Setting Screen](lollipop-images/android-5-gallery-labeled-sml.png)](lollipop-images/android-5-gallery-labeled.png#lightbox)
 
 Android 5.0 greets you with the home screen shown on the left. The
 center screenshot is the first screen of the app list, and the
@@ -253,12 +244,11 @@ app: the `Theme.Material` dark theme (the default), the
 `Theme.Material.Light` theme, and the 
 `Theme.Material.Light.DarkActionBar` theme: 
 
-[![Screenshots of Dark, Light, and DarkActionBar themes](lollipop-images/three-material-themes-sml.png)](lollipop-images/three-material-themes.png)
+[![Screenshots of Dark, Light, and DarkActionBar themes](lollipop-images/three-material-themes-sml.png)](lollipop-images/three-material-themes.png#lightbox)
 
 For more about using Material Theme features in Xamarin.Android apps, see 
 [Material Theme](~/android/user-interface/material-theme.md).
 
-<a name="animations" />
 
 ## Animations
 
@@ -268,7 +258,6 @@ more intuitive to use. Also, Android 5.0 apps can use *reveal effect*
 animations to hide or reveal views. You can use *curved motion* settings
 to configure how quickly or slowly animations are rendered.
 
-<a name="touchanim" />
 
 ### Touch Feedback Animations
 
@@ -294,7 +283,6 @@ time.
 For more on touch feedback animations in Android 5.0, 
 see [Customize Touch Feedback](http://developer.android.com/training/material/animations.html#Touch).
 
-<a name="activityanim" />
 
 ### Activity Transition Animations
 
@@ -313,7 +301,7 @@ of transition animations:
 For example, the following sequence of screenshots illustrates a shared
 element transition:
 
-[![Frame by frame screenshots of a shared element transition animation](lollipop-images/activity-transition-sml.png)](lollipop-images/activity-transition.png)
+[![Frame by frame screenshots of a shared element transition animation](lollipop-images/activity-transition-sml.png)](lollipop-images/activity-transition.png#lightbox)
 
 A shared element (a photo of a caterpillar) is one of several views in
 the first activity; it enlarges to become the only view in the second
@@ -352,7 +340,6 @@ Shared element transitions support multiple types of animations, such as:
 For more about activity transition animations in Android 5.0, see 
 [Customize Activity Transitions](http://developer.android.com/training/material/animations.html#Transitions).
 
-<a name="viewstate" />
 
 ### View State Transition Animations
 
@@ -371,7 +358,6 @@ following techniques:
 For more about view state transition animations in 
 Android 5.0, see [Animate View State Changes](http://developer.android.com/training/material/animations.html#ViewState).
 
-<a name="reveal" />
 
 ### Reveal Effect
 
@@ -381,12 +367,12 @@ and final radius of the clipping circle. The following sequence of
 screenshots illustrates a reveal effect animation from the center of the
 screen:
 
-[![Frame by frame screenshots of reveal animation](lollipop-images/reveal-center-sml.png)](lollipop-images/reveal-center.png)
+[![Frame by frame screenshots of reveal animation](lollipop-images/reveal-center-sml.png)](lollipop-images/reveal-center.png#lightbox)
 
 The next sequence illustrates a reveal effect animation that takes place
 from the bottom left corner of the screen:
 
-[![Frame by frame screenshots of clipping animation](lollipop-images/reveal-left-sml.png)](lollipop-images/reveal-left.png)
+[![Frame by frame screenshots of clipping animation](lollipop-images/reveal-left-sml.png)](lollipop-images/reveal-left.png#lightbox)
 
 Reveal animations can be reversed; that is, the clipping circle can
 shrink to hide the view rather than enlarge to reveal the view.
@@ -394,7 +380,6 @@ shrink to hide the view rather than enlarge to reveal the view.
 For more information on the Android 5.0 reveal effect in, 
 see [Use the Reveal Effect](http://developer.android.com/training/material/animations.html#Reveal).
 
-<a name="curvedmotion" />
 
 ### Curved Motion
 
@@ -419,7 +404,6 @@ according to specified control points and motion curves. For more information ab
 how to specify curved motion settings in Android 5.0, 
 see [Use Curved Motion](http://developer.android.com/training/material/animations.html#CurvedMotion).
 
-<a name="viewshadows" />
 
 ## View Shadows & Elevation
 
@@ -433,7 +417,7 @@ The following example illustrates the shadows cast by an empty
 `TextView` control when its elevation attribute is set to 2dp, 4dp, and
 6dp, respectively:
 
-[![Screenshots of progessively larger view shadows](lollipop-images/view-shadows-sml.png)](lollipop-images/view-shadows.png)
+[![Screenshots of progessively larger view shadows](lollipop-images/view-shadows-sml.png)](lollipop-images/view-shadows.png#lightbox)
 
 View shadow settings can be static (as shown above) or they can be used
 in animations to make a view appear to temporarily rise above the
@@ -445,7 +429,6 @@ can set through a `ViewPropertyAnimator` method call.
 For more about view shadows in Android 5.0, 
 see [Defining Shadows and Clipping Views](http://developer.android.com/training/material/shadows-clipping.html).
 
-<a name="colorfeatures" />
 
 ## Color Features
 
@@ -458,7 +441,6 @@ Android 5.0 provides two new features for managing color in apps:
     customize your app's color theme to coordinate with the color palette of
     a displayed image.
 
-<a name="tinting" />
 
 ### Drawable Tinting
 
@@ -485,7 +467,6 @@ set to a light gray:
 For more about drawable tinting in Android 5.0, 
 see [Drawable Tinting](http://developer.android.com/training/material/drawables.html#DrawableTint).
 
-<a name="colorextract" />
 
 ### Prominent Color Extraction
 
@@ -511,7 +492,7 @@ For example, in the following screenshots, a photo viewing app extracts
 the prominent colors from the image on display and uses these colors to
 adapt the color scheme of the app to match the image:
 
-[![Screenshots of green, pink, and blue theme color extractions](lollipop-images/prominent-color-extraction-sml.png)](lollipop-images/prominent-color-extraction.png)
+[![Screenshots of green, pink, and blue theme color extractions](lollipop-images/prominent-color-extraction-sml.png)](lollipop-images/prominent-color-extraction.png#lightbox)
 
 In the above screenshots, the action bar is set to the extracted
 "vibrant light" color and the background is set to the extracted
@@ -522,7 +503,6 @@ extracted from the image.
 For more about color extraction in Android 5.0, 
 see [Extracting Prominent Colors from an Image](http://developer.android.com/training/material/drawables.html#ColorExtract).
 
-<a name="newuiwidgets" />
 
 ## New UI Widgets
 
@@ -538,13 +518,12 @@ and `CardView` uses view shadows to make each card appear to float above
 the background. Examples of these new widgets are shown in the following
 screenshots:
 
-[![Screenshots of apps built with RecyclerView](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png)
+[![Screenshots of apps built with RecyclerView](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
 
 The screenshot on the left is an example of `RecyclerView` as used in an
 email app, and the screenshot on the right is an example of `CardView`
 as used in a travel reservation app.
 
-<a name="recyclerview" />
 
 ### RecyclerView
 
@@ -565,7 +544,7 @@ intermediary between the adapter and the `RecyclerView`:
 The following screenshots illustrate a `RecyclerView` that contains 100
 items (each item consists of an `ImageView` and a `TextView`):
 
-[![Screenshots of a RecyclerView app scrolling through images](lollipop-images/recyclerview-scroll-sml.png)](lollipop-images/recyclerview-scroll.png)
+[![Screenshots of a RecyclerView app scrolling through images](lollipop-images/recyclerview-scroll-sml.png)](lollipop-images/recyclerview-scroll.png#lightbox)
 
 `RecyclerView` handles this large data set with ease &ndash; scrolling
 from the beginning of the list to end of the list in this sample app
@@ -574,12 +553,11 @@ in fact, animations for adding and removing items are enabled by
 default. When an item is added to a `RecyclerView`, it fades in as shown
 in this sequence of screenshots:
 
-[![Frame by frame screenshot of a photo item fading in](lollipop-images/recyclerview-animation-sml.png)](lollipop-images/recyclerview-animation.png)
+[![Frame by frame screenshot of a photo item fading in](lollipop-images/recyclerview-animation-sml.png)](lollipop-images/recyclerview-animation.png#lightbox)
 
 For more about `RecyclerView`, 
 see [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md).
 
-<a name="cardview" />
 
 ### CardView
 
@@ -588,7 +566,7 @@ corners. Because `CardView` has built-in view shadows, it provides
 an easy way for you to add visual depth to your app. The following
 screenshots show three text-oriented examples of `CardView`:
 
-[![Example screenshots of apps using RecyclerView with CardView-based items](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png)
+[![Example screenshots of apps using RecyclerView with CardView-based items](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
 
 Each of the cards in the above example contains a `TextView`; the
 background color is set via the `cardBackgroundColor` attribute.
@@ -596,7 +574,6 @@ background color is set via the `cardBackgroundColor` attribute.
 For more about `CardView`, 
 see [CardView](~/android/user-interface/controls/card-view.md).
 
-<a name="enhanced" />
 
 ## Enhanced Notifications
 
@@ -615,7 +592,7 @@ In Android 5.0, notifications can also appear on the device lockscreen.
 For example, here is an example screenshot of a lockscreen with a single
 notification:
 
-[![Screenshot of notification appearing on the lock screen](lollipop-images/lockscreen-notification-sml.png)](lollipop-images/lockscreen-notification.png)
+[![Screenshot of notification appearing on the lock screen](lollipop-images/lockscreen-notification-sml.png)](lollipop-images/lockscreen-notification.png#lightbox)
 
 Users can double-tap a notification on the lockscreen to unlock
 the device and jump to the app that originated that notification,
@@ -633,7 +610,7 @@ of the user without disrupting the currently running activity.
 The following example illustrates a simple Heads-up notification that
 displays on top of an app:
 
-[![Example of a heads-up notification](lollipop-images/heads-up-notification-sml.png)](lollipop-images/heads-up-notification.png)
+[![Example of a heads-up notification](lollipop-images/heads-up-notification-sml.png)](lollipop-images/heads-up-notification.png#lightbox)
 
 Heads-up notifications are typically used for the following events:
 
@@ -658,7 +635,6 @@ For detailed information about creating and launching notifications
 with the latest Android 5.0 features, see
 [Local Notifications](~/android/app-fundamentals/notifications/local-notifications.md).
 
-<a name="newapis" />
 
 ## New APIs
 

@@ -15,9 +15,8 @@ The `Switch` widget (shown below) allows a user
 to toggle between two states, such as ON or OFF. The `Switch` default
 value is OFF. The widget is shown below in both its ON and OFF states:
 
-[ ![Screenshots of a Switch widget in OFF and ON states](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png)
+[![Screenshots of a Switch widget in OFF and ON states](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png#lightbox)
 
-<a name="Creating_a_Switch" />
 
 ## Creating a Switch
 
@@ -31,9 +30,8 @@ follows:
 
 This creates a basic switch as shown below:
 
-[ ![Screenshot of demo app displaying a Switch in the OFF state](switch-images/07-switch.png)](switch-images/07-switch.png)
+[![Screenshot of demo app displaying a Switch in the OFF state](switch-images/07-switch.png)](switch-images/07-switch.png#lightbox)
 
-<a name="Changing_Default_Values" />
 
 ## Changing Default Values
 
@@ -50,7 +48,6 @@ default to ON and read NO/YES instead of OFF/ON, we can set the
         android:textOff="NO" />
 ```
 
- <a name="Providing_a_Title" />
 
 
 ## Providing a Title
@@ -69,7 +66,7 @@ The `Switch` widget also supports including a text label by setting the
 
 This markup produces the following screenshot at runtime:
 
-[![Screenshot of demo app with text horizontally preceding the Switch widget](switch-images/08-switch.png)](switch-images/08-switch.png)
+[![Screenshot of demo app with text horizontally preceding the Switch widget](switch-images/08-switch.png)](switch-images/08-switch.png#lightbox)
 
 When a `Switch`'s value changes, it raises a `CheckedChange` event.
 For example, in the following code we capture this event and present a

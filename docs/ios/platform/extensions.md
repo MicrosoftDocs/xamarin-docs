@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
@@ -13,6 +14,10 @@ ms.date: 03/22/2017
 # iOS Extensions
 
 _Introduced in iOS 8, Extensions are widgets that are presented by iOS in standard  contexts, such as within the Notification Center, when the user requests a custom keyboard, or when they are photo editing. All Extensions are installed in conjunction with a Container app and are activated from a particular Extension Point in a Host app._
+
+> [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
+
+**Creating Extensions in iOS, by [Xamarin University](https://university.xamarin.com/)**
 
 Extensions, as introduced in iOS 8, are specialized `UIViewControllers` that are presented by iOS inside standard contexts such as within the **Notification Center**, as custom keyboard types requested by the user to perform specialized input or other contexts like editing a photo where the Extension can provide special effect filters.
 
@@ -179,7 +184,7 @@ Specific types of Extensions may have additional requirements. For instance, a *
 
 In following walkthrough, you will create an example **Today** widget that calculates the day and number of days remaining in the year:
 
-[ ![](extensions-images/carpediemscreenshot-sm.png "An example Today widget that calculates the day and number of days remaining in the year")](extensions-images/carpediemscreenshot.png)
+[![](extensions-images/carpediemscreenshot-sm.png "An example Today widget that calculates the day and number of days remaining in the year")](extensions-images/carpediemscreenshot.png#lightbox)
 
 <a name="Creating-the-Solution" />
 
@@ -189,26 +194,26 @@ To create the required solution, do the following:
 
 1. First, create a new iOS, **Single View App** project and click the **Next** button: 
 
-	[ ![](extensions-images/today01.png "First, create a new iOS, Single View App project and click the Next button")](extensions-images/today01.png)
+	[![](extensions-images/today01.png "First, create a new iOS, Single View App project and click the Next button")](extensions-images/today01.png#lightbox)
 2. Call the project `TodayContainer` and click the **Next** button: 
 
-	[ ![](extensions-images/today02.png "Call the project TodayContainer and click the Next button")](extensions-images/today02.png)
+	[![](extensions-images/today02.png "Call the project TodayContainer and click the Next button")](extensions-images/today02.png#lightbox)
 3. Verify the **Project Name** and **SolutionName** and click the **Create** button to create the solution: 
 
-	[ ![](extensions-images/today03.png "Verify the Project Name and SolutionName and click the Create button to create the solution")](extensions-images/today03.png)
+	[![](extensions-images/today03.png "Verify the Project Name and SolutionName and click the Create button to create the solution")](extensions-images/today03.png#lightbox)
 4. Next, in the **Solution Explorer**, right-click on the Solution and add a new **iOS Extension** project from the **Today Extension** template: 
 
-	[ ![](extensions-images/today04.png "Next, in the Solution Explorer, right-click on the Solution and add a new iOS Extension project from the Today Extension template")](extensions-images/today04.png)
+	[![](extensions-images/today04.png "Next, in the Solution Explorer, right-click on the Solution and add a new iOS Extension project from the Today Extension template")](extensions-images/today04.png#lightbox)
 5. Call the project `DaysRemaining` and click the **Next** button: 
 
-	[ ![](extensions-images/today05.png "Call the project DaysRemaining and click the Next button")](extensions-images/today05.png)
+	[![](extensions-images/today05.png "Call the project DaysRemaining and click the Next button")](extensions-images/today05.png#lightbox)
 6. Review the project and click the **Create** button to create it: 
 
-	[ ![](extensions-images/today06.png "Review the project and click the Create button to create it")](extensions-images/today06.png)
+	[![](extensions-images/today06.png "Review the project and click the Create button to create it")](extensions-images/today06.png#lightbox)
 
 The resulting Solution should now have two projects, as shown here:
 
-[ ![](extensions-images/today07.png "The resulting Solution should now have two projects, as shown here")](extensions-images/today07.png)
+[![](extensions-images/today07.png "The resulting Solution should now have two projects, as shown here")](extensions-images/today07.png#lightbox)
 
 <a name="Creating-the-Extension-User-Interface" />
 
@@ -224,10 +229,10 @@ To build the UI with a Storyboard, do the following:
 
 1. In the **Solution Explorer**, double-click the Extension project's `Main.storyboard` file to open it for editing: 
 
-	[ ![](extensions-images/today08.png "Double-click the Extension projects Main.storyboard file to open it for editing")](extensions-images/today08.png)
+	[![](extensions-images/today08.png "Double-click the Extension projects Main.storyboard file to open it for editing")](extensions-images/today08.png#lightbox)
 2. Select the Label that was automatically added to the UI by template and give it the **Name** `TodayMessage` in the **Widget** tab of the **Properties Explorer**: 
 
-	[ ![](extensions-images/today09.png "Select the Label that was automatically added to the UI by template and give it the Name TodayMessage in the Widget tab of the Properties Explorer")](extensions-images/today09.png)
+	[![](extensions-images/today09.png "Select the Label that was automatically added to the UI by template and give it the Name TodayMessage in the Widget tab of the Properties Explorer")](extensions-images/today09.png#lightbox)
 3. Save the changes to the Storyboard.
 
 <a name="Using-Code" />
@@ -238,16 +243,16 @@ To build the UI in code, do the following:
 
 1. In the **Solution Explorer**, select the **DaysRemaining** project, add a new class and call it `CodeBasedViewController`: 
 
-	[ ![](extensions-images/code01.png "Aelect the DaysRemaining project, add a new class and call it CodeBasedViewController")](extensions-images/code01.png)
+	[![](extensions-images/code01.png "Aelect the DaysRemaining project, add a new class and call it CodeBasedViewController")](extensions-images/code01.png#lightbox)
 2. Again, in the **Solution Explorer**, double-click Extension's `Info.plist` file to open it for editing: 
 
-	[ ![](extensions-images/code02.png "Double-click Extensions Info.plist file to open it for editing")](extensions-images/code02.png)
+	[![](extensions-images/code02.png "Double-click Extensions Info.plist file to open it for editing")](extensions-images/code02.png#lightbox)
 3. Select the **Source View** (from the bottom of the screen) and open the `NSExtension` node: 
 
-	[ ![](extensions-images/code03.png "Select the Source View from the bottom of the screen and open the NSExtension node")](extensions-images/code03.png)
+	[![](extensions-images/code03.png "Select the Source View from the bottom of the screen and open the NSExtension node")](extensions-images/code03.png#lightbox)
 4. Remove the `NSExtensionMainStoryboard` key and add a `NSPrincipalClass` with the value `CodeBasedViewController`: 
 
-	[ ![](extensions-images/code04.png "Remove the NSExtensionMainStoryboard key and add a NSPrincipalClass with the value CodeBasedViewController")](extensions-images/code04.png)
+	[![](extensions-images/code04.png "Remove the NSExtensionMainStoryboard key and add a NSPrincipalClass with the value CodeBasedViewController")](extensions-images/code04.png#lightbox)
 5. Save your changes.
 
 Next, edit the `CodeBasedViewController.cs` file and make it look like the following:
@@ -323,7 +328,7 @@ Note how similar this process is to the normal process of writing an app. An Ext
 
 For this walkthrough, the container app is simply used as a method to ship and install the Extension and provides no functionality of its own. Edit the TodayContainer's `Main.storyboard` file and add some text defining the Extension's function and how to install it:
 
-[ ![](extensions-images/today10.png "Edit the TodayContainers Main.storyboard file and add some text defining the Extensions function and how to install it")](extensions-images/today10.png)
+[![](extensions-images/today10.png "Edit the TodayContainers Main.storyboard file and add some text defining the Extensions function and how to install it")](extensions-images/today10.png#lightbox)
 
 Save the changes to the Storyboard.
 
@@ -333,19 +338,19 @@ Save the changes to the Storyboard.
 
 To test your Extension in the iOS Simulator, run the **TodayContainer** app. The container's main view will be displayed:
 
-[ ![](extensions-images/run01.png "The containers main view will be displayed")](extensions-images/run01.png)
+[![](extensions-images/run01.png "The containers main view will be displayed")](extensions-images/run01.png#lightbox)
 
 Next, hit the **Home** button in the Simulator, swipe down from the top of the screen to open the **Notification Center**, select the **Today** tab and click the **Edit** button:
 
-[ ![](extensions-images/run02.png "Hit the Home button in the Simulator, swipe down from the top of the screen to open the Notification Center, select the Today tab and click the Edit button")](extensions-images/run02.png)
+[![](extensions-images/run02.png "Hit the Home button in the Simulator, swipe down from the top of the screen to open the Notification Center, select the Today tab and click the Edit button")](extensions-images/run02.png#lightbox)
 
 Add the **DaysRemaining** Extension to the **Today** view and click the **Done** button:
 
-[ ![](extensions-images/run03.png "Add the DaysRemaining Extension to the Today view and click the Done button")](extensions-images/run03.png)
+[![](extensions-images/run03.png "Add the DaysRemaining Extension to the Today view and click the Done button")](extensions-images/run03.png#lightbox)
 
 The new widget will be added to the **Today** view and the results will be displayed:
 
-[ ![](extensions-images/run04.png "The new widget will be added to the Today view and the results will be displayed")](extensions-images/run04.png)
+[![](extensions-images/run04.png "The new widget will be added to the Today view and the results will be displayed")](extensions-images/run04.png#lightbox)
 
 <a name="Communicating-with-the-Host-App" />
 

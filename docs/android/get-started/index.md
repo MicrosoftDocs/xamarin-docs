@@ -5,6 +5,7 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: D3BC68C5-87C1-50AF-ED0A-55EBF07CBD8B
 ms.technology: xamarin-android
+ms.custom: xamu-video
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/25/2017
@@ -44,3 +45,9 @@ This article provides an introduction to C# programming for Java
 developers, focusing primarily on the C# language features that Java
 developers will encounter while learning about Xamarin.Android app
 development.
+
+## Xamarin University Video
+
+> [!VIDEO https://youtube.com/embed/rkNikCa5D48]
+
+**Building Your First Android App with Xamarin for Visual Studio, by [Xamarin University](https://university.xamarin.com)**

@@ -77,7 +77,7 @@ For a Remote Notification to be modified by a Service Extension, its payload mus
 
 Take a look at the following overview of the process:
 
-[ ![](advanced-user-notifications-images/extension02.png "Adding Media Attachments process")](advanced-user-notifications-images/extension02.png)
+[![](advanced-user-notifications-images/extension02.png "Adding Media Attachments process")](advanced-user-notifications-images/extension02.png#lightbox)
 
 Once the Remote Notification is delivered to the device (via APNs), the Service Extension can then download the required image via any means desired (such as an `NSURLSession`) and after it receives the image, it can modify the contents of the Notification and display it to the user.
 
@@ -153,7 +153,7 @@ To support user interaction with a User Notification, Custom Actions should be c
 
 When a User Notification with a Custom UI is presented to the user, it will have the following elements:
 
-[ ![](advanced-user-notifications-images/customui01.png "A User Notification with a Custom UI elements")](advanced-user-notifications-images/customui01.png)
+[![](advanced-user-notifications-images/customui01.png "A User Notification with a Custom UI elements")](advanced-user-notifications-images/customui01.png#lightbox)
 
 If the user interacts with the Custom Actions (presented below the Notification), the User Interface can be updated to give the user feedback as the what happened when they invoked a given action.
 
@@ -167,13 +167,13 @@ To implement a Custom User Notification UI in a Xamarin.iOS app, do the followin
 2. Right-click on the Solution Name in the **Solution Pad** and select **Add** > **Add New Project**.
 3. Select **iOS** > **Extensions** > **Notification Content Extensions** and click the **Next** button: 
 
-	[ ![](advanced-user-notifications-images/notify01.png "Select Notification Content Extensions")](advanced-user-notifications-images/notify01.png)
+	[![](advanced-user-notifications-images/notify01.png "Select Notification Content Extensions")](advanced-user-notifications-images/notify01.png#lightbox)
 4. Enter a **Name** for the extension and click the **Next** button: 
 
-	[ ![](advanced-user-notifications-images/notify02.png "Enter a Name for the extension")](advanced-user-notifications-images/notify02.png)
+	[![](advanced-user-notifications-images/notify02.png "Enter a Name for the extension")](advanced-user-notifications-images/notify02.png#lightbox)
 5. Adjust the **Project Name** and/or **Solution Name** if required and click the **Create** button: 
 
-	[ ![](advanced-user-notifications-images/notify03.png "Adjust the Project Name and/or Solution Name")](advanced-user-notifications-images/notify03.png)
+	[![](advanced-user-notifications-images/notify03.png "Adjust the Project Name and/or Solution Name")](advanced-user-notifications-images/notify03.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
@@ -181,7 +181,7 @@ To implement a Custom User Notification UI in a Xamarin.iOS app, do the followin
 2. Right-click on the Solution Name in the **Solution Explorer** and select **Add** > **Add New Project**.
 3. Select **iOS** > **Extensions** > **Notification Content Extensions**: 
 
-	[ ![](advanced-user-notifications-images/notify01w.png "Select Notification Content Extensions")](advanced-user-notifications-images/notify01w.png)
+	[![](advanced-user-notifications-images/notify01w.png "Select Notification Content Extensions")](advanced-user-notifications-images/notify01w.png#lightbox)
 4. Enter a **Name** for the extension and click the **OK** button.
 
 -----
@@ -250,7 +250,7 @@ The system needs to be informed on how to find the app's Notification Content Ex
 3. Expand the `NSExtension` key.
 4. Add the `UNNotificationExtensionCategory` key as type **String** with the value of the category the Extension belongs to (in this example `event-invite): 
 
-	[ ![](advanced-user-notifications-images/customui02.png "Add the UNNotificationExtensionCategory key")](advanced-user-notifications-images/customui02.png)
+	[![](advanced-user-notifications-images/customui02.png "Add the UNNotificationExtensionCategory key")](advanced-user-notifications-images/customui02.png#lightbox)
 5. Save your changes.
 
 # [Visual Studio](#tab/vswin)
@@ -259,7 +259,7 @@ The system needs to be informed on how to find the app's Notification Content Ex
 3. Expand the `NSExtension` key.
 4. Add the `UNNotificationExtensionCategory` key as type **String** with the value of the category the Extension belongs to (in this example `event-invite): 
 
-	[ ![](advanced-user-notifications-images/customui02w.png "Add the UNNotificationExtensionCategory key")](advanced-user-notifications-images/customui02w.png)
+	[![](advanced-user-notifications-images/customui02w.png "Add the UNNotificationExtensionCategory key")](advanced-user-notifications-images/customui02w.png#lightbox)
 5. Save your changes.
 
 -----
@@ -268,11 +268,11 @@ Notification Content Extension Categories (`UNNotificationExtensionCategory`) us
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![](advanced-user-notifications-images/customui03.png "Notification Content Extension Categories")](advanced-user-notifications-images/customui03.png)
+[![](advanced-user-notifications-images/customui03.png "Notification Content Extension Categories")](advanced-user-notifications-images/customui03.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[ ![](advanced-user-notifications-images/customui03w.png "Notification Content Extension Categories")](advanced-user-notifications-images/customui03w.png)
+[![](advanced-user-notifications-images/customui03w.png "Notification Content Extension Categories")](advanced-user-notifications-images/customui03w.png#lightbox)
 
 -----
 
@@ -282,11 +282,11 @@ In the situation where the Custom Notification UI will be displaying the same co
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![](advanced-user-notifications-images/customui04.png "Finding default information")](advanced-user-notifications-images/customui04.png)
+[![](advanced-user-notifications-images/customui04.png "Finding default information")](advanced-user-notifications-images/customui04.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[ ![](advanced-user-notifications-images/customui04w.png "Finding default information")](advanced-user-notifications-images/customui04w.png)
+[![](advanced-user-notifications-images/customui04w.png "Finding default information")](advanced-user-notifications-images/customui04w.png#lightbox)
 
 -----
 
@@ -363,11 +363,11 @@ To eliminate this effect, edit the `Info.plist` file for the Extension and set t
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![](advanced-user-notifications-images/customui05.png "The UNNotificationExtensionInitialContentSizeRatio key")](advanced-user-notifications-images/customui05.png)
+[![](advanced-user-notifications-images/customui05.png "The UNNotificationExtensionInitialContentSizeRatio key")](advanced-user-notifications-images/customui05.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[ ![](advanced-user-notifications-images/customui05w.png "The UNNotificationExtensionInitialContentSizeRatio key")](advanced-user-notifications-images/customui05w.png)
+[![](advanced-user-notifications-images/customui05w.png "The UNNotificationExtensionInitialContentSizeRatio key")](advanced-user-notifications-images/customui05w.png#lightbox)
 
 -----
 

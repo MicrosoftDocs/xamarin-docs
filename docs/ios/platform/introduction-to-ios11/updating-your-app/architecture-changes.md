@@ -30,7 +30,7 @@ To update your app in Visual Studio for Mac, use the following steps:
 
 5. Change the configuration to **Release|iPhone** and set the **Supported architectures** drop-down to **ARM64**.
 
-For more information on 32-bit and 64-bit architectures, see the [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64.md#ios) guide.
+For more information on 32-bit and 64-bit architectures, see the [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md#ios) guide.
 
 ## Related Links
 

@@ -306,9 +306,9 @@ iOS provides a number of features to assist in building RTL-aware apps:
 The following screenshots show the [localized **Tasky** sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in Arabic and Hebrew (although
 English has been entered in the fields):
 
-[ ![](images/rtl-ar-sml.png "Localization in Arabic")](images/rtl-ar.png "Arabic") 
+[![](images/rtl-ar-sml.png "Localization in Arabic")](images/rtl-ar.png#lightbox "Arabic") 
 
-[ ![](images/rtl-he-sml.png "Localization in Hebrew")](images/rtl-he.png "Hebrew")
+[![](images/rtl-he-sml.png "Localization in Hebrew")](images/rtl-he.png#lightbox "Hebrew")
 
 iOS automatically reverses the `UINavigationController`, and the other controls
 are placed inside `UIStackView` or aligned with Auto-Layout.

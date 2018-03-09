@@ -19,7 +19,7 @@ that make it easier to implement game graphics and audio in a Xamarin.iOS app.
 These include both ease of development through high-level frameworks and harnessing
 the power of the iOS device's GPU for improved speed and graphic abilities.
 
-[ ![](images/flocking01.png "An example of an app running flocking")](images/flocking01.png)
+[![](images/flocking01.png "An example of an app running flocking")](images/flocking01.png#lightbox)
 
 This includes GameplayKit, ReplayKit, Model I/O, MetalKit and Metal Performance
 Shaders along with new, enhanced features of Metal, SceneKit and SpriteKit.
@@ -55,7 +55,7 @@ For example, an 2D enemy finding its way through a maze or a 3D character throug
 
 Consider the following map:
 
-[ ![](images/gkpathfindpath.png "An example pathfinding map")](images/gkpathfindpath.png)
+[![](images/gkpathfindpath.png "An example pathfinding map")](images/gkpathfindpath.png#lightbox)
 
 Using pathfinding this C# code can find a way through the map:
 
@@ -366,7 +366,7 @@ public override void ViewWillLayoutSubviews ()
 
 When run, the little animated _"Boids"_ will flock around our finger taps:
 
-[ ![](images/flocking01.png "The little animated Boids will flock around the finger taps")](images/flocking01.png)
+[![](images/flocking01.png "The little animated Boids will flock around the finger taps")](images/flocking01.png#lightbox)
 
 ### Other Apple Examples
 

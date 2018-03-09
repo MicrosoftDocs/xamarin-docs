@@ -18,7 +18,7 @@ One specific user case for pickers it to set the date and / or time. To provide 
 
 The article covers implementing and using the [Picker](#picker) and [Date Picker](#datepicker) controls.
 
-<a name="picker">
+<a name="picker"/>
 
 ## Picker
 
@@ -139,7 +139,7 @@ The return value signifies the number of dials your picker will have.
 The appearance of the `UIPickerView` can be customized by using the `UIPickerView.UIPickerViewAppearance` class or by overriding the `UIPickerViewModel.GetView` and `UIPickerViewModel.GetRowHeight` methods in the `UIPickerViewModel`.
 
 
-<a name="datepicker">
+<a name="datepicker"/>
 
 ## Date Picker
 

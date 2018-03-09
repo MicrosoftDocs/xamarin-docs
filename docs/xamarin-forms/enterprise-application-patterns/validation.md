@@ -15,7 +15,7 @@ Any app that accepts input from users should ensure that the input is valid. An 
 
 In the context of the Model-ViewModel-Model (MVVM) pattern, a view model or model will often be required to perform data validation and signal any validation errors to the view so that the user can correct them. The eShopOnContainers mobile app performs synchronous client-side validation of view model properties and notifies the user of any validation errors by highlighting the control that contains the invalid data, and by displaying error messages that inform the user of why the data is invalid. Figure 6-1 shows the classes involved in performing validation in the eShopOnContainers mobile app.
 
-[![](validation-images/validation.png "Validation classes in the eShopOnContainers mobile app")](validation-images/validation-large.png "Validation classes in the eShopOnContainers mobile app")
+[![](validation-images/validation.png "Validation classes in the eShopOnContainers mobile app")](validation-images/validation-large.png#lightbox "Validation classes in the eShopOnContainers mobile app")
 
 **Figure 6-1**: Validation classes in the eShopOnContainers mobile app
 

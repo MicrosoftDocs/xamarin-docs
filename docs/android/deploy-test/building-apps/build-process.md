@@ -6,12 +6,11 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
+ms.date: 03/01/2018
 ---
 
 # Build Process
 
-<a name="Overview" />
 
 ## Overview
 
@@ -23,8 +22,6 @@ supporting the `AndroidAsset`, `AndroidResource`, and other
 [Android-callable wrappers](~/android/platform/java-integration/android-callable-wrappers.md),
 and generating a `.apk` for execution on Android devices.
 
-<a name="App_Packaging" />
-<a name="Application_Packages" />
 
 ## Application Packages
 
@@ -40,7 +37,6 @@ In broad terms, there are two types of Android application packages
 Not coincidentally, these match the MSBuild `Configuration` which
 produces the package.
 
-<a name="Shared_Runtime" />
 
 ### Shared Runtime
 
@@ -74,7 +70,6 @@ Fast deployment is enabled by default, and may be disabled in Debug builds
 by setting the `$(EmbedAssembliesIntoApk)` property to `True`.
 
 
-<a name="MSBuild_Projects" />
 
 ## MSBuild Projects
 
@@ -114,7 +109,6 @@ The following build targets are defined for Xamarin.Android projects:
     `Resource.designer.cs` file. This target is usually called by the
     IDE when new resources are added to the project.
 
-<a name="Build_Properties" />
 
 ## Build Properties
 
@@ -180,7 +174,6 @@ Install properties control the behavior of the `Install` and
     MSBuild /t:Install ProjectName.csproj /p:AdbTarget=-e
     ```
 
-<a name="App_Packaging" />
 
 ### Packaging Properties
 
@@ -631,8 +624,6 @@ The following MSBuild properties are used with
     The default value will change in a future release.
 
 
-<a name="Resgen" />
-<a name="Resource_Properties" />
 
 ### Resource Properties
 
@@ -665,7 +656,6 @@ resources.
     **Experimental**. Added in Xamarin.Android 7.0.
 
 
-<a name="Signing" />
 <a name="Signing_Properties" />
 
 ### Signing Properties
@@ -754,15 +744,12 @@ multiple files, and they will be evaluated in no particular order (so don't
 specify the same environment variable or system property in multiple
 files).
 
-<a name="Java_Interop_Support" />
-<a name="AndroidJavaSource" />
 
 ### AndroidJavaSource
 
 Files with a Build action of `AndroidJavaSource` are Java source code which
 will be included in the final Android package.
 
-<a name="AndroidJavaLibrary" />
 
 ### AndroidJavaLibrary
 
@@ -770,8 +757,6 @@ Files with a Build action of `AndroidJavaLibrary` are Java
 Archives ( `.jar` files) which will be included in the final Android
 package.
 
-<a name="Resources" />
-<a name="AndroidResource" />
 
 ### AndroidResource
 
@@ -818,8 +803,6 @@ distinct resource names.
 </ItemGroup>
 ```
 
-<a name="Native_Library_Support" />
-<a name="AndroidNativeLibrary" />
 
 ### AndroidNativeLibrary
 
@@ -880,7 +863,6 @@ These files are ignored unless the `$(EnableProguard)` MSBuild property
 is `True`.
 
 
-<a name="Target_Definitions" />
 
 ## Target Definitions
 

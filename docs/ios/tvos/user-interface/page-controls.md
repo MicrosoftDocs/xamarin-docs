@@ -16,7 +16,7 @@ _This article covers designing and working with Page Control inside of a Xamarin
 
 Sometimes you might need to display a series of pages or images in your Xamarin.tvOS app. A Page Control was designed to clearly show which page a user is on out of the maximum number of pages. A Page Control displays a series of dots against a dark, oval shaped background. The current page will display a filled dot, all other pages show as hollow dots. The Page control will clip the outer most dots if there are too many to fit in its background area.
 
-[ ![](page-controls-images/page01.png "Sample Page control")](page-controls-images/page01.png)
+[![](page-controls-images/page01.png "Sample Page control")](page-controls-images/page01.png#lightbox)
 
 A Page Control in a non-interactive element designed to give feedback to the user only. You will need to add other controls to change the current page number (such as gestures or Buttons).
 
@@ -37,14 +37,14 @@ The easiest way to work with Page Controls in a Xamarin.tvOS app is to add them 
 1. In the **Solution Pad**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Page Control** from the **Toolbox** and drop it on the View: 
 
-	[ ![](page-controls-images/page02.png "A Page Control")](page-controls-images/page02.png)
+	[![](page-controls-images/page02.png "A Page Control")](page-controls-images/page02.png#lightbox)
 1. In the **Widget Tab** of the **Properties Pad**, you can adjust several properties of the Page Control such as its **Current Page** and **# of Pages**: 
 
-	[ ![](page-controls-images/page03.png "The Widget Tab")](page-controls-images/page03.png)
+	[![](page-controls-images/page03.png "The Widget Tab")](page-controls-images/page03.png#lightbox)
 1. Next, add controls or gestures to the view to move backward and forward through the collection of pages.
 1. Finally, assign **Names** to the controls so that you can respond to them in C# code. For example: 
 
-	[ ![](page-controls-images/page04.png "Name the control")](page-controls-images/page04.png)
+	[![](page-controls-images/page04.png "Name the control")](page-controls-images/page04.png#lightbox)
 1. Save your changes.
 	
 
@@ -54,14 +54,14 @@ The easiest way to work with Page Controls in a Xamarin.tvOS app is to add them 
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Page Control** from the **Toolbox** and drop it on the View: 
 
-	[ ![](page-controls-images/page02-vs.png "A Page Control")](page-controls-images/page02-vs.png)
+	[![](page-controls-images/page02-vs.png "A Page Control")](page-controls-images/page02-vs.png#lightbox)
 1. In the **Widget Tab** of the **Properties Explorer**, you can adjust several properties of the Page Control such as its **Current Page** and **# of Pages**: 
 
-	[ ![](page-controls-images/page03-vs.png "The Widget tab")](page-controls-images/page03-vs.png)
+	[![](page-controls-images/page03-vs.png "The Widget tab")](page-controls-images/page03-vs.png#lightbox)
 1. Next, add controls or gestures to the view to move backward and forward through the collection of pages.
 1. Finally, assign **Names** to the controls so that you can respond to them in C# code. For example: 
 
-	[ ![](page-controls-images/page04-vs.png "Name the control")](page-controls-images/page04-vs.png)
+	[![](page-controls-images/page04-vs.png "Name the control")](page-controls-images/page04-vs.png#lightbox)
 1. Save your changes.
 	
 

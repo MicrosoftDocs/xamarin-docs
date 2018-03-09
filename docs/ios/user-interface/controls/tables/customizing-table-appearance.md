@@ -27,7 +27,7 @@ There are four built-in styles:
 
 These screenshots show how each style appears:
 
- [ ![](customizing-table-appearance-images/image7.png "These screenshots show how each style appears")](customizing-table-appearance-images/image7.png)
+ [![](customizing-table-appearance-images/image7.png "These screenshots show how each style appears")](customizing-table-appearance-images/image7.png#lightbox)
 
 The sample **CellDefaultTable** contains the code to produce these screens. The
 cell style is set in the `UITableViewCell` constructor, like
@@ -60,7 +60,7 @@ Cells can have the following accessories added to the right of the view:
 
 This is what they look like:
 
- [ ![](customizing-table-appearance-images/image8.png "Sample Accessories")](customizing-table-appearance-images/image8.png)
+ [![](customizing-table-appearance-images/image8.png "Sample Accessories")](customizing-table-appearance-images/image8.png#lightbox)
 
 To display one of these accessories you can set the `Accessory`
 property in the `GetCell` method:
@@ -124,7 +124,7 @@ to display. The custom cell can have different colors and control layouts.
 The CellCustomTable example implements a `UITableViewCell`
 subclass that defines a custom layout of `UILabel`s and a `UIImage` with different fonts and colors. The resulting cells look like this:
 
- [ ![](customizing-table-appearance-images/image9.png "Custom Cell Layouts")](customizing-table-appearance-images/image9.png)
+ [![](customizing-table-appearance-images/image9.png "Custom Cell Layouts")](customizing-table-appearance-images/image9.png#lightbox)
 
 The custom cell class consists of only three methods:
 

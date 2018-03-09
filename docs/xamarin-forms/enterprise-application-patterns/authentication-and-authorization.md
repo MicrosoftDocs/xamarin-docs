@@ -44,7 +44,7 @@ The eShopOnContainers mobile app communicates with the identity microservice, wh
 -   Accessing a resource with IdentityServer is achieved by the mobile app requesting an *access* token, which allows access to an API resource. Clients request access tokens and forward them to the API. Access tokens contain information about the client, and the user (if present). APIs then use that information to authorize access to their data.
 
 > [!NOTE]
-> **Note**: A client must be registered with IdentityServer before it can request tokens.
+> A client must be registered with IdentityServer before it can request tokens.
 
 ### Adding IdentityServer to a Web Application
 

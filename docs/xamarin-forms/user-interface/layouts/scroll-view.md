@@ -14,7 +14,7 @@ ms.date: 04/22/2016
 
 [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) contains layouts and enables them to scroll offscreen. `ScrollView` is also used to allow views to automatically move to the visible portion of the screen when the keyboard is showing.
 
-[ ![](scroll-view-images/layouts-sml.png "Xamarin.Forms Layouts")](scroll-view-images/layouts.png "Xamarin.Forms Layouts")
+[![](scroll-view-images/layouts-sml.png "Xamarin.Forms Layouts")](scroll-view-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 This article covers:
 
@@ -31,7 +31,7 @@ This article covers:
 ## Usage
 
 > [!NOTE]
-> **Note**: `ScrollView`s should not be nested. In addition, `ScrollView`s should not be nested with other controls that provide scrolling, like `ListView` and `WebView`.
+> `ScrollView`s should not be nested. In addition, `ScrollView`s should not be nested with other controls that provide scrolling, like `ListView` and `WebView`.
 
 `ScrollView` exposes a `Content` property which can be set to a single view or layout. Consider this example of a layout with a very large boxView, followed by an `Entry`:
 

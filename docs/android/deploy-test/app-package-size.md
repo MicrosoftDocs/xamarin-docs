@@ -32,7 +32,7 @@ required Base Class Library (BCL) assemblies. For example, if we take the
 default “Hello World” template, the contents of a complete package build
 would look like this:
 
-[ ![Package size before linker](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png)
+[![Package size before linker](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png#lightbox)
 
 15.8 MB is a larger download size than we’d like. The problem is the BCL
 libraries, as they include mscorlib, System, and Mono.Android, which provide a
@@ -49,7 +49,7 @@ System.dll for sending and receiving email, but if your application does not
 make use of this functionality, that code is just wasting space. After running
 the linker on the Hello World application, our package now looks like this:
 
-[ ![Package size after linker](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png)
+[![Package size after linker](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png#lightbox)
 
 As we can see, this removes a significant amount of the BCL that was not
 being used. Note that the final BCL size is dependent on what the application
@@ -81,7 +81,7 @@ The first time we debug on device, we copy two large packages called
 Mono Runtime and BCL, while Shared Platform contains Android API level
 specific assemblies:
 
-[ ![Shared runtime package size](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png)
+[![Shared runtime package size](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png#lightbox)
 
 Copying these core components is only done once as it takes quite a bit of
 time, but allows any subsequent applications running in debug mode to utilize

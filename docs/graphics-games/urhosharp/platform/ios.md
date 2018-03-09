@@ -1,6 +1,6 @@
 ---
 title: "UrhoSharp iOS and tvOS Support"
-description: "iOS and tvOS Specific Setup and Features"
+description: "iOS and tvOS Specific Setup and Features for UrhoSharp."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7B06567E-E789-4EA1-A2A9-F3B2212EDD23
@@ -21,17 +21,17 @@ cases, you will want to take advantage of platform specific features.
 In the pages below, assume that `MyGame` is a sublcass of the
 `Application` class.
 
-# iOS and tvOS
+## iOS and tvOS
 
 **Supported architectures:** armv7, arm64, i386
 
-# Creating a Project
+## Creating a Project
 
 Create an iOS project, and then add Data to the Resources directory and make sure all files have **BundleResource** as the **Build Action**.
 
 ![Project Setup](ios-images/image-4.png "Add Data to the Resources directory")
 
-# Configuring and Launching Urho
+## Configuring and Launching Urho
 
 Add using statements for the `Urho` and `Urho.iOS` namespaces, and then
 add this code for initializing Urho, as well as launching your
@@ -62,7 +62,7 @@ It is important that you disable PNG optimizations because the default
 iOS PNG optimizer will generate images that Urho can not currently
 properly consume
 
-# Custom Embedding of Urho
+## Custom Embedding of Urho
 
 You can alternatively to having Urho take over the entire application
 screen, and to use it as a component of your application, you can

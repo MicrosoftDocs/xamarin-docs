@@ -58,10 +58,10 @@ The following code demonstrates *explicit* style inheritance in a XAML page:
 
 The `baseStyle` targets [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) instances, and sets the [`HorizontalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) and [`VerticalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) properties. The `baseStyle` is not set directly on any controls. Instead, `labelStyle` and `buttonStyle` inherit from it, setting additional bindable property values. The `labelStyle` and `buttonStyle` are then applied to the [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instances and [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) instance, by setting their [`Style`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) properties. This results in the appearance shown in the following screenshots:
 
-[![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png)
+[![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
 
 > [!NOTE]
-> **Note**: An implicit style can be derived from an explicit style, but an explicit style can't be derived from an implicit style.
+> An implicit style can be derived from an explicit style, but an explicit style can't be derived from an implicit style.
 
 ### Respecting the Inheritance Chain
 

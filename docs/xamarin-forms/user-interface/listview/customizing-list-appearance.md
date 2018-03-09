@@ -269,8 +269,8 @@ XAML:
 
 ![](customizing-list-appearance-images/separator-custom.png "ListView with Green Row Separators")
 
-**NOTE**: setting either of these properties on Android after
-  loading the `ListView` incurs a large performance penalty.
+> [!NOTE]
+> Setting either of these properties on Android after loading the `ListView` incurs a large performance penalty.
 
 <a name="Row_Heights" />
 

@@ -56,7 +56,7 @@ The resulting nested view hierarchy can be examined with [Xamarin Inspector](~/t
 Layout compression, which is available for Xamarin.Forms applications on the iOS and Android platforms, aims to flatten the view nesting by removing specified layouts from the visual tree, which can improve page-rendering performance. The performance benefit that's delivered varies depending on the complexity of a page, the version of the operating system being used, and the device on which the application is running. However, the biggest performance gains will be seen on older devices.
 
 > [!NOTE]
-> **Note**: While this article focuses on the results of applying layout compression on Android, it's equally applicable to iOS.
+> While this article focuses on the results of applying layout compression on Android, it's equally applicable to iOS.
 
 ## Layout Compression
 

@@ -35,7 +35,7 @@ Watches are no different - you now need to add your Apple Watch
   **Xcode** (**Windows > Devices** list). When the paired phone
   is connected the watch's information will also be displayed:
 
-[ ![](device-images/xcode-devices-sml.png "Paired Watch Information")](device-images/xcode-devices.png)
+[![](device-images/xcode-devices-sml.png "Paired Watch Information")](device-images/xcode-devices.png#lightbox)
 
 When you know the Watch's UDID, add it to the device list
   in the Dev Center:
@@ -126,13 +126,13 @@ This may occur when building in DEBUG mode to deploy to an Apple Watch device.
 To *temporarily* work around this issue, disable **Incremental Builds** in the Watch Extension
 **Project Options > Build > watchOS Build** window:
 
-[ ![](device-images/disable-incremental-sml.png "The Incremental Builds checkbox")](device-images/disable-incremental.png)
+[![](device-images/disable-incremental-sml.png "The Incremental Builds checkbox")](device-images/disable-incremental.png#lightbox)
 
 This will be fixed in a future release, after which incremental builds can be
 re-enabled to take advantage of faster build times.
 
 
-#3# Watch App fails to start while debugging on device
+### Watch App fails to start while debugging on device
 
 When attempting to debug a watch app on a physical device, only the icon & loading
 spinner appear (and eventually time-out). This will be addressed in a future release;

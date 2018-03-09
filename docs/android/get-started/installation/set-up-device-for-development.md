@@ -32,7 +32,6 @@ computer for debugging:
 Each of these steps will be covered in more detail in the sections
 below.
 
-<a name="EnableDebugging" />
 
 ## Enable Debugging on the Device
 
@@ -41,7 +40,6 @@ application. However the device must be properly configured before
 debugging can occur. The steps involved are slightly different,
 depending on the version of Android running on the device.
 
-<a name="EnableDebuggingAndroid4" />
 
 ### Android 4.0 to Android 4.1
 
@@ -55,9 +53,8 @@ these steps:
 This screenshot shows the **Developer options** screen on a device
 running Android 4.0.3:
 
-[![Developer options](set-up-device-for-development-images/developer-options-sml.png)](set-up-device-for-development-images/developer-options.png)
+[![Developer options](set-up-device-for-development-images/developer-options-sml.png)](set-up-device-for-development-images/developer-options.png#lightbox)
 
-<a name="EnableDebuggingAndroid42" />
 
 ### Android 4.2 and higher
 
@@ -66,17 +63,16 @@ by default. To make it available, go to **Settings > About phone**, and
 tap the **Build number** item seven times to reveal the **Developer
 Options** tab:
 
-[![Build number item](set-up-device-for-development-images/about-phone-sml.png)](set-up-device-for-development-images/about-phone.png)
+[![Build number item](set-up-device-for-development-images/about-phone-sml.png)](set-up-device-for-development-images/about-phone.png#lightbox)
 
 Once the **Developer Options** tab is available under **Settings >
 System**, open it to reveal developer settings:
 
-[![Developer settings screen](set-up-device-for-development-images/developer3.png)](set-up-device-for-development-images/developer3.png)
+[![Developer settings screen](set-up-device-for-development-images/developer3.png)](set-up-device-for-development-images/developer3.png#lightbox)
 
 This is the place to enable developer options such as USB debugging and
 stay awake mode.
 
-<a name="USB_Debugging" />
 
 ## Install USB Drivers
 
@@ -98,7 +94,6 @@ Android SDK in following location on a Windows computer:
 
     C:\Users\[username]\AppData\Local\Android\android-sdk
 
-<a name="Download_the_USB_Drivers" />
 
 ### Download the USB Drivers
 
@@ -112,7 +107,7 @@ Install the **Google USB Driver** package by starting the Android SDK
 Manager, and expanding the **Extras** folder, as can be seen in the
 follow screenshot:
 
-[![Google USB Driver Package selected](set-up-device-for-development-images/usbdriverpackage.png)](set-up-device-for-development-images/usbdriverpackage.png)
+[![Google USB Driver Package selected](set-up-device-for-development-images/usbdriverpackage.png)](set-up-device-for-development-images/usbdriverpackage.png#lightbox)
 
 Check the **Google USB Driver** box, and click the **Install** button.
 The driver files are downloaded to the following location:
@@ -124,7 +119,6 @@ The default path for a Xamarin.Android installation is:
     C:\Users\[username]\AppData\Local\Android\android-sdk\extras\google\usb_driver
 
 
-<a name="Installing_the_USB_Driver" />
 
 ### Installing the USB Driver
 
@@ -151,7 +145,6 @@ To install the drivers on Windows 7:
 
 8.  Click  **Next** to install the driver.
 
-<a name="Windows_8" />
 
 ### Installing Unverified Drivers in Windows 8
 
@@ -175,7 +168,6 @@ Nexus:
     described above.
 
 
-<a name="ConnectDevice" />
 
 ## Connect the Device to the Computer
 
@@ -191,7 +183,6 @@ ways to do so:
     cable or the device is to far away for a USB cable. Connecting via
     WiFi will be covered in the next section.
 
-<a name="Debug_over_WiFi" />
 
 ### Connecting over WiFi
 
@@ -242,7 +233,6 @@ the following command at the command prompt to see what is connected:
 
     adb devices
 
-<a name="Summary" />
 
 ## Summary
 

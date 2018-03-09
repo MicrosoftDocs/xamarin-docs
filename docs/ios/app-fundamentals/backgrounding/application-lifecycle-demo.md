@@ -13,9 +13,9 @@ ms.date: 03/18/2017
 
 In this section, we are going to examine an application that demonstrates the four Application States, and the role of the `AppDelegate` methods in notifying the application of when states get changed. The application will print updates to the console whenever the app changes state:
 
- [ ![](application-lifecycle-demo-images/image3.png "The sample app")](application-lifecycle-demo-images/image3.png)
+ [![](application-lifecycle-demo-images/image3.png "The sample app")](application-lifecycle-demo-images/image3.png#lightbox)
 
- [ ![](application-lifecycle-demo-images/image4.png "The app will print updates to the console whenever the app changes state")](application-lifecycle-demo-images/image4.png)
+ [![](application-lifecycle-demo-images/image4.png "The app will print updates to the console whenever the app changes state")](application-lifecycle-demo-images/image4.png#lightbox)
 
 ## Walkthrough
 

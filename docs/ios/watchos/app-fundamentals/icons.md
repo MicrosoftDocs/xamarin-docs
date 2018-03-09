@@ -107,7 +107,7 @@ Once your [Parent app](~/ios/watchos/app-fundamentals/parent-app.md) has
 
 3. Add all the watchOS images, as shown in this screenshot:
 
-  [ ![](icons-images/appicons-sml.png "Add all the watchOS images, as shown in this screenshot")](icons-images/appicons.png)
+  [![](icons-images/appicons-sml.png "Add all the watchOS images, as shown in this screenshot")](icons-images/appicons.png#lightbox)
 
   Refer to [Apple's icon guidelines](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/IconandImageSizes.html) for the required sizes
   (the dimensions are also shown on the screen). Remember

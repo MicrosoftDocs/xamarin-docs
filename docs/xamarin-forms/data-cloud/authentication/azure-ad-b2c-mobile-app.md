@@ -17,7 +17,7 @@ _Azure Active Directory B2C is a cloud identity management solution for consumer
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
 > [!NOTE]
-> **Note**: The [Microsoft Authentication Library](https://www.nuget.org/packages/Microsoft.Identity.Client) is still in preview, but is suitable for use in a production environment. However, there may be breaking changes to the API, internal cache format, and other mechanisms of the library, which may impact your application.
+> The [Microsoft Authentication Library](https://www.nuget.org/packages/Microsoft.Identity.Client) is still in preview, but is suitable for use in a production environment. However, there may be breaking changes to the API, internal cache format, and other mechanisms of the library, which may impact your application.
 
 ## Overview
 
@@ -68,7 +68,7 @@ For a client-managed authentication workflow, the Azure Active Directory B2C ten
 
 The following screenshot demonstrates this configuration:
 
-[![](azure-ad-b2c-mobile-app-images/client-flow-config-sml.png "Azure Active Directory B2C Configuration")](azure-ad-b2c-mobile-app-images/client-flow-config.png "Azure Active Directory B2C Configuration")
+[![](azure-ad-b2c-mobile-app-images/client-flow-config-sml.png "Azure Active Directory B2C Configuration")](azure-ad-b2c-mobile-app-images/client-flow-config.png#lightbox "Azure Active Directory B2C Configuration")
 
 The policy used in the Azure Active Directory B2C tenant should also be configured so that the reply URL is set to the same custom URL scheme, followed by `://auth/`. The following screenshot demonstrates this configuration:
 
@@ -154,7 +154,7 @@ For a server-managed authentication workflow, the Azure Active Directory B2C ten
 
 The following screenshot demonstrates this configuration:
 
-[![](azure-ad-b2c-mobile-app-images/server-flow-config-sml.png "Azure Active Directory B2C Configuration")](azure-ad-b2c-mobile-app-images/server-flow-config.png "Azure Active Directory B2C Configuration")
+[![](azure-ad-b2c-mobile-app-images/server-flow-config-sml.png "Azure Active Directory B2C Configuration")](azure-ad-b2c-mobile-app-images/server-flow-config.png#lightbox "Azure Active Directory B2C Configuration")
 
 The policy used in the Azure Active Directory B2C tenant should also be configured so that the Reply URL is set to the address of the Azure Mobile App, followed by `/.auth/login/aad/callback`. The following screenshot demonstrates this configuration:
 

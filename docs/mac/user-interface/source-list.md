@@ -18,7 +18,7 @@ When working with C# and .NET in a Xamarin.Mac application, you have access to t
 
 A Source List is a special type of Outline View used to show the source of an action, like the side bar in Finder or iTunes.
 
-[ ![](source-list-images/source05.png "An example source list")](source-list-images/source05.png)
+[![](source-list-images/source05.png "An example source list")](source-list-images/source05.png#lightbox)
 
 In this article, we'll cover the basics of working with Source Lists in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
@@ -46,7 +46,7 @@ A Source List is a special type of Outline View used to show the source of an ac
 
 First, let's create a new `SourceListItem` class to hold the data for our Source List. In the **Solution Explorer**, right-click the Project and select **Add** > **New File...** Select **General** > **Empty Class**, enter `SourceListItem` for the **Name** and click the **New** button:
 
-[ ![](source-list-images/source01.png "Adding an empty class")](source-list-images/source01.png)
+[![](source-list-images/source01.png "Adding an empty class")](source-list-images/source01.png#lightbox)
 
 Make the `SourceListItem.cs` file look like the following: 
 
@@ -528,19 +528,19 @@ This creates a custom, reusable subclass of `NSOutlineView` (`SourceListView`) t
 
 Now, let's design our Source List in Interface Builder. Double-click the `Main.storyboard` file to open it for editing in Interface Builder and drag a Split View from the **Library Inspector**, add it to the View Controller and set it to resize with the View in the **Constraints Editor**:
 
-[ ![](source-list-images/source00.png "Editing constraints")](source-list-images/source00.png)
+[![](source-list-images/source00.png "Editing constraints")](source-list-images/source00.png#lightbox)
 
 Next, drag a Source List from the **Library Inspector**, add it to the left side of the Split View and set it to resize with the View in the **Constraints Editor**:
 
-[ ![](source-list-images/source02.png "Editing constraints")](source-list-images/source02.png)
+[![](source-list-images/source02.png "Editing constraints")](source-list-images/source02.png#lightbox)
 
 Next, switch to the **Identity View**, select the Source List, and change it's **Class** to `SourceListView`:
 
-[ ![](source-list-images/source03.png "Setting the class name")](source-list-images/source03.png)
+[![](source-list-images/source03.png "Setting the class name")](source-list-images/source03.png#lightbox)
 
 Finally, create an **Outlet** for our Source List called `SourceList` in the `ViewController.h` file:
 
-[ ![](source-list-images/source04.png "Configuring an Outlet")](source-list-images/source04.png)
+[![](source-list-images/source04.png "Configuring an Outlet")](source-list-images/source04.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
@@ -610,7 +610,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 If we run our application, the following will be displayed:
 
-[ ![](source-list-images/source05.png "An example app run")](source-list-images/source05.png)
+[![](source-list-images/source05.png "An example app run")](source-list-images/source05.png#lightbox)
 
 <a name="Summary" />
 

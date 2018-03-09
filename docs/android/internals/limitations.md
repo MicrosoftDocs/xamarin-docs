@@ -15,13 +15,11 @@ Since applications on Android require generating Java proxy types during the bui
 
 These are the Xamarin.Android limitations compared to desktop Mono:
 
-<a name="Limited_Dynamic_Language_Support" />
 
 ## Limited Dynamic Language Support
 
  [Android callable wrappers](~/android/platform/java-integration/android-callable-wrappers.md) are needed any time the Android runtime needs to invoke managed code. Android callable wrappers are generated at compile time, based on static analysis of IL. The net result of this: you *cannot* use dynamic languages (IronPython, IronRuby, etc.) in any scenario where subclassing of Java types is required (including indirect subclassing), as there's no way of extracting these dynamic types at compile time to generate the necessary Android callable wrappers.
 
-<a name="Limited_Java_Generation_Support" />
 
 ## Limited Java Generation Support
 
@@ -85,7 +83,6 @@ class MyIntentService : IntentService {
 }
 ```
 
-<a name="Generic_Csharp_classes" />
 
 ### Generic C# classes
 
@@ -148,7 +145,6 @@ Generic C# classes are only partially supported. The following limitations exist
     }
     ```
 
-<a name="Partial_Java_Generics_Support" />
 
 ## Partial Java Generics Support
 

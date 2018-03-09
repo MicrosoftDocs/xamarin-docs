@@ -14,7 +14,7 @@ ms.date: 11/25/2015
 
 `RelativeLayout` is used to position and size views relative to properties of the layout or sibling views. Unlike `AbsoluteLayout`, `RelativeLayout` does not have the concept of the moving anchor and does not have facilities for positioning elements relative to the bottom or right edges of the layout. `RelativeLayout` does support positioning elements outside of its own bounds.
 
-[ ![](relative-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](relative-layout-images/layouts.png "Xamarin.Forms Layouts")
+[![](relative-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 ## Purpose
 
@@ -72,7 +72,7 @@ Note the following aspects of the above layout:
 - The box's `y` coordinate is defined as half the height of the parent, -100.
 
 > [!NOTE]
-> **Note**: Because of the way constraints are defined, it is possible to make more complex layouts in C# than can be specified with XAML.
+> Because of the way constraints are defined, it is possible to make more complex layouts in C# than can be specified with XAML.
 
 Both of the examples above define constraints as `RelativeToParent` &ndash; that is, their values are relative to the parent element. It is also possible to define constraints as relative to another view. This allows for more intuitive (to the developer) layouts and can make the intent of your layout code more readily apparent.
 

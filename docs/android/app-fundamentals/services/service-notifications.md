@@ -44,7 +44,7 @@ public class MyService: Service
 
 This screenshot is an example of the notification that is displayed:
 
-[![Notification icon displayed in the status bar](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png)
+[![Notification icon displayed in the status bar](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
 
 When the user slides down the notification screen from the top, the full notification is displayed:
 

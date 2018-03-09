@@ -36,6 +36,7 @@ There are a few benefits to this approach:
 -  Reducing the need for static images in the application bundle can reduce application size.
 -  Graphics become more resilient to resolution changes across devices.
 
+<a name="Drawing_in_a_UIView_Subclass"/>
 
 ## Drawing in a UIView Subclass
 
@@ -178,6 +179,8 @@ Adding this code before any drawing operations results in dashed strokes 10 unit
  ![](core-graphics-images/02-dashed-stroke.png "Adding this code before any drawing operations results in dashed strokes")
  
 Note that when using the Unified API in Xamarin.iOS, the array type needs to be an `nfloat`, and also needs to be explicitly cast to Math.PI.
+
+<a name="Drawing_Images_and_Text"/>
 
 ## Drawing Images and Text
 

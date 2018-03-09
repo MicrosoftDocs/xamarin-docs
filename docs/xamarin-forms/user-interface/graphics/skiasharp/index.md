@@ -18,10 +18,9 @@ SkiaSharp is a 2D graphics system for .NET and C# powered by the open-source Ski
 
 This guide assumes that you are familiar with Xamarin.Forms programming.
 
-## Webinar
+> [!VIDEO https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms/player]
 
-[![](images/skiasharpwebinarscreen.png "SkiaSharp for Xamarin.Forms Webinar")](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)  
-[Watch the webinar "SkiaSharp for Xamarin.Forms"](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)
+**Webinar: SkiaSharp for Xamarin.Forms**
 
 ## SkiaSharp Preliminaries
 

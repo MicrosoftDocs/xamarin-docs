@@ -183,7 +183,7 @@ Generally these properties are not used directly. Instead, combinations of these
 
 Here's the result with the `HorizontalOptions` and `VerticalOptions` properties of `Label` both set to `LayoutOptions.Center`:
 
-[![Triple screenshot of greetings program](images/ch02fg05-small.png "Horizontally and Vertically Centered Label")](images/ch02fg05-large.png "Horizontally and Vertically Centered Label")
+[![Triple screenshot of greetings program](images/ch02fg05-small.png "Horizontally and Vertically Centered Label")](images/ch02fg05-large.png#lightbox "Horizontally and Vertically Centered Label")
 
 ## Solution 5. Center the text within the Label
 

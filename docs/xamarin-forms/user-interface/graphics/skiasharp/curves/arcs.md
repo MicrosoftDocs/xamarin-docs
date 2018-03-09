@@ -96,7 +96,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 As you can see, both the start angle and the sweep angle can take on negative values:
 
-[![](arcs-images/anglearc-small.png "Triple screenshot of the Angle Arc page")](arcs-images/anglearc-large.png "Triple screenshot of the Angle Arc page")
+[![](arcs-images/anglearc-small.png "Triple screenshot of the Angle Arc page")](arcs-images/anglearc-large.png#lightbox "Triple screenshot of the Angle Arc page")
 
 This approach to generating an arc is algorithmically the simplest, and it's easy to derive the parametric equations that describe the arc. Knowing the size and location of the ellipse, and the start and sweep angles, the start and end points of the arc can be calculated using simple trigonometry:
 
@@ -201,11 +201,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 A new `SKPath` object is created for each pie slice. The path consists of a line from the center, then an `ArcTo` to draw the arc, and another line back to the center results from the `Close` call. This program displays "exploded" pie slices by moving them all out from the center by 50 pixels. That task requires a vector in the direction of the midpoint of the sweep angle for each slice:
 
-[![](arcs-images/explodedpiechart-small.png "Triple screenshot of the Exploded Pie Chart page")](arcs-images/explodedpiechart-large.png "Triple screenshot of the Exploded Pie Chart page")
+[![](arcs-images/explodedpiechart-small.png "Triple screenshot of the Exploded Pie Chart page")](arcs-images/explodedpiechart-large.png#lightbox "Triple screenshot of the Exploded Pie Chart page")
 
 To see what it looks like without the "explosion," simply comment out the `Translate` call:
 
-[![](arcs-images/explodedpiechartunexploded-small.png "Triple screenshot of the Exploded Pie Chart page without the explosion")](arcs-images/explodedpiechartunexploded-large.png "Triple screenshot of the Exploded Pie Chart page without the explosion")
+[![](arcs-images/explodedpiechartunexploded-small.png "Triple screenshot of the Exploded Pie Chart page without the explosion")](arcs-images/explodedpiechartunexploded-large.png#lightbox "Triple screenshot of the Exploded Pie Chart page without the explosion")
 
 ## The Tangent Arc
 
@@ -409,7 +409,7 @@ public partial class TangentArcPage : InteractivePage
 
 Here's the **Tangent Arc** page running on all three platforms:
 
-[![](arcs-images/tangentarc-small.png "Triple screenshot of the Tangent Arc page")](arcs-images/tangentarc-large.png "Triple screenshot of the Tangent Arc page")
+[![](arcs-images/tangentarc-small.png "Triple screenshot of the Tangent Arc page")](arcs-images/tangentarc-large.png#lightbox "Triple screenshot of the Tangent Arc page")
 
 On the Windows Mobile device, the three points are nearly colinear, and the arc is very small.
 
@@ -486,7 +486,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here's the program running on the three platforms:
 
-[![](arcs-images/roundedheptagon-small.png "Triple screenshot of the Rounded Heptagon page")](arcs-images/roundedheptagon-large.png "Triple screenshot of the Rounded Heptagon page")
+[![](arcs-images/roundedheptagon-small.png "Triple screenshot of the Rounded Heptagon page")](arcs-images/roundedheptagon-large.png#lightbox "Triple screenshot of the Rounded Heptagon page")
 
 ## The Elliptical Arc
 
@@ -581,7 +581,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here it is running on the three platforms:
 
-[![](arcs-images/ellipticalarc-small.png "Triple screenshot of the Elliptical Arc page")](arcs-images/ellipticalarc-large.png "Triple screenshot of the Elliptical Arc page")
+[![](arcs-images/ellipticalarc-small.png "Triple screenshot of the Elliptical Arc page")](arcs-images/ellipticalarc-large.png#lightbox "Triple screenshot of the Elliptical Arc page")
 
 The **Arc Infinity** page uses the elliptical arc to draw an infinity sign. The infinity sign is based on two circles with radii of 100 units separated by 100 units:
 
@@ -649,7 +649,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The code uses the `Bounds` property of `SKPath` to determine the dimensions of the infinity sine to scale it to the size of the canvas:
 
-[![](arcs-images/arcinfinity-small.png "Triple screenshot of the Arc Infinity page")](arcs-images/arcinfinity-large.png "Triple screenshot of the Arc Infinity page")
+[![](arcs-images/arcinfinity-small.png "Triple screenshot of the Arc Infinity page")](arcs-images/arcinfinity-large.png#lightbox "Triple screenshot of the Arc Infinity page")
 
 The result seems a little small, which suggests that the `Bounds` property of `SKPath` is reporting a size larger than the path.
 
@@ -657,7 +657,7 @@ Internally, Skia approximates the arc using multiple quadratic Bézier curves. T
 
 To get a tighter fit, use the `TightBounds` property, which excludes the control points. Here's the program running in landscape mode, and using the `TightBounds` property to obtain the path bounds:
 
-[![](arcs-images/arcinfinitytightbounds-small.png "Triple screenshot of the Arc Infinity page with tight bounds")](arcs-images/arcinfinitytightbounds-large.png "Triple screenshot of the Arc Infinity page with tight bounds")
+[![](arcs-images/arcinfinitytightbounds-small.png "Triple screenshot of the Arc Infinity page with tight bounds")](arcs-images/arcinfinitytightbounds-large.png#lightbox "Triple screenshot of the Arc Infinity page with tight bounds")
 
 Although the connections between the arcs and straight lines are mathematically smooth, the change from arc to straight line might seem a little abrupt. A better infinity sign is presented in the next page.
 

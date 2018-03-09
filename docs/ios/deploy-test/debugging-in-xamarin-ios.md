@@ -39,11 +39,11 @@ When you are ready to start debugging your application the first step is to [set
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![](debugging-in-xamarin-ios-images/debugging1.png "Setting Breakpoints")](debugging-in-xamarin-ios-images/debugging1.png)
+[![](debugging-in-xamarin-ios-images/debugging1.png "Setting Breakpoints")](debugging-in-xamarin-ios-images/debugging1.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[ ![](debugging-in-xamarin-ios-images/debugging1a.png "Setting Breakpoints")](debugging-in-xamarin-ios-images/debugging1a.png)
+[![](debugging-in-xamarin-ios-images/debugging1a.png "Setting Breakpoints")](debugging-in-xamarin-ios-images/debugging1a.png#lightbox)
 
 -----
 
@@ -51,13 +51,13 @@ You can view all the breakpoints that have been set in your code by going to the
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![](debugging-in-xamarin-ios-images/image0a.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0a.png)
+[![](debugging-in-xamarin-ios-images/image0a.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0a.png#lightbox)
 
  If the Breakpoints pad does not display automatically, you can make it visible by selecting _View > Debug Windows > Breakpoints_
  
 # [Visual Studio](#tab/vswin)
 
-[ ![](debugging-in-xamarin-ios-images/image0.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0.png)
+[![](debugging-in-xamarin-ios-images/image0.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0.png#lightbox)
 
  If the Breakpoints pad does not display automatically, you can make it visible by selecting _Debug > Windows > Breakpoints_
  
@@ -67,13 +67,13 @@ Before you begin debugging any application, always ensure that the configuration
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![](debugging-in-xamarin-ios-images/debugging7.png "Debugging on simulator")](debugging-in-xamarin-ios-images/debugging7.png)
-[ ![](debugging-in-xamarin-ios-images/debugging7a.png "Debugging on a physical device")](debugging-in-xamarin-ios-images/debugging7a.png)
+[![](debugging-in-xamarin-ios-images/debugging7.png "Debugging on simulator")](debugging-in-xamarin-ios-images/debugging7.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7a.png "Debugging on a physical device")](debugging-in-xamarin-ios-images/debugging7a.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[ ![](debugging-in-xamarin-ios-images/debugging7c.png "Debugging on simulator")](debugging-in-xamarin-ios-images/debugging7c.png)
-[ ![](debugging-in-xamarin-ios-images/debugging7d.png "Debugging on a physical device")](debugging-in-xamarin-ios-images/debugging7d.png)
+[![](debugging-in-xamarin-ios-images/debugging7c.png "Debugging on simulator")](debugging-in-xamarin-ios-images/debugging7c.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7d.png "Debugging on a physical device")](debugging-in-xamarin-ios-images/debugging7d.png#lightbox)
 
 -----
 
@@ -82,11 +82,11 @@ To start debugging, select the target device or similar in your IDE:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![](debugging-in-xamarin-ios-images/debugging7b.png "Select the target device")](debugging-in-xamarin-ios-images/debugging7b.png)
+[![](debugging-in-xamarin-ios-images/debugging7b.png "Select the target device")](debugging-in-xamarin-ios-images/debugging7b.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[ ![](debugging-in-xamarin-ios-images/debugging7e.png "Select the target device")](debugging-in-xamarin-ios-images/debugging7e.png)
+[![](debugging-in-xamarin-ios-images/debugging7e.png "Select the target device")](debugging-in-xamarin-ios-images/debugging7e.png#lightbox)
 
 -----
 
@@ -96,11 +96,11 @@ Then deploy your application by pressing the  **Play** button.
 
 When you hit a breakpoint, the code will be highlighted yellow:
 
-[ ![](debugging-in-xamarin-ios-images/image2.png "The code will be highlighted yellow")](debugging-in-xamarin-ios-images/image2.png)
+[![](debugging-in-xamarin-ios-images/image2.png "The code will be highlighted yellow")](debugging-in-xamarin-ios-images/image2.png#lightbox)
 
 Debugging tools, such as inspecting the values of objects, can be used at this point to get more information about what is happening in your code:
 
-[ ![](debugging-in-xamarin-ios-images/image3.png "Displaying a color value")](debugging-in-xamarin-ios-images/image3.png)
+[![](debugging-in-xamarin-ios-images/image3.png "Displaying a color value")](debugging-in-xamarin-ios-images/image3.png#lightbox)
 
 ## Conditional Breakpoints
 
@@ -113,26 +113,26 @@ To set a conditional breakpoint, access the  **Breakpoint Properties window**, w
 
 - To add a new conditional breakpoint, right-click on the editor margin, to the left of the line number for the code you wish to set a breakpoint on, and select New Breakpoint:
 
-	[ ![](debugging-in-xamarin-ios-images/image4.png "Select New Breakpoint")](debugging-in-xamarin-ios-images/image4.png)
+	[![](debugging-in-xamarin-ios-images/image4.png "Select New Breakpoint")](debugging-in-xamarin-ios-images/image4.png#lightbox)
 
 - To add a condition to an existing breakpoint, right-click on the breakpoint and select  **Breakpoint Properties** or in the  **Breakpoints Pad** select the properties button illustrated below:
 
-	[ ![](debugging-in-xamarin-ios-images/image5.png "The Breakpoints Pad")](debugging-in-xamarin-ios-images/image5.png)
+	[![](debugging-in-xamarin-ios-images/image5.png "The Breakpoints Pad")](debugging-in-xamarin-ios-images/image5.png#lightbox)
 
 
 You can then enter the condition under which you want to breakpoint to occur:
 
-[ ![](debugging-in-xamarin-ios-images/image6.png "Enter the condition for the breakpoint to occur")](debugging-in-xamarin-ios-images/image6.png)
+[![](debugging-in-xamarin-ios-images/image6.png "Enter the condition for the breakpoint to occur")](debugging-in-xamarin-ios-images/image6.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
 To set a conditional breakpoint in Visual Studio 2015, first [set a regular breakpoint](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/). Right-click on the breakpoint to display its context menu:
 
- [ ![](debugging-in-xamarin-ios-images/image4vs.png "The breakpoint context menu")](debugging-in-xamarin-ios-images/image4vs.png)
+ [![](debugging-in-xamarin-ios-images/image4vs.png "The breakpoint context menu")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
 
 Select **Conditions...** to display the _Breakpoint Settings_ menu:
 
- [ ![](debugging-in-xamarin-ios-images/image6vs.png "The Breakpoint Settings menu")](debugging-in-xamarin-ios-images/image6vs.png)
+ [![](debugging-in-xamarin-ios-images/image6vs.png "The Breakpoint Settings menu")](debugging-in-xamarin-ios-images/image6vs.png#lightbox)
 
 Here, you can enter the conditions under which you want the breakpoint to occur
 
@@ -148,7 +148,7 @@ When a breakpoint has been reached, the Debug tools enable you to get control ov
 
 In Visual Studio for Mac they will look like the following:
 
- [ ![](debugging-in-xamarin-ios-images/image7.png "The Debug tools enable the developer to get control over the program’s execution")](debugging-in-xamarin-ios-images/image7.png)
+ [![](debugging-in-xamarin-ios-images/image7.png "The Debug tools enable the developer to get control over the program’s execution")](debugging-in-xamarin-ios-images/image7.png#lightbox)
 
 These are:
 
@@ -161,7 +161,7 @@ These are:
 
 In Visual Studio they will look like the following:
 
-[ ![](debugging-in-xamarin-ios-images/image7vs.png "The Debug tools enable the developer to get control over the program’s execution")](debugging-in-xamarin-ios-images/image7vs.png)
+[![](debugging-in-xamarin-ios-images/image7vs.png "The Debug tools enable the developer to get control over the program’s execution")](debugging-in-xamarin-ios-images/image7vs.png#lightbox)
 
 These are:
 
@@ -258,13 +258,13 @@ by default.
 
 To enable this feature, make sure the **Debug project code only; do not step into framework code** option is deselected under the _Visual Studio for Mac > Preferences > Debugger_ menu as illustrated below:
 
-[ ![](debugging-in-xamarin-ios-images/debugging6.png "Debugging Mono's Class Libraries")](debugging-in-xamarin-ios-images/debugging6.png)
+[![](debugging-in-xamarin-ios-images/debugging6.png "Debugging Mono's Class Libraries")](debugging-in-xamarin-ios-images/debugging6.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
 To debug the class libraries in Visual Studio, you must disable **Just My Code** under the _Debug > Options_ menu. In the _Debugging > General_ node, clear the **Enable Just My Code** checkbox:
 
-[ ![](debugging-in-xamarin-ios-images/debugging6vs.png "Debugging Mono's Class Libraries")](debugging-in-xamarin-ios-images/debugging6vs.png)
+[![](debugging-in-xamarin-ios-images/debugging6vs.png "Debugging Mono's Class Libraries")](debugging-in-xamarin-ios-images/debugging6vs.png#lightbox)
 
 -----
 

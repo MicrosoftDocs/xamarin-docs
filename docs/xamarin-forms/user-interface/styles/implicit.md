@@ -47,7 +47,7 @@ The following code example shows an *implicit* style declared in XAML in a page'
 
 The [`ResourceDictionary`](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) defines a single *implicit* style that's applied to the page's [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) instances. The `Style` is used to display blue text on a yellow background, while also setting other appearance options. The `Style` is added to the page's [`ResourceDictionary`](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) without specifying an `x:Key` attribute. Therefore, the `Style` is applied to all the `Entry` instances implicitly as they match the [`TargetType`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/) property of the `Style` exactly. However, the `Style` is not applied to the `CustomEntry` instance, which is a subclassed `Entry`. This results in the appearance shown in the following screenshots:
 
-[![](implicit-images/implicit-styles.png "Implicit Styles Example")](implicit-images/implicit-styles-large.png "Implicit Styles Example")
+[![](implicit-images/implicit-styles.png "Implicit Styles Example")](implicit-images/implicit-styles-large.png#lightbox "Implicit Styles Example")
 
 In addition, the fourth [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) overrides the [`BackgroundColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/) and [`TextColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.TextColor/) properties of the implicit style to different `Color` values.
 

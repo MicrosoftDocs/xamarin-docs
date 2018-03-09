@@ -14,7 +14,7 @@ ms.date: 04/07/2017
 
 _Test and debug iOS apps entirely within Visual Studio on Windows_
 
-[ ![](ios-simulator-images/hero-sml.png "iOS Simulator running on Windows")](ios-simulator-images/hero.png)
+[![](ios-simulator-images/hero-sml.png "iOS Simulator running on Windows")](ios-simulator-images/hero.png#lightbox)
 
 ## Download and Install
 
@@ -34,7 +34,7 @@ To use the remote iOS simulator:
 You can disable the remote iOS simulator from **Tools > Options > Xamarin > iOS Settings**
 by unchecking the box for **Remote Simulator to Windows** shown here:
 
-[ ![](ios-simulator-images/options-sml.png "checkbox to use simulator")](ios-simulator-images/options.png)
+[![](ios-simulator-images/options-sml.png "checkbox to use simulator")](ios-simulator-images/options.png#lightbox)
 
 The iOS simulator will then open on the connected Mac computer. Check this option to
 turn the remote iOS simulator back on.
@@ -54,14 +54,14 @@ The window toolbar includes a number of buttons to interact with the simulator:
 - [**Settings**](#settings) – configure the keyboard and location.
  - Other [**options**](#options) – a variety of simulator options are available such as rotate, shake, or invoke other states in the simulator. When some options are obscured, they can be accessed from the ellipsis icon that appears in the toolbar, or by right-clicking on the window.
 
-	[ ![](ios-simulator-images/maps-app-sml.png "iOS simulator maps example")](ios-simulator-images/maps-app.png)
+	[![](ios-simulator-images/maps-app-sml.png "iOS simulator maps example")](ios-simulator-images/maps-app.png#lightbox)
 
 
 ### Settings
 
 The "gear" icon opens the **Settings** window:
 
-[ ![](ios-simulator-images/settings-sml.png "iOS simulator settings")](ios-simulator-images/settings.png)
+[![](ios-simulator-images/settings-sml.png "iOS simulator settings")](ios-simulator-images/settings.png#lightbox)
 
 This allows you to enable the hardware keyboard on the simulator, and
 choose what location is reported to the device (including a static location, or
@@ -74,7 +74,7 @@ other moving location options).
 Right-click anywhere in the simulator window to view all the options available in the simulator, such as
 rotation, triggering a shake gesture, and rebooting the simulator:
 
-[ ![](ios-simulator-images/more-sml.png "iOS simulator additional settings")](ios-simulator-images/more.png)
+[![](ios-simulator-images/more-sml.png "iOS simulator additional settings")](ios-simulator-images/more.png#lightbox)
 
 ### Touchscreen Support
 

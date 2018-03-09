@@ -7,14 +7,10 @@ ms.assetid: DC4CDBD0-3DF9-4B7E-B876-29128985E2A7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/22/2018
+ms.date: 03/01/2018
 ---
 
 # Material Theme
-
-<a name="overview" />
-
-## Overview
 
 *Material Theme* is a user interface style that determines the look and
 feel of views and activities starting with Android 5.0 (Lollipop). Material Theme
@@ -35,7 +31,7 @@ Android provides three Material Theme flavors:
 
 Examples of these Material Theme flavors are displayed here:
 
-[![Example screenshots of the Dark theme, Light theme, and Dark Action Bar theme](material-theme-images/three-flavors-sml.png)](material-theme-images/three-flavors.png)
+[![Example screenshots of the Dark theme, Light theme, and Dark Action Bar theme](material-theme-images/three-flavors-sml.png)](material-theme-images/three-flavors.png#lightbox)
 
 You can derive from Material Theme to create your own theme, overriding
 some or all color attributes. For example, you can create a theme that
@@ -60,7 +56,6 @@ gracefully fall back to an earlier theme when it runs on older versions
 of Android (see the
 [Compatibility](#compatibility) section of this article for details).
 
-<a name="requirements" />
 
 ## Requirements
 
@@ -80,7 +75,6 @@ features in Xamarin-based apps:
 To learn how to configure an Android 5.0 app project, 
 see [Setting Up an Android 5.0 Project](~/android/platform/lollipop.md).
 
-<a name="builtinthemes" />
 
 ## Using the Built-in Themes
 
@@ -94,7 +88,6 @@ same theme across all activities, or you can assign different themes to
 different activities. The following sections explain how to configure
 themes at the app level and at the activity level.
 
-<a name="themeanapp" />
 
 ### Theming an Application
 
@@ -128,7 +121,6 @@ When the application theme is set to
 `@android:style/Theme.Material.Light`, every activity in *MyApp* will be
 displayed using `Theme.Material.Light`.
 
-<a name="activitytheme" />
 
 ### Theming an Activity
 
@@ -177,7 +169,7 @@ Material Theme exposes the following layout attributes for customization:
 
 These screen areas are labeled in the following diagram:
 
-[ ![Diagram of attributes and their associated screen areas](material-theme-images/screen-attributes-sml.png)](material-theme-images/screen-attributes.png)
+[![Diagram of attributes and their associated screen areas](material-theme-images/screen-attributes-sml.png)](material-theme-images/screen-attributes.png#lightbox)
 
 By default, `statusBarColor` is set to the value of
 `colorPrimaryDark`. You can set `statusBarColor` to a solid color, or
@@ -185,7 +177,6 @@ you can set it to `@android:color/transparent` to make the status bar
 transparent. The navigation bar can also be made transparent by setting
 `navigationBarColor` to `@android:color/transparent`.
 
-<a name="customapptheme" />
 
 ### Creating a Custom App Theme
 
@@ -213,7 +204,7 @@ custom theme, use the following steps:
 -   Create a **Resources/values-v21** folder. In this folder, create 
     a **styles.xml** file:
 
-    [ ![Location of styles.xml in the Resources/values-21.xml folder](material-theme-images/values-v21-sml.png)](material-theme-images/values-v21.png)
+    [![Location of styles.xml in the Resources/values-21.xml folder](material-theme-images/values-v21-sml.png)](material-theme-images/values-v21.png#lightbox)
 
     Note that **Resources/values-v21** is specific to Android 5.0 &ndash; older 
     versions of Android will not read files in this folder.
@@ -236,7 +227,7 @@ custom theme, use the following steps:
 -   At this point, an app that uses *MyCustomTheme* will display the 
     stock `Theme.Material.Light` theme without customizations:
 
-    [ ![Custom theme appearance before customizations](material-theme-images/custom-theme-before-sml.png)](material-theme-images/custom-theme-before.png)
+    [![Custom theme appearance before customizations](material-theme-images/custom-theme-before-sml.png)](material-theme-images/custom-theme-before.png#lightbox)
 
 -   Add color customizations to **styles.xml** by defining the colors of layout 
     attributes that you want to change. For example, to change the app bar color 
@@ -261,7 +252,7 @@ With these changes in place, an app that uses *MyCustomTheme* will display
 an app bar color in `my_blue` and UI controls in `my_purple`, but use the 
 `Theme.Material.Light` color scheme everywhere else:
 
-[ ![Custom theme appearance after customizations](material-theme-images/custom-theme-after-sml.png)](material-theme-images/custom-theme-after.png)
+[![Custom theme appearance after customizations](material-theme-images/custom-theme-after-sml.png)](material-theme-images/custom-theme-after.png#lightbox)
 
 In this example, *MyCustomTheme* borrows colors from `Theme.Material.Light` 
 for the background color, status bar, and text colors, but it changes the 
@@ -313,12 +304,11 @@ The following screenshot provides an example of the default
 has been styled with the custom `CardView.MyBlue` theme (shown 
 on the right):
 
-[ ![Examples of default CardView and Custom CardView](material-theme-images/custom-cardview-sml.png)](material-theme-images/custom-cardview.png)
+[![Examples of default CardView and Custom CardView](material-theme-images/custom-cardview-sml.png)](material-theme-images/custom-cardview.png#lightbox)
 
 In this example, the custom `CardView` is displayed with the 
 background color `my_blue` and an 18dp corner radius.
 
-<a name="compatibility" />
 
 ## Compatibility
 

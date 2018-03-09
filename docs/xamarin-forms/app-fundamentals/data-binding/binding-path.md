@@ -132,7 +132,7 @@ That child is a `Label`, which has a `Text` property of type `String`, which has
 
 Here's the program running on all three platforms:
 
-[![Path Variations](binding-path-images/pathvariations-small.png "Path Variations")](binding-path-images/pathvariations-large.png "Path Variations")
+[![Path Variations](binding-path-images/pathvariations-small.png "Path Variations")](binding-path-images/pathvariations-large.png#lightbox "Path Variations")
 
 ## Debugging Complex Paths
 

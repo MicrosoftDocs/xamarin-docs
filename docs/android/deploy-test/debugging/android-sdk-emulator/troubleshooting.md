@@ -99,7 +99,7 @@ disable them. In Visual Studio, click **Tools > Options > Xamarin >
 Android Settings** and disable the **Warn if AVD acceleration is not
 supported (HAXM)** option:
 
-[![Disabling AVD acceleration warnings](troubleshooting-images/win/06-disable-perf-warnings-sml.png)](troubleshooting-images/win/06-disable-perf-warnings.png)
+[![Disabling AVD acceleration warnings](troubleshooting-images/win/06-disable-perf-warnings-sml.png)](troubleshooting-images/win/06-disable-perf-warnings.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -134,7 +134,6 @@ unknown reason. To help resolve this error, see
 
 -----
 
-<a name="solutions" />
 
 ## Solutions to Common Problems
 
@@ -143,7 +142,6 @@ configuring changes to your computer or by installing additional
 software. The following sections describe these issues and provide
 solutions.
 
-<a name="deployment" />
 
 ### Deployment Issues
 
@@ -178,7 +176,6 @@ steps:
    emulator again.
 
 
-<a name="haxm-issues" />
 
 ### HAXM Issues
 
@@ -210,7 +207,6 @@ such as Hyper-V, Windows Device Guard, and some antivirus software:
   or uninstall this software, reboot, and retry the Android SDK
   Emulator.
 
-<a name="bios" />
 
 #### Incorrect BIOS Settings
 

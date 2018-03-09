@@ -15,7 +15,6 @@ It is possible to publish an application without using any of the
 existing Android marketplaces. This section will explain these other
 publishing methods and the licensing levels of Xamarin.Android.
 
-<a name="Xamarin_Licensing" />
 
 ## Xamarin Licensing
 
@@ -38,7 +37,6 @@ Visit the [visualstudio.com](https://www.visualstudio.com/xamarin/) to download 
 Community Edition or to learn more about purchasing the Professional
 and Enterprise editions.
 
-<a name="Allow_Installation_from_Unknown_Sources" />
 
 ## Allow Installation from Unknown Sources
 
@@ -49,14 +47,13 @@ installation from non-marketplace sources, a user must enable the
 application. The setting for this may be found under **Settings >
 Security**, as shown in the following diagram:
 
-[ ![Security settings screen](publishing-independently-images/settings.png)](publishing-independently-images/settings.png)
+[![Security settings screen](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
 
 > [!IMPORTANT]
 > **Note:** Some network providers might prevent the installation of applications from unknown sources, regardless of this setting.
 
 
-<a name="Publishing_by_E-Mail" />
 
 ## Publishing by E-Mail
 
@@ -65,14 +62,13 @@ distribute an application to users. When the user opens the e-mail on
 an Android-powered device, Android will recognize the APK attachment
 and display an **Install** button as shown in the following image:
 
-[ ![Install button for attachment](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png)
+[![Install button for attachment](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png#lightbox)
 
 Although distribution via e-mail is simple, it provides few protections
 against piracy or unauthorized distribution. It is best reserved for
 situations where the recipients of the application are few, and they
 are trusted not to distribute the application.
 
-<a name="Publishing_by_Web" />
 
 ## Publishing by Web
 
@@ -82,7 +78,6 @@ providing a download link to users. When an Android-powered device
 browses to a link and then downloads the application, that application
 will automatically be installed once the download is complete.
 
-<a name="Manually_Installing_an_APK" />
 
 ## Manually Installing an APK
 

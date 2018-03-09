@@ -21,20 +21,8 @@ They support compiler directives so that you can conditionally include platform-
 If you have used file-linking in the past to share code between projects, Shared Projects works in a similar way but with much improved IDE support.
 
 
-# Requirements
 
-Shared Project support was added in Xamarin Studio 5 and Visual Studio 2013 Update 2 (see note).
-
-> [!IMPORTANT]
->  Microsoft released this new project type - **Shared Projects ([download Visual Studio extension preview](http://visualstudiogallery.msdn.microsoft.com/315c13a7-2787-4f57-bdf7-adae6ed54450))** - for Visual Studio 2013 Update 2 (April 2014). Refer to Microsoft's [Windows Phone 8.1](http://blogs.msdn.com/b/visualstudio/archive/2014/04/08/building-windows-phone-8-1-apps-in-html.aspx) and [Microsoft Store](http://msdn.microsoft.com/en-us/library/windows/apps/dn609832.aspx#CrossPlatform) docs for more details on how it works with those platforms.
-
-
-
-
- <a name="Walkthrough" />
-
-
-# What is a Shared Project?
+## What is a Shared Project?
 
 Unlike most other project types a shared project does not have any output (in DLL form), instead the code is compiled into each project that references it. This is illustrated in the diagram below - conceptually the entire contents of the Shared Project is "copied into" each referencing project and compiled as though it was a part of them.
 
@@ -50,9 +38,7 @@ Note that Android application projects cannot reference other Android applicatio
 
 
 
-<a name="Xamarin_Studio_Walkthrough" />
-
-# Visual Studio for Mac Walkthrough
+## Visual Studio for Mac Walkthrough
 
 
 This section walks through how to create and use a Shared Project using Visual Studio for Mac. Refer the to [Shared Project Example](#Shared_Project_Example) section for a complete example.
@@ -105,15 +91,13 @@ The **Options** screen is shown below - the Project **Name** and the **Default N
 
 
 
-<a name="Visual_Studio_Walkthrough" />
-
-# Visual Studio Walkthrough
+## Visual Studio Walkthrough
 
 
 This section walks through how to create and use a Shared Project using Visual Studio. Refer the to [Shared Project Example](#Shared_Project_Example) section for a complete implementation.
 
 
-## Creating a Shared Project
+### Creating a Shared Project
 
 
 To create a new Shared Project navigate to **File > New Solution...** and choose a name for the project and solution.
@@ -141,7 +125,7 @@ Adding a reference to a Shared Project is done the same way as referencing a reg
 Once the Shared Project is referenced by another library or application you can build the solution and view any errors in the code. When the Shared Project is referenced by _two-or-more_ other projects, a menu appears in the top-left of the source code editor to see which projects reference the current code file.
 
 
-## Shared Project Properties
+### Shared Project Properties
 
 
 When you select a Shared Project there fewer settings in the Properties panel than other project types. Because Shared Projects are not compiled (on their own), you cannot set output or compiler options, project configurations, assembly signing, or custom commands. The code in a Shared Project effectively inherits these values from whatever is referencing them.
@@ -157,10 +141,9 @@ The **Properties** panel is shown below - the **Root Namespace** is the only set
 
 -----
 
- <a name="Shared_Project_Example" />
+<a name="Shared_Project_Example"/>
 
-
-# Shared Project Example
+## Shared Project Example
 
 The [Tasky](https://github.com/xamarin/mobile-samples/tree/master/Tasky) example uses a Shared Project to contain the common code used by both the iOS, Android and Windows Phone applications. Both the `SQLite.cs` and `TaskRepository.cs` source code files utilise compiler directives (eg. `#if __ANDROID__`) to produce different output for each of the applications that reference them.
 
@@ -182,10 +165,9 @@ The running applications are shown below.
 
  ![](shared-projects-images/example.png "iOS, Android, Windows Phone examples")
 
- <a name="Summary" />
 
 
-# Summary
+## Summary
 
 This document described how Shared Projects work, how they can be created and used in both Visual Studio for Mac and Visual Studio, and introduced a simple sample application that demonstrates a Shared Project in action.
 

@@ -26,7 +26,6 @@ are:
     Preference objects as lists.
 
 
-<a name="The_ListFragment" />
 
 ## The ListFragment
 
@@ -35,9 +34,8 @@ The `ListFragment` is very similar in concept and functionality to the
 Fragment. The image below shows a `ListFragment` running on a tablet
 and a phone:
 
-[![Screenshots of ListFragment on a tablet and on a phone](specialized-fragment-classes-images/intro-screenshot-sml.png)](specialized-fragment-classes-images/intro-screenshot.png)
+[![Screenshots of ListFragment on a tablet and on a phone](specialized-fragment-classes-images/intro-screenshot-sml.png)](specialized-fragment-classes-images/intro-screenshot.png#lightbox)
 
-<a name="Binding_Data_With_The_ListAdapter" />
 
 ### Binding Data With The ListAdapter
 
@@ -63,7 +61,6 @@ When setting the `ListAdapter`, it is important to use the
 property. Using `ListView.ListAdapter` will cause important
 initialization code to be skipped.
 
-<a name="Responding_to_User_Selection" />
 
 
 ### Responding to User Selection
@@ -100,7 +97,6 @@ In the code above, when the user selects an item in the `ListFragment`,
 a new Fragment is displayed in the hosting Activity, showing more
 details about the item that was selected.
 
-<a name="DialogFragment" />
 
 
 ## DialogFragment
@@ -111,7 +107,7 @@ window. It is meant to replace the managed dialog APIs (starting in
 Android 3.0). The following screenshot shows an example of a
 `DialogFragment`:
 
-[![Screenshot of DialogFragment displaying Add New Vehicle EditBox](specialized-fragment-classes-images/dialog-fragment-example.png)](specialized-fragment-classes-images/dialog-fragment-example.png)
+[![Screenshot of DialogFragment displaying Add New Vehicle EditBox](specialized-fragment-classes-images/dialog-fragment-example.png)](specialized-fragment-classes-images/dialog-fragment-example.png#lightbox)
 
 A `DialogFragment` ensures that the state between the Fragment and the
 dialog remain consistent. All interactions and control of the dialog
@@ -135,14 +131,13 @@ two methods:
   method, it is not necessary to override `OnCreateView` .
 
 
-<a name="A_Simple_DialogFragment" />
 
 ### A Simple DialogFragment
 
 The following screenshot shows a simple `DialogFragment` that has a
 `TextView` and two `Button`s:
 
-[![Example DialogFragment with a TextView and two buttons](specialized-fragment-classes-images/dialog-fragment-example-2.png)](specialized-fragment-classes-images/dialog-fragment-example-2.png)
+[![Example DialogFragment with a TextView and two buttons](specialized-fragment-classes-images/dialog-fragment-example-2.png)](specialized-fragment-classes-images/dialog-fragment-example-2.png#lightbox)
 
 The `TextView` will display the number of times that the user has
 clicked one button in the `DialogFragment`, while clicking the other
@@ -177,7 +172,6 @@ public class MyDialogFragment : DialogFragment
 }
 ```
 
-<a name="Displaying_a_Fragment" />
 
 ### Displaying a Fragment
 
@@ -200,7 +194,6 @@ public void ShowDialog()
 }
 ```
 
-<a name="Dismissing_a_Fragment" />
 
 ### Dismissing a Fragment
 
@@ -209,7 +202,6 @@ Fragment to be removed from the Activity and commits that transaction.
 The standard Fragment lifecycle methods that are involved with the
 destruction of a Fragment will be called.
 
-<a name="Alert_Dialog" />
 
 ### Alert Dialog
 
@@ -237,7 +229,6 @@ public class AlertDialogFragment : DialogFragment
 }
 ```
 
- <a name="PreferenceFragment" />
 
 
 ## PreferenceFragment
@@ -254,9 +245,8 @@ In Android 3.0 or higher applications, use the `PreferenceFragment` to
 deal with preferences in applications. The following picture shows an
 example of a `PreferenceFragment`:
 
-[![Example PreferencesFragment with inline, dialog, and launch preferences](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png)
+[![Example PreferencesFragment with inline, dialog, and launch preferences](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png#lightbox)
 
-<a name="Create_A_Preference_Fragment_from_a_Resource" />
 
 ### Create A Preference Fragment from a Resource
 
@@ -332,7 +322,6 @@ public class PrefFragment : PreferenceFragment
 }
 ```
 
- <a name="Querying_Activities_to_Create_a_Preference_Fragment" />
 
 
 ### Querying Activities to Create a Preference Fragment
@@ -386,4 +375,4 @@ the `MetatDataAttribute` is not provided, then an exception will be
 thrown at run time. When this code runs, the `PreferenceFragment`
 appears as in the following screenshot:
 
-[![Screenshot of example app with PreferenceFragment displayed](specialized-fragment-classes-images/preference-fragment-getpreferencesfromintent.png)](specialized-fragment-classes-images/preference-fragment-getpreferencesfromintent.png)
+[![Screenshot of example app with PreferenceFragment displayed](specialized-fragment-classes-images/preference-fragment-getpreferencesfromintent.png)](specialized-fragment-classes-images/preference-fragment-getpreferencesfromintent.png#lightbox)

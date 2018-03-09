@@ -14,7 +14,7 @@ ms.date: 10/26/2017
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) supports arranging views into rows and columns. Rows and columns can be set to have proportional sizes or absolute sizes. The `Grid` layout should not be confused with traditional tables and is not intended to present tabular data. `Grid` does not have the concept of row, column or cell formatting. Unlike HTML tables, `Grid` is purely intended for laying out content.
 
-[ ![](grid-images/layouts-sml.png "Xamarin.Forms Layouts")](grid-images/layouts.png "Xamarin.Forms Layouts")
+[![](grid-images/layouts-sml.png "Xamarin.Forms Layouts")](grid-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 This article will cover:
 
@@ -50,7 +50,7 @@ Row and column information is stored in `Grid`'s `RowDefinitions` & `ColumnDefin
 - **Absolute** &ndash; sizes columns and rows with specific, fixed height and width values. Specified as a value and `GridUnitType.Absolute` in C# and as `#` in XAML, with `#` being your desired value.
 
 > [!NOTE]
-> **Note**: The width values for columns are set as `*`` by default in Xamarin.Forms, which ensures that the column will fill the available space.
+> The width values for columns are set as `*`` by default in Xamarin.Forms, which ensures that the column will fill the available space.
 
 Consider an app that needs three rows and two columns. The bottom row needs to be exactly 200px tall and the top row needs to be twice as tall as the middle row. The left column needs to be wide enough to fit the content and the right column needs to fill the remaining space.
 

@@ -134,10 +134,9 @@ resource ID &mdash; `Resource.Layout.Main` refers to the
 
 Run the application. You should see the following:
 
-[![Example screenshot of TableLayout app displaying multiple table rows](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png)
+[![Example screenshot of TableLayout app displaying multiple table rows](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
 
 
-<a name="References" />
 
 ## References
 

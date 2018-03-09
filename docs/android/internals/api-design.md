@@ -11,7 +11,6 @@ ms.date: 02/16/2018
 
 # API Design
 
-<a name="Overview" />
 
 ## Overview
 
@@ -23,7 +22,6 @@ At the core of Xamarin.Android there is an interop engine that bridges
 the C# world with the Java world and provides developers with access to
 the Java APIs from C# or other .NET languages.
 
-<a name="Design_Principles" />
 
 ## Design Principles
 
@@ -66,7 +64,6 @@ instead of single-method interfaces when appropriate and applicable.
       [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/)).
 
 
-<a name="Assemblies" />
 
 ## Assemblies
 
@@ -80,11 +77,9 @@ The bindings to the Android platform are contained in the
 for consuming Android APIs and communicating with the Android runtime
 VM.
 
-<a name="Binding_Design" />
 
 ## Binding Design
 
-<a name="Collections" />
 
 ### Collections
 
@@ -150,7 +145,6 @@ if (goodSource.Count != 4) // false
     throw new InvalidOperationException ("should not be reached.");
 ```
 
-<a name="Properties" />
 
 ### Properties
 
@@ -170,7 +164,6 @@ Java methods are transformed into properties, when appropriate:
    array.
 
 
-<a name="Events_and_Listeners" />
 
 ### Events and Listeners
 
@@ -272,7 +265,6 @@ implementing the listener interface on a subclass of
 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) or any other wrapped
 Java object, such as an Android activity.
 
-<a name="Runnables" />
 
 ### Runnables
 
@@ -303,7 +295,6 @@ We left the
 of replacing them since several types implement the interface and can
 therefore be passed as runnables directly.
 
-<a name="Inner_Classes" />
 
 ### Inner Classes
 
@@ -365,7 +356,6 @@ Note how `CubeWallpaper.CubeEngine` is nested within `CubeWallpaper`,
 constructor which takes the declaring type -- `CubeWallpaper` in this
 case -- all as specified above.
 
-<a name="Interfaces" />
 
 ### Interfaces
 
@@ -481,7 +471,6 @@ Finally, types with a *Consts* suffix such as
 introduced InterfaceConsts nested types. They will be removed in
 Xamarin.Android 3.0.
 
-<a name="Resources" />
 
 ## Resources
 
@@ -543,7 +532,6 @@ You would then use `Resource.Drawable.icon` to reference the
 `layout/main.xml` file, or `Resource.String.first_string` to reference
 the first string in the dictionary file `values/strings.xml`.
 
-<a name="Constants_and_Enumerations" />
 
 ## Constants and Enumerations
 

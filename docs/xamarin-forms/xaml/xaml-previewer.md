@@ -26,7 +26,7 @@ There is more information in the [release notes](https://developer.xamarin.com/r
 
 The **Preview** button can be displayed on the editor by right-clicking a XAML file, and selecting **Open With > XAML Viewer**. The preview pane can then be shown or hidden by pressing the **Preview** button in the top-right corner of any XAML document window:
 
-[ ![ListView control preview in Visual Studio for Mac](xaml-previewer-images/xamlp-list-sml.png "Forms Previewer in Visual Studio for Mac")](xaml-previewer-images/xamlp-list.png "Forms Previewer in Visual Studio for Mac")
+[![ListView control preview in Visual Studio for Mac](xaml-previewer-images/xamlp-list-sml.png "Forms Previewer in Visual Studio for Mac")](xaml-previewer-images/xamlp-list.png#lightbox "Forms Previewer in Visual Studio for Mac")
 
 ### Visual Studio on Windows
 
@@ -34,7 +34,7 @@ Use the **View > Other Windows > Xamarin.Forms Previewer** menu in Visual Studio
 to open the preview window. Use the **Window > New Vertical Tab Group**
 menu to position it side-by-side.
 
-[ ![ListView control preview in Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "Forms Previewer in Visual Studio")](xaml-previewer-images/xamlp-list-vs.png "Forms Previewer in Visual Studio")
+[![ListView control preview in Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "Forms Previewer in Visual Studio")](xaml-previewer-images/xamlp-list-vs.png#lightbox "Forms Previewer in Visual Studio")
 
 ## XAML Preview Options
 

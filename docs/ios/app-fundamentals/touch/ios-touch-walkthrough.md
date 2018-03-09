@@ -23,12 +23,14 @@ Each section contains instructions to write the code from scratch.
 The [starting sample code](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)
 already includes a complete storyboard and menu screen:
 
- [ ![](ios-touch-walkthrough-images/image3.png "The sample includes menu screen")](ios-touch-walkthrough-images/image3.png)
+ [![](ios-touch-walkthrough-images/image3.png "The sample includes menu screen")](ios-touch-walkthrough-images/image3.png#lightbox)
 
 Follow the instructions below to add code to the storyboard, and learn about
 the different types of touch events available in iOS. Alternatively, open the
 [finished sample](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final) to
 see everything working.
+
+<a name="Touch_Samples"/>
 
 ## Touch Samples
 
@@ -38,7 +40,7 @@ to add the code required to implement touch events:
 
 1. Open the project **Touch_Start**. First run the project to make sure everything is okay, and touch the **Touch Samples** button. You should see a screen similar to the following (although none of the buttons will work):
 	
-	[![](ios-touch-walkthrough-images/image4.png "Sample app run with non-working buttons")](ios-touch-walkthrough-images/image4.png)
+	[![](ios-touch-walkthrough-images/image4.png "Sample app run with non-working buttons")](ios-touch-walkthrough-images/image4.png#lightbox)
 
 
 1. Edit the file **TouchViewController.cs** and add the following two
@@ -173,9 +175,9 @@ exists perform some action based on where the touch occurred:
 
 1. At this point the Touch Samples screen is finished. Notice how the screen changes as you interact with each of the images, as shown in the following screenshot:
 		
-	[![](ios-touch-walkthrough-images/image4.png "The starting app screen")](ios-touch-walkthrough-images/image4.png)
+	[![](ios-touch-walkthrough-images/image4.png "The starting app screen")](ios-touch-walkthrough-images/image4.png#lightbox)
 	
-	[![](ios-touch-walkthrough-images/image5.png "The screen after the user drags a button")](ios-touch-walkthrough-images/image5.png)
+	[![](ios-touch-walkthrough-images/image5.png "The screen after the user drags a button")](ios-touch-walkthrough-images/image5.png#lightbox)
  
 
 <a name="Gesture_Recognizer_Samples" />
@@ -191,7 +193,7 @@ In this section we will get rid of the touch events and show how to use the foll
 If you run the [starting sample code](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)
 and click on the **Gesture Recognizer Samples** button, you should see the following screen:
 
- [ ![](ios-touch-walkthrough-images/image6.png "Clicking on the Gesture Recognizer Samples button shows this screen")](ios-touch-walkthrough-images/image6.png)
+ [![](ios-touch-walkthrough-images/image6.png "Clicking on the Gesture Recognizer Samples button shows this screen")](ios-touch-walkthrough-images/image6.png#lightbox)
 
 Follow these steps to implement gesture recognizers:
 
@@ -318,9 +320,11 @@ but instead of using a delegate for a target we are using an `Action`.
 1. Run the application, and interact with the two images.
 The following screenshot is one example of these interactions:
 	
-	[![](ios-touch-walkthrough-images/image7.png "This screenshot shows a drag interaction")](ios-touch-walkthrough-images/image7.png)
+	[![](ios-touch-walkthrough-images/image7.png "This screenshot shows a drag interaction")](ios-touch-walkthrough-images/image7.png#lightbox)
 
 
+
+<a name="Custom_Gesture_Recognizer"/>
 
 ## Custom Gesture Recognizer
 
@@ -329,7 +333,7 @@ custom gesture recognizer. The custom gesture recognizer will
 subclasses `UIGestureRecognizer`, and will recognize when the user draws a “V” on the screen
 then toggle a bitmap. The following screenshot is an example of this screen:
 
- [ ![](ios-touch-walkthrough-images/image8.png "The app will recognize when the user draws a `V` on the screen")](ios-touch-walkthrough-images/image8.png)
+ [![](ios-touch-walkthrough-images/image8.png "The app will recognize when the user draws a `V` on the screen")](ios-touch-walkthrough-images/image8.png#lightbox)
 
 Follow these steps to create a custom gesture recognizer:
 
@@ -508,9 +512,9 @@ the **CustomGestureViewController.cs** file and add the following two instance v
 
 1. Run the application, and try drawing a “V” on the screen. You should see the image being displayed change, as shown in the following screenshots:
 	
-	[![](ios-touch-walkthrough-images/image9.png "The button checked")](ios-touch-walkthrough-images/image9.png)
+	[![](ios-touch-walkthrough-images/image9.png "The button checked")](ios-touch-walkthrough-images/image9.png#lightbox)
 	
-	[![](ios-touch-walkthrough-images/image10.png "The button unchecked")](ios-touch-walkthrough-images/image10.png)
+	[![](ios-touch-walkthrough-images/image10.png "The button unchecked")](ios-touch-walkthrough-images/image10.png#lightbox)
 
 
 

@@ -16,11 +16,11 @@ _The Picker view is a control for selecting a text item from a list of data._
 
 A [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) displays a short list of items, from which the user can select. However, a [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) doesn't show any data when it's first displayed. Instead, the value of its [`Title`](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Title/) property is shown as a placeholder on the iOS and Android platforms:
 
-[![](images/picker-initial.png "Initial Picker Display")](images/picker-initial-large.png "Initial Picker Display")
+[![](images/picker-initial.png "Initial Picker Display")](images/picker-initial-large.png#lightbox "Initial Picker Display")
 
 When the [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) gains focus, its data is displayed and the user can select an item:
 
-[![](images/picker-selection.png "Picker Selecting an Item")](images/picker-selection-large.png "Picker Selecting an Item")
+[![](images/picker-selection.png "Picker Selecting an Item")](images/picker-selection-large.png#lightbox "Picker Selecting an Item")
 
 Following selection, the selected item is displayed by the [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/):
 

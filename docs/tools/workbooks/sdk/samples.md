@@ -16,7 +16,7 @@ See the [Kitchen Sink][KitchenSink] sample for a working example of an
 integration. Simply build `KitchenSink.sln` in Visual Studio for Mac or
 Visual Studio and then open `KitchenSink.workbook`.
 
-[![Kitchen Sink Integration Screenshot](samples-images/kitchensinkintegrationscreenshot.png)](samples-images/kitchensinkintegrationscreenshot.png)
+[![Kitchen Sink Integration Screenshot](samples-images/kitchensinkintegrationscreenshot.png)](samples-images/kitchensinkintegrationscreenshot.png#lightbox)
 
 The Kitchen Sink sample demonstrates both sets of concepts:
 

@@ -33,7 +33,6 @@ create:
 
 ![Example screenshot of the app with multiple tabs](creating-a-tabbed-ui-images/image02.png)
 
-<a name="Creating_the_Application" />
 
 ## Creating the Application
 
@@ -73,7 +72,7 @@ following XML:
 
 The following screenshot shows the layout in the Xamarin Designer:
 
-[![Screenshot of the TabHost layout in the Xamarin Designer](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png)
+[![Screenshot of the TabHost layout in the Xamarin Designer](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png#lightbox)
 
 The TabHost must have two child views inside it: a `TabWidget` and a
 `FrameLayout`. To position the `TabWidget` and `FrameLayout` vertically
@@ -249,7 +248,6 @@ That's it! We have created a tabbed application which gives the user an
 easy way navigate to different parts of an application.
 
 
-<a name="Summary" />
 
 ## Summary
 

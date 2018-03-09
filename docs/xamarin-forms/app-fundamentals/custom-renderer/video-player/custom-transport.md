@@ -642,11 +642,11 @@ namespace VideoPlayerDemos
 
 Because `AutoPlay` is set to `false` in the **CustomTransport.xaml** file, you'll need to press the **Play** button when it becomes enabled to begin the video. The buttons are defined so that the Unicode characters discussed above are accompanied by their text equivalents. The buttons have a consistent appearance on each platform when the video is playing:
 
-[![Custom Transport Playing](custom-transport-images/customtransportplaying-small.png "Custom Transport Playing")](custom-transport-images/customtransportplaying-large.png "Custom Transport Playing")
+[![Custom Transport Playing](custom-transport-images/customtransportplaying-small.png "Custom Transport Playing")](custom-transport-images/customtransportplaying-large.png#lightbox "Custom Transport Playing")
 
 But on Android and UWP, the **Play** button looks very different when the video is paused:
 
-[![Custom Transport Paused](custom-transport-images/customtransportpaused-small.png "Custom Transport Paused")](custom-transport-images/customtransportpaused-large.png "Custom Transport Paused")
+[![Custom Transport Paused](custom-transport-images/customtransportpaused-small.png "Custom Transport Paused")](custom-transport-images/customtransportpaused-large.png#lightbox "Custom Transport Paused")
 
 In a production application, you'll probably want to use your own bitmap images for the buttons to achieve visual uniformity.
 

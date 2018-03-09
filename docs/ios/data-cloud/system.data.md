@@ -30,7 +30,7 @@ The following program creates a database in `Documents/mydb.db3`, and if the dat
 First, right-click on the **References** node and choose **Edit References...**
   then select `System.Data` and `Mono.Data.Sqlite`:
 
-[ ![](system.data-images/edit-references-sml.png "Adding new references")](system.data-images/edit-references.png)
+[![](system.data-images/edit-references-sml.png "Adding new references")](system.data-images/edit-references.png#lightbox)
 
 ### Sample Code
 

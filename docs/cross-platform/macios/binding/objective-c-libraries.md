@@ -1,19 +1,15 @@
 ---
-title: "Binding Objective-C Libraries"
+title: "Binding Objective-C libraries"
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 ms.technology: xamarin-cross-platform
-author: asb3993
-ms.author: amburns
-ms.date: 06/26/2017
+author: bradumbaugh
+ms.author: brumbaug
+ms.date: 03/06/2018
 ---
 
-# Binding Objective-C Libraries
-
-[//]: # (The original file resides under https://github.com/xamarin/xamarin-macios/tree/master/docs/website/)
-[//]: # (This allows all contributors (including external) to submit, using a PR, updates to the documentation that match the tools changes)
-[//]: # (Modifications outside of xamarin-macios/master will be lost on future updates)
+# Binding Objective-C libraries
 
 When working with Xamarin.iOS or Xamarin.Mac, you might encounter cases where you want to
 consume a third-party Objective-C library. In those situations, you
@@ -46,33 +42,27 @@ project to experiment with bindings.
 
 <a name="Getting_Started" />
 
-# Getting Started
+## Getting started
 
 # [Visual Studio for Mac](#tab/vsmac)
-
 
 The easiest way to create a binding is to create a Xamarin.iOS Binding Project.
 You can do this from Visual Studio for Mac by selecting the project type,
 **iOS > Library > Bindings Library**:
 
-
-[![](objective-c-libraries-images/00-sml.png "Do this from Visual Studio for Mac by selecting the project type, iOS  Library  Bindings Library")](objective-c-libraries-images/00.png)
-
+[![](objective-c-libraries-images/00-sml.png "Do this from Visual Studio for Mac by selecting the project type, iOS Library Bindings Library")](objective-c-libraries-images/00.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
-
 
 The easiest way to create a binding is to create a Xamarin.iOS Binding Project.
 You can do this from Visual Studio on Windows by selecting the project type,
 **Visual C# > iOS > Bindings Library (iOS)**:
 
-
-[![](objective-c-libraries-images/00vs-sml.png "iOS  Bindings Library iOS")](objective-c-libraries-images/00vs.png)
+[![](objective-c-libraries-images/00vs-sml.png "iOS Bindings Library iOS")](objective-c-libraries-images/00vs.png#lightbox)
 
 > [!IMPORTANT]
 > Note: Binding Projects for **Xamarin.Mac** are only supported in
 > Visual Studio for Mac.
-
 
 -----
 
@@ -90,7 +80,7 @@ includes enumeration values and structures that your code might use.
 
 <a name="Binding_an_API" />
 
-# Binding an API
+## Binding an API
 
 To do a comprehensive binding, you will want to understand the Objective-C
 API definition and familiarize yourself with the .NET Framework Design
@@ -147,10 +137,9 @@ components:
 -  Optional: extra sources that might expand the generated binding, or provide a more C# friendly API (any C# files that you add to the project).
 -  The native library that you are binding.
 
-
 This chart shows the relationship between the files:
 
- [ ![](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png "This chart shows the relationship between the files")](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png)
+ [![](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png "This chart shows the relationship between the files")](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png#lightbox)
 
 The API Definition file: will only contain namespaces and interface
 definitions (with any members that an interface can contain) and
@@ -207,7 +196,7 @@ the extension ".a". When you do this, Visual Studio for Mac will add two
 files: the `.a` file and an automatically populated C# file that
 contains information about what the native library contains:
 
- [ ![](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png "Native libraries by convention start with the word lib and end with the extension .a")](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png)
+ [![](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png "Native libraries by convention start with the word lib and end with the extension .a")](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png#lightbox)
 
 The contents of the `libMagicChord.linkwith.cs` file has information about how
 this library can be used and instructs your IDE to package this binary into
@@ -232,8 +221,7 @@ this is merely a contract
 
  <a name="The_API_definition_file" />
 
-
-# The API definition file
+## The API definition file
 
 The API definition file consists of a number of interfaces. The interfaces in
 the API definition will be turned into a class declaration and they must be
@@ -251,7 +239,7 @@ attributes to drive the binding.
 
 <a name="Binding_Methods" />
 
-## Binding Methods
+### Binding methods
 
 The simplest binding you can do is to bind a method. Just declare a
 method in the interface with the C# naming conventions and decorate
@@ -307,7 +295,7 @@ leaked.
 
 <a name="Binding_Properties" />
 
-## Binding Properties
+### Binding properties
 
 Just like methods, Objective-C properties are bound using the
 [[Export]](~/cross-platform/macios/binding/binding-types-reference.md)
@@ -381,7 +369,7 @@ The [[NullAllowed]](~/cross-platform/macios/binding/binding-types-reference.md) 
 string Text { get; [NullAllowed] set; }
 ```
 
-### Caveats of Binding Custom Controls
+#### Caveats of binding custom controls
 
 The following caveats should be considered when setting up the binding for a custom control:
 
@@ -395,8 +383,7 @@ Failure to observe any of the above listed caveats can result in the binding sil
 
 <a name="MutablePattern" />
 
-### Objective-C Mutable Pattern and Properties
-
+#### Objective-C mutable pattern and properties
 
 Objective-C frameworks use an idiom where some classes are
 immutable with a mutable subclass.   For example `NSString` is
@@ -434,8 +421,7 @@ interface MyMutableTree {
 
  <a name="Binding_Constructors" />
 
-
-## Binding Constructors
+### Binding constructors
 
 The **btouch-native** tool will automatically generate fours
 constructors in your class, for a given class `Foo`, it generates:
@@ -444,7 +430,6 @@ constructors in your class, for a given class `Foo`, it generates:
 -  `Foo (NSCoder)`: the constructor used during deserialization of NIB files (maps to Objective-C's "initWithCoder:" constructor).
 -  `Foo (IntPtr handle)`: the constructor for handle-based creation, this is invoked by the runtime when the runtime needs to expose a managed object from an unmanaged object.
 -  `Foo (NSEmptyFlag)`: this is used by derived classes to prevent double initialization.
-
 
 For constructors that you define, they need to be declared using the
 following signature inside the Interface definition: they must return
@@ -459,8 +444,7 @@ IntPtr Constructor (CGRect frame);
 
  <a name="Binding_Protocols" />
 
-
-## Binding Protocols
+### Binding protocols
 
 As described in the API design document, in the section [discussing
 Models and Protocols](~/ios/internals/api-design/index.md),
@@ -621,7 +605,7 @@ interface MyTool {
 The above is needed because at binding time the `IMyProtocol` would not
 exist, that is why you need to provide an empty interface.
 
-### Adopting Protocol Generated Interfaces
+#### Adopting protocol-generated interfaces
 
 Whenever you implement one of the interfaces generated for
 the protocols, like this:
@@ -633,8 +617,6 @@ class MyDelegate : NSObject, IUITableViewDelegate {
     }
 }
 ```
-
-
 
 The implementation for the interface methods automatically gets
 exported with the proper name, so it is equivalent to this:
@@ -653,8 +635,7 @@ implicitly or explicitly.
 
 <a name="Binding_Class_Extensions" />
 
-
-## Binding Class Extensions
+### Binding class extensions
 
 <!--In Objective-C it is possible to extend classes with new methods,
 similar in spirit to C#'s extension methods. When one of these methods
@@ -693,8 +674,7 @@ interface NSStringDrawingExtensions {
 
  <a name="Binding_Objective-C_Argument_Lists" />
 
-
-## Binding Objective-C Argument Lists
+### Binding Objective-C argument lists
 
 Objective-C supports variadic arguments, you can use the following
 technique described by Zach Gris on [this
@@ -739,8 +719,7 @@ public void AppendWorkers(params Worker[] workers)
 
  <a name="Binding_Fields" />
 
-
-## Binding Fields
+### Binding fields
 
 Sometimes you will want to access public fields that were declared in a
 	library.
@@ -785,7 +764,6 @@ The `[Field]` attribute can be applied to the following data types:
 -  `System.Drawing.SizeF`
 -  `CGSize`
 
-
 In addition to the native field name, you can specify the library name where
 the field is located, by passing the library name:
 
@@ -810,8 +788,7 @@ interface LonelyClass {
 
 <a name="Binding_Enums" />
 
-
-## Binding Enums
+### Binding enums
 
 You can add `enum` directly in your binding files to makes it easier
 to use them inside API definitions - without using a different source
@@ -871,8 +848,7 @@ An alternative is to mark the original, `NSString`-based, definition as
 `[Protected]`. This will allow subclassing to work, when required, and
 the wrap'ed version will still work and call the overriden method.
 
-
-## Binding NSValue NSNumber and NSString to a better type
+### Binding NSValue, NSNumber, and NSString to a better type
 
 The [[BindAs]](~/cross-platform/macios/binding/binding-types-reference.md) attribute allows binding `NSNumber`, `NSValue` and `NSString`(enums) into more accurate C# types. The attribute can be used to create better, more accurate, .NET API over the native API.
 
@@ -918,8 +894,7 @@ Please see [[BindAs] documentation](~/cross-platform/macios/binding/binding-type
 
  <a name="Binding_Notifications" />
 
-
-## Binding Notifications
+### Binding notifications
 
 Notifications are messages that are posted to the
 `NSNotificationCenter.DefaultCenter` and are used as a mechanism to
@@ -992,7 +967,6 @@ receiving notifications, like this:
 token.Dispose ();
 ```
 
-
 Or you can call
 [NSNotification.DefaultCenter.RemoveObserver](https://developer.xamarin.com/api/member/Foundation.NSNotificationCenter.RemoveObserver/p/Foundation.NSObject/)
 and pass the token. If your notification contains parameters, you
@@ -1038,8 +1012,7 @@ var token = MyClass.NotificationsObserveScreenChanged ((notification) => {
 
  <a name="Binding_Categories" />
 
-
-## Binding Categories
+### Binding categories
 
 Categories are an Objective-C mechanism used to extend the set of
 methods and properties available in a class.   In practice, they are
@@ -1055,8 +1028,6 @@ extension methods.This is what a category would look like in Objective-C:
 -(void) makeBackgroundRed;
 @end
 ```
-
-
 
 The above example if found on a library would extend instances of
 `UIView` with the method `makeBackgroundRed`.
@@ -1078,8 +1049,6 @@ interface MyUIViewExtension {
 }
 ```
 
-
-
 The above will create a `MyUIViewExtension` a class that contains the
 `MakeBackgroundRed` extension method.  This means that you can now call
 "MakeBackgroundRed" on any `UIView` subclass, giving you the same
@@ -1097,8 +1066,6 @@ functionality, purely for decoration purposes.  Like this:
 picture;
 @end
 ```
-
-
 
 Although you can use the `Category` attribute also for this
 decoration style of declarations, you might as well just add them
@@ -1139,8 +1106,7 @@ interface SocialNetworking {
 
  <a name="Binding_Blocks" />
 
-
-## Binding Blocks
+### Binding blocks
 
 Blocks are a new construct introduced by Apple to bring the functional
 equivalent of C# anonymous methods to Objective-C. For example, the
@@ -1195,8 +1161,7 @@ s.Enumerate ((obj, stop) => {
 
  <a name="GeneratingAsync" />
 
-
-## Asynchronous Methods
+### Asynchronous methods
 
 The binding generator can turn a certain class of methods into
 async-friendly methods (methods that return a Task or Task&lt;T&gt;).
@@ -1220,8 +1185,6 @@ Example:
 void LoadFile (string file, Action<string> completed);
 ```
 
-
-
 The above code will generate both the LoadFile method, as
 	well as:
 
@@ -1232,7 +1195,7 @@ Task<string> LoadFileAsync (string file);
 
 <a name="Surfacing_Strong_Types" />
 
-## Surfacing Strong Types for weak NSDictionary parameters
+### Surfacing strong types for weak NSDictionary parameters
 
 In many places in the Objective-C API, parameters are passed as weakly
 typed `NSDictionary` APIs with specific keys and values, but these are
@@ -1276,10 +1239,9 @@ You need to create a supporting file for this, it does not go into
 your contract API.  This is what you would have to write to create
 your XyzOptions class:
 
-
 ```csharp
 public class XyzOptions : DictionaryContainer {
-#if !COREBUILD
+# if !COREBUILD
     public XyzOptions () : base (new NSMutableDictionary ()) {}
     public XyzOptions (NSDictionary dictionary) : base (dictionary){}
 
@@ -1291,7 +1253,7 @@ public class XyzOptions : DictionaryContainer {
        get { return GetStringValue (XyzOptionsKeys.CaptionKey); }
        set { SetStringValue (XyzOptionsKeys.CaptionKey, value); }
     }
-#endif
+# endif
 }
 ```
 
@@ -1389,15 +1351,13 @@ that you want to use.
 
  <a name="Type_mappings" />
 
-# Type mappings
-
+## Type mappings
 
 This section covers how Objective-C types are mapped to C# types.
 
 <a name="Simple_Types" />
 
-
-## Simple Types
+### Simple types
 
 The following table shows how you should map types from the
 Objective-C and CocoaTouch world to the Xamarin.iOS world:
@@ -1606,8 +1566,7 @@ Objective-C and CocoaTouch world to the Xamarin.iOS world:
 
  <a name="Arrays" />
 
-
-## Arrays
+### Arrays
 
 The Xamarin.iOS runtime automatically takes care of converting C#
 arrays to `NSArrays` and doing the conversion back, so for example the
@@ -1641,8 +1600,7 @@ in the array, you can use `NSObject []` as the return value.
 
  <a name="Selectors" />
 
-
-## Selectors
+### Selectors
 
 Selectors appear on the Objective-C API as the special type
 "SEL". When binding a selector, you would map the type to
@@ -1723,8 +1681,7 @@ class DialogPrint : UIViewController {
 
  <a name="Strings" />
 
-
-## Strings
+### Strings
 
 When you are binding a method that takes an `NSString`, you can replace
 that with a C# string type, both on return types and parameters.
@@ -1737,13 +1694,12 @@ NSString](~/ios/internals/api-design/nsstring.md) document.
 In some rare cases, an API might expose a C-like string (`char *`)
 instead of an Objective-C string (`NSString *`). In those cases, you can
 annotate the parameter with the
-[`[PlainString]`](~/cross-platform/macios/binding/binding-types-reference.md)
+[`[PlainString]`](~/cross-platform/macios/binding/binding-types-reference.md#plainstring)
 attribute.
 
  <a name="outref_parameters" />
 
-
-## out/ref parameters
+### out/ref parameters
 
 Some APIs return values in their parameters, or pass parameters by reference.
 
@@ -1771,8 +1727,7 @@ void SomeString (ref NSObject byref);
 
  <a name="Memory_management_attributes" />
 
-
-## Memory management attributes
+### Memory management attributes
 
 When you use the `[Export]` attribute and you are passing data that will
 be retained by the called method, you can specify the argument
@@ -1789,16 +1744,13 @@ semantics available are:
 -  Copy:
 -  Retain:
 
-
  <a name="Style_Guidelines" />
 
-
-## Style Guidelines
+### Style guidelines
 
  <a name="Using_[Internal]" />
 
-
-### Using [Internal]
+#### Using [Internal]
 
 You can use the
 [[Internal]](~/cross-platform/macios/binding/binding-types-reference.md)
@@ -1814,8 +1766,7 @@ wrap those types yourself in your own way.
 
  <a name="Event_Handlers_and_Callbacks" />
 
-
-# Event Handlers and Callbacks
+## Event handlers and callbacks
 
 Objective-C classes typically broadcast notifications or request
 information by sending a message on a delegate class (Objective-C
@@ -1866,7 +1817,6 @@ To wrap the class you must:
 
 -  In your host class, add to your `[BaseType]` declaration the type that is acting as its delegate and the C# name that you exposed. In our example above those are "typeof (MyClassDelegate)" and "WeakDelegate" respectively.
 -  In your delegate class, on each method that has more than two parameters, you need to specify the type that you want to use for the automatically generated EventArgs class.
-
 
 The binding generator is not limited to wrapping only a single event
 destination, it is possible that some Objective-C classes to emit
@@ -1944,8 +1894,7 @@ will be returned.
 
  <a name="Enumerations_and_Base_Types" />
 
-
-# Enumerations and Base Types
+## Enumerations and base types
 
 You can also reference enumerations or base types that are not
 directly supported by the btouch interface definition system. To do
@@ -1955,8 +1904,7 @@ btouch.
 
  <a name="Linking_the_Dependencies" />
 
-
-# Linking the Dependencies
+## Linking the dependencies
 
 If you are binding APIs that are not part of your application, you
 need to make sure that your executable is linked against these
@@ -1998,8 +1946,7 @@ runtime for Xamarin.iOS.
 
  <a name="Assisted_References" />
 
-
-# Assisted References
+## Assisted references
 
 Some transient objects like action sheets and alert boxes are
 cumbersome to keep track of for developers and the binding generator
@@ -2056,8 +2003,7 @@ class Demo {
 
  <a name="Inheriting_Protocols" />
 
-
-# Inheriting Protocols
+## Inheriting protocols
 
 As of Xamarin.iOS v3.2, we support inheriting from protocols that have
 been marked with the `[Model]` property. This is useful in certain API
@@ -2070,7 +2016,6 @@ but in these cases now we can have the `MKShape` class inherit from the
 `MKOverlay` protocol and it will generate all the required methods
 automatically.
 
-
-## Related Links
+### Related links
 
 - [Binding Sample](https://developer.xamarin.com/samples/BindingSample/)

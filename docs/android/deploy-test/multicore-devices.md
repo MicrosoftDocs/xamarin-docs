@@ -14,7 +14,6 @@ ms.date: 02/05/2018
 
 _Android can run on several different computer architectures. This document discusses the different CPU architectures that may be employed for a Xamarin.Android application. This document will also explain how Android applications are packaged to support different CPU architectures. The Application Binary Interface (ABI) will be introduced, and guidance will be provided regarding which ABIs to use in a Xamarin.Android application._
 
-<a name="Overview" />
 
 ## Overview
 
@@ -67,14 +66,12 @@ there is an `armeabi-v7a` directory present and the device is an
 > [!NOTE]
 > **Note**: Xamarin.Android will ensure that `.so` are added to the APK in the correct order. This bug should not be an issue for users of Xamarin.Android.
 
-<a name="ABI_Descriptions" />
 
 ### ABI Descriptions
 
 Each ABI supported by Android is identified by a unique name.
 
 
-<a name="armeabi" />
 
 #### armeabi
 
@@ -91,7 +88,6 @@ below). Using `aremabi` code on a single-core `armeabi-v7a` device is
 safe.
 
 
-<a name="armeabi-v7a" />
 
 #### armeabi-v7a
 
@@ -104,7 +100,6 @@ performance improvements over an application that uses `armeabi`.
 **Note:** `armeabi-v7a` machine code will not run on ARMv5 devices.
 
 
-<a name="arm64-v8a" />
 
 #### arm64-v8a
 
@@ -115,7 +110,6 @@ this architecture (for more information, see
 [Experimental Features](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features)).
 
 
-<a name="x86" />
 
 #### x86
 
@@ -131,10 +125,8 @@ extensions such as:
 
 
 **Note:** Google TV, although it runs on x86, is not supported by Android's NDK or
-by Xamarin.Android. <a name="mips" />
 
 
-<a name="x86_64" />
 
 #### x86_64
 
@@ -154,7 +146,6 @@ supported by Android.
 but will be in a future release.
 
 
-<a name="APK_File_Format" />
 
 #### APK File Format
 
@@ -164,7 +155,7 @@ application. It is a `.zip` file, but uses the `.apk` file name
 extension. When expanded, the contents of an `.apk` created by
 Xamarin.Android can be seen in the screenshot below:
 
-[ ![Contents of the .apk](multicore-devices-images/00.png)](multicore-devices-images/00.png)
+[![Contents of the .apk](multicore-devices-images/00.png)](multicore-devices-images/00.png#lightbox)
 
 A quick description of the contents of the `.apk` file:
 
@@ -192,7 +183,6 @@ A quick description of the contents of the `.apk` file:
 > **Note**: The file `libmonodroid.so` is the native library required by all Xamarin.Android applications.
 
 
-<a name="Android_Device_ABI_Support" />
 
 #### Android Device ABI Support
 
@@ -210,7 +200,6 @@ For example, a typical ARMv5TE device will only have a primary ABI of
 `armeabi-v7a` and a secondary ABI of `armeabi`. A typical x86 device
 would only specify a primary ABI of `x86`.
 
-<a name="Android_Native_Library_Installation" />
 
 ### Android Native Library Installation
 
@@ -347,7 +336,6 @@ $APP/lib/libone.so # from armeabi
 $APP/lib/libtwo.so # from armeabi-v7a
 ```
 
-<a name="Xamarin.Android_and_ABIs" />
 
 ### Xamarin.Android and ABIs
 
@@ -371,7 +359,6 @@ Xamarin.Android 5.1, see
 Xamarin.Android does not currently provide support for `mips`.
 
 
-<a name="Declaring_Supported_ABIs" />
 
 ### Declaring Supported ABI's
 
@@ -389,7 +376,7 @@ In Visual Studio for Mac, the supported architectures may be selected on the
 **Android Build** page of **Project Options**, under the **Advanced**
 tab, as shown in the following screenshot:
 
-[![Android Build Supported ABIs](multicore-devices-images/xs-abi-selections-sml.png)](multicore-devices-images/xs-abi-selections.png)
+[![Android Build Supported ABIs](multicore-devices-images/xs-abi-selections-sml.png)](multicore-devices-images/xs-abi-selections.png#lightbox)
 
 There are some situations when it may be necessary to declare
 additional ABI support such as when:

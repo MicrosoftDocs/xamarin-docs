@@ -18,7 +18,7 @@ _This article covers sandboxing a Xamarin.Mac application for release on the App
 
 When working with C# and .NET in a Xamarin.Mac application, you have the same ability to sandbox an application as you do when working with Objective-C or Swift.
 
-[![An example of the running app](sandboxing-images/intro01.png "An example of the running app")](sandboxing-images/intro01-large.png)
+[![An example of the running app](sandboxing-images/intro01.png "An example of the running app")](sandboxing-images/intro01-large.png#lightbox)
 
 In this article, we'll cover the basics of working with sandboxing in a Xamarin.Mac application and all of the elements that go into sandboxing: container directories, entitlements, user-determined permissions, privilege separation, and kernel enforcement. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
@@ -66,19 +66,19 @@ Let's do the following to create our sample project:
 1. Start Visual Studio for Mac and click the **New Solution..** link.
 2. From the **New Project** dialog box, select **Mac** > **App** > **Cocoa App**: 
 
-    [![Creating a new Cocoa App](sandboxing-images/sample01.png "Creating a new Cocoa App")](sandboxing-images/sample01-large.png)
+    [![Creating a new Cocoa App](sandboxing-images/sample01.png "Creating a new Cocoa App")](sandboxing-images/sample01-large.png#lightbox)
 3. Click the **Next** button, enter `MacSandbox` for the project name and click the **Create** button: 
 
-    [![Entering the app name](sandboxing-images/sample02.png "Entering the app name")](sandboxing-images/sample02-large.png)
+    [![Entering the app name](sandboxing-images/sample02.png "Entering the app name")](sandboxing-images/sample02-large.png#lightbox)
 4. In the **Solution Pad**, double-click the **Main.storyboard** file to open it for editing in Xcode: 
 
-    [![Editing the main storyboard](sandboxing-images/sample03.png "Editing the main storyboard")](sandboxing-images/sample03-large.png)
+    [![Editing the main storyboard](sandboxing-images/sample03.png "Editing the main storyboard")](sandboxing-images/sample03-large.png#lightbox)
 5. Drag a **Web View** onto the Window, size it to fill the content area and set it to grow and shrink with the window: 
 
-    [![Adding a web view](sandboxing-images/sample04.png "Adding a web view")](sandboxing-images/sample04-large.png)
+    [![Adding a web view](sandboxing-images/sample04.png "Adding a web view")](sandboxing-images/sample04-large.png#lightbox)
 6. Create an outlet for the web view called `webView`: 
 
-    [![Creating a new outlet](sandboxing-images/sample05.png "Creating a new outlet")](sandboxing-images/sample05-large.png)
+    [![Creating a new outlet](sandboxing-images/sample05.png "Creating a new outlet")](sandboxing-images/sample05-large.png#lightbox)
 7. Return to Visual Studio for Mac and double-click the **ViewController.cs** file in the **Solution Pad** to open it for editing.
 8. Add the following using statement: `using WebKit;`
 9. Make the `ViewDidLoad` method look like the following: 
@@ -95,7 +95,7 @@ public override void AwakeFromNib ()
 
 Run you application and ensure that the Apple Website is displayed in the window as follows:
 
-[![Showing an example app run](sandboxing-images/sample06.png "Showing an example app run")](sandboxing-images/sample06-large.png)
+[![Showing an example app run](sandboxing-images/sample06.png "Showing an example app run")](sandboxing-images/sample06-large.png#lightbox)
 
 <a name="Signing_and_Provisioning_the_App" />
 
@@ -107,34 +107,34 @@ Let do the following:
 
 1. Log into the Apple Developer Portal: 
 
-    [![Logging into the Apple Developer Portal](sandboxing-images/sign01.png "Logging into the Apple Developer Portal")](sandboxing-images/sign01-large.png)
+    [![Logging into the Apple Developer Portal](sandboxing-images/sign01.png "Logging into the Apple Developer Portal")](sandboxing-images/sign01-large.png#lightbox)
 2. Select **Certificates, Identifiers & Profiles**: 
 
-    [![Selecting Certificates, Identifiers & Profiles](sandboxing-images/sign02.png "Selecting Certificates, Identifiers & Profiles")](sandboxing-images/sign02-large.png)
+    [![Selecting Certificates, Identifiers & Profiles](sandboxing-images/sign02.png "Selecting Certificates, Identifiers & Profiles")](sandboxing-images/sign02-large.png#lightbox)
 3. Under **Mac Apps**, select **Identifiers**: 
 
-    [![Selecting Identifiers](sandboxing-images/sign03.png "Selecting Identifiers")](sandboxing-images/sign03-large.png)
+    [![Selecting Identifiers](sandboxing-images/sign03.png "Selecting Identifiers")](sandboxing-images/sign03-large.png#lightbox)
 4. Create a new ID for the application: 
 
-    [![Creating a new App ID](sandboxing-images/sign04.png "Creating a new App ID")](sandboxing-images/sign04-large.png)
+    [![Creating a new App ID](sandboxing-images/sign04.png "Creating a new App ID")](sandboxing-images/sign04-large.png#lightbox)
 5. Under **Provisioning Profiles**, select **Development**: 
 
-    [![Selecting Development](sandboxing-images/sign05.png "Selecting Development")](sandboxing-images/sign05-large.png)
+    [![Selecting Development](sandboxing-images/sign05.png "Selecting Development")](sandboxing-images/sign05-large.png#lightbox)
 6. Create a new profile and select **Mac App Development**: 
 
-    [![Creating a new profile](sandboxing-images/sign06.png "Creating a new profile")](sandboxing-images/sign06-large.png)
+    [![Creating a new profile](sandboxing-images/sign06.png "Creating a new profile")](sandboxing-images/sign06-large.png#lightbox)
 7. Select the App ID we created above: 
 
-    [![Selecting the App ID](sandboxing-images/sign07.png "Selecting the App ID")](sandboxing-images/sign07-large.png)
+    [![Selecting the App ID](sandboxing-images/sign07.png "Selecting the App ID")](sandboxing-images/sign07-large.png#lightbox)
 8. Select the Developers for this profile: 
 
-    [![Adding developers](sandboxing-images/sign08.png "Adding developers")](sandboxing-images/sign08-large.png)
+    [![Adding developers](sandboxing-images/sign08.png "Adding developers")](sandboxing-images/sign08-large.png#lightbox)
 9. Select the computers for this profile: 
 
-    [![Selecting the allowed computers](sandboxing-images/sign09.png "Selecting the allowed computers")](sandboxing-images/sign09-large.png)
+    [![Selecting the allowed computers](sandboxing-images/sign09.png "Selecting the allowed computers")](sandboxing-images/sign09-large.png#lightbox)
 10. Give the profile a Name: 
 
-    [![Giving the profile a name](sandboxing-images/sign10.png "Giving the profile a name")](sandboxing-images/sign10-large.png)
+    [![Giving the profile a name](sandboxing-images/sign10.png "Giving the profile a name")](sandboxing-images/sign10-large.png#lightbox)
 11. Click the **Done** button.
 
 > [!IMPORTANT]
@@ -156,10 +156,10 @@ Next, we need to select the new App ID and Provisioning Profile in our Xamarin.M
 1. In the **Solution Pad**, double-click the **Info.plist** file to open it for editing.
 2. Ensure that the **Bundle Identifier** matches our App ID we created above (example: `com.appracatappra.MacSandbox`): 
 
-    [![Editing the Bundle Identifier](sandboxing-images/sign13.png "Editing the Bundle Identifier")](sandboxing-images/sign13-large.png)
+    [![Editing the Bundle Identifier](sandboxing-images/sign13.png "Editing the Bundle Identifier")](sandboxing-images/sign13-large.png#lightbox)
 3. Next, double-click the **Entitlements.plist** file and ensure our **iCloud Key-Value Store** and the **iCloud Containers** all match our App ID we created above (example: `com.appracatappra.MacSandbox`): 
 
-    [![Editing the Entitlements.plist file](sandboxing-images/sign17.png "Editing the Entitlements.plist file")](sandboxing-images/sign17-large.png)
+    [![Editing the Entitlements.plist file](sandboxing-images/sign17.png "Editing the Entitlements.plist file")](sandboxing-images/sign17-large.png#lightbox)
 3. Save your changes.
 4. In the **Solution Pad**, double-click the project file to open its Options for editing:  
 
@@ -176,7 +176,7 @@ Next, we need to select the new App ID and Provisioning Profile in our Xamarin.M
 
 At this point you should try to run the application and make sure that everything is signed and provisioned correctly. If the app still runs as before, everything is good. In the event of a failure, you might get a dialog box like the following one:
 
-[![An example provisioning issue dialog](sandboxing-images/sign16.png "An example provisioning issue dialog")](sandboxing-images/sign16-large.png)
+[![An example provisioning issue dialog](sandboxing-images/sign16.png "An example provisioning issue dialog")](sandboxing-images/sign16-large.png#lightbox)
 
 Here are the most common causes of provisioning and signing issues:
 
@@ -193,12 +193,12 @@ You enable the App Sandbox by selecting a checkbox in your projects options. Do 
 1. In the **Solution Pad**, double-click the **Entitlements.plist** file to open it for editing.
 2. Check both **Enable Entitlements** and **Enable App Sandboxing**: 
 
-    [![Editing entitlements and enabling sandboxing](sandboxing-images/sign17.png "Editing entitlements and enabling sandboxing")](sandboxing-images/sign17-large.png)
+    [![Editing entitlements and enabling sandboxing](sandboxing-images/sign17.png "Editing entitlements and enabling sandboxing")](sandboxing-images/sign17-large.png#lightbox)
 3. Save your changes.
 
 At this point, you have enabled the App Sandbox but you have not provided the required network access for the Web View. If you run the application now, you should get a blank window:
 
-[![Showing the web access being blocked](sandboxing-images/sample08.png "Showing the web access being blocked")](sandboxing-images/sample08-large.png)
+[![Showing the web access being blocked](sandboxing-images/sample08.png "Showing the web access being blocked")](sandboxing-images/sample08-large.png#lightbox)
 
 ### Verifying that the app is sandboxed
 
@@ -206,25 +206,25 @@ Aside from the resource blocking behavior, there are three main ways to tell if 
 
 1. In Finder, check the contents of the `~/Library/Containers/` folder - If the app is sandboxed, there will be a folder named like your app's Bundle Identifier (example: `com.appracatappra.MacSandbox`): 
 
-    [![Opening the app's bundle](sandboxing-images/sample09.png "Opening the app's bundle")](sandboxing-images/sample09-large.png)
+    [![Opening the app's bundle](sandboxing-images/sample09.png "Opening the app's bundle")](sandboxing-images/sample09-large.png#lightbox)
 2. The system sees the app as sandboxed in the Activity Monitor:
     - Launch Activity Monitor (under `/Applications/Utilities`). 
     - Choose **View** > **Columns** and ensure that the **Sandbox** menu item is checked.
     - Ensure that the Sandbox column reads `Yes` for your application: 
 
-    [![Checking the app in the Activity Monitor](sandboxing-images/sample10.png "Checking the app in the Activity Monitor")](sandboxing-images/sample10-large.png)
+    [![Checking the app in the Activity Monitor](sandboxing-images/sample10.png "Checking the app in the Activity Monitor")](sandboxing-images/sample10-large.png#lightbox)
 3. Check that the app binary is sandboxed:
     - Start the Terminal app.
     - Navigate to the applications `bin` directory.
     - Issue this command: `codesign -dvvv --entitlements :- executable_path` (where `executable_path` is the path to your application): 
 
-    [![Checking the app on the command line](sandboxing-images/sample11.png "Checking the app on the command line")](sandboxing-images/sample11-large.png)
+    [![Checking the app on the command line](sandboxing-images/sample11.png "Checking the app on the command line")](sandboxing-images/sample11-large.png#lightbox)
 
 ### Debugging a sandboxed app
 
 The debugger connects to Xamarin.Mac apps through TCP, which means that by default when you enable sandboxing, it is unable to connect to the app, so if you try to run the app without the proper permissions enabled, you get an error *“Unable to connect to the debugger”*. 
 
-[![Setting the required options](sandboxing-images/debug01.png "Setting the required options")](sandboxing-images/debug01-large.png)
+[![Setting the required options](sandboxing-images/debug01.png "Setting the required options")](sandboxing-images/debug01-large.png#lightbox)
 
 The **Allow Outgoing Network Connections (Client)** permission is the one required for the debugger, enabling this one will allow debugging normally. Since you can’t debug without it, we have updated the `CompileEntitlements` target for `msbuild` to automatically add that permission to the entitlements for any app that is sandboxed for debug builds only. Release builds should use the entitlements specified in the entitlements file, unmodified.
 
@@ -244,7 +244,7 @@ Do the following:
 2. Open the **Console** application (from `/Applications/Utilties/`).
 3. Select **All Messages** in the sidebar and enter `sandbox` in the search: 
 
-    [![An example of a sandboxing issue in the console](sandboxing-images/resolve01.png "An example of a sandboxing issue in the console")](sandboxing-images/resolve01-large.png)
+    [![An example of a sandboxing issue in the console](sandboxing-images/resolve01.png "An example of a sandboxing issue in the console")](sandboxing-images/resolve01-large.png#lightbox)
 
 For our example app above, you can see that the Kernal is blocking the `network-outbound` traffic because of the App Sandbox, since we have not requested that right.
 
@@ -257,7 +257,7 @@ Do the following:
 1. In the **Solution Pad**, double-click the **Entitlements.plist** file to open it for editing.
 2. Under the **Entitlements** section, check the **Allow Outgoing Network Connections (Client)** checkbox: 
 
-    [![Editing the entitlements](sandboxing-images/sign17.png "Editing the entitlements")](sandboxing-images/sign17-large.png)
+    [![Editing the entitlements](sandboxing-images/sign17.png "Editing the entitlements")](sandboxing-images/sign17-large.png#lightbox)
 3. Save the changes to the application.
 
 If we do the above for our example app, then build and run it, the web content will now be displayed as expected.
@@ -280,7 +280,7 @@ By enabling the App Sandbox, you remove all but a minimal set of privileges, whi
 
 You modify your application's App Sandbox Resources by editing its **Entitlements.plist** file and checking or selecting the rights required from the editors dropdown boxes:
 
-[![Editing the entitlements](sandboxing-images/sign17.png "Editing the entitlements")](sandboxing-images/sign17-large.png)
+[![Editing the entitlements](sandboxing-images/sign17.png "Editing the entitlements")](sandboxing-images/sign17-large.png#lightbox)
 
 ### Container directories and file system access
 

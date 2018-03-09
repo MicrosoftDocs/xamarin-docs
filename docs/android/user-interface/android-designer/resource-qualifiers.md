@@ -14,7 +14,6 @@ ms.date: 01/29/2018
 
 _This topic explains how to define resources that will be used only when some qualifier values are matched. A simple example is a language-qualified string resource. A string resource can be defined as the default, with other alternative resources defined to be used for additional languages. All resource types can be qualified, including the layout itself._
 
-<a name="Custom_Device_Configurations" />
 
 ## Custom Device Configurations
 
@@ -34,11 +33,11 @@ shown below:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Device Selector menu](resource-qualifiers-images/vs/01-device-selector-sml.png)](resource-qualifiers-images/vs/01-device-selector.png)
+[![Device Selector menu](resource-qualifiers-images/vs/01-device-selector-sml.png)](resource-qualifiers-images/vs/01-device-selector.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Device Selector menu](resource-qualifiers-images/xs/01-device-selector-sml.png)](resource-qualifiers-images/xs/01-device-selector.png)
+[![Device Selector menu](resource-qualifiers-images/xs/01-device-selector-sml.png)](resource-qualifiers-images/xs/01-device-selector.png#lightbox)
 
 -----
 
@@ -50,11 +49,11 @@ presented:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![AVD Manager](resource-qualifiers-images/vs/02-device-definitions-sml.png)](resource-qualifiers-images/vs/02-device-definitions.png)
+[![AVD Manager](resource-qualifiers-images/vs/02-device-definitions-sml.png)](resource-qualifiers-images/vs/02-device-definitions.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![AVD Manager](resource-qualifiers-images/xs/02-device-definitions-sml.png)](resource-qualifiers-images/xs/02-device-definitions.png)
+[![AVD Manager](resource-qualifiers-images/xs/02-device-definitions-sml.png)](resource-qualifiers-images/xs/02-device-definitions.png#lightbox)
 
 -----
 
@@ -68,11 +67,11 @@ For example, selecting the **Nexus 5** definition and clicking
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Clone Device](resource-qualifiers-images/vs/03-clone-sml.png)](resource-qualifiers-images/vs/03-clone.png)
+[![Clone Device](resource-qualifiers-images/vs/03-clone-sml.png)](resource-qualifiers-images/vs/03-clone.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Clone Device](resource-qualifiers-images/xs/03-clone-sml.png)](resource-qualifiers-images/xs/03-clone.png)
+[![Clone Device](resource-qualifiers-images/xs/03-clone-sml.png)](resource-qualifiers-images/xs/03-clone.png#lightbox)
 
 -----
 
@@ -84,11 +83,11 @@ device definition is landscape-only:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Custom Device](resource-qualifiers-images/vs/04-custom-sml.png)](resource-qualifiers-images/vs/04-custom.png)
+[![Custom Device](resource-qualifiers-images/vs/04-custom-sml.png)](resource-qualifiers-images/vs/04-custom.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Custom Device](resource-qualifiers-images/xs/04-custom-sml.png)](resource-qualifiers-images/xs/04-custom.png)
+[![Custom Device](resource-qualifiers-images/xs/04-custom-sml.png)](resource-qualifiers-images/xs/04-custom.png#lightbox)
 
 -----
 
@@ -98,11 +97,11 @@ appears in the **Device Definitions** list:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Updated device definitions](resource-qualifiers-images/vs/05-updated-device-definitions-sml.png)](resource-qualifiers-images/vs/05-updated-device-definitions.png)
+[![Updated device definitions](resource-qualifiers-images/vs/05-updated-device-definitions-sml.png)](resource-qualifiers-images/vs/05-updated-device-definitions.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Updated device definitions](resource-qualifiers-images/xs/05-updated-device-definitions-sml.png)](resource-qualifiers-images/xs/05-updated-device-definitions.png)
+[![Updated device definitions](resource-qualifiers-images/xs/05-updated-device-definitions-sml.png)](resource-qualifiers-images/xs/05-updated-device-definitions.png#lightbox)
 
 -----
 
@@ -115,11 +114,11 @@ list, try restarting the IDE):
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Custom device appears in device list](resource-qualifiers-images/vs/06-nexus-5-custom-sml.png)](resource-qualifiers-images/vs/06-nexus-5-custom.png)
+[![Custom device appears in device list](resource-qualifiers-images/vs/06-nexus-5-custom-sml.png)](resource-qualifiers-images/vs/06-nexus-5-custom.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Custom device appears in device list](resource-qualifiers-images/xs/06-nexus-5-custom-sml.png)](resource-qualifiers-images/xs/06-nexus-5-custom.png)
+[![Custom device appears in device list](resource-qualifiers-images/xs/06-nexus-5-custom-sml.png)](resource-qualifiers-images/xs/06-nexus-5-custom.png#lightbox)
 
 -----
 
@@ -129,16 +128,15 @@ the customizations created earlier (in this case, landscape-only mode):
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Custom device in use](resource-qualifiers-images/vs/07-custom-in-use-sml.png)](resource-qualifiers-images/vs/07-custom-in-use.png)
+[![Custom device in use](resource-qualifiers-images/vs/07-custom-in-use-sml.png)](resource-qualifiers-images/vs/07-custom-in-use.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Custom device in use](resource-qualifiers-images/xs/07-custom-in-use-sml.png)](resource-qualifiers-images/xs/07-custom-in-use.png)
+[![Custom device in use](resource-qualifiers-images/xs/07-custom-in-use-sml.png)](resource-qualifiers-images/xs/07-custom-in-use.png#lightbox)
 
 -----
 
 
-<a name="resource_qualifier_options" />
 
 ## Resource Qualifier Options
 
@@ -148,11 +146,11 @@ options:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Resource Qualifier Options](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png)
+[![Resource Qualifier Options](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Resource Qualifier Options](resource-qualifiers-images/xs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt.png)
+[![Resource Qualifier Options](resource-qualifiers-images/xs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt.png#lightbox)
 
 -----
 
@@ -171,7 +169,6 @@ can select and configure resource qualifiers (as explained
 next).
 
 
-<a name="Language_and_Region" />
 
 ### Language
 
@@ -182,11 +179,11 @@ add a new language to the list:
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Add language/region](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png)
+[![Add language/region](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Add language/region](resource-qualifiers-images/xs/09-add-language-region-sml.png)](resource-qualifiers-images/xs/09-add-language-region.png)
+[![Add language/region](resource-qualifiers-images/xs/09-add-language-region-sml.png)](resource-qualifiers-images/xs/09-add-language-region.png#lightbox)
 
 -----
 
@@ -201,7 +198,7 @@ regions:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![List of languages](resource-qualifiers-images/xs/10-languages-sml.png)](resource-qualifiers-images/xs/10-languages.png)
+[![List of languages](resource-qualifiers-images/xs/10-languages-sml.png)](resource-qualifiers-images/xs/10-languages.png#lightbox)
 
 -----
 
@@ -219,7 +216,7 @@ resource:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Language and Region Chosen](resource-qualifiers-images/xs/11-language-region-added-sml.png)](resource-qualifiers-images/xs/11-language-region-added.png)
+[![Language and Region Chosen](resource-qualifiers-images/xs/11-language-region-added-sml.png)](resource-qualifiers-images/xs/11-language-region-added.png#lightbox)
 
 -----
 
@@ -229,7 +226,6 @@ for it, the added language will no longer be shown the next time you
 open the project.
 
 
-<a name="ui_mode" />
 
 ### UI Mode
 
@@ -239,7 +235,7 @@ displayed, such as **Normal**, **Car Dock**, **Desk Dock**,
 
 # [Visual Studio](#tab/vswin)
 
-[ ![UI Mode menu](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png)
+[![UI Mode menu](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
 
 Below this list are the night modes **Not Night** and **Night**,
 followed by the layout directions **Left to Right** and **Right to
@@ -255,7 +251,7 @@ For more information about Android UI modes, see
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![UI Mode menu](resource-qualifiers-images/xs/12-ui-mode-sml.png)](resource-qualifiers-images/xs/12-ui-mode.png)
+[![UI Mode menu](resource-qualifiers-images/xs/12-ui-mode-sml.png)](resource-qualifiers-images/xs/12-ui-mode.png#lightbox)
 
 Below this list are the night modes **Not Night** and **Night**,
 followed by the layout directions **Left to Right** and **Right to
@@ -270,12 +266,11 @@ The last item in the **Resource Qualifier Options** dialog is the
 **Round screen** menu. This menu allows you to select either **Round
 screens** (for use with Android Wear) or **Rectangular screens**:
 
-[ ![Round Screen menu](resource-qualifiers-images/xs/13-round-screen-sml.png)](resource-qualifiers-images/xs/13-round-screen.png)
+[![Round Screen menu](resource-qualifiers-images/xs/13-round-screen-sml.png)](resource-qualifiers-images/xs/13-round-screen.png#lightbox)
 
 -----
 
 
-<a name="Action_Bar" />
 
 ## Action Bar Settings
 
@@ -288,7 +283,7 @@ paintbrush (Theme Editor) icon:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Action Bar settings](resource-qualifiers-images/xs/13b-action-bar-sml.png)](resource-qualifiers-images/xs/13b-action-bar.png)
+[![Action Bar settings](resource-qualifiers-images/xs/13b-action-bar-sml.png)](resource-qualifiers-images/xs/13b-action-bar.png#lightbox)
 
 -----
 
@@ -308,7 +303,6 @@ three Action Bar modes:
     activity.
 
 
-<a name="Themes" />
 
 ## Themes
 
@@ -318,11 +312,11 @@ themes available from the installed Android SDK, as shown below:
 
 # [Visual Studio](#tab/vswin)
 
-[![More Themes list](resource-qualifiers-images/vs/15-theme-menu-sml.png "More Themes list")](resource-qualifiers-images/vs/15-theme-menu.png)
+[![More Themes list](resource-qualifiers-images/vs/15-theme-menu-sml.png "More Themes list")](resource-qualifiers-images/vs/15-theme-menu.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![More Themes list](resource-qualifiers-images/xs/14-theme-menu-sml.png)](resource-qualifiers-images/xs/14-theme-menu.png)
+[![More Themes list](resource-qualifiers-images/xs/14-theme-menu-sml.png)](resource-qualifiers-images/xs/14-theme-menu.png#lightbox)
 
 -----
 
@@ -339,12 +333,11 @@ as shown below:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Light theme is now available](resource-qualifiers-images/xs/15-light-theme-sml.png)](resource-qualifiers-images/xs/15-light-theme.png)
+[![Light theme is now available](resource-qualifiers-images/xs/15-light-theme-sml.png)](resource-qualifiers-images/xs/15-light-theme.png#lightbox)
 
 -----
 
 
-<a name="Android_Version" />
 
 ## Android Version
 
@@ -376,7 +369,7 @@ you will still be limited to the widgets that are available in Android
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![List of Android versions](resource-qualifiers-images/xs/16-android-version-sml.png)](resource-qualifiers-images/xs/16-android-version.png)
+[![List of Android versions](resource-qualifiers-images/xs/16-android-version-sml.png)](resource-qualifiers-images/xs/16-android-version.png#lightbox)
 
 The target framework version can be set in the project's settings under
 the **Project Options > Build > General** section. For more information

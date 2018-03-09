@@ -14,7 +14,10 @@ ms.date: 02/15/2018
 
 _This topic describes Designer features that make it easier for developers to create Material Design-compliant layouts. This section introduces and explains how to use the Material Grid, the Material Color Palette, the Typographic Scale, and the Theme Editor._
 
-<a name="overview" />
+
+> [!Video https://youtube.com/embed/E3_ZjIOzVzY]
+
+**Evolve 2016: Everyone Can Create Beautiful Apps with Material Design**
 
 ## Overview
 
@@ -45,7 +48,6 @@ We'll have look at each of these features and provide examples of how
 to use them.
 
 
-<a name="material_grid" />
 
 ## Material Design Grid
 
@@ -54,11 +56,11 @@ of the Designer:
 
 # [Visual Studio](#tab/vswin)
 
-[![Material Design grid](material-design-features-images/vs/01-material-design-grid-sml.png)](material-design-features-images/vs/01-material-design-grid.png)
+[![Material Design grid](material-design-features-images/vs/01-material-design-grid-sml.png)](material-design-features-images/vs/01-material-design-grid.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Material Design grid](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png)
+[![Material Design grid](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png#lightbox)
 
 -----
 
@@ -75,11 +77,11 @@ These elements can be seen in the followng screenshot:
 
 # [Visual Studio](#tab/vswin)
 
-[![Keyline, spacing, and grid](material-design-features-images/vs/02-grid-and-keylines-sml.png)](material-design-features-images/vs/02-grid-and-keylines.png)
+[![Keyline, spacing, and grid](material-design-features-images/vs/02-grid-and-keylines-sml.png)](material-design-features-images/vs/02-grid-and-keylines.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Keyline, spacing, and grid](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png)
+[![Keyline, spacing, and grid](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png#lightbox)
 
 -----
 
@@ -113,7 +115,7 @@ that allows you to disable/enable the grid, configure the placement of
 keylines, and set the spacings. Note that all values are expressed in
 `dp` (density-independent pixels):
 
-[![Grid, keyline, and spacing configuration](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png)
+[![Grid, keyline, and spacing configuration](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png#lightbox)
 
 To add a new keyline, enter a new offset value in the **Offset** box,
 select a location (**left**, **top**, **right**, or **bottom**) and
@@ -134,13 +136,13 @@ Every Property panel item that accepts a color now has an additional
 icon that you can use to open the Material Design Color Palette, as
 shown in this screenshot:
 
-[![Color icon](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png)
+[![Color icon](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png#lightbox)
 
 When you click this icon, a dialog popover opens that makes it possible
 for you to configure the color of that property from the Material
 Design color palette:
 
-[![Material Design color palette](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png)
+[![Material Design color palette](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png#lightbox)
 
 The top of the color palette displays primary Material Design colors
 while the bottom of the palette displays a range of hues for the
@@ -150,13 +152,13 @@ When you select a hue, the color of the property is changed to the
 selected hue. In the following example, the `Background Tint` of the
 button is changed to *Indigo 500*:
 
-[![Choose Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png)
+[![Choose Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
 
 `Background Tint` is set to the color code for *Indigo 500*
 (`#ff3f51b5`), and the Designer updates the background color of the
 button to reflect this change:
 
-[![Background tint changes](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png)
+[![Background tint changes](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png#lightbox)
 
 For more information about the Material Design color palette, see the
 Material Design
@@ -168,30 +170,29 @@ The **Text Appearance** section of the **Property** pad **Style** tab
 has an icon that lets you select from a `TextAppearance` style that
 conforms to the Material Design specification:
 
-[![Style tab](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png)
+[![Style tab](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png#lightbox)
 
 When you click this icon, it opens the **Typographic Scale** dialog
 popover, which presents a list of pre-configured text styles that you
 can choose from:
 
-[![Text style chooser](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png)
+[![Text style chooser](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png#lightbox)
 
 In the following example, clicking **Display 1** changes the text of
 the button to the larger font of **Display 1**:
 
-[![Display 1 style](material-design-features-images/xs/10-display-1-sml.png)](material-design-features-images/xs/10-display-1.png)
+[![Display 1 style](material-design-features-images/xs/10-display-1-sml.png)](material-design-features-images/xs/10-display-1.png#lightbox)
 
 The text style in the **Typographic Scale** dialog follows the
 **Theme** setting. For example, if the **Light** theme is chosen in the
 Designer, the list of available text styles mirrors the **Light**
 theme:
 
-[![Light theme](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png)
+[![Light theme](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png#lightbox)
 
 -----
 
 
-<a name="theme_editor" />
 
 ## Theme Editor
 
@@ -205,7 +206,7 @@ icon on the toolbar:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Theme Editor icon](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png)
+[![Theme Editor icon](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png#lightbox)
 
 -----
 
@@ -220,11 +221,11 @@ we are using the `Default Theme`):
 
 # [Visual Studio](#tab/vswin)
 
-[![Theme Editor](material-design-features-images/vs/05-theme-editor-sml.png)](material-design-features-images/vs/05-theme-editor.png)
+[![Theme Editor](material-design-features-images/vs/05-theme-editor-sml.png)](material-design-features-images/vs/05-theme-editor.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Theme Editor](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png)
+[![Theme Editor](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png#lightbox)
 
 -----
 
@@ -247,7 +248,6 @@ following tabs to help you edit that color:
 Let's look at each one of these tabs in detail.
 
 
-<a name="theme_edit_inherit_tab" />
 
 ### Inherit Tab
 
@@ -256,11 +256,11 @@ style inheritance for the **Background** color of the **Default Theme**:
 
 # [Visual Studio](#tab/vswin)
 
-[![Inherit Tab](material-design-features-images/vs/06-inherit-tab-sml.png)](material-design-features-images/vs/06-inherit-tab.png)
+[![Inherit Tab](material-design-features-images/vs/06-inherit-tab-sml.png)](material-design-features-images/vs/06-inherit-tab.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Inherit Tab](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png)
+[![Inherit Tab](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
 
 -----
 
@@ -271,7 +271,6 @@ For more information about style inheritance, see
 [Styles and Themes](http://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 
-<a name="theme_edit_color_picker" />
 
 ### Color Picker
 
@@ -279,11 +278,11 @@ The following screenshot illustrates the **Color Picker**:
 
 # [Visual Studio](#tab/vswin)
 
-[![Color Picker](material-design-features-images/vs/07-color-picker-sml.png)](material-design-features-images/vs/07-color-picker.png)
+[![Color Picker](material-design-features-images/vs/07-color-picker-sml.png)](material-design-features-images/vs/07-color-picker.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Color Picker](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png)
+[![Color Picker](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
 
 -----
 
@@ -299,7 +298,6 @@ value through various means:
 The color you choose in the Color Picker is *not* restricted to
 Material Design guidelines or to the set of available color resources.
 
-<a name="theme_edit_resources" />
 
 ### Resources
 
@@ -308,11 +306,11 @@ present in the theme:
 
 # [Visual Studio](#tab/vswin)
 
-[![Resources](material-design-features-images/vs/08-resources-sml.png)](material-design-features-images/vs/08-resources.png)
+[![Resources](material-design-features-images/vs/08-resources-sml.png)](material-design-features-images/vs/08-resources.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Resources](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png)
+[![Resources](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png#lightbox)
 
 -----
 
@@ -323,7 +321,6 @@ the UI may "run together" (because they have the same color) and become
 difficult for the user to distinguish.
 
 
-<a name="theme_edit_material_pallette" />
 
 ### Material Palette
 
@@ -333,7 +330,7 @@ The **Material Palette** tab opens the **Material Design Color
 Palette**. Choosing a color value from this palette constrains your
 color choice so that it is consistent with Material Design guidelines.
 
-[![Material Palette](material-design-features-images/vs/09-material-palette-sml.png)](material-design-features-images/vs/09-material-palette.png)
+[![Material Palette](material-design-features-images/vs/09-material-palette-sml.png)](material-design-features-images/vs/09-material-palette.png#lightbox)
 
 The top of the color palette displays primary Material Design colors
 while the bottom of the palette displays a range of hues for the
@@ -349,7 +346,7 @@ button is changed to *Indigo 500*:
 (`#ff3f51b5`), and the Designer updates the background color to reflect
 this change:
 
-[![Background tint changed](material-design-features-images/vs/11-background-tint-sml.png)](material-design-features-images/vs/11-background-tint.png)
+[![Background tint changed](material-design-features-images/vs/11-background-tint-sml.png)](material-design-features-images/vs/11-background-tint.png#lightbox)
 
 For more information about the Material Design color palette, see the
 Material Design
@@ -362,12 +359,11 @@ described [earlier](#material_palette). Choosing a color value from this palette
 constrains your color choice so that it is consistent with Material
 Design guidelines.
 
-[![Material Palette](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png)
+[![Material Palette](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
 
 -----
 
 
-<a name="theme_create" />
 
 ### Creating a New Theme
 
@@ -381,7 +377,7 @@ new custom theme. First, we'll change the **Background** color to *Blue
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Change background to Blue 900](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png)
+[![Change background to Blue 900](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png#lightbox)
 
 -----
 
@@ -391,11 +387,11 @@ message, *The current theme has unsaved changes*:
 
 # [Visual Studio](#tab/vswin)
 
-[![Unsaved changes warning](material-design-features-images/vs/13-unsaved-changes-sml.png)](material-design-features-images/vs/13-unsaved-changes.png)
+[![Unsaved changes warning](material-design-features-images/vs/13-unsaved-changes-sml.png)](material-design-features-images/vs/13-unsaved-changes.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Unsaved changes warning](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png)
+[![Unsaved changes warning](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png#lightbox)
 
 -----
 
@@ -437,11 +433,11 @@ in the creation of a new theme called **Custom**:
 
 # [Visual Studio](#tab/vswin)
 
-[![Custom theme added](material-design-features-images/vs/14-custom-theme-sml.png)](material-design-features-images/vs/14-custom-theme.png)
+[![Custom theme added](material-design-features-images/vs/14-custom-theme-sml.png)](material-design-features-images/vs/14-custom-theme.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Custom theme added](material-design-features-images/xs/19-custom-theme-sml.png)](material-design-features-images/xs/19-custom-theme.png)
+[![Custom theme added](material-design-features-images/xs/19-custom-theme-sml.png)](material-design-features-images/xs/19-custom-theme.png#lightbox)
 
 -----
 
@@ -449,7 +445,6 @@ in the creation of a new theme called **Custom**:
 Because the currently-selected theme is not a project theme, there is
 no dialog to update the selected theme or to specify a new location.
 
-<a name="summary" />
 
 ## Summary
 

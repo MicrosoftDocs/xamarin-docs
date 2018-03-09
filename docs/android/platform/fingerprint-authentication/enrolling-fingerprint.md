@@ -42,7 +42,7 @@ To setup a screen lock, perform the following steps:
 
 4. From there, follow the sequence to add a fingerprint to the device:
 
-    [![Sequence of screenshots for adding a fingerprint to the device](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png)
+    [![Sequence of screenshots for adding a fingerprint to the device](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png#lightbox)
 
 5. In the final screen you are prompted to place your finger on the fingerprint scanner: 
 

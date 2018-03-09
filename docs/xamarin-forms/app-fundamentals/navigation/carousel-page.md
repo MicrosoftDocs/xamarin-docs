@@ -32,7 +32,7 @@ Swiping from right to left again moves to the third page, while swiping from lef
 
 <!--
 > [!NOTE]
-> **Note**: The [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) has been deprecated, and will be removed from Xamarin.Forms in a future release. Instead, the [`CarouselView`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselView/) should be used to provide a gallery-like view, where users can swipe from side to side to move through a collection of items.
+> The [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) has been deprecated, and will be removed from Xamarin.Forms in a future release. Instead, the [`CarouselView`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselView/) should be used to provide a gallery-like view, where users can swipe from side to side to move through a collection of items.
 -->
 
 ## Creating a CarouselPage
@@ -45,7 +45,7 @@ Two approaches can be used to create a [`CarouselPage`](https://developer.xamari
 With both approaches, the `CarouselPage` will then display each page in turn, with a swipe interaction moving to the next page to be displayed. This navigation experience will feel natural and familiar to Windows Phone users.
 
 > [!NOTE]
-> **Note**: A [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) can only be populated with [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instances, or `ContentPage` derivatives.
+> A [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) can only be populated with [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instances, or `ContentPage` derivatives.
 
 <a name="Populating_a_CarouselPage_with_a_Page_Collection" />
 
@@ -138,7 +138,7 @@ public class MainPageCS : CarouselPage
 Each [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) simply displays a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) for a particular color and a [`BoxView`](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) of that color.
 
 > [!NOTE]
-> **Note**: The [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) does not support UI virtualization. Therefore, performance may be affected if the `CarouselPage` contains too many child elements.
+> The [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) does not support UI virtualization. Therefore, performance may be affected if the `CarouselPage` contains too many child elements.
 
 If a [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) is embedded into the [`Detail`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) page of a [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/), the [`MasterDetailPage.IsGestureEnabled`](https://developer.xamarin.com/api/field/Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty/) property should be set to `false` to prevent gesture conflicts between the `CarouselPage` and the `MasterDetailPage`.
 
@@ -235,7 +235,7 @@ public class MainPageCS : CarouselPage
 Each [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) simply displays a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) for a particular color and a [`BoxView`](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) of that color.
 
 > [!NOTE]
-> **Note**: The [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) does not support UI virtualization. Therefore, performance may be affected if the `CarouselPage` contains too many child elements.
+> The [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) does not support UI virtualization. Therefore, performance may be affected if the `CarouselPage` contains too many child elements.
 
 If a [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) is embedded into the [`Detail`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) page of a [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/), the [`MasterDetailPage.IsGestureEnabled`](https://developer.xamarin.com/api/field/Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty/) property should be set to `false` to prevent gesture conflicts between the `CarouselPage` and the `MasterDetailPage`.
 

@@ -6,7 +6,7 @@ ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Alternate Resources
@@ -233,7 +233,7 @@ test of rules:
 
 These rules are also illustrated in the following flowchart:
 
-[![Resources flowchart](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png)
+[![Resources flowchart](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png#lightbox)
 
 When the system is looking for density-specific resources and cannot
 find them, it will attempt to locate other density specific resources
@@ -302,7 +302,7 @@ As a result of this process, Android will use the drawable resources in the
 resource directory `drawable-en-port-ldpi` for the device.
 
 > [!NOTE]
-> **Note:** The screen size qualifiers provide one exception to
+> The screen size qualifiers provide one exception to
 > this selection process. It is possible for Android to select resources that are
 > designed for a smaller screen than what the current device provides. For
 > example, a large screen device may use the resources provide for a normal sized

@@ -5,9 +5,10 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: EAEF7341-7A00-4439-9FAF-43882637BEF8
 ms.technology: xamarin-android
+ms.custom: video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Oreo Features
@@ -23,7 +24,7 @@ fonts in XML, downloadable fonts, autofill, and picture in picture
 these APIs are available to Xamarin.Android apps when you use
 Xamarin.Android 8.0 and later.
 
-[![Android Oreo hero image](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png)
+[![Android Oreo hero image](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
 
 This article is structured to help you get started in developing
 Xamarin.Android apps for Android 8.0 Oreo. It explains how to install
@@ -32,8 +33,6 @@ device) for testing. It also provides an outline of the new features in
 Android 8.0 Oreo, with links to sample apps that illustrate how to use
 Android Oreo features in Xamarin.Android apps.
 
-
-<a name="requirements" />
 
 ## Requirements
 
@@ -52,7 +51,6 @@ apps:
     installed via the Android SDK Manager.
 
 
-<a name="gettingstarted" />
 
 ## Getting Started
 
@@ -72,7 +70,6 @@ Android Oreo project:
 Each of these steps is explained in the following sections:
 
 
-<a name="updates" />
 
 ### Update Visual Studio and Xamarin.Android
 
@@ -107,7 +104,6 @@ For more information about Xamarin support for Android Oreo, see the
 [Xamarin.Android 8.0 release notes](https://developer.xamarin.com/releases/android/xamarin.android_8/xamarin.android_8.0/).
 
 
-<a name="sdk" />
 
 ### Install the Android SDK
 
@@ -125,13 +121,13 @@ later.
    Android SDK emulator, be sure to include the **x86** system images that you
    will need:
 
-    [![Selecting Android 8.0 packages in the Android SDK Manager](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png)
+    [![Selecting Android 8.0 packages in the Android SDK Manager](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png#lightbox)
 
 3. Install **Android SDK Tools 26.0.2** or later, **Android SDK
    Platform-Tools 26.0.0** or later, and **Android SDK Build-Tools
    26.0.0** (or later):
 
-    [![Selecting Android SDK Tools 26 in the Android SDK Manager](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png)
+    [![Selecting Android SDK Tools 26 in the Android SDK Manager](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -141,18 +137,17 @@ later.
    Android SDK emulator, be sure to include the **x86** system images
    that you will need:
 
-    [![Selecting Android 8.0 packages in the SDK Manager](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png)
+    [![Selecting Android 8.0 packages in the SDK Manager](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png#lightbox)
 
 3. Install **Android SDK Tools 26.0.2** or later, **Android SDK
    Platform-Tools 26.0.0** or later, and **Android SDK Build-Tools
    26.0.0** (or later):
 
-    [![Selecting Android SDK Tools 26 in the SDK Manager](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png)
+    [![Selecting Android SDK Tools 26 in the SDK Manager](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png#lightbox)
 
 -----
 
 
-<a name="xaproject" />
 
 ### Start a Xamarin.Android Project
 
@@ -169,7 +164,6 @@ recommended that you also set your target framework level to API 26 or
 later. For more about configuring Android API level levels, see
 [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).
 
-<a name="emudev" />
 
 ### Configure an Emulator or Device
 
@@ -243,7 +237,7 @@ steps:
 After you **avdmanager** to create your virtual device, it will be
 included in the device pull-down menu:
 
-[![New AVD added to device pull-down menu](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png)
+[![New AVD added to device pull-down menu](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -273,7 +267,7 @@ included in the device pull-down menu:
 After you use **avdmanager** to create your virtual device, it will be
 included in the device pull-down menu:
 
-[![New AVD added to device pull-down menu](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png)
+[![New AVD added to device pull-down menu](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png#lightbox)
 
 -----
 
@@ -288,7 +282,6 @@ more information about manually updating your device to Android Oreo,
 see [Factory Images for Nexus and Pixel Devices](https://developers.google.com/android/images).
 
 
-<a name="newfeatures" />
 
 ## New Features
 
@@ -299,7 +292,6 @@ following sections highlight these features and provide links to help
 you get started using them in your app.
 
 
-<a name="notifchan" />
 
 ### Notification Channels
 
@@ -320,14 +312,13 @@ sample; this sample app manages two channels and sets additional
 notification options.
 
 
-<a name="notifbadge" />
 
 ### Notification Badges
 
 Notification badges are small dots that appear over app icons as shown
 in this screenshot:
 
-[![Example notification badges on app icons](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png)
+[![Example notification badges on app icons](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png#lightbox)
 
 These dots indicate that there are new notifications for one or more
 notification channels in the app associated with that app icon &ndash;
@@ -342,7 +333,6 @@ Developer
 topic.
 
 
-<a name="customfonts" />
 
 ### Custom Fonts in XML
 
@@ -380,7 +370,6 @@ the Android Developer
 [Fonts in XML](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html)
 topic.
 
-<a name="dlfonts" />
 
 ### Downloadable Fonts
 
@@ -425,7 +414,6 @@ For more information about downloading fonts, see the Android Developer
 topic.
 
 
-<a name="autofill" />
 
 ### Autofill
 
@@ -448,7 +436,6 @@ your app for autofill, see the Android Developer
 topic.
 
 
-<a name="pip" />
 
 ### Picture in Picture (PIP)
 
@@ -485,7 +472,6 @@ continues uninterrupted while switching back and forth between display
 modes or other activities.
 
 
-<a name="other" />
 
 ### Other Features
 
@@ -498,7 +484,6 @@ Android Developer
 [Android Oreo Features and APIs](https://developer.android.com/about/versions/oreo/android-8.0.html) topic.
 
 
-<a name="behavior" />
 
 ## Behavior Changes
 
@@ -506,7 +491,6 @@ Android Oreo includes a variety of system and API behavior changes that can
 have an impact on the functionality of existing apps. These changes
 are described as follows.
 
-<a name="bgsl" />
 
 ### Background Execution Limits
 
@@ -534,7 +518,6 @@ Android Developer
 [Background Execution Limits](https://developer.android.com/about/versions/oreo/background.html)
 topic.
 
-<a name="breaking" />
 
 ### Breaking Changes
 
@@ -552,7 +535,6 @@ the following changes, where applicable:
   background. If you are targeting Android Oreo, you should use
   [PendingIntent.GetBroadcast](https://developer.xamarin.com/api/member/Android.App.PendingIntent.GetBroadcast/p/Android.Content.Context/System.Int32/Android.Content.Intent/Android.App.PendingIntentFlags/) instead.  
 
-<a name="sample_code" />
 
 ## Sample Code
 
@@ -591,8 +573,12 @@ advantage of Android Oreo features:
     device's location using a bound and started foreground service.
 
 
+## Video
 
-<a name="summary" />
+> [!VIDEO https://youtube.com/embed/OuvEcaMO-Ho]
+
+**Android 8.0 Oreo development with C#**
+
 
 ## Summary
 

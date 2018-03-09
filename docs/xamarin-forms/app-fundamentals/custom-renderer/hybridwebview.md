@@ -147,7 +147,7 @@ The process for creating the custom renderer class is as follows:
 1. Add an `ExportRenderer` attribute to the custom renderer class to specify that it will be used to render the Xamarin.Forms custom control. This attribute is used to register the custom renderer with Xamarin.Forms.
 
 > [!NOTE]
-> **Note**: For most Xamarin.Forms elements, it is optional to provide a custom renderer in each platform project. If a custom renderer isn't registered, then the default renderer for the control's base class will be used. However, custom renderers are required in each platform project when rendering a [View](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) element.
+> For most Xamarin.Forms elements, it is optional to provide a custom renderer in each platform project. If a custom renderer isn't registered, then the default renderer for the control's base class will be used. However, custom renderers are required in each platform project when rendering a [View](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) element.
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
@@ -312,7 +312,7 @@ This functionality is achieved as follows:
   - Resources are released.
 
 > [!NOTE]
-> **Note**: The `WKWebView` class is only supported in iOS 8 and later.
+> The `WKWebView` class is only supported in iOS 8 and later.
 
 ### Creating the Custom Renderer on Android
 
@@ -407,7 +407,7 @@ public class JSBridge : Java.Lang.Object
 The class must derive from `Java.Lang.Object`, and methods that are exposed to JavaScript must be decorated with the `[JavascriptInterface]` and `[Export]` attributes. Therefore, when the `invokeCSharpAction` JavaScript function is injected into the web page and is executed, it will call the `JSBridge.InvokeAction` method due to being decorated with the `[JavascriptInterface]` and `[Export("invokeAction")]` attributes. In turn, the `InvokeAction` method invokes the `HybridWebView.InvokeAction` method, which will invoked the registered action to display the pop-up.
 
 > [!NOTE]
-> **Note**: Projects that use the `[Export]` attribute must include a reference to `Mono.Android.Export`, or a compiler error will result.
+> Projects that use the `[Export]` attribute must include a reference to `Mono.Android.Export`, or a compiler error will result.
 
 Note that the `JSBridge` class maintains a `WeakReference` to the `HybridWebViewRenderer` class. This is to avoid creating a circular reference between the two classes. For more information see [Weak References](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx) on MSDN.
 

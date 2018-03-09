@@ -59,7 +59,6 @@ script these steps using
 [Rake](http://martinfowler.com/articles/rake.html).
 
 
-<a name="Setting_android_versionCode" />
 
 ### Creating the Version Code for the APK
 
@@ -92,7 +91,7 @@ following list explains this eight digit version code format
 The following diagram illustrates the position of each code described
 in the above list:
 
-[![Diagram of eight-digit version code format, coded by color](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png)
+[![Diagram of eight-digit version code format, coded by color](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png#lightbox)
 
 
 Google Play will ensure that the correct APK is delivered to the device
@@ -127,7 +126,6 @@ the developer. The process of calculating the correct
 An example of how to do so will be covered in the walkthrough at the
 end of this document.
 
-<a name="CreatingAndroidManifest" />
 
 ### Create A Temporary AndroidManifest.XML
 
@@ -183,7 +181,6 @@ The following list explains each command line parameter:
     the Xamarin.Android project.
 
 
-<a name="SignAndZipAlign" />
 
 ### Sign and Zipalign The APK
 
@@ -203,7 +200,6 @@ run on a device. This is the format of the command line to use:
 zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 ```
 
-<a name="Automating_APK_Creation_With_Rake" />
 
 ## Automating APK Creation With Rake
 
@@ -254,7 +250,7 @@ Once the rake task has completed, there will be three `bin` folders
 with the file `xamarin.helloworld.apk`. The next screenshot shows each
 of these folders with their contents:
 
-[![Locations of platform-specific folders containing xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png)
+[![Locations of platform-specific folders containing xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
 
 > [!NOTE]

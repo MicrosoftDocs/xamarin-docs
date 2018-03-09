@@ -76,7 +76,7 @@ To support 32 and 64 bit code transparently from C# and F#,
 	we are introducing new data types.   Learn about them
 	here.
 
-##  [Building 32 and 64 bit apps](32-and-64.md)
+##  [Building 32 and 64 bit apps](32-and-64/index.md)
 
 What you need to know to support 32 and 64 bit
 	applications.

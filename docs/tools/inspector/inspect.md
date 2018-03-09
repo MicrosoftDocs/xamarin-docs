@@ -24,11 +24,11 @@ Live app inspection is available for enterprise customers.
 
 
 
-[ ![](inspect-images/mac-heres-the-button.png "Click the Inspect button in the IDE toolbar")](inspect-images/mac-heres-the-button.png)
+[![](inspect-images/mac-heres-the-button.png "Click the Inspect button in the IDE toolbar")](inspect-images/mac-heres-the-button.png#lightbox)
 
 A new Xamarin Inspector client window will open, with a fresh REPL prompt.
 
-[ ![](inspect-images/inspector-0.7.0-map-inspect-small.png "A new Xamarin Inspector client window will open, with a fresh REPL prompt")](inspect-images/inspector-0.7.0-map-inspect.png)
+[![](inspect-images/inspector-0.7.0-map-inspect-small.png "A new Xamarin Inspector client window will open, with a fresh REPL prompt")](inspect-images/inspector-0.7.0-map-inspect.png#lightbox)
 
 Once this window appears, you have an interactive C# prompt that you can use to
 execute and evaluate C# statements and expressions. What makes this unique is

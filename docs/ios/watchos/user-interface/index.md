@@ -15,7 +15,7 @@ The [**WatchKitCatalog**](https://github.com/xamarin/monotouch-samples/tree/mast
   demonstrates various watchOS controls. The app's storyboard
   is shown here (click to zoom):
 
-[ ![](images/storyboard-sml.png "Sample watchOS layout")](images/storyboard.png)
+[![](images/storyboard-sml.png "Sample watchOS layout")](images/storyboard.png#lightbox)
 
 The programmatic names of all the controls is prefixed with
   `WKInterface` (eg. `WKInterfaceLabel`, `WKInterfaceButton`).

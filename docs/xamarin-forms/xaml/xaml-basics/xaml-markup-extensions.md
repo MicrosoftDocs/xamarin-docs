@@ -298,7 +298,7 @@ Here’s the final complete XAML file with three buttons accessing six shared va
 
 The screenshots verify the consistent styling, and the platform-dependent styling:
 
-[ ![](xaml-markup-extensions-images/sharedresources.png "Styled Controls")](xaml-markup-extensions-images/sharedresources-large.png "Styled Controls")
+[![](xaml-markup-extensions-images/sharedresources.png "Styled Controls")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "Styled Controls")
 
 Although it is most common to define the `Resources` collection at the top of the page, keep in mind that the `Resources` property is defined by `VisualElement`, and you can have `Resources` collections on other elements on the page. For example, try adding one to the `StackLayout` in this example:
 
@@ -436,7 +436,7 @@ Both these namespace declarations are included in the **StaticConstantsPage** sa
 
 The size of the resultant `BoxView` relative to the screen is platform-dependent:
 
- [ ![](xaml-markup-extensions-images/staticconstants.png "Controls using x:Static Markup Extension")](xaml-markup-extensions-images/staticconstants-large.png "Controls using x:Static Markup Extension")
+ [![](xaml-markup-extensions-images/staticconstants.png "Controls using x:Static Markup Extension")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "Controls using x:Static Markup Extension")
 
 ## Other Standard Markup Extensions
 
@@ -552,7 +552,7 @@ Perhaps the most important lesson you should take from this sample is the syntax
 
 Here’s the program running:
 
-[ ![](xaml-markup-extensions-images/relativelayout.png "Relative Layout using Constraints")](xaml-markup-extensions-images/relativelayout-large.png "Relative Layout using Constraints")
+[![](xaml-markup-extensions-images/relativelayout.png "Relative Layout using Constraints")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "Relative Layout using Constraints")
 
 ## Summary
 

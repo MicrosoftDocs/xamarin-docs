@@ -111,7 +111,7 @@ The *device* styles respect accessibility preferences, so font sizes will change
 
 The following screenshots demonstrate the device styles on each platform, with the smallest accessible font size:
 
-[![](device-images/minimum-size.png "Accessible Small Device Styles on Each Platform")](device-images/minimum-size-large.png "Accessible Small Device Styles on Each Platform")
+[![](device-images/minimum-size.png "Accessible Small Device Styles on Each Platform")](device-images/minimum-size-large.png#lightbox "Accessible Small Device Styles on Each Platform")
 
 The following screenshots demonstrate the device styles on each platform, with the largest accessible font size:
 

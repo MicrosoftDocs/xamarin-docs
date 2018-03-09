@@ -33,16 +33,16 @@ using the "Portable Library" template for the broadest support:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Portable Library Template Visual Studio for Mac](images/xamarin-studio-pcl.png)](images/xamarin-studio-pcl.png)
+[![Portable Library Template Visual Studio for Mac](images/xamarin-studio-pcl.png)](images/xamarin-studio-pcl.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[![Portable Library Template Visual Studio](images/visual-studio-pcl.png)](images/visual-studio-pcl.png)
+[![Portable Library Template Visual Studio](images/visual-studio-pcl.png)](images/visual-studio-pcl.png#lightbox)
 
 In Visual Studio, you'll want to make sure you select the following target
 platforms for your portable library:
 
-[![Portable Library Platforms Visual Studio](images/visual-studio-pcl-platforms.png)](images/visual-studio-pcl-platforms.png)
+[![Portable Library Platforms Visual Studio](images/visual-studio-pcl-platforms.png)](images/visual-studio-pcl-platforms.png#lightbox)
 
 -----
 
@@ -51,11 +51,11 @@ Once you create the library project, add a reference to our
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![NuGet Visual Studio for Mac](images/xamarin-studio-nuget.png)](images/xamarin-studio-nuget.png)
+[![NuGet Visual Studio for Mac](images/xamarin-studio-nuget.png)](images/xamarin-studio-nuget.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[![NuGet Visual Studio](images/visual-studio-nuget.png)](images/visual-studio-nuget.png)
+[![NuGet Visual Studio](images/visual-studio-nuget.png)](images/visual-studio-nuget.png#lightbox)
 
 -----
 
@@ -184,11 +184,11 @@ installed the NuGet package in a workbook:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![Workbook with Integration](images/mac-workbooks-integrated.png)](images/mac-workbooks-integrated.png)
+[![Workbook with Integration](images/mac-workbooks-integrated.png)](images/mac-workbooks-integrated.png#lightbox)
 
 # [Visual Studio](#tab/vswin)
 
-[![Workbook with Integration](images/windows-workbooks-integrated.png)](images/windows-workbooks-integrated.png)
+[![Workbook with Integration](images/windows-workbooks-integrated.png)](images/windows-workbooks-integrated.png#lightbox)
 
 -----
 

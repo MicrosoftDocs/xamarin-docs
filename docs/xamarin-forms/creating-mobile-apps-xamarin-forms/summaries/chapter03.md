@@ -126,7 +126,7 @@ In all of the examples so far, the entire text displayed by the `Label` has been
 
 The [**VariableFormattedText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormText) sample demonstrates using the `FormattedText` property for a single line of text, and [**VariableFormattedParagraph**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormPara) demonstrates the technique for an entire paragraph, as shown here:
 
-[![Triple screenshot of variable formatted paragraph](images/ch03fg06-small.png "Variable Formatted Label Text")](images/ch03fg06-large.png "Variable Formatted Label Text")
+[![Triple screenshot of variable formatted paragraph](images/ch03fg06-small.png "Variable Formatted Label Text")](images/ch03fg06-large.png#lightbox "Variable Formatted Label Text")
 
 The [**NamedFontSizes**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) program uses a single `Label` and a `FormattedString` object to display all of the named font sizes for each platform.
 

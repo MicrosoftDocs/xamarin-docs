@@ -11,7 +11,6 @@ ms.date: 02/16/2018
 
 # Manually Signing the APK
 
-<a name="signing_legacy" />
 
 After the application has been built for release, the APK must be signed prior to distribution so that it can be run on an Android device. This process is typically handled with the IDE, however there are some situations where it is necessary to sign the APK manually, at the command line. The following steps are involved with signing an APK:
 
@@ -31,7 +30,6 @@ After the application has been built for release, the APK must be signed prior t
 The order of the steps is important and is dependent on which tool used to sign the APK. When using **apksigner**, it is important to first **zipalign** the application, and then to sign it with **apksigner**.  If it is necessary to use **jarsigner** to sign the APK, then it is important to first sign the APK and then run **zipalign**. 
 
 
-<a name="Prerequisites" />
 
 ## Prerequisites
 
@@ -44,7 +42,6 @@ Build Tools must use **jarsigner** as described in
 [Sign the APK with jarsigner](#Sign_the_APK_with_jarsigner) below.
 
 
-<a name="Creating_a_Private_Keystore" />
 
 ## Create a Private Keystore
 
@@ -76,7 +73,6 @@ or publically distributed, then it is possible for unofficial or
 malicious versions of an application to be distributed.
 
 
-<a name="Create_a_New_Keystore" />
 
 ### Create a New Keystore
 
@@ -131,7 +127,6 @@ the &ndash; `list` option:
 $ keytool -list -keystore xample.keystore
 ```
 
-<a name="Zipalign_the_APK" />
 
 ## Zipalign the APK
 
@@ -143,7 +138,6 @@ The follow command will use the signed APK and produce a signed, zipaligned APK 
 $ zipalign -f -v 4 mono.samples.helloworld-unsigned.apk helloworld.apk
 ```
 
-<a name="Manually_Signing_the_APK" />
 
 ## Sign the APK
 

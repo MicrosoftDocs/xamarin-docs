@@ -79,7 +79,6 @@ fragmentTx.AddToBackStack(null);
 fragmentTx.Commit();
 ```
 
-<a name="Communicating_with_Fragments" />
 
 ## Communicating with Fragments
 
@@ -110,7 +109,6 @@ var emailList = FragmentManager.FindFragmentById<EmailListFragment>(Resource.Id.
 emailList.SomeCustomMethod(parameter1, parameter2);
 ```
 
-<a name="Communicating_with_the_Activity" />
 
 ### Communicating with the Activity
 

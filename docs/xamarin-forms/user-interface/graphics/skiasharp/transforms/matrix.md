@@ -398,7 +398,7 @@ public class PathTransformPage : ContentPage
 
 It appears in the upper-left corner of the canvas:
 
-[![](matrix-images/pathtransform-small.png "Triple screenshot of the Path Transform page")](matrix-images/pathtransform-large.png "Triple screenshot of the Path Transform page")
+[![](matrix-images/pathtransform-small.png "Triple screenshot of the Path Transform page")](matrix-images/pathtransform-large.png#lightbox "Triple screenshot of the Path Transform page")
 
 The constructor of this program applies the matrix to the path with the following call:
 
@@ -585,7 +585,7 @@ public partial class ShowAffineMatrixPage : ContentPage
 
 The iOS screen below shows the bitmap when the page is first loaded, while the two other screens show it after some manipulation:
 
-[![](matrix-images/showaffinematrix-small.png "Triple screenshot of the Show Affine Matrix page")](matrix-images/showaffinematrix-large.png "Triple screenshot of the Show Affine Matrix page")
+[![](matrix-images/showaffinematrix-small.png "Triple screenshot of the Show Affine Matrix page")](matrix-images/showaffinematrix-large.png#lightbox "Triple screenshot of the Show Affine Matrix page")
 
 Although it seems as if the touch points drag the corners of the bitmap, that's only an illusion. The matrix calculated from the touch points transforms the bitmap so that the corners coincide with the touch points.
 

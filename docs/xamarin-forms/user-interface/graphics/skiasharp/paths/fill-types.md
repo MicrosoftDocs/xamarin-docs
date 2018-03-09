@@ -160,7 +160,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Normally, the path fill type should affect only fills and not strokes, but the two `Inverse` modes affect both fills and strokes. For fills, the two `Inverse` types fill areas oppositely so that the area outside the star is filled. For strokes, the two `Inverse` types color everything except the stroke. Using these inverse fill types can produce some odd effects, as the iOS screenshot demonstrates:
 
-[![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png "Triple screenshot of the Five-Pointed Star page")
+[![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png#lightbox "Triple screenshot of the Five-Pointed Star page")
 
 The Android and Windows mobile screenshots show the typical even-odd and winding effects, but the order of the stroke and fill also affects the results.
 
@@ -213,7 +213,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 It's an interesting image created with a minimum of code:
 
-[![](fill-types-images/overlappingcircles-small.png "Triple screenshot of the Overlapping Circles page")](fill-types-images/overlappingcircles-large.png "Triple screenshot of the Overlapping Circles page")
+[![](fill-types-images/overlappingcircles-small.png "Triple screenshot of the Overlapping Circles page")](fill-types-images/overlappingcircles-large.png#lightbox "Triple screenshot of the Overlapping Circles page")
 
 
 ## Related Links

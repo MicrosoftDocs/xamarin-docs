@@ -32,7 +32,6 @@ In Mono for Android, the content provider class should have a
 `[ContentProvider]` attribute to specify the Uri (or Uris) that should
 be added to **AndroidManifest.xml**.
 
-<a name="Mime_Type" />
 
 ### Mime Type
 
@@ -50,7 +49,6 @@ The second part of the MIME Type is specific to your application, and
 should use a reverse-DNS standard with a `vnd.` prefix. The sample code
 uses `vnd.com.xamarin.sample.Vegetables`.
 
-<a name="Data_Model_Metadata" />
 
 ### Data Model Metadata
 
@@ -70,7 +68,6 @@ exposed the metadata for the Contacts data. For our custom
 `ContentProvider` we will just expose the constants on the class
 itself.
 
-<a name="Implementation" />
 
 ## Implementation
 
@@ -92,7 +89,6 @@ applications can also access it as long as they know the Uri and
 information about the schema (which is usually exposed as constant
 values).
 
-<a name="Create_a_database" />
 
 ## Create a Database
 
@@ -135,14 +131,12 @@ set. See the
 [ListViews and Adapters](~/android/user-interface/layouts/list-view/index.md)
 document for more details on using the `ListView` control.
 
-<a name="Create_the_ContentProvider" />
 
 ## Create the ContentProvider
 
 The rest of this section gives step-by-step instructions on how the
 **SimpleContentProvider/VegetableProvider.cs** example class was built.
 
-<a name="Initialize_the_Database" />
 
 ### Initialize the Database
 
@@ -164,7 +158,6 @@ public class VegetableProvider : ContentProvider
 The rest of the code will form the actual content provider
 implementation that allows the data to be discovered and queried.
 
-<a name="Add_Metadata_for_Consumers" />
 
 
 ## Add Metadata for Consumers
@@ -216,7 +209,6 @@ public class VegetableProvider : ContentProvider
 }
 ```
 
-<a name="Implement_the_URI_Parsing_Helper" />
 
 ## Implement the URI Parsing Helper
 
@@ -258,7 +250,6 @@ This code is all private to the `ContentProvider` class. Refer to
 [Google's UriMatcher documentation](https://developer.xamarin.com/api/type/Android.Content.UriMatcher/)
 for further information.
 
-<a name="Implement_the_QueryMethod" />
 
 ## Implement the QueryMethod
 
@@ -309,7 +300,6 @@ public override String GetType(Android.Net.Uri uri)
 }
 ```
 
-<a name="Implement_the_Other_Overrides" />
 
 ## Implement the Other Overrides
 
@@ -337,7 +327,6 @@ application has been installed, the data it exposes will be available
 both inside the application but also to any other application that
 knows the Uri to reference it.
 
-<a name="Access_the_ContentProvider" />
 
 ## Access the ContentProvider
 
@@ -346,7 +335,6 @@ the same way as the Contacts provider at the start of this document:
 obtain a cursor using the specified Uri and then use an adapter to
 access the data.
 
-<a name="Bind_a_ListView_to_a_ContentProvider" />
 
 ## Bind a ListView to a ContentProvider
 
@@ -378,10 +366,9 @@ listView.Adapter = adapter;
 
 The resulting application looks like this:
 
-[![Screenshot of app listing Vegetables, Fruits, Flower Buds, Legumes, Bulbs, Tubers](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png)
+[![Screenshot of app listing Vegetables, Fruits, Flower Buds, Legumes, Bulbs, Tubers](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png#lightbox)
 
 
-<a name="Retrieve_a_Single_Item_from_a_ContentProvider" />
 
 ## Retrieve a Single Item from a ContentProvider
 

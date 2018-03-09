@@ -50,7 +50,7 @@ The `Application.On<Android>` method specifies that this platform-specific will 
 
 The result is that the soft keyboard input area operating mode can be set when an input control has focus:
 
-[![](android-images/pan-resize.png "Soft Keyboard Operating Mode Platform-Specific")](android-images/pan-resize-large.png "Soft Keyboard Operating Mode Plaform-Specific")
+[![](android-images/pan-resize.png "Soft Keyboard Operating Mode Platform-Specific")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
 
 <a name="fastscroll" />
 
@@ -94,7 +94,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 The result is that fast scrolling through data in a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) can be enabled, which changes the size of the scroll thumb:
 
-[![](android-images/fastscroll.png "ListView FastScroll Platform-Specific")](android-images/fastscroll-large.png "ListView FastScroll Plaform-Specific")
+[![](android-images/fastscroll.png "ListView FastScroll Platform-Specific")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
 
 <a name="enable_swipe_paging" />
 
@@ -240,7 +240,7 @@ The `Application.Current.On<Android>` method specifies that this platform-specif
 
 The result is that the [`Disappearing`](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) and [`Appearing`](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) page events won't be fired on application pause and resume respectively, and that if the soft keyboard was displayed when the application was paused, it will also be displayed when the application resumes:
 
-[![](android-images/keyboard-on-resume.png "Lifecycle Events Platform-Specific")](android-images/keyboard-on-resume-large.png "Lifecycle Events Platform-Specific")
+[![](android-images/keyboard-on-resume.png "Lifecycle Events Platform-Specific")](android-images/keyboard-on-resume-large.png#lightbox "Lifecycle Events Platform-Specific")
 
 ## Summary
 

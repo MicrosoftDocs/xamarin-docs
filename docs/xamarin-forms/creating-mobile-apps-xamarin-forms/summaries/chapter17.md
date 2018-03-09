@@ -86,7 +86,7 @@ The [**GridCellBorders**](https://github.com/xamarin/xamarin-forms-book-samples/
 
 The [**KeypadGrid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/KeypadGrid) sample uses a `Grid` to display a keypad:
 
-[![Triple screenshot of Keypad Grid](images/ch17fg12-small.png "Keypad Grid")](images/ch17fg12-large.png "Keypad Grid")
+[![Triple screenshot of Keypad Grid](images/ch17fg12-small.png "Keypad Grid")](images/ch17fg12-large.png#lightbox "Keypad Grid")
 
 ### Responding to orientation changes
 

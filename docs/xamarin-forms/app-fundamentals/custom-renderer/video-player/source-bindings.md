@@ -68,7 +68,7 @@ namespace VideoPlayerDemos
 
 When the page first loads, no item is selected in the `ListView`, so you must select one for the video to begin playing:
 
-[![Select Web Video](source-bindings-images/selectwebvideo-small.png "Select Web Video")](source-bindings-images/selectwebvideo-large.png "Select Web Video")
+[![Select Web Video](source-bindings-images/selectwebvideo-small.png "Select Web Video")](source-bindings-images/selectwebvideo-large.png#lightbox "Select Web Video")
 
 The `Source` property of `VideoPlayer` is backed by a bindable property, which means that it can be the target of a data binding. This is demonstrated by the **Bind to VideoPlayer** page. The markup in the **BindToVideoPlayer.xaml** file is supported by the following class that encapsulates a title of a video and a corresponding `VideoSource` object:
 

@@ -36,11 +36,11 @@ To embed a file into a **PCL** assembly, create or add a file and ensure that **
 
 # [Visual Studio](#tab/vswin)
 
-[ ![Configuring embedded resource build action](files-images/vs-embeddedresource-sml.png "Setting EmbeddedResource BuildAction")](files-images/vs-embeddedresource.png "Setting EmbeddedResource BuildAction")
+[![Configuring embedded resource build action](files-images/vs-embeddedresource-sml.png "Setting EmbeddedResource BuildAction")](files-images/vs-embeddedresource.png#lightbox "Setting EmbeddedResource BuildAction")
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[ ![Text file embedded in PCL, configuring embedded resource build action](files-images/xs-embeddedresource-sml.png "Setting EmbeddedResource BuildAction")](files-images/xs-embeddedresource.png "Setting EmbeddedResource BuildAction")
+[![Text file embedded in PCL, configuring embedded resource build action](files-images/xs-embeddedresource-sml.png "Setting EmbeddedResource BuildAction")](files-images/xs-embeddedresource.png#lightbox "Setting EmbeddedResource BuildAction")
 
 -----
 
@@ -57,7 +57,7 @@ using (var reader = new System.IO.StreamReader (stream)) {
 
 The `text` variable can then be used to display the text or otherwise use it in code. This screenshot of the [sample app](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/) shows the text rendered in a `Label` control.
 
- [ ![Text file embedded in PCL](files-images/pcltext-sml.png "Embedded Text File in PCL Displayed in App")](files-images/pcltext.png "Embedded Text File in PCL Displayed in App")
+ [![Text file embedded in PCL](files-images/pcltext-sml.png "Embedded Text File in PCL Displayed in App")](files-images/pcltext.png#lightbox "Embedded Text File in PCL Displayed in App")
 
 Loading and deserializing an XML is equally simple. The following code shows an XML file being loaded and deserialized from a resource, then bound to a `ListView` for display. The XML file contains an array of `Monkey` objects (the class is defined in the sample code).
 
@@ -73,7 +73,7 @@ var listView = new ListView ();
 listView.ItemsSource = monkeys;
 ```
 
- [ ![Xml file embedded in PCL, displayed in ListView](files-images/pclxml-sml.png "Embedded XML File in PCL Displayed in ListView")](files-images/pclxml.png "Embedded XML File in PCL Displayed in ListView")
+ [![Xml file embedded in PCL, displayed in ListView](files-images/pclxml-sml.png "Embedded XML File in PCL Displayed in ListView")](files-images/pclxml.png#lightbox "Embedded XML File in PCL Displayed in ListView")
 
 <a name="Embedding_in_Shared_Projects" />
 
@@ -137,7 +137,7 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 
 Because Xamarin.Forms runs on multiple platforms, each with its own filesystem, there is no single approach for loading and saving files created by the user. To demonstrate how to save and load text files the sample app includes a screen that saves and loads some user input - the finished screen is shown below:
 
- [ ![Saving and loading text](files-images/saveandload-sml.png "Saving and Loading Files in App")](files-images/saveandload.png "Saving and Loading Files in App")
+ [![Saving and loading text](files-images/saveandload-sml.png "Saving and Loading Files in App")](files-images/saveandload.png#lightbox "Saving and Loading Files in App")
 
 Each platform has a slightly different directory structure, and different filesystem capabilities - for example Xamarin.iOS and Xamarin.Android support most `System.IO` functionality but Windows Phone only supports `IsolatedStorage` and [ `Windows.Storage`](http://msdn.microsoft.com/library/windowsphone/develop/jj681698(v=vs.105).aspx) APIs.
 

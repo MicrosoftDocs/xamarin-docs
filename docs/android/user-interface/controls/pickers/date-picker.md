@@ -36,7 +36,7 @@ in a `DialogFragment`. The sample application will display the
 an Activity. When the date is set by the user, a `TextView` will update
 with the date that was selected.
 
-[![Screenshot of Pick Date button followed by Date Picker dialog](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png)
+[![Screenshot of Pick Date button followed by Date Picker dialog](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png#lightbox)
 
 ## Requirements
 
@@ -77,7 +77,6 @@ date to the hosting activity:
    `DialogFragment`.
 
 
-<a name="extending_dialogfragment" />
 
 ### Extending DialogFragment
 
@@ -141,7 +140,6 @@ object and initialize it with the current date and the callback object
 > will be in the range of 1 to 31 (depending on which month was selected).
 
 
-<a name="date_picker_fragment" />
 
 ### Showing the DatePickerFragment
 
@@ -181,7 +179,6 @@ public class MainActivity : Activity
 }
 ```
 
-<a name="summary" />
 
 ## Summary
 

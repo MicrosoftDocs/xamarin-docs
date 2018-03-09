@@ -142,7 +142,7 @@ As you prepare your application for iOS 7, you can realign subviews visually usi
 
  `TopLayoutGuide` and `BottomLayoutGuide` serve as a reference for where views should begin or end, so that the content is not overlapped by a translucent `UIKit` bar, as in the following example:
 
- [ ![](ios7-ui-images/clipped.png "Sample content not overlapped by a translucent UIKit bar")](ios7-ui-images/clipped.png)
+ [![](ios7-ui-images/clipped.png "Sample content not overlapped by a translucent UIKit bar")](ios7-ui-images/clipped.png#lightbox)
 
 These APIs can be used to calculate a view's displacement from the top or bottom of the screen, and adjust content placement accordingly:
 
@@ -162,7 +162,7 @@ public override void ViewDidLayoutSubviews ()
 
 We can use the value calculated above to set our `ImageView`'s displacement from the top of the screen, so the whole image is visible:
 
- [ ![](ios7-ui-images/good2.png "Example ImageViews displacement from the top of the screen")](ios7-ui-images/good2.png)
+ [![](ios7-ui-images/good2.png "Example ImageViews displacement from the top of the screen")](ios7-ui-images/good2.png#lightbox)
 
 Refer to the [ImageViewer](https://developer.xamarin.com/samples/mobile/iOS7-ui-updates) for a working sample.
 
@@ -175,15 +175,15 @@ The displacement value is generated dynamically after the View has been added to
 
 This API specifies which edges of a view should be extended to full screen, regardless of bar translucency. In iOS 7, navigation bars and toolbars appear layered above the controller’s view - unlike in previous iOS versions, where they didn’t take up the same space. The iOS 7 Photos application illustrates the default `UIViewController.EdgesForExtendedLayout` value, `UIRectEdge.All`. This setting fills all four edges in the view with content, creating the overlapping and full-screen effect:
 
- [ ![](ios7-ui-images/photos.png "Sample EdgesForExtendedLayout")](ios7-ui-images/photos.png)
+ [![](ios7-ui-images/photos.png "Sample EdgesForExtendedLayout")](ios7-ui-images/photos.png#lightbox)
 
 Tapping the image removes the bars and shows the image full-screen:
 
- [ ![](ios7-ui-images/photos2.png "EdgesForExtendedLayout with the bars removed")](ios7-ui-images/photos2.png)
+ [![](ios7-ui-images/photos2.png "EdgesForExtendedLayout with the bars removed")](ios7-ui-images/photos2.png#lightbox)
 
 Because full-screen content is the default, applications configured for iOS 6 will have part of the view clipped, as in the screenshot below:
 
- [ ![](ios7-ui-images/clipped.png "Apps configured for iOS 6 will have part of the view clipped, as in this screenshot")](ios7-ui-images/clipped.png)
+ [![](ios7-ui-images/clipped.png "Apps configured for iOS 6 will have part of the view clipped, as in this screenshot")](ios7-ui-images/clipped.png#lightbox)
 
 Modifying the `UIViewController.EdgesForExtendedLayout` property adjusts for this behavior. We can specify that the view not fill any edges, so our view will avoid displaying content in the space occupied by navigation or toolbars (at every orientation):
 
@@ -195,7 +195,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) {
 
 In our app, we'll see the view is again repositioned, so the whole image is visible:
 
- [ ![](ios7-ui-images/good.png "Example with whole image visible")](ios7-ui-images/good.png)
+ [![](ios7-ui-images/good.png "Example with whole image visible")](ios7-ui-images/good.png#lightbox)
 
 Note that while the effects of the `TopLayoutGuide/BottomLayoutGuide` and `EdgesForExtendedLayout` APIs are similar, they are meant to fill different goals. Changing the `EdgesForExtendedLayout` setting from the default may fix clipped views in applications designed for iOS 6, but a good iOS 7 design should honor the full-screen aesthetic and provide a full-screen viewing experience, relying on `TopLayoutGuide` and `BottomLayoutGuide` to properly position content that's meant to be manipulated into a comfortable place for the user.
 

@@ -15,13 +15,12 @@ The Amazon Mobile App Distribution Program enables mobile app
 developers to publish their applications on Amazon. This section 
 briefly covers the Amazon App Store for Android. 
 
-[![Amazon App Store screen](publishing-to-amazon-images/amazon-app-store.png)](publishing-to-amazon-images/amazon-app-store.png)
+[![Amazon App Store screen](publishing-to-amazon-images/amazon-app-store.png)](publishing-to-amazon-images/amazon-app-store.png#lightbox)
 
 Amazon does not limit the size of APKs. However, if an APK is larger than
 30MB, then it will use FTP for distribution rather than the Amazon Mobile App
 Distribution Portal.
 
-<a name="Submitting_Apps:_Binary_Info" />
 
 ## Submitting Apps: Binary Info
 
@@ -36,7 +35,6 @@ by Amazon require the following assets:
 -  Updates to five videos may be provided.
 
 
-<a name="Approval_Process" />
 
 ## Approval Process
 

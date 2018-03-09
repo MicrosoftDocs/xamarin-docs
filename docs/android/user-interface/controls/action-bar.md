@@ -11,7 +11,6 @@ ms.date: 02/06/2018
 
 # ActionBar
 
-<a name="overview" />
 
 ## Overview
 
@@ -22,14 +21,13 @@ the `TabActivity` class itself has been deprecated in 4.0. A new way to
 create a tabbed interface has been introduced that uses the Action Bar,
 which we'll discuss next.
 
-<a name="Action_Bar_Tabs" />
 
 ## Action Bar Tabs
 
 The Action Bar includes support for adding tabbed interfaces in Android 4.0.
 The following screenshot shows an example of such an interface.
 
-[![Screenshot of app running in an emulator; two tabs are shown](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png)
+[![Screenshot of app running in an emulator; two tabs are shown](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
 
 To create tabs in the Action Bar, we first need to set its
 `NavigationMode` property to support tabs. In Android 4, an `ActionBar`
@@ -100,7 +98,6 @@ this.ActionBar.AddTab (tab);
 For the complete example, see the *HelloTabsICS* project in the sample
 code for this document.
 
-<a name="ShareActionProvider" />
 
 ## ShareActionProvider
 
@@ -111,7 +108,6 @@ the previously used applications for easy access to them later from the
 Action Bar. This allows applications to share data via a user
 experience that's consistent throughout Android.
 
-<a name="Image_Sharing_Example" />
 
 ### Image Sharing Example
 
@@ -124,15 +120,14 @@ associated with the `ShareActionProvider`. In this example, the
 messaging application has been previously used, so it is presented on
 the Action Bar.
 
-[![Screenshot of messaging application icon in the Action Bar](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png)
+[![Screenshot of messaging application icon in the Action Bar](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
 
 When the user clicks on the item in the Action Bar, the messaging app that
 contains the shared image is launched, as shown below:
 
-[![Screenshot of messaging app displaying monkey image](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png)
+[![Screenshot of messaging app displaying monkey image](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
 
-<a name="Specifying_the_action_Provider_Class" />
 
 ### Specifying the action Provider Class
 
@@ -150,7 +145,6 @@ follows:
 </menu>
 ```
 
-<a name="Inflating_the_Menu" />
 
 ### Inflating the Menu
 
@@ -172,7 +166,6 @@ public override bool OnCreateOptionsMenu (IMenu menu)
 }
 ```
 
-<a name="Creating_the_Intent" />
 
 ### Creating the Intent
 

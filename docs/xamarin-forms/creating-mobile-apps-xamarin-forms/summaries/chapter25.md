@@ -52,7 +52,7 @@ The `Master` and `Detail` properties are defined with visual trees in the [Schoo
 
 That XAML file also sets the [`IsPresented`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsPresented/) property of `MasterDetailPage` to `True`. This causes the master page to be displayed at startup; by default the detail page is displayed. The [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs) file sets `IsPresented` to `false` when an item is selected from the `ListView` in the master page. The detail page is then displayed:
 
-[![Triple screenshot of School And Detail](images/ch25fg09-small.png "Detail Page from a MasterDetailPage")](images/ch25fg09-large.png "Detail Page from a MasterDetailPage")
+[![Triple screenshot of School And Detail](images/ch25fg09-small.png "Detail Page from a MasterDetailPage")](images/ch25fg09-large.png#lightbox "Detail Page from a MasterDetailPage")
 
 ### Your own user interface
 
@@ -97,7 +97,7 @@ The [**DiscreteTabbedColors**](https://github.com/xamarin/xamarin-forms-book-sam
 
 For each page that appears in a `TabbedPage`, the `Title` property is required to specify the text in the tab, and the Apple Store requires that an icon be used as well, so the `Icon` property is set for iOS:
 
-[![Triple screenshot of Discrete Tabbed Colors](images/ch25fg13-small.png "TabbedPage")](images/ch25fg13-large.png "TabbedPage")
+[![Triple screenshot of Discrete Tabbed Colors](images/ch25fg13-small.png "TabbedPage")](images/ch25fg13-large.png#lightbox "TabbedPage")
 
 The [**StudentNotes**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/StudentNotes) sample has a home page that lists all the students. When a student is tapped, this navigates to a `TabbedPage` derivative, [`StudentNotesDataPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/StudentNotes/StudentNotes/StudentNotes/StudentNotesDataPage.xaml), that incorporates three `ContentPage` objects in its visual tree, one of which allows entering some notes for that student.
 

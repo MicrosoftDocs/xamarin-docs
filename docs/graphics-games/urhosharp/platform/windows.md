@@ -1,6 +1,6 @@
 ---
 title: "UrhoSharp Windows Support"
-description: "Windows Specific Setup and Features"
+description: "Windows Specific Setup and Features for UrhoSharp."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
@@ -27,13 +27,13 @@ You can see complete examples showing how to use this in our [samples](https://g
 
 # Standalone Project
 
-## Creating a Project
+### Creating a Project
 
 Create a Console project, reference the Urho NuGet and then make sure
 that you can locate the assets (the directories containing the Data
 directory).
 
-## Configuring and Launching Urho
+### Configuring and Launching Urho
 
 To launch your application, do this:
 
@@ -41,19 +41,19 @@ To launch your application, do this:
 DesktopUrhoInitializer.AssetsDirectory = "../Assets";
 new MyGame().Run();
 ```
-## Example
+### Example
 
 [Complete example](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/Desktop)
 
-# Integrated with WPF
+## Integrated with WPF
 
-## Creating a Project
+### Creating a Project
 
 Create a WPF project, reference the Urho NuGet and then make sure
 that you can locate the assets (the directories containing the Data
 directory).
 
-## Configuring and Launching Urho from WPF
+### Configuring and Launching Urho from WPF
 
 Create a subclass of `Window` and configure your assets like this:
 
@@ -87,19 +87,19 @@ Create a subclass of `Window` and configure your assets like this:
 	}
 ```
 
-## Example
+### Example
 
 [Complete example](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/WPF)
 
-# Integrated with UWP
+## Integrated with UWP
 
-## Creating a Project
+### Creating a Project
 
 Create a UWP project, reference the Urho NuGet and then make sure
 that you can locate the assets (the directories containing the Data
 directory).
 
-## Configuring and Launching Urho from UWP
+### Configuring and Launching Urho from UWP
 
 Create a subclass of `Window` and configure your assets like this:
 
@@ -122,19 +122,19 @@ Create a subclass of `Window` and configure your assets like this:
 	}
 ```
 
-## Example
+### Example
 
 [Complete example](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/UWP)
 
-# Integrated with Windows.Forms
+## Integrated with Windows.Forms
 
-## Creating a Project
+### Creating a Project
 
 Create a Windows.Forms project, reference the Urho NuGet and then make sure
 that you can locate the assets (the directories containing the Data
 directory).
 
-## Configuring and Launching Urho from Windows.Forms
+### Configuring and Launching Urho from Windows.Forms
 
 Launch Urho from your form, see [Complete Sample](https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/WinForms/SamplesForm.cs)
 

@@ -18,7 +18,7 @@ topic explores the
 app, a simple code example that uses `RecyclerView` to display a large
 collection of photos: 
 
-[ ![Two screenshots of a RecyclerView app that uses CardViews to display photos](recyclerview-example-images/01-recyclerviewer-sml.png)](recyclerview-example-images/01-recyclerviewer.png)
+[![Two screenshots of a RecyclerView app that uses CardViews to display photos](recyclerview-example-images/01-recyclerviewer-sml.png)](recyclerview-example-images/01-recyclerviewer.png#lightbox)
 
 **RecyclerViewer** uses
 [CardView](~/android/user-interface/controls/card-view.md) to
@@ -27,7 +27,6 @@ of `RecyclerView`'s performance advantages, this sample app is able
 to quickly scroll through a large collection of photos smoothly and
 without noticeable delays.
 
-<a name="datasource" />
 
 ### An Example Data Source
 
@@ -66,7 +65,6 @@ presented here. The source code to `PhotoAlbum` is available at
 [PhotoAlbum.cs](https://github.com/xamarin/monodroid-samples/blob/master/android5.0/RecyclerViewer/RecyclerViewer/PhotoAlbum.cs)
  in the [RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/) sample app.
 
-<a name="preliminaries" />
 
 ### Layout and Initialization
 
@@ -168,7 +166,7 @@ The view holder class is called `PhotoViewHolder`. Each
 `TextView` of an associated row item, which is laid out in a `CardView`
 as diagrammed here:
 
-[ ![Diagram of CardView containing an ImageView and TextView](recyclerview-example-images/02-cardview-layout-sml.png)](recyclerview-example-images/02-cardview-layout.png)
+[![Diagram of CardView containing an ImageView and TextView](recyclerview-example-images/02-cardview-layout-sml.png)](recyclerview-example-images/02-cardview-layout.png#lightbox)
 
 `PhotoViewHolder` derives from `RecyclerView.ViewHolder` and contains properties
 to store references to the `ImageView` and `TextView` shown in the above layout.
@@ -246,7 +244,6 @@ The layout manager calls these methods while it is positioning items
 within the `RecyclerView`. The implementation of these methods is
 examined in the following sections.
 
-<a name="oncreateviewholder" />
 
 #### OnCreateViewHolder
 
@@ -323,7 +320,6 @@ public override RecyclerView.ViewHolder
 The resulting view holder instance, `vh`, is returned back to the
 caller (the layout manager).
 
-<a name="onbindviewholder" />
 
 #### OnBindViewHolder
 
@@ -365,7 +361,6 @@ the position can be used as an array index into the photo album;
 however, more complex data sources may require extra code to establish
 such a mapping.
 
-<a name="itemcount" />
 
 #### ItemCount
 
@@ -383,7 +378,6 @@ public override int ItemCount
 For more information about `RecyclerView.Adapter`, see the
 [RecyclerView.Adapter class reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html).
 
-<a name="together" />
 
 ### Putting it All Together
 
@@ -475,14 +469,13 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 When this code is compiled and run, it creates the basic photo viewing
 app as shown in the following screenshots:
 
-[ ![Two screenshots of photo viewing app with vertically scrolling photo cards](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png)
+[![Two screenshots of photo viewing app with vertically scrolling photo cards](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png#lightbox)
 
 This basic app only supports browsing of the photo album. It does not
 respond to item-touch events, nor does it handle changes in the
 underlying data. This functionality is added in
 [Extending the RecyclerView Example](~/android/user-interface/layouts/recycler-view/extending-the-example.md).
 
-<a name="layoutmanagerchange" />
 
 ### Changing the LayoutManager
 
@@ -503,7 +496,7 @@ scroll in the horizontal direction. When you compile and run the app
 again, you'll see that the photographs are displayed in a grid and that
 scrolling is horizontal rather than vertical:
 
-[ ![Example screenshot of app with horizontally-scrolling photos in a grid](recyclerview-example-images/04-gridlayoutmanager-sml.png)](recyclerview-example-images/04-gridlayoutmanager.png)
+[![Example screenshot of app with horizontally-scrolling photos in a grid](recyclerview-example-images/04-gridlayoutmanager-sml.png)](recyclerview-example-images/04-gridlayoutmanager.png#lightbox)
 
 By changing only one line of code, is is possible to modify the
 photo-viewing app to use a different layout with different behavior.

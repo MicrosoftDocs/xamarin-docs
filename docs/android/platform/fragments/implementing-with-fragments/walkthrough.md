@@ -20,7 +20,7 @@ Create a new Xamarin.Android project called **FragmentSample**. The
 **Minimum Android** version should be set to Android 3.1 or later, as
 shown in the image below:
 
-[![Setting the Minimum Android version](walkthrough-images/00.png)](walkthrough-images/00.png)
+[![Setting the Minimum Android version](walkthrough-images/00.png)](walkthrough-images/00.png#lightbox)
 
 
 ## 2. Create the MainActivity
@@ -53,7 +53,7 @@ layout called **activity_main.axml**. We'll also rename the default
 layout file as **Resources/Layout/activity_main.axml**. After these
 changes, the layout folders should resemble the following screen shot:
 
-[![Screenshot of layout folders in the IDE](walkthrough-images/01.png)](walkthrough-images/01.png)
+[![Screenshot of layout folders in the IDE](walkthrough-images/01.png)](walkthrough-images/01.png#lightbox)
 
 
 All devices will load and use the layout file in **Resources/Layout**.
@@ -114,7 +114,7 @@ higher, it uses the older resource qualifier.
 `TitlesFragment` will display the titles of the various
 plays, so let's add a new fragment to the project called `TitlesFragment`:
 
-[![Adding a new fragment to the TitlesFragment project](walkthrough-images/02.png)](walkthrough-images/02.png)
+[![Adding a new fragment to the TitlesFragment project](walkthrough-images/02.png)](walkthrough-images/02.png#lightbox)
 
 After `TitlesFragment` has been added, we must change the class so
 that it inherits from `Android.App.ListFragment`. `ListFragment` is
@@ -207,7 +207,6 @@ into the `FrameLayout` on the Activity. For other devices that do not
 have a large display &ndash; phones, for example &ndash; `isDualPane`
 will be set to `false` so a new `DetailsActivity` will be started.
 
-<a name="5. Create_the_DetailsActivity" />
 
 ## 5. Create the DetailsActivity
 
@@ -241,7 +240,6 @@ root view has the special ID `Android.Resource.Id.Content`. A new
 of a `FragmentTransaction` that is created by the Activity's
 `FragmentManager`.
 
-<a name="6. Create_the_DetailsFragment" />
 
 ## 6. Create the DetailsFragment
 

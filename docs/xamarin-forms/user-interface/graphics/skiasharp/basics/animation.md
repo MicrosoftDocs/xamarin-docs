@@ -137,7 +137,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The method calculates a maximum radius based on the size of the display area, and a minimum radius based on the maximum radius. The `scale` value is animated between 0 and 1 and back to 0, so the method uses that to compute an `xRadius` and `yRadius` that ranges between `minRadius` and `maxRadius`. These values are used to draw and fill an ellipse:
 
-[![](animation-images/pulsatingellipse-small.png "Triple screenshot of the Pulsating Ellipse page")](animation-images/pulsatingellipse-large.png "Triple screenshot of the Pulsating Ellipse page")
+[![](animation-images/pulsatingellipse-small.png "Triple screenshot of the Pulsating Ellipse page")](animation-images/pulsatingellipse-large.png#lightbox "Triple screenshot of the Pulsating Ellipse page")
 
 Notice that the `SKPaint` object is created in a `using` block. Like many SkiaSharp classes `SKPaint` derives from `SKObject`, which derives from `SKNativeObject`, which implements the [`IDisposable`](https://developer.xamarin.com/api/type/System.IDisposable/) interface. `SKPaint` overrides the `Dispose` method to release unmanaged resources.
 
@@ -240,7 +240,7 @@ public class ExpandingCirclesPage : ContentPage
 
 The result is that the image looks the same when `t` equals 0 as when `t` equals 1, and the circles seem to continue expanding forever:
 
-[![](animation-images/expandingcircles-small.png "Triple screenshot of the Expanding Circles page")](animation-images/expandingcircles-large.png "Triple screenshot of the Expanding Circles page")
+[![](animation-images/expandingcircles-small.png "Triple screenshot of the Expanding Circles page")](animation-images/expandingcircles-large.png#lightbox "Triple screenshot of the Expanding Circles page")
 
 
 ## Related Links

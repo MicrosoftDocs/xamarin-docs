@@ -27,7 +27,7 @@ In [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive)
 the **Distribution Channel** dialog presented two choices for
 distribution. Select **Ad-Hoc**:
 
-[ ![Distribution Channel dialog](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png)
+[![Distribution Channel dialog](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -45,7 +45,7 @@ In [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive)
 the **Sign and Distribute...** dialog presented us with two choices for
 distribution. Select **Ad-Hoc** and click **Next**:
 
-[ ![Sign and Distribute dialog](images/xs/01-select-ad-hoc-sml.png)](images/xs/01-select-ad-hoc.png)
+[![Sign and Distribute dialog](images/xs/01-select-ad-hoc-sml.png)](images/xs/01-select-ad-hoc.png#lightbox)
 
 -----
 
@@ -66,18 +66,18 @@ An existing certificate can be used by clicking the **Import** button and then p
 [Sign the APK](#signapkvs). Otherwise, click the click the
 **+** button to create a new certificate:
 
-[ ![Ad Hoc signing identity](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png)
+[![Ad Hoc signing identity](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png#lightbox)
 
 The **Create Android Key Store** dialog is displayed; use this dialog
 to create a new signing certificate that can use for signing
 Android applications. Enter the required information (outlined in red)
 as shown in this dialog:
 
-[ ![Create Android Key Store dialog](images/vs/03-create-android-key-store-vs-sml.png)](images/vs/03-create-android-key-store-vs.png)
+[![Create Android Key Store dialog](images/vs/03-create-android-key-store-vs-sml.png)](images/vs/03-create-android-key-store-vs.png#lightbox)
 
 The following example illustrates the kind of information that must be provided. Click **Create** to create the new certificate:
 
-[ ![Creating a new certificate](images/vs/04-key-store-example-vs-sml.png)](images/vs/04-key-store-example-vs.png)
+[![Creating a new certificate](images/vs/04-key-store-example-vs-sml.png)](images/vs/04-key-store-example-vs.png#lightbox)
 
 The resulting keystore resides in the following location:
 
@@ -108,13 +108,13 @@ Existing Key** button to import it and then proceed to
 [Sign the APK](#signapkxs) Otherwise, click the **Create a New 
 Key** button to create a new certificate: 
 
-[ ![Android Signing Identity dialog](images/xs/02-android-signing-identity-sml.png)](images/xs/02-android-signing-identity.png)
+[![Android Signing Identity dialog](images/xs/02-android-signing-identity-sml.png)](images/xs/02-android-signing-identity.png#lightbox)
 
 The **Create New Certificate** dialog is used to create a new signing
 certificate that can be used for signing Android applications. Click
 **OK** after entering in the necessary information:
 
-[ ![Create New Certificate dialog](images/xs/03-create-new-certificate-sml.png)](images/xs/03-create-new-certificate.png)
+[![Create New Certificate dialog](images/xs/03-create-new-certificate-sml.png)](images/xs/03-create-new-certificate.png#lightbox)
 
 The resulting keystore resides in the following location:
 
@@ -139,7 +139,6 @@ For more information about the keystore, see
 -----
 
 <a name="signapkvs" />
-<a name="signingxs" />
 
 ## Sign the APK
 
@@ -155,24 +154,24 @@ click **Save As** to publish the app for independent distribution. For
 example, the **chimp** signing identity (created earlier) is selected
 in this screenshot:
 
-[ ![Signing Identity example](images/vs/05-save-as-vs-sml.png)](images/vs/05-save-as-vs.png)
+[![Signing Identity example](images/vs/05-save-as-vs-sml.png)](images/vs/05-save-as-vs.png#lightbox)
 
 Next, the **Archive Manager** displays the publishing progress. When
 the publishing process completes, the **Save As** dialog opens to ask
 for a location where the generated .APK file is to be
 stored:
 
-[ ![Save As dialog](images/vs/06-save-as-dialog-vs-sml.png)](images/vs/06-save-as-dialog-vs.png)
+[![Save As dialog](images/vs/06-save-as-dialog-vs-sml.png)](images/vs/06-save-as-dialog-vs.png#lightbox)
 
 Navigate to the desired location and click **Save**. If the key
 password is unknown, the **Signing Password** dialog will appear to
 prompt for the password for the selected certificate:
 
-[ ![Signing Password dialog](images/vs/07-signing-password-vs-sml.png)](images/vs/07-signing-password-vs.png)
+[![Signing Password dialog](images/vs/07-signing-password-vs-sml.png)](images/vs/07-signing-password-vs.png#lightbox)
 
 After the signing process completes, click **Open Folder**:
 
-[ ![Open Folder button](images/vs/08-open-folder-vs-sml.png)](images/vs/08-open-folder-vs.png)
+[![Open Folder button](images/vs/08-open-folder-vs-sml.png)](images/vs/08-open-folder-vs.png#lightbox)
 
 This causes Windows Explorer to open the folder containing the
 generated APK file. At this point, Visual Studio has compiled the
@@ -180,7 +179,7 @@ Xamarin.Android application into an APK that is ready for distribution.
 The following screenshot displays an example of the ready-to-publish
 app, **MyApp.MyApp.apk**:
 
-[ ![APK shown in Windows Explorer](images/vs/09-generated-app-vs-sml.png)](images/vs/09-generated-app-vs.png)
+[![APK shown in Windows Explorer](images/vs/09-generated-app-vs-sml.png)](images/vs/09-generated-app-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -191,13 +190,13 @@ an app on Google Play, click **Cancel** and go to
 Otherwise click **Next** to publish the app *ad-hoc* (for independent
 distribution) as shown in this example:
 
-[ ![Sign and Distribute dialog](images/xs/04-select-identity-sml.png)](images/xs/04-select-identity.png)
+[![Sign and Distribute dialog](images/xs/04-select-identity-sml.png)](images/xs/04-select-identity.png#lightbox)
 
 The **Publish as Ad Hoc** dialog provides a summary of the signed app
 before it is published. If this information is correct, click
 **Publish**.
 
-[ ![Publish as Ad Hoc dialog](images/xs/05-publish-ad-hoc-sml.png)](images/xs/05-publish-ad-hoc.png)
+[![Publish as Ad Hoc dialog](images/xs/05-publish-ad-hoc-sml.png)](images/xs/05-publish-ad-hoc.png#lightbox)
 
 The **Output APK file** dialog will save the APK to the path specified. Click **Save**.
 
@@ -211,11 +210,11 @@ used in the **Create New Certificate** dialog) and click **OK**:
 The APK is signed with the certificate and saved to the specified
 location. Click **Reveal in Finder**:
 
-[ ![Publication Succeeded dialog](images/xs/08-app-is-ready-sml.png)](images/xs/08-app-is-ready.png)
+[![Publication Succeeded dialog](images/xs/08-app-is-ready-sml.png)](images/xs/08-app-is-ready.png#lightbox)
 
 This opens the finder to the location of the signed APK file:
 
-[ ![APK shown in Finder](images/xs/09-show-in-finder-sml.png)](images/xs/09-show-in-finder.png)
+[![APK shown in Finder](images/xs/09-show-in-finder-sml.png)](images/xs/09-show-in-finder.png#lightbox)
 
 The APK is ready to copy from the finder and send to its final
 destination. It's a good idea to install the APK on an Android device
@@ -226,7 +225,6 @@ for more information about publishing an *ad-hoc* APK.
 -----
 
 
-<a name="nextsteps" />
 
 ## Next Steps
 

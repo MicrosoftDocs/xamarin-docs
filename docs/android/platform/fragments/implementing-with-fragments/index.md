@@ -14,7 +14,6 @@ ms.date: 02/06/2018
 
 _Android 3.0 introduced Fragments. Fragments are self-contained, modular components that are used to help address the complexity of writing applications that may run on screens of different sizes. This article walks through how to use fragments to develop Xamarin.Android applications, and how to support fragments on pre-Android 3.0 devices._
 
-<a name="Overview" />
 
 ## Overview
 
@@ -24,7 +23,7 @@ app will utilize fragments so that we can define our UI components in one place,
 but then use them on different form factors. For example, the following screen
 shots show the application running on a 10" tablet, as well as on a phone:
 
-[![Screenshots of example app running on tablet and phone](images/intro-screenshot-sml.png)](images/intro-screenshot.png)
+[![Screenshots of example app running on tablet and phone](images/intro-screenshot-sml.png)](images/intro-screenshot.png#lightbox)
 
 This section will cover the following topics:
 
@@ -39,7 +38,6 @@ the application to take advantage of larger screen sizes.
 Support Package, then makes some minor changes to the Activities in the
 application, allowing it to run on older versions of Android.
 
-<a name="Requirements" />
 
 ## Requirements
 
@@ -47,7 +45,6 @@ This walkthrough requires Xamarin.Android 4.0 or higher. It will also be
 necessary to install the Android Support Package, as outlined in the Fragments
 documentation.
 
-<a name="Introduction" />
 
 ## Introduction
 

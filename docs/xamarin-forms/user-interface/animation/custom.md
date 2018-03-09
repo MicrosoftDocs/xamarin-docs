@@ -50,7 +50,7 @@ The following arguments are specified in the `Commit` method:
 The overall effect is to create an animation that increases the [`Scale`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Scale/) property of an [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) from 1 to 2, over 2 seconds (2000 milliseconds), using the [`Linear`](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.Linear/) easing function. Each time the animation completes, its `Scale` property is reset to 1 and the animation repeats.
 
 > [!NOTE]
-> **Note**: Concurrent animations, that run independently of each other can be constructed by creating an `Animation` object for each animation, and then calling the `Commit` method on each animation.
+> Concurrent animations, that run independently of each other can be constructed by creating an `Animation` object for each animation, and then calling the `Commit` method on each animation.
 
 <a name="child" />
 

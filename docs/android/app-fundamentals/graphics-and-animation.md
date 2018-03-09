@@ -14,7 +14,6 @@ ms.date: 02/16/2018
 
 _Android provides a very rich and diverse framework for supporting 2D graphics and animations. This topic introduces these frameworks and discusses how to create custom graphics and animations for use in a Xamarin.Android application._
 
-<a name="Overview" />
 
 ## Overview
 
@@ -107,7 +106,6 @@ Refer to
 more information on how to utilize Android's accessibility APIs.
 
 
-<a name="2D_Graphics" />
 
 ## 2D Graphics
 
@@ -132,7 +130,6 @@ will change based on calculations related to the value of the slider.
 Let's examine Drawable Resources first. They are simpler and cover the
 most common custom drawing cases.
 
-<a name="Drawable Resources" />
 
 ### Drawable Resources
 
@@ -262,7 +259,6 @@ For more details about the XML elements and syntax of Drawable
 Resources, consult
 [Google's documentation](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
 
-<a name="Using the Canvas Drawing API" />
 
 ### Using the Canvas Drawing API
 
@@ -317,7 +313,6 @@ instructions. For example:
     text is drawn at location `x,y` .
 
 
-<a name="Drawing with the Canvas API" />
 
 #### Drawing with the Canvas API
 
@@ -359,7 +354,6 @@ should a screen similar to the following:
 
 ![Screen with red paint and green paint objects](graphics-and-animation-images/image3.png)
 
-<a name="Animation" />
 
 ## Animation
 
@@ -386,7 +380,6 @@ for animations:
 In general, property animation is the preferred system to use as it is
 more flexible and offers more features.
 
-<a name="View Animations" />
 
 ### View Animations
 
@@ -500,7 +493,6 @@ myImage.StartAnimation(myAnimation);
 Now that we have a fundamental understanding of how View Animations
 work, lets move to Property Animations.
 
-<a name="Property Animations" />
 
 ### Property Animations
 
@@ -624,7 +616,6 @@ animator.Start();
 As you can see from the previous code snippet, `ObjectAnimator` can
 reduce and simplify the code that is necessary to animate an object.
 
-<a name="Drawable Animations" />
 
 ### Drawable Animations
 
@@ -679,7 +670,6 @@ protected override void OnCreate(Bundle bundle)
 At this point we have covered the foundations of the animation APIs
 available in an Android application.
 
-<a name="Summary" />
 
 ## Summary
 

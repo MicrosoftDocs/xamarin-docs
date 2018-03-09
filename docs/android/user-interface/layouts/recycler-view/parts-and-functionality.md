@@ -6,7 +6,7 @@ ms.assetid: 54F999BE-2732-4BC7-A466-D17373961C48
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 03/01/2018
 ---
 
 # RecyclerView Parts and Functionality
@@ -103,7 +103,7 @@ that fit on the screen and it reuses those item layouts as the user
 scrolls. When the view first scrolls out of sight, it goes through the
 recycling process illustrated in the following figure:
 
-[ ![Diagram illustrating the six steps of view recycling](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png)
+[![Diagram illustrating the six steps of view recycling](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png#lightbox)
 
 1.  When a view scrolls out of sight and is no longer displayed, it
     becomes a *scrap view*.
@@ -136,7 +136,6 @@ inflated item-layout file. These references are used to load new data
 into the views every time the layout is recycled to show new data.
  
 
-<a name="layoutmanager" />
 
 ### The Layout Manager
 
@@ -176,7 +175,6 @@ predefined layout manager by default.
 For more information about the layout manager, see the
 [RecyclerView.LayoutManager class reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html).
 
-<a name="viewholder" />
 
 ### The View Holder
 
@@ -196,7 +194,6 @@ A detailed example of a `ViewHolder` implementation is presented in
 For more information about `RecyclerView.ViewHolder`, see the
 [RecyclerView.ViewHolder class reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
 
-<a name="adapter" />
 
 ### The Adapter
 
@@ -213,7 +210,7 @@ The following drawing illustrates how the adapter maps content in a
 data source through view holders to individual views within each row
 item in the `RecyclerView`:
 
-[ ![Diagram illustrating Adapter connecting Data Source to ViewHolders](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png)
+[![Diagram illustrating Adapter connecting Data Source to ViewHolders](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png#lightbox)
 
 The adapter loads each `RecyclerView` row with data for a particular
 row item. For row position *P*, for example, the adapter locates the
@@ -239,7 +236,6 @@ The layout manager calls these methods while it is positioning items
 within the `RecyclerView`. 
 
 
-<a name="datachanges" />
 
 ### Notifying RecyclerView of Data Changes
 

@@ -48,7 +48,7 @@ Multiple `Button` objects can also be distinguished by setting the [`StyleId`](h
 
 The [**SimplestKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/SimplestKeypad) sample uses the same event handler for all 10 number keys on a numeric keypad and distinguishes between them with the `StyleId` property:
 
-[![Triple screenshot of simplest keypad](images/ch06fg04-small.png "Calculator")](images/ch06fg04-large.png "Calculator")
+[![Triple screenshot of simplest keypad](images/ch06fg04-small.png "Calculator")](images/ch06fg04-large.png#lightbox "Calculator")
 
 ## Saving transient data
 

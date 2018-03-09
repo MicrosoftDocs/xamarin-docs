@@ -95,7 +95,7 @@ If a particular modal page can be navigated to multiple times, it should retain 
 
 The [**ViewGalleryType**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryType) sample demonstrates using a `TableView` to list menu items. Each item is associated with a `Type` object for a particular page. When that item is selected, the program instantiates the page and navigates to it.
 
-[![Triple screenshot of View Gallery Type](images/ch24fg21-small.png "TableView Listing Menu Items")](images/ch24fg21-large.png "TableView Listing Menu Items")
+[![Triple screenshot of View Gallery Type](images/ch24fg21-small.png "TableView Listing Menu Items")](images/ch24fg21-large.png#lightbox "TableView Listing Menu Items")
 
 The [**ViewGalleryInst**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryInst) sample is a little different in that the menu contains instances of each page rather than types. This helps retain the information from each page, but all the pages must be instantiated at program startup.
 

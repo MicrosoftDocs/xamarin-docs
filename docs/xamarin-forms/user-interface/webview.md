@@ -34,7 +34,8 @@ WebView comes with support for the following types of content:
 - HTML strings &ndash; WebView can show HTML strings from memory.
 - Local Files &ndash; WebView can present any of the content types above embedded in the app.
 
-**Note**: `WebView` on Windows and Windows Phone does not support Silverlight, Flash or any ActiveX controls, even if they are supported by Internet Explorer on that platform.
+> [!NOTE]
+> `WebView` on Windows and Windows Phone does not support Silverlight, Flash or any ActiveX controls, even if they are supported by Internet Explorer on that platform.
 
 ### Websites
 
@@ -46,14 +47,15 @@ var browser = new WebView {
 };
 ```
 
-**Note**: URLs must be fully formed with the protocol specified (i.e. it must have "http://" or "https://" prepended to it).
+> [!NOTE]
+> URLs must be fully formed with the protocol specified (i.e. it must have "http://" or "https://" prepended to it).
 
 #### iOS and ATS
 
 Since version 9, iOS will only allow your application to communicate with servers that implement best-practice security by default. Values must be set in `Info.plist` to enable communication with insecure servers.
 
 > [!NOTE]
-> **Note:** If your application requires a connection to an insecure website, you should always enter the domain as an exception using `NSExceptionDomains` instead of turning ATS off completely using `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` should only be used in extreme emergency situations.
+> If your application requires a connection to an insecure website, you should always enter the domain as an exception using `NSExceptionDomains` instead of turning ATS off completely using `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` should only be used in extreme emergency situations.
 
 The following demonstrates how to enable a specific domain (in this case xamarin.com) to bypass ATS requirements:
 
@@ -217,10 +219,10 @@ namespace WorkingWithWebview.Android {
 }
 ```
 
-On Android, files in the **Assets** folder can also be accessed through the `Forms.Context.Assets` property, as demonstrated in the following code example:
+On Android, files in the **Assets** folder can also be accessed through the current Android context, which is exposed by the `MainActivity.Instance` property:
 
 ```csharp
-var assetManager = Xamarin.Forms.Forms.Context.Assets;
+var assetManager = MainActivity.Instance.Assets;
 using (var streamReader = new StreamReader (assetManager.Open ("local.html"))) {
   var html = streamReader.ReadToEnd ();
 }

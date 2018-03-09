@@ -11,7 +11,6 @@ ms.date: 03/28/2017
 
 # Introduction to Mobile Development
 
-
 Building mobile applications can be as easy as opening up the IDE, throwing
 something together, doing a quick bit of testing, and submitting to an App Store
 – all done in an afternoon. Or it can be an extremely involved process that
@@ -19,19 +18,10 @@ involves rigorous up-front design, usability testing, QA testing on thousands of
 devices, a full beta lifecycle, and then deployment a number of different
 ways.
 
-This guide is a thorough introductory examination
-of building a Xamarin mobile application, including:
-
-1.   [ **Introduction to Xamarin**](#Introduction_to_Xamarin) – List of features of the Xamarin platform.
-1.   [ **How Does Xamarin Work?**](#How_Does_Xamarin_Work) – A brief overview of how Xamarin works to bring C# to iOS and Android.
-1.   [ **Get started!**](#Sample_App) – Dive in and build a Xamarin app, for iOS, Android, or all the platforms using Xamarin.Forms.
-
-
 This document is intended to introduce the Xamarin platform. To learn more about the *process* of building mobile applications from design through to testing, refer to the [Introduction to the Mobile Software Development Lifecycle](~/cross-platform/get-started/introduction-to-mobile-sdlc.md) document.
 
 Please refer to our [system requirements](~/cross-platform/get-started/requirements.md#mac)
 to confirm you are able to install Xamarin.
-
 
 ## Introduction to Xamarin
 

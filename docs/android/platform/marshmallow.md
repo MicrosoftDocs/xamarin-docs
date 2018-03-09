@@ -7,7 +7,7 @@ ms.assetid: E4D6F183-98D2-460A-9D65-937639A899E0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/01/2018
 ---
 
 # Marshmallow Features
@@ -20,7 +20,6 @@ Marshmallow development, and provides links to sample applications that
 illustrate how to make use of new Android Marshmallow features in 
 Xamarin.Android apps. 
 
-<a name="overview" />
 
 ## Overview
 
@@ -34,7 +33,7 @@ Xamarin.Android supports Android Marshmallow and includes:
     information about Android 6.0 APIs, see 
     [Android 6.0 APIs](http://developer.android.com/preview/api-overview.html). 
 
-[![Hero images of tablets and phones running Marshmallow](marshmallow-images/android-m-hero-sml.png)](marshmallow-images/android-m-hero.png)
+[![Hero images of tablets and phones running Marshmallow](marshmallow-images/android-m-hero-sml.png)](marshmallow-images/android-m-hero.png#lightbox)
 
 Although the Marshmallow release is mainly focused on "polish and 
 quality", it also provides many new features of interest to 
@@ -93,9 +92,6 @@ Android Marshmallow and earlier versions of Android. This article
 explains how to get started building apps with Android Marshmallow, and 
 it provides an overview of the new feature highlights in Android 6.0. 
 
-
-<a name="requirements" />
-
 ## Requirements
 
 The following is required to use the new Android Marshmallow features 
@@ -123,7 +119,6 @@ You can continue to use
 [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) 
 if you are developing specifically for API level 23 or earlier. 
 
-<a name="gettingstarted" />
 
 ## Getting Started
 
@@ -142,7 +137,6 @@ create an Android Marshmallow project:
 
 Each of these steps is explained in the following sections:
 
-<a name="updates" />
 
 ### Install Xamarin Updates
 
@@ -151,7 +145,6 @@ Marshmallow, change the update channel to **Stable** and install
 all updates. For more information about installing updates from the updates 
 channel, see [Change the Updates Channel](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/). 
 
-<a name="sdkpreview" />
 
 ### Install the Android 6.0 SDK
 
@@ -163,11 +156,11 @@ use the Android SDK Manager to install the Android 6.0 SDK:
     use **Tools > Android > Android SDK Manager**) and install
     the latest Android SDK Tools:
 
-    [![Selecting Android SDK tools in the Android SDK Manager](marshmallow-images/mnc-preview-tools.png)](marshmallow-images/mnc-preview-tools.png)
+    [![Selecting Android SDK tools in the Android SDK Manager](marshmallow-images/mnc-preview-tools.png)](marshmallow-images/mnc-preview-tools.png#lightbox)
 
 -   Also, install the latest **Android 6.0** SDK packages:
 
-    [![Selecting Android 6.0 SDK packages in the Android SDK Manager](marshmallow-images/mnc-preview-packages.png)](marshmallow-images/mnc-preview-packages.png)
+    [![Selecting Android 6.0 SDK packages in the Android SDK Manager](marshmallow-images/mnc-preview-packages.png)](marshmallow-images/mnc-preview-packages.png#lightbox)
 
 You must install Android SDK Tools revision 24.3.4 or later.
 For more information about using the Android SDK Manager to install the
@@ -175,7 +168,6 @@ Android 6.0 SDK, see
 [SDK Manager](http://developer.android.com/tools/help/sdk-manager.html).
 
 
-<a name="xaproject" />
 
 ### Start a Xamarin.Android Project
 
@@ -191,7 +183,6 @@ For more about configuring Android API level levels, see
 [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).
 
 
-<a name="emudev" />
 
 ### Configure an Emulator or Device
 
@@ -204,7 +195,7 @@ device using the following settings:
 
 For example, this virtual device is configured to emulate a Nexus 5:
 
-[![Configuring an AVD using Nexus 5 device, Android 6.0 Target, and Intel Atom (x86)](marshmallow-images/android-m-avd.png)](marshmallow-images/android-m-avd.png)
+[![Configuring an AVD using Nexus 5 device, Android 6.0 Target, and Intel Atom (x86)](marshmallow-images/android-m-avd.png)](marshmallow-images/android-m-avd.png#lightbox)
 
 If you are using a physical device such as a Nexus 5, 6, or 9, you can
 install a preview image of Android Marshmallow. For more information about
@@ -212,7 +203,6 @@ updating your device to Android Marshmallow, see
 [Hardware System Images](http://developer.android.com/preview/download.html#images).
 
 
-<a name="newfeatures" />
 
 ## New Features
 
@@ -224,7 +214,6 @@ sections highlight these enhancements and provide links to help you get
 started in using the new Android Marshmallow features in your app. 
 
 
-<a name="permissions" />
 
 ### Runtime Permissions
 
@@ -258,7 +247,6 @@ in Android Marshmallow, see
 [Working with System Permissions](https://developer.android.com/preview/features/runtime-permissions.html).
 
 
-<a name="authentication" />
 
 ### Authentication Enhancements
 
@@ -273,8 +261,6 @@ the need for passwords:
 The links and sample apps described next can help you become familiar
 with these new features.
 
-
-<a name="fingerprint" />
 
 #### Fingerprint Authentication
 
@@ -297,7 +283,6 @@ Note that this sample app requires a device with a fingerprint reader.
 This app does not store your fingerprint (or your password).
 
 
-<a name="voice" />
 
 #### Voice Interactions
 
@@ -313,7 +298,6 @@ in a Xamarin.Android app:
 [Voice Interactions](https://github.com/jamesmontemagno/MarshmallowSamples/tree/master/VoiceInteractions).
 
 
-<a name="confirmcred" />
 
 #### Confirm Credential
 
@@ -337,7 +321,6 @@ To use this sample app:
 2.  Tap the **Purchase** button and confirm the secure lock screen credentials.
 
 
-<a name="chrometabs" />
 
 ### Chrome Custom Tabs
 
@@ -370,7 +353,6 @@ For more information about this feature, see
 [Chrome Custom Tabs](https://developer.chrome.com/multidevice/android/customtabs).
 
 
-<a name="designlib" />
 
 ### Material Design Support Library
 
@@ -435,8 +417,6 @@ For more information about the Design library, see
 [Android Design Support Library](http://android-developers.blogspot.co.at/2015/05/android-design-support-library.html)
 in the Android Developer's blog.
 
-
-<a name="libraries" />
 
 ### Additional Library Updates
 

@@ -144,7 +144,7 @@ resource ID &ndash; `Resources.Layout.Main` refers to the
 
 Run the application. You should see the following:
 
-[ ![Screenshot of app first LinearLayout arranged horizontally, second vertically](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png)
+[![Screenshot of app first LinearLayout arranged horizontally, second vertically](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
 
 Notice how the XML attributes define each View's behavior. Try
 experimenting with different values for `android:layout_weight` to see
@@ -155,7 +155,6 @@ document for more about how
 [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
 handles the `android:layout_weight` attribute.
 
-<a name="References" />
 
 ## References
 

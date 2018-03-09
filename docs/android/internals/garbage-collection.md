@@ -46,7 +46,6 @@ with the argument
 [GC.MaxGeneration](https://developer.xamarin.com/api/property/System.GC.MaxGeneration/). 
 
 
-<a name="Cross-VM_Object_Collections" />
 
 ## Cross-VM Object Collections
 
@@ -124,7 +123,6 @@ lifetime of Native peers will be extended beyond what they would
 otherwise live, as the Native peer won't be collectible until both the
 Native peer and the Managed peer are collectible.
 
-<a name="Object_Cycles" />
 
 ## Object Cycles
 
@@ -153,7 +151,6 @@ should be invoked. This will manually "sever" the connection on the
 object between the two VMs by freeing the global reference, thus 
 allowing the objects to be collected faster. 
 
-<a name="Automatic_Collections" />
 
 ## Automatic Collections
 
@@ -264,7 +261,6 @@ There are multiple ways to help the GC to reduce memory use and collection
 times.
 
 
-<a name="Disposing_of_Peer_instances" />
 
 ### Disposing of Peer instances
 
@@ -448,7 +444,6 @@ class MyClass : Java.Lang.Object, ISomeInterface
 }
 ```
 
-<a name="Reduce_Referenced_Instances" />
 
 ### Reduce Referenced Instances
 
@@ -532,7 +527,6 @@ class BetterActivity : Activity {
 }
 ```
 
-<a name="Minor_Collections" />
 
 ## Minor Collections
 
@@ -551,7 +545,6 @@ collection once the duty cycle has ended. Example duty cycles include:
 -  A group of network requests to refresh/sync app data.
 
 
-<a name="Major_Collections" />
 
 ## Major Collections
 
@@ -572,7 +565,6 @@ Major collections should only be manually invoked, if ever:
     method. 
 
 
-<a name="Diagnostics" />
 
 ## Diagnostics
 
@@ -584,7 +576,6 @@ and/or
 [ *gc*](~/android/troubleshooting/index.md). 
 
 
-<a name="Configuration" />
 
 ## Configuration
 

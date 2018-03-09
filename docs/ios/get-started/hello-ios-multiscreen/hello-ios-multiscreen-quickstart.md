@@ -14,7 +14,7 @@ ms.date: 12/02/2016
 
 This part of the walkthrough will add a second screen to the Phoneword application that will display a history of the phone numbers that were called with the app. The final application will have a second screen that displays the call history, as illustrated by the following screenshot:
 
- [ ![](hello-ios-multiscreen-quickstart-images/00.png "The final application will have a second screen that displays the call history, as illustrated by this screenshot")](hello-ios-multiscreen-quickstart-images/00.png)
+ [![](hello-ios-multiscreen-quickstart-images/00.png "The final application will have a second screen that displays the call history, as illustrated by this screenshot")](hello-ios-multiscreen-quickstart-images/00.png#lightbox)
 
 The [accompanying Deep Dive](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md), will review the application that is build built and discuss architecture, navigation, and other new iOS concepts that we encounter along the way.
 

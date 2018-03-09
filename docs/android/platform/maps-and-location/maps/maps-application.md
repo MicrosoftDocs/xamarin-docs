@@ -14,14 +14,13 @@ ms.date: 04/05/2017
 The simplest way to work with maps in Xamarin.Android is to leverage
 the built-in maps application shown below:
 
-[![Example screenshot of built-in Google Maps app](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png)
+[![Example screenshot of built-in Google Maps app](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
 
 When you use the maps application, the map will not be part of your
 application. Instead, your application will launch the maps application
 and load the map externally. The next section examines how to use
 Xamarin.Android to launch maps like the one above.
 
-<a name="Creating_the_Intent" />
 
 ## Creating the Intent
 
@@ -40,7 +39,6 @@ This code is all that is needed to launch the map shown in the previous
 screenshot. In addition to specifying latitude and longitude, the URI
 scheme for maps supports several other options.
 
-<a name="Geo_Uri_Scheme" />
 
 ## Geo URI Scheme
 
@@ -67,10 +65,9 @@ search terms) use Google's geocoder service to retrieve the location
 that is then displayed on the map. For example, the URI
 `geo:0,0?q=coop+Cambridge` results in the map shown below:
 
-[![Example screenshot showing Google Maps with a search term](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png)
+[![Example screenshot showing Google Maps with a search term](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
 
 
-<a name="Street_View" />
 
 For more information about geo URI schemes, see
 [Show a location on a map](http://developer.android.com/guide/components/intents-common.html#Maps).
@@ -82,7 +79,7 @@ In addition to the geo scheme, Android also supports loading street
 views from an Intent. An example of the street view application
 launched from Xamarin.Android is shown below:
 
-[![Example screenshot of a street view](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png)
+[![Example screenshot of a street view](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png#lightbox)
 
 To launch a street view, simply use the `google.streetview` URI scheme,
 as demonstrated in the following code:

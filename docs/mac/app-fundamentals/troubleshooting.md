@@ -66,7 +66,7 @@ The following sections cover known issues and their solutions.
 
 The debugger connects to Xamarin.Mac apps through TCP, which means that by default when you enable sandboxing, it is unable to connect to the app, so if you try to run the app without the proper permissions enabled, you get an error *“Unable to connect to the debugger”*. 
 
-[![Editing the entitlements](troubleshooting-images/debug01.png "Editing the entitlements")](troubleshooting-images/debug01-large.png)
+[![Editing the entitlements](troubleshooting-images/debug01.png "Editing the entitlements")](troubleshooting-images/debug01-large.png#lightbox)
 
 The **Allow Outgoing Network Connections (Client)** permission is the one required for the debugger, enabling this one will allow debugging normally. Since you can’t debug without it, we have updated the `CompileEntitlements` target for `msbuild` to automatically add that permission to the entitlements for any app that is sandboxed for debug builds only. Release builds should use the entitlements specified in the entitlements file, unmodified.
 
@@ -76,7 +76,7 @@ When including 3rd party libraries in your Xamarin.Mac app, you might get an err
 
 This can be solved by opening the options for the Xamarin.Mac project, going to **Mac Build** > **Internationalization** and checking the **West** internationalization:
 
-[![Editing the build options](troubleshooting-images/issue01.png "Editing the build options")](troubleshooting-images/issue01-large.png)
+[![Editing the build options](troubleshooting-images/issue01.png "Editing the build options")](troubleshooting-images/issue01-large.png#lightbox)
 
 ### Failed to compile (mm5103)
 
@@ -96,7 +96,7 @@ With the new Visual Studio for Mac installed, when you create a new Xamarin.Mac 
 
 If you double-click the **Entitlements.plist** file, the Entitlements Editor will be displayed:
 
-[![Editing the entitlements](troubleshooting-images/entitlements02.png "Editing the entitlements")](troubleshooting-images/entitlements02-large.png)
+[![Editing the entitlements](troubleshooting-images/entitlements02.png "Editing the entitlements")](troubleshooting-images/entitlements02-large.png#lightbox)
 
 For existing Xamarin.Mac projects, you will need to manually create the **Entitlements.plist** file by right-clicking on the project in the **Solution Pad** and selecting **Add** > **New File...**. Next, select **Xamarin.Mac** > **Empty Property List**:
 
@@ -104,7 +104,7 @@ For existing Xamarin.Mac projects, you will need to manually create the **Entitl
 
 Enter `Entitlements` for the name and click the **New** button. If your project previously included an Entitlements file, you will be prompted to add it to the project instead of creating a new file:
 
-[![Verifying the overwrite of a file](troubleshooting-images/entitlements04.png "Verifying the overwrite of a file")](troubleshooting-images/entitlements04-large.png)
+[![Verifying the overwrite of a file](troubleshooting-images/entitlements04.png "Verifying the overwrite of a file")](troubleshooting-images/entitlements04-large.png#lightbox)
 
 ## Contacting support (business or enterprise licenses)
 

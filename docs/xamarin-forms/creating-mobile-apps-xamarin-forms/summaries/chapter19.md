@@ -94,7 +94,7 @@ The [**TextCellListXaml**](https://github.com/xamarin/xamarin-forms-book-samples
 
 In XAML it is possible to set a [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) to the `DataTemplate` and then define a custom visual tree as the [`View`](https://developer.xamarin.com/api/property/Xamarin.Forms.ViewCell.View/) property of `ViewCell`. (`View` is the content property of `ViewCell` so the `ViewCell.View` tags aren't required.) The [**CustomNamedColorList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/CustomNamedColorList) sample demonstrates this technique:
 
-[![Triple screenshot of Custom Named Color List](images/ch19fg11-small.png "Custom Named Color List")](images/ch19fg11-large.png "Custom Named Color List")
+[![Triple screenshot of Custom Named Color List](images/ch19fg11-small.png "Custom Named Color List")](images/ch19fg11-large.png#lightbox "Custom Named Color List")
 
 Getting the sizing right for all the platforms can be tricky. The [`RowHeight`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.RowHeight/) property is useful but in some cases you'll want to resort to the [`HasUnevenRows`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.HasUnevenRows/) property, which is less efficient but forces the `ListView` to size the rows. For iOS and Android, you must use one of these two properties to get proper row sizing.
 
@@ -125,7 +125,7 @@ The [`Student`](https://github.com/xamarin/xamarin-forms-book-samples/blob/maste
 
 The [**StudentList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/StudentList) program uses an `ImageCell` to display the students and their images in a `ListView`:
 
-[![Triple screenshot of Student List](images/ch19fg18-small.png "Student List")](images/ch19fg18-large.png "Student List")
+[![Triple screenshot of Student List](images/ch19fg18-small.png "Student List")](images/ch19fg18-large.png#lightbox "Student List")
 
 The [**ListViewHeader**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ListViewHeader) sample adds a [`Header`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.Header/) property but it only shows up on Android.
 

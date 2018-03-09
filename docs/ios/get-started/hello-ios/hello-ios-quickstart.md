@@ -14,7 +14,7 @@ ms.date: 03/23/2017
 
 This guide describes how to create an application that translates an alphanumeric phone number entered by the user into a numeric phone number, and then calls that number. The final application looks like this:
 
- [ ![](hello-ios-quickstart-images/image1.png "The Hello.iOS Quickstart app")](hello-ios-quickstart-images/image1.png)
+ [![](hello-ios-quickstart-images/image1.png "The Hello.iOS Quickstart app")](hello-ios-quickstart-images/image1.png#lightbox)
 
 
 <a name="Requirements" />

@@ -50,17 +50,15 @@ In iOS 10 Apple builds upon this feature by allowing the user to start a search 
 
 To implement this feature, edit the app's `Info.plist` file, add the `CoreSpotlightContinuation` key of type **Boolean** and set its value to `YES`:
 
-[[ide name="xs]]
+# [Visual Studio for Mac](#tab/vsmac)
 
-[ ![](app-search-enhancements-images/search01.png "Editing CoreSpotlightContinuation in the Info.plist file")](app-search-enhancements-images/search01.png)
+[![](app-search-enhancements-images/search01.png "Editing CoreSpotlightContinuation in the Info.plist file")](app-search-enhancements-images/search01.png#lightbox)
 
-[[/ide]]
+# [Visual Studio](#tab/vswin)
 
-[[ide name="vs]]
+[![](app-search-enhancements-images/searchw01.png "Editing CoreSpotlightContinuation in the Info.plist file")](app-search-enhancements-images/search01.png#lightbox)
 
-[ ![](app-search-enhancements-images/searchw01.png "Editing CoreSpotlightContinuation in the Info.plist file")](app-search-enhancements-images/search01.png)
-
-[[/ide]]
+-----
 
 To respond to the user continuing a search result (`NSUserActivity`), edit the `AppDelegate.cs` file and override the `ContinueUserActivity` method. For example:
 

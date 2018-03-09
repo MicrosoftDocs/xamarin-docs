@@ -64,7 +64,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The successive rectangles trickle down the page:
 
-[![](translate-images/accumulatedtranslate-small.png "Triple screenshot of the Accumulated Translate page")](translate-images/accumulatedtranslate-large.png "Triple screenshot of the Accumulated Translate page")
+[![](translate-images/accumulatedtranslate-small.png "Triple screenshot of the Accumulated Translate page")](translate-images/accumulatedtranslate-large.png#lightbox "Triple screenshot of the Accumulated Translate page")
 
 If the accumulated translation factors are `dx` and `dy`, and the point you specify in a drawing function is (`x`, `y`), then the graphical object is rendered at the point (`x'`, `y'`), where:
 
@@ -121,7 +121,7 @@ using (SKPaint textPaint = new SKPaint())
 
 In each of the three examples, `Translate` is called for displaying the text to offset it from the location given by the `x` and `y` variables. Then the text is displayed again in another color with no translation effect:
 
-[![](translate-images/translatetexteffects-small.png "Triple screenshot of the Translate Text Effects page")](translate-images/translatetexteffects-large.png "Triple screenshot of the Translate Text Effects page")
+[![](translate-images/translatetexteffects-small.png "Triple screenshot of the Translate Text Effects page")](translate-images/translatetexteffects-large.png#lightbox "Triple screenshot of the Translate Text Effects page")
 
 Each of the three examples shows a different way of negating the `Translate` call:
 
@@ -205,7 +205,7 @@ public class HendecagramArrayPage : ContentPage
 
 Here's the result:
 
-[![](translate-images/hendecagramarray-small.png "Triple screenshot of the Hendecagram Array page")](translate-images/hendecagramarray-large.png "Triple screenshot of the Hendecagram Array page")
+[![](translate-images/hendecagramarray-small.png "Triple screenshot of the Hendecagram Array page")](translate-images/hendecagramarray-large.png#lightbox "Triple screenshot of the Hendecagram Array page")
 
 Animations often involve transforms. The **Hendecagram Animation** page moves the 11-pointed star around in a circle. The [`HendecagramAnimationPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/HendecagramAnimationPage.cs) class begins with some fields and overrides of the `OnAppearing` and `OnDisappearing` methods to start and stop a Xamarin.Forms timer:
 
@@ -290,7 +290,7 @@ public class HendecagramAnimationPage : ContentPage
 
 The `PaintSurface` handler calls the `Translate` method twice, first to translate to the center of the canvas, and then to translate to the circumference of a circle centered around (0, 0). The radius of the circle is set to be as large as possible while still keeping the star within the confines of the page:
 
-[![](translate-images/hendecagramanimation-small.png "Triple screenshot of the Hendecagram Animation page")](translate-images/hendecagramanimation-large.png "Triple screenshot of the Hendecagram Animation page")
+[![](translate-images/hendecagramanimation-small.png "Triple screenshot of the Hendecagram Animation page")](translate-images/hendecagramanimation-large.png#lightbox "Triple screenshot of the Hendecagram Animation page")
 
 Notice that the star maintains the same orientation as it revolves around the center of the page. It doesn't rotate at all. That's a job for a rotate transform.
 

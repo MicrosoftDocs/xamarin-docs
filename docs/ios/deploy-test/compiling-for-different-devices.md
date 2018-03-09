@@ -13,17 +13,16 @@ ms.date: 03/18/2017
 
 The build properties of your executable can be configured from the Project's **iOS Build** properties page, which is found by right-clicking on the Project name and browsing to **Options > iOS Build** in Visual Studio for Mac, and **Properties** in Visual Studio:
 
-[[ide name="xs"]]
+# [Visual Studio for Mac](#tab/vsmac)
 
-[ ![](compiling-for-different-devices-images/image1.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1.png) 
 
-[[/ide]] 
+[![](compiling-for-different-devices-images/image1.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1.png#lightbox) 
 
-[[ide name="vs"]]
+# [Visual Studio](#tab/vswin)
 
-[ ![](compiling-for-different-devices-images/image1a.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1a.png)
+[![](compiling-for-different-devices-images/image1a.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1a.png#lightbox)
 
-[[/ide]]
+-----
 
 In addition to the configuration options available on the UI, you can also pass
 your own set of command line options to the [Xamarin.iOS build tool (mtouch)](~/ios/deploy-test/mtouch.md).
@@ -79,9 +78,9 @@ the Mono engine does, at the cost of long compile times.
 
 You can enable these from iOS Build options in Visual Studio for Mac or Visual Studio.
 
-[ ![](compiling-for-different-devices-images/image2.png "Enabling LLVM")](compiling-for-different-devices-images/image2.png)
+[![](compiling-for-different-devices-images/image2.png "Enabling LLVM")](compiling-for-different-devices-images/image2.png#lightbox)
 
-[ ![](compiling-for-different-devices-images/image2a.png "Enabling LLVM")](compiling-for-different-devices-images/image2a.png)
+[![](compiling-for-different-devices-images/image2a.png "Enabling LLVM")](compiling-for-different-devices-images/image2a.png#lightbox)
 
  <a name="ARMV7_and_ARMV7s_support" />
 
@@ -153,7 +152,7 @@ To do this you should take the following steps:
 -  Add  `'-gcc_flags "-weak_framework iAd"'` to the **Additional Options** for each configuration you wish to weakly link on:
 
 
-[ ![](compiling-for-different-devices-images/image3.png "Additional Options")](compiling-for-different-devices-images/image3.png)
+[![](compiling-for-different-devices-images/image3.png "Additional Options")](compiling-for-different-devices-images/image3.png#lightbox)
 
 
 In addition to this you will need to guard your usage of the types from

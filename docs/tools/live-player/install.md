@@ -85,7 +85,7 @@ Xamarin Live Player requires:
 2. Go to **Visual Studio > Preferences...** and select the **Projects > Xamarin Live Player (Preview)** tab.
 3. Tick **Enable Xamarin Live Player**:
 
-  [ ![Check the Enable Xamarin Live Player box in the Options window](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png)
+  [![Check the Enable Xamarin Live Player box in the Options window](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
 
 2. Create or open a Xamarin project (or a [sample](~/tools/live-player/samples.md)).
 3. Choose **Live Player** in the device list.

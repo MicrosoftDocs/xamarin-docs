@@ -44,7 +44,7 @@ applications using Visual Studio.
 The diagram below shows a simple overview of the Xamarin.iOS development
 workflow:
 
-[![The Xamarin.iOS development workflow](images/xma2.png)](images/xma2.png)
+[![The Xamarin.iOS development workflow](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
 >  Visual Studio actually launches a separate MSBuild process to build the
@@ -67,7 +67,7 @@ networked Mac OS X computer to perform these tasks. Once configured,
 Xamarin’s tools will make the process as seamless as possible.
 
 
-<a name="system-requirements">
+<a name="system-requirements"/>
 
 ### System Requirements
 
@@ -99,8 +99,6 @@ to lack of plug-in support. Xamarin is supported in Visual Studio Community.
 
 **The Windows computer must be able to reach the Mac via the network.**
 
-<a name="appleaccount" />
-
 ### Apple Developer Account
 
 To deploy applications to a device or to submit them to the App Store, an
@@ -110,8 +108,6 @@ before Xamarin.iOS for Visual Studio can work. See the [Device
 Provisioning](~/ios/get-started/installation/device-provisioning/index.md)
 article for steps to obtain a development certificate and to provision a
 device.
-
-<a name="features" />
 
 ## Features 
 
@@ -140,6 +136,7 @@ features:
 
 ## Configuring your Mac
 
+<a name="installation"/>
 
 ### Installation
 
@@ -209,7 +206,7 @@ Xamarin:
 
 Once your Mac is configured, it’s time to set up your Windows computer.
 
-<a name="windowsinstallation">
+<a name="windowsinstallation"/>
 
 ## Windows Installation
 
@@ -226,8 +223,8 @@ required to get everything working:
 - [Connect Visual Studio to the Mac](#connectingtomac) – Visual Studio
   must be connected to the Mac build host before it can build Xamarin.iOS
   projects.
-- [Configure the Visual Studio Toolbar](#Visual_Studio_Toolbar_Overview) –
-  This will let you easily access Xamarin.iOS features in Visual Studio.
+- [Configure the Visual Studio Toolbar](#toolbar) – This will let you easily 
+  access Xamarin.iOS features in Visual Studio.
 
 <a name="connectingtomac" /> 
 
@@ -242,23 +239,23 @@ To connect your Mac, follow the steps below:
 
 - Browse to **Tools > Options** and under **Xamarin** select **iOS Settings**:
 
-  [![The iOS Settings screen](images/image2.png)](images/image2.png)
+  [![The iOS Settings screen](images/image2.png)](images/image2.png#lightbox)
 
 - Provided the Mac has been correctly
   [configured](#configuration)
   to allow **Remote Login**, you should be able to select your Mac in the
   list:
 
-  [![The Remote Host dialog box](images/xma3.png)](images/xma3.png)
+  [![The Remote Host dialog box](images/xma3.png)](images/xma3.png#lightbox)
 
 - This will prompt for the administrative credentials of your Mac host:
 
-  [![The login dialog box](images/xma4.png)](images/xma4.png)
+  [![The login dialog box](images/xma4.png)](images/xma4.png#lightbox)
 
 - When you have connected, it will display the 'Connection Successful' icon
   next to the machine name:
 
-  [![The Remote Has dialog displaying the Connection Successful icon next to the machine name](images/image6.png)](images/image6.png)
+  [![The Remote Has dialog displaying the Connection Successful icon next to the machine name](images/image6.png)](images/image6.png#lightbox)
 
 You will be reconnected each time you start Visual Studio.
 
@@ -275,7 +272,7 @@ To configure the toolbar first open the **View > Toolbars** menu and make
 sure the **iOS** entry is selected. Choose the menu item as shown in this
 screenshot—it should be ticked to indicate that the toolbar is visible:
 
-[![Choose Toolbars > iOS](images/image31.png)](images/image31.png)
+[![Choose Toolbars > iOS](images/image31.png)](images/image31.png#lightbox)
 
 ### Visual Studio 2015
 
@@ -289,11 +286,11 @@ Click the menu button at the right side of the Standard bar:
 - Choose **Add or Remove Buttons**
 - Select **Solution Platforms**
 
-[![Select Solution Platform](images/image35.png)](images/image35.png)
+[![Select Solution Platform](images/image35.png)](images/image35.png#lightbox)
 
 The **Standard** and **iOS** toolbars should now resemble this screenshot:
 
-[![The Standard and iOS toolbars should now resemble this screenshot](images/image36.png)](images/image36.png)
+[![The Standard and iOS toolbars should now resemble this screenshot](images/image36.png)](images/image36.png#lightbox)
 
 Once the toolbar configuration is complete, you are ready to begin using
 Xamarin iOS for Visual Studio.

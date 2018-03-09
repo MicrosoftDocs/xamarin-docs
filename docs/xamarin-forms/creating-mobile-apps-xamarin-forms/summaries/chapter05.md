@@ -58,7 +58,7 @@ It's possible to fit a block of text within a particular rectangle by calculatin
 
 The [**EstimatedFontSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EstimatedFontSize) sample demonstrates this technique. This program was written before the [`Margin`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) property was available, so it uses a [`ContentView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) with a [`Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) setting to simulate a margin.
 
-[![Triple screenshot of estimated font size](images/ch05fg07-small.png "Text Fit to Available Size")](images/ch05fg07-large.png "Text Fit to Available Size")
+[![Triple screenshot of estimated font size](images/ch05fg07-small.png "Text Fit to Available Size")](images/ch05fg07-large.png#lightbox "Text Fit to Available Size")
 
 ## A fit-to-size clock
 
