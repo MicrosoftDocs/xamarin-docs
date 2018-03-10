@@ -16,9 +16,15 @@ ms.date: 05/10/2017
 
 ## Get the App
 
-Xamarin Live Player is available from the iOS App Store and Google Play:
+### Xamarin Live Player for Android
+Xamarin Live Player is available for Android from Google Play:
 
-[ ![Download from iOS App Store](player-images/app-store-badge.svg)](https://itunes.apple.com/us/app/xamarin-live-player/id1228841832?ls=1&mt=8) [ ![Available on Google Play](player-images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
+[ ![Available on Google Play](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
+
+For Android devices without Google Play the Xamarin Live Player is available through [HockeyApp](https://aka.ms/xlp-hockeyapp) distribution. Additionally, early preview builds for Android can be installed directly from Google Play by opting in to the [open beta program](https://play.google.com/apps/testing/com.xamarin.live)
+
+### Xamarin Live Player for iOS
+We encourage users to join the [Xamarin Live Player app _iOS Preview_](https://aka.ms/liveplayeralpha) to enjoy quick access to the latest improvements through TestFlight.
 
 
 
