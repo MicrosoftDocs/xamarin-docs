@@ -164,7 +164,7 @@ namespace MacXib
 }
 ```
 
-Now the app's Main Window is defined in a .xib (OS **X*- **I**nterface **B**uilder) file automatically included in the project when adding a Window Controller. To edit your windows design, in the **Solution Pad**, double click the **MainWindow.xib** file:
+Now the app's Main Window is defined in a **.xib** file automatically included in the project when adding a Window Controller. To edit your windows design, in the **Solution Pad**, double click the **MainWindow.xib** file:
 
 ![Selecting the MainWindow.xib file](xib-images/edit01.png "Selecting the MainWindow.xib file")
 

@@ -136,7 +136,7 @@ The following options can be used to give additional support when using sigh:
 
 - To download all provisioning profiles use:
 
-    ````bash
+    ```bash
     fastlane sigh download_all
     ```
 

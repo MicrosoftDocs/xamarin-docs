@@ -18,33 +18,12 @@ CocosSharp provides methods for standardizing object dimensions in your game reg
 
 The default resolution behavior of CocosSharp is to match physical pixels with in-game coordinates. The following table shows how various devices would render a background environment sprite with width and height of 368x240. The first row is technically not an actual device, but rather the expected rendering of the sprite, regardless of device resolution:
 
-<table>
-    <thead>
-        <tr>
-            <th>Device</th>
-            <th>Display Resolution</th>
-			<th>Example Screenshot</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Desired Display</td>
-            <td>368x240 (with black bars for aspect ratio)</td>
-			<td><img src="resolutions-images/image1.png" title="368x240 (with black bars for aspect ratio)" /></td>
-        </tr>
-        <tr>
-            <td>iPhone 4s</td>
-            <td>960x640</td>
-			<td><img src="resolutions-images/image2.png" title="iPhone 4s 960x640" /></td>
-        </tr>
-		<tr>
-			<td>iPhone 6 Plus</td>
-			<td>1920x1080</td>
-			<td><img src="resolutions-images/image3.png" title="iPhone 6 Plus 1920x1080" /></td>
-		</tr>
-    </tbody>
-</table>
 
+| **Device** | **Display Resolution** | **Example Screenshot** |
+|--- | --- |--- |
+|Desired Display|368x240 (with black bars for aspect ratio)| ![368x240 (with black bars for aspect ratio)](resolutions-images/image1.png) |
+|iPhone 4s|960x640| ![iPhone 4s 960x640](resolutions-images/image2.png) |
+|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920x1080](resolutions-images/image3.png) |
 
 This document covers how to use CocosSharp to fix the problem shown in the table above. That is, we’ll cover how to make any device render as shown in the first row – regardless of screen resolution.
 

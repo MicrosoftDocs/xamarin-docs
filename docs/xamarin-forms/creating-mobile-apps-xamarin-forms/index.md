@@ -12,7 +12,7 @@ ms.date: 10/03/2016
 
 # Creating Mobile Apps with Xamarin.Forms Book First Edition
 
-<p><img src="Images/Cover-sml.png" title="Creating Mobile Apps with Xamarin.Forms Book" align="left"/>Charles Petzold's latest book -
+<p><img src="Images/Cover-sml.png" title="Creating Mobile Apps with Xamarin.Forms Book" align="left" />Charles Petzold's latest book -
 <i>Creating Mobile Apps with Xamarin.Forms</i> - has been sent to (electronic) press and
 is now available for download!</p>
 

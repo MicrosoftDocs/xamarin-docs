@@ -12,8 +12,6 @@ ms.date: 02/16/2018
 
 # Android Wear
 
-## Android Wear
-
 Android Wear is a version of Android that is designed for wearable
 devices such as smart watches. This section includes instructions on
 how to install and configure tools required for Wear development, a
@@ -160,7 +158,7 @@ Check out these video links that discuss Xamarin.Android with Wear support.
 <table align="center" border="0" cellpadding="1" cellspacing="1">
 	<tr>
 		<td>
-		<a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/"><img src="Images/video-android-l.png" border="0"/ /></td>
+		<a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/"><img src="Images/video-android-l.png" border="0" /></td>
 		<td><a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/">Android L and So Much More</a>
 		<br />
 		The Android L Developer Preview introduced a plethora of new APIs
@@ -169,7 +167,7 @@ Check out these video links that discuss Xamarin.Android with Wear support.
 	</tr>
 	<tr>
 		<td>
-		<a href="https://www.youtube.com/watch?v=80H8tXByZQc"><img src="Images/video-eyes-ears.png" border="0" / /></td>
+		<a href="https://www.youtube.com/watch?v=80H8tXByZQc"><img src="Images/video-eyes-ears.png" border="0" /></td>
 		<td><a href="https://www.youtube.com/watch?v=80H8tXByZQc">C# is in my Ears and in my Eyes: Google Glass and Android Wear</a>
 		<br />
 		Wearable computing might seem like something from the future
@@ -179,7 +177,7 @@ Check out these video links that discuss Xamarin.Android with Wear support.
 	</tr>
 	<tr>
 		<td>
-		<a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU"><img src="Images/video-whats-new.png" border="0" / /></td>
+		<a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU"><img src="Images/video-whats-new.png" border="0" /></td>
 		<td><a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU">What's new in Xamarin.Android</a>
 		<br />
 		<i>Android L, Android Wear, Android TV, Android Auto, Material Design, and ART;

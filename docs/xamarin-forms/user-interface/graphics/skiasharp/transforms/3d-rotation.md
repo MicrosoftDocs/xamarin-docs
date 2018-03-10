@@ -23,7 +23,7 @@ It is hard to develop this `SKMatrix` transform working solely within two dimens
 
 A three-dimensional coordinate system adds a third axis called Z. Conceptually, the Z axis is at right angles to the screen. Coordinate points in 3D space are indicated with three numbers: (x, y, z). In the 3D coordinate system used in this article, increasing values of X are to the right and increasing values of Y go down, just as in two dimensions. Increasing positive Z values come out of the screen. The origin is the upper-left corner, just as in 2D graphics. You can think of the screen as an XY plane with the Z axis at right angles to this plane.
 
-This is called a left-hand coordinate system. If you point the forefinger for your left hand in the direction of positive X coordinates (to the right), and your middle finger in the direction of increasing Y coordinates (down), then your thumb points in the direction of increasing Z coordinates &#x2014; extending out from the screen.
+This is called a left-hand coordinate system. If you point the forefinger for your left hand in the direction of positive X coordinates (to the right), and your middle finger in the direction of increasing Y coordinates (down), then your thumb points in the direction of increasing Z coordinates — extending out from the screen.
 
 In 3D graphics, transforms are based on a 4-by-4 matrix. Here is the 4-by-4 identity matrix:
 
@@ -105,7 +105,7 @@ Rotation around the Z axis is the same as in 2D graphics:
 |    0       0     0  1  |
 </pre>
 
-The direction of rotation is implied by the handedness of the coordinate system. This is a left-handed system, so if you point the thumb of your left hand towards increasing values for a particular axis &#x2014; to the right for rotation around the X axis, down for rotation around the Y axis, and towards you for rotation around the Z axis &#x2014; then the curve of your other fingers indicates the direction of rotation for positive angles.
+The direction of rotation is implied by the handedness of the coordinate system. This is a left-handed system, so if you point the thumb of your left hand towards increasing values for a particular axis — to the right for rotation around the X axis, down for rotation around the Y axis, and towards you for rotation around the Z axis — then the curve of your other fingers indicates the direction of rotation for positive angles.
 
 `SKMatrix44` has generalized static [`CreateRotation`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/) and [`CreateRotationDegrees`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/) methods that allow you to specify the axis around which the rotation occurs:
 
@@ -438,7 +438,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-The `OnAppearing` override defines three Xamarin.Forms `Animation` objects to animate the `xRotationDegrees`, `yRotationDegrees`, and `zRotationDegrees` fields at different rates. Notice that the periods of these animations are set to prime numbers &#x2014; 5 seconds, 7 seconds, and 11 seconds &#x2014; so the overall combination only repeats every 385 seconds, or more than 10 minutes:
+The `OnAppearing` override defines three Xamarin.Forms `Animation` objects to animate the `xRotationDegrees`, `yRotationDegrees`, and `zRotationDegrees` fields at different rates. Notice that the periods of these animations are set to prime numbers — 5 seconds, 7 seconds, and 11 seconds — so the overall combination only repeats every 385 seconds, or more than 10 minutes:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage

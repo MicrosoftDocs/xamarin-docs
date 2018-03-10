@@ -22,6 +22,8 @@ Xamarin.Forms has three primary views for working with text:
 
 Text appearance can be changed using built-in or custom [styles](#Styles) and some controls support custom [fonts](#Fonts).
 
+<a name="Label" />
+
 ## [Label](label.md)
 
 The `Label` view is used to display text. It can show multiple
@@ -33,6 +35,8 @@ See the [Label](label.md) article for more detailed information.
 
 For information on customizing the font used in a label, see [Fonts](fonts.md).
 
+<a name="Entry" />
+
 ## [Entry](entry.md)
 
 `Entry` is used to accept single-line text input. `Entry` offers control over colors, but cannot have customized fonts. `Entry` has a password mode and can show placeholder text until text is entered.
@@ -43,6 +47,8 @@ See the [Entry](entry.md) article for more information.
 
 Note that, unlike `Label`, `Entry` cannot have custom font settings.
 
+<a name="Editor" />
+
 ## [Editor](editor.md)
 
 `Editor` is used to accept multi-line text input. `Editor` can have a custom background color, but text color and font cannot be altered.
@@ -51,10 +57,14 @@ Note that, unlike `Label`, `Entry` cannot have custom font settings.
 
 See the [Editor](editor.md) article for more information.
 
+<a name="Fonts" />
+
 ## [Fonts](fonts.md)
 
 The `Label` control supports different font settings using
 the built-in fonts on each platform or custom fonts included with your app. See the [Fonts](fonts.md) article for more detailed information.
+
+<a name="Styles" />
 
 ## [Styles](styles.md)
 
