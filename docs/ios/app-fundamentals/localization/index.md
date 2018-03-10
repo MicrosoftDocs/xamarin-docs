@@ -25,53 +25,48 @@ This section describes some of the localization features in iOS. Skip to the
 ### Language
 
 Users choose their language in the **Settings** app. This setting affects the
-language strings and images displayed by the operating system as well as applications
-that detect language settings.
+language strings and images displayed by the operating system and in apps. 
 
-This is where users will decide whether they want to see English, Spanish,
-Japanese, French or other language displayed in their apps.
-
-The actual list of supported languages in iOS 7 is:
-English (U.S.), English (UK), Chinese (Simplified), Chinese (Traditional), French, German, Italian, Japanese, Korean, Spanish, Arabic, Catalan, Croatian, Czech, Danish, Dutch, Finnish, Greek, Hebrew, Hungarian, Indonesian, Malay, Norwegian, Polish, Portuguese, Portuguese (Brazil), Romanian, Russian, Slovak, Swedish, Thai, Turkish, Ukrainian, Vietnamese, English (Australian), Spanish (Mexican).
-
-The current language can be queried by accessing the first element of the `PreferredLanguages` array:
+To determine the language being used in an app, get the first element
+of `NSBundle.MainBundle.PreferredLocalizations`:
 
 ```csharp
 var lang = NSBundle.MainBundle.PreferredLocalizations[0];
 ```
 
 This value will be a language code such as `en` for English, `es` for Spanish,
-`ja` for Japanese, etc. _The value returned is restricted to one of the localizations supported by the application (using fallback rules to determine the best match)._
+`ja` for Japanese, etc. The value returned is restricted to one of the 
+localizations supported by the application (using fallback rules to 
+determine the best match).
 
-Application code does not always need to check for this value - Xamarin and iOS both
+Application code does not always need to check for this value – Xamarin and iOS both
 provide features that help to automatically provide the correct string or resource
 for the user's language. These features are described in the remainder of this document.
 
 > [!NOTE]
-> **NOTE:** Prior to iOS 9, the recommended code was `var lang = NSLocale.PreferredLanguages [0];`.
->
-> The results returned by this code changed in iOS 9 - see [Technical Note TN2418](https://developer.apple.com/library/content/technotes/tn2418/_index.html) for more information.
->
-> You can continue to use `NSLocale.PreferredLanguages [0]` to determine the
-> actual values selected by the user (regardless of the localizations your app supports).
+> Use `NSLocale.PreferredLanguages` to determine the user's language 
+> preferences, regardless of the localizations supported by
+> the app. The values returned by this method changed in iOS 9; see
+> [Technical Note TN2418](https://developer.apple.com/library/content/technotes/tn2418/_index.html) 
+> for details.
 
 ### Locale
 
 Users choose their locale in the **Settings** app. This setting affects the way
-that dates, times, numbers and currency are formatted.
+that dates, times, numbers, and currency are formatted.
 
-This lets users choose whether they see 12 hour or 24 hour time formats, whether
+This lets users choose whether they see 12-hour or 24-hour time formats, whether
 their decimal separator is a comma or a point, and the order of day, month and
 year in date display.
 
 With Xamarin you have access to both Apple’s iOS classes (`NSNumberFormatter`) as
 well as the .NET classes in System.Globalization. Developers should evaluate
 which is better suited to their needs, as there are different features available
-in each. In particular, if you are retrieving and displaying In App Purchase
-prices using StoreKit you should definitely use Apple’s formatting classes for
+in each. In particular, if you are retrieving and displaying In-App Purchase
+prices using StoreKit you should use Apple’s formatting classes for
 the price information returned.
 
-The current locale can be queried by either:
+The current locale can be queried by either of two ways:
 
 - `NSLocale.CurrentLocale.LocaleIdentifier`
 - `NSLocale.AutoUpdatingCurrentLocale.LocaleIdentifier`
@@ -80,12 +75,11 @@ The first value can be cached by the operating system and so might not always
 reflect the user’s currently selected locale. Use the second value to obtain the
 currently selected locale.
 
-
 ### NSCurrentLocaleDidChangeNotification
 
 iOS generates an `NSCurrentLocaleDidChangeNotification` when the user updates
 their locale. Applications can listen for this notification while they are
-running, and make appropriate changes to the UI.
+running and can make appropriate changes to the UI.
 
 <a name="basics" />
 
@@ -95,28 +89,69 @@ The following features of iOS are easily leveraged in Xamarin to provide
 localized resources for display to the user. Refer to the [TaskyL10n sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
 to see how to implement these ideas.
 
-### Info.plist
+### Specifying default and supported languages in Info.plist
 
-Before you begin, configure the **Info.plist** file with the following keys:
+In [Technical Q&A QA1828: How iOS Determines the Language For Your App](https://developer.apple.com/library/content/qa/qa1828/_index.html), 
+Apple describes how iOS selects a language to use in an app. The following
+factors impact which language is displayed:
 
-- `CFBundleDevelopmentRegion` - the default language for the application (typically
-  the language spoken by the developers, and used in the storyboards and string and
-  image resources). In the example below, **en** (for English) is specified.
-- `CFBundleLocalizations` - an array of other localizations supported by the
-  application, also using langauge codes like **es** (Spanish) and **pt-PT**
-  (Portuguese spoken in Portugal).
+- The user's preferred languages (found in the **Settings** app)
+- The localizations bundled with the app (.lproj folders)
+- `CFBundleDevelopmentRegion` (**Info.plist** value specifying the default 
+  language for the app)
+- `CFBundleLocalizations` (**Info.plist** array specifying all supported 
+   localizations)
+
+As indicated in the Technical Q&A, `CFBundleDevelopmentRegion` represents an
+app's default region and language. If the app doesn't explicitly support any
+of a user's preferred languages, it will use the language specified by this
+field. 
+
+> [!IMPORTANT]
+> iOS 11 applies this language selection mechanism more strictly than did
+> previous versions of the operating system. Because of this, any iOS 11 app
+> that does not explicitly declare its supported localizations – either by
+> including .lproj folders or setting a value for `CFBundleLocalizations` –
+> may display a different language in iOS 11 than it did in iOS 10.
+
+If `CFBundleDevelopmentRegion` has not been specified in the **Info.plist**
+file, the Xamarin.iOS build tools currently use a default value of 
+`en_US`. While this may change in a future release, it means that the
+default language is English.
+
+To ensure that your app selects an expected language, take the following 
+steps:
+
+- Specify a default language. Open **Info.plist** and use the **Source** 
+  view to set a value for the `CFBundleDevelopmentRegion` key; in XML, it 
+  should look similar to the following:
 
 ```xml
 <key>CFBundleDevelopmentRegion</key>
-<string>en</string>
+<string>es</string>
+```
+
+This example uses “es” to specify that when none of a user’s preferred
+languages are supported, default to Spanish.
+
+- Declare all supported localizations. In **Info.plist**, use the
+  **Source** view to set an array for the `CFBundleLocalizations` key; in
+  XML, it should look similar to the following:
+
+```xml
 <key>CFBundleLocalizations</key>
 <array>
-  <string>de</string>
-  <string>es</string>
-  <string>ja</string>
-  ...
+    <string>en</string>
+    <string>es</string>
+    ...
 </array>
 ```
+
+Xamarin.iOS apps that have been localized using .NET mechanisms such as
+.resx files must provide these **Info.plist** values as well.
+
+For more information about these **Info.plist** keys, take a look at Apple's
+[Information Property List Key Reference](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html).
 
 ### LocalizedString method
 
@@ -133,10 +168,10 @@ organized by language, in specially named directories with an **.lproj** suffix.
 
 There can be a number of different **.strings** files in each language directory:
 
-- **Localizable.strings** - the main list of localized text.
-- **InfoPlist.strings** - certain specific keys are allowed in this file to
-  translate things like the application name.
-- **<storyboard-name>.strings** - optional file that contains translations
+- **Localizable.strings** – the main list of localized text.
+- **InfoPlist.strings** – certain specific keys are allowed in this file to
+  translate things such as the application name.
+- **<storyboard-name>.strings** – optional file that contains translations
   for user interface elements in a storyboard.
 
 The **Build Action** for these files should be **Bundle Resource**.
@@ -145,7 +180,7 @@ The **Build Action** for these files should be **Bundle Resource**.
 
 The syntax for localized string values is:
 
-```csharp
+```console
 /* comment */
 "key"="localized-value";
 ```
@@ -158,7 +193,7 @@ You should escape the following characters in strings:
 
 This is an example **es/Localizable.strings** (ie. Spanish) file from the sample:
 
-```csharp
+```console
 "<new task>" = "<new task>";
 "Task Details" = "Detalles de la tarea";
 "Name" = "Nombre";
@@ -197,7 +232,7 @@ Use the standard naming conventions for the launch images (and the XIB or
 Storyboard for iPhone 6 models) when placing them in
 the **.lproj** directories for each language.
 
-```csharp
+```console
 Default.png
 Default@2x.png
 Default-568h@2x.png
@@ -209,7 +244,7 @@ LaunchScreen.xib
 Placing an **InfoPlist.strings** file in an **.lproj** directory lets you
 override some values from the app's **Info.plist**, including the application name:
 
-```csharp
+```console
 "CFBundleDisplayName" = "LeónTodo";
 ```
 
@@ -218,32 +253,6 @@ Other keys that you can use to [localize application-specific strings](https://d
 - CFBundleName
 - CFBundleShortVersionString
 - NSHumanReadableCopyright
-
-
-<!--
-## App icon
-
-Does not seem to be possible (although it definitely used to be!).
--->
-
-### Localization Native Development Region
-
-The default strings (located in the **Base.lproj** folder) will be assumed
-to be the ‘fallback’ language. This means that if a translation is requested in
-the code and is not found for a the current language, the **Base.lproj** folder will
-be searched for the default string to use (if no match is found, the translation
-identifier string itself is displayed).
-
-Developers can choose a different language to be the fallback by setting the
-plist key `CFBundleDevelopmentRegionKey`. Its value should be set to the language
-code for the native development language. This screenshot shows a plist in Xamarin
-Studio with the Native Development Region set to Spanish (es):
-
-![](images/cfbundledevelopmentregion.png "InfoPList.strings property")
-
-If the default language used in your storyboards and throughout your code is not
-English, set this value to reflect the native language being
-used throughout the app code.
 
 ### Dates and Times
 
@@ -272,7 +281,7 @@ Debug.WriteLine ("Medium,None: " + df.StringFor(date));
 
 Results for English in the United States:
 
-```csharp
+```console
 Full,Long: Friday, August 7, 2015 at 10:29:32 AM PDT
 Short,Short: 8/7/15, 10:29 AM
 Medium,None: Aug 7, 2015
@@ -280,7 +289,7 @@ Medium,None: Aug 7, 2015
 
 Results for Spanish in Spain:
 
-```csharp
+```console
 Full,Long: viernes, 7 de agosto de 2015, 10:26:58 GMT-7
 Short,Short: 7/8/15 10:26
 Medium,None: 7/8/2015
@@ -295,16 +304,17 @@ date and time formatting, check both **iPhone Language** and **Region** settings
 
 iOS provides a number of features to assist in building RTL-aware apps:
 
-* Use **Auto-Layout** `leading` and `trailing` attributes for control aligment
-  (which corresponds to *left* and *right* for English, for example, but is reversed for RTL languages).
+* Use auto layout's `leading` and `trailing` attributes for control aligment
+  (which corresponds to left and right for English, but is reversed for RTL languages).
   The [`UIStackView`](~/ios/user-interface/controls/uistackview.md)
   control is particularly useful for laying out controls to be RTL-aware.
-* Use `TextAlignment = UITextAlignment.Natural` for text alignment (which will be *left*
-  for most languages but *right* for RTL).
+* Use `TextAlignment = UITextAlignment.Natural` for text alignment (which will be left
+  for most languages but right for RTL).
 * `UINavigationController` automatically flips the back button and reverses swipe direction.
 
-The following screenshots show the [localized **Tasky** sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in Arabic and Hebrew (although
-English has been entered in the fields):
+The following screenshots show the 
+[localized Tasky sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) 
+in Arabic and Hebrew (although English has been entered in the fields):
 
 [![](images/rtl-ar-sml.png "Localization in Arabic")](images/rtl-ar.png#lightbox "Arabic") 
 
@@ -314,7 +324,6 @@ iOS automatically reverses the `UINavigationController`, and the other controls
 are placed inside `UIStackView` or aligned with Auto-Layout.
 RTL text is localized using **.strings** files in the same
 way as LTR text.
-
 
 <a name="code"/>
 
@@ -326,19 +335,17 @@ built in code (rather than XIBs or storyboards).
 
 ### Project Structure
 
-
-
 ![](images/solution-code.png "Resources tree")
 
 ### Localizable.strings file
 
 As described above, the **Localizable.strings** file format
-consists of key-value pairs, where the key is a user-selected string that
-indicates
+consists of key-value pairs. The key describes the intent of the string
+and the value is the translated text to be used in the app.
 
 The Spanish (**es**) localizations for the sample are shown below:
 
-```csharp
+```console
 "<new task>" = "<new task>";
 "Task Details" = "Detalles de la tarea";
 "Name" = "Nombre";
@@ -388,10 +395,11 @@ have been localized, to override the one present in **Base.lproj**.
 When creating and editing controls in a storyboard, select each control
 and check the ID to use for localization:
 
-* in Visual Studio for Mac, it's located in the Properties pad and called  **Localization ID**.
-* in Xcode, it's called **Object ID**.
+* In Visual Studio for Mac, it's located in the **Properties Pad** and is called **Localization ID**.
+* In Xcode, it's called **Object ID**.
 
-It is a string value that often has a form like **"NF3-h8-xmR"**:
+This string value often has a form such as "NF3-h8-xmR", as shown in the
+following screenshot:
 
 ![](images/xs-designer-localization-id.png "Xcode view of Storyboard localization")
 
@@ -408,7 +416,7 @@ In the example **Mainstoryboard.strings** below you can see `UITextField`s have
 a `placeholder` text property that can be localized; `UILabel`s have a `text`
 property; and `UIButton`s default text is set using `normalTitle`:
 
-```csharp
+```console
 "SXg-TT-IwM.placeholder" = "nombre de la tarea";
 "Pqa-aa-ury.placeholder"= "﻿otra información de tarea";
 "zwR-D9-hM1.text" = "Detalles de la tarea";
@@ -419,37 +427,16 @@ property; and `UIButton`s default text is set using `normalTitle`:
 ```
 
 > [!IMPORTANT]
-> **Using a storyboard with Size Classes** may result in the translations
-not appearing. This is probably related to [this issue](http://stackoverflow.com/questions/24989208/xcode-6-does-not-localize-interface-builder)
-where Apple's documentation says:
-> Localization A storyboard or XIB will not localize correctly if all of the following three conditions are true: The storyboard or XIB uses size classes. The base localization and the build target are set to Universal. The build targets iOS 7.0.
-> The fix is to duplicate your storyboard strings file into two identical files: **MainStoryboard~iphone.strings**
-and **MainStoryboard~ipad.strings**:
-
+> Using a storyboard with size classes may result in translations that do
+> not appear in the application. [Apple's Xcode Release Notes](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html) 
+> indicate that a storyboard or XIB will not localize correctly if three things
+> are true: it uses size classes, the base localization and the build target 
+> are set to Universal, and the build targets iOS 7.0. The fix is to 
+> duplicate your  storyboard strings file into two identical files: 
+> **MainStoryboard~iphone.strings** and **MainStoryboard~ipad.strings**, as
+> shown in the following screenshot:
+> 
 > ![](images/xs-dup-strings.png "Strings files")
-
-
-<!--
-# Native Formatting
-
-Xamarin.iOS applications can take advantage of the .NET framework's formatting options for localizing
-numbers and dates.
-
-### Date string formatting
-
-https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/DataFormatting/Articles/dfDateFormatting10_4.html#//apple_ref/doc/uid/TP40002369-SW1
-
-
-NSDateFormatter formatter = new NSDateFormatter ();
-formatter.DateFormat = "MMMM/dd/yyyy";
-NSString dateString = new NSString (formatter.ToString (d));
-
-
-### Number formatting
-
-https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/DataFormatting/Articles/dfNumberFormatting10_4.html#//apple_ref/doc/uid/TP40002368-SW1
-
--->
 
 <a name="appstore" />
 
@@ -460,20 +447,6 @@ to enter translations for each country your app is on sale. Note their warning
 that the translations will only appear if your app also contains a localized
 **.lproj** directory for the language.
 
-<!--
-
-Once you’ve entered your application into iTunes Connect the default language
-metadata and screenshots will appear as shown:
-
-![]( "itunes connect 1")
-
-Use the language list on the right to select other languages to provide
-translated application name, description, search keywords, URLs and screenshots.
-The complete list of languages is shown in this screenshot:
-
-![]( "itunes connect 2")
--->
-
 ## Summary
 
 This article covers the basics of localizing iOS applications using the built-in
@@ -481,7 +454,6 @@ resource handling and storyboard features.
 
 You can learn more about i18n and L10n for iOS, Android and cross-platform apps
 (including Xamarin.Forms) in [this cross-platform guide](~/cross-platform/app-fundamentals/localization.md).
-
 
 ## Related Links
 
