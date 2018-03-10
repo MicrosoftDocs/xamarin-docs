@@ -6,7 +6,7 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 03/09/2018
 ---
 
 # Build Process
@@ -222,8 +222,7 @@ when packaing Release applications.
 -   **AndroidFastDeploymentType** &ndash; A `:` (colon)-separated list
     of values to control what types can be deployed to the
     [Fast Deployment directory](#Fast_Deployment) on the target device
-    when the
-    [`$(EmbedAssembliesIntoApk)`](#EmbedAssembliesIntoApk) MSBuild
+    when the `$(EmbedAssembliesIntoApk)` MSBuild
     property is `False`. If a resource is fast deployed, it is *not*
     embedded into the generated `.apk`, which can speed up deployment
     times. (The more that is fast deployed, then the less frequently
@@ -244,7 +243,8 @@ when packaing Release applications.
     use in place of `android.app.Application` when a class inherits
     from [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/).
 
-    This property is generally set by *other* properties, such as the [`$(AndroidEnableMultiDex)`](#AndroidEnableMultiDex) MSBuild property.
+    This property is generally set by *other* properties, such as the
+    `$(AndroidEnableMultiDex)` MSBuild property.
 
     Added in Xamarin.Android 6.1.
 
@@ -505,7 +505,7 @@ when packaing Release applications.
 
     This is True by default for &ldquo;Release&rdquo; apps which have
     debugging symbols enabled:
-    [`$(EmbedAssembliesIntoApk)`](#EmbedAssembliesIntoApk) is True,
+    `$(EmbedAssembliesIntoApk)` is True,
     `$(DebugSymbols)` is True, and `$(Optimize)` is True.
 
     Added in Xamarin.Android 7.1.
@@ -549,17 +549,18 @@ when packaing Release applications.
     -   **versionCode** &ndash; Uses the version code direrctly from
         `Properties\AndroidManifest.xml`.
 
-    You can define custom items using the [AndroidVersionCodeProperties](#AndroidVersionCodeProperties)
-    property.
+    You can define custom items using the `AndroidVersionCodeProperties`
+    property (defined next).
 
     Added in Xamarin.Android 7.2.
 
--   **AndroidVersionCodeProperties** &ndash; A string property which allows
-    the developer to define custom items to use with the [AndroidVersionCodePattern](#AndroidVersionCodePattern).
-    They are in the form of a `key=value` pair. All items in the `value` should
-    be integer values. For example: `screen=23;target=$(_SupportedApiLevel)`.
-    As you can see you can make use of existing or custom MSBuild properties
-    in the string.
+-   **AndroidVersionCodeProperties** &ndash; A string property which
+    allows the developer to define custom items to use with the
+    `AndroidVersionCodePattern`. They are in the form of a `key=value`
+    pair. All items in the `value` should be integer values. For
+    example: `screen=23;target=$(_SupportedApiLevel)`. As you can see
+    you can make use of existing or custom MSBuild properties in the
+    string.
 
     Added in Xamarin.Android 7.2.
 

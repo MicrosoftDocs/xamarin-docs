@@ -7,7 +7,7 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/09/2018
 ---
 
 # Firebase Job Dispatcher
@@ -134,7 +134,7 @@ The `Job.Builder` will perform some basic validation checks on the input values 
 * A `Job`'s _lifetime_ (how long it will be scheduled to run) is only until the device reboots &ndash; once the device reboots the `Job` is lost.
 * A `Job` is not recurring &ndash; it will only run once.
 * A `Job` will be scheduled to run as soon as possible.
-* The default retry strategy for a `Job` is to use an _exponential backoff_ (discussed on more detail below in the section [Setting a RetryStrategy](#Setting_a_RestryStrategy))
+* The default retry strategy for a `Job` is to use an _exponential backoff_ (discussed on more detail below in the section [Setting a RetryStrategy](#Setting_a_RetryStrategy))
 
 ### Scheduling a `Job`
 
@@ -160,12 +160,14 @@ The value returned by `FirebaseJobDispatcher.Schedule` will be one of the follow
 
 It is possible to customize a job. Examples of how a job may be customized include the following:
 
-* [Pass Parameters to a Job](#Passing_Parameters_to_a_Job) &ndash; A `Job` may require additional values to perform its work, for example downloading a file.
+* [Passing Parameters to a Job](#Passing_Parameters_to_a_Job) &ndash; A `Job` may require additional values to perform its work, for example downloading a file.
 * [Set Constraints](#Setting_Constraints) &ndash; It may be necessary to only run a job when certain conditions are met. For example, only run a `Job` when the device is charging. 
 * [Specify when a `Job` should run](#Setting_Job_Triggers) &ndash; The Firebase Job Dispatcher allows applications to specify a time when the job should run.  
 * [Declare a retry strategy for failed jobs](#Setting_a_RetryStrategy) &ndash; A _retry strategy_ provides guidance to the `FirebaseJobDispatcher` on what to do with `Jobs` that fail to complete. 
 
 Each of these topics will be discussed more in the following sections.
+
+<a name="Passing_Parameters_to_a_Job" />
 
 #### Passing Parameters to a Job
 
@@ -193,6 +195,7 @@ public override bool OnStartJob(IJobParameters jobParameters)
 } 
 ```
 
+<a name="Setting_Constraints" />
 
 #### Setting Constraints
 
@@ -211,6 +214,8 @@ Job myJob = dispatcher.NewJobBuilder()
                       .Build();
 ```
 
+<a name="Setting_Job_Triggers" />
+
 #### Setting Job Triggers
 
 The `JobTrigger` provides guidance to the operating system about when the job should start. A `JobTrigger` has an _executing window_ that defines a scheduled time for when the `Job` should run. The execution window has a _start window_ value and an _end window_ value. The start window is the number of seconds that the device should wait before running the job and the end window value is the maximum number of seconds to wait before running the `Job`. 
@@ -226,6 +231,8 @@ Job myJob = dispatcher.NewJobBuilder()
 ```
 
 The default `JobTrigger` for a job is represented by the value `Trigger.Now`, which specifies that a job be run as soon as possible after being scheduled..
+
+<a name="Setting_a_RetryStrategy" />
 
 #### Setting a RetryStrategy
 

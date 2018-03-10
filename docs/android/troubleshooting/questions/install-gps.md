@@ -6,6 +6,7 @@ ms.assetid: 2DBB7988-34DD-4E59-AB84-C83C8FEAF604
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
+ms.date: 03/09/2018
 ---
 
 # How do I install Google Play Services in an emulator?

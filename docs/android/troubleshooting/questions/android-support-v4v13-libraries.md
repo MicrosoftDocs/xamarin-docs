@@ -6,6 +6,7 @@ ms.assetid: FE66A82A-6C05-4646-BC52-E806F5DC606C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
+ms.date: 03/09/2018
 ---
 
 # Smarter Xamarin Android Support v4 / v13 NuGet Packages

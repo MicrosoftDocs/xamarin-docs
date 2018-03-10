@@ -7,7 +7,7 @@ ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
+ms.date: 03/09/2018
 ---
 
 # Java Bindings Metadata
@@ -174,7 +174,6 @@ ignore a Java type and not bind it. This is done by adding a
 <remove-node path="/api/package[@name='{package_name}']/class[@name='{name}']" />
 ```
 
-
 ### Renaming Members
 
 Renaming members cannot be done by directly editing the **api.xml**
@@ -213,6 +212,8 @@ example:
 <attr path="/api/package[@name='android']/class[@name='Manifest']" 
     name="managedName">NewName</attr>
 ```
+
+<a name="Renaming_EventArg_Wrapper_Classes" />
 
 #### Renaming `EventArg` Wrapper Classes
 
