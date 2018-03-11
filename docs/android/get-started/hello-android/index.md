@@ -3,7 +3,7 @@ title: "Hello, Android"
 description: "In this two-part guide, you will build your first Xamarin.Android application using Visual Studio for Mac or Visual Studio and develop an understanding of the fundamentals of Android application development with Xamarin. Along the way, the tools, concepts, and steps required to build and deploy a Xamarin.Android application will be introduced."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 9D08DBB7-B07E-4795-82FB-D794DB867D13
+ms.assetid: C6474F70-3617-46AD-93E8-BE66878EEC17
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle

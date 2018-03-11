@@ -3,7 +3,7 @@ title: "Hello, Android Multiscreen"
 description: "In this two-part guide, you expand the Phoneword application that you created in the Hello, Android guide to handle a second screen. Along the way, this guide will introduce the basic Android Application Building Blocks and dive deeper into Android architecture as you develop a better understanding of Android application structure and functionality."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 9D08DBB7-B07E-4795-82FB-D794DB867D13
+ms.assetid: D82EC193-2CB7-44C3-8688-0CEBDF60C3D6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle

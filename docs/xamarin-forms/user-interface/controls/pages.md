@@ -3,7 +3,7 @@ title: "Xamarin.Forms Pages"
 description: "Xamarin.Forms Pages represent cross-platform mobile application screens."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
+ms.assetid: 9C8C710F-E312-420B-9324-A7A20CEDB7EC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch

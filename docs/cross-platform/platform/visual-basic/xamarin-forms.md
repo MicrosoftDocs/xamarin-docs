@@ -3,7 +3,7 @@ title: "Xamarin.Forms using Visual Basic.NET"
 description: "Xamarin.Forms PCL project template can be modified to use Visual Basic for the main assembly, effectively allowing you to build cross-platform mobile apps using VB.NET."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
+ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns

@@ -2,7 +2,7 @@
 title: "Debuggable Attribute"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
+ms.assetid: 1ABF90F1-6A70-45AE-9271-D90DC42807D0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle

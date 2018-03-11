@@ -2,7 +2,7 @@
 title: "NSString"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
+ms.assetid: 785744B3-42E2-4590-8F41-435325E609B9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug

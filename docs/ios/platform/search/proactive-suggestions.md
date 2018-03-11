@@ -3,7 +3,7 @@ title: "Introduction to Proactive Suggestions"
 description: "This article shows how to use Proactive Suggestions in the Xamarin.iOS app to drive engagement by allowing the system to proactively present helpful information automatically to the user."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug

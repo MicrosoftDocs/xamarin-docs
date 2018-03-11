@@ -4,6 +4,7 @@ description: "Explore how to use SkiaSharp to render cubic, quadratic, and conic
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017

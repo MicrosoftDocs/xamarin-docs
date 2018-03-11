@@ -3,6 +3,7 @@ title: "Summary of Chapter 1. How does Xamarin.Forms fit in?"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
