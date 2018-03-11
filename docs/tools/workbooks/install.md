@@ -2,7 +2,7 @@
 title: "Installation and Requirements"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
+ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge

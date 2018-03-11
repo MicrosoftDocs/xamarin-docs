@@ -4,9 +4,9 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3C440714-43E3-4D31-946F-CA59DAB303E8
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 03/01/2018
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
 ---
 
 # Permissions In Xamarin.Android

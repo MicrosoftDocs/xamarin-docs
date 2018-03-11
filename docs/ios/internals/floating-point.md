@@ -2,7 +2,7 @@
 title: "Floating Point"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
+ms.assetid: 003F25C1-B430-4339-9C95-7DF527EBC699
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug

@@ -40,7 +40,7 @@ verify that HAXM is installed and available to the Android SDK
 Emulator.
 
 > [!NOTE]
-> **Note:** You cannot run HAXM on a virtual machine.
+> You cannot run HAXM on a virtual machine.
 
 
 ## Verifying HAXM Installation

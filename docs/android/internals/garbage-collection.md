@@ -20,7 +20,7 @@ object space*, with two kinds of collections:
 -   Major collections (collects Gen1 and large object space heaps). 
 
 > [!NOTE]
-> **Note:** In the absence of an explicit collection via
+> In the absence of an explicit collection via
 [GC.Collect()](https://developer.xamarin.com/api/member/System.GC.Collect/)
 collections are *on demand*, based upon heap allocations. *This is not
 a reference counting system*; objects *will not be collected as soon as
@@ -292,7 +292,7 @@ the managed callable wrapper and the Java instance. For example, see
 
 
 > [!NOTE]
-> **Note:** You must be *extremely* careful when disposing of
+> You must be *extremely* careful when disposing of
 `Java.Lang.Object` subclass instances.
 
 To minimize the possibility of memory corruption, observe the following

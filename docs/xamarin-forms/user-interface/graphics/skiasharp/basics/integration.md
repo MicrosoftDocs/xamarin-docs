@@ -4,6 +4,7 @@ description: "Create SkiaSharp graphics that respond to touch and Xamarin.Forms 
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017

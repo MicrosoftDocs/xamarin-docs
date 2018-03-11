@@ -41,15 +41,11 @@ Once all required resources have been installed and developer mode has been enab
 1. Select **File** > **New** > **Project...**
 1. Select the **Installed** > **Templates** > **Visual C#** > **MonoGame** category: 
 
-
-	![](uwp-images/image1.png "MonoGame category")
-
+    ![](uwp-images/image1.png "MonoGame category")
 
 1. Select the **MonoGame Windows 10 Universal Project** option: 
 
-
-	![](uwp-images/image2.png "Select the MonoGame Windows 10 Universal Project option")
-
+    ![](uwp-images/image2.png "Select the MonoGame Windows 10 Universal Project option")
 
 1. Enter a name for the new project and click **OK**.
 If Visual Studio displays any errors after clicking OK, verify that Windows 10 tools are installed and that the device is in developer mode. 

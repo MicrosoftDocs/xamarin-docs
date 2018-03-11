@@ -3,7 +3,7 @@ title: "Tab Layout with TabHost"
 description: "This article will provide a high level overview of the the TabHost, an older API used to create tabbed layouts in a Xamarin.Android application."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 1CFF590A-AC86-C3B3-36CA-A70248BC7F97
+ms.assetid: 77B890A4-27A6-41DF-81BA-22C6116A8FB2
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
@@ -18,7 +18,7 @@ _This article will provide a high level overview of the the TabHost, an older AP
 ## Overview
 
 > [!NOTE]
-> **Note:** `TabHost` is an old API that has been deprecated by Google. Developers are encouraged to
+> `TabHost` is an old API that has been deprecated by Google. Developers are encouraged to
 > build tabbed applications using the [ActionBar](~/android/user-interface/controls/action-bar.md). The
 > `ActionBar` is available in all version of Android. It was first introduced in Android 3.0 (API level 11)
 > and was back ported to Android 2.2 (API level 8) and Android 2.3 (API level 10) in

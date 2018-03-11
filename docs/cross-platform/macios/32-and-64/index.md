@@ -3,7 +3,7 @@ title: "32/64-bit platform considerations"
 description: "Considerations when targeting 32-bit and 64-bit architectures for your application"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 12027F75-70DD-436B-8668-4FF66567B4A8
+ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug

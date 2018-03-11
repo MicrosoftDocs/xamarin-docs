@@ -3,7 +3,7 @@ title: "Nougat Features"
 description: "How to get started using Xamarin.Android to develop apps for Android Nougat."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: E4D6F183-98D2-460A-9D65-937639A899E0
+ms.assetid: 5C74ABE2-C862-4ED0-8EA5-C7FEE5251D4B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
@@ -90,7 +90,7 @@ Xamarin-based apps:
     Previewer.
 
 > [!IMPORTANT]
-> **Note:** Xamarin.Android does not support JDK 9.
+> Xamarin.Android does not support JDK 9.
 
 Note that apps must be rebuilt with Xamarin C6SR4 or later to
 work reliably with Android Nougat. Because Android Nougat can link only to
@@ -180,7 +180,7 @@ later. For more about configuring Android API level levels, see
 
 
 > [!NOTE]
-> **Note:** Currently you must set the **Minimum Android
+> Currently you must set the **Minimum Android
 version** to **Android 7.0 (API 24 - Nougat)** to deploy your
 app to Android Nougat devices or emulators.
 

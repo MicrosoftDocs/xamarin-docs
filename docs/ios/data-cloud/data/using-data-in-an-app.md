@@ -2,7 +2,7 @@
 title: "Using Data in an App"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: D5932AEB-0B6E-4F37-8B32-9BE4775AEE85
+ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug

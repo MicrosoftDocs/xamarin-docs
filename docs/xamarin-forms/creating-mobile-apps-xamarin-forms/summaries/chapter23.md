@@ -3,6 +3,7 @@ title: "Summary of Chapter 23. Triggers and behaviors"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017

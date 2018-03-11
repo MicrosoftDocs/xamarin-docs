@@ -3,7 +3,7 @@ title: "Advanced User Notifications"
 description: "This article takes a deeper look at the new User Notifications framework and how to take full advantage of it in a Xamarin.iOS app."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4e1ff652-28f0-4566-b383-9d12664401a4
+ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug

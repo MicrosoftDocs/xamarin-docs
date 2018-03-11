@@ -47,7 +47,7 @@ To embed a file into a **PCL** assembly, create or add a file and ensure that **
 `GetManifestResourceStream` is used to access the embedded file using its **Resource ID**. By default the resource ID is the filename prefixed with the default namespace for the project it is embedded in - in this case the assembly is **WorkingWithFiles** and the filename is **PCLTextResource.txt**, so the resource ID is `WorkingWithFiles.PCLTextResource.txt`.
 
 ```csharp
-var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
 Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLTextResource.txt");
 string text = "";
 using (var reader = new System.IO.StreamReader (stream)) {
@@ -62,7 +62,7 @@ The `text` variable can then be used to display the text or otherwise use it in 
 Loading and deserializing an XML is equally simple. The following code shows an XML file being loaded and deserialized from a resource, then bound to a `ListView` for display. The XML file contains an array of `Monkey` objects (the class is defined in the sample code).
 
 ```csharp
-var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
 Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLXmlResource.xml");
 List<Monkey> monkeys;
 using (var reader = new System.IO.StreamReader (stream)) {
@@ -102,7 +102,7 @@ var resourcePrefix = "WorkingWithFiles.WinPhone.";
 
 Debug.WriteLine("Using this resource prefix: " + resourcePrefix);
 // note that the prefix includes the trailing period '.' that is required
-var assembly = typeof(SharedPage).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(SharedPage)).Assembly;
 Stream stream = assembly.GetManifestResourceStream
     (resourcePrefix + "SharedTextResource.txt");
 ```
@@ -125,7 +125,7 @@ Because it is sometimes difficult to understand why a particular resource isn't 
 using System.Reflection;
 // ...
 // use for debugging, not in released app code!
-var assembly = typeof(SharedPage).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(SharedPage)).Assembly;
 foreach (var res in assembly.GetManifestResourceNames()) {
     System.Diagnostics.Debug.WriteLine("found resource: " + res);
 }

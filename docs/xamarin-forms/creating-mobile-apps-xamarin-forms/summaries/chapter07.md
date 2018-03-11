@@ -3,6 +3,7 @@ title: "Summary of Chapter 7. XAML vs. code"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017

@@ -2,7 +2,7 @@
 title: "Embeddinator-4000 Best Practices for ObjC"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
+ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge

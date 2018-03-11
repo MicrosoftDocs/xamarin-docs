@@ -6,6 +6,7 @@ ms.assetid: 3528E195-AA74-90AF-B5F3-3B65FB4F0BB8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
+ms.date: 03/09/2018
 ---
 
 # Linking on Android

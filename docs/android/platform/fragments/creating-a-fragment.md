@@ -33,7 +33,7 @@ The code above will inflate the view
 
 
 > [!NOTE]
-> **Note:** Fragment sub-classes must have a public default no argument constructor.
+> Fragment sub-classes must have a public default no argument constructor.
 
 ## Adding a Fragment to an Activity
 

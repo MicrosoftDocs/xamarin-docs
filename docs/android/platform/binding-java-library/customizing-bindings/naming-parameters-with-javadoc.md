@@ -40,7 +40,7 @@ in the APIs bound by a Java Binding Project.
 
 
 > [!NOTE]
-> **Note:** There is a great deal of variance in the JavaDoc
+> There is a great deal of variance in the JavaDoc
 output. The .JAR binding toolchain does not support every single
 possible permutation and consequently some parameter may not be
 properly named.

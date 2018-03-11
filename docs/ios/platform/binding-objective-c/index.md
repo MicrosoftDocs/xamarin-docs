@@ -3,7 +3,7 @@ title: "Binding iOS Libraries"
 description: "How to make iOS native libraries (and CocoaPods) accessible in Xamarin apps."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
+ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
 ms.custom: xamu-video
 author: bradumbaugh

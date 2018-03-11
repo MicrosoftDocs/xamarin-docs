@@ -3,7 +3,7 @@ title: "Proactive Suggestions"
 description: "This article shows how to use Proactive Suggestions in a watchOS 3 app to drive engagement by allowing the system to proactively present helpful information automatically to the user."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug

@@ -5,9 +5,9 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: B2727160-12F2-43EE-84B5-0B15C8FCF4BD
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 03/01/2018
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
 ---
 
 # Broadcast Receivers in Xamarin.Android

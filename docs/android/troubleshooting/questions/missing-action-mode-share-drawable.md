@@ -6,6 +6,7 @@ ms.assetid: 5814069C-FC43-41DE-B5A5-024D05E59929
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
+ms.date: 03/09/2018
 ---
 
 # Android.Support.v7.AppCompat - No resource found that matches the given name: attr 'android:actionModeShareDrawable'

@@ -3,7 +3,7 @@ title: "tvOS Internals"
 description: "Xamarin.tvOS shares the same DNA as our Xamarin.iOS product, so the advanced documents that we have produced for our iOS product are nearly identical to our tvOS product."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: B245062F-1DD9-4BE5-8E11-728BA3C8AD4C
+ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug

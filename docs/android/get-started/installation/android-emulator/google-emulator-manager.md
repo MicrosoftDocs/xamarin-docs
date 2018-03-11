@@ -21,7 +21,7 @@ as the *Android Virtual Device (AVD) Manager*) to create virtual
 devices for use by the Android SDK Emulator.
 
 > [!NOTE]
-> **Note:** If you are targeting Android 8.0 Oreo, you must use the [Xamarin Android Device Manager](~/android/get-started/installation/android-emulator/xamarin-device-manager.md) to create and configure virtual devices.
+> If you are targeting Android 8.0 Oreo, you must use the [Xamarin Android Device Manager](~/android/get-started/installation/android-emulator/xamarin-device-manager.md) to create and configure virtual devices.
 
 
 ## Installing System Images

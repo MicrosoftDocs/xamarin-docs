@@ -54,7 +54,7 @@ three states.
 
 
 > [!NOTE]
-> **Note:** The order of the `<item>` elements is important. When
+> The order of the `<item>` elements is important. When
 > this drawable is referenced, the `<item>`s are traversed in-order
 > to determine which one is appropriate for the current button state.
 > Because the "normal" image is last, it is only applied

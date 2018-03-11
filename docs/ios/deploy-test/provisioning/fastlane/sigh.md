@@ -2,7 +2,7 @@
 title: "fastlane for iOS – sigh"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
@@ -136,7 +136,7 @@ The following options can be used to give additional support when using sigh:
 
 - To download all provisioning profiles use:
 
-    ````bash
+    ```bash
     fastlane sigh download_all
     ```
 

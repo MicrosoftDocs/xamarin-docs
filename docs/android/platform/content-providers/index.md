@@ -7,6 +7,7 @@ ms.assetid: 6E1810AA-EB70-9AD0-1B32-D9418908CC97
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
+ms.date: 03/09/2018
 ---
 
 # Intro to ContentProviders

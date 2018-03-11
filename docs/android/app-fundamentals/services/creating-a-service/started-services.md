@@ -4,8 +4,8 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8CC3A850-4CD2-4F93-98EE-AF3470794000
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: topgenorth
+ms.author: toopge
 ms.date: 02/16/2018
 ---
 
@@ -53,6 +53,8 @@ The key lifecycle events of a started service are shown in this diagram:
 
 ![A diagram showing the order in which the lifecycle methods are called](started-services-images/started-service-01.png "A diagram showing the order in which the lifecycle methods are called.")
 
+
+<a name="Stopping_the_Service" />
 
 ## Stopping the Service
 

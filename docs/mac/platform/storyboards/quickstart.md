@@ -3,7 +3,7 @@ title: "Storyboards Quick Start"
 description: "Getting started building macOS user interfaces with storyboards."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: F37BA503-0B25-489F-80A8-58C493291A55
+ms.assetid: 20719B5D-8147-4E8A-A23C-8D575C7ACCEE
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug

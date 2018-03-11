@@ -75,8 +75,8 @@ A Merchant ID is used to let Apple Pay know that you can accept payments, and is
 7.	Scroll down to the bottom of this expanded section and click **Edit**.
 8.	Scroll down the list to Apple Pay and click the **Edit** button:  
     
-    
     ![Edit Apple Pay App ID details](apple-pay-capabilities-images/image39.png)
+
 9.	Select the Merchant ID to use with this App ID, and click **Continue**:  
     
     ![Select Merchant ID to use for App ID](apple-pay-capabilities-images/image40.png)

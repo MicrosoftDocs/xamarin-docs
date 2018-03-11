@@ -3,7 +3,7 @@ title: "Map"
 description: "Xamarin.Forms uses the native map APIs on each platform."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
+ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch

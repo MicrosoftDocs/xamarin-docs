@@ -3,7 +3,7 @@ title: "Adding a Universal Windows Platform (UWP) App"
 description: "This article explains how to add a UWP app project to a Xamarin.Forms solution that was created in Visual Studio for Mac."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: ADF99B78-F1BC-48DF-9128-01B93C4411C1
+ms.assetid: 34AAA045-64B8-4FDE-BB49-3FF0B4FFA17C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch

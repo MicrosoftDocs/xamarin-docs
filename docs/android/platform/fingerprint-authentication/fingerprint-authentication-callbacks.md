@@ -30,7 +30,7 @@ scanner may have been tampered with outside of the application.
 
 
 > [!NOTE]
-> **Note:** It is recommended to keep the callback class relatively light weight and free of application specific logic. The callbacks should act as a "traffic cop" between the Android application and the results from the fingerprint scanner.
+> It is recommended to keep the callback class relatively light weight and free of application specific logic. The callbacks should act as a "traffic cop" between the Android application and the results from the fingerprint scanner.
 
 ## A Sample Authentication Callback Handler
 

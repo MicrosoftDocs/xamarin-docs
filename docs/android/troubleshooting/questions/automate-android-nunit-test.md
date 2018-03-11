@@ -12,7 +12,7 @@ ms.date: 02/16/2018
 # How do I automate an Android NUnit Test project?
 
 > [!NOTE]
-> **Note:** This guide covers steps for setting up an Android
+> This guide covers steps for setting up an Android
 NUnit test project, not a Xamarin.UITest project. Xamarin.UITest guides
 can be found [here](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
 

@@ -3,6 +3,7 @@ title: "Summary of Chapter 17. Mastering the Grid"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017

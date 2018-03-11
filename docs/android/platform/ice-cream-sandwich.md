@@ -7,6 +7,7 @@ ms.assetid: 78E18A62-C12F-A699-37FA-44B9F6B44273
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
+ms.date: 03/09/2018
 ---
 
 # Ice Cream Sandwich Features

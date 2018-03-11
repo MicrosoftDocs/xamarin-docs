@@ -113,7 +113,7 @@ To support iOS 9 multitasking on any new Xamarin.iOS app, again use storyboards 
 
 ### Screen Size and Orientation Considerations
 
-Before iOS 9, you could design your app agains specific device screen sizes and orientations. Because an app can now be run in a Slide Out panel or in Split View mode, it can find itself running in either a compact or regular horizontal size class on iPad, regardless of the device's physical orientation or screen size.
+Before iOS 9, you could design your app against specific device screen sizes and orientations. Because an app can now be run in a Slide Out panel or in Split View mode, it can find itself running in either a compact or regular horizontal size class on iPad, regardless of the device's physical orientation or screen size.
 
 [![](multitasking-images/sizeclasses01.png "Screen Size and Orientation Considerations")](multitasking-images/sizeclasses01.png#lightbox)
 
@@ -121,28 +121,11 @@ On an iPad, a full screen app has Regular horizontal and vertical Size Classes. 
 
 On iPads that support Slide Over and Split View, you can end up with the following combinations:
 
-<table width=100% border="1px">
-	<tr>
-		<td><b>Orientation</b></td>
-		<td><b>Primary App</b></td>
-		<td><b>Secondary App</b></td>
-	</tr>
-	<tr>
-		<td><b>Portrait</b></td>
-		<td>75% of Screen<br/>Compact Horizontal<br/>Regular Vertical</td>
-		<td>25% of Screen<br/>Compact Horizontal<br/>Regular Vertical</td>
-	</tr>
-	<tr>
-		<td><b>Landscape</b></td>
-		<td>75% of Screen<br/>Regular Horizontal<br/>Regular Vertical</td>
-		<td>25% of Screen<br/>Compact Horizontal<br/>Regular Vertical</td>
-	</tr>
-	<tr>
-		<td><b>Landscape</b></td>
-		<td>50% of Screen<br/>Compact Horizontal<br/>Regular Vertical</td>
-		<td>50% of Screen<br/>Compact Horizontal<br/>Regular Vertical</td>
-	</tr>
-</table>
+| **Orientation** | **Primary App** | **Secondary App** |
+|--- |--- |--- |
+| **Portrait** |75% of Screen<br />Compact Horizontal<br />Regular Vertical|25% of Screen<br />Compact Horizontal<br />Regular Vertical|
+| **Landscape** |75% of Screen<br />Regular Horizontal<br />Regular Vertical|25% of Screen<br />Compact Horizontal<br />Regular Vertical|
+| **Landscape** |50% of Screen<br />Compact Horizontal<br />Regular Vertical|50% of Screen<br />Compact Horizontal<br />Regular Vertical|
 
 In the example [MuliTask](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) app, if it is run full screen on an iPad in the landscape mode, it will present both the list and the detail view at the same time:
 

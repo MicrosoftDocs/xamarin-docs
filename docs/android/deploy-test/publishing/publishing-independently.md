@@ -51,7 +51,7 @@ Security**, as shown in the following diagram:
 
 
 > [!IMPORTANT]
-> **Note:** Some network providers might prevent the installation of applications from unknown sources, regardless of this setting.
+> Some network providers might prevent the installation of applications from unknown sources, regardless of this setting.
 
 
 

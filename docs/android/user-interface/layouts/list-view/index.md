@@ -42,7 +42,7 @@ use `ListView` in real-world apps.
 
 
 > [!NOTE]
-> **Note**: The `RecyclerView` widget is a more advanced and
+> The `RecyclerView` widget is a more advanced and
 flexible version of `ListView`. Because `RecyclerView` is designed to
 be the successor to `ListView` (and `GridView`), we recommend that you
 use `RecyclerView` rather than `ListView` for new app development. For

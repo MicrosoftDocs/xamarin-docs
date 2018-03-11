@@ -7,7 +7,7 @@ ms.assetid: A417DEE9-7B7B-4E35-A79C-284739E3838E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 03/09/2018
 ---
 
 # Working With JNI
@@ -464,7 +464,7 @@ and non-final methods) or implemented (for interface methods). The
 [Supporting Inheritance, Interfaces](#_Supporting_Inheritance,_Interfaces_1) section covers the
 complexities of supporting virtual methods and interface methods.
 
-<a name="_Static_Methods" />
+<a name="_Static_Methods_1" />
 
 #### Static Methods
 
@@ -662,7 +662,7 @@ methods are helpers to perform a `JNIEnv.FindClass`,
 `JNIEnv.DeleteGlobalReference` on the value returned from
 `JNIEnv.FindClass`. See the next section for details.
 
-<a name="_Supporting_Inheritance,_Interfaces" />
+<a name="_Supporting_Inheritance,_Interfaces_1" />
 
 ### Supporting Inheritance, Interfaces
 
@@ -1625,7 +1625,7 @@ reference.
 Fields are manipulated through *field IDs*. Field IDs are obtained via
 [JNIEnv.GetFieldID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetFieldID/),
 which requires the class that the field is defined in, the name of the
-field, and the [JNI Type Signature](#_JNI_Type_Signatures) of the field.
+field, and the [JNI Type Signature](#JNI_Type_Signatures) of the field.
 
 Field IDs do not need to be freed, and are valid as long as the
 corresponding Java type is loaded. (Android does not currently support
@@ -1729,7 +1729,7 @@ Static Fields are manipulated through *field IDs*. Field IDs are
 obtained via
 [JNIEnv.GetStaticFieldID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticFieldID/),
 which requires the class that the field is defined in, the name of the
-field, and the [JNI Type Signature](#JNI%20Type%20Signatures) of the field.
+field, and the [JNI Type Signature](#JNI_Type_Signatures) of the field.
 
 Field IDs do not need to be freed, and are valid as long as the
 corresponding Java type is loaded. (Android does not currently support
@@ -1829,7 +1829,7 @@ Instance Methods are invoked through *method IDs*. Method IDs are
 obtained via
 [JNIEnv.GetMethodID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetMethodID/),
 which requires the type that the method is defined in, the name of the
-method, and the [JNI Type Signature](#_JNI_Type_Signatures) of the method.
+method, and the [JNI Type Signature](#JNI_Type_Signatures) of the method.
 
 Method IDs do not need to be freed, and are valid as long as the
 corresponding Java type is loaded. (Android does not currently support
@@ -1936,7 +1936,7 @@ Static Methods are invoked through *method IDs*. Method IDs are
 obtained via
 [JNIEnv.GetStaticMethodID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticMethodID/),
 which requires the type that the method is defined in, the name of the
-method, and the [JNI Type Signature](#JNI%20Type%20Signatures) of the method.
+method, and the [JNI Type Signature](#JNI_Type_Signatures) of the method.
 
 Method IDs do not need to be freed, and are valid as long as the
 corresponding Java type is loaded. (Android does not currently support class
@@ -1982,7 +1982,7 @@ where `*` is the return type of the method.
     &ndash; Invoke a static method which returns a `double` value.
 
 
-<a name="_JNI_Type_Signatures" />
+<a name="JNI_Type_Signatures" />
 
 ## JNI Type Signatures
 
@@ -2046,7 +2046,7 @@ value types. The mapping is as follows:
 -  `"V"` for  `void` method return types.
 
 
-<a name="_Simplified_Type_References" />
+<a name="_Simplified_Type_References_1" />
 
 ### Simplified Type References
 

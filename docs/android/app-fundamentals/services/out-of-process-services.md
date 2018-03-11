@@ -5,8 +5,8 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 27A2E972-A690-480B-B31D-5EF1F74F673C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: topgenorth
+ms.author: toopge
 ms.date: 02/16/2018
 ---
 

@@ -3,7 +3,7 @@ title: "App-Linking in Android"
 description: "This guide will discuss how Android 6.0 supports app-linking, a technique that allows mobile apps to respond to URLs on websites. It will discuss what app-linking is, how to implement app-linking in an Android 6.0 application, and how to configure a website to grant permissions to the mobile app for a domain."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
+ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
@@ -80,7 +80,7 @@ Android will verify every host that is identified by the intent filters against 
 Android 6.0 app-linking requires that Android verify the association between the application and the website before setting the application as the default handler for the URI. This verification will occur when the application is first installed. The *Digital Assets Links* file is a JSON file that is hosted by the relevant webdomain(s).
 
 > [!NOTE]
-> **Note:** The `android:autoVerify` attribute must be set by the intent filter &ndash; otherwise Android will not perform the verification.
+> The `android:autoVerify` attribute must be set by the intent filter &ndash; otherwise Android will not perform the verification.
 
 The file is placed by the webmaster of the domain at the location **https://domain/.well-known/assetlinks.json**.
 

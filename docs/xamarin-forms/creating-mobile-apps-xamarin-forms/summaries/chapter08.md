@@ -3,6 +3,7 @@ title: "Summary of Chapter 8. Code and XAML in harmony"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017

@@ -3,7 +3,7 @@ title: "Windows Platform-Specifics"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article demonstrates how to consume the Windows platform-specifics that are built into Xamarin.Forms."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
+ms.assetid: 22B403C0-FE6D-498A-AE53-095E6C4B527C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch

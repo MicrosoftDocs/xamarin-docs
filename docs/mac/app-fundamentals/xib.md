@@ -3,7 +3,7 @@ title: ".xib files"
 description: "This article covers working with .xib files created in Xcode's Interface Builder to create and maintain user interfaces for a Xamarin.Mac application."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
@@ -164,7 +164,7 @@ namespace MacXib
 }
 ```
 
-Now the app's Main Window is defined in a .xib (OS **X*- **I**nterface **B**uilder) file automatically included in the project when adding a Window Controller. To edit your windows design, in the **Solution Pad**, double click the **MainWindow.xib** file:
+Now the app's Main Window is defined in a **.xib** file automatically included in the project when adding a Window Controller. To edit your windows design, in the **Solution Pad**, double click the **MainWindow.xib** file:
 
 ![Selecting the MainWindow.xib file](xib-images/edit01.png "Selecting the MainWindow.xib file")
 

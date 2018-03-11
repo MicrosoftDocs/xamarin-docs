@@ -2,7 +2,7 @@
 title: "Using ADO.NET"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: F6ABCEF1-951E-40D8-9EA9-DD79123C2650
+ms.assetid: 79078A4D-2D24-44F3-9543-B50418A7A000
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug

@@ -38,7 +38,7 @@ You can continue to use
 if you are developing specifically for API level 23 or earlier.
 
 > [!IMPORTANT]
-> **Note:** Xamarin.Android does not support JDK 9.
+> Xamarin.Android does not support JDK 9.
 
 ## Installation
 
