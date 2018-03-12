@@ -2016,6 +2016,6 @@ but in these cases now we can have the `MKShape` class inherit from the
 `MKOverlay` protocol and it will generate all the required methods
 automatically.
 
-### Related links
+## Related links
 
 - [Binding Sample](https://developer.xamarin.com/samples/BindingSample/)
