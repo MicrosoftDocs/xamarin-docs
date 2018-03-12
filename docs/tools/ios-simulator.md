@@ -52,7 +52,7 @@ The window toolbar includes a number of buttons to interact with the simulator:
 - **Lock** – locks the simulator (you can swipe to unlock).
 - **Screenshot** – saves a screenshot of the simulator to disk.
 - [**Settings**](#settings) – configure the keyboard and location.
- - Other [**options**](#options) – a variety of simulator options are available such as rotate, shake, or invoke other states in the simulator. When some options are obscured, they can be accessed from the ellipsis icon that appears in the toolbar, or by right-clicking on the window.
+- Other [**options**](#options) – a variety of simulator options are available such as rotate, shake, or invoke other states in the simulator. When some options are obscured, they can be accessed from the ellipsis icon that appears in the toolbar, or by right-clicking on the window.
 
 	[![](ios-simulator-images/maps-app-sml.png "iOS simulator maps example")](ios-simulator-images/maps-app.png#lightbox)
 
