@@ -34,42 +34,12 @@ Anything that can be achieved with an effect can also be achieved with a custom 
 
 The following table lists the namespace for the `PlatformEffect` class on each platform, and the types of its properties:
 
-<table>
- <thead>
-   <tr>
-     <td><strong>Platform</strong></td>
-     <td><strong>Namespace</strong></td>
-     <td><strong>Container</strong></td>
-     <td><strong>Control</strong></td>
-   </tr>
- </thead>
- <tbody>
-   <tr>
-     <td>iOS</a></td>
-     <td>Xamarin.Forms.Platform.iOS</td>
-     <td>UIView</td>
-     <td>UIView</td>
-   </tr>
-   <tr>
-     <td>Android</a></td>
-     <td>Xamarin.Forms.Platform.Android</td>
-     <td>ViewGroup</td>
-     <td>View</td>
-   </tr>
-   <tr>
-     <td>Windows Phone 8.1</a></td>
-     <td>Xamarin.Forms.Platform.WinRT</td>
-     <td>FrameworkElement</td>
-     <td>FrameworkElement</td>
-   </tr>
-   <tr>
-     <td>Universal Windows Platform (UWP)</a></td>
-     <td>Xamarin.Forms.Platform.UWP</td>
-     <td>FrameworkElement</td>
-     <td>FrameworkElement</td>
-   </tr>
- </tbody>
-</table>
+|Platform|Namespace|Container|Control|
+|--- |--- |--- |--- |
+|iOS|Xamarin.Forms.Platform.iOS|UIView|UIView|
+|Android|Xamarin.Forms.Platform.Android|ViewGroup|View|
+|Windows Phone 8.1|Xamarin.Forms.Platform.WinRT|FrameworkElement|FrameworkElement|
+|Universal Windows Platform (UWP)|Xamarin.Forms.Platform.UWP|FrameworkElement|FrameworkElement|
 
 Each platform-specific `PlatformEffect` class exposes the following properties:
 

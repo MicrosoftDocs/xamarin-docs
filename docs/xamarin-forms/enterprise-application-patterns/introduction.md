@@ -114,48 +114,16 @@ In addition, unit tests are provided for some of the classes in the eShopOnConta
 
 The eShopOnContainers mobile app solution organizes the source code and other resources into projects. All of the projects use folders to organize the source code and other resources into categories. The following table outlines the projects that make up the eShopOnContainers mobile app:
 
-<table>
-<thead>
-<tr class="header">
-<th>Project</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>eShopOnContainers.Core</td>
-<td>This project is the portable class library (PCL) project that contains the shared code and shared UI.</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.Droid</td>
-<td>This project holds Android specific code and is the entry point for the Android app.</td>
-</tr>
-<tr class="odd">
-<td>eShopOnContainers.iOS</td>
-<td>This project holds iOS specific code and is the entry point for the iOS app.</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.UWP</td>
-<td>This project holds Universal Windows Platform (UWP) specific code and is the entry point for the Windows app.</td>
-</tr>
-<tr class="odd">
-<td>eShopOnContainers.TestRunner.Droid</td>
-<td>This project is the Android test runner for the eShopOnContainers.UnitTests project.</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.TestRunner.iOS</td>
-<td>This project is the iOS test runner for the eShopOnContainers.UnitTests project.</td>
-</tr>
-<tr class="odd">
-<td>eShopOnContainers.TestRunner.Windows</td>
-<td>This project is the Universal Windows Platform test runner for the eShopOnContainers.UnitTests project.</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.UnitTests</td>
-<td>This project contains unit tests for the eShopOnContainers.Core project.</td>
-</tr>
-</tbody>
-</table>
+|Project|Description|
+|--- |--- |
+|eShopOnContainers.Core|This project is the portable class library (PCL) project that contains the shared code and shared UI.|
+|eShopOnContainers.Droid|This project holds Android specific code and is the entry point for the Android app.|
+|eShopOnContainers.iOS|This project holds iOS specific code and is the entry point for the iOS app.|
+|eShopOnContainers.UWP|This project holds Universal Windows Platform (UWP) specific code and is the entry point for the Windows app.|
+|eShopOnContainers.TestRunner.Droid|This project is the Android test runner for the eShopOnContainers.UnitTests project.|
+|eShopOnContainers.TestRunner.iOS|This project is the iOS test runner for the eShopOnContainers.UnitTests project.|
+|eShopOnContainers.TestRunner.Windows|This project is the Universal Windows Platform test runner for the eShopOnContainers.UnitTests project.|
+|eShopOnContainers.UnitTests|This project contains unit tests for the eShopOnContainers.Core project.|
 
 The classes from the eShopOnContainers mobile app can be re-used in any Xamarin.Forms app with little or no modification.
 
@@ -163,76 +131,23 @@ The classes from the eShopOnContainers mobile app can be re-used in any Xamarin.
 
 The eShopOnContainers.Core PCL project contains the following folders:
 
-<table>
-<thead>
-<tr class="header">
-<th>Folder</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Animations</td>
-<td>Contains classes that enable animations to be consumed in XAML.</td>
-</tr>
-<tr class="even">
-<td>Behaviors</td>
-<td>Contains behaviors that are exposed to view classes.</td>
-</tr>
-<tr class="odd">
-<td>Controls</td>
-<td>Contains custom controls used by the app.</td>
-</tr>
-<tr class="even">
-<td>Converters</td>
-<td>Contains value converters that apply custom logic to a binding.</td>
-</tr>
-<tr class="odd">
-<td>Effects</td>
-<td>Contains the <code>EntryLineColorEffect</code> class, which is used to change the border color of specific <code>Entry</code> controls.</td>
-</tr>
-<tr class="even">
-<td>Exceptions</td>
-<td>Contains the custom <code>ServiceAuthenticationException</code>.</td>
-</tr>
-<tr class="odd">
-<td>Extensions</td>
-<td>Contains extension methods for the <code>VisualElement</code> and <code>IEnumerable<T></code> classes.</td>
-</tr>
-<tr class="even">
-<td>Helpers</td>
-<td>Contains helper classes for the app.</td>
-</tr>
-<tr class="odd">
-<td>Models</td>
-<td>Contains the model classes for the app.</td>
-</tr>
-<tr class="even">
-<td>Properties</td>
-<td>Contains <code>AssemblyInfo.cs</code>, a .NET assembly metadata file.</td>
-</tr>
-<tr class="odd">
-<td>Services</td>
-<td>Contains interfaces and classes that implement services that are provided to the app.</td>
-</tr>
-<tr class="even">
-<td>Triggers</td>
-<td>Contains the <code>BeginAnimation</code> trigger, which is used to invoke an animation in XAML.</td>
-</tr>
-<tr class="odd">
-<td>Validations</td>
-<td>Contains classes involved in validating data input.</td>
-</tr>
-<tr class="even">
-<td>ViewModels</td>
-<td>Contains the application logic that's exposed to pages.</td>
-</tr>
-<tr class="odd">
-<td>Views</td>
-<td>Contains the pages for the app.</td>
-</tr>
-</tbody>
-</table>
+|Folder|Description|
+|--- |--- |
+|Animations|Contains classes that enable animations to be consumed in XAML.|
+|Behaviors|Contains behaviors that are exposed to view classes.|
+|Controls|Contains custom controls used by the app.|
+|Converters|Contains value converters that apply custom logic to a binding.|
+|Effects|Contains the `EntryLineColorEffect` class, which is used to change the border color of specific `Entry` controls.|
+|Exceptions|Contains the custom `ServiceAuthenticationException`.|
+|Extensions|Contains extension methods for the `VisualElement` and `IEnumerable` classes.|
+|Helpers|Contains helper classes for the app.|
+|Models|Contains the model classes for the app.|
+|Properties|Contains `AssemblyInfo.cs`, a .NET assembly metadata file.|
+|Services|Contains interfaces and classes that implement services that are provided to the app.|
+|Triggers|Contains the `BeginAnimation` trigger, which is used to invoke an animation in XAML.|
+|Validations|Contains classes involved in validating data input.|
+|ViewModels|Contains the application logic that's exposed to pages.|
+|Views|Contains the pages for the app.|
 
 ##### Platform Projects
 

@@ -45,42 +45,12 @@ Instructions on setting up the REST service can be found in the readme file that
 
 The REST service is written using ASP.NET Core and provides the following operations:
 
-<table>
-  <thead>
-    <tr>
-      <th>Operation</th>
-      <th>HTTP method</th>
-      <th>Relative URI</th>
-      <th>Parameters</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Get a list of to-do items</td>
-      <td>GET</td>
-      <td>/api/todoitems/</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Create a new to-do item</td>
-      <td>POST</td>
-      <td>/api/todoitems/</td>
-      <td>A JSON formatted <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>Update a to-do item</td>
-      <td>PUT</td>
-      <td>/api/todoitems/</td>
-      <td>A JSON formatted <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>Delete a to-do item</td>
-      <td>DELETE</td>
-      <td>/api/todoitems/{id}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+|Operation|HTTP method|Relative URI|Parameters|
+|--- |--- |--- |--- |
+|Get a list of to-do items|GET|/api/todoitems/|
+|Create a new to-do item|POST|/api/todoitems/|A JSON formatted TodoItem|
+|Update a to-do item|PUT|/api/todoitems/|A JSON formatted TodoItem|
+|Delete a to-do item|DELETE|/api/todoitems/{id}|
 
 The majority of the URIs include the `TodoItem` ID in the path. For example, to delete the `TodoItem` whose ID is `6bb8a868-dba1-4f1a-93b7-24ebce87e243`, the client sends a DELETE request to `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243`. For more information about the data model used in the sample application, see [Modeling the data](~/xamarin-forms/data-cloud/walkthrough.md).
 

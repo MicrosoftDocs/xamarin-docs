@@ -35,37 +35,12 @@ Instructions on setting up the ASMX service can be found in the readme file that
 
 The ASMX service provides the following operations:
 
-<table>
-  <thead>
-    <tr>
-      <th>Operation</th>
-      <th>Description</th>
-      <th>Parameters</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>GetTodoItems</td>
-      <td>Get a list of to-do items</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>CreateTodoItem</td>
-      <td>Create a new to-do item</td>
-      <td>An XML serialized <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>EditTodoItem</td>
-      <td>Update a to-do item</td>
-      <td>An XML serialized <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>DeleteTodoItem</td>
-      <td>Delete a to-do item</td>
-      <td>An XML serialized <code>TodoItem</code></td>
-    </tr>
-  </tbody>
-</table>
+|Operation|Description|Parameters|
+|--- |--- |--- |
+|GetTodoItems|Get a list of to-do items|
+|CreateTodoItem|Create a new to-do item|An XML serialized TodoItem|
+|EditTodoItem|Update a to-do item|An XML serialized TodoItem|
+|DeleteTodoItem|Delete a to-do item|An XML serialized TodoItem|
 
 For more information about the data model used in the application, see [Modeling the data](~/xamarin-forms/data-cloud/walkthrough.md).
 

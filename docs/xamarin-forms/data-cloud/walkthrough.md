@@ -36,47 +36,19 @@ the relevant sample code on the page relating to each web-service style.
 
 The PCL project for each sample application consists of three main folders:
 
-<table>
-    <thead>
-        <tr><td><strong>Folder</strong></td><td><strong>Purpose</strong></td></tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>Data</strong></td>
-						<td>Contains the classes and interfaces used to manage data items, and communicate with the web service. At a minimum, this includes the <code>TodoItemManager</code> class, which is exposed through a property in the <code>App</code> class to invoke web service operations.</td>
-        </tr>
-        <tr>
-            <td><strong>Models</strong></td>
-						<td>Contains the data model classes for the application. At a minimum, this includes the <code>TodoItem</code> class, which models a single item of data used by the application. The folder can also include any additional classes used to model user data.</td>
-        </tr>
-        <tr>
-            <td><strong>Views</strong></td>
-						<td>Contains the pages for the application. This usually consists of the <code>TodoListPage</code> and <code>TodoItemPage</code> classes, and any additional classes used for authentication purposes.</td>
-				</tr>
-    </tbody>
-</table>
+|Folder|Purpose|
+|--- |--- |
+|Data|Contains the classes and interfaces used to manage data items, and communicate with the web service. At a minimum, this includes the `TodoItemManager` class, which is exposed through a property in the `App` class to invoke web service operations.|
+|Models|Contains the data model classes for the application. At a minimum, this includes the `TodoItem` class, which models a single item of data used by the application. The folder can also include any additional classes used to model user data.|
+|Views|Contains the pages for the application. This usually consists of the `TodoListPage` and `TodoItemPage` classes, and any additional classes used for authentication purposes.|
 
 The PCL project for each application also consists of a number of important files:
 
-<table>
-    <thead>
-      <tr><td><strong>File</strong></td><td><strong>Purpose</strong></td></tr>
-    <thead>
-    <tbody>
-        <tr>
-            <td><strong>Constants.cs</strong></td>
-            <td>The <code>Constants</code> class, which specifies any constants used by the application to communicate with the web service. These constants require updating to access your personal backend service created on a provider.
-        </tr>
-        <tr>
-            <td><strong>ITextToSpeech.cs</strong></td>
-            <td>The <code>ITextToSpeech</code> interface, which specifies that the <code>Speak</code> method must be provided by any implementing classes.</td>
-        </tr>
-        <tr>
-          <td><strong>Todo.cs</strong></td>
-          <td>The <code>App</code> class that is responsible for instantiating both the first page that will be displayed by the application on each platform, and the <code>TodoItemManager</code> class that is used to invoke web service operations.</td>
-        </tr>
-    </tbody>
-</table>
+|File|Purpose|
+|--- |--- |
+|Constants.cs|The `Constants` class, which specifies any constants used by the application to communicate with the web service. These constants require updating to access your personal backend service created on a provider.|
+|ITextToSpeech.cs|The `ITextToSpeech` interface, which specifies that the `Speak` method must be provided by any implementing classes.|
+|Todo.cs|The `App` class that is responsible for instantiating both the first page that will be displayed by the application on each platform, and the `TodoItemManager` class that is used to invoke web service operations.|
 
 ### Viewing Pages
 

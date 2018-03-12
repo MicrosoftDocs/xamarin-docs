@@ -48,51 +48,20 @@ The `RateAppPage` allows the user to take a photo of their face, which is submit
 
 The Portable Class Library (PCL) project for the sample application consists of five main folders:
 
-<table>
-    <thead>
-        <tr><td><strong>Folder</strong></td><td><strong>Purpose</strong></td></tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>Models</strong></td>
-            <td>Contains the data model classes for the application. This includes the <code>TodoItem</code> class, which models a single item of data used by the application. The folder also includes classes used to model JSON responses returned from different Microsoft Cognitive Service APIs.</td>
-        </tr>
-        <tr>
-            <td><strong>Repositories</strong></td>
-						<td>Contains the <code>ITodoItemRepository</code> interface and <code>TodoItemRepository</code> class that are used to perform database operations.</td>
-        </tr>
-        <tr>
-            <td><strong>Services</strong></td>
-						<td>Contains the interfaces and classes that are used to access different Microsoft Cognitive Service APIs, along with interfaces that are used by the <code>DependencyService</code> class to locate the classes that implement the interfaces in platform projects.</td>
-        </tr>
-        <tr>
-            <td><strong>Utils</strong></td>
-            <td>Contains the <code>Timer</code> class, which is used by the <code>AuthenticationService</code> class to renew a JWT access token every 9 minutes.</td>
-        </tr>
-        <tr>
-            <td><strong>Views</strong></td>
-            <td>Contains the pages for the application.</td>
-        </tr>
-    </tbody>
-</table>
+|Folder|Purpose|
+|--- |--- |
+|Models|Contains the data model classes for the application. This includes the `TodoItem` class, which models a single item of data used by the application. The folder also includes classes used to model JSON responses returned from different Microsoft Cognitive Service APIs.|
+|Repositories|Contains the `ITodoItemRepository` interface and `TodoItemRepository` class that are used to perform database operations.|
+|Services|Contains the interfaces and classes that are used to access different Microsoft Cognitive Service APIs, along with interfaces that are used by the `DependencyService` class to locate the classes that implement the interfaces in platform projects.|
+|Utils|Contains the `Timer` class, which is used by the `AuthenticationService` class to renew a JWT access token every 9 minutes.|
+|Views|Contains the pages for the application.|
 
 The PCL project also contains some important files:
 
-<table>
-    <thead>
-      <tr><td><strong>File</strong></td><td><strong>Purpose</strong></td></tr>
-    <thead>
-    <tbody>
-        <tr>
-            <td><strong>Constants.cs</strong></td>
-            <td>The <code>Constants</code> class, which specifies the API keys and endpoints for the Microsoft Cognitive Service APIs that are invoked. The API key constants require updating to access the different Cognitive Service APIs.
-        </tr>
-        <tr>
-          <td><strong>App.xaml.cs</strong></td>
-          <td>The <code>App</code> class is responsible for instantiating both the first page that will be displayed by the application on each platform, and the <code>TodoManager</code> class that is used to invoke database operations.</td>
-        </tr>
-    </tbody>
-</table>
+|File|Purpose|
+|--- |--- |
+|Constants.cs|The `Constants` class, which specifies the API keys and endpoints for the Microsoft Cognitive Service APIs that are invoked. The API key constants require updating to access the different Cognitive Service APIs.|
+|App.xaml.cs|The `App` class is responsible for instantiating both the first page that will be displayed by the application on each platform, and the `TodoManager` class that is used to invoke database operations.|
 
 ### NuGet Packages
 

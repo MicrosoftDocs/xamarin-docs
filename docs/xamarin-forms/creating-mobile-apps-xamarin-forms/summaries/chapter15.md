@@ -26,40 +26,12 @@ Xamarin.Forms contains 20 instantiable classes that derive from `View` but not `
 
 The eight views in this chapter effectively allow the user to interact with basic .NET data types:
 
-<table>
-  <tr>
-    <th>Data type</th>
-    <th>Views</th>
-  </tr>
-  <tr>
-    <td>`Double`</td>
-    <td
-      <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/">Slider</a></code>,
-      <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Stepper</a></code>
-    </td>
-  </tr>
-  <tr>
-    <td>`Boolean`</td>
-    <td>
-      <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/">Switch</a></code>
-    </td>
-  </tr>
-  <tr>
-    <td>`String`</td>
-    <td>
-      <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/">Entry</a></code>, 
-      <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Editor/">Editor</a></code>,
-      <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/">SearchBar</a></code>
-    </td>
-  </tr>
-  <tr>
-    <td>`DateTime`</td>
-    <td>
-      <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/">DatePicker</a></code>,
-      <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.TimePicker/">TimePicker</a></code>
-    </td>
-  </tr>
-</table>
+|Data type|Views|
+|--- |--- |
+|`Double`|[`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/), [`Stepper`](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/)|
+|`Boolean`|[`Switch`](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/)|
+|`String`|[`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/), [`Editor`](https://developer.xamarin.com/api/type/Xamarin.Forms.Editor/), [`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/)|
+|`DateTime`|[`DatePicker`](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/), [`TimePicker`](https://developer.xamarin.com/api/type/Xamarin.Forms.TimePicker/)|
 
 You can think of these views as visual interactive representations of the underlying data types. This concept is explored more in the next chapter, [**Chapter 16. Data binding**](chapter16.md).
 

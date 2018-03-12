@@ -47,36 +47,13 @@ public interface INavigationService
 
 This interface specifies that an implementing class must provide the following methods:
 
-<table>
-<thead>
-<tr class="header">
-<th>Method</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>InitializeAsync</code></td>
-<td>Performs navigation to one of two pages when the app is launched.</td>
-</tr>
-<tr class="even">
-<td><code>NavigateToAsync<T></code></td>
-<td>Performs hierarchical navigation to a specified page.</td>
-</tr>
-<tr class="odd">
-<td><code>NavigateToAsync<T>(parameter)</code></td>
-<td>Performs hierarchical navigation to a specified page, passing a parameter.</td>
-</tr>
-<tr class="even">
-<td><code>RemoveLastFromBackStackAsync</code></td>
-<td>Removes the previous page from the navigation stack.</td>
-</tr>
-<tr class="odd">
-<td><code>RemoveBackStackAsync</code></td>
-<td>Removes all the previous pages from the navigation stack.</td>
-</tr>
-</tbody>
-</table>
+|Method|Purpose|
+|--- |--- |
+|`InitializeAsync`|Performs navigation to one of two pages when the app is launched.|
+|`NavigateToAsync`|Performs hierarchical navigation to a specified page.|
+|`NavigateToAsync(parameter)`|Performs hierarchical navigation to a specified page, passing a parameter.|
+|`RemoveLastFromBackStackAsync`|Removes the previous page from the navigation stack.|
+|`RemoveBackStackAsync`|Removes all the previous pages from the navigation stack.|
 
 In addition, the `INavigationService` interface specifies that an implementing class must provide a `PreviousPageViewModel` property. This property returns the view model type associated with the previous page in the navigation stack.
 
