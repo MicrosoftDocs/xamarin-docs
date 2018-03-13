@@ -236,7 +236,6 @@ If the Output window does not include enough information to diagnose the problem
 
 4. When you open the .zip file, you will see a list of files similar to the example below. For connection errors, the most important files are the **\*Ide.log** and **\*Ide.svclog** files. These files contain the same messages in two slightly different formats. The **.svclog** is XML and is useful if you want to browse through the messages. The **.log** is plain text and is useful if you want to filter the messages using command line tools.
 
-
 	To browse through all the messages, select and open the **.svclog** file:
 
 	[![](troubleshooting-images/troubleshooting-image13.png "Select the svclog file")](troubleshooting-images/troubleshooting-image13.png#lightbox)
