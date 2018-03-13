@@ -131,7 +131,7 @@ To add a new .sprintefont file, right-click on the Fonts folder and select **Add
 The .spritefont file is actually an XML file which can be edited in any text editor, including Visual Studio for Mac. The most common variables edited in a .spritefont file are the `FontName` and `Size` property:
 
 
-```csharp
+```xml
     <!-- Modify this string to change the font that will be imported. -->
     <FontName>Arial</FontName>
 
@@ -143,7 +143,7 @@ The .spritefont file is actually an XML file which can be edited in any text edi
 We’ll open the file in any text editor. As our **arial-36.spritefont** name suggests, we’ll leave the `FontName` as `Arial` but change the `Size` value to `36`:
 
 
-```csharp
+```xml
     <!-- Modify this string to change the font that will be imported. -->
     <FontName>Arial</FontName>   
   

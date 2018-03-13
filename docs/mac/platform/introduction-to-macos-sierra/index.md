@@ -60,8 +60,6 @@ The CloudKit framework has been expanded in macOS Sierra to allow user to quickl
 
 CloudKit provides a complete UI for sending and accepting shared record invitations and the user has complete read/write control over the people that have access to the records.
 
-<!--To find out more, please see our [CloudKit Data Sharing](~/mac/platform-features/introduction-to-macos-sierra/cloudkit-data-sharing/) guide.-->
-
 For more information, please see Apple's [CloudKit Framework Reference](https://developer.apple.com/reference/clockkit) and [CloudKit JS Framework Reference](https://developer.apple.com/reference/cloudkitjs).
 
 <a name="Safari-App-Extensions-Support" />

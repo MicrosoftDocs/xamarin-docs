@@ -18,19 +18,19 @@ There are two options for sharing code between cross-platform mobile application
 
 ## Building Cross Platform Mobile Apps
 
- [Overview](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-0-overview.md)
+ [Overview](~/cross-platform/app-fundamentals/building-cross-platform-applications/overview.md)
 
- [Part 1 – Understanding the Xamarin Mobile Platform](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-1-understanding-the-xamarin-mobile-platform.md)
+ [Part 1 – Understanding the Xamarin Mobile Platform](~/cross-platform/app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md)
 
- [Part 2 – Architecture](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-2-architecture.md)
+ [Part 2 – Architecture](~/cross-platform/app-fundamentals/building-cross-platform-applications/architecture.md)
 
- [Part 3 – Setting Up a Xamarin Cross Platform Solution](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-3-setting-up-a-xamarin-cross-platform-solution.md)
+ [Part 3 – Setting Up a Xamarin Cross Platform Solution](~/cross-platform/app-fundamentals/building-cross-platform-applications/setting-up-a-xamarin-cross-platform-solution.md)
 
- [Part 4 – Dealing with Multiple Platforms](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-4-platform-divergence-abstraction-divergent-implementation.md)
+ [Part 4 – Dealing with Multiple Platforms](~/cross-platform/app-fundamentals/building-cross-platform-applications/platform-divergence-abstraction-divergent-implementation.md)
 
- [Part 5 – Practical Code Sharing Strategies](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-5-practical-code-sharing-strategies.md)
+ [Part 5 – Practical Code Sharing Strategies](~/cross-platform/app-fundamentals/building-cross-platform-applications/practical-code-sharing-strategies.md)
 
- [Part 6 - Testing and App Store Approvals](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-6-testing-and-app-store-approvals.md)
+ [Part 6 - Testing and App Store Approvals](~/cross-platform/app-fundamentals/building-cross-platform-applications/testing-and-app-store-approvals.md)
 
  <a name="Cross-Platform_Mobile_Application_Case_Studies" />
 
