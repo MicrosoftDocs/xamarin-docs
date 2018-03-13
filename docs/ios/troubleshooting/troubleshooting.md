@@ -263,7 +263,7 @@ restarting Visual Studio for Mac, and send the results to us.
 
 
 
-Please attach the XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}.log**, and **Components-{TIMESTAMP}.log **
+Please attach the XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}.log**, and **Components-{TIMESTAMP}.log**
 (in older versions of XS/MonoDevelop, just send **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**).
 
  **NOTE: The above issue was fixed in XS 2.2 Final**
