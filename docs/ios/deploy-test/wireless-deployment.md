@@ -1,6 +1,6 @@
 ---
 title: "Wireless Deployment"
-description: "This preview feature allows for deployment to iOS or Apple TV devices over a networked connection"
+description: "This feature allows for deployment to iOS or Apple TV devices over a networked connection"
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
@@ -12,39 +12,32 @@ ms.date: 02/09/2018
 
 # Wireless Deployment
 
-_This preview feature allows for deployment to iOS or Apple TV devices over a networked connection_
-
-![Preview release](~/media/shared/preview.png)
-
-An important part of the developer workflow is deploying to a device. Xcode 9 introduced the option of deploying to an iOS device or Apple TV through a network, rather than having to hardwire your devices every time you want to deploy and debug your app. This feature has been introduced in Visual Studio for Mac and Visual Studio 15.6 release, which is currently in preview.
+An important part of the developer workflow is deploying to a device. Xcode 9 introduced the option of deploying to an iOS device or Apple TV through a network, rather than having to hardwire your devices every time you want to deploy and debug your app. This feature has been introduced in Visual Studio for Mac 7.4 and Visual Studio 15.6 release.
 
 This guide details how to pair and deploy to a device over the network.
 
 ## Requirements
 
-Wireless deployment is available as a **preview** feature in both Visual Studio for Mac and Visual Studio.
-
+Wireless deployment is available as a feature in both Visual Studio for Mac and Visual Studio.
 
 To use wireless deployment, you must have the following:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
 - macOS 10.12.4
-- The latest preview version of Visual Studio for Mac 
-    - To install this switch to the [Alpha or Beta channel](https://docs.microsoft.com/en-us/visualstudio/mac/update) in Visual Studio for Mac.
+- The latest version of Visual Studio for Mac
 - Xcode 9.0 or later
 - A device with iOS 11.0 or tvOS 11.0 and later
 
 # [Visual Studio](#tab/vswin)
 
-- The latest [preview version](https://www.visualstudio.com/vs/preview/) of Visual Studio
+- The latest version of Visual Studio
 - A device with iOS 11.0 or tvOS 11.0 and later
 
 On your Mac build host, the following components should be installed:
 
 - macOS 10.12.4
-- Visual Studio for Mac Preview
-    - To do install switch to the [Alpha or Beta channel](https://docs.microsoft.com/en-us/visualstudio/mac/update) in Visual Studio for Mac.
+- Visual Studio for Mac
 - Xcode 9.0 or later
 
 -----
