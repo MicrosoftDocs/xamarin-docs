@@ -40,7 +40,7 @@ A call to `Layout` is required for an element to appear on the screen, and cause
 - [`Width`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) of type `double`
 - [`Height`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) of type `double`
 
-Prior to the `Layout` call, `Height` and `Width` have mock values of &#x2013;1.
+Prior to the `Layout` call, `Height` and `Width` have mock values of &ndash;1.
 
 A call to `Layout` also triggers calls to the following protected methods:
 

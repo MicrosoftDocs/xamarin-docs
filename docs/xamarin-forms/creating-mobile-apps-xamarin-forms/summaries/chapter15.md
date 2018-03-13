@@ -87,7 +87,7 @@ The [`Stepper`](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/) d
 
 - [`Increment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Increment/) of type `double`, initialized to 1
 
-Visually, the `Stepper` consists of two buttons labeled **&#x2013;** and **+**. Pressing **&#x2013;** decreases `Value` by `Increment` to a minimum of `Minimum`. Pressing **+** increases `Value` by `Increment` to a maximum of `Maximum`.
+Visually, the `Stepper` consists of two buttons labeled **&ndash;** and **+**. Pressing **&ndash;** decreases `Value` by `Increment` to a minimum of `Minimum`. Pressing **+** increases `Value` by `Increment` to a maximum of `Maximum`.
 
 This is demonstrated by the [**StepperDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/StepperDemo) sample.
 

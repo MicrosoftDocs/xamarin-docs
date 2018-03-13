@@ -63,7 +63,7 @@ The **Interface Editor** section provides the surface on which you graphically l
 
 #### Properties & utilities
 
-The **Properties & Utilities** section is devided into two main sections that we will be working with, **Properties** (also called Inspectors) and the **Library**:
+The **Properties & Utilities** section is divided into two main sections that we will be working with, **Properties** (also called Inspectors) and the **Library**:
 
 ![The Property Inspector](xib-images/xcode04.png "The Property Inspector")
 
@@ -371,7 +371,7 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 This code attaches to the action that you created in Xcode and Interface Builder and will be called any time the user clicks the button.
 
-Some UI elements automatically have built in actions, for example, items in the default Menu Bar such as the **Open...** menu item (`openDocument:`). In the **Solution Pad**, double-click the `AppDelegate.CS` file to open it for editing and add the following code below the `DidFinishLaunching` method:
+Some UI elements automatically have built in actions, for example, items in the default Menu Bar such as the **Open...** menu item (`openDocument:`). In the **Solution Pad**, double-click the **AppDelegate.cs** file to open it for editing and add the following code below the `DidFinishLaunching` method:
 
 ```csharp
 [Export ("openDocument:")]

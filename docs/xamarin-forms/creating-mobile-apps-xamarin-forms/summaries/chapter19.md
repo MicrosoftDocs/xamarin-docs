@@ -27,7 +27,7 @@ The [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) is 
 
 The [**PickerDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/PickerDemo) sample demonstrates how to use XAML to set the `Picker` [`Title`](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Title/) property and add `string` items to the [`Items`](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Items/) collection. When the user selects the `Picker`, it displays the items in the `Items` collection in a platform-dependent manner.
 
-The [`SelectedIndexChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.Picker.SelectedIndexChanged/) event indicates when the user has selected an item. The zero-based [`SelectedIndex`](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.SelectedIndex/) property then indicates the selected item. If no item is selected, `SelectedIndex` equals &#x2013;1.
+The [`SelectedIndexChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.Picker.SelectedIndexChanged/) event indicates when the user has selected an item. The zero-based [`SelectedIndex`](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.SelectedIndex/) property then indicates the selected item. If no item is selected, `SelectedIndex` equals &ndash;1.
 
 You can also use `SelectedIndex` to initialize the selected item, but it must be set after the `Items` collection is filled. In XAML, this means that you'll probably use a property element to set `SelectedIndex`.
 
@@ -79,11 +79,11 @@ The [**NaiveNamedColorList**](https://github.com/xamarin/xamarin-forms-book-samp
 
 `ListView` needs a template to display these items. In code, you can set the [`ItemTemplate`](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemTemplate/) property defined by `ItemsView<TVisual>` to a [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) object using the [`DataTemplate` constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/) that references a derivative of the [`Cell`](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) class. `Cell` has five derivatives:
 
-- [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) &#x2014; contains two `Label` views (conceptually speaking)
-- [`ImageCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/) &#x2014; adds an `Image` view to `TextCell`
-- [`EntryCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell/) &#x2014; contains an `Entry` view with a `Label`
-- [`SwitchCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.SwitchCell/) &#x2014; contains a `Switch` with a `Label`
-- [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) &#x2014; can be any `View` (likely with children)
+- [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) &mdash; contains two `Label` views (conceptually speaking)
+- [`ImageCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/) &mdash; adds an `Image` view to `TextCell`
+- [`EntryCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell/) &mdash; contains an `Entry` view with a `Label`
+- [`SwitchCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.SwitchCell/) &mdash; contains a `Switch` with a `Label`
+- [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) &mdash; can be any `View` (likely with children)
 
 Then call [`SetValue`](https://developer.xamarin.com/api/member/Xamarin.Forms.DataTemplate.SetValue/p/Xamarin.Forms.BindableProperty/System.Object/) and [`SetBinding`](https://developer.xamarin.com/api/member/Xamarin.Forms.DataTemplate.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/) on the `DataTemplate` object to associate values with the `Cell` properties, or to set data bindings on the `Cell` properties referencing properties of the items in the `ItemsSource` collection. This is demonstrated in the [**TextCellListCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/TextCellListCode) sample.
 

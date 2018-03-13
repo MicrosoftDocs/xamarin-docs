@@ -38,7 +38,7 @@ In summary, a Xamarin.Forms programmer targeting phones and tablets can assume t
 - 160 units to the inch, equivalent to
 - 64 units to the centimeter
 
-The read-only [`Width`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) and [`Height`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) properties defined by `VisualElement` have default "mock" values of &#x2013;1. Only when an element has been sized and accommodated in layout will these properties reflect the actual size of the element in device-independent units. This size includes any `Padding` set on the element but not the `Margin`.
+The read-only [`Width`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) and [`Height`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) properties defined by `VisualElement` have default "mock" values of &ndash;1. Only when an element has been sized and accommodated in layout will these properties reflect the actual size of the element in device-independent units. This size includes any `Padding` set on the element but not the `Margin`.
 
 A visual element fires the [`SizeChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.VisualElement.SizeChanged/) event when its `Width` or `Height` has changed. The [**WhatSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/WhatSize) sample uses this event to display the size of the program's screen.
 
@@ -71,7 +71,7 @@ The **EstimatedFontSize** program and the **FitToSizeClock** program both contai
 
 ## Empirically fitting text
 
-Another way to fit text to a rectangle is to empirically calculate the rendered text size and adjust it up or down. The program in the book calls [`GetSizeRequest`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.GetSizeRequest/p/System.Double/System.Double/) on a visual element to obtain the element's desired size. That method has been deprecated, and programs should instead call [`Measure`] (/api/member/Xamarin.Forms.VisualElement.Measure/p/System.Double/System.Double/Xamarin.Forms.MeasureFlags/).
+Another way to fit text to a rectangle is to empirically calculate the rendered text size and adjust it up or down. The program in the book calls [`GetSizeRequest`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.GetSizeRequest/p/System.Double/System.Double/) on a visual element to obtain the element's desired size. That method has been deprecated, and programs should instead call [`Measure`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.Measure/p/System.Double/System.Double/Xamarin.Forms.MeasureFlags/).
 
 For a `Label`, the first argument should be the width of the container (to allow wrapping), while the second argument should be set to `Double.PositiveInfinity` to make the height unconstrained. The [**EmpiricalFontSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize) sample demonstrates this technique.
 

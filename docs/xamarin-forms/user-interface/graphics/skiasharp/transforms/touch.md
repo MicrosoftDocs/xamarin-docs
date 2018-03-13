@@ -189,7 +189,7 @@ public partial class TouchManipulationPage : ContentPage
 }
 ```
 
-If the `HitTest` method returns `true` &#x2014; meaning that a finger has touched the screen within the area occupied by the bitmap &#x2014; then the touch ID is added to the `TouchIds` collection. This ID represents the sequence of touch events for that finger until the finger lifts from the screen. If multiple fingers touch the bitmap, then the `touchIds` collection contains a touch ID for each finger.
+If the `HitTest` method returns `true` &mdash; meaning that a finger has touched the screen within the area occupied by the bitmap &mdash; then the touch ID is added to the `TouchIds` collection. This ID represents the sequence of touch events for that finger until the finger lifts from the screen. If multiple fingers touch the bitmap, then the `touchIds` collection contains a touch ID for each finger.
 
 The `TouchAction` handler also calls the `ProcessTouchEvent` class in `TouchManipulationBitmap`. This is where some (but not all) of the real touch processing occurs.
 
@@ -400,7 +400,7 @@ class TouchManipulationManager
 
 Whenever rotation has been selected, both the one-finger and two-finger manipulation methods handle the rotation first. If any rotation is detected, then the rotation component is effectively removed. What remains is interpreted as panning and scaling.
 
-Here's the `OneFingerManipulate` method. If one-finger rotation has not been enabled, then the logic is simple &#x2014; it simply uses the previous point and new point to construct a vector named `delta` that corresponds precisely to translation. With one-finger rotation enabled, the method uses angles from the pivot point (the center of the bitmap) to the previous point and new point to construct a rotation matrix:
+Here's the `OneFingerManipulate` method. If one-finger rotation has not been enabled, then the logic is simple &mdash; it simply uses the previous point and new point to construct a vector named `delta` that corresponds precisely to translation. With one-finger rotation enabled, the method uses angles from the pivot point (the center of the bitmap) to the previous point and new point to construct a rotation matrix:
 
 ```csharp
 class TouchManipulationManager

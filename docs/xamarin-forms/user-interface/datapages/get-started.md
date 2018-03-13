@@ -203,7 +203,7 @@ but future preview releases will make this easier to do.
 
 ## Troubleshooting
 
-<a name="loadtheme"/>
+<a name="loadtheme" />
 
 ## Could not load file or assembly 'Xamarin.Forms.Theme.Light' or one of its dependencies
 

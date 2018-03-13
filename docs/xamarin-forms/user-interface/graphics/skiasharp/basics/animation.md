@@ -103,7 +103,7 @@ async Task AnimationLoop()
 
 ```
 
-The `while` loop begins by obtaining a cycle time from the `Slider`. This is a time in seconds, for example, 5. The second statement calculates a value of `t` for *time*. For a `cycleTime` of 5, `t` increases from 0 to 1 every 5 seconds. The argument to the `Math.Sin` function in the second statement ranges from 0 to 2π every 5 seconds. The `Math.Sin` function returns a value ranging from 0 to 1 back to 0 and then to &#x2013;1 and 0 every 5 seconds, but with values that change more slowly when the value is near 1 or –1. The value 1 is added so the values are always positive, and then it's divided by 2, so the values ranges from ½ to 1 to ½ to 0 to ½, but slower when the value is around 1 and 0. This is stored in the `scale` field, and the `SKCanvasView` is invalidated.
+The `while` loop begins by obtaining a cycle time from the `Slider`. This is a time in seconds, for example, 5. The second statement calculates a value of `t` for *time*. For a `cycleTime` of 5, `t` increases from 0 to 1 every 5 seconds. The argument to the `Math.Sin` function in the second statement ranges from 0 to 2π every 5 seconds. The `Math.Sin` function returns a value ranging from 0 to 1 back to 0 and then to &ndash;1 and 0 every 5 seconds, but with values that change more slowly when the value is near 1 or –1. The value 1 is added so the values are always positive, and then it's divided by 2, so the values ranges from ½ to 1 to ½ to 0 to ½, but slower when the value is around 1 and 0. This is stored in the `scale` field, and the `SKCanvasView` is invalidated.
 
 The `PaintSurface` method uses this `scale` value to calculate the two axes of the ellipse:
 

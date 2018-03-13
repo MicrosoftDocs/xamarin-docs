@@ -65,8 +65,7 @@ You must have an Apple Developer account to use this feature. More information o
     ![](apple-account-management-images/image6.png)
 
 
-<a name="managing"/>
-    
+<a name="managing" />
 
 
 ## Managing Signing Identities and Provisioning Profiles

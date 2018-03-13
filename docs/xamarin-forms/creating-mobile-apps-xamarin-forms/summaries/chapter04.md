@@ -65,9 +65,9 @@ For a vertical `StackLayout`, the `HorizontalOptions` setting determines how a c
 
 For a vertical `StackLayout`, each child is vertically unconstrained and gets a vertical slot depending on the child's height, in which case the `VerticalOptions` setting is irrelevant.
 
-If the vertical `StackLayout` itself is unconstrained&#x2014;that is if its `VerticalOptions` setting is `Start`, `Center`, or `End`, then the height of the `StackLayout` is the total height of its children.
+If the vertical `StackLayout` itself is unconstrained&mdash;that is if its `VerticalOptions` setting is `Start`, `Center`, or `End`, then the height of the `StackLayout` is the total height of its children.
 
-However, if the vertical `StackLayout` is vertically constrained&#x2014;if its `VerticalOptions` setting is `Fill`&#x2014;then the height of the `StackLayout` will be the height of its container, which might be greater than the total height of its children. If that is the case, and if at least one child has a `VerticalOptions` setting with an `Expands` flag of `true`, then the extra space in the `StackLayout` is allocated equally among all those children with an `Expands` flag of `true`. The total height of the children will then equal the height of the `StackLayout`, and the `Alignment` part of the `VerticalOptions` setting determines how the child is vertically positioned in its slot.
+However, if the vertical `StackLayout` is vertically constrained&mdash;if its `VerticalOptions` setting is `Fill`&mdash;then the height of the `StackLayout` will be the height of its container, which might be greater than the total height of its children. If that is the case, and if at least one child has a `VerticalOptions` setting with an `Expands` flag of `true`, then the extra space in the `StackLayout` is allocated equally among all those children with an `Expands` flag of `true`. The total height of the children will then equal the height of the `StackLayout`, and the `Alignment` part of the `VerticalOptions` setting determines how the child is vertically positioned in its slot.
 
 This is demonstrated in the [**VerticalOptionsDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/VerticalOptionsDemo) sample.
 

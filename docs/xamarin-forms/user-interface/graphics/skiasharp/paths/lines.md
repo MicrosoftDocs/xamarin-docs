@@ -26,7 +26,7 @@ canvas.DrawLine (x0, y0, x1, y1, paint);
 
 By default, the `StrokeWidth` property of a newly instantiated `SKPaint` object is 0, which has the same effect as a value of 1 in rendering a line of one pixel in thickness. This appears very thin on high resolution devices such as phones, so you'll probably want to set the `StrokeWidth` to a larger value. But once you start drawing lines of a sizable thickness, that raises another issue: How should the starts and ends of these thick lines be rendered?
 
-The appearance of the starts and ends of lines is called a *line cap* or, in Skia, a *stroke cap*. The word "cap" in this context refers to a kind of hat &#x2014; something that sits on the end of the line. You set the [`StrokeCap`](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeCap/) property of the `SKPaint` object to one of the following members of the [`SKStrokeCap`](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeCap/) enumeration:
+The appearance of the starts and ends of lines is called a *line cap* or, in Skia, a *stroke cap*. The word "cap" in this context refers to a kind of hat &mdash; something that sits on the end of the line. You set the [`StrokeCap`](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeCap/) property of the `SKPaint` object to one of the following members of the [`SKStrokeCap`](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeCap/) enumeration:
 
 - [`Butt`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Butt/) (the default)
 - [`Square`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)

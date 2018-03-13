@@ -123,7 +123,7 @@ that can be applied by setting the `StyleClass` on these controls:
 
 ## Troubleshooting
 
-<a name="loadtheme"/>
+<a name="loadtheme" />
 
 ### Could not load file or assembly 'Xamarin.Forms.Theme.Light' or one of its dependencies
 

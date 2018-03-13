@@ -111,7 +111,7 @@ As you can see, the first contour is obviously a series of three connected lines
 - `AddPath` to add another path to the current path
 - [`AddPathReverse`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddPathReverse/p/SkiaSharp.SKPath/) to add another path in reverse
 
-Keep in mind that an `SKPath` object defines only a geometry &#x2014; a series of points and connections. Only when an `SKPath` is combined with an `SKPaint` object is the path rendered with a particular color, stroke width, and so forth. Also, keep in mind that the `SKPaint` object passed to the `DrawPath` method defines characteristics of the entire path. If you want to draw something requiring several colors, you must use a separate path for each color.
+Keep in mind that an `SKPath` object defines only a geometry &mdash; a series of points and connections. Only when an `SKPath` is combined with an `SKPaint` object is the path rendered with a particular color, stroke width, and so forth. Also, keep in mind that the `SKPaint` object passed to the `DrawPath` method defines characteristics of the entire path. If you want to draw something requiring several colors, you must use a separate path for each color.
 
 Just as the appearance of the start and end of a line is defined by a stroke cap, the appearance of the connection between two lines is defined by a *stroke join*. You specify this by setting the [`StrokeJoin`](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeJoin/) property of `SKPaint` to a member of the [`SKStrokeJoin`](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeJoin/) enumeration:
 

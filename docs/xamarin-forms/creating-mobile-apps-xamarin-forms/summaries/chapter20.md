@@ -66,7 +66,7 @@ Traditionally, the .NET [`System.IO`](https://developer.xamarin.com/api/namespac
 
 ### Good news and bad news
 
-All the platforms supported by Xamarin.Forms support application local storage &#x2014; storage that is private to the application.
+All the platforms supported by Xamarin.Forms support application local storage &mdash; storage that is private to the application.
 
 The Xamarin.iOS and Xamarin.Android libraries include a version of .NET that Xamarin has expressly tailored for these two platforms. These include classes from `System.IO` that you can use to perform file I/O with application local storage in these two platforms.
 
@@ -119,7 +119,7 @@ The [**TextFileAsync**](https://github.com/xamarin/xamarin-forms-book-samples/tr
 
 ### Keeping it in the background
 
-Methods in libraries that make calls to multiple asynchronous methods &#x2014; such as the `WriteFileAsync` and `ReadFileASync` methods in the Windows Runtime [`FileHelper`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/FileHelper.cs) class &#x2014; can be made somewhat more efficient by using the [`ConfigureAwait`](https://developer.xamarin.com/api/member/System.Threading.Tasks.Task%3CTResult%3E.ConfigureAwait/p/System.Boolean/) method to avoid switching back to the user-interface thread.
+Methods in libraries that make calls to multiple asynchronous methods &mdash; such as the `WriteFileAsync` and `ReadFileASync` methods in the Windows Runtime [`FileHelper`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/FileHelper.cs) class &mdash; can be made somewhat more efficient by using the [`ConfigureAwait`](https://developer.xamarin.com/api/member/System.Threading.Tasks.Task%3CTResult%3E.ConfigureAwait/p/System.Boolean/) method to avoid switching back to the user-interface thread.
 
 ### Don't block the UI thread!
 

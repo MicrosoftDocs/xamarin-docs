@@ -106,7 +106,7 @@ LoadApplication(new YOUR_NAMESPACE.App());
 
 12 . Add any local resources (eg. image files) from the existing platform projects that are required.
 
-<a name="troubleshooting"/>
+<a name="troubleshooting" />
 
 ## Troubleshooting
 
