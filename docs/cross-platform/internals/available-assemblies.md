@@ -15,7 +15,7 @@ _Available assemblies in Xamarin.iOS, Xamarin.Android, and Xamarin.Mac_
 
 Xamarin.iOS, Xamarin.Android, and Xamarin.Mac all ship with over a dozen assemblies. Just as Silverlight is an extended subset of the desktop .NET assemblies, Xamarin platforms is also an extended subset of several Silverlight and desktop .NET assemblies.
 
-Xamarin platforms are not ABI compatible with existing assemblies compiled for a different profile. You must recompile your source code to generate assemblies targeting the correct. profile (just as you need to recompile source code to target Silverlight and .NET 3.5 separately).
+Xamarin platforms are not ABI compatible with existing assemblies compiled for a different profile. You must recompile your source code to generate assemblies targeting the correct profile (just as you need to recompile source code to target Silverlight and .NET 3.5 separately).
 
 Xamarin.Mac applications can be compiled in three modes: one that uses Xamarin's curated Mobile Profile, the Xamarin.Mac .NET 4.5 Framework which allows you target existing full desktop assemblies, and an unsupported one that uses the .NET API found in a system Mono installation. For more information, please see our [Target Frameworks](~/mac/platform/target-framework.md) documentation.
 
