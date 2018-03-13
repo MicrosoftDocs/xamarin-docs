@@ -1095,7 +1095,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="https://review.docs.microsoft.com/en-us//media/illustrations/dynamics-resource-library.svg?branch=master" alt="Xamarin Workbooks" />
+                                                        <img src="https://docs.microsoft.com/en-us/media/illustrations/dynamics-resource-library.svg" alt="Xamarin Workbooks" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
