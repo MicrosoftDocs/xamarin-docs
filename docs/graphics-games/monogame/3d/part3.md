@@ -43,7 +43,7 @@ This walkthrough focuses on moving objects in 3D space. We’ll begin with the p
 
 Before we begin moving our robot around, we will create a `Robot` class to contain logic for drawing and movement. Game developers refer to this encapsulation of logic and data as an *entity*.
 
-Add a new empty class file to the **MonoGame3D** Portable Class Library (not the platform-specific ModelAndVerts.Android). Name it** Robot **and click **New**:
+Add a new empty class file to the **MonoGame3D** Portable Class Library (not the platform-specific ModelAndVerts.Android). Name it **Robot** and click **New**:
 
 ![](part3-images/image3.png "Name it Robot and click New")
 
