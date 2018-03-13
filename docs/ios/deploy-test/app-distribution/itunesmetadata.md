@@ -235,7 +235,7 @@ Optionally the `subgenres` key can be used to further define up to two sub genre
 
 For iOS applications, Apple currently defines the following genres and genre IDs:
 
-[!include[](~/ios/includes/table-appstore.html)]
+[!include[](~/ios/includes/table-appstore.md)]
 
 For more information, please see Apple's [Genre IDs Appendix](http://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html) documentation.
 

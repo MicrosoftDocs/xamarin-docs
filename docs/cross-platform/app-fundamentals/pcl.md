@@ -45,129 +45,13 @@ The table below shows some of the features that vary by .NET platform. To write 
    guaranteed to run on specific devices/platforms you simply choose which support is required when you create
   the project.
 
-<table border="1" cellpadding="1" cellspacing="1">
-  <tbody>
-    <tr>
-      <td>
-        Feature
-      </td>
-      <td>
-        .NET Framework
-      </td>
-      <td>
-        UWP apps
-      </td>
-      <td>
-        Silverlight
-      </td>
-      <td>
-        Windows Phone
-      </td>
-      <td>
-        Xamarin
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Core
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-    </tr>
-    <tr>
-      <td>
-        LINQ
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-    </tr>
-    <tr>
-      <td>
-        IQueryable
-      </td>
-       <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        7.5 +
-      </td>
-      <td>
-        Y
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Serialization
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Data Annotations
-      </td>
-      <td>
-        4.0.3 +
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-        Y
-      </td>
-      <td>
-      </td>
-      <td>
-        Y
-      </td>
-    </tr>
-  </tbody>
-</table>
+|Feature|.NET Framework|UWP apps|Silverlight|Windows Phone|Xamarin|
+|---|---|---|---|---|---|
+|Core|Y|Y|Y|Y|Y|
+|LINQ|Y|Y|Y|Y|Y|
+|IQueryable|Y|Y|Y|7.5 +|Y|
+|Serialization|Y|Y|Y|Y|Y|
+|Data Annotations|4.0.3 +|Y|Y||Y|
 
 The Xamarin column reflects the fact that Xamarin.iOS and Xamarin.Android supports all the profiles shipped with Visual Studio, and the availability of features in any libraries you create will only be limited by the other platforms you choose to support.
 
