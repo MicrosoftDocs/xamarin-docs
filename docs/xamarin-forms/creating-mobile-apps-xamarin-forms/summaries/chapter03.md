@@ -87,7 +87,7 @@ Several instance methods allow modifying an existing color to create a new color
 
 Finally, two static read-only properties define special color value:
 
-- [`Color.Default`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Default/), all channels set to &#x2013;1
+- [`Color.Default`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Default/), all channels set to &ndash;1
 - [`Color.Accent`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Accent/)
 
 `Color.Default` is intended to enforce the platform's color scheme, and consequently has a different meaning in different contexts on different platforms. By default the platform color schemes are:

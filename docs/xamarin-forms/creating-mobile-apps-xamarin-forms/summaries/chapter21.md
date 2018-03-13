@@ -15,9 +15,9 @@ A Xamarin.Forms view appears on the screen in a location and size determined by 
 
 Xamarin.Forms supports three basic types of transforms:
 
-- *Translation* &#x2014; shift an element horizontally or vertically
-- *Scale* &#x2014; change the size of an element
-- *Rotation* &#x2014; turn an element around a point or axis
+- *Translation* &mdash; shift an element horizontally or vertically
+- *Scale* &mdash; change the size of an element
+- *Rotation* &mdash; turn an element around a point or axis
 
 In Xamarin.Forms, the scaling is isotropic; it affects the width and height uniformly. Rotation is supported both on the two-dimensional surface of the screen and in 3D space. There is no skew (or sheer) transform, and no generalized matrix transform.
 

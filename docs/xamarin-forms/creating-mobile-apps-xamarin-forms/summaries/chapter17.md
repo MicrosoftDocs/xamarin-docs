@@ -25,16 +25,16 @@ The definition of a `Grid` in XAML generally begins with filling the [`RowDefini
 
 In XAML, the [`GridLengthTypeConverter`](https://developer.xamarin.com/api/type/Xamarin.Forms.GridLengthTypeConverter/) converts simple text strings into `GridLength` values. Behind the scenes, the [`GridLength` constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.GridLength.GridLength/p/System.Double/Xamarin.Forms.GridUnitType/) creates the `GridLength` value based on a number and a value of type [`GridUnitType`](https://developer.xamarin.com/api/type/Xamarin.Forms.GridUnitType/), an enumeration with three members:
 
-- [`Absolute`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Absolute/) &#x2014; the width or height is specified in device-independent units (a number in XAML)
-- [`Auto`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Auto/) &#x2014; the height or width is autosized based on cell contents ("Auto" in XAML)
-- [`Star`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Star/) &#x2014; leftover height or width is allocated proportionally (a number with "\*", called *star*, in XAML)
+- [`Absolute`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Absolute/) &mdash; the width or height is specified in device-independent units (a number in XAML)
+- [`Auto`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Auto/) &mdash; the height or width is autosized based on cell contents ("Auto" in XAML)
+- [`Star`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Star/) &mdash; leftover height or width is allocated proportionally (a number with "\*", called *star*, in XAML)
 
-Each child of the `Grid` must also be assigned a row and column (either explicitly or implicitly). Row spans and column spans are optional. These are all specified using attached bindable properties &#x2014; properties that are defined by the `Grid` but set on children of the `Grid`. `Grid` defines four static attached bindable properties:
+Each child of the `Grid` must also be assigned a row and column (either explicitly or implicitly). Row spans and column spans are optional. These are all specified using attached bindable properties &mdash; properties that are defined by the `Grid` but set on children of the `Grid`. `Grid` defines four static attached bindable properties:
 
-- [`RowProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowProperty/) &#x2014; the zero-based row; default is 0
-- [`ColumnProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnProperty/) &#x2014; the zero-based column; default is 0
-- [`RowSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowSpanProperty/) &#x2014; the number of rows the child spans; default is 1
-- [`ColumnSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnSpanProperty/) &#x2014; the number of columns the child spans; default is 1
+- [`RowProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowProperty/) &mdash; the zero-based row; default is 0
+- [`ColumnProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnProperty/) &mdash; the zero-based column; default is 0
+- [`RowSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowSpanProperty/) &mdash; the number of rows the child spans; default is 1
+- [`ColumnSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnSpanProperty/) &mdash; the number of columns the child spans; default is 1
 
 In code, a program can use eight static methods to set and get these values:
 

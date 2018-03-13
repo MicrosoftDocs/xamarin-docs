@@ -21,23 +21,7 @@ It is a single library with a uniform API for all .NET Platforms including .NET 
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-## Xamarin Studio
-
-.NET Standard library projects can be created in Xamarin Studio 6.2, by first
-creating a Portable Library project:
-
-[![](net-standard-images/xs01-sml.png "Create a new portable library project")](net-standard-images/xs01.png#lightbox)
-
-Once the project has been created, right-click and open the **Project Options** window.
-In the **General** section the project can be converted to .NET Standard and set
-to use a specific version in the **Platform** drop-down list:
-
-[![](net-standard-images/xs02-sml.png "Convert to .NET Standard in general options")](net-standard-images/xs02.png#lightbox)
-
-You can then [create a NuGet package](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/existing-library.md)
-to share the library with other developers.
-
-## Visual Studio for Mac Walkthrough
+## Visual Studio for Mac
 
 This section walks through how to create and use a .NET Standard Library using Visual Studio for Mac. Refer to the .NET Standard Library Example section for a complete implementation.
 
@@ -67,7 +51,7 @@ Inside you can change your version of `netstandard` by changing the `Target Fram
 
 # [Visual Studio](#tab/vswin)
 
-## Visual Studio (Windows) Walkthrough
+## Visual Studio 2017 (Windows)
 
 This section walks through how to create and use a .NET Standard Library using Visual Studio. Refer to the .NET Standard Library Example section for a complete implementation.
 
@@ -103,7 +87,3 @@ Once a .NET Standard Library has been created, you can add a reference to it fro
 
 -----
 
-
-## Related Links
-
-- [Release Notes](https://developer.xamarin.com/releases/studio/xamarin.studio_6.2/xamarin.studio_6.2/#.NET_Standard_Support)

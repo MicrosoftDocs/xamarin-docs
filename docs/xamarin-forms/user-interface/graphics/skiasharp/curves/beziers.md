@@ -16,7 +16,7 @@ _Explore how to use SkiaSharp to render cubic, quadratic, and conic Bézier curv
 
 The Bézier curve is named after Pierre Bézier (1910 – 1999), a French engineer at the automotive company Renault, who used the curve for the computer-assisted design of car bodies.
 
-Bézier curves are known for being well-suited to interactive design: They are well behaved &#x2014; in other words, there aren't singularities that cause the curve to become infinite or unwieldy &#x2014; and they are generally aesthetically pleasing. Character outlines of computer-based fonts are usually defined with Bézier curves:
+Bézier curves are known for being well-suited to interactive design: They are well behaved &mdash; in other words, there aren't singularities that cause the curve to become infinite or unwieldy &mdash; and they are generally aesthetically pleasing. Character outlines of computer-based fonts are usually defined with Bézier curves:
 
 ![](beziers-images/beziersample.png "A sample Bezier curve")
 
@@ -407,7 +407,7 @@ However, the shape of a quadratic Bézier curve is not elliptical, which is why 
 
 ## The Conic Bézier Curve
 
-The conic Bézier curve &#x2014; also known as the rational quadratic Bézier curve &#x2014; is a relatively recent addition to the family of Bézier curves. Like the quadratic Bézier curve, the rational quadratic Bézier curve involves a start point, an end point, and one control point. But the rational quadratic Bézier curve also requires a *weight* value. It's called a *rational* quadratic because the parametric formulas involve ratios.
+The conic Bézier curve &mdash; also known as the rational quadratic Bézier curve &mdash; is a relatively recent addition to the family of Bézier curves. Like the quadratic Bézier curve, the rational quadratic Bézier curve involves a start point, an end point, and one control point. But the rational quadratic Bézier curve also requires a *weight* value. It's called a *rational* quadratic because the parametric formulas involve ratios.
 
 The parametric equations for X and Y are ratios that share the same denominator. Here is the equation for the denominator for *t* ranging from 0 to 1 and a weight value of *w*:
 
@@ -421,7 +421,7 @@ x(t) = ((1 – t)²x₀ + 2wt(1 – t)x₁ + t²x₂)) ÷ d(t)
 
 y(t) = ((1 – t)²y₀ + 2wt(1 – t)y₁ + t²y₂)) ÷ d(t)
 
-Rational quadratic Bézier curves are also called *conics* because they can exactly represent segments of any conic section &#x2014; hyperbolas, parabolas, ellipses, and circles.
+Rational quadratic Bézier curves are also called *conics* because they can exactly represent segments of any conic section &mdash; hyperbolas, parabolas, ellipses, and circles.
 
 To add a rational quadratic Bézier curve to a path, use the [`ConicTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/) method or the [`ConicTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/) overload with separate `x` and `y` coordinates:
 

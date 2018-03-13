@@ -14,7 +14,7 @@ ms.date: 04/03/2017
 
 _Load bitmaps from various sources and display them._
 
-The support of bitmaps in SkiaSharp is quite extensive. This article covers only the basics &#x2014; how to load bitmaps and how to display them:
+The support of bitmaps in SkiaSharp is quite extensive. This article covers only the basics &mdash; how to load bitmaps and how to display them:
 
 ![](bitmaps-images/bitmapssample.png "The display of two bitmaps")
 
@@ -203,7 +203,7 @@ The bitmap is stretched to the dimensions of the rectangle, which is why the mon
 
 [![](bitmaps-images/basicbitmaps-small.png "A triple screenshot of the Basic Bitmaps page")](bitmaps-images/basicbitmaps-large.png#lightbox "A triple screenshot of the Basic Bitmaps page")
 
-The third image &#x2014; which you can only see if you run the program and load a photo from your own picture library &#x2014; is also displayed within a rectangle, but the rectangle's position and size are adjusted to maintain the bitmap's aspect ratio. This calculation is a little more involved because it requires calculating a scaling factor based on the size of the bitmap and the destination rectangle, and centering the rectangle in that area:
+The third image &mdash; which you can only see if you run the program and load a photo from your own picture library &mdash; is also displayed within a rectangle, but the rectangle's position and size are adjusted to maintain the bitmap's aspect ratio. This calculation is a little more involved because it requires calculating a scaling factor based on the size of the bitmap and the destination rectangle, and centering the rectangle in that area:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

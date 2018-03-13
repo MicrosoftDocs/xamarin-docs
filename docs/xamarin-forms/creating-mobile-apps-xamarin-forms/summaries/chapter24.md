@@ -114,7 +114,7 @@ The [**BuildAPage**](https://github.com/xamarin/xamarin-forms-book-samples/tree/
 
 ## Patterns of data transfer
 
-It is often necessary to share data between pages &#x2014; to transfer data to a navigated page, and for a page to return data to the page that invoked it. There are several techniques for doing this.
+It is often necessary to share data between pages &mdash; to transfer data to a navigated page, and for a page to return data to the page that invoked it. There are several techniques for doing this.
 
 ### Constructor arguments
 

@@ -40,7 +40,7 @@ The `SKCanvas` class defines four `Scale` methods. The first [`Scale`](https://d
 public void Scale (Single s)
 ```
 
-This is known as *isotropic* scaling &#x2014; scaling that is the same in both directions. Isotropic scaling preserves the object's aspect ratio.
+This is known as *isotropic* scaling &mdash; scaling that is the same in both directions. Isotropic scaling preserves the object's aspect ratio.
 
 The second [`Scale`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/) method lets you specify different values for horizontal and vertical scaling:
 
@@ -164,7 +164,7 @@ The upper-left corner of the rounded rectangle is positioned `margin` pixels fro
 
 [![](scale-images/centeredscale-small.png "Triple screenshot of the Centered Scale page")](scale-images/centeredscale-large.png#lightbox "Triple screenshot of the Centered Scale page")
 
-The `Slider` elements in this program have a range of &#x2013;10 to 10. As you can see,
+The `Slider` elements in this program have a range of &ndash;10 to 10. As you can see,
 negative values of vertical scaling (such as on the Android screen in the center) cause objects to flip around the horizontal axis that passes through the center of scaling. Negative values of horizontal scaling (such as in the Windows screen on the right) cause objects to flip around the vertical axis that passes through the center of scaling.
 
 This fourth version of the `Scale` method is actually a shortcut. You might want to see how this works by replacing the `Scale` method in this code with the following:

@@ -17,7 +17,7 @@ One of the most unpleasant jobs in programming is porting a code base from one p
 
 This problem is common when targeting mobile platforms. Currently, there exist two major mobile platforms, the Apple family of iPhones and iPads running the iOS operating system, and the Android operating system that runs on a variety of phones and tablets. Another significant platform is Microsoft's Universal Windows Platform (UWP), which allows a single program to target both Windows 10 and Windows 10 Mobile.
 
-A software vendor that wishes to target these three platforms must deal with different user-interface paradigms, three different development environments, three different programming interfaces, and&#x2014;perhaps most awkwardly&#x2014;three different programming languages: Objective-C for the iPhone and iPad, Java for Android, and C# for Windows.
+A software vendor that wishes to target these three platforms must deal with different user-interface paradigms, three different development environments, three different programming interfaces, and&mdash;perhaps most awkwardly&mdash;three different programming languages: Objective-C for the iPhone and iPad, Java for Android, and C# for Windows.
 
 ## The C# and .NET solution
 

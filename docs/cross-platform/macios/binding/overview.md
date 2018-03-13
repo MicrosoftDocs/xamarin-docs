@@ -93,7 +93,7 @@ API defintions that can be built into bindings.
 
 <a name="howitworks" />
 
-# How Binding Works
+## How Binding Works
 
 It is possible to use the [[Register]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) attribute,
 [[Export]](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) attribute, and

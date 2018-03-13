@@ -25,7 +25,7 @@ An angle measured north or south of the equator from the center of the Earth mar
 
 ### Longitude and meridians
 
-Halves of great circles from the north pole to the south pole are lines of equal longitude, also known as *meridians*. These are relative to the Prime Meridian in Greenwich, England. By convention, longitudes east of the Prime Meridian are positive values from 0 degrees to 180 degrees, and longitudes west of the Prime Meridian are negative values from 0 degrees to &#x2013;180 degrees.
+Halves of great circles from the north pole to the south pole are lines of equal longitude, also known as *meridians*. These are relative to the Prime Meridian in Greenwich, England. By convention, longitudes east of the Prime Meridian are positive values from 0 degrees to 180 degrees, and longitudes west of the Prime Meridian are negative values from 0 degrees to &ndash;180 degrees.
 
 ### The equirectangular projection
 

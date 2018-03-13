@@ -131,7 +131,7 @@ Anything you can do with a trigger, you can also do with a behavior, but behavio
 
 The argument is the element that the behavior is attached to. Generally, the `OnAttachedTo` method attaches some event handlers, and `OnDetachingFrom` detaches them. Because such a class usually saves some state, it generally cannot be shared in a `Style`.
 
-[**BehaviorEntryValidation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BehaviorEntryValidation) sample is similar to **TriggerEntryValidation** except that it uses a behavior &#x2014; the [`NumericValidationBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationBehavior.cs) class in the [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) library.
+[**BehaviorEntryValidation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BehaviorEntryValidation) sample is similar to **TriggerEntryValidation** except that it uses a behavior &mdash; the [`NumericValidationBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationBehavior.cs) class in the [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) library.
 
 ### Behaviors with properties
 

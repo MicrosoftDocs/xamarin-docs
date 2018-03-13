@@ -234,7 +234,7 @@ These three points define two connected lines:
 
 ![](arcs-images/tangentarcconnectinglines.png "Lines connecting the three points of a tangent arc")
 
-If the three points are colinear &#x2014; that is, if they lie on the same straight line &#x2014; no arc will be drawn.
+If the three points are colinear &mdash; that is, if they lie on the same straight line &mdash; no arc will be drawn.
 
 The `ArcTo` method also includes a `radius` parameter. This defines the radius of a circle:
 

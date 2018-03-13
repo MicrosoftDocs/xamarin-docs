@@ -34,40 +34,14 @@ XAML uses prefixes to declare non-default namespaces, with the prefix being used
 
 The following table outlines the `x` namespace attributes supported by Xamarin.Forms:
 
-<table>
- <thead>
-   <tr>
-     <td><strong>Construct</strong></td>
-     <td><strong>Description</strong></td>
-   </tr>
- </thead>
- <tbody>
-   <tr>
-     <td><code>x:Arguments</code></td>
-     <td>Specifies constructor arguments for a non-default constructor, or for a factory method object declaration.</td>
-   </tr>
-   <tr>
-     <td><code>x:Class</code></td>
-     <td>Specifies the namespace and class name for a class defined in XAML. The class name must match the class name of the code-behind file. Note that this construct can only appear in the root element of a XAML file.</td>
-   </tr>
-   <tr>
-     <td><code>x:FactoryMethod</code></td>
-     <td>Specifies a factory method that can be used to initialize an object.</td>
-   </tr>
-   <tr>
-     <td><code>x:Key</code></td>
-     <td>Specifies a unique user-defined key for each resource in a <code>ResourceDictionary</code>. The key's value is used to retrieve the XAML resource, and is typically used as the argument for the <code>StaticResource</code> markup extension.</td>
-   </tr>
-   <tr>
-     <td><code>x:Name</code></td>
-     <td>Specifies a runtime object name for the XAML element. Setting <code>x:Name</code> is similar to declaring a variable in code.</td>
-   </tr>
-   <tr>
-     <td><code>x:TypeArguments</code></td>
-     <td>Specifies the generic type arguments to the constructor of a generic type.</td>
-   </tr>
- </tbody>
-</table>
+|Construct|Description|
+|--- |--- |
+|`x:Arguments`|Specifies constructor arguments for a non-default constructor, or for a factory method object declaration.|
+|`x:Class`|Specifies the namespace and class name for a class defined in XAML. The class name must match the class name of the code-behind file. Note that this construct can only appear in the root element of a XAML file.|
+|`x:FactoryMethod`|Specifies a factory method that can be used to initialize an object.|
+|`x:Key`|Specifies a unique user-defined key for each resource in a `ResourceDictionary`. The key's value is used to retrieve the XAML resource, and is typically used as the argument for the `StaticResource` markup extension.|
+|`x:Name`|Specifies a runtime object name for the XAML element. Setting `x:Name` is similar to declaring a variable in code.|
+|`x:TypeArguments`|Specifies the generic type arguments to the constructor of a generic type.|
 
 For more information about the `x:Arguments`, `x:FactoryMethod`, and `x:TypeArguments` attributes, see [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
