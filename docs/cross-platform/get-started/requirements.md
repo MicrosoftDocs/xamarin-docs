@@ -33,7 +33,7 @@ on obtaining the software and required SDKs.
 This table shows which platforms can be built with different
 development tool & operating system combinations:
 
-[!include[](~/cross-platform/includes/development-environment.html)]
+[!include[](~/cross-platform/includes/development-environment.md)]
 
 
 > [!NOTE]
@@ -49,7 +49,7 @@ development tool & operating system combinations:
 Using a Mac computer for Xamarin development requires the following software/SDK versions. Check
 your operating system version and follow the instructions for the [Xamarin installer](#install).
 
-[!include[](~/cross-platform/includes/macos-requirements.html)]
+[!include[](~/cross-platform/includes/macos-requirements.md)]
 
 > [!NOTE]
 > NOTE: Xcode can be installed (and updated) on
@@ -62,7 +62,7 @@ for testing and debugging
 (Xamarin.Mac apps can be tested directly on the development computer;
 Apple Watch apps are deployed first to the paired iPhone).
 
-[!include[](~/cross-platform/includes/macos-testing.html)]
+[!include[](~/cross-platform/includes/macos-testing.md)]
 
 
 <a name="windows" />
@@ -74,7 +74,7 @@ Check your operating system version (and confirm that you are not using an *Expr
 Visual Studio - if so, consider updating to a *Community* edition).
 Visual Studio 2015 and 2017 installers include an option to install Xamarin automatically.
 
-[!include[](~/cross-platform/includes/windows-requirements.html)]
+[!include[](~/cross-platform/includes/windows-requirements.md)]
 
 
 > [!NOTE]
@@ -91,7 +91,7 @@ Xamarin mobile applications can be deployed to physical devices via USB
 for testing and debugging (iOS devices must be connected to the Mac computer, not the computer
 running Visual Studio).
 
-[!include[](~/cross-platform/includes/windows-testing.html)]
+[!include[](~/cross-platform/includes/windows-testing.md)]
 
 
 > [!NOTE]

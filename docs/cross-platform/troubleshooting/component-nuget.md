@@ -1,6 +1,6 @@
 ---
-title: "Updating Component References to NuGet"
-description: "Replace your Component references with NuGet packages to future-proof your apps."
+title: "Updating component references to NuGet"
+description: "Replace your component references with NuGet packages to future-proof your apps."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
@@ -10,12 +10,12 @@ ms.author: amburns
 ms.date: 11/22/2017
 ---
 
-# Updating Component References to NuGet
+# Updating component references to NuGet
 
-_Replace your Component references with NuGet packages to future-proof your apps._
+_Replace your component references with NuGet packages to future-proof your apps._
 
 This guide explains how to update existing Xamarin solutions
-to change Component references to NuGet packages.
+to change component references to NuGet packages.
 
 - [Components that contain NuGet packages](#contain)
 - [Components with NuGet replacements](#replace)
@@ -28,6 +28,82 @@ equivalent NuGet package, read the
 Refer to these pages for more detailed instructions for adding NuGet packages
 on [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 or [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+
+## Opening a project containing a component
+
+In November 2017, it was [announced](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) that the Xamarin Component Store would be discontinued. In an effort to move forward with the sunsetting of components, the 15.6 release of Visual Studio and 7.4 release of Visual Studio for Mac no longer support components in your project. 
+
+# [Visual Studio](#tab/vswin)
+
+If you load a project into Visual Studio, the following dialog is displayed, explaining that you must remove any components from your project manually:
+
+![Alert dialog explaining that a component has been found in your project and must be removed](component-nuget-images/component-alert-vs.png)
+
+To remove a component from your project:
+
+1. Open the .csproj file. To do this, right-click on the project name and select **Unload Project**. 
+
+2. Right-click again on the unloaded project and select **Edit {your-project-name}.csproj**.
+
+3. Find any references in the file to `XamarinComponentReference`. It should look similar to the following example:
+
+    ```xml
+    <ItemGroup>
+      <XamarinComponentReference Include="advancedcolorpicker">
+        <Version>2.0.1</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+      <XamarinComponentReference Include="gunmetaltheme">
+        <Version>1.4.1</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+      <XamarinComponentReference Include="signature-pad">
+        <Version>2.2.0</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+    </ItemGroup>
+    ```
+
+4. Remove the references to `XamarinComponentReference` and save the file. In the example above, it's safe to remove the entire `ItemGroup`.
+
+5. Once the file has been saved, right-click on the project name and select **Reload Project**.
+
+6. Repeat the steps above for each project in your solution.
+
+# [Visual Studio for Mac](#tab/vsmac)
+
+If you load a project into Visual Studio for Mac, the following dialog is displayed, explaining that you must remove any components from your project manually:
+
+![Alert dialog explaining that a component has been found in your project and must be removed](component-nuget-images/component-alert.png)
+
+To remove a component from your project:
+
+1. Open the .csproj file. To do this, right-click on the project name and select **Tools > Edit File**.
+
+2. Find any references in the file to `XamarinComponentReference`. It should look similar to the following example:
+
+    ```xml
+    <ItemGroup>
+      <XamarinComponentReference Include="advancedcolorpicker">
+        <Version>2.0.1</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+      <XamarinComponentReference Include="gunmetaltheme">
+        <Version>1.4.1</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+      <XamarinComponentReference Include="signature-pad">
+        <Version>2.2.0</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+    </ItemGroup>
+    ```
+
+3. Remove the references to `XamarinComponentReference` and save the file. In the example above, it's safe to remove the entire `ItemGroup`
+
+4. Repeat the steps above for each project in your solution. 
+
+-----
 
 <a name="contain" />
 

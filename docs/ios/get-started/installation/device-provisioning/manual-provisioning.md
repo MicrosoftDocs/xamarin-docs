@@ -5,8 +5,8 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: asb3993
+ms.author: amburns
 ms.date: 07/15/2017
 ---
 
@@ -235,7 +235,8 @@ At this point provisioning should be complete, and the app is ready to be deploy
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-Make sure to set the Team selector to None under Project Options > iOS Bundle Signing.
+> [!IMPORTANT]
+> Before you begin, make sure to select **Manual Provisioning** in the **Info.plist**.
 
 1. Plug the device in to a Mac.
 2. In the project's **Info.plist**, make sure the Bundle Identifier matches the App ID (unless the App ID is a wildcard):
