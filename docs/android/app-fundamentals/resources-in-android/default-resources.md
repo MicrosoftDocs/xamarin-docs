@@ -6,7 +6,7 @@ ms.assetid: 762572F0-173A-D994-0510-8F36BEF3D487
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 03/13/2018
 ---
 
 # Default Resources
@@ -41,7 +41,7 @@ A complete list of resource types is provided below:
 
 -  **color** &ndash; XML files that describe a state list of colors. To
    understand color state lists, consider a UI widget such as a Button.
-   It may make have different states such as pressed or disabled, and
+   It may have different states such as pressed or disabled, and
    the button may change color with each change in state. The list is
    expressed in a state list.
 
