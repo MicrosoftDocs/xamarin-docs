@@ -5,8 +5,8 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: asb3993
+ms.author: amburns
 ms.date: 11/17/2017
 ---
 
@@ -30,23 +30,15 @@ To automatically sign your app for deployment on an iOS device, do the following
 
 1. Open an iOS project in Visual Studio for Mac.
 
-2. Open the **Info.plist** file:
+2. Open the **Info.plist** file.
 
-    ![Info.plist file](automatic-provisioning-images/image1.png)
-
-3. In the **Signing** section, select your team from the **Team** dropdown:
+3. In the **Signing** section, select select **Automatic Provisioning**:
 
     ![Team selector dropdown](automatic-provisioning-images/image2.png)
 
-4. Select the **Automatically manage signing** checkbox, as illustrated below. This start the automatic signing process, where Visual Studio for Mac will attempt to generate an App ID, provisioning profile, and a signing identity and set these artifacts to be used for signing. When the checkbox has been selected, the manual controls for selecting signing identities are disabled.
+4. Select your team from the **Team** dropdown.
 
-    ![automatically manage teams option](automatic-provisioning-images/image3.png)
-
-5. The following dialog will pop up, advising you that the project file will be modified to use the newly generated certificate and provisioning profile:
-
-    ![dialog that advises the project file will be modified](automatic-provisioning-images/image4.png)
-
-6. After a few seconds a Signing Certificate and Provisioning profile will be created and displayed:
+6. After a few seconds a Signing Certificate and Provisioning profile will be created:
 
     ![successfully created certificate and profile](automatic-provisioning-images/image5.png)
 
