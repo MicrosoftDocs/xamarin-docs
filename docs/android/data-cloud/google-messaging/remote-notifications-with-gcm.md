@@ -7,7 +7,7 @@ ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/13/2018
 ---
 
 # Remote Notifications With Google Cloud Messaging
@@ -696,37 +696,12 @@ is `com.xamarin.gcmexample`.
 
 Let's look at what each setting in this XML does:
 
-<table>
-    <thead>
-        <tr>
-            <th>Setting</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>com.google.android.gms.gcm.GcmReceiver</code></td>
-            <td>Declares that our app implements a GCM receiver that
-                captures and processes incoming push notification messages.</td>
-        </tr>
-        <tr>
-            <td><code>com.google.android.c2dm.permission.SEND</code></td>
-            <td>Declares that only GCM servers can send messages directly 
-                to the app.</td>
-        </tr>
-        <tr>
-            <td><code>com.google.android.c2dm.intent.RECEIVE</code></td> 
-            <td>Intent filter advertising that our app handles broadcast 
-                messages from GCM.</td>
-        </tr>
-        <tr>
-            <td><code>com.google.android.c2dm.intent.REGISTRATION</code></td>
-            <td>Intent filter advertising that our app handles new registration 
-                intents (that is, we have implemented an Instance ID Listener 
-                Service).</td>
-        </tr>
-    </tbody>
-</table>
+|Setting|Description|
+|---|---|
+|`com.google.android.gms.gcm.GcmReceiver`|Declares that our app implements a GCM receiver that captures and processes incoming push notification messages.|
+|`com.google.android.c2dm.permission.SEND`|Declares that only GCM servers can send messages directly to the app.|
+|`com.google.android.c2dm.intent.RECEIVE`|Intent filter advertising that our app handles broadcast messages from GCM.|
+|`com.google.android.c2dm.intent.REGISTRATION`|Intent filter advertising that our app handles new registration intents (that is, we have implemented an Instance ID Listener Service).|
 
 Alternatively, you can decorate `GcmListenerService` with these 
 attributes rather than specifying them in XML; here we specify them in 

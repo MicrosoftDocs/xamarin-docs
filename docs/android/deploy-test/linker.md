@@ -6,7 +6,7 @@ ms.assetid: 3528E195-AA74-90AF-B5F3-3B65FB4F0BB8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
+ms.date: 03/13/2018
 ---
 
 # Linking on Android
@@ -20,43 +20,10 @@ members is found. Then everything outside of this closure is *discarded*.
 
 For example, the [Hello, Android](https://developer.xamarin.com/samples/HelloM4A/) sample:
 
-<table border="0" cellpadding="1" cellspacing="1">
-  <tbody>
-    <tr>
-      <td>
-        <strong>Configuration</strong>
-      </td>
-      <td>
-        <strong>1.2.0 Size</strong>
-      </td>
-      <td>
-        <strong>4.0.1 Size</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Release without Linking:
-      </td>
-      <td>
-        14.0 MB
-      </td>
-      <td>
-        16.0 MB
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Release with Linking:
-      </td>
-      <td>
-        4.2 MB
-      </td>
-      <td>
-        2.9 MB
-      </td>
-    </tr>
-  </tbody>
-</table>
+|Configuration|1.2.0 Size|4.0.1 Size|
+|---|---|---|
+|Release without Linking:|14.0 MB|16.0 MB|
+|Release with Linking:|4.2 MB|2.9 MB|
 
 Linking results in a package that is 30% the size of the original
 (unlinked) package in 1.2.0, and 18% of the unlinked package in 4.0.1.

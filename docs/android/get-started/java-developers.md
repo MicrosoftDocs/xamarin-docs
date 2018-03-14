@@ -7,7 +7,7 @@ ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
+ms.date: 03/13/2018
 ---
 
 # Xamarin for Java Developers
@@ -725,143 +725,19 @@ Many language keywords used in Java are also used in C#. There are also
 a number of Java keywords that have an equivalent but differently-named
 counterpart in C#, as listed in this table:
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-  <thead>
-    <th>
-        <strong>Java</strong>
-    </th>
-    <th>
-        <strong>C#</strong>
-    </th>
-    <th>
-        <strong>Description</strong>
-    </th>
-  </thead>
-  <tbody>
-    <tr>
-      <td valign="top">
-        <code>boolean</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/c8f5xwh7.aspx">bool</a>
-      </td>
-      <td valign="top">
-        Used for declaring the boolean values <code>true</code> and <code>false</code>.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>extends</code>
-      </td>
-      <td valign="top">
-        <code>:</code>
-      </td>
-      <td valign="top">
-        Precedes the class and interfaces to inherit from.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>implements</code>
-      </td>
-      <td valign="top">
-        <code>:</code>
-      </td>
-      <td valign="top">
-        Precedes the class and interfaces to inherit from.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>import</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/zhdeatwt.aspx">using</a>
-      </td>
-      <td valign="top">
-        Imports types from a namespace, also used for creating a namespace alias.
-      </td>
-    </tr>
-    <tr>
-      <td valign="final">
-        <code>final</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/88c54tsw.aspx">sealed</a>
-      </td>
-      <td valign="top">
-        Prevents class derivation; prevents methods and properties
-        from being overridden in derived classes.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>instanceof</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/scekt9xw.aspx">is</a>
-      </td>
-      <td valign="top">
-        Evaluates whether an object is compatible with a given type.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>native</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/e59b22c5.aspx">extern</a>
-      </td>
-      <td valign="top">
-        Declares a method that is implemented externally.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>package</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/z2kcy19k.aspx">namespace</a>
-      </td>
-      <td valign="top">
-        Declares a scope for a related set of objects.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>T...</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/w5zay9db.aspx">params T[]</a>
-      </td>
-      <td valign="top">
-        Specifies a method parameter that takes a variable number of arguments.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>super</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/hfw7t1ce.aspx">base</a>
-      </td>
-      <td valign="top">
-        Used to access members of the parent class from within a derived class.
-      </td>
-    </tr>
-    <tr>
-      <td valign="synchronized">
-        <code>synchronized</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/c5kehkcz.aspx">lock</a>
-      </td>
-      <td valign="top">
-        Wraps a critical section of code with lock acquisition and release.
-      </td>
-    </tr>
-  </tbody>
-</table>
+|Java|C#|Description|
+|---|---|---|
+|`boolean`|[bool](https://msdn.microsoft.com/en-us/library/c8f5xwh7.aspx)|Used for declaring the boolean values true and false.|
+|`extends`|`:`|Precedes the class and interfaces to inherit from.|
+|`implements`|`:`|Precedes the class and interfaces to inherit from.|
+|`import`|[using](https://msdn.microsoft.com/en-us/library/zhdeatwt.aspx)|Imports types from a namespace, also used for creating a namespace alias.|
+|`final`|[sealed](https://msdn.microsoft.com/en-us/library/88c54tsw.aspx)|Prevents class derivation; prevents methods and properties from being overridden in derived classes.|
+|`instanceof`|[is](https://msdn.microsoft.com/en-us/library/scekt9xw.aspx)|Evaluates whether an object is compatible with a given type.|
+|`native`|[extern](https://msdn.microsoft.com/en-us/library/e59b22c5.aspx)|Declares a method that is implemented externally.|
+|`package`|[namespace](https://msdn.microsoft.com/en-us/library/z2kcy19k.aspx)|Declares a scope for a related set of objects.|
+|`T...`|[params T](https://msdn.microsoft.com/en-us/library/w5zay9db.aspx)|Specifies a method parameter that takes a variable number of arguments.|
+|`super`|[base](https://msdn.microsoft.com/en-us/library/hfw7t1ce.aspx)|Used to access members of the parent class from within a derived class.|
+|`synchronized`|[lock](https://msdn.microsoft.com/en-us/library/c5kehkcz.aspx)|Wraps a critical section of code with lock acquisition and release.|
 
 
 Also, there are many keywords that are unique to C# and have no
@@ -870,204 +746,31 @@ following C# keywords (this table is useful to refer to when you
 are reading through Xamarin.Android
 [sample code](https://developer.xamarin.com/samples/android/all/)):
 
-
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-  <thead>
-    <th>
-        <strong>C#</strong>
-    </th>
-    <th>
-        <strong>Description</strong>
-    </th>
-  </thead>
-  <tbody>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/cscsdfbt.aspx">as</a>
-      </td>
-      <td valign="top">
-        Performs conversions between compatible reference types or nullable types.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/hh156513.aspx">async</a>
-      </td>
-      <td valign="top">
-        Specifies that a method or lambda expression is asynchronous.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/hh156528.aspx">await</a>
-      </td>
-      <td valign="top">
-        Suspends the execution of a method until a task completes.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/5bdb6693.aspx">byte</a>
-      </td>
-      <td valign="top">
-        Unsigned 8-bit integer type.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/900fyy8e.aspx">delegate</a>
-      </td>
-      <td valign="top">
-        Used to encapsulate a method or anonymous method.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/sbbt4032.aspx">enum</a>
-      </td>
-      <td valign="top">
-        Declares an enumeration, a set of named constants.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/8627sbea.aspx">event</a>
-      </td>
-      <td valign="top">
-        Declares an event in a publisher class.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/f58wzh21.aspx">fixed</a>
-      </td>
-      <td valign="top">
-        Prevents a variable from being relocated.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        get
-      </td>
-      <td valign="top">
-        Defines an accessor method that retrieves the value of a property.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/dd469484.aspx">in</a>
-      </td>
-      <td valign="top">
-        Enables a parameter to accept a less derived type in a generic interface.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx">object</a>
-      </td>
-      <td valign="top">
-        An alias for the <code>Object</code> type in the .NET framework.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/t3c3bfhx.aspx">out</a>
-      </td>
-      <td valign="top">
-        Parameter modifier or generic type parameter declaration.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/ebca9ah3.aspx">override</a>
-      </td>
-      <td valign="top">
-        Extends or modifies the implementation of an inherited member.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/6b0scde8.aspx">partial</a>
-      </td>
-      <td valign="top">
-        Declares a definition to be split into multiple files, or splits a method
-        definition from its implementation.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/acdd6hb7.aspx">readonly</a>
-      </td>
-      <td valign="top">
-        Declares that a class member can be assigned only at declaration time or by the class constructor.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/14akc2c7.aspx">ref</a>
-      </td>
-      <td valign="top">
-        Causes an argument to be passed by reference rather than by value.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/ms228368.aspx">set</a>
-      </td>
-      <td valign="top">
-        Defines an accessor method that sets the value of a property.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/362314fe.aspx">string</a>
-      </td>
-      <td valign="top">
-        Alias for the <code>String</code> type in the .NET framework.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/ah19swz4.aspx">struct</a>
-      </td>
-      <td valign="top">
-        A value type that encapsulates a group of related variables.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/58918ffs.aspx">typeof</a>
-      </td>
-      <td valign="top">
-        Obtains the type of an object.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/bb383973.aspx">var</a>
-      </td>
-      <td valign="top">
-        Declares an implicitly-typed local variable.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/a1khb4f8.aspx">value</a>
-      </td>
-      <td valign="top">
-        References the value that client code wants to assign to a property.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/9fkccyh4.aspx">virtual</a>
-      </td>
-      <td valign="top">
-        Allows a method to be overridden in a derived class.
-      </td>
-    </tr>
-  </tbody>
-</table>
+|C#|Description|
+|---|---|
+|[as](https://msdn.microsoft.com/en-us/library/cscsdfbt.aspx)|Performs conversions between compatible reference types or nullable types.|
+|[async](https://msdn.microsoft.com/en-us/library/hh156513.aspx)|Specifies that a method or lambda expression is asynchronous.|
+|[await](https://msdn.microsoft.com/en-us/library/hh156528.aspx)|Suspends the execution of a method until a task completes.|
+|[byte](https://msdn.microsoft.com/en-us/library/5bdb6693.aspx)|Unsigned 8-bit integer type.|
+|[delegate](https://msdn.microsoft.com/en-us/library/900fyy8e.aspx)|Used to encapsulate a method or anonymous method.|
+|[enum](https://msdn.microsoft.com/en-us/library/sbbt4032.aspx)|Declares an enumeration, a set of named constants.|
+|[event](https://msdn.microsoft.com/en-us/library/8627sbea.aspx)|Declares an event in a publisher class.|
+|[fixed](https://msdn.microsoft.com/en-us/library/f58wzh21.aspx)|Prevents a variable from being relocated.|
+|`get`|Defines an accessor method that retrieves the value of a property.|
+|[in](https://msdn.microsoft.com/en-us/library/dd469484.aspx)|Enables a parameter to accept a less derived type in a generic interface.|
+|[object](https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx)|An alias for the Object type in the .NET framework.|
+|[out](https://msdn.microsoft.com/en-us/library/t3c3bfhx.aspx)|Parameter modifier or generic type parameter declaration.|
+|[override](https://msdn.microsoft.com/en-us/library/ebca9ah3.aspx)|Extends or modifies the implementation of an inherited member.|
+|[partial](https://msdn.microsoft.com/en-us/library/6b0scde8.aspx)|Declares a definition to be split into multiple files, or splits a method definition from its implementation.|
+|[readonly](https://msdn.microsoft.com/en-us/library/acdd6hb7.aspx)|Declares that a class member can be assigned only at declaration time or by the class constructor.|
+|[ref](https://msdn.microsoft.com/en-us/library/14akc2c7.aspx)|Causes an argument to be passed by reference rather than by value.|
+|[set](https://msdn.microsoft.com/en-us/library/ms228368.aspx)|Defines an accessor method that sets the value of a property.|
+|[string](https://msdn.microsoft.com/en-us/library/362314fe.aspx)|Alias for the String type in the .NET framework.|
+|[struct](https://msdn.microsoft.com/en-us/library/ah19swz4.aspx)|A value type that encapsulates a group of related variables.|
+|[typeof](https://msdn.microsoft.com/en-us/library/58918ffs.aspx)|Obtains the type of an object.|
+|[var](https://msdn.microsoft.com/en-us/library/bb383973.aspx)|Declares an implicitly-typed local variable.|
+|[value](https://msdn.microsoft.com/en-us/library/a1khb4f8.aspx)|References the value that client code wants to assign to a property.|
+|[virtual](https://msdn.microsoft.com/en-us/library/9fkccyh4.aspx)|Allows a method to be overridden in a derived class.|
 
 
 <a name="interop" />
