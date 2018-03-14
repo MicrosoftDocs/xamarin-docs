@@ -7,7 +7,7 @@ ms.assetid: 2AE68ACE-8496-445D-BF17-5E4097D4AE35
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 03/14/2018
 ---
 
 # Resolving Library Installation Errors
@@ -243,8 +243,14 @@ its contents:
 
     [![Example of files copied to the 23.1.1.0/embedded folder](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png#lightbox)
 
-8.  Verify that all files are copied over. The **embedded** directory should now contain
-    files such as **.jar**, **.aar**, and **.pom**.
+8.  Verify that all files are copied over. The **embedded** directory
+    should now contain files such as **.jar**, **.aar**, and **.pom**.
+
+9.  Unzip any extracted **.aar** files. On Windows, append a **.zip**
+    extension to the **.aar** file, right-click it and select **Extract
+    All...**, then remove the **.zip** extension. On macOS, unzip the
+    **.aar** file by using the **unzip** command in the Terminal (for
+    example, **unzip file.aar**).
 
 At this point, you have manually installed the missing components 
 and your project should build without errors. If not, verify that 
