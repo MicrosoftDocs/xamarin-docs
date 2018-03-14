@@ -11,9 +11,7 @@ ms.date: 09/29/2017
 
 # Installing Xamarin in Visual Studio on Windows
 
-Because Xamarin is now included with all editions of Visual Studio at
-no extra cost and does not require a separate license, you can use the
-Visual Studio installer to download and install Xamarin tools.
+Xamarin is free to use and included in all editions of Visual Studio.
 
 <a name="requirements" />
 
