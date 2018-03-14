@@ -1,5 +1,6 @@
 ---
-title: "Installation and Requirements"
+title: "Workbooks Installation and Requirements"
+description: "How to download, install, and use Xamarin Workbooks."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
@@ -8,54 +9,25 @@ author: topgenorth
 ms.author: toopge
 ---
 
-# Installation and Requirements
-
-<script>
-var inspectorOnLoad = function () {
-  var primaryTextBase = "Xamarin Workbooks for";
-  var secondaryTextBase = "or download for";
-  var inspectorDownloadUrlMac = "https://dl.xamarin.com/interactive/XamarinInteractive.pkg";
-  var inspectorDownloadUrlWin = "https://dl.xamarin.com/interactive/XamarinInteractive.msi";
-
-  var aPrimary = document.getElementById("inspector-download-primary");
-  var aSecondary = document.getElementById("inspector-download-secondary");
-
-  var aMac = aPrimary;
-  var aWin = aSecondary;
-  var macTextBase = primaryTextBase;
-  var winTextBase = secondaryTextBase;
-
-  if (/win/i.test(navigator.platform.toLowerCase())) {
-    aMac = aSecondary;
-    aWin = aPrimary;
-    macTextBase = secondaryTextBase;
-    winTextBase = primaryTextBase;
-  }
-
-  aMac.href = inspectorDownloadUrlMac;
-  aMac.text = macTextBase + " Mac";
-  aWin.href = inspectorDownloadUrlWin;
-  aWin.text = winTextBase + " Windows";
-};
-
-document.addEventListener("DOMContentLoaded", inspectorOnLoad);
-</script>
+# Workbooks Installation and Requirements
 
 <a name="install" />
 
 ## Download and Install
 
-<ol>
-  <li>Check the <a href="#Requirements">
-requirements</a> below.</li>
-  <li>Download and install
-  <a href="https://dl.xamarin.com/interactive/XamarinInteractive.pkg" id="inspector-download-primary">Xamarin Workbooks for Mac</a>
-  (<a href="https://dl.xamarin.com/interactive/XamarinInteractive.msi" id="inspector-download-secondary">or download for Windows</a>).
-  </li>
-  <li>Start <a href="~/tools/workbooks/workbook.md">
-  playing around</a> with workbooks or try out the <a href="https://developer.xamarin.com/workbooks/">samples</a>.
-	</li>
-</ol>
+# [Windows](#tab/vswin)
+
+1. Check the [requirements](#requirements) below.
+2. Download and install [Xamarin Workbooks for Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
+3. Start [playing around](~/tools/workbooks/workbook.md) with workbooks or try out the [samples](https://developer.xamarin.com/workbooks)
+
+# [macOS](#tab/vsmac)
+
+1. Check the [requirements](#Requirements) below.
+2. Download and install [Xamarin Workbooks for Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
+3. Start [playing around](~/tools/workbooks/workbook.md) with workbooks or try out the [samples](https://developer.xamarin.com/workbooks)
+
+-----
 
 ## Requirements
 
@@ -67,53 +39,15 @@ requirements</a> below.</li>
 
 #### Supported App Platforms
 
-<table>
-<thead>
-  <tr>
-    <th>App Platform</th>
-    <th>OS Support</th>
-    <th>Notes</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Mac (Unified)</td>
-    <td>Only supported on Mac</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>iOS (Unified)</td>
-    <td>Supported on Mac and Windows</td>
-    <td>
-      <ul>
-        <li>Xamarin.iOS 11.0 and Xcode 9.0 or greater must be installed on Mac.</li>
-        <li>Running iOS workbooks on Windows requires a Mac build host running all of the above, and the <a href="~/tools/ios-simulator.md">Remoted iOS Simulator</a>
-        installed on Windows.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Android</td>
-    <td>Supported on Mac and Windows</td>
-    <td>Must use Google, Visual Studio or Xamarin Android emulator, with a virtual device >= 5.0</td>
-  </tr>
-  <tr>
-    <td>WPF</td>
-    <td>Only supported on Windows</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>Console (.NET Framework)</td>
-    <td>Supported on Mac and Windows</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>Console (.NET Core)</td>
-    <td>Supported on Mac and Windows</td>
-    <td/>
-  </tr>
-</tbody>
-</table>
+|App Platform|OS Support|Notes|
+|--- |--- |--- |
+|Mac (Unified)|Only supported on Mac|
+|iOS (Unified)|Supported on Mac and Windows|Xamarin.iOS 11.0 and Xcode 9.0 or greater must be installed on Mac. Running iOS workbooks on Windows requires a Mac build host running all of the above, and the [Remoted iOS Simulator](~/tools/ios-simulator.md) installed on Windows.|
+|Android|Supported on Mac and Windows|Must use Google, Visual Studio or Xamarin Android emulator, with a virtual device >= 5.0|
+|WPF|Only supported on Windows|
+|Console (.NET Framework)|Supported on Mac and Windows|
+|Console (.NET Core)|Supported on Mac and Windows|
+
 
 ## Reporting Bugs
 
@@ -129,7 +63,7 @@ Always attach Workbooks client log files:
 1.4.x also features the ability to select the log file in Finder (macOS) or
 Explorer (Windows) directly from the main menu:
 
-- **Help → Reveal Log File**
+- **Help > Reveal Log File**
 
 #### Log paths for Workbooks 1.3 and earlier:
 
@@ -142,23 +76,23 @@ It is very helpful to know details about your Operating System and installed Xam
 
 From the main menu in Workbooks:
 
-* **Help → Copy Version Information**
+* **Help > Copy Version Information**
 
 #### Instructions for Workbooks 1.3 and earlier:
 
 Visual Studio For Mac
 
-- **Visual Studio → About Visual Studio → Show Details → Copy Information**
+- **Visual Studio > About Visual Studio > Show Details > Copy Information**
 - Paste into bug report
 
 Visual Studio
 
-- **Help → About Visual Studio → Copy Info**
+- **Help > About Visual Studio > Copy Info**
 - Let us know your Operating System version and whether you are running 32-bit or 64-bit Windows.
 
 ### Samples
 
-If you can attach or link to the `.workbooks` file you are having trouble with,
+If you can attach or link to the **.workbooks** file you are having trouble with,
 that might help solve your bug more quickly.
 
 ### Devices
@@ -173,7 +107,7 @@ we'll need to know:
 - Android: What emulator platform are you using? Google Emulator?
   Visual Studio Android Emulator? Xamarin Android Player?
 - iOS on Windows: What version of the Xamarin Remote iOS Simulator do you have
-  installed (check `Add/Remove Programs` in `Control Panel`)?
+  installed (check **Add/Remove Programs** in **Control Panel**)?
 - iOS on Windows: Please also provide Platform Version Information for your Mac
   build host
 - Does the device have network connectivity (check via web browser)?
@@ -201,7 +135,7 @@ it will need to be uninstalled via the **Apps & features**
 system settings page on Windows 10 or via **Add/Remove Programs** in the
 Control Panel on older versions of Windows.
 
-> **Start → Settings → System → Apps & features**
+> **Start > Settings > System > Apps & features**
 
 ![](install-images/windows-remove.png "Xamarin Workbooks and Inspector as listed in &quot;Apps &amp; features&quot;")
 
@@ -234,7 +168,7 @@ For older versions, you will need to manually remove the following:
 
 ## Downgrading
 
-The bundle identifier for `/Applications/Xamarin Workbooks.app` changed from
+The bundle identifier for **/Applications/Xamarin Workbooks.app** changed from
 `com.xamarin.Inspector` to `com.xamarin.Workbooks` in the 1.4 release to
 facilitate a future splitting of the Xamarin Workbooks & Inspector installers.
 

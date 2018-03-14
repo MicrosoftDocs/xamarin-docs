@@ -6,7 +6,7 @@ ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 03/13/2018
 ---
 
 # Alternate Resources
@@ -64,7 +64,7 @@ The possible qualifiers are listed below for reference:
   resources to Germany, the qualifier would be `mcc262`. To target
   resources for T-Mobile in the U.S., the qualifier is `mcc310-mnc026`.
   For a complete list of mobile country codes and mobile network codes
-  see <http://mcclist.com/>.
+  see <http://mcc-mnc.com/>.
 
 - **Language** &ndash; The two-letter
   [ISO 639-1 language code](http://en.wikipedia.org/wiki/ISO_639-1) and

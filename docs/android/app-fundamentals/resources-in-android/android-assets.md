@@ -6,7 +6,7 @@ ms.assetid: 70ECDDC9-FA40-03B4-BF04-E7CFFFE4260D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/30/2017
+ms.date: 03/13/2018
 ---
 
 # Using Android Assets
@@ -54,9 +54,9 @@ packaged into the APK at compile time.
 
 Assets are read using an
 [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/). An
-instance of the `AssetManager` is available by access the
+instance of the `AssetManager` is available by accessing the
 [Assets](https://developer.xamarin.com/api/property/Android.Content.Context.Assets/) property on an
-`Android.Contet.Context`, such as an Activity.
+`Android.Content.Context`, such as an Activity.
 In the following code, we open our **read_asset.txt** asset, read the
 contents, and display it using a TextView.
 

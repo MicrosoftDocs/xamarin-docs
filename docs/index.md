@@ -1038,11 +1038,11 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-windows-simulator.svg?branch=master" alt="iOS Simulator for Windows" />
+                                                        <img src="~/media/index/xamarin-tools-windows-simulator.svg?branch=master" alt="Remoted iOS Simulator for Windows" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>iOS Simulator for Windows</h3>
+                                                    <h3>Remoted iOS Simulator for Windows</h3>
                                                     <p>Interact with the iOS Simulator using Visual Studio on Windows.</p>
                                                 </div>
                                             </div>

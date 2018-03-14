@@ -1,5 +1,6 @@
 ---
-title: "Installation and Requirements"
+title: "Inspector Installation and Requirements"
+description: "How to download, install, and use the Xamarin Inspector."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
@@ -9,50 +10,22 @@ ms.author: toopge
 ms.date: 03/29/2017
 ---
 
-# Installation and Requirements
-
-<script>
-var inspectorOnLoad = function () {
-  var primaryTextBase = "Xamarin Workbooks & Inspector for";
-  var secondaryTextBase = "or download for";
-  var inspectorDownloadUrlMac = "https://dl.xamarin.com/interactive/XamarinInteractive.pkg";
-  var inspectorDownloadUrlWin = "https://dl.xamarin.com/interactive/XamarinInteractive.msi";
-
-  var aPrimary = document.getElementById("inspector-download-primary");
-  var aSecondary = document.getElementById("inspector-download-secondary");
-
-  var aMac = aPrimary;
-  var aWin = aSecondary;
-  var macTextBase = primaryTextBase;
-  var winTextBase = secondaryTextBase;
-
-  if (/win/i.test(navigator.platform.toLowerCase())) {
-    aMac = aSecondary;
-    aWin = aPrimary;
-    macTextBase = secondaryTextBase;
-    winTextBase = primaryTextBase;
-  }
-
-  aMac.href = inspectorDownloadUrlMac;
-  aMac.text = macTextBase + " Mac";
-  aWin.href = inspectorDownloadUrlWin;
-  aWin.text = winTextBase + " Windows";
-};
-
-document.addEventListener("DOMContentLoaded", inspectorOnLoad);
-</script>
+# Inspector Installation and Requirements
 
 ## Download and Installation
 
-<ol>
-  <li>Download and install
-  <a href="https://dl.xamarin.com/interactive/XamarinInteractive.pkg" id="inspector-download-primary">Xamarin Workbooks & Inspector for Mac</a>
-  (<a href="https://dl.xamarin.com/interactive/XamarinInteractive.msi" id="inspector-download-secondary">or download for Windows</a>).
-  </li>
-  <li><a href="~/tools/inspector/inspect.md">
-  Inspect your own app!</a>
-	</li>
-</ol>
+
+# [Windows](#tab/vswin)
+
+1. Download and install [Xamarin Workbooks & Inspector for Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
+2. [Inspect your own app!](~/tools/inspector/inspect.md)
+
+# [macOS](#tab/vsmac)
+
+1. Download and install [Xamarin Workbooks & Inspector for Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
+2. [Inspect your own app!](~/tools/inspector/inspect.md)
+
+-----
 
 ## Requirements
 
@@ -75,43 +48,13 @@ Live app inspection is available for enterprise customers.
 
 ### Supported App Platforms
 
-<table>
-<thead>
-  <tr>
-    <th>App Platform</th>
-    <th>IDE Support</th>
-    <th>Notes</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Mac (Unified)</td>
-    <td>Only supported on Mac</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>iOS (Unified)</td>
-    <td>Supported in XS and Visual Studio</td>
-    <td>Inspecting iOS apps from Windows requires the same version of Inspector to also be installed on the Mac build host.</td>
-  </tr>
-  <tr>
-    <td>Android</td>
-    <td>Supported in XS and Visual Studio</td>
-    <td>
-      <ul>
-        <li>Must target Android >= 4.0.3</li>
-        <li>Must have fastdev enabled</li>
-        <li>Must use Google, Visual Studio, or Xamarin Android emulators. Android 7 emulators may not allow inspection at this time.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>WPF</td>
-    <td>Only supported in Visual Studio on Windows</td>
-    <td/>
-  </tr>
-</tbody>
-</table>
+|App Platform|IDE Support|Notes|
+|--- |--- |--- |
+|Mac (Unified)|Only supported on Mac|
+|iOS (Unified)|Supported in XS and Visual Studio|Inspecting iOS apps from Windows requires the same version of Inspector to also be installed on the Mac build host.|
+|Android|Supported in XS and Visual Studio|Must target Android >= 4.0.3, with **fastdev** enabled.<br />Must use Google, Visual Studio, or Xamarin Android emulators. Android 7 emulators may not allow inspection at this time.|
+|WPF|Only supported in Visual Studio on Windows|
+
 
 <a name="reporting-bugs" />
 
@@ -119,7 +62,7 @@ Live app inspection is available for enterprise customers.
 
 Bugs should be reported directly via Visual Studio:
 
-- **Help → Send Feedback → Report a Problem**
+- **Help > Send Feedback > Report a Problem**
 
 Please include all of the following information:
 
@@ -129,12 +72,12 @@ This information is vital.
 
 Visual Studio For Mac
 
-- **Visual Studio → About Visual Studio → Show Details → Copy Information**
+- **Visual Studio > About Visual Studio > Show Details > Copy Information**
 - Paste into bug report
 
 Xamarin Studio
 
-- **Xamarin Studio → About Xamarin Studio → Show Details → Copy Information**
+- **Xamarin Studio > About Xamarin Studio > Show Details > Copy Information**
 - Paste into bug report
 
 Visual Studio
@@ -154,7 +97,7 @@ Inspector client
 1.4.x also features the ability to select the log file in Finder (macOS) or
 Explorer (Windows) directly from the main menu:
 
-- **Help → Reveal Log File**
+- **Help > Reveal Log File**
 
 Visual Studio For Mac
 
@@ -167,11 +110,11 @@ Xamarin Studio
 Visual Studio
 
 - `%LOCALAPPDATA%\Xamarin\Logs\{VS version}\Inspector {date}.log`
-- The contents of the Visual Studio `Output` pane may also be informative.
+- The contents of the Visual Studio **Output** pane may also be informative.
 
 ### Project Settings
 
-If you can attach the `.csproj` for the project you are trying to inspect,
+If you can attach the **.csproj** for the project you are trying to inspect,
 it would be extremely helpful. This is easier than asking about individual settings.
 
 Also please confirm that you are in Debug configuration.
@@ -200,8 +143,8 @@ uninstall the software.
 
 #### Visual Studio Installer
 
-If you have Visual Studio 2017, open "Visual Studio Installer", and look in
-"Individual Components" for "Xamarin Workbooks". If it is checked, uncheck it
+If you have Visual Studio 2017, open **Visual Studio Installer**, and look in
+**Individual Components** for **Xamarin Workbooks**. If it is checked, uncheck it
 and then click "Modify" to uninstall.
 
 #### System Uninstall
@@ -211,7 +154,7 @@ it will need to be uninstalled via the **Apps & features**
 system settings page on Windows 10 or via **Add/Remove Programs** in the
 Control Panel on older versions of Windows.
 
-> **Start → Settings → System → Apps & features**
+> **Start > Settings > System > Apps & features**
 
 ![](install-images/windows-remove.png "Xamarin Workbooks and Inspector as listed in 'Apps & features'")
 

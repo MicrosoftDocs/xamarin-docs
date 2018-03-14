@@ -7,7 +7,7 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 03/13/2018
 ---
 
 # Xamarin Android Device Manager
@@ -614,7 +614,7 @@ You can change properties by using the following guidelines:
 The following table provides a detailed explanation of the properties
 listed in the **New Device** and **Device Editor** screens:
 
-[!include[](~/android/includes/table.html)]
+[!include[](~/android/includes/emulator-properties.md)]
 
 For more information about these properties, see
 [Hardware Profile Properties](https://developer.android.com/studio/run/managing-avds.html#hpproperties).

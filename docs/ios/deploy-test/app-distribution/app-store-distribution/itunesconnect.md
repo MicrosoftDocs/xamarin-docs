@@ -94,7 +94,7 @@ Apple requires screenshots and videos be provided at every screen size and resol
 
 The following screen sizes and resolutions are currently required:
 
-[!include[](~/ios/includes/table-itunesconnect.html)]
+[!include[](~/ios/includes/table-itunesconnect.md)]
 
 ### Editing Screenshots in iTunes Connect
 

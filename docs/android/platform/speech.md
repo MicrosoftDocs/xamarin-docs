@@ -159,12 +159,12 @@ a phone set up in Germany will install the German language, whereas one in Ameri
 
 `TextToSpeech` can take up to 3 parameters, the first two are required with the third being optional
 (`AppContext`, `IOnInitListener`, `engine`). The listener is used to bind to the service and test for failure
-with the engine being any number of available Android text to speech engines, At a minimum, the device will
+with the engine being any number of available Android text to speech engines. At a minimum, the device will
 have Google’s own engine.
 
 ### Step 2 - Finding the languages available
 
-The `Java.Util.Locale` namespace contains a helpful method called `GetAvailableLocales()`. This list of languages
+The `Java.Util.Locale` class contains a helpful method called `GetAvailableLocales()`. This list of languages
 supported by the speech engine can then be tested against the installed languages.
 
 It is a trivial matter to generate the list of "understood" languages. There will always be a default language
@@ -227,7 +227,7 @@ protected override void OnActivityResult(int req, Result res, Intent data)
 
 ### Step 5 - The IOnInitListener
 
-For an activity to be able to convert the text to speech, the interface method `OnInit` has to be created
+For an activity to be able to convert the text to speech, the interface method `OnInit` has to be implemented
 (this is the second parameter specified for the instantiation of the `TextToSpeech` class). This initializes
 the listener and tests the result.
 
