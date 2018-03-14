@@ -114,8 +114,8 @@ sections:
     className: cardsD
     items:
     - title: API
-      href: 
-      html: <p><a href="https://developer.xamarin.com/api/root/monotouch-lib/">iOS API docs</a></p><p><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=xamarinios-10.8">Base Class Library</a></p>
+      href: https://developer.xamarin.com/api/root/ios-unified/
+      html: <p><a href="https://developer.xamarin.com/api/root/ios-unified/">iOS API docs</a></p><p><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=xamarinios-10.8">Base Class Library</a></p>
     - title: Samples
       href: https://developer.xamarin.com/samples
       html: <p><a href="https://developer.xamarin.com/samples/ios/all/">iOS Samples</a></p><p><a href="https://developer.xamarin.com/samples/ios/all/">watchOS Samples</a></p><p><a href="https://developer.xamarin.com/samples/ios/all/">tvOS Samples</a></p>
