@@ -13,7 +13,7 @@ ms.date: 04/10/2017
 
 # Getting Started
 
-_Learn to develop mobile applications from zero to deployment with these in-depth guides._
+_Learn to develop mobile applications from zero to deployment with these in-depth guides.  _
 
 Before you begin, check out the [system requirements](requirements.md)
 and [installation instructions](installation/index.md) to make sure everything's
