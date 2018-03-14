@@ -102,9 +102,12 @@ sections:
     className: cardsD
     items:
     - title: API
-      html: <p><a href="https://developer.xamarin.com/api/root/monodroi-lib/">Android API docs</a></p><p><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=xamarinandroid-7.1">Base Class Library</a></p>
+      href: https://developer.xamarin.com/api/root/MonoAndroid-lib/
+      html: <p><a href="https://developer.xamarin.com/api/root/MonoAndroid-lib/">Android API docs</a></p><p><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=xamarinandroid-7.1">Base Class Library</a></p>
     - title: Samples
+      href: https://developer.xamarin.com/samples/android/all/
       html: <p><a href="https://developer.xamarin.com/samples/android/all/">Android Samples</a></p>
     - title: Workbooks
+      href: https://developer.xamarin.com/workbooks#android
       html: <p><a href="https://developer.xamarin.com/workbooks#android">Android Workbooks</a></p>
     
