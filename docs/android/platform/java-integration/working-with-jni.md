@@ -210,9 +210,9 @@ derives from a Java class and overrides existing Java methods. However,
 in some scenarios, the code generation is not adequate, as outlined
 below:
 
--   Android support action names in layout xml attributes, for example
+-   Android supports action names in layout XML attributes, for example
     the [android:onClick](https://developer.xamarin.com/api/member/Android.Views.View+IOnClickListener.OnClick/p/Android.Views.View/)
-    XML attribute. When it is specified, the inflated View instance try
+    XML attribute. When it is specified, the inflated View instance tries
     to look up the Java method.
 
 -   The [java.io.Serializable](http://developer.android.com/reference/java/io/Serializable.html)
