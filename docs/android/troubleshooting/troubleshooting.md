@@ -6,7 +6,7 @@ ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 03/15/2018
 ---
 
 # Troubleshooting Tips
@@ -402,7 +402,7 @@ yourself, Xamarin.Android does not know where to look for the SDK. You can tell
 Xamarin.Android where the SDK is in Visual Studio by going to
 **Tools > Options > Xamarin > Android Settings**:
 
-[![Android SDK Location in Xamarin Android Settings](troubleshooting-images/01a.png)](troubleshooting-images/01a.png#lightbox)
+[![Android SDK Location in Xamarin Android Settings](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
 
 
 
