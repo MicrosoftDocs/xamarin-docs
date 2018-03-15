@@ -65,7 +65,7 @@ Xamarin Live Player requires:
 
   If no device is is paired, a QR code will appear with instructions on how to pair a device:
 
-    ![Pair a device window](install-images/manage-empty-windows.png)
+  ![Pair a device window](install-images/manage-empty-windows.png)
 
   If the device cannot be contacted for pairing, an error may appear.
 
@@ -108,11 +108,11 @@ Xamarin Live Player requires:
 
   If no device is paired, a QR code will appear with instructions on how to pair a device:
 
-    ![Pair a device window](install-images/manage-empty.png)
+  ![Pair a device window](install-images/manage-empty.png)
 
   If the device cannot be contacted for pairing, an error will appear:
 
-    ![Cannot connect to device error message](install-images/error-cannot-connect.png)
+  ![Cannot connect to device error message](install-images/error-cannot-connect.png)
 
 
 -----

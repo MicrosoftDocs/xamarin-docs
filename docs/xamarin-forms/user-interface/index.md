@@ -34,6 +34,10 @@ This document is a quick reference to the UI views that make up the Xamarin.Form
 
 DataPages provide an API to quickly and easily bind a data source to pre-built views. List items and detail pages will automatically render the data, and be customized using themes.
 
+## [DatePicker](datepicker.md)
+
+The `DatePicker` allows a user to select a date within a specified range. It is implemented using the date picker supported by the particular platform that the program is run on.
+
 ## [Graphics](graphics/index.md)
 
 How to incorporate graphics and game engine visuals into a Xamarin.Forms application.

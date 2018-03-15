@@ -15,13 +15,13 @@ ms.author: toopge
 
 ## Download and Install
 
-# [Windows](#tab/vswin)
+# [Windows](#tab/windows)
 
 1. Check the [requirements](#requirements) below.
 2. Download and install [Xamarin Workbooks for Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
 3. Start [playing around](~/tools/workbooks/workbook.md) with workbooks or try out the [samples](https://developer.xamarin.com/workbooks)
 
-# [macOS](#tab/vsmac)
+# [macOS](#tab/macos)
 
 1. Check the [requirements](#Requirements) below.
 2. Download and install [Xamarin Workbooks for Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
