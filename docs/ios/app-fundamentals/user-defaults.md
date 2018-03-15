@@ -12,12 +12,12 @@ ms.date: 06/07/2016
 
 # Working with User Defaults
 
-_This article covers working with NSUserDefault to save default settings in a Xamarin iOS App or Extension._
+_This article covers working with NSUserDefault to save default settings in a Xamarin.iOS App or Extension._
 
 
-The `NSUserDefaults` class provides a way for iOS Apps and Extensions to programmatically interact with the system-wide Default System. By using the Defaults System, the user can configure an app's behavior or styling to meet their preferences (based on the design of the app). For example, to present data in Metric vs Imperial measurements or select a given UI Theme.
+The `NSUserDefaults` class provides a way for iOS Apps and Extensions to programmatically interact with the system-wide Defaults System. By using the Defaults System, the user can configure an app's behavior or styling to meet their preferences (based on the design of the app). For example, to present data in Metric vs Imperial measurements or select a given UI Theme.
 
-When used App Groups, `NSUserDefaults` also provides a way to communicate between apps (or Extensions) within a given group.
+When used with App Groups, `NSUserDefaults` also provides a way to communicate between apps (or Extensions) within a given group.
 
 <a name="About-User-Defaults" />
 
@@ -28,7 +28,7 @@ As stated above, User Defaults (`NSUserDefaults`) can be added to an App (or Ext
 When your app first executes, `NSUserDefaults` reads the keys and values from the app's User Defaults Database and caches them to memory to avoid opening and reading the database each time a value is required. 
 
 > [!IMPORTANT]
-> **Note**: Apple no longer suggest that the developer call the  `Synchronize` method to sync the in-memory cache with the database directly. Instead, it will be automatically called at periodic intervals to keep the in-memory cache in sync with a user’s defaults database.
+> **Note**: Apple no longer recommends that the developer call the `Synchronize` method to sync the in-memory cache with the database directly. Instead, it will be automatically called at periodic intervals to keep the in-memory cache in sync with a user’s defaults database.
 
 The `NSUserDefaults` class contains several convenience methods for reading and writing preference values for common data types such as: string, integer, float, boolean and URLs. Other types of data can be archived using `NSData`, then read from or written to the User Defaults Database. For more information, please see Apple's [Preferences and Settings Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i).
 
@@ -42,7 +42,7 @@ The Shared User Defaults Instance provides access to the User Defaults for the c
 - The app's Bundle Identifier domain.
 - An `NSGlobalDomain` consisting of the defaults shared by all apps.
 - A separate domain for each of the user's preferred languages.
-- An `NSRegistationDomain` with a set of temporary defaults that can be modified by the app to ensure searches are always successful.
+- An `NSRegistrationDomain` with a set of temporary defaults that can be modified by the app to ensure searches are always successful.
 
 To access the Shared User Defaults Instance, use the following code:
 
@@ -55,11 +55,11 @@ var plist = NSUserDefaults.StandardUserDefaults;
 
 ## Accessing an App Group NSUserDefaults Instance
 
-As stated above, by using App Groups, `NSUserDefaults` can be used to communicate between Apps (or Extensions) within a given group. First, you will need to ensure that the App Group and the required App IDs have been properly configured in the **Certificates, Identifiers & Profiles** section on [iOS Dev Center](https://developer.apple.com/devcenter/ios/) and have been installed on in the development environment.
+As stated above, by using App Groups, `NSUserDefaults` can be used to communicate between Apps (or Extensions) within a given group. First, you will need to ensure that the App Group and the required App IDs have been properly configured in the **Certificates, Identifiers & Profiles** section on [iOS Dev Center](https://developer.apple.com/devcenter/ios/) and have been installed in the development environment.
 
-Next, your App and/or Extension projects will need to be one of the valid App IDs created above, that the `Entitlements.plist` file has the App Groups enabled and specified and that it get's included in the App Bundle.
+Next, your App and/or Extension projects need to have one of the valid App IDs created above, and the `Entitlements.plist` file has to be included in the App Bundle with the App Groups enabled and specified.
 
-With this all in place, the shared App Group user Defaults can be accessed using the following code:
+With this all in place, the shared App Group User Defaults can be accessed using the following code:
 
 ```csharp
 // Get App Group User Defaults

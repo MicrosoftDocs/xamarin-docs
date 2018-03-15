@@ -10,20 +10,18 @@ ms.author: brumbaug
 
 # Threading
 
-The Xamarin.iOS runtime gives access to developers to the
-	.NET threading APIs, both explicit use of threads
-	( `System.Threading.Thread, System.Threading.ThreadPool`),
-	implicitly when using the asynchronous delegate patterns or
+The Xamarin.iOS runtime gives developers access to the
+	.NET threading APIs, both explicitly when using threads
+	(`System.Threading.Thread, System.Threading.ThreadPool`)
+	and implicitly when using the asynchronous delegate patterns or
 	the BeginXXX methods as well as the full range of APIs that
 	support the Task Parallel Library.
 
 
 
 Xamarin strongly recommends that you use
-	the [Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717.aspx)
-
- (TPL) for building applications for a few
-	reasons:-  The default TPL scheduler will delegate Task execution to the thread pool, which in turn will dynamically grow the number of threads needed as process takes place, while avoiding a scenario where too many threads end up competing for CPU time. 
+	the [Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717.aspx) (TPL) for building applications for a few reasons:
+-  The default TPL scheduler will delegate Task execution to the thread pool, which in turn will dynamically grow the number of threads needed as process takes place, while avoiding a scenario where too many threads end up competing for CPU time. 
 -  It is easier to think about operations in terms of TPL Tasks. You can easily manipulate them, schedule them, serialize their execution or launch many in parallel with a rich set of APIs. 
 -  It is the foundation for programming with the new C# async language extensions. 
 
@@ -52,7 +50,6 @@ MyThreadedRoutine ()
 {  
     var result = DoComputation ();  
 
-    //
     // we want to update an object that is managed by the main
     // thread; To do so, we need to ensure that we only access
     // this from the main thread:

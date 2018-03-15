@@ -65,7 +65,7 @@ The Empty project template adds 4 files to the project:
 ## iOS Templates
 
 
-Visual Studio for Mac does not provide an Empty template. All templates come with Storyboard support, which Apple recommends as the primary way to create a UI. However, it is possible to to create your UI in completely in code. 
+Visual Studio for Mac does not provide an Empty template. All templates come with Storyboard support, which Apple recommends as the primary way to create a UI. However, it is possible to create your UI completely in code. 
 
 The steps below guide you through removing the Storyboard from an application: 
 
@@ -312,7 +312,7 @@ In the example above, we started to create a user interface in code by adding a 
 
 iOS user interfaces are comprised of a view hierarchy. Additional views, such as labels, buttons, sliders, etc. are added as subviews of some parent view.
 
-For example, let's edit to the `CustomViewController` to create a login screen where the user can enter a username and password. The screen will consist of two text fields and a button.
+For example, let's edit the `CustomViewController` to create a login screen where the user can enter a username and password. The screen will consist of two text fields and a button.
 
 ### Adding the Text Fields
 
@@ -429,7 +429,7 @@ View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 
 ## Adding Button Functionality
 
-When a button is clicked, your users will expect something to happen whether this by an alert, or navigating to another screen. 
+When a button is clicked, your users will expect something to happen. For example, an alert is shown or navigation is performed to another screen. 
 
 Let's add some code to push a second view controller onto the navigation stack.
 
@@ -493,7 +493,7 @@ In addition to using controls that are part of UIKit, custom views can also be u
 
 ### Inheriting from UIView
 
-The first thing we need to do is create a class for the custom view. We'll do this using the **Class** template in Visual Studio to add an empty class named `CircleView`. The base class should be set to `UIView`, which recall is in the `UIKit` namespace. We'll also need the `System.Drawing` namespace as well. The other various `System.*` namespaces won't be used in this example, so feel free to remove them.
+The first thing we need to do is create a class for the custom view. We'll do this using the **Class** template in Visual Studio to add an empty class named `CircleView`. The base class should be set to `UIView`, which we recall is in the `UIKit` namespace. We'll also need the `System.Drawing` namespace as well. The other various `System.*` namespaces won't be used in this example, so feel free to remove them.
 
 The class should look like this:
 
