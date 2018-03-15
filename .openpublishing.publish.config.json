@@ -6,6 +6,7 @@
       "build_output_subfolder": "xamarin-docs",
       "locale": "en-us",
       "monikers": [],
+      "xref_query_tags": ["/dotnet"],
       "moniker_ranges": [],
       "open_to_public_contributors": true,
       "type_mapping": {
