@@ -6,7 +6,7 @@ ms.assetid: 298139E2-194F-4A58-BC2D-1D22231066C4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
+ms.date: 03/15/2018
 ---
 
 # Garbage Collection
@@ -21,7 +21,7 @@ object space*, with two kinds of collections:
 
 > [!NOTE]
 > In the absence of an explicit collection via
-[GC.Collect()](https://developer.xamarin.com/api/member/System.GC.Collect/)
+[GC.Collect()](xref:System.GC.Collect)
 collections are *on demand*, based upon heap allocations. *This is not
 a reference counting system*; objects *will not be collected as soon as
 there are no outstanding references*, or when a scope has exited. The
@@ -33,17 +33,17 @@ Minor collections are cheap and frequent, and are used to collect
 recently allocated and dead objects. Minor collections are performed 
 after every few MB of allocated objects. Minor collections may be 
 manually performed by calling 
-[GC.Collect (0)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32/) 
+[GC.Collect (0)](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_) 
 
 Major collections are expensive and less frequent, and are used to 
 reclaim all dead objects. Major collections are performed once memory 
 is exhausted for the current heap size (before resizing the heap). 
 Major collections may be manually performed by calling 
-[GC.Collect ()](https://developer.xamarin.com/api/member/System.GC.Collect/) 
+[GC.Collect ()](xref:System.GC.Collect) 
 or by calling 
-[GC.Collect (int)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32) 
+[GC.Collect (int)](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_) 
 with the argument 
-[GC.MaxGeneration](https://developer.xamarin.com/api/property/System.GC.MaxGeneration/). 
+[GC.MaxGeneration](xref:System.GC.MaxGeneration). 
 
 
 
@@ -54,7 +54,7 @@ There are three categories of object types.
 -   **Managed objects**: types which do *not* inherit from 
     [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 
     , e.g. 
-    [System.String](https://developer.xamarin.com/api/type/System.String/). 
+    [System.String](xref:System.String). 
     These are collected normally by the GC. 
 
 -   **Java objects**: Java types which are present within the Android 
@@ -138,9 +138,9 @@ can be expected to have representations within both VMs.
 All objects that have representation in both VMs will have lifetimes 
 which are extended compared to objects which are present only within a 
 single VM (such as a 
-[`System.Collections.Generic.List<int>`](https://developer.xamarin.com/api/type/System.Collections.Generic.List%601/)). 
+[`System.Collections.Generic.List<int>`](xref:System.Collections.Generic.List%601)). 
 Calling 
-[GC.Collect](https://developer.xamarin.com/api/member/System.GC.Collect/) 
+[GC.Collect](xref:System.GC.Collect) 
 won't necessarily collect these objects, as the Xamarin.Android GC 
 needs to ensure that the object isn't referenced by either VM before 
 collecting it. 
@@ -284,7 +284,7 @@ It is frequently necessary to help the GC. Unfortunately,
 *GC.AddMemoryPressure()* and *GC.RemoveMemoryPressure()* are not 
 supported, so if you *know* that you just freed a large Java-allocated 
 object graph you may need to manually call 
-[GC.Collect()](https://developer.xamarin.com/api/member/System.GC.Collect/) 
+[GC.Collect()](xref:System.GC.Collect) 
 to prompt a GC to release the Java-side memory, or you can explicitly 
 dispose of *Java.Lang.Object* subclasses, breaking the mapping between 
 the managed callable wrapper and the Java instance. For example, see 
@@ -531,7 +531,7 @@ class BetterActivity : Activity {
 ## Minor Collections
 
 Minor collections may be manually performed by calling 
-[GC.Collect(0)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32). 
+[GC.Collect(0)](xref:System.GC.Collect). 
 Minor collections are cheap (when compared to major collections), but 
 do have a significant fixed cost, so you don't want to trigger them too 
 often, and should have a pause time of a few milliseconds. 
@@ -549,7 +549,7 @@ collection once the duty cycle has ended. Example duty cycles include:
 ## Major Collections
 
 Major collections may be manually performed by calling 
-[GC.Collect()](https://developer.xamarin.com/api/member/System.GC.Collect/)
+[GC.Collect()](xref:System.GC.Collect)
 or `GC.Collect(GC.MaxGeneration)`. 
 
 They should be performed rarely, and may have a pause time of a second 
