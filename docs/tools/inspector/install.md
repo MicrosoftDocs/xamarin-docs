@@ -15,12 +15,12 @@ ms.date: 03/29/2017
 ## Download and Installation
 
 
-# [Windows](#tab/vswin)
+# [Windows](#tab/windows)
 
 1. Download and install [Xamarin Workbooks & Inspector for Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
 2. [Inspect your own app!](~/tools/inspector/inspect.md)
 
-# [macOS](#tab/vsmac)
+# [macOS](#tab/macos)
 
 1. Download and install [Xamarin Workbooks & Inspector for Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
 2. [Inspect your own app!](~/tools/inspector/inspect.md)
