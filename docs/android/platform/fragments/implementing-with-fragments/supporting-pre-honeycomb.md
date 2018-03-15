@@ -6,7 +6,7 @@ ms.assetid: DACD0C14-5DDF-7BDE-6844-80550D301307
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
+ms.date: 03/15/2018
 ---
 
 # Supporting pre-Honeycomb Android using Support Packages
@@ -16,10 +16,7 @@ of the new API's &ndash; such as fragments &ndash; to older versions of
 Android. So by adding the Android Support Package, we can run our
 application on Android 2.3 devices, as shown by the following screens:
 
-![Fragments Walkthrough screenshot](supporting-pre-honeycomb-images/00.png)
-
-![Details Activity screenshot](supporting-pre-honeycomb-images/01.png)
-
+[![Fragments Walkthrough and Details Activity screenshots](supporting-pre-honeycomb-images/01-sml.png)](supporting-pre-honeycomb-images/01.png#lightbox)
 
 ## Adding the Support Package
 
@@ -33,17 +30,15 @@ include the
 component into your Xamarin.Android project, as illustrated in the
 following screenshot:
 
-![Adding the Android Support Library v4 package](supporting-pre-honeycomb-images/02.png)
+[![Adding the Android Support Library v4 package](supporting-pre-honeycomb-images/02-sml.png)](supporting-pre-honeycomb-images/02.png#lightbox)
 
 Once the package has been added, change the target framework to Android 2.2 or higher:
 
-![Screenshot of changing the Target Framework API level](supporting-pre-honeycomb-images/03.png)
+[![Screenshot of changing the Target Framework API level](supporting-pre-honeycomb-images/03-sml.png)](supporting-pre-honeycomb-images/03.png#lightbox)
 
 Also, ensure that the minimum Android version targets the same API level:
 
-![Screenshot of setting the Minimum Android version](supporting-pre-honeycomb-images/04.png)
-
-
+[![Screenshot of setting the Minimum Android version](supporting-pre-honeycomb-images/04-sml.png)](supporting-pre-honeycomb-images/04.png#lightbox)
 
 ### Change MainActivity to derive from FragmentActivity
 

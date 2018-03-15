@@ -152,7 +152,7 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 
 As the user scrolls, the [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/) calls the `GetView` override to request new views to display – if available it passes an unused view in the `convertView` parameter. If this value is `null` then the code creates a new [`View`](https://developer.xamarin.com/api/type/Android.Views.View/) instance, otherwise the `convertView` properties can be reset and reused.
 
-For more information, see [Row View Re-Use](~/android/user-interface/layouts/list-view/populating.md) in [Populating a ListView with Data](~/android/user-interface/layouts/list-view/populating.md).
+For more information, see [Row View Re-Use](~/android/user-interface/layouts/list-view/populating.md#row-view-re-use) in [Populating a ListView with Data](~/android/user-interface/layouts/list-view/populating.md).
 
 <a name="removeeventhandlers" />
 
@@ -221,7 +221,7 @@ To receive a notification when the user exits the UI, implement the [`OnTrimMemo
 
 ## Optimize Image Resources
 
-Images are some of the most expensive resources that applications use, and are often captured at high resolutions. Therefore, when displaying an image display it at the resolution required for the device's screen. If the image is of a higher resolution than the screen, it should be scaled down.
+Images are some of the most expensive resources that applications use, and are often captured at high resolutions. Therefore, when displaying an image, display it at the resolution required for the device's screen. If the image is of a higher resolution than the screen, it should be scaled down.
 
 For more information, see [Optimize Image Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages) in the [Cross-Platform Performance](~/cross-platform/deploy-test/memory-perf-best-practices.md) guide.
 

@@ -6,7 +6,7 @@ ms.assetid: 3112E68A-7853-B147-90A6-6295CA2C4CB5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 03/15/2018
 ---
 
 # Gallery
@@ -82,7 +82,7 @@ for other image scaling options.
 
 Start a new project named *HelloGallery*.
 
-![Screenshot of new Android project in the New Solution dialog](gallery-images/hellogallery1.png)
+[![Screenshot of new Android project in the New Solution dialog](gallery-images/hellogallery1-sml.png)](gallery-images/hellogallery1.png#lightbox)
 
 Find some photos you'd like to use, or
 [download these sample

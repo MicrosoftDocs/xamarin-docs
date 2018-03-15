@@ -7,7 +7,7 @@ ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/15/2018
 ---
 
 # Fragments
@@ -85,10 +85,10 @@ Fragments are available in the Android SDK starting with API level 11
 
 Fragments are available in Xamarin.Android 4.0 and higher. A
 Xamarin.Android application must target at least API level 11 (Android 3.0) or higher in
-order to use Fragments. The Target Framework may be set in the Project Options
+order to use Fragments. The Target Framework may be set in the project Properties
 as shown below:
 
-[![Setting the Target Framework API level in the Project Options](images/03.png)](images/03.png#lightbox)
+[![Setting the Target Framework API level in the Project Options](images/03-sml.png)](images/03.png#lightbox)
 
 It is possible to use Fragments in older versions of Android by using the
 Android Support Package and Xamarin.Android 4.2 or higher. How to do this is
