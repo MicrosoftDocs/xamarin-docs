@@ -18,7 +18,7 @@ The commanding interface provides an alternative approach to implementing comman
 
 To allow a data binding between a `Button` and a ViewModel, the `Button` defines two properties:
 
-- [`Command`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Command/) of type [`ICommand`](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/)
+- [`Command`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Command/) of type <xref:System.Windows.Input.ICommand>
 - [`CommandParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.CommandParameter/) of type `Object`
 
 To use the command interface, you define a data binding that targets the `Command` property of the `Button` where the source is a property in the ViewModel of type `ICommand`. The ViewModel contains code associated with that `ICommand` property that is executed when the button is clicked. You can set `CommandParameter` to arbitrary data to distinguish between multiple buttons if they are all bound to the same `ICommand` property in the ViewModel.
@@ -35,7 +35,7 @@ All these commands can be handled within a ViewModel in a manner that doesn't de
 
 ## The ICommand Interface
 
-The [`ICommand`](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/) interface is not part of Xamarin.Forms. It is defined instead in the [`System.Windows.Input`](https://developer.xamarin.com/api/namespace/System.Windows.Input/) namespace, and consists of two methods and one event:
+The <xref:System.Windows.Input.ICommand>  interface is not part of Xamarin.Forms. It is defined instead in the [System.Windows.Input](xref:System.Windows.Input) namespace, and consists of two methods and one event:
 
 ```csharp
 public interface ICommand
