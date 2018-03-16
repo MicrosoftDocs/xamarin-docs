@@ -35,11 +35,9 @@ The Keychain can’t decrypt the keychain item by itself; instead it is done in 
 
 First your application should query into the Keychain to see if a password exists. If it doesn’t exist, you may need to prompt for a password so the user isn’t continually asked. If the password needs to be updated, prompt the user for a new password and pass in the updated value to the keychain.
 
-
-> ℹ️ **Note**: With any secrets you receive from the database, it is not just best practice, but expected that no secrets will be kept in memory. You should only keep a secret for as long as it is necessary, and absolutely do not assign it to a global variable!
-
-
-
+> [!NOTE]
+> After using a secret retrieved from the Keychain, all references to the 
+> data should be purged from memory. Never assign it to a global variable.
 
 ## Keychain ACL and Touch ID
 
@@ -49,32 +47,11 @@ Access Control List is a new keychain item attribute in iOS 8 that describes the
 
 As of iOS 8, there is now a new user presence policy, `SecAccessControl`, which is enforced by the secure enclave on an iPhone 5s and above. We can see in the table below, just how the device configuration can influence the policy evaluation:
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-	<td>Device Configuration</td>
-	<td>Policy Evaluation</td>
-	<td>Backup Mechanism</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td>Device without Passcode</td>
-	<td>No Access</td>
-	<td>None</td>
-</tr>
-<tr>
-	<td>Device with Passcode</td>
-	<td>Requires Passcode</td>
-	<td>None</td>
-</tr>
-<tr>
-	<td>Device with Touch ID</td>
-	<td>Prefers Touch ID</td>
-	<td>Allows Passcode</td>
-</tr>
-</tbody>
-</table>
+|Device Configuration|Policy Evaluation|Backup Mechanism|
+|--- |--- |--- |
+|Device without Passcode|No Access|None|
+|Device with Passcode|Requires Passcode|None|
+|Device with Touch ID|Prefers Touch ID|Allows Passcode|
 
 All operations inside the Secure Enclave can trust each other. This means we can use the Touch ID authentication result to authorize the Keychain item decryption. The Secure Enclave also keeps a counter of failed Touch ID matches, in which case a user will have to revert to using the passcode.
 A new framework in iOS 8, called _Local Authentication_, supports this process of authentication within the device. We will explore this in the next section.

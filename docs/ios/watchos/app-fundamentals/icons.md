@@ -20,51 +20,12 @@ Apple Watch solutions require two sets of icons:
 
 ## Apple Watch Icons
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-    <tr>
-      <td valign="top">
-        <b>iOS App Icon</b>
-      </td>
-      <td valign="top">
-        Appears on the iPhone and starts the Parent app
-      </td>
-      <td>
-        <img src="icons-images/icon-ios.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" rowspan="3">
-        <b>Watch App Icon</b>
-      </td>
-      <td valign="top">
-        Appears on the Apple Watch home screen
-      </td>
-      <td>
-        <img src="icons-images/icon-home.png" class="tableimg" />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        Appears on Watch notifications
-      </td>
-      <td>
-        <img src="icons-images/notification-icon.png" class="tableimg" />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        Appears in the <a href="~/ios/watchos/app-fundamentals/settings.md">iOS Apple Watch App</a>
-      </td>
-      <td>
-        <a href="icons-images/watch-app.png">
-          <img src="icons-images/watch-app-sml.png" class="tableimg">
-        </a>
-      </td>
-    </tr>
-    <tbody>
-</table>
-
-
+| | | |
+|-|-|-|
+|iOS App Icon|Appears on the iPhone and starts the Parent app|![](icons-images/icon-ios.png)|
+|Watch App Icon|Appears on the Apple Watch home screen|![](icons-images/icon-home.png)|
+||Appears on Watch notifications|![](icons-images/notification-icon.png)|
+||Appears in the [iOS Apple Watch App](~/ios/watchos/app-fundamentals/settings.md)|![](icons-images/watch-app-sml.png)|
 
 ## Configuring Your Solution
 

@@ -57,52 +57,18 @@ For example, to supply the 512 x 512 version of the app's icon, the file would b
 
 To ensure that the icon looks great in all the places that users see it, provide resources in the sizes listed below:
 
-<table width="100%" border="1px">
-<tr>
-	<td>Filename</td>
-	<td>Size in Pixels</td>
-</tr>
-<tr>
-	<td>icon_512x512@2x.png</td>
-	<td>1024 x 1024</td>
-</tr>
-<tr>
-	<td>icon_512x512.png</td>
-	<td>512 x 512</td>
-</tr>
-<tr>
-	<td>icon_256x256@2x.png</td>
-	<td>512 x 512</td>
-</tr>
-<tr>
-	<td>icon_256x256.png</td>
-	<td>256 x 256</td>
-</tr>
-<tr>
-	<td>icon_128x128@2x.png</td>
-	<td>256 x 256</td>
-</tr>
-<tr>
-	<td>icon_128x128.png</td>
-	<td>128 x 128</td>
-</tr>
-<tr>
-	<td>icon_32x32@2x.png</td>
-	<td>64 x 64</td>
-</tr>
-<tr>
-	<td>icon_32x32.png</td>
-	<td>32 x 32</td>
-</tr>
-<tr>
-	<td>icon_16x16@2x.png</td>
-	<td>32 x 32</td>
-</tr>
-<tr>
-	<td>icon_16x16.png</td>
-	<td>16 x 16</td>
-</tr>
-</table>
+|Filename|Size in Pixels|
+|---|---|
+|icon_512x512@2x.png|1024 x 1024|
+|icon_512x512.png|512 x 512|
+|icon_256x256@2x.png|512 x 512|
+|icon_256x256.png|256 x 256|
+|icon_128x128@2x.png|256 x 256|
+|icon_128x128.png|128 x 128|
+|icon_32x32@2x.png|64 x 64|
+|icon_32x32.png|32 x 32|
+|icon_16x16@2x.png|32 x 32|
+|icon_16x16.png|16 x 16|
 
 For more information, see Apple's [Provide High-Resolution Versions of All App Graphics Resources](https://developer.apple.com/library/mac/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW3) documentation.
 

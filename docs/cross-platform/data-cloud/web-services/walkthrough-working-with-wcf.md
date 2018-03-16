@@ -154,45 +154,45 @@ You will need to know the IP address of your workstation. For the purposes of th
 
 1. Let's begin by configuring IIS Express to listen for external requests. We can do this by editing the configuration file for IIS Express at `[solutiondirectory]\.vs\config\applicationhost.config`, as shown in the following screenshot:
 
-	[![](walkthrough-working-with-wcf-images/image05.png "We can do this by editing the configuration file for IIS Express at solutiondirectory.vsconfigapplicationhost.config, as shown in this screenshot")](walkthrough-working-with-wcf-images/image05.png#lightbox)
+    [![](walkthrough-working-with-wcf-images/image05.png "We can do this by editing the configuration file for IIS Express at solutiondirectory.vsconfigapplicationhost.config, as shown in this screenshot")](walkthrough-working-with-wcf-images/image05.png#lightbox)
 
 
-	Locate the `site` element with the name `HelloWorldWcfHost`. It should look something like the following XML snippet:
+    Locate the `site` element with the name `HelloWorldWcfHost`. It should look something like the following XML snippet:
 
         <site name="HelloWorldWcfHost" id="2">
-        	<application path="/" applicationPool="Clr4IntegratedAppPool">
-        	    <virtualDirectory path="/" physicalPath="\\vmware-host\Shared Folders\tom\work\xamarin\code\private-samples\webservices\HelloWorld\HelloWorldWcfHost" />
-        	</application>
-        	<bindings>
-        	    <binding protocol="http" bindingInformation="*:8733:localhost" />
-        	</bindings>
+            <application path="/" applicationPool="Clr4IntegratedAppPool">
+                <virtualDirectory path="/" physicalPath="\\vmware-host\Shared Folders\tom\work\xamarin\code\private-samples\webservices\HelloWorld\HelloWorldWcfHost" />
+            </application>
+            <bindings>
+                <binding protocol="http" bindingInformation="*:8733:localhost" />
+            </bindings>
         </site>
 
-	We will need to add another `binding` to open up port 8734 to outside traffic. Add the following XML to the `bindings` element, replacing the IP address with your own IP address:
+    We will need to add another `binding` to open up port 8734 to outside traffic. Add the following XML to the `bindings` element, replacing the IP address with your own IP address:
 
         <binding protocol="http" bindingInformation="*:8734:192.168.1.143" />
 
-	This will configure IIS Express to accept HTTP traffic from any remote IP address on port 8734 on the external IP address of the computer. This above snippet assumes the IP address of the computer running IIS Express is 192.168.1.143. After the changes, the `bindings` element should look like the following:
+    This will configure IIS Express to accept HTTP traffic from any remote IP address on port 8734 on the external IP address of the computer. This above snippet assumes the IP address of the computer running IIS Express is 192.168.1.143. After the changes, the `bindings` element should look like the following:
 
         <site name="HelloWorldWcfHost" id="2">
-        	<application path="/" applicationPool="Clr4IntegratedAppPool">
-        	    <virtualDirectory path="/" physicalPath="\\vmware-host\Shared Folders\tom\work\xamarin\code\private-samples\webservices\HelloWorld\HelloWorldWcfHost" />
-        	</application>
-        	<bindings>
-        	    <binding protocol="http" bindingInformation="*:8733:localhost" />
-        	    <binding protocol="http" bindingInformation="*:8734:192.168.1.143" />
-        	</bindings>
+            <application path="/" applicationPool="Clr4IntegratedAppPool">
+                <virtualDirectory path="/" physicalPath="\\vmware-host\Shared Folders\tom\work\xamarin\code\private-samples\webservices\HelloWorld\HelloWorldWcfHost" />
+            </application>
+            <bindings>
+                <binding protocol="http" bindingInformation="*:8733:localhost" />
+                <binding protocol="http" bindingInformation="*:8734:192.168.1.143" />
+            </bindings>
         </site>
 
 1. Next, we need to configure IIS Express accept incoming connections on port 8734. Startup up an administrative command prompt, and run this command:
 
-	`> netsh http add urlacl url=http://192.168.1.143:9608/ user=everyone`
+    `> netsh http add urlacl url=http://192.168.1.143:9608/ user=everyone`
 
 1. The final step is to configure Windows Firewall to permit external traffic on port 8734. From an administrative command prompt, run the following command:
 
-	`> netsh advfirewall firewall add rule name="IISExpressXamarin" dir=in protocol=tcp localport=8734 profile=private remoteip=localsubnet action=allow`
+    `> netsh advfirewall firewall add rule name="IISExpressXamarin" dir=in protocol=tcp localport=8734 profile=private remoteip=localsubnet action=allow`
 
-	This command will allow incoming traffic on port 8734 from all devices on the same subnet as the Windows 10 workstation.
+    This command will allow incoming traffic on port 8734 from all devices on the same subnet as the Windows 10 workstation.
 
 You have created a very basic WCF service hosted in IIS Express that will accept incoming connections from other devices or computers on our subnet. You can test this out by running your application and visiting `http://localhost:8733/Design_Time_Addresses/HelloWorldService/` on your workstation and `http://192.168.1.143:8734/Design_Time_Addresses/HelloWorldService/` from another computer on your subnet.
 
@@ -228,45 +228,45 @@ The WCF service proxy can be consumed by a Xamarin.Android application, as follo
                   android:orientation="vertical"
                   android:layout_width="fill_parent"
                   android:layout_height="fill_parent">
-        	<LinearLayout
-        	        android:orientation="vertical"
-        	        android:layout_width="fill_parent"
-        	        android:layout_height="0px"
-        	        android:layout_weight="1">
-        	    <Button
-        	            android:id="@+id/sayHelloWorldButton"
-        	            android:layout_width="fill_parent"
-        	            android:layout_height="wrap_content"
-        	            android:text="@string/say_hello_world" />
-        	    <TextView
-        	            android:text="Large Text"
-        	            android:textAppearance="?android:attr/textAppearanceLarge"
-        	            android:layout_width="fill_parent"
-        	            android:layout_height="wrap_content"
-        	            android:id="@+id/sayHelloWorldTextView" />
-        	</LinearLayout>
-        	<LinearLayout
-        	        android:orientation="vertical"
-        	        android:layout_width="fill_parent"
-        	        android:layout_height="0px"
-        	        android:layout_weight="1">
-        	    <Button
-        	            android:id="@+id/getHelloWorldDataButton"
-        	            android:layout_width="fill_parent"
-        	            android:layout_height="wrap_content"
-        	            android:text="@string/get_hello_world_data" />
-        	    <TextView
-        	            android:text="Large Text"
-        	            android:textAppearance="?android:attr/textAppearanceLarge"
-        	            android:layout_width="fill_parent"
-        	            android:layout_height="wrap_content"
-        	            android:id="@+id/getHelloWorldDataTextView" />
-        	</LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1">
+                <Button
+                        android:id="@+id/sayHelloWorldButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/say_hello_world" />
+                <TextView
+                        android:text="Large Text"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sayHelloWorldTextView" />
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1">
+                <Button
+                        android:id="@+id/getHelloWorldDataButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/get_hello_world_data" />
+                <TextView
+                        android:text="Large Text"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/getHelloWorldDataTextView" />
+            </LinearLayout>
         </LinearLayout>
 
-	The following screenshots shows the UI in the designer:
+    The following screenshots shows the UI in the designer:
 
-	[![](walkthrough-working-with-wcf-images/image09.png "This is a screenshot of what this UI looks like in the designer")](walkthrough-working-with-wcf-images/image09.png#lightbox)
+    [![](walkthrough-working-with-wcf-images/image09.png "This is a screenshot of what this UI looks like in the designer")](walkthrough-working-with-wcf-images/image09.png#lightbox)
 
 1. In **Solution Explorer**, open `Resources/values/Strings.xml` and add the following XML:
 
@@ -294,24 +294,24 @@ The WCF service proxy can be consumed by a Xamarin.Android application, as follo
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-        	base.OnCreate(bundle);
+            base.OnCreate(bundle);
 
-        	SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.Main);
 
-        	InitializeHelloWorldServiceClient();
+            InitializeHelloWorldServiceClient();
 
-        	// This button will invoke the GetHelloWorldData - the method that takes a C# object as a parameter.
-        	_getHelloWorldDataButton = FindViewById<Button>(Resource.Id.getHelloWorldDataButton);
-        	_getHelloWorldDataButton.Click += GetHelloWorldDataButtonOnClick;
-        	_getHelloWorldDataTextView = FindViewById<TextView>(Resource.Id.getHelloWorldDataTextView);
+            // This button will invoke the GetHelloWorldData - the method that takes a C# object as a parameter.
+            _getHelloWorldDataButton = FindViewById<Button>(Resource.Id.getHelloWorldDataButton);
+            _getHelloWorldDataButton.Click += GetHelloWorldDataButtonOnClick;
+            _getHelloWorldDataTextView = FindViewById<TextView>(Resource.Id.getHelloWorldDataTextView);
 
-        	// This button will invoke SayHelloWorld - this method takes a simple string as a parameter.
-        	_sayHelloWorldButton = FindViewById<Button>(Resource.Id.sayHelloWorldButton);
-        	_sayHelloWorldButton.Click += SayHelloWorldButtonOnClick;
-        	_sayHelloWorldTextView = FindViewById<TextView>(Resource.Id.sayHelloWorldTextView);
+            // This button will invoke SayHelloWorld - this method takes a simple string as a parameter.
+            _sayHelloWorldButton = FindViewById<Button>(Resource.Id.sayHelloWorldButton);
+            _sayHelloWorldButton.Click += SayHelloWorldButtonOnClick;
+            _sayHelloWorldTextView = FindViewById<TextView>(Resource.Id.sayHelloWorldTextView);
         }
 
-	The code above initializes the instance variables for the class and wires up some event handlers.
+    The code above initializes the instance variables for the class and wires up some event handlers.
 
 1. In `MainActivity.cs`, instantiate the client proxy class by adding the following two methods:
 
@@ -337,7 +337,7 @@ The WCF service proxy can be consumed by a Xamarin.Android application, as follo
             return binding;
         }
 
-	The code above instantiates and initializes a `HelloWorldServiceClient` object.
+    The code above instantiates and initializes a `HelloWorldServiceClient` object.
 
 1. In `MainActivity.cs`, add even handlers for the two buttons in the `Activity`:
 
@@ -390,41 +390,16 @@ The WCF service proxy can be consumed by a Xamarin.iOS application, as follows:
 1. In the `HelloWorld.iOS` project, add a reference to the `HelloWorldServiceProxy` project, and a reference to the `System.ServiceModel` namespace.
 1. In **Solution Explorer**, double-click on `Main.storyboard` to open the file in the iOS designer. Then, add the following `UIButton` and `UITextView` controls:
 
-	<table>
-	    <thead>
-	        <tr>
-	            <td></td>
-	            <td>Name</td>
-	            <td>Title</td>
-	        </tr>
-	    </thead>
-	    <tbody>
-	        <tr>
-	            <td><code>UIButton</code></td>
-	            <td><code>sayHelloWorldButton</code></td>
-	            <td>Say "Hello, World"</td>
-	        </tr>
-	        <tr>
-	            <td><code>UITextView</code></td>
-	            <td><code>sayHelloWorldText</code></td>
-	            <td></td>
-	        </tr>
-	        <tr>
-	            <td><code>UIButton</code></td>
-	            <td><code>getHelloWorldDataButton</code></td>
-	            <td>Get "Hello, World" Data</td>
-	        </tr>
-	        <tr>
-	            <td><code>UITextView</code></td>
-	            <td><code>getHelloWorldDataText</code></td>
-	            <td></td>
-	        </tr>
-	    </tbody>
-	</table>
+    ||Name|Title|
+    |--- |--- |--- |
+    |`UIButton`|`sayHelloWorldButton`|Say "Hello, World"|
+    |`UITextView`|`sayHelloWorldText`||
+    |`UIButton`|`getHelloWorldDataButton`|Get "Hello, World" Data|
+    |`UITextView`|`getHelloWorldDataText`||
 
-	After adding the controls, the UI should resemble the following screenshot:
+    After adding the controls, the UI should resemble the following screenshot:
 
-	[![](walkthrough-working-with-wcf-images/image12.png "After adding the controls, the UI should resemble this screenshot")](walkthrough-working-with-wcf-images/image12.png#lightbox)
+    [![](walkthrough-working-with-wcf-images/image12.png "After adding the controls, the UI should resemble this screenshot")](walkthrough-working-with-wcf-images/image12.png#lightbox)
 
 1. In **Solution Explorer**, open `ViewController.cs` and add the following code:
 
@@ -511,7 +486,7 @@ The WCF service proxy can be consumed by a Xamarin.iOS application, as follows:
 
 1. Run the application, ensure that the WCF service is running, and click on the two buttons. The application will call the WCF asynchronously, provided that the `Endpoint` field is correctly set:
 
-	[![](walkthrough-working-with-wcf-images/image10.png "Within 30 seconds a response should be received from each WCF method, and our application should look like this screenshot")](walkthrough-working-with-wcf-images/image10.png#lightbox)
+    [![](walkthrough-working-with-wcf-images/image10.png "Within 30 seconds a response should be received from each WCF method, and our application should look like this screenshot")](walkthrough-working-with-wcf-images/image10.png#lightbox)
 
 <a name="Summary" />
 

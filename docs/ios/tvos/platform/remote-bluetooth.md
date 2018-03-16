@@ -35,43 +35,14 @@ Your challenge as a tvOS app developer is the create a quick, easy to use and vi
 
 The Siri Remote has the following features and expected usages within your tvOS app:
 
-<table width="100%" border="1px">
-<tr>
-	<td><b>Feature</b></td>
-	<td><b>General App Usage</b></td>
-	<td><b>Game App Usage</b></td>
-</tr>
-<tr>
-	<td valign="top"><b>Touch Surface</b><br/>Swipe to navigate, press to select and hold for contextual menus.</td>
-	<td valign="top"><b>Tap/Swipe:</b><br/>UI Navigation between focusable items.<br/><br/><b>Click:</b><br/>Activates selected (in-focus) item.</td>
-	<td valign="top"><b>Tap/Swipe:</b><br/>Depends on game design and can be used as a D-Pad by tapping on the edges.<br/><br/><b>Click:</b><br/>Perform primary button function.</td>
-</tr>
-<tr>
-	<td valign="top"><b>Menu</b><br/>Press to return to previous screen or menu.</td>
-	<td valign="top">Returns to previous screen and exits to Apple TV Home screen from the main app screen.</td>
-	<td valign="top">Pause and resume gameplay, returns to previous screen and exits to Apple TV Home screen from the main app screen.</td>
-</tr>
-<tr>
-	<td valign="top"><b>Siri/Search</b><br/>In countries with Siri, press and hold for voice control, in all other countries, displays Search Screen.</td>
-	<td valign="top">n/a</td>
-	<td valign="top">n/a</td>
-</tr>
-<tr>
-	<td valign="top"><b>Play/Pause</b><br/>Play and Pause media or provides a secondary function in apps.</td>
-	<td valign="top">Starts media playback and pause/resume playback.</td>
-	<td valign="top">Performs secondary button function or skips intro video (if exists).</td>
-</tr>
-<tr>
-	<td valign="top"><b>Home</b><br/>Press to return to the Home screen, double-click to display running apps, press and hold to sleep device.</td>
-	<td valign="top">n/a</td>
-	<td valign="top">n/a</td>
-</tr>
-<tr>
-	<td valign="top"><b>Volume</b><br/>Controls attached audio/video equipment volume.</td>
-	<td valign="top">n/a</td>
-	<td valign="top">n/a</td>
-</tr>
-</table>
+|Feature|General App Usage|Game App Usage|
+|---|---|---|
+|**Touch Surface**<br />Swipe to navigate, press to select and hold for contextual menus.|**Tap/Swipe**<br />UI Navigation between focusable items.<br /><br />**Click**<br />Activates selected (in-focus) item.|**Tap/Swipe**<br />Depends on game design and can be used as a D-Pad by tapping on the edges.<br /><br />**Click**<br />Perform primary button function.|
+|**Menu**<br />Press to return to previous screen or menu.|Returns to previous screen and exits to Apple TV Home screen from the main app screen.|Pause and resume gameplay, returns to previous screen and exits to Apple TV Home screen from the main app screen.|
+|**Siri/Search**<br />In countries with Siri, press and hold for voice control, in all other countries, displays Search Screen.|n/a|n/a|
+|**Play/Pause**<br />Play and Pause media or provides a secondary function in apps.|Starts media playback and pause/resume playback.|Performs secondary button function or skips intro video (if exists).|
+|**Home**<br />Press to return to the Home screen, double-click to display running apps, press and hold to sleep device.|n/a|n/a|
+|**Volume**<br />Controls attached audio/video equipment volume.|n/a|n/a|
 
 <a name="Touch-Surface-Gestures" />
 
@@ -79,18 +50,10 @@ The Siri Remote has the following features and expected usages within your tvOS 
 
 The Siri Remote's Touch Surface is able to detect a variety of single-finger gestures that you can respond to in your Xamarin.tvOS app:
 
-<table width="100%">
-<tr>
-	<td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture01.png"></td>
-	<td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture02.png"></td>
-	<td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture03.png"></td>
-</tr>
-<tr>
-	<td valign="top"><b>Swipe:</b><br/>Moves selection (focus) between UI elements on screen (up, down left, right). Swiping can be used to scroll through large lists of content quickly using inertia.</td>
-	<td valign="top"><b>Click:</b><br/>Activates the selected (in-focus) item or acts like the primary button in a game. Clicking and holding can activate contextual menus or secondary functions.</td>
-	<td valign="top"><b>Tap:</b><br/>Lightly tapping the Touch Surface on the edges acts like directional buttons on a D-Pad, moving focus up, down, left or right depending on the area tapped. Depending on the app, can be used to reveal hidden controls.</td>
-</tr>
-</table>
+|Swipe|Click|Tap|
+|---|---|---|
+|![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
+|Moves selection (focus) between UI elements on screen (up, down left, right). Swiping can be used to scroll through large lists of content quickly using inertia.|Activates the selected (in-focus) item or acts like the primary button in a game. Clicking and holding can activate contextual menus or secondary functions.|Lightly tapping the Touch Surface on the edges acts like directional buttons on a D-Pad, moving focus up, down, left or right depending on the area tapped. Depending on the app, can be used to reveal hidden controls.|
 
 Apple provides the following suggestions for working with Touch Surface gestures:
 
@@ -108,7 +71,7 @@ In addition to gestures on the Touch Surface, your app can respond to the user c
 Additionally, menu button presses can be detected using a Gesture Recognizer with standard `UIKit` elements. If you intercept the Menu button being pressed, you'll be responsible for closing the current View and View Controller and return to the previous one.
 
 > [!IMPORTANT]
-> **NOTE:** You should **always** assign a function to the Play/Pause button on the remote. Having a non-functional button can make your app look broken to the end user. If you don't have a valid function for this button, assign the same function as the primary button (Touch Surface Click).
+> You should **always** assign a function to the Play/Pause button on the remote. Having a non-functional button can make your app look broken to the end user. If you don't have a valid function for this button, assign the same function as the primary button (Touch Surface Click).
 
 
 
@@ -315,77 +278,24 @@ In addition to the standard Siri Remote that ships with the Apple TV, 3rd party,
 Game Controllers can be used to enhance gameplay and provide a sense of immersion in a game. They can also be used to control the standard Apple TV interface so the use doesn't have to switch between the remote and the controller.
 
 > [!IMPORTANT]
-> **NOTE:** Bluetooth Game Controllers are an optional purchase that end users might make, your app cannot force the user to purchase one. If your app supports Game Controllers it must also support the Siri Remote so that the game is useable by all Apple TV users.
-
+> Bluetooth Game Controllers are an optional purchase that end users might make, your app cannot force the user to purchase one. If your app supports Game Controllers it must also support the Siri Remote so that the game is useable by all Apple TV users.
 
 A Game Controller has the following features and expected usages within your tvOS app:
-<table width="100%" border="1px">
-<tr>
-	<td><b>Feature</b></td>
-	<td><b>General App Usage</b></td>
-	<td><b>Game App Usage</b></td>
-</tr>
-<tr>
-	<td valign="top"><b>D-Pad</b></td>
-	<td valign="top">Navigates through UI elements (changes focus).</td>
-	<td valign="top">Depends on game.</td>
-</tr>
-<tr>
-	<td valign="top"><b>A</b></td>
-	<td valign="top">Activates the selected (in-focus) item.</td>
-	<td valign="top">Performs primary button function and confirms dialog actions.</td>
-</tr>
-<tr>
-	<td valign="top"><b>B</b></td>
-	<td valign="top">Returns to previous screen or exits to the Home screen if on the app's main screen.</td>
-	<td valign="top">Performs the secondary button function or returns to the previous screen.</td>
-</tr>
-<tr>
-	<td valign="top"><b>X</b></td>
-	<td valign="top">Starts media playback or pause/resumes playback.</td>
-	<td valign="top">Depends on game.</td>
-</tr>
-<tr>
-	<td valign="top"><b>Y</b></td>
-	<td valign="top">n/a</td>
-	<td valign="top">Depends on game.</td>
-</tr>
-<tr>
-	<td valign="top"><b>Menu</b></td>
-	<td valign="top">Returns to previous screen or exits to the Home screen if on the app's main screen.</td>
-	<td valign="top">Pause/resume gameplay, returns to previous screen or exits to the Home screen if on the app's main screen.</td>
-</tr>
-<tr>
-	<td valign="top"><b>Left Shoulder Button</b></td>
-	<td valign="top">Navigates Left.</td>
-	<td valign="top">Depends on game.</td>
-</tr>
-<tr>
-	<td valign="top"><b>Left Trigger</b></td>
-	<td valign="top">Navigates Left.</td>
-	<td valign="top">Depends on game.</td>
-</tr>
-<tr>
-	<td valign="top"><b>Right Shoulder Button</b></td>
-	<td valign="top">Navigates Right.</td>
-	<td valign="top">Depends on game.</td>
-</tr>
-<tr>
-	<td valign="top"><b>Right Trigger</b></td>
-	<td valign="top">Navigates Right</td>
-	<td valign="top">Depends on game.</td>
-</tr>
-<tr>
-	<td valign="top"><b>Left Thumbstick</b></td>
-	<td valign="top">Navigates through UI elements (changes focus).</td>
-	<td valign="top">Depends on game.</td>
-</tr>
-<tr>
-	<td valign="top"><b>Right Thumbstick</b></td>
-	<td valign="top">n/a</td>
-	<td valign="top">Depends on game.</td>
-</tr>
-</table>
+
+|Feature|General App Usage|Game App Usage|
+|---|---|---|
+|**D-Pad**|Navigates through UI elements (changes focus).|Depends on game.|
+|**A**|Activates the selected (in-focus) item.|Performs primary button function and confirms dialog actions.|
+|**B**|Returns to previous screen or exits to the Home screen if on the app's main screen.|Performs the secondary button function or returns to the previous screen.|
+|**X**|Starts media playback or pause/resumes playback.|Depends on game.|
+|**Y**|n/a|Depends on game.|
+|**Menu**|Returns to previous screen or exits to the Home screen if on the app's main screen.|Pause/resume gameplay, returns to previous screen or exits to the Home screen if on the app's main screen.|
+|**Left Shoulder Button**|Navigates Left.|Depends on game.|
+|**Left Trigger**|Navigates Left.|Depends on game.|
+|**Right Shoulder Button**|Navigates Right.|Depends on game.|
+|**Right Trigger**|Navigates Right|Depends on game.|
+|**Left Thumbstick**|Navigates through UI elements (changes focus).|Depends on game.|
+|**Right Thumbstick**|n/a|Depends on game.|
 
 Apple provides the following suggestions for working with Game Controllers:
 

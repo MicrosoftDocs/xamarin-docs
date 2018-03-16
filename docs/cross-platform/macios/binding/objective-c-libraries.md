@@ -1362,207 +1362,31 @@ This section covers how Objective-C types are mapped to C# types.
 The following table shows how you should map types from the
 Objective-C and CocoaTouch world to the Xamarin.iOS world:
 
-<table border="1" cellpadding="1" cellspacing="1" width="80%">
-	  <caption>
-	    Type mappings
-	  </caption>
-	  <tbody>
-	    <tr>
-	      <td>
-	        Objective-C type name
-	      </td>
-	      <td>
-	        Xamarin.iOS Unified API type
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        BOOL, GLboolean
-	      </td>
-	      <td>
-	        bool
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        NSInteger
-	      </td>
-	      <td>
-	        nint
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        NSUInteger
-	      </td>
-	      <td>
-	        nuint
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        CFTimeInterval / NSTimeInterval
-	      </td>
-	      <td>
-	        double
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        NSString (<a href="~/ios/internals/api-design/nsstring.md">more on binding
-	        NSString</a>)
-	      </td>
-	      <td>
-	        string
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        char *
-	      </td>
-	      <td>
-	        <a href="~/cross-platform/macios/binding/binding-types-reference.md#plainstring">
-	        [PlainString]</a> string
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        CGRect
-	      </td>
-	      <td>
-	        CGRect
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        CGPoint
-	      </td>
-	      <td>
-	        CGPoint
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        CGSize
-	      </td>
-	      <td>
-	        CGSize
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        CGFloat, GLfloat
-	      </td>
-	      <td>
-	        nfloat
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        CoreFoundation types (CF*)
-	      </td>
-	      <td>
-	        CoreFoundation.CF*
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        GLint
-	      </td>
-	      <td>
-	        nint
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        GLfloat
-	      </td>
-	      <td>
-	        nfloat
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        Foundation types (NS*)
-	      </td>
-	      <td>
-	        Foundation.NS*
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        id
-	      </td>
-	      <td>
-	        Foundation.NSObject
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        NSGlyph
-	      </td>
-	      <td>
-	        nint
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        NSSize
-	      </td>
-	      <td>
-	        CGSize
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        NSTextAlignment
-	      </td>
-	      <td>
-	        UITextAlignment
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        SEL
-	      </td>
-	      <td>
-	        ObjCRuntime.Selector
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        dispatch_queue_t
-	      </td>
-	      <td>
-	        CoreFoundation.DispatchQueue
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        CFTimeInterval
-	      </td>
-	      <td>
-	        double
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        CFIndex
-	      </td>
-	      <td>
-	        nint
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        NSGlyph
-	      </td>
-	      <td>
-	        nuint
-	      </td>
-	    </tr>
-	  </tbody>
-	</table>
+|Objective-C type name|Xamarin.iOS Unified API type|
+|---|---|
+|`BOOL`, `GLboolean`|`bool`|
+|`NSInteger`|`nint`|
+|`NSUInteger`|`nuint`|
+|`CFTimeInterval` / `NSTimeInterval`|`double`|
+|`NSString` ([more on binding `NSString`](~/ios/internals/api-design/nsstring.md))|`string`|
+|`char *`|`string` (see also: [PlainString attribute](~/cross-platform/macios/binding/binding-types-reference.md#plainstring))|
+|`CGRect`|`CGRect`|
+|`CGPoint`|`CGPoint`|
+|`CGSize`|`CGSize`|
+|`CGFloat`, `GLfloat`|`nfloat`|
+|CoreFoundation types (`CF*`)|`CoreFoundation.CF*`|
+|`GLint`|`nint`|
+|`GLfloat`|`nfloat`|
+|Foundation types (`NS*`)|`Foundation.NS*`|
+|`id`|`Foundation`.`NSObject`|
+|`NSGlyph`|`nint`|
+|`NSSize`|`CGSize`|
+|`NSTextAlignment`|`UITextAlignment`|
+|`SEL`|`ObjCRuntime.Selector`|
+|`dispatch_queue_t`|`CoreFoundation.DispatchQueue`|
+|`CFTimeInterval`|`double`|
+|`CFIndex`|`nint`|
+|`NSGlyph`|`nuint`|
 
  <a name="Arrays" />
 

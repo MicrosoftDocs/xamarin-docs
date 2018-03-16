@@ -7,7 +7,7 @@ ms.assetid: 3BE4A128-2D88-4500-9E48-20375EA99A49
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/13/2018
+ms.date: 03/16/2018
 ---
 
 # Android Wear
@@ -44,6 +44,18 @@ Explains how to deploy your Android Wear app to an Android
 Wear device or to Android emulator configured for Wear. It also
 includes debugging tips and information for how to set up a Bluetooth
 connection between your development computer and an Android device.
+
+##  [Wear APIs](https://developer.android.com/reference/android/support/wearable)
+
+The Android Developer site provides detailed information about key Wear APIs
+such as [Wearable Activity](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html),
+[Intents](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html),
+[Authentication](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html),
+[Complications](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html),
+[Complications Rendering](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html),
+[Notifications](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html),
+[Views](https://developer.android.com/reference/android/support/wearable/view/package-summary.html), and
+[WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
 
 
 

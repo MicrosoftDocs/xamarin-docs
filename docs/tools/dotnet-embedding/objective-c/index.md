@@ -197,13 +197,11 @@ Due to `NSDate` reference date, all conversions between it and `DateTime` must b
 
 When converting from `DateTime` to `NSDate` the DateTime's `Kind` property is taken into account.
 
-<table>
-<tr><th> Kind         </th><th> Results                                                                                            </th></tr>
-<!--tr><td> ------------ </td><td> -------------------------------------------------------------------------------------------------- </td></tr-->
-<tr><td> Utc          </td><td> Conversion is performed using the provided DateTime object as is.                                  </td></tr>
-<tr><td> Local        </td><td> The result of calling `ToUniversalTime ()` in the provided DateTime object is used for conversion. </td></tr>
-<tr><td> Unspecified  </td><td> The provided DateTime object is assumed to be UTC, so same behavior as Kind == Utc.                </td></tr>
-</table>
+|Kind|Results                                                                                            |
+|---|---|
+|Utc|Conversion is performed using the provided `DateTime` object as is.|
+|Local|The result of calling `ToUniversalTime()` in the provided `DateTime` object is used for conversion.|
+|Unspecified|The provided `DateTime` object is assumed to be UTC, so same behavior as Kind == Utc.|
 
 The conversion is done by using the following formula:
 

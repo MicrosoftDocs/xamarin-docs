@@ -34,4 +34,4 @@ By the end of this walkthrough we will have created a simple game where the play
 - [Game Content (sample)](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Content.zip?raw=true)
 - [Completed project (sample)](https://developer.xamarin.com/samples/mobile/BouncingGame/)
 - [CocosSharp PCL on NuGet](http://www.nuget.org/packages/CocosSharp.PCL.Shared/)
-- [CocosSharp API Documentation](http://developer.xamarin.comhttps://developer.xamarin.com/api/namespace/CocosSharp/)
+- [CocosSharp API Documentation](https://developer.xamarin.com/api/namespace/CocosSharp/)

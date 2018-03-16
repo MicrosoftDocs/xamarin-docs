@@ -85,36 +85,14 @@ This makes it simpler to share code between the Mac and iOS
 
 The Unified API removes deprecated methods and there are a few instances where there were typos in the API names when they were bound to the original MonoTouch and MonoMac namespaces in the Classic APIs. These instances have been corrected in the new Unified APIs and will need to be updated in your component, iOS and Mac applications. Here is a list of the most common ones you might run into:
 
-<table width="100%" border="1">
-<tr>
-	<th>Classic API Method Name</th>
-	<th>Unified API Method Name</th>
-</tr>
-<tr>
-	<td>UINavigationController.PushViewControllerAnimated()</td>
-	<td>UINavigationController.PushViewController()</td>
-</tr>
-<tr>
-	<td>UINavigationController.PopViewControllerAnimated()</td>
-	<td>UINavigationController.PopViewController()</td>
-</tr>
-<tr>
-	<td>CGContext.SetRGBFillColor()</td>
-	<td>CGContext.SetFillColor()</td>
-</tr>
-<tr>
-	<td>NetworkReachability.SetCallback()</td>
-	<td>NetworkReachability.SetNotification()</td>
-</tr>
-<tr>
-	<td>CGContext.SetShadowWithColor</td>
-	<td>CGContext.SetShadow</td>
-</tr>
-<tr>
-	<td>UIView.StringSize</td>
-	<td>UIKit.UIStringDrawing.StringSize</td>
-</tr>
-</table>
+|Classic API Method Name|Unified API Method Name|
+|--- |--- |
+|`UINavigationController.PushViewControllerAnimated()`|`UINavigationController.PushViewController()`|
+|`UINavigationController.PopViewControllerAnimated()`|`UINavigationController.PopViewController()`|
+|`CGContext.SetRGBFillColor()`|`CGContext.SetFillColor()`|
+|`NetworkReachability.SetCallback()`|`NetworkReachability.SetNotification()`|
+|`CGContext.SetShadowWithColor`|`CGContext.SetShadow`|
+|`UIView.StringSize`|`UIKit.UIStringDrawing.StringSize`|
 
 For a full list of changes when switching from the Classic to the Unified API, please see our [Classic (monotouch.dll) vs Unified (Xamarin.iOS.dll) API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) documentation.
 

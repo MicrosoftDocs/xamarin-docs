@@ -36,17 +36,9 @@ The Launch Image appears quickly and gives the impression that your app is fast 
 
 Launch Images are not an opportunity for ads or artistic expression, they exist only to give the impression that your app launches quickly and is ready to use.
 
-<table width="100%" border="1px">
-<tr>
-	<td colspan="2"><b>Launch Image</b></td>
-</tr>
-<tr>
-	<td><b>Size</b></td>
-	<td>1920px x 1080px
-
-	Non-layered `.png` files only</td>
-</tr>
-</table>
+|Launch Image Size|Notes|
+|---|---|
+|1920x1080px|Non-layered .png files only|
 
 Apple makes the following suggestions for designing your app's Launch Image:
 
@@ -142,39 +134,15 @@ Your Xamarin.tvOS app will require not only an App Icon for the Apple TV Home sc
 
 Every app must supply both a small and a large version of its App Icon. The small icon will be used on the Apple TV Home screen when the app is installed. The large version is used by the App Store. The large App Icon should mimic the look and feel of the small icon version.
 
-<table width="100%" border="1px">
-<tr>
-	<td colspan="2"><b>Small Icon</b></td>
-	<td colspan="2"><b>Large Icon</b></td>
-</tr>
-<tr>
-	<td><b>Actual Size</b></td>
-	<td>400px x 240px</td>
-	<td><b>Size</b></td>
-	<td>1280px x 768px</td>
-</tr>
-<tr>
-	<td><b>Safe Zone Size</b></td>
-	<td>370px x 222px</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td><b>Unfocused Size</b></td>
-	<td>300px x 180px</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td><b>Focused Size</b></td>
-	<td>370px x 222px</td>
-	<td></td>
-	<td></td>
-</tr>
-</table>
+|Small Icon||Large Icon||
+|---|---|---|---|
+|Actual Size|400x240px|Size|1280x768px|
+|Safe Zone Size|370x222px|||
+|Unfocused Size|300x180px|||
+|Focused Size|370x222px|||
 
 > [!IMPORTANT]
-> **NOTE:** Your App Icons must be provided as **Layered Images**. Please see the [Layered Image](#Layered-Images) section above for more details.
+> Your App Icons must be provided as **Layered Images**. Please see the [Layered Image](#Layered-Images) section above for more details.
 
 
 
@@ -223,17 +191,9 @@ If the user has placed your Xamarin.tvOS app on the Top Row on the Apple TV Home
 
 The Top Shelf Image can either be provided as a single static `.png` or `.lsr` file (see [Creating Layered Images](#Creating-Layered-Images)) or it can be dynamically created at runtime as a single row of Focusable Items (see [Dynamic Top Shelf Content](#Dynamic-Top-Shelf-Content) below).
 
-<table width="100%" border="1px">
-<tr>
-	<td colspan="2"><b>Top Shelf Image</b></td>
-</tr>
-<tr>
-	<td><b>Size</b></td>
-	<td>1920px x 720px
-
-	Static `.png` or layered `.lsr` file</td>
-</tr>
-</table>
+|Top Shelf Image Size|Notes|
+|---|---|
+|1920x720px|Static .png or layered .lsr file|
 
 Apple provides the following suggestions for creating your Top Shelf Images:
 
@@ -275,38 +235,12 @@ Content is presented as a single, horizontal scrolling list of content with a la
 
 The following content sizes will be required:
 
-<table width="100%" border="1px">
-<tr>
-	<td><b>&nbsp;</b></td>
-	<td><b>Poster (2:3)</b></td>
-	<td><b>Square (1:1)</b></td>
-	<td><b>HDTV (16:9)</b></td>
-</tr>
-<tr>
-	<td><b>Actual Size</b></td>
-	<td>404px x 608px</td>
-	<td>608px x 608px</td>
-	<td>908px x 512px</td>
-</tr>
-<tr>
-	<td><b>Safe Zone Size</b></td>
-	<td>380px x 570px</td>
-	<td>570px x 570px</td>
-	<td>852px x 479px</td>
-</tr>
-<tr>
-	<td><b>Unfocused Size</b></td>
-	<td>333px x 500px</td>
-	<td>500px x 500px</td>
-	<td>782px x 440px</td>
-</tr>
-<tr>
-	<td><b>Focused Size</b></td>
-	<td>380px x 570px</td>
-	<td>570px x 570px</td>
-	<td>852px x 479px</td>
-</tr>
-</table>
+||Poster (2:3)|Square (1:1)|HDTV (16:9)|
+|---|---|---|---|
+|Actual Size|404x608px|608x608px|908x512px|
+|Safe Zone Size|380x570px|570x570px|852x479px|
+|Unfocused Size|333x500px|500x500px|782x440px|
+|Focused Size|380x570px|570x570px|852x479px|
 
 Apple provides the following suggestions for the Sectioned Content Row:
 
@@ -321,27 +255,14 @@ Optionally, your Xamarin.tvOS app can present its content in the Top Shelf as an
 
 In addition to the automatic scrolling, the user can take control of the banners and scroll in either direction using the Siri Remote. Making a small, circular gesture on the Siri Remote when a banner is in focus will activate the Parallax Effect for that banner.
 
-<table width="100%" border="1px">
-<tr>
-	<td colspan="2"><b>Banner Image (Extra Wide)</b></td>
-</tr>
-<tr>
-	<td><b>Actual Size</b></td>
-	<td>1940px x 624px</td>
-</tr>
-<tr>
-	<td><b>Safe Zone Size</b></td>
-	<td>1740px x 620px</td>
-</tr>
-<tr>
-	<td><b>Unfocused Size</b></td>
-	<td>1740px x 560px</td>
-</tr>
-<tr>
-	<td><b>Focused Size</b></td>
-	<td>1740px x 620px</td>
-</tr>
-</table>
+**Banner Image (Extra Wide)**
+
+|   |   |
+|---|---|
+|Actual Size|1940x624px|
+|Safe Zone Size|1740x620px|
+|Unfocused Size|1740x560px|
+|Focused Size|1740x620px|
 
 Scrolling Inset Banners can either be provided as a static `.png` or layered `.lsr` file.
 
@@ -362,44 +283,13 @@ If your Xamarin.tvOS app is a game and you've included Game Center support, seve
 - **Dashboard Artwork** - An optional image can be provided that will appear at the top of your app's dashboard within Game Center. These images are non-focusable.
 - **Leaderboard Artwork** - You must provide between one (1) to three (3) 16:9 aspect ratio images for each leaderboard that your app supports. These may be either static `.png` or layered `.lsr` files. The Leaderboard artwork is focusable.
 
-<table width="100%" border="1px">
-<tr>
-	<td><b>&nbsp;</b></td>
-	<td><b>Achievement Icons</b></td>
-	<td><b>Dashboard Artwork</b></td>
-	<td><b>Leaderboard Artwork</b></td>
-</tr>
-<tr>
-	<td><b>Visible Size</b></td>
-	<td>200px x 200px</td>
-	<td>923px x 150px</td>
-	<td>n/a</td>
-</tr>
-<tr>
-	<td><b>Actual Size</b></td>
-	<td>320px x 320px</td>
-	<td>n/a</td>
-	<td>659px x 371px</td>
-</tr>
-<tr>
-	<td><b>Safe Zone Size</b></td>
-	<td>n/a</td>
-	<td>n/a</td>
-	<td>618px x 348px</td>
-</tr>
-<tr>
-	<td><b>Unfocused Size</b></td>
-	<td>n/a</td>
-	<td>n/a</td>
-	<td>548px x 309px</td>
-</tr>
-<tr>
-	<td><b>Focused Size</b></td>
-	<td>n/a</td>
-	<td>n/a</td>
-	<td>618px x 348px</td>
-</tr>
-</table>
+||Achievement Icons|Dashboard Artwork|Leaderboard Artwork|
+|---|---|---|---|
+|Visible Size|200x200px|923x150px|n/a|
+|Actual Size|320x320px|n/a|659x371px|
+|Safe Zone Size|n/a|n/a|618x348px|
+|Unfocused Size|n/a|n/a|548x309px|
+|Focused Size|n/a|n/a|618x348px|
 
 For more information about working with Game Center, please see Apple's [Game Center Programming Guide](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html).
 

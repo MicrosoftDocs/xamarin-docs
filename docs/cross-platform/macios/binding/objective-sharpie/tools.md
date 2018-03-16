@@ -55,19 +55,14 @@ Available Tools:
 
 Objective Sharpie provides the following tools:
 
-<table>
-  <thead>
-    <tr><td>Tool</td><td>Description</td>
-  </thead>
-  <tbody>
-    <tr><td><b>xcode</b></td><td>Provides information about the current Xcode installation and the versions of iOS and Mac SDKs that are available. We will be using this information later when we generate our bindings.</td></tr>
-    <tr><td><b>pod</b></td><td>Searches for, configures, installs (in a local directory), and binds Objective-C <a href="https://cocoapods.org">CocoaPod</a> libraries available from the master Spec repository. This tool evaluates the installed CocoaPod to automatically deduce the correct input to pass to the <code>bind</code> tool below. <em><strong>New in 3.0!</strong></em></td></tr>
-    <tr><td><b>bind</b></td><td>Parses the header files (<code>*.h</code>) in the Objective-C library into the <a href="~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md">initial <i>ApiDefinition.cs</i> and <i>StructsAndEnums.cs</i> files</a>.</td></tr>
-    <tr><td><b>update</b></td><td>Checks for newer versions of Objective Sharpie and downloads and launches the installer if one is available.</td></tr>
-    <tr><td><b>verify-docs</b></td><td>Shows detailed information about <code>[Verify]</code> attributes.</td></tr>
-    <tr><td><b>docs</b></td><td>Navigates to this document in your default web browser.</td></tr>
-  </tbody>
-</table>
+|Tool|Description|
+|--- |--- |
+|**xcode**|Provides information about the current Xcode installation and the versions of iOS and Mac SDKs that are available. We will be using this information later when we generate our bindings.|
+|**pod**|Searches for, configures, installs (in a local directory), and binds Objective-C [CocoaPod](https://cocoapods.org/) libraries available from the master Spec repository. This tool evaluates the installed CocoaPod to automatically deduce the correct input to pass to the `bind` tool below. New in 3.0!|
+|**bind**|Parses the header files (`*.h`) in the Objective-C library into the initial [ApiDefinition.cs and StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) files.|
+|**update**|Checks for newer versions of Objective Sharpie and downloads and launches the installer if one is available.|
+|**verify-docs**|Shows detailed information about `[Verify]` attributes.|
+|**docs**|Navigates to this document in your default web browser.|
 
 To get help on a specific Objective Sharpie tool, enter the name of the tool and the `-help` option. For example, `sharpie xcode -help` returns the following output:
 

@@ -61,108 +61,33 @@ There are many ways that the user might initiate an interaction with the app, si
 
 For example, if the user wanted to send a message to their friend Bobo, they might have the following conversation with Siri:
 
-<table width="100%" border="1px">
-<tr>
-	<td width="50%"><b>Siri</b></td>
-	<td width="50%"><b>User</b></td>
-</tr>
-<tr>
-	<td></td>
-	<td>"Hey Siri, send a MonkeyChat Message"</td>
-</tr>
-<tr>
-	<td>"To whom?"</td>
-	<td></td>
-</tr>
-<tr>
-	<td></td>
-	<td>"Bobo"</td>
-</tr>
-<tr>
-	<td>"What do you want to say to Bobo?"</td>
-	<td></td>
-</tr>
-<tr>
-	<td></td>
-	<td>"Please send more bananas"</td>
-</tr>
-</table>
+_User: Hey Siri, send a MonkeyChat message._<br />
+_Siri: To whom?_<br />
+_User: Bobo._<br />
+_Siri: What do you want to say to Bobo?_<br />
+_User: Please send more Bananas._<br />
 
 Another person might make the same request with a different conversation:
 
-<table width="100%" border="1px">
-<tr>
-	<td width="50%"><b>Siri</b></td>
-	<td width="50%"><b>User</b></td>
-</tr>
-<tr>
-	<td></td>
-	<td>"Send a message to Bobo on MonkeyChat"</td>
-</tr>
-<tr>
-	<td>"What do you want to say to Bobo?"</td>
-	<td></td>
-</tr>
-<tr>
-	<td></td>
-	<td>"Please send more bananas"</td>
-</tr>
-</table>
+_User: Send a message to Bobo on MonkeyChat._<br />
+_Siri: What do you want to say to Bobo?_<br />
+_User: Please send more bananas._<br />
 
 And another user might make an even shorter request:
 
-<table width="100%" border="1px">
-<tr>
-	<td width="50%"><b>Siri</b></td>
-	<td width="50%"><b>User</b></td>
-</tr>
-<tr>
-	<td></td>
-	<td>"MonkeyChat Bobo please send more bananas"</td>
-</tr>
-<tr>
-	<td>"Ok, sending message please send more bananas to Bobo on Monkeychat"</td>
-	<td></td>
-</tr>
-</table>
+_User: MonkeyChat Bobo please send more bananas._<br />
+_Siri: Ok, sending message please send more bananas to Bobo on Monkeychat._<br />
 
 Or even make the same request in a different language:
 
-<table width="100%" border="1px">
-<tr>
-	<td width="50%"><b>Siri</b></td>
-	<td width="50%"><b>User</b></td>
-</tr>
-<tr>
-	<td></td>
-	<td>"MonkeyChat Bobo s’il vous plaît envoyer plus de bananes"</td>
-</tr>
-<tr>
-	<td>"Oui, envoi message s’il vous plaît envoyer plus de bananes à Bobo sur Monkeychat"</td>
-	<td></td>
-</tr>
-</table>
+_User: MonkeyChat Bobo s’il vous plaît envoyer plus de bananes._<br />
+_Siri: Oui, envoi message s’il vous plaît envoyer plus de bananes à Bobo sur Monkeychat._<br />
 
 Yet another user might be very verbose in their conversation:
 
-<table width="100%" border="1px">
-<tr>
-	<td width="50%"><b>Siri</b></td>
-	<td width="50%"><b>User</b></td>
-</tr>
-<tr>
-	<td></td>
-	<td>"Hey Siri, can you please do me a favor and launch the MonkeyChat app to send a text with the message please send more bananas"</td>
-</tr>
-<tr>
-	<td>"To whom?"</td>
-	<td></td>
-</tr>
-<tr>
-	<td></td>
-	<td>"My best pal Bobo"</td>
-</tr>
-</table>
+_User: Hey Siri, can you please do me a favor and launch the MonkeyChat app to send a text with the message please send more bananas._<br />
+_Siri: To whom?_<br />
+_User: My best pal Bobo._<br />
 
 Additionally, there are many ways that Siri might respond to a request, some based on how the request was made:
 
@@ -194,24 +119,9 @@ There are three main ways that the app can take part in the user's conversation 
 
 Given the above information, examine how the following conversation would interact with the MonkeyChat app:
 
-<table width="100%" border="1px">
-<tr>
-	<td width="50%"><b>Siri</b></td>
-	<td width="50%"><b>User</b></td>
-</tr>
-<tr>
-	<td></td>
-	<td>"Hey Siri, send a message to Bobo on MonkeyChat"</td>
-</tr>
-<tr>
-	<td>"What do you want to say to Bobo?"</td>
-	<td></td>
-</tr>
-<tr>
-	<td></td>
-	<td>"Please send more bananas"</td>
-</tr>
-</table>
+_User: Hey Siri, send a message to Bobo on MonkeyChat._<br />
+_Siri: What do you want to say to Bobo?_<br />
+_User: Please send more bananas._<br />
 
 The first role that the app takes in the conversation is to help Siri understand the user's speech:
 
@@ -378,9 +288,9 @@ There are several parts to a Vocabulary `AppIntentVocabulary.plist` file:
 
 - **Example App Uses** - These provide a set of common use cases for the requests that the user can make of the app. For example: *"Start a workout with MonkeyFit."*
 - **Parameters** - These provide a set of non standard parameter types specific to the app. For example, workout names for the MonkeyFit app. These consist of:
-	- **Phrase** - Allows the app to define unique terms for the app. For example: the "Bananarific" workout type for the MonkeyFit app. 
-	- **Pronunciation** - Gives pronunciation hints to Siri as a simple phonetic spelling for a given phrase. For example, "ba nana ri fic".
-	- **Example** - Provides an example of using the given phrase in the app. For example, *"Start a Bananarific in MonkeyFit"*.
+    - **Phrase** - Allows the app to define unique terms for the app. For example: the "Bananarific" workout type for the MonkeyFit app. 
+    - **Pronunciation** - Gives pronunciation hints to Siri as a simple phonetic spelling for a given phrase. For example, "ba nana ri fic".
+    - **Example** - Provides an example of using the given phrase in the app. For example, *"Start a Bananarific in MonkeyFit"*.
 
 For more information, please see Apple's [App Vocabulary File Format Reference](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CustomVocabularyKeys.html#//apple_ref/doc/uid/TP40016875-CH10-SW1).
 
