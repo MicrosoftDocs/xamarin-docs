@@ -18,10 +18,10 @@ please review the [iOS Designer](~/ios/user-interface/designer/index.md) documen
 
 The Apple Interface Builder tool ("IB") can be used to design user
 interfaces visually. The interface definitions created by IB are saved in **.xib** files. Widgets and other objects in **.xib** files may be given a "class identity",
-which can be a custom user-defined type. This allows you you customize the
+which can be a custom user-defined type. This allows you to customize the
 behavior of widgets and to write custom widgets.
 
-These user classes are normally subclasses of UI controller classes. These
+These user classes are normally subclasses of UI controller classes. They
 have *outlets* (analogous to properties) and *actions* (analogous
 to events) that can be connected to interface objects. At runtime, when the IB
 file is loaded, the objects are created, and the outlets and actions are
@@ -37,7 +37,7 @@ Working with **.xib** files is not currently supported in Xamarin.iOS for Visual
 
 As well as using existing types from Cocoa Touch, it is possible to define
 custom types in **.xib** files. It is also possible to use types that are defined in
-other **.xib** files, or defined purely in C# code. Currently, Interface Builder is not aware of the details of types defined outside the current **.xib** file, so will not list them or show their custom outlets and actions. Removing this limitation is planned for sometime in the future.
+other **.xib** files, or defined purely in C# code. Currently, Interface Builder is not aware of the details of types defined outside the current **.xib** file, so it will not list them or show their custom outlets and actions. Removing this limitation is planned for sometime in the future.
 
 Custom classes can be defined in a **.xib** file using the "Add Subclass" command
 in the "Classes" tab of Interface Builder. We refer to these as "CodeBehind"
@@ -74,7 +74,7 @@ classes in IB without using Visual Studio for Mac to generate designer files, yo
 to apply this manually to make your managed classes match up to the expected
 Objective-C class names.
 
-Classes cannot be defined in more that one **.xib**, or they will conflict.
+Classes cannot be defined in more than one **.xib**, or they will conflict.
 
 ## Non-Designer Class Parts
 
@@ -98,11 +98,11 @@ corresponding to any connected actions.
 Designer classes contain properties corresponding to all outlets defined on
 the custom class. The fact that these are properties is an implementation detail
 of the Xamarin.iOS to Objective C bridge, to enable lazy binding. You should
-consider them to be equivalent private fields, intended to be used only from the
+consider them to be equivalent to private fields, intended to be used only from the
 CodeBehind class. If you wish to make them public, add accessor properties to
-the non-designer class part as you would for any other private field.
+the non-designer class part, as you would for any other private field.
 
-If outlet properties are defined to have a type of **id** (equivalent to
+If outlet properties are defined to have a type of `id` (equivalent to
 `NSObject`) then the designer code generator currently determines the strongest
 possible type based on objects connected to that outlet, for convenience.
 However, this may not be supported in future versions, so it is recommended that
@@ -116,15 +116,15 @@ the partial methods is twofold:
 
 1.  If you type  `partial` in the class body of the non-designer class part, Visual Studio for Mac will
 offer to autocomplete the signatures of all non-implemented partial methods.
-1.  The partial method signatures have an attribute applied that exposes them to the Objective-C world,
-so they can get handled as to the corresponding action.
+2.  The partial method signatures have an attribute applied that exposes them to the Objective-C world,
+so they can get handled as the corresponding action.
 
 
 If you wish, you may ignore the partial method, and implement the action by
 applying the attribute to a different method, or let it fall through to a base
 class.
 
-If actions defined to have a sender type of `id` (equivalent to `NSObject`),
+If actions are defined to have a sender type of `id` (equivalent to `NSObject`),
 then the designer code generator currently determines the strongest possible
 type based on objects connected to that action. However, this
 may not be supported in future versions, so it is recommended that you
@@ -141,15 +141,15 @@ example with tab controllers. This can be done by explictly referencing the
 class definition from another **.xib** file, or by defining the same class name again
 in the second **.xib**.
 
-The latter case can be problematic. This is down to Visual Studio for Mac processing **.xib** files individually. It cannot automatically detect and merge duplicate definitions, so you may end up with conflicts applying the Register attribute multiple times when the same partial class is defined in multiple designer files. Recent versions of Visual Studio for Mac attempt to resolve this, but this may not
-always work as expected. In future is is likely to become unsupported, and
+The latter case can be problematic due to Visual Studio for Mac processing **.xib** files individually. It cannot automatically detect and merge duplicate definitions, so you may end up with conflicts applying the Register attribute multiple times when the same partial class is defined in multiple designer files. Recent versions of Visual Studio for Mac attempt to resolve this, but it may not
+always work as expected. In future this is likely to become unsupported, and
 instead Visual Studio for Mac will make all types defined in all **.xib** files and managed
 code in the project directly visible from all **.xib** files.
 
 ## Type Resolution
 
 Types used in IB are Objective-C type names. These are mapped to CLR types
-though the use of Register attributes. When generating outlet and action code,
+through the use of Register attributes. When generating outlet and action code,
 Visual Studio for Mac will resolve the corresponding CLR types for all Objective-C types
 wrapped by the Xamarin.iOS core, and fully qualify their type names.
 
