@@ -35,28 +35,11 @@ With these new data types, the same source code is compiled
 The following table shows the changes in our data types to
 	match this new 32/64 bit world:
 
-<table>
-	    <tr>
-	        <th>Native Type</th>
-	        <th>32-bit backing type</th> 
-	        <th>64-bit backing type</th>
-	    </tr>
-	    <tr>
-	        <td><code>System.nint</code></td>
-		<td><code>System.Int32</code> (<code>int</code>)</td>
-		<td><code>System.Int64</code> (<code>long</code>)</td>
-	    </tr>
-	    <tr>
-	        <td><code>System.nuint</code></td>
-		<td><code>System.UInt32</code> (<code>uint</code>)</td>
-		<td><code>System.UInt64</code> (<code>ulong</code>)</td>
-	    </tr>
-	    <tr>
-	        <td><code>System.nfloat</code></td>
-		<td><code>System.Single</code> (<code>float</code>)</td>
-		<td><code>System.Double</code> (<code>double</code>)</td>
-	    </tr>
-	</table>
+|Native Type|32-bit backing type|64-bit backing type|
+|--- |--- |--- |
+|`System.nint`|`System.Int32` (`int`)|`System.Int64` (`long`)|
+|`System.nuint`|`System.UInt32` (`uint`)|`System.UInt64` (`ulong`)|
+|`System.nfloat`|`System.Single` (`float`)|`System.Double` (`double`)|
 
 We chose those names to allow your C# code to look more or
 	less the same way that it would look today.
@@ -113,28 +96,11 @@ The point, size and rectangle data types that are used with
 
 When moving to **Unified**, you will need to replace instances of `System.Drawing` with their `CoreGraphics` counterparts as shown in the following table:
 
-<table>
-	    <tr>
-	        <th>Old Type in System.Drawing</th>
-	        <th>New Data Type CoreGraphics</th> 
-	        <th>Description</th>
-	    </tr>
-	    <tr>
-		<td><code>RectangleF</code></td>
-		<td><code>CGRect</code></td>
-		<td>Holds floating point rectangle information.  </td>
-	    </tr>
-	    <tr>
-		<td><code>SizeF</code></td>
-		<td><code>CGSize</code></td>
-		<td>Holds floating point size information (width, height)</td>
-	    </tr>
-	    <tr>
-		<td><code>PointF</code></td>
-		<td><code>CGPoint</code></td>
-		<td>Holds a floating point, point information (X, Y)</td>
-	    </tr>
-	</table>
+|Old Type in System.Drawing|New Data Type CoreGraphics|Description|
+|--- |--- |--- |
+|`RectangleF`|`CGRect`|Holds floating point rectangle information.|
+|`SizeF`|`CGSize`|Holds floating point size information (width, height)|
+|`PointF`|`CGPoint`|Holds a floating point, point information (X, Y)|
 
 The old data types used floats to store the elements of the
 	data structures, while the new one uses `System.nfloat`.

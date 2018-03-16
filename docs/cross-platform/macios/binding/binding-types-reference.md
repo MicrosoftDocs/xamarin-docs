@@ -2508,73 +2508,22 @@ interface MyColoringKeys {
 
 #### Strong dictionary types
 
-The following data types are supported in the `StrongDictionary`
-definition:
+The following data types are supported in the `StrongDictionary` definition:
 
-<table border="1" cellpadding="1" cellspacing="1" width="80%">
-<tbody>
-  <tr>
-    <td>C# Interface Type</td>
-    <td>NSDictionary Storage Type</td>
-  </tr>
-  <tr>
-    <td>bool</td>
-    <td>Boolean stored in an NSNumber</td>
-  </tr>
-  <tr>
-    <td>Enumeration values</td>
-    <td>integer stored in an NSNumber</td>
-  </tr>
-  <tr>
-    <td>int</td>
-    <td>32-bit integer stored in an NSNumber</td>
-  </tr>
-  <tr>
-    <td>uint</td>
-    <td>32-bit unsigned integer stored in an NSNumber</td>
-  </tr>
-  <tr>
-    <td>nint</td>
-    <td>NSInteger stored in an NSNumber</td>
-  </tr>
-  <tr>
-    <td>nuint</td>
-    <td>NSUInteger stored in an NSNumber</td>
-  </tr>
-  <tr>
-    <td>long</td>
-    <td>64-bit integer stored in an NSNumber</td>
-  </tr>
-  <tr>
-    <td>float</td>
-    <td>32-bit integer stored as an NSNumber</td>
-  </tr>
-  <tr>
-    <td>double</td>
-    <td>64-bit integer stored as an NSNumber</td>
-  </tr>
-  <tr>
-    <td>NSObject and subclasses</td>
-    <td>NSObject</td>
-  </tr>
-  <tr>
-    <td>NSDictionary</td>
-    <td>NSDictionary</td>
-  </tr>
-  <tr>
-    <td>string</td>
-    <td>NSString</td>
-  </tr>
-  <tr>
-    <td>NSString</td>
-    <td>NSString</td>
-  </tr>
-  <tr>
-    <td>C# Array of NSObject</td>
-    <td>NSArray</td>
-  </tr>
-  <tr>
-    <td>C# Array of enumerations</td>
-    <td>NSArray containing NSNumbers with the value</td>
-  </tr>
-</tbody>
+|C# Interface Type|`NSDictionary` Storage Type|
+|---|---|
+|`bool`|`Boolean` stored in an `NSNumber`|
+|Enumeration values|integer stored in an `NSNumber`|
+|`int`|32-bit integer stored in an `NSNumber`|
+|`uint`|32-bit unsigned integer stored in an `NSNumber`|
+|`nint`|`NSInteger` stored in an `NSNumber`|
+|`nuint`|`NSUInteger` stored in an `NSNumber`|
+|`long`|64-bit integer stored in an `NSNumber`|
+|`float`|32-bit integer stored as an `NSNumber`|
+|`double`|64-bit integer stored as an `NSNumber`|
+|`NSObject` and subclasses|`NSObject`|
+|`NSDictionary`|`NSDictionary`|
+|`string`|`NSString`|
+|`NSString`|`NSString`|
+|C# `Array` of `NSObject`|`NSArray`|
+|C# `Array` of enumerations|`NSArray` containing `NSNumber` values|

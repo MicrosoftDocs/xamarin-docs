@@ -113,32 +113,12 @@ Any application using Size Classes will also use the new [*Adaptive Segues*](~/i
 
 [![](images/adaptivesegue.png "The Adaptive Segues dropdown")](images/adaptivesegue.png#lightbox)
 
-<table>
-    <thead>
-        <tr>
-            <th>Segue</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Show</td>
-            <td>This is very similar to a Push segue, but it takes the content of the screen into account. </td>
-        </tr>
-        <tr>
-            <td>Show Detail</td>
-            <td>If the app displays a master and detail view (For example, in a split view controller on an iPAd), the content will replace the detail view. If the app displays only the master <strong>or</strong> detail, the content will replace the top of the view controller stack.</td>
-        </tr>
-        <tr>
-            <td>Presentation</td>
-            <td>This is similar to the Modal segue, and allows for selection of presentation and transition styles.</td>
-        </tr>
-        <tr>
-            <td>Popover Presentation</td>
-            <td>This presents content as a popover</td>
-        </tr>
-    </tbody>
-</table>
+|Segue|Description|
+|--- |--- |
+|Show|This is very similar to a Push segue, but it takes the content of the screen into account.|
+|Show Detail|If the app displays a master and detail view (For example, in a split view controller on an iPad), the content will replace the detail view. If the app displays only the master or detail, the content will replace the top of the view controller stack.|
+|Presentation|This is similar to the Modal segue, and allows for selection of presentation and transition styles.|
+|Popover Presentation|This presents content as a popover|
 
 ### Transferring Data with Segues
 

@@ -75,32 +75,15 @@ PurpleView.LeadingAnchor.ConstraintEqualTo (OrangeView.TrailingAnchor, 10).Activ
 
 Where the parts of the C# code correspond to the given parts of the equation as follows:
 
-<table width="100%" border="1">
-<tr>
-<td width="50%"><b>Equation</b></td><td><b>Code</b></td>
-</tr>
-<tr>
-<td width="50%">Item 1</td><td>PurpleView</td>
-</tr>
-<tr>
-<td width="50%">Attribute 1</td><td>LeadingAnchor</td>
-</tr>
-<tr>
-<td width="50%">Relationship</td><td>ConstraintEqualTo</td>
-</tr>
-<tr>
-<td width="50%">Multiplier</td><td>Defaults to 1.0 so not specified</td>
-</tr>
-<tr>
-<td width="50%">Item 2</td><td>OrangeView</td>
-</tr>
-<tr>
-<td width="50%">Attribute 2</td><td>TrailingAnchor</td>
-</tr>
-<tr>
-<td width="50%">Constant</td><td>10.0</td>
-</tr>
-</table>
+|Equation|Code|
+|---|---|
+|Item 1|PurpleView|
+|Attribute 1|LeadingAnchor|
+|Relationship|ConstraintEqualTo|
+|Multiplier|Defaults to 1.0 so not specified|
+|Item 2|OrangeView|
+|Attribute 2|TrailingAnchor|
+|Constant|10.0|
 
 In addition to providing only the parameters that are required to solve a given layout constraint equation, each of the Layout Anchor methods enforce the type safety of the parameters passed to them. So horizontal constraint anchors such as `LeadingAnchor` or `TrailingAnchor` can only be used with other horizontal anchor types and multipliers are only provided to size constraints.
 

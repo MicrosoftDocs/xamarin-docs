@@ -14,28 +14,13 @@ ms.author: amburns
 
 As shown on the [Xamarin Support page](https://www.xamarin.com/support), several options are available.  Here are some quick initial recommendations [inspired by Stack Overflow](http://stackoverflow.com/help/product-support) on how to pick the best option:
 
-<table>
-    <tr>
-        <td>"What does this error mean?" or "How do I ... ?"</td>
-        <td><a href="http://stackoverflow.com/questions/ask?tags=xamarin">Stack Overflow</a> under the <em>xamarin</em> tag</td>
-    </tr>
-    <tr>
-        <td>I believe this problem is caused by a defect in the Xamarin source code.</td>
-        <td><a href="https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html">Xamarin Bugzilla</a></td>
-    </tr>
-    <tr>
-        <td>I have an idea, feature request, or new documentation request.</td>
-        <td><a href="https://xamarin.uservoice.com">Xamarin UserVoice page</a></td>
-    </tr>
-    <tr>
-        <td>What resources, frameworks, or tools do other users recommend for ... ? (and other open-ended discussions)</td>
-        <td><a href="https://forums.xamarin.com/">Xamarin Forums</a></td>
-    </tr>
-    <tr>
-        <td>I have a question about subscriptions, licensing, or pricing.</td>
-        <td>Email or call using the contact info on the <a href="https://www.xamarin.com/faq">FAQ</a></td>
-    </tr>
-</table>
+|   |   |
+|---|---|
+|"What does this error mean?" or "How do I ... ?"|[Stack Overflow](http://stackoverflow.com/questions/ask?tags=xamarin) under the *xamarin* tag|
+|I believe this problem is caused by a defect in the Xamarin source code.|[Xamarin Bugzilla](https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html)|
+|I have an idea, feature request, or new documentation request.|[Xamarin UserVoice page](https://xamarin.uservoice.com)|
+|What resources, frameworks, or tools do other users recommend for ... ? (and other open-ended discussions)|[Xamarin Forums](https://forums.xamarin.com)|
+|I have a question about subscriptions, licensing, or pricing.|Email or call using the contact info on the [FAQ](https://www.xamarin.com/faq)|
 
 The Xamarin support team helps monitor each of these options.  We encourage all users to contribute their thoughtful questions and reports to take advantage of and help grow the knowledgeable Xamarin developer community.  For suspected defects, be sure to submit bug reports when possible to ensure that the issues are tracked formally by the Xamarin engineering team.
 

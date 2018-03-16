@@ -339,40 +339,14 @@ Signing and zipaligning the APK are technically two separate tasks that are perf
 
 Both of these commands require command line parameters that may vary from project to project. In addition, some of these command line parameters are passwords that should not appear in the console output when the build is running. We’ll store some of these command line parameters in environment variables. The environment variables required for signing and/or zip aligning are described in the table below:
 
-<table>
-    <thead>
-        <tr>
-            <td>Environment Variable</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>KEYSTORE_FILE</td>
-            <td>This is the path to the keystore for signing the APK</td>
-        </tr>
-        <tr>
-            <td>KEYSTORE_ALIAS</td>
-            <td>The key in the keystore that will be used to sign the APK.</td>
-        </tr>
-        <tr>
-            <td>INPUT_APK</td>
-            <td>The APK that is created by `xbuild`.</td>
-        </tr>
-        <tr>
-            <td>SIGNED_APK</td>
-            <td>The signed APK produced by `jarsigner`.</td>
-        </tr>
-        <tr>
-            <td>FINAL_APK</td>
-            <td>This is the zip aligned APK that is produced by `zipalign`.</td>
-        </tr>
-        <tr>
-            <td>STORE_PASS</td>
-            <td>This is the password that is used to access the contents of the keystore for singing the file.</td>
-        </tr>
-    </tbody>
-</table>
+|Environment Variable|Description|
+|--- |--- |
+|KEYSTORE_FILE|This is the path to the keystore for signing the APK|
+|KEYSTORE_ALIAS|The key in the keystore that will be used to sign the APK.|
+|INPUT_APK|The APK that is created by `xbuild`.|
+|SIGNED_APK|The signed APK produced by `jarsigner`.|
+|FINAL_APK|This is the zip aligned APK that is produced by `zipalign`.|
+|STORE_PASS|This is the password that is used to access the contents of the keystore for singing the file.|
 
 As described in the Requirements section, these environment variables can be set during the build using the EnvInject plugin. The job should have a new build step added based on the Inject environment variables, as shown in the next screenshot:
 

@@ -40,63 +40,14 @@ This article covers the following topics:
 
 ## Extension Points
 
-There are several types of Extension that can be created in iOS 8 (and greater):
-
-<table>
-<colgroup>
-<col />
-<col />
-<col />
-</colgroup>
-
-<thead>
-<tr>
-	<th >Type</th>
-	<th >Description</th>
-	<th >Extension Point</th>
-	<th >Host App</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-	<td >Action</td>
-	<td >Specialized editor or viewer for a particular media type</td>
-	<td ><code>com.apple.ui-services</code></td>
-	<td >Any</td>
-</tr>
-<tr>
-	<td >Document Provider</td>
-	<td >Allows app to use a remote document store</td>
-	<td ><code>com.apple.fileprovider-ui</code></td>
-	<td >Apps using a <a href="https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/">UIDocumentPickerViewController</a></td>
-</tr>
-<tr>
-	<td >Keyboard</td>
-	<td >Alternate keyboards</td>
-	<td ><code>com.apple.keyboard-service</code></td>
-	<td >Any</td>
-</tr>
-<tr>
-	<td >Photo Editing</td>
-	<td >Photo manipulation and editing</td>
-	<td ><code>com.apple.photo-editing</code></td>
-	<td >Photos.app editor</td>
-</tr>
-<tr>
-	<td >Share</td>
-	<td >Shares data with social networks, messaging services, etc.</td>
-	<td ><code>com.apple.share-services</code></td>
-	<td >Any</td>
-</tr>
-<tr>
-	<td >Today</td>
-	<td >“Widgets” that appear on the Today screen or Notification Center</td>
-	<td ><code>com.apple.widget-extensions</code></td>
-	<td >Today and Notification Center</td>
-</tr>
-</tbody>
-</table>
+|Type|Description|Extension Point|Host App|
+|--- |--- |--- |--- |
+|Action|Specialized editor or viewer for a particular media type|`com.apple.ui-services`|Any|
+|Document Provider|Allows app to use a remote document store|`com.apple.fileprovider-ui`|Apps using a [UIDocumentPickerViewController](https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/)|
+|Keyboard|Alternate keyboards|`com.apple.keyboard-service`|Any|
+|Photo Editing|Photo manipulation and editing|`com.apple.photo-editing`|Photos.app editor|
+|Share|Shares data with social networks, messaging services, etc.|`com.apple.share-services`|Any|
+|Today|“Widgets” that appear on the Today screen or Notification Center|`com.apple.widget-extensions`|Today and Notification Center|
 
 [Additional extension points](~/ios/platform/introduction-to-ios10/index.md#app-extensions) were added in iOS 10.
 

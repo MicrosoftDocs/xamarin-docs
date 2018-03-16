@@ -150,40 +150,12 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 
 Here are the differences between the database types:
 
-<table cellpadding="1" cellspacing="1" border="1" width="100%">
-<thead>
-<tr>
-<td></td>
-<td>Public Database</td>
-<td>Private Database</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Data Type</td>
-<td>Shared Data</td>
-<td>Current User's Data</td>
-</tr>
-
-<tr>
-<td>Quota</td>
-<td>Accounted for in the Developer's Quota</td>
-<td>Accounted for in the User's Quota</td>
-</tr>
-
-<tr>
-<td>Default Permissions</td>
-<td>World Readable</td>
-<td>User Readable</td>
-</tr>
-
-<tr>
-<td>Editing Permissions</td>
-<td>iCloud Dashboard Roles via a record-class level</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
+||Public Database|Private Database|
+|---|--- |--- |
+|**Data Type**|Shared Data|Current User's Data|
+|**Quota**|Accounted for in the Developer's Quota|Accounted for in the User's Quota|
+|**Default Permissions**|World Readable|User Readable|
+|**Editing Permissions**|iCloud Dashboard Roles via a record-class level|N/A|
 
 ### Records
 

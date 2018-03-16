@@ -112,63 +112,23 @@ This section will cover the typical types of trait collections that the user wil
 
 The following is a typical Trait Collection that the developer might see on an iPhone:
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-	<td>Property</td>
-	<td>Value</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td><code>HorizontalSizeClass</code></td>
-	<td>Compact</td>
-</tr>
-<tr>
-	<td><code>VerticalSizeClass</code></td>
-	<td>Regular</td>
-</tr>
-<tr>
-	<td><code>UserInterfaceIdom</code></td>
-	<td>Phone</td>
-</tr>
-<tr>
-	<td><code>DisplayScale</code></td>
-	<td>2.0</td>
-</tr>
-</tbody>
-</table>
+|Property|Value|
+|--- |--- |
+|`HorizontalSizeClass`|Compact|
+|`VerticalSizeClass`|Regular|
+|`UserInterfaceIdom`|Phone|
+|`DisplayScale`|2.0|
 
 The above set would represent a Fully Qualified Trait Collection, as it has values for all of its trait properties.
 
 It is also possible to have a Trait Collection that is missing some of its values (which Apple refers to as *Unspecified*):
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-	<td>Property</td>
-	<td>Value</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td><code>HorizontalSizeClass</code></td>
-	<td>Compact</td>
-</tr>
-<tr>
-	<td><code>VerticalSizeClass</code></td>
-	<td>{unspecified}</td>
-</tr>
-<tr>
-	<td><code>UserInterfaceIdom</code></td>
-	<td>{unspecified}</td>
-</tr>
-<tr>
-	<td><code>DisplayScale</code></td>
-	<td>{unspecified}</td>
-</tr>
-</tbody>
-</table>
+|Property|Value|
+|--- |--- |
+|`HorizontalSizeClass`|Compact|
+|`VerticalSizeClass`|Unspecified|
+|`UserInterfaceIdom`|Unspecified|
+|`DisplayScale`|Unspecified|
 
 Generally, however, when the developer asks the Trait Environment for its Trait Collection, it will return a fully qualified collection as seen in the example above.
 
@@ -212,7 +172,6 @@ Another function that a developer can perform on Trait Collections is to add two
 
 As stated above, if any of the traits is unspecified in one of the Trait Collections and is specified in another, the value will be set to the specified version. However, if there are multiple versions of a given value specified, the value from the last Trait Collection will be the value that is used.
 
-
 ## Adaptive View Controllers
 
 This section will cover the details of how the iOS View and View Controllers have adopted the concepts of Traits and Size Classes to automatically be more adaptive in the developer's applications.
@@ -255,58 +214,11 @@ First, iOS 8 does some setup to prepare for the transition to take place. Next, 
 
 iOS 8 provides several callbacks that the developer can use to participate in the Trait Change as seen in the following table:
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-	<td>Phase</td>
-	<td>Callback</td>
-	<td>Description</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td>Setup</td>
-	<td>
-		<ul>
-		<li><code>WillTransitionToTraitCollection</code></li>
-		<li><code>TraitCollectionDidChange</code></li>
-		</ul>
-	</td>
-	<td>
-		<ul>
-		<li>This method gets called at the beginning of a Trait Change before a Trait Collection gets set to its new value.</li>
-		<li>The method gets called when the value of the Trait Collection has changed but before any animation takes place.</li>
-		</ul>
-	</td>
-</tr>
-<tr>
-	<td>Animation</td>
-	<td>
-		<ul>
-		<li><code>WillTransitionToTraitCollection</code></li>
-		</ul>
-	</td>
-	<td>
-		<ul>
-		<li>The Transition Coordinator that gets passed to this method has an <code>AnimateAlongside</code> property that allows the developer to add animations that will be executed along with the default animations.</li>
-		</ul>
-	</td>
-</tr>
-<tr>
-	<td>Clean-up</td>
-	<td>
-		<ul>
-		<li><code>WillTransitionToTraitCollection</code></li>
-		</ul>
-	</td>
-	<td>
-		<ul>
-		<li>Provides a method for developers to include their own cleanup code after the transition takes place.</li>
-		</ul>
-	</td>
-</tr>
-</tbody>
-</table>
+|Phase|Callback|Description|
+|--- |--- |--- |
+|Setup|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>This method gets called at the beginning of a Trait Change before a Trait Collection gets set to its new value.</li><li>The method gets called when the value of the Trait Collection has changed but before any animation takes place.</li></ul>|
+|Animation|`WillTransitionToTraitCollection`|The Transition Coordinator that gets passed to this method has an `AnimateAlongside` property that allows the developer to add animations that will be executed along with the default animations.|
+|Clean-up|`WillTransitionToTraitCollection`|Provides a method for developers to include their own cleanup code after the transition takes place.|
 
 The `WillTransitionToTraitCollection` method is great for animating View Controllers along with the Trait Collection changes. The `WillTransitionToTraitCollection` method is only available on View Controllers ( `UIViewController`) and not on other Trait Environments, like `UIViews`.
 
@@ -793,37 +705,37 @@ Do the following:
 1. Open **Visual Studio for Mac** and load the **Solution** to add the Dynamic Launch Screen to.
 2. In the **Solution Explorer**, right-click the `MainStoryboard.storyboard` file and select **Open With** > **Xcode Interface Builder**:
 
-	[![](unified-storyboards-images/dls01.png "Open With Xcode Interface Builder")](unified-storyboards-images/dls01.png#lightbox)
+    [![](unified-storyboards-images/dls01.png "Open With Xcode Interface Builder")](unified-storyboards-images/dls01.png#lightbox)
 3. In Xcode, select **File** > **New** > **File...**:
 
-	[![](unified-storyboards-images/dls02.png "Select File / New")](unified-storyboards-images/dls02.png#lightbox)
+    [![](unified-storyboards-images/dls02.png "Select File / New")](unified-storyboards-images/dls02.png#lightbox)
 4. Select **iOS** > **User Interface** > **Launch Screen** and click the **Next** button:
 
-	[![](unified-storyboards-images/dls03.png "Select iOS / User Interface / Launch Screen")](unified-storyboards-images/dls03.png#lightbox)
+    [![](unified-storyboards-images/dls03.png "Select iOS / User Interface / Launch Screen")](unified-storyboards-images/dls03.png#lightbox)
 5. Name the file `LaunchScreen.xib` and click the **Create** button:
 
-	[![](unified-storyboards-images/dls04.png "Name the file LaunchScreen.xib")](unified-storyboards-images/dls04.png#lightbox)
+    [![](unified-storyboards-images/dls04.png "Name the file LaunchScreen.xib")](unified-storyboards-images/dls04.png#lightbox)
 6. Edit the design of the launch screen by adding graphic elements and using Layout Constraints to position them for the given devices, orientations and screen sizes:
 
-	[![](unified-storyboards-images/dls05.png "Editing the design of the launch screen")](unified-storyboards-images/dls05.png#lightbox)
+    [![](unified-storyboards-images/dls05.png "Editing the design of the launch screen")](unified-storyboards-images/dls05.png#lightbox)
 7. Save the changes to `LaunchScreen.xib`.
 8. Select the **Applications Target** and the **General** tab:
 
-	[![](unified-storyboards-images/dls06.png "Select the Applications Target and the General tab")](unified-storyboards-images/dls06.png#lightbox)
+    [![](unified-storyboards-images/dls06.png "Select the Applications Target and the General tab")](unified-storyboards-images/dls06.png#lightbox)
 9. Click the **Choose Info.plist** button, select the `Info.plist` for the Xamarin app and click the **Choose** button:
 
-	[![](unified-storyboards-images/dls07.png "Select the Info.plist for the Xamarin app")](unified-storyboards-images/dls07.png#lightbox)
+    [![](unified-storyboards-images/dls07.png "Select the Info.plist for the Xamarin app")](unified-storyboards-images/dls07.png#lightbox)
 10. In the **App Icons and Launch Images** section, open the **Launch Screen File** dropdown and choose the `LaunchScreen.xib` created above:
 
-	[![](unified-storyboards-images/dls08.png "Choose the LaunchScreen.xib")](unified-storyboards-images/dls08.png#lightbox)
+    [![](unified-storyboards-images/dls08.png "Choose the LaunchScreen.xib")](unified-storyboards-images/dls08.png#lightbox)
 11. Save the changes to the file and return to Visual Studio for Mac.
 12. Wait for Visual Studio for Mac to finish syncing changes with Xcode.
 13. In the **Solution Explorer**, right-click on the **Resource** folder and select **Add** > **Add Files...**:
 
-	[![](unified-storyboards-images/dls09.png "Select Add / Add Files...")](unified-storyboards-images/dls09.png#lightbox)
+    [![](unified-storyboards-images/dls09.png "Select Add / Add Files...")](unified-storyboards-images/dls09.png#lightbox)
 14. Select the `LaunchScreen.xib` file created above and click the **Open** button:
 
-	[![](unified-storyboards-images/dls10.png "Select the LaunchScreen.xib file")](unified-storyboards-images/dls10.png#lightbox)
+    [![](unified-storyboards-images/dls10.png "Select the LaunchScreen.xib file")](unified-storyboards-images/dls10.png#lightbox)
 15. Build the application.
 
 ### Testing the Dynamic Launch Screen
