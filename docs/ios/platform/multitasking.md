@@ -256,7 +256,7 @@ This article has covered the steps required to ensure that a Xamarin.iOS app wil
 ## Related Links
 
 - [iOS 9 Samples](https://developer.xamarin.com/samples/ios/iOS9/)
-- [MultiTask (sample)](http://developer.xamarin.comhttps://developer.xamarin.com/samples/monotouch/ios9/MultiTask/)
+- [MultiTask (sample)](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/)
 - [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

@@ -500,4 +500,4 @@ Note the following:
 - [Layout (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 - [BusinessTumble Example (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
 - [Responsive Layout (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
-- [Display an Image based on Screen Orientation](https://developer.xamarin.comhttps://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)
+- [Display an Image based on Screen Orientation](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)

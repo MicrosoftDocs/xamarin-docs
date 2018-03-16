@@ -407,7 +407,7 @@ The constructor of this program applies the matrix to the path with the followin
 transformedPath.Transform(matrix);
 ```
 
-The path does *not* retain this matrix as a property. Instead, it applies the transform to all of the coordinates of the path. If `Transform` is called again, the transform is applied again, and the only way you can go back is by applying another matrix that undoes the transform. Fortunately, the `SKMatrix` structure defines a [`TryInverse`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.TryInvert/p/SkiaSharp.SKMatrix@/) method that obtains the matrix that reverses a given matrix:
+The path does *not* retain this matrix as a property. Instead, it applies the transform to all of the coordinates of the path. If `Transform` is called again, the transform is applied again, and the only way you can go back is by applying another matrix that undoes the transform. Fortunately, the `SKMatrix` structure defines a [`TryInverse`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.TryInvert/p/SkiaSharp.SKMatrix/) method that obtains the matrix that reverses a given matrix:
 
 ```csharp
 SKMatrix inverse;

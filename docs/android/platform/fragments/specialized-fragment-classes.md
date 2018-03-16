@@ -235,8 +235,7 @@ public class AlertDialogFragment : DialogFragment
 
 To help manage preferences, the Fragments API provides the
 `PreferenceFragment` subclass. The `PreferenceFragment` is similar to
-the [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/
-) &ndash; 
+the [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/) &ndash; 
 it will show a hierarchy of preferences to the user in a
 Fragment. As the user interacts with the preferences, they will be
 automatically saved to

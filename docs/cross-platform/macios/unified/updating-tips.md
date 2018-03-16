@@ -235,4 +235,4 @@ class BasicPinAnnotation : MKAnnotation
 - [Updating Xamarin.Forms Apps](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 - [Updating Bindings](~/cross-platform/macios/unified/update-binding.md)
 - [Working with Native Types in Cross-Platform Apps](~/cross-platform/macios/native-types-cross-platform.md)
-- [Classic vs Unified API differences](http://developer.xamarin.comhttps://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Classic vs Unified API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
