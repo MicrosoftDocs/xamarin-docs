@@ -635,5 +635,5 @@ Now it's time to dissect the tools and skills you have just learned. Next up is 
 
 ## Related Links
 
-- [Xamarin Andrid App Icons (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
+- [Xamarin Android App Icons (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
 - [Phoneword (sample)](https://developer.xamarin.com/samples/monodroid/Phoneword)
