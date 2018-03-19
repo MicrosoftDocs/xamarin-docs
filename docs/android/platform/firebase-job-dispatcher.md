@@ -7,7 +7,7 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
+ms.date: 03/19/2018
 ---
 
 # Firebase Job Dispatcher
@@ -23,7 +23,7 @@ For example, a background job might poll a website every few minutes to query fo
 Android already provides several APIs to help with performing work in the background, however none of these are a comprehensive solution:
 
 * **[Intent Services](~/android/app-fundamentals/services/creating-a-service/intent-services.md)** &ndash; Intent Services are great for performing the work, however they provide no way to schedule work.
-* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager)** &ndash; These APIs only allow work to be scheduled, but provide no way to actually perform the work. Also, the AlarmManager only allows time based constraints, which means raise an alarm at a certain time or after a certain period of time has elapsed. 
+* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)** &ndash; These APIs only allow work to be scheduled, but provide no way to actually perform the work. Also, the AlarmManager only allows time based constraints, which means raise an alarm at a certain time or after a certain period of time has elapsed. 
 * **[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)** &ndash; The JobSchedule is a great API that works with the operating system to schedule jobs. However, it is only available for those Android apps that target API level 21 or higher. 
 * **[Broadcast Receivers](~/android/app-fundamentals/broadcast-receivers.md)** &ndash; An Android app can setup broadcast receivers to perform work in response to system wide events or Intents. However, broadcast receivers don't provide any control over when  the job should be run. Also changes in the Android operating system will restrict when broadcast receivers will work, or the kinds of work that they can respond to. 
 * **Google Cloud Message Network Manager** &ndash; For a long time this was, arguably, the best way to intelligently schedule background work. However, the GCMNetworkManager has since been deprecated. 
