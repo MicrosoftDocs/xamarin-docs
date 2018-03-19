@@ -407,7 +407,8 @@ screen:
 
 
 <a name="device-edit" />
- 
+
+
 ### Edit Device
 
 # [Visual Studio](#tab/vswin)
@@ -554,6 +555,7 @@ The additional options menu contains the following items:
 
 <a name="properties" />
  
+
 ## Profile Properties
 
 The **New Device** and **Device Edit** screens list the properties of
