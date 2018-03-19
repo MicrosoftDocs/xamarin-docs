@@ -104,30 +104,28 @@ of how this is done:
 
 **C# (Managed Code)**
 
-```
-
+```csharp
  class MyViewController : UIViewController{
  	[Export ("myFunc")]
  	public void MyFunc ()
  	{
  	}
  }
-
-
 ```
 
 **Objective-C:**
 
-```csharp
+```objectivec
 @interface MyViewController : UIViewController { }
 
 	-(void)myFunc;
-@end @implementation
+@end
 
-	MyViewController {}
+@implementation	MyViewController {}
+
 	-(void) myFunc
 	{
-	/* code to call the managed MyViewController.MyFunc method */
+		/* code to call the managed MyViewController.MyFunc method */
 	}
 @end
 
