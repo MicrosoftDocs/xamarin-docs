@@ -6,20 +6,40 @@ ms.assetid: C10FD999-7A91-4708-B642-0C1B0901BD24
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 03/09/2018
+ms.date: 03/19/2018
 ---
 
 # Foreground Services
 
-Some services are performing some tasks that users are actively  aware of, these services are known as _foreground services_. An example of a foreground service is an app that is providing the user with directions while driving or walking. Even if the app is in the background, it is still important that the service has sufficient resources to work properly and that the user has a quick and handy way to access the app. For an Android app, this means that a foreground service should receive higher priority than a "regular" service and a foreground service must provide a `Notification` that Android will display as long as the service is running.
+A foreground service is a special type of a bound service or a started service. Occasionally services will perform tasks that users must be actively aware of, these services are known as _foreground services_. An example of a foreground service is an app that is providing the user with directions while driving or walking. Even if the app is in the background, it is still important that the service has sufficient resources to work properly and that the user has a quick and handy way to access the app. For an Android app, this means that a foreground service should receive higher priority than a "regular" service and a foreground service must provide a `Notification` that Android will display as long as the service is running.
  
-A foreground service is created and started just as any other service. When the service is starting up, it will register itself with Android as a foreground service.
- 
-This guide will discuss the extra steps that must be taken to register a foreground service, and to stop the service when  it's done.
+To start a foreground service, the app must dispatch an Intent that tells Android to start the service. Then the service must register itself as a foreground service with Android. Apps that are running on Android 8.0 (or higher) should use the `Context.StartForegroundService` method to start the service, while apps that are running on devices with an older version of Android should use `Context.StartService`
+
+This C# extension method is an example of how to start a foreground service. On Android 8.0 and higher it will use the `StartForegroundService` method, otherwise the older `StartService` method will be used.  
+
+```csharp
+public static void StartForegroundServiceComapt<T>(this Context context, Bundle args = null) where T : Service
+{
+    var intent = new Intent(context, typeof(T));
+    if (args != null) 
+    {
+        intent.PutExtras(args);
+    }
+
+    if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.O)
+    {
+        context.StartForegroundService(intent);
+    }
+    else
+    {
+        context.StartService(intent);
+    }
+}
+```
 
 ## Registering as a Foreground Service
 
-A foreground service is a special type of a bound service or a started service. The service, once it has started, calls the [`StartForeground`](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/) method to register itself with Android as a foreground service.   
+Once a foreground service has started, it must register itself with Android by invoking the [`StartForeground`](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/). If the service is started with the `Service.StartForegroundService` method but does not register itself, then Android will stop the service and flag the app as non-responsive.
 
 `StartForeground` takes two parameters, both of which are mandatory:
  
@@ -74,8 +94,7 @@ The status bar notification that is displayed can also be removed by passing `tr
 StopForeground(true);
 ```
 
-If the service is halted with a call to `StopSelf` or `StopService`, then the status bar notificaiton will likewise be removed.
-
+If the service is halted with a call to `StopSelf` or `StopService`, the status bar notification will be removed.
 
 ## Related Links
 

@@ -441,7 +441,7 @@ A simplified example of creating a custom `normal` permission will be described 
 
 To use a custom permission, it is declared by the service while the client explicitly requests that permission.
 
-To create a permission in the service APK, a `permission` element is added to the `manifest` element in**AndroidManifest.xml**. This permission must have the `name`, `protectionLevel`, and `label` attributes set. The `name` attribute must be set to a string that uniquely identifies the permission. The name will be displayed in the **App Info** view of the **Android Settings** (as shown in the next section).
+To create a permission in the service APK, a `permission` element is added to the `manifest` element in **AndroidManifest.xml**. This permission must have the `name`, `protectionLevel`, and `label` attributes set. The `name` attribute must be set to a string that uniquely identifies the permission. The name will be displayed in the **App Info** view of the **Android Settings** (as shown in the next section).
 
 The `protectionLevel` attribute must be set to one of the four string values that were described above.  The `label` and `description` must refer to string resources and are used to provide a user-friendly name and description to the user.
 

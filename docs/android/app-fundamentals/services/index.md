@@ -7,7 +7,7 @@ ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/16/2018
+ms.date: 03/19/2018
 ---
 
 # Creating Android Services
@@ -39,7 +39,7 @@ Background work can be broken down into two broad classifications:
 
 There are four different types of Android services:
 
-* **Bound Service** &ndash; A _bound service_ is a service that  has some other component (typically an Activity) bound to it. A bound service provides an interface that allows the bound component and the service to interact with each other. Once there are no more clients bound to the service, Android will shut the service down.
+* **Bound Service** &ndash; A _bound service_ is a service that  has some other component (typically an Activity) bound to it. A bound service provides an interface that allows the bound component and the service to interact with each other. Once there are no more clients bound to the service, Android will shut the service down. 
 
 * **`IntentService`** &ndash; An _`IntentService`_ is a specialized subclass of the `Service` class that simplifies service creation and usage. An `IntentService` is meant to handle individual autonomous calls. Unlike a service, which can concurrently handle multiple calls, an `IntentService` is more like a _work queue processor_ &ndash; work is queued up and an `IntentService` processes each job one at a time on a single worker thread. Typically, an`IntentService` is not bound to an Activity or a Fragment. 
 
@@ -53,4 +53,26 @@ While most services run in the background, there is a special sub-category known
 
 It is also possible to run a service in it's own process on the same device, this is sometimes referred to as a _remote service_ or as an _out-of-process service_. This does require more effort to create, but can be useful for when an application needs to share functionality with other applications, and can, in some cases, improve the user experience of an application. 
 
-Each of these services has its own characteristics and behaviours, and so will be covered in more detail in their own guides.
+### Background Execution Limits in Android 8.0
+
+Starting in Android 8.0 (API level 26), an Android application no longer have the ability to run freely in the background. When in the foreground, an app can start and run services without restriction. When an application moves into the background, Android will grant the app a certain amount of time to start and use services. Once that time has elapsed, the app can no longer start any services and any services that were started will be terminated. At this point is is not possible for the app to perform any work. Android considers an application to be in the foreground if one of the following conditions are met:
+
+* There is a visible activity (either started or paused).
+* The app has started a foreground service.
+* Another app is in the foreground and is using components from an app that would be otherwise in the background. An example of this is if Application A, which is in the foreground, is bound to a service provided by Application B. Application B would then also be considered in the foreground, and not terminated by Android for being in the background.
+
+There are some situations where, even though an app is in the background,  Android will wake up the app and relax these restrictions for a few minutes, allowing the app to perform some work:
+* A high priority Firebase Cloud Message is received by the app.
+* The app receives a broadcast, such as 
+* The application receives an executes a `PendingIntent` in response to a Notification.
+
+Existing Xamarin.Android applications may have to change how they perform background work to avoid any issues that might arise on Android 8.0. Here are some practical alterantives to an Android service:
+
+* **Schedule work to run in the background using the Android Job Scheduler or the [Firebase Job Dispatcher](~/android/platform/firebase-job-dispatcher.md)** &ndash; These two libraries provide a framework for applications to segregate background work in to _jobs_, a discrete unit of work. Apps can then schedule the job with the operating system along with some criteria about when the job can run.
+* **Start the service in the foreground** &ndash; a foreground service is useful for when the app must perform some task in the background and the user may need to periodically interact with that task. The foreground service will display a persistent notification so that the user is aware that the app is running a background task and also provides a way to monitor or interact with the task. An example of this would be a podcasting app that is playing back a podcast to the user or perhaps downloading a podcast episode so that it can be enjoyed later. 
+* **Use a high priority Firebase Cloud Message (FCM)** &ndash; When Android receives a high priority FCM for an app, it will allow that app to run services in the background for a short period of time. This would be a good alternative to having a background service that polls an app in the background. 
+* **Defer work for when the app comes into the foreground** &ndash; If none of the previous solutions are viable, then apps must develop their own way to pause and resume work when the app comes to the foreground.
+
+## Related Links
+
+* [Android Oreo Background Execution Limits](https://www.youtube.com/watch?v=Pumf_4yjTMc)
