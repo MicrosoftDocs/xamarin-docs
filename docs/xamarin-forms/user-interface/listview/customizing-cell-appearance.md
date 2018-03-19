@@ -69,11 +69,9 @@ Note that when targeting Windows Phone 8.1, `ImageCell` will not scale images by
 <a name="customcells" />
 
 ## Custom Cells
-When the built-in cells don't provide the required layout, custom cells implemented the required layout. For example, you may want to present a cell with two labels that have equal weight. A `LabelCell` would be insufficient because the `LabelCell` has one label that is smaller.
+When the built-in cells don't provide the required layout, custom cells implemented the required layout. For example, you may want to present a cell with two labels that have equal weight. A `LabelCell` would be insufficient because the `LabelCell` has one label that is smaller. Most cell customizations add additional read-only data (such as additional labels, images or other display information).
 
 All custom cells must derive from [`ViewCell`](http://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/), the same base class that all of the built-in cell types use.
-
-Most cell customizations add additional read-only data (such as additional labels, images or other display information). If buttons or other controls that can be focused are added, the cell itself may not be clickable on Android. See below for a way to overcome this limitation.
 
 Xamarin.Forms 2 introduced a new [caching behavior](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy) on the `ListView` control which can be set to improve scrolling performance for some types of custom cells.
 
@@ -257,30 +255,6 @@ var listView = new ListView {
 ```
 
 On iOS and Android, if the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) is recycling elements and the custom cell uses a custom renderer, the custom renderer must correctly implement property change notification. When cells are reused their property values will change when the binding context is updated to that of an available cell, with `PropertyChanged` events being raised. For more information, see [Customizing a ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md). For more information about cell recycling, see [Caching Strategy](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy).
-
-### Enabling Row Selection on Android
-
-To allow row selection for cells that also include input elements such as buttons, a simple [`custom renderer`](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) is required. In the common code, create a subclass of `Button` so that a custom renderer can be added in the platform projects:
-
-```csharp
-public class ListButton : Button { }
-```
-
-The renderer implementation for Android simply sets the `Focusable` property which allows the row to be selectable as well as host-clickable buttons. This code is added to the Android application project:
-
-```csharp
-[assembly: ExportRenderer (typeof (ListButton), typeof (ListButtonRenderer))]
-// ...
-public class ListButtonRenderer : ButtonRenderer {
-    protected override void OnElementChanged (ElementChangedEventArgs<ListButton> e) {
-        base.OnElementChanged (e);
-        Control.Focusable = false;
-    }
-}
-```
-
-As stated above, only Android requires the `ButtonRenderer` to be implemented. iOS and Windows Phone platforms both allow the button to be clicked without implementing a custom renderer.
-
 
 ## Related Links
 
