@@ -21,7 +21,7 @@ your application.  SkiaSharp is a .NET binding to the [Skia](https://skia.org) l
 power of this library.
 
 The library is currently available as a cross-platform [NuGet Package](https://www.nuget.org/packages/SkiaSharp), you
-can it to your project by adding the NuGet reference.
+can add it to your project by adding the NuGet reference.
 
 To draw, your code will create an `SkCanvas` which describes the
 surface where the drawing operations will take place.
