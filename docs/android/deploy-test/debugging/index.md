@@ -7,12 +7,12 @@ ms.assetid: A355A471-8195-4391-93FE-0000BCB17923
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/16/2018
 ---
 
 # Debugging
 
-## Debuggin Overview
+## Debugging Overview
 
 Developing Android applications requires running the application,
 either on physical hardware or using an emulator or simulator. Using
