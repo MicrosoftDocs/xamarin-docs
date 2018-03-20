@@ -42,7 +42,7 @@ The following code example demonstrates using the *device* styles in a XAML page
 			<Label Text="Title style"
 			  Style="{DynamicResource TitleStyle}" />
 			<Label Text="Subtitle text style"
-			  Style="{DynamicResource SubtitleTextStyle}" />
+			  Style="{DynamicResource SubtitleStyle}" />
 			<Label Text="Body style"
 			  Style="{DynamicResource BodyStyle}" />
 			<Label Text="Caption style"
