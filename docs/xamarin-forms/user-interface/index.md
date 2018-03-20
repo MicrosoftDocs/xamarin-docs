@@ -62,6 +62,10 @@ Adding maps requires an additional NuGet package download and some platform-spec
 
 The [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) view is a control for selecting a text item from a list of data.
 
+## [Slider](slider.md)
+
+The `Slider` allows a user to select a numeric value from a continuous range.
+
 ## [Styles](styles/index.md)
 
 Font, color, and other attributes can be grouped into styles which can be shared across controls, layouts, or the entire application using ResourceDictionaries.
