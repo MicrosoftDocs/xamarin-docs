@@ -56,7 +56,7 @@ and layout as normal Android packages, with the following additions:
     uncompressed within the *assemblies* folder. During process startup
     in Release builds the *.apk* is *mmap()* ed into the process and
     the assemblies are loaded from memory. This permits faster app
-    startup, as assemblies to not need to be extracted prior to
+    startup, as assemblies do not need to be extracted prior to
     execution. - *Note:* Assembly location information such as
     [Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/)
     and
