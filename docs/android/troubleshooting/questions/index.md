@@ -6,7 +6,7 @@ ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/19/2018
 ---
 
 # Frequently Asked Questions
@@ -88,6 +88,12 @@ app, that is, they are mutually exclusive. This is because
 `Support-v13` actually contains all of the types and implementation of
 `Support-v4`. If you try and reference both in the same project you
 will encounter duplicate type errors.
+
+### [How do I resolve a PathTooLongException Error?](path-too-long-exception.md)
+
+This article explains how to resolve a **PathTooLongException** error
+that may occur while building a Xamarin.Android project.
+
 
 
 ## Deprecated

@@ -228,6 +228,7 @@
 #### [How do I enable Intellisense in Android .axml files?](troubleshooting/questions/enable-axml-intellisense.md)
 #### [Why can't my Android release build connect to the Internet?](troubleshooting/questions/android-internet.md)
 #### [Smarter Xamarin Android Support v4 / v13 NuGet Packages](troubleshooting/questions/android-support-v4v13-libraries.md)
+#### [How do I resolve a PathTooLongException?](troubleshooting/questions/path-too-long-exception.md)
 #### [What version of Xamarin.Android added Lollipop support?](troubleshooting/questions/xa-lollipop.md)
 #### [Android.Support.v7.AppCompat - No resource found that matches the given name: attr 'android:actionModeShareDrawable'](troubleshooting/questions/missing-action-mode-share-drawable.md)
 #### [Adjusting Java memory parameters for the Android designer](troubleshooting/questions/android-designer-java-memory.md)
