@@ -366,7 +366,7 @@ The view contains the following main elements:
 Do the following to wire-up the view controller for Manual Focus Control:
 
 
- 1. Add the following using statements:
+1. Add the following using statements:
 
 	```csharp
 	using System;
@@ -383,7 +383,7 @@ Do the following to wire-up the view controller for Manual Focus Control:
 	using System.Timers;
 	```  
   
- 1. Add the following private variables:
+1. Add the following private variables:
 
 	```csharp
 	#region Private Variables
