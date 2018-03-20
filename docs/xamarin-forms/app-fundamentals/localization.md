@@ -18,22 +18,6 @@ _Xamarin.Forms apps can be localized using .NET resources files._
 
 The built-in mechanism for localizing .NET applications uses [RESX files](http://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx) and the classes in the `System.Resources` and `System.Globalization` namespaces. The RESX files containing translated strings are embedded in the Xamarin.Forms assembly, along with a compiler-generated class that provides strongly-typed access to the translations. The translation text can then be retrieved in code.
 
-This document contains the following sections:
-
-**Globalizing Xamarin.Forms Code**
-
-* Adding and using string resources in a Xamarin.Forms PCL app.
-* Enabling language detection in each of the native apps.
-
-**Localizing XAML**
-
-* Localizing XAML using an `IMarkupExtension`.
-* Enabling the markup extension in the native apps.
-
-**Localizing Platform-Specific Elements**
-
-* Localizing images and the app name in the native apps.
-
 ### Sample Code
 
 There are two samples associated with this document:
@@ -734,46 +718,45 @@ using Xamarin.Forms.Xaml;
 
 namespace UsingResxLocalization
 {
-	// You exclude the 'Extension' suffix when using in Xaml markup
-	[ContentProperty ("Text")]
-	public class TranslateExtension : IMarkupExtension
-	{
-		readonly CultureInfo ci;
-		const string ResourceId = "UsingResxLocalization.Resx.AppResources";
+    // You exclude the 'Extension' suffix when using in XAML
+    [ContentProperty("Text")]
+    public class TranslateExtension : IMarkupExtension
+    {
+        readonly CultureInfo ci = null;
+        const string ResourceId = "UsingResxLocalization.Resx.AppResources";
 
-		private static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(()=> new ResourceManager(ResourceId
-		                                                                                                          , typeof(TranslateExtension).GetTypeInfo().Assembly));
+        static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(
+            () => new ResourceManager(ResourceId, IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly));
 
-		public TranslateExtension()
-		{
-			if (Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Android)
-			{
-				ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
-			}
-		}
+        public string Text { get; set; }
 
-		public string Text { get; set; }
+        public TranslateExtension()
+        {
+            if (Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Android)
+            {
+                ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+            }
+        }
 
-		public object ProvideValue (IServiceProvider serviceProvider)
-		{
-			if (Text == null)
-				return "";
+        public object ProvideValue(IServiceProvider serviceProvider)
+        {
+            if (Text == null)
+                return string.Empty;
 
-			var translation = ResMgr.Value.GetString(Text, ci);
-
-			if (translation == null)
-			{
-				#if DEBUG
-				throw new ArgumentException(
-					String.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
-					"Text");
-				#else
-				translation = Text; // returns the key, which GETS DISPLAYED TO THE USER
-				#endif
-			}
-			return translation;
-		}
-	}
+            var translation = ResMgr.Value.GetString(Text, ci);
+            if (translation == null)
+            {
+#if DEBUG
+                throw new ArgumentException(
+                    string.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
+                    "Text");
+#else
+				translation = Text; // HACK: returns the key, which GETS DISPLAYED TO THE USER
+#endif
+            }
+            return translation;
+        }
+    }
 }
 ```
 
@@ -782,7 +765,7 @@ The following bullets explain the important elements in the code above:
 * The class is named `TranslateExtension`, but by convention we can refer to is as **Translate** in our markup.
 * The class implements `IMarkupExtension`, which is required by Xamarin.Forms for it to work.
 * `"UsingResxLocalization.Resx.AppResources"` is the resource identifier for our RESX resources. It is comprised of our default namespace, the folder where the resource files are located and the default RESX filename.
-* The `ResourceManager` class is created using `typeof(TranslateExtension)` to determine the current assembly to load resources from.
+* The `ResourceManager` class is created using `IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)` to determine the current assembly to load resources from, and cached in the static `ResMgr` field. It's created as a `Lazy` type so that its creation is deferred until it's first used in the `ProvideValue` method.
 * `ci` uses the dependency service to get the user's chosen language from the native operating system.
 * `GetString` is the method that retrieves the actual translated string from the resources files. On Windows Phone 8.1 and the Universal Windows Platform, `ci` will be null because the `ILocalize` interface isn't implemented on those platforms. This is equivalent to calling the `GetString` method with only the first parameter. Instead, the resources framework will automatically recognize the locale and will retrieve the translated string from the appropriate RESX file.
 * Error handling has been included to help debug missing resources by throwing an exception (in `DEBUG` mode only).
