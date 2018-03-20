@@ -6,7 +6,7 @@ ms.assetid: 9C8145B3-FCF1-4649-8C6A-49672DDA4159
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 03/19/2018
 ---
 
 # Preparing an Application for Release
@@ -58,16 +58,9 @@ Each of these steps is described below in more detail.
 
 It is strongly recommended that each Xamarin.Android application
 specify an application icon. Some application marketplaces will not
-allow an Android application to be published without one.
-
-The `Icon` property of the `Application` attribute is used to specify
-the application icon for a Xamarin.Android project. This attribute can
-be declared in the file **Properties\AssemblyInfo.cs**, as shown in
-this sample snippet:
-
-```csharp
-[assembly: Application(Icon = "@drawable/icon")]
-```
+allow an Android application to be published without one. The `Icon`
+property of the `Application` attribute is used to specify the
+application icon for a Xamarin.Android project.
 
 # [Visual Studio](#tab/vswin)
 
@@ -86,6 +79,16 @@ application icon through the **Android Application** section of
 [![Set the application icon](images/xs/01-application-icon-sml.png)](images/xs/01-application-icon.png#lightbox)
 
 -----
+
+In these examples, `@drawable/icon` refers to an icon file that is
+located at **Resources/drawable/icon.png** (note that the **.png**
+extension is not included in the resource name). This attribute
+can also be declared in the file **Properties\AssemblyInfo.cs**, as
+shown in this sample snippet:
+
+```csharp
+[assembly: Application(Icon = "@drawable/icon")]
+```
 
 <a name="Versioning" />
 
