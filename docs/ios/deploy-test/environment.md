@@ -27,8 +27,7 @@ not set.
 
 Permanent environment variables are set by specifying extra arguments to
 the mtouch packaging tool. These environment variables are compiled into the
-executable, and will be set even if the app is not launched from Xamarin
-Studio.
+executable, and will be set even if the app is not launched from Visual Studio for Mac.
 
 ## Example
 

@@ -46,7 +46,7 @@ variable to the specified *value* during process startup.
 If *key* starts with a lowercase letter, then *key* is treated as an
 Android system property and *value* is the *default value*: Android
 system properties which control Xamarin.Android execution behavior are
-looked up first from the Android system property server, and if no
+looked up first from the Android system property store, and if no
 value is present then the value specified in the environment file is
 used. This is to permit `adb shell setprop` to be used to override
 values which come from the environment file for diagnostic purposes.
@@ -61,13 +61,13 @@ the `$(AndroidEnvironment)` Build action.
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
 The assembly-qualified type which must inherit from
-[HttpMessageHandler](https://msdn.microsoft.com/en-us/library/system.net.http.httpmessagehandler(v=vs.118).aspx)
+[HttpMessageHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpmessagehandler?view=xamarinandroid-7.1)
 and is constructed from the
-[`HttpClient()` default constructor](https://msdn.microsoft.com/en-us/library/hh138077(v=vs.118).aspx).
+[`HttpClient()` default constructor](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=xamarinandroid-7.1#System_Net_Http_HttpClient__ctor).
 
 In Xamarin.Android 6.1, this environment variable is not set by
 default, and
-[HttpClientHandler](https://msdn.microsoft.com/en-us/library/system.net.http.httpclienthandler(v=vs.118).aspx)
+[HttpClientHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1)
 will be used.
 
 Alternatively, the value `Xamarin.Android.Net.AndroidClientHandler` may
