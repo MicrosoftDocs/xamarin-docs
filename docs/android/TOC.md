@@ -122,6 +122,7 @@
 #### [Responding to Authentication Callbacks](platform/fingerprint-authentication/fingerprint-authentication-callbacks.md)
 #### [Guidance & Summary](platform/fingerprint-authentication/summary.md)
 #### [Enrolling a Fingerprint](platform/fingerprint-authentication/enrolling-fingerprint.md)
+### [Android Job Scheduler](platform/android-job-scheduler.md)
 ### [Firebase Job Dispatcher](platform/firebase-job-dispatcher.md)
 ### [Fragments](platform/fragments/index.md)
 #### [Implementing With Fragments](platform/fragments/implementing-with-fragments/index.md)

@@ -9,3 +9,6 @@ _repo.*/
 
 # Folder configuration on Mac
 .DS_Store
+
+# WebStorm configuration files.
+.idea
