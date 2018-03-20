@@ -415,9 +415,9 @@ being created for a set of `int` constants:
 ```
 
 Here we have taken the Java class `SKRealReachSettings` and defined a 
-C# enum called `SKRealReachSettings` in the namespace 
+C# enum called `SKMeasurementUnit` in the namespace 
 `Skobbler.Ngx.Map.RealReach`. The `field` entries defines the name of 
-the Java constant (example `UNIT\_SECOND`), the name of the enum entry 
+the Java constant (example `UNIT_SECOND`), the name of the enum entry 
 (example `Second`), and the integer value represented by both 
 entities (example `0`). 
 
@@ -440,7 +440,7 @@ Given the `SKRealReachSettings` enum defined above, the following
 ```
 
 The first `method` line maps the return value of the Java
-`getMeasurementUnit` method to the `SKRealReachSettings` enum. The
+`getMeasurementUnit` method to the `SKMeasurementUnit` enum. The
 second `method` line maps the first parameter of the
 `setMeasurementUnit` to the same enum.
 
