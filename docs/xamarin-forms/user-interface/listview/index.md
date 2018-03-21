@@ -67,5 +67,5 @@ To learn more about the interactivity features of ListView, see [Actions & Inter
 - [Grouping (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
 - [Custom Renderer View (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/WorkingWithListviewNative)
 - [ListView Interactivity (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
-- [iOS Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView-ios.workbook)
-- [Android Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView-android.workbook)
+- [iOS Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView1-ios.workbook)
+- [Android Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView1-android.workbook)
