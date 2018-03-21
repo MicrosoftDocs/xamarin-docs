@@ -82,10 +82,10 @@ public sealed class Person : ISerializableObject
 ```
 
 > [!NOTE]
-> Note: APIs that produce `ISerializableObject` objects directly do
-not need to be handled by a `RepresentationProvider`. If the object you
-want to display is **not** an `ISerializableObject`, you will want to
-handle wrapping it in your `RepresentationProvider`.
+> APIs that produce `ISerializableObject` objects directly do
+> not need to be handled by a `RepresentationProvider`. If the object you
+> want to display is **not** an `ISerializableObject`, you will want to
+> handle wrapping it in your `RepresentationProvider`.
 
 ### Rendering a Representation
 

@@ -22,7 +22,7 @@ Download the [installer](https://dl.xamarin.com/xamarin-simulator/Xamarin.Simula
 and install on your Windows computer. Visual Studio Tools for Xamarin should already be installed.
 
 > [!NOTE]
-> Using a remote iOS Simulator requires Visual Studio a networked Mac with Xamarin installed.
+> Using a remote iOS Simulator on Visual Studio requires a networked Mac with Xamarin installed.
 
 ## Getting Started
 

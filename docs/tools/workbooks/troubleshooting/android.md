@@ -25,10 +25,11 @@ not supported. Use `x86` or `x86_64` devices only.
 Please read [our documentation on setting up Android emulators][android-emu]
 if you are not familiar with the process.
 
-**NOTE:** Workbooks 1.1 and earlier will try (and fail!) to use ARM emulators
-if they are available. To work around this, launch the x86 emulator of your
-choice before opening or creating an Android workbook. Workbooks will always
-prefer to connect to a running emulator, as long as it is compatible.
+> [!NOTE]
+> Workbooks 1.1 and earlier will try (and fail!) to use ARM emulators
+> if they are available. To work around this, launch the x86 emulator of your
+> choice before opening or creating an Android workbook. Workbooks will always
+> prefer to connect to a running emulator, as long as it is compatible.
 
 ## Workbooks Won't Load
 
@@ -37,7 +38,7 @@ prefer to connect to a running emulator, as long as it is compatible.
 First, check that your emulator has fully-working network access by testing any
 website in the emulator's web browser.
 
-### Visual Studio Android Emulator cannot connect to internet
+### Visual Studio Android Emulator cannot connect to the internet
 
 If your emulator does not have network access, you may need to follow these
 steps to fix your Hyper-V network switch. If you switch between Wi-Fi networks
