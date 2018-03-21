@@ -27,9 +27,9 @@ if you are not familiar with the process.
 
 > [!NOTE]
 > Workbooks 1.1 and earlier will try (and fail!) to use ARM emulators
-if they are available. To work around this, launch the x86 emulator of your
-choice before opening or creating an Android workbook. Workbooks will always
-prefer to connect to a running emulator, as long as it is compatible.
+> if they are available. To work around this, launch the x86 emulator of your
+> choice before opening or creating an Android workbook. Workbooks will always
+> prefer to connect to a running emulator, as long as it is compatible.
 
 ## Workbooks Won't Load
 
