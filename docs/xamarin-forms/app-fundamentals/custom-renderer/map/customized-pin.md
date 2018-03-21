@@ -49,12 +49,11 @@ The `CustomMap` control is created in the portable class library (PCL) project a
 ```csharp
 public class CustomPin : Pin
 {
-  public string Id { get; set; }
   public string Url { get; set; }
 }
 ```
 
-This class defines a `CustomPin` as inheriting the properties of the [`Pin`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Pin/) class, and adding `Id`, and `Url` properties.
+This class defines a `CustomPin` as inheriting the properties of the [`Pin`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Pin/) class, and adding a `Url` property.
 
 <a name="Consuming_the_Custom_Map" />
 
@@ -249,14 +248,14 @@ MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotatio
         throw new Exception("Custom pin not found");
     }
 
-    annotationView = mapView.DequeueReusableAnnotation(customPin.Id);
+    annotationView = mapView.DequeueReusableAnnotation(customPin.Id.ToString());
     if (annotationView == null) {
-        annotationView = new CustomMKAnnotationView(annotation, customPin.Id);
+        annotationView = new CustomMKAnnotationView(annotation, customPin.Id.ToString());
         annotationView.Image = UIImage.FromFile("pin.png");
         annotationView.CalloutOffset = new CGPoint(0, 0);
         annotationView.LeftCalloutAccessoryView = new UIImageView(UIImage.FromFile("monkey.png"));
         annotationView.RightCalloutAccessoryView = UIButton.FromType(UIButtonType.DetailDisclosure);
-        ((CustomMKAnnotationView)annotationView).Id = customPin.Id;
+        ((CustomMKAnnotationView)annotationView).Id = customPin.Id.ToString();
         ((CustomMKAnnotationView)annotationView).Url = customPin.Url;
     }
     annotationView.CanShowCallout = true;
@@ -441,7 +440,7 @@ public Android.Views.View GetInfoContents (Marker marker)
       throw new Exception ("Custom pin not found");
     }
 
-    if (customPin.Id == "Xamarin") {
+    if (customPin.Id.ToString() == "Xamarin") {
       view = inflater.Inflate (Resource.Layout.XamarinMapInfoWindow, null);
     } else {
       view = inflater.Inflate (Resource.Layout.MapInfoWindow, null);
@@ -595,7 +594,7 @@ private void OnMapElementClick(MapControl sender, MapElementClickEventArgs args)
                 throw new Exception("Custom pin not found");
             }
 
-            if (customPin.Id == "Xamarin")
+            if (customPin.Id.ToString() == "Xamarin")
             {
                 if (mapOverlay == null)
                 {
