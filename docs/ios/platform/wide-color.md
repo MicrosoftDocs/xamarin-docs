@@ -187,7 +187,7 @@ Apple has the following suggestions for the file formats and color profiles used
 - Export image assets as 16-bit PNG files with an embedded "Display P3" ICC profile.
 
 > [!IMPORTANT]
-> **NOTE:** Using the **Save for Web** or **Export Assets** features found in most popular image editing software _will not_ work for wide color images since these features have not been updated to support the required file format specifications yet.
+> Using the **Save for Web** or **Export Assets** features found in most popular image editing software _will not_ work for wide color images since these features have not been updated to support the required file format specifications yet.
 
 ### Supporting Wide Color with Asset Catalogs
 

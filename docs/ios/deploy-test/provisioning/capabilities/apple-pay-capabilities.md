@@ -112,7 +112,7 @@ To create a certificate, follow the steps below:
     ![Creating a certificate signing request](apple-pay-capabilities-images/image45.png)
     
     > [!IMPORTANT]
-> If you are using a payment provider for Apple Pay, such a JudoPay or Stripe, they can provide you with a properly formatted CSR that you can use at this point. Information on requesting this is found on the [JudoPay](https://www.judopay.com/docs/version-52/apple-pay/getting-started/#create-an-apple-pay-certificate) and [Stripe](https://stripe.com/docs/apple-pay/apps#csr) sites. To create your own CSR, follow the steps 5-8 below. Once you have a CSR go to step 9.
+    > If you are using a payment provider for Apple Pay, such a JudoPay or Stripe, they can provide you with a properly formatted CSR that you can use at this point. Information on requesting this is found on the [JudoPay](https://www.judopay.com/docs/version-52/apple-pay/getting-started/#create-an-apple-pay-certificate) and [Stripe](https://stripe.com/docs/apple-pay/apps#csr) sites. To create your own CSR, follow the steps 5-8 below. Once you have a CSR go to step 9.
 
 5.	Open the Keychain Access application, and browse to **Keychain Access > Certificate Assistant > Request a Certificate from a Certificate Authority:** 
 

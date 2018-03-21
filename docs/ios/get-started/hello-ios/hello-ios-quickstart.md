@@ -86,7 +86,7 @@ On the Launch Screen, click **New Project...** to create a new Xamarin.iOS solut
   ![](hello-ios-quickstart-images/image8new.png "Drag a Label onto the design surface the area in the center")
 
   > [!NOTE]
-> **Note:** You can bring up the **Properties Pad** or **Toolbox** at any time by navigating to **View > Pads**.
+  > You can bring up the **Properties Pad** or **Toolbox** at any time by navigating to **View > Pads**.
 
 9. Grab the handles of the *Dragging Controls* (the circles around the control) and make the label wider:
 
@@ -267,9 +267,8 @@ to the top of the file:
 
   ![](hello-ios-quickstart-images/image27new.png "Press Start")
 
-
   > [!NOTE]
-> **Note:** At present, due to a requirement from Apple, it may be necessary to have a a development certificate or *signing identity* to build you code for device or simulator. Follow the steps in the [Device Provisioning guide](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) to set this up.
+  > At present, due to a requirement from Apple, it may be necessary to have a a development certificate or *signing identity* to build you code for device or simulator. Follow the steps in the [Device Provisioning guide](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) to set this up.
 
 28. This will launch the application inside the iOS Simulator:
 
@@ -288,7 +287,7 @@ This walkthrough describes how to create an application called Phoneword that tr
 **Note**: This walkthrough uses Visual Studio Enterprise 2017 on a Windows 10 Virtual Machine. Your set up can differ from this, as long as it meets the requirements above, but be aware that some screenshots may look different to your set up.
 
 > [!NOTE]
-> **Before proceeding with this walkthrough** you _must_ have already connected to your Mac from Visual Studio. This is because Xamarin.iOS relies on Apple's tooling to build and launch the iOS Designer and applications. To get set up, follow the steps in the [Connecting to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) guide.
+> Before proceeding with this walkthrough, you must have already connected to your Mac from Visual Studio. This is because Xamarin.iOS relies on Apple's tooling to build and launch the iOS Designer and applications. To get set up, follow the steps in the [Connecting to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) guide.
 
 1. Launch Visual Studio from the **Start** menu:
 
@@ -332,7 +331,7 @@ This walkthrough describes how to create an application called Phoneword that tr
   ![](hello-ios-quickstart-images/vs-image10.png "Change the Text property of the Label to `Enter a Phoneword`")
 
   > [!NOTE]
-> **Note:** You can bring up the **Properties** or **Toolbox** at any time by navigating to the **View** menu.
+  > You can bring up the **Properties** or **Toolbox** at any time by navigating to the **View** menu.
 
 
 9. Search for “text field” inside the Toolbox and drag a **Text Field** from the **Toolbox** onto the design surface and place it under the **Label**. Adjust the width until the **Text Field** is the same width as the **Label**:
@@ -376,7 +375,7 @@ This walkthrough describes how to create an application called Phoneword that tr
   ![](hello-ios-quickstart-images/vs-image19.png "Add a new Class named PhoneTranslator")
 
   > [!IMPORTANT]
-> Make sure that you select the 'class' template that has a C# in the icon. Otherwise you may not be able to reference this new class.
+  > Make sure that you select the 'class' template that has a C# in the icon. Otherwise you may not be able to reference this new class.
 
 
 17. This creates a new C# class. Remove all the template code and replace it with the following code:

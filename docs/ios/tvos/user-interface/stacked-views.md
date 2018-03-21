@@ -72,7 +72,7 @@ If the `BaselineRelativeArrangement` property is `true`, the subviews will be la
 * A Horizontal Stack View will use its tallest subview for both the first and last baseline. If the tallest view is also a Stack View, it will use it's tallest subview as the baseline.
 
 > [!IMPORTANT]
-> **NOTE:** Baseline Alignment does not work on stretched or compressed subview sizes as the baseline will be calculated to the wrong position. For Baseline Alignment, ensure that the subview's **Height** matches the Intrinsic Content View's **Height**.
+> Baseline Alignment does not work on stretched or compressed subview sizes as the baseline will be calculated to the wrong position. For Baseline Alignment, ensure that the subview's **Height** matches the Intrinsic Content View's **Height**.
 
 
 
@@ -145,7 +145,7 @@ The easiest way to work with Stack Views in a Xamarin.tvOS app is to add them to
 -----
 
 > [!IMPORTANT]
-> **NOTE:** NOTE: While it is possible to assign actions such as `TouchUpInside` to a UI element (such as a `UIButton`) in the iOS Designer when creating an Event Handler, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the default `Action Type` when creating Actions for tvOS user interface elements.
+> While it is possible to assign actions such as `TouchUpInside` to a UI element (such as a `UIButton`) in the iOS Designer when creating an Event Handler, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the default `Action Type` when creating Actions for tvOS user interface elements.
 
 For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
 

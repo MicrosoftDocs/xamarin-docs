@@ -83,7 +83,7 @@ For an image to be included in a Sticker Pack, it must meet the following requir
 - Images cannot be smaller than 100x100 points, or larger that 206 x 206 points.
 
 > [!IMPORTANT]
-> **NOTE:** Sticker images should always be provided at the `@3x` resolution in the 300 x 300 to 618 x 618 pixel range. The system will automatically generate the `@2x` and `@1x` versions at runtime as required.
+> Sticker images should always be provided at the `@3x` resolution in the 300 x 300 to 618 x 618 pixel range. The system will automatically generate the `@2x` and `@1x` versions at runtime as required.
 
 Apple suggests testing the Sticker Image Assets against various different colored backgrounds (such as white, black, red, yellow and multi-colored) and over photos, to ensure that they look the best in all possible situations.
 

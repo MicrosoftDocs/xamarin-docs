@@ -71,7 +71,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 The `MaximumPossibleForce` property returns the highest possible value for the `Force` property of the [UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/) based on the iOS device that the app is running on.
 
 > [!IMPORTANT]
-> **NOTE:** Changes in pressure will cause the `TouchesMoved` event to be raised, even if the X/Y coordinates have not changed. Because of this change in behavior, your iOS apps should be prepared for the `TouchesMoved` event to be invoked more often and for the X/Y coordinates to be the same as the last `TouchesMoved` call.
+> Changes in pressure will cause the `TouchesMoved` event to be raised, even if the X/Y coordinates have not changed. Because of this change in behavior, your iOS apps should be prepared for the `TouchesMoved` event to be invoked more often and for the X/Y coordinates to be the same as the last `TouchesMoved` call.
 
 
 
@@ -293,7 +293,7 @@ Here we are defining two static Quick Action items with the following keys:
 * `UIApplicationShortcutItemType` - Is a string value that we will use to identify the item in our app. See the following section for more information.
 
 > [!IMPORTANT]
-> **NOTE:** Quick Action shortcut items that are set in the `Info.plist` file cannot be accessed with the `Application.ShortcutItems` property. They are only passed in to the `HandleShortcutItem` event handler. 
+> Quick Action shortcut items that are set in the `Info.plist` file cannot be accessed with the `Application.ShortcutItems` property. They are only passed in to the `HandleShortcutItem` event handler. 
 
 
 

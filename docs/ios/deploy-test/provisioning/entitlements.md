@@ -28,7 +28,7 @@ The Entitlements.plist file is used to specify entitlements and is used to sig
 However, some additional provisioning is required to ensure that the app is code signed correctly. The provisioning profile used must contain an App ID that has the required capability enabled. For information on how to do this, refer to the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide.
 
 > [!IMPORTANT]
-> Note: The Entitlements.plist file helps fill in the correct properties for an application using capabilities, but it can't generate a provisioning profile as it is not linked to an Apple developer account. You will still need to generate a provisioning profile using the developer portal to deploy and distribute the application.
+> The Entitlements.plist file helps fill in the correct properties for an application using capabilities, but it can't generate a provisioning profile as it is not linked to an Apple developer account. You will still need to generate a provisioning profile using the developer portal to deploy and distribute the application.
 
 ## Set Entitlements in a Xamarin.iOS Project
 

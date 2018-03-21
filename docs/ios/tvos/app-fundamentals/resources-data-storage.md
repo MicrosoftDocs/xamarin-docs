@@ -31,7 +31,7 @@ Each tvOS app is provided a temporary cache directory that its additional resour
 As a result, your app cannot rely on previously downloaded content being available the next time it is launched. Your Xamarin.tvOS app should always check for the existence of required resources and download them as required.
 
 > [!IMPORTANT]
-> **NOTE:** While you have the ability to download other assets and resources as required, Apple warns against consuming all of the space in your app's cache, as it can lead to unpredictable results.
+> While you have the ability to download other assets and resources as required, Apple warns against consuming all of the space in your app's cache, as it can lead to unpredictable results.
 
 
 
@@ -66,7 +66,7 @@ These resources may continue to be cached on the Apple TV throughout multiple la
 You use Xcode to create bundles of related content (such as all assets for game level 2) associated with a give Resource Tag. Later your app will request On-Demand Resource by specifying this Resource Tag. Your app should present a UI to the user stating that content is being downloaded. For more information, please see Apple's [On-Demand Resources Guide](https://developer.apple.com/library/prerelease/tvos/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/index.html#//apple_ref/doc/uid/TP40015083).
 
 > [!IMPORTANT]
-> **NOTE:** Care should be taken to strike the right balance between the number of times the app has to download On-Demand Resources and the size of the individual downloads. User may become frustrated with your app if gameplay is interrupted constantly to download new content or if a single download takes too much time.
+> Care should be taken to strike the right balance between the number of times the app has to download On-Demand Resources and the size of the individual downloads. User may become frustrated with your app if gameplay is interrupted constantly to download new content or if a single download takes too much time.
 
 
 

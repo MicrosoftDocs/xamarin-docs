@@ -35,7 +35,7 @@ Even if you plan to release a Xamarin.iOS application for In-House Deployment, f
 The next section will describe how to get set up with a Distribution Certificate and a Distribution Provisioning Profile.
 
 > [!NOTE]
->  Note: Only Team Agents and Admins can create Distribution Certificates and Provisioning Profiles.
+> Only Team Agents and Admins can create Distribution Certificates and Provisioning Profiles.
 
 <a name="createcertificate" />
 

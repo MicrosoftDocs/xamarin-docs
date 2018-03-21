@@ -182,7 +182,7 @@ With your Xamarin.iOS application properly configured, you are now ready to do t
 
 
 > [!NOTE]
-> Note: While the old _App Store_ and _Ad Hoc_ configurations have now been removed from all of the Visual Studio for Mac template projects, you may find that older projects still include these configurations. If this is the case, you can continue to use the **App Store | Device** configuration in step 1 of the list above.
+> While the old _App Store_ and _Ad Hoc_ configurations have now been removed from all of the Visual Studio for Mac template projects, you may find that older projects still include these configurations. If this is the case, you can continue to use the **App Store | Device** configuration in step 1 of the list above.
 
 ### Sign and Distribute your App
 
@@ -306,7 +306,7 @@ With your distribution build created and archived, you are now ready to submit y
 ## Submitting Your App to Apple
 
 > [!NOTE]
-> Note: Apple has recently changed its verification process for iOS applications, and may reject apps with the `iTunesMetadata.plist` included in the IPA. If you encounter the error `ERROR: ERROR ITMS-90047: "Disallowed paths ( "iTunesMetadata.plist" ) found at: Payload/iPhoneApp1.app"`the workaround described [here](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1) should resolve the issue.
+> Apple has recently changed its verification process for iOS applications, and may reject apps with the `iTunesMetadata.plist` included in the IPA. If you encounter the error `ERROR: ERROR ITMS-90047: "Disallowed paths ( "iTunesMetadata.plist" ) found at: Payload/iPhoneApp1.app"`the workaround described [here](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1) should resolve the issue.
 
 With the distribution build completed, you are ready to submit your iOS application to Apple for review and release on the App Store.
 

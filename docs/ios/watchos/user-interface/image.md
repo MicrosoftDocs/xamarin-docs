@@ -127,9 +127,7 @@ animatedImage.StopAnimating ();
 
 > [!IMPORTANT]
 > watchOS 3 apps run entirely on the device. The following
-information is for watchOS 1 apps only.
-
-
+> information is for watchOS 1 apps only.
 
 If the application repeatedly uses an image that is
 	stored in the extension (or has been downloaded),

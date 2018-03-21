@@ -15,7 +15,7 @@ ms.date: 03/17/2017
 _Sharing data between the iOS and watch app in watchOS 1_
 
 > [!IMPORTANT]
-> **NOTE:** Accessing the parent application using the examples below
+> Accessing the parent application using the examples below
 only works on watchOS 1 watch apps.
 
 

@@ -119,7 +119,7 @@ For custom elements that inherit from `UIView` or `UIViewController`, you can ov
 To request that the Focus Engine moves focus back to the `PreferredFocusedView` UI element, call the `SetNeedsUpdateFocus` method of the View Controller.
 
 > [!IMPORTANT]
-> **NOTE:** Calling `SetNeedsUpdateFocus` only has effect if the View Controller it is being called against contains the View that currently has focus.
+> Calling `SetNeedsUpdateFocus` only has effect if the View Controller it is being called against contains the View that currently has focus.
 
 
 

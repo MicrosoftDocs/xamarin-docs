@@ -554,7 +554,7 @@ To implement a Service Extension in a Xamarin.iOS app, do the following:
 -----
 
 > [!IMPORTANT]
-> NOTE: The Bundle Identifier for the service extension should match the Bundle Identifier of the main app with `.appnameserviceextension` appended to the end. For example, if the main app had a Bundle Identifier of  `com.xamarin.monkeynotify`, the service extension should have a Bundle Identifier of `com.xamarin.monkeynotify.monkeynotifyserviceextension`. This should automatically be set when the extension is added to the solution. 
+> The Bundle Identifier for the service extension should match the Bundle Identifier of the main app with `.appnameserviceextension` appended to the end. For example, if the main app had a Bundle Identifier of  `com.xamarin.monkeynotify`, the service extension should have a Bundle Identifier of `com.xamarin.monkeynotify.monkeynotifyserviceextension`. This should automatically be set when the extension is added to the solution. 
 
 There is one main class in the Notification Service Extension that will need to be modified to provide the required functionality. For example:
 

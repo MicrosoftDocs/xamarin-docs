@@ -15,7 +15,7 @@ ms.date: 03/18/2017
 _This section shows how to implement local notifications in Xamarin.iOS. It will explain the various UI elements of an iOS notification and discuss the API's involved with creating and displaying a notification._
 
 > [!IMPORTANT]
-> **NOTE:** The information in this section pertains to iOS 9 and prior, it has been left here to support older iOS versions. For iOS 10 and later, please see the [User Notification Framework guide](~/ios/platform/user-notifications/index.md) for supporting both Local and Remote Notification on an iOS device.
+> The information in this section pertains to iOS 9 and prior, it has been left here to support older iOS versions. For iOS 10 and later, please see the [User Notification Framework guide](~/ios/platform/user-notifications/index.md) for supporting both Local and Remote Notification on an iOS device.
 
 iOS has three ways to indicate to the user that a notification has been received:
 
@@ -81,7 +81,7 @@ Per the Apple Human Interface Guidelines, if a notification plays a sound, it sh
     seconds, iOS will play the default sound instead.
 
 > [!IMPORTANT]
-> **Note**: There is a bug in the iOS simulator that will fire the delegate notification twice. This issue should not occur when running the application on a device.
+> There is a bug in the iOS simulator that will fire the delegate notification twice. This issue should not occur when running the application on a device.
 
 ## Handling Notifications
 

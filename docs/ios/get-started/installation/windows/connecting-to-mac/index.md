@@ -47,7 +47,7 @@ workflow:
 [![iOS development workflow](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
->  Visual Studio actually launches a separate MSBuild process to build the
+> Visual Studio actually launches a separate MSBuild process to build the
 > projects. This process creates a new connection to the Mac, meaning there
 > are actually two SSH connections from Windows to Mac when Visual Studio
 > builds. Building from the [command-line](#commandline) only creates the
@@ -74,8 +74,8 @@ The system requirements can be found in the [Installing Xamarin.iOS on Windows](
 #### Compatibility
 
 > [!IMPORTANT]
->  The Windows machine must be using the same version of Xamarin.iOS as
->    the Mac to which it is connected. To ensure this is true:                                                    
+> The Windows machine must be using the same version of Xamarin.iOS as
+> the Mac to which it is connected. To ensure this is true:                                                    
 >                                                                                                                 
 > - **Visual Studio 2015 and earlier**: Ensure that you are on the same
 >   [updates channel](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/)
@@ -165,7 +165,7 @@ subsequent connections the agent will use the username and key file to
 connect to the most recently connected known build host.
 
 > [!NOTE]
->  **Note**: You must use the _username_ and not the _full name_ when
+> You must use the _username_ and not the _full name_ when
 > entering your credentials.  You can find this out by using the `whoami`
 > command in Terminal.  For example, from the screenshot below, the account
 > name will be **amyb** and not **Amy Burns**:

@@ -28,7 +28,7 @@ The two new frameworks contain the following functionality:
 [![](contacts-images/add01.png "An example Contact Sheet on an iOS device")](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
-> **NOTE:** The existing `AddressBook` and `AddressBookUI` frameworks use by iOS 8 (and prior) have been deprecated in iOS 9 and should be replaced with the new `Contacts` and `ContactsUI` frameworks as soon as possible for any existing Xamarin.iOS app. New apps should be written against the new frameworks.
+> The existing `AddressBook` and `AddressBookUI` frameworks use by iOS 8 (and prior) have been deprecated in iOS 9 and should be replaced with the new `Contacts` and `ContactsUI` frameworks as soon as possible for any existing Xamarin.iOS app. New apps should be written against the new frameworks.
 
 
 
@@ -143,7 +143,7 @@ var predicate = CNContact.GetPredicateForContacts("Appleseed");
 ```
 
 > [!IMPORTANT]
-> **NOTE:** Generic and compound predicates are not supported by the Contacts framework.
+> Generic and compound predicates are not supported by the Contacts framework.
 
 For example, to limit the fetch to only the **GivenName** and **FamilyName** properties of the contact, use the following code:
 
@@ -189,7 +189,7 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 ```
 
 > [!IMPORTANT]
-> **NOTE:** The `GetUnifiedContact` and `GetUnifiedContacts` methods of the `CNContactStore` class _only_ return a Partial Contact limited to the properties requested from the fetch keys provided.
+> The `GetUnifiedContact` and `GetUnifiedContacts` methods of the `CNContactStore` class _only_ return a Partial Contact limited to the properties requested from the fetch keys provided.
 
 ### Unified Contacts
 

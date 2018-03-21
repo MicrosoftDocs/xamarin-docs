@@ -36,7 +36,7 @@ Lists the available assemblies and classes from the .NET Base Class Library
 It also covers how Visual Studio for Mac and Xcode's Interface Builder allows you to use Interface Builder to design UI.
 
 > [!IMPORTANT]
-> **NOTE**: This document explains Visual Studio for Mac's integration with Xcode's Interface Builder only. For more information on the iOS Designer, please review the [iOS Designer](~/ios/user-interface/designer/index.md) document.
+> This document explains Visual Studio for Mac's integration with Xcode's Interface Builder only. For more information on the iOS Designer, please review the [iOS Designer](~/ios/user-interface/designer/index.md) document.
 
 
 

@@ -61,9 +61,9 @@ myTable.SetNumberOfRows ((nint)rows.Count, "default");
 ```
 
 > [!IMPORTANT]
-> **NOTE**: Table rows are not virtualized like they are
-in iOS. Try to limit the number of rows (Apple recommends
-less than 20).
+> Table rows are not virtualized like they are in iOS. Try to limit the
+> number of rows (Apple recommends less than 20).
+
 Once the rows have been created, you need to populate
 	each cell (like `GetCell` would do in iOS). This code
 	snippet from the [WatchTables example](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/)
@@ -77,11 +77,10 @@ for (var i = 0; i < rows.Count; i++) {
 ```
 
 > [!IMPORTANT]
-> **NOTE:** Using `SetNumberOfRows` and then looping through
-using `GetRowController` causes the entire table
-to be sent to the watch. On subsequent views of the table,
-if you need to add or remove specific rows use `InsertRowsAt`
-and `RemoveRowsAt` for better performance.
+> Using `SetNumberOfRows` and then looping through using
+> `GetRowController` causes the entire table to be sent to the watch. On
+> subsequent views of the table, if you need to add or remove specific rows
+> use `InsertRowsAt` and `RemoveRowsAt` for better performance.
 
 
 ## Respond to Taps
@@ -188,8 +187,8 @@ up and down, or using the Digital Crown.
 ![](table-images/table-scroll-sml.png "Vertical Detail Paging example") ![](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
-> **WARNING:** This feature is currently only available by editing the
-storyboard in Xcode Interface Builder.
+> This feature is currently only available by editing the
+> storyboard in Xcode Interface Builder.
 
 To enable this feature, select the `WKInterfaceTable` on the design surface
 and tick the **Vertical Detail Paging** option:

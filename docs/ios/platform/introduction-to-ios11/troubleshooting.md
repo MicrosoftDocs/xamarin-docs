@@ -22,7 +22,7 @@ The following sections list some known issues that can occur when using iOS 11 w
 - [Forums and StackOverflow](#Forums-and-StackOverflow)
 
 > [!IMPORTANT]
-> **NOTE:** Xamarin Studio will not work with Xcode 9.
+> Xamarin Studio will not work with Xcode 9.
 > [Please upgrade to Visual Studio for Mac](https://www.visualstudio.com/vs/).
 
 <a name="Reporting-Bugs" />

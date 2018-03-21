@@ -169,7 +169,7 @@ Refer to the [ImageViewer](https://developer.xamarin.com/samples/mobile/iOS7-ui-
 The displacement value is generated dynamically after the View has been added to the hierarchy, so attempting to read `TopLayoutGuide` and `BottomLayoutGuide` values in `ViewDidLoad` will return 0. Calculate the value after the View has loaded - for example, in the `ViewDidLayoutSubviews`.
 
 > [!IMPORTANT]
-> **Note**: `TopLayoutGuide` and `BottomLayoutGuide` are deprecated in iOS 11 in favor of the new safe area layout. Apple have stated that using the safe area is compatible with iOS version earlier than iOS 11. For more information, see the [Updating your app for iOS 11](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) guide.
+> `TopLayoutGuide` and `BottomLayoutGuide` are deprecated in iOS 11 in favor of the new safe area layout. Apple have stated that using the safe area is compatible with iOS version earlier than iOS 11. For more information, see the [Updating your app for iOS 11](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) guide.
 
 #### EdgesForExtendedLayout
 
@@ -248,7 +248,7 @@ For example, the following screenshot shows the effect of changing the tint colo
 The tint color can be applied to images as well when the `RenderingMode` is set to `UIImageRenderingMode.AlwaysTemplate`.
 
 > [!IMPORTANT]
-> Note: Tint color cannot be set using `UIAppearance`.
+> Tint color cannot be set using `UIAppearance`.
 
 
 ### Dynamic Type

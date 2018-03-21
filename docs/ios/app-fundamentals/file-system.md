@@ -472,7 +472,7 @@ Console.WriteLine ("Group Path: " + appGroupContainerPath);
 ...
 ```
 > [!IMPORTANT]
-> **NOTE:** If the Group Path returned is `null`, check the configuration of the entitlements and the provisioning profile and make sure that they are correct.
+> If the Group Path returned is `null`, check the configuration of the entitlements and the provisioning profile and make sure that they are correct.
 
 
 <a name="Application_Version_Updates" />

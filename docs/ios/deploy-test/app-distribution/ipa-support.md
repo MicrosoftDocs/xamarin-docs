@@ -147,7 +147,7 @@ Once the provisioning profile has been created and selected, the optional **iTun
     ![](ipa-support-images/imagevs02.png "Select Ad-Hoc from the Configuration dropdown list")
 
     > [!NOTE]
-> An Ad-Hoc configuration may not be available for newer Xamarin.iOS projects. If it's not available, select the **Release** configuration.
+    > An Ad-Hoc configuration may not be available for newer Xamarin.iOS projects. If it's not available, select the **Release** configuration.
 
 3. If you are including an option **iTunesMetadata.plist** file, click the **...** button, select it from the list and click the **Open** button:
 

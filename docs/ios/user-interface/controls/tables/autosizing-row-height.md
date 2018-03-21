@@ -42,7 +42,7 @@ Next, we need to select the Cell Prototype and give it a unique **Identifier**:
 In the case of our example, `GrowCell`. We'll use this value later when we populate the table.
 
 > [!IMPORTANT]
-> **NOTE:** If your table contains more than one cell type (**Prototype**), you need to ensure each type has its own unique `Identifier` for Auto Row Resizing to work.
+> If your table contains more than one cell type (**Prototype**), you need to ensure each type has its own unique `Identifier` for Auto Row Resizing to work.
 
 For each element of our Cell Prototype, assign a **Name** to expose it to C# code. For example:
 

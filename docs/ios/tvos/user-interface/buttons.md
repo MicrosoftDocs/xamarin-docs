@@ -126,7 +126,7 @@ namespace tvRemote
 As long as a button's `Enabled` property is `true` and it is not covered by another control or view, it can be made the in-focus item using the Siri Remote. If the user selects the button and clicks the Touch Surface, the `ButtonPressed` action defined above would be executed.
 
 > [!IMPORTANT]
-> **NOTE:** While it is possible to assign actions such as `TouchUpInside` to a `UIButton` in the iOS Designer when creating an **Event Handler**, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the default **Action Type** when creating **Actions** for tvOS user interface elements.
+> While it is possible to assign actions such as `TouchUpInside` to a `UIButton` in the iOS Designer when creating an **Event Handler**, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the default **Action Type** when creating **Actions** for tvOS user interface elements.
 
 
 
@@ -187,7 +187,7 @@ View.AddSubview (button);
 ```
 
 > [!IMPORTANT]
-> **NOTE:** While it is possible to assign actions such as `TouchUpInside` to a `UIButton`, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use events such as **AllEvents** or **PrimaryActionTriggered**.
+> While it is possible to assign actions such as `TouchUpInside` to a `UIButton`, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use events such as **AllEvents** or **PrimaryActionTriggered**.
 
 
 

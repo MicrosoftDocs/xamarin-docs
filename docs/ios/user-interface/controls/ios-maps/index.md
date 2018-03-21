@@ -400,8 +400,8 @@ The implementation above adds an annotation to the map when an item is selected 
 
  ![](images/08-search-results.png "An annotation added to the map when an item is selected from the results")
  
- > [!IMPORTANT]
-> **Note** `UISearchController` was implemented in iOS 8. If you wish to support devices earlier than this, then you will need to use `UISearchDisplayController`.
+> [!IMPORTANT]
+> `UISearchController` was implemented in iOS 8. If you wish to support devices earlier than this, then you will need to use `UISearchDisplayController`.
 
 
 

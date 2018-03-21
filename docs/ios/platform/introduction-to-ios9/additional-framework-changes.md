@@ -49,7 +49,7 @@ The CloudKit framework streamlines the development of applications that access i
 The new _CloudKit Web Services_ framework provides  a JavaScript library (CloudKit JS) that can be incorporated in your website to provide access to the same CloudKit based data and content as your Xamarin.iOS app.
 
 > [!IMPORTANT]
-> **NOTE:** Before you can access, present or update content from a CloudKit database using CloudKit JS, you must have previously defined that database's schema.
+> Before you can access, present or update content from a CloudKit database using CloudKit JS, you must have previously defined that database's schema.
 
 
 

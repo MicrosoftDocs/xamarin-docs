@@ -97,7 +97,7 @@ Additionally, Trait Collections have the following features in tvOS 10:
 - A tvOS app can handle Trait Collection changes by overriding the `TraitCollectionDidChange` method of a `UIView` or `UIViewController` class.
 
 > [!IMPORTANT]
-> **NOTE:** The Xamarin.tvOS Early Preview for tvOS 10 doesn't fully support `UIUserInterfaceStyle` for `UITraitCollection` yet. Full support will be added in a future release.
+> The Xamarin.tvOS Early Preview for tvOS 10 doesn't fully support `UIUserInterfaceStyle` for `UITraitCollection` yet. Full support will be added in a future release.
 
 
 
@@ -120,7 +120,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 ```
 
 > [!IMPORTANT]
-> **NOTE:** Unfortunately, the Xamarin.tvOS Preview for tvOS 10 doesn't fully support `UIUserInterfaceStyle` for `UITraitCollection`, so this type of customization is not yet available. Full support will be added in a future release.
+> Unfortunately, the Xamarin.tvOS Preview for tvOS 10 doesn't fully support `UIUserInterfaceStyle` for `UITraitCollection`, so this type of customization is not yet available. Full support will be added in a future release.
 
 <a name="Responding-to-Theme-Changes-Directly" />
 

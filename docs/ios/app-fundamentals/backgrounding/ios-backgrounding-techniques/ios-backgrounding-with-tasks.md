@@ -39,7 +39,7 @@ UIApplication.SharedApplication.EndBackgroundTask(taskID);
 The registration process pairs a task with a unique identifier, `taskID`, and then wraps it in matching `BeginBackgroundTask` and `EndBackgroundTask` calls. To generate the identifier, we make a call to the `BeginBackgroundTask` method on the `UIApplication` object, and then start the long-running task, usually on a new thread. When the task is complete, we call `EndBackgroundTask` and pass in the same identifier. This is important because iOS will terminate the application if a `BeginBackgroundTask` call does not have a matching `EndBackgroundTask`.
 
 > [!IMPORTANT]
-> **Note**: Background-safe tasks can run on either the main thread or a background thread, depending on the application's needs.
+> Background-safe tasks can run on either the main thread or a background thread, depending on the application's needs.
 
 
 ## Performing Tasks During DidEnterBackground
@@ -61,7 +61,7 @@ public override void DidEnterBackground (UIApplication application) {
 We begin by overriding the `DidEnterBackground` method in the `AppDelegate`, where we register our task via `BeginBackgroundTask` as we did in the previous example. Next, we spawn a new thread and perform our long-running task. Note that the `EndBackgroundTask` call is now made from inside the long-running task, since the `DidEnterBackground` method will have already returned.
 
 > [!IMPORTANT]
-> **Note**: iOS uses a [watchdog mechanism](http://developer.apple.com/library/ios/qa/qa1693/_index.html) to ensure that an application's UI remains responsive. An application that spends too much time in `DidEnterBackground` will become unresponsive in the UI. Kicking off tasks to run in the background allows `DidEnterBackground` to return in a timely manner, keeping the UI responsive and preventing the watchdog from killing the application.
+> iOS uses a [watchdog mechanism](http://developer.apple.com/library/ios/qa/qa1693/_index.html) to ensure that an application's UI remains responsive. An application that spends too much time in `DidEnterBackground` will become unresponsive in the UI. Kicking off tasks to run in the background allows `DidEnterBackground` to return in a timely manner, keeping the UI responsive and preventing the watchdog from killing the application.
 
 
 ## Handling Background Task Time Limits
@@ -149,7 +149,7 @@ else {
 ```
 
 > [!IMPORTANT]
-> **Note**: Avoid making calls to update the UI from the background in iOS 6-compliant code, as iOS 6 does not support background UI updates, and will terminate the application.
+> Avoid making calls to update the UI from the background in iOS 6-compliant code, as iOS 6 does not support background UI updates, and will terminate the application.
 
 
 The `NSURLSession` API includes a rich set of features to handle authentication, manage failed transfers, and report client-side - but not server-side - errors. It helps bridge the interruptions in task run time introduced in iOS 7, and also provides support for transferring large files quickly and reliably. The next section explores this second feature.

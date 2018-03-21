@@ -14,7 +14,11 @@ ms.author: brumbaug
 _Even if you don't plan to add iOS 9 features to your app straight away, you should rebuild your apps with the latest version of Xamarin._
 
 > [!IMPORTANT]
-> **NOTE:** This information on this page is for customers with apps already in the App Store targeting iOS 8 or earlier, who have not already submitted updates for iOS 9 compatibility. If you are already using the latest versions - Xcode 7 and Xamarin.iOS 9 - for your app development please visit the [introduction to iOS 9](~/ios/platform/introduction-to-ios9/index.md).
+> The information on this page is for customers with apps already in the App
+> Store targeting iOS 8 or earlier, who have not already submitted updates
+> for iOS 9 compatibility. If you are already using the latest versions -
+> Xcode 7 and Xamarin.iOS 9 - for your app development please visit the
+> [introduction to iOS 9](~/ios/platform/introduction-to-ios9/index.md).
 
 When the first iOS 9 betas appeared, we identified two issues with older versions of
 Xamarin that manifested as older apps being unable to start on iOS 9.

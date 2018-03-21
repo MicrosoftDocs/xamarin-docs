@@ -73,7 +73,7 @@ Do the following:
 With these settings in place, the application is now ready to access the HomeKit Framework APIs. For detailed information on provisioning, please see our [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) and [Provisioning Your App](~/ios/get-started/installation/device-provisioning/index.md) guides.
 
 > [!IMPORTANT]
-> **NOTE:** Testing a HomeKit enabled app requires a real iOS device that has been properly provisioned for development. HomeKit cannot be tested from the iOS Simulator.
+> Testing a HomeKit enabled app requires a real iOS device that has been properly provisioned for development. HomeKit cannot be tested from the iOS Simulator.
 
 ## The HomeKit Accessory Simulator
 
@@ -139,7 +139,7 @@ To set this key, do the following:
 6. Save the changes to the file.
 
 > [!IMPORTANT]
-> **NOTE:** Failure to set the `NSHomeKitUsageDescription` key in the `Info.plist` file will result in the app _silently failing_ (being closed by the system at runtime) without error when run in iOS 10 (or greater).
+> Failure to set the `NSHomeKitUsageDescription` key in the `Info.plist` file will result in the app _silently failing_ (being closed by the system at runtime) without error when run in iOS 10 (or greater).
 
 ## Connecting to HomeKit
 
@@ -261,7 +261,7 @@ If the home was created successfully, you need to call the `UpdatePrimaryHome` m
 You should also monitor the Home Manager’s `DidAddHome` and `DidRemoveHome` events and update the app's user interface as required.
 
 > [!IMPORTANT]
-> **NOTE:** The `AlertView.PresentOKAlert` method used in the sample code above is a helper class in the HomeKitIntro application that makes working with the iOS Alerts easier.
+> The `AlertView.PresentOKAlert` method used in the sample code above is a helper class in the HomeKitIntro application that makes working with the iOS Alerts easier.
 
 
 ## Finding New Accessories
@@ -271,7 +271,7 @@ Once a Primary Home has been defined or loaded from the Home Manager, your Xamar
 Call the `StartSearchingForNewAccessories` method to start looking for new accessories and the `StopSearchingForNewAccessories` method when finished.
 
 > [!IMPORTANT]
-> **NOTE:** `StartSearchingForNewAccessories` should not be left running for long periods of time because it will negatively affect both battery life and performance of the iOS device. Apple suggests calling `StopSearchingForNewAccessories` after a minute or only searching when the Find Accessory UI is presented to the user.
+> `StartSearchingForNewAccessories` should not be left running for long periods of time because it will negatively affect both battery life and performance of the iOS device. Apple suggests calling `StopSearchingForNewAccessories` after a minute or only searching when the Find Accessory UI is presented to the user.
 
 The `DidFindNewAccessory` event will be called when new accessories are discovered and they will be added to the `DiscoveredAccessories` list in the Accessory Browser.
 

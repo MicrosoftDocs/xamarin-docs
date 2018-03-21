@@ -302,7 +302,7 @@ public partial class ViewController : UIViewController
 The `ViewController` now drives the interactions of the Content View Hierarchy associated with this View Controller in the Storyboard. Next you’ll learn about the View Controller's role in managing the Views by introducing a process called the View lifecycle.
 
 > [!NOTE]
-> **Note:** For visual-only screens that don’t require user interaction, the **Class** property can be left blank in the **Properties Pad**. This sets the View Controller's backing class as the default implementation of a `UIViewController`, which is appropriate if you don’t plan on adding custom code.
+> For visual-only screens that don’t require user interaction, the **Class** property can be left blank in the **Properties Pad**. This sets the View Controller's backing class as the default implementation of a `UIViewController`, which is appropriate if you don’t plan on adding custom code.
 
 ### View Lifecycle
 
@@ -416,7 +416,7 @@ The iOS Simulator is a quick way to test an application. The Simulator has a num
 A device takes time to provision and requires an Apple Developer Account. The [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide gives thorough instructions on getting a device ready for development.
 
 > [!NOTE]
-> **Note:** At present, due to a requirement from Apple, it is necessary to have a a development certificate or _signing identity_ to build you code for device or simulator. Follow the steps in the [Device Provisioning guide](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) to set this up.
+> At present, due to a requirement from Apple, it is necessary to have a a development certificate or _signing identity_ to build you code for device or simulator. Follow the steps in the [Device Provisioning guide](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) to set this up.
 
 Once the device is provisioned, you can deploy to it by plugging it in, changing the target in the build toolbar to the iOS Device, and pressing **Start** ( **Play**) as illustrated by the following screenshot:
 

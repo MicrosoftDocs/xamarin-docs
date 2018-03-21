@@ -577,7 +577,7 @@ The iOS Designer will confirm that the developer wants to convert the format of 
  [![](unified-storyboards-images/sizeclass02.png "The use Size Classes alert")](unified-storyboards-images/sizeclass02.png#lightbox)
 
 > [!IMPORTANT]
-> **NOTE**: Auto Layout must also be checked for Size Classes to work correctly.
+> Auto Layout must also be checked for Size Classes to work correctly.
 
 ### Generic Device Types
 
@@ -626,7 +626,7 @@ See the Size Class section of this article for more information on Size Classes 
 If the developer has used storyboards before, then they will be familiar with the existing segue types of **Push**, **Modal** and **Popover**. When Size Classes are enabled on a Unified Storyboard file, the following Adaptive Segue Types (that correspond to the new View Controller API discussed above) are made available: **Show** and **Show Detail**.
 
 > [!IMPORTANT]
-> **Note**: When Size Classes are enabled, any existing segues will be converted to the new types.
+> When Size Classes are enabled, any existing segues will be converted to the new types.
 
 Take the example of an iOS 8 Application that uses a Unified Storyboard with a Split View Controller that has a simple game navigation menu in the Master View. If the user clicks on a menu button, the selected item’s View Controller should be shown in the Details section of the Split View Controller when running on an iPad. On an iPhone the item’s View Controller should be pushed onto the Navigation stack.
 

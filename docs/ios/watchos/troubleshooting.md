@@ -31,13 +31,6 @@ This page contains additional information and workarounds for features
 ### General
 
 <a name="deploy" />
-<!--
-* You cannot deploy to the App Store *from within Visual Studio for Mac or Visual Studio*
-	in the current release. You should create an **Archive** in Visual Studio for Mac
-	and then switch to Xcode to upload the archive to iTunes Connect. Visual Studio
-	is not currently supported (but will be a future release). Refer to the
-	[deployment guide](~/ios/watchos/deploy-test/appstore.md) for more information.
--->
 
 - Earlier releases of Visual Studio for Mac incorrectly show one of the the
 	**AppleCompanionSettings** icons as being 88x88 pixels; which results in a
@@ -56,14 +49,6 @@ This page contains additional information and workarounds for features
 	Watch App's **Info.plist** `WKCompanionAppBundleIdentifier`
 	is set to match the bundle identifier of the iOS parent/container
 	app (ie. the one that runs on the iPhone).
-
-<!--
-- **Can't launch application on Watch simulator.** This seems to
-	be an issue with the iOS Simulator hanging when trying to
-	install an app that has changed. Xcode release notes (beta 4)
-	includes a similar known issue:
-	If the issue persists, reset the Simulator (**iOS Simulator > Reset Content and Settings...**).
--->
 
 - iOS Designer does not show entrypoint arrows for Glance or Notification
 	interface controllers.
@@ -89,15 +74,6 @@ The iOS Designer support for Watch Kit *requires* the solution
 	to be configured correctly. If the project references are not
 	set (see [how to set references](~/ios/watchos/get-started/project-references.md))
 	then the design surface will not work correctly.
-
-<!--
-* New Watch Kit apps created in Visual Studio might not allow
-	starting in Notifications mode.
-
-* You cannot deploy to the App Store from Visual Studio (see [notes above](#deploy)
-	and the [deployment guide](~/ios/watchos/deploy-test/appstore.md)). Use
-	Visual Studio for Mac and Xcode on your Mac Build Host.
-	-->
 
 <a name="noalpha" />
 
@@ -133,10 +109,11 @@ It's easy to remove the alpha channel on Mac OS X using the **Preview** app:
 ## Manually Adding Interface Controller Files
 
 > [!IMPORTANT]
-> Xamarin's Watch Kit support includes designing
-	watch storyboards in the iOS designer (in both Visual Studio for Mac and Visual Studio), which does not require the steps outlined below. Simply
-	give an interface controller a Class name in the Visual Studio for Mac
-	Properties pad and the C# code files will be created automatically.
+> Xamarin's WatchKit support includes designing watch storyboards in the
+> iOS designer (in both Visual Studio for Mac and Visual Studio), which
+> does not require the steps outlined below. Simply give an interface
+> controller a Class name in the Visual Studio for Mac Properties pad and
+> the C# code files will be created automatically.
 
 
 *If* you are using Xcode Interface Builder, follow
@@ -144,7 +121,6 @@ It's easy to remove the alpha channel on Mac OS X using the **Preview** app:
 	for your watch app and enable synchronization with
 	Xcode so that the outlets and actions are available
 	in C#:
-
 
 1. Open the watch app's **Interface.storyboard** in **Xcode Interface Builder**.
 	
@@ -290,7 +266,10 @@ in C#!
 ## Launching the Watch App from the Command Line
 
 > [!IMPORTANT]
-> You can start the Watch App in normal app mode by default, and also in **Glance** or **Notification** modes using [custom execution parameters](~/ios/watchos/get-started/installation.md#custommodes) in Visual Studio for Mac and Visual Studio.
+> You can start the Watch App in normal app mode by default, and also in
+> **Glance** or **Notification** modes using 
+> [custom execution parameters](~/ios/watchos/get-started/installation.md#custommodes) in
+> Visual Studio for Mac and Visual Studio.
 
 
 You can also use the command line to control the iOS Simulator. The command
@@ -311,9 +290,9 @@ The full path to the main app bundle *for the iOS app that
 	contains the watch app and extension*.
 
 > [!NOTE]
-> *Note:* the path you need to supply is for the *iPhone application
-	 .app file*, i.e. the one that will be deployed to the iOS simulator
-	 and that contains both the watch extension and watch app.
+> The path you need to supply is for the *iPhone application .app file*,
+> i.e. the one that will be deployed to the iOS simulator and that contains
+> both the watch extension and watch app.
 
 Example:
 

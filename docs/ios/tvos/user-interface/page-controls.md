@@ -68,7 +68,7 @@ The easiest way to work with Page Controls in a Xamarin.tvOS app is to add them 
 -----
 
 > [!IMPORTANT]
-> **NOTE:** While it is possible to assign events such as `TouchUpInside` to a UI element (such as a UIButton) in the iOS Designer, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the `Primary Action` event when creating event handlers for tvOS user interface elements.
+> While it is possible to assign events such as `TouchUpInside` to a UI element (such as a UIButton) in the iOS Designer, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the `Primary Action` event when creating event handlers for tvOS user interface elements.
 
 
 

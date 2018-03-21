@@ -21,7 +21,7 @@ Navigation Bars can be added to the top of views to display a Title and optional
 In addition to the Title (that is displayed in the center), Navigation Bars can contain one or more Navigation Bar Buttons (`UIBarButtonItem`) on the left and right sides of the bar.
 
 > [!IMPORTANT]
-> **NOTE:** Navigation Bars are totally transparent by default. Care should be taken to ensure that the content of the Navigation Bar stays readable over the content underneath it. For example, when content in a Table View or Collection scrolls under it.
+> Navigation Bars are totally transparent by default. Care should be taken to ensure that the content of the Navigation Bar stays readable over the content underneath it. For example, when content in a Table View or Collection scrolls under it.
 
 
 
@@ -73,7 +73,7 @@ The easiest way to work with Navigation Bars in a Xamarin.tvOS app is to add the
 -----
 
 > [!IMPORTANT]
-> **NOTE:** While it is possible to assign events such as `TouchUpInside` to a UI element (such as a UIButton) in the iOS Designer, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the `Primary Action` event when creating event handlers for tvOS user interface elements.
+> While it is possible to assign events such as `TouchUpInside` to a UI element (such as a UIButton) in the iOS Designer, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the `Primary Action` event when creating event handlers for tvOS user interface elements.
 
 
 

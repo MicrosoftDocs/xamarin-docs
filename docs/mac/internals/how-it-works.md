@@ -105,7 +105,7 @@ AOT is enabled in Xamarin.Mac by double-clicking the **Project Name** in the **S
 ![Adding AOT to additional mmp arguments](how-it-works-images/aot01.png "Adding AOT to additional mmp arguments")
 
 > [!IMPORTANT]
-> WARNING! Enabling AOT compilation dramatically increases build time, sometimes up to several minutes, but it can improve app launch times by an average of 20%. As a result, AOT compilation should only be enabled on **Release** builds of a Xamarin.Mac app.
+> Enabling AOT compilation dramatically increases build time, sometimes up to several minutes, but it can improve app launch times by an average of 20%. As a result, AOT compilation should only be enabled on **Release** builds of a Xamarin.Mac app.
 
 ### Aot compilation options
 

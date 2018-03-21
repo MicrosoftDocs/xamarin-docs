@@ -64,7 +64,7 @@ If a ride-sharing app uses the [MKDirectionsRequest](https://developer.xamarin.c
 If the app only supports ride sharing, the system suggestion would begin with *"Get a ride to..."*, if other types of routing direction (such as Walking or Bike) are supported, the system will use *"Get directions to..."*
 
 > [!IMPORTANT]
-> **NOTE:** The [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/) object that the app receives may not include longitude and latitude information and will require geocoding.
+> The [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/) object that the app receives may not include longitude and latitude information and will require geocoding.
 
 ## Implementing Proactive Suggestions
 

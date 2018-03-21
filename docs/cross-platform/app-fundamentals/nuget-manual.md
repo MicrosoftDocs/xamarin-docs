@@ -15,13 +15,13 @@ ms.date: 03/22/2017
 _This page contains some tips to help build NuGet packages that target the Xamarin platform._
 
 > [!NOTE]
-> Xamarin Studio 6.2 (and Visual Studio for Mac) includes the ability to _automatically_ generate
-> NuGet packages from PCL, .NET Standard, or Shared Projects.
-> Refer to the [Multiplatform Libraries for Code Sharing](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)
+> Xamarin Studio 6.2 (and Visual Studio for Mac) includes the ability to
+> _automatically_ generate NuGet packages from PCL, .NET Standard, or
+> Shared Projects. Refer to the 
+> [Multiplatform Libraries for Code Sharing](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)
 > guide for more details.
 
 ## NuGet Package Xamarin Profiles
-
 
 The NuGet website's [Supporting Multiple .NET Framework Versions and Profiles](https://docs.nuget.org/create/enforced-package-conventions)
 discusses how to support different Microsoft frameworks and profiles

@@ -76,7 +76,7 @@ On mouse-up, a menu will appear letting us choose the action for our segue. It m
 [![](images/16new.png "The Action Segue dropdown with Size Classes")](images/16new.png#lightbox)
 
 > [!IMPORTANT]
-> **NOTE:** If you are using VMWare for your Windows Virtual Machine,  Ctrl-click is mapped as the _Right-Click_ mouse button by default. To create a Segue, edit your Keyboard preferences through **Preferences** > **Keyboard & Mouse** > **Mouse Shortcuts** and remap your **Secondary button** as illustrated below:
+> If you are using VMWare for your Windows Virtual Machine,  Ctrl-click is mapped as the _Right-Click_ mouse button by default. To create a Segue, edit your Keyboard preferences through **Preferences** > **Keyboard & Mouse** > **Mouse Shortcuts** and remap your **Secondary button** as illustrated below:
 > 
 > [![](images/image22.png "Keyboard and Mouse preference settings")](images/image22.png#lightbox)
 > 

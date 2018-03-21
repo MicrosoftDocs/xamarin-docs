@@ -43,8 +43,8 @@ instructions against the database.
 
 	`Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);`
 
-	> [!NOTE]
-> **NOTE:** The dbPath variable should be determined according the rules discussed earlier in this document.
+    > [!NOTE]
+    > The `dbPath` variable should be determined according the rules discussed earlier in this document.
 
 2. **Creating a Database Connection** - After the SQLite database file has been created you can create a connection object to access the data. The connection is constructed with a connection string which takes the form of `Data Source=file_path`, as shown here:
 

@@ -24,7 +24,7 @@ Creating captivating icons and imagery are a critical part of developing an imme
 - [Setting Xamarin.tvOS Project Images](#Setting-Xamarin.tvOS-Project-Images) - Covers the steps required to set the Launch Image and App Icon for your Xamarin.tvOS app.
 
 > [!IMPORTANT]
-> **NOTE:** All images on the Apple TV are at the 1x resolution (`@1x`) and you should _only_ use images of this size. Including larger, higher-resolution graphics not only take time to download and use more memory and storage, but they have to be dynamically rescaled at runtime and will negatively affect drawing performance.
+> All images on the Apple TV are at the 1x resolution (`@1x`) and you should _only_ use images of this size. Including larger, higher-resolution graphics not only take time to download and use more memory and storage, but they have to be dynamically rescaled at runtime and will negatively affect drawing performance.
 
 <a name="Launch-Image" />
 
@@ -75,7 +75,7 @@ Layered Images contain from two (2) to five (5) separate layers that are combine
 [![](icons-images-images/layered01.png "Layered Images Z-ordered diagram")](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
-> **NOTE:** Layered Images are required for your app's icons and are optional for other [Focusable Items](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (such as the Top Shelf Image). However, Apple suggests using Layered Images for any image that can get focus in your app.
+> Layered Images are required for your app's icons and are optional for other [Focusable Items](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (such as the Top Shelf Image). However, Apple suggests using Layered Images for any image that can get focus in your app.
 
 
 

@@ -47,7 +47,7 @@ workflow:
 [![The Xamarin.iOS development workflow](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
->  Visual Studio actually launches a separate MSBuild process to build the
+> Visual Studio actually launches a separate MSBuild process to build the
 > projects. This process creates a new connection to the Mac, meaning there
 > are actually two SSH connections from Windows to Mac when Visual Studio
 > builds. Building from the
@@ -147,8 +147,8 @@ configure Xamarin.iOS on macOS to allow Xamarin for Visual Studio to connect
 to it.
 
 > [!IMPORTANT]
->  The Windows machine must be using the same version of Xamarin.iOS as 
->    the Mac to which it is connected. To ensure this is true:
+> The Windows machine must be using the same version of Xamarin.iOS as 
+> the Mac to which it is connected. To ensure this is true:
 >
 > - **Visual Studio 2015 and earlier**: Ensure that you are on the same
 >   [updates channel](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/)
@@ -188,9 +188,9 @@ The Mac should now be discoverable by Visual Studio if it's on the same
 network.
 
 > [!NOTE]
-> If you have the macOS firewall set to block signed
-applications by default, you may need to allow `mono-sgen` to receive incoming
-connections. An alert dialog will appear to prompt you if this is the case.
+> If you have the macOS firewall set to block signed applications by 
+> default, you may need to allow `mono-sgen` to receive incoming
+> connections. An alert dialog will appear to prompt you if this is the case.
 
 <a name="developersetup"/>
 

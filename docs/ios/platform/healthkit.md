@@ -39,7 +39,7 @@ The following are required to complete the steps presented in this article:
 - **iOS 8 (or greater) Device** – An iOS device running the latest version of iOS 8 or greater for testing.
 
 > [!IMPORTANT]
-> **NOTE:** Health Kit was introduced in iOS 8. Currently, Health Kit is not available on the iOS simulator, and debugging requires connection to a physical iOS device.
+> Health Kit was introduced in iOS 8. Currently, Health Kit is not available on the iOS simulator, and debugging requires connection to a physical iOS device.
 
 
 
@@ -212,7 +212,7 @@ The job of `ValidateAuthorization()` is to build the set of `HKObjectTypes` that
 The `ReactToHealthCarePermissions()` callback will be called after the user has interacted with the permissions dialog and is passed two pieces of information: a `bool` value that will be `true` if the user has interacted with the permissions dialog and an `NSError` which, if non-null, indicates some kind of error associated with presenting the permissions dialog.
 
 > [!IMPORTANT]
-> **NOTE:** To be clear about the arguments to this function: the _success_ and _error_ parameters do not indicate whether the user has granted permission to access Health Kit data! They only indicate that the user has been given the opportunity to permit access to the data.
+> To be clear about the arguments to this function: the _success_ and _error_ parameters do not indicate whether the user has granted permission to access Health Kit data! They only indicate that the user has been given the opportunity to permit access to the data.
 
 To confirm whether the app has access to the data, the `HKHealthStore.GetAuthorizationStatus()` is used, passing in `HKQuantityTypeIdentifierKey.HeartRate`. Based on the status returned, the app enables or disables the ability to enter data. There is no standard user experience for dealing with a denial of access and there are many possible options. In the example app, the status is set on a `HeartRateModel` singleton object that, in turn, raises relevant events.
 
@@ -400,7 +400,7 @@ The iOS Simulator does not support Health Kit. Debugging must be done on a physi
 Attach a properly-provisioned iOS 8 development device to your system. Select it as the deployment target in Visual Studio for Mac and from the menu choose **Run > Debug**.
 
 > [!IMPORTANT]
-> **NOTE:** Mistakes relating to provisioning will surface at this point. To troubleshoot errors, review the Creating and Provisioning a Health Kit App section above. The components are: 
+> Mistakes relating to provisioning will surface at this point. To troubleshoot errors, review the Creating and Provisioning a Health Kit App section above. The components are: 
 >
 > - **iOS Dev Center** - Explicit App ID & Health Kit enabled Provisioning Profile. 
 > - **Project Options** - Bundle Identifier (explicit App ID) & Provisioning Profile.

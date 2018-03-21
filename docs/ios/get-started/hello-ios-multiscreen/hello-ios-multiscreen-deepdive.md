@@ -45,7 +45,7 @@ The MVC pattern is useful because it provides logical separation between differe
 reuse code and views. Let’s jump in and take a look at each of the three roles in more detail.
 
 > [!NOTE]
-> **Note**: The MVC pattern is loosely analogous to the structure of ASP.NET pages or WPF applications. In these examples, the View is the component that is actually responsible for describing the UI and corresponds to the ASPX (HTML) page in ASP.NET or to XAML in a WPF application. The Controller is the component that is responsible for managing the View, which corresponds to the code-behind in ASP.NET or WPF.
+> The MVC pattern is loosely analogous to the structure of ASP.NET pages or WPF applications. In these examples, the View is the component that is actually responsible for describing the UI and corresponds to the ASPX (HTML) page in ASP.NET or to XAML in a WPF application. The Controller is the component that is responsible for managing the View, which corresponds to the code-behind in ASP.NET or WPF.
 
 
 ### Model
@@ -63,7 +63,7 @@ works, why we built it, and how to get in touch with us to report bugs. These ap
 not have any real Model data.
 
 > [!NOTE]
-> **Note**: In some literature, the Model portion of the MVC pattern can refer to the entire application backend, not just the data that is displayed on the UI. In this guide we use a modern interpretation of the Model, but the distinction is not particularly important.
+> In some literature, the Model portion of the MVC pattern can refer to the entire application backend, not just the data that is displayed on the UI. In this guide we use a modern interpretation of the Model, but the distinction is not particularly important.
 
 
 ### View

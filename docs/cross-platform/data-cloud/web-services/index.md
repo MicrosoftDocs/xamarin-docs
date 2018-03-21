@@ -26,9 +26,12 @@ For customers using Xamarin.Forms, there are complete examples using each of the
 documentation.
 
 > [!IMPORTANT]
-> **Note for Xamarin.iOS:** In iOS 9, App Transport Security (ATS) enforces secure connections between internet resources (such as the app's back-end server)
-and the app, thereby preventing accidental disclosure of sensitive information. Since ATS is enabled by default in apps built for iOS 9, all connections will be subject to ATS security requirements. If connections do not meet these requirements, they will fail with an exception.
-
+> In iOS 9, App Transport Security (ATS) enforces secure connections
+> between internet resources (such as the app's back-end server) and the
+> app, thereby preventing accidental disclosure of sensitive information.
+> Since ATS is enabled by default in apps built for iOS 9, all connections
+> will be subject to ATS security requirements. If connections do not meet
+> these requirements, they will fail with an exception.
 
 You can opt-out of ATS if it is not possible to use the `HTTPS` protocol and secure communication for internet resources. This can be achieved by updating the app's **Info.plist** file. For more information see [App Transport Security](~/ios/app-fundamentals/ats.md).
 
@@ -189,7 +192,7 @@ client.GetAsync<CustomersResponse>("",
 ```
 
 > [!IMPORTANT]
-> **Note:** While tools like ServiceStack and RestSharp make it easy to call and consume REST services, it is sometimes non-trivial to consume XML or JSON that does not conform to the standard _DataContract_ serialization conventions. If necessary, invoke the request and handle the appropriate serialization explicitly using the ServiceStack.Text library discussed below.
+> While tools like ServiceStack and RestSharp make it easy to call and consume REST services, it is sometimes non-trivial to consume XML or JSON that does not conform to the standard _DataContract_ serialization conventions. If necessary, invoke the request and handle the appropriate serialization explicitly using the ServiceStack.Text library discussed below.
 
 
 <a name="Options_for_consuming_RESTful_data" />

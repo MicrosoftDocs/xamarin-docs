@@ -28,7 +28,7 @@ As stated above, User Defaults (`NSUserDefaults`) can be added to an App (or Ext
 When your app first executes, `NSUserDefaults` reads the keys and values from the app's User Defaults Database and caches them to memory to avoid opening and reading the database each time a value is required. 
 
 > [!IMPORTANT]
-> **Note**: Apple no longer recommends that the developer call the `Synchronize` method to sync the in-memory cache with the database directly. Instead, it will be automatically called at periodic intervals to keep the in-memory cache in sync with a user’s defaults database.
+> Apple no longer recommends that the developer call the `Synchronize` method to sync the in-memory cache with the database directly. Instead, it will be automatically called at periodic intervals to keep the in-memory cache in sync with a user’s defaults database.
 
 The `NSUserDefaults` class contains several convenience methods for reading and writing preference values for common data types such as: string, integer, float, boolean and URLs. Other types of data can be archived using `NSData`, then read from or written to the User Defaults Database. For more information, please see Apple's [Preferences and Settings Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i).
 
@@ -123,7 +123,7 @@ plist.SetBool(useHeader, "UseHeader");
 ```
 
 > [!IMPORTANT]
-> **NOTE:** When your App first executes, `NSUserDefaults` reads the keys and values from the app's User Defaults Database and caches them to memory to avoid opening and reading the database each time a value is required.
+> When your App first executes, `NSUserDefaults` reads the keys and values from the app's User Defaults Database and caches them to memory to avoid opening and reading the database each time a value is required.
 
 
 

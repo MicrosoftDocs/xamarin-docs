@@ -170,7 +170,7 @@ Next, we need to select the new App ID and Provisioning Profile in our Xamarin.M
 6. Click the **Done** button.
 
 > [!IMPORTANT]
-> **Note:** You might have to quit and restart Visual Studio for Mac to get it to recognize the new App ID and Provisioning Profile that was installed by Xcode.
+> You might have to quit and restart Visual Studio for Mac to get it to recognize the new App ID and Provisioning Profile that was installed by Xcode.
 
 #### Troubleshooting provisioning issues
 
@@ -304,7 +304,7 @@ A Xamarin.Mac application's App Container Directory has the following characteri
 - For _shoebox_ types of apps (like Apple's Photo app), the user's content will go into the Container.
 
 > [!IMPORTANT]
-> **Note:** Unfortunately, Xamarin.Mac does not have 100% API coverage yet (unlike Xamarin.iOS), as a result the `NSHomeDirectory` API has not been mapped in the current version of Xamarin.Mac.
+> Unfortunately, Xamarin.Mac does not have 100% API coverage yet (unlike Xamarin.iOS), as a result the `NSHomeDirectory` API has not been mapped in the current version of Xamarin.Mac.
 
 As a temporary workaround, you can use the following code:
 
@@ -409,7 +409,9 @@ When the user imports a resource file into the project (via a `NSOpenPanel`), th
 A Document-Scoped Bookmark can be resolved by any application that can open the bookmark data and the document itself. This supports portability, allowing the user to send the project files to another user and having all of the bookmarks work for them as well.
 
 > [!IMPORTANT]
-> **Note:** A Document-Scoped Bookman can _only_ point to a single file and not a folder and that file cannot be in a location used by the system (such as `/private` or `/Library`).
+> A Document-Scoped Bookmark can _only_ point to a single file and not a
+> folder and that file cannot be in a location used by the system (such as
+> `/private` or `/Library`).
 
 #### Using security-scoped bookmarks
 
@@ -424,7 +426,7 @@ Using either type of Security-Scoped Bookmark, requires you to perform the follo
 After you relinquish access to a resource, you'll need to return to step 4 again to re-establish access. If the Xamarin.Mac app is restarted, you must return to step 3 and re-resolve the bookmark.
 
 > [!IMPORTANT]
-> **Note:** Failure to release access to Security-Scoped URL resources will cause a Xamarin.Mac app to leak Kernel resources. As a result, the app will no longer be able to add file system locations to its Container until it is restarted.
+> Failure to release access to Security-Scoped URL resources will cause a Xamarin.Mac app to leak Kernel resources. As a result, the app will no longer be able to add file system locations to its Container until it is restarted.
 
 ### The App Sandbox and code signing
 
@@ -489,7 +491,7 @@ Designing a Xamarin.Mac app for the App Sandbox typically consists of the follow
 6. Implement a migration strategy.
 
 > [!IMPORTANT]
-> **Note:** You must not only sandbox the main executable in you app bundle, but also every included helper app or tool in that bundle. This is required for any app distributed from the Mac App Store and, if possible, should be done for any other form of app distribution.
+> You must not only sandbox the main executable in you app bundle, but also every included helper app or tool in that bundle. This is required for any app distributed from the Mac App Store and, if possible, should be done for any other form of app distribution.
 
 For a list of all executable binaries in a Xamarin.Mac app's bundle, type the following command in Terminal:
 

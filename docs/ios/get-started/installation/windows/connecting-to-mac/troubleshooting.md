@@ -226,7 +226,7 @@ If the Output window does not include enough information to diagnose the problem
 1. Start Visual Studio.
 
 	> [!IMPORTANT]
->  Note that **.svclogs** are not enabled by default. To access them you will need to start Visual Studio with verbose logs as explained in the [Version Logs](~/cross-platform/troubleshooting/questions/version-logs.md#visual-studio-startup-verbose-logs) guide. For more information, refer to the [Troubleshooting Extensions with the Activity Log](https://blogs.msdn.microsoft.com/visualstudio/2010/02/24/troubleshooting-extensions-with-the-activity-log/) blog.
+	> Note that **.svclogs** are not enabled by default. To access them you will need to start Visual Studio with verbose logs as explained in the [Version Logs](~/cross-platform/troubleshooting/questions/version-logs.md#visual-studio-startup-verbose-logs) guide. For more information, refer to the [Troubleshooting Extensions with the Activity Log](https://blogs.msdn.microsoft.com/visualstudio/2010/02/24/troubleshooting-extensions-with-the-activity-log/) blog.
 
 2. Attempt to connect to the build host.
 

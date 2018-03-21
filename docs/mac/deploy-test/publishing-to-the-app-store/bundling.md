@@ -15,7 +15,7 @@ ms.date: 03/14/2017
 This section describes the basics of building an application for release in the Mac App Store using Visual Studio for Mac. Based on additional features (such as iCloud access and push notifications), further setup may be required that goes beyon the scope of this article.
 
 > [!NOTE]
->  **Note**: Before starting this section, the developer must have created a production provisioning profile to build for the Mac App Store. See the instructions earlier in this document about creating the required provisioning profiles.
+> Before starting this section, the developer must have created a production provisioning profile to build for the Mac App Store. See the instructions earlier in this document about creating the required provisioning profiles.
 
 ## Code signing options
 

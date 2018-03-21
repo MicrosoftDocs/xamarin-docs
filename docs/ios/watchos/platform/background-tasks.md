@@ -139,7 +139,7 @@ Again, the system will issue a `WKSnapshotRefreshBackgroundTask` so that the app
 When the app marks the `WKSnapshotRefreshBackgroundTask` completed, the system will automatically take a Snapshot of the app's UI.
 
 > [!IMPORTANT]
-> **NOTE:** It is important to always schedule a ` WKSnapshotRefreshBackgroundTask` after the app has received new data and updated its User Interface or the user will not see the modified information.
+> It is important to always schedule a ` WKSnapshotRefreshBackgroundTask` after the app has received new data and updated its User Interface or the user will not see the modified information.
 
 
 
@@ -626,7 +626,7 @@ Apps that have been pinned to the dock can expect the following:
 The last app the user ran will be considered the _Most Recently Used_ app  and will occupy the last slot in the Dock. From there, there user can choose to pin it permanently to the Dock. The Most Recently Used will be treated like any other favorite app the user has already pinned to the Dock.
 
 > [!IMPORTANT]
-> **NOTE:** Apps that have only been added to the Home Screen will not be given any regular scheduling. To receive regular scheduling and background updates, an app _must_ be added to the Dock.
+> Apps that have only been added to the Home Screen will not be given any regular scheduling. To receive regular scheduling and background updates, an app _must_ be added to the Dock.
 
 As stated earlier in this document, Snapshots are very important in watchOS 3 since they function as both the preview and launch images for the app. If the user settles on an app in the Dock, it will expand to full screen, enter the foreground and start running, so it is imperative that the Snapshot be up-to-date.
 

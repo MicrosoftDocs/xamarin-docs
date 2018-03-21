@@ -81,7 +81,7 @@ The Developer Profile contains certificates, their associated keys, and any prov
 -----
 
 > [!WARNING]
-> **Note:** Losing the certificate and associated keys can be incredibly disruptive, as it will require revoking  existing certificates and re-provisioning any associated devices, including those registered for ad-hoc deployment. After successfully setting up  Development Certificates, export a backup copy and store them in a safe place. For more information on how to do this, refer to the Exporting and Importing Certificates and Profiles section of the [Maintaining Certificates](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) guide in Apple's docs.
+> Losing the certificate and associated keys can be incredibly disruptive, as it will require revoking  existing certificates and re-provisioning any associated devices, including those registered for ad-hoc deployment. After successfully setting up  Development Certificates, export a backup copy and store them in a safe place. For more information on how to do this, refer to the Exporting and Importing Certificates and Profiles section of the [Maintaining Certificates](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) guide in Apple's docs.
 
 <a name="provisioning" />
 
@@ -208,12 +208,12 @@ The new certificates or provisioning profiles will be available in Visual Studio
 # [Visual Studio for Mac](#tab/vsmac)
 
 > [!IMPORTANT]
-> **Note:** It may be necessary to stop and restart Visual Studio for Mac before it will see any new or modified certificates or profiles updated by Xcode.
+> It may be necessary to stop and restart Visual Studio for Mac before it will see any new or modified certificates or profiles updated by Xcode.
 
 # [Visual Studio](#tab/vswin)
 
 > [!IMPORTANT]
-> **Note:** It may be necessary to stop and restart Visual Studio before it will see any new or modified certificates or profiles updated by Xcode.
+> It may be necessary to stop and restart Visual Studio before it will see any new or modified certificates or profiles updated by Xcode.
 
 -----
 

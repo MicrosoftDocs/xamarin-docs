@@ -63,7 +63,7 @@ The App Switcher is an important control feature introduced in iOS 7. It is laun
 Using the App Switcher, users can scroll through snapshots of all backgrounded and suspended applications. Tapping an application launches it into the foreground. Swiping up removes the application from the background, terminating its process. We will take a closer look at the App Switcher in the [iOS Application Lifecycle Demo](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md) in the next section.
 
 > [!IMPORTANT]
-> **Note**: The App Switcher does not show a difference between backgrounded and suspended applications.
+> The App Switcher does not show a difference between backgrounded and suspended applications.
 
 
 

@@ -123,7 +123,7 @@ To provide the required `NSSpeechRecognitionUsageDescription` key in the `Info.p
 -----
 
 > [!IMPORTANT]
-> **NOTE:** Failing to provide either of the above `Info.plist` keys (`NSSpeechRecognitionUsageDescription` or `NSMicrophoneUsageDescription`) can result in the app failing without warning when trying to access either Speech Recognition or the microphone for live audio.
+> Failing to provide either of the above `Info.plist` keys (`NSSpeechRecognitionUsageDescription` or `NSMicrophoneUsageDescription`) can result in the app failing without warning when trying to access either Speech Recognition or the microphone for live audio.
 
 
 
@@ -182,7 +182,7 @@ The `RequestAuthorization` method of the `SFSpeechRecognizer` class will request
 A `SFSpeechRecognizerAuthorizationStatus` result is returned to the `RequestAuthorization` method's callback routine that can be used to take action based on the user's permission. 
 
 > [!IMPORTANT]
-> **NOTE:** Apple suggests waiting until the user has started an action in the app that requires speech recognition before requesting this permission.
+> Apple suggests waiting until the user has started an action in the app that requires speech recognition before requesting this permission.
 
 ### Recognizing Pre-Recorded Speech
 
@@ -369,7 +369,7 @@ RecognitionTask.Cancel ();
 It is important to call `RecognitionTask.Cancel` if the user cancels the translation to free up both memory and the device's processor.
 
 > [!IMPORTANT]
-> **NOTE:** Failing to provide the `NSSpeechRecognitionUsageDescription` or `NSMicrophoneUsageDescription` `Info.plist` keys can result in the app failing without warning when trying to access either Speech Recognition or the microphone for live audio (`var node = AudioEngine.InputNode;`). Please see the **Providing a Usage Description** section above for more information.
+> Failing to provide the `NSSpeechRecognitionUsageDescription` or `NSMicrophoneUsageDescription` `Info.plist` keys can result in the app failing without warning when trying to access either Speech Recognition or the microphone for live audio (`var node = AudioEngine.InputNode;`). Please see the **Providing a Usage Description** section above for more information.
 
 ## Speech Recognition Limits
 

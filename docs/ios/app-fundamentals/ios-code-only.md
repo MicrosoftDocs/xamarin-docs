@@ -617,7 +617,7 @@ For more information on creating a Launch Screen, refer to the documents below:
 - [Managing Launch Screens with Storyboards](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 > [!IMPORTANT]
-> **NOTE:** As of iOS 9, Apple recommends that Storyboards should be used as the primary method of creating a Launch Screen.
+> As of iOS 9, Apple recommends that Storyboards should be used as the primary method of creating a Launch Screen.
 
 ### Creating a Launch Image for pre-iOS 8 applications
 
@@ -626,7 +626,7 @@ A static image can be used in addition to a .xib or Storyboard launch screen if 
 This static image can be set in the Info.plist file, or as an Asset Catalog (for iOS 7) in your application. You will need to provide separate images for each device size (320x480, 640x960, 640x1136) that your application may run on. For more information on Launch Screen sizes, view the [Launch Screen Images](~/ios/app-fundamentals/images-icons/launch-screens.md) guide.
 
 > [!IMPORTANT]
-> **NOTE:** If your app has no Launch Screen, you may notice that it doesn't fully fit the screen. If this is the case, you should make sure to include, at least, a 640x1136 image named `Default-568@2x.png` to your Info.plist. 
+> If your app has no Launch Screen, you may notice that it doesn't fully fit the screen. If this is the case, you should make sure to include, at least, a 640x1136 image named `Default-568@2x.png` to your Info.plist. 
 
 
 

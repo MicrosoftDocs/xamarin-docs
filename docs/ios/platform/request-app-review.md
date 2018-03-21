@@ -53,7 +53,7 @@ namespace iOSTenThree
 ```
 
 > [!NOTE]
-> **NOTE:** Calling  `RequestReview()` in an under-development app will always display the rating and review dialog so it can be tested. This does not apply to apps that have been distributed through TestFlight, where the method call will be ignored.
+> Calling  `RequestReview()` in an under-development app will always display the rating and review dialog so it can be tested. This does not apply to apps that have been distributed through TestFlight, where the method call will be ignored.
 
 When the `RequestReview()` method is called in a shipping app that the user has installed from the App Store, iOS 10 will handle the entire rating and review process for the developer. Again, because this process is governed by App Store policy, an alert may or may not be displayed.
 

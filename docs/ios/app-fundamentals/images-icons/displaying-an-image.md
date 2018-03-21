@@ -91,7 +91,7 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 ```
 
 > [!IMPORTANT]
-> **NOTE**: If the images assigned to an Image Set are not showing up correctly, ensure that the correct filename is being used with the `FromBundle` method (the **Image Set** and not the parent **Asset Catalog** name). For PNG images, the `.png` extension can be omitted. For other image formats, the extension is required (eg. `PurpleMonkey.jpg`).
+> If the images assigned to an Image Set are not showing up correctly, ensure that the correct filename is being used with the `FromBundle` method (the **Image Set** and not the parent **Asset Catalog** name). For PNG images, the `.png` extension can be omitted. For other image formats, the extension is required (eg. `PurpleMonkey.jpg`).
 
 <a name="Using-Vector-Images-in-Asset-Catalogs" />
 

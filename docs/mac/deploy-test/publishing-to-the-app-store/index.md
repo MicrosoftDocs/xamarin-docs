@@ -35,7 +35,7 @@ When you join the [Mac Developer Program](https://developer.apple.com/devcenter/
 Choose the correct enrollment type for your situation.
 
 > [!NOTE]
-> **Note**: The choices made here will affect the way some screens appear when configuring a developer account. The descriptions and screenshots in this document are done from the perspective of an **Individual** developer account. In a **Company**, some options will only be available to **Team Admin** users.
+> The choices made here will affect the way some screens appear when configuring a developer account. The descriptions and screenshots in this document are done from the perspective of an **Individual** developer account. In a **Company**, some options will only be available to **Team Admin** users.
 
 
 ### [Certificates and Identifiers](~/mac/deploy-test/publishing-to-the-app-store/certificates-identifiers.md)

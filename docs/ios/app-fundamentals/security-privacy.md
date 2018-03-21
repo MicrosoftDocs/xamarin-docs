@@ -40,7 +40,7 @@ The following general changes have been made to Security and Privacy in iOS 10:
 Apps running on iOS 10 (or later) must statically declare their intent to access specific features or user information by entering one or more Privacy Keys in their `Info.plist` files that explain to the user why the app wishes to gain access.
 
 > [!IMPORTANT]
-> **NOTE** Apps that fail to provide the required keys will be silently terminated by the system when they attempt to access one of the restricted features or user information, _without error_! If an app starts unexpectedly failing on iOS 10, ensure that all of the required `Info.plist` have been specified.
+> Apps that fail to provide the required keys will be silently terminated by the system when they attempt to access one of the restricted features or user information, _without error_! If an app starts unexpectedly failing on iOS 10, ensure that all of the required `Info.plist` have been specified.
 
 The following Privacy related keys are available:
 
@@ -105,7 +105,7 @@ To set any of the Privacy keys, do the following:
 -----
 
 > [!IMPORTANT]
-> **NOTE:** In the example given above, failure to set the `NSHomeKitUsageDescription` key in the `Info.plist` file would result in the app _silently failing_ (being closed by the system at runtime) without error when run in iOS 10 (or greater).
+> In the example given above, failure to set the `NSHomeKitUsageDescription` key in the `Info.plist` file would result in the app _silently failing_ (being closed by the system at runtime) without error when run in iOS 10 (or greater).
 
 <a name="Summary" />
 

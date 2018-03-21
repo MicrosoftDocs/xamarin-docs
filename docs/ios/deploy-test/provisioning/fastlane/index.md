@@ -43,7 +43,7 @@ The content provided can be used as a springboard to aid with app distribution, 
 2. Download the fastlane tools from [https://download.fastlane.tools](https://download.fastlane.tools). 
 
     > [!NOTE]
-> It is possible to install fastlane tools from Homebrew using `brew cask install fastlane` or via Rubygems (2.0 or above) using `sudo gem install fastlane –NV`. However using the installer will ensure that the correct dependencies are available. 
+    > It is possible to install fastlane tools from Homebrew using `brew cask install fastlane` or via Rubygems (2.0 or above) using `sudo gem install fastlane –NV`. However using the installer will ensure that the correct dependencies are available. 
 
 3. Install fastlane by unzipping the file, and double-click on the `install` executable. If you get an error advising that the file "can't be opened because it is from an unidentified developer", press OK and do the following:
     - Control + Click on the `install` executable. This will display the dialog below:

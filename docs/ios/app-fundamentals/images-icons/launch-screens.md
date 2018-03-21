@@ -257,7 +257,7 @@ In iOS 8 (and later), the developer can create a special Unified Storyboard to p
 -----
 
 > [!NOTE]
-> **NOTE**: A Storyboard used as a Launch Screen _must_ include only
+> A Storyboard used as a Launch Screen _must_ include only
 > simple, built-in UI elements and **cannot** do any calculations or derive
 > from a custom class.
 

@@ -33,7 +33,7 @@ Regardless of how you plan to release a Xamarin.iOS application, you'll need to 
 You can select the same **App ID** and **Devices** that you used for your development provisioning profile, but if you don't already have one, you will need to create a Distribution Certificate to identify your organization when submitting the app to the app store. The steps on how to create a Distribution Certificate are described in the section below.
 
 > [!NOTE]
->  Note: Only Team Agents and Admins can create Distribution Certificates and Provisioning Profiles.
+> Only Team Agents and Admins can create Distribution Certificates and Provisioning Profiles.
 
 <a name="creatingcertificate" />
 

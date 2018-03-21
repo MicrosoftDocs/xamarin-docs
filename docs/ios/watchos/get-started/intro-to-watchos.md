@@ -13,7 +13,7 @@ ms.date: 09/13/2016
 # Introduction to watchOS
 
 > [!NOTE]
-> **NOTE:** Check out the [Introduction to watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md)
+> Check out the [Introduction to watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md)
 > for an overview of the latest features.
 
 ## About watchOS

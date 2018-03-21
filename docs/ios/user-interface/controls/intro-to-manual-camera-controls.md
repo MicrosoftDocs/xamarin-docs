@@ -877,7 +877,7 @@ An `AVCaptureWhiteBalanceTemperatureAndTintValues` structure has also been added
 Use the `CaptureDevice.GetTemperatureAndTintValues`and the `CaptureDevice.GetDeviceWhiteBalanceGains`methods to convert between temperature and tint, chromaticity and RGB gain color spaces.
 
 > [!NOTE]
-> **Note**: The conversion routines are more accurate the closer the value to be converted is to the Planckian Locus.
+> The conversion routines are more accurate the closer the value to be converted is to the Planckian Locus.
 
 
 

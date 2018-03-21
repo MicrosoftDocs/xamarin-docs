@@ -468,7 +468,7 @@ Also new to watchOS 3, are the Motion Paused (`HKWorkoutEventType.MotionPaused`)
 When the app receives a Motion Paused event, it should stop collecting data until the user resumes motion and the Motion Resumes event is received. App app should not pause the Workout session in response to a Motion Paused event.
 
 > [!IMPORTANT]
-> **NOTE:** The Motion Paused and Motion Resume events are only supported for the RunningWorkout Activity Type (`HKWorkoutActivityType.Running`).
+> The Motion Paused and Motion Resume events are only supported for the RunningWorkout Activity Type (`HKWorkoutActivityType.Running`).
 
 Again, these events can be handled by overriding the `DidGenerateEvent` method of the `HKWorkoutSessionDelegate`:
 
@@ -645,7 +645,7 @@ Take a look at how this process works:
 3. Using the passed in Workout Configuration, the watchOS 3 app starts a new Workout Session (`HKWorkoutSession`).
 
 > [!IMPORTANT]
-> **NOTE:** In order for the parent iPhone app to start a workout on the Apple Watch, the watchOS 3 app must have Background Running enabled. Please see [Enabling Background Running](#Enabling-Background-Running) above for more details.
+> In order for the parent iPhone app to start a workout on the Apple Watch, the watchOS 3 app must have Background Running enabled. Please see [Enabling Background Running](#Enabling-Background-Running) above for more details.
 
 This process is very similar to the process of starting a Workout Session in the watchOS 3 app directly. On the iPhone, use the following code:
 
@@ -760,7 +760,7 @@ Taking all of the information presented in this document, a watchOS 3 based work
 3. **watchOS 3 `OutdoorRunDelegate.cs`** - A custom `HKWorkoutSessionDelegate` to handle events for the workout.
 
 > [!IMPORTANT]
-> **NOTE:** The code shown in the following sections only includes the parts required to implement the new, enhanced features provided to Workout apps in watchOS 3. All supporting code and the code to present and update the UI is not included but can be easily created by following our other watchOS documentation.<p/>
+> The code shown in the following sections only includes the parts required to implement the new, enhanced features provided to Workout apps in watchOS 3. All supporting code and the code to present and update the UI is not included but can be easily created by following our other watchOS documentation.<p/>
 
 
 

@@ -46,7 +46,7 @@ care of efficiently transferring large files to and from the iCloud Servers in t
 focus on other tasks.
 
 > [!NOTE]
-> **NOTE:** It is important to note that CloudKit is a _Transport Technology_. It doesn't provide any persistence; it only enables an application to send and receive information from the servers efficiently.
+> It is important to note that CloudKit is a _Transport Technology_. It doesn't provide any persistence; it only enables an application to send and receive information from the servers efficiently.
 
 As of this writing, Apple is initially providing CloudKit for free with a high limit on both bandwidth and storage capacity. For larger projects or applications with a large user base, Apple has hinted that an affordable pricing scale will be provided.
 
@@ -242,7 +242,7 @@ References are exposed in the CloudKit Framework via the `CKReference` class. Th
 References provide the mechanism behind Cascading Deletes. If a parent record is deleted from the database, any child records (as specified in a Relationship) will automatically be deleted from the database as well.
 
 > [!NOTE]
-> **Note**: Dangling Pointers are a possibility when using CloudKit. For example, by the time the application has fetched a list of record pointers, selected a record and then asked for the record, the record might no longer exist in the database. An application must be coded to handle this situation gracefully.
+> Dangling Pointers are a possibility when using CloudKit. For example, by the time the application has fetched a list of record pointers, selected a record and then asked for the record, the record might no longer exist in the database. An application must be coded to handle this situation gracefully.
 
 While not required, Back References are preferred when working with the CloudKit Framework. Apple has fine-tuned the system to make this the most efficient type of reference.
 
@@ -398,7 +398,7 @@ Three things to note about the above code:
 
 
 > [!NOTE]
-> **Note**: Because of the “lossy” nature of mobile network communications, where connections are constantly being dropped or interrupted, one of the first considerations the developer must make when working with CloudKit is error handling.
+> Because of the “lossy” nature of mobile network communications, where connections are constantly being dropped or interrupted, one of the first considerations the developer must make when working with CloudKit is error handling.
 
 ### Fetching a Record
 
@@ -563,7 +563,7 @@ Finally, a push notification should be sent to every device attached to the data
 Subscriptions are exposed in the CloudKit Framework via the `CKSubscription` class. They combine a Record Type ( `RecordType`), a Predicate ( `NSPredicate`) and an Apple Push Notification ( `Push`).
 
 > [!NOTE]
-> **Note**: CloudKit pushes are slightly augmented as they contain a payload containing CloudKit specific information such as what caused the push to happen.
+> CloudKit pushes are slightly augmented as they contain a payload containing CloudKit specific information such as what caused the push to happen.
 
 #### How Subscriptions Work
 
@@ -681,7 +681,7 @@ Because this is coming from iCloud, there is a rich backing store of User Inform
 On a Container by Container basis, a unique, randomly-generated User ID is created and associated with the user's iCloud account (email address). This User ID is returned to the application and can be used in any way the developer sees fit.
 
 > [!NOTE]
-> **Note**: Different applications running on the same device for the same iCloud user will have different User IDs because they are connected to different CloudKit Containers.
+> Different applications running on the same device for the same iCloud user will have different User IDs because they are connected to different CloudKit Containers.
 
 The following code gets the CloudKit user ID for the currently logged in iCloud user on the device:
 
@@ -813,7 +813,7 @@ The developer can use this feature to make changes to a schema during developmen
 Prior to deploying the application, the developer can migrate their schema and data to the production environment using **CloudKit Dashboard**. When running against the Production Environment, the server prevents an application from changing the schema programmatically. The developer can still make changes with **CloudKit Dashboard** but attempts to add fields to a record in the Production Environment result in errors.
 
 > [!NOTE]
-> **NOTE:** The iOS Simulator works only with the **Development Environment**. When the developer is ready to test an application in a **Production Environment**, a physical iOS device is required.
+> The iOS Simulator works only with the **Development Environment**. When the developer is ready to test an application in a **Production Environment**, a physical iOS device is required.
 
 
 ## Shipping a CloudKit Enabled App

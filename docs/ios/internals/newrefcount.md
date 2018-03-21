@@ -42,7 +42,7 @@ Note that these options have been removed in newer versions of Visual Studio for
 
 	
 > [!IMPORTANT]
-> **NOTE:** An earlier version of this feature has been around since MonoTouch 5.2 but was only available for **sgen** as an experimental preview. This new, enhanced version is now also available for the **Boehm** garbage collector.
+> An earlier version of this feature has been around since MonoTouch 5.2 but was only available for **sgen** as an experimental preview. This new, enhanced version is now also available for the **Boehm** garbage collector.
 
 
 Historically there have been two kinds of objects managed by Xamarin.iOS: those

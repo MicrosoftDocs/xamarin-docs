@@ -39,7 +39,7 @@ The following sections will go over each option in detail.
 By using the `NSLayoutAnchor` class, you have a fluent interface for creating constraints based on the anchor properties of the UI items being constrained. For example, a View Controller's top and bottom layout guides exposes the `TopAnchor`, `BottomAnchor` and `HeightAnchor` anchor properties while a View exposes edge, center, size and baseline properties.
 
 > [!IMPORTANT]
-> **NOTE:** In addition to the standard set of anchor properties, iOS Views also include the `LayoutMarginsGuides` and `ReadableContentGuide` properties. These properties expose `UILayoutGuide` objects for working with the View's margins and readable content guides respectively.
+> In addition to the standard set of anchor properties, iOS Views also include the `LayoutMarginsGuides` and `ReadableContentGuide` properties. These properties expose `UILayoutGuide` objects for working with the View's margins and readable content guides respectively.
 
 Layout Anchors provide several methods for creating constraints in an easy-to-read, compact format:
 

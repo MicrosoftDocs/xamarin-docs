@@ -126,7 +126,7 @@ To enable the new testing environment, do the following:
 4. Use one of the test payment cards from the [Apple Pay Guide](https://developer.apple.com/apple-pay/) to make payments.
 
 > [!IMPORTANT]
->  **NOTE:** By switching iCloud Accounts, the device will automatically switch to the new testing environment. However, Apple still **requires** the app to be tested with real cards in a production environment before submission to the iTunes App Store.
+> By switching iCloud Accounts, the device will automatically switch to the new testing environment. However, Apple still **requires** the app to be tested with real cards in a production environment before submission to the iTunes App Store.
 
 ## Summary
 

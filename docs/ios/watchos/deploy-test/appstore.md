@@ -13,7 +13,7 @@ ms.date: 03/17/2017
 # Deploying to the App Store
 
 > [!IMPORTANT]
->  Be sure to review [Apple's Watch Kit Submission Guide](https://developer.apple.com/app-store/watch/), and see the [Troubleshooting](#Troubleshooting) section for any issues you may have.
+> Be sure to review [Apple's Watch Kit Submission Guide](https://developer.apple.com/app-store/watch/), and see the [Troubleshooting](#Troubleshooting) section for any issues you may have.
 
 - Ensure you have:
   - [**Distribution Provisioning Profiles**](#provisioning) created
@@ -212,7 +212,7 @@ Ensure you have the latest version of Visual Studio for Mac, and that your
   and re-create the **AppIcons.appiconset**.
 
 > [!IMPORTANT]
-> NOTE: There is a known bug in Visual Studio for Mac's Watch icon support: it expects an 88x88 pixel image for the **29x29@3x** image (which should be 87x87 pixels).
+> There is a known bug in Visual Studio for Mac's Watch icon support: it expects an 88x88 pixel image for the **29x29@3x** image (which should be 87x87 pixels).
 
 
 You
@@ -234,7 +234,7 @@ This message may appear during validation and submission, or in an
 Ensure you are using the latest version of Xcode and Xamarin's tools.
 -->
 > [!IMPORTANT]
-> NOTE: You must **Archive** your app in Visual Studio for Mac and then switch to Xcode 6.2+ to validate and upload to iTunes Connect.
+> You must **Archive** your app in Visual Studio for Mac and then switch to Xcode 6.2+ to validate and upload to iTunes Connect.
 
 
 Use the Stable Xamarin channel, and Xcode 6.2+.

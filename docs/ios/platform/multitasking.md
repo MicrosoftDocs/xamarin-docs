@@ -29,7 +29,7 @@ There are a number of things to consider when [supporting multitasking in your a
 - [Custom Hardware Keyboard Shortcuts](#Custom-Hardware-Keyboard-Shortcuts)
 - [Resource Management](#Resource-Management-Considerations)
 
-As an app developer you can also [opt-out of multitasking](#Opting-Out-of-Multitasking), including [disabling PIP Video Playback](#Disabling-PIP-Video-Playback).
+As an app developer you can also [opt out of multitasking](#Opting-Out-of-Multitasking), including [disabling PIP Video Playback](#Disabling-PIP-Video-Playback).
 
 This article will cover the steps required to ensure that your Xamarin.iOS app runs correctly in a multitasking environment or how to opt out of multitasking if it is not a good fit for your app.
 
@@ -201,7 +201,7 @@ Please see the sample [MultiTask app](http://developer.xamarin.com/samples/monot
 
 Even for apps that are already using iOS 8's design guides and best practices, efficient resource management might still be an issue. In iOS 9, apps no longer have exclusive use of memory, CPU or other system resources.
 
-As a result, you must fine-tune your Xamarin.iOS app to use system resources effectively or it faces termination under low memory situations. This is equally true of apps that opt-out of multitasking, since a second app might still be run in a Slide Over panel or a Picture in Picture window requiring extra resources or causing the refresh rate to fall below 60 frames per second.
+As a result, you must fine-tune your Xamarin.iOS app to use system resources effectively or it faces termination under low memory situations. This is equally true of apps that opt out of multitasking, since a second app might still be run in a Slide Over panel or a Picture in Picture window requiring extra resources or causing the refresh rate to fall below 60 frames per second.
 
 Consider the following user actions and their implications:
 
@@ -219,19 +219,18 @@ See Apple's [Energy Efficiency Guide for iOS Apps](https://developer.apple.com/l
 
 <a name="Opting-Out-of-Multitasking" />
 
-## Opting-Out of Multitasking
+## Opting Out of Multitasking
 
 While Apple suggests that all iOS 9 apps support multitasking, there might very specific reasons for an app not too, such as games or camera apps that require the full screen to work correctly.
 
-For your Xamarin.iOS app to opt-out of being run in either a Slide Out panel or in Split View mode, edit the project's **Info.plist** file and check **Requires Full Screen**:
+For your Xamarin.iOS app to opt out of being run in either a Slide Out panel or in Split View mode, edit the project's **Info.plist** file and check **Requires Full Screen**:
 
-[![](multitasking-images/fullscreen01.png "Opting-Out of Multitasking")](multitasking-images/fullscreen01.png#lightbox)
+[![](multitasking-images/fullscreen01.png "Opting Out of Multitasking")](multitasking-images/fullscreen01.png#lightbox)
 
 > [!IMPORTANT]
-> **NOTE:** While Opting-Out of multitasking prevents your app from being run in Slide Out or Split View, it does **not** prevent another app from being run in Slide Out or a Picture in Picture video from displaying along with your app.
-
-
-
+> While opting out of multitasking prevents your app from being run in Slide
+> Out or Split View, it does not prevent another app from being run in Slide
+> Out or a Picture in Picture video from displaying along with your app.
 
 <a name="Disabling-PIP-Video-Playback" />
 
@@ -239,7 +238,7 @@ For your Xamarin.iOS app to opt-out of being run in either a Slide Out panel or 
 
 In most situations, your app should allow the user to play any video content it displays in a Picture in Picture floating window. However, there might be situations where this might not be desired, such as game cut scene videos.
 
-To opt-out of PIP video playback, do the following in your app:
+To opt out of PIP video playback, do the following in your app:
 
  - If you are using a `AVPlayerViewController` to display video, set the `AllowsPictureInPicturePlayback` property to `false`.
  - If you are using the `AVPlayerLayer` to display video, don't instantiate an `AVPictureInPictureController`.

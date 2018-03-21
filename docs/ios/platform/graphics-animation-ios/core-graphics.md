@@ -224,7 +224,7 @@ The resulting image is then displayed upright:
  ![](core-graphics-images/04-upright-monkey.png "The sample image displayed upright")
 
 > [!IMPORTANT]
->  **Note:** Changes to the graphics context apply to all subsequent drawing operations. Therefore, when the CTM is transformed, it will affect any additional drawing. For example, if you drew the triangle after the CTM transformation, it would appear upside down.
+> Changes to the graphics context apply to all subsequent drawing operations. Therefore, when the CTM is transformed, it will affect any additional drawing. For example, if you drew the triangle after the CTM transformation, it would appear upside down.
 
 ### Adding Text to the Image
 

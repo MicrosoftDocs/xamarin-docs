@@ -20,7 +20,7 @@ _Once Xamarin.iOS has been successfully installed, the next step in iOS developm
 - Xcode 9 or greater
 
 > [!IMPORTANT]
->  This guide illustrates how to use Visual Studio for Mac to set up an Apple device for deployment and how to deploy an application. For manual steps on how to do this or to do this with Visual Studio on Windows, it is recommended that you follow the detailed steps in the [manual provisioning](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) guide.
+> This guide illustrates how to use Visual Studio for Mac to set up an Apple device for deployment and how to deploy an application. For manual steps on how to do this or to do this with Visual Studio on Windows, it is recommended that you follow the detailed steps in the [manual provisioning](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) guide.
 
 ## Enabling Automatic Signing
 

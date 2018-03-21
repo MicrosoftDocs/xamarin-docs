@@ -54,7 +54,7 @@ This section explains how to use Visual Studio for Mac's automatic provisioning 
 # [Visual Studio for Mac](#tab/vsmac)
 
 > [!IMPORTANT]
-> **NOTE**: Not all capabilities can be added and managed in Visual Studio for Mac. The following list contains the supported capabilities:
+> Not all capabilities can be added and managed in Visual Studio for Mac. The following list contains the supported capabilities:
 >
 >* HealthKit 
 >* HomeKit 
@@ -194,7 +194,7 @@ Now create a provisioning profile that contains this App ID. Follow the steps be
     ![Visual Studio for Mac Project Options](images/image16.png)
 
 > [!IMPORTANT]
-> Note: You may also need to set entitlement keys in the Entitlement.plist file and privacy keys in the Info.plist file. More information on these entitlements is provided in the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
+> You may also need to set entitlement keys in the Entitlement.plist file and privacy keys in the Info.plist file. More information on these entitlements is provided in the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
 
 <a name="nextsteps" />
 
@@ -216,7 +216,7 @@ The list below details some of the most common issues that can create roadblocks
 -	Ensure that the Provisioning Profiles and App IDs have been installed and that the App's **Info.plist** (in the Xamarin Project) is using one of the App IDs configured above.
 -	Ensure that the App's **Entitlements.plist** file (in the Xamarin Project) has the correct service enabled.
 -	Ensure that the appropriate privacy-keys are set in info.plist
--	In the App's **iOS Bundle Signing**, ensure that the **Custom Entitlements** is set to **Entitlements.plist**. **Note:** This is _not_ the default setting for Debug and iOS Simulator builds.
+-	In the App's **iOS Bundle Signing**, ensure that the **Custom Entitlements** is set to **Entitlements.plist**. This is _not_ the default setting for Debug and iOS Simulator builds.
 
 <a name="summary" />
 

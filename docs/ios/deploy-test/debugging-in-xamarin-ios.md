@@ -19,10 +19,9 @@ languages code and use [LLDB](http://lldb.llvm.org/tutorial.html) when you need 
 
 
 > [!NOTE]
-> **IMPORTANT:** when you compile applications in Debug
-mode, Xamarin.iOS will generate slower and much larger applications as every line
-of code must be instrumented. Before releasing, make sure that you do a Release
-build.
+> When you compile applications in Debug mode, Xamarin.iOS will generate 
+> slower and much larger applications as every line of code must be
+> instrumented. Before releasing, make sure that you do a Release build.
 
 The Xamarin.iOS debugger is integrated into your IDE and it allows
 developers to debug Xamarin.iOS applications built with any of the managed

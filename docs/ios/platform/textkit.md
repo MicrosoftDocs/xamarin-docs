@@ -139,7 +139,7 @@ public class ExclusionPathView : UITextView
 This code adds support for drawing on the text view using Core Graphics. Since the `UITextView` class is now built to use Text Kit for its text rendering and layout, it can use all the features of Text Kit, such as setting exclusion paths.
 
 > [!IMPORTANT]
->   Note: This example subclasses `UITextView` to add touch drawing support. Subclassing `UITextView` isn’t necessary to get the features of Text Kit.
+> This example subclasses `UITextView` to add touch drawing support. Subclassing `UITextView` isn’t necessary to get the features of Text Kit.
 
 
 

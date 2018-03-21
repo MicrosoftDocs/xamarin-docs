@@ -194,7 +194,7 @@ This section of the iTunes Connect Application Record provides the unique ID of 
 ### App Icon
 
 > [!IMPORTANT]
->  **Note**: App Icons are no longer submitted through iTunes Connect. They must be submitted through the **AppIcon** image set in your project's **Assets.xcassets** file. For more information, see the [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) guide.
+>  App Icons are no longer submitted through iTunes Connect. They must be submitted through the **AppIcon** image set in your project's **Assets.xcassets** file. For more information, see the [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) guide.
 
 The App Icon is the face of your application to your users, so it must be memorable and display well at a small size. Memorable icons are clean, simple, and immediately recognizable.
 

@@ -75,7 +75,7 @@ When we're done updating content, we let the OS know by calling the completion h
 Applications using Background Fetch can make calls to update the UI from the background. When the user opens the app, the UI will be up to date and displaying new content. This will also update the application's App Switcher snapshot, so the user can see when the application has new content.
 
 > [!IMPORTANT]
-> **Note**: Once `PerformFetch` is called, the application has approximately 30 seconds to kick off download of new content, and call the completion handler block. If this takes too long, the app will be terminated. Consider using Background Fetch with the _Background Transfer Service_ when downloading media or other large files.
+> Once `PerformFetch` is called, the application has approximately 30 seconds to kick off download of new content, and call the completion handler block. If this takes too long, the app will be terminated. Consider using Background Fetch with the _Background Transfer Service_ when downloading media or other large files.
 
 
 ### BackgroundFetchInterval
@@ -128,7 +128,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 Remote notifications should be used for infrequent updates with content that is crucial to the application's functionality. For more information on remote notifications, see the Xamarin [Push Notifications in iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md) guide.
 
 > [!IMPORTANT]
-> **Note**: Because the update mechanism in Remote Notifications is based on Background Fetch, the application must kick off download of new content and call the completion handler block within 30 seconds of receiving the notification, or iOS will terminate the application. Consider pairing Remote Notifications with _Background Transfer Service_ when downloading media or other large files in the background.
+> Because the update mechanism in Remote Notifications is based on Background Fetch, the application must kick off download of new content and call the completion handler block within 30 seconds of receiving the notification, or iOS will terminate the application. Consider pairing Remote Notifications with _Background Transfer Service_ when downloading media or other large files in the background.
 
 
 ### Silent Remote Notifications
@@ -152,7 +152,7 @@ However, APNs will let silent notifications "piggyback" alongside a normal Remot
  [![](updating-an-application-in-the-background-images/silent.png "Regular notifications can be used to push stored silent notifications from the APNs to the device, as illustrated by this diagram")](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
-> **Note**: Apple encourages developers to send silent push notifications whenever the application requires, and let the APNs schedule their delivery.
+> Apple encourages developers to send silent push notifications whenever the application requires, and let the APNs schedule their delivery.
 
 
 In this section, we've covered the various options for refreshing content in the background to run tasks that don't fit into a background-necessary category. Now, let's see some of these APIs in action.

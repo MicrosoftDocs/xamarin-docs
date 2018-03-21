@@ -68,7 +68,7 @@ rm -rf ~/Library/XamarinStudio-*
 Mono is an open source implementation of Microsoft’s .NET Framework and is used by all Xamarin Products—Xamarin.iOS, Xamarin.Android and Xamarin.Mac to allow development of these platforms in C#.
 
 > [!IMPORTANT]
-> Note: There are other applications outside of Xamarin
+> There are other applications outside of Xamarin
 > which also use Mono, such as Unity. Be sure that there are no other dependencies
 > on Mono before uninstalling it.
 
@@ -268,7 +268,7 @@ three-bar menu next to the **Launch** button.
 [![](uninstalling-xamarin-images/vs2017-uninstall-sml.png "Uninstall Visual Studio completely")](uninstalling-xamarin-images/vs2017-uninstall.png#lightbox)
 
 > [!IMPORTANT]
-> **WARNING:** If you have two (or more) instances of Visual Studio installed side-by-side (SxS) – such as a Release and a Preview version – uninstalling
+> If you have two (or more) instances of Visual Studio installed side-by-side (SxS) – such as a Release and a Preview version – uninstalling
 > one instance might remove some Xamarin functionality from the other Visual Studio instance(s), including:
 >
 > - Xamarin Profiler

@@ -52,7 +52,7 @@ your operating system version and follow the instructions for the [Xamarin insta
 [!include[](~/cross-platform/includes/macos-requirements.md)]
 
 > [!NOTE]
-> NOTE: Xcode can be installed (and updated) on
+> Xcode can be installed (and updated) on
 >[developer.apple.com](https://developer.apple.com/xcode/download/) or via the Mac App Store.
 
 ### Testing & Debugging on macOS

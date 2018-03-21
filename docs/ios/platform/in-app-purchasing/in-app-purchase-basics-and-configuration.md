@@ -112,7 +112,7 @@ the Bundle Identifier, however it would be equally valid to use an identifier
 like my_store_example (even though Apple doesn’t recommend it).
 
 > [!IMPORTANT]
-> **NOTE**:  Apple also allows wild-card asterisk to be added to the end of a **Bundle Identifier** so that a single App ID can be used for
+> Apple also allows wild-card asterisk to be added to the end of a **Bundle Identifier** so that a single App ID can be used for
 multiple applications, however _wild-card App IDs cannot be used for In-AppPurchase_. An example wild-card Bundle Identifier might be com.xamarin.*
 
 #### Enabling App Services

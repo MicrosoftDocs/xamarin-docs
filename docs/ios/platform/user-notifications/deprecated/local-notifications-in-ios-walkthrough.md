@@ -15,7 +15,7 @@ ms.date: 03/18/2017
 _In this section we'll walk through how to use local notifications in a Xamarin.iOS application. It will demonstrate the basics of creating and publishing a notification that will pop up an alert when received by the app._
 
 > [!IMPORTANT]
-> **NOTE:** The information in this section pertains to iOS 9 and prior, it has been left here to support older iOS versions. For iOS 10 and later, please see the [User Notification Framework guide](~/ios/platform/user-notifications/index.md) for supporting both Local and Remote Notification on an iOS device.
+> The information in this section pertains to iOS 9 and prior, it has been left here to support older iOS versions. For iOS 10 and later, please see the [User Notification Framework guide](~/ios/platform/user-notifications/index.md) for supporting both Local and Remote Notification on an iOS device.
 
 ## Walkthrough
 

@@ -162,16 +162,16 @@ going to handling lists and notes intents, it also implements
 `IINNotebookDomainHandling`.
 
 > [!NOTE]
-> **Note About Naming:** There is a convention in .NET for interfaces to be prefixed with a
-> capital `I`, which Xamarin adheres to when binding protocols from the iOS SDK.
->
-> Xamarin also preserves type names from iOS, and Apple uses the first two characters
-> in type names to reflect the framework that a type belongs to.
->
-> For the `Intents` framework, types are prefixed with `IN*` (eg. `INExtension`)
-> but these are _not_ interfaces.
-> It also follows that protocols (which become interfaces in C#)
-> end up with two `I`s, such as `IINAddTasksIntentHandling`.
+> - There is a convention in .NET for interfaces to be prefixed with a
+>   capital `I`, which Xamarin adheres to when binding protocols from the 
+>   iOS SDK.
+> - Xamarin also preserves type names from iOS, and Apple uses the first two 
+>   characters in type names to reflect the framework that a type belongs 
+>   to.
+> - For the `Intents` framework, types are prefixed with `IN*` 
+>   (eg. `INExtension`) but these are _not_ interfaces.
+> - It also follows that protocols (which become interfaces in C#) end up 
+>   with two `I`s, such as `IINAddTasksIntentHandling`.
 
 #### Handling Intents
 

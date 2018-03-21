@@ -96,7 +96,7 @@ If we want to find out the progress of a download task, we can override the `Did
 The session delegate API provides a broad toolkit for interacting with tasks. For a full list of session delegate methods, refer to the `NSUrlSessionDelegate` API documentation.
 
 > [!IMPORTANT]
-> **Note**: Background sessions are started on a background thread, so any calls to update the UI must be explicitly run on the UI thread by calling `InvokeOnMainThread` to avoid iOS terminating the app. 
+> Background sessions are started on a background thread, so any calls to update the UI must be explicitly run on the UI thread by calling `InvokeOnMainThread` to avoid iOS terminating the app. 
 
 
 ## Handling Transfer Completion

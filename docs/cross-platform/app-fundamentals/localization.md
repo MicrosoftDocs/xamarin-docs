@@ -286,62 +286,6 @@ This provides maximum flexibility for the translator:
 -	Some languages might need the switch value to be abbreviated to fit in the user interface control, while the complete (translated) word can appear in the label.
 -	Alternatively, for some languages the rendering of your switch might be use "I" and "O" for cultural familiarity, but you might still want the label to read "On" or "Off".
 
-<!--
-# Testing
-
-Once you’ve build and localized your app, you’ll want to be able to test. That means setting your emulator/simulator or device to use another locale or language.
-
-> [!IMPORTANT]
-> **WARNING:** Be careful when you set your device to a language you cannot read, as you may not be able to navigate the menu system to return it to your native language!
-
-
-## iOS
-
-Use Settings.app to switch the language and locale of the iOS Simulator or an iOS device.
-
-On the iOS Simulator you can use the Reset Content and Settings menu item (if the device is in a foreign language and you can’t navigate back to your native tongue).
-
-![]( "ios settings to change language")
-
-## Android
-
-To change the locale on a device
-
-**Home > Menu > Settings > **
-
-Then depending on Android version
-
-**Locale & text > Select locale**
-
-or
-
-**Language & Input > Select language**
-
-![]( "android settings to change language")
-
-When you are testing on the emulator, you can navigate using the settings app as above, or you can reset the locale using the ADB tool command. Using Command Prompt on Windows or Terminal on OS X, start `adb shell` then send commands to set the emulator’s locale. **adb** can usually be found on the Mac in `/Users/YOURNAME/Library/Developer/Xamarin/android-sdk-mac_x86/platform-tools/adb`
-
-### Spanish (Mexico)
-setprop persist.sys.language es;setprop persist.sys.country MX;stop;sleep 5;start
-
-### French (France)
-setprop persist.sys.language fr;setprop persist.sys.country FR;stop;sleep 5;start
-
-### Japanese (Japan)
-setprop persist.sys.language ja;setprop persist.sys.country JP;stop;sleep 5;start
-
-### Portuguese (Brazil)
-setprop persist.sys.language pt;setprop persist.sys.country BR;stop;sleep 5;start
-
-### English (USA)
-setprop persist.sys.language en;setprop persist.sys.country US;stop;sleep 5;start
-
-**TIP:** the default location of ADB on Mac OS X is
-`/Users/[USERNAME]/Library/Developer/Xamarin/android-sdk-mac_x86/platform-tools/adb shell`
-
--->
-
-
 ### Translation Services
 
 #### Machine translation
@@ -354,8 +298,6 @@ For testing purposes you could use one of the many online translation tools to i
 - [Google Translate](http://translate.google.com/)
 
 There are many others available. The quality of machine translation generally isn't considered good enough to release an application without first being reviewed and tested by professional translators or native speakers.
-
- <!--Microsoft's Multilingual Application Toolkit helps you automatically translate strings, and is demonstrated with Xamarin.Forms in [this sample]().-->
 
 #### Professional translation
 

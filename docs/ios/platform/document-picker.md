@@ -217,7 +217,7 @@ Using Stitching in the above diagram:
 By using Stitching the application no longer has to open a data source to monitor local and cloud based file changes. Now the application can rely on `NSMetadataQuery` directly.
 
 > [!IMPORTANT]
-> **Note**: Stitching only works if the Application is using File Coordination as presented in the section above. If File Coordination is not being used, the APIs default to the existing pre iOS 8 behavior.
+> Stitching only works if the Application is using File Coordination as presented in the section above. If File Coordination is not being used, the APIs default to the existing pre iOS 8 behavior.
 
 
 
@@ -461,7 +461,7 @@ Do the following:
 6.  Right-click on `Entitlements.plist` in the **Solution Explorer** to open it in the editor.
 
 	> [!IMPORTANT]
-> **NOTE**: In Visual Studio you may need to open the Entitlements editor by right-clicking on it, selecting **Open With…** and selecting Property List Editor
+	> In Visual Studio you may need to open the Entitlements editor by right-clicking on it, selecting **Open With…** and selecting Property List Editor
 
 7.  Check  **Enable iCloud** ,  **iCloud Documents** ,  **Key-value storage** and  **CloudKit** .
 8.  Ensure the **Container** exists for the application (as created above). Example: `iCloud.com.your-company.AppName`
@@ -789,7 +789,7 @@ namespace DocPicker
 ```
 
 > [!IMPORTANT]
-> **Note**: The above code includes the code from the Discovering and Listing Documents section above. It is presented here in its entirety, as it would appear in an actual application. For simplicity, this example works with a single, hard-coded file (`test.txt`) only.
+> The above code includes the code from the Discovering and Listing Documents section above. It is presented here in its entirety, as it would appear in an actual application. For simplicity, this example works with a single, hard-coded file (`test.txt`) only.
 
 The above code exposes several iCloud Drive shortcuts to make them easier to work with in the rest of the application.
 
@@ -898,7 +898,7 @@ if (presentationPopover!=null) {
 ```
 
 > [!IMPORTANT]
-> **Note**: The developer must call the `StartAccessingSecurityScopedResource` method of the `NSUrl` before an external document can be accessed. The `StopAccessingSecurityScopedResource` method must be called to release the security lock as soon as the document has been loaded.
+> The developer must call the `StartAccessingSecurityScopedResource` method of the `NSUrl` before an external document can be accessed. The `StopAccessingSecurityScopedResource` method must be called to release the security lock as soon as the document has been loaded.
 
 ### Sample Output
 
@@ -1130,7 +1130,7 @@ On Mac OS X Yosemite, Apple does not provide the backwards compatibility so all 
 After a user's account has been migrated to iCloud Drive, only devices using iCloud Drive will be able to propagate changes to Documents across those devices.
 
 > [!IMPORTANT]
-> **Note**: Developers should be aware that the new features covered in this article are only available if the user's account has been migrated to iCloud Drive. 
+> Developers should be aware that the new features covered in this article are only available if the user's account has been migrated to iCloud Drive. 
 
 ## Summary
 

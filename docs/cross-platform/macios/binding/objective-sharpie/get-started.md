@@ -12,7 +12,11 @@ ms.date: 10/11/2017
 # Getting Started
 
 > [!IMPORTANT]
-> **WARNING:** Objective Sharpie is a tool for experienced Xamarin developers with advanced knowledge of Objective-C (and by extension, C). Before attempting to bind an Objective-C library you should have solid knowledge of how to build the native library on the command line (and a good understanding of how the native library works).
+> Objective Sharpie is a tool for experienced Xamarin developers with
+> advanced knowledge of Objective-C (and by extension, C). Before
+> attempting to bind an Objective-C library you should have solid
+> knowledge of how to build the native library on the command line (and a
+> good understanding of how the native library works).
 
 <a name="installing" />
 
@@ -51,10 +55,11 @@ that can be used to create a binding project which compiles into a library
 you can use in Xamarin apps.
 
 > [!IMPORTANT]
-> Objective Sharpie comes with one **major** rule for proper usage: you must
-absolutely pass it the correct clang compiler command line arguments in order
-to ensure proper parsing. This is because the Objective Sharpie parsing phase
-is simply a tool [implemented against the clang libtooling API](http://clang.llvm.org/docs/LibTooling.html).
+> Objective Sharpie comes with one **major** rule for proper usage: you
+> must absolutely pass it the correct clang compiler command line arguments
+> in order to ensure proper parsing. This is because the Objective Sharpie
+> parsing phase is simply a tool [implemented against the clang libtooling
+> API](http://clang.llvm.org/docs/LibTooling.html).
 
 This means that Objective Sharpie has the full power of Clang
 (the C/Objective-C/C++ compiler that actually compiles the native library

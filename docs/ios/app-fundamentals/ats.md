@@ -82,7 +82,7 @@ The TLS level is controlled by the web service that you are consuming and is the
 Depending on the server that you are talking to (especially if it is a 3rd party service), you might need to disable forward secrecy or select a lower TLS level. See the [Configuring ATS Options](#Configuring-ATS-Options) section below for more details.
 
 > [!IMPORTANT]
-> **NOTE:** App Transport Security does not apply to Xamarin apps using **Managed HTTPClient implementations**. It applies to connections using CFNetwork **HTTPClient implementations** or **NSURLSession HTTPClient implementations** only.
+> App Transport Security does not apply to Xamarin apps using **Managed HTTPClient implementations**. It applies to connections using CFNetwork **HTTPClient implementations** or **NSURLSession HTTPClient implementations** only.
 
 ### Setting the HTTPClient Implementation
 
@@ -245,7 +245,7 @@ Inside Visual Studio for Mac, double-click the `Info.plist` file in the **Soluti
 [![](ats-images/ats02.png "The Source view of the Info.plist file")](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
-> **NOTE:** If your application requires a connection to an insecure website, you should **always** enter the domain as an exception using `NSExceptionDomains` instead of turning ATS off completely using `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` should only be used in extreme emergency situations.
+> If your application requires a connection to an insecure website, you should **always** enter the domain as an exception using `NSExceptionDomains` instead of turning ATS off completely using `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` should only be used in extreme emergency situations.
 
 
 

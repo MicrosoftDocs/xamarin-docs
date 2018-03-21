@@ -242,7 +242,7 @@ Do the following on your Mac:
 22. Click the **OK** button to save the changes.
 
 > [!IMPORTANT]
-> **NOTE:** Testing SiriKit only works on a real iOS 10 Hardware Device and not in the iOS 10 Simulator. If having issues installing a SiriKit enabled Xamarin.iOS app on real hardware, ensure that the required Entitlements, App ID, Signing Identifier and Provisioning Profile have been correctly configured in both Apple's Developer Portal and Visual Studio for Mac.
+> Testing SiriKit only works on a real iOS 10 Hardware Device and not in the iOS 10 Simulator. If having issues installing a SiriKit enabled Xamarin.iOS app on real hardware, ensure that the required Entitlements, App ID, Signing Identifier and Provisioning Profile have been correctly configured in both Apple's Developer Portal and Visual Studio for Mac.
 
 ### Requesting Siri Authorization
 
@@ -428,7 +428,7 @@ namespace MonkeyChat
 ```
 
 > [!IMPORTANT]
-> **NOTE:** Siri treats custom vocabulary as hints and will incorporate as much of the terminology as possible. However, space for custom vocabulary is limited making it important to register _only_ the terminology that might be confusing, therefore keeping the total number of registered terms to a minimum.
+> Siri treats custom vocabulary as hints and will incorporate as much of the terminology as possible. However, space for custom vocabulary is limited making it important to register _only_ the terminology that might be confusing, therefore keeping the total number of registered terms to a minimum.
 
 For more information, please see our [User Specific Vocabulary Reference](~/ios/platform/sirikit/understanding-sirikit.md) and Apple's [Specifying Custom Vocabulary Reference](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1).
 
@@ -583,7 +583,7 @@ To add a `AppIntentVocabulary.plist` file to the app project, do the following:
 -----
 
 > [!IMPORTANT]
-> **NOTE:** The `AppIntentVocabulary.plist` will be registered with Siri on the test devices during development and it might take some time for Siri to incorporate the custom vocabulary. As a result, the tester will need to wait several minutes before attempting to test App Specific Vocabulary when it has been updated.
+> The `AppIntentVocabulary.plist` will be registered with Siri on the test devices during development and it might take some time for Siri to incorporate the custom vocabulary. As a result, the tester will need to wait several minutes before attempting to test App Specific Vocabulary when it has been updated.
 
 For more information, please see our [App Specific Vocabulary Reference](~/ios/platform/sirikit/understanding-sirikit.md) and Apple's [Specifying Custom Vocabulary Reference](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1).
 
@@ -1009,7 +1009,7 @@ Siri will also pass in a completion handler that the app need to return the desi
 Layout the Intents UI Extension's user interface in the iOS Designer. Double-click the extension's `MainInterface.storyboard` file in the **Solution Explorer** to open it for editing. Drag in all of the required UI elements to build out the User Interface and save the changes.
 
 > [!IMPORTANT]
-> **NOTE:** While it is possible to add interactive elements such as `UIButtons` or `UITextFields` to the Intent UI Extension's `UIViewController`, these are strictly forbidden as the Intent UI in non-interactive and the user will not be able to interact with them.
+> While it is possible to add interactive elements such as `UIButtons` or `UITextFields` to the Intent UI Extension's `UIViewController`, these are strictly forbidden as the Intent UI in non-interactive and the user will not be able to interact with them.
 
 ### Wire-Up the User Interface
 

@@ -141,7 +141,7 @@ In addition to the Remote Notifications presented above, Media Attachments are a
 Notification in iOS 10 support Media Attachments of images (static and GIFs), audio or video and the system will automatically display the correct custom UI for each of these types of attachments when the Notification is presented to the user.
 
 > [!NOTE]
-> **NOTE:** Care should be taken to optimize both the media size and the time it takes to download the media from the remote server (or to assemble the media for Local Notifications) as the system imposes strict limits to both when running the app's Service Extension. For example, consider sending a scaled down version of the image or a tiny clip of a video to be presented in the Notification.
+> Care should be taken to optimize both the media size and the time it takes to download the media from the remote server (or to assemble the media for Local Notifications) as the system imposes strict limits to both when running the app's Service Extension. For example, consider sending a scaled down version of the image or a tiny clip of a video to be presented in the Notification.
 
 ## Creating Custom User Interfaces
 
@@ -295,7 +295,7 @@ In the situation where the Custom Notification UI will be displaying the same co
 To design the Notification Content Extension's custom user interface, double-click the `MainInterface.storyboard` file to open it for editing in the iOS Designer, drag in the elements that you need to build the desired interface (such as `UILabels` and `UIImageViews`).
 
 > [!NOTE]
-> **NOTE:** The Notification UI does _not_ support interactive controls such as text fields or buttons in a Notification Content Extension. While they can be added to the storyboard, the user will not be able to interact with them. To add user interaction to a Custom Notification UI, use custom actions instead.
+> The Notification UI does _not_ support interactive controls such as text fields or buttons in a Notification Content Extension. While they can be added to the storyboard, the user will not be able to interact with them. To add user interaction to a Custom Notification UI, use custom actions instead.
 
 Once the UI has been laid out and the necessary controls exposed to C# code, open the `NotificationViewController.cs` for editing and modify the `DidReceiveNotification` method to populate the UI when the user expands the notification. For example:
 

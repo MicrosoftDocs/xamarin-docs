@@ -93,7 +93,7 @@ You can verify the icons are configured correct by checking
   and confirming the icon appears on the notification screen.
 
 > [!NOTE]
-> **Note**: Icons cannot have an alpha channel (the app will be rejected during App Store submission if an alpha channel is present). You can check if an alpha channel exists and remove it [using the Preview app on Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
+> Icons cannot have an alpha channel (the app will be rejected during App Store submission if an alpha channel is present). You can check if an alpha channel exists and remove it [using the Preview app on Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
 
 
 ## Related Links

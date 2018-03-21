@@ -270,7 +270,7 @@ The Intents UI Extension will always be displayed along with other Siri content 
 There are a few instances where the app can replace the information that Siri is displaying to the user by default such as messaging or maps where the app can replace the default experience with one tailored to the app.
 
 > [!IMPORTANT]
-> **NOTE:** While it is possible to add interactive elements such as `UIButtons` or `UITextFields` to the Intent UI Extension's `UIViewController`, these are strictly forbidden as the Intent UI in non-interactive and the user will not be able to interact with them.
+> While it is possible to add interactive elements such as `UIButtons` or `UITextFields` to the Intent UI Extension's `UIViewController`, these are strictly forbidden as the Intent UI in non-interactive and the user will not be able to interact with them.
 
 It is totally optional for the app to provide an Intent UI Extension since Siri contains a default set of UI for each Intent type. Additionally, the Intents UI interfaces are only available for certain Intents that Apple has deemed would be helpful to the user.
 
@@ -316,7 +316,7 @@ The app also needs to update Siri promptly when user specific vocabulary changes
 More importantly, the app _must_ delete information from the Siri vocabulary promptly since a user could become upset if they deleted a piece of information but Siri was still recognizing it hours or days later.
 
 > [!IMPORTANT]
-> **NOTE:** The app should remove all of the User Specific Vocabulary from Siri if the user chooses to reset the app or if they logout.
+> The app should remove all of the User Specific Vocabulary from Siri if the user chooses to reset the app or if they logout.
 
 ## SiriKit Permissions
 

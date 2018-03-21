@@ -63,7 +63,7 @@ Where:
 When working with a Stack View, you can think of the **Alignment** as the **X** and **Y** location of the subview and the **Distribution** as the **Height** and **Width**.
 
 > [!IMPORTANT]
-> **NOTE:** `UIStackView` is designed as a non-rendering container view and as such, it is not drawn to the canvas like other subclasses of `UIView`. So setting properties such as `BackgroundColor` or overriding `DrawRect` will have no visual effect.
+> `UIStackView` is designed as a non-rendering container view and as such, it is not drawn to the canvas like other subclasses of `UIView`. So setting properties such as `BackgroundColor` or overriding `DrawRect` will have no visual effect.
 
 Continue to layout the app's interface by adding a Label, ImageView, two Buttons and a Horizontal Stack View so that it resembles the following:
 
@@ -210,7 +210,7 @@ If the `BaselineRelativeArrangement` property is `true`, the subviews will be la
  - A Horizontal Stack View will use its tallest subview for both the first and last baseline. If the tallest view is also a Stack View, it will use it's tallest subview as the baseline.
 
 > [!IMPORTANT]
-> **NOTE:** Baseline Alignment does not work on stretched or compressed subview sizes as the baseline will be calculated to the wrong position. For Baseline Alignment, ensure that the subview's **Height** matches the Intrinsic Content View's **Height**.
+> Baseline Alignment does not work on stretched or compressed subview sizes as the baseline will be calculated to the wrong position. For Baseline Alignment, ensure that the subview's **Height** matches the Intrinsic Content View's **Height**.
 
 ### Common Stack View Uses
 
