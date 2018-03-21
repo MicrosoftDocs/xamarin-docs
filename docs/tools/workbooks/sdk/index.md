@@ -202,13 +202,13 @@ moving pieces that make up the SDK, and our [sample integrations](~/tools/workbo
 additional things you can do from your integration, like providing custom
 JavaScript that is run in the Workbooks client.
 
-[integration-type]: /api/type/Xamarin.Interactive.IAgentIntegration/
-[repman-api]: /api/type/Xamarin.Interactive.Representations.IRepresentationManager/
-[color]: /api/type/Xamarin.Interactive.Representations.Color/
-[xir]: /api/namespace/Xamarin.Interactive.Representations/
-[reppr]: /api/type/Xamarin.Interactive.Representations.RepresentationProvider/
-[prrep]: /api/member/Xamarin.Interactive.Representations.RepresentationProvider.ProvideRepresentations/p/System.Object/
+[integration-type]: https://developer.xamarin.com/api/type/Xamarin.Interactive.IAgentIntegration/
+[repman-api]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.IRepresentationManager/
+[color]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.Color/
+[xir]: https://developer.xamarin.com/api/namespace/Xamarin.Interactive.Representations/
+[reppr]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.RepresentationProvider/
+[prrep]: https://developer.xamarin.com/api/member/Xamarin.Interactive.Representations.RepresentationProvider.ProvideRepresentations/p/System.Object/
 [nugetorg]: https://nuget.org
 [nuget]: https://nuget.org/packages/Xamarin.Workbooks.Integration
-[addprovider]: /api/member/Xamarin.Interactive.Representations.IRepresentationManager.AddProvider/
+[addprovider]: https://developer.xamarin.com/api/member/Xamarin.Interactive.Representations.IRepresentationManager.AddProvider/
 [oxyplot]: http://www.oxyplot.org/

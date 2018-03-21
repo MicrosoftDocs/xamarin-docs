@@ -112,11 +112,10 @@ xamarin.interactive.RendererRegistry.registerRenderer(
 );
 ```
 
-Here, `PersonRenderer` implements the `Renderer` interface. See the
-[typings][typings] for more details.
+Here, `PersonRenderer` implements the `Renderer` interface. See the [typings][typings] for more details.
 
 [typings]: https://github.com/xamarin/Workbooks/blob/master/SDK/typings/xamarin-interactive.d.ts
-[xir-color]: /api/type/Xamarin.Interactive.Representations.Color/
-[repman]: /api/type/Xamarin.Interactive.Representations.IRepresentationManager/
-[repp]: /api/type/Xamarin.Interactive.Representations.RepresentationProvider/
-[serobj]: /api/type/Xamarin.Interactive.Serialization.ISerializableObject/
+[xir-color]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.Color/
+[repman]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.IRepresentationManager/
+[repp]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.RepresentationProvider/
+[serobj]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Serialization.ISerializableObject/
