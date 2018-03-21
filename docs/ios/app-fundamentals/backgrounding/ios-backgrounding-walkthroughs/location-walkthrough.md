@@ -75,7 +75,7 @@ This walkthrough explains some key backgrounding concepts, including registering
 	- `AllowsBackgroundLocationUpdates` – This is a Boolean property, introduced in iOS 9 that can be set to allow an app to receive location updates when suspended.
 
     > [!IMPORTANT]
-    > **WARNING**: iOS 8 (and greater) also requires an entry in the **Info.plist** file to show the user as part of the authorization request.
+    > iOS 8 (and greater) also requires an entry in the **Info.plist** file to show the user as part of the authorization request.
 
 1. Add a key `NSLocationAlwaysUsageDescription`
 or `NSLocationWhenInUseUsageDescription` with a
@@ -145,7 +145,7 @@ public class LocationUpdatedEventArgs : EventArgs
 1. In the Solution Pad, double-click the `ViewController.cs` file and edit it to create a new instance of the LocationManager and call `StartLocationUpdates`on it.
   Change the code to look like the following:
 
-	```csharp
+    ```csharp
 	#region Computed Properties
 	public static bool UserInterfaceIdiomIsPhone {
 				get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
