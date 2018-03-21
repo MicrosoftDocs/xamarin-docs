@@ -6,7 +6,7 @@ ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/19/2018
+ms.date: 03/21/2018
 ---
 
 # Android Debug Log
@@ -21,13 +21,17 @@ tool to view the logged data.
 ## Android Debug Log Overview
 
 The **Debug Log** tool provides a way to view log output while debugging an
-app. The debug log supports the following devices:
+app through Visual Studio. The debug log supports the following devices:
 
 -   Physical Android phones, tablets, and wearables.
 -   An Android Virtual device running on the Google Android Emulator. 
 
 > [!NOTE]
 > The **Debug Log** tool does not work with Xamarin Live Player.
+
+The **Debug Log** does not display log messages that are generated
+while the app is running standalone on the device (i.e., while it is
+disconnected from Visual Studio).
 
 
 ## Accessing the Debug Log from Visual Studio
