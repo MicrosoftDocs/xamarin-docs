@@ -96,19 +96,18 @@ instance variables to the class `TouchViewController`:
 		}
 	}
 	```
-	This method works by checking for a `UITouch` object, and if it
-exists perform some action based on where the touch occurred:
+	
+    This method works by checking for a `UITouch` object, and if it exists perform some action based on where the touch occurred:
 
-	* _Inside TouchImage_ – display the text `Touches Began` in a label and change the image.
-	* _Inside DoubleTouchImage_ – change the image displayed if the gesture was a double-tap.
-	* _Inside DragImage_ – set a flag indicating that the touch has started. The method `TouchesMoved` will use this flag to determine if `DragImage` should be moved around the screen or not, as we shall see in the next step.
+    * _Inside TouchImage_ – display the text `Touches Began` in a label and change the image.
+    * _Inside DoubleTouchImage_ – change the image displayed if the gesture was a double-tap.
+    * _Inside DragImage_ – set a flag indicating that the touch has started. The method `TouchesMoved` will use this flag to determine if `DragImage` should be moved around the screen or not, as we shall see in the next step.
 
+    The above code only deals with individual touches, there is still no behavior if the user
+    is moving their finger on the screen. To respond to movement, implement `TouchesMoved`
+    as shown in the code below:
 
-	The above code only deals with individual touches, there is still no behavior if the user
-	is moving their finger on the screen. To respond to movement, implement `TouchesMoved`
-	as shown in the code below:
-
-	```csharp 
+    ```csharp 
 	public override void TouchesMoved(NSSet touches, UIEvent evt)
 	{
 		base.TouchesMoved(touches, evt);
@@ -133,11 +132,11 @@ exists perform some action based on where the touch occurred:
 			}
 		}
 	}
-	```
+    ```
 
-	This method gets a `UITouch` object, and then checks to see where the touch occurred. If the touch occurred in `TouchImage`, then the text Touches Moved is displayed on the screen. 
+    This method gets a `UITouch` object, and then checks to see where the touch occurred. If the touch occurred in `TouchImage`, then the text Touches Moved is displayed on the screen. 
 
-	If `touchStartedInside` is true, then we know that the user has their finger on `DragImage` and is moving it around. The code will move `DragImage` as the user moves their finger around the screen.
+    If `touchStartedInside` is true, then we know that the user has their finger on `DragImage` and is moving it around. The code will move `DragImage` as the user moves their finger around the screen.
 
 1. We need to handle the case when the user lifts his or her finger off the screen, or iOS cancels the touch event. For this, we will implement `TouchesEnded` and `TouchesCancelled` as shown below:
 
@@ -200,7 +199,7 @@ Follow these steps to implement gesture recognizers:
 
 1. Edit the file **GestureViewController.cs** and add the following instance variable:
 
-	```chsarp
+	```csharp
 	#region Private Variables
 	private bool imageHighlighted = false;
 	private RectangleF originalImageFrame = RectangleF.Empty;
@@ -213,7 +212,7 @@ calculate the offset required to redraw the image on the screen.
 
 1. Add the following method to the controller:
 
-	```chsarp
+	```csharp
 	private void WireUpDragGestureRecognizer()
 	{
 		// Create a new tap gesture
@@ -233,7 +232,7 @@ this method is provided in the next step.
 
 1. To implement HandleDrag, add the following code to the controller:
 
-	```chsarp
+	```csharp
 	private void HandleDrag(UIPanGestureRecognizer recognizer)
 	{
 		// If it's just began, cache the location of the image
@@ -262,7 +261,7 @@ now support dragging the one image around the screen.
 
 1. Add a `UITapGestureRecognizer` that will change the image being displayed in DoubleTouchImage. Add the following method to the `GestureViewController` controller:
 
-	```chsarp
+	```csharp
 	private void WireUpTapGestureRecognizer()
 	{
 		// Create a new tap gesture
@@ -299,7 +298,7 @@ but instead of using a delegate for a target we are using an `Action`.
 
 1. The final thing we need to do is modify `ViewDidLoad` so that it calls the methods we just added. Change ViewDidLoad so it resembles the following code:
 
-	```chsarp
+	```csharp
 	public override void ViewDidLoad()
 	{
 		base.ViewDidLoad();
@@ -340,7 +339,7 @@ Follow these steps to create a custom gesture recognizer:
 
 1. Add a new class to the project named `CheckmarkGestureRecognizer`, and make it look like the following code:
 
-	```chsarp
+	```csharp
 	using System;
 	using CoreGraphics;
 	using Foundation;
@@ -462,7 +461,7 @@ Now the class can start fresh next time the user interacts with the application,
 1. Now that we’ve defined a custom gesture recognizer (`CheckmarkGestureRecognizer`) edit
 the **CustomGestureViewController.cs** file and add the following two instance variables:
 
-	```chsarp
+	```csharp
 	#region Private Variables
 	private bool isChecked = false;
 	private CheckmarkGestureRecognizer checkmarkGesture;
@@ -471,7 +470,7 @@ the **CustomGestureViewController.cs** file and add the following two instance v
 
 1. To instantiate and configure our gesture recognizer, add the following method to the controller:
 
-	```chsarp
+	```csharp
 	private void WireUpCheckmarkGestureRecognizer()
 	{
 		// Create the recognizer
@@ -500,7 +499,7 @@ the **CustomGestureViewController.cs** file and add the following two instance v
 
 1. Edit `ViewDidLoad` so that it calls `WireUpCheckmarkGestureRecognizer`, as shown in the following code snippet:
 
-	```chsarp
+	```csharp
 	public override void ViewDidLoad()
 	{
 		base.ViewDidLoad();
