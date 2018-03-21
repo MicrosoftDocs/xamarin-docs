@@ -68,26 +68,34 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
 
 7. Once you have confirmed the IP address of the Mac, try a `ping` to that address in `cmd.exe` on Windows:
 
-		ping 10.1.8.95
-
+    ```
+    ping 10.1.8.95
+    ```
+    
 	If the ping fails, then the Mac is not _routable_ from the Windows computer. That problem will need to be solved at the level of the local area network configuration between the 2 computers. Ensure that both machines are on the same Local Network.
 
 8. Next, test if the `ssh` client from OpenSSH can connect successfully to the Mac from Windows. One way to install this program is to install [Git for Windows](https://git-for-windows.github.io/). You can then start a **Git Bash** command prompt and attempt to `ssh` in to the Mac with your username and IP address:
 
-		ssh amyb@10.1.8.95
-
+    ```bash
+    ssh amyb@10.1.8.95
+    ```
+    
 <a name="stepnine" />
 
 9. If **step 8 succeeds**, you can try running a simple command like `ls` over the connection:
 
-		ssh amyb@10.1.8.95 'ls'
-
+    ```bash
+    ssh amyb@10.1.8.95 'ls'
+    ```
+    
 	This should list the contents of your home directory on the Mac. If the `ls` command works correctly but the Visual Studio connection still fails, you can check the [Known Issues and Limitations](#knownissues) section about complications specific to Xamarin. If none of those match your problem, please [file a new bug report](https://bugzilla.xamarin.com/newbug) and attach the logs described under [Check the Verbose Log Files](#verboselogs).
 
 10. If **step 8 fails**, you can run the following command in Terminal on the Mac to see if the SSH server is accepting _any_ connections:
 
-		ssh localhost
-
+    ```bash
+    ssh localhost
+    ```
+    
 11. If step 8 fails but **step 10 succeeds**, then the problem is most likely that port 22 on the Mac build host is not accessible from Windows due to the network configuration. Possible configuration issues include:
 
 	- The OS X firewall settings are disallowing the connection. Be sure to double-check step 3.
@@ -157,8 +165,10 @@ Reported causes:
 
 	5. Add the following line at the bottom of the file:
 
-			UseDNS no
-
+		```
+		UseDNS no
+		```
+		
 	6. Remove any lines that say `UseDNS yes` to make sure the new setting takes effect.
 
 	7. Save the file.
@@ -175,16 +185,20 @@ If your log files show a problem during the "Installing", "Uploading", or "Start
 
 1. Run the following command in Terminal on the Mac:
 
-		open "$HOME/Library/Caches/Xamarin"
-
+    ```bash
+    open "$HOME/Library/Caches/Xamarin"
+    ```
+    
 2. Control-click the **XMA** folder and select **Move to Trash**:
 
 	[![](troubleshooting-images/troubleshooting-image8.png "Move the XMA folder to Trash")](troubleshooting-images/troubleshooting-image8.png#lightbox)
 
 3. There is a cache on Windows as well that it may help to clear. Open a cmd prompt as Administrator on Windows:
 
-		del %localappdata%\Temp\Xamarin\XMA
-
+    ```
+    del %localappdata%\Temp\Xamarin\XMA
+    ```
+    
 ## Warning Messages
 
 This section discusses a few messages that can appear in the Output windows and logs that you can usually ignore.
@@ -256,9 +270,9 @@ If the normal log files still do not provide sufficient information to diagnose 
 
 3. Run the following command in the command prompt to launch Visual Studio with verbose logging:
 
-	```bash
-	devenv /log
-	```
+    ```bash
+    devenv /log
+    ```
 
 4. Attempt to connect to the build host from Visual Studio.
 
@@ -266,9 +280,9 @@ If the normal log files still do not provide sufficient information to diagnose 
 
 6. Run the following command in Terminal on the Mac to copy any recent log messages from the SSH server into a file on your Desktop:
 
-	```bash
-	grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"
-	```
+    ```bash
+    grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"
+   ```
 
 If these verbose log files do not provide enough clues to resolve the issue directly, please [file a new bug report](https://bugzilla.xamarin.com/newbug) and attach both the .zip file from step 5 and the .log file from step 6.
 
@@ -342,9 +356,9 @@ If you are troubleshooting a build problem and want to make sure the behavior is
 
 1. Run the following command in Terminal on the Mac:
 
-	```bash
-	open "$HOME/Library/Caches/Xamarin"
-	```
+    ```bash
+    open "$HOME/Library/Caches/Xamarin"
+    ```
 
 2. Control-click the **mtbs** folder and select **Move to Trash**:
 
