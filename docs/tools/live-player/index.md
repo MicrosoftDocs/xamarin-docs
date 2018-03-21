@@ -16,8 +16,8 @@ Xamarin Live Player lets you make live edits to your app and have those changes 
 
 [![Xamarin Live Player: Code, Scan, Test](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
-1. Enable the *Xamarin Live Player* in **Preferences**, then select from the **Devices** list.
-2. Debug or run, and then scan the QRCodeto pair your device.
+1. Enable the *Xamarin Live Player* in **Preferences**, then select your device from the **Devices** list.
+2. Debug or run, and then scan the QR code to pair your device.
 3. The app runs right on your phone or tablet.
 
 ## [Xamarin Live Player Setup](install.md)

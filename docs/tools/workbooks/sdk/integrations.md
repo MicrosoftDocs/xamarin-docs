@@ -74,8 +74,8 @@ no public APIs and simply perform "behind the scenes" tasks like yielding
 object [representations](~/tools/workbooks/sdk/representations.md).
 
 > [!NOTE]
-> Note: APIs which must be public but should not be surfaced via IntelliSense
-can be marked with the usual `[EditorBrowsable (EditorBrowsableState.Never)]`
-attribute.
+> APIs which must be public but should not be surfaced via IntelliSense
+> can be marked with the usual `[EditorBrowsable (EditorBrowsableState.Never)]`
+> attribute.
 
 [nuget]: https://nuget.org/packages/Xamarin.Workbooks.Integration

@@ -30,7 +30,7 @@ inline live-diagnostics, and multi-line statement support.
 [ ![](workbook-images/inspector-0.6.0-repl-small.png "The code editing window provides code completion, syntax coloring, inline live-diagnostics, and multi-line statement support")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
 Xamarin Workbooks are saved in a `.workbook` file, which is a CommonMark
-file with some metadata at the top (see [Workbooks File Types](#Workbooks_Files_Types) for more
+file with some metadata at the top (see [Workbooks File Types](#workbooks-files-types) for more
 details on how workbooks can be saved).
 
 ### NuGet Package Support
@@ -171,7 +171,7 @@ directory is opened in Workbooks 0.99.3 or later, when it is saved, it will be
 converted into a `.workbook` package. This is true on both Mac and Windows.
 
 > [!NOTE]
-> **NOTE:** Windows users will open the `package.workbook\index.workbook` file
+> Windows users will open the `package.workbook\index.workbook` file
 directly, but otherwise the package will behave the same as on Mac.
 
 ### Archives
