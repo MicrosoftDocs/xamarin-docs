@@ -19,9 +19,11 @@ ms.date: 03/21/2017
 
 This error may appear in the *Mac Server Log* in Visual Studio:
 
-> ```Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter.exe not found
-> rver.BaseCommand.OnRequest (System.Net.HttpListenerContext context, System.Object commandRequestState) [0x00000] in <filename unknown>:0
->   at Mtb.Server.Listener.OnRequest (System.Object state) [0x00000] in <filename unknown>:0```
+```
+Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter.exe not found
+ rver.BaseCommand.OnRequest (System.Net.HttpListenerContext context, System.Object commandRequestState) [0x00000] in <filename unknown>:0
+  at Mtb.Server.Listener.OnRequest (System.Object state) [0x00000] in <filename unknown>:0
+```
 
 There are 2 separate issues in this message:
 
