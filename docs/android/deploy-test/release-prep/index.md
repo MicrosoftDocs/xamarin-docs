@@ -6,7 +6,7 @@ ms.assetid: 9C8145B3-FCF1-4649-8C6A-49672DDA4159
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/20/2018
+ms.date: 03/21/2018
 ---
 
 # Preparing an Application for Release
@@ -89,7 +89,12 @@ shown in this sample snippet:
 ```csharp
 [assembly: Application(Icon = "@drawable/icon")]
 ```
-The namespace of the `Application` attribute is `Android.App`.
+
+Normally, `using Android.App` is declared at the top of
+**AssemblyInfo.cs** (the namespace of the `Application` attribute is
+`Android.App`); however, you may need to add this `using` statement if
+it is not already present.
+
 
 <a name="Versioning" />
 
