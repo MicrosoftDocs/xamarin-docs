@@ -106,6 +106,7 @@ This makes it possible to use a different `HttpMessageHandler` from what is decl
 SSL (Secure Socket Layer) and its successor, TLS (Transport Layer Security), provide support for HTTP and other network connections via `System.Net.Security.SslStream`. Xamarin.iOS, Xamarin.tvOS or Xamarin.Mac's `System.Net.Security.SslStream` implementation will call Apple's native SSL/TLS implementation instead of using the managed implementation provided by Mono. Apple's native implementation supports TLS 1.2.
 
 <a name="Mono" />
+
 > [!WARNING]
 > The **Mono/Managed** TLS provider is limited to SSL v3 and TLS v1. This TLS provider has been deprecated and is no longer available for Xamarin.iOS applications. 
 
