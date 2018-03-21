@@ -50,7 +50,7 @@ There are some known limitations with NuGet package support in Workbooks:
     the managed library.
   * Packages which depend on `.targets` files or PowerShell scripts will likely
     fail to work as expected.
-  * To modify a package dependency, edit the workbook's manifest with
+  * To remove or modify a package dependency, edit the workbook's manifest with
     a text editor. Proper package management is on the way.
 
 ### Xamarin.Forms Support
