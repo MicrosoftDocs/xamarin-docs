@@ -34,12 +34,8 @@ following directory:
 
 **/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin**
 
-A symbolic link to this directory exists here:
-
-**/Developer/MonoTouch/usr/bin**
-
-To make it convenient to use `mtouch`, add its directory to your system's
-`PATH` environment variable. 
+To make `mtouch` convenient to use, add its parent directory to your 
+system's `PATH` environment variable.  
 
 For example, to do this in Bash, add the following line to the end of your 
 **~/.bash_profile** file:
@@ -47,6 +43,14 @@ For example, to do this in Bash, add the following line to the end of your
 ```bash
 export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin
 ```
+
+> [!WARNING]
+> To use `mtouch`, do not rely on the existence of **/Developer/MonoTouch/usr/bin**, 
+> a symbolic link that points to 
+> **/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin**. This
+> symbolic link exists only to maintain compatibility with older MonoTouch
+> releases that were not installed in **/Library/Frameworks/...**, and it 
+> may disappear in a future release.
 
 ## Building
 
