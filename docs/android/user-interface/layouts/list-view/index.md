@@ -7,7 +7,7 @@ ms.assetid: C2BA2705-9B20-01C2-468D-860BDFEDC157
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 03/21/2018
 ---
 
 # ListView
@@ -82,12 +82,12 @@ Create an XML file named **list_item.xml** and save it inside the
 This file defines the layout for each item that will be placed in the
 [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/).
 
-Open the `HelloListView.cs` and make the class extend
+Open `MainActivity.cs` and modify the class to extend
 [`ListActivity`](https://developer.xamarin.com/api/type/Android.App.ListActivity/) (instead of
 [`Activity`](https://developer.xamarin.com/api/type/Android.App.Activity/)):
 
 ```csharp
-public class HelloListView : ListActivity
+public class MainActivity : ListActivity
 {
 ```
 
@@ -104,9 +104,9 @@ protected override void OnCreate (Bundle bundle)
 
     ListView.TextFilterEnabled = true;
 
-    ListView.ItemClick += delegate (object sender, ItemEventArgs args) {
-        // When clicked, show a toast with the TextView text
-        Toast.MakeText (Application, ((TextView)args.View).Text, ToastLength.Short).Show ();
+    ListView.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs args)
+    {
+        Toast.MakeText(Application, ((TextView)args.View).Text, ToastLength.Short).Show();
     };
 }
 ```
@@ -156,9 +156,12 @@ defining your own layout file for the
 For example, try using `Android.Resource.Layout.SimpleListItem1`
 instead of `Resource.Layout.list_item`.
 
-After the
-[`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
-method, add the string array:
+Add the following `using` statement:
+
+```csharp
+using System;
+```
+Next, add the following string array as a member of `MainActivity`:
 
 ```csharp
 static readonly string[] countries = new String[] {
@@ -213,7 +216,7 @@ Run the application. You can scroll the list, or type to filter it,
 then click an item to see a message. You should see something like
 this:
 
-[![Example screenshot of ListView with country names](images/helloviews6.png)](images/helloviews6.png#lightbox)
+[![Example screenshot of ListView with country names](images/01-listview-example-sml.png)](images/01-listview-example.png#lightbox)
 
 Note that using a hard-coded string array is not the best design
 practice. One is used in this tutorial for simplicity, to
@@ -226,15 +229,16 @@ project **Resources/Values/Strings.xml** file. For example:
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="countries_array">
-        <item>Bahrain</item>
-        <item>Bangladesh</item>
-        <item>Barbados</item>
-        <item>Belarus</item>
-        <item>Belgium</item>
-        <item>Belize</item>
-        <item>Benin</item>
-    </string-array>
+  <string name="app_name">HelloListView</string>
+  <string-array name="countries_array">
+    <item>Bahrain</item>
+    <item>Bangladesh</item>
+    <item>Barbados</item>
+    <item>Belarus</item>
+    <item>Belgium</item>
+    <item>Belize</item>
+    <item>Benin</item>
+  </string-array>
 </resources>
 ```
 
@@ -248,6 +252,9 @@ line with the following:
 string[] countries = Resources.GetStringArray (Resource.Array.countries_array);
 ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countries);
 ```
+Run the application. You should see something like this:
+
+[![Example screenshot of ListView with smaller list of names](images/02-smaller-example-sml.png)](images/02-smaller-example.png#lightbox)
 
 
 ## Going Further with ListView
