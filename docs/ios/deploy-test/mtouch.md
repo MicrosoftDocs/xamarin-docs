@@ -27,6 +27,26 @@ or iPod Touch device.
 Check our [mtouch(1)](http://docs.go-mono.com/?link=man%3amtouch(1)) manual page with all of the possible uses of the mtouch
 tool.
 
+## Installation
+
+On a Mac, `mtouch` is bundled with Xamarin.iOS. It can be found in the 
+following directory:
+
+**/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin**
+
+A symbolic link to this directory exists here:
+
+**/Developer/MonoTouch/usr/bin**
+
+To make it convenient to use `mtouch`, add its directory to your system's
+`PATH` environment variable. 
+
+For example, to do this in Bash, add the following line to the end of your 
+**~/.bash_profile** file:
+
+```bash
+export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin
+```
 
 ## Building
 
