@@ -5,9 +5,9 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 03/19/2018
+author: topgenorth
+ms.author: toopge
+ms.date: 03/20/2018
 ---
 
 # Firebase Job Dispatcher

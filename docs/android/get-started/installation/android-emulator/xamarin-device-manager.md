@@ -7,7 +7,7 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/13/2018
+ms.date: 03/20/2018
 ---
 
 # Xamarin Android Device Manager
@@ -626,10 +626,10 @@ For more information about these properties, see
 
 ## Troubleshooting
 
-# [Visual Studio](#tab/vswin)
-
 The following describes common Xamarin Android Device Manager problems and
 workarounds:
+
+# [Visual Studio](#tab/vswin)
 
 ### Android SDK in Non-Standard Location
 
@@ -666,7 +666,59 @@ To workaround this problem, do the following:
 After making this change to **user.config**, you should be able to
 launch the Xamarin Android Device Manager.
 
+### Snapshot disables WiFi on Android Oreo
+
+If you have an AVD configured for Android Oreo with simulated Wi-Fi access,
+restarting the AVD after a snapshot may cause Wi-Fi access to become disabled.
+
+To work around this problem,
+
+1. Select the AVD in the Xamarin Device Manager.
+
+2. From the additional options menu, click **Reveal in Explorer**.
+
+3. Navigate to **snapshots > default_boot**.
+
+4. Delete the **snapshot.pb** file:
+
+    [![Location of the snapshot.pb file](xamarin-device-manager-images/win/36-delete-snapshot-sml.png)](xamarin-device-manager-images/win/36-delete-snapshot.png#lightbox)
+
+5. Restart the AVD. 
+
+After these changes are made, the AVD will restart in a state that
+allows Wi-Fi to work again.
+
+
+# [Visual Studio for Mac](#tab/vsmac)
+
+### Snapshot disables WiFi on Android Oreo
+
+If you have an AVD configured for Android Oreo with simulated Wi-Fi access,
+restarting the AVD after a snapshot may cause Wi-Fi access to become disabled.
+
+To work around this problem,
+
+1. Select the AVD in the Xamarin Device Manager.
+
+2. From the additional options menu, click **Reveal in Finder**.
+
+3. Navigate to **snapshots > default_boot**.
+
+4. Delete the **snapshot.pb** file:
+
+    [![Location of the snapshot.pb file](xamarin-device-manager-images/mac/36-delete-snapshot-sml.png)](xamarin-device-manager-images/mac/36-delete-snapshot.png#lightbox)
+
+5. Restart the AVD. 
+
+After these changes are made, the AVD will restart in a state that
+allows Wi-Fi to work again.
+
+-----
+
+
 ### Generating a Bug Report
+
+# [Visual Studio](#tab/vswin)
 
 If you find a problem with the Xamarin Android Device Manager that
 cannot be resolved using the above troubleshooting tips, please file a
@@ -675,15 +727,12 @@ Report**:
 
 ![Location of menu item for filing a bug report](xamarin-device-manager-images/win/35-bug-report.png)
 
+
 # [Visual Studio for Mac](#tab/vsmac)
 
-Currently, there are no known problems/workarounds for the Xamarin
-Android Device Manager on Visual Studio for Mac. 
-
-### Generating a Bug Report
-
-If you find a problem,
-please file a bug report by clicking **Help > Generate Bug Report**:
+If you find a problem with the Xamarin Android Device Manager that
+cannot be resolved using the above troubleshooting tips, please file a
+bug report by clicking **Help > Generate Bug Report**:
 
 ![Location of menu item for filing a bug report](xamarin-device-manager-images/mac/35-bug-report.png)
 
