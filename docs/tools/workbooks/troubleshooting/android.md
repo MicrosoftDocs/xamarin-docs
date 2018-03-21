@@ -25,7 +25,8 @@ not supported. Use `x86` or `x86_64` devices only.
 Please read [our documentation on setting up Android emulators][android-emu]
 if you are not familiar with the process.
 
-**NOTE:** Workbooks 1.1 and earlier will try (and fail!) to use ARM emulators
+> [!NOTE]
+> Workbooks 1.1 and earlier will try (and fail!) to use ARM emulators
 if they are available. To work around this, launch the x86 emulator of your
 choice before opening or creating an Android workbook. Workbooks will always
 prefer to connect to a running emulator, as long as it is compatible.
@@ -37,14 +38,14 @@ prefer to connect to a running emulator, as long as it is compatible.
 First, check that your emulator has fully-working network access by testing any
 website in the emulator's web browser.
 
-### Visual Studio Android Emulator cannot connect to internet
+### Visual Studio Android Emulator cannot connect to the Internet
 
 If your emulator does not have network access, you may need to follow these
 steps to fix your Hyper-V network switch. If you switch between Wi-Fi networks
 frequently you may need to repeat this periodically:
 
 0. **Make sure any critical network operations are complete, as this may
-   temporarily disconnect Windows from the internet.**
+   temporarily disconnect Windows from the Internet.**
 1. Close emulators.
 2. Open `Hyper-V Manager`.
 3. Under `Actions`, open `Virtual Switch Manager...`.
@@ -52,7 +53,7 @@ frequently you may need to repeat this periodically:
 5. Click `OK`.
 6. Launch VS Android Emulator. You will probably be prompted to recreate
    virtual network switch.
-7. Test that VS Android Emulator's browser can access the internet.
+7. Test that VS Android Emulator's browser can access the Internet.
 
 [android-emu]: https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debug-on-emulator/
 
