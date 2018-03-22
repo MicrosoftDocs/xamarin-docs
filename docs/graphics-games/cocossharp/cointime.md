@@ -57,10 +57,7 @@ Tiles can be placed by clicking in the **mastersheet** tileset and then clicking
 1. Click on the tile to draw
 1. Click or push and drag over the map to paint the tile
 
-
     ![](cointime-images/image2.png "Click on the tile to draw 1")
-
- 
 
 The top-left of the tileset contains all of the terrain in Coin Time. Terrain, which is solid, includes the **SolidCollision** property, as shown in the tile properties on the left of the screen:
 
@@ -93,15 +90,11 @@ The process of adding levels to Coin Time requires no code changes, and only a f
 1. Rename the new .tmx file so it continues the level number sequence with existing levels, such as **level8.tmx**
 1. In Visual Studio or Visual Studio for Mac, add the new .tmx file to the Android levels folder. Verify that the file uses the **AndroidAsset** build action.
 
-
     ![](cointime-images/image8.png "Verify that the file uses the AndroidAsset build action")
-
 
 1. Add the new .tmx file to the iOS levels folder. Be sure to link the file from its original location and verify that it uses the **BundleResource** build action.
 
-
     ![](cointime-images/image9.png "Be sure to link the file from its original location and verify that it uses the BundleResource build action")
-
 
 The new level should appear in the level select screen as level 9 (level file names start at 0, but the level buttons begin with the number 1):
 
