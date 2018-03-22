@@ -20,7 +20,7 @@ Platform-specific images are also required for icons and splash screens; these n
 
 This document discusses the following topics:
 
-- [ **Local images**](#Local_Images) - displaying images shipped with the application, including resolving native resolutions like iOS Retina or Android or UWP high-DPI versions of an image.
+- [ **Local images**](#Local_Images) - displaying images shipped with the application, including resolving native resolutions like iOS Retina, Android or UWP high-DPI versions of an image.
 - [ **Embedded images**](#Embedded_Images) - displaying images embedded as an assembly resource.
 - [ **Downloaded images**](#Downloading_Images) - downloading and displaying images.
 - [ **Icons and splashscreens**](#Icons_and_splashscreens) - platform-specific icons and start-up images.
@@ -91,7 +91,7 @@ follows the rules, but examples of invalid filenames include "water front.png", 
 
 ### Native Resolutions (Retina and High-DPI)
 
-iOS, Android, Windows Phone and UWP include support for different image resolutions, where the operating system chooses the appropriate image at runtime based on the device's capabilities. Xamarin.Forms uses the native platforms' APIs for loading local images, so it automatically supports alternate resolutions if the files are correctly named and located in the project.
+iOS, Android, Windows Phone, and UWP include support for different image resolutions, where the operating system chooses the appropriate image at runtime based on the device's capabilities. Xamarin.Forms uses the native platforms' APIs for loading local images, so it automatically supports alternate resolutions if the files are correctly named and located in the project.
 
 The preferred way to manage images since iOS 9 is to drag images for each resolution required to the appropriate asset catalog image set. For more information, see [Adding Images to an Asset Catalog Image Set](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
@@ -101,7 +101,7 @@ Android alternate resolution images should be placed in [specially-named directo
 
 [![Android Multiple-Resolution Image Location](images-images/xs-highdpisolution-sml.png "Android Multiple-Resolution Image Location")](images-images/xs-highdpisolution.png#lightbox "Android Multiple-Resolution Image Location")
 
-UWP and Windows Phone image file names [can be suffixed with `.scale-xxx` before the file extension](https://docs.microsoft.com/en-us/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), where `xxx` is the percentage of scaling applied to the asset, e.g. **myimage.scale-200.png**. Images can then be referred to in code or XAML without the scale modifier, e.g. just **myimage.png**. The platform will select the nearest appropriate asset scale based on the display's current DPI.
+UWP and Windows Phone image file names [can be suffixed with `.scale-xxx` before the file extension](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), where `xxx` is the percentage of scaling applied to the asset, e.g. **myimage.scale-200.png**. Images can then be referred to in code or XAML without the scale modifier, e.g. just **myimage.png**. The platform will select the nearest appropriate asset scale based on the display's current DPI.
 
 ### Additional Controls that Display Images
 
