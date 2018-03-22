@@ -6,7 +6,7 @@ ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/21/2018
+ms.date: 03/22/2018
 ---
 
 # Android Debug Log
@@ -141,6 +141,13 @@ command prompt window and navigate to the Android SDK platform-tools
 folder (typically, the SDK platform-tools folder is located at
 **C:\\Program Files (x86)\\Android\\android-sdk\\platform-tools**).
 
+If only a single device (physical device or emulator) is attached, the
+log can be viewed by entering the following command:
+
+```shell
+$ adb logcat
+```
+
 # [Visual Studio for Mac](#tab/vsmac)
 
 Another option is to view the debug log via the command line. Open a 
@@ -148,14 +155,15 @@ Terminal window and navigate to the Android SDK platform-tools folder
 (typically, the SDK platform-tools folder is located at
 **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/platform-tools**).
 
------
-
 If only a single device (physical device or emulator) is attached, the
 log can be viewed by entering the following command:
 
 ```shell
-$ adb logcat
+$ ./adb logcat
 ```
+
+-----
+
 
 If more than one device is attached, the device must be explicitly
 identified. For example **adb -d logcat** displays the log of the only
