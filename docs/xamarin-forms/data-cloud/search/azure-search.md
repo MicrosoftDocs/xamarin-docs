@@ -115,7 +115,7 @@ searchClient.Indexes.Delete(Constants.Index);
 
 After defining the index, data can be uploaded to it using one of two models:
 
-- **Pull model** – data is periodically ingested from Azure DocumentDB, Azure SQL Database, Azure Blob Storage, or SQL Server hosted in an Azure Virtual Machine.
+- **Pull model** – data is periodically ingested from Azure Cosmos DB, Azure SQL Database, Azure Blob Storage, or SQL Server hosted in an Azure Virtual Machine.
 - **Push model** – data is programmatically sent to the index. This is the model adopted in this article.
 
 A `SearchIndexClient` instance must be created to import data into the index. This can be accomplished by calling the `SearchServiceClient.Indexes.GetClient` method, as demonstrated in the following code example:

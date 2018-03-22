@@ -16,7 +16,7 @@ _An Azure Cosmos DB document database is a NoSQL database that provides low late
 
 ## [Consuming an Azure Cosmos DB Document Database](consuming.md)
 
-This article explains how to use the Microsoft Azure DocumentDB Client Library to integrate an Azure Cosmos DB document database into a Xamarin.Forms application.
+This article explains how to use the Azure Cosmos DB .NET Standard client library to integrate an Azure Cosmos DB document database into a Xamarin.Forms application.
 
 ## [Authenticating Users with an Azure Cosmos DB Document Database](authentication.md)
 

@@ -46,7 +46,7 @@ This article demonstrates how to use the Microsoft Azure Search Library to integ
 
 ## [Storing Data in a Document Database](cosmosdb/index.md)
 
-This guide demonstrates how to use the Microsoft Azure DocumentDB Client Library to integrate an Azure Cosmos DB document database into a Xamarin.Forms application. An Azure Cosmos DB document database is a NoSQL database that provides low latency access to JSON documents, offering a fast, highly available, scalable database service for applications that require seamless scale and global replication.
+This guide demonstrates how to use the Azure Cosmos DB .NET Standard client library to integrate an Azure Cosmos DB document database into a Xamarin.Forms application. An Azure Cosmos DB document database is a NoSQL database that provides low latency access to JSON documents, offering a fast, highly available, scalable database service for applications that require seamless scale and global replication.
 
 ## [Adding Intelligence with Cognitive Services](cognitive-services/index.md)
 
