@@ -18,71 +18,74 @@ various iOS APIs to allow developers to create native iOS
 applications with Mono.
 
 At the core of Xamarin.iOS, there is an interop engine that bridges
-the C# world with the Objective-C world as, well as bindings for the
-iOS C-based APIs like CoreGraphics and [OpenGLES](#OpenGLES).
+the C# world with the Objective-C world, as well as bindings for the
+iOS C-based APIs like CoreGraphics and [OpenGL ES](#OpenGLES).
 
-The low-level runtime to communicate with Objective-C code is in the
+The low-level runtime to communicate with Objective-C code is in 
 [MonoTouch.ObjCRuntime](#MonoTouch.ObjCRuntime). On top of this,
-bindings for [Foundation](#MonoTouch.Foundation), CoreFoundation and
+bindings for [Foundation](#MonoTouch.Foundation), CoreFoundation, and
 [UIKit](#MonoTouch.UIKit) are provided.
 
 ## Design Principles
 
-These are some of our design principles for the Xamarin.iOS binding
-(these also apply to Xamarin.Mac, the Mono bindings for Objective-C on
-OS X):
+These are some of our design principles for the Xamarin.iOS bindings
+(they also apply to Xamarin.Mac, the Mono bindings for Objective-C on
+macOS):
 
-- Follow the Framework Design Guidelines
+- Follow the [Framework Design Guidelines](https://docs.microsoft.com/dotnet/standard/design-guidelines)
 - Allow developers to subclass Objective-C classes:
 
   - Derive from an existing class
-  - Call base constructor to chain
+  - Call the base constructor to chain
   - Overriding methods should be done with C#'s override system
+  - Subclassing should work with C# standard constructs
 
-- Subclass should work with C# standard constructs
 - Do not expose developers to Objective-C selectors
 - Provide a mechanism to call arbitrary Objective-C libraries
-- Make common Objective-C tasks easy, and hard Objective-C tasks possible
+- Make common Objective-C tasks easy and hard Objective-C tasks possible
 - Expose Objective-C properties as C# properties
-- Expose a strongly typed API:
-- Increase type-safety
-- Minimize runtime errors
-- Get IDE intellisense on return types
-- Allows for IDE popup documentation
-- Encourage in-IDE exploration of the APIs:
-- Native C# types:
+- Expose a strongly-typed API:
 
-    - Example: instead of exposing the weakly-typed array like
-      this:
-		```
-		NSArray *getViews
-		```
-        we expose them with strong types, like this:
+  - Increase type safety
+  - Minimize runtime errors
+  - Get IDE IntelliSense on return types
+  - Allows for IDE popup documentation
+
+- Encourage in-IDE exploration of the APIs:
+
+  - For example, instead of exposing a weakly-typed array like this:
+    
+    ```objc
+    NSArray *getViews
+    ```
+    Expose a strong type, like this:
 	
-		```
-		NSView [] Views { get; set; }
-		```
+    ```csharp
+    NSView [] Views { get; set; }
+    ```
 	
     This gives Visual Studio for Mac the ability to do auto-completion while
-        browsing the API and also allows all of the `System.Array` operations
-        to be available on the returned value and allows the return value
-        to participate in LINQ
+    browsing the API, makes all of the `System.Array` operations available 
+    on the returned value, and allows the return value to participate in 
+    LINQ.
 
-- [NSString becomes string](~/ios/internals/api-design/nsstring.md)
-- Turn int and uint parameters that should have been enums as C#
-  enumerations and C# enumerations with [Flags] attributes
-- Instead of type-neutral NSArray objects expose arrays as strongly
-  typed array.
-- Events and notifications, give users a choice between:
+- Native C# types:
 
-	- Strongly typed version is the default
-	- Weakly typed version for advance use cases
+  - [`NSString` becomes `string`](~/ios/internals/api-design/nsstring.md)
+  - Turn `int` and `uint` parameters that should have been enums into C#
+    enumerations and C# enumerations with `[Flags]` attributes
+  - Instead of type-neutral `NSArray` objects, expose arrays as 
+    strongly-typed arrays.
+  - For events and notifications, give users a choice between:
+
+	- A strongly-typed version by default
+	- A weakly-typed version for advanced use cases
 
 - Support the Objective-C delegate pattern:
 
 	- C# event system
-	- Expose C# delegates (lambdas, anonymous methods and System.Delegate) to
-Objective-C APIs as "blocks"
+	- Expose C# delegates (lambdas, anonymous methods, and `System.Delegate`) 
+      to Objective-C APIs as blocks
 
 ### Assemblies
 
