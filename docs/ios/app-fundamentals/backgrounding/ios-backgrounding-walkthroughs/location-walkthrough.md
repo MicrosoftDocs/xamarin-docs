@@ -22,19 +22,18 @@ This walkthrough explains some key backgrounding concepts, including registering
 
 1. A location application qualifies as a background-necessary application in iOS. Register the application as a Location application by editing the **Info.plist** file for the project.
 
-	Under Solution Explorer, double click on the **Info.plist** file to open it, and scroll to the bottom of the list. Place a check by both the **Enable Background Modes** and the **Location Updates** checkboxes.
+    Under Solution Explorer, double click on the **Info.plist** file to open it, and scroll to the bottom of the list. Place a check by both the **Enable Background Modes** and the **Location Updates** checkboxes.
 
+    In Visual Studio for Mac, it will look like something like this:
 
-	In Visual Studio for Mac, it will look like something like this:
+    [![](location-walkthrough-images/image7.png "Place a check by both the Enable Background Modes and the Location Updates checkboxes")](location-walkthrough-images/image7.png#lightbox)
 
-	[![](location-walkthrough-images/image7.png "Place a check by both the Enable Background Modes and the Location Updates checkboxes")](location-walkthrough-images/image7.png#lightbox)
-
-	In Visual Studio, **Info.plist** needs to be updated manually by adding the following key/value pair:
+    In Visual Studio, **Info.plist** needs to be updated manually by adding the following key/value pair:
 
     ```xml
     <key>UIBackgroundModes</key>
     <array>
-        <string>location</string>
+      <string>location</string>
     </array>
     ```
 
