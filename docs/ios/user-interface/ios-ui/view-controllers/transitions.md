@@ -71,7 +71,7 @@ public class TransitioningDelegate : UIViewControllerTransitioningDelegate
 }
 ```
 
-If you would want to also have a custom animation when the view is being dismissed you have to override the `GetAnimationControllerForDismissedController` in the `TransitionDelegate`. When the transition takes place, the system creates an instance of `IUIViewControllerContextTransitioning`, which it passed to the animator’s methods. `IUIViewControllerContextTransitioning` contains the `ContainerView` where the animation occurs, as well as the view controller initiating the transition and the view controller being transitioned to.
+When the transition takes place, the system creates an instance of `IUIViewControllerContextTransitioning`, which it passed to the animator’s methods. `IUIViewControllerContextTransitioning` contains the `ContainerView` where the animation occurs, as well as the view controller initiating the transition and the view controller being transitioned to.
 
 The `UIViewControllerAnimatedTransitioning` class handles the actual animation. Two methods must be implemented:
 
