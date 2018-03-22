@@ -234,7 +234,7 @@ namespace Hello_Mac
 
 The developer is not usually concerned with designer files, as they’re automatically managed by Visual Studio for Mac and provide the requisite plumbing code that allows access to controls that have been added to any window or view in the app.
 
-With the Xamarin.Mac app project created and a basic understanding of its components, switch to Xcode to create the user interface using the Interface Builder.
+With the Xamarin.Mac app project created and a basic understanding of its components, switch to Xcode to create the user interface using Interface Builder.
 
 <a name="Info_plist" />
 
@@ -410,7 +410,7 @@ So what are **Outlets** and **Actions**? In traditional .NET user interface prog
 
 In Xcode, **Outlets** and **Actions** are added directly in code via *Control-dragging*. More specifically, this means that to create an **Outlet** or **Action**, the developer will choose a control element to add an **Outlet** or **Action** to, hold down the **Control** key on the keyboard, and drag that control directly into the code.
 
-For Xamarin.Mac developers, this means that the developer will drag into the Objective-C stub files that correspond to the C# file where they want to create the **Outlet** or **Action**. Visual Studio for Mac created a file called `ViewController.h` as part of the shim Xcode Project it generated to use the Interface Builder:
+For Xamarin.Mac developers, this means that the developer will drag into the Objective-C stub files that correspond to the C# file where they want to create the **Outlet** or **Action**. Visual Studio for Mac created a file called `ViewController.h` as part of the shim Xcode Project it generated to use Interface Builder:
 
 [![](hello-mac-images/xcode16.png "Viewing source in Xcode")](hello-mac-images/xcode16.png#lightbox)
 
@@ -486,7 +486,7 @@ Do the following:
 With the user interface wired-up and exposed to C# code, switch back to Visual Studio for Mac and let it synchronize the changes made in Xcode and Interface Builder.
 
 > [!NOTE]
-> It probably took a long time to create the user interface and **Outlets** and **Actions** for this first app, and it may seem like a lot of work, but a lot of new concepts were introduced and a lot of time was spent covering new ground. After practicing for a while and working with the Interface Builder, this interface and all its **Outlets** and **Actions** can be created in just a minute or two.
+> It probably took a long time to create the user interface and **Outlets** and **Actions** for this first app, and it may seem like a lot of work, but a lot of new concepts were introduced and a lot of time was spent covering new ground. After practicing for a while and working with Interface Builder, this interface and all its **Outlets** and **Actions** can be created in just a minute or two.
 
 <a name="Synchronizing_Changes_with_Xcode" />
 
