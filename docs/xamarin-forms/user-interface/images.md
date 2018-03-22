@@ -172,7 +172,7 @@ The following screenshots show the result of displaying an embedded image on eac
 Because there is no built-in type converter from `string` to `ResourceImageSource`, these types of images cannot be natively loaded by XAML. Instead, a simple custom XAML markup extension can be written to load images using a **Resource ID** specified in XAML:
 
 ```csharp
-[ContentProperty ("Source")]
+[ContentProperty (nameof(Source))]
 public class ImageResourceExtension : IMarkupExtension
 {
  public string Source { get; set; }
@@ -183,6 +183,7 @@ public class ImageResourceExtension : IMarkupExtension
    {
      return null;
    }
+   
    // Do your translation lookup here, using whatever method you require
    var imageSource = ImageSource.FromResource(Source);
 
