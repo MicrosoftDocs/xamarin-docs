@@ -15,7 +15,7 @@ ms.date: 11/14/2017
 
 For Xamarin.Android to work with .NET Embedding, you need the following:
 
-* Xamarin.Android 7.4.99 or later (build from [Jenkins](https://jenkins.mono-project.com/view/Xamarin.Android/job/xamarin-android/lastSuccessfulBuild/Azure/))
+* [Xamarin.Android 7.4.99](https://www.visualstudio.com/xamarin/) or later
 * [Android Studio 3.x](https://developer.android.com/studio/index.html) with Java 1.8
 
 # Callbacks

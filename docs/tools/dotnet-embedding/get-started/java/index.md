@@ -29,7 +29,7 @@ For Windows:
 * Windows 10 SDK
 
 For Android:
-* Xamarin.Android 7.4.99 or later (build from [Jenkins](https://jenkins.mono-project.com/view/Xamarin.Android/job/xamarin-android/lastSuccessfulBuild/Azure/))
+* [Xamarin.Android 7.4.99](https://www.visualstudio.com/xamarin/) or later
 * [Android Studio 3.x](https://developer.android.com/studio/index.html) with Java 1.8
 
 You can use [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) to edit and compile your C# code.

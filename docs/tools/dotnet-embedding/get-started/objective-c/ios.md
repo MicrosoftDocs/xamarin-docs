@@ -16,7 +16,7 @@ ms.date: 11/14/2017
 
 In addition to the requirements from our [Getting started with Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) guide you'll also need:
 
-* [Xamarin.iOS 10.11+](https://jenkins.mono-project.com/view/Xamarin.MaciOS/job/xamarin-macios-builds-master/) from our _master_ branch.
+* [Xamarin.iOS 10.11](https://www.visualstudio.com/xamarin/) or later
 
 ## Hello world
 
