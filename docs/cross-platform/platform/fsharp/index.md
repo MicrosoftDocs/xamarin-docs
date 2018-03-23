@@ -12,31 +12,27 @@ ms.date: 03/24/2017
 
 # F&#35;
 
-_F# is a strongly-typed functional programming language designed to run on .NET_
+F# is an open-source, cross-platform functional-first programming language for .NET.
 
-F# combines the succinctness, expressivity and
-composability of type-inferred functional programming, the
-compile-time safety of strongly-typed code, and the
-runtime support, libraries, interoperability, tools, and object model
+F# combines the succinctness, expressivity and composability of type-inferred functional programming, the
+compile-time safety of strongly-typed code, and the runtime support, libraries, interoperability, tools, and object model
 of .NET.
 
-F# is now available "out of the box" as a programming language to Xamarin
-	users on all of the Xamarin-supported platforms: Android,
-	OS X, and iOS.
+F# is available as a programming language to Xamarin users on all of the Xamarin-supported platforms: Android, OS X, and iOS.
 
-- [Getting Started with F#](overview.md)
-- [F# Samples](samples.md)
+- [F# Guide](https://docs.microsoft.com/en-us/dotnet/fsharp/)
+- [Getting Started with F# and Xamarin](overview.md)
+- [F# Mobile Samples](samples.md)
 
 ## F# Features in Visual Studio for Mac
 
-There are a number of [new F# features](https://developer.xamarin.com/releases/studio/xamarin.studio_6.0/xamarin.studio_6.0/#F_Enhancements)
-available in Visual Studio for Mac, including:
+F# is a supported language in Visual Studio for Mac. Features supported include:
 
-- F# 4 support
-- F# PCL support
+- F# 4.1 support
+- F# PCL and .NET Standard support
 - F# Shared Project support
-- Code navigation improvements
+- Code navigation
 - Syntax highlighting in F# Interactive
-- F# templates for Xamarin.Forms projects
-- [*and a lot more...*](https://developer.xamarin.com/releases/studio/xamarin.studio_6.0/xamarin.studio_6.0/#F_Enhancements)
+- F# templates for Xamarin.Forms, iOS and Android
+- [*and more...*](https://developer.xamarin.com/releases/studio/xamarin.studio_6.0/xamarin.studio_6.0/#F_Enhancements)
 
