@@ -144,5 +144,5 @@ The following binding scenario guides can help you bind a Java library (or libra
 ## Related Links
 
 - [Working with JNI](~/android/platform/java-integration/working-with-jni.md)
-- [GAPI Metadata](http://www.mono-project.com/GAPI#Metadata)
+- [GAPI Metadata](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
 - [Using Native Libraries](~/android/platform/native-libraries.md)

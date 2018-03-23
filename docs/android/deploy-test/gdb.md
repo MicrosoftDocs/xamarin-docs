@@ -193,7 +193,7 @@ app instances. This will not work on pre-Android v4.0 targets.
 ### `mono_pmip` doesn't work
 
 The `mono_pmip` function (useful for
-[obtaining managed stack frames](http://www.mono-project.com/Debugging#Debugging_with_GDB)) 
+[obtaining managed stack frames](http://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)) 
 is exported from `libmonosgen-2.0.so`, which the `_Gdb` target does not
 currently pull down. (This will be fixed in a future release.)
 

@@ -12,7 +12,7 @@ ms.date: 03/15/2018
 # Garbage Collection
 
 Xamarin.Android uses Mono's 
-[Simple Generational garbage collector](http://www.mono-project.com/Compacting_GC). 
+[Simple Generational garbage collector](http://www.mono-project.com/docs/advanced/garbage-collector/sgen/). 
 This is a mark-and-sweep garbage collector with two generations and a *large 
 object space*, with two kinds of collections: 
 

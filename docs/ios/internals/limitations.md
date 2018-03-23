@@ -24,7 +24,7 @@ These are the Xamarin.iOS limitations compared to desktop Mono:
 Unlike traditional Mono/.NET, code on the iPhone is statically compiled ahead
 	of time instead of being compiled on demand by a JIT compiler.
 
-Mono's [Full AOT](http://www.mono-project.com/AOT#Full_AOT) technology has a few limitations
+Mono's [Full AOT](http://www.mono-project.com/docs/advanced/aot/#full-aot) technology has a few limitations
 	with respect to generics, these are caused because not every
 	possible generic instantiation can be determined up front at
 	compile time. This is not a problem for regular .NET or Mono
