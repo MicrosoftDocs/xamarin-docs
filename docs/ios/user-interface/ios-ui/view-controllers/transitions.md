@@ -115,7 +115,7 @@ public class CustomTransitionAnimator : UIViewControllerAnimatedTransitioning
 
 Now, when the button is tapped, the animation implemented in the `UIViewControllerAnimatedTransitioning` class is used:
 
- ![](transitions-images/custom-transition.png "An example of the zoom in effect running") 
+ ![](transitions-images/custom-transition.png "An example of the zoom in effect running")
 
 ## Collection View Transitions
 
