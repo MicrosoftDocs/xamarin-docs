@@ -100,7 +100,7 @@ It is also possible to debug a second project once the first project is started 
 
 ## Creating a Solution Configuration
 
-A _solution configuration_ tells Visual Studio for Mac what project to run when a debugging session is intiated with the **Start** button. There can be more than one solution configuration per solution. This makes it possible to specify what projects are run when debugging the project.
+A _solution configuration_ tells Visual Studio for Mac what project to run when a debugging session is initiated with the **Start** button. There can be more than one solution configuration per solution. This makes it possible to specify what projects are run when debugging the project.
 
 To create a new solution configuration in Xamaring Studio:
 
