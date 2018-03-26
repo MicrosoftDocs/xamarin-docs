@@ -28,15 +28,11 @@ This guide assumes a familiarity with the contents covered in the [Getting Start
 
 1. Create a new solution from the **iOS > App > Single View Application > C#** template, name it `ScratchTicket`, and continue through the New Project wizard:
 
-
     [![](ios-designable-controls-walkthrough-images/01new.png "Create a new solution")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
-
 
 1. Create a new empty class file named `ScratchTicketView`:
 
-
     [![](ios-designable-controls-walkthrough-images/02new.png "Create a new ScratchTicketView class")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
-
 
 1. Add the following code for `ScratchTicketView` class:
 
