@@ -154,13 +154,11 @@ In Mono these bridges are implemented by the Just-in-Time
 	the iPhone there are two important limitations at this
 	point:
 
--  You must flag all of your callback methods with the  [MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/MonoPInvokeCallbackAttribute/) 
+-  You must flag all of your callback methods with the 
+   [MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoPInvokeCallbackAttribute) 
 -  The methods have to be static methods, there is no support for instance methods. 
-
-
  
- <a name="No_Remoting" />
-
+<a name="No_Remoting" />
 
 ## No Remoting
 
