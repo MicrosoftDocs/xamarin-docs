@@ -15,7 +15,7 @@ message that can be sent to an object or a *class*. [Xamarin.iOS](~/ios/internal
 to instance methods, and class selectors to static methods.
 
 Unlike normal C functions (and like C++ member functions), you cannot
-directly invoke a selector using [P/Invoke](http://www.mono-project.com/Dllimport).
+directly invoke a selector using [P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/).
 (*Aside*: in theory you could use P/Invoke for non-virtual C++ member
 functions, but you'd need to worry about per-compiler name mangling, which is a
 world of pain better ignored.) Instead, selectors are sent to an Objective-C

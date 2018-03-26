@@ -185,7 +185,7 @@ Creating a fat binary is a three step process:
 
 While these three steps are rather straightforward, and it may be necessary to repeat them in the future when the Objective-C library receives updates or if we require bug fixes. If you decide to automate these steps, it will simplify the future maintenance and support of the iOS binding project.
 
-There are many tools available to automate such tasks - a shell script, [rake](http://rake.rubyforge.org/), [xbuild](http://www.mono-project.com/Microsoft.Build), and [make](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). When we installed the Xcode Command Line tools, we also installed make, so that is the build system that will be used for this walkthrough. Here is a **Makefile** that you can use to create a multi-architecture shared library that will work on an iOS device and the simulator for the any library:
+There are many tools available to automate such tasks - a shell script, [rake](http://rake.rubyforge.org/), [xbuild](http://www.mono-project.com/docs/tools+libraries/tools/xbuild/), and [make](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). When we installed the Xcode Command Line tools, we also installed make, so that is the build system that will be used for this walkthrough. Here is a **Makefile** that you can use to create a multi-architecture shared library that will work on an iOS device and the simulator for the any library:
 
 ```bash
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
