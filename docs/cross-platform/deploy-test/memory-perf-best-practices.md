@@ -289,7 +289,7 @@ To reduce pressure on the garbage collector, follow these guidelines:
 
 ## Reduce the Size of the Application
 
-It's important to understand the compilation process on each platform, to understand where an applications executable size comes from:
+It's important to understand the compilation process on each platform, to understand where an application's executable size comes from:
 
 - iOS applications are ahead-of-time (AOT) compiled to ARM assembly language. The .NET framework is included, with unused classes being stripped out only if the appropriate linker option is enabled.
 - Android applications are compiled to intermediate language (IL) and packaged with MonoVM and just-in-time (JIT) compilation. Unused framework classes are stripped out only if the appropriate linker option is enabled.
@@ -351,7 +351,7 @@ Regardless of the image resolution, displaying image resources can greatly incre
 
 ## Reduce the Application Activation Period
 
-All applications have an *activation period*, which is the time between when the application is started and when the application is ready to use. This activation period provides users with their first impression of the application, and so it's important to reduce the activation period and the users perception of it, in order for them to gain a favorable first impression of the application.
+All applications have an *activation period*, which is the time between when the application is started and when the application is ready to use. This activation period provides users with their first impression of the application, and so it's important to reduce the activation period and the user's perception of it, in order for them to gain a favorable first impression of the application.
 
 Before an application displays its initial UI, it should provide a splash screen to indicate to the user that the application is starting. If the application can't quickly display its initial UI, the splash screen should be used to inform the user of progress through the activation period, to offer reassurance that the application hasn't hung. This reassurance could be a progress bar, or similar control.
 
