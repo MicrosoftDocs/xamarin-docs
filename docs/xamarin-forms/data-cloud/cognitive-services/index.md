@@ -19,12 +19,12 @@ _Microsoft Cognitive Services are a set of APIs, SDKs, and services available to
 The accompanying sample is a todo list application that provides functionality to:
 
 - View a list of tasks.
-- Add and edit tasks through the soft keyboard, or by performing speech recognition with the Bing Speech API. For more information about performing speech recognition, see [Speech Recognition using the Bing Speech API](speech-recognition.md).
+- Add and edit tasks through the soft keyboard, or by performing speech recognition with the Microsoft Speech API. For more information about performing speech recognition, see [Speech Recognition using the Microsoft Speech API](speech-recognition.md).
 - Spell check tasks using the Bing Spell Check API. For more information, see [Spell Checking using the Bing Spell Check API](spell-check.md).
 - Translate tasks from English to German using the Translator API. For more information, see [Text Translation using the Translator API](text-translation.md).
 - Delete tasks.
 - Set a task's status to 'done'.
-- Rate the application with emotion recognition, using the Emotion API. For more information, see [Emotion Recognition using the Emotion API](emotion-recognition.md).
+- Rate the application with emotion recognition, using the Face API. For more information, see [Emotion Recognition using the Face API](emotion-recognition.md).
 
 Tasks are stored in a local SQLite database. For more information about using a local SQLite database, see [Working with a Local Database](~/xamarin-forms/app-fundamentals/databases.md).
 
@@ -42,7 +42,7 @@ Clicking the smilies button on the `TodoListPage` navigates to the `RateAppPage`
 
 ![](images/sample-application-3.png "RateAppPage")
 
-The `RateAppPage` allows the user to take a photo of their face, which is submitted to the Emotion API with the returned emotion being displayed.
+The `RateAppPage` allows the user to take a photo of their face, which is submitted to the Face API with the returned emotion being displayed.
 
 ## Understanding the Application Anatomy
 
@@ -69,7 +69,7 @@ The sample application uses the following NuGet packages:
 
 - `Microsoft.Net.Http` – provides the `HttpClient` class for making requests over HTTP.
 - `Newtonsoft.Json` – provides a JSON framework for .NET.
-- `Microsoft.ProjectOxford.Emotion` – a client library for accessing the Emotion API.
+- `Microsoft.ProjectOxford.Face` – a client library for accessing the Face API.
 - `PCLStorage` – provides a set of cross-platform local file IO APIs.
 - `sqlite-net-pcl` – provides SQLite database storage.
 - `Xam.Plugin.Media` – provides cross-platform photo taking and picking APIs.
@@ -113,11 +113,10 @@ The `IAudioRecorderService` interface is implemented by the `AudioRecorderServic
 
 The sample application invokes the following Microsoft Cognitive Services:
 
-- Bing Speech API. For more information, see [Speech Recognition using the Bing Speech API](speech-recognition.md).
+- Microsoft Speech API. For more information, see [Speech Recognition using the Microsoft Speech API](speech-recognition.md).
 - Bing Spell Check API. For more information, see [Spell Checking using the Bing Spell Check API](spell-check.md).
 - Translate API. For more information, see [Text Translation using the Translator API](text-translation.md).
-- Emotion API. For more information, see [Emotion Recognition using the Emotion API](emotion-recognition.md).
-
+- Face API. For more information, see [Emotion Recognition using the Face API](emotion-recognition.md).
 
 ## Related Links
 
