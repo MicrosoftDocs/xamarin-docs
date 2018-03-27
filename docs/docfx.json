@@ -53,9 +53,22 @@
 
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/xamarin-docs",
-      "feedback_product_url": "https://forums.xamarin.com/"
+      "feedback_product_url": "https://forums.xamarin.com/categories/general/"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "feedback_product_url": {
+        "android/**/**.md":"https://forums.xamarin.com/categories/android/",
+        "ios/**/**.md":"https://forums.xamarin.com/categories/ios/",
+        "mac/**/**.md":"https://forums.xamarin.com/categories/mac/",
+        "xamarin-forms/**/**.md":"https://forums.xamarin.com/categories/xamarin-forms/",
+        "cross-platform/**/**.md":"https://forums.xamarin.com/categories/cross-platform/",
+        "tools/workbooks/**/**.md":"https://forums.xamarin.com/categories/inspector/",
+        "tools/inspector/**/**.md":"https://forums.xamarin.com/categories/inspector/",
+        "tools/live-player/**/**.md":"https://forums.xamarin.com/categories/live-player",
+        "tools/profiler/**/**.md":"https://forums.xamarin.com/categories/profiler",
+        "graphics-games/**/**.md":"https://forums.xamarin.com/categories/graphics-games/"
+      }
+    },
     "template": [],
     "dest": "xamarin-docs"
   }

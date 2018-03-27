@@ -21,19 +21,19 @@ The Bing Spell Check REST API has two operating modes, and a mode must be specif
 - `Spell` corrects short text (up to 9 words) without any casing changes.
 - `Proof` corrects long text, provides casing corrections and basic punctuation, and suppresses aggressive corrections.
 
-An API key must be obtained to use the Bing Spell Check API. This can be obtained at [Getting started for free](https://www.microsoft.com/cognitive-services/sign-up?ReturnUrl=/cognitive-services/subscriptions?productId=%2fproducts%2fBing.Speech.Preview) on microsoft.com.
+An API key must be obtained to use the Bing Spell Check API. This can be obtained at [Try Cognitive Services](https://azure.microsoft.com/try/cognitive-services/)
 
-For a list of the languages supported by the Bing Spell Check API, see [Language support](https://www.microsoft.com/cognitive-services/Bing-Spell-check-API/documentation#language-support) on microsoft.com. For more information about the Bing Spell Check API, see [Bing Spell Check API](https://www.microsoft.com/cognitive-services/bing-spell-check-api/documentation) on microsoft.com.
+For a list of the languages supported by the Bing Spell Check API, see [Supported languages](/azure/cognitive-services/bing-spell-check/bing-spell-check-supported-languages/). For more information about the Bing Spell Check API, see [Bing Spell Check Documentation](/azure/cognitive-services/bing-spell-check/).
 
 ## Authentication
 
 Every request made to the Bing Spell Check API requires an API key that should be specified as the value of the `Ocp-Apim-Subscription-Key` header. The following code example shows how to add the API key to the `Ocp-Apim-Subscription-Key` header of a request:
 
 ```csharp
-using (var httpClient = new HttpClient())
+public BingSpellCheckService()
 {
-  httpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
-  ...
+    httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", Constants.BingSpellCheckApiKey);
 }
 ```
 
@@ -41,27 +41,25 @@ Failure to pass a valid API key to the Bing Spell Check API will result in a 401
 
 ## Performing Spell Checking
 
-Spell checking can be achieved by making a GET or POST request to the `SpellCheck` API at `https://api.cognitive.microsoft.com/bing/v5.0/SpellCheck`. When making a GET request, the text to be spell checked is sent as a query parameter. When making a POST request, the text to be spell checked is sent in the request body. GET requests are limited to spell checking 1500 characters due to the query parameter string length limitation. Therefore, POST requests will typically be made unless short strings are being spell checked.
+Spell checking can be achieved by making a GET or POST request to the `SpellCheck` API at `https://api.cognitive.microsoft.com/bing/v7.0/SpellCheck`. When making a GET request, the text to be spell checked is sent as a query parameter. When making a POST request, the text to be spell checked is sent in the request body. GET requests are limited to spell checking 1500 characters due to the query parameter string length limitation. Therefore, POST requests should typically be made unless short strings are being spell checked.
 
 In the sample application, the `SpellCheckTextAsync` method invokes the spell checking process:
 
 ```csharp
 public async Task<SpellCheckResult> SpellCheckTextAsync(string text)
 {
-  string requestUri = GenerateRequestUri(Constants.BingSpellCheckEndpoint, text, SpellCheckMode.Spell);
-  var response = await SendRequestAsync(requestUri, Constants.BingSpellCheckApiKey);
-  var spellCheckResults = JsonConvert.DeserializeObject<SpellCheckResult>(response);
-  return spellCheckResults;
+    string requestUri = GenerateRequestUri(Constants.BingSpellCheckEndpoint, text, SpellCheckMode.Spell);
+    var response = await SendRequestAsync(requestUri);
+    var spellCheckResults = JsonConvert.DeserializeObject<SpellCheckResult>(response);
+    return spellCheckResults;
 }
 ```
 
 The `SpellCheckTextAsync` method generates a request URI and then sends the request to the `SpellCheck` API, which returns a JSON response containing the result. The JSON response is deserialized, with the result being returned to the calling method for display.
 
-For more information about the Bing Spell Check REST API, see [Spell Check API](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/57855119bca1df1c647bc358) on microsoft.com.
-
 ### Configuring Spell Checking
 
-The spell checking process can be configured by specifying HTTP query parameters. There are compulsory and optional parameters, with the following method showing the compulsory parameters that must be set for a GET request:
+The spell checking process can be configured by specifying HTTP query parameters:
 
 ```csharp
 string GenerateRequestUri(string spellCheckEndpoint, string text, SpellCheckMode mode)
@@ -75,59 +73,56 @@ string GenerateRequestUri(string spellCheckEndpoint, string text, SpellCheckMode
 
 This method sets the text to be spell checked, and the spell check mode.
 
-For more information about the compulsory and optional parameters, see [Spell Check API](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/57855119bca1df1c647bc358) on microsoft.com.
+For more information about the Bing Spell Check REST API, see [Spell Check API v7 reference](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/).
 
 ### Sending the Request
 
 The `SendRequestAsync` method makes the GET request to the Bing Spell Check REST API and returns the response:
 
 ```csharp
-async Task<string> SendRequestAsync(string url, string apiKey)
+async Task<string> SendRequestAsync(string url)
 {
-  using (var httpClient = new HttpClient())
-  {
-    httpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
     var response = await httpClient.GetAsync(url);
     return await response.Content.ReadAsStringAsync();
-  }
 }
 ```
 
 This method builds the GET request by adding the API key as the value of the `Ocp-Apim-Subscription-Key` header. The GET request is then sent to the `SpellCheck` API, with the request URL specifying the text to be translated, and the spell check mode. The response is then read and returned to the calling method.
 
-The `SpellCheck` API will send HTTP status code 200 (OK) in the response, provided that the request is valid, which indicates that the request succeeded and that the requested information is in the response. For a list of possible error responses, see Responses at [Spell Check API](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/57855119bca1df1c647bc358) on microsoft.com.
+The `SpellCheck` API will send HTTP status code 200 (OK) in the response, provided that the request is valid, which indicates that the request succeeded and that the requested information is in the response. For a list of response objects, see [Response objects](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference#response-objects).
 
 ### Processing the Response
 
 The API response is returned in JSON format. The following JSON data shows the response message for the misspelled text `Go shappin tommorow`:
 
-```csharp
-{
-  "_type": "SpellCheck",
-  "flaggedTokens": [
-    {
-      "offset": 3,
-      "token": "shappin",
-      "type": "UnknownToken",
-      "suggestions": [
-        {
-          "suggestion": "shopping",
-          "score": 1
-        }
-      ]
-    },
-    {
-      "offset": 11,
-      "token": "tommorow",
-      "type": "UnknownToken",
-      "suggestions": [
-        {
-          "suggestion": "tomorrow",
-          "score": 1
-        }
-      ]
-    }
-  ]
+```json
+{  
+   "_type":"SpellCheck",
+   "flaggedTokens":[  
+      {  
+         "offset":3,
+         "token":"shappin",
+         "type":"UnknownToken",
+         "suggestions":[  
+            {  
+               "suggestion":"shopping",
+               "score":1
+            }
+         ]
+      },
+      {  
+         "offset":11,
+         "token":"tommorow",
+         "type":"UnknownToken",
+         "suggestions":[  
+            {  
+               "suggestion":"tomorrow",
+               "score":1
+            }
+         ]
+      }
+   ],
+   "correctionType":"High"
 }
 ```
 
@@ -158,11 +153,9 @@ This code iterates through the `FlaggedTokens` collection and replaces any missp
 
 This article explained how to use the Bing Spell Check REST API to correct spelling errors in a Xamarin.Forms application. Bing Spell Check performs contextual spell checking for text, providing inline suggestions for misspelled words.
 
-
-
 ## Related Links
 
-- [Bing Spell Check Documentation](https://www.microsoft.com/cognitive-services/bing-spell-check-api/documentation)
+- [Bing Spell Check Documentation](/azure/cognitive-services/bing-spell-check/)
 - [Consuming a RESTful Web Service](~/xamarin-forms/data-cloud/consuming/rest.md)
 - [Todo Cognitive Services (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
-- [Bing Spell Check API](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/57855119bca1df1c647bc358)
+- [Bing Spell Check API v7 reference](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)

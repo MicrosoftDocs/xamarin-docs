@@ -1,5 +1,5 @@
 ---
-title: "User interface"
+title: "macOS user interface"
 description: "This article links to guides that describe various macOS UI controls."
 ms.topic: article
 ms.prod: xamarin
@@ -7,10 +7,10 @@ ms.assetid: 876B6EC2-E158-43F2-B9C9-03F54F3D2A49
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 10/19/2016
+ms.date: 03/27/2018
 ---
 
-# User interface
+# macOS user interface
 
 _This article links to guides that describe various macOS UI controls._
 
@@ -22,7 +22,7 @@ You may want to take a look at the [Exposing C# classes / methods to Objective-C
 
 ## [Windows](~/mac/user-interface/window.md)
 
-This article covers working with windows and panels in a Xamarin.Mac application. It covers creating and maintaining windows and panels in Xcode and Interface Builder, loading windows and panels from `.storyboard` or `.xib` files, using windows and responding to windows in C# code.
+This article covers working with windows and panels in a Xamarin.Mac application. It covers creating and maintaining windows and panels in Xcode and Interface Builder, loading windows and panels from .storyboard or .xib files, using windows, and responding to windows in C# code.
 
 ## [Dialogs](~/mac/user-interface/dialog.md)
 
@@ -36,7 +36,7 @@ This article covers working with alerts in a Xamarin.Mac application. It covers 
 
 Menus are used in various parts of a Mac application's user interface; from the application's main menu at the top of the screen to pop-up menus and contextual menus that can appear anywhere in a window. Menus are an integral part of a Mac application's user experience. This article covers working with Cocoa menus in a Xamarin.Mac application.
 
-## [Standard Controls](~/mac/user-interface/standard-controls.md)
+## [Standard controls](~/mac/user-interface/standard-controls.md)
 
 Working with the standard AppKit controls such as buttons, labels, text fields, check boxes, and segmented controls in a Xamarin.Mac application. This guide covers adding them to a user interface design in Xcode's Interface Builder, exposing them to code through outlets and actions, and working with AppKit controls in C# code.
 
@@ -44,30 +44,30 @@ Working with the standard AppKit controls such as buttons, labels, text fields, 
 
 This article covers working with toolbars in a Xamarin.Mac application. It covers creating and maintaining toolbars in Xcode and Interface Builder, how to expose the toolbar items to code using outlets and actions, enabling and disabling toolbar items, and finally responding to Toolbar items in C# code.
 
-## [Table Views](~/mac/user-interface/table-view.md)
+## [Table views](~/mac/user-interface/table-view.md)
 
-This article covers working with table Vvews in a Xamarin.Mac application. It covers creating and maintaining table views in Xcode and Interface Builder, how to expose the table view items to code using outlets and actions, populating table views, and responding to table view items in C# code.
+This article covers working with table views in a Xamarin.Mac application. It covers creating and maintaining table views in Xcode and Interface Builder, how to expose the table view items to code using outlets and actions, populating table views, and responding to table view items in C# code.
 
-## [Outline Views](~/mac/user-interface/outline-view.md)
+## [Outline views](~/mac/user-interface/outline-view.md)
 
 This article covers working with outline views in a Xamarin.Mac application. It covers creating and maintaining outline views in Xcode and Interface Builder, how to expose the outline view items to code using outlets and actions, populating outline views, and responding to outline view items in C# code.
 
-## [Source Lists](~/mac/user-interface/source-list.md)
+## [Source lists](~/mac/user-interface/source-list.md)
 
 This article covers working with source lists in a Xamarin.Mac application. It covers creating and maintaining source lists in Xcode and Interface Builder, how to expose source list items to code using outlets and actions, populating source lists, and responding to source list items in C# code.
 
-## [Collection Views](~/mac/user-interface/collection-view.md)
+## [Collection views](~/mac/user-interface/collection-view.md)
 
 This article covers working with collection views in a Xamarin.Mac application. It covers creating and maintaining collection views in Xcode and Interface Builder, how to expose the collection view items to code using outlets and actions, populating collection views, and responding to collection views in C# code.
 
-## [Creating Custom User Controls](~/mac/user-interface/custom-controls.md)
+## [Creating custom controls](~/mac/user-interface/custom-controls.md)
 
 This article covers creating custom user interface controls (by inheriting from `NSControl`), drawing a custom interface for the control, and creating custom actions that can be used with Xcode's Interface Builder.
 
-## Mac Samples Gallery
+## Mac samples gallery
 
 We also suggest taking a look at the [Mac Samples Gallery](https://developer.xamarin.com/samples/mac/all/). It includes a wealth of ready-to-use code that can help you get a Xamarin.Mac project off the ground quickly.
 
-## Related Links
+## Related links
 
 - [macOS Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

@@ -32,7 +32,7 @@ development, for new and experienced application developers alike. It takes a
 fairly comprehensive approach to introducing most of the concepts you’ll run
 into during the entire Software Development Lifecycle (SDLC). However, this
 document may not be for everyone, if you’re itching to just start building
-applications, we recommend jumping ahead to either the [Introduction to Mobile Development](~/cross-platform/get-started/introduction-to-mobile-development.md), [Hello, Android](~/android/get-started/hello-android/index.md) or [Hello, iPhone](~/ios/get-started/hello-ios/index.md) tutorials, and then coming back to this document later.
+applications, we recommend jumping ahead to the [Introduction to Mobile Development](~/cross-platform/get-started/introduction-to-mobile-development.md) guide and then coming back to this document later.
 
 ## Mobile Development SDLC
 
@@ -99,23 +99,20 @@ start trying to solve the User Experience or UX.
 
 #### UX Design
 
-UX is usually done via wireframes or mockups using tools such as [Balsamiq](http://www.balsamiq.com/), [Mockingbird](https://gomockingbird.com/), [Visio](http://office.microsoft.com/en-us/visio/), or just plain ol’ pen
-and paper. UX Mockups allow the UX to be designed without having to worry
+UX is usually done via wireframes or mockups using one of the many [design toolkits](https://docs.microsoft.com/windows/uwp/design/downloads/). UX mockups allow the UX to be designed without having to worry
 about the actual UI design:
 
  [![](introduction-to-mobile-sdlc-images/balsamiq.png "UX is usually done via wireframes or mockups using tools such as Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
-When creating UX Mockups, it’s important to consider the Interface
-Guidelines for the various platforms that the app will target. The app should "feel at home" on each platform. The offical design guidelines for each platform are:
+When creating UX mockups, it’s important to consider the interface
+guidelines for the various platforms that the app will target. The app should "feel at home" on each platform. The official design guidelines for each platform are:
 
-1.   **Apple** -  [Human Interface Guidelines](http://developer.apple.com/library/ios/#DOCUMENTATION/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
+1.   **Apple** -  [Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
 1.   **Android** –  [Design Guidelines](http://developer.android.com/design/index.html)
-1.   **Windows Phone** –  [Design library for Windows Phone](http://msdn.microsoft.com/en-US/library/windowsphone/design/fa00461b-abe1-41d1-be87-0b0fe3d3389d(v=vs.105).aspx)
+1.   **UWP** –  [UWP Design basics](https://docs.microsoft.com/windows/uwp/design/basics/)
 
 For example, each app has a metaphor for switching between sections in an
-application. iOS uses a tab bar at the bottom of the screen, Android uses a tab bar at the top of the screen, and Windows Phone uses the Panorama view:
-
- ![](introduction-to-mobile-sdlc-images/38.png "Each app has a metaphor for switching between sections in an application")
+application. iOS uses a tab bar at the bottom of the screen, Android uses a tab bar at the top of the screen, and UWP uses the [Pivot or tab](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot) view.
 
 Additionally, the hardware itself also dictates UX decisions. For example,
 iOS devices have no physical *back* button, and therefore introduce the
@@ -144,17 +141,6 @@ As with UX, it’s important to understand that each platform has it’s own
 design language, so a well-designed application may still look different on each platform:
 
  [![](introduction-to-mobile-sdlc-images/multiplatform-1.png "A well-designed application may still look different on each platform")](introduction-to-mobile-sdlc-images/multiplatform-1.png#lightbox)
-
-For good UI design inspiration, check out some of the following sites:
-
-1.   [pttrns.com](http://pttrns.com) – (iOS only)
-1.   [androidpttrns.com](http://androidpttrns.com) - (Android only)
-1.   [lovelyui.com](http://lovelyui.com) – (iOS, Android, and Windows Phone)
-1.   [mobiledesignpatterngallery.com](http://mobiledesignpatterngallery.com) – (iOS, Android, and Windows Phone)
-
-Additionally, it is possible to view the portfolios of graphic designers at sites such as [Behance.com](http://behance.com) and [Dribbble.com](http://dribbble.com). Designers from all over
-the world can be found there, often times in places where the exchange rate is
-favorable, so good graphic design doesn’t necessarily have to cost a lot.
 
 ### Development
 
@@ -200,12 +186,7 @@ deployment options out there that make this process much easier by allowing you
 to invite people to a testing pool, release builds over the web, and provide
 tools that allow for user feedback.
 
-Some of the most popular ones are:
-
-1.   **Testflight** – This is an iOS product that allows you to distribute apps for testing as well as receive crash reports and usage information from your customers. This is included as part of iTunes connect, and is not available if you are part of an Apple Developer Enterprise membership.
-2.   **LaunchPad (launchpadapp.com)** – Designed for Android, this service is very similar to TestFlight.
-3.   **Vessel (vessel.io)** – A service for iOS and Android that lets you monitor usage, track customers and even do A/B testing from inside your app.
-4.  **hockeyapp.com** - Provides a testing service for iOS, Android and Windows Phone.
+For testing and deployment, you can use [App Center](https://appcenter.ms/) to continuously build, test, release, and monitor apps.
 
 ### Distribution
 
@@ -249,10 +230,9 @@ many others. A few popular ones are:
 1.  [Handango](http://www.handango.com/)
 1.  [GetJar](http://www.getjar.com/)
 
-#### Windows 
+#### UWP 
 
-Windows applications are distributed to users via the Microsoft Store. Developers submit their apps for approval, after which they appear in the
-Store.
+UWP applications are distributed to users via the Microsoft Store. Developers submit their apps for approval, after which they appear in the Store. For more information on publishing Windows apps, see UWP's [Publish](https://docs.microsoft.com/windows/uwp/publish/) documentation.
 
 ## Mobile Development Considerations
 
@@ -361,10 +341,8 @@ are used to execute processes while the application is in the background. For
 more information see the [Creating Services](~/android/app-fundamentals/services/index.md)
 guide.
 
-#### Many Devices &amp; Many Form Factors
+#### Many Devices and Many Form Factors
 
-Unlike iOS, which has a small set of devices, or even Windows Phone, which
-only runs on approved devices that meet a minimum set of platform requirements,
 Google doesn’t impose any limits on which devices can run the Android OS. This
 open paradigm results in a product environment populated by a myriad of
 different devices with very different hardware, screen resolutions and ratios,
@@ -392,7 +370,7 @@ iOS, for instance. For a list of application permissions, see the [Manifest Perm
 
 #### Multitasking
 
-Multitasking in Windows Phone also has two parts: the lifecycle for pages and
+Multitasking in UWP has two parts: the lifecycle for pages and
 applications, and background processes. Each screen in an application is an
 instance of a Page class, which has events associated with being made active or
 inactive (with special rules for handling the inactive state, or being
@@ -401,41 +379,17 @@ inactive (with special rules for handling the inactive state, or being
 The second part is providing background agents for processing tasks even when
 the application is not running in the foreground. 
 
-#### DEVICE Capabilities
+#### Device Capabilities
 
-Although Windows Phone hardware is fairly homogeneous due to the strict
-guidelines provided by Microsoft, there are still components that are optional
+Although UWP hardware is fairly homogeneous, there are still components that are optional
 and therefore require special considering while coding. Optional hardware
-capabilities include the camera, compass and gyroscope. There is also a special
+capabilities include the camera, compass, and gyroscope. There is also a special
 class of low-memory (256MB) that requires special consideration, or developers
 can opt-out of low-memory support.
 
-#### Database
-
-Both iOS and Android include the SQLite database engine that allows for
-sophisticated data storage that also works cross-platform. Windows Phone 7 did
-not include a database, while Windows Phone 7.1 and 8 include a [local database engine](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202860(v=vs.105).aspx) that can only be queried with [LINQ to SQL](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202872(v=vs.105).aspx) and does not
-support Transact-SQL queries. There is an [open-source port of SQLite](http://code.google.com/p/csharp-sqlite/)
-available that can be added to Windows Phone applications to provide familiar
-Transact-SQL support and cross-platform compatibility.
-
 #### Security Considerations
 
-Windows Phone applications are run with a restricted set of permissions that
-isolates them from one another and limits the operations they can perform.
-Network access must be performed via specific APIs and inter-application
-communication can only be done via controlled mechanisms. Access to the
-file-system is also restricted; the Isolated Storage API provides key-value pair
-storage and the ability to create files and folders in a controlled fashion
-(refer to the [Isolated Storage Overview](http://msdn.microsoft.com/en-us/library/ff402541(v=vs.92).aspx) for more information).
-
-An application’s access to hardware and operating system features is
-controlled by the capabilities listed in its manifest file (similar to Android).
-The manifest must declare the features required by the application, so that
-users can see and agree to those permissions and also so that the operating
-system allows access to the APIs. Applications must request access to features
-like the contacts or appointments data, camera, location, media library and
-more. See Microsoft’s [Application Manifest File](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509(v=vs.92).aspx) documentation for additional information.
+For information on important security considerations in UWP, refer to the [Security](https://docs.microsoft.com/windows/uwp/security/) documentation.
 
 ## Summary
 

@@ -27,7 +27,7 @@ Create the Phoneword application as follows:
 
     ![](quickstart-images/vs/new-solution.png "New Project")
 
-3. In the **New Project** dialog, click **Cross-Platform**, select the **Cross Platform App (Xamarin.Forms)** template, set the Name and Solution name to `Phoneword`, choose a suitable location for the project and click the **OK** button:
+3. In the **New Project** dialog, click **Cross-Platform**, select the **Mobile App (Xamarin.Forms)** template, set the Name and Solution name to `Phoneword`, choose a suitable location for the project and click the **OK** button:
 
     ![](quickstart-images/vs/new-project.png "Cross-Platform Project Templates")
 
