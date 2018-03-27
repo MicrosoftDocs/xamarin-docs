@@ -50,7 +50,9 @@ adb shell am instrument -w @PACKAGE_NAME@/app.tests.TestInstrumentation
 Replace `@PACKAGE\_NAME@` as appropriate; it is the value present in the
 **AndroidManifest.xml** `/manifest/@package` attribute.
 
-*Important Note*: With the
+
+> [!NOTE]
+> *Important*: With the
 [Xamarin.Android 5.0](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Android_Callable_Wrapper_Naming)
 release, the default package names for Android Callable Wrappers will
 be based on the MD5SUM of the assembly-qualified name of the type being
