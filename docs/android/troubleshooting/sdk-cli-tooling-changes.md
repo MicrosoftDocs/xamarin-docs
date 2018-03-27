@@ -17,11 +17,11 @@ _Changes to how the Android SDK manages the installed API levels and AVDs._
 ## Changes to  Android SDK Tooling
 
 In modern versions of the SDK Tools for Android, Google has removed the
-existing AVD and SDK managers in favour of new _command line interface_
-(CLI) tooling. The former **android** program has been removed and the
-the GUI(Graphical User Interface) managers in Visual Studio for Mac and
+existing AVD and SDK managers in favour of new CLI (Command Line Interface)
+tooling. The former **android** program has been removed and the
+GUI (Graphical User Interface) managers in Visual Studio for Mac and
 older versions of Xamarin for Visual Studio will no longer work past
-version Android SDK Tools.
+version 25.2.5 of Android SDK Tools.
 
 
 ![Android IDE menu in Visual Studio](sdk-cli-tooling-changes-images/android-ide-menu.png)
@@ -58,7 +58,7 @@ see [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.ht
 **Added In:** Android SDK Tools 25.3.0 (March, 2017) and higher.
 
 There is a new program called **avdmanager** in the **tools/bin**
-folder of your Android SDK. This tool is used to maintain the AVD's for
+folder of your Android SDK. This tool is used to maintain the AVDs for
 the Google Android Emulator. For more information about using this
 tool, see [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
 
@@ -79,6 +79,6 @@ Tools** version **25.2.5** or lower.
 
 - [Android SDK Setup](~/android/get-started/installation/android-sdk.md)
 - [Understanding Android API levels](~/android/app-fundamentals/android-api-levels.md)
-- [SDK Tools Release Notes (Google)](https://developer.android.com/studiohttps://developer.xamarin.com/releases/sdk-tools.html)
+- [SDK Tools Release Notes (Google)](https://developer.android.com/studio/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
-- [avdmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
+- [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)
