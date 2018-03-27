@@ -1,4 +1,4 @@
----
+﻿---
 title: "Part 3. XAML Markup Extensions"
 description: "XAML markup extensions constitute an important feature in XAML that allow properties to be set to objects or values that are referenced indirectly from other sources. XAML markup extensions are particularly important for sharing objects, and referencing constants used throughout an application, but they find their greatest utility in data bindings."
 ms.topic: article
@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
-ms.date: 10/25/2017
+ms.date: 3/27/2018
 ---
 
 # Part 3. XAML Markup Extensions
@@ -41,7 +41,7 @@ Some XAML pages contain several views with properties set to the same values. Fo
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
         <Button Text="Do that!"
                 HorizontalOptions="Center"
@@ -49,7 +49,7 @@ Some XAML pages contain several views with properties set to the same values. Fo
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
         <Button Text="Do the other thing!"
                 HorizontalOptions="Center"
@@ -57,7 +57,7 @@ Some XAML pages contain several views with properties set to the same values. Fo
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
     </StackLayout>
 </ContentPage>
@@ -132,7 +132,7 @@ Now it’s necessary to set the `HorizontalOptions` and `VerticalOptions` proper
         BorderWidth="3"
         Rotation="-15"
         TextColor="Red"
-        FontSize="Large" />
+        FontSize="24" />
 ```
 
 The `StaticResource` markup extension is always delimited with curly braces, and includes the dictionary key.
@@ -192,7 +192,7 @@ Those two resources can be referenced in the same way as the `LayoutOptions` val
         BorderWidth="{StaticResource borderWidth}"
         Rotation="{StaticResource rotationAngle}"
         TextColor="Red"
-        FontSize="Large" />
+        FontSize="24" />
 ```
 
 For resources of type `Color`, you can use the same string representations that you use when directly assigning attributes of these types. The type converters are invoked when the resource is created. Here's a resource of type `Color`:
@@ -201,14 +201,10 @@ For resources of type `Color`, you can use the same string representations that 
 <Color x:Key="textColor">Red</Color>
 ```
 
-The `FontSize` property presents a little problem. The property is defined to be of type `double`. When you set the property to a member of the `NamedSize` enumeration such as `Large`, the `FontSizeConverter` class works behind the scenes to convert it into a platform-dependent value using the `Device.GetNamedSized` method.
-
-However, you can't define a resource for a font size as a `double` and set the value to "Large". At the time that the XAML parser processes the resource, it doesn't know the value will be used as a font size. 
-
-The solution is to define the resource as a `string` using the `x:String` type:
+Often, programs set a `FontSize` property to a member of the `NamedSize` enumeration such as `Large`. The `FontSizeConverter` class works behind the scenes to convert it into a platform-dependent value using the `Device.GetNamedSized` method. However, when defining a font-size resource, it makes more sense to use a numeric value, shown here as an `x:Double` type:
 
 ```xaml
-<x:String x:Key="fontSize">Large</x:String>
+<x:Double x:Key="fontSize">24</x:Double>
 ```
 
 Now all the properties except `Text` are defined by resource settings:
@@ -275,7 +271,7 @@ Here’s the final complete XAML file with three buttons accessing six shared va
                 BorderWidth="{StaticResource borderWidth}"
                 Rotation="{StaticResource rotationAngle}"
                 TextColor="{StaticResource textColor}"
-                FontSize"{StaticResource fontSize}" />
+                FontSize="{StaticResource fontSize}" />
 
         <Button Text="Do that!"
                 HorizontalOptions="{StaticResource horzOptions}"
