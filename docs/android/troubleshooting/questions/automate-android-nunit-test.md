@@ -17,9 +17,9 @@ NUnit test project, not a Xamarin.UITest project. Xamarin.UITest guides
 can be found [here](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
 
 When you create an Android Unit Test Project
-[Visual Studio for Mac] or Unit Test App (Android)
-[Visual Studio], by default it will not automatically run your tests.
-To automate your android Unit Test: To run NUnit tests on a target
+in Visual Studio for Mac or a Unit Test App (Android)
+in Visual Studio, by default it will not automatically run your tests.
+To run NUnit tests on a target
 device, we use an `Android.App.Instrumentation` subclass, which can be
 created and executed by using the `adb shell am instrument` command.
 
