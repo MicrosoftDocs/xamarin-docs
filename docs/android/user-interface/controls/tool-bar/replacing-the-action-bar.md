@@ -6,11 +6,10 @@ ms.assetid: 5341D28E-B203-478D-8464-6FAFDC3A4110
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 03/27/2018
 ---
 
 # Replacing the Action Bar
-
 
 ## Overview
 
@@ -44,15 +43,15 @@ created and its action bar is replaced with a customized `Toolbar`.
 
 ## Start an App Project
 
-Create a new Android project called **ToolbarFun** (see 
-[Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) 
-for more information about creating a new Android project). After this 
-project is created, set the target and minimum Android API levels 
-to **Android 5.0 (API Level 21 - Lollipop)**. For more information 
-about setting Android version levels, see 
-[Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md). 
-When the app is built and run, it displays the default action bar 
-as seen in this screenshot: 
+Create a new Android project called **ToolbarFun** (see
+[Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md)
+for more information about creating a new Android project). After this
+project is created, set the target and minimum Android API levels to
+**Android 5.0 (API Level 21 - Lollipop)** or later. For more
+information about setting Android version levels, see
+[Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md). When the app
+is built and run, it displays the default action bar as seen in this
+screenshot:
 
 [![Screenshot of default action bar](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
 
@@ -95,6 +94,8 @@ color of the toolbar:
 ```xml
 <item name="android:colorPrimary">#5A8622</item>
 ```
+
+## Apply the Custom Theme
 
 Edit **Properties/AndroidManifest.xml** and add the following 
 `android:theme` attribute to the `<application>` element so that the 
@@ -169,12 +170,6 @@ its contents with the following XML:
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
-    <Button
-        android:id="@+id/MyButton"
-        android:layout_below="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello World, Click Me!" />
 </RelativeLayout>
 ```
 
@@ -214,6 +209,8 @@ Notice that the `Toolbar` is styled independently of the
 `Theme.Material.Light.DarkActionBar` theme that is applied to 
 the remainder of the app. 
 
+If an exception occurs while running the app, see the
+[Troubleshooting](#troubleshooting) section below.
 
  
 ## Add Menu Items 
@@ -246,10 +243,11 @@ The following sections demonstrate this process in detail by adding
 ### Install Menu Icons
 
 Continuing with the `ToolbarFun` example app, add menu icons to the app
-project. Download [toolbar-icons.zip](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons.zip?raw=true) and unzip it. 
-Copy the contents of the extracted *mipmap-* folders to the project *mipmap-*
-folders under **ToolbarFun/Resources** and include each added icon
-file in the project.
+project. Download
+[toolbar icons](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons-plus.zip?raw=true),
+unzip, and copy the contents of the extracted *mipmap-* folders to
+the project *mipmap-* folders under **ToolbarFun/Resources** and
+include each added icon file in the project.
 
 
 ### Define a Menu Resource
@@ -358,6 +356,29 @@ For more information about Android menus, see the Android Developer
 topic. 
  
 
+## Troubleshooting
+
+The following tips can help to debug problems that may occur while
+replacing the action bar with a toolbar.
+
+### Activity Already Has an Action Bar
+
+If the app is not properly configured to use a custom theme as
+explained in [Apply the Custom Theme](#apply-the-custom-theme), the following
+exception may occur while running the app:
+
+![Error that can occur when custom theme is not used](replacing-the-action-bar-images/03-theme-not-defined.png)
+
+In addition, an error message such as the following may be produced:
+_Java.Lang.IllegalStateException: This Activity already has an action
+bar supplied by the window decor._ 
+
+To correct this error, verify that the `android:theme` attribute for
+the custom theme is added to `<application>` (in
+**Properties/AndroidManifest.xml**) as described earlier in
+[Apply the Custom Theme](#apply-the-custom-theme). In addition,
+this error may be caused if the `Toolbar` layout or custom theme 
+is not configured properly.
 
 
 ## Related Links
