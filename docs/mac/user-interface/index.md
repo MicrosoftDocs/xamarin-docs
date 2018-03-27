@@ -18,7 +18,7 @@ When working with C# and .NET in a Xamarin.Mac application, you have access to t
 
 The guides listed below give detailed information about working with macOS UI elements in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, as it covers key concepts and techniques that we'll be using in every article.
 
-You may want to take a look at the [Exposing C# classes / methods to Objective-C](~/mac/internals/how-it-works.md#exposing-c-classes--methods-to-objective-c) section of the [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) document as well, it explains the `Register` and `Export` attributes used to wire-up your C# classes to Objective-C objects and UI elements.
+You may want to take a look at the [Exposing C# classes / methods to Objective-C](~/mac/internals/how-it-works.md#exposing-c-classes--methods-to-objective-c) section of the [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) document as well, as it explains the `Register` and `Export` attributes used to wire-up your C# classes to Objective-C objects and UI elements.
 
 ## [Windows](~/mac/user-interface/window.md)
 
