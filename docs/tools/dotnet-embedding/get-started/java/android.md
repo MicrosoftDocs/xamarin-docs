@@ -14,7 +14,7 @@ ms.date: 11/14/2017
 
 In addition to the requirements from our [Getting started with Java](~/tools/dotnet-embedding/get-started/java/index.md) guide you'll also need:
 
-* Xamarin.Android 7.4.99 or later (build from [Jenkins](https://jenkins.mono-project.com/view/Xamarin.Android/job/xamarin-android/lastSuccessfulBuild/Azure/))
+* [Xamarin.Android 7.4.99](https://www.visualstudio.com/xamarin/) or later
 * [Android Studio 3.x](https://developer.android.com/studio/index.html) with Java 1.8
 
 As an overview, we will:
