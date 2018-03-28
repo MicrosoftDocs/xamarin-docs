@@ -30,7 +30,7 @@ following:
     later must be installed.
 
 -   **Xamarin.Android** &ndash;
-    [Xamarin.Android 7.4.99](https://jenkins.mono-project.com/view/Xamarin.Android/job/xamarin-android/lastSuccessfulBuild/Azure/)
+    [Xamarin.Android 7.4.99](https://www.visualstudio.com/xamarin/)
     or later must be installed.
 
 -   **Java Developer Kit** &ndash;
