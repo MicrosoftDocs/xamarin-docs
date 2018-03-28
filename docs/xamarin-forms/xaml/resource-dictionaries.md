@@ -49,7 +49,7 @@ The following XAML code example shows resources defined in an application level 
 
 This [`ResourceDictionary`](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) defines three [`Color`](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) resources and a [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) resource. For more information about creating a XAML `App` class, see [App Class](~/xamarin-forms/app-fundamentals/application-class.md).
 
-Each resource have a key that is specified using the `x:Key` attribute, which gives it a descriptive key in the `ResourceDictionary`. The key is used to retrieve a resource from the [`ResourceDictionary`](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) by the `StaticResource` markup extension, as demonstrated in the following XAML code example that shows additional resources defined in a control level `ResourceDictionary`:
+Each resource has a key that is specified using the `x:Key` attribute, which gives it a descriptive key in the `ResourceDictionary`. The key is used to retrieve a resource from the [`ResourceDictionary`](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) by the `StaticResource` markup extension, as demonstrated in the following XAML code example that shows additional resources defined in a control level `ResourceDictionary`:
 
 ```xaml
 <StackLayout Margin="0,20,0,0">
