@@ -36,6 +36,8 @@ The **Preview** button can be displayed on the editor by right-clicking a XAML f
 
 [![ListView control preview in Visual Studio for Mac](xaml-previewer-images/xamlp-list-sml.png "Forms Previewer in Visual Studio for Mac")](xaml-previewer-images/xamlp-list.png#lightbox "Forms Previewer in Visual Studio for Mac")
 
+-----
+
 ## XAML Preview Options
 
 The options along the top of the preview pane are:
