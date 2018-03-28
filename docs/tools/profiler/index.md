@@ -44,7 +44,7 @@ This guide examines common profiling scenarios and introduces the profiler as a 
 ## Download and Install
 
 > [!NOTE]
-> **NOTE:** You will need to be a Visual Studio Enterprise subscriber to unlock this feature in either Visual Studio Enterprise on Windows or Visual Studio for Mac on a Mac.
+> **NOTE:** You will need to be a [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) subscriber to unlock this feature in either Visual Studio Enterprise on Windows or Visual Studio for Mac on a Mac.
 
 The Xamarin Profiler is a standalone application, and is integrated with
 Visual Studio for Mac and Visual Studio to enable profiling from within the IDE.
@@ -57,10 +57,6 @@ Download the install package for your platform:
 - [**Windows**](https://dl.xamarin.com/profiler/profiler-windows.msi)
 
 Once downloaded, launch the installer to add the Xamarin Profiler to your system.
-
-IDE integration is available in all release versions of Xamarin.
-However, [Visual Studio Enterprise](https://www.xamarin.com/compare-visual-studio) is required for profiling.
-
 
 
 ## Profilers and Profiling
