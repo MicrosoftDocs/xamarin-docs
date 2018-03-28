@@ -36,7 +36,7 @@ enumeration names in XAML Standard.
 
 ## Properties and Enumerations
 
-|Xamarin.FormsControls with updated properties|Xamarin.FormsProperty or Enum|XAML StandardEquivalent|
+|Xamarin.Forms controls with updated properties|Xamarin.Forms property or enum|XAML Standard equivalent|
 |--- |--- |--- |
 |Button, Entry, Label, DatePicker, Editor, SearchBar, TimePicker|TextColor|Foreground|
 |VisualElement|BackgroundColor|Background *|
