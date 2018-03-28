@@ -53,13 +53,6 @@ The following addresses will need to be added to ensure that software updates ca
 -  download.visualstudio.microsoft.com
 -  dl.xamarin.com
 
-### Xamarin Insights
-
-The following addresses will need to be added to ensure that activity reaches the Xamarin Insights server:
-
-* https://xaapi.xamarin.com
-
-
 ## Xamarin Mac Agent
 
 To connect Visual Studio to a Mac build host using the Xamarin Mac Agent requires the SSH port to be open. By default this is **Port 22**.

@@ -11,8 +11,6 @@ ms.date: 03/23/2017
 
 # Part 6 - Testing and App Store Approvals
 
-<a name="Testing" />
-
 
 ## Testing
 
@@ -21,8 +19,6 @@ process before they are published; so testing is critical to ensure your app
 reaches the market (let alone succeeds with your customers). Testing can take
 many forms, from developer-level unit testing to managing beta testing across a
 wide variety of hardware.
-
- <a name="Test_on_All_Platforms" />
 
 
 ### Test on All Platforms
@@ -40,8 +36,6 @@ capabilities/configurations.
 You should also test on as many different physical hardware devices as you
 can.
 
- <a name="Devices_in_cloud" />
-
 
 #### Devices in cloud
 
@@ -53,8 +47,6 @@ needing to directly invest in lots of hardware.
 
 [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) offers an easy way
 to test iOS and Android applications on hundreds of different devices.
-
- <a name="Test_Management" />
 
 
 ### Test Management
@@ -71,12 +63,10 @@ infrastructure that is built into your application to collect and report on
 usage and errors, and also streamlining the provisioning process to help sign-up
 and manage testers and their devices.
 
-The [Xamarin Insights Preview](http://xamarin.com/insights) offers a solution
-to the second part of this issue, providing crash reporting and sophisticated application
+[Visual Studio App Center](/appcenter/) offers a solution
+to these issues, providing test version distribution, crash reporting, and sophisticated application
 usage information.
 
-
- <a name="Test_Automation" />
 
 
 ### Test Automation
@@ -86,12 +76,10 @@ user interface test scripts that can be run locally or uploaded to
 [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/).
 
 
- <a name="Unit_Testing" />
 
 
 ## Unit Testing
 
- <a name="Touch.Unit" />
 
 
 #### Touch.Unit
@@ -102,7 +90,6 @@ the JUnit/NUnit style writing tests.
 Refer to our [Unit Testing with Xamarin.iOS](~/ios/deploy-test/touch.unit.md) documentation for details on writing tests and
 running Touch.Unit.
 
- <a name="Andr.Unit" />
 
 
 #### Andr.Unit
@@ -111,22 +98,7 @@ There is an open-source equivalent of Touch.Unit for Android called
 Andr.Unit. You can download it from [github](https://github.com/spouliot/Andr.Unit) and read
 about the tool on [@spouliot's blog](http://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
 
- <a name="Windows_Phone" />
 
-
-#### Windows Phone
-
-Here are some links to help setup unit testing for Windows Phone:
-
--   [http://www.jeff.wilcox.name/2010/05/sl3-utf-bits/](http://www.jeff.wilcox.name/2010/05/sl3-utf-bits/)
--   [http://www.jeff.wilcox.name/2011/06/updated-ut-mango-bits/](http://www.jeff.wilcox.name/2011/06/updated-ut-mango-bits/)
--   [http://www.smartypantscoding.com/a-cheat-sheet-for-unit-testing-silverlight-apps-on-windows-phone-7](http://www.smartypantscoding.com/a-cheat-sheet-for-unit-testing-silverlight-apps-on-windows-phone-7)
--   [http://mobile.dzone.com/articles/unit-testing-your-windows](http://mobile.dzone.com/articles/unit-testing-your-windows)
-
-
-&nbsp;
-
- <a name="App_Store_Approvals" />
 
 
 ## App Store Approvals
@@ -149,7 +121,6 @@ can mean missing a marketing window of opportunity, especially if it happens
 more than once, and weeks pass between your original launch date and when the
 app is finally approved.
 
- <a name="Be_prepared" />
 
 
 ### Be prepared
@@ -174,7 +145,6 @@ actual process to submit apps is covered in the following documentation:
 The remainder of this section discusses things you should take into
 consideration to ensure your app is approved without any hiccups.
 
- <a name="Quality" />
 
 
 ### Quality
@@ -203,8 +173,6 @@ enough in regular use will be rejected. Always provide user feedback when
 something is happening in the background, or the app will appear to have crashed
 and once again, get rejected.
 
- <a name="Check_Your_Edge_Cases" />
-
 
 ### Check Your Edge Cases
 
@@ -225,7 +193,6 @@ might have been missed:
 -   **Hardware varies** – remember to test on the oldest, slowest hardware that you plan to support. There are two aspects that might affect your app: performance, which might be unusable on an older device, and support for hardware features such as a camera, microphone, GPS, gyroscope or other optional component. Applications should degrade gracefully (and not crash) when a component is unavailable.
 
 
- <a name="Guidelines_are_more_than_just_a_‘guide’" />
 
 
 ### Guidelines are more than just a ‘guide’
@@ -252,7 +219,6 @@ guidelines.
 Encourage your designers to read and follow the design guidelines for each
 platform.
 
- <a name="Implementing_Platform-Specific_Features" />
 
 
 ### Implementing Platform-Specific Features
@@ -267,7 +233,6 @@ some rules to follow with the following iOS features:
 -   **Maps** – It’s increasingly common to add overlays and other features to mobile maps, however be careful not to obscure the map ‘credits’ information (such as the Google logo in iOS5) as doing so will result in rejection.
 
 
- <a name="Manage_Your_Metadata" />
 
 
 ### Manage Your Metadata
@@ -287,7 +252,6 @@ Put as much effort into the application’s metadata as into development and
 testing. Applications DO get rejected for minor infringements in the metadata so
 it is worthwhile taking the time to get it right.
 
- <a name="App_Stores:_Not_For_Everyone" />
 
 
 ### App Stores: Not For Everyone
@@ -312,8 +276,6 @@ and allows companies to distribute in-house apps to their employees.
 Unfortunately this license does not address the need for extranet-like app
 distribution to other closed groups of customers or suppliers. [Enterprise (and Ad-Hoc) Deployment](~/ios/deploy-test/app-distribution/ipa-support.md)
 
-
- <a name="App_Store_Summary" />
 
 
 ### App Store Summary
