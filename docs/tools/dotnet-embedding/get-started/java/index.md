@@ -6,7 +6,7 @@ ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.date: 11/14/2017
+ms.date: 03/28/2018
 ---
 
 # Getting started with Java
@@ -29,7 +29,7 @@ For Windows:
 * Windows 10 SDK
 
 For Android:
-* [Xamarin.Android 7.4.99](https://www.visualstudio.com/xamarin/) or later
+* [Xamarin.Android 7.5](https://www.visualstudio.com/xamarin/) or later
 * [Android Studio 3.x](https://developer.android.com/studio/index.html) with Java 1.8
 
 You can use [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) to edit and compile your C# code.

@@ -7,7 +7,7 @@ ms.assetid: A489EEF3-1008-4257-BF63-FE21D8C23821
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
+ms.date: 03/28/2018
 ---
 
 # Embedding .NET in Java
@@ -30,7 +30,7 @@ following:
     later must be installed.
 
 -   **Xamarin.Android** &ndash;
-    [Xamarin.Android 7.4.99](https://www.visualstudio.com/xamarin/)
+    [Xamarin.Android 7.5](https://www.visualstudio.com/xamarin/)
     or later must be installed.
 
 -   **Java Developer Kit** &ndash;
