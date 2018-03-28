@@ -22,7 +22,7 @@ This article explains some common problems and provides steps to correct them.
 Occurs when the mobile device running Xamarin Live Player is not on the
 same network as the computer running the IDE. Check out the following:
 
-- Confirm that both the device and computer are on the same WiFi network.
+- Confirm that both the device and computer are on the same Wi-Fi network.
   - If the computer is also connected to a wired network, try unplugging the wired connection.
 - The network may be tightly secured (such as some corporate networks), blocking the ports needed by Xamarin Live Player.
 - Close the Xamarin Live Player app and restart it.
@@ -33,13 +33,93 @@ same network as the computer running the IDE. Check out the following:
 **"IOException: unable to read data from the transport connection: Operation on non-blocking socket would block"**
 
 This error is often experienced when the mobile device running Xamarin Live Player is not on the
-same network as the computer running the IDE; this often happens when connecting to a device that was previously
+same network as the computer running Visual Studio; this often happens when connecting to a device that was previously
 paired successfully.
 
-* Check that both the device and computer are on the same WiFi network.
+* Check that both the device and computer are on the same Wi-Fi network.
 * The network may be tightly secured (such as some corporate networks), blocking the ports needed by Xamarin Live Player. The following ports are required for the Xamarin Live Player:
   * 37847 – Internal network access 
   * 8090 – External network access
+
+## Manually Configure Device
+
+If you can not connect to your device over Wi-Fi you can attempt to manually configure your device via the configuration file, with the following steps:
+
+**Step 1: Open configuration file**
+
+Head to your application data folder:
+
+* Windows: **%userprofile%\AppData\Roaming**
+* macOS: **~/Users/$USER/.config**
+
+In this folder you will find **PlayerDeviceList.xml** if it does not exist you will need to create one.
+
+**Step 2: Get IP address**
+
+In the Xamarin Live Player app, go to **About > Connection Test > Start Connection Test**.
+
+Take note of the IP Address, you will need the IP address listed when you configure your device.
+
+**Step 3: Get pairing code**
+
+Inside of the Xamarin Live Player tap **Pair** or **Pair Again**, then press **Enter Manually**. A numeric code will be displayed, which you will need to update the configuration file.
+
+**Step 4: Generate GUID**
+
+Go to: https://www.guidgenerator.com/online-guid-generator.aspx and generate a new guid and make sure Upper Case is on.
+
+
+**Step 5: Configure device**
+
+Open up the **PlayerDeviceList.xml** up in an editor such as Visual Studio or Visual Studio Code. You need to configure your device manually in this file. By default, the file should contain the following empty `Devices` XML element:
+
+```xml
+<DeviceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Devices>
+
+</Devices>
+</DeviceList>
+```
+
+**Add iOS Device:**
+
+```xml
+<PlayerDevice>
+<SecretCode>ENTER-PAIR-CODE-HERE</SecretCode>
+<UniqueIdentifier>ENTER-GUID-HERE</UniqueIdentifier>
+<Name>iPhone Player</Name>
+<Platform>iOS</Platform>
+<AndroidApiLevel>0</AndroidApiLevel>
+<DebuggerEndPoint>ENTER-IP-HERE:37847</DebuggerEndPoint>
+<HostEndPoint />
+<NeedsAppInstall>false</NeedsAppInstall>
+<IsSimulator>false</IsSimulator>
+<SimulatorIdentifier />
+<LastConnectTimeUtc>2018-01-08T20:36:03.9492291Z</LastConnectTimeUtc>
+</PlayerDevice>
+```
+
+
+**Add Android Device:**
+
+```xml
+<PlayerDevice>
+<SecretCode>ENTER-PAIR-CODE-HERE</SecretCode>
+<UniqueIdentifier>ENTER-GUID-HERE</UniqueIdentifier>
+<Name>Android Player</Name>
+<Platform>Android</Platform>
+<AndroidApiLevel>24</AndroidApiLevel>
+<DebuggerEndPoint>ENTER-IP-HERE:37847</DebuggerEndPoint>
+<HostEndPoint />
+<NeedsAppInstall>false</NeedsAppInstall>
+<IsSimulator>false</IsSimulator>
+<SimulatorIdentifier />
+<LastConnectTimeUtc>2018-01-08T20:34:42.2332328Z</LastConnectTimeUtc>
+</PlayerDevice>
+```
+
+**Close and re-open Visual Studio.** Your device should show up in the list.
+
 
 ## "Type or namespace cannot be found" message in IDE
 

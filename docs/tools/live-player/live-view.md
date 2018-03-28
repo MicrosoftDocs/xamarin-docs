@@ -1,4 +1,5 @@
 ---
+redirect_url: /xamarin/tools/live-player/
 title: "XAML Live Previewing"
 description: "Test app code changes in real time on your iOS or Android device"
 ms.topic: article
@@ -16,12 +17,12 @@ One of the benefits of the Xamarin Live Player is the ability to live preview XA
 
 ## Requirements
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. A machine running Windows 7 or higher.
 2. Visual Studio 2017 version 15.4 or higher with the **Mobile development with .NET** workload installed.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. A Mac with OS X 10.11, macOS 10.12, or greater.
 2. Visual Studio for Mac 7.2 or later. We recommend the latest version.
@@ -36,7 +37,7 @@ One of the benefits of the Xamarin Live Player is the ability to live preview XA
 
 Before you can use the Xamarin Live Player with your iOS or Android device, you'll need to download the Xamarin Live Player app and pair it to Visual Studio as described in the [Install](~/tools/live-player/install.md) guide. Once you have successfully paired your device to Visual Studio, you can begin the live preview of your XAML page. 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Open the XAML page that you want to live preview in the Visual Studio 2017 editor:
 
@@ -50,7 +51,7 @@ Before you can use the Xamarin Live Player with your iOS or Android device, you'
 
     ![](live-view-images/vs-image3.png)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Open the XAML page that you want to live preview in the Visual Studio for Mac editor:
 

@@ -1,6 +1,6 @@
 ---
 title: "Xamarin Live Player Samples"
-description: "Here are some samples to try out with Xamarin Live Player"
+description: "Here are some samples to try out with Xamarin Live Player."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
@@ -12,26 +12,27 @@ ms.date: 06/20/2017
 
 # Xamarin Live Player Samples
 
-_Here are some samples to try out with Xamarin Live Player_
-
-## Xamarin.Forms
+## Get Started with Xamarin.Forms
 
 Visit the [Sample Gallery](https://developer.xamarin.com/samples/xamarin-live-player/all/) for
 Xamarin.Forms samples that work with Xamarin Live Player.
 
-<a name="colorcontrol"/>
+## Featured Samples
 
-## Color Control (iOS)
+### [Basic Calculator](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator/)
 
-Based on this [recipe](https://developer.xamarin.com/recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image/),
-the Color Control sample lets you take a photo on your iPhone and adjust the color levels:
+This Xamarin.Forms app provides a simple calculator you can use on your Android or iOS device.
 
-![Color Control sample app screenshot](samples-images/color-control-sml.png)
+![Basic Calculator sample screenshot](samples-images/basic-calculator-sml.png)
 
-[Download sample](https://developer.xamarin.com/samples/mobile/LivePlayer/ColorControl/)
+### [BugSweeper](https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/)
+
+This is a familiar game with a new twist. Ten bugs are hidden in a 9-by-9 grid of tiles. To win, you must find and flag all ten bugs.
+
+![BugSweeper app on Android](samples-images/bugsweeper-sml.png)
+
 
 
 ## Related Links
 
-- [Color Control (iOS) (sample)](https://developer.xamarin.com/samples/mobile/LivePlayer/ColorControl/)
-- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-live-player/all/)
+- [Xamarin.Forms Live Player Samples](https://developer.xamarin.com/samples/xamarin-live-player/all/)

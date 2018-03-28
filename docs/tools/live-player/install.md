@@ -18,25 +18,28 @@ Xamarin Live Player lets you make live edits to your app and have those changes 
 
 ## 1. Get the App
 
-### Xamarin Live Player for Android
+# [Android](#tab/android)
+
 Xamarin Live Player is available for Android from Google Play:
 
 [ ![Available on Google Play](install-images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
 For Android devices without Google Play the Xamarin Live Player is available through [HockeyApp](https://aka.ms/xlp-hockeyapp) distribution. Additionally, early preview builds for Android can be installed directly from Google Play by opting in to the [open beta program](https://play.google.com/apps/testing/com.xamarin.live)
 
-### Xamarin Live Player for iOS
+# [iOS](#tab/ios)
+
 We encourage users to join the [Xamarin Live Player app _iOS Preview_](https://aka.ms/liveplayeralpha) to enjoy quick access to the latest improvements through TestFlight.
 
+-----
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
-## 2. Get Visual Studio 2017 Preview on Windows (or [for Mac](?tabs=vsmac))
+## 2. Get Visual Studio 2017
 
 Xamarin Live Player requires:
 
-- Visual Studio 2017 [15.4](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/#visualstudio2017) or newer.
-- A Visual Studio computer and a device on the same WiFi network
+- Visual Studio 2017 15.4 or newer.
+- A Visual Studio computer and a device on the same WiFi network.
 
 ## 3. Using Xamarin Live Player for the first time
 
@@ -69,9 +72,9 @@ Xamarin Live Player requires:
 
   If the device cannot be contacted for pairing, an error may appear.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
-## 2. Get Visual Studio for Mac (or [for Windows](?tabs=vswin))
+## 2. Get Visual Studio for Mac
 
 Xamarin Live Player requires:
 
@@ -117,7 +120,7 @@ Xamarin Live Player requires:
 
 -----
 
-If you experience any issues, see [limitations and troubleshooting](~/tools/live-player/troubleshooting.md).
+If you experience any issues or can not connect, see [limitations and troubleshooting](~/tools/live-player/troubleshooting.md).
 
 
 ## Related Links
