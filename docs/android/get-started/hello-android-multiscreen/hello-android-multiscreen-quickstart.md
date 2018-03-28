@@ -156,7 +156,7 @@ public class MainActivity : Activity
 ```
 
 In the `MainActivity` class, add the following code to register the 
-**Translation History** button (place this line after the `translationHistory` declaration):
+**Translation History** button (place this line after the `translateButton` declaration):
 
 ```csharp
 Button translationHistoryButton = FindViewById<Button> (Resource.Id.TranslationHistoryButton);
