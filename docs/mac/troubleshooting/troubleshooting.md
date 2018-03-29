@@ -1,6 +1,6 @@
 ---
-title: "Reporting bugs"
-description: "This document describes approaches for resolving bugs."
+title: "Xamarin.Mac troubleshooting tips"
+description: "This document describes approaches for resolving issues encountered when developing Xamarin.Mac applications."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5CBC6822-BCD7-4DAD-8468-6511250D41C4
@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Reporting bugs
+# Xamarin.Mac troubleshooting tips
 
 ## Overview
 

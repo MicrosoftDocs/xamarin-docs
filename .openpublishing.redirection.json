@@ -3,6 +3,10 @@
       {
           "source_path": "docs/cross-platform/getting-started/index.md",
           "redirect_url": "/xamarin/cross-platform/get-started"
+      },
+      {
+          "source_path": "docs/mac/app-fundamentals/troubleshooting.md",
+          "redirect_url": "/xamarin/mac/troubleshooting/troubleshooting"
       }
     ]
   }

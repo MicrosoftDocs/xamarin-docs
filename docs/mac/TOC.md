@@ -15,7 +15,6 @@
 ### [Copy and Paste](app-fundamentals/copy-paste.md)
 ### [Sandboxing a Xamarin.Mac App](app-fundamentals/sandboxing.md)
 ### [Playing Sound with AVAudioPlayer](app-fundamentals/sounds.md)
-### [Troubleshooting](app-fundamentals/troubleshooting.md)
 ## [User Interface](user-interface/index.md)
 ### [Windows](user-interface/window.md)
 ### [Dialogs](user-interface/dialog.md)
@@ -58,6 +57,8 @@
 ### [How Xamarin.Mac works](internals/how-it-works.md)
 ### [Frameworks](internals/frameworks.md)
 ### [Registrar](internals/registrar.md)
-
+## [Troubleshooting](troubleshooting/index.md)
+### [Troubleshooting Tips](troubleshooting/troubleshooting.md)
+### [Error messages (mmp)](troubleshooting/mmp-errors.md)
 ## [Release Notes](https://developer.xamarin.com/releases/mac/)
 ## [Samples](samples/index.yml)
