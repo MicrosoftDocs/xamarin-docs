@@ -16,7 +16,7 @@ _This article explains how to debug a Xamarin.Android application on a physical 
 
 ## Debug on Device Overview
 
-It is possible to debug a Xamarin.Android on an Android device using
+It is possible to debug a Xamarin.Android app on an Android device using
 either Visual Studio for Mac or Visual Studio. Before debugging can
 occur on a device, it must be
 [setup for development](~/android/get-started/installation/set-up-device-for-development.md)
