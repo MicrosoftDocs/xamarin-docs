@@ -16,7 +16,7 @@ _This article covers working with windows and panels in a Xamarin.Mac applicatio
 
 When working with C# and .NET in a Xamarin.Mac application, you have access to the same Windows and Panels that a developer working in in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Windows and Panels (or optionally create them directly in C# code).
 
-Based on it's purpose, a Xamarin.Mac application can present one or more Window on screen to manage and coordinate the information it displays and works with. The principal functions of a windows are:
+Based on its purpose, a Xamarin.Mac application can present one or more Windows on screen to manage and coordinate the information it displays and works with. The principal functions of a window are:
 
 1. To provide an area in which Views and Controls can be placed and managed.
 2. To accept and respond to events in response to user interaction with both the keyboard and mouse.
