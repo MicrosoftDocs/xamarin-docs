@@ -1,4 +1,5 @@
 ---
+redirect_url: "/visualstudio/mac/installation/"
 title: "Installation"
 description: "This tutorial illustrates the installation paths for Xamarin.Mac."
 ms.topic: article
@@ -15,7 +16,7 @@ ms.date: 04/12/2017
 _This tutorial illustrates the installation paths for Xamarin.Mac._
 
 > [!NOTE]
-> This content has moved to the Visual Studio for Mac install guides on [docs.microsoft.com](https://docs.microsoft.com/en-us/visualstudio/mac/installation).
+> This content has moved to the [Visual Studio for Mac install guide](https://docs.microsoft.com/visualstudio/mac/installation).
 
 
 ## Related Links

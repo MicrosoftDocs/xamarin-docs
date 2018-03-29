@@ -1,6 +1,6 @@
 # [Xamarin.Mac](index.yml)
 ## [Getting Started](get-started/index.md)
-### [Installation](get-started/installation.md)
+### [Installation](/visualstudio/mac/installation/)
 ### [Hello, Mac](get-started/hello-mac.md)
 ### [Related Documentation](get-started/related.md)
 ## [Application Fundamentals](app-fundamentals/index.md)
