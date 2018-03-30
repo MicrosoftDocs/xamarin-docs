@@ -203,7 +203,7 @@ The following graph can help visualize a typical CocosSharp hierarchy:
 
 ![](cocossharp-images/image4.png "Typical CocosSharp Hierarchy")
 
-Only one `CCScene` can be active at one time. Most games use multiple `CCLayer` instances to sort content, but our application uses only one. Similarly, most games use multiple visual objects, but we’ll only have one in our app. A more detailed discussion about the CocosSharp visual hierarchy can be found in the [Bouncing Game walkthrough](~/graphics-games/cocossharp/first-game/index.md).
+Only one `CCScene` can be active at one time. Most games use multiple `CCLayer` instances to sort content, but our application uses only one. Similarly, most games use multiple visual objects, but we’ll only have one in our app. A more detailed discussion about the CocosSharp visual hierarchy can be found in the [BouncingGame walkthrough](~/graphics-games/cocossharp/bouncing-game.md).
 
 Initially the `GameScene` class will be nearly empty – we’ll just create it to satisfy the reference in `HomePage`. Add a new class to your PCL named `GameScene`. It should inherit from the `CCScene` class as follows:
 

@@ -1,5 +1,5 @@
 ---
-title: "Improving Framerate with CCSpriteSheet"
+title: "Improving frame rate with CCSpriteSheet"
 description: "CCSpriteSheet provides functionality for combining and using many image files in one texture. Reducing texture count can improve a game’s load times and framerate."
 ms.topic: article
 ms.prod: xamarin
@@ -10,14 +10,14 @@ ms.author: chape
 ms.date: 03/24/2017
 ---
 
-# Improving Framerate with CCSpriteSheet
+# Improving frame rate with CCSpriteSheet
 
 _CCSpriteSheet provides functionality for combining and using many image files in one texture. Reducing texture count can improve a game’s load times and framerate._
 
 Many games require optimization efforts to run smoothly and load quickly on mobile hardware. The `CCSpriteSheet` class can help address many common performance problems encountered by CocosSharp games. This guide covers common performance problems and how to address them using the `CCSpriteSheet` class.
 
 
-# What is a Sprite Sheet?
+## What is a sprite sheet?
 
 A *sprite sheet*, which can also be referred to as a *texture atlas*, is an image which combines multiple images into one file. This can improve runtime performance as well as content load times.
 
@@ -26,7 +26,7 @@ For example, the following image is a simple sprite sheet created by three separ
 ![](ccspritesheet-images/image1.png "The individual images can be any size, and the resulting sprite sheet is not required to be completely filled")
 
 
-## Render States
+### Render states
 
 Visual CocosSharp objects (such as `CCSprite`) simplify rendering code over traditional  graphical API rendering code such as MonoGame or OpenGL, which require the creation of vertex buffers (as outlined in the [Drawing 3D Graphics with Vertices in MonoGame](~/graphics-games/monogame/3d/part2.md) guide). Despite its simplicity, CocosSharp does not eliminate the cost of setting *render states*, which are the number of times that the rendering code must switch textures or other rendering-related states.
 
@@ -58,7 +58,7 @@ Render states can be difficult to optimize because the draw order must obey the 
 
 Of course, the ideal situation is to have a single render state, despite having multiple images. CocosSharp games can accomplish this by combining all images into a single file, then loading that one file (along with its accompanying **.plist** file) into a `CCSpriteSheet`. Using the `CCSpriteSheet` class becomes even more important for games which have a large number of images, or which have very complicated layouts. 
 
-## Load Times
+### Load times
 
 Combining multiple images into one file also improves a game’s load times for a number of reasons:
 
@@ -66,9 +66,9 @@ Combining multiple images into one file also improves a game’s load times for 
  - Loading fewer files means less per-file overhead, such as parsing .png headers
  - Loading fewer files requires less seek time, which is important for disk-based media such as DVDs and traditional computer hard drives
 
-# Using CCSpriteSheet in Code
+## Using CCSpriteSheet in code
 
-To create a `CCSpriteSheet` instance, the code must supply an image and a file which defines the regions of the image to use for each frame. The image can be loaded as a **.png** or **.xnb** file (if using the [content pipeline](~/graphics-games/cocossharp/content-pipeline/index.md)). The file defining the frames is a **.plist** file which can be created by hand or *TexturePacker* (which we’ll discuss below).
+To create a `CCSpriteSheet` instance, the code must supply an image and a file which defines the regions of the image to use for each frame. The image can be loaded as a **.png** or **.xnb** file (if using the [Content Pipeline](~/graphics-games/cocossharp/content-pipeline/index.md)). The file defining the frames is a **.plist** file which can be created by hand or *TexturePacker* (which we’ll discuss below).
 
 The sample app, which [can be downloaded here](https://developer.xamarin.com/samples/mobile/SpriteSheetDemo/), creates the `CCSpriteSheet` from a **.png** and **.plist** file using the following code:
 
@@ -106,7 +106,7 @@ CCSprite sprite = new CCSprite (frame);
 Since the `CCSprite` constructor can take a `CCSpriteFrame` parameter, the code never has to investigate the details of the `CCSpriteFrame`, such as which texture it uses, or the region of the image in the master sprite sheet.
 
 
-#  Creating a Sprite Sheet .plist
+## Creating a sprite sheet .plist
 
 The .plist file is an xml-based file, which can be created and edited by hand. Similarly, image editing programs can be used to combine multiple files into one larger file. Since creating and maintaining sprite sheets can be very time consuming, we will look at the TexturePacker program which can export files in the CocosSharp format. TexturePacker offers a free and a "Pro" version, and is available for Windows and Mac OS. The remainder of this guide can be followed by using the free version. 
 
@@ -120,13 +120,13 @@ Image files (such as **.png**) can be added to TexturePacker by drag-dropping th
 
 To export a sprite sheet, click the **Publish sprite sheet** button and select a location for the sprite sheet. TexturePacker will save a .plist file and an image file.
 
-To use the resulting files, add both the .png and .plist to a CocosSharp project. For information on adding files to CocosSharp projects, see the [Implementing the BouncingGame guide](~/graphics-games/cocossharp/first-game/part2.md). Once the files are added, they can be loaded into a  `CCSpriteSheet` as was shown earlier in the code above:
+To use the resulting files, add both the .png and .plist to a CocosSharp project. For information on adding files to CocosSharp projects, see the [BouncingGame guide](~/graphics-games/cocossharp/bouncing-game.md). Once the files are added, they can be loaded into a  `CCSpriteSheet` as was shown earlier in the code above:
 
 ```csharp
 CCSpriteSheet sheet = new CCSpriteSheet ("sheet.plist", "sheet.png"); 
 ```
 
-## Considerations for Maintaining a TexturePacker Sprite Sheet
+### Considerations for maintaining a TexturePacker sprite sheet
 
 As games are developed, artists may add, remove, or modify art. Any change requires an updated sprite sheet. The following considerations can ease sprite sheet maintenance:
 
@@ -140,11 +140,11 @@ As games are developed, artists may add, remove, or modify art. Any change requi
 
 	![](ccspritesheet-images/image10.png "To include folder paths, click show advanced in the Data section and check Prepend folder name")
 
-# Summary
+## Summary
 
 This guide covers how to create and use the `CCSpriteSheet` class. It also covers how to construct files which can be loaded into `CCSpriteSheet` instances using the TexturePacker program.
 
-## Related Links
+## Related links
 
 - [CCSpriteSheet](https://developer.xamarin.com/api/type/CocosSharp.CCSpriteSheet/)
 - [Full Demo (sample)](https://developer.xamarin.com/samples/mobile/SpriteSheetDemo/)

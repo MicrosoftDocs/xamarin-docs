@@ -7,6 +7,18 @@
       {
           "source_path": "docs/mac/app-fundamentals/troubleshooting.md",
           "redirect_url": "/xamarin/mac/troubleshooting/troubleshooting"
+      },
+      {
+          "source_path": "docs/graphics-games/cocossharp/first-game/index.md",
+          "redirect_url": "/xamarin/graphics-games/cocossharp"
+      },
+      {
+          "source_path": "docs/graphics-games/cocossharp/first-game/part1.md",
+          "redirect_url": "/xamarin/graphics-games/cocossharp/bouncing-game"
+      },
+      {
+          "source_path": "docs/graphics-games/cocossharp/first-game/part2.md",
+          "redirect_url": "/xamarin/graphics-games/cocossharp/bouncing-game"
       }
     ]
   }

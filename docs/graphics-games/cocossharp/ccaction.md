@@ -19,7 +19,7 @@ _The CCAction class simplifies adding animations to CocosSharp games. These anim
 This guide uses a project called **ActionProject** which [can be downloaded here](https://developer.xamarin.com/samples/mobile/CCAction). This guide uses the `CCDrawNode` class, which is covered in the [Drawing Geometry with CCDrawNode](~/graphics-games/cocossharp/ccdrawnode.md) guide.
 
 
-# Running the ActionProject
+## Running the ActionProject
 
 **ActionProject** is a CocosSharp solution which can be built for iOS and Android. It serves both as a code sample for how to use the `CCAction` class and as a real-time demo of common `CCAction` implementations.
 
@@ -35,8 +35,7 @@ Clicking the labels on the left changes which type of `CCAction` is performed on
 
 ![](ccaction-images/image3.gif "Clicking the Position label will cycle through the different values that can be changed")
 
-
-# Common Variable-Changing CCActions 
+## Common variable-changing CCAction classes
 
 The **ActionProject** uses the following `CCAction`-inheriting classes, which are a part of CocosSharp:
 
@@ -90,7 +89,7 @@ Each of the types listed above ends with the word *To* which means the `CCAction
 Each "To" class also has a "By" version, which will add the argument value to the current value on the `CCNode`. For example, creating a `CCMoveBy` with a position of X = 100 and Y = 200 will result in the `CCNode` instance being moved to the right 100 units and up 200 units from the position it was at when the action was started.
 
 
-# Easing Actions
+## Easing actions
 
 By default, variable-changing actions will perform *linear interpolation* – the action will move towards the desired value at a constant rate. If interpolating *position* linearly, the moving object will immediately start and stop moving at the beginning and end of the action, and its speed will stay constant as the action executes. 
 
@@ -124,35 +123,35 @@ As shown by the application, the exact same easing can be applied to other varia
 ![](ccaction-images/image5.gif "The exact same easing can be applied to other variable-setting actions such as CCRotateTo")
 
 
-# Easing In, Out, and InOut
+## Easing In, Out, and InOut
 
 All easing actions have `In`, `Out`, or `InOut` appended to the easing type. These terms refer to when the easing is applied: `In` means easing will be applied at the beginning, `Out` means at the end, and `InOut` means both at the beginning and end.
 
 An `In` easing action will impact the way a variable is applied throughout the entire interpolation (both at the beginning and at the end), but typically the most recognizable characteristics of the easing action will take place at the beginning. Similarly, `Out` easing actions are characterized by their behavior at the end of the interpolation. For example, `CCEaseBounceOut` will result in an object bouncing at the end of the action.
 
 
-## Out
+### Out
 
 `Out` easing generally applies the most noticeable changes at the end of the interpolation. For example, `CCEaseExponentialOut` will slow the rate of change of the changing variable as it approaches the target value:
 
 ![](ccaction-images/image6.gif "CCEaseExponentialOut will slow the rate of change of the changing variable as it approaches the target value")
 
 
-## In
+### In
 
 `In` easing generally applies the most noticeable change at the beginning of the interpolation. For example, `CCEaseExponentialIn` will move more slowly at the beginning of the action:
 
 ![](ccaction-images/image7.gif "CCEaseExponentialIn will move more slowly at the beginning of the action")
 
 
-## InOut
+### InOut
 
 `InOut` generally applies the most noticeable changes both at the beginning and end. `InOut` easing is usually symmetric. For example, `CCEaseExponentialInOut` will move slowly at the beginning and end of the action:
 
 ![](ccaction-images/image8.gif "CCEaseExponentialInOut will move slowly at the beginning and end of the action")
 
 
-# Implementing a Custom CCAction
+## Implementing a custom CCAction
 
 All of the classes we’ve discussed so far are included in CocosSharp to provide common functionality. Custom `CCAction` implementations can provide additional flexibility. For example, a `CCAction` which controls the filled ratio of an experience bar can be used so that the experience bar grows smoothly whenever the user earns experience.
 
@@ -222,7 +221,7 @@ The LineWidthAction can be combined with any easing action to change the line wi
 ![](ccaction-images/image9.gif "The LineWidthAction can be combined with any easing action to change the line width in various ways, as shown in this animation")
 
 
-## Interpolation and the Update Method
+### Interpolation and the Update method
 
 The only logic, aside from storing values in the classes above, lives in the `LineWidthState.Update` method. The `startWidth` variable stores the width of the target `LineNode` at the start of the action, and the `deltaWidth` variable stores how much the value will change over the course of the action.
 
@@ -243,11 +242,11 @@ castedTarget.Width = startWidth + deltaWidth * 1;
 The `time` value will usually be between 0 and 1 - but not always - and `Update` implementations should not assume these bounds. Some easing methods (such as `CCEaseBackIn` and `CCEaseBackOut`) will provide a time value outside of the 0 to 1 range.
 
 
-# Conclusion
+## Conclusion
 
 Interpolation and easing are a critical part of creating a polished game, especially when creating user interfaces. This guide covers how to use `CCActions` to interpolate standard values such as position and rotation as well as custom values. The `LineWidthState` and `LineWidthAction` classes show how to implement a custom action.
 
-## Related Links
+## Related links
 
 - [CCAction](https://developer.xamarin.com/api/type/CocosSharp.CCAction)
 - [CCMoveTo](https://developer.xamarin.com/api/type/CocosSharp.CCMoveTo)

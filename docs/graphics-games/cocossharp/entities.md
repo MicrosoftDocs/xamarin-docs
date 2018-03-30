@@ -30,7 +30,7 @@ The finished game will look like this:
 ![](entities-images/image1.png "The finished game will look like this")
 
 
-# Introduction to Game Entities
+## Introduction to game entities
 
 Game entities are classes that define objects needing rendering, collision, physics, or artificial intelligence logic. Fortunately, the entities present in a game’s code base often match the conceptual objects in a game. When this is true, identifying the entities needed in a game can be more easily accomplished. 
 
@@ -47,7 +47,7 @@ For example, a space themed [shoot ‘em up game](http://en.wikipedia.org/wiki/S
 These entities would be their own classes in the game, and each instance would require little or no setup beyond instantiation.
 
 
-# General vs. Specific Entity Types
+## General vs. specific entity types
 
 One of the first questions faced by game developers using an entity system is how much to generalize their entities. The most specific of implementations would define classes for every type of entity, even if they differ by few characteristics. More general systems will combine groups of entities into one class, and allow instances to be customized.
 
@@ -80,7 +80,7 @@ The level of generalization used depends on many considerations, including:
 For the sake of simplicity, we’ll be using a specific class-based approach with a single ship and bullet entity for this tutorial.
 
 
-# Project Setup
+## Project setup
 
 Before we begin implementing our entities, we need to create a project. We’ll be using the CocosSharp project templates to simplify project creation. [Check this post](http://forums.xamarin.com/discussion/26822/cocossharp-project-templates-for-xamarin-studio) for information on creating a CocosSharp project from the Visual Studio for Mac templates. The remainder of this guide will use the project name **EntityProject**.
 
@@ -106,14 +106,14 @@ public override void ApplicationDidFinishLaunching (CCApplication applicati
 For more information on dealing with CocosSharp resolutions, see our [guide on Handling Multiple Resolutions in CocosSharp](~/graphics-games/cocossharp/resolutions.md).
 
 
-# Adding Content to the Project
+## Adding content to the project
 
 Once our project has been created, we will add the files contained in [this content zip file](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Entities.zip?raw=true). To do this, download the zip file and unzip it. Add both **ship.png** and **bullet.png** to the **Content** folder. The **Content** folder will be inside the **Assets** folder on Android, and will be at the root of the project on iOS. Once added, we should see both files in the **Content** folder:
 
 ![](entities-images/image2.png "Once added, both files should be in the Content folder")
 
 
-# Creating the Ship Entity
+## Creating the ship entity
 
 The `Ship` class will be our game’s first entity. To add a `Ship` class, first create a folder called **Entities** at the root level of the project. Add a new class in the **Entities** folder called `Ship`:
 
@@ -175,16 +175,16 @@ If we run our game we will now see our Ship entity:
 ![](entities-images/image4.png "When running the game, the Ship entity will be displayed")
 
 
-## Why Inherit from CCNode instead of CCSprite?
+### Why inherit from CCNode instead of CCSprite?
 
 At this point our `Ship` class is a simple wrapper for a `CCSprite` instance. Since `CCSprite` also inherits from `CCNode`, we could have inherited directly from `CCSprite`, which would have reduced the code in `Ship.cs`. Furthermore, inheriting directly from `CCSprite` reduces the number of in-memory objects and can improve performance by making the dependency tree smaller.
 
 Despite these benefits, we inherited from `CCNode` to hide some of the `CCSprite` properties from each instance. For example, the `Texture` property should not be modified outside of the `Ship` class, and inheriting from `CCNode` allows us to hide this property. The public members of our entities become especially important as a game grows larger and as additional developers are added to a team.
 
 
-# Adding Input to the Ship
+## Adding input to the ship
 
-Now that our ship is visible on screen we will be adding input. Our approach will be similar to the approach taken in the [Introduction to CocosSharp Guide](~/graphics-games/cocossharp/first-game/part2.md), except that we will be placing the code for movement in the `Ship` class rather than in the containing `CCLayer` or `CCScene`.
+Now that our ship is visible on screen we will be adding input. Our approach will be similar to the approach taken in the [BouncingGame guide](~/graphics-games/cocossharp/bouncing-game.md), except that we will be placing the code for movement in the `Ship` class rather than in the containing `CCLayer` or `CCScene`.
 
 Add the code to `Ship` to support moving it to wherever the user is touching the screen:
 
@@ -226,7 +226,7 @@ public class Ship : CCNode
 Many shoot ‘em up games implement a maximum velocity, mimicking traditional controller-based movement. That said, we’ll simply implement immediate movement to keep our code shorter.
 
 
-# Creating the Bullet Entity
+## Creating the bullet entity
 
 The second entity in our simple game is an entity for displaying bullets. Just like the `Ship` entity, the `Bullet` entity will contain a `CCSprite` so that it appears on screen. The logic for movement differs in that it does not depend on user input for movement; rather, `Bullet` instances will move in a straight line using velocity properties.
 
@@ -284,7 +284,7 @@ Aside from changing the file used for the `CCSprite` to `bullet.png`, the code i
 The `Schedule` method allows adding delegates to be called every-frame. In this case we’re adding the `ApplyVelocity` method so that our bullet moves according to its velocity values. The `Schedule` method takes an `Action<float>`, where the float parameter specifies the amount of time (in seconds) since the last frame, which we use to implement time-based movement. Since the time value is measured in seconds, then our velocity values represent movement in *pixels per second*.
 
 
-# Adding Bullets to GameLayer
+## Adding bullets to GameLayer
 
 Before we add any `Bullet` instances to our game we will make a container, specifically a `List<Bullet>`. Modify the `GameLayer` so it includes a list of Bullets:
 
@@ -418,14 +418,14 @@ Now we can run the game and see the `Ship` shooting `Bullet` instances:
 ![](entities-images/image1.png "Run the game and the Ship will be shooting Bullet instances")
 
 
-# Why GameLayer has ship and bullets members
+## Why GameLayer has ship and bullets members
 
 Our `GameLayer` class defines two fields to hold references to our entity instances (`ship` and `bullets`), but does nothing with them. Furthermore, entities are responsible for their own behavior such as movement and shooting. So why did we add `ship` and `bullets` fields to `GameLayer`?
 
 The reason we added these members is because a full game implementation would require logic in the `GameLayer` for interaction between the different entities. For example, this game may be further developed to include enemies that can be destroyed by the player. These enemies would be contained in a `List` in the `GameLayer`, and logic to test whether `Bullet` instances collide with the enemies would be performed in the `GameLayer` as well. In other words, the `GameLayer` is the root *owner* of all entity instances, and it is responsible for interactions between entity instances.
 
 
-# Bullet Destruction Considerations
+## Bullet destruction considerations
 
 Our game currently lacks code for destroying `Bullet` instances. Each `Bullet` instance has logic for moving on screen, but we haven’t added any code to destroy any off-screen `Bullet` instances.
 
@@ -433,12 +433,11 @@ Furthermore, the destruction of `Bullet` instances may not belong in `GameLayer`
 
 The simplest solution is to expand the responsibility of the factory class to  support destruction. Then the factory can be notified of an entity instance being destroyed, which can be handled by other objects, such as the `GameLayer` removing the entity instance from its lists. 
 
-
-# Summary
+## Summary
 
 This guide shows how to create CocosSharp entities by inheriting from the `CCNode` class. These entities are self-contained objects, handling creation of their own visuals and custom logic. This guide designates code that belongs inside an entity (movement and creation of other entities) from code that belongs in the root entity container (collision and other entity interaction logic).
 
-## Related Links
+## Related links
 
 - [CocosSharp API Documentation](https://developer.xamarin.com/api/namespace/CocosSharp/)
 - [Content zip](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Entities.zip?raw=true)

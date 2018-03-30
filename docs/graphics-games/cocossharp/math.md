@@ -1,5 +1,5 @@
 ---
-title: "2D Math with CocosSharp"
+title: "2D math with CocosSharp"
 description: "This guide covers 2D mathematics for game development. It uses CocosSharp to show how to perform common game development tasks and explains the math behind these tasks."
 ms.topic: article
 ms.prod: xamarin
@@ -10,7 +10,7 @@ ms.author: chape
 ms.date: 03/27/2017
 ---
 
-# 2D Math with CocosSharp
+# 2D math with CocosSharp
 
 _This guide covers 2D mathematics for game development. It uses CocosSharp to show how to perform common game development tasks and explains the math behind these tasks._
 
@@ -24,12 +24,12 @@ To position and move objects with code is a core part of developing games of all
 Developers who do not have a strong math background, or who have long-forgotten these topics from school, do not need to worry – this document will break concepts down into bite-sized pieces, and will accompany theoretical explanations with practical examples. In short, this article will answer the age-old math student question: "When will I actually need to use this stuff?"
 
 
-# Requirements
+## Requirements
 
 Although this document focuses primarily on the mathematical side of CocosSharp, code samples assume working with objects inheriting form `CCNode`. Furthermore, since `CCNode` does not include values for velocity and acceleration, the code assumes working with Entities which provide values such as VelocityX, VelocityY, AccelerationX, and AccelerationY. For more information on entities, see our walkthrough on [Entities in CocosSharp](~/graphics-games/cocossharp/entities.md).
 
 
-# Velocity
+## Velocity
 
 Game developers use the term *velocity* to describe how an object is moving – specifically how fast something is moving and the direction that it is moving. 
 
@@ -46,7 +46,7 @@ bulletInstance.VelocityY = 300;
 ```
 
 
-## Implementing Velocity
+### Implementing velocity
 
 CocosSharp does not implement velocity, so objects requiring movement will need to implement their own movement logic. New game developers implementing velocity often make the mistake of making their velocity dependent on frame rate. That is, the following *incorrect implementation* will seem to provide correct results, but will be based on the game’s frame rate:
 
@@ -71,7 +71,7 @@ Consider that a game which runs at a lower frame rate will update the position o
 For an example of how to add time-based movement, see [this recipe covering time based movement](https://developer.xamarin.com/recipes/cross-platform/game_development/time_based_movement/).
 
 
-## Calculating positions using velocity
+### Calculating positions using velocity
 
 Velocity can be used to make predictions about where an object will be after some amount of time passes, or to help tune objects’ behavior without needing to run the game. For example, a developer who is implementing the movement of a fired bullet needs to set the bullet’s velocity after it is instantiated. The screen size can be used to provide a basis for setting velocity. That is, if the developer knows that the bullet should move the height of the screen in 2 seconds, then the velocity should be set to the height of the screen divided by 2. If the screen is 800 pixels tall, then the bullet’s speed would be set to 400 (which is 800/2).
 
@@ -88,7 +88,7 @@ label.Text = secondsToReachTarget + " seconds to reach target";
 ```
 
 
-# Acceleration
+## Acceleration
 
 *Acceleration* is a common concept in game development, and it shares many similarities with velocity. Acceleration quantifies whether an object is speeding up or slowing down (how the velocity value changes over time). Acceleration *adds* to velocity, just like velocity adds to position. Common applications of acceleration include gravity, a car speeding up, and a space ship firing its thrusters. 
 
@@ -107,12 +107,12 @@ icicle.AccelerationY = -50;
 ```
 
 
-## Acceleration vs. Deceleration
+### Acceleration vs. deceleration
 
 Although acceleration and deceleration are sometimes differentiated in every-day speech, there is no technical difference between the two. Gravity is a force which results in acceleration. If an object is thrown upward then gravity will slow it down (decelerating), but once the object has stopped climbing and is falling in the same direction as gravity then gravity is speeding it up (accelerating). As shown below, the application of an acceleration is the same whether it is being applied in the same direction or opposite direction of movement. 
 
 
-## Implementing Acceleration
+### Implementing acceleration
 
 Acceleration is similar to velocity when implementing – it is not automatically implemented by CocosSharp, and time-based acceleration is the desired implementation (as opposed to frame-based acceleration). Therefore a simple acceleration (along with velocity) implementation may look like:
 
@@ -145,7 +145,7 @@ The most obvious difference to the code above is the `halfSecondsSquared` variab
 The practical impact of `halfSecondSquare` is that acceleration will behave mathematically accurately and predictably regardless of frame rate. The linear approximation of acceleration is subject to frame rate – the lower the framerate drops the less accurate the approximation becomes. Using `halfSecondsSquared` guarantees that code will behave the same regardless of framerate.
 
 
-# Angles and Rotation
+## Angles and rotation
 
 Visual objects such as `CCSprite` support rotation through a `Rotation` variable. This can be assigned to a value to set its rotation in degrees. For example, the following code shows how to rotate a `CCSprite` instance:
 
@@ -185,7 +185,7 @@ This distinction is important because the `System.Math` class uses counterclockw
 We should note that the above diagrams display rotation in degrees; however, some mathematical functions (such as the functions in the `System.Math` namespace) expect and return values in *radians* rather than degrees. We’ll look at how to convert between the two unit types a little later in this guide.
 
 
-## Rotating to face a direction
+### Rotating to face a direction
 
 As shown above, `CCSprite` can be rotated using the `Rotation` property. The `Rotation` property is provided by `CCNode` (the base class for `CCSprite`), which means rotation can be applied to entities which inherit from `CCNode` as well. 
 
@@ -257,14 +257,16 @@ This code results in the following behavior:
 
 ![](math-images/image5.gif "This code results in this behavior")
 
-### Using Atan2 to Convert Offsets to Angles
+#### Using Atan2 to convert offsets to angles
+
 `System.Math.Atan2` can be used to convert an offset to an angle. The function name `Atan2` comes from the trigonometric function arctangent. The "2" suffix differentiates this function from the standard `Atan` function, which strictly matches the mathematical behavior of arctangent. Arctangent is a function which returns a value between -90 and +90 degrees (or the equivalent in radians). Many applications, including computer games, often require a full 360 degrees of values, so the `Math` class includes `Atan2` to satisfy this need.
 
 Notice that the code above passes the Y parameter first, then the X parameter, when calling the `Atan2` method. This is backwards from the usual X, Y ordering of position coordinates. For more information [see the Atan2 docs](https://msdn.microsoft.com/en-us/library/system.math.atan2(v=vs.110).aspx).
 
 It’s also worth noting that the return value from `Atan2` is in radians, which is another unit used to measure angles. This guide doesn’t cover the details of radians, but keep in mind that all trigonometric functions in the `System.Math` namespace use radians, so any values must be converted to degrees before being used on CocosSharp objects. More information on radians can be found [in the radian Wikipedia page](http://en.wikipedia.org/wiki/Radian).
 
-### Forward Angle
+#### Forward angle
+
 Once the `FacePoint` method converts the angle to radians, it defines a `forwardAngle` value. This value represents the angle in which the entity is facing when its Rotation value equals 0. In this example, we assume that the entity is facing upward, which is 90 degrees when using a mathematical rotation (as opposed to CocosSharp rotation). We use the mathematical rotation here since we haven’t yet inverted the rotation for CocosSharp.
 
 The following shows what an entity with a `forwardAngle` of 90 degrees might look like:
@@ -272,7 +274,7 @@ The following shows what an entity with a `forwardAngle` of 90 degrees might loo
 ![](math-images/image6.png "This shows what an entity with a forwardAngle of 90 degrees might look like")
 
 
-## Angled Velocity
+### Angled velocity
 
 So far we’ve looked at how to convert an offset into an angle. This section goes the other way – takes an angle and converts it into X and Y values. Common examples include a car moving in the direction that it is facing, or a space ship shooting a bullet which moves in the direction that the ship is facing. 
 
@@ -350,6 +352,6 @@ This code may produce something like:
 ![](math-images/image9.png "This code may produce something like this screenshot")
 
 
-# Summary
+## Summary
 
 This guide covers common mathematical concepts in 2D game development. It shows how to assign and implement velocity and acceleration, and covers how to rotate objects and vectors for movement in any direction.

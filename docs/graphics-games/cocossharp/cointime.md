@@ -1,5 +1,5 @@
 ---
-title: "Coin Time Implementation Details"
+title: "Coin Time game details"
 description: "This guide discusses implementation details in the Coin Time game, including working with tile maps, creating entities, animating sprites, and implementing efficient collision."
 ms.topic: article
 ms.prod: xamarin
@@ -10,7 +10,7 @@ ms.author: chape
 ms.date: 03/24/2017
 ---
 
-# Coin Time Implementation Details
+# Coin Time game details
 
 _This guide discusses implementation details in the Coin Time game, including working with tile maps, creating entities, animating sprites, and implementing efficient collision._
 
@@ -20,27 +20,27 @@ Coin Time is a full platformer game for iOS and Android. The goal of the game is
 
 This guide discusses implementation details in Coin Time, covering the following topics:
 
-- [Working with TMX Files](#Working_with_TMX_Files)
-- [Level Loading](#Level_Loading)
-- [Adding New Entities](#Adding_New_Entities)
-- [Animated Entities](#Animated_Entities)
+- [Working with tmx files](#working-with-tmx-files)
+- [Level loading](#level-loading)
+- [Adding new entities](#adding-new-entities)
+- [Animated entities](#animated-entities)
 
 
-# Content in Coin Time
+## Content in Coin Time
 
 Coin Time is a sample project that represents how a full CocosSharp project might be organized. Coin Time’s structure aims to simplify the addition and maintenance of content. It uses **.tmx** files created by [Tiled](http://www.mapeditor.org) for levels and XML files to define animations. Modifying or adding new content can be achieved with minimal effort. 
 
 While this approach makes Coin Time an effective project for learning and experimentation, it also reflects how professional games are made. This guide explains some of the approaches taken to simplify adding and modifying content.
 
 
-# Working with TMX Files
+## Working with tmx files
 
 Coin Time levels are defined using the .tmx file format, which is output by the [Tiled](http://www.mapeditor.org) tile map editor. For a detailed discussion of working with Tiled, see the [Using Tiled with Cocos Sharp guide](~/graphics-games/cocossharp/tiled.md). 
 
 Each level is defined in its own .tmx file contained in the **CoinTime/Assets/Content/levels** folder. All Coin Time levels share one tileset file, which is defined in the **mastersheet.tsx** file. This file defines the custom properties for each tile, such as whether the tile has solid collision or whether the tile should be replaced by an entity instance. The mastersheet.tsx file allows properties to be defined only once and used across all levels. 
 
 
-## Editing a Tile Map
+### Editing a tile map
 
 To edit a tile map, open the .tmx file in Tiled by double-clicking the .tmx file or opening it through the File menu in Tiled. Coin Time level tile maps contain three layers: 
 
@@ -50,7 +50,8 @@ To edit a tile map, open the .tmx file in Tiled by double-clicking the .tmx file
 
 As we will explore later, the level-loading code expects these three layers in all Coin Time levels.
 
-### Editing Terrain
+#### Editing terrain
+
 Tiles can be placed by clicking in the **mastersheet** tileset and then clicking on the tile map. For example, to paint new terrain in a level:
 
 1. Select the Terrain layer
@@ -63,7 +64,8 @@ The top-left of the tileset contains all of the terrain in Coin Time. Terrain, w
 
 ![](cointime-images/image3.png "Terrain, which is solid, includes the SolidCollision property, as shown in the tile properties on the left of the screen")
 
-### Editing Entities
+#### Editing entities
+
 Entities can be added or removed from a level – just like terrain. The **mastersheet** tileset has all entities placed about halfway horizontally, so they may not be visible without scrolling to the right:
 
 ![](cointime-images/image4.png "The mastersheet tileset has all entities placed about halfway horizontally, so they may not be visible without scrolling to the right")
@@ -81,7 +83,7 @@ Once the file has been modified and saved, the changes will automatically show u
 ![](cointime-images/image7.png "Once the file has been modified and saved, the changes will automatically show up if the project is built and run")
 
 
-## Adding New Levels
+### Adding new levels
 
 The process of adding levels to Coin Time requires no code changes, and only a few small changes to the project. To add a new level:
 
@@ -101,7 +103,7 @@ The new level should appear in the level select screen as level 9 (level file na
 ![](cointime-images/image10.png "The new level should appear in the level select screen as level 9 level file names start at 0, but the level buttons begin with the number 1")
 
 
-# Level Loading
+## Level loading
 
 As shown earlier, new levels require no changes in code – the game automatically detects the levels if they are named correctly and added to the **levels** folder with the correct build action (**BundleResource** or **AndroidAsset**).
 
@@ -197,7 +199,7 @@ private void GoToLevel(int levelNumber)
 Next we’ll take a look at methods called in `GoToLevel`.
 
 
-## LoadLevel
+### LoadLevel
 
 The `LoadLevel` method is responsible for loading the .tmx file and adding it to the `GameScene`. This method does not create any interactive objects such as collision or entities – it simply creates the visuals for the level, also referred to as the *environment*.
 
@@ -223,7 +225,7 @@ The `CCTileMap` constructor takes a file name, which is created using the level 
 Currently, CocosSharp does not allow reordering of layers without removing and re-adding them to their parent `CCScene` (which is the `GameScene` in this case), so the last few lines of the method are required to reorder the layers.
 
 
-## CreateCollision
+### CreateCollision
 
 The `CreateCollision` method constructs a `LevelCollision` instance which is used to perform *solid collision* between the player and environment.
 
@@ -241,7 +243,7 @@ Without this collision, the player would fall through the level and the game wou
 Collision in Coin Time can be added with no additional code – only modifications to tiled files. 
 
 
-## ProcessTileProperties
+### ProcessTileProperties
 
 Once a level is loaded and the collision is created, `ProcessTileProperties` is called to perform logic based on tile properties. Coin Time includes a `PropertyLocation` struct for defining properties and the coordinates of the tile with these properties:
 
@@ -339,7 +341,7 @@ private bool TryCreateEntity(string entityType, float worldX, float worldY)
 ```
 
 
-# Adding New Entities
+## Adding new entities
 
 Coin Time uses the entity pattern for its game objects (which is covered in the [Entities in CocosSharp guide](~/graphics-games/cocossharp/entities.md)). All entities inherit from `CCNode`, which means they can be added as children of the `gameplayLayer`.
 
@@ -348,19 +350,19 @@ Each entity type is also referenced directly through a list or single instance. 
 The existing code provides a number of entity types as examples of how to create new entities. The following steps can be used to create a new entity:
 
 
-## 1 - Define a new class using the entity pattern
+### 1 - Define a new class using the entity pattern
 
 The only requirement for creating an entity is to create a class which inherits from `CCNode`. Most entities have some visual, such as a `CCSprite`, which should be added as a child of the entity in its constructor.
 
-CoinTime provides the `AnimatedSpriteEntity` class which simplifies the creation of animated entities. Animations will be covered in more detail in the [Animated Entities section](#Animated_Entities).
+CoinTime provides the `AnimatedSpriteEntity` class which simplifies the creation of animated entities. Animations will be covered in more detail in the [Animated Entities section](#animated-entities).
 
 
-## 2 – Add a new entry to the TryCreateEntity switch statement
+### 2 – Add a new entry to the TryCreateEntity switch statement
 
 Instances of the new entity should be instantiated in the `TryCreateEntity`. If the entity requires every-frame logic like collision, AI, or reading input, then the `GameScene` needs to keep a reference to the object. If multiple instances are needed (such as `Coin` or `Enemy` instances), then a new `List` should be added to the `GameScene` class.
 
 
-## 3 – Modify tile properties for the new entity
+### 3 – Modify tile properties for the new entity
 
 Once the code supports the creation of the new entity, the new entity needs to be added to the tileset. The tileset can be edited by opening any level `.tmx` file. 
 
@@ -385,7 +387,7 @@ The tileset should overwrite the existing **mastersheet.tsx** tileset:
 ![](cointime-images/image15.png "he tileset should overwrite the existing mastersheet.tsx tileset")
 
 
-# Entity Tile Removal
+## Entity tile removal
 
 When a tile map is loaded into a game, the individual tiles are static objects. Since entities require custom behavior such as movement, Coin Time code removes tiles when entities are created.
 
@@ -449,7 +451,7 @@ private void ProcessTileProperties()
 ```
 
 
-# Entity Offsets
+## Entity offsets
 
 Entities created from tiles are positioned by aligning the center of the entity with the center of the tile. Larger entities, like `Door`, use additional properties and logic to be placed correctly. 
 
@@ -489,12 +491,12 @@ private void ProcessTileProperties()
 ```
 
 
-# Animated Entities
+## Animated entities
 
 Coin Time includes several animated entities. The `Player` and `Enemy` entities play walk animations and the `Door` entity plays an opening animation once all coins have been collected.
 
 
-## .achx files
+### .achx files
 
 Coin Time animations are defined in .achx files. Each animation is defined between `AnimationChain` tags, as shown in the following animation defined in **propanimations.achx**:
 
@@ -529,7 +531,7 @@ The `FrameLength` property defines the number of seconds that a frame in an anim
 All other AnimationChain properties in the .achx file are ignored by Coin Time.
 
 
-## AnimatedSpriteEntity
+### AnimatedSpriteEntity
 
 Animation logic is contained in the `AnimatedSpriteEntity` class, which serves as the base class for most entities used in the `GameScene`. It provides the following functionality:
 
@@ -558,10 +560,10 @@ walkRightAnimation = animations.Find (item => item.Name == "WalkRight");
 ```
 
 
-# Summary
+## Summary
 
 This guide covers the implementation details of coin time. Coin Time is created to be a complete game, but is also a project which can be easily modified and expanded. Readers are encouraged to spend time making modifications to levels, adding new levels, and creating new entities to further understand how Coin Time is implemented.
 
-## Related Links
+## Related links
 
 - [Game Project (sample)](https://developer.xamarin.com/samples/mobile/CoinTime/)

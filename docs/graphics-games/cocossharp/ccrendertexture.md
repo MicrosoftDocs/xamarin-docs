@@ -1,5 +1,5 @@
 ---
-title: "Performance and Visual Effects with CCRenderTexture"
+title: "Performance and visual effects with CCRenderTexture"
 description: "CCRenderTexture enables developers to improve the performance of their CocosSharp games by reducing draw calls, and can be used for creating visual effects. This guide accompanies the CCRenderTexture sample to provide a hands-on example of how to use this class effectively."
 ms.topic: article
 ms.prod: xamarin
@@ -9,7 +9,7 @@ author: charlespetzold
 ms.author: chape
 ---
 
-# Performance and Visual Effects with CCRenderTexture
+# Performance and visual effects with CCRenderTexture
 
 _CCRenderTexture enables developers to improve the performance of their CocosSharp games by reducing draw calls, and can be used for creating visual effects. This guide accompanies the CCRenderTexture sample to provide a hands-on example of how to use this class effectively._
 
@@ -20,7 +20,7 @@ This guide examines how to use the `CCRenderTexture` object to improve the perfo
 ![](ccrendertexture-images/image1.png "This guide references the CCRenderTexture sample project")
 
 
-# Card – a Typical Entity
+## Card – a typical entity
 
 Before looking at how to use `CCRenderTexture` object, we’ll first familiarize ourselves with the `Card` entity that we’ll use throughout this project to explore the `CCRenderTexture` class. The `Card` class is a typical entity, following the entity pattern outlined in the [Entity guide](~/graphics-games/cocossharp/entities.md). The Card class has all of its visual components (instances of `CCSprite` and `CCLabel`) listed as fields:
 
@@ -61,7 +61,7 @@ The sample is coded to expose two problems that can occur when each visual compo
 - Certain visual effects, such as transparency, cannot be implemented accurately, as we will explore later
 
 
-## Card Draw Calls
+### Card draw calls
 
 Our code is a simplification of what might be found in a full *collectable card game* (CCG) such as "Magic: The Gathering" or "Hearthstone". Our game only displays three cards at once and has a small number of possible units (blue, green, and orange). By contrast, a full game may have over twenty cards on-screen at a given time, and players may have hundreds of cards to choose from when creating their decks. Even though our game does not currently suffer from performance problems, a full game with similar implementation might.
 
@@ -72,7 +72,7 @@ CocosSharp provides some insight into rendering performance by exposing the draw
 Notice that despite having three cards on screen, we have nineteen draw calls (each card results in six draw calls, the text displaying the performance information accounts for one more). Draw calls have a significant impact on a game’s performance, so CocosSharp provides a number of ways to reduce them. One technique is described in the [CCSpriteSheet guide](~/graphics-games/cocossharp/ccspritesheet.md). Another technique is to use the `CCRenderTexture` to reduce each entity down to one call, as we’ll examine in this guide.
 
 
-## Card Transparency
+### Card transparency
 
 Our `Card` entity includes an `Opacity` property to control transparency as shown in the following code snippet:
 
@@ -139,7 +139,7 @@ To help visualize why this occurs, we need to keep in mind that each visual comp
 Using a `CCRenderTexture` allows us to make the entire card transparent without impacting the rendering of individual components within the card, as we will see later in this guide.
 
 
-# Using CCRenderTexture
+## Using CCRenderTexture
 
 Now that we’ve identified the problems with rendering each component individually, we’ll turn on rendering to a `CCRenderTexture` and compare the behavior.
 
@@ -155,7 +155,7 @@ protected override void AddedToScene ()
 ```
 
 
-## Card Draw Calls
+### Card draw calls
 
 If we run the game now, we’ll see the draw calls reduced from nineteen to four (each card reduced from six to one):
 
@@ -164,7 +164,7 @@ If we run the game now, we’ll see the draw calls reduced from nineteen to four
 As previously mentioned, this type of reduction can have a significant impact on games with more visual entities on screen.
 
 
-## Card Transparency
+### Card transparency
 
 Once the `useRenderTextures` is set to `true`, transparent cards will render differently:
 
@@ -177,7 +177,7 @@ Let’s compare the transparent robot card using render textures (left) vs. with
 The most obvious differences are in the details text (black instead of light gray) and the robot sprite (dark instead of light and desaturated).
 
 
-# CCRenderTexture Details
+## CCRenderTexture details
 
 Now that we’ve seen the benefits of using `CCRenderTexture`, let’s take a look at how it is used in the `Card` entity.
 
@@ -253,7 +253,7 @@ The `SwitchToRenderTexture` method can be called whenever the texture needs to b
 The following sections explore the `SwitchToRenderTexture` method. 
 
 
-## CCRenderTexture Size
+### CCRenderTexture size
 
 The CCRenderTexture constructor requires two sets of dimensions. The first controls the size of the `CCRenderTexture` when it is drawn, and the second specifies the pixel width and height of its contents. The `Card` entity instantiates its `CCRenderTexture` using the background [ContentSize](https://developer.xamarin.com/api/property/CocosSharp.CCSprite.ContentSize/). Our game has a `DesignResolution` of 512 by 384, as shown in `ViewController.LoadGame` on iOS and `MainActivity.LoadGame` on Android:
 
@@ -290,7 +290,7 @@ renderTexture = new CCRenderTexture(unitResolution, pixelResolution);
 ![](ccrendertexture-images/image9.png "To compare, can change the pixelResolution value to match the background.ContentSize without being doubled and compare the result")
 
 
-## Rendering to a CCRenderTexture
+### Rendering to a CCRenderTexture
 
 Typically, visual objects in CocosSharp are not explicitly rendered. Instead, visual objects are added to a `CCLayer` which is part of a `CCScene`. CocosSharp automatically renders the `CCScene` and its visual hierarchy in every frame without any rendering code being called. 
 
@@ -352,7 +352,7 @@ foreach (var component in visualComponents)
 this.AddChild(renderTexture.Sprite);
 ```
 
-# Summary
+## Summary
 
 This guide covered the `CCRenderTexture` class by using a `Card` entity which could be used in a collectible card game. It showed how to use the `CCRenderTexture` class to improve frame rate and properly implement entity-wide transparency.
 

@@ -26,7 +26,7 @@ When finished we will have the following demo:
 ![](tiled-images/image1.png "The demo app created by following the steps in this guide")
 
 
-# The Purpose of Tile Maps
+## The purpose of tile maps
 
 Tile maps have existed in game development for decades, but are still commonly used in 2D games for their efficiency and esthetics. Tile maps are able to achieve a very high level of efficiency through their use of tile sets – the source image used by tile maps. A tile set is a collection of images combined into one file. Although tile sets refer to images used in tile maps, files that contain multiple smaller images are also called sprite sheets or sprite maps in game development. We can visualize how tile sets are used by adding a grid to the tile set that we’ll be using in our demo:
 
@@ -39,7 +39,7 @@ Tile maps arrange the individual tiles from tile sets. We should note that each 
 ![](tiled-images/image4.png "This image shows possible arrangements using the same tile set")
 
 
-# Working with .tmx Files
+## Working with .tmx files
 
 The .tmx file format is an XML file created by the Tiled application, which can be [downloaded for free on the Tiled website](http://www.mapeditor.org/). The .tmx file format stores the information for tile maps. Typically a game will have one .tmx file for each level or separate area.
 
@@ -76,7 +76,7 @@ If we run the game we will see the tile map appear in the bottom-left corner of 
 ![](tiled-images/image6.png "If the game is run, the tile map appear in the bottom-left corner of the screen")
 
 
-# Considerations for Rendering Pixel Art
+## Considerations for rendering pixel art
 
 Pixel art, in the context of video game development, refers to 2D visual art which is typically created by-hand, and is often low resolution. Pixel art can be restrictively time intensive to create, so pixel art tile sets often include low-resolution tiles, such as 16 or 32 pixel width and height. If not scaled at runtime, pixel art is often too small for most modern phones and tablets.
 
@@ -157,7 +157,7 @@ Now our tile map will not appear blurry:
 ![](tiled-images/image8.png "Now the tile map will not appear blurry")
 
 
-# Using Tile Properties at Runtime
+## Using tile properties at runtime
 
 So far we have a `CCTileMap` loading a .tmx file and displaying it, but we have no way to interact with it. Specifically, certain tiles (such as our treasure chest) need to have custom logic. We’ll step through how to detect custom tile properties, and various ways to react to these properties once identified at runtime.
 
@@ -269,11 +269,11 @@ Most of the code is self-explanatory, but we should discuss the handling of trea
 In other words, the treasure chest will benefit from being an entity rather than being a simple tile in the `CCTileMap`. For more information on game entities, see the [Entities in CocosSharp guide](~/graphics-games/cocossharp/entities.md).
 
 
-# Summary
+## Summary
 
 This walkthrough covers how to load .tmx files created by Tiled into a CocosSharp application. It shows how to modify the app resolution to account for lower-resolution pixel art, and how to find tiles by their properties to perform custom logic, like creating entity instances.
 
-## Related Links
+## Related links
 
 - [Tiled Website](http://www.mapeditor.org/)
 - [Content zip](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Tiled.zip?raw=true)

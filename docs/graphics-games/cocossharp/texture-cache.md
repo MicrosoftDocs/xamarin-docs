@@ -10,7 +10,7 @@ ms.author: chape
 ms.date: 03/28/2017
 ---
 
-# Texture Caching using CCTextureCache
+# Texture caching using CCTextureCache
 
 _CocosSharp’s CCTextureCache class provides a standard way to organize, cache, and unload content. It is especially useful for large games which may not fit entirely into RAM, simplifying the process of grouping and disposing of textures._
 
@@ -25,7 +25,7 @@ This guide covers the `CCTextureCache` and why it is important for game developm
  - Disposing textures
 
 
-# Why Texture Caching Matters
+## Why texture caching matters
 
 Texture caching is an important consideration in game development as texture loading is a time-consuming operation and textures require a significant amount of RAM at runtime.
 
@@ -34,7 +34,7 @@ As with any file operation, loading textures from disk can be a costly operation
 As mentioned above, textures also occupy a large amount of runtime memory. For example a background image sized to the resolution of an iPhone 6 (1344x750) would occupy 4 megabytes of RAM – even if the PNG file is only few kilobytes in size. Texture caching provides a way to share texture references within an app and also an easy way to unload all content when transitioning between different game states.
 
 
-# Texture Lifespan
+## Texture lifespan
 
 CocosSharp textures may be kept in memory for the entire length of an app’s execution, or they may be short lived. To minimize memory usage an app should dispose of textures when no longer needed. Of course, this means that textures may be disposed and re-loaded at a later time, which can increase load times or hurt performance during loads. 
 
@@ -54,7 +54,7 @@ If the game was large enough it would eventually load enough textures to fill al
 The diagram shown above indicates that texture memory usage can be reduced by unloading, but this may require additional loading times if a player decides to replay a level. It’s also worth noting that the UITexture and MainCharacter textures are loaded and never unloaded. This implies that these textures are needed in all levels, so they are always kept in memory. 
 
 
-# Using SharedTextureCache
+## Using SharedTextureCache
 
 CocosSharp automatically caches textures when loading them through the `CCSprite` constructor. For example the following code only creates one texture instance:
 
@@ -80,7 +80,7 @@ CCSprite starSprite = new CCSprite ();
 `AddImage` checks if the argument file (in this case `star.png`) has already been loaded. If so, then the cached instance is returned. If not then it is loaded from the file system, and a reference to the texture is stored internally for subsequent `AddImage` calls. In other words the `star.png` image is only loaded once, and subsequent calls require no additional disk access or additional texture memory.
 
 
-# Lazy Loading vs. Pre-Loading with AddImage
+## Lazy loading vs. pre-loading with AddImage
 
 `AddImage` allows code to be written the same whether the requested texture is already loaded or not. This means that content will not be loaded until it is needed; however, this can also cause performance problems at runtime due to unpredictable content loading.
 
@@ -110,12 +110,12 @@ void PreLoadImages()
 This pre-loading can result in wasted memory and can increase startup time. For example, the player may never actually obtain a power-up represented by the `powerup3.png` texture, so it will be unnecessarily loaded. Of course this may be a necessary cost to pay to avoid a potential pop in gameplay, so it’s usually best to preload content if it will fit in RAM.
 
 
-# Disposing Textures
+## Disposing textures
 
 If a game does not require more texture memory than is available on the minimum spec device then textures do not need to be disposed. On the other hand, larger games may need to free up texture memory to make room for new content. For example a game may use a large amount of memory storing textures for an environment. If the environment is only used in a specific level then it should be unloaded when the level ends.
 
 
-## Disposing a Single Texture
+### Disposing a single texture
 
 Removing a single texture first requires calling the `Dispose` method, then manual removal from the `CCTextureCache`.
 
@@ -183,11 +183,11 @@ The Dispose method will dispose all internal textures, clearing out the memory u
 
 
 
-# Summary
+## Summary
 
 This guide shows how to use the `CCTextureCache` class to balance memory usage and runtime performance. `CCTexturCache.SharedTextureCache` can be explicitly or implicitly used to load and cache textures for the life of the application, while `CCTextureCache` instances can be used to unload textures to reduce memory usage.
 
-## Related Links
+## Related links
 
 - [https://github.com/mono/CocosSharp](https://github.com/mono/CocosSharp)
 - [/api/type/CocosSharp.CCTextureCache/](https://developer.xamarin.com/api/type/CocosSharp.CCTextureCache/)

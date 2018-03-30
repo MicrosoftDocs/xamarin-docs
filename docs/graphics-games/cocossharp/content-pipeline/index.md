@@ -1,5 +1,6 @@
 ---
 title: "CocosSharp Content Pipeline"
+description: "This document links to guides that describe the CocosSharp Content Pipeline."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2BC895E5-BDFD-443D-A96D-86BA7042CB70
@@ -10,9 +11,9 @@ ms.author: chape
 
 # CocosSharp Content Pipeline
 
-Content Pipelines are often used in game development to optimize content and format it such that it can be loaded on certain hardware or with certain game development frameworks.
+Content pipelines are often used in game development to optimize content and format it such that it can be loaded on certain hardware or with certain game development frameworks.
 
-##  [Introduction to Content Pipelines](~/graphics-games/cocossharp/content-pipeline/introduction.md)
+##  [Introduction to content pipelines](~/graphics-games/cocossharp/content-pipeline/introduction.md)
 
 This article provides a conceptual understanding of content pipelines, primarily focusing on the MonoGame Content Pipeline, which is a content pipeline implementation used with CocosSharp and MonoGame.
 

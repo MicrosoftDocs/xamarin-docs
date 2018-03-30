@@ -1,5 +1,5 @@
 ---
-title: "Fruity Falls Game Details"
+title: "Fruity Falls game details"
 description: "This guide reviews the Fruity Falls game, covering common CocosSharp and game development concepts such as physics, content management, game state, and game design."
 ms.topic: article
 ms.prod: xamarin
@@ -10,7 +10,7 @@ ms.author: chape
 ms.date: 03/27/2017
 ---
 
-# Fruity Falls Game Details
+# Fruity Falls game details
 
 _This guide reviews the Fruity Falls game, covering common CocosSharp and game development concepts such as physics, content management, game state, and game design._
 
@@ -18,7 +18,7 @@ Fruity Falls is a simple, physics-based game in which the player sorts red and y
 
 ![](fruity-falls-images/image1.png "The goal of the game is to earn as many points as possible without letting a fruit drop into the wrong bin, ending the game")
 
-Fruity Falls extends the concepts introduced in the [BouncingGame guide](~/graphics-games/cocossharp/first-game/index.md) by adding the following:
+Fruity Falls extends the concepts introduced in the [BouncingGame guide](~/graphics-games/cocossharp/bouncing-game.md) by adding the following:
 
  - Content in the form of PNGs
  - Advanced physics
@@ -28,20 +28,20 @@ Fruity Falls extends the concepts introduced in the [BouncingGame guide](~/graph
  - Code organization using game entities
  - Game design focused on fun and replay value
 
-While the BouncingGame focused on introducing core CocosSharp concepts, Fruity Falls shows how to bring it all together into a finished game product. Since this guide references the BouncingGame, readers should first familiarize themselves with the [BouncingGame guide](~/graphics-games/cocossharp/first-game/index.md) prior to reading this guide.
+While the [BouncingGame guide](~/graphics-games/cocossharp/bouncing-game.md) focused on introducing core CocosSharp concepts, Fruity Falls shows how to bring it all together into a finished game product. Since this guide references the BouncingGame, readers should first familiarize themselves with the [BouncingGame guide](~/graphics-games/cocossharp/bouncing-game.md) prior to reading this guide.
 
 This guide covers the implementation and design of Fruity Falls to provide insights to help you make your own game. It covers the following topics:
 
 
-- [GameController Class](#GameController_Class)
-- [Game Entities](#Game_Entities)
-- [Fruit Graphics](#Fruit_Graphics)
-- [Physics](#Physics)
-- [Game Content](#Game_Content)
-- [GameCoefficients](#GameCoefficients)
+- [GameController class](#gamecontroller-class)
+- [Game entities](#game-entities)
+- [Fruit graphics](#fruit-graphics)
+- [Physics](#physics)
+- [Game content](#game-content)
+- [GameCoefficients](#gamecoefficients)
 
 
-# GameController Class
+## GameController class
 
 The Fruity Falls PCL project includes a `GameController` class which is responsible for instantiating the game and moving between scenes. This class is used by both the iOS and Android projects to eliminate duplicate code.
 
@@ -75,7 +75,7 @@ GameView.DesignResolution = new CCSizeI (width, height);
 Finally, the `GameController` class provides a static method which can be called by any `CCGameScene` to transition to a different `CCScene`. This method is used to move between the `TitleScene` and the `GameScene`.
 
 
-# Game Entities
+## Game entities
 
 Fruity Falls makes use of the entity pattern for most of the game objects. A detailed explanation of this pattern can be found in the [Entities in CocosSharp guide](~/graphics-games/cocossharp/entities.md).
 
@@ -103,7 +103,7 @@ public Fruit ()
 ```
 
 
-## Fruit Graphics
+### Fruit graphics
 
 The `CreateFruitGraphic` method creates a `CCSprite` instance and adds it to the `Fruit`. The `IsAntialiased` property is set to false to give the game a pixelated look. This value is set to false on all `CCSprite` and `CCLabel` instances throughout the game:
 
@@ -175,7 +175,7 @@ The `extraPointsLabel` color is adjusted to keep contrast with the fruit image, 
 ![](fruity-falls-images/image4.png "The extraPointsLabel color is adjusted to keep contrast with the fruit image, and its PositionY value is adjusted to center the CCLabel on the fruits CCSprite")
 
 
-## Collision
+### Collision
 
 Fruity Falls implements a custom collision solution using objects in the Geometry folder:
 
@@ -214,17 +214,17 @@ private void CreateCollision()
 }
 ```
 
-Collision logic is covered [later in this guide](#Collision).
+Collision logic is covered [later in this guide](#collision).
 
 
-# Physics
+## Physics
 
 The physics in Fruity Falls can be separated into two categories: movement and collision. 
 
 
-## Movement Using Velocity and Acceleration
+### Movement using velocity and acceleration
 
-Fruity Falls uses `Velocity` and `Acceleration` values to control the movement of its entities, similar to the [BouncingGame](~/graphics-games/cocossharp/first-game/index.md). Entities implement their movement logic in a method named `Activity`, which is called once per frame. For example, we can see the implementation of movement in the `Fruit` class’ `Activity` method:
+Fruity Falls uses `Velocity` and `Acceleration` values to control the movement of its entities, similar to the [BouncingGame](~/graphics-games/cocossharp/bouncing-game.md). Entities implement their movement logic in a method named `Activity`, which is called once per frame. For example, we can see the implementation of movement in the `Fruit` class’ `Activity` method:
 
 ```csharp
 public void Activity(float frameTimeInSeconds)
@@ -270,7 +270,7 @@ public void HandleInput(CCPoint touchPoint)
 }
 ```
 
-## Collision
+### Collision
 
 Fruity Falls implements semi-realistic collision between the fruit and other collidable objects such as the `Paddle` and `GameScene.Splitter`. To help debug collision, Fruity Falls collision areas can be made visible by changing the `GameCoefficients.ShowDebugInfo` in the `GameCoefficients.cs` file:
 
@@ -326,7 +326,8 @@ private void PerformCollision()
 }
 ```
 
-### FruitVsBorders
+#### FruitVsBorders
+
 `FruitVsBorders` collision performs its own logic for collision rather than relying on logic contained in a different class. This difference exists because the collision between fruit and the screen’s borders is not perfectly solid – it is possible for fruit to be pushed off the edge of the screen by careful paddle movement. Fruit will bounce off of the screen when hit with the paddle, but if the player slowly pushes fruit it will  move past the edge and off the screen:
 
 
@@ -348,7 +349,8 @@ private void FruitVsBorders(Fruit fruit)
 }
 ```
 
-### FruitVsBins
+#### FruitVsBins
+
 The `FruitVsBins` method is responsible for checking if any fruit has fallen into one of the two bins. If so, then the player is awarded points (if the fruit/bin colors match) or the game ends (if the colors do not match):
 
 
@@ -376,7 +378,8 @@ private void FruitVsBins(Fruit fruit)
 }
 ```
 
-### FruitVsPaddle and FruitPolygonCollision
+#### FruitVsPaddle and FruitPolygonCollision
+
 Fruit vs. paddle and fruit vs. splitter (the area separating the two bins) collision both rely on the `FruitPolygonCollision` method. This method has three parts:
 
 1. Test whether the objects collide
@@ -416,7 +419,7 @@ The math behind the collision logic contained in the `Polygon` and `CollisionRes
  
 
 
-# Game Content
+## Game content
 
 The art in Fruity Falls immediately distinguishes the game from the BouncingGame. While the game designs are similar, players will immediately see a difference in how the two games look. Gamers often decide whether to try a game by its visuals. Therefore, it is vitally important that developers invest resources in making a visually appealing game.
 
@@ -429,7 +432,7 @@ The art for Fruity Falls was created with the following goals:
  - Ability to create simple visual effects without resource-heavy animations
 
 
-## Content Location
+### Content location
 
 Fruity Falls includes all of its content in the Images folder in the Android project:
 
@@ -442,9 +445,9 @@ These same files are linked in the iOS project to avoid duplication, and so chan
 It’s worth noting that the content is not contained within the **Ld** or **Hd** folders, which are part of the default CocosSharp template. The **Ld** and **Hd** folders are intended to be used for games which provide two sets of content – one for lower-resolution devices, such as phones, and one for higher-resolution devices, such as tablets. The Fruity Falls art is intentionally created with a pixelated aesthetic, so it does not need to provide content for different screen sizes. Therefore, the **Ld** and **Hd** folders have been completely removed from the project.
 
 
-## GameScene Layering
+### GameScene layering
 
-As mentioned earlier in this guide, the GameScene is responsible for all game object instantiation, positioning, and inter-object logic (such as collision). All objects are added to one of four `CCLayer` instances:
+As mentioned earlier in this guide, the `GameScene` is responsible for all game object instantiation, positioning, and inter-object logic (such as collision). All objects are added to one of four `CCLayer` instances:
 
 
 ```csharp
@@ -485,7 +488,7 @@ private void CreateBackground()
 ```
 
 
-## Vine Entity
+### Vine entity
 
 The `Vine` entity is uniquely used for content – it has no impact on gameplay. It is composed of twenty `CCSprite` instances, a number selected by trial and error to make sure the vine always reaches the top of the screen:
 
@@ -554,7 +557,7 @@ public void Activity(float frameTimeInSeconds)
 Notice that a small amount of rotation is added back to the vine through the `vineAngle` coefficient. This value can be changed to adjust how much the vines rotate.
 
 
-# GameCoefficients
+## GameCoefficients
 
 Every good game is the product of iteration, so Fruity Falls includes a class called `GameCoefficients` which controls how the game is played. This class contains expressive variables which are used throughout the game to control physics, layout, spawning, and scoring.
 
@@ -603,11 +606,11 @@ public static class GameCoefficients
 ```
 
 
-# Conclusion
+## Conclusion
 
 This guide explored the Fruity Falls game. It covered concepts including content, physics, and game state management.
 
-## Related Links
+## Related links
 
 - [CocosSharp API Documentation](https://developer.xamarin.com/api/namespace/CocosSharp/)
 - [Completed project (sample)](https://developer.xamarin.com/samples/mobile/FruityFalls/)
