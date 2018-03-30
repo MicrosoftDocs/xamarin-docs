@@ -2,7 +2,7 @@
     "redirections": [
       {
           "source_path": "docs/cross-platform/getting-started/index.md",
-          "redirect_url": "/xamarin/cross-platform/get-started"
+          "redirect_url": "/xamarin/xamarin-forms/get-started"
       },
       {
           "source_path": "docs/mac/app-fundamentals/troubleshooting.md",

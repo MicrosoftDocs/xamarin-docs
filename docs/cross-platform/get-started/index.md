@@ -21,11 +21,13 @@ ready to go.
 
 ## Build Your First App
 
-To start coding straight away, choose a quick start guide to help build your first app:
+> [!div class="nextstepaction"]
+> [Xamarin.Forms Quickstart](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md)
+
+If you'd like to build an app using native UI technologies (like Android XML or Xcode Storyboards), try one of these platform-specific guides:
 
 * [Android Quick Start](~/android/get-started/hello-android/hello-android-quickstart.md)
 * [iOS Quick Start](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
-* [Xamarin.Forms Quick Start](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md)
 * [Getting Started with Mac](~/mac/get-started/hello-mac.md)
 
 ## Getting Started with Mobile Development
@@ -46,7 +48,7 @@ This article discusses the software development lifecycle with respect to mobile
 This document provides an overview of Visual Studio for Mac, the Integrated Development Environment (IDE).
 
 
-## Xamarin University Video
+## Get Started with Xamarin University
 
 > [!VIDEO https://youtube.com/embed/NGvn-pGZFPA]
 

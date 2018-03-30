@@ -1,4 +1,6 @@
 ---
+redirect_url: /xamarin/cross-platform/internals/available-assemblies/
+
 title: "Internals"
 description: "Details of the inner workings of the Xamarin SDKs."
 ms.topic: article

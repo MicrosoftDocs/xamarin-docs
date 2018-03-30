@@ -5,7 +5,7 @@ metadata:
   description: Cross-platform guidance for mobile developers.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 03/28/2018
   ms.topic: landing-page
 abstract:
   description: Xamarin provides a platform for cross-platform development for mobile, tablet, and desktop applications.
@@ -29,15 +29,15 @@ sections:
     - image:
         src: https://docs.microsoft.com/media/common/i_setup.svg
       text: Requirements
-      href: ~/cross-platform/get-started/index.md
+      href: ~/cross-platform/get-started/requirements.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
       text: Getting Started
-      href: ~/cross-platform/get-started/index.md
+      href: ~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
       text: Multi-screen Apps
-      href: ~/cross-platform/index.md
+      href: ~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/quickstart.md
 - title: Guides
   items:
   - type: grid
@@ -60,12 +60,6 @@ sections:
           src: ~/media/icons/i_platform.svg
           href: ~/
         title: Platform Features
-      - href: ~/cross-platform/data-cloud/
-        html: Local and remote data storage and retrieval, and other cloud-based services.
-        image:
-          src: ~/media/icons/i_data-cloud.svg
-          href: ~/cross-platform/data-cloud/
-        title: Data & Cloud Services
       - href: ~/cross-platform/macios/
         html: Common features of the iOS, watchOS, tvOS, and macOS SDKs.
         image:
@@ -88,12 +82,6 @@ sections:
           src: ~/media/icons/i_deploy-test.svg
           href: ~/cross-platform/deploy-test/
         title: Deployment and Testing
-      - href: ~/cross-platform/internals/
-        html: Additional information about cross-platform mobile, tablet, and desktop development.
-        image:
-          src: https://docs.microsoft.com/en-us/media/common/i_advanced.svg
-          href: ~/cross-platform/internals/
-        title: Advanced Concepts & Internals
 - title: Platforms
   items:
   - type: list
