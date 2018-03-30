@@ -7,7 +7,7 @@ ms.assetid: CD128CB9-499F-4558-B49F-77248824EFDF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 03/30/2018
 ---
 
 # Visual Studio Android Emulator
@@ -24,6 +24,10 @@ times than the default emulator that comes with the Android SDK. The
 Visual Studio Emulator for Android can be used as an alternative to the
 default Android SDK emulator when developing a Xamarin.Android
 application.
+
+> [!NOTE]
+> The Visual Studio Android Emulator is compatible only with Visual 
+> Studio 2015 &ndash; it does not work with Visual Studio 2017.
 
 This guide explains how to launch the Microsoft Android emulator from
 Visual Studio to test your app, and it describes the various features

@@ -6,7 +6,7 @@ ms.assetid: 3528E195-AA74-90AF-B5F3-3B65FB4F0BB8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/13/2018
+ms.date: 03/30/2018
 ---
 
 # Linking on Android
@@ -176,6 +176,11 @@ namespace Android.Runtime
     }
 }
 ```
+
+In the above examples, the `Preserve` attribute is declared in the
+`Android.Runtime` namespace; however, you can use the `Preserve`
+attribute in any namespace because the linker looks up this attribute
+by type name.
 
 
 
