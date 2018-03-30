@@ -36,7 +36,7 @@ ListView has a number of components available to exercise the native functionali
 
 ![](images/grouping-depth.png "ListView with Grouped Data")
 
-- **[Cells](customizing-cell-appearance.md)** &ndash; Data in a ListView is presented in cells. Each cell corresponds to a row of data. There arebuilt-in cells to choose from, or you can define your own custom cell. Both built-in and custom cells can be used/defined in XAML or code.
+- **[Cells](customizing-cell-appearance.md)** &ndash; Data in a ListView is presented in cells. Each cell corresponds to a row of data. There are built-in cells to choose from, or you can define your own custom cell. Both built-in and custom cells can be used/defined in XAML or code.
   - **[Built-in](customizing-cell-appearance.md#Built_in_Cells)** &ndash; Built in cells, especially TextCell and ImageCell, can be great for performance, since they correspond to native controls on each platform.
    	- **[TextCell](customizing-cell-appearance.md#TextCell)** &ndash; Displays a string of text, optionally with detail text. Detail text is rendered as a second line in a smaller font with an accent color.
    	- **[ImageCell](customizing-cell-appearance.md#ImageCell)** &ndash; Displays an image with text. Appears as a TextCell with an image on the left.
