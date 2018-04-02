@@ -116,4 +116,4 @@ Notice that the `SKPath` is created in a `using` block. This `SKPath` consumes m
 ## Related Links
 
 - [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

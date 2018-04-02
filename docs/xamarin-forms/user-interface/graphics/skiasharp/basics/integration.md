@@ -19,7 +19,7 @@ SkiaSharp graphics can integrate with the rest of Xamarin.Forms in several ways.
 ![](integration-images/integrationexample.png "Selecting a color with sliders")
 
 Another approach to creating interactive SkiaSharp graphics in Xamarin.Forms is through touch.
-The second page in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) program is entitled **Tap Toggle Fill**. It draws a simple circle two ways &mdash; without a fill and with a fill &mdash; toggled by a tap. The [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) class shows how you can alter SkiaSharp graphics in response to user input.
+The second page in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program is entitled **Tap Toggle Fill**. It draws a simple circle two ways &mdash; without a fill and with a fill &mdash; toggled by a tap. The [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) class shows how you can alter SkiaSharp graphics in response to user input.
 
 For this page, the `SKCanvasView` class is instantiated in the [TapToggleFill.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) file, which also sets a Xamarin.Forms [`TapGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) on the view:
 
@@ -237,4 +237,4 @@ But the best way to get a feel for the two models is to experiment with them you
 ## Related Links
 
 - [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

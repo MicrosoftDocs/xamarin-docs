@@ -22,7 +22,7 @@ If you've been programming in Xamarin.Forms for a while, you might have a feel f
 
 Those circles *are* small in comparison with Xamarin.Forms sizes. By default, SkiaSharp draws in units of pixels while Xamarin.Forms bases coordinates and sizes on a device-independent unit established by the underlying platform.(More information on the Xamarin.Forms coordinate system can be found in [Chapter 5. Dealing with Sizes](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) of the book *Creating Mobile Apps with Xamarin.Forms*.)
 
-The page in the [**SkewSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+The page in the [**SkewSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 program entitled **Surface Size** uses SkiaSharp text output to show the size of the display surface from three different sources:
 
 - The normal Xamarin.Forms [`Width`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) and [`Height`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) properties of the `SKCanvasView` object.
@@ -162,4 +162,4 @@ canvas.DrawOval(rect, paint);
 ## Related Links
 
 - [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

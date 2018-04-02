@@ -687,5 +687,5 @@ The code loops through the collection and displays the pile of bitmaps from the 
 ## Related Links
 
 - [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Invoking Events from Effects](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

@@ -18,7 +18,7 @@ You can animate SkiaSharp graphics in Xamarin.Forms by causing the `PaintSurface
 
 ![](animation-images/animationexample.png "Several concentric circles seemingly expanding from the center")
 
-The **Pulsating Ellipse** page in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) program animates the two axes of an ellipse so that it appears to be pulsating, and you can even control the rate of this pulsation:
+The **Pulsating Ellipse** page in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program animates the two axes of an ellipse so that it appears to be pulsating, and you can even control the rate of this pulsation:
 
 
 The [**PulsatingEllipsePage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) file instantiates a Xamarin.Forms `Slider` and a `Label` to display the current value of the slider. This is a common way to integrate an `SKCanvasView` with other Xamarin.Forms views:
@@ -247,4 +247,4 @@ The result is that the image looks the same when `t` equals 0 as when `t` equals
 ## Related Links
 
 - [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -14,9 +14,9 @@ ms.date: 03/10/2017
 
 _Learn the basics of SkiaSharp graphics concepts and coordinates_
 
-After you have added the SkiaSharp NuGet package to your Xamarin.Forms application, you can begin using SkiaSharp graphics. The [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) solution includes several pages that demonstrate SkiaSharp programming techniques in progressively more advanced lessons.
+After you have added the SkiaSharp NuGet package to your Xamarin.Forms application, you can begin using SkiaSharp graphics. The [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) solution includes several pages that demonstrate SkiaSharp programming techniques in progressively more advanced lessons.
 
-All the sample programs in this section appear under the heading **SkiaSharp Basics** in the home page of the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) program, and in the [**Basics**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics) folder of the solution.
+All the sample programs in this section appear under the heading **SkiaSharp Basics** in the home page of the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program, and in the [**Basics**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics) folder of the solution.
 
 ## [Drawing a Simple Circle](circle.md)
 
@@ -46,4 +46,4 @@ Load bitmaps from various sources and display them.
 ## Related Links
 
 - [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -16,7 +16,7 @@ _Learn how to use SkiaSharp to draw curves and use path features_
 
 The exploration of [`SKPath`](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) methods and properties began in the [SkiaSharp Lines and Paths](~/xamarin-forms/user-interface/graphics/skiasharp/paths/index.md) article. The articles here continue with methods that add curves to an `SKPath` objects, and exploit other powerful path features. You'll see how you can specify an entire path in a concise text string, how to use path effects, and how to dig into path internals.
 
-All the sample programs in this section appear under the heading **Curves and More Paths** in the home page of the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) program, and in the [**Curves**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves) folder of the solution.
+All the sample programs in this section appear under the heading **Curves and More Paths** in the home page of the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program, and in the [**Curves**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves) folder of the solution.
 
 ## [Three Ways to Draw an Arc](arcs.md)
 
@@ -50,4 +50,4 @@ Get information about paths and enumerate the contents
 ## Related Links
 
 - [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

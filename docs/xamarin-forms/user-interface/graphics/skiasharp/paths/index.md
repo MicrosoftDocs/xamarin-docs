@@ -18,7 +18,7 @@ The [previous section](~/xamarin-forms/user-interface/graphics/skiasharp/basics/
 
 The graphics path is the most generalized approach to drawing lines and curves in SkiaSharp. This section covers using an `SKPath` object to draw straight lines, and to use a collection of tiny straight lines (called a *polyline*) to draw curves that you can define mathematically. A later section will discusses the various sorts of curves supported by `SKPath`.
 
-All the sample programs in this section appear under the heading **Lines and Paths** in the home page of the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) program, and in the [**Paths**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Paths) folder of the solution.
+All the sample programs in this section appear under the heading **Lines and Paths** in the home page of the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program, and in the [**Paths**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Paths) folder of the solution.
 
 ## [Lines and Stroke Caps](lines.md)
 
@@ -48,4 +48,4 @@ Use your fingers to paint on the canvas.
 ## Related Links
 
 - [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -32,7 +32,7 @@ These arguments may be negative. A second [`Translate`](https://developer.xamari
 public void Translate (SKPoint point)
 ```
 
-The **Accumulated Translate** page of the [**SkiaSharpForms**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) sample program demonstrates that multiple calls of the `Translate` method are cumulative. The [`AccumulatedTranslate`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) class displays 20 versions of the same rectangle, each one offset from the previous rectangle just enough so they stretch along the diagonal. Here's the `PaintSurface` event handler:
+The **Accumulated Translate** page of the [**SkiaSharpForms**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) sample program demonstrates that multiple calls of the `Translate` method are cumulative. The [`AccumulatedTranslate`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) class displays 20 versions of the same rectangle, each one offset from the previous rectangle just enough so they stretch along the diagonal. Here's the `PaintSurface` event handler:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -299,4 +299,4 @@ Notice that the star maintains the same orientation as it revolves around the ce
 ## Related Links
 
 - [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
