@@ -7,7 +7,7 @@ ms.assetid: FA3B8EC4-34D2-47E3-ACEA-BD34B28115B9
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
+ms.date: 04/02/2018
 ---
 
 # Android Speech
@@ -194,6 +194,18 @@ foreach (var locale in localesAvailable)
 langAvailable = langAvailable.OrderBy(t => t).Distinct().ToList();
 ```
 
+This code calls
+[TextToSpeech.IsLanguageAvailable](https://developer.xamarin.com/api/member/Android.Speech.Tts.TextToSpeech.IsLanguageAvailable/p/Java.Util.Locale/) 
+to test if the language package for a given locale is already present on the device. 
+This method returns a
+[LanguageAvailableResult](https://developer.xamarin.com/api/type/Android.Speech.Tts.LanguageAvailableResult/),
+which indicates whether the language for
+the passed locale is available. If `LanguageAvailableResult` indicates
+that the language is `NotSupported`, then there is no voice package
+available (even for download) for that language. If
+`LanguageAvailableResult` is set to `MissingData`, then it is possible
+to download a new language package as explained below in Step 4.
+
 ### Step 3 - Setting the speed and pitch
 
 Android allows the user to alter the sound of the speech by altering the `SpeechRate` and `Pitch` (the rate of
@@ -201,13 +213,24 @@ speed and the tone of the speech). This goes from 0 to 1, with "normal" speech b
 
 ### Step 4 - Testing and loading new languages
 
-This is performed using an `Intent` with the result being interpreted in `OnActivityResult`. Unlike the
-speech-to-text example that used the `RecognizerIntent` as a `PutExtra` parameter to the `Intent`, the
-install Intent uses an `Action`.
+Downloading a new language is performed by using an `Intent`. The
+result of this intent causes the
+[OnActivityResult](https://developer.xamarin.com/api/member/Android.App.Activity.OnActivityResult/)
+method to be invoked. Unlike the speech-to-text example (which used the
+[RecognizerIntent](https://developer.xamarin.com/api/type/Android.Speech.RecognizerIntent/)
+as a `PutExtra` parameter to the `Intent`), the testing and loading `Intent`s are `Action`-based:
 
-It is possible to install a new language from Google using the following code. The result of the
-`Activity` checks to see if the language is required and if it is, installs the language after being
-prompted for the download to occur.
+-   [TextToSpeech.Engine.ActionCheckTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionCheckTtsData/)
+    &ndash; Starts an activity from the platform `TextToSpeech` engine
+    to verify proper installation and availability of language
+    resources on the device.
+
+-   [TextToSpeech.Engine.ActionInstallTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionInstallTtsData/)
+    &ndash; Starts an activity that prompts the user to download the necessary
+    languages.
+
+The following code example illustrates how to use these actions to test
+for language resources and download a new language:
 
 ```csharp
 var checkTTSIntent = new Intent();
@@ -224,6 +247,30 @@ protected override void OnActivityResult(int req, Result res, Intent data)
     }
 }
 ```
+
+`TextToSpeech.Engine.ActionCheckTtsData` tests for the availability of
+language resources. `OnActivityResult` is invoked when this test
+completes. If language resources need to be downloaded,
+`OnActivityResult` fires off the
+`TextToSpeech.Engine.ActionInstallTtsData` action to start an activity
+that allows the user to download the necessary languages. Note that
+this `OnActivityResult` implementation does not check the `Result` code
+because, in this simplified example, the determination has already been
+made that the language package needs to be downloaded.
+
+The `TextToSpeech.Engine.ActionInstallTtsData` action causes the
+**Google TTS voice data** activity to be presented to the user for
+choosing languages to download:
+
+![Google TTS Voice Data Activity](speech-images/01-google-tts-voice-data.png)
+
+As an example, the user might pick French and click the download icon
+to download French voice data:
+
+![Example of downloading French language](speech-images/02-selecting-french.png)
+
+Installation of this data happens automatically after the download completes.
+
 
 ### Step 5 - The IOnInitListener
 
