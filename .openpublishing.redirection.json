@@ -19,6 +19,10 @@
       {
           "source_path": "docs/graphics-games/cocossharp/first-game/part2.md",
           "redirect_url": "/xamarin/graphics-games/cocossharp/bouncing-game"
+      },
+      {
+          "source_path": "docs/ios/troubleshooting/questions/downgrade-xcode.md",
+          "redirect_url": "/xamarin/ios/troubleshooting/questions/previous-xcode"
       }
     ]
   }

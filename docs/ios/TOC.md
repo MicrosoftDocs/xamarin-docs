@@ -261,7 +261,7 @@
 ### [Error messages (mtouch)](troubleshooting/mtouch-errors.md)
 ### [Frequently Asked Questions](troubleshooting/questions/index.md)
 #### [Can I use a Mac VM with Xamarin?](troubleshooting/questions/mac-vm.md)
-#### [How can I downgrade Xcode?](troubleshooting/questions/downgrade-xcode.md)
+#### [Downloading a previous version of Xcode](troubleshooting/questions/previous-xcode.md)
 #### [Where can I set my iOS SDK Locations?](troubleshooting/questions/ios-sdk.md)
 #### [Reenable developer options after updating iOS](troubleshooting/questions/update-developer-options.md)
 #### [User Location not working in iOS 8](troubleshooting/questions/ios8-user-location.md)
