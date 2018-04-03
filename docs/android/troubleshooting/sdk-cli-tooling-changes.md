@@ -1,7 +1,7 @@
 ---
 title: "Changes to the Android SDK Tooling"
 description: "Changes to how the Android SDK manages the installed API levels and AVDs."
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
 ms.technology: xamarin-android

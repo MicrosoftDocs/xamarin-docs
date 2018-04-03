@@ -1,7 +1,6 @@
 ---
 title: "Running the Android SDK Emulator"
 description: "How to debug your app with the Android SDK Emulator"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android

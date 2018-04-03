@@ -1,7 +1,6 @@
 ---
 title: "Native Views in C#"
 description: "Native views from iOS, Android, and UWP can be directly referenced from Xamarin.Forms pages created using C#. This article demonstrates how to add native views to a Xamarin.Forms layout created using C#, and how to override the layout of custom views to correct their measurement API usage."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 230F937C-F914-4B21-8EA1-1A2A9E644769
 ms.technology: xamarin-forms

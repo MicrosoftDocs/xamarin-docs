@@ -1,7 +1,6 @@
 ---
 title: "Visual Studio Android Emulator"
 description: "This guide explains how to configure and use the Visual Studio Android Emulator to develop Xamarin.Android apps in Visual Studio 2015."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CD128CB9-499F-4558-B49F-77248824EFDF
 ms.technology: xamarin-android

@@ -1,6 +1,5 @@
 ---
 title: "Binding Objective-C libraries"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 ms.technology: xamarin-cross-platform

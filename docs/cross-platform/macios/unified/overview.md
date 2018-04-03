@@ -1,7 +1,6 @@
 ---
 title: "Unified API Overview"
 description: "The new style API makes it easier than ever to share code between Mac and iOS as well as allowing you to support 32 and 64 bit applications with the same binary."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
 ms.technology: xamarin-cross-platform

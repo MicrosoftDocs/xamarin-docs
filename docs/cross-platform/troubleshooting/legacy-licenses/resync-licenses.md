@@ -1,6 +1,6 @@
 ---
 title: "How do I manually resynchronize Xamarin licenses?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: D0BD93E9-3A1F-4E5B-8EE8-36ADC33DCFE4
 ms.technology: xamarin-cross-platform

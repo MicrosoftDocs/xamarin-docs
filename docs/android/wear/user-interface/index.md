@@ -1,7 +1,6 @@
 ---
 title: "User Interface"
 description: "Creating User Interfaces for Android Wear Apps"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 092A6E08-FB07-4AC2-A5BD-8A9D4E6268D8
 ms.technology: xamarin-android

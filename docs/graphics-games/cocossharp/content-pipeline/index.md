@@ -1,7 +1,6 @@
 ---
 title: "CocosSharp Content Pipeline"
 description: "This document links to guides that describe the CocosSharp Content Pipeline."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2BC895E5-BDFD-443D-A96D-86BA7042CB70
 ms.technology: xamarin-cross-platform

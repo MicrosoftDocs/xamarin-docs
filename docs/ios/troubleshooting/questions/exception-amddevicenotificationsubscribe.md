@@ -1,6 +1,6 @@
 ---
 title: "System.Exception AMDeviceNotificationSubscribe returned ..."
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7E4ACC7E-F4FB-46C1-8837-C7FBAAFB2DC7
 ms.technology: xamarin-ios

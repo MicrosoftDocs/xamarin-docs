@@ -1,7 +1,6 @@
 ---
 title: "Social Framework"
 description: "The Social Framework provides a unified API for interacting with social networks including Twitter and Facebook, as well as SinaWeibo for users in China."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
 ms.technology: xamarin-ios

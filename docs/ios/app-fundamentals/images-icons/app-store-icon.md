@@ -1,7 +1,6 @@
 ---
 title: "App Store Icon"
 description: "This article covers including and managing an image asset in a Xamarin.iOS app to be used as an App Store Icon."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios

@@ -1,6 +1,5 @@
 ---
 title: "Part 3 - Setting Up A Xamarin Cross Platform Solution"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 ms.technology: xamarin-cross-platform

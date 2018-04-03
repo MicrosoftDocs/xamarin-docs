@@ -1,7 +1,6 @@
 ---
 title: "ListView Performance"
 description: "Ensure great performance with your ListView-based app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1B085639-652C-4862-86EB-5D55D32B9395
 ms.technology: xamarin-forms

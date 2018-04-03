@@ -1,6 +1,6 @@
 ---
 title: "How do I enable Intellisense in Android .axml files?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 84850CB2-1CE2-4D3F-BD01-6B3B033F5A4C
 ms.technology: xamarin-android

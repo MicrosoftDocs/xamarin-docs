@@ -1,7 +1,7 @@
 ---
 title: "Xamarin.Mac troubleshooting"
 description: "Documents in this section cover features specific to troubleshooting with Xamarin.Mac."
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: EB81B998-6931-4CD3-8BB0-4679D5B5F39A
 ms.technology: xamarin-mac

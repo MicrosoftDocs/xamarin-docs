@@ -1,7 +1,6 @@
 ---
 title: "Introduction to Storyboards"
 description: "This article provides an introduction to working with Storyboards in a Xamarin.Mac app. It covers creating and maintaining the app's UI using storyboards and Xcode's Interface Builder."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F37BA503-0B25-489F-80A8-58C493291A55
 ms.technology: xamarin-mac

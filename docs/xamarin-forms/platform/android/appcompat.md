@@ -1,7 +1,6 @@
 ---
 title: "Adding AppCompat and Material Design"
 description: "Follow these steps to convert existing Xamarin.Forms Android apps to use AppCompat and Material Design"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 045FBCDF-4D45-48BB-9911-BD3938C87D58
 ms.technology: xamarin-forms

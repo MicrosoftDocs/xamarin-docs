@@ -1,7 +1,6 @@
 ---
 title: "Explicit Styles"
 description: "An explicit style is one that is selectively applied to controls by setting their Style properties."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C0DF9F8F-B431-4374-A574-325BC3C41A3B
 ms.technology: xamarin-forms

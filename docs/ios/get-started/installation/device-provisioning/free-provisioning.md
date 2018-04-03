@@ -1,7 +1,6 @@
 ---
 title: "Free Provisioning"
 description: "With Apple's release of Xcode 7 came an important change for all iOS and Mac developers–free provisioning."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios

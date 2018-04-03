@@ -1,7 +1,6 @@
 ---
 title: "Introduction to watchOS 4"
 description: "New features available to developers using Xamarin for watchOS 4."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
 ms.technology: xamarin-ios

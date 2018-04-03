@@ -1,6 +1,5 @@
 ---
 title: "Installing Xamarin Preview on Windows"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9F730444-06E8-4B3F-8A19-CA95CD484FFA
 ms.technology: xamarin-cross-platform

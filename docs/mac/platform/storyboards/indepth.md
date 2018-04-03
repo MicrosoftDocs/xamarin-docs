@@ -1,7 +1,6 @@
 ---
 title: "Working with Storyboards"
 description: "Building macOS user interfaces with storyboards using Xcode."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
 ms.technology: xamarin-mac

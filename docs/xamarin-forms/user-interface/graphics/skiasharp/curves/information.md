@@ -1,7 +1,6 @@
 ---
 title: "Path Information and Enumeration"
 description: "Get information about paths and enumerate the contents"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8E8C5C6A-F324-4155-8652-7A77D231B3E5
 ms.technology: xamarin-forms

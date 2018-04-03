@@ -1,7 +1,6 @@
 ---
 title: "Picker"
 description: "The Picker view is a control for selecting a text item from a list of data."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms

@@ -1,6 +1,5 @@
 ---
 title: "Authentication and Authorization"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
 ms.technology: xamarin-forms

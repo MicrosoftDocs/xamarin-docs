@@ -1,7 +1,6 @@
 ---
 title: "Pickers"
 description: "Using built-in Android dialogs to query the user for time and date"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 57C86933-3F04-47DD-9839-72D522D73330
 ms.technology: xamarin-android

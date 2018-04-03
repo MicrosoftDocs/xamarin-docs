@@ -1,7 +1,6 @@
 ---
 title: "Google Emulator Manager"
 description: "How to create and manage Android virtual devices using the Google Emulator Manager"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0C0BBEC0-C84A-4558-B905-4EF81FCD62F9
 ms.technology: xamarin-android

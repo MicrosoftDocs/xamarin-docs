@@ -1,7 +1,6 @@
 ---
 title: "HealthKit"
 description: "HealthKit is a framework introduced in iOS 8 that provides a centralized, coordinated, and secure datastore for health-related information. The operating system ensures the privacy and security of health information and, with the Health app, a dashboard for the user. With the user’s permission, applications can read and write a broad variety of health information."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios

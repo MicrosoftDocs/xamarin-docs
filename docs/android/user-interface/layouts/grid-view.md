@@ -1,6 +1,5 @@
 ---
 title: "GridView"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6992C4FF-ECBB-3493-AEE6-3E063C1A8C54
 ms.technology: xamarin-android

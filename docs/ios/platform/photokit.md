@@ -1,7 +1,6 @@
 ---
 title: "PhotoKit"
 description: "Photo Kit allows apps to query the system image library and create custom UI to view and modify its contents."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios

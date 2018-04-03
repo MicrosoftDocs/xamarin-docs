@@ -1,7 +1,6 @@
 ---
 title: "Storing and Accessing Data in Azure Storage"
 description: "Azure Storage is a scalable cloud storage solution that can be used to store unstructured, and structured data. This article demonstrates how to use Xamarin.Forms to store text and binary data in Azure Storage, and how to access the data."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
 ms.technology: xamarin-forms

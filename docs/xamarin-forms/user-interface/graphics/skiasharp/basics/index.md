@@ -1,7 +1,6 @@
 ---
 title: "SkiaSharp Drawing Basics"
 description: "Learn the basics of SkiaSharp graphics concepts and coordinates"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B

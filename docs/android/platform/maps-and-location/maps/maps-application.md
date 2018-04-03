@@ -1,6 +1,5 @@
 ---
 title: "Maps Application"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 929EACB8-8950-50E1-093C-43FB5F1F1CD5
 ms.technology: xamarin-android

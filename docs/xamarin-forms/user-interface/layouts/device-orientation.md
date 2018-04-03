@@ -1,7 +1,6 @@
 ---
 title: "Device Orientation"
 description: "Understand how to lay out applications that look great in portrait and landscape orientations."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
 ms.technology: xamarin-forms

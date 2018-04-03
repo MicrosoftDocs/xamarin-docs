@@ -1,7 +1,7 @@
 ---
 title: "How do I resolve a PathTooLongException error?"
 description: "This article explains how to resolve a PathTooLongException that may occur while building an app."
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 60EE1C8D-BE44-4612-B3B5-70316D71B1EA
 ms.technology: xamarin-android

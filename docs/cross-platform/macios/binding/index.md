@@ -1,6 +1,5 @@
 ---
 title: "Binding Objective-C"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 ms.technology: xamarin-cross-platform

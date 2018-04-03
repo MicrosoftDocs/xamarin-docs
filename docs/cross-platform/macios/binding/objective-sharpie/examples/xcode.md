@@ -1,6 +1,5 @@
 ---
 title: "Real-World Example using an Xcode Project"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 168AA64C-E181-4937-A1F2-AD095B9A36F2
 ms.technology: xamarin-cross-platform

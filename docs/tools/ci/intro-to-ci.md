@@ -1,7 +1,6 @@
 ---
 title: "Introduction to Continuous Integration with Xamarin"
 description: "Continuous Integration is a software engineering practice in which an automated build compiles and optionally tests an app when code is added or changed by developers in the project's version control repository. This article will discuss the general concepts of Continuous Integration and some of the options available for Continuous Integration with Xamarin projects."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 ms.technology: xamarin-cross-platform

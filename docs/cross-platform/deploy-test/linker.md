@@ -1,6 +1,5 @@
 ---
 title: "Custom Linker Configuration"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
 ms.technology: xamarin-cross-platform

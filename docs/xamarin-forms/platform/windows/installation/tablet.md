@@ -1,6 +1,5 @@
 ---
 title: "Adding a Windows App"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: ADF99B78-F1BC-48DF-9128-01B93C4411C1
 ms.technology: xamarin-forms

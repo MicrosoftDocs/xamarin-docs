@@ -1,7 +1,6 @@
 ---
 title: "Styles"
 description: "Using styles to customize appearance"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8
 ms.technology: xamarin-forms

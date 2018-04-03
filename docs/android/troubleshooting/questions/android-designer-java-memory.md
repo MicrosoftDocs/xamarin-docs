@@ -1,6 +1,6 @@
 ---
 title: "Adjusting Java memory parameters for the Android designer"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
 ms.technology: xamarin-android

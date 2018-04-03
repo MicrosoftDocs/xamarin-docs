@@ -1,7 +1,6 @@
 ---
 title: "Fragments"
 description: "Android 3.0 introduced Fragments, showing how to support more flexible designs for the many different screen sizes found on phones and tablets. This article will cover how to use Fragments to develop Xamarin.Android applications, and also how to support Fragments on pre-Android 3.0 (API Level 11) devices."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android

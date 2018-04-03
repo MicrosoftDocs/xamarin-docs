@@ -1,6 +1,5 @@
 ---
 title: "Text Input"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 03A7F1DC-017D-4501-91FD-82C78272CDB1
 ms.technology: xamarin-ios

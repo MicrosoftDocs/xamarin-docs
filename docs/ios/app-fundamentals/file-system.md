@@ -1,7 +1,6 @@
 ---
 title: "Working with the File System"
 description: "Xamarin.iOS can use the same System.IO classes to work with files and directories in iOS that you would use in any .NET application. However, despite the familiar classes and methods, iOS implements some restrictions on the files that can be created or accessed and also provides special features for certain directories. This article outlines these restrictions and features, and demonstrates how file access works in a Xamarin.iOS application."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios

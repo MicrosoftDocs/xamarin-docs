@@ -1,7 +1,6 @@
 ---
 title: "Application Icons"
 description: "This article covers including and managing an image asset in a Xamarin.iOS app to be used as an App Icon."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios

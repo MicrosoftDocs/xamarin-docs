@@ -1,7 +1,6 @@
 ---
 title: "Part 2. Essential XAML Syntax"
 description: "XAML is mostly designed for instantiating and initializing objects. But often, properties must be set to complex objects that cannot easily be represented as XML strings, and sometimes properties defined by one class must be set on a child class. These two needs require the essential XAML syntax features of property elements and attached properties."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
 ms.technology: xamarin-forms

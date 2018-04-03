@@ -1,7 +1,6 @@
 ---
 title: "Alerts"
 description: "This article covers working with alerts in a Xamarin.Mac application. It describes creating and displaying alerts from C# code and responding to user interactions."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac

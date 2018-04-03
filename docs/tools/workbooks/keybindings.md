@@ -1,6 +1,5 @@
 ---
 title: "Xamarin Workbooks Editor Keyboard Shortcuts"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6375A371-3215-4A7C-B97B-A19E58BE96D6
 ms.technology: xamarin-cross-platform

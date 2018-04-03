@@ -1,7 +1,7 @@
 ---
 title: "Troubleshooting"
 description: "Common error conditions and how to resolve them"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 63291951-7375-4CBF-BCC3-2E4AD157A2C8
 ms.technology: xamarin-forms

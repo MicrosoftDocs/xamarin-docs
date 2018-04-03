@@ -1,7 +1,6 @@
 ---
 title: "Installation"
 description: "This tutorial illustrates the installation paths for Xamarin.iOS."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 625A0933-47A5-6184-3AD5-7E1C8464AEBD
 ms.technology: xamarin-ios

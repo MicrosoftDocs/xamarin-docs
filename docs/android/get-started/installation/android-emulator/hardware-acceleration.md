@@ -1,7 +1,6 @@
 ---
 title: "Android Emulator Hardware Acceleration"
 description: "How to prepare your computer for maximum Android SDK Emulator performance"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android

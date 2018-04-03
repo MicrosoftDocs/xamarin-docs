@@ -1,7 +1,6 @@
 ---
 title: "SkiaSharp Transforms"
 description: "Learn about transforms for displaying SkiaSharp graphics"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551

@@ -1,7 +1,6 @@
 ---
 title: "Basic Animation"
 description: "Discover how to animate your SkiaSharp graphics"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3

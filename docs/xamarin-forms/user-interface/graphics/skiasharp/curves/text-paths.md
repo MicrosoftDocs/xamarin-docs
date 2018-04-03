@@ -1,7 +1,6 @@
 ---
 title: "Paths and Text"
 description: "Explore the intersection of paths and text"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B
 ms.technology: xamarin-forms

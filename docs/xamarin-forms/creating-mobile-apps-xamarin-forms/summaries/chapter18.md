@@ -1,6 +1,5 @@
 ---
 title: "Summary of Chapter 18. MVVM"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F

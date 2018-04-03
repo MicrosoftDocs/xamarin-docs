@@ -1,7 +1,6 @@
 ---
 title: "Working with Tables in the iOS Designer"
 description: "In the previous sections we explored developing using Tables. In this, the fifth and final section, we will aggregate what we have learned so far and create a basic Chore List application using a Storyboard."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
 ms.technology: xamarin-ios

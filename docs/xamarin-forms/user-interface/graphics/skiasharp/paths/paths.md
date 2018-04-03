@@ -1,7 +1,6 @@
 ---
 title: "Path Basics"
 description: "Explore the SkiaSharp SKPath object for combining connected lines and curves"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A7EDA6C2-3921-4021-89F3-211551E430F1
 ms.technology: xamarin-forms

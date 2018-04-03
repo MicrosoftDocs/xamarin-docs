@@ -1,6 +1,5 @@
 ---
 title: "Toolbar Compatibility"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A0798CA1-2C7D-43B6-9E91-4435CC7B6683
 ms.technology: xamarin-android

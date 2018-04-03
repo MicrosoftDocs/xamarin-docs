@@ -1,7 +1,6 @@
 ---
 title: "WebView"
 description: "Present local or network web content and documents."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms

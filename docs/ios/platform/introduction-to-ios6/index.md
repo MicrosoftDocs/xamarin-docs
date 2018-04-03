@@ -1,7 +1,6 @@
 ---
 title: "Introduction to iOS 6"
 description: "iOS 6 includes a variety of new technologies for developing apps, which Xamarin.iOS 6 brings to C# developers."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios

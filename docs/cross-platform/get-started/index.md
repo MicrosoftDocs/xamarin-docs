@@ -1,7 +1,6 @@
 ---
 title: "Getting Started"
 description: "Learn to develop mobile applications from zero to deployment with these in-depth guides."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.technology: xamarin-cross-platform

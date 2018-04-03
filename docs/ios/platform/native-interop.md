@@ -1,6 +1,5 @@
 ---
 title: "Referencing Native Libraries"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios

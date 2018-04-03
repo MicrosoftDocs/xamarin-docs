@@ -1,7 +1,6 @@
 ---
 title: "Using UrhoSharp in Xamarin.Forms"
 description: "UrhoSharp can be used to add 3D graphics to an application for advanced visualization"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0646B98E-CC04-4537-9715-9F82338FD7FF
 ms.technology: xamarin-forms

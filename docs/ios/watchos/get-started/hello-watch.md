@@ -1,7 +1,6 @@
 ---
 title: "Hello, Watch"
 description: "Getting started with Xamarin and watchOS"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: AD1DA488-51AB-420A-A0B7-3AE69A964A40
 ms.technology: xamarin-ios

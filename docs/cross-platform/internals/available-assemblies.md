@@ -1,7 +1,6 @@
 ---
 title: "Available Assemblies"
 description: "Available assemblies in Xamarin.iOS, Xamarin.Android, and Xamarin.Mac"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 ms.technology: xamarin-cross-platform

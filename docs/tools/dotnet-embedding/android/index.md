@@ -1,6 +1,5 @@
 ---
 title: ".NET Embedding on Android"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
 ms.technology: xamarin-cross-platform

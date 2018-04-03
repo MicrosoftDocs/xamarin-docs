@@ -1,7 +1,6 @@
 ---
 title: "Resource Dictionaries"
 description: "XAML resources are definitions of objects that can be used more than once. A ResourceDictionary allows resources to be defined in a single location, and re-used throughout a Xamarin.Forms application. This article explains how to create and consume a ResourceDictionary, and how to merge resource dictionaries."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms

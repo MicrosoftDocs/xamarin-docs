@@ -1,6 +1,6 @@
 ---
 title: "How can I download a previous version of Xcode?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 76D47B6D-F4E9-4957-B30C-B259A8FB125F
 ms.technology: xamarin-ios

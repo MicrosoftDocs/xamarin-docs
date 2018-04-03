@@ -1,7 +1,6 @@
 ---
 title: "User Interface"
 description: "How to use the views provided by Xamarin.Forms"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms

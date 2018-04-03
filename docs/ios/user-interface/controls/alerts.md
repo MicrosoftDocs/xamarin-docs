@@ -1,6 +1,5 @@
 ---
 title: "Displaying Alerts"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 61C671E9-3757-4052-86E4-28640025A34A
 ms.technology: xamarin-ios

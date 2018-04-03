@@ -1,7 +1,6 @@
 ---
 title: "UrhoSharp Platform Support"
 description: "Cross Platform 3D/2D Game and Visualization Engine"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6205E430-1036-4CC3-8E97-AA5554E3D468
 ms.technology: xamarin-cross-platform

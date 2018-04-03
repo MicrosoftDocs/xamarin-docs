@@ -1,7 +1,6 @@
 ---
 title: "Dynamic Styles"
 description: "Styles do not respond to property changes, and remain unchanged for the duration of an application. For example, after assigning a Style to a visual element, if one of the Setter instances is modified, removed, or a new Setter instance added, the changes won't be applied to the visual element. However, applications can respond to style changes dynamically at runtime by using dynamic resources."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216
 ms.technology: xamarin-forms

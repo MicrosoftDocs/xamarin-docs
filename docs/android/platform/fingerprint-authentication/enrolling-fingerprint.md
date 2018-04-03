@@ -1,7 +1,6 @@
 ---
 title: "Enrolling a Fingerprint"
 description: "How to set up a screen lock and enroll a fingerprint on an Android device or Emulator."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 52092F63-00EE-4F8B-A49F-65C9CCBA7EF2
 ms.technology: xamarin-android

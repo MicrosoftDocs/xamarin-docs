@@ -1,7 +1,6 @@
 ---
 title: "Using CocosSharp in Xamarin.Forms"
 description: "CocosSharp can be used to add precise shape, image, and text rendering to an application for advanced visualization"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E0F404D5-5C6B-4288-92EC-78996C674E4E
 ms.technology: xamarin-forms

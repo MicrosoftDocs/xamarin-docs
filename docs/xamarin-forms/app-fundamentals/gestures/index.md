@@ -1,7 +1,6 @@
 ---
 title: "Gestures"
 description: "Gesture recognizers can be used to detect user interaction with many elements of a Xamarin.Forms application."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0E197A51-2304-4C09-A710-C7FF24A89F15
 ms.technology: xamarin-forms

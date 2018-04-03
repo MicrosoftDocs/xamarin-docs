@@ -1,7 +1,6 @@
 ---
 title: "iOS Architecture"
 description: "Exploring Xamarin.iOS at a low level"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F40F2275-17DA-4B4D-9678-618FF25C6803
 ms.technology: xamarin-ios

@@ -1,6 +1,5 @@
 ---
 title: "Linking on Android"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3528E195-AA74-90AF-B5F3-3B65FB4F0BB8
 ms.technology: xamarin-android

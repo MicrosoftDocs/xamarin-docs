@@ -1,6 +1,5 @@
 ---
 title: "Labels"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
 ms.technology: xamarin-ios

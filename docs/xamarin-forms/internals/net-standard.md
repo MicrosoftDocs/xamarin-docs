@@ -1,7 +1,6 @@
 ---
 title: ".NET Standard 2.0 Support in Xamarin.Forms"
 description: "This article explains how to convert a Xamarin.Forms application to use .NET Standard 2.0."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 95805355-63a7-44e7-a3c6-6487a6276ab2
 ms.technology: xamarin-forms

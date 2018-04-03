@@ -1,6 +1,5 @@
 ---
 title: "Customizing a Table's Appearance"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8A83DE38-0028-CB61-66F9-0FB9DE552286
 ms.technology: xamarin-ios

@@ -1,7 +1,6 @@
 ---
 title: "Working with Page Control"
 description: "This article covers designing and working with Page Control inside of a Xamarin.tvOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 19198D46-7BBE-4D04-9BFA-7D1C5C9F9FC6
 ms.technology: xamarin-ios

@@ -1,7 +1,6 @@
 ---
 title: "Inspecting Live Applications"
 description: "Visualize and debug your live app"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 ms.technology: xamarin-cross-platform

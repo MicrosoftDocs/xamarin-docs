@@ -1,7 +1,6 @@
 ---
 title: "Introduction to Behaviors"
 description: "Behaviors let you add functionality to user interface controls without having to subclass them. Instead, the functionality is implemented in a behavior class and attached to the control as if it was part of the control itself. This article provides an introduction to behaviors."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0DF1EF8C-A212-4142-A3C6-DF760A82A757
 ms.technology: xamarin-forms

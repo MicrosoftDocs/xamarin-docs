@@ -1,6 +1,5 @@
 ---
 title: "Deprecated Notification Technologies"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 20C4F6E5-56DF-4A85-BBF0-E38C88586307
 ms.technology: xamarin-ios

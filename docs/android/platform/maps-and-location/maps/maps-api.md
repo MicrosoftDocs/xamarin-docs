@@ -1,6 +1,5 @@
 ---
 title: "Maps API"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C0589878-2D04-180E-A5B9-BB41D5AF6E02
 ms.technology: xamarin-android

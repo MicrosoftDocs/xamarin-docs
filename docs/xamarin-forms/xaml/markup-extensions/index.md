@@ -1,7 +1,6 @@
 ---
 title: "XAML Markup Extensions"
 description: "Extend the range of sources from which XAML attributes are set"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
 ms.technology: xamarin-forms

@@ -1,7 +1,6 @@
 ---
 title: "Automate Xamarin.Forms testing with Xamarin.UITest and App Center"
 description: "Xamarin UITest component can be used with Xamarin.Forms to write UI tests to run in the cloud on hundreds of devices."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
 ms.technology: xamarin-forms

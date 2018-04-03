@@ -1,7 +1,6 @@
 ---
 title: "Authenticating Users with Azure Active Directory B2C"
 description: "Azure Active Directory B2C is a cloud identity management solution for consumer-facing web and mobile applications. This article demonstrates how to use Microsoft Authentication Library and Azure Active Directory B2C to integrate consumer identity management into a mobile application."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B0A5DB65-0585-4A00-B908-22CCC286E6B6
 ms.technology: xamarin-forms

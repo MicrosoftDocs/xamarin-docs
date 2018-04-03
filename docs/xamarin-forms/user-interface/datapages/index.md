@@ -1,6 +1,5 @@
 ---
 title: "DataPages"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95
 ms.technology: xamarin-forms

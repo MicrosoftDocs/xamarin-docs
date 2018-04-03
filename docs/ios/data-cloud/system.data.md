@@ -1,6 +1,5 @@
 ---
 title: "System.Data"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios

@@ -1,6 +1,5 @@
 ---
 title: "APK Expansion Files"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DB7E38E8-3C4E-5191-27EA-22DE63044FE2
 ms.technology: xamarin-android

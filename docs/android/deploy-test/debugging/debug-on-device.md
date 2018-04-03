@@ -1,7 +1,6 @@
 ---
 title: "Debug on Device"
 description: "This article explains how to debug a Xamarin.Android application on a physical Android device."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 153D3746-A27F-198B-48FE-D219C0133A79
 ms.technology: xamarin-android

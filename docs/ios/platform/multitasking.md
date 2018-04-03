@@ -1,7 +1,6 @@
 ---
 title: "Multitasking for iPad"
 description: "iOS 9 supports two apps running at the same time, using slide over or split view. It also supports video playing Picture-In-Picture."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
 ms.technology: xamarin-ios

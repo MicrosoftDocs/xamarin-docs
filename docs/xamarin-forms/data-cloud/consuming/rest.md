@@ -1,7 +1,6 @@
 ---
 title: "Consuming a RESTful Web Service"
 description: "Integrating a web service into an application is a common scenario. This article demonstrates how to consume a RESTful web service from a Xamarin.Forms application."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B540910C-9C51-416A-AAB9-057BF76489C3
 ms.technology: xamarin-forms

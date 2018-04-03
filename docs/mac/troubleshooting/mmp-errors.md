@@ -1,7 +1,7 @@
 ---
 title: "Xamarin.Mac error messages (mmp)"
 description: "An errors reference guide for mmp."
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5B26339F-A202-4E41-9229-D0BC9E77868E
 ms.technology: xamarin-mac

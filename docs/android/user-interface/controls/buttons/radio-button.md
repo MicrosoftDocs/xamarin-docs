@@ -1,6 +1,5 @@
 ---
 title: "RadioButton"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3C32EA3F-D917-C988-72C5-A17354DA791E
 ms.technology: xamarin-android

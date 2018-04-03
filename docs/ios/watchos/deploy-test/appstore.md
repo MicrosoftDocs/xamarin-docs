@@ -1,7 +1,6 @@
 ---
 title: "Deploying to the App Store"
 description: "Deploying Watch Apps to the App Store"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios

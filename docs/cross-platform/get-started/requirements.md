@@ -1,7 +1,6 @@
 ---
 title: "System Requirements"
 description: "Pre-requisites for using Xamarin"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 ms.technology: xamarin-cross-platform

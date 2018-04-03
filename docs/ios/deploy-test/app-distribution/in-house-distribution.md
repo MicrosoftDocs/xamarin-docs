@@ -1,7 +1,6 @@
 ---
 title: "In-House Distribution"
 description: "This document gives a brief overview of distribution of applications In-House, as a member of the Apple Enterprise Developer Program."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9466E51E-303E-466E-85D7-D0525E16BB37
 ms.technology: xamarin-ios

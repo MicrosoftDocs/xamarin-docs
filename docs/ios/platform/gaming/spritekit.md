@@ -1,6 +1,5 @@
 ---
 title: "SpriteKit"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 93971DAE-ED6B-48A8-8E61-15C0C79786BB
 ms.technology: xamarin-ios

@@ -1,6 +1,5 @@
 ---
 title: "SceneKit"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 19049ED5-B68E-4A0E-9D57-B7FAE3BB8987
 ms.technology: xamarin-ios

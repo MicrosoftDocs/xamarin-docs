@@ -1,6 +1,5 @@
 ---
 title: "Using ADO.NET"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F6ABCEF1-951E-40D8-9EA9-DD79123C2650
 ms.technology: xamarin-android

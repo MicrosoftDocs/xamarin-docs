@@ -1,7 +1,6 @@
 ---
 title: "Consuming an Amazon SimpleDB Service"
 description: "Amazon SimpleDB is a web service that provides the ability to store and query data in Amazon's cloud. This article explains how to use the AWS SDK for .NET to query, create, replace, and delete data stored in a SimpleDB service."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 823819AA-15F9-4144-B355-78A10AD37513
 ms.technology: xamarin-forms

@@ -1,6 +1,5 @@
 ---
 title: "MVVM"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: dd8c1813-df44-4947-bcee-1a1ff2334b87
 ms.technology: xamarin-forms

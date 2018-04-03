@@ -1,6 +1,5 @@
 ---
 title: "Publishing to the Amazon App Store"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A3E9EAC7-2968-8891-CDF2-B73FC0013EC9
 ms.technology: xamarin-android

@@ -1,7 +1,6 @@
 ---
 title: "SkiaSharp Lines and Paths"
 description: "Use SkiaSharp to draw lines and graphics paths"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 316A15FE-383D-4D06-8641-BAC7EE7474CA
 ms.technology: xamarin-forms

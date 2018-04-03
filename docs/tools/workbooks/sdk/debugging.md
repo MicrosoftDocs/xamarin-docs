@@ -1,6 +1,5 @@
 ---
 title: "Debugging integrations"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 ms.technology: xamarin-cross-platform

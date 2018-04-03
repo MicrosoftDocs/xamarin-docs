@@ -1,6 +1,5 @@
 ---
 title: "Extending the RecyclerView Example"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 707EE1CE-C164-485B-944C-82C6795E8A24
 ms.technology: xamarin-android

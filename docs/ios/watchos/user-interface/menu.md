@@ -1,6 +1,5 @@
 ---
 title: "Menu Control (Force Touch)"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5A7F83FB-9BC4-4812-92C5-CEC8DAE8211E
 ms.technology: xamarin-ios

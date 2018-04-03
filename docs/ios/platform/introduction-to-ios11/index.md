@@ -1,7 +1,6 @@
 ---
 title: "Introduction to iOS 11"
 description: "Try new iOS 11 APIs with Xamarin."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 22C38EA6-6DA9-4B92-B41B-814E589033F6
 ms.technology: xamarin-ios

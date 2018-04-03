@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Android Errors Matrix"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7EBE4C01-8EFC-4B7E-97BA-D879994F59AB
 ms.technology: xamarin-android

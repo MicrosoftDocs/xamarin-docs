@@ -1,7 +1,6 @@
 ---
 title: "SkiaSharp Platform Specific Details"
 description: "Details on using SkiaSharp in your platform. brief: Provide details on how to bring your SkSurface contents into your native application."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
 ms.technology: xamarin-cross-platform

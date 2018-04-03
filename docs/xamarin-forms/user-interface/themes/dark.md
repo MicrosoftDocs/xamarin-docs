@@ -1,6 +1,5 @@
 ---
 title: "Dark Theme"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 43A3798D-6F05-4734-AF5E-97235B46D9B9
 ms.technology: xamarin-forms

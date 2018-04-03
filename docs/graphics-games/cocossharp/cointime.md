@@ -1,7 +1,6 @@
 ---
 title: "Coin Time game details"
 description: "This guide discusses implementation details in the Coin Time game, including working with tile maps, creating entities, animating sprites, and implementing efficient collision."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5D285684-0417-4E16-BD14-2D1F6DEFBB8B
 ms.technology: xamarin-cross-platform

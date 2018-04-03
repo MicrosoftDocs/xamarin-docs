@@ -1,6 +1,6 @@
 ---
 title: "Why can't I log into Xamarin in Visual Studio or Visual Studio for Mac?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6EF2B553-5DF9-41CC-B68F-77A7F64572FA
 ms.technology: xamarin-cross-platform

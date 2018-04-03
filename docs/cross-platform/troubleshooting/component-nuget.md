@@ -1,7 +1,7 @@
 ---
 title: "Updating component references to NuGet"
 description: "Replace your component references with NuGet packages to future-proof your apps."
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 ms.technology: xamarin-cross-platform

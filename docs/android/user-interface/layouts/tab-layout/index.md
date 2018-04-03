@@ -1,7 +1,6 @@
 ---
 title: "Tabbed Layouts"
 description: "An Overview of Tabbed Layouts in Android"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1CFF590A-AC86-C3B3-36CA-A70248BC7F97
 ms.technology: xamarin-android

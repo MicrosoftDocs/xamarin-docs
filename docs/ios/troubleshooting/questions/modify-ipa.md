@@ -1,6 +1,6 @@
 ---
 title: "Can I add files to or remove files from an IPA file after building it in Visual Studio?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6C3082FB-C3F1-4661-BE45-64570E56DE7C
 ms.technology: xamarin-ios

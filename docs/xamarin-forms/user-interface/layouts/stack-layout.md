@@ -1,7 +1,6 @@
 ---
 title: "StackLayout"
 description: "Use StackLayout to present collections of views over one dimension."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
 ms.technology: xamarin-forms

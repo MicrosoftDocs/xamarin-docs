@@ -1,7 +1,6 @@
 ---
 title: "F#"
 description: "F# is a strongly-typed functional programming language designed to run on .NET"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 506410BD-F89C-4FEB-8915-760FE250A206
 ms.technology: xamarin-cross-platform

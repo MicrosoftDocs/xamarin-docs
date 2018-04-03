@@ -1,7 +1,6 @@
 ---
 title: "Files"
 description: "File handling with Xamarin.Forms can be done using embedded resources or writing against the native filesystem APIs."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
 ms.technology: xamarin-forms

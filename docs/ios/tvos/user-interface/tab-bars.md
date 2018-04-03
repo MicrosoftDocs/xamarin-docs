@@ -1,7 +1,6 @@
 ---
 title: "Working with Tab Bar Controller"
 description: "This article covers designing and working with Tab Bar Controller inside of a Xamarin.tvOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios

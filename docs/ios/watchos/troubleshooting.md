@@ -1,7 +1,7 @@
 ---
 title: "watchOS Troubleshooting"
 description: "Known issues and workarounds for watchOS development issues."
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
 ms.technology: xamarin-ios

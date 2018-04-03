@@ -1,7 +1,6 @@
 ---
 title: "Using Jenkins with Xamarin"
 description: "This guide illustrates how to set up Jenkins as a continuous integration server and automate compiling mobile applications created with Xamarin. It describes how to install Jenkins on OS X, configure it, and set up jobs to compile Xamarin.iOS and Xamarin.Android applications when changes are committed to the source code management system."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 ms.technology: xamarin-cross-platform

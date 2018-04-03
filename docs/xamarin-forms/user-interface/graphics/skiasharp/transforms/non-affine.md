@@ -1,7 +1,6 @@
 ---
 title: "Non-Affine Transforms"
 description: "Create perspective and taper effects with the third column of the transform matrix"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1

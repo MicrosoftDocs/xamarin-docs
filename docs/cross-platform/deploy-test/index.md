@@ -1,7 +1,6 @@
 ---
 title: "Deployment and Testing"
 description: "Stabilization Guides"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D02C62C9-47D1-4E72-8A83-602C3E7929BE
 ms.technology: xamarin-cross-platform

@@ -1,6 +1,6 @@
 ---
 title: "Can I change the output path of the IPA file?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F5E5DCC6-F7CC-48E2-89E8-709E9C269502
 ms.technology: xamarin-ios

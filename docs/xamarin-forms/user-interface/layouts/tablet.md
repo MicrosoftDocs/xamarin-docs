@@ -1,6 +1,5 @@
 ---
 title: "Layout for Tablet and Desktop apps"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D62F472B-4345-4983-8403-659A538B591F
 ms.technology: xamarin-forms

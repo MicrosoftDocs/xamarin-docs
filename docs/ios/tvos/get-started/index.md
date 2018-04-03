@@ -1,7 +1,6 @@
 ---
 title: "Getting Started"
 description: "Learn how to install Xamarin support for tvOS and quickly get started in tvOS development."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1A3D8211-A689-41D9-BCFE-AF8398992031
 ms.technology: xamarin-ios

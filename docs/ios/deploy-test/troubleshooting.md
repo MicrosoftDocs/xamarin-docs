@@ -1,7 +1,6 @@
 ---
 title: "Troubleshooting"
 description: "Tips & Tricks to create smooth deployment"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 65286D09-F74D-4F22-B6CD-D1BCD7FC7992
 ms.technology: xamarin-ios

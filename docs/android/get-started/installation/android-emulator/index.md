@@ -1,7 +1,6 @@
 ---
 title: "Android Emulator Setup"
 description: "This section describes how to prepare the Android SDK Emulator for testing your app. It explains how to accelerate the emulator for maximum performance, and it shows you how to use an emulator manager to create and customize virtual devices."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 889963B7-F4DA-41D9-9B8D-B733BB71A329
 ms.technology: xamarin-android

@@ -1,6 +1,5 @@
 ---
 title: "Step 2. Configure Service Access for Mobile Application"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8A14A457-F72E-4B08-B4B6-801F7619F893
 ms.technology: xamarin-cross-platform

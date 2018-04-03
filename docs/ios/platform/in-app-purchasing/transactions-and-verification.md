@@ -1,6 +1,5 @@
 ---
 title: "Transactions and Verification"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios

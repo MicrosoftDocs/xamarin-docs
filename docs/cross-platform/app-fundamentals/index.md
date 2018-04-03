@@ -1,7 +1,6 @@
 ---
 title: "Application Fundamentals"
 description: "Core Application Concepts"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
 ms.technology: xamarin-cross-platform

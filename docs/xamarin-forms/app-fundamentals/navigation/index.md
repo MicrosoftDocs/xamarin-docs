@@ -1,7 +1,6 @@
 ---
 title: "Navigation"
 description: "Xamarin.Forms provides a number of different page navigation experiences, depending upon the Page type being used."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BC5D0C6C-D5A9-4B12-A492-ED1F570CEC87
 ms.technology: xamarin-forms

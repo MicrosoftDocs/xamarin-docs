@@ -1,6 +1,5 @@
 ---
 title: "Summary of Chapter 25. Page varieties"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89

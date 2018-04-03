@@ -1,7 +1,6 @@
 ---
 title: "Xamarin.Mac ahead of time compilation"
 description: "Ahead of time (AOT) compilation tradeoffs and considerations"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 38B8A017-5A58-429C-A6E9-9860A1DCEF63
 ms.technology: xamarin-mac

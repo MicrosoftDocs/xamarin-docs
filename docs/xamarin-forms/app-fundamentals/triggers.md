@@ -1,7 +1,6 @@
 ---
 title: "Triggers"
 description: "Responding to user interface changes with XAML"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms

@@ -1,7 +1,6 @@
 ---
 title: "Building Cross Platform Applications"
 description: "This section discusses, in a summary plus six parts, how to build applications using the Xamarin development platform  – from understanding how Xamarin works to designing mobile apps, and then testing and deploying to the various app stores."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
 ms.technology: xamarin-cross-platform

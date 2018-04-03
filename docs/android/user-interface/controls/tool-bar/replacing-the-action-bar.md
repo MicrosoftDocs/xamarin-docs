@@ -1,6 +1,5 @@
 ---
 title: "Replacing the Action Bar"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5341D28E-B203-478D-8464-6FAFDC3A4110
 ms.technology: xamarin-android

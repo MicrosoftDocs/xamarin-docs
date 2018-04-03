@@ -1,7 +1,6 @@
 ---
 title: "Controls"
 description: "Xamarin.iOS exposes all the native user interface objects provided by Apple. They are easily added to Xamarin.iOS apps using the iOS Designer, Xcode's Interface Builder or programmatically. Regardless of which method you choose, Xamarin.iOS exposes all the user interface object properties and methods in C#."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
 ms.technology: xamarin-ios

@@ -1,7 +1,6 @@
 ---
 title: "Graphics and Animation in iOS"
 description: "Core Application Concepts"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3FEF45F2-C0F0-4D66-8796-9674FFE6740F
 ms.technology: xamarin-ios

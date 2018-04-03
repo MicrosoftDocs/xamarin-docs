@@ -1,7 +1,6 @@
 ---
 title: "Understanding the Sample"
 description: "This topic provides a walkthrough of the Xamarin.Forms sample application that demonstrates how to communicate with different web services. While each web service uses a separate sample application, they are functionally similar and share common classes."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
 ms.technology: xamarin-forms

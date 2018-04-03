@@ -1,7 +1,6 @@
 ---
 title: "Core Animation"
 description: "This article examines the Core Animation framework, showing how it enables high performance, fluid animations in UIKit, as well as how to use it directly for lower-level animation control."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D4744147-FACB-415B-8155-3A6B3C35E527
 ms.technology: xamarin-ios

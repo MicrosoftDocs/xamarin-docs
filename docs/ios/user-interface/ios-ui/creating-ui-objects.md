@@ -1,6 +1,5 @@
 ---
 title: "Creating User Interface Objects"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4D6B136C-744A-4936-8655-A77E62BA7A60
 ms.technology: xamarin-ios

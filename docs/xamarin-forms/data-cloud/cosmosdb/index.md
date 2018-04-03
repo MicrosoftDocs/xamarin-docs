@@ -1,7 +1,6 @@
 ---
 title: "Storing Data in a Document Database"
 description: "An Azure Cosmos DB document database is a NoSQL database that provides low latency access to JSON documents, offering a fast, highly available, scalable database service for applications that require seamless scale and global replication."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F050E9D0-8CC3-4E75-8960-0D8273769E7C
 ms.technology: xamarin-forms

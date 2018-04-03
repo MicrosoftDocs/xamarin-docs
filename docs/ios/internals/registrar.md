@@ -1,6 +1,5 @@
 ---
 title: "Type Registrar"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios

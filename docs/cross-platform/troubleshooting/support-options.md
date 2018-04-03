@@ -1,6 +1,6 @@
 ---
 title: "What support options are available for Xamarin?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform

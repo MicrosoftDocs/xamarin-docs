@@ -1,7 +1,6 @@
 ---
 title: "DependencyService"
 description: "Xamarin.Forms allows developers to define behavior in platform-specific projects. DependencyService then finds the right platform implementation, allowing shared code to access the native functionality."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 403479F2-6751-41F2-ADCE-3AF595062FE4
 ms.technology: xamarin-forms

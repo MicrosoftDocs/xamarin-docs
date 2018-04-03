@@ -1,7 +1,6 @@
 ---
 title: "Deployment and Testing"
 description: "Stabilization Guides"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 705c9fa4-12ef-4ee0-ab3e-8319ee9944c5
 ms.technology: xamarin-forms

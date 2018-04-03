@@ -1,7 +1,6 @@
 ---
 title: "Bitmap Basics"
 description: "Load bitmaps from various sources and display them."
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3

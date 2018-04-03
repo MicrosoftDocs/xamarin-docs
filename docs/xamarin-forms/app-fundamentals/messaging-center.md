@@ -1,7 +1,6 @@
 ---
 title: "MessagingCenter"
 description: "Xamarin.Forms includes a simple messaging service to send and receive messages."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms

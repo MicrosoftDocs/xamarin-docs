@@ -1,7 +1,6 @@
 ---
 title: "Troubleshooting"
 description: "Known issues with the Xamarin Live Player, and how to fix them."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 ms.technology: xamarin-cross-platform

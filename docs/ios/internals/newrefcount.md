@@ -1,6 +1,5 @@
 ---
 title: "New Reference Counting System"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios

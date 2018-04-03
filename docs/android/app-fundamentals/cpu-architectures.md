@@ -1,7 +1,6 @@
 ---
 title: "CPU Architectures"
 description: "Xamarin.Android supports several CPU architectures, including 32-bit and 64-bit devices. This article explains how to target an app to one or more Android-supported CPU architectures."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D4BC889D-9164-49BB-9B7B-F6C4E4E109F1
 ms.technology: xamarin-android

@@ -1,7 +1,6 @@
 ---
 title: "Authenticating Users with an Azure Cosmos DB Document Database"
 description: "Azure Cosmos DB document databases support partitioned collections, which can span multiple servers and partitions, while supporting unlimited storage and throughput. This article explains how to combine access control with partitioned collections, so that a user can only access their own documents in a Xamarin.Forms application."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
 ms.technology: xamarin-forms

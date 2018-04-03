@@ -1,6 +1,5 @@
 ---
 title: "Windows Platform Features"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
 ms.technology: xamarin-forms

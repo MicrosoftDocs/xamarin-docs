@@ -1,6 +1,5 @@
 ---
 title: "F# Samples"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8A355636-DE60-45BC-B988-1967755FDD28
 ms.technology: xamarin-cross-platform

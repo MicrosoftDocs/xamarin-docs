@@ -1,6 +1,5 @@
 ---
 title: "Tips for Updating Code to the Unified API"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.technology: xamarin-cross-platform

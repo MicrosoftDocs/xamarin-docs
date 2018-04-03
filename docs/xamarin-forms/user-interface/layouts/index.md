@@ -1,7 +1,6 @@
 ---
 title: "Layouts"
 description: "Lay out views on screen."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms

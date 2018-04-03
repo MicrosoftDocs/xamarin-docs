@@ -1,7 +1,6 @@
 ---
 title: "Troubleshooting"
 description: "This article provides several troubleshooting tips for working with iOS 11 in Xamarin.iOS apps."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A90493BF-5298-4A5D-A5D5-8A8FCD078FF7
 ms.technology: xamarin-ios

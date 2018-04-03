@@ -1,6 +1,5 @@
 ---
 title: "Auto Complete"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android

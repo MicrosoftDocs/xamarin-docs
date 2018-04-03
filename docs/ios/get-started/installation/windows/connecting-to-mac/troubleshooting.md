@@ -1,7 +1,6 @@
 ---
 title: "Connection Troubleshooting"
 description: "This guide provides troubleshooting steps for issues that may be encountered using the new connection manager, including connectivity and SSH issues."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1508A15-1997-4562-B537-E4A9F3DD1F06
 ms.technology: xamarin-ios

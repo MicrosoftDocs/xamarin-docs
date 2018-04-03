@@ -1,6 +1,5 @@
 ---
 title: "Preface"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c
 ms.technology: xamarin-forms

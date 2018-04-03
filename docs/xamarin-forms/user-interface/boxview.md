@@ -1,7 +1,6 @@
 ---
 title: "BoxView"
 description: "Use a colored rectangle for decoration, graphics, and interaction."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
 ms.technology: xamarin-forms

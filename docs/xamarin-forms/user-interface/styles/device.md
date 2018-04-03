@@ -1,7 +1,6 @@
 ---
 title: "Device Styles"
 description: "Xamarin.Forms includes six dynamic styles, known as device styles, in the Device.Styles class."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7FF19ED1-0822-4238-9435-AD970317A2F8
 ms.technology: xamarin-forms

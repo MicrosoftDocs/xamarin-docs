@@ -1,6 +1,6 @@
 ---
 title: "Runtime error: The assembly mscorlib.dll was not found or could not be loaded"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1027E16C-2C14-4BB5-AAAB-342F3E28E22E
 ms.technology: xamarin-ios

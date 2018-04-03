@@ -1,6 +1,5 @@
 ---
 title: "iOS Backgrounding Walkthroughs"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D4937080-7865-48C0-8FE5-310E90229BC3
 ms.technology: xamarin-ios

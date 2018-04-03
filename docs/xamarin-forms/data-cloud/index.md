@@ -1,7 +1,6 @@
 ---
 title: "Data & Cloud Services"
 description: "Xamarin.Forms applications can consume web services implemented using a wide variety of technologies, and this guide will examine how to do this."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0601D9D0-C8D2-4C3B-A749-A340BDBF64A4ß
 ms.technology: xamarin-forms

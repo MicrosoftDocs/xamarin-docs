@@ -1,6 +1,5 @@
 ---
 title: "Manual Installation"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: a4edda7a-ed4f-4e8a-9904-1716e86a7f78
 ms.technology: xamarin-ios

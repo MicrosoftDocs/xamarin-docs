@@ -1,7 +1,6 @@
 ---
 title: "Graphics"
 description: "How to incorporate graphics and game engine visuals into a Xamarin.Forms application."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 167ec01a-fb9e-431e-a44d-a10eaf62bf39
 ms.technology: xamarin-forms

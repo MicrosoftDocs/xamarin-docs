@@ -1,6 +1,5 @@
 ---
 title: "MonoGame Platform Specific Considerations"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 36EF35F2-882C-4DCF-A95D-A36EFA47BCCC
 ms.technology: xamarin-cross-platform

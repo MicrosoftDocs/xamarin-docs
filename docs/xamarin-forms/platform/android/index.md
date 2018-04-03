@@ -1,7 +1,6 @@
 ---
 title: "Android Platform Features"
 description: "Adding Android-specific functionality to Xamarin.Forms apps"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E24168F3-0138-4814-86EA-B467F6B8A545
 ms.technology: xamarin-forms

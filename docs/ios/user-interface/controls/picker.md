@@ -1,7 +1,6 @@
 ---
 title: "Picker"
 description: "This guide covers designing and working with Pickers in a Xamarin.iOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios

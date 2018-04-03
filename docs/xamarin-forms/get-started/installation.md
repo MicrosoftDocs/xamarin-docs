@@ -1,7 +1,6 @@
 ---
 title: "Xamarin.Forms Requirements"
 description: "Platform and development system requirements for Xamarin.Forms."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
 ms.technology: xamarin-forms

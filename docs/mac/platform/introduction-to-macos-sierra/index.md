@@ -1,7 +1,6 @@
 ---
 title: "Introduction to macOS Sierra"
 description: "This article introduces all of the new and modified APIs and features available in macOS Sierra for Xamarin.Mac developers."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 71A8A737-F310-4320-BD23-743AA1E9033C
 ms.technology: xamarin-mac

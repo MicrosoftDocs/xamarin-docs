@@ -1,7 +1,6 @@
 ---
 title: "Text"
 description: "Using Xamarin.Forms to enter or display text."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
 ms.technology: xamarin-forms

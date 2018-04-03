@@ -1,6 +1,5 @@
 ---
 title: "Auto-Sizing Row Height"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
 ms.technology: xamarin-ios

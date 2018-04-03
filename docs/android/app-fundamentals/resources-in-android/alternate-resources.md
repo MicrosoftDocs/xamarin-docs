@@ -1,6 +1,5 @@
 ---
 title: "Alternate Resources"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android

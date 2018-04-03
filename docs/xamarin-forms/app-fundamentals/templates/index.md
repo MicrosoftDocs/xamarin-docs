@@ -1,7 +1,6 @@
 ---
 title: "Templates"
 description: "How to use the templating support provided by Xamarin.Forms"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4453C209-C068-47D5-A49B-0ECC95C0FB3B
 ms.technology: xamarin-forms

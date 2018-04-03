@@ -1,7 +1,6 @@
 ---
 title: "Embedding .NET in Java"
 description: "How to use a Xamarin .NET library in a Java-based Native Android Project"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A489EEF3-1008-4257-BF63-FE21D8C23821
 ms.technology: xamarin-android

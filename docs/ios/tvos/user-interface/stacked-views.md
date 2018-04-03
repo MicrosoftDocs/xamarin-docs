@@ -1,7 +1,6 @@
 ---
 title: "Working with Stacked View"
 description: "This article covers designing and working with Stacked View inside of a Xamarin.tvOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios

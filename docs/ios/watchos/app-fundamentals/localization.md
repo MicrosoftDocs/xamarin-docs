@@ -1,7 +1,6 @@
 ---
 title: "Working with Localization"
 description: "Adapting your watchOS apps for multiple languages"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios

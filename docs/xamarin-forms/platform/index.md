@@ -1,7 +1,6 @@
 ---
 title: "Platform Features"
 description: "Take advantage of platform-specific features with Xamarin.Forms"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms

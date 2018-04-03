@@ -1,6 +1,5 @@
 ---
 title: "Unit Testing"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
 ms.technology: xamarin-ios

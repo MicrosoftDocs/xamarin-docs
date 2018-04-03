@@ -1,7 +1,6 @@
 ---
 title: "String Formatting"
 description: "Use data bindings to format and display objects as strings"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
 ms.technology: xamarin-forms

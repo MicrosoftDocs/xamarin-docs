@@ -1,7 +1,6 @@
 ---
 title: "XAML Previewer for Xamarin.Forms"
 description: "See your Xamarin.Forms layouts rendered as you type!"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms

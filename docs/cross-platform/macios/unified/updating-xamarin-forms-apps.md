@@ -1,7 +1,6 @@
 ---
 title: "Updating Existing Xamarin.Forms Apps"
 description: "Follow these steps to update an existing Xamarin.Forms app to use the Unified API and update to version 1.3.1"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
 ms.technology: xamarin-cross-platform

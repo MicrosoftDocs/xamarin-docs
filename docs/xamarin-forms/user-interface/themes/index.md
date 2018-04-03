@@ -1,6 +1,5 @@
 ---
 title: "Themes"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3DFB7C55-69F6-4980-A501-588719143482
 ms.technology: xamarin-forms

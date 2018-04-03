@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4513D391-9850-4CDC-BE9B-7FF4B14FEFFC
 ms.technology: xamarin-cross-platform

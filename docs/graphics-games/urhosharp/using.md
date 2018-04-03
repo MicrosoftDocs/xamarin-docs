@@ -1,7 +1,6 @@
 ---
 title: "Using UrhoSharp"
 description: "Overview of the UrhoSharp Engine"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 ms.technology: xamarin-cross-platform

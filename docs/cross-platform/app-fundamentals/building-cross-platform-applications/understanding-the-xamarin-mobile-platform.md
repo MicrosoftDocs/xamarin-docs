@@ -1,6 +1,5 @@
 ---
 title: "Part 1 – Understanding the Xamarin Mobile Platform"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
 ms.technology: xamarin-cross-platform

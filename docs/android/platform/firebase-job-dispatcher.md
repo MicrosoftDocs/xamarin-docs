@@ -1,7 +1,6 @@
 ---
 title: "Firebase Job Dispatcher"
 description: "This guide discusses how to schedule background work using the Firebase Job Dispatcher library from Google."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android

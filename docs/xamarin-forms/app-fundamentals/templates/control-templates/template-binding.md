@@ -1,7 +1,6 @@
 ---
 title: "Binding from a ControlTemplate"
 description: "Template bindings allow controls in a control template to data bind to public properties, enabling property values on controls in the control template to be easily changed. This article demonstrates using template bindings to perform data binding from a control template."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 794A663C-3A8D-438A-BD02-8E97C919B55F
 ms.technology: xamarin-forms

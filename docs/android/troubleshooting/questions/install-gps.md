@@ -1,6 +1,6 @@
 ---
 title: "How do I install Google Play Services in an emulator?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 2DBB7988-34DD-4E59-AB84-C83C8FEAF604
 ms.technology: xamarin-android

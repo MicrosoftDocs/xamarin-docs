@@ -1,6 +1,5 @@
 ---
 title: "Introduction"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FDAC0771-4749-4758-865A-F1BD190CA54B
 ms.technology: xamarin-android

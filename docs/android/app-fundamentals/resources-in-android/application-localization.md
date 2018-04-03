@@ -1,6 +1,5 @@
 ---
 title: "Application Localization and String Resources"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 374A9DA6-1853-8B98-6954-7FE3F591C07C
 ms.technology: xamarin-android

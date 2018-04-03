@@ -1,6 +1,5 @@
 ---
 title: "Publishing Independently"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6FB4DEF2-01AD-C5FE-0950-CE1BF088A9C6
 ms.technology: xamarin-android

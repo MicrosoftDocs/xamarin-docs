@@ -1,7 +1,6 @@
 ---
 title: "Using the Android Designer"
 description: "This topic is a walkthrough of the Xamarin.Android Designer. It demonstrates how to create a user interface for a small color browser app; this user interface is created entirely in the Designer."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 70FF2F9A-71BD-317E-C881-A44D82DF1BD8
 ms.technology: xamarin-android

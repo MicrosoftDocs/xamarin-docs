@@ -1,7 +1,6 @@
 ---
 title: "Playing sound with AVAudioPlayer"
 description: "This article shows how to use a helper class to control the playback of sound using an AVAudioPlayer."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4A683A94-F75D-4EAF-8497-E9443653250B
 ms.technology: xamarin-mac

@@ -1,7 +1,6 @@
 ---
 title: "Deployment and Testing"
 description: "How to test your Wear app on an Android device (or emulator) and prepare it for deployment."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3D8E5A97-F719-4E8C-B777-108DFF20C91F
 ms.technology: xamarin-android

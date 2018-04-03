@@ -1,7 +1,6 @@
 ---
 title: "Understanding SiriKit Concepts"
 description: "This article covers the key concepts that will be required for working with SiriKit in a Xamarin.iOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios

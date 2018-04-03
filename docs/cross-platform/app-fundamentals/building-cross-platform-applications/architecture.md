@@ -1,6 +1,5 @@
 ---
 title: "Part 2 - Architecture"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
 ms.technology: xamarin-cross-platform

@@ -1,7 +1,6 @@
 ---
 title: "Xamarin.Forms Multiscreen Quickstart"
-ms.topic: article
-ms.prod: xamarin
+ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms
 author: davidbritch

@@ -1,6 +1,5 @@
 ---
 title: "PopUp Menu"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1C58E12B-4634-4691-BF59-D5A3F6B0E6F7
 ms.technology: xamarin-android

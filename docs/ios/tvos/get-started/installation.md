@@ -1,7 +1,6 @@
 ---
 title: "Installing tvOS Support"
 description: "This article covers the steps required to install tvOS support."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0819DC93-A46B-49DC-A566-8E27CAE1B829
 ms.technology: xamarin-ios

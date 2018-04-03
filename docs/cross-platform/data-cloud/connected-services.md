@@ -1,7 +1,6 @@
 ---
 title: "Connected Services in Visual Studio for Mac"
 description: "Add Azure data storage, authentication, and push notifications to mobile apps from within Visual Studio for Mac"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: ADDFB3A5-DB6A-417C-8ACE-33D107FB75C2
 ms.technology: xamarin-cross-platform

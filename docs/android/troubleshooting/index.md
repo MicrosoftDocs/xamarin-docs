@@ -1,7 +1,7 @@
 ---
 title: "Troubleshooting"
 description: "Documents in this section cover features specific to troubleshooting with Android."
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 54583AB3-FE6D-4357-B4FC-CBC48B7EDEE4
 ms.technology: xamarin-android

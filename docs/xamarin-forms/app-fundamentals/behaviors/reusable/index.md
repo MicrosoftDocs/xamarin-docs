@@ -1,7 +1,6 @@
 ---
 title: "Reusable Behaviors"
 description: "Behaviors are reusable across more than one application. These articles explain how to create useful behaviors to perform commonly used functionality."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DC9AA512-3624-4EE6-AB5E-628EBA55D2DF
 ms.technology: xamarin-forms

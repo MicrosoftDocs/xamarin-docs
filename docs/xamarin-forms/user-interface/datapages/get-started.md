@@ -1,6 +1,5 @@
 ---
 title: "Getting Started with DataPages"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6416E5FA-6384-4298-BAA1-A89381E47210
 ms.technology: xamarin-forms

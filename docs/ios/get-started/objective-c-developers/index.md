@@ -1,7 +1,6 @@
 ---
 title: "Xamarin for Objective-C Developers"
 description: "If you are an Objective-C developer, you are well on your way to leveraging your skills and existing Objective-C code on the Xamarin platform, while reaping the code reuse benefits of C#. This section serves as an entry point to Xamarin.iOS, and points to a wealth of information about using existing Objective-C code from C#."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9F3C86A3-403E-4025-99CA-99FCA86DC828
 ms.technology: xamarin-ios

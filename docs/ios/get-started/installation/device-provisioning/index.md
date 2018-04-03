@@ -1,7 +1,6 @@
 ---
 title: "Device Provisioning"
 description: "Once Xamarin.iOS has been successfully installed, the next step in iOS development is to provision your iOS device. This guide will explore requesting development certificates and profiles, working with app services, and deploying an app to device."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios

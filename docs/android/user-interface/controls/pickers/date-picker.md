@@ -1,7 +1,6 @@
 ---
 title: "Date Picker"
 description: "Selecting Calendar Dates using the DatePickerDialog and DialogFragment"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F2BCD8D4-8957-EA53-C5A8-6BB603ADB47B
 ms.technology: xamarin-android

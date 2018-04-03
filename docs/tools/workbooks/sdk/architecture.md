@@ -1,6 +1,5 @@
 ---
 title: "Architecture Overview"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6C0226BE-A0C4-4108-B482-0A903696AB04
 ms.technology: xamarin-cross-platform

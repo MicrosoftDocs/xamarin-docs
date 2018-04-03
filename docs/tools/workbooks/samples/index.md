@@ -1,6 +1,5 @@
 ---
 title: "Sample Workbooks"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DE1609F8-0D39-4EA0-8666-0468FCF77ACC
 ms.technology: xamarin-cross-platform

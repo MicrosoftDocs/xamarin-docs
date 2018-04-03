@@ -1,6 +1,5 @@
 ---
 title: "Navigation"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4cad57b5-7fe4-4527-a988-d9b60c9620b4
 ms.technology: xamarin-forms

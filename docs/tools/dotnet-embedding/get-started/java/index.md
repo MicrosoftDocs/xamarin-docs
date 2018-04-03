@@ -1,6 +1,5 @@
 ---
 title: "Getting started with Java"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
 ms.technology: xamarin-cross-platform

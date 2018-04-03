@@ -1,7 +1,7 @@
 ---
 title: "Resolving Library Installation Errors"
 description: "In some cases, you may get errors while installing Android support libraries. This guide provides workarounds for some common errors."
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 2AE68ACE-8496-445D-BF17-5E4097D4AE35
 ms.technology: xamarin-android

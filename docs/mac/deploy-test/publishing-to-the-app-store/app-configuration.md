@@ -1,7 +1,6 @@
 ---
 title: "Mac app configuration"
 description: "This guide walks through configuring your Xamarin.Mac app for publication."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: fea66a34-1581-4cd6-b714-3fbff215a542
 ms.technology: xamarin-mac

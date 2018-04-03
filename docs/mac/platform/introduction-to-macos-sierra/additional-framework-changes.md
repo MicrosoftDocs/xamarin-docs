@@ -1,7 +1,6 @@
 ---
 title: "Additional macOS Sierra Framework Changes"
 description: "This article covers additional, minor changes or enhancements to existing frameworks for macOS Sierra."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CA701269-D11E-4DE3-89C1-58EF8993A482
 ms.technology: xamarin-mac

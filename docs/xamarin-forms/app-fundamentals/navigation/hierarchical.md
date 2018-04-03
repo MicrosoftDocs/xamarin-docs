@@ -1,7 +1,6 @@
 ---
 title: "Hierarchical Navigation"
 description: "The NavigationPage class provides a hierarchical navigation experience where the user is able to navigate through pages, forwards and backwards, as desired. The class implements navigation as a last-in, first-out (LIFO) stack of Page objects. This article demonstrates how to use the NavigationPage class to perform navigation in a stack of pages."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms

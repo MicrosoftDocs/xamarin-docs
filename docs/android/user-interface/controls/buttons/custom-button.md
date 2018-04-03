@@ -1,6 +1,5 @@
 ---
 title: "Custom Button"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C523D41E-5855-248D-079D-6B12B74B7617
 ms.technology: xamarin-android

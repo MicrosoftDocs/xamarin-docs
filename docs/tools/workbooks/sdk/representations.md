@@ -1,6 +1,5 @@
 ---
 title: "Representations in Xamarin Workbooks"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5C7A60E3-1427-47C9-A022-720F25ECB031
 ms.technology: xamarin-cross-platform

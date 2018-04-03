@@ -1,7 +1,6 @@
 ---
 title: "Renderer Base Classes and Native Controls"
 description: "Every Xamarin.Forms control has an accompanying renderer for each platform that creates an instance of a native control. This article lists the renderer and native control classes that implement each Xamarin.Forms page, layout, view, and cell."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93
 ms.technology: xamarin-forms

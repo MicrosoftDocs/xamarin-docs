@@ -1,7 +1,6 @@
 ---
 title: "Working with Text and Search Fields"
 description: "This article covers designing and working with Text and Search Fields inside of a Xamarin.tvOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios

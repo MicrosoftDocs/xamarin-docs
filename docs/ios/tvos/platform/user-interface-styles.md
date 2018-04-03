@@ -1,7 +1,6 @@
 ---
 title: "New User interface Styles"
 description: "This article covers the Light and Dark UI Themes that Apple has added to tvOS 10 and how to implement them in a Xamarin.tvOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
 ms.technology: xamarin-ios

@@ -1,7 +1,6 @@
 ---
 title: "Platform Features"
 description: "Apple Watch-specific features to include in watchOS apps."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 13F23E01-BAED-43EB-A70E-3B30EF53D379
 ms.technology: xamarin-ios

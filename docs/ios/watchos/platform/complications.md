@@ -1,7 +1,6 @@
 ---
 title: "Complications"
 description: "watchOS allows developers to write custom complications for watch faces"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7ACD9A2B-CF69-46EA-B0C8-10E7D81216E8
 ms.technology: xamarin-ios

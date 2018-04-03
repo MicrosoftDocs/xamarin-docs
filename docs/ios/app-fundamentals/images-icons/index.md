@@ -1,7 +1,6 @@
 ---
 title: "Images and Icons"
 description: "This section includes a variety of articles that cover working with images in a Xamarin.iOS app, such as using them as icons, launch screens or including them in controls and providing icons for custom document types."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios

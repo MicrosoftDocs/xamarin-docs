@@ -1,6 +1,5 @@
 ---
 title: "NSString"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 785744B3-42E2-4590-8F41-435325E609B9
 ms.technology: xamarin-ios

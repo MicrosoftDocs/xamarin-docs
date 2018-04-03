@@ -1,7 +1,6 @@
 ---
 title: "Where's my Mac?"
 description: "Instructions for configuring your Mac for Visual Studio to build Xamarin.iOS projects"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4f792690-b3b1-4d56-a5e2-363b4f246059
 ms.technology: xamarin-ios

@@ -1,6 +1,5 @@
 ---
 title: "Communicating Between Loosely Coupled Components"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1194af33-8a91-48d2-88b5-b84d77f2ce69
 ms.technology: xamarin-forms

@@ -1,6 +1,5 @@
 ---
 title: "RelativeLayout"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: AFD9C849-02C3-E728-BC78-77A563612BC5
 ms.technology: xamarin-android

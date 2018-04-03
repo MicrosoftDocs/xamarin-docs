@@ -1,7 +1,6 @@
 ---
 title: "XAML Namespaces"
 description: "XAML uses the xmlns XML attribute for namespace declarations. This article introduces the XAML namespace syntax, and demonstrates how to declare a XAML namespace to access a type."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
 ms.technology: xamarin-forms

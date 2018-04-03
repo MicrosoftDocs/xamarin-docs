@@ -1,7 +1,6 @@
 ---
 title: "Handling multiple resolutions in CocosSharp"
 description: "This guide shows how to work with CocosSharp to develop games that display properly on devices of varying resolutions."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 859ABF98-2646-431A-A4A8-3E7E48DA5A43
 ms.technology: xamarin-cross-platform

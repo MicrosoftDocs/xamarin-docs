@@ -1,7 +1,6 @@
 ---
 title: "Providing Haptic Feedback"
 description: "This article covers the new types of haptic feedback available in iOS 10 and how to implement them in Xamarin.iOS."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 888106D1-58F4-453F-BACC-91D51FA39C80
 ms.technology: xamarin-ios

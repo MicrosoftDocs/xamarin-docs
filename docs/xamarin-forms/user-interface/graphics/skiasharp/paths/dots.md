@@ -1,7 +1,6 @@
 ---
 title: "Dots and Dashes"
 description: "Master the intricacies of drawing dotted and dashed lines in SkiaSharp"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078
 ms.technology: xamarin-forms

@@ -1,7 +1,6 @@
 ---
 title: "Platform Features"
 description: "Cross-platform application features and concepts."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 ms.technology: xamarin-cross-platform

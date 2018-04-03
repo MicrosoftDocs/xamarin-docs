@@ -1,7 +1,6 @@
 ---
 title: "ViewPager with Fragments"
 description: "ViewPager is a layout manager that lets you implement gestural navigation. Gestural navigation allows the user to swipe left and right to step through pages of data. This guide explains how to implement a swipeable UI with ViewPager, using Fragments as the data pages."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 62B6286F-3680-48F3-B91B-453692E457E5
 ms.technology: xamarin-android

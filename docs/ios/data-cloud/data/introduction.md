@@ -1,6 +1,5 @@
 ---
 title: "Introduction"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B1994468-FD06-4FD9-96B3-FCEBB13A972A
 ms.technology: xamarin-ios

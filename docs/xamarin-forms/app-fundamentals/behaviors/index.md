@@ -1,7 +1,6 @@
 ---
 title: "Behaviors"
 description: "Behaviors lets you add functionality to user interface controls without having to subclass them. Behaviors are written in code and added to controls in XAML or code."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 42E32AD7-8E3B-48B3-B402-E75B758DA913
 ms.technology: xamarin-forms

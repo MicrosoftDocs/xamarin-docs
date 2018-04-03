@@ -1,7 +1,6 @@
 ---
 title: "App Store Distribution"
 description: "This document covers the requirements for distribution to Apple's App Store."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
 ms.technology: xamarin-ios

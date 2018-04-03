@@ -1,7 +1,6 @@
 ---
 title: "Multi-Touch Finger Tracking"
 description: "This document demonstrates how to track touch events from multiple fingers"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 48E8B20D-0833-43D2-976A-0605DDB386E3
 ms.technology: xamarin-ios

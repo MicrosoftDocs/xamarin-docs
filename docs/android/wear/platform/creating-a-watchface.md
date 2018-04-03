@@ -1,7 +1,6 @@
 ---
 title: "Creating a Watch Face"
 description: "This guide explains how to implement a custom watch face service for Android Wear. Step-by-step instructions are provided for building a stripped down digital watch face service, followed by more code to create an analog-style watch face."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4D3F9A40-A820-458D-A12A-D784BB11F643
 ms.technology: xamarin-android

@@ -1,6 +1,5 @@
 ---
 title: "Editing"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
 ms.technology: xamarin-ios

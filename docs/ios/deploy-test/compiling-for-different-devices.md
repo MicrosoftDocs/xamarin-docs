@@ -1,6 +1,5 @@
 ---
 title: "Compiling for Different Devices"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3B259248-887E-3E4F-E09C-7AD28C2A8CEE
 ms.technology: xamarin-ios

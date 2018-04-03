@@ -1,6 +1,5 @@
 ---
 title: "Managing Fragments"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 02C5E8F0-32EF-4FD9-DC8B-04650E20722C
 ms.technology: xamarin-android

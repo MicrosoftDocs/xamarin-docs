@@ -1,7 +1,6 @@
 ---
 title: "Customizing an Entry"
 description: "The Xamarin.Forms Entry control allows a single line of text to be edited. This article demonstrates how to create a custom renderer for the Entry control, enabling developers to override the default native rendering with their own platform-specific customization."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D
 ms.technology: xamarin-forms

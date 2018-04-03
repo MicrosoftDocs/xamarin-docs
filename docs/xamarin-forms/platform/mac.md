@@ -1,7 +1,6 @@
 ---
 title: "Mac Platform Setup"
 description: "Xamarin.Forms now has preview support for the Mac platform"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EEC549E0-F182-4F9C-B2BA-B31D19569AA5
 ms.technology: xamarin-forms

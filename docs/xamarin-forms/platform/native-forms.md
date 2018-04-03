@@ -1,7 +1,6 @@
 ---
 title: "Native Forms"
 description: "Native Forms allow Xamarin.Forms ContentPage-derived pages to be consumed by native Xamarin.iOS, Xamarin.Android, and Universal Windows Platform (UWP) projects. Native projects can consume ContentPage-derived pages that are directly added to the project, or from a Portable Class Library (PCL), .NET Standard Library, or Shared Project. This article explains how to consume ContentPage-derived pages that are directly added to native projects, and how to navigate between them."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms

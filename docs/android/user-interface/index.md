@@ -1,7 +1,6 @@
 ---
 title: "User Interface"
 description: "Creating User Interfaces for Xamarin.Android Apps"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F67B7C33-BC53-2BB6-CDA7-16E4AB4A9EFB
 ms.technology: xamarin-android

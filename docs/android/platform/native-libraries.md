@@ -1,6 +1,5 @@
 ---
 title: "Using Native Libraries"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7AA6CEC8-C09E-BBDA-FDD6-E40559143548
 ms.technology: xamarin-android

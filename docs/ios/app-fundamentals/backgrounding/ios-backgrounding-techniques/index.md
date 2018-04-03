@@ -1,6 +1,5 @@
 ---
 title: "iOS Backgrounding Techniques"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 011A8D48-1CDC-486A-A2B0-C4946118E7A9
 ms.technology: xamarin-ios

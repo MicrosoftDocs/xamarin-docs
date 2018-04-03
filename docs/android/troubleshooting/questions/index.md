@@ -1,6 +1,6 @@
 ---
 title: "Frequently Asked Questions"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android

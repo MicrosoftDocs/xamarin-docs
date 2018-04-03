@@ -1,7 +1,6 @@
 ---
 title: "Code Signing and Provisioning"
 description: "Beyond the basics"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
 ms.technology: xamarin-ios

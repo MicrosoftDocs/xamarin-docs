@@ -1,6 +1,5 @@
 ---
 title: "Supporting pre-Honeycomb Android using Support Packages"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DACD0C14-5DDF-7BDE-6844-80550D301307
 ms.technology: xamarin-android

@@ -1,7 +1,6 @@
 ---
 title: "Searching Data with Azure Search"
 description: "Azure Search is a cloud service that provides indexing and querying capabilities for uploaded data. This removes the infrastructure requirements and search algorithm complexities traditionally associated with implementing search functionality in an application. This article demonstrates how to use the Microsoft Azure Search Library to integrate Azure Search into a Xamarin.Forms application."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
 ms.technology: xamarin-forms

@@ -1,6 +1,5 @@
 ---
 title: "Device Class"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms

@@ -1,7 +1,6 @@
 ---
 title: "Tab Bars and Tab Bar Controllers"
 description: "iOS applications using a tab-navigation UI are built using the UITabBarController class. In this article we’ll walk through how to set up a tabbed application that contains several controllers and views. We’ll then examine how to load a UITabBarController when it is not the root controller, such as after a login screen."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7C772899-2900-F139-D642-F3C4F3F14DDC
 ms.technology: xamarin-ios

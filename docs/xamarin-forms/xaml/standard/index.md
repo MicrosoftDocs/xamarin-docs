@@ -1,7 +1,6 @@
 ---
 title: "XAML Standard (Preview)"
 description: "How to get started exploring the XAML Standard Preview in Xamarin.Forms"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 24382DF1-BE70-4608-B86F-B79FB23E4A78
 ms.technology: xamarin-forms

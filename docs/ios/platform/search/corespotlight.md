@@ -1,6 +1,5 @@
 ---
 title: "Search with Core Spotlight"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios

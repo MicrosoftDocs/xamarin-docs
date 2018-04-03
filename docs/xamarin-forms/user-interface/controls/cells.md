@@ -1,7 +1,6 @@
 ---
 title: "Xamarin.Forms Cells"
 description: "Xamarin.Forms cells can be added to ListViews and TableViews."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 77DA0C89-35D6-4C09-A072-3ADE53FD56CF
 ms.technology: xamarin-forms

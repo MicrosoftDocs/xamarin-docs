@@ -1,7 +1,6 @@
 ---
 title: "Xamarin Firewall Configuration Instructions"
 description: "A list of hosts that you need to whitelist in your firewall to allow Xamarin’s platform to work for your company."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
 ms.technology: xamarin-cross-platform

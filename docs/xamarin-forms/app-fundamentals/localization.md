@@ -1,7 +1,6 @@
 ---
 title: "Localization"
 description: "Xamarin.Forms apps can be localized using .NET resources files."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509
 ms.technology: xamarin-forms

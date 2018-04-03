@@ -1,7 +1,6 @@
 ---
 title: "Toolbar"
 description: "The Toolbar is an action bar component that provides more flexibility than the default action bar: it can be placed anywhere in the app, its size can be changed, and it can use a color scheme that is different from the app's theme. Also, each app screen can have multiple Toolbars."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 22EE5FBD-3240-4308-AF76-EF45D72936DE
 ms.technology: xamarin-android

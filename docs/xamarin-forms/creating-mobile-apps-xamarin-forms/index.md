@@ -1,7 +1,6 @@
 ---
 title: "Creating Mobile Apps with Xamarin.Forms Book First Edition"
 description: "Learn Xamarin.Forms with the electronic version of the Creating Mobile Apps book by Charles Petzold."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CDE99818-689B-4376-9DC4-C4102AC0F931
 ms.technology: xamarin-forms

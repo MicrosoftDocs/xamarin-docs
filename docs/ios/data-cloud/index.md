@@ -1,7 +1,6 @@
 ---
 title: "Data and Cloud Services"
 description: "Stabilization and Deployment Guides"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 945719F7-7CE6-4207-BF0F-23195125FC84
 ms.technology: xamarin-ios

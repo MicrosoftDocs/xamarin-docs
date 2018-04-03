@@ -1,6 +1,5 @@
 ---
 title: "Summary of Chapter 13. Bitmaps"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7

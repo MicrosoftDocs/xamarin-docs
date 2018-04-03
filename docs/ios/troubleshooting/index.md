@@ -1,7 +1,7 @@
 ---
 title: "Troubleshooting"
 description: "Documents in this section cover features specific to troubleshooting with Xamarin.iOS. Troubleshooting"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1DE5E667-A671-47CE-A0AC-F0D8B00ACFCE
 ms.technology: xamarin-ios

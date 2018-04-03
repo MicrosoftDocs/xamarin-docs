@@ -1,6 +1,5 @@
 ---
 title: "Creating a Custom Theme"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4FE08ADC-093F-47FA-B33C-20CF08B5D7E0
 ms.technology: xamarin-forms

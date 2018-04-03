@@ -1,7 +1,6 @@
 ---
 title: "Profiling Xamarin.iOS Applications with Instruments"
 description: "How to use Instruments on an Xamarin.iOS application on a device or in the simulator."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 70A8CAC8-20C2-655B-37C3-ACF9EA7874D8
 ms.technology: xamarin-ios

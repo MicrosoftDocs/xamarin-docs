@@ -1,6 +1,5 @@
 ---
 title: "Walkthrough - Using Background Location"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
 ms.technology: xamarin-ios

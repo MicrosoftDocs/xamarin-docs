@@ -1,6 +1,5 @@
 ---
 title: "Walkthrough – Using Touch in iOS"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 13F8289B-7A80-4959-AF3F-57874D866DCA
 ms.technology: xamarin-ios

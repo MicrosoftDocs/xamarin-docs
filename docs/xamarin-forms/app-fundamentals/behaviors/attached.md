@@ -1,7 +1,6 @@
 ---
 title: "Attached Behaviors"
 description: "Attached behaviors are static classes with one or more attached properties. This article demonstrates how to create and consume attached behaviors."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: ECEE6AEC-44FA-4AF7-BAD0-88C6EE48422E
 ms.technology: xamarin-forms

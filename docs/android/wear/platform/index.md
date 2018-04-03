@@ -1,7 +1,6 @@
 ---
 title: "Platform Features"
 description: "Key Components of the Android Wear Platform"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E86688B5-B2FE-476A-A2AA-F8CC26EA8D2B
 ms.technology: xamarin-android

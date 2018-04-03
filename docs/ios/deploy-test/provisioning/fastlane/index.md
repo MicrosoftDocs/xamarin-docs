@@ -1,7 +1,6 @@
 ---
 title: "Introduction to fastlane for iOS"
 description: "This guide introduces the various fastlane tools that can be used to code sign iOS applications"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
 ms.technology: xamarin-ios

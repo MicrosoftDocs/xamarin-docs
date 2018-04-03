@@ -1,6 +1,5 @@
 ---
 title: "API Design"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android

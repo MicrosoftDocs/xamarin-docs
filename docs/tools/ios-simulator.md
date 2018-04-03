@@ -1,7 +1,6 @@
 ---
 title: "Remoted iOS Simulator (for Windows)"
 description: "Test and debug iOS apps entirely within Visual Studio on Windows"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
 ms.technology: xamarin-cross-platform

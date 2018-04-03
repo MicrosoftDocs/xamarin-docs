@@ -1,7 +1,6 @@
 ---
 title: "Creating Platform-Specifics"
 description: "Vendors can create their own platform-specifics with Effects. An Effect provides the specific functionality, which is then exposed through a platform-specific. The result is an Effect that can be more easily consumed through XAML, and through a fluent code API. This article demonstrates how to expose an Effect through a platform-specific."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0D0E6274-6EF2-4D40-BB77-3D8E53BCD24B
 ms.technology: xamarin-forms

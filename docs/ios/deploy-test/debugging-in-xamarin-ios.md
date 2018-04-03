@@ -1,7 +1,6 @@
 ---
 title: "Debugging"
 description: "Xamarin.iOS applications can be debugged with the built-in debugger in Visual Studio for Mac or Visual Studio."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 05460010-99E1-DC38-F855-2D691EF54484
 ms.technology: xamarin-ios

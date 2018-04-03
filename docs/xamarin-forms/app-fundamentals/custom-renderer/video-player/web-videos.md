@@ -1,6 +1,5 @@
 ---
 title: "Playing a Web video"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 75781A10-865D-4BA8-8D6B-E3DA012922BC
 ms.technology: xamarin-forms

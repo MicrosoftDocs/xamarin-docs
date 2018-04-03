@@ -1,7 +1,6 @@
 ---
 title: "Creating iOS User Interfaces in Code"
 description: "Xamarin.iOS provides two methods of creating a User Interface for your app – with the Xamarin Designer for iOS or in code. This article examines how to create iOS user interfaces entirely in code. It shows how to start from a project template to build an application screen in a controller by creating a hierarchy of views from UIKit. Then, it discusses how to create custom views that can be loaded in a controller."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios

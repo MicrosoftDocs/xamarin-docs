@@ -1,6 +1,5 @@
 ---
 title: "Binding video sources to the player"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 504E0C7E-051A-4AF2-B654-BAB4D0957928
 ms.technology: xamarin-forms

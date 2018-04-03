@@ -1,7 +1,6 @@
 ---
 title: "iOS 9 Compatibility"
 description: "Even if you don't plan to add iOS 9 features to your app straight away, you should rebuild your apps with the latest version of Xamarin."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 69A05B0E-8A0A-489F-8165-B10AC46FAF3C
 ms.technology: xamarin-ios

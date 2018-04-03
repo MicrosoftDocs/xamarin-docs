@@ -1,6 +1,6 @@
 ---
 title: "Smarter Xamarin Android Support v4 / v13 NuGet Packages"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: FE66A82A-6C05-4646-BC52-E806F5DC606C
 ms.technology: xamarin-android

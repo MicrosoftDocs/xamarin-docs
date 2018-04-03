@@ -1,7 +1,6 @@
 ---
 title: "Working with the Parent Application"
 description: "Sharing data between the iOS and watch app in watchOS 1"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9AD29833-E9CC-41A3-95D2-8A655FF0B511
 ms.technology: xamarin-ios

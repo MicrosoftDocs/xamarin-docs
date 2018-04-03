@@ -1,7 +1,6 @@
 ---
 title: "Application Fundamentals"
 description: "Core Application Concepts"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios

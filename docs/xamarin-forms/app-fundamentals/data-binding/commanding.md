@@ -1,7 +1,6 @@
 ---
 title: "The Command Interface"
 description: "Implement the `Command` property with data bindings"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
 ms.technology: xamarin-forms

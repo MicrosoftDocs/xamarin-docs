@@ -1,7 +1,6 @@
 ---
 title: "Programming UrhoSharp with F#"
 description: "How to create a simple UrhoSharp application using F# in Visual Studio for Mac"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F976AB09-0697-4408-999A-633977FEFF64
 ms.technology: xamarin-cross-platform

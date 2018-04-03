@@ -1,7 +1,6 @@
 ---
 title: "Dialogs"
 description: "This article covers working with dialogs and modal windows in a Xamarin.Mac application. It describes creating modal windows in Xcode and Interface builder, working with standard dialogs, and interacting with these controls in C# code."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac

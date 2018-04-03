@@ -1,7 +1,6 @@
 ---
 title: "SkiaSharp Curves and Paths"
 description: "Learn how to use SkiaSharp to draw curves and use path features"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635

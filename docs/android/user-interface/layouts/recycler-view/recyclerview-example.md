@@ -1,6 +1,5 @@
 ---
 title: "A Basic RecyclerView Example"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
 ms.technology: xamarin-android

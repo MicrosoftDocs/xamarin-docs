@@ -1,7 +1,6 @@
 ---
 title: "2D Drawing"
 description: "Cross Platform 2D Drawing with SkiaSharp"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 ms.technology: xamarin-cross-platform

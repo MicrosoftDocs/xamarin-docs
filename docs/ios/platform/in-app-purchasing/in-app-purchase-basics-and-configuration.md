@@ -1,6 +1,5 @@
 ---
 title: "In-App Purchase Basics and Configuration"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios

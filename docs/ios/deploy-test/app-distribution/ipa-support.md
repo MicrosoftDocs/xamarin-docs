@@ -1,7 +1,6 @@
 ---
 title: "IPA Support"
 description: "This article covers how to create an IPA file that can be used to deploy an application using Ad Hoc distribution, either for testing, or for In-House distribution of internal applications."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D253C2DB-852E-6FC6-C9FD-574730B8DB19
 ms.technology: xamarin-ios

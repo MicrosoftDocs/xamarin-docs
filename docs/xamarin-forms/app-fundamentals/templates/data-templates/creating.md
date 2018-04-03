@@ -1,7 +1,6 @@
 ---
 title: "Creating a DataTemplate"
 description: "Data templates can be created inline, in a ResourceDictionary, or from a custom type or appropriate Xamarin.Forms cell type. This article explores each technique."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CFF4AB5E-9069-461C-84D8-F9F6C38510AB
 ms.technology: xamarin-forms

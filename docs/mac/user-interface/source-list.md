@@ -1,7 +1,6 @@
 ---
 title: "Source lists"
 description: "This article covers working with source lists in a Xamarin.Mac application. It describes creating and maintaining source lists in Xcode and Interface Builder and interacting with them in C# code."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 651A3649-5AA8-4133-94D6-4873D99F7FCC
 ms.technology: xamarin-mac

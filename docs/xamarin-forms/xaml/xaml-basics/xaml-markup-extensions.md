@@ -1,7 +1,6 @@
 ﻿---
 title: "Part 3. XAML Markup Extensions"
 description: "XAML markup extensions constitute an important feature in XAML that allow properties to be set to objects or values that are referenced indirectly from other sources. XAML markup extensions are particularly important for sharing objects, and referencing constants used throughout an application, but they find their greatest utility in data bindings."
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6

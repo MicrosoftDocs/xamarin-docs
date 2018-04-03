@@ -5,7 +5,7 @@ keywords: keyword, list, for, internal, search
 author: conceptdev
 ms.author: crdun
 ms.date: 02/26/2018
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
 ---
@@ -28,7 +28,7 @@ keywords: a, comma, separated, list, of keywords, to, use, for, this, doc, howev
 author: conceptdev (your Github user name)
 ms.author: crdun (your Microsoft Alias)
 ms.date: 02/26/2018 (creation date, in US format: mm/dd/yyyy)
-ms.topic: article (one only of the following: article, get-started-article, hero-article, hub-page, landing-page, non-content, reference, search)
+ms.topic: conceptual (one only of the following: conceptual, quickstart, tutorial, overview)
 ms.assetid: b39854a6-c523-4a66-bef6-9b5da03bafff (a unique number representing the asset - just use a GUID, you can generate one at https://www.guidgenerator.com/)
 ms.prod: xamarin (no reason to change this)
 ms.custom: Analytics data, a field that gets imported into SkyEye so you can use it in custom reports

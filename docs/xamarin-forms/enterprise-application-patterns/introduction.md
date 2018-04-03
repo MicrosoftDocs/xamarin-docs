@@ -1,6 +1,5 @@
 ---
 title: "Introduction"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: cbce0659-fa03-447a-86ec-140438143230
 ms.technology: xamarin-forms

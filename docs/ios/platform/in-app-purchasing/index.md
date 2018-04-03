@@ -1,7 +1,6 @@
 ---
 title: "In-App Purchasing"
 description: "iOS applications can sell digital products and services using the Store Kit APIs. Products are created and managed in the iTunes Connect portal. Apple manages the transaction processing and approves all products before they can be sold, and charges a fee for each transaction (currently 30%). Apple requires that you use the in-app purchasing for any digital sales in your app, but you cannot use it for sales of physical goods or non-digital services. Apps that offer alternate payment options for digital products and services are likely to be rejected. This document explains how to configure your application to use Store Kit and provides Xamarin.iOS examples of the most common in-app purchasing scenarios."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios

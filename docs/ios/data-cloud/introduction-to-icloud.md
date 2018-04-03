@@ -1,7 +1,6 @@
 ---
 title: "iCloud"
 description: "Apple introduced iCloud in iOS 5 as a service to allow applications to store data on Apple's servers and have it synchronized across all devices used by the same person (via their Apple ID). It also has a backup component, where the data on your devices is backed-up to Apple's servers. This document describes how to use some of the iCloud APIs provided by Apple to store and retrieve data from their servers, with C# samples for storing small key-value data pairs and for storing documents. It also discusses how iCloud Backup can influence the design of your application."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios

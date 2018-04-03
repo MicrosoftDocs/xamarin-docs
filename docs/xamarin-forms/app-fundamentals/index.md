@@ -1,7 +1,6 @@
 ---
 title: "Application Fundamentals"
 description: "Exploring the fundamentals of Xamarin.Forms development"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms

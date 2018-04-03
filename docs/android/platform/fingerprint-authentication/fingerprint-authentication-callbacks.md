@@ -1,6 +1,5 @@
 ---
 title: "Responding to Authentication Callbacks"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6533AFC9-1A1C-4897-A154-4D4ECFE27761
 ms.technology: xamarin-android

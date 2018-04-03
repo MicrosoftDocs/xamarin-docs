@@ -1,6 +1,5 @@
 ---
 title: ".xib Code Generation"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios

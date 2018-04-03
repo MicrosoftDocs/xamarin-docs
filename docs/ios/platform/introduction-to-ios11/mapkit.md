@@ -1,6 +1,5 @@
 ---
 title: "New Features in MapKit on iOS 11"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 304AE5A3-518F-422F-BE24-92D62CE30F34
 ms.technology: xamarin-ios

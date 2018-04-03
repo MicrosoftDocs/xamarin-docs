@@ -1,6 +1,5 @@
 ---
 title: "GridLayout"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B69A4BF5-9CFB-443A-9F7B-062D1E498F61
 ms.technology: xamarin-android

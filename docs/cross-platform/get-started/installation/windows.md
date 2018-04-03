@@ -1,6 +1,5 @@
 ---
 title: "Installing Xamarin in Visual Studio on Windows"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 ms.technology: xamarin-cross-platform

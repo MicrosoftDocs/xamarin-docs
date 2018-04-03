@@ -1,7 +1,6 @@
 ---
 title: "Installing Xamarin.Android as a System App"
 description: "This guide will discuss the differences between a system app and a user app, and how to install a Xamarin.Android application as a system application. This guide applies to authors of custom Android ROM images. It will not explain how to create a custom ROM."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0113143B-7D8D-4C4C-B2F5-B966A2E7CE1F
 ms.technology: xamarin-android

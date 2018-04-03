@@ -1,6 +1,5 @@
 ---
 title: "Edit Text"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E513BCBC-438E-15E8-B83A-4B768A8E8B32
 ms.technology: xamarin-android

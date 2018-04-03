@@ -2,7 +2,6 @@
 redirect_url: /xamarin/tools/live-player/
 title: "XAML Live Previewing"
 description: "Test app code changes in real time on your iOS or Android device"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 86E9A179-21F8-4F3A-A9CE-36F0FC5DB4A8
 ms.technology: xamarin-cross-platform

@@ -1,7 +1,6 @@
 ---
 title: "Set Up Device for Development"
 description: "This article will discuss how to setup an Android device and connect it to a computer so that the device may be used to run and debug Xamarin.Android applications."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9116A3AA-EA00-56AF-AE70-BAEEC045EF11
 ms.technology: xamarin-android

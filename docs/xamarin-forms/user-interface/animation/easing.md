@@ -1,7 +1,6 @@
 ---
 title: "Easing Functions"
 description: "Xamarin.Forms includes an Easing class that allows you to specify a transfer function that controls how animations speed up or slow down as they're running. This article demonstrates how to consume the pre-defined easing functions, and how to create custom easing functions."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E6F124C7-A161-4C1F-AF40-52F0935E54DE
 ms.technology: xamarin-forms

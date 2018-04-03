@@ -1,7 +1,6 @@
 ---
 title: "Core NFC"
 description: "Reading Near Field Communication (NFC) tags using iOS 11"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E

@@ -1,7 +1,6 @@
 ---
 title: "Installing Xamarin.iOS on Windows"
 description: "This article shows how to set up Xamarin.iOS for Visual Studio. It covers the installation process for the Xamarin extension for Visual Studio, and discusses connecting to the Apple SDK installed on the Mac."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: abf85d3e-a365-44a2-b1a4-6c572c7f76dd
 ms.technology: xamarin-ios

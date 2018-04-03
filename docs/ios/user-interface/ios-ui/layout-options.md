@@ -1,6 +1,5 @@
 ---
 title: "Layout Options"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
 ms.technology: xamarin-ios

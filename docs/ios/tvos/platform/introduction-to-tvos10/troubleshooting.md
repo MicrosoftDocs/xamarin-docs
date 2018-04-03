@@ -1,7 +1,6 @@
 ---
 title: "Troubleshooting"
 description: "This article provides several troubleshooting tips for working with tvOS 10 in Xamarin.tvOS apps."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EA5564BB-C415-49A2-B70C-3DBF5E0F3FAB
 ms.technology: xamarin-ios

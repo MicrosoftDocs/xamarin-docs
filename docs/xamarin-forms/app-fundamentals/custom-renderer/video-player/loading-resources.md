@@ -1,6 +1,5 @@
 ---
 title: "Loading application resource videos"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F75BD540-9354-4C17-A119-57F3DEC66D54
 ms.technology: xamarin-forms

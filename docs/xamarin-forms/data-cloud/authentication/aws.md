@@ -1,7 +1,6 @@
 ---
 title: "Authenticating Users with an Amazon SimpleDB Service"
 description: "Amazon SimpleDB does not offer its own resource-based permissions system. Instead, authentication against an identity provider can be used to ensure that users only have access to their own data in the SimpleDB domain. This article explains how to restrict users' access to their own SimpleDB data."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 797C91A5-9720-4DAC-89D8-5C85996584C8
 ms.technology: xamarin-forms

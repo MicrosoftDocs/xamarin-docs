@@ -1,7 +1,6 @@
 ---
 title: "Platform Features"
 description: "Documents in this section cover features specific to iOS."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
 ms.technology: xamarin-ios

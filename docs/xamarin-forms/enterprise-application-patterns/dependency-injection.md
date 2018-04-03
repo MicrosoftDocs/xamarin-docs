@@ -1,6 +1,5 @@
 ---
 title: "Dependency Injection"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103
 ms.technology: xamarin-forms

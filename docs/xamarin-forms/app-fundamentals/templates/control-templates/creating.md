@@ -1,7 +1,6 @@
 ---
 title: "Creating a ControlTemplate"
 description: "Control templates can be defined at the application level or page level. This article demonstrates how to create and consume control templates."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A9AEB052-FBF5-4589-9BD4-6D6F62BED7F1
 ms.technology: xamarin-forms

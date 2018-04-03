@@ -1,6 +1,5 @@
 ---
 title: "Populating a ListView With Data"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: AC4F95C8-EC3F-D960-7D44-8D55D0E4F1B6
 ms.technology: xamarin-android

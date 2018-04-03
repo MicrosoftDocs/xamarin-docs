@@ -1,6 +1,6 @@
 ---
 title: "Where can I find the .dSYM file to symbolicate iOS crash logs?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: CB8607B9-FFDA-4617-8210-8E43EC512588
 ms.technology: xamarin-ios

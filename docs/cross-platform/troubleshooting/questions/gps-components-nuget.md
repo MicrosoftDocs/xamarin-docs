@@ -1,6 +1,6 @@
 ---
 title: "Unifying Google Play Services Components and NuGet"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5D962EB4-2CB3-4B7D-9D77-889DEACDAE02
 ms.technology: xamarin-cross-platform

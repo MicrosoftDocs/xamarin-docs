@@ -1,7 +1,6 @@
 ---
 title: "Working with Collection Views"
 description: "This article covers designing and working with Collection Views inside of a Xamarin.tvOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios

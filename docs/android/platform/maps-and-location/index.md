@@ -1,7 +1,6 @@
 ---
 title: "Maps and Location"
 description: "Using Maps with Xamarin.Android"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B45211C5-D377-4A55-8C8E-95D4BF470AE3
 ms.technology: xamarin-android

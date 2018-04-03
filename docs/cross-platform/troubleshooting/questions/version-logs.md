@@ -1,6 +1,6 @@
 ---
 title: "Where can I find my version information and logs?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 ms.technology: xamarin-cross-platform

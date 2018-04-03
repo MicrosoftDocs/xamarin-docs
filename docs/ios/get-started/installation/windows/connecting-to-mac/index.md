@@ -1,7 +1,6 @@
 ---
 title: "Connecting to the Mac"
 description: "Xamarin.iOS for Visual Studio lets developers create, build, and debug iOS applications on a Windows computer using the Visual Studio IDE. This guide explains the features provided Xamarin.iOS for Visual Studio and how the connection to the Mac build host is made."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios

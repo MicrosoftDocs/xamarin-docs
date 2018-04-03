@@ -1,7 +1,6 @@
 ---
 title: "Events, Protocols and Delegates"
 description: "This article presents the key iOS technologies used to receive callbacks and to populate user interface controls with data. These technologies are events, protocols, and delegates. This article explains what each of these is, and how each is used from C#. It demonstrates how Xamarin.iOS uses iOS controls to expose familiar .NET events, as well as how Xamarin.iOS provides support for Objective-C concepts such as protocols and delegates (Objective-C delegates should not be confused with C# delegates). This article also provides examples that show how protocols are used – both as the basis for Objective-C delegates and in non-delegate scenarios."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
 ms.technology: xamarin-ios

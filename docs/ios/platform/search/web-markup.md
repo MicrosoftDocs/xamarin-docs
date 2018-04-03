@@ -1,7 +1,6 @@
 ---
 title: "Search with Web Markup"
 description: "Adding web-based search results that can link back to your app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios

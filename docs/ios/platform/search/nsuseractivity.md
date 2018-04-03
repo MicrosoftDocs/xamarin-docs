@@ -1,6 +1,5 @@
 ---
 title: "Search with NSUserActivity"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
 ms.technology: xamarin-ios

@@ -1,7 +1,6 @@
 ---
 title: "Additional watchOS 3 Frameworks Changes"
 description: "This article covers additional, minor changes or enhancements to existing frameworks for watchOS 3."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FE93796E-F699-4B14-B37D-D39F9D48E81E
 ms.technology: xamarin-ios

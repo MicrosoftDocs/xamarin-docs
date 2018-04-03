@@ -1,7 +1,6 @@
 ---
 title: "HomeKit"
 description: "HomeKit is Apple's framework for controlling home automation devices. This article introduces HomeKit and covers configuring test accessories in the HomeKit Accessory Simulator and writing a simple Xamarin.iOS app to interact with these accessories."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
 ms.technology: xamarin-ios

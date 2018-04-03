@@ -1,6 +1,5 @@
 ---
 title: "Light Theme"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D5D16AE3-F51F-4359-B37A-E1087ECE512B
 ms.technology: xamarin-forms

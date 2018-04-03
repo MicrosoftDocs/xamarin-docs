@@ -1,6 +1,5 @@
 ---
 title: "Displaying Images"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 67CA8DB6-769D-42BB-A137-3AF933789FE1
 ms.technology: xamarin-ios

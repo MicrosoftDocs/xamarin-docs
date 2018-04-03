@@ -1,7 +1,6 @@
 ---
 title: "Carousel Page"
 description: "The Xamarin.Forms CarouselPage is a page that users can swipe from side to side to navigate through pages of content, like a gallery. This article demonstrates how to use a CarouselPage to navigate through a collection of pages."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2D14FC9D-DF5F-427E-9006-2AAE61ECF8DC
 ms.technology: xamarin-forms

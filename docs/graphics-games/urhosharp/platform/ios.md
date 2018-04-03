@@ -1,7 +1,6 @@
 ---
 title: "UrhoSharp iOS and tvOS Support"
 description: "iOS and tvOS Specific Setup and Features for UrhoSharp."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7B06567E-E789-4EA1-A2A9-F3B2212EDD23
 ms.technology: xamarin-cross-platform

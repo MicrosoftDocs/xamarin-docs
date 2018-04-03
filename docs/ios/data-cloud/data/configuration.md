@@ -1,6 +1,5 @@
 ---
 title: "Configuration"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E5582F4B-AD74-420F-9E6D-B07CFB420B3A
 ms.technology: xamarin-ios

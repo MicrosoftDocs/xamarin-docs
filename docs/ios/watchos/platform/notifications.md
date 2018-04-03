@@ -1,6 +1,5 @@
 ---
 title: "Notifications"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0BC1306E-0713-4592-996E-7530CCF281E7
 ms.technology: xamarin-ios

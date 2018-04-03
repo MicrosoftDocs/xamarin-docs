@@ -1,7 +1,6 @@
 ---
 title: "Related Documentation"
 description: "Links to additional documentation for macOS developers."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0a282c58-1c37-4f73-8440-85de2daf454a
 ms.technology: xamarin-mac

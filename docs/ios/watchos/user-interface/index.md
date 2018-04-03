@@ -1,6 +1,5 @@
 ---
 title: "watchOS User Interface"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EDFAD203-02EA-4A74-9CE2-7B8513BC90E1
 ms.technology: xamarin-ios

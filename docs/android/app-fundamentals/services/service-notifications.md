@@ -1,7 +1,6 @@
 ---
 title: "Service Notifications"
 description: "This guide discusses how an Android service may use local notifications to dispatch information to a user."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6C06FDE7-6385-40EF-AC7C-8EFB54E29F45
 ms.technology: xamarin-android

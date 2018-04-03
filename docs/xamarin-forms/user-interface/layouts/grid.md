@@ -1,7 +1,6 @@
 ---
 title: "Grid"
 description: "Present views in grids."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms

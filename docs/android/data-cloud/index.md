@@ -1,7 +1,6 @@
 ---
 title: "Data and Cloud Services"
 description: "The guides in this section examine how to access data and make use of cloud services."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 54D9D34B-D4FA-473B-BD11-75D3762920B0
 ms.technology: xamarin-android

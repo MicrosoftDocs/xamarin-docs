@@ -1,6 +1,5 @@
 ---
 title: "Summary of Chapter 5. Dealing with sizes"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF

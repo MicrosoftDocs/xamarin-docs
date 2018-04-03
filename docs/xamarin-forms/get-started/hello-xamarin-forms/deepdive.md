@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms Deep Dive"
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
 ms.technology: xamarin-forms

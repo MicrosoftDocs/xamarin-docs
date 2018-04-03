@@ -1,7 +1,6 @@
 ---
 title: "Platform Features"
 description: "Key Components of the macOS Platform"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 37451F65-672A-4512-8DDD-06CCDE9E5A12
 ms.technology: xamarin-mac

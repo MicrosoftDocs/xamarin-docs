@@ -1,7 +1,6 @@
 ---
 title: "Touch"
 description: "Touch screens on many of today's devices allow users to quickly and efficiently interact with devices in a natural and intuitive way. This interaction is not limited just to simple touch detection - it is possible to use gestures as well. For example, the pinch-to-zoom gesture is a very common example of this by pinching a part of the screen with two fingers the user can zoom in or out. This guide examines touch and gestures in Android."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
 ms.technology: xamarin-android

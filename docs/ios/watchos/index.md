@@ -1,7 +1,6 @@
 ---
 title: "watchOS"
 description: "Build apps for Apple Watch with Xamarin"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 14EAE85E-460A-4145-8C8D-869D176D5C3F
 ms.technology: xamarin-ios

@@ -1,6 +1,5 @@
 ---
 title: "Native Types"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
 ms.technology: xamarin-cross-platform

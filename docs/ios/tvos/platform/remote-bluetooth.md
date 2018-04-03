@@ -1,7 +1,6 @@
 ---
 title: "Siri Remote and Bluetooth Controllers"
 description: "This article covers supporting the new Siri Remote and Bluetooth game controllers in your Xamarin.tvOS apps."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios

@@ -1,7 +1,6 @@
 ---
 title: "Ice Cream Sandwich Features"
 description: "This article describes several of the new features available to application developers with the Android 4 API - Ice Cream Sandwich. It covers several new user interface technologies and then examines a variety of new capabilities that Android 4 offers for sharing data between applications and between devices."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 78E18A62-C12F-A699-37FA-44B9F6B44273
 ms.technology: xamarin-android

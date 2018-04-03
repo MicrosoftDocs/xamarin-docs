@@ -1,6 +1,5 @@
 ---
 title: "Part 5 - Practical Code Sharing Strategies"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 ms.technology: xamarin-cross-platform

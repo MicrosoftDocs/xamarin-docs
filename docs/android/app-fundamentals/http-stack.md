@@ -1,7 +1,6 @@
 ---
 title: "HttpClient Stack and SSL/TLS Implementation Selector for Android"
 description: "The HttpClient Stack and SSL/TLS Implementation selectors determine the HttpClient and SSL/TLS implementation that will be used by your Xamarin.Android apps."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D7ABAFAB-5CA2-443D-B902-2C7F3AD69CE2
 ms.technology: xamarin-android

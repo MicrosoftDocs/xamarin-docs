@@ -1,7 +1,6 @@
 ---
 title: "Introduction to CoreML"
 description: "Machine learning for mobile apps on iOS 11"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios

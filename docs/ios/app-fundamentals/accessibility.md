@@ -1,6 +1,5 @@
 ---
 title: "Accessibility on iOS"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 88D59B36-05A3-4356-AE29-EC2B69CE7162
 ms.technology: xamarin-ios

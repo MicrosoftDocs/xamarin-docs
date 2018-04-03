@@ -1,7 +1,6 @@
 ---
 title: "Wireless Deployment"
 description: "This feature allows for deployment to iOS or Apple TV devices over a networked connection"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios

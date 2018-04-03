@@ -1,7 +1,6 @@
 ---
 title: "Android Resources"
 description: "This article introduces the concept of Android resources in Xamarin.Android and will document how to use them. It covers how to use resources in your Android application to support application localization, and multiple devices including varying screen sizes and densities."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android

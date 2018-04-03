@@ -1,7 +1,6 @@
 ---
 title: "Basic Bindings"
 description: "Data-binding targets, sources, and the binding context"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
 ms.technology: xamarin-forms

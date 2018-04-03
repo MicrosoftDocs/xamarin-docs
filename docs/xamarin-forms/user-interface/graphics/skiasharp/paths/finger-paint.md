@@ -1,7 +1,6 @@
 ---
 title: "Finger Painting"
 description: "Use your fingers to paint on the canvas."
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B

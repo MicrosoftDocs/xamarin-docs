@@ -1,7 +1,6 @@
 ---
 title: "Alternate App Icons"
 description: "This article covers using alternate app icons in Xamarin.iOS."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 302fa818-33b9-4ea1-ab63-0b2cb312299a
 ms.technology: xamarin-ios

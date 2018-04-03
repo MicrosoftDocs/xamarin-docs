@@ -1,6 +1,5 @@
 ---
 title: "Using SQLite.NET"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3447B7EE-A320-489E-AF02-E5721097760A
 ms.technology: xamarin-android

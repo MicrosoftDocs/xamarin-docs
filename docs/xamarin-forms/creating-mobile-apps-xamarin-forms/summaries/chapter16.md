@@ -1,6 +1,5 @@
 ---
 title: "Summary of Chapter 16. Data binding"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6

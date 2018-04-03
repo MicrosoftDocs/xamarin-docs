@@ -1,7 +1,6 @@
 ---
 title: "Advanced Concepts & Internals"
 description: "Implementation details for Xamarin.Forms, and advanced tips and tricks."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5
 ms.technology: xamarin-forms

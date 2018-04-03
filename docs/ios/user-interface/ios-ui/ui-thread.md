@@ -1,6 +1,5 @@
 ---
 title: "Working with the UI Thread"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 98762ACA-AD5A-4E1E-A536-7AF3BE36D77E
 ms.technology: xamarin-ios

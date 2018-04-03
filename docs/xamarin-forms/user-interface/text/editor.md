@@ -1,7 +1,6 @@
 ---
 title: "Editor"
 description: "Multi-line text input"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms

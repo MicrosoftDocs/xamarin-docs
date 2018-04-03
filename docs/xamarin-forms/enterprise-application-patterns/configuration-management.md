@@ -1,6 +1,5 @@
 ---
 title: "Configuration Management"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 50d6e780-e768-47f8-9361-3af11e56b87b
 ms.technology: xamarin-forms

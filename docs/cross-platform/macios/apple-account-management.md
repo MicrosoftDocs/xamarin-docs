@@ -1,6 +1,5 @@
 ---
 title: "Apple Account Management"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 ms.technology: xamarin-cross-platform

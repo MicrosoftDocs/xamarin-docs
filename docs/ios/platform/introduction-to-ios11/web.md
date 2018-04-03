@@ -1,6 +1,5 @@
 ---
 title: "Web Changes in iOS 11"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C74B2E94-177C-43D4-8D6C-9B528773C120
 ms.technology: xamarin-ios

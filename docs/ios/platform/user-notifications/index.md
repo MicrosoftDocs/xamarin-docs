@@ -1,7 +1,6 @@
 ---
 title: "User Notifications Framework"
 description: "This article covers all of the ways that Users Notification have been enhanced by iOS 10 and how to use them in a Xamarin.iOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios

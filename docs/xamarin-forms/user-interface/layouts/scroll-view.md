@@ -1,7 +1,6 @@
 ---
 title: "ScrollView"
 description: "Use ScrollView to present layouts that can't fit on just one screen and have content make room for the keyboard."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
 ms.technology: xamarin-forms

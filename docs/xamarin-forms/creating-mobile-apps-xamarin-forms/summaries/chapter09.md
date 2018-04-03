@@ -1,6 +1,5 @@
 ---
 title: "Summary of Chapter 9. Platform-specific API calls"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D

@@ -1,7 +1,6 @@
 ---
 title: "Controls"
 description: "Building blocks for creating Xamarin.Android User Interfaces"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
 ms.technology: xamarin-android

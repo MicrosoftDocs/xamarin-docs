@@ -1,6 +1,5 @@
 ---
 title: "Part 4 - Dealing with Multiple Platforms"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 ms.technology: xamarin-cross-platform

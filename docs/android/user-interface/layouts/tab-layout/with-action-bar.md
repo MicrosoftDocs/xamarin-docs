@@ -1,7 +1,6 @@
 ---
 title: "Tabbed Layouts with the ActionBar"
 description: "This guide introduces and explains how to use the ActionBar APIs to create a tabbed user interface in a Xamarin.Android application."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B7E60AAF-BDA5-4305-9000-675F0438734D
 ms.technology: xamarin-android

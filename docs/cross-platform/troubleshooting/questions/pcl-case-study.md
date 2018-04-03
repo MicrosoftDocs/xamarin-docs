@@ -1,6 +1,6 @@
 ---
 title: "PCL case study: How can I resolve problems related to System.Diagnostics.Tracing for the Microsoft TPL Dataflow NuGet package?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7986A556-382D-4D00-ACCF-3589B4029DE8
 ms.technology: xamarin-cross-platform

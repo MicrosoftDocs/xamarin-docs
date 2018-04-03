@@ -1,7 +1,6 @@
 ---
 title: "Walkthrough - Creating a tabbed UI with TabHost"
 description: "This article will walk through creating a tabbed UI in Xamarin.Android using the TabHost API."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: AD6E2173-974E-477C-940F-0CAB5E53326D
 ms.technology: xamarin-android

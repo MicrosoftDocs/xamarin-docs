@@ -1,6 +1,5 @@
 ---
 title: "Unit Testing"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
 ms.technology: xamarin-forms

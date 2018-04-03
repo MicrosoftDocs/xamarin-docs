@@ -1,7 +1,6 @@
 ---
 title: "Frameworks"
 description: "This document lists frameworks supported by Xamarin.Mac."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E8108E77-13FE-2EC2-83FF-AFE0408D3EE6
 ms.technology: xamarin-mac

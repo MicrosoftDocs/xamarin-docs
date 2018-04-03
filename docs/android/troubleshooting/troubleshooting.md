@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting Tips"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android

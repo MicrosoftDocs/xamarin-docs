@@ -1,7 +1,7 @@
 ---
 title: "Hello, Xamarin.Forms Multiscreen"
 description: "This guide expands the Phoneword application created in the Hello, Xamarin.Forms guide to navigate to a second screen. Topics covered include page navigation and data binding to a collection."
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 4b1f7817-6754-4b8d-9567-424d7d8f2b05
 ms.technology: xamarin-forms

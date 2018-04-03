@@ -1,7 +1,6 @@
 ---
 title: "Storing Files in the Cloud"
 description: "Azure Storage is a scalable cloud storage solution that can be used for storing unstructured, and structured data."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2C0EDFCE-6DB4-4BF6-B978-E64614AC9DB6
 ms.technology: xamarin-forms

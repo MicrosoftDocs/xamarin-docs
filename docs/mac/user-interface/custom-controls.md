@@ -1,7 +1,6 @@
 ---
 title: "Creating custom controls"
 description: "This article describes how to create custom controls and work with them in Interface Builder."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac

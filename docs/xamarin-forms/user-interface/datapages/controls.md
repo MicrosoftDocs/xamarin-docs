@@ -1,6 +1,5 @@
 ---
 title: "DataPages Controls Reference"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 891615D0-E8BD-4ACC-A7F0-4C3725FBCC31
 ms.technology: xamarin-forms

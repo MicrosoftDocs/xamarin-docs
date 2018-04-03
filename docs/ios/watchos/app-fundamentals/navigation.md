@@ -1,6 +1,5 @@
 ---
 title: "Working with Navigation"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 71A64C10-75C8-4159-A547-6A704F3B5C2E
 ms.technology: xamarin-ios

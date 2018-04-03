@@ -1,7 +1,6 @@
 ---
 title: "Xamarin Android Device Manager"
 description: "The Xamarin Android Device Manager, currently in preview, replaces Google's legacy Device Manager. This guide explains how to use the Xamarin Android Device Manager to create and configure Android Virtual Devices (AVDs) that emulate Android devices. You can use these virtual devices to run and test your app without having to rely on a physical device."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android

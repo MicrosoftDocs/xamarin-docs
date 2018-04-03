@@ -1,7 +1,6 @@
 ---
 title: "watchOS 3 Troubleshooting"
 description: "This article provides several troubleshooting tips for working with watchOS 3 in Xamarin Apple Watch apps."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5911D898-0E23-40CC-9F3C-5F61B4D50ADC
 ms.technology: xamarin-ios

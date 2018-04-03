@@ -1,6 +1,6 @@
 ---
 title: "PCL Reflection API"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 3137957A-478F-4DCC-BA58-EA14D99E2ED8
 ms.technology: xamarin-cross-platform

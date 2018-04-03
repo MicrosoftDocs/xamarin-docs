@@ -1,7 +1,6 @@
 ---
 title: "Xamarin.Forms XAML Basics"
 description: "Getting started with cross-platform markup for mobile devices"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF
 ms.technology: xamarin-forms

@@ -1,6 +1,5 @@
 ---
 title: "Using Android Assets"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 70ECDDC9-FA40-03B4-BF04-E7CFFFE4260D
 ms.technology: xamarin-android

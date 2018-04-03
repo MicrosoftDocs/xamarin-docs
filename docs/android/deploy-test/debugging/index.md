@@ -1,7 +1,6 @@
 ---
 title: "Debugging"
 description: "How to test and debug your Xamarin.Android app"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A355A471-8195-4391-93FE-0000BCB17923
 ms.technology: xamarin-android

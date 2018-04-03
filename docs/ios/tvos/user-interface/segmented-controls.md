@@ -1,7 +1,6 @@
 ---
 title: "Working with Segmented Controls"
 description: "This article covers designing and working with Segmented Controls inside of a Xamarin.tvOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios

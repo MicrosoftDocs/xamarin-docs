@@ -1,6 +1,5 @@
 ---
 title: "Creating A Fragment"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F2997242-BC29-1440-7F1A-CFC447CD73FA
 ms.technology: xamarin-android

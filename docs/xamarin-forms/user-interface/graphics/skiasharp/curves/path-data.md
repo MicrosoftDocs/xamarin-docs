@@ -1,7 +1,6 @@
 ---
 title: "SVG Path Data"
 description: "Define paths using text strings in the Scalable Vector Graphics format"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2

@@ -1,6 +1,5 @@
 ---
 title: "Troubleshooting Xamarin Workbooks"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1706EA2C-7A94-4E30-BD4D-A2F31070554F
 ms.technology: xamarin-cross-platform

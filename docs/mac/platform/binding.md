@@ -1,7 +1,6 @@
 ---
 title: "Binding Mac libraries"
 description: "This guide links to other documents that describe how to create bindings for Objective-C librariesl"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 521707CD-79D3-488A-84CB-A37EBF93AC94
 ms.technology: xamarin-mac

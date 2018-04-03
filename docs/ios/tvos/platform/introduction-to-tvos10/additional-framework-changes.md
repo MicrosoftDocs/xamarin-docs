@@ -1,7 +1,6 @@
 ---
 title: "Additional tvOS 10 Frameworks Changes"
 description: "This article covers additional, minor changes or enhancements to existing frameworks for tvOS 10."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F771640A-F92E-4954-82D5-2D720434971E
 ms.technology: xamarin-ios

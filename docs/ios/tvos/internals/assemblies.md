@@ -1,6 +1,5 @@
 ---
 title: "Assemblies"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0B1ACF06-65FF-49E2-B6BC-7AEC55638ED8
 ms.technology: xamarin-ios

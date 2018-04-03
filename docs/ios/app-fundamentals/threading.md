@@ -1,6 +1,5 @@
 ---
 title: "Threading"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios

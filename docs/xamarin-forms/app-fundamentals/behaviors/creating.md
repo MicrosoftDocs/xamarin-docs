@@ -1,7 +1,6 @@
 ---
 title: "Xamarin.Forms Behaviors"
 description: "Xamarin.Forms behaviors are created by deriving from the Behavior or Behavior<T> class. This article demonstrates how to create and consume Xamarin.Forms behaviors."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 300C16FE-A7E0-445B-9099-8E93ABB6F73D
 ms.technology: xamarin-forms

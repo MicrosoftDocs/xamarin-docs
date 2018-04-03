@@ -1,7 +1,7 @@
 ---
 title: "Troubleshooting"
 description: "This article covers know issues you might encounter while working with Xamarin's tvOS support."
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 124E4953-4DFA-42B0-BCFC-3227508FE4A6
 ms.technology: xamarin-ios

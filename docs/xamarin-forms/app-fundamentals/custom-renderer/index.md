@@ -1,7 +1,6 @@
 ---
 title: "Custom Renderers"
 description: "Xamarin.Forms user interfaces are rendered using the native controls of the target platform, allowing Xamarin.Forms applications to retain the appropriate look and feel for each platform. Custom Renderers let developers override this process to customize the appearance and behavior of Xamarin.Forms controls on each platform."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms

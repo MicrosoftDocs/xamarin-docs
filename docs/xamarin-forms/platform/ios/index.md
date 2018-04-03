@@ -1,7 +1,6 @@
 ---
 title: "iOS Platform Features"
 description: "Adding iOS-specific functionality to Xamarin.Forms apps"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms

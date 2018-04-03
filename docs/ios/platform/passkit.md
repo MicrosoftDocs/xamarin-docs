@@ -1,7 +1,6 @@
 ---
 title: "PassKit"
 description: "Wallet is a system iOS app that stores and displays barcodes and other information to link customer transactions on their phone with the ‘real world’."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios

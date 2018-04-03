@@ -1,6 +1,6 @@
 ---
 title: "How do I change my account's email address?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4CCC850B-B62C-4911-8768-599BBCE5122E
 ms.technology: xamarin-cross-platform

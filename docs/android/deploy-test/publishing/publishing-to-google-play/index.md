@@ -1,6 +1,5 @@
 ---
 title: "Publishing to Google Play"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FB1CC234-3554-8566-48BD-2B9B3A28CC7F
 ms.technology: xamarin-android

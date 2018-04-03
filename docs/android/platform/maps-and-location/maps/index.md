@@ -1,7 +1,6 @@
 ---
 title: "Maps"
 description: "This article discusses how to use maps and location with Xamarin.Android. It covers everything from leveraging the built-in maps application to using the Google Maps Android API V2 directly."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android

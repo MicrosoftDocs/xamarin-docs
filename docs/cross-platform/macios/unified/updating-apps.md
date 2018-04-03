@@ -1,6 +1,5 @@
 ---
 title: "Updating Existing Apps to the Unified API"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 ms.technology: xamarin-cross-platform

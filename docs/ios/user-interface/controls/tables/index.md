@@ -1,7 +1,6 @@
 ---
 title: "Working with Tables and Cells"
 description: "Displaying data using UITableView with Xamarin.iOS"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios

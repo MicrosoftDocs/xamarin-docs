@@ -1,6 +1,5 @@
 ---
 title: "Summary of Chapter 6. Button clicks"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9

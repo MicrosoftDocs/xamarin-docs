@@ -1,6 +1,5 @@
 ---
 title: "Walkthrough - Using Touch in Android"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E281F89B-4142-4BD8-8882-FB65508BF69E
 ms.technology: xamarin-android

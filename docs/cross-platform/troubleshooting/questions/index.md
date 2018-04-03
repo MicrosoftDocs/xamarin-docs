@@ -1,6 +1,7 @@
+
 ---
 title: "General Frequently Asked Questions"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
 ms.technology: xamarin-cross-platform

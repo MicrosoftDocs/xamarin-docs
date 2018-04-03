@@ -1,6 +1,5 @@
 ---
 title: "Manually Signing the APK"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 08549E1C-7F04-4D20-9E7A-794B9D09FD12
 ms.technology: xamarin-android

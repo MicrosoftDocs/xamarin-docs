@@ -1,7 +1,6 @@
 ---
 title: "2D math with CocosSharp"
 description: "This guide covers 2D mathematics for game development. It uses CocosSharp to show how to perform common game development tasks and explains the math behind these tasks."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5C241AB4-F97E-4B61-B93C-F5D307BCD517
 ms.technology: xamarin-cross-platform

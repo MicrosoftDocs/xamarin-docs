@@ -1,6 +1,5 @@
 ---
 title: "Custom video positioning"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6D792264-30FF-46F7-8C1B-2FEF9D277DF4
 ms.technology: xamarin-forms

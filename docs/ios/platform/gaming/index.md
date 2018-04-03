@@ -1,7 +1,6 @@
 ---
 title: "iOS Gaming APIs"
 description: "This article covers the new gaming enhancements provided by iOS 9 that can be used to improve your Xamarin.iOS game's graphics and audio features."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios

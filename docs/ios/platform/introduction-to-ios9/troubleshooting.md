@@ -1,7 +1,6 @@
 ---
 title: "Troubleshooting"
 description: "This article provides several troubleshooting tips for working with iOS 9 in Xamarin.iOS apps."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios

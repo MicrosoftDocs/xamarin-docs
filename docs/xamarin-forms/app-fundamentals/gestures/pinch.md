@@ -1,7 +1,6 @@
 ---
 title: "Adding a Pinch Gesture Recognizer"
 description: "The pinch gesture is used for performing interactive zoom and is implemented with the PinchGestureRecognizer class. A common scenario for the pinch gesture is to perform interactive zoom of an image at the pinch location. This is accomplished by scaling the content of the viewport, and is demonstrated in this article."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
 ms.technology: xamarin-forms

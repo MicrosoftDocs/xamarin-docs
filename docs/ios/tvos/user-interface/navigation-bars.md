@@ -1,7 +1,6 @@
 ---
 title: "Working with Navigation Controllers"
 description: "This article covers designing and working with Navigation Bars inside of a Xamarin.tvOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74E396B7-87F0-46F7-BC6C-827DB8884C97
 ms.technology: xamarin-ios

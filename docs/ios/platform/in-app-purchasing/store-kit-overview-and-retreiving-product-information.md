@@ -1,6 +1,5 @@
 ---
 title: "Store Kit Overview and Retrieving Product Information"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FC21192E-6325-4389-C060-E92DBB5EBD87
 ms.technology: xamarin-ios

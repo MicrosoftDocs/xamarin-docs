@@ -1,7 +1,6 @@
 ---
 title: "Setting Accessibility Values on User Interface Elements"
 description: "Xamarin.Forms allows accessibility values to be set on user interface elements by using attached properties from the AutomationProperties class, which in turn set native accessibility values. This article explains how to use the AutomationProperties class, so that a screen reader can speak about the elements on the page."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
 ms.technology: xamarin-forms

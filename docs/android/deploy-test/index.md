@@ -1,7 +1,6 @@
 ---
 title: "Deployment and Testing"
 description: "This section includes guides that explain how to test an application, optimize its performance, prepare it for release, sign it with a certificate, and publish it to an app store"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 568C0B85-EFF3-AF6F-5605-95055193D367
 ms.technology: xamarin-android

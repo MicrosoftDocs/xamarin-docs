@@ -1,7 +1,6 @@
 ---
 title: "LayoutOptions"
 description: "Every Xamarin.Forms view has HorizontalOptions and VerticalOptions properties, of type LayoutOptions. This article explains the effect that each LayoutOptions value has on the alignment and expansion of a view."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7CAB5631-5153-4DEF-8AD7-C6011CE44307
 ms.technology: xamarin-forms

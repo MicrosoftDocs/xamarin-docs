@@ -1,6 +1,5 @@
 ---
 title: "mtouch"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios

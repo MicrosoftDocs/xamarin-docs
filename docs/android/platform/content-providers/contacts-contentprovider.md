@@ -1,6 +1,5 @@
 ---
 title: "Using the Contacts ContentProvider"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 21C5D1B4-3783-6090-33AB-78A484E65925
 ms.technology: xamarin-android

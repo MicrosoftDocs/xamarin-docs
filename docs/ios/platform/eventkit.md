@@ -1,7 +1,6 @@
 ---
 title: "EventKit"
 description: "This guide provides an overview on how to access and work with Calendars, CalendarEvents, and Reminders data stored in the Calendar Database, as exposed via the EventKit. It covers the major classes and their role in EventKit programming, as well as a number of common tasks associated with the EventKit framework."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios

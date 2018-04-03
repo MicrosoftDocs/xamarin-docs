@@ -1,7 +1,7 @@
 ---
 title: "Hello, Android: Quickstart"
 description: "In this two-part guide, you will build your first Xamarin.Android application (using Visual Studio or Visual Studio for Mac) and develop an understanding of the fundamentals of Android application development with Xamarin. Along the way, you will be introduced to the tools, concepts, and steps required to build and deploy a Xamarin.Android application."
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android

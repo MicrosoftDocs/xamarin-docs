@@ -1,6 +1,5 @@
 ---
 title: "Setup and Installation"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4BE549B8-5696-2BA7-DA32-8C0EE90A879D
 ms.technology: xamarin-android

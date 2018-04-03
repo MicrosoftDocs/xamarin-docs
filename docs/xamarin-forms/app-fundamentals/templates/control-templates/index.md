@@ -1,7 +1,6 @@
 ---
 title: "Control Templates"
 description: "Control templates provide a clean separation between the appearance of a page and its content, enabling the creation of pages that can easily be themed."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 836C8D57-ABBC-4D5A-B3CF-0B723E069A2B
 ms.technology: xamarin-forms

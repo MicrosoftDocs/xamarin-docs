@@ -1,7 +1,6 @@
 ---
 title: "iOS and Mac"
 description: "In this section we cover strategies to share code between your Xamarin.iOS and Xamarin.Mac projects."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 ms.technology: xamarin-cross-platform

@@ -1,7 +1,6 @@
 ---
 title: "Deployment and Testing"
 description: "This document links to guides that discuss icons, performance, and publishing to the App Store."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2FF314C7-D926-9FEC-57A6-F421A0ED3A46
 ms.technology: xamarin-mac

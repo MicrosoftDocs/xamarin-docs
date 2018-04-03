@@ -1,6 +1,5 @@
 ---
 title: "Walkthrough"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: ED368FA9-A34E-DC39-D535-5C34C32B9761
 ms.technology: xamarin-android

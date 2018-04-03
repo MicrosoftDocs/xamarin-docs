@@ -1,7 +1,6 @@
 ---
 title: "Embedded frameworks"
 description: "This document describes how application developers can embed user frameworks in their apps."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios

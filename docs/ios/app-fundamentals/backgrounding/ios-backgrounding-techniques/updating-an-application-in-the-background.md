@@ -1,6 +1,5 @@
 ---
 title: "Updating an Application in the Background"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A2B2231A-C045-4C11-8176-F9966485197A
 ms.technology: xamarin-ios

@@ -1,7 +1,6 @@
 ---
 title: "An Introduction to Renderscript"
 description: "This guide introduces Renderscript and explains how to use the intrinsic Renderscript API's in a Xamarin.Android application that targets API level 17 or higher."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 378793C7-5E3E-40E6-ABEE-BEAEF64E6A47
 ms.technology: xamarin-android

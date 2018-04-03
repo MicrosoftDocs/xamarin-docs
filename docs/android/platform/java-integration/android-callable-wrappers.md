@@ -1,6 +1,5 @@
 ---
 title: "Android Callable Wrappers"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C33E15FA-1E2B-819A-C656-CA588D611492
 ms.technology: xamarin-android

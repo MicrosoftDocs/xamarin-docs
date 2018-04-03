@@ -1,7 +1,6 @@
 ---
 title: "Android Localization"
 description: "This document introduces the localization features of the Android SDK and how to access them with Xamarin."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D1277939-A1E8-468E-B136-820D816AF853
 ms.technology: xamarin-android

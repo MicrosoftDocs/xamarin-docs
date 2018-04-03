@@ -1,7 +1,6 @@
 ---
 title: "Drag and Drop"
 description: "Implementing drag and drop for iOS 11"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0D39C4C3-D169-42F8-B3FA-7F98CF0B6F1F
 ms.technology: xamarin-ios

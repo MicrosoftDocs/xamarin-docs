@@ -1,7 +1,6 @@
 ---
 title: "Introduction to Effects"
 description: "Effects allow the native controls on each platform to be customized, and are typically used for small styling changes. This article provides an introduction to effects, outlines the boundary between effects and custom renderers, and describes the PlatformEffect class."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 30CB8615-8F39-4762-BDB7-333D2B57D112
 ms.technology: xamarin-forms

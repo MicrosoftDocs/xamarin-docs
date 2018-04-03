@@ -1,7 +1,6 @@
 ---
 title: "Adding a Tap Gesture Gesture Recognizer"
 description: "The tap gesture is used for tap detection and is implemented with the TapGestureRecognizer class."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
 ms.technology: xamarin-forms

@@ -1,6 +1,5 @@
 ---
 title: "Supported and Unsupported Frameworks"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 28EF1337-3D0E-47AB-8A13-1B333A964FB6
 ms.technology: xamarin-ios

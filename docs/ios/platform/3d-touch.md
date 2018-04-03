@@ -1,7 +1,6 @@
 ---
 title: "Introduction to 3D Touch"
 description: "This article covers using the new iPhone 6s and iPhone 6s Plus 3D Touch gestures in your app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 806D051E-3791-40F7-9776-4E4D3E56F7F3
 ms.technology: xamarin-ios

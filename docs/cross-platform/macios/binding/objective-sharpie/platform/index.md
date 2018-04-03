@@ -1,6 +1,5 @@
 ---
 title: "Objective Sharpie Features"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-cross-platform
 ms.assetid: 9A17A2C6-AFFD-41E2-BE9B-9BC1AA57E1E1

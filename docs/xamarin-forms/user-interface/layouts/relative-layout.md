@@ -1,7 +1,6 @@
 ---
 title: "RelativeLayout"
 description: "Use RelativeLayout to create UIs that scale to fit any screen size."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A
 ms.technology: xamarin-forms

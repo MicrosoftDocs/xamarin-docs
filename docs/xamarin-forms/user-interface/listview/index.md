@@ -1,7 +1,6 @@
 ---
 title: "ListView"
 description: "Present your data in beautiful, interactive lists."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FEFDF7E0-720F-4BD1-863F-4477226AA695
 ms.technology: xamarin-forms

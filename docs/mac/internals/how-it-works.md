@@ -1,7 +1,6 @@
 ---
 title: "How Xamarin.Mac works"
 description: "This document describes the internal workings of Xamarin.Mac. In particular, it looks at constructors, memory management, ahead of time compilation, and the registrar."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C2053ABB-6DBF-4233-AEEA-B72FC6A81FE1
 ms.technology: xamarin-mac

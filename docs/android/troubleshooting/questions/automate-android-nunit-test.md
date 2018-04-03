@@ -1,6 +1,6 @@
 ---
 title: "How do I automate an Android NUnit Test project?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: EA3CFCC4-2D2E-49D6-A26C-8C0706ACA045
 ms.technology: xamarin-android

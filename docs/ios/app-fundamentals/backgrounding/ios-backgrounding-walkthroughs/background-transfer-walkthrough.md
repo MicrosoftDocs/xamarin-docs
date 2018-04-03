@@ -1,7 +1,6 @@
 ---
 title: "Walkthrough - Using Background Transfer Service and NSURLSession"
 description: "In this walkthrough, we use the Background Transfer Service and NSURLSession API to kick off downloading a large image that continues to download when the app is in the background."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
 ms.technology: xamarin-ios

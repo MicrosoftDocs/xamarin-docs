@@ -1,7 +1,6 @@
 ---
 title: "Unified Storyboards"
 description: "Unified storyboards allow the iOS developer to create the user interface with a single storyboard, rather than multiple storyboards, to cover the expanding range of device screen sizes. This article is designed to give a deeper overview into the operation of the unified storyboard within Xamarin.iOS."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios

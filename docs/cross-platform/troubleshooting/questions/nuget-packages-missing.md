@@ -1,6 +1,6 @@
 ---
 title: "Missing packages error after updating Nuget packages"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: D61CC966-1D4A-49A5-8A6F-41572E28329B
 ms.technology: xamarin-cross-platform

@@ -1,6 +1,5 @@
 ---
 title: "Monogame"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 35EC29CE-538B-4844-BACC-E51823EFF3B5
 ms.technology: xamarin-cross-platform

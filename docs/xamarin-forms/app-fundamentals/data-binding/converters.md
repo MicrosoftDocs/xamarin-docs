@@ -1,7 +1,6 @@
 ---
 title: "Binding Value Converters"
 description: "Cast or convert values within the data binding"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
 ms.technology: xamarin-forms

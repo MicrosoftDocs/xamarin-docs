@@ -1,7 +1,6 @@
 ---
 title: "Creating a Custom ContentProvider"
 description: "The previous section demonstrated how to consume data from a built-in ContentProvider implementation. This section will explain how to build a custom ContentProvider and then consume its data."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 36742B59-607E-070E-5D0E-B9C18917D3F4
 ms.technology: xamarin-android

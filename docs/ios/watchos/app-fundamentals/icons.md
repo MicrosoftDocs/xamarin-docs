@@ -1,6 +1,5 @@
 ---
 title: "Working with Icons"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios

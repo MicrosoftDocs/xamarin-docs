@@ -1,6 +1,5 @@
 ---
 title: "Generic subclasses of NSObject"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
 ms.technology: xamarin-ios

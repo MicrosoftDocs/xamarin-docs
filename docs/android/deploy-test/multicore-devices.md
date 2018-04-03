@@ -1,7 +1,6 @@
 ---
 title: "Multi-Core Devices & Xamarin.Android"
 description: "Android can run on several different computer architectures. This document discusses the different CPU architectures that may be employed for a Xamarin.Android application. This document will also explain how Android applications are packaged to support different CPU architectures. The Application Binary Interface (ABI) will be introduced, and guidance will be provided regarding which ABIs to use in a Xamarin.Android application."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D812883C-A14A-E74B-0F72-E50071E96328
 ms.technology: xamarin-android

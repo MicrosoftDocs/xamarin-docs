@@ -1,7 +1,6 @@
 ---
 title: "Common patterns and idioms"
 description: "This document describes the model-view-controller pattern, the data source and delegate patterns, and protocols."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BF0A3517-17D8-453D-87F7-C8A34BEA8FF5
 ms.technology: xamarin-mac

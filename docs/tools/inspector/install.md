@@ -1,7 +1,6 @@
 ---
 title: "Inspector Installation and Requirements"
 description: "How to download, install, and use the Xamarin Inspector."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 ms.technology: xamarin-cross-platform

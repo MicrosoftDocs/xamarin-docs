@@ -1,7 +1,6 @@
 ---
 title: "Hello, tvOS Quick Start Guide"
 description: "This guide walks through creating your first Xamarin.tvOS app and its development toolchain. It also introduces the Xamarin Designer, which exposes UI controls to code, and illustrates how to build, run, and test a Xamarin.tvOS application."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6E0AFE58-A13B-492F-861E-D5D73EB1C4A3
 ms.technology: xamarin-ios

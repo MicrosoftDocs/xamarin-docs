@@ -1,7 +1,6 @@
 ---
 title: "Automatic Provisioning"
 description: "Once Xamarin.iOS has been successfully installed, the next step in iOS development is to provision your iOS device. This guide explores using Automatic Signing in Visual Studio for Mac to request development certificates and profiles."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios

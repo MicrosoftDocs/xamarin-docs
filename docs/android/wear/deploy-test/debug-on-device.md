@@ -1,7 +1,6 @@
 ---
 title: "Debug on a Wear Device"
 description: "This article explains how to debug a Xamarin.Android Wear application on a Wear device."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 01668E4B-BB83-4C26-B23A-F788173FB823
 ms.technology: xamarin-android

@@ -1,7 +1,6 @@
 ---
 title: "Porting Java to C#"
 description: "A third option for using Java in a Xamarin.Android application is to port the Java source code to C#."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 39E528BD-010F-47FC-BE48-8E7848E30454
 ms.technology: xamarin-android

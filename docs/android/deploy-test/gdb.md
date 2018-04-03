@@ -1,6 +1,5 @@
 ---
 title: "GDB"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CD0BE462-FA38-4881-B481-82AD05B3B8FE
 ms.technology: xamarin-android

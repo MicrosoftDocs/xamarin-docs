@@ -1,7 +1,6 @@
 ---
 title: "Working with Icons and Images"
 description: "This article covers designing and working with icons and images inside of a Xamarin.tvOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios

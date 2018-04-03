@@ -1,7 +1,6 @@
 ---
 title: "User Interface"
 description: "General User Experience (UX) coverage including controls, the designer and UX design principles."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2B3E45FA-C30F-D708-0E8F-3EE02BD1A867
 ms.technology: xamarin-ios

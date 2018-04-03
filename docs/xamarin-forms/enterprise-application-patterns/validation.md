@@ -1,6 +1,5 @@
 ---
 title: "Validation"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 56e4f0fc-48d9-4033-91ec-173bb46a5e4d
 ms.technology: xamarin-forms

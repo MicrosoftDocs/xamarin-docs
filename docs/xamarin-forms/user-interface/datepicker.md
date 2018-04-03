@@ -1,7 +1,6 @@
 ---
 title: "Using DatePicker"
 description: "A Xamarin.Forms view that allows the user to select a date"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
 ms.technology: xamarin-forms

@@ -1,7 +1,6 @@
 ---
 title: "Building HTML views using Razor Templates"
 description: " Using a full-screen webpage to render HTML can be a simple and effective way to render complex formatting in a cross-platform way, especially if you already have the HTML, Javascript and CSS from a website project."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 ms.technology: xamarin-cross-platform

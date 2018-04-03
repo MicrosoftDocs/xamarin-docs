@@ -1,6 +1,6 @@
 ---
 title: "My Android Resource.designer.cs file will not update"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 3F7376E3-59CC-4722-AEED-BB50E4D952AA
 ms.technology: xamarin-android

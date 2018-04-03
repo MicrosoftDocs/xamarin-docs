@@ -1,6 +1,5 @@
 ---
 title: "Image Control"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B741C207-3427-46F3-9C90-A52BF8933FA4
 ms.technology: xamarin-ios

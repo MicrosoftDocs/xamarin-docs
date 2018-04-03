@@ -1,6 +1,5 @@
 ---
 title: "iOS Backgrounding with Tasks"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios

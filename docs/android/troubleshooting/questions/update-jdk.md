@@ -1,7 +1,7 @@
 ---
 title: "How do I update the Java Development Kit (JDK) version?"
 description: "This article illustrates how to update the Java Development Kit (JDK) version on Windows and Mac."
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4b3ac51d-18dd-4034-87b4-4365194e4ece
 ms.technology: xamarin-android

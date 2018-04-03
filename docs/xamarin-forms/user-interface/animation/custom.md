@@ -1,7 +1,6 @@
 ---
 title: "Custom Animations"
 description: "The Animation class is the building block of all Xamarin.Forms animations, with the extension methods in the ViewExtensions class creating one or more Animation objects. This article demonstrates how to use the Animation class to create and cancel animations, synchronize multiple animations, and create custom animations that animate properties that aren't animated by the existing animation methods."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
 ms.technology: xamarin-forms

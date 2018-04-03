@@ -1,7 +1,7 @@
 ---
 title: "Hello, Mac"
 description: "This guide walks through the steps of creating a first Xamarin.Mac app, and in the process introduces the development toolchain, including Visual Studio for Mac, Xcode and Interface Builder. It also introduces Outlets and Actions, which expose UI controls to code, and finally, it illustrates how to build, run and test a Xamarin.Mac application."
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 37D0E9E6-979B-7069-B3BE-C5F0AF99BA72
 ms.technology: xamarin-mac

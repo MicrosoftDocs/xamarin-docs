@@ -1,7 +1,6 @@
 ---
 title: "Visual Design Updates"
 description: "Exploring the new features of iOS 11"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7C300B94-0FAF-492E-A326-877419A1824B
 ms.technology: xamarin-ios

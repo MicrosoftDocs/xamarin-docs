@@ -1,7 +1,6 @@
 ---
 title: "macOS user interface"
 description: "This article links to guides that describe various macOS UI controls."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 876B6EC2-E158-43F2-B9C9-03F54F3D2A49
 ms.technology: xamarin-mac

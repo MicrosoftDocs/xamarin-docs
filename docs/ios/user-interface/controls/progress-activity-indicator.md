@@ -1,6 +1,5 @@
 ---
 title: "Progress and Activity Indicators"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7AA887E4-51F7-4867-82C5-A8D2EA48AE07
 ms.technology: xamarin-ios

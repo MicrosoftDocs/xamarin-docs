@@ -1,7 +1,6 @@
 ---
 title: "Android SDK Emulator"
 description: "This guide explains how to use the Google Android SDK Emulator with Visual Studio."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8913bb90-1340-409d-b7bb-71a06914923a
 ms.technology: xamarin-android

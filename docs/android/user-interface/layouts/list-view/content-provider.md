@@ -1,6 +1,5 @@
 ---
 title: "Using a ContentProvider"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 251F7557-328D-0132-F39D-595920A28B87
 ms.technology: xamarin-android

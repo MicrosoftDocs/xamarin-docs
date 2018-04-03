@@ -1,7 +1,6 @@
 ---
 title: "Web Views"
 description: "Disambiguating iOS web view options"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
 ms.technology: xamarin-ios

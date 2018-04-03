@@ -1,6 +1,5 @@
 ---
 title: "Subscriptions and Reporting"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios

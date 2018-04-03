@@ -1,7 +1,6 @@
 ---
 title: "Binding Mode"
 description: "Control the flow of information between source and target"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
 ms.technology: xamarin-forms

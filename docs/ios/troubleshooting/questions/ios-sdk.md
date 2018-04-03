@@ -1,6 +1,6 @@
 ---
 title: "Where can I set my iOS SDK locations?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9D2AA00F-1EBD-40AA-87BF-0D7418E4B9EA
 ms.technology: xamarin-ios

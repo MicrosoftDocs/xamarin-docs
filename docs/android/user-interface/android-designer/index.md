@@ -1,7 +1,6 @@
 ---
 title: "Android Designer"
 description: "This article covers the features of the Xamarin.Android Designer. It covers designer basics, showing how to use the Designer to lay out widgets visually and how to edit properties. It also shows how to use the Designer to work with user interfaces and resources across various configurations, such as themes, languages, and device configurations, as well as how to design for alternative views like landscape and portrait."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android

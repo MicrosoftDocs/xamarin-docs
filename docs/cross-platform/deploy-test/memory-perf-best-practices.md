@@ -1,7 +1,6 @@
 ---
 title: "Cross-Platform Performance"
 description: "There are many techniques for increasing the performance of applications built with the Xamarin platform. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application. This article describes and discusses these techniques."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 ms.technology: xamarin-cross-platform

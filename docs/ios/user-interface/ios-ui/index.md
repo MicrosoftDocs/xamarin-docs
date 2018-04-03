@@ -1,7 +1,6 @@
 ---
 title: "User Interface in iOS"
 description: "Covers working with the iOS User Interface in a Xamarin.iOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
 ms.technology: xamarin-ios

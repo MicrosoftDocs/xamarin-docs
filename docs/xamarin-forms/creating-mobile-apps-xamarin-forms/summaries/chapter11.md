@@ -1,6 +1,5 @@
 ---
 title: "Summary of Chapter 11. The Bindable infrastructure"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B

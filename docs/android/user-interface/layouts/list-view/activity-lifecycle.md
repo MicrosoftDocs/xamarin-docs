@@ -1,6 +1,5 @@
 ---
 title: "ListView and the Activity Lifecycle"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 40840D03-6074-30A2-74DA-3664703E3367
 ms.technology: xamarin-android

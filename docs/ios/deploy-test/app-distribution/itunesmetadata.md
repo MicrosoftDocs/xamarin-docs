@@ -1,7 +1,6 @@
 ---
 title: "The iTunesMetadata.plist File"
 description: "This article covers the iTunesMetadata.plist file used to provide information to iTunes about an iOS application using Ad Hoc distribution for either testing or Enterprise deployment."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 70676eba-6a99-4a3a-bccc-84359fe9c2c3
 ms.technology: xamarin-ios

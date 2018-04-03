@@ -1,7 +1,6 @@
 ---
 title: "Databases"
 description: "This article covers using key-value coding and key-value observing to allow for data binding between SQLite databases and UI elements in Xcode's Interface Builder. It also covers using the SQLite.NET ORM to provide access to SQLite data."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
 ms.technology: xamarin-mac

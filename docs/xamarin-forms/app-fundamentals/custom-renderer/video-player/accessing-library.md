@@ -1,6 +1,5 @@
 ---
 title: "Accessing the device's video library"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 364C1D43-EAAE-45B9-BE24-0DA5AE74C4D9
 ms.technology: xamarin-forms

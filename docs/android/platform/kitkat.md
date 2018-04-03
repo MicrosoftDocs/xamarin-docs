@@ -1,7 +1,6 @@
 ---
 title: "KitKat Features"
 description: "Android 4.4 (KitKat) comes loaded with a cornucopia of features for users and developers. This guide highlights several of these features and provides code examples and implementation details to help you make the most out of KitKat."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D3FDEA1C-F076-406F-BCC3-2A55D2C6ADEE
 ms.technology: xamarin-android

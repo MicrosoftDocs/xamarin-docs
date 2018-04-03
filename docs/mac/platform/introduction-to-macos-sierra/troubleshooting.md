@@ -1,7 +1,6 @@
 ---
 title: "Troubleshooting"
 description: "This article provides several troubleshooting tips for working with macOS Sierra in Xamarin.Mac apps."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 323DD5EE-87CE-48E4-B234-1CF61B45A019
 ms.technology: xamarin-mac

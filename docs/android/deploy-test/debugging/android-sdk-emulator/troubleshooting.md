@@ -1,7 +1,6 @@
 ---
 title: "Android SDK Emulator Troubleshooting"
 description: "How to identify and resolve Android SDK Emulator problems"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4B05C3C5-E1F6-47A9-B098-C31E630194F6
 ms.technology: xamarin-android

@@ -1,7 +1,6 @@
 ---
 title: "Building ABI-Specific APKs"
 description: "This document will discuss how to build an APK that will target a single ABI using Xamarin.Android."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D21B195B-4530-4EB2-8704-5C4349A2CDD8
 ms.technology: xamarin-android

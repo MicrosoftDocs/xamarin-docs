@@ -1,6 +1,5 @@
 ---
 title: "Packaging Wear Apps"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android

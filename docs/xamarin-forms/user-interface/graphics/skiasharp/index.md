@@ -1,7 +1,6 @@
 ---
 title: "Using SkiaSharp in Xamarin.Forms"
 description: "Use SkiaSharp for 2D graphics in your Xamarin.Forms applications"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
 ms.technology: xamarin-forms

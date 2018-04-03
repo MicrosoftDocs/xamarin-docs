@@ -1,6 +1,5 @@
 ---
 title: "Application Lifecycle Demo"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5C8AACA6-49F8-4C6D-99C3-5F443C01B230
 ms.technology: xamarin-ios

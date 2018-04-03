@@ -1,7 +1,6 @@
 ---
 title: "CocosSharp"
 description: "This document links to various articles about game development with CocosSharp."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5E72869D-3541-408B-AB64-D34C777AFB79
 ms.technology: xamarin-cross-platform

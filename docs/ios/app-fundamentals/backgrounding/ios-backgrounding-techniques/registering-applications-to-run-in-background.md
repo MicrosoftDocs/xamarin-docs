@@ -1,6 +1,5 @@
 ---
 title: "Registering Applications to Run in the Background"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios

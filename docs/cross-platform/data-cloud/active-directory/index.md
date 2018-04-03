@@ -1,7 +1,6 @@
 ---
 title: "Microsoft Azure Active Directory"
 description: "Using Active Directory to authenticate users in Xamarin mobile applications."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0A74766A-B583-47AF-986C-FEA8F5CBF9CD
 ms.technology: xamarin-cross-platform

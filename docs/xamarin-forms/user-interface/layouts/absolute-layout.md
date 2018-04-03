@@ -1,7 +1,6 @@
 ---
 title: "AbsoluteLayout"
 description: "Use AbsoluteLayout to create pixel-perfect UIs."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
 ms.technology: xamarin-forms

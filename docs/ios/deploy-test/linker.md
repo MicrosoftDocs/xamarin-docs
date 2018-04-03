@@ -1,6 +1,5 @@
 ---
 title: "Linking on iOS"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios

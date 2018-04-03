@@ -1,7 +1,6 @@
 ---
 title: "Marshmallow Features"
 description: "This article helps you get started using in using Xamarin.Android to develop apps for Android 6.0 Marshmallow."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E4D6F183-98D2-460A-9D65-937639A899E0
 ms.technology: xamarin-android

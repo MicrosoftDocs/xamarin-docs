@@ -1,6 +1,5 @@
 ---
 title: "Android Wear Controls"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5B62A5F8-5E55-4B3C-BFC4-E21CDB27C08B
 ms.technology: xamarin-android

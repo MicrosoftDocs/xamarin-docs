@@ -1,7 +1,6 @@
 ---
 title: "Xamarin.iOS Performance"
 description: "There are many techniques for increasing the performance of applications built with Xamarin.iOS. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application. This article describes and discusses these techniques."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios

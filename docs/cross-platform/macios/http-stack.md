@@ -1,7 +1,6 @@
 ---
 title: "HttpClient Stack and SSL/TLS Implementation Selector for iOS/macOS"
 description: "The HttpClient Stack and SSL/TLS Implementation Selector determines the HttpClient and SSL/TLS implementation that will be used by your Xamarin iOS, tvOS, or macOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
 ms.technology: xamarin-cross-platform

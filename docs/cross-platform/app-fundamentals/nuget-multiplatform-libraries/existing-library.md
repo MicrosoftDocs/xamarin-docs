@@ -1,6 +1,5 @@
 ---
 title: "Creating a NuGet from Existing Library Projects"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
 ms.technology: xamarin-cross-platform

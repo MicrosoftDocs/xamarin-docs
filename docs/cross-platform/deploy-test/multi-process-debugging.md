@@ -1,6 +1,5 @@
 ---
 title: "Multi-Process Debugging"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 852F8AB1-F9E2-4126-9C8A-12500315C599
 ms.technology: xamarin-cross-platform

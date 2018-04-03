@@ -1,6 +1,5 @@
 ---
 title: "Search Bar"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios

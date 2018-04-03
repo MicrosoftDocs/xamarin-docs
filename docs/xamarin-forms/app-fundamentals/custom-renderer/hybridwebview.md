@@ -1,7 +1,6 @@
 ---
 title: "Implementing a HybridWebView"
 description: "Xamarin.Forms custom user interface controls should derive from the View class, which is used to place layouts and controls on the screen. This article demonstrates how to create a custom renderer for a HybridWebView custom control, which demonstrates how to enhance the platform-specific web controls to allow C# code to be invoked from JavaScript."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms

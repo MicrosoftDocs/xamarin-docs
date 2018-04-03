@@ -1,7 +1,6 @@
 ---
 title: "Time Picker"
 description: "Selecting a time using TimePickerDialog and DialogFragment"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EB4E8206-E8AD-9F04-AC1C-82AC9364A9DD
 ms.technology: xamarin-android

@@ -1,7 +1,6 @@
 ---
 title: "Application fundamentals"
 description: "This document links to guides that describe various concepts necessary to understand when developing Xamarin.Mac applications."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5A36B3A7-F197-4AC3-A40D-B2C49362FF06
 ms.technology: xamarin-mac

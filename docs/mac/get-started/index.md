@@ -1,7 +1,6 @@
 ---
 title: "Getting Started with Mac"
 description: "Introduction to Xamarin.Mac"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6CE7C634-6495-3517-B004-21C9EBF4C462
 ms.technology: xamarin-mac

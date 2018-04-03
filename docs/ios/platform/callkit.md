@@ -1,7 +1,6 @@
 ---
 title: "CallKit"
 description: "This article covers the new CallKit API that Apple released in iOS 10 and how to implement it in Xamarin.iOS VOIP apps."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 738A142D-FFD2-4738-B3ED-57C273179848
 ms.technology: xamarin-ios

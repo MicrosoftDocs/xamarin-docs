@@ -1,6 +1,5 @@
 ---
 title: "Creating a New Multiplatform Library for NuGet"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
 ms.technology: xamarin-cross-platform

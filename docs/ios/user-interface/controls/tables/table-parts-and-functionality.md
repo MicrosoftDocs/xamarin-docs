@@ -1,6 +1,5 @@
 ---
 title: "Table Parts and Functionality"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
 ms.technology: xamarin-ios

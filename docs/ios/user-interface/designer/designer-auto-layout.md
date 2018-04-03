@@ -1,7 +1,6 @@
 ---
 title: "Auto Layout with the Xamarin Designer for iOS"
 description: "This guide introduces iOS Auto Layout and the new constraints workflow available in the Xamarin Designer for iOS."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios

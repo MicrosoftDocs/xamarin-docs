@@ -1,7 +1,6 @@
 ---
 title: "Implementing With Fragments"
 description: "Android 3.0 introduced Fragments. Fragments are self-contained, modular components that are used to help address the complexity of writing applications that may run on screens of different sizes. This article walks through how to use fragments to develop Xamarin.Android applications, and how to support fragments on pre-Android 3.0 devices."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
 ms.technology: xamarin-android

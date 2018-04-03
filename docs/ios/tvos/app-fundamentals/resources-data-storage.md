@@ -1,7 +1,6 @@
 ---
 title: "Resources and Data Storage"
 description: "This article covers working with resources and persistent data storage in a Xamarin.tvOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C56B5046-D2C0-4B63-9CE0-ADAA0EFD368A
 ms.technology: xamarin-ios

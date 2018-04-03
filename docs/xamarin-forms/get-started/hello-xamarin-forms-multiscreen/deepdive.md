@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms Multiscreen Deep Dive"
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: e4faa36c-6600-48c0-94c4-b4431103a4
 ms.technology: xamarin-forms

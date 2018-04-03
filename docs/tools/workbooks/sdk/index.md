@@ -1,6 +1,5 @@
 ---
 title: "Getting Started with the Xamarin Workbooks SDK"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
 ms.technology: xamarin-cross-platform

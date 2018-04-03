@@ -1,7 +1,6 @@
 ---
 title: "Deployment and Testing"
 description: "Testing on devices and uploading to the App Store"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios

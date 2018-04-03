@@ -1,7 +1,6 @@
 ---
 title: "eXtensible Application Markup Language (XAML)"
 description: "XAML is a declarative markup language that can be used to define user interfaces. The user interface is defined in an XML file using the XAML syntax, while runtime behavior is defined in a separate code-behind file."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms

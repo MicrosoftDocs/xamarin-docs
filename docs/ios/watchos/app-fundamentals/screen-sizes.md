@@ -1,6 +1,5 @@
 ---
 title: "Working with Screen Sizes"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 840DF939-2F59-4ABA-87D8-92AAC8A92BC4
 ms.technology: xamarin-ios

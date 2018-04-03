@@ -1,6 +1,5 @@
 ---
 title: "TextureView"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DD1F3D68-5DD8-4644-8A13-08AE7719DE30
 ms.technology: xamarin-android

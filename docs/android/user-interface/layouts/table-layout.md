@@ -1,6 +1,5 @@
 ---
 title: "TableLayout"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android

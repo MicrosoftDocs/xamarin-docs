@@ -1,7 +1,6 @@
 ---
 title: "Xamarin Live Player Samples"
 description: "Here are some samples to try out with Xamarin Live Player."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
 ms.technology: xamarin-cross-platform

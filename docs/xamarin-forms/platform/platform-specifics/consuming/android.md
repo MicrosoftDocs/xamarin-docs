@@ -1,7 +1,6 @@
 ---
 title: "Android Platform-Specifics"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article demonstrates how to consume the Android platform-specifics that are built into Xamarin.Forms."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms

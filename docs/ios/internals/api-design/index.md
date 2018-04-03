@@ -1,7 +1,6 @@
 ---
 title: "API Design"
 description: "Perspective on the Xamarin.iOS API design"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios

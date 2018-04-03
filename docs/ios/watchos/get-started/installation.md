@@ -1,7 +1,6 @@
 ---
 title: "Setup and Installation"
 description: "Setting up to develop for watchOS"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 69F21F15-198D-4B42-A703-21D35CAB0CCA
 ms.technology: xamarin-ios

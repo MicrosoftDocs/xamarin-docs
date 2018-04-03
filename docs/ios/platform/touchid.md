@@ -1,7 +1,6 @@
 ---
 title: "Touch ID"
 description: "Touch ID is Apple's biometric fingerprint authentication technology."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
 ms.technology: xamarin-ios

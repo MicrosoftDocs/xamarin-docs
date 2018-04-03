@@ -1,7 +1,6 @@
 ---
 title: "Introduction to tvOS"
 description: "This article introduces building tvOS apps with Xamarin."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 14345503-1742-41F5-B2EF-EE31AB7C3516
 ms.technology: xamarin-ios

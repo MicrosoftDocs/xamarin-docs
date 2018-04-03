@@ -1,7 +1,7 @@
 ---
 title: "Xamarin.Android and JDK 9"
 description: "This article explains how to resolve Java Development Kit (JDK) 9 errors in Xamarin.Android."
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7DCF0985-F77D-4A68-AC54-10C9846E189A
 ms.technology: xamarin-android

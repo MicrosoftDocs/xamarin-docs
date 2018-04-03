@@ -1,6 +1,5 @@
 ---
 title: "Getting started with Android"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
 ms.technology: xamarin-cross-platform

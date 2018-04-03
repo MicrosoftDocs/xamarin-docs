@@ -1,7 +1,6 @@
 ---
 title: "Introduction to Game Development with Xamarin"
 description: "The nature of game development can differ considerably from the development of other types of apps. This article is an introduction to game development featuring technologies that can be used with Xamarin.iOS and Xamarin.Android. It provides both a high level discussion of how games are made and a sampling of technologies available for use with Xamarin.iOS and Xamarin.Android."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 ms.technology: xamarin-cross-platform

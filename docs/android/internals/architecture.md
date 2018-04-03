@@ -1,6 +1,5 @@
 ---
 title: "Architecture"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android

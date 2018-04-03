@@ -1,7 +1,6 @@
 ---
 title: "Ad-Hoc Distribution"
 description: "This document gives an overview of the Ad Hoc distribution techniques that are primarily used for testing an Xamarin.iOS applications with a wide group of people."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
 ms.technology: xamarin-ios

@@ -1,7 +1,6 @@
 ---
 title: "Apple Pay on watchOS"
 description: "This article covers the enhancements Apple has made to Apple Pay in watchOS 3 and how to implement them in Xamarin.iOS for Apple Watch."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 32FF5D21-C252-485D-83AC-A7E592237962
 ms.technology: xamarin-ios

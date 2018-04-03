@@ -1,7 +1,6 @@
 ---
 title: "Getting Started with iOS"
 description: "From Hello World to Hello App Store"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FA802CCF-3BA4-4F26-A7BF-FBB7D0AA889B
 ms.technology: xamarin-ios

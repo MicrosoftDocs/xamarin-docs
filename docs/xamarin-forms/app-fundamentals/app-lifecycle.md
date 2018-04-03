@@ -1,7 +1,6 @@
 ---
 title: "App Lifecycle"
 description: "How to respond to application lifecycle"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 69B416CF-B243-4790-AB29-F030B32465BE
 ms.technology: xamarin-forms

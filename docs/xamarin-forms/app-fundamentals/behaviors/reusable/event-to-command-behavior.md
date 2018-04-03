@@ -1,7 +1,6 @@
 ---
 title: "Reusable EventToCommandBehavior"
 description: "Behaviors can be used to associate commands with controls that were not designed to interact with commands. This article demonstrates using a Xamarin.Forms behavior to invoke a command when an event fires."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EC7F6556-9776-40B8-9424-A8094482A2F3
 ms.technology: xamarin-forms

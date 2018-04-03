@@ -1,7 +1,6 @@
 ---
 title: "Overview"
 description: "Details of how the binding process works"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 ms.technology: xamarin-cross-platform

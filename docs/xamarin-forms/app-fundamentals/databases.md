@@ -1,7 +1,6 @@
 ---
 title: "Local Databases"
 description: "Xamarin.Forms supports database-driven applications using the SQLite database engine, which makes it possible to load and save objects in shared code. This article describes how Xamarin.Forms applications can read and write data to a local SQLite database using SQLite.Net."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms

@@ -1,6 +1,5 @@
 ---
 title: "Xamarin.Android Environment"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 67BFD4E1-276C-4B9F-9BD8-A5218D2BD529
 ms.technology: xamarin-android

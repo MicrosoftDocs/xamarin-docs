@@ -1,7 +1,6 @@
 ---
 title: "Oreo Features"
 description: "How to get started using Xamarin.Android to develop apps for the latest version of Android."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EAEF7341-7A00-4439-9FAF-43882637BEF8
 ms.technology: xamarin-android

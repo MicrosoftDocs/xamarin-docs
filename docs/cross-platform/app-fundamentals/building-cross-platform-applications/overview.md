@@ -1,6 +1,5 @@
 ---
 title: "Building Cross Platform Applications Overview"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 ms.technology: xamarin-cross-platform

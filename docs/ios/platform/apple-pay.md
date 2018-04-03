@@ -1,7 +1,6 @@
 ---
 title: "Apple Pay"
 description: "This guide explores setting up the Xamarin.iOS environment for use with Apple Pay to pay for physical goods, such as food, entertainment, and memberships via your app. It includes information on the required identifiers, certificates and entitlements."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios

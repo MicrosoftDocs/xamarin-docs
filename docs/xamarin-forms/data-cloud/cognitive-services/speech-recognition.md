@@ -1,7 +1,6 @@
 ---
 title: "Speech Recognition Using the Microsoft Speech API"
 description: "The Microsoft Speech API is a cloud-based API that provides algorithms to process spoken language. This article explains how to use the Microsoft Speech Recognition REST API to convert audio to text in a Xamarin.Forms application."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B435FF6B-8785-48D9-B2D9-1893F5A87EA1
 ms.technology: xamarin-forms

@@ -1,7 +1,6 @@
 ---
 title: "Colors"
 description: "Xamarin.Forms provides a flexible cross-platform Color class."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
 ms.technology: xamarin-forms

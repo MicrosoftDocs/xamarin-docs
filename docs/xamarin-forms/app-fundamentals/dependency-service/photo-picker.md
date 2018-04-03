@@ -1,7 +1,6 @@
 ---
 title: "Picking a Photo from the Picture Library"
 description: "Use DependencyService to pick a photo from the phone's picture library"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4F51B0E7-6A63-403C-B488-500CCBCE75DD
 ms.technology: xamarin-forms

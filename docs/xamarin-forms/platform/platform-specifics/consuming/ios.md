@@ -1,7 +1,6 @@
 ---
 title: "iOS Platform-Specifics"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article demonstrates how to consume the iOS platform-specifics that are built into Xamarin.Forms."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms

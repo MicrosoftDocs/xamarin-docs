@@ -1,6 +1,5 @@
 ---
 title: ".NET Standard"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 ms.technology: xamarin-cross-platform

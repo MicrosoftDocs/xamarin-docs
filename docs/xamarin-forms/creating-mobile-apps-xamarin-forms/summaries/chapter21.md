@@ -1,6 +1,5 @@
 ---
 title: "Summary of Chapter 21. Transforms"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9

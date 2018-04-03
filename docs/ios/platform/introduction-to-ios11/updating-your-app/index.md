@@ -1,7 +1,6 @@
 ---
 title: "Updating Your App to iOS 11"
 description: "Exploring the new features of iOS 11"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EC809504-9CF6-4949-B6EE-36384297E744
 ms.technology: xamarin-ios

@@ -1,6 +1,5 @@
 ---
 title: "Populating a Table with Data"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6FE64DDF-1029-EB9B-6EEC-1C7DFDFDF3AF
 ms.technology: xamarin-ios

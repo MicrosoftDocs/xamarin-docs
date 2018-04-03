@@ -1,6 +1,5 @@
 ---
 title: "Purchasing Consumable Products"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E0CB4A0F-C3FA-3933-58A7-13246971D677
 ms.technology: xamarin-ios

@@ -1,6 +1,5 @@
 ---
 title: "Web View"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 807F214A-166D-B342-0BBA-525517577F6B
 ms.technology: xamarin-android

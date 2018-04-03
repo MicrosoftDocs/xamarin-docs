@@ -1,7 +1,6 @@
 ---
 title: "Working with Alerts"
 description: "This article covers working with UIAlertController to display an alert message to the user in Xamarin.tvOS."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios

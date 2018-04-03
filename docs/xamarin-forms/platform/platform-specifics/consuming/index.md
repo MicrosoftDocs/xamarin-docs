@@ -1,7 +1,6 @@
 ---
 title: "Consuming Platform-Specifics"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6AF9D016-F693-44B8-B279-7AFDA5504634
 ms.technology: xamarin-forms

@@ -1,6 +1,5 @@
 ---
 title: ".NET Embedding Limitations"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
 ms.technology: xamarin-cross-platform

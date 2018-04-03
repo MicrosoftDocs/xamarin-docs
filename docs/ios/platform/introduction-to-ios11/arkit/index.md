@@ -1,7 +1,6 @@
 ---
 title: "Introduction to ARKit"
 description: "Augmented Reality for iOS 11"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
 ms.technology: xamarin-ios

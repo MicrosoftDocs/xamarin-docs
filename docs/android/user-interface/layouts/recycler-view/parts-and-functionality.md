@@ -1,6 +1,5 @@
 ---
 title: "RecyclerView Parts and Functionality"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 54F999BE-2732-4BC7-A466-D17373961C48
 ms.technology: xamarin-android

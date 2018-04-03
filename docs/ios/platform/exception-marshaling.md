@@ -1,7 +1,6 @@
 ---
 title: "Exception Marshaling"
 description: "Xamarin.iOS contains new events to help respond to exceptions, particularly in native code."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios

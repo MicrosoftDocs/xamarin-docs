@@ -1,7 +1,6 @@
 ---
 title: "Working with Buttons"
 description: "This article covers designing and working with buttons inside of a Xamarin.tvOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios

@@ -1,6 +1,6 @@
 ---
 title: "Legacy License Frequently Asked Questions"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: E7137ABE-9B34-4C36-BEE6-B2601183CD38
 ms.technology: xamarin-cross-platform

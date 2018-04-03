@@ -1,7 +1,6 @@
 ---
 title: "Limitations"
 description: "Some limitations of the Xamarin Live Player"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 36A1531E-630A-4B7C-A333-4E67E5DC023C
 ms.technology: xamarin-cross-platform

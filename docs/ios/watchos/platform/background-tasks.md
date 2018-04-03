@@ -1,7 +1,6 @@
 ---
 title: "Background Tasks"
 description: "Use the new Background Tasks watchOS 3 to ensure a watch app always has the latest data and Dock Snapshots."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
 ms.technology: xamarin-ios

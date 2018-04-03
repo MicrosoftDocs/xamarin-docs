@@ -1,7 +1,6 @@
 ---
 title: "Binding Path"
 description: "Use data bindings to access sub-properties and collection members"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
 ms.technology: xamarin-forms

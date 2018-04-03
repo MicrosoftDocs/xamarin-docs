@@ -1,7 +1,6 @@
 ---
 title: "Provisioning Profiles"
 description: "This guide walks through creating the necessary Provisioning Profiles that will be required to publish a Xamarin.Mac app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: bdff6c32-f7e3-4a97-a093-dbda48be8227
 ms.technology: xamarin-mac

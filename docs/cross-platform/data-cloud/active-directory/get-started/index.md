@@ -1,7 +1,6 @@
 ---
 title: "Azure Active Directory"
 description: "Register an app to use Azure Active Directory"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 70B3C2AB-CB4D-420C-9CFA-20CCFA0E3C78
 ms.technology: xamarin-cross-platform

@@ -1,7 +1,6 @@
 ---
 title: "Deployment and Testing"
 description: "This section covers topics used to test an app as well as how to distribute it. Topics here include things such as tools used for debugging, deployment to testers and how to publish an application to the Apple TV App Store."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DA4B4BD7-DC09-4F61-BC07-36727AF52BA2
 ms.technology: xamarin-ios

@@ -1,7 +1,6 @@
 ---
 title: "User Interface"
 description: "General User Experience (UX) coverage including User Interface (UI) controls, use Xcode's Interface Builder and UX design principles when working with Xamarin.tvOS."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8CF80705-B36A-42D6-B66B-52BC8586FA5A
 ms.technology: xamarin-ios

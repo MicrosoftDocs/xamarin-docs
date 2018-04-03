@@ -1,6 +1,5 @@
 ---
 title: "Build Process"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android

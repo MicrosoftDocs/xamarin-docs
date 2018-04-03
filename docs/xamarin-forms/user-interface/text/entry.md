@@ -1,7 +1,6 @@
 ---
 title: "Entry"
 description: "Single-line text or password input"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms

@@ -1,6 +1,5 @@
 ---
 title: "fastlane for iOS – sigh"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios

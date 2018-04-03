@@ -1,7 +1,6 @@
 ---
 title: "TableView"
 description: "Present scrolling menus, settings and input forms."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms

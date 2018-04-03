@@ -1,7 +1,6 @@
 ---
 title: "Debugging a native crash"
 description: "This guide describes how to debug exceptions that originate in the Objective-C runtime."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac

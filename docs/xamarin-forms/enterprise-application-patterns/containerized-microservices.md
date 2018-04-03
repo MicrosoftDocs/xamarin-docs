@@ -1,6 +1,5 @@
 ---
 title: "Containerized Microservices"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5872ad92-04e0-4f1a-9691-79d5602f5683
 ms.technology: xamarin-forms

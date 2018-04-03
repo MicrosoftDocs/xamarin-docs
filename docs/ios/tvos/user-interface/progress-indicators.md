@@ -1,7 +1,6 @@
 ---
 title: "Working with Progress Indicators"
 description: "This article covers designing and working with Progress Indicators inside of a Xamarin.tvOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 582B6D0C-1F16-4299-A9A6-5651E76009FE
 ms.technology: xamarin-ios

@@ -1,7 +1,6 @@
 ---
 title: "Authenticating Users with an Identity Provider"
 description: "Xamarin.Auth is a cross-platform SDK for authenticating users and storing their accounts. It includes OAuth authenticators that provide support for consuming identity providers such as Google, Microsoft, Facebook, and Twitter. This article explains how to use Xamarin.Auth to manage the authentication process in a Xamarin.Forms application."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
 ms.technology: xamarin-forms

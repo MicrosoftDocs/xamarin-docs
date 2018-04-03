@@ -1,6 +1,5 @@
 ---
 title: "Preparing an Application for Release"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9C8145B3-FCF1-4649-8C6A-49672DDA4159
 ms.technology: xamarin-android

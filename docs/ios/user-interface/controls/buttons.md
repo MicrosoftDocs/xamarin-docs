@@ -1,7 +1,6 @@
 ---
 title: "Buttons"
 description: "The UIButton class is used to represent various different styles of button in iOS screens. This section introduces the different options for working with buttons in iOS."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 304229E5-8FA8-41BD-8563-D19E1D2A0296
 ms.technology: xamarin-ios

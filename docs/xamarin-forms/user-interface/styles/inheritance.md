@@ -1,7 +1,6 @@
 ---
 title: "Style Inheritance"
 description: "Styles can inherit from other styles to reduce duplication and enable reuse."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 67A3A39C-8CC0-446D-8162-FFA73582D3B8
 ms.technology: xamarin-forms

@@ -1,6 +1,5 @@
 ---
 title: "Getting started with C"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2A27BE0F-95FB-4C3A-8A43-72540179AA85
 ms.technology: xamarin-cross-platform

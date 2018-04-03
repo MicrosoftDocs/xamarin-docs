@@ -1,7 +1,6 @@
 ---
 title: "CoreImage"
 description: "CoreImage is a new framework introduced with iOS 5 to provide image processing and live video enhancement functionality. This article introduces these features with Xamarin.iOS samples."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios

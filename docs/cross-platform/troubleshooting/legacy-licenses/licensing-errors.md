@@ -1,6 +1,6 @@
 ---
 title: "Some specific licensing errors"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: D26BDF2D-923B-4BC1-841A-74583155DB71
 ms.technology: xamarin-cross-platform

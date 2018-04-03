@@ -1,6 +1,5 @@
 ---
 title: "Working with Settings"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4B2EB192-F0A2-4010-B141-0431520594C0
 ms.technology: xamarin-ios

@@ -1,6 +1,5 @@
 ---
 title: "Android Debug Log"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android

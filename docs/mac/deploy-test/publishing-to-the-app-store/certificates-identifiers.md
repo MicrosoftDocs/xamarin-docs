@@ -1,7 +1,6 @@
 ---
 title: "Certificates and identifiers"
 description: "This guide walks through creating the necessary Certificates and Identifiers that will be required to publish a Xamarin.Mac app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 393d0066-7f6f-4ac3-a48d-4b5db65bc4cd
 ms.technology: xamarin-mac

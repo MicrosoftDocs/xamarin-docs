@@ -1,6 +1,5 @@
 ---
 title: "Limitations"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F953F9B4-3596-8B3A-A8E4-8219B5B9F7CA
 ms.technology: xamarin-android

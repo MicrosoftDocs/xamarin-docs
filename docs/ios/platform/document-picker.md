@@ -1,7 +1,6 @@
 ---
 title: "Document Picker"
 description: "The Document Picker view controller grants users access to files outside an application's sandbox. It is a simple mechanism for sharing documents between apps. It also enables more complex workflows, because users can edit a single document with multiple applications. This article provides an introduction to using the Document Picker in a Xamarin.iOS application and the changes in iCloud Documents required to support it."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios

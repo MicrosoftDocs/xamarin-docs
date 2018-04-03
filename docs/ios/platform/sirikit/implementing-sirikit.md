@@ -1,7 +1,6 @@
 ---
 title: "Implementing SiriKit"
 description: "This article covers the steps required to implement SiriKit support in a Xamarin.iOS apps."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios

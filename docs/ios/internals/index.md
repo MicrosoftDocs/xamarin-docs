@@ -1,7 +1,6 @@
 ---
 title: "iOS Advanced Concepts and Internals"
 description: "This topic looks into MonoTouch API design, assemblies and classes from the .NET Base Class Library (BCL), and how  Visual Studio for Mac integrates with Xcode's Interface Builder and Apple's toolchain."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 951713CD-D6AD-981C-A09E-4F2C98588D8B
 ms.technology: xamarin-ios

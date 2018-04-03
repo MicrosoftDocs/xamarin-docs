@@ -1,7 +1,7 @@
 ---
 title: "Hello, Xamarin.Forms"
 description: "This guide provides an introduction to developing a Xamarin.Forms application using Visual Studio for Mac or Visual Studio, and to the fundamentals of application development using Xamarin.Forms. Topics covered include the tools, concepts, and steps required to build and deploy a Xamarin.Forms application."
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: af79e4ef-99c6-4a17-b5d1-95ab652ac7ab
 ms.technology: xamarin-forms

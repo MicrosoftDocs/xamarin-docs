@@ -1,7 +1,6 @@
 ---
 title: "Tools & Commands"
 description: "Overview of the tools included with Objective Sharpie, and the command line arguments to use them."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
 ms.technology: xamarin-cross-platform

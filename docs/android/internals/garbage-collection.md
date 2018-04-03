@@ -1,6 +1,5 @@
 ---
 title: "Garbage Collection"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 298139E2-194F-4A58-BC2D-1D22231066C4
 ms.technology: xamarin-android

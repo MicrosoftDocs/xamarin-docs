@@ -1,7 +1,6 @@
 ---
 title: "Android Wear"
 description: "Building apps for Android wearable devices."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3BE4A128-2D88-4500-9E48-20375EA99A49
 ms.technology: xamarin-android

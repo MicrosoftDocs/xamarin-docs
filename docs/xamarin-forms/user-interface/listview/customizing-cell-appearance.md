@@ -1,7 +1,6 @@
 ---
 title: "Cell Appearance"
 description: "Explore options for presenting data while taking advantage of the convenience of ListView."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FD45CB91-1A8F-46FB-B432-6BC20492E456
 ms.technology: xamarin-forms

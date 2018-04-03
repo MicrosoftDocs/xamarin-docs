@@ -1,7 +1,6 @@
 ---
 title: "Google Messaging"
 description: "This section contains guides that describe how to implement Xamarin.Android apps using Google messaging services."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 85E8DF92-D160-4763-A7D3-458B4C31635F
 ms.technology: xamarin-android

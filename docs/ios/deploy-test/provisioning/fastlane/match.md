@@ -1,6 +1,5 @@
 ---
 title: "fastlane for iOS - match"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C4A2A67E-0643-4CED-B1A9-79D65054F3CA
 ms.technology: xamarin-ios

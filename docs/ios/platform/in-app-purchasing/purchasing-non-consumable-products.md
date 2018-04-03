@@ -1,6 +1,5 @@
 ---
 title: "Purchasing Non-Consumable Products"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios

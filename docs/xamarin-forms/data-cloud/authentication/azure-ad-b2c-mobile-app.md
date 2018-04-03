@@ -1,7 +1,6 @@
 ---
 title: "Integrating Azure Active Directory B2C with Azure Mobile Apps"
 description: "Azure Active Directory B2C is a cloud identity management solution for consumer-facing web and mobile applications. This article demonstrates how to use Azure Active Directory B2C to provide authentication and authorization to an Azure Mobile Apps instance with Xamarin.Forms."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 53F52036-A997-4D0F-86B4-4302C6913136
 ms.technology: xamarin-forms

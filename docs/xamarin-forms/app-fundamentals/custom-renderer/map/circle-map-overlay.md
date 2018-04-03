@@ -1,7 +1,6 @@
 ---
 title: "Highlighting a Circular Area on a Map"
 description: "This article explains how to add a circular overlay to a map, to highlight a circular area of the map."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6FF8BD15-074E-4E6A-9522-F9E2BE32EF12
 ms.technology: xamarin-forms

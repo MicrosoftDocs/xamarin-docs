@@ -1,7 +1,6 @@
 ---
 title: "App Class"
 description: "Features of the default App class, which can be either C# or XAML"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
 ms.technology: xamarin-forms

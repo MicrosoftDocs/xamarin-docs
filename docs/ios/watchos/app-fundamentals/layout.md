@@ -1,6 +1,5 @@
 ---
 title: "Working with Layout"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BEDB62A1-2249-4459-986F-413A41E63DF0
 ms.technology: xamarin-ios

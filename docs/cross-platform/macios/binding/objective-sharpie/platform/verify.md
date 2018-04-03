@@ -1,6 +1,5 @@
 ---
 title: "Verify Attributes"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 107FBCEA-266B-4295-B7AA-40A881B82B7B
 ms.technology: xamarin-cross-platform

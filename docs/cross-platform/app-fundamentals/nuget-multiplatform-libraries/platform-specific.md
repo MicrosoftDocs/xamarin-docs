@@ -1,6 +1,5 @@
 ---
 title: "Creating New Platform-Specific Library Projects for NuGet"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D8BC4906-805F-4AFB-8D1A-88B7BF87E17F
 ms.technology: xamarin-cross-platform

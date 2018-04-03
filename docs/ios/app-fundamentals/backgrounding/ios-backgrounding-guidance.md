@@ -1,6 +1,5 @@
 ---
 title: "iOS Backgrounding Guidance"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BC629536-F179-4EC2-AD72-8F45081F8EE0
 ms.technology: xamarin-ios

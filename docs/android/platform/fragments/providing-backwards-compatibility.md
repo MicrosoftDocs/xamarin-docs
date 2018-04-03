@@ -1,6 +1,5 @@
 ---
 title: "Providing Backwards Compatibility with the Android Support Package"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7511D2F8-2B4F-4200-C74E-E967153B2E8D
 ms.technology: xamarin-android

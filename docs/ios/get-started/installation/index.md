@@ -1,6 +1,5 @@
 ---
 title: "Xamarin.iOS Installation"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E5A29963-C8BD-465B-BFC1-7FAC9CC64BD3
 ms.technology: xamarin-ios

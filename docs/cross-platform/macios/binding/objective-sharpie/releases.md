@@ -1,6 +1,5 @@
 ---
 title: "Release History"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
 ms.technology: xamarin-cross-platform

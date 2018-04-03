@@ -1,7 +1,6 @@
 ---
 title: "Project References"
 description: "Explanation of the relationship between the iOS app, watch app, and watch extension."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C366E062-C33D-406A-B3FF-CBE82E5D1E7E
 ms.technology: xamarin-ios

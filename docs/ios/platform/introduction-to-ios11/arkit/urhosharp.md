@@ -1,6 +1,5 @@
 ---
 title: "Using ARKit with UrhoSharp"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios

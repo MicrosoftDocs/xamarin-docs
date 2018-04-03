@@ -1,7 +1,6 @@
 ---
 title: "Architecture Changes"
 description: "Exploring the new features of iOS 11"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 55F62F3F-8570-402B-B7D9-2875F76CB946
 ms.technology: xamarin-ios

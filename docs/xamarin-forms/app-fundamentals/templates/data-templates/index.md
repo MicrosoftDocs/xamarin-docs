@@ -1,7 +1,6 @@
 ---
 title: "Data Templates"
 description: "A DataTemplate is used to specify the appearance of data on supported controls, and typically binds to the data to be displayed."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 838F4BDB-B719-457F-8633-27E9B267A2A0
 ms.technology: xamarin-forms

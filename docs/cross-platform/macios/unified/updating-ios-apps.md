@@ -1,7 +1,6 @@
 ---
 title: "Updating Existing iOS Apps"
 description: "Follow these steps to update an existing Xamarin.iOS app to use the Unified API."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
 ms.technology: xamarin-cross-platform

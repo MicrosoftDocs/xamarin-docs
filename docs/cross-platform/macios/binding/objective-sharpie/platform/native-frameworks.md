@@ -1,6 +1,5 @@
 ---
 title: "Binding Native Frameworks"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
 ms.technology: xamarin-cross-platform

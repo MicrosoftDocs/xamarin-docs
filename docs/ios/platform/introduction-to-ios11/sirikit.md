@@ -1,6 +1,5 @@
 ---
 title: "SiriKit"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios

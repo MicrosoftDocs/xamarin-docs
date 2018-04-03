@@ -1,7 +1,6 @@
 ---
 title: "Introduction to watchOS"
 description: "Overview of the watchOS solution structure and limitations"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 99c316d6-6707-40f6-bec9-801d05888759
 ms.technology: xamarin-ios

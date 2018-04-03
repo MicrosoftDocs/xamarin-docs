@@ -1,6 +1,5 @@
 ---
 title: "Getting Started"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 ms.technology: xamarin-cross-platform

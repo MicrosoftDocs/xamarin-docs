@@ -1,7 +1,6 @@
 ---
 title: "iOS Localization"
 description: "This document covers the localization features of the iOS SDK and how to access them with Xamarin."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios

@@ -1,7 +1,6 @@
 ---
 title: "Setup Windows Projects"
 description: "Adding new Windows projects to an existing Xamarin.Forms solution"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A0774D2E-6994-4D91-84E8-DAB66FC92320
 ms.technology: xamarin-forms

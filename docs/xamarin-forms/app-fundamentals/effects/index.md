@@ -1,7 +1,6 @@
 ---
 title: "Effects"
 description: "Xamarin.Forms user interfaces are rendered using the native controls of the target platform, allowing Xamarin.Forms applications to retain the appropriate look and feel for each platform. Effects allow the native controls on each platform to be customized without having to resort to a custom renderer implementation."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8AF168A7-4CD9-4603-B961-15B8B1543784
 ms.technology: xamarin-forms

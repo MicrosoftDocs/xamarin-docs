@@ -1,7 +1,6 @@
 ---
 title: "The Rotate Transform"
 description: "Explore the effects and animations possible with the SkiaSharp rotate transform"
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2

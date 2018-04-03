@@ -1,7 +1,6 @@
 ---
 title: "Testing on Watch Devices"
 description: "Deploying Apps to test on your Apple Watch"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios

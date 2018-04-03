@@ -1,7 +1,6 @@
 ---
 title: "Configuring an App in iTunes Connect"
 description: "This article covers the steps required to setup and maintain a Xamarin.iOS application in iTunes Connect so that it can be released for distribution on the App Store."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
 ms.technology: xamarin-ios

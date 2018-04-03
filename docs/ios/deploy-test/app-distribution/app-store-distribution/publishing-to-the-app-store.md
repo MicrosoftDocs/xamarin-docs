@@ -1,7 +1,6 @@
 ---
 title: "Publishing to the App Store"
 description: "This article shows how to configure, build, and publish a Xamarin.iOS application for distribution via the App Store. It includes a step-by-step guide that covers how to prepare your application for distribution, how to use Apple’s tools to submit your application for review, and, finally, how to publish your application to the App Store."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios

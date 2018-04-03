@@ -1,7 +1,6 @@
 ---
 title: "Styles"
 description: "Style text in Xamarin.Forms"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
 ms.technology: xamarin-forms

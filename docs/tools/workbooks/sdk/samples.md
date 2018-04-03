@@ -1,6 +1,5 @@
 ---
 title: "Sample Integrations"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 327DAD2E-1F76-4EB5-BCD0-9E7384D99E48
 ms.technology: xamarin-cross-platform

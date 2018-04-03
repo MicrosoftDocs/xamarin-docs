@@ -1,7 +1,6 @@
 ---
 title: "Xamarin.Mac registrar"
 description: "This document describes the purpose of the Xamarin.Mac registrar and its different usage configurations."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7CAAA6B7-D654-4AD3-BAEC-9DD01210978A
 ms.technology: xamarin-mac

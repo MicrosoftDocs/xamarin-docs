@@ -1,7 +1,6 @@
 ---
 title: "Introduction"
 description: "Xamarin.Forms data templates provide the ability to define the presentation of data on supported controls. This article provides an introduction to data templates, examining why they are necessary."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4ED4ACF4-BE4A-44ED-8EAF-C03947B8663B
 ms.technology: xamarin-forms

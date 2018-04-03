@@ -1,7 +1,6 @@
 ---
 title: "Highlighting a Route on a Map"
 description: "This article explains how to add a polyline overlay to a map. A polyline overlay is a series of connected line segments that are typically used to show a route on a map, or form any shape that's required."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FBFDC715-1654-4188-82A0-FC522548BCFF
 ms.technology: xamarin-forms

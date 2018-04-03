@@ -1,6 +1,6 @@
 ---
 title: "Frequently Asked Questions"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 89364175-53BA-4A09-B3E2-44AC67DD971C
 ms.technology: xamarin-forms

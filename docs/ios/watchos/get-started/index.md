@@ -1,7 +1,6 @@
 ---
 title: "Getting Started with watchOS"
 description: "Introduction to watchOS and how to build watch apps"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BB938008-C013-4A1D-8229-FEEE94F83BBD
 ms.technology: xamarin-ios

@@ -1,6 +1,5 @@
 ---
 title: "API"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4C1669A4-C12B-9C49-4A39-9046576D10DC
 ms.technology: xamarin-ios

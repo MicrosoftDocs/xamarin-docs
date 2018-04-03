@@ -1,7 +1,6 @@
 ---
 title: "Using Slider"
 description: "Use a Slider for selecting from a range of continuous values."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
 ms.technology: xamarin-forms

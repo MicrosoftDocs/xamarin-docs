@@ -1,6 +1,6 @@
 ---
 title: "Why does my iOS build fail with: no valid iPhone code signing keys found in keychain?"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9DF24C46-D521-4112-9B21-52EA4E8D90D0
 ms.technology: xamarin-ios

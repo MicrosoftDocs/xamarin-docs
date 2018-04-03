@@ -1,7 +1,6 @@
 ---
 title: "Fonts"
 description: "Setting Fonts in Xamarin.Forms"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms

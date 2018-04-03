@@ -1,6 +1,6 @@
 ---
 title: "Team License Management"
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: FD7F5F42-3844-4365-91E0-B9A3BBE58FE0
 ms.technology: xamarin-cross-platform

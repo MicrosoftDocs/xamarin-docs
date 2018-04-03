@@ -1,6 +1,5 @@
 ---
 title: "Customizing a ListView's Appearance"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B09AD282-2C4F-D71E-6806-9B1EF05C2CD4
 ms.technology: xamarin-android

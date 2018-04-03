@@ -1,7 +1,6 @@
 ---
 title: "Outline views"
 description: "This article covers working with outline views in a Xamarin.Mac application. It describes creating and maintaining outline views in Xcode and Interface Builder and working with them programmatically."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
 ms.technology: xamarin-mac

@@ -1,7 +1,6 @@
 ---
 title: "Plugins"
 description: "Easily add native functionality to Xamarin.Forms apps"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8A06A420-A9D0-4BCB-B9AF-3AEA6A648A8B
 ms.technology: xamarin-forms

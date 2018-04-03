@@ -1,7 +1,6 @@
 ---
 title: "View Controllers"
 description: "Covers working with iOS View Controllers in a Xamarin.iOS app."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 15846D93-26A7-4E7E-B6DA-8E20FCD995E7
 ms.technology: xamarin-ios

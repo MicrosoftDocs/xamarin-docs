@@ -1,7 +1,7 @@
 ---
 title: "Hello, iOS"
 description: "This two-part guide, describes how to build a basic Xamarin.iOS application using Visual Studio for Mac or Visual Studio and develop an understanding of the fundamentals of iOS application development with Xamarin. It will introduce the tools, concepts, and steps required to build and deploy a Xamarin.iOS application."
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
 ms.technology: xamarin-ios

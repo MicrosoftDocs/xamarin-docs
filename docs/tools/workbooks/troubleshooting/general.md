@@ -1,6 +1,5 @@
 ---
 title: "Known Issues & Workarounds"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 ms.technology: xamarin-cross-platform

@@ -1,7 +1,6 @@
 ---
 title: "Updating Existing Mac Apps"
 description: "Follow these steps to update an existing Xamarin.Mac app to use the Unified API."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
 ms.technology: xamarin-cross-platform

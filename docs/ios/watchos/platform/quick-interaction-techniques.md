@@ -1,7 +1,6 @@
 ---
 title: "Quick Interaction Techniques for watchOS 3"
 description: "This article covers the quick interaction techniques Apple has added in watchOS 3 and how to implement them in Xamarin.iOS for Apple Watch."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios

@@ -1,7 +1,6 @@
 ---
 title: ".storyboard/.xib-less user interface design"
 description: "This article covers creating a Xamarin.Mac application's user interface directly from C# code, without .storyboard files, .xib files, or Interface Builder."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 02310F58-DCF1-4589-9F4A-065DF64FC0E1
 ms.technology: xamarin-mac

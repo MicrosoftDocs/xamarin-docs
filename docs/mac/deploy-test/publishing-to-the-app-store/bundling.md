@@ -1,7 +1,6 @@
 ---
 title: "Bundling for the Mac App Store"
 description: "This guide walks through bundling a Xamarin.Mac app for publication to the Mac App Store."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 00a36d7c-937d-4657-bf6a-0de9684b8f94
 ms.technology: xamarin-mac

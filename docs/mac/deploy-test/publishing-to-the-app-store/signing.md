@@ -1,7 +1,6 @@
 ---
 title: "Sign with Developer ID"
 description: "This guide walks through signing a Xamarin.Mac app with the Developer ID for publication."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: cf7b733b-e08f-4f56-a233-264b29ee4c97
 ms.technology: xamarin-mac

@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms Quickstart"
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8
 ms.technology: xamarin-forms
