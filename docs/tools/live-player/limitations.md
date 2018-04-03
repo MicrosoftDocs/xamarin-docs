@@ -6,7 +6,7 @@ ms.assetid: 36A1531E-630A-4B7C-A333-4E67E5DC023C
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.date: 08/04/2017
+ms.date: 03/29/2018
 ---
 
 # Limitations
