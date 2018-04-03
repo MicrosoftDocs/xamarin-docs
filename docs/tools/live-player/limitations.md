@@ -47,7 +47,7 @@ There are some limitations on the things Xamarin Live Player can run, including 
 - Limited support for reflection (currently affects some popular NuGets, like SQLite and Json.NET). Other NuGets may still be supported.
 - Some system classes cannot be overridden (for example, you cannot implement a subclass).
 - Some platform features that require provisioning can't work in the Xamarin Live Player app (however it has been configured for common operations like photo gallery access).
-- Custom targets and build steps are ignored. For example, tools like Fody, Retit, AutoFac, and AutoMapper cannot be incorporated.
+- Custom targets and build steps are ignored. For example, tools like Fody, Refit, AutoFac, and AutoMapper cannot be incorporated.
 - F# projects are not supported on Android and limited support on iOS
 - Advanced scenarios with custom generic classes and interfaces may not be supported.
 
