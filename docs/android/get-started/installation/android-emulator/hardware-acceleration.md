@@ -6,7 +6,7 @@ ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 12/22/2017
+ms.date: 04/04/2018
 ---
 
 # Android Emulator Hardware Acceleration
@@ -23,24 +23,25 @@ HAXM is a hardware-assisted virtualization engine (hypervisor) that
 uses Intel Virtualization Technology (VT) to speed up Android app
 emulation on a host machine. In combination with Android x86 emulator
 images provided by Intel and the official Android SDK Manager, HAXM
-allows for faster Android emulation on VT-enabled systems. If you are
-developing on a machine with an Intel CPU that has VT capabilities, you
-can take advantage of HAXM to greatly speed up the Android SDK Emulator
-(if you're not sure whether your CPU supports VT, see
-[Determine If Your Processor Supports Intel Virtualization Technology](https://www.intel.com/content/www/us/en/support/processors/000005486.html)).
+allows for faster Android emulation on VT-enabled systems. 
+
+If you are developing on a machine with an Intel CPU that has VT
+capabilities, you can take advantage of HAXM to greatly speed up the
+Android SDK Emulator (if you're not sure whether your CPU supports VT,
+see [Determine If Your Processor Supports Intel Virtualization Technology](https://www.intel.com/content/www/us/en/support/processors/000005486.html)).
+
+> [!NOTE]
+> You can't run a VM-accelerated emulator inside another VM, such as a VM
+> hosted by VirtualBox, VMWare, or Docker. You must run the Google Android emulator 
+> [directly on your system hardware](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
 The Android SDK Emulator automatically makes use of HAXM when it is
-available. When you select an **x86**-based virtual device (as
-described in
+available. When you select an **x86**-based virtual device (as described in
 [Configuration and Use](~/android/deploy-test/debugging/android-sdk-emulator/index.md)),
 that virtual device will use HAXM for hardware acceleration. Before you
 use the Android SDK Emulator for the first time, it's a good idea to
 verify that HAXM is installed and available to the Android SDK
 Emulator.
-
-> [!NOTE]
-> You cannot run HAXM on a virtual machine.
-
 
 ## Verifying HAXM Installation
 
@@ -268,6 +269,13 @@ computer may prevent you from disabling Device Guard or Credential
 Guard. In this case, you can request an exemption from your domain
 adminstrator to allow you to opt out of Credential Guard. Alternately,
 you can use a computer that is not domain-joined to use HAXM.
+
+## Hardware Acceleration and AMD CPUs
+
+Because Google's Android emulator currently supports AMD hardware acceleration
+[only on Linux](https://developer.android.com/studio/run/emulator-acceleration.html#dependencies), hardware
+acceleration is not available for AMD-based computers running Windows.
+
 
 # [Visual Studio for Mac](#tab/vsmac)
 
