@@ -45,7 +45,7 @@ virtual machine, use the following steps:
     ```bash
     cd /tmp
     mkfifo backpipe
-    nc -kl 5555 0 < backpipe | nc 127.0.0.1 5555 > backpipe
+    nc -kl 5555 0<backpipe | nc 127.0.0.1 5555 > backpipe
     ```
 
     As long as the `nc` commands stay running in a Terminal window, the
