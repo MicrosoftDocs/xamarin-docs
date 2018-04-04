@@ -5,7 +5,7 @@ ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/22/2018
+ms.date: 04/04/2018
 ---
 
 # Android Debug Log
@@ -193,6 +193,21 @@ This produces output similar to the following:
 I/myapp   (11103): this is an info message
 W/myapp   (11103): this is a warning message
 E/myapp   (11103): this is an error message
+```
+
+It is also possible to use `Console.WriteLine` to write to the **Debug
+Log** &ndash; these messages appear in logcat with a slightly different
+output format (this technique is particularly useful when debugging
+Xamarin.Forms apps on Android):
+
+```csharp
+System.Console.WriteLine ("DEBUG - Button Clicked!");
+```
+
+This produces output similar to the following in logcat:
+
+```
+Info (19543) / mono-stdout: DEBUG - Button Clicked!
 ```
 
 ## Interesting Messages
