@@ -164,7 +164,6 @@ Hosting a WCF locally is adequate when connections only come from the local mach
 
     [![](walkthrough-working-with-wcf-images/image05.png "We can do this by editing the configuration file for IIS Express at solutiondirectory.vsconfigapplicationhost.config, as shown in this screenshot")](walkthrough-working-with-wcf-images/image05.png#lightbox)
 
-
     Locate the `site` element with the name `HelloWorldWcfHost`. It should look something like the following XML snippet:
 
     ```xml
