@@ -135,7 +135,7 @@ There is a built-in converter for the `Font` property that allows all font setti
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-To specify mulitple `Font` settings, combine the required settings into a single font attribute string. The font attribute string should be formatted as `"[font-face],[attributes],[size]"`. The order of the parameters is important, all parameters are optional, and mulitple `attributes` can be specified, for example:
+To specify multiple `Font` settings, combine the required settings into a single font attribute string. The font attribute string should be formatted as `"[font-face],[attributes],[size]"`. The order of the parameters is important, all parameters are optional, and multiple `attributes` can be specified, for example:
 
 ```xaml
 <Label Text="Small bold text" FontAttributes="Bold" FontSize="Micro" />
