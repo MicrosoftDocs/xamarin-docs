@@ -25,7 +25,7 @@ Generally, you'll want to make the dash and gap lengths a multiple of the stroke
 
 However, the `StrokeCap` setting of the `SKPaint` object also affects these dots and dashes. As you'll see shortly, that has an impact on the elements of this array.
 
-Dotted and dashed lines are demonstrated on the **Dots and Dashes** page. The [**DotsAndDashesPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) file instantiates two `Picker` views, one for letting you select a stroke cap and the second to select a dash array:
+Dotted and dashed lines are demonstrated on the **Dots and Dashes** page. The [**DotsAndDashesPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) file instantiates two `Picker` views, one for letting you select a stroke cap and the second to select a dash array:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -88,7 +88,7 @@ Dotted and dashed lines are demonstrated on the **Dots and Dashes** page. The [*
 
 The first three items in the `dashArrayPicker` assume that the stroke width is 10 pixels. The { 10, 10 } array is for a dotted line, { 30, 10 } is for a dashed line, and { 10, 10, 30, 10 } is for a dot-and-dash line. (The other three will be discussed shortly.)
 
-The [`DotsAndDashesPage` code-behind file](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) contains the `PaintSurface` event handler and a couple of helper routines for accessing the `Picker` views:
+The [`DotsAndDashesPage` code-behind file](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) contains the `PaintSurface` event handler and a couple of helper routines for accessing the `Picker` views:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -164,7 +164,7 @@ The Windows screen shows that dotted and dashed line for a stroke cap of `Round`
 
 So far no mention has been made of the second parameter to the `SKPathEffect.CreateDash` method. This parameter is named `phase` and it refers to an offset within the dot-and-dash pattern for the beginning of the line. For example, if the dash array is { 10, 10 } and the `phase` is 10, then the line begins with a gap rather than a dot.
 
-One interesting application of the `phase` parameter is in an animation. The **Animated Spiral** page is similar to the **Archimedean Spiral** page, except that the [`AnimatedSpiralPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) class animates the `phase` parameter. The page also demonstrates another approach to animation. The earlier example of the [`PulsatingEllipsePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) used the `Task.Delay` method to control the animation. This example uses instead the Xamarin.Forms `Device.Timer` method:
+One interesting application of the `phase` parameter is in an animation. The **Animated Spiral** page is similar to the **Archimedean Spiral** page, except that the [`AnimatedSpiralPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) class animates the `phase` parameter. The page also demonstrates another approach to animation. The earlier example of the [`PulsatingEllipsePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) used the `Task.Delay` method to control the animation. This example uses instead the Xamarin.Forms `Device.Timer` method:
 
 
 ```csharp

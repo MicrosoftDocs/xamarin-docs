@@ -20,7 +20,7 @@ You can animate SkiaSharp graphics in Xamarin.Forms by causing the `PaintSurface
 The **Pulsating Ellipse** page in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program animates the two axes of an ellipse so that it appears to be pulsating, and you can even control the rate of this pulsation:
 
 
-The [**PulsatingEllipsePage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) file instantiates a Xamarin.Forms `Slider` and a `Label` to display the current value of the slider. This is a common way to integrate an `SKCanvasView` with other Xamarin.Forms views:
+The [**PulsatingEllipsePage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) file instantiates a Xamarin.Forms `Slider` and a `Label` to display the current value of the slider. This is a common way to integrate an `SKCanvasView` with other Xamarin.Forms views:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -145,7 +145,7 @@ Notice that the `SKPaint` object is created in a `using` block. Like many SkiaSh
 
  A better solution in this particular case would be to create two `SKPaint` objects once and save them as fields.
 
-That's what the **Expanding Circles** animation does. The [`ExpandingCirclesPage`](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) class begins by defining several fields, including an `SKPaint` object:
+That's what the **Expanding Circles** animation does. The [`ExpandingCirclesPage`](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) class begins by defining several fields, including an `SKPaint` object:
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage

@@ -69,7 +69,7 @@ path.ArcTo (oval, startAngle, sweepAngle, false);
 
 This version of `ArcTo` draws a line from the current position to the beginning of the arc. This means that the arc can be somewhere in the middle of a larger contour.
 
-The **Angle Arc** page lets you use two sliders to specify the start and sweep angles. The XAML file instantiates two `Slider` elements and an `SKCanvasView`. The `PaintCanvas` handler in the [**AngleArcPage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/AngleArcPage.xaml.cs) file draws both the oval and the arc using two `SKPaint` objects defined as fields:
+The **Angle Arc** page lets you use two sliders to specify the start and sweep angles. The XAML file instantiates two `Slider` elements and an `SKCanvasView`. The `PaintCanvas` handler in the [**AngleArcPage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/AngleArcPage.xaml.cs) file draws both the oval and the arc using two `SKPaint` objects defined as fields:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -106,7 +106,7 @@ y = oval.MidY + (oval.Height / 2) * sin(angle)
 
 The `angle` value is either `startAngle` or `startAngle + sweepAngle`.
 
-The use of two angles to define an arc is best for cases where you know the angular length of the arc that you want to draw, for example, to make a pie chart. The **Exploded Pie Chart** page demonstrates this. The [`ExplodedPieChartPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ExplodedPieChartPage.cs) class uses an internal class to define some fabricated data and colors:
+The use of two angles to define an arc is best for cases where you know the angular length of the arc that you want to draw, for example, to make a pie chart. The **Exploded Pie Chart** page demonstrates this. The [`ExplodedPieChartPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ExplodedPieChartPage.cs) class uses an internal class to define some fabricated data and colors:
 
 ```csharp
 class ChartData
@@ -255,7 +255,7 @@ Here's the final straight line and arc that is added to the contour:
 
 The contour can be continued from the second tangent point.
 
-The **Tangent Arc** page allows you to experiment with the tangent arc. This is the first of several pages that derive from [`InteractivePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/InteractivePage.cs), which defines a few handy `SKPaint` objects and performs `TouchPoint` processing:
+The **Tangent Arc** page allows you to experiment with the tangent arc. This is the first of several pages that derive from [`InteractivePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/InteractivePage.cs), which defines a few handy `SKPaint` objects and performs `TouchPoint` processing:
 
 ```csharp
 public class InteractivePage : ContentPage
@@ -305,7 +305,7 @@ public class InteractivePage : ContentPage
 }
 ```
 
-The `TangentArcPage` class derives from `InteractivePage`. The constructor in the [**TangentArcPage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml.cs) file is responsible for instantiating and initializing the `touchPoints` array, and setting `baseCanvasView` (in `InteractivePage`) to the `SKCanvasView` object instantiated in the [**TangentArcPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml) file:
+The `TangentArcPage` class derives from `InteractivePage`. The constructor in the [**TangentArcPage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml.cs) file is responsible for instantiating and initializing the `touchPoints` array, and setting `baseCanvasView` (in `InteractivePage`) to the `SKCanvasView` object instantiated in the [**TangentArcPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml) file:
 
 ```csharp
 public partial class TangentArcPage : InteractivePage
@@ -415,7 +415,7 @@ On the Windows Mobile device, the three points are nearly colinear, and the arc 
 
 The tangent arc is ideal for creating rounded corners, such as a rounded rectangle. Because `SKPath` already includes an `AddRoundedRect` method, the **Rounded Heptagon** page demonstrates how to use `ArcTo` for rounding the corners of a seven-sided polygon. (The code is generalized for any regular polygon.)
 
-The `PaintSurface` handler of the [`RoundedHeptagonPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/RoundedHeptagonPage.cs) class contains one `for` loop to calculate the coordinates of the seven vertices of the heptagon, and a second to calculate the midpoints of the seven sides from these vertices. These midpoints are then used to construct the path:
+The `PaintSurface` handler of the [`RoundedHeptagonPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RoundedHeptagonPage.cs) class contains one `for` loop to calculate the coordinates of the seven vertices of the heptagon, and a second to calculate the midpoints of the seven sides from these vertices. These midpoints are then used to construct the path:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -539,7 +539,7 @@ If the tilted ellipse is not large enough to fit between the two points, then it
 
 Although this approach to defining an arc sounds complex on first encounter, it is the only approach that allows defining an arc with a rotated ellipse, and it is often the easiest approach when you need to integrate arcs with other parts of the contour.
 
-The **Elliptical Arc** page allows you to interactively set the two points, and the size and rotation of the ellipse. The `EllipticalArcPage` class derives from `InteractivePage`, and the `PaintSurface` handler in the [**EllipticalArcPage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/EllipticalArcPage.xaml.cs) code-behind file draws the four arcs:
+The **Elliptical Arc** page allows you to interactively set the two points, and the size and rotation of the ellipse. The `EllipticalArcPage` class derives from `InteractivePage`, and the `PaintSurface` handler in the [**EllipticalArcPage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/EllipticalArcPage.xaml.cs) code-behind file draws the four arcs:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -609,7 +609,7 @@ The four tangent points are all that's necessary to draw an infinity sign center
 
 ![](arcs-images/infinitycoordinates.png "Two circles with tangent lines and coordinates")
 
-The `PaintSurface` handler in the [`ArcInfinityPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ArcInfinityPage.cs) class positions the infinity sign so that the (0, 0) point is positioned in the center of the page, and scales the path to the screen size:
+The `PaintSurface` handler in the [`ArcInfinityPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ArcInfinityPage.cs) class positions the infinity sign so that the (0, 0) point is positioned in the center of the page, and scales the path to the screen size:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

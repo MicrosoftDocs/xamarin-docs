@@ -35,7 +35,7 @@ x' = x•cos(α) – y•sin(α)
 
 y` = x•sin(α) + y•cos(α)
 
-The **Basic Rotate** page demonstrates the `RotateDegrees` method. The [`BasicRotate.xaml.cs`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/BasicRotatePage.xaml.cs) file displays some text with its baseline centered on the page and rotates it based on a `Slider` with a range of –360 to 360. Here's the relevant part of the `PaintSurface` handler:
+The **Basic Rotate** page demonstrates the `RotateDegrees` method. The [`BasicRotate.xaml.cs`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicRotatePage.xaml.cs) file displays some text with its baseline centered on the page and rotates it based on a `Slider` with a range of –360 to 360. Here's the relevant part of the `PaintSurface` handler:
 
 ```csharp
 using (SKPaint textPaint = new SKPaint
@@ -137,7 +137,7 @@ There are usually several ways to combine rotation and translation. The **Rotate
 
 [![](rotate-images/rotatedtext-small.png "Triple screenshot of the Rotated Text page")](rotate-images/rotatedtext-large.png#lightbox "Triple screenshot of the Rotated Text page")
 
-Here's the `PaintSurface` handler of the [`RotatedTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/RotatedTextPage.cs) class:
+Here's the `PaintSurface` handler of the [`RotatedTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/RotatedTextPage.cs) class:
 
 ```csharp
 static readonly string text = "    ROTATE";

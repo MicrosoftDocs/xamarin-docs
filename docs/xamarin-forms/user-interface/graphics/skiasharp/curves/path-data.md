@@ -143,7 +143,7 @@ The static [`SKPath.ParseSvgPathData`](https://developer.xamarin.com/api/member/
 
 The [`ToSvgPathData`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ToSvgPathData()/) method is handy for obtaining SVG path data from an existing `SKPath` object to transfer  to another program, or to store in a text-based file format such as XML. (The `ToSvgPathData` method is not demonstrated in sample code in this article.) Do *not* expect `ToSvgPathData` to return a string corresponding exactly to the method calls that created the path. In particular, you'll discover that arcs are converted to multiple `QuadTo` commands, and that's how they appear in the path data returned from `ToSvgPathData`.
 
-The **Path Data Hello** page spells out the word "HELLO" using SVG path data. Both the `SKPath` and `SKPaint` objects are defined as fields in the [`PathDataHelloPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) class:
+The **Path Data Hello** page spells out the word "HELLO" using SVG path data. Both the `SKPath` and `SKPaint` objects are defined as fields in the [`PathDataHelloPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) class:
 
 ```csharp
 public class PathDataHelloPage : ContentPage
@@ -214,7 +214,7 @@ The path fills the canvas, which looks more reasonable when viewed in landscape 
 
 [![](path-data-images/pathdatahello-small.png "Triple screenshot of the Path Data Hello page")](path-data-images/pathdatahello-large.png#lightbox "Triple screenshot of the Path Data Hello page")
 
-The **Path Data Cat** page is similar. The path and paint objects are both defined as fields in the [`PathDataCatPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) class:
+The **Path Data Cat** page is similar. The path and paint objects are both defined as fields in the [`PathDataCatPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) class:
 
 ```csharp
 public class PathDataCatPage : ContentPage
@@ -287,7 +287,7 @@ Here's the program running on all three platforms:
 
 Normally, when an `SKPath` object is defined as a field, the contours of the path must be defined in the constructor or another method. When using SVG path data, however, you've seen that the path can be specified entirely in the field definition.
 
-The earlier **Ugly Analog Clock** sample in the [**The Rotate Transform**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md) article displayed the hands of the clock as simple lines. The **Pretty Analog Clock** program below replaces those lines with `SKPath` objects defined as fields in the [`PrettyAnalogClockPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs) class along with `SKPaint` objects:
+The earlier **Ugly Analog Clock** sample in the [**The Rotate Transform**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md) article displayed the hands of the clock as simple lines. The **Pretty Analog Clock** program below replaces those lines with `SKPath` objects defined as fields in the [`PrettyAnalogClockPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs) class along with `SKPaint` objects:
 
 ```csharp
 public class PrettyAnalogClockPage : ContentPage

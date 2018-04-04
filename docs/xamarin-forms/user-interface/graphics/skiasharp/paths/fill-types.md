@@ -28,7 +28,7 @@ Both the winding and even-odd algorithms determine if any enclosed area is fille
 
 With many routine paths, the winding algorithm often fills all the enclosed areas of a path. The even-odd algorithm generally produces more interesting results.
 
-The classic example is a five-pointed star, as demonstrated in the **Five-Pointed Star** page. The [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) file instantiates two `Picker` views to select the path fill type and whether the path is stroked or filled or both, and in what order:
+The classic example is a five-pointed star, as demonstrated in the **Five-Pointed Star** page. The [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) file instantiates two `Picker` views to select the path fill type and whether the path is stroked or filled or both, and in what order:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
