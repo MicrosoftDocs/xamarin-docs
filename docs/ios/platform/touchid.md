@@ -119,48 +119,47 @@ In the previous sections, we looked at the theory behind access and authenticati
 
 So let’s look at adding some Touch ID Authentication to our application. In this walkthrough we are going to use the [Storyboard Table](https://developer.xamarin.com/samples/StoryboardTable/) sample. We want to make sure that only the device owner can add something to this list, we don’t want to clutter it up by letting anyone add an item!
 
-1.	Download the sample and run it in Visual Studio for Mac.
-2.	Double Click on `MainStoryboard.Storyboard` to open the sample in the iOS Designer. With this sample, we want to add a new screen to our application, which will control the authentication. This will go before the current `MasterViewController`.
-3.	Drag a new **View Controller** from the **Toolbox** to the **Design Surface**. Set this as the **Root View Controller** by **Ctrl + Drag** from the **Navigation Controller**:
+1. Download the sample and run it in Visual Studio for Mac.
+2. Double Click on `MainStoryboard.Storyboard` to open the sample in the iOS Designer. With this sample, we want to add a new screen to our application, which will control the authentication. This will go before the current `MasterViewController`.
+3. Drag a new **View Controller** from the **Toolbox** to the **Design Surface**. Set this as the **Root View Controller** by **Ctrl + Drag** from the **Navigation Controller**:
 
 	[![](touchid-images/image4.png "Set the Root View Controller")](touchid-images/image4.png#lightbox)
 4.  Name the new View Controller `AuthenticationViewController`.
-5.	Next, drag a button and place it on the `AuthenticationViewController`. Call this `AuthenticateButton`, and give it the text `Add a Chore`.
-6.	Create an event on the `AuthenticateButton` called `AuthenticateMe`.
-7.	Create a manual segue from `AuthenticationViewController` by clicking the black bar at the bottom and **Ctrl + Drag** from the bar to the `MasterViewController` and choosing **push** (or **show** if using size classes):
+5. Next, drag a button and place it on the `AuthenticationViewController`. Call this `AuthenticateButton`, and give it the text `Add a Chore`.
+6. Create an event on the `AuthenticateButton` called `AuthenticateMe`.
+7. Create a manual segue from `AuthenticationViewController` by clicking the black bar at the bottom and **Ctrl + Drag** from the bar to the `MasterViewController` and choosing **push** (or **show** if using size classes):
 
 	[![](touchid-images/image5.png "Drag from the bar to the MasterViewController and choosing push or show")](touchid-images/image6.png#lightbox)
-8.	Click on the newly created segue and give it the identifier `AuthenticationSegue`, as illustrated below:
+8. Click on the newly created segue and give it the identifier `AuthenticationSegue`, as illustrated below:
 
 	[![](touchid-images/image7.png "Set the segue identifier to AuthenticationSegue")](touchid-images/image7.png#lightbox)
-9.	Add the following code to `AuthenticationViewController`:
+9. Add the following code to `AuthenticationViewController`:
 
-	```
-	partial void AuthenticateMe (UIButton sender)
-        {
-            var context = new LAContext();
-            NSError AuthError;
-            var myReason = new NSString("To add a new chore");
+    ```csharp
+    partial void AuthenticateMe (UIButton sender)
+    {
+        var context = new LAContext();
+        NSError AuthError;
+        var myReason = new NSString("To add a new chore");
 
-
-            if (context.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out AuthError)){
-                var replyHandler = new LAContextReplyHandler((success, error) => {
-
-                    this.InvokeOnMainThread(()=>{
-                        if(success){
-                            Console.WriteLine("You logged in!");
-                            PerformSegue("AuthenticationSegue", this);
-                        }
-                        else{
-                            //Show fallback mechanism here
-                        }
-                    });
-
+        if (context.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out AuthError)){
+            var replyHandler = new LAContextReplyHandler((success, error) => {
+                this.InvokeOnMainThread(()=> {
+                    if(success)
+                    {
+                        Console.WriteLine("You logged in!");
+                        PerformSegue("AuthenticationSegue", this);
+                    }
+                    else
+                    {
+                        // Show fallback mechanism here
+                    }
                 });
-                context.EvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, myReason, replyHandler);
-            };
-        }
-	```
+            });
+            context.EvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, myReason, replyHandler);
+        };
+    }
+    ```
 
 This is all the code you need to implement Touch ID authentication using Local Authentication. The highlighted lines in the image below show the use of Local Authentication:
 
