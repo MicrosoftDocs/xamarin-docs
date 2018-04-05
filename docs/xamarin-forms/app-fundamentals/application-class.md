@@ -18,7 +18,7 @@ in your projects default `App` subclass:
 * A persistent [`Properties` dictionary](#Properties_Dictionary) to store simple values across lifecycle state changes.
 * A static `Current` property that contains a reference to the current application object.
 
-If also exposes [Lifecycle methods](~/xamarin-forms/app-fundamentals/app-lifecycle.md) such
+It also exposes [Lifecycle methods](~/xamarin-forms/app-fundamentals/app-lifecycle.md) such
 as `OnStart`, `OnSleep`, and `OnResume` as well as modal navigation events.
 
 Depending on which template you chose, the `App` class could be defined in one
