@@ -116,7 +116,7 @@ public class AnimatedDottedTextPage : ContentPage
             textPaint.TextSize *= 0.95f * info.Width / textWidth;
 
             // Find the text bounds
-            SKRect textBounds;
+            SKRect textBounds = new SKRect();
             textPaint.MeasureText(text, ref textBounds);
 
             // Calculate offsets to center the text on the screen
@@ -732,7 +732,7 @@ public class HatchFillPage : ContentPage
     ...
     static SKMatrix Multiply(SKMatrix first, SKMatrix second)
     {
-        SKMatrix target;
+        SKMatrix target = SKMatrix.MakeIdentity();
         SKMatrix.Concat(ref target, first, second);
         return target;
     }
@@ -1050,7 +1050,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         textPaint.TextSize *= 0.95f * info.Width / textWidth;
 
         // Find the text bounds
-        SKRect textBounds;
+        SKRect textBounds = new SKRect();
         textPaint.MeasureText(text, ref textBounds);
 
         // Calculate offsets to center the text on the screen
@@ -1370,7 +1370,7 @@ public class DashedHatchLinesPage : ContentPage
     ...
     static SKMatrix Multiply(SKMatrix first, SKMatrix second)
     {
-        SKMatrix target;
+        SKMatrix target = SKMatrix.MakeIdentity();
         SKMatrix.Concat(ref target, first, second);
         return target;
     }

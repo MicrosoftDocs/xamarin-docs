@@ -152,7 +152,7 @@ public class TextPathEffectPage : ContentPage
         Content = canvasView;
 
         // Get the bounds of textPathPaint
-        SKRect textPathPaintBounds;
+        SKRect textPathPaintBounds = new SKRect();
         textPathPaint.MeasureText(character, ref textPathPaintBounds);
 
         // Create textPath centered around (0, 0)
@@ -187,7 +187,7 @@ public class TextPathEffectPage : ContentPage
         textPaint.TextSize = Math.Min(info.Width, info.Height);
 
         // Do not measure the text with PathEffect set!
-        SKRect textBounds;
+        SKRect textBounds = new SKRect();
         textPaint.MeasureText(character, ref textBounds);
 
         // Coordinates to center text on screen
@@ -231,7 +231,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         textPaint.TextSize = Math.Min(info.Width, info.Height);
 
         // Measure the text
-        SKRect textBounds;
+        SKRect textBounds = new SKRect();
         textPaint.MeasureText("@", ref textBounds);
 
         // Coordinates to center text on screen

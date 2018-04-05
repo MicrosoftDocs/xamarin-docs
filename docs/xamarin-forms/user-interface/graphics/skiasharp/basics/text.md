@@ -45,7 +45,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     textPaint.TextSize = 0.9f * info.Width * textPaint.TextSize / textWidth;
 
     // Find the text bounds
-    SKRect textBounds;
+    SKRect textBounds = new SKRect();
     textPaint.MeasureText(str, ref textBounds);
     ...
 }
@@ -146,7 +146,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     textPaint.TextSize = 0.95f * info.Width * textPaint.TextSize / textWidth;
 
     // Find the text bounds
-    SKRect textBounds;
+    SKRect textBounds = new SKRect();
     textPaint.MeasureText(text, ref textBounds);
 
     // Calculate offsets to center the text on the screen

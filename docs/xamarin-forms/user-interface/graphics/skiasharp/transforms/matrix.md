@@ -539,7 +539,7 @@ public partial class ShowAffineMatrixPage : ContentPage
             Persp2 = 1
         };
 
-        SKMatrix result;
+        SKMatrix result = SKMatrix.MakeIdentity();
         SKMatrix.Concat(ref result, A, S);
         return result;
     }
