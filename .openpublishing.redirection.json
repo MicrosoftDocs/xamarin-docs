@@ -23,6 +23,10 @@
       {
           "source_path": "docs/ios/troubleshooting/questions/downgrade-xcode.md",
           "redirect_url": "/xamarin/ios/troubleshooting/questions/previous-xcode"
+      },
+      {
+        "source_path": "docs/cross-platform/data-cloud/connected-services.md",
+        "redirect_url": "/visualstudio/mac/connected-services"
       }
     ]
   }
