@@ -286,17 +286,40 @@ namespace MapOverlay.UWP
                 nativeMap.MapElements.Add(polygon);
             }
         }
-        ...
+        // GenerateCircleCoordinates helper method (below)
     }
 }
 ```
 
 This method performs the following operations, provided that the custom renderer is attached to a new Xamarin.Forms element:
 
-- The circle position and radius are retrieved from the `CustomMap.Circle` property and passed to the `GenerateCircleCoordinates` method, which generates latitude and longitude coordinates for the circle perimeter.
+- The circle position and radius are retrieved from the `CustomMap.Circle` property and passed to the `GenerateCircleCoordinates` method, which generates latitude and longitude coordinates for the circle perimeter. The code for this helper method is shown below.
 - The circle perimeter coordinates are converted into a `List` of `BasicGeoposition` coordinates.
 - The circle is created by instantiating a `MapPolygon` object. The `MapPolygon` class is used to display a multi-point shape on the map by setting its `Path` property to a `Geopath` object that contains the shape coordinates.
 - The polygon is rendered on the map by adding it to the `MapControl.MapElements` collection.
+
+
+```
+List<Position> GenerateCircleCoordinates(Position position, double radius)
+{
+    double latitude = position.Latitude.ToRadians();
+    double longitude = position.Longitude.ToRadians();
+    double distance = radius / EarthRadiusInMeteres;
+    var positions = new List<Position>();
+
+    for (int angle = 0; angle <=360; angle++)
+    {
+        double angleInRadians = ((double)angle).ToRadians();
+        double latitudeInRadians = Math.Asin(Math.Sin(latitude) * Math.Cos(distance) + Math.Cos(latitude) * Math.Sin(distance) * Math.Cos(angleInRadians));
+        double longitudeInRadians = longitude + Math.Atan2(Math.Sin(angleInRadians) * Math.Sin(distance) * Math.Cos(latitude), Math.Cos(distance) - Math.Sin(latitude) * Math.Sin(latitudeInRadians));
+
+        var pos = new Position(latitudeInRadians.ToDegrees(), longitudeInRadians.ToDegrees());
+        positions.Add(pos);
+    }
+
+    return positions;
+}
+```
 
 ## Summary
 
