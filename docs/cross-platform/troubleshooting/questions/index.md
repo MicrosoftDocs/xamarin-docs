@@ -1,4 +1,3 @@
-
 ---
 title: "General Frequently Asked Questions"
 ms.topic: troubleshooting
@@ -10,10 +9,6 @@ ms.author: amburns
 ---
 
 # General Frequently Asked Questions
-
-## Visual Studio 2017 Release Candidate
-### [Can I use Visual Studio 2017 Release Candidate with Xamarin?](visualstudio-2017-rc.md)
-For a description of the current implications of using Xamarin with Visual Studio 2017 Release Candidate (RC) as well as for information on how to install Xamarin in Visual Studio2017 RC.
 
 ## Portable Class Libraries
 ### [How can I view what libraries are supported in a PCL?](pcl-support-libraries.md)

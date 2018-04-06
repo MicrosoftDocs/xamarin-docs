@@ -14,7 +14,7 @@ ms.date: 02/18/2018
 ## General Issues
 ### [Frequently Asked Questions](questions/index.md)
 
-Frequently Asked Questions about the Xamarin Platform.
+Frequently Asked Questions about the Xamarin Platform, and answers specific to Visual Studio.
 
 ### [Updating Component References to NuGet](component-nuget.md)
 

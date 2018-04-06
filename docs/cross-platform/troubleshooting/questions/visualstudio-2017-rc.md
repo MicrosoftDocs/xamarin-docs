@@ -1,4 +1,5 @@
 ---
+redirect_url: "/xamarin/cross-platform/troubleshooting/questions/"
 title: "Can I use Visual Studio 2017 Release Candidate with Xamarin?"
 ms.topic: troubleshooting
 ms.prod: xamarin
