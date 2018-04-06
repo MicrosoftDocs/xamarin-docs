@@ -118,17 +118,13 @@ Note that we have:
 - Changed the `ListView`'s `ItemsSource` to the grouped list
 
 ### Customizing Grouping
-Now that we've seen how to implement basic grouping in ListView, let's see how
-to customize the display of group headers.
+
+If grouping has been enabled in the list, the group header can also be customized.
 
 Similar to how the `ListView` has an `ItemTemplate` for defining how rows are
-displayed, `ListView` has a `GroupHeaderTemplate`. This is an example of the
-ListView from above, with a customized group header template:
+displayed, `ListView` has a `GroupHeaderTemplate`. 
 
-![](customizing-list-appearance-images/grouping-depth.png "ListView with Customized GroupHeaderTemplate")
-
-
-Here's how to accomplish that design in XAML:
+An example of customizing the group header in XAML is shown here:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
