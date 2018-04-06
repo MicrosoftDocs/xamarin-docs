@@ -818,7 +818,7 @@ Create the Phoneword application as follows:
 
     namespace Phoneword.Droid
     {
-        [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+        [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
         public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
         {
             internal static MainActivity Instance { get; private set; }
@@ -839,6 +839,9 @@ Create the Phoneword application as follows:
     ```
 
     Save the changes to **MainActivity.cs** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
+
+    > [!NOTE]
+    > The sample code uses `Theme="@style/MainTheme"` because it is based on an older template. You can verify the correct style name in **Phoneword/Droid/Resources/values/styles.xml** if you get a compiler error for the theme name.
 
 26. In the **Solution Pad**, expand the **Properties** folder and double-click the **AndroidManifest.xml** file:
 
