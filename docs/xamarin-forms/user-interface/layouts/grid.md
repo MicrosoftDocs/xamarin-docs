@@ -126,8 +126,8 @@ var bottomLeft = new Label { Text = "Bottom Left" };
 var bottomRight = new Label { Text = "Bottom Right" };
 
 grid.Children.Add(topLeft, 0, 0);
-grid.Children.Add(topRight, 0, 1);
-grid.Children.Add(bottomLeft, 1, 0);
+grid.Children.Add(topRight, 1, 0;
+grid.Children.Add(bottomLeft, 0, 1);
 grid.Children.Add(bottomRight, 1, 1);
 ```
 
