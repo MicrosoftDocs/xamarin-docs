@@ -396,6 +396,8 @@ Recent advances have seen each of the popular web browsers adopt technologies li
 
 WebView on Android by default is about as fast as the built-in browser.
 
+The [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) uses the Microsoft Edge rendering engine. Desktop and tablet devices should see the same performance as using the Edge browser itself.
+
 The `WebBrowser` control on Windows Phone 8 and Windows Phone 8.1 does not support the latest HTML5 features and can often have poor performance. Be aware of how sites will display in the Windows Phone's `WebView`. It is not sufficient to test in Internet Explorer.
 
 ## Permissions
