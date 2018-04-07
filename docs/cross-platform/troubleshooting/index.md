@@ -24,21 +24,8 @@ How to update existing Xamarin solutions to change Component references to NuGet
 
 Support options for Xamarin products.
 
-### [Legacy License Questions](legacy-licenses/index.md)
-
-Troubleshooting articles for Xamarin users with Legacy platform licenses. (MSDN license holders should refer to this [Licensing Options guide](~/cross-platform/get-started/requirements.md) instead.)
-
 ## Product-Specific Questions
 
 - [Android](~/android/troubleshooting/questions/index.md)
 - [iOS](~/ios/troubleshooting/questions/index.md)
 - [Xamarin.Forms](~/xamarin-forms/troubleshooting/questions/index.md)
-
-
-
-## Related Links
-
-- [Android FAQs](~/android/troubleshooting/questions/index.md)
-- [iOS FAQs](~/ios/troubleshooting/questions/index.md)
-- [Xamarin.Forms FAQs](~/xamarin-forms/troubleshooting/questions/index.md)
-- [Xamarin.UITest FAQs](https://developer.xamarin.com~/testcloud/uitest/questions/)

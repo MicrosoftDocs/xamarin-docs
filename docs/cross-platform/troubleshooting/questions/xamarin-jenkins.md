@@ -47,7 +47,3 @@ or
 > Error: The Starter Edition of Xamarin.iOS does not support building outside of Xamarin Studio 
 
 The most common cause of this scenario is the use of Jenkins by logging in with a user account not associated with your Xamarin license. The simplest way of resolving this, is to install Jenkins as an app directly via the user account. That process and some additional considerations are described here: [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)
-
-Another possibility is that your Xamarin license information is corrupted somehow, you can use the [Xamarin License Resync guide](~/cross-platform/troubleshooting/legacy-licenses/resync-licenses.md) to troubleshoot this scenario.
-
-

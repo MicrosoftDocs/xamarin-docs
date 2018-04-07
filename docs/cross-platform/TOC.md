@@ -105,10 +105,4 @@
 
 ### [Updating Component References to NuGet](troubleshooting/component-nuget.md)
 ### [Support Options](troubleshooting/support-options.md)
-### [Legacy License Questions](troubleshooting/legacy-licenses/index.md)
-#### [Xamarin Platform Team Management](troubleshooting/legacy-licenses/team-management.md)
-#### [How do I change my account's email address?](troubleshooting/legacy-licenses/change-email.md)
-#### [How do I manually resynchronize Xamarin licenses?](troubleshooting/legacy-licenses/resync-licenses.md)
-#### [Some specific licensing errors](troubleshooting/legacy-licenses/licensing-errors.md)
-#### [Why can't I log into Xamarin in Visual Studio or Visual Studio for Mac?](troubleshooting/legacy-licenses/login-troubleshooting.md)
 ## [Samples](samples/index.yml)

@@ -1,33 +1,56 @@
 {
-    "redirections": [
-      {
-          "source_path": "docs/cross-platform/getting-started/index.md",
-          "redirect_url": "/xamarin/xamarin-forms/get-started"
-      },
-      {
-          "source_path": "docs/mac/app-fundamentals/troubleshooting.md",
-          "redirect_url": "/xamarin/mac/troubleshooting/troubleshooting"
-      },
-      {
-          "source_path": "docs/graphics-games/cocossharp/first-game/index.md",
-          "redirect_url": "/xamarin/graphics-games/cocossharp"
-      },
-      {
-          "source_path": "docs/graphics-games/cocossharp/first-game/part1.md",
-          "redirect_url": "/xamarin/graphics-games/cocossharp/bouncing-game"
-      },
-      {
-          "source_path": "docs/graphics-games/cocossharp/first-game/part2.md",
-          "redirect_url": "/xamarin/graphics-games/cocossharp/bouncing-game"
-      },
-      {
-          "source_path": "docs/ios/troubleshooting/questions/downgrade-xcode.md",
-          "redirect_url": "/xamarin/ios/troubleshooting/questions/previous-xcode"
-      },
-      {
-        "source_path": "docs/cross-platform/data-cloud/connected-services.md",
-        "redirect_url": "/visualstudio/mac/connected-services"
-      }
-    ]
-  }
-  
+  "redirections": [
+    {
+      "source_path": "docs/cross-platform/getting-started/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/get-started"
+    },
+    {
+      "source_path": "docs/mac/app-fundamentals/troubleshooting.md",
+      "redirect_url": "/xamarin/mac/troubleshooting/troubleshooting"
+    },
+    {
+      "source_path": "docs/graphics-games/cocossharp/first-game/index.md",
+      "redirect_url": "/xamarin/graphics-games/cocossharp"
+    },
+    {
+      "source_path": "docs/graphics-games/cocossharp/first-game/part1.md",
+      "redirect_url": "/xamarin/graphics-games/cocossharp/bouncing-game"
+    },
+    {
+      "source_path": "docs/graphics-games/cocossharp/first-game/part2.md",
+      "redirect_url": "/xamarin/graphics-games/cocossharp/bouncing-game"
+    },
+    {
+      "source_path": "docs/ios/troubleshooting/questions/downgrade-xcode.md",
+      "redirect_url": "/xamarin/ios/troubleshooting/questions/previous-xcode"
+    },
+    {
+      "source_path": "docs/cross-platform/data-cloud/connected-services.md",
+      "redirect_url": "/visualstudio/mac/connected-services"
+    },
+    {
+      "source_path": "docs/cross-platform/troubleshooting/legacy-licenses/change-email.md",
+      "redirect_url": "/xamarin/cross-platform/troubleshooting"
+    },
+    {
+      "source_path": "docs/cross-platform/troubleshooting/legacy-licenses/index.md",
+      "redirect_url": "/xamarin/cross-platform/troubleshooting"
+    },
+    {
+      "source_path": "docs/cross-platform/troubleshooting/legacy-licenses/licensing-errors.md",
+      "redirect_url": "/xamarin/cross-platform/troubleshooting"
+    },
+    {
+      "source_path": "docs/cross-platform/troubleshooting/legacy-licenses/login-troubleshooting.md",
+      "redirect_url": "/xamarin/cross-platform/troubleshooting"
+    },
+    {
+      "source_path": "docs/cross-platform/troubleshooting/legacy-licenses/resync-licenses.md",
+      "redirect_url": "/xamarin/cross-platform/troubleshooting"
+    },
+    {
+      "source_path": "docs/cross-platform/troubleshooting/legacy-licenses/team-management.md",
+      "redirect_url": "/xamarin/cross-platform/troubleshooting"
+    }
+  ]
+}
