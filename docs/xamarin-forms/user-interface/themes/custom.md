@@ -80,7 +80,7 @@ by applying an [effect](~/xamarin-forms/app-fundamentals/effects/index.md). The 
 platform-specific code in the [iOS](#ios) and [Android](#android) projects (shown below.)
 
 ```csharp
-namemspace ThemesDemo
+namespace ThemesDemo
 {
   public static class ThemeEffects
   {
