@@ -49,7 +49,7 @@ methods to register with Objective-C and generates a map
 which is embedded into your binary.  Then, at startup, we
 register the map with the Objective-C runtime.
 
-### Categories
+### Categories
 
 Starting with Xamarin.iOS 8.10 it will be possible to
 create Objective-C categories using C# syntax.
