@@ -209,6 +209,7 @@
 ### [iOS](platform/ios/index.md)
 #### [Formatting](platform/ios/theme.md)
 ### [Mac](platform/mac.md)
+### [WPF](platform/wpf.md)
 ### [Native Forms](platform/native-forms.md)
 ### [Native Views](platform/native-views/index.md)
 #### [Native Views in XAML](platform/native-views/xaml.md)

@@ -33,6 +33,10 @@ Some iOS styling can be performed via **Info.plist** and the `UIAppearance` API.
 
 Xamarin.Forms now has preview support for macOS apps.
 
+## [WPF](wpf.md)
+
+Xamarin.Forms now has preview support for Windows Presentation Foundation (WPF) apps.
+
 ## [Native Forms](native-forms.md)
 
 Native Forms allow Xamarin.Forms [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derived pages to be consumed by native Xamarin.iOS, Xamarin.Android, and Universal Windows Platform (UWP) projects.
