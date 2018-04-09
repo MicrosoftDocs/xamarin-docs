@@ -6,7 +6,7 @@ ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 04/09/2018
 ---
 
 # Remote Notifications with Firebase Cloud Messaging
@@ -581,7 +581,7 @@ the following line to the top of the `OnCreate` method to verify that
 **google-services.json** was parsed correctly:
 
 ```csharp
-Log.Debug(TAG, "google app id: " + Resource.String.google_app_id);
+Log.Debug(TAG, "google app id: " + GetString(Resource.String.google_app_id));
 ```
 
 The `google_app_id` value logged to the output window should match the 
