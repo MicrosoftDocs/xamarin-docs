@@ -5,6 +5,7 @@ ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 04/09/2018
 ---
 
 # Limitations
@@ -136,6 +137,22 @@ But the entire Reflection API, including Type.GetType
 	("someClass"), listing methods, listing properties, fetching
 	attributes and values works just fine.
 
+### Using Delegates to call Native Functions
+
+To call a native function through a C# delegate, the delegate's declaration 
+must be decorated with one of the following attributes:
+
+- [UnmanagedFunctionPointerAttribute](https://developer.xamarin.com/api/type/System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute/) 
+  (preferred, since it is cross-platform and compatible with .NET Standard 
+   1.1+)
+- [MonoNativeFunctionWrapperAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoNativeFunctionWrapperAttribute)
+
+Failing to provide one of these attributes will result in a runtime
+error such as:
+
+```
+System.ExecutionEngineException: Attempting to JIT compile method '(wrapper managed-to-native) YourClass/YourDelegate:wrapper_aot_native(object,intptr,intptr)' while running in aot-only mode.
+```
  
  <a name="Reverse_Callbacks" />
 
