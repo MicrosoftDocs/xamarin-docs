@@ -51,6 +51,14 @@
     {
       "source_path": "docs/cross-platform/troubleshooting/legacy-licenses/team-management.md",
       "redirect_url": "/xamarin/cross-platform/troubleshooting"
+    },
+    {
+      "source_path": "docs/xamarin-forms/data-cloud/consuming/aws.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/consuming"
+    },
+    {
+      "source_path": "docs/xamarin-forms/data-cloud/authentication/aws.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/authentication"
     }
   ]
 }

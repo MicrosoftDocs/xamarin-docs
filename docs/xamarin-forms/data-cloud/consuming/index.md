@@ -1,6 +1,6 @@
 ---
 title: "Consuming Web Services"
-description: "This guide demonstrates how to communicate with different web services to provide create, read, update, and delete (CRUD) functionality to a Xamarin.Forms application. Topics covered include communicating with ASMX services, WCF services, REST services, Azure Mobile Apps, and Amazon Web Services."
+description: "This guide demonstrates how to communicate with different web services to provide create, read, update, and delete (CRUD) functionality to a Xamarin.Forms application. Topics covered include communicating with ASMX services, WCF services, REST services, and Azure Mobile Apps."
 ms.prod: xamarin
 ms.assetid: 8B360BDA-E4E3-4A3F-9004-0E35362F49F
 ms.technology: xamarin-forms
@@ -11,7 +11,7 @@ ms.date: 09/20/2016
 
 # Consuming Web Services
 
-_This guide demonstrates how to communicate with different web services to provide create, read, update, and delete (CRUD) functionality to a Xamarin.Forms application. Topics covered include communicating with ASMX services, WCF services, REST services, Azure Mobile Apps, and Amazon Web Services._
+_This guide demonstrates how to communicate with different web services to provide create, read, update, and delete (CRUD) functionality to a Xamarin.Forms application. Topics covered include communicating with ASMX services, WCF services, REST services, and Azure Mobile Apps.
 
 ## [Consuming an ASP.NET Web Service (ASMX)](~/xamarin-forms/data-cloud/consuming/asmx.md)
 
@@ -28,11 +28,6 @@ Representational State Transfer (REST) is an architectural style for building we
 ## [Consuming an Azure Mobile App](~/xamarin-forms/data-cloud/consuming/azure.md)
 
 Azure Mobile Apps allow you to develop apps with scalable backends hosted in Azure App Service, with support for mobile authentication, offline sync, and push notifications. This article, which is only applicable to Azure Mobile Apps that use a Node.js backend, explains how to query, insert, update, and delete data stored in a table in an Azure Mobile Apps instance.
-
-## [Consuming an Amazon SimpleDB Service](~/xamarin-forms/data-cloud/consuming/aws.md)
-
-Amazon SimpleDB is a web service that provides the ability to store and query data in Amazon's cloud. This article explains how to use the AWS SDK for .NET to query, create and replace, and delete data stored in a SimpleDB service.
-
 
 ## Related Links
 

@@ -33,11 +33,6 @@ Azure Active Directory B2C is a cloud identity management solution for consumer-
 
 Azure Active Directory B2C can be used to manage the authentication workflow for Azure Mobile Apps. With this approach, the identity management experience is fully defined in the cloud, and can be modified without changing your mobile application code. This article demonstrates how to use Azure Active Directory B2C to provide authentication and authorization to an Azure Mobile Apps instance with Xamarin.Forms.
 
-## [Authenticating Users with an Amazon SimpleDB Service](aws.md)
-
-Amazon SimpleDB does not offer its own resource-based permissions system. Instead, authentication against an identity provider can be used to ensure that users only have access to their own data in the SimpleDB domain. This article explains how to restrict users' access to their own SimpleDB data.
-
-
 ## Related Links
 
 - [Introduction to Web Services](~/cross-platform/data-cloud/web-services/index.md)

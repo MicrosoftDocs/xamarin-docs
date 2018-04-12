@@ -21,11 +21,11 @@ This article provides a walkthrough of the Xamarin.Forms sample application that
 
 ## [Consuming Web Services](~/xamarin-forms/data-cloud/consuming/index.md)
 
-This guide demonstrates how to communicate with different web services to provide create, read, update, and delete (CRUD) functionality to a Xamarin.Forms application. Topics covered include communicating with [ASMX services](consuming/asmx.md), [WCF services](consuming/wcf.md), [REST services](consuming/rest.md), [Azure Mobile Apps](consuming/azure.md), and [Amazon Web Services](consuming/aws.md).
+This guide demonstrates how to communicate with different web services to provide create, read, update, and delete (CRUD) functionality to a Xamarin.Forms application. Topics covered include communicating with [ASMX services](consuming/asmx.md), [WCF services](consuming/wcf.md), [REST services](consuming/rest.md), and [Azure Mobile Apps](consuming/azure.md).
 
 ## [Authenticating Access to Web Services](~/xamarin-forms/data-cloud/authentication/index.md)
 
-This guide explains how to integrate authentication services into a Xamarin.Forms application to enable users to share a backend while only having access to their own data. Topics covered include [using basic authentication with a REST service](authentication/rest.md), [using the Xamarin.Auth component to authenticate against OAuth identity providers](authentication/oauth.md), and using the inbuilt authentication mechanisms offered by [Azure Mobile Apps](authentication/azure.md), and [Amazon Web Services](authentication/aws.md).
+This guide explains how to integrate authentication services into a Xamarin.Forms application to enable users to share a backend while only having access to their own data. Topics covered include [using basic authentication with a REST service](authentication/rest.md), [using the Xamarin.Auth component to authenticate against OAuth identity providers](authentication/oauth.md), and using the inbuilt authentication mechanisms offered by [Azure Mobile Apps](authentication/azure.md).
 
 ## [Synchronizing Data with Web Services](sync/index.md)
 

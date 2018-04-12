@@ -84,7 +84,7 @@ Web service operations are accessed through the `TodoItemManager` class, and an 
 
 In addition, some sample applications contain additional methods in the `TodoItemManager` class, which are used to manage the user authentication process.
 
-Rather than invoke the web service operations directly, the `TodoItemManager` methods invoke methods on a dependent class that is injected into the `TodoItemManager` constructor. For example, one sample application injects the `SimpleDBStorage` class into the `TodoItemManager` constructor to provide the implementation that invokes operations against Amazon's SimpleDB service.
+Rather than invoke the web service operations directly, the `TodoItemManager` methods invoke methods on a dependent class that is injected into the `TodoItemManager` constructor. For example, one sample application injects the `RestService` class into the `TodoItemManager` constructor to provide the implementation that uses REST APIs to access data.
 
 ### Translating Text to Speech
 
@@ -111,4 +111,3 @@ This topic provided a walkthrough of the Xamarin.Forms sample application that's
 - [WCF version (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF)
 - [REST version (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
 - [Azure version (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzure)
-- [Amazon Web Services version (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAWS)
