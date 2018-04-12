@@ -34,6 +34,10 @@ To implement the new features of the Document Picker, the following changes have
 -  An iCloud folder has been added in the Mac OS Finder.
 -  iOS devices can access the contents of the Mac OS iCloud folder.
 
+> [!IMPORTANT]
+> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
+> to help developers properly handle the European Union's General Data 
+> Protection Regulation (GDPR).
 
 ## What is a Document?
 

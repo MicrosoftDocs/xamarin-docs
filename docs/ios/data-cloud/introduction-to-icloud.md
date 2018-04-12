@@ -33,6 +33,11 @@ different files directly in the file system.
 This document discusses the first two types - Key-Value pairs and
 UIDocument subclasses - and how to use those features in Xamarin.iOS.
 
+> [!IMPORTANT]
+> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
+> to help developers properly handle the European Union's General Data 
+> Protection Regulation (GDPR).
+
 ## Requirements
 
 - The latest stable version of Xamarin.iOS

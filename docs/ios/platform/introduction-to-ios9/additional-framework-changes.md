@@ -61,6 +61,11 @@ For more information, please see the following documents:
 - [CloudKit Web Services Reference](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015240) - Apple's reference that describes the HTTP interface to CloudKit.
 - [CloudKit Catalog: An Introduction to CloudKit (Cocoa and JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) - Apple's sample app using CloudKit and CloudKit JS.
 
+> [!IMPORTANT]
+> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
+> to help developers properly handle the European Union's General Data 
+> Protection Regulation (GDPR).
+
 ## Foundation Framework Additions
 
 Apple included the following changes to the Foundation framework in iOS 9:

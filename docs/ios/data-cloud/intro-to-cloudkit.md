@@ -19,6 +19,11 @@ of anonymity by allowing access to applications with their iCloud IDs without sh
 
 Developers can focus on their client-side applications and let iCloud eliminate the need to write server-side application logic. CloudKit provides authentication, private and public databases, and structured data and asset storage services.
 
+> [!IMPORTANT]
+> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
+> to help developers properly handle the European Union's General Data 
+> Protection Regulation (GDPR).
+
 ## Requirements
 
 The following is required to complete the steps presented in this article:

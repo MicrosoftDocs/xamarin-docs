@@ -52,6 +52,11 @@ As a result, your Xamarin.tvOS app must store any user data in an iCloud Data St
 - **iCloud Key-Value Storage (KVS)** - For small pieces of information (less than 1MB) that your app might require (like user preferences), you can use iCloud KVS Storage. iCloud KVS data is automatically synced to the cloud and all of the user's devices running the same app. For more information please see the [Key-Value Storage](~/ios/data-cloud/introduction-to-icloud.md) section of our [Introduction to iCloud](~/ios/data-cloud/introduction-to-icloud.md) document or Apple's [Designing for Key-Value Data in iCloud](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/iCloudDesignGuide/Chapters/DesigningForKey-ValueDataIniCloud.html#//apple_ref/doc/uid/TP40012094-CH7) documentation.
 - **CloudKit** - For the storage of larger pieces of information (greater than 1MB), use Apple's CloudKit Framework. Unlike iCloud KVS Storage, CloudKit data can be shared amongst all the users of your app (as well as being private to a single user). Form more information, please see our [Introduction to CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) documentation or Apple's [CloudKit Quick Start](https://developer.apple.com/library/prerelease/tvos/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987).
 
+> [!IMPORTANT]
+> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
+> to help developers properly handle the European Union's General Data 
+> Protection Regulation (GDPR).
+
 <a name="On-Demand-Resources" />
 
 ### On-Demand Resources

@@ -17,14 +17,10 @@ iCloud provides iOS users with a convenient and simple way to store their conten
 
 Adding the iCloud capability to an application is slightly more difficult than other App Services because of _containers_. Containers are used in iCloud to store information for an app, and allow all information contained in a single iCloud account to be segregated – like the sandboxing on a user’s iOS device. For more information on containers, refer to the [Introduction to CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) guide.
 
-<!--# Xcode
-
-The steps in section [Adding App Services ](~/ios/deploy-test/provisioning/capabilities/index.md) above can be used to toggle the required iCloud capability. Depending on which means of storage is being used in your app, you may need to do additional setup. The image below shows the iCloud capabilities pane:
-
- ![iCloud Capability section](icloud-capabilities-images/image21.png)
-
-First select the required service. If iCloud Documents or CloudKit have been selected, you must select a container. Selecting the default container will create a new container that is unique to the app. Alternatively, if you have created a container either via Xcode or the developer portal, select it here.
--->
+> [!IMPORTANT]
+> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
+> to help developers properly handle the European Union's General Data 
+> Protection Regulation (GDPR).
 
 <a name="icloud-developer-center" />
 

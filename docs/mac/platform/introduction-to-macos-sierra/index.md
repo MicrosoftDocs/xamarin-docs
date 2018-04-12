@@ -61,6 +61,11 @@ CloudKit provides a complete UI for sending and accepting shared record invitati
 
 For more information, please see Apple's [CloudKit Framework Reference](https://developer.apple.com/reference/clockkit) and [CloudKit JS Framework Reference](https://developer.apple.com/reference/cloudkitjs).
 
+> [!IMPORTANT]
+> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
+> to help developers properly handle the European Union's General Data 
+> Protection Regulation (GDPR).
+
 <a name="Safari-App-Extensions-Support" />
 
 ### Safari App Extensions Support

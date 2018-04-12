@@ -125,6 +125,11 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
     - The `$(CFBundleIdentifier)` string begins with `iCloud` and is set when the iCloud container is crated as per the steps in the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) guide.
     - The $`(TeamIdentifierPrefix)` and `$(CFBundleIdentifier)` placeholders can be used and will be substituted for the correct values at build time.
 
+> [!IMPORTANT]
+> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
+> to help developers properly handle the European Union's General Data 
+> Protection Regulation (GDPR).
+
 ### App Groups
 
 - **Description**: An App Group allows different applications (or an application and its extensions) to access a shared file storage location.
