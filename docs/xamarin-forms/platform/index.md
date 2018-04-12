@@ -29,6 +29,10 @@ How to use the `Device` class to create platform-specific behavior in shared cod
 
 Some iOS styling can be performed via **Info.plist** and the `UIAppearance` API. This guide includes examples of how to include iOS 9 features into the iOS app of a Xamarin.Forms solution, including Core Spotlight search.
 
+## [GTK](gtk.md)
+
+Xamarin.Forms now has preview support for GTK# apps.
+
 ## [Mac](mac.md)
 
 Xamarin.Forms now has preview support for macOS apps.

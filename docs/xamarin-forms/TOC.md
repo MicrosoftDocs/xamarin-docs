@@ -208,6 +208,7 @@
 ### [Device Class](platform/device.md)
 ### [iOS](platform/ios/index.md)
 #### [Formatting](platform/ios/theme.md)
+### [GTK#](platform/gtk.md)
 ### [Mac](platform/mac.md)
 ### [WPF](platform/wpf.md)
 ### [Native Forms](platform/native-forms.md)
