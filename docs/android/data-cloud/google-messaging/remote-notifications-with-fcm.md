@@ -6,7 +6,7 @@ ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/09/2018
+ms.date: 04/12/2018
 ---
 
 # Remote Notifications with Firebase Cloud Messaging
@@ -947,6 +947,40 @@ When you open the notification, you should see the last message that
 was sent from the Firebase Console Notifications GUI: 
 
 [![Foreground notification shown with foreground icon](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png#lightbox)
+
+
+## Disconnecting from FCM
+
+To unsubscribe from a topic, call the
+[UnsubscribeFromTopic](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessaging.html#unsubscribeFromTopic%28java.lang.String%29)
+method on the
+[FirebaseMessaging](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessaging)
+class. For example, to unsubscribe from the _news_ topic subscribed to
+earlier, an **Unsubscribe** button could be added to the layout with
+the following handler code:
+
+```csharp
+var unSubscribeButton = FindViewById<Button>(Resource.Id.unsubscribeButton);
+unSubscribeButton.Click += delegate {
+    FirebaseMessaging.Instance.UnsubscribeFromTopic("news");
+    Log.Debug(TAG, "Unsubscribed from remote notifications");
+};
+```
+
+To unregister the device from FCM altogether, delete the instance ID by
+calling the
+[DeleteInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29)
+method on the
+[FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId)
+class. For example:
+
+```csharp
+FirebaseInstanceId.Instance.DeleteInstanceId();
+```
+
+This method call deletes the the instance ID and the data associated
+with it. As a result, the periodic sending of FCM data to the device is
+halted.
 
  
 ## Troubleshooting
