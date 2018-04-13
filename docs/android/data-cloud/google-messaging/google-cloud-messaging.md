@@ -6,7 +6,7 @@ ms.assetid: DF8EF401-F63D-4BA0-B2C6-B22DF8FD60CB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
+ms.date: 04/12/2018
 ---
 
 # Google Cloud Messaging
@@ -20,6 +20,10 @@ Messaging routes messages between your app and an app server, and it
 provides a step-by-step procedure for acquiring credentials so that
 your app can use GCM services.
 
+> [!NOTE]
+> GCM has been superceded by [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) (FCM).
+> GCM server and client APIs [have been deprecated](https://firebase.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html)
+> and will no longer be available as soon as April 11th, 2019.
 
 ## Overview
 
