@@ -102,8 +102,9 @@ After following those instructions, paste the API key in the
 **Properties/AndroidManifest.xml** file (view source and find/update the following element):
 
 ```xml
-<meta-data android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AbCdEfGhIjKlMnOpQrStUvWValueGoesHere" />
+<meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="YOUR_API_KEY"/>
 ```
 
 Without a valid API key the maps control will display as a grey box on Android.
