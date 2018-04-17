@@ -44,7 +44,7 @@ This interface is implemented in all the platforms using platform-specific code.
 
 ## iOS Implementation
 
-The iOS implementation of the `IPicturePicker` interface uses the [`UIImagePickerController`](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) as described in the [**Choose a Photo from the Gallery**](https://developer.xamarin.com/recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery/) recipe and [sample code](https://github.com/xamarin/recipes/tree/master/ios/media/video_and_photos/choose_a_photo_from_the_gallery).
+The iOS implementation of the `IPicturePicker` interface uses the [`UIImagePickerController`](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) as described in the [**Choose a Photo from the Gallery**](https://developer.xamarin.com/recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery/) recipe and [sample code](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery).
 
 The iOS implementation is contained in the [`PicturePickerImplementation`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/iOS/PicturePickerImplementation.cs) class in the iOS project of the sample code. To make this class visible to the `DependencyService` manager, the class must be identified with an [`assembly`] attribute of type `Dependency`, and the class must be public and explicitly implement the `IPicturePicker` interface:
 
@@ -142,7 +142,7 @@ An iOS application requires permission from the user to access the phone's photo
 
 ## Android Implementation
 
-The Android implementation uses the technique described in the [**Select an Image**](https://developer.xamarin.com/recipes/android/other_ux/pick_image/) recipe and the [sample code](https://github.com/xamarin/recipes/tree/master/android/other_ux/pick_image). However, the method that is called when the user has selected an image from the picture library is an `OnActivityResult` override in a class that derives from `Activity`. For this reason, the normal [`MainActivity`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/MainActivity.cs) class in the Android project has been supplemented with a field, a property, and an override of the `OnActivityResult` method:
+The Android implementation uses the technique described in the [**Select an Image**](https://developer.xamarin.com/recipes/android/other_ux/pick_image/) recipe and the [sample code](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image). However, the method that is called when the user has selected an image from the picture library is an `OnActivityResult` override in a class that derives from `Activity`. For this reason, the normal [`MainActivity`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/MainActivity.cs) class in the Android project has been supplemented with a field, a property, and an override of the `OnActivityResult` method:
 
 ```csharp
 public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
