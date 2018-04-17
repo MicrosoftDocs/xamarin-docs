@@ -8,7 +8,6 @@ author: topgenorth
 ms.author: toopge
 ms.date: 11/22/2017
 ---
-
 # Xamarin Live Player Setup
 
 Xamarin Live Player lets you make live edits to your app and have those changes reflected live on the device. Your code runs inside the Xamarin Live Player app – no need to set up emulators or to use cables to deploy! This article describes how to set up Xamarin Live Player.
@@ -126,4 +125,4 @@ If you experience any issues or can not connect, see [limitations and troublesho
 
 - [Limitations](~/tools/live-player/limitations.md)
 - [Troubleshooting](~/tools/live-player/troubleshooting.md)
-- [Xamarin Live Player Samples](~/tools/livehttps://developer.xamarin.com/samples.md)
+- [Xamarin Live Player Samples](~/tools/live-player/samples.md)

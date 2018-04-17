@@ -9,7 +9,6 @@ author: topgenorth
 ms.author: toopge
 ms.date: 12/21/2017
 ---
-
 # XAML Live Previewing
 
 One of the benefits of the Xamarin Live Player is the ability to live preview XAML pages, make changes to the code in Visual Studio, and see the changes appear instantly on your device. The live preview can be made either on your iOS or Android device, or on a simulator or emulator. This guide demonstrates how to use the live preview feature to view individual XAML screens.
@@ -146,4 +145,4 @@ There is currently no support for using live XAML previewing on the remoted iOS 
 
 - [Xamarin Live Player Overview](https://xamarin.com/live)
 - [Blog post](https://blog.xamarin.com/live-player/)
-- [Xamarin Live Player Samples](~/tools/livehttps://developer.xamarin.com/samples.md)
+- [Xamarin Live Player Samples](~/tools/live-player/samples.md)
