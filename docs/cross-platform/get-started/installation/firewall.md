@@ -39,7 +39,7 @@ The following addresses will need to be added to access the Xamarin Component St
 
 -  components.xamarin.com (to use Xamarin Components Store)
 -  xampubdl.blob.core.windows.net (hosts Components Store downloads)
--  www.nuget.org (to access NuGet)
+-  www\.nuget.org (to access NuGet)
 -  az320820.vo.msecnd.net (NuGet downloads)
 -  dl-ssl.google.com (Google components)
 
