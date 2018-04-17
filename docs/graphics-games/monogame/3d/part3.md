@@ -8,7 +8,6 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
 ---
-
 # 3D Coordinates in MonoGame
 
 _Understanding the 3D coordinate system is an important step in developing 3D games. MonoGame provides a number of classes for positioning, orienting, and scaling objects in 3D space._
@@ -19,26 +18,26 @@ The concepts presented originate from linear algebra, but we’ll take a practic
 
 We’ll be covering the following topics:
 
- - Creating a Project
- - Creating a Robot Entity
- - Moving the Robot Entity
- - Matrix Multiplication
- - Creating the Camera Entity
- - Moving the Camera with Input
+- Creating a Project
+- Creating a Robot Entity
+- Moving the Robot Entity
+- Matrix Multiplication
+- Creating the Camera Entity
+- Moving the Camera with Input
 
 Once finished, we’ll have a project with a robot moving in a circle and a camera which can be controlled by touch input:
 
 ![](part3-images/image1.gif "Once finished, the app will include a project with a robot moving in a circle and a camera which can be controlled by touch input")
 
 
-# Creating a Project
+## Creating a Project
 
 This walkthrough focuses on moving objects in 3D space. We’ll begin with the project for rendering models and vertex arrays [which can be found here](https://developer.xamarin.com/samples/mobile/ModelsAndVertsMG/). Once downloaded, unzip and open the project to make sure it runs and we should see the following:
 
 ![](part3-images/image2.png "Once downloaded, unzip and open the project to make sure it runs and this view should be displayed")
 
 
-# Creating a Robot Entity
+## Creating a Robot Entity
 
 Before we begin moving our robot around, we will create a `Robot` class to contain logic for drawing and movement. Game developers refer to this encapsulation of logic and data as an *entity*.
 
@@ -47,7 +46,6 @@ Add a new empty class file to the **MonoGame3D** Portable Class Library (not the
 ![](part3-images/image3.png "Name it Robot and click New")
 
 Modify the `Robot` class as follows:
-
 
 ```csharp
 using System;
@@ -84,7 +82,7 @@ namespace MonoGame3D
 
                     effect.View = Matrix.CreateLookAt (
                         cameraPosition, cameraLookAtVector, cameraUpVector);
-                        
+
                     float fieldOfView = Microsoft.Xna.Framework.MathHelper.PiOver4;
                     float nearClipPlane = 1;
                     float farClipPlane = 200;
@@ -105,7 +103,6 @@ namespace MonoGame3D
 ```
 
 The `Robot` code is essentially the same code in `Game1` for drawing a `Model`. For a review on `Model` loading and drawing, see [this guide on working with Models](~/graphics-games/monogame/3d/part1.md). We can now remove all of the `Model` loading and rendering code from `Game1`, and replace it with a `Robot` instance:
-
 
 ```csharp
 using Microsoft.Xna.Framework;
@@ -131,7 +128,7 @@ namespace MonoGame3D
         {
             graphics = new GraphicsDeviceManager(this);
             graphics.IsFullScreen = true;
-                        
+
             Content.RootDirectory = "Content";
         }
 
@@ -222,7 +219,7 @@ namespace MonoGame3D
                     2);
             }
         }
-    }                                          
+    }
 }
 ```
 
@@ -230,15 +227,13 @@ If we run the code now we will have a scene with only one robot which is drawn m
 
 ![](part3-images/image4.png "If the code is run now, the app will display a scene with only one robot which is drawn mostly under the floor")
 
-
-# Moving the Robot
+## Moving the Robot
 
 Now that we have a `Robot` class, we can add movement logic to the robot. In this case, we’ll simply make the robot move in a circle according to the game time. This is a somewhat impractical implementation for a real game since a character may typically respond to input or artificial intelligence, but it provides an environment for us to explore 3D positioning and rotation.
 
 The only information we’ll need from outside of the `Robot` class is the current game time. We’ll add an `Update` method which will take a `GameTime` parameter. This `GameTime` parameter will be used to increment an angle variable that we’ll use to determine the final position for the robot.
 
 First, we’ll add the angle field to the `Robot` class under the `model` field:
-
 
 ```csharp
 public class Robot
@@ -247,11 +242,10 @@ public class Robot
 
     // new code:
     float angle;
-    ... 
+    ...
 ```
 
  Now we can increment this value in an `Update` function:
-
 
 ```csharp
 public void Update(GameTime gameTime)
@@ -263,17 +257,15 @@ public void Update(GameTime gameTime)
 
 We need to make sure that the `Update` method is called from `Game1.Update`:
 
-
 ```csharp
 protected override void Update(GameTime gameTime)
 {
     robot.Update (gameTime);
     base.Update(gameTime);
-} 
+}
 ```
 
 Of course, at this point the angle field does nothing – we need to write code to use it. We’ll modify the `Draw` method so that we can calculate the world `Matrix` in a dedicated method: 
-
 
 ```csharp
 public void Draw(Vector3 cameraPosition, float aspectRatio)
@@ -292,7 +284,7 @@ public void Draw(Vector3 cameraPosition, float aspectRatio)
 
             effect.View = Matrix.CreateLookAt (
                 cameraPosition, cameraLookAtVector, cameraUpVector);
-                
+
             float fieldOfView = Microsoft.Xna.Framework.MathHelper.PiOver4;
             float nearClipPlane = 1;
             float farClipPlane = 200;
@@ -303,18 +295,17 @@ public void Draw(Vector3 cameraPosition, float aspectRatio)
 
         mesh.Draw ();
     }
-} 
+}
 ```
 
 Next, we’ll implement the `GetWorldMatrix` method in the `Robot` class:
-
 
 ```csharp
 Matrix GetWorldMatrix()
 {
     const float circleRadius = 8;
     const float heightOffGround = 3;
-    
+
     // this matrix moves the model "out" from the origin
     Matrix translationMatrix = Matrix.CreateTranslation (
         circleRadius, 0, heightOffGround);
@@ -326,15 +317,14 @@ Matrix GetWorldMatrix()
     Matrix combined = translationMatrix * rotationMatrix;
 
     return combined;
-} 
+}
 ```
 
 The result of running this code results in the robot moving in a circle:
 
 ![](part3-images/image5.gif "Running this code results in the robot moving in a circle")
 
-
-# Matrix Multiplication
+## Matrix Multiplication
 
 The code above rotates the robot by creating a `Matrix` in the `GetWorldMatrix` method. The `Matrix` struct contains 16 float values which can be used to translate (set position), rotate, and scale (set size). When we assign the `effect.World` property, we are telling the underlying rendering system how to position, size, and orient whatever we happen to be drawing (a `Model` or geometry from vertices). 
 
@@ -344,9 +334,9 @@ Fortunately, the `Matrix` struct includes a number of methods which simplify the
 
 The second matrix that we create is a rotation matrix using the `CreateRotationZ` matrix. This is one of three methods which can be used to create rotation:
 
- - `CreateRotationX`
- - `CreateRoationY`
- - `CreateRotationZ`
+- `CreateRotationX`
+- `CreateRoationY`
+- `CreateRotationZ`
 
 Each method creates a rotation matrix by rotating about a given axis. In our case, we are rotating about the Z axis, which points "up". The following can help visualize how axis-based rotation works:
 
@@ -355,7 +345,6 @@ Each method creates a rotation matrix by rotating about a given axis. In our cas
 We are also using the `CreateRotationZ` method with the angle field, which increments over time due to our `Update` method being called. The result is that the `CreateRotationZ` method causes our robot to orbit around the origin as time passes.
 
 The final line of code combines the two matrices into one:
-
 
 ```csharp
 Matrix combined = translationMatrix * rotationMatrix;
@@ -366,7 +355,6 @@ This is referred to as matrix multiplication, which works slightly different tha
 ![](part3-images/image8.png "A visualization pf the way that the above line affects the position and rotation")
 
 To help understand how the order of matrix multiplication can impact the outcome, consider the following, where the matrix multiplication is inverted:
-
 
 ```csharp
 Matrix combined = rotationMatrix * translationMatrix;
@@ -380,13 +368,11 @@ If we run the code with the inverted multiplication, we’ll notice that since t
 
 ![](part3-images/image10.gif "The model rotates in place")
 
-
-# Creating the Camera Entity
+## Creating the Camera Entity
 
 The `Camera` entity will contain all of the logic necessary to perform input-based movement and to provide properties for assigning properties on the `BasicEffect` class.
 
 First we’ll implement a static camera (no input-based movement) and integrate it into our existing project. Add a new class to the **MonoGame3D** Portable Class Library (the same project with `Robot.cs`) and name it **Camera**. Replace the contents of the file with the following code:
-
 
 ```csharp
 using System;
@@ -423,7 +409,7 @@ namespace MonoGame3D
                 float nearClipPlane = 1;
                 float farClipPlane = 200;
                 float aspectRatio = graphicsDevice.Viewport.Width / (float)graphicsDevice.Viewport.Height;
-                
+
                 return Matrix.CreatePerspectiveFieldOfView(
                     fieldOfView, aspectRatio, nearClipPlane, farClipPlane);
             }
@@ -444,8 +430,7 @@ namespace MonoGame3D
 
 The code above is very similar to the code from `Game1` and `Robot` which assign the matrices on `BasicEffect`. 
 
-Now we can integrate the new `Camera` class into our existing projects. First, we’ll modify the `Robot` class to take a `Camera` instance in its` Draw `method, which will eliminate a lot of duplicate code. Replace the `Robot.Draw` method with the following:
-
+Now we can integrate the new `Camera` class into our existing projects. First, we’ll modify the `Robot` class to take a `Camera` instance in its `Draw` method, which will eliminate a lot of duplicate code. Replace the `Robot.Draw` method with the following:
 
 ```csharp
 public void Draw(Camera camera)
@@ -464,11 +449,10 @@ public void Draw(Camera camera)
 
         mesh.Draw ();
     }
-} 
+}
 ```
 
 Next ,modify the `Game1.cs` file:
-
 
 ```csharp
 using Microsoft.Xna.Framework;
@@ -495,7 +479,7 @@ namespace MonoGame3D
         {
             graphics = new GraphicsDeviceManager(this);
             graphics.IsFullScreen = true;
-                        
+
             Content.RootDirectory = "Content";
         }
 
@@ -581,35 +565,32 @@ namespace MonoGame3D
             }
         }
     }
-} 
+}
 ```
 
 The modifications to the `Game1` from the previous version (which are identified with `// New camera code` ) are:
 
- - `Camera` field in `Game1`
- - `Camera` instantiation in `Game1.Initialize`
- - `Camera.Update` call in `Game1.Update`
- - `Robot.Draw` now takes a `Camera` parameter
- - `Game1.Draw` now uses `Camera.ViewMatrix` and `Camera.ProjectionMatrix`
+- `Camera` field in `Game1`
+- `Camera` instantiation in `Game1.Initialize`
+- `Camera.Update` call in `Game1.Update`
+- `Robot.Draw` now takes a `Camera` parameter
+- `Game1.Draw` now uses `Camera.ViewMatrix` and `Camera.ProjectionMatrix`
 
-
-# Moving the Camera with Input
+## Moving the Camera with Input
 
 So far, we’ve added a `Camera` entity but haven’t done anything with it to change runtime behavior. We will add behavior which allows the user to:
 
- - Touch the left side of the screen to turn the camera toward the left
- - Touch the right side of the screen to turn the camera to the right
- - Touch the center of the screen to move the camera forward
+- Touch the left side of the screen to turn the camera toward the left
+- Touch the right side of the screen to turn the camera to the right
+- Touch the center of the screen to move the camera forward
 
-
-## Making lookAt Relative
+### Making lookAt Relative
 
 First we’ll update the `Camera` class to include an `angle` field which will be used to set the direction that the `Camera` is facing. Currently, our `Camera` determines the direction it is facing through the local `lookAtVector`, which is assigned to `Vector3.Zero`. In other words, our `Camera` always looks at the origin. If the Camera moves, then the angle that the camera is facing will also change:
 
 ![](part3-images/image11.gif "If the Camera moves, then the angle that the camera is facing will also change")
 
-We want the `Camera` to be facing the same direction regardless of its position – at least until we implement the logic for rotating the` Camera `using input. The first change will be to adjust the `lookAtVector` variable to be based off of our current location, rather than looking at an absolute position:
-
+We want the `Camera` to be facing the same direction regardless of its position – at least until we implement the logic for rotating the `Camera` using input. The first change will be to adjust the `lookAtVector` variable to be based off of our current location, rather than looking at an absolute position:
 
 ```csharp
 public class Camera
@@ -631,7 +612,7 @@ public class Camera
             return  Matrix.CreateLookAt (
                 position, lookAtVector, upVector);
         }
-    } 
+    }
     ...
 ```
 
@@ -639,15 +620,13 @@ This results in the `Camera` viewing the world straight-on. Notice that the init
 
 ![](part3-images/image12.png "Running the game displays this view")
 
-
-## Creating an angle Variable
+### Creating an angle Variable
 
 The `lookAtVector` variable controls the angle that our camera is viewing. Currently it is fixed to view down the negative Y axis, and slightly tilted down (from the `-.5f` Z value). We’ll create an `angle` variable which will be used to adjust the `lookAtVector` property. 
 
 In earlier sections of this walkthrough we showed that matrices can be used to rotate how objects are drawn. We can also use matrices to rotate vectors like the `lookAtVector` using the `Vector3.Transform` method. 
 
 Add an `angle` field and modify the `ViewMatrix` property as follows:
-
 
 ```csharp
 public class Camera
@@ -674,12 +653,11 @@ public class Camera
             return  Matrix.CreateLookAt (
                 position, lookAtVector, upVector);
         }
-    } 
+    }
     ...
 ```
 
-
-## Reading input
+### Reading input
 
 Our `Camera` entity can now be fully controlled through its position and angle variables – we just need to change them according to input.
 
@@ -689,13 +667,11 @@ If the user is touching on the left third then we’ll adjust the `angle` value 
 
 First, add a using statement to qualify the `TouchPanel` and `TouchCollection` classes in `Camera.cs`:
 
-
 ```csharp
 using Microsoft.Xna.Framework.Input.Touch; 
 ```
 
 Next, modify the `Update` method to read the touch panel and adjust the `angle` and `position` variables appropriately:
-
 
 ```csharp
 public void Update(GameTime gameTime)
@@ -730,7 +706,7 @@ public void Update(GameTime gameTime)
             angle -= (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
     }
-} 
+}
 ```
 
 Now the `Camera` will respond to touch input:
@@ -743,8 +719,7 @@ If the user is touching the screen, then the code checks to see if the first tou
 
 If the user is touching the center third of the screen, then the camera will move forward. This is accomplished first by obtaining the forward vector, which is initially defined as pointing towards the negative Y axis, then rotated by a matrix created using `Matrix.CreateRotationZ` and the `angle` value. Finally the `forwardVector` is applied to `position` using the `unitsPerSecond` coefficient.
 
-
-# Summary
+## Summary
 
 This walkthrough covers how to move and rotate `Models` in 3D space using `Matrices` and the `BasicEffect.World` property. This form of movement provides the basis for moving objects in 3D games. This walkthrough also covers how to implement a `Camera` entity for viewing the world from any position and angle.
 

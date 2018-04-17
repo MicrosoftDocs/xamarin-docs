@@ -1,6 +1,6 @@
 ---
 title: "SkiaSharp Platform Specific Details"
-description: "Details on using SkiaSharp in your platform. brief: Provide details on how to bring your SkSurface contents into your native application."
+description: "Details on how to bring your SKSurface contents into your native application."
 ms.prod: xamarin
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
 ms.technology: xamarin-cross-platform
@@ -8,7 +8,6 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
 ---
-
 # Platform Specific Integration
 
 The examples below allocate the image buffers manually, this is done
@@ -71,7 +70,7 @@ using (var bitmap = Bitmap.CreateBitmap (canvas.Width, canvas.Height, Bitmap.Con
 }
 ```
 
-## OS X
+## macOS
 
 ```csharp
 var screenScale = (int)NSScreen.MainScreen.BackingScaleFactor * 2;
@@ -119,7 +118,6 @@ using (var bitmap = new Bitmap(width, height, PixelFormat.Format32bppPArgb)) {
 ## Xamarin.Forms
 
 To include SkiaSharp in your Xamarin.Forms applications see the guide [Using SkiaSharp in Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
-
 
 ## Related Links
 

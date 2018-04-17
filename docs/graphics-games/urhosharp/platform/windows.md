@@ -6,8 +6,8 @@ ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
+ms.date: 03/29/2017
 ---
-
 # UrhoSharp Windows Support
 
 _Windows Specific Setup and Features_
@@ -24,7 +24,7 @@ In the pages below, assume that `MyGame` is a subclass of the
 
 You can see complete examples showing how to use this in our [samples](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples)
 
-# Standalone Project
+## Standalone Project
 
 ### Creating a Project
 
@@ -40,6 +40,7 @@ To launch your application, do this:
 DesktopUrhoInitializer.AssetsDirectory = "../Assets";
 new MyGame().Run();
 ```
+
 ### Example
 
 [Complete example](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/Desktop)
@@ -136,4 +137,3 @@ directory).
 ### Configuring and Launching Urho from Windows.Forms
 
 Launch Urho from your form, see [Complete Sample](https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/WinForms/SamplesForm.cs)
-

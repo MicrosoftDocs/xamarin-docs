@@ -8,12 +8,11 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
 ---
-
 # An Introduction to UrhoSharp
 
 _This provides a brief introduction to the concepts behind UrhoSharp_
 
-![](introduction-images/urhosharp-icon.png "UrhoSharp is a powerful 3D Game Engine for Xamarin and .NET developers")
+![UrhoSharp logo](introduction-images/urhosharp-icon.png)
 
 UrhoSharp is a powerful 3D Game Engine for Xamarin and .NET
 developers.  It is similar in spirit to Apple’s SceneKit and SpriteKit
@@ -27,7 +26,7 @@ both OpenGL and Direct3D systems.
 
 UrhoSharp is a game engine with a lot of functionality out of the box:
 
- - Powerful 3D graphic rendering
+- Powerful 3D graphic rendering
 - [Physics simulation](https://developer.xamarin.com/api/namespace/Urho.Physics/) (using the Bullet library)
 - [Scene handling](https://developer.xamarin.com/api/type/Urho.Scene/)
 - Await/Async support
@@ -40,14 +39,14 @@ UrhoSharp is a game engine with a lot of functionality out of the box:
 - [Convex hull generation for collision detection](https://developer.xamarin.com/api/type/Urho.Physics.CollisionShape/) (using StanHull)
 - [Audio playback](https://developer.xamarin.com/api/namespace/Urho.Audio/) (with **libvorbis**)
 
-# Getting Started
+## Getting Started
 
 UrhoSharp is conveniently distributed as a [NuGet package](https://www.nuget.org/) and it can be added to
 your C# or F# projects that target Windows, Mac, Android or iOS.  The
 NuGet comes with both the libraries required to run your program, as
 well as the basic assets (CoreData) used by the engine.
 
-## Urho as a Portable Class Library
+### Urho as a Portable Class Library
 
 The Urho package can be consumed either from a platform-specific
 project, or from a Portable Class Library project, allowing you to
@@ -55,7 +54,7 @@ reuse all of your code across all platforms.  This means that all you
 would have to do on each platform is to write your platform specific
 entry point, and then transfer control to your shared game code.
 
-## Samples
+### Samples
 
 You can get a taste for the capabilities of Urho by opening in either
 Visual Studio for Mac or Visual Studio the Sample solution from:
@@ -88,7 +87,7 @@ The following sample shows what the engine is capable of doing:
 
 While the other samples show individual properties of each sample.
 
-# Basic Structure
+## Basic Structure
 
 Your game should subclass the
 [`Application`](https://developer.xamarin.com/api/type/Urho.Application/)
@@ -124,7 +123,7 @@ class MySample : Application {
         UI.Root.AddChild(helloText);
 
         // Create a top-level scene, must add the Octree
-	// to visualize any 3D content.
+        // to visualize any 3D content.
         var scene = new Scene();
         scene.CreateComponent<Octree>();
         // Box
@@ -167,7 +166,9 @@ To launch your application you call the engine initialization
 function, followed by creating a new instance of your Application
 class, like this:
 
-    new MySample().Run();
+```csharp
+new MySample().Run();
+```
 
 The runtime will invoke the `Setup` and `Start` methods for you.  If you
 override `Setup` you can configure the engine parameters (not show in
@@ -182,18 +183,20 @@ scene.
 The following piece of code uses the UI framework to create a text
 element and add it to your application:
 
-        // UI text
-        var helloText = new Text()
-        {
-            Value = "Hello World from UrhoSharp",
-            HorizontalAlignment = HorizontalAlignment.Center,
-            VerticalAlignment = VerticalAlignment.Center
-        };
-        helloText.SetColor(new Color(0f, 1f, 1f));
-        helloText.SetFont(
-            font: ResourceCache.GetFont("Fonts/Font.ttf"),
-            size: 30);
-        UI.Root.AddChild(helloText);
+```csharp
+// UI text
+var helloText = new Text()
+{
+    Value = "Hello World from UrhoSharp",
+    HorizontalAlignment = HorizontalAlignment.Center,
+    VerticalAlignment = VerticalAlignment.Center
+};
+helloText.SetColor(new Color(0f, 1f, 1f));
+helloText.SetFont(
+    font: ResourceCache.GetFont("Fonts/Font.ttf"),
+    size: 30);
+UI.Root.AddChild(helloText);
+```
 
 The UI framework is there to provide a very simple in-game user
 interface, and it works by adding new nodes to the [`UI.Root`](https://developer.xamarin.com/api/property/Urho.Gui.UI.Root/) node.
@@ -201,7 +204,7 @@ interface, and it works by adding new nodes to the [`UI.Root`](https://developer
 The second part of our sample setups the main scene.  This involves a
 number of steps, creating a 3D Scene, creating a 3D box in the screen,
 adding a light, a camera and a viewport.  These are explored in more
-detail in the section "[Scene, Nodes, Components and Cameras](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras)"
+detail in the section [Scene, Nodes, Components and Cameras](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras).
 
 The third part of our sample triggers a couple of actions.  Actions
 are recipes that describe a particular effect, and once created they
@@ -211,8 +214,10 @@ method on a `Node`.
 The first action scales the box with a bouncing effect and the second
 one rotates the box forever:
 
-    await boxNode.RunActionsAsync(
-        new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1)));
+```csharp
+await boxNode.RunActionsAsync(
+    new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1)));
+```
 
 The above shows how the first action that we create is a [`ScaleTo`](https://developer.xamarin.com/api/type/Urho.Actions.ScaleTo/)
 action, this is merely a recipe that indicates that you want to scale
@@ -222,11 +227,15 @@ action.  The easing actions distort the linear execution of an action
 and apply an effect, in this case it provides the bouncing-out effect.
 So our recipe could be written as:
 
-    var recipe = new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1));
+```csharp
+var recipe = new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1));
+```
 
 Once the recipe has been created, we execute the recipe:
 
-    await boxNode.RunActionsAsync (recipe)
+```csharp
+await boxNode.RunActionsAsync (recipe)
+```
 
 The await indicates that the will want to resume execution after this
 line when the action completes.  Once the action completes we trigger
@@ -236,15 +245,13 @@ The [Using UrhoSharp](~/graphics-games/urhosharp/using.md) document
 explores in more depth the concepts behind Urho and how to structure
 your code to build a game.
 
-# Copyrights
+## Copyrights
 
 This documentation contains original content from Xamarin Inc, but
 draws extensively from the open source documentation for the Urho3D
 project and contains screenshots from the Cocos2D project.
 
-
-
-## Related Links
+### Related Links
 
 - [Planet Earth Workbook](https://developer.xamarin.com/workbooks/graphics/urhosharp/planetearth/planetearth.workbook)
 - [Exploring Coordinates Workbook](https://developer.xamarin.com/workbooks/graphics/urhosharp/coordinates/ExploringUrhoCoordinates.workbook)

@@ -8,23 +8,22 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
 ---
-
 # UrhoSharp - 3D/2D Engine
 
 _UrhoSharp is a cross-platform high-level 3D and 2D engine that can be used to create animated 3D and 2D scenes for your applications using geometries, materials, lights and cameras._
 
-![](images/video.gif "Sample UrhoSharp game")
+![Sample UrhoSharp game](images/video.gif)
 
 UrhoSharp is distributed as a NuGet package that can be installed on
 either Visual Studio or Visual Studio for Mac and can be
 used to target any of the following platforms: Android, MacOS, iOS, tvOS and Windows.
 
-##  [An Introduction to UrhoSharp](~/graphics-games/urhosharp/introduction.md)
+## [An Introduction to UrhoSharp](~/graphics-games/urhosharp/introduction.md)
 
 This article provides a high-level overview of UrhoSharp and its
 capabilities for 3D visualization and for use in simple 3D games.
 
-##  [Using UrhoSharp](~/graphics-games/urhosharp/using.md)
+## [Using UrhoSharp](~/graphics-games/urhosharp/using.md)
 
 In this document we describe the core concepts of UrhoSharp that you
 would use to build a game or create a 3D visualization for your
@@ -60,7 +59,6 @@ There are also a number of UrhoSharp [Workbooks](https://developer.xamarin.com/w
 [Planet Earth](https://developer.xamarin.com/workbooks/graphics/urhosharp/planetearth/planetearth.workbook) and
 [Exploring Coordinates](https://developer.xamarin.com/workbooks/graphics/urhosharp/coordinates/ExploringUrhoCoordinates.workbook).
 
-
 ## Copyright
 
 This documentation contains original content from Xamarin Inc, but
@@ -70,8 +68,6 @@ project and contains screenshots from the Cocos2D project.
 ## License
 
 The UrhoSharp license is available at the [http://download.xamarin.com/content/licenses/URHO.LICENSE](http://download.xamarin.com/content/licenses/URHO.LICENSE)
-
-
 
 ## Related Links
 

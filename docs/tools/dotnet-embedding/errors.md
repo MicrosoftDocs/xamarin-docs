@@ -7,7 +7,6 @@ author: topgenorth
 ms.author: toopge
 ms.date: 04/11/2018
 ---
-
 # .NET embedding errors
 
 ## EM0xxx: Binding error messages

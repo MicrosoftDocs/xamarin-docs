@@ -8,49 +8,45 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
 ---
-
 # Part 2 – Implementing the WalkingGame
 
 _This walkthrough shows how to add game logic and content to an empty MonoGame project to create a demo of an animated sprite moving with touch input._
 
 The previous parts of this walkthrough showed how to create empty MonoGame projects. We will build on these previous parts by making a simple game demo. This article contains the following sections:
 
- - Unzipping our game content
- - MonoGame Class Overview
- - Rendering our first Sprite
- - Creating the CharacterEntity
- - Adding CharacterEntity to the game
- - Creating the Animation class
- - Adding the first Animation to CharacterEntity
- - Adding movement to the character
- - Matching movement and animation
+- Unzipping our game content
+- MonoGame Class Overview
+- Rendering our first Sprite
+- Creating the CharacterEntity
+- Adding CharacterEntity to the game
+- Creating the Animation class
+- Adding the first Animation to CharacterEntity
+- Adding movement to the character
+- Matching movement and animation
 
 
-# Unzipping our Game Content
+## Unzipping our Game Content
 
 Before we begin writing code, we will want to unzip our game *content*. Game developers often use the term *content* to refer to non-code files which are usually created by visual artists, game designers, or audio designers. Common types of content include files used to display visuals, play sound, or control artificial intelligence (AI) behavior. From a game development team’s perspective content is usually created by non-programmers.
 
 The content used here can be found [on github](https://github.com/xamarin/mobile-samples/blob/master/WalkingGameMG/Resources/charactersheet.png?raw=true). We’ll need these files downloaded to a location that we will access later in this walkthrough.
 
-
-# MonoGame Class Overview
+## MonoGame Class Overview
 
 For starters we will explore the MonoGame classes used in basic rendering:
 
- - `SpriteBatch` – used to draw 2D graphics to the screen. *Sprites* are 2D visual elements which are used to display images on screen. The `SpriteBatch` object can draw a single sprite at a time between its `Begin` and `End` methods, or multiple sprites can be grouped together, or *batched*.
- - `Texture2D` – represents an image object at runtime. `Texture2D` instances are often created from file formats such as .png or .bmp, although they can also be created dynamically at runtime. `Texture2D` instances are used when rendering with `SpriteBatch` instances.
- - `Vector2` – represents a position in a 2D coordinate system which is often used for positioning visual objects. MonoGame also includes `Vector3` and `Vector4` but we will only use `Vector2` in this walkthrough.
- - `Rectangle` – a four-sided area with position, width, and height. We’ll be using this to define which portion of our `Texture2D` to render when we start working with animations.
+- `SpriteBatch` – used to draw 2D graphics to the screen. *Sprites* are 2D visual elements which are used to display images on screen. The `SpriteBatch` object can draw a single sprite at a time between its `Begin` and `End` methods, or multiple sprites can be grouped together, or *batched*.
+- `Texture2D` – represents an image object at runtime. `Texture2D` instances are often created from file formats such as .png or .bmp, although they can also be created dynamically at runtime. `Texture2D` instances are used when rendering with `SpriteBatch` instances.
+- `Vector2` – represents a position in a 2D coordinate system which is often used for positioning visual objects. MonoGame also includes `Vector3` and `Vector4` but we will only use `Vector2` in this walkthrough.
+- `Rectangle` – a four-sided area with position, width, and height. We’ll be using this to define which portion of our `Texture2D` to render when we start working with animations.
 
 We should also note that MonoGame is not maintained by Microsoft – despite its namespace. The `Microsoft.Xna` namespace is used in MonoGame to make it easier to migrate existing XNA projects to MonoGame.
 
-
-# Rendering our First Sprite
+## Rendering our First Sprite
 
 Next we will draw a single sprite to the screen to show how to perform 2D rendering in MonoGame.
 
-
-## Creating a Texture2D
+### Creating a Texture2D
 
 We need to create a `Texture2D` instance to use when rendering our sprite. All game content is ultimately contained in a folder named **Content,** located in the platform-specific project. MonoGame shared projects cannot contain content, as the content must use build actions specific to the platform. CocosSharp developers will find the Content folder a familiar concept – they are located in the same place in both CocosSharp and MonoGame projects. The Content folder can be found in the iOS project, and inside the Assets folder in the Android project.
 
@@ -63,7 +59,6 @@ The Content folder now contains the charactersheet.png file:
 ![](part2-images/image2.png "The Content folder now contains the charactersheet.png file")
 
 Next, we’ll add code to load the charactersheet.png file and create a `Texture2D`. To do this open the `Game1.cs` file and add the following field to the Game1.cs class:
-
 
 ```csharp
 Texture2D characterSheetTexture;
@@ -79,8 +74,8 @@ protected override void LoadContent()
     // TODO: use this.Content to load your game content here
 }
 ```
-We should note that the default project already instantiates the `spriteBatch` instance for us. We’ll be using this later but we won’t be adding any additional code to prepare the `spriteBatch` for use. On the other hand, our `spriteSheetTexture` does require initialization, so we will initialize it after the `spriteBatch` is created:
 
+We should note that the default project already instantiates the `spriteBatch` instance for us. We’ll be using this later but we won’t be adding any additional code to prepare the `spriteBatch` for use. On the other hand, our `spriteSheetTexture` does require initialization, so we will initialize it after the `spriteBatch` is created:
 
 ```csharp
 protected override void LoadContent()
@@ -96,7 +91,6 @@ protected override void LoadContent()
 ```
 
 Now that we have a `SpriteBatch` instance and a `Texture2D` instance we can add our rendering code to the `Game1.Draw` method:
-
 
 ```csharp
 protected override void Draw(GameTime gameTime)
@@ -120,36 +114,33 @@ Running the game now shows a single sprite displaying the texture created from c
 
 ![](part2-images/image3.png "Running the game now shows a single sprite displaying the texture created from charactersheet.png")
 
-
-#  Creating the CharacterEntity
+## Creating the CharacterEntity
 
 So far we’ve added code to render a single sprite to the screen; however, if we were to develop a full game without creating any other classes, we’d run into code organization issues.
 
-
-## What is an Entity?
+### What is an Entity?
 
 A common pattern for organizing game code is to create a new class for each game *entity* type. An entity in game development is an object which can contain some of the following characteristics (not all are required):
 
- - A visual element such as a sprite, text, or 3D model
- - Physics or every frame behavior such as a unit patrolling a set path or a player character responding to input
- - Can be created and destroyed dynamically, such as a power-up appearing and being collected by the player
+- A visual element such as a sprite, text, or 3D model
+- Physics or every frame behavior such as a unit patrolling a set path or a player character responding to input
+- Can be created and destroyed dynamically, such as a power-up appearing and being collected by the player
 
 Entity organization systems can be complex, and many game engines offer classes to help manage entities. We’ll be implementing a very simple entity system, so it’s worth noting that full games usually require more organization on the developer’s part.
 
 
-## Defining the CharacterEntity
+### Defining the CharacterEntity
 
 Our entity, which we’ll call `CharacterEntity`, will have the following characteristics:
 
- - The ability to load its own `Texture2D`
- - The ability to render itself, including containing calling methods to update the walking animation
- - `X `and Y properties to control the character’s position.
- - The ability to update itself – specifically, to read values from the touch screen and adjust position appropriately.
+- The ability to load its own `Texture2D`
+- The ability to render itself, including containing calling methods to update the walking animation
+- `X` and Y properties to control the character’s position.
+- The ability to update itself – specifically, to read values from the touch screen and adjust position appropriately.
 
 To add the `CharacterEntity` to our game, right-click or Control-click on the **WalkingGame** project and select **Add > New File...**. Select the **Empty Class** option and name the new file **CharacterEntity**, then click **New**.
 
 First we’ll add the ability for the `CharacterEntity` to load a `Texture2D` as well as to draw itself. We will modify the newly-added `CharacterEntity.cs` file as follows:
-
 
 ```csharp
 using System;
@@ -199,8 +190,7 @@ namespace WalkingGame
 
 The above code adds the responsibility of positioning, rendering, and loading content to the `CharacterEntity`. Let’s take a moment to point out some considerations taken in the code above.
 
-
-## Why are X and Y Floats?
+### Why are X and Y Floats?
 
 Developers who are new to game programming may wonder why the `float` type is being used as opposed to `int` or `double`. The reason is that a 32-bit value is most common for positioning in low-level rendering code. The double type occupies 64 bits for precision, which is rarely needed for positioning objects. While a 32 bit difference may seem insignificant, many modern games include graphics which require processing tens of thousands of position values each frame (30 or 60 times per second). Cutting the amount of memory that must move through the graphics pipeline by half can have a significant impact on a game’s performance.
 
@@ -208,25 +198,22 @@ The `int` data type can be an appropriate unit of measurement for positioning, b
 
 Finally, we will see that the logic which moves our character around the screen will do so using the game’s timing values. The result of multiplying velocity by how much time has passed in a given frame will rarely result in a whole number, so we need to use `float` for `X` and `Y`.
 
-
-## Why is characterSheetTexture Static?
+### Why is characterSheetTexture Static?
 
 The `characterSheetTexture` `Texture2D` instance is a runtime representation of the charactersheet.png file. In other words, it contains the color values for each pixel as extracted from the source **charactersheet.png** file. If our game were to create two `CharacterEntity` instances, then each one would need access to information from charactersheet.png. In this situation we wouldn’t want to incur the performance cost of loading charactersheet.png twice, nor would we want to have duplicate texture memory stored in ram. Using a `static` field allows us to share the same `Texture2D` across all `CharacterEntity` instances.
 
 Using `static` members for the runtime representation of content is a simplistic solution and it does not address problems encountered in larger games such as unloading content when moving from one level to another. More sophisticated solutions, which are beyond the scope of this walkthrough, include using MonoGame’s content pipeline or creating a custom content management system.
 
-
-## Why is SpriteBatch Passed as an Argument Instead of Instantiated by the Entity?
+### Why is SpriteBatch Passed as an Argument Instead of Instantiated by the Entity?
 
 The `Draw` method as implemented above takes a `SpriteBatch` argument, but by contrast, the `characterSheetTexture` is instantiated by the `CharacterEntity`.
 
 The reason for this is because the most efficient rendering is possible when the same `SpriteBatch` instance is used for all `Draw` calls, and when all `Draw` calls are being made between a single set of `Begin` and `End` calls. Of course, our game will only include a single entity instance, but more complicated games will benefit from pattern that allows multiple entities to use the same `SpriteBatch` instance.
 
 
-# Adding CharacterEntity to the Game
+## Adding CharacterEntity to the Game
 
 Now that we’ve added our `CharacterEntity` with code for rendering itself, we can replace the code in `Game1.cs` to use an instance of this new entity. To do this we’ll replace the `Texture2D` field with a `CharacterEntity` field in `Game1`:
-
 
 ```csharp
 public class Game1 : Game
@@ -238,11 +225,10 @@ public class Game1 : Game
 
     public Game1()
     {
-	...
+    ...
 ```
 
 Next, we’ll add the instantiation of this entity in `Game1.Initialize`:
-
 
 ```csharp
 protected override void Initialize()
@@ -254,7 +240,6 @@ protected override void Initialize()
 ```
 
 We also need to remove the `Texture2D` creation from `LoadContent` since that is now handled inside of our `CharacterEntity`. `Game1.LoadContent` should look like this:
-
 
 ```csharp
 protected override void LoadContent()
@@ -290,15 +275,14 @@ If we run the game, we will now see the character. Since X and Y default to 0, t
 
 ![](part2-images/image4.png "Since X and Y default to 0, then the character is positioned against the top left corner of the screen")
 
-
-# Creating the Animation Class
+## Creating the Animation Class
 
 Currently our `CharacterEntity` displays the full **charactersheet.png** file. This arrangement of multiple images in one file is referred to as a *sprite sheet*. Typically, a sprite will render only a portion of the sprite sheet. We will modify the `CharacterEntity` to render a portion of this **charactersheet.png**, and this portion will change over time to display a walking animation.
 
 We will create the `Animation` class to control the logic and state of the CharacterEntity animation. The Animation class will be a general class which could be used for any entity, not just `CharacterEntity` animations. Ultimate the `Animation` class will provide a `Rectangle` which the `CharacterEntity` will use when drawing itself. We'll also create an `AnimationFrame` class which will be used to define the animation.
 
 
-## Defining AnimationFrame
+### Defining AnimationFrame
 
 `AnimationFrame` will not contain any logic related to animation. We’ll be using it only to store data. To add the `AnimationFrame` class, right-click or Control-click on the **WalkingGame** shared project and select **Add > New File....** Enter the name **AnimationFrame** and click the **New** button. We’ll modify the `AnimationFrame.cs` file so that it contains the following code:
 
@@ -319,11 +303,10 @@ namespace WalkingGame
 
 The `AnimationFrame` class contains two pieces of information:
 
- - `SourceRectangle` – Defines the area of the `Texture2D` which will be displayed by the `AnimationFrame`. This value is measured in pixels, with the top left being (0, 0).
- - `Duration` – Defines how long an `AnimationFrame` is displayed when used in an `Animation`.
+- `SourceRectangle` – Defines the area of the `Texture2D` which will be displayed by the `AnimationFrame`. This value is measured in pixels, with the top left being (0, 0).
+- `Duration` – Defines how long an `AnimationFrame` is displayed when used in an `Animation`.
 
-
-## Defining Animation
+### Defining Animation
 
 The `Animation` class will contain a `List<AnimationFrame>` as well as the logic to switch which frame is currently displayed according to how much time has passed.
 
@@ -384,25 +367,21 @@ namespace WalkingGame
 
 Let’s look at some of the details from the `Animation` class.
 
-
-## frames List
+### frames List
 
 The `frames` member is what stores the data for our animation. The code which instantiates the animations will add `AnimationFrame` instances to the `frames` list through the `AddFrame` method. A more complete implementation may offer `public` methods or properties for modifying `frames`, but we’ll limit the functionality to adding frames for this walkthrough.
 
-
-## Duration
+### Duration
 
 Duration returns the total duration of the `Animation,` which is obtained by adding the duration of all of the contained `AnimationFrame` instances. This value could be cached if `AnimationFrame` were an immutable object, but since we implemented AnimationFrame as a class which can be changed after being added to Animation, we need to calculate this value whenever the property is accessed.
 
-
-## Update
+### Update
 
 The `Update` method should be called every frame (that is, every time the entire game is updated). Its purpose is to increase the `timeIntoAnimation` member which is used to return the currently displayed frame. The logic in `Update` prevents the `timeIntoAnimation` from ever being larger than the duration of the entire animation.
 
 Since we’ll be using the `Animation` class to display a walking animation then we want to have this animation repeat when it has reached the end. We can accomplish this by checking if the `timeIntoAnimation` is larger than the `Duration` value. If so it will cycle back to the beginning and preserve the remainder, resulting in a looping animation.
 
-
-## Obtaining the Current Frame’s Rectangle
+### Obtaining the Current Frame’s Rectangle
 
 The purpose of the `Animation` class is ultimately to provide a `Rectangle` which can be used when drawing a sprite. Currently the `Animation` class contains logic for changing the `timeIntoAnimation` member, which we’ll use to obtain which `Rectangle` should be displayed. We’ll do this by creating a `CurrentRectangle` property in the `Animation` class. Copy this property into the `Animation` class:
 
@@ -449,19 +428,18 @@ public Rectangle CurrentRectangle
 }
 ```
 
-# Adding the first Animation to CharacterEntity
+## Adding the first Animation to CharacterEntity
 
 The `CharacterEntity` will contain animations for walking and standing, as well as a reference to the current `Animation` being displayed.
 
 First, we’ll add our first `Animation,` which we’ll use to test out the functionality as written so far. Let’s add the following members to the CharacterEntity class:
-
 
 ```csharp
 Animation walkDown;
 Animation currentAnimation;
 ```
 
- Next, let’s define the `walkDown` animation. To do this modify the `CharacterEntity` constructor as follows:
+Next, let’s define the `walkDown` animation. To do this modify the `CharacterEntity` constructor as follows:
 
 ```csharp
 public CharacterEntity (GraphicsDevice graphicsDevice)
@@ -481,6 +459,7 @@ public CharacterEntity (GraphicsDevice graphicsDevice)
     walkDown.AddFrame (new Rectangle (32, 0, 16, 16), TimeSpan.FromSeconds (.25));
 }
 ```
+
 As mentioned earlier, we need to call `Animation.Update` for time-based animations to play. We also need to assign the `currentAnimation`. For now we’ll assign the `currentAnimation` to `walkDown`, but we’ll be replacing this code later when we implement our movement logic. We’ll add the `Update` method to `CharacterEntity` as follows:
 
 
@@ -497,7 +476,6 @@ public void Update(GameTime gameTime)
 
 Now that we have the `currentAnimation` being assigned and updated, we can use it to perform our drawing. We’ll modify `CharacterEntity.Draw` as follows:
 
-
 ```csharp
 public void Draw(SpriteBatch spriteBatch)
 {
@@ -511,7 +489,6 @@ public void Draw(SpriteBatch spriteBatch)
 
 The last step to getting the `CharacterEntity` animating is to call the newly added `Update` method from `Game1`. Modify `Game1.Update` as follows:
 
-
 ```csharp
 protected override void Update(GameTime gameTime)
 {
@@ -524,13 +501,11 @@ Now the `CharacterEntity` will play its `walkDown` animation:
 
 ![](part2-images/image5.gif "Now the CharacterEntity will play its walkDown animation")
 
-
-# Adding Movement to the Character
+## Adding Movement to the Character
 
 Next, we’ll be adding movement to our character using touch controls. When the user touches the screen, the character will move towards the point where the screen is touched. If no touches are detected, then the character will stand in place.
 
-
-## Defining GetDesiredVelocityFromInput
+### Defining GetDesiredVelocityFromInput
 
 We’ll be using MonoGame’s `TouchPanel` class, which provides information about the current state of the touch screen. Let’s add a method which will check the `TouchPanel` and return our character’s desired velocity:
 
@@ -563,7 +538,6 @@ The `TouchPanel.GetState` method returns a `TouchCollection` which contains info
 
 If the user is touching the screen, we will move the character towards the first touch, in other words, the `TouchLocation` at index 0. Initially we’ll set the desired velocity to equal the difference between the character’s location and the first touch’s location:
 
-
 ```csharp
         desiredVelocity.X = touchCollection [0].Position.X - this.X;
         desiredVelocity.Y = touchCollection [0].Position.Y - this.Y;
@@ -574,10 +548,9 @@ What follows is a bit of math which will keep the character moving at the same s
 The `if (desiredVelocity.X != 0 || desiredVelocity.Y != 0)` statement is checking if the velocity is non-zero – in other words, it’s checking to make sure that the user is not touching the same spot as the character’s current position. If not, then we need to set the character’s speed to be constant regardless of how far away the touch is. We accomplish this by normalizing the velocity vector which, results in it being a length of 1. A velocity vector of 1 means that the character will move at 1 pixel per second. We’ll speed this up by multiplying the value by the desired speed of 200.
 
 
-## Applying Velocity to Position
+### Applying Velocity to Position
 
 The velocity returned from `GetDesiredVelocityFromInput` needs to be applied to the character’s `X` and `Y` values to have any effect at runtime. We’ll modify the `Update` method as follows:
-
 
 ```csharp
 public void Update(GameTime gameTime)
@@ -602,19 +575,16 @@ If we run our game now, we’ll see that the character is moving towards the tou
 
 ![](part2-images/image6.gif "The character is moving towards the touch location")
 
-
-# Matching Movement and Animation
+## Matching Movement and Animation
 
 Once we have our character moving and playing a single animation, we can define the remainder of our animations, then use them to reflect the movement of the character. When finished we will have eight animations in total:
 
- - Animations for walking up, down, left, and right
- - Animations for standing still and facing up, down, left, and right
+- Animations for walking up, down, left, and right
+- Animations for standing still and facing up, down, left, and right
 
-
-## Defining the Rest of the Animations
+### Defining the Rest of the Animations
 
 We’ll first add the `Animation` instances to the `CharacterEntity` class for all of our animations in the same place where we added `walkDown`. Once we do this, the `CharacterEntity` will have the following `Animation` members:
-
 
 ```csharp
 Animation walkDown;
@@ -631,7 +601,6 @@ Animation currentAnimation;
 ```
 
 Now we’ll define the animations in the `CharacterEntity` constructor as follows:
-
 
 ```csharp
 public CharacterEntity (GraphicsDevice graphicsDevice)
@@ -764,8 +733,7 @@ The result of this code is that the character will properly animate when walking
 
 ![](part2-images/image7.gif "The result of this code is that the character will properly animate when walking, and then face the last direction it was walking when it stops")
 
-
-# Summary
+## Summary
 
 This walkthrough showed how to work with MonoGame to create a cross-platform game with sprites, moving objects, input detection, and animation. It covers creating a general-purpose animation class. It also showed how to create a character entity for organizing code logic.
 

@@ -6,8 +6,8 @@ ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
+ms.date: 03/29/2017
 ---
-
 # Using UrhoSharp
 
 _Overview of the UrhoSharp Engine_
@@ -19,7 +19,7 @@ game.
 
 <a name="scenenodescomponentsandcameras"/>
 
-# Scenes, Nodes, Components and Cameras
+## Scenes, Nodes, Components and Cameras
 
 The scene model can be described as a component-based scene graph. The
 Scene consists of a hierarchy of scene nodes, starting from the root
@@ -36,7 +36,7 @@ necessary to get things to show up on your screen
 
 In addition to setting up your scene, you need to setup a [`Camera`](https://developer.xamarin.com/api/type/Urho.Camera/), this is what determines what will get shown to the user.
 
-## Setting up your Scene
+### Setting up your Scene
 
 You would typically create this form your Start method:
 
@@ -60,7 +60,7 @@ planeObject.Model = ResourceCache.GetModel ("Models/Plane.mdl");
 planeObject.SetMaterial(ResourceCache.GetMaterial("Materials/StoneTiled.xml"));
 ```
 
-## Components
+### Components
 
 Rendering 3D objects, sound playback, physics and scripted logic
 updates are all enabled by creating different Components into the
@@ -107,13 +107,13 @@ attach to your nodes to bring them to life: user-visible elements
 (models), sounds, rigid bodies, collision shapes, cameras, light
 sources, particle emitters and much more.
 
-## Shapes
+### Shapes
 
 As a convenience, various shapes are available as simple nodes in the
 Urho.Shapes namespace.  These include boxes, spheres, cones, cylinders
 and planes.
 
-## Camera and Viewport
+### Camera and Viewport
 
 Just like the light, cameras are components, so you will need to
 attach the component to a node, this is done like this:
@@ -135,7 +135,7 @@ Renderer.SetViewPort (0, new Viewport (Context, scene, camera, null))
 
 And now you should be able to see the results of your creation.
 
-## Identification and scene hierarchy
+### Identification and scene hierarchy
 
 Unlike nodes, components do not have names; components inside the same
 node are only identified by their type, and index in the node's
@@ -194,7 +194,7 @@ is loaded. However, note that creating geometry, physics or script
 components to an unattached node, and then moving it into a scene
 later will cause those components to not work correctly.
 
-## Scene updates
+### Scene updates
 
 A Scene whose updates are enabled (default) will be automatically
 updated on each main loop iteration.  The application's [`SceneUpdate`](https://developer.xamarin.com/api/event/Urho.Scene.SceneUpdate/)
@@ -207,7 +207,7 @@ also makes it invisible, while disabling a sound source component
 mutes it. If a node is disabled, all of its components are treated as
 disabled regardless of their own enable/disable state.
 
-# Adding Behavior to Your Components
+## Adding Behavior to Your Components
 
 The best way to structure your game is to make your own component that
 encapsulate an actor or element on your game.  This makes the feature
@@ -222,7 +222,7 @@ Alternatively, you can control exactly what happens to your component
 by updating your component properties on each frame (discussed in
 Frame-based Behavior section).
 
-## Actions
+### Actions
 
 You can add behavior to nodes very easily using Actions.  Actions can
 alter various node properties and execute them over a period of time,
@@ -270,7 +270,7 @@ In the above example the cloud will move and fade out at the same time.
 You will notice that these are using C# await, which allows you to
 think linearly about the behavior you want to achieve.
 
-## Basic Actions
+### Basic Actions
 
 These are the actions supported in UrhoSharp:
 
@@ -284,7 +284,7 @@ These are the actions supported in UrhoSharp:
 
 Other advanced features include the combination of the [`Spawn`](https://developer.xamarin.com/api/type/Urho.Actions.Spawn) and [`Sequence`](https://developer.xamarin.com/api/type/Urho.Actions.Sequence) actions.
 
-## Easing - Controlling the Speed of Your Actions
+### Easing - Controlling the Speed of Your Actions
 
 Easing is a way that directs the way that the animation will unfold,
 and it can make your animations a lot more pleasant.  By default your
@@ -311,7 +311,7 @@ controlling over the period of time, from start to finish:
 easing types and their behavior on the value of the object they are
 controlling over the period of time")
 
-## Using Actions and Async Code
+### Using Actions and Async Code
 
 In your [`Component`](https://developer.xamarin.com/api/type/Urho.Component/) subclass, you should introduce an async method that
 prepares your component behavior and drives the functionality for it.
@@ -344,7 +344,7 @@ class Robot : Component {
 
     protected async void MoveRandomly (float minX, float maxX,
                                        float minY, float maxY,
-				       float duration)
+                       float duration)
     {
         while (IsAlive){
             var moveAction = new MoveBy(duration,
@@ -379,7 +379,7 @@ alive.  And to make things more interesting, the robot will keep
 shooting simultaneously.  The shooting will only start every 0.1
 seconds.
 
-## Frame-based Behavior Programming
+### Frame-based Behavior Programming
 
 If you want to control the behavior of your component on a
 frame-by-frame basis instead of using actions, what you would do is to
@@ -416,7 +416,7 @@ var rotator = new Rotator() { RotationSpeed = rotationSpeed };
 boxNode.AddComponent (rotator);
 ```
 
-## Combining Styles
+### Combining Styles
 
 You can use the async/action based model for programming much of the
 behavior which is great for fire-and-forget style of programming, but
@@ -439,7 +439,7 @@ components point toward the user by setting direction of the node with
     }
 ```
 
-# Loading and saving scenes
+## Loading and saving scenes
 
 Scenes can be loaded and saved in XML format; see the functions
 [`LoadXml`](https://developer.xamarin.com/api/member/Urho.Scene.LoadXml) and [`SaveXML()`](https://developer.xamarin.com/api/member/Urho.Scene.SaveXml). When a scene is loaded, all existing content
@@ -485,7 +485,7 @@ class MyComponent : Component {
 }
 ```
 
-## Object Prefabs
+### Object Prefabs
 
 Just loading or saving whole scenes is not flexible enough for games
 where new objects need to be dynamically created. On the other hand,
@@ -515,7 +515,7 @@ using (var file = new File(Context, prefabPath, FileMode.Read))
 }
 ```
 
-# Events
+## Events
 
 UrhoObjects raise a number of events, these are surfaced as C# events
 on the various classes that generate them.  In addition to the
@@ -575,7 +575,7 @@ The parameter received by the event handler is a strongly typed
 event arguments class that will be specific to each event and contains the
 event payload.
 
-# Responding to User Input
+## Responding to User Input
 
 You can subscribe to various events, like keystrokes down by
 subscribing to the event, and responding to the input being delivered:
@@ -617,7 +617,7 @@ protected override void OnUpdate(float timeStep)
 }
 ```
 
-# Resources (Assets)
+## Resources (Assets)
 
 Resources include most things in UrhoSharp that are loaded from mass storage during initialization or runtime:
 
@@ -660,7 +660,7 @@ memory than allowed, the oldest resources will be removed from the
 cache if not in use anymore. By default the memory budgets are set to
 unlimited.
 
-## Bringing 3D-Models and Images
+### Bringing 3D-Models and Images
 
 Urho3D tries to use existing file formats whenever possible, and
 define custom file formats only when absolutely necessary such as for
@@ -675,7 +675,7 @@ There is also a handy add-in for Blender
 that can export your Blender assets in the format that is suitable for
 Urho3D.
 
-## Background loading of resources
+### Background loading of resources
 
 Normally, when requesting resources using one of the `ResourceCache`’s
 `Get` method, they are loaded immediately in the main thread, which may
@@ -708,7 +708,7 @@ finishing background loaded resources can be configured by setting the
 
 <a name="sound"/>
 
-# Sound
+## Sound
 
 Sound is an important part of game play, and the UrhoSharp framework
 provides a way of playing sounds in your game.  You play sounds by
@@ -730,7 +730,7 @@ soundSource.AutoRemove = true;
 
 <a name="particles"/>
 
-# Particles
+## Particles
 
 Particles provide a simple way of adding some simple and inexpensive
 effects to your application.  You can consume particles stored in PEX
@@ -776,7 +776,7 @@ And this is what it looks if you use a blocky texture:
 
 ![Particles with a box texture](using-images/image-2.png "And this is what it looks if using a blocky texture")
 
-# Multithreading Support
+## Multithreading Support
 
 UrhoSharp is a single threaded library.  This means that you should
 not attempt to invoke methods in UrhoSharp from a background thread,
@@ -789,20 +789,17 @@ components on the main UI, you can use the
 method.  Additionally, you can use C# await and the .NET task APIs to
 ensure that the code is executed on the proper thread.
 
-
-# UrhoEditor
+## UrhoEditor
 
 You can download the Urho Editor for your platform from the [Urho
 Website](http://urho3d.github.io/), go to Downloads and pick the
 latest version.
 
-# Copyrights
+## Copyrights
 
 This documentation contains original content from Xamarin Inc, but
 draws extensively from the open source documentation for the Urho3D
 project and contains screenshots from the Cocos2D project.
-
-
 
 ## Related Links
 

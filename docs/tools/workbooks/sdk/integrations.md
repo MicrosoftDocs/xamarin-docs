@@ -5,8 +5,8 @@ ms.assetid: 002CE0B1-96CC-4AD7-97B7-43B233EF57A6
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
+ms.date: 03/30/2017
 ---
-
 # External Integrations
 
 Integration assemblies should reference

@@ -7,9 +7,7 @@ author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
 ---
-
 # .NET Embedding Limitations
-
 
 This document explains the limitations of .NET Embedding (Embeddinator-4000) and, whenever possible, provides workarounds for them.
 

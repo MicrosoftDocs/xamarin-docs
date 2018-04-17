@@ -8,7 +8,6 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
 ---
-
 # Introduction to 3D Graphics with MonoGame
 
 _MonoGame offers a flexible, efficient API for displaying real-time 3D graphics. It includes higher-level constructs for rendering and also access to lower-level graphics resources._
@@ -20,7 +19,7 @@ MonoGame is nearly identical to Microsoft’s XNA, so developers experienced wit
 The first section covers how to add a 3D model to your game from an .fbx file. The next section discusses how to create a 3D camera which includes common controls, such as moving and looking around. The last section takes a deeper dive into the `VertexBuffer` class which allows for more control over 3D rendering compared to rendering models loaded from .fbx files.
 
 
-# Subsections
+## Topics
 
 - [Using the Model class](~/graphics-games/monogame/3d/part1.md)
 - [Drawing 3D Graphics with Vertices](~/graphics-games/monogame/3d/part2.md)

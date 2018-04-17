@@ -7,7 +7,6 @@ author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
 ---
-
 # Objective-C Support
 
 ## Specific features

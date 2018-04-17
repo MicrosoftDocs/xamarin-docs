@@ -5,8 +5,8 @@ ms.assetid: 5C7A60E3-1427-47C9-A022-720F25ECB031
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
+ms.date: 03/30/2017
 ---
-
 # Representations in Xamarin Workbooks
 
 ## Representations
@@ -46,12 +46,12 @@ this works:
 ```csharp
 public sealed class Person : ISerializableObject
 {
-	public string Name { get; }
+  public string Name { get; }
 
-	// Rest of the code is omitted…
+  // Rest of the code is omitted…
 
-	void ISerializableObject.Serialize (ObjectSerializer serializer)
-		=> serializer.Property (nameof (Name), Name);
+  void ISerializableObject.Serialize (ObjectSerializer serializer)
+    => serializer.Property (nameof (Name), Name);
 }
 ```
 

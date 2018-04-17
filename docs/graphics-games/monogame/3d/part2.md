@@ -8,7 +8,6 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
 ---
-
 # Drawing 3D Graphics with Vertices in MonoGame
 
 _MonoGame supports using arrays of vertices to define how a 3D object is rendered on a per-point basis. Users can take advantage of vertex arrays to create dynamic geometry, implement special effects, and improve the efficiency of their rendering through culling._
@@ -25,19 +24,18 @@ As shown above, the sphere is clearly composed of multiple triangles. We can vie
 
 This walkthrough will cover the following topics:
 
- - Creating a project
- - Creating the vertices
- - Adding drawing code
- - Rendering with a texture
- - Modifying texture coordinates
- - Rendering vertices with models
+- Creating a project
+- Creating the vertices
+- Adding drawing code
+- Rendering with a texture
+- Modifying texture coordinates
+- Rendering vertices with models
 
 The finished project will contain a checkered floor which will be drawn using a vertex array:
 
 ![](part2-images/image3.png "The finished project will contain a checkered floor which will be drawn using a vertex array")
 
-
-# Creating a Project
+## Creating a Project
 
 First, we’ll download a project which will serve as our starting point. We’ll use the Model project [which can be found here](https://developer.xamarin.com/samples/mobile/ModelRenderingMG/).
 
@@ -47,12 +45,11 @@ Once downloaded and unzipped, open and run the project. We expect to see six rob
 
 By the end of this project we’ll be combining our own custom vertex rendering with the robot `Model`, so we aren’t going to delete the robot rendering code. Instead, we’ll just clear out the `Game1.Draw` call to remove the drawing of the 6 robots for now. To do this, open the **Game1.cs** file and locate the `Draw` method. Modify it so it contains the following code:
 
-
 ```csharp
 protected override void Draw(GameTime gameTime)
 {
-	GraphicsDevice.Clear(Color.CornflowerBlue);
-	base.Draw(gameTime);
+  GraphicsDevice.Clear(Color.CornflowerBlue);
+  base.Draw(gameTime);
 }
 ```
 
@@ -60,36 +57,33 @@ This will result in our game displaying an empty blue screen:
 
 ![](part2-images/image5.png "This will result in the game displaying an empty blue screen")
 
-
-# Creating the Vertices
+## Creating the Vertices
 
 We will create an array of vertices to define our geometry. In this walkthrough, we’ll be creating a 3D plane (a square in 3D space, not an airplane). Although our plane has four sides and four corners, it will be composed of two triangles, each of which requires three vertices. Therefore, we will be defining a total of six points.
 
 So far we’ve been talking about vertices in a general sense, but MonoGame provides some standard structs which can be used for vertices:
 
- - `Microsoft.Xna.Framework.Graphics.VertexPositionColor`
- - `Microsoft.Xna.Framework.Graphics.VertexPositionColorTexture`
- - `Microsoft.Xna.Framework.Graphics.VertexPositionNormalTexture`
- - `Microsoft.Xna.Framework.Graphics.VertexPositionTexture`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionColor`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionColorTexture`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionNormalTexture`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionTexture`
 
 Each type’s name indicates the components it contains. For example, `VertexPositionColor` contains values for position and color. Let’s look at each of the components:
 
- - Position – All vertex types include a `Position` component. The `Position` values define where the vertex is located in 3D space (X, Y, and Z).
- - Color – Vertices can optionally specify a `Color` value to perform custom tinting.
- - Normal – Normals define which way the surface of the object is facing. Normals are necessary if rendering an object with lighting since the direction that a surface is facing impacts how much light it receives. Normals are typically specified as a *unit vector* – a 3D vector which has a length of 1.
- - Texture – Texture refers to texture coordinates – that is, which portion of a texture should appear at a given vertex. Texture values are necessary if rendering a 3D object with a texture. Texture coordinates are normalized coordinates, which means that values will fall between 0 and 1. We’ll cover texture coordinates in more detail later in this guide.
+- Position – All vertex types include a `Position` component. The `Position` values define where the vertex is located in 3D space (X, Y, and Z).
+- Color – Vertices can optionally specify a `Color` value to perform custom tinting.
+- Normal – Normals define which way the surface of the object is facing. Normals are necessary if rendering an object with lighting since the direction that a surface is facing impacts how much light it receives. Normals are typically specified as a *unit vector* – a 3D vector which has a length of 1.
+- Texture – Texture refers to texture coordinates – that is, which portion of a texture should appear at a given vertex. Texture values are necessary if rendering a 3D object with a texture. Texture coordinates are normalized coordinates, which means that values will fall between 0 and 1. We’ll cover texture coordinates in more detail later in this guide.
 
 Our plane will serve as a floor, and we’ll want to apply a texture when performing our rendering, so we will use the `VertexPositionTexture` type to define our vertices.
 
 First, we’ll add a member to our Game1 class:
-
 
 ```csharp
 VertexPositionTexture[] floorVerts; 
 ```
 
 Next, define our vertices in `Game1.Initialize`. Notice that the provided template referenced earlier in this article does not contain a `Game1.Initialize` method, so we need to add the entire method to `Game1`:
-
 
 ```csharp
 protected override void Initialize ()
@@ -112,8 +106,7 @@ To help visualize what our vertices will look like, consider the following diagr
 
 We need to rely on our diagram to visualize the vertices until we finish implementing our rendering code.
 
-
-# Adding Drawing Code
+## Adding Drawing Code
 
 Now that we have the positions for our geometry defined, we can write our rendering code.
 
@@ -124,11 +117,10 @@ First, we’ll need to define a `BasicEffect` instance which will hold parameter
 ...
 VertexPositionTexture[] floorVerts;
 // new code:
-BasicEffect effect; 
+BasicEffect effect;
 ```
 
 Next, modify the `Initialize` method to define the effect:
-
 
 ```csharp
 protected override void Initialize ()
@@ -146,11 +138,10 @@ protected override void Initialize ()
     effect = new BasicEffect (graphics.GraphicsDevice);
 
     base.Initialize ();
-} 
+}
 ```
 
 Now we can add code to perform the drawing:
-
 
 ```csharp
 void DrawGround()
@@ -189,7 +180,7 @@ void DrawGround()
             // The number of triangles to draw
             2);
     }
-} 
+}
 ```
 
 We'll need to call `DrawGround` in our `Game1.Draw`:
@@ -211,13 +202,11 @@ The app will display the following when executed:
 
 Let’s look at some of the details in the code above.
 
-
-## View and Projection Properties
+### View and Projection Properties
 
 The `View` and `Projection` properties control how we view the scene. We’ll be modifying this code later when we re-add the model rendering code. Specifically, `View` controls the location and orientation of the camera, and `Projection` controls the *field of view* (which can be used to zoom the camera).
 
-
-## Techniques and Passes
+### Techniques and Passes
 
 Once we’ve assigned properties on our effect we can perform the actual rendering. 
 
@@ -225,8 +214,7 @@ We won’t be changing the `CurrentTechnique` property in this walkthrough, but 
 
 The important thing to keep in mind is that the `foreach` loop enables the same C# code to render any effect regardless of the complexity of the underlying `BasicEffect`.
 
-
-## DrawUserPrimitives
+### DrawUserPrimitives
 
 `DrawUserPrimitives` is where the vertices are rendered. The first parameter tells the method how we have organized our vertices. We have structured them so that each triangle is defined by three ordered vertices, so we use the `PrimitiveType.TriangleList` value.
 
@@ -236,15 +224,13 @@ The third parameter specifies the first index to draw. Since we want our entire 
 
 Finally, we specify how many triangles to render. Our vertex array contains two triangles, so pass a value of 2.
 
-
-# Rendering with a Texture
+## Rendering with a Texture
 
 At this point our app renders a white plane (in perspective). Next we’ll add a texture to our project to be used when rendering our plane. 
 
 To keep things simple we’ll add the .png directly to our project rather than using the MonoGame Pipeline tool. To do this, download [this .png file](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) to your computer. Once downloaded, right-click on the **Content** folder in the Solution pad and select **Add>Add Files...** . If working on Android, then this folder will be located under the **Assets** folder in the Android-specific project. If on iOS, then this folder will be in the root of the iOS project. Navigate to the location where **checkerboard.png** is saved and select this file. Select to copy the file to the directory.
 
 Next, we’ll add the code to create our `Texture2D` instance. First, add the `Texture2D` as a member of `Game1` under the `BasicEffect` instance:
-
 
 ```csharp
 ...
@@ -270,11 +256,10 @@ protected override void LoadContent()
     {
         checkerboardTexture = Texture2D.FromStream (this.GraphicsDevice, stream);
     }
-} 
+}
 ```
 
 Next, modify the `DrawGround` method. The only modification necessary is to assign `effect.TextureEnabled` to `true` and to set the `effect.Texture` to `checkerboardTexture`:
-
 
 ```csharp
 void DrawGround()
@@ -311,7 +296,7 @@ void DrawGround()
             0,
             2);
     }
-} 
+}
 ```
 
 Finally, we need to modify the `Game1.Initialize` method to also assign texture coordinates on our vertices:
@@ -349,8 +334,7 @@ If we run the code, we can see that our plane now displays a checkerboard patter
 
 ![](part2-images/image8.png "The plane now displays a checkerboard pattern")
 
-
-# Modifying Texture Coordinates
+## Modifying Texture Coordinates
 
 MonoGame uses normalized texture coordinates, which are coordinates between 0 and 1 rather than between 0 and the texture’s width or height. The following diagram can help visualize normalized coordinates:
 
@@ -387,7 +371,7 @@ protected override void Initialize ()
     effect = new BasicEffect (graphics.GraphicsDevice);
 
     base.Initialize ();
-} 
+}
 ```
 
 This results in the texture repeating 20 times:
@@ -395,10 +379,9 @@ This results in the texture repeating 20 times:
 ![](part2-images/image10.png "This results in the texture repeating 20 times")
 
 
-# Rendering Vertices with Models
+## Rendering Vertices with Models
 
 Now that our plane is rendering properly, we can re-add the models to view everything together. First, we’ll re-add the model code to our `Game1.Draw` method (with modified positions):
-
 
 ```csharp
 protected override void Draw(GameTime gameTime)
@@ -421,7 +404,6 @@ protected override void Draw(GameTime gameTime)
 
 We will also create a `Vector3` in `Game1` to represent our camera’s position. We’ll add a field under our `checkerboardTexture` declaration:
 
-
 ```csharp
 ...
 Texture2D checkerboardTexture;
@@ -430,7 +412,6 @@ Vector3 cameraPosition = new Vector3(0, 10, 10);
 ```
 
 Next, remove the local `cameraPosition` variable from the `DrawModel` method:
-
 
 ```csharp
 void DrawModel(Vector3 modelPosition)
@@ -454,7 +435,6 @@ void DrawModel(Vector3 modelPosition)
 
 Similarly remove the local `cameraPosition` variable from the `DrawGround` method:
 
-
 ```csharp
 void DrawGround()
 {
@@ -474,7 +454,6 @@ Now if we run the code we can see both the models and the ground at the same tim
 
 If we modify the camera position (such as by increasing its X value, which in this case moves the camera to the left) we can see that the value impacts both the ground and the models:
 
-
 ```csharp
 Vector3 cameraPosition = new Vector3(15, 10, 10);
 ```
@@ -483,8 +462,7 @@ This code results in the following:
 
 ![](part2-images/image3.png "This code results in this view")
 
-
-# Summary
+## Summary
 
 This walkthrough showed how to use a vertex array to perform custom rendering. In this case, we created a checkered floor by combining our vertex-based rendering with a texture and `BasicEffect`, but the code presented here serves as the basis for any 3D rendering. We also showed that vertex based rendering can be mixed with models in the same scene.
 

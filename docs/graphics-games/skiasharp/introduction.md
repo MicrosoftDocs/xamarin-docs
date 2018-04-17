@@ -8,7 +8,6 @@ author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
 ---
-
 # An Introduction to SkiaSharp
 
 _This provides a brief introduction to the concepts behind SkiaSharp_
@@ -139,7 +138,7 @@ using (var paint = new SKPaint()) {
 }
 ```
 
-# More information
+## More information
 
 More information about using SkiaSharp can be found on the [API documentation online](https://developer.xamarin.com/api/namespace/SkiaSharp/)
 

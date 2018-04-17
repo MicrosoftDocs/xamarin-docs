@@ -8,7 +8,6 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
 ---
-
 # Introduction to Game Development with MonoGame
 
 _This multi-part walkthrough shows how to create a simple 2D application using MonoGame.  It covers common game programming concepts, such as graphics, input, game entities, and physics._
@@ -23,16 +22,16 @@ By the end of this walkthrough, we will have created a simple game where the pla
 
 The following shows the result of this walkthrough:
 
-![](images/image1.gif "The app that will be built in the walkthrough")
+![Animation of sample game character following the mouse](images/image1.gif)
 
-# Monogame and XNA
+## Monogame and XNA
 
 The MonoGame library is intended to mimic Microsoft’s XNA library in both syntax and functionality.  All MonoGame objects exist under the Microsoft.Xna namespace – allowing most XNA code to be used in MonoGame with no modification. 
 
 Developers familiar with XNA will already be familiar with MonoGame’s syntax, and developers looking for additional information on working with MonoGame will be able to reference existing online XNA walkthroughs, API documentation, and discussions.
 
 
-# Walkthrough Parts
+## Walkthrough Parts
 
 - [Part 1 – Creating a Cross Platform MonoGame Project](~/graphics-games/monogame/introduction/part1.md)
 - [Part 2 – Implementing the WalkingGame](~/graphics-games/monogame/introduction/part2.md)

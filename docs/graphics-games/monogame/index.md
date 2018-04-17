@@ -5,8 +5,8 @@ ms.assetid: 35EC29CE-538B-4844-BACC-E51823EFF3B5
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
+ms.date: 03/29/2017
 ---
-
 # Monogame
 
 MonoGame is an efficient, flexible, cross platform API for developing 2D and 3D games. It provides the foundation for many cross-platform game engines, but can be used directly in games without being wrapped in a game engine.

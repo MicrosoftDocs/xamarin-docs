@@ -6,8 +6,8 @@ ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
+ms.date: 03/29/2017
 ---
-
 # UrhoSharp Android Support
 
 _Android Specific Setup and Features_

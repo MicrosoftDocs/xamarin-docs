@@ -8,7 +8,6 @@ author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
 ---
-
 # Using Team City with Xamarin
 
 _This guide will discuss the steps involved with using TeamCity to compile mobile applications and then submit them to Xamarin Test Cloud._
@@ -35,7 +34,7 @@ There are several steps involved with setting up TeamCity:
 
 - **Creating A TeamCity Project** – Once the previous three steps are completed, we must create a TeamCity project that will contain all of the meta-data necessary to retrieve the source code, compile the projects, and submit the tests to Xamarin Test Cloud.
 
-# Requirements
+## Requirements
 
 Experience with [Xamarin Test Cloud](https://developer.xamarin.com/guides/testcloud) is required.
 
@@ -84,7 +83,6 @@ The build script can be as simple as a Powershell file (on Windows) or a bash sc
 - [**FAKE**](http://fsharp.github.io/FAKE/) – this is a DSL based in F# which makes it possible to utilize existing .NET libraries if necessary.
 
 Which scripting language is used depends on your preferences and requirements. The [TaskyPro-Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) example contains an example of using Rake as a [build script](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile).
-
 
 > [!NOTE]
 > It is possible to use an XML based build system such as MSBuild or NAnt, but these lack the expressiveness and maintainability of a DSL that is dedicated to building software.
@@ -162,37 +160,37 @@ Once TeamCity is installed and Visual Studio for Mac can build your project, it 
 
 1. Started by logging into TeamCity via the web browser. Navigate to the Root Project:
 
-	![](teamcity-images/image2.png "Navigate to the Root Project")
+    ![Navigate to the Root Project](teamcity-images/image2.png "Navigate to the Root Project")
 Underneath the Root Project, create a new sub-project:
 
-	![](teamcity-images/image3.png "Navigate to the Root Project Underneath the Root Project, create a new sub-project")
+    ![Navigate to the Root Project Underneath the Root Project, create a new sub-project](teamcity-images/image3.png "Navigate to the Root Project Underneath the Root Project, create a new sub-project")
 2. Once the sub-project has been created, add a new Build Configuration:
 
-	![](teamcity-images/image5.png "Once the sub-project has been created, add a new Build Configuration")
+    ![Once the sub-project has been created, add a new Build Configuration](teamcity-images/image5.png "Once the sub-project has been created, add a new Build Configuration")
 3. Attach a VCS project to the Build Configuration. This is done via the Version Control Setting screen:
 
-	![](teamcity-images/image6.png "This is done via the Version Control Setting screen")
+    ![This is done via the Version Control Setting screen](teamcity-images/image6.png "This is done via the Version Control Setting screen")
 
     If there is no VCS project created, you have the option to create one from the New VCS Root page shown below:
 
-	![](teamcity-images/image7.png "If there is no VCS project created, you have the option to create one from the New VCS Root page")
+    ![If there is no VCS project created, you have the option to create one from the New VCS Root page](teamcity-images/image7.png "If there is no VCS project created, you have the option to create one from the New VCS Root page")
 
     Once the VCS root has been attached,  TeamCity will checkout the project and try to auto detect build steps. If you are familiar with TeamCity, then you can select one of the detected build steps. It is safe to ignore the detected build steps for now.
 
 4. Next, configure a Build Trigger. This will queue up a build when certain conditions are met, such as when a user commits code to the repository. The following screenshot shows how to add a build trigger:
 
-	![](teamcity-images/image8.png "This screenshot shows how to add a build trigger")
+    ![This screenshot shows how to add a build trigger](teamcity-images/image8.png "This screenshot shows how to add a build trigger")
     An example of configuring a build trigger can be seen in the following screenshot:
 
-	![](teamcity-images/image9.png "An example of configuring a build trigger can be seen in this screenshot")
+    ![An example of configuring a build trigger can be seen in this screenshot](teamcity-images/image9.png "An example of configuring a build trigger can be seen in this screenshot")
 
 5. The previous section, Parameterizing the Build Script, suggested storing some values as environment variables. These variables can be added to the build configuration via the Parameters screen. Add the variables for the Test Cloud API Key, the iOS device ID, and the Android Device ID as shown in the screenshot below:
 
-	![](teamcity-images/image11.png "Add the variables for the Test Cloud API Key, the iOS device ID, and the Android Device ID")
+    ![Add the variables for the Test Cloud API Key, the iOS device ID, and the Android Device ID](teamcity-images/image11.png "Add the variables for the Test Cloud API Key, the iOS device ID, and the Android Device ID")
 
 6. The final step is to add a build step that will invoke the build script to compile the application and enqueue the application to Test Cloud. The following screenshot is an example of a build step that uses a Rakefile to build an application:
 
-	![](teamcity-images/image12.png "This screenshot is an example of a build step that uses a Rakefile to build an application")
+    ![This screenshot is an example of a build step that uses a Rakefile to build an application](teamcity-images/image12.png "This screenshot is an example of a build step that uses a Rakefile to build an application")
 
 7. At this point, the build configuration is complete. It is a good idea to trigger a build to confirm that the project is properly configured. A good way to do this is to commit a small, insignificant change to the repository. TeamCity should detect the commit and start a build.
 

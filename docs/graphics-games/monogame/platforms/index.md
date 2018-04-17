@@ -5,8 +5,8 @@ ms.assetid: 36EF35F2-882C-4DCF-A95D-A36EFA47BCCC
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
+ms.date: 03/29/2017
 ---
-
 # MonoGame Platform Specific Considerations
 
 ## [MonoGame on Universal Windows Platform (UWP)](~/graphics-games/monogame/platforms/uwp.md)

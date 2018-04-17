@@ -7,34 +7,32 @@ author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
 ---
-
 # Embeddinator-4000 Best Practices for ObjC
 
 This is a draft and might not be in-sync with the features presently supported by the tool. We hope that this document will evolve separately and eventually match the final tool, i.e. we'll suggest long term best approaches - not immediate workarounds.
 
 A large part of this document also applies to other supported languages. However all provided examples are in C# and Objective-C.
 
-
-# Exposing a subset of the managed code
+## Exposing a subset of the managed code
 
 The generated native library/framework contains Objective-C code to call each of the managed APIs that is exposed. The more API you surface (make public) then larger the native _glue_ library will become.
 
 It might be a good idea to create a different, smaller assembly, to expose only the required APIs to the native developer. That facade will also allow you more control over the visibility, naming, error checking... of the generated code.
 
-
-# Exposing a chunkier API
+## Exposing a chunkier API
 
 There is a price to pay to transition from native to managed (and back). As such, it's better to expose _chunky instead of chatty_ APIs to the native developers, e.g.
 
 **Chatty**
-```
+
+```csharp
 public class Person {
-	public string FirstName { get; set; }
-	public string LastName { get; set; }
+  public string FirstName { get; set; }
+  public string LastName { get; set; }
 }
 ```
 
-```csharp
+```objc
 // this requires 3 calls / transitions to initialize the instance
 Person *p = [[Person alloc] init];
 p.firstName = @"Sebastien";
@@ -42,25 +40,25 @@ p.lastName = @"Pouliot";
 ```
 
 **Chunky**
-```
+
+```csharp
 public class Person {
-	public Person (string firstName, string lastName) {}
+  public Person (string firstName, string lastName) {}
 }
 ```
 
-```csharp
+```objc
 // a single call / transition will perform better
 Person *p = [[Person alloc] initWithFirstName:@"Sebastien" lastName:@"Pouliot"];
 ```
 
 Since the number of transitions is smaller the performance will be better. It also requires less code to be generated, so this will produce a smaller native library as well.
 
-
-# Naming
+## Naming
 
 Naming things is one of two hardest problems in computer science, the others being cache invalidation and off-by-1 errors. Hopefully .NET Embedding can shield you from all but naming.
 
-## Types
+### Types
 
 Objective-C does not support namespaces. In general, its types are prefixed with a 2 (for Apple) or 3 (for 3rd parties) character prefix, like `UIView` for UIKit's View, which denotes the framework.
 
@@ -68,13 +66,13 @@ For .NET types skipping the namespace is not possible as it can introduce duplic
 
 ```csharp
 namespace Xamarin.Xml.Configuration {
-	public class Reader {}
+  public class Reader {}
 }
 ```
 
 would be used like:
 
-```csharp
+```objc
 id reader = [[Xamarin_Xml_Configuration_Reader alloc] init];
 ```
 
@@ -86,11 +84,11 @@ public class XAMXmlConfigReader : Xamarin.Xml.Configuration.Reader {}
 
 making it more Objective-C friendly to use, e.g.:
 
-```csharp
+```objc
 id reader = [[XAMXmlConfigReader alloc] init];
 ```
 
-## Methods
+### Methods
 
 Even good .NET names might not be ideal for an Objective-C API.
 
@@ -101,7 +99,7 @@ From an Objective-C developer's point of view, a method with a `Get` prefix impl
 
 This naming rule has no match in the .NET GC world; a .NET method with a `Create` prefix will behave identically in .NET. However, for Objective-C developers, it normally means you own the returned instance, i.e. the [create rule](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-103029).
 
-# Exceptions
+## Exceptions
 
 It's quite commont in .NET to use exceptions extensively to report errors. However, they are slow and not quite identical in ObjC. Whenever possible you should hide them from the Objective-C developer.
 
@@ -110,7 +108,7 @@ For example, the .NET `Try` pattern will be much easier to consume from Objectiv
 ```csharp
 public int Parse (string number)
 {
-	return Int32.Parse (number);
+  return Int32.Parse (number);
 }
 ```
 
@@ -119,11 +117,11 @@ versus
 ```csharp
 public bool TryParse (string number, out int value)
 {
-	return Int32.TryParse (number, out value);
+  return Int32.TryParse (number, out value);
 }
 ```
 
-## Exceptions inside `init*`
+### Exceptions inside `init*`
 
 In .NET a constructor must either succeed and return a (_hopefully_) valid instance or throw an exception.
 
@@ -133,8 +131,8 @@ The generator follow the same `return nil` pattern for generated `init*` methods
 
 ## Operators
 
-ObjC does not allow operators to be overloaded as C# does, so these are converted to class selectors.
+Objective-C does not allow operators to be overloaded as C# does, so these are converted to class selectors.
 
-["Friendly"](https://msdn.microsoft.com/en-us/library/ms229032(v=vs.110).aspx) named method are generated in preference to the operator overloads when found, and can produce an easier to consume API.
+["Friendly"](/dotnet/standard/design-guidelines/operator-overloads/) named method are generated in preference to the operator overloads when found, and can produce an easier to consume API.
 
-Classes that override the operators == and\or != should override the standard Equals (Object) method as well.
+Classes that override the operators `==` and\or `!=` should override the standard Equals (Object) method as well.
