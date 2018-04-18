@@ -76,17 +76,26 @@ Additional configuration steps are required on some platforms before the map wil
 
 ### iOS
 
-On iOS 7 the map control "just works", so long as the `FormsMaps.Init()` call has been made.
+To access location services on iOS, you must set the following keys in **Info.plist**:
 
-For iOS 8,iOS 10 and iOS 11  three keys need to be added to the **Info.plist** file: [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) , [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) and `NSLocationAlwaysAndWhenInUseUsageDescription`. The XML representation is shown below - you should update the `string` values to reflect how your application is using the location information:
+- iOS 11
+    - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – for using location services when the app is in use
+    - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services/requesting_always_authorization?language=objc) – for using location services at all times
+- iOS 10 and earlier
+    - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – for using location services when the app is in use
+    - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – for using location services at all times    
+    
+To support iOS 11 and earlier, you can include all three keys: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, and `NSLocationAlwaysUsageDescription`.
+
+The XML representation for these keys in **Info.plist** is shown below. You should update the `string` values to reflect how your application is using the location information:
 
 ```xml
 <key>NSLocationAlwaysUsageDescription</key>
-    <string>Can we use your location</string>
+<string>Can we use your location at all times?</string>
 <key>NSLocationWhenInUseUsageDescription</key>
-    <string>We are using your location</string>
+<string>Can we use your location when your app is being used?</string>
 <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-<string>Can we use your location</string>
+<string>Can we use your location at all times?</string>
 ```
 
 The **Info.plist** entries can also be added in **Source** view while editing the **Info.plist** file:
