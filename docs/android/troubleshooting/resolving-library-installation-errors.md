@@ -246,11 +246,11 @@ its contents:
 8.  Verify that all files are copied over. The **embedded** directory
     should now contain files such as **.jar**, **.aar**, and **.pom**.
 
-9.  Unzip any extracted **.aar** files. On Windows, append a **.zip**
-    extension to the **.aar** file, right-click it and select **Extract
-    All...**, then remove the **.zip** extension. On macOS, unzip the
-    **.aar** file by using the **unzip** command in the Terminal (for
-    example, **unzip file.aar**).
+9.  Unzip the contents of any extracted **.aar** files to the **embedded** 
+    directory. On Windows, append a **.zip** extension to the **.aar** 
+    file, open it, and copy the contents to the **embedded** directory.
+    On macOS, unzip the **.aar** file by using the **unzip** command in 
+    the Terminal (for example, **unzip file.aar**).
 
 At this point, you have manually installed the missing components 
 and your project should build without errors. If not, verify that 
