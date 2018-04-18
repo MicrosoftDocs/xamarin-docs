@@ -78,13 +78,15 @@ Additional configuration steps are required on some platforms before the map wil
 
 On iOS 7 the map control "just works", so long as the `FormsMaps.Init()` call has been made.
 
-For iOS 8 two keys need to be added to the **Info.plist** file: [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) and [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26). The XML representation is shown below - you should update the `string` values to reflect how your application is using the location information:
+For iOS 8,iOS 10 and iOS 11  three keys need to be added to the **Info.plist** file: [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) , [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) and `NSLocationAlwaysAndWhenInUseUsageDescription`. The XML representation is shown below - you should update the `string` values to reflect how your application is using the location information:
 
 ```xml
 <key>NSLocationAlwaysUsageDescription</key>
     <string>Can we use your location</string>
 <key>NSLocationWhenInUseUsageDescription</key>
     <string>We are using your location</string>
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>Can we use your location</string>
 ```
 
 The **Info.plist** entries can also be added in **Source** view while editing the **Info.plist** file:
