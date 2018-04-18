@@ -7,29 +7,20 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.date: 11/22/2017
+ms.date: 04/18/2018
 ---
-
 # Updating component references to NuGet
 
-_Replace your component references with NuGet packages to future-proof your apps._
+> [!NOTE]
+> Xamarin Components are no longer supported in Visual Studio, and should be replaced by
+> NuGet packages. Follow the instructions below to manually remove component references
+> from your projects.
 
-This guide explains how to update existing Xamarin solutions
-to change component references to NuGet packages.
-
-- [Components that contain NuGet packages](#contain)
-- [Components with NuGet replacements](#replace)
-
-Most components fall into one of the above categories.
-If you are using a component that does not appear to have an
-equivalent NuGet package, read the
-[components without a NuGet migration path](#require-update) section below.
-
-Refer to these pages for more detailed instructions for adding NuGet packages
+Refer to these instructions for adding NuGet packages
 on [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 or [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
-## Opening a project containing a component
+## Manually removing component references
 
 In November 2017, it was [announced](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) that the Xamarin Component Store would be discontinued. In an effort to move forward with the sunsetting of components, the 15.6 release of Visual Studio and 7.4 release of Visual Studio for Mac no longer support components in your project. 
 
@@ -41,7 +32,7 @@ If you load a project into Visual Studio, the following dialog is displayed, exp
 
 To remove a component from your project:
 
-1. Open the .csproj file. To do this, right-click on the project name and select **Unload Project**. 
+1. Open the **.csproj** file. To do this, right-click on the project name and select **Unload Project**. 
 
 2. Right-click again on the unloaded project and select **Edit {your-project-name}.csproj**.
 
@@ -101,9 +92,25 @@ To remove a component from your project:
 
 3. Remove the references to `XamarinComponentReference` and save the file. In the example above, it's safe to remove the entire `ItemGroup`
 
-4. Repeat the steps above for each project in your solution. 
+4. Repeat the steps above for each project in your solution.
 
 -----
+
+> [!WARNING]
+> The following instructions only work with older versions of Visual Studio.
+> The **Components** node is no longer available in the current releases of Visual Studio 2017
+> or Visual Studio for Mac.
+
+The following sections explain how to update existing Xamarin solutions
+to change component references to NuGet packages.
+
+- [Components that contain NuGet packages](#contain)
+- [Components with NuGet replacements](#replace)
+
+Most components fall into one of the above categories.
+If you are using a component that does not appear to have an
+equivalent NuGet package, read the
+[components without a NuGet migration path](#require-update) section below.
 
 <a name="contain" />
 
@@ -153,7 +160,6 @@ Note that the **Packages** tab will probably be empty:
 
 _It may contain NuGet dependencies, but these can be ignored._
 
-
 To confirm a replacement NuGet package exists, search on [NuGet.org](https://www.nuget.org/packages),
 using the component name, or alternatively by author.
 
@@ -162,7 +168,6 @@ searching for:
 
 - [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl) – the product name.
 - [`praeclarum`](https://www.nuget.org/packages?q=praeclarum) – the author's profile.
-
 
 ### Updating the Solution
 
