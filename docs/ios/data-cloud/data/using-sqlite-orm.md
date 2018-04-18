@@ -1,13 +1,13 @@
 ---
-title: "Using SQLite.NET"
+title: "Using SQLite.NET with iOS"
+description: "The SQLite.NET PCL NuGet library provides a simple data access mechanism for Xamarin.iOS apps."
 ms.prod: xamarin
 ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 01/18/2018
+ms.date: 04/18/2018
 ---
-
 # Using SQLite.NET
 
 The SQLite.NET library that Xamarin recommends is a basic ORM that lets you  store and retrieve objects in the local SQLite database on an iOS device.
@@ -17,33 +17,47 @@ ORM stands for Object Relational Mapping – an API that lets you save and retri
 
 ## Usage
 
-Add the [SQLite.net PCL NuGet package](https://www.nuget.org/packages/sqlite-net-pcl/),
-  to your project - it supports a variety of platforms including iOS, Android, and Windows.
+To include the SQLite.NET library in a Xamarin app, add the following NuGet package to your project:
 
-  [![](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet package")](using-sqlite-orm-images/image1a.png#lightbox)
+- **Package Name:** SQLite-net PCL
+- **Author:** Frank A. Krueger
+- **Id:** sqlite-net-pcl
+- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+
+[![SQLite.NET NuGet package](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet package")](using-sqlite-orm-images/image1a.png#lightbox)
+
+> [!TIP]
+> There are a number of different SQLite packages available – be sure to choose the correct one (it might not be the top result in search).
 
 Once you have the SQLite.NET library available, follow these three steps to use it to access a database:
 
-
 1. **Add a using statement** - Add the following statement to the C# files where data access is required:
 
-		using SQLite;
+    ```csharp
+    using SQLite;
+    ```
 
 1. **Create a Blank Database** - A database reference can be created by passing the file path the SQLiteConnection class constructor. You do not need to check if the file already exists – it will automatically be created if required, otherwise the existing database file will be opened.
 
-		var db = new SQLiteConnection (dbPath);
+    ```csharp
+    var db = new SQLiteConnection (dbPath);
+    ```
 
 	The dbPath variable should be determined according the rules discussed earlier in this document.
 
 1. **Save Data** - Once you have created a SQLiteConnection object, database commands are executed by calling its methods, such as CreateTable and Insert like this:
 
-		db.CreateTable<Stock> ();
-		db.Insert (newStock); // after creating the newStock object
+    ```csharp
+    db.CreateTable<Stock> ();
+    db.Insert (newStock); // after creating the newStock object
+    ```
 
 1. **Retrieve Data** - To retrieve an object (or a list of objects) use the following syntax:
 
-		var stock = db.Get<Stock>(5); // primary key id of 5
-		var stockList = db.Table<Stock>();
+    ```csharp
+    var stock = db.Get<Stock>(5); // primary key id of 5
+    var stockList = db.Table<Stock>();
+    ```
 
 ## Basic Data Access Sample
 
@@ -51,14 +65,13 @@ The *DataAccess_Basic* sample code for this document looks like this when runnin
 
 **iOS**
 
- ![](using-sqlite-orm-images/image2.png "iOS SQLite.NET sample")
+ [![iOS SQLite.NET sample](using-sqlite-orm-images/image2-sml.png)](using-sqlite-orm-images/image2-sml.png#lightbox)
 
 The following code sample shows an entire database interaction using the SQLite.NET library to encapsulate the underlying database access. It shows:
 
 1.  Creating the database file
 1.  Inserting some data by creating objects and then saving them
 1.  Querying the data
-
 
 You’ll need to include these namespaces:
 
@@ -191,7 +204,6 @@ example, this line of code configures SQLite for **Serialized** mode:
 ```csharp
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
-
 
 ## Related Links
 

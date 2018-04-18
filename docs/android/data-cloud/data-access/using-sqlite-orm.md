@@ -1,13 +1,13 @@
 ---
-title: "Using SQLite.NET"
+title: "Using SQLite.NET with Android"
+description: "The SQLite.NET PCL NuGet library provides a simple data access mechanism for Xamarin.Android apps."
 ms.prod: xamarin
 ms.assetid: 3447B7EE-A320-489E-AF02-E5721097760A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
+ms.date: 04/18/2018
 ---
-
 # Using SQLite.NET
 
 The SQLite.NET library that Xamarin recommends is a very basic ORM that
@@ -16,17 +16,22 @@ on an Android device. ORM stands for Object Relational Mapping &ndash; an
 API that lets you save and retrieve "objects" from a database
 without writing SQL statements.
 
-## Using SQLite.NET
+To include the SQLite.NET library in a Xamarin app, add the following NuGet package to your project:
 
-To include the SQLite.NET library in a Xamarin app, add the [SQLite.net PCL NuGet package](https://www.nuget.org/packages/sqlite-net-pcl/) to the project using the **SQLite-net PCL** NuGet package:
+- **Package Name:** SQLite-net PCL
+- **Author:** Frank A. Krueger
+- **Id:** sqlite-net-pcl
+- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 [![SQLite.NET NuGet package](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet package")](using-sqlite-orm-images/image1a.png#lightbox)
 
+> [!TIP]
+> There are a number of different SQLite packages available – be sure to choose the correct one (it might not be the top result in search).
+
 Once you have the SQLite.NET library available, follow these three steps to use it to access a database:
 
-
-1.  **Add a using statement** &ndash; Add the following statement to the C# 
-    files where data access is required: 
+1.  **Add a using statement** &ndash; Add the following statement to the C#
+    files where data access is required:
 
     ```csharp
     using SQLite;
@@ -272,7 +277,7 @@ SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 The Android version of SQLite has a limitation that requires a few more 
 steps. If the call to `SqliteConnection.SetConfig` produces a SQLite 
 exception such as `library used incorrectly`, then you must use the 
-following workaround: 
+following workaround:
 
 1.  Link to the native **libsqlite.so** library so that the
    `sqlite3_shutdown` and `sqlite3_initialize` APIs are made 
@@ -300,8 +305,6 @@ following workaround:
 This workaround also works for the `Mono.Data.Sqlite` library. For more 
 information about SQLite and multi-threading, see 
 [SQLite and Multiple Threads](https://www.sqlite.org/threadsafe.html). 
-
-
 
 ## Related Links
 
