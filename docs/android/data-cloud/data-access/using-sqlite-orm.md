@@ -8,7 +8,7 @@ author: mgmclemore
 ms.author: mamcle
 ms.date: 04/18/2018
 ---
-# Using SQLite.NET
+# Using SQLite.NET with Android
 
 The SQLite.NET library that Xamarin recommends is a very basic ORM that
 lets you easily store and retrieve objects in the local SQLite database
@@ -18,7 +18,7 @@ without writing SQL statements.
 
 To include the SQLite.NET library in a Xamarin app, add the following NuGet package to your project:
 
-- **Package Name:** SQLite-net PCL
+- **Package Name:** sqlite-net-pcl
 - **Author:** Frank A. Krueger
 - **Id:** sqlite-net-pcl
 - **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)

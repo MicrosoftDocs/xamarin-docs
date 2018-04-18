@@ -1,5 +1,5 @@
 ---
-title: "Using Data in an App"
+title: "Using Data in an iOS app"
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
@@ -8,7 +8,7 @@ ms.author: brumbaug
 ms.date: 10/11/2016
 ---
 
-# Using Data in an App
+# Using data in an iOS app
 
 The **DataAccess_Adv** sample shows a working application that allows user-input and *CRUD* (Create, Read, Update and Delete) database functionality. The application consists of two screens: a list and a data entry form. All the data access code is re-usable in iOS and Android without modification.
 

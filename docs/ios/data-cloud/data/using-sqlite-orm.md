@@ -8,7 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/18/2018
 ---
-# Using SQLite.NET
+# Using SQLite.NET with iOS
 
 The SQLite.NET library that Xamarin recommends is a basic ORM that lets you  store and retrieve objects in the local SQLite database on an iOS device.
 ORM stands for Object Relational Mapping – an API that lets you save and retrieve “objects” from a database without writing SQL statements.
@@ -19,7 +19,7 @@ ORM stands for Object Relational Mapping – an API that lets you save and retri
 
 To include the SQLite.NET library in a Xamarin app, add the following NuGet package to your project:
 
-- **Package Name:** SQLite-net PCL
+- **Package Name:** sqlite-net-pcl
 - **Author:** Frank A. Krueger
 - **Id:** sqlite-net-pcl
 - **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)

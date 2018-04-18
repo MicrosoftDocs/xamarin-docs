@@ -1,5 +1,5 @@
 ---
-title: "Using ADO.NET"
+title: "Using ADO.NET with Android"
 ms.prod: xamarin
 ms.assetid: F6ABCEF1-951E-40D8-9EA9-DD79123C2650
 ms.technology: xamarin-android
@@ -8,7 +8,7 @@ ms.author: mamcle
 ms.date: 02/08/2018
 ---
 
-# Using ADO.NET
+# Using ADO.NET with Android
 
 Xamarin has built-in support for the SQLite database that is available
 on Android and can be exposed using familiar ADO.NET-like syntax. Using
