@@ -5,7 +5,7 @@ ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.date: 09/29/2017
+ms.date: 04/19/2018
 ---
 
 # Installing Xamarin in Visual Studio on Windows
@@ -19,10 +19,7 @@ Xamarin is free to use and included in all editions of Visual Studio.
 The following are required for installing Visual Studio tools for Xamarin:
 
 1. Windows 7 or higher.
-
-2. Visual Studio 2017 (Community, Professional, or Enterprise).
-
-3. Xamarin for Visual Studio.
+1. Xamarin Tools for Visual Studio.
 
 Note that Xamarin cannot be used with Express editions of
 Visual Studio due to lack of plug-in support.
