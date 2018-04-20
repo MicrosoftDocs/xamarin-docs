@@ -430,7 +430,7 @@ Do the following:
 
 2. The Xcode will switch to a split-view mode with the **Interface Editor** on one side and a **Code Editor** on the other.
 
-3. Notice that Xcode has automatically picked the **ViewController.m** file in the **Code Editor**, which is incorrect. From the discussion on what **Outlets** and **Actions** are above, the developer will need to have the **ViewController.h** selected.
+3. Notice that Xcode has automatically picked the **ViewController.h** file in the **Code Editor**, which is incorrect. From the discussion on what **Outlets** and **Actions** are above, the developer will need to have the **ViewController.h** selected.
 
 4. At the top of the **Code Editor** click on the **Automatic Link** and select the `ViewController.h` file:
 
