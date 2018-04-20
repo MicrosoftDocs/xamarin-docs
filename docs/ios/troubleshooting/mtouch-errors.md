@@ -1676,7 +1676,7 @@ The assembly causing the issue is named in the error message. In order to fix th
 
 Mixed-mode assemblies can not be processed by the linker.
 
-See https://msdn.microsoft.com/en-us/library/x0w2664k.aspx for more information on mixed-mode assemblies.
+See https://msdn.microsoft.com/library/x0w2664k.aspx for more information on mixed-mode assemblies.
 
 ## MT3xxx: AOT error messages
 

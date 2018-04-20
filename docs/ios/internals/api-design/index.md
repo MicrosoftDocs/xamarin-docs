@@ -918,7 +918,7 @@ pointing to a 2 megabyte image) and other important and finite resources
 
 NSObject implements the IDisposable interface and also the [.NET
 Dispose
-pattern](http://msdn.microsoft.com/en-us/library/fs2xkftw.aspx). This
+pattern](http://msdn.microsoft.com/library/fs2xkftw.aspx). This
 allows developers that subclass NSObject to override the Dispose
 behavior and release their own resources on demand. For example,
 consider this view controller that keeps around a bunch of images:

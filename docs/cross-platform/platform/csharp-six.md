@@ -54,7 +54,7 @@ Visual Studio for Mac automatically updates the Mono installation on your system
 Windows users must have [Visual Studio 2015 or 2017^](https://www.visualstudio.com/) installed
 to compile C# 6 code (even if you choose Xamarin Studio for Windows as your IDE).
 
-^ or *[Microsoft Build Tools 2015](http://www.microsoft.com/en-us/download/details.aspx?id=48159)*
+^ or *[Microsoft Build Tools 2015](http://www.microsoft.com/download/details.aspx?id=48159)*
 for command line compilation or build servers, for example.
 
 ## Using C# 6

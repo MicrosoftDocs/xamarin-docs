@@ -14,7 +14,7 @@ ms.date: 02/17/2018
 _This walkthrough covers how a mobile application built with Xamarin can consume a WCF web service using the BasicHttpBinding class._
 
 
-It is a common requirement for mobile applications to be able to communicate with backend systems. There are many choices and options for backend frameworks, one of which is [Windows Communication Foundation](http://msdn.microsoft.com/en-us/library/ms731082.aspx) (WCF). This walkthrough will provide an example of how a Xamarin mobile application can consume a WCF service using the `BasicHttpBinding` class. The walkthrough includes the following topics:
+It is a common requirement for mobile applications to be able to communicate with backend systems. There are many choices and options for backend frameworks, one of which is [Windows Communication Foundation](http://msdn.microsoft.com/library/ms731082.aspx) (WCF). This walkthrough will provide an example of how a Xamarin mobile application can consume a WCF service using the `BasicHttpBinding` class. The walkthrough includes the following topics:
 
 1.  **Create a WCF Service** - In this section we will create a very basic WCF service having two methods. The first method will take a string parameter, while the other method will take a C# object. This section will also discuss how to configure a developer's workstation to allow remote access to the WCF service.
 1.  **Create a Xamarin.Android Application** - Once the WCF service has been created, we will create a simple Xamarin.Android application that will use the WCF service. This section will cover how to create a WCF service proxy class to facilitate communication with the WCF service.
@@ -224,7 +224,7 @@ A web service proxy must be created for the WCF service, before an application c
 1. Build the `HelloWorldServiceProxy` project.
 
 > [!NOTE]
-> An alternative to creating the proxy using the Microsoft WCF Web Service Reference Provider in Visual Studio 2017 is to use the ServiceModel Metadata Utility Tool (svcutil.exe). For more information, see [ServiceModel Metadata Utility Tool (Svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
+> An alternative to creating the proxy using the Microsoft WCF Web Service Reference Provider in Visual Studio 2017 is to use the ServiceModel Metadata Utility Tool (svcutil.exe). For more information, see [ServiceModel Metadata Utility Tool (Svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
 
 <a name="Creating_a_Xamarin_Android_Application" />
 
@@ -531,6 +531,6 @@ This tutorial covered how to work with a WCF service in a mobile application usi
 ## Related Links
 
 - [HelloWorld (sample)](https://developer.xamarin.com/samples/mobile/WCF-Walkthrough/)
-- [Developing Service-Oriented Applications with WCF](https://docs.microsoft.com/en-us/dotnet/framework/wcf/index)
-- [How to: Create a Windows Communication Foundation Client](https://docs.microsoft.com/en-us/dotnet/framework/wcf/how-to-create-a-wcf-client)
-- [ServiceModel Metadata Utility Tool (svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
+- [Developing Service-Oriented Applications with WCF](https://docs.microsoft.com/dotnet/framework/wcf/index)
+- [How to: Create a Windows Communication Foundation Client](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
+- [ServiceModel Metadata Utility Tool (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)

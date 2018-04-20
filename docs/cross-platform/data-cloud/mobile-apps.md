@@ -15,7 +15,7 @@ _Samples and code downloads for the Azure portal documentation._
 
 <!--
 NOTE TO AUTHORS: this page is referenced from
-http://azure.microsoft.com/en-us/develop/mobile/xamarin/
+http://azure.microsoft.com/develop/mobile/xamarin/
 as https://developer.xamarin.com/guides/cross-platform/data-cloud/mobile-services/
 A redirect has been put in place to /mobile-apps/ HOWEVER the /Resources/ .ZIP files are still located in /mobile-services/ so that the following permalinks don't break
 
@@ -50,8 +50,8 @@ It covers creating a new Azure Mobile App in the portal and then downloading and
 
 Demonstrates how to add server-side scripts to Azure Mobile Services data tables to implement server-side validation and other functionality.
 
--  [iOS](https://azure.microsoft.com/en-us/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
--  [Android](https://azure.microsoft.com/en-us/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
+-  [iOS](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
+-  [Android](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
 -->
 
 <!--
@@ -59,16 +59,16 @@ Demonstrates how to add server-side scripts to Azure Mobile Services data tables
 
 A quick example of paging large sets of data using Skip() and Take().
 
--  [iOS](https://azure.microsoft.com/en-us/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
--  [Android](https://azure.microsoft.com/en-us/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
+-  [iOS](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
+-  [Android](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
 -->
 
 ## Get Started with Users
 
 Provides complete instructions for configuring and coding a Login screen using Azure Mobile Services. Supported authentication providers include Microsoft, Google, Facebook, and Twitter.
 
--  [iOS](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-ios-get-started-users/)
--  [Android](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-android-get-started-users/)
+-  [iOS](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-ios-get-started-users/)
+-  [Android](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-android-get-started-users/)
 
 
 ## Authorize Users in Scripts
@@ -103,7 +103,7 @@ Complete instructions to configure push notifications on the Apple and Google we
 - [GetStartedWithPush (sample)](https://github.com/xamarin/mobile-samples/tree/master/Azure/GetStartedWithPush)
 - [NotificationHubs (sample)](https://github.com/xamarin/mobile-samples/tree/master/Azure/NotificationHubs)
 - [Azure Mobile Client](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)
-- [Azure Mobile Apps learning path](https://azure.microsoft.com/en-us/documentation/learning-paths/appservice-mobileapps/)
+- [Azure Mobile Apps learning path](https://azure.microsoft.com/documentation/learning-paths/appservice-mobileapps/)
 
 <!--
 - [ValidateModifyData (sample)](https://github.com/xamarin/mobile-samples/tree/master/Azure/ValidateModifyData)

@@ -260,7 +260,7 @@ This code results in the following behavior:
 
 `System.Math.Atan2` can be used to convert an offset to an angle. The function name `Atan2` comes from the trigonometric function arctangent. The "2" suffix differentiates this function from the standard `Atan` function, which strictly matches the mathematical behavior of arctangent. Arctangent is a function which returns a value between -90 and +90 degrees (or the equivalent in radians). Many applications, including computer games, often require a full 360 degrees of values, so the `Math` class includes `Atan2` to satisfy this need.
 
-Notice that the code above passes the Y parameter first, then the X parameter, when calling the `Atan2` method. This is backwards from the usual X, Y ordering of position coordinates. For more information [see the Atan2 docs](https://msdn.microsoft.com/en-us/library/system.math.atan2(v=vs.110).aspx).
+Notice that the code above passes the Y parameter first, then the X parameter, when calling the `Atan2` method. This is backwards from the usual X, Y ordering of position coordinates. For more information [see the Atan2 docs](https://msdn.microsoft.com/library/system.math.atan2(v=vs.110).aspx).
 
 It’s also worth noting that the return value from `Atan2` is in radians, which is another unit used to measure angles. This guide doesn’t cover the details of radians, but keep in mind that all trigonometric functions in the `System.Math` namespace use radians, so any values must be converted to degrees before being used on CocosSharp objects. More information on radians can be found [in the radian Wikipedia page](http://en.wikipedia.org/wiki/Radian).
 

@@ -58,7 +58,7 @@ to develop cross-platform mobile applications.
 
 
 > [!NOTE]
-> This Getting Started series focuses on getting started building iOS and Android applications. Microsoft offers tutorials for Windows Phone development [here](http://dev.windowsphone.com/en-us/develop). To learn more about cross-platform development with Xamarin (including UWP apps for Windows), read the [Building Cross-Platform Applications guide](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md).
+> This Getting Started series focuses on getting started building iOS and Android applications. Microsoft offers information about [Universal Windows Platform (UWP) development](https://docs.microsoft.com/windows/uwp/develop/) for tablets and desktops. To learn more about cross-platform development with Xamarin (including UWP apps for Windows), read the [Building Cross-Platform Applications guide](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md).
 
 
 

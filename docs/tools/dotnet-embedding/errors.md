@@ -225,7 +225,7 @@ In such cases only two generated `increment` selectors will be created, both cal
 
 ### EM1033: Method `M` is not generated because another method exposes the operator with a friendly name.
 
-This is a **warning** that the method `M` is not generated because another method exposes the operator with a friendly name. (https://msdn.microsoft.com/en-us/library/ms229032(v=vs.110).aspx)
+This is a **warning** that the method `M` is not generated because another method exposes the operator with a friendly name. (https://msdn.microsoft.com/library/ms229032(v=vs.110).aspx)
 
 <a name="EM1034" />
 

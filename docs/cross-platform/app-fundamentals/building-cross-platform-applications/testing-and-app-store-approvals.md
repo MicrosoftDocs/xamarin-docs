@@ -119,7 +119,7 @@ actual process to submit apps is covered in the following documentation:
 
 - [Publishing to Apple's iOS App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
 - [Preparing an app for Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md)
-- Windows developers should visit the [Windows Dev Center](https://developer.microsoft.com/en-us/windows/windows-apps) to read about submitting their apps.
+- Windows developers should visit the [Windows Dev Center](https://developer.microsoft.com/windows/windows-apps) to read about submitting their apps.
 
 The remainder of this section discusses things you should take into
 consideration to ensure your app is approved without any hiccups.

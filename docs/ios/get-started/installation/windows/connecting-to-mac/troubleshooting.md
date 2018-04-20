@@ -264,7 +264,7 @@ If the normal log files still do not provide sufficient information to diagnose 
 
 1. Quit Visual Studio.
 
-2. Start a [**Developer Command Prompt**](https://msdn.microsoft.com/en-us/library/ms229859(v=vs.110).aspx).
+2. Start a [**Developer Command Prompt**](https://msdn.microsoft.com/library/ms229859(v=vs.110).aspx).
 
 3. Run the following command in the command prompt to launch Visual Studio with verbose logging:
 

@@ -99,7 +99,7 @@ These are the logs from the `XamarinInstaller.exe` installer.
 msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 ```
 
-Reference: [Command-Line Options](http://msdn.microsoft.com/en-us/library/aa367988.aspx)
+Reference: [Command-Line Options](http://msdn.microsoft.com/library/aa367988.aspx)
 
 #### <a id="visual-studio-startup-verbose-logs" name="visual-studio-startup-verbose-logs" />Visual Studio startup, verbose logs
 
@@ -107,7 +107,7 @@ Reference: [Command-Line Options](http://msdn.microsoft.com/en-us/library/aa3679
 devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 ```
 
-Reference: [/Log (devenv.exe)](http://msdn.microsoft.com/en-us/library/ms241272.aspx)
+Reference: [/Log (devenv.exe)](http://msdn.microsoft.com/library/ms241272.aspx)
 
 ### <a id="mac-logs" name="mac-logs" />Mac logs
 

@@ -137,7 +137,7 @@ Objective-C uses *blocks* to create closures, where you can create a function in
 };
 ```
 
-For more information on lambda expressions, see Microsoft’s [C# Programming Guide](http://msdn.microsoft.com/en-us/library/vstudio/bb397687.aspx).
+For more information on lambda expressions, see Microsoft’s [C# Programming Guide](http://msdn.microsoft.com/library/vstudio/bb397687.aspx).
 
 ## Summary
 

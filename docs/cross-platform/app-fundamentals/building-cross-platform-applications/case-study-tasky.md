@@ -201,7 +201,7 @@ public T GetItem<T> (int id) where T : BL.Contracts.IBusinessEntity, new ()
 
 #### Locking to prevent Concurrent Access
 
-A [lock](http://msdn.microsoft.com/en-us/library/c5kehkcz(v=vs.100).aspx) is implemented within the `TaskItemDatabase`
+A [lock](http://msdn.microsoft.com/library/c5kehkcz(v=vs.100).aspx) is implemented within the `TaskItemDatabase`
 class to prevent concurrent access to the database. This is to ensure concurrent
 access from different threads is serialized (otherwise a UI component might
 attempt to read the database at the same time a background thread is updating

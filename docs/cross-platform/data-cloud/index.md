@@ -33,8 +33,8 @@ There is a collection of [Azure Mobile Apps documentation](~/cross-platform/data
   to help implement push notifications across platforms.
 
 Configure your apps on the [Azure App Services portal](https://portal.azure.com/)
-  to access Mobile Apps, Web APIs, Storage, and much more. Learn about [how app services are different](http://azure.microsoft.com/en-us/updates/whats-new-with-azure-app-service/) and watch in
-  [these videos from Microsoft](http://azure.microsoft.com/en-us/campaigns/azure-march-announcement/).
+  to access Mobile Apps, Web APIs, Storage, and much more. Learn about [how app services are different](http://azure.microsoft.com/updates/whats-new-with-azure-app-service/) and watch in
+  [these videos from Microsoft](http://azure.microsoft.com/campaigns/azure-march-announcement/).
 
 ## Active Directory Authentication
 
@@ -73,7 +73,7 @@ incorporated into Xamarin apps:
 - [MyShoppe](https://github.com/jamesmontemagno/MyShoppe) - Azure Mobile Apps.
 
 - [eShop](https://github.com/dotnet-architecture/eShopOnContainers) – sample for the [Architecture series](https://www.microsoft.com/net/learn/architecture) of ebooks.
-- [MyDriving](https://azure.microsoft.com/en-us/campaigns/mydriving/) – Azure + IoT sample from Build 2016.
+- [MyDriving](https://azure.microsoft.com/campaigns/mydriving/) – Azure + IoT sample from Build 2016.
 
 
 ## Related Links

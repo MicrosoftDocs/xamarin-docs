@@ -103,7 +103,7 @@ To enable this feature, do the following:
 1. Create a Message App Extension.
 2. Add the `com.apple.developer.associated-domains` to the app's entitlements and include a list of web domains that host the images the Message App Extension is sharing. For each domain, specify the `spotlight-image-search` service.
 3. Add a `apple-app-site-association` file to the website that is hosting the images. This file includes a dictionary for the `spotlight-image-search` service and includes the app's ID, which is the Team ID or App ID prefix followed by the Bundle ID. The file can contain up to 500 paths and patterns that will be indexed by Spotlight and included in popular image searches. For more information, please see Apple's [Creating and Uploading the Association File](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html#//apple_ref/doc/uid/TP40016308-CH12-SW4) documentation.
-4. Allow the Applebot to crawl the websites. Please see Apple's [About Applebot](https://support.apple.com/en-us/HT204683) documentation.
+4. Allow the Applebot to crawl the websites. Please see Apple's [About Applebot](https://support.apple.com/HT204683) documentation.
 
 See our [Message App Integration](~/ios/platform/message-app-integration/index.md) documentation for more details.
 

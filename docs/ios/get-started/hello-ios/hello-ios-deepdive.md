@@ -81,7 +81,7 @@ On the right is the *Solution Pane*, which contains the directory structure and 
 
 In the [Hello, iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md) walkthrough, you created a Solution called **Phoneword** and placed an iOS Project - **Phoneword_iOS** - inside it. The items inside the Project include:
 
--  **References** - Contains the assemblies required to build and run the application. Expand the directory to see references to .NET assemblies such as  [System](http://msdn.microsoft.com/en-us/library/system%28v=vs.110%29.aspx) , System.Core, and  [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml%28v=vs.110%29.aspx) , as well as a reference to Xamarin's Xamarin.iOS assembly.
+-  **References** - Contains the assemblies required to build and run the application. Expand the directory to see references to .NET assemblies such as  [System](http://msdn.microsoft.com/library/system%28v=vs.110%29.aspx) , System.Core, and  [System.Xml](http://msdn.microsoft.com/library/system.xml%28v=vs.110%29.aspx) , as well as a reference to Xamarin's Xamarin.iOS assembly.
 -  **Packages** - The Packages directory contains ready-made NuGet packages.
 -  **Resources** - The Resources folder stores other media.
 -  **Main.cs** – This contains the main entry point of the application. To start the application, the name of the main application class, the  `AppDelegate`, is passed in .

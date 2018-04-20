@@ -336,4 +336,4 @@ This article has demonstrated how consume Visual Basic code in Xamarin applicati
 ## Related Links
 
 - [TaskyPortableVB (sample)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB)
-- [Cross-Platform Development with the .NET Framework (Microsoft)](http://msdn.microsoft.com/en-us/library/gg597391(v=vs.110).aspx)
+- [Cross-Platform Development with the .NET Framework (Microsoft)](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)

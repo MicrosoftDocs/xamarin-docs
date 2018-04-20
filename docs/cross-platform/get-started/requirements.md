@@ -95,7 +95,7 @@ running Visual Studio).
 
 > [!NOTE]
 >
->* [Windows Phone 8.1 emulator download](https://www.microsoft.com/en-us/download/details.aspx?id=43719).
+>* [Windows Phone 8.1 emulator download](https://www.microsoft.com/download/details.aspx?id=43719).
 >* The Windows Phone 10 emulator is included with the Visual Studio 2015 UWP SDK.
 
 <a name="install" />
@@ -104,7 +104,7 @@ running Visual Studio).
 
 The latest Xamarin release for macOS can be downloaded from
 [xamarin.com/download](http://xamarin.com/download). For Windows,
-follow the [Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio)
+follow the [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio)
 installation instructions.
 
 A complete list of our current product versions is available on the

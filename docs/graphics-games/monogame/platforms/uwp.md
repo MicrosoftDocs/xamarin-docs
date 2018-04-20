@@ -26,9 +26,9 @@ Developing MonoGame UWP apps requires:
 - Setting device to developer mode
 - [MonoGame 3.5 for Visual Studio](http://www.monogame.net/2016/03/17/monogame-3-5/) or newer
 
-For more information, see this [page on setting up for Windows 10 UWP development](https://msdn.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
+For more information, see this [page on setting up for Windows 10 UWP development](https://msdn.microsoft.com/windows/uwp/get-started/get-set-up).
 
-Xbox One games can be developed on retail Xbox One hardware. Additional software is required on both the developing PC and the Xbox One. For information on configuring an Xbox One for game development, see this page on [setting up an Xbox One](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index).
+Xbox One games can be developed on retail Xbox One hardware. Additional software is required on both the developing PC and the Xbox One. For information on configuring an Xbox One for game development, see this page on [setting up an Xbox One](https://msdn.microsoft.com/windows/uwp/xbox-apps/index).
 
 ## Creating an Empty Template
 

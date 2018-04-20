@@ -40,7 +40,7 @@ These steps will work for any iOS project that uses the MSBuild build engine on 
 2. Set the DestinationFolder to the desired output folder. As usual you may use MSBuild properties (like $(OutputPath)) within this argument if you wish.
 
 ## Notes
-- The `CreateIpaDependsOn` property is defined in the `Xamarin.iOS.Common.targets` file that is part of Xamarin.iOS. It behaves as described under *Overriding 'DependsOn' Properties* on [https://msdn.microsoft.com/en-us/library/ms366724.aspx](https://msdn.microsoft.com/en-us/library/ms366724.aspx).
+- The `CreateIpaDependsOn` property is defined in the `Xamarin.iOS.Common.targets` file that is part of Xamarin.iOS. It behaves as described under *Overriding 'DependsOn' Properties* on [https://msdn.microsoft.com/library/ms366724.aspx](https://msdn.microsoft.com/library/ms366724.aspx).
 
 - You could use a **Move** Task rather than a **Copy** Task if you preferred. If you choose that option and you are building on Windows, you will need to use the fully-qualified task name `<Microsoft.Build.Tasks.Move>` to avoid an ambiguity with the XamarinVS build tasks.
 
@@ -74,6 +74,6 @@ These steps will work for any iOS project that uses the MSBuild build engine on 
 2. Set the `DestinationFolder` to the desired output folder. As usual you may use MSBuild properties (like `$(OutputPath)`) within this argument if you wish.
 
 ## Notes
-- The `CreateIpaDependsOn` property is defined in the `Xamarin.iOS.Common.targets` file that is part of Xamarin.iOS. It behaves as described under *Overriding "DependsOn" Properties* on [https://msdn.microsoft.com/en-us/library/ms366724.aspx](https://msdn.microsoft.com/en-us/library/ms366724.aspx).
+- The `CreateIpaDependsOn` property is defined in the `Xamarin.iOS.Common.targets` file that is part of Xamarin.iOS. It behaves as described under *Overriding "DependsOn" Properties* on [https://msdn.microsoft.com/library/ms366724.aspx](https://msdn.microsoft.com/library/ms366724.aspx).
 
 - You could use a **Move** Task rather than a **Copy** Task if you preferred. If you choose that option and you are building on Windows, you will need to use the fully-qualified task name `<Microsoft.Build.Tasks.Move>` to avoid an ambiguity with the XamarinVS build tasks.

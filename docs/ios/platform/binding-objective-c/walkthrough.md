@@ -737,4 +737,4 @@ This article walked through the process of creating and using a Xamarin.iOS bind
 - [Binding Details](~/cross-platform/macios/binding/overview.md)
 - [Binding Types Reference Guide](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin for Objective-C Developers](~/ios/get-started/objective-c-developers/index.md)
-- [Framework Design Guidelines](http://msdn.microsoft.com/en-us/library/ms229042.aspx)
+- [Framework Design Guidelines](http://msdn.microsoft.com/library/ms229042.aspx)

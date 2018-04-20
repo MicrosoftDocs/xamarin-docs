@@ -17,7 +17,7 @@ Library project types (such as PCL or .NET Standard, or the new NuGet project ty
 **NuGet Package** section in the **Project Options** window.
 
 The **Metadata** section configures the values used in the
-[**.nuspec** NuGet package manifest file](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#the-role-and-structure-of-the-nuspec-file).
+[**.nuspec** NuGet package manifest file](https://docs.microsoft.com/nuget/create-packages/creating-a-package#the-role-and-structure-of-the-nuspec-file).
 
 ## Required Information
 
@@ -25,17 +25,17 @@ The **General** tab contains four fields that must be entered to generate a NuGe
 
 [![](metadata-images/metadata-general-sml.png "NuGet package required metadata window")](metadata-images/metadata-general.png#lightbox)
 
-- **ID** – The package identifier, which should be unique within Nuget.org (or wherever the package will be distributed). Follow this [guidance](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) and only use characters that are valid in a URL (no spaces, and avoid most special characters).
-- **Version** – Choose a version number consistent with [NuGet's versioning rules](https://docs.microsoft.com/en-us/nuget/create-packages/dependency-versions).
+- **ID** – The package identifier, which should be unique within Nuget.org (or wherever the package will be distributed). Follow this [guidance](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) and only use characters that are valid in a URL (no spaces, and avoid most special characters).
+- **Version** – Choose a version number consistent with [NuGet's versioning rules](https://docs.microsoft.com/nuget/create-packages/dependency-versions).
 - **Authors** – Comma-separated list of names.
 - **Description** – Overview of the package's features which is displayed when users are selecting the package.
 
 > [!NOTE]
 > Remember to increment the version number when building new versions for distribution to NuGet or other users.
 
-For more information, see the [Required Elements Reference](https://docs.microsoft.com/en-us/nuget/schema/nuspec#required-metadata-elements)
-for more information, as well as these detailed instructions on [Choosing a unique package identifier and setting the version number](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) and
-[Setting a package type](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#setting-a-package-type).
+For more information, see the [Required Elements Reference](https://docs.microsoft.com/nuget/schema/nuspec#required-metadata-elements)
+for more information, as well as these detailed instructions on [Choosing a unique package identifier and setting the version number](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) and
+[Setting a package type](https://docs.microsoft.com/nuget/create-packages/creating-a-package#setting-a-package-type).
 
 > [!IMPORTANT]
 > All fields on this tab must be entered; otherwise, an error message will appear:
@@ -48,7 +48,7 @@ The **Details** tab contains optional fields to be included in the NuGet package
 
 [![](metadata-images/metadata-detail-sml.png "NuGet package optional metadata window")](metadata-images/metadata-detail.png#lightbox)
 
-Refer to the [Optional Elements Reference](https://docs.microsoft.com/en-us/nuget/schema/nuspec#optional-metadata-elements)
+Refer to the [Optional Elements Reference](https://docs.microsoft.com/nuget/schema/nuspec#optional-metadata-elements)
 for more information about the required and optional fields.
 
 > [!NOTE]
@@ -57,4 +57,4 @@ for more information about the required and optional fields.
 
 ## Related Links
 
-- [.nuspec Reference](https://docs.microsoft.com/en-us/nuget/schema/nuspec#general-form-and-schema)
+- [.nuspec Reference](https://docs.microsoft.com/nuget/schema/nuspec#general-form-and-schema)

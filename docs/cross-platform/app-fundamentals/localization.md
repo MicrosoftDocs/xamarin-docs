@@ -116,7 +116,7 @@ If the data is being input by the app user, parse it using a CultureInfo instanc
 double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 ```
 
-See the [Parsing Numeric Strings](http://msdn.microsoft.com/en-us/library/xbtzcc4w(v=vs.110).aspx) and [Parsing Date and Time Strings](http://msdn.microsoft.com/en-us/library/2h3syy57(v=vs.110).aspx) MSDN articles for additional information.
+See the [Parsing Numeric Strings](http://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) and [Parsing Date and Time Strings](http://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) MSDN articles for additional information.
 
 <a name="rtl" />
 
@@ -140,7 +140,7 @@ currently automatically support RTL rendering.
 
 Different languages define the sort order of their alphabets differently, even when they use the same character set.
 
-See the [Detail of String Comparison](http://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) in [Best Practices for Using Strings in the .NET Framework](http://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx) for an example where language (CultureInfo) affects the sort order.
+See the [Detail of String Comparison](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) in [Best Practices for Using Strings in the .NET Framework](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) for an example where language (CultureInfo) affects the sort order.
 
 It’s unlikely the built-in database capabilities on the mobile platforms will support language-specific sort ordering so you may be required to implement additional code in your business logic.
 
@@ -323,4 +323,4 @@ Continue reading technical details for the platform you are interested in:
 
 - [Apple's Localization Overview](https://developer.apple.com/internationalization/)
 - [Android's Localization Checklist](http://developer.android.com/distribute/tools/localization-checklist.html)
-- [Best Practices for Developing World-Ready Applications (MSDN)](http://msdn.microsoft.com/en-us/library/w7x1y988%28v=vs.90%29.aspx)
+- [Best Practices for Developing World-Ready Applications (MSDN)](http://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)

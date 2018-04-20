@@ -62,7 +62,7 @@ This includes profiles that are combinations of:
 -  UWP apps
 
 You can read more about the different profiles' capabilities on
-[Microsoft’s website](http://msdn.microsoft.com/en-us/library/gg597391(v=vs.110).aspx)
+[Microsoft’s website](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)
 and see another community member's [PCL profile summary](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY)
 which includes supported framework info and other notes.
 
@@ -450,4 +450,4 @@ This article has briefly discussed the benefits and pitfalls of Portable Class L
 - [Portable Visual Basic](~/cross-platform/platform/visual-basic/index.md)
 - [Shared Projects](~/cross-platform/app-fundamentals/shared-projects.md)
 - [Sharing Code Options](~/cross-platform/app-fundamentals/code-sharing.md)
-- [Cross-Platform Development with the .NET Framework (Microsoft)](http://msdn.microsoft.com/en-us/library/gg597391(v=vs.110).aspx)
+- [Cross-Platform Development with the .NET Framework (Microsoft)](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)

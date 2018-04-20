@@ -224,7 +224,7 @@ platforms you are targeting:
 
 -   **iOS** –  [Apple's Human Interface Guidelines](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html)
 -   **Android** –  [Google's User Interface Guidelines](http://developer.android.com/guide/practices/ui_guidelines/index.html)
--   **Windows** –  [User Experience Design Guidelines for Windows](https://developer.microsoft.com/en-us/windows/design)
+-   **Windows** –  [User Experience Design Guidelines for Windows](https://developer.microsoft.com/windows/design)
 
 
  <a name="Library_and_Code_Re-use" />

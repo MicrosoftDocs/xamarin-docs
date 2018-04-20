@@ -93,7 +93,7 @@ using (TextReader reader = new StreamReader("./TestData/test.xml")) {
 }
 ```
 
-Refer to the MSDN documentation for the [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml.aspx) namespace for more information about [serialization](http://msdn.microsoft.com/en-us/library/system.xml.serialization.aspx). You should also review the [Xamarin.iOS documentation](~/ios/deploy-test/linker.md) on the linker
+Refer to the MSDN documentation for the [System.Xml](http://msdn.microsoft.com/library/system.xml.aspx) namespace for more information about [serialization](http://msdn.microsoft.com/library/system.xml.serialization.aspx). You should also review the [Xamarin.iOS documentation](~/ios/deploy-test/linker.md) on the linker
 – usually you will need to add the `[Preserve]` attribute to
 classes you intend to serialize.
 
@@ -120,7 +120,7 @@ var directoryname = Path.Combine (documents, "NewDirectory");
 Directory.CreateDirectory(directoryname);
 ```
 
-For more information about the System.IO namespace, see the [MSDN Documentation](http://msdn.microsoft.com/en-us/library/system.io.aspx).
+For more information about the System.IO namespace, see the [MSDN Documentation](http://msdn.microsoft.com/library/system.io.aspx).
 
 
 ### Serializing Json

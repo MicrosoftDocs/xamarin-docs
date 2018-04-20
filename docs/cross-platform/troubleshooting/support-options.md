@@ -28,7 +28,7 @@ The Xamarin support team helps monitor each of these options.  We encourage all 
 
 ### Visual Studio email support incidents for Xamarin topics
 
-Xamarin SDK and IDE features are eligible for technical support incidents as part of [Visual Studio subscriber benefits](https://msdn.microsoft.com/subscriptions/bb266240) and [Microsoft Premier Support](https://www.microsoft.com/en-us/microsoftservices/support.aspx).  This matches up with the policies for other development platforms in Visual Studio like UWP and ASP.NET.  Xamarin incidents submitted this way will be assigned to the Xamarin support team.  See the [Microsoft Support FAQ](https://support.microsoft.com/gp/offerprophone) for more information on the policies for these incidents.
+Xamarin SDK and IDE features are eligible for technical support incidents as part of [Visual Studio subscriber benefits](https://msdn.microsoft.com/subscriptions/bb266240) and [Microsoft Premier Support](https://www.microsoft.com/microsoftservices/support.aspx).  This matches up with the policies for other development platforms in Visual Studio like UWP and ASP.NET.  Xamarin incidents submitted this way will be assigned to the Xamarin support team.  See the [Microsoft Support FAQ](https://support.microsoft.com/gp/offerprophone) for more information on the policies for these incidents.
 
 For Xamarin Test Cloud, support incidents can be submitted by navigating to the [Test Cloud login page](https://testcloud.xamarin.com/login) and opening the **Support** link.
 
