@@ -529,7 +529,7 @@ replace the template code with the following:
 ```csharp
 using Android.App;
 using Android.Content;
-using Android.Gms.Gcm.Iid;
+using Android.Gms.Iid;
 
 namespace ClientApp
 {
