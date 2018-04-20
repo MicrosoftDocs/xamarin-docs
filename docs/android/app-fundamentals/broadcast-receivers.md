@@ -6,13 +6,12 @@ ms.assetid: B2727160-12F2-43EE-84B5-0B15C8FCF4BD
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 03/19/2018
+ms.date: 04/20/2018
 ---
 
 # Broadcast Receivers in Xamarin.Android
 
 _This section discusses how to use a Broadcast Receiver._
-
 
 ## Broadcast Receiver Overview
 
@@ -51,7 +50,7 @@ public class SampleReceiver : BroadcastReceiver
     public override void OnReceive(Context context, Intent intent)
     {
         // Do stuff here.
-        
+
         String value = intent.GetStringExtra("key");
     }
 }
@@ -93,9 +92,9 @@ public class MySampleBroadcastReceiver : BroadcastReceiver
 }
 ```
 
-Apps that target Android 8.0 (API level 26) or higher may not statically register for an implicit broadcast. Apps may still statically register for an explicit broadcast. There is a small list of of implicit broadcasts that are exempt from this restriction. These exceptions are described in the [Implicit Broadcast Exceptions](https://developer.android.com/guide/components/broadcast-exceptions.html) guide in the Android documentation. Apps that are interested in implicit broadcasts must do so dynamically using the `RegisterReceiver` method. This is described next.  
+Apps that target Android 8.0 (API level 26) or higher may not statically register for an implicit broadcast. Apps may still statically register for an explicit broadcast. There is a small list of of implicit broadcasts that are exempt from this restriction. These exceptions are described in the [Implicit Broadcast Exceptions](https://developer.android.com/guide/components/broadcast-exceptions.html) guide in the Android documentation. Apps that are interested in implicit broadcasts must do so dynamically using the `RegisterReceiver` method. This is described next.
 
-### Context-Registering a Broadcast Receiver 
+### Context-Registering a Broadcast Receiver
 
 Context-registration  (also referred to as dynamic registration) of a receiver is performed by invoking the `RegisterReceiver` method, and the broadcast receiver must be unregistered with a call to the `UnregisterReceiver` method. To prevent leaking resources, it is important to unregister the receiver when it is no longer relevant for the context (the Activity or service). For example, a service may broadcast an intent to inform an Activity that updates are available to be displayed to the user. When the Activity starts, it would register for those Intents. When the Activity is moved into the background and no longer visible to the user, it should unregister the receiver because the UI for displaying the updates is no longer visible. The following code snippet is an example of how to register and unregister a broadcast receiver in the context of an Activity:
 
@@ -104,22 +103,22 @@ Context-registration  (also referred to as dynamic registration) of a receiver i
 public class MainActivity: Activity 
 {
     MySampleBroadcastReceiver receiver;
-    
+
     protected override void OnCreate(Bundle savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
         receiver = new MySampleBroadcastReceiver()
-        
+
         // Code omitted for clarity
     }
-    
+
     protected override OnResume() 
     {
         base.OnResume();
         RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
         // Code omitted for clarity
     }
-    
+
     protected override OnPause() 
     {
         UnregisterReceiver(receiver);
@@ -153,28 +152,32 @@ A broadcast may be published to all apps installed on the device creating an Int
 
     This snippet is another example of sending a broadcast by using the
     `Intent.SetAction` method to identify the action:
-    
+
     ```csharp 
     Intent intent = new Intent();
     intent.SetAction("com.xamarin.example.TEST");
     intent.PutExtra("key", "value");
     SendBroadcast(intent);
     ```
-   
+
 2. **Context.SendOrderedBroadcast** &ndash; This is method is very similar to `Context.SendBroadcast`, with the difference being that the intent will be published one at time to receivers, in the order that the recievers were registered.
-   
+
 ### LocalBroadcastManager
 
-The [Xamarin Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) provides a helper class called [`LocalBroadcastManager`](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html). The `LocalBroadcastManager` is intended for apps that do not want to send or receive broadcasts from other apps on the device. The `LocalBroadcastManager` will only publish messages within the context of the application. Other apps on the device cannot receive the messages that are published with the `LocalBroadcastManager`. 
+The [Xamarin Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) provides a helper class called [`LocalBroadcastManager`](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html). The `LocalBroadcastManager` is intended for apps that do not want to send or receive broadcasts from other apps on the device. The `LocalBroadcastManager` will only publish messages within the context of the application, and only to those broadcast receivers that are registered with the `LocalBroadcastManager`. This code snippet is an example of registering a broadcast receiver with `LocalBroadcastManager`:
 
-This code snippet shows how to dispatch an Intent using the `LocalBroadcastManager`:
+```csharp
+Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this). RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
+```
+
+Other apps on the device cannot receive the messages that are published with the `LocalBroadcastManager`. This code snippet shows how to dispatch an Intent using the `LocalBroadcastManager`:
 
 ```csharp
 Intent message = new Intent("com.xamarin.example.TEST");
 // If desired, pass some values to the broadcast receiver.
 intent.PutExtra("key", "value");
 Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this).SendBroadcast(message);
-``` 
+```
 
 ## Related Links
 
