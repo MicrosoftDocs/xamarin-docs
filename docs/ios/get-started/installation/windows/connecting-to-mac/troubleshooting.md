@@ -110,36 +110,36 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
 
 <a name="knownissues" />
 
-## Known Issues and Limitations
+### Known Issues and Limitations
 
 > [!NOTE]
 > This section only applies if you have already connected successfully to the Mac build host with your Mac username and password using the OpenSSH SSH client, as discussed in steps 8 and 9 above.
 
-### "Invalid credentials. Please try again."
+#### "Invalid credentials. Please try again."
 
 Known causes:
 
 - **Limitation** – This error can appear when attempting to log in to the build host using the account _Full Name_ if the name includes an accented character. This is a limitation of the [SSH.NET library](https://sshnet.codeplex.com/) that Xamarin uses for the SSH connection. **Workaround**: See step 5 above.
 
-### "Unable to authenticate with SSH keys. Please try to log in with credentials first"
+#### "Unable to authenticate with SSH keys. Please try to log in with credentials first"
 
 Known cause:
 
 - **SSH security restriction** – This message most often means that one of the files or directories in the fully qualified path of **$HOME/.ssh/authorized\_keys** on the Mac has write permissions enabled for _other_ or _group_ members. **Common fix**: Run `chmod og-w "$HOME"` in a Terminal command prompt on the Mac. For details about which particular file or directory is causing the problem, run `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` in Terminal, and then open the **sshd.log** file from your Desktop and look for "Authentication refused: bad ownership or modes".
 
-### "Trying to connect..." never completes
+#### "Trying to connect..." never completes
 
 - **Bug [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** – This problem can happen on Xamarin 4.1 if the **Login shell** in the **Advanced Options** context menu for the Mac user in **System Preferences &gt; Users &amp; Groups** is set to a value other than **/bin/bash**. (Starting with Xamarin 4.2, this scenario instead leads to the "Couldn't connect" error message.) **Workaround**: Change the **Login shell** back to the original default of **/bin/bash**.
 
 <a name="tryagain" />
 
-### "Couldn't connect to MacBuildHost.local. Please try again."
+#### "Couldn't connect to MacBuildHost.local. Please try again."
 
 Reported causes:
 
 - **Bug** – A few users have seen this error message along with a more detailed error in the log files "An unexpected error occurred while configuring SSH for the user ... Session operation has timed out" when attempting to log in to the build host using an Active Directory or other directory service domain user account. **Workaround:** Log in to the build host using a local user account instead.
 
-- **Bug** – Some users have seen this error when attempting to connect to the build host by double-clicking the name of the Mac in the connection dialog. **Possible workaround**: [Manually add the Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manual-add) using the IP address.
+- **Bug** – Some users have seen this error when attempting to connect to the build host by double-clicking the name of the Mac in the connection dialog. **Possible workaround**: [Manually add the Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac) using the IP address.
 
 - **Bug [#35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)** – Some users have run across this error when using a wireless network connection between the Mac build host and Windows. **Possible workaround**: Move both computers to a wired network connection.
 
@@ -177,7 +177,7 @@ Reported causes:
 
 <a name="clearing" />
 
-### Clearing the Broker, IDB, Build, and Designer Agents on the Mac
+#### Clearing the Broker, IDB, Build, and Designer Agents on the Mac
 
 If your log files show a problem during the "Installing", "Uploading", or "Starting" steps for any of Mac agents, you can try deleting the **XMA** cache folder to force Visual Studio to re-upload them.
 
@@ -197,31 +197,31 @@ If your log files show a problem during the "Installing", "Uploading", or "Start
     del %localappdata%\Temp\Xamarin\XMA
     ```
     
-## Warning Messages
+### Warning Messages
 
 This section discusses a few messages that can appear in the Output windows and logs that you can usually ignore.
 
-### "There is a mismatch between the installed Xamarin.iOS ... and the local Xamarin.iOS"
+#### "There is a mismatch between the installed Xamarin.iOS ... and the local Xamarin.iOS"
 
 As long as you have confirmed that both Mac and Windows are updated to the same Xamarin distribution channel, this warning is ignorable.
 
-### "Failed to execute 'ls /usr/bin/mono': ExitStatus=1"
+#### "Failed to execute 'ls /usr/bin/mono': ExitStatus=1"
 
 This message is ignorable as long as the Mac is running OS X 10.11 (El Capitan) or newer. This message is not a problem on OS X 10.11 because Xamarin also checks **/usr/local/bin/mono**, which is the correct expected location for `mono` on OS X 10.11.
 
-### "Bonjour service 'MacBuildHost' did not respond with its IP address."
+#### "Bonjour service 'MacBuildHost' did not respond with its IP address."
 
-This message is ignorable unless you notice that the connection dialog does not display the IP address of Mac build host. If the IP address _is_ missing in that dialog, you can still [manually add the Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manual-add).
+This message is ignorable unless you notice that the connection dialog does not display the IP address of Mac build host. If the IP address _is_ missing in that dialog, you can still [manually add the Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac).
 
-### "Invalid user a from 10.1.8.95" and "input\_userauth\_request: invalid user a [preauth]"
+#### "Invalid user a from 10.1.8.95" and "input\_userauth\_request: invalid user a [preauth]"
 
 You might notice this messages if you look in the **sshd.log**. These messages are part of the normal connection process. They appear because Xamarin uses the username **a** temporarily when retrieving the _SSH Fingerprint_.
 
-## Output Window and Log Files
+### Output Window and Log Files
 
 If Visual Studio hits an error when connecting to the build host, there are 2 locations to check for additional messages: the Output window and the log files.
 
-### Output Window
+#### Output Window
 
 The Output window is the best place to start. It displays messages about the main connection steps and errors. To view the Xamarin messages in the Output window:
 
@@ -231,7 +231,7 @@ The Output window is the best place to start. It displays messages about the mai
 
 [![](troubleshooting-images/troubleshooting-image11.png "Select Xamarin in the Output tab")](troubleshooting-images/troubleshooting-image11.png#lightbox)
 
-### Log Files
+#### Log Files
 
 If the Output window does not include enough information to diagnose the problem, the log files are the next place to look. The log files contain additional diagnostic messages that do not appear in the Output window. To view the log files:
 
@@ -258,7 +258,7 @@ If the Output window does not include enough information to diagnose the problem
 
 <a name="verboselogs" />
 
-### Verbose Log Files
+#### Verbose Log Files
 
 If the normal log files still do not provide sufficient information to diagnose the problem, one last technique to try is to enable verbose logging. The verbose logs are also preferred on bug reports.
 
@@ -283,6 +283,15 @@ If the normal log files still do not provide sufficient information to diagnose 
    ```
 
 If these verbose log files do not provide enough clues to resolve the issue directly, please [file a new bug report](https://bugzilla.xamarin.com/newbug) and attach both the .zip file from step 5 and the .log file from step 6.
+
+## Troubleshooting automatic Mac provisioning
+
+### IDE log files
+
+If you encounter any trouble using [automatic Mac
+provisioning](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning),
+take a look at the Visual Studio 2017 IDE logs, stored in
+**%LOCALAPPDATA%\Xamarin\Logs\15.0**.
 
 ## Troubleshooting Build and Deployment Errors
 
@@ -365,5 +374,5 @@ If you are troubleshooting a build problem and want to make sure the behavior is
 
 ## Related Links
 
-- [Connecting to the Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-- [Connecting a Mac to your Visual Studio environment with XMA (video)](https://university.xamarin.com/lightninglectures/xamarin-mac-agent)
+- [Pair to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+- [Xamarin Mac Build Agent - Xamarin University Lightning Lecture](https://www.youtube.com/watch?v=MBAPBtxkjFQ)

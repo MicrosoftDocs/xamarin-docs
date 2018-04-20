@@ -33,43 +33,29 @@ There are a few requirements that must be adhered to when developing for iOS in 
 
 There are a number of configuration options available, so you can decide which works best for your development needs. These are listed below:
 
--  Use a Mac as your main development Machine and run a Windows Virtual Machine with Visual Studio installed. We recommend using
+-  Use a Mac as your main development machine and run a Windows virtual machine with Visual Studio installed. We recommend using
 VM software such as [Parallels](http://www.parallels.com/products/desktop/) or [VMWare](http://www.vmware.com/products/fusion/) .
--  Use a Mac just as a Build Host. In this scenario it would be simply connected to the same network as a Windows machine with
+-  Use a Mac just as a build host. In this scenario it would be connected to the same network as a Windows machine with
 the [necessary](~/cross-platform/get-started/installation/windows.md#installation) tools installed.
 
 
 In either case, you should follow these steps:
 
-- [Install the Xamarin.iOS tools on your Mac host](https://docs.microsoft.com/visualstudio/mac/installation)
-- [Configure your Mac](~/ios/get-started/installation/windows/index.md#configuring)
+- [Install Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 - [Install Xamarin tools on Windows](~/cross-platform/get-started/installation/windows.md)
-
-To develop with Xamarin in Visual Studio, you must be using **at least** Visual Studio 2015 Professional or higher. Xamarin
-will **not work** with Express Editions of Visual Studio, as they do not support add-ins.
 
 ## Connecting to the Mac
 
-You can connect to your Mac build host either via the icon on the Visual Studio toolbar (providing an iOS application is open):
+To connect Visual Studio to your Mac build host, follow the instructions
+in the [Pair to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+guide.
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png "Connect to Mac icon")](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png#lightbox)
-
-Or by browsing to **Tools > Options** in Visual Studio and selecting **Xamarin > iOS Settings**:
-
- [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png "iOS option")](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png#lightbox)
-
-You can change the Mac Build Host by clicking the **Find Xamarin Mac Agent** button. The following screen is
-displayed to update the Mac Build Host:
-
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png "Xamarin Mac Agent Dialog")](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png#lightbox)
 
 
 ## Visual Studio Toolbar Overview
 
 Xamarin iOS for Visual Studio adds items to the Standard toolbar and to the new iOS toolbar.
 The functions of these toolbars are explained below.
-
-
 
 ### Standard Toolbar
 
@@ -175,7 +161,7 @@ To add objects to your view, use the **Toolbox** pane to drag and drop items ont
 
 ### Device Logging
 
-In Visual Studio 2015 and above the Android and iOS log pads are unified
+In Visual Studio 2017, the Android and iOS log pads are unified.
 
 The new Device Log tool window for Visual Studio allows to show logs for Android and iOS devices. It can be shown by executing any of the following commands:
 

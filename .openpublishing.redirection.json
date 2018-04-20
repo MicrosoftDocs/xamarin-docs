@@ -59,6 +59,15 @@
     {
       "source_path": "docs/xamarin-forms/data-cloud/authentication/aws.md",
       "redirect_url": "/xamarin/xamarin-forms/data-cloud/authentication"
+    },
+    {
+      "source_path": "docs/ios/get-started/installation/windows/connecting-to-mac/visual-studio-ssh.md",
+      "redirect_url": "/xamarin/ios/get-started/installation/windows/connecting-to-mac"
+    },
+    {
+      "source_path": "docs/ios/get-started/installation/windows/manual-installation.md",
+      "redirect_url": "/xamarin/ios/get-started/installation/windows"
     }
   ]
 }
+
