@@ -143,7 +143,7 @@ a greater number of classes from the BCL.
 The code sharing strategy you choose will be driven by the platforms you are
 targeting. Choose a method that works best for your project.
 
-PCL or .NET Standard are good choices for building sharable code libraries (especially publishing on NuGet). Shared Projects work well for application developers planning to use lots of plaform-specific functionality in their cross-platforma apps.
+PCL or .NET Standard are good choices for building sharable code libraries (especially publishing on NuGet). Shared Projects work well for application developers planning to use lots of plaform-specific functionality in their cross-platform apps.
 
 
 ## Related Links
