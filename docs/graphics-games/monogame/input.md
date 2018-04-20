@@ -20,7 +20,7 @@ The original XNA API provided the `Xbox360GamePad` class for reading input from 
 
 ## Reading Input from GamePad
 
-The `GameController` class provides a standardized way of reading input on any MonoGame platform. It provides information through two methods:
+The `GamePad` class provides a standardized way of reading input on any MonoGame platform. It provides information through two methods:
 
 - `GetState` – returns the current state of the controller’s buttons, analog sticks, and d-pad.
 - `GetCapabilities` – returns information about the capabilities of hardware, such as whether the controller has certain buttons or supports vibration.
