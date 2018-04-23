@@ -261,7 +261,7 @@ Some OOP purists may disapprove of the previous implementation of the `Timestamp
 Strictly speaking, it is not necessary for the client to know about the `TimestampService` and exposing that concrete class to clients can make an application more brittle and harder to maintain over it's lifetime. An alternate approach is to use an interface which exposes the `GetFormattedTimestamp()` method, and proxy calls to the service through the `Binder` (or possible the service connection class):  
 
 ```csharp
-public class TimestampBinder : Binder, IGetTimesamp
+public class TimestampBinder : Binder, IGetTimestamp
 {
     TimestampService service;
     public TimestampBinder(TimestampService service)
