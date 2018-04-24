@@ -6,77 +6,83 @@ ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.date: 06/12/2017
+ms.date: 04/20/2018
 ---
-
 # HttpClient Stack and SSL/TLS Implementation Selector for iOS/macOS
 
-## HttpClient Stack Selector
-
-Available for Xamarin.iOS, Xamarin.tvOS, and Xamarin.Mac: this controls which `HttpClient` implementation to use. The default continues to be an HttpClient that is powered by `HttpWebRequest`, while you can now optionally switch to an implementation that uses iOS, tvOS, or macOS native transports (`NSUrlSession` or `CFNetwork` depending on the OS). The upside is smaller binaries, and faster downloads, the downside is that it requires the event loop to be running for async operations to be executed.
+The **HttpClient Implementation  Selector** for Xamarin.iOS, Xamarin.tvOS, and Xamarin.Mac controls which `HttpClient` implementation to use. You can switch to an implementation that uses iOS, tvOS, or macOS native transports (`NSUrlSession` or `CFNetwork`, depending on the OS). The upside is TLS 1.2-support, smaller binaries, and faster downloads; the downside is that it requires the event loop to be running for async operations to be executed.
 
 Projects must reference the **System.Net.Http** assembly.
+
+> [!WARNING]
+> **April, 2018** – Due to increased security requirements, including PCI compliance, major cloud providers and web servers are expected to stop supporting TLS versions older than 1.2.  Xamarin projects created in previous versions of Visual Studio default to use older versions of TLS.
+>
+> In order to ensure your apps continue to work with these servers and services, **you should update your Xamarin projects with the `NSUrlSession` setting shown below, then re-build and re-deploy your apps** to your users.
 
 <a name="Selecting-a-HttpClient-Stack" />
 
 ### Selecting a HttpClient Stack
 
-To adjust the HttpClient being used by your app:
+To adjust the `HttpClient` being used by your app:
 
 1. Double-click the **Project Name** in the **Solution Explorer** to open the Project Options.
 2. Switch to the **Build** settings for your project (for example, **iOS Build** for a Xamarin.iOS app).
-3. From the **HttpClient Implementation** dropdown, select the HttpClient type as one of the following: **Managed**, **CFNetwork** or **NSUrlSession**.
+3. From the **HttpClient Implementation** dropdown, select the `HttpClient` type as one of the following: **NSUrlSession** (recommended), **CFNetwork**, or **Managed**.
 
 [![Choose HttpClient implementation from Managed, CFNetwork, or NSUrlSession](http-stack-images/http-xs-sml.png)](http-stack-images/http-xs.png#lightbox)
 
-<a name="Managed" />
-
-### Managed (Default)
-
-The Managed handler is the fully managed HttpClient handler that has been shipped with previous version of Xamarin.
-
-#### Pros:
-
- - It has the most compatible feature set with Microsoft .NET and older Xamarin versions.
-
-#### Cons:
-
- - It is not fully integrated with the Apple OSes and is limited to TLS 1.0.
- - It typically much slower at things like encryption than the native APIs.
- - It requires more managed code, thus creating a larger app distributable.
-
-<a name="CFNetwork" />
-
-### CFNetwork
-
-The CFNetwork-based handler is based on the native `CFNetwork` framework available in iOS 6 and newer.
-
-#### Pros:
-
- - It uses native APIs for better performance and smaller executable size.
- - Supports for newer standards such as TLS 1.2.
-
-#### Cons:
-
- - Requires iOS 6 or later.
- - Not available on watchOS.
- - Some HttpClient features/options are not available.
+> [!TIP]
+> For TLS 1.2 support the `NSUrlSession` option is recommended.
 
 <a name="NSUrlSession" />
 
 ### NSUrlSession
 
-The NSURLSession-based handler is based on the native `NSURLSession` framework available in iOS 7 and newer.
+The `NSURLSession`-based handler is based on the native `NSURLSession` framework available in iOS 7 and newer. 
+**This is the recommended setting.**
 
-#### Pros:
+#### Pros
 
- - It uses native APIs for better performance and smaller executable size.
- - Supports for the latest standards such as TLS 1.2.
+- It uses native APIs for better performance and smaller executable size.
+- Support for the latest standards such as TLS 1.2.
 
-#### Cons:
+#### Cons
 
- - Requires iOS 7 or later.
- - Some HttpClient features/options are not available.
+- Requires iOS 7 or later.
+- Some `HttpClient` features/options are not available.
+
+<a name="CFNetwork" />
+
+### CFNetwork
+
+The `CFNetwork`-based handler is based on the native `CFNetwork` framework available in iOS 6 and newer.
+
+#### Pros
+
+- It uses native APIs for better performance and smaller executable size.
+- Support for newer standards such as TLS 1.2.
+
+#### Cons
+
+- Requires iOS 6 or later.
+- Not available on watchOS.
+- Some HttpClient features/options are not available.
+
+<a name="Managed" />
+
+### Managed
+
+The Managed handler is the fully managed HttpClient handler that has been shipped with previous version of Xamarin.
+
+#### Pros
+
+- It has the most compatible feature set with Microsoft .NET and older Xamarin versions.
+
+#### Cons
+
+- It is not fully integrated with the Apple OSes and is limited to TLS 1.0. It may not be able to connect to secure web servers or cloud services in the future.
+- It typically much slower at things like encryption than the native APIs.
+- It requires more managed code, thus creating a larger app distributable.
 
 ### Programmatically Setting the HttpMessageHandler
 
@@ -100,14 +106,9 @@ This makes it possible to use a different `HttpMessageHandler` from what is decl
 <a name="Selecting-a-SSL-TLS-implementation" />
 <a name="Apple-TLS" />
 
-## SSL/TLS implementation build
+## SSL/TLS implementation
 
 SSL (Secure Socket Layer) and its successor, TLS (Transport Layer Security), provide support for HTTP and other network connections via `System.Net.Security.SslStream`. Xamarin.iOS, Xamarin.tvOS or Xamarin.Mac's `System.Net.Security.SslStream` implementation will call Apple's native SSL/TLS implementation instead of using the managed implementation provided by Mono. Apple's native implementation supports TLS 1.2.
-
-<a name="Mono" />
-
-> [!WARNING]
-> The **Mono/Managed** TLS provider is limited to SSL v3 and TLS v1. This TLS provider has been deprecated and is no longer available for Xamarin.iOS applications. 
 
 <a name="App-Transport-Security" />
 
