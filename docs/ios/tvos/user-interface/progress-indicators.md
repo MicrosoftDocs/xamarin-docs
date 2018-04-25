@@ -1,103 +1,162 @@
 ---
-title: "Working with Progress Indicators"
-description: "This article covers designing and working with Progress Indicators inside of a Xamarin.tvOS app."
+title: "Working with progress indicators"
+description: "This article covers designing and working with progress indicators inside of a Xamarin.tvOS app."
 ms.prod: xamarin
 ms.assetid: 582B6D0C-1F16-4299-A9A6-5651E76009FE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/16/2017
+ms.date: 04/25/2018
 ---
 
-# Working with Progress Indicators
+# Working with progress indicators
 
-_This article covers designing and working with Progress Indicators inside of a Xamarin.tvOS app._
+_This article covers designing and working with progress indicators inside
+of a Xamarin.tvOS app._
 
+There might be times when your Xamarin.tvOS app needs to load new content or
+perform a lengthy processing operation. During these times, you should
+present either an activity indicator or a progress bar to let the user know
+that the app is still running and to give them some indication as to the
+length of the task being run.
 
-There might be times when your Xamarin.tvOS app needs to load new content or perform a lengthy processing operation. During these times, you should present either an Activity Indicator or Progress Bar to let the user know that the app is still running and to give them some indication as to the length of the task being run.
+![Sample progress indicators](progress-indicators-images/intro01.png "Sample
+progress indicators")
 
-[![](progress-indicators-images/intro01.png "Sample progress indicators")](progress-indicators-images/intro01.png#lightbox)
+## About activity indicators
 
-<a name="About-Activity-Indicators" />
+An activity indicator presents as a spinning cog and is used to represent a
+task of an undetermined length. The indicator is presented when the task
+starts and disappears when the task is completed.
 
-## About Activity Indicators
+Apple has the following suggestions for working with activity indicators:
 
-An Activity Indicator presents as a spinning cog visually and is used to represent a task of an undetermined length. The indicator is presented when the task starts and disappears when the task is completed.
+- **Whenever possible, use progress bars instead** - Because an activity
+  indicator gives the user no feedback as to how long the process being run
+  will take, always use a progress bar if the length is known (for example,
+  how many bytes to download in a file).
+- **Keep the indicator animated** - Users relate a stationary activity
+  indicator to a stalled app, so you should always animate the indicator
+  while it is being displayed.
+- **Describe the task being processed** - Just displaying the activity
+  indicator by itself isn't enough; the user needs to be informed about the
+  process on which they are waiting. Include a meaningful label (usually a 
+  single, complete sentence) that clearly defines the task.
 
-Apple has the following suggestions for working with Activity Indicators:
+## About progress bars
 
-- **Whenever Possible, use Progress Bars Instead** - Because an Activity Indicator gives the user no feedback as to how long the process being run will take, always use a Progress Bar if the length is know (for example, how many bytes to download in a file).
-- **Keep the Indicator Animated** - Users relate a stationary Activity Indicator to a stalled app so you should always have the indicator animated while it is being displayed.
-- **Describe the Task being Processed** - Just displaying the Activity Indicator by itself isn't enough, the user needs to be informed about the process they are waiting on. Include a meaningful label (usually a single, complete sentence) that clearly defines the task.
+A progress bar presents as a line that fills with color to indicate the
+state and length of a time-consuming task. Progress bars should always be
+used when the length of the tasks is known or can be computed.
 
-<a name="Summary" />
+Apple has the following suggestions for working with progress bars:
 
-## About Progress Bars
+- **Accurately report progress** - Progress bars should always present an
+  accurate representation of the time required to complete a task. Never
+  misrepresent the time to make the app appear busy.
+- **Use for well-defined durations** - Progress bars should not only show
+  that a lengthy task is taking place, but give the user and indication of
+  how much of the task is completed and an estimate of the time remaining.
 
-A Progress Bar presents as a line that fills with color to indicate the state and length of a time-consuming task. Progress Bars should always be used when the length of the tasks is know or can be computed.
+## Progress indicators and storyboards
 
-Apple has the following suggestions for working with Progress Bars:
-
-- **Accurately Report Progress** - Progress Bars should always be an accurate representation of the time required to complete a task. Never misrepresent the time to make the app appear busy.
-- **Use for Well-Defined Durations** - Progress Bar should not only show that a lengthy task is taking place, but give the user and indication of how much of the task is completed and an estimate of the time remaining.
-
-<a name="Progress-Indicators-and-Storyboards" />
-
-## Progress Indicators and Storyboards
-
-The easiest way to work with Progress Indicator in a Xamarin.tvOS app is to add them to the app's UI using the iOS Designer.
+The easiest way to work with a progress indicator in a Xamarin.tvOS app is
+to add it to the app's UI using the iOS Designer.
 
 # [Visual Studio for Mac](#tab/vsmac)
 	
-1. In the **Solution Pad**, double-click the `Main.storyboard` file and open it for editing.
-1. Drag a **Activity Indicator** from the **Toolbox** and drop it on the View: 
+1. In the **Solution Pad**, double-click the **Main.storyboard** file and
+   open it for editing.
 
-	[![](progress-indicators-images/activity01.png "A Activity Indicator")](progress-indicators-images/activity01.png#lightbox)
-1. In the **Widget Tab** of the **Properties Pad**, you can adjust several properties of the Activity Indicator such as its **Style** and **Behavior**: 
+2. Drag an **Activity Indicator** from the **Toolbox** and drop it on the
+   view: 
 
-	[![](progress-indicators-images/activity02.png "The Widget Tab ")](progress-indicators-images/activity02.png#lightbox)
-1. Drag a **Progress View** from the **Toolbox** and drop it on the View: 
+    ![An activity indicator](progress-indicators-images/activity01.png "An
+     activity indicator")
 
-	[![](progress-indicators-images/activity03.png "A Progress View")](progress-indicators-images/activity03.png#lightbox)
-1. In the **Widget Tab** of the **Property Explorer**, you can adjust several properties of the Progress View such as its **Style** and **Progress** (percent complete): 
+3. In the **Widget** tab of the **Properties Pad**, you can adjust several
+   properties of the activity indicator such as its **Style**,
+   **Behavior**, and **Name**: 
 
-	[![](progress-indicators-images/activity04.png "The Widget Tab")](progress-indicators-images/activity04.png#lightbox)
-1. Finally, assign **Names** to the controls so that you can respond to them in C# code. For example: 
+    ![The Widget tab for an activity
+    indicator](progress-indicators-images/activity02.png "The Widget tab for
+    an activity indicator")
+    
+    The **Name** determines the name of the property that represents the
+    activity indicator in C# code.
 
-	[![](progress-indicators-images/activity05.png "Assign a name")](progress-indicators-images/activity05.png#lightbox)
-1. Save your changes.
+4. Drag a **Progress View** from the **Toolbox** and drop it on the view: 
+
+    ![A progress view](progress-indicators-images/activity03.png "A progress
+    view")
+
+5. In the **Widget** tab of the **Property Explorer**, you can adjust
+   several properties of the progress view such as its **Style**,
+   **Progress** (percent complete), and **Name**: 
+
+    ![The Widget tab for a progress
+    view](progress-indicators-images/activity04.png "The Widget tab for a
+    progress view")
+    
+    The **Name** determines the name of the property that represents the
+    progress view in C# code.
+
+6. Save your changes.
 
 # [Visual Studio](#tab/vswin)
 	
-1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
-1. Drag a **Activity Indicator** from the **Toolbox** and drop it on the View: 
+1. In the **Solution Explorer**, double-click the **Main.storyboard** file 
+   and open it for editing.
 
-	[![](progress-indicators-images/activity01-vs.png "A Activity Indicator")](progress-indicators-images/activity01-vs.png#lightbox)
-1. In the **Widget Tab** of the **Properties Explorer**, you can adjust several properties of the Activity Indicator such as its **Style** and **Behavior**: 
+2. Drag an **Activity Indicator** from the **Toolbox** and drop it on the
+   view: 
 
-	[![](progress-indicators-images/activity02-vs.png "The Widget Tab")](progress-indicators-images/activity02-vs.png#lightbox)
-1. Drag a **Progress View** from the **Toolbox** and drop it on the View: 
+    ![An activity indicator](progress-indicators-images/activity01-vs.png
+    "An activity indicator")
 
-	[![](progress-indicators-images/activity03-vs.png "A Progress View")](progress-indicators-images/activity03-vs.png#lightbox)
-1. In the **Widget Tab** of the **Property Explorer**, you can adjust several properties of the Progress View such as its **Style** and **Progress** (percent complete): 
+3. In the **Widget** tab of the **Properties Explorer**, you can adjust
+   several properties of the activity indicator such as its **Style**,
+   **Behavior**, and **Name**: 
 
-	[![](progress-indicators-images/activity04-vs.png "The Widget Tab")](progress-indicators-images/activity04-vs.png#lightbox)
-1. Finally, assign **Names** to the controls so that you can respond to them in C# code. For example: 
+    ![The Widget tab for an activity
+    indicator](progress-indicators-images/activity02-vs.png "The Widget tab
+    for an activity indicator")
 
-	[![](progress-indicators-images/activity05-vs.png "Assign a name")](progress-indicators-images/activity05-vs.png#lightbox)
-1. Save your changes.
+    The **Name** determines the name of the property that represents
+    the activity indicator in C# code.
+
+4. Drag a **Progress View** from the **Toolbox** and drop it on the view: 
+
+   ![A progress view](progress-indicators-images/activity03-vs.png "A
+   progress view")
+
+5. In the **Widget** tab of the **Property Explorer**, you can adjust
+   several properties of the progress view such as its **Style**,
+   **Progress** (percent complete), and **Name**: 
+
+    ![The Widget tab for a progress
+    view](progress-indicators-images/activity04-vs.png "The Widget tab for a
+    progress view")
+    
+    The **Name** determines the name of the property that represents the
+    progress view in C# code.
+
+6. Save your changes.
 
 -----
 
-For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). 
+For more information on working with storyboards, please see our [Hello,
+tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). 
 
-<a name="Working-with-Activity-Indicators" />
+## Working with activity indicators
 
-## Working with Activity Indicators
+As stated above, activity indicators should be shown when your app is
+running a long process of indeterminate length.
 
-As stated above, Activity Indicators should be shown when your app is running a long process, but you don't know the exact length of time the task will require.
-
-At any point you can see if the Activity Indicator is running its spinning animation by checking the `IsAnimating` property. If the `HidesWhenStopped` property is `true`, the Activity Indicator will automatically be hidden when its animation is stopped.
+At any point, you can see if an activity indicator is animating by checking
+its `IsAnimating` property. If the `HidesWhenStopped` property is `true`,
+the activity indicator will automatically be hidden when its animation is
+stopped.
 
 You can use the following code to start the animation: 
 
@@ -111,25 +170,31 @@ And the following will stop the animation:
 ActivityIndicator.StopAnimating();
 ```
 
-<a name="Working-with-Progress-Bars" />
+> [!NOTE]
+> These code snippets assume that the activity indicator's **Name**
+> was set to **ActivityIndicator** in the **Widget** tab of the iOS
+> Designer.
 
-## Working with Progress Bars
+## Working with progress bars
 
-Again, a Progress Bar should be used any time your app is executing a long running task of a know duration. 
+Again, a progress bar should be used any time your app is executing a long
+running task of a known duration. 
 
-The `Progress` property is used to set the amount of the task that has been completed from 0% to 100% (0.0 to 1.0). Use the `ProgressTintColor` property to set the color of the amount completed bar and the `TrackTintColor` property to set the background color (uncompleted amount).
-
-<a name="Summary" />
+The `Progress` property is used to set the amount of the task that has been
+completed from 0% to 100% (0.0 to 1.0). Use the `ProgressTintColor` property
+to set the color of the amount completed bar and the `TrackTintColor`
+property to set the background color (uncompleted amount).
 
 ## Summary
 
-This article has covered designing and working with Progress Indicators inside of a Xamarin.tvOS app.
+This article has covered designing and working with progress indicators
+inside of a Xamarin.tvOS app.
 
-
-
-## Related Links
+## Related links
 
 - [tvOS Samples](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS Human Interface Guides](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [App Programming Guide for tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [tvOS Human Interface
+  Guides](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [App Programming Guide for
+  tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
