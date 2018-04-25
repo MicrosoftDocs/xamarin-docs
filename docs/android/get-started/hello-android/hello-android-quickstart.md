@@ -7,7 +7,7 @@ ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
+ms.date: 04/25/2018
 ---
 
 # Hello, Android: Quickstart
@@ -220,11 +220,10 @@ below the `base.OnCreate(bundle)` and `SetContentView
 the `OnCreate` method resembles the following:
 
 ```csharp
-using System;
 using Android.App;
-using Android.Content;
-using Android.Widget;
 using Android.OS;
+using Android.Widget;
+using Core;
 
 namespace Phoneword
 {
@@ -500,13 +499,10 @@ template button handling code so that the `OnCreate` method
 resembles the following:
 
 ```csharp
-using System;
 using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using Android.Widget;
+using Core;
 
 namespace Phoneword
 {
