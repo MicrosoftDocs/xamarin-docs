@@ -77,7 +77,7 @@ Ordinarily, users will not need to edit the MSBuild files by hand
 any changes made, and automatically invoke build targets as needed. 
 
 Advanced users may wish to do things not supported by the IDE's GUI, so 
-the build process is customisable by editing the project file directly. 
+the build process is customizable by editing the project file directly. 
 This page documents only the Xamarin.Android-specific features and 
 customizations &ndash; many more things are possible with the normal 
 MSBuild items, properties and targets. 
@@ -151,7 +151,7 @@ an [MSBuild PropertyGroup element](http://msdn.microsoft.com/en-us/library/t4w15
       Application package will *not* be debuggable.
 
     If `DebugType` is not set or is the empty string, then the
-    `DebugSymbols` property controls whether or not th Application is
+    `DebugSymbols` property controls whether or not the Application is
     debuggable.
 
 
@@ -177,7 +177,7 @@ Install properties control the behavior of the `Install` and
 Packaging properties control the creation of the Android package, and are
 used by the `Install` and `SignAndroidPackage` targets.
 The [Signing Properties](#Signing_Properties) are also relevant
-when packaing Release applications.
+when packaging Release applications.
 
 
 -   **AndroidApkSigningAlgorithm** &ndash; A string value which specifies
@@ -379,9 +379,9 @@ when packaing Release applications.
     highest versioned installed build-tools package is used.
 
     The `$(AndroidSdkBuildToolsVersion)` MSBuild property contains
-    the prefered build-tools version. The Xamarin.Android build system
+    the preferred build-tools version. The Xamarin.Android build system
     provides a default value in `Xamarin.Android.Common.targets`, and
-    the default value may be overridden within youur project file to
+    the default value may be overridden within your project file to
     choose an alternate build-tools version, if (for example) the
     latest aapt is crashing out while a previous aapt version is known
     to work.
@@ -426,11 +426,11 @@ when packaing Release applications.
 
     When this property is `False`, then the
     `$(AndroidFastDeploymentType)` MSBuild property also controls what
-    will be embedd into the `.apk`, which can impact deployment and
-    rebuidl times.
+    will be embedded into the `.apk`, which can impact deployment and
+    rebuild times.
 
 -   **EnableLLVM** &ndash; A boolean property that determines whether
-    or not LLVM will be used when Ahead-of-Time compiling assemblines
+    or not LLVM will be used when Ahead-of-Time compiling assemblies
     into native code.
 
     Support for this property was added in Xamarin.Android 5.1.
@@ -575,16 +575,16 @@ when packaing Release applications.
     If we include a left padding format string 
     `{abi}{versionCode:0000}`,
     it would produce `50044` because we are left padding the `versionCode`
-    with `0`. Alternatively you can use the decimal padding such as
+    with `0`. Alternatively, you can use the decimal padding such as
     `{abi}{versionCode:D4}`
     which does the same as the previous example.
 
     Only '0' and 'Dx' padding format strings are supported since the value
     MUST be an integer.
     
-    Pre defined key items
+    Pre-defined key items
 
-    -   **abi**  &ndash; Inserts the targetted abi for the app
+    -   **abi**  &ndash; Inserts the targeted abi for the app
         -   1 &ndash; `armeabi`
         -   2 &ndash; `armeabi-v7a`
         -   3 &ndash; `x86`
@@ -595,14 +595,14 @@ when packaing Release applications.
         value from the `AndroidManifest.xml` or `11` if none is
         defined.
 
-    -   **versionCode** &ndash; Uses the version code direrctly from 
+    -   **versionCode** &ndash; Uses the version code directly from 
         `Properties\AndroidManifest.xml`. 
 
     You can define custom items using the `$(AndroidVersionCodeProperties)`
     property (defined next).
 
     By default the value will be set to `{abi}{versionCode:D6}`. If a developer
-    wants to keep the old behaviour you can override the default by setting
+    wants to keep the old behavior you can override the default by setting
     the `$(AndroidUseLegacyVersionCode)` property to `true`
 
     Added in Xamarin.Android 7.2.
@@ -619,7 +619,7 @@ when packaing Release applications.
 
 -   **AndroidUseLegacyVersionCode** &ndash; A boolean property will allows
     the developer to revert the versionCode calculation back to its old pre 
-    Xamarin.Android 8.2 behaviour. This should ONLY be used for developers 
+    Xamarin.Android 8.2 behavior. This should ONLY be used for developers 
     with existing applications in the Google Play Store. It is highly recommended
     that the new `$(AndroidVersionCodePattern)` property is used.
 
@@ -675,7 +675,7 @@ The following MSBuild properties are used with
 -   **AndroidCodegenTarget** &ndash; A string property which controls the code generation target ABI. Possible values include:
 
     - **XamarinAndroid**: Uses the JNI binding API present in since
-      Mono for Android 1.0. Binding assemblies built with with
+      Mono for Android 1.0. Binding assemblies built with
       Xamarin.Android 5.0 or later can only run on Xamarin.Android 5.0
       or later (API/ABI additions), but the *source* is compatible with
       prior product versions.
@@ -938,7 +938,7 @@ The normal `Content` Build action is not supported (as we
 haven't figured out how to support it without a possibly costly first-run
 step).
 
-Starting in Xamarin.Android 5.1, attempting to use thw `@(Content)`
+Starting in Xamarin.Android 5.1, attempting to use the `@(Content)`
 Build action will result in a `XA0101` warning.
 
 ### LinkDescription
@@ -978,7 +978,7 @@ targets:
 </PropertyGroup>
 ```
 
-All of these these targets and properties can be included for C# by 
+All of these targets and properties can be included for C# by 
 importing *Xamarin.Android.CSharp.targets*: 
 
 ```xml
