@@ -5,7 +5,7 @@ metadata:
   description: Xamarin.iOS exposes the complete iOS SDK for .NET developers.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 04/25/2018
   ms.topic: landing-page
 abstract:
   description: Xamarin.iOS exposes the complete iOS SDK for .NET developers. Build fully native iOS apps using C# or F# in Visual Studio.
@@ -41,72 +41,64 @@ sections:
       href: ~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md
 - title: Guides
   items:
-  - type: grid
-    style: columns
-    className: column50
+  - type: list
+    style: cards
+    className: cardsB
     items:
-    - type: list
-      style: cards
-      className: cardsB
-      items:
-      - href: ~/ios/get-started/index.md
-        html: Tutorials to get you up and running with Xamarin.iOS. Make sure everything is installed correctly, and build your first iOS apps.
-        image:
-          src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
-          href: ~/ios/get-started/index.md
-        title: Getting Started
-      - href: ~/ios/user-interface
-        html: Learn about the complete set of user interface controls available for iOS in UIKit.
-        image:
-          src: ~/media/icons/i_user-interface.svg
-          href: ~/ios/user-interface/
-        title: User Interface
-      - href: ~/ios/data-cloud/
-        html: Local and remote data storage and retrieval, and other cloud-based services.
-        image:
-          src: ~/media/icons/i_data-cloud.svg
-          href: ~/ios/data-cloud/
-        title: Data & Cloud Services
-      - href: ~/ios/internals/
-        html: Detailed information on how Xamarin.iOS works.
-        image:
-          src: https://docs.microsoft.com/en-us/media/common/i_config-tools.svg
-          href: ~/ios/internals/
-        title: Advanced Concepts & Internals
-      - href: ~/ios/watchos/
-        html: Build apps for Apple Watch!
-        image:
-          src: ~/media/icons/i_watchos.svg
-          href: ~/ios/watchos/
-        title: watchOS
-    - type: list
-      style: cards
-      className: cardsB
-      items:
-      - href: ~/ios/app-fundamentals/
-        html: Everything you need to know to build iOS apps, such as working with files, images, databases, and more.
-        image:
-          src: ~/media/icons/i_app-build.svg
-          href: ~/ios/app-fundamentals/
-        title: Application Fundamentals
-      - href: ~/ios/platform/
-        html: Working with iOS platform features, such as ARKit and CoreML, and the other new features in iOS 11.
-        image:
-          src: ~/media/icons/i_platform.svg
-          href: ~/ios/platform/
-        title: Platform Features
-      - href: ~/ios/deploy-test/
-        html: Instructions for building and deploying your apps to the App Store, and tips for testing them beforehand!
-        image:
-          src: ~/media/icons/i_deploy-test.svg
-          href: ~/ios/deploy-test/
-        title: Deployment and Testing
-      - href: ~/ios/tvos/
-        html: Build apps for Apple TV!
-        image:
-          src: ~/media/icons/i_tvos.svg
-          href: ~/ios/tvos/
-        title: tvOS
+    - href: ~/ios/get-started/index.md
+      html: Tutorials to get you up and running with Xamarin.iOS. Make sure everything is installed correctly, and build your first iOS apps.
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+        href: ~/ios/get-started/index.md
+      title: Getting Started
+    - href: ~/ios/app-fundamentals/
+      html: Everything you need to know to build iOS apps, such as working with files, images, databases, and more.
+      image:
+        src: ~/media/icons/i_app-build.svg
+        href: ~/ios/app-fundamentals/
+      title: Application Fundamentals
+    - href: ~/ios/user-interface
+      html: Learn about the complete set of user interface controls available for iOS in UIKit.
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: ~/ios/user-interface/
+      title: User Interface
+    - href: ~/ios/platform/
+      html: Working with iOS platform features, such as ARKit and CoreML, and the other new features in iOS 11.
+      image:
+        src: ~/media/icons/i_platform.svg
+        href: ~/ios/platform/
+      title: Platform Features
+    - href: ~/ios/data-cloud/
+      html: Local and remote data storage and retrieval, and other cloud-based services.
+      image:
+        src: ~/media/icons/i_data-cloud.svg
+        href: ~/ios/data-cloud/
+      title: Data & Cloud Services
+    - href: ~/ios/deploy-test/
+      html: Instructions for building and deploying your apps to the App Store, and tips for testing them beforehand!
+      image:
+        src: ~/media/icons/i_deploy-test.svg
+        href: ~/ios/deploy-test/
+      title: Deployment and Testing
+    - href: ~/ios/internals/
+      html: Detailed information on how Xamarin.iOS works.
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_config-tools.svg
+        href: ~/ios/internals/
+      title: Advanced Concepts & Internals
+    - href: ~/ios/watchos/
+      html: Build apps for Apple Watch!
+      image:
+        src: ~/media/icons/i_watchos.svg
+        href: ~/ios/watchos/
+      title: watchOS
+    - href: ~/ios/tvos/
+      html: Build apps for Apple TV!
+      image:
+        src: ~/media/icons/i_tvos.svg
+        href: ~/ios/tvos/
+      title: tvOS
 - title: Reference
   items:
   - type: list
