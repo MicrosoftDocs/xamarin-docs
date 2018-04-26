@@ -626,7 +626,7 @@ Create the Phoneword application as follows:
     }
     ```
 
-    Save the changes to **Phoneword.cs** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
+    Save the changes to **App.xaml.cs** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
 
 13. In the **Solution Pad**, select the **Phoneword** project, right-click and select **Add > New File...**:
 
