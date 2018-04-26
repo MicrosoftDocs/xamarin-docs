@@ -6,7 +6,7 @@ ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/06/2018
+ms.date: 04/26/2018
 ---
 
 # Xamarin.Forms Quickstart
@@ -31,7 +31,7 @@ Create the Phoneword application as follows:
 
     ![](quickstart-images/vs/new-project.png "Cross-Platform Project Templates")
 
-4. In the **New Cross Platform App** dialog, click **Blank App**, select **Xamarin.Forms** as the UI Technology, select **.NET Standard** as the Code Sharing Strategy, and click the **OK** button:
+4. In the **New Cross Platform App** dialog, click **Blank App**, select **.NET Standard** as the Code Sharing Strategy, and click the **OK** button:
 
     ![](quickstart-images/vs/new-app.png "New Cross-Platform App")
 
