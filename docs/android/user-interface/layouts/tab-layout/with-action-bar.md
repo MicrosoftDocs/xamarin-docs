@@ -139,7 +139,7 @@ protected override void OnCreate(Bundle bundle)
     tab.SetIcon(Resource.Drawable.tab1_icon);
     tab.TabSelected += (sender, args) => {
                            // Do something when tab is selected
-                       }
+                       };
     ActionBar.AddTab(tab);
 
     tab = ActionBar.NewTab();
@@ -147,7 +147,7 @@ protected override void OnCreate(Bundle bundle)
     tab.SetIcon(Resource.Drawable.tab2_icon);
     tab.TabSelected += (sender, args) => {
                            // Do something when tab is selected
-                       }
+                       };
     ActionBar.AddTab(tab);
 }
 ```
