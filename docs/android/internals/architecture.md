@@ -259,10 +259,9 @@ Order of events:
 11. The *LogTextBox(Context, IAttributeSet, int)* constructor executes
     *on the same instance created in (7)* .
 
-If the (IntPtr, JniHandleOwnership) constructor cannot be found, then a
-[System.MissingMethodException](https://developer.xamarin.com/api/type/System.MissingMethodException/)
-will be thrown.
-
+12. If the (IntPtr, JniHandleOwnership) constructor cannot be found, then a
+    System.MissingMethodException](https://developer.xamarin.com/api/type/System.MissingMethodException/)
+    will be thrown.
 
 <a name="Premature_Dispose_Calls" />
 
