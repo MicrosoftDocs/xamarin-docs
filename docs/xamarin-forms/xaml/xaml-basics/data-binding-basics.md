@@ -273,7 +273,8 @@ Much better. Now all that’s needed is to spruce up the item template with more
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ListView ItemsSource="{x:Static local:NamedColor.All}">
+    <ListView ItemsSource="{x:Static local:NamedColor.All}"
+              RowHeight="{StaticResource rowHeight}">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
