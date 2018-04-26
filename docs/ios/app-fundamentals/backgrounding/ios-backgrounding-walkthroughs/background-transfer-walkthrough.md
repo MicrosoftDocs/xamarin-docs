@@ -37,7 +37,7 @@ public partial class SimpleBackgroundTransferViewController : UIViewController
   NSUrlSessionConfiguration configuration =
       NSUrlSessionConfiguration.CreateBackgroundSessionConfiguration ("com.SimpleBackgroundTransfer.BackgroundSession");
   session = NSUrlSession.FromConfiguration
-      (configuration, (NSUrlSessionDelegate) new MySessionDelegate, new NSOperationQueue());
+      (configuration, (NSUrlSessionDelegate) new MySessionDelegate(), new NSOperationQueue());
 
 }
 ```
