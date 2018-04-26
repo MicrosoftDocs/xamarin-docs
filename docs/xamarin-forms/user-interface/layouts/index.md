@@ -179,7 +179,7 @@ Xamarin.Forms and its built-in layouts are capable of handling changes in device
 
 ### [Layout for Tablet and Desktop apps](tablet.md)
 
-iOS, Android, and Windows platforms all support larger screen sizes
+iOS, Android, and Universal Windows Platform all support larger screen sizes
 on tablet devices (as well as laptops and desktops for Windows). Xamarin.Forms
 lets you optimize your app for larger screens by detecting the device
 type and either adjusting the page layout, or using a totally different

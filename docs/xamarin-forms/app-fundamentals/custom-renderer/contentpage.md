@@ -13,7 +13,7 @@ ms.date: 11/29/2017
 
 _A ContentPage is a visual element that displays a single view and occupies most of the screen. This article demonstrates how to create a custom renderer for the ContentPage page, enabling developers to override the default native rendering with their own platform-specific customization._
 
-Every Xamarin.Forms control has an accompanying renderer for each platform that creates an instance of a native control. When a [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) is rendered by a Xamarin.Forms application, in iOS the `PageRenderer` class is instantiated, which in turn instantiates a native `UIViewController` control. On the Android platform, the `PageRenderer` class instantiates a `ViewGroup` control. On Windows Phone and the Universal Windows Platform (UWP), the `PageRenderer` class instantiates a `FrameworkElement` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Every Xamarin.Forms control has an accompanying renderer for each platform that creates an instance of a native control. When a [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) is rendered by a Xamarin.Forms application, in iOS the `PageRenderer` class is instantiated, which in turn instantiates a native `UIViewController` control. On the Android platform, the `PageRenderer` class instantiates a `ViewGroup` control. On the Universal Windows Platform (UWP), the `PageRenderer` class instantiates a `FrameworkElement` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 The following diagram illustrates the relationship between the [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) and the corresponding native controls that implement it:
 
@@ -193,57 +193,6 @@ namespace CustomRenderer.Droid
 The call to the base class's `OnElementChanged` method instantiates an Android `ViewGroup` control, which is a group of views. The live camera stream is only rendered provided that the renderer isn't already attached to an existing Xamarin.Forms element, and provided that a page instance exists that is being rendered by the custom renderer.
 
 The page is then customized by invoking a series of methods that use the `Camera` API to provide the live stream from the camera and the ability to capture a photo, before the `AddView` method is invoked to add the live camera stream UI to the `ViewGroup`.
-
-### Creating the Page Renderer on Windows Phone
-
-The following code example shows the page renderer for the Windows Phone platform:
-
-```csharp
-[assembly: ExportRenderer (typeof(CameraPage), typeof(CameraPageRenderer))]
-namespace CustomRenderer.WinPhone81
-{
-	public class CameraPageRenderer : PageRenderer
-	{
-		...
-
-		protected override void OnElementChanged (VisualElementChangedEventArgs e)
-		{
-			base.OnElementChanged (e);
-
-			if (e.OldElement != null || Element == null) {
-				return;
-			}
-
-			try {
-				...
-				var container = ContainerElement as Canvas;
-
-				SetupUserInterface ();
-				SetupEventHandlers ();
-				SetupLiveCameraStream ();
-				container.Children.Add (page);
-			}
-			...
-		}
-
-		protected override Size ArrangeOverride(Size finalSize)
-		{
-			page.Arrange(new Windows.Foundation.Rect(0, 0, finalSize.Width, finalSize.Height));
-			return finalSize;
-		}
-		...
-	}
-}
-```
-
-The call to the base class's `OnElementChanged` method instantiates a Windows Phone `Canvas` control, on which the page is rendered. The live camera stream is only rendered provided that the renderer isn't already attached to an existing Xamarin.Forms element, and provided that a page instance exists that is being rendered by the custom renderer.
-
-On the Windows Phone platform, a typed reference to the native page being used on the platform can be accessed through the `ContainerElement` property, with the `Canvas` control being the typed reference to the `FrameworkElement`. The page is then customized by invoking a series of methods that use the `MediaCapture` API to provide the live stream from the camera and the ability to capture a photo before the customized page is added to the `Canvas` for display.
-
-When implementing a custom renderer that derives from `PageRenderer` on the Windows Runtime, the `ArrangeOverride` method should also be implemented to arrange the page controls, because the base renderer doesn't know what to do with them. Otherwise, a blank page results. Therefore, in this example the `ArrangeOverride` method calls the `Arrange` method on the `Page` instance.
-
-> [!NOTE]
-> It's important to stop and dispose of the objects that provide access to the camera in a Windows Phone 8.1 WinRT application. Failure to do so can interfere with other applications that attempt to access the device's camera. For more information, see the `CleanUpCaptureResourcesAsync` method in the Windows Phone project in the sample solution, and [Quickstart: Capturing video by using the MediaCapture API](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx).
 
 ### Creating the Page Renderer on UWP
 

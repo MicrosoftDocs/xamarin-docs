@@ -29,12 +29,12 @@ This guide is composed of the following sections:
 WebView comes with support for the following types of content:
 
 - HTML & CSS websites &ndash; WebView has full support for websites written using HTML & CSS, including JavaScript support.
-- Documents &ndash; Because WebView is implemented using native components on each platform, WebView is capable of showing documents that are viewable on each platform. That means that PDF files work on iOS and Android, but not Windows Phone.
+- Documents &ndash; Because WebView is implemented using native components on each platform, WebView is capable of showing documents that are viewable on each platform. That means that PDF files work on iOS and Android.
 - HTML strings &ndash; WebView can show HTML strings from memory.
 - Local Files &ndash; WebView can present any of the content types above embedded in the app.
 
 > [!NOTE]
-> `WebView` on Windows and Windows Phone does not support Silverlight, Flash or any ActiveX controls, even if they are supported by Internet Explorer on that platform.
+> `WebView` on Windows does not support Silverlight, Flash or any ActiveX controls, even if they are supported by Internet Explorer on that platform.
 
 ### Websites
 
@@ -227,28 +227,9 @@ using (var streamReader = new StreamReader (assetManager.Open ("local.html"))) {
 }
 ```
 
-#### Windows Phone
+#### Universal Windows Platform
 
-On Windows Phone, place HTML, CSS and images in the project root with the build action set to *Content* as demonstrated below:
-
-![](webview-images/windows-vs.png "Local Files on Windows Phone")
-
-On Windows Phone, the `BaseUrl` should be set to `""`:
-
-```csharp
-[assembly: Dependency (typeof(BaseUrl_Windows))]
-namespace WorkingWithWebview.Windows {
-  public class BaseUrl_Windows : IBaseUrl {
-    public string Get() {
-      return "";
-    }
-  }
-}
-```
-
-#### Windows Runtime and Universal Windows Platform
-
-On Windows Runtime and Universal Windows Platform (UWP) projects, place HTML, CSS and images in the project root with the build action set to *Content*.
+On Universal Windows Platform (UWP) projects, place HTML, CSS and images in the project root with the build action set to *Content*.
 
 The `BaseUrl` should be set to `"ms-appx-web:///"`:
 
@@ -398,14 +379,11 @@ WebView on Android by default is about as fast as the built-in browser.
 
 The [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) uses the Microsoft Edge rendering engine. Desktop and tablet devices should see the same performance as using the Edge browser itself.
 
-The `WebBrowser` control on Windows Phone 8 and Windows Phone 8.1 does not support the latest HTML5 features and can often have poor performance. Be aware of how sites will display in the Windows Phone's `WebView`. It is not sufficient to test in Internet Explorer.
-
 ## Permissions
 
 In order for `WebView` to work, you must make sure that permissions are set for each platform. Note that on some platforms, `WebView` will work in debug mode, but not when built for release. That is because some permissions, like those for internet access on Android, are set by default by Visual Studio for Mac when in debug mode.
 
-- **Windows Phone 8.0** &ndash; requires `ID_CAP_WEBBROWSERCOMPONENT` for the control and `ID_CAP_NETWORKING` for internet access.
-- **Windows Phone 8.1 and UWP** &ndash; requires the Internet (Client & Server) capability when displaying network content.
+- **UWP** &ndash; requires the Internet (Client & Server) capability when displaying network content.
 - **Android** &ndash; requires `INTERNET`  only when displaying content from the network. Local content requires no special permissions.
 - **iOS** &ndash; requires no special permissions.
 

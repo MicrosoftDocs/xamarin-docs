@@ -25,9 +25,6 @@ This article will guide you through creating apps that take advantage of device 
 
 When using Xamarin.Forms, the supported method of controlling device orientation is to use the settings for each individual project.
 
-> [!NOTE]
-> As of Xamarin.Forms 1.5.0 there is a bug which prevents custom renderer-based attempts to control orientation to fail. See [this discussion](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)this discussion in the Xamarin forums for more information.
-
 ### iOS
 
 On iOS, device orientation is configured for applications using the **Info.plist** file. This file will include orientation settings for iPhone & iPod, as well as settings for iPad if the app includes it as a target. The following are instructions specific to your IDE. Use the IDE options at the top of this document to select which instructions you'd like to see:
@@ -53,7 +50,6 @@ If you'd prefer to edit the values using a key-value editor interface, select th
 ![Supported Device Orientations in Visual Studio for Mac](device-orientation-images/orientation-xam-source.png)
 
 -----
-
 
 ### Android
 
@@ -89,27 +85,9 @@ Xamarin.Android supports several options for specifying orientation:
 
 Note that the native Android APIs provide a lot of control over how orientation is managed, including options that explicitly contradict the user's expressed preferences.
 
-### Windows Phone
+### Universal Windows platform
 
-On Windows Phone RT, supported orientations are set in the <span class="UIItem">Package.appxmanifest</span> file. Opening the manifest will reveal a configuration panel where supported orientations can be selected:
-
-![](device-orientation-images/vs-winrt-config.png "Package.appxmanifest Visual Editor")
-
-On Windows Phone 8 (Silverlight), supported orientations are set in code in the <span class="UIItem">MainPage.xaml.cs</span> file. In the default project template, the value is already set with the following line of code:
-
-```csharp
-SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
-```
-
-To specify orientation options on Windows Phone, replace that with the code to enable the orientations you want:
-
-```csharp
-SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
-SupportedOrientations = SupportedPageOrientation.Portrait; // portrait only
-SupportedOrientations = SupportedPageOrientation.Landscape; // landscape only
-```
-
-Note that Windows Phone supports landscape views in both (as seen from portrait) left-to-right and right-to-left orientations. It is not possible to specify which is used.
+On the Universal Windows Platform (UWP), supported orientations are set in the **Package.appxmanifest** file. Opening the manifest will reveal a configuration panel where supported orientations can be selected.
 
 <a name="Reacting_to_Changes_in_Orientation" />
 

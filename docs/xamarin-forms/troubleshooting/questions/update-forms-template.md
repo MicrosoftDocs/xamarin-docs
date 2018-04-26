@@ -22,7 +22,6 @@ This guide uses the Xamarin.Forms PCL template as an example, but the same gener
 3.  Change all of the occurrences of the old version of the Forms package to the new version you'd like to use.
     *   `FormsTemplate\FormsTemplate.vstemplate`
     *   `FormsTemplate.Android\FormsTemplate.Android.vstemplate`
-    *   `FormsTemplate.WinPhone\FormsTemplate.WinPhone.vstemplate`
     *   `FormsTemplate.iOS\FormsTemplate.iOS.vstemplate`
 
     Example: `<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`

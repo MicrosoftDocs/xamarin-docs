@@ -13,7 +13,7 @@ ms.date: 11/29/2017
 
 _A Xamarin.Forms ListView is a view that displays a collection of data as a vertical list. This article demonstrates how to create a custom renderer that encapsulates platform-specific list controls and native cell layouts, allowing more control over native list control performance._
 
-Every Xamarin.Forms view has an accompanying renderer for each platform that creates an instance of a native control. When a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) is rendered by a Xamarin.Forms application, in iOS the `ListViewRenderer` class is instantiated, which in turn instantiates a native `UITableView` control. On the Android platform, the `ListViewRenderer` class instantiates a native `ListView` control. On Windows Phone and the Universal Windows Platform (UWP), the `ListViewRenderer` class instantiates a native `ListView` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Every Xamarin.Forms view has an accompanying renderer for each platform that creates an instance of a native control. When a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) is rendered by a Xamarin.Forms application, in iOS the `ListViewRenderer` class is instantiated, which in turn instantiates a native `UITableView` control. On the Android platform, the `ListViewRenderer` class instantiates a native `ListView` control. On the Universal Windows Platform (UWP), the `ListViewRenderer` class instantiates a native `ListView` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 The following diagram illustrates the relationship between the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) control and the corresponding native controls that implement it:
 
@@ -463,15 +463,15 @@ protected override void OnElementPropertyChanged (object sender, System.Componen
 
 The method creates a new instance of the `NativeAndroidListViewAdapter` class that provides data to the native `ListView` control, provided that the bindable `NativeListView.Items` property has changed.
 
-### Creating the Custom Renderer on Windows Phone and UWP
+### Creating the Custom Renderer on UWP
 
-The following code example shows the custom renderer for Windows Phone and UWP:
+The following code example shows the custom renderer for UWP:
 
 ```csharp
-[assembly: ExportRenderer (typeof(NativeListView), typeof(NativeWinPhoneListViewRenderer))]
-namespace CustomRenderer.WinPhone81
+[assembly: ExportRenderer(typeof(NativeListView), typeof(NativeUWPListViewRenderer))]
+namespace CustomRenderer.UWP
 {
-    public class NativeWinPhoneListViewRenderer : ListViewRenderer
+    public class NativeUWPListViewRenderer : ListViewRenderer
     {
         ListView listView;
 

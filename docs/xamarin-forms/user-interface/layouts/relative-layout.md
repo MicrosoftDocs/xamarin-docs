@@ -218,8 +218,6 @@ The above code results in the following layout:
 
 ![](relative-layout-images/relative.png "Complex RelativeLayout")
 
-Note that, due to a difference in how buttons are rendered by Windows Phone, some of the circles have been replaced by boxviews in the Windows Phone screenshot.
-
 Notice that `RelativeLayouts`s are nested, because in some cases nesting layouts can be easier than presenting all elements within the same layout. Also notice that some elements are `RelativeToView`, because that allows for easier and more intuitive layout when the relationships between views guide positioning.
 
 

@@ -221,7 +221,7 @@ The `LineColorBehavior` attached behavior is used to highlight [`Entry`](https:/
 	<Entry.Style>
         <OnPlatform x:TypeArguments="Style">
             <On Platform="iOS, Android" Value="{StaticResource EntryStyle}" />
-            <On Platform="UWP, WinRT, WinPhone" Value="{StaticResource UwpEntryStyle}" />
+            <On Platform="UWP" Value="{StaticResource UwpEntryStyle}" />
         </OnPlatform>
     </Entry.Style>
     ...

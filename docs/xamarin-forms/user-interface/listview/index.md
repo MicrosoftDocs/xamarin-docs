@@ -49,7 +49,7 @@ To learn more about customizing cells in a ListView, see [Customizing ListView C
 ListView supports a number of interaction styles, including:
 
 - **[Pull-to-Refresh](interactivity.md#Pull_to_Refresh)** &ndash; ListView supports pull-to-refresh on each platform.
-- **[Context Actions](interactivity.md#Context_Actions)** &ndash; ListView supports taking action on individual items in a list. For example, you can implement swipe-to-action on iOS, or long-tap actions on Android and Windows Phone.
+- **[Context Actions](interactivity.md#Context_Actions)** &ndash; ListView supports taking action on individual items in a list. For example, you can implement swipe-to-action on iOS, or long-tap actions on Android.
 - **[Selection](interactivity.md#selectiontaps)** &ndash; You can listen for selections and deselections to take action when a row is tapped.
 
 ![](images/context-default.png "ListView with Context Actions")

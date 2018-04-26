@@ -212,8 +212,6 @@ The above code results in the following layout:
 
 ![](stack-layout-images/stack.png "Complex StackLayout")
 
-Note that, due to a difference in how buttons are rendered by Windows Phone, some of the circles have been replaced by boxviews in the Windows Phone screenshot.
-
 Notice that `StackLayouts`s are nested, because in some cases nesting layouts can be easier than presenting all elements within the same layout. Also notice that, because `StackLayout` doesn't support overlapping items, the page doesn't have some of the layout niceties found in the pages for the other layouts.
 
 

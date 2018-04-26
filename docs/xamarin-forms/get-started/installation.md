@@ -22,7 +22,7 @@ Xamarin.Forms applications can be written for the following operating systems:
 -  iOS 8 or higher
 -  Android 4.0.3 (API 15) or higher ([more details](#android))
 -  Windows 10 Universal Windows Platform ([more details](#windows10))
--  Windows 8.1 / Windows Phone 8.1 WinRT ([more details](#windows))
+-  *Windows 8.1 / Windows Phone 8.1 WinRT (DEPRECATED)*
 -  *Windows Phone 8 Silverlight (DEPRECATED)*
 
 It is assumed that developers have familiarity with [Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md) and [Shared Projects](~/cross-platform/app-fundamentals/shared-projects.md).
@@ -54,20 +54,11 @@ that use Android 4.0.3 and newer. These values are set in the **Project Options*
 
 -----
 
-
 <a name="windows10" />
 
 ### Universal Windows Platform
 
-Windows 10 UWP projects are not added when a solution is created on macOS. For instructions on how to add these projects to an existing solution, see [Adding a Universal Windows Platform (UWP) App](~/xamarin-forms/platform/windows/installation/universal.md).
-
-
-<a name="windows" />
-
-### Windows 8.1 / Windows Phone 8.1 WinRT
-
-Windows 8.1 / Windows Phone 8.1 WinRT projects are not added when a solution is created on macOS. For instructions on how to add these projects to an existing solution, see [Adding a Windows Phone App](~/xamarin-forms/platform/windows/installation/phone.md) and [Adding a Windows App](~/xamarin-forms/platform/windows/installation/tablet.md).
-
+Windows 10 UWP projects are not added when a solution is created on macOS. For instructions on how to add these projects to an existing solution, see [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md).
 
 ## Development System Requirements
 
@@ -95,6 +86,5 @@ Developing Xamarin.Forms apps for UWP requires:
 * [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)
 
 UWP projects are included in Xamarin.Forms solutions created in Visual Studio 2015 and Visual Studio 2017.
-You can also [add a Universal Windows Platform (UWP) App](~/xamarin-forms/platform/windows/installation/universal.md) to an existing
+You can also [add a Universal Windows Platform (UWP) App](~/xamarin-forms/platform/windows/installation/index.md) to an existing
 Xamarin.Forms solution.
-

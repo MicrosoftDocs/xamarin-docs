@@ -16,7 +16,7 @@ This article will guide you to use [`DependencyService`](https://developer.xamar
 - **[Creating the Interface](#Creating_the_Interface)** &ndash; understand how to the interface is created in shared code.
 - **[iOS Implementation](#iOS_Implementation)** &ndash; learn how to implement the interface in native code for iOS.
 - **[Android Implementation](#Android_Implementation)** &ndash; learn how to implement the interface in native code for Android.
-- **[Windows Implementation](#WindowsImplementation)** &ndash; learn how to implement the interface in native code for Windows Phone and the Universal Windows Platform (UWP).
+- **[UWP Implementation](#WindowsImplementation)** &ndash; learn how to implement the interface in native code for the Universal Windows Platform (UWP).
 - **[Implementing in Shared Code](#Implementing_in_Shared_Code)** &ndash; learn how to use `DependencyService` to call into the native implementation from shared code.
 
 The application using `DependencyService` will have the following structure:
@@ -141,9 +141,9 @@ This attribute registers the class as an implementation of the `IDeviceOrientait
 
 <a name="WindowsImplementation" />
 
-## Windows Phone and Universal Windows Platform Implementation
+## Universal Windows Platform Implementation
 
-The following code implements the `IDeviceOrientation` interface on Windows Phone and the Universal Windows Platform:
+The following code implements the `IDeviceOrientation` interface on the Universal Windows Platform:
 
 ```csharp
 namespace DependencyServiceSample.WindowsPhone

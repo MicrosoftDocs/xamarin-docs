@@ -188,7 +188,7 @@ At runtime, code in the particular platform project calls a `LoadApplication` me
 
 Although you normally don’t need to spend much time with generated code files, sometimes runtime exceptions are raised on code in the generated files, so you should be familiar with them.
 
-When you compile and run this program, the `Label` element appears in the center of the page as the XAML suggests. The three platforms from left to right are iOS, Android, and Windows 10 Mobile:
+When you compile and run this program, the `Label` element appears in the center of the page as the XAML suggests. The three platforms from left to right are iOS, Android, and UWP:
 
 [![](get-started-with-xaml-images/xamlsamples.png "Default Xamarin.Forms display")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "Default Xamarin.Forms display")
 
@@ -348,11 +348,11 @@ public MainPage()
 }
 ```
 
-Setting the `Content` property of the page replaces the setting of the `Content` property in the XAML file. When you compile and deploy the new version of this program, a button appears on the screen. Pressing it navigates to `HelloXamlPage`. Here’s the resultant page on iPhone, Android, and Windows 10 Mobile devices:
+Setting the `Content` property of the page replaces the setting of the `Content` property in the XAML file. When you compile and deploy the new version of this program, a button appears on the screen. Pressing it navigates to `HelloXamlPage`. Here’s the resultant page on iPhone, Android, and UWP:
 
 [![](get-started-with-xaml-images/helloxaml1.png "Rotated Label Text")](get-started-with-xaml-images/helloxaml1-large.png#lightbox "Rotated Label Text")
 
-You can navigate back to `MainPage` using the **< Back** button on iOS, using the left arrow at the top of the page or at the bottom of the phone on Android, or using the left arrow at the bottom of the page on Windows 10 Mobile.
+You can navigate back to `MainPage` using the **< Back** button on iOS, using the left arrow at the top of the page or at the bottom of the phone on Android, or using the left arrow at the top of the page on Windows 10.
 
 Feel free to experiment with the XAML for different ways to render the `Label`. If you need to embed any Unicode characters into the text, you can use the standard XML syntax. For example, to put the greeting in smart quotes, use:
 

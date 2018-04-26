@@ -149,7 +149,7 @@ Generic type arguments for the constructor of a generic type can be specified us
       <OnPlatform x:TypeArguments="Thickness">
         <On Platform="iOS" Value="0,20,0,0" />
         <On Platform="Android" Value="5, 10" />
-        <On Platform="WinPhone, Windows" Value="10" />
+        <On Platform="UWP" Value="10" />
       </OnPlatform>
     </StackLayout.Margin>
   </StackLayout>

@@ -231,7 +231,7 @@ The iPhone at the left shows how the `SKPointMode.Points` enumeration member cau
 
 When you instead use `SKPointMode.Lines`, as shown on the Android screen in the center, the `DrawPoints` method draws a line between each pair of `SKPoint` values, using the specified line cap, in this case `Round`.
 
-The Windows mobile device shows the result of the `SKPointMode.Polygon` value. A line is drawn between the successive points in the array, but if you look very closely, you'll see that these lines are not connected. Each of these separate lines starts and ends with the specified line cap. If you select the `Round` caps, the lines might appear to be connected, but they're really not connected.
+The UWP screenshot shows the result of the `SKPointMode.Polygon` value. A line is drawn between the successive points in the array, but if you look very closely, you'll see that these lines are not connected. Each of these separate lines starts and ends with the specified line cap. If you select the `Round` caps, the lines might appear to be connected, but they're really not connected.
 
 Whether lines are connected or not connected is a crucial aspect of working with graphics paths.
 

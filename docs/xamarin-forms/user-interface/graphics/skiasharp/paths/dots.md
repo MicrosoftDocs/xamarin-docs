@@ -160,7 +160,7 @@ To get around this problem when using a stroke cap of `Square` or `Round`, you m
 - { 30, 10 } becomes { 20, 20 } for a dashed line
 - { 10, 10, 30, 10 } becomes { 0, 20, 20, 20} for a dotted and dashed line
 
-The Windows screen shows that dotted and dashed line for a stroke cap of `Round`. The `Round` stroke cap often gives the best appearance of dots and dashes in thick lines.
+The UWP screen shows that dotted and dashed line for a stroke cap of `Round`. The `Round` stroke cap often gives the best appearance of dots and dashes in thick lines.
 
 So far no mention has been made of the second parameter to the `SKPathEffect.CreateDash` method. This parameter is named `phase` and it refers to an offset within the dot-and-dash pattern for the beginning of the line. For example, if the dash array is { 10, 10 } and the `phase` is 10, then the line begins with a gap rather than a dot.
 

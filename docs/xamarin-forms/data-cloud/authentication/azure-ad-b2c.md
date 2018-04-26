@@ -56,7 +56,7 @@ The Microsoft Authentication Library (MSAL) NuGet library must be added to the P
 
 ### Portable Class Library
 
-MSAL doesn't support Windows Phone 8.1, and so PCLs that consume MSAL will need to remove this target. This can be accomplished by retargeting PCLs to use Profile7. For more information about PCLs, see [Introduction to Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md).
+PCLs that consume MSAL will need to be retargeted to use Profile7. For more information about PCLs, see [Introduction to Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md).
 
 ### iOS
 

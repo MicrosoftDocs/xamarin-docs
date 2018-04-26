@@ -41,7 +41,7 @@ Two approaches can be used to create a [`CarouselPage`](https://developer.xamari
 - [Populate](#Populating_a_CarouselPage_with_a_Page_Collection) the `CarouselPage` with a collection of child [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instances.
 - [Assign](#Populating_a_CarouselPage_with_a_Template) a collection to the [`ItemsSource`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemsSource/) property and assign a [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) to the [`ItemTemplate`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemTemplate/) property to return [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instances for objects in the collection.
 
-With both approaches, the `CarouselPage` will then display each page in turn, with a swipe interaction moving to the next page to be displayed. This navigation experience will feel natural and familiar to Windows Phone users.
+With both approaches, the `CarouselPage` will then display each page in turn, with a swipe interaction moving to the next page to be displayed. 
 
 > [!NOTE]
 > A [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) can only be populated with [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instances, or `ContentPage` derivatives.
@@ -242,7 +242,7 @@ For more information about the [`CarouselPage`](https://developer.xamarin.com/ap
 
 ## Summary
 
-This article demonstrated how to use a [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) to navigate through a collection of pages. The `CarouselPage` is a page that users can swipe from side to side to navigate through pages of content, like a gallery, and provides a navigation experience that feels natural and familiar to Windows Phone users.
+This article demonstrated how to use a [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) to navigate through a collection of pages. The `CarouselPage` is a page that users can swipe from side to side to navigate through pages of content,much like a gallery.
 
 
 ## Related Links

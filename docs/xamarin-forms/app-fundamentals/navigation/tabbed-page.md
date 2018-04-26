@@ -35,7 +35,6 @@ The layout of a [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Fo
 	> [!NOTE]
   > Note that when using AppCompat on Android, each tab will also display an icon. In addition, the `TabbedPageRenderer` for Android AppCompat has an overridable `SetTabIcon` method that can be used to load tab icons from a custom `Drawable`. This override makes it possible to use SVG images as icons on a `TabbedPage`.
 
-- On Windows Phone, the list of tabs appears at the top of the screen, and the detail area is below. The tab names are automatically converted to lowercase, and the user can scroll the collection of tabs if there are too many to fit on one screen.
 - On Windows tablet form-factors, the tabs aren't always visible and users need to swipe-down (or right-click, if they have a mouse attached) to view the tabs in a `TabbedPage` (as shown below).
 
 ![](tabbed-page-images/windows-tabs.png "TabbedPage Tabs on Windows")

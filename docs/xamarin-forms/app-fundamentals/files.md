@@ -95,9 +95,6 @@ var resourcePrefix = "WorkingWithFiles.iOS.";
 #if __ANDROID__
 var resourcePrefix = "WorkingWithFiles.Droid.";
 #endif
-#if WINDOWS_PHONE
-var resourcePrefix = "WorkingWithFiles.WinPhone.";
-#endif
 
 Debug.WriteLine("Using this resource prefix: " + resourcePrefix);
 // note that the prefix includes the trailing period '.' that is required
@@ -138,7 +135,7 @@ Because Xamarin.Forms runs on multiple platforms, each with its own filesystem, 
 
  [![Saving and loading text](files-images/saveandload-sml.png "Saving and Loading Files in App")](files-images/saveandload.png#lightbox "Saving and Loading Files in App")
 
-Each platform has a slightly different directory structure, and different filesystem capabilities - for example Xamarin.iOS and Xamarin.Android support most `System.IO` functionality but Windows Phone only supports `IsolatedStorage` and [ `Windows.Storage`](http://msdn.microsoft.com/library/windowsphone/develop/jj681698(v=vs.105).aspx) APIs.
+Each platform has a slightly different directory structure, and different filesystem capabilities - for example Xamarin.iOS and Xamarin.Android support most `System.IO` functionality but the Universal Windows Platform only supports [`Windows.Storage`](/uwp/api/windows.storage/) APIs.
 
 To get around this problem, the sample app defines an Interface in the Xamarin.Forms PCL to load and save files. It provides a simple API to load and save text files that will be stored on the device.
 
@@ -186,9 +183,9 @@ namespace WorkingWithFiles {
 }
 ```
 
-### Universal Windows Platform (UWP), Windows 8.1 and Windows Phone 8.1
+### Universal Windows Platform (UWP)
 
-These platforms have a different filesystem API –
+The UWP has a different filesystem API –
 [`Windows.Storage`](/windows/uwp/files/quickstart-reading-and-writing-files/) – that is used to save and load files.
 The `ISaveAndLoad` interface can be implemented as shown below:
 
@@ -223,7 +220,6 @@ namespace WindowsApp
     }
 }
 ```
-
 
 <a name="Saving_and_Loading_in_Shared_Projects" />
 
