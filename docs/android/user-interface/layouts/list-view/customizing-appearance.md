@@ -5,7 +5,7 @@ ms.assetid: B09AD282-2C4F-D71E-6806-9B1EF05C2CD4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 04/26/2018
 ---
 
 # Customizing a ListView's Appearance
@@ -142,7 +142,7 @@ ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListI
 
 The `ListView` itself supports different selection modes, regardless of
 the accessory being displayed. To avoid confusion, use `Single`
-selection mode with `Checked` and `SingleChoice` accessories and the
+selection mode with `SingleChoice` accessories and the `Checked` or 
 `Multiple` mode with the `MultipleChoice` style. The selection mode is
 controlled by the `ChoiceMode` property of the `ListView`.
 
