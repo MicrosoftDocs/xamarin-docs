@@ -321,7 +321,8 @@ reverse-engineer, debug, or tamper with the application.
 [Dotfuscator Community
 Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) can
 be used to obfuscate managed code and inject runtime security state
-detection code into a Xamarin.Android app at build time.
+detection code into a Xamarin.Android app at build time to detect 
+and respond if the app is running on a rooted device.
 
 Dotfuscator CE is included with Visual Studio,
 however only Visual Studio 2015 Update 3 (and higher) has the correct
@@ -342,7 +343,8 @@ reverse-engineer, debug, or tamper with the application.
 Although it does not support Visual Studio for Mac, you can use
 [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview)
 with Visual Studio to obfuscate managed code and inject runtime security state
-detection code into a Xamarin.Android app at build time.
+detection code into a Xamarin.Android app at build time to detect 
+and respond if the app is running on a rooted device.
 
 To configure Dotfuscator CE, please see
 [Using Dotfuscator Community Edition with Xamarin](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator).
