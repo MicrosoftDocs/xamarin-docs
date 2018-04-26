@@ -13,7 +13,7 @@ ms.date: 11/29/2017
 
 _The Xamarin.Forms Entry control allows a single line of text to be edited. This article demonstrates how to create a custom renderer for the Entry control, enabling developers to override the default native rendering with their own platform-specific customization._
 
-Every Xamarin.Forms control has an accompanying renderer for each platform that creates an instance of a native control. When an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control is rendered by a Xamarin.Forms application, in iOS the `EntryRenderer` class is instantiated, which in turns instantiates a native `UITextField` control. On the Android platform, the `EntryRenderer` class instantiates an `EditText` control. On Windows Phone and the Universal Windows Platform (UWP), the `EntryRenderer` class instantiates a `TextBox` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Every Xamarin.Forms control has an accompanying renderer for each platform that creates an instance of a native control. When an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control is rendered by a Xamarin.Forms application, in iOS the `EntryRenderer` class is instantiated, which in turns instantiates a native `UITextField` control. On the Android platform, the `EntryRenderer` class instantiates an `EditText` control. On the Universal Windows Platform (UWP), the `EntryRenderer` class instantiates a `TextBox` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 The following diagram illustrates the relationship between the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control and the corresponding native controls that implement it:
 
@@ -174,13 +174,13 @@ namespace CustomRenderer.Android
 
 The call to the base class's `OnElementChanged` method instantiates an Android `EditText` control, with a reference to the control being assigned to the renderer's `Control` property. The background color is then set to light green with the `Control.SetBackgroundColor` method.
 
-### Creating the Custom Renderer on Windows Phone and UWP
+### Creating the Custom Renderer on UWP
 
-The following code example shows the custom renderer for Windows Phone and UWP:
+The following code example shows the custom renderer for UWP:
 
 ```csharp
 [assembly: ExportRenderer(typeof(MyEntry), typeof(MyEntryRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class MyEntryRenderer : EntryRenderer
     {

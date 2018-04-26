@@ -15,7 +15,7 @@ so in addition to phones, apps can also run on:
 
 * iPads,
 * Android tablets,
-* Windows tablets and desktop computers (running Windows 8.1 or Windows 10).
+* Windows tablets and desktop computers (running Windows 10).
 
 This page briefly discusses:
 
@@ -68,14 +68,7 @@ Android app project to include optimized image resources in your app.
 
 ### Windows Tablets and Desktops
 
-To support tablets and desktop computers running Windows, you'll need to
-use one of the two supported project types:
-
-* [Windows 8.1](~/xamarin-forms/platform/windows/installation/tablet.md) -
-  builds apps specifically for Windows 8.1 tablets and desktops.
-* [Windows UWP support](~/xamarin-forms/platform/windows/installation/universal.md) -
-  builds universal apps that run on both Windows 10
-  phones, tablets, and desktops.
+To support tablets and desktop computers running Windows, you'll need to use [Windows UWP support](~/xamarin-forms/platform/windows/installation/index.md), which builds universal apps that run on Windows 10.
 
 Apps running on Windows tablets and desktops can be resized to arbitrary
 dimensions in addition to running full-screen.

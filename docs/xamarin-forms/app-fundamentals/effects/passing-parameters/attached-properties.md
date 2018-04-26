@@ -341,14 +341,14 @@ public class LabelShadowEffect : PlatformEffect
 
 The `OnElementPropertyChanged` method updates the radius, color, or offset of the shadow, provided that the appropriate `ShadowEffect` attached property value has changed. A check for the property that's changed should always be made, as this override can be called many times.
 
-### Windows Phone & Universal Windows Platform Projects
+### Universal Windows Platform Project
 
-The following code example shows the `LabelShadowEffect` implementation for the Windows Phone and Universal Windows Platform (UWP) projects:
+The following code example shows the `LabelShadowEffect` implementation for the Universal Windows Platform (UWP) project:
 
 ```csharp
 [assembly: ResolutionGroupName ("MyCompany")]
 [assembly: ExportEffect (typeof(LabelShadowEffect), "LabelShadowEffect")]
-namespace EffectsDemo.WinPhone81
+namespace EffectsDemo.UWP
 {
 	public class LabelShadowEffect : PlatformEffect
 	{
@@ -397,7 +397,7 @@ namespace EffectsDemo.WinPhone81
 }
 ```
 
-The Windows Runtime and Universal Windows Platform don't provide a shadow effect, and so the `LabelShadowEffect` implementation on both platforms simulates one by adding a second offset [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) behind the primary `Label`. The `OnAttached` method creates the new `Label` and sets some layout properties on the `Label`. It then calls methods that retrieve the attached property values using the `ShadowEffect` getters, and creates the shadow by setting the [`TextColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/), [`TranslationX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/), and [`TranslationY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) properties to control the color and location of the `Label`. The `shadowLabel` is then inserted offset behind the primary `Label`. This functionality is wrapped in a `try`/`catch` block in case the control that the effect is attached to does not have the `Control.Layer` properties. No implementation is provided by the `OnDetached` method because no cleanup is necessary.
+The Universal Windows Platform doesn't provide a shadow effect, and so the `LabelShadowEffect` implementation on both platforms simulates one by adding a second offset [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) behind the primary `Label`. The `OnAttached` method creates the new `Label` and sets some layout properties on the `Label`. It then calls methods that retrieve the attached property values using the `ShadowEffect` getters, and creates the shadow by setting the [`TextColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/), [`TranslationX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/), and [`TranslationY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) properties to control the color and location of the `Label`. The `shadowLabel` is then inserted offset behind the primary `Label`. This functionality is wrapped in a `try`/`catch` block in case the control that the effect is attached to does not have the `Control.Layer` properties. No implementation is provided by the `OnDetached` method because no cleanup is necessary.
 
 #### Responding to Property Changes
 

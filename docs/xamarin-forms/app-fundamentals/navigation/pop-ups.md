@@ -41,7 +41,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 ## Guiding Users Through Tasks
 
-The [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) is a common UI element in iOS. The Xamarin.Forms [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) method lets you include this control in cross-platforms apps, rendering native alternatives in Android and Windows Phone.
+The [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) is a common UI element in iOS. The Xamarin.Forms [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) method lets you include this control in cross-platforms apps, rendering native alternatives in Android and UWP.
 
 To display an action sheet, `await` [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) in any [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/), passing the message and button labels as strings. The method returns the string label of the button that was clicked by the user. A simple example is shown here:
 

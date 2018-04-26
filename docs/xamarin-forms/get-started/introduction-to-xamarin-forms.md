@@ -1,6 +1,6 @@
 ---
 title: "An Introduction to Xamarin.Forms"
-description: "Xamarin.Forms is a cross-platform natively backed UI toolkit abstraction that allows developers to easily create user interfaces that can be shared across Android, iOS, Windows, and Windows Phone. The user interfaces are rendered using the native controls of the target platform, allowing Xamarin.Forms applications to retain the appropriate look and feel for each platform. This article provides an introduction to Xamarin.Forms and how to get started writing applications with it."
+description: "Xamarin.Forms is a cross-platform natively backed UI toolkit abstraction that allows developers to easily create user interfaces that can be shared across Android, iOS, and the Universal Windows Platform. The user interfaces are rendered using the native controls of the target platform, allowing Xamarin.Forms applications to retain the appropriate look and feel for each platform. This article provides an introduction to Xamarin.Forms and how to get started writing applications with it."
 ms.prod: xamarin
 ms.assetid: f619595f-3ee7-439b-a1bc-d13e5106e6e9
 ms.technology: xamarin-forms
@@ -11,13 +11,13 @@ ms.date: 12/02/2016
 
 # An Introduction to Xamarin.Forms
 
-_Xamarin.Forms is a cross-platform natively backed UI toolkit abstraction that allows developers to easily create user interfaces that can be shared across Android, iOS, Windows, and Windows Phone. The user interfaces are rendered using the native controls of the target platform, allowing Xamarin.Forms applications to retain the appropriate look and feel for each platform. This article provides an introduction to Xamarin.Forms and how to get started writing applications with it._
+_Xamarin.Forms is a cross-platform natively backed UI toolkit abstraction that allows developers to easily create user interfaces that can be shared across Android, iOS, Windows, and the Universal Windows Platform. The user interfaces are rendered using the native controls of the target platform, allowing Xamarin.Forms applications to retain the appropriate look and feel for each platform. This article provides an introduction to Xamarin.Forms and how to get started writing applications with it._
 
 <a name="Overview" />
 
 ## Overview
 
-Xamarin.Forms is a framework that allows developers to rapidly create cross platform user interfaces. It provides it's own abstraction for the user interface that will be rendered using native controls on iOS, Android, Windows, or Windows Phone. This means that applications can share a large portion of their user interface code and still retain the native look and feel of the target platform.
+Xamarin.Forms is a framework that allows developers to rapidly create cross platform user interfaces. It provides it's own abstraction for the user interface that will be rendered using native controls on iOS, Android, or the Universal Windows Platform (UWP). This means that applications can share a large portion of their user interface code and still retain the native look and feel of the target platform.
 
 Xamarin.Forms allows for rapid prototyping of applications that can evolve over time to complex applications. Because Xamarin.Forms applications are native applications, they don't have the limitations of other toolkits such as browser sandboxing, limited APIs, or poor performance. Applications written using Xamarin.Forms are able to utilize any of the API’s or features of the underlying platform, such as (but not limited to) CoreMotion, PassKit, and StoreKit on iOS; NFC and Google Play Services on Android; and Tiles on Windows. In addition, it's possible to create applications that will have parts of their user interface created with Xamarin.Forms while other parts are created using the native UI toolkit.
 
@@ -116,39 +116,6 @@ namespace HelloXamarinFormsWorld.Android
 ```
 
 The `OnCreate` override initializes the Xamarin.Forms framework by calling the `Init` method. This causes the Android-specific implementation of Xamarin.Forms to be loaded in the application before the Xamarin.Forms application is loaded.
-
-<a name="Launching_in_Windows_Phone" />
-
-#### Windows Phone 8.1 (WinRT)
-
-In Windows Runtime applications, the `Init` method that initializes the Xamarin.Forms framework is invoked from the `App` class:
-
-```csharp
-Xamarin.Forms.Forms.Init (e);
-
-if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
-{
-  ...
-}
-```
-
-This causes the Windows Phone-specific implementation of Xamarin.Forms to be loaded in the application. The initial Xamarin.Forms page is launched by the `MainPage` class, as demonstrated in the following code example:
-
-```csharp
-public partial class MainPage
-{
-    public MainPage()
-    {
-      this.InitializeComponent();
-      this.NavigationCacheMode = NavigationCacheMode.Required;
-      this.LoadApplication(new HelloXamarinFormsWorld.App());
-    }
-}
-```
-
-The Xamarin.Forms application is loaded with the `LoadApplication` method.
-
-Xamarin.Forms also has support for Windows 8.1. For information about how to configure this project types, see [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md).
 
 #### Universal Windows Platform
 
@@ -743,7 +710,7 @@ Alternatively, Creating Mobile Apps with Xamarin.Forms, a book by Charles Petzol
 
 ## Summary
 
-This article provided an introduction to Xamarin.Forms and how to get started writing applications with it. Xamarin.Forms is a cross-platform natively backed UI toolkit abstraction that allows developers to easily create user interfaces that can be shared across Android, iOS, Windows, and Windows Phone. The user interfaces are rendered using the native controls of the target platform, allowing Xamarin.Forms applications to retain the appropriate look and feel for each platform.
+This article provided an introduction to Xamarin.Forms and how to get started writing applications with it. Xamarin.Forms is a cross-platform natively backed UI toolkit abstraction that allows developers to easily create user interfaces that can be shared across Android, iOS, and the Universal Windows Platform. The user interfaces are rendered using the native controls of the target platform, allowing Xamarin.Forms applications to retain the appropriate look and feel for each platform.
 
 
 ## Related Links

@@ -53,7 +53,7 @@ On Android you must pass the same parameters as `Forms.Init`:
 Xamarin.FormsMaps.Init(this, bundle);
 ```
 
-For the Windows Runtime (WinRT) and the Universal Windows Platform (UWP) use the following code:
+For the Universal Windows Platform (UWP) use the following code:
 
 ```csharp
 Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
@@ -63,7 +63,7 @@ Add this call in the following files for each platform:
 
 -  **iOS** - AppDelegate.cs file, in the  `FinishedLaunching` method.
 -  **Android** - MainActivity.cs file, in the  `OnCreate` method.
--  **WinRT and UWP** - MainPage.xaml.cs file, in the `MainPage` constructor.
+-  **UWP** - MainPage.xaml.cs file, in the `MainPage` constructor.
 
 Once the NuGet package has been added and the initialization method called inside
 each applcation, `Xamarin.Forms.Maps` APIs can be used in the common PCL or Shared Project code.
@@ -145,9 +145,9 @@ The last two are required because applications
   [permissions](http://developer.android.com/reference/android/Manifest.permission.html)
   to learn more.
 
-### Windows Runtime and Universal Windows Platform
+### Universal Windows Platform
 
-To use maps on the Windows Runtime and the Universal Windows Platform you must generate an authorization token. For more information, see [Request a maps authentication key](https://msdn.microsoft.com/library/windows/apps/mt219694.aspx) on MSDN.
+To use maps on the Universal Windows Platform you must generate an authorization token. For more information, see [Request a maps authentication key](https://msdn.microsoft.com/library/windows/apps/mt219694.aspx) on MSDN.
 
 The authentication token should then be specified in the `FormsMaps.Init("AUTHORIZATION_TOKEN")` method call, to authenticate the app with Bing Maps.
 
@@ -268,7 +268,7 @@ MyMap.MoveToRegion(
 
 ## Summary
 
-The Xamarin.Forms.Maps is a separate NuGet that must be added to each project in a Xamarin.Forms solution. Additional initialization code is required, as well as some configuration steps for iOS, Android, WinRT, and UWP.
+The Xamarin.Forms.Maps is a separate NuGet that must be added to each project in a Xamarin.Forms solution. Additional initialization code is required, as well as some configuration steps for iOS, Android, and UWP.
 
 Once configured the Maps API can be used to render maps with pin markers in just a few lines of code. Maps can be further enhanced with a [custom renderer](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
 

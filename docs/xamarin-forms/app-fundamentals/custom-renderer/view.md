@@ -13,7 +13,7 @@ ms.date: 11/29/2017
 
 _Xamarin.Forms custom user interface controls should derive from the View class, which is used to place layouts and controls on the screen. This article demonstrates how to create a custom renderer for a Xamarin.Forms custom control that's used to display a preview video stream from the device's camera._
 
-Every Xamarin.Forms view has an accompanying renderer for each platform that creates an instance of a native control. When a [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) is rendered by a Xamarin.Forms application in iOS, the `ViewRenderer` class is instantiated, which in turn instantiates a native `UIView` control. On the Android platform, the `ViewRenderer` class instantiates a native `View` control. On Windows Phone and the Universal Windows Platform (UWP), the `ViewRenderer` class instantiates a native `FrameworkElement` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Every Xamarin.Forms view has an accompanying renderer for each platform that creates an instance of a native control. When a [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) is rendered by a Xamarin.Forms application in iOS, the `ViewRenderer` class is instantiated, which in turn instantiates a native `UIView` control. On the Android platform, the `ViewRenderer` class instantiates a native `View` control. On the Universal Windows Platform (UWP), the `ViewRenderer` class instantiates a native `FrameworkElement` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 The following diagram illustrates the relationship between the [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) and the corresponding native controls that implement it:
 
@@ -259,13 +259,13 @@ namespace CustomRenderer.Droid
 
 Provided that the `Control` property is `null`, the `SetNativeControl` method is called to instantiate a new `CameraPreview` control and assign a reference to it to the `Control` property. The `CameraPreview` control is a platform-specific custom control that uses the `Camera` API to provide the preview stream from the camera. The `CameraPreview` control is then configured, provided that the custom renderer is attached to a new Xamarin.Forms element. This configuration involves creating a new native `Camera` object to access a particular hardware camera, and registering an event handler to process the `Click` event. In turn this handler will stop and start the video preview when it's tapped. The `Click` event is unsubscribed from if the Xamarin.Forms element the renderer is attached to changes.
 
-### Creating the Custom Renderer on Windows Phone and UWP
+### Creating the Custom Renderer on UWP
 
-The following code example shows the custom renderer for Windows Phone and UWP:
+The following code example shows the custom renderer for UWP:
 
 ```csharp
 [assembly: ExportRenderer (typeof(CameraPreview), typeof(CameraPreviewRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
 	public class CameraPreviewRenderer : ViewRenderer<CameraPreview, Windows.UI.Xaml.Controls.CaptureElement>
 	{
@@ -313,7 +313,7 @@ namespace CustomRenderer.WinPhone81
 Provided that the `Control` property is `null`, a new `CaptureElement` is instantiated and the `InitializeAsync` method is called, which uses the `MediaCapture` API to provide the preview stream from the camera. The `SetNativeControl` method is then called to assign a reference to the `CaptureElement` instance to the `Control` property. The `CaptureElement` control exposes a `Tapped` event that's handled by the `OnCameraPreviewTapped` method to stop and start the video preview when it's tapped. The `Tapped` event is subscribed to when the custom renderer is attached to a new Xamarin.Forms element, and unsubscribed from only when the element the renderer is attached to changes.
 
 > [!NOTE]
-> It's important to stop and dispose of the objects that provide access to the camera in a Windows Phone or UWP application. Failure to do so can interfere with other applications that attempt to access the device's camera. For more information, see and [Quickstart: Capturing video by using the MediaCapture API](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) for Windows Runtime applications, and [Display the camera preview](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) for UWP applications.
+> It's important to stop and dispose of the objects that provide access to the camera in a UWP application. Failure to do so can interfere with other applications that attempt to access the device's camera. For more information, see [Display the camera preview](/windows/uwp/audio-video-camera/simple-camera-preview-access/).
 
 ## Summary
 

@@ -146,17 +146,17 @@ The `OnAttached` method calls the `SetBackgroundColor` method to set the backgro
 
 The `OnElementPropertyChanged` override responds to bindable property changes on the Xamarin.Forms control. When the [`IsFocused`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsFocused/) property changes, the background color of the control is changed to white if the control has focus, otherwise it's changed to light green. This functionality is wrapped in a `try`/`catch` block in case the control the effect is attached to does not have a `BackgroundColor` property.
 
-## Windows Phone & Universal Windows Platform Projects
+## Universal Windows Platform Projects
 
-The following code example shows the `FocusEffect` implementation for the Windows Phone and Universal Windows Platform (UWP) projects:
+The following code example shows the `FocusEffect` implementation for Universal Windows Platform (UWP) projects:
 
 ```csharp
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.WinRT;
+using Xamarin.Forms.Platform.UWP;
 
 [assembly: ResolutionGroupName("MyCompany")]
 [assembly: ExportEffect(typeof(FocusEffect), "FocusEffect")]
-namespace EffectsDemo.WinPhone81
+namespace EffectsDemo.UWP
 {
     public class FocusEffect : PlatformEffect
     {

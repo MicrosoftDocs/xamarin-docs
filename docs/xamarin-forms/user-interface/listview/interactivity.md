@@ -49,12 +49,10 @@ With selection enabled:
 
 ![](interactivity-images/selection-default.png "ListView with Selection Enabled")
 
-Note that on Windows Phone, some cells, including `SwitchCell` don't update their visual state in response to selection.
-
 <a name="Context_Actions" />
 
 ## Context Actions
-Often, users will want to take action on an item in a `ListView`. For example, consider a list of emails in the Mail app. On iOS, you can swipe to delete a message and on Windows Phone, you can long-press a message and then delete it:
+Often, users will want to take action on an item in a `ListView`. For example, consider a list of emails in the Mail app. On iOS, you can swipe to delete a message::
 
 ![](interactivity-images/context-default.png "ListView with Context Actions")
 
@@ -148,8 +146,6 @@ Pull-to-Refresh as the user is pulling:
 
 Pull-to-Refresh as the user has released the pull. This is what the user sees while you're updating list:
 ![](interactivity-images/refresh-in-progress.png "ListView Pull to Refresh Complete")
-
-Note that as of Xamarin.Forms 1.4.3, pull-to-refresh is not supported on Windows Phone 8.1. On Windows phone 8, pull-to-refresh is not a native platform feature, so an implementation of pull-to-refresh is provided by Xamarin.Forms. Finally, be aware that pull-to-refresh will not work on Windows Phone if all elements in the list can fit on the screen (in other words, if vertical scrolling isn't required).
 
 ListView exposes a few events that allow you to respond to pull-to-refresh events.
 

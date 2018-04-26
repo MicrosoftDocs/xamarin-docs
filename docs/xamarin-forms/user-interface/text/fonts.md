@@ -166,7 +166,7 @@ The `FormattedString` class can also be used in XAML, as shown here:
         <OnPlatform x:TypeArguments="x:String">
                 <On Platform="iOS" Value="MarkerFelt-Thin" />
                 <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
         </OnPlatform>
     </Label.FontFamily>
 </Label>
@@ -178,7 +178,7 @@ When specifying a custom font face, it is always a good idea to use `OnPlatform`
 
 ## Using a Custom Font
 
-Using a font other than the built-in typefaces requires some platform-specific coding. This screenshot shows the custom font **Lobster** from [Google's open-source fonts](https://www.google.com/fonts) rendered on iOS, Android and Windows Phone using Xamarin.Forms.
+Using a font other than the built-in typefaces requires some platform-specific coding. This screenshot shows the custom font **Lobster** from [Google's open-source fonts](https://www.google.com/fonts) rendered using Xamarin.Forms.
 
  [![Custom font on iOS and Android](fonts-images/custom-sml.png "Custom Fonts Example")](fonts-images/custom.png#lightbox "Custom Fonts Example")
 
@@ -241,7 +241,7 @@ You can also use [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#p
         <OnPlatform x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Lobster-Regular" />
                 <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
         </OnPlatform>
     </Label.FontFamily>
 </Label>

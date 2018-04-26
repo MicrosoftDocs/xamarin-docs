@@ -67,7 +67,7 @@ Values of the `xSkew` argument shift the bottom of the text right for positive v
 
 [![](skew-images/skewexperiment-small.png "Triple screenshot of the Skew Experiment page")](skew-images/skewexperiment-large.png#lightbox "Triple screenshot of the Skew Experiment page")
 
-If `xSkew` is the negative of `ySkew`, the result is rotation, but also scaled somewhat as the Windows display indicates.
+If `xSkew` is the negative of `ySkew`, the result is rotation, but also scaled somewhat as the UWP display indicates.
 
 The transform formulas are as follows:
 

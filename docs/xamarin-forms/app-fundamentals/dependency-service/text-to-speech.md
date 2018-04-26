@@ -16,7 +16,7 @@ This article will guide you as you create a cross-platform app that uses [`Depen
 - **[Creating the Interface](#Creating_the_Interface)** &ndash; understand how the interface is created in shared code.
 - **[iOS Implementation](#iOS_Implementation)** &ndash; learn how to implement the interface in native code for iOS.
 - **[Android Implementation](#Android_Implementation)** &ndash; learn how to implement the interface in native code for Android.
-- **[Windows Implementation](#WindowsImplementation)** &ndash; learn how to implement the interface in native code for Windows Phone and the Universal Windows Platform (UWP).
+- **[UWP Implementation](#WindowsImplementation)** &ndash; learn how to implement the interface in native code for the Universal Windows Platform (UWP).
 - **[Implementing in Shared Code](#Implementing_in_Shared_Code)** &ndash; learn how to use `DependencyService` to call into the native implementation from shared code.
 
 The application using `DependencyService` will have the following structure:
@@ -118,9 +118,9 @@ The `[assembly]` attribute registers the class as an implementation of the `ITex
 
 <a name="WindowsImplementation" />
 
-## Windows Phone and Universal Windows Platform Implementation
+## Universal Windows Platform Implementation
 
-Windows Phone and the Universal Windows Platform have a speech API in the `Windows.Media.SpeechSynthesis` namespace. The only caveat is to remember to tick the **Microphone** capability in the manifest, otherwise access to the speech APIs are blocked.
+The Universal Windows Platform has a speech API in the `Windows.Media.SpeechSynthesis` namespace. The only caveat is to remember to tick the **Microphone** capability in the manifest, otherwise access to the speech APIs are blocked.
 
 ```csharp
 [assembly:Dependency(typeof(TextToSpeechImplementation))]
@@ -161,7 +161,7 @@ public MainPage ()
 }
 ```
 
-Running this application on iOS, Android, or the Windows platforms and pressing the button will result in the application speaking to you, using the native speech SDK on each platform.
+Running this application on iOS, Android, or the UWP and pressing the button will result in the application speaking to you, using the native speech SDK on each platform.
 
  ![iOS and Android text-to-speech button](text-to-speech-images/running.png "Text to Speech Sample")
 

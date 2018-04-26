@@ -217,78 +217,10 @@ public class MainActivity :
 > [these instructions](~/xamarin-forms/platform/android/appcompat.md)
 > to update your existing Android apps.
 
-
-### Windows Phone Project
-
-The main page in the Windows Phone (Silverlight-based) project should inherit
-from `FormsApplicationPage`. This means the XAML and C# for `MainPage` reference
-the `FormsApplicationPage` class as shown.
-
-The XAML uses a custom namespace so that the root element reflects the `FormsApplicationPage` class:
-
-```xaml
-<winPhone:FormsApplicationPage
-   ...
-   xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"
-    ...>
-</winPhone:FormsApplicationPage>
-```
-
-The C# inherits from the `FormsApplicationPage` class, and calls `LoadApplication` to create an instance of your Xamarin.Forms `App`. Note that it is good practice to explicitly use the application namespace to qualify the `App` because Windows Phone applications also have their own `App` class unrelated to Xamarin.Forms.
-
-```csharp
-public partial class MainPage :
-    global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
-
-        global::Xamarin.Forms.Forms.Init();
-        LoadApplication(new YOUR_APP_NAMESPACE.App()); // new in 1.3, use the correct namespace
-    }
- }
-```
-
-### Windows 8.1 Project
-
-The main page in [Windows 8.1 (WinRT-based)](~/xamarin-forms/platform/windows/installation/tablet.md)
-projects should now inherit from  `WindowsPage`. This means the XAML for `MainPage`
-reference the `WindowsPage` class as shown:
-
-The XAML uses a custom namespace so that the root element reflects the `FormsApplicationPage` class:
-
-```xaml
-<forms:WindowsPage
-   ...
-   xmlns:forms="using:Xamarin.Forms.Platform.WinRT"
-   ...>
-</forms:WindowsPage>
-```
-
-The C# codebehind's construction must call `LoadApplication` to create an
-instance of your Xamarin.Forms `App`. Note that it is good practice to
-explicitly use the application namespace to qualify the `App` because UWP applications
-also have their own `App` class unrelated to Xamarin.Forms.
-
-```csharp
-public partial class MainPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        LoadApplication(new YOUR_APP_NAMESPACE.App());
-    }
- }
-```
-
-Note that `Forms.Init()` must be called in **App.xaml.cs** around line 65.
-
 ### Universal Windows Project (UWP) for Windows 10
 
-[Universal Windows Project](~/xamarin-forms/platform/windows/installation/universal.md)
-support in Xamarin.Forms is currently in Preview.
+See [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md)
+for information about UWP support in Xamarin.Forms.
 
 The main page in the UWP project should inherit from `WindowsPage`. This means
 the XAML and C# for `MainPage` reference the `FormsApplicationPage` class as shown.

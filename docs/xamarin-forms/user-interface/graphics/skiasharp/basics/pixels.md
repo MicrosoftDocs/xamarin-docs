@@ -99,7 +99,7 @@ Here's the program running on all three platforms:
 
 As you can see, the `CanvasSize` property of the `SKCanvasView` and the `Size` property of the `SKImageInfo` value are consistent in reporting the pixel dimensions. The `Height` and `Width` properties of the `SKCanvasView` are Xamarin.Forms properties, and report the size of the view in the device-independent units defined by the platform.
 
-The iOS 7 simulator on the left has 2 pixels per device-independent unit, the Android Nexus 5 in the center has 3 pixels per unit, and the Nokia Lumia 925 on the right has 2.25 pixels per unit. That's why the simple circle shown earlier looks about the same size on the iPhone and Windows phone, but is smaller on the Android phone.
+The iOS 7 simulator on the left has 2 pixels per device-independent unit, and the Android Nexus 5 in the center has 3 pixels per unit. That's why the simple circle shown earlier has different sizes on different platforms.
 
 If you'd prefer to work entirely in device-independent units, you can do so by setting the `IgnorePixelScaling` property of the `SKCanvasView` to `true`. However, you might not like the results. SkiaSharp renders the graphics on a smaller device surface, with a pixel size equal to the size of the view in device-independent units. (For example, SkiaSharp would use a display surface of 360 x 512 pixels on the Nexus 5.) It then scales that image up in size, resulting in noticeable bitmap jaggies.
 

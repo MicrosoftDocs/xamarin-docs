@@ -13,7 +13,7 @@ ms.date: 12/07/2016
 
 _A Xamarin.Forms ViewCell is a cell that can be added to a ListView or TableView, which contains a developer-defined view. This article demonstrates how to create a custom renderer for a ViewCell that's hosted inside a Xamarin.Forms ListView control. This stops the Xamarin.Forms layout calculations from being repeatedly called during ListView scrolling._
 
-Every Xamarin.Forms cell has an accompanying renderer for each platform that creates an instance of a native control. When a [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) is rendered by a Xamarin.Forms application, in iOS the `ViewCellRenderer` class is instantiated, which in turn instantiates a native `UITableViewCell` control. On the Android platform, the `ViewCellRenderer` class instantiates a native `View` control. On Windows Phone and the Universal Windows Platform (UWP), the `ViewCellRenderer` class instantiates a native `DataTemplate`. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Every Xamarin.Forms cell has an accompanying renderer for each platform that creates an instance of a native control. When a [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) is rendered by a Xamarin.Forms application, in iOS the `ViewCellRenderer` class is instantiated, which in turn instantiates a native `UITableViewCell` control. On the Android platform, the `ViewCellRenderer` class instantiates a native `View` control. On the Universal Windows Platform (UWP), the `ViewCellRenderer` class instantiates a native `DataTemplate`. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 The following diagram illustrates the relationship between the [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) and the corresponding native controls that implement it:
 
@@ -165,7 +165,7 @@ The `NativeCell` custom cell is rendered by platform-specific renderer classes, 
 
 ![](viewcell-images/screenshots.png "NativeCell on each Platform")
 
-The `ViewCellRenderer` class exposes platform-specific methods for rendering the custom cell. This is the `GetCell` method on the iOS platform, the `GetCellCore` method on the Android platform, and the `GetTemplate` method on the Windows Phone platform.
+The `ViewCellRenderer` class exposes platform-specific methods for rendering the custom cell. This is the `GetCell` method on the iOS platform, the `GetCellCore` method on the Android platform, and the `GetTemplate` method on UWP.
 
 Each custom renderer class is decorated with an `ExportRenderer` attribute that registers the renderer with Xamarin.Forms. The attribute takes two parameters – the type name of the Xamarin.Forms cell being rendered, and the type name of the custom renderer. The `assembly` prefix to the attribute specifies that the attribute applies to the entire assembly.
 
@@ -515,15 +515,15 @@ The following code example shows the layout definition for the `NativeAndroidCel
 
 This layout specifies that two `TextView` controls and an `ImageView` control are used to display the cell's content. The two `TextView` controls are vertically oriented within a `LinearLayout` control, with all the controls being contained within a `RelativeLayout`.
 
-### Creating the Custom Renderer on Windows Phone and UWP
+### Creating the Custom Renderer on UWP
 
-The following code example shows the custom renderer for Windows Phone and UWP:
+The following code example shows the custom renderer for UWP:
 
 ```csharp
-[assembly: ExportRenderer(typeof(NativeCell), typeof(NativeWinPhoneCellRenderer))]
-namespace CustomRenderer.WinPhone81
+[assembly: ExportRenderer(typeof(NativeCell), typeof(NativeUWPCellRenderer))]
+namespace CustomRenderer.UWP
 {
-    public class NativeWinPhoneCellRenderer : ViewCellRenderer
+    public class NativeUWPCellRenderer : ViewCellRenderer
     {
         public override Windows.UI.Xaml.DataTemplate GetTemplate(Cell cell)
         {

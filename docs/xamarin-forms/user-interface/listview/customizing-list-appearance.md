@@ -31,7 +31,7 @@ To enable grouping:
 - Set the `ListView`'s `ItemsSource` to that list.
 - Set `IsGroupingEnabled` to true.
 - Set [`GroupDisplayBinding`](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupDisplayBinding/) to bind to the property of the groups that is being used as the title of the group.
-- [Optional] Set [`GroupShortNameBinding`](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/) to bind to the property of the groups that is being used as the short name for the group. The short name is used for the jump lists (rigt-side column on iOS, tile grid on Windows Phone).
+- [Optional] Set [`GroupShortNameBinding`](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/) to bind to the property of the groups that is being used as the short name for the group. The short name is used for the jump lists (right-side column on iOS).
 
 Start by creating a class for the groups:
 
@@ -122,7 +122,7 @@ Note that we have:
 If grouping has been enabled in the list, the group header can also be customized.
 
 Similar to how the `ListView` has an `ItemTemplate` for defining how rows are
-displayed, `ListView` has a `GroupHeaderTemplate`. 
+displayed, `ListView` has a `GroupHeaderTemplate`.
 
 An example of customizing the group header in XAML is shown here:
 
@@ -211,7 +211,7 @@ To create a customized header and footer, define the Header and Footer views:
 <a name="Row_Separators" />
 
 ## Row Separators
-Separator lines are displayed between `ListView` elements by default on iOS and Android. Windows Phone does not support separator lines, per that platforms UX guidelines. If you'd prefer to hide the separator lines on iOS and Android, set the `SeparatorVisibility` property on your ListView. The options for `SeparatorVisibility` are:
+Separator lines are displayed between `ListView` elements by default on iOS and Android. If you'd prefer to hide the separator lines on iOS and Android, set the `SeparatorVisibility` property on your ListView. The options for `SeparatorVisibility` are:
 
 * **Default** - shows a separator line on iOS and Android.
 * **None** - hides the separator on all platforms.

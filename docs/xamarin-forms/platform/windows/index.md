@@ -18,29 +18,11 @@ contains more information about the pre-requisites.
 
 ## Platform Support
 
-The Xamarin.Forms templates available in Visual Studio contain one
-Windows project by default:
-
-* **Universal Windows Platform Apps** - Xamarin.Forms apps can also be
-  optimized for Windows 10. Universal (UWP) apps can run on phone, tablet, and
-  desktop devices.
-
-If you have installed the correct development options in Visual Studio,
-  it's also possible to [add](installation/index.md) these project types to
-  support older versions of Windows:
-
-* **Windows 8.1** - You can deploy Xamarin.Forms apps to tablet and desktop
-  form-factors as a Windows 8.1 app project using WinRT controls.
-* **Windows Phone 8.1** - Xamarin.Forms has full support
-  for the Windows Phone 8.1 platform using WinRT. The look and feel of apps using
-  Windows Phone 8.1 support may be different to your earlier Xamarin.Forms Windows Phone
-  apps that were based on Silverlight.
-
+The Xamarin.Forms templates available in Visual Studio contain a Universal Windows Platform (UWP) project.
 
 > [!NOTE]
-> Xamarin.Forms 1.x and 2.x support _Windows Phone 8 Silverlight_
-> application development, however this project type has been deprecated.
-
+> Xamarin.Forms 1.x and 2.x support _Windows Phone 8 Silverlight_,
+> _Windows Phone 8.1_, and _Windows 8.1_ application development. However, these project types have been deprecated.
 
 ## Getting Started
 
@@ -54,20 +36,17 @@ If the Windows platform you wish to target isn't already in your solution,
 vist the [setup instructions](installation/index.md) to add the desired
 Windows project type/s.
 
-
 ## Samples
 
 [All the samples](https://github.com/xamarin/xamarin-forms-book-preview-2)
 for Charles Petzold's book
 [*Creating Mobile Apps with Xamarin.Forms*](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
-include Windows Phone 8.1, Windows 8.1, and Universal Windows Platform (for Windows 10)
-projects.
+include Universal Windows Platform (for Windows 10) projects.
 
 The ["Scott Hanselman" demo app](https://github.com/jamesmontemagno/Hanselman.Forms)
 is available separately, and also includes Apple Watch and Android Wear projects
 (using Xamarin.iOS and Xamarin.Android respectively, Xamarin.Forms does not run
 on those platforms).
-
 
 ## Related Links
 

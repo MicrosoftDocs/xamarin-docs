@@ -37,7 +37,6 @@ The following table lists the namespace for the `PlatformEffect` class on each p
 |--- |--- |--- |--- |
 |iOS|Xamarin.Forms.Platform.iOS|UIView|UIView|
 |Android|Xamarin.Forms.Platform.Android|ViewGroup|View|
-|Windows Phone 8.1|Xamarin.Forms.Platform.WinRT|FrameworkElement|FrameworkElement|
 |Universal Windows Platform (UWP)|Xamarin.Forms.Platform.UWP|FrameworkElement|FrameworkElement|
 
 Each platform-specific `PlatformEffect` class exposes the following properties:

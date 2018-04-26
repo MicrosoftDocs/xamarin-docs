@@ -480,7 +480,7 @@ The `Platform` property of `On` is of type `IList<string>`, so you can include m
 </ContentPage>
 ```
 
-Because Android and Windows are set to the default value of `Padding`, that tag can be removed:
+Because Android and UWP are set to the default value of `Padding`, that tag can be removed:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

@@ -96,7 +96,7 @@ However, the precise order that these events occur is platform dependent. For mo
 
 ### Disabling the Back Button
 
-On Android and Windows Phone, the user can always return to the previous page by pressing the standard *Back* button on the device. If the modal page requires the user to complete a self-contained task before leaving the page, the application must disable the *Back* button. This can be accomplished by overriding the [`Page.OnBackButtonPressed`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnBackButtonPressed/) method on the modal page. For more information see [Chapter 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) of Charles Petzold's Xamarin.Forms book.
+On Android, the user can always return to the previous page by pressing the standard *Back* button on the device. If the modal page requires the user to complete a self-contained task before leaving the page, the application must disable the *Back* button. This can be accomplished by overriding the [`Page.OnBackButtonPressed`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnBackButtonPressed/) method on the modal page. For more information see [Chapter 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) of Charles Petzold's Xamarin.Forms book.
 
 ### Animating Page Transitions
 

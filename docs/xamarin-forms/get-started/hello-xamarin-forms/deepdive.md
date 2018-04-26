@@ -312,7 +312,7 @@ The Phoneword application for Xamarin.Forms has introduced several concepts not 
 	    <ContentPage.Padding>
 	        <OnPlatform x:TypeArguments="Thickness">
 	            <On Platform="iOS" Value="20, 40, 20, 20" />
-	            <On Platform="Android, WinPhone, Windows" Value="20" />
+	            <On Platform="Android, UWP" Value="20" />
 	        </OnPlatform>
 	    </ContentPage.Padding>
 	    ...

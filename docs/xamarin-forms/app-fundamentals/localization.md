@@ -223,7 +223,7 @@ myEntry.Placeholder = AppResources.NotesPlaceholder;
 myButton.Text = AppResources.AddButton;
 ```
 
-The user interface on iOS, Android, and the Windows platforms renders as you'd expect, except now it's possible to translate the app into multiple languages because the text is being loaded from a resource rather than being hard-coded. Here is a screenshot showing the UI on each platform prior to translation:
+The user interface on iOS, Android, and the Universal Windows Platform (UWP) renders as you'd expect, except now it's possible to translate the app into multiple languages because the text is being loaded from a resource rather than being hard-coded. Here is a screenshot showing the UI on each platform prior to translation:
 
 ![](localization-images/simple-example-english.png "Cross-Platform UIs Prior to Translation")
 
@@ -308,7 +308,7 @@ public interface ILocalize
 }
 ```
 
-Second, use the [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md) in the Xamarin.Forms `App` class to call the interface and set our RESX resources culture to the correct value. Notice that we don't need to manually set this value for Windows Phone and the Universal Windows Platform, since the resources framework automatically recognizes the selected language on those platforms.
+Second, use the [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md) in the Xamarin.Forms `App` class to call the interface and set our RESX resources culture to the correct value. Notice that we don't need to manually set this value for the Universal Windows Platform, since the resources framework automatically recognizes the selected language on those platforms.
 
 ```csharp
 if (Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Android)
@@ -366,7 +366,7 @@ public class PlatformCulture
 ### Platform-Specific Code
 
 The code to detect which language to display must be platform-specific because
-iOS, Android, and the Windows platforms all expose this information in slightly
+iOS, Android, and UWP all expose this information in slightly
 different ways. The code for the `ILocalize` dependency service is provided below
 for each platform, along with additional platform-specific requirements to ensure
 localized text is rendered correctly.
@@ -631,53 +631,9 @@ to automatically display translated strings.
 > **Fast assembly deployment** is NOT ticked. This option causes problems
 > with loading resources and should not be used if you are testing localized apps.
 
-#### Windows Application Projects
+#### Universal Windows Platform
 
-Windows 8.1 and Universal Windows Platform (UWP) projects do not
-require the dependency service – these platforms automatically
-set the resource's culture correctly.
-
-Implementing the XAML markup extension described later in this document
-may require the `ILocalize` implementation shown below for Windows Phone.
-
-##### Windows Phone 8.0
-
-Although not used in the `App` class, here is the Windows Phone implementation
-for the `ILocalize` dependency service. Add this class to the Windows Phone app project;
-it will be required if implementing the XAML markup extension described later:
-
-```csharp
-[assembly: Dependency(typeof(UsingResxLocalization.WinPhone.Localize))]
-
-namespace UsingResxLocalization.WinPhone
-{
-    public class Localize : UsingResxLocalization.ILocalize
-    {
-        public void SetLocale (CultureInfo ci) { }
-        public System.Globalization.CultureInfo GetCurrentCultureInfo ()
-        {
-            return System.Threading.Thread.CurrentThread.CurrentUICulture;
-        }
-    }
-}
-
-```
-
-Windows Phone 8.0 projects must be properly configured for localized text to be displayed.
-Supported languages must be selected in the Project Options *and* the **WMAppManifest.xml** files.
-If these settings are not updated the localized RESX resources will not be loaded.
-
-##### Project Options
-
-Right-click on the Windows Phone project and select **Properties**. In the **Application** tab tick the **Supported Cultures** that the application supports:
-
-[![](localization-images/winphone-projectproperties-sml.png "Project Properties - Supported Cultures")](localization-images/winphone-projectproperties.png#lightbox "Project Properties - Supported Cultures")
-
-##### WMAppManifest.xml
-
-Expand the Properties node in the Windows Phone project and double-click on the **WMAppManifest.xml** file. Click on the **Packaging** tab and tick all the languages supported by the application.
-
-[![](localization-images/winphone-wmappmanifest-sml.png "WMAppManifest.xml - Supported Languages")](localization-images/winphone-wmappmanifest.png#lightbox "WMAppManifest.xml - Supported Languages")
+Universal Windows Platform (UWP) projects do not require the dependency service. Instead, this platform automatically sets the resource's culture correctly.
 
 ##### AssemblyInfo.cs
 
@@ -766,7 +722,7 @@ The following bullets explain the important elements in the code above:
 * `"UsingResxLocalization.Resx.AppResources"` is the resource identifier for our RESX resources. It is comprised of our default namespace, the folder where the resource files are located and the default RESX filename.
 * The `ResourceManager` class is created using `IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)` to determine the current assembly to load resources from, and cached in the static `ResMgr` field. It's created as a `Lazy` type so that its creation is deferred until it's first used in the `ProvideValue` method.
 * `ci` uses the dependency service to get the user's chosen language from the native operating system.
-* `GetString` is the method that retrieves the actual translated string from the resources files. On Windows Phone 8.1 and the Universal Windows Platform, `ci` will be null because the `ILocalize` interface isn't implemented on those platforms. This is equivalent to calling the `GetString` method with only the first parameter. Instead, the resources framework will automatically recognize the locale and will retrieve the translated string from the appropriate RESX file.
+* `GetString` is the method that retrieves the actual translated string from the resources files. On the Universal Windows Platform, `ci` will be null because the `ILocalize` interface isn't implemented on those platforms. This is equivalent to calling the `GetString` method with only the first parameter. Instead, the resources framework will automatically recognize the locale and will retrieve the translated string from the appropriate RESX file.
 * Error handling has been included to help debug missing resources by throwing an exception (in `DEBUG` mode only).
 
 The following XAML snippet shows how to use the markup extension. There are two steps to make it work:
@@ -892,92 +848,23 @@ The app now localizes the app name and image. Here's a screenshot of the result 
 
 ![](localization-images/android-imageicon.png "Android Sample App Text and Image Localization")
 
-### Windows Phone 8.0 Application Project
+### Universal Windows Platform Application Projects
 
-Windows Phone doesn't have a simple built-in way of selecting a specific localized image nor for localizing the app name.
-
-#### Images
-
-To get around this limitation the sample provides a suggestion for how you might implement localized image loading using a [custom renderer](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) for the `Image` control.
-
-The custom renderer code is shown below - if the source is a `FileImageSource` then it extracts the filename and builds a path to a localized image using the `CurrentUICulture`. Some languages require special handling so that fallbacks work as expected; in the example the default is to use only the two-letter language code except in a few special cases:
-
-```csharp
-using System.IO;
-using Xamarin.Forms;
-using Xamarin.Forms.Platform.WinPhone;
-
-[assembly: ExportRenderer(typeof(Image), typeof(UsingResxLocalization.WinPhone.LocalizedImageRenderer))]
-namespace UsingResxLocalization.WinPhone
-{
-    public class LocalizedImageRenderer : ImageRenderer
-    {
-        protected override void OnElementChanged(ElementChangedEventArgs<Image> e)
-        {
-            base.OnElementChanged(e);
-
-            if (e.NewElement != null)
-            {
-                var s = e.NewElement.Source as FileImageSource;
-                if (s != null)
-                {
-                    var fileName = s.File;
-                    string ci = System.Threading.Thread.CurrentThread.CurrentUICulture.ToString();
-                    // you might need some custom logic here to support particular cultures and fallbacks
-                    if (ci == "pt-BR") {
-                        // use the complete string 'as is'
-                    } else if (ci == "zh-CN") {
-                         // we could have named the image directories differently,
-                         // but this keeps them consisent with RESX file naming
-                        ci = "zh-Hans";
-                    } else if (ci == "zh-TW" || ci == "zh-HK") {
-                        ci = "zh-Hant";
-                    } else {
-                        // for all others, just use the two-character language code
-                        ci = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
-                    }
-                    e.NewElement.Source = Path.Combine("Assets/" + ci + "/" + fileName);
-                }
-            }
-        }
-    }
-}
-```
-
-This code works with the localized images in the directory structure shown below. You're encouraged to modify the code to meet your specific localization requirements (such as handling more specific locales, and falling back when images are not available):
-
-![](localization-images/winphone-resources.png "WinPhone Localized Images Directory Structure")
-
-Windows Phone now localizes the image. Here's a screenshot of the result (in Spanish and Simplified Chinese):
-
-![](localization-images/winphone-image-sml.png "WinPhone Sample App Text and Image Localization")
-
-#### App Name
-
-Refer to Microsoft's documentation for [localizing the Windows Phone 8.0 app title](http://msdn.microsoft.com/library/windows/apps/ff967550(v=vs.105).aspx).
-
-### Windows Phone 8.1 and Universal Windows Platform Application Projects
-
-Windows Phone 8.1 and the Universal Windows Platform both possess a resource infrastructure that simplifies the localization of images and the app name.
+The Universal Windows Platform possesses a resource infrastructure that simplifies the localization of images and the app name.
 
 #### Images
 
 Images can be localized by placing them in a resource-specific folder, as demonstrated in the following screenshot:
 
-![](localization-images/uwp-image-folder-structure.png "WinPhone 8.1 and UWP Image Localization Folder Structure")
+![](localization-images/uwp-image-folder-structure.png "UWP Image Localization Folder Structure")
 
 At runtime the Windows resource infrastructure will select the appropriate image based on the user's locale.
-
-#### App Name
-
-Refer to Microsoft's documentation for [Windows 8.1 Store apps: Localize the information that describes your app to users](https://msdn.microsoft.com/library/windows/apps/hh454044.aspx) and [Loading strings from the app manifest](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323.aspx#loading_strings_from_the_app_manifest.).
 
 ## Summary
 
 Xamarin.Forms applications can be localized using RESX files and .NET globalization classes. Apart from a small amount of platform-specific code to detect what language the user prefers, most of the localization effort is centralized in the common code.
 
-Images are generally handled in a platform-specific way to take advantage of the multi-resolution support provided in both iOS and Android. Windows Phone requires some custom code to localize images in a cross-platform-friendly way; sample code was provided to add this capability.
-
+Images are generally handled in a platform-specific way to take advantage of the multi-resolution support provided in both iOS and Android. 
 
 ## Related Links
 

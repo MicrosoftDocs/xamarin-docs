@@ -59,11 +59,4 @@ There are a wide variety of open-source plug-ins available on Github, Nuget, and
 
 ## [Windows](windows/index.md)
 
-Xamarin.Forms has support for four different types of Windows project:
-
-* Windows Phone 8 Silverlight (the original Windows platform supported by Xamarin.Forms),
-* Windows Phone 8.1 (WinRT),
-* Windows 8.1 (WinRT), and
-* Universal Windows Platform (Windows 10).
-
-This section describes the differences between them, and how to add them to an existing Xamarin.Forms solution.
+Xamarin.Forms has support for the Universal Windows Platform (UWP) on Windows 10. This article describes how to add a a UWP project to an existing Xamarin.Forms solution.

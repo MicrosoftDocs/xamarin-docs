@@ -40,7 +40,7 @@ var @default = new Label    { Text = "Default",    BackgroundColor = Color.Defau
 var accent = new Label      { Text = "Accent",     BackgroundColor = Color.Accent };
 ```
 
-These colors are shown on each platform below. Notice the final color - `Accent` - is a blue-ish color for iOS and Android; this value is defined by Xamarin.Forms. On Windows Phone the `Accent` shows as red *because that is the user-selected accent color for that device*; this value changes depending on the user's preferences.
+These colors are shown on each platform below. Notice the final color - `Accent` - is a blue-ish color for iOS and Android; this value is defined by Xamarin.Forms.
 
  [![Color demo](colors-images/colors-sml.png "Color Demo")](colors-images/colors.png#lightbox "Color Demo")
 
@@ -55,8 +55,6 @@ Developers can use this value to set a `Color` property but should **not** query
 Set the color to clear.
 
 ## Color.Accent
-
-On Windows Phone, this is the complementary color chosen by the user. Good Windows Phone applications use this as part of their styling to provide a native look and feel.
 
 On iOS and Android this instance is set to a contrasting color that is visible on the default background but is not the same as the default text color.
 

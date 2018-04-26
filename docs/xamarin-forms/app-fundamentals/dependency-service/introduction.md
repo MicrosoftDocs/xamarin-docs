@@ -44,54 +44,65 @@ public interface ITextToSpeech {
 
 ### Implementation per Platform
 
-Once a suitable interface has been designed, that interface must be implemented in the project for each platform that you are targeting. For example, the following classes implement the `ITextToSpeech` interface on Windows Phone:
+Once a suitable interface has been designed, that interface must be implemented in the project for each platform that you are targeting. For example, the following class implements the `ITextToSpeech` interface on iOS:
 
 ```csharp
-namespace TextToSpeech.WinPhone
+namespace UsingDependencyService.iOS
 {
-  public class TextToSpeechImplementation : ITextToSpeech
-  {
-      public TextToSpeechImplementation() {}
+	public class TextToSpeech_iOS : ITextToSpeech
+	{
+		public void Speak (string text)
+		{
+			var speechSynthesizer = new AVSpeechSynthesizer ();
 
-      public async void Speak(string text)
-      {
-          SpeechSynthesizer synth = new SpeechSynthesizer();
-          await synth.SpeakTextAsync(text);
-      }
-  }
+			var speechUtterance = new AVSpeechUtterance (text) {
+				Rate = AVSpeechUtterance.MaximumSpeechRate/4,
+				Voice = AVSpeechSynthesisVoice.FromLanguage ("en-US"),
+				Volume = 0.5f,
+				PitchMultiplier = 1.0f
+			};
+
+			speechSynthesizer.SpeakUtterance (speechUtterance);
+		}
+	}
 }
 ```
-
-Note that every implementation must have a default (parameterless) constructor in order for `DependencyService` to be able to instantiate it. Parameterless constructors cannot be defined by the interface.
 
 ### Registration
 
 Each implementation of the interface needs to be registered with `DependencyService`
-with a metadata attribute. The following code registers the implementation for Windows Phone:
+with a metadata attribute. The following code registers the implementation for iOS:
 
 ```csharp
-using TextToSpeech.WinPhone;
-
-[assembly: Xamarin.Forms.Dependency (typeof (TextToSpeechImplementation))]
-namespace TextToSpeech.WinPhone {
+[assembly: Dependency (typeof (TextToSpeech_iOS))]
+namespace UsingDependencyService.iOS
+{
   ...
+}
 ```
 
 Putting it all together, the platform-specific implementation looks like this:
 
 ```csharp
-[assembly: Xamarin.Forms.Dependency (typeof (TextToSpeechImplementation))]
-namespace TextToSpeech.WinPhone {
-  public class TextToSpeechImplementation : ITextToSpeech
-  {
-      public TextToSpeechImplementation() {}
+[assembly: Dependency (typeof (TextToSpeech_iOS))]
+namespace UsingDependencyService.iOS
+{
+	public class TextToSpeech_iOS : ITextToSpeech
+	{
+		public void Speak (string text)
+		{
+			var speechSynthesizer = new AVSpeechSynthesizer ();
 
-      public async void Speak(string text)
-      {
-          SpeechSynthesizer synth = new SpeechSynthesizer();
-          await synth.SpeakTextAsync(text);
-      }
-  }
+			var speechUtterance = new AVSpeechUtterance (text) {
+				Rate = AVSpeechUtterance.MaximumSpeechRate/4,
+				Voice = AVSpeechSynthesisVoice.FromLanguage ("en-US"),
+				Volume = 0.5f,
+				PitchMultiplier = 1.0f
+			};
+
+			speechSynthesizer.SpeakUtterance (speechUtterance);
+		}
+	}
 }
 ```
 
@@ -100,7 +111,7 @@ Note: that the registration is performed at the namespace level, not the class l
 #### Universal Windows Platform .NET Native Compilation
 
 UWP projects that use the .NET Native compilation option should follow a
-[slightly different configuration](~/xamarin-forms/platform/windows/installation/universal.md#target-invocation-exception)
+[slightly different configuration](~/xamarin-forms/platform/windows/installation/index.md#target-invocation-exception)
 when initializing Xamarin.Forms. .NET Native compilation also requires slightly
 different registration for dependency services.
 

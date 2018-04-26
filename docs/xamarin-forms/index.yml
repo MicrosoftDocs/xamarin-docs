@@ -8,7 +8,7 @@ metadata:
   ms.date: 04/25/2018
   ms.topic: landing-page
 abstract:
-  description: Xamarin.Forms exposes a complete cross-platform UI toolkit for .NET developers. Build fully native Android, iOS, and Windows apps using C# in Visual Studio.
+  description: Xamarin.Forms exposes a complete cross-platform UI toolkit for .NET developers. Build fully native Android, iOS, and Universal Windows Platform apps using C# in Visual Studio.
   menu:
     items:
     - href: ~/xamarin-forms/samples/
@@ -25,7 +25,7 @@ sections:
 - title: Get Started
   items:
   - type: paragraph
-    text: Learn how to build your first Xamarin.Forms app with Xamarin and C#, targetting Android, iOS, and Windows.
+    text: Learn how to build your first Xamarin.Forms app with Xamarin and C#, targetting Android, iOS, and the Universal Windows Platform.
   - type: list
     style: icon48
     items:

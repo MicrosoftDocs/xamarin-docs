@@ -411,8 +411,6 @@ Here's the **Tangent Arc** page running on all three platforms:
 
 [![](arcs-images/tangentarc-small.png "Triple screenshot of the Tangent Arc page")](arcs-images/tangentarc-large.png#lightbox "Triple screenshot of the Tangent Arc page")
 
-On the Windows Mobile device, the three points are nearly colinear, and the arc is very small.
-
 The tangent arc is ideal for creating rounded corners, such as a rounded rectangle. Because `SKPath` already includes an `AddRoundedRect` method, the **Rounded Heptagon** page demonstrates how to use `ArcTo` for rounding the corners of a seven-sided polygon. (The code is generalized for any regular polygon.)
 
 The `PaintSurface` handler of the [`RoundedHeptagonPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RoundedHeptagonPage.cs) class contains one `for` loop to calculate the coordinates of the seven vertices of the heptagon, and a second to calculate the midpoints of the seven sides from these vertices. These midpoints are then used to construct the path:

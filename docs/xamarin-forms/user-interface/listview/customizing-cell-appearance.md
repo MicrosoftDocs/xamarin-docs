@@ -59,8 +59,6 @@ TextCells are rendered as native controls at runtime, so performance is very goo
 - `DetailColor` &ndash; the color of the detail text
 - `ImageSource` &ndash; the image to display next to the text
 
-Note that when targeting Windows Phone 8.1, `ImageCell` will not scale images by default. Also, note that Windows Phone 8.1 is the only platform on which detail text is presented in the same color and font as primary text by default. Windows Phone 8.0 renders `ImageCell` as seen below:
-
 ![](customizing-cell-appearance-images/image-cell-default.png "Default ImageCell Example")
 
 ![](customizing-cell-appearance-images/image-cell-custom.png "Customized ImageCell Example")

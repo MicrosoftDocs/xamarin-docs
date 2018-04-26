@@ -850,7 +850,7 @@ In the `PaintSurface` handler, the `SKPathEffect.Create2DPath` calls sets the ho
 
 The scaling from the original screenshot causes some distortion, particularly on the Android screen.
 
-Notice that these tiles always appear whole and are never truncated. Except on the Windows 10 Mobile screen, it's not even evident that the area being filled is a rounded rectangle. If you want to truncate these tiles to a particular area, use a clipping path.
+Notice that these tiles always appear whole and are never truncated. On the first two screenshots, it's not even evident that the area being filled is a rounded rectangle. If you want to truncate these tiles to a particular area, use a clipping path.
 
 Try setting the `Style` property of the `SKPaint` object to `Stroke`, and you'll see the individual tiles outlined rather than filled.
 

@@ -43,7 +43,7 @@ The layout of a [`NavigationPage`](https://developer.xamarin.com/api/type/Xamari
 
 - On iOS, a navigation bar is present at the top of the page that displays a title, and that has a *Back* button that returns to the previous page.
 - On Android, a navigation bar is present at the top of the page that displays a title, an icon, and a *Back* button that returns to the previous page. The icon is defined in the `[Activity]` attribute that decorates the `MainActivity` class in the Android platform-specific project.
-- On Windows Phone, a navigation bar is present at the top of the page that displays a title. Windows Phone lacks the *Back* button on the navigation bar because an on-screen *Back* button is present at the bottom of the screen.
+- On the Universal Windows Platform, a navigation bar is present at the top of the page that displays a title. 
 
 On all the platforms, the value of the [`Page.Title`](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/) property will be displayed as the page title.
 

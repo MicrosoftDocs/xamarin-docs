@@ -88,7 +88,7 @@ Here it is running on all three platforms:
 
 Mathematically, the curve is a cubic polynomial. The curve intersects a straight line at three points at most. At the start point, the curve is always tangent to, and in the same direction as, a straight line from the start point to the first control point. At the end point, the curve is always tangent to, and in the same direction as, a straight line from the second control point to the end point.
 
-The cubic Bézier curve is always bounded by a convex quadrilateral connecting the four points. This is called a *convex hull*. If the control points lie on the straight line between the start and end point, then the Bézier curve renders as a straight line. But the curve can also cross itself, as the screenshot from the Windows Mobile device demonstrates.
+The cubic Bézier curve is always bounded by a convex quadrilateral connecting the four points. This is called a *convex hull*. If the control points lie on the straight line between the start and end point, then the Bézier curve renders as a straight line. But the curve can also cross itself, as the third screenshot demonstrates.
 
 A path contour can contain multiple connected cubic Bézier curves, but the connection between two cubic Bézier curves will be smooth only if the following three points are colinear (that is, lie on a straight line):
 
@@ -204,7 +204,7 @@ Here's the program running on the three platforms with three different angles:
 
 [![](beziers-images/beziercirculararc-small.png "Triple screenshot of the Bezier Circular Arc page")](beziers-images/beziercirculararc-large.png#lightbox "Triple screenshot of the Bezier Circular Arc page")
 
-Look closely at the Windows Mobile screen, and you'll see that the Bézier curve notably deviates from a semicircle when the angle is 180 degrees, but the iOS screen shows that it seems to fit a quarter-circle just fine when the angle is 90 degrees.
+Look closely at the third screenshot, and you'll see that the Bézier curve notably deviates from a semicircle when the angle is 180 degrees, but the iOS screen shows that it seems to fit a quarter-circle just fine when the angle is 90 degrees.
 
 Calculating the coordinates of the two control points is quite easy when the quarter circle is oriented like this:
 

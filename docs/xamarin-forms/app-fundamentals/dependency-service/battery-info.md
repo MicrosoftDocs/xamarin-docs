@@ -18,7 +18,6 @@ Because Xamarin.Forms does not include functionality for checking the current ba
 - **[Creating the Interface](#Creating_the_Interface)** &ndash; understand how the interface is created in shared code.
 - **[iOS Implementation](#iOS_Implementation)** &ndash; learn how to implement the interface in native code for iOS.
 - **[Android Implementation](#Android_Implementation)** &ndash; learn how to implement the interface in native code for Android.
-- **[Windows Phone Implementation](#Windows_Phone_Implementation)** &ndash; learn how to implement the interface in native code for Windows Phone.
 - **[Universal Windows Platform Implementation](#UWPImplementation)** &ndash; learn how to implement the interface in native code for the Universal Windows Platform (UWP).
 - **[Implementing in Shared Code](#Implementing_in_Shared_Code)** &ndash; learn how to use `DependencyService` to call into the native implementation from shared code.
 
@@ -307,74 +306,6 @@ namespace DependencyServiceSample.Droid
 
 This attribute registers the class as an implementation of the `IBattery` interface, which means that `DependencyService.Get<IBattery>` can be used in the shared code can create an instance of it.
 
-<a name="Windows_Phone_Implementation" />
-
-## Windows Phone Implementation
-
-This implementation is more limited than the Android and iOS versions because the Windows Phone power API provides less information than the Android and iOS equivalents.
-
-```csharp
-using System;
-using Windows.ApplicationModel.Core;
-using DependencyServiceSample.WinPhone;
-
-namespace DependencyServiceSample.WinPhone
-{
-  public class BatteryImplementation : IBattery
-  {
-    private int last;
-    private BatteryStatus status = BatteryStatus.Unknown;
-
-    public BatteryImplementation()
-    {
-      last = DefaultBattery.RemainingChargePercent;
-    }
-
-    Windows.Phone.Devices.Power.Battery battery;
-    private Windows.Phone.Devices.Power.Battery DefaultBattery
-    {
-      get { return battery ?? (battery = Windows.Phone.Devices.Power.Battery.GetDefault()); }
-    }
-    public int RemainingChargePercent
-    {
-      get
-      { return DefaultBattery.RemainingChargePercent; }
-    }
-
-    public  BatteryStatus Status
-    {
-      get { return status; }
-    }
-
-    public PowerSource PowerSource
-    {
-      get
-      {
-        if (status == BatteryStatus.Full || status == BatteryStatus.Charging)
-          return PowerSource.Ac;
-
-        return PowerSource.Battery;
-      }
-    }
-  }
-}
-```
-
-Add this `[assembly]` attribute above the class (and outside any namespaces that have been defined), including any required `using` statements.
-
-```csharp
-using System;
-using Windows.ApplicationModel.Core;
-using DependencyServiceSample.WinPhone;
-
-[assembly: Xamarin.Forms.Dependency (typeof (BatteryImplementation))]
-namespace DependencyServiceSample.WinPhone {
-  public class BatteryImplementation : IBattery {
-    ...
-```
-
-This attribute registers the class as an implementation of the `IBattery` interface, which means that `DependencyService.Get<IBattery>` can be used in shared code to create an instance of it.
-
 <a name="UWPImplementation" />
 
 ## Universal Windows Platform Implementation
@@ -533,7 +464,7 @@ public MainPage ()
 }
 ```
 
-Running this application on iOS, Android, or the Windows platforms and pressing the button will result in the button text updating to reflect the current power status of the device.
+Running this application on iOS, Android, or UWP and pressing the button will result in the button text updating to reflect the current power status of the device.
 
 ![](battery-info-images/battery.png "Battery Status Sample")
 

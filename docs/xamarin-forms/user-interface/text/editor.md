@@ -70,7 +70,7 @@ public partial class EditorPage : ContentPage
 		InitializeComponent ();
 		var layout = new StackLayout { Padding = new Thickness(5,10) };
 		this.Content = layout;
-		//dark blue on Windows Phone & Android, light blue on iOS
+		//dark blue on UWP & Android, light blue on iOS
 		var editor = new Editor { BackgroundColor = Device.RuntimePlatform == Device.iOS ? Color.FromHex("#A4EAFF") : Color.FromHex("#2c3e50") };
 		layout.Children.Add(editor);
 	}
@@ -91,7 +91,7 @@ In XAML:
                 <Editor.BackgroundColor>
                     <OnPlatform x:TypeArguments="x:Color">
                         <On Platform="iOS" Value="#a4eaff" />
-                        <On Platform="Android, WinPhone, UWP" Value="#2c3e50" />
+                        <On Platform="Android, UWP" Value="#2c3e50" />
                     </OnPlatform>
                 </Editor.BackgroundColor>
             </Editor>

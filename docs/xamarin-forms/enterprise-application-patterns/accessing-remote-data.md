@@ -326,13 +326,13 @@ FFImageLoading's `CachedImage` control is a replacement for the Xamarin.Forms [`
     <ffimageloading:CachedImage.LoadingPlaceholder>
         <OnPlatform x:TypeArguments="ImageSource">
             <On Platform="iOS, Android" Value="default_campaign" />
-            <On Platform="UWP, WinRT, WinPhone" Value="Assets/default_campaign.png" />
+            <On Platform="UWP" Value="Assets/default_campaign.png" />
         </OnPlatform>
     </ffimageloading:CachedImage.LoadingPlaceholder>
     <ffimageloading:CachedImage.ErrorPlaceholder>
         <OnPlatform x:TypeArguments="ImageSource">
             <On Platform="iOS, Android" Value="noimage" />
-            <On Platform="UWP, WinRT, WinPhone" Value="Assets/noimage.png" />
+            <On Platform="UWP" Value="Assets/noimage.png" />
         </OnPlatform>
     </ffimageloading:CachedImage.ErrorPlaceholder>
 </ffimageloading:CachedImage>

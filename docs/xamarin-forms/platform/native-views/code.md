@@ -30,7 +30,6 @@ Using these methods in a Xamarin.Forms shared project requires importing the app
 
 - **iOS** – Xamarin.Forms.Platform.iOS
 - **Android** – Xamarin.Forms.Platform.Android
-- **Windows Runtime** – Xamarin.Forms.Platform.WinRT
 - **Universal Windows Platform (UWP)** – Xamarin.Forms.Platform.UWP
 
 ## Adding Platform-Specific Views on Each Platform
@@ -66,7 +65,7 @@ contentView.Content = textView.ToView();
 
 The example assumes that the `stackLayout` and `contentView` instances have previously been created in XAML or C#.
 
-### Windows Runtime and Universal Windows Platform
+### Universal Windows Platform
 
 The following code example demonstrates how to add a `TextBlock` to a [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) and a [`ContentView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/):
 
