@@ -185,7 +185,7 @@ This method clears the `Errors` collection, and then retrieves any validation ru
 
 ### Triggering Validation when Properties Change
 
-Validation is also automatically triggered whenever a bound property changes. For example, when a two-way binding in the `LoginView` sets the `UserName` or `Password` property, validation is triggered. The following code example demonstrates how this occurs:
+Validation can also be triggered whenever a bound property changes. For example, when a two-way binding in the `LoginView` sets the `UserName` or `Password` property, validation is triggered. The following code example demonstrates how this occurs:
 
 ```xaml
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">  
