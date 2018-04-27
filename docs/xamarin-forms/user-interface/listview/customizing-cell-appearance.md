@@ -66,7 +66,7 @@ TextCells are rendered as native controls at runtime, so performance is very goo
 <a name="customcells" />
 
 ## Custom Cells
-When the built-in cells don't provide the required layout, custom cells implemented the required layout. For example, you may want to present a cell with two labels that have equal weight. A `LabelCell` would be insufficient because the `LabelCell` has one label that is smaller. Most cell customizations add additional read-only data (such as additional labels, images or other display information).
+When the built-in cells don't provide the required layout, custom cells implemented the required layout. For example, you may want to present a cell with two labels that have equal weight. A `TextCell` would be insufficient because the `TextCell` has one label that is smaller. Most cell customizations add additional read-only data (such as additional labels, images or other display information).
 
 All custom cells must derive from [`ViewCell`](http://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/), the same base class that all of the built-in cell types use.
 
