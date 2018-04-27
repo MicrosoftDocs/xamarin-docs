@@ -103,8 +103,8 @@ No. In fact, you can even start all your supported application targets (Android,
 
 * Only reloading of XAML is supported.
 * Only supported in Visual Studio.
-* Only works with .NET Standard libraries.
-* CSS stylesheets are not supported.
+* Only works with .NET Standard libraries. This will be fixed in the next preview release.
+* CSS stylesheets are not supported. This will be fixed in the next preview release.
 * UI state may not be maintained between redeploys, unless using MVVM.
 
 ## Live Reload Server
