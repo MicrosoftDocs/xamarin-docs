@@ -47,7 +47,7 @@
       "manager": "crdun",
       "audience": "developer",
       "ms.topic": "conceptual",
-      "ms.technology": "xamarin",
+      "ms.technology": "xamarin-crossplatform",
       "ms.prod": "xamarin",
       "searchScope": ["Xamarin"],
       "feedback_system": "GitHub",
