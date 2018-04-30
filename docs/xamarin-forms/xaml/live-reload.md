@@ -102,11 +102,15 @@ No. In fact, you can even start all your supported application targets (Android,
 ## Limitations
 
 * Only reloading of XAML is supported.
+* UI state may not be maintained between redeploys, unless using MVVM.
+
+## Known Issues
+
 * Only supported in Visual Studio.
 * Only works with .NET Standard libraries. This will be fixed in the next preview release.
 * CSS stylesheets are not supported. This will be fixed in the next preview release.
-* UI state may not be maintained between redeploys, unless using MVVM.
-* Reloading app-wide resources (i.e. **App.xaml** or shared resource dictionaries), app navigation is reset.
+* Reloading app-wide resources (i.e. **App.xaml** or shared resource dictionaries), app navigation is reset. This will be fixed in the next preview release.
+* Editing XAML while debugging UWP may cause a runtime crash. Workaround: Use **Start without Debugging (Ctrl + F5)** instead of **Start Debugging (F5)**.
 
 ## Troubleshooting
 
@@ -141,7 +145,7 @@ If you have an older preview and you have problems uninstalling it, follow these
 
 In scenarios where a connection from the running app to your machine (as denoted by using `localhost` or `127.0.0.1` in **Tools > Options > Xamarin > Live Reload**) is not possible (i.e. firewalls, different networks), you can configure a remote server instead, which both the IDE and the app will conect to.
 
-Live Reload uses the standard [MQTT protocol](http://mqtt.org/) to exchange messages, and can therefore communicate with [third party servers](https://github.com/mqtt/mqtt.github.io/wiki/servers). There are even [public servers](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (also known as *brokers*) available that you can use. Live Reload has been tested with `broker.hivemq.com` and `iot.eclipse.org` host names, as well as the services provided by [www.cloudmqtt.com](https://www.cloudmqtt.com) and [www.cloudamqp.com](https://www.cloudamqp.com). You can also deploy your own MQTT server in the cloud, such as [HiveMQ on Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud) or [Rabbit MQ on AWS](http://www.rabbitmq.com/ec2.html). 
+Live Reload uses the standard [MQTT protocol](http://mqtt.org/) to exchange messages, and can therefore communicate with [third party servers](https://github.com/mqtt/mqtt.github.io/wiki/servers). There are even [public servers](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (also known as *brokers*) available that you can use. Live Reload has been tested with `broker.hivemq.com` and `iot.eclipse.org` host names, as well as the services provided by [www.cloudmqtt.com](https://www.cloudmqtt.com) and [www.cloudamqp.com](https://www.cloudamqp.com). You can also deploy your own MQTT server in the cloud, such as [HiveMQ on Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud).
 
 You can configure any port, but it's common to use the default 1883 port for remote servers. Live Reload messages use strong end-to-end AES symmetric encryption, so it's safe to connect to remote servers. By default, both the encryption key and the initialization vector (IV) are regenerated on every Visual Studio session.
 
