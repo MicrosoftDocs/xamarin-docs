@@ -40,7 +40,7 @@ public abstract class AbstractClass : Java.Lang.Object
 Here are the details to make this work:
 
 - `[Register]` generates a nice package name in Java--you will get an auto-generated package name without it.
-- Subclassing `Java.Lang.Object` signals Embeddinator to run the class through Xamarin.Android's Java generator.
+- Subclassing `Java.Lang.Object` signals to .NET Embedding to run the class through Xamarin.Android's Java generator.
 - Empty constructor: is what you will want to use from Java code.
 - `(IntPtr, JniHandleOwnership)` constructor: is what Xamarin.Android will use for creating the C#-equivalent of Java objects.
 - `[Export]` signals Xamarin.Android to expose the method to Java. We can also change the method name, since the Java world likes to use lower case methods.
@@ -60,7 +60,7 @@ public class JavaCallbacks : Java.Lang.Object
 ```
 `JavaCallbacks` could be any class to test this, as long as it is a `Java.Lang.Object`.
 
-Now, run Embeddinator on your .NET assembly to generate an AAR. See the [Getting Started guide](~/tools/dotnet-embedding/get-started/java/android.md) for details.
+Now, run .NET Embedding on your .NET assembly to generate an AAR. See the [Getting Started guide](~/tools/dotnet-embedding/get-started/java/android.md) for details.
 
 After importing the AAR file into Android Studio, let's write a unit test:
 
@@ -149,7 +149,7 @@ There is quite a bit going on here, we:
 
 After adding this class and generating a new AAR, our unit test passes. As you can see this pattern for callbacks is not *ideal*, but doable.
 
-For details on Java interop, see the amazing [Xamarin.Android documentation](https://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/working_with_jni/) on this subject.
+For details on Java interop, see the amazing [Xamarin.Android documentation](~/android/platform/java-integration/working-with-jni.md) on this subject.
 
 ## Interfaces
 
@@ -165,7 +165,8 @@ public interface IJavaCallback : IJavaObject
     void Send(string text);
 }
 ```
-`IJavaObject` signals Embeddinator that this is a Xamarin.Android interface, but otherwise this is exactly the same as an `abstract` class.
+
+`IJavaObject` signals to .NET Embedding that this is a Xamarin.Android interface, but otherwise this is exactly the same as an `abstract` class.
 
 Since Xamarin.Android will not currently generate the Java code for this interface, add the following Java to your C# project:
 
@@ -176,7 +177,8 @@ public interface IJavaCallback {
     void send(String text);
 }
 ```
-You can place the file anywhere, but make sure to set its build action to `AndroidJavaSource`. This will signal Embeddinator to copy it to the proper directory to get compiled into your AAR file.
+
+You can place the file anywhere, but make sure to set its build action to `AndroidJavaSource`. This will signal .NET Embedding to copy it to the proper directory to get compiled into your AAR file.
 
 Next, the `Invoker` implementation will be quite the same:
 
@@ -277,15 +279,15 @@ There are a couple of things we could to do improve these scenarios:
     - This removes the need for adding Java source file with a build action of `AndroidJavaSource`.
 1. Make a way for Xamarin.Android to load an `Invoker` for virtual classes.
     - This removes the need to mark the class in our `virtual` example `abstract`.
-1. Generate `Invoker` classes for Embeddinator automatically
+1. Generate `Invoker` classes for .NET Embedding automatically
     - This is going to be complicated, but doable. Xamarin.Android is already doing something similar to this for Java binding projects.
 
-There is alot of work to be done here, but these enhancements to Embeddinator are possible.
+There is a lot of work to be done here, but these enhancements to .NET Embedding are possible.
 
 ## Further Reading
 
 * [Getting Started on Android](~/tools/dotnet-embedding/get-started/java/android.md)
 * [Preliminary Android Research](~/tools/dotnet-embedding/android/index.md)
-* [Embeddinator Limitations](~/tools/dotnet-embedding/limitations.md)
+* [.NET Embedding Limitations](~/tools/dotnet-embedding/limitations.md)
 * [Contributing to the open source project](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
 * [Error codes and descriptions](~/tools/dotnet-embedding/errors.md)

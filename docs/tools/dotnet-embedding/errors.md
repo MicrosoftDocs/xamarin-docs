@@ -1,5 +1,5 @@
 ---
-title: ".NET embedding errors"
+title: ".NET Embedding errors"
 ms.prod: xamarin
 ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
 ms.technology: xamarin-cross-platform
@@ -7,6 +7,7 @@ author: topgenorth
 ms.author: toopge
 ms.date: 04/11/2018
 ---
+
 # .NET embedding errors
 
 ## EM0xxx: Binding error messages
@@ -87,7 +88,7 @@ This is a known issue that we intend to fix in a future release of the generator
 
 The tool could not merge the frameworks mentioned in the error message, because there's a common file between them.
 
-This might indicate a bug in the Embeddinator-4000; please file a bug report at [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) with a test case.
+This might indicate a bug in .NET Embedding; please file a bug report at [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) with a test case.
 
 <a name="EM0011" />
 
@@ -137,9 +138,9 @@ The syntax given for the command line option `A` could not be parsed by the tool
 
 ### EM0099: Internal error *. Please file a bug report with a test case (https://github.com/mono/Embeddinator-4000/issues).
 
-This error message is reported when an internal consistency check in the Embeddinator-4000 fails.
+This error message is reported when an internal consistency check in .NET Embedding fails.
 
-This indicates a bug in the Embeddinator-4000; please file a bug report at [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) with a test case.
+This indicates a bug in .NET Embedding; please file a bug report at [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) with a test case.
 
 <!-- 1xxx: code processing -->
 
@@ -184,7 +185,7 @@ public class MyType {
 }
 ```
 
-In such cases only two generated `init` selectors will be created, both calling into mono, but no wrapper for the later will exist.
+In such cases only two generated `init` selectors will be created, both calling into Mono, but no wrapper for the later will exist.
 
 <a name="EM1030" />
 
@@ -219,7 +220,7 @@ public class MyType {
 }
 ```
 
-In such cases only two generated `increment` selectors will be created, both calling into mono, but no wrapper for the later will exist.
+In such cases only two generated `increment` selectors will be created, both calling into Mono, but no wrapper for the later will exist.
 
 <a name="EM1033" />
 
@@ -231,7 +232,7 @@ This is a **warning** that the method `M` is not generated because another metho
 
 ### EM1034: Extension method `M` is not generated inside a category because they cannot be created on primitive type `T`. A normal, static method was generated.
 
-This is a **warning** that an extension method on a primivite type (e.g. `System.Int32`) was found. In ObjC it is not possible to create categories on primitive type. Instead the generator will be produce a normal, static method.
+This is a **warning** that an extension method on a primivite type (e.g. `System.Int32`) was found. In Objective-C it is not possible to create categories on primitive type. Instead the generator will be produce a normal, static method.
 
 <a name="EM1040" />
 
@@ -281,7 +282,7 @@ This is a **warning** that Element `E` is not generated as its name conflicts wi
 
 This is a **warning** that target `E` is considered unsupported for Xamarin.iOS and Xamarin.Mac use cases. 
 
-Consumption of static or dynamic Embeddinator libraries may require additional work steps or tweaks, and should be avoided in most use cases.
+Consumption of static or dynamic .NET Embedding libraries may require additional work steps or tweaks, and should be avoided in most use cases.
 
 Consider removing your `--target` parameter or pass `--target=framework` instead.
 

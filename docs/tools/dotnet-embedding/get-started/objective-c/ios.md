@@ -10,22 +10,21 @@ ms.date: 11/14/2017
 
 # Getting started with iOS
 
-
 ## Requirements
 
-In addition to the requirements from our [Getting started with Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) guide you'll also need:
+In addition to the requirements from our [Getting started with Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) guide, you'll also need:
 
 * [Xamarin.iOS 10.11](https://www.visualstudio.com/xamarin/) or later
 
 ## Hello world
 
-First let's build a simple hello world example in C#.
+First, build a simple hello world example in C#.
 
 ### Create C# sample
 
-Open Visual Studio for Mac, create a new iOS Class Library project, name it `hello-from-csharp`, and save it to `~/Projects/hello-from-csharp`.
+Open Visual Studio for Mac, create a new iOS Class Library project, name it **hello-from-csharp**, and save it to **~/Projects/hello-from-csharp**.
 
-Replace the code in the `MyClass.cs` file with the following snippet:
+Replace the code in the **MyClass.cs** file with the following snippet:
 
 ```csharp
 using UIKit;
@@ -38,36 +37,41 @@ public class MyUIView : UITextView
 }
 ```
 
-Build the project, the resulting assembly will be saved as `~/Projects/hello-from-csharp/hello-from-csharp/bin/Debug/hello-from-csharp.dll`.
+Build the project, and the resulting assembly will be saved as **~/Projects/hello-from-csharp/hello-from-csharp/bin/Debug/hello-from-csharp.dll**.
 
 ### Bind the managed assembly
 
-Run the embeddinator to create a native framework for the managed assembly:
+Once you have a managed assembly, bind it by invoking .NET Embedding.
+
+As described in the
+[installation](~/tools/dotnet-embedding/get-started/install/install.md)
+guide, this can be done as post-build step in your project, with a
+custom MSBuild target, or manually:
 
 ```shell
 cd ~/Projects/hello-from-csharp
 objcgen ~/Projects/hello-from-csharp/hello-from-csharp/bin/Debug/hello-from-csharp.dll --target=framework --platform=iOS --outdir=output -c --debug
 ```
 
-The framework will be placed in `~/Projects/hello-from-csharp/output/hello-from-csharp.framework`.
+The framework will be placed in **~/Projects/hello-from-csharp/output/hello-from-csharp.framework**.
 
 ### Use the generated output in an Xcode project
 
-Open Xcode and create a new iOS Single View Application, name it `hello-from-csharp` and select the **Objective-C** language.
+Open Xcode, create a new iOS Single View Application, name it **hello-from-csharp**, and select the **Objective-C** language.
 
-Open the `~/Projects/hello-from-csharp/output` directory in Finder, select `hello-from-csharp.framework`, drag it to the Xcode project and drop it just above the `hello-from-csharp` folder in the project.
+Open the **~/Projects/hello-from-csharp/output** directory in Finder, select **hello-from-csharp.framework**, drag it to the Xcode project and drop it just above the **hello-from-csharp** folder in the project.
 
 ![Drag and drop framework]Images/hello-from-csharp-ios-drag-drop-framework.png)
 
-Make sure `Copy items if needed` is checked in the dialog that pops up, and click `Finish`.
+Make sure **Copy items if needed** is checked in the dialog that pops up, and click **Finish**.
 
 ![Copy items if needed](ios-images/hello-from-csharp-ios-copy-items-if-needed.png)
 
-Select the `hello-from-csharp` project and navigate to the `hello-from-csharp` target's **General tab**. In the **Embedded Binary** section, add `hello-from-csharp.framework`.
+Select the **hello-from-csharp** project and navigate to the **hello-from-csharp** target's **General tab**. In the **Embedded Binary** section, add **hello-from-csharp.framework**.
 
 ![Embedded binaries](ios-images/hello-from-csharp-ios-embedded-binaries.png)
 
-Open ViewController.m, and replace the contents with:
+Open **ViewController.m**, and replace the contents with:
 
 ```objective-c
 #import "ViewController.h"
@@ -87,6 +91,12 @@ Open ViewController.m, and replace the contents with:
 @end
 ```
 
-Finally run the Xcode project, and something like this will show up:
+.NET Embedding does not currently support bitcode on iOS, which is enabled for some Xcode project templates. 
+
+Disable it in your project settings:
+
+![Bitcode Option](../../images/ios-bitcode-option.png)
+
+Finally, run the Xcode project, and something like this will show up:
 
 ![Hello from C# sample running in the simulator](ios-images/hello-from-csharp-ios.png)

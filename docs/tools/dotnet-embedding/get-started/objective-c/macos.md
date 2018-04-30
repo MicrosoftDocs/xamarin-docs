@@ -10,7 +10,6 @@ ms.date: 11/14/2017
 
 # Getting started with macOS
 
-
 ## What you will need
 
 * Follow instructions in the [Getting started with Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) guide.
@@ -23,7 +22,7 @@ First, build a simple hello world example in C#.
 
 Open Visual Studio for Mac, create a new Mac Class Library project named **hello-from-csharp**, and save it to **~/Projects/hello-from-csharp**.
 
-Replace the code in the `MyClass.cs` file with the following snippet:
+Replace the code in the **MyClass.cs** file with the following snippet:
 
 ```csharp
 using AppKit;
@@ -40,7 +39,12 @@ Build the project. The resulting assembly will be saved as **~/Projects/hello-fr
 
 ### Bind the managed assembly
 
-Run the embeddinator to create a native framework for the managed assembly:
+Once you have a managed assembly, bind it by invoking .NET Embedding.
+
+As described in the
+[installation](~/tools/dotnet-embedding/get-started/install/install.md)
+guide, this can be done as post-build step in your project, with a
+custom MSBuild target, or manually:
 
 ```shell
 cd ~/Projects/hello-from-csharp
@@ -85,8 +89,8 @@ Open **ViewController.m**, and replace the contents with:
 @end
 ```
 
-Finally run the Xcode project, and something like this will show up:
+Finally, run the Xcode project, and something like this will show up:
 
 ![Hello from C# sample running in the simulator](macos-images/hello-from-csharp-mac.png)
 
-A more complete and better-looking sample is available [here](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).
+A more complete and better-looking sample [is available here](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).

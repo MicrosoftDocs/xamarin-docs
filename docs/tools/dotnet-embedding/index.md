@@ -22,11 +22,14 @@ your existing iOS app, you can do that.   Or if you want to link it
 with a native C++ library, you can also do that.   Or consume .NET
 code from Java.
 
+.NET Embedding is based on the [Embeddinator-4000](https://github.com/mono/Embeddinator-4000) 
+open source project.
+
 ## Environments and Languages
 
 The tool is both aware of the environment it will use, as well as the
 language that will consume it.   For example, the iOS platform does
-not allow just-in-time (JIT) compilation, so the embeddinator will
+not allow just-in-time (JIT) compilation, so .NET Embedding will
 statically compile your .NET code into native code that can be used in
 iOS.  Other environments do allow JIT compilation, and in those
 enviroments, we opt to JIT compile.
@@ -35,9 +38,9 @@ It supports various language consumers, so it surfaces .NET code as
 idiomatic code in the target language.   This is the list of supported
 languages at present:
 
-- [**Objective-C**](objective-c/index.md) – mapping .NET to idiomatic Objective-C APIs.
-- [**Java**](android/index.md) – mapping .NET to idiomatic Java APIs.
-- **C**: mapping .NET to an object-oriented like C APIs.
+- [**Objective-C**](objective-c/index.md) – mapping .NET to idiomatic Objective-C APIs
+- [**Java**](android/index.md) – mapping .NET to idiomatic Java APIs
+- [**C**](get-started/c.md) – mapping .NET to object-oriented like C APIs
 
 More languages will come later.
 
@@ -46,10 +49,9 @@ More languages will come later.
 To get started, check one of our guides for each of the currently
 supported languages:
 
-- [**Objective-C**](get-started/objective-c/index.md) – covers macOS and iOS.
-- [**Java**](get-started/java/index.md) – covers macOS and Android.
-- [**C**](get-started/c.md) – covers C language on desktop platforms.
-
+- [**Objective-C**](get-started/objective-c/index.md) – covers macOS and iOS
+- [**Java**](get-started/java/index.md) – covers macOS and Android
+- [**C**](get-started/c.md) – covers C language on desktop platforms
 
 ## Related Links
 

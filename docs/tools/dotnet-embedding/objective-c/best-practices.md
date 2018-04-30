@@ -1,5 +1,5 @@
 ---
-title: "Embeddinator-4000 Best Practices for ObjC"
+title: ".NET Embedding Best Practices for Objective-C"
 ms.prod: xamarin
 ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
 ms.technology: xamarin-cross-platform
@@ -7,7 +7,8 @@ author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
 ---
-# Embeddinator-4000 Best Practices for ObjC
+
+# .NET Embedding best practices for Objective-C
 
 This is a draft and might not be in-sync with the features presently supported by the tool. We hope that this document will evolve separately and eventually match the final tool, i.e. we'll suggest long term best approaches - not immediate workarounds.
 
@@ -101,7 +102,7 @@ This naming rule has no match in the .NET GC world; a .NET method with a `Create
 
 ## Exceptions
 
-It's quite commont in .NET to use exceptions extensively to report errors. However, they are slow and not quite identical in ObjC. Whenever possible you should hide them from the Objective-C developer.
+It's quite common in .NET to use exceptions extensively to report errors. However, they are slow and not quite identical in Objective-C. Whenever possible you should hide them from the Objective-C developer.
 
 For example, the .NET `Try` pattern will be much easier to consume from Objective-C code:
 
@@ -133,6 +134,6 @@ The generator follow the same `return nil` pattern for generated `init*` methods
 
 Objective-C does not allow operators to be overloaded as C# does, so these are converted to class selectors.
 
-["Friendly"](/dotnet/standard/design-guidelines/operator-overloads/) named method are generated in preference to the operator overloads when found, and can produce an easier to consume API.
+["Friendly"](https://docs.microsoft.com/dotnet/standard/design-guidelines/operator-overloads) named methods are generated in preference to the operator overloads when found, and can produce an easier to consume API.
 
 Classes that override the operators `==` and\or `!=` should override the standard Equals (Object) method as well.

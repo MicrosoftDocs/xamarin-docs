@@ -7,6 +7,7 @@ author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
 ---
+
 # Objective-C Support
 
 ## Specific features
@@ -15,7 +16,7 @@ The generation of Objective-C has a few special features that are worth noting.
 
 ### Automatic Reference Counting
 
-The use of Automatic Reference Counting (ARC) is **required** to call the generated bindings. Project using a embeddinator-based library must be compiled with `-fobjc-arc`.
+The use of Automatic Reference Counting (ARC) is **required** to call the generated bindings. Project using a .NET Embedding-based library must be compiled with `-fobjc-arc`.
 
 ### NSString support
 
