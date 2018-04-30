@@ -6,7 +6,7 @@ ms.assetid: CD128CB9-499F-4558-B49F-77248824EFDF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/30/2018
+ms.date: 04/30/2018
 ---
 
 # Visual Studio Android Emulator
@@ -289,5 +289,5 @@ workarounds when using the emulator.
 
 ## Related Links
 
-- [Visual Studio Emulator for Android](https://www.visualstudio.com/en-us/explore/msft-android-emulator-vs.aspx)
+- [Visual Studio Emulator for Android](https://www.visualstudio.com/vs/msft-android-emulator/)
 - [Introducing Visual Studio's Emulator for Android](https://blogs.msdn.microsoft.com/visualstudioalm/2014/11/12/introducing-visual-studios-emulator-for-android/)
