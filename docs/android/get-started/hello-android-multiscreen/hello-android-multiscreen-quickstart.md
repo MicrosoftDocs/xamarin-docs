@@ -7,7 +7,7 @@ ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
+ms.date: 04/30/2018
 ---
 
 # Hello, Android Multiscreen: Quickstart
@@ -135,12 +135,14 @@ for this Activity. This is discussed in more detail in the
 ### Adding Translation History Code
 
 This app collects phone numbers (that the user has translated on the
-first screen) and passes them to the second screen. The phone
-numbers are stored as a list of strings. To support lists, add the
-following `using` directive to the top of the `MainActivity` class:
+first screen) and passes them to the second screen. The phone numbers
+are stored as a list of strings. To support lists (and Intents, which
+are used later), add the following `using` directives to the top of 
+**MainActivity.cs**:
 
 ```csharp
 using System.Collections.Generic;
+using Android.Content;
 ```
 
 Next, create an empty list that can be filled with phone numbers.
@@ -296,12 +298,14 @@ this Activity. This is explained in more detail in the
 ### Adding Translation History Code
 
 This app collects phone numbers (that the user has translated on the
-first screen) and passes them to the second screen. The phone
-numbers are stored as a list of strings. To support lists, add the
-following `using` directive to the top of the `MainActivity` class:
+first screen) and passes them to the second screen. The phone numbers
+are stored as a list of strings. To support lists (and Intents, which
+are used later), add the following `using` directives to the top of
+**MainActivity.cs**:
 
 ```csharp
 using System.Collections.Generic;
+using Android.Content;
 ```
 
 Next, create an empty list that can be filled with phone numbers. The `MainActivity`
