@@ -114,6 +114,27 @@ No. In fact, you can even start all your supported application targets (Android,
 
 ## Troubleshooting
 
+### Error codes
+
+* **XLR001**: *The current project references 'Xamarin.LiveReload' NuGet package version '[VERSION]' but the Xamarin Live Reload extension requires version '[VERSION]'.*
+
+  In order to allow rapid iteration and evolution of the Live Reload feature, the nuget package and the Visual Studio extension must match exactly. Update your nuget package to the same version of the extension you have installed.
+
+* **XLR002**: *Live Reload requires at least the 'MqttHostname' property when building from the command line. Alternatively, set 'EnableLiveReload' to 'false' to disable the feature.*
+
+  The properties required by Live Reload are not available when building from the command line (or in continuous integration), and must therefore be provided explicitly. 
+
+* **XLR003**: *Live Reload nuget package requires installing the Xamarin Live Reload Visual Studio extension.*
+
+  Attempted to build a project that references the Live Reload nuget package but the Visual Extension is not installed.  
+
+* **XLR004**: *Live Reload requires at least Visual Studio 2017 version 15.8 for non-.NET Standard projects.*
+
+  Support for projects other than .NET Standard requires at least 15.8 (Preview).
+   
+
+
+
 ### App doesn't connect
 
 When the application is built, the information from **Tools > Options > Xamarin > Live Reload** (host name, port and encryption keys) are embedded in the app, so that when `LiveReload.Init()` runs, no pairing or configuration is necessary for the connection to succeed.
