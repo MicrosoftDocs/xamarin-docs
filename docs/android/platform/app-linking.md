@@ -64,8 +64,8 @@ The following example shows how to use the [IntentFilterAttribute](https://devel
               Categories = new[] { Intent.CategoryBrowsable, Intent.CategoryDefault },
               DataScheme = "http",
               DataHost = "recipe-app.com",
-              DataPathPrefix = "/recipe"),
-              AutoVerify=true]
+              DataPathPrefix = "/recipe",
+              AutoVerify=true)]
 public class RecipeActivity : Activity
 {
     // Code for the activity omitted
