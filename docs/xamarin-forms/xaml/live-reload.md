@@ -128,11 +128,6 @@ No. In fact, you can even start all your supported application targets (Android,
 
   Attempted to build a project that references the Live Reload nuget package but the Visual Extension is not installed.  
 
-* **XLR004**: *Live Reload requires at least Visual Studio 2017 version 15.8 for non-.NET Standard projects.*
-
-  Support for projects other than .NET Standard requires at least 15.8 (Preview).
-   
-
 
 
 ### App doesn't connect
