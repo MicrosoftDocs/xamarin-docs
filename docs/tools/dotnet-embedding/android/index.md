@@ -1,11 +1,11 @@
 ---
-title: ".NET Embedding on Android"
+title: "Sharing .NET Code with Java and Android Apps"
 ms.prod: xamarin
 ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.date: 03/28/2018
+ms.date: 04/25/2018
 ---
 
 # .NET Embedding on Android

@@ -1,11 +1,11 @@
 ---
-title: "Setup and Installation"
+title: "Installing and Setting Up Xamarin.Android"
 ms.prod: xamarin
 ms.assetid: 4BE549B8-5696-2BA7-DA32-8C0EE90A879D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 12/28/2017
+ms.date: 04/25/2018
 ---
 
 # Setup and Installation

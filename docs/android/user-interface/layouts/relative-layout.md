@@ -1,11 +1,11 @@
 ---
-title: "RelativeLayout"
+title: "Using the RelativeLayout in Xamarin.Android"
 ms.prod: xamarin
 ms.assetid: AFD9C849-02C3-E728-BC78-77A563612BC5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 04/25/2018
 ---
 
 # RelativeLayout

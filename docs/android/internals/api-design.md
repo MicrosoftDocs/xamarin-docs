@@ -1,5 +1,5 @@
 ---
-title: "API Design"
+title: "Xamarin.Android API Design Principles"
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
@@ -8,7 +8,7 @@ ms.author: mamcle
 ms.date: 02/16/2018
 ---
 
-# API Design
+# Xamarin.Android API Design Principles
 
 
 ## Overview
@@ -61,7 +61,6 @@ instead of single-method interfaces when appropriate and applicable.
 
     - Provide a mechanism to call arbitrary Java libraries (
       [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/)).
-
 
 
 ## Assemblies

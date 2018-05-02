@@ -1,12 +1,12 @@
 ---
-title: "ListView"
+title: "Using the ListView in Xamarin.Android"
 description: "ListView is an important UI component of Android applications; it is used everywhere from short lists of menu options to long lists of contacts or internet favorites. It provides a simple way to present a scrolling list of rows that can either be formatted with a built-in style or customized extensively."
 ms.prod: xamarin
 ms.assetid: C2BA2705-9B20-01C2-468D-860BDFEDC157
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/21/2018
+ms.date: 04/25/2018
 ---
 
 # ListView

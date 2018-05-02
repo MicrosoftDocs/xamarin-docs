@@ -1,5 +1,5 @@
 ---
-title: "Platform Features"
+title: "Platform Features of Xamarin.Android"
 description: "Documents in this section cover features specific to Android. Here you'll find topics such as using Fragments, working with maps and encapsulating data with Content Providers."
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E

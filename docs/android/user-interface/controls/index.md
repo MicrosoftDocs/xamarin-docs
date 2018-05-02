@@ -1,5 +1,5 @@
 ---
-title: "Controls"
+title: "Android Controls (Widgets)"
 description: "Building blocks for creating Xamarin.Android User Interfaces"
 ms.prod: xamarin
 ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
@@ -9,8 +9,7 @@ ms.author: mamcle
 ms.date: 02/06/2018
 ---
 
-# Controls
-
+# Android Controls (Widgets)
 
 Xamarin.Android exposes all of the native user interface controls
 (widgets) provided by Android. These controls can be easily added to

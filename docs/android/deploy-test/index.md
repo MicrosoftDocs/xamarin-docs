@@ -1,12 +1,12 @@
 ---
-title: "Deployment and Testing"
+title: "Testing, Optimizing, and Deploying Xamarin.Android Apps"
 description: "This section includes guides that explain how to test an application, optimize its performance, prepare it for release, sign it with a certificate, and publish it to an app store"
 ms.prod: xamarin
 ms.assetid: 568C0B85-EFF3-AF6F-5605-95055193D367
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 04/25/2018
 ---
 
 # Deployment and Testing

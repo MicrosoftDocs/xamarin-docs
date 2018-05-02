@@ -1,20 +1,21 @@
 ---
-title: "Debugging"
+title: "Debugging Xamarin.Android on Devices and Emulators"
 description: "How to test and debug your Xamarin.Android app"
 ms.prod: xamarin
 ms.assetid: A355A471-8195-4391-93FE-0000BCB17923
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/16/2018
+ms.date: 04/25/2018
 ---
 
 # Debugging
 
+This section discusses how to debug a Xamarin.Android app on devices or emulators.
 ## Debugging Overview
 
 Developing Android applications requires running the application,
-either on physical hardware or using an emulator or simulator. Using
+either on physical hardware or using an emulator. Using
 hardware is the best approach, but not always the most practical. In
 many cases, it can be simpler and more cost effective to
 simulate/emulate Android hardware using one of the emulators

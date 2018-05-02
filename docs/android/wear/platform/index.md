@@ -1,12 +1,12 @@
 ---
-title: "Platform Features"
-description: "Key Components of the Android Wear Platform"
+title: "Platform Features of Wear OS with Xamarin.Android"
+description: "Key Components of the Wear OS Platform"
 ms.prod: xamarin
 ms.assetid: E86688B5-B2FE-476A-A2AA-F8CC26EA8D2B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 04/25/2018
 ---
 
 # Platform Features

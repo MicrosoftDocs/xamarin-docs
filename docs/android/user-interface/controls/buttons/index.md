@@ -1,5 +1,5 @@
 ---
-title: "Buttons"
+title: "Buttons in Xamarin.Android"
 description: "Implementing UI elements that the user taps to perform an action"
 ms.prod: xamarin
 ms.assetid: 4FBB7789-A8DA-4B8B-A46C-849181388A8D
@@ -9,7 +9,7 @@ ms.author: mamcle
 ms.date: 08/18/2017
 ---
 
-# Buttons
+# Buttons in Xamarin.Android
 
 The `Button` class is used to represent various different styles of
 button in Android screens. This section introduces the different

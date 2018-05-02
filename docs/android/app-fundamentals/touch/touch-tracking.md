@@ -1,12 +1,12 @@
 ---
-title: "Multi-Touch Finger Tracking"
+title: "Multi-Touch Finger Tracking in Xamarin.Android"
 description: "This topic demonstrates how to track touch events from multiple fingers"
 ms.prod: xamarin
 ms.assetid: 048D51F9-BD6C-4B44-8C53-CCEF276FC5CC
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 04/25/2018
 ---
 
 # Multi-Touch Finger Tracking

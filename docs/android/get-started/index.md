@@ -1,5 +1,5 @@
 ---
-title: "Getting Started with Android"
+title: "Start Developing Android Apps with Xamarin.Android"
 description: "Xamarin.Android makes it possible for you to create native Android applications using the same UI controls as you would in Java, but with the flexibility and elegance of a modern language (C#), the power of the .NET Base Class Library (BCL), and a first-class IDE (Visual Studio) at your fingertips. This series introduces the basics of Xamarin.Android development. It takes you from setup and installation to building your first application."
 ms.prod: xamarin
 ms.assetid: D3BC68C5-87C1-50AF-ED0A-55EBF07CBD8B
@@ -7,7 +7,7 @@ ms.technology: xamarin-android
 ms.custom: xamu-video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/25/2017
+ms.date: 04/25/2018
 ---
 
 # Getting Started Series
