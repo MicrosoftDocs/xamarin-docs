@@ -48,6 +48,15 @@
 ### [Performance](deploy-test/memory-perf-best-practices.md)
 ### [Installing NUnit 2.6.4 using NuGet](deploy-test/installing-nunit-using-nuget.md)
 ### [Multi Process Debugging](deploy-test/multi-process-debugging.md)
+
+## [Desktop Developers](desktop/index.md)
+### [App lifecycle comparison](desktop/lifecycle.md)
+### [UI controls comparison](desktop/controls/index.md)
+#### [WPF vs Xamarin.Forms](desktop/controls/wpf.md)
+### [Porting guidance](desktop/porting.md)
+### [Samples](desktop/samples.md)
+
+
 ## [Apple Platform](macios/index.md)
 ### [Apple Account Management](macios/apple-account-management.md)
 ### [Unified API](macios/unified/index.md)
