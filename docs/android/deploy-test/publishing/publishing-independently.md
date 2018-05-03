@@ -30,7 +30,7 @@ distribution of Xamarin.Android apps:
 
 -   **Visual Studio Enterprise** &ndash; For teams of any size (Windows
     only). This license includes enterprise capabilities, a standard or
-    cloud subscription, and a 25% Xamarin Test Cloud discount.
+    cloud subscription.
 
 Visit the [visualstudio.com](https://www.visualstudio.com/xamarin/) to download the
 Community Edition or to learn more about purchasing the Professional

@@ -28,7 +28,7 @@ using CoreSpotlight;
 
 // Create attributes to describe an item
 var attributes = new CSSearchableItemAttributeSet();
-attributes.Title = "Test Cloud";
+attributes.Title = "App Center Test";
 attributes.ContentDescription = "Automatically test your app on 1,000 devices in the cloud.";
 
 // Create item

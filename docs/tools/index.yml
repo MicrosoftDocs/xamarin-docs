@@ -58,13 +58,6 @@ sections:
         src: ~/media/index/xamarin-cross-platform-dotnet-embedding.svg
         href: ~/tools/dotnet-embedding/index.md
       title: .NET Embedding
-    - href: https://developer.xamarin.com/testcloud/
-      html: Test your app on any device.
-      image:
-        src: https://docs.microsoft.com/en-us/media/illustrations/team-services-agile-track.svg
-        href: https://developer.xamarin.com/testcloud/
-      title: Xamarin Test Cloud
-      
 - title: Platforms
   items:
   - type: list

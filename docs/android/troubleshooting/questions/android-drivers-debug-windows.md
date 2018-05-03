@@ -31,7 +31,7 @@ exact USB driver needed. Some alternatives for testing Android apps
 developed in Windows including using an Android emulator or using
 external testing services. Some of these include:
 
-- [Xamarin Test Cloud](https://xamarin.com/test-cloud) - Cloud Testing services run on hundreds of real Android devices.
+- [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/) - Cloud Testing services run on hundreds of real Android devices.
 
 - [Visual Studio Emulator for Android](https://www.visualstudio.com/en-us/features/msft-android-emulator-vs.aspx)
 

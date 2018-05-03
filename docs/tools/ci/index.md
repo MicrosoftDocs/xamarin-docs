@@ -31,9 +31,8 @@ Build Xamarin.iOS and Xamarin.Android solutions with App Center, straight from G
 
 ### [Using TeamCity with Xamarin](~/tools/ci/teamcity.md)
 
-This guide discusses the steps involved with using TeamCity to compile mobile apps and then submit them to Xamarin Test Cloud.
+This guide discusses the steps involved with using TeamCity to compile mobile apps and then submit them to App Center Test.
 
-###  [Using Jenkins with Xamarin](~/tools/ci/jenkins-walkthrough.md)
+### [Using Jenkins with Xamarin](~/tools/ci/jenkins-walkthrough.md)
 
 This guide illustrates how to set up Jenkins as a continuous integration server and automate compiling mobile apps created with Xamarin. It describes how to install Jenkins on OS X, configure it, and set up jobs to compile Xamarin.iOS and Xamarin.Android apps when changes are committed to the version control system.
-
