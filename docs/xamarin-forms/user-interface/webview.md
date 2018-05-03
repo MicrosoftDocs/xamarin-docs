@@ -325,41 +325,40 @@ WebView raises two events to help you respond to changes in state:
 - **Navigating** &ndash; event raised when the WebView begins loading a new page.
 - **Navigated** &ndash; event raised when the page is loaded and navigation has stopped.
 
-If you anticipate using webpages that take a long time to load, consider using those events to implement a status indicator. For example:
-
-Our XAML:
+If you anticipate using webpages that take a long time to load, consider using those events to implement a status indicator. For example the XAML looks like this:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="WebViewDemo.LoadingDemo" Title="Loading Demo">
-	<ContentPage.Content>
+  <ContentPage.Content>
     <StackLayout>
       <Label x:Name="LoadingLabel"
         Text="Loading..."
         HorizontalOptions="Center"
-        isVisible="false" />
+        IsVisible="false" />
       <WebView x:Name="Browser"
       HeightRequest="1000"
       WidthRequest="1000"
       Navigating="webOnNavigating"
       Navigated="webOnEndNavigating" />
     </StackLayout>
-	</ContentPage.Content>
+  </ContentPage.Content>
 </ContentPage>
 ```
-Our two event handlers:
+
+The two event handlers:
 
 ```csharp
 void webOnNavigating (object sender, WebNavigatingEventArgs e)
 {
-			LoadingLabel.IsVisible = true;
+    LoadingLabel.IsVisible = true;
 }
 
 void webOnEndNavigating (object sender, WebNavigatedEventArgs e)
 {
-			LoadingLabel.IsVisible = false;
+    LoadingLabel.IsVisible = false;
 }
 ```
 
