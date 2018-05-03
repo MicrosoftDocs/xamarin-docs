@@ -11,7 +11,7 @@ abstract:
   description: Xamarin.Mac exposes the complete macOS SDK for .NET developers. Build fully native apps in Visual Studio for Mac.
   menu:
     items:
-    - href: ~/mac/samples/
+    - href: ~/mac/samples/index.yml
       text: Mac Samples
     - href: https://developer.xamarin.com/releases/mac/
       text: Release Notes

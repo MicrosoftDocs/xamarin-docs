@@ -1,5 +1,5 @@
 ---
-title: "Application Fundamentals"
+title: "Sharing Code"
 description: "Core Application Concepts"
 ms.prod: xamarin
 ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
@@ -9,35 +9,16 @@ ms.author: amburns
 ms.date: 02/18/2018
 ---
 
-# Application Fundamentals
+# Sharing Code
 
 This section provides a guide on some of the more common things tasks or
 concepts that developers need to be aware of when developing mobile
 applications.
 
-##  [Building Cross Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
-
-By choosing Xamarin and keeping a few things in mind when you design and
-develop your mobile applications, you can realize tremendous code sharing across
-mobile platforms, reduce your time to market, leverage existing talent, meet
-customer demand for mobile access, and reduce cross-platform
-complexity.&nbsp;This document outlines key guidelines to realizing these
-advantages for utility and productivity applications.
-
-## [Code Sharing Options](code-sharing.md)
+## [Code Sharing Overview](code-sharing.md)
 
 Learn about the different code sharing options available for Xamarin projects, including
 Portable Class Libraries (PCLs), Shared Projects, and .NET Standard Libraries.
-
-
-## [Accessibility](accessibility.md)
-
-Tips for building accessible applications.
-
-
-## [Localization](localization.md)
-
-Guidelines for making locale-aware apps that can be translated into multiple languages.
 
 
 ##  [Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md)
@@ -64,25 +45,3 @@ to create NuGet packages for each code-sharing scenario.
 ##  [Manually Creating NuGet Packages for Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
 
 Tips for creating NuGet packages that work with the Xamarin platform.
-
-##  [Cross Platform Data Access](~/xamarin-forms/data-cloud/index.md)
-
-Most applications have some requirement to save data on the device locally. Unless the amount of data is trivially small, this usually requires a database and a data layer in the application to manage database access. iOS and Android both have the SQLite database engine “built in” and access to store and retrieve data is simplified by Xamarin’s platform. The [Android data access](~/android/data-cloud/data-access/index.md), [iOS data access](~/ios/data-cloud/data/index.md), and [Xamarin.Forms data access](~/xamarin-forms/data-cloud/index.md) guides provide examples of how to access SQLite on each platform.
-
-
-##  [Transport Layer Security](transport-layer-security.md)
-
-Information on selectingthe correct SSL/TLS implementation to secure
-your app's network connectivity.
-
-
-##  [Notifications](~/xamarin-forms/data-cloud/push-notifications/index.md)
-
-Mobile applications use notifications as an unobtrusive way of informing the user that some application specific
-event has happened. Notifications are typically used to notify the user of the status of an application process that
-is running in the background. An example of this might be downloading a large file. This file might take a long time
-to download, so this activity should occur in the background. When the download is complete, the user is informed of
-the fact by a notification.
-Additionally, notification ares not just limited to local applications. It is also possible for server applications
-to publish notifications to mobile applications. This article will discuss how to use notifications on both Android
-and iOS.

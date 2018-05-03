@@ -828,12 +828,12 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Application Fundamentals" src="~/media/index/xamarin-cross-platform-fundamentals.svg?branch=master" data-linktype="external">
+                                                        <img alt="Sharing Code" src="~/media/index/xamarin-cross-platform-fundamentals.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Application Fundamentals</h3>
-                                                    <p>Learn about the basics of writing sharable code for basic tasks like file handling, images, etc.</p>
+                                                    <h3>Sharing Code</h3>
+                                                    <p>Learn about the different options for sharing code and libraries between Android, iOS, and Windows.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -847,12 +847,12 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Platform Features" src="~/media/index/xamarin-cross-platform-platform-features.svg?branch=master" data-linktype="external">
+                                                        <img alt="Language Support" src="~/media/index/xamarin-cross-platform-platform-features.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Platform Features</h3>
-                                                    <p>Working with platform-specific features like FaceID and ARKit, and the latest additions to iOS.</p>
+                                                    <h3>Language Support</h3>
+                                                    <p>Xamarin projects can be written in C# and F#, and consume libraries written in VB. Razor templates are also supported.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -870,8 +870,8 @@ featureFlags:
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Deployment & Testing</h3>
-                                                    <p>Building and deploying apps for multiple platforms.</p>
+                                                    <h3>Debugging & Performance</h3>
+                                                    <p>Tips to help improve your app, regardless of which platform you target.</p>
                                                 </div>
                                             </div>
                                         </div>

@@ -1,5 +1,5 @@
 ---
-title: "Platform Features"
+title: "Language Support"
 description: "Cross-platform application features and concepts."
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
@@ -9,15 +9,16 @@ ms.author: amburns
 ms.date: 02/18/2018
 ---
 
-# Platform Features
+# Language Support
 
 This section contains documents that explain some more advanced cross-platform application features and concepts.
 
-##  [Async Support Overview](~/cross-platform/platform/async.md)
+## C# 
+###  [Async Support Overview](~/cross-platform/platform/async.md)
 
 Version 5 of C# introduced two new keywords to express asynchronous operations: async and await. These keywords let you write simple code that utilizes the Task Parallel Library to execute long running operations (such as network access) in another thread and easily access the results on completion. The latest versions of Xamarin.iOS and Xamarin.Android support async and await - this document provides explanations and an example of using the new syntax with Xamarin.
 
-## [C# 6 Language Features](~/cross-platform/platform/csharp-six.md)
+### [C# 6 Language Features](~/cross-platform/platform/csharp-six.md)
 
 The latest version of the C# language – version 6 – continues to evolve the language to have less boilerplate, improved clarity, and more consistency. Cleaner initialization syntax, the ability to use `await` in `catch/finally` blocks, and the null-conditional `?` operator are especially useful.
 
@@ -33,7 +34,3 @@ Visual Studio supports the creation of Portable Class Libraries using Visual Bas
 
 Xamarin enables developers to leverage the Razor templating engine, originally introduced with ASP.NET MVC, along with C# to easily combine data with HTML, Javascript and CSS without the hassle of manually building HTML strings in code.
 This article demonstrates how to use Razor templates with Xamarin for Android and iOS.
-
-##  [Manually Creating NuGet Packages for Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
-
-Tips for creating NuGet packages that work with the Xamarin platform.

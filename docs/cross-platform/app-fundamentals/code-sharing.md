@@ -9,7 +9,7 @@ ms.author: amburns
 ms.date: 03/23/2017
 ---
 
-# Sharing Code Options
+# Sharing Code Overview
 
 _This document compares the different methods of sharing code between cross-platform projects: Shared Projects, Portable Class Libraries, and .NET Standard, including the benefits and disadvantages of each._
 

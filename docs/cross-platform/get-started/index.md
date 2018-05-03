@@ -42,6 +42,15 @@ This document explains *how Xamarin works* at a high-level and links through to 
 
 This article discusses the software development lifecycle with respect to mobile applications, and discusses some of the considerations required when building mobile projects. For developers wishing to just jump right in and start building, this guide can be skipped and read later for a more complete understanding of mobile development.
 
+##  [Building Cross Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+
+By choosing Xamarin and keeping a few things in mind when you design and
+develop your mobile applications, you can realize tremendous code sharing across
+mobile platforms, reduce your time to market, leverage existing talent, meet
+customer demand for mobile access, and reduce cross-platform
+complexity.&nbsp;This document outlines key guidelines to realizing these
+advantages for utility and productivity applications.
+
 ###  [Introducing Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/)
 
 This document provides an overview of Visual Studio for Mac, the Integrated Development Environment (IDE).
