@@ -39,7 +39,7 @@ Here is a summary of the key points for creating Xamarin cross-platform
 apps:
 
 -   **Use C#** - Write your apps in C#. Existing code written in C# can be ported to iOS and Android using Xamarin very easily, and obviously used in Windows apps.
--   **Utilize MVC or MVVVM design patterns** - Develop your application’s User Interface using the Model/View/Controller pattern. Architect your application using a Model/View/Controller approach or a Model/View/ViewModel approach where there is a clear separation between the “Model” and the rest. Determine which parts of your application will be using native user interface elements of each platform (iOS, Android, Windows, Mac) and use this as a guideline to split your application into two components: “Core” and “User-Interface”.
+-   **Utilize MVC or MVVM design patterns** - Develop your application’s User Interface using the Model/View/Controller pattern. Architect your application using a Model/View/Controller approach or a Model/View/ViewModel approach where there is a clear separation between the “Model” and the rest. Determine which parts of your application will be using native user interface elements of each platform (iOS, Android, Windows, Mac) and use this as a guideline to split your application into two components: “Core” and “User-Interface”.
 -   **Build native UIs** - Each OS-specific application provides a different user-interface layer (implemented in C# with the assistance of native UI design tools):
 
 1.  On iOS, use the UIKit APIs to create native-looking applications, optionally utilizing Xamarin's iOS designer to create your UI visually.
