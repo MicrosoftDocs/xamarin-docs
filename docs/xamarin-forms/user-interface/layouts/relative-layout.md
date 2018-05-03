@@ -17,7 +17,7 @@ ms.date: 11/25/2015
 
 ## Purpose
 
-`RelativeLayout` can be used to position views on screen relative to the overall layout or two other views.
+`RelativeLayout` can be used to position views on screen relative to the overall layout or to other views.
 
 ![](relative-layout-images/flag.png "RelativeLayout Exploration")
 
