@@ -6,7 +6,7 @@ ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/16/2018
+ms.date: 05/04/2018
 ---
 
 # Bound Services in Xamarin.Android
@@ -38,8 +38,8 @@ This guide will discuss how to extend the `Service` class to implement a bound s
 There are three components that must be implemented in order for an Android application to consume a bound service:
 
 1. **Extend the `Service` class and Implement the Lifecycle Callback Methods** &ndash; This class will contain the code that will perform the work that will be requested of the service. This will be covered in more detail below.
-2. **Create a Class that Implements `IServiceConnection`** &ndash; This object contains callback methods that notify the client when it has connected to (or lost the connection) from the service. The service connection will also provide a reference to an object that the client can use to directly interact with the service. This reference is known as the _binder_.
-3. **Create a Class that Implements `IBinder`** &ndash; A _Binder_ implementation provides the API that a client uses to communicate with the service. The Binder can either provide a reference to the bound service, allowing methods to be directly invoked or the Binder can provide a client API that encapsulates and hides the bound service from the application. An `IBinder` must provide the necessary code for remote procedure calls. It is not necessary (or recommended) to implement the `IBinder` interface directly. An `IBinder` Instead applications should extend the `Binder` which provides most of the base functionality required by an `IBinder`.
+2. **Create a Class that Implements `IServiceConnection`** &ndash; This interface provides callback methods will invoked by Android to notify the client when the connection to the service has changed, i.e. the client has connected or disconnected to the service. The service connection will also provide a reference to an object that the client can use to directly interact with the service. This reference is known as the _binder_.
+3. **Create a Class that Implements `IBinder`** &ndash; A _Binder_ implementation provides the API that a client uses to communicate with the service. The Binder can either provide a reference to the bound service, allowing methods to be directly invoked or the Binder can provide a client API that encapsulates and hides the bound service from the application. An `IBinder` must provide the necessary code for remote procedure calls. It is not necessary (or recommended) to implement the `IBinder` interface directly. Instead applications should extend the `Binder` type which provides most of the base functionality required by an `IBinder`.
 4. **Starting and Binding to a Service** &ndash; Once the service connection, binder, and service have been created the Android application is responsible for starting the service and binding to it.
 
 Each of these steps will be discussed in the following sections in more detail.
