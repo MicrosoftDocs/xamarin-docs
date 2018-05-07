@@ -47,7 +47,7 @@ Effects allow the native controls on each platform to be customized, and are typ
 
 The Xamarin.Forms [`GestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/) class supports tap, pinch, and pan gestures on user interface controls.
 
-## [Localization](localization.md)
+## [Localization](localization/index.md)
 
 The built-in .NET localization framework can be used to build cross-platform multilingual applications with Xamarin.Forms.
 

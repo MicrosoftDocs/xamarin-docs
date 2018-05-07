@@ -83,6 +83,28 @@ if (Device.Idiom == TargetIdiom.Phone) {
 }
 ```
 
+## Device.FlowDirection
+
+The [`Device.FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) value retrieves a [`FlowDirection`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlowDirection/) enumeration value that represents the current flow direction being used by the device. Flow direction is the direction in which the UI elements on the page are scanned by the eye. The enumeration values are:
+
+- [`LeftToRight`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.LeftToRight/)
+- [`RightToRight`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.RightToLeft/)
+- [`MatchParent`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.MatchParent/)
+
+In XAML, the [`Device.FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) value can be retrieved by using the `x:Static` markup extension:
+
+```xaml
+<ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
+```
+
+The equivalent code in C# is:
+
+```csharp
+this.FlowDirection = Device.FlowDirection;
+```
+
+For more information about flow direction, see [Right-to-left Localization](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
+
 <a name="Device_Styles" />
 
 ## Device.Styles

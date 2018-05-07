@@ -1,5 +1,5 @@
 ---
-title: "Localization"
+title: "String and Image Localization"
 description: "Xamarin.Forms apps can be localized using .NET resources files."
 ms.prod: xamarin
 ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509
@@ -15,7 +15,7 @@ _Xamarin.Forms apps can be localized using .NET resources files._
 
 ## Overview
 
-The built-in mechanism for localizing .NET applications uses [RESX files](http://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx) and the classes in the `System.Resources` and `System.Globalization` namespaces. The RESX files containing translated strings are embedded in the Xamarin.Forms assembly, along with a compiler-generated class that provides strongly-typed access to the translations. The translation text can then be retrieved in code.
+The built-in mechanism for localizing .NET applications uses [RESX files](http://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx) and the classes in the `System.Resources` and `System.Globalization` namespaces. The RESX files containing translated strings are embedded in the Xamarin.Forms assembly, along with a compiler-generated class that provides strongly-typed access to the translations. The translated text can then be retrieved in code.
 
 ### Sample Code
 
@@ -26,7 +26,7 @@ There are two samples associated with this document:
 
 #### Shared Projects are not recommended
 
-The TodoLocalized sample includes a [Shared Project demo](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized/SharedProject/) however due to limitations of the build system the resource files do not get a **.designer.cs** file generated which breaks the ability to access translated strings [strongly-typed in code](~/xamarin-forms/app-fundamentals/localization.md).
+The TodoLocalized sample includes a [Shared Project demo](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized/SharedProject/) however due to limitations of the build system the resource files do not get a **.designer.cs** file generated which breaks the ability to access translated strings strongly-typed in code.
 
 The remainder of this document relates to projects using the Xamarin.Forms PCL template.
 
@@ -50,7 +50,7 @@ The base resources (RESX) file will contain the default language strings (the sa
 
 Choose a meaningful name such as **AppResources** and press **OK**.
 
-[![Add Resource File](localization-images/resx-new-file-sml.png "New File Dialog")](localization-images/resx-new-file.png#lightbox "New File Dialog")
+[![Add Resource File](text-images/resx-new-file-sml.png "New File Dialog")](text-images/resx-new-file.png#lightbox "New File Dialog")
 
 Two files will be added to the project:
 
@@ -59,7 +59,7 @@ Two files will be added to the project:
 
 The solution tree will show the files as related. The RESX file *should* be edited to add new translatable strings; the **.designer.cs** file should *not* be edited.
 
-![](localization-images/appresources-tree.png "AppResources.resx File")
+![](text-images/appresources-tree.png "AppResources.resx File")
 
 ##### String Visibility
 
@@ -74,11 +74,11 @@ shows the **Custom Tool: ResXFileCodeGenerator**.
 
 # [Visual Studio](#tab/vswin)
 
-[![](localization-images/vs-resx-internal-sml.png "Properties Window for AppResources.Resx")](localization-images/vs-resx-internal.png#lightbox)
+[![](text-images/vs-resx-internal-sml.png "Properties Window for AppResources.Resx")](text-images/vs-resx-internal.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![](localization-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](localization-images/xs-resx-internal.png#lightbox)
+[![](text-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
 
 -----
 
@@ -89,14 +89,14 @@ as shown in the screenshot below:
 
 # [Visual Studio](#tab/vswin)
 
-[![](localization-images/vs-resx-public-sml.png "Properties Window for AppResources.Resx")](localization-images/vs-resx-public.png#lightbox)
+[![](text-images/vs-resx-public-sml.png "Properties Window for AppResources.Resx")](text-images/vs-resx-public.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-[![](localization-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](localization-images/xs-resx-internal.png#lightbox)
+[![](text-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
 
 
-[![](localization-images/xs-resx-public-sml.png "Properties Pad for AppResources.Resx")](localization-images/xs-resx-public.png#lightbox)
+[![](text-images/xs-resx-public-sml.png "Properties Pad for AppResources.Resx")](text-images/xs-resx-public.png#lightbox)
 
 -----
 
@@ -174,7 +174,7 @@ These language-specific resources files *do not* require a **.designer.cs** part
 class so they can be added as regular XML files, with the **Build Action: EmbeddedResource**
 set. This screenshot shows a solution containing language-specific resource files:
 
-![](localization-images/appresources-langs.png "Language-Specific Resource Files")
+![](text-images/appresources-langs.png "Language-Specific Resource Files")
 
 As an application is developed and the base RESX file has text added, you should send it out to translators who will translate each `data` element and return a language-specific resource file (using the naming convention shown) to be included in the app. Some 'machine translated' examples are shown below:
 
@@ -225,7 +225,7 @@ myButton.Text = AppResources.AddButton;
 
 The user interface on iOS, Android, and the Universal Windows Platform (UWP) renders as you'd expect, except now it's possible to translate the app into multiple languages because the text is being loaded from a resource rather than being hard-coded. Here is a screenshot showing the UI on each platform prior to translation:
 
-![](localization-images/simple-example-english.png "Cross-Platform UIs Prior to Translation")
+![](text-images/simple-example-english.png "Cross-Platform UIs Prior to Translation")
 
 ### Troubleshooting
 
@@ -493,7 +493,7 @@ force iOS to translate these elements we need to indicate which languages we
 support in the **Info.plist** file. You can add these values via
 **Info.plist > Source** as shown here:
 
-![Localization keys in Info.plist](localization-images/info-plist.png "Localization Keys in Info.plist")
+![Localization keys in Info.plist](text-images/info-plist.png "Localization Keys in Info.plist")
 
 Alternatively, open the **Info.plist** file in an XML editor and edit the values directly:
 
@@ -649,7 +649,7 @@ This informs the resource manager of the app's default culture, therefore ensuri
 
 After updating the platform-specific projects as shown above and recompiling the app with translated RESX files, updated translations will be available in each app. Here is a screenshot from the sample code translated into Simplified Chinese:
 
-![](localization-images/simple-example-hans.png "Cross-Platform UIs Translated to Simplified Chinese")
+![](text-images/simple-example-hans.png "Cross-Platform UIs Translated to Simplified Chinese")
 
 ## Localizing XAML
 
@@ -796,7 +796,7 @@ iOS uses a naming standard called Localization Projects or **.lproj** directorie
 
 This screenshot shows the iOS sample app with language-specific **.lproj** directories. The Spanish directory called **es.lproj**, contains localized versions of the default image, as well as **flag.png**:
 
-![](localization-images/ios-resources.png "iOS Localization Project Directories")
+![](text-images/ios-resources.png "iOS Localization Project Directories")
 
 Each language directory contains a copy of **flag.png**, localized for that language. If no image is supplied, the operating system will default to the image in the default language directory. For full Retina support, you should supply **@2x** and **@3x** copies of each image.
 
@@ -810,7 +810,7 @@ The contents of the **InfoPlist.strings** is just a single key-value to configur
 
 When the application is run, the app name and the image are both localized:
 
-![](localization-images/ios-imageicon.png "iOS Sample App Text and Image Localization")
+![](text-images/ios-imageicon.png "iOS Sample App Text and Image Localization")
 
 ### Android Application Project
 
@@ -820,7 +820,7 @@ Android follows a different scheme for storing localized images using different 
 
 This screenshot shows the Android sample with a some localized drawables and strings:
 
-![](localization-images/android-resources.png "Android Localized Drawables and String Directories")
+![](text-images/android-resources.png "Android Localized Drawables and String Directories")
 
 Note that Android does not use zh-Hans and zh-Hant codes for Simplified and Traditional Chinese; instead, it only supports country-specific codes zh-CN and zh-TW.
 
@@ -846,7 +846,7 @@ Update the **MainActivity.cs** in the Android app project so that the `Label` re
 
 The app now localizes the app name and image. Here's a screenshot of the result (in Spanish):
 
-![](localization-images/android-imageicon.png "Android Sample App Text and Image Localization")
+![](text-images/android-imageicon.png "Android Sample App Text and Image Localization")
 
 ### Universal Windows Platform Application Projects
 
@@ -856,7 +856,7 @@ The Universal Windows Platform possesses a resource infrastructure that simplifi
 
 Images can be localized by placing them in a resource-specific folder, as demonstrated in the following screenshot:
 
-![](localization-images/uwp-image-folder-structure.png "UWP Image Localization Folder Structure")
+![](text-images/uwp-image-folder-structure.png "UWP Image Localization Folder Structure")
 
 At runtime the Windows resource infrastructure will select the appropriate image based on the user's locale.
 
@@ -864,7 +864,7 @@ At runtime the Windows resource infrastructure will select the appropriate image
 
 Xamarin.Forms applications can be localized using RESX files and .NET globalization classes. Apart from a small amount of platform-specific code to detect what language the user prefers, most of the localization effort is centralized in the common code.
 
-Images are generally handled in a platform-specific way to take advantage of the multi-resolution support provided in both iOS and Android. 
+Images are generally handled in a platform-specific way to take advantage of the multi-resolution support provided in both iOS and Android.
 
 ## Related Links
 

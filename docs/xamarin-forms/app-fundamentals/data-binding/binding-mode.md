@@ -4,9 +4,9 @@ description: "Control the flow of information between source and target"
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
 ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
+author: charlespetzold
+ms.author: chape
+ms.date: 05/01/2018
 ---
 
 # Binding Mode
@@ -54,6 +54,7 @@ The binding mode is specified with a member of the [`BindingMode`](https://devel
 - [`TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/) &ndash; data goes both ways between source and target
 - [`OneWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWay/) &ndash; data goes from source to target
 - [`OneWayToSource`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; data goes from target to source
+- [`OneTime`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; data goes from source to target, but only when the `BindingContext` changes (new with Xamarin.Forms 3.0)
 
 Every bindable property has a default binding mode that is set when the bindable property is created, and which is available from the [`DefaultBindingMode`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableProperty.DefaultBindingMode/) property of the `BindableProperty` object. This default binding mode indicates the mode in effect when that property is a data-binding target.
 
@@ -90,6 +91,15 @@ Read-only bindable properties have a default binding mode of `OneWayToSource`. T
 - `SelectedItem` property of `ListView`
 
 The rationale is that a binding on the `SelectedItem` property should result in setting the binding source. An example later in this article overrides that behavior.
+
+### One-Time Bindings
+
+Several properties have a default binding mode of `OneTime`. These are:
+
+- `IsTextPredictionEnabled` property of `Entry`
+- `Text`, `BackgroundColor`, and `Style` properties of `Span`.
+
+Target properties with a binding mode of `OneTime` are updated only when the binding context changes. For bindings on these target properties, this simplifies the binding infrastructure because it is not necessary to monitor changes in the source properties.
 
 ## ViewModels and Property-Change Notifications
 
@@ -194,6 +204,8 @@ public class HslColorViewModel : INotifyPropertyChanged
 When the `Color` property changes, the static `GetNearestColorName` method in the `NamedColor` class (also included in the **DataBindingDemos** solution) obtains the closest named color and sets the `Name` property. This `Name` property has a private `set` accessor, so it cannot be set from outside the class.
 
 When a ViewModel is set as a binding source, the binding infrastructure attaches a handler to the `PropertyChanged` event. In this way, the binding can be notified of changes to the properties, and can then set the target properties from the changed values.
+
+However, when a target property (or the `Binding` definition on a target property) has a `BindingMode` of `OneTime`, it is not necessary for the binding infrastructure to attach a handler on the `PropertyChanged` event. The target property is updated only when the `BindingContext` changes and not when the source property itself changes. 
 
 The **Simple Color Selector** XAML file instantiates the `HslColorViewModel` in the page's resource dictionary and initializes the `Color` property. The `BindingContext` property of the `Grid` is set to a `StaticResource` binding extension to reference that resource:
 

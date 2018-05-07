@@ -62,7 +62,7 @@ The device styles are bound to using the `DynamicResource` markup extension. The
 
 ![](device-images/device-styles.png "Device Styles on Each Platform")
 
-*Device* styles can also be derived from by setting the [`BaseResourceKey`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.BaseResourceKey/) property to the key name for the device style. In the code example above, `myBodyStyle` inherits from [`BodyStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/) and sets an accented text color. For more information about dynamic style inheritance, see [Dynamic Style Inheritance](~/xamarin-forms/user-interface/styles/dynamic.md#dynamic-style-inheritance).
+*Device* styles can also be derived from by setting the [`BaseResourceKey`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.BaseResourceKey/) property to the key name for the device style. In the code example above, `myBodyStyle` inherits from [`BodyStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/) and sets an accented text color. For more information about dynamic style inheritance, see [Dynamic Style Inheritance](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance).
 
 The following code example demonstrates the equivalent page in C#:
 

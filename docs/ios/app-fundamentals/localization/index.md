@@ -460,5 +460,5 @@ You can learn more about i18n and L10n for iOS, Android and cross-platform apps
 - [Tasky (localized storyboard) (sample)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard)
 - [Apple Localization Guide](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)
 - [Cross-Platform Localization Overview](~/cross-platform/app-fundamentals/localization.md)
-- [Xamarin.Forms Localization](~/xamarin-forms/app-fundamentals/localization.md)
+- [Xamarin.Forms Localization](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [Android Localization](~/android/app-fundamentals/localization.md)

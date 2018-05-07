@@ -79,7 +79,35 @@
     {
       "source_path": "docs/ios/get-started/installation/windows/manual-installation.md",
       "redirect_url": "/xamarin/ios/get-started/installation/windows"
-    }
+    },	
+    {
+      "source_path": "docs/xamarin-forms/user-interface/styles/introduction.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/styles/xaml/introduction"
+    },
+    {
+      "source_path": "docs/xamarin-forms/user-interface/styles/explicit.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/styles/xaml/explicit"
+    },
+    {
+      "source_path": "docs/xamarin-forms/user-interface/styles/implicit.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/styles/xaml/implicit"
+    },
+    {
+      "source_path": "docs/xamarin-forms/user-interface/styles/application.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/styles/xaml/application"
+    },
+    {
+      "source_path": "docs/xamarin-forms/user-interface/styles/inheritance.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/styles/xaml/inheritance"
+    },
+    {
+      "source_path": "docs/xamarin-forms/user-interface/styles/dynamic.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/styles/xaml/dynamic"
+    },
+    {
+      "source_path": "docs/xamarin-forms/user-interface/styles/device.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/styles/xaml/device"
+    }	
   ]
 }
 

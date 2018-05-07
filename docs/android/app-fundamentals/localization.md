@@ -330,5 +330,5 @@ guide](~/cross-platform/app-fundamentals/localization.md).
 - [Tasky (localized in code) (sample)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
 - [Android Localizing with Resources](http://developer.android.com/guide/topics/resources/localization.html)
 - [Cross-Platform Localization Overview](~/cross-platform/app-fundamentals/localization.md)
-- [Xamarin.Forms Localization](~/xamarin-forms/app-fundamentals/localization.md)
+- [Xamarin.Forms Localization](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [iOS Localization](~/ios/app-fundamentals/localization/index.md)

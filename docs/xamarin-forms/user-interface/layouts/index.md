@@ -24,6 +24,7 @@ Each layout control is described below, as well as details on how to handle scre
 * **[AbsoluteLayout](absolute-layout.md)** &ndash; used to arrange views by setting coordinates & size in terms of absolute values or ratios. AbsoluteLayout can be used to layer views as well as anchor them to the left, right or center.
 * **[RelativeLayout](relative-layout.md)** &ndash; used to arrange views by setting constraints relative to their parent's dimensions & position.
 * **[Grid](grid.md)** &ndash; used to arrange views in a grid. Rows and columns can be specified in terms of absolute values or ratios.
+* **[FlexLayout](flex-layout.md)** &ndash; used to arrange views horizontally or vertically with wrapping.
 * **[ScrollView](scroll-view.md)** &ndash; used to provide scrolling when a view can't fit entirely within the bounds of the screen.
 * **[LayoutOptions](layout-options.md)** &ndash; define alignment and expansion for a view, relative to its parent.
 * **[Input Transparency](#input_transparency)** &ndash; specifies whether an element receives input.
@@ -58,6 +59,23 @@ For an example of when `StackLayout` would be a good choice, consider an app tha
   <Button HorizontalOptions="End" Text="Button" />
 </StackLayout>
 ```
+
+### [FlexLayout](flex-layout.md)
+
+The `FlexLayout` is similar to `StackLayout` in that it displays child views either horizontally or vertically:
+
+```xaml
+<FlexLayout Direction="Column"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly">
+        
+    <Label Text="FlexLayout in Action" />
+    <Button Text="Button" />
+    <Label Text="Another Label" />
+</FlexLayout>
+```
+
+However, if there are too many children to fit in a single row or columm, `FlexLayout` is also capable of wrapping those views. `FlexLayout` is based on the CSS Flexible Box Layout Module, and has many of the same built-in options for positioning and aligning its children.
 
 ### [AbsoluteLayout](absolute-layout.md)
 

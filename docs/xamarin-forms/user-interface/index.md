@@ -47,7 +47,7 @@ Images can be shared across platforms with Xamarin.Forms, they can be loaded spe
 
 ## [Layouts](layouts/index.md)
 
-Xamarin.Forms has several layouts for organizing on-screen content. `StackLayout`, `Grid`, `AbsoluteLayout`, `ScrollView`, and `RelativeLayout` can each be used to create beautiful, responsive user interfaces.
+Xamarin.Forms has several layouts for organizing on-screen content. `StackLayout`, `Grid`, `FlexLayout`, `AbsoluteLayout`, `ScrollView`, and `RelativeLayout` can each be used to create beautiful, responsive user interfaces.
 
 ## [ListView](listview/index.md)
 
@@ -80,6 +80,10 @@ Xamarin.Forms has several views for presenting and receiving text. Text views ca
 ## [Themes](themes/index.md)
 
 Xamarin.Forms Themes define a specific visual appearance for the standard controls. Once you add a theme to the application's resource dictionary, the appearance of the standard controls will change.
+
+## [Visual State Manager](visual-state-manager.md)
+
+The Visual State Manager provides a structured way to trigger changes in the user interface from code, including layout that adapts to changes in device orientation or size.
 
 ## [WebView](webview.md)
 

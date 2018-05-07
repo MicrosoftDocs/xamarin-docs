@@ -17,7 +17,7 @@ those concepts.
 If you want to skip straight to the technical details of localizing Xamarin apps,
 start with one of these platform-specific how-to articles:
 
-- [**Xamarin.Forms**](~/xamarin-forms/app-fundamentals/localization.md) cross-platform localization using RESX files.
+- [**Xamarin.Forms**](~/xamarin-forms/app-fundamentals/localization/index.md) cross-platform localization using RESX files.
 - [**Xamarin.iOS**](~/ios/app-fundamentals/localization/index.md) native platform localization.
 - [**Xamarin.Android**](~/android/app-fundamentals/localization.md) native platform localization.
 
@@ -313,7 +313,7 @@ These concepts can be applied to the various platform-specific and cross-platfor
 
 Continue reading technical details for the platform you are interested in:
 
-- [Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization.md) cross-platform localization using RESX files.
+- [Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization/index.md) cross-platform localization using RESX files.
 - [Xamarin.iOS](~/ios/app-fundamentals/localization/index.md) native platform localization.
 - [Xamarin.Android](~/android/app-fundamentals/localization.md) native platform localization.
 
