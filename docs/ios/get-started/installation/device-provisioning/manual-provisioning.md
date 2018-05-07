@@ -253,7 +253,10 @@ If this is set to **Automatic**, Visual Studio for Mac will select the identity 
 
 # [Visual Studio](#tab/vswin)
 
-1. Plug the device in to a Mac.
+> [!IMPORTANT]
+> Before you begin, make sure to select **Manual Provisioning** in **Project > Provisioning Properties…**.
+
+1. Plug the device in to the Mac build host.
 2. In the project's **Info.plist**, make sure the Bundle Identifier matches the App ID:
 
   ![](manual-provisioning-images/servicevs01.png "Entering an Identifier")

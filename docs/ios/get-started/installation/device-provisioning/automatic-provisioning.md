@@ -1,31 +1,42 @@
 ---
 title: "Automatic Provisioning"
-description: "Once Xamarin.iOS has been successfully installed, the next step in iOS development is to provision your iOS device. This guide explores using Automatic Signing in Visual Studio for Mac to request development certificates and profiles."
+description: "Once Xamarin.iOS has been successfully installed, the next step in iOS development is to provision your iOS device. This guide explores using Automatic Signing  to request development certificates and profiles."
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 11/17/2017
+ms.date: 05/06/2018
 ---
 
 # Automatic Provisioning
 
-_Once Xamarin.iOS has been successfully installed, the next step in iOS development is to provision your iOS device. This guide explores using Automatic Signing in Visual Studio for Mac to request development certificates and profiles._
+_Once Xamarin.iOS has been successfully installed, the next step in iOS development is to provision your iOS device. This guide explores using Automatic Signing to request development certificates and profiles._
 
 ## Requirements
+
+# [Visual Studio for Mac](#tab/vsmac)
 
 - Visual Studio for Mac 7.3 or greater
 - Xcode 9 or greater
 
-> [!IMPORTANT]
-> This guide illustrates how to use Visual Studio for Mac to set up an Apple device for deployment and how to deploy an application. For manual steps on how to do this or to do this with Visual Studio on Windows, it is recommended that you follow the detailed steps in the [manual provisioning](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) guide.
+# [Visual Studio](#tab/vswin)
+
+- Visual Studio 2017 Version 15.7 (or greater)
+
+You must also be paired to a Mac build host that has the following:
+
+- Xcode 9 or greater
+
+-----
 
 ## Enabling Automatic Signing
 
-Before you start the automatic signing process, you should ensure that you have an Apple ID added in Visual Studio for Mac, as described in the [Apple Account Management](~/cross-platform/macios/apple-account-management.md) guide. Once you've added an Apple ID, you can use any associated _Team_. This allows certificates, profiles, and other IDs to be made against the team. The team ID is also used to create a the prefix for an App ID that will be included in the provisioning profile. Having this allows Apple to verify that you are who you say you are.
+Before you start the automatic signing process, you should ensure that you have an Apple ID added in Visual Studio, as described in the [Apple Account Management](~/cross-platform/macios/apple-account-management.md) guide. Once you've added an Apple ID, you can use any associated _Team_. This allows certificates, profiles, and other IDs to be made against the team. The team ID is also used to create a the prefix for an App ID that will be included in the provisioning profile. Having this allows Apple to verify that you are who you say you are.
 
 To automatically sign your app for deployment on an iOS device, do the following:
+
+# [Visual Studio for Mac](#tab/vsmac)
 
 1. Open an iOS project in Visual Studio for Mac.
 
@@ -43,11 +54,31 @@ To automatically sign your app for deployment on an iOS device, do the following
 
     If the automatic signing fails the **Automatic signing pad** will display the reason for the error.
 
+# [Visual Studio](#tab/vswin)
+
+1. Pair Visual Studio 2017 to a Mac as described in the [Pair to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) guide.
+
+2. Open the Provisioning options by selecting **Project > Provisioning Properties…**
+
+3. Select the **Automatically Provisioning** scheme:
+
+    ![Selection of the Automatic scheme](automatic-provisioning-images/prov4.png)
+
+4. Select your team from the **Team** combo box to start the automatic signing process.
+
+    ![Selection of the Team](automatic-provisioning-images/prov3.png)
+
+4. This starts the automatic signing process. Visual Studio then attempts to generate an App ID, provisioning profile, and a signing identity to use these artifacts for signing. You can see the generation process in the Build output:
+
+    ![Build output showing generation of artifacts](automatic-provisioning-images/prov5.png)
+
+-----
+
 ## Triggering Automatic Provisioning
 
 When automatic signing has been enabled, Visual Studio for Mac will update these artifacts if necessary when any of the following things happen:
 
-* An iOS device is plugged into your mac
+* An iOS device is plugged into your Mac
     - This automatically checks to see if the device is registered on the Apple Developer Portal. If it isn’t, it will add it and generate a new provisioning profile that contains it.
 * The Bundle ID of your app is changed
     - This updates the app ID. A new provisioning profile containing this app ID is created.

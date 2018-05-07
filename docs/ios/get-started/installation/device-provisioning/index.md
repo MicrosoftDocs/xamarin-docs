@@ -6,7 +6,7 @@ ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 07/15/2017
+ms.date: 05/06/2018
 ---
 
 # Device Provisioning
@@ -43,23 +43,14 @@ These steps ensure that everything that is created or used during the developmen
 
 <a name="Provisioning_Profile" />
 
-# [Visual Studio for Mac](#tab/vsmac)
-
 ## Provisioning your Device
 
-There are two ways to provision your iOS device with Visual Studio for Mac:
+There are two ways to provision your iOS device:
 
-* **Automatically (Recommended)** – Select the **Automatically manage signing** option in the Info.plist file to have Visual Studio for Mac automatically create and manage your Signing Identities, App IDs, and Provisioning Profiles.  For information on how to automatically manage provisioning, see the [Automatic Provisioning](automatic-provisioning.md) guide. This is the recommended way of provisioning an iOS device.
+* **Automatically (Recommended)** – Select the **Automatic Provisioning** scheme in your project to have Visual Studio automatically create and manage your Signing Identities, App IDs, and Provisioning Profiles. For information on how to automatically manage provisioning, see the [Automatic Provisioning](automatic-provisioning.md) guide. This is the recommended way of provisioning an iOS device.
 
 * **Manually** – Signing Identities, App IDs, and Provisioning Profiles can be created and managed via the Apple Developer Portal, as described in [manual provisioning](manual-provisioning.md) guide. These artifacts can then be managed as described in the [Apple Account Management](~/cross-platform/macios/apple-account-management.md) guide.
 
-# [Visual Studio](#tab/vswin)
-
-## Provisioning your Device
-
-For steps on how to set up an Apple device for deployment and deploy an application with Visual Studio on Windows, it is recommended that you follow the detailed steps in the [manual provisioning](manual-provisioning.md) guide.
-
------
 
 <a name="appservices" />
 
@@ -70,9 +61,6 @@ Apple provides a selection of special Application Services, also called capabili
 * Create an App ID with the required app services.
 * Create a new [provisioning profile](#Provisioning_Profile) that contains this App ID.
 * Set Entitlements in the Xamarin.iOS Project
-
-> [!NOTE]
-> Currently, provisioning profiles created in Visual Studio for Mac will not take into account entitlements selected in your projects (Entitlements.plist). This functionality will be added in future versions of the IDE. If you need to use App Services, it is recommended that you follow the instructions in the [Manual Provisioning](manual-provisioning.md) guide.
 
 ## Related Links
 
