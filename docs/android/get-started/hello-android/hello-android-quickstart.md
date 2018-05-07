@@ -74,10 +74,10 @@ Visual Studio Android Emulator, see
 
 Start Visual Studio.  Click **File > New > Project** to create a new project.
 
-In the **New Project** dialog, click the **Blank App (Android)** template.
+In the **New Project** dialog, click the **Android App** template.
 Name the new project `Phoneword`. Click **OK** to create the new project:
 
-[![New project is Phoneword](hello-android-quickstart-images/vs/02-new-project-name-sml.png)](hello-android-quickstart-images/vs/02-new-project-name.png#lightbox)
+[![New project is Phoneword](hello-android-quickstart-images/vs/02-new-project-name-sml.w157.png)](hello-android-quickstart-images/vs/02-new-project-name.w157.png#lightbox)
 
 ### Creating the Layout
 
@@ -140,10 +140,10 @@ Explorer** pane and choosing **Add > New Item...** as shown below:
 
 [![Add new item](hello-android-quickstart-images/vs/12-add-new-item-sml.png)](hello-android-quickstart-images/vs/12-add-new-item.png#lightbox)
 
-In the **Add New Item** dialog, select **Visual C# > Code**
+In the **Add New Item** dialog, select **Visual C# > Code > Code File**
 and name the new code file **PhoneTranslator.cs**:
 
-[![Add PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-sml.png)](hello-android-quickstart-images/vs/14-add-class.png#lightbox)
+[![Add PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-sml.w157.png)](hello-android-quickstart-images/vs/14-add-class.w157.png#lightbox)
 
 This creates a new empty C# class. Insert the following code into this file:
 
@@ -220,10 +220,11 @@ below the `base.OnCreate(bundle)` and `SetContentView
 the `OnCreate` method resembles the following:
 
 ```csharp
+using System;
 using Android.App;
-using Android.OS;
+using Android.Content;
 using Android.Widget;
-using Core;
+using Android.OS;
 
 namespace Phoneword
 {
@@ -499,10 +500,13 @@ template button handling code so that the `OnCreate` method
 resembles the following:
 
 ```csharp
+using System;
 using Android.App;
-using Android.OS;
+using Android.Content;
+using Android.Runtime;
+using Android.Views;
 using Android.Widget;
-using Core;
+using Android.OS;
 
 namespace Phoneword
 {

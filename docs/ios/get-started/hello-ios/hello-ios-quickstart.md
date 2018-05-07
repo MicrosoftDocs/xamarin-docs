@@ -1,5 +1,5 @@
 ---
-title: "Hello, iOS"
+title: "Hello, iOS Quickstart"
 description: "This two-part guide, describes how to build a basic Xamarin.iOS application using Visual Studio for Mac or Visual Studio and develop an understanding of the fundamentals of iOS application development with Xamarin. It will introduce the tools, concepts, and steps required to build and deploy a Xamarin.iOS application."
 ms.topic: quickstart
 ms.prod: xamarin
@@ -7,7 +7,7 @@ ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/23/2017
+ms.date: 05/02/2017
 ---
 
 # Hello.iOS Quickstart
@@ -15,7 +15,6 @@ ms.date: 03/23/2017
 This guide describes how to create an application that translates an alphanumeric phone number entered by the user into a numeric phone number, and then calls that number. The final application looks like this:
 
  [![](hello-ios-quickstart-images/image1.png "The Hello.iOS Quickstart app")](hello-ios-quickstart-images/image1.png#lightbox)
-
 
 <a name="Requirements" />
 
@@ -38,7 +37,7 @@ The [Xamarin.iOS Mac Installation guide](~/ios/get-started/installation/mac.md) 
 
 Xamarin.iOS works with the following setups:
 
--  Latest version of Visual Studio 2015 or 2017 Professional or higher on Windows 7 or above, paired with a Mac build host that fits the above specifications.
+-  Latest version of Visual Studio 2017 Community, Professional, or Enterprise on Windows 7 or above, paired with a Mac build host that fits the above specifications.
 
 The [Xamarin.iOS Windows Installation guide](~/ios/get-started/installation/windows/index.md) is available for step-by-step installation instructions.
 
@@ -59,7 +58,6 @@ This walkthrough describes how to create an application called Phoneword that tr
 On the Launch Screen, click **New Project...** to create a new Xamarin.iOS solution:
 
 ![](hello-ios-quickstart-images/image3new.png "iOS solution")
-
 
 2. From the **New Solution dialog**, choose the **iOS > App > Single View Application** template, ensuring that C# is selected. Click **Next**:
 
@@ -293,51 +291,42 @@ This walkthrough describes how to create an application called Phoneword that tr
 
   ![](hello-ios-quickstart-images/image001-.png "The Start screen")
 
-  In the search box under **New Solution** enter _Single View App_, and select **Single View App (iPhone)** to create a new Xamarin.iOS solution:
+  Create a new Xamarin.iOS solution by selecting **File > New > Project... > Visual C# > iPhone & iPad > iOS App (Xamari**:
 
-  ![](hello-ios-quickstart-images/image002-.png "Add a Single View app")
+  ![Select iOS App (Xamarin) project type](hello-ios-quickstart-images/image002.w157.png "Select iOS App (Xamarin) project type")
 
+  In the next dialog that appears, select the **Single View App** template and press **OK** to create the project:
 
-2. Name the Project and Solution `Phoneword`, as illustrated below:
+  ![Select Single View project template](hello-ios-quickstart-images/image002-2.w157.png "Select Single View project template")
 
-  ![](hello-ios-quickstart-images/vs-image3.png "Name the Project PhonewordiOS and the new Solution Phoneword")
+1. Confirm that the Xamarin Mac Agent icon in the toolbar is green.
 
+    ![Confirm that the Xamarin Mac Agent icon in the toolbar is green](hello-ios-quickstart-images/vs-image4.png)
 
-3. Press **OK** to create the new Project
+    If it isn't, this means that there is no connection to your Mac build host, follow the steps in the [configuration guide](~/ios/get-started/installation/windows/connecting-to-mac/index.md) to get connected.
 
-4. Confirm that the Xamarin Mac Agent icon in the toolbar is green.
-
-	![Confirm that the Xamarin Mac Agent icon in the toolbar is green](hello-ios-quickstart-images/vs-image4.png)
-
-	If it isn't, this means that there is no connection to your Mac build host, follow the steps in the [configuration guide](~/ios/get-started/installation/windows/connecting-to-mac/index.md) to get connected.
-
-
-5. Open the **Main.storyboard** file in the iOS Designer by double-clicking on it in the **Solution Explorer**:
+1. Open the **Main.storyboard** file in the iOS Designer by double-clicking on it in the **Solution Explorer**:
 
   ![](hello-ios-quickstart-images/vs-image7.png "The iOS Designer")
 
-6. Open the **Toolbox** tab, type “label” into the search bar and drag a **Label** onto the design surface (the area in the center):
+1. Open the **Toolbox** tab, type “label” into the search bar and drag a **Label** onto the design surface (the area in the center):
 
   ![](hello-ios-quickstart-images/vs-image8.png "Drag a Label onto the design surface the area in the center")
 
-
-7. Next, grab the handles of the *Dragging Controls* and make the label wider:
+1. Next, grab the handles of the *Dragging Controls* and make the label wider:
 
   ![](hello-ios-quickstart-images/vs-image9.png "Make the label wider")
 
-
-8. With the **Label** selected on the design surface, use the **Properties Windows** to change the **Text** property of the **Label** to "Enter a Phoneword:"
+1. With the **Label** selected on the design surface, use the **Properties Windows** to change the **Text** property of the **Label** to "Enter a Phoneword:"
 
   ![](hello-ios-quickstart-images/vs-image10.png "Change the Text property of the Label to `Enter a Phoneword`")
 
   > [!NOTE]
   > You can bring up the **Properties** or **Toolbox** at any time by navigating to the **View** menu.
 
-
-9. Search for “text field” inside the Toolbox and drag a **Text Field** from the **Toolbox** onto the design surface and place it under the **Label**. Adjust the width until the **Text Field** is the same width as the **Label**:
+1. Search for “text field” inside the Toolbox and drag a **Text Field** from the **Toolbox** onto the design surface and place it under the **Label**. Adjust the width until the **Text Field** is the same width as the **Label**:
 
   ![](hello-ios-quickstart-images/vs-image12.png "Adjust the width until the Text Field is the same width as the Label")
-
 
 10. With the **Text Field** selected on the design surface, change the **Text Field**’s **Name** property in the Identity section of the **Properties** to `PhoneNumberText`, and change the **Text** property to "1-855-XAMARIN":
 
@@ -370,9 +359,9 @@ This walkthrough describes how to create an application called Phoneword that tr
   ![](hello-ios-quickstart-images/vs-image18.png "Add some code to translate phone numbers from alphanumeric to numeric")
 
 
-16. In the **New File** dialog, select **Apple > Class** and name the new file `PhoneTranslator`:
+16. In the **Add New Item** dialog (right click on the project, choose Add > New Item...), select **Apple > Class** and name the new file `PhoneTranslator`:
 
-  ![](hello-ios-quickstart-images/vs-image19.png "Add a new Class named PhoneTranslator")
+  ![](hello-ios-quickstart-images/vs-image19.w157.png "Add a new class named PhoneTranslator")
 
   > [!IMPORTANT]
   > Make sure that you select the 'class' template that has a C# in the icon. Otherwise you may not be able to reference this new class.

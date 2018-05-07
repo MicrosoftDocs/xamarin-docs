@@ -6,7 +6,7 @@ ms.assetid: 380413B8-6A99-4BB8-B64C-3EAF9F359C22
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 04/11/2018
 ---
 
 # Binding an .AAR
@@ -97,7 +97,7 @@ Before commencing with the steps below, please download the example
     Visual Studio (the screenshots below show Visual Studio, but
     Visual Studio for Mac is very similar). Name the solution **AarBinding**:
 
-    [![Create AarBindings project](binding-an-aar-images/01-new-bindings-library-vs-sml.png)](binding-an-aar-images/01-new-bindings-library-vs.png#lightbox)
+    [![Create AarBindings project](binding-an-aar-images/01-new-bindings-library-vs-sml.w157.png)](binding-an-aar-images/01-new-bindings-library-vs.w157.png#lightbox)
 
 2.  The template includes a **Jars** folder where you add your .AAR(s)
     to the Bindings Library project. Right-click the **Jars** folder
@@ -155,7 +155,7 @@ a reference to the Bindings Library. Use the following steps:
     the Solution and select **Add New Project**. Name the new project
     **BindingTest**:
 
-    [![Create new BindingTest project](binding-an-aar-images/07-add-new-project-vs-sml.png)](binding-an-aar-images/07-add-new-project-vs.png#lightbox)
+    [![Create new BindingTest project](binding-an-aar-images/07-add-new-project-vs-sml.w157.png)](binding-an-aar-images/07-add-new-project-vs.w157.png#lightbox)
 
 2.  Right-click the **References** node of the **BindingTest** project and
     select **Add Reference...**:

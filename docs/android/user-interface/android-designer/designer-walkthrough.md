@@ -6,7 +6,7 @@ ms.assetid: 70FF2F9A-71BD-317E-C881-A44D82DF1BD8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/29/2018
+ms.date: 04/10/2018
 ---
 
 # Using the Android Designer
@@ -49,9 +49,9 @@ The first step is to create a new Xamarin.Android project.
 # [Visual Studio](#tab/vswin)
 
 Launch Visual Studio and click **New Project...** then choose the
-**Visual C\# > Android > Blank App (Android)** template:
+**Visual C\# > Android > Android App (Xamarin)** template:
 
-[![Android blank app](designer-walkthrough-images/vs/01-android-app-sml.png)](designer-walkthrough-images/vs/01-android-app.png#lightbox)
+[![Android blank app](designer-walkthrough-images/vs/01-android-app-sml.w157.png)](designer-walkthrough-images/vs/01-android-app.w157.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -93,7 +93,7 @@ Explorer** and select **Add > New Item...**. In the **Add New Item**
 dialog, select **Android Layout**. Name the file **ListItem.axml** and
 click **Add**:
 
-[![New layout](designer-walkthrough-images/vs/03-new-layout-sml.png)](designer-walkthrough-images/vs/03-new-layout.png#lightbox)
+[![New layout](designer-walkthrough-images/vs/03-new-layout-sml.w157.png)](designer-walkthrough-images/vs/03-new-layout.w157.png#lightbox)
 
 The new **ListItem** layout is displayed in the Designer:
 

@@ -6,7 +6,7 @@ ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 04/10/2018
 ---
 
 # Hello, Wear
@@ -25,7 +25,7 @@ Create a new **Android Wear Application**:
 
 # [Visual Studio](#tab/vswin)
 
-[![Creating a new Android Wear Application in the New Project dialog](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png#lightbox)
+[![Creating a new Android Wear Application in the New Project dialog](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 

@@ -73,6 +73,10 @@
       "redirect_url": "/xamarin/xamarin-forms/platform/windows/installation"
     },
     {
+      "source_path": "docs/android/platform/fragments/implementing-with-fragments/supporting-pre-honeycomb.md",
+      "redirect_url": "xamarin/android/platform/fragments/implementing-with-fragments/walkthrough"
+    },
+    {
       "source_path": "docs/ios/get-started/installation/windows/connecting-to-mac/visual-studio-ssh.md",
       "redirect_url": "/xamarin/ios/get-started/installation/windows/connecting-to-mac"
     },

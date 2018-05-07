@@ -6,7 +6,7 @@ ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/17/2017
+ms.date: 05/03/2018
 ---
 
 # Implementing SiriKit
@@ -91,7 +91,7 @@ Do the following:
 2. Right-click on the Solution Name in the **Solution Explorer** and select **Add** > **New Project...**.
 3. Select **Visual C#** > **Shared Project** and click the **Next** button: 
 
-	[![](implementing-sirikit-images/prep02w.png "Select Class Library")](implementing-sirikit-images/prep02w.png#lightbox)
+	[![](implementing-sirikit-images/prep02.w157-sml.png "Select Class Library")](implementing-sirikit-images/prep02.w157.png#lightbox)
 4. Enter `MonkeyChatCommon` for the **Name** and click the **Create** button.
 5. Right-click on the **References** folder of the main app in the **Solution Explorer** and select **Edit References...**. Check the **MonkeyChatCommon** project and click the **OK** button: 
 
@@ -455,7 +455,7 @@ To add a `AppIntentVocabulary.plist` file to the app project, do the following:
 
 1. Right-click the Project Name in the **Solution Explorer** and select **Add** > **New File...** > **iOS**:
 
-	[![](implementing-sirikit-images/plist01.png "Add a property list")](implementing-sirikit-images/plist01.png#lightbox) 
+	[![](implementing-sirikit-images/plist01.png "Add a property list")](implementing-sirikit-images/plist01.png#lightbox)
 2. Double-click the `AppIntentVocabulary.plist` file in the **Solution Explorer** to open it for editing.
 3. Click the **+** to add a key, set the **Name** to `ParameterVocabularies` and the **Type** to `Array`:
 
@@ -517,9 +517,10 @@ To add a `AppIntentVocabulary.plist` file to the app project, do the following:
 
 # [Visual Studio](#tab/vswin)
 
-1. Right-click the Project Name in the **Solution Explorer** and select **Add** > **New File...** > **iOS**:
+1. Right-click the Project Name in the **Solution Explorer** and select **Add > New Item... > Apple > Property List > Info.plist**:
 
-	[![](implementing-sirikit-images/plist01w.png "Add a new Info.plist")](implementing-sirikit-images/plist01w.png#lightbox) 
+	[![](implementing-sirikit-images/plist01.w157-sml.png "Add a new Info.plist")](implementing-sirikit-images/plist01.w157.png#lightbox)
+
 2. Double-click the `AppIntentVocabulary.plist` file in the **Solution Explorer** to open it for editing.
 3. Click the **+** to add a key, set the **Name** to `ParameterVocabularies` and the **Type** to `Array`:
 
@@ -621,11 +622,11 @@ To add an Intents Extension to the solution, do the following:
 # [Visual Studio](#tab/vswin)
 
 1. Right-click on the **Solution Name** in the **Solution Explorer** and select **Add** > **Add New Project...**.
-2. From the dialog box select **iOS** > **Extensions** > **Intent Extension** and click the **Next** button: 
+2. From the dialog box select **Visual C# > iOS Extensions > Intent Extension** and click the **Next** button:
 
-	[![](implementing-sirikit-images/intents05w.png "Select Intent Extension")](implementing-sirikit-images/intents05w.png#lightbox)
+    [![](implementing-sirikit-images/intents05.w157-sml.png "Select Intent Extension")](implementing-sirikit-images/intents05.w157.png#lightbox)
 3. Next enter a **Name** for the Intent Extension and click the **OK** button.
-5. In the **Solution Explorer**, right-click on the **References** folder of the newly created Intent Extension. Check the name of the common shared code library project (that the app created above) and click the **OK** button: 
+1. In the **Solution Explorer**, right-click on the **References** folder of the newly-created Intents Extension and choose **Add > Reference**. Check the name of the common shared code library project (that the app created above) and click the **OK** button:
 
 	[![](implementing-sirikit-images/intents08w.png "Select the name of the common shared code library project")](implementing-sirikit-images/intents08w.png#lightbox)
 	

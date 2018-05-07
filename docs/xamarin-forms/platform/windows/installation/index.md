@@ -6,7 +6,7 @@ ms.assetid: A0774D2E-6994-4D91-84E8-DAB66FC92320
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/16/2016
+ms.date: 04/10/2018
 ---
 
 # Setup Windows Projects

@@ -6,7 +6,7 @@ ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/06/2018
+ms.date: 04/10/2018
 ---
 
 # Xamarin.Forms Deep Dive

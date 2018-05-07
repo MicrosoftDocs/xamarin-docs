@@ -6,7 +6,7 @@ ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/26/2018
+ms.date: 05/03/2018
 ---
 
 # Xamarin.Forms Quickstart
@@ -29,7 +29,7 @@ Create the Phoneword application as follows:
 
 3. In the **New Project** dialog, click **Cross-Platform**, select the **Mobile App (Xamarin.Forms)** template, set the Name and Solution name to `Phoneword`, choose a suitable location for the project and click the **OK** button:
 
-    ![](quickstart-images/vs/new-project.png "Cross-Platform Project Templates")
+    ![](quickstart-images/vs/new-project.w157.png "Cross-Platform Project Templates")
 
 4. In the **New Cross Platform App** dialog, click **Blank App**, select **.NET Standard** as the Code Sharing Strategy, and click the **OK** button:
 
@@ -164,7 +164,7 @@ Create the Phoneword application as follows:
 
 12. In the **Add New Item** dialog, select **Visual C# > Code > Class**, name the new file **PhoneTranslator**, and click the **Add** button:
 
-    ![](quickstart-images/vs/add-translator-class.png "Add New Class")
+    ![](quickstart-images/vs/add-translator-class.w157.png "Add New Class")
 
 13. In **PhoneTranslator.cs**, remove all of the template code and replace it with the following code. This code will translate a phone word to a phone number:
 
@@ -230,7 +230,7 @@ Create the Phoneword application as follows:
 
 15. In the **Add New Item** dialog, select **Visual C# > Code > Interface**, name the new file **IDialer**, and click the **Add** button:
 
-    ![](quickstart-images/vs/add-idialer-interface.png "Add New Interface")
+    ![](quickstart-images/vs/add-idialer-interface.w157.png "Add New Interface")
 
 16. In **IDialer.cs**, remove all of the template code and replace it with the following code. This code defines a `Dial` method that must be implemented on each platform to dial a translated phone number:
 
@@ -253,9 +253,9 @@ Create the Phoneword application as follows:
 
     ![](quickstart-images/vs/add-new-item-ios.png "Add New Item")
 
-18. In the **Add New Item** dialog, select **Apple > Code > Class**, name the new file **PhoneDialer**, and click the **Add** button:
+18. In the **Add New Item** dialog, select **Visual C# > Code > Class**, name the new file **PhoneDialer**, and click the **Add** button:
 
-    ![](quickstart-images/vs/new-phone-dialer-ios.png "Add New Class")
+    ![](quickstart-images/vs/new-phone-dialer-ios.w157.png "Add New Class")
 
 19. In **PhoneDialer.cs**, remove all of the template code and replace it with the following code. This code creates the <code>Dial</code> method that will be used on the iOS platform to dial a translated phone number:
 
@@ -287,7 +287,7 @@ Create the Phoneword application as follows:
 
 21. In the **Add New Item** dialog, select **Visual C# > Android > Class**, name the new file **PhoneDialer**, and click the **Add** button:
 
-    ![](quickstart-images/vs/new-phone-dialer-android.png "Add New Class")
+    ![](quickstart-images/vs/new-phone-dialer-android.w157.png "Add New Class")
 
 22. In **PhoneDialer.cs**, remove all of the template code and replace it with the following code. This code creates the `Dial` method that will be used on the Android platform to dial a translated phone number:
 
@@ -387,7 +387,7 @@ Create the Phoneword application as follows:
 
 27. In the **Add New Item** dialog, select **Visual C# > Code > Class**, name the new file **PhoneDialer**, and click the **Add** button:
 
-    ![](quickstart-images/vs/new-phone-dialer-uwp.png "Add New Class")
+    ![](quickstart-images/vs/new-phone-dialer-uwp.w157.png "Add New Class")
 
 28. In **PhoneDialer.cs**, remove all of the template code and replace it with the following code. This code creates the `Dial` method, and helper methods, that will be used on the Universal Windows Platform to dial a translated phone number:
 
@@ -519,7 +519,7 @@ Create the Phoneword application as follows:
         <ContentPage.Padding>
             <OnPlatform x:TypeArguments="Thickness">
                 <On Platform="iOS" Value="20, 40, 20, 20" />
-                <On Platform="Android, UWP" Value="20" />
+                <On Platform="Android, WinPhone, Windows" Value="20" />
             </OnPlatform>
         </ContentPage.Padding>
         <StackLayout>
@@ -626,7 +626,7 @@ Create the Phoneword application as follows:
     }
     ```
 
-    Save the changes to **App.xaml.cs** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
+    Save the changes to **Phoneword.cs** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
 
 13. In the **Solution Pad**, select the **Phoneword** project, right-click and select **Add > New File...**:
 

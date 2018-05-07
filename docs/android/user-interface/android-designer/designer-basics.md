@@ -37,7 +37,7 @@ load the Designer as shown below:
 Likewise, you can add a new layout by right-clicking the **layout**
 folder in the **Solution Explorer** and selecting **Add > New Item... > Android Layout**:
 
-[![Add New Item dialog](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png#lightbox)
+[![Add New Item dialog](designer-basics-images/vs/02-add-new-layout-sml.w157.png)](designer-basics-images/vs/02-add-new-layout.w157.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 

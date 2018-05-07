@@ -6,7 +6,7 @@ ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
+ms.date: 04/11/2018
 ---
 
 # Binding a .JAR
@@ -111,7 +111,7 @@ Bindings Library* template. (The screenshots in this walkthrough
 use Visual Studio, but Visual Studio for Mac is very similar.) Name the 
 Solution **JarBinding**: 
 
-[![Create JarBinding library project](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png#lightbox)
+[![Create JarBinding library project](binding-a-jar-images/01-new-bindings-library-sml.w157.png)](binding-a-jar-images/01-new-bindings-library.w157.png#lightbox)
 
 The template includes a **Jars** folder where you add your .JAR(s) 
 to the Bindings Library project. Right-click the **Jars** folder 
@@ -192,7 +192,7 @@ creating this app in the same Solution as the Bindings Library in
 order to simplify this walkthrough; however, the app that consumes
 the Bindings Library could, instead, reside in a different Solution: 
 
-[![Add new BindingTest project](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png#lightbox)
+[![Add new BindingTest project](binding-a-jar-images/07-add-new-project-sml.w157.png)](binding-a-jar-images/07-add-new-project.w157.png#lightbox)
 
 Right-click the **References** node of the **BindingTest** project and 
 select **Add Reference...**:

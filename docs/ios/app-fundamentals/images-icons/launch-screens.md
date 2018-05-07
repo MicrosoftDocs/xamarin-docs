@@ -1,12 +1,12 @@
 ---
-title: "Launch Screens"
+title: "Launch Screens for Xamarin.iOS Apps"
 description: "This article explains how to create an app Launch Screen for all iOS devices, at any resolution and orientation, using a single Unified Storyboard."
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 01/19/2018
+ms.date: 05/02/2018
 ---
 
 # Launch Screens
@@ -136,12 +136,13 @@ In iOS 8 (and later), the developer can create a special Unified Storyboard to p
 
 # [Visual Studio](#tab/vswin)
 
-1. Create a new project. In Visual Studio, select **File > New > Project**,
-   and then choose **Single View App (iPhone)**:
-    
-    ![The New Project window, with Single View App (iPhone) selected](launch-screens-images/launch01-vs.png)
+1. Create a new project. In Visual Studio, select **File > New > Project > Visual C# > iPhone & iPad > iOS App (Xamarin)**:
 
-    - Name the project, choose a location, and select **OK**.
+    ![The New Project window, with iOS App (Xamarin) selected](launch-screens-images/launch01.w157.png)
+
+    Select the **Single View App** template, and then click **OK**:
+
+    ![Single View App template](launch-screens-images/launch01-2.w157.png)
 
 2. If **Resources > LaunchScreen.xib** exists in the **Solution Explorer**,
    delete it by right-clicking on the file and choosing **Delete**. This
@@ -152,7 +153,7 @@ In iOS 8 (and later), the developer can create a special Unified Storyboard to p
    followed by **Empty Storyboard**. Name this Storyboard
    **LaunchScreen.storyboard** and click **Add**:
 
-    ![The Add New Item window, with Empty Storyboard selected](launch-screens-images/launch03-vs.png)
+    ![The Add New Item window, with Empty Storyboard selected](launch-screens-images/launch03.w157.png)
 
 4. Configure the Project to use **LaunchScreen.storyboard** as its Launch
    Screen Storyboard:
@@ -170,7 +171,7 @@ In iOS 8 (and later), the developer can create a special Unified Storyboard to p
     - In the **Solution Explorer**, right-click on **Asset Catalogs** and
       select **Add Asset Catalog**. Name this new Asset Catalog **Assets**:
 
-    ![The Add New Item window, with Asset Catalog selected](launch-screens-images/launch05-vs.png)
+    ![The Add New Item window, with Asset Catalog selected](launch-screens-images/launch05.w157.png)
 
     - Add a new Image Set to the **Assets** Asset Catalog, as described in
       the [Adding Images to an Asset Catalog Image Set](~/ios/app-fundamentals/images-icons/displaying-an-image.md)

@@ -6,7 +6,7 @@ ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/17/2017
+ms.date: 05/02/2017
 ---
 
 # Enhanced User Notifications
@@ -544,10 +544,10 @@ To implement a Service Extension in a Xamarin.iOS app, do the following:
 # [Visual Studio](#tab/vswin)
 
 1. Open the app's solution in Visual Studio.
-2. Right-click on the Solution Name in the **Solution Explorer** and select **Add** > **Add New Project**.
-3. Select **iOS** > **Extensions** > **Notification Service Extensions**: 
+2. Right-click on the Solution Name in the **Solution Explorer** and select **Add > New Project...**.
+3. Select **Visual C# > iOS Extensions > Notification Service Extension**:
 
-	[![](enhanced-user-notifications-images/extension01w.png "Select Notification Service Extensions")](enhanced-user-notifications-images/extension01w.png#lightbox)
+	[![](enhanced-user-notifications-images/extension01.w157-sml.png "Select Notification Service Extensions")](enhanced-user-notifications-images/extension01.w157.png#lightbox)
 4. Enter a **Name** for the extension and click the **OK** button.
 
 -----

@@ -6,7 +6,7 @@ ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/17/2017
+ms.date: 05/03/2018
 ---
 
 # Advanced User Notifications
@@ -177,10 +177,10 @@ To implement a Custom User Notification UI in a Xamarin.iOS app, do the followin
 # [Visual Studio](#tab/vswin)
 
 1. Open the app's solution in Visual Studio for Mac.
-2. Right-click on the Solution Name in the **Solution Explorer** and select **Add** > **Add New Project**.
-3. Select **iOS** > **Extensions** > **Notification Content Extensions**: 
+2. Right-click on the Solution Name in the **Solution Explorer** and select **Add > New Project...**.
+3. Select **Visual C# > iOS Extensions > Notification Content Extension**:
 
-	[![](advanced-user-notifications-images/notify01w.png "Select Notification Content Extensions")](advanced-user-notifications-images/notify01w.png#lightbox)
+	[![](advanced-user-notifications-images/notify01.w157-sml.png "Select Notification Content Extensions")](advanced-user-notifications-images/notify01.w157.png#lightbox)
 4. Enter a **Name** for the extension and click the **OK** button.
 
 -----

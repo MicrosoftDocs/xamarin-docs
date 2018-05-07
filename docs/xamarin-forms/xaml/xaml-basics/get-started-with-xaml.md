@@ -6,7 +6,7 @@ ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 10/25/2017
+ms.date: 04/10/2018
 ---
 
 # Part 1. Getting Started with XAML
@@ -19,9 +19,9 @@ To begin editing your first XAML file, use Visual Studio or Visual Studio for Ma
 
 # [Visual Studio](#tab/vswin)
 
-In Windows, use Visual Studio to select **File > New > Project** from the menu. In the **New Project** dialog, select **Visual C# > Cross Platform** at the left, and then **Cross Platform App (Xamarin.Forms or Native)** from the list in the center. 
+In Windows, use Visual Studio to select **File > New > Project** from the menu. In the **New Project** dialog, select **Visual C# > Cross Platform** at the left, and then **Mobile App (Xamarin.Forms)** from the list in the center. 
 
-![](get-started-with-xaml-images/win/newprojectdialog.png "New Project Dialog")
+![](get-started-with-xaml-images/win/newprojectdialog.w157.png "New Project Dialog")
 
 Select a location for the solution, give it a name of **XamlSamples** (or whatever you prefer), and press **OK**.
 
@@ -222,7 +222,7 @@ Test that the program still compiles and deploys before continuing.
 
 To add other XAML-based `ContentPage` classes to your project, select the **XamlSamples** PCL project and invoke the **Project > Add New Item** menu item. At the left of the **Add New Item** dialog, select **Visual C#** and **Xamarin.Forms**. From the list select **Content Page** (not **Content Page (C#)**, which creates a code-only page, or **Content View**, which is not a page). Give the page a name, for example, **HelloXamlPage.xaml**:
 
-![](get-started-with-xaml-images/win/addnewitemdialog.png "Add New Item Dialog")
+![](get-started-with-xaml-images/win/addnewitemdialog.w157.png "Add New Item Dialog")
 
 # [Visual Studio for Mac](#tab/vsmac)
 

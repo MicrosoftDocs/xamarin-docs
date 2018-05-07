@@ -6,7 +6,7 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 04/10/2018
 ---
 
 # Windows Installation
@@ -150,11 +150,11 @@ creating your app:
 ![How to create a new project](windows-images/10-new-project.png)
 
 In the **New Project** dialog, select **Android** under **Templates** and
-click **Blank App (Android)** in the right pane. Enter a name for
+click **Android App** in the right pane. Enter a name for
 your app (in the screenshot below, the app is called **MyApp**), then
 click **OK**:
 
-[![Screenshot of New Project dialog, creating a blank Android app](windows-images/11-first-app-sml.png)](windows-images/11-first-app.png#lightbox)
+[![Screenshot of New Project dialog, creating a blank Android app](windows-images/11-first-app-sml.w157.png)](windows-images/11-first-app.w157.png#lightbox)
 
 That's it! Now you are ready to use Xamarin.Android to create
 Android applications!

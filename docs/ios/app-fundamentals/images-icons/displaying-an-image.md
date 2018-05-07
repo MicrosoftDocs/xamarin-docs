@@ -6,7 +6,7 @@ ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/18/2017
+ms.date: 04/24/2018
 ---
 
 # Displaying an Image
@@ -62,6 +62,7 @@ When using an **Image Set** in the iOS Designer, simply select the set's name fr
 1. Open the Asset Catalog from the **Solution Explorer**, and in the top left corner, click the **Plus** button:
 
 	![](displaying-an-image-images/asset5.png "Click the Plus button")
+
 2. Select **Add Image Set** and the Image Set editor will be displayed for the new image set. From here, drag in images for each of the different devices and and resolutions required. (Note: that these resolutions match up to the resolutions specified in the [Image Sizes and Filenames](~/ios/app-fundamentals/images-icons/displaying-an-image.md) document):
 
 	![](displaying-an-image-images/asset7.png "The image set editor")

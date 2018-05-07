@@ -6,7 +6,7 @@ ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/19/2017
+ms.date: 05/02/2018
 ---
 
 # Introduction to Xamarin.iOS for Visual Studio
@@ -49,8 +49,6 @@ In either case, you should follow these steps:
 To connect Visual Studio to your Mac build host, follow the instructions
 in the [Pair to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
 guide.
-
-
 
 ## Visual Studio Toolbar Overview
 
@@ -137,14 +135,17 @@ Visual Studio’s Project Properties can be accessed by right-clicking on the Pr
 
 ## Creating a New Project for iOS Applications
 
-Creating a new iOS project from within Visual Studio is done just like any other project type. Selecting **File > New Project** will open the dialog shown below, illustrating some of the templates available for creating a new iOS project:
+Creating a new iOS project from within Visual Studio is done just like any other project type. Selecting **File > New Project** will open the dialog shown below, illustrating some of the project types available for creating a new iOS project:
 
+![Creating a New Project](introduction-to-xamarin-ios-for-visual-studio-images/newproject.w157.png)
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/newproject.png "Creating a New Project")
+Selecting **iOS App (Xamarin)** will show the following templates for creating a new Xamarin.iOS application:
+
+![Selecting the template for an iOS app](introduction-to-xamarin-ios-for-visual-studio-images/newproject-2.w157.png)
 
 Storyboard and .xib files can be edited in Visual Studio using the iOS Designer. To create a Storyboard, choose the one of the Storyboard templates. This will generate a **Main.storyboard** file in the **Solution Explorer** as illustrated by the screenshot below:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/solution-explorer-new.png "The Main.storyboard file in the Solution Explorer")
+![The Main.storyboard file in the Solution Explorer](introduction-to-xamarin-ios-for-visual-studio-images/solution-explorer-new.w157.png)
 
 To start creating or editing your Storyboard, double-click on `Main.storyboard` to open it in the iOS Designer:
 

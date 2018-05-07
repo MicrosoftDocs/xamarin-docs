@@ -1,81 +1,51 @@
 ---
-title: "Implementing With Fragments"
-description: "Android 3.0 introduced Fragments. Fragments are self-contained, modular components that are used to help address the complexity of writing applications that may run on screens of different sizes. This article walks through how to use fragments to develop Xamarin.Android applications, and how to support fragments on pre-Android 3.0 devices."
+title: "Implementing Fragments - Walkthrough"
+description: "This article walks through how to use fragments to develop Xamarin.Android applications."
+ms.topic: tutorial
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 04/26/2018
 ---
 
-# Implementing With Fragments
+# Implementing fragments - walkthrough
 
-_Android 3.0 introduced Fragments. Fragments are self-contained, modular components that are used to help address the complexity of writing applications that may run on screens of different sizes. This article walks through how to use fragments to develop Xamarin.Android applications, and how to support fragments on pre-Android 3.0 devices._
-
+_Fragments are self-contained, modular components that can help address the complexity of Android apps that target devices with a variety of screen sizes. This article walks through how to create and use fragments when developing Xamarin.Android applications._
 
 ## Overview
 
-In this section, we'll walk through how to create an application that will
-display a list of Shakespeare's plays and a quote from each selected play. Our
-app will utilize fragments so that we can define our UI components in one place,
-but then use them on different form factors. For example, the following screen
-shots show the application running on a 10" tablet, as well as on a phone:
+In this section, you'll walk through how to create and use fragments in a Xamarin.Android application. This application will display the titles of several plays by William Shakespeare in a list. When the user taps on the title of a play, then the app will display a quote from that play in a separate activity:
 
-[![Screenshots of example app running on tablet and phone](images/intro-screenshot-sml.png)](images/intro-screenshot.png#lightbox)
+[![App running on an Android phone in portrait mode](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
 
-This section will cover the following topics:
+When the phone is rotated to landscape mode, the appearance of the app will change: both the list of plays and quotes will appear in the same activity. When a play is selected, the quote will be display in the same activity:
 
-- **Creating Fragments** &ndash; shows how to create a fragment to
-display a list of Shakespeare's plays, and another fragment to display a quote
-from each play.
+[![App running on an Android phone in landscape mode](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
 
-- **Supporting different screen sizes** &ndash; shows how to layout
-the application to take advantage of larger screen sizes.
+Finally, if the app is running on a tablet:
 
-- **Using the Android Support Package** &ndash; implements the Android
-Support Package, then makes some minor changes to the Activities in the
-application, allowing it to run on older versions of Android.
+[![App running on an Android tablet](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)
 
+This sample application can easily adapt to the different form factors and orientations with minimal code changes by using fragments and [Alternate Layouts](/xamarin/android/app-fundamentals/resources-in-android/alternate-resources).
 
-## Requirements
+The data for the application will exist in two string arrays that are hardcoded in the app as C# string arrays. Each of the arrays will serve as the data source for one fragment.  One array will hold the name of some plays by Shakespeare, and the other array will hold a quote from that play. When the app starts up, it will display the play names in a `ListFragment`. When the user clicks on a play in the `ListFragment`, the app will start up another activity which will display the quote.
 
-This walkthrough requires Xamarin.Android 4.0 or higher. It will also be
-necessary to install the Android Support Package, as outlined in the Fragments
-documentation.
+The user interface for the app will consist of two layouts, one for portrait and one for landscape mode. At run time, Android will determine what layout to load based on the orientation of the device and will provide that layout to the Activity to render. All of the logic for responding to user clicks and displaying the data will be contained in fragments. The Activities in the app exist only as containers that will host the fragments.
 
+This walkthrough will be broken down into two guides. The [first part](./walkthrough.md) will focus on the core parts of the application. A single set of layouts (optimized for portrait mode) will be created, along with two fragments and two Activities:
 
-## Introduction
+1. `MainActivity` &nbsp; This is the startup Activity for the app.
+1. `TitlesFragment` &nbsp; This fragment will display a list of titles of plays that were written by William Shakespeare. It will be hosted by `MainActivity`.
+1. `PlayQuoteActivity` &nbsp; `TitlesFragment` will start the `PlayQuoteActivity` in response to the user selecting a play in `TitlesFragment`.
+1. `PlayQuoteFragment` &nbsp; This fragment will display a quote from a play by William Shakespeare. It will be hosted by `PlayQuoteActivity`.
 
-In the example we’ll build in this section, the Activities do not
-contain logic for loading the list, responding to user selection, or displaying
-the quote for the selected play. This logic exists in the individual fragments.
-By placing this logic in the fragments themselves, we can break up the workflow
-of the application to support large screens with one Activity or small screens
-with multiple Activities without having to write different logic for each
-Activity. On a tablet, both fragments will be in one Activity. On a phone, the
-fragments will be hosted in different Activities.
-
-This application includes the following parts:
-
- **MainActivity** – displays one or both of the fragments,
-depending on the size of the screen. This is the startup Activity.
-
- **TitlesFragment** – displays a list of Shakespeare’s plays
-from which the user may select.
-
- **DetailsFragment** – displays the quote from the selected
-play.
-
- **DetailsActivity** – hosts and displays the DetailsFragment.
-This Activity is used by devices with small screens, such as phones.
-
-
+The [second part of this walkthrough](./walkthrough-landscape.md) will discuss adding an alternate layout (optimized for landscape mode) which will display both fragments on the screen. Also, some minor code changes will be made to the code so that the app will adapt its behavior to the number of fragments that are concurrently displayed on the screen.
 
 ## Related Links
 
 - [FragmentsWalkthrough (sample)](https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/)
 - [Designer Overview](~/android/user-interface/android-designer/index.md)
-- [Xamarin.Android samples: Honeycomb Gallery](https://developer.xamarin.com/samples/HoneycombGallery/)
 - [Implementing Fragments](http://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [Support Package](http://developer.android.com/sdk/compatibility-library.html)

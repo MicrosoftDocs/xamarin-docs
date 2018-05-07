@@ -6,7 +6,7 @@ ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/18/2017
+ms.date: 05/03/2018
 ---
 
 # Creating iOS User Interfaces in Code
@@ -29,9 +29,7 @@ The diagram below illustrates the relationships between the Window, Views, Subvi
 
 [![](ios-code-only-images/image9.png "This diagram illustrates the relationships between the Window, Views, Subviews, and View Controller")](ios-code-only-images/image9.png#lightbox)
 
-
 These view hierarchies can be constructed using the [Xamarin Designer for iOS](~/ios/user-interface/designer/index.md) in Visual Studio for Mac, however it is good to have a fundamental understanding of how to work entirely in code. This article walks through some basic points to get up and running with code-only user interface development.
-
 
 -----
 
@@ -41,16 +39,17 @@ These view hierarchies can be constructed using the [Xamarin Designer for iOS](~
 
 ## iOS Blank Project Template
 
-First, create an iOS project in Visual Studio using the iPhone **Blank Project** template, shown below, which we'll extend to add controllers and views.
+First, create an iOS project in Visual Studio using the **File > New Project > Visual C# > iPhone & iPad > iOS App (Xamarin)** project, shown below:
 
+[![New Project Dialog](ios-code-only-images/blankapp.w157-sml.png)](ios-code-only-images/blankapp.w157.png#lightbox)
 
-[![](ios-code-only-images/blankapp-vs.png "New Project Dialog")](ios-code-only-images/blankapp-vs.png#lightbox)
+Then select the **Blank App** project template:
 
+[![Select a Template Dialog](ios-code-only-images/blankapp-2.w157-sml.png)](ios-code-only-images/blankapp-2.w157.png#lightbox)
 
-The Empty project template adds 4 files to the project:
+The Empty Project template adds 4 files to the project:
 
-
-[![](ios-code-only-images/empty-project.png "Project Files")](ios-code-only-images/empty-project.png#lightbox)
+[![Project Files](ios-code-only-images/empty-project.w157-sml.png "Project Files")](ios-code-only-images/empty-project.w157.png#lightbox)
 
 
 1. **AppDelegate.cs** - Contains a  `UIApplicationDelegate` subclass,  `AppDelegate` , which is used to handle application events from iOS. The application window is created in the `AppDelegate`'s  `FinishedLaunching` method.
@@ -95,18 +94,12 @@ The steps below guide you through removing the Storyboard from an application:
 	        return true;
 	    }
 
+The code that was added to the `FinishedLaunching` method in step 5 above, is the minimum amount of code required to create a Window for your iOS application.
+
 
 -----
 
-## Creating a Window
 
-# [Visual Studio](#tab/vswin)
-
-# [Visual Studio for Mac](#tab/vsmac)
-
-The code that was added to the `FinishedLaunching` method in step 3 above, is the minimum amount of code required to create a Window for your iOS application.	
-
------
 
 iOS applications are built using the [MVC pattern](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md#Model_View_Controller). The first screen that an application displays is created from the window's root view controller. See the [Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md) guide for more details on the MVC pattern itself.
 
@@ -219,7 +212,7 @@ Add a new class named `CustomViewController` as shown below:
 
 # [Visual Studio](#tab/vswin)
 
-[![](ios-code-only-images/customviewcontroller.png "Add a new class named CustomViewController")](ios-code-only-images/customviewcontroller.png#lightbox)
+[![](ios-code-only-images/customviewcontroller.w157-sml.png "Add a new class named CustomViewController")](ios-code-only-images/customviewcontroller.w157.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
