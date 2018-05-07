@@ -77,6 +77,12 @@ sections:
         src: ~/media/icons/i_platform.svg
         href: ~/xamarin-forms/platform/
       title: Platform Features
+    - href: ~/essentials/index.md?context=xamarin/xamarin-forms
+      html: Cross-platform APIs for mobile applications.
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_multi-connect.svg
+        href: ~/essentials/index.md?context=xamarin/xamarin-forms
+      title: Xamarin.Essentials
     - href: ~/xamarin-forms/data-cloud/
       html: Local and remote data storage and retrieval, and other cloud-based services.
       image:

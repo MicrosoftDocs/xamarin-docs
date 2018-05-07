@@ -1,0 +1,77 @@
+---
+title: "Xamarin.Essentials Version Tracking"
+description: "The VersionTracking class lets you check the applications version and build numbers along with seeing additional information such as if it is the first time the application launched ever or for the current version, get the previous build information, and more."
+ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
+ms.technology: xamarin-crossplatform
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 05/04/2018
+---
+# Xamarin.Essentials Version Tracking
+
+![Pre-release NuGet](~/media/shared/pre-release.png)
+
+The **VersionTracking** class lets you check the applications version and build numbers along with seeing additional information such as if it is the first time the application launched ever or for the current version, get the previous build information, and more.
+
+## Using Version Tracking
+
+Add a reference to Xamarin.Essentials in your class:
+
+```csharp
+using Xamarin.Essentials;
+```
+
+The first time you use the **VersionTracking** class it will start tracking the current version. You must call `Track` early only in your application each time it is loaded to ensure the current version information is tracked:
+
+```csharp
+VersionTracking.Track();
+```
+
+After the initial `Track` is called version information can be read:
+
+```csharp
+
+// First time ever launched application
+var firstLaunch = VersionTracking.IsFirstLaunchEver;
+
+// First time launching current version
+var firstLaunchCurrent = VersionTracking.IsFirstLaunchForCurrentVersion;
+
+// First time launching current build
+var firstLaunchBuild = VersionTracking.IsFirstLaunchForCurrentBuild;
+
+// Current app version (2.0.0)
+var currentVersion = VersionTracking.CurrentVersion;
+
+// Current build (2)
+var currentBuild = VersionTracking.CurrentBuild;
+
+// Previous app version (1.0.0)
+var previousVersion = VersionTracking.PreviousVersion;
+
+// Previous app build (1)
+var previousBuild = VersionTracking.PreviousBuild;
+
+// First version of app installed (1.0.0)
+var firstVersion = VersionTracking.FirstInstalledVersion;
+
+// First build of app installed (1)
+var firstBuild = VersionTracking.FirstInstalledBuild;
+
+// List of versions installed (1.0.0, 2.0.0)
+var versionHistory = VersionTracking.VersionHistory;
+
+// List of builds installed (1, 2)
+var buildHistory = VersionTracking.BuildHistory;
+```
+
+## Platform Implementation Specifics
+
+All version information is stored using the [Preferences](preferences.md) API in Xamarin.Essentials and is stored with a filename of **[YOUR-APP-PACKAGE-ID].xamarinessentials**.
+
+Uninstalling the application will cause the _LocalSettings_, and all version tracking information to be removed.
+
+## API
+
+- [Version Tracking source code](https://github.com/xamarin/Essentials/tree/master/Essentials/VersionTracking)
+- [Version Tracking API documentation](xref:Xamarin.Essentials.VersionTracking)
