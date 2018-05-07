@@ -78,7 +78,7 @@ sections:
         href: ~/xamarin-forms/platform/
       title: Platform Features
     - href: ~/essentials/index.md?context=xamarin/xamarin-forms
-      html: Cross-platform APIs for mobile applications.
+      html: Cross-platform APIs for common tasks like file access, device info, hardware features, and more.
       image:
         src: https://docs.microsoft.com/en-us/media/common/i_multi-connect.svg
         href: ~/essentials/index.md?context=xamarin/xamarin-forms
