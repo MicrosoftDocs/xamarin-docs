@@ -165,7 +165,7 @@ The `handler` field maintains the reference to the anonymous method, and is used
 
 > [!NOTE]
 > iOS developers should review the documentation on
-> [avoiding circular references in iOS](~/ios/deploy-test/performance.md#avoidcircularreferences)
+> [avoiding circular references in iOS](~/ios/deploy-test/performance.md#avoid-strong-circular-references)
 > to ensure their apps use memory efficiently.
 
 <a name="lazy" />
