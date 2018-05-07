@@ -5,7 +5,7 @@ ms.assetid: A78A55E7-FB5C-4C42-8E3E-939B5E98F9EB
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/01/2018
+ms.date: 05/03/2018
 ---
 
 # Creating a Service
@@ -84,10 +84,10 @@ The most basic way to start a service in Android is to dispatch an `Intent` whic
     ```
 
 -   **Implicit Intent** &ndash; This type of Intent loosely identifies
-    the of action that should be performed, but the exact service to
+    the of action that the user wishes to perform, but the exact service to
     complete that action is unknown. An implicit Intent can be thought
     of as a letter that is addressed "To Whom It May Concern...".
-    Android will examine the contents of the Intent, and determin if
+    Android will examine the contents of the Intent, and determine if
     there is an existing service which matches the intent.
 
     An _intent filter_ is used to help match the implicit intent with a
