@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
-ms.date: 05/01/2018
+ms.date: 05/07/2018
 ---
 
 # The Xamarin.Forms Visual State Manager
@@ -26,7 +26,7 @@ In its initial release, the Xamarin.Florms Visual State Manager defines one visu
 - "Disabled"
 - "Focused"
 
-This visual state group is supported for all classes that derive from [`VisualElement`](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/), which is the base class for [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) and [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/). 
+This visual state group is supported for all classes that derive from [`VisualElement`](xref:Xamarin.Forms.VisualElement), which is the base class for [`View`](xref:Xamarin.Forms.View) and [`Page`](xref:Xamarin.Forms.Page). 
 
 You can also define your own visual state groups and visual states, as this article will demonstrate.
 
@@ -69,9 +69,9 @@ Next, insert `VisualStateManager.VisualStateGroups` tags between those tags:
 
 This might look a little strange. Normally, the only markup that appears between two tags of this sort is for content or property elements, and the `VisualStateManager.VisualStateGroups` tag is neither.
 
-This is legal XAML syntax because [`VisualStateGroups`](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualStateManager.VisualStateGroupsProperty/) is an attached bindable property defined by the [`VisualStateManager`](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualStateManager.VisualStateGroups) class. (For more information on attached bindable properties, see the article [Attached properties](~/xamarin-forms/xaml/attached-properties.md).) This is how the `VisualStateGroups` property is attached to the `Entry` object.
+This is legal XAML syntax because [`VisualStateGroups`](xref:Xamarin.Forms.VisualStateManager.VisualStateGroupsProperty) is an attached bindable property defined by the [`VisualStateManager`](xref:Xamarin.Forms.VisualStateManager) class. (For more information on attached bindable properties, see the article [Attached properties](~/xamarin-forms/xaml/attached-properties.md).) This is how the `VisualStateGroups` property is attached to the `Entry` object.
 
-The `VisualStateGroups` property is of type [`VisualStateGroupList`](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualStateGroupList/), which is a collection of [`VisualStateGroup`](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualStateGroup/) objects. Within the `VisualStateManager.VisualStateGroups` tags, insert a pair of `VisualStateGroup` tags for each group of visual states you wish to include:
+The `VisualStateGroups` property is of type [`VisualStateGroupList`](xref:Xamarin.Forms.VisualStateGroupList), which is a collection of [`VisualStateGroup`](xref:Xamarin.Forms.VisualStateGroup) objects. Within the `VisualStateManager.VisualStateGroups` tags, insert a pair of `VisualStateGroup` tags for each group of visual states you wish to include:
 
 ```xaml
 <Entry FontSize="18">
@@ -89,7 +89,7 @@ Notice that the `VisualStateGroup` tag has an `x:Name` attribute indicating the 
 <VisualStateGroup Name="CommonStates">
 ```
 
-The `VisualStateGroup` class defines a property named [`States`](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualStateGroup/States/), which is a collection of [`VisualState`](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualState/) objects. `States` is the content property of `VisualStateGroups` so you can include the `VisualState` tags directly between the `VisualStateGroup` tags.
+The `VisualStateGroup` class defines a property named [`States`](xref:Xamarin.Forms.VisualStateGroup.States), which is a collection of [`VisualState`](xref:Xamarin.Forms.VisualState) objects. `States` is the content property of `VisualStateGroups` so you can include the `VisualState` tags directly between the `VisualStateGroup` tags.
 
 The next step is to include a pair of tags for every visual state in that group. These also can be identified using `x:Name` or `Name`:
 
@@ -113,7 +113,7 @@ The next step is to include a pair of tags for every visual state in that group.
 </Entry>
 ```
 
-`VisualState` defines a property named [`Setters`](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualState/Setters/), which is a collection of [`Setter`](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/) objects. These are the same `Setter` objects that you use in a [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) object.
+`VisualState` defines a property named [`Setters`](xref:Xamarin.Forms.VisualState.Setters), which is a collection of [`Setter`](xref:Xamarin.Forms.Setter) objects. These are the same `Setter` objects that you use in a [`Style`](xref:Xamarin.Forms.Style) object.
 
 `Setters` is _not_ the content property of `VisualState`, so it is necessary to include property element tags for the `Setters` property:
 

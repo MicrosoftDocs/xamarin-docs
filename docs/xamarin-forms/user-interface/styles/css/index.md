@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/28/2018
+ms.date: 05/07/2018
 ---
 
 # Styling Xamarin.Forms apps using Cascading Style Sheets
@@ -72,7 +72,7 @@ The [MonkeyAppCSS](https://developer.xamarin.com/samples/xamarin-forms/UserInter
 [![MonkeyApp Detail Page with CSS styling](css-images/MonkeyAppDetailPage.png "MonkeyApp Detail Page with CSS styling")](css-images/MonkeyAppDetailPage-Large.png#lightbox "MonkeyApp Detail Page with CSS styling")
 
 > [!NOTE]
-> It's not currently possible to style the background color of a [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) using a style sheet. Therefore, in the sample application the [`NavigationPage.BarBackgroundColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.NavigationPage.BarBackgroundColor/) property is set in code.
+> It's not currently possible to style the background color of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) using a style sheet. Therefore, in the sample application the [`NavigationPage.BarBackgroundColor`](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) property is set in code.
 
 ## Consuming a style sheet
 
@@ -87,7 +87,7 @@ There are a number of approaches that can be used to load a style sheet.
 
 ### XAML
 
-A style sheet can be loaded and parsed with the [`StyleSheet`](https://developer.xamarin.com/api/type/Xamarin.Forms.StyleSheets.StyleSheet/) class before being added to the [`ResourceDictionary`](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) for the page:
+A style sheet can be loaded and parsed with the [`StyleSheet`](xref:Xamarin.Forms.StyleSheets.StyleSheet) class before being added to the [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) for the page:
 
 ```xaml
 <ContentPage ...>
@@ -98,12 +98,12 @@ A style sheet can be loaded and parsed with the [`StyleSheet`](https://developer
 </ContentPage>
 ```
 
-The [`StyleSheet.Source`](https://developer.xamarin.com/api/property/Xamarin.Forms.StyleSheets.Source/) property specifies the style sheet as a URI relative to the location of the enclosing XAML file, or relative to the project root if the URI starts with a `/`.
+The [`StyleSheet.Source`](xref:Xamarin.Forms.Xaml.StyleSheetExtension.Source) property specifies the style sheet as a URI relative to the location of the enclosing XAML file, or relative to the project root if the URI starts with a `/`.
 
 > [!WARNING]
 > The CSS file will fail to load if it's build action is not set to  **EmbeddedResource**.
 
-Alternatively, the style sheet can be loaded and parsed with the [`StyleSheet`](https://developer.xamarin.com/api/type/Xamarin.Forms.StyleSheets.StyleSheet/) class by inlining it in a `CDATA` section:
+Alternatively, the style sheet can be loaded and parsed with the [`StyleSheet`](xref:Xamarin.Forms.StyleSheets.StyleSheet) class by inlining it in a `CDATA` section:
 
 ```xaml
 <ContentPage ...>
@@ -122,7 +122,7 @@ Alternatively, the style sheet can be loaded and parsed with the [`StyleSheet`](
 
 ### C#
 
-In C#, a style sheet can be loaded as an embedded resource and added to the [`ResourceDictionary`](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) for the page:
+In C#, a style sheet can be loaded as an embedded resource and added to the [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) for the page:
 
 ```csharp
 public partial class MyPage : ContentPage
@@ -140,7 +140,7 @@ public partial class MyPage : ContentPage
 
 The first argument to the `StyleSheet.FromAssemblyResource` method is the assembly containing the style sheet, while the second argument is a `string` representing the resource identifier. The resource identifier can be obtained from the **Properties** window when the CSS file is selected.
 
-Alternatively, the style sheet can be loaded from a `StringReader` and added to the [`ResourceDictionary`](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) for the page:
+Alternatively, the style sheet can be loaded from a `StringReader` and added to the [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) for the page:
 
 ```csharp
 public partial class MyPage : ContentPage
@@ -175,7 +175,7 @@ stacklayout {
 }
 ```
 
-This selector identifies any [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) elements on pages that consume the style sheet, and sets their margins to a uniform thickness of 20.
+This selector identifies any [`StackLayout`](xref:Xamarin.Forms.StackLayout) elements on pages that consume the style sheet, and sets their margins to a uniform thickness of 20.
 
 > [!NOTE]
 > The `element` selector does not identify sub-classes of the specified type.
@@ -190,7 +190,7 @@ Elements in the visual tree can be selected by base class with the case insensit
 }
 ```
 
-This selector identifies any [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) elements that consume the style sheet, and sets their background color to `lightgray`.
+This selector identifies any [`ContentPage`](xref:Xamarin.Forms.ContentPage) elements that consume the style sheet, and sets their background color to `lightgray`.
 
 > [!NOTE]
 > The `^base` selector is specific to Xamarin.Forms, and isn't part of the CSS specification.
@@ -205,7 +205,7 @@ Individual elements in the visual tree can be selected with the case sensitive `
 }
 ```
 
-This selector identifies the element whose [`StyleId`](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.StyleId/) property is set to `listView`. However, if the `StyleId` property is not set, the selector will fall back to using the `x:Name` of the element. Therefore, in the following XAML example, the `#listView` selector will identify the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) whose `x:Name` attribute is set to `listView`, and will set it's background color to `lightgray`.
+This selector identifies the element whose [`StyleId`](xref:Xamarin.Forms.Element.StyleId) property is set to `listView`. However, if the `StyleId` property is not set, the selector will fall back to using the `x:Name` of the element. Therefore, in the following XAML example, the `#listView` selector will identify the [`ListView`](xref:Xamarin.Forms.ListView) whose `x:Name` attribute is set to `listView`, and will set it's background color to `lightgray`.
 
 ```xaml
 <ContentPage ...>
@@ -237,7 +237,7 @@ Elements with a specific class attribute can be selected with the case sensitive
 }
 ```
 
-A CSS class can be assigned to a XAML element by setting the [`StyleClass`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.StyleClass/) property of the element to the CSS class name. Therefore, in the following XAML example, the styles defined by the `.detailPageTitle` class are assigned to the first [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/), while the styles defined by the `.detailPageSubtitle` class are assigned to the second `Label`.
+A CSS class can be assigned to a XAML element by setting the [`StyleClass`](xref:Xamarin.Forms.VisualElement.StyleClass) property of the element to the CSS class name. Therefore, in the following XAML example, the styles defined by the `.detailPageTitle` class are assigned to the first [`Label`](xref:Xamarin.Forms.Label), while the styles defined by the `.detailPageSubtitle` class are assigned to the second `Label`.
 
 ```xaml
 <ContentPage ...>
@@ -265,7 +265,7 @@ listview image {
 }
 ```
 
-This selector identifies any [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) elements that are children of [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) elements, and sets their height and width to 60. Therefore, in the following XAML example, the `listview image` selector will identify the [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) that's a child of the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/), and sets its height and width to 60.
+This selector identifies any [`Image`](xref:Xamarin.Forms.Image) elements that are children of [`ListView`](xref:Xamarin.Forms.ListView) elements, and sets their height and width to 60. Therefore, in the following XAML example, the `listview image` selector will identify the [`Image`](xref:Xamarin.Forms.Image) that's a child of the [`ListView`](xref:Xamarin.Forms.ListView), and sets its height and width to 60.
 
 ```xaml
 <ContentPage ...>
@@ -304,7 +304,7 @@ stacklayout>image {
 }
 ```
 
-This selector identifies any [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) elements that are direct children of [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) elements, and sets their height and width to 200. Therefore, in the following XAML example, the `stacklayout>image` selector will identify the [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) that's a direct child of the [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), and sets its height and width to 200.
+This selector identifies any [`Image`](xref:Xamarin.Forms.Image) elements that are direct children of [`StackLayout`](xref:Xamarin.Forms.StackLayout) elements, and sets their height and width to 200. Therefore, in the following XAML example, the `stacklayout>image` selector will identify the [`Image`](xref:Xamarin.Forms.Image) that's a direct child of the [`StackLayout`](xref:Xamarin.Forms.StackLayout), and sets its height and width to 200.
 
 ```xaml
 <ContentPage ...>
@@ -397,7 +397,7 @@ The following properties are currently unsupported:
 - Layout properties (box, or grid).
 - Shorthand properties, such as `font`, and `border`.
 
-In addition, there's no `inherit` value and so inheritance isn't supported. Therefore you can't, for example, set the `font-size` property on a layout and expect all the [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instances in the layout to inherit the value. The one exception is the `direction` property, which has a default value of `inherit`.
+In addition, there's no `inherit` value and so inheritance isn't supported. Therefore you can't, for example, set the `font-size` property on a layout and expect all the [`Label`](xref:Xamarin.Forms.Label) instances in the layout to inherit the value. The one exception is the `direction` property, which has a default value of `inherit`.
 
 ### Color
 

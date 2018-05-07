@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
-ms.date: 05/01/2018
+ms.date: 05/07/2018
 ---
 
 # The Xamarin.Forms FlexLayout
 
 _Use FlexLayout for stacking or wrapping a collection of child views._
 
-The Xamarin.Forms [`FlexLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexLayout/) is new in Xamarin.Forms version 3.0. It is based on the CSS [Flexible Box Layout Module](http://www.w3.org/TR/css-flexbox-1/), commonly known as _flex layout_ or _flex-box_, so called because it includes many flexible options to arrange children within the layout.
+The Xamarin.Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) is new in Xamarin.Forms version 3.0. It is based on the CSS [Flexible Box Layout Module](http://www.w3.org/TR/css-flexbox-1/), commonly known as _flex layout_ or _flex-box_, so called because it includes many flexible options to arrange children within the layout.
 
 `FlexLayout` is similar to the Xamarin.Forms [`StackLayout`](~/xamarin-forms/user-interface/layouts/stack-layout.md) in that it can arrange its children horizontally and vertically in a stack. However, the `FlexLayout` is also capable of wrapping its children if there are too many to fit in a single row or column, and also has many options for orientation, alignment, and adapting to various screen sizes.
 
@@ -61,11 +61,11 @@ Here's that page running on iOS, Android, and the Universal Windows Platform:
 
 Three properties of `FlexLayout` are shown in the **SimpleStackPage.xaml** file:
 
-- The [`Direction`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Direction/) property is set to a value of the [`FlexDirection`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexDirection/) enumeration. The default is `Row`. Setting the property to `Column` causes the children of the `FlexLayout` to be arranged in a single column of items.
+- The [`Direction`](xref:Xamarin.Forms.FlexLayout.Direction) property is set to a value of the [`FlexDirection`](xref:Xamarin.Forms.FlexDirection) enumeration. The default is `Row`. Setting the property to `Column` causes the children of the `FlexLayout` to be arranged in a single column of items.
 
     When items in a `FlexLayout` are arranged in a column, the `FlexLayout` is said to have a vertical _main axis_ and a horizontal _cross axis_.
 
-- The [`AlignItems`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.AlignItems/) property is of type [`FlexAlignItems`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexAlignItems/) and specifies how items are aligned on the cross axis. The `Center` option causes each item to be horizontally centered.
+- The [`AlignItems`](xref:Xamarin.Forms.FlexLayout.AlignItems) property is of type [`FlexAlignItems`](xref:Xamarin.Forms.FlexAlignItems) and specifies how items are aligned on the cross axis. The `Center` option causes each item to be horizontally centered.
 
     If you were using a `StackLayout` rather than a `FlexLayout` for this task, you would center all the items by assigning the `HorizontalOptions` property of each item to `Center`. The `HorizontalOptions` property doesn't work for children of a `FlexLayout`, but this single `AlignItems` property accomplishes the same goal. If you need to, you can use the `AlignSelf` attached bindable property to override the `AlignItems` property for individual items:
 
@@ -77,7 +77,7 @@ Three properties of `FlexLayout` are shown in the **SimpleStackPage.xaml** file:
 
     With that change, this one `Label` is positioned at the left edge of the `FlexLayout` when the reading order is left-to-right.
 
-- The [`JustifyContent`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.JustifyContent/) property is of type [`FlexJustify`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexJustify/), and specifies how items are arranged on the main axis. The `SpaceEvenly` option allocates all leftover vertical space equally between all the items, and above the first item, and below the last item.
+- The [`JustifyContent`](xref:Xamarin.Forms.FlexLayout.JustifyContent) property is of type [`FlexJustify`](xref:Xamarin.Forms.FlexJustify), and specifies how items are arranged on the main axis. The `SpaceEvenly` option allocates all leftover vertical space equally between all the items, and above the first item, and below the last item.
 
     If you were using a `StackLayout`, you would need to assign the `VerticalOptions` property of each item to `CenterAndExpand` to achieve a similar effect. But the `CenterAndExpand` option would allocate twice as much space between each item than before the first item and after the last item. You can mimic the `CenterAndExpand` option of `VerticalOptions` by setting the `JustifyContent` property of `FlexLayout` to `SpaceAround`.
 
@@ -108,7 +108,7 @@ The **Photo Wrapping** page of the **[FlexLayoutDemos](https://developer.xamarin
 
 The `Direction` property of this `FlexLayout` is not set, so it has the default setting of `Row`, meaning that the children are arranged in rows and the main axis is horizontal.
 
-The [`Wrap`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Wrap/) property is of an enumeration type [`FlexWrap`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexWrap/). If there are too many items to fit on a row, then this property setting causes the items to wrap to the next row.
+The [`Wrap`](xref:Xamarin.Forms.FlexLayout.Wrap) property is of an enumeration type [`FlexWrap`](xref:Xamarin.Forms.FlexWrap). If there are too many items to fit on a row, then this property setting causes the items to wrap to the next row.
 
 Notice that the `FlexLayout` is a child of a `ScrollView`. If there are too many rows to fit on the page, then the `ScrollView` has a default `Orientation` property of `Vertical` and allows vertical scrolling.
 
@@ -394,14 +394,14 @@ Each of the `Label` views has a gray background that shows the space allocated t
 
 ### The Direction property
 
-The [`Direction`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Direction/) property is of type [`FlexDirection`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexDirection/), an enumeration with four members:
+The [`Direction`](xref:Xamarin.Forms.FlexLayout.Direction) property is of type [`FlexDirection`](xref:Xamarin.Forms.FlexDirection), an enumeration with four members:
 
 - `Column`
 - `ColumnReverse` (or "column-reverse" in XAML)
 - `Row`, the default
 - `RowReverse` (or "row-reverse" in XAML)
 
-In XAML, you can specify the value of this property using the enumeration member names in lowercase, uppercase, or mixed case, or you can use two additional strings shown in parentheses that are the same as the CSS indicators. (The "column-reverse" and "row-reverse" strings are defined in the [`FlexDirectionTypeConverter`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexDirectionTypeConverter/) class used by the XAML parser.)
+In XAML, you can specify the value of this property using the enumeration member names in lowercase, uppercase, or mixed case, or you can use two additional strings shown in parentheses that are the same as the CSS indicators. (The "column-reverse" and "row-reverse" strings are defined in the [`FlexDirectionTypeConverter`](xref:Xamarin.Forms.FlexDirectionTypeConverter) class used by the XAML parser.)
 
 Here's the **Experiment** page showing (from left to right), the `Row` direction, `Column` direction, and `ColumnReverse` direction:
 
@@ -413,7 +413,7 @@ Notice that for the `Reverse` options, the items start at the right or bottom.
 
 ### The Wrap property
 
-The [`Wrap`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Wrap/) property is of type [`FlexWrap`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexWrap/), an enumeration with three members:
+The [`Wrap`](xref:Xamarin.Forms.FlexLayout.Wrap) property is of type [`FlexWrap`](xref:Xamarin.Forms.FlexWrap), an enumeration with three members:
 
 - `NoWrap`, the default
 - `Wrap`
@@ -429,7 +429,7 @@ When the `Wrap` property is set to `NoWrap` and the main axis is constrained (as
 
 ### The JustifyContent property
 
-The [`JustifyContent`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.JustifyContent/) property is of type [`FlexJustify`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexJustify/), an enumeration with six members:
+The [`JustifyContent`](xref:Xamarin.Forms.FlexLayout.JustifyContent) property is of type [`FlexJustify`](xref:Xamarin.Forms.FlexJustify), an enumeration with six members:
 
 - `Start` (or "flex-start" in XAML), the default
 - `Center`
@@ -448,7 +448,7 @@ In all three screenshots, the `Wrap` property is set to `Wrap`. The `Start` defa
 
 ### The AlignItems property
 
-The [`AlignItems`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.AlignItems/) property is of type [`FlexAlignItems`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexAlignItems/), an enumeration with four members:
+The [`AlignItems`](xref:Xamarin.Forms.FlexLayout.AlignItems) property is of type [`FlexAlignItems`](xref:Xamarin.Forms.FlexAlignItems), an enumeration with four members:
 
 - `Stretch`, the default
 - `Center`
@@ -467,7 +467,7 @@ For any individual item, the `AlignItems` setting can be overridden with the [`A
 
 ### The AlignContent property
 
-The [`AlignContent`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.AlignContent/) property is of type [`FlexAlignContent`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexAlignContent/), an enumeration with seven members:
+The [`AlignContent`](xref:Xamarin.Forms.FlexLayout.AlignContent) property is of type [`FlexAlignContent`](xref:Xamarin.Forms.FlexAlignContent), an enumeration with seven members:
 
 - `Stretch`, the default
 - `Center`
@@ -497,7 +497,7 @@ The `AlignContent` has no effect when there is only one row or column.
 
 ### The AlignSelf Property
 
-The [`AlignSelf`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.AlignSelf/) attached bindable property is of type [`FlexAlignSelf`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexAlignContent/), an enumeration with five members:
+The [`AlignSelf`](xref:Xamarin.Forms.FlexLayout.AlignSelfProperty) attached bindable property is of type [`FlexAlignSelf`](xref:Xamarin.Forms.FlexAlignContent), an enumeration with five members:
 
 - `Auto`, the default
 - `Stretch`
@@ -521,15 +521,15 @@ Notice that there is no reference to the `FlexLayout` parent of the `Label`. In 
 
 ### The Order Property
 
-The [`Order`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Order/) property is of type `int`. The default value is 0.
+The [`Order`](xref:Xamarin.Forms.FlexLayout.OrderProperty) property is of type `int`. The default value is 0.
 
 The `Order` property allows you to change the order that the children of the `FlexLayout` are arranged. Usually, the children of a `FlexLayout` are arranged is the same order that they appear in the `Children` collection. You can override this order by setting the `Order` attached bindable property to a non-zero integer value on one or more children. The `FlexLayout` then arranges its children based on the setting of the `Order` property on each child, but children with the same `Order` setting are arranged in the order that they appear in the `Children` collection.
 
 ### The Basis Property
 
-The [`Basis`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Basis/) attached bindable property indicates the amount of space that is allocated to a child of the `FlexLayout` on the main axis. The size specfied by the `Basis` property is the size along the main axis of the parent `FlexLayout`. In other words, `Basis` indicates the width of a child when the children are arranged in rows, or the height when the children are arranged in columns.
+The [`Basis`](xref:Xamarin.Forms.FlexLayout.BasisProperty) attached bindable property indicates the amount of space that is allocated to a child of the `FlexLayout` on the main axis. The size specfied by the `Basis` property is the size along the main axis of the parent `FlexLayout`. In other words, `Basis` indicates the width of a child when the children are arranged in rows, or the height when the children are arranged in columns.
 
-The `Basis` property is of type [`FlexBasis`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexBasis/), a structure. The size can be specified in either device-independent units or as a percentage of the size of the `FlexLayout`. The default value of the `Basis` property is the static property `FlexBasis.Auto`, which means that the child's requested width or height is used.
+The `Basis` property is of type [`FlexBasis`](xref:Xamarin.Forms.FlexBasis), a structure. The size can be specified in either device-independent units or as a percentage of the size of the `FlexLayout`. The default value of the `Basis` property is the static property `FlexBasis.Auto`, which means that the child's requested width or height is used.
 
 In code, you can set the `Basis` property for a `Label` named `label` to 40 device-independent units like this:
 
@@ -577,7 +577,7 @@ The iOS screenshot at the left shows the two `Label` elements being given height
 
 ### The Grow Property
 
-The [`Grow`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Grow/) property is of type `int`. The default value is 0, and the value must be greater than or equal to 0.
+The [`Grow`](xref:Xamarin.Forms.FlexLayout.GrowProperty) attached bindable property is of type `int`. The default value is 0, and the value must be greater than or equal to 0.
 
 The `Grow` property plays a role when when the `Wrap` property is set to `NoWrap` and the row of children has a total width less than the width of the `FlexLayout`, or the column of children has a shorter height than the `FlexLayout`. The `Grow` property indicates how to apportion the leftover space among the children.
 
@@ -593,7 +593,7 @@ How the child view uses that space depends on the particular type of child. For 
 
 ### The Shrink Property
 
-The [`Shrink`](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Shrink/) property is of type `int`. The default value is 1, and the value must be greater than or equal to 0.
+The [`Shrink`](xref:Xamarin.Forms.FlexLayout.ShrinkProperty) attached bindable property is of type `int`. The default value is 1, and the value must be greater than or equal to 0.
 
 The `Shrink` property plays a role when the `Wrap` property is set to `NoWrap` and the aggregate width of a row of children is greater than the width of the `FlexLayout`, or the aggregate height of a single column of children is greater than the height of the `FlexLayout`. Normally the `FlexLayout` will display these children by constricting their sizes. The `Shrink` property can indicate which children are given priority in being displayed at their full sizes.
 

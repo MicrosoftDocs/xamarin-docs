@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/18/2018
+ms.date: 05/07/2018
 ---
 
 # Right-to-left localization
@@ -17,27 +17,27 @@ _Right-to-left localization adds support for right-to-left flow direction to Xam
 > [!NOTE]
 > Right-to-left localization requires the use of iOS 9 or higher, and API 17 or higher on Android.
 
-Flow direction is the direction in which the UI elements on the page are scanned by the eye. Some languages, such as Arabic and Hebrew, require that UI elements are laid out in a right-to-left flow direction. This can be achieved by setting the [`VisualElement.FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property. This property gets or sets the direction in which UI elements flow within any parent element that controls their layout, and should be set to one of the [`FlowDirection`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlowDirection/) enumeration values:
+Flow direction is the direction in which the UI elements on the page are scanned by the eye. Some languages, such as Arabic and Hebrew, require that UI elements are laid out in a right-to-left flow direction. This can be achieved by setting the [`VisualElement.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property. This property gets or sets the direction in which UI elements flow within any parent element that controls their layout, and should be set to one of the [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) enumeration values:
 
-- [`LeftToRight`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.LeftToRight/)
-- [`RightToRight`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.RightToLeft/)
-- [`MatchParent`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.MatchParent/)
+- [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
+- [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
+- [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
-Setting the [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property to [`RightToLeft`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.RightToLeft/) on an element generally sets the alignment to the right, the reading order to right-to-left, and the layout of the control to flow from right-to-left:
+Setting the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property to [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) on an element generally sets the alignment to the right, the reading order to right-to-left, and the layout of the control to flow from right-to-left:
 
 [![TodoItemPage in Arabic with a right-to-left flow direction](rtl-images/TodoItemPage-Arabic.png "TodoItemPage in Arabic with a right-to-left flow direction")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage in Arabic with a right-to-left flow direction")
 
 > [!TIP]
-> You should only set the [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property on initial layout. Changing this value at runtime causes an expensive layout process that will affect performance.
+> You should only set the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property on initial layout. Changing this value at runtime causes an expensive layout process that will affect performance.
 
-The default [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property value for an element without a parent is [`LeftToRight`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.LeftToRight/), while the default `FlowDirection` for an element with a parent is [`MatchParent`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.MatchParent/). Therefore, an element inherits the `FlowDirection` property value from its parent in the visual tree, and any element can override the value it gets from its parent.
+The default [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property value for an element without a parent is [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight), while the default `FlowDirection` for an element with a parent is [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent). Therefore, an element inherits the `FlowDirection` property value from its parent in the visual tree, and any element can override the value it gets from its parent.
 
 > [!TIP]
-> When localizing an app for right-to-left languages, set the [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property on a page or root layout. This causes all of the elements contained within the page, or root layout, to respond appropriately to the flow direction.
+> When localizing an app for right-to-left languages, set the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property on a page or root layout. This causes all of the elements contained within the page, or root layout, to respond appropriately to the flow direction.
 
 ## Respecting device flow direction
 
-Respecting the device's flow direction based on the selected language and region is an explicit developer choice and does not happen automatically. It can be achieved by setting the [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property on a page, or root layout, to the `static` [`Device.FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.FlowDirection/) value:
+Respecting the device's flow direction based on the selected language and region is an explicit developer choice and does not happen automatically. It can be achieved by setting the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property on a page, or root layout, to the `static` [`Device.FlowDirection`](xref:Xamarin.Forms.Device.FlowDirection) value:
 
 ```xaml
 <ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
@@ -47,7 +47,7 @@ Respecting the device's flow direction based on the selected language and region
 this.FlowDirection = Device.FlowDirection;
 ```
 
-All child elements of the page, or root layout, will by default then inherit the [`Device.FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.FlowDirection/) value.
+All child elements of the page, or root layout, will by default then inherit the [`Device.FlowDirection`](xref:Xamarin.Forms.Device.FlowDirection) value.
 
 ## Platform setup
 
@@ -72,7 +72,7 @@ For more information, see [Localization Basics in iOS](https://docs.microsoft.co
 Right-to-left localization can then be tested by changing the language and region on the device/simulator to a right-to-left locale that was specified in **Info.plist**.
 
 > [!WARNING]
-> Please note that when changing the language and region to a right-to-left locale on iOS, any [`DatePicker`](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/) views will throw an exception if you do not include the resources required for the locale. For example, when testing an app in Arabic that has a `DatePicker`, ensure that **mideast** is selected in the **Internationalization** section of the **iOS Build** pane.
+> Please note that when changing the language and region to a right-to-left locale on iOS, any [`DatePicker`](xref:Xamarin.Forms.DatePicker) views will throw an exception if you do not include the resources required for the locale. For example, when testing an app in Arabic that has a `DatePicker`, ensure that **mideast** is selected in the **Internationalization** section of the **iOS Build** pane.
 
 ### Android
 
@@ -115,29 +115,29 @@ Right-to-left localization can then be tested by changing the language and regio
 
 Xamarin.Forms right-to-left localization currently has a number of limitations:
 
-- [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) button location, toolbar item location, and transition animation is controlled by the device locale, rather than the [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property.
-- [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) swipe direction does not flip.
-- [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) visual content does not flip.
-- [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert/p/System.String/System.String/System.String/) and [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet/p/System.String/System.String/System.String/System.String[]/) orientation is controlled by the device locale, rather than the [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property.
-- [`WebView`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) content does not respect the [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property.
+- [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) button location, toolbar item location, and transition animation is controlled by the device locale, rather than the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
+- [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) swipe direction does not flip.
+- [`Image`](xref:Xamarin.Forms.Image) visual content does not flip.
+- [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert/p/System.String/System.String/System.String/) and [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet/p/System.String/System.String/System.String/System.String[]/) orientation is controlled by the device locale, rather than the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
+- [`WebView`](xref:Xamarin.Forms.WebView) content does not respect the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
 - A `TextDirection` property needs to be added, to control text alignment.
 
 ### iOS
 
-- [`Stepper`](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/) orientation is controlled by the device locale, rather than the [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property.
-- [`EntryCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell/) text alignment is controlled by the device locale, rather than the [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property.
-- [`ContextActions`](https://developer.xamarin.com/api/property/Xamarin.Forms.Cell.ContextActions/) gestures and alignment are not reversed.
+- [`Stepper`](xref:Xamarin.Forms.Stepper) orientation is controlled by the device locale, rather than the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
+- [`EntryCell`](xref:Xamarin.Forms.EntryCell) text alignment is controlled by the device locale, rather than the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
+- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) gestures and alignment are not reversed.
 
 ### Android
 
-- [`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) orientation is controlled by the device locale, rather than the [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property.
-- [`ContextActions`](https://developer.xamarin.com/api/property/Xamarin.Forms.Cell.ContextActions/) placement is controlled by the device locale, rather than the [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property.
+- [`SearchBar`](xref:Xamarin.Forms.SearchBar) orientation is controlled by the device locale, rather than the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
+- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) placement is controlled by the device locale, rather than the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
 
 ### UWP
 
-- [`Editor`](https://developer.xamarin.com/api/type/Xamarin.Forms.Editor/) text alignment is controlled by the device locale, rather than the [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property.
-- [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property is not inherited by [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) children.
-- [`ContextActions`](https://developer.xamarin.com/api/property/Xamarin.Forms.Cell.ContextActions/) text alignment is controlled by the device locale, rather than the [`FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) property.
+- [`Editor`](xref:Xamarin.Forms.Editor) text alignment is controlled by the device locale, rather than the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
+- [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property is not inherited by [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) children.
+- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) text alignment is controlled by the device locale, rather than the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
 
 ## Right to left language support with Xamarin.University
 
