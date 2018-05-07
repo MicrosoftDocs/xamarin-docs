@@ -84,6 +84,7 @@
 #### [Updating Xamarin.Mac Unified Apps to 64-bit](~/cross-platform/macios/32-and-64/mac-64-bit.md?context=xamarin/mac)
 ### [Working with Native Types in Cross-Platform Apps](~/cross-platform/macios/native-types-cross-platform.md?context=xamarin/mac)
 ### [HttpClient Stack and SSL/TLS Implementation Selector](~/cross-platform/macios/http-stack.md?context=xamarin/mac)
+### [Build Optimizations](~/cross-platform/macios/optimizations.md?context=xamarin/mac)
 ## [Advanced Concepts and Internals](internals/index.md)
 ### [AOT](internals/aot.md)
 ### [Available Assemblies](~/cross-platform/internals/available-assemblies.md?context=xamarin/mac)

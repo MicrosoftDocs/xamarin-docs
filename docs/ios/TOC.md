@@ -300,6 +300,7 @@
 #### [Updating Xamarin.Mac Unified Apps to 64-bit](~/cross-platform/macios/32-and-64/mac-64-bit.md?context=xamarin/ios)
 ### [Working with Native Types in Cross-Platform Apps](~/cross-platform/macios/native-types-cross-platform.md?context=xamarin/ios)
 ### [HttpClient Stack and SSL/TLS Implementation Selector](~/cross-platform/macios/http-stack.md?context=xamarin/ios)
+### [Build Optimizations](~/cross-platform/macios/optimizations.md?context=xamarin/ios)
 ## [Advanced Concepts and Internals](internals/index.md)
 ### [API](internals/api.md)
 ### [API Design](internals/api-design/index.md)
