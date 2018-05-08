@@ -3,7 +3,6 @@ title: "Xamarin Inspector"
 description: "Visualize and debug your live app"
 ms.prod: xamarin
 ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017

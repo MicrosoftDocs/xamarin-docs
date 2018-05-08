@@ -2,7 +2,6 @@
 title: "Sample Workbooks"
 ms.prod: xamarin
 ms.assetid: DE1609F8-0D39-4EA0-8666-0468FCF77ACC
-ms.technology: xamarin-cross-platform
 ms.custom: xamu-video
 author: topgenorth
 ms.author: toopge

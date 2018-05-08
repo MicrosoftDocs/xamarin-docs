@@ -3,7 +3,6 @@ title: "Visual Basic.NET in Xamarin iOS and Android"
 description: "XThis walkthrough demonstrates how to build native Xamarin.iOS and Xamarin.Android apps that utilize business logic written in Visual Basic.NET."
 ms.prod: xamarin
 ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017

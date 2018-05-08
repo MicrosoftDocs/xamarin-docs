@@ -2,7 +2,6 @@
 title: "TinyRenderer Workbooks"
 ms.prod: xamarin
 ms.assetid: E4E17836-94C2-436F-ADD8-104AC574D22B
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017

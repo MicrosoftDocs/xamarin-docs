@@ -2,7 +2,6 @@
 title: "Xamarin.Essentials Magnetometer"
 description: "The Magnetometer class lets you monitor the device's magnetometer sensor which indicates the device's orientation relative to Earth's magnetic field."
 ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018

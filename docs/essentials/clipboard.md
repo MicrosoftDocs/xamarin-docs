@@ -2,7 +2,6 @@
 title: "Xamarin.Essentials Clipboard"
 description: "The Clipboard class lets you copy and paste text to the system clipboard between applications."
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018

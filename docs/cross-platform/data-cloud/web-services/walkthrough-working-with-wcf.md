@@ -3,7 +3,6 @@ title: "Walkthrough - Working with WCF"
 description: "This walkthrough covers how a mobile application built with Xamarin can consume a WCF web service using the BasicHttpBinding class."
 ms.prod: xamarin
 ms.assetid: D0E83342-2E79-4D25-BD57-43718F5628C4
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018

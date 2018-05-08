@@ -2,7 +2,6 @@
 title: "Xamarin.Essentials Device Display Information"
 description: "The DeviceDisplay class provides information about the device's screen metrics the application is running on."
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018

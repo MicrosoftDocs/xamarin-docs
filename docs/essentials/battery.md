@@ -2,7 +2,6 @@
 title: "Xamarin.Essentials Battery"
 description: "The Battery class lets you check the device's battery information and monitor for changes."
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018

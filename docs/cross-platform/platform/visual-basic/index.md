@@ -3,7 +3,6 @@ title: "Portable Visual Basic.NET"
 description: "This guide will explain how Visual Basic can be used to write Portable Class Library (PCL) projects that can be used in solutions targeting Xamarin.iOS and Xamarin.Android."
 ms.prod: xamarin
 ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017

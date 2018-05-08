@@ -3,7 +3,6 @@ title: "Introduction to Game Development with MonoGame"
 description: "This multi-part walkthrough shows how to create a simple 2D application using MonoGame.  It covers common game programming concepts, such as graphics, input, game entities, and physics."
 ms.prod: xamarin
 ms.assetid: D781401F-7A96-4098-9645-5F98AEAF7F71
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017

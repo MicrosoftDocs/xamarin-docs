@@ -2,7 +2,6 @@
 title: "Xamarin.Essentials App Information"
 description: "The AppInfo class provides information about your application."
 ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018

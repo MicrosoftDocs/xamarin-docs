@@ -2,7 +2,6 @@
 title: "Installing .NET Embedding"
 ms.prod: xamarin
 ms.assetid: 47106AF3-AC6E-4A0E-B30B-9F73C116DDB3
-ms.technology: xamarin-cross-platform
 author: chamons
 ms.author: chhamo
 ms.date: 4/18/2018

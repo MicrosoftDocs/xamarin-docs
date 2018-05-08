@@ -3,7 +3,6 @@ title: "Using Team City with Xamarin"
 description: "This guide will discuss the steps involved with using TeamCity to compile mobile applications and then submit them to Xamarin Test Cloud."
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017

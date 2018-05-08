@@ -2,7 +2,6 @@
 title: "Xamarin.Essentials Device Information"
 description: "The DeviceInfo class provides information about the device the application is running on."
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018

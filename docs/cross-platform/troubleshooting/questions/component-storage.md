@@ -3,7 +3,6 @@ title: "Where are the components stored on my machine?"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5EBB49EE-39E5-428B-866F-9FC1BB215B31
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ---

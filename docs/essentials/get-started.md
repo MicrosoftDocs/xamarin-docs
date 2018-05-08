@@ -2,7 +2,6 @@
 title: "Xamarin.Essentials"
 description: "Xamarin.Essentials provides a single cross-platform API that works with any iOS, Android, or UWP application that can be accessed from shared code no matter how the user interface is created."
 ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018

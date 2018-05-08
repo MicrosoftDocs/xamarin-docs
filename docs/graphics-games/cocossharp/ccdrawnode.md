@@ -3,7 +3,6 @@ title: "Drawing geometry with CCDrawNode"
 description: "CCDrawNode provides methods for drawing primitive objects such as lines, circles, and triangles."
 ms.prod: xamarin
 ms.assetid: 46A3C3CE-74CC-4A3A-AB05-B694AE182ADB
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017

@@ -3,7 +3,6 @@ title: "Editing NuGet Metadata"
 description: "Use the project options to edit NuGet metadata for multiplatform libraries"
 ms.prod: xamarin
 ms.assetid: 147BA370-67A7-4E6C-BF17-AA7C536C0A48
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017

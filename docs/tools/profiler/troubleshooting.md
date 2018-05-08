@@ -3,7 +3,6 @@ title: "Xamarin Profiler Troubleshooting"
 description: "Troubleshooting the Xamarin Profiler"
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017

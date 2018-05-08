@@ -3,7 +3,6 @@ title: "Introduction to 3D Graphics with MonoGame"
 description: "MonoGame offers a flexible, efficient API for displaying real-time 3D graphics. It includes higher-level constructs for rendering and also access to lower-level graphics resources."
 ms.prod: xamarin
 ms.assetid: 8706826E-8BA5-4E00-A7D6-4072626E3292
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017

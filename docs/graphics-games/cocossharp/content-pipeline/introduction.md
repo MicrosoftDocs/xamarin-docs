@@ -3,7 +3,6 @@ title: "Introduction to content pipelines"
 description: "Content pipelines are applications, or parts of applications, that are used to convert files into a format that can be loaded by game projects. The MonoGame Content Pipeline is a specific content pipeline implementation for converting files for CocosSharp and MonoGame projects."
 ms.prod: xamarin
 ms.assetid: 40628B5F-FAF7-4FA7-A929-6C3FEA83F8EC
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017

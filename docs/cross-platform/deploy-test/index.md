@@ -3,7 +3,6 @@ title: "Deployment & Debugging"
 description: "Tips for debugging Xamarin apps, and changing deployment configurations."
 ms.prod: xamarin
 ms.assetid: D02C62C9-47D1-4E72-8A83-602C3E7929BE
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/07/2017

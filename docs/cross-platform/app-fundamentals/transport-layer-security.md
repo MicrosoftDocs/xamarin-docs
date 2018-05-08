@@ -3,7 +3,6 @@ title: "Transport Layer Security (TLS) 1.2"
 description: "Enabling TLS 1.2 for Xamarin projects on Android, iOS, and Mac"
 ms.prod: xamarin
 ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018

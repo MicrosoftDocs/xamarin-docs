@@ -2,7 +2,6 @@
 title: "ApiDefinitions & StructsAndEnums Files"
 ms.prod: xamarin
 ms.assetid: AC2087C0-BA54-46D8-B70C-6972941C8F73
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017

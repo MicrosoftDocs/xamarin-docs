@@ -3,7 +3,6 @@ title: "Binding troubleshooting"
 description: "This guide describes what to do if you have difficulty binding an Objective-C library."
 ms.prod: xamarin
 ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/19/2016

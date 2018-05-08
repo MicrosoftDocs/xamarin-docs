@@ -3,7 +3,6 @@ title: "Build optimizations"
 description: "This document explains the various optimizations that are applied at build time for Xamarin.iOS and Xamarin.Mac apps."
 ms.prod: xamarin
 ms.assetid: 84B67E31-B217-443D-89E5-CFE1923CB14E
-ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 dateupdated: 04/16/2018

@@ -3,7 +3,6 @@ title: "Accessibility"
 description: "Ensure that your apps are useable by the widest possible audience"
 ms.prod: xamarin
 ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017

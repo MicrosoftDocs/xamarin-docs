@@ -3,7 +3,6 @@ title: "Microsoft Azure Mobile Apps"
 description: "Samples and code downloads for the Azure portal documentation."
 ms.prod: xamarin
 ms.assetid: 7B9AA8D9-C181-4C33-8AB0-2F56E4DBFC03
-ms.technology: xamarin-cross-platform
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2017

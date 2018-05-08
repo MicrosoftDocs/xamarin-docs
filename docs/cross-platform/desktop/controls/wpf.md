@@ -1,7 +1,6 @@
 ---
 ms.assetid: 1BB412D1-FC3D-4E69-8B01-B976A3DB6328
 title: "WPF vs. Xamarin.Forms: Similarities & Differences"
-ms.technology: xamarin-crossplatform
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017

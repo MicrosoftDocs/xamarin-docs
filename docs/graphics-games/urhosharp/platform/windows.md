@@ -3,7 +3,6 @@ title: "UrhoSharp Windows Support"
 description: "Windows Specific Setup and Features for UrhoSharp."
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017

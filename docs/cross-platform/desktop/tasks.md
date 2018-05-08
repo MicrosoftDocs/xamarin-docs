@@ -1,7 +1,6 @@
 ---
 ms.assetid: 0B45BF03-145B-43B2-AFD9-5A0EAB1E63A9
 title: Common Tasks Comparison
-ms.technology: xamarin-crossplatform
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017

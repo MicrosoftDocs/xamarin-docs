@@ -2,7 +2,6 @@
 title: "Xamarin.Essentials Email"
 description: "The Email class enables an application to open the default email application with a specified information including subject, body, and recepients (TO, CC, BCC)."
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018

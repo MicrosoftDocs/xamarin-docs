@@ -2,7 +2,6 @@
 ms.assetid: 65F6A634-9CB0-4BB8-A013-7CA0334F6100
 title: Cross-Platform for Desktop Developers
 description: Xamarin lets you build apps for Windows, Android, iOS, and Mac using your Windows Forms or WPF skills.
-ms.technology: xamarin-crossplatform
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017

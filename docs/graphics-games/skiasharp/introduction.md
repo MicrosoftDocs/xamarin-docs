@@ -3,7 +3,6 @@ title: "An Introduction to SkiaSharp"
 description: "This provides a brief introduction to the concepts behind SkiaSharp"
 ms.prod: xamarin
 ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017

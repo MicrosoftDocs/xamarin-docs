@@ -3,7 +3,6 @@ title: "Uninstalling Xamarin"
 description: "Uninstalling Xamarin products from a computer"
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017

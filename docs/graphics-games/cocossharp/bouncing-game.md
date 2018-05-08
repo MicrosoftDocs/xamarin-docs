@@ -3,7 +3,6 @@ title: "BouncingGame details"
 description: "This walkthrough shows how to implement a simple bouncing ball game using CocosSharp."
 ms.prod: xamarin
 ms.assetid: AC9FD56F-6E4A-40DA-8168-45A761D869FD
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2018

@@ -3,7 +3,6 @@ title: "Manually Creating NuGet Packages for Xamarin"
 description: "This page contains some tips to help build NuGet packages that target the Xamarin platform."
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017

@@ -3,7 +3,6 @@ title: "Accessing the Graph API"
 description: "Using Active Directory to query the Graph API using Xamarin"
 ms.prod: xamarin
 ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017

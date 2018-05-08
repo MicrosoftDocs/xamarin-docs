@@ -3,7 +3,6 @@ title: "SkiaSharp Platform Specific Details"
 description: "Details on how to bring your SKSurface contents into your native application."
 ms.prod: xamarin
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017

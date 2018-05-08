@@ -3,7 +3,6 @@ title: "Xamarin Live Player App"
 description: "Edit and test apps in real time on your iOS or Android device"
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017

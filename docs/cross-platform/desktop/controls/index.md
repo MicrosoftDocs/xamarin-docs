@@ -2,7 +2,6 @@
 ms.assetid: 4D47185C-8998-4903-AE64-7E2A67F9DF7A
 title: UI Controls Comparison
 description: Understand the similarities and differences between the controls availabe on each platform.
-ms.technology: xamarin-crossplatform
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017

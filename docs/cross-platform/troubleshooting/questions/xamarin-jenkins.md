@@ -3,7 +3,6 @@ title: "Why isn't Jenkins supported by Xamarin?"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ---

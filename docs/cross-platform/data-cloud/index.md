@@ -3,7 +3,6 @@ title: "Microsoft Azure"
 description: "Documentation and sample code downloads for Azure."
 ms.prod: xamarin
 ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017

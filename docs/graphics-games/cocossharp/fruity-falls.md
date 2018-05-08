@@ -3,7 +3,6 @@ title: "Fruity Falls game details"
 description: "This guide reviews the Fruity Falls game, covering common CocosSharp and game development concepts such as physics, content management, game state, and game design."
 ms.prod: xamarin
 ms.assetid: A5664930-F9F0-4A08-965D-26EF266FED24
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017

@@ -2,7 +2,6 @@
 title: "Xamarin.Essentials Gyroscope"
 description: "The Gyroscope class lets you monitor the device's gyroscope sensor which is the rotation around the device's three primary axes."
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018

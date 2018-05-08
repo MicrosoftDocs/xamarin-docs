@@ -3,7 +3,6 @@ title: "Live Player for Xamarin.Forms"
 description: "Start learning Xamarin quickly, building and running apps on your Android or iOS device."
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017

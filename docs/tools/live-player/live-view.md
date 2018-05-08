@@ -4,7 +4,6 @@ title: "XAML Live Previewing"
 description: "Test app code changes in real time on your iOS or Android device"
 ms.prod: xamarin
 ms.assetid: 86E9A179-21F8-4F3A-A9CE-36F0FC5DB4A8
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 12/21/2017

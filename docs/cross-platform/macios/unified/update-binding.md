@@ -3,7 +3,6 @@ title: "Migrating a Binding to the Unified API"
 description: "This article covers the steps required to update an existing Xamarin Binding Project to support the Unified APIs for Xamarin.IOS and Xamarin.Mac applications."
 ms.prod: xamarin
 ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017

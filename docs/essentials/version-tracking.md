@@ -2,7 +2,6 @@
 title: "Xamarin.Essentials Version Tracking"
 description: "The VersionTracking class lets you check the applications version and build numbers along with seeing additional information such as if it is the first time the application launched ever or for the current version, get the previous build information, and more."
 ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018

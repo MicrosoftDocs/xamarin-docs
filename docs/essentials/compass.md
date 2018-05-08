@@ -2,7 +2,6 @@
 title: "Xamarin.Essentials Compass"
 description: "The Compass class lets you monitor the device's magnetic north heading."
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018

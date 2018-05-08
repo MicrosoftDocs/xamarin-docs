@@ -3,7 +3,6 @@ title: "Case Study: Tasky"
 description: "This document describes how the principles of Building Cross-Platform Applications have been applied in the Tasky Portable sample application. It touches on mobile application design, writing common code for re-use and implementing platform-specific projects that target the iOS, Android and Windows Phone platforms."
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017

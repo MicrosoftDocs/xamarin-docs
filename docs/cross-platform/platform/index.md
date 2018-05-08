@@ -3,7 +3,6 @@ title: "Language Support"
 description: "Cross-platform application features and concepts."
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018

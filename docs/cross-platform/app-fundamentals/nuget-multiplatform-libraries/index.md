@@ -3,7 +3,6 @@ title: "NuGet Projects (Nugetizer 3000)"
 description: "Automatically create NuGet packages to share code across platforms using the 'Nugetizer 3000'!"
 ms.prod: xamarin
 ms.assetid: F0A5A9BB-86CD-44C9-8EE8-74D1E5E74A30
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2017

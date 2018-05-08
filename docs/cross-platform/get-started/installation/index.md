@@ -3,7 +3,6 @@ title: "Installation"
 description: "This section provides an overview of installation and setup practices that can be used to get set up with Xamarin on Visual Studio."
 ms.prod: xamarin
 ms.assetid: 0f813a14-2f0c-415d-8667-4563f3dc06e8
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 09/29/2017

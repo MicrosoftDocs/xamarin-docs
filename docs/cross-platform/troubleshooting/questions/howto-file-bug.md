@@ -3,7 +3,6 @@ title: "When and how should I file a bug report?"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ---

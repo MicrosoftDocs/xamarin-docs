@@ -3,7 +3,6 @@ title: "Xamarin Profiler"
 description: "This guide explores the key features of the Xamarin Profiler. It look at profilers, profiling and when they should be used, and at a standard workflow for profiling Xamarin applications."
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017

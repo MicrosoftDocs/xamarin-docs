@@ -3,7 +3,6 @@ title: "UrhoSharp Mac Support"
 description: "Mac Specific Setup and Features for UrhoSharp."
 ms.prod: xamarin
 ms.assetid: 95FFBD36-14E9-4C17-B1E8-9A04E81E824D
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017

@@ -2,7 +2,6 @@
 title: "Getting started with .NET Embedding"
 ms.prod: xamarin
 ms.assetid: AF8A4798-EBDD-4E73-997B-C3D4FC5E9685
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017

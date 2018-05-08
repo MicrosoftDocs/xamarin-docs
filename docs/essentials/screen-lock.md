@@ -2,7 +2,6 @@
 title: "Xamarin.Essentials Screen Lock"
 description: "The ScreenLock class can request to keep the screen from falling asleep when the application is running."
 ms.assetid: 6B67C114-315E-4199-AA72-3F90E85A4909
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018

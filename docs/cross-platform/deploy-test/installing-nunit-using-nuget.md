@@ -3,7 +3,6 @@ title: "Installing NUnit 2.6.4 using NuGet"
 description: "This guide covers how to downgrade NUnit 3.0 to NUnit 2.6.4 using NuGet."
 ms.prod: xamarin
 ms.assetid: 7683F2B8-7FDF-48C4-8E7D-649D4D4E79F0
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017

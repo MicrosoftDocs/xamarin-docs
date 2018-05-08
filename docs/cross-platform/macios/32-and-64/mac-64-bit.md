@@ -3,7 +3,6 @@ title: "Updating Xamarin.Mac Unified applications to 64-bit"
 description: "This guide describes how to update your Xamarin.Mac applications to target 64-bit"
 ms.prod: xamarin
 ms.assetid: C3810A74-539C-4FFB-B47F-68CA5F7BCDAD
-ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/22/2018

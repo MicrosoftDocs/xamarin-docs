@@ -3,7 +3,6 @@ title: "UrhoSharp Android Support"
 description: "Android Specific Setup and Features for UrhoSharp."
 ms.prod: xamarin
 ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017

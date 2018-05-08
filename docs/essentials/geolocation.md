@@ -2,7 +2,6 @@
 title: "Xamarin.Essentials Geolocation"
 description: "The Geolocation class provides APIs to retrieve the device's current geolocation coordinates."
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018

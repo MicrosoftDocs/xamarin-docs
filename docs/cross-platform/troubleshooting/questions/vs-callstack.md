@@ -3,7 +3,6 @@ title: "How do I collect the current call stacks of the Visual Studio process?"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 64c24b09-2c4a-43ad-b94d-6cd05a1aee44
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/30/2017

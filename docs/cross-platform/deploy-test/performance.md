@@ -3,7 +3,6 @@ title: "Performance and Security"
 description: "Tips for improving your apps performance and ensuring secure communications."
 ms.prod: xamarin
 ms.assetid: 3E0886A7-B0ED-44CC-8DE3-5B274FBBE2E5
-ms.technology: xamarin-cross-platform
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2017
