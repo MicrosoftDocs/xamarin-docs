@@ -41,7 +41,7 @@ Alternatively, you can search for it in the **Online** tab in the **Extensions a
 
 Adding Live Reload to existing mobile apps can be done in three steps:
 
-1. Ensure all projects are updated to use [Xamarin.Forms 3.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3) or above.
+1. Ensure all projects are updated to use [Xamarin.Forms 3.0.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3) or above.
 2. Install the **Xamarin.LiveReload** NuGet into your .NET Standard 2.0 library. This does not need to be installed in your platform projects. Ensure that the **Package source** is set to **All**.
 
 ![Add Xamarin Live Reload NuGet with NuGet Package Manager](images/addlivereloadnuget.png)
