@@ -87,5 +87,5 @@ Examples:
 
 ## API
 
-- [Accelerometer source code](https://github.com/xamarin/Essentials/tree/master/Essentials/Acceleromter)
+- [Accelerometer source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
 - [Accelerometer API documentation](xref:Xamarin.Essentials.Accelerometer)
