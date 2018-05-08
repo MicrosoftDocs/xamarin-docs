@@ -199,7 +199,7 @@ These two properties are defined only by `Label`, whereas the `HorizontalAlignme
 
 ## Related Links
 
-- [Chapter 2 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf)
-- [Chapter 2 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)
-- [Chapter 2 F# samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)
+- [Chapter 2 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf)
+- [Chapter 2 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
+- [Chapter 2 F# samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
 - [Getting Started with Xamarin.Forms](~/xamarin-forms/get-started/index.md)
