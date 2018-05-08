@@ -272,7 +272,7 @@ included in the device pull-down menu:
 
 For more information about configuring an Android emulator for testing
 and debugging, see
-[Android SDK Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+[Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
 
 If you are using a physical device such as a Nexus or a Pixel, you can
 either update your device through automatic over the air (OTA) updates

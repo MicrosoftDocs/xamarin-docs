@@ -24,12 +24,12 @@ below. If you are not yet familiar with the process of deploying and
 running Android Wear apps, see
 [Hello, Wear](~/android/wear/get-started/hello-wear.md).
 
-## Configure the Android SDK Emulator
+## Configure the Google Android Emulator
 
 To run your Wear app on an emulator, you must install the Android SDK
 Android Emulator and configure it for Android Wear. For overall Android
 SDK Emulator installation and configuration information, see 
-[Android SDK Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+[Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
 
 When you create a Wear virtual device, select an Android Wear device
 profile (such as **Android Wear Square**). For improved performance,
@@ -64,5 +64,5 @@ and restart it each time the app is run.
  
 ## Summary
  
-This guide explained how to configure the Android SDK Emulator for Wear
+This guide explained how to configure the Google Android Emulator for Wear
 development and launch a Wear virtual device for debugging.

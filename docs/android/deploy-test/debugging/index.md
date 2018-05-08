@@ -22,7 +22,7 @@ simulate/emulate Android hardware using one of the emulators
 described below.
 
 
-### [Android SDK Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
+### [Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
 
 These articles explain how to use the default emulator that is provided
 with the Android SDK. This emulator is available for Visual Studio for

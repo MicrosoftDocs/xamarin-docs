@@ -1,6 +1,6 @@
 ---
-title: "Android SDK Emulator"
-description: "This guide explains how to use the Google Android SDK Emulator with Visual Studio."
+title: "Google Android Emulator"
+description: "This guide explains how to use the  Google Android Emulator with Visual Studio."
 ms.prod: xamarin
 ms.assetid: 8913bb90-1340-409d-b7bb-71a06914923a
 ms.technology: xamarin-android
@@ -9,9 +9,9 @@ ms.author: mamcle
 ms.date: 02/16/2018
 ---
 
-# Android SDK Emulator
+# Google Android Emulator
 
-_This guide explains how to use the Google Android SDK Emulator with Visual Studio._
+_This guide explains how to use the  Google Android Emulator with Visual Studio._
 
 
 ## Overview
@@ -27,13 +27,13 @@ troubleshoot common problems.
 
 ### [Running the Emulator](~/android/deploy-test/debugging/android-sdk-emulator/running-the-emulator.md)
 
-How to launch the Android SDK Emulator from Visual Studio.
+How to launch the Google Android Emulator from Visual Studio.
 
 ### [Troubleshooting](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md)
 
-How to identify and resolve common Android SDK Emulator problems.
+How to identify and resolve common Google Android Emulator problems.
 
-For information about configuring the Android SDK Emulator and
+For information about configuring the Google Android Emulator and
 creating new virtual devices, see 
 [Android Emulator Setup](~/android/get-started/installation/android-emulator/index.md).
 

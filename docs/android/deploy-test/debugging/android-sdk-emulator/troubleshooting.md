@@ -1,18 +1,18 @@
 ---
-title: "Android SDK Emulator Troubleshooting"
-description: "How to identify and resolve Android SDK Emulator problems"
+title: "Google Android Emulator Troubleshooting"
+description: "How to identify and resolve Google Android Emulator problems"
 ms.prod: xamarin
 ms.assetid: 4B05C3C5-E1F6-47A9-B098-C31E630194F6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 05/04/2018
 ---
 
-# Android SDK Emulator Troubleshooting
+# Google Android Emulator Troubleshooting
 
 In this article, the most common warning messages and issues with the
-Android SDK Emulator (and their solutions) are explained.
+Google Android Emulator (and their solutions) are explained.
  
 <a name="perfwarn" />
 
@@ -38,7 +38,7 @@ recommend using a physical Android device for development.
 ![Hyper-V is installed or active](troubleshooting-images/02-hyper-v-active.png)
 
 When this dialog is displayed, Hyper-V is installed or active and
-must be disabled. [Disabling Hyper-V](~/android/get-started/installation/android-emulator/hardware-acceleration.md#disable-hyperv) explains how to resolve this issue. 
+must be disabled. [Disabling Hyper-V](#disable-hyperv) explains how to resolve this issue.
 
 ### HAXM is Not Installed
 
@@ -104,7 +104,7 @@ supported (HAXM)** option:
 
 Beginning with Visual Studio for Mac build 7.2 (build 559) , a
 performance warning dialog may be displayed when you first deploy your
-app to the Android SDK Emulator. These warning dialogs are explained
+app to the Google Android Emulator. These warning dialogs are explained
 below.
 
 ### HAXM is Not Installed
@@ -136,7 +136,7 @@ unknown reason. To help resolve this error, see
 
 ## Solutions to Common Problems
 
-Many common Android SDK Emulator problems can be resolved by making
+Many common Google Android Emulator problems can be resolved by making
 configuring changes to your computer or by installing additional
 software. The following sections describe these issues and provide
 solutions.
@@ -180,7 +180,7 @@ steps:
 
 # [Visual Studio](#tab/vswin)
 
-If the Android SDK Emulator does not start properly, this is usually
+If the Google Android Emulator does not start properly, this is usually
 caused by problems with HAXM. HAXM issues are often the result of
 conflicts with other virtualization technologies, incorrect
 settings, or an out of date HAXM driver.
@@ -194,12 +194,12 @@ such as Hyper-V, Windows Device Guard, and some antivirus software:
 
 - **Hyper-V** &ndash; If you are using Windows with Hyper-V enabled,
   follow the steps in
-  [Disabling Hyper-V](~/android/get-started/installation/android-emulator/hardware-acceleration.md#disable-hyperv).
+  [Disabling Hyper-V](#disable-hyperv).
 
 - **Device Guard** &ndash; Device Guard and Credential Guard can
   prevent Hyper-V from being disabled on Windows machines. To disable
   Device Guard and Credential Guard, see
-  [Disabling Device Guard](~/android/get-started/installation/android-emulator/hardware-acceleration.md#disable-devguard).
+  [Disabling Device Guard](#disable-devguard).
 
 - **Antivirus Software** &ndash; If you are running antivirus software
   that uses hardware-assisted virtualization (such as Avast), disable
@@ -212,7 +212,7 @@ such as Hyper-V, Windows Device Guard, and some antivirus software:
 If you are using HAXM on a Windows PC, HAXM will not work unless
 virtualization technology (Intel VT-x) is enabled in the BIOS. If VT-x
 is disabled, you will get an error similiar to the following when you
-attempt to start the Android SDK Emulator:
+attempt to start the Google Android Emulator:
 
 **This computer meets the requirements for HAXM, but Intel
 Virtualization Technology (VT-x) is not turned on.**
@@ -223,7 +223,7 @@ computer back into Windows.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-If the Android SDK Emulator does not start properly, this is usually
+If the Google Android Emulator does not start properly, this is usually
 caused by problems with HAXM. HAXM issues are often the result of
 conflicts with other virtualization technologies, incorrect settings,
 or an out of date HAXM driver. Try reinstalling the HAXM driver, using
@@ -231,3 +231,122 @@ the steps detailed in
 [Installing HAXM](~/android/get-started/installation/android-emulator/hardware-acceleration.md#install-haxm).
 
 -----
+
+
+# [Visual Studio](#tab/vswin)
+
+<a name="disable-hyperv" />
+
+### Disabling Hyper-V
+
+If you are using Windows with Hyper-V enabled, you must disable it and
+reboot your computer to install and use HAXM. You can disable
+Hyper-V from the Control Panel by following these steps:
+
+1. In the Windows search box, enter **Programs and** then click the
+   **Programs and Features** search result.
+
+2. In the Control Panel **Programs and Features** dialog, click
+   **Turn Windows features on or off**:
+
+    ![Turn Windows features on or off](troubleshooting-images/win/07-turn-windows-features.png)
+
+3. Uncheck **Hyper-V** and restart the computer:
+
+    ![Disabling Hyper-V in the Windows Features dialog](troubleshooting-images/win/08-uncheck-hyper-v.png)
+
+Alternately, you can use the following Powershell cmdlet to disable Hyper-V:
+
+`Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor`
+
+Intel HAXM and Microsoft Hyper-V cannot both be active at the same
+time. Unfortunately, there is currently no way to switch between
+between Hyper-V and HAXM without restarting your computer. If you
+want to use the
+[Visual Studio Emulator for Android](~/android/deploy-test/debugging/visual-studio-android-emulator.md)
+(which depends on Hyper-V), you will be unable to use the Android SDK
+Emulator without rebooting. One way to use both Hyper-V and HAXM is
+to create a multi-boot setup as explained in
+[Creating a no hypervisor boot entry](https://blogs.msdn.microsoft.com/virtual_pc_guy/2008/04/14/creating-a-no-hypervisor-boot-entry/).
+
+In some cases, using the above steps will not succeed in disabling
+Hyper-V if Device Guard and Credential Guard are enabled. If you are
+unable to disable Hyper-V (or it seems to be disabled but HAXM
+installation still fails), use the steps in the next section to disable
+Device Guard and Credential Guard.
+
+<a name="disable-devguard" />
+
+#### Disabling Device Guard
+
+Device Guard and Credential Guard can prevent Hyper-V from being
+disabled on Windows machines. This is often a problem for domain-joined
+machines that are configured and controlled by an owning organization.
+On Windows 10, use the following steps to see if **Device Guard** is
+running:
+
+1. In **Windows Search**, type **System info** to start the **System
+   Information** app.
+
+2. In the **System Summary**, look to see if **Device Guard
+   Virtualization based security** is present and is in the **Running**
+   state:
+
+   [![Device Guard is present and running](troubleshooting-images/win/09-device-guard-sml.png)](troubleshooting-images/win/09-device-guard.png#lightbox)
+
+If Device Guard is enabled, use the following steps to disable it:
+
+1. Ensure that **Hyper-V** is disabled (under **Turn Windows Features
+   on or off**) as described in the previous section.
+
+2. In the Windows Search Box, type **gpedit** and select the **Edit
+   group policy** search result. This launches the **Local Group
+   Policy Editor**.
+
+3. In the **Local Group Policy Editor**, navigate to **Computer
+   Configuration > Administrative Templates > System > Device Guard**:
+
+   [![Device Guard in Local Group Policy Editor](troubleshooting-images/win/10-group-policy-editor-sml.png)](troubleshooting-images/win/10-group-policy-editor.png#lightbox)
+
+4. Change **Turn On Virtualization Based Security** to **Disabled** (as
+   shown above) and exit the **Local Group Policy Editor**.
+
+5. In the Windows Search Box, type **cmd**. When **Command Prompt** appears
+   in the search results, right-click **Command Prompt** and select
+   **Run as Administrator**.
+
+6. Copy and paste the following commands into the command prompt window
+   (if drive **Z:** is in use, pick an unused drive letter to use
+   instead):
+
+        mountvol Z: /s
+        copy %WINDIR%\System32\SecConfig.efi Z:\EFI\Microsoft\Boot\SecConfig.efi /Y
+        bcdedit /create {0cb3b571-2f2e-4343-a879-d86a476d7215} /d "DebugTool" /application osloader
+        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} path "\EFI\Microsoft\Boot\SecConfig.efi"
+        bcdedit /set {bootmgr} bootsequence {0cb3b571-2f2e-4343-a879-d86a476d7215}
+        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} loadoptions DISABLE-LSA-ISO,DISABLE-VBS
+        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} device partition=Z:
+        mountvol Z: /d
+
+7. Restart your computer. On the boot screen, you should see a prompt like the following:
+
+   **Do you want to disable Credential Guard?**
+
+   Press the indicated key to disable Credential Guard as prompted.
+
+8. After the computer reboots, check again to ensure that Hyper-V is
+   disabled (as described in the previous steps).
+
+If Hyper-V is still not disabled, the policies of your domain-joined
+computer may prevent you from disabling Device Guard or Credential
+Guard. In this case, you can request an exemption from your domain
+adminstrator to allow you to opt out of Credential Guard. Alternately,
+you can use a computer that is not domain-joined to use HAXM.
+
+
+# [Visual Studio](#tab/vsmac)
+
+Hyper-V is not available on OS X or macOS.
+
+-----
+

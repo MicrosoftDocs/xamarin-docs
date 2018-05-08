@@ -17,7 +17,7 @@ described in
 the next step is to create virtual devices to use for testing and
 debugging your app. You can use the legacy Google Emulator Manager (also known
 as the *Android Virtual Device (AVD) Manager*) to create virtual
-devices for use by the Android SDK Emulator.
+devices for use by the Google Android Emulator.
 
 > [!NOTE]
 > If you are targeting Android 8.0 Oreo, you must use the [Xamarin Android Device Manager](~/android/get-started/installation/android-emulator/xamarin-device-manager.md) to create and configure virtual devices.

@@ -44,7 +44,7 @@ that you need for developing Xamarin.Android apps.
 
 ## [Android Emulator Setup](~/android/get-started/installation/android-emulator/index.md)
 
-These articles explain how to setup the Android SDK Emulator for
+These articles explain how to setup the Google Android Emulator for
 testing and debugging Xamarin.Android applications.
 
 ## [Android Device Setup](~/android/get-started/installation/set-up-device-for-development.md)

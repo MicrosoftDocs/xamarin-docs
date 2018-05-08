@@ -1,6 +1,6 @@
 ---
-title: "Running the Android SDK Emulator"
-description: "How to debug your app with the Android SDK Emulator"
+title: "Running the Google Android Emulator"
+description: "How to debug your app with the Google Android Emulator"
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
@@ -9,10 +9,10 @@ ms.author: mamcle
 ms.date: 02/16/2018
 ---
 
-# Running the Android SDK Emulator
+# Running the Google Android Emulator
 
 In this guide, you will learn how to launch a virtual device in the
-Android SDK Emulator for debugging and testing your app.
+Google Android Emulator for debugging and testing your app.
 
 ## Using a Pre-Configured Virtual Device
 
@@ -119,7 +119,7 @@ button to run the application:
 
 After the Android emulator starts, Xamarin.Android will deploy the app
 to the emulator. The emulator runs the app with the configured virtual
-device image. An example screenshot of the Android SDK Emulator is
+device image. An example screenshot of the Google Android Emulator is
 displayed below (the emulator is running a blank app called **MyApp**):
 
 ![Emulator running a blank app](running-the-emulator-images/emulator-running.png)
@@ -133,7 +133,7 @@ be patient. Installation of the runtime takes place only when the first
 Xamarin.Android app is deployed to the emulator &ndash; subsequent
 deployments are faster because only the app is copied to the emulator.
 
-For more information about using the Android SDK Emulator, see
+For more information about using the Google Android Emulator, see
 the following Android Developer topics:
 
 -   [Navigating on the Screen](https://developer.android.com/studio/run/emulator.html#navigate)
