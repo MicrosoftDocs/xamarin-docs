@@ -6,7 +6,7 @@ ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
 ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
-ms.date: 04/23/2018
+ms.date: 05/08/2018
 ---
 
 # Xamarin Live Reload
@@ -23,8 +23,8 @@ Live Reload is currently only available in Visual Studio 2017.
 
 ## Requirements
 
-* [Visual Studio 2017 15.7 Preview 4](https://www.visualstudio.com/vs/preview/) or above with the **Mobile development with .NET** workload.
-* [Xamarin.Forms 3.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3) or above.
+* [Visual Studio 2017 version 15.7 or above](https://www.visualstudio.com/vs/) or above with the **Mobile development with .NET** workload.
+* [Xamarin.Forms 3.0.0 or above](https://www.nuget.org/packages/Xamarin.Forms/) or above.
 
 ## Getting Started
 ### 1. Install Xamarin Live Reload from the Visual Studio Marketplace
@@ -41,8 +41,13 @@ Alternatively, you can search for it in the **Online** tab in the **Extensions a
 
 Adding Live Reload to existing mobile apps can be done in three steps:
 
-1. Ensure all projects are updated to use [Xamarin.Forms 3.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3) or above.
-2. Install the **Xamarin.LiveReload** NuGet into your .NET Standard 2.0 library. This does not need to be installed in your platform projects. Ensure that the **Package source** is set to **All**.
+1. Ensure all projects are updated to use [Xamarin.Forms 3.0.0 or above](https://www.nuget.org/packages/Xamarin.Forms/) or above.
+
+2. Add the **Xamarin.LiveReload** NuGet package:
+
+    a. **.NET Standard** – Install the **Xamarin.LiveReload** NuGet into your .NET Standard 2.0 library. This does not need to be installed in your platform projects. Ensure that the **Package source** is set to **All**.
+    
+    b. **Shared Projects** – Install the **Xamarin.LiveReload** NuGet into all platform projects (such as Android, iOS, UWP, etc.). Ensure that the **Package source** is set to **All**.
 
 ![Add Xamarin Live Reload NuGet with NuGet Package Manager](images/addlivereloadnuget.png)
 
@@ -81,7 +86,7 @@ Because your app is compiled, Live Reload works with all libraries, such as Pris
 
 ### What changes does Live Reload redeploy? 
 
-Live Reload only applies changes made to XAML. If you make changes to a C# file, a recompile will be required. Support for reloading C# is planned for a future release.
+Live Reload only applies changes made to XAML or CSS. If you make changes to a C# file, a recompile will be required. Support for reloading C# is planned for a future release.
 
 ### What platforms are supported? 
 
@@ -107,8 +112,6 @@ No. In fact, you can even start all your supported application targets (Android,
 ## Known Issues
 
 * Only supported in Visual Studio.
-* Only works with .NET Standard libraries. This will be fixed in the next preview release.
-* CSS stylesheets are not supported. This will be fixed in the next preview release.
 * Reloading app-wide resources (i.e. **App.xaml** or shared resource dictionaries), app navigation is reset. This will be fixed in the next preview release.
 * Editing XAML while debugging UWP may cause a runtime crash. Workaround: Use **Start without Debugging (Ctrl + F5)** instead of **Start Debugging (F5)**.
 
@@ -127,8 +130,6 @@ No. In fact, you can even start all your supported application targets (Android,
 * **XLR003**: *Live Reload nuget package requires installing the Xamarin Live Reload Visual Studio extension.*
 
   Attempted to build a project that references the Live Reload nuget package but the Visual Extension is not installed.  
-
-
 
 ### App doesn't connect
 
