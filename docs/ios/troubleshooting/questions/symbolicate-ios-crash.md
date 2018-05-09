@@ -6,20 +6,42 @@ ms.assetid: CB8607B9-FFDA-4617-8210-8E43EC512588
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 05/09/2018
 ---
 
 # Where can I find the .dSYM file to symbolicate iOS crash logs?
 
-When building iOS apps from visual studio, the .dSYM file that can be used to symbolicate crash reports ends up on the build host at path:
-```
-    /Users/<username>/Library/Caches/Xamarin/mtbs/builds/<appname>/<guid>/bin/iPhone/<configuration>
-```
+When building an iOS app with Visual Studio for Mac or Visual Studio 2017,
+the .dSYM file that's needed to symbolicate crash reports will be placed in 
+the same directory hierarchy as your app's project file (.csproj). The exact
+location depends on your project's build settings:
 
-Note that the `~/Library` folder is hidden by default in Finder, so if need be use Finder's **Go > Go to Folder** menu and enter: `~/Library/Caches/Xamarin/mtbs/builds/` to open the folder.  
+- If you have enabled device-specific builds, the the .dSYM can be found in 
+the following directory:
 
-Alternately you can unhide the `~/Library` folder by using the **Show View Options** panel for your home folder. If you select your home folder in the sidebar in Finder and use the Finder menu **View > Show View Options** (or cmd-j), then you will see a checkbox to **Show Library Folder**.
+    **&lt;project directory&gt;/bin/&lt;platform&gt;/&lt;configuration&gt;/device-builds/&lt;device&gt;-&lt;os-version&gt;/**
 
+    For example:
+  
+    **TestApp/bin/iPhone/Release/device-builds/iphone8.4-11.3.1/**
 
-### See Also
-- Extended steps for symbolicating iOS crash reports: [http://jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/](http://jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/)
+- If you have not enabled device-specific builds, the .dSYM can be found in 
+the following directory:
+
+    **&lt;project directory&gt;/bin/&lt;platform&gt;/&lt;configuration&gt;/**
+
+    For example:
+
+    **TestApp/bin/iPhone/Release/**
+
+> [!NOTE]
+> As part of the build process, Visual Studio 2017 copies the .dSYM file 
+> from the Mac build host to Windows. If you do not see a .dSYM file on 
+> Windows, be sure you have configured your app's build settings to
+> [create an .ipa file](~/ios/deploy-test/app-distribution/ipa-support.md).
+
+## See also
+
+- [Symbolicating iOS Crash Files (Xamarin.iOS)](http://jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/)
 - [Demystifying iOS Application Crash Logs](https://www.raywenderlich.com/23704/demystifying-ios-application-crash-logs)
+
