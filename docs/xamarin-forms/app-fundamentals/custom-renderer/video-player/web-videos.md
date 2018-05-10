@@ -116,7 +116,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-Handling objects of type `ResourceVideoSource` is described in the article [Loading Application Resource Videos](loading-resources.md). The `VideoPlayer` class has no facility to load a video file stored as a resource in the portable class library.
+Handling objects of type `ResourceVideoSource` is described in the article [Loading Application Resource Videos](loading-resources.md). The `VideoPlayer` class has no facility to load a video file stored as a resource in the .NET Standard library.
 
 The `FileVideoSource` class is used to access video files from the device's video library. The single property is also of type `string`:
 

@@ -23,7 +23,7 @@ This article walks through the creation of an application that allows the user t
 
 ## Creating the Interface
 
-First, create an interface in shared code that expresses the desired functionality. In the case of a photo-picking application, just one method is required. This is defined in the  [`IPicturePicker`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/DependencyServiceSample/IPicturePicker.cs) interface in the portable class library of the sample code:
+First, create an interface in shared code that expresses the desired functionality. In the case of a photo-picking application, just one method is required. This is defined in the  [`IPicturePicker`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/DependencyServiceSample/IPicturePicker.cs) interface in the .NET Standard library of the sample code:
 
 ```csharp
 namespace DependencyServiceSample
@@ -257,7 +257,7 @@ namespace DependencyServiceSample.UWP
 
 ## Implementing in Shared Code
 
-Now that the interface has been implemented for each platform, the application in the common portable class library can take advantage of it.
+Now that the interface has been implemented for each platform, the application in the .NET Standard library can take advantage of it.
 
 The [`App`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/DependencyServiceSample/DependencyServiceSample.cs) class creates a `Button` to pick a photo:
 

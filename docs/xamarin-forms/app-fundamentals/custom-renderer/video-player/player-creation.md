@@ -14,7 +14,7 @@ The [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/c
 
 ## The video player
 
-The [`VideoPlayer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/VideoPlayer.cs) class is part of the **VideoPlayerDemos** portable class library (PCL) that is shared among the platforms. It derives from `View`:
+The [`VideoPlayer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/VideoPlayer.cs) class is part of the **VideoPlayerDemos** .NET Standard library that is shared among the platforms. It derives from `View`:
 
 ```csharp
 using System;

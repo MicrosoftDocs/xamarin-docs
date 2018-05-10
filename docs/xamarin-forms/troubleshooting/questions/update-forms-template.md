@@ -11,7 +11,7 @@ ms.date: 04/25/2017
 
 # Can I update the Xamarin.Forms default template to a newer NuGet package?
 
-This guide uses the Xamarin.Forms PCL template as an example, but the same general method will also work for the Xamarin.Forms Shared Project template. This guide is written with the example of updating from Xamarin.Forms 1.5.1.6471 to 2.1.0.6529, but the same steps are possible to set other versions as the default instead.
+This guide uses the Xamarin.Forms .NET Standard library template as an example, but the same general method will also work for the Xamarin.Forms Shared Project template. This guide is written with the example of updating from Xamarin.Forms 1.5.1.6471 to 2.1.0.6529, but the same steps are possible to set other versions as the default instead.
 
 1.  Copy the original template `.zip` from:
 

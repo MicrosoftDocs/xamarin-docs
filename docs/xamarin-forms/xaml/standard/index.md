@@ -18,7 +18,7 @@ Follow these steps to experiment with XAML Standard in Xamarin.Forms:
 # [Visual Studio](#tab/vswin)
 
 1. Download the [preview NuGet package here](https://aka.ms/xf-xamlstandard-nuget).
-2. Add the **Xamarin.Forms.Alias** NuGet package to your Xamarin.Forms PCL, .NET Standard, and platform projects.
+2. Add the **Xamarin.Forms.Alias** NuGet package to your Xamarin.Forms .NET Standard and platform projects.
 3. Initialize the package with `Alias.Init()`
 4. Add an `xmlns:a` reference `xmlns:a="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias"`
 5. Use the types in XAML - see the [Controls reference](controls.md) for more information.
@@ -26,7 +26,7 @@ Follow these steps to experiment with XAML Standard in Xamarin.Forms:
 # [Visual Studio for Mac](#tab/vsmac)
 
 1. Download the [preview NuGet package here](https://aka.ms/xf-xamlstandard-nuget).
-2. Add the **Xamarin.Forms.Alias** NuGet package to your Xamarin.Forms PCL, .NET Standard, and platform projects.
+2. Add the **Xamarin.Forms.Alias** NuGet package to your Xamarin.Forms .NET Standard and platform projects.
 3. Initialize the package with `Alias.Init()`
 4. Add an `xmlns:a` reference `xmlns:a="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias"`
 5. Use the types in XAML - see the [Controls reference](controls.md) for more information.

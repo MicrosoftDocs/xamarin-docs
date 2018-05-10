@@ -35,7 +35,7 @@ Xamarin.Forms uses the [`Image`](https://developer.xamarin.com/api/type/Xamarin.
 
 - [`FromFile`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromFile/p/System.String/) - Requires a filename or filepath that can be resolved on each platform.
 - [`FromUri`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromUri/p/System.Uri/) - Requires a Uri object, eg.  `new Uri("http://server.com/image.jpg")` .
-- [`FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) - Requires a resource identifier to an image file embedded in the application or PCL, with a **Build Action:EmbeddedResource**.
+- [`FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) - Requires a resource identifier to an image file embedded in the application or .NET Standard library project, with a **Build Action:EmbeddedResource**.
 - [`FromStream`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromStream/p/System.Func%7BSystem.IO.Stream%7D/) - Requires a stream that supplies image data.
 
 The [`Aspect`](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Aspect/) property determines how the image will be scaled to fit the display area:

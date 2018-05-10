@@ -45,7 +45,7 @@ For that reason, the touch-tracking effect described in this article implements 
 
 ## The Touch-Tracking Effect API
 
-The [**Touch Tracking Effect Demos**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) sample contains the classes (and an enumeration) that implement the low-level touch-tracking. These types belong to the namespace `TouchTracking` and begin with the word `Touch`. The **TouchTrackingEffectDemos** Portable Class Library project includes the `TouchActionType` enumeration for the type of touch events:
+The [**Touch Tracking Effect Demos**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) sample contains the classes (and an enumeration) that implement the low-level touch-tracking. These types belong to the namespace `TouchTracking` and begin with the word `Touch`. The **TouchTrackingEffectDemos** .NET Standard library project includes the `TouchActionType` enumeration for the type of touch events:
 
 ```csharp
 public enum TouchActionType
@@ -61,7 +61,7 @@ public enum TouchActionType
 
 All the platforms also include an event that indicates that the touch event has been cancelled.
 
-The `TouchEffect` class in the PCL derives from `RoutingEffect` and defines an event named `TouchAction` and a method named `OnTouchAction` that invokes the `TouchAction` event:
+The `TouchEffect` class in the .NET Standard library derives from `RoutingEffect` and defines an event named `TouchAction` and a method named `OnTouchAction` that invokes the `TouchAction` event:
 
 ```csharp
 public class TouchEffect : RoutingEffect
@@ -83,7 +83,7 @@ public class TouchEffect : RoutingEffect
 
 Also notice the `Capture` property. To capture touch events, an application must set this property to `true` prior to a `Pressed` event. Otherwise, the touch events behave like those in the Universal Windows Platform.
 
-The `TouchActionEventArgs` class in the PCL contains all the information that accompanies each event:
+The `TouchActionEventArgs` class in the .NET Standard library contains all the information that accompanies each event:
 
 ```csharp
 public class TouchActionEventArgs : EventArgs
@@ -108,7 +108,7 @@ public class TouchActionEventArgs : EventArgs
 
 An application can use the `Id` property for tracking individual fingers. Notice the `IsInContact` property. This property is always `true` for `Pressed` events and `false` for `Released` events. It's also always `true` for `Moved` events on iOS and Android. The `IsInContact` property might be `false` for `Moved` events on the Universal Windows Platform when the program is running on the desktop and the mouse pointer moves without a button pressed.
 
-You can use the `TouchEffect` class in your own applications by including the file in the solution's PCL project, and by adding an instance to the `Effects` collection of any Xamarin.Forms element. Attach a handler to the `TouchAction` event to obtain the touch events.
+You can use the `TouchEffect` class in your own applications by including the file in the solution's .NET Standard library project, and by adding an instance to the `Effects` collection of any Xamarin.Forms element. Attach a handler to the `TouchAction` event to obtain the touch events.
 
 To use `TouchEffect` in your own application, you'll also need the platform implementations included in **TouchTrackingEffectDemos** solution.
 
@@ -147,7 +147,7 @@ public class TouchEffect : PlatformEffect
         // Get the Windows FrameworkElement corresponding to the Element that the effect is attached to
         frameworkElement = Control == null ? Container : Control;
 
-        // Get access to the TouchEffect class in the PCL
+        // Get access to the TouchEffect class in the .NET Standard library
         effect = (TouchTracking.TouchEffect)Element.Effects.
                     FirstOrDefault(e => e is TouchTracking.TouchEffect);
 
@@ -199,7 +199,7 @@ public class TouchEffect : PlatformEffect
 }
 ```
 
-`OnPointerPressed` also checks the value of the `Capture` property in the effect class in the PCL and calls `CapturePointer` if it is `true`.
+`OnPointerPressed` also checks the value of the `Capture` property in the effect class in the .NET Standard library and calls `CapturePointer` if it is `true`.
 
  The other UWP event handlers are even simpler:
 
@@ -263,7 +263,7 @@ void OnTouch(object sender, Android.Views.View.TouchEventArgs args)
 
             idToEffectDictionary.Add(id, this);
 
-            capture = pclTouchEffect.Capture;
+            capture = libTouchEffect.Capture;
             break;
 
 ```
@@ -274,7 +274,7 @@ The item is removed from the `idToEffectDictionary` when the finger is released 
 void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Point pointerLocation, bool isInContact)
 {
     // Get the method to call for firing events
-    Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.pclTouchEffect.OnTouchAction;
+    Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.libTouchEffect.OnTouchAction;
 
     // Get the location of the pointer within the view
     touchEffect.view.GetLocationOnScreen(twoIntArray);

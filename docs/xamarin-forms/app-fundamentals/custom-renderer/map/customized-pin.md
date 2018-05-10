@@ -43,7 +43,7 @@ public class CustomMap : Map
 }
 ```
 
-The `CustomMap` control is created in the portable class library (PCL) project and defines the API for the custom map. The custom map exposes the `CustomPins` property that represents the collection of `CustomPin` objects that will be rendered by the native map control on each platform. The `CustomPin` class is shown in the following code example:
+The `CustomMap` control is created in the .NET Standard library project and defines the API for the custom map. The custom map exposes the `CustomPins` property that represents the collection of `CustomPin` objects that will be rendered by the native map control on each platform. The `CustomPin` class is shown in the following code example:
 
 ```csharp
 public class CustomPin : Pin
@@ -58,7 +58,7 @@ This class defines a `CustomPin` as inheriting the properties of the [`Pin`](htt
 
 ## Consuming the Custom Map
 
-The `CustomMap` control can be referenced in XAML in the PCL project by declaring a namespace for its location and using the namespace prefix on the custom map control. The following code example shows how the `CustomMap` control can be consumed by a XAML page:
+The `CustomMap` control can be referenced in XAML in the .NET Standard library project by declaring a namespace for its location and using the namespace prefix on the custom map control. The following code example shows how the `CustomMap` control can be consumed by a XAML page:
 
 ```xaml
 <ContentPage ...
@@ -318,7 +318,7 @@ void OnCalloutAccessoryControlTapped (object sender, MKMapViewAccessoryTappedEve
 }
 ```
 
-This method opens a web browser and navigates to the address stored in the `CustomMKAnnotationView.Url` property. Note that the address was defined when creating the `CustomPin` collection in the PCL project.
+This method opens a web browser and navigates to the address stored in the `CustomMKAnnotationView.Url` property. Note that the address was defined when creating the `CustomPin` collection in the .NET Standard library project.
 
 <a name="Deselecting_the_Annotation" />
 
@@ -495,7 +495,7 @@ void OnInfoWindowClick (object sender, GoogleMap.InfoWindowClickEventArgs e)
 }
 ```
 
-This method opens a web browser and navigates to the address stored in the `Url` property of the retrieved `CustomPin` instance for the `Marker`. Note that the address was defined when creating the `CustomPin` collection in the PCL project.
+This method opens a web browser and navigates to the address stored in the `Url` property of the retrieved `CustomPin` instance for the `Marker`. Note that the address was defined when creating the `CustomPin` collection in the .NET Standard library project.
 
 For more information about customizing a `MapView` instance, see [Maps API](~/android/platform/maps-and-location/maps/maps-api.md).
 
@@ -641,7 +641,7 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 }
 ```
 
-This method opens a web browser and navigates to the address stored in the `Url` property of the `CustomPin` instance. Note that the address was defined when creating the `CustomPin` collection in the PCL project.
+This method opens a web browser and navigates to the address stored in the `Url` property of the `CustomPin` instance. Note that the address was defined when creating the `CustomPin` collection in the .NET Standard library project.
 
 For more information about customizing a `MapControl` instance, see [Maps and Location Overview](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx) on MSDN.
 

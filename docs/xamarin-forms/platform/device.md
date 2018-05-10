@@ -151,7 +151,7 @@ The [Maps sample](https://github.com/xamarin/xamarin-forms-samples/blob/master/W
 
 ## Device.StartTimer
 
-The `Device` class also has a `StartTimer` method which provides a simple way to trigger time-dependent tasks that works in Xamarin.Forms common code (including PCLs). Pass a `TimeSpan` to set the interval and return `true` to keep the timer running or `false` to stop it after the current invocation.
+The `Device` class also has a `StartTimer` method which provides a simple way to trigger time-dependent tasks that works in Xamarin.Forms common code, including a .NET Standard library. Pass a `TimeSpan` to set the interval and return `true` to keep the timer running or `false` to stop it after the current invocation.
 
 ```csharp
 Device.StartTimer (new TimeSpan (0, 0, 60), () => {
@@ -180,7 +180,7 @@ Note that methods using `async/await` do not need to use `BeginInvokeOnMainThrea
 
 ## Summary
 
-The Xamarin.Forms `Device` class allows fine-grained control over functionality and layouts on a per-platform basis - even in common code (either PCL or Shared Projects).
+The Xamarin.Forms `Device` class allows fine-grained control over functionality and layouts on a per-platform basis - even in common code (either .NET Standard library projects or Shared Projects).
 
 
 ## Related Links

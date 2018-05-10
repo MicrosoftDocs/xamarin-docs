@@ -55,13 +55,13 @@ public class NativeListView : ListView
 }
 ```
 
-The `NativeListView` is created in the portable class library (PCL) project and defines the API for the custom control. This control exposes an `Items` property that is used for populating the `ListView` with data, and which can be data bound to for display purposes. It also exposes an `ItemSelected` event that will be fired whenever an item is selected in a platform-specific native list control. For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+The `NativeListView` is created in the .NET Standard library project and defines the API for the custom control. This control exposes an `Items` property that is used for populating the `ListView` with data, and which can be data bound to for display purposes. It also exposes an `ItemSelected` event that will be fired whenever an item is selected in a platform-specific native list control. For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
 <a name="Consuming_the_Custom_Control" />
 
 ## Consuming the Custom Control
 
-The `NativeListView` custom control can be referenced in Xaml in the PCL project by declaring a namespace for its location and using the namespace prefix on the control. The following code example shows how the `NativeListView` custom control can be consumed by a XAML page:
+The `NativeListView` custom control can be referenced in Xaml in the .NET Standard library project by declaring a namespace for its location and using the namespace prefix on the control. The following code example shows how the `NativeListView` custom control can be consumed by a XAML page:
 
 ```xaml
 <ContentPage ...

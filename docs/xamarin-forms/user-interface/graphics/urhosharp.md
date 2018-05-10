@@ -29,13 +29,13 @@ demonstrates how UrhoSharp could be used to construct an interactive 3D chart:
 
 Before using UrhoSharp, developers need to add the UrhoSharp Nuget package
 to their solution. This guide assumes a Xamarin.Forms project with an
-iOS, Android, and PCL project. All of the code will be written in the PCL
+iOS, Android, and .NET Standard library project. All of the code will be written in the .NET Standard library
 project; but the UrhoSharp Nuget must be added to the iOS and Android projects too.
 
 The UrhoSharp.Forms Nuget package contains all of the objects needed to create
 UrhoSharp objects. The UrhoSharp.Forms nuget package includes the
 `UrhoSurface` class, which is used to host UrhoSharp in Xamarin.Forms.
-To begin, right-click on the PCL’s **Packages** folder and select **Add Packages...**.
+To begin, right-click on the **Packages** folder in the .NET Standard library project and select **Add Packages...**.
 Enter the search term **UrhoSharp.Forms**, select **UrhoSharp for Xamarin.Forms**,
 then click **Add Package**.
 

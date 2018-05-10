@@ -39,13 +39,13 @@ public class MyEntry : Entry
 }
 ```
 
-The `MyEntry` control is created in the portable class library (PCL) project and is simply an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control. Customization of the control will be carried out in the custom renderer, so no additional implementation is required in the `MyEntry` control.
+The `MyEntry` control is created in the .NET Standard library project and is simply an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control. Customization of the control will be carried out in the custom renderer, so no additional implementation is required in the `MyEntry` control.
 
 <a name="Consuming_the_Custom_Control" />
 
 ## Consuming the Custom Control
 
-The `MyEntry` control can be referenced in XAML in the PCL project by declaring a namespace for its location and using the namespace prefix on the control element. The following code example shows how the `MyEntry` control can be consumed by a XAML page:
+The `MyEntry` control can be referenced in XAML in the .NET Standard library project by declaring a namespace for its location and using the namespace prefix on the control element. The following code example shows how the `MyEntry` control can be consumed by a XAML page:
 
 ```xaml
 <ContentPage ...

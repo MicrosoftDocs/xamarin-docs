@@ -28,7 +28,7 @@ There are two samples associated with this document:
 
 The TodoLocalized sample includes a [Shared Project demo](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized/SharedProject/) however due to limitations of the build system the resource files do not get a **.designer.cs** file generated which breaks the ability to access translated strings strongly-typed in code.
 
-The remainder of this document relates to projects using the Xamarin.Forms PCL template.
+The remainder of this document relates to projects using the Xamarin.Forms .NET Standard library template.
 
 ## Globalizing Xamarin.Forms Code
 
@@ -42,7 +42,7 @@ The samples target English, French, Spanish, German, Chinese, Japanese, Russian,
 
 ### Adding Resources
 
-The first step in globalizing a Xamarin.Forms PCL application is adding the RESX resource files that will be used to store all the text used in the app. We need to add a RESX file that contains the default text, and then add additional RESX files for each language we wish to support.
+The first step in globalizing a Xamarin.Forms .NET Standard library application is adding the RESX resource files that will be used to store all the text used in the app. We need to add a RESX file that contains the default text, and then add additional RESX files for each language we wish to support.
 
 #### Base Language Resource
 
@@ -104,7 +104,7 @@ This change is optional, and is only required if you wish to reference
 localized strings across different assemblies (for example, if you put the RESX
 files in a different assembly to your code). The sample for this topic
 leaves the strings `internal` because they are defined in the same Xamarin.Forms
-PCL assembly where they are used.
+.NET Standard library assembly where they are used.
 
 You only need to set the custom tool on the base RESX file as shown above;
 you do not need to set *any* build tool on the language-specific RESX files
@@ -637,7 +637,7 @@ Universal Windows Platform (UWP) projects do not require the dependency service.
 
 ##### AssemblyInfo.cs
 
-Expand the Properties node in the Portable Class Library (PCL) project and double-click on the **AssemblyInfo.cs** file. Add the following line to the file to set the neutral resources assembly language to English:
+Expand the Properties node in the .NET Standard library project and double-click on the **AssemblyInfo.cs** file. Add the following line to the file to set the neutral resources assembly language to English:
 
 ```csharp
 [assembly: NeutralResourcesLanguage("en")]

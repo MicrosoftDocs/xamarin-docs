@@ -13,7 +13,7 @@ ms.date: 04/25/2017
 
 
 ## [Can I update the Xamarin.Forms default template to a newer NuGet package?](update-forms-template.md)
-This guide uses the Xamarin.Forms PCL template as an example, but the same general method will also work for the Xamarin.Forms Shared Project template. 
+This guide uses the Xamarin.Forms .NET Standard library template as an example, but the same general method will also work for the Xamarin.Forms Shared Project template. 
 
 ## [Why doesn't the Visual Studio XAML designer work for Xamarin.Forms XAML files?](forms-xaml-designer.md)
 Xamarin.Forms doesn't currently support visual designers for XAML files.

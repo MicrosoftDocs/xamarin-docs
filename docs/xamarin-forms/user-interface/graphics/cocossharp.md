@@ -52,13 +52,13 @@ More detailed information can be found in the [CocosSharp section](~/graphics-ga
 ## Adding the CocosSharp Nuget packages
 
 Before using CocosSharp, developers need to make a few additions to their Xamarin.Forms project.
-This guide assumes a Xamarin.Forms project with an iOS, Android, and PCL project.
-All of the code will be written in the PCL project; however, libraries must be added to the iOS and Android projects.
+This guide assumes a Xamarin.Forms project with an iOS, Android, and .NET Standard library project.
+All of the code will be written in the .NET Standard library project; however, libraries must be added to the iOS and Android projects.
 
 The CocosSharp Nuget package contains all of the objects needed to create CocosSharp objects.
 The CocosSharp.Forms nuget package includes the `CocosSharpView` class, which is used to host CocosSharp in Xamarin.Forms.
 Add the **CocosSharp.Forms** NuGet and **CocosSharp** will be automatically added as well.
-To do this, right-click on the PCL’s <span class="UIItem">Packages</span> folder
+To do this, right-click on the <span class="UIItem">Packages</span> folder in the .NET Standard library project
 and select <span class="UIItem">Add Packages...</span>. Enter the search term
 <span class="UIItem">CocosSharp.Forms</span>, select <span class="UIItem">CocosSharp for Xamarin.Forms</span>,
 then click <span class="UIItem">Add Package</span>.
@@ -204,7 +204,7 @@ The following graph can help visualize a typical CocosSharp hierarchy:
 
 Only one `CCScene` can be active at one time. Most games use multiple `CCLayer` instances to sort content, but our application uses only one. Similarly, most games use multiple visual objects, but we’ll only have one in our app. A more detailed discussion about the CocosSharp visual hierarchy can be found in the [BouncingGame walkthrough](~/graphics-games/cocossharp/bouncing-game.md).
 
-Initially the `GameScene` class will be nearly empty – we’ll just create it to satisfy the reference in `HomePage`. Add a new class to your PCL named `GameScene`. It should inherit from the `CCScene` class as follows:
+Initially the `GameScene` class will be nearly empty – we’ll just create it to satisfy the reference in `HomePage`. Add a new class to your .NET Standard library project named `GameScene`. It should inherit from the `CCScene` class as follows:
 
 
 ```csharp

@@ -26,7 +26,7 @@ in the code.
 
 ## 1. Add NuGet Packages
 
-Add these Nuget packages to your Xamarin.Forms PCL and application projects:
+Add these Nuget packages to your Xamarin.Forms .NET Standard library and application projects:
 
 * Xamarin.Forms.Pages
 * Xamarin.Forms.Theme.Base

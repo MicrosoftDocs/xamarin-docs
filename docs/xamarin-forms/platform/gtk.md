@@ -52,7 +52,7 @@ Follow these instructions to add a GTK# app that will run on the Windows desktop
 
 6. In the **Solution Explorer**, right-click the solution name and select **Manage NuGet Packages for Solution**. Select the **Update** tab and the **Xamarin.Forms** package. Select all the projects and update them to the same Xamarin.Forms version as used by the GTK project.
 
-7. In the **Solution Explorer**, right-click on **References** in the GTK project. In the **Reference Manager** dialog, select **Projects** at the left, and check the checkbox adjacent to the .NET Standard, PCL, or Shared project:
+7. In the **Solution Explorer**, right-click on **References** in the GTK project. In the **Reference Manager** dialog, select **Projects** at the left, and check the checkbox adjacent to the .NET Standard or Shared project:
 
     ![Reference the shared project](gtk-images/win/reference-shared-project.png "Reference the shared project")
 
@@ -125,7 +125,7 @@ Follow these instructions to add a GTK# app that will run on the Mac desktop:
 
 6. Update the other platform projects to use the same Xamarin.Forms version as used by the GTK project.
 
-7. In the **Solution Pad**, right-click on **References > Edit References...** for the GTK project, and add a reference to the Xamarin.Forms project (either .NET Standard, PCL, or Shared Project).
+7. In the **Solution Pad**, right-click on **References > Edit References...** for the GTK project, and add a reference to the Xamarin.Forms project (either .NET Standard or Shared Project).
 
     ![Reference the shared project](gtk-images/mac/reference-shared-project.png "Reference the shared project")
 

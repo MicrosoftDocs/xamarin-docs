@@ -38,7 +38,7 @@ Follow these instructions to add a Mac app that will run on macOS Sierra and Mac
 5. In the Mac project, right-click on **Packages > Add Packages...** to add the
   [Xamarin.Forms/2.3.5.235-pre2](https://www.nuget.org/packages/Xamarin.Forms/2.3.5.235-pre2) NuGet. You should also update the other projects to this version.
 
-6. In the Mac project, right-click on **References** and add a reference to the Xamarin.Forms project (either Shared Project or PCL).
+6. In the Mac project, right-click on **References** and add a reference to the Xamarin.Forms project (either Shared Project or .NET Standard library project).
 
   ![Add a reference to the Xamarin.Forms shared code project](mac-images/references-sml.png)
 

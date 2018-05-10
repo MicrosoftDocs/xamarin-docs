@@ -17,7 +17,7 @@ Xamarin.Forms [Pages, Layouts and Controls](~/xamarin-forms/user-interface/contr
 
 Developers can implement their own custom `Renderer` classes to customize the appearance and/or behavior of a control. However, implementing a custom renderer class to perform a simple control customization is often a heavy-weight response. Effects simplify this process, allowing the native controls on each platform to be more easily customized.
 
-Effects are created in platform-specific projects by subclassing the `PlatformEffect` control, and then the effects are consumed by attaching them to an appropriate control in a Xamarin.Forms Portable Class Library (PCL) or Shared Library project.
+Effects are created in platform-specific projects by subclassing the `PlatformEffect` control, and then the effects are consumed by attaching them to an appropriate control in a Xamarin.Forms .NET Standard library or Shared Library project.
 
 ## Why Use an Effect over a Custom Renderer?
 

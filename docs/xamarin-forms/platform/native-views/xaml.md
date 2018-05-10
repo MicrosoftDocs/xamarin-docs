@@ -70,7 +70,7 @@ Bindable properties and attached bindable properties can also be set on native v
 Android widget constructors generally require the Android `Context` object as an argument, and this can be made available through a static property in the `MainActivity` class. Therefore, when creating an Android widget in XAML, the `Context` object must generally be passed to the widget's constructor using the `x:Arguments` attribute with a `x:Static` markup extension. For more information, see [Passing Arguments to Native Views](#passing_arguments).
 
 > [!NOTE]
-> Note that naming a native view with `x:Name` is not possible in either a Portable Class Library (PCL) project or a Shared Asset Project (SAP). Doing so will generate a variable of the native type, which will cause a compilation error. However, native views can be wrapped in `ContentView` instances and retrieved in the code-behind file, provided that a SAP is being used. For more information, see [Referring to a Native View from Code](#native_view_code).
+> Note that naming a native view with `x:Name` is not possible in either a .NET Standard library project or a Shared Asset Project (SAP). Doing so will generate a variable of the native type, which will cause a compilation error. However, native views can be wrapped in `ContentView` instances and retrieved in the code-behind file, provided that a SAP is being used. For more information, see [Referring to a Native View from Code](#native_view_code).
 
 <a name="native_bindings" />
 
@@ -281,7 +281,7 @@ The iOS and Android native buttons share the same `OnButtonTap` event handler, b
 
 ## Subclassing Native Views
 
-Many iOS and Android native views are not suitable for instantiating in XAML because they use methods, rather than properties, to set up the control. The solution to this issue is to subclass native views in wrappers that define a more XAML-friendly API that uses properties to setup the control, and that uses platform-independent events. The wrapped native views can then be placed in a Shared Asset Project (SAP) and surrounded with conditional compilation directives, or placed in platform-specific projects and referenced from XAML in a Portable Class Library (PCL) project.
+Many iOS and Android native views are not suitable for instantiating in XAML because they use methods, rather than properties, to set up the control. The solution to this issue is to subclass native views in wrappers that define a more XAML-friendly API that uses properties to setup the control, and that uses platform-independent events. The wrapped native views can then be placed in a Shared Asset Project (SAP) and surrounded with conditional compilation directives, or placed in platform-specific projects and referenced from XAML in a .NET Standard library project.
 
 The following code example demonstrates a Xamarin.Forms page that consumes subclassed native views:
 

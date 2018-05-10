@@ -184,7 +184,7 @@ The `OnAttached` method sets the `Background` property of the control to cyan, a
 
 ## Consuming the Effect
 
-The process for consuming an effect from a Xamarin.Forms Portable Class Library (PCL) or Shared Library project is as follows:
+The process for consuming an effect from a Xamarin.Forms .NET Standard library or Shared Library project is as follows:
 
 1. Declare a control that will be customized by the effect.
 1. Attach the effect to the control by adding it to the control's [`Effects`](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/) collection.
@@ -205,7 +205,7 @@ The following XAML code example shows an [`Entry`](https://developer.xamarin.com
 </Entry>
 ```
 
-The `FocusEffect` class in the PCL supports effect consumption in XAML, and is shown in the following code example:
+The `FocusEffect` class in the .NET Standard library supports effect consumption in XAML, and is shown in the following code example:
 
 ```csharp
 public class FocusEffect : RoutingEffect

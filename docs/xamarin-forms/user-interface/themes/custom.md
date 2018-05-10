@@ -72,7 +72,7 @@ The code for this effect is given below - to reference it correctly a custom
 xmlns:local="clr-namespace:ThemesDemo;assembly=ThemesDemo"
 ```
 
-### C# code in the PCL or Shared Project
+### C# code in the .NET Standard library project or Shared Project
 
 The code for creating a round-corner `BoxView` uses [effects](~/xamarin-forms/app-fundamentals/effects/index.md).
 The corner radius is applied using a `BindableProperty` and is implemented

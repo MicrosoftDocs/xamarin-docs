@@ -15,29 +15,6 @@ _Adding new Windows projects to an existing Xamarin.Forms solution_
 
 Older Xamarin.Forms solutions (or those created on macOS) will not have Universal Windows Platform (UWP) app projects. Therefore, you'll need to manually add a UWP project to build a Windows 10 (UWP) app.
 
-<a name="pcl" />
-
-## Update the PCL Profile
-
-If your existing Xamarin.Forms app used the Portable Class Library (PCL) template, you must update its profile.
-
-1. **right-click > Properties** (your existing settings may differ)
-
-  ![](images/targets.png "PCL Targets")
-
-2. Click on the **Change...** button
-
-3. Ensure the **Windows 8** and **Windows Phone 8.1** options are selected (and **Windows Phone Silveright** is *de-selected*):
-
-  ![](images/pcl.png "PCL Target Options")
-
-4. Press **OK** and save the changes.
-
-This equates to **Profile 111** if you are configuring your PCL
-  in Visual Studio for Mac using the drop-down list.
-
-  ![](images/pcl-xs.png "PCL Profile 111")
-
 ## Add a Universal Windows Platform app
 
 You should be running **Visual Studio 2017** on **Windows 10** to build
@@ -70,7 +47,7 @@ Windows 10 phones, tablets, and desktops:
   [![](universal-images/configuration-sml.png "Configuration Manager Window")](universal-images/configuration.png#lightbox "Configuration Manager Window")
 
  5 . Right-click on the project and select **Add > Reference** and create a
-  reference to the Xamarin.Forms application project (PCL, .NET Standard, or Shared Project).
+  reference to the Xamarin.Forms application project (.NET Standard or Shared Project).
 
   ![](universal-images/addref-sml.png "Reference Manager Dialog")
 

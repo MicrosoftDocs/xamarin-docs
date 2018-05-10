@@ -70,7 +70,7 @@ public class HybridWebView : View
 }
 ```
 
-The `HybridWebView` custom control is created in the portable class library (PCL) project and defines the following API for the control:
+The `HybridWebView` custom control is created in the .NET Standard library project and defines the following API for the control:
 
 - A `Uri` property that specifies the address of the web page to be loaded.
 - A `RegisterAction` method that registers an `Action` with the control. The registered action will be invoked from JavaScript contained in the HTML file referenced through the `Uri` property.
@@ -81,7 +81,7 @@ The `HybridWebView` custom control is created in the portable class library (PCL
 
 ## Consuming the HybridWebView
 
-The `HybridWebView` custom control can be referenced in XAML in the PCL project by declaring a namespace for its location and using the namespace prefix on the custom control. The following code example shows how the `HybridWebView` custom control can be consumed by a XAML page:
+The `HybridWebView` custom control can be referenced in XAML in the .NET Standard library project by declaring a namespace for its location and using the namespace prefix on the custom control. The following code example shows how the `HybridWebView` custom control can be consumed by a XAML page:
 
 ```xaml
 <ContentPage ...

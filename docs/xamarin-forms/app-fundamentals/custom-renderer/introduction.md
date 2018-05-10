@@ -47,7 +47,7 @@ The `MyEntry` control is an `Entry` control where the `BackgroundColor` is set t
 The `local` namespace prefix can be anything. However, the `namespace` and `assembly` values must match the details of the custom control. Once the namespace is declared, the prefix is used to reference the custom control.
 
 > [!NOTE]
-> Defining the `xmlns` is much simpler in PCLs than Shared Projects. A PCL is compiled into an assembly so it's easy to determine what the `assembly=CustomRenderer` value should be. When using Shared Projects, all the shared assets (including the XAML) are compiled into each of the referencing projects, which means that if the iOS, Android, and UWP projects have their own *assembly names* it is impossible to to write the `xmlns` declaration because the value needs to be different for each application. Custom controls in XAML for Shared Projects will require every application project to be configured with the same assembly name.
+> Defining the `xmlns` is much simpler in .NET Standard library projects than Shared Projects. A .NET Standard library is compiled into an assembly so it's easy to determine what the `assembly=CustomRenderer` value should be. When using Shared Projects, all the shared assets (including the XAML) are compiled into each of the referencing projects, which means that if the iOS, Android, and UWP projects have their own *assembly names* it is impossible to to write the `xmlns` declaration because the value needs to be different for each application. Custom controls in XAML for Shared Projects will require every application project to be configured with the same assembly name.
 
 The `MyEntry` custom control is then rendered on each platform, with a gray background, as shown in the following screenshots:
 
@@ -70,7 +70,7 @@ The topics in this series will provide demonstrations and explanations of this p
 
 ## Troubleshooting
 
-If a custom control is contained in a PCL project that's been added to the solution (i.e. not the PCL created by the Visual Studio for Mac/Visual Studio Xamarin.Forms App project template), an exception may occur in iOS when attempting to access the custom control. If this issue occurs it can be resolved by creating a reference to the custom control from the `AppDelegate` class:
+If a custom control is contained in a .NET Standard library project that's been added to the solution (i.e. not the .NET Standard library created by the Visual Studio for Mac/Visual Studio Xamarin.Forms App project template), an exception may occur in iOS when attempting to access the custom control. If this issue occurs it can be resolved by creating a reference to the custom control from the `AppDelegate` class:
 
 ```csharp
 var temp = new ClassInPCL(); // in AppDelegate, but temp not used anywhere

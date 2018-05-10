@@ -66,7 +66,7 @@ Add this call in the following files for each platform:
 -  **UWP** - MainPage.xaml.cs file, in the `MainPage` constructor.
 
 Once the NuGet package has been added and the initialization method called inside
-each applcation, `Xamarin.Forms.Maps` APIs can be used in the common PCL or Shared Project code.
+each applcation, `Xamarin.Forms.Maps` APIs can be used in the common .NET Standard library project or Shared Project code.
 
 <a name="Platform_Configuration" />
 

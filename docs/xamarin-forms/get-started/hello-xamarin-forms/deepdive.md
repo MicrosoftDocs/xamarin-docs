@@ -50,7 +50,7 @@ Visual Studio for Mac follows the Visual Studio practice of organizing code into
 
 The projects are:
 
-- Phoneword – This project is the portable class library (PCL) project that holds all of the shared code and shared UI.
+- Phoneword – This project is the .NET Standard library project that holds all of the shared code and shared UI.
 - Phoneword.Droid – This project holds Android specific code and is the entry point for Android applications.
 - Phoneword.iOS – This project holds iOS specific code and is the entry point for iOS applications.
 
@@ -90,7 +90,7 @@ A Xamarin.Forms application is architected in the same way as a traditional cros
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-A Xamarin.Forms application is architected in the same way as a traditional cross-platform application. Shared code is typically placed in a Portable Class Library (PCL), and platform-specific applications consume the shared code. The following diagram shows an overview of this relationship for the Phoneword application:
+A Xamarin.Forms application is architected in the same way as a traditional cross-platform application. Shared code is typically placed in a .NET Standard library, and platform-specific applications consume the shared code. The following diagram shows an overview of this relationship for the Phoneword application:
 
 ![](deepdive-images/xs/architecture.png "Phoneword Architecture")
 

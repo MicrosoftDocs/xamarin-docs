@@ -386,13 +386,13 @@ xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-You’ll need additional XML namespace declarations to access other classes. Each additional XML namespace declaration defines a new prefix. To access classes local to the shared application PCL, such as `AppConstants`, XAML programmers often use the prefix `local`. The namespace declaration must indicate the CLR (Common Language Runtime) namespace name, also known as the .NET namespace name, which is the name that appears in a C# `namespace` definition or in a `using` directive:
+You’ll need additional XML namespace declarations to access other classes. Each additional XML namespace declaration defines a new prefix. To access classes local to the shared application .NET Standard library, such as `AppConstants`, XAML programmers often use the prefix `local`. The namespace declaration must indicate the CLR (Common Language Runtime) namespace name, also known as the .NET namespace name, which is the name that appears in a C# `namespace` definition or in a `using` directive:
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-You can also define XML namespace declarations for .NET namespaces in any assembly that the PCL references. For example, here’s a `sys` prefix for the standard .NET `System` namespace, which is in the **mscorlib** assembly, which once stood for "Microsoft Common Object Runtime Library," but now means "Multilanguage Standard Common Object Runtime Library." Because this is another assembly, you must also specify the assembly name, in this case **mscorlib**:
+You can also define XML namespace declarations for .NET namespaces in any assembly that the .NET Standard library references. For example, here’s a `sys` prefix for the standard .NET `System` namespace, which is in the **mscorlib** assembly, which once stood for "Microsoft Common Object Runtime Library," but now means "Multilanguage Standard Common Object Runtime Library." Because this is another assembly, you must also specify the assembly name, in this case **mscorlib**:
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=mscorlib"

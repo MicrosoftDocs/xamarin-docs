@@ -1,21 +1,23 @@
 ---
 title: "Part 1. Getting Started with XAML"
-description: "In a Xamarin.Forms application, XAML is mostly used to define the visual contents of a page. A XAML file is always associated with a C# code file that provides code support for the markup. Together, these two files contribute to a new class definition that includes child views and property initialization. Within the XAML file, classes and properties are referenced with XML elements and attributes, and links between the markup and code are established."
+description: "In a Xamarin.Forms application, XAML is mostly used to define the visual contents of a page and works together with a code-behind file." 
 ms.prod: xamarin
 ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 04/10/2018
+ms.date: 05/10/2018
 ---
 
 # Part 1. Getting Started with XAML
 
-_In a Xamarin.Forms application, XAML is mostly used to define the visual contents of a page. A XAML file is always associated with a C# code file that provides code support for the markup. Together, these two files contribute to a new class definition that includes child views and property initialization. Within the XAML file, classes and properties are referenced with XML elements and attributes, and links between the markup and code are established._
+_In a Xamarin.Forms application, XAML is mostly used to define the visual contents of a page and works together with a C# code-behind file._
+
+The code-behind file provides code support for the markup. Together, these two files contribute to a new class definition that includes child views and property initialization. Within the XAML file, classes and properties are referenced with XML elements and attributes, and links between the markup and code are established.
 
 ## Creating the Solution
 
-To begin editing your first XAML file, use Visual Studio or Visual Studio for Mac to create a new Xamarin.Forms solution. (Select the tab at the top of this page corresponding to your environment.)
+To begin editing your first XAML file, use Visual Studio or Visual Studio for Mac to create a new Xamarin.Forms solution. (Select the tab below corresponding to your environment.)
 
 # [Visual Studio](#tab/vswin)
 
@@ -25,13 +27,13 @@ In Windows, use Visual Studio to select **File > New > Project** from the menu. 
 
 Select a location for the solution, give it a name of **XamlSamples** (or whatever you prefer), and press **OK**.
 
-On the next screen, select the **Blank App** template, the **Xamarin.Forms** UI technology, and the **Portable Class Library (PCL)** code-sharing strategy:
+On the next screen, select the **Blank App** template and the **.NET Standard** code-sharing strategy:
 
 ![](get-started-with-xaml-images/win/newcrossplatformapp.png "New App Dialog")
 
 Press **OK**. 
 
-Four projects are created in the solution: the **XamlSamples** portable class library (PCL), **XamlSamples.Android**, **XamlSamples.iOS**, and the Universal Windows Platform solution, **XamlSamples.UWP**.
+Four projects are created in the solution: the **XamlSamples** .NET Standard library, **XamlSamples.Android**, **XamlSamples.iOS**, and the Universal Windows Platform solution, **XamlSamples.UWP**.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -41,7 +43,7 @@ In Visual Studio for Mac, select **File > New Solution** from the menu. In the *
 
 Press **Next**.
 
-In the next dialog, give the project a name of **XamlSamples** (or whatever you prefer). Make sure that the **Use Portable Class Library** radio button is selected, and that **Use XAML for user interface files** is checked:
+In the next dialog, give the project a name of **XamlSamples** (or whatever you prefer). Make sure that the **Use .NET Standard** radio button is selected:
 
 ![](get-started-with-xaml-images/mac/newprojectdialog2.png "New Project Dialog 2")
 
@@ -53,17 +55,17 @@ In the following dialog, you can select a location for the project:
 
 Press **Create**
 
-Three projects are created in the solution: the **XamlSamples** portable class library (PCL), **XamlSamples.Android**, and **XamlSamples.iOS**. 
+Three projects are created in the solution: the **XamlSamples** .NET Standard library, **XamlSamples.Android**, and **XamlSamples.iOS**. 
 
 -----
 
 After creating the **XamlSamples** solution, you might want to test your development environment by selecting the various platform projects as the solution startup project, and building and deploying the simple application created by the project template on either phone emulators or real devices.
 
-Unless you need to write platform-specific code, the shared **XamlSamples** PCL project is where you’ll be spending virtually all of your programming time. These articles will not venture outside of that project.
+Unless you need to write platform-specific code, the shared **XamlSamples** .NET Standard library project is where you’ll be spending virtually all of your programming time. These articles will not venture outside of that project.
 
 ### Anatomy of a XAML File
 
-Within the **XamlSamples** portable class library are a pair of files with the following names:
+Within the **XamlSamples** .NET Standard library are a pair of files with the following names:
 
 - **App.xaml**, the XAML file; and
 - **App.xaml.cs**, a C# *code-behind* file associated with the XAML file.
@@ -72,12 +74,10 @@ You'll need to click the arrow next to **App.xaml** to see the code-behind file.
 
 Both **App.xaml** and **App.xaml.cs** contribute to a class named `App` that derives from `Application`. Most other classes with XAML files contribute to a class that derives from `ContentPage`; those files use XAML to define the visual contents of an entire page. This is true of the other two files in the **XamlSamples** project:
 
-# [Visual Studio](#tab/vswin)
-
 - **MainPage.xaml**, the XAML file; and
 - **MainPage.xaml.cs**, the C# code-behind file.
 
-The **MainPage.xaml** file looks like this:
+The **MainPage.xaml** file looks like this (although the formatting might be a little different):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -85,56 +85,27 @@ The **MainPage.xaml** file looks like this:
              xmlns:local="clr-namespace:XamlSamples"
              x:Class="XamlSamples.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin Forms!" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+    </StackLayout>
 
 </ContentPage>
 ```
-
-# [Visual Studio for Mac](#tab/vsmac)
-
-- **XamlSamplesPage.xaml**, the XAML file; and
-- **XamlSamplesPage.xaml.cs**, the C# code-behind file.
-
-The **XamlSamplesPage.xaml** file looks like this:
-
-```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:local="clr-namespace:XamlSamples" 
-             x:Class="XamlSamples.XamlSamplesPage">
-
-    <Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
-</ContentPage>
-```
-
------
 
 The two XML namespace ( `xmlns`) declarations refer to URIs, the first seemingly on Xamarin’s web site and the second on Microsoft’s. Don’t bother checking what those URIs point to. There’s nothing there. They are simply URIs owned by Xamarin and Microsoft, and they basically function as version identifiers.
 
 The first XML namespace declaration means that tags defined within the XAML file with no prefix refer to classes in Xamarin.Forms, for example `ContentPage`. The second namespace declaration defines a prefix of `x`. This is used for several elements and attributes that are intrinsic to XAML itself and which are supported by other implementations of XAML. However, these elements and attributes are slightly different depending on the year embedded in the URI. Xamarin.Forms supports the 2009 XAML specification, but not all of it.
 
-The `local` namespace declaration allows you to access other classes from the PCL project.
+The `local` namespace declaration allows you to access other classes from the .NET Standard library project.
 
 At the end of that first tag, the `x` prefix is used for an attribute named `Class`. Because the use of this `x` prefix is virtually universal for the XAML namespace, XAML attributes such as `Class` are almost always referred to as `x:Class`.
 
-# [Visual Studio](#tab/vswin)
-
 The `x:Class` attribute specifies a fully qualified .NET class name: the `MainPage` class in the `XamlSamples` namespace. This means that this XAML file defines a new class named `MainPage` in the `XamlSamples` namespace that derives from `ContentPage`—the tag in which the `x:Class` attribute appears.
 
-# [Visual Studio for Mac](#tab/vsmac)
-
-The `x:Class` attribute specifies a fully qualified .NET class name: the `XamlSamplesPage` class in the `XamlSamples` namespace. This means that this XAML file defines a new class named `XamlSamplesPage` in the `XamlSamples` namespace that derives from `ContentPage`—the tag in which the `x:Class` attribute appears.
-
------
-
 The `x:Class` attribute can only appear in the root element of a XAML file to define a derived C# class. This is the only new class defined in the XAML file. Everything else that appears in the XAML file is instead simply instantiated from existing classes and initialized.
-
-# [Visual Studio](#tab/vswin)
 
 The **MainPage.xaml.cs** file looks like this (aside from unused `using` directives):
 
@@ -157,34 +128,7 @@ The `MainPage` class derives from `ContentPage`, but notice the `partial` class 
 
 When Visual Studio builds the project, it parses the XAML file to generate a C# code file. If you look in the **XamlSamples\XamlSamples\obj\Debug** directory, you’ll find a file named **XamlSamples.MainPage.xaml.g.cs**. The ‘g’ stands for generated. This is the other partial class definition of `MainPage` that contains the definition of the `InitializeComponent` method called from the `MainPage` constructor. These two partial `MainPage` class definitions can then be compiled together. Depending on whether the XAML is compiled or not, either the XAML file or a binary form of the XAML file is embedded in the executable.
 
-At runtime, code in the particular platform project calls a `LoadApplication` method, passing to it a new instance of the `App` class in the PCL. The `App` class constructor instantiates `MainPage`. The constructor of that class calls `InitializeComponent`, which then calls the `LoadFromXaml` method that extracts the XAML file (or its compiled binary) from the PCL. `LoadFromXaml` initializes all the objects defined in the XAML file, connects them all together in parent-child relationships, attaches event handlers defined in code to events set in the XAML file, and sets the resultant tree of objects as the content of the page.
-
-# [Visual Studio for Mac](#tab/vsmac)
-
-The **XamlSamplesPage.xaml.cs** file looks like this:
-
-```csharp
-using Xamarin.Forms;
-
-namespace XamlSamples
-{
-    public partial class XamlSamplesPage : ContentPage
-    {
-        public XamlSamplesPage()
-        {
-            InitializeComponent();
-        }
-    }
-}
-```
-
-The `XamlSamplesPage` class derives from `ContentPage`, but notice the `partial` class definition. There suggests that there should be another C# file with another partial class definition for `XamlSamplesPage`, but where is it? And what is that `InitializeComponent` method?
-
-When Visual Studio for Mac builds the project, it parses the XAML file to generate a C# code file. If you look in the **XamlSamples\XamlSamples\obj\Debug** directory, you’ll find a file named **XamlSamples.XamlSamplesPage.xaml.g.cs**. The ‘g’ stands for generated. This is the other partial class definition of `XamlSamplesPage` that contains the definition of the `InitializeComponent` method called from the `XamlSamplesPage` constructor.  These two partial `XamlSamplesPage` class definitions can then be compiled together. Depending on whether the XAML is compiled or not, either the XAML file or a binary form of the XAML file is embedded in the executable.
-
-At runtime, code in the particular platform project calls a `LoadApplication` method, passing to it a new instance of the `App` class in the PCL. The `App` class constructor instantiates `XamlSamplesPage`. The constructor of that class calls `InitializeComponent`, which then calls the `LoadFromXaml` method that extracts the XAML file (or its compiled binary) from the PCL. `LoadFromXaml` initializes all the objects defined in the XAML file, connects them all together in parent-child relationships, attaches event handlers defined in code to events set in the XAML file, and sets the resultant tree of objects as the content of the page.
-
------
+At runtime, code in the particular platform project calls a `LoadApplication` method, passing to it a new instance of the `App` class in the .NET Standard library. The `App` class constructor instantiates `MainPage`. The constructor of that class calls `InitializeComponent`, which then calls the `LoadFromXaml` method that extracts the XAML file (or its compiled binary) from the .NET Standard library. `LoadFromXaml` initializes all the objects defined in the XAML file, connects them all together in parent-child relationships, attaches event handlers defined in code to events set in the XAML file, and sets the resultant tree of objects as the content of the page.
 
 Although you normally don’t need to spend much time with generated code files, sometimes runtime exceptions are raised on code in the generated files, so you should be familiar with them.
 
@@ -194,39 +138,17 @@ When you compile and run this program, the `Label` element appears in the center
 
 For more interesting visuals, all you need is more interesting XAML.
 
-# [Visual Studio](#tab/vswin)
-
-# [Visual Studio for Mac](#tab/vsmac)
-
-## Preliminaries
-
-To make file names in Visual Studio for Mac consistent with the files created by Visual Studio running under Windows, rename **XamlSamplesPage.xaml** to **MainPage.xaml**, and **XamlSamplesPage.xaml.cs** to **MainPage.xaml.cs**. Within the **XamlSamplesPage.xaml** file, change `XamlSamplesPage` to `MainPage`. Within the **XamlSamplesPage.xaml.cs** file, change two occurrences of `XamlSamplesPage` to `MainPage`. Within the **App.xaml.cs** file, change the statement
-
-```csharp
-MainPage = new XamlSamplesPage();
-```
-
-to:
-
-```csharp
-MainPage = new MainPage();
-```
-
------
-
-Test that the program still compiles and deploys before continuing.
-
 ## Adding New XAML Pages
 
 # [Visual Studio](#tab/vswin)
 
-To add other XAML-based `ContentPage` classes to your project, select the **XamlSamples** PCL project and invoke the **Project > Add New Item** menu item. At the left of the **Add New Item** dialog, select **Visual C#** and **Xamarin.Forms**. From the list select **Content Page** (not **Content Page (C#)**, which creates a code-only page, or **Content View**, which is not a page). Give the page a name, for example, **HelloXamlPage.xaml**:
+To add other XAML-based `ContentPage` classes to your project, select the **XamlSamples** .NET Standard library project and invoke the **Project > Add New Item** menu item. At the left of the **Add New Item** dialog, select **Visual C#** and **Xamarin.Forms**. From the list select **Content Page** (not **Content Page (C#)**, which creates a code-only page, or **Content View**, which is not a page). Give the page a name, for example, **HelloXamlPage.xaml**:
 
 ![](get-started-with-xaml-images/win/addnewitemdialog.w157.png "Add New Item Dialog")
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-To add other XAML-based `ContentPage` classes to your project, select the **XamlSamples** PCL project and invoke the **File > New File** menu item. At the left of the **New File** dialog, select **Forms** at the left, and **Forms ContentPage Xaml** (not **Forms ContentPage**, which creates a code-only page, or **Content View**, which is not a page). Give the page a name, for example, **HelloXamlPage**:
+To add other XAML-based `ContentPage` classes to your project, select the **XamlSamples** .NET Standard library project and invoke the **File > New File** menu item. At the left of the **New File** dialog, select **Forms** at the left, and **Forms ContentPage Xaml** (not **Forms ContentPage**, which creates a code-only page, or **Content View**, which is not a page). Give the page a name, for example, **HelloXamlPage**:
 
 ![](get-started-with-xaml-images/mac/newfiledialog.png "New File Dialog")
 

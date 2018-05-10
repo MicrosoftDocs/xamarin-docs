@@ -61,13 +61,13 @@ public class NativeCell : ViewCell
   }
 }
 ```
-The `NativeCell` class is created in the portable class library (PCL) project and defines the API for the custom cell. The custom cell exposes `Name`, `Category`, and `ImageFilename` properties that can be displayed through data binding. For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+The `NativeCell` class is created in the .NET Standard library project and defines the API for the custom cell. The custom cell exposes `Name`, `Category`, and `ImageFilename` properties that can be displayed through data binding. For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
 <a name="Consuming_the_Custom_Cell" />
 
 ## Consuming the Custom Cell
 
-The `NativeCell` custom cell can be referenced in Xaml in the PCL project by declaring a namespace for its location and using the namespace prefix on the custom cell element. The following code example shows how the `NativeCell` custom cell can be consumed by a XAML page:
+The `NativeCell` custom cell can be referenced in Xaml in the .NET Standard library project by declaring a namespace for its location and using the namespace prefix on the custom cell element. The following code example shows how the `NativeCell` custom cell can be consumed by a XAML page:
 
 ```xaml
 <ContentPage ...
