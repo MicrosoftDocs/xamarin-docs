@@ -47,6 +47,8 @@ To get started with using Hyper-V and the Google Android Emulator:
 
     [![Android SDKs and Tools dialog](hardware-acceleration-images/win/14-sdk-manager.w158-sml.png)](hardware-acceleration-images/win/14-sdk-manager.w158.png#lightbox)
 
+1. **Create a file named** `advancedFeatures.ini` **in the folder** `~\.android\` (aka C:\Users<your-username\.android\) if it doesn't already exist, and add `WindowsHypervisorPlatform = on` to the content of the file.
+
 ### Known Issues
 
 * Performance may be reduced when using certain Intel and AMD-based processors.
