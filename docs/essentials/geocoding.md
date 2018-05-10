@@ -102,11 +102,11 @@ catch (FeatureNotSupportedException fnsEx)
 }
 catch (Exception ex)
 {
-    // Handle exception that may have occured in geocoding
+    // Handle exception that may have occurred in geocoding
 }
 ```
 
 ## API
 
-- [Geocoding source code](https://github.com/xamarin/Essentials/tree/master/Essentials/Geocoding)
+- [Geocoding source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geocoding)
 - [Geocoding API documentation](xref:Xamarin.Essentials.Geocoding)
