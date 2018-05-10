@@ -5,7 +5,7 @@ ms.assetid: E281F89B-4142-4BD8-8882-FB65508BF69E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/02/2018
+ms.date: 05/09/2018
 ---
 
 # Walkthrough - Using Touch in Android
@@ -49,7 +49,7 @@ up into sections, with each section focusing on one of the Activities.
     private void TouchMeImageViewOnTouch(object sender, View.TouchEventArgs touchEventArgs)
     {
         string message;
-        switch (touchEventArgs.Event.Action & MotionEventArgs.Mask)
+        switch (touchEventArgs.Event.Action & MotionEventActions.Mask)
         {
             case MotionEventActions.Down:
             case MotionEventActions.Move:
@@ -425,14 +425,12 @@ lets get on with the final Activity in the walkthrough.
     Now draw a checkmark on the screen, and the bitmap being displayed
     should look something like that shown in the next screenshots:
 
-    [![Drawn checkmark](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
-    [![Recognized checkmark](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
+    [![Drawn checkmark, checkmark is recognized](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
 
     Finally, draw a scribble on the screen. The checkbox should change
     back to its original image as shown in these screenshots:
 
-    [![Scribble on the screen](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png#lightbox)
-    [![Original image is displayed](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png#lightbox)
+    [![Scribble on the screen, original image is displayed](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
 You now have an understanding of how to integrate touch and gestures in
 an Android application using Xamarin.Android.
