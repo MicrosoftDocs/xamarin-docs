@@ -264,53 +264,58 @@ Provided that the `Control` property is `null`, the `SetNativeControl` method is
 The following code example shows the custom renderer for UWP:
 
 ```csharp
-[assembly: ExportRenderer (typeof(CameraPreview), typeof(CameraPreviewRenderer))]
+[assembly: ExportRenderer(typeof(CameraPreview), typeof(CameraPreviewRenderer))]
 namespace CustomRenderer.UWP
 {
-	public class CameraPreviewRenderer : ViewRenderer<CameraPreview, Windows.UI.Xaml.Controls.CaptureElement>
-	{
-		MediaCapture mediaCapture;
-		CaptureElement captureElement;
-		CameraOptions cameraOptions;
-		Application app;
-		bool isPreviewing = false;
-
-		protected override void OnElementChanged (ElementChangedEventArgs<CameraPreview> e)
-		{
-			base.OnElementChanged (e);
-
-			if (Control == null) {
-                ...
-				captureElement = new CaptureElement ();
-				captureElement.Stretch = Stretch.UniformToFill;
-
-				InitializeAsync ();
-				SetNativeControl (captureElement);
-			}
-			if (e.OldElement != null) {
-				// Unsubscribe
-				Tapped -= OnCameraPreviewTapped;
-			}
-			if (e.NewElement != null) {
-				// Subscribe
-				Tapped += OnCameraPreviewTapped;
-			}
-		}
-
-		async void OnCameraPreviewTapped (object sender, TappedRoutedEventArgs e)
-		{
-			if (isPreviewing) {
-				await StopPreviewAsync ();
-			} else {
-				await StartPreviewAsync ();
-			}
-		}
+    public class CameraPreviewRenderer : ViewRenderer<CameraPreview, Windows.UI.Xaml.Controls.CaptureElement>
+    {
         ...
-	}
+        CaptureElement _captureElement;
+        bool _isPreviewing;
+
+        protected override void OnElementChanged(ElementChangedEventArgs<CameraPreview> e)
+        {
+            base.OnElementChanged(e);
+
+            if (Control == null)
+            {
+                ...
+                _captureElement = new CaptureElement();
+                _captureElement.Stretch = Stretch.UniformToFill;
+
+                SetupCamera();
+                SetNativeControl(_captureElement);
+            }
+            if (e.OldElement != null)
+            {
+                // Unsubscribe
+                Tapped -= OnCameraPreviewTapped;
+                ...
+            }
+            if (e.NewElement != null)
+            {
+                // Subscribe
+                Tapped += OnCameraPreviewTapped;
+            }
+        }
+
+        async void OnCameraPreviewTapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (_isPreviewing)
+            {
+                await StopPreviewAsync();
+            }
+            else
+            {
+                await StartPreviewAsync();
+            }
+        }
+        ...
+    }
 }
 ```
 
-Provided that the `Control` property is `null`, a new `CaptureElement` is instantiated and the `InitializeAsync` method is called, which uses the `MediaCapture` API to provide the preview stream from the camera. The `SetNativeControl` method is then called to assign a reference to the `CaptureElement` instance to the `Control` property. The `CaptureElement` control exposes a `Tapped` event that's handled by the `OnCameraPreviewTapped` method to stop and start the video preview when it's tapped. The `Tapped` event is subscribed to when the custom renderer is attached to a new Xamarin.Forms element, and unsubscribed from only when the element the renderer is attached to changes.
+Provided that the `Control` property is `null`, a new `CaptureElement` is instantiated and the `SetupCamera` method is called, which uses the `MediaCapture` API to provide the preview stream from the camera. The `SetNativeControl` method is then called to assign a reference to the `CaptureElement` instance to the `Control` property. The `CaptureElement` control exposes a `Tapped` event that's handled by the `OnCameraPreviewTapped` method to stop and start the video preview when it's tapped. The `Tapped` event is subscribed to when the custom renderer is attached to a new Xamarin.Forms element, and unsubscribed from only when the element the renderer is attached to changes.
 
 > [!NOTE]
 > It's important to stop and dispose of the objects that provide access to the camera in a UWP application. Failure to do so can interfere with other applications that attempt to access the device's camera. For more information, see [Display the camera preview](/windows/uwp/audio-video-camera/simple-camera-preview-access/).

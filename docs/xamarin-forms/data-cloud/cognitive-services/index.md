@@ -66,9 +66,7 @@ The PCL project also contains some important files:
 
 The sample application uses the following NuGet packages:
 
-- `Microsoft.Net.Http` – provides the `HttpClient` class for making requests over HTTP.
 - `Newtonsoft.Json` – provides a JSON framework for .NET.
-- `Microsoft.ProjectOxford.Face` – a client library for accessing the Face API.
 - `PCLStorage` – provides a set of cross-platform local file IO APIs.
 - `sqlite-net-pcl` – provides SQLite database storage.
 - `Xam.Plugin.Media` – provides cross-platform photo taking and picking APIs.

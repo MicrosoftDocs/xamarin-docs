@@ -218,7 +218,7 @@ namespace CustomRenderer.UWP
 			{
 				...
 				SetupUserInterface();
-				SetupCamera();
+				SetupBasedOnStateAsync();
 
 				this.Children.Add(page);
 			}

@@ -86,7 +86,7 @@ async Task<string> SendRequestAsync(string url)
 }
 ```
 
-This method builds the GET request by adding the API key as the value of the `Ocp-Apim-Subscription-Key` header. The GET request is then sent to the `SpellCheck` API, with the request URL specifying the text to be translated, and the spell check mode. The response is then read and returned to the calling method.
+This method sends the GET request to the `SpellCheck` API, with the request URL specifying the text to be translated, and the spell check mode. The response is then read and returned to the calling method.
 
 The `SpellCheck` API will send HTTP status code 200 (OK) in the response, provided that the request is valid, which indicates that the request succeeded and that the requested information is in the response. For a list of response objects, see [Response objects](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference#response-objects).
 
