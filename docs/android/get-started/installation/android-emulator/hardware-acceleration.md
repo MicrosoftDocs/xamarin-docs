@@ -6,7 +6,7 @@ ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/07/2018
+ms.date: 05/10/2018
 ---
 
 # Android Emulator Hardware Acceleration
@@ -27,33 +27,68 @@ The Android SDK Manager will automatically make use of hardware acceleration whe
 > [!NOTE]
 > Hyper-V support is currently in Preview.
 
-Developers who are using Windows 10 (April 2018 Update) are strongly encouraged to use Microsoft's Hyper-V. The Visual Studio Tools for Xamarin make it easy for developers to test and debug their Xamarin.Android applications in situations where an Android device is unavailable or impractical.
+Developers who are using Windows 10 (April 2018 Update) are strongly
+encouraged to use Microsoft's Hyper-V. The Visual Studio Tools for
+Xamarin make it easy for developers to test and debug their
+Xamarin.Android applications in situations where an Android device is
+unavailable or impractical.
 
 To get started with using Hyper-V and the Google Android Emulator:
 
-1. **Update to Windows 10 April 2018 Update (build 1803)** &ndash; To verify what version of Windows is running, click in the Cortana search bar, and type **About**. Select **About your PC** in the search results. Scroll down in the **About** dialog, to the **Windows specifications** section. The **Version** should be at least 1803:
+1. **Update to Windows 10 April 2018 Update (build 1803)** &ndash; To
+   verify what version of Windows is running, click in the Cortana
+   search bar, and type **About**. Select **About your PC** in the
+   search results. Scroll down in the **About** dialog, to the
+   **Windows specifications** section. The **Version** should be at
+   least 1803:
 
     [![Windows specifications](hardware-acceleration-images/win/12-about-windows.w10-sml.png)](hardware-acceleration-images/win/12-about-windows.w10.png#lightbox)
 
-1. **Enable both Hyper-V and the Windows Hypervisor Platform** &ndash; In the Cortana Search bar, type **Turn Windows features on or off**. Scroll down in the **Windows Features** dialog, and ensure that the **Windows Hypervisor Platform** is enabled.
+2. **Enable both Hyper-V and the Windows Hypervisor Platform** &ndash;
+   In the Cortana Search bar, type **Turn Windows features on or off**.
+   Scroll down in the **Windows Features** dialog, and ensure that the
+   **Windows Hypervisor Platform** is enabled.
 
     [![Hyper-V and Windows Hypervisor Platform enabled](hardware-acceleration-images/win/13-windows-features.w10-sml.png)](hardware-acceleration-images/win/13-windows-features.w10.png#lightbox)
 
     It may be necessary to reboot Windows after enabling Hyper-V and the Windows Hypervisor Platform.
 
-1. **Install [Visual Studio 15.8 Preview 1](https://aka.ms/hyperv-emulator-dl)** &ndash; This version of Visual Studio provides IDE support for starting the Google Android Emulator with Hyper-V support.
+3. **Install
+   [Visual Studio 15.8 Preview 1](https://aka.ms/hyperv-emulator-dl)**
+   &ndash; This version of Visual Studio provides IDE support for
+   starting the Google Android Emulator with Hyper-V support.
 
-1. **Install the Google Android emulator package 27.2.7 or higher** &ndash; To install this package, navigate to **Tools > Android > Android SDK Manager** in Visual Studio. Select the **Tools** tab, and ensure the Android Emulator component is at least of version 27.2.7.
+4. **Install the Google Android emulator package 27.2.7 or higher**
+   &ndash; To install this package, navigate to **Tools > Android >
+   Android SDK Manager** in Visual Studio. Select the **Tools** tab,
+   and ensure the Android Emulator component is at least of version
+   27.2.7.
 
     [![Android SDKs and Tools dialog](hardware-acceleration-images/win/14-sdk-manager.w158-sml.png)](hardware-acceleration-images/win/14-sdk-manager.w158.png#lightbox)
 
-1. **Create a file named** `advancedFeatures.ini` **in the folder** `~\.android\` (aka C:\Users<your-username\.android\) if it doesn't already exist, and add `WindowsHypervisorPlatform = on` to the content of the file.
+5. If the Android Emulator version is less than 27.3.1, apply the
+   additional workaround step explained in **Known Issues** (next).
+
 
 ### Known Issues
 
-* Performance may be reduced when using certain Intel and AMD-based processors.
-* Android application may take an abnormal amount of time to load on deployment.
-* MMIO access error may intermittently prevent a boot of the Android emulator. Restarting the emulator should resolve this.
+-   If the emulator version is at least 27.2.7 but less than 27.3.1,
+    the following workaround is required to use Hyper-V:
+    1.  In the **C:\\Users\\_username_\\.android** folder, create a file called **advancedFeatures.ini** if it doesn't already exist.
+    2.  Add the following line to **advancedFeatures.ini**:
+        ```
+        WindowsHypervisorPlatform = on
+        ```
+
+-   Performance may be reduced when using certain Intel and AMD-based
+    processors.
+
+-   Android application may take an abnormal amount of time to load on
+    deployment.
+
+-   MMIO access error may intermittently prevent a boot of the Android
+    emulator. Restarting the emulator should resolve this.
+
 
 # [Visual Studio for Mac](#tab/vsmac)
 
