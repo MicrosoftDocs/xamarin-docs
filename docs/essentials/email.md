@@ -53,5 +53,5 @@ public class EmailTest
 
 ## API
 
-- [Email source code](https://github.com/xamarin/Essentials/tree/master/Essentials/Email)
+- [Email source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
 - [Email API documentation](xref:Xamarin.Essentials.Email)

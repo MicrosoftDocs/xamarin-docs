@@ -133,5 +133,5 @@ public class BatteryTest
 
 ## API
 
-- [Battery source code](https://github.com/xamarin/Essentials/tree/master/Essentials/Battery)
+- [Battery source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Battery)
 - [Battery API documentation](xref:Xamarin.Essentials.Battery)

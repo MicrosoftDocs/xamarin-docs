@@ -62,5 +62,5 @@ User interface to share to external application that appears when request is mad
 
 ## API
 
-- [Data Transfer source code](https://github.com/xamarin/Essentials/tree/master/Essentials/DataTransfer)
+- [Data Transfer source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DataTransfer)
 - [Data Transfer API documentation](xref:Xamarin.Essentials.DataTransfer)

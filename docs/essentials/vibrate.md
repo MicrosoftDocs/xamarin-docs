@@ -102,5 +102,5 @@ catch (Exception ex)
 
 ## API
 
-- [Vibration source code](https://github.com/xamarin/Essentials/tree/master/Essentials/Vibration)
+- [Vibration source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Vibration)
 - [Vibration API documentation](xref:Xamarin.Essentials.Vibration)

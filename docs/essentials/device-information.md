@@ -70,5 +70,5 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## API
 
-- [DeviceInfo source code](https://github.com/xamarin/Essentials/tree/master/Essentials/DeviceInfo)
+- [DeviceInfo source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DeviceInfo)
 - [DeviceInfo API documentation](xref:Xamarin.Essentials.DeviceInfo)

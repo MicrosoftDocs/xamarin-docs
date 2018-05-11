@@ -72,5 +72,5 @@ Uninstalling the application will cause the _LocalSettings_, and all version tra
 
 ## API
 
-- [Version Tracking source code](https://github.com/xamarin/Essentials/tree/master/Essentials/VersionTracking)
+- [Version Tracking source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/VersionTracking)
 - [Version Tracking API documentation](xref:Xamarin.Essentials.VersionTracking)
