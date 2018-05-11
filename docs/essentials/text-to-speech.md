@@ -10,7 +10,7 @@ ms.date: 05/04/2018
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
 
-The **TextToSpeech** class enables an application utilize the built in text-to-speech engines to speak back text from the device and also to query available languages that the engine can support.
+The **TextToSpeech** class enables an application to utilize the built in text-to-speech engines to speak back text from the device and also to query available languages that the engine can support.
 
 ## Using Text-to-Speech
 
@@ -40,7 +40,7 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-This method takes in an optional CancellationToken to stop the utterance one it starts. 
+This method takes in an optional CancellationToken to stop the utterance once it starts. 
 ```csharp
 CancellationTokenSource cts;
 public async Task SpeakNowDefaultSettings()
@@ -60,7 +60,7 @@ public void CancelSpeech()
 }
 ```
 
-Text-to-Speech will automatically queue speach requests from the same thread. 
+Text-to-Speech will automatically queue speech requests from the same thread. 
 
 ```csharp
 bool isBusy = false;
@@ -110,7 +110,7 @@ The following are supported values for these parameters:
 
 ### Speech Locales
 
-Each platform offers locales to speak back text in multiple languages and accents. Each platform has a different codes and ways of specifying this, which is why Essentials provides a cross-platform `Locale` class and a way to query them with `GetLocalesAsync`.
+Each platform offers locales to speak back text in multiple languages and accents. Each platform has different codes and ways of specifying this, which is why Essentials provides a cross-platform `Locale` class and a way to query them with `GetLocalesAsync`.
 
 ```csharp
 public async Task SpeakNow()
