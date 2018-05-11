@@ -14,7 +14,7 @@ The **SecureStorage** class helps securely store simple key/value pairs.
 
 ## Getting Started
 
-To access the **SecureStorage** functionality the following platform specific setup is required.
+To access the **SecureStorage** functionality, the following platform-specific setup is required:
 
 # [Android](#tab/android)
 
@@ -22,9 +22,9 @@ No additional setup required.
 
 # [iOS](#tab/ios)
 
-When developing on the iOS Simulator it is required to enable the Keychain entitlement and add a Keychain group with the application's package identifier.
+When developing on the iOS simulator, enable the **Keychain** entitlement and add a keychain access group for the application's bundle identifier.
 
-Open the Entitlements.plist in the iOS project and find the Keychain entitlement and enable it. This will automatically add the application's identifier as a group.
+Open the **Entitlements.plist** in the iOS project and find the **Keychain** entitlement and enable it. This will automatically add the application's identifier as a group.
 
 In the project properties under iOS Bundle Signing set the **Entitlements.plist** in the Custom Entitlements.
 
