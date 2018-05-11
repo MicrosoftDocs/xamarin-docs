@@ -26,7 +26,7 @@ When developing on the iOS simulator, enable the **Keychain** entitlement and ad
 
 Open the **Entitlements.plist** in the iOS project and find the **Keychain** entitlement and enable it. This will automatically add the application's identifier as a group.
 
-In the project properties under iOS Bundle Signing set the **Entitlements.plist** in the Custom Entitlements.
+In the project properties, under **iOS Bundle Signing** set the **Custom Entitlements** to **Entitlements.plist**.
 
 # [UWP](#tab/uwp)
 
