@@ -30,7 +30,7 @@ public class ScreenLockTest
         if (ScreenLock.IsMonitoring)
             ScreenLock.RequestActive();
         else
-            ScreenLock.RequestRelease;
+            ScreenLock.RequestRelease();
     }
 }
 ```
