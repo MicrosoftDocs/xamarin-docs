@@ -46,5 +46,5 @@ public class SmsTest
 
 ## API
 
-- [Sms source code](https://github.com/xamarin/Essentials/tree/master/Essentials/Sms)
+- [Sms source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Sms)
 - [Sms API documentation](xref:Xamarin.Essentials.Sms)

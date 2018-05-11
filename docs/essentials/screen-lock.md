@@ -37,5 +37,5 @@ public class ScreenLockTest
 
 ## API
 
-- [Screen Lock source code](https://github.com/xamarin/Essentials/tree/master/Essentials/ScreenLock)
+- [Screen Lock source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/ScreenLock)
 - [Screen Lock API documentation](xref:Xamarin.Essentials.ScreenLock)

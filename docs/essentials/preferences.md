@@ -79,5 +79,5 @@ When storing a string, this API is intended to store small amounts of text.  Per
 
 ## API
 
-- [Preferences source code](https://github.com/xamarin/Essentials/tree/master/Essentials/Preferences)
+- [Preferences source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Preferences)
 - [Preferences API documentation](xref:Xamarin.Essentials.Preferences)

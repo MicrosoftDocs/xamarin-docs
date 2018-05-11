@@ -40,5 +40,5 @@ var text = await Clipboard.GetTextAsync();
 
 ## API
 
-- [Clipboard source code](https://github.com/xamarin/Essentials/tree/master/Essentials/Clipboard)
+- [Clipboard source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Clipboard)
 - [Clipboard API documentation](xref:Xamarin.Essentials.Clipboard)

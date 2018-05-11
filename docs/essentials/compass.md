@@ -83,5 +83,5 @@ Be aware that running multiple sensors from your app at the same time may adjust
 
 ## API
 
-- [Compass source code](https://github.com/xamarin/Essentials/tree/master/Essentials/Compass)
+- [Compass source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
 - [Compass API documentation](xref:Xamarin.Essentials.Compass)

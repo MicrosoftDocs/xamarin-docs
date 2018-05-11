@@ -38,5 +38,5 @@ var build = AppInfo.BuildString;
 
 ## API
 
-- [AppInfo source code](https://github.com/xamarin/Essentials/tree/master/Essentials/AppInfo)
+- [AppInfo source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/AppInfo)
 - [AppInfo API documentation](xref:Xamarin.Essentials.AppInfo)

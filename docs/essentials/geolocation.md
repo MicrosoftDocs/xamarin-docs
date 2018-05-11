@@ -172,5 +172,5 @@ The following table outlines accuracy per platform
 
 ## API
 
-- [Geolocation source code](https://github.com/xamarin/Essentials/tree/master/Essentials/Geolocation)
+- [Geolocation source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geolocation)
 - [Geolocation API documentation](xref:Xamarin.Essentials.Geolocation)
