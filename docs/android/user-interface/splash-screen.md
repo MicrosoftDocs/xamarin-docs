@@ -6,7 +6,7 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 05/11/2018
 ---
 
 # Splash Screen
@@ -200,6 +200,106 @@ public class MainActivity : AppCompatActivity
     // Code omitted for brevity
 }
 ```
+
+## Landscape Mode
+
+The splash screen implemented in the previous steps will display
+correctly in both portrait and landscape mode. However, in some cases
+it is necessary to have separate splash screens for portrait and
+landscape modes (for example, if the splash image is full-screen).
+
+To add a splash screen for landscape mode, use the following steps:
+
+1. In the **Resources/drawable** folder, add the landscape version of
+   the splash screen image you want to use. In this example,
+   **splash_logo_land.png** is the landscape version of the logo that
+   was used in the above examples (it uses black lettering instead of
+   blue).
+
+2. In the **Resources/drawable** folder, create a landscape version of
+   the `layer-list` drawable that was defined earlier (for example,
+   **splash_screen_land.xml**). In this file, set the bitmap path to
+   the landscape version of the splash screen image. In the following
+   example, **splash_screen_land.xml** uses **splash_logo_land.png**:
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+      <item>
+        <color android:color="@color/splash_background"/>
+      </item>
+      <item>
+        <bitmap
+            android:src="@drawable/splash_logo_land"
+            android:tileMode="disabled"
+            android:gravity="center"/>
+      </item>
+    </layer-list>
+
+    ```
+
+3.  Create the **Resources/values-land** folder if it doesn't already
+    exist.
+
+4.  Add the files **colors.xml** and **style.xml** to **values-land**
+    (these can be copied and modified from the existing
+    **values/colors.xml** and **values/style.xml** files).
+
+5.  Modify **values-land/style.xml** so that it uses the landscape
+    version of the drawable for `windowBackground`. In this example,
+    **splash_screen_land.xml** is used:
+
+    ```xml
+    <resources>
+      <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
+      </style>
+        <style name="MyTheme" parent="MyTheme.Base">
+      </style>
+      <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_land</item>
+        <item name="android:windowNoTitle">true</item>  
+        <item name="android:windowFullscreen">true</item>  
+        <item name="android:windowContentOverlay">@null</item>  
+        <item name="android:windowActionBar">true</item>  
+      </style>
+    </resources>
+    ```
+
+6.  Modify **values-land/colors.xml** to configure the colors you want
+    to use for the landscape version of the splash screen. In this
+    example, the splash background color is changed to yellow for
+    landscape mode:
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+      <color name="primary">#2196F3</color>
+      <color name="primaryDark">#1976D2</color>
+      <color name="accent">#FFC107</color>
+      <color name="window_background">#F5F5F5</color>
+      <color name="splash_background">#FFFF00</color>
+    </resources>
+    ```
+
+7.  Build and run the app again. Rotate the device to landscape mode while
+    the splash screen is still displayed. The splash screen changes to the
+    landscape version:
+
+    [![Rotation of splash screen to landscape mode](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
+
+
+Note that the use of a landscape-mode splash screen does not always
+provide a seamless experience. By default, Android launches the app in
+portrait mode and transitions it to landscape mode even if the device
+is already in landscape mode. As a result, if the app is launched while
+the device is in landscape mode, the device briefly presents the
+portrait splash screen and then animates rotation from the portrait to
+the landscape splash screen. Unfortunately, this initial
+portrait-to-landscape transition takes place even when
+`ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape` is
+specified in the splash Activity's flags. The best way to work around
+this limitation is to create a single splash screen image that renders
+correctly in both portrait and landscape modes.
 
 
 ## Summary
