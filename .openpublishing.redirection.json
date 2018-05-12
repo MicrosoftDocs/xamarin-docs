@@ -111,7 +111,15 @@
     {
       "source_path": "docs/xamarin-forms/user-interface/styles/device.md",
       "redirect_url": "/xamarin/xamarin-forms/user-interface/styles/xaml/device"
-    }	
+    },
+    {
+      "source_path": "docs/android/user-interface/layouts/tab-layout/tab-host.md",
+      "redirect_url": "/xamarin/android/user-interface/layouts/tab-layout/with-action-bar"
+    },
+    {
+      "source_path": "docs/android/user-interface/layouts/tab-layout/creating-a-tabbed-ui.md",
+      "redirect_url": "/xamarin/android/user-interface/layouts/tab-layout/with-action-bar"
+    }
   ]
 }
 
