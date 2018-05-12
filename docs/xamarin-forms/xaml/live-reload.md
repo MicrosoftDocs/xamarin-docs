@@ -6,7 +6,7 @@ ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
 ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
-ms.date: 05/08/2018
+ms.date: 05/11/2018
 ---
 
 # Xamarin Live Reload
@@ -49,7 +49,7 @@ Adding Live Reload to existing mobile apps can be done in three steps:
     
     b. **Shared Projects** – Install the **Xamarin.LiveReload** NuGet into all platform projects (such as Android, iOS, UWP, etc.). Ensure that the **Package source** is set to **All**.
 
-![Add Xamarin Live Reload NuGet with NuGet Package Manager](images/addlivereloadnuget.png)
+    [![Add Xamarin Live Reload NuGet with NuGet Package Manager](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
 
 3. Add `LiveReload.Init();` to the constructor in the `Application` class, as shown in the following code snippet:
 
