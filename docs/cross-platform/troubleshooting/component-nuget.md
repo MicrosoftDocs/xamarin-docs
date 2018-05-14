@@ -10,7 +10,10 @@ ms.date: 04/18/2018
 ---
 # Updating component references to NuGet
 
-> [!NOTE]
+> [!IMPORTANT]
+> The Component Store has been discontinued as of May 15, 2018 (this closure was 
+> originally [announced](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) in November 2017).
+>
 > Xamarin Components are no longer supported in Visual Studio, and should be replaced by
 > NuGet packages. Follow the instructions below to manually remove component references
 > from your projects.
@@ -19,9 +22,11 @@ Refer to these instructions for adding NuGet packages
 on [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 or [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
+A list of popular Xamarin [plugins and libraries](https://github.com/xamarin/XamarinComponents/blob/master/README.md) is available to help find alternatives to components which are unavailable as NuGet pacakges.
+
 ## Manually removing component references
 
-In November 2017, it was [announced](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) that the Xamarin Component Store would be discontinued. In an effort to move forward with the sunsetting of components, the 15.6 release of Visual Studio and 7.4 release of Visual Studio for Mac no longer support components in your project. 
+The 15.6 release of Visual Studio and 7.4 release of Visual Studio for Mac no longer support components in your project. 
 
 # [Visual Studio](#tab/vswin)
 
@@ -218,6 +223,6 @@ alternative delivery options.
 
 
 ## Related Links
-
+- [List of popular Xamarin Plugins and Libraries](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
 - [Install and use a NuGet package (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 - [Including a NuGet package (Mac)](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)
