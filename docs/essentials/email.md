@@ -25,7 +25,7 @@ The Email functionality works by calling the `ComposeAsync` method an `EmailMess
 ```csharp
 public class EmailTest
 {
-    public async Task SendEmail(string subject, string, body, List<string> recipients)
+    public async Task SendEmail(string subject, string body, List<string> recipients)
     {
         try
         {
