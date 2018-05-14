@@ -6,7 +6,7 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/11/2018
+ms.date: 05/14/2018
 ---
 
 # Splash Screen
@@ -213,7 +213,7 @@ To add a splash screen for landscape mode, use the following steps:
 1. In the **Resources/drawable** folder, add the landscape version of
    the splash screen image you want to use. In this example,
    **splash_logo_land.png** is the landscape version of the logo that
-   was used in the above examples (it uses black lettering instead of
+   was used in the above examples (it uses white lettering instead of
    blue).
 
 2. In the **Resources/drawable** folder, create a landscape version of
@@ -235,7 +235,6 @@ To add a splash screen for landscape mode, use the following steps:
             android:gravity="center"/>
       </item>
     </layer-list>
-
     ```
 
 3.  Create the **Resources/values-land** folder if it doesn't already
@@ -267,7 +266,7 @@ To add a splash screen for landscape mode, use the following steps:
 
 6.  Modify **values-land/colors.xml** to configure the colors you want
     to use for the landscape version of the splash screen. In this
-    example, the splash background color is changed to yellow for
+    example, the splash background color is changed to blue for
     landscape mode:
 
     ```xml
@@ -277,7 +276,7 @@ To add a splash screen for landscape mode, use the following steps:
       <color name="primaryDark">#1976D2</color>
       <color name="accent">#FFC107</color>
       <color name="window_background">#F5F5F5</color>
-      <color name="splash_background">#FFFF00</color>
+      <color name="splash_background">#3498DB</color>
     </resources>
     ```
 
