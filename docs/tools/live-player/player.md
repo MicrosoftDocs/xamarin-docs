@@ -5,29 +5,11 @@ ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: topgenorth
 ms.author: toopge
-ms.date: 05/10/2017
+ms.date: 05/14/2017
 ---
 # Xamarin Live Player App
 
 ![Preview feature](~/media/shared/preview.png)
-
-## Get the App
-
-# [Android](#tab/android)
-
-Xamarin Live Player is available for Android from Google Play:
-
-[![Available on Google Play](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
-
-For Android devices without Google Play the Xamarin Live Player is available through [HockeyApp](https://aka.ms/xlp-hockeyapp) distribution. Additionally, early preview builds for Android can be installed directly from Google Play by opting in to the [open beta program](https://play.google.com/apps/testing/com.xamarin.live)
-
-# [iOS](#tab/ios)
-
-We encourage users to join the [Xamarin Live Player app _iOS Preview_](https://aka.ms/liveplayeralpha) to enjoy quick access to the latest improvements through TestFlight.
-
------
-
-## Using the App
 
 Once you have installed the app on your phone, follow the
 [setup instructions](~/tools/live-player/install.md) to connect to your

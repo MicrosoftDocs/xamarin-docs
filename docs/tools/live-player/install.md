@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 author: topgenorth
 ms.author: toopge
-ms.date: 11/22/2017
+ms.date: 05/14/2018
 ---
 # Xamarin Live Player Setup
 
@@ -25,7 +25,9 @@ For Android devices without Google Play the Xamarin Live Player is available thr
 
 # [iOS](#tab/ios)
 
-We encourage users to join the [Xamarin Live Player app _iOS Preview_](https://aka.ms/liveplayeralpha) to enjoy quick access to the latest improvements through TestFlight.
+We encourage users to join the Xamarin Live Player app iOS Preview to enjoy quick access to the latest improvements through TestFlight. By accessing the Xamarin Live Player, you’re agreeing to the Microsoft [Terms of Use](https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx) & [Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement). Microsoft may use your contact information to provide updates and special offers about Xamarin and other Microsoft products and services. You can unsubscribe at any time.
+
+To access the Xamarin Live Player iOS Preview, please complete the [TestFlight registration information](https://fastring.xamarinliveplayer.com/), after which you will receive an email from TestFlight on how to install the Xamarin Live Player iOS Preview.
 
 -----
 
