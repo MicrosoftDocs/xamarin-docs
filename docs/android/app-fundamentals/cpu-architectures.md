@@ -35,12 +35,11 @@ configured for **Debug**, the **Use Shared Runtime** and **Use Fast
 Deployment** options are enabled, which disable explicit architecture
 selection.
 
-In Visual Studio, double-click **Properties** under your project in
-**Solution Explorer** and select the **Android Options** page. Click
-the **Packaging** tab and verify that **Use Shared Runtime** is
+In Visual Studio, right-click on your project under the
+**Solution Explorer** and select **Properties**. Under the **Android Options** 
+page check the **Packaging properties** section and verify that **Use Shared Runtime** is
 disabled (turning this off allows you to explicitly select which ABIs
-to support). Click the **Advanced** tab and, under **Advanced
-Properties**, check the architectures that you want to support:
+to support). Click the **Advanced** button and, under **Supported architectures**, check the architectures that you want to support:
 
 [![Selecting armeabi and armeabi-v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 
