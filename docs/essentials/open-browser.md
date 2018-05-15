@@ -28,7 +28,7 @@ public class BrowserTest
 {
     public async Task OpenBrowser(Uri uri)
     {
-        await Browser.RequestAsync(uri, BrowserLaunchType.SystemPreferred);
+        await Browser.OpenAsync(uri, BrowserLaunchType.SystemPreferred);
     }
 }
 ```
