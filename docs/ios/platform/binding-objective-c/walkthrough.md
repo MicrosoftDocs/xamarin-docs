@@ -422,7 +422,7 @@ sdk: macosx10.11     arch: x86_64  i386
 sdk: watchos2.2      arch: armv7
 ```
 
-From the above, we can see that we have the `iphoneos8.1` SDK installed on our machine. With this information in place, we are ready to parse the InfColorPicker project `.h` files into the initial **ApiDefinition.cs** and `StructsAndEnums.cs` for the InfColorPicker project.
+From the above, we can see that we have the `iphoneos9.3` SDK installed on our machine. With this information in place, we are ready to parse the InfColorPicker project `.h` files into the initial **ApiDefinition.cs** and `StructsAndEnums.cs` for the InfColorPicker project.
 
 Enter the following command in the the Terminal app:
 
