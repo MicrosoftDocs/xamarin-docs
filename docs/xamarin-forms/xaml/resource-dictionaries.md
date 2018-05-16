@@ -31,7 +31,7 @@ Resources are defined in a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDic
 A Xamarin.Forms program contains only one class that derives from `Application` but often makes use of many classes that derive from `VisualElement`, including pages, layouts, and controls. Any of these objects can have its `Resources` property set to a `ResourceDictionary`. Choosing where to put a particular `ResourceDictionary` impacts where the resources can be used:
 
 - Resources in a `ResourceDictionary` that is attached to a view such as `Button` or `Label` can only be applied to that particular object, so this is not very useful.
-- Resources in a `ResourceDictionary` attached to a layout such as `StackLayout` or `Grid` can be applied to the layout and all the children of that layout. 
+- Resources in a `ResourceDictionary` attached to a layout such as `StackLayout` or `Grid` can be applied to the layout and all the children of that layout.
 - Resources in a `ResourceDictionary` defined at the page level can be applied to the page and to all its children.
 - Resources in a `ResourceDictionary` defined at the application level can be applied throughout the application.
 
@@ -183,7 +183,7 @@ You can instantiate `MyResourceDictionary` by putting it between a pair of `Reso
         <local:MyResourceDictionary />
 	</ContentPage.Resources>
 	...
-</ContentPage>	
+</ContentPage>
 ```
 
 An instance of `MyResourceDictionary` is set to the `Resources` property of the `ContentPage` object.
@@ -254,7 +254,7 @@ When merged [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) resour
 
 ## Merging Dictionaries in Xamarin.Forms 3.0
 
-Beginning with Xamarin.Forms 3.0, the process of merging `ResourceDictionaries` has become somewhat easier and more flexible. The `MergedDictionaries` property-element tags are no longer necessary. Instead, you add to the resource dictionary another `ResourceDictionary` tag with the new [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) property set to the filename of the XAML file with the resources:
+Beginning with Xamarin.Forms 3.0, the process of merging [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) instances has become somewhat easier and more flexible. The `MergedDictionaries` property-element tags are no longer necessary. Instead, you add to the resource dictionary another `ResourceDictionary` tag with the new [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) property set to the filename of the XAML file with the resources:
 
 ```xaml
 <ContentPage ...>
@@ -290,7 +290,7 @@ Because Xamarin.Forms 3.0 automatically instantiates the `ResourceDictionary`, t
 </ContentPage>
 ```
 
-This new syntax does _not_ instantiate the `MyResourceDictionary` class. Instead, it references the XAML file. For that reason the code-behind file (**MyResourceDictionary.xaml.cs**) is no longer required. You can also remove the `x:Class` attribute from the root tag of the **MyResourceDictionary.xaml** file. 
+This new syntax does _not_ instantiate the `MyResourceDictionary` class. Instead, it references the XAML file. For that reason the code-behind file (**MyResourceDictionary.xaml.cs**) is no longer required. You can also remove the `x:Class` attribute from the root tag of the **MyResourceDictionary.xaml** file.
 
 ## Summary
 

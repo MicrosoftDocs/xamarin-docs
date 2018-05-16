@@ -13,7 +13,7 @@ ms.date: 01/12/2016
 
 _A description of all the visual elements used to construct a Xamarin.Forms application._
 
-The visual interface of a Xamarin.Forms application is constructed of objects that map to the native controls of each target platform. This allows platform-specific applications for iOS, Android, and the Universal Windows Platform to use Xamarin.Forms code contained in  a [.NET Standard Library](~/cross-platform/app-fundamentals/net-standard.md) or a [Shared Project](~/cross-platform/app-fundamentals/shared-projects.md).
+The visual interface of a Xamarin.Forms application is constructed of objects that map to the native controls of each target platform. This allows platform-specific applications for iOS, Android, and the Universal Windows Platform to use Xamarin.Forms code contained in  a [.NET Standard library](~/cross-platform/app-fundamentals/net-standard.md) or a [Shared Project](~/cross-platform/app-fundamentals/shared-projects.md).
 
 The four main control groups used to create the user interface of a Xamarin.Forms application are shown in these four articles:
 

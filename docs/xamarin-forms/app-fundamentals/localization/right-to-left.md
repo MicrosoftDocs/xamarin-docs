@@ -101,7 +101,7 @@ The required language resources should be specified in the `<Resources>` node of
 </Resources>
 ```
 
-In addition, UWP requires that the app's default culture is explicitly defined in the .NET Standard Library. This can be accomplished by setting the `NeutralResourcesLanguage` attribute in `AssemblyInfo.cs`, or in another class, to the default culture:
+In addition, UWP requires that the app's default culture is explicitly defined in the .NET Standard library. This can be accomplished by setting the `NeutralResourcesLanguage` attribute in `AssemblyInfo.cs`, or in another class, to the default culture:
 
 ```csharp
 using System.Resources;
