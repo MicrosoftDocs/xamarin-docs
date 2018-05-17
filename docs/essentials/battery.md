@@ -102,7 +102,7 @@ switch (source)
 }
 ```
 
-Whenever any of the battery's properties chagne an event is triggered:
+Whenever any of the battery's properties change an event is triggered:
 
 ```csharp
 public class BatteryTest
