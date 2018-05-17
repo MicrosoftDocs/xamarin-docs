@@ -26,7 +26,7 @@ To get the application's directory to store **cache data**. Cache data can be us
 var cacheDir = FileSystem.CacheDirectory;
 ```
 
-To get the application's top-level diredctory for any files that are not user data files. These files are backed up with the operating system syncing framework. See Platform Implementation Specifics below.
+To get the application's top-level directory for any files that are not user data files. These files are backed up with the operating system syncing framework. See Platform Implementation Specifics below.
 
 ```csharp
 var mainDir = FileSystem.AppDataDirectory;
