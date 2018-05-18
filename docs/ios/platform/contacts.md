@@ -366,6 +366,6 @@ existing contacts and display contact information.
 ## Related Links
 
 - [QuickContacts Sample](https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/)
-- [What's New in iOS 9](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-DontLinkElementID_14)
-- [Contacts Framework Reference](https://developer.apple.com/library/prerelease/ios/documentation/Contacts/Reference/Contacts_Framework/index.html#//apple_ref/doc/uid/TP40015328)
-- [ContactsUI Framework Reference](https://developer.apple.com/library/prerelease/ios/documentation/ContactsUI/Reference/ContactsUI_Framework/index.html#//apple_ref/doc/uid/TP40016207)
+- [What's New in iOS 9](https://developer.apple.com/library/content/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [Contacts Framework Reference](https://developer.apple.com/documentation/contacts?language=objc)
+- [ContactsUI Framework Reference](https://developer.apple.com/documentation/contactsui?language=objc)
