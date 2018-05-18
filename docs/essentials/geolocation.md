@@ -6,7 +6,7 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ---
-# Xamarin.Essentials Geocoding
+# Xamarin.Essentials Geolocation
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
 
