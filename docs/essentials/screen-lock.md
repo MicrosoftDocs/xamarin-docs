@@ -27,7 +27,7 @@ public class ScreenLockTest
 {
     public void ToggleScreenLock()
     {
-        if (ScreenLock.IsMonitoring)
+        if (ScreenLock.IsActive)
             ScreenLock.RequestActive();
         else
             ScreenLock.RequestRelease();
