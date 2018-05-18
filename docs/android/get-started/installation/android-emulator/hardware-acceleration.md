@@ -54,11 +54,11 @@ To get started with using Hyper-V and the Google Android Emulator:
     It may be necessary to reboot Windows after enabling Hyper-V and the Windows Hypervisor Platform.
 
 3. **Install
-   [Visual Studio 15.8 Preview 1](https://aka.ms/hyperv-emulator-dl)**
+   [Visual Studio 15.8 Preview 1 or later](https://www.visualstudio.com/vs/preview/)**
    &ndash; This version of Visual Studio provides IDE support for
    starting the Google Android Emulator with Hyper-V support.
 
-4. **Install the Google Android emulator package 27.2.7 or higher**
+4. **Install the Google Android emulator package 27.2.7 or later**
    &ndash; To install this package, navigate to **Tools > Android >
    Android SDK Manager** in Visual Studio. Select the **Tools** tab,
    and ensure the Android Emulator component is at least of version
