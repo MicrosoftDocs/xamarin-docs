@@ -20,7 +20,7 @@ _Right-to-left localization adds support for right-to-left flow direction to Xam
 Flow direction is the direction in which the UI elements on the page are scanned by the eye. Some languages, such as Arabic and Hebrew, require that UI elements are laid out in a right-to-left flow direction. This can be achieved by setting the [`VisualElement.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property. This property gets or sets the direction in which UI elements flow within any parent element that controls their layout, and should be set to one of the [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) enumeration values:
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
-- [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
+- [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
 Setting the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property to [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) on an element generally sets the alignment to the right, the reading order to right-to-left, and the layout of the control to flow from right-to-left:
