@@ -49,7 +49,7 @@ To open a file that is bundled into the application package:
 # [Android](#tab/android)
 
 - **CacheDirectory** – Returns the [CacheDir](https://developer.android.com/reference/android/content/Context.html#getCacheDir) of the current context.
-- **AppDataDirectory** – Returns the [FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir) of the current context and are backed up using [Autu Backup](https://developer.android.com/guide/topics/data/autobackup.html) starting on API 23 and above.
+- **AppDataDirectory** – Returns the [FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir) of the current context and are backed up using [Auto Backup](https://developer.android.com/guide/topics/data/autobackup.html) starting on API 23 and above.
 
 Add any file into the **Assets** folder in the Android project and mark the Build Action as **AndroidAsset** to use it with `OpenAppPackageFileAsync`.
 
