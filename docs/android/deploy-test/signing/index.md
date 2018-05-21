@@ -5,7 +5,7 @@ ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/26/2018
+ms.date: 05/21/2018
 ---
 
 # Signing the Android Application Package
@@ -168,9 +168,9 @@ prompt for the password for the selected certificate:
 
 [![Signing Password dialog](images/vs/07-signing-password-vs-sml.png)](images/vs/07-signing-password-vs.png#lightbox)
 
-After the signing process completes, click **Open Folder**:
+After the signing process completes, click **Open Distribution**:
 
-[![Open Folder button](images/vs/08-open-folder-vs-sml.png)](images/vs/08-open-folder-vs.png#lightbox)
+[![Open Distribution button](images/vs/08-open-distribution-sml.png)](images/vs/08-open-distribution.png#lightbox)
 
 This causes Windows Explorer to open the folder containing the
 generated APK file. At this point, Visual Studio has compiled the
