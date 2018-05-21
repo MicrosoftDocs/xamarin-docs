@@ -6,10 +6,19 @@ ms.assetid: CC6A0D52-E9FA-4270-B3FA-84660621D6D5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 10/13/2017
+ms.date: 05/21/2018
 ---
 
 # Advanced Concepts and Internals
+
+_This section contains topics that explain the architecture, API
+design, and limitations of Xamarin.Android. In addition, it includes
+topics that explain its garbage collection implementation and the
+assemblies that are available in Xamarin.Android. Because
+Xamarin.Android is
+[open-source](https://github.com/xamarin/xamarin-android), it is also
+possible to understand the inner workings of Xamarin.Android by
+examining its source code._
 
 
 ##  [Architecture](~/android/internals/architecture.md)
