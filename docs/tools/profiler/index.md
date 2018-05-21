@@ -20,34 +20,13 @@ The Xamarin Profiler has a number of instruments available for profiling — All
 
 This guide examines common profiling scenarios and introduces the profiler as a tool to help analyze and optimize iOS and Android applications.
 
-## Contents
-
-- [Download and Install](#Download_and_Install)
-- [Profilers and Profiling](#Profilers_and_Profiling)
-- [Xamarin Profiler](#Xamarin_Profiler)
-- [Profiler Support](#Profiler_Support)
-- [Profiler Basics](#Profiler_Basics)
-	- [Allowing Profiling in your App](#Allowing_Profiling_in_your_App)
-	- [Launching the Profiler](#Launching_the_Profiler)
-		- [Launching from Visual Studio for Mac](#Launching_from_Xamarin_Studio)
-		- [Launching from Visual Studio](#Launching_from_Visual_Studio)
-		- [Saving and Loading Profiler Sessions](#Saving_and_Loading_Profiler_Sessions)
-		- [Profiler Features and Instruments](#Profiler_Features)
-	- [Allocations](#Allocations)
-	- [Time Profiler](#Time_Profiler)
-	- [Cycles](#Cycles)
-- [Profiling Applications](#Profiling_Applications)
-- [Summary](#Summary)
-
 ## Download and Install
 
 > [!NOTE]
-> **NOTE:** You will need to be a [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) subscriber to unlock this feature in either Visual Studio Enterprise on Windows or Visual Studio for Mac on a Mac.
+> You will need to be a [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) subscriber to unlock this feature in either Visual Studio Enterprise on Windows or Visual Studio for Mac on a Mac.
 
 The Xamarin Profiler is a standalone application, and is integrated with
 Visual Studio for Mac and Visual Studio to enable profiling from within the IDE.
-
-### Download
 
 Download the install package for your platform:
 
@@ -55,7 +34,6 @@ Download the install package for your platform:
 - [**Windows**](https://dl.xamarin.com/profiler/profiler-windows.msi)
 
 Once downloaded, launch the installer to add the Xamarin Profiler to your system.
-
 
 ## Profilers and Profiling
 
@@ -196,7 +174,6 @@ You can load *.mlpd* files into the Profiler by opening the standalone applicati
 
 For more information, see [Generating .mlpd Files ](~/tools/profiler/troubleshooting.md#gen_mlpd).
 
-
 ## Profiler Features
 
 The Xamarin Profiler is composed of five sections as illustrated below:
@@ -295,7 +272,6 @@ The plot chart, as shown in the screenshot below, displays the number of samples
 
 -----
 
-
 - **Call Tree** – Shows amount of time spent in each method:
 
 # [Visual Studio for Mac](#tab/vsmac)
@@ -337,24 +313,7 @@ If you profile an app with any other configuration, you will be presented with t
 
 -----
 
-
 Select **Update** to continue.
-
-<!---
-## Profiling Android Applications
-
-
-Due to the recent inclusion of the profiling libraries into any new Android project template, you will find that when profiling any legacy applications you are greeted with the message dialog above.
-
-You will need to enable this to make sure that the profiling libraries are included in your Android application, for debug builds. This should not be checked for release builds as it creates overhead.
-
-
-## Profiling iOS Applications
-
-### Profiling tvOS
-
-## Profiling Mac Applications
--->
 
 ### SGen Garbage Collector and Profiling
 
@@ -371,7 +330,6 @@ For more information on memory management, refer to the [Memory and Performance 
 ## Summary
 
 In this guide we looked at what profiling is and how it is advantageous to the developer. We then introduced the Xamarin Profiler, providing some history and information into how it works. Finally we toured the features of the Xamarin Profiler, and explored the Allocations and Time Profiler Instruments.
-
 
 ## Related Links
 
