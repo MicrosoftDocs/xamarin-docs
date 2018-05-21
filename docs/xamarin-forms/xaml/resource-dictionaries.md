@@ -6,7 +6,7 @@ ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 05/07/2018
+ms.date: 05/21/2018
 ---
 
 # Resource Dictionaries
@@ -26,7 +26,7 @@ In XAML, resources that are stored in a `ResourceDictionary` can then be retriev
 Resources are defined in a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) that is then set to one of the following `Resources` properties:
 
 - The [`Resources`](xref:Xamarin.Forms.Application.Resources) property of any class that derives from [`Application`](xref:Xamarin.Forms.Application)
-- The [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) property of any class that derives from ['VisualElement`](xref:Xamarin.Forms.Application)
+- The [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) property of any class that derives from [`VisualElement`](xref:Xamarin.Forms.Application)
 
 A Xamarin.Forms program contains only one class that derives from `Application` but often makes use of many classes that derive from `VisualElement`, including pages, layouts, and controls. Any of these objects can have its `Resources` property set to a `ResourceDictionary`. Choosing where to put a particular `ResourceDictionary` impacts where the resources can be used:
 
@@ -39,18 +39,18 @@ The following XAML shows resources defined in an application level `ResourceDict
 
 ```xaml
 <Application ...>
-	<Application.Resources>
-		<ResourceDictionary>
-			<Color x:Key="PageBackgroundColor">Yellow</Color>
-			<Color x:Key="HeadingTextColor">Black</Color>
-			<Color x:Key="NormalTextColor">Blue</Color>
-			<Style x:Key="LabelPageHeadingStyle" TargetType="Label">
-				<Setter Property="FontAttributes" Value="Bold" />
-				<Setter Property="HorizontalOptions" Value="Center" />
-				<Setter Property="TextColor" Value="{StaticResource HeadingTextColor}" />
-			</Style>
-		</ResourceDictionary>
-	</Application.Resources>
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PageBackgroundColor">Yellow</Color>
+            <Color x:Key="HeadingTextColor">Black</Color>
+            <Color x:Key="NormalTextColor">Blue</Color>
+            <Style x:Key="LabelPageHeadingStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource HeadingTextColor}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
 ```
 
@@ -60,16 +60,16 @@ Beginning in Xamarin.Forms 3.0, the explicit `ResourceDictionary` tags are not r
 
 ```xaml
 <Application ...>
-	<Application.Resources>
-		<Color x:Key="PageBackgroundColor">Yellow</Color>
-		<Color x:Key="HeadingTextColor">Black</Color>
-		<Color x:Key="NormalTextColor">Blue</Color>
-		<Style x:Key="LabelPageHeadingStyle" TargetType="Label">
-			<Setter Property="FontAttributes" Value="Bold" />
-			<Setter Property="HorizontalOptions" Value="Center" />
-			<Setter Property="TextColor" Value="{StaticResource HeadingTextColor}" />
-		</Style>
-	</Application.Resources>
+    <Application.Resources>
+        <Color x:Key="PageBackgroundColor">Yellow</Color>
+        <Color x:Key="HeadingTextColor">Black</Color>
+        <Color x:Key="NormalTextColor">Blue</Color>
+        <Style x:Key="LabelPageHeadingStyle" TargetType="Label">
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="TextColor" Value="{StaticResource HeadingTextColor}" />
+        </Style>
+    </Application.Resources>
 </Application>
 ```
 
@@ -89,15 +89,15 @@ Each resource has a key that is specified using the `x:Key` attribute, which bec
     </ResourceDictionary>
   </StackLayout.Resources>
   <Label Text="ResourceDictionary Demo" Style="{StaticResource LabelPageHeadingStyle}" />
-	<Label Text="This app demonstrates consuming resources that have been defined in resource dictionaries."
-		   Margin="10,20,10,0"
-		   Style="{StaticResource LabelNormalStyle}" />
-	<Button Text="Navigate"
-			Clicked="OnNavigateButtonClicked"
-			TextColor="{StaticResource NormalTextColor}"
-			Margin="0,20,0,0"
-			HorizontalOptions="Center"
-			Style="{StaticResource MediumBoldText}" />
+    <Label Text="This app demonstrates consuming resources that have been defined in resource dictionaries."
+           Margin="10,20,10,0"
+           Style="{StaticResource LabelNormalStyle}" />
+    <Button Text="Navigate"
+            Clicked="OnNavigateButtonClicked"
+            TextColor="{StaticResource NormalTextColor}"
+            Margin="0,20,0,0"
+            HorizontalOptions="Center"
+            Style="{StaticResource MediumBoldText}" />
 </StackLayout>
 ```
 
@@ -114,25 +114,25 @@ When `ResourceDictionary` resources share `x:Key` attribute values, resources de
 
 ```xaml
 <ContentPage ... BackgroundColor="{StaticResource PageBackgroundColor}">
-	<ContentPage.Resources>
-		<ResourceDictionary>
-			<Color x:Key="PageBackgroundColor">Blue</Color>
-			<Color x:Key="NormalTextColor">Yellow</Color>
-		</ResourceDictionary>
-	</ContentPage.Resources>
-	<StackLayout Margin="0,20,0,0">
-		...
-		<Label Text="ResourceDictionary Demo" Style="{StaticResource LabelPageHeadingStyle}" />
-		<Label Text="This app demonstrates consuming resources that have been defined in resource dictionaries."
-			   Margin="10,20,10,0"
-			   Style="{StaticResource LabelNormalStyle}" />
-		<Button Text="Navigate"
-				Clicked="OnNavigateButtonClicked"
-				TextColor="{StaticResource NormalTextColor}"
-				Margin="0,20,0,0"
-				HorizontalOptions="Center"
-				Style="{StaticResource MediumBoldText}" />
-	</StackLayout>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PageBackgroundColor">Blue</Color>
+            <Color x:Key="NormalTextColor">Yellow</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Margin="0,20,0,0">
+        ...
+        <Label Text="ResourceDictionary Demo" Style="{StaticResource LabelPageHeadingStyle}" />
+        <Label Text="This app demonstrates consuming resources that have been defined in resource dictionaries."
+               Margin="10,20,10,0"
+               Style="{StaticResource LabelNormalStyle}" />
+        <Button Text="Navigate"
+                Clicked="OnNavigateButtonClicked"
+                TextColor="{StaticResource NormalTextColor}"
+                Margin="0,20,0,0"
+                HorizontalOptions="Center"
+                Style="{StaticResource MediumBoldText}" />
+    </StackLayout>
 </ContentPage>
 ```
 
@@ -179,10 +179,10 @@ You can instantiate `MyResourceDictionary` by putting it between a pair of `Reso
 
 ```xaml
 <ContentPage ...>
-	<ContentPage.Resources>
+    <ContentPage.Resources>
         <local:MyResourceDictionary />
-	</ContentPage.Resources>
-	...
+    </ContentPage.Resources>
+    ...
 </ContentPage>
 ```
 
@@ -203,13 +203,13 @@ And instance of `MyResourceDictionary` can be merged into any application, page,
 
 ```xaml
 <ContentPage ...>
-	<ContentPage.Resources>
+    <ContentPage.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <local:MyResourceDictionary />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-	</ContentPage.Resources>
+    </ContentPage.Resources>
     ...
 </ContentPage>
 ```
@@ -218,10 +218,10 @@ That markup shows only an instance of `MyResourceDictionary` being added to the 
 
 ```xaml
 <ContentPage ...>
-	<ContentPage.Resources>
+    <ContentPage.Resources>
         <ResourceDictionary>
 
-			<!-- Add more resources here -->
+            <!-- Add more resources here -->
 
             <ResourceDictionary.MergedDictionaries>
 
@@ -233,10 +233,10 @@ That markup shows only an instance of `MyResourceDictionary` being added to the 
 
             </ResourceDictionary.MergedDictionaries>
 
-			<!-- Add more resources here -->
+            <!-- Add more resources here -->
 
         </ResourceDictionary>
-	</ContentPage.Resources>
+    </ContentPage.Resources>
     ...
 </ContentPage>
 ```
@@ -258,17 +258,17 @@ Beginning with Xamarin.Forms 3.0, the process of merging [`ResourceDictionary`](
 
 ```xaml
 <ContentPage ...>
-	<ContentPage.Resources>
+    <ContentPage.Resources>
         <ResourceDictionary>
 
-			<!-- Add more resources here -->
+            <!-- Add more resources here -->
 
             <ResourceDictionary Source="MyResourceDictionary.xaml" />
 
-			<!-- Add more resources here -->
+            <!-- Add more resources here -->
 
         </ResourceDictionary>
-	</ContentPage.Resources>
+    </ContentPage.Resources>
     ...
 </ContentPage>
 ```
@@ -277,15 +277,15 @@ Because Xamarin.Forms 3.0 automatically instantiates the `ResourceDictionary`, t
 
 ```xaml
 <ContentPage ...>
-	<ContentPage.Resources>
+    <ContentPage.Resources>
 
-		<!-- Add more resources here -->
+        <!-- Add more resources here -->
 
         <ResourceDictionary Source="MyResourceDictionary.xaml" />
 
-		<!-- Add more resources here -->
+        <!-- Add more resources here -->
 
-	</ContentPage.Resources>
+    </ContentPage.Resources>
     ...
 </ContentPage>
 ```
