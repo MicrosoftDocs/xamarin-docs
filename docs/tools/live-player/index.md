@@ -18,7 +18,7 @@ The Xamarin Live Player is designed as a getting started sandbox for developers 
 
 [![Xamarin Live Player: Code, Scan, Test](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
-1. Download the app by flowing the [Xamarin Live Player setup](install.md) instructions.
+1. Download the app by following the [Xamarin Live Player setup](install.md) instructions.
 2. Enable the *Xamarin Live Player* in **Preferences**, then select your device from the **Devices** list.
 2. Manage Live Player devices to scan a QR code to pair your device to Visual Studio.
 3. The app runs right on your phone or tablet.
