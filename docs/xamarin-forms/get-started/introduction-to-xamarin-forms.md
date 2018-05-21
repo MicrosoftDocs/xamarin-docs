@@ -17,7 +17,7 @@ _Xamarin.Forms is a cross-platform natively backed UI toolkit abstraction that a
 
 ## Overview
 
-Xamarin.Forms is a framework that allows developers to rapidly create cross platform user interfaces. It provides it's own abstraction for the user interface that will be rendered using native controls on iOS, Android, or the Universal Windows Platform (UWP). This means that applications can share a large portion of their user interface code and still retain the native look and feel of the target platform.
+Xamarin.Forms is a framework that allows developers to rapidly create cross platform user interfaces. It provides its own abstraction for the user interface that will be rendered using native controls on iOS, Android, or the Universal Windows Platform (UWP). This means that applications can share a large portion of their user interface code and still retain the native look and feel of the target platform.
 
 Xamarin.Forms allows for rapid prototyping of applications that can evolve over time to complex applications. Because Xamarin.Forms applications are native applications, they don't have the limitations of other toolkits such as browser sandboxing, limited APIs, or poor performance. Applications written using Xamarin.Forms are able to utilize any of the API’s or features of the underlying platform, such as (but not limited to) CoreMotion, PassKit, and StoreKit on iOS; NFC and Google Play Services on Android; and Tiles on Windows. In addition, it's possible to create applications that will have parts of their user interface created with Xamarin.Forms while other parts are created using the native UI toolkit.
 
