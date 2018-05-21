@@ -6,6 +6,7 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ---
+
 # Xamarin.Essentials Geolocation
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
@@ -14,7 +15,7 @@ The **Geolocation** class provides APIs to retrieve the device's current geoloca
 
 ## Getting Started
 
-To access the **Geolocation** functionality the following platform specific setup is required.
+To access the **Geolocation** functionality, the following platform-specific setup is required:
 
 # [Android](#tab/android)
 
@@ -30,9 +31,9 @@ Open the **AssemblyInfo.cs** file under the **Properties** folder and add:
 [assembly: UsesFeature("android.hardware.location.network", Required = false)]
 ```
 
-OR Update Android Manifest:
+Or update the Android manifest:
 
-Open the **AndroidManifest.xml** file under the **Properties** folder and add the following inside of the **manifest** node.
+Open the **AndroidManifest.xml** file under the **Properties** folder and add the following inside of the **manifest** node:
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -42,15 +43,15 @@ Open the **AndroidManifest.xml** file under the **Properties** folder and add th
 <uses-feature android:name="android.hardware.location.network" android:required="false" />
 ```
 
-Or right click on the Anroid project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check the **ACCESS_COARSE_LOCATION** and **ACCESS_FINE_LOCATION** permissions. This will automatically update the **AndroidManifest.xml** file.
+Or right-click on the Android project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check the **ACCESS_COARSE_LOCATION** and **ACCESS_FINE_LOCATION** permissions. This will automatically update the **AndroidManifest.xml** file.
 
 # [iOS](#tab/ios)
 
-Your app is required to have keys in your **Info.plist** for NSLocationWhenInUseUsageDescription in order to access the device’s location.
+Your app's **Info.plist** must contain the `NSLocationWhenInUseUsageDescription` key in order to access the device’s location.
 
 Open the plist editor and add the **Privacy - Location When In Use Usage Description** property and fill in a value to display the user.
 
-OR manually edit the file and add the following:
+Or manually edit the file and add the following:
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
@@ -59,7 +60,7 @@ OR manually edit the file and add the following:
 
 # [UWP](#tab/uwp)
 
-You must set the `Location` permission for the application. This can be done by open the **Package.appxmanifest** and selecing the **Capabilities** tab and checking **Location**.
+You must set the `Location` permission for the application. This can be done by opening the **Package.appxmanifest** and selecing the **Capabilities** tab and checking **Location**.
 
 -----
 
@@ -99,7 +100,7 @@ catch (Exception ex)
 }
 ```
 
-To query the current device's [location](xref:Xamarin.Essentials.Location) coordinates the `GetLocationAsync` can be used. It is recommended to pass in a full `GeolocationRequest` and `CancellationToken` since it may take some time to get the device's location.
+To query the current device's [location](xref:Xamarin.Essentials.Location) coordinates, the `GetLocationAsync` can be used. It is best to pass in a full `GeolocationRequest` and `CancellationToken` since it may take some time to get the device's location.
 
 ```csharp
 try
@@ -128,7 +129,7 @@ catch (Exception ex)
 
 ## Geolocation Accuracy
 
-The following table outlines accuracy per platform
+The following table outlines accuracy per platform:
 
 ### Lowest
 
