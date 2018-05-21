@@ -28,7 +28,7 @@ XAML is used as the declarative markup language for WPF and Xamarin.Forms. For t
 
 - Xamarin.Forms supports the [XAML 2009 specification](/dotnet/framework/xaml-services/xaml-2009-language-features/); this makes it easier to define data such as `string`s, `int`s, etc. as well as defining generic types and passing arguments to constructors.
 
-- There is currently no way to dyanmically load XAML like WPF can with `XamlReader`. You can get the same basic functionality with a [NuGet package](https://www.nuget.org/packages/Xamarin.Forms.Dynamic/) though.
+- There is currently no way to dynamically load XAML like WPF can with `XamlReader`. You can get the same basic functionality with a [NuGet package](https://www.nuget.org/packages/Xamarin.Forms.Dynamic/) though.
 
 ### Markup Extensions
 
