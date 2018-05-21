@@ -22,7 +22,7 @@ Refer to these instructions for adding NuGet packages
 on [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 or [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
-A list of popular Xamarin [plugins and libraries](https://github.com/xamarin/XamarinComponents/blob/master/README.md) is available to help find alternatives to components which are unavailable as NuGet pacakges.
+A list of popular Xamarin [plugins and libraries](https://github.com/xamarin/XamarinComponents/blob/master/README.md) is available to help find alternatives to components which are unavailable as NuGet packages.
 
 ## Manually removing component references
 
