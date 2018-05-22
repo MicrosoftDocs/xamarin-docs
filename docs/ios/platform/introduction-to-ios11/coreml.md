@@ -32,7 +32,7 @@ These steps describe how to add CoreML to an iOS project. Refer to the [Mars Hab
 
 ### 1. Add the model to the project
 
-Add a compiled model (a directory with the **.modelc** extension) to the **Resources** directory of the project. The directory's contents should all have a build action of **BundleResource**:
+Add a compiled model (a directory with the **.modelc** extension) to the **Resources** directory of the project. The directory's contents should all have a build action of **CoreMLModel**:
 
 ![The Resources folder should contain the compiled model](coreml-images/resources-modelc.png)
 
