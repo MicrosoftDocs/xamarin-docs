@@ -6,7 +6,7 @@ ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 05/06/2018
+ms.date: 05/22/2018
 ---
 
 # Automatic Provisioning
@@ -35,7 +35,7 @@ You must also be paired to a Mac build host that has the following:
 Before you start the automatic signing process, you should ensure that you have an Apple ID added in Visual Studio, as described in the [Apple Account Management](~/cross-platform/macios/apple-account-management.md) guide. Once you've added an Apple ID, you can use any associated _Team_. This allows certificates, profiles, and other IDs to be made against the team. The team ID is also used to create a the prefix for an App ID that will be included in the provisioning profile. Having this allows Apple to verify that you are who you say you are.
 
 > [!IMPORTANT]
-> Before you begin, make sure to sign in to either [iTunes Connect](https://itunesconnect.apple.com/) or [appleid.apple.com](https://appleid.apple.com) and follow the prompts to accept the new privacy agreement from Apple. If you don't accept the privacy agreement, you'll get the following alert when trying to provision your device:
+> Before you begin, make sure to sign in to either [iTunes Connect](https://itunesconnect.apple.com/) or [appleid.apple.com](https://appleid.apple.com) to check that you have accepted the latest Apple account policies. If prompted, complete the steps to accept any new account agreements from Apple. If you don't accept the privacy agreement from May 2018, you'll get the following alert when trying to provision your device:
 > ```
 > Unexpected authentication failure. Reason: {
 > "authType" : "sa"
