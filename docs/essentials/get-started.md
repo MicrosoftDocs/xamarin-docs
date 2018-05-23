@@ -20,7 +20,7 @@ Xamarin.Essentials supports the following platforms and operating systems:
 | --- | --- |
 | Android | 4.4 (API 19) or higher |
 | iOS |10.0 or higher |
-| UWP | 10.0.6299.0 or higher |
+| UWP | 10.0.16299.0 or higher |
 
 ## Installation
 
