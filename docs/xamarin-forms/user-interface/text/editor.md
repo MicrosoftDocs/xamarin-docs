@@ -15,8 +15,8 @@ _Multi-line text input_
 
 The `Editor` control is used to accept multi-line input. This article will cover:
 
-- **[Customization](#Customization)** &ndash; keyboard and color options.
-- **[Interactivity](#Interactivity)** &ndash; events that can be listened for to provide interactivity.
+- **[Customization](#customization)** &ndash; keyboard and color options.
+- **[Interactivity](#interactivity)** &ndash; events that can be listened for to provide interactivity.
 
 ## Customization
 
