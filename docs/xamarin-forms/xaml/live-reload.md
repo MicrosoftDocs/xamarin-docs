@@ -131,6 +131,10 @@ No. In fact, you can even start all your supported application targets (Android,
 
   Attempted to build a project that references the Live Reload nuget package but the Visual Extension is not installed.  
 
+* *Exception while loading assemblies: System.IO.FileNotFoundException: Could not load assembly 'Xamarin.Live.Reload, Version=0.3.27.0, Culture=neutral, PublicKeyToken='.*
+
+  The host project should be using `PackageReference` instead of `packages.config`
+
 ### App doesn't connect
 
 When the application is built, the information from **Tools > Options > Xamarin > Live Reload** (host name, port and encryption keys) are embedded in the app, so that when `LiveReload.Init()` runs, no pairing or configuration is necessary for the connection to succeed.
