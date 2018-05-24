@@ -6,7 +6,7 @@ ms.assetid: 0008682B-6CEF-0C1D-3200-56ECF58F5D3C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 05/22/2018
 ---
 
 # Location Services
@@ -118,9 +118,21 @@ monitoring. In this section, we are going to focus on the basics of
 setting up the `LocationClient`, establishing providers, and getting
 the user's location.
 
-The fused location provider is part of [Google Play Services](http://developer.android.com/google/play-services/index.html). The Google Play Services package must be installed and configured properly in the application for the fused location provider API to work, and the device must have the Google Play Services APK installed.
+The fused location provider is part of
+[Google Play Services](http://developer.android.com/google/play-services/index.html).
+The Google Play Services package must be installed and configured
+properly in the application for the fused location provider API to
+work, and the device must have the Google Play Services APK installed.
 
-Before a Xamarin.Android application can use the fused location provider, it must add the **Xamarin.GooglePlayServices.Maps** to the project.
+Before a Xamarin.Android application can use the fused location
+provider, it must add the **Xamarin.GooglePlayServices.Maps** package
+to the project. In addition, the following `using` statements should be
+added to any source files that reference the classes described below:
+
+```csharp
+using Android.Gms.Common;
+using Android.Gms.Location;
+```
 
 ### Checking if Google Play Services is installed
 
