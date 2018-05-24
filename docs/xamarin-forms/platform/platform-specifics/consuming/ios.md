@@ -6,7 +6,7 @@ ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/16/2017
+ms.date: 05/23/2018
 ---
 
 # iOS Platform-Specifics
@@ -24,6 +24,7 @@ On iOS, Xamarin.Forms contains the following platform-specifics:
 - Controlling when item selection occurs in a [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/). For more information, see [Controlling Picker Item Selection](#picker_update_mode).
 - Setting the status bar visibility on a [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/). For more information, see [Setting the Status Bar Visibility on a Page](#set_status_bar_visibility).
 - Controlling whether a [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) handles a touch gesture or passes it to its content. For more information, see [Delaying Content Touches in a ScrollView](#delay_content_touches).
+- Setting the separator style on a [`ListView`](xref:Xamarin.Forms.ListView). For more information, see [Setting the Separator Style on a ListView](#listview-separatorstyle).
 
 <a name="blur" />
 
@@ -298,7 +299,6 @@ The result is that the status bar text color on a [`NavigationPage`](https://dev
 This platform-specific is used to scale the font size of an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) to ensure that the inputted text fits in the control. It's consumed in XAML by setting the [`Entry.AdjustsFontSizeToFitWidth`](https://developer.xamarin.com/api/field/Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.AdjustsFontSizeToFitWidthProperty/) attached property to a `boolean` value:
 
 ```xaml
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage ...
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
 	<StackLayout Margin="20">
@@ -389,7 +389,6 @@ The result is that a specified `UpdateMode` is applied to the [`Picker`](https:/
 This platform-specific is used to set the visibility of the status bar on a [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/), and it includes the ability to control how the status bar enters or leaves the `Page`. It's consumed in XAML by setting the `Page.PrefersStatusBarHidden` attached property to a value of the `StatusBarHiddenMode` enumeration, and optionally the `Page.PreferredStatusBarUpdateAnimation` attached property to a value of the `UIStatusBarAnimation` enumeration:
 
 ```xaml
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage ...
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.PrefersStatusBarHidden="True"
@@ -464,6 +463,45 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 The result is that a [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) can disable delaying receiving content touches, so that in this scenario the [`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) receives the gesture rather than the [`Detail`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) page of the [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/):
 
 [![](ios-images/scrollview-delay-content-touches.png "ScrollView Delay Content Touches Platform-Specific")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Plaform-Specific")
+
+<a name="listview-separatorstyle" />
+
+## Setting the Separator Style on a ListView
+
+This platform-specific controls whether the separator between cells in a [`ListView`](xref:Xamarin.Forms.ListView) uses the full width of the `ListView`. It's consumed in XAML by setting the [`ListView.SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SeparatorStyleProperty) attached property to a value of the [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) enumeration:
+
+```xaml
+<ContentPage ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout Margin="20">
+        <ListView ... ios:ListView.SeparatorStyle="FullWidth">
+            ...
+        </ListView>
+    </StackLayout>
+</ContentPage>
+```
+
+Alternatively, it can be consumed from C# using the fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+listView.On<iOS>().SetSeparatorStyle(SeparatorStyle.FullWidth);
+```
+
+The `ListView.On<iOS>` method specifies that this platform-specific will only run on iOS. The [`ListView.SetSeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SetSeparatorStyle(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.ListView},Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle)) method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, is used to control whether the separator between cells in the [`ListView`](xref:Xamarin.Forms.ListView) uses the full width of the `ListView`, with the [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) enumeration providing two possible values:
+
+- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle.Default) – indicates the default iOS separator behavior. This is the default behavior in Xamarin.Forms.
+- [`FullWidth`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle.FullWidth) – indicates that separators will be drawn from one edge of the `ListView` to the other.
+
+The result is that a specified [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) value is applied to the [`ListView`](xref:Xamarin.Forms.ListView), which controls the width of the separator between cells:
+
+![](ios-images/listview-separatorstyle.png "ListView SeparatorStyle Platform-Specific")
+
+> [!NOTE]
+> Once the separator style has been set to `FullWidth`, it cannot be changed back to `Default` at runtime.
 
 ## Summary
 
