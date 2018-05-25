@@ -73,6 +73,12 @@ applications built with Xamarin.Android. Collectively these techniques
 can greatly reduce the amount of work being performed by a CPU and the
 amount of memory consumed by an application.
 
+## [Profiling Android Apps](~/android/deploy-test/profiling.md)
+
+This guide explains how to use profiler tools to examine the
+performance and memory usage of an Android app.
+
+
 ## [Preparing an Application for Release](~/android/deploy-test/release-prep/index.md)
 
 After an application has been coded and tested, it is necessary to
