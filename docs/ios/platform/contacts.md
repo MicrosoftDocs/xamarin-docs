@@ -126,8 +126,8 @@ For property labels that you will be displaying in your app's UI, the Contact fr
 
 ```csharp
 // Localized properties
-Console.WriteLine(CNContact.LocalizeProperty(CNContactOption.Nickname));
-Console.WriteLine(CNLabeledValue.LocalizeLabel(CNLabelKey.Home));
+Console.WriteLine(CNContact.LocalizeProperty(CNContactOptions.Nickname));
+Console.WriteLine(CNLabeledValue<NSString>.LocalizeLabel(CNLabelKey.Home));
 ```
 
 ### Fetching Existing Contacts
