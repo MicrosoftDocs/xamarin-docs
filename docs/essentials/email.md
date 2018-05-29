@@ -36,12 +36,13 @@ public class EmailTest
                 To = recipients,
                 //Cc = ccRecipients,
                 //Bcc = bccRecipients
-            }
+            };
+            
             await Email.ComposeAsync(message);
         }
         catch (FeatureNotSupportedException fbsEx)
         {
-            // Sms is not supported on this device
+            // Email is not supported on this device
         }
         catch (Exception ex)
         {
