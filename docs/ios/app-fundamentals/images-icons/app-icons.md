@@ -110,7 +110,7 @@ To use an Asset Catalog, do the following:
 
 1. Double-click the `Info.plist` file in the **Solution Explorer** to open it for editing.
 2. Scroll down to the **App Icons** section.
-3. From the **Source** dropdown list, ensure **AppIcons** is selected: 
+3. From the **Source** dropdown list, ensure **AppIcon** is selected: 
 
     ![](app-icons-images/migrate01.png "Ensure AppIcons is selected")
 4. From the **Solution Explorer**, double-click the `Assets.xcassets` file to open it for editing: 
