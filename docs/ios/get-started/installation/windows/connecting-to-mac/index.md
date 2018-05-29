@@ -6,7 +6,7 @@ ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 04/16/2018
+ms.date: 05/29/2018
 ---
 
 # Pair to Mac
@@ -44,6 +44,7 @@ Pair to Mac enables the following development workflow:
 - It's possible to use the Windows command-line to build iOS applications.
 
 > [!NOTE]
+> 
 > Before following the instructions in this guide, complete the following
 > steps: 
 > 
@@ -210,6 +211,7 @@ tools (but not Xcode itself).
 >   enabled on the Mac, and the Mac must be network-accessible to the Windows 
 >   machine. See [Enabling remote login on the Mac](#enable-remote-login-on-the-mac) 
 >   for more details.
+> - Automatic Mac provisioning requires 3GB of free space on the Mac to install Xamarin.iOS.
 
 Pair to Mac performs necessary software installations/updates when Visual
 Studio 2017 is [connecting to the
