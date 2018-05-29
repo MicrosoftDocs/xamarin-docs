@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 author: asb3993
 ms.author: amburns
-ms.date: 02/18/2018
+ms.date: 05/29/2018
 ---
 
 # Building HTML views using Razor Templates
@@ -145,7 +145,7 @@ On Android simply subclass WebViewClient and then implement code to respond to t
 
 ```csharp
 class HybridWebViewClient : WebViewClient {
-    public override bool ShouldOverrideUrlLoading (WebView webView, string url) {
+    public override bool ShouldOverrideUrlLoading (WebView webView, IWebResourceRequest request) {
         // return true if handled in code
         // return false to let the web view follow the link
     }
