@@ -7,7 +7,7 @@ ms.assetid: 60EE1C8D-BE44-4612-B3B5-70316D71B1EA
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/20/2018
+ms.date: 05/29/2018
 ---
  
 # How do I resolve a PathTooLongException error?
@@ -42,6 +42,19 @@ project **.csproj** file:
 ```xml
 <PropertyGroup>
     <UseShortFileNames>True</UseShortFileNames>
+</PropertyGroup>
+```
+
+If setting this flag does not fix the **PathTooLongException** error,
+another approach is to specify a
+[common intermediate output root](https://blogs.msdn.microsoft.com/kirillosenkov/2015/04/04/using-a-common-intermediate-and-output-directory-for-your-solution/)
+for projects in your solution by setting `IntermediateOutputPath` in
+the project **.csproj** file. Try to use a relatively short path. For
+example:
+
+```xml
+<PropertyGroup>
+    <IntermediateOutputPath>C:\Projects\MyApp</IntermediateOutputPath>
 </PropertyGroup>
 ```
 
