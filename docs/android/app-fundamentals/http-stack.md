@@ -94,9 +94,9 @@ Beginning with Xamarin.Android 8.3, `HttpClientHandler` defaults to
 Boring SSL (`btls`) as the underlying TLS provider. The Boring SSL
 TLS provider offers the following advantages:
 
--   It supports TLS 1.2.
+-   It supports TLS 1.2+.
 -   It supports all Android versions.
--   It provides TLS 1.2 support for both `HttpClient` and `WebClient`.
+-   It provides TLS 1.2+ support for both `HttpClient` and `WebClient`.
 
 The disadvantage of using Boring SSL as the underling TLS provider is
 that it can increase the size of the resulting APK (it adds about 1MB
