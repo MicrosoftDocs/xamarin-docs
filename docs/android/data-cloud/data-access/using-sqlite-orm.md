@@ -310,5 +310,4 @@ information about SQLite and multi-threading, see
 
 - [DataAccess Basic (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Android Data Recipes](https://developer.xamarin.com/recipes/android/data/)
 - [Xamarin.Forms data access](~/xamarin-forms/app-fundamentals/databases.md)
