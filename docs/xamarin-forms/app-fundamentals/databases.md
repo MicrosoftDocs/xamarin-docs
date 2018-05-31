@@ -6,9 +6,8 @@ ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/23/2017
+ms.date: 05/31/2018
 ---
-
 # Local Databases
 
 _Xamarin.Forms supports database-driven applications using the SQLite database engine, which makes it possible to load and save objects in shared code. This article describes how Xamarin.Forms applications can read and write data to a local SQLite database using SQLite.Net._
@@ -29,17 +28,20 @@ This section shows how to add the SQLite.Net NuGet packages to a Xamarin.Forms s
 
 <a name="XamarinForms_PCL_Project" />
 
-### Xamarins.Forms PCL Project
+### Xamarins.Forms .NET Standard or PCL Project
 
-To add SQLite support to a Xamarin.Forms PCL project, use NuGet's search function to find **sqlite-net-pcl** and install the package:
+To add SQLite support to a Xamarin.Forms project, use NuGet's search function to find **sqlite-net-pcl** and install the package:
 
-![](databases-images/vs2017-sqlite-pcl-nuget.png "Add NuGet SQLite.NET PCL Package")
+![Add NuGet SQLite.NET PCL Package](databases-images/vs2017-sqlite-pcl-nuget.png "Add NuGet SQLite.NET PCL Package")
 
 There are a number of NuGet packages with similar names, the correct package has these attributes:
 
 - **Created by:** Frank A. Krueger
 - **Id:** sqlite-net-pcl
 - **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+
+> [!TIP]
+> Use the **sqlite-net-pcl** NuGet even in .NET Standard projects.
 
 Once the reference has been added, write an interface to abstract the platform-specific functionality, which is to determine the location of the database file. The interface used in the sample defines a single method:
 
@@ -127,7 +129,7 @@ All the the data access code is written in the PCL project to be shared across a
 
 To configure the iOS application, add the same NuGet package to the iOS project using the *NuGet* window:
 
-![](databases-images/vsmac-sqlite-nuget.png "Add NuGet SQLite.NET PCL Package")
+![Add NuGet SQLite.NET PCL Package](databases-images/vsmac-sqlite-nuget.png "Add NuGet SQLite.NET PCL Package")
 
 The only code required is the `IFileHelper` implementation that determines the data file path. The following code places the SQLite database file in the **Library/Databases** folder within the application's sandbox. See the [iOS Working with the File System](~/ios/app-fundamentals/file-system.md) documentation for more information on the different directories that are available for storage.
 
@@ -135,21 +137,21 @@ The only code required is the `IFileHelper` implementation that determines the d
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.iOS
 {
-	public class FileHelper : IFileHelper
-	{
-		public string GetLocalFilePath(string filename)
-		{
-			string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-			string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
+    {
+      string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+      string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
 
-			if (!Directory.Exists(libFolder))
-			{
-				Directory.CreateDirectory(libFolder);
-			}
+      if (!Directory.Exists(libFolder))
+      {
+        Directory.CreateDirectory(libFolder);
+      }
 
-			return Path.Combine(libFolder, filename);
-		}
-	}
+      return Path.Combine(libFolder, filename);
+    }
+  }
 }
 ```
 
@@ -169,14 +171,14 @@ Once this reference has been added, the only code required is the `IFileHelper` 
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.Droid
 {
-	public class FileHelper : IFileHelper
-	{
-		public string GetLocalFilePath(string filename)
-		{
-			string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-			return Path.Combine(path, filename);
-		}
-	}
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
+    {
+        string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+        return Path.Combine(path, filename);
+    }
+  }
 }
 ```
 
@@ -186,7 +188,7 @@ namespace Todo.Droid
 
 To configure the UWP application, add the same NuGet package to the UWP project using the *NuGet* window:
 
-![](databases-images/vs2017-sqlite-uwp-nuget.png "Add NuGet SQLite.NET PCL Package")
+![Add NuGet SQLite.NET PCL Package](databases-images/vs2017-sqlite-uwp-nuget.png "Add NuGet SQLite.NET PCL Package")
 
 Once the reference is added, implement the `IFileHelper` interface using the platform-specific `Windows.Storage` API to determine the data file path.
 
@@ -197,23 +199,21 @@ using Windows.Storage;
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.UWP
 {
-	public class FileHelper : IFileHelper
-	{
-		public string GetLocalFilePath(string filename)
-		{
-			return Path.Combine(ApplicationData.Current.LocalFolder.Path, filename);
-		}
-	}
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
+    {
+      return Path.Combine(ApplicationData.Current.LocalFolder.Path, filename);
+    }
+  }
 }
-
 ```
 
 ## Summary
 
 Xamarin.Forms supports database-driven applications using the SQLite database engine, which makes it possible to load and save objects in shared code.
 
-This article focused on **accessing** a SQLite database using Xamarin.Forms. For more information on working with SQLite.Net itself, refer to the [Data Access: Using SQLite.NET](~/cross-platform/app-fundamentals/index.md) documentation. Most SQLite.Net code is sharable across all platforms; only configuring the location of the SQLite database file requires platform-specific functionality.
-
+This article focused on **accessing** a SQLite database using Xamarin.Forms. For more information on working with SQLite.Net itself, refer to the [SQLite.NET on Android](~/android/data-cloud/data-access/using-sqlite-orm.md) or [SQLite.NET on iOS](~/ios/data-cloud/data/using-sqlite-orm.md) documentation. Most SQLite.Net code is sharable across all platforms; only configuring the location of the SQLite database file requires platform-specific functionality.
 
 ## Related Links
 
