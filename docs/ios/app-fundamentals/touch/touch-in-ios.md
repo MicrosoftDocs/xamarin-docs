@@ -113,7 +113,7 @@ Gesture recognizers can greatly simplify and reduce the programming effort to su
 
 Xamarin.iOS provides the class `UIGestureRecognizer` as a base class for the following built-in gesture recognizers:
 
--  *UITapGesturesRecognizer* – This is for one or more taps.
+-  *UITapGestureRecognizer* – This is for one or more taps.
 -  *UIPinchGestureRecognizer* – Pinching and spreading apart fingers.
 -  *UIPanGestureRecognizer* – Panning or dragging.
 -  *UISwipeGestureRecognizer* – Swiping in any direction.
