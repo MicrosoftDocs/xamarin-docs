@@ -53,7 +53,7 @@ Extend the Phoneword application as follows:
 
     Save the changes to **CallHistoryPage.xaml** by pressing **CTRL+S**, and close the file.
 
-5. In **Solution Explorer**, double-click **App.xaml.cs** to open it:
+5. In **Solution Explorer**, double-click the **App.xaml.cs** file in the shared **Phoneword** project to open it:
 
     ![](quickstart-images/vs/open-app-class.png "Open App.xaml.cs")
 
@@ -84,7 +84,7 @@ Extend the Phoneword application as follows:
 
     Save the changes to **App.xaml.cs** by pressing **CTRL+S**, and close the file.
 
-7. In **Solution Explorer**, double-click **MainPage.xaml** to open it:
+7. In **Solution Explorer**, double-click the **MainPage.xaml** file in the shared **Phoneword** project to open it:
 
     ![](quickstart-images/vs/open-mainpage-xaml.png "Open MainPage.xaml")
 
