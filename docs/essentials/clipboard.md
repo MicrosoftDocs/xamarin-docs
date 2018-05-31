@@ -29,7 +29,7 @@ var hasText = Clipboard.HasText;
 To set text to the **Clipboard**:
 
 ```csharp
-ClipBoard.SetText("Hello World");
+Clipboard.SetText("Hello World");
 ```
 
 To read text from the **Clipboard**:
