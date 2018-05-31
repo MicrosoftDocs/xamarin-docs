@@ -1,51 +1,45 @@
 ---
 title: "iOS Designer"
-description: "The Xamarin Designer for iOS is a visual designer for the iOS Storyboard and Interface Builder formats that is fully integrated with Visual Studio for Mac and Visual Studio. The iOS Designer maintains full compatibility with the Storyboard and.xib formats, so that files can be edited in either Visual Studio for Mac or Visual Studio in addition to Xcode's Interface Builder. Additionally, the Xamarin Designer for iOS supports advanced features such as custom controls that render at design-time in the editor."
+description: "The Xamarin Designer for iOS is a visual designer for the iOS Storyboard and Interface Builder formats that is fully integrated with Visual Studio for Mac and Visual Studio. The iOS Designer maintains full compatibility with the Storyboard and .xib formats, so that files can be edited in either Visual Studio for Mac or Visual Studio in addition to Xcode's Interface Builder. Additionally, the Xamarin Designer for iOS supports advanced features such as custom controls that render at design-time in the editor."
 ms.prod: xamarin
 ms.assetid: E35EFB69-EBBA-40E3-ADBE-CB8016F17127
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/21/2017
+ms.date: 05/31/2018
 ---
-
 # iOS Designer
 
-_The Xamarin Designer for iOS is a visual designer for the iOS Storyboard and Interface Builder formats that is fully integrated with Visual Studio for Mac and Visual Studio. The iOS Designer maintains full compatibility with the Storyboard and.xib formats, so that files can be edited in either Visual Studio for Mac or Visual Studio in addition to Xcode's Interface Builder. Additionally, the Xamarin Designer for iOS supports advanced features such as custom controls that render at design-time in the editor._
+_The Xamarin Designer for iOS is a visual designer for the iOS Storyboard and Interface Builder formats that is fully integrated with Visual Studio for Mac and Visual Studio. The iOS Designer maintains full compatibility with the Storyboard and .xib formats, so that files can be edited in either Visual Studio for Mac or Visual Studio in addition to Xcode's Interface Builder. Additionally, the Xamarin Designer for iOS supports advanced features such as custom controls that render at design-time in the editor._
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
+[![iOS Designer in Visual Studio for Mac](images/designer-vsmac-sml.png "The iOS Designer")](images/designer-vsmac.png#lightbox)
 
-[![](images/designer-new1.png "The iOS Designer")](images/designer-new1.png#lightbox)
+# [Visual Studio](#tab/windows)
 
-
-# [Visual Studio](#tab/vswin)
-
-
-[![](images/designer-vs.png "The iOS Designer")](images/designer-vs.png#lightbox)
-
+[![iOS Designer in Visual Studio](images/designer-vs.png "The iOS Designer")](images/designer-vs.png#lightbox)
 
 -----
 
 ## Availability
 
-The Xamarin Designer for iOS is available in Visual Studio for Mac and in Visual Studio 2015 and 2017 on Windows.
+The Xamarin Designer for iOS is available in Visual Studio for Mac and in Visual Studio 2017 on Windows.
 
-These guides assumes a familiarity with the contents covered in the [Getting Started guides](~/ios/get-started/index.md).
-
+These guides assumes a familiarity with the contents covered in the [Xamarin.iOS Getting Started guides](~/ios/get-started/index.md).
 
 ## [iOS Designer Basics](introduction.md)
 
 This guide covers the features of the Xamarin iOS designer. It covers designer basics, showing how to use the designer to lay out controls visually and how to edit properties.
 
-##  [Designable Controls Overview](ios-designable-controls-overview.md)
+## [Designable Controls Overview](ios-designable-controls-overview.md)
 
 This guide looks in depth at custom controls, how they are created and what requirements they must meet to be rendered on the design surface. Additionally, it shows how to debug common issues that can occur when using Designable Controls.
 
-##  [Walkthrough - Using Custom Controls with iOS Designer](ios-designable-controls-walkthrough.md)
+## [Walkthrough - Using Custom Controls with iOS Designer](ios-designable-controls-walkthrough.md)
 
 This article provides a step-by-step walkthrough showing how to create a custom control and use it in the iOS designer. It shows how to make a control available in the designer’s Toolbox so it can be drag/dropped onto a view. Additionally, it shows how to implement a control so it renders properly at design time and runtime, as well as how to create properties that can be set at design time.
 
-##  [Auto Layout with the Xamarin iOS Designer](designer-auto-layout.md)
+## [Auto Layout with the Xamarin iOS Designer](designer-auto-layout.md)
 
 This guide introduces iOS Auto Layout and the new constraints workflow available in the iOS designer.
