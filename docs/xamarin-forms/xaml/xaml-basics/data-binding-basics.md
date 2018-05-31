@@ -384,7 +384,7 @@ Here’s the result:
 
 [![](data-binding-basics-images/listview3.png "Binding to a Collection with a DataTemplate and Converters")](data-binding-basics-images/listview3-large.png#lightbox "Binding to a Collection with a DataTemplate and Converters")
 
-The `ListView` is quite sophisticated in handling changes that might dynamically occur in the underlying data, but only if take certain steps. If the collection of items assigned to the `ItemsSource` property of the `ListView` changes during runtime—that is, if items can be added to or removed from the collection—use an `ObservableCollection` class for these items. `ObservableCollection` implements the `INotifyCollectionChanged` interface, and `ListView` will install a handler for the `CollectionChanged` event.
+The `ListView` is quite sophisticated in handling changes that might dynamically occur in the underlying data, but only if you take certain steps. If the collection of items assigned to the `ItemsSource` property of the `ListView` changes during runtime—that is, if items can be added to or removed from the collection—use an `ObservableCollection` class for these items. `ObservableCollection` implements the `INotifyCollectionChanged` interface, and `ListView` will install a handler for the `CollectionChanged` event.
 
 If properties of the items themselves change during runtime, then the items in the collection should implement the `INotifyPropertyChanged` interface and signal changes to property values using the `PropertyChanged` event. This is demonstrated in the next part of this series, [Part 5. From Data Binding to MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 
