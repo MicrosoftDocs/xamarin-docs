@@ -68,7 +68,7 @@ tooltips rendering without text.
 
 Starting in Workbooks 1.3, we've removed the SkiaSharp renderers that we shipped
 in Workbooks 0.99.0, in favor of SkiaSharp providing the renderers itself, using
-our [SDK][/guides/cross-platform/workbooks/sdk/].
+our [SDK](~/tools/workbooks/sdk).
 
 ### Workaround
 
