@@ -19,7 +19,7 @@ ms.date: 03/06/2017
 
 ## How DependencyService Works
 
-Xamarin.Forms apps need three components to use `DependencyService`:
+Xamarin.Forms apps need four components to use `DependencyService`:
 
 - **Interface** &ndash; The required functionality is defined by an interface in shared code.
 - **Implementation Per Platform** &ndash; Classes that implement the interface must be added to each platform project.
