@@ -168,7 +168,7 @@ lv.ChoiceMode = Android.Widget.ChoiceMode.Single; // 1
 
 // Use this block if targeting Gingerbread or lower
 /*
-lv.ChoiceMode = Android.Widget.ChoiceMode.Single; // Single
+lv.ChoiceMode = 1; // Single
 //lv.ChoiceMode = 0; // none
 //lv.ChoiceMode = 2; // Multiple
 //lv.ChoiceMode = 3; // MultipleModal
