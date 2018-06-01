@@ -115,6 +115,7 @@
 #### [Easing Functions](user-interface/animation/easing.md)
 #### [Custom Animations](user-interface/animation/custom.md)
 ### [BoxView](user-interface/boxview.md)
+### [Button](user-interface/button.md)
 ### [Colors](user-interface/colors.md)
 ### [Controls Reference](user-interface/controls/index.md)
 #### [Pages](user-interface/controls/pages.md)
