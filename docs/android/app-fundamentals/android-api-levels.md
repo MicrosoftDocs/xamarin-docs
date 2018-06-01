@@ -6,7 +6,7 @@ ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 06/01/2018
 ---
 
 # Understanding Android API Levels
@@ -34,6 +34,13 @@ Before you can configure an API level for your project, you must
 install the SDK platform components for that API level. For more
 information about downloading and installing Android SDK components,
 see [Android SDK Setup](~/android/get-started/installation/android-sdk.md).
+
+> [!NOTE]
+> Beginning in August 2018, the Google Play Console
+will require that new apps target API level 26 (Android 8.0) or higher.
+Existing apps will be required to target API level 26 or higher
+beginning in November 2018. For more information, see
+[Improving app security and performance on Google Play for years to come](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
 
 # [Visual Studio](#tab/vswin)
 
@@ -275,13 +282,6 @@ latest Target Framework version is especially important when you use
 the latest support library releases &ndash; each library expects your
 app to be compiled at that support library's minimum API level or
 greater. 
-
-> [!NOTE]
-> Beginning in August 2018, the Google Play Console
-will require that new apps target API level 26 (Android 8.0) or higher.
-Existing apps will be required to target API level 26 or higher
-beginning in November 2018. For more information, see
-[Improving app security and performance on Google Play for years to come](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
 
 
 # [Visual Studio](#tab/vswin)
