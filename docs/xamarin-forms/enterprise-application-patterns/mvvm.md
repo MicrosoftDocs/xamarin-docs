@@ -171,7 +171,7 @@ This approach has the advantage that an app has a single class that is responsib
 
 All view model and model classes that are accessible to a view should implement the `INotifyPropertyChanged` interface. Implementing this interface in a view model or model class allows the class to provide change notifications to any data-bound controls in the view when the underlying property value changes.
 
-App's should be architected for the correct use of property change notification, by meeting the following requirements:
+Apps should be architected for the correct use of property change notification, by meeting the following requirements:
 
 -   Always raising a `PropertyChanged` event if a public property's value changes. Do not assume that raising the `PropertyChanged` event can be ignored because of knowledge of how XAML binding occurs.
 -   Always raising a `PropertyChanged` event for any calculated properties whose values are used by other properties in the view model or model.
