@@ -6,7 +6,7 @@ ms.assetid: 36EC7341-A2A4-409C-BD4F-330BAC505123
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/19/2017
+ms.date: 05/30/2018
 ---
 
 # What USB drivers do I need to debug Android on Windows?
@@ -35,5 +35,5 @@ external testing services. Some of these include:
 
 - [Visual Studio Emulator for Android](https://www.visualstudio.com/en-us/features/msft-android-emulator-vs.aspx)
 
-- [Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
+- [Debugging with the Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
 

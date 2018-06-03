@@ -6,7 +6,7 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/17/2018
+ms.date: 05/30/2018
 ---
 
 # Windows Installation
@@ -121,7 +121,7 @@ A significant improvement in performance when developing on x86 based computers 
 1. Microsoft's Hyper-V &ndash; Available on computers running the Windows 10 April Update.
 2. Intel's Hardware Accelerated Execution Manager (HAXM) &ndash; Available on x86 computers running OS X, macOS, or older version of Windows.
 
-For more information about the Google Android Emulator, Hyper-V, and HAXM, please see [Android Emulator Hardware Acceleration](~/android/get-started/installation/android-emulator/hardware-acceleration.md) guide.
+For more information about the Google Android Emulator, Hyper-V, and HAXM, please see [Hardware Acceleration for Emulator Performance](~/android/get-started/installation/android-emulator/hardware-acceleration.md) guide.
 
 > [!NOTE]
 > On older versions of Windows, HAXM is not compatible with Hyper-V. In this scenario it is necessary to either [disable Hyper-V](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#disabling-hyper-v) or to use the slower emulator images that do not have the x86 optimizations.
@@ -177,6 +177,6 @@ tutorials to learn how to create a working Xamarin.Android app.
 - [Installing Visual Studio Tools for Xamarin](~/cross-platform/get-started/installation/windows.md)
 - [System Requirements](~/cross-platform/get-started/requirements.md)
 - [Android SDK Setup](~/android/get-started/installation/android-sdk.md)
-- [Google Android Emulator](~/android/get-started/installation/android-emulator/index.md)
+- [Android Emulator Setup](~/android/get-started/installation/android-emulator/index.md)
 - [Set Up Device For Development](~/android/get-started/installation/set-up-device-for-development.md)
 - [Run Apps on the Android Emulator](https://developer.android.com/studio/run/emulator#Requirements)

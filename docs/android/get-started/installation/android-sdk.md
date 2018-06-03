@@ -6,7 +6,7 @@ ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 06/02/2018
 ---
 
 # Setting up the Android SDK for Xamarin.Android
@@ -54,10 +54,10 @@ Android SDK Manager.
 
 To use the Xamarin Android SDK Manager, you will need the following:
 
-- Visual Studio 2017 community edition or higher. Visual Studio 2017
-  version 15.5 or later is required.
+- Visual Studio 2017 (Community, Professional, or Enterprise edition). Visual 
+  Studio 2017 version 15.5 or later is required.
 
-- Xamarin for Visual Studio version 4.5.0 or later. 
+- Visual Studio Tools for Xamarin version 4.5.0 or later. 
 
 The Xamarin Android SDK Manager is not compatible with Visual Studio
 2015. Users of Visual Studio 2015 should use the SDK Manager tools

@@ -6,12 +6,13 @@ ms.assetid: A355A471-8195-4391-93FE-0000BCB17923
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/25/2018
+ms.date: 05/30/2018
 ---
 
 # Debugging
 
 This section discusses how to debug a Xamarin.Android app on devices or emulators.
+
 ## Debugging Overview
 
 Developing Android applications requires running the application,
@@ -21,8 +22,7 @@ many cases, it can be simpler and more cost effective to
 simulate/emulate Android hardware using one of the emulators
 described below.
 
-
-### [Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
+### [Debugging with the Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
 
 These articles explain how to use the default emulator that is provided
 with the Android SDK. This emulator is available for Visual Studio for

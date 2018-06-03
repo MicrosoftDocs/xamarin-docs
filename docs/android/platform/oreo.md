@@ -7,7 +7,7 @@ ms.technology: xamarin-android
 ms.custom: video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 05/30/2018
 ---
 
 # Oreo Features
@@ -187,10 +187,10 @@ you must use either the Xamarin Android Emulator Manager or the
 command-line `avdmanager` tool to create virtual devices for Android
 Oreo.
 
-To use the Xamarin Android Device Manager to create and manage virtual
+To use the Android Device Manager to create and manage virtual
 devices, see
-[Xamarin Android Device Manager](~/android/get-started/installation/android-emulator/xamarin-device-manager.md).
-To create virtual devices without the Xamarin Android Emulator Manager,
+[Managing Virtual Devices with the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
+To create virtual devices without the Android Device Manager,
 follow the steps in the next section.
 
 
@@ -272,7 +272,7 @@ included in the device pull-down menu:
 
 For more information about configuring an Android emulator for testing
 and debugging, see
-[Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+[Debugging with the Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
 
 If you are using a physical device such as a Nexus or a Pixel, you can
 either update your device through automatic over the air (OTA) updates

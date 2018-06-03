@@ -6,7 +6,7 @@ ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 06/02/2018
 ---
 
 # Adjusting Java memory parameters for the Android designer
@@ -15,8 +15,9 @@ The default memory parameters that are used when starting the `java`
 process for the Android designer might be incompatible with some system
 configurations.
 
-Starting with Xamarin Studio 5.7.2.7 (and later, Visual Studio for Mac) and Xamarin for Visual Studio
-3.9.344 these settings can be customized on a per-project basis.
+Starting with Xamarin Studio 5.7.2.7 (and later, Visual Studio for Mac)
+and Visual Studio Tools for Xamarin 3.9.344, these settings can be
+customized on a per-project basis.
 
 ## New Android designer properties and corresponding Java options
 

@@ -7,7 +7,7 @@ ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/25/2018
+ms.date: 05/30/2018
 ---
 
 # Hello, Android: Quickstart
@@ -55,7 +55,7 @@ set.
 If you are using Google's Android SDK emulator, we recommend that
 you configure the emulator to use hardware acceleration. Instructions
 for configuring hardware acceleration are available in
-[Hardware Acceleration](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
+[Hardware Acceleration for Emulator Performance](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
 
 # [Visual Studio](#tab/vswin)
 

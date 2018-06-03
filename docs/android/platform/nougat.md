@@ -6,7 +6,7 @@ ms.assetid: 5C74ABE2-C862-4ED0-8EA5-C7FEE5251D4B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 06/02/2018
 ---
 
 # Nougat Features
@@ -71,7 +71,7 @@ The following is required to use the new Android Nougat features in
 Xamarin-based apps:
 
 -   **Visual Studio or Visual Studio for Mac** &ndash; If you are using Visual
-    Studio, version 4.2.0.628 or later of Xamarin for Visual Studio is
+    Studio, version 4.2.0.628 or later of Visual Studio Tools for Xamarin is
     required. If you are using Visual Studio for Mac, version 6.1.0 or later
     of Visual Studio for Mac is required.
 

@@ -6,7 +6,7 @@ ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 05/30/2018
 ---
 
 # Debug Android Wear on an Emulator
@@ -29,7 +29,7 @@ running Android Wear apps, see
 To run your Wear app on an emulator, you must install the Android SDK
 Android Emulator and configure it for Android Wear. For overall Android
 SDK Emulator installation and configuration information, see 
-[Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+[Android Emulator Setup](~/android/get-started/installation/android-emulator/index.md).
 
 When you create a Wear virtual device, select an Android Wear device
 profile (such as **Android Wear Square**). For improved performance,

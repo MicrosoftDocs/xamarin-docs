@@ -6,13 +6,13 @@ ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 05/30/2018
 ---
 
 # Running the Google Android Emulator
 
-In this guide, you will learn how to launch a virtual device in the
-Google Android Emulator for debugging and testing your app.
+_In this guide, you will learn how to launch a virtual device in the
+Google Android Emulator to debug and test your app._
 
 ## Using a Pre-Configured Virtual Device
 
@@ -40,25 +40,23 @@ your app's target API level), skip to
 emulator. (If you are not yet familiar with Android API levels, see
 [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).)
 
-If your Xamarin.Android project is using a Target Framework level
-that is incompatible with the available virtual devices, the drop-down
-menu will list the unusable virtual devices under **Unsupported
-Devices**. 
-For example, the following project has a Target Framework set to
-**Android 7.1 Nougat (API 25)**, which is incompatible with the
-**Android 6.0** virtual devices that are provided by default:
+If your Xamarin.Android project is using a Target Framework level that
+is incompatible with the available virtual devices, the drop-down menu
+lists the unusable virtual devices under **Unsupported Devices**. For
+example, the following project has a Target Framework set to **Android
+7.1 Nougat (API 25)**, which is incompatible with the **Android 6.0**
+virtual devices that are listed in this example:
 
 [![Incompatible virtual device](running-the-emulator-images/win/02-incompatible-level-sml.png)](running-the-emulator-images/win/02-incompatible-level.png#lightbox)
 
 You can click **Change Minimum Android Target** to change the project's
 Minimum Android Version so that it matches the API level of the
-available virtual devices. Alternately, you can use the **Android
-Emulator Manager** to create new virtual devices that support your
-target API level as explained later in
-[Configuring Virtual Devices](#virtualdevice). Before you can configure
-virtual devices for a new API level, you must first install the
-corresponding system images for that API level &ndash; this is
-explained in the next section.
+available virtual devices. Alternately, you can use the
+[Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)
+to create new virtual devices that support your target API level.
+Before you can configure virtual devices for a new API level, you must
+first install the corresponding system images for that API level (see
+[Setting up the Android SDK for Xamarin.Android](~/android/get-started/installation/android-sdk.md)).
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -82,30 +80,24 @@ emulator. (If you are not yet familiar with Android API levels, see
 
 -----
 
-## Creating Custom Virtual Devices
+## Editing Virtual Devices
 
-To create custom virtual devices, you must use either the Xamarin
-Android Device Manager or the legacy Google Emulator Manager that is
-part of the Android SDK. For more information about creating and
-customizing virtual devices, see
-[Xamarin Android Device Manager](~/android/get-started/installation/android-emulator/xamarin-device-manager.md).
-If you prefer to use the legacy Google Emulator Manager, see
-[Google Emulator Manager](~/android/get-started/installation/android-emulator/google-emulator-manager.md).
+To modify virtual devices (or to create new ones), you must use the
+[Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 
-Note that if you are developing for Android 8.0 Oreo, you must use the
-Xamarin Android Device Manager.
 
 <a name="launching" />
 
 ## Launching the Emulator
 
-Near the top of the IDE, there is a drop-down menu that can be used to
-select **Debug** or **Release** mode. Choosing **Debug** attaches the
-debugger to the application process running inside the emulator. 
-
-After you have chosen a virtual device from the device drop-down menu,
-select either **Debug** or **Release** mode, then click the **Play**
-button to run the application:
+Near the top of Visual Studio, there is a drop-down menu that can be
+used to select **Debug** or **Release** mode. Choosing **Debug** causes
+the debugger to attach to the application process running inside the
+emulator after the app starts. Choosing **Release** mode disables the
+debugger (however, you can still run the app and use log statements for
+debug). After you have chosen a virtual device from the device
+drop-down menu, select either **Debug** or **Release** mode, then click
+the Play button to run the application:
 
 # [Visual Studio](#tab/vswin)
 
@@ -117,21 +109,52 @@ button to run the application:
 
 -----
 
-After the Android emulator starts, Xamarin.Android will deploy the app
-to the emulator. The emulator runs the app with the configured virtual
-device image. An example screenshot of the Google Android Emulator is
-displayed below (the emulator is running a blank app called **MyApp**):
+After the emulator starts, Xamarin.Android will deploy the app to the
+emulator. The emulator runs the app with the configured virtual device
+image. An example screenshot of the Google Android Emulator is
+displayed below. In this example, the emulator is running a blank app
+called **MyApp**:
 
 ![Emulator running a blank app](running-the-emulator-images/emulator-running.png)
 
-The emulator may be left running; it is not necessary to shut it down
-and restart it each time the app is run. The first time a
-Xamarin.Android app is run in the emulator, the Xamarin.Android shared
-runtime for the targetted API level is installed, followed by the
-application. The runtime installation may take a few moments, so please
-be patient. Installation of the runtime takes place only when the first
-Xamarin.Android app is deployed to the emulator &ndash; subsequent
-deployments are faster because only the app is copied to the emulator.
+The emulator may be left running: it is not necessary to shut it down
+and wait for it to restart each time the app is launched. The first
+time a Xamarin.Android app is run in the emulator, the Xamarin.Android
+shared runtime for the targetted API level is installed, followed by
+the application. The runtime installation may take a few moments, so
+please be patient. Installation of the runtime takes place only when
+the first Xamarin.Android app is deployed to the emulator &ndash;
+subsequent deployments are faster because only the app is copied to the
+emulator.
+
+## Quick Boot
+
+Newer versions of the Google Android Emulator include a feature called
+_Quick Boot_ that launches the emulator in only a few seconds. When you
+close the emulator, it takes a snapshot of the virtual device state so
+that it can be quickly restored from that state when it is restarted.
+To access this feature, you will need the following:
+
+-   Android Emulator version 27.0.2 or later
+-   Android SDK Tools version 26.1.1 or later
+
+When the above-listed versions of the emulator and SDK tools are
+installed, the Quick Boot feature is enabled by default. 
+
+The first cold boot of the virtual device takes place without a speed
+improvement because a snapshot has not yet been created:
+
+![Cold Boot screenshot](running-the-emulator-images/cold-boot.png)
+
+When you exit out of the emulator, Quick Boot saves the state of
+the emulator in a snapshot:
+
+![Saving state on shutdown](running-the-emulator-images/saving-state.png)
+
+Subsequent virtual device starts are much faster because the emulator
+simply restores the state at which you closed the emulator.
+
+![Loading state on restart](running-the-emulator-images/loading-state.png)
 
 For more information about using the Google Android Emulator, see
 the following Android Developer topics:
@@ -141,4 +164,6 @@ the following Android Developer topics:
 -   [Performing Basic Tasks in the Emulator](https://developer.android.com/studio/run/emulator.html#tasks)
 
 -   [Working with Extended Controls, Settings, and Help](https://developer.android.com/studio/run/emulator.html#extended)
+
+-   [Run the emulator with Quick Boot](https://developer.android.com/studio/run/emulator#quickboot)
 

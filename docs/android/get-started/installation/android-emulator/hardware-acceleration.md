@@ -1,24 +1,56 @@
 ---
-title: "Android Emulator Hardware Acceleration"
-description: "How to prepare your computer for maximum Google Android Emulator performance"
+title: "Hardware Acceleration for Emulator Performance"
+description: "This article explains how to use your computer's hardware acceleration features to maximize Google Android Emulator performance."
 ms.prod: xamarin
 ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/10/2018
+ms.date: 05/30/2018
 ---
 
-# Android Emulator Hardware Acceleration
+# Hardware Acceleration for Emulator Performance
 
-The Google Android Emulator is prohibitively slow without hardware acceleration. It is possible to drastically improve the performance of the Google Android Emulator using special emulator hardward images that target x86 hardware and one of two virtualization technologies:
+_This article explains how to use your computer's hardware acceleration
+features to maximize Google Android Emulator performance._
 
-1. **Microsoft's Hyper-V and the Hypervisor Platform** &ndash; Hyper-V is a virtualization component that is available on Windows 10 that enables running virtualized computer systems on top of a physical host. This is the recommended virtualization technology for the accelerated Google Android Emulator images. To learn more about Hyper-V, please consult the [Hyper-V on Windows 10 guide](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/).
-2. **Intel's Hardware Accelerated Execution Manager (HAXM)** &ndash; this is a virtualization engine for computers running Intel CPUs. This is the recommended virtualization engine for developers that are unable to use Hyper-V.
+## Overview
 
-The Android SDK Manager will automatically make use of hardware acceleration when it is available it is running an emulator image specifically for an **x86**-based virtual device (as described in [Configuration and Use](~/android/deploy-test/debugging/android-sdk-emulator/index.md)).
+Visual Studio makes it easier for developers to test and debug their
+Xamarin.Android applications by using the Google Android Emulator in
+situations where an Android device is unavailable or impractical.
+However, the Android emulator runs too slowly if hardware acceleration
+is not available on the computer that runs it. You can drastically
+improve the performance of the Android emulator by using special
+virtual device images that target x86 hardware in conjunction with one
+of two virtualization technologies:
 
-## Hyper-V Overview
+1. **Microsoft's Hyper-V and the Hypervisor Platform**. Hyper-V
+   is a virtualization feature of Windows that makes it possible to run 
+   virtualized computer systems on a physical host computer. This
+   is the recommended virtualization technology to use for accelerating
+   the Google Android Emulator. To learn more about Hyper-V,
+   see [Hyper-V on Windows 10](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/).
+
+2. **Intel's Hardware Accelerated Execution Manager (HAXM)**. 
+   HAXM is a virtualization engine for computers running Intel CPUs.
+   This is the recommended virtualization engine for computers that
+   are unable to run Hyper-V.
+
+The Google Android Emulator will automatically make use of hardware
+acceleration if the following criteria are met:
+
+-   Hardware acceleration is available and enabled on the development
+    computer.
+
+-   The emulator is running an emulator image specifically created for
+    an **x86**-based virtual device.
+
+For information about launching and debugging with the Android
+Emulator, see
+[Debugging with the Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+
+## Hyper-V
 
 # [Visual Studio](#tab/vswin)
 
@@ -27,58 +59,56 @@ The Android SDK Manager will automatically make use of hardware acceleration whe
 > [!NOTE]
 > Hyper-V support is currently in Preview.
 
-Developers who are using Windows 10 (April 2018 Update) are strongly
-encouraged to use Microsoft's Hyper-V. The Visual Studio Tools for
-Xamarin make it easy for developers to test and debug their
-Xamarin.Android applications in situations where an Android device is
-unavailable or impractical.
+Developers who are using Windows 10 (April 2018 Update or later) are
+strongly encouraged to use Microsoft's Hyper-V to accelerate the Google
+Android Emulator. To use the Google Android Emulator with Hyper-V:
 
-To get started with using Hyper-V and the Google Android Emulator:
-
-1. **Update to Windows 10 April 2018 Update (build 1803)** &ndash; To
-   verify what version of Windows is running, click in the Cortana
-   search bar, and type **About**. Select **About your PC** in the
-   search results. Scroll down in the **About** dialog, to the
+1. **Update to Windows 10 April 2018 Update (build 1803) or later**.
+   To verify which version of Windows is running, click in the
+   Cortana search bar and type **About**. Select **About your PC** in
+   the search results. Scroll down in the **About** dialog to the
    **Windows specifications** section. The **Version** should be at
    least 1803:
 
     [![Windows specifications](hardware-acceleration-images/win/12-about-windows.w10-sml.png)](hardware-acceleration-images/win/12-about-windows.w10.png#lightbox)
 
-2. **Enable both Hyper-V and the Windows Hypervisor Platform** &ndash;
+2. **Enable the Windows Hypervisor Platform**.
    In the Cortana Search bar, type **Turn Windows features on or off**.
-   Scroll down in the **Windows Features** dialog, and ensure that the
-   **Windows Hypervisor Platform** is enabled.
+   Scroll down in the **Windows Features** dialog and ensure that 
+   **Windows Hypervisor Platform** is enabled:
 
-    [![Hyper-V and Windows Hypervisor Platform enabled](hardware-acceleration-images/win/13-windows-features.w10-sml.png)](hardware-acceleration-images/win/13-windows-features.w10.png#lightbox)
+    [![Windows Hypervisor Platform enabled](hardware-acceleration-images/win/13-windows-features.w10-sml.png)](hardware-acceleration-images/win/13-windows-features.w10.png#lightbox)
 
-    It may be necessary to reboot Windows after enabling Hyper-V and the Windows Hypervisor Platform.
+   Enabling **Windows Hypervisor Platform** automatically enables
+   Hyper-V. It is a good idea to restart Windows after making this
+   change.
 
 3. **Install
-   [Visual Studio 15.8 Preview 1 or later](https://www.visualstudio.com/vs/preview/)**
-   &ndash; This version of Visual Studio provides IDE support for
-   starting the Google Android Emulator with Hyper-V support.
-
-4. **Install the Google Android emulator package 27.2.7 or later**
-   &ndash; To install this package, navigate to **Tools > Android >
-   Android SDK Manager** in Visual Studio. Select the **Tools** tab,
-   and ensure the Android Emulator component is at least of version
-   27.2.7.
+   [Visual Studio 15.8 Preview 1 or later](https://www.visualstudio.com/vs/preview/)**.
+   This version of Visual Studio provides IDE support for
+   running the Google Android Emulator with Hyper-V.
+ 
+4. **Install the Google Android emulator package 27.2.7 or later**. To
+   install this package, navigate to **Tools > Android > Android SDK
+   Manager** in Visual Studio. Select the **Tools** tab and ensure that
+   the Android Emulator version is at least 27.2.7. Also ensure that
+   the Android SDK Tools version is 26.1.1 or later:
 
     [![Android SDKs and Tools dialog](hardware-acceleration-images/win/14-sdk-manager.w158-sml.png)](hardware-acceleration-images/win/14-sdk-manager.w158.png#lightbox)
 
-5. If the Android Emulator version is less than 27.3.1, apply the
-   additional workaround step explained in **Known Issues** (next).
+5. If the emulator version is at least 27.2.7 but less than 27.3.1,
+   the following workaround is required to use Hyper-V:
 
+    1.  In the **C:\\Users\\_username_\\.android** folder, create a file called **advancedFeatures.ini** 
+        (if it doesn't already exist).
 
-### Known Issues
-
--   If the emulator version is at least 27.2.7 but less than 27.3.1,
-    the following workaround is required to use Hyper-V:
-    1.  In the **C:\\Users\\_username_\\.android** folder, create a file called **advancedFeatures.ini** if it doesn't already exist.
     2.  Add the following line to **advancedFeatures.ini**:
         ```
         WindowsHypervisorPlatform = on
         ```
+
+
+### Known Issues
 
 -   Performance may be reduced when using certain Intel and AMD-based
     processors.
@@ -92,29 +122,33 @@ To get started with using Hyper-V and the Google Android Emulator:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-Hyper-V support requires Windows 10. Please see the [Hyper-V requirements](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#check-requirements) for more details.
+Hyper-V support requires Windows 10. Please see the
+[Hyper-V requirements](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#check-requirements)
+for more details.
 
 -----
 
-## HAXM Overview
+## HAXM
 
 HAXM is a hardware-assisted virtualization engine (hypervisor) that
 uses Intel Virtualization Technology (VT) to speed up Android app
-emulation on a host machine. In combination with Android x86 emulator
-images provided by Intel and the official Android SDK Manager, HAXM
-allows for faster Android emulation on VT-enabled systems. 
+emulation on a host machine. Using HAXM in conjunction with Android x86
+emulator images provided by Intel allows for faster Android emulation
+on VT-enabled systems.
 
 If you are developing on a machine with an Intel CPU that has VT
 capabilities, you can take advantage of HAXM to greatly speed up the
 Google Android Emulator (if you're not sure whether your CPU supports VT,
-see [Determine If Your Processor Supports Intel Virtualization Technology](https://www.intel.com/content/www/us/en/support/processors/000005486.html)).
+see [Does My Processor Supports Intel Virtualization Technology?](https://www.intel.com/content/www/us/en/support/processors/000005486.html)).
 
 > [!NOTE]
 > You can't run a VM-accelerated emulator inside another VM, such as a VM
 > hosted by VirtualBox, VMWare, or Docker. You must run the Google Android emulator
 > [directly on your system hardware](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
-Before you use the Google Android Emulator for the first time, it's a good idea to verify that HAXM is installed and available to the Google Android Emulator.
+Before using the Google Android Emulator for the first time, it's a
+good idea to verify that HAXM is installed and available for the Google
+Android Emulator to use.
 
 ### Verifying HAXM Installation
 
@@ -124,10 +158,10 @@ Google Android Emulator, do the following:
 
 # [Visual Studio](#tab/vswin)
 
-1. Launch the Android Emulator Manager by clicking **Tools > Android >
-   Android Emulator Manager**:
+1. Launch the Android Device Manager by clicking **Tools > Android >
+   Android Device Manager**:
 
-    [![Android Emulator Manager menu item location](hardware-acceleration-images/win/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/win/01-avd-manager-menu-item.png#lightbox)
+    [![Android Device Manager menu item location](hardware-acceleration-images/win/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/win/01-avd-manager-menu-item.png#lightbox)
 
 2. If you see a **Performance Warning** dialog similar to the following, then HAXM is
    not yet installed or configured properly on your computer:
@@ -138,8 +172,8 @@ Google Android Emulator, do the following:
    [Performance Warnings](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#perfwarn)
    to identify the cause and resolve the underlying problem.
 
-3. Select an **x86** image (for example, **VisualStudio\_android-23\_x86\_phone**), click **Start**, then
-   click **Launch**:
+3. Select an **x86** image (for example, **VisualStudio\_android-23\_x86\_phone**) and
+   click **Start**:
 
     ![Starting the Google Android Emulator with a default virtual device image](hardware-acceleration-images/win/02-start-default-avd.png)
 
@@ -160,10 +194,10 @@ Google Android Emulator, do the following:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-1. Launch the Android Emulator Manager by clicking **Tools >
-   Google Emulator Manager**:
+1. Launch the Android Device Manager by clicking **Tools >
+   Device Manager**:
 
-    [![Android Emulator Manager menu item location](hardware-acceleration-images/mac/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/mac/01-avd-manager-menu-item.png#lightbox)
+    [![Android Device Manager menu item location](hardware-acceleration-images/mac/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/mac/01-avd-manager-menu-item.png#lightbox)
 
 2. If you see a **Performance Warning** dialog similar to the following, then HAXM is
    not yet installed or configured properly on your computer:
@@ -174,8 +208,8 @@ Google Android Emulator, do the following:
    [Performance Warnings](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#perfwarn)
    to identify the cause and resolve the underlying problem.
 
-3. Select the **x86** image (for example, **Android\_Accelerated\_x86**), click **Start**, then
-   click **Launch**:
+3. Select the **x86** image (for example,
+   **Android\_Accelerated\_x86**) and click **Play**:
 
     [![Starting the Google Android Emulator with a default virtual device image](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png#lightbox)
 

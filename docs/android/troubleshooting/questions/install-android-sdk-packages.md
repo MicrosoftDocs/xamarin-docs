@@ -6,7 +6,7 @@ ms.assetid: F136AAE0-C6D2-4B0F-8F8C-7A6A94877266
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/02/2018
+ms.date: 05/30/2018
 ---
 
 # Which Android SDK packages should I install?
@@ -40,11 +40,10 @@ to install the API levels between the minimum and target (even if you
 are backporting to those API levels).
 
 ## System Images
-These are only required if you want to use the out-of-the-box Android emulators from Google. 
 
-- [How to Configure the default emulator](~/android/get-started/installation/android-emulator/index.md)
-
-- [How to Accelerate the default emulator](~/android/get-started/installation/android-emulator/index.md)
+These are only required if you want to use the out-of-the-box Android
+emulators from Google. For more information, see
+[Android Emulator Setup](~/android/get-started/installation/android-emulator/index.md)
 
 ## Extras
 The Android SDK Extras are usually not required; but it is useful to be aware of them since they may be required depending on your use case.

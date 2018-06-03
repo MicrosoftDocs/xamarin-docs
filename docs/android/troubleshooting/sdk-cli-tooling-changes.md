@@ -7,7 +7,7 @@ ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/02/2018
+ms.date: 06/02/2018
 ---
 
 # Changes to the Android SDK Tooling
@@ -20,7 +20,7 @@ In recent versions of the SDK Tools for Android, Google has removed the
 existing AVD and SDK managers in favor of new CLI (Command Line
 Interface) tooling. The **android** program has been removed and the
 Google GUI (Graphical User Interface) managers in Visual Studio for Mac
-and older versions of Xamarin for Visual Studio will no longer work
+and older versions of Visual Studio Tools for Xamarin will no longer work
 past version 25.2.5 of Android SDK Tools. For example, attempting to
 use the **android** program via the command line will result in an
 error message like the following:
@@ -46,7 +46,7 @@ for the discontinued Google GUI-based managers:
     instead of the legacy Google SDK Manager.
 
 -   To create and configure Android Virtual Devices, use 
-    the [Xamarin Android Device Manager](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)
+    the [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)
     instead of the legacy Google Emulator Manager.
 
 These tools are functionally equivalent to the Google GUI-based
@@ -92,7 +92,7 @@ Tools** version **25.2.5** or lower.
 ## Related Links
 
 - [Android SDK Setup](~/android/get-started/installation/android-sdk.md)
-- [Android Device Manager](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)
+- [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)
 - [Understanding Android API levels](~/android/app-fundamentals/android-api-levels.md)
 - [SDK Tools Release Notes (Google)](https://developer.android.com/studio/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
