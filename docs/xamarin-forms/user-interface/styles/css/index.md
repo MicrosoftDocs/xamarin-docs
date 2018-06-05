@@ -1,5 +1,5 @@
 ---
-title: "Styling Xamarin.Forms Apps using Cascading Style Sheets"
+title: "Styling Xamarin.Forms Apps using Cascading Style Sheets (CSS)"
 description: "Xamarin.Forms supports styling visual elements using Cascading Style Sheets (CSS)."
 ms.prod: xamarin
 ms.assetid: C89D57A6-DAB9-4C42-963F-26D67627DDC2
@@ -9,8 +9,7 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
 ---
-
-# Styling Xamarin.Forms apps using Cascading Style Sheets
+# Styling Xamarin.Forms apps using Cascading Style Sheets (CSS)
 
 _Xamarin.Forms supports styling visual elements using Cascading Style Sheets (CSS)._
 
