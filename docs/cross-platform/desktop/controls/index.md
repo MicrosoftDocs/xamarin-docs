@@ -1,11 +1,12 @@
 ---
 ms.assetid: 4D47185C-8998-4903-AE64-7E2A67F9DF7A
-title: UI Controls Comparison
-description: Understand the similarities and differences between the controls availabe on each platform.
+title: "UI Controls Comparison"
+description: "This document provides a comparison of UI controls between Xamarin.Forms, Windows Forms, and WPF. It also links to other documentation that compares WPF to Xamarin.Forms."
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
 ---
+
 # UI Controls Comparison
 
 Below is a comparison of Xamarin.Forms controls with Windows Forms and WPF,

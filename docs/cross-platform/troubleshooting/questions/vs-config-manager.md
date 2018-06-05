@@ -8,7 +8,7 @@ ms.author: amburns
 ms.date: 12/02/2016
 ---
 
-# Why doesn't Visual Studio include my referenced library project in my build
+# Why doesn't Visual Studio include my referenced library project in my build?
 
 Visual Studio uses the **Configuration Manager** to determine which projects in a solution are automatically included in a given build or deployment configuration.
 

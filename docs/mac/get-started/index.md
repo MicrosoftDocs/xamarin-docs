@@ -1,6 +1,6 @@
 ---
-title: "Getting Started with Mac"
-description: "Introduction to Xamarin.Mac"
+title: "Getting Started with Xamarin.Mac"
+description: "This document links to guides that describe how to install Xamarin.Mac and provide a walkthrough of how to build a sample Xamarin.Mac app."
 ms.prod: xamarin
 ms.assetid: 6CE7C634-6495-3517-B004-21C9EBF4C462
 ms.technology: xamarin-mac
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 12/02/2016
 ---
 
-# Getting Started with Mac
+# Getting Started with Xamarin.Mac
 
 ##  [Installation](~/mac/get-started/installation.md)
 

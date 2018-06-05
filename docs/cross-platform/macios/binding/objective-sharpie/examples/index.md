@@ -1,5 +1,6 @@
 ---
-title: "Examples"
+title: "Objective Sharpie Examples"
+description: "This document links to various guides that describe how to use the Objective Sharpie tool, which is used to automate the process of creating C# bindings to Objective-C code."
 ms.prod: xamarin
 ms.assetid: 1ACB0935-6D5F-4A5F-BE28-08DA1B675F0E
 author: asb3993
@@ -7,7 +8,7 @@ ms.author: amburns
 ms.date: 03/29/2017
 ---
 
-# Examples
+# Objective Sharpie Examples
 
 Follow these examples to better understand how Objective Sharpie works:
 

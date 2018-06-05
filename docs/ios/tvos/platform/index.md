@@ -1,6 +1,6 @@
 ---
-title: "Platform Features"
-description: "This document links to articles describing the features included in various tvOS releases."
+title: "tvOS Platform Features"
+description: "This document links to articles describing the features included in various tvOS releases. It also links to a document that describes the Siri Remote and Bluetooth controllers."
 ms.prod: xamarin
 ms.assetid: FB705CAD-B43C-4374-B139-92AB81185429
 ms.technology: xamarin-ios
@@ -30,8 +30,6 @@ This article introduces all of the new and modified APIs and features available 
 ## [Siri Remote and Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md)
 
 This article covers supporting the new Siri Remote and Bluetooth game controllers in Xamarin.tvOS apps.
-
-
 
 ## Related Links
 

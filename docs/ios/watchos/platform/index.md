@@ -1,6 +1,6 @@
 ---
-title: "Platform Features"
-description: "Apple Watch-specific features to include in watchOS apps."
+title: "watchOS Platform Features"
+description: "This document links to various guides that describe watchOS platform features such as Apple Pay, notifications, complications, proactive suggestions, workout apps, and more."
 ms.prod: xamarin
 ms.assetid: 13F23E01-BAED-43EB-A70E-3B30EF53D379
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 09/13/2016
 ---
 
-# Platform Features
+# watchOS Platform Features
 
 _Apple Watch-specific features to include in watchOS apps._
 

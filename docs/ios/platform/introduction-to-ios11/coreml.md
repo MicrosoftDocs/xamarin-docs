@@ -1,6 +1,6 @@
 ---
-title: "Introduction to CoreML"
-description: "Machine learning for mobile apps on iOS 11"
+title: "Introduction to CoreML in Xamarin.iOS"
+description: "This document describes CoreML, which enables machine learning on iOS. This document discusses how to get started with CoreML and how to use it with the Vision framework."
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 08/30/2016
 ---
 
-# Introduction to CoreML
+# Introduction to CoreML in Xamarin.iOS
 
 _Machine learning for mobile apps on iOS 11_
 

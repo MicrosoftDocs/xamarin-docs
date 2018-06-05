@@ -7,7 +7,8 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
 ---
-# Using the Model class
+
+# Using the Model Class
 
 _The Model class greatly simplifies rendering complex 3D objects when compared to the traditional method of rendering 3D graphics. Model objects are created from content files, allowing for easy integration of content with no custom code._
 

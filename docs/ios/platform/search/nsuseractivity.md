@@ -1,5 +1,6 @@
 ---
-title: "Search with NSUserActivity"
+title: "Search with NSUserActivity in Xamarin.iOS"
+description: "This document describes how to index an NSUserActivity, making it searchable in Spotlight and Safari. It discusses how to respond to the selection of an NSUserActivity in search results."
 ms.prod: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/20/2017
 ---
 
-# Search with NSUserActivity
+# Search with NSUserActivity in Xamarin.iOS
 
 `NSUserActivity` was introduced in iOS 8 and is used to provide the data for Handoff.
 It allows you to create activities in specific parts of your app that can then be

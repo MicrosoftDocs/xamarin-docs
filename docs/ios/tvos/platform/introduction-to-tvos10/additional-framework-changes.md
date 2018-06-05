@@ -1,6 +1,6 @@
 ---
 title: "Additional tvOS 10 Frameworks Changes"
-description: "This article covers additional, minor changes or enhancements to existing frameworks for tvOS 10."
+description: "This document describes minor changes and enhancements made to existing frameworks in iOS 10. It discusses updates to AVFoundation, AVKit, Core Data, Core Graphics, Foundation, GameKit, GameplayKit, and more."
 ms.prod: xamarin
 ms.assetid: F771640A-F92E-4954-82D5-2D720434971E
 ms.technology: xamarin-ios
@@ -11,14 +11,11 @@ ms.date: 03/16/2017
 
 # Additional tvOS 10 Frameworks Changes
 
-_This article covers additional, minor changes or enhancements to existing frameworks for tvOS 10._
-
-
 In addition to the major changes to tvOS, Apple has made modifications and improvements to several existing frameworks in tvOS 10.
 
 <a name="AV-Foundation-Framework" />
 
-## AV Foundation Framework Additions
+## AVFoundation Framework Additions
 
 The AVFoundation framework includes the following enhancements:
 

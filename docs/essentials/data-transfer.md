@@ -1,12 +1,13 @@
 ---
-title: "Xamarin.Essentials Data Transfer"
-description: "The DataTransfer class enables an application to share data such as text and web links to other applications on the device."
+title: "Xamarin.Essentials: Data Transfer"
+description: "The DataTransfer class in Xamarin.Essentials enables an application to share data such as text and web links to other applications on the device."
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ---
-# Xamarin.Essentials Data Transfer
+
+# Xamarin.Essentials: Data Transfer
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
 

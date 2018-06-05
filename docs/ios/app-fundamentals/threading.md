@@ -1,5 +1,6 @@
 ---
-title: "Threading"
+title: "Threading in Xamarin.iOS"
+description: "This document describes how to use the System.Threading APIs in a Xamarin.iOS application. It discusses The Task Parallel Library, building responsive applications, and garbage collection."
 ms.prod: xamarin
 ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
@@ -7,7 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# Threading
+# Threading in Xamarin.iOS
 
 The Xamarin.iOS runtime gives developers access to the
 	.NET threading APIs, both explicitly when using threads

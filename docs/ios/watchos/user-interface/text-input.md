@@ -1,5 +1,6 @@
 ---
-title: "Working with Text Input"
+title: "Working with watchOS Text Input in Xamarin"
+description: "This document describes watchOS text input in Xamarin. It discusses the PresentTextInputController method, scribbling, plain text, emojis, and dictation."
 ms.prod: xamarin
 ms.assetid: E9CDF1DE-4233-4C39-99A9-C0AA643D314D
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/17/2017
 ---
 
-# Working with Text Input
+# Working with watchOS Text Input in Xamarin
 
 The Apple Watch does not provide a keyboard for
   users to input text, however it does support

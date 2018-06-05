@@ -1,5 +1,6 @@
 ---
-title: "Sample Workbooks"
+title: "Xamarin Workbooks – Samples"
+description: "This document links to sample workbooks to use when learning how to use Xamarin Workbooks. Linked workbooks demonstrate OpenGL, UrhoSharp, and property animation in Xamarin.Android."
 ms.prod: xamarin
 ms.assetid: DE1609F8-0D39-4EA0-8666-0468FCF77ACC
 ms.custom: xamu-video
@@ -8,7 +9,7 @@ ms.author: toopge
 ms.date: 03/30/2017
 ---
 
-# Sample Workbooks
+# Xamarin Workbooks – Samples
 
 > [!NOTE]
 > A variety of samples are available at

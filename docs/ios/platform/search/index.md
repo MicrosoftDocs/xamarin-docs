@@ -1,5 +1,5 @@
 ---
-title: "New Search APIs"
+title: "Search APIs in Xamarin.iOS"
 description: "This article covers using the new App Search APIs provided by iOS 9 to allow users to search for information and features inside your Xamarin.iOS apps."
 ms.prod: xamarin
 ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
@@ -8,9 +8,9 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# New Search APIs
+# Search APIs in Xamarin.iOS
 
-_This article covers using the new App Search APIs provided by iOS 9 to allow users to search for information and features inside your Xamarin.iOS apps._
+_This article covers using the App Search APIs provided by iOS 9 to allow users to search for information and features inside your Xamarin.iOS apps._
 
 Search has been expanded in iOS 9 to provide great new ways to access information
 and features inside a Xamarin.iOS app. Using the new App Search APIs, app content

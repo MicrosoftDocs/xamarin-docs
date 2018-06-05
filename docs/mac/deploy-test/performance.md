@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Mac performance"
-description: "This document provides some performance considerations for Xamarin.Mac apps."
+description: "This document provides some performance considerations for Xamarin.Mac apps. It discusses the modern target framework, the linker, AOT, delegates, Cocoa APIs for reusing views, and async code."
 ms.prod: xamarin
 ms.assetid: 54B07DED-FDF2-49B2-A5FB-3A9357E65922
 ms.technology: xamarin-mac

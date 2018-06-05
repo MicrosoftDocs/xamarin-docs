@@ -1,6 +1,6 @@
 ---
-title: "App Store Changes"
-description: "Exploring the new features of iOS 11"
+title: "App Store Changes in iOS 11"
+description: "This document explores changes to the App Store in iOS 11. It discusses an application's store icon, promoted in-app purchases, the redesigned product page, customer communication, and phased releases."
 ms.prod: xamarin
 ms.assetid: 4A7A03FD-B4F2-4969-8676-A17260730FD6
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 09/13/2016
 ---
 
-# App Store Changes
-
-_Exploring the new features of iOS 11_
+# App Store Changes in iOS 11
 
 The iOS App Store has had a complete redesign, which not only allows users to efficiently navigate the store, but also allows you, as a developer, to promote your app to users. These promotions include updates to in-app purchases and updates to the product page. iOS 11 also adds updates regarding how to communicate with users, how to add your app icon, and how to release your app to the public.
 

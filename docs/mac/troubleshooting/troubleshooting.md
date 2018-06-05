@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Mac troubleshooting tips"
-description: "This document describes approaches for resolving issues encountered when developing Xamarin.Mac applications."
+description: "This document describes approaches for resolving issues encountered when developing Xamarin.Mac applications. It also discusses ways to get support."
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5CBC6822-BCD7-4DAD-8468-6511250D41C4

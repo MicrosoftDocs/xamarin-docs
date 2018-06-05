@@ -1,5 +1,6 @@
 ---
-title: "Search Bar"
+title: "Search Bars in Xamarin.iOS"
+description: "This document describes how to use search bars in Xamarin.iOS. It discusses how to create search bars programmatically and in a storyboard."
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 07/11/2017
 ---
 
-# Search Bar
+# Search Bars in Xamarin.iOS
 
 The UISearchBar is used to search through a list of values. 
 

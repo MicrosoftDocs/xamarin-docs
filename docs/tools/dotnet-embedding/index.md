@@ -1,6 +1,6 @@
 ---
 title: ".NET Embedding"
-description: ".NET Embedding allows your existing .NET Code (C#, F#, and others) to be consumed from other programming languages"
+description: ".NET Embedding allows your existing .NET Code (C#, F#, and others) to be consumed by code written in other programming languages."
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
 author: topgenorth
@@ -31,7 +31,7 @@ language that will consume it.   For example, the iOS platform does
 not allow just-in-time (JIT) compilation, so .NET Embedding will
 statically compile your .NET code into native code that can be used in
 iOS.  Other environments do allow JIT compilation, and in those
-enviroments, we opt to JIT compile.
+environments, we opt to JIT compile.
 
 It supports various language consumers, so it surfaces .NET code as
 idiomatic code in the target language.   This is the list of supported

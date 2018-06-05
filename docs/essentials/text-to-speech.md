@@ -1,12 +1,13 @@
 ---
-title: "Xamarin.Essentials Text-to-Speech"
-description: "The TextToSpeech class enables an application utilize the built in text-to-speech engines to speak back text from the device and also to query available languages that the engine can support."
+title: "Xamarin.Essentials: Text-to-Speech"
+description: "The TextToSpeech class in Xamarin.Essentials enables an application utilize the built in text-to-speech engines to speak back text from the device and also to query available languages that the engine can support."
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ---
-# Xamarin.Essentials Text-to-Speech
+
+# Xamarin.Essentials: Text-to-Speech
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
 

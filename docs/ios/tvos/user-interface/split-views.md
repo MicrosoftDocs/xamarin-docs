@@ -1,6 +1,6 @@
 ---
-title: "Working with Split View Controllers"
-description: "This article covers designing and working with Split View Controllers inside of a Xamarin.tvOS app."
+title: "Working with tvOS Split View Controllers in Xamarin"
+description: "This document describes how to work with tvOS split views in an app built with Xamarin. It provides a high-level overview of split view controllers, how to use them with storyboards, accessing the master and detail views, and showing and hiding the master view."
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
@@ -9,10 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Working with Split View Controllers
-
-_This article covers designing and working with Split View Controllers inside of a Xamarin.tvOS app._
-
+# Working with tvOS Split View Controllers in Xamarin
 
 A Split View Controller presents and manages a Master and Detail View Controller side-by-side, on screen at the same time. Split View Controllers are used to present persistent, focusable content in the Master View (the smaller section on the left) and related details in the Detail View (the larger section on the right).
 

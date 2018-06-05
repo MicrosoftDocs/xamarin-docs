@@ -1,6 +1,6 @@
 ---
-title: "Working with Text and Search Fields"
-description: "This article covers designing and working with Text and Search Fields inside of a Xamarin.tvOS app."
+title: "Working with tvOS Text and Search Fields in Xamarin"
+description: "This document describes how to work with text and search fields in a tvOS app built with Xamarin. It provides a high-level overview of text and search fields, and discusses keyboards, storyboard integration, search data models, and more."
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios
@@ -9,11 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Working with Text and Search Fields
-
-_This article covers designing and working with Text and Search Fields inside of a Xamarin.tvOS app._
-
-
+# Working with tvOS Text and Search Fields in Xamarin
 
 When required, your Xamarin.tvOS app can request small pieces of text from the user (such as User IDs and Passwords) using a Text Field and the on-screen keyboard:
 

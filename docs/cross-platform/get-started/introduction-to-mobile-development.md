@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Mobile Development"
+description: "This document provides an introduction to mobile development, discussing Xamarin, how it works, and the applications it outputs."
 ms.prod: xamarin
 ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993

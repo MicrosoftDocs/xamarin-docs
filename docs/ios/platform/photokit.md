@@ -1,6 +1,6 @@
 ---
-title: "PhotoKit"
-description: "Photo Kit allows apps to query the system image library and create custom UI to view and modify its contents."
+title: "PhotoKit in Xamarin.iOS"
+description: "This document describes PhotoKit, discussing its model objects, how to query model data, and saving changes to the photo library."
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios
@@ -9,18 +9,18 @@ ms.author: brumbaug
 ms.date: 06/14/2017
 ---
 
-# PhotoKit
+# PhotoKit in Xamarin.iOS
 
-_Photo Kit allows apps to query the system image library and create custom UI to view and modify its contents._
-
-Photo Kit is a new framework that allows applications to query the system image library and create custom user interfaces to view and modify its contents. It includes a number of classes that represent image and video assets, as well as collections of assets such as albums and folders.
+PhotoKit is a new framework that allows applications to query the system image library and create custom user interfaces to view and modify its contents. It includes a number of classes that represent image and video assets, as well as collections of assets such as albums and folders.
 
 ## Model Objects
-Photo Kit represents these assets in what it calls model objects. The model objects that represent the photos and videos themselves are of type `PHAsset`. A `PHAsset` contains metadata such as the asset’s media type and its creation date.
+
+PhotoKit represents these assets in what it calls model objects. The model objects that represent the photos and videos themselves are of type `PHAsset`. A `PHAsset` contains metadata such as the asset’s media type and its creation date.
 Similarly, the `PHAssetCollection` and `PHCollectionList` classes contain metadata about asset collections and collection lists respectively. Asset collections are groups of assets, such as all the photos and videos for a given year. Likewise, collection lists are groups of asset collections, such as photos and videos grouped by year.
 
 ## Querying Model Data
-Photo Kit makes it easy to query model data through a variety of fetch methods. For example, to retrieve all images, you would call `PFAsset.Fetch`, passing the `PHAssetMediaType.Image` media type.
+
+PhotoKit makes it easy to query model data through a variety of fetch methods. For example, to retrieve all images, you would call `PFAsset.Fetch`, passing the `PHAssetMediaType.Image` media type.
 
 	PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
 

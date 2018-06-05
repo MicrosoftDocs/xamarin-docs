@@ -1,6 +1,6 @@
 ---
 title: "iOS Security and Privacy Features"
-description: "This article covers working with security and privacy in iOS and how they affect a Xamarin.iOS app."
+description: "This document describes security and privacy features of iOS and discusses how to use them with Xamarin.iOS. It takes a look at updates made in iOS 10 and how to access private user data."
 ms.prod: xamarin
 ms.assetid: 718C8721-C359-4650-878A-D68E159A3F53
 ms.technology: xamarin-ios

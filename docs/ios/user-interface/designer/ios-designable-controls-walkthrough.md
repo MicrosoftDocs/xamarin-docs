@@ -1,6 +1,6 @@
 ---
-title: "Walkthrough - Using Custom Controls with the Xamarin Designer for iOS"
-description: "This article provides a step-by-step walkthrough showing how to create a custom control and use it in the Xamarin Designer for iOS. It shows how to make a control available in the designer’s Toolbox so it can be drag/dropped onto a view. Additionally, it shows how to implement a control so it renders properly at design time and runtime, as well as how to create properties that can be set at design time."
+title: "Using Custom Controls with the iOS Designer"
+description: "This document describes how to create a custom control and use it with the Xamarin Designer for iOS. It shows how to make the control available in the iOS Designer's Toolbox, implement the control so that it renders correctly and design time, and more."
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/22/2017
 ---
 
-# Walkthrough - Using Custom Controls with the Xamarin Designer for iOS
-
-_This article provides a step-by-step walkthrough showing how to create a custom control and use it in the Xamarin Designer for iOS. It shows how to make a control available in the designer’s Toolbox so it can be drag/dropped onto a view. Additionally, it shows how to implement a control so it renders properly at design time and runtime, as well as how to create properties that can be set at design time._
+# Using Custom Controls with the iOS Designer
 
 ## Requirements
 

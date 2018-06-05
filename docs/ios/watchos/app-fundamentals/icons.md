@@ -1,5 +1,6 @@
 ---
-title: "Working with Icons"
+title: "Working with watchOS Icons in Xamarin"
+description: "This document describes the various icons necessary for a watchOS application and how to set up a solution to include these icons."
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
@@ -7,7 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# Working with Icons
+# Working with watchOS Icons in Xamarin
 
 Apple Watch solutions require two sets of icons:
 

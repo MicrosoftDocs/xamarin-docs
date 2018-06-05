@@ -1,5 +1,6 @@
 ---
-title: "Table Control"
+title: "watchOS Table Controls in Xamarin"
+description: "This document describes how to use watchOS table controls in Xamarin. It discusses adding a table, adding a row controller, creating and populating rows, responding to taps, and more."
 ms.prod: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/17/2017
 ---
 
-# Table Control
+# watchOS Table Controls in Xamarin
 
 The watchOS `WKInterfaceTable` control is much simpler than
 	its iOS counterpart, but performs a similar role. It creates

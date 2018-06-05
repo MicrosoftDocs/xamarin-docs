@@ -1,5 +1,6 @@
 ---
 title: "Advanced (manual) Real-World Example"
+description: "This document describes how to use the output of xcodebuild as the input to Objective Sharpie, which provides insight into what Objective Sharpie does under the hood."
 ms.prod: xamarin
 ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
@@ -9,9 +10,7 @@ ms.date: 03/29/2017
 
 # Advanced (manual) Real-World Example
 
-
 **This example uses the [POP library from Facebook](https://github.com/facebook/pop).**
-
 
 This section covers a more advanced approach to binding, where we will use Apple's `xcodebuild` tool to first build the POP project, and then manually deduce input for Objective Sharpie. This essentially covers what Objective Sharpie is doing under the hood in the previous section.
 

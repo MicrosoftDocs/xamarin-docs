@@ -1,5 +1,5 @@
 ---
-title: "Sharing Code Options"
+title: "Sharing Code Overview"
 description: "This document compares the different methods of sharing code between cross-platform projects: Shared Projects, Portable Class Libraries, and .NET Standard, including the benefits and disadvantages of each."
 ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53

@@ -1,6 +1,6 @@
 ---
 title: "Introduction to the Mobile Software Development Lifecycle"
-description: "This article discusses the software development lifecycle with respect to mobile applications, and discusses some of the considerations required when building mobile projects. For developers wishing to just jump right in and start building, this guide can be skipped and read later for a more complete understanding of mobile development."
+description: "This document describes the mobile software development lifecycle, taking a look at UX design, UI design, development, stabilization, distribution, and more."
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: asb3993
@@ -9,8 +9,6 @@ ms.date: 11/22/2016
 ---
 
 # Introduction to the Mobile Software Development Lifecycle
-
-_This article discusses the software development lifecycle with respect to mobile applications, and discusses some of the considerations required when building mobile projects. For developers wishing to just jump right in and start building, this guide can be skipped and read later for a more complete understanding of mobile development._
 
 Building mobile applications can be as easy as opening up the IDE, throwing
 something together, doing a quick bit of testing, and submitting to an App Store

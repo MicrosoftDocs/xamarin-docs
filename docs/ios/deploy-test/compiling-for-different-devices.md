@@ -1,5 +1,6 @@
 ---
-title: "Compiling for Different Devices"
+title: "Compiling for Different Devices in Xamarin.iOS"
+description: "This document describes various build configuration options that can be used to customize a Xamarin.iOS build for different devices."
 ms.prod: xamarin
 ms.assetid: 3B259248-887E-3E4F-E09C-7AD28C2A8CEE
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# Compiling for Different Devices
+# Compiling for Different Devices in Xamarin.iOS
 
 The build properties of your executable can be configured from the Project's **iOS Build** properties page, which is found by right-clicking on the Project name and browsing to **Options > iOS Build** in Visual Studio for Mac, and **Properties** in Visual Studio:
 

@@ -1,5 +1,6 @@
 ---
-title: "In-App Purchase Basics and Configuration"
+title: "In-App Purchase Basics and Configuration in Xamarin.iOS"
+description: "This document describes in-app purchases in Xamarin.iOS, discussing relevant information about rules, configuration, and iTunes Connect."
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# In-App Purchase Basics and Configuration
+# In-App Purchase Basics and Configuration in Xamarin.iOS
 
 Implementing in-app purchases requires the application to utilize the
 StoreKit API on the device. StoreKit manages all communication with Apple’s

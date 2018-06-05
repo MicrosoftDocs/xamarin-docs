@@ -1,6 +1,6 @@
 ---
-title: "CocosSharp"
-description: "This document links to various articles about game development with CocosSharp."
+title: "CocosSharp 2D Game Engine"
+description: "This document links to various articles about game development with CocosSharp. Linked content describes sample apps, drawing, animation, and more."
 ms.prod: xamarin
 ms.assetid: 5E72869D-3541-408B-AB64-D34C777AFB79
 author: charlespetzold
@@ -8,7 +8,7 @@ ms.author: chape
 ms.date: 03/29/2018
 ---
 
-# CocosSharp
+# CocosSharp 2D Game Engine
 
 _CocosSharp is a library for building 2D games using C# and F#. It is
 a .NET port of the popular Cocos2D engine._

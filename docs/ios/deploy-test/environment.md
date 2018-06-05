@@ -1,5 +1,6 @@
 ---
-title: "Environment"
+title: "Execution Environment for Xamarin.iOS Apps"
+description: "This document describes how to set up temporary and permanent environment variables for a Xamarin.iOS app. The variables can be specified in a project's properties or as extra arguments to the mtouch packaging tool."
 ms.prod: xamarin
 ms.assetid: 9801644A-89BB-4491-AD28-7F3B97D2CD62
 ms.technology: xamarin-ios
@@ -7,7 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# Environment
+# Execution Environment for Xamarin.iOS Apps
 
 The *execution environment* is the set of environment variables that influence program
 execution. Environment variables can be set temporarily in the project's properties, or

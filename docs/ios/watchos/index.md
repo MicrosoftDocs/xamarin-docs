@@ -1,6 +1,6 @@
 ---
-title: "watchOS"
-description: "Build apps for Apple Watch with Xamarin"
+title: "Building watchOS Apps with Xamarin"
+description: "This document links to various guides that describe how to build watchOS apps with Xamarin. The linked guides discuss getting started, watchOS user interface controls, watchOS features, deployment and testing, and troubleshooting"
 ms.prod: xamarin
 ms.assetid: 14EAE85E-460A-4145-8C8D-869D176D5C3F
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/17/2017
 ---
 
-# watchOS
-
-_Build apps for Apple Watch with Xamarin_
+# Building watchOS Apps with Xamarin
 
 ![Apple Watch picker interface](images/watch1.png) ![Apple Watch buttons](images/watch2.png) ![Apple Watch map interface](images/watch3.png)
 

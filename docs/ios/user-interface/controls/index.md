@@ -1,6 +1,6 @@
 ---
-title: "Controls"
-description: "Xamarin.iOS exposes all the native user interface objects provided by Apple. They are easily added to Xamarin.iOS apps using the iOS Designer, Xcode's Interface Builder or programmatically. Regardless of which method you choose, Xamarin.iOS exposes all the user interface object properties and methods in C#."
+title: "User Interface Controls in Xamarin.iOS"
+description: "This document links to guides that describe the various iOS user interface controls available to Xamarin.iOS developers. Linked content discusses alerts, buttons, collection views, images, manual camera controls, maps, labels, pickers, date pickers, and more."
 ms.prod: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
 ms.technology: xamarin-ios
@@ -9,11 +9,9 @@ ms.author: brumbaug
 ms.date: 03/21/2017
 ---
 
-# Controls
+# User Interface Controls in Xamarin.iOS
 
-_Xamarin.iOS exposes all the native user interface objects provided by Apple. They are easily added to Xamarin.iOS apps using the iOS Designer, Xcode's Interface Builder or programmatically. Regardless of which method you choose, Xamarin.iOS exposes all the user interface object properties and methods in C#._
-
-This document will introduce some of the most common iOS user interface controls and how to use them.
+This document introduces some of the most common iOS user interface controls and how to use them.
 
 ## [Alerts](alerts.md)
 

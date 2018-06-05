@@ -1,5 +1,6 @@
 ---
-title: "Transactions and Verification"
+title: "Transactions and Verification in Xamarin.iOS"
+description: "This document describes how to allow for the restoration of past purchases in a Xamarin.iOS app. It also discusses ways to secure purchases and server-delivered products."
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# Transactions and Verification
+# Transactions and Verification in Xamarin.iOS
 
 ## Restoring Past Transactions
 

@@ -1,6 +1,6 @@
 ---
 title: "Mac app configuration"
-description: "This guide walks through configuring your Xamarin.Mac app for publication."
+description: "This document describes how to configure a Xamarin.Mac app for publication. It discusses application settings, signing settings, and build settings."
 ms.prod: xamarin
 ms.assetid: fea66a34-1581-4cd6-b714-3fbff215a542
 ms.technology: xamarin-mac
@@ -11,13 +11,9 @@ ms.date: 04/12/2017
 
 # Mac app configuration
 
-_This guide walks through configuring your Xamarin.Mac app for publication._
-
-
 ## Mac app configuration
 
 Right-click on the Mac application project in Visual Studio for Mac and choose **Options**.
-
 
 ### Application settings
 
@@ -33,7 +29,6 @@ Running Mac applications created with Xamarin.Mac have the following system requ
 
 - A Mac computer running Mac OS X 10.7 or greater.
 
-
 ### Signing settings
 
 The **Mac Signing** section of the **Project Options** dialog allows the developer to sign a Xamarin.Mac app for testing, for self release or for release through the Apple App Store:
@@ -42,13 +37,11 @@ The **Mac Signing** section of the **Project Options** dialog allows the develop
 
 From here select the Identity, Provisioning Profile and any custom entitlements used to sign the app when it is compiled. The developer can optionally sign the Installer used to install the app on an other Mac.
 
-
 ### Build settings
 
 The **Mac Build** section of the **Project Options** dialog allows the developer to select the architecture for a Xamarin.Mac app, to control what version of macOS the app will support and to optionally create an install package when the app is successfully compiled:
 
  [![Editing the build settings](app-configuration-images/config03.png "Editing the build settings")](app-configuration-images/config03-large.png#lightbox)
-
 
 ## Related Links
 

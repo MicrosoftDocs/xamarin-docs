@@ -1,8 +1,7 @@
 ---
 redirect_url: /xamarin/cross-platform/internals/available-assemblies/
-
-title: "Internals"
-description: "Details of the inner workings of the Xamarin SDKs."
+title: "Xamarin – Internals"
+description: "This document links to guides that describe the internal workings of Xamarin. Currently, it links to the Available Assemblies document."
 ms.prod: xamarin
 ms.assetid: 0bec99a9-ab79-4f10-8d7b-35f9338c0728
 author: asb3993
@@ -10,10 +9,9 @@ ms.author: amburns
 ms.date: 03/13/2018
 ---
 
-# Internals
+# Xamarin – Internals
 
 This section contains documents that explain some more advanced cross-platform application features and concepts.
-
 
 ## [Available Assemblies](~/cross-platform/internals/available-assemblies.md)
 

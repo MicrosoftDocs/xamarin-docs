@@ -1,11 +1,13 @@
 ---
 title: "Getting Started with the Xamarin Workbooks SDK"
+description: "This document describes how to get started with the Xamarin Workbooks SDK, which can be used to develop integrations for Xamarin Workbooks."
 ms.prod: xamarin
 ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
 ---
+
 # Getting Started with the Xamarin Workbooks SDK
 
 This document provides a quick guide to getting started with developing

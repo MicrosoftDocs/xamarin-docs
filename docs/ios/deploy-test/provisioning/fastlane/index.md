@@ -1,6 +1,6 @@
 ---
 title: "Introduction to fastlane for iOS"
-description: "This guide introduces the various fastlane tools that can be used to code sign iOS applications"
+description: "This guide introduces the various fastlane tools that can be used to code sign iOS applications. It describes how to update, install, and use the fastlane tools." 
 ms.prod: xamarin
 ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
 ms.technology: xamarin-ios
@@ -10,8 +10,6 @@ ms.date: 03/19/2017
 ---
 
 # Introduction to fastlane for iOS
-
-_This guide introduces the various fastlane tools that can be used to code sign iOS applications_
 
 fastlane is an open source project, created to simplify the confusing and often tedious process of releasing iOS and Android apps. It comprises of several utilities that each handle a specific aspect of app release, such as:
 

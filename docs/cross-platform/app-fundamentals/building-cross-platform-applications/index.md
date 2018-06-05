@@ -1,6 +1,6 @@
 ---
-title: "Building Cross Platform Applications"
-description: "This section discusses, in a summary plus six parts, how to build applications using the Xamarin development platform  – from understanding how Xamarin works to designing mobile apps, and then testing and deploying to the various app stores."
+title: "Building Cross-Platform Applications"
+description: "This section discusses, in a summary plus six parts, how to build applications using the Xamarin development platform – from understanding how Xamarin works to designing mobile apps, and then testing and deploying to the various app stores."
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
 author: asb3993
@@ -8,13 +8,11 @@ ms.author: amburns
 ms.date: 01/28/2016
 ---
 
-# Sharing Code Options
+# Building Cross-Platform Applications
 
 There are two options for sharing code between cross-platform mobile applications: Shared Asset Projects and Portable Class Libraries. These options are [discussed here](~/cross-platform/app-fundamentals/code-sharing.md); more information on [Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md) and [Shared Projects](~/cross-platform/app-fundamentals/shared-projects.md) is also available.
 
 <a name="Sections" />
-
-## Building Cross Platform Mobile Apps
 
  [Overview](~/cross-platform/app-fundamentals/building-cross-platform-applications/overview.md)
 
@@ -32,7 +30,6 @@ There are two options for sharing code between cross-platform mobile application
 
  <a name="Cross-Platform_Mobile_Application_Case_Studies" />
 
-
 ## Case Studies
 
 The principles outlined in this document are put into practice in the sample
@@ -40,7 +37,6 @@ application *Tasky*, as well as [pre-built applications](https://xamarin.com/pre
 like [Xamarin CRM](https://xamarin.com/prebuilt/#xamarincrm).
 
  <a name="Tasky" />
-
 
 ### Tasky
 
@@ -51,7 +47,6 @@ and uses a local SQLite database.
  [![tasky list](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) [![tasky list](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
 
 Read the [Tasky Case Study](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md).
-
 
 ## Summary
 
@@ -67,8 +62,6 @@ and how they can be built in a cross-platform way.
 
 Finally, it briefly discusses testing, and provides references to
 a case study that puts these principles into action.
-
-
 
 ## Related Links
 

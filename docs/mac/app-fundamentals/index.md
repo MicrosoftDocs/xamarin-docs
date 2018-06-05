@@ -1,5 +1,5 @@
 ---
-title: "Application fundamentals"
+title: "Xamarin.Mac Application fundamentals"
 description: "This document links to guides that describe various concepts necessary to understand when developing Xamarin.Mac applications."
 ms.prod: xamarin
 ms.assetid: 5A36B3A7-F197-4AC3-A40D-B2C49362FF06
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 12/17/2015
 ---
 
-# Application fundamentals
+# Xamarin.Mac Application fundamentals
 
 ## [Common patterns and idioms](~/mac/app-fundamentals/patterns.md)
 

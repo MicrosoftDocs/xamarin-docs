@@ -1,6 +1,6 @@
 ---
-title: "Working with Tab Bar Controller"
-description: "This article covers designing and working with Tab Bar Controller inside of a Xamarin.tvOS app."
+title: "Working with tvOS Tab Bar Controllers in Xamarin"
+description: "This document describes how to work with tab bar controllers in a tvOS app built with Xamarin. It provides a high-level over view of tab bars and discusses tab bar items, storyboard integration, and tab bar items."
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Working with Tab Bar Controller
-
-_This article covers designing and working with Tab Bar Controller inside of a Xamarin.tvOS app._
+# Working with tvOS Tab Bar Controllers in Xamarin
 
 For many types of tvOS apps, primary navigation is presented as a Tab Bar running across the top of the screen. The user swipes left and right across the list of possible Categories and the content area below the changes to reflect the user's selection.
 

@@ -1,6 +1,6 @@
 ---
-title: "Async Overview"
-description: "The latest version of the C# language – version 5 – introduced two new keywords to express asynchronous operations: async and await. These keywords let you write simple code that utilizes the Task Parallel Library to execute long running operations (such as network access) in another thread and easily access the results on completion. The latest versions of Xamarin.iOS and Xamarin.Android support async and await - this document provides explanations and an example of using the new syntax with Xamarin."
+title: "Async Support Overview"
+description: "This document describes programming with async and await, concepts introduced in C# 5 to make it easier to write asynchronous code."
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
@@ -10,7 +10,7 @@ ms.date: 03/22/2017
 
 # Async Support Overview
 
-_The latest version of the C# language – version 5 – introduced two new keywords to express asynchronous operations: async and await. These keywords let you write simple code that utilizes the Task Parallel Library to execute long running operations (such as network access) in another thread and easily access the results on completion. The latest versions of Xamarin.iOS and Xamarin.Android support async and await - this document provides explanations and an example of using the new syntax with Xamarin._
+_C# 5 introduced two keywords to simplify asynchronous programing: async and await. These keywords let you write simple code that utilizes the Task Parallel Library to execute long running operations (such as network access) in another thread and easily access the results on completion. The latest versions of Xamarin.iOS and Xamarin.Android support async and await - this document provides explanations and an example of using the new syntax with Xamarin._
 
 Xamarin's Async support is built on the Mono 3.0 foundation and upgrades the API profile from the being a Mobile-friendly version of Silverlight to be a mobile-friendly version of .NET 4.5.
 

@@ -1,5 +1,6 @@
 ---
-title: "Objective-C Selectors"
+title: "Objective-C Selectors in Xamarin.iOS"
+description: "This document discusses how to interact with Objective-C selectors from C#. It describes how to invoke selectors and technical considerations that must be taken into account when doing so."
 ms.prod: xamarin
 ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
 ms.technology: xamarin-ios
@@ -7,7 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# Objective-C Selectors
+# Objective-C Selectors in Xamarin.iOS
 
 The Objective-C language is based upon *selectors*. A selector is a
 message that can be sent to an object or a *class*. [Xamarin.iOS](~/ios/internals/api-design/index.md) maps instance selectors

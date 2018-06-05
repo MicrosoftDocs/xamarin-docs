@@ -1,5 +1,6 @@
 ---
 title: "What support options are available for Xamarin?"
+description: "This document describes the various support options available for Xamarin developers. It discusses email support, Stack Overflow, and additional resources."
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2

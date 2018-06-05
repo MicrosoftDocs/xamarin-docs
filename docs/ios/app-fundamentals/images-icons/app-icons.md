@@ -1,6 +1,6 @@
 ---
-title: "Application Icons"
-description: "This article covers including and managing an image asset in a Xamarin.iOS app to be used as an App Icon."
+title: "Application Icons in Xamarin.iOS"
+description: "This document describes how to work with various application icons in Xamarin.iOS: the application icon itself, Spotlight icons, the Settings icons, and iTunes artwork."
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 05/22/2017
 ---
 
-# Application Icons
-
-_This article covers including and managing an image asset in a Xamarin.iOS app to be used as an App Icon._
+# Application Icons in Xamarin.iOS
 
 The following topics will be covered in detail:
 

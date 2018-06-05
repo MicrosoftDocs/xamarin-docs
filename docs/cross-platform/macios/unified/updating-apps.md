@@ -1,5 +1,6 @@
 ---
 title: "Updating Existing Apps to the Unified API"
+description: "This document links to various guides that describe how to update Xamarin applications to the Unified API. It discusses Xamarin.iOS apps, Xamarin.Mac apps. Xamarin.Forms apps, native types in cross-platform apps, and binding projects."
 ms.prod: xamarin
 ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: asb3993
@@ -10,10 +11,13 @@ ms.date: 03/29/2017
 # Updating Existing Apps to the Unified API
 
 > [!IMPORTANT]
-> **Classic Profile Deprecation:** As new platforms are added in Xamarin.iOS we are starting to gradually deprecate features from the classic profile (monotouch.dll). For example, the non-NRC (new-ref-count) option was removed. NRC has always been enabled for all unified applications (i.e. non-NRC was never an option) and has no known issues. Future releases will remove the option of using Boehm as the garbage collector. This was also an option never available to unified applications. The complete removal of classic support is scheduled for next fall with the release of Xamarin.iOS 10.0.
-
-
-
+> The Xamarin Classic API, which preceded the Unified API, has been 
+> deprecated. 
+> - The last version of Xamarin.iOS to support the Classic API
+>   (monotouch.dll) was Xamarin.iOS 9.10.
+> - Xamarin.Mac still supports the Classic API, but it is no longer
+>   updated. Since it is deprecated, developers should move their 
+>   applications to the Unified API.
 
 ## How to Update Your Apps
 
@@ -31,7 +35,7 @@ There are three steps to update your apps:
 
 3. Fix remaining compiler errors relating to the new
 	[64-types](~/cross-platform/macios/nativetypes.md)
-	and [other APIs](~/cross-platform/macios/unified/index.md#deprecated-typos)
+	and [other APIs](~/cross-platform/macios/unified/overview.md#deprecated-typos)
 	that have changed. Check out [these tips](~/cross-platform/macios/unified/updating-tips.md)
 	for additional information on manual updates that
 	might be required.
@@ -74,9 +78,6 @@ Customers that have created bindings to Objective-C libraries
 	in the underlying API (where some types will now be 64-bit).
 	Follow these instructions to [update
 	an existing Binding Project to support the Unified API](~/cross-platform/macios/unified/update-binding.md).
-
-
-
 
 ## Related Links
 

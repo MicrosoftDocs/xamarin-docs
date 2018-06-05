@@ -1,5 +1,6 @@
 ---
 title: "Installing .NET Embedding"
+description: "This document describes how to install .NET Embedding. It discusses how to run the tooling by hand, how to generate bindings automatically, how to use custom MSBuild targets, and necessary post-build steps."
 ms.prod: xamarin
 ms.assetid: 47106AF3-AC6E-4A0E-B30B-9F73C116DDB3
 author: chamons

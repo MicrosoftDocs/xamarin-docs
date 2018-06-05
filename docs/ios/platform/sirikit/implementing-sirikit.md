@@ -1,6 +1,6 @@
 ---
-title: "Implementing SiriKit"
-description: "This article covers the steps required to implement SiriKit support in a Xamarin.iOS apps."
+title: "Implementing SiriKit in Xamarin.iOS"
+description: "This document describes the steps required to implement SiriKit support in a Xamarin.iOS apps. It discusses Intents extensions and Intents UI extensions."
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
@@ -9,11 +9,9 @@ ms.author: brumbaug
 ms.date: 05/03/2018
 ---
 
-# Implementing SiriKit
+# Implementing SiriKit in Xamarin.iOS
 
 _This article covers the steps required to implement SiriKit support in a Xamarin.iOS apps._
-
-
 
 New to iOS 10, SiriKit allows a Xamarin.iOS app to provide services that are accessible to the user using Siri and the Maps app on an iOS device. This article covers the steps required to implement SiriKit support in the Xamarin.iOS apps by adding the required Intents Extensions, Intents UI Extensions and Vocabulary.
 

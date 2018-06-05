@@ -1,6 +1,6 @@
 ---
-title: "Manual Camera Controls"
-description: "The AVFoundation Framework makes it easier than ever for users to take great photos by allowing for Manual Camera Controls. Using this framework, an application can take direct control over the camera focus, white balance, and exposure settings. An application can also use bracketed exposure captures to automatically capture images with different exposure settings. This article will take a quick look at using the Manual Camera Controls in a simple iOS 8 mobile application."
+title: "Manual Camera Controls in Xamarin.iOS"
+description: "This document describes how the iOS AVFoundation framework can be used with Xamarin.iOS to enable manual camera controls. Manual camera controls allow a user to control focus, white balance, and exposure settings."
 ms.prod: xamarin
 ms.assetid: 56340225-5F3C-4BFC-9A79-61496D7FE5B5
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/22/2017
 ---
 
-# Manual Camera Controls
-
-_The AVFoundation Framework makes it easier than ever for users to take great photos by allowing for Manual Camera Controls. Using this framework, an application can take direct control over the camera focus, white balance, and exposure settings. An application can also use bracketed exposure captures to automatically capture images with different exposure settings. This article will take a quick look at using the Manual Camera Controls in a simple iOS 8 mobile application._
+# Manual Camera Controls in Xamarin.iOS
 
 The Manual Camera Controls, provided by the `AVFoundation Framework` in iOS 8, allow a mobile application to take full control over an iOS device's camera. This fine-grained level of control can be used to create professional level camera applications and provide artist compositions by tweaking the parameters of the camera while taking a still image or video.
 

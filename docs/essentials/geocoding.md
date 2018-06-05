@@ -1,12 +1,13 @@
 ---
-title: "Xamarin.Essentials Geocoding"
-description: "The Geocoding class provides APIs to geocode a placemark to a positional coordinates and reverse geocode coordincates to a placemark."
+title: "Xamarin.Essentials: Geocoding"
+description: "The Geocoding class in Xamarin.Essentials provides APIs to both geocode a placemark to a positional coordinates and reverse geocode coordinates to a placemark."
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ---
-# Xamarin.Essentials Geocoding
+
+# Xamarin.Essentials: Geocoding
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
 

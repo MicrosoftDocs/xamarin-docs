@@ -1,5 +1,6 @@
 ---
-title: "Populating a Table with Data"
+title: "Populating a Table with Data in Xamarin.iOS"
+description: "This document describes how to populate a table with data in a Xamarin.iOS application. It discusses UITableViewSource, cell reuse, adding an index, and headers and footers."
 ms.prod: xamarin
 ms.assetid: 6FE64DDF-1029-EB9B-6EEC-1C7DFDFDF3AF
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/22/2017
 ---
 
-# Populating a Table with Data
+# Populating a Table with Data in Xamarin.iOS
 
 To add rows to a `UITableView` you need to implement a `UITableViewSource` subclass and override the methods that the table
 view calls to populate itself.

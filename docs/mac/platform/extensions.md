@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Mac Extension Support"
-description: "This article covers extension support in Xamarin.Mac version 2.10 (and greater)."
+description: "This document describes Xamarin.Mac's support for Finder, Share, and Today extensions. It examines limitations and known issues, links to a walkthrough and sample app, and provides tips for working with extensions."
 ms.prod: xamarin
 ms.assetid: 4148F1BE-DFA0-46B6-9FCD-425A6541F510
 ms.technology: xamarin-mac

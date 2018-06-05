@@ -1,5 +1,6 @@
 ---
-title: "System.Data"
+title: "System.Data in Xamarin.iOS"
+description: "This document describes how to use System.Data and Mono.Data.Sqlite.dll to access SQLite data in a Xamarin.iOS application."
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
@@ -7,7 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# System.Data
+# System.Data in Xamarin.iOS
 
 Xamarin.iOS 8.10 adds support for [System.Data](https://developer.xamarin.com/api/namespace/System.Data/), including the `Mono.Data.Sqlite.dll` ADO.NET provider. Support includes the addition of the following [assemblies](~/cross-platform/internals/available-assemblies.md):
 
@@ -16,7 +17,6 @@ Xamarin.iOS 8.10 adds support for [System.Data](https://developer.xamarin.com/ap
 -  `System.Transactions.dll`
 -  `Mono.Data.Tds.dll`
 -  `Mono.Data.Sqlite.dll`
-
 
 <a name="Example" />
 

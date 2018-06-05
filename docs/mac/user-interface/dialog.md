@@ -1,5 +1,5 @@
 ---
-title: "Dialogs"
+title: "Dialogs in Xamarin.Mac"
 description: "This article covers working with dialogs and modal windows in a Xamarin.Mac application. It describes creating modal windows in Xcode and Interface builder, working with standard dialogs, and interacting with these controls in C# code."
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Dialogs
+# Dialogs in Xamarin.Mac
 
 When working with C# and .NET in a Xamarin.Mac application, you have access to the same Dialogs and Modal Windows that a developer working in in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Modal Windows (or optionally create them directly in C# code).
 

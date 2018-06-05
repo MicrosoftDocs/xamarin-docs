@@ -1,6 +1,6 @@
 ---
-title: "Setup and Installation"
-description: "Setting up to develop for watchOS"
+title: "Installing and Using watchOS in Xamarin"
+description: "This document describes how to install and use watchOS with Xamarin. It discusses installation, watchOS project structure, how to use the iOS designer, Xcode integration, and provides troubleshooting tips."
 ms.prod: xamarin
 ms.assetid: 69F21F15-198D-4B42-A703-21D35CAB0CCA
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 12/05/2017
 ---
 
-# Installation
+# Installing and Using watchOS in Xamarin
 
 watchOS 4 requires macOS Sierra (10.12) with Xcode 9.
 

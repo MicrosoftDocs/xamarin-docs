@@ -1,6 +1,6 @@
 ---
-title: "Hello, iOS: Deep Dive"
-description: "This two-part guide describes how to build a basic Xamarin.iOS application using Visual Studio for Mac or Visual Studio and develop an understanding of the fundamentals of iOS application development with Xamarin. It will introduce the tools, concepts, and steps required to build and deploy a Xamarin.iOS application."
+title: "Hello, iOS – Deep Dive"
+description: "This document takes a deeper look at the Hello, iOS sample application, considering its architecture, user interface, content view hierarchy, testing, deployment, and more."
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 61ba3a7e-fe11-4439-8bc8-9809512b8eff
@@ -10,12 +10,11 @@ ms.author: brumbaug
 ms.date: 03/19/2017
 ---
 
-# Hello, iOS Deep Dive
+# Hello, iOS – Deep Dive
 
 The Quickstart walkthrough, introduced building and running a basic Xamarin.iOS application. Now it’s time to develop a deeper understanding of how iOS applications work so you can build more sophisticated programs. This guide reviews the steps that in the Hello, iOS walkthrough to enable understanding of the fundamental concepts of iOS application development.
 
 The following topics are explored in this article:
-
 
 # [Visual Studio for Mac](#tab/vsmac)
 

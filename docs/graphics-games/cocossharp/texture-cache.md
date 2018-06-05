@@ -1,6 +1,6 @@
 ---
-title: "Texture Caching using CCTextureCache"
-description: "CocosSharp’s CCTextureCache class provides a standard way to organize, cache, and unload content. It is especially useful for large games which may not fit entirely into RAM, simplifying the process of grouping and disposing of textures."
+title: "Texture caching using CCTextureCache"
+description: "CocosSharp’s CCTextureCache class provides a standard way to organize, cache, and unload content. It is especially useful for large games that may not fit entirely into RAM, simplifying the process of grouping and disposing of textures."
 ms.prod: xamarin
 ms.assetid: 1B5F3F85-9E68-42A7-B516-E90E54BA7102
 author: charlespetzold

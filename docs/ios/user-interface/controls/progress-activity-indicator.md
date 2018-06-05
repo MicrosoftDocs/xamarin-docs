@@ -1,5 +1,6 @@
 ---
-title: "Progress and Activity Indicators"
+title: "Progress and Activity Indicators in Xamarin.iOS"
+description: "This document discusses how to use progress and activity indicators in Xamarin.iOS. It describes how to use them both programmatically and with a storyboard."
 ms.prod: xamarin
 ms.assetid: 7AA887E4-51F7-4867-82C5-A8D2EA48AE07
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 07/11/2017
 ---
 
-# Progress and Activity Indicators
+# Progress and Activity Indicators in Xamarin.iOS
 
 It's likely that your app will have to carry out long running tasks such as loading or processing data and that this delay may cause a delay in updating your UI. During this time you should always use a progress indicator to reassure the user that the system is busy doing work. This gives the user control that the app is working on their request, that it's not waiting for their input, and can provide a means of detailing exactly how long they have to wait.
 

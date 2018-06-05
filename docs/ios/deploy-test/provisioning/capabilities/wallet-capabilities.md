@@ -1,5 +1,5 @@
 ---
-title: "Wallet Capabilities"
+title: "Wallet Capabilities in Xamarin.iOS"
 description: "Adding capabilities to an application often requires additional provisioning setup. This guide explains the setup needed for Wallet capabilities."
 ms.prod: xamarin
 ms.assetid: BD9475E6-F586-488C-93D4-8A2A1629B99B
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/15/2017
 ---
 
-# Wallet Capabilities
+# Wallet Capabilities in Xamarin.iOS
 
 _Adding capabilities to an application often requires additional provisioning setup. This guide explains the setup needed for Wallet capabilities._
 

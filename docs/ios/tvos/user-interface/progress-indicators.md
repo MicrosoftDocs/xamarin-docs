@@ -1,6 +1,6 @@
 ---
-title: "Working with progress indicators"
-description: "This article covers designing and working with progress indicators inside of a Xamarin.tvOS app."
+title: "Working with tvOS progress indicators in Xamarin"
+description: "This document describes how to work with progress indicators in a tvOS app built with Xamarin. It discusses both progress bars and activity indicators."
 ms.prod: xamarin
 ms.assetid: 582B6D0C-1F16-4299-A9A6-5651E76009FE
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 04/25/2018
 ---
 
-# Working with progress indicators
+# Working with tvOS progress indicators in Xamarin
 
 _This article covers designing and working with progress indicators inside
 of a Xamarin.tvOS app._

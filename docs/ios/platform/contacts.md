@@ -1,5 +1,5 @@
 ---
-title: "Contacts and ContactsUI"
+title: "Contacts and ContactsUI in Xamarin.iOS"
 description: "This article covers working with the new Contacts and Contacts UI frameworks in a Xamarin.iOS app. These frameworks replace the existing Address Book and Address Book UI used in previous versions of iOS."
 ms.prod: xamarin
 ms.assetid: 7b6fb66a-5e19-4a5a-9ed2-f6b02af099af
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/20/2017
 ---
 
-# Contacts and ContactsUI
+# Contacts and ContactsUI in Xamarin.iOS
 
 _This article covers working with the new Contacts and Contacts UI frameworks in a Xamarin.iOS app. These frameworks replace the existing Address Book and Address Book UI used in previous versions of iOS._
 

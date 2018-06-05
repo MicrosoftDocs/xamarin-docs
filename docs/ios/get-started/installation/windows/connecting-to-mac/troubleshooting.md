@@ -1,5 +1,5 @@
 ---
-title: "Connection Troubleshooting"
+title: "Connection Troubleshooting for a Xamarin.iOS Build Host"
 description: "This guide provides troubleshooting steps for issues that may be encountered using the new connection manager, including connectivity and SSH issues."
 ms.prod: xamarin
 ms.assetid: A1508A15-1997-4562-B537-E4A9F3DD1F06
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/19/2017
 ---
 
-# Connection Troubleshooting
+# Connection Troubleshooting for a Xamarin.iOS Build Host
 
 _This guide provides troubleshooting steps for issues that may be encountered using the new connection manager, including connectivity and SSH issues._
 

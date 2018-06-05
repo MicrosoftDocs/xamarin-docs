@@ -1,6 +1,6 @@
 ---
-title: "Working with Segmented Controls"
-description: "This article covers designing and working with Segmented Controls inside of a Xamarin.tvOS app."
+title: "Working with tvOS Segmented Controls in Xamarin"
+description: "This document describes how to work with tvOS segmented controls in an app built with Xamarin. It discusses segment icons and text, events, modifying the control's appearance, and more."
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
@@ -9,10 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Working with Segmented Controls
-
-_This article covers designing and working with Segmented Controls inside of a Xamarin.tvOS app._
-
+# Working with tvOS Segmented Controls in Xamarin
 
 A Segmented Control provides a set of linear elements, each of which can contain an icon or text, and is used to provide a set of related choices to the user.
 

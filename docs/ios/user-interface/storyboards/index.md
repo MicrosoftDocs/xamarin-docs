@@ -1,6 +1,6 @@
 ---
-title: "Introduction to Storyboards"
-description: "A Storyboard is a visual representation of the appearance and flow of your application. Xamarin has introduced a Designer to allow Xamarin.iOS applications to take advantage of storyboards, so you can design your application screen visually and access the views, controllers and segues with C# for more control."
+title: "Introduction to Storyboards in Xamarin.iOS"
+description: "This document provides an introduction to storyboards in Xamarin.iOS. It describes how a storyboard is used to define a user interface, segues, and how to use the iOS Designer to edit storyboard files."
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/22/2017
 ---
 
-# Introduction to Storyboards
-
-_A Storyboard is a visual representation of the appearance and flow of your application. Xamarin has introduced a Designer to allow Xamarin.iOS applications to take advantage of storyboards, so you can design your application screen visually and access the views, controllers and segues with C# for more control._
+# Introduction to Storyboards in Xamarin.iOS
 
 In this guide we will explain what a Storyboard is and examine some of the key components – such as Segues. We'll look at how 
 Storyboards can be created and used, and what advantages they  have for a developer.

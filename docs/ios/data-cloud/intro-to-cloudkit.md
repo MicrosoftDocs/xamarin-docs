@@ -1,6 +1,6 @@
 ---
-title: "CloudKit"
-description: "iCloud APIs enable iOS 8 applications to store data in iCloud, with support for automatic syncing across a user's account. Using CloudKit gives users a consistent and seamless experience across iCloud-enabled devices. This article covers enabling CloudKit in an iOS 8 application using the Convenience API."
+title: "CloudKit in Xamarin.iOS"
+description: "This document describes how to work with CloudKit in Xamarin.iOS. It provides an overview of CloudKit and discusses how to enable it, the CloudKit Convenience API, scalability, user accounts, and development and production environments."
 ms.prod: xamarin
 ms.assetid: 66B207F2-FAA0-4551-B43B-3DB9F620C397
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 05/11/2016
 ---
 
-# CloudKit
-
-_iCloud APIs enable iOS 8 applications to store data in iCloud, with support for automatic syncing across a user's account. Using CloudKit gives users a consistent and seamless experience across iCloud-enabled devices. This article covers enabling CloudKit in an iOS 8 application using the Convenience API._
+# CloudKit in Xamarin.iOS
 
 The CloudKit framework streamlines the development of applications that access iCloud. This includes the retrieval of
 application data and asset rights as well as being able to securely store application information. This kit gives users a layer

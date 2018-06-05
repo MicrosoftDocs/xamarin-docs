@@ -1,6 +1,6 @@
 ---
-title: "Introduction to ARKit"
-description: "Augmented Reality for iOS 11"
+title: "Introduction to ARKit in Xamarin.iOS"
+description: "This document describes augmented reality in iOS 11 with ARKit. It discusses how to add a 3D model to an app, configure the view, implement a session delegate, position the 3D model in the world, and pause the augmented reality session."
 ms.prod: xamarin
 ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 08/30/2016
 ---
 
-# Introduction to ARKit
+# Introduction to ARKit in Xamarin.iOS
 
 _Augmented Reality for iOS 11_
 

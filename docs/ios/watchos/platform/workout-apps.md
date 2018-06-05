@@ -1,5 +1,5 @@
 ---
-title: "Workout Apps"
+title: "watchOS Workout Apps in Xamarin"
 description: "This article covers the enhancements Apple has made to workout apps in watchOS 3 and how to implement them in Xamarin."
 ms.prod: xamarin
 ms.assetid: F1D19635-A738-43E5-9873-1FC1BA44EEDF
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/17/2017
 ---
 
-# Workout Apps
+# watchOS Workout Apps in Xamarin
 
 _This article covers the enhancements Apple has made to workout apps in watchOS 3 and how to implement them in Xamarin._
 

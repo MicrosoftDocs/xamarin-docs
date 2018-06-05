@@ -1,5 +1,6 @@
 ---
 title: "Tips for Updating Code to the Unified API"
+description: "This document discusses common errors and various tips useful when updating an application to use Xamarin's Unified API."
 ms.prod: xamarin
 ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 author: asb3993
@@ -21,7 +22,6 @@ There is a [bug](https://bugzilla.xamarin.com/show_bug.cgi?id=25569) in the curr
 
 ```console
 Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not find a storyboard named 'xxx' in bundle NSBundle...
-
 ```
 
 You can do the following to solve this issue, locate the following build target file:
@@ -105,9 +105,9 @@ After using the migration tool, you may still get some
 	```
 
  * The NSObject `.ctor(IntPtr)` constructor has been changed from public
- 	to protected ([to prevent improper use](~/cross-platform/macios/unified/index.md#NSObject_ctor)).
+ 	to protected ([to prevent improper use](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
 
- * `NSAction` has been [replaced](~/cross-platform/macios/unified/index.md#NSAction)
+ * `NSAction` has been [replaced](~/cross-platform/macios/unified/overview.md#NSAction)
  	with the starndard .NET `Action`. Some simple (single parameter) delegates
  	have also been replaced with `Action<T>`.
 

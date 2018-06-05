@@ -1,6 +1,6 @@
 ---
-title: "Troubleshooting"
-description: "Tips & Tricks to create smooth deployment"
+title: "Xamarin.iOS Testing and Deployment - Troubleshooting"
+description: "This document provides troubleshooting tips related to code signing and provisioning, TestFlight, and copying the iOS app bundle from the Mac build host to Windows."
 ms.prod: xamarin
 ms.assetid: 65286D09-F74D-4F22-B6CD-D1BCD7FC7992
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 08/23/2017
 ---
 
-# Troubleshooting
+# Xamarin.iOS Testing and Deployment - Troubleshooting
 
 ## Code Signing & Provisioning
 
@@ -28,7 +28,6 @@ Code Signing & Provisioning with iOS can be quite awkward, and so it is importan
 * Ensure that all the required certificates and the corresponding private keys are available. For each team  will need a developer certificate (to install apps on a own device), and a distribution certificate (to install on other devices)
 
 * Relaunch Xcode and Visual Studio for Mac / Visual Studio when a new Provisioning Profile or Certificate is installed.
-
 
 ## TestFlight
 

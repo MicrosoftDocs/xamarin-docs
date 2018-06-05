@@ -1,5 +1,5 @@
 ---
-title: "Copy and paste"
+title: "Copy and paste in Xamarin.Mac"
 description: "This article covers working with the pasteboard to provide copy and paste in a Xamarin.Mac application. It shows how to work with standard data types that can be shared between multiple apps and how to support custom data within a given app."
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Copy and paste
+# Copy and paste in Xamarin.Mac
 
 _This article covers working with the pasteboard to provide copy and paste in a Xamarin.Mac application. It shows how to work with standard data types that can be shared between multiple apps and how to support custom data within a given app._
 

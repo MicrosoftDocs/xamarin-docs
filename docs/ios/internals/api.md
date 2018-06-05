@@ -1,5 +1,6 @@
 ---
-title: "API"
+title: "Xamarin.iOS API Overview"
+description: "This document links to the Xamarin API reference documentation, a guide that describes the Xamarin.iOS API design, and a list of assemblies that are available for use in Xamarin development."
 ms.prod: xamarin
 ms.assetid: 4C1669A4-C12B-9C49-4A39-9046576D10DC
 ms.technology: xamarin-ios
@@ -7,7 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# API
+# Xamarin.iOS API Overview
 
 Xamarin.iOS exposes a C#/CIL binding to the CocoaTouch API and also provides
 access to the ECMA CIL APIs and various other .NET APIs.

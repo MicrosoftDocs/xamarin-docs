@@ -1,6 +1,6 @@
 ---
-title: "Working with Page Control"
-description: "This article covers designing and working with Page Control inside of a Xamarin.tvOS app."
+title: "Working with tvOS Page Controls in Xamarin"
+description: "This document describes how to work with tvOS page controls in an app built with Xamarin. It provides a high-level description of page controls, discusses how to set them up in storyboards, and examines how to respond to page change events."
 ms.prod: xamarin
 ms.assetid: 19198D46-7BBE-4D04-9BFA-7D1C5C9F9FC6
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Working with Page Control
-
-_This article covers designing and working with Page Control inside of a Xamarin.tvOS app._
+# Working with tvOS Page Controls in Xamarin
 
 Sometimes you might need to display a series of pages or images in your Xamarin.tvOS app. A Page Control was designed to clearly show which page a user is on out of the maximum number of pages. A Page Control displays a series of dots against a dark, oval shaped background. The current page will display a filled dot, all other pages show as hollow dots. The Page control will clip the outer most dots if there are too many to fit in its background area.
 
@@ -68,9 +66,6 @@ The easiest way to work with Page Controls in a Xamarin.tvOS app is to add them 
 
 > [!IMPORTANT]
 > While it is possible to assign events such as `TouchUpInside` to a UI element (such as a UIButton) in the iOS Designer, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the `Primary Action` event when creating event handlers for tvOS user interface elements.
-
-
-
 
 Edit your View Controller (example `ViewController.cs`) file and add the code to handle the pages being changed. For example:
 

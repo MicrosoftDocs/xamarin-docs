@@ -1,11 +1,13 @@
 ---
 title: "Representations in Xamarin Workbooks"
+description: "This document describes the Xamarin Workbooks representation pipeline, which enables the rendering of rich results for any code that returns a value."
 ms.prod: xamarin
 ms.assetid: 5C7A60E3-1427-47C9-A022-720F25ECB031
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
 ---
+
 # Representations in Xamarin Workbooks
 
 ## Representations

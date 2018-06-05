@@ -1,6 +1,6 @@
 ---
-title: "Playing Sound with AVAudioPlayer"
-description: "This article shows how to use a helper class to control the playback of sound using an AVAudioPlayer."
+title: "Playing Sound in tvOS with AVAudioPlayer in Xamarin"
+description: "This article shows how to use a helper class to control the playback of sound using an AVAudioPlayer in a Xamarin.iOS application."
 ms.prod: xamarin
 ms.assetid: E0305572-DC64-48BB-BD97-0A5096E6CA04
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Playing Sound with AVAudioPlayer
-
-_This article shows how to use a helper class to control the playback of sound using an AVAudioPlayer._
+# Playing Sound in tvOS with AVAudioPlayer in Xamarin
 
 ## About the AVAudioPlayer
 

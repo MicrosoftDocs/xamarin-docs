@@ -1,5 +1,6 @@
 ---
-title: "Using ARKit with UrhoSharp"
+title: "Using ARKit with UrhoSharp in Xamarin.iOS"
+description: "This document describes how to set up an ARKit app in Xamarin.iOS, then looks at how frames are rendered, how to adjust the camera, how to detect planes, how to work with lighting, and more. It also discusses UrhoSharp and writing code for HoloLens."
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 08/01/2016
 ---
 
-# Using ARKit with UrhoSharp
+# Using ARKit with UrhoSharp in Xamarin.iOS
 
 With the introduction of [ARKit](https://developer.apple.com/arkit/), Apple has made it simple for developers to create augmented reality applications. ARKit can track the exact position of your device and detect various surfaces on the world, and it is then up to the developer to blend the data coming out of ARKit into your code.
 

@@ -1,6 +1,6 @@
 ---
-title: "Sharing Code"
-description: "Core Application Concepts"
+title: "Sharing Code On Multiple Platforms"
+description: "This document links to various guides that describe techniques for sharing code, including portable class libraries, shared projects, .NET Standard, and NuGet."
 ms.prod: xamarin
 ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
 author: asb3993
@@ -8,7 +8,7 @@ ms.author: amburns
 ms.date: 02/18/2018
 ---
 
-# Sharing Code
+# Sharing Code On Multiple Platforms
 
 This section provides a guide on some of the more common things tasks or
 concepts that developers need to be aware of when developing mobile

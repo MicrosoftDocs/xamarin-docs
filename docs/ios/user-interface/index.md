@@ -1,6 +1,6 @@
 ---
-title: "User Interface"
-description: "General User Experience (UX) coverage including controls, the designer and UX design principles."
+title: "Building User Interfaces with Xamarin.iOS"
+description: "This document describes how to build a user interface in a Xamarin.iOS app. It provides links to guides about the iOS designer, storyboards, general iOS interface concepts, and iOS user interface controls."
 ms.prod: xamarin
 ms.assetid: 2B3E45FA-C30F-D708-0E8F-3EE02BD1A867
 ms.technology: xamarin-ios
@@ -9,13 +9,12 @@ ms.author: brumbaug
 ms.date: 06/21/2017
 ---
 
-# User Interface
+# Building User Interfaces with Xamarin.iOS
 
 ## [iOS Designer](~/ios/user-interface/designer/index.md)
 
 We have built a designer for the iOS storyboard format which is fully integrated
 into Visual Studio for Mac. The iOS designer maintains full compatibility with the storyboard format, so that files can be edited in either Xcode or Visual Studio for Mac. Additionally, the editor supports advanced features, such as custom controls that render at design-time in the editor.
-
 
 ## [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md)
 
@@ -28,5 +27,3 @@ Covers working with the iOS User Interface in a Xamarin.iOS app including: the A
 ## [User Interface Controls](~/ios/user-interface/controls/index.md)
 
 Xamarin.iOS exposes all the native user interface objects provided by Apple. They are easily added to Xamarin.iOS applications using the iOS Designer, Xcode's Interface Builder or programmatically. Regardless of which method you choose, Xamarin.iOS exposes all the user interface object properties and methods in C#.
-
-

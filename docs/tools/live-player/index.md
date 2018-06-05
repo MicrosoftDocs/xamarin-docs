@@ -1,6 +1,6 @@
 ---
-title: "Live Player for Xamarin.Forms"
-description: "Start learning Xamarin quickly, building and running apps on your Android or iOS device."
+title: "Xamarin Live Player for Xamarin.Forms"
+description: "This document discusses the Xamarin Live Player for Xamarin.Forms, describing installation, the Xamarin Live Player app, samples to use with Xamarin Live Player, limitations, and troubleshooting."
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: topgenorth
@@ -42,7 +42,6 @@ Xamarin Live Player has some restrictions on what features it can support.
 ## [Troubleshooting](troubleshooting.md)
 
 Find help if things go wrong.
-
 
 ## Related Links
 

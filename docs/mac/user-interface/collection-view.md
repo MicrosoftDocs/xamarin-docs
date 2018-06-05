@@ -1,5 +1,5 @@
 ---
-title: "Collection views"
+title: "Collection Views in Xamarin.Mac"
 description: "This article describes working with collection views in a Xamarin.Mac app. It covers creating and maintaining collection views in Xcode and Interface Builder and working with them programmatically."
 ms.prod: xamarin
 ms.assetid: 6EE32256-5948-4AE4-8133-6D0B3F4173E8
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 05/24/2017
 ---
 
-# Collection views
+# Collection Views in Xamarin.Mac
 
 _This article describes working with collection views in a Xamarin.Mac app. It covers creating and maintaining collection views in Xcode and Interface Builder and working with them programmatically._
 

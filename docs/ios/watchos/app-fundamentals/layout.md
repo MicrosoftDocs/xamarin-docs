@@ -1,5 +1,6 @@
 ---
-title: "Working with Layout"
+title: "Working with watchOS Layout in Xamarin"
+description: "This document describes how to create a watchOS layout using Xamarin. It discusses interface controllers, groups, separators, and content controls."
 ms.prod: xamarin
 ms.assetid: BEDB62A1-2249-4459-986F-413A41E63DF0
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/17/2017
 ---
 
-# Working with Layout
+# Working with watchOS Layout in Xamarin
 
 Designing layouts for the Apple Watch
   [screen sizes](~/ios/watchos/app-fundamentals/screen-sizes.md)

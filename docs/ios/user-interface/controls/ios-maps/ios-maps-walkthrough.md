@@ -1,5 +1,5 @@
 ---
-title: "Annotations and Overlays"
+title: "Annotations and Overlays in Xamarin.iOS"
 description: "This article presents a step-by-step walkthrough showing how to work with the annotation and overlay features of Map Kit. It shows how to add a map to an application that displays an annotation and overlay at the location of the Xamarin Evolve 2013 conference."
 ms.prod: xamarin
 ms.assetid: 1BC4F7FC-AE3C-46D7-A4D3-18E142F55B8E
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/21/2017
 ---
 
-# Annotations and Overlays – Walkthrough
+# Annotations and Overlays in Xamarin.iOS
 
 The application we’re going to build in this walkthrough is shown below:
 

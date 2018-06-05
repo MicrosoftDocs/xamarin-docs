@@ -13,7 +13,6 @@ ms.date: 06/07/2016
 
 _This article introduces all of the new and modified APIs and features available in tvOS 9 for Xamarin.tvOS developers._
 
-
 Apple has released the 4th generation of the Apple TV hardware featuring a redesigned, touch-enable remote, running the new tvOS operating system (based on iOS 9).
 
 For the first time, tvOS opens the Apple TV platform to the developer, allowing you to create rich, immersive apps and release them through the Apple TV's built-in App Store in a process similar to the experience of writing and releasing apps for iOS using the iTunes App Store.

@@ -1,6 +1,6 @@
 ---
-title: "Touch ID"
-description: "Touch ID is Apple's biometric fingerprint authentication technology."
+title: "Touch ID in Xamarin.iOS"
+description: "This document describes how to use Touch ID, Apple's biometric fingerprint authentication technology, in Xamarin.iOS apps."
 ms.prod: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/20/2017
 ---
 
-# Touch ID
+# Touch ID in Xamarin.iOS
 
 Touch ID was introduced in iOS 7 as a means of authenticating the user - similar to a passcode. However, it was limited to unlocking the device, using the App Store, using iTunes and authenticating the iCloud keychain only.
 

@@ -1,5 +1,6 @@
 ---
 title: "Xamarin.iOS Installation"
+description: "This document links to guides that describe how to install Xamarin.iOS on Mac and Windows and how to provision a device for testing."
 ms.prod: xamarin
 ms.assetid: E5A29963-C8BD-465B-BFC1-7FAC9CC64BD3
 ms.technology: xamarin-ios

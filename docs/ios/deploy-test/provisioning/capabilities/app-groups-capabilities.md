@@ -1,5 +1,5 @@
 ---
-title: "App Group Capabilities"
+title: "App Group Capabilities in Xamarin.iOS"
 description: "Adding capabilities to an application often requires additional provisioning setup. This guide explains the setup needed for App Group capabilities."
 ms.prod: xamarin
 ms.assetid: 0A61220B-BBAC-492B-9D3B-578986E64064
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/15/2017
 ---
 
-# App Group Capabilities
+# App Group Capabilities in Xamarin.iOS
 
 _Adding capabilities to an application often requires additional provisioning setup. This guide explains the setup needed for App Group capabilities._
 

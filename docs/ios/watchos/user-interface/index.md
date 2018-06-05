@@ -1,5 +1,6 @@
 ---
-title: "watchOS User Interface"
+title: "watchOS User Interface Controls in Xamarin"
+description: "This document describes the various controls that are available for use in watchOS user interfaces. It provides a description of labels, buttons, switches, sliders, images, separators, maps, and more."
 ms.prod: xamarin
 ms.assetid: EDFAD203-02EA-4A74-9CE2-7B8513BC90E1
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 09/19/2016
 ---
 
-# watchOS User Interface
+# watchOS User Interface Controls in Xamarin
 
 The [**WatchKitCatalog**](https://github.com/xamarin/monotouch-samples/tree/master/watchOS/WatchKitCatalog) sample
   demonstrates various watchOS controls. The app's storyboard

@@ -1,5 +1,6 @@
 ---
-title: "Supported and Unsupported Frameworks"
+title: "Supported and Unsupported Frameworks in tvOS"
+description: "In order to help clarify the features available to tvOS applications, this document provides two lists of Apple frameworks: those supported by tvOS, and those not supported by tvOS."
 ms.prod: xamarin
 ms.assetid: 28EF1337-3D0E-47AB-8A13-1B333A964FB6
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 06/07/2016
 ---
 
-# Supported and Unsupported Frameworks
+# Supported and Unsupported Frameworks in tvOS
 
 <a name="Supported-Frameworks" />
 

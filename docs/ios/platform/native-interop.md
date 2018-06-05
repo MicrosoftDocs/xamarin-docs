@@ -1,5 +1,6 @@
 ---
-title: "Referencing Native Libraries"
+title: "Referencing Native Libraries in Xamarin.iOS"
+description: "This document discusses how to link native C libraries into a Xamarin.iOS application. It describes how to build universal native libraries and accessing C methods from C#."
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 07/28/2016
 ---
 
-# Referencing Native Libraries
+# Referencing Native Libraries in Xamarin.iOS
 
 Xamarin.iOS supports linking with both native C libraries and Objective-C
 libraries. This document discusses how to link your native C libraries with your

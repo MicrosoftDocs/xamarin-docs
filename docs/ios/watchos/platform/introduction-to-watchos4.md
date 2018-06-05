@@ -1,6 +1,6 @@
 ---
 title: "Introduction to watchOS 4"
-description: "New features available to developers using Xamarin for watchOS 4."
+description: "This document provides a high-level introduction to watchOS 4, describing the new features that are now available to Xamarin developers."
 ms.prod: xamarin
 ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
 ms.technology: xamarin-ios
@@ -10,8 +10,6 @@ ms.date: 10/07/2017
 ---
 
 # Introduction to watchOS 4
-
-_New features available to developers using Xamarin for watchOS 4._
 
 Access new features of watchOS 4 in your apps:
 
@@ -25,7 +23,6 @@ Changes since watchOS 3:
 
 * App code and UI run in a single process.
 * Location permission can be granted on the watch (no need to ask the user to accept on their phone).
-
 
 ## Related Links
 

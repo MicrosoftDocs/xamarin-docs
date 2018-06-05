@@ -1,6 +1,6 @@
 ---
-title: "Hello, iOS Multiscreen"
-description: "In this two-part guide, we expand the Phoneword application we created in the Hello, iOS guide to handle a second screen. Along the way we’ll introduce the Model-View-Controller design pattern, implement our first iOS navigation, and develop a deeper understanding of iOS application structure and functionality."
+title: "Hello, iOS Multiscreen – Quickstart"
+description: "This document demonstrates how to expand the Phoneword sample application to add a second screen, describing model-view-controller, iOS navigation, and other core iOS development concepts along the way."
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d72e6230-c9ee-4bee-90ec-877d256821aa
@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 12/02/2016
 ---
 
-# Hello.iOS Multiscreen Quickstart
+# Hello, iOS Multiscreen – Quickstart
 
 This part of the walkthrough will add a second screen to the Phoneword application that will display a history of the phone numbers that were called with the app. The final application will have a second screen that displays the call history, as illustrated by the following screenshot:
 

@@ -1,6 +1,6 @@
 ---
-title: "Playing sound with AVAudioPlayer"
-description: "This article shows how to use a helper class to control the playback of sound using an AVAudioPlayer."
+title: "Playing sound with AVAudioPlayer in Xamarin.Mac"
+description: "This document describes how to play sound with AVAudioPlayer in a Xamarin.Mac app. It discusses AVAudioPlayer at a high level and links to other documentation that explores it more fully."
 ms.prod: xamarin
 ms.assetid: 4A683A94-F75D-4EAF-8497-E9443653250B
 ms.technology: xamarin-mac
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 10/19/2016
 ---
 
-# Playing sound with AVAudioPlayer
-
-_This article shows how to use a helper class to control the playback of sound using an AVAudioPlayer._
+# Playing sound with AVAudioPlayer in Xamarin.Mac
 
 ## About the AVAudioPlayer
 
@@ -30,8 +28,6 @@ You can use the `AVAudioPlayer` class to do the following:
 ## Playing sounds in macOS
 
 Because macOS supports the same Audio Toolbox classes as iOS, please see our iOS [Playing Sound with AVAudioPlayer](https://developer.xamarin.com/recipes/ios/media/sound/avaudioplayer/) documentation for the full details of playing audio in a Xamarin.Mac app.
-
-
 
 ## Related Links
 

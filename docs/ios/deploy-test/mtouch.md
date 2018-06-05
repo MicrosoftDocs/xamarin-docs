@@ -1,5 +1,6 @@
 ---
-title: "mtouch"
+title: "Using mtouch to Bundle Xamarin.iOS Apps"
+description: "This document describes mtouch, a tool that drives many of the steps required to turn a Xamarin.iOS application into a bundle, launch it in the simulator, and deploy it to a physical device."
 ms.prod: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
@@ -7,8 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# mtouch
-
+# Using mtouch to Bundle Xamarin.iOS Apps
 
 iPhone applications are shipped as application bundles. These are directories
 with the extension `.app` that contain your code, data, configuration
@@ -19,7 +19,6 @@ by the `mtouch` command, a tool that integrates many of the steps
 required to turn the application into a bundle. This tool is also used to launch
 your application in the simulator and to deploy the software to an actual iPhone
 or iPod Touch device.
-
 
 ## Detailed Instructions
 

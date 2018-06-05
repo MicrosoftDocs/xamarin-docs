@@ -1,5 +1,6 @@
 ---
-title: "Registering Applications to Run in the Background"
+title: "Registering Xamarin.iOS Apps to Run in the Background"
+description: "This document describes how to register a Xamarin.iOS application to run in the background. It discusses Audio apps, VoIP apps, external accessories and bluetooth, and more."
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# Registering Applications to Run in the Background
+# Registering Xamarin.iOS Apps to Run in the Background
 
 Registering individual tasks for background privileges works for some applications, but what happens if an application is constantly called upon to perform important, long-running tasks, such as getting directions for the user via GPS? Applications such as these should instead be registered as known background-necessary applications.
 

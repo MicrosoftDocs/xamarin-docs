@@ -1,6 +1,6 @@
 ---
 title: "Xamarin Live Player Samples"
-description: "Here are some samples to try out with Xamarin Live Player."
+description: "This document links to sample applications to use when testing out the Xamarin Live Player. Linked samples include a basic calculator and a bug sweeper game."
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
 author: topgenorth
@@ -28,8 +28,6 @@ This Xamarin.Forms app provides a simple calculator you can use on your Android 
 This is a familiar game with a new twist. Ten bugs are hidden in a 9-by-9 grid of tiles. To win, you must find and flag all ten bugs.
 
 ![BugSweeper app on Android](samples-images/bugsweeper-sml.png)
-
-
 
 ## Related Links
 

@@ -1,5 +1,6 @@
 ---
-title: "Deprecated Notification Technologies"
+title: "Deprecated Notification Technologies in Xamarin.iOS"
+description: "This document describes iOS notification technologies that have been deprecated in favor of the User Notifications framework, introduced in iOS 10."
 ms.prod: xamarin
 ms.assetid: 20C4F6E5-56DF-4A85-BBF0-E38C88586307
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 10/07/2016
 ---
 
-# Deprecated Notification Technologies
+# Deprecated Notification Technologies in Xamarin.iOS
 
 This section shows how to implement local and push notifications
   in Xamarin.iOS. It will explain the various UI elements of an
@@ -17,9 +18,6 @@ This section shows how to implement local and push notifications
 
 > [!IMPORTANT]
 > The information in this section pertains to iOS 9 and prior, it has been left here to support older iOS versions. For iOS 10 and later, please see the [User Notification Framework guide](~/ios/platform/user-notifications/index.md) for supporting both Local and Remote Notification on an iOS device.
-
-
-
 
 ## Sections
 

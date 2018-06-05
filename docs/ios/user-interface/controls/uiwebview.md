@@ -1,6 +1,6 @@
 ---
-title: "Web Views"
-description: "Disambiguating iOS web view options"
+title: "Web Views in Xamarin.iOS"
+description: "This document describes the various ways a Xamarin.iOS app can display web content. It discusses UIWebView, WKWebView, SFSafariViewController, Safari, and app transport security."
 ms.prod: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/22/2017
 ---
 
-# Web Views
+# Web Views in Xamarin.iOS
 
 Over the lifetime of iOS Apple has released a number of ways for app developers to incorporate web view functionality in their apps. Most users utilize the built-in Safari web browser on their iOS device, and therefore expect that web-view functionality from other apps is consistent with this experience. They expect the same gestures to work, the performance to be on par, and the functionality the same.
 

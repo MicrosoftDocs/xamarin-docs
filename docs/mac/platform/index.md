@@ -1,6 +1,6 @@
 ---
-title: "Platform Features"
-description: "Key Components of the macOS Platform"
+title: "macOS Platform Features"
+description: "This document links to guides that describe important macOS and Xamarin.Mac platform features: OpenTK, Storyboards, extensions, and more."
 ms.prod: xamarin
 ms.assetid: 37451F65-672A-4512-8DDD-06CCDE9E5A12
 ms.technology: xamarin-mac
@@ -9,10 +9,9 @@ ms.author: brumbaug
 ms.date: 10/19/2016
 ---
 
-# Platform Features
+# macOS Platform Features
 
 Documents in this section cover working with key, platform-specific features of macOS in a Xamarin.Mac application.
-
 
 ## [Introduction to macOS Sierra](~/mac/platform/introduction-to-macos-sierra/index.md)
 

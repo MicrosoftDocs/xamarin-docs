@@ -1,15 +1,14 @@
 ---
 title: "UrhoSharp Platform Support"
-description: "Cross Platform 3D/2D Game and Visualization Engine"
+description: "This document links to various guides that describe how to add Urho to an existing native project for a specific platform. It discusses Android, iOS, tvOS, macOS, Windows, and Xamarin.Forms."
 ms.prod: xamarin
 ms.assetid: 6205E430-1036-4CC3-8E97-AA5554E3D468
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
 ---
-# UrhoSharp Platform Support
 
-_Cross Platform 3D/2D Game and Visualization Engine_
+# UrhoSharp Platform Support
 
 In this section, we discuss how to add Urho to an existing native
 project for your platform and how to take advantage of platform

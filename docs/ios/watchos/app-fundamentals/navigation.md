@@ -1,5 +1,6 @@
 ---
-title: "Working with Navigation"
+title: "Working with watchOS Navigation in Xamarin"
+description: "This document describes how to work with navigation in a watchOS application. It discusses modal interfaces, hierarchical navigation, and page-based interfaces."
 ms.prod: xamarin
 ms.assetid: 71A64C10-75C8-4159-A547-6A704F3B5C2E
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/17/2017
 ---
 
-# Working with Navigation
+# Working with watchOS Navigation in Xamarin
 
 The simplest navigation option available on the watch
   is a simple [modal popup](#modal) that appears on top

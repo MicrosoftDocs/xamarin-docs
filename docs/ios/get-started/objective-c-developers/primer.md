@@ -1,6 +1,6 @@
 ---
 title: "C# Primer for Objective-C Developers"
-description: "Xamarin.iOS allows platform-agnostic code written in C# to be shared across platforms. However, existing iOS applications may want to leverage Objective-C code that has already been created. This article serves as a short primer for Objective-C developers looking to move to Xamarin and the C# language."
+description: "This document describes C# for Objective-C developers. It compares and contrasts the two languages by examining protocols and interfaces, categories and extension methods, frameworks and assemblies, selectors and named parameters, and more."
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios

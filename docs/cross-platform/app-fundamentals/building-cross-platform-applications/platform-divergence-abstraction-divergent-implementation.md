@@ -1,5 +1,6 @@
 ---
 title: "Part 4 - Dealing with Multiple Platforms"
+description: "This document describes how to handle application divergence based on platform or capability. It discusses screen size, navigation metaphors, touch and gestures, push notifications, and interface paradigms such as lists and tabs."
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: asb3993

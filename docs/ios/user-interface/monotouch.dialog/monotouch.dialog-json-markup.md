@@ -1,5 +1,6 @@
 ---
 title: "MonoTouch.Dialog Json Markup"
+description: "This document describes the JSON syntax that can be used to build a Xamarin.iOS user interface using MonoTouch.Dialog."
 ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios

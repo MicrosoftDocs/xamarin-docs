@@ -1,6 +1,6 @@
 ---
 title: "Introduction to iOS 6"
-description: "iOS 6 includes a variety of new technologies for developing apps, which Xamarin.iOS 6 brings to C# developers."
+description: "This document links to guides that describe features introduced in iOS 6. Collection views, PassKit, the Social Framework, and changes to StoreKit are all discussed."
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
@@ -30,13 +30,13 @@ allow easily creating grid-like layouts out of the box, while supporting custom
 layouts as well. For more information see, the [Introduction to Collection Views](~/ios/user-interface/controls/uicollectionview.md) [](~/ios/user-interface/controls/uicollectionview.md)guide.
 
 
-## [Introduction to Pass Kit](~/ios/platform/passkit.md)
+## [Introduction to PassKit](~/ios/platform/passkit.md)
 
-The Pass Kit framework allows applications to interact with digital passes
+The PassKit framework allows applications to interact with digital passes
 that are managed in the Passbook app. For more information see, the [Introduction to Pass Kit guide](~/ios/platform/passkit.md).
 
 
-##  [Introduction to Event Kit](~/ios/platform/eventkit.md)
+##  [Introduction to EventKit](~/ios/platform/eventkit.md)
 
 The EventKit framework provides a way to access the Calendars, Calendar
 Events, and Reminders data that Calendar Database stores. Access to the
@@ -51,7 +51,7 @@ networks including Twitter and Facebook, as well as SinaWeibo for users in
 China. For more information see, the [Introduction to the Social Framework](~/ios/platform/social-framework.md) guide.
 
 
-##  [Changes to Store Kit](changes-to-storekit.md)
+##  [Changes to StoreKit](changes-to-storekit.md)
 
 Apple has introduced two new features in Store Kit: purchasing and
 downloading iTunes or App Store content from within your app, and hosting your

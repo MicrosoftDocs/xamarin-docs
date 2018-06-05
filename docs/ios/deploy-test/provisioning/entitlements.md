@@ -1,5 +1,5 @@
 ---
-title: "Working with Entitlements"
+title: "Working with Entitlements in Xamarin.iOS"
 description: "Entitlements are special app capabilities and security permissions granted to applications that are correctly configured to use them."
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/15/2017
 ---
 
-# Working with Entitlements
+# Working with Entitlements in Xamarin.iOS
 
 _Entitlements are special app capabilities and security permissions granted to applications that are correctly configured to use them._
 

@@ -1,5 +1,6 @@
 ---
-title: "Customizing a Table's Appearance"
+title: "Customizing a Table's Appearance in Xamarin.iOS"
+description: "This document describes how to customize a table's appearance in Xamarin.iOS. It discusses cell styles, accessories, cell separators, and custom cell layouts."
 ms.prod: xamarin
 ms.assetid: 8A83DE38-0028-CB61-66F9-0FB9DE552286
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/22/2017
 ---
 
-# Customizing a Table's Appearance
+# Customizing a Table's Appearance in Xamarin.iOS
 
 The simplest way to change the appearance of a table is to use a different
 cell style. You can change which cell style is used when creating each cell in

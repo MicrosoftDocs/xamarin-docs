@@ -1,5 +1,6 @@
 ---
-title: "Purchasing Non-Consumable Products"
+title: "Purchasing Non-Consumable Products in Xamarin.iOS"
+description: "This document describes non-consumable products in Xamarin.iOS, which are features purchased by a user that remain available indefinitely, regardless of device."
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# Purchasing Non-Consumable Products
+# Purchasing Non-Consumable Products in Xamarin.iOS
 
 Non-consumable products are ‘owned’ by the customer. The expectation is
 that they will always have access to them, even if their device is lost/stolen

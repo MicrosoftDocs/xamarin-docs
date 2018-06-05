@@ -1,5 +1,5 @@
 ---
-title: ".xib files"
+title: ".xib files in Xamarin.Mac"
 description: "This article covers working with .xib files created in Xcode's Interface Builder to create and maintain user interfaces for a Xamarin.Mac application."
 ms.prod: xamarin
 ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# .xib files
+# .xib files in Xamarin.Mac
 
 _This article covers working with .xib files created in Xcode's Interface Builder to create and maintain user interfaces for a Xamarin.Mac application._
 

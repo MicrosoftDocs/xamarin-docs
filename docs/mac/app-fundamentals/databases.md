@@ -1,5 +1,5 @@
 ---
-title: "Databases"
+title: "Databases in Xamarin.Mac"
 description: "This article covers using key-value coding and key-value observing to allow for data binding between SQLite databases and UI elements in Xcode's Interface Builder. It also covers using the SQLite.NET ORM to provide access to SQLite data."
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Databases
+# Databases in Xamarin.Mac
 
 _This article covers using key-value coding and key-value observing to allow for data binding between SQLite databases and UI elements in Xcode's Interface Builder. It also covers using the SQLite.NET ORM to provide access to SQLite data._
 

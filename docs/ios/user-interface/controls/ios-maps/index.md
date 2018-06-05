@@ -1,6 +1,6 @@
 ---
-title: "Maps"
-description: "iOS includes the MapKit framework, which makes it easy to add maps to an application. Using Map Kit, iOS applications can add interactive maps that support features such as panning and zooming, showing user location and layering rich graphics on a map. This article delves into several of Map Kit's features, showing how to take advantage of them to build geographic features into an application"
+title: "Maps in Xamarin.iOS"
+description: "This document describes the iOS MapKit framework and how it is used with Xamarin.iOS. It discusses how to add a map, style it, pan and zoom, work with user location, add annotations, work with callouts and overlays, and perform local search."
 ms.prod: xamarin
 ms.assetid: 5DD8E56D-51C1-4AFA-B387-79B5734698ED
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/21/2017
 ---
 
-# Maps
-
-_iOS includes the MapKit framework, which makes it easy to add maps to an application. Using Map Kit, iOS applications can add interactive maps that support features such as panning and zooming, showing user location and layering rich graphics on a map. This article delves into several of Map Kit's features, showing how to take advantage of them to build geographic features into an application_
+# Maps in Xamarin.iOS
 
 Maps are a common feature in all modern mobile operating systems. iOS offers mapping support natively through the Map Kit framework. With Map Kit, applications can easily add rich, interactive maps. These maps can be customized in a variety of ways, such as adding annotations to mark locations on a map, and overlaying graphics of arbitrary shapes. Map Kit even has built-in support for showing the current location of a device.
 

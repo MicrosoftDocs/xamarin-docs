@@ -1,6 +1,6 @@
 ---
-title: "Wireless Deployment"
-description: "This feature allows for deployment to iOS or Apple TV devices over a networked connection"
+title: "Wireless Deployment for Xamarin.iOS and tvOS Apps"
+description: "This document describes how to wirelessly deploy a Xamarin.iOS app to an iOS device from either Visual Studio fro Mac or Visual Studio 2017."
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 02/09/2018
 ---
 
-# Wireless Deployment
+# Wireless Deployment for Xamarin.iOS and tvOS Apps
 
 An important part of the developer workflow is deploying to a device. Xcode 9 introduced the option of deploying to an iOS device or Apple TV through a network, rather than having to hardwire your devices every time you want to deploy and debug your app. This feature has been introduced in Visual Studio for Mac 7.4 and Visual Studio 15.6 release.
 

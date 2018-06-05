@@ -1,5 +1,5 @@
 ---
-title: "Message App Integration"
+title: "Message App Integration in Xamarin.iOS"
 description: "These articles show how include a Message App Extension in a Xamarin.iOS solution that integrates with the Messages app to present new functionality to the user."
 ms.prod: xamarin
 ms.assetid: 00AF2D4C-9BA8-4265-A11F-989C93BDF723
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 08/29/2016
 ---
 
-# Message App Integration
+# Message App Integration in Xamarin.iOS
 
 _These articles show how include a Message App Extension in a Xamarin.iOS solution that integrates with the Messages app to present new functionality to the user._
 

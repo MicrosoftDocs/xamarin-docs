@@ -1,6 +1,6 @@
 ---
-title: "iOS Localization"
-description: "This document covers the localization features of the iOS SDK and how to access them with Xamarin."
+title: "Localization in Xamarin.iOS"
+description: "This document describes iOS localization features and how to use these features in Xamarin.iOS apps. It discusses language, locale, strings files, launch images, and more."
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 04/28/2017
 ---
 
-# iOS Localization
+# Localization in Xamarin.iOS
 
 _This document covers the localization features of the iOS SDK and how to access them with Xamarin._
 

@@ -1,6 +1,6 @@
 ---
-title: "Resources and Data Storage"
-description: "This article covers working with resources and persistent data storage in a Xamarin.tvOS app."
+title: "tvOS Resources and Data Storage in Xamarin"
+description: "This article describes how to work with resource and persistent data storage in a tvOS app built with Xamarin. It discusses iCloud data storage and on-demand resources."
 ms.prod: xamarin
 ms.assetid: C56B5046-D2C0-4B63-9CE0-ADAA0EFD368A
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Resources and Data Storage
+# tvOS Resources and Data Storage in Xamarin
 
 _This article covers working with resources and persistent data storage in a Xamarin.tvOS app._
 

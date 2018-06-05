@@ -1,5 +1,6 @@
 ---
-title: "Internationalization Encodings"
+title: "Internationalization Encodings in Xamarin.iOS"
+description: "This document describes internationalization encodings in Xamarin.iOS, discussing the available encodings and how to add them to an app."
 ms.prod: xamarin
 ms.assetid: F5117294-28BB-4583-B6A0-A339B050FDE1
 ms.technology: xamarin-ios
@@ -7,7 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# Internationalization Encodings
+# Internationalization Encodings in Xamarin.iOS
 
 Not all encodings are included in the Xamarin.iOS class library by default.
 

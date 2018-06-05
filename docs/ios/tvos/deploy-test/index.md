@@ -1,5 +1,5 @@
 ---
-title: "Deployment and Testing"
+title: "Deploying and Testing tvOS Apps in Xamarin"
 description: "This section covers topics used to test an app as well as how to distribute it. Topics here include things such as tools used for debugging, deployment to testers and how to publish an application to the Apple TV App Store."
 ms.prod: xamarin
 ms.assetid: DA4B4BD7-DC09-4F61-BC07-36727AF52BA2
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Deployment and Testing
+# Deploying and Testing tvOS Apps in Xamarin
 
 ## [App Distribution](~/ios/tvos/deploy-test/app-distribution/index.md)
 

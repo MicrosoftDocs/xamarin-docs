@@ -11,7 +11,7 @@
 ### [Introduction to Mobile Development](get-started/introduction-to-mobile-development.md)
 ### [Introduction to the Mobile SDLC](get-started/introduction-to-mobile-sdlc.md)
 
-### [Building Cross Platform Applications](app-fundamentals/building-cross-platform-applications/index.md)
+### [Building Cross-Platform Applications](app-fundamentals/building-cross-platform-applications/index.md)
 #### [Overview](app-fundamentals/building-cross-platform-applications/overview.md)
 #### [Part 1 - Understanding the Xamarin Mobile Platform](app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md)
 #### [Part 2 - Architecture](app-fundamentals/building-cross-platform-applications/architecture.md)

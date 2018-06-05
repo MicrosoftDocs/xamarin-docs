@@ -1,12 +1,13 @@
 ---
 title: "Xamarin Live Player Setup"
-description: "Edit and test apps in real time on your iOS or Android device"
+description: "This document describes how to set up the Xamarin Live Player and use it to make live edits to a running application."
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 author: topgenorth
 ms.author: toopge
 ms.date: 05/14/2018
 ---
+
 # Xamarin Live Player Setup
 
 Xamarin Live Player lets you make live edits to your app and have those changes reflected live on the device. Your code runs inside the Xamarin Live Player app – no need to set up emulators or to use cables to deploy! This article describes how to set up Xamarin Live Player.

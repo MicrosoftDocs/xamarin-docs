@@ -1,6 +1,6 @@
 ---
-title: "Testing on Watch Devices"
-description: "Deploying Apps to test on your Apple Watch"
+title: "Testing on Apple Watch Devices"
+description: "This document describes how to deploy a watchOS app built with Xamarin for testing on an actual Apple Watch. It discusses devices, provisioning profiles, testing, and provides some troubleshooting tips."
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/17/2017
 ---
 
-# Testing on Watch Devices
+# Testing on Apple Watch Devices
 
 After you've followed the [deployment steps](~/ios/watchos/deploy-test/index.md)
   to create App IDs and App Groups (if required), use the instructions

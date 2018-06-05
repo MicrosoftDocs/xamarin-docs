@@ -1,6 +1,6 @@
 ---
-title: "Search and Home Screen Widget Enhancements"
-description: "This article covers the enhancements Apple has made to the Widget System in iOS 10."
+title: "Search and Home Screen Widget Enhancements in iOS 10"
+description: "This document describes the enhancements Apple has made to the Widgets in iOS 10, including updates to search and home screen widgets."
 ms.prod: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
 ms.technology: xamarin-ios
@@ -9,10 +9,9 @@ ms.author: brumbaug
 ms.date: 03/17/2017
 ---
 
-# Search and Home Screen Widget Enhancements
+# Search and Home Screen Widget Enhancements in iOS 10
 
 _This article covers the enhancements Apple has made to the Widget System in iOS 10._
-
 
 Apple has introduced several enhancements to the Widget System to ensure that the widgets look great on any background that exists on the new iOS 10 Lock Screen. Additionally, widgets now contain a [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) property that allows the developer to describe how much content is available and allows the user to expand and collapse the content.
 

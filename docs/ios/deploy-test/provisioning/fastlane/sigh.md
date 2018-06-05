@@ -1,5 +1,6 @@
 ---
 title: "fastlane for iOS – sigh"
+description: "This document describe's fastlane's sigh command, which is used to create, renew, and repair provisioning profiles for all Xamarin.iOS build configurations."
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios

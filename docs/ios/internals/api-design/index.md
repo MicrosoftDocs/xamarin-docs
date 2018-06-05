@@ -1,6 +1,6 @@
 ---
-title: "API Design"
-description: "Perspective on the Xamarin.iOS API design"
+title: "Xamarin.iOS API Design"
+description: "This document describes some of the guiding principles that used to architect the Xamarin.iOS APIs and how these relate to Objective-C."
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/21/2017
 ---
 
-# API Design
+# Xamarin.iOS API Design
 
 In addition to the core Base Class Libraries that are part of Mono,
 [Xamarin.iOS](http://www.xamarin.com/iOS) ships with bindings for

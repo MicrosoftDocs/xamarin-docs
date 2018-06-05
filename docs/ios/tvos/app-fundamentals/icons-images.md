@@ -1,6 +1,6 @@
 ---
-title: "Working with Icons and Images"
-description: "This article covers designing and working with icons and images inside of a Xamarin.tvOS app."
+title: "Working with tvOS Icons and Images in Xamarin"
+description: "This document describes how to work with icons and images in a tvOS app built with Xamarin. It discusses launch images, layered images, the app icon, and more."
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Working with Icons and Images
-
-_This article covers designing and working with icons and images inside of a Xamarin.tvOS app._
+# Working with tvOS Icons and Images in Xamarin
 
 Creating captivating icons and imagery are a critical part of developing an immersive user experience for your Apple TV apps. This guide will cover the steps required to create and include the necessary graphic assets for your Xamarin.tvOS apps:
 

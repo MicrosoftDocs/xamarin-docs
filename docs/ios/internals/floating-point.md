@@ -1,5 +1,6 @@
 ---
-title: "Floating Point"
+title: "Floating Point Operations in Xamarin.iOS"
+description: "This document describes how Xamarin.iOS handles 32-bit and 64-bit precision floating point operations and discusses associated impacts to performance."
 ms.prod: xamarin
 ms.assetid: 003F25C1-B430-4339-9C95-7DF527EBC699
 ms.technology: xamarin-ios
@@ -7,7 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# Floating Point
+# Floating Point Operations in Xamarin.iOS
 
 Xamarin.iOS will by default perform 32-bit and 64-bit floating point
 operations using 64-bit precision on ARM.  

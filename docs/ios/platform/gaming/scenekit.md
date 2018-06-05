@@ -1,5 +1,6 @@
 ---
-title: "SceneKit"
+title: "SceneKit in Xamarin.iOS"
+description: "This document describes SceneKit, a 3D scene graph API that simplifies working with 3D graphics by abstracting away the complexities of OpenGL."
 ms.prod: xamarin
 ms.assetid: 19049ED5-B68E-4A0E-9D57-B7FAE3BB8987
 ms.technology: xamarin-ios
@@ -8,13 +9,13 @@ ms.author: brumbaug
 ms.date: 06/14/2017
 ---
 
-# SceneKit
+# SceneKit in Xamarin.iOS
 
-Scene Kit is a 3D scene graph API that simplifies working with 3D graphics. It was first introduced in OS X 10.8, and has now come to iOS 8. With Scene Kit creating immersive 3D visualizations and casual 3D games does not require expertise in OpenGL. Building on common scene graph concepts, Scene Kit abstracts away the complexities of OpenGL and OpenGL ES, making it very easy to add 3D content to an application. However, if you are an OpenGL expert, Scene Kit has great support for tying in directly with OpenGL as well. It also includes numerous features that complement 3D graphics, such as physics, and integrates very well with several other Apple frameworks, such as Core Animation, Core Image and Sprite Kit.
+SceneKit is a 3D scene graph API that simplifies working with 3D graphics. It was first introduced in OS X 10.8, and has now come to iOS 8. With SceneKit creating immersive 3D visualizations and casual 3D games does not require expertise in OpenGL. Building on common scene graph concepts, SceneKit abstracts away the complexities of OpenGL and OpenGL ES, making it very easy to add 3D content to an application. However, if you are an OpenGL expert, SceneKit has great support for tying in directly with OpenGL as well. It also includes numerous features that complement 3D graphics, such as physics, and integrates very well with several other Apple frameworks, such as Core Animation, Core Image and Sprite Kit.
 
-Scene Kit is extremely easy to work with. It is a declarative API that takes care of rendering. You simply set up a scene, add properties to it, and Scene Kit handles the rendering of the scene.
+SceneKit is extremely easy to work with. It is a declarative API that takes care of rendering. You simply set up a scene, add properties to it, and SceneKit handles the rendering of the scene.
 
-To work with Scene Kit you create a scene graph using the `SCNScene` class. A scene contains a hierarchy of nodes, represented by instances of `SCNNode`, defining locations in 3D space. Each node has properties such as geometry, lighting and materials that affect its appearance, as illustrated by the following figure:
+To work with SceneKit you create a scene graph using the `SCNScene` class. A scene contains a hierarchy of nodes, represented by instances of `SCNNode`, defining locations in 3D space. Each node has properties such as geometry, lighting and materials that affect its appearance, as illustrated by the following figure:
 
 ![](scenekit-images/image7.png "The SceneKit hierarchy") 
 
@@ -39,7 +40,7 @@ scene.RootNode.AddChildNode (sphereNode);
 
 ## Adding Light
 
-At this point the sphere won’t display anything because there is no light in the scene. Attaching `SCNLight` instances to nodes creates lights in Scene Kit. There are several types of lights ranging from various forms of directional lighting to ambient lighting. For example the following code creates an omnidirectional light on the side of the sphere:
+At this point the sphere won’t display anything because there is no light in the scene. Attaching `SCNLight` instances to nodes creates lights in SceneKit. There are several types of lights ranging from various forms of directional lighting to ambient lighting. For example the following code creates an omnidirectional light on the side of the sphere:
 
 ```csharp
 // omnidirectional light
@@ -85,7 +86,7 @@ cameraNode = new SCNNode {
 scene.RootNode.AddChildNode (cameraNode);
 ```
 
-As you can see from the code above, Scene Kit objects can be created using constructors or from the Create factory method. The former allows using C# initializer syntax, but which one to use is largely a matter of preference.
+As you can see from the code above, SceneKit objects can be created using constructors or from the Create factory method. The former allows using C# initializer syntax, but which one to use is largely a matter of preference.
 
 With the camera in place, the entire sphere is visible to the user:
 
@@ -125,7 +126,7 @@ Now the monkey appears to sit visually within the sphere, independent of the poi
 
 ### Animation
 
-Scene Kit is designed to work well with animation. You can create both implicit or explicit animations, and can even render a scene from a Core Animation layer tree. When creating an implicit animation, Scene Kit provides its own transition class, `SCNTransaction`.
+SceneKit is designed to work well with animation. You can create both implicit or explicit animations, and can even render a scene from a Core Animation layer tree. When creating an implicit animation, SceneKit provides its own transition class, `SCNTransaction`.
 
 Here’s an example that rotates the sphere:
 
@@ -136,7 +137,7 @@ sphereNode.Rotation = new SCNVector4 (0, 1, 0, (float)Math.PI * 4);
 SCNTransaction.Commit ();
 ```
 
-You can animate much more than rotation though. Many properties of Scene Kit are animatable. For example, the following code animates the material’s `Shininess` to increase the specular reflection.
+You can animate much more than rotation though. Many properties of SceneKit are animatable. For example, the following code animates the material’s `Shininess` to increase the specular reflection.
 
 ```csharp
 SCNTransaction.Begin ();
@@ -145,4 +146,4 @@ material.Shininess = 0.1f;
 SCNTransaction.Commit ();
 ```
 
-Scene Kit is very straightforward to use. It offers a wealth of additional features including constraints, physics, declarative actions, 3D text, depth of field support, Sprite Kit integration and Core Image integration to name just a few.
+SceneKit is very straightforward to use. It offers a wealth of additional features including constraints, physics, declarative actions, 3D text, depth of field support, Sprite Kit integration and Core Image integration to name just a few.

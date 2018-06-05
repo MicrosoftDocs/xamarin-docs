@@ -1,6 +1,6 @@
 ---
-title: "Walkthrough: Creating an application using the Reflection API"
-description: "In addition to the Elements API, MonoTouch.Dialog (MT.D) also includes an attribute-based Reflection API. The Reflection API makes creating screens with MT.D as easy as decorating classes with attributes. This article provides a walk through showing how to create an application using the Reflection API."
+title: "Creating a Xamarin.iOS application using the Reflection API"
+description: "This document describes the MonoTouch.Dialog attribute-based Reflection API, which creates UI based on classes decorated with attributes."
 ms.prod: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
@@ -8,10 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# Walkthrough: Creating an application using the Reflection API
-
-_In addition to the Elements API, MonoTouch.Dialog (MT.D) also includes an attribute-based Reflection API. The Reflection API makes creating screens with MT.D as easy as decorating classes with attributes. This article provides a walk through showing how to create an application using the Reflection API._
-
+# Creating a Xamarin.iOS application using the Reflection API
 
 The MT.D Reflection API allows classes to be decorated with attributes that
 MT.D uses to create screens automatically. The reflection API provides a binding
@@ -38,7 +35,6 @@ this example, we’ll build a simple data entry screen as shown below:
  [![](reflection-api-walkthrough-images/01-expense-entry.png "In this example, we'll build a simple data entry screen as shown here")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
 
  <a name="Creating_a_Class_with_MT.D_Attributes" />
-
 
 ## Creating a Class with MT.D Attributes
 

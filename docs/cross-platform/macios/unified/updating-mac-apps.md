@@ -1,6 +1,6 @@
 ---
 title: "Updating Existing Mac Apps"
-description: "Follow these steps to update an existing Xamarin.Mac app to use the Unified API."
+description: "This document describes the steps that must be followed to update a Xamarin.Mac app from the Classic API to the Unified API."
 ms.prod: xamarin
 ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
 author: asb3993
@@ -9,8 +9,6 @@ ms.date: 03/29/2017
 ---
 
 # Updating Existing Mac Apps
-
-_Follow these steps to update an existing Xamarin.Mac app to use the Unified API._
 
 Updating an existing app to use the Unified API requires changes to the project file itself as well as to the namespaces and APIs used in the application code.
 

@@ -1,5 +1,6 @@
 ---
-title: "Creating User Interface Objects"
+title: "Creating User Interface Objects in Xamarin.iOS"
+description: "This document provides an overview of how to create a user interface in Xamarin.iOS. It discusses the iOS Designer, Xcode Interface Builder, C#, and storyboards."
 ms.prod: xamarin
 ms.assetid: 4D6B136C-744A-4936-8655-A77E62BA7A60
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/21/2017
 ---
 
-# Creating User Interface Objects
+# Creating User Interface Objects in Xamarin.iOS
 
 Apple groups related pieces of functionality into “frameworks” which equate to Xamarin.iOS namespaces. `UIKit` is the
 namespace that contains all the user interface controls for iOS.
@@ -18,7 +19,6 @@ Whenever your code needs to reference a user interface control, such as a label 
 ```csharp
 using UIKit;
 ```
-
 
 All the controls discussed in this chapter are in the UIKit namespace, and each user control class name has the `UI` prefix.
 

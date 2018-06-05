@@ -1,6 +1,6 @@
 ---
 title: "Manually Creating NuGet Packages for Xamarin"
-description: "This page contains some tips to help build NuGet packages that target the Xamarin platform."
+description: "This document contains tips to help build NuGet packages that target the Xamarin platform. It describes NuGet package Xamarin profiles, PCL NuGets with platform dependencies, and links to various open-source samples."
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: asb3993
@@ -71,7 +71,6 @@ To clarify:
 - **Xamarin.iOS10** matches Xamarin.iOS 1.0 and newer
 - **Xamarin.iOS1.0** also matches Xamarin.iOS 1.0 and newer
 
-
 ## PCL NuGets with Platform Dependencies
 
 PCL Profiles are limited in what .NET framework APIs they can access,
@@ -93,7 +92,6 @@ Some open-source examples that you can refer to:
 - [**ModernHttpClient**](https://www.nuget.org/packages/modernhttpclient/) – Write your app using System.Net.Http, but drop this library in and it will go drastically faster (view [source](https://github.com/paulcbetts/ModernHttpClient)).
 - [**Splat**](https://www.nuget.org/packages/Splat/) – A library to make things cross-platform that should be (view [source](https://github.com/paulcbetts/Splat)).
 - [**NGraphics**](https://www.nuget.org/packages/NGraphics/) - A cross platform library for rendering vector graphics on .NET (view [source](https://github.com/praeclarum/NGraphics/blob/master/NGraphics.nuspec)).
-
 
 ## Related Links
 

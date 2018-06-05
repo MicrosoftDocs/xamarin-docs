@@ -1,6 +1,6 @@
 ---
 title: "Interactive Workbooks"
-description: "Use workbooks to create live documents with C# code for experimenting, teaching, training or exploring."
+description: "This document describes how to use Xamarin Workbooks to create live documents containing C# code for experimenting, teaching, training, or exploring."
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
 author: topgenorth
@@ -9,8 +9,6 @@ ms.date: 03/30/2017
 ---
 
 # Interactive Workbooks
-
-_Use workbooks to create live documents with C# code for experimenting, teaching, training or exploring._
 
 You can use Workbooks as a standalone application, separate from your IDE.
 

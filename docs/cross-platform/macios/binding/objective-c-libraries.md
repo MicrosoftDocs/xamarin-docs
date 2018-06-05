@@ -1,5 +1,6 @@
 ---
 title: "Binding Objective-C libraries"
+description: "This document provides a high-level overview of how to create C# bindings to Objective-C code, describing how to bind events, methods, custom controls, and more."
 ms.prod: xamarin
 ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: bradumbaugh

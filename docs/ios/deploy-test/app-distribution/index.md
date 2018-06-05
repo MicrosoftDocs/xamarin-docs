@@ -1,5 +1,5 @@
 ---
-title: "App Distribution Overview"
+title: "Xamarin.iOS App Distribution Overview"
 description: "This document gives an overview of the distribution techniques that are available for Xamarin.iOS applications and serves as a pointer to more detailed documents on the topic."
 ms.prod: xamarin
 ms.assetid: 341D36DB-BB07-FA94-BCC9-5F8C0B18C179
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# App Distribution Overview
+# Xamarin.iOS App Distribution Overview
 
 _This document gives an overview of the distribution techniques that are available for Xamarin.iOS applications and serves as a pointer to more detailed documents on the topic._
 

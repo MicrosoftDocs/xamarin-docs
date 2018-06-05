@@ -1,6 +1,6 @@
 ---
-title: "HealthKit"
-description: "HealthKit is a framework introduced in iOS 8 that provides a centralized, coordinated, and secure datastore for health-related information. The operating system ensures the privacy and security of health information and, with the Health app, a dashboard for the user. With the user’s permission, applications can read and write a broad variety of health information."
+title: "HealthKit in Xamarin.iOS"
+description: "This document describes HealthKit, a framework introduced in iOS 8 that provides a centralized, coordinated, and secure datastore for health-related information. It discusses how to provision a HealthKit app and how to write code that uses the HealthKit framework."
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/19/2017
 ---
 
-# HealthKit
-
-_HealthKit is a framework introduced in iOS 8 that provides a centralized, coordinated, and secure datastore for health-related information. The operating system ensures the privacy and security of health information and, with the Health app, a dashboard for the user. With the user’s permission, applications can read and write a broad variety of health information._
+# HealthKit in Xamarin.iOS
 
 Health Kit provides a secure datastore for the user’s health-related information. Health Kit apps may, with the user’s explicit permission, read and write to this datastore and receive notifications when pertinent data is added. Apps can present the data, or user’s can use the Apple's provided Health app to view a dashboard of all their data.
 

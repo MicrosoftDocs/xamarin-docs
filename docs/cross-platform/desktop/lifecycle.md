@@ -1,11 +1,12 @@
 ---
 ms.assetid: 7C132A7C-4973-4B2D-98DC-3661C08EA33F
-title: WPF vs. Xamarin.Forms App Lifecycle
-description: Understanding the app startup process, and dealing with background states
+title: "WPF vs. Xamarin.Forms App Lifecycle"
+description: "This document compares the the similarities and differences between the application lifecycle for Xamarin.Forms and WPF applications. It also looks at the visual tree, graphics, resources, and styles."
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
 ---
+
 # WPF vs. Xamarin.Forms App Lifecycle
 
 Xamarin.Forms takes a lot of design guidance from the XAML-based frameworks that came before it, particularly WPF. However, in other ways it deviates significantly which can be a sticky point for people attempting to migrate over. This document attempts to identify some of those issues and provide guidance where possible to bridge WPF knowledge to Xamarin.Forms.

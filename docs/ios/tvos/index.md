@@ -1,6 +1,6 @@
 ---
-title: "Introduction to tvOS"
-description: "This article introduces building tvOS apps with Xamarin."
+title: "Introduction to tvOS in Xamarin"
+description: "This document links to various guides and samples that demonstrate how to build tvOS apps with Xamarin. The guides discuss various features such as user interface development, data storage, icons, and more."
 ms.prod: xamarin
 ms.assetid: 14345503-1742-41F5-B2EF-EE31AB7C3516
 ms.technology: xamarin-ios
@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 02/02/2018
 ---
 
-# Introduction to tvOS
+# Introduction to tvOS in Xamarin
 
 ## Introducing tvOS
 

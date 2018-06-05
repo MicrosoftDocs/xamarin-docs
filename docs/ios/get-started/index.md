@@ -1,6 +1,6 @@
 ---
-title: "Getting Started with iOS"
-description: "From Hello World to Hello App Store"
+title: "Getting Started with Xamarin.iOS"
+description: "This document links to guides that describe how to set up Xamarin.iOS and how to build a first application, and provides information about Xamarin to Objective-C developers."
 ms.prod: xamarin
 ms.assetid: FA802CCF-3BA4-4F26-A7BF-FBB7D0AA889B
 ms.technology: xamarin-ios
@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 11/23/2016
 ---
 
-# Getting Started with iOS
+# Getting Started with Xamarin.iOS
 
 Xamarin.iOS allows developers to create native iOS applications using the same UI controls that are available in Objective-C and Xcode, except with the flexibility and elegance of a modern language (C#), the power of the .NET Base Class Library (BCL), and two first-class IDEs - Visual Studio for Mac and Visual Studio. This series introduces how to setup and install Xamarin.iOS and addresses the basics of Xamarin.iOS development.
 

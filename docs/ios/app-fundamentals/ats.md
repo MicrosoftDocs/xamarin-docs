@@ -1,5 +1,5 @@
 ---
-title: "App Transport Security"
+title: "App Transport Security in Xamarin.iOS"
 description: "App Transport Security (ATS) enforces secure connections between internet resources (such as the app's back-end server) and your app."
 ms.prod: xamarin
 ms.assetid: F8C5E444-2D05-4D9B-A2EF-EB052CD6F007
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 06/13/2017
 ---
 
-# App Transport Security
+# App Transport Security in Xamarin.iOS
 
 _App Transport Security (ATS) enforces secure connections between internet resources (such as the app's back-end server) and your app._
 

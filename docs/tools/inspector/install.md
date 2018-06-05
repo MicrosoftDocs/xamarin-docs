@@ -1,6 +1,6 @@
 ---
 title: "Inspector Installation and Requirements"
-description: "How to download, install, and use the Xamarin Inspector."
+description: "This document describes how to install the Xamarin Inspector and discusses supported operating system, IDEs, and app platforms."
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: topgenorth
@@ -11,7 +11,6 @@ ms.date: 03/29/2017
 # Inspector Installation and Requirements
 
 ## Download and Installation
-
 
 # [Windows](#tab/windows)
 
@@ -52,7 +51,6 @@ Live app inspection is available for enterprise customers.
 |iOS (Unified)|Supported in XS and Visual Studio|Inspecting iOS apps from Windows requires the same version of Inspector to also be installed on the Mac build host.|
 |Android|Supported in XS and Visual Studio|Must target Android >= 4.0.3, with **fastdev** enabled.<br />Must use Google, Visual Studio, or Xamarin Android emulators. Android 7 emulators may not allow inspection at this time.|
 |WPF|Only supported in Visual Studio on Windows|
-
 
 <a name="reporting-bugs" />
 
@@ -178,6 +176,5 @@ For older versions, you will need to manually remove the following:
 
 1. Delete the Workbooks app at `"/Applications/Xamarin Workbooks.app"`
 2. Delete the Inspector app at `"Applications/Xamarin Inspector.app"`
-2. Delete the add-ins: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` and `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-3. Delete Inspector and supporting files here: `/Library/Frameworks/Xamarin.Interactive.framework` and `/Library/Frameworks/Xamarin.Inspector.framework`
-
+3. Delete the add-ins: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` and `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+4. Delete Inspector and supporting files here: `/Library/Frameworks/Xamarin.Interactive.framework` and `/Library/Frameworks/Xamarin.Inspector.framework`

@@ -1,5 +1,6 @@
 ---
 title: "fastlane for iOS – cert"
+description: "This document describes fastlane, a tool that automates many parts of the iOS application provisioning process: requesting certificates, adding a device to Apple's Developer Portal, creating an App ID, and more."
 ms.prod: xamarin
 ms.assetid: 900FA6FF-F3C9-4D35-993E-B0D88E6B1883
 ms.technology: xamarin-ios

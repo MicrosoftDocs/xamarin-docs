@@ -1,6 +1,6 @@
 ---
-title: "Troubleshooting"
-description: "Known issues with the Xamarin Live Player, and how to fix them."
+title: "Troubleshooting Xamarin Live Player"
+description: "This document describes known issues with the Xamarin Live Player and potential fixes. It discusses connection issues, configuration issues, and more."
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: topgenorth
@@ -8,12 +8,11 @@ ms.author: toopge
 ms.date: 05/17/2017
 ---
 
-# Troubleshooting
+# Troubleshooting Xamarin Live Player
 
 ![Preview feature](~/media/shared/preview.png)
 
 This article explains some common problems and provides steps to correct them.
-
 
 ## Mobile device does not connect after scanning barcode (or entering code)
 
@@ -24,7 +23,6 @@ same network as the computer running the IDE. Check out the following:
   - If the computer is also connected to a wired network, try unplugging the wired connection.
 - The network may be tightly secured (such as some corporate networks), blocking the ports needed by Xamarin Live Player.
 - Close the Xamarin Live Player app and restart it.
-
 
 ## "Error while trying to deploy" message in IDE
 
@@ -66,7 +64,6 @@ Inside of the Xamarin Live Player tap **Pair** or **Pair Again**, then press **E
 
 Go to: https://www.guidgenerator.com/online-guid-generator.aspx and generate a new guid and make sure Upper Case is on.
 
-
 **Step 5: Configure device**
 
 Open up the **PlayerDeviceList.xml** up in an editor such as Visual Studio or Visual Studio Code. You need to configure your device manually in this file. By default, the file should contain the following empty `Devices` XML element:
@@ -97,7 +94,6 @@ Open up the **PlayerDeviceList.xml** up in an editor such as Visual Studio or Vi
 </PlayerDevice>
 ```
 
-
 **Add Android Device:**
 
 ```xml
@@ -117,7 +113,6 @@ Open up the **PlayerDeviceList.xml** up in an editor such as Visual Studio or Vi
 ```
 
 **Close and re-open Visual Studio.** Your device should show up in the list.
-
 
 ## "Type or namespace cannot be found" message in IDE
 
@@ -143,9 +138,7 @@ Xamarin.Forms Android projects must use "Toolbar.axml" and "Tabbar.axml"
 for the names of the relevant layout files. The default template
 uses these names; renaming them will cause rendering issues.
 
-
 Please report any additional issues on [bugzilla](https://aka.ms/live-player-report-issue).
-
 
 ## Related Links
 

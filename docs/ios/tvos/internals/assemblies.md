@@ -1,5 +1,6 @@
 ---
-title: "Assemblies"
+title: "Assemblies Supported by Xamarin for tvOS"
+description: "In order to help clarify the features available to tvOS applications, this document provides a list of assemblies supported by Xamarin for tvOS development."
 ms.prod: xamarin
 ms.assetid: 0B1ACF06-65FF-49E2-B6BC-7AEC55638ED8
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 06/07/2016
 ---
 
-# Assemblies
+# Assemblies Supported by Xamarin for tvOS
 
 ## Supported Assemblies
 
@@ -42,8 +43,6 @@ This is a list of the assemblies supported by Xamarin for your Xamarin.tvOS apps
 ## Portable Class Libraries
 
 In addition to the Mac bindings, Xamarin.tvOS can consume [.NET Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md).
-
-
 
 ## Related Links
 

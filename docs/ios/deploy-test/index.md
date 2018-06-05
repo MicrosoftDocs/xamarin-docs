@@ -1,6 +1,6 @@
 ---
-title: "Deployment and Testing"
-description: "Stabilization and Deployment Guides"
+title: "Deploying and Testing Xamarin.iOS Apps"
+description: "This document links to various guides that describe topics related to deploying and testing a Xamarin.iOS application. For example, app distribution, .ipa files, provisioning, wireless deployment, TestFlight, and debugging."
 ms.prod: xamarin
 ms.assetid: 2DBF3BF9-79E7-4E24-AF26-E34C972B0169
 ms.technology: xamarin-ios
@@ -9,13 +9,12 @@ ms.author: brumbaug
 ms.date: 03/19/2017
 ---
 
-# Deployment and Testing
+# Deploying and Testing Xamarin.iOS Apps
 
 This section covers topics used to test an application as well as how to
 distribute it. Topics here include things such as tools used for
 debugging, deployment to testers and how to publish an application to the App
 Store.
-
 
 ##  [App Distribution](~/ios/deploy-test/app-distribution/index.md)
 
@@ -52,7 +51,6 @@ applications both in the iOS simulator and on iOS devices. This article shows
 how to use the debugger as well as how to configure various options it
 supports.
 
-
 ##  [Touch.Unit](~/ios/deploy-test/touch.unit.md)
 
 This document describes how to create unit tests for your Xamarin.iOS projects.
@@ -60,15 +58,11 @@ Unit testing with Xamarin.iOS is done using the Touch.Unit framework that includ
 both an iOS test runner as well as a modified version of the [NUnitLite](http://www.nunitlite.com/) framework
 that provides a familiar set of APIs for writing unit tests.
 
-
-
 ##  [Using Instruments to Detect Native Leaks using MarkHeap](~/ios/deploy-test/using-instruments-to-detect-native-leaks-using-markheap.md)
 
 This article describe how to use Instruments on any iOS device
 and any Xamarin.iOS application. It also looks at how to profile applications
 in the simulator.
-
-
 
 ##  [Walkthrough - Using Apple's Instrument Tool](~/ios/deploy-test/walkthrough-apples-instrument.md)
 

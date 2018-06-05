@@ -1,6 +1,6 @@
 ---
-title: "Troubleshooting"
-description: "This article provides several troubleshooting tips for working with iOS 11 in Xamarin.iOS apps."
+title: "Troubleshooting iOS 11 Apps Built With Xamarin.iOS"
+description: "This article describes resources that can be used for troubleshooting when developing Xamarin.iOS applications. It discusses bug reporting, release notes, the Xamarin Releases blog, and support options."
 ms.prod: xamarin
 ms.assetid: A90493BF-5298-4A5D-A5D5-8A8FCD078FF7
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 08/31/2017
 ---
 
-# Troubleshooting
-
-_This article provides several troubleshooting tips for working with iOS 11 in Xamarin.iOS apps._
+# Troubleshooting iOS 11 Apps Built With Xamarin.iOS
 
 The following sections list some known issues that can occur when using iOS 11 with Xamarin.iOS and, where available, the solution to those issues:
 

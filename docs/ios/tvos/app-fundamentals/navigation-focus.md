@@ -1,5 +1,5 @@
 ---
-title: "Working with Navigation and Focus"
+title: "Working with tvOS Navigation and Focus in Xamarin"
 description: "This article covers the concept of Focus and how it is used to present and handle Navigation inside of a Xamarin.tvOS app."
 ms.prod: xamarin
 ms.assetid: DD72E95F-AE9B-47D2-B132-5FA5FBD8026E
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Working with Navigation and Focus
+# Working with tvOS Navigation and Focus in Xamarin
 
 _This article covers the concept of Focus and how it is used to present and handle Navigation inside of a Xamarin.tvOS app._
 

@@ -1,5 +1,6 @@
 ---
 title: "Part 2 - Architecture"
+description: "This document describes architecture patterns helpful for building cross-platform applications. It discusses typical application layers (data layer, data access layer, etc.) and common mobile software patterns (MVVM, MVC, etc.)"
 ms.prod: xamarin
 ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
 author: asb3993

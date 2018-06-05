@@ -1,6 +1,6 @@
 ---
-title: "EventKit"
-description: "This guide provides an overview on how to access and work with Calendars, CalendarEvents, and Reminders data stored in the Calendar Database, as exposed via the EventKit. It covers the major classes and their role in EventKit programming, as well as a number of common tasks associated with the EventKit framework."
+title: "EventKit in Xamarin.iOS"
+description: "This document describes EventKit and how to use it in Xamarin.iOS. It discusses calendars, calendar events, and reminders, looks at classes commonly used when programming with EventKit, and more."
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/19/2017
 ---
 
-# EventKit
-
-_This guide provides an overview on how to access and work with Calendars, CalendarEvents, and Reminders data stored in the Calendar Database, as exposed via the EventKit. It covers the major classes and their role in EventKit programming, as well as a number of common tasks associated with the EventKit framework._
+# EventKit in Xamarin.iOS
 
 iOS has two calendar-related applications built-in: the Calendar Application,
 and the Reminders Application. It’s straightforward enough to understand how the Calendar Application manages calendar data, but the Reminders Application is less obvious. Reminders can actually have dates associated with them in terms of when

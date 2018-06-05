@@ -1,6 +1,6 @@
 ---
 title: "Auto Layout with the Xamarin Designer for iOS"
-description: "This guide introduces iOS Auto Layout and the new constraints workflow available in the Xamarin Designer for iOS."
+description: "This guide introduces iOS Auto Layout and describes how to use the Xamarin Designer for iOS to create and edit layouts using constraints. It also discusses modifying constraints in code, animating constraint changes, and more."
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios
@@ -10,8 +10,6 @@ ms.date: 03/21/2017
 ---
 
 # Auto Layout with the Xamarin Designer for iOS
-
-_This guide introduces iOS Auto Layout and the new constraints workflow available in the Xamarin Designer for iOS._
 
 Auto Layout (also called “adaptive layout”) is a responsive design approach. Unlike the transitional layout system, where each element’s location is hard-coded to a point on the screen, Auto Layout is about *relationships* - the positions of elements relative to other elements on the design surface. At the heart of Auto Layout is the idea of constraints or rules that define the placement of an element or set of elements in the context of other elements on the screen. Because the elements are not tied to a particular position on the screen, constraints help create an adaptive layout that looks good on different screen sizes and device orientations.
 

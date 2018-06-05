@@ -1,6 +1,6 @@
 ---
-title: "Working with Stacked View"
-description: "This article covers designing and working with Stacked View inside of a Xamarin.tvOS app."
+title: "Working with tvOS Stacked Views in Xamarin"
+description: "This document describes how to worked with tvOS stacked views in an app built with Xamarin. It provides a high-level overview of stacked views and discusses Auto Layout, positioning and sizing a stacked view, common uses, integration with Storyboards, and more."
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
@@ -9,10 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Working with Stacked View
-
-_This article covers designing and working with Stacked View inside of a Xamarin.tvOS app._
-
+# Working with tvOS Stacked Views in Xamarin
 
 The Stack View control (`UIStackView`) leverages the power of Auto Layout and Size Classes to manage a stack of subviews, either horizontally or vertically, which dynamically responds to content changes and screen size of the Apple TV device.
 

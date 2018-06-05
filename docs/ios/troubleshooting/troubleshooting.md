@@ -1,5 +1,6 @@
 ---
-title: "Troubleshooting"
+title: "Troubleshooting Tips for Xamarin.iOS"
+description: "This document provides various tips useful for troubleshooting during the development of Xamarin.iOS applications. It describes specific error messages as well as other potential problems."
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
@@ -9,7 +10,7 @@ ms.author: brumbaug
 ms.date: 05/22/0201
 ---
 
-# Troubleshooting
+# Troubleshooting Tips for Xamarin.iOS 
 
 ## Xamarin.iOS cannot resolve System.ValueTuple
 

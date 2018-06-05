@@ -1,6 +1,6 @@
 ---
-title: "Siri Remote and Bluetooth Controllers"
-description: "This article covers supporting the new Siri Remote and Bluetooth game controllers in your Xamarin.tvOS apps."
+title: "Siri Remote and Bluetooth Controllers for tvOS in Xamarin"
+description: "This article describes how to work with the Siri Remote and Bluetooth game controllers in tvOS apps written with Xamarin."
 ms.prod: xamarin
 ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
@@ -9,10 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Siri Remote and Bluetooth Controllers
-
-_This article covers supporting the new Siri Remote and Bluetooth game controllers in your Xamarin.tvOS apps._
-
+# Siri Remote and Bluetooth Controllers for tvOS in Xamarin
 
 Users of your Xamarin.tvOS app will not be interacting with it's interface directly as with iOS where they tap images on the device's screen, but indirectly from across the room using the [Siri Remote](#The-Siri-Remote).
 
@@ -71,9 +68,6 @@ Additionally, menu button presses can be detected using a Gesture Recognizer wit
 
 > [!IMPORTANT]
 > You should **always** assign a function to the Play/Pause button on the remote. Having a non-functional button can make your app look broken to the end user. If you don't have a valid function for this button, assign the same function as the primary button (Touch Surface Click).
-
-
-
 
 <a name="Gestures-and-Storyboards" />
 

@@ -1,6 +1,6 @@
 ---
-title: "User Interface in iOS"
-description: "Covers working with the iOS User Interface in a Xamarin.iOS app."
+title: "User Interfaces in iOS"
+description: "This document links to guides that describe how to build user interfaces in Xamarin.iOS app. The linked guides cover the Appearance API, creating user interface objects, layout options, and more."
 ms.prod: xamarin
 ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 06/14/2017
 ---
 
-# User Interface in iOS
+# User Interfaces in iOS
 
 ## [Appearance API](introduction-to-the-appearance-api.md)
 

@@ -1,12 +1,13 @@
 ---
 title: "Xamarin.Essentials Open Browser"
-description: "The Browser class enables an application to open a web link in the optimized system preferred browser or the external browser."
+description: "The Browser class in Xamarin.Essentials enables an application to open a web link in the optimized system preferred browser or the external browser."
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ---
-# Xamarin.Essentials Browser
+
+# Xamarin.Essentials: Browser
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
 

@@ -1,6 +1,6 @@
 ---
-title: "Troubleshooting"
-description: "This article provides several troubleshooting tips for working with tvOS 10 in Xamarin.tvOS apps."
+title: "Troubleshooting tvOS 10 Apps Built With Xamarin"
+description: "This article provides several troubleshooting tips for working with tvOS 10 in Xamarin apps. It describes issues related to the App Store, binary compatibility, the CFNetwork HttpProtocol, CloudKit, Core Image, NSUserActivity, and UIKit."
 ms.prod: xamarin
 ms.assetid: EA5564BB-C415-49A2-B70C-3DBF5E0F3FAB
 ms.technology: xamarin-ios
@@ -9,17 +9,15 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Troubleshooting
+# Troubleshooting tvOS 10 Apps Built With Xamarin
 
-_This article provides several troubleshooting tips for working with tvOS 10 in Xamarin.tvOS apps._
-
-The following sections list some known issues that can occur when using tvOS 10 with Xamarin.tvOS and the solution to those issues:
+The following sections list some known issues that can occur when using tvOS 10 with Xamarin and the solution to those issues:
 
 - [App Store](#App-Store)
 - [Binary Compatibility](#Binary-Compatibility)
 - [CFNetwork HTTP Protocol](#CFNetwork-HTTP-Protocol)
 - [CloudKit](#CloudKit)
-- [CoreImage](#CoreImage)
+- [Core Image](#CoreImage)
 - [NSUserActivity](#NSUserActivity)
 - [UIKit](#UIKit)
 
@@ -58,7 +56,7 @@ Long running operations will return a _"You don't have permission to save the fi
 
 <a name="CoreImage" />
 
-## CoreImage
+## Core Image
 
 The `CIImageProcessor` API now supports an arbitrary input image count. `CIImageProcessor` API that was included in tvOS 10 beta 1 will be removed.
 
@@ -80,10 +78,6 @@ Known Issues:
  - tvOS 10 requires the developer to call `base.AwakeFromNib` when subclassing `UIViewController` and overriding the `AwakeFromNib` method.
  - Apps with custom `UIView` subclasses that override `LayoutSubviews` and dirty the layout before calling `base.LayoutSubviews` may trigger an infinite layout loop in tvOS 10.
  - Direction-specific or flippable images assets are no flipping when assigned to `UIButton` objects.
-
-
-
-
 
 ## Related Links
 

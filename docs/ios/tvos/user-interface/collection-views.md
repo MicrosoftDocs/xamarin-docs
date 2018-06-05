@@ -1,6 +1,6 @@
 ---
-title: "Working with Collection Views"
-description: "This article covers designing and working with Collection Views inside of a Xamarin.tvOS app."
+title: "Working with tvOS Collection Views in Xamarin"
+description: "This document describes how to work with collection views in a tvOS app built with Xamarin. It covers collection view layouts, creating cells and supplementary views, responding to user events, and more."
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Working with Collection Views
-
-_This article covers designing and working with Collection Views inside of a Xamarin.tvOS app._
+# Working with tvOS Collection Views in Xamarin
 
 Collection Views allow for a group of content to be displayed using arbitrary layouts. Using built-in support, they allow for the easy creation grid-like or linear layouts, while also supporting custom layouts.
 

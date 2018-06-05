@@ -1,6 +1,6 @@
 ---
-title: "Advanced User Notifications"
-description: "This article takes a deeper look at the new User Notifications framework and how to take full advantage of it in a Xamarin.iOS app."
+title: "Advanced User Notifications in Xamarin.iOS"
+description: "This article takes a deeper look at the User Notifications framework, introduced in iOS 10. It discusses user notifications, the user notification interface, media attachments, custom user interfaces, and more."
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 05/03/2018
 ---
 
-# Advanced User Notifications
-
-_This article takes a deeper look at the new User Notifications framework and how to take full advantage of it in a Xamarin.iOS app._
+# Advanced User Notifications in Xamarin.iOS
 
 New to iOS 10, the User Notification framework allows for the delivery and handling of local and remote notifications. Using this framework, an app or app extension can schedule the delivery of local notifications by specifying a set of conditions such as location or time of day.
 

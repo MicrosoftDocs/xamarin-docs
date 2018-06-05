@@ -1,5 +1,6 @@
 ---
-title: "Touch in iOS"
+title: "Touch Events and Gestures in Xamarin.iOS"
+description: "This document describes how to work with touch events, multi-touch, gestures, multiple gestures, and custom gestures in Xamarin.iOS applications."
 ms.prod: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# Touch in iOS
+# Touch Events and Gestures in Xamarin.iOS
 
 It is important to understand the touch events and touch APIs in an iOS application, as they are central to all physical interactions with the device. All touch interactions involve a `UITouch` object. In this article we will learn how to use the `UITouch` class and its APIs to support touch. Later, we will expand on our knowledge to learn how to support gestures.
 

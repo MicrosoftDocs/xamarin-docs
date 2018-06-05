@@ -1,6 +1,6 @@
 ---
-title: "Request App Review"
-description: "This article covers the RequestReview method that Apple added to iOS 10 and how to implement it in Xamarin.iOS."
+title: "Request App Review in Xamarin.iOS"
+description: "This article describes the RequestReview method that Apple added to iOS 10, and discusses how to implement it in Xamarin.iOS."
 ms.prod: xamarin
 ms.assetid: 6408e707-b7dc-4557-b931-16a4d79b8930
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/29/2017
 ---
 
-# Request App Review
+# Request App Review in Xamarin.iOS
 
 _This article covers the RequestReview method that Apple added to iOS 10 and how to implement it in Xamarin.iOS._
 

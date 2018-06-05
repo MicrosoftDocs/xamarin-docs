@@ -1,5 +1,5 @@
 ---
-title: "Multitasking for iPad"
+title: "Multitasking for iPad in Xamarin.iOS"
 description: "iOS 9 supports two apps running at the same time, using slide over or split view. It also supports video playing Picture-In-Picture."
 ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 03/20/2017
 ---
 
-# Multitasking for iPad
+# Multitasking for iPad in Xamarin.iOS
 
 _iOS 9 supports two apps running at the same time, using slide over or split view. It also supports video playing Picture-In-Picture._
 

@@ -1,6 +1,6 @@
 ---
-title: "Installation"
-description: "This tutorial illustrates the installation paths for Xamarin.iOS."
+title: "Installing and Configuring Xamarin.iOS on a Mac"
+description: "This guide links to instructions that describe how to install and configure Xamarin.iOS on a Mac by setting up Visual Studio for Mac."
 ms.prod: xamarin
 ms.assetid: 625A0933-47A5-6184-3AD5-7E1C8464AEBD
 ms.technology: xamarin-ios
@@ -9,12 +9,10 @@ ms.author: brumbaug
 ms.date: 03/19/2017
 ---
 
-# Installing and Configuring Xamarin.iOS on Mac
+# Installing and Configuring Xamarin.iOS on a Mac
 
 > [!NOTE]
 > This content has moved to the Visual Studio for Mac install guides on [docs.microsoft.com](https://docs.microsoft.com/visualstudio/mac/installation).
-
-
 
 ## Related Links
 

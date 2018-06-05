@@ -1,6 +1,6 @@
 ---
-title: "F#"
-description: "F# is a strongly-typed functional programming language designed to run on .NET"
+title: "Using F# With Xamarin"
+description: "F# is a strongly-typed functional programming language designed to run on .NET. This document provides a high-level overview of its features and links to samples built with F#."
 ms.prod: xamarin
 ms.assetid: 506410BD-F89C-4FEB-8915-760FE250A206
 author: asb3993
@@ -8,7 +8,7 @@ ms.author: amburns
 ms.date: 03/24/2017
 ---
 
-# F&#35;
+# Using F# With Xamarin
 
 F# is an open-source, cross-platform, functional-first programming
 language for .NET.

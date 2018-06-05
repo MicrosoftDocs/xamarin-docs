@@ -1,13 +1,14 @@
 ---
-title: "SkiaSharp Platform Specific Details"
-description: "Details on how to bring your SKSurface contents into your native application."
+title: "SkiaSharp Platform-Specific Notes"
+description: "This document describes platform-specific details relevant to SkiaSharp. It provides sample code for iOS, Android, macOS, Windows, and Xamarin.Forms."
 ms.prod: xamarin
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
 ---
-# Platform Specific Integration
+
+# SkiaSharp Platform-Specific Notes
 
 The examples below allocate the image buffers manually, this is done
 to illustrate a common platform pattern which is to draw on a existing

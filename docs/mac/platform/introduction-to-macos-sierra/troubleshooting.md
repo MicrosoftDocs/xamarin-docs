@@ -1,6 +1,6 @@
 ---
-title: "Troubleshooting"
-description: "This article provides several troubleshooting tips for working with macOS Sierra in Xamarin.Mac apps."
+title: "Xamarin.Mac - macOS Sierra Troubleshooting"
+description: "This document provides several troubleshooting tips for working with macOS Sierra in Xamarin.Mac apps. Tips relate to the Mac App Store, Apple Pay, binary compatibility, CFNetwork, CloudKit, and more."
 ms.prod: xamarin
 ms.assetid: 323DD5EE-87CE-48E4-B234-1CF61B45A019
 ms.technology: xamarin-mac
@@ -9,18 +9,18 @@ ms.author: brumbaug
 ms.date: 09/22/2016
 ---
 
-# Troubleshooting
+# Xamarin.Mac - macOS Sierra Troubleshooting
 
 _This article provides several troubleshooting tips for working with macOS Sierra in Xamarin.Mac apps._
 
-he following sections list some known issues that can occur when using macOS Sierra with Xamarin.mac and the solution to those issues:
+The following sections list some known issues that can occur when using macOS Sierra with Xamarin.mac and the solution to those issues:
 
 - [App Store](#App-Store)
 - [Apple Pay](#Apple-Pay)
 - [Binary Compatibility](#Binary-Compatibility)
 - [CFNetwork HTTP Protocol](#CFNetwork-HTTP-Protocol)
 - [CloudKit](#CloudKit)
-- [CoreImage](#CoreImage)
+- [Core Image](#CoreImage)
 - [Notifications](#Notifications)
 - [NSUserActivity](#NSUserActivity)
 - [Safari](#Safari)
@@ -65,7 +65,7 @@ Long running operations will return a _"You don't have permission to save the fi
 
 <a name="CoreImage" />
 
-## CoreImage
+## Core Image
 
 The `CIImageProcessor` API now supports an arbitrary input image count. `CIImageProcessor` API that was included in macOS Sierra beta 1 will be removed.
 

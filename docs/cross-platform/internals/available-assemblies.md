@@ -1,6 +1,6 @@
 ---
 title: "Available Assemblies"
-description: "Available assemblies in Xamarin.iOS, Xamarin.Android, and Xamarin.Mac"
+description: "This document lists the assemblies available for use in Xamarin.iOS, Xamarin.Android, and Xamarin.Mac. It also links to documentation about .NET Standard libraries and Portable Class Libraries."
 ms.prod: xamarin
 ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: asb3993
@@ -9,8 +9,6 @@ ms.date: 03/13/2018
 ---
 
 # Available Assemblies
-
-_Available assemblies in Xamarin.iOS, Xamarin.Android, and Xamarin.Mac_
 
 Xamarin.iOS, Xamarin.Android, and Xamarin.Mac all ship with over a dozen assemblies. Just as Silverlight is an extended subset of the desktop .NET assemblies, Xamarin platforms is also an extended subset of several Silverlight and desktop .NET assemblies.
 

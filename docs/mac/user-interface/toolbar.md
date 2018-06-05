@@ -1,5 +1,5 @@
 ---
-title: "Toolbars"
+title: "Toolbars in Xamarin.Mac"
 description: "This article describes working with toolbars in a Xamarin.Mac application. It covers creating and maintaining toolbars in Xcode and Interface Builder, exposing them to code, and working with them programmatically."
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Toolbars
+# Toolbars in Xamarin.Mac
 
 _This article describes working with toolbars in a Xamarin.Mac application. It covers creating and maintaining toolbars in Xcode and Interface Builder, exposing them to code, and working with them programmatically._
 

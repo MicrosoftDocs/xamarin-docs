@@ -1,6 +1,6 @@
 ---
-title: "Touch"
-description: "Touch screens on many of today’s devices allow users to quickly and efficiently interact with devices in a natural and intuitive way. This interaction is not limited just to simple touch detection – it is possible to use gestures as well. For example, the pinch-to-zoom gesture is a very common example of this – by pinching a part of the screen with two fingers the user can zoom in or out. This guide examines touch and gestures in iOS."
+title: "Handling Touch in Xamarin.iOS Apps"
+description: "This document links to guides that describe how to work with touch, multi-touch, gestures, and 3D Touch in a Xamarin.iOS app."
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
@@ -9,10 +9,7 @@ ms.author: brumbaug
 ms.date: 01/23/2017
 ---
 
-# Touch
-
-_Touch screens on many of today’s devices allow users to quickly and efficiently interact with devices in a natural and intuitive way. This interaction is not limited just to simple touch detection – it is possible to use gestures as well. For example, the pinch-to-zoom gesture is a very common example of this – by pinching a part of the screen with two fingers the user can zoom in or out. This guide examines touch and gestures in iOS._
-
+# Handling Touch in Xamarin.iOS Apps
 
 Like other mobile platforms, iOS has a number of ways to handle touch. It can support multi-touch — many points of contact on the screen — and complex gestures. This guide introduces some of the concepts, as well as the particularities of implementing touch and gestures on iOS.
 
@@ -34,8 +31,6 @@ This guide serves as introduction to Touch in iOS. For more information on using
 
 * [3D Touch](~/ios/platform/3d-touch.md)
 * [Providing Haptic Feedback](~/ios/user-interface/ios-ui/haptic-feedback.md)
-
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough: Using a JSON Element to create a User Interface"
+title: "Using JSON to create a User Interface in Xamarin.iOS"
 description: "MonoTouch.Dialog (MT.D) includes support for dynamic UI generation via JSON data. In this tutorial, we’ll walk through how to use a JSONElement to create a user interface from JSON that is either included with an application, or loaded from a remote Url."
 ms.prod: xamarin
 ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
@@ -8,10 +8,9 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# Walkthrough: Using a JSON Element to create a User Interface
+# Using JSON to create a User Interface in Xamarin.iOS
 
 _MonoTouch.Dialog (MT.D) includes support for dynamic UI generation via JSON data. In this tutorial, we’ll walk through how to use a JSONElement to create a user interface from JSON that is either included with an application, or loaded from a remote Url._
-
 
 MT.D supports creating user interfaces declared in JSON. When elements are
 declared using JSON, MT.D will create the associated elements for you

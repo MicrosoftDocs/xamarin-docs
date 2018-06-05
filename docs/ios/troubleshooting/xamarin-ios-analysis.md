@@ -1,5 +1,6 @@
 ---
 title: "Xamarin.iOS analysis rules"
+description: "This document describes a set of analysis rules that check Xamarin.iOS project settings to help determine if more/better-optimized settings are available."
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C29B69F5-08E4-4DCC-831E-7FD692AB0886

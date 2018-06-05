@@ -1,6 +1,6 @@
 ---
 title: "Xamarin Inspector"
-description: "Visualize and debug your live app"
+description: "This document links to guides that describe how to install and use the Xamarin Inspector to explore and debug applications."
 ms.prod: xamarin
 ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
 author: topgenorth
@@ -9,7 +9,6 @@ ms.date: 03/29/2017
 ---
 
 # Xamarin Inspector
-
 
 Xamarin Workbooks & Inspector bring an interactive C# console with tools to
 users. The Inspector integrates with the app debugging workflow of your IDE,

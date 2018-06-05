@@ -1,6 +1,6 @@
 ---
-title: "Case Study: Tasky"
-description: "This document describes how the principles of Building Cross-Platform Applications have been applied in the Tasky Portable sample application. It touches on mobile application design, writing common code for re-use and implementing platform-specific projects that target the iOS, Android and Windows Phone platforms."
+title: "Cross-Platform App Case Study: Tasky"
+description: "This document describes how the Tasky Portable sample application was designed and built as a cross-platform mobile application. It discusses the app's requirements, interface, data model, core functionality, implementation, and more."
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: asb3993
@@ -8,9 +8,7 @@ ms.author: amburns
 ms.date: 03/23/2017
 ---
 
-# Case Study: Tasky
-
-_This document describes how the principles of Building Cross-Platform Applications have been applied in the Tasky Portable sample application. It touches on mobile application design, writing common code for re-use and implementing platform-specific projects that target the iOS, Android and Windows Phone platforms._
+# Cross-Platform App Case Study: Tasky
 
 *Tasky* *Portable* is a simple to-do list application. This document
 discusses how it was designed and built, following the guidance of the [Building Cross-Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)

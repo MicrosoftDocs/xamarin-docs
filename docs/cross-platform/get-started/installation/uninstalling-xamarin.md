@@ -1,6 +1,6 @@
 ---
 title: "Uninstalling Xamarin"
-description: "Uninstalling Xamarin products from a computer"
+description: "This document describes how to uninstall Xamarin on both Mac and Windows. It provides specific instructions about uninstalling Mono, Xamarin.Android, Xamarin.iOS, and other tools."
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993

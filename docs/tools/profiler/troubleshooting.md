@@ -1,6 +1,6 @@
 ---
 title: "Xamarin Profiler Troubleshooting"
-description: "Troubleshooting the Xamarin Profiler"
+description: "This document provides troubleshooting information related to the Xamarin Profiler. It describes issues related to logging and diagnostics, the IDE, and other topics."
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: topgenorth
@@ -9,8 +9,6 @@ ms.date: 10/27/2017
 ---
 
 # Xamarin Profiler Troubleshooting
-
-_Troubleshooting the Xamarin Profiler_
 
 ## Logging and Diagnostics
 
@@ -21,6 +19,7 @@ The Xamarin team can help track issues if you provide us with information, inclu
 - The **.mlpd** being generated for the profiling session (see below).
 
 ### Getting Log Outputs
+
 On Mac logs are saved to `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`.
 
 On Windows these are saved to `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` Please include the latest log whenever you submit an issue.
@@ -45,7 +44,6 @@ The **.mlpd** for a current session can also be saved by choosing **File > Save 
 
 ![](troubleshooting-images/image17-vs.png "Saving .mlpd file in Visual Studio")
 
-
 It is important to note that **.mlpd** contain a lot of information, and the file size will be large.
 
 ## Troubleshooting
@@ -66,7 +64,6 @@ Check the following settings to resolve this:
 - Ensure that you are logged in and properly authenticated.
 - [Visual Studio] You must be using [Visual Studio Enterprise](https://www.visualstudio.com/vs/enterprise/) and have a valid Enterprise license.
 
-
 #### I get an error when I try to launch the profiler
 
 If you run into this error box when using the profiler in Visual Studio :
@@ -79,14 +76,11 @@ It is normally due to being unable to launch to the Simulator / Emulator. Try an
 
 If you have a thread that you wanted to specifically watch, it would be ideal to name the thread at the very beginning of its creation so that get get `ThreadName` instead of `0x0`. For example to set the thread name as UI, you could use the following code:
 
-
 ```csharp
 RunOnUiThread (() => {
   Thread.CurrentThread.Name  = "UI";
 });
 ```
-
-
 
 ## Related Links
 

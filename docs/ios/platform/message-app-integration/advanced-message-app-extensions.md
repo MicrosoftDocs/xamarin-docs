@@ -1,5 +1,5 @@
 ---
-title: "Advanced Message App Extensions"
+title: "Advanced Message App Extensions in Xamarin.iOS"
 description: "This article shows advanced techniques for working with Message App Extensions in a Xamarin.iOS solution that integrates with the Messages app and presents new functionality to the user."
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Advanced Message App Extensions
+# Advanced Message App Extensions in Xamarin.iOS
 
 _This article shows advanced techniques for working with Message App Extensions in a Xamarin.iOS solution that integrates with the Messages app and presents new functionality to the user._
 

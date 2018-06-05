@@ -1,6 +1,6 @@
 ---
-title: "Events, Protocols and Delegates"
-description: "This article presents the key iOS technologies used to receive callbacks and to populate user interface controls with data. These technologies are events, protocols, and delegates. This article explains what each of these is, and how each is used from C#. It demonstrates how Xamarin.iOS uses iOS controls to expose familiar .NET events, as well as how Xamarin.iOS provides support for Objective-C concepts such as protocols and delegates (Objective-C delegates should not be confused with C# delegates). This article also provides examples that show how protocols are used – both as the basis for Objective-C delegates and in non-delegate scenarios."
+title: "Events, Protocols and Delegates in Xamarin.iOS"
+description: "This document describes how to work with events, protocols, and delegates in Xamarin.iOS. These fundamental concepts are ubiquitous in Xamarin.iOS development."
 ms.prod: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# Events, Protocols and Delegates
-
-_This article presents the key iOS technologies used to receive callbacks and to populate user interface controls with data. These technologies are events, protocols, and delegates. This article explains what each of these is, and how each is used from C#. It demonstrates how Xamarin.iOS uses iOS controls to expose familiar .NET events, as well as how Xamarin.iOS provides support for Objective-C concepts such as protocols and delegates (Objective-C delegates should not be confused with C# delegates). This article also provides examples that show how protocols are used – both as the basis for Objective-C delegates and in non-delegate scenarios._
+# Events, Protocols and Delegates in Xamarin.iOS
 
 Xamarin.iOS uses controls to expose events for most user interactions.
 Xamarin.iOS applications consume these events in much the same way as do
@@ -36,7 +34,6 @@ foundation for handling callback scenarios in Xamarin.iOS, including:
 -  **Protocols** – Learning what protocols are and how they are used, and creating an example that provides data for a map annotation.
 -  **Delegates** – Learning about Objective-C delegates by extending the map example to handle user interaction that includes an annotation, then learning the difference between strong and weak delegates and when to use each of these.
 
-
 To illustrate protocols and delegates, we’ll build a simple map application
 that adds an annotation to a map as shown here:
 
@@ -46,8 +43,7 @@ that adds an annotation to a map as shown here:
 Before tackling this app, let’s get started by looking at .NET events under
 the UIKit.
 
- <a name=".NET_Events_with_UIKit" />
-
+<a name=".NET_Events_with_UIKit" />
 
 ## .NET Events with UIKit
 
@@ -60,7 +56,6 @@ aButton.TouchUpInside += (o,s) => {
     Console.WriteLine("button touched");
 };
 ```
-
 You could also implement this with a C# 2.0-style anonymous method like this
 one:
 

@@ -1,5 +1,6 @@
 ---
-title: ".NET Standard"
+title: "Using .NET Standard Libraries to Share Code"
+description: "This document describes how to use .NET Standard Libraries to share code. It discusses creating a .NET Standard library, editing its settings, and using it in an application."
 ms.prod: xamarin
 ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: asb3993
@@ -7,9 +8,9 @@ ms.author: amburns
 ms.date: 04/12/2017
 ---
 
-# .NET Standard
+# Using .NET Standard Libraries to Share Code
 
-## Using .NET Standard Library Projects to share code
+## .NET Standard
 
 The .NET Standard Library is a formal specification of .NET APIs that are intended to be available on all .NET runtimes. The motivation behind the Standard Library is establishing greater uniformity in the .NET ecosystem.
 [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) continues to establish uniformity for .NET runtime behavior, but there is no similar spec for the .NET Base Class Libraries (BCL) for .NET library implementations.

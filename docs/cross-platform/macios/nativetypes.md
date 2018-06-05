@@ -1,5 +1,6 @@
 ---
-title: "Native Types"
+title: "Native Types for iOS and macOS"
+description: "This document describes how Xamarin's Unified API maps .NET types to 32-bit and 64-bit native types, as necessary based on compilation target architecture."
 ms.prod: xamarin
 ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
 author: asb3993
@@ -7,31 +8,26 @@ ms.author: amburns
 ms.date: 01/25/2016
 ---
 
-# Native Types
+# Native Types for iOS and macOS
 
-At the core of the difference, both Mac and iOS APIs use an
-	architecture-specific data types that are always 32 bit on 32
-	bit platforms and 64 bit on 64 bit platforms.
+Mac and iOS APIs use architecture-specific data types that are always
+32 bits on 32-bit platforms and 64 bits on 64-bit platforms.
 
-For example, Objective-C maps the `NSInteger`
-	data type to `int32_t` on 32 bit systems and
-	to `int64_t` on 64 bit systems.
+For example, Objective-C maps the `NSInteger` data type to `int32_t` on
+32-bit systems and to `int64_t` on 64 bit systems.
 
-To match this behavior, on our unified API, we are
-	replacing the previous uses of `int` (which in .NET
-	is defined as always being `System.Int32`) to a new
-	data type: `System.nint`.  You can think of the "n"
-	as meaning "native", so the native integer type of the
-	platform.
+To match this behavior, on our unified API, we are replacing the previous
+uses of `int` (which in .NET is defined as always being `System.Int32`)
+to a new data type: `System.nint`. You can think of the "n" as meaning
+"native", so the native integer type of the platform.
 
-With these new data types, the same source code is compiled
-	for 32 bits, 32 bit and 64 bits or 64 bits, depending on your
-	compilation flags.
+With these new data types, the same source code is compiled for 32-bit and
+64-bit architectures, depending on your compilation flags.
 
 ## New Data Types
 
 The following table shows the changes in our data types to
-	match this new 32/64 bit world:
+	match this new 32/64-bit world:
 
 |Native Type|32-bit backing type|64-bit backing type|
 |--- |--- |--- |
@@ -46,7 +42,7 @@ We chose those names to allow your C# code to look more or
 
 The design of the new data types is intended to allow
 	a single C# source file to naturally use 32 or 64 bit storage
-	depending on the host platorm and the compilation settings.
+	depending on the host platform and the compilation settings.
 
 This required us to design a set of implicit and explicit
 	conversions to and from the platform-specific data types to

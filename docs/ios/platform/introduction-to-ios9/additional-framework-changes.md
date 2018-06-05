@@ -1,6 +1,6 @@
 ---
 title: "Additional iOS 9 Frameworks Changes"
-description: "This article covers additional, minor changes or enhancements to existing frameworks for iOS 9."
+description: "This document describes additional framework changes introduced in iOS 9. It discusses AVFoundation, AVKit, and CloudKit."
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
@@ -16,9 +16,9 @@ _This article covers additional, minor changes or enhancements to existing frame
 
 In addition to the major changes to iOS, Apple has made modifications and improvements to several existing frameworks in iOS 9.
 
-## AV Foundation Framework Additions
+## AVFoundation Framework Additions
 
-In the AV Foundation framework, the [AVSpeechSynthesisVoice](https://developer.xamarin.com/api/type/AVFoundation.AVSpeechSynthesisVoice/) class now allows you to specify a voice by identifier in addition to language.
+In the AVFoundation framework, the [AVSpeechSynthesisVoice](https://developer.xamarin.com/api/type/AVFoundation.AVSpeechSynthesisVoice/) class now allows you to specify a voice by identifier in addition to language.
 
 For example, the following code gets a list of all available voices:
 

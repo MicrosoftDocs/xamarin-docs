@@ -1,5 +1,5 @@
 ---
-title: "Menus"
+title: "Menus in Xamarin.Mac"
 description: "This article covers working with menus in a Xamarin.Mac application. It describes creating and maintaining menus and menu items in Xcode and Interface Builder and working with them programmatically."
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Menus
+# Menus in Xamarin.Mac
 
 _This article covers working with menus in a Xamarin.Mac application. It describes creating and maintaining menus and menu items in Xcode and Interface Builder and working with them programmatically._
 

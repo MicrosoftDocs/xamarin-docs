@@ -1,5 +1,5 @@
 ---
-title: "Windows"
+title: "Windows in Xamarin.Mac"
 description: "This article covers working with windows and panels in a Xamarin.Mac application. It describes creating windows and panels in Xcode and Interface Builder, loading them from storyboards and .xib files, and working with them programmatically."
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Windows
+# Windows in Xamarin.Mac
 
 _This article covers working with windows and panels in a Xamarin.Mac application. It describes creating windows and panels in Xcode and Interface Builder, loading them from storyboards and .xib files, and working with them programmatically._
 

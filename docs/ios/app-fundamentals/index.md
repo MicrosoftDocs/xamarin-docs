@@ -1,6 +1,6 @@
 ---
-title: "Application Fundamentals"
-description: "Core Application Concepts"
+title: "Xamarin.iOS Application Fundamentals"
+description: "This document links to various guides that describe concepts foundational to Xamarin.iOS development, such as app transport security, backgrounding, events, and threading."
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 06/21/2017
 ---
 
-# Application Fundamentals
+# Xamarin.iOS Application Fundamentals
 
 This section provides a guide on some of the more common things tasks or
 concepts that developers need to be aware of when developing Xamarin.iOS (formerly MonoTouch) applications.

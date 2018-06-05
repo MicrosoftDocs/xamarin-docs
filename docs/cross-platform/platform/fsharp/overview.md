@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with F#"
-description: "F# is a strongly-typed functional programming language designed to run on .NET"
+description: "This document describes how to learn F# and use it to build Xamarin applications with Visual Studio 2017 and Visual Studio for Mac."
 ms.prod: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: asb3993

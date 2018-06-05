@@ -1,5 +1,6 @@
 ---
 title: "Creating New Platform-Specific Library Projects for NuGet"
+description: "This document describes how to create a single NuGet package that contains platform-specific code for multiple platforms."
 ms.prod: xamarin
 ms.assetid: D8BC4906-805F-4AFB-8D1A-88B7BF87E17F
 author: asb3993
@@ -17,7 +18,7 @@ to both.
 
 Multiple assemblies are created and built into a single NuGet package. NuGet standards
 ensure that the package can be added to all supported project types, such as
-Xamarin iOS and Android projects.
+Xamarin.iOS and Android projects.
 
 ## Steps to Create a Cross-Platform Library NuGet
 

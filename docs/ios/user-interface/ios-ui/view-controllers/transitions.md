@@ -1,5 +1,6 @@
 ---
-title: "View Controller Transitions"
+title: "View Controller Transitions in Xamarin.iOS"
+description: "This document describes how to customize animated transitions between view controllers in Xamarin.iOS applications."
 ms.prod: xamarin
 ms.assetid: CB3AC8E2-8A47-4839-AFA5-AE33047BB26C
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 06/14/2017
 ---
 
-# View Controller Transitions
+# View Controller Transitions in Xamarin.iOS
 
 UIKit adds support for customizing the animated transition that occurs when presenting view controllers. This support is included with built-in controllers, as well as any custom controllers that inherit directly from `UIViewController`. Additionally, `UICollectionViewController` takes advantage of controller transition customization to leverage the animated transitions in collection view layouts.
 

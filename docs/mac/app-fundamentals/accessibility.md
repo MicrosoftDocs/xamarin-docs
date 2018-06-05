@@ -1,6 +1,6 @@
 ---
 title: "Accessibility on macOS"
-description: "This guide describes features for building an accessible Xamarin.Mac application."
+description: "This document describes how to work with macOS accessibility features in a Xamarin.Mac app. It discusses describing UI elements in storyboards and code, custom controls, and testing accessibility."
 ms.prod: xamarin
 ms.assetid: D7F4892B-501A-4271-A7E0-BDD1586B63AD
 ms.technology: xamarin-mac

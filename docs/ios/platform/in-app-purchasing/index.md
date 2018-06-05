@@ -1,6 +1,6 @@
 ---
-title: "In-App Purchasing"
-description: "iOS applications can sell digital products and services using the Store Kit APIs. Products are created and managed in the iTunes Connect portal. Apple manages the transaction processing and approves all products before they can be sold, and charges a fee for each transaction (currently 30%). Apple requires that you use the in-app purchasing for any digital sales in your app, but you cannot use it for sales of physical goods or non-digital services. Apps that offer alternate payment options for digital products and services are likely to be rejected. This document explains how to configure your application to use Store Kit and provides Xamarin.iOS examples of the most common in-app purchasing scenarios."
+title: "In-App Purchasing in Xamarin.iOS"
+description: "This document describes how to sell digital products and services using the StoreKit APIs. It links to guides that discuss configuration, consumable products, non-consumable products, transactions, subscriptions, and more."
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
@@ -8,10 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# In-App Purchasing
-
-_iOS applications can sell digital products and services using the Store Kit APIs. Products are created and managed in the iTunes Connect portal. Apple manages the transaction processing and approves all products before they can be sold, and charges a fee for each transaction (currently 30%). Apple requires that you use the in-app purchasing for any digital sales in your app, but you cannot use it for sales of physical goods or non-digital services. Apps that offer alternate payment options for digital products and services are likely to be rejected. This document explains how to configure your application to use Store Kit and provides Xamarin.iOS examples of the most common in-app purchasing scenarios._
-
+# In-App Purchasing in Xamarin.iOS
 
 iOS applications can sell digital products or services using StoreKit – a
 set of APIs provided by iOS that communicate with Apple’s servers to conduct
@@ -31,10 +28,8 @@ number of steps:
 -  **Building the user interface and the products themselves** – The products must be implemented, including mechanisms to track each purchase and backup/restore them if appropriate.
 -  **Monitoring sales and receiving funds** – Use information provided by iTunes Connect to monitor sales trends and track your income.
 
-
 This document explains how to complete all these steps to provide
 in-app purchases using Xamarin.iOS.
-
 
 ## Requirements
 
@@ -44,7 +39,7 @@ To support In-App Purchasing you must use Xamarin.iOS 5.0 or newer with Xcode 7 
 
  * [In-App Purchase Basics and Configuration](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
- * [Store Kit Overview and Retreiving Product Information](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+ * [StoreKit Overview and Retrieving Product Information](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
  * [Purchasing Consumable Products](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
@@ -53,7 +48,6 @@ To support In-App Purchasing you must use Xamarin.iOS 5.0 or newer with Xcode 7 
  * [Transactions and Verification](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
 
  * [Subscriptions and Reporting](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
-
 
 ## Summary
 

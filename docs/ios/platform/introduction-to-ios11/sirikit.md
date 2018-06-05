@@ -1,5 +1,6 @@
 ---
-title: "SiriKit"
+title: "SiriKit Updates in iOS 11"
+description: "This document describes how to work with SiriKit in iOS 11. In particular, it examines how to work with tasks and notes and how to provide alternative names for an application."
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 09/07/2017
 ---
 
-# SiriKit
+# SiriKit Updates in iOS 11
 
 SiriKit was introduced in iOS 10, with a number of service domains
 (including workouts, ride booking, and making calls). Refer to the

@@ -1,5 +1,6 @@
 ---
-title: "Application Lifecycle Demo"
+title: "Application Lifecycle Demo for Xamarin.iOS"
+description: "This document examines various lifecycle events handled by the app delegate in an iOS application, demonstrating when and how these events are handled."
 ms.prod: xamarin
 ms.assetid: 5C8AACA6-49F8-4C6D-99C3-5F443C01B230
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# Application Lifecycle Demo
+# Application Lifecycle Demo for Xamarin.iOS
 
 In this section, we are going to examine an application that demonstrates the four Application States, and the role of the `AppDelegate` methods in notifying the application of when states get changed. The application will print updates to the console whenever the app changes state:
 

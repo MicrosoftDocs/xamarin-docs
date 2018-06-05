@@ -1,5 +1,5 @@
 ---
-title: "Provisioning Profiles"
+title: "Provisioning Profiles for Xamarin.Mac apps"
 description: "This guide walks through creating the necessary Provisioning Profiles that will be required to publish a Xamarin.Mac app."
 ms.prod: xamarin
 ms.assetid: bdff6c32-f7e3-4a97-a093-dbda48be8227
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 04/12/2017
 ---
 
-# Provisioning Profiles
+# Provisioning Profiles for Xamarin.Mac apps
 
 Provisioning profiles allow a developer to incorporate several macOS (formerly known as Mac OS X) specific features (such as iCloud and Push Notifications) into their Xamarin.Mac apps. They must create, download and install a Mac Provisioning Profile for each application they are developing that use these features.
 

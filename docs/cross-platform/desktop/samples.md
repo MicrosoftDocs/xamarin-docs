@@ -1,11 +1,12 @@
 ---
 ms.assetid: 77F12838-DBB1-48AC-ACF8-B934998B6EC8
-title: Cross-platform desktop samples
-description: Desktop apps ported to cross-platform mobile apps.
+title: "Cross-platform desktop samples"
+description: "This document links to various sample applications that have been ported to run as cross-platform apps with Xamarin."
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
 ---
+
 # Cross-platform desktop samples
 
 ## WPF to Cross-Platform with Xamarin.Forms

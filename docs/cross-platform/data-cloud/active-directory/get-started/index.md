@@ -1,6 +1,6 @@
 ---
 title: "Azure Active Directory"
-description: "Register an app to use Azure Active Directory"
+description: "This document describes the steps that must be followed to allow a mobile app to authenticate with Azure Active Directory."
 ms.prod: xamarin
 ms.assetid: 70B3C2AB-CB4D-420C-9CFA-20CCFA0E3C78
 author: asb3993

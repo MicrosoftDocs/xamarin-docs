@@ -1,6 +1,6 @@
 ---
-title: "Hello, iOS Quickstart"
-description: "This two-part guide, describes how to build a basic Xamarin.iOS application using Visual Studio for Mac or Visual Studio and develop an understanding of the fundamentals of iOS application development with Xamarin. It will introduce the tools, concepts, and steps required to build and deploy a Xamarin.iOS application."
+title: "Hello, iOS – Quickstart"
+description: "This walkthrough demonstrates how to build a simple Xamarin.iOS application called Hello, iOS. In doing so, it introduces the fundamental tools and concepts that must be understood to build Xamarin.iOS applications."
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 05/02/2017
 ---
 
-# Hello.iOS Quickstart
+# Hello, iOS – Quickstart
 
 This guide describes how to create an application that translates an alphanumeric phone number entered by the user into a numeric phone number, and then calls that number. The final application looks like this:
 

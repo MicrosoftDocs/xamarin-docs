@@ -1,5 +1,6 @@
 ---
 title: "Part 5 - Practical Code Sharing Strategies"
+description: "This document discusses practical code sharing strategies for scenarios such as databases, file access, network operations, and asynchronous code."
 ms.prod: xamarin
 ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: asb3993

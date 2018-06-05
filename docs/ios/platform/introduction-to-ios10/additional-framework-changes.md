@@ -1,6 +1,6 @@
 ---
 title: "Additional iOS 10 Frameworks Changes"
-description: "This article covers additional, minor changes or enhancements to existing frameworks for iOS 10."
+description: "This document describes minor changes and enhancements made to existing frameworks in iOS 10 and discusses how to make use of these updates in Xamarin.iOS."
 ms.prod: xamarin
 ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
 ms.technology: xamarin-ios

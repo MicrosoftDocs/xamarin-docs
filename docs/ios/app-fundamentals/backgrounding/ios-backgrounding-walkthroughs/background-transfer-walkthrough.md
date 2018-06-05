@@ -1,6 +1,6 @@
 ---
-title: "Walkthrough - Using Background Transfer Service and NSURLSession"
-description: "In this walkthrough, we use the Background Transfer Service and NSURLSession API to kick off downloading a large image that continues to download when the app is in the background."
+title: "Background Transfer and NSURLSession in Xamarin.iOS"
+description: "This document provides a walkthrough that demonstrates how to use background transfer and NSUrlSession to kick off the download of a large image, and continue that download when the app is placed in the background."
 ms.prod: xamarin
 ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# Walkthrough - Using Background Transfer Service and NSURLSession
-
-_In this walkthrough, we use the Background Transfer Service and NSURLSession API to kick off downloading a large image that continues to download when the app is in the background._
+# Background Transfer and NSURLSession in Xamarin.iOS
 
 A background transfer is initiated by configuring a background `NSURLSession` and enqueuing upload or download tasks. If tasks complete while the application is backgrounded, suspended, or terminated, iOS will notify the application by calling the completion handler in the application's *AppDelegate*. The following diagram demonstrates this in action:
 

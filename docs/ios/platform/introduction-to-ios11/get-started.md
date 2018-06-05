@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with iOS 11"
-description: "Download and install Xcode 9"
+description: "This document describes steps that must be completed in order to get started developing iOS 11 Apps. It discusses how to download Xcode and update Visual Studio 2017."
 ms.prod: xamarin
 ms.assetid: 794EA2C4-884B-42AC-B8C4-8C8E5474B660
 ms.technology: xamarin-ios

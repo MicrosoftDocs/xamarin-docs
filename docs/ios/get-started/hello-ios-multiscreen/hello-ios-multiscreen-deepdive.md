@@ -1,6 +1,6 @@
 ---
-title: "Hello, iOS Multiscreen"
-description: "In this two-part guide, we expand the Phoneword application we created in the Hello, iOS guide to handle a second screen. Along the way we’ll introduce the Model-View-Controller design pattern, implement our first iOS navigation, and develop a deeper understanding of iOS application structure and functionality."
+title: "Hello, iOS Multiscreen – Deep Dive"
+description: "This document takes a deeper look at the expanded Phoneword application, futher considering model-view-controller, iOS navigation, and other iOS development concepts."
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 12/02/2016
 ---
 
-# Hello, iOS Multiscreen Deep Dive
+# Hello, iOS Multiscreen – Deep Dive
 
 In the Quickstart walkthrough, we built and ran our first multi-screen Xamarin.iOS application. Now it’s time to develop a
 deeper understanding of iOS navigation and architecture.

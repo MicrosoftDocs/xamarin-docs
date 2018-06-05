@@ -1,5 +1,6 @@
 ---
 title: "iOS Backgrounding Guidance"
+description: "This diagrams presented in this document provide guidance about which of iOS's many backgrounding options should be chosen for a specific need."
 ms.prod: xamarin
 ms.assetid: BC629536-F179-4EC2-AD72-8F45081F8EE0
 ms.technology: xamarin-ios

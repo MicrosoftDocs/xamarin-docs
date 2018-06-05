@@ -1,5 +1,6 @@
 ---
-title: "SpriteKit"
+title: "SpriteKit in Xamarin.iOS"
+description: "This document describes SpriteKit, Apple's 2D graphics framework that integrates with SceneKit, incorporates physics and animation, includes support for lighting and shading, and more. SpriteKit can be used to create 2D games."
 ms.prod: xamarin
 ms.assetid: 93971DAE-ED6B-48A8-8E61-15C0C79786BB
 ms.technology: xamarin-ios
@@ -8,22 +9,22 @@ ms.author: brumbaug
 ms.date: 06/14/2017
 ---
 
-# SpriteKit
+# SpriteKit in Xamarin.iOS
 
-Sprite Kit, the 2D game framework from Apple, has some interesting new features in iOS 8 and OS X Yosemite. These include integration with Scene Kit, shader support, lighting, shadows, constraints, normal map generation, and physics enhancements. In particular, the new physics features make it very easy to add realistic effects to a game.
+SpriteKit, the 2D graphics framework from Apple, has some interesting new features in iOS 8 and OS X Yosemite. These include integration with SceneKit, shader support, lighting, shadows, constraints, normal map generation, and physics enhancements. In particular, the new physics features make it very easy to add realistic effects to a game.
 
 ## Physics Bodies
 
-Sprite Kit includes a 2D, rigid body physics API. Every sprite has an associated physics body (`SKPhysicsBody`) that defines the physics properties such as mass and friction, as well as the geometry of the body in the physics world.
+SpriteKit includes a 2D, rigid body physics API. Every sprite has an associated physics body (`SKPhysicsBody`) that defines the physics properties such as mass and friction, as well as the geometry of the body in the physics world.
 
 ## Creating a Physics Body from a Texture
-Sprite Kit now supports deriving the physics body of a sprite from its texture. This makes it easy to implement collisions that look more natural.
+SpriteKit now supports deriving the physics body of a sprite from its texture. This makes it easy to implement collisions that look more natural.
 
 For example, notice in the following collision how the banana and monkey collide nearly at the surface of each image:
  
 ![](spritekit-images/image13.png "The banana and monkey collide nearly at the surface of each image")
 
-Sprite Kit makes creating such a physics body possible with a single line of code. Simply call `SKPhysicsBody.Create` with the texture and size:
+SpriteKit makes creating such a physics body possible with a single line of code. Simply call `SKPhysicsBody.Create` with the texture and size:
     sprite.PhysicsBody = SKPhysicsBody.Create (sprite.Texture, sprite.Size);
 
 ## Alpha Threshold
@@ -42,7 +43,7 @@ The effect of tweaking the alpha threshold like this fine-tunes the previous col
  
 ## Physics Fields
 
-Another great addition to Sprite Kit is the new physics field support. These allow you to add things such as vortex fields, radial gravity fields and spring fields to name just a few.
+Another great addition to SpriteKit is the new physics field support. These allow you to add things such as vortex fields, radial gravity fields and spring fields to name just a few.
 
 Physics fields are created using the SKFieldNode class, which is added to a scene just like any other `SKNode`. There are a variety of factory methods on `SKFieldNode` to create different physics fields. You can create a spring field by calling `SKFieldNode.CreateSpringField()`, a radial gravity field by calling `SKFieldNode.CreateRadialGravityField()`, and so on.
 

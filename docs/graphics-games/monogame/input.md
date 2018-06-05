@@ -1,6 +1,6 @@
 ---
 title: "MonoGame GamePad Reference"
-description: "GamePad is a standard, cross-platform class for accessing input devices in MonoGame."
+description: "This document describes GamePad, a cross-platform class for accessing input devices in MonoGame. It discusses how to read input from the gamepad and provides example code."
 ms.prod: xamarin
 ms.assetid: 1F71F3E8-2397-4C6A-8163-6731ECFB7E03
 author: charlespetzold

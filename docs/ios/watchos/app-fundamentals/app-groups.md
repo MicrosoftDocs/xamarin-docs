@@ -1,5 +1,6 @@
 ---
-title: "Working with App Groups"
+title: "Working with watchOS App Groups in Xamarin"
+description: "This document describes app groups and their use in a watchOS application. It discusses how to configure an app group, provisioning requirements, Entitlements.plist considerations, and deployment." 
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/17/2017
 ---
 
-# Working with App Groups
+# Working with watchOS App Groups in Xamarin
 
 
 An App Group allows different applications (or an

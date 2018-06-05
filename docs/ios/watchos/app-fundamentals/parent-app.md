@@ -1,6 +1,6 @@
 ---
-title: "Working with the Parent Application"
-description: "Sharing data between the iOS and watch app in watchOS 1"
+title: "Working with the watchOS Parent Application in Xamarin"
+description: "This document describes how to work with a watchOS parent application in Xamarin. It discusses WatchKit app extensions, iOS apps, shared storage, and more."
 ms.prod: xamarin
 ms.assetid: 9AD29833-E9CC-41A3-95D2-8A655FF0B511
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/17/2017
 ---
 
-# Working with the Parent Application
-
-_Sharing data between the iOS and watch app in watchOS 1_
+# Working with the watchOS Parent Application in Xamarin
 
 > [!IMPORTANT]
 > Accessing the parent application using the examples below

@@ -1,6 +1,6 @@
 ---
-title: "Platform Features"
-description: "Documents in this section cover features specific to iOS."
+title: "iOS Platform Features"
+description: "This document links to various guides that describe features introduced in various versions of iOS, and other iOS platform features."
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
 ms.technology: xamarin-ios
@@ -9,22 +9,19 @@ ms.author: brumbaug
 ms.date: 06/15/2017
 ---
 
-# Platform Features
+# iOS Platform Features
 
 ##  [Introduction to iOS 11](~/ios/platform/introduction-to-ios11/index.md)
 
 How to install and get started with the Xcode 9 beta and the preview of Xamarin's iOS 11 support.
 
-
 ##  [Introduction to iOS 10](~/ios/platform/introduction-to-ios10/index.md)
 
 Apple's iOS 10 includes several new APIs and services that allow you to develop apps with new features and functionality. With iOS 10, apps have new abilities such as extending Maps, Messages, Phone and Siri. This section shows hows to take advantage of these features in a Xamarin.iOS app.
 
-
 ##  [Introduction to iOS 9](~/ios/platform/introduction-to-ios9/index.md)
 
 This section defines the changes made in iOS 9 when upgrading from iOS 8 and how to use these features in a Xamarin.iOS app.
-
 
 ##  [Introduction to iOS 8](~/ios/platform/introduction-to-ios8.md)
 
@@ -144,8 +141,6 @@ New to iOS 10, the User Notification framework allows for the delivery and handl
 ##  [Wide Color](~/ios/platform/wide-color.md)
 
 iOS 10 and macOS Sierra enhances the support for extended-range pixel formats and wide-gamut color spaces throughout the system including frameworks such as Core Graphics, Core Image, Metal and AVFoundation. Support for devices with wide color displays is further eased by providing this behavior throughout the entire graphics stack.
-
-
 
 ##  [Binding Objective-C](binding-objective-c/index.md)
 

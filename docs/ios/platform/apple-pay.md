@@ -1,5 +1,5 @@
 ---
-title: "Apple Pay"
+title: "Apple Pay in Xamarin.iOS"
 description: "This guide explores setting up the Xamarin.iOS environment for use with Apple Pay to pay for physical goods, such as food, entertainment, and memberships via your app. It includes information on the required identifiers, certificates and entitlements."
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
@@ -8,15 +8,13 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# Apple Pay
+# Apple Pay in Xamarin.iOS
 
 _This guide explores setting up the Xamarin.iOS environment for use with Apple Pay to pay for physical goods, such as food, entertainment, and memberships via your app. It includes information on the required identifiers, certificates and entitlements._
-
 
 Apple Pay was introduced alongside iOS 8, enabling users to pay for physical goods such as food,
 entertainment, and memberships via their iOS devices. It is available on iPhone 6 and iPhone 6 Plus, and can also be paired with the Apple Watch for in-store purchases. When used on an iPhone, it uses Touch ID as a way to confirm and
 authorize transactions to a user's credit or debit card.
-
 
 ## Requirements
 
@@ -45,7 +43,6 @@ With Apple Pay, Apple [states](https://developer.apple.com/apple-pay/Getting-Sta
 for Payments”. In comparison, IAP has a 30% charge for each transaction. Moreover, with Apple Pay, the
 transaction does not go through Apple at all, instead, it goes through a Payment platform.
 
-
 ## Using a Payment Processor Platform
 
 One of the fundamental parts of Apple Pay is the processing of payments. While it
@@ -62,7 +59,6 @@ Two options include:
 - **JudoPay** - check out their [Xamarin sample code on github](https://github.com/Judopay/Xamarin-Sample-App), and register at
 [JudoPay.com](https://www.judopay.com/).
 
-
 ## Provisioning for Apple Pay
 
 Configuring an app to use Apple Pay requires setup on the Apple Developer Portal and within your app. There are a number of steps that should be followed to successfully provision your app for Apple pay:
@@ -78,13 +74,11 @@ Configuring an app to use Apple Pay requires setup on the Apple Developer Portal
 5. Add Apple Pay entitlements:
 	- Select the Apple pay entitlement as detailed [here](~/ios/deploy-test/provisioning/entitlements.md), or manually add the key/value pair to the file from [here](~/ios/deploy-test/provisioning/entitlements.md)
 
-
 ## Working with Apple Pay
 
 Apple has made several enhancements to Apple Pay in iOS 10 that allow the user to make secure payments from websites and through interaction with Siri and Maps.
 
 With iOS 10, several new APIs have been added that work with both iOS and watchOS to support dynamic payment networks and a new sandbox test environment.
-
 
 ### Apple Pay Website Integration
 
@@ -131,7 +125,6 @@ To enable the new testing environment, do the following:
 
 In this article, we explored the different items required to use Apple Pay within your app. We
 looked at how to create a Merchant ID, and how it is used within the **Entitlements.plist**, which needs to be modified manually.
-
 
 ## Related Links
 

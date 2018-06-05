@@ -1,5 +1,6 @@
 ---
-title: "Configuration"
+title: "Configuring SQLite in Xamarin.iOS"
+description: "This document describes how to determine the location for a SQLite database file in a Xamarin.iOS application. These concepts are relevant no matter the selected data access mechanism."
 ms.prod: xamarin
 ms.assetid: E5582F4B-AD74-420F-9E6D-B07CFB420B3A
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 10/11/2016
 ---
 
-# Configuration
+# Configuring SQLite in Xamarin.iOS
 
 To use SQLite in your Xamarin.iOS application you will need to determine the correct file location for your database file.
 

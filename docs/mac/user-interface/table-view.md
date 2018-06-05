@@ -1,5 +1,5 @@
 ---
-title: "Table Views"
+title: "Table Views in Xamarin.Mac"
 description: "This article covers working with table views in a Xamarin.Mac application. It describes creating table views in Xcode and Interface Builder and interacting with them in code."
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Table Views
+# Table Views in Xamarin.Mac
 
 _This article covers working with table views in a Xamarin.Mac application. It describes creating table views in Xcode and Interface Builder and interacting with them in code._
 

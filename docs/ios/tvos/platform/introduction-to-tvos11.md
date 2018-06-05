@@ -1,6 +1,6 @@
 ---
 title: "Introduction to tvOS 11"
-description: "New features available to developers using Xamarin for tvOS 11"
+description: "This document provides a brief overview of the new features available to Xamarin developers in tvOS 11 and links to Apple's release notes."
 ms.prod: xamarin
 ms.assetid: 5258F7A1-3388-4482-978C-DC33AAAEFBE6
 ms.technology: xamarin-ios
@@ -32,8 +32,6 @@ Access new tvOS 11 features in Xamarin.tvOS apps:
 - Metal 2
 
 For a complete list of changes Apple introduced in tvOS 11, see the [What's New in tvOS](https://developer.apple.com/library/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS_11_0.html) document.
-
-
 
 ## Related Links
 

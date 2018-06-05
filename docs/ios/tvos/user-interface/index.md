@@ -1,5 +1,5 @@
 ---
-title: "User Interface"
+title: "Building tvOS User Interfaces with Xamarin"
 description: "General User Experience (UX) coverage including User Interface (UI) controls, use Xcode's Interface Builder and UX design principles when working with Xamarin.tvOS."
 ms.prod: xamarin
 ms.assetid: 8CF80705-B36A-42D6-B66B-52BC8586FA5A
@@ -9,11 +9,11 @@ ms.author: brumbaug
 ms.date: 06/07/2016
 ---
 
-# User Interface
+# Building tvOS User Interfaces with Xamarin
 
 _General User Experience (UX) coverage including User Interface (UI) controls, use Xcode's Interface Builder and UX design principles when working with Xamarin.tvOS._
 
-When working with C# and .NET in a Xamarin.tvOS app, you have access to the same User Interface controls that a developer working in in Objective-C or Swift and Xcode does. Because Xamarin.tvOS integrates directly with Xcode, you can use Xcode's Interface Builder to create and maintain your User Interfaces (or optionally create them directly in C# code).
+When working with C# and .NET in a Xamarin-based tvOS, you have access to the same User Interface controls that a developer working in in Objective-C or Swift and Xcode does. Xcode's Interface Builder can be used to create and maintain your User Interfaces (or optionally create them directly in C# code).
 
 The guides listed below give detailed information about working with tvOS UI elements in a Xamarin.tvOS app. It is highly suggested that you work through the [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md) first, as it covers key concepts and techniques that we'll be using in every article.
 

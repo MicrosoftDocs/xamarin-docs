@@ -1,5 +1,5 @@
 ---
-title: "Apple Pay Capabilities"
+title: "Apple Pay Capabilities in Xamarin.iOS"
 description: "Adding capabilities to an application often requires additional provisioning setup. This guide explains the setup needed for Apple Pay capabilities."
 ms.prod: xamarin
 ms.assetid: 735CC916-16A4-471B-87F7-0535E24288D7
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/15/2017
 ---
 
-# Apple Pay Capabilities
+# Apple Pay Capabilities in Xamarin.iOS
 
 _Adding capabilities to an application often requires additional provisioning setup. This guide explains the setup needed for Apple Pay capabilities._
 

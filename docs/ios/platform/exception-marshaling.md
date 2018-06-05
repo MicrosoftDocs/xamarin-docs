@@ -1,6 +1,6 @@
 ---
-title: "Exception Marshaling"
-description: "Xamarin.iOS contains new events to help respond to exceptions, particularly in native code."
+title: "Exception Marshaling in Xamarin.iOS"
+description: "This document describes how to work with native and managed exceptions in a Xamarin.iOS app. It discusses problems that can occur and a solution for these problems."
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/05/2017
 ---
 
-# Exception Marshaling
+# Exception Marshaling in Xamarin.iOS
 
 _Xamarin.iOS contains new events to help respond to exceptions, particularly in native code._
 
@@ -138,7 +138,7 @@ although the Mono runtime will unwind the native frames, it won't execute any Ob
 
 Code example:
 
-``` objective-c
+```objc
 -(id) setObject: (id) object forKey: (id) key
 {
 	@try {
@@ -157,7 +157,7 @@ A variation of this is to throw a managed exception in managed code, and then
 unwinding through native frames to get to the first managed `catch`
 clause:
 
-``` csharp
+```csharp
 class AppDelegate : UIApplicationDelegate {
 	public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 	{

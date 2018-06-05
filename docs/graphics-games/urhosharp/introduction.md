@@ -1,15 +1,14 @@
 ---
 title: "An Introduction to UrhoSharp"
-description: "This provides a brief introduction to the concepts behind UrhoSharp"
+description: "This document describes the basic structure of an UrhoSharp application and links to various guides and sample applications that demonstrate how to use UrhoSharp."
 ms.prod: xamarin
 ms.assetid: 18041443-5093-4AF7-8B20-03E00478EF35
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
 ---
-# An Introduction to UrhoSharp
 
-_This provides a brief introduction to the concepts behind UrhoSharp_
+# An Introduction to UrhoSharp
 
 ![UrhoSharp logo](introduction-images/urhosharp-icon.png)
 

@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Game Development with Xamarin"
-description: "The nature of game development can differ considerably from the development of other types of apps. This article is an introduction to game development featuring technologies that can be used with Xamarin.iOS and Xamarin.Android. It provides both a high level discussion of how games are made and a sampling of technologies available for use with Xamarin.iOS and Xamarin.Android."
+description: "This document provides a high-level overview of game development with Xamarin, describing both how games are made and a sampling of technologies available for use with Xamarin.iOS and Xamarin.Android."
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: charlespetzold
@@ -9,8 +9,6 @@ ms.date: 03/24/2017
 ---
 
 # Introduction to Game Development with Xamarin
-
-_The nature of game development can differ considerably from the development of other types of apps. This article is an introduction to game development featuring technologies that can be used with Xamarin.iOS and Xamarin.Android. It provides both a high level discussion of how games are made and a sampling of technologies available for use with Xamarin.iOS and Xamarin.Android._
 
 Developing games can be very exciting, especially given how easy it can be to publish your work on mobile platforms. This article discusses concepts and technologies related to game development that will help you create games, whether your goal is to create a high-quality AAA game or just to program for fun.
 

@@ -1,5 +1,6 @@
 ---
-title: "F# Samples"
+title: "F# Samples for Xamarin"
+description: "F# can be used to build Xamarin applications. This document links to various iOS, Mac, and Xamarin.Forms sample Xamarin app projects written in F#."
 ms.prod: xamarin
 ms.assetid: 8A355636-DE60-45BC-B988-1967755FDD28
 author: asb3993
@@ -7,7 +8,7 @@ ms.author: amburns
 ms.date: 03/24/2017
 ---
 
-# F# Samples
+# F# Samples for Xamarin
 
 This page links to some F# samples using Xamarin.
 

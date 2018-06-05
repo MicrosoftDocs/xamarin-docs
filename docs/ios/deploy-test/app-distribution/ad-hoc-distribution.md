@@ -1,5 +1,5 @@
 ---
-title: "Ad-Hoc Distribution"
+title: "Ad-Hoc Distribution for Xamarin.iOS Apps"
 description: "This document gives an overview of the Ad Hoc distribution techniques that are primarily used for testing an Xamarin.iOS applications with a wide group of people."
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/19/2017
 ---
 
-# Ad-Hoc Distribution
+# Ad-Hoc Distribution for Xamarin.iOS Apps
 
 _This document gives an overview of the Ad Hoc distribution techniques that are primarily used for testing an Xamarin.iOS applications with a wide group of people._
 

@@ -1,6 +1,6 @@
 ---
-title: "Hello, Watch"
-description: "Getting started with Xamarin and watchOS"
+title: "Hello, watchOS – Walkthrough"
+description: "This document provides a walkthrough of building a simple watchOS application using Xamarin. It describes how to work in both Visual Studio and Visual Studio for Mac, work with storyboards, and respond to events in code."
 ms.prod: xamarin
 ms.assetid: AD1DA488-51AB-420A-A0B7-3AE69A964A40
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 12/14/2016
 ---
 
-# Hello, Watch
+# Hello, watchOS – Walkthrough
 
 After you have created a solution following the steps in
 [Setup and Installation](~/ios/watchos/get-started/installation.md), you will have 3 projects:
@@ -139,12 +139,12 @@ Now open **InterfaceController.cs** (*not* InterfaceController.designer.cs)
   and add the following code:
 
 ```csharp
-int clickCount = 0; 
+int clickCount = 0;
 partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 {
   var msg = String.Format("Clicked {0} times", ++clickCount);
   myLabel.SetText(msg);
-} 
+}
 ```
 
 This code should be fairly transparent: the instance variable `clickCount` is incremented every time the function `OnButtonPress` is called. The text of `myLabel` is changed to reflect this count; `myLabel`, of course, is the name of one of the Outlets you created in XCode. The `partial` function is the implementation of the function associated with the name of the Action you specified.

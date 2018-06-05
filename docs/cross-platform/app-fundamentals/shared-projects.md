@@ -1,5 +1,5 @@
 ---
-title: "Shared Projects"
+title: "Using Shared Projects to Share Code"
 description: "Shared Projects let you write common code that is referenced by a number of different application projects. The code is compiled as part of each referencing project and can include compiler directives to help incorporate platform-specific functionality into the shared code base."
 ms.prod: xamarin
 ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
@@ -8,7 +8,7 @@ ms.author: amburns
 ms.date: 03/23/2017
 ---
 
-# Shared Projects
+# Using Shared Projects to Share Code
 
 _Shared Projects let you write common code that is referenced by a number of different application projects. The code is compiled as part of each referencing project and can include compiler directives to help incorporate platform-specific functionality into the shared code base._
 

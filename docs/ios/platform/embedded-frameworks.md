@@ -1,6 +1,6 @@
 ---
-title: "Embedded frameworks"
-description: "This document describes how application developers can embed user frameworks in their apps."
+title: "Embedded frameworks in Xamarin.iOS"
+description: "This document describes how to share code with embedded frameworks in a Xamarin.iOS application. This can be done with either the mtouch tool or native references."
 ms.prod: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios
@@ -8,7 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# Embedded frameworks
+# Embedded frameworks in Xamarin.iOS
 
 _This document describes how application developers can embed user frameworks in their apps._
 

@@ -1,5 +1,6 @@
 ---
-title: "Walkthrough - Using Background Location"
+title: "Walkthrough - Background Location in Xamarin.iOS"
+description: "This document provides a walkthrough of how to use location information in a backgrounded Xamarin.iOS application. It describes necessary setup, user interface, and application states."
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# Walkthrough - Using Background Location
+# Walkthrough - Background Location in Xamarin.iOS
 
 In this example, we are going to build an iOS Location application that prints information about our current location: latitude, longitude, and other parameters to the screen. This application will demonstrate how to properly perform location updates while the application is either Active or Backgrounded.
 

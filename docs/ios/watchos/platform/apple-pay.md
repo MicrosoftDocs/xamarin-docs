@@ -1,5 +1,5 @@
 ---
-title: "Apple Pay on watchOS"
+title: "Apple Pay on watchOS in Xamarin"
 description: "This article covers the enhancements Apple has made to Apple Pay in watchOS 3 and how to implement them in Xamarin.iOS for Apple Watch."
 ms.prod: xamarin
 ms.assetid: 32FF5D21-C252-485D-83AC-A7E592237962
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/17/2017
 ---
 
-# Apple Pay on watchOS
+# Apple Pay on watchOS in Xamarin
 
 Apple has made several enhancements to Apple Pay in watchOS 3 that adds support for In-App Payments. This allows the user to securely provide payment and contact information to pay for physical goods and services directly from the Apple Watch.
 

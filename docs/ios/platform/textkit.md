@@ -1,6 +1,6 @@
 ---
-title: "TextKit"
-description: "The Text Kit API offers powerful text layout and rendering features in Xamarin.iOS."
+title: "TextKit in Xamarin.iOS"
+description: "This document describes how to use TextKit in Xamarin.iOS. TextKit provides powerful text layout and rendering features."
 ms.prod: xamarin
 ms.assetid: 1D0477E8-CD1E-48A9-B7C8-7CA892069EFF
 ms.technology: xamarin-ios
@@ -9,20 +9,19 @@ ms.author: brumbaug
 ms.date: 03/19/2017
 ---
 
-# Text Kit
+# TextKit in Xamarin.iOS
 
-Text Kit is a new API that offers powerful text layout and rendering features. It is built on top of the low level Core Text framework, but is much easier to use than Core Text.
+TextKit is a new API that offers powerful text layout and rendering features. It is built on top of the low-level Core Text framework, but is much easier to use than Core Text.
 
-To make the features of Text Kit available to standard controls, several iOS text controls have been re-implemented to use Text Kit, including:
+To make the features of TextKit available to standard controls, several iOS text controls have been re-implemented to use TextKit, including:
 
 -  UITextView
 -  UITextField
 -  UILabel
 
-
 ## Architecture
 
-Text Kit provides a layered architecture that separates the text storage from the layout and display, including the following classes:
+TextKit provides a layered architecture that separates the text storage from the layout and display, including the following classes:
 
 -  `NSTextContainer` – Provides the coordinate system and geometry that is used to layout text.
 -  `NSLayoutManager` – Lays out text by turning text into glyphs. 
@@ -33,7 +32,7 @@ These three classes are applied to a view that renders text. The built-in text h
 
 The following figure illustrates this architecture:
 
- ![](textkit-images/textkitarch.png "This figure illustrates the Text Kit architecture")
+ ![](textkit-images/textkitarch.png "This figure illustrates the TextKit architecture")
 
 ## Text Storage and Attributes
 
@@ -52,7 +51,7 @@ After `EndEditing` is called, the changes are sent to the layout manager, which 
 
 ## Layout with Exclusion Path
 
-Text Kit also supports layout, and allows for complex scenarios such as multi-column text and flowing text around specified paths called *exclusion paths*. Exclusion paths are applied to the text container, which modifies the geometry of the text layout, causing the text to flow around the specified paths.
+TextKit also supports layout, and allows for complex scenarios such as multi-column text and flowing text around specified paths called *exclusion paths*. Exclusion paths are applied to the text container, which modifies the geometry of the text layout, causing the text to flow around the specified paths.
 
 Adding an exclusion path requires setting the `ExclusionPaths` property on the layout manager. Setting this property causes the layout manager to invalidate the text layout and flow the text around the exclusion path.
 
@@ -135,10 +134,10 @@ public class ExclusionPathView : UITextView
 }
 ```
 
-This code adds support for drawing on the text view using Core Graphics. Since the `UITextView` class is now built to use Text Kit for its text rendering and layout, it can use all the features of Text Kit, such as setting exclusion paths.
+This code adds support for drawing on the text view using Core Graphics. Since the `UITextView` class is now built to use TextKit for its text rendering and layout, it can use all the features of TextKit, such as setting exclusion paths.
 
 > [!IMPORTANT]
-> This example subclasses `UITextView` to add touch drawing support. Subclassing `UITextView` isn’t necessary to get the features of Text Kit.
+> This example subclasses `UITextView` to add touch drawing support. Subclassing `UITextView` isn’t necessary to get the features of TextKit.
 
 
 

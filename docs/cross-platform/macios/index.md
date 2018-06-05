@@ -1,6 +1,6 @@
 ---
 title: "Apple Platform (iOS and Mac)"
-description: "In this section we cover strategies to share code between your Xamarin.iOS and Xamarin.Mac projects."
+description: "This document describes various topics related to Xamarin.iOS and Xamarin.Mac development: code sharing, the Unified API, binding Objective-C libraries, native references, native types, and more."
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: asb3993
@@ -9,8 +9,6 @@ ms.date: 03/29/2017
 ---
 
 # Apple Platform (iOS and Mac)
-
-_In this section we cover strategies to share code between your Xamarin.iOS and Xamarin.Mac projects._
 
 ## Code Sharing
 
@@ -66,8 +64,6 @@ section explains:
 
 ## [Native References](native-references.md)
 
-
-
 ##  [Mac/iOS Native Types](nativetypes.md)
 
 To support 32 and 64 bit code transparently from C# and F#,
@@ -86,7 +82,6 @@ This article covers using the new iOS Unified API Native types
 code is shared with non-iOS devices such as Android or Windows Phone OSes.
 It provides insight into when the Native types should be used and provides
 several possible solutions to cases where the new type must be used with cross-platform code.
-
 
 ## [HttpClient Stack and SSL/TLS Implementation Selector](http-stack.md)
 

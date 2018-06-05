@@ -1,5 +1,6 @@
 ---
-title: "Unit Testing"
+title: "Unit Testing Xamarin.iOS Apps"
+description: "This document provides an overview of how to unit test a Xamarin.iOS application. It describes how to create a unit test project, writing tests, and running tests."
 ms.prod: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/19/2017
 ---
 
-# Unit Testing
+# Unit Testing Xamarin.iOS Apps
 
 This document describes how to create unit tests for your Xamarin.iOS projects.
 Unit testing with Xamarin.iOS is done using the Touch.Unit framework that includes

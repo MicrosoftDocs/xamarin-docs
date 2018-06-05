@@ -1,5 +1,6 @@
 ---
 title: "Getting started with .NET Embedding"
+description: "This document links to various guides that describe how to use .NET Embedding in C, Java, Android, Objective-C, iOS, and macOS projects."
 ms.prod: xamarin
 ms.assetid: AF8A4798-EBDD-4E73-997B-C3D4FC5E9685
 author: topgenorth

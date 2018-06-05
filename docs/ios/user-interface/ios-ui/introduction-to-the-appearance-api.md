@@ -1,5 +1,5 @@
 ---
-title: "Appearance API"
+title: "Appearance API in Xamarin.iOS"
 description: "iOS lets you apply visual property settings at a static class level rather than on individual objects so that the change applies to all instances of that control in the application."
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/22/2017
 ---
 
-# Appearance API
+# Appearance API in Xamarin.iOS
 
 _iOS lets you apply visual property settings at a static class level rather than on individual objects so that the change applies to all instances of that control in the application._
 

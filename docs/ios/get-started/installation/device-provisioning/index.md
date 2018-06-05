@@ -1,6 +1,6 @@
 ---
-title: "Device Provisioning"
-description: "Once Xamarin.iOS has been successfully installed, the next step in iOS development is to provision your iOS device. This guide will explore requesting development certificates and profiles, working with app services, and deploying an app to device."
+title: "Device Provisioning for Xamarin.iOS"
+description: "This document describes how to provision a device so that it can be used to test an application. It also discusses how to configure an app so that it can use capabilities such as push notifications."
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: amburns
 ms.date: 05/06/2018
 ---
 
-# Device Provisioning
-
-_Once Xamarin.iOS has been successfully installed, the next step in iOS development is to provision your iOS device. This guide will explore requesting development certificates and profiles, working with app services, and deploying an app to device._
+# Device Provisioning for Xamarin.iOS
 
 While developing a Xamarin.iOS application it is essential to test it by deploying the app to a physical device, in addition to the simulator. Device-only bugs and performance issues can transpire when running on a device, due to hardware limits such as memory or network connectivity. To test on a physical device, the device must be *provisioned*, and Apple must be informed that the device will be used for testing.
 

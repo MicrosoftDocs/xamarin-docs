@@ -1,6 +1,6 @@
 ---
 title: "Binding iOS Libraries"
-description: "How to make iOS native libraries (and CocoaPods) accessible in Xamarin apps."
+description: "This document describes how to create C# bindings to Objective-C code, making it possible to consume native libraries and CocoaPods in a Xamarin.iOS application."
 ms.prod: xamarin
 ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
@@ -11,8 +11,6 @@ ms.date: 03/18/2017
 ---
 
 # Binding iOS Libraries
-
-_How to make iOS native libraries (and CocoaPods) accessible in Xamarin apps._
 
 Follow these links to learn about binding Objective-C libraries and CocoaPods
 for Xamarin.iOS and Xamarin.Mac:

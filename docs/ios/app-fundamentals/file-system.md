@@ -1,6 +1,6 @@
 ---
-title: "Working with the File System"
-description: "Xamarin.iOS can use the same System.IO classes to work with files and directories in iOS that you would use in any .NET application. However, despite the familiar classes and methods, iOS implements some restrictions on the files that can be created or accessed and also provides special features for certain directories. This article outlines these restrictions and features, and demonstrates how file access works in a Xamarin.iOS application."
+title: "Working with the File System in Xamarin.iOS"
+description: "This document describes how to work with the file system in Xamarin.iOS. It discusses directories, reading files, XML and JSON serialization, the application sandbox, sharing files through iTunes, and more."
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# Working with the File System
-
-_Xamarin.iOS can use the same System.IO classes to work with files and directories in iOS that you would use in any .NET application. However, despite the familiar classes and methods, iOS implements some restrictions on the files that can be created or accessed and also provides special features for certain directories. This article outlines these restrictions and features, and demonstrates how file access works in a Xamarin.iOS application._
+# Working with the File System in Xamarin.iOS
 
 You can use Xamarin.iOS and the `System.IO` classes in the *.NET Base Class Library (BCL)* to access the iOS file system. The `File` class lets you create, delete, and read files, and the `Directory` class allows you to create, delete, or enumerate the
 contents of directories. You can also use `Stream` subclasses, which
@@ -37,7 +35,6 @@ Xamarin.iOS to execute some simple file system operations:
 
  <a name="General_File_Access" />
 
-
 ## General File Access
 
 Xamarin.iOS allows you to use the .NET `System.IO` classes for file
@@ -47,8 +44,7 @@ The following code snippets illustrate some common file operations. You’ll
 find them all below in the `SampleCode.cs` file, in the sample application for
 this article.
 
- <a name="Working_with_directories" />
-
+<a name="Working_with_directories" />
 
 ### Working with directories
 

@@ -1,5 +1,6 @@
 ---
-title: "Sliders, Switches, and Segmented Controls"
+title: "Sliders, Switches, and Segmented Controls in Xamarin.iOS"
+description: "This document discusses slides, switches, and segmented controls in Xamarin.iOS, describing how to work with them both programmatically and in the iOS Designer."
 ms.prod: xamarin
 ms.assetid: 85BF0EC8-E581-49CD-B9E7-98BE4C5A0F6B
 ms.technology: xamarin-ios
@@ -8,10 +9,9 @@ ms.author: brumbaug
 ms.date: 03/21/2017
 ---
 
-# Sliders, Switches, and Segmented Controls
+# Sliders, Switches, and Segmented Controls in Xamarin.iOS
 
 <a name="Sliders" />
-
 
 ## Sliders
 

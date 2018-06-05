@@ -1,5 +1,6 @@
 ---
-title: "Editing"
+title: "Editing Tables with Xamarin.iOS"
+description: "This document describes how to edit tables in Xamarin.iOS. It discusses swipe to delete, edit mode, and row insertion."
 ms.prod: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/22/2017
 ---
 
-# Editing
+# Editing Tables with Xamarin.iOS
 
 Table editing features are enabled by overriding methods in a `UITableViewSource` subclass. The simplest editing behavior is the
 swipe-to-delete gesture that can be implemented with a single method override.

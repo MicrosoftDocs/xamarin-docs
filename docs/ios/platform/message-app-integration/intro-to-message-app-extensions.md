@@ -1,5 +1,5 @@
 ---
-title: "Message App Extension Basics"
+title: "Message App Extension Basics in Xamarin.iOS"
 description: "This article shows how include a Message App Extension in a Xamarin.iOS solution that integrates with the Messages app and presents new functionality to the user."
 ms.prod: xamarin
 ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 05/02/2017
 ---
 
-# Message App Extension Basics
+# Message App Extension Basics in Xamarin.iOS
 
 _This article shows how include a Message App Extension in a Xamarin.iOS solution that integrates with the Messages app and presents new functionality to the user._
 

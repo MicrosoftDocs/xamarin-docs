@@ -1,6 +1,6 @@
 ---
-title: "Troubleshooting"
-description: "This article provides several troubleshooting tips for working with iOS 9 in Xamarin.iOS apps."
+title: "Xamarin.iOS 9 – Troubleshooting"
+description: "This article provides various troubleshooting tips for working with iOS 9 in Xamarin.iOS. Tips cover XML parsing, simulators, layout constraints, network issues, and many other topics."
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/20/2017
 ---
 
-# Troubleshooting
+# Xamarin.iOS 9 – Troubleshooting
 
 _This article provides several troubleshooting tips for working with iOS 9 in Xamarin.iOS apps._
 
@@ -193,8 +193,6 @@ There are at least two possible workarounds for this problem:
 With Xamarin.iOS it’s possible to make View or View Controller initialization inside constructors which are called when something is exposed into managed code but it breaks iOS design.
 
 In general you should not initialize anything that can call back Objective-C code from the constructor since you can't be sure when it will be called. That also means there's a better places (other .ctor) or calls to override (as Objective-C has no events) where this initialization should be done.
-
-
 
 ## Related Links
 

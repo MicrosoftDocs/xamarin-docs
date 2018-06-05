@@ -1,5 +1,5 @@
 ---
-title: "Working with Table Views"
+title: "Working with tvOS Table Views in Xamarin"
 description: "This article covers designing and working with Table Views and Table View Controllers inside of a Xamarin.tvOS app."
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Working with Table Views
+# Working with tvOS Table Views in Xamarin
 
 _This article covers designing and working with Table Views and Table View Controllers inside of a Xamarin.tvOS app._
 

@@ -1,6 +1,6 @@
 ---
 title: "Push Notifications in iOS"
-description: "This section will cover push notifications in iOS. It introduces the Apple Push Notifications Gateway Service and the role it plays in publishing notifications to iOS applications. It will explain how to create the security certificates necessary to enable push notifications and discuss. Finally this section will discuss some of the housekeeping tasks that application servers must perform to keep track of the client mobile devices."
+description: "This document describes how to work with push notifications in iOS 9 and earlier. It discusses certificates, registering with the Apple Push Notifications Gateway Service (APNS), and more."
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
@@ -10,8 +10,6 @@ ms.date: 03/18/2017
 ---
 
 # Push Notifications in iOS
-
-_This section will cover push notifications in iOS. It introduces the Apple Push Notifications Gateway Service and the role it plays in publishing notifications to iOS applications. It will explain how to create the security certificates necessary to enable push notifications and discuss. Finally this section will discuss some of the housekeeping tasks that application servers must perform to keep track of the client mobile devices._
 
 > [!IMPORTANT]
 > The information in this section pertains to iOS 9 and prior, it has been left here to support older iOS versions. For iOS 10 and later, please see the [User Notification Framework guide](~/ios/platform/user-notifications/index.md) for supporting both Local and Remote Notification on an iOS device.

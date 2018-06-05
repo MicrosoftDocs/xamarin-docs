@@ -1,11 +1,12 @@
 ---
 ms.assetid: 814857C5-D54E-469F-97ED-EE1CAA0156BB
-title: Desktop app porting guidance
-description: A simple explanation of how to decouple existing Windows Forms or WPF apps to create cross-platform apps to run on macOS, iOS, Android, as well as UWP/Windows 10.
+title: "Desktop app porting guidance"
+description: "A simple explanation of how to decouple existing Windows Forms or WPF apps to create cross-platform apps to run on macOS, iOS, Android, as well as UWP/Windows 10."
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
 ---
+
 # Desktop app porting guidance
 
 Most application code can be categorized into one of the following areas:

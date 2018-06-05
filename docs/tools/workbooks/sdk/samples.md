@@ -1,11 +1,13 @@
 ---
 title: "Sample Integrations"
+description: "This document links to samples that demonstrate Xamarin Workbooks integrations. Linked samples work with representation rendering and SkiaSharp."
 ms.prod: xamarin
 ms.assetid: 327DAD2E-1F76-4EB5-BCD0-9E7384D99E48
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
 ---
+
 # Sample Integrations
 
 See the [Kitchen Sink][KitchenSink] sample for a working example of an

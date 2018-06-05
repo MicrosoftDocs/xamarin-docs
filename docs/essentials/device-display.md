@@ -1,12 +1,13 @@
 ---
-title: "Xamarin.Essentials Device Display Information"
-description: "The DeviceDisplay class provides information about the device's screen metrics the application is running on."
+title: "Xamarin.Essentials: Device Display Information"
+description: "This document describes the DeviceDisplay class in Xamarin.Essentials, which provides screen metrics for the device on which the application is running."
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ---
-# Xamarin.Essentials Device Display Information
+
+# Xamarin.Essentials: Device Display Information
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
 

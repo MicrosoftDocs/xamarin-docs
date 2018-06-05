@@ -1,6 +1,6 @@
 ---
-title: "iOS Data Access"
-description: "Most applications have some requirement to save data on the device locally. Unless the amount of data is trivially small, this usually requires a database and a data layer in the application to manage database access. iOS has the SQLite database engine “built in” and access to store and retrieve data is simplified by Xamarin’s platform. This document shows how to access an SQLite database."
+title: "Xamarin.iOS Data Access"
+description: "This document links to guides that describe how to work with local databases in a Xamarin.iOS application. Linked content discusses SQLite.NET, ADO.NET, and more."
 ms.prod: xamarin
 ms.assetid: 3AEDFD8D-FB10-4CEF-BE04-CCD14E95F02C
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 10/11/2016
 ---
 
-# iOS Data Access
-
-_Most applications have some requirement to save data on the device locally. Unless the amount of data is trivially small, this usually requires a database and a data layer in the application to manage database access. iOS has the SQLite database engine “built in” and access to store and retrieve data is simplified by Xamarin’s platform. This document shows how to access an SQLite database._
+# Xamarin.iOS Data Access
 
 Xamarin.iOS supports database access APIs such as:
 
@@ -39,7 +37,6 @@ which explains how to work with SQLite in a PCL library with Xamarin.Forms.
 -  [Using SQLite.NET ORM](using-sqlite-orm.md)
 -  [Using ADO.NET](using-adonet.md)
 -  [Using Data in an App](using-data-in-an-app.md)
-
 
 ## Summary
 

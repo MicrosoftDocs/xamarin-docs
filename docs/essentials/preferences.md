@@ -1,12 +1,13 @@
 ---
-title: "Xamarin.Essentials Preferences"
-description: "The Preferences class saves application preferences in a key/value store."
+title: "Xamarin.Essentials: Preferences"
+description: "This document describes the Preferences class in Xamarin.Essentials, which saves application preferences in a key/value store. It discusses how to use the class and the types of data that can be stored."
 ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ---
-# Xamarin.Essentials Preferences
+
+# Xamarin.Essentials: Preferences
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
 

@@ -1,11 +1,12 @@
 ---
 title: "Xamarin.Essentials"
-description: "Xamarin.Essentials provides developers with cross-platform APIs for their mobile applications."
+description: "This document links to various guides that describe Xamarin.Essentials, which provides developers with cross-platform APIs for their mobile applications."
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ---
+
 # Xamarin.Essentials
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)

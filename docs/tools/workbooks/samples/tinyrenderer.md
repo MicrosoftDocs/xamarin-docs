@@ -1,5 +1,6 @@
 ---
 title: "TinyRenderer Workbooks"
+description: "This document describes the TinyRenderer workbooks, which work with OpenGL. These workbooks run on both Windows and Mac."
 ms.prod: xamarin
 ms.assetid: E4E17836-94C2-436F-ADD8-104AC574D22B
 author: topgenorth
@@ -31,7 +32,6 @@ to better understand how software rendering works.
 The C# code in these workbooks is based on this
 open source [C++ code](https://github.com/ssloy/tinyrenderer) and the text is
 from this [wiki](https://github.com/ssloy/tinyrenderer/wiki/). We appreciate that the original work is available under a license that allowed us to turn it into a set of workbooks.
-
 
 ## Related Links
 

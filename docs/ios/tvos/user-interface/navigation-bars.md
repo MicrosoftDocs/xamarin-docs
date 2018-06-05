@@ -1,6 +1,6 @@
 ---
-title: "Working with Navigation Controllers"
-description: "This article covers designing and working with Navigation Bars inside of a Xamarin.tvOS app."
+title: "Working with tvOS Navigation Bars in Xamarin"
+description: "This document describes how to work with navigation bars in a tvOS app built with Xamarin. It discusses setting up navigation bars in a storyboard and responding to events from these buttons."
 ms.prod: xamarin
 ms.assetid: 74E396B7-87F0-46F7-BC6C-827DB8884C97
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# Working with Navigation Controllers
-
-_This article covers designing and working with Navigation Bars inside of a Xamarin.tvOS app._
+# Working with tvOS Navigation Bars in Xamarin
 
 Navigation Bars can be added to the top of views to display a Title and optional Navigation Bar Buttons. Typically they are used when the user has navigated from a main page, like a Table View, Collection or Menu to a subview showing the details of the selected item.
 
@@ -22,9 +20,6 @@ In addition to the Title (that is displayed in the center), Navigation Bars can 
 > [!IMPORTANT]
 > Navigation Bars are totally transparent by default. Care should be taken to ensure that the content of the Navigation Bar stays readable over the content underneath it. For example, when content in a Table View or Collection scrolls under it.
 
-
-
-
 <a name="Navigation-Bars-and-Storyboards" />
 
 ## Navigation Bars and Storyboards
@@ -32,7 +27,6 @@ In addition to the Title (that is displayed in the center), Navigation Bars can 
 The easiest way to work with Navigation Bars in a Xamarin.tvOS app is to add them to the app's UI using the iOS Designer.
 
 # [Visual Studio for Mac](#tab/vsmac)
-
 
 1. In the **Solution Pad**, double-click `Main.storyboard` file and open it for editing.
 1. Drag a **Navigation Bar** from the **Toolbox** and drop it on the View at the top of the screen: 
@@ -73,9 +67,6 @@ The easiest way to work with Navigation Bars in a Xamarin.tvOS app is to add the
 
 > [!IMPORTANT]
 > While it is possible to assign events such as `TouchUpInside` to a UI element (such as a UIButton) in the iOS Designer, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the `Primary Action` event when creating event handlers for tvOS user interface elements.
-
-
-
 
 The following code gives an example of events handlers on three different BarButtonItems: `ShowFirstHotel`, `ShowSecondHotel`, and `ShowThirdHotel`. When each item is clicked, the background image `HotelImage` is changed. This is edited in the View Controller (example `ViewController.cs`) file:
 

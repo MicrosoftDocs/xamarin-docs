@@ -1,5 +1,6 @@
 ---
 title: "fastlane for iOS - match"
+description: "This document describes fastlane's match command, which is used to create and maintain code signing certificates and provisioning profiles for iOS development."
 ms.prod: xamarin
 ms.assetid: C4A2A67E-0643-4CED-B1A9-79D65054F3CA
 ms.technology: xamarin-ios

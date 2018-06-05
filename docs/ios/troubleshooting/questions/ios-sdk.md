@@ -8,15 +8,18 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# Where can I set my iOS SDK locations
+# Where can I set my iOS SDK locations?
 
 ## Visual Studio
+
 **Tools -> Options -> Xamarin -> iOS Settings**
 
 ## Visual Studio for Mac
+
 **Visual Studio for Mac -> Preferences -> Projects -> SDK Locations -> iOS**
 
 ## Default iOS SDK paths
+
 Xamarin.iOS & the Apple SDK (Xcode) will have the default location when the location box is left blank. These defaults are as follows:
 
 - Xcode: `/Applications/Xcode.app`

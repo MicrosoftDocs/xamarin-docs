@@ -1,5 +1,5 @@
 ---
-title: "Working with Row Actions"
+title: "Working with Row Actions in Xamarin.iOS"
 description: "This guide demonstrates how to create custom swipe actions for table rows with UISwipeActionsConfiguration or UITableViewRowAction"
 ms.prod: xamarin
 ms.assetid: 340FB633-0C46-40AA-9963-FF17D7CA6858
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 09/25/2017
 ---
 
-# Working with Row Actions
+# Working with Row Actions in Xamarin.iOS
 
 _This guide demonstrates how to create custom swipe actions for table rows with UISwipeActionsConfiguration or UITableViewRowAction_
 

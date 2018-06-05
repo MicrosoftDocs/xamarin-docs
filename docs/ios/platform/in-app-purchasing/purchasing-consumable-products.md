@@ -1,5 +1,6 @@
 ---
-title: "Purchasing Consumable Products"
+title: "Purchasing Consumable Products in Xamarin.iOS"
+description: "This document describes consumable products in Xamarin.iOS. Consumable products are single-use pieces of functionality such as in-game currency."
 ms.prod: xamarin
 ms.assetid: E0CB4A0F-C3FA-3933-58A7-13246971D677
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# Purchasing Consumable Products
+# Purchasing Consumable Products in Xamarin.iOS
 
 Consumable products are the simplest to implement, since there is no
 ‘restore’ requirement. They are useful for products like in-game currency or
@@ -25,8 +26,6 @@ process can be visualized like this:
 [![The purchasing process visualization](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
    
  The basic workflow is:   
-   
-   
    
  1. The app adds an `SKPayment` to the queue. If required the user will be prompted for
 their Apple ID, and asked to confirm the payment.   

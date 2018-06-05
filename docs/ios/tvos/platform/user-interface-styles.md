@@ -1,5 +1,5 @@
 ---
-title: "New User interface Styles"
+title: "tvOS User interface Styles in Xamarin"
 description: "This article covers the Light and Dark UI Themes that Apple has added to tvOS 10 and how to implement them in a Xamarin.tvOS app."
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
@@ -9,12 +9,11 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ---
 
-# New User interface Styles
+# tvOS User interface Styles in Xamarin
 
 _This article covers the Light and Dark UI Themes that Apple has added to tvOS 10 and how to implement them in a Xamarin.tvOS app._
 
 tvOS 10 now supports both a Dark and Light User Interface theme that all of the build-in UIKit controls will automatically adapt to, based on the user's preferences. Additionally, the developer can manually adjust UI elements based on the theme that the user has selected and can override a given theme.
-
 
 <a name="About-the-New-User-Interface-Styles" />
 

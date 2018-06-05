@@ -1,6 +1,6 @@
 ---
-title: "Native References"
-description: "Native references gives you the ability to embed a native Framework into a Xamarin.iOS or Xamarin.Mac project or binding project."
+title: "Native References iOS, Mac, and Bindings Projects"
+description: "Native references gives you the ability to embed a native framework into a Xamarin.iOS, Xamarin.Mac, or binding project."
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: asb3993
@@ -8,18 +8,14 @@ ms.author: amburns
 ms.date: 03/29/2017
 ---
 
-# Native References
+# Native References in iOS, Mac, and Bindings Projects
 
-_Native references gives you the ability to embed a native Framework into a Xamarin.iOS or Xamarin.Mac project or binding project._
-
+_Native references gives you the ability to embed a native framework into a Xamarin.iOS or Xamarin.Mac project or binding project._
 
 Since iOS 8.0 it’s been possible to create an embedded framework to share code between app extensions and the main app in Xcode. Using the Native Reference feature it will be possible to consume these embedded frameworks (created with Xcode) in Xamarin.iOS.
  
 > [!IMPORTANT]
 > It will not be possible to create embedded frameworks from any type of Xamarin.iOS or Xamarin.Mac projects, Native References only allow for the consumption of existing native (Objective-C) frameworks.
-
-
-
 
 <a name="Terminology" />
 

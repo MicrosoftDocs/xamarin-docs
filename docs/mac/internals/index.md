@@ -1,6 +1,6 @@
 ---
-title: "Under the hood"
-description: "A peek at the inner workings of Xamarin.Mac"
+title: "Under the hood in Xamarin.Mac"
+description: "This document links to various guides that describe the inner workings of Xamarin.Mac. Linked documents discuss ahead of time compilation, Xamarin.Mac architecture, and the Xamarin.Mac registrar."
 ms.prod: xamarin
 ms.assetid: 84974D75-0CCE-4455-AA38-00DE68AE33B6
 ms.technology: xamarin-mac
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 11/10/2017
 ---
 
-# Under the hood
-
-_A peek at the inner workings of Xamarin.Mac_
+# Under the hood in Xamarin.Mac
 
 ## [Ahead of time compilation (AOT)](aot.md)
 

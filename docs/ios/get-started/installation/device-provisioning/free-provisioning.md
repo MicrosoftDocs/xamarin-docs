@@ -1,6 +1,6 @@
 ---
-title: "Free Provisioning"
-description: "With Apple's release of Xcode 7 came an important change for all iOS and Mac developers–free provisioning."
+title: "Free Provisioning for Xamarin.iOS Apps"
+description: "This document describes how Xamarin.iOS developers can test their app on a physical device without needing to sign up for Apple's paid Developer Program."
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
@@ -9,9 +9,9 @@ ms.author: amburns
 ms.date: 03/19/2017
 ---
 
-# Free Provisioning
+# Free Provisioning for Xamarin.iOS Apps
 
-_With Apple's release of Xcode 7 came an important change for all iOS and Mac developers–free provisioning._
+_With Apple's release of Xcode 7 came an important change for all iOS and Mac developers: free provisioning._
 
 Free provisioning allows developers to deploy their Xamarin.iOS application to their iOS device **without** being part of any **Apple Developer Program**. This is extremely advantageous to developers, as testing on a device allows many benefits over testing on the simulator, including, but not limited to memory, storage, network connectivity among others.
 

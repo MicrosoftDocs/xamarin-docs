@@ -1,6 +1,6 @@
 ---
-title: "iOS Architecture"
-description: "Exploring Xamarin.iOS at a low level"
+title: "iOS App Architecture"
+description: "This document describes Xamarin.iOS at a low level, discussing how native and managed code interact, AOT compilation, selectors, registrars, application launch, and the generator."
 ms.prod: xamarin
 ms.assetid: F40F2275-17DA-4B4D-9678-618FF25C6803
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/21/2017
 ---
 
-# iOS Architecture
+# iOS App Architecture
 
 Xamarin.iOS applications run within the Mono execution environment,
 and use full Ahead of Time (AOT) compilation  to compile C# code to ARM assembly
@@ -35,7 +35,6 @@ an ARM chip). This guide explores how AOT compiles your managed code to native
 code, and explains how a Xamarin.iOS application works, making full use of
 Apple’s iOS APIs through the use of bindings, while also having access to .NET’s
 BCL and a sophisticated language such as C#.
-
 
 ## AOT
 
@@ -105,10 +104,10 @@ of how this is done:
 
 ```csharp
  class MyViewController : UIViewController{
- 	[Export ("myFunc")]
- 	public void MyFunc ()
- 	{
- 	}
+     [Export ("myFunc")]
+     public void MyFunc ()
+     {
+     }
  }
 ```
 
@@ -117,15 +116,15 @@ of how this is done:
 ```objectivec
 @interface MyViewController : UIViewController { }
 
-	-(void)myFunc;
+    -(void)myFunc;
 @end
 
 @implementation	MyViewController {}
 
-	-(void) myFunc
-	{
-		/* code to call the managed MyViewController.MyFunc method */
-	}
+    -(void) myFunc
+    {
+        /* code to call the managed MyViewController.MyFunc method */
+    }
 @end
 
 ```
@@ -155,7 +154,7 @@ time. This is used by default for device builds. The static registrar can also
 be used with the iOS simulator by passing `--registrar:static` as an `mtouch`
 attribute in your project’s build options, as shown below:
 
-	[![](architecture-images/image1.png "Setting Additional mtouch arguments")](architecture-images/image1.png#lightbox)
+    [![](architecture-images/image1.png "Setting Additional mtouch arguments")](architecture-images/image1.png#lightbox)
 
 For more information on the specifics of the iOS Type Registration system used
 by Xamarin.iOS, refer to the [Type Registrar](~/ios/internals/registrar.md) guide.
@@ -189,33 +188,33 @@ properties:
 ```csharp
 [BaseType (typeof (UIView))]
 public interface UIToolbar : UIBarPositioning {
-	[Export ("initWithFrame:")]
-	IntPtr Constructor (CGRect frame);
+    [Export ("initWithFrame:")]
+    IntPtr Constructor (CGRect frame);
 
-	[Export ("barStyle")]
-	UIBarStyle BarStyle { get; set; }
+    [Export ("barStyle")]
+    UIBarStyle BarStyle { get; set; }
 
-	[Export ("items", ArgumentSemantic.Copy)][NullAllowed]
-	UIBarButtonItem [] Items { get; set; }
+    [Export ("items", ArgumentSemantic.Copy)][NullAllowed]
+    UIBarButtonItem [] Items { get; set; }
 
-	[Export ("translucent", ArgumentSemantic.Assign)]
-	bool Translucent { [Bind ("isTranslucent")] get; set; }
+    [Export ("translucent", ArgumentSemantic.Assign)]
+    bool Translucent { [Bind ("isTranslucent")] get; set; }
 
-	// done manually so we can keep this "in sync" with 'Items' property
-	//[Export ("setItems:animated:")][PostGet ("Items")]
-	//void SetItems (UIBarButtonItem [] items, bool animated);
+    // done manually so we can keep this "in sync" with 'Items' property
+    //[Export ("setItems:animated:")][PostGet ("Items")]
+    //void SetItems (UIBarButtonItem [] items, bool animated);
 
-	[Since (5,0)]
-	[Export ("setBackgroundImage:forToolbarPosition:barMetrics:")]
-	[Appearance]
-	void SetBackgroundImage ([NullAllowed] UIImage backgroundImage, UIToolbarPosition position, UIBarMetrics barMetrics);
+    [Since (5,0)]
+    [Export ("setBackgroundImage:forToolbarPosition:barMetrics:")]
+    [Appearance]
+    void SetBackgroundImage ([NullAllowed] UIImage backgroundImage, UIToolbarPosition position, UIBarMetrics barMetrics);
 
-	[Since (5,0)]
-	[Export ("backgroundImageForToolbarPosition:barMetrics:")]
-	[Appearance]
-	UIImage GetBackgroundImage (UIToolbarPosition position, UIBarMetrics barMetrics);
+    [Since (5,0)]
+    [Export ("backgroundImageForToolbarPosition:barMetrics:")]
+    [Appearance]
+    UIImage GetBackgroundImage (UIToolbarPosition position, UIBarMetrics barMetrics);
 
-	...
+    ...
 }
 ```
 

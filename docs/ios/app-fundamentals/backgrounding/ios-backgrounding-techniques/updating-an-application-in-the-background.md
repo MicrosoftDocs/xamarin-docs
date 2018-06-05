@@ -1,5 +1,6 @@
 ---
-title: "Updating an Application in the Background"
+title: "Updating a Xamarin.iOS App in the Background"
+description: "This document describes various ways to update a Xamarin.iOS app that is in the background, such as region monitoring, background fetch, and remote notifications."
 ms.prod: xamarin
 ms.assetid: A2B2231A-C045-4C11-8176-F9966485197A
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# Updating an Application in the Background
+# Updating a Xamarin.iOS App in the Background
 
 Background refresh is the process of waking an application that is suspended or not running, and updating it with new content. iOS provides three options for refreshing content in the background:
 

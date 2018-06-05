@@ -1,6 +1,6 @@
 ---
 title: "32/64-bit platform considerations"
-description: "Considerations when targeting 32-bit and 64-bit architectures for your application"
+description: "This document describes various considerations to keep in mind when targeting 32-bit and 64-bit architectures for a Xamarin.iOS or Xamarin.Mac application."
 ms.prod: xamarin
 ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: bradumbaugh

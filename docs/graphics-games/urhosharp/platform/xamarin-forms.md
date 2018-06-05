@@ -1,5 +1,6 @@
 ---
 title: "UrhoSharp Xamarin.Forms Support"
+description: "This document discusses hosting UrhoSharp in a Xamarin.Forms application. It links to instructions and sample code for doing so."
 description: "Xamarin.Forms-specific setup for UrhoSharp."
 ms.prod: xamarin
 ms.assetid: B630B8BE-3D8D-4CDB-BDB0-9709052AA46C
@@ -9,8 +10,6 @@ ms.date: 03/29/2017
 ---
 
 # UrhoSharp Xamarin.Forms Support
-
-_Xamarin.Forms-specific setup_
 
 UrhoSharp can be hosted in Xamarin.Forms applications. The Urho code
 can be written in a PCL and shared across platforms.

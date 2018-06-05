@@ -1,5 +1,6 @@
 ---
-title: "Troubleshooting"
+title: "Xamarin Troubleshooting"
+description: "This document links to content that answers frequently asked questions about Xamarin development, describes how to update component references to NuGet, discusses support options, and answers product-specific questions."
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4513D391-9850-4CDC-BE9B-7FF4B14FEFFC
@@ -8,9 +9,10 @@ ms.author: amburns
 ms.date: 02/18/2018
 ---
 
-# Troubleshooting
+# Xamarin Troubleshooting
 
 ## General Issues
+
 ### [Frequently Asked Questions](questions/index.md)
 
 Frequently Asked Questions about the Xamarin Platform, and answers specific to Visual Studio.

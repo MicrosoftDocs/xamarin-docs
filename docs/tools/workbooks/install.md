@@ -1,6 +1,6 @@
 ---
 title: "Workbooks Installation and Requirements"
-description: "How to download, install, and use Xamarin Workbooks."
+description: "This document describes how to download and install Xamarin Workbooks, discussing supported platforms and system requirements."
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: topgenorth

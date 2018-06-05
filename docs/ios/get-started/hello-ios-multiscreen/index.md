@@ -1,6 +1,6 @@
 ---
 title: "Hello, iOS Multiscreen"
-description: "In this two-part guide, we expand the Phoneword application we created in the Hello, iOS guide to handle a second screen. Along the way we’ll introduce the Model-View-Controller design pattern, implement our first iOS navigation, and develop a deeper understanding of iOS application structure and functionality."
+description: "This document links to walkthroughs that expand the Phoneword sample application to add a second screen. The walkthroughs explore the model-view-controller design pattern, iOS navigation, and other core iOS development concepts."
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 79f57ac0-37d0-4593-9dcf-fca93ad0be65
@@ -18,10 +18,7 @@ In the first part of this guide we’ll add a second screen to our Phoneword app
 
 ##  [Part 2: Deep Dive](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
 
-
-
 In the second part of this document, we’ll review what we’ve built and discuss architecture, navigation, and other new iOS concepts that we encounter along the way.
-
 
 ## Related Links
 

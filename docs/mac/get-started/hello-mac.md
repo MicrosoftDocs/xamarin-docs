@@ -1,6 +1,6 @@
 ---
-title: "Hello, Mac"
-description: "This guide walks through the steps of creating a first Xamarin.Mac app, and in the process introduces the development toolchain, including Visual Studio for Mac, Xcode and Interface Builder. It also introduces Outlets and Actions, which expose UI controls to code, and finally, it illustrates how to build, run and test a Xamarin.Mac application."
+title: "Hello, Mac – Walkthrough"
+description: "This document demonstrates how to create a Xamarin.Mac app and introduces Visual Studio for Mac, Xcode, and Interface Builder. It discusses exposing UI controls to code through outlets and actions, and it illustrates how to build, run, and test a Xamarin.Mac application."
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 37D0E9E6-979B-7069-B3BE-C5F0AF99BA72
@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 03/23/2017
 ---
 
-# Hello, Mac
+# Hello, Mac – Walkthrough
 
 Xamarin.Mac allows for the development of fully native Mac apps in C# and .NET using the same OS X libraries and interface controls that are used when developing in *Objective-C* and *Xcode*. Because Xamarin.Mac integrates directly with Xcode, the developer can use Xcode's _Interface Builder_ to create an app's user interfaces (or optionally create them directly in C# code).
 

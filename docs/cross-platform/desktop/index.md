@@ -1,14 +1,15 @@
 ---
 ms.assetid: 65F6A634-9CB0-4BB8-A013-7CA0334F6100
-title: Cross-Platform for Desktop Developers
-description: Xamarin lets you build apps for Windows, Android, iOS, and Mac using your Windows Forms or WPF skills.
+title: "Cross-Platform for Desktop Developers"
+description: "This document links to various guides that describe Xamarin.Forms for WPF and Windows Forms developers. The linked content explores application lifecycle, UI controls, porting guidance, and samples."
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
 ---
+
 # Cross-Platform for Desktop Developers
 
-This section contains information to help WPF and Windows.Forms developers
+This section contains information to help WPF and Windows Forms developers
 to learn mobile app development with Xamarin, by cross-referencing their existing
 knowledge and experience to mobile idioms, and providing examples of porting
 desktop apps to mobile.

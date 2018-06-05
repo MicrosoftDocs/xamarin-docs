@@ -1,6 +1,6 @@
 ---
-title: "Picker"
-description: "This guide covers designing and working with Pickers in a Xamarin.iOS app."
+title: "Picker Control in Xamarin.iOS"
+description: "This document describes how to design and work with picker controls in a Xamarin.iOS app. It discusses how to implement a picker in code and in the iOS Designer."
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 08/02/2017
 ---
 
-# Picker
+# Picker Control in Xamarin.iOS
 
 The Picker control displays 'wheel-like' control that contains a scrollable list of values with the selected value being highlighted. Users rotate the wheel to select the option they want.
 

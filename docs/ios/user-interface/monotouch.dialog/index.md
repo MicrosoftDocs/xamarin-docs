@@ -1,6 +1,6 @@
 ---
-title: "Introduction to MonoTouch.Dialog"
-description: "The MonoTouch.Dialog (MT.D) toolkit is an indispensable framework for rapid application UI development in Xamarin.iOS. MT.D makes it fast and easy to define complex application UI using a declarative approach, rather than the tedium of navigation controllers, tables, etc. Additionally, MT.D has a flexible set of APIs that provide developers with a complete control or hands off approach, as well as additional features such as pull-to-refresh, background image loading, search support, and dynamic UI generation via JSON data. This guide introduces the different ways to work with MT.D and then dives deep into advanced usage."
+title: "Introduction to MonoTouch.Dialog for Xamarin.iOS"
+description: "This document describes MonoTouch.Dialog (MT.D), a framework for rapid, declarative UI development with Xamarin.iOS. It discusses how to use the MonoTouch.Dialog APIs to create an interface in code or JSON and use features like pull-to-refresh, search, background image loading, and more."
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
@@ -8,10 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# Introduction to MonoTouch.Dialog
-
-_The MonoTouch.Dialog (MT.D) toolkit is an indispensable framework for rapid application UI development in Xamarin.iOS. MT.D makes it fast and easy to define complex application UI using a declarative approach, rather than the tedium of navigation controllers, tables, etc. Additionally, MT.D has a flexible set of APIs that provide developers with a complete control or hands off approach, as well as additional features such as pull-to-refresh, background image loading, search support, and dynamic UI generation via JSON data. This guide introduces the different ways to work with MT.D and then dives deep into advanced usage._
-
+# Introduction to MonoTouch.Dialog for Xamarin.iOS
 
 MonoTouch.Dialog, referred to as MT.D for short, is a rapid UI development
 toolkit that allows developers to build out application screens and navigation

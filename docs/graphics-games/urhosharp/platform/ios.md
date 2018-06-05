@@ -1,15 +1,14 @@
 ---
 title: "UrhoSharp iOS and tvOS Support"
-description: "iOS and tvOS Specific Setup and Features for UrhoSharp."
+description: "This document discusses iOS and tvOS support for UrhoSharp. It describes how to create a project, configure and launch Urho, and perform a custom embed of Urho."
 ms.prod: xamarin
 ms.assetid: 7B06567E-E789-4EA1-A2A9-F3B2212EDD23
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
 ---
-# UrhoSharp iOS and tvOS Support
 
-_iOS and tvOS Specific Setup and Features_
+# UrhoSharp iOS and tvOS Support
 
 While Urho is a portable class library, and allows the same API to be
 used across the various platform for your game logic, you still need

@@ -1,6 +1,6 @@
 ---
-title: "Sign with Developer ID"
-description: "This guide walks through signing a Xamarin.Mac app with the Developer ID for publication."
+title: "Signing Xamarin.Mac Apps with a Developer ID"
+description: "This document describes how to sign a Xamarin.Mac app with a developer ID so that it can be distributed outside of the Mac App Store. It discusses code signing options and building."
 ms.prod: xamarin
 ms.assetid: cf7b733b-e08f-4f56-a233-264b29ee4c97
 ms.technology: xamarin-mac
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Sign with Developer ID
+# Signing Xamarin.Mac Apps with a Developer ID
 
 If the developer plans to distribute an app directly to macOS
 users, Apple recommends that they code-sign it with their Developer ID so that it can be installed on macOS systems with **GateKeeper** enabled. If the app has not been signed, **GateKeeper** will prevent users from installing with an alert message (they can bypass this restricting by holding down the Control key while launching).

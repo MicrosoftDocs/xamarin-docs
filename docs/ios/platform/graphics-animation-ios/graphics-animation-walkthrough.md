@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough - Using CoreGraphics and CoreAnimation"
+title: "Using Core Graphics and Core Animation in Xamarin.iOS"
 description: "This article demonstrates step by step how to create an application that uses Core Graphics and Core Animation. It shows how to draw on the screen in response to user touch as well as how to animate an image to travel along a path."
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# Drawing and Animating Along a Path
+# Using Core Graphics and Core Animation in Xamarin.iOS
 
 For this walkthrough we are going to draw a path using Core Graphics in response to touch input. Then, we will add a `CALayer` containing an image that we will animate along the path.
 

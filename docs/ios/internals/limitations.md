@@ -1,5 +1,6 @@
 ---
-title: "Limitations"
+title: "Limitations of Xamarin.iOS"
+description: "This document describes the limitations of Xamarin.iOS, discussing generics, generic subclasses of NSObjects, P/Invokes in generic objects, and more."
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 04/09/2018
 ---
 
-# Limitations
+# Limitations of Xamarin.iOS
 
 Since applications on the iPhone using Xamarin.iOS are compiled to static code,
 	it is not possible to use any facilities that require code generation at

@@ -1,5 +1,6 @@
 ---
 title: "Getting started with iOS"
+description: "This document describes how to get started using .NET Embedding with iOS. It discusses requirements and presents a sample app to demonstrate how to bind a managed assembly and use the output in an Xcode project."
 ms.prod: xamarin
 ms.assetid: D5453695-69C9-44BC-B226-5B86950956E2
 author: topgenorth

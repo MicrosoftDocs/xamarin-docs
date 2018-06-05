@@ -1,6 +1,6 @@
 ---
-title: "tvOS Internals"
-description: "Xamarin.tvOS shares the same DNA as our Xamarin.iOS product, so the advanced documents that we have produced for our iOS product are nearly identical to our tvOS product."
+title: "tvOS in Xamarin – Internals"
+description: "Documents describing the internal workings of tvOS on Xamarin, which is based on Xamarin.iOS. Link content discusses assemblies, target frameworks, and related iOS concepts."
 ms.prod: xamarin
 ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
@@ -9,10 +9,7 @@ ms.author: brumbaug
 ms.date: 06/07/2016
 ---
 
-# tvOS Internals
-
-_Xamarin.tvOS shares the same DNA as our Xamarin.iOS product, so the advanced documents that we have produced for our iOS product are nearly identical to our tvOS product._
-
+# tvOS in Xamarin – Internals 
 
 ##  [Assemblies](~/ios/tvos/internals/assemblies.md)
 
@@ -69,8 +66,6 @@ Notes on using threading within Xamarin.iOS applications.
 ###  [XIB Code Generation](~/ios/internals/xib-code-generation.md)
 
 How Visual Studio for Mac integrates with Xcode's Interface Builder to allow you to use Interface Builder to design UI.
-
-
 
 ## Related Links
 

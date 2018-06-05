@@ -1,12 +1,13 @@
 ---
 title: "An Introduction to SkiaSharp"
-description: "This provides a brief introduction to the concepts behind SkiaSharp"
+description: "This document provides a brief introduction to core SkiaSharp concepts. In particular, it discusses obtaining and drawing on an SKCanvas."
 ms.prod: xamarin
 ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
 ---
+
 # An Introduction to SkiaSharp
 
 _This provides a brief introduction to the concepts behind SkiaSharp_

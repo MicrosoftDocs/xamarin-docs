@@ -1,5 +1,6 @@
 ---
-title: "Subscriptions and Reporting"
+title: "Subscriptions and Reporting in Xamarin.iOS"
+description: "This document describes non-renewing subscriptions, free subscriptions, auto-renewable subscriptions, and using iTunes Connect to report on these items."
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/18/2017
 ---
 
-# Subscriptions and Reporting
+# Subscriptions and Reporting in Xamarin.iOS
 
 ## About Non-Renewing Subscriptions
 
@@ -16,9 +17,7 @@ Non-renewing subscriptions are intended for products that represent the sale
 of a service with a time restriction (such as one week’s access to a
 navigation application or time-limited access to a data archive).   
    
-   
-   
- Key differences between non-renewing subscriptions and other product
+Key differences between non-renewing subscriptions and other product
 types:
 
 -  The product definition in iTunes Connect does not include the term. The application code must be able to infer the validity period from the Product ID. 

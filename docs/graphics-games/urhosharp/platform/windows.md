@@ -1,15 +1,14 @@
 ---
 title: "UrhoSharp Windows Support"
-description: "Windows Specific Setup and Features for UrhoSharp."
+description: "This document discusses Windows support for UrhoSharp. It describes how to create a project, configure and and launch Urho, integrate with WPF, and integrate with UWP."
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
 ---
-# UrhoSharp Windows Support
 
-_Windows Specific Setup and Features_
+# UrhoSharp Windows Support
 
 While Urho is a portable class library, and allows the same API to be
 used across the various platform for your game logic, you still need

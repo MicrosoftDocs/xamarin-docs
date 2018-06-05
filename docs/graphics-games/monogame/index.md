@@ -1,14 +1,16 @@
 ---
-title: "Monogame"
+title: "Monogame Framework"
+description: "This document links to various guides that describe game development with MonoGame: an overview, discussions about 3D graphics and gamepads, and a look at platform-specific considerations."
 ms.prod: xamarin
 ms.assetid: 35EC29CE-538B-4844-BACC-E51823EFF3B5
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
 ---
-# Monogame
 
-MonoGame is an efficient, flexible, cross platform API for developing 2D and 3D games. It provides the foundation for many cross-platform game engines, but can be used directly in games without being wrapped in a game engine.
+# Monogame Framework
+
+MonoGame is an efficient, flexible, cross-platform API for developing 2D and 3D games. It provides the foundation for many cross-platform game engines, but can be used directly in games without being wrapped in a game engine.
 
 ## [Introduction to Game Development with MonoGame](~/graphics-games/monogame/introduction/index.md)
 

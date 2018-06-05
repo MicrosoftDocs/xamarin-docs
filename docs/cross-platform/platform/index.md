@@ -1,6 +1,6 @@
 ---
-title: "Language Support"
-description: "Cross-platform application features and concepts."
+title: "Programming Language Support in Xamarin"
+description: "This document describes various programming languages supported by Xamarin. It discusses C#, F#, portable Visual Basic.NET, and Razor Templates."
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 author: asb3993
@@ -8,11 +8,10 @@ ms.author: amburns
 ms.date: 02/18/2018
 ---
 
-# Language Support
-
-This section contains documents that explain some more advanced cross-platform application features and concepts.
+# Programming Language Support in Xamarin
 
 ## C# 
+
 ###  [Async Support Overview](~/cross-platform/platform/async.md)
 
 Version 5 of C# introduced two new keywords to express asynchronous operations: async and await. These keywords let you write simple code that utilizes the Task Parallel Library to execute long running operations (such as network access) in another thread and easily access the results on completion. The latest versions of Xamarin.iOS and Xamarin.Android support async and await - this document provides explanations and an example of using the new syntax with Xamarin.

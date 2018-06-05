@@ -1,5 +1,6 @@
 ---
-title: "Text Input"
+title: "Text Input in Xamarin.iOS"
+description: "This document describes text input in a Xamarin.iOS app. It discusses using UITextField and UITextVIew both programmatically and in the iOS Designer."
 ms.prod: xamarin
 ms.assetid: 03A7F1DC-017D-4501-91FD-82C78272CDB1
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/21/2017
 ---
 
-# Text Input
+# Text Input in Xamarin.iOS
 
 Accepting user text input is accomplished with the `UITextField` for single-line inputs and UITextView for multi-line editable text. You can drag either of these controls onto a screen and double-click to set the initial text.
 

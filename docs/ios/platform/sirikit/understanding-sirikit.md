@@ -1,6 +1,6 @@
 ---
 title: "Understanding SiriKit Concepts"
-description: "This article covers the key concepts that will be required for working with SiriKit in a Xamarin.iOS app."
+description: "This document describes the key concepts required for working with SiriKit in a Xamarin.iOS app. For example, it discusses Intents and Intents UI extensions, SiriKit permissions, designing a great experience, and more."
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios

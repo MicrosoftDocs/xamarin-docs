@@ -1,6 +1,6 @@
 ---
 title: "Bundling for the Mac App Store"
-description: "This guide walks through bundling a Xamarin.Mac app for publication to the Mac App Store."
+description: "This document describes how to bundle a Xamarin.Mac app for publication to the Mac App Store. It discusses code signing options and building."
 ms.prod: xamarin
 ms.assetid: 00a36d7c-937d-4657-bf6a-0de9684b8f94
 ms.technology: xamarin-mac
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Bundle for Mac App Store
+# Bundling for the Mac App Store
 
 This section describes the basics of building an application for release in the Mac App Store using Visual Studio for Mac. Based on additional features (such as iCloud access and push notifications), further setup may be required that goes beyon the scope of this article.
 

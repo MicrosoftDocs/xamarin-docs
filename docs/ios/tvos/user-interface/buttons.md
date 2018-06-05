@@ -1,6 +1,6 @@
 ---
-title: "Working with Buttons"
-description: "This article covers designing and working with buttons inside of a Xamarin.tvOS app."
+title: "Working with tvOS Buttons in Xamarin"
+description: "This document describes how to work with buttons in a tvOS app built with Xamarin. It discusses how to work with buttons in code and in storyboards, and it examines how to style a button."
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
@@ -9,10 +9,7 @@ ms.author: brumbaug
 ms.date: 03/07/2017
 ---
 
-# Working with Buttons
-
-_This article covers designing and working with buttons inside of a Xamarin.tvOS app._
-
+# Working with tvOS Buttons in Xamarin
 
 Use an instance of the `UIButton` class to create a focusable, selectable button in a tvOS window. When the user selects a button, it sends an Action message to the target object allow your Xamarin.tvOS app respond to the user's input.
 

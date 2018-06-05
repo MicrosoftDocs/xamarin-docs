@@ -1,6 +1,6 @@
 ---
-title: "2D Drawing"
-description: "Cross Platform 2D Drawing with SkiaSharp"
+title: "2D Drawing With SkiaSharp"
+description: "This document provides an overview of cross-platform 2D drawing with SkiaSharp. It links to various guides that describe SkiaSharp and its various APIs."
 ms.prod: xamarin
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 author: charlespetzold
@@ -8,7 +8,7 @@ ms.author: chape
 ms.date: 09/14/2017
 ---
 
-# 2D Drawing
+# 2D Drawing With SkiaSharp
 
 SkiaSharp provides a powerful C# API for doing 2D graphics. It is
 powered by [Google’s Skia library](http://skia.org), the

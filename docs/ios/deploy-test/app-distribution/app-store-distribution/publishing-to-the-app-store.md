@@ -1,6 +1,6 @@
 ---
-title: "Publishing to the App Store"
-description: "This article shows how to configure, build, and publish a Xamarin.iOS application for distribution via the App Store. It includes a step-by-step guide that covers how to prepare your application for distribution, how to use Apple’s tools to submit your application for review, and, finally, how to publish your application to the App Store."
+title: "Publishing Xamarin.iOS Apps to the App Store"
+description: "This document describes how to configure, build, and publish a Xamarin.iOS application for distribution in the App Store."
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 08/23/2017
 ---
 
-# Publishing to the App Store
-
-_This article shows how to configure, build, and publish a Xamarin.iOS application for distribution via the App Store. It includes a step-by-step guide that covers how to prepare your application for distribution, how to use Apple’s tools to submit your application for review, and, finally, how to publish your application to the App Store._
+# Publishing Xamarin.iOS Apps to the App Store
 
 In order distribute applications to all iOS devices, Apple requires apps to be published through the *App Store*, making the App Store the one-stop shopping location for iOS applications. With over 500,000 applications in the store, developers of many types of applications capitalized on the massive success of this single point of distribution. The App Store is a turnkey solution, offering app developers both distribution and payment systems.
 

@@ -1,6 +1,6 @@
 ---
-title: "Debugging"
-description: "Xamarin.iOS applications can be debugged with the built-in debugger in Visual Studio for Mac or Visual Studio."
+title: "Debugging Xamarin.iOS Apps"
+description: "This document describes how to use the debugger in Visual Studio for Mac or Visual Studio 2017 to debug a Xamarin.iOS application, including setting breakpoints, wireless debugging, and more."
 ms.prod: xamarin
 ms.assetid: 05460010-99E1-DC38-F855-2D691EF54484
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/19/2017
 ---
 
-# Debugging
+# Debugging Xamarin.iOS Apps
 
 _Xamarin.iOS applications can be debugged with the built-in debugger in Visual Studio for Mac or Visual Studio._
 

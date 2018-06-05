@@ -1,15 +1,16 @@
 ---
-title: "HttpClient Stack and SSL/TLS Implementation Selector for iOS/macOS"
-description: "The HttpClient Stack and SSL/TLS Implementation Selector determines the HttpClient and SSL/TLS implementation that will be used by your Xamarin iOS, tvOS, or macOS app."
+title: "HttpClient and SSL/TLS Implementation Selector for iOS/macOS"
+description: "The HttpClient stack and SSL/TLS implementation selector determines the HttpClient and SSL/TLS implementation that will be used by your Xamarin iOS, tvOS, or macOS app."
 ms.prod: xamarin
 ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
 ---
-# HttpClient Stack and SSL/TLS Implementation Selector for iOS/macOS
 
-The **HttpClient Implementation  Selector** for Xamarin.iOS, Xamarin.tvOS, and Xamarin.Mac controls which `HttpClient` implementation to use. You can switch to an implementation that uses iOS, tvOS, or macOS native transports (`NSUrlSession` or `CFNetwork`, depending on the OS). The upside is TLS 1.2-support, smaller binaries, and faster downloads; the downside is that it requires the event loop to be running for async operations to be executed.
+# HttpClient and SSL/TLS Implementation Selector for iOS/macOS
+
+The **HttpClient Implementation Selector** for Xamarin.iOS, Xamarin.tvOS, and Xamarin.Mac controls which `HttpClient` implementation to use. You can switch to an implementation that uses iOS, tvOS, or macOS native transports (`NSUrlSession` or `CFNetwork`, depending on the OS). The upside is TLS 1.2-support, smaller binaries, and faster downloads; the downside is that it requires the event loop to be running for async operations to be executed.
 
 Projects must reference the **System.Net.Http** assembly.
 

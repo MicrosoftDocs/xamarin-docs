@@ -1,6 +1,6 @@
 ---
-title: "Background Tasks"
-description: "Use the new Background Tasks watchOS 3 to ensure a watch app always has the latest data and Dock Snapshots."
+title: "watchOS Background Tasks in Xamarin"
+description: "This document describes how to use background tasks with watchOS in Xamarin, taking a look at types of background tasks, using resources, implementing background tasks, scheduling, best practices, and more."
 ms.prod: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/13/2017
 ---
 
-# Background Tasks
-
-_Use the new Background Tasks watchOS 3 to ensure a watch app always has the latest data and Dock Snapshots._
+# watchOS Background Tasks in Xamarin
 
 With watchOS 3, there are three main ways that a watch app can keep its information up-to-date: 
 

@@ -1,5 +1,6 @@
 ---
-title: "Displaying Alerts"
+title: "Displaying Alerts in Xamarin.iOS"
+description: "This document describes how to display alerts in Xamarin.iOS by using the UIAlertController APIs introduced in iOS 8."
 ms.prod: xamarin
 ms.assetid: 61C671E9-3757-4052-86E4-28640025A34A
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/21/2017
 ---
 
-# Displaying Alerts
+# Displaying Alerts in Xamarin.iOS
 
 Starting with iOS 8, UIAlertController has completed replaced UIActionSheet and UIAlertView both of which are now deprecated.
 

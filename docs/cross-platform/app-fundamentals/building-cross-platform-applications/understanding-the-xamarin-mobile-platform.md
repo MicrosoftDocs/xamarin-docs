@@ -1,5 +1,6 @@
 ---
 title: "Part 1 – Understanding the Xamarin Mobile Platform"
+description: "This document describes the Xamarin platform at a high level, looking at the compilation process, platform SDK access, code sharing, user interface creation, visual designers, and more."
 ms.prod: xamarin
 ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
 author: asb3993

@@ -1,6 +1,6 @@
 ---
-title: "Unified Storyboards"
-description: "Unified storyboards allow the iOS developer to create the user interface with a single storyboard, rather than multiple storyboards, to cover the expanding range of device screen sizes. This article is designed to give a deeper overview into the operation of the unified storyboard within Xamarin.iOS."
+title: "Unified Storyboards in Xamarin.iOS"
+description: "This document describes unified storyboards in Xamarin.iOS. Unified storyboards allow developers to support multiple screen sizes with a single interface definition."
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 03/20/2017
 ---
 
-# Unified Storyboards
-
-_Unified storyboards allow the iOS developer to create the user interface with a single storyboard, rather than multiple storyboards, to cover the expanding range of device screen sizes. This article is designed to give a deeper overview into the operation of the unified storyboard within Xamarin.iOS._
+# Unified Storyboards in Xamarin.iOS
 
 iOS 8 includes a new, simpler-to-use mechanism for creating the user interface — the unified storyboard. With a single storyboard to cover all of the different hardware screen sizes, fast and responsive views can be created in a "design-once, use-many" style.
 

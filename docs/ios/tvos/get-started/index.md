@@ -1,6 +1,6 @@
 ---
-title: "Getting Started"
-description: "Learn how to install Xamarin support for tvOS and quickly get started in tvOS development."
+title: "Getting Started with tvOS in Xamarin"
+description: "This document describes how to get started building tvOS apps with Xamarin. It links to an installation guide and a quick start guide."
 ms.prod: xamarin
 ms.assetid: 1A3D8211-A689-41D9-BCFE-AF8398992031
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 06/07/2016
 ---
 
-# Getting Started with Xamarin.tvOS
+# Getting Started with tvOS in Xamarin
 
 Xamarin.tvOS allows for the creation of native tvOS apps with the flexibility and elegance of the modern C# language, the power of the .NET Base Class Library (BCL), and Visual Studio for Mac or Visual Studio 2015 or 2017 on Windows.
 

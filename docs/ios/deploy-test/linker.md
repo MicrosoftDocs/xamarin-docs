@@ -1,5 +1,6 @@
 ---
-title: "Linking on iOS"
+title: "Linking Xamarin.iOS Apps"
+description: "This document describes the Xamarin.iOS linker, which is used to eliminate unused code from a Xamarin.iOS application in order to reduce its size."
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/24/2017
 ---
 
-# Linking on iOS
+# Linking Xamarin.iOS Apps
 
 When building your application, Visual Studio for Mac or Visual Studio calls
 a tool called **mtouch** that includes a linker for managed code. It is

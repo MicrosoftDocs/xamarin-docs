@@ -1,5 +1,6 @@
 ---
-title: "Vision Framework"
+title: "Vision Framework in Xamarin.iOS"
+description: "This document describes how to use the iOS 11 Vision Framework in Xamarin.iOS. Specifically, it discusses rectangle detection and face detection."
 ms.prod: xamarin
 ms.assetid: 7273ED68-7B7D-4252-B3A0-02DB2E357A8C
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 08/31/2016
 ---
 
-# Vision Framework
+# Vision Framework in Xamarin.iOS
 
 The Vision framework adds a number of new image processing features to iOS 11,
 including:

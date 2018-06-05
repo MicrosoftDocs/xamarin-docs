@@ -1,6 +1,6 @@
 ---
-title: "Microsoft Azure"
-description: "Documentation and sample code downloads for Azure."
+title: "Microsoft Azure and Xamarin"
+description: "This document links to documentation about Connected Services in Visual Studio for Mac, Azure Mobile Apps, Active Directory Authentication, and WebAPI."
 ms.prod: xamarin
 ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: asb3993
@@ -8,9 +8,7 @@ ms.author: amburns
 ms.date: 10/09/2017
 ---
 
-# Microsoft Azure
-
-_Documentation and sample code downloads for Azure._
+# Microsoft Azure and Xamarin
 
 [ ![](images/evolve-mikej-azure-sml.png "Azure App Services features are easy to add to Xamarin apps, including cloud data storage and cross-platform push notifications")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
@@ -21,7 +19,6 @@ _Documentation and sample code downloads for Azure._
 The new [Connected Services](connected-services.md) feature of Visual Studio for Mac
   helps developers to quickly and easily add Azure functionality to
   mobile applications from within the IDE. Currently available for testing in the Alpha channel.
-
 
 ## Azure App Services
 

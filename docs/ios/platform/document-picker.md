@@ -1,6 +1,6 @@
 ---
-title: "Document Picker"
-description: "The Document Picker view controller grants users access to files outside an application's sandbox. It is a simple mechanism for sharing documents between apps. It also enables more complex workflows, because users can edit a single document with multiple applications. This article provides an introduction to using the Document Picker in a Xamarin.iOS application and the changes in iCloud Documents required to support it."
+title: "Document Picker in Xamarin.iOS"
+description: "This document describes the iOS Document Picker and discusses how to use it in Xamarin.iOS. It takes a look at iCloud, documents, common setup code, document provider extensions, and more."
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
@@ -8,9 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# Document Picker
-
-_The Document Picker view controller grants users access to files outside an application's sandbox. It is a simple mechanism for sharing documents between apps. It also enables more complex workflows, because users can edit a single document with multiple applications. This article provides an introduction to using the Document Picker in a Xamarin.iOS application and the changes in iCloud Documents required to support it._
+# Document Picker in Xamarin.iOS
 
 The Document Picker allows documents to be shared between apps. These documents may be stored in iCloud or in a different app’s directory. Documents are shared via the set of [Document Provider Extensions](~/ios/platform/extensions.md) the user has installed on their device. 
 

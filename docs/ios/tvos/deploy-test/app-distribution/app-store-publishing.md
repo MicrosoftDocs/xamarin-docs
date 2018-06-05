@@ -1,6 +1,6 @@
 ---
 title: "Publishing to the Apple TV App Store"
-description: "This article shows how to configure, build, and publish a Xamarin.tvOS app for distribution via the Apple TV App Store. It includes a step-by-step guide that covers how to prepare your app for distribution, how to use Apple’s tools to submit your app for review, and, finally, how to publish your app to the Apple TV App Store."
+description: "This document describes how to publish an app to the Apple TV App Store. It discusses how to configure, provision, build, and submit a tvOS application built with Xamarin."
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
@@ -10,8 +10,6 @@ ms.date: 03/16/2017
 ---
 
 # Publishing to the Apple TV App Store
-
-_This article shows how to configure, build, and publish a Xamarin.tvOS app for distribution via the Apple TV App Store. It includes a step-by-step guide that covers how to prepare your app for distribution, how to use Apple’s tools to submit your app for review, and, finally, how to publish your app to the Apple TV App Store._
 
 In order distribute applications to all Apple TV devices, Apple requires apps to be published through the *Apple TV App Store*, making the App Store the one-stop shopping location for tvOS apps. Developers of many types of apps can capitalized on the massive success of this single point of distribution. The Apple TV App Store is a turnkey solution, offering app developers both distribution and payment systems.
 

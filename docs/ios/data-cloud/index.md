@@ -1,6 +1,6 @@
 ---
-title: "Data and Cloud Services"
-description: "Stabilization and Deployment Guides"
+title: "Data and Cloud Services in Xamarin.iOS Apps"
+description: "This document links to guides that describe how to work with local data, iCloud, and CloudKit in a Xamarin.iOS app."
 ms.prod: xamarin
 ms.assetid: 945719F7-7CE6-4207-BF0F-23195125FC84
 ms.technology: xamarin-ios
@@ -9,8 +9,7 @@ ms.author: brumbaug
 ms.date: 06/13/2017
 ---
 
-# Data and Cloud Services
-
+# Data and Cloud Services in Xamarin.iOS Apps
 
 ##  [Data Access](~/ios/data-cloud/data/index.md)
 

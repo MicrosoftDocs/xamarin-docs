@@ -1,6 +1,6 @@
 ---
-title: "Working with Tables and Cells"
-description: "Displaying data using UITableView with Xamarin.iOS"
+title: "Working with Tables and Cells in Xamarin.iOS"
+description: "This document links to various guides that describe how to display data with the UITableView control in a Xamarin.iOS app."
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
@@ -9,8 +9,7 @@ ms.author: brumbaug
 ms.date: 01/06/2016
 ---
 
-# Working with Tables and Cells
-
+# Working with Tables and Cells in Xamarin.iOS
 
 This section introduces the classes used to create and display tables then provides examples of how to use them in Xamarin.iOS. It will cover using the default appearance for tables, customizing the layout, implementing editing and using the Xamarin iOS Designer to design a table visually. Sometimes the display is obviously a list of rows (such as the Music app) and other times it is difficult to recognize the table control (such as editing in the Contacts app, or a conversation in Messages app).
 
@@ -22,7 +21,6 @@ These articles will take a comprehensive look at working with tables, including:
 -   **Displaying data in tables** – Demonstrating how to create and populate a table, use different table and cell styles and avoid memory issues by recycling cell objects. 
 -   **Advanced usage** – Building custom cells and using the editing features of the UITableView class. 
 -   **Creating a table visually** – Using the Xamarin Designer for iOS to create a table-driven interface with a Storyboard. 
-
 
 ## Contents
 
@@ -39,7 +37,6 @@ These articles will take a comprehensive look at working with tables, including:
  [Creating Tables in a Storyboard](~/ios/user-interface/controls/tables/creating-tables-in-a-storyboard.md)
  
  [Auto-Sizing Row Height](~/ios/user-interface/controls/tables/autosizing-row-height.md)
-
 
 ## Related Links
 

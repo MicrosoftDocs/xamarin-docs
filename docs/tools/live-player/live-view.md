@@ -1,13 +1,14 @@
 ---
 redirect_url: /xamarin/tools/live-player/
 title: "XAML Live Previewing"
-description: "Test app code changes in real time on your iOS or Android device"
+description: "This document discusses how to use the Xamarin Live Player to live preview XAML pages, make changes to the XAML, and see the changes appear instantly on device."
 ms.prod: xamarin
 ms.assetid: 86E9A179-21F8-4F3A-A9CE-36F0FC5DB4A8
 author: topgenorth
 ms.author: toopge
 ms.date: 12/21/2017
 ---
+
 # XAML Live Previewing
 
 One of the benefits of the Xamarin Live Player is the ability to live preview XAML pages, make changes to the code in Visual Studio, and see the changes appear instantly on your device. The live preview can be made either on your iOS or Android device, or on a simulator or emulator. This guide demonstrates how to use the live preview feature to view individual XAML screens.
@@ -25,8 +26,6 @@ One of the benefits of the Xamarin Live Player is the ability to live preview XA
 2. Visual Studio for Mac 7.2 or later. We recommend the latest version.
 
 -----
-
-
 
 <a name="deploydevice" />
 
@@ -64,13 +63,6 @@ Before you can use the Xamarin Live Player with your iOS or Android device, you'
 
 -----
 
-
-
-
-
-
-
-
 ## Deploying to Android Emulator
 
 # [Visual Studio](#tab/vswin)
@@ -103,10 +95,6 @@ Before you can use the Xamarin Live Player with your iOS or Android device, you'
 
 -----
 
-
-
-
-
 ## Deploying to iOS Simulator
 
 # [Visual Studio](#tab/vswin)
@@ -132,13 +120,6 @@ There is currently no support for using live XAML previewing on the remoted iOS 
     ![](live-view-images/image5.png)  
 
 -----
-
-
-
-
-
-
-
 
 ## Related Links
 

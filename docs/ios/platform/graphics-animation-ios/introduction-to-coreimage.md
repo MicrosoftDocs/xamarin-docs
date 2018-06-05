@@ -1,6 +1,6 @@
 ---
-title: "CoreImage"
-description: "CoreImage is a new framework introduced with iOS 5 to provide image processing and live video enhancement functionality. This article introduces these features with Xamarin.iOS samples."
+title: "Core Image in Xamarin.iOS"
+description: "Core Image is a new framework introduced with iOS 5 to provide image processing and live video enhancement functionality. This article introduces these features with Xamarin.iOS samples."
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
@@ -9,11 +9,11 @@ ms.author: brumbaug
 ms.date: 03/19/2017
 ---
 
-# CoreImage
+# Core Image in Xamarin.iOS
 
-_CoreImage is a new framework introduced with iOS 5 to provide image processing and live video enhancement functionality. This article introduces these features with Xamarin.iOS samples._
+_Core Image is a new framework introduced with iOS 5 to provide image processing and live video enhancement functionality. This article introduces these features with Xamarin.iOS samples._
 
-CoreImage is a new framework introduced in iOS 5 that provides a number of
+Core Image is a new framework introduced in iOS 5 that provides a number of
 built-in filters and effects to apply to images and videos, including face
 detection.
 
@@ -24,7 +24,7 @@ This document contains simple examples of:
 -  Listing the available filters.
 
 
-These examples should help get you started incorporating CoreImage features
+These examples should help get you started incorporating Core Image features
 into your Xamarin.iOS applications.
 
 ## Requirements
@@ -33,7 +33,7 @@ You must use the latest version of Xcode.
 
 ## Face Detection
 
-The CoreImage face detection feature does just what it says – it attempts
+The Core Image face detection feature does just what it says – it attempts
 to identify faces in a photo and returns the coordinates of any faces that it
 recognizes. This information can be used to count the number of people in an
 image, draw indicators on the image (eg. for ‘tagging’ people in a
@@ -246,7 +246,7 @@ auto-complete in either Visual Studio for Mac or Visual Studio.
 
 ## Summary
 
-This article has shown how to use some of the new iOS 5 CoreImage framework
+This article has shown how to use some of the new iOS 5 Core Image framework
 features like face detection and applying filters to an image. There are dozens
 of different image filters available in the framework for you to use.
 
@@ -254,5 +254,5 @@ of different image filters available in the framework for you to use.
 
 - [Core Image (sample)](https://developer.xamarin.com/samples/CoreImage/)
 - [Adjust Contract and Brightness of an Image Recipe](https://developer.xamarin.com/recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
-- [Using CoreImage Filters](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
+- [Using Core Image Filters](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 - [CIFilter Class Reference](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.htm)

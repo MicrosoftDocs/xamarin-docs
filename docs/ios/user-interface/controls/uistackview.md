@@ -1,5 +1,5 @@
 ---
-title: "Stack View"
+title: "Stack Views in Xamarin.iOS"
 description: "This article covers using the new UIStackView control in a Xamarin.iOS app to manage a set of subviews in either a horizontally or vertically arranged stack."
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 03/20/2017
 ---
 
-# Stack View
+# Stack Views in Xamarin.iOS
 
 _This article covers using the new UIStackView control in a Xamarin.iOS app to manage a set of subviews in either a horizontally or vertically arranged stack._
 

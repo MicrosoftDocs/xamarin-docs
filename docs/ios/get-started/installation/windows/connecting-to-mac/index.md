@@ -1,6 +1,6 @@
 ---
-title: "Pair to Mac"
-description: "This guide describes how to use Pair to Mac to connect Visual Studio 2017 to a Mac build host."
+title: "Pair to Mac for Xamarin.iOS Development"
+description: "This guide describes how to use Pair to Mac to connect Visual Studio 2017 to a Mac build host. It discusses how to enable remote login on the Mac, connect to the Mac from Visual Studio 2017, manually add a Mac build host to the Windows machine, and more."
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 05/29/2018
 ---
 
-# Pair to Mac
+# Pair to Mac for Xamarin.iOS Development
 
 _This guide describes how to use Pair to Mac to connect Visual Studio 2017 
 to a Mac build host._

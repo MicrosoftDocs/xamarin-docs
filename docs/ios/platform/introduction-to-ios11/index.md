@@ -1,6 +1,6 @@
 ---
 title: "Introduction to iOS 11"
-description: "Try new iOS 11 APIs with Xamarin."
+description: "This document links to various guides that describe features of iOS 11, including ARKit, CoreML, MapKit, PDFKit, SiriKit, the Vision framework, and more."
 ms.prod: xamarin
 ms.assetid: 22C38EA6-6DA9-4B92-B41B-814E589033F6
 ms.technology: xamarin-ios

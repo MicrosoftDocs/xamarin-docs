@@ -1,6 +1,6 @@
 ---
 title: "Configuring Visual Studio 2017"
-description: "This article describes various Xamarin.iOS configuration options for Visual Studio 2017."
+description: "This article describes how to configure Visual Studio 2017 for Xamarin.iOS development. In particular, it discusses how to configure the installed version of Xamarin.iOS, the iOS toolbar, and the Solution Platforms drop-down menu."
 ms.prod: xamarin
 ms.assetid: 22D82244-890D-4325-B3CC-C0AC49130BCA
 ms.technology: xamarin-ios

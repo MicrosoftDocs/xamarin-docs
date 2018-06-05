@@ -1,5 +1,6 @@
 ---
-title: "Generic subclasses of NSObject"
+title: "Generic subclasses of NSObject in Xamarin.iOS"
+description: "This document describes how to create create generic subclasses of NSObject. It examines what can and cannot be done, discusses the static registrar, and takes a look at performance."
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
 ms.technology: xamarin-ios
@@ -8,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/21/2017
 ---
 
-# Generic subclasses of NSObject
+# Generic subclasses of NSObject in Xamarin.iOS
 
 ## Using generics with NSObjects
 

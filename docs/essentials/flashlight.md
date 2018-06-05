@@ -1,12 +1,13 @@
 ---
-title: "Xamarin.Essentials Flashlight"
-description: "The Flashlight class has the ability to turn on or off the device's camera flash to turn it into a flashlight."
+title: "Xamarin.Essentials: Flashlight"
+description: "This document describes the Flashlight class in Xamarin.Essentials, which has the ability to turn on or off the device's camera flash to turn it into a flashlight."
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ---
-# Xamarin.Essentials Flashlight
+
+# Xamarin.Essentials: Flashlight
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
 

@@ -1,5 +1,5 @@
 ---
-title: "Application icon"
+title: "Application icon for Xamarin.Mac apps"
 description: "This article covers creating the images required for a Xamarin.Mac application's icon, bundling the images into a .icns file, and including the icon in the Xamarin.Mac project."
 ms.prod: xamarin
 ms.assetid: 675b9405-d9a7-49f0-94ad-417f10a71d11
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ---
 
-# Application icon
+# Application icon for Xamarin.Mac apps
 
 _This article covers creating the images required for a Xamarin.Mac application's icon, bundling the images into a .icns file, and including the icon in the Xamarin.Mac project._
 

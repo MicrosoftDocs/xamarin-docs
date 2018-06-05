@@ -1,6 +1,6 @@
 ---
-title: "Architecture Changes"
-description: "Exploring the new features of iOS 11"
+title: "Architecture Changes in iOS 11"
+description: "This document describes the deprecation of 32-bit apps in iOS 11. It discusses how to update applications to target 64-bit architectures."
 ms.prod: xamarin
 ms.assetid: 55F62F3F-8570-402B-B7D9-2875F76CB946
 ms.technology: xamarin-ios
@@ -9,9 +9,7 @@ ms.author: brumbaug
 ms.date: 09/13/2016
 ---
 
-# Architecture Changes
-
-_Exploring the new features of iOS 11_
+# Architecture Changes in iOS 11
 
 One of the biggest changes that you should be aware of with iOS 11 is the deprecation of 32-bit support for apps, as detailed in [Apple's](https://developer.apple.com/news/?id=06282017b) press release. All new apps and updates to existing apps must support 64-bit. 32-bit apps **will not launch** in iOS 11.
 

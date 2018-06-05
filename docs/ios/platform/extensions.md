@@ -1,6 +1,6 @@
 ---
-title: "iOS Extensions"
-description: "Introduced in iOS 8, Extensions are widgets that are presented by iOS in standard  contexts, such as within the Notification Center, when the user requests a custom keyboard, or when they are photo editing. All Extensions are installed in conjunction with a Container app and are activated from a particular Extension Point in a Host app."
+title: "iOS Extensions in Xamarin.iOS"
+description: "This document describes extensions, which are widgets presented by iOS in standard context such as within the Notification Center. It discusses how to create an extension and communicate with it from the parent app."
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
@@ -10,9 +10,7 @@ ms.author: brumbaug
 ms.date: 03/22/2017
 ---
 
-# iOS Extensions
-
-_Introduced in iOS 8, Extensions are widgets that are presented by iOS in standard  contexts, such as within the Notification Center, when the user requests a custom keyboard, or when they are photo editing. All Extensions are installed in conjunction with a Container app and are activated from a particular Extension Point in a Host app._
+# iOS Extensions in Xamarin.iOS
 
 > [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
 

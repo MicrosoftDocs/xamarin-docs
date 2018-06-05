@@ -1,6 +1,6 @@
 ---
-title: "Using the MonoGame PipelineTool"
-description: "The MonoGame Pipeline Tool is used to create and manage MonoGame content projects. The files in content projects are processed by the Monogame Pipeline tool and outputted as .xnb files for use in CocosSharp and MonoGame applications."
+title: "Using the MonoGame Pipeline Tool"
+description: "The MonoGame Pipeline Tool is used to create and manage MonoGame content projects. The files in content projects are processed by the MonoGame Pipeline tool and outputted as .xnb files for use in CocosSharp and MonoGame applications."
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: charlespetzold
@@ -10,7 +10,7 @@ ms.date: 03/27/2017
 
 # Using the MonoGame Pipeline Tool
 
-_The MonoGame Pipeline Tool is used to create and manage MonoGame content projects. The files in content projects are processed by the Monogame Pipeline tool and outputted as .xnb files for use in CocosSharp and MonoGame applications._
+_The MonoGame Pipeline Tool is used to create and manage MonoGame content projects. The files in content projects are processed by the MonoGame Pipeline tool and outputted as .xnb files for use in CocosSharp and MonoGame applications._
 
 The MonoGame Pipeline Tool provides an easy-to-use environment for converting content files into **.xnb** files for use in CocosSharp and MonoGame applications. For information on content pipelines and why they are useful in game development, see [this introduction on content pipelines](~/graphics-games/cocossharp/content-pipeline/introduction.md)
 

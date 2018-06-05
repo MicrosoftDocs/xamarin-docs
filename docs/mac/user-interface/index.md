@@ -1,6 +1,6 @@
 ---
-title: "macOS user interface"
-description: "This article links to guides that describe various macOS UI controls."
+title: "macOS user interface controls in Xamarin.Mac"
+description: "This document links to guides that describe various user interface controls available to Xamarin.Mac developers. Linked content takes a look at windows, dialogs, alerts, menus, toolbars, table views, outline views, and more."
 ms.prod: xamarin
 ms.assetid: 876B6EC2-E158-43F2-B9C9-03F54F3D2A49
 ms.technology: xamarin-mac
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 03/27/2018
 ---
 
-# macOS user interface
+# macOS user interface controls in Xamarin.Mac
 
 _This article links to guides that describe various macOS UI controls._
 

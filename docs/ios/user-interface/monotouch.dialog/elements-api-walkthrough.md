@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough - Creating an application using the Elements API"
+title: "Creating a Xamarin.iOS application using the Elements API"
 description: "This article builds upon the information presented in the Introduction to MonoTouch Dialog article. It presents a walkthrough that shows how to use the MonoTouch.Dialog (MT.D) Elements API to quickly get started building an application with MT.D."
 ms.prod: xamarin
 ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
@@ -8,7 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ---
 
-# Walkthrough - Creating an application using the Elements API
+# Creating a Xamarin.iOS application using the Elements API
 
 _This article builds upon the information presented in the Introduction to MonoTouch Dialog article. It presents a walkthrough that shows how to use the MonoTouch.Dialog (MT.D) Elements API to quickly get started building an application with MT.D._
 
