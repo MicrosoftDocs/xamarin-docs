@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: topgenorth
 ms.author: toopge
-ms.date: 10/27/2017
+ms.date: 06/03/2018
 ---
 
 # Xamarin Profiler
@@ -286,13 +286,15 @@ The plot chart, as shown in the screenshot below, displays the number of samples
 
 ### Cycles
 
-Through the use of C# and F# managed code, it can be quite common, and unfortunately quite easy to create references to objects which will never be disposed. This intrument allows you to pinpoint those objects, and display the cycles referenced in your application.
+Through the use of C# and F# managed code, it can be quite common, and unfortunately quite easy to create references to objects which will never be disposed. This instrument allows you to pinpoint those objects, and display the cycles referenced in your application.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
+[![Cycles Instrument](images/cycles.m751-sml.png)](images/cycles.m751.png#lightbox) 
+
 # [Visual Studio](#tab/vswin)
 
-[![Cycles Instrument](images/cycles-vs.png)](images/time1-vs.png#lightbox) 
+[![Cycles Instrument](images/cycles-vs-sml.png)](images/cycles-vs.png#lightbox) 
 
 -----
 
