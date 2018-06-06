@@ -32,7 +32,7 @@ Adding a .NET Standard Library to your solution is fairly straight forward.
 
   **Note:** This template will be renamed to `.NET Standard` in a future version of Visual Studio for Mac.
 
-  ![Create a .NET Core class library](net-standard-images/vsm01.png)
+  ![Create a .NET Core class library](net-standard-images/vsm01.png "Creating a New .NET Core Class Library")
 
 2. The .NET Standard Library project will appear as shown in the Solution Explorer. The Dependencies node will indicate that the library uses the [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
 
@@ -42,7 +42,7 @@ Adding a .NET Standard Library to your solution is fairly straight forward.
 
 The .NET Standard Library settings can be viewed and changed by right-clicking on the project and selecting `Options` as shown in this screenshot:
 
-![Edit .NET Standard target framework in Project Options](net-standard-images/vsm03.png)
+![Edit .NET Standard target framework in Project Options](net-standard-images/vsm03.png "Edit the version of the .NET Standard Target Framework in Project Options")
 
 Inside you can change your version of `netstandard` by changing the `Target Framework` dropdown value.
 
@@ -62,17 +62,17 @@ Adding a .NET Standard Library to your solution is fairly straight forward.
 
 1. In the Add New Project dialog, select the `.NET Standard` category and then select `Class Library(.NET Standard)`.
 
-  ![](net-standard-images/vs01.png "Create new .NET Standard class library")
+  ![Creating a New .NET Standard Class Library](net-standard-images/vs01.png "Create new .NET Standard class library")
 
 2. The .NET Standard Library project will appear as shown in the Solution Explorer. The Dependencies node will indicate that the library uses the [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
 
-  ![](net-standard-images/vs02.png ".NET Standard project in solution")
+  ![NETStandard.Library in the Project Folder](net-standard-images/vs02.png ".NET Standard project in solution")
 
 #### Editing .NET Standard Library Settings
 
 The .NET Standard Library settings can be viewed and changed by right-clicking on the project and selecting `Properties` as shown in this screenshot:
 
-![](net-standard-images/vs03.png "Reference a .NET Standard library the same way as other projects")
+![Edit .NET standard target frameworks in project properties](net-standard-images/vs03.png "Reference a .NET Standard library the same way as other projects")
 
 Inside you can change your version of `netstandard` by changing the `Target Framework` dropdown value.
 
@@ -82,7 +82,7 @@ Inside you can change your version of `netstandard` by changing the `Target Fram
 
 Once a .NET Standard Library has been created, you can add a reference to it from any compatible Application or Library project in the same way you normally add references. In Visual Studio, right-click on the References node and choose `Add Reference...` then switch to the `Solution : Projects` tab as shown:
 
-![](net-standard-images/vs04.png "In Visual Studio, right-click on the References node and choose Add Reference... then switch to the Solution  Projects tab as shown")
+![Referencing a .NET Standard Library](net-standard-images/vs04.png "In Visual Studio, right-click on the References node and choose Add Reference... then switch to the Solution  Projects tab as shown")
 
 -----
 
