@@ -6,7 +6,7 @@ ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
+ms.date: 06/05/2018
 ---
 
 # Hardware Acceleration for Emulator Performance
@@ -109,6 +109,11 @@ Android Emulator. To use the Google Android Emulator with Hyper-V:
 
 
 ### Known Issues
+
+-   If you are unable to update to emulator version 27.2.7 or later after
+    updating to a Visual Studio preview, you may have to
+    directly install the [preview installer](http://aka.ms/hyperv-emulator-dl)
+    to enable newer emulator versions.
 
 -   Performance may be reduced when using certain Intel and AMD-based
     processors.
