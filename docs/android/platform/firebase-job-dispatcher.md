@@ -6,14 +6,13 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 05/08/2018
+ms.date: 06/05/2018
 ---
 
 # Firebase Job Dispatcher
 
 _This guide discusses how to schedule background work using the Firebase Job Dispatcher library from Google._
 
-![Firebase Job Dispatcher in Preview](~/media/shared/preview.png)
 
 ## Overview
 
@@ -61,9 +60,6 @@ The Firebase Job Dispatcher requires Android API level 9 or higher. The Firebase
 To get started with the Firebase Job Dispatcher, first add the [Xamarin.Firebase.JobDispatcher NuGet package](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher) to the Xamarin.Android project. Search the NuGet Package Manager for the **Xamarin.Firebase.JobDispatcher** package (which is still in pre-release).
 
 After adding the Firebase Job Dispatcher library, create a `JobService` class and then schedule it to run with an instance of the `FirebaseJobDispatcher`.
-
-> [!NOTE]
-> The current binding for the Firebase Job Dispatcher targets an old version of the library. The is a [known bug[(https://bugzilla.xamarin.com/show_bug.cgi?id=59046)] which prevents the binding from being updated to target a newer version of the Firebase Job Dispatcher.
 
 
 ### Creating a JobService
@@ -289,7 +285,6 @@ This guide discussed how to use the Firebase Job Dispatcher to intelligently per
 
 ## Related Links
 
-- [Bindings Generator fails with ERROR FATAL UNHANDLED EXCEPTION: System.ArgumentNullException: Value cannot be null.](https://bugzilla.xamarin.com/show_bug.cgi?id=59046)
 - [Xamarin.Firebase.JobDispatcher on NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher)
 - [firebase-job-dispatcher on GitHub](https://github.com/firebase/firebase-jobdispatcher-android)
 - [Xamarin.Firebase.JobDispatcher Binding](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
