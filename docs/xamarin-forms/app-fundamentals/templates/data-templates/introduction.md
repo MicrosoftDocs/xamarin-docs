@@ -31,9 +31,9 @@ The `Person` class defines `Name`, `Age`, and `Location` properties, which can b
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DataTemplates"
              ...>
-	<StackLayout Margin="20">
-		...
-		<ListView Margin="0,20,0,0">
+    <StackLayout Margin="20">
+        ...
+        <ListView Margin="0,20,0,0">
             <ListView.ItemsSource>
                 <x:Array Type="{x:Type local:Person}">
                     <local:Person Name="Steve" Age="21" Location="USA" />
@@ -45,7 +45,7 @@ The `Person` class defines `Name`, `Age`, and `Location` properties, which can b
                 </x:Array>
             </ListView.ItemsSource>
         </ListView>
-	</StackLayout>
+    </StackLayout>
 </ContentPage>
 ```
 

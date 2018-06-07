@@ -72,18 +72,18 @@ public async Task<SpeechResult> RecognizeSpeechAsync(string filename)
 {
     ...
 
-	// Read audio file to a stream
-	var file = await PCLStorage.FileSystem.Current.LocalStorage.GetFileAsync(filename);
-	var fileStream = await file.OpenAsync(PCLStorage.FileAccess.Read);
+    // Read audio file to a stream
+    var file = await PCLStorage.FileSystem.Current.LocalStorage.GetFileAsync(filename);
+    var fileStream = await file.OpenAsync(PCLStorage.FileAccess.Read);
 
-	// Send audio stream to Bing and deserialize the response
-	string requestUri = GenerateRequestUri(Constants.SpeechRecognitionEndpoint);
-	string accessToken = authenticationService.GetAccessToken();
-	var response = await SendRequestAsync(fileStream, requestUri, accessToken, Constants.AudioContentType);
-	var speechResult = JsonConvert.DeserializeObject<SpeechResult>(response);
+    // Send audio stream to Bing and deserialize the response
+    string requestUri = GenerateRequestUri(Constants.SpeechRecognitionEndpoint);
+    string accessToken = authenticationService.GetAccessToken();
+    var response = await SendRequestAsync(fileStream, requestUri, accessToken, Constants.AudioContentType);
+    var speechResult = JsonConvert.DeserializeObject<SpeechResult>(response);
 
-	fileStream.Dispose();
-	return speechResult;
+    fileStream.Dispose();
+    return speechResult;
 }
 ```
 

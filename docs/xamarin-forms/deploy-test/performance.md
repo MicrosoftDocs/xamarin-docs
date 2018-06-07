@@ -58,13 +58,13 @@ A layout that's capable of displaying multiple children, but that only has a sin
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 x:Class="DisplayImage.HomePage">
-	<ContentPage.Content>
-		<StackLayout>
-			<Image Source="waterfront.jpg" />
-		</StackLayout>
-	</ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DisplayImage.HomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="waterfront.jpg" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -72,11 +72,11 @@ This is wasteful and the [`StackLayout`](https://developer.xamarin.com/api/type/
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 x:Class="DisplayImage.HomePage">
-	<ContentPage.Content>
-		<Image Source="waterfront.jpg" />
-	</ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DisplayImage.HomePage">
+    <ContentPage.Content>
+        <Image Source="waterfront.jpg" />
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -84,29 +84,29 @@ In addition, don't attempt to reproduce the appearance of a specific layout by u
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 x:Class="Details.HomePage"
-			 Padding="0,20,0,0">
-	<ContentPage.Content>
-		<StackLayout>
-			<StackLayout Orientation="Horizontal">
-				<Label Text="Name:" />
-				<Entry Placeholder="Enter your name" />
-			</StackLayout>
-			<StackLayout Orientation="Horizontal">
-				<Label Text="Age:" />
-				<Entry Placeholder="Enter your age" />
-			</StackLayout>
-			<StackLayout Orientation="Horizontal">
-				<Label Text="Occupation:" />
-				<Entry Placeholder="Enter your occupation" />
-			</StackLayout>
-			<StackLayout Orientation="Horizontal">
-				<Label Text="Address:" />
-				<Entry Placeholder="Enter your address" />
-			</StackLayout>
-		</StackLayout>
-	</ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Details.HomePage"
+             Padding="0,20,0,0">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Name:" />
+                <Entry Placeholder="Enter your name" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Age:" />
+                <Entry Placeholder="Enter your age" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Occupation:" />
+                <Entry Placeholder="Enter your occupation" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Address:" />
+                <Entry Placeholder="Enter your address" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -114,31 +114,31 @@ This is wasteful because unnecessary layout calculations are performed. Instead,
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 x:Class="Details.HomePage"
-			 Padding="0,20,0,0">
-	<ContentPage.Content>
-		<Grid>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="100" />
-				<ColumnDefinition Width="*" />
-			</Grid.ColumnDefinitions>
-			<Grid.RowDefinitions>
-				<RowDefinition Height="30" />
-				<RowDefinition Height="30" />
-				<RowDefinition Height="30" />
-				<RowDefinition Height="30" />
-			</Grid.RowDefinitions>
-			<Label Text="Name:" />
-			<Entry Grid.Column="1" Placeholder="Enter your name" />
-			<Label Grid.Row="1" Text="Age:" />
-			<Entry Grid.Row="1" Grid.Column="1" Placeholder="Enter your age" />
-			<Label Grid.Row="2" Text="Occupation:" />
-			<Entry Grid.Row="2" Grid.Column="1" Placeholder="Enter your occupation" />
-			<Label Grid.Row="3" Text="Address:" />
-			<Entry Grid.Row="3" Grid.Column="1" Placeholder="Enter your address" />
-		</Grid>
-	</ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Details.HomePage"
+             Padding="0,20,0,0">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <Label Text="Name:" />
+            <Entry Grid.Column="1" Placeholder="Enter your name" />
+            <Label Grid.Row="1" Text="Age:" />
+            <Entry Grid.Row="1" Grid.Column="1" Placeholder="Enter your age" />
+            <Label Grid.Row="2" Text="Occupation:" />
+            <Entry Grid.Row="2" Grid.Column="1" Placeholder="Enter your occupation" />
+            <Label Grid.Row="3" Text="Address:" />
+            <Entry Grid.Row="3" Grid.Column="1" Placeholder="Enter your address" />
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -209,17 +209,17 @@ The second technique is to remove unnecessary elements. For example, the followi
 
 ```xaml
 <ContentPage.Content>
-	<StackLayout>
-		<StackLayout Padding="20,20,0,0">
-			<Label Text="Hello" />
-		</StackLayout>
-		<StackLayout Padding="20,20,0,0">
-			<Label Text="Welcome to the App!" />
-		</StackLayout>
-		<StackLayout Padding="20,20,0,0">
-			<Label Text="Downloading Data..." />
-		</StackLayout>
-	</StackLayout>
+    <StackLayout>
+        <StackLayout Padding="20,20,0,0">
+            <Label Text="Hello" />
+        </StackLayout>
+        <StackLayout Padding="20,20,0,0">
+            <Label Text="Welcome to the App!" />
+        </StackLayout>
+        <StackLayout Padding="20,20,0,0">
+            <Label Text="Downloading Data..." />
+        </StackLayout>
+    </StackLayout>
 </ContentPage.Content>
 ```
 
@@ -243,17 +243,17 @@ Any resources that are used throughout the application should be stored in the a
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
-   			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    		 x:Class="Resources.App">
-	 <Application.Resources>
-	 	<ResourceDictionary>
-			<Style x:Key="HeadingLabelStyle" TargetType="Label">
-				<Setter Property="HorizontalOptions" Value="Center" />
-				<Setter Property="FontSize" Value="Large" />
-				<Setter Property="TextColor" Value="Red" />
-			</Style>
-	 	</ResourceDictionary>
-	 </Application.Resources>
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Resources.App">
+     <Application.Resources>
+         <ResourceDictionary>
+            <Style x:Key="HeadingLabelStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="Red" />
+            </Style>
+         </ResourceDictionary>
+     </Application.Resources>
 </Application>
 ```
 
@@ -261,21 +261,21 @@ However, XAML that's specific to a page shouldn't be included in the app's resou
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 x:Class="Test.HomePage"
-			 Padding="0,20,0,0">
-	 <ContentPage.Resources>
- 	 	<ResourceDictionary>
-			<Style x:Key="HeadingLabelStyle" TargetType="Label">
-				<Setter Property="HorizontalOptions" Value="Center" />
-				<Setter Property="FontSize" Value="Large" />
-				<Setter Property="TextColor" Value="Red" />
-			</Style>
-		</ResourceDictionary>
-	 </ContentPage.Resources>
-	<ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test.HomePage"
+             Padding="0,20,0,0">
+     <ContentPage.Resources>
+          <ResourceDictionary>
+            <Style x:Key="HeadingLabelStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="Red" />
+            </Style>
+        </ResourceDictionary>
+     </ContentPage.Resources>
+    <ContentPage.Content>
       ...
-	</ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>
 
 ```

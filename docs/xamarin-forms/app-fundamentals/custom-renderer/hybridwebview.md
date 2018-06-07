@@ -85,13 +85,13 @@ The `HybridWebView` custom control can be referenced in XAML in the .NET Standar
 
 ```xaml
 <ContentPage ...
-			 xmlns:local="clr-namespace:CustomRenderer;assembly=CustomRenderer"
-			 x:Class="CustomRenderer.HybridWebViewPage"
-			 Padding="0,20,0,0">
-	<ContentPage.Content>
-		<local:HybridWebView x:Name="hybridWebView" Uri="index.html"
+             xmlns:local="clr-namespace:CustomRenderer;assembly=CustomRenderer"
+             x:Class="CustomRenderer.HybridWebViewPage"
+             Padding="0,20,0,0">
+    <ContentPage.Content>
+        <local:HybridWebView x:Name="hybridWebView" Uri="index.html"
           HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-	</ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -209,17 +209,17 @@ Enter name: <input type="text" id="name">
 <script type="text/javascript">
 function log(str)
 {
-	$('#result').text($('#result').text() + " " + str);
+    $('#result').text($('#result').text() + " " + str);
 }
 
 function invokeCSCode(data) {
-	try {
-	    log("Sending Data:" + data);
-	    invokeCSharpAction(data);
-	}
-	catch (err){
-	  	log(err);
-	}
+    try {
+        log("Sending Data:" + data);
+        invokeCSharpAction(data);
+    }
+    catch (err){
+          log(err);
+    }
 }
 </script>
 </body>
@@ -255,42 +255,42 @@ The following code example shows the custom renderer for the iOS platform:
 [assembly: ExportRenderer (typeof(HybridWebView), typeof(HybridWebViewRenderer))]
 namespace CustomRenderer.iOS
 {
-	public class HybridWebViewRenderer : ViewRenderer<HybridWebView, WKWebView>, IWKScriptMessageHandler
-	{
-		const string JavaScriptFunction = "function invokeCSharpAction(data){window.webkit.messageHandlers.invokeAction.postMessage(data);}";
-		WKUserContentController userController;
+    public class HybridWebViewRenderer : ViewRenderer<HybridWebView, WKWebView>, IWKScriptMessageHandler
+    {
+        const string JavaScriptFunction = "function invokeCSharpAction(data){window.webkit.messageHandlers.invokeAction.postMessage(data);}";
+        WKUserContentController userController;
 
-		protected override void OnElementChanged (ElementChangedEventArgs<HybridWebView> e)
-		{
-			base.OnElementChanged (e);
+        protected override void OnElementChanged (ElementChangedEventArgs<HybridWebView> e)
+        {
+            base.OnElementChanged (e);
 
-			if (Control == null) {
-				userController = new WKUserContentController ();
-				var script = new WKUserScript (new NSString (JavaScriptFunction), WKUserScriptInjectionTime.AtDocumentEnd, false);
-				userController.AddUserScript (script);
-				userController.AddScriptMessageHandler (this, "invokeAction");
+            if (Control == null) {
+                userController = new WKUserContentController ();
+                var script = new WKUserScript (new NSString (JavaScriptFunction), WKUserScriptInjectionTime.AtDocumentEnd, false);
+                userController.AddUserScript (script);
+                userController.AddScriptMessageHandler (this, "invokeAction");
 
-				var config = new WKWebViewConfiguration { UserContentController = userController };
-				var webView = new WKWebView (Frame, config);
-				SetNativeControl (webView);
-			}
-			if (e.OldElement != null) {
-				userController.RemoveAllUserScripts ();
-				userController.RemoveScriptMessageHandler ("invokeAction");
-				var hybridWebView = e.OldElement as HybridWebView;
-				hybridWebView.Cleanup ();
-			}
-			if (e.NewElement != null) {
-				string fileName = Path.Combine (NSBundle.MainBundle.BundlePath, string.Format ("Content/{0}", Element.Uri));
-				Control.LoadRequest (new NSUrlRequest (new NSUrl (fileName, false)));
-			}
-		}
+                var config = new WKWebViewConfiguration { UserContentController = userController };
+                var webView = new WKWebView (Frame, config);
+                SetNativeControl (webView);
+            }
+            if (e.OldElement != null) {
+                userController.RemoveAllUserScripts ();
+                userController.RemoveScriptMessageHandler ("invokeAction");
+                var hybridWebView = e.OldElement as HybridWebView;
+                hybridWebView.Cleanup ();
+            }
+            if (e.NewElement != null) {
+                string fileName = Path.Combine (NSBundle.MainBundle.BundlePath, string.Format ("Content/{0}", Element.Uri));
+                Control.LoadRequest (new NSUrlRequest (new NSUrl (fileName, false)));
+            }
+        }
 
-		public void DidReceiveScriptMessage (WKUserContentController userContentController, WKScriptMessage message)
-		{
-			Element.InvokeAction (message.Body.ToString ());
-		}
-	}
+        public void DidReceiveScriptMessage (WKUserContentController userContentController, WKScriptMessage message)
+        {
+            Element.InvokeAction (message.Body.ToString ());
+        }
+    }
 }
 ```
 

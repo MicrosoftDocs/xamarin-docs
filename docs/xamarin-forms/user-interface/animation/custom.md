@@ -74,10 +74,10 @@ Alternatively, the code example can be written more concisely, as demonstrated i
 
 ```csharp
 new Animation {
-	{ 0, 0.5, new Animation (v => image.Scale = v, 1, 2) },
-	{ 0, 1, new Animation (v => image.Rotation = v, 0, 360) },
-	{ 0.5, 1, new Animation (v => image.Scale = v, 2, 1) }
-	}.Commit (this, "ChildAnimations", 16, 4000, null, (v, c) => SetIsEnabledButtonState (true, false));
+    { 0, 0.5, new Animation (v => image.Scale = v, 1, 2) },
+    { 0, 1, new Animation (v => image.Rotation = v, 0, 360) },
+    { 0.5, 1, new Animation (v => image.Scale = v, 2, 1) }
+    }.Commit (this, "ChildAnimations", 16, 4000, null, (v, c) => SetIsEnabledButtonState (true, false));
 ```
 
 In both code examples, a parent [`Animation`](https://developer.xamarin.com/api/type/Xamarin.Forms.Animation/) object is created, to which additional `Animation` objects are then added. The first two arguments to the [`Add`](https://developer.xamarin.com/api/member/Xamarin.Forms.Animation.Add/p/System.Double/System.Double/Xamarin.Forms.Animation/) method specify when to begin and finish the child animation. The argument values must be between 0 and 1, and represent the relative period within the parent animation that the specified child animation will be active. Therefore, in this example the `scaleUpAnimation` will be active for the first half of the animation, the `scaleDownAnimation` will be active for the second half of the animation, and the `rotateAnimation` will be active for the entire duration.

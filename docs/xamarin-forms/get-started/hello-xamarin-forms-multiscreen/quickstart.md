@@ -35,9 +35,9 @@ Extend the Phoneword application as follows:
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-    			       xmlns:local="clr-namespace:Phoneword;assembly=Phoneword"
-    			       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    			       x:Class="Phoneword.CallHistoryPage"
+                       xmlns:local="clr-namespace:Phoneword;assembly=Phoneword"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       x:Class="Phoneword.CallHistoryPage"
                        Title="Call History">
         <ContentPage.Padding>
             <OnPlatform x:TypeArguments="Thickness">
@@ -67,18 +67,18 @@ Extend the Phoneword application as follows:
     [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Phoneword
     {
-    	public partial class App : Application
-    	{
-    		public static IList<string> PhoneNumbers { get; set; }
+        public partial class App : Application
+        {
+            public static IList<string> PhoneNumbers { get; set; }
 
-    		public App()
-    		{
-    			InitializeComponent();
-    			PhoneNumbers = new List<string>();
-    			MainPage = new NavigationPage(new MainPage());
-    		}
+            public App()
+            {
+                InitializeComponent();
+                PhoneNumbers = new List<string>();
+                MainPage = new NavigationPage(new MainPage());
+            }
             ...
-    	}
+        }
     }
     ```
 
@@ -116,26 +116,26 @@ Extend the Phoneword application as follows:
 
     namespace Phoneword
     {
-    	public partial class MainPage : ContentPage
-    	{
+        public partial class MainPage : ContentPage
+        {
             ...
 
-    		async void OnCall(object sender, EventArgs e)
-    		{
+            async void OnCall(object sender, EventArgs e)
+            {
                 ...
-    			if (dialer != null) {
-    				App.PhoneNumbers.Add (translatedNumber);
-    				callHistoryButton.IsEnabled = true;
-    				dialer.Dial (translatedNumber);
-    			}
+                if (dialer != null) {
+                    App.PhoneNumbers.Add (translatedNumber);
+                    callHistoryButton.IsEnabled = true;
+                    dialer.Dial (translatedNumber);
+                }
                 ...
-    		}
+            }
 
-    		async void OnCallHistory(object sender, EventArgs e)
-    		{
-    			await Navigation.PushAsync (new CallHistoryPage ());
-    		}
-    	}
+            async void OnCallHistory(object sender, EventArgs e)
+            {
+                await Navigation.PushAsync (new CallHistoryPage ());
+            }
+        }
     }
     ```
 
@@ -181,9 +181,9 @@ Extend the Phoneword application as follows:
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-    			       xmlns:local="clr-namespace:Phoneword;assembly=Phoneword"
-    			       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    			       x:Class="Phoneword.CallHistoryPage"
+                       xmlns:local="clr-namespace:Phoneword;assembly=Phoneword"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       x:Class="Phoneword.CallHistoryPage"
                        Title="Call History">
         <ContentPage.Padding>
             <OnPlatform x:TypeArguments="Thickness">
@@ -213,18 +213,18 @@ Extend the Phoneword application as follows:
     [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Phoneword
     {
-    	public partial class App : Application
-    	{
-    		public static IList<string> PhoneNumbers { get; set; }
+        public partial class App : Application
+        {
+            public static IList<string> PhoneNumbers { get; set; }
 
-    		public App()
-    		{
-    			InitializeComponent();
-    			PhoneNumbers = new List<string>();
-    			MainPage = new NavigationPage(new MainPage());
-    		}
+            public App()
+            {
+                InitializeComponent();
+                PhoneNumbers = new List<string>();
+                MainPage = new NavigationPage(new MainPage());
+            }
             ...
-    	}
+        }
     }
     ```
 
@@ -262,26 +262,26 @@ Extend the Phoneword application as follows:
 
     namespace Phoneword
     {
-    	public partial class MainPage : ContentPage
-    	{
+        public partial class MainPage : ContentPage
+        {
             ...
 
-    		async void OnCall(object sender, EventArgs e)
-    		{
+            async void OnCall(object sender, EventArgs e)
+            {
                 ...
-    			if (dialer != null) {
-    				App.PhoneNumbers.Add (translatedNumber);
-    				callHistoryButton.IsEnabled = true;
-    				dialer.Dial (translatedNumber);
-    			}
+                if (dialer != null) {
+                    App.PhoneNumbers.Add (translatedNumber);
+                    callHistoryButton.IsEnabled = true;
+                    dialer.Dial (translatedNumber);
+                }
                 ...
-    		}
+            }
 
-    		async void OnCallHistory(object sender, EventArgs e)
-    		{
-    			await Navigation.PushAsync (new CallHistoryPage ());
-    		}
-    	}
+            async void OnCallHistory(object sender, EventArgs e)
+            {
+                await Navigation.PushAsync (new CallHistoryPage ());
+            }
+        }
     }
     ```
 

@@ -62,12 +62,12 @@ The `CustomMap` control can be referenced in XAML in the .NET Standard library p
 
 ```xaml
 <ContentPage ...
-			 xmlns:local="clr-namespace:CustomRenderer;assembly=CustomRenderer">
-	<ContentPage.Content>
-		<local:CustomMap x:Name="myMap" MapType="Street"
+             xmlns:local="clr-namespace:CustomRenderer;assembly=CustomRenderer">
+    <ContentPage.Content>
+        <local:CustomMap x:Name="myMap" MapType="Street"
           WidthRequest="{x:Static local:App.ScreenWidth}"
           HeightRequest="{x:Static local:App.ScreenHeight}" />
-	</ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>
 ```
 

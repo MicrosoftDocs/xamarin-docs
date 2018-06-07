@@ -21,19 +21,19 @@ The following code example shows a [`Style`](https://developer.xamarin.com/api/t
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.App">
-	<Application.Resources>
-		<ResourceDictionary>
-			<Style x:Key="buttonStyle" TargetType="Button">
-				<Setter Property="HorizontalOptions" Value="Center" />
-				<Setter Property="VerticalOptions" Value="CenterAndExpand" />
-				<Setter Property="BorderColor" Value="Lime" />
-				<Setter Property="BorderRadius" Value="5" />
-				<Setter Property="BorderWidth" Value="5" />
-				<Setter Property="WidthRequest" Value="200" />
-				<Setter Property="TextColor" Value="Teal" />
-			</Style>
-		</ResourceDictionary>
-	</Application.Resources>
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="BorderColor" Value="Lime" />
+                <Setter Property="BorderRadius" Value="5" />
+                <Setter Property="BorderWidth" Value="5" />
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="TextColor" Value="Teal" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
 ```
 
@@ -43,13 +43,13 @@ The following code example shows a XAML page applying the `buttonStyle` to the p
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ApplicationStylesPage" Title="Application" Icon="xaml.png">
-	<ContentPage.Content>
-		<StackLayout Padding="0,20,0,0">
-			<Button Text="These buttons" Style="{StaticResource buttonStyle}" />
-			<Button Text="are demonstrating" Style="{StaticResource buttonStyle}" />
-			<Button Text="application style overrides" Style="{StaticResource buttonStyle}" />
-		</StackLayout>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <Button Text="These buttons" Style="{StaticResource buttonStyle}" />
+            <Button Text="are demonstrating" Style="{StaticResource buttonStyle}" />
+            <Button Text="application style overrides" Style="{StaticResource buttonStyle}" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -65,29 +65,29 @@ Styles lower in the view hierarchy take precedence over those defined higher up.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ApplicationStylesPage" Title="Application" Icon="xaml.png">
-	<ContentPage.Resources>
-		<ResourceDictionary>
-			<Style x:Key="buttonStyle" TargetType="Button">
-			    ...
-				<Setter Property="TextColor" Value="Red" />
-			</Style>
-		</ResourceDictionary>
-	</ContentPage.Resources>
-	<ContentPage.Content>
-		<StackLayout Padding="0,20,0,0">
-			<StackLayout.Resources>
-				<ResourceDictionary>
-					<Style x:Key="buttonStyle" TargetType="Button">
-					    ...
-						<Setter Property="TextColor" Value="Blue" />
-					</Style>
-				</ResourceDictionary>
-			</StackLayout.Resources>
-			<Button Text="These buttons" Style="{StaticResource buttonStyle}" />
-			<Button Text="are demonstrating" Style="{StaticResource buttonStyle}" />
-			<Button Text="application style overrides" Style="{StaticResource buttonStyle}" />
-		</StackLayout>
-	</ContentPage.Content>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                ...
+                <Setter Property="TextColor" Value="Red" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="buttonStyle" TargetType="Button">
+                        ...
+                        <Setter Property="TextColor" Value="Blue" />
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <Button Text="These buttons" Style="{StaticResource buttonStyle}" />
+            <Button Text="are demonstrating" Style="{StaticResource buttonStyle}" />
+            <Button Text="application style overrides" Style="{StaticResource buttonStyle}" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -102,20 +102,20 @@ The original `buttonStyle`, defined at application level, is overridden by the `
 ```csharp
 public class App : Application
 {
-	public App ()
-	{
-		var buttonStyle = new Style (typeof(Button)) {
-			Setters = {
-				...
-				new Setter { Property = Button.TextColorProperty,	Value = Color.Teal }
-			}
-		};
+    public App ()
+    {
+        var buttonStyle = new Style (typeof(Button)) {
+            Setters = {
+                ...
+                new Setter { Property = Button.TextColorProperty,    Value = Color.Teal }
+            }
+        };
 
-		Resources = new ResourceDictionary ();
-		Resources.Add ("buttonStyle", buttonStyle);
-		...
-	}
-	...
+        Resources = new ResourceDictionary ();
+        Resources.Add ("buttonStyle", buttonStyle);
+        ...
+    }
+    ...
 }
 ```
 
@@ -126,18 +126,18 @@ The following code example shows a C# page applying the `buttonStyle` to the pag
 ```csharp
 public class ApplicationStylesPageCS : ContentPage
 {
-	public ApplicationStylesPageCS ()
-	{
-		...
-		Content = new StackLayout {
-			Children = {
-				new Button { Text = "These buttons", Style = (Style)Application.Current.Resources ["buttonStyle"] },
-				new Button { Text = "are demonstrating", Style = (Style)Application.Current.Resources ["buttonStyle"] },
-				new Button { Text = "application styles", Style = (Style)Application.Current.Resources ["buttonStyle"]
-				}
-			}
-		};
-	}
+    public ApplicationStylesPageCS ()
+    {
+        ...
+        Content = new StackLayout {
+            Children = {
+                new Button { Text = "These buttons", Style = (Style)Application.Current.Resources ["buttonStyle"] },
+                new Button { Text = "are demonstrating", Style = (Style)Application.Current.Resources ["buttonStyle"] },
+                new Button { Text = "application styles", Style = (Style)Application.Current.Resources ["buttonStyle"]
+                }
+            }
+        };
+    }
 }
 ```
 

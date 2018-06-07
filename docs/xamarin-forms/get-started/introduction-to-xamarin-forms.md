@@ -54,11 +54,11 @@ public class App : Application
     MainPage = new ContentPage {
       Content =  new Label
       {
-      	Text = "Hello, Forms !",
-      	VerticalOptions = LayoutOptions.CenterAndExpand,
-      	HorizontalOptions = LayoutOptions.CenterAndExpand,
+          Text = "Hello, Forms !",
+          VerticalOptions = LayoutOptions.CenterAndExpand,
+          HorizontalOptions = LayoutOptions.CenterAndExpand,
       }
-  	};
+      };
   }
 }
 ```

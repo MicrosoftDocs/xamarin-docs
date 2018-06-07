@@ -53,16 +53,16 @@ along with the markup that produces them.
 
 ```xaml
 <StackLayout Padding="20">
-	<Button Text="Button Default" />
-	<Button Text="Button Class Default" StyleClass="Default" />
-	<Button Text="Button Class Primary" StyleClass="Primary" />
-	<Button Text="Button Class Success" StyleClass="Success" />
-	<Button Text="Button Class Info" StyleClass="Info" />
-	<Button Text="Button Class Warning" StyleClass="Warning" />
-	<Button Text="Button Class Danger" StyleClass="Danger" />
-	<Button Text="Button Class Link" StyleClass="Link" />
-	<Button Text="Button Class Default Small" StyleClass="Small" />
-	<Button Text="Button Class Default Large" StyleClass="Large" />
+    <Button Text="Button Default" />
+    <Button Text="Button Class Default" StyleClass="Default" />
+    <Button Text="Button Class Primary" StyleClass="Primary" />
+    <Button Text="Button Class Success" StyleClass="Success" />
+    <Button Text="Button Class Info" StyleClass="Info" />
+    <Button Text="Button Class Warning" StyleClass="Warning" />
+    <Button Text="Button Class Danger" StyleClass="Danger" />
+    <Button Text="Button Class Link" StyleClass="Link" />
+    <Button Text="Button Class Default Small" StyleClass="Small" />
+    <Button Text="Button Class Default Large" StyleClass="Large" />
 </StackLayout>
 ```
 

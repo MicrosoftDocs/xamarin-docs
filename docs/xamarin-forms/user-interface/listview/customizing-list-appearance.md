@@ -37,18 +37,18 @@ Start by creating a class for the groups:
 
 ```csharp
 public class PageTypeGroup : List<PageModel>
-	{
-		public string Title { get; set; }
-		public string ShortName { get; set; } //will be used for jump lists
-		public string Subtitle { get; set; }
-		private PageTypeGroup(string title, string shortName)
-		{
-			Title = title;
-			ShortName = shortName;
-		}
+    {
+        public string Title { get; set; }
+        public string ShortName { get; set; } //will be used for jump lists
+        public string Subtitle { get; set; }
+        private PageTypeGroup(string title, string shortName)
+        {
+            Title = title;
+            ShortName = shortName;
+        }
 
-		public static IList<PageTypeGroup> All { private set; get; }
-	}
+        public static IList<PageTypeGroup> All { private set; get; }
+    }
 ```
 
 In the above code, `All` is the list that will be given to our ListView as the
@@ -60,21 +60,21 @@ will be populated at program start:
 ```csharp
 static PageTypeGroup()
 {
-	List<PageTypeGroup> Groups = new List<PageTypeGroup> {
-			new PageTypeGroup ("Alfa", "A"){
-				new PageModel("Amelia", "Cedar", new switchCellPage(),""),
-				new PageModel("Alfie", "Spruce", new switchCellPage(), "grapefruit.jpg"),
-				new PageModel("Ava", "Pine", new switchCellPage(), "grapefruit.jpg"),
-				new PageModel("Archie", "Maple", new switchCellPage(), "grapefruit.jpg")
-			},
-			new PageTypeGroup ("Bravo", "B"){
-				new PageModel("Brooke", "Lumia", new switchCellPage(),""),
-				new PageModel("Bobby", "Xperia", new switchCellPage(), "grapefruit.jpg"),
-				new PageModel("Bella", "Desire", new switchCellPage(), "grapefruit.jpg"),
-				new PageModel("Ben", "Chocolate", new switchCellPage(), "grapefruit.jpg")
-			}
-		}
-		All = Groups; //set the publicly accessible list
+    List<PageTypeGroup> Groups = new List<PageTypeGroup> {
+            new PageTypeGroup ("Alfa", "A"){
+                new PageModel("Amelia", "Cedar", new switchCellPage(),""),
+                new PageModel("Alfie", "Spruce", new switchCellPage(), "grapefruit.jpg"),
+                new PageModel("Ava", "Pine", new switchCellPage(), "grapefruit.jpg"),
+                new PageModel("Archie", "Maple", new switchCellPage(), "grapefruit.jpg")
+            },
+            new PageTypeGroup ("Bravo", "B"){
+                new PageModel("Brooke", "Lumia", new switchCellPage(),""),
+                new PageModel("Bobby", "Xperia", new switchCellPage(), "grapefruit.jpg"),
+                new PageModel("Bella", "Desire", new switchCellPage(), "grapefruit.jpg"),
+                new PageModel("Ben", "Chocolate", new switchCellPage(), "grapefruit.jpg")
+            }
+        }
+        All = Groups; //set the publicly accessible list
 }
 ```
 
@@ -90,19 +90,19 @@ Here is the XAML for displaying the grouped list:
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="DemoListView.GroupingViewPage"
-	<ContentPage.Content>
-		<ListView  x:Name="GroupedView"
-		GroupDisplayBinding="{Binding Title}"
-		GroupShortNameBinding="{Binding ShortName}"
-		IsGroupingEnabled="true">
-			<ListView.ItemTemplate>
-				<DataTemplate>
-					<TextCell Text="{Binding Title}"
-					 Detail="{Binding Subtitle}" />
-				</DataTemplate>
-			</ListView.ItemTemplate>
-		</ListView>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <ListView  x:Name="GroupedView"
+        GroupDisplayBinding="{Binding Title}"
+        GroupShortNameBinding="{Binding ShortName}"
+        IsGroupingEnabled="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}"
+                     Detail="{Binding Subtitle}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -131,31 +131,31 @@ An example of customizing the group header in XAML is shown here:
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="DemoListView.GroupingViewPage">
-	<ContentPage.Content>
-		<ListView x:Name="GroupedView"
-		 GroupDisplayBinding="{Binding Title}"
-		 GroupShortNameBinding="{Binding ShortName}"
-		 IsGroupingEnabled="true">
-			<ListView.ItemTemplate>
-				<DataTemplate>
-					<TextCell Text="{Binding Title}"
-					Detail="{Binding Subtitle}"
-					TextColor="#f35e20"
-					DetailColor="#503026" />
-				</DataTemplate>
-			</ListView.ItemTemplate>
-			<!-- Group Header Customization-->
-			<ListView.GroupHeaderTemplate>
-				<DataTemplate>
-					<TextCell Text="{Binding Title}"
-					Detail="{Binding ShortName}"
-					TextColor="#f35e20"
-					DetailColor="#503026" />
-				</DataTemplate>
-			</ListView.GroupHeaderTemplate>
-			<!-- End Group Header Customization -->
-		</ListView>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <ListView x:Name="GroupedView"
+         GroupDisplayBinding="{Binding Title}"
+         GroupShortNameBinding="{Binding ShortName}"
+         IsGroupingEnabled="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}"
+                    Detail="{Binding Subtitle}"
+                    TextColor="#f35e20"
+                    DetailColor="#503026" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <!-- Group Header Customization-->
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}"
+                    Detail="{Binding ShortName}"
+                    TextColor="#f35e20"
+                    DetailColor="#503026" />
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+            <!-- End Group Header Customization -->
+        </ListView>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -174,9 +174,9 @@ To create a simple header/footer, just set the Header or Footer properties to th
 
 ```csharp
 ListView HeaderList = new ListView() {
-	Header = "Header",
-	Footer = "Footer"
-	};
+    Header = "Header",
+    Footer = "Footer"
+    };
 ```
 
 In XAML:
@@ -191,18 +191,18 @@ To create a customized header and footer, define the Header and Footer views:
 
 ```xaml
 <ListView.Header>
-	<StackLayout Orientation="Horizontal">
-		<Label Text="Header"
-		TextColor="Olive"
-		BackgroundColor="Red" />
-	</StackLayout>
+    <StackLayout Orientation="Horizontal">
+        <Label Text="Header"
+        TextColor="Olive"
+        BackgroundColor="Red" />
+    </StackLayout>
 </ListView.Header>
 <ListView.Footer>
-	<StackLayout Orientation="Horizontal">
-		<Label Text="Footer"
-		TextColor="Gray"
-		BackgroundColor="Blue" />
-	</StackLayout>
+    <StackLayout Orientation="Horizontal">
+        <Label Text="Footer"
+        TextColor="Gray"
+        BackgroundColor="Blue" />
+    </StackLayout>
 </ListView.Footer>
 ```
 
@@ -323,13 +323,13 @@ Individual `ListView` rows can be programmatically resized at runtime, provided 
 ```csharp
 void OnImageTapped (object sender, EventArgs args)
 {
-	var image = sender as Image;
-	var viewCell = image.Parent.Parent as ViewCell;
+    var image = sender as Image;
+    var viewCell = image.Parent.Parent as ViewCell;
 
-	if (image.HeightRequest < 250) {
-		image.HeightRequest = image.Height + 100;
-		viewCell.ForceUpdateSize ();
-	}
+    if (image.HeightRequest < 250) {
+        image.HeightRequest = image.Height + 100;
+        viewCell.ForceUpdateSize ();
+    }
 }
 ```
 

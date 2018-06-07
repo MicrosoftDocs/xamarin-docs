@@ -19,27 +19,27 @@ To define a [`ControlTemplate`](https://developer.xamarin.com/api/type/Xamarin.F
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SimpleTheme.App">
-	<Application.Resources>
-		<ResourceDictionary>
-			<ControlTemplate x:Key="TealTemplate">
-				<Grid>
+    <Application.Resources>
+        <ResourceDictionary>
+            <ControlTemplate x:Key="TealTemplate">
+                <Grid>
                     ...
-					<BoxView ... />
-					<Label Text="Control Template Demo App"
-					       TextColor="White"
+                    <BoxView ... />
+                    <Label Text="Control Template Demo App"
+                           TextColor="White"
                            VerticalOptions="Center" ... />
-					<ContentPresenter ... />
-					<BoxView Color="Teal" ... />
-					<Label Text="(c) Xamarin 2016"
-					       TextColor="White"
+                    <ContentPresenter ... />
+                    <BoxView Color="Teal" ... />
+                    <Label Text="(c) Xamarin 2016"
+                           TextColor="White"
                            VerticalOptions="Center" ... />
-				</Grid>
-			</ControlTemplate>
-			<ControlTemplate x:Key="AquaTemplate">
+                </Grid>
+            </ControlTemplate>
+            <ControlTemplate x:Key="AquaTemplate">
                 ...
-			</ControlTemplate>
-		</ResourceDictionary>
-	</Application.Resources>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
 ```
 
@@ -64,13 +64,13 @@ The following code example shows a [`ContentPage`](https://developer.xamarin.com
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SimpleTheme.HomePage">
-	<ContentView x:Name="contentView" Padding="0,20,0,0"
+    <ContentView x:Name="contentView" Padding="0,20,0,0"
                  ControlTemplate="{StaticResource TealTemplate}">
-		<StackLayout VerticalOptions="CenterAndExpand">
-			<Label Text="Welcome to the app!" HorizontalOptions="Center" />
-			<Button Text="Change Theme" Clicked="OnButtonClicked" />
-		</StackLayout>
-	</ContentView>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Welcome to the app!" HorizontalOptions="Center" />
+            <Button Text="Change Theme" Clicked="OnButtonClicked" />
+        </StackLayout>
+    </ContentView>
 </ContentPage>
 ```
 
@@ -103,7 +103,7 @@ A [`ControlTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.Contr
 
 ```xaml
 <Style TargetType="ContentView">
-	<Setter Property="ControlTemplate" Value="{StaticResource TealTemplate}" />
+    <Setter Property="ControlTemplate" Value="{StaticResource TealTemplate}" />
 </Style>
 ```
 
@@ -111,9 +111,9 @@ Because the [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SimpleTheme.HomePage">
-	<ContentView x:Name="contentView" Padding="0,20,0,0">
-	  ...
-	</ContentView>
+    <ContentView x:Name="contentView" Padding="0,20,0,0">
+      ...
+    </ContentView>
 </ContentPage>
 ```
 
@@ -125,19 +125,19 @@ In addition to creating [`ControlTemplate`](https://developer.xamarin.com/api/ty
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SimpleTheme.HomePage">
-	<ContentPage.Resources>
-		<ResourceDictionary>
-			<ControlTemplate x:Key="TealTemplate">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ControlTemplate x:Key="TealTemplate">
                 ...
-			</ControlTemplate>
-			<ControlTemplate x:Key="AquaTemplate">
+            </ControlTemplate>
+            <ControlTemplate x:Key="AquaTemplate">
                 ...
-			</ControlTemplate>
-		</ResourceDictionary>
-	</ContentPage.Resources>
-	<ContentView ... ControlTemplate="{StaticResource TealTemplate}">
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentView ... ControlTemplate="{StaticResource TealTemplate}">
         ...
-	</ContentView>
+    </ContentView>
 </ContentPage>
 ```
 

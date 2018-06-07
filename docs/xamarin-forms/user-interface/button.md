@@ -54,10 +54,10 @@ The [`Text`](xref:Xamarin.Forms.Button.Text) property specifies the text that ap
 ```csharp
 public partial class BasicButtonClickPage : ContentPage
 {
-	public BasicButtonClickPage ()
-	{
-		InitializeComponent ();
-	}
+    public BasicButtonClickPage ()
+    {
+        InitializeComponent ();
+    }
 
     async void OnButtonClicked(object sender, EventArgs args)
     {
@@ -314,9 +314,9 @@ That `NavigateCommand` property is of type `ICommand` and is defined in the code
 ```csharp
 public partial class MainPage : ContentPage
 {
-	public MainPage()
-	{
-		InitializeComponent();
+    public MainPage()
+    {
+        InitializeComponent();
 
         NavigateCommand = new Command<Type>(async (Type pageType) =>
         {
@@ -372,10 +372,10 @@ public partial class PressAndReleaseButtonPage : ContentPage
     bool animationInProgress = false;
     Stopwatch stopwatch = new Stopwatch();
 
-	public PressAndReleaseButtonPage ()
-	{
-		InitializeComponent ();
-	}
+    public PressAndReleaseButtonPage ()
+    {
+        InitializeComponent ();
+    }
 
     void OnButtonPressed(object sender, EventArgs args)
     {
@@ -666,10 +666,10 @@ The `Toggled` event handlers are in the code-behind file. They are responsible f
 ```csharp
 public partial class ToggleButtonDemoPage : ContentPage
 {
-	public ToggleButtonDemoPage ()
-	{
-		InitializeComponent ();
-	}
+    public ToggleButtonDemoPage ()
+    {
+        InitializeComponent ();
+    }
 
     void OnItalicButtonToggled(object sender, ToggledEventArgs args)
     {

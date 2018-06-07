@@ -103,13 +103,13 @@ Before an iOS application can receive push notifications, it must register with 
 ```csharp
 public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 {
-	...
-	var settings = UIUserNotificationSettings.GetSettingsForTypes(
-		UIUserNotificationType.Alert, new NSSet());
+    ...
+    var settings = UIUserNotificationSettings.GetSettingsForTypes(
+        UIUserNotificationType.Alert, new NSSet());
 
-	UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
-	UIApplication.SharedApplication.RegisterForRemoteNotifications();
-	...
+    UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
+    UIApplication.SharedApplication.RegisterForRemoteNotifications();
+    ...
 }
 ```
 
@@ -127,17 +127,17 @@ The APNS registration request occurs in the background. When the response is rec
 ```csharp
 public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
 {
-	const string templateBodyAPNS = "{\"aps\":{\"alert\":\"$(messageParam)\"}}";
+    const string templateBodyAPNS = "{\"aps\":{\"alert\":\"$(messageParam)\"}}";
 
-	JObject templates = new JObject();
-	templates["genericMessage"] = new JObject
-	{
-		{"body", templateBodyAPNS}
-	};
+    JObject templates = new JObject();
+    templates["genericMessage"] = new JObject
+    {
+        {"body", templateBodyAPNS}
+    };
 
-	// Register for push with the Azure mobile app
-	Push push = TodoItemManager.DefaultManager.CurrentClient.GetPush();
-	push.RegisterAsync(deviceToken, templates);
+    // Register for push with the Azure mobile app
+    Push push = TodoItemManager.DefaultManager.CurrentClient.GetPush();
+    push.RegisterAsync(deviceToken, templates);
 }
 ```
 
@@ -154,21 +154,21 @@ The `DidReceiveRemoteNotification` override in the `AppDelegate` class is used t
 
 ```csharp
 public override void DidReceiveRemoteNotification(
-	UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
+    UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
 {
-	NSDictionary aps = userInfo.ObjectForKey(new NSString("aps")) as NSDictionary;
+    NSDictionary aps = userInfo.ObjectForKey(new NSString("aps")) as NSDictionary;
 
-	string alert = string.Empty;
-	if (aps.ContainsKey(new NSString("alert")))
-		alert = (aps[new NSString("alert")] as NSString).ToString();
+    string alert = string.Empty;
+    if (aps.ContainsKey(new NSString("alert")))
+        alert = (aps[new NSString("alert")] as NSString).ToString();
 
-	// Show alert
-	if (!string.IsNullOrEmpty(alert))
-	{
+    // Show alert
+    if (!string.IsNullOrEmpty(alert))
+    {
       var notificationAlert = UIAlertController.Create("Notification", alert, UIAlertControllerStyle.Alert);
       notificationAlert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Cancel, null));
       UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(notificationAlert, true, null);
-	}
+    }
 }
 ```
 
@@ -369,7 +369,7 @@ Before a Universal Windows Platform (UWP) application can receive push notificat
 private async Task InitNotificationsAsync()
 {
     var channel = await PushNotificationChannelManager
-		  .CreatePushNotificationChannelForApplicationAsync();
+          .CreatePushNotificationChannelForApplicationAsync();
 
     const string templateBodyWNS =
         "<toast><visual><binding template=\"ToastText01\"><text id=\"1\">$(messageParam)</text></binding></visual></toast>";
@@ -385,7 +385,7 @@ private async Task InitNotificationsAsync()
     };
 
     await TodoItemManager.DefaultManager.CurrentClient.GetPush()
-		  .RegisterAsync(channel.Uri, templates);
+          .RegisterAsync(channel.Uri, templates);
 }
 ```
 
@@ -396,8 +396,8 @@ The `InitNotificationsAsync` method is invoked from the `OnLaunched` override in
 ```csharp
 protected override async void OnLaunched(LaunchActivatedEventArgs e)
 {
-	...
-	await InitNotificationsAsync();
+    ...
+    await InitNotificationsAsync();
 }
 ```
 

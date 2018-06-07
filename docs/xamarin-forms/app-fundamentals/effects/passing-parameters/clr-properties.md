@@ -45,7 +45,7 @@ public class ShadowEffect : RoutingEffect
   public float DistanceY { get; set; }
 
   public ShadowEffect () : base ("MyCompany.LabelShadowEffect")
-  {			
+  {            
   }
 }
 ```
@@ -117,27 +117,27 @@ The following code example shows the `LabelShadowEffect` implementation for the 
 [assembly:ExportEffect (typeof(LabelShadowEffect), "LabelShadowEffect")]
 namespace EffectsDemo.iOS
 {
-	public class LabelShadowEffect : PlatformEffect
-	{
-		protected override void OnAttached ()
-		{
-			try {
-				var effect = (ShadowEffect)Element.Effects.FirstOrDefault (e => e is ShadowEffect);
-				if (effect != null) {
-					Control.Layer.CornerRadius = effect.Radius;
-					Control.Layer.ShadowColor = effect.Color.ToCGColor ();
-					Control.Layer.ShadowOffset = new CGSize (effect.DistanceX, effect.DistanceY);
-					Control.Layer.ShadowOpacity = 1.0f;
-				}
-			} catch (Exception ex) {
-				Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
-			}
-		}
+    public class LabelShadowEffect : PlatformEffect
+    {
+        protected override void OnAttached ()
+        {
+            try {
+                var effect = (ShadowEffect)Element.Effects.FirstOrDefault (e => e is ShadowEffect);
+                if (effect != null) {
+                    Control.Layer.CornerRadius = effect.Radius;
+                    Control.Layer.ShadowColor = effect.Color.ToCGColor ();
+                    Control.Layer.ShadowOffset = new CGSize (effect.DistanceX, effect.DistanceY);
+                    Control.Layer.ShadowOpacity = 1.0f;
+                }
+            } catch (Exception ex) {
+                Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
+            }
+        }
 
-		protected override void OnDetached ()
-		{
-		}
-	}
+        protected override void OnDetached ()
+        {
+        }
+    }
 }
 ```
 
@@ -152,29 +152,29 @@ The following code example shows the `LabelShadowEffect` implementation for the 
 [assembly:ExportEffect (typeof(LabelShadowEffect), "LabelShadowEffect")]
 namespace EffectsDemo.Droid
 {
-	public class LabelShadowEffect : PlatformEffect
-	{
-		protected override void OnAttached ()
-		{
-			try {
-				var control = Control as Android.Widget.TextView;
-				var effect = (ShadowEffect)Element.Effects.FirstOrDefault (e => e is ShadowEffect);
-				if (effect != null) {
-					float radius = effect.Radius;
-					float distanceX = effect.DistanceX;
-					float distanceY = effect.DistanceY;
-					Android.Graphics.Color color = effect.Color.ToAndroid ();
-					control.SetShadowLayer (radius, distanceX, distanceY, color);
-				}
-			} catch (Exception ex) {
-				Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
-			}
-		}
+    public class LabelShadowEffect : PlatformEffect
+    {
+        protected override void OnAttached ()
+        {
+            try {
+                var control = Control as Android.Widget.TextView;
+                var effect = (ShadowEffect)Element.Effects.FirstOrDefault (e => e is ShadowEffect);
+                if (effect != null) {
+                    float radius = effect.Radius;
+                    float distanceX = effect.DistanceX;
+                    float distanceY = effect.DistanceY;
+                    Android.Graphics.Color color = effect.Color.ToAndroid ();
+                    control.SetShadowLayer (radius, distanceX, distanceY, color);
+                }
+            } catch (Exception ex) {
+                Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
+            }
+        }
 
-		protected override void OnDetached ()
-		{
-		}
-	}
+        protected override void OnDetached ()
+        {
+        }
+    }
 }
 ```
 
@@ -189,39 +189,39 @@ The following code example shows the `LabelShadowEffect` implementation for the 
 [assembly: ExportEffect (typeof(LabelShadowEffect), "LabelShadowEffect")]
 namespace EffectsDemo.UWP
 {
-	public class LabelShadowEffect : PlatformEffect
-	{
-		bool shadowAdded = false;
+    public class LabelShadowEffect : PlatformEffect
+    {
+        bool shadowAdded = false;
 
-		protected override void OnAttached ()
-		{
-			try {
-				if (!shadowAdded) {
-					var effect = (ShadowEffect)Element.Effects.FirstOrDefault (e => e is ShadowEffect);
-					if (effect != null) {
-						var textBlock = Control as Windows.UI.Xaml.Controls.TextBlock;
-						var shadowLabel = new Label ();
-						shadowLabel.Text = textBlock.Text;
-						shadowLabel.FontAttributes = FontAttributes.Bold;
-						shadowLabel.HorizontalOptions = LayoutOptions.Center;
-						shadowLabel.VerticalOptions = LayoutOptions.CenterAndExpand;
-						shadowLabel.TextColor = effect.Color;
-						shadowLabel.TranslationX = effect.DistanceX;
-						shadowLabel.TranslationY = effect.DistanceY;
+        protected override void OnAttached ()
+        {
+            try {
+                if (!shadowAdded) {
+                    var effect = (ShadowEffect)Element.Effects.FirstOrDefault (e => e is ShadowEffect);
+                    if (effect != null) {
+                        var textBlock = Control as Windows.UI.Xaml.Controls.TextBlock;
+                        var shadowLabel = new Label ();
+                        shadowLabel.Text = textBlock.Text;
+                        shadowLabel.FontAttributes = FontAttributes.Bold;
+                        shadowLabel.HorizontalOptions = LayoutOptions.Center;
+                        shadowLabel.VerticalOptions = LayoutOptions.CenterAndExpand;
+                        shadowLabel.TextColor = effect.Color;
+                        shadowLabel.TranslationX = effect.DistanceX;
+                        shadowLabel.TranslationY = effect.DistanceY;
 
-						((Grid)Element.Parent).Children.Insert (0, shadowLabel);
-						shadowAdded = true;
-					}
-				}
-			} catch (Exception ex) {
-				Debug.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
-			}
-		}
+                        ((Grid)Element.Parent).Children.Insert (0, shadowLabel);
+                        shadowAdded = true;
+                    }
+                }
+            } catch (Exception ex) {
+                Debug.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
+            }
+        }
 
-		protected override void OnDetached ()
-		{
-		}
-	}
+        protected override void OnDetached ()
+        {
+        }
+    }
 }
 ```
 

@@ -38,8 +38,8 @@ This platform-specific is used to blur the content layered beneath it, and is co
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
   ...
   <AbsoluteLayout HorizontalOptions="Center">
-  	<Image Source="monkeyface.png" />
-  	<BoxView x:Name="boxView" ios:VisualElement.BlurEffect="ExtraLight" HeightRequest="300" WidthRequest="300" />
+      <Image Source="monkeyface.png" />
+      <BoxView x:Name="boxView" ios:VisualElement.BlurEffect="ExtraLight" HeightRequest="300" WidthRequest="300" />
   </AbsoluteLayout>
   ...
 </ContentPage>
@@ -69,8 +69,8 @@ This platform-specific is used to display the page title as a large title on the
 
 ```xaml
 <NavigationPage xmlns="http://xamarin.com/schemas/2014/forms"
-        		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        		xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
                 ...
                 ios:NavigationPage.PrefersLargeTitles="true">
   ...
@@ -302,13 +302,13 @@ This platform-specific is used to scale the font size of an [`Entry`](https://de
 ```xaml
 <ContentPage ...
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-	<StackLayout Margin="20">
-		<Entry x:Name="entry"
+    <StackLayout Margin="20">
+        <Entry x:Name="entry"
                Placeholder="Enter text here to see the font size change"
                FontSize="22"
                ios:Entry.AdjustsFontSizeToFitWidth="true" />
         ...
-	</StackLayout>
+    </StackLayout>
 </ContentPage>
 ```
 

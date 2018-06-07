@@ -69,15 +69,15 @@ The `NativeListView` custom control can be referenced in Xaml in the .NET Standa
     ...>
     ...
     <ContentPage.Content>
-  	    <Grid>
-  	      <Grid.RowDefinitions>
-  	        <RowDefinition Height="Auto"/>
-  	        <RowDefinition Height="*" />
-  	      </Grid.RowDefinitions>
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
           <Label Text="{x:Static local:App.Description}" HorizontalTextAlignment="Center" />
-  	      <local:NativeListView Grid.Row="1" x:Name="nativeListView" ItemSelected="OnItemSelected" VerticalOptions="FillAndExpand" />
-  	    </Grid>
-  	</ContentPage.Content>
+            <local:NativeListView Grid.Row="1" x:Name="nativeListView" ItemSelected="OnItemSelected" VerticalOptions="FillAndExpand" />
+          </Grid>
+      </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -191,21 +191,21 @@ The following code example shows the custom renderer for the iOS platform:
 [assembly: ExportRenderer (typeof(NativeListView), typeof(NativeiOSListViewRenderer))]
 namespace CustomRenderer.iOS
 {
-	public class NativeiOSListViewRenderer : ListViewRenderer
-	{
-		protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.ListView> e)
-		{
-			base.OnElementChanged (e);
+    public class NativeiOSListViewRenderer : ListViewRenderer
+    {
+        protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.ListView> e)
+        {
+            base.OnElementChanged (e);
 
-			if (e.OldElement != null) {
-				// Unsubscribe
-			}
+            if (e.OldElement != null) {
+                // Unsubscribe
+            }
 
-			if (e.NewElement != null) {
-				Control.Source = new NativeiOSListViewSource (e.NewElement as NativeListView);
-			}
-		}
-	}
+            if (e.NewElement != null) {
+                Control.Source = new NativeiOSListViewSource (e.NewElement as NativeListView);
+            }
+        }
+    }
 }
 ```
 

@@ -63,71 +63,71 @@ An attached property must be added to the `Shadow` platform-specific to allow co
 ```csharp
 namespace MyCompany.Forms.PlatformConfiguration.iOS
 {
-	using System.Linq;
-	using Xamarin.Forms;
-	using Xamarin.Forms.PlatformConfiguration;
-	using FormsElement = Xamarin.Forms.Label;
+    using System.Linq;
+    using Xamarin.Forms;
+    using Xamarin.Forms.PlatformConfiguration;
+    using FormsElement = Xamarin.Forms.Label;
 
-	public static class Shadow
-	{
-		const string EffectName = "MyCompany.LabelShadowEffect";
+    public static class Shadow
+    {
+        const string EffectName = "MyCompany.LabelShadowEffect";
 
-		public static readonly BindableProperty IsShadowedProperty =
-			BindableProperty.CreateAttached("IsShadowed",
-			                                typeof(bool),
-			                                typeof(Shadow),
-			                                false,
-			                                propertyChanged: OnIsShadowedPropertyChanged);
+        public static readonly BindableProperty IsShadowedProperty =
+            BindableProperty.CreateAttached("IsShadowed",
+                                            typeof(bool),
+                                            typeof(Shadow),
+                                            false,
+                                            propertyChanged: OnIsShadowedPropertyChanged);
 
-		public static bool GetIsShadowed(BindableObject element)
-		{
-			return (bool)element.GetValue(IsShadowedProperty);
-		}
+        public static bool GetIsShadowed(BindableObject element)
+        {
+            return (bool)element.GetValue(IsShadowedProperty);
+        }
 
-		public static void SetIsShadowed(BindableObject element, bool value)
-		{
-			element.SetValue(IsShadowedProperty, value);
-		}
+        public static void SetIsShadowed(BindableObject element, bool value)
+        {
+            element.SetValue(IsShadowedProperty, value);
+        }
 
         ...
 
-		static void OnIsShadowedPropertyChanged(BindableObject element, object oldValue, object newValue)
-		{
-			if ((bool)newValue)
-			{
-				AttachEffect(element as FormsElement);
-			}
-			else
-			{
-				DetachEffect(element as FormsElement);
-			}
-		}
+        static void OnIsShadowedPropertyChanged(BindableObject element, object oldValue, object newValue)
+        {
+            if ((bool)newValue)
+            {
+                AttachEffect(element as FormsElement);
+            }
+            else
+            {
+                DetachEffect(element as FormsElement);
+            }
+        }
 
-		static void AttachEffect(FormsElement element)
-		{
-			IElementController controller = element;
-			if (controller == null || controller.EffectIsAttached(EffectName))
-			{
-				return;
-			}
-			element.Effects.Add(Effect.Resolve(EffectName));
-		}
+        static void AttachEffect(FormsElement element)
+        {
+            IElementController controller = element;
+            if (controller == null || controller.EffectIsAttached(EffectName))
+            {
+                return;
+            }
+            element.Effects.Add(Effect.Resolve(EffectName));
+        }
 
-		static void DetachEffect(FormsElement element)
-		{
-			IElementController controller = element;
-			if (controller == null || !controller.EffectIsAttached(EffectName))
-			{
-				return;
-			}
+        static void DetachEffect(FormsElement element)
+        {
+            IElementController controller = element;
+            if (controller == null || !controller.EffectIsAttached(EffectName))
+            {
+                return;
+            }
 
-			var toRemove = element.Effects.FirstOrDefault(e => e.ResolveId == Effect.Resolve(EffectName).ResolveId);
-			if (toRemove != null)
-			{
-				element.Effects.Remove(toRemove);
-			}
-		}
-	}
+            var toRemove = element.Effects.FirstOrDefault(e => e.ResolveId == Effect.Resolve(EffectName).ResolveId);
+            if (toRemove != null)
+            {
+                element.Effects.Remove(toRemove);
+            }
+        }
+    }
 }
 ```
 
@@ -147,26 +147,26 @@ Extension methods must be added to the `Shadow` platform-specific to allow consu
 ```csharp
 namespace MyCompany.Forms.PlatformConfiguration.iOS
 {
-	using System.Linq;
-	using Xamarin.Forms;
-	using Xamarin.Forms.PlatformConfiguration;
-	using FormsElement = Xamarin.Forms.Label;
+    using System.Linq;
+    using Xamarin.Forms;
+    using Xamarin.Forms.PlatformConfiguration;
+    using FormsElement = Xamarin.Forms.Label;
 
-	public static class Shadow
-	{
+    public static class Shadow
+    {
         ...
-		public static bool IsShadowed(this IPlatformElementConfiguration<iOS, FormsElement> config)
-		{
-			return GetIsShadowed(config.Element);
-		}
+        public static bool IsShadowed(this IPlatformElementConfiguration<iOS, FormsElement> config)
+        {
+            return GetIsShadowed(config.Element);
+        }
 
-		public static IPlatformElementConfiguration<iOS, FormsElement> SetIsShadowed(this IPlatformElementConfiguration<iOS, FormsElement> config, bool value)
-		{
-			SetIsShadowed(config.Element, value);
-			return config;
-		}
+        public static IPlatformElementConfiguration<iOS, FormsElement> SetIsShadowed(this IPlatformElementConfiguration<iOS, FormsElement> config, bool value)
+        {
+            SetIsShadowed(config.Element, value);
+            return config;
+        }
         ...
-	}
+    }
 }
 ```
 
@@ -183,49 +183,49 @@ The `Shadow` platform-specific adds the `MyCompany.LabelShadowEffect` to a [`Lab
 [assembly: ExportEffect(typeof(LabelShadowEffect), "LabelShadowEffect")]
 namespace ShadowPlatformSpecific.iOS
 {
-	public class LabelShadowEffect : PlatformEffect
-	{
-		protected override void OnAttached()
-		{
-			UpdateShadow();
-		}
+    public class LabelShadowEffect : PlatformEffect
+    {
+        protected override void OnAttached()
+        {
+            UpdateShadow();
+        }
 
-		protected override void OnDetached()
-		{
-		}
+        protected override void OnDetached()
+        {
+        }
 
-		protected override void OnElementPropertyChanged(PropertyChangedEventArgs args)
-		{
-			base.OnElementPropertyChanged(args);
+        protected override void OnElementPropertyChanged(PropertyChangedEventArgs args)
+        {
+            base.OnElementPropertyChanged(args);
 
-			if (args.PropertyName == Shadow.IsShadowedProperty.PropertyName)
-			{
-				UpdateShadow();
-			}
-		}
+            if (args.PropertyName == Shadow.IsShadowedProperty.PropertyName)
+            {
+                UpdateShadow();
+            }
+        }
 
-		void UpdateShadow()
-		{
-			try
-			{
-				if (((Label)Element).OnThisPlatform().IsShadowed())
-				{
-					Control.Layer.CornerRadius = 5;
-					Control.Layer.ShadowColor = UIColor.Black.CGColor;
-					Control.Layer.ShadowOffset = new CGSize(5, 5);
-					Control.Layer.ShadowOpacity = 1.0f;
-				}
-				else if (!((Label)Element).OnThisPlatform().IsShadowed())
-				{
-					Control.Layer.ShadowOpacity = 0;
-				}
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine("Cannot set property on attached control. Error: ", ex.Message);
-			}
-		}
-	}
+        void UpdateShadow()
+        {
+            try
+            {
+                if (((Label)Element).OnThisPlatform().IsShadowed())
+                {
+                    Control.Layer.CornerRadius = 5;
+                    Control.Layer.ShadowColor = UIColor.Black.CGColor;
+                    Control.Layer.ShadowOffset = new CGSize(5, 5);
+                    Control.Layer.ShadowOpacity = 1.0f;
+                }
+                else if (!((Label)Element).OnThisPlatform().IsShadowed())
+                {
+                    Control.Layer.ShadowOpacity = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Cannot set property on attached control. Error: ", ex.Message);
+            }
+        }
+    }
 }
 ```
 

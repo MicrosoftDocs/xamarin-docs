@@ -51,20 +51,20 @@ using Microsoft.WindowsAzure.MobileServices.Sync;
 
 namespace TodoAzure
 {
-	public partial class TodoItemManager
-	{
-		static TodoItemManager defaultInstance = new TodoItemManager();
-		IMobileServiceClient client;
-		IMobileServiceSyncTable<TodoItem> todoTable;
+    public partial class TodoItemManager
+    {
+        static TodoItemManager defaultInstance = new TodoItemManager();
+        IMobileServiceClient client;
+        IMobileServiceSyncTable<TodoItem> todoTable;
 
-		private TodoItemManager()
-		{
-			this.client = new MobileServiceClient(Constants.ApplicationURL);
-			var store = new MobileServiceSQLiteStore("localstore.db");
-			store.DefineTable<TodoItem>();
-			this.client.SyncContext.InitializeAsync(store);
-			this.todoTable = client.GetSyncTable<TodoItem>();
-		}
+        private TodoItemManager()
+        {
+            this.client = new MobileServiceClient(Constants.ApplicationURL);
+            var store = new MobileServiceSQLiteStore("localstore.db");
+            store.DefineTable<TodoItem>();
+            this.client.SyncContext.InitializeAsync(store);
+            this.todoTable = client.GetSyncTable<TodoItem>();
+        }
         ...
   }
 }

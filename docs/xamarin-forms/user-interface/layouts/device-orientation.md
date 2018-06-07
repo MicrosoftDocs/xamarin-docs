@@ -58,11 +58,11 @@ To control the orientation on Android, open **MainActivity.cs** and set the orie
 ```csharp
 namespace MyRotatingApp.Droid
 {
-	[Activity (Label = "MyRotatingApp.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
+    [Activity (Label = "MyRotatingApp.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
     ScreenOrientation = ScreenOrientation.Landscape)] //This is what controls orientation
-	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
-	{
-		protected override void OnCreate (Bundle bundle)
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
+    {
+        protected override void OnCreate (Bundle bundle)
 ...
 ```
 
@@ -169,38 +169,38 @@ That is accomplished with the following XAML:
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="ResponsiveLayout.StackLayoutPageXaml"
 Title="Stack Photo Editor - XAML">
-	<ContentPage.Content>
-		<StackLayout Spacing="10" Padding="5" Orientation="Vertical"
-		x:Name="outerStack"> <!-- can change orientation to make responsive -->
-			<ScrollView>
-				<StackLayout Spacing="5" HorizontalOptions="FillAndExpand"
-					WidthRequest="1000">
-					<StackLayout Orientation="Horizontal">
-						<Label Text="Name: " WidthRequest="75"
-							HorizontalOptions="Start" />
-						<Entry Text="deer.jpg"
-							HorizontalOptions="FillAndExpand" />
-					</StackLayout>
-					<StackLayout Orientation="Horizontal">
-						<Label Text="Date: " WidthRequest="75"
-							HorizontalOptions="Start" />
-						<Entry Text="07/05/2015"
-							HorizontalOptions="FillAndExpand" />
-					</StackLayout>
-					<StackLayout Orientation="Horizontal">
-						<Label Text="Tags:" WidthRequest="75"
-							HorizontalOptions="Start" />
-						<Entry Text="deer, tiger"
-							HorizontalOptions="FillAndExpand" />
-					</StackLayout>
-					<StackLayout Orientation="Horizontal">
-						<Button Text="Save" HorizontalOptions="FillAndExpand" />
-					</StackLayout>
-				</StackLayout>
-			</ScrollView>
-			<Image  Source="deer.jpg" />
-		</StackLayout>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Padding="5" Orientation="Vertical"
+        x:Name="outerStack"> <!-- can change orientation to make responsive -->
+            <ScrollView>
+                <StackLayout Spacing="5" HorizontalOptions="FillAndExpand"
+                    WidthRequest="1000">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Name: " WidthRequest="75"
+                            HorizontalOptions="Start" />
+                        <Entry Text="deer.jpg"
+                            HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Date: " WidthRequest="75"
+                            HorizontalOptions="Start" />
+                        <Entry Text="07/05/2015"
+                            HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Tags:" WidthRequest="75"
+                            HorizontalOptions="Start" />
+                        <Entry Text="deer, tiger"
+                            HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Save" HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+            <Image  Source="deer.jpg" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -244,32 +244,32 @@ That is accomplished with the following XAML:
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="ResponsiveLayout.AbsoluteLayoutPageXaml"
 Title="AbsoluteLayout - XAML" BackgroundImage="deer.jpg">
-	<ContentPage.Content>
-		<AbsoluteLayout>
-			<ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
-				AbsoluteLayout.LayoutFlags="PositionProportional,SizeProportional">
-				<AbsoluteLayout>
-					<Image Source="deer.jpg"
-						AbsoluteLayout.LayoutBounds=".5,0,300,300"
-						AbsoluteLayout.LayoutFlags="PositionProportional" />
-					<BoxView Color="#CC1A7019" AbsoluteLayout.LayoutBounds=".5
-						300,.7,50" AbsoluteLayout.LayoutFlags="XProportional
-						WidthProportional" />
-					<Label Text="deer.jpg" AbsoluteLayout.LayoutBounds = ".5
-						310,1, 50" AbsoluteLayout.LayoutFlags="XProportional
-						WidthProportional" HorizontalTextAlignment="Center" TextColor="White" />
-				</AbsoluteLayout>
-			</ScrollView>
-			<Button Text="Previous" AbsoluteLayout.LayoutBounds="0,1,.5,60"
-				AbsoluteLayout.LayoutFlags="PositionProportional
-					WidthProportional"
-				BackgroundColor="White" TextColor="Green" BorderRadius="0" />
-			<Button Text="Next" AbsoluteLayout.LayoutBounds="1,1,.5,60"
-				AbsoluteLayout.LayoutFlags="PositionProportional
-					WidthProportional" BackgroundColor="White"
-					TextColor="Green" BorderRadius="0" />
-		</AbsoluteLayout>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="PositionProportional,SizeProportional">
+                <AbsoluteLayout>
+                    <Image Source="deer.jpg"
+                        AbsoluteLayout.LayoutBounds=".5,0,300,300"
+                        AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView Color="#CC1A7019" AbsoluteLayout.LayoutBounds=".5
+                        300,.7,50" AbsoluteLayout.LayoutFlags="XProportional
+                        WidthProportional" />
+                    <Label Text="deer.jpg" AbsoluteLayout.LayoutBounds = ".5
+                        310,1, 50" AbsoluteLayout.LayoutFlags="XProportional
+                        WidthProportional" HorizontalTextAlignment="Center" TextColor="White" />
+                </AbsoluteLayout>
+            </ScrollView>
+            <Button Text="Previous" AbsoluteLayout.LayoutBounds="0,1,.5,60"
+                AbsoluteLayout.LayoutFlags="PositionProportional
+                    WidthProportional"
+                BackgroundColor="White" TextColor="Green" BorderRadius="0" />
+            <Button Text="Next" AbsoluteLayout.LayoutBounds="1,1,.5,60"
+                AbsoluteLayout.LayoutFlags="PositionProportional
+                    WidthProportional" BackgroundColor="White"
+                    TextColor="Green" BorderRadius="0" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -298,69 +298,69 @@ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="ResponsiveLayout.RelativeLayoutPageXaml"
 Title="RelativeLayout - XAML"
 BackgroundImage="deer.jpg">
-	<ContentPage.Content>
-		<RelativeLayout x:Name="outerLayout">
-			<BoxView BackgroundColor="#AA1A7019"
-				RelativeLayout.WidthConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Width,Factor=1}"
-				RelativeLayout.HeightConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Height,Factor=1}"
-				RelativeLayout.XConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Width,Factor=0,Constant=0}"
-				RelativeLayout.YConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Height,Factor=0,Constant=0}" />
-			<ScrollView
-				RelativeLayout.WidthConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Width,Factor=1}"
-				RelativeLayout.HeightConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Height,Factor=1,Constant=-60}"
-				RelativeLayout.XConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Width,Factor=0,Constant=0}"
-				RelativeLayout.YConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Height,Factor=0,Constant=0}">
-				<RelativeLayout>
-					<Image Source="deer.jpg" x:Name="imageDeer"
-						RelativeLayout.WidthConstraint="{ConstraintExpression
-							Type=RelativeToParent,Property=Width,Factor=.8}"
-						RelativeLayout.XConstraint="{ConstraintExpression
-							Type=RelativeToParent,Property=Width,Factor=.1}"
-						RelativeLayout.YConstraint="{ConstraintExpression
-							Type=RelativeToParent,Property=Height,Factor=0,Constant=10}" />
-					<Label Text="deer.jpg" HorizontalTextAlignment="Center"
-						RelativeLayout.WidthConstraint="{ConstraintExpression
-							Type=RelativeToParent,Property=Width,Factor=1}"
-						RelativeLayout.HeightConstraint="{ConstraintExpression
-							Type=RelativeToParent,Property=Height,Factor=0,Constant=75}"
-						RelativeLayout.XConstraint="{ConstraintExpression
-							Type=RelativeToParent,Property=Width,Factor=0,Constant=0}"
-						RelativeLayout.YConstraint="{ConstraintExpression
-							Type=RelativeToView,ElementName=imageDeer,Property=Height,Factor=1,Constant=20}" />
-				</RelativeLayout>
+    <ContentPage.Content>
+        <RelativeLayout x:Name="outerLayout">
+            <BoxView BackgroundColor="#AA1A7019"
+                RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=1}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Height,Factor=1}"
+                RelativeLayout.XConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=0,Constant=0}"
+                RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Height,Factor=0,Constant=0}" />
+            <ScrollView
+                RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=1}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Height,Factor=1,Constant=-60}"
+                RelativeLayout.XConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=0,Constant=0}"
+                RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Height,Factor=0,Constant=0}">
+                <RelativeLayout>
+                    <Image Source="deer.jpg" x:Name="imageDeer"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression
+                            Type=RelativeToParent,Property=Width,Factor=.8}"
+                        RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToParent,Property=Width,Factor=.1}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,Property=Height,Factor=0,Constant=10}" />
+                    <Label Text="deer.jpg" HorizontalTextAlignment="Center"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression
+                            Type=RelativeToParent,Property=Width,Factor=1}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression
+                            Type=RelativeToParent,Property=Height,Factor=0,Constant=75}"
+                        RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToParent,Property=Width,Factor=0,Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToView,ElementName=imageDeer,Property=Height,Factor=1,Constant=20}" />
+                </RelativeLayout>
 
-			</ScrollView>
+            </ScrollView>
 
-			<Button Text="Previous" BackgroundColor="White" TextColor="Green" BorderRadius="0"
-				RelativeLayout.YConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Height,Factor=1,Constant=-60}"
-				RelativeLayout.XConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Width,Factor=0,Constant=0}"
-				RelativeLayout.HeightConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Width,Factor=0,Constant=60}"
-				RelativeLayout.WidthConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Width,Factor=.5}"
-				 />
-			<Button Text="Next" BackgroundColor="White" TextColor="Green" BorderRadius="0"
-				RelativeLayout.XConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Width,Factor=.5}"
-				RelativeLayout.YConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Height,Factor=1,Constant=-60}"
-				RelativeLayout.HeightConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Width,Factor=0,Constant=60}"
-				RelativeLayout.WidthConstraint="{ConstraintExpression
-					Type=RelativeToParent,Property=Width,Factor=.5}"
-				/>
-		</RelativeLayout>
-	</ContentPage.Content>
+            <Button Text="Previous" BackgroundColor="White" TextColor="Green" BorderRadius="0"
+                RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Height,Factor=1,Constant=-60}"
+                RelativeLayout.XConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=0,Constant=0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=0,Constant=60}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=.5}"
+                 />
+            <Button Text="Next" BackgroundColor="White" TextColor="Green" BorderRadius="0"
+                RelativeLayout.XConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=.5}"
+                RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Height,Factor=1,Constant=-60}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=0,Constant=60}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=.5}"
+                />
+        </RelativeLayout>
+    </ContentPage.Content>
 </ContentPage>
 
 ```
@@ -388,51 +388,51 @@ That is accomplished with the following XAML:
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="ResponsiveLayout.GridPageXaml"
 Title="Grid - XAML">
-	<ContentPage.Content>
-		<Grid x:Name="outerGrid">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="*" />
-				<RowDefinition Height="60" />
-			</Grid.RowDefinitions>
-			<Grid x:Name="innerGrid" Grid.Row="0" Padding="10">
-				<Grid.RowDefinitions>
-					<RowDefinition Height="*" />
-				</Grid.RowDefinitions>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="*" />
-					<ColumnDefinition Width="*" />
-				</Grid.ColumnDefinitions>
-				<Image Source="deer.jpg" Grid.Row="0" Grid.Column="0" HeightRequest="300" WidthRequest="300" />
-				<Grid x:Name="controlsGrid" Grid.Row="0" Grid.Column="1" >
-					<Grid.RowDefinitions>
-						<RowDefinition Height="Auto" />
-						<RowDefinition Height="Auto" />
-						<RowDefinition Height="Auto" />
-					</Grid.RowDefinitions>
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="Auto" />
-						<ColumnDefinition Width="*" />
-					</Grid.ColumnDefinitions>
-					<Label Text="Name:" Grid.Row="0" Grid.Column="0" />
-					<Label Text="Date:" Grid.Row="1" Grid.Column="0" />
-					<Label Text="Tags:" Grid.Row="2" Grid.Column="0" />
-					<Entry Grid.Row="0" Grid.Column="1" />
-					<Entry Grid.Row="1" Grid.Column="1" />
-					<Entry Grid.Row="2" Grid.Column="1" />
-				</Grid>
-			</Grid>
-			<Grid x:Name="buttonsGrid" Grid.Row="1">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="*" />
-					<ColumnDefinition Width="*" />
-					<ColumnDefinition Width="*" />
-				</Grid.ColumnDefinitions>
-				<Button Text="Previous" Grid.Column="0" />
-				<Button Text="Save" Grid.Column="1" />
-				<Button Text="Next" Grid.Column="2" />
-			</Grid>
-		</Grid>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <Grid x:Name="outerGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <Grid x:Name="innerGrid" Grid.Row="0" Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="deer.jpg" Grid.Row="0" Grid.Column="0" HeightRequest="300" WidthRequest="300" />
+                <Grid x:Name="controlsGrid" Grid.Row="0" Grid.Column="1" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Name:" Grid.Row="0" Grid.Column="0" />
+                    <Label Text="Date:" Grid.Row="1" Grid.Column="0" />
+                    <Label Text="Tags:" Grid.Row="2" Grid.Column="0" />
+                    <Entry Grid.Row="0" Grid.Column="1" />
+                    <Entry Grid.Row="1" Grid.Column="1" />
+                    <Entry Grid.Row="2" Grid.Column="1" />
+                </Grid>
+            </Grid>
+            <Grid x:Name="buttonsGrid" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Previous" Grid.Column="0" />
+                <Button Text="Save" Grid.Column="1" />
+                <Button Text="Next" Grid.Column="2" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -443,27 +443,27 @@ private double width;
 private double height;
 
 protected override void OnSizeAllocated (double width, double height){
-	base.OnSizeAllocated (width, height);
-	if (width != this.width || height != this.height) {
-		this.width = width;
-		this.height = height;
-		if (width > height) {
-			innerGrid.RowDefinitions.Clear();
-			innerGrid.ColumnDefinitions.Clear ();
-			innerGrid.RowDefinitions.Add (new RowDefinition{ Height = new GridLength (1, GridUnitType.Star) });
-			innerGrid.ColumnDefinitions.Add (new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star) });
-			innerGrid.ColumnDefinitions.Add (new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star) });
-			innerGrid.Children.Remove (controlsGrid);
-			innerGrid.Children.Add (controlsGrid, 1, 0);
-		} else {
-			innerGrid.ColumnDefinitions.Clear ();
-			innerGrid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (1, GridUnitType.Star) });
-			innerGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Auto) });
-			innerGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });
-			innerGrid.Children.Remove (controlsGrid);
-			innerGrid.Children.Add (controlsGrid, 0, 1);
-		}
-	}
+    base.OnSizeAllocated (width, height);
+    if (width != this.width || height != this.height) {
+        this.width = width;
+        this.height = height;
+        if (width > height) {
+            innerGrid.RowDefinitions.Clear();
+            innerGrid.ColumnDefinitions.Clear ();
+            innerGrid.RowDefinitions.Add (new RowDefinition{ Height = new GridLength (1, GridUnitType.Star) });
+            innerGrid.ColumnDefinitions.Add (new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star) });
+            innerGrid.ColumnDefinitions.Add (new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star) });
+            innerGrid.Children.Remove (controlsGrid);
+            innerGrid.Children.Add (controlsGrid, 1, 0);
+        } else {
+            innerGrid.ColumnDefinitions.Clear ();
+            innerGrid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (1, GridUnitType.Star) });
+            innerGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Auto) });
+            innerGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });
+            innerGrid.Children.Remove (controlsGrid);
+            innerGrid.Children.Add (controlsGrid, 0, 1);
+        }
+    }
 }
 ```
 

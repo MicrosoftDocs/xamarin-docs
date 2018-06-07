@@ -40,11 +40,11 @@ The following XAML markup shows some common controls:
 
 ```xaml
 <StackLayout Padding="40">
-	<Label Text="Regular label" />
-	<Entry Placeholder="type here" />
-	<Button Text="OK" />
-	<BoxView Color="Yellow" />
-	<Switch />
+    <Label Text="Regular label" />
+    <Entry Placeholder="type here" />
+    <Button Text="OK" />
+    <BoxView Color="Yellow" />
+    <Switch />
 </StackLayout>
 ```
 
@@ -69,9 +69,9 @@ shows three different `BoxView`s wtih different style classes applied:
 
 ```xaml
 <StackLayout Padding="40">
-	<BoxView StyleClass="HorizontalRule" />
-	<BoxView StyleClass="Circle" />
-	<BoxView StyleClass="Rounded" />
+    <BoxView StyleClass="HorizontalRule" />
+    <BoxView StyleClass="Circle" />
+    <BoxView StyleClass="Rounded" />
 </StackLayout>
 ```
 

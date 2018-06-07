@@ -166,7 +166,7 @@ The `Completed` event is used to react to the completion of an interaction with 
 ```csharp
 void Entry_Completed (object sender, EventArgs e)
 {
-	var text = ((Entry)sender).Text; //cast sender to access the properties of the Entry
+    var text = ((Entry)sender).Text; //cast sender to access the properties of the Entry
 }
 ```
 
@@ -192,8 +192,8 @@ The `TextChanged` event is used to react to a change in the content of a field.
 ```csharp
 void Entry_TextChanged (object sender, TextChangedEventArgs e)
 {
-	var oldText = e.OldTextValue;
-	var newText = e.NewTextValue;
+    var oldText = e.OldTextValue;
+    var newText = e.NewTextValue;
 }
 ```
 

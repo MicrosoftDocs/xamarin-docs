@@ -36,9 +36,9 @@ Rather than set the [`Label.Text`](https://developer.xamarin.com/api/property/Xa
 
 ```xaml
 <ContentPage ...>
-	<ContentView ... ControlTemplate="{StaticResource TealTemplate}">
+    <ContentView ... ControlTemplate="{StaticResource TealTemplate}">
           ...
-	</ContentView>
+    </ContentView>
 </ContentPage>
 ```
 
@@ -124,12 +124,12 @@ The `HeaderText` and `FooterText` ViewModel properties can be bound to, as shown
 ```xaml
 <ContentPage xmlns:local="clr-namespace:SimpleTheme;assembly=SimpleTheme"
              HeaderText="{Binding HeaderText}" FooterText="{Binding FooterText}" ...>
-	<ContentPage.BindingContext>
-		<local:HomePageViewModel />
-	</ContentPage.BindingContext>
-	<ContentView ControlTemplate="{StaticResource TealTemplate}" ...>
+    <ContentPage.BindingContext>
+        <local:HomePageViewModel />
+    </ContentPage.BindingContext>
+    <ContentView ControlTemplate="{StaticResource TealTemplate}" ...>
     ...
-	</ContentView>
+    </ContentView>
 </ContentPage>
 ```
 

@@ -54,25 +54,25 @@ The following XAML code example shows a [`CarouselPage`](https://developer.xamar
 
 ```xaml
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
-			  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			  x:Class="CarouselPageNavigation.MainPage">
-	<ContentPage>
-		<ContentPage.Padding>
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="CarouselPageNavigation.MainPage">
+    <ContentPage>
+        <ContentPage.Padding>
           <OnPlatform x:TypeArguments="Thickness">
               <On Platform="iOS, Android" Value="0,40,0,0" />
           </OnPlatform>
-		</ContentPage.Padding>
-		<StackLayout>
-			<Label Text="Red" FontSize="Medium" HorizontalOptions="Center" />
-			<BoxView Color="Red" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-		</StackLayout>
-	</ContentPage>
-	<ContentPage>
-		...
-	</ContentPage>
-	<ContentPage>
-		...
-	</ContentPage>
+        </ContentPage.Padding>
+        <StackLayout>
+            <Label Text="Red" FontSize="Medium" HorizontalOptions="Center" />
+            <BoxView Color="Red" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage>
+        ...
+    </ContentPage>
+    <ContentPage>
+        ...
+    </ContentPage>
 </CarouselPage>
 ```
 
@@ -81,8 +81,8 @@ The following code example shows the equivalent UI in C#:
 ```csharp
 public class MainPageCS : CarouselPage
 {
-	public MainPageCS ()
-	{
+    public MainPageCS ()
+    {
         Thickness padding;
         switch (Device.RuntimePlatform)
         {
@@ -95,42 +95,42 @@ public class MainPageCS : CarouselPage
                 break;
         }
 
-		var redContentPage = new ContentPage {
-			Padding = padding,
-			Content = new StackLayout {
-				Children = {
-					new Label {
-						Text = "Red",
-						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
-						HorizontalOptions = LayoutOptions.Center
-					},
-					new BoxView {
-						Color = Color.Red,
-						WidthRequest = 200,
-						HeightRequest = 200,
-						HorizontalOptions = LayoutOptions.Center,
-						VerticalOptions = LayoutOptions.CenterAndExpand
-					}
-				}
-			}
-		};
-		var greenContentPage = new ContentPage {
-			Padding = padding,
-			Content = new StackLayout {
-				...
-			}
-		};
-		var blueContentPage = new ContentPage {
-			Padding = padding,
-			Content = new StackLayout {
-				...
-			}
-		};
+        var redContentPage = new ContentPage {
+            Padding = padding,
+            Content = new StackLayout {
+                Children = {
+                    new Label {
+                        Text = "Red",
+                        FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
+                        HorizontalOptions = LayoutOptions.Center
+                    },
+                    new BoxView {
+                        Color = Color.Red,
+                        WidthRequest = 200,
+                        HeightRequest = 200,
+                        HorizontalOptions = LayoutOptions.Center,
+                        VerticalOptions = LayoutOptions.CenterAndExpand
+                    }
+                }
+            }
+        };
+        var greenContentPage = new ContentPage {
+            Padding = padding,
+            Content = new StackLayout {
+                ...
+            }
+        };
+        var blueContentPage = new ContentPage {
+            Padding = padding,
+            Content = new StackLayout {
+                ...
+            }
+        };
 
-		Children.Add (redContentPage);
-		Children.Add (greenContentPage);
-		Children.Add (blueContentPage);
-	}
+        Children.Add (redContentPage);
+        Children.Add (greenContentPage);
+        Children.Add (blueContentPage);
+    }
 }
 ```
 
@@ -151,23 +151,23 @@ The following XAML code example shows a [`CarouselPage`](https://developer.xamar
 
 ```xaml
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
-			  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			  x:Class="CarouselPageNavigation.MainPage">
-	<CarouselPage.ItemTemplate>
-		<DataTemplate>
-			<ContentPage>
-				<ContentPage.Padding>
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="CarouselPageNavigation.MainPage">
+    <CarouselPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage>
+                <ContentPage.Padding>
                   <OnPlatform x:TypeArguments="Thickness">
                     <On Platform="iOS, Android" Value="0,40,0,0" />
                   </OnPlatform>
-				</ContentPage.Padding>
-				<StackLayout>
-					<Label Text="{Binding Name}" FontSize="Medium" HorizontalOptions="Center" />
-					<BoxView Color="{Binding Color}" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-				</StackLayout>
-			</ContentPage>
-		</DataTemplate>
-	</CarouselPage.ItemTemplate>
+                </ContentPage.Padding>
+                <StackLayout>
+                    <Label Text="{Binding Name}" FontSize="Medium" HorizontalOptions="Center" />
+                    <BoxView Color="{Binding Color}" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+            </ContentPage>
+        </DataTemplate>
+    </CarouselPage.ItemTemplate>
 </CarouselPage>
 ```
 
@@ -176,8 +176,8 @@ The [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.Carous
 ```csharp
 public MainPage ()
 {
-	...
-	ItemsSource = ColorsDataModel.All;
+    ...
+    ItemsSource = ColorsDataModel.All;
 }
 ```
 
@@ -186,8 +186,8 @@ The following code example shows the equivalent [`CarouselPage`](https://develop
 ```csharp
 public class MainPageCS : CarouselPage
 {
-	public MainPageCS ()
-	{
+    public MainPageCS ()
+    {
         Thickness padding;
         switch (Device.RuntimePlatform)
         {
@@ -200,34 +200,34 @@ public class MainPageCS : CarouselPage
                 break;
         }
 
-		ItemTemplate = new DataTemplate (() => {
-			var nameLabel = new Label {
-				FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
-				HorizontalOptions = LayoutOptions.Center
-			};
-			nameLabel.SetBinding (Label.TextProperty, "Name");
+        ItemTemplate = new DataTemplate (() => {
+            var nameLabel = new Label {
+                FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
+                HorizontalOptions = LayoutOptions.Center
+            };
+            nameLabel.SetBinding (Label.TextProperty, "Name");
 
-			var colorBoxView = new BoxView {
-				WidthRequest = 200,
-				HeightRequest = 200,
-				HorizontalOptions = LayoutOptions.Center,
-				VerticalOptions = LayoutOptions.CenterAndExpand
-			};
-			colorBoxView.SetBinding (BoxView.ColorProperty, "Color");
+            var colorBoxView = new BoxView {
+                WidthRequest = 200,
+                HeightRequest = 200,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.CenterAndExpand
+            };
+            colorBoxView.SetBinding (BoxView.ColorProperty, "Color");
 
-			return new ContentPage {
-				Padding = padding,
-				Content = new StackLayout {
-					Children = {
-						nameLabel,
-						colorBoxView
-					}
-				}
-			};
-		});
+            return new ContentPage {
+                Padding = padding,
+                Content = new StackLayout {
+                    Children = {
+                        nameLabel,
+                        colorBoxView
+                    }
+                }
+            };
+        });
 
-		ItemsSource = ColorsDataModel.All;
-	}
+        ItemsSource = ColorsDataModel.All;
+    }
 }
 ```
 

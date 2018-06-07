@@ -18,25 +18,25 @@ Xamarin.Forms applications often contain multiple controls that have an identica
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	x:Class="Styles.NoStylesPage"
-	Title="No Styles"
-	Icon="xaml.png">
-	<ContentPage.Content>
-		<StackLayout Padding="0,20,0,0">
-			<Label Text="These labels"
-			       HorizontalOptions="Center"
-				   VerticalOptions="CenterAndExpand"
-				   FontSize="Large" />
-			<Label Text="are not"
-			       HorizontalOptions="Center"
-				   VerticalOptions="CenterAndExpand"
-				   FontSize="Large" />
-			<Label Text="using styles"
-			       HorizontalOptions="Center"
-				   VerticalOptions="CenterAndExpand"
-				   FontSize="Large" />
-		</StackLayout>
-	</ContentPage.Content>
+    x:Class="Styles.NoStylesPage"
+    Title="No Styles"
+    Icon="xaml.png">
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <Label Text="These labels"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="Large" />
+            <Label Text="are not"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="Large" />
+            <Label Text="using styles"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="Large" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -45,35 +45,35 @@ The following code example shows the equivalent page created in C#:
 ```csharp
 public class NoStylesPageCS : ContentPage
 {
-	public NoStylesPageCS ()
-	{
-		Title = "No Styles";
-		Icon = "csharp.png";
-		Padding = new Thickness (0, 20, 0, 0);
+    public NoStylesPageCS ()
+    {
+        Title = "No Styles";
+        Icon = "csharp.png";
+        Padding = new Thickness (0, 20, 0, 0);
 
-		Content = new StackLayout {
-			Children = {
-				new Label {
-					Text = "These labels",
-					HorizontalOptions = LayoutOptions.Center,
-					VerticalOptions = LayoutOptions.CenterAndExpand,
-					FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label))
-				},
-				new Label {
-					Text = "are not",
-					HorizontalOptions = LayoutOptions.Center,
-					VerticalOptions = LayoutOptions.CenterAndExpand,
-					FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label))
-				},
-				new Label {
-					Text = "using styles",
-					HorizontalOptions = LayoutOptions.Center,
-					VerticalOptions = LayoutOptions.CenterAndExpand,
-					FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label))
-				}
-			}
-		};
-	}
+        Content = new StackLayout {
+            Children = {
+                new Label {
+                    Text = "These labels",
+                    HorizontalOptions = LayoutOptions.Center,
+                    VerticalOptions = LayoutOptions.CenterAndExpand,
+                    FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label))
+                },
+                new Label {
+                    Text = "are not",
+                    HorizontalOptions = LayoutOptions.Center,
+                    VerticalOptions = LayoutOptions.CenterAndExpand,
+                    FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label))
+                },
+                new Label {
+                    Text = "using styles",
+                    HorizontalOptions = LayoutOptions.Center,
+                    VerticalOptions = LayoutOptions.CenterAndExpand,
+                    FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label))
+                }
+            }
+        };
+    }
 }
 ```
 
@@ -109,9 +109,9 @@ When creating a [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.S
 
 ```xaml
 <Style x:Key="labelStyle" TargetType="Label">
-	<Setter Property="HorizontalOptions" Value="Center" />
-	<Setter Property="VerticalOptions" Value="CenterAndExpand" />
-	<Setter Property="FontSize" Value="Large" />
+    <Setter Property="HorizontalOptions" Value="Center" />
+    <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+    <Setter Property="FontSize" Value="Large" />
 </Style>
 ```
 

@@ -237,13 +237,13 @@ The `BaseUrl` should be set to `"ms-appx-web:///"`:
 [assembly: Dependency(typeof(BaseUrl))]
 namespace WorkingWithWebview.UWP
 {
-	public class BaseUrl : IBaseUrl
-	{
-		public string Get()
-		{
-			return "ms-appx-web:///";
-		}
-	}
+    public class BaseUrl : IBaseUrl
+    {
+        public string Get()
+        {
+            return "ms-appx-web:///";
+        }
+    }
 }
 ```
 
@@ -270,15 +270,15 @@ Start by creating the page for the browser view:
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="WebViewDemo.InAppDemo"
 Title="In App Browser">
-	<ContentPage.Content>
-		<StackLayout>
-			<StackLayout Orientation="Horizontal" Padding="10,10">
-				<Button Text="Back" HorizontalOptions="StartAndExpand" Clicked="backClicked" />
-				<Button Text="Forward" HorizontalOptions="End" Clicked="forwardClicked" />
-			</StackLayout>
-			<WebView x:Name="Browser" WidthRequest="1000" HeightRequest="1000" />
-		</StackLayout>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="10,10">
+                <Button Text="Back" HorizontalOptions="StartAndExpand" Clicked="backClicked" />
+                <Button Text="Forward" HorizontalOptions="End" Clicked="forwardClicked" />
+            </StackLayout>
+            <WebView x:Name="Browser" WidthRequest="1000" HeightRequest="1000" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -288,29 +288,29 @@ In our code-behind:
 public partial class InAppDemo : ContentPage
 {
   //sets the URL for the browser in the page at creation
-	public InAppDemo (string URL)
-	{
-		InitializeComponent ();
-		Browser.Source = URL;
-	}
+    public InAppDemo (string URL)
+    {
+        InitializeComponent ();
+        Browser.Source = URL;
+    }
 
 
-	private void backClicked(object sender, EventArgs e)
-	{
+    private void backClicked(object sender, EventArgs e)
+    {
     // Check to see if there is anywhere to go back to
-		if (Browser.CanGoBack) {
-			Browser.GoBack ();
-		} else { // If not, leave the view
-			Navigation.PopAsync ();
-		}
-	}
+        if (Browser.CanGoBack) {
+            Browser.GoBack ();
+        } else { // If not, leave the view
+            Navigation.PopAsync ();
+        }
+    }
 
-	private void forwardClicked(object sender, EventArgs e)
-	{
-		if (Browser.CanGoForward) {
-			Browser.GoForward ();
-		}
-	}
+    private void forwardClicked(object sender, EventArgs e)
+    {
+        if (Browser.CanGoForward) {
+            Browser.GoForward ();
+        }
+    }
 }
 ```
 
@@ -425,8 +425,8 @@ AbsoluteLayout *without* WidthRequest & HeightRequest:
 
 ```xaml
 <AbsoluteLayout>
-	<Label Text="test" AbsoluteLayout.LayoutBounds="0,0,100,100" />
-	<WebView Source="http://www.xamarin.com/"
+    <Label Text="test" AbsoluteLayout.LayoutBounds="0,0,100,100" />
+    <WebView Source="http://www.xamarin.com/"
       AbsoluteLayout.LayoutBounds="0,150,500,500" />
 </AbsoluteLayout>
 ```

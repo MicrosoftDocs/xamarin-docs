@@ -23,35 +23,35 @@ The following code demonstrates *explicit* style inheritance in a XAML page:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" Icon="xaml.png">
-	<ContentPage.Resources>
-		<ResourceDictionary>
-			<Style x:Key="baseStyle" TargetType="View">
-				<Setter Property="HorizontalOptions"
-				        Value="Center" />
-				<Setter Property="VerticalOptions"
-				        Value="CenterAndExpand" />
-			</Style>
-			<Style x:Key="labelStyle" TargetType="Label"
-			       BasedOn="{StaticResource baseStyle}">
-			    ...
-				<Setter Property="TextColor" Value="Teal" />
-			</Style>
-			<Style x:Key="buttonStyle" TargetType="Button"
-			       BasedOn="{StaticResource baseStyle}">
-				<Setter Property="BorderColor" Value="Lime" />
-				...
-			</Style>
-		</ResourceDictionary>
-	</ContentPage.Resources>
-	<ContentPage.Content>
-		<StackLayout Padding="0,20,0,0">
-			<Label Text="These labels"
-			       Style="{StaticResource labelStyle}" />
-			...
-			<Button Text="So is the button"
-			        Style="{StaticResource buttonStyle}" />
-		</StackLayout>
-	</ContentPage.Content>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="View">
+                <Setter Property="HorizontalOptions"
+                        Value="Center" />
+                <Setter Property="VerticalOptions"
+                        Value="CenterAndExpand" />
+            </Style>
+            <Style x:Key="labelStyle" TargetType="Label"
+                   BasedOn="{StaticResource baseStyle}">
+                ...
+                <Setter Property="TextColor" Value="Teal" />
+            </Style>
+            <Style x:Key="buttonStyle" TargetType="Button"
+                   BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BorderColor" Value="Lime" />
+                ...
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <Label Text="These labels"
+                   Style="{StaticResource labelStyle}" />
+            ...
+            <Button Text="So is the button"
+                    Style="{StaticResource buttonStyle}" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -74,28 +74,28 @@ This inheritance chain is demonstrated in the following code example:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" Icon="xaml.png">
-	<ContentPage.Resources>
-		<ResourceDictionary>
-			<Style x:Key="baseStyle" TargetType="View">
-			  ...
-			</Style>
-		</ResourceDictionary>
-	</ContentPage.Resources>
-	<ContentPage.Content>
-		<StackLayout Padding="0,20,0,0">
-			<StackLayout.Resources>
-				<ResourceDictionary>
-					<Style x:Key="labelStyle" TargetType="Label" BasedOn="{StaticResource baseStyle}">
-					  ...
-					</Style>
-					<Style x:Key="buttonStyle" TargetType="Button" BasedOn="{StaticResource baseStyle}">
-					  ...
-					</Style>
-				</ResourceDictionary>
-			</StackLayout.Resources>
-			...
-		</StackLayout>
-	</ContentPage.Content>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="View">
+              ...
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="labelStyle" TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                      ...
+                    </Style>
+                    <Style x:Key="buttonStyle" TargetType="Button" BasedOn="{StaticResource baseStyle}">
+                      ...
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            ...
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -108,41 +108,41 @@ The equivalent C# page, where [`Style`](https://developer.xamarin.com/api/type/X
 ```csharp
 public class StyleInheritancePageCS : ContentPage
 {
-	public StyleInheritancePageCS ()
-	{
-		var baseStyle = new Style (typeof(View)) {
-			Setters = {
-				new Setter {
-					Property = View.HorizontalOptionsProperty, Value = LayoutOptions.Center	},
-				...
-			}
-		};
+    public StyleInheritancePageCS ()
+    {
+        var baseStyle = new Style (typeof(View)) {
+            Setters = {
+                new Setter {
+                    Property = View.HorizontalOptionsProperty, Value = LayoutOptions.Center    },
+                ...
+            }
+        };
 
-		var labelStyle = new Style (typeof(Label)) {
-			BasedOn = baseStyle,
-			Setters = {
-				...
-				new Setter { Property = Label.TextColorProperty, Value = Color.Teal	}
-			}
-		};
+        var labelStyle = new Style (typeof(Label)) {
+            BasedOn = baseStyle,
+            Setters = {
+                ...
+                new Setter { Property = Label.TextColorProperty, Value = Color.Teal    }
+            }
+        };
 
-		var buttonStyle = new Style (typeof(Button)) {
-			BasedOn = baseStyle,
-			Setters = {
-				new Setter { Property = Button.BorderColorProperty, Value =	Color.Lime },
-				...
-			}
-		};
-		...
+        var buttonStyle = new Style (typeof(Button)) {
+            BasedOn = baseStyle,
+            Setters = {
+                new Setter { Property = Button.BorderColorProperty, Value =    Color.Lime },
+                ...
+            }
+        };
+        ...
 
-		Content = new StackLayout {
-			Children = {
-				new Label { Text = "These labels", Style = labelStyle },
-				...
-				new Button { Text = "So is the button", Style = buttonStyle }
-			}
-		};
-	}
+        Content = new StackLayout {
+            Children = {
+                new Label { Text = "These labels", Style = labelStyle },
+                ...
+                new Button { Text = "So is the button", Style = buttonStyle }
+            }
+        };
+    }
 }
 ```
 

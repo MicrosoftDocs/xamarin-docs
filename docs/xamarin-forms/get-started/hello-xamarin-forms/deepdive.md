@@ -107,15 +107,15 @@ using Xamarin.Forms.Xaml;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Phoneword
 {
-	public partial class App : Application
-	{
-		public App()
-		{
-			InitializeComponent();
-			MainPage = new MainPage();
-		}
+    public partial class App : Application
+    {
+        public App()
+        {
+            InitializeComponent();
+            MainPage = new MainPage();
+        }
         ...
-	}
+    }
 }
 ```
 
@@ -130,16 +130,16 @@ To launch the initial Xamarin.Forms page in iOS, the Phoneword.iOS project inclu
 ```csharp
 namespace Phoneword.iOS
 {
-	[Register ("AppDelegate")]
-	public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
-	{
-		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
-		{
-			global::Xamarin.Forms.Forms.Init ();
-			LoadApplication (new App ());
-			return base.FinishedLaunching (app, options);
-		}
-	}
+    [Register ("AppDelegate")]
+    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    {
+        public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+        {
+            global::Xamarin.Forms.Forms.Init ();
+            LoadApplication (new App ());
+            return base.FinishedLaunching (app, options);
+        }
+    }
 }
 ```
 
@@ -153,9 +153,9 @@ To launch the initial Xamarin.Forms page in Android, the Phoneword.Droid project
 namespace Phoneword.Droid
 {
     [Activity(Label = "Phoneword",
-			  Icon = "@drawable/icon",
-			  MainLauncher = true,
-			  ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+              Icon = "@drawable/icon",
+              MainLauncher = true,
+              ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         internal static MainActivity Instance { get; private set; }
@@ -224,15 +224,15 @@ When the Phoneword application is run on any platform, it displays a single scre
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-						 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-						 x:Class="Phoneword.MainPage">
-		...
-		<StackLayout>
-			<Label Text="Enter a Phoneword:" />
-			<Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
-			<Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
-			<Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
-		</StackLayout>
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         x:Class="Phoneword.MainPage">
+        ...
+        <StackLayout>
+            <Label Text="Enter a Phoneword:" />
+            <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
+            <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+            <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
+        </StackLayout>
 </ContentPage>
 ```
 
@@ -272,52 +272,52 @@ The Phoneword application for Xamarin.Forms has introduced several concepts not 
 
 - Enabling and disabling buttons. A [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) can be toggled on or off by changing its [`IsEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsEnabled/) property. For example, the following code example disables the `callButton`:
 
-	```csharp
-	callButton.IsEnabled = false;
-	```
+    ```csharp
+    callButton.IsEnabled = false;
+    ```
 
 - Displaying an alert dialog. When the user presses the call **Button** the Phoneword application shows an *Alert Dialog* with the option to place or cancel a call. The [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert/p/System.String/System.String/System.String/System.String/) method is used to create the dialog, as shown in the following code example:
 
-	```csharp
-	await this.DisplayAlert (
-			"Dial a Number",
-			"Would you like to call " + translatedNumber + "?",
-			"Yes",
-			"No");
-	```
+    ```csharp
+    await this.DisplayAlert (
+            "Dial a Number",
+            "Would you like to call " + translatedNumber + "?",
+            "Yes",
+            "No");
+    ```
 
 - Accessing native features via the [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) class. The Phoneword application uses the `DependencyService` class to resolve the `IDialer` interface to platform-specific phone dialing implementations, as shown in the following code example from the Phoneword project:
 
-	```csharp
-	async void OnCall (object sender, EventArgs e)
-	{
-	    ...
-	    var dialer = DependencyService.Get<IDialer> ();
-	    ...
-	}
-	```
+    ```csharp
+    async void OnCall (object sender, EventArgs e)
+    {
+        ...
+        var dialer = DependencyService.Get<IDialer> ();
+        ...
+    }
+    ```
 
   For more information about the [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) class, see [Accessing Native Features via the DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
 - Placing a phone call with a URL. The Phoneword application uses `OpenURL` to launch the system phone app. The URL consists of a `tel:` prefix followed by the phone number to be called, as shown in the following code example from the iOS project:
 
-	```csharp
-	return UIApplication.SharedApplication.OpenUrl (new NSUrl ("tel:" + number));
-	```
+    ```csharp
+    return UIApplication.SharedApplication.OpenUrl (new NSUrl ("tel:" + number));
+    ```
 
 - Tweaking the platform layout. The [`Device`](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) class enables developers to customize the application layout and functionality on a per-platform basis, as shown in the following code example that uses different [`Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) values on different platforms to correctly display each page:
 
-	```xaml
-	<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" ... >
-	    <ContentPage.Padding>
-	        <OnPlatform x:TypeArguments="Thickness">
-	            <On Platform="iOS" Value="20, 40, 20, 20" />
-	            <On Platform="Android, UWP" Value="20" />
-	        </OnPlatform>
-	    </ContentPage.Padding>
-	    ...
-	</ContentPage>
-	```
+    ```xaml
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" ... >
+        <ContentPage.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="20, 40, 20, 20" />
+                <On Platform="Android, UWP" Value="20" />
+            </OnPlatform>
+        </ContentPage.Padding>
+        ...
+    </ContentPage>
+    ```
 
   For more information about platform tweaks, see [Device Class](~/xamarin-forms/platform/device.md).
 

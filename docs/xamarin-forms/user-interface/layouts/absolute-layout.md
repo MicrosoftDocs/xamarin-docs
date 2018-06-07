@@ -22,7 +22,7 @@ This article will cover:
   - **[Proportional Layouts](#Proportional_Layouts)** &ndash; understand how proportional values work in an `AbsoluteLayout`.
   - **[Specifying Values](#Specifying_Values)** &ndash; understand how proportional and absolute values are specified.
   - **[Proportional Values](#Proportional_Values)** &ndash; understand how proportional values work.
-	- **[Absolute Values](#Absolute_Values)** &ndash; understand how absolute values work.
+    - **[Absolute Values](#Absolute_Values)** &ndash; understand how absolute values work.
 
 <a name="Purpose" />
 
@@ -89,21 +89,21 @@ In XAML, bounds and flags are set as part of the definition of views within the 
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="LayoutSamples.AbsoluteLayoutExploration"
 Title="Absolute Layout Exploration">
-	<ContentPage.Content>
-		<AbsoluteLayout>
-			<Label Text="I'm centered on iPhone 4 but no other device"
-				AbsoluteLayout.LayoutBounds="115,150,100,100" LineBreakMode="WordWrap"  />
-			<Label Text="I'm bottom center on every device."
-				AbsoluteLayout.LayoutBounds=".5,1,.5,.1" AbsoluteLayout.LayoutFlags="All"
-				LineBreakMode="WordWrap"  />
-			<BoxView Color="Olive"  AbsoluteLayout.LayoutBounds="1,.5, 25, 100"
-				AbsoluteLayout.LayoutFlags="PositionProportional" />
-			<BoxView Color="Red" AbsoluteLayout.LayoutBounds="0,.5,25,100"
-				AbsoluteLayout.LayoutFlags="PositionProportional" />
-			<BoxView Color="Blue" AbsoluteLayout.LayoutBounds=".5,0,100,25"
-				AbsoluteLayout.LayoutFlags="PositionProportional" />
-		</AbsoluteLayout>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Label Text="I'm centered on iPhone 4 but no other device"
+                AbsoluteLayout.LayoutBounds="115,150,100,100" LineBreakMode="WordWrap"  />
+            <Label Text="I'm bottom center on every device."
+                AbsoluteLayout.LayoutBounds=".5,1,.5,.1" AbsoluteLayout.LayoutFlags="All"
+                LineBreakMode="WordWrap"  />
+            <BoxView Color="Olive"  AbsoluteLayout.LayoutBounds="1,.5, 25, 100"
+                AbsoluteLayout.LayoutFlags="PositionProportional" />
+            <BoxView Color="Red" AbsoluteLayout.LayoutBounds="0,.5,25,100"
+                AbsoluteLayout.LayoutFlags="PositionProportional" />
+            <BoxView Color="Blue" AbsoluteLayout.LayoutBounds=".5,0,100,25"
+                AbsoluteLayout.LayoutFlags="PositionProportional" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -120,42 +120,42 @@ The following achieves the same layout in C#:
 ```csharp
 public class AbsoluteLayoutExplorationCode : ContentPage
 {
-	public AbsoluteLayoutExplorationCode ()
-	{
-		Title = "Absolute Layout Exploration - Code";
-		var layout = new AbsoluteLayout();
+    public AbsoluteLayoutExplorationCode ()
+    {
+        Title = "Absolute Layout Exploration - Code";
+        var layout = new AbsoluteLayout();
 
-		var centerLabel = new Label {
+        var centerLabel = new Label {
         Text = "I'm centered on iPhone 4 but no other device.",
         LineBreakMode = LineBreakMode.WordWrap};
 
-		AbsoluteLayout.SetLayoutBounds (centerLabel, new Rectangle (115, 159, 100, 100));
-		// No need to set layout flags, absolute positioning is the default
+        AbsoluteLayout.SetLayoutBounds (centerLabel, new Rectangle (115, 159, 100, 100));
+        // No need to set layout flags, absolute positioning is the default
 
-		var bottomLabel = new Label { Text = "I'm bottom center on every device.", LineBreakMode = LineBreakMode.WordWrap };
-		AbsoluteLayout.SetLayoutBounds (bottomLabel, new Rectangle (.5, 1, .5, .1));
-		AbsoluteLayout.SetLayoutFlags (bottomLabel, AbsoluteLayoutFlags.All);
+        var bottomLabel = new Label { Text = "I'm bottom center on every device.", LineBreakMode = LineBreakMode.WordWrap };
+        AbsoluteLayout.SetLayoutBounds (bottomLabel, new Rectangle (.5, 1, .5, .1));
+        AbsoluteLayout.SetLayoutFlags (bottomLabel, AbsoluteLayoutFlags.All);
 
-		var rightBox = new BoxView{ Color = Color.Olive };
-		AbsoluteLayout.SetLayoutBounds (rightBox, new Rectangle (1, .5, 25, 100));
-		AbsoluteLayout.SetLayoutFlags (rightBox, AbsoluteLayoutFlags.PositionProportional);
+        var rightBox = new BoxView{ Color = Color.Olive };
+        AbsoluteLayout.SetLayoutBounds (rightBox, new Rectangle (1, .5, 25, 100));
+        AbsoluteLayout.SetLayoutFlags (rightBox, AbsoluteLayoutFlags.PositionProportional);
 
-		var leftBox = new BoxView{ Color = Color.Red };
-		AbsoluteLayout.SetLayoutBounds (leftBox, new Rectangle (0, .5, 25, 100));
-		AbsoluteLayout.SetLayoutFlags (leftBox, AbsoluteLayoutFlags.PositionProportional);
+        var leftBox = new BoxView{ Color = Color.Red };
+        AbsoluteLayout.SetLayoutBounds (leftBox, new Rectangle (0, .5, 25, 100));
+        AbsoluteLayout.SetLayoutFlags (leftBox, AbsoluteLayoutFlags.PositionProportional);
 
-		var topBox = new BoxView{ Color = Color.Blue };
-		AbsoluteLayout.SetLayoutBounds (topBox, new Rectangle (.5, 0, 100, 25));
-		AbsoluteLayout.SetLayoutFlags (topBox, AbsoluteLayoutFlags.PositionProportional);
+        var topBox = new BoxView{ Color = Color.Blue };
+        AbsoluteLayout.SetLayoutBounds (topBox, new Rectangle (.5, 0, 100, 25));
+        AbsoluteLayout.SetLayoutFlags (topBox, AbsoluteLayoutFlags.PositionProportional);
 
-		layout.Children.Add (bottomLabel);
-		layout.Children.Add (centerLabel);
-		layout.Children.Add (rightBox);
-		layout.Children.Add (leftBox);
-		layout.Children.Add (topBox);
+        layout.Children.Add (bottomLabel);
+        layout.Children.Add (centerLabel);
+        layout.Children.Add (rightBox);
+        layout.Children.Add (leftBox);
+        layout.Children.Add (topBox);
 
-		Content = layout;
-	}
+        Content = layout;
+    }
 }
 ```
 <a name="Proportional_Values" />
@@ -219,58 +219,58 @@ Consider the following XAML:
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="TheBusinessTumble.AbsoluteLayoutPage"
 Title="AbsoluteLayout">
-	<ContentPage.ToolbarItems>
-		<ToolbarItem Text="Save" />
-	</ContentPage.ToolbarItems>
-	<ContentPage.Content>
-		<ScrollView>
-			<AbsoluteLayout BackgroundColor="Maroon">
-				<BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0
-					0,1,100" AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional" />
-				<Button BackgroundColor="Maroon"
-					AbsoluteLayout.LayoutBounds=".5,55,70,70" AbsoluteLayout.LayoutFlags="XProportional" BorderRadius="35" />
-				<Button BackgroundColor="Red" AbsoluteLayout.LayoutBounds=".5
-					60,60,60" AbsoluteLayout.LayoutFlags="XProportional" BorderRadius="30" />
-				<Label Text="User Name" FontAttributes="Bold" FontSize="26"
-					TextColor="Black" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds=".5,140,1,40" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
-				<Entry Text="Bio + Hashtags" TextColor="White"
-					BackgroundColor="Maroon" AbsoluteLayout.LayoutBounds=".5,180,1,40" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
-				<AbsoluteLayout BackgroundColor="White"
-						AbsoluteLayout.LayoutBounds="0, 220, 1, 50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional">
-					<AbsoluteLayout AbsoluteLayout.LayoutBounds="0,0,.5,1" AbsoluteLayout.LayoutFlags="WidthProportional,HeightProportional">
-						<Button BackgroundColor="Black" BorderRadius="20"
-							AbsoluteLayout.LayoutBounds="5,.5,40,40" AbsoluteLayout.LayoutFlags="YProportional" />
-						<Label Text="Accent Color" TextColor="Black"
-							AbsoluteLayout.LayoutBounds="50,.55,1,25" AbsoluteLayout.LayoutFlags="YProportional,WidthProportional" />
-					</AbsoluteLayout>
-					<AbsoluteLayout AbsoluteLayout.LayoutBounds="1,0,.5,1" AbsoluteLayout.LayoutFlags="WidthProportional,HeightProportional,XProportional">
-						<Button BackgroundColor="Maroon" BorderRadius="20"
-							AbsoluteLayout.LayoutBounds="5,.5,40,40" AbsoluteLayout.LayoutFlags="YProportional" />
-						<Label Text="Primary Color" TextColor="Black"
-							AbsoluteLayout.LayoutBounds="50,.55,1,25" AbsoluteLayout.LayoutFlags="YProportional,WidthProportional" />
-					</AbsoluteLayout>
-				</AbsoluteLayout>
-				<AbsoluteLayout AbsoluteLayout.LayoutBounds="0,270,1,50" AbsoluteLayout.LayoutFlags="WidthProportional" Padding="5,0,0,0">
-					<Label Text="Age:" TextColor="White"
-						AbsoluteLayout.LayoutBounds="0,25,.25,50" AbsoluteLayout.LayoutFlags="WidthProportional" />
-					<Entry Text="35" TextColor="White" BackgroundColor="Maroon"
-						AbsoluteLayout.LayoutBounds="1,10,.75,50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
-				</AbsoluteLayout>
-				<AbsoluteLayout AbsoluteLayout.LayoutBounds="0,320,1,50" AbsoluteLayout.LayoutFlags="WidthProportional" Padding="5,0,0,0">
-					<Label Text="Interests:" TextColor="White"
-						AbsoluteLayout.LayoutBounds="0,25,.25,50" AbsoluteLayout.LayoutFlags="WidthProportional" />
-					<Entry Text="Xamarin.Forms" TextColor="White"
-						BackgroundColor="Maroon" AbsoluteLayout.LayoutBounds="1,10,.75,50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
-				</AbsoluteLayout>
-				<AbsoluteLayout AbsoluteLayout.LayoutBounds="0,370,1,50" AbsoluteLayout.LayoutFlags="WidthProportional" Padding="5,0,0,0">
-					<Label Text="Ask me about:" TextColor="White"
-						AbsoluteLayout.LayoutBounds="0,25,.25,50" AbsoluteLayout.LayoutFlags="WidthProportional" />
-					<Entry Text="Xamarin, C#, .NET, Mono" TextColor="White"
-						BackgroundColor="Maroon" AbsoluteLayout.LayoutBounds="1,10,.75,50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
-				</AbsoluteLayout>
-			</AbsoluteLayout>
-		</ScrollView>
-	</ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <AbsoluteLayout BackgroundColor="Maroon">
+                <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0
+                    0,1,100" AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional" />
+                <Button BackgroundColor="Maroon"
+                    AbsoluteLayout.LayoutBounds=".5,55,70,70" AbsoluteLayout.LayoutFlags="XProportional" BorderRadius="35" />
+                <Button BackgroundColor="Red" AbsoluteLayout.LayoutBounds=".5
+                    60,60,60" AbsoluteLayout.LayoutFlags="XProportional" BorderRadius="30" />
+                <Label Text="User Name" FontAttributes="Bold" FontSize="26"
+                    TextColor="Black" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds=".5,140,1,40" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+                <Entry Text="Bio + Hashtags" TextColor="White"
+                    BackgroundColor="Maroon" AbsoluteLayout.LayoutBounds=".5,180,1,40" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+                <AbsoluteLayout BackgroundColor="White"
+                        AbsoluteLayout.LayoutBounds="0, 220, 1, 50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional">
+                    <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,0,.5,1" AbsoluteLayout.LayoutFlags="WidthProportional,HeightProportional">
+                        <Button BackgroundColor="Black" BorderRadius="20"
+                            AbsoluteLayout.LayoutBounds="5,.5,40,40" AbsoluteLayout.LayoutFlags="YProportional" />
+                        <Label Text="Accent Color" TextColor="Black"
+                            AbsoluteLayout.LayoutBounds="50,.55,1,25" AbsoluteLayout.LayoutFlags="YProportional,WidthProportional" />
+                    </AbsoluteLayout>
+                    <AbsoluteLayout AbsoluteLayout.LayoutBounds="1,0,.5,1" AbsoluteLayout.LayoutFlags="WidthProportional,HeightProportional,XProportional">
+                        <Button BackgroundColor="Maroon" BorderRadius="20"
+                            AbsoluteLayout.LayoutBounds="5,.5,40,40" AbsoluteLayout.LayoutFlags="YProportional" />
+                        <Label Text="Primary Color" TextColor="Black"
+                            AbsoluteLayout.LayoutBounds="50,.55,1,25" AbsoluteLayout.LayoutFlags="YProportional,WidthProportional" />
+                    </AbsoluteLayout>
+                </AbsoluteLayout>
+                <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,270,1,50" AbsoluteLayout.LayoutFlags="WidthProportional" Padding="5,0,0,0">
+                    <Label Text="Age:" TextColor="White"
+                        AbsoluteLayout.LayoutBounds="0,25,.25,50" AbsoluteLayout.LayoutFlags="WidthProportional" />
+                    <Entry Text="35" TextColor="White" BackgroundColor="Maroon"
+                        AbsoluteLayout.LayoutBounds="1,10,.75,50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+                </AbsoluteLayout>
+                <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,320,1,50" AbsoluteLayout.LayoutFlags="WidthProportional" Padding="5,0,0,0">
+                    <Label Text="Interests:" TextColor="White"
+                        AbsoluteLayout.LayoutBounds="0,25,.25,50" AbsoluteLayout.LayoutFlags="WidthProportional" />
+                    <Entry Text="Xamarin.Forms" TextColor="White"
+                        BackgroundColor="Maroon" AbsoluteLayout.LayoutBounds="1,10,.75,50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+                </AbsoluteLayout>
+                <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,370,1,50" AbsoluteLayout.LayoutFlags="WidthProportional" Padding="5,0,0,0">
+                    <Label Text="Ask me about:" TextColor="White"
+                        AbsoluteLayout.LayoutBounds="0,25,.25,50" AbsoluteLayout.LayoutFlags="WidthProportional" />
+                    <Entry Text="Xamarin, C#, .NET, Mono" TextColor="White"
+                        BackgroundColor="Maroon" AbsoluteLayout.LayoutBounds="1,10,.75,50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+                </AbsoluteLayout>
+            </AbsoluteLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>
 ```
 

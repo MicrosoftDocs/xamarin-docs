@@ -51,23 +51,23 @@ In XAML, the `PersonDataTemplateSelector` can be instantiated by declaring it as
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Selector;assembly=Selector" x:Class="Selector.HomePage">
-	<ContentPage.Resources>
-		<ResourceDictionary>
-			<DataTemplate x:Key="validPersonTemplate">
-				<ViewCell>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="validPersonTemplate">
+                <ViewCell>
                    ...
-				</ViewCell>
-			</DataTemplate>
-			<DataTemplate x:Key="invalidPersonTemplate">
-				<ViewCell>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="invalidPersonTemplate">
+                <ViewCell>
                    ...
-				</ViewCell>
-			</DataTemplate>
-			<local:PersonDataTemplateSelector x:Key="personDataTemplateSelector"
+                </ViewCell>
+            </DataTemplate>
+            <local:PersonDataTemplateSelector x:Key="personDataTemplateSelector"
                 ValidTemplate="{StaticResource validPersonTemplate}"
                 InvalidTemplate="{StaticResource invalidPersonTemplate}" />
-		</ResourceDictionary>
-	</ContentPage.Resources>
+        </ResourceDictionary>
+    </ContentPage.Resources>
   ...
 </ContentPage>
 ```

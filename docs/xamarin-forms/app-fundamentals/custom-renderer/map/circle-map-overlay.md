@@ -61,12 +61,12 @@ Consume the `CustomMap` control by declaring an instance of it in the XAML page 
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:local="clr-namespace:MapOverlay;assembly=MapOverlay"
-			 x:Class="MapOverlay.MapPage">
-	<ContentPage.Content>
-		<local:CustomMap x:Name="customMap" MapType="Street" WidthRequest="{x:Static local:App.ScreenWidth}" HeightRequest="{x:Static local:App.ScreenHeight}" />
-	</ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MapOverlay;assembly=MapOverlay"
+             x:Class="MapOverlay.MapPage">
+    <ContentPage.Content>
+        <local:CustomMap x:Name="customMap" MapType="Street" WidthRequest="{x:Static local:App.ScreenWidth}" HeightRequest="{x:Static local:App.ScreenHeight}" />
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -75,16 +75,16 @@ Alternatively, consume the `CustomMap` control by declaring an instance of it in
 ```csharp
 public class MapPageCS : ContentPage
 {
-	public MapPageCS ()
-	{
-		var customMap = new CustomMap {
-			MapType = MapType.Street,
-			WidthRequest = App.ScreenWidth,
-			HeightRequest = App.ScreenHeight
-		};
+    public MapPageCS ()
+    {
+        var customMap = new CustomMap {
+            MapType = MapType.Street,
+            WidthRequest = App.ScreenWidth,
+            HeightRequest = App.ScreenHeight
+        };
         ...
-		Content = customMap;
-	}
+        Content = customMap;
+    }
 }
 ```
 

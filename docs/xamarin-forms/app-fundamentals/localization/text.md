@@ -269,9 +269,9 @@ similar to the code below:
 
 ```csharp
 System.Resources.ResourceManager temp =
-		new System.Resources.ResourceManager(
-				"UsingResxLocalization.Resx.AppResources",
-				typeof(AppResources).GetTypeInfo().Assembly);
+        new System.Resources.ResourceManager(
+                "UsingResxLocalization.Resx.AppResources",
+                typeof(AppResources).GetTypeInfo().Assembly);
 ```
 
 Check the **Application Output** for the results of the debug code shown above,
@@ -303,7 +303,7 @@ First, define an interface to expose the user's preferred culture, similar to th
 ```csharp
 public interface ILocalize
 {
-	CultureInfo GetCurrentCultureInfo ();
+    CultureInfo GetCurrentCultureInfo ();
     void SetLocale (CultureInfo ci);
 }
 ```
@@ -313,9 +313,9 @@ Second, use the [DependencyService](~/xamarin-forms/app-fundamentals/dependency-
 ```csharp
 if (Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Android)
 {
-	var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
-	Resx.AppResources.Culture = ci; // set the RESX for resource localization
-	DependencyService.Get<ILocalize>().SetLocale(ci); // set the Thread for locale-aware methods
+    var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+    Resx.AppResources.Culture = ci; // set the RESX for resource localization
+    DependencyService.Get<ILocalize>().SetLocale(ci); // set the Thread for locale-aware methods
 }
 ```
 
@@ -331,33 +331,33 @@ take advantage of this `PlatformCulture` helper class:
 ```csharp
 public class PlatformCulture
 {
-	public PlatformCulture (string platformCultureString)
-	{
-		if (String.IsNullOrEmpty(platformCultureString))
+    public PlatformCulture (string platformCultureString)
+    {
+        if (String.IsNullOrEmpty(platformCultureString))
         {
-			throw new ArgumentException("Expected culture identifier", "platformCultureString"); // in C# 6 use nameof(platformCultureString)
-		}
+            throw new ArgumentException("Expected culture identifier", "platformCultureString"); // in C# 6 use nameof(platformCultureString)
+        }
         PlatformString = platformCultureString.Replace("_", "-"); // .NET expects dash, not underscore
-		var dashIndex = PlatformString.IndexOf("-", StringComparison.Ordinal);
-		if (dashIndex > 0)
-		{
-			var parts = PlatformString.Split('-');
-			LanguageCode = parts[0];
-			LocaleCode = parts[1];
-		}
-		else
-		{
-			LanguageCode = PlatformString;
-			LocaleCode = "";
-		}
-	}
-	public string PlatformString { get; private set; }
-	public string LanguageCode { get; private set; }
-	public string LocaleCode { get; private set; }
-	public override string ToString()
-	{
-		return PlatformString;
-	}
+        var dashIndex = PlatformString.IndexOf("-", StringComparison.Ordinal);
+        if (dashIndex > 0)
+        {
+            var parts = PlatformString.Split('-');
+            LanguageCode = parts[0];
+            LocaleCode = parts[1];
+        }
+        else
+        {
+            LanguageCode = PlatformString;
+            LocaleCode = "";
+        }
+    }
+    public string PlatformString { get; private set; }
+    public string LanguageCode { get; private set; }
+    public string LocaleCode { get; private set; }
+    public override string ToString()
+    {
+        return PlatformString;
+    }
 }
 ```
 
@@ -393,78 +393,78 @@ underscore before instantiating the `CultureInfo` class:
 namespace UsingResxLocalization.iOS
 {
 public class Localize : UsingResxLocalization.ILocalize
-	{
-		public void SetLocale (CultureInfo ci)
-		{
-			Thread.CurrentThread.CurrentCulture = ci;
-			Thread.CurrentThread.CurrentUICulture = ci;
-		}
-		public CultureInfo GetCurrentCultureInfo ()
-		{
-			var netLanguage = "en";
-			if (NSLocale.PreferredLanguages.Length > 0)
-			{
-				var pref = NSLocale.PreferredLanguages [0];
-				netLanguage = iOSToDotnetLanguage(pref);
-			}
-			// this gets called a lot - try/catch can be expensive so consider caching or something
-			System.Globalization.CultureInfo ci = null;
-			try
-			{
-				ci = new System.Globalization.CultureInfo(netLanguage);
-			}
-			catch (CultureNotFoundException e1)
-			{
-				// iOS locale not valid .NET culture (eg. "en-ES" : English in Spain)
-				// fallback to first characters, in this case "en"
-				try
-				{
-					var fallback = ToDotnetFallbackLanguage(new PlatformCulture(netLanguage));
-					ci = new System.Globalization.CultureInfo(fallback);
-				}
-				catch (CultureNotFoundException e2)
-				{
-					// iOS language not valid .NET culture, falling back to English
-					ci = new System.Globalization.CultureInfo("en");
-				}
-			}
-			return ci;
-		}
-		string iOSToDotnetLanguage(string iOSLanguage)
-		{
-			var netLanguage = iOSLanguage;
-			//certain languages need to be converted to CultureInfo equivalent
-			switch (iOSLanguage)
-			{
-				case "ms-MY":   // "Malaysian (Malaysia)" not supported .NET culture
-				case "ms-SG":	// "Malaysian (Singapore)" not supported .NET culture
-					netLanguage = "ms"; // closest supported
-					break;
-				case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture
-					netLanguage = "de-CH"; // closest supported
-					break;
-				// add more application-specific cases here (if required)
-				// ONLY use cultures that have been tested and known to work
-			}
-			return netLanguage;
-		}
-		string ToDotnetFallbackLanguage (PlatformCulture platCulture)
-		{
-			var netLanguage = platCulture.LanguageCode; // use the first part of the identifier (two chars, usually);
-			switch (platCulture.LanguageCode)
-			{
-				case "pt":
-					netLanguage = "pt-PT"; // fallback to Portuguese (Portugal)
-					break;
-				case "gsw":
-					netLanguage = "de-CH"; // equivalent to German (Switzerland) for this app
-					break;
-				// add more application-specific cases here (if required)
-				// ONLY use cultures that have been tested and known to work
-			}
-			return netLanguage;
-		}
-	}
+    {
+        public void SetLocale (CultureInfo ci)
+        {
+            Thread.CurrentThread.CurrentCulture = ci;
+            Thread.CurrentThread.CurrentUICulture = ci;
+        }
+        public CultureInfo GetCurrentCultureInfo ()
+        {
+            var netLanguage = "en";
+            if (NSLocale.PreferredLanguages.Length > 0)
+            {
+                var pref = NSLocale.PreferredLanguages [0];
+                netLanguage = iOSToDotnetLanguage(pref);
+            }
+            // this gets called a lot - try/catch can be expensive so consider caching or something
+            System.Globalization.CultureInfo ci = null;
+            try
+            {
+                ci = new System.Globalization.CultureInfo(netLanguage);
+            }
+            catch (CultureNotFoundException e1)
+            {
+                // iOS locale not valid .NET culture (eg. "en-ES" : English in Spain)
+                // fallback to first characters, in this case "en"
+                try
+                {
+                    var fallback = ToDotnetFallbackLanguage(new PlatformCulture(netLanguage));
+                    ci = new System.Globalization.CultureInfo(fallback);
+                }
+                catch (CultureNotFoundException e2)
+                {
+                    // iOS language not valid .NET culture, falling back to English
+                    ci = new System.Globalization.CultureInfo("en");
+                }
+            }
+            return ci;
+        }
+        string iOSToDotnetLanguage(string iOSLanguage)
+        {
+            var netLanguage = iOSLanguage;
+            //certain languages need to be converted to CultureInfo equivalent
+            switch (iOSLanguage)
+            {
+                case "ms-MY":   // "Malaysian (Malaysia)" not supported .NET culture
+                case "ms-SG":    // "Malaysian (Singapore)" not supported .NET culture
+                    netLanguage = "ms"; // closest supported
+                    break;
+                case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture
+                    netLanguage = "de-CH"; // closest supported
+                    break;
+                // add more application-specific cases here (if required)
+                // ONLY use cultures that have been tested and known to work
+            }
+            return netLanguage;
+        }
+        string ToDotnetFallbackLanguage (PlatformCulture platCulture)
+        {
+            var netLanguage = platCulture.LanguageCode; // use the first part of the identifier (two chars, usually);
+            switch (platCulture.LanguageCode)
+            {
+                case "pt":
+                    netLanguage = "pt-PT"; // fallback to Portuguese (Portugal)
+                    break;
+                case "gsw":
+                    netLanguage = "de-CH"; // equivalent to German (Switzerland) for this app
+                    break;
+                // add more application-specific cases here (if required)
+                // ONLY use cultures that have been tested and known to work
+            }
+            return netLanguage;
+        }
+    }
 }
 ```
 
@@ -500,15 +500,15 @@ Alternatively, open the **Info.plist** file in an XML editor and edit the values
 ```xml
 <key>CFBundleLocalizations</key>
 <array>
-	<string>de</string>
-	<string>es</string>
-	<string>fr</string>
-	<string>ja</string>
-	<string>pt</string> <!-- Brazil -->
-	<string>pt-PT</string> <!-- Portugal -->
-	<string>ru</string>
-	<string>zh-Hans</string>
-	<string>zh-Hant</string>
+    <string>de</string>
+    <string>es</string>
+    <string>fr</string>
+    <string>ja</string>
+    <string>pt</string> <!-- Brazil -->
+    <string>pt-PT</string> <!-- Portugal -->
+    <string>ru</string>
+    <string>zh-Hans</string>
+    <string>zh-Hant</string>
 </array>
 <key>CFBundleDevelopmentRegion</key>
 <string>en</string>
@@ -534,77 +534,77 @@ the following code). Add this dependency service implementation to the Android a
 
 namespace UsingResxLocalization.Android
 {
-	public class Localize : UsingResxLocalization.ILocalize
-	{
-		public void SetLocale(CultureInfo ci)
-		{
-			Thread.CurrentThread.CurrentCulture = ci;
-			Thread.CurrentThread.CurrentUICulture = ci;
-		}
-		public CultureInfo GetCurrentCultureInfo()
-		{
-			var netLanguage = "en";
-			var androidLocale = Java.Util.Locale.Default;
-			netLanguage = AndroidToDotnetLanguage(androidLocale.ToString().Replace("_", "-"));
-			// this gets called a lot - try/catch can be expensive so consider caching or something
-			System.Globalization.CultureInfo ci = null;
-			try
-			{
-				ci = new System.Globalization.CultureInfo(netLanguage);
-			}
-			catch (CultureNotFoundException e1)
-			{
-				// iOS locale not valid .NET culture (eg. "en-ES" : English in Spain)
-				// fallback to first characters, in this case "en"
-				try
-				{
-					var fallback = ToDotnetFallbackLanguage(new PlatformCulture(netLanguage));
-					ci = new System.Globalization.CultureInfo(fallback);
-				}
-				catch (CultureNotFoundException e2)
-				{
-					// iOS language not valid .NET culture, falling back to English
-					ci = new System.Globalization.CultureInfo("en");
-				}
-			}
-			return ci;
-		}
-		string AndroidToDotnetLanguage(string androidLanguage)
-		{
-			var netLanguage = androidLanguage;
-			//certain languages need to be converted to CultureInfo equivalent
-			switch (androidLanguage)
-			{
-				case "ms-BN":   // "Malaysian (Brunei)" not supported .NET culture
-				case "ms-MY":   // "Malaysian (Malaysia)" not supported .NET culture
-				case "ms-SG":   // "Malaysian (Singapore)" not supported .NET culture
-					netLanguage = "ms"; // closest supported
-					break;
-				case "in-ID":  // "Indonesian (Indonesia)" has different code in  .NET
-					netLanguage = "id-ID"; // correct code for .NET
-					break;
-				case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture
-					netLanguage = "de-CH"; // closest supported
-					break;
-					// add more application-specific cases here (if required)
-					// ONLY use cultures that have been tested and known to work
-			}
-			return netLanguage;
-		}
-		string ToDotnetFallbackLanguage(PlatformCulture platCulture)
-		{
-			var netLanguage = platCulture.LanguageCode; // use the first part of the identifier (two chars, usually);
-			switch (platCulture.LanguageCode)
-			{
-				case "gsw":
-					netLanguage = "de-CH"; // equivalent to German (Switzerland) for this app
-					break;
-					// add more application-specific cases here (if required)
-					// ONLY use cultures that have been tested and known to work
-			}
-			return netLanguage;
-		}
-	}
+    public class Localize : UsingResxLocalization.ILocalize
+    {
+        public void SetLocale(CultureInfo ci)
+        {
+            Thread.CurrentThread.CurrentCulture = ci;
+            Thread.CurrentThread.CurrentUICulture = ci;
+        }
+        public CultureInfo GetCurrentCultureInfo()
+        {
+            var netLanguage = "en";
+            var androidLocale = Java.Util.Locale.Default;
+            netLanguage = AndroidToDotnetLanguage(androidLocale.ToString().Replace("_", "-"));
+            // this gets called a lot - try/catch can be expensive so consider caching or something
+            System.Globalization.CultureInfo ci = null;
+            try
+            {
+                ci = new System.Globalization.CultureInfo(netLanguage);
+            }
+            catch (CultureNotFoundException e1)
+            {
+                // iOS locale not valid .NET culture (eg. "en-ES" : English in Spain)
+                // fallback to first characters, in this case "en"
+                try
+                {
+                    var fallback = ToDotnetFallbackLanguage(new PlatformCulture(netLanguage));
+                    ci = new System.Globalization.CultureInfo(fallback);
+                }
+                catch (CultureNotFoundException e2)
+                {
+                    // iOS language not valid .NET culture, falling back to English
+                    ci = new System.Globalization.CultureInfo("en");
+                }
+            }
+            return ci;
+        }
+        string AndroidToDotnetLanguage(string androidLanguage)
+        {
+            var netLanguage = androidLanguage;
+            //certain languages need to be converted to CultureInfo equivalent
+            switch (androidLanguage)
+            {
+                case "ms-BN":   // "Malaysian (Brunei)" not supported .NET culture
+                case "ms-MY":   // "Malaysian (Malaysia)" not supported .NET culture
+                case "ms-SG":   // "Malaysian (Singapore)" not supported .NET culture
+                    netLanguage = "ms"; // closest supported
+                    break;
+                case "in-ID":  // "Indonesian (Indonesia)" has different code in  .NET
+                    netLanguage = "id-ID"; // correct code for .NET
+                    break;
+                case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture
+                    netLanguage = "de-CH"; // closest supported
+                    break;
+                    // add more application-specific cases here (if required)
+                    // ONLY use cultures that have been tested and known to work
+            }
+            return netLanguage;
+        }
+        string ToDotnetFallbackLanguage(PlatformCulture platCulture)
+        {
+            var netLanguage = platCulture.LanguageCode; // use the first part of the identifier (two chars, usually);
+            switch (platCulture.LanguageCode)
+            {
+                case "gsw":
+                    netLanguage = "de-CH"; // equivalent to German (Switzerland) for this app
+                    break;
+                    // add more application-specific cases here (if required)
+                    // ONLY use cultures that have been tested and known to work
+            }
+            return netLanguage;
+        }
+    }
 }
 ```
 
@@ -706,7 +706,7 @@ namespace UsingResxLocalization
                     string.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
                     "Text");
 #else
-				translation = Text; // HACK: returns the key, which GETS DISPLAYED TO THE USER
+                translation = Text; // HACK: returns the key, which GETS DISPLAYED TO THE USER
 #endif
             }
             return translation;
@@ -733,14 +733,14 @@ The following XAML snippet shows how to use the markup extension. There are two 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-		x:Class="UsingResxLocalization.FirstPageXaml"
-		xmlns:i18n="clr-namespace:UsingResxLocalization;assembly=UsingResxLocalization">
-	<StackLayout Padding="0, 20, 0, 0">
-		<Label Text="{i18n:Translate NotesLabel}" />
-		<Entry Placeholder="{i18n:Translate NotesPlaceholder}" />
-		<Button Text="{i18n:Translate AddButton}" />
-	</StackLayout>
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="UsingResxLocalization.FirstPageXaml"
+        xmlns:i18n="clr-namespace:UsingResxLocalization;assembly=UsingResxLocalization">
+    <StackLayout Padding="0, 20, 0, 0">
+        <Label Text="{i18n:Translate NotesLabel}" />
+        <Entry Placeholder="{i18n:Translate NotesPlaceholder}" />
+        <Button Text="{i18n:Translate AddButton}" />
+    </StackLayout>
 </ContentPage>
 ```
 
@@ -841,7 +841,7 @@ Update the **MainActivity.cs** in the Android app project so that the `Label` re
 
 ```csharp
 [Activity (Label = "@string/app_name", MainLauncher = true,
-		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 ```
 
 The app now localizes the app name and image. Here's a screenshot of the result (in Spanish):

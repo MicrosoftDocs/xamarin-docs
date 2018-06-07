@@ -36,12 +36,12 @@ To enable the UITest code to reference controls, each control needs a unique ide
 
 ```csharp
 var b = new Button {
-	Text = "Click me",
-	AutomationId = "MyButton"
+    Text = "Click me",
+    AutomationId = "MyButton"
 };
 var l = new Label {
-	Text = "Hello, Xamarin.Forms!",
-	AutomationId = "MyLabel"
+    Text = "Hello, Xamarin.Forms!",
+    AutomationId = "MyLabel"
 };
 ```
 
@@ -135,21 +135,21 @@ Visual Studio has a template to help add a Xamarin.UITest project to an existing
 1. Right click on the solution, and select **File > New Project**.
 1. From the **Visual C#** Templates, select the **Test** category. Select the **UI Test App > Cross-Platform** template:
 
-	![](uitest-and-test-cloud-images/08-new-uitest-project-vs.png "Add New Project")
+    ![](uitest-and-test-cloud-images/08-new-uitest-project-vs.png "Add New Project")
 
-	This will add a new project with the **NUnit**, **Xamarin.UITest**, and **NUnitTestAdapter** NuGet packages to the solution:
+    This will add a new project with the **NUnit**, **Xamarin.UITest**, and **NUnitTestAdapter** NuGet packages to the solution:
 
-	![](uitest-and-test-cloud-images/09-new-uitest-project-xs.png "NuGet Package Manager")
+    ![](uitest-and-test-cloud-images/09-new-uitest-project-xs.png "NuGet Package Manager")
 
-	The **NUnitTestAdapter** is a third party test runner that allows Visual Studio to run NUnit tests from Visual Studio.
+    The **NUnitTestAdapter** is a third party test runner that allows Visual Studio to run NUnit tests from Visual Studio.
 
-	The new project also has two classes in it. **AppInitializer** contains code to help initialize and setup tests. The other class, **Tests**, contains boilerplate code to help start the UITests.
+    The new project also has two classes in it. **AppInitializer** contains code to help initialize and setup tests. The other class, **Tests**, contains boilerplate code to help start the UITests.
 
 1. Add a project reference from the UITest project to the Xamarin.Android project:
 
-	![](uitest-and-test-cloud-images/10-test-apps-vs.png "Project Reference Manager")
+    ![](uitest-and-test-cloud-images/10-test-apps-vs.png "Project Reference Manager")
 
-	This will allow the **NUnitTestAdapter** to run the UITests for the Android app from Visual Studio.
+    This will allow the **NUnitTestAdapter** to run the UITests for the Android app from Visual Studio.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -157,23 +157,23 @@ It is possible to add a new Xamarin.UITest project to an existing solution manua
 
 1. Start by adding a new project by selecting the solution, and clicking **File > Add New Project**. In the **New Project** dialog, select **Cross-platform > Tests > Xamarin Test Cloud > UI Test App**:
 
-	![](uitest-and-test-cloud-images/02-new-uitest-project-xs.png "Choose a Template")
+    ![](uitest-and-test-cloud-images/02-new-uitest-project-xs.png "Choose a Template")
 
-	This will add a new project that already has the **NUnit** and **Xamarin.UITest** NuGet packages in the solution:
+    This will add a new project that already has the **NUnit** and **Xamarin.UITest** NuGet packages in the solution:
 
-	![](uitest-and-test-cloud-images/03-new-uitest-project-xs.png "Xamarin UITest NuGet Packages")
+    ![](uitest-and-test-cloud-images/03-new-uitest-project-xs.png "Xamarin UITest NuGet Packages")
 
-	The new project also has two classes in it. **AppInitializer** contains code to help initialize and setup tests. The other class, **Tests**, contains boilerplate code to help start the UITests.
+    The new project also has two classes in it. **AppInitializer** contains code to help initialize and setup tests. The other class, **Tests**, contains boilerplate code to help start the UITests.
 
 1. Select **View > Pads > Unit Tests** to display the Unit Test pad. Expand **UsingUITest > UsingUITest.UITests > Test Apps**:
 
-	![](uitest-and-test-cloud-images/04-unit-test-pad-xs.png "Unit Test Pad")
+    ![](uitest-and-test-cloud-images/04-unit-test-pad-xs.png "Unit Test Pad")
 
 1. Right click on **Test Apps**, click on **Add App Project**, and select iOS and Android projects in the dialog that appears:
 
-	![](uitest-and-test-cloud-images/05-add-test-apps-xs.png "Test Apps Dialog")
+    ![](uitest-and-test-cloud-images/05-add-test-apps-xs.png "Test Apps Dialog")
 
-	The **Unit Test** pad should now have a reference to the iOS and Android projects. This will allow the Visual Studio for Mac test runner to execute UITests locally against the two Xamarin.Forms projects.
+    The **Unit Test** pad should now have a reference to the iOS and Android projects. This will allow the Visual Studio for Mac test runner to execute UITests locally against the two Xamarin.Forms projects.
 
 #### Adding UITest to the iOS App
 
@@ -181,22 +181,22 @@ There are some additional changes that need to be performed to the iOS applicati
 
 1. Add the **Xamarin Test Cloud Agent** NuGet package. Right click on **Packages**, select **Add Packages**, search NuGet for the **Xamarin Test Cloud Agent** and add it to the Xamarin.iOS project:
 
-	![](uitest-and-test-cloud-images/07-add-test-cloud-agent-xs.png "Add NuGet Packages")
+    ![](uitest-and-test-cloud-images/07-add-test-cloud-agent-xs.png "Add NuGet Packages")
 
 1. Edit the `FinishedLaunching` method of the **AppDelegate** class to initialize the Xamarin Test Cloud Agent when the iOS application starts, and to set the `AutomationId` property of the views. The `FinishedLaunching` method should resemble the following code example:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 {
-		#if ENABLE_TEST_CLOUD
-		Xamarin.Calabash.Start();
-		#endif
+        #if ENABLE_TEST_CLOUD
+        Xamarin.Calabash.Start();
+        #endif
 
-		global::Xamarin.Forms.Forms.Init();
+        global::Xamarin.Forms.Forms.Init();
 
-		LoadApplication(new App());
+        LoadApplication(new App());
 
-		return base.FinishedLaunching(app, options);
+        return base.FinishedLaunching(app, options);
 }
 ```
 

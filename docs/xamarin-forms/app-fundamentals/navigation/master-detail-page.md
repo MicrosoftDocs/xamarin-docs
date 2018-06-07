@@ -58,19 +58,19 @@ The following XAML code example shows a [`MasterDetailPage`](https://developer.x
 
 ```xaml
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
-				  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-				  xmlns:local="clr-namespace:MasterDetailPageNavigation;assembly=MasterDetailPageNavigation"
-				  x:Class="MasterDetailPageNavigation.MainPage">
-	<MasterDetailPage.Master>
-		<local:MasterPage x:Name="masterPage" />
-	</MasterDetailPage.Master>
-	<MasterDetailPage.Detail>
-		<NavigationPage>
-			<x:Arguments>
-				<local:ContactsPage />
-			</x:Arguments>
-		</NavigationPage>
-	</MasterDetailPage.Detail>
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:MasterDetailPageNavigation;assembly=MasterDetailPageNavigation"
+                  x:Class="MasterDetailPageNavigation.MainPage">
+    <MasterDetailPage.Master>
+        <local:MasterPage x:Name="masterPage" />
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:ContactsPage />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
 </MasterDetailPage>
 ```
 
@@ -79,16 +79,16 @@ The following code example shows the equivalent [`MasterDetailPage`](https://dev
 ```csharp
 public class MainPageCS : MasterDetailPage
 {
-	MasterPageCS masterPage;
+    MasterPageCS masterPage;
 
-	public MainPageCS ()
-	{
-		masterPage = new MasterPageCS ();
-		Master = masterPage;
-		Detail = new NavigationPage (new ContactsPageCS ());
-		...
-	}
-	...
+    public MainPageCS ()
+    {
+        masterPage = new MasterPageCS ();
+        Master = masterPage;
+        Detail = new NavigationPage (new ContactsPageCS ());
+        ...
+    }
+    ...
 }
 ```
 
@@ -100,12 +100,12 @@ The following XAML code example shows the declaration of the `MasterPage` object
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="using:MasterDetailPageNavigation"
-			 x:Class="MasterDetailPageNavigation.MasterPage"
-			 Padding="0,40,0,0"
-			 Icon="hamburger.png"
-			 Title="Personal Organiser">
+             x:Class="MasterDetailPageNavigation.MasterPage"
+             Padding="0,40,0,0"
+             Icon="hamburger.png"
+             Title="Personal Organiser">
     <StackLayout>
         <ListView x:Name="listView">
            <ListView.ItemsSource>
@@ -212,21 +212,21 @@ The `MasterPage` instance contains a `ListView` property that exposes its [`List
 ```csharp
 public partial class MainPage : MasterDetailPage
 {
-	public MainPage ()
-	{
-		...
-		masterPage.ListView.ItemSelected += OnItemSelected;
-	}
+    public MainPage ()
+    {
+        ...
+        masterPage.ListView.ItemSelected += OnItemSelected;
+    }
 
-	void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
-	{
-		var item = e.SelectedItem as MasterPageItem;
-		if (item != null) {
-			Detail = new NavigationPage ((Page)Activator.CreateInstance (item.TargetType));
-			masterPage.ListView.SelectedItem = null;
-			IsPresented = false;
-		}
-	}
+    void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
+    {
+        var item = e.SelectedItem as MasterPageItem;
+        if (item != null) {
+            Detail = new NavigationPage ((Page)Activator.CreateInstance (item.TargetType));
+            masterPage.ListView.SelectedItem = null;
+            IsPresented = false;
+        }
+    }
 }
 ```
 
@@ -257,9 +257,9 @@ The following XAML code example demonstrates how to set the [`MasterBehavior`](h
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
-				  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-				  x:Class="MasterDetailPageNavigation.MainPage"
-				  MasterBehavior="Popover">
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="MasterDetailPageNavigation.MainPage"
+                  MasterBehavior="Popover">
   ...
 </MasterDetailPage>
 ```
@@ -269,13 +269,13 @@ The following code example shows the equivalent [`MasterDetailPage`](https://dev
 ```csharp
 public class MainPageCS : MasterDetailPage
 {
-	MasterPageCS masterPage;
+    MasterPageCS masterPage;
 
-	public MainPageCS ()
-	{
-		MasterBehavior = MasterBehavior.Popover;
-		...
-	}
+    public MainPageCS ()
+    {
+        MasterBehavior = MasterBehavior.Popover;
+        ...
+    }
 }
 ```
 

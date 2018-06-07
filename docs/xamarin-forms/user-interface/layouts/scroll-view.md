@@ -36,12 +36,12 @@ This article covers:
 
 ```xaml
 <ContentPage.Content>
-	<ScrollView>
-		<StackLayout>
-			<BoxView BackgroundColor="Red" HeightRequest="600" WidthRequest="150" />
-			<Entry />
-		</StackLayout>
-	</ScrollView>
+    <ScrollView>
+        <StackLayout>
+            <BoxView BackgroundColor="Red" HeightRequest="600" WidthRequest="150" />
+            <Entry />
+        </StackLayout>
+    </ScrollView>
 </ContentPage.Content>
 ```
 
@@ -51,7 +51,7 @@ In C#:
 var scroll = new ScrollView();
 Content = scroll;
 var stack = new StackLayout();
-stack.Children.Add(new BoxView { BackgroundColor = Color.Red,	HeightRequest = 600, WidthRequest = 600 });
+stack.Children.Add(new BoxView { BackgroundColor = Color.Red,    HeightRequest = 600, WidthRequest = 600 });
 stack.Children.Add(new Entry());
 ```
 
@@ -102,7 +102,7 @@ The `IsAnimated` property specifies how the view will be scrolled. When set to t
 Label label = new Label { Text = "Position: " };
 ScrollView scroll = new ScrollView();
 scroll.Scrolled += (object sender, ScrolledEventArgs e) => {
-	label.Text = "Position: " + e.ScrollX + " x " + e.ScrollY;
+    label.Text = "Position: " + e.ScrollX + " x " + e.ScrollY;
 };
 ```
 

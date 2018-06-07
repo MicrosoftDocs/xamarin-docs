@@ -49,22 +49,22 @@ Once a suitable interface has been designed, that interface must be implemented 
 ```csharp
 namespace UsingDependencyService.iOS
 {
-	public class TextToSpeech_iOS : ITextToSpeech
-	{
-		public void Speak (string text)
-		{
-			var speechSynthesizer = new AVSpeechSynthesizer ();
+    public class TextToSpeech_iOS : ITextToSpeech
+    {
+        public void Speak (string text)
+        {
+            var speechSynthesizer = new AVSpeechSynthesizer ();
 
-			var speechUtterance = new AVSpeechUtterance (text) {
-				Rate = AVSpeechUtterance.MaximumSpeechRate/4,
-				Voice = AVSpeechSynthesisVoice.FromLanguage ("en-US"),
-				Volume = 0.5f,
-				PitchMultiplier = 1.0f
-			};
+            var speechUtterance = new AVSpeechUtterance (text) {
+                Rate = AVSpeechUtterance.MaximumSpeechRate/4,
+                Voice = AVSpeechSynthesisVoice.FromLanguage ("en-US"),
+                Volume = 0.5f,
+                PitchMultiplier = 1.0f
+            };
 
-			speechSynthesizer.SpeakUtterance (speechUtterance);
-		}
-	}
+            speechSynthesizer.SpeakUtterance (speechUtterance);
+        }
+    }
 }
 ```
 
@@ -87,22 +87,22 @@ Putting it all together, the platform-specific implementation looks like this:
 [assembly: Dependency (typeof (TextToSpeech_iOS))]
 namespace UsingDependencyService.iOS
 {
-	public class TextToSpeech_iOS : ITextToSpeech
-	{
-		public void Speak (string text)
-		{
-			var speechSynthesizer = new AVSpeechSynthesizer ();
+    public class TextToSpeech_iOS : ITextToSpeech
+    {
+        public void Speak (string text)
+        {
+            var speechSynthesizer = new AVSpeechSynthesizer ();
 
-			var speechUtterance = new AVSpeechUtterance (text) {
-				Rate = AVSpeechUtterance.MaximumSpeechRate/4,
-				Voice = AVSpeechSynthesisVoice.FromLanguage ("en-US"),
-				Volume = 0.5f,
-				PitchMultiplier = 1.0f
-			};
+            var speechUtterance = new AVSpeechUtterance (text) {
+                Rate = AVSpeechUtterance.MaximumSpeechRate/4,
+                Voice = AVSpeechSynthesisVoice.FromLanguage ("en-US"),
+                Volume = 0.5f,
+                PitchMultiplier = 1.0f
+            };
 
-			speechSynthesizer.SpeakUtterance (speechUtterance);
-		}
-	}
+            speechSynthesizer.SpeakUtterance (speechUtterance);
+        }
+    }
 }
 ```
 

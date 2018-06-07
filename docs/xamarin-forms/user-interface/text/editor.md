@@ -65,15 +65,15 @@ In C#:
 ```csharp
 public partial class EditorPage : ContentPage
 {
-	public EditorPage ()
-	{
-		InitializeComponent ();
-		var layout = new StackLayout { Padding = new Thickness(5,10) };
-		this.Content = layout;
-		//dark blue on UWP & Android, light blue on iOS
-		var editor = new Editor { BackgroundColor = Device.RuntimePlatform == Device.iOS ? Color.FromHex("#A4EAFF") : Color.FromHex("#2c3e50") };
-		layout.Children.Add(editor);
-	}
+    public EditorPage ()
+    {
+        InitializeComponent ();
+        var layout = new StackLayout { Padding = new Thickness(5,10) };
+        this.Content = layout;
+        //dark blue on UWP & Android, light blue on iOS
+        var editor = new Editor { BackgroundColor = Device.RuntimePlatform == Device.iOS ? Color.FromHex("#A4EAFF") : Color.FromHex("#2c3e50") };
+        layout.Children.Add(editor);
+    }
 }
 ```
 
@@ -118,7 +118,7 @@ The `Completed` event is used to react to the completion of an interaction with 
 ```csharp
 void EditorCompleted (object sender, EventArgs e)
 {
-	var text = ((Editor)sender).Text; // sender is cast to an Editor to enable reading the `Text` property of the view.
+    var text = ((Editor)sender).Text; // sender is cast to an Editor to enable reading the `Text` property of the view.
 }
 ```
 
@@ -129,15 +129,15 @@ In C#:
 ```csharp
 public partial class EditorPage : ContentPage
 {
-	public EditorPage ()
-	{
-		InitializeComponent ();
-		var layout = new StackLayout { Padding = new Thickness(5,10) };
-		this.Content = layout;
-		var editor = new Editor ();
-		editor.Completed += EditorCompleted;
-		layout.Children.Add(editor);
-	}
+    public EditorPage ()
+    {
+        InitializeComponent ();
+        var layout = new StackLayout { Padding = new Thickness(5,10) };
+        this.Content = layout;
+        var editor = new Editor ();
+        editor.Completed += EditorCompleted;
+        layout.Children.Add(editor);
+    }
 }
 ```
 
@@ -149,11 +149,11 @@ In XAML:
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="TextSample.EditorPage"
 Title="Editor Demo">
-	<ContentPage.Content>
-		<StackLayout Padding="5,10">
-			<Editor Completed="EditorCompleted" />
-		</StackLayout>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <StackLayout Padding="5,10">
+            <Editor Completed="EditorCompleted" />
+        </StackLayout>
+    </ContentPage.Content>
 </Contentpage>
 ```
 
@@ -166,8 +166,8 @@ The `TextChanged` event is used to react to a change in the content of a field.
 ```csharp
 void EditorTextChanged (object sender, TextChangedEventArgs e)
 {
-	var oldText = e.OldTextValue;
-	var newText = e.NewTextValue;
+    var oldText = e.OldTextValue;
+    var newText = e.NewTextValue;
 }
 ```
 
@@ -178,15 +178,15 @@ In code:
 ```csharp
 public partial class EditorPage : ContentPage
 {
-	public EditorPage ()
-	{
-		InitializeComponent ();
-		var layout = new StackLayout { Padding = new Thickness(5,10) };
-		this.Content = layout;
-		var editor = new Editor ();
-		editor.TextChanged += EditorTextChanged;
-		layout.Children.Add(editor);
-	}
+    public EditorPage ()
+    {
+        InitializeComponent ();
+        var layout = new StackLayout { Padding = new Thickness(5,10) };
+        this.Content = layout;
+        var editor = new Editor ();
+        editor.TextChanged += EditorTextChanged;
+        layout.Children.Add(editor);
+    }
 }
 ```
 
@@ -198,11 +198,11 @@ In XAML:
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="TextSample.EditorPage"
 Title="Editor Demo">
-	<ContentPage.Content>
-		<StackLayout Padding="5,10">
-			<Editor TextChanged="EditorTextChanged" />
-		</StackLayout>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <StackLayout Padding="5,10">
+            <Editor TextChanged="EditorTextChanged" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 

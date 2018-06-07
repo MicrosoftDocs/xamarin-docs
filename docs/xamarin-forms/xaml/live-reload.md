@@ -56,16 +56,16 @@ Adding Live Reload to existing mobile apps can be done in three steps:
 ```csharp
 public partial class App : Application
 {
-	public App ()
-	{
-		// Initialize Live Reload.
-		#if DEBUG
-		LiveReload.Init();
-		#endif
-		
-		InitializeComponent();
-		MainPage = new MainPage();
-	}
+    public App ()
+    {
+        // Initialize Live Reload.
+        #if DEBUG
+        LiveReload.Init();
+        #endif
+        
+        InitializeComponent();
+        MainPage = new MainPage();
+    }
 }
 ```
 

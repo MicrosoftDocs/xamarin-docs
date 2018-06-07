@@ -40,12 +40,12 @@ The following code example shows the associated code-behind:
 ```csharp
 public partial class App : Application
 {
-	public App ()
-	{
-		InitializeComponent ();
-		MainPage = new HomePage ();
-	}
-	...
+    public App ()
+    {
+        InitializeComponent ();
+        MainPage = new HomePage ();
+    }
+    ...
 }
 ```
 
@@ -62,10 +62,10 @@ The `MainPage` property should be set in the `App` constructor,
 ```csharp
 public class App : Xamarin.Forms.Application
 {
-	public App ()
-	{
-		MainPage = new ContentPage { Title = "App Lifecycle Sample" }; // your page here
-	}
+    public App ()
+    {
+        MainPage = new ContentPage { Title = "App Lifecycle Sample" }; // your page here
+    }
 }
 ```
 
@@ -92,8 +92,8 @@ so you need to cast its value before using it.
 ```csharp
 if (Application.Current.Properties.ContainsKey("id"))
 {
-	var id = Application.Current.Properties ["id"] as int;
-	// do something with id
+    var id = Application.Current.Properties ["id"] as int;
+    // do something with id
 }
 ```
 
@@ -110,7 +110,7 @@ Always check for the presence of the key before accessing it to prevent unexpect
 
 The `Properties` dictionary is saved to the device automatically.
   Data added to the dictionary will be available when the application returns from
-	the background or even after it is restarted.
+    the background or even after it is restarted.
 
 Xamarin.Forms 1.4 introduced an additional method on the `Application` class -
   `SavePropertiesAsync()` - which can be called to
@@ -134,28 +134,28 @@ A complete `Application` class implementation is shown below for reference:
 ```csharp
 public class App : Xamarin.Forms.Application
 {
-	public App ()
-	{
-		MainPage = new ContentPage { Title = "App Lifecycle Sample" }; // your page here
-	}
+    public App ()
+    {
+        MainPage = new ContentPage { Title = "App Lifecycle Sample" }; // your page here
+    }
 
-	protected override void OnStart()
-	{
-		// Handle when your app starts
-		Debug.WriteLine ("OnStart");
-	}
+    protected override void OnStart()
+    {
+        // Handle when your app starts
+        Debug.WriteLine ("OnStart");
+    }
 
-	protected override void OnSleep()
-	{
-		// Handle when your app sleeps
-		Debug.WriteLine ("OnSleep");
-	}
+    protected override void OnSleep()
+    {
+        // Handle when your app sleeps
+        Debug.WriteLine ("OnSleep");
+    }
 
-	protected override void OnResume()
-	{
-		// Handle when your app resumes
-		Debug.WriteLine ("OnResume");
-	}
+    protected override void OnResume()
+    {
+        // Handle when your app resumes
+        Debug.WriteLine ("OnResume");
+    }
 }
 
 ```

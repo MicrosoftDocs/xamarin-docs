@@ -44,8 +44,8 @@ Create the Phoneword application as follows:
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-    			       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    			       x:Class="Phoneword.MainPage">
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       x:Class="Phoneword.MainPage">
         <ContentPage.Padding>
             <OnPlatform x:TypeArguments="Thickness">
                 <On Platform="iOS" Value="20, 40, 20, 20" />
@@ -130,29 +130,29 @@ Create the Phoneword application as follows:
     [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Phoneword
     {
-    	public partial class App : Application
-    	{
-    		public App()
-    		{
-    			InitializeComponent();
-    			MainPage = new MainPage();
-    		}
+        public partial class App : Application
+        {
+            public App()
+            {
+                InitializeComponent();
+                MainPage = new MainPage();
+            }
 
-    		protected override void OnStart()
-    		{
-    			// Handle when your app starts
-    		}
+            protected override void OnStart()
+            {
+                // Handle when your app starts
+            }
 
-    		protected override void OnSleep()
-    		{
-    			// Handle when your app sleeps
-    		}
+            protected override void OnSleep()
+            {
+                // Handle when your app sleeps
+            }
 
-    		protected override void OnResume()
-    		{
-    			// Handle when your app resumes
-    		}
-    	}
+            protected override void OnResume()
+            {
+                // Handle when your app resumes
+            }
+        }
     }
     ```
 
@@ -173,52 +173,52 @@ Create the Phoneword application as follows:
 
     namespace Core
     {
-    	public static class PhonewordTranslator
-    	{
-    		public static string ToNumber(string raw)
-    		{
-    			if (string.IsNullOrWhiteSpace(raw))
-    				return null;
+        public static class PhonewordTranslator
+        {
+            public static string ToNumber(string raw)
+            {
+                if (string.IsNullOrWhiteSpace(raw))
+                    return null;
 
-    			raw = raw.ToUpperInvariant();
+                raw = raw.ToUpperInvariant();
 
-    			var newNumber = new StringBuilder();
-    			foreach (var c in raw)
-    			{
-    				if (" -0123456789".Contains(c))
-    					newNumber.Append(c);
-    				else
-    				{
-    					var result = TranslateToNumber(c);
-    					if (result != null)
-    						newNumber.Append(result);
-    					// Bad character?
-    					else
-    						return null;
-    				}
-    			}
-    			return newNumber.ToString();
-    		}
+                var newNumber = new StringBuilder();
+                foreach (var c in raw)
+                {
+                    if (" -0123456789".Contains(c))
+                        newNumber.Append(c);
+                    else
+                    {
+                        var result = TranslateToNumber(c);
+                        if (result != null)
+                            newNumber.Append(result);
+                        // Bad character?
+                        else
+                            return null;
+                    }
+                }
+                return newNumber.ToString();
+            }
 
-    		static bool Contains(this string keyString, char c)
-    		{
-    			return keyString.IndexOf(c) >= 0;
-    		}
+            static bool Contains(this string keyString, char c)
+            {
+                return keyString.IndexOf(c) >= 0;
+            }
 
-    		static readonly string[] digits = {
-    			"ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"
-    		};
+            static readonly string[] digits = {
+                "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"
+            };
 
-    		static int? TranslateToNumber(char c)
-    		{
-    			for (int i = 0; i < digits.Length; i++)
-    			{
-    				if (digits[i].Contains(c))
-    					return 2 + i;
-    			}
-    			return null;
-    		}
-    	}
+            static int? TranslateToNumber(char c)
+            {
+                for (int i = 0; i < digits.Length; i++)
+                {
+                    if (digits[i].Contains(c))
+                        return 2 + i;
+                }
+                return null;
+            }
+        }
     }
     ```
 
@@ -237,10 +237,10 @@ Create the Phoneword application as follows:
     ```csharp
     namespace Phoneword
     {
-    	public interface IDialer
-    	{
-    		bool Dial(string number);
-    	}
+        public interface IDialer
+        {
+            bool Dial(string number);
+        }
     }
     ```
 
@@ -268,14 +268,14 @@ Create the Phoneword application as follows:
     [assembly: Dependency(typeof(PhoneDialer))]
     namespace Phoneword.iOS
     {
-    	public class PhoneDialer : IDialer
-    	{
-    		public bool Dial(string number)
-    		{
-    			return UIApplication.SharedApplication.OpenUrl (
-    				new NSUrl ("tel:" + number));
-    		}
-    	}
+        public class PhoneDialer : IDialer
+        {
+            public bool Dial(string number)
+            {
+                return UIApplication.SharedApplication.OpenUrl (
+                    new NSUrl ("tel:" + number));
+            }
+        }
     }
     ```
 
@@ -302,39 +302,39 @@ Create the Phoneword application as follows:
     [assembly: Dependency(typeof(PhoneDialer))]
     namespace Phoneword.Droid
     {
-    	public class PhoneDialer : IDialer
-    	{
-    		public bool Dial(string number)
-    		{
-    			var context = MainActivity.Instance;
-    			if (context == null)
-    				return false;
+        public class PhoneDialer : IDialer
+        {
+            public bool Dial(string number)
+            {
+                var context = MainActivity.Instance;
+                if (context == null)
+                    return false;
 
-    			var intent = new Intent (Intent.ActionCall);
-    			intent.SetData (Uri.Parse ("tel:" + number));
+                var intent = new Intent (Intent.ActionCall);
+                intent.SetData (Uri.Parse ("tel:" + number));
 
-    			if (IsIntentAvailable (context, intent)) {
-    				context.StartActivity (intent);
-    				return true;
-    			}
+                if (IsIntentAvailable (context, intent)) {
+                    context.StartActivity (intent);
+                    return true;
+                }
 
-    			return false;
-    		}
+                return false;
+            }
 
-    		public static bool IsIntentAvailable(Context context, Intent intent)
-    		{
-    			var packageManager = context.PackageManager;
+            public static bool IsIntentAvailable(Context context, Intent intent)
+            {
+                var packageManager = context.PackageManager;
 
-    			var list = packageManager.QueryIntentServices (intent, 0)
-    				.Union (packageManager.QueryIntentActivities (intent, 0));
+                var list = packageManager.QueryIntentServices (intent, 0)
+                    .Union (packageManager.QueryIntentActivities (intent, 0));
 
-    			if (list.Any ())
-    				return true;
+                if (list.Any ())
+                    return true;
 
-    			var manager = TelephonyManager.FromContext (context);
-    			return manager.PhoneType != PhoneType.None;
-    		}
-    	}
+                var manager = TelephonyManager.FromContext (context);
+                return manager.PhoneType != PhoneType.None;
+            }
+        }
     }
     ```
 
@@ -514,8 +514,8 @@ Create the Phoneword application as follows:
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-    			       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    			       x:Class="Phoneword.MainPage">
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       x:Class="Phoneword.MainPage">
         <ContentPage.Padding>
             <OnPlatform x:TypeArguments="Thickness">
                 <On Platform="iOS" Value="20, 40, 20, 20" />
@@ -600,29 +600,29 @@ Create the Phoneword application as follows:
     [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Phoneword
     {
-    	public partial class App : Application
-    	{
-    		public App()
-    		{
-    			InitializeComponent();
-    			MainPage = new MainPage();
-    		}
+        public partial class App : Application
+        {
+            public App()
+            {
+                InitializeComponent();
+                MainPage = new MainPage();
+            }
 
-    		protected override void OnStart()
-    		{
-    			// Handle when your app starts
-    		}
+            protected override void OnStart()
+            {
+                // Handle when your app starts
+            }
 
-    		protected override void OnSleep()
-    		{
-    			// Handle when your app sleeps
-    		}
+            protected override void OnSleep()
+            {
+                // Handle when your app sleeps
+            }
 
-    		protected override void OnResume()
-    		{
-    			// Handle when your app resumes
-    		}
-    	}
+            protected override void OnResume()
+            {
+                // Handle when your app resumes
+            }
+        }
     }
     ```
 
@@ -643,52 +643,52 @@ Create the Phoneword application as follows:
 
     namespace Core
     {
-    	public static class PhonewordTranslator
-    	{
-    		public static string ToNumber(string raw)
-    		{
-    			if (string.IsNullOrWhiteSpace(raw))
-    				return null;
+        public static class PhonewordTranslator
+        {
+            public static string ToNumber(string raw)
+            {
+                if (string.IsNullOrWhiteSpace(raw))
+                    return null;
 
-    			raw = raw.ToUpperInvariant();
+                raw = raw.ToUpperInvariant();
 
-    			var newNumber = new StringBuilder();
-    			foreach (var c in raw)
-    			{
-    				if (" -0123456789".Contains(c))
-    					newNumber.Append(c);
-    				else
-    				{
-    					var result = TranslateToNumber(c);
-    					if (result != null)
-    						newNumber.Append(result);
-    					// Bad character?
-    					else
-    						return null;
-    				}
-    			}
-    			return newNumber.ToString();
-    		}
+                var newNumber = new StringBuilder();
+                foreach (var c in raw)
+                {
+                    if (" -0123456789".Contains(c))
+                        newNumber.Append(c);
+                    else
+                    {
+                        var result = TranslateToNumber(c);
+                        if (result != null)
+                            newNumber.Append(result);
+                        // Bad character?
+                        else
+                            return null;
+                    }
+                }
+                return newNumber.ToString();
+            }
 
-    		static bool Contains(this string keyString, char c)
-    		{
-    			return keyString.IndexOf(c) >= 0;
-    		}
+            static bool Contains(this string keyString, char c)
+            {
+                return keyString.IndexOf(c) >= 0;
+            }
 
-    		static readonly string[] digits = {
-    			"ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"
-    		};
+            static readonly string[] digits = {
+                "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"
+            };
 
-    		static int? TranslateToNumber(char c)
-    		{
-    			for (int i = 0; i < digits.Length; i++)
-    			{
-    				if (digits[i].Contains(c))
-    					return 2 + i;
-    			}
-    			return null;
-    		}
-    	}
+            static int? TranslateToNumber(char c)
+            {
+                for (int i = 0; i < digits.Length; i++)
+                {
+                    if (digits[i].Contains(c))
+                        return 2 + i;
+                }
+                return null;
+            }
+        }
     }
     ```
 
@@ -707,10 +707,10 @@ Create the Phoneword application as follows:
     ```csharp
     namespace Phoneword
     {
-    	public interface IDialer
-    	{
-    		bool Dial(string number);
-    	}
+        public interface IDialer
+        {
+            bool Dial(string number);
+        }
     }
     ```
     Save the changes to **IDialer.cs** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
@@ -737,14 +737,14 @@ Create the Phoneword application as follows:
     [assembly: Dependency(typeof(PhoneDialer))]
     namespace Phoneword.iOS
     {
-    	public class PhoneDialer : IDialer
-    	{
-    		public bool Dial(string number)
-    		{
-    			return UIApplication.SharedApplication.OpenUrl (
-    				new NSUrl ("tel:" + number));
-    		}
-    	}
+        public class PhoneDialer : IDialer
+        {
+            public bool Dial(string number)
+            {
+                return UIApplication.SharedApplication.OpenUrl (
+                    new NSUrl ("tel:" + number));
+            }
+        }
     }
     ```
 
@@ -771,39 +771,39 @@ Create the Phoneword application as follows:
     [assembly: Dependency(typeof(PhoneDialer))]
     namespace Phoneword.Droid
     {
-    	public class PhoneDialer : IDialer
-    	{
-    		public bool Dial(string number)
-    		{
-    			var context = MainActivity.Instance;
-    			if (context == null)
-    				return false;
+        public class PhoneDialer : IDialer
+        {
+            public bool Dial(string number)
+            {
+                var context = MainActivity.Instance;
+                if (context == null)
+                    return false;
 
-    			var intent = new Intent (Intent.ActionCall);
-    			intent.SetData (Uri.Parse ("tel:" + number));
+                var intent = new Intent (Intent.ActionCall);
+                intent.SetData (Uri.Parse ("tel:" + number));
 
-    			if (IsIntentAvailable (context, intent)) {
-    				context.StartActivity (intent);
-    				return true;
-    			}
+                if (IsIntentAvailable (context, intent)) {
+                    context.StartActivity (intent);
+                    return true;
+                }
 
-    			return false;
-    		}
+                return false;
+            }
 
-    		public static bool IsIntentAvailable(Context context, Intent intent)
-    		{
-    			var packageManager = context.PackageManager;
+            public static bool IsIntentAvailable(Context context, Intent intent)
+            {
+                var packageManager = context.PackageManager;
 
-    			var list = packageManager.QueryIntentServices (intent, 0)
-    				.Union (packageManager.QueryIntentActivities (intent, 0));
+                var list = packageManager.QueryIntentServices (intent, 0)
+                    .Union (packageManager.QueryIntentActivities (intent, 0));
 
-    			if (list.Any ())
-    				return true;
+                if (list.Any ())
+                    return true;
 
-    			var manager = TelephonyManager.FromContext (context);
-    			return manager.PhoneType != PhoneType.None;
-    		}
-    	}
+                var manager = TelephonyManager.FromContext (context);
+                return manager.PhoneType != PhoneType.None;
+            }
+        }
     }
     ```
 

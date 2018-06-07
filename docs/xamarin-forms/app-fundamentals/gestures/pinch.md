@@ -71,18 +71,18 @@ This class can be wrapped around a user interface element so that the pinch gest
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:local="clr-namespace:PinchGesture;assembly=PinchGesture"
-			 x:Class="PinchGesture.HomePage">
-	<ContentPage.Content>
-		<Grid Padding="20">
-			<local:PinchToZoomContainer>
-				<local:PinchToZoomContainer.Content>
-					<Image Source="waterfront.jpg" />
-				</local:PinchToZoomContainer.Content>
-			</local:PinchToZoomContainer>
-		</Grid>
-	</ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PinchGesture;assembly=PinchGesture"
+             x:Class="PinchGesture.HomePage">
+    <ContentPage.Content>
+        <Grid Padding="20">
+            <local:PinchToZoomContainer>
+                <local:PinchToZoomContainer.Content>
+                    <Image Source="waterfront.jpg" />
+                </local:PinchToZoomContainer.Content>
+            </local:PinchToZoomContainer>
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>
 ```
 

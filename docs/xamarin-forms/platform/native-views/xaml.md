@@ -43,18 +43,18 @@ The following code example demonstrates consuming native views for each platform
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-		xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
-		xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-		xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
-		xmlns:win="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
-			Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
-		x:Class="NativeViews.NativeViewDemo">
-	<StackLayout Margin="20">
-		<ios:UILabel Text="Hello World" TextColor="{x:Static ios:UIColor.Red}" View.HorizontalOptions="Start" />
-		<androidWidget:TextView Text="Hello World" x:Arguments="{x:Static androidLocal:MainActivity.Instance}" />
-		<win:TextBlock Text="Hello World" />
-	</StackLayout>
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
+        xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
+        xmlns:win="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
+            Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
+        x:Class="NativeViews.NativeViewDemo">
+    <StackLayout Margin="20">
+        <ios:UILabel Text="Hello World" TextColor="{x:Static ios:UIColor.Red}" View.HorizontalOptions="Start" />
+        <androidWidget:TextView Text="Hello World" x:Arguments="{x:Static androidLocal:MainActivity.Instance}" />
+        <win:TextBlock Text="Hello World" />
+    </StackLayout>
 </ContentPage>
 ```
 
@@ -82,28 +82,28 @@ Properties of native views can also use data binding. The following code example
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-		xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
-		xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-		xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
-		xmlns:win="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
-			Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
-		xmlns:local="clr-namespace:NativeSwitch"
-		x:Class="NativeSwitch.NativeSwitchPage">
-	<StackLayout Margin="20">
-		<Label Text="Native Views Demo" FontAttributes="Bold" HorizontalOptions="Center" />
-		<Entry Placeholder="This Entry is bound to the native switch" IsEnabled="{Binding IsSwitchOn}" />
-		<ios:UISwitch On="{Binding Path=IsSwitchOn, Mode=TwoWay, UpdateSourceEventName=ValueChanged}"
-			OnTintColor="{x:Static ios:UIColor.Red}"
-			ThumbTintColor="{x:Static ios:UIColor.Blue}" />
-		<androidWidget:Switch x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
-			Checked="{Binding Path=IsSwitchOn, Mode=TwoWay, UpdateSourceEventName=CheckedChange}"
-			Text="Enable Entry?" />
-		<win:ToggleSwitch Header="Enable Entry?"
-			OffContent="No"
-			OnContent="Yes"
-			IsOn="{Binding IsSwitchOn, Mode=TwoWay, UpdateSourceEventName=Toggled}" />
-	</StackLayout>
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
+        xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
+        xmlns:win="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
+            Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
+        xmlns:local="clr-namespace:NativeSwitch"
+        x:Class="NativeSwitch.NativeSwitchPage">
+    <StackLayout Margin="20">
+        <Label Text="Native Views Demo" FontAttributes="Bold" HorizontalOptions="Center" />
+        <Entry Placeholder="This Entry is bound to the native switch" IsEnabled="{Binding IsSwitchOn}" />
+        <ios:UISwitch On="{Binding Path=IsSwitchOn, Mode=TwoWay, UpdateSourceEventName=ValueChanged}"
+            OnTintColor="{x:Static ios:UIColor.Red}"
+            ThumbTintColor="{x:Static ios:UIColor.Blue}" />
+        <androidWidget:Switch x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
+            Checked="{Binding Path=IsSwitchOn, Mode=TwoWay, UpdateSourceEventName=CheckedChange}"
+            Text="Enable Entry?" />
+        <win:ToggleSwitch Header="Enable Entry?"
+            OffContent="No"
+            OnContent="Yes"
+            IsOn="{Binding IsSwitchOn, Mode=TwoWay, UpdateSourceEventName=Toggled}" />
+    </StackLayout>
 </ContentPage>
 
 ```
@@ -127,51 +127,51 @@ The following code example demonstrates both techniques:
 
 ```xaml
 <ContentPage ...
-		xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
-		xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
+        xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
+        xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
         xmlns:androidGraphics="clr-namespace:Android.Graphics;assembly=Mono.Android;targetPlatform=Android"
         xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:winMedia="clr-namespace:Windows.UI.Xaml.Media;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
-		xmlns:winText="clr-namespace:Windows.UI.Text;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
+        xmlns:winText="clr-namespace:Windows.UI.Text;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:winui="clr-namespace:Windows.UI;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows">
-		...
-		<ios:UILabel Text="Simple Native Color Picker" View.HorizontalOptions="Center">
-			<ios:UILabel.Font>
-				<ios:UIFont x:FactoryMethod="FromName">
-					<x:Arguments>
-						<x:String>Papyrus</x:String>
-						<x:Single>24</x:Single>
-					</x:Arguments>
-				</ios:UIFont>
-			</ios:UILabel.Font>
-		</ios:UILabel>
-		<androidWidget:TextView x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
-					Text="Simple Native Color Picker"
-					TextSize="24"
-					View.HorizontalOptions="Center">
-			<androidWidget:TextView.Typeface>
-				<androidGraphics:Typeface x:FactoryMethod="Create">
-					<x:Arguments>
-						<x:String>cursive</x:String>
-						<androidGraphics:TypefaceStyle>Normal</androidGraphics:TypefaceStyle>
-					</x:Arguments>
-				</androidGraphics:Typeface>
-			</androidWidget:TextView.Typeface>
-		</androidWidget:TextView>
-		<winControls:TextBlock Text="Simple Native Color Picker"
-					FontSize="20"
-					FontStyle="{x:Static winText:FontStyle.Italic}"
-					View.HorizontalOptions="Center">
-			<winControls:TextBlock.FontFamily>
-				<winMedia:FontFamily>
-					<x:Arguments>
-						<x:String>Georgia</x:String>
-					</x:Arguments>
-				</winMedia:FontFamily>
-			</winControls:TextBlock.FontFamily>
-		</winControls:TextBlock>
-		...
+        ...
+        <ios:UILabel Text="Simple Native Color Picker" View.HorizontalOptions="Center">
+            <ios:UILabel.Font>
+                <ios:UIFont x:FactoryMethod="FromName">
+                    <x:Arguments>
+                        <x:String>Papyrus</x:String>
+                        <x:Single>24</x:Single>
+                    </x:Arguments>
+                </ios:UIFont>
+            </ios:UILabel.Font>
+        </ios:UILabel>
+        <androidWidget:TextView x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
+                    Text="Simple Native Color Picker"
+                    TextSize="24"
+                    View.HorizontalOptions="Center">
+            <androidWidget:TextView.Typeface>
+                <androidGraphics:Typeface x:FactoryMethod="Create">
+                    <x:Arguments>
+                        <x:String>cursive</x:String>
+                        <androidGraphics:TypefaceStyle>Normal</androidGraphics:TypefaceStyle>
+                    </x:Arguments>
+                </androidGraphics:Typeface>
+            </androidWidget:TextView.Typeface>
+        </androidWidget:TextView>
+        <winControls:TextBlock Text="Simple Native Color Picker"
+                    FontSize="20"
+                    FontStyle="{x:Static winText:FontStyle.Italic}"
+                    View.HorizontalOptions="Center">
+            <winControls:TextBlock.FontFamily>
+                <winMedia:FontFamily>
+                    <x:Arguments>
+                        <x:String>Georgia</x:String>
+                    </x:Arguments>
+                </winMedia:FontFamily>
+            </winControls:TextBlock.FontFamily>
+        </winControls:TextBlock>
+        ...
 </ContentPage>
 ```
 
@@ -203,29 +203,29 @@ The native API can then be invoked on the native view to perform the desired ope
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-		xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
-		xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-		xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
-    	xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
-			Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
-    	xmlns:local="clr-namespace:NativeViewInsideContentView"
-		x:Class="NativeViewInsideContentView.NativeViewInsideContentViewPage">
-	<StackLayout Margin="20">
-		<ContentView x:Name="contentViewTextParent" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
-			<ios:UILabel Text="Text in a UILabel" TextColor="{x:Static ios:UIColor.Red}" />
-			<androidWidget:TextView x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
-				Text="Text in a TextView" />
-      		<winControls:TextBlock Text="Text in a TextBlock" />
-    	</ContentView>
-		<ContentView x:Name="contentViewButtonParent" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
-			<ios:UIButton TouchUpInside="OnButtonTap" View.HorizontalOptions="Center" View.VerticalOptions="Center" />
-			<androidWidget:Button x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
-				Text="Scale and Rotate Text"
-				Click="OnButtonTap" />
-			<winControls:Button Content="Scale and Rotate Text" />
-		</ContentView>
-	</StackLayout>
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
+        xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
+        xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
+            Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
+        xmlns:local="clr-namespace:NativeViewInsideContentView"
+        x:Class="NativeViewInsideContentView.NativeViewInsideContentViewPage">
+    <StackLayout Margin="20">
+        <ContentView x:Name="contentViewTextParent" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <ios:UILabel Text="Text in a UILabel" TextColor="{x:Static ios:UIColor.Red}" />
+            <androidWidget:TextView x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
+                Text="Text in a TextView" />
+              <winControls:TextBlock Text="Text in a TextBlock" />
+        </ContentView>
+        <ContentView x:Name="contentViewButtonParent" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+            <ios:UIButton TouchUpInside="OnButtonTap" View.HorizontalOptions="Center" View.VerticalOptions="Center" />
+            <androidWidget:Button x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
+                Text="Scale and Rotate Text"
+                Click="OnButtonTap" />
+            <winControls:Button Content="Scale and Rotate Text" />
+        </ContentView>
+    </StackLayout>
 </ContentPage>
 ```
 
@@ -234,40 +234,40 @@ In the example above, the native views for each platform are children of [`Conte
 ```csharp
 public partial class NativeViewInsideContentViewPage : ContentPage
 {
-	public NativeViewInsideContentViewPage()
-	{
-		InitializeComponent();
+    public NativeViewInsideContentViewPage()
+    {
+        InitializeComponent();
 
 #if __IOS__
-		var wrapper = (Xamarin.Forms.Platform.iOS.NativeViewWrapper)contentViewButtonParent.Content;
-		var button = (UIKit.UIButton)wrapper.NativeView;
-		button.SetTitle("Scale and Rotate Text", UIKit.UIControlState.Normal);
-		button.SetTitleColor(UIKit.UIColor.Black, UIKit.UIControlState.Normal);
+        var wrapper = (Xamarin.Forms.Platform.iOS.NativeViewWrapper)contentViewButtonParent.Content;
+        var button = (UIKit.UIButton)wrapper.NativeView;
+        button.SetTitle("Scale and Rotate Text", UIKit.UIControlState.Normal);
+        button.SetTitleColor(UIKit.UIColor.Black, UIKit.UIControlState.Normal);
 #endif
 #if __ANDROID__
-		var wrapper = (Xamarin.Forms.Platform.Android.NativeViewWrapper)contentViewTextParent.Content;
-		var textView = (Android.Widget.TextView)wrapper.NativeView;
-		textView.SetTextColor(Android.Graphics.Color.Red);
+        var wrapper = (Xamarin.Forms.Platform.Android.NativeViewWrapper)contentViewTextParent.Content;
+        var textView = (Android.Widget.TextView)wrapper.NativeView;
+        textView.SetTextColor(Android.Graphics.Color.Red);
 #endif
 #if WINDOWS_UWP
-		var textWrapper = (Xamarin.Forms.Platform.UWP.NativeViewWrapper)contentViewTextParent.Content;
-		var textBlock = (Windows.UI.Xaml.Controls.TextBlock)textWrapper.NativeElement;
-		textBlock.Foreground = new Windows.UI.Xaml.Media.SolidColorBrush(Windows.UI.Colors.Red);
-		var buttonWrapper = (Xamarin.Forms.Platform.UWP.NativeViewWrapper)contentViewButtonParent.Content;
-		var button = (Windows.UI.Xaml.Controls.Button)buttonWrapper.NativeElement;
-		button.Click += (sender, args) => OnButtonTap(sender, EventArgs.Empty);
+        var textWrapper = (Xamarin.Forms.Platform.UWP.NativeViewWrapper)contentViewTextParent.Content;
+        var textBlock = (Windows.UI.Xaml.Controls.TextBlock)textWrapper.NativeElement;
+        textBlock.Foreground = new Windows.UI.Xaml.Media.SolidColorBrush(Windows.UI.Colors.Red);
+        var buttonWrapper = (Xamarin.Forms.Platform.UWP.NativeViewWrapper)contentViewButtonParent.Content;
+        var button = (Windows.UI.Xaml.Controls.Button)buttonWrapper.NativeElement;
+        button.Click += (sender, args) => OnButtonTap(sender, EventArgs.Empty);
 #endif
-	}
+    }
 
-	async void OnButtonTap(object sender, EventArgs e)
-	{
-		contentViewButtonParent.Content.IsEnabled = false;
-		contentViewTextParent.Content.ScaleTo(2, 2000);
-		await contentViewTextParent.Content.RotateTo(360, 2000);
-		contentViewTextParent.Content.ScaleTo(1, 2000);
-		await contentViewTextParent.Content.RelRotateTo(360, 2000);
-		contentViewButtonParent.Content.IsEnabled = true;
-	}
+    async void OnButtonTap(object sender, EventArgs e)
+    {
+        contentViewButtonParent.Content.IsEnabled = false;
+        contentViewTextParent.Content.ScaleTo(2, 2000);
+        await contentViewTextParent.Content.RotateTo(360, 2000);
+        contentViewTextParent.Content.ScaleTo(1, 2000);
+        await contentViewTextParent.Content.RelRotateTo(360, 2000);
+        contentViewButtonParent.Content.IsEnabled = true;
+    }
 }
 ```
 
@@ -287,30 +287,30 @@ The following code example demonstrates a Xamarin.Forms page that consumes subcl
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    	xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
-    	xmlns:iosLocal="clr-namespace:SubclassedNativeControls.iOS;assembly=SubclassedNativeControls.iOS;targetPlatform=iOS"
-		xmlns:android="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-    	xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
-		xmlns:androidLocal="clr-namespace:SubclassedNativeControls.Droid;assembly=SubclassedNativeControls.Droid;targetPlatform=Android"
-		xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
-			Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
-		xmlns:local="clr-namespace:SubclassedNativeControls"
-		x:Class="SubclassedNativeControls.SubclassedNativeControlsPage">
-	<StackLayout Margin="20">
-		<Label Text="Subclassed Native Views Demo" FontAttributes="Bold" HorizontalOptions="Center" />
-	    <StackLayout Orientation="Horizontal">
-	      <Label Text="You have chosen:" />
-	      <Label Text="{Binding SelectedFruit}" />      
-	    </StackLayout>
-		<iosLocal:MyUIPickerView ItemsSource="{Binding Fruits}"
-			SelectedItem="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=SelectedItemChanged}" />
-		<androidLocal:MySpinner x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
-			ItemsSource="{Binding Fruits}"
-			SelectedObject="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=ItemSelected}" />
-		<winControls:ComboBox ItemsSource="{Binding Fruits}"
-			SelectedItem="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=SelectionChanged}" />
-	</StackLayout>
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
+        xmlns:iosLocal="clr-namespace:SubclassedNativeControls.iOS;assembly=SubclassedNativeControls.iOS;targetPlatform=iOS"
+        xmlns:android="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SubclassedNativeControls.Droid;assembly=SubclassedNativeControls.Droid;targetPlatform=Android"
+        xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
+            Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
+        xmlns:local="clr-namespace:SubclassedNativeControls"
+        x:Class="SubclassedNativeControls.SubclassedNativeControlsPage">
+    <StackLayout Margin="20">
+        <Label Text="Subclassed Native Views Demo" FontAttributes="Bold" HorizontalOptions="Center" />
+        <StackLayout Orientation="Horizontal">
+          <Label Text="You have chosen:" />
+          <Label Text="{Binding SelectedFruit}" />      
+        </StackLayout>
+        <iosLocal:MyUIPickerView ItemsSource="{Binding Fruits}"
+            SelectedItem="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=SelectedItemChanged}" />
+        <androidLocal:MySpinner x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
+            ItemsSource="{Binding Fruits}"
+            SelectedObject="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=ItemSelected}" />
+        <winControls:ComboBox ItemsSource="{Binding Fruits}"
+            SelectedItem="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=SelectionChanged}" />
+    </StackLayout>
 </ContentPage>
 ```
 
@@ -329,43 +329,43 @@ The iOS implementation subclasses the [`UIPickerView`](https://developer.xamarin
 ```csharp
 public class MyUIPickerView : UIPickerView
 {
-	public event EventHandler<EventArgs> SelectedItemChanged;
+    public event EventHandler<EventArgs> SelectedItemChanged;
 
-	public MyUIPickerView()
-	{
-		var model = new PickerModel();
-		model.ItemChanged += (sender, e) =>
-		{
-			if (SelectedItemChanged != null)
-			{
-				SelectedItemChanged.Invoke(this, e);
-			}
-		};
-		Model = model;
-	}
+    public MyUIPickerView()
+    {
+        var model = new PickerModel();
+        model.ItemChanged += (sender, e) =>
+        {
+            if (SelectedItemChanged != null)
+            {
+                SelectedItemChanged.Invoke(this, e);
+            }
+        };
+        Model = model;
+    }
 
-	public IList<string> ItemsSource
-	{
-		get
-		{
-			var pickerModel = Model as PickerModel;
-			return (pickerModel != null) ? pickerModel.Items : null;
-		}
-		set
-		{
-			var model = Model as PickerModel;
-			if (model != null)
-			{
-				model.Items = value;
-			}
-		}
-	}
+    public IList<string> ItemsSource
+    {
+        get
+        {
+            var pickerModel = Model as PickerModel;
+            return (pickerModel != null) ? pickerModel.Items : null;
+        }
+        set
+        {
+            var model = Model as PickerModel;
+            if (model != null)
+            {
+                model.Items = value;
+            }
+        }
+    }
 
-	public string SelectedItem
-	{
-		get { return (Model as PickerModel).SelectedItem; }
-		set { }
-	}
+    public string SelectedItem
+    {
+        get { return (Model as PickerModel).SelectedItem; }
+        set { }
+    }
 }
 ```
 
@@ -374,41 +374,41 @@ The `MyUIPickerView` class exposes `ItemsSource` and `SelectedItem` properties, 
 ```csharp
 class PickerModel : UIPickerViewModel
 {
-	int selectedIndex = 0;
-	public event EventHandler<EventArgs> ItemChanged;
-	public IList<string> Items { get; set; }
+    int selectedIndex = 0;
+    public event EventHandler<EventArgs> ItemChanged;
+    public IList<string> Items { get; set; }
 
-	public string SelectedItem
-	{
-		get
-		{
-			return Items != null && selectedIndex >= 0 && selectedIndex < Items.Count ? Items[selectedIndex] : null;
-		}
-	}
+    public string SelectedItem
+    {
+        get
+        {
+            return Items != null && selectedIndex >= 0 && selectedIndex < Items.Count ? Items[selectedIndex] : null;
+        }
+    }
 
-	public override nint GetRowsInComponent(UIPickerView pickerView, nint component)
-	{
-		return Items != null ? Items.Count : 0;
-	}
+    public override nint GetRowsInComponent(UIPickerView pickerView, nint component)
+    {
+        return Items != null ? Items.Count : 0;
+    }
 
-	public override string GetTitle(UIPickerView pickerView, nint row, nint component)
-	{
-		return Items != null && Items.Count > row ? Items[(int)row] : null;
-	}
+    public override string GetTitle(UIPickerView pickerView, nint row, nint component)
+    {
+        return Items != null && Items.Count > row ? Items[(int)row] : null;
+    }
 
-	public override nint GetComponentCount(UIPickerView pickerView)
-	{
-		return 1;
-	}
+    public override nint GetComponentCount(UIPickerView pickerView)
+    {
+        return 1;
+    }
 
-	public override void Selected(UIPickerView pickerView, nint row, nint component)
-	{
-		selectedIndex = (int)row;
-		if (ItemChanged != null)
-		{
-			ItemChanged.Invoke(this, new EventArgs());
-		}
-	}
+    public override void Selected(UIPickerView pickerView, nint row, nint component)
+    {
+        selectedIndex = (int)row;
+        if (ItemChanged != null)
+        {
+            ItemChanged.Invoke(this, new EventArgs());
+        }
+    }
 }
 ```
 
@@ -421,56 +421,56 @@ The Android implementation subclasses the [`Spinner`](https://developer.xamarin.
 ```csharp
 class MySpinner : Spinner
 {
-	ArrayAdapter adapter;
-	IList<string> items;
+    ArrayAdapter adapter;
+    IList<string> items;
 
-	public IList<string> ItemsSource
-	{
-		get { return items; }
-		set
-		{
-			if (items != value)
-			{
-				items = value;
-				adapter.Clear();
+    public IList<string> ItemsSource
+    {
+        get { return items; }
+        set
+        {
+            if (items != value)
+            {
+                items = value;
+                adapter.Clear();
 
-				foreach (string str in items)
-				{
-					adapter.Add(str);
-				}
-			}
-		}
-	}
+                foreach (string str in items)
+                {
+                    adapter.Add(str);
+                }
+            }
+        }
+    }
 
-	public string SelectedObject
-	{
-		get { return (string)GetItemAtPosition(SelectedItemPosition); }
-		set
-		{
-			if (items != null)
-			{
-				int index = items.IndexOf(value);
-				if (index != -1)
-				{
-					SetSelection(index);
-				}
-			}
-		}
-	}
+    public string SelectedObject
+    {
+        get { return (string)GetItemAtPosition(SelectedItemPosition); }
+        set
+        {
+            if (items != null)
+            {
+                int index = items.IndexOf(value);
+                if (index != -1)
+                {
+                    SetSelection(index);
+                }
+            }
+        }
+    }
 
-	public MySpinner(Context context) : base(context)
-	{
-		ItemSelected += OnBindableSpinnerItemSelected;
+    public MySpinner(Context context) : base(context)
+    {
+        ItemSelected += OnBindableSpinnerItemSelected;
 
-		adapter = new ArrayAdapter(context, Android.Resource.Layout.SimpleSpinnerItem);
-		adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-		Adapter = adapter;
-	}
+        adapter = new ArrayAdapter(context, Android.Resource.Layout.SimpleSpinnerItem);
+        adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+        Adapter = adapter;
+    }
 
-	void OnBindableSpinnerItemSelected(object sender, ItemSelectedEventArgs args)
-	{
-		SelectedObject = (string)GetItemAtPosition(args.Position);
-	}
+    void OnBindableSpinnerItemSelected(object sender, ItemSelectedEventArgs args)
+    {
+        SelectedObject = (string)GetItemAtPosition(args.Position);
+    }
 }
 ```
 

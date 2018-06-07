@@ -44,52 +44,52 @@ Follow these instructions to add a Mac app that will run on macOS Sierra and Mac
 
 7. Update **Main.cs** to initialize the `AppDelegate`:
 
-	```csharp
-	static class MainClass
-	{
-		static void Main(string[] args)
-		{
-			NSApplication.Init();
-			NSApplication.SharedApplication.Delegate = new AppDelegate(); // add this line
-			NSApplication.Main(args);
-		}
-	}
-	```
+    ```csharp
+    static class MainClass
+    {
+        static void Main(string[] args)
+        {
+            NSApplication.Init();
+            NSApplication.SharedApplication.Delegate = new AppDelegate(); // add this line
+            NSApplication.Main(args);
+        }
+    }
+    ```
 
 8. Update `AppDelegate` to initialize Xamarin.Forms, create a window, and load the Xamarin.Forms application (remembering to set an appropriate `Title`). _If you have other dependencies that need to be initialized, do that here as well._
 
-	```csharp
-	using Xamarin.Forms;
-	using Xamarin.Forms.Platform.MacOS;
-	// also add a using for the Xamarin.Forms project, if the namespace is different to this file
-	...
-	[Register("AppDelegate")]
-	public class AppDelegate : FormsApplicationDelegate
-	{
-		NSWindow window;
-		public AppDelegate()
-		{
-			var style = NSWindowStyle.Closable | NSWindowStyle.Resizable | NSWindowStyle.Titled;
+    ```csharp
+    using Xamarin.Forms;
+    using Xamarin.Forms.Platform.MacOS;
+    // also add a using for the Xamarin.Forms project, if the namespace is different to this file
+    ...
+    [Register("AppDelegate")]
+    public class AppDelegate : FormsApplicationDelegate
+    {
+        NSWindow window;
+        public AppDelegate()
+        {
+            var style = NSWindowStyle.Closable | NSWindowStyle.Resizable | NSWindowStyle.Titled;
 
-			var rect = new CoreGraphics.CGRect(200, 1000, 1024, 768);
-			window = new NSWindow(rect, style, NSBackingStore.Buffered, false);
-			window.Title = "Xamarin.Forms on Mac!"; // choose your own Title here
-			window.TitleVisibility = NSWindowTitleVisibility.Hidden;
-		}
+            var rect = new CoreGraphics.CGRect(200, 1000, 1024, 768);
+            window = new NSWindow(rect, style, NSBackingStore.Buffered, false);
+            window.Title = "Xamarin.Forms on Mac!"; // choose your own Title here
+            window.TitleVisibility = NSWindowTitleVisibility.Hidden;
+        }
 
-		public override NSWindow MainWindow
-		{
-			get { return window; }
-		}
+        public override NSWindow MainWindow
+        {
+            get { return window; }
+        }
 
-		public override void DidFinishLaunching(NSNotification notification)
-		{
-			Forms.Init();
-			LoadApplication(new App());
-			base.DidFinishLaunching(notification);
-		}
-	}
-	```
+        public override void DidFinishLaunching(NSNotification notification)
+        {
+            Forms.Init();
+            LoadApplication(new App());
+            base.DidFinishLaunching(notification);
+        }
+    }
+    ```
 
 9. Double-click **Main.storyboard** to edit in Xcode. Select the **Window** and _uncheck_ the **Is Initial Controller** checkbox (this is because the code above creates a window):
 
@@ -109,11 +109,11 @@ With recent changes made to `OnPlatform` you can now target any number of platfo
 
 ```xml
 <Button.TextColor>
-	<OnPlatform x:TypeArguments="Color">
-		<On Platform="iOS" Value="White"/>
-		<On Platform="macOS" Value="White"/>
-		<On Platform="Android" Value="Black"/>
-	</OnPlatform>
+    <OnPlatform x:TypeArguments="Color">
+        <On Platform="iOS" Value="White"/>
+        <On Platform="macOS" Value="White"/>
+        <On Platform="Android" Value="Black"/>
+    </OnPlatform>
 </Button.TextColor>
 ```
 

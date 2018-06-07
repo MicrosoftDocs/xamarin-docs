@@ -84,27 +84,27 @@ The XAML to create the above layout is below:
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="demoListView.ImageCellPage">
-	<ContentPage.Content>
-		<ListView  x:Name="listView">
-			<ListView.ItemTemplate>
-				<DataTemplate>
-					<ViewCell>
-						<StackLayout BackgroundColor="#eee"
-						Orientation="Vertical">
-							<StackLayout Orientation="Horizontal">
-								<Image Source="{Binding image}" />
-								<Label Text="{Binding title}"
-								TextColor="#f35e20" />
-								<Label Text="{Binding subtitle}"
-								HorizontalOptions="EndAndExpand"
-								TextColor="#503026" />
-							</StackLayout>
-						</StackLayout>
-					</ViewCell>
-				</DataTemplate>
-			</ListView.ItemTemplate>
-		</ListView>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <ListView  x:Name="listView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="#eee"
+                        Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding image}" />
+                                <Label Text="{Binding title}"
+                                TextColor="#f35e20" />
+                                <Label Text="{Binding subtitle}"
+                                HorizontalOptions="EndAndExpand"
+                                TextColor="#503026" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -122,49 +122,49 @@ First, define a custom cell class, with `ViewCell` as the base class:
 
 ```csharp
 public class CustomCell : ViewCell
-	{
-		public CustomCell()
-		{
-			//instantiate each of our views
-			var image = new Image ();
-			StackLayout cellWrapper = new StackLayout ();
-			StackLayout horizontalLayout = new StackLayout ();
-			Label left = new Label ();
-			Label right = new Label ();
+    {
+        public CustomCell()
+        {
+            //instantiate each of our views
+            var image = new Image ();
+            StackLayout cellWrapper = new StackLayout ();
+            StackLayout horizontalLayout = new StackLayout ();
+            Label left = new Label ();
+            Label right = new Label ();
 
-			//set bindings
-			left.SetBinding (Label.TextProperty, "title");
-			right.SetBinding (Label.TextProperty, "subtitle");
-			image.SetBinding (Image.SourceProperty, "image");
+            //set bindings
+            left.SetBinding (Label.TextProperty, "title");
+            right.SetBinding (Label.TextProperty, "subtitle");
+            image.SetBinding (Image.SourceProperty, "image");
 
-			//Set properties for desired design
-			cellWrapper.BackgroundColor = Color.FromHex ("#eee");
-			horizontalLayout.Orientation = StackOrientation.Horizontal;
-			right.HorizontalOptions = LayoutOptions.EndAndExpand;
-			left.TextColor = Color.FromHex ("#f35e20");
-			right.TextColor = Color.FromHex ("503026");
+            //Set properties for desired design
+            cellWrapper.BackgroundColor = Color.FromHex ("#eee");
+            horizontalLayout.Orientation = StackOrientation.Horizontal;
+            right.HorizontalOptions = LayoutOptions.EndAndExpand;
+            left.TextColor = Color.FromHex ("#f35e20");
+            right.TextColor = Color.FromHex ("503026");
 
-			//add views to the view hierarchy
-			horizontalLayout.Children.Add (image);
-			horizontalLayout.Children.Add (left);
-			horizontalLayout.Children.Add (right);
-			cellWrapper.Children.Add (horizontalLayout);
-			View = cellWrapper;
-		}
-	}
+            //add views to the view hierarchy
+            horizontalLayout.Children.Add (image);
+            horizontalLayout.Children.Add (left);
+            horizontalLayout.Children.Add (right);
+            cellWrapper.Children.Add (horizontalLayout);
+            View = cellWrapper;
+        }
+    }
 ```
 
 In your constructor for the page with the `ListView`, set the ListView's `ItemTemplate` property to a new `DataTemplate`:
 
 ```csharp
 public partial class ImageCellPage : ContentPage
-	{
-		public ImageCellPage ()
-		{
-			InitializeComponent ();
-			listView.ItemTemplate = new DataTemplate (typeof(CustomCell));
-		}
-	}
+    {
+        public ImageCellPage ()
+        {
+            InitializeComponent ();
+            listView.ItemTemplate = new DataTemplate (typeof(CustomCell));
+        }
+    }
 ```
 
 Note that the constructor for `DataTemplate` takes a type. The typeof operator gets the CLR type for `CustomCell`.
@@ -178,41 +178,41 @@ When binding to a custom cell type's [`BindableProperty`](https://developer.xama
 ```csharp
 public class CustomCell : ViewCell
 {
-	Label nameLabel, ageLabel, locationLabel;
+    Label nameLabel, ageLabel, locationLabel;
 
-	public static readonly BindableProperty NameProperty =
-	    BindableProperty.Create ("Name", typeof(string), typeof(CustomCell), "Name");
-	public static readonly BindableProperty AgeProperty =
-	    BindableProperty.Create ("Age", typeof(int), typeof(CustomCell), 0);
-	public static readonly BindableProperty LocationProperty =
-	    BindableProperty.Create ("Location", typeof(string), typeof(CustomCell), "Location");
+    public static readonly BindableProperty NameProperty =
+        BindableProperty.Create ("Name", typeof(string), typeof(CustomCell), "Name");
+    public static readonly BindableProperty AgeProperty =
+        BindableProperty.Create ("Age", typeof(int), typeof(CustomCell), 0);
+    public static readonly BindableProperty LocationProperty =
+        BindableProperty.Create ("Location", typeof(string), typeof(CustomCell), "Location");
 
-	public string Name {
-		get { return(string)GetValue (NameProperty); }
-		set { SetValue (NameProperty, value); }
-	}
+    public string Name {
+        get { return(string)GetValue (NameProperty); }
+        set { SetValue (NameProperty, value); }
+    }
 
-	public int Age {
-		get { return(int)GetValue (AgeProperty); }
-		set { SetValue (AgeProperty, value); }
-	}
+    public int Age {
+        get { return(int)GetValue (AgeProperty); }
+        set { SetValue (AgeProperty, value); }
+    }
 
-	public string Location {
-		get { return(string)GetValue (LocationProperty); }
-		set { SetValue (LocationProperty, value); }
-	}
-	...
+    public string Location {
+        get { return(string)GetValue (LocationProperty); }
+        set { SetValue (LocationProperty, value); }
+    }
+    ...
 
-	protected override void OnBindingContextChanged ()
-	{
-		base.OnBindingContextChanged ();
+    protected override void OnBindingContextChanged ()
+    {
+        base.OnBindingContextChanged ();
 
-		if (BindingContext != null) {
-			nameLabel.Text = Name;
-			ageLabel.Text = Age.ToString ();
-			locationLabel.Text = Location;
-		}
-	}
+        if (BindingContext != null) {
+            nameLabel.Text = Name;
+            ageLabel.Text = Age.ToString ();
+            locationLabel.Text = Location;
+        }
+    }
 }
 ```
 
@@ -227,11 +227,11 @@ In XAML, binding the custom cell type to data can be achieved as shown in the fo
 
 ```xaml
 <ListView x:Name="listView">
-	<ListView.ItemTemplate>
-		<DataTemplate>
-			<local:CustomCell Name="{Binding Name}" Age="{Binding Age}" Location="{Binding Location}" />
-		</DataTemplate>
-	</ListView.ItemTemplate>
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <local:CustomCell Name="{Binding Name}" Age="{Binding Age}" Location="{Binding Location}" />
+        </DataTemplate>
+    </ListView.ItemTemplate>
 </ListView>
 ```
 
@@ -246,8 +246,8 @@ customCell.SetBinding (CustomCell.AgeProperty, "Age");
 customCell.SetBinding (CustomCell.LocationProperty, "Location");
 
 var listView = new ListView {
-	ItemsSource = people,
-	ItemTemplate = customCell
+    ItemsSource = people,
+    ItemTemplate = customCell
 };
 ```
 

@@ -16,7 +16,7 @@ _Style text in Xamarin.Forms_
 
 Styles can be used to adjust the appearance of labels, entries, and editors. Styles can be defined once and used by many views, but a style can only be used with views of one type.
 Styles can be given a `Key` and applied selectively using a specific
-	control's `Style` property.
+    control's `Style` property.
 
 This article covers the following topics:
 
@@ -62,9 +62,9 @@ In C#, a custom style for a label with red text of size 30 would be defined as f
 
 ```csharp
 var LabelStyle = new Style (typeof(Label)) {
-	Setters = {
-		new Setter {Property = Label.TextColorProperty, Value = Color.Red},
-		new Setter {Property = Label.FontSizeProperty, Value = 30}
+    Setters = {
+        new Setter {Property = Label.TextColorProperty, Value = Color.Red},
+        new Setter {Property = Label.FontSizeProperty, Value = 30}
     }
 };
 
@@ -75,18 +75,18 @@ In XAML:
 
 ```xaml
 <ContentPage.Resources>
-	<ResourceDictionary>
-		<Style x:Key="LabelStyle" TargetType="Label">
-			<Setter Property="TextColor" Value="Red"/>
-			<Setter Property="FontSize" Value="30"/>
-		</Style>
-	</ResourceDictionary>
+    <ResourceDictionary>
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="Red"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
+    </ResourceDictionary>
 </ContentPage.Resources>
 
 <ContentPage.Content>
-	<StackLayout>
-		<Label Text="Check out my style." Style="{StaticResource LabelStyle}" />
-	</StackLayout>
+    <StackLayout>
+        <Label Text="Check out my style." Style="{StaticResource LabelStyle}" />
+    </StackLayout>
 </ContentPage.Content>
 ```
 

@@ -83,13 +83,13 @@ following code contains two examples - globally styling the tab bar and switch c
 public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 {
   // tab bar
-	UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
+    UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
   // switch
-	UISwitch.Appearance.OnTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
-	// required Xamarin.Forms code
-	Forms.Init ();
-	LoadApplication (new App ());
-	return base.FinishedLaunching (app, options);
+    UISwitch.Appearance.OnTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
+    // required Xamarin.Forms code
+    Forms.Init ();
+    LoadApplication (new App ());
+    return base.FinishedLaunching (app, options);
 }
 ```
 

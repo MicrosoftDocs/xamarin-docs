@@ -26,12 +26,12 @@ The two `IMarkupExtension` interfaces define only one method each, named `Provid
 ```csharp
 public interface IMarkupExtension
 {
-	object ProvideValue(IServiceProvider serviceProvider);
+    object ProvideValue(IServiceProvider serviceProvider);
 }
 
 public interface IMarkupExtension<out T> : IMarkupExtension
 {
-	new T ProvideValue(IServiceProvider serviceProvider);
+    new T ProvideValue(IServiceProvider serviceProvider);
 }
 ```
 

@@ -79,11 +79,11 @@ namespace for `xmlns:p` must also be added:
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
 <p:ListDataPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:p="clr-namespace:Xamarin.Forms.Pages;assembly=Xamarin.Forms.Pages"
-			 x:Class="DataPagesDemo.SessionDataPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:p="clr-namespace:Xamarin.Forms.Pages;assembly=Xamarin.Forms.Pages"
+             x:Class="DataPagesDemo.SessionDataPage">
 
-	<ContentPage.Content></ContentPage.Content>
+    <ContentPage.Content></ContentPage.Content>
 
 </p:ListDataPage>
 ```
@@ -111,14 +111,14 @@ refers to a layout that is predefined in the preview and contains styles
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
 <p:ListDataPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:p="clr-namespace:Xamarin.Forms.Pages;assembly=Xamarin.Forms.Pages"
-			 x:Class="DataPagesDemo.SessionDataPage"
-			 Title="Sessions" StyleClass="Events">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:p="clr-namespace:Xamarin.Forms.Pages;assembly=Xamarin.Forms.Pages"
+             x:Class="DataPagesDemo.SessionDataPage"
+             Title="Sessions" StyleClass="Events">
 
-	<p:ListDataPage.DataSource>
-		<p:JsonDataSource Source="http://demo3143189.mockable.io/sessions" />
-	</p:ListDataPage.DataSource>
+    <p:ListDataPage.DataSource>
+        <p:JsonDataSource Source="http://demo3143189.mockable.io/sessions" />
+    </p:ListDataPage.DataSource>
 
 </p:ListDataPage>
 ```
@@ -167,18 +167,18 @@ syntax which is included in the **Xamarin.Forms.Pages** Nuget:
 
 ```xaml
 <p:ListDataPage.DefaultItemTemplate>
-	<DataTemplate>
-		<ViewCell>
-			<p:ListItemControl
-				Title="{p:DataSourceBinding title}"
-				Detail="{p:DataSourceBinding room}"
-				ImageSource="{p:DataSourceBinding image}"
-				DataSource="{Binding Value}"
-				HeightRequest="90"
-			>
-			</p:ListItemControl>
-		</ViewCell>
-	</DataTemplate>
+    <DataTemplate>
+        <ViewCell>
+            <p:ListItemControl
+                Title="{p:DataSourceBinding title}"
+                Detail="{p:DataSourceBinding room}"
+                ImageSource="{p:DataSourceBinding image}"
+                DataSource="{Binding Value}"
+                HeightRequest="90"
+            >
+            </p:ListItemControl>
+        </ViewCell>
+    </DataTemplate>
 </p:ListDataPage.DefaultItemTemplate>
 ```
 

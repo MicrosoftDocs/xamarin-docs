@@ -75,17 +75,17 @@ The `NativeCell` custom cell can be referenced in Xaml in the .NET Standard libr
     ...>
     ...
     <ContentPage.Content>
-  		<StackLayout>
-  			<Label Text="Xamarin.Forms native cell" HorizontalTextAlignment="Center" />
-  			<ListView x:Name="listView" CachingStrategy="RecycleElement" ItemSelected="OnItemSelected">
-  				<ListView.ItemTemplate>
-  					<DataTemplate>
-  						<local:NativeCell Name="{Binding Name}" Category="{Binding Category}" ImageFilename="{Binding ImageFilename}" />
-  					</DataTemplate>
-  				</ListView.ItemTemplate>
-  			</ListView>
-  		</StackLayout>
-  	</ContentPage.Content>
+          <StackLayout>
+              <Label Text="Xamarin.Forms native cell" HorizontalTextAlignment="Center" />
+              <ListView x:Name="listView" CachingStrategy="RecycleElement" ItemSelected="OnItemSelected">
+                  <ListView.ItemTemplate>
+                      <DataTemplate>
+                          <local:NativeCell Name="{Binding Name}" Category="{Binding Category}" ImageFilename="{Binding ImageFilename}" />
+                      </DataTemplate>
+                  </ListView.ItemTemplate>
+              </ListView>
+          </StackLayout>
+      </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -179,26 +179,26 @@ The following code example shows the custom renderer for the iOS platform:
 [assembly: ExportRenderer(typeof(NativeCell), typeof(NativeiOSCellRenderer))]
 namespace CustomRenderer.iOS
 {
-	public class NativeiOSCellRenderer : ViewCellRenderer
-	{
-		NativeiOSCell cell;
+    public class NativeiOSCellRenderer : ViewCellRenderer
+    {
+        NativeiOSCell cell;
 
-		public override UITableViewCell GetCell(Cell item, UITableViewCell reusableCell, UITableView tv)
-		{
-			var nativeCell = (NativeCell)item;
+        public override UITableViewCell GetCell(Cell item, UITableViewCell reusableCell, UITableView tv)
+        {
+            var nativeCell = (NativeCell)item;
 
-			cell = reusableCell as NativeiOSCell;
-			if (cell == null)
-				cell = new NativeiOSCell(item.GetType().FullName, nativeCell);
-			else
-				cell.NativeCell.PropertyChanged -= OnNativeCellPropertyChanged;
+            cell = reusableCell as NativeiOSCell;
+            if (cell == null)
+                cell = new NativeiOSCell(item.GetType().FullName, nativeCell);
+            else
+                cell.NativeCell.PropertyChanged -= OnNativeCellPropertyChanged;
 
-			nativeCell.PropertyChanged += OnNativeCellPropertyChanged;
-			cell.UpdateCell(nativeCell);
-			return cell;
-		}
+            nativeCell.PropertyChanged += OnNativeCellPropertyChanged;
+            cell.UpdateCell(nativeCell);
+            return cell;
+        }
         ...
-	}
+    }
 }
 ```
 
@@ -221,27 +221,27 @@ The following code example shows the `OnNativeCellPropertyChanged` method that's
 ```csharp
 namespace CustomRenderer.iOS
 {
-	public class NativeiOSCellRenderer : ViewCellRenderer
-	{
+    public class NativeiOSCellRenderer : ViewCellRenderer
+    {
         ...
 
-		void OnNativeCellPropertyChanged(object sender, PropertyChangedEventArgs e)
-		{
-			var nativeCell = (NativeCell)sender;
-			if (e.PropertyName == NativeCell.NameProperty.PropertyName)
-			{
-				cell.HeadingLabel.Text = nativeCell.Name;
-			}
-			else if (e.PropertyName == NativeCell.CategoryProperty.PropertyName)
-			{
-				cell.SubheadingLabel.Text = nativeCell.Category;
-			}
-			else if (e.PropertyName == NativeCell.ImageFilenameProperty.PropertyName)
-			{
-				cell.CellImageView.Image = cell.GetImage(nativeCell.ImageFilename);
-			}
-		}
-	}
+        void OnNativeCellPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            var nativeCell = (NativeCell)sender;
+            if (e.PropertyName == NativeCell.NameProperty.PropertyName)
+            {
+                cell.HeadingLabel.Text = nativeCell.Name;
+            }
+            else if (e.PropertyName == NativeCell.CategoryProperty.PropertyName)
+            {
+                cell.SubheadingLabel.Text = nativeCell.Category;
+            }
+            else if (e.PropertyName == NativeCell.ImageFilenameProperty.PropertyName)
+            {
+                cell.CellImageView.Image = cell.GetImage(nativeCell.ImageFilename);
+            }
+        }
+    }
 }
 ```
 
@@ -324,32 +324,32 @@ The following code example shows the custom renderer for the Android platform:
 [assembly: ExportRenderer(typeof(NativeCell), typeof(NativeAndroidCellRenderer))]
 namespace CustomRenderer.Droid
 {
-	public class NativeAndroidCellRenderer : ViewCellRenderer
-	{
-		NativeAndroidCell cell;
+    public class NativeAndroidCellRenderer : ViewCellRenderer
+    {
+        NativeAndroidCell cell;
 
-		protected override Android.Views.View GetCellCore(Cell item, Android.Views.View convertView, ViewGroup parent, Context context)
-		{
-			var nativeCell = (NativeCell)item;
-			Console.WriteLine("\t\t" + nativeCell.Name);
+        protected override Android.Views.View GetCellCore(Cell item, Android.Views.View convertView, ViewGroup parent, Context context)
+        {
+            var nativeCell = (NativeCell)item;
+            Console.WriteLine("\t\t" + nativeCell.Name);
 
-			cell = convertView as NativeAndroidCell;
-			if (cell == null)
-			{
-				cell = new NativeAndroidCell(context, nativeCell);
-			}
-			else
-			{
-				cell.NativeCell.PropertyChanged -= OnNativeCellPropertyChanged;
-			}
+            cell = convertView as NativeAndroidCell;
+            if (cell == null)
+            {
+                cell = new NativeAndroidCell(context, nativeCell);
+            }
+            else
+            {
+                cell.NativeCell.PropertyChanged -= OnNativeCellPropertyChanged;
+            }
 
-			nativeCell.PropertyChanged += OnNativeCellPropertyChanged;
+            nativeCell.PropertyChanged += OnNativeCellPropertyChanged;
 
-			cell.UpdateCell(nativeCell);
-			return cell;
-		}
+            cell.UpdateCell(nativeCell);
+            return cell;
+        }
         ...
-	}
+    }
 }
 ```
 
@@ -372,27 +372,27 @@ The following code example shows the `OnNativeCellPropertyChanged` method that's
 ```csharp
 namespace CustomRenderer.Droid
 {
-	public class NativeAndroidCellRenderer : ViewCellRenderer
-	{
+    public class NativeAndroidCellRenderer : ViewCellRenderer
+    {
         ...
 
-		void OnNativeCellPropertyChanged(object sender, PropertyChangedEventArgs e)
-		{
-			var nativeCell = (NativeCell)sender;
-			if (e.PropertyName == NativeCell.NameProperty.PropertyName)
-			{
-				cell.HeadingTextView.Text = nativeCell.Name;
-			}
-			else if (e.PropertyName == NativeCell.CategoryProperty.PropertyName)
-			{
-				cell.SubheadingTextView.Text = nativeCell.Category;
-			}
-			else if (e.PropertyName == NativeCell.ImageFilenameProperty.PropertyName)
-			{
-				cell.SetImage(nativeCell.ImageFilename);
-			}
-		}
-	}
+        void OnNativeCellPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            var nativeCell = (NativeCell)sender;
+            if (e.PropertyName == NativeCell.NameProperty.PropertyName)
+            {
+                cell.HeadingTextView.Text = nativeCell.Name;
+            }
+            else if (e.PropertyName == NativeCell.CategoryProperty.PropertyName)
+            {
+                cell.SubheadingTextView.Text = nativeCell.Category;
+            }
+            else if (e.PropertyName == NativeCell.ImageFilenameProperty.PropertyName)
+            {
+                cell.SetImage(nativeCell.ImageFilename);
+            }
+        }
+    }
 }
 ```
 

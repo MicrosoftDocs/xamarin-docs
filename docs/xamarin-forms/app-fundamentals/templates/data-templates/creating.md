@@ -41,18 +41,18 @@ The [`ListView.ItemTemplate`](https://developer.xamarin.com/api/type/Xamarin.For
             <local:Person Name="Jane" Age="30" Location="USA" />
         </x:Array>
     </ListView.ItemsSource>
-	<ListView.ItemTemplate>
-		<DataTemplate>
-			<ViewCell>
-				<Grid>
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell>
+                <Grid>
                     ...
                     <Label Text="{Binding Name}" FontAttributes="Bold" />
-					<Label Grid.Column="1" Text="{Binding Age}" />
-					<Label Grid.Column="2" Text="{Binding Location}" HorizontalTextAlignment="End" />
-				</Grid>
-			</ViewCell>
-		</DataTemplate>
-	</ListView.ItemTemplate>
+                    <Label Grid.Column="1" Text="{Binding Age}" />
+                    <Label Grid.Column="2" Text="{Binding Location}" HorizontalTextAlignment="End" />
+                </Grid>
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
 </ListView>
 ```
 
@@ -242,7 +242,7 @@ Data templates can also be created as reusable objects in a [`ResourceDictionary
                 </x:Array>
             </ListView.ItemsSource>
         </ListView>
-	</StackLayout>
+    </StackLayout>
 </ContentPage>
 ```
 

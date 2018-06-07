@@ -35,10 +35,10 @@ An unaltered [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Form
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 x:Class="CustomRenderer.CameraPage">
-	<ContentPage.Content>
-	</ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CustomRenderer.CameraPage">
+    <ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -47,11 +47,11 @@ Similarly, the code-behind file for the [`ContentPage`](https://developer.xamari
 ```csharp
 public partial class CameraPage : ContentPage
 {
-	public CameraPage ()
-	{
-		// A custom renderer is used to display the camera UI
-		InitializeComponent ();
-	}
+    public CameraPage ()
+    {
+        // A custom renderer is used to display the camera UI
+        InitializeComponent ();
+    }
 }
 ```
 
@@ -60,9 +60,9 @@ The following code example shows how the page can be created in C#:
 ```csharp
 public class CameraPageCS : ContentPage
 {
-	public CameraPageCS ()
-	{
-	}
+    public CameraPageCS ()
+    {
+    }
 }
 ```
 
@@ -77,7 +77,7 @@ The empty `CameraPage` must be displayed by the Xamarin.Forms application. This 
 ```csharp
 async void OnTakePhotoButtonClicked (object sender, EventArgs e)
 {
-	await Navigation.PushAsync (new CameraPage ());
+    await Navigation.PushAsync (new CameraPage ());
 }
 ```
 
@@ -120,29 +120,29 @@ The following code example shows the page renderer for the iOS platform:
 [assembly:ExportRenderer (typeof(CameraPage), typeof(CameraPageRenderer))]
 namespace CustomRenderer.iOS
 {
-	public class CameraPageRenderer : PageRenderer
-	{
-		...
+    public class CameraPageRenderer : PageRenderer
+    {
+        ...
 
-		protected override void OnElementChanged (VisualElementChangedEventArgs e)
-		{
-			base.OnElementChanged (e);
+        protected override void OnElementChanged (VisualElementChangedEventArgs e)
+        {
+            base.OnElementChanged (e);
 
-			if (e.OldElement != null || Element == null) {
-				return;
-			}
+            if (e.OldElement != null || Element == null) {
+                return;
+            }
 
-			try {
-				SetupUserInterface ();
-				SetupEventHandlers ();
-				SetupLiveCameraStream ();
-				AuthorizeCameraUse ();
-			} catch (Exception ex) {
-				System.Diagnostics.Debug.WriteLine (@"			ERROR: ", ex.Message);
-			}
-		}
-		...
-	}
+            try {
+                SetupUserInterface ();
+                SetupEventHandlers ();
+                SetupLiveCameraStream ();
+                AuthorizeCameraUse ();
+            } catch (Exception ex) {
+                System.Diagnostics.Debug.WriteLine (@"            ERROR: ", ex.Message);
+            }
+        }
+        ...
+    }
 }
 ```
 
@@ -182,7 +182,7 @@ namespace CustomRenderer.Droid
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine(@"			ERROR: ", ex.Message);
+                System.Diagnostics.Debug.WriteLine(@"            ERROR: ", ex.Message);
             }
         }
         ...
@@ -202,36 +202,36 @@ The following code example shows the page renderer for UWP:
 [assembly: ExportRenderer(typeof(CameraPage), typeof(CameraPageRenderer))]
 namespace CustomRenderer.UWP
 {
-	public class CameraPageRenderer : PageRenderer
-	{
-		...
-		protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Page> e)
-		{
-			base.OnElementChanged(e);
+    public class CameraPageRenderer : PageRenderer
+    {
+        ...
+        protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Page> e)
+        {
+            base.OnElementChanged(e);
 
-			if (e.OldElement != null || Element == null)
-			{
-				return;
-			}
+            if (e.OldElement != null || Element == null)
+            {
+                return;
+            }
 
-			try
-			{
-				...
-				SetupUserInterface();
-				SetupBasedOnStateAsync();
+            try
+            {
+                ...
+                SetupUserInterface();
+                SetupBasedOnStateAsync();
 
-				this.Children.Add(page);
-			}
-			...
-		}
+                this.Children.Add(page);
+            }
+            ...
+        }
 
-		protected override Size ArrangeOverride(Size finalSize)
-		{
-			page.Arrange(new Windows.Foundation.Rect(0, 0, finalSize.Width, finalSize.Height));
-			return finalSize;
-		}
-		...
-	}
+        protected override Size ArrangeOverride(Size finalSize)
+        {
+            page.Arrange(new Windows.Foundation.Rect(0, 0, finalSize.Width, finalSize.Height));
+            return finalSize;
+        }
+        ...
+    }
 }
 
 ```

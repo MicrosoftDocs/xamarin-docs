@@ -52,7 +52,7 @@ The [**BasicBoxView**](https://developer.xamarin.com/samples/xamarin-forms/BoxVi
              xmlns:local="clr-namespace:BasicBoxView"
              x:Class="BasicBoxView.MainPage">
 
-	<BoxView Color="CornflowerBlue"
+    <BoxView Color="CornflowerBlue"
              WidthRequest="160"
              HeightRequest="160"
              VerticalOptions="Center" 

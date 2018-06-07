@@ -27,19 +27,19 @@ This results in the structure shown in the following code example:
 ```csharp
 public class CustomBehavior : Behavior<View>
 {
-	protected override void OnAttachedTo (View bindable)
-	{
-		base.OnAttachedTo (bindable);
-		// Perform setup
-	}
+    protected override void OnAttachedTo (View bindable)
+    {
+        base.OnAttachedTo (bindable);
+        // Perform setup
+    }
 
-	protected override void OnDetachingFrom (View bindable)
-	{
-		base.OnDetachingFrom (bindable);
-		// Perform clean up
-	}
+    protected override void OnDetachingFrom (View bindable)
+    {
+        base.OnDetachingFrom (bindable);
+        // Perform clean up
+    }
 
-	// Behavior implementation
+    // Behavior implementation
 }
 ```
 
@@ -56,24 +56,24 @@ The sample application demonstrates a `NumericValidationBehavior`, which highlig
 ```csharp
 public class NumericValidationBehavior : Behavior<Entry>
 {
-	protected override void OnAttachedTo(Entry entry)
-	{
-		entry.TextChanged += OnEntryTextChanged;
-		base.OnAttachedTo(entry);
-	}
+    protected override void OnAttachedTo(Entry entry)
+    {
+        entry.TextChanged += OnEntryTextChanged;
+        base.OnAttachedTo(entry);
+    }
 
-	protected override void OnDetachingFrom(Entry entry)
-	{
-		entry.TextChanged -= OnEntryTextChanged;
-		base.OnDetachingFrom(entry);
-	}
+    protected override void OnDetachingFrom(Entry entry)
+    {
+        entry.TextChanged -= OnEntryTextChanged;
+        base.OnDetachingFrom(entry);
+    }
 
-	void OnEntryTextChanged(object sender, TextChangedEventArgs args)
-	{
-		double result;
-		bool isValid = double.TryParse (args.NewTextValue, out result);
-		((Entry)sender).TextColor = isValid ? Color.Default : Color.Red;
-	}
+    void OnEntryTextChanged(object sender, TextChangedEventArgs args)
+    {
+        double result;
+        bool isValid = double.TryParse (args.NewTextValue, out result);
+        ((Entry)sender).TextColor = isValid ? Color.Default : Color.Red;
+    }
 }
 ```
 
@@ -121,37 +121,37 @@ The following code example shows an attached property that controls adding and r
 ```csharp
 public class NumericValidationBehavior : Behavior<Entry>
 {
-	public static readonly BindableProperty AttachBehaviorProperty =
-		BindableProperty.CreateAttached ("AttachBehavior", typeof(bool), typeof(NumericValidationBehavior), false, propertyChanged: OnAttachBehaviorChanged);
+    public static readonly BindableProperty AttachBehaviorProperty =
+        BindableProperty.CreateAttached ("AttachBehavior", typeof(bool), typeof(NumericValidationBehavior), false, propertyChanged: OnAttachBehaviorChanged);
 
-	public static bool GetAttachBehavior (BindableObject view)
-	{
-		return (bool)view.GetValue (AttachBehaviorProperty);
-	}
+    public static bool GetAttachBehavior (BindableObject view)
+    {
+        return (bool)view.GetValue (AttachBehaviorProperty);
+    }
 
-	public static void SetAttachBehavior (BindableObject view, bool value)
-	{
-		view.SetValue (AttachBehaviorProperty, value);
-	}
+    public static void SetAttachBehavior (BindableObject view, bool value)
+    {
+        view.SetValue (AttachBehaviorProperty, value);
+    }
 
-	static void OnAttachBehaviorChanged (BindableObject view, object oldValue, object newValue)
-	{
-		var entry = view as Entry;
-		if (entry == null) {
-			return;
-		}
+    static void OnAttachBehaviorChanged (BindableObject view, object oldValue, object newValue)
+    {
+        var entry = view as Entry;
+        if (entry == null) {
+            return;
+        }
 
-		bool attachBehavior = (bool)newValue;
-		if (attachBehavior) {
-			entry.Behaviors.Add (new NumericValidationBehavior ());
-		} else {
-			var toRemove = entry.Behaviors.FirstOrDefault (b => b is NumericValidationBehavior);
-			if (toRemove != null) {
-				entry.Behaviors.Remove (toRemove);
-			}
-		}
-	}
-	...
+        bool attachBehavior = (bool)newValue;
+        if (attachBehavior) {
+            entry.Behaviors.Add (new NumericValidationBehavior ());
+        } else {
+            var toRemove = entry.Behaviors.FirstOrDefault (b => b is NumericValidationBehavior);
+            if (toRemove != null) {
+                entry.Behaviors.Remove (toRemove);
+            }
+        }
+    }
+    ...
 }
 ```
 
@@ -161,9 +161,9 @@ The following code example shows an *explicit* style for the `NumericValidationB
 
 ```xaml
 <Style x:Key="NumericValidationStyle" TargetType="Entry">
-	<Style.Setters>
-		<Setter Property="local:NumericValidationBehavior.AttachBehavior" Value="true" />
-	</Style.Setters>
+    <Style.Setters>
+        <Setter Property="local:NumericValidationBehavior.AttachBehavior" Value="true" />
+    </Style.Setters>
 </Style>
 ```
 
@@ -185,7 +185,7 @@ The [`OnDetachingFrom`](https://developer.xamarin.com/api/member/Xamarin.Forms.B
 ```csharp
 var toRemove = entry.Behaviors.FirstOrDefault (b => b is NumericValidationBehavior);
 if (toRemove != null) {
-	entry.Behaviors.Remove (toRemove);
+    entry.Behaviors.Remove (toRemove);
 }
 ```
 

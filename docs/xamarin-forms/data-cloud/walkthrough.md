@@ -65,10 +65,10 @@ Each sample application uses the `TodoItem` class to model the data that is disp
 ```csharp
 public class TodoItem
 {
-	public string ID { get; set; }
-	public string Name { get; set; }
-	public string Notes { get; set; }
-	public bool Done { get; set; }
+    public string ID { get; set; }
+    public string Name { get; set; }
+    public string Notes { get; set; }
+    public bool Done { get; set; }
 }
 ```
 
@@ -93,8 +93,8 @@ The majority of the sample applications contain text-to-speech (TTS) functionali
 ```csharp
 void OnSpeakActivated (object sender, EventArgs e)
 {
-	var todoItem = (TodoItem)BindingContext;
-	App.Speech.Speak(todoItem.Name + " " + todoItem.Notes);
+    var todoItem = (TodoItem)BindingContext;
+    App.Speech.Speak(todoItem.Name + " " + todoItem.Notes);
 }
 ```
 

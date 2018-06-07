@@ -76,16 +76,16 @@ This class can be wrapped around a user interface element so that the pan gestur
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:local="clr-namespace:PanGesture"
-			 x:Class="PanGesture.HomePage">
-	<ContentPage.Content>
-		<AbsoluteLayout>
-			<local:PanContainer>
-				<Image Source="MonoMonkey.jpg" WidthRequest="1024" HeightRequest="768" />
-			</local:PanContainer>
-		</AbsoluteLayout>
-	</ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PanGesture"
+             x:Class="PanGesture.HomePage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <local:PanContainer>
+                <Image Source="MonoMonkey.jpg" WidthRequest="1024" HeightRequest="768" />
+            </local:PanContainer>
+        </AbsoluteLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 

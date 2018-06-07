@@ -58,15 +58,15 @@ The `CameraPreview` custom control can be referenced in XAML in the PCL project 
 
 ```xaml
 <ContentPage ...
-			 xmlns:local="clr-namespace:CustomRenderer;assembly=CustomRenderer"
-			 ...>
-	<ContentPage.Content>
-		<StackLayout>
-			<Label Text="Camera Preview:" />
-			<local:CameraPreview Camera="Rear"
+             xmlns:local="clr-namespace:CustomRenderer;assembly=CustomRenderer"
+             ...>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Camera Preview:" />
+            <local:CameraPreview Camera="Rear"
               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-		</StackLayout>
-	</ContentPage.Content>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -159,40 +159,40 @@ The following code example shows the custom renderer for the iOS platform:
 [assembly: ExportRenderer (typeof(CameraPreview), typeof(CameraPreviewRenderer))]
 namespace CustomRenderer.iOS
 {
-	public class CameraPreviewRenderer : ViewRenderer<CameraPreview, UICameraPreview>
-	{
-		UICameraPreview uiCameraPreview;
+    public class CameraPreviewRenderer : ViewRenderer<CameraPreview, UICameraPreview>
+    {
+        UICameraPreview uiCameraPreview;
 
-		protected override void OnElementChanged (ElementChangedEventArgs<CameraPreview> e)
-		{
-			base.OnElementChanged (e);
+        protected override void OnElementChanged (ElementChangedEventArgs<CameraPreview> e)
+        {
+            base.OnElementChanged (e);
 
-			if (Control == null) {
-				uiCameraPreview = new UICameraPreview (e.NewElement.Camera);
-				SetNativeControl (uiCameraPreview);
-			}
-			if (e.OldElement != null) {
-				// Unsubscribe
-				uiCameraPreview.Tapped -= OnCameraPreviewTapped;
-			}
-			if (e.NewElement != null) {
-				// Subscribe
-				uiCameraPreview.Tapped += OnCameraPreviewTapped;
-			}
-		}
+            if (Control == null) {
+                uiCameraPreview = new UICameraPreview (e.NewElement.Camera);
+                SetNativeControl (uiCameraPreview);
+            }
+            if (e.OldElement != null) {
+                // Unsubscribe
+                uiCameraPreview.Tapped -= OnCameraPreviewTapped;
+            }
+            if (e.NewElement != null) {
+                // Subscribe
+                uiCameraPreview.Tapped += OnCameraPreviewTapped;
+            }
+        }
 
-		void OnCameraPreviewTapped (object sender, EventArgs e)
-		{
-			if (uiCameraPreview.IsPreviewing) {
-				uiCameraPreview.CaptureSession.StopRunning ();
-				uiCameraPreview.IsPreviewing = false;
-			} else {
-				uiCameraPreview.CaptureSession.StartRunning ();
-				uiCameraPreview.IsPreviewing = true;
-			}
-		}
+        void OnCameraPreviewTapped (object sender, EventArgs e)
+        {
+            if (uiCameraPreview.IsPreviewing) {
+                uiCameraPreview.CaptureSession.StopRunning ();
+                uiCameraPreview.IsPreviewing = false;
+            } else {
+                uiCameraPreview.CaptureSession.StartRunning ();
+                uiCameraPreview.IsPreviewing = true;
+            }
+        }
         ...
-	}
+    }
 }
 ```
 

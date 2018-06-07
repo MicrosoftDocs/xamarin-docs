@@ -486,7 +486,7 @@ The **App.xaml** file includes resources for two additional videos:
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:video="clr-namespace:FormsVideoLibrary"
              x:Class="VideoPlayerDemos.App">
-	<Application.Resources>
+    <Application.Resources>
         <ResourceDictionary>
 
             <video:UriVideoSource x:Key="ElephantsDream"
@@ -499,7 +499,7 @@ The **App.xaml** file includes resources for two additional videos:
                                   Uri="https://archive.org/download/Sintel/sintel-2048-stereo_512kb.mp4" />
             
         </ResourceDictionary>
-	</Application.Resources>
+    </Application.Resources>
 </Application>
 ```
 

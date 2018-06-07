@@ -28,33 +28,33 @@ The following code example demonstrates using the *device* styles in a XAML page
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DeviceStylesPage" Title="Device" Icon="xaml.png">
-	<ContentPage.Resources>
-		<ResourceDictionary>
-			<Style x:Key="myBodyStyle" TargetType="Label"
-			  BaseResourceKey="BodyStyle">
-				<Setter Property="TextColor" Value="Accent" />
-			</Style>
-		</ResourceDictionary>
-	</ContentPage.Resources>
-	<ContentPage.Content>
-		<StackLayout Padding="0,20,0,0">
-			<Label Text="Title style"
-			  Style="{DynamicResource TitleStyle}" />
-			<Label Text="Subtitle text style"
-			  Style="{DynamicResource SubtitleStyle}" />
-			<Label Text="Body style"
-			  Style="{DynamicResource BodyStyle}" />
-			<Label Text="Caption style"
-			  Style="{DynamicResource CaptionStyle}" />
-			<Label Text="List item detail text style"
-			  Style="{DynamicResource ListItemDetailTextStyle}" />
-			<Label Text="List item text style"
-			  Style="{DynamicResource ListItemTextStyle}" />
-			<Label Text="No style" />
-			<Label Text="My body style"
-			  Style="{StaticResource myBodyStyle}" />
-		</StackLayout>
-	</ContentPage.Content>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="myBodyStyle" TargetType="Label"
+              BaseResourceKey="BodyStyle">
+                <Setter Property="TextColor" Value="Accent" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <Label Text="Title style"
+              Style="{DynamicResource TitleStyle}" />
+            <Label Text="Subtitle text style"
+              Style="{DynamicResource SubtitleStyle}" />
+            <Label Text="Body style"
+              Style="{DynamicResource BodyStyle}" />
+            <Label Text="Caption style"
+              Style="{DynamicResource CaptionStyle}" />
+            <Label Text="List item detail text style"
+              Style="{DynamicResource ListItemDetailTextStyle}" />
+            <Label Text="List item text style"
+              Style="{DynamicResource ListItemTextStyle}" />
+            <Label Text="No style" />
+            <Label Text="My body style"
+              Style="{StaticResource myBodyStyle}" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -69,36 +69,36 @@ The following code example demonstrates the equivalent page in C#:
 ```csharp
 public class DeviceStylesPageCS : ContentPage
 {
-	public DeviceStylesPageCS ()
-	{
-		var myBodyStyle = new Style (typeof(Label)) {
-			BaseResourceKey = Device.Styles.BodyStyleKey,
-			Setters = {
-				new Setter {
-					Property = Label.TextColorProperty,
-					Value = Color.Accent
-				}
-			}
-		};
+    public DeviceStylesPageCS ()
+    {
+        var myBodyStyle = new Style (typeof(Label)) {
+            BaseResourceKey = Device.Styles.BodyStyleKey,
+            Setters = {
+                new Setter {
+                    Property = Label.TextColorProperty,
+                    Value = Color.Accent
+                }
+            }
+        };
 
-		Title = "Device";
-		Icon = "csharp.png";
-		Padding = new Thickness (0, 20, 0, 0);
+        Title = "Device";
+        Icon = "csharp.png";
+        Padding = new Thickness (0, 20, 0, 0);
 
-		Content = new StackLayout {
-			Children = {
-				new Label { Text = "Title style", Style = Device.Styles.TitleStyle },
-				new Label { Text = "Subtitle style", Style = Device.Styles.SubtitleStyle },
-				new Label { Text = "Body style", Style = Device.Styles.BodyStyle },
-				new Label { Text = "Caption style", Style = Device.Styles.CaptionStyle },
-				new Label { Text = "List item detail text style",
-				  Style = Device.Styles.ListItemDetailTextStyle },
-				new Label { Text = "List item text style", Style = Device.Styles.ListItemTextStyle },
-				new Label { Text = "No style" },
-				new Label { Text = "My body style", Style = myBodyStyle }
-			}
-		};
-	}
+        Content = new StackLayout {
+            Children = {
+                new Label { Text = "Title style", Style = Device.Styles.TitleStyle },
+                new Label { Text = "Subtitle style", Style = Device.Styles.SubtitleStyle },
+                new Label { Text = "Body style", Style = Device.Styles.BodyStyle },
+                new Label { Text = "Caption style", Style = Device.Styles.CaptionStyle },
+                new Label { Text = "List item detail text style",
+                  Style = Device.Styles.ListItemDetailTextStyle },
+                new Label { Text = "List item text style", Style = Device.Styles.ListItemTextStyle },
+                new Label { Text = "No style" },
+                new Label { Text = "My body style", Style = myBodyStyle }
+            }
+        };
+    }
 }
 ```
 

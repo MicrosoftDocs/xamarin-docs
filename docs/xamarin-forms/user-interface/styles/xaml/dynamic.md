@@ -19,30 +19,30 @@ The following code example demonstrates *dynamic* styles in a XAML page:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DynamicStylesPage" Title="Dynamic" Icon="xaml.png">
-	<ContentPage.Resources>
-		<ResourceDictionary>
-			<Style x:Key="baseStyle" TargetType="View">
-			  ...
-			</Style>
-			<Style x:Key="blueSearchBarStyle"
-			       TargetType="SearchBar"
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="View">
+              ...
+            </Style>
+            <Style x:Key="blueSearchBarStyle"
+                   TargetType="SearchBar"
                    BasedOn="{StaticResource baseStyle}">
-			  ...
-			</Style>
-			<Style x:Key="greenSearchBarStyle"
-			       TargetType="SearchBar">
-			  ...
-			</Style>
-			...
-		</ResourceDictionary>
-	</ContentPage.Resources>
-	<ContentPage.Content>
-		<StackLayout Padding="0,20,0,0">
-			<SearchBar Placeholder="These SearchBar controls"
-			           Style="{DynamicResource searchBarStyle}" />
-			...
-		</StackLayout>
-	</ContentPage.Content>
+              ...
+            </Style>
+            <Style x:Key="greenSearchBarStyle"
+                   TargetType="SearchBar">
+              ...
+            </Style>
+            ...
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <SearchBar Placeholder="These SearchBar controls"
+                       Style="{DynamicResource searchBarStyle}" />
+            ...
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -53,24 +53,24 @@ Instead, in the code-behind file, the constructor creates a [`ResourceDictionary
 ```csharp
 public partial class DynamicStylesPage : ContentPage
 {
-	bool originalStyle = true;
+    bool originalStyle = true;
 
-	public DynamicStylesPage ()
-	{
-		InitializeComponent ();
-		Resources ["searchBarStyle"] = Resources ["blueSearchBarStyle"];
-	}
+    public DynamicStylesPage ()
+    {
+        InitializeComponent ();
+        Resources ["searchBarStyle"] = Resources ["blueSearchBarStyle"];
+    }
 
-	void OnButtonClicked (object sender, EventArgs e)
-	{
-		if (originalStyle) {
-			Resources ["searchBarStyle"] = Resources ["greenSearchBarStyle"];
-			originalStyle = false;
-		} else {
-			Resources ["searchBarStyle"] = Resources ["blueSearchBarStyle"];
-			originalStyle = true;
-		}
-	}
+    void OnButtonClicked (object sender, EventArgs e)
+    {
+        if (originalStyle) {
+            Resources ["searchBarStyle"] = Resources ["greenSearchBarStyle"];
+            originalStyle = false;
+        } else {
+            Resources ["searchBarStyle"] = Resources ["blueSearchBarStyle"];
+            originalStyle = true;
+        }
+    }
 }
 ```
 
@@ -84,34 +84,34 @@ The following code example demonstrates the equivalent page in C#:
 ```csharp
 public class DynamicStylesPageCS : ContentPage
 {
-	bool originalStyle = true;
+    bool originalStyle = true;
 
-	public DynamicStylesPageCS ()
-	{
-		...
-		var baseStyle = new Style (typeof(View)) {
-			...
-		};
-		var blueSearchBarStyle = new Style (typeof(SearchBar)) {
-			...
-		};
-		var greenSearchBarStyle = new Style (typeof(SearchBar)) {
-			...
-		};
-		...
-		var searchBar1 = new SearchBar { Placeholder = "These SearchBar controls" };
-		searchBar1.SetDynamicResource (VisualElement.StyleProperty, "searchBarStyle");
-		...
-		Resources = new ResourceDictionary ();
-		Resources.Add ("blueSearchBarStyle", blueSearchBarStyle);
-		Resources.Add ("greenSearchBarStyle", greenSearchBarStyle);
-		Resources ["searchBarStyle"] = Resources ["blueSearchBarStyle"];
+    public DynamicStylesPageCS ()
+    {
+        ...
+        var baseStyle = new Style (typeof(View)) {
+            ...
+        };
+        var blueSearchBarStyle = new Style (typeof(SearchBar)) {
+            ...
+        };
+        var greenSearchBarStyle = new Style (typeof(SearchBar)) {
+            ...
+        };
+        ...
+        var searchBar1 = new SearchBar { Placeholder = "These SearchBar controls" };
+        searchBar1.SetDynamicResource (VisualElement.StyleProperty, "searchBarStyle");
+        ...
+        Resources = new ResourceDictionary ();
+        Resources.Add ("blueSearchBarStyle", blueSearchBarStyle);
+        Resources.Add ("greenSearchBarStyle", greenSearchBarStyle);
+        Resources ["searchBarStyle"] = Resources ["blueSearchBarStyle"];
 
-		Content = new StackLayout {
-			Children = { searchBar1, searchBar2, searchBar3, searchBar4,	button	}
-		};
-	}
-	...
+        Content = new StackLayout {
+            Children = { searchBar1, searchBar2, searchBar3, searchBar4,    button    }
+        };
+    }
+    ...
 }
 ```
 
@@ -127,29 +127,29 @@ The following code example demonstrates *dynamic* style inheritance in a XAML pa
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DynamicStylesInheritancePage" Title="Dynamic Inheritance" Icon="xaml.png">
-	<ContentPage.Resources>
-		<ResourceDictionary>
-			<Style x:Key="baseStyle" TargetType="View">
-			  ...
-			</Style>
-			<Style x:Key="blueSearchBarStyle" TargetType="SearchBar" BasedOn="{StaticResource baseStyle}">
-			  ...
-			</Style>
-			<Style x:Key="greenSearchBarStyle" TargetType="SearchBar">
-			  ...
-			</Style>
-			<Style x:Key="tealSearchBarStyle" TargetType="SearchBar" BaseResourceKey="searchBarStyle">
-			  ...
-			</Style>
-			...
-		</ResourceDictionary>
-	</ContentPage.Resources>
-	<ContentPage.Content>
-		<StackLayout Padding="0,20,0,0">
-			<SearchBar Text="These SearchBar controls" Style="{StaticResource tealSearchBarStyle}" />
-			...
-		</StackLayout>
-	</ContentPage.Content>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="View">
+              ...
+            </Style>
+            <Style x:Key="blueSearchBarStyle" TargetType="SearchBar" BasedOn="{StaticResource baseStyle}">
+              ...
+            </Style>
+            <Style x:Key="greenSearchBarStyle" TargetType="SearchBar">
+              ...
+            </Style>
+            <Style x:Key="tealSearchBarStyle" TargetType="SearchBar" BaseResourceKey="searchBarStyle">
+              ...
+            </Style>
+            ...
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <SearchBar Text="These SearchBar controls" Style="{StaticResource tealSearchBarStyle}" />
+            ...
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -165,38 +165,38 @@ The following code example demonstrates the equivalent page in C#:
 ```csharp
 public class DynamicStylesInheritancePageCS : ContentPage
 {
-	bool originalStyle = true;
+    bool originalStyle = true;
 
-	public DynamicStylesInheritancePageCS ()
-	{
-		...
-		var baseStyle = new Style (typeof(View)) {
-			...
-		};
-		var blueSearchBarStyle = new Style (typeof(SearchBar)) {
-			...
-		};
-		var greenSearchBarStyle = new Style (typeof(SearchBar)) {
-			...
-		};
-		var tealSearchBarStyle = new Style (typeof(SearchBar)) {
-			BaseResourceKey = "searchBarStyle",
-			...
-		};
-		...
-		Resources = new ResourceDictionary ();
-		Resources.Add ("blueSearchBarStyle", blueSearchBarStyle);
-		Resources.Add ("greenSearchBarStyle", greenSearchBarStyle);
-		Resources ["searchBarStyle"] = Resources ["blueSearchBarStyle"];
+    public DynamicStylesInheritancePageCS ()
+    {
+        ...
+        var baseStyle = new Style (typeof(View)) {
+            ...
+        };
+        var blueSearchBarStyle = new Style (typeof(SearchBar)) {
+            ...
+        };
+        var greenSearchBarStyle = new Style (typeof(SearchBar)) {
+            ...
+        };
+        var tealSearchBarStyle = new Style (typeof(SearchBar)) {
+            BaseResourceKey = "searchBarStyle",
+            ...
+        };
+        ...
+        Resources = new ResourceDictionary ();
+        Resources.Add ("blueSearchBarStyle", blueSearchBarStyle);
+        Resources.Add ("greenSearchBarStyle", greenSearchBarStyle);
+        Resources ["searchBarStyle"] = Resources ["blueSearchBarStyle"];
 
-		Content = new StackLayout {
-			Children = {
-				new SearchBar { Text = "These SearchBar controls", Style = tealSearchBarStyle },
-				...
-			}
-		};
-	}
-	...
+        Content = new StackLayout {
+            Children = {
+                new SearchBar { Text = "These SearchBar controls", Style = tealSearchBarStyle },
+                ...
+            }
+        };
+    }
+    ...
 }
 ```
 

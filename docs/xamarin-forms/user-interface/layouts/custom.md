@@ -341,9 +341,9 @@ The `WrapLayout` class can be consumed by placing it on a [`Page`](https://devel
 
 ```xaml
 <ContentPage ... xmlns:local="clr-namespace:ImageWrapLayout">
-	<ScrollView Margin="0,20,0,20">
-		<local:WrapLayout x:Name="wrapLayout" />
-	</ScrollView>
+    <ScrollView Margin="0,20,0,20">
+        <local:WrapLayout x:Name="wrapLayout" />
+    </ScrollView>
 </ContentPage>
 ```
 

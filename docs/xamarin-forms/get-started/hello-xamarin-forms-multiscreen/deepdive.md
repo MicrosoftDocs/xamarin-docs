@@ -71,15 +71,15 @@ The [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage ...
-			 xmlns:local="clr-namespace:Phoneword;assembly=Phoneword"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 ...>
+             xmlns:local="clr-namespace:Phoneword;assembly=Phoneword"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             ...>
     ...
-	<ContentPage.Content>
+    <ContentPage.Content>
        ...
        <ListView ItemsSource="{x:Static local:App.PhoneNumbers}" />
        ...
-	</ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>
 ```
 

@@ -39,12 +39,12 @@ Title="StackLayout Demo">
         HorizontalOptions="FillAndExpand" />
       <BoxView Color="Yellow" VerticalOptions="FillAndExpand"
         HorizontalOptions="FillAndExpand" />
-			<BoxView Color="Green" VerticalOptions="FillAndExpand"
+            <BoxView Color="Green" VerticalOptions="FillAndExpand"
         HorizontalOptions="FillAndExpand" />
-			<BoxView HeightRequest="75" Color="Blue" VerticalOptions="End"
+            <BoxView HeightRequest="75" Color="Blue" VerticalOptions="End"
         HorizontalOptions="FillAndExpand" />
     </StackLayout>
-	</ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -117,12 +117,12 @@ Title="StackLayout Demo">
         HorizontalOptions="FillAndExpand" />
       <BoxView VerticalOptions="FillAndExpand"
         HorizontalOptions="FillAndExpand" />
-			<BoxView VerticalOptions="FillAndExpand"
+            <BoxView VerticalOptions="FillAndExpand"
         HorizontalOptions="FillAndExpand" />
-			<BoxView HeightRequest="75" VerticalOptions="End"
+            <BoxView HeightRequest="75" VerticalOptions="End"
         HorizontalOptions="FillAndExpand" />
     </StackLayout>
-	</ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -164,7 +164,7 @@ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="TheBusinessTumble.StackLayoutPage"
 BackgroundColor="Maroon"
 Title="StackLayouts">
-	<ContentPage.Content>
+    <ContentPage.Content>
     <ScrollView>
       <StackLayout Spacing="0" Padding="0" BackgroundColor="Maroon">
         <BoxView HorizontalOptions="FillAndExpand" HeightRequest="100"
@@ -203,7 +203,7 @@ Title="StackLayouts">
         </StackLayout>
       </StackLayout>
     </ScrollView>
-	</ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>
 
 ```

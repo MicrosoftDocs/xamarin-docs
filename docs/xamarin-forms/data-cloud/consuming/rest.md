@@ -146,7 +146,7 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
   ...
 
   if (response.IsSuccessStatusCode) {
-    Debug.WriteLine (@"				TodoItem successfully saved.");
+    Debug.WriteLine (@"                TodoItem successfully saved.");
 
   }
   ...
@@ -193,7 +193,7 @@ public async Task DeleteTodoItemAsync (string id)
   ...
   var response = await client.DeleteAsync (uri);
   if (response.IsSuccessStatusCode) {
-    Debug.WriteLine (@"				TodoItem successfully deleted.");
+    Debug.WriteLine (@"                TodoItem successfully deleted.");
   }
   ...
 }

@@ -51,40 +51,40 @@ using Xamarin.Forms.Platform.iOS;
 [assembly:ExportEffect (typeof(FocusEffect), "FocusEffect")]
 namespace EffectsDemo.iOS
 {
-	public class FocusEffect : PlatformEffect
-	{
-		UIColor backgroundColor;
+    public class FocusEffect : PlatformEffect
+    {
+        UIColor backgroundColor;
 
-		protected override void OnAttached ()
-		{
-			try {
-				Control.BackgroundColor = backgroundColor = UIColor.FromRGB (204, 153, 255);
-			} catch (Exception ex) {
-				Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
-			}
-		}
+        protected override void OnAttached ()
+        {
+            try {
+                Control.BackgroundColor = backgroundColor = UIColor.FromRGB (204, 153, 255);
+            } catch (Exception ex) {
+                Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
+            }
+        }
 
-		protected override void OnDetached ()
-		{
-		}
+        protected override void OnDetached ()
+        {
+        }
 
-		protected override void OnElementPropertyChanged (PropertyChangedEventArgs args)
-		{
-			base.OnElementPropertyChanged (args);
+        protected override void OnElementPropertyChanged (PropertyChangedEventArgs args)
+        {
+            base.OnElementPropertyChanged (args);
 
-			try {
-				if (args.PropertyName == "IsFocused") {
-					if (Control.BackgroundColor == backgroundColor) {
-						Control.BackgroundColor = UIColor.White;
-					} else {
-						Control.BackgroundColor = backgroundColor;
-					}
-				}
-			} catch (Exception ex) {
-				Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
-			}
-		}
-	}
+            try {
+                if (args.PropertyName == "IsFocused") {
+                    if (Control.BackgroundColor == backgroundColor) {
+                        Control.BackgroundColor = UIColor.White;
+                    } else {
+                        Control.BackgroundColor = backgroundColor;
+                    }
+                }
+            } catch (Exception ex) {
+                Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
+            }
+        }
+    }
 }
 ```
 
@@ -104,41 +104,41 @@ using Xamarin.Forms.Platform.Android;
 [assembly:ExportEffect (typeof(FocusEffect), "FocusEffect")]
 namespace EffectsDemo.Droid
 {
-	public class FocusEffect : PlatformEffect
-	{
-		Android.Graphics.Color backgroundColor;
+    public class FocusEffect : PlatformEffect
+    {
+        Android.Graphics.Color backgroundColor;
 
-		protected override void OnAttached ()
-		{
-			try {
-				backgroundColor = Android.Graphics.Color.LightGreen;
-				Control.SetBackgroundColor (backgroundColor);
+        protected override void OnAttached ()
+        {
+            try {
+                backgroundColor = Android.Graphics.Color.LightGreen;
+                Control.SetBackgroundColor (backgroundColor);
 
-			} catch (Exception ex) {
-				Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
-			}
-		}
+            } catch (Exception ex) {
+                Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
+            }
+        }
 
-		protected override void OnDetached ()
-		{
-		}
+        protected override void OnDetached ()
+        {
+        }
 
-		protected override void OnElementPropertyChanged (System.ComponentModel.PropertyChangedEventArgs args)
-		{
-			base.OnElementPropertyChanged (args);
-			try {
-				if (args.PropertyName == "IsFocused") {
-					if (((Android.Graphics.Drawables.ColorDrawable)Control.Background).Color == backgroundColor) {
-						Control.SetBackgroundColor (Android.Graphics.Color.Black);
-					} else {
-						Control.SetBackgroundColor (backgroundColor);
-					}
-				}
-			} catch (Exception ex) {
-				Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
-			}
-		}
-	}
+        protected override void OnElementPropertyChanged (System.ComponentModel.PropertyChangedEventArgs args)
+        {
+            base.OnElementPropertyChanged (args);
+            try {
+                if (args.PropertyName == "IsFocused") {
+                    if (((Android.Graphics.Drawables.ColorDrawable)Control.Background).Color == backgroundColor) {
+                        Control.SetBackgroundColor (Android.Graphics.Color.Black);
+                    } else {
+                        Control.SetBackgroundColor (backgroundColor);
+                    }
+                }
+            } catch (Exception ex) {
+                Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
+            }
+        }
+    }
 }
 ```
 
@@ -198,10 +198,10 @@ The following XAML code example shows an [`Entry`](https://developer.xamarin.com
 
 ```xaml
 <Entry Text="Effect attached to an Entry" ...>
-	<Entry.Effects>
-		<local:FocusEffect />
-	</Entry.Effects>
-	...
+    <Entry.Effects>
+        <local:FocusEffect />
+    </Entry.Effects>
+    ...
 </Entry>
 ```
 
@@ -210,9 +210,9 @@ The `FocusEffect` class in the .NET Standard library supports effect consumption
 ```csharp
 public class FocusEffect : RoutingEffect
 {
-	public FocusEffect () : base ("MyCompany.FocusEffect")
-	{
-	}
+    public FocusEffect () : base ("MyCompany.FocusEffect")
+    {
+    }
 }
 ```
 

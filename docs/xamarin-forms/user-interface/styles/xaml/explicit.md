@@ -21,39 +21,39 @@ The following code example shows *explicit* styles declared in XAML in a page's 
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" Icon="xaml.png">
-	<ContentPage.Resources>
-		<ResourceDictionary>
-			<Style x:Key="labelRedStyle" TargetType="Label">
-				<Setter Property="HorizontalOptions"
-				        Value="Center" />
-				<Setter Property="VerticalOptions"
-				        Value="CenterAndExpand" />
-				<Setter Property="FontSize" Value="Large" />
-				<Setter Property="TextColor" Value="Red" />
-			</Style>
-			<Style x:Key="labelGreenStyle" TargetType="Label">
-			    ...
-				<Setter Property="TextColor" Value="Green" />
-			</Style>
-			<Style x:Key="labelBlueStyle" TargetType="Label">
-			    ...
-				<Setter Property="TextColor" Value="Blue" />
-			</Style>
-		</ResourceDictionary>
-	</ContentPage.Resources>
-	<ContentPage.Content>
-		<StackLayout Padding="0,20,0,0">
-			<Label Text="These labels"
-			       Style="{StaticResource labelRedStyle}" />
-			<Label Text="are demonstrating"
-			       Style="{StaticResource labelGreenStyle}" />
-			<Label Text="explicit styles,"
-			       Style="{StaticResource labelBlueStyle}" />
-			<Label Text="and an explicit style override"
-			       Style="{StaticResource labelBlueStyle}"
-				   TextColor="Teal" />
-		</StackLayout>
-	</ContentPage.Content>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelRedStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions"
+                        Value="Center" />
+                <Setter Property="VerticalOptions"
+                        Value="CenterAndExpand" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="Red" />
+            </Style>
+            <Style x:Key="labelGreenStyle" TargetType="Label">
+                ...
+                <Setter Property="TextColor" Value="Green" />
+            </Style>
+            <Style x:Key="labelBlueStyle" TargetType="Label">
+                ...
+                <Setter Property="TextColor" Value="Blue" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <Label Text="These labels"
+                   Style="{StaticResource labelRedStyle}" />
+            <Label Text="are demonstrating"
+                   Style="{StaticResource labelGreenStyle}" />
+            <Label Text="explicit styles,"
+                   Style="{StaticResource labelBlueStyle}" />
+            <Label Text="and an explicit style override"
+                   Style="{StaticResource labelBlueStyle}"
+                   TextColor="Teal" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -69,20 +69,20 @@ In addition to creating *explicit* styles at the page level, they can also be cr
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" Icon="xaml.png">
-	<ContentPage.Content>
-		<StackLayout Padding="0,20,0,0">
-			<StackLayout.Resources>
-				<ResourceDictionary>
-					<Style x:Key="labelRedStyle" TargetType="Label">
-					  ...
-					</Style>
-					...
-				</ResourceDictionary>
-			</StackLayout.Resources>
-			<Label Text="These labels" Style="{StaticResource labelRedStyle}" />
-			...
-		</StackLayout>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="labelRedStyle" TargetType="Label">
+                      ...
+                    </Style>
+                    ...
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <Label Text="These labels" Style="{StaticResource labelRedStyle}" />
+            ...
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -97,46 +97,46 @@ For information about creating styles in an application's [`ResourceDictionary`]
 ```csharp
 public class ExplicitStylesPageCS : ContentPage
 {
-	public ExplicitStylesPageCS ()
-	{
-		var labelRedStyle = new Style (typeof(Label)) {
-			Setters = {
-				...
-				new Setter { Property = Label.TextColorProperty, Value = Color.Red	}
-			}
-		};
-		var labelGreenStyle = new Style (typeof(Label)) {
-			Setters = {
-				...
-				new Setter { Property = Label.TextColorProperty, Value = Color.Green }
-			}
-		};
-		var labelBlueStyle = new Style (typeof(Label)) {
-			Setters = {
-				...
-				new Setter { Property = Label.TextColorProperty, Value = Color.Blue }
-			}
-		};
+    public ExplicitStylesPageCS ()
+    {
+        var labelRedStyle = new Style (typeof(Label)) {
+            Setters = {
+                ...
+                new Setter { Property = Label.TextColorProperty, Value = Color.Red    }
+            }
+        };
+        var labelGreenStyle = new Style (typeof(Label)) {
+            Setters = {
+                ...
+                new Setter { Property = Label.TextColorProperty, Value = Color.Green }
+            }
+        };
+        var labelBlueStyle = new Style (typeof(Label)) {
+            Setters = {
+                ...
+                new Setter { Property = Label.TextColorProperty, Value = Color.Blue }
+            }
+        };
 
-		Resources = new ResourceDictionary ();
-		Resources.Add ("labelRedStyle", labelRedStyle);
-		Resources.Add ("labelGreenStyle", labelGreenStyle);
-		Resources.Add ("labelBlueStyle", labelBlueStyle);
-		...
+        Resources = new ResourceDictionary ();
+        Resources.Add ("labelRedStyle", labelRedStyle);
+        Resources.Add ("labelGreenStyle", labelGreenStyle);
+        Resources.Add ("labelBlueStyle", labelBlueStyle);
+        ...
 
-		Content = new StackLayout {
-			Children = {
-				new Label { Text = "These labels",
-				            Style = (Style)Resources ["labelRedStyle"] },
-				new Label { Text = "are demonstrating",
-				            Style = (Style)Resources ["labelGreenStyle"] },
-				new Label { Text = "explicit styles,",
-				            Style = (Style)Resources ["labelBlueStyle"] },
-				new Label {	Text = "and an explicit style override",
-				            Style = (Style)Resources ["labelBlueStyle"], TextColor = Color.Teal }
-			}
-		};
-	}
+        Content = new StackLayout {
+            Children = {
+                new Label { Text = "These labels",
+                            Style = (Style)Resources ["labelRedStyle"] },
+                new Label { Text = "are demonstrating",
+                            Style = (Style)Resources ["labelGreenStyle"] },
+                new Label { Text = "explicit styles,",
+                            Style = (Style)Resources ["labelBlueStyle"] },
+                new Label {    Text = "and an explicit style override",
+                            Style = (Style)Resources ["labelBlueStyle"], TextColor = Color.Teal }
+            }
+        };
+    }
 }
 ```
 
@@ -147,28 +147,28 @@ However, there is no advantage to using a [`ResourceDictionary`](https://develop
 ```csharp
 public class ExplicitStylesPageCS : ContentPage
 {
-	public ExplicitStylesPageCS ()
-	{
-		var labelRedStyle = new Style (typeof(Label)) {
-			...
-		};
-		var labelGreenStyle = new Style (typeof(Label)) {
-			...
-		};
-		var labelBlueStyle = new Style (typeof(Label)) {
-			...
-		};
-		...
-		Content = new StackLayout {
-			Children = {
-				new Label { Text = "These labels", Style = labelRedStyle },
-				new Label { Text = "are demonstrating", Style = labelGreenStyle },
-				new Label { Text = "explicit styles,", Style = labelBlueStyle },
-				new Label { Text = "and an explicit style override", Style = labelBlueStyle,
-				            TextColor = Color.Teal }
-			}
-		};
-	}
+    public ExplicitStylesPageCS ()
+    {
+        var labelRedStyle = new Style (typeof(Label)) {
+            ...
+        };
+        var labelGreenStyle = new Style (typeof(Label)) {
+            ...
+        };
+        var labelBlueStyle = new Style (typeof(Label)) {
+            ...
+        };
+        ...
+        Content = new StackLayout {
+            Children = {
+                new Label { Text = "These labels", Style = labelRedStyle },
+                new Label { Text = "are demonstrating", Style = labelGreenStyle },
+                new Label { Text = "explicit styles,", Style = labelBlueStyle },
+                new Label { Text = "and an explicit style override", Style = labelBlueStyle,
+                            TextColor = Color.Teal }
+            }
+        };
+    }
 }
 ```
 

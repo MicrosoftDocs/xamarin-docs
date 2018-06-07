@@ -27,12 +27,12 @@ The layout of a [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Fo
 
 - On iOS, the list of tabs appears at the bottom of the screen, and the detail area is above. Each tab also has an icon image which should be a 30x30 PNG with transparency for normal resolution, 60x60 for high resolution, and 90x90 for iPhone 6 Plus resolution. If there are more than five tabs, a *More* tab will appear, which can be used to access the additional tabs. For more information about loading images in a Xamarin.Forms application, see [Working with Images](~/xamarin-forms/user-interface/images.md). For more information about icon requirements, see [Creating Tabbed Applications](~/ios/user-interface/controls/creating-tabbed-applications.md).
 
-	> [!NOTE]
+    > [!NOTE]
   > Note that the `TabbedRenderer` for iOS has an overridable `GetIcon` method that can be used to load tab icons from a specified source. This override makes it possible to use SVG images as icons on a `TabbedPage`. In addition, selected and unselected versions of an icon can be provided.
 
 - On Android, the list of tabs appears at the top of the screen, and the detail area is below. The tab names are automatically capitalized, and the user can scroll the collection of tabs if there are too many to fit on one screen.
 
-	> [!NOTE]
+    > [!NOTE]
   > Note that when using AppCompat on Android, each tab will also display an icon. In addition, the `TabbedPageRenderer` for Android AppCompat has an overridable `SetTabIcon` method that can be used to load tab icons from a custom `Drawable`. This override makes it possible to use SVG images as icons on a `TabbedPage`.
 
 - On Windows tablet form-factors, the tabs aren't always visible and users need to swipe-down (or right-click, if they have a mouse attached) to view the tabs in a `TabbedPage` (as shown below).
@@ -59,15 +59,15 @@ The following XAML code example shows a [`TabbedPage`](https://developer.xamarin
 
 ```xaml
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			xmlns:local="clr-namespace:TabbedPageWithNavigationPage;assembly=TabbedPageWithNavigationPage"
-			x:Class="TabbedPageWithNavigationPage.MainPage">
-	<local:TodayPage />
-	<NavigationPage Title="Schedule" Icon="schedule.png">
-		<x:Arguments>
-			<local:SchedulePage />
-		</x:Arguments>
-	</NavigationPage>
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:TabbedPageWithNavigationPage;assembly=TabbedPageWithNavigationPage"
+            x:Class="TabbedPageWithNavigationPage.MainPage">
+    <local:TodayPage />
+    <NavigationPage Title="Schedule" Icon="schedule.png">
+        <x:Arguments>
+            <local:SchedulePage />
+        </x:Arguments>
+    </NavigationPage>
 </TabbedPage>
 ```
 

@@ -188,42 +188,42 @@ The following code example shows the `LabelShadowEffect` implementation for the 
 [assembly:ExportEffect (typeof(LabelShadowEffect), "LabelShadowEffect")]
 namespace EffectsDemo.iOS
 {
-	public class LabelShadowEffect : PlatformEffect
-	{
-		protected override void OnAttached ()
-		{
-			try {
-				UpdateRadius ();
-				UpdateColor ();
-				UpdateOffset ();
-				Control.Layer.ShadowOpacity = 1.0f;
-			} catch (Exception ex) {
-				Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
-			}
-		}
+    public class LabelShadowEffect : PlatformEffect
+    {
+        protected override void OnAttached ()
+        {
+            try {
+                UpdateRadius ();
+                UpdateColor ();
+                UpdateOffset ();
+                Control.Layer.ShadowOpacity = 1.0f;
+            } catch (Exception ex) {
+                Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
+            }
+        }
 
-		protected override void OnDetached ()
-		{
-		}
+        protected override void OnDetached ()
+        {
+        }
         ...
 
-		void UpdateRadius ()
-		{
-			Control.Layer.CornerRadius = (nfloat)ShadowEffect.GetRadius (Element);
-		}
+        void UpdateRadius ()
+        {
+            Control.Layer.CornerRadius = (nfloat)ShadowEffect.GetRadius (Element);
+        }
 
-		void UpdateColor ()
-		{
-			Control.Layer.ShadowColor = ShadowEffect.GetColor (Element).ToCGColor ();
-		}
+        void UpdateColor ()
+        {
+            Control.Layer.ShadowColor = ShadowEffect.GetColor (Element).ToCGColor ();
+        }
 
-		void UpdateOffset ()
-		{
-			Control.Layer.ShadowOffset = new CGSize (
+        void UpdateOffset ()
+        {
+            Control.Layer.ShadowOffset = new CGSize (
                 (double)ShadowEffect.GetDistanceX (Element),
                 (double)ShadowEffect.GetDistanceY (Element));
-		}
-	}
+        }
+    }
 ```
 
 The `OnAttached` method calls methods that retrieve the attached property values using the `ShadowEffect` getters, and which set `Control.Layer` properties to the property values to create the shadow. This functionality is wrapped in a `try`/`catch` block in case the control that the effect is attached to does not have the `Control.Layer` properties. No implementation is provided by the `OnDetached` method because no cleanup is necessary.
@@ -262,53 +262,53 @@ The following code example shows the `LabelShadowEffect` implementation for the 
 [assembly:ExportEffect (typeof(LabelShadowEffect), "LabelShadowEffect")]
 namespace EffectsDemo.Droid
 {
-	public class LabelShadowEffect : PlatformEffect
-	{
-		Android.Widget.TextView control;
-		Android.Graphics.Color color;
-		float radius, distanceX, distanceY;
+    public class LabelShadowEffect : PlatformEffect
+    {
+        Android.Widget.TextView control;
+        Android.Graphics.Color color;
+        float radius, distanceX, distanceY;
 
-		protected override void OnAttached ()
-		{
-			try {
-				control = Control as Android.Widget.TextView;
-				UpdateRadius ();
-				UpdateColor ();
-				UpdateOffset ();
-				UpdateControl ();
-			} catch (Exception ex) {
-				Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
-			}
-		}
+        protected override void OnAttached ()
+        {
+            try {
+                control = Control as Android.Widget.TextView;
+                UpdateRadius ();
+                UpdateColor ();
+                UpdateOffset ();
+                UpdateControl ();
+            } catch (Exception ex) {
+                Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
+            }
+        }
 
-		protected override void OnDetached ()
-		{
-		}
+        protected override void OnDetached ()
+        {
+        }
         ...
 
-		void UpdateControl ()
-		{
-			if (control != null) {
-				control.SetShadowLayer (radius, distanceX, distanceY, color);
-			}
-		}
+        void UpdateControl ()
+        {
+            if (control != null) {
+                control.SetShadowLayer (radius, distanceX, distanceY, color);
+            }
+        }
 
-		void UpdateRadius ()
-		{
-			radius = (float)ShadowEffect.GetRadius (Element);
-		}
+        void UpdateRadius ()
+        {
+            radius = (float)ShadowEffect.GetRadius (Element);
+        }
 
-		void UpdateColor ()
-		{
-			color = ShadowEffect.GetColor (Element).ToAndroid ();
-		}
+        void UpdateColor ()
+        {
+            color = ShadowEffect.GetColor (Element).ToAndroid ();
+        }
 
-		void UpdateOffset ()
-		{
-			distanceX = (float)ShadowEffect.GetDistanceX (Element);
-			distanceY = (float)ShadowEffect.GetDistanceY (Element);
-		}
-	}
+        void UpdateOffset ()
+        {
+            distanceX = (float)ShadowEffect.GetDistanceX (Element);
+            distanceY = (float)ShadowEffect.GetDistanceY (Element);
+        }
+    }
 ```
 
 The `OnAttached` method calls methods that retrieve the attached property values using the `ShadowEffect` getters, and calls a method that calls the [`TextView.SetShadowLayer`](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/) method to create a shadow using the property values. This functionality is wrapped in a `try`/`catch` block in case the control that the effect is attached to does not have the `Control.Layer` properties. No implementation is provided by the `OnDetached` method because no cleanup is necessary.
@@ -350,50 +350,50 @@ The following code example shows the `LabelShadowEffect` implementation for the 
 [assembly: ExportEffect (typeof(LabelShadowEffect), "LabelShadowEffect")]
 namespace EffectsDemo.UWP
 {
-	public class LabelShadowEffect : PlatformEffect
-	{
-		Label shadowLabel;
-		bool shadowAdded = false;
+    public class LabelShadowEffect : PlatformEffect
+    {
+        Label shadowLabel;
+        bool shadowAdded = false;
 
-		protected override void OnAttached ()
-		{
-			try {
-				if (!shadowAdded) {
-					var textBlock = Control as Windows.UI.Xaml.Controls.TextBlock;
+        protected override void OnAttached ()
+        {
+            try {
+                if (!shadowAdded) {
+                    var textBlock = Control as Windows.UI.Xaml.Controls.TextBlock;
 
-					shadowLabel = new Label ();
-					shadowLabel.Text = textBlock.Text;
-					shadowLabel.FontAttributes = FontAttributes.Bold;
-					shadowLabel.HorizontalOptions = LayoutOptions.Center;
-					shadowLabel.VerticalOptions = LayoutOptions.CenterAndExpand;
+                    shadowLabel = new Label ();
+                    shadowLabel.Text = textBlock.Text;
+                    shadowLabel.FontAttributes = FontAttributes.Bold;
+                    shadowLabel.HorizontalOptions = LayoutOptions.Center;
+                    shadowLabel.VerticalOptions = LayoutOptions.CenterAndExpand;
 
-					UpdateColor ();
-					UpdateOffset ();
+                    UpdateColor ();
+                    UpdateOffset ();
 
-					((Grid)Element.Parent).Children.Insert (0, shadowLabel);
-					shadowAdded = true;
-				}
-			} catch (Exception ex) {
-				Debug.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
-			}
-		}
+                    ((Grid)Element.Parent).Children.Insert (0, shadowLabel);
+                    shadowAdded = true;
+                }
+            } catch (Exception ex) {
+                Debug.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
+            }
+        }
 
-		protected override void OnDetached ()
-		{
-		}
+        protected override void OnDetached ()
+        {
+        }
         ...
 
-		void UpdateColor ()
-		{
-			shadowLabel.TextColor = ShadowEffect.GetColor (Element);
-		}
+        void UpdateColor ()
+        {
+            shadowLabel.TextColor = ShadowEffect.GetColor (Element);
+        }
 
-		void UpdateOffset ()
-		{
-			shadowLabel.TranslationX = ShadowEffect.GetDistanceX (Element);
-			shadowLabel.TranslationY = ShadowEffect.GetDistanceY (Element);
-		}
-	}
+        void UpdateOffset ()
+        {
+            shadowLabel.TranslationX = ShadowEffect.GetDistanceX (Element);
+            shadowLabel.TranslationY = ShadowEffect.GetDistanceY (Element);
+        }
+    }
 }
 ```
 

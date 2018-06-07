@@ -64,15 +64,15 @@ This platform-specific is used to enable fast scrolling through data in a [`List
 ```xaml
 <ContentPage ...
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
-	<StackLayout Margin="20">
+    <StackLayout Margin="20">
         ...
         <ListView ItemsSource="{Binding GroupedEmployees}"
                   GroupDisplayBinding="{Binding Key}"
                   IsGroupingEnabled="true"
                   android:ListView.IsFastScrollEnabled="true">
             ...
-		</ListView>
-	</StackLayout>
+        </ListView>
+    </StackLayout>
 </ContentPage>
 ```
 

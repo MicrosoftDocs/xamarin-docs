@@ -60,8 +60,8 @@ The required right-to-left locale should be added as a supported language to the
 ```xml
 <key>CFBundleLocalizations</key>
 <array>
-	<string>en</string>
-	<string>ar</string>
+    <string>en</string>
+    <string>ar</string>
 </array>
 ```
 
@@ -81,9 +81,9 @@ The app's **AndroidManifest.xml** file should be updated so that the `<uses-sdk>
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest ... >
-	<uses-sdk android:minSdkVersion="17" ... />
-	<application ... android:supportsRtl="true">
-	</application>
+    <uses-sdk android:minSdkVersion="17" ... />
+    <application ... android:supportsRtl="true">
+    </application>
 </manifest>
 ```
 
@@ -95,9 +95,9 @@ The required language resources should be specified in the `<Resources>` node of
 
 ```xml
 <Resources>
-	<Resource Language="x-generate"/>
-	<Resource Language="en" />
-	<Resource Language="ar" />
+    <Resource Language="x-generate"/>
+    <Resource Language="en" />
+    <Resource Language="ar" />
 </Resources>
 ```
 

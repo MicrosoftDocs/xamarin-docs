@@ -143,8 +143,8 @@ using Urho.Shapes;
 
 namespace FormsSample
 {
-	public class Charts : Urho.Application
-	{
+    public class Charts : Urho.Application
+    {
     public Charts (ApplicationOptions options = null) : base(options) { }
     protected override void Start ()
     {

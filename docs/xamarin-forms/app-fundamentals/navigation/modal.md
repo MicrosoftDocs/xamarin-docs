@@ -171,23 +171,23 @@ The `DetailPage` then uses data binding to display the `Contact` instance data, 
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 x:Class="ModalNavigation.DetailPage">
-	<ContentPage.Padding>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModalNavigation.DetailPage">
+    <ContentPage.Padding>
       <OnPlatform x:TypeArguments="Thickness">
         <On Platform="iOS" Value="0,40,0,0" />
       </OnPlatform>
-	</ContentPage.Padding>
-	<ContentPage.Content>
-		<StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-			<StackLayout Orientation="Horizontal">
-				<Label Text="Name:" FontSize="Medium" HorizontalOptions="FillAndExpand" />
-				<Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" />
-			</StackLayout>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Name:" FontSize="Medium" HorizontalOptions="FillAndExpand" />
+                <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" />
+            </StackLayout>
               ...
-			<Button x:Name="dismissButton" Text="Dismiss" Clicked="OnDismissButtonClicked" />
-		</StackLayout>
-	</ContentPage.Content>
+            <Button x:Name="dismissButton" Text="Dismiss" Clicked="OnDismissButtonClicked" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 

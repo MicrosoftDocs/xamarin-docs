@@ -63,12 +63,12 @@ To accomplish the same layout as above in XAML:
 
 ```xaml
 <TableView Intent="Settings">
-	<TableRoot>
-		<TableSection Title="Ring">
-			<SwitchCell Text="New Voice Mail" />
+    <TableRoot>
+        <TableSection Title="Ring">
+            <SwitchCell Text="New Voice Mail" />
       <SwitchCell Text="New Mail" On="true" />
-		</TableSection>
-	</TableRoot>
+        </TableSection>
+    </TableRoot>
 </TableView>
 ```
 
@@ -143,24 +143,24 @@ The XAML to create the above layout is below:
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DemoTableView.TablePage" Title="TableView">
-	<ContentPage.Content>
-		<TableView Intent="Settings">
-			<TableRoot>
-				<TableSection Title="Getting Started">
-					<ViewCell>
-						<StackLayout Orientation="Horizontal">
-							<Image Source="bulb.png" />
-							<Label Text="left"
-							  TextColor="#f35e20" />
-							<Label Text="right"
-							  HorizontalOptions="EndAndExpand"
-							  TextColor="#503026" />
-						</StackLayout>
-					</ViewCell>
-				</TableSection>
-			</TableRoot>
-		</TableView>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="Getting Started">
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="bulb.png" />
+                            <Label Text="left"
+                              TextColor="#f35e20" />
+                            <Label Text="right"
+                              HorizontalOptions="EndAndExpand"
+                              TextColor="#503026" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
 </ContentPage>
 
 ```

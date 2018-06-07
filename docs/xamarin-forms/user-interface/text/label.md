@@ -54,14 +54,14 @@ In code:
 ```csharp
 public partial class LabelPage : ContentPage
 {
-	public LabelPage ()
-	{
-		InitializeComponent ();
-		var layout = new StackLayout { Padding = new Thickness(5,10) };
-		this.Content = layout;
-		var label = new Label { Text="This is a label.", TextColor = Color.FromHex("#77d065"), FontSize = 20 };
-		layout.Children.Add(label);
-	}
+    public LabelPage ()
+    {
+        InitializeComponent ();
+        var layout = new StackLayout { Padding = new Thickness(5,10) };
+        this.Content = layout;
+        var label = new Label { Text="This is a label.", TextColor = Color.FromHex("#77d065"), FontSize = 20 };
+        layout.Children.Add(label);
+    }
 }
 ```
 
@@ -73,8 +73,8 @@ In XAML:
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="TextSample.LabelPage"
 Title="Label Demo">
-	<ContentPage.Content>
-		<StackLayout Padding="5,10">
+    <ContentPage.Content>
+        <StackLayout Padding="5,10">
       <Label TextColor="#77d065" FontSize = "20" Text="This is a label." />
     </StackLayout>
   </ContentPage.Content>
@@ -103,19 +103,19 @@ The following C# code demonstrates a label where the first word is bold and the 
 ```csharp
 public partial class LabelPage : ContentPage
 {
-	public LabelPage ()
-	{
-		InitializeComponent ();
-		var layout = new StackLayout { Padding = new Thickness(5,10) };
-		this.Content = layout;
+    public LabelPage ()
+    {
+        InitializeComponent ();
+        var layout = new StackLayout { Padding = new Thickness(5,10) };
+        this.Content = layout;
     var label = new Label { FontSize = 20 };
     var s = new FormattedString ();
     s.Spans.Add (new Span{ Text = "Red Bold", FontAttributes = FontAttributes.Bold });
     s.Spans.Add (new Span{ Text = "Default" });
     s.Spans.Add (new Span{ Text = "italic small", FontSize =  Device.GetNamedSize(NamedSize.Small, typeof(Label)), FontAttributes = FontAttributes.Italic});
     label.FormattedText = s;
-		layout.Children.Add(label);
-	}
+        layout.Children.Add(label);
+    }
 }
 ```
 
@@ -127,8 +127,8 @@ In XAML:
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="TextSample.LabelPage"
 Title="Label Demo">
-	<ContentPage.Content>
-		<StackLayout Padding="5,10">
+    <ContentPage.Content>
+        <StackLayout Padding="5,10">
       <Label FontSize=20>
         <Label.FormattedText>
           <FormattedString>

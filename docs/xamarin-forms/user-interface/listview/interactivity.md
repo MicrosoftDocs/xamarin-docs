@@ -109,7 +109,7 @@ ContextActions.Add (deleteAction);
                Text="Delete" IsDestructive="True" />
          </ViewCell.ContextActions>
          <StackLayout Padding="15,0">
-         	 <Label Text="{Binding title}" />
+              <Label Text="{Binding title}" />
          </StackLayout>
       </ViewCell>
     </DataTemplate>

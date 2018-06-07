@@ -25,10 +25,10 @@ for example see the `xmlns:pages` declaration below:
 
 ```xaml
 <ContentPage
-	xmlns="http://xamarin.com/schemas/2014/forms"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	xmlns:pages="clr-namespace:Xamarin.Forms.Pages;assembly=Xamarin.Forms.Pages"
-	x:Class="DataPagesDemo.Detail">
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Xamarin.Forms.Pages;assembly=Xamarin.Forms.Pages"
+    x:Class="DataPagesDemo.Detail">
 ```
 
 The examples below include `DynamicResource` references which would need
@@ -53,9 +53,9 @@ The `HeroImage` control has four properties:
 
 ```xaml
 <pages:HeroImage
-	ImageSource="{ DynamicResource HeroImageImage }"
-	Text="Keith Ballinger"
-	Detail="Xamarin"
+    ImageSource="{ DynamicResource HeroImageImage }"
+    Text="Keith Ballinger"
+    Detail="Xamarin"
 />
 ```
 
@@ -87,12 +87,12 @@ There are five properties:
 
 ```xaml
 <StackLayout Spacing="0">
-	<pages:ListItemControl
-		Detail="Xamarin"
-		ImageSource="{ DynamicResource UserImage }"
-		Title="Miguel de Icaza"
-		PlaceholdImageSource="{ DynamicResource IconImage }"
-	/>
+    <pages:ListItemControl
+        Detail="Xamarin"
+        ImageSource="{ DynamicResource UserImage }"
+        Title="Miguel de Icaza"
+        PlaceholdImageSource="{ DynamicResource IconImage }"
+    />
 ```
 
 These screenshots show the `ListItem` on iOS and Android platforms using
@@ -207,50 +207,50 @@ in [step 5](#5).
 ```xml
 <!-- CARDVIEW FONT SIZES -->
 <OnPlatform x:TypeArguments="x:Double" x:Key="CardViewTextFontSize">
-		<On Platform="iOS, Android" Value="15" />
+        <On Platform="iOS, Android" Value="15" />
 </OnPlatform>
 
 <OnPlatform x:TypeArguments="x:Double" x:Key="CardViewDetailFontSize">
-		<On Platform="iOS, Android" Value="13" />
+        <On Platform="iOS, Android" Value="13" />
 </OnPlatform>
 
-<OnPlatform x:TypeArguments="Color"	x:Key="CardViewTextTextColor">
-		<On Platform="iOS" Value="{StaticResource iOSCardViewTextTextColor}" />
-		<On Platform="Android" Value="{StaticResource AndroidCardViewTextTextColor}" />
+<OnPlatform x:TypeArguments="Color"    x:Key="CardViewTextTextColor">
+        <On Platform="iOS" Value="{StaticResource iOSCardViewTextTextColor}" />
+        <On Platform="Android" Value="{StaticResource AndroidCardViewTextTextColor}" />
 </OnPlatform>
 
-<OnPlatform x:TypeArguments="Thickness"	x:Key="CardViewTextlMargin">
-		<On Platform="iOS" Value="12,10,12,4" />
-		<On Platform="Android" Value="20,0,20,5" />
+<OnPlatform x:TypeArguments="Thickness"    x:Key="CardViewTextlMargin">
+        <On Platform="iOS" Value="12,10,12,4" />
+        <On Platform="Android" Value="20,0,20,5" />
 </OnPlatform>
 
-<OnPlatform x:TypeArguments="Color"	x:Key="CardViewDetailTextColor">
-		<On Platform="iOS" Value="{StaticResource iOSCardViewDetailTextColor}" />
-		<On Platform="Android" Value="{StaticResource AndroidCardViewDetailTextColor}" />
+<OnPlatform x:TypeArguments="Color"    x:Key="CardViewDetailTextColor">
+        <On Platform="iOS" Value="{StaticResource iOSCardViewDetailTextColor}" />
+        <On Platform="Android" Value="{StaticResource AndroidCardViewDetailTextColor}" />
 </OnPlatform>
 
-<OnPlatform x:TypeArguments="Thickness"	x:Key="CardViewDetailMargin">
-		<On Platform="iOS" Value="12,0,10,12" />
-		<On Platform="Android" Value="20,0,20,20" />
+<OnPlatform x:TypeArguments="Thickness"    x:Key="CardViewDetailMargin">
+        <On Platform="iOS" Value="12,0,10,12" />
+        <On Platform="Android" Value="20,0,20,20" />
 </OnPlatform>
 
-<OnPlatform x:TypeArguments="Color"	x:Key="CardViewBackgroundColor">
-		<On Platform="iOS" Value="{StaticResource iOSCardViewBackgroundColor}" />
-		<On Platform="Android" Value="{StaticResource AndroidCardViewBackgroundColor}" />
+<OnPlatform x:TypeArguments="Color"    x:Key="CardViewBackgroundColor">
+        <On Platform="iOS" Value="{StaticResource iOSCardViewBackgroundColor}" />
+        <On Platform="Android" Value="{StaticResource AndroidCardViewBackgroundColor}" />
 </OnPlatform>
 
 <OnPlatform x:TypeArguments="x:Double" x:Key="CardViewShadowSize">
-		<On Platform="iOS" Value="2" />
-		<On Platform="Android" Value="5" />
+        <On Platform="iOS" Value="2" />
+        <On Platform="Android" Value="5" />
 </OnPlatform>
 
 <OnPlatform x:TypeArguments="x:Double" x:Key="CardViewCornerRadius">
-		<On Platform="iOS" Value="0" />
-		<On Platform="Android" Value="4" />
+        <On Platform="iOS" Value="0" />
+        <On Platform="Android" Value="4" />
 </OnPlatform>
 
-<OnPlatform x:TypeArguments="Color"	x:Key="CardViewShadowColor">
-		<On Platform="iOS, Android" Value="#CDCDD1" />
+<OnPlatform x:TypeArguments="Color"    x:Key="CardViewShadowColor">
+        <On Platform="iOS, Android" Value="#CDCDD1" />
 </OnPlatform>
 ```
 
@@ -264,26 +264,26 @@ will be used in the custom control:
 ```xml
 <!-- EXPLICIT STYLES (will be Classes) -->
 <Style TargetType="Label" x:Key="CardViewTextStyle">
-	<Setter Property="FontSize" Value="{ StaticResource CardViewTextFontSize }" />
-	<Setter Property="TextColor" Value="{ StaticResource CardViewTextTextColor }" />
-	<Setter Property="HorizontalOptions" Value="Start" />
-	<Setter Property="Margin" Value="{ StaticResource CardViewTextlMargin }" />
-	<Setter Property="HorizontalTextAlignment" Value="Start" />
+    <Setter Property="FontSize" Value="{ StaticResource CardViewTextFontSize }" />
+    <Setter Property="TextColor" Value="{ StaticResource CardViewTextTextColor }" />
+    <Setter Property="HorizontalOptions" Value="Start" />
+    <Setter Property="Margin" Value="{ StaticResource CardViewTextlMargin }" />
+    <Setter Property="HorizontalTextAlignment" Value="Start" />
 </Style>
 
 <Style TargetType="Label" x:Key="CardViewDetailStyle">
-	<Setter Property="HorizontalTextAlignment" Value="Start" />
-	<Setter Property="TextColor" Value="{ StaticResource CardViewDetailTextColor }" />
-	<Setter Property="FontSize" Value="{ StaticResource CardViewDetailFontSize }" />
-	<Setter Property="HorizontalOptions" Value="Start" />
-	<Setter Property="Margin" Value="{ StaticResource CardViewDetailMargin }" />
+    <Setter Property="HorizontalTextAlignment" Value="Start" />
+    <Setter Property="TextColor" Value="{ StaticResource CardViewDetailTextColor }" />
+    <Setter Property="FontSize" Value="{ StaticResource CardViewDetailFontSize }" />
+    <Setter Property="HorizontalOptions" Value="Start" />
+    <Setter Property="Margin" Value="{ StaticResource CardViewDetailMargin }" />
 </Style>
 
 <Style TargetType="Image" x:Key="CardViewImageImageStyle">
-	<Setter Property="HorizontalOptions" Value="Center" />
-	<Setter Property="VerticalOptions" Value="Center" />
-	<Setter Property="WidthRequest" Value="220"/>
-	<Setter Property="HeightRequest" Value="165"/>
+    <Setter Property="HorizontalOptions" Value="Center" />
+    <Setter Property="VerticalOptions" Value="Center" />
+    <Setter Property="WidthRequest" Value="220"/>
+    <Setter Property="HeightRequest" Value="165"/>
 </Style>
 ```
 
@@ -356,14 +356,14 @@ the theme you are using the resource dictionary:
 
 ```xaml
 <!-- CARD VIEW COLORS -->
-			<Color x:Key="iOSCardViewBackgroundColor">#404040</Color>
-			<Color x:Key="AndroidCardViewBackgroundColor">#404040</Color>
+            <Color x:Key="iOSCardViewBackgroundColor">#404040</Color>
+            <Color x:Key="AndroidCardViewBackgroundColor">#404040</Color>
 
-			<Color x:Key="AndroidCardViewTextTextColor">#FFFFFF</Color>
-			<Color x:Key="iOSCardViewTextTextColor">#FFFFFF</Color>
+            <Color x:Key="AndroidCardViewTextTextColor">#FFFFFF</Color>
+            <Color x:Key="iOSCardViewTextTextColor">#FFFFFF</Color>
 
-			<Color x:Key="AndroidCardViewDetailTextColor">#B5B4B9</Color>
-			<Color x:Key="iOSCardViewDetailTextColor">#B5B4B9</Color>
+            <Color x:Key="AndroidCardViewDetailTextColor">#B5B4B9</Color>
+            <Color x:Key="iOSCardViewDetailTextColor">#B5B4B9</Color>
 ```
 
 <a name="6" />
@@ -375,7 +375,7 @@ defined in [step 4](#4) using a `Style` `Setter` element
 
 ```xml
 <Style TargetType="local:CardView">
-	<Setter Property="ControlTemplate" Value="{ StaticResource CardViewControlControlTemplate }" />
+    <Setter Property="ControlTemplate" Value="{ StaticResource CardViewControlControlTemplate }" />
   ... some custom styling omitted
   <Setter Property="BackgroundColor" Value="{ StaticResource CardViewBackgroundColor }" />
 </Style>

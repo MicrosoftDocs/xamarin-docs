@@ -496,12 +496,12 @@ The code-behind file is reponsible for handling the `TextChanged` event from the
 ```csharp
 public partial class VsmValidationPage : ContentPage
 {
-	public VsmValidationPage ()
-	{
-		InitializeComponent ();
+    public VsmValidationPage ()
+    {
+        InitializeComponent ();
 
         GoToState(false);
-	}
+    }
 
     void OnTextChanged(object sender, TextChangedEventArgs args)
     {
@@ -668,9 +668,9 @@ The code-behind file sets the `BindingContext` property of `menuStack` to implem
 ```csharp
 public partial class VsmAdaptiveLayoutPage : ContentPage
 {
-	public VsmAdaptiveLayoutPage ()
-	{
-		InitializeComponent ();
+    public VsmAdaptiveLayoutPage ()
+    {
+        InitializeComponent ();
 
         SizeChanged += (sender, args) =>
         {
@@ -691,7 +691,7 @@ public partial class VsmAdaptiveLayoutPage : ContentPage
         });
 
         menuStack.BindingContext = this;
-	}
+    }
 
     public ICommand SelectedCommand { private set; get; }
 }

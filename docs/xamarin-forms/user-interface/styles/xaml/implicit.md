@@ -21,26 +21,26 @@ The following code example shows an *implicit* style declared in XAML in a page'
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" Icon="xaml.png">
-	<ContentPage.Resources>
-		<ResourceDictionary>
-			<Style TargetType="Entry">
-				<Setter Property="HorizontalOptions" Value="Fill" />
-				<Setter Property="VerticalOptions" Value="CenterAndExpand" />
-				<Setter Property="BackgroundColor" Value="Yellow" />
-				<Setter Property="FontAttributes" Value="Italic" />
-				<Setter Property="TextColor" Value="Blue" />
-			</Style>
-		</ResourceDictionary>
-	</ContentPage.Resources>
-	<ContentPage.Content>
-		<StackLayout Padding="0,20,0,0">
-			<Entry Text="These entries" />
-			<Entry Text="are demonstrating" />
-			<Entry Text="implicit styles," />
-			<Entry Text="and an implicit style override" BackgroundColor="Lime" TextColor="Red" />
-			<local:CustomEntry Text="Subclassed Entry is not receiving the style" />
-		</StackLayout>
-	</ContentPage.Content>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry">
+                <Setter Property="HorizontalOptions" Value="Fill" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="BackgroundColor" Value="Yellow" />
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="TextColor" Value="Blue" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <Entry Text="These entries" />
+            <Entry Text="are demonstrating" />
+            <Entry Text="implicit styles," />
+            <Entry Text="and an implicit style override" BackgroundColor="Lime" TextColor="Red" />
+            <local:CustomEntry Text="Subclassed Entry is not receiving the style" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -56,20 +56,20 @@ In addition to creating *implicit* styles at the page level, they can also be cr
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" Icon="xaml.png">
-	<ContentPage.Content>
-		<StackLayout Padding="0,20,0,0">
-			<StackLayout.Resources>
-				<ResourceDictionary>
-					<Style TargetType="Entry">
-						<Setter Property="HorizontalOptions" Value="Fill" />
-						...
-					</Style>
-				</ResourceDictionary>
-			</StackLayout.Resources>
-			<Entry Text="These entries" />
-			...
-		</StackLayout>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Entry">
+                        <Setter Property="HorizontalOptions" Value="Fill" />
+                        ...
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <Entry Text="These entries" />
+            ...
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
@@ -84,29 +84,29 @@ For information about creating styles in an application's [`ResourceDictionary`]
 ```csharp
 public class ImplicitStylesPageCS : ContentPage
 {
-	public ImplicitStylesPageCS ()
-	{
-		var entryStyle = new Style (typeof(Entry)) {
-			Setters = {
-				...
-				new Setter { Property = Entry.TextColorProperty, Value = Color.Blue }
-			}
-		};
+    public ImplicitStylesPageCS ()
+    {
+        var entryStyle = new Style (typeof(Entry)) {
+            Setters = {
+                ...
+                new Setter { Property = Entry.TextColorProperty, Value = Color.Blue }
+            }
+        };
 
-		...
-		Resources = new ResourceDictionary ();
-		Resources.Add (entryStyle);
+        ...
+        Resources = new ResourceDictionary ();
+        Resources.Add (entryStyle);
 
-		Content = new StackLayout {
-			Children = {
-				new Entry { Text = "These entries" },
-				new Entry { Text = "are demonstrating" },
-				new Entry { Text = "implicit styles," },
-				new Entry { Text = "and an implicit style override", BackgroundColor = Color.Lime, TextColor = Color.Red },
-				new CustomEntry  { Text = "Subclassed Entry is not receiving the style" }
-			}
-		};
-	}
+        Content = new StackLayout {
+            Children = {
+                new Entry { Text = "These entries" },
+                new Entry { Text = "are demonstrating" },
+                new Entry { Text = "implicit styles," },
+                new Entry { Text = "and an implicit style override", BackgroundColor = Color.Lime, TextColor = Color.Red },
+                new CustomEntry  { Text = "Subclassed Entry is not receiving the style" }
+            }
+        };
+    }
 }
 ```
 

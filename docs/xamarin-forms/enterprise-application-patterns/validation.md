@@ -218,7 +218,7 @@ The `LineColorBehavior` attached behavior is used to highlight [`Entry`](https:/
 
 ```xaml
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">
-	<Entry.Style>
+    <Entry.Style>
         <OnPlatform x:TypeArguments="Style">
             <On Platform="iOS, Android" Value="{StaticResource EntryStyle}" />
             <On Platform="UWP" Value="{StaticResource UwpEntryStyle}" />
