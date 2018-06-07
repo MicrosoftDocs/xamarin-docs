@@ -6,7 +6,7 @@ ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 02/24/2017
+ms.date: 05/31/2018
 ---
 
 # XAML Previewer for Xamarin.Forms
@@ -56,6 +56,17 @@ controls by hardcoding a binding context (either in the code-behind or using XAM
 
 Refer to James Montemagno's [blog post on adding design-time data](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data)
 to see how to bind to a static ViewModel in XAML.
+
+## Detecting Design Mode
+
+The static [`DesignMode.IsDesignModeEnabled`](xref:Xamarin.Forms.DesignMode.IsDesignModeEnabled) property can be examined to determine whether the application is running in the previewer. This allows you to specify code that will only execute when the application is running in the previewer:
+
+```csharp
+if (DesignMode.IsDesignModeEnabled)
+{
+  // Previewer only code  
+}
+```
 
 ## Troubleshooting
 

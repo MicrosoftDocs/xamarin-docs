@@ -6,7 +6,7 @@ ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/20/2017
+ms.date: 04/06/2018
 ---
 
 # Platform Features
@@ -37,10 +37,6 @@ Xamarin.Forms now has preview support for GTK# apps.
 
 Xamarin.Forms now has preview support for macOS apps.
 
-## [WPF](wpf.md)
-
-Xamarin.Forms now has preview support for Windows Presentation Foundation (WPF) apps.
-
 ## [Native Forms](native-forms.md)
 
 Native Forms allow Xamarin.Forms [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derived pages to be consumed by native Xamarin.iOS, Xamarin.Android, and Universal Windows Platform (UWP) projects.
@@ -57,6 +53,14 @@ Platform-specifics allow you to consume functionality that's only available on a
 
 There are a wide variety of open-source plug-ins available on Github, Nuget, and the Xamarin Component Store to help extend Xamarin.Forms apps.
 
+## [Tizen](tizen.md)
+
+Tizen .NET enables you to build .NET applications with Xamarin.Forms and the Tizen .NET framework.
+
 ## [Windows](windows/index.md)
 
 Xamarin.Forms has support for the Universal Windows Platform (UWP) on Windows 10. This article describes how to add a a UWP project to an existing Xamarin.Forms solution.
+
+## [WPF](wpf.md)
+
+Xamarin.Forms now has preview support for Windows Presentation Foundation (WPF) apps.

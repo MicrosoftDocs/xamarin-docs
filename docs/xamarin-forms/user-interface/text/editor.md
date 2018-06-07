@@ -6,7 +6,7 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
+ms.date: 05/31/2018
 ---
 
 # Editor
@@ -22,7 +22,7 @@ The `Editor` control is used to accept multi-line input. This article will cover
 
 ### Setting and Reading Text
 
-Editor, like other text-presenting views, exposes the `Text` property. `Text` can be used to set and read the text presented by the `Editor`. The following example demonstrates setting text in XAML:
+The `Editor`, like other text-presenting views, exposes the `Text` property. This property can be used to set and read the text presented by the `Editor`. The following example demonstrates setting the `Text` property in XAML:
 
 ```xaml
 <Editor Text="I am an Editor" />
@@ -40,6 +40,20 @@ To read text, access the `Text` property in C#:
 var text = MyEditor.Text;
 ```
 
+### Limiting Input Length
+
+The [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) property can be used to limit the input length that's permitted for the [`Editor`](xref:Xamarin.Forms.Editor). This property should be set to a positive integer:
+
+```xaml
+<Editor ... MaxLength="10" />
+```
+
+```csharp
+var editor = new Editor { ... MaxLength = 10 };
+```
+
+A [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) property value of 0 indicates that no input will be allowed, and a value of `int.MaxValue`, which is the default value for an [`Editor`](xref:Xamarin.Forms.Editor), indicates that there is no effective limit on the number of characters that may be entered.
+
 ### Keyboards
 
 The keyboard that is presented when users interact with an `Editor` can be set programmatically via the [``Keyboard``](https://developer.xamarin.com/api/type/Xamarin.Forms.Keyboard/) property.
@@ -53,8 +67,24 @@ The options for the keyboard type are:
 - **Telephone** &ndash; used when entering telephone numbers
 - **Url** &ndash; used for entering file paths & web addresses
 
-There is an [example of each keyboard](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/)
-in our Recipes section.
+There is an [example of each keyboard](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) in our Recipes section.
+
+### Enabling and Disabling Spell Checking
+
+The [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) property controls whether spell checking is enabled. By default, the property is set to `true`. As the user enters text, misspellings are indicated.
+
+However, for some text entry scenarios, such as entering a username, spell checking provides a negative experience and so should be disabled by setting the [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) property to `false`:
+
+```xaml
+<Editor ... IsSpellCheckEnabled="false" />
+```
+
+```csharp
+var editor = new Editor { ... IsSpellCheckEnabled = false };
+```
+
+> [!NOTE]
+> When the [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) property is set to `false`, and a custom keyboard isn't being used, the native spell checker will be disabled. However, if a [`Keyboard`](xref:Xamarin.Forms.Keyboard) has been set that disables spell checking, such as [`Keyboard.Chat`](xref:Xamarin.Forms.Keyboard.Chat), the `IsSpellCheckEnabled` property is ignored. Therefore, the property cannot be used to enable spell checking for a `Keyboard` that explicitly disables it.
 
 ### Colors
 

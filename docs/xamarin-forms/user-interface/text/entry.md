@@ -6,20 +6,20 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
+ms.date: 05/31/2018
 ---
 
 # Entry
 
 _Single-line text or password input_
 
-Xamarin.Forms `Entry` is used for single-line text input. `Entry`, like the Editor view, supports multiple keyboard types. Additionally, `Entry` can be used as a password field.
+The Xamarin.Forms `Entry` is used for single-line text input. The `Entry`, like the `Editor` view, supports multiple keyboard types. Additionally, the `Entry` can be used as a password field.
 
 ## Display Customization
 
 ### Setting and Reading Text
 
-Entry, like other text-presenting views, exposes the `Text` property. `Text` can be used to set and read the text presented by the `Entry`. The following example demonstrates setting the text in XAML:
+The `Entry`, like other text-presenting views, exposes the `Text` property. This property can be used to set and read the text presented by the `Entry`. The following example demonstrates setting the `Text` property in XAML:
 
 ```xaml
 <Entry Text="I am an Entry" />
@@ -40,6 +40,20 @@ var text = MyEntry.Text;
 > [!NOTE]
 > The width of an `Entry` can be defined by setting its `WidthRequest` property. Do not depend on the width of an `Entry` being defined based on the value of its `Text` property.
 
+### Limiting Input Length
+
+The [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) property can be used to limit the input length that's permitted for the [`Entry`](xref:Xamarin.Forms.Entry). This property should be set to a positive integer:
+
+```xaml
+<Entry ... MaxLength="10" />
+```
+
+```csharp
+var entry = new Entry { ... MaxLength = 10 };
+```
+
+A [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) property value of 0 indicates that no input will be allowed, and a value of `int.MaxValue`, which is the default value for an [`Entry`](xref:Xamarin.Forms.Entry), indicates that there is no effective limit on the number of characters that may be entered.
+
 ### Keyboards
 
 The keyboard that is presented when users interact with an `Entry` can be set programmatically via the `Keyboard` property.
@@ -55,6 +69,23 @@ The options for the keyboard type are:
 
 There is an [example of each keyboard](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/)
 in our Recipes section.
+
+### Enabling and Disabling Spell Checking
+
+The [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) property controls whether spell checking is enabled. By default, the property is set to `true`. As the user enters text, misspellings are indicated.
+
+However, for some text entry scenarios, such as entering a username, spell checking provides a negative experience and so should be disabled by setting the [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) property to `false`:
+
+```xaml
+<Entry ... IsSpellCheckEnabled="false" />
+```
+
+```csharp
+var entry = new Entry { ... IsSpellCheckEnabled = false };
+```
+
+> [!NOTE]
+> When the [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) property is set to `false`, and a custom keyboard isn't being used, the native spell checker will be disabled. However, if a [`Keyboard`](xref:Xamarin.Forms.Keyboard) has been set that disables spell checking, such as [`Keyboard.Chat`](xref:Xamarin.Forms.Keyboard.Chat), the `IsSpellCheckEnabled` property is ignored. Therefore, the property cannot be used to enable spell checking for a `Keyboard` that explicitly disables it.
 
 ### Placeholders
 

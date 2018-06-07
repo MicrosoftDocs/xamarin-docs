@@ -68,6 +68,21 @@ On iOS and Android this instance is set to a contrasting color that is visible o
 -  **WithSaturation** - returns a new color, replacing the saturation with the value supplied.
 -  **MultiplyAlpha** - returns a new color by modifying the alpha, multiplying it by the supplied alpha value.
 
+## Implicit Conversions
+
+Implicit conversion between the `Xamarin.Forms.Color` and `System.Drawing.Color` types can be performed:
+
+```csharp
+Xamarin.Forms.Color xfColor = Xamarin.Forms.Color.FromRgb(0, 72, 255);
+System.Drawing.Color sdColor = System.Drawing.Color.FromArgb(38, 127, 0);
+
+// Implicity convert from a Xamarin.Forms.Color to a System.Drawing.Color
+System.Drawing.Color sdColor2 = xfColor;
+
+// Implicitly convert from a System.Drawing.Color to a Xamarin.Forms.Color
+Xamarin.Forms.Color xfColor2 = sdColor;
+```
+
 ## Device.RuntimePlatform
 
 This code snippet uses the `Device.RuntimePlatform` property to selectively set the color of an `ActivityIndicator`:

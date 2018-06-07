@@ -6,7 +6,7 @@ ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
+ms.date: 06/01/2018
 ---
 
 # ListView Interactivity
@@ -130,6 +130,9 @@ public void OnDelete (object sender, EventArgs e) {
     DisplayAlert("Delete Context Action", mi.CommandParameter + " delete context action", "OK");
 }
 ```
+
+> [!NOTE]
+> The `NavigationPageRenderer` for Android has an overridable `UpdateMenuItemIcon` method that can be used to load icons from a custom `Drawable`. This override makes it possible to use SVG images as icons on `MenuItem` instances on Android.
 
 <a name="Pull_to_Refresh" />
 
