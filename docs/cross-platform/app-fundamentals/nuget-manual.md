@@ -97,4 +97,4 @@ Some open-source examples that you can refer to:
 
 - [Nugetizer-3000 Automated Nuget Creation](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)
 - [Updating NuGets for iOS 64-bit](http://blog.xamarin.com/how-to-update-nuget-packages-for-64-bit/)
-- [Including a NuGet in your Project](/visualstudio/mac/nuget-walkthrough/index.md)
+- [Including a NuGet in your Project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)
