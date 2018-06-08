@@ -1,6 +1,6 @@
 ---
 title: "Checking Device Orientation"
-description: "Use DependencyService to access device orientation from shared code"
+description: "This article explains how to use the Xamarin.Forms DependencyService class to access device orientation from shared code."
 ms.prod: xamarin
 ms.assetid: 5F60975F-47DB-4361-B97C-2290D6F77D2F
 ms.technology: xamarin-forms

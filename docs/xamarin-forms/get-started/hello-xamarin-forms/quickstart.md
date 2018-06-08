@@ -1,5 +1,6 @@
 ---
 title: "Xamarin.Forms Quickstart"
+description: "This article explains how to create an application that translates an alphanumeric phone number entered by the user into a numeric phone number, and that calls the number."
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8

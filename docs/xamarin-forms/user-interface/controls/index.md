@@ -1,6 +1,6 @@
 ---
 title: "Controls Reference"
-description: "A description of all the visual elements used to construct a Xamarin.Forms application."
+description: "A description of all the visual elements used to construct a Xamarin.Forms application. This article lists the control groups that make up the user interface of a Xamarin.Forms application."
 ms.prod: xamarin
 ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
 ms.technology: xamarin-forms

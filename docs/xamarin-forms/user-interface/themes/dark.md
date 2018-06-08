@@ -1,5 +1,6 @@
 ---
-title: "Dark Theme"
+title: "Xamarin.Forms Dark Theme"
+description: "This article explains how to consume the Xamarin.Forms Dark Theme in an app."
 ms.prod: xamarin
 ms.assetid: 43A3798D-6F05-4734-AF5E-97235B46D9B9
 ms.technology: xamarin-forms
@@ -8,7 +9,7 @@ ms.author: dabritch
 ms.date: 09/01/2017
 ---
 
-# Dark Theme
+# Xamarin.Forms Dark Theme
 
 ![](~/media/shared/preview.png "This API is currently in preview")
 
@@ -69,4 +70,3 @@ along with the markup that produces them.
 
 The [complete list of built-in classes](~/xamarin-forms/user-interface/themes/index.md)
 shows what styles are available for some common controls.
-

@@ -1,5 +1,6 @@
 ---
 title: "Summary of Chapter 14. Absolute layout"
+description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 14. Absolute layout"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
@@ -79,7 +80,7 @@ An attribute in XAML that consists of a class name, a dot, and a property name i
 
 ## Overlays
 
-You can use `AbsoluteLayout` to construct an *overlay*, which covers the page with other controls, perhaps to protect the user from interacting with the normal controls on the page. 
+You can use `AbsoluteLayout` to construct an *overlay*, which covers the page with other controls, perhaps to protect the user from interacting with the normal controls on the page.
 
 The [**SimpleOverlay**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) sample demonstrates this technique, and also demonstrates the [`ProgressBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.ProgressBar/), which displays the extent to which a program has completed a task.
 

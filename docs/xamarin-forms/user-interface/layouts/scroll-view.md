@@ -1,6 +1,6 @@
 ---
-title: "ScrollView"
-description: "Use ScrollView to present layouts that can't fit on just one screen and have content make room for the keyboard."
+title: "Xamarin.Forms ScrollView"
+description: "This article explains how to use the Xamarin.Forms ScrollView class to present layouts that can't fit on just one screen, and which have content make room for the keyboard."
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 04/22/2016
 ---
 
-# ScrollView
+# Xamarin.Forms ScrollView
 
 [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) contains layouts and enables them to scroll offscreen. `ScrollView` is also used to allow views to automatically move to the visible portion of the screen when the keyboard is showing.
 

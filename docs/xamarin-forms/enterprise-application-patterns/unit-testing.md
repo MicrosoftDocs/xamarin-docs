@@ -1,5 +1,6 @@
 ---
-title: "Unit Testing"
+title: "Unit Testing Enterprise Apps"
+description: "This chapter explains how unit testing is performed in the eShopOnContainers mobile app."
 ms.prod: xamarin
 ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
 ms.technology: xamarin-forms
@@ -8,7 +9,7 @@ ms.author: dabritch
 ms.date: 08/07/2017
 ---
 
-# Unit Testing
+# Unit Testing Enterprise Apps
 
 Mobile apps have unique problems that desktop and web-based applications don't have to worry about. Mobile users will differ by the devices that they use, by network connectivity, by the availability of services, and a range of other factors. Therefore, mobile apps should be tested as they will be used in the real world to improve their quality, reliability, and performance. There are many types of testing that should be performed on an app, including unit testing, integration testing, and user interface testing, with unit testing being the most common form of testing.
 

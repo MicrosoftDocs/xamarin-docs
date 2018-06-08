@@ -1,5 +1,6 @@
 ---
 title: "Getting Started with DataPages"
+description: "This article explains how to get started building a simple data-driven page using Xamarin.Forms DataPages."
 ms.prod: xamarin
 ms.assetid: 6416E5FA-6384-4298-BAA1-A89381E47210
 ms.technology: xamarin-forms
@@ -17,7 +18,7 @@ ms.date: 12/01/2017
 [Xamarin.Forms Theme](~/xamarin-forms/user-interface/themes/index.md) reference to render.
 
 
-To get started building a simple data-drive page using the DataPages Preview,
+To get started building a simple data-driven page using the DataPages Preview,
 follow the steps below. This demo uses a hardcoded style ("Events") in
 the Preview builds that only works with the specific JSON format
 in the code.

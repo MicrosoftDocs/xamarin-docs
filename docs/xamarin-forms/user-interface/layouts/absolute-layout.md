@@ -1,6 +1,6 @@
 ---
-title: "AbsoluteLayout"
-description: "Use AbsoluteLayout to create pixel-perfect UIs."
+title: "Xamarin.Forms AbsoluteLayout"
+description: "This article explains how to use the Xamarin.Forms AbsoluteLayout class to create pixel-perfect UIs. This class positions and sizes child elements proportional to its own size and position or by absolute values."
 ms.prod: xamarin
 ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 11/25/2015
 ---
 
-# AbsoluteLayout
+# Xamarin.Forms AbsoluteLayout
 
 [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) positions and sizes child elements proportional to its own size and position or by absolute values. Child views may be positioned and sized using proportional values or static values, and proportional and static values can be mixed.
 

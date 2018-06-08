@@ -1,6 +1,6 @@
 ---
-title: "Navigation"
-description: "Xamarin.Forms provides a number of different page navigation experiences, depending upon the Page type being used."
+title: "Xamarin.Forms Navigation"
+description: "This guide explains how to perform navigation in Xamarin.Forms apps. Xamarin.Forms provides a number of different page navigation experiences, depending upon the Page type being used."
 ms.prod: xamarin
 ms.assetid: BC5D0C6C-D5A9-4B12-A492-ED1F570CEC87
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 12/01/2017
 ---
 
-# Navigation
+# Xamarin.Forms Navigation
 
 _Xamarin.Forms provides a number of different page navigation experiences, depending upon the Page type being used._
 
@@ -38,4 +38,3 @@ Xamarin.Forms also provides support for modal pages. A modal page encourages use
 ## [Displaying Pop-Ups](pop-ups.md)
 
 Xamarin.Forms provides two pop-up-like user interface elements: an alert and an action sheet. These interface elements can be used to ask users simple questions and to guide users through tasks.
-

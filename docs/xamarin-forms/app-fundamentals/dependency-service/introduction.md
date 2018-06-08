@@ -1,6 +1,6 @@
 ---
 title: "Introduction to DependencyService"
-description: "Understand how DependencyService works to access native platform features"
+description: "This article explains how the Xamarin.Forms DependencyService class works to access native platform features."
 ms.prod: xamarin
 ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
 ms.technology: xamarin-forms

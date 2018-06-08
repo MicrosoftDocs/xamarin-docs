@@ -1,6 +1,6 @@
 ---
-title: "TableView"
-description: "Present scrolling menus, settings and input forms."
+title: "Xamarin.Forms TableView"
+description: "This article explains how to use the Xamarin.Forms TableView class to present scrolling menus, settings and input forms in applications."
 ms.prod: xamarin
 ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 03/08/2016
 ---
 
-# TableView
+# Xamarin.Forms TableView
 
 [TableView](https://developer.xamarin.com/api/type/Xamarin.Forms.TableView/) is a view for displaying scrollable lists of data or choices where there are rows that don't share the same template. Unlike [ListView](~/xamarin-forms/user-interface/listview/index.md), TableView does not have the concept of an `ItemsSource`, so items must be added as children manually.
 

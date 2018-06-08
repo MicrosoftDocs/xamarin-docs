@@ -1,5 +1,5 @@
 ---
-title: "Tabbed Page"
+title: "Xamarin.Forms Tabbed Page"
 description: "The Xamarin.Forms TabbedPage consists of a list of tabs and a larger detail area, with each tab loading content into the detail area. This article demonstrates how to use a TabbedPage to navigate through a collection of pages."
 ms.prod: xamarin
 ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 07/10/2017
 ---
 
-# Tabbed Page
+# Xamarin.Forms Tabbed Page
 
 _The Xamarin.Forms TabbedPage consists of a list of tabs and a larger detail area, with each tab loading content into the detail area. This article demonstrates how to use a TabbedPage to navigate through a collection of pages._
 

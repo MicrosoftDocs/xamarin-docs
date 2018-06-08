@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Introduction to Xamarin.Forms Control Templates"
 description: "Xamarin.Forms control templates provide the ability to easily theme and re-theme application pages at runtime. This article provides an introduction to control templates."
 ms.prod: xamarin
 ms.assetid: 8B8E2360-6531-44A3-A7C8-9A8808DE9B86
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 03/08/2016
 ---
 
-# Introduction
+# Introduction to Xamarin.Forms Control Templates
 
 _Xamarin.Forms control templates provide the ability to easily theme and re-theme application pages at runtime. This article provides an introduction to control templates._
 

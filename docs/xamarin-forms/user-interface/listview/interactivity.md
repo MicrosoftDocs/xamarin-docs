@@ -1,6 +1,6 @@
 ---
 title: "ListView Interactivity"
-description: "Add interactivity to your ListView by implementing selections, swipe-to-delete, and pull-to-refresh."
+description: "This article explains how to add interactivity to a Xamarin.Forms ListView by implementing selections, swipe-to-delete, and pull-to-refresh."
 ms.prod: xamarin
 ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms

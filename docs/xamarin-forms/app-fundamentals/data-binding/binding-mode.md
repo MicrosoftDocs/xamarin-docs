@@ -1,6 +1,6 @@
 ---
-title: "Binding Mode"
-description: "Control the flow of information between source and target"
+title: "Xamarin.Forms Binding Mode"
+description: "This article explains how to control the flow of information between source and target using a binding mode, which is specified with a member of the BindingMode enumeration. Every bindable property has a default binding mode, which indicates the mode in effect when that property is a data-binding target."
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: chape
 ms.date: 05/01/2018
 ---
 
-# Binding Mode
+# Xamarin.Forms Binding Mode
 
 In the [previous article](basic-bindings.md), the **Alternative Code Binding** and **Alternative XAML Binding** pages featured a `Label` with its `Scale` property bound to the `Value` property of a `Slider`. Because the `Slider` initial value is 0, this caused the `Scale` property of the `Label` to be set to 0 rather than 1, and the `Label` disappeared.
 
@@ -22,7 +22,7 @@ In the [**DataBindingDemos**](https://developer.xamarin.com/samples/xamarin-form
              Title="Reverse Binding">
     <StackLayout Padding="10, 0">
 
-        <Label x:Name="label" 
+        <Label x:Name="label"
                Text="TEXT"
                FontSize="80"
                HorizontalOptions="Center"
@@ -48,9 +48,9 @@ The difference between the **Reverse Binding** sample and the earlier samples in
 
 ## The Default Binding Mode
 
-The binding mode is specified with a member of the [`BindingMode`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingMode/) enumeration: 
+The binding mode is specified with a member of the [`BindingMode`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingMode/) enumeration:
 
-- [`Default`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.Default/) 
+- [`Default`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.Default/)
 - [`TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/) &ndash; data goes both ways between source and target
 - [`OneWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWay/) &ndash; data goes from source to target
 - [`OneWayToSource`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; data goes from target to source
@@ -74,11 +74,11 @@ Most bindable properties have a default binding mode of `OneWay` but the followi
 - `SelectedItem` property of `MultiPage`
 - `SelectedIndex` and `SelectedItem` properties of `Picker`
 - `Value` property of `Slider` and `Stepper`
-- `IsToggled` property of `Switch` 
+- `IsToggled` property of `Switch`
 - `On` property of `SwitchCell`
 - `Time` property of `TimePicker`
 
-These particular properties are defined as `TwoWay` for a very good reason: 
+These particular properties are defined as `TwoWay` for a very good reason:
 
 When data bindings are used with the Model-View-ViewModel (MVVM) application architecture, the ViewModel class is the data-binding source, and the View, which consists of views such as `Slider`, are data-binding targets. MVVM bindings resemble the **Reverse Binding** sample more than the bindings in the previous samples. It is very likely that you want each view on the page to be initialized with the value of the corresponding property in the ViewModel, but changes in the view should also affect the ViewModel property.
 
@@ -113,7 +113,7 @@ The `HslColorViewModel` class defines five properties: The `Hue`, `Saturation`, 
 public class HslColorViewModel : INotifyPropertyChanged
 {
     Color color;
-    string name; 
+    string name;
 
     public event PropertyChangedEventHandler PropertyChanged;
 
@@ -126,7 +126,7 @@ public class HslColorViewModel : INotifyPropertyChanged
                 Color = Color.FromHsla(value, color.Saturation, color.Luminosity);
             }
         }
-        get 
+        get
         {
             return color.Hue;
         }
@@ -205,7 +205,7 @@ When the `Color` property changes, the static `GetNearestColorName` method in th
 
 When a ViewModel is set as a binding source, the binding infrastructure attaches a handler to the `PropertyChanged` event. In this way, the binding can be notified of changes to the properties, and can then set the target properties from the changed values.
 
-However, when a target property (or the `Binding` definition on a target property) has a `BindingMode` of `OneTime`, it is not necessary for the binding infrastructure to attach a handler on the `PropertyChanged` event. The target property is updated only when the `BindingContext` changes and not when the source property itself changes. 
+However, when a target property (or the `Binding` definition on a target property) has a `BindingMode` of `OneTime`, it is not necessary for the binding infrastructure to attach a handler on the `PropertyChanged` event. The target property is updated only when the `BindingContext` changes and not when the source property itself changes.
 
 The **Simple Color Selector** XAML file instantiates the `HslColorViewModel` in the page's resource dictionary and initializes the `Color` property. The `BindingContext` property of the `Grid` is set to a `StaticResource` binding extension to reference that resource:
 
@@ -217,7 +217,7 @@ The **Simple Color Selector** XAML file instantiates the `HslColorViewModel` in 
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <local:HslColorViewModel x:Key="viewModel" 
+            <local:HslColorViewModel x:Key="viewModel"
                                      Color="MediumTurquoise" />
 
             <Style TargetType="Slider">
@@ -225,7 +225,7 @@ The **Simple Color Selector** XAML file instantiates the `HslColorViewModel` in 
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-        
+
     <Grid BindingContext="{StaticResource viewModel}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -242,7 +242,7 @@ The **Simple Color Selector** XAML file instantiates the `HslColorViewModel` in 
                    HorizontalTextAlignment="Center" />
 
             <Slider Value="{Binding Hue}" />
-    
+
             <Slider Value="{Binding Saturation}" />
 
             <Slider Value="{Binding Luminosity}" />
@@ -253,7 +253,7 @@ The **Simple Color Selector** XAML file instantiates the `HslColorViewModel` in 
 
 The `BoxView`, `Label`, and three `Slider` views inherit the binding context from the `Grid`. These views are all binding targets that reference source properties in the ViewModel. For the `Color` property of the `BoxView`, and the `Text` property of the `Label`, the data bindings are `OneWay`: The properties in the view are set from the properties in the ViewModel.
 
-The `Value` property of the `Slider`, however, is `TwoWay`. This allows each `Slider` to be set from the ViewModel, and also for the ViewModel to be set from each `Slider`. 
+The `Value` property of the `Slider`, however, is `TwoWay`. This allows each `Slider` to be set from the ViewModel, and also for the ViewModel to be set from each `Slider`.
 
 When the program is first run, the `BoxView`, `Label`, and three `Slider` elements are all set from the ViewModel based on the initial `Color` property set when the ViewModel was instantiated. This is shown in the iOS screenshot at the left:
 
@@ -268,7 +268,7 @@ Instantiating the ViewModel in the resource dictionary is one common approach. I
     <Grid.BindingContext>
         <local:HslColorViewModel Color="MediumTurquoise" />
     </Grid.BindingContext>
-        
+
     ···
 
 </Grid>
@@ -404,9 +404,9 @@ public class SampleSettingsViewModel : INotifyPropertyChanged
 }
 ```
 
-Each application setting is a property that is saved to the Xamarin.Forms properties dictionary in a method named `SaveState` and loaded from that dictionary in the constructor. Towards the bottom of the class are two methods that help streamline ViewModels and make them less prone to errors. The `OnPropertyChanged` method at the bottom has an optional parameter that is set to the calling property. This avoids spelling errors when specifying the name of the property as a string. 
+Each application setting is a property that is saved to the Xamarin.Forms properties dictionary in a method named `SaveState` and loaded from that dictionary in the constructor. Towards the bottom of the class are two methods that help streamline ViewModels and make them less prone to errors. The `OnPropertyChanged` method at the bottom has an optional parameter that is set to the calling property. This avoids spelling errors when specifying the name of the property as a string.
 
-The `SetProperty` method in the class does even more: It compares the value that is being set to the property with the value stored as a field, and only calls `OnPropertyChanged` when the two values are not equal. 
+The `SetProperty` method in the class does even more: It compares the value that is being set to the property with the value stored as a field, and only calls `OnPropertyChanged` when the two values are not equal.
 
 The `SampleSettingsViewModel` class defines two properties for the background color: The `BackgroundNamedColor` property is of type `NamedColor`, which is a class also included in the **DataBindingDemos** solution. The `BackgroundColor` property is of type `Color`, and is obtained from the `Color` property of the `NamedColor` object.
 
@@ -645,7 +645,7 @@ The `SelectedItem` property of the `ListView` is of type `NamedColor`, and is bo
 SelectedItem="{Binding BackgroundNamedColor, Mode=TwoWay}"
 ```
 
-The default binding mode for `SelectedItem` is `OneWayToSource`, which sets the ViewModel property from the selected item. The `TwoWay` mode allows the `SelectedItem` to be initialized from the ViewModel. 
+The default binding mode for `SelectedItem` is `OneWayToSource`, which sets the ViewModel property from the selected item. The `TwoWay` mode allows the `SelectedItem` to be initialized from the ViewModel.
 
 However, when the `SelectedItem` is set in this way, the `ListView` does not automatically scroll to show the selected item. A little code in the code-behind file is necessary:
 
@@ -658,13 +658,13 @@ public partial class SampleSettingsPage : ContentPage
 
         if (colorListView.SelectedItem != null)
         {
-            colorListView.ScrollTo(colorListView.SelectedItem, 
-                                   ScrollToPosition.MakeVisible, 
+            colorListView.ScrollTo(colorListView.SelectedItem,
+                                   ScrollToPosition.MakeVisible,
                                    false);
         }
     }
 }
-``` 
+```
 
 The iOS screenshot at the left shows the program when it's first run. The constructor in `SampleSettingsViewModel` initializes the background color to white, and that's what's selected in the `ListView`:
 

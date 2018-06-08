@@ -1,6 +1,6 @@
 ---
-title: "Cell Appearance"
-description: "Explore options for presenting data while taking advantage of the convenience of ListView."
+title: "Customizing ListView Cell Appearance"
+description: "This article explores options for presenting data in Xamarin.Forms applications, while taking advantage of the convenience of the ListView control."
 ms.prod: xamarin
 ms.assetid: FD45CB91-1A8F-46FB-B432-6BC20492E456
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 12/07/2016
 ---
 
-# Cell Appearance
+# Customizing ListView Cell Appearance
 
 ListView presents scrollable lists, which can be customized through the use of `ViewCell`s. `ViewCells` can be used for displaying text and images, indicating a true/false state and receiving user input.
 

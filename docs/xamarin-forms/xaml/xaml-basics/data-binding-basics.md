@@ -1,6 +1,6 @@
 ---
 title: "Part 4. Data Binding Basics"
-description: "Data bindings allow properties of two objects to be linked so that a change in one causes a change in the other. This is a very valuable tool, and while data bindings can be defined entirely in code, XAML provides shortcuts and convenience. Consequently, one of the most important markup extensions in Xamarin.Forms is Binding."
+description: "Data bindings allow properties of two objects to be linked so that a change in one causes a change in the other."
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
@@ -81,7 +81,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 The properties can all be on one line or separated into multiple lines:
 
 ```csharp
-Text="{Binding Value, 
+Text="{Binding Value,
                StringFormat='The angle is {0:F0} degrees'}"
 ```
 
@@ -97,13 +97,13 @@ Here’s the running program:
 
 [![](data-binding-basics-images/sliderbinding.png "View-to-View Bindings")](data-binding-basics-images/sliderbinding-large.png#lightbox "View-to-View Bindings ")
 
-## The Binding Mode 
+## The Binding Mode
 
 A single view can have data bindings on several of its properties. However, each view can have only one `BindingContext`, so multiple data bindings on that view must all reference properties of the same object.
 
 The solution to this and other problems involves the `Mode` property, which is set to a member of the `BindingMode` enumeration:
 
-- `Default` 
+- `Default`
 - `OneWay` — values are transferred from the source to the target
 - `OneWayToSource` — values are transferred from the target to the source
 - `TwoWay` — values are transferred both ways between source and target
@@ -319,7 +319,7 @@ Much better. Now all that’s needed is to spruce up the item template with more
 </ContentPage>
 ```
 
-Notice the use of `OnPlatform` to define the size of a `BoxView` and the height of the `ListView` rows. Although the values for all three platforms are the same, the markup could easily be adapted for other values to fine-tune the display. 
+Notice the use of `OnPlatform` to define the size of a `BoxView` and the height of the `ListView` rows. Although the values for all three platforms are the same, the markup could easily be adapted for other values to fine-tune the display.
 
 ## Binding Value Converters
 
@@ -361,7 +361,7 @@ namespace XamlSamples
 }
 ```
 
-The `ConvertBack` method does not play a role in this program because the bindings are only one way from source to target. 
+The `ConvertBack` method does not play a role in this program because the bindings are only one way from source to target.
 
 A binding references a binding converter with the `Converter` property. A binding converter can also accept a parameter specified with the `ConverterParameter` property. For some versatility, this is how the multiplier is specified. The binding converter checks the converter parameter for a valid `double` value.
 

@@ -1,5 +1,6 @@
 ---
 title: "Loading application resource videos"
+description: "This article explains how to load videos stored as application resources in a video player application, using Xamarin.Forms."
 ms.prod: xamarin
 ms.assetid: F75BD540-9354-4C17-A119-57F3DEC66D54
 ms.technology: xamarin-forms
@@ -12,7 +13,7 @@ ms.date: 02/12/2018
 
 The custom renderers for the `VideoPlayer` view are capable of playing video files that have been embedded in the individual platform projects as application resources. However, the current version of `VideoPlayer` cannot access resources embedded in a .NET Standard library.
 
-To load these resources, create an instance of `ResourceVideoSource` by setting the `Path` property to the filename (or the folder and filename) of the resource. Alternatively, you can call the static `VideoSource.FromResource` method to reference the resource. Then, set the `ResourceVideoSource` object to the `Source` property of `VideoPlayer`. 
+To load these resources, create an instance of `ResourceVideoSource` by setting the `Path` property to the filename (or the folder and filename) of the resource. Alternatively, you can call the static `VideoSource.FromResource` method to reference the resource. Then, set the `ResourceVideoSource` object to the `Source` property of `VideoPlayer`.
 
 ## Storing the video files
 
@@ -26,13 +27,13 @@ In the **VideoPlayerDemos** solution, the **VideoPlayerDemos.iOS** project conta
 
 ### Android video resources
 
-In an Android project, videos must be stored in a subfolder of **Resources** named **raw**. The **raw** folder cannot contain subfolders. Give the video file a `Build Action` of `AndroidResource`. Set the `Path` property of `ResourceVideoSource` to the filename, for example, **MyFile.mp4**. 
+In an Android project, videos must be stored in a subfolder of **Resources** named **raw**. The **raw** folder cannot contain subfolders. Give the video file a `Build Action` of `AndroidResource`. Set the `Path` property of `ResourceVideoSource` to the filename, for example, **MyFile.mp4**.
 
-The **VideoPlayerDemos.Android** project contains a subfolder of **Resources** named **raw**, which contains a file named **AndroidApiVideo.mp4**. 
+The **VideoPlayerDemos.Android** project contains a subfolder of **Resources** named **raw**, which contains a file named **AndroidApiVideo.mp4**.
 
 ### UWP video resources
 
-In a Universal Windows Platform project, you can store videos in any folder in the project. Give the file a `Build Action` of `Content`. Set the `Path` property of `ResourceVideoSource` to the folder and filename, for example, **MyFolder/MyVideo.mp4**. 
+In a Universal Windows Platform project, you can store videos in any folder in the project. Give the file a `Build Action` of `Content`. Set the `Path` property of `ResourceVideoSource` to the folder and filename, for example, **MyFolder/MyVideo.mp4**.
 
 The **VideoPlayerDemos.UWP** project contains a folder named **Videos** with the file **UWPApiVideo.mp4**.
 
@@ -165,7 +166,7 @@ The **Play Video Resource** page in the **VideoPlayerDemos** solution uses the `
 </ContentPage>
 ```
 
-If the iOS resource is stored in the **Resources** folder, and if the UWP resource is stored in the root folder of the project, you can use the same filename for the three platforms. If that is the case, then you can set that name directly to the `Source` property of `VideoPlayer`. 
+If the iOS resource is stored in the **Resources** folder, and if the UWP resource is stored in the root folder of the project, you can use the same filename for the three platforms. If that is the case, then you can set that name directly to the `Source` property of `VideoPlayer`.
 
 Here's that page running on the three platforms:
 

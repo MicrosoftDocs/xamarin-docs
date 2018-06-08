@@ -1,5 +1,6 @@
 ---
 title: "Summary of Chapter 8. Code and XAML in harmony"
+description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 8. Code and XAML in harmony"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED

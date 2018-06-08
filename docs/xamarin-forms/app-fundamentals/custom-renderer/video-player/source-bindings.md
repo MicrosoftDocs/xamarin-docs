@@ -1,5 +1,6 @@
 ---
 title: "Binding video sources to the player"
+description: "This article explains how to bind video sources to the video player, using Xamarin.Forms."
 ms.prod: xamarin
 ms.assetid: 504E0C7E-051A-4AF2-B654-BAB4D0957928
 ms.technology: xamarin-forms
@@ -23,7 +24,7 @@ When the `Source` property of the `VideoPlayer` view is set to a new video file,
             <RowDefinition Height="2*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
+
         <video:VideoPlayer x:Name="videoPlayer"
                            Grid.Row="0" />
 

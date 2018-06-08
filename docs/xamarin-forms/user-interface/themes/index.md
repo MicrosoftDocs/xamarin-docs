@@ -1,5 +1,6 @@
 ---
-title: "Themes"
+title: "Xamarin.Forms Themes"
+description: "This article introduces Xamarin.Forms Themes, which define specific visual appearances for standard views."
 ms.prod: xamarin
 ms.assetid: 3DFB7C55-69F6-4980-A501-588719143482
 ms.technology: xamarin-forms
@@ -8,7 +9,7 @@ ms.author: dabritch
 ms.date: 09/01/2017
 ---
 
-# Themes
+# Xamarin.Forms Themes
 
 ![](~/media/shared/preview.png "This API is currently in preview")
 

@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms Views"
-description: "Xamarin.Forms views are the building blocks of cross-platform mobile user interfaces."
+description: "Xamarin.Forms views are the building blocks of cross-platform mobile user interfaces. This article lists the views that are included in Xamarin.Forms."
 ms.prod: xamarin
 ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
@@ -75,7 +75,7 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 | [`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) displays an area for the user to type a text string, and a button (or a keyboard key) that signals the application to perform a search. The [`Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.Text/) property provides access to the text, and the [`SearchButtonPressed`](https://developer.xamarin.com/api/event/Xamarin.Forms.SearchBar.SearchButtonPressed/) event indicates that the button has been pressed.<br /><br />[API Documentation](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) | [![SearchBar Example](views-images/SearchBar.png "SearchBar Example")](views-images/SearchBar-Large.png#lightbox "SearchBar Example")<br /> [C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SearchBarDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml.cs) |
 |     |     |
 
-## Views for setting values 
+## Views for setting values
 
 ### Slider
 
@@ -91,7 +91,7 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 | [`Stepper`](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/) allows the user to select a `double` value from a range of incremental values specified with the [`Minimum`](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Minimum/), [`Maximum`](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Maximum/), and [`Increment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Increment/) properties.<br /><br />[API Documentation](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/) | [![Stepper Example](views-images/Stepper.png "Stepper Example")](views-images/Stepper-Large.png#lightbox "Stepper Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
 |     |     |
 
-### Switch 
+### Switch
 
 |     |     |
 | --- | --- |

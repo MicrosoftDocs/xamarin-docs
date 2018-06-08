@@ -1,5 +1,6 @@
 ---
-title: "Introduction"
+title: "Introduction to Enterprise App Development"
+description: "This chapter provides an introduction to enterprise app development, and introduces the eShopOnContainers mobile app."
 ms.prod: xamarin
 ms.assetid: cbce0659-fa03-447a-86ec-140438143230
 ms.technology: xamarin-forms
@@ -8,7 +9,7 @@ ms.author: dabritch
 ms.date: 08/07/2017
 ---
 
-# Introduction
+# Introduction to Enterprise App Development
 
 Regardless of platform, developers of enterprise apps face several challenges:
 

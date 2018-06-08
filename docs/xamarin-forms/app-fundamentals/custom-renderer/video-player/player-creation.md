@@ -1,5 +1,6 @@
 ---
 title: "Creating the platform video players"
+description: "This article explains how to implement a video player custom renderer on each platform, using Xamarin.Forms."
 ms.prod: xamarin
 ms.assetid: EEE2FB9B-EB73-4A3F-A859-7A1D4808E149
 ms.technology: xamarin-forms

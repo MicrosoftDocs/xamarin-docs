@@ -1,5 +1,5 @@
 ---
-title: "Carousel Page"
+title: "Xamarin.Forms Carousel Page"
 description: "The Xamarin.Forms CarouselPage is a page that users can swipe from side to side to navigate through pages of content, like a gallery. This article demonstrates how to use a CarouselPage to navigate through a collection of pages."
 ms.prod: xamarin
 ms.assetid: 2D14FC9D-DF5F-427E-9006-2AAE61ECF8DC
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 12/01/2017
 ---
 
-# Carousel Page
+# Xamarin.Forms Carousel Page
 
 _The Xamarin.Forms CarouselPage is a page that users can swipe from side to side to navigate through pages of content, like a gallery. This article demonstrates how to use a CarouselPage to navigate through a collection of pages._
 
@@ -41,7 +41,7 @@ Two approaches can be used to create a [`CarouselPage`](https://developer.xamari
 - [Populate](#Populating_a_CarouselPage_with_a_Page_Collection) the `CarouselPage` with a collection of child [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instances.
 - [Assign](#Populating_a_CarouselPage_with_a_Template) a collection to the [`ItemsSource`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemsSource/) property and assign a [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) to the [`ItemTemplate`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemTemplate/) property to return [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instances for objects in the collection.
 
-With both approaches, the `CarouselPage` will then display each page in turn, with a swipe interaction moving to the next page to be displayed. 
+With both approaches, the `CarouselPage` will then display each page in turn, with a swipe interaction moving to the next page to be displayed.
 
 > [!NOTE]
 > A [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) can only be populated with [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instances, or `ContentPage` derivatives.

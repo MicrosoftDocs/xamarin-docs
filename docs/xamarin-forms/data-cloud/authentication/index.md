@@ -1,6 +1,6 @@
 ---
 title: "Authenticating Access to Web Services"
-description: "This guide explains how to integrate authentication services into a Xamarin.Forms application to enable users to share a backend while only having access to their own data. Topics covered include using basic authentication with a REST service, using the Xamarin.Auth component to authenticate against OAuth identity providers, and using the built-in authentication mechanisms offered by different providers."
+description: "This guide explains how to integrate authentication services into a Xamarin.Forms application to enable users to share a backend while only having access to their own data."
 ms.prod: xamarin
 ms.assetid: E6FCFAE1-4F83-4F93-9190-EC5290360C54
 ms.technology: xamarin-forms

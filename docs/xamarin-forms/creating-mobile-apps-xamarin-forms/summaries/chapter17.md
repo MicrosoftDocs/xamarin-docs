@@ -1,5 +1,6 @@
 ---
 title: "Summary of Chapter 17. Mastering the Grid"
+description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 17. Mastering the Grid"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1

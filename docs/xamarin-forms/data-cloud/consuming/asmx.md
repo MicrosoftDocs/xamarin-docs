@@ -1,6 +1,6 @@
 ---
 title: "Consuming an ASP.NET Web Service (ASMX)"
-description: "ASMX provides the ability to build web services that send messages using the Simple Object Access Protocol (SOAP). SOAP is a platform-independent and language-independent protocol for building and accessing web services. Consumers of an ASMX service do not need to know anything about the platform, object model, or programming language used to implement the service. They only need to understand how to send and receive SOAP messages. This article demonstrates how to consume an ASMX SOAP service from a Xamarin.Forms application."
+description: "This article demonstrates how to consume an ASMX SOAP service from a Xamarin.Forms application."
 ms.prod: xamarin
 ms.assetid: D5533964-5528-4D35-9C2B-FAFB632472AC
 ms.technology: xamarin-forms

@@ -1,6 +1,6 @@
 ---
-title: "Custom Renderers"
-description: "Xamarin.Forms user interfaces are rendered using the native controls of the target platform, allowing Xamarin.Forms applications to retain the appropriate look and feel for each platform. Custom Renderers let developers override this process to customize the appearance and behavior of Xamarin.Forms controls on each platform."
+title: "Xamarin.Forms Custom Renderers"
+description: "Custom Renderers let developers override the rendering of the native controls on each platform, to customize the appearance and behavior of Xamarin.Forms controls."
 ms.prod: xamarin
 ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 02/12/2018
 ---
 
-# Custom Renderers
+# Xamarin.Forms Custom Renderers
 
 _Xamarin.Forms user interfaces are rendered using the native controls of the target platform, allowing Xamarin.Forms applications to retain the appropriate look and feel for each platform. Custom Renderers let developers override this process to customize the appearance and behavior of Xamarin.Forms controls on each platform._
 
@@ -51,7 +51,7 @@ This article demonstrates how to create a custom renderer for a `HybridWebView` 
 
 ## [Implementing a video player](video-player/index.md)
 
-This article shows how to write renderers to implement a custom `VideoPlayer` control that can play videos from the web, videos embedded as application resources, or videos stored in the video library on the user's device. Several techniques are demonstrated, including implementing methods and read-only bindable properties. 
+This article shows how to write renderers to implement a custom `VideoPlayer` control that can play videos from the web, videos embedded as application resources, or videos stored in the video library on the user's device. Several techniques are demonstrated, including implementing methods and read-only bindable properties.
 
 
 ## Related Links

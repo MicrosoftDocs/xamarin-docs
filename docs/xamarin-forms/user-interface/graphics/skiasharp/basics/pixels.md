@@ -1,6 +1,6 @@
 ---
 title: "Pixels and Device-Independent Units"
-description: "Explore the differences between SkiaSharp coordinates and Xamarin.Forms coordinates"
+description: "This article explores the differences between SkiaSharp coordinates and Xamarin.Forms coordinates, and demonstrates this with sample code."
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890

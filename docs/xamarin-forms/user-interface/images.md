@@ -1,5 +1,5 @@
 ---
-title: "Images"
+title: "Images in Xamarin.Forms"
 description: "Images can be shared across platforms with Xamarin.Forms, they can be loaded specifically for each platform, or they can be downloaded for display."
 ms.prod: xamarin
 ms.assetid: C025AB53-05CC-49BA-9815-75D6DF9E40B7
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 08/15/2017
 ---
 
-# Images
+# Images in Xamarin.Forms
 
 _Images can be shared across platforms with Xamarin.Forms, they can be loaded specifically for each platform, or they can be downloaded for display._
 
@@ -183,7 +183,7 @@ public class ImageResourceExtension : IMarkupExtension
    {
      return null;
    }
-   
+
    // Do your translation lookup here, using whatever method you require
    var imageSource = ImageSource.FromResource(Source);
 

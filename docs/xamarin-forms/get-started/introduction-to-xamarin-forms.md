@@ -1,6 +1,6 @@
 ---
 title: "An Introduction to Xamarin.Forms"
-description: "Xamarin.Forms is a cross-platform natively backed UI toolkit abstraction that allows developers to easily create user interfaces that can be shared across Android, iOS, and the Universal Windows Platform. The user interfaces are rendered using the native controls of the target platform, allowing Xamarin.Forms applications to retain the appropriate look and feel for each platform. This article provides an introduction to Xamarin.Forms and how to get started writing applications with it."
+description: "This article provides an introduction to Xamarin.Forms and how to get started writing applications with it."
 ms.prod: xamarin
 ms.assetid: f619595f-3ee7-439b-a1bc-d13e5106e6e9
 ms.technology: xamarin-forms

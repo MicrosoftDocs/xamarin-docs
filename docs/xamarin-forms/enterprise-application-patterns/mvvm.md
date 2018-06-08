@@ -1,5 +1,6 @@
 ---
-title: "MVVM"
+title: "The Model-View-ViewModel Pattern"
+description: "This chapter explains how the eShopOnContainers mobile app uses the MVVM pattern to cleanly separate the business and presentation logic of the app from its user interface."
 ms.prod: xamarin
 ms.assetid: dd8c1813-df44-4947-bcee-1a1ff2334b87
 ms.technology: xamarin-forms
@@ -8,7 +9,7 @@ ms.author: dabritch
 ms.date: 08/07/2017
 ---
 
-# MVVM
+# The Model-View-ViewModel Pattern
 
 The Xamarin.Forms developer experience typically involves creating a user interface in XAML, and then adding code-behind that operates on the user interface. As apps are modified, and grow in size and scope, complex maintenance issues can arise. These issues include the tight coupling between the UI controls and the business logic, which increases the cost of making UI modifications, and the difficulty of unit testing such code.
 

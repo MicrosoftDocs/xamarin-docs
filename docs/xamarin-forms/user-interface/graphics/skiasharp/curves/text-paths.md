@@ -1,6 +1,6 @@
 ---
-title: "Paths and Text"
-description: "Explore the intersection of paths and text"
+title: "Paths and Text in SkiaSharp"
+description: "This article explores the intersection of SkiaSharp paths and text, and demonstrates this with sample code."
 ms.prod: xamarin
 ms.assetid: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B
 ms.technology: xamarin-forms
@@ -9,13 +9,13 @@ ms.author: chape
 ms.date: 08/01/2017
 ---
 
-# Paths and Text
+# Paths and Text in SkiaSharp
 
 _Explore the intersection of paths and text_
 
-In modern graphics systems, text fonts are collections of character outlines, usually defined by quadratic Bézier curves. Consequently, many modern graphics systems include a facility to convert text characters into a graphics path. 
+In modern graphics systems, text fonts are collections of character outlines, usually defined by quadratic Bézier curves. Consequently, many modern graphics systems include a facility to convert text characters into a graphics path.
 
-You've already seen that you can stroke the outlines of text characters as well as fill them. This allows you to display these character outlines with a particular stroke width and even a path effect as described in the [**Path Effects**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) article. But it is also possible to convert a character string into an `SKPath` object. This means that text outlines can be used for clipping with techniques that were described in the [**Clipping with Paths and Regions**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md) article. 
+You've already seen that you can stroke the outlines of text characters as well as fill them. This allows you to display these character outlines with a particular stroke width and even a path effect as described in the [**Path Effects**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) article. But it is also possible to convert a character string into an `SKPath` object. This means that text outlines can be used for clipping with techniques that were described in the [**Clipping with Paths and Regions**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md) article.
 
 Besides using a path effect to stroke a character outline, you can also create path effects that are based on a paths are derived from character strings, and you can even combine the two effects:
 
@@ -33,7 +33,7 @@ The [`GetTextPath`](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.G
 public SKPath GetTextPath (String text, Single x, Single y)
 ```
 
-The `x` and `y` arguments indicate the starting point of the baseline of the left side of the text. They play the same role here as in the `DrawText` method of `SKCanvas`. Within the path, the baseline of the left side of the text will have the coordinates (x, y). 
+The `x` and `y` arguments indicate the starting point of the baseline of the left side of the text. They play the same role here as in the `DrawText` method of `SKCanvas`. Within the path, the baseline of the left side of the text will have the coordinates (x, y).
 
 The `GetTextPath` method is overkill if you merely want to fill or stroke the resultant path. The normal `DrawText` method allows you to do that. The `GetTextPath` method is more useful for other tasks involving paths.
 
@@ -110,7 +110,7 @@ public class ClippingTextPage : ContentPage
 
         // Display bitmap to fill window but maintain aspect ratio
         SKRect rect = new SKRect(0, 0, info.Width, info.Height);
-        canvas.DrawBitmap(bitmap, 
+        canvas.DrawBitmap(bitmap,
             rect.AspectFill(new SKSize(bitmap.Width, bitmap.Height)));
     }
 }
@@ -137,7 +137,7 @@ public class TextPathEffectPage : ContentPage
         TextSize = littleSize
     };
 
-    SKPaint textPaint = new SKPaint 
+    SKPaint textPaint = new SKPaint
     {
         Style = SKPaintStyle.Stroke,
         Color = SKColors.Black
@@ -156,7 +156,7 @@ public class TextPathEffectPage : ContentPage
         textPathPaint.MeasureText(character, ref textPathPaintBounds);
 
         // Create textPath centered around (0, 0)
-        SKPath textPath = textPathPaint.GetTextPath(character, 
+        SKPath textPath = textPathPaint.GetTextPath(character,
                                                     -textPathPaintBounds.MidX,
                                                     -textPathPaintBounds.MidY);
         // Create the path effect
@@ -320,7 +320,7 @@ The `TextSize` property of `textPaint` is then adjusted so that the text width m
 
 [![](text-paths-images/circulartext-small.png "Triple screenshot of the Circular Text page")](text-paths-images/circulartext-large.png#lightbox "Triple screenshot of the Circular Text page")
 
-The text itself was chosen to be somewhat circular as well: The word "circle" is both the subject of the sentence and the object of a prepositional phrase. 
+The text itself was chosen to be somewhat circular as well: The word "circle" is both the subject of the sentence and the object of a prepositional phrase.
 
 ## Related Links
 

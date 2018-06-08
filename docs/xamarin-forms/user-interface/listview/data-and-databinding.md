@@ -1,6 +1,6 @@
 ---
 title: "ListView Data Sources"
-description: "Learn how to populate your ListView with data."
+description: "This article explains how to populate the Xamarin.Forms ListView with data, and how to use data binding with a ListView."
 ms.prod: xamarin
 ms.assetid: B5571660-1E82-4379-95C3-0725288CF5D9
 ms.technology: xamarin-forms

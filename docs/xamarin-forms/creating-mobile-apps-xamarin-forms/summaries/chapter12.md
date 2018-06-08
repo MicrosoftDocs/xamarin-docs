@@ -1,5 +1,6 @@
 ---
 title: "Summary of Chapter 12. Styles"
+description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 12. Styles"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3

@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Styles"
+title: "Introduction to Xamarin.Forms Styles"
 description: "Styles allow the appearance of visual elements to be customized. Styles are defined for a specific type and contain values for the properties available on that type."
 ms.prod: xamarin
 ms.assetid: 3FF899C0-6CFB-4C1D-837D-9E9E10181967
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 04/27/2016
 ---
 
-# Introduction to Styles
+# Introduction to Xamarin.Forms Styles
 
 _Styles allow the appearance of visual elements to be customized. Styles are defined for a specific type and contain values for the properties available on that type._
 

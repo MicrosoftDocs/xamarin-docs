@@ -1,6 +1,6 @@
 ---
-title: "Layouts"
-description: "Lay out views on screen."
+title: "Layouts in Xamarin.Forms"
+description: "Xamarin.Forms has several layouts and features for organizing content on screen, and this article explains them."
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms
@@ -10,9 +10,9 @@ ms.author: dabritch
 ms.date: 10/26/2017
 ---
 
-# Layouts
+# Layouts in Xamarin.Forms
 
-Xamarin.Forms has several layouts and features for organizing content on screen. 
+Xamarin.Forms has several layouts and features for organizing content on screen.
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
@@ -68,7 +68,7 @@ The `FlexLayout` is similar to `StackLayout` in that it displays child views eit
 <FlexLayout Direction="Column"
             AlignItems="Center"
             JustifyContent="SpaceEvenly">
-        
+
     <Label Text="FlexLayout in Action" />
     <Button Text="Button" />
     <Label Text="Another Label" />

@@ -1,5 +1,6 @@
 ---
 title: "Adding iOS-specific Formatting"
+description: "This article explains how to set iOS-specific appearance without using a Xamarin.Forms custom renderer."
 ms.prod: xamarin
 ms.assetid: CE50E207-D092-4D88-8439-1B51F178E7ED
 ms.technology: xamarin-forms

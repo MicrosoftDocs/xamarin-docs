@@ -1,6 +1,6 @@
 ---
 title: "The Translate Transform"
-description: "Learn how to use the translate transform to shift SkiaSharp graphics"
+description: "This article examiens how to use the translate transform to shift SkiaSharp graphics in Xamarin.Forms applications, and demonstrates this with sample code."
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F

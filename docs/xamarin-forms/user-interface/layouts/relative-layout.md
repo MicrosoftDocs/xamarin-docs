@@ -1,6 +1,6 @@
 ---
-title: "RelativeLayout"
-description: "Use RelativeLayout to create UIs that scale to fit any screen size."
+title: "Xamarin.Forms RelativeLayout"
+description: "This article explains how to use the Xamarin.Forms RelativeLayout class to create UIs that scale to fit any screen size."
 ms.prod: xamarin
 ms.assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 11/25/2015
 ---
 
-# RelativeLayout
+# Xamarin.Forms RelativeLayout
 
 `RelativeLayout` is used to position and size views relative to properties of the layout or sibling views. Unlike `AbsoluteLayout`, `RelativeLayout` does not have the concept of the moving anchor and does not have facilities for positioning elements relative to the bottom or right edges of the layout. `RelativeLayout` does support positioning elements outside of its own bounds.
 

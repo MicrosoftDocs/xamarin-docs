@@ -1,6 +1,6 @@
 ---
-title: "Gestures"
-description: "Gesture recognizers can be used to detect user interaction with many elements of a Xamarin.Forms application."
+title: "Xamarin.Forms Gestures"
+description: "This guide explains how Xamarin.Forms gesture recognizers can be used to detect user interaction with many elements of a Xamarin.Forms application."
 ms.prod: xamarin
 ms.assetid: 0E197A51-2304-4C09-A710-C7FF24A89F15
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 01/21/2016
 ---
 
-# Gestures
+# Xamarin.Forms Gestures
 
 _Gesture recognizers can be used to detect user interaction with many elements of a Xamarin.Forms application._
 
@@ -26,4 +26,3 @@ The pinch gesture is used for performing interactive zoom and is implemented wit
 ## [Adding a Pan Gesture Recognizer](pan.md)
 
 The pan gesture is used for detecting dragging and is implemented with the [`PanGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.PanGestureRecognizer/) class.
-

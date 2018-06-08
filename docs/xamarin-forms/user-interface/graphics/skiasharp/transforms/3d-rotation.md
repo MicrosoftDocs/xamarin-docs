@@ -1,6 +1,6 @@
 ---
-title: "3D Rotations"
-description: "Use non-affine transforms to rotate 2D objects in 3D space."
+title: "3D Rotations in SkiaSharp"
+description: "This article explains how to use non-affine transforms to rotate 2D objects in 3D space, and demonstrates this with sample code."
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
@@ -9,7 +9,7 @@ ms.author: chape
 ms.date: 04/14/2017
 ---
 
-# 3D Rotations
+# 3D Rotations in SkiaSharp
 
 _Use non-affine transforms to rotate 2D objects in 3D space._
 

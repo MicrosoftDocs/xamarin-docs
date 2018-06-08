@@ -1,6 +1,6 @@
 ---
-title: "Text"
-description: "Using Xamarin.Forms to enter or display text."
+title: "Text in Xamarin.Forms"
+description: "Xamarin.Forms has three primary views for working with text, and this article explains how to use them to enter and display text in Xamarin.Forms applications."
 ms.prod: xamarin
 ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 05/22/2017
 ---
 
-# Text
+# Text in Xamarin.Forms
 
 _Using Xamarin.Forms to enter or display text._
 

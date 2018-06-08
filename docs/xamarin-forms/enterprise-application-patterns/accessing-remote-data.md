@@ -1,5 +1,6 @@
 ---
 title: "Accessing Remote Data"
+description: "This chapter explains how the eShopOnContainers mobile app accesses data from the containerized microservices."
 ms.prod: xamarin
 ms.assetid: 42eba6f5-9784-4e1a-9943-5c1fbeea7452
 ms.technology: xamarin-forms

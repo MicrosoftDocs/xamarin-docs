@@ -1,5 +1,6 @@
 ---
 title: "Chapter Summaries for Creating Mobile Apps with Xamarin.Forms"
+description: "Creating Mobile Apps with Xamarin.Forms: Chapter Summaries"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 14A1A56C-CE91-4F86-BCF2-A4CB055A861E

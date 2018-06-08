@@ -1,6 +1,6 @@
 ---
-title: "Plugins"
-description: "Easily add native functionality to Xamarin.Forms apps"
+title: "Consuming and Creating Xamarin.Forms Plugins"
+description: "This article explains how to consume and create Xamarin.Forms Plugins. Plugins are typically used to easily expose native platform features."
 ms.prod: xamarin
 ms.assetid: 8A06A420-A9D0-4BCB-B9AF-3AEA6A648A8B
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 01/07/2016
 ---
 
-# Plugins
+# Consuming and Creating Xamarin.Forms Plugins
 
 There are many native platform features that exist across all platforms but
 have slightly different APIs. Developers write plugins to create an abstract

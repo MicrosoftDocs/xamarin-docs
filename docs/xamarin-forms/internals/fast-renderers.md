@@ -1,5 +1,5 @@
 ---
-title: "Fast Renderers"
+title: "Xamarin.Forms Fast Renderers"
 description: "This article introduces fast renderers, which reduce the inflation and rendering costs of a Xamarin.Forms control on Android by flattening the resulting native control hierarchy."
 ms.prod: xamarin
 ms.assetid: 097f87f2-d891-4f3c-be02-fb7d195a481a
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 10/24/2017
 ---
 
-# Fast Renderers
+# Xamarin.Forms Fast Renderers
 
 _This article introduces fast renderers, which reduce the inflation and rendering costs of a Xamarin.Forms control on Android by flattening the resulting native control hierarchy._
 

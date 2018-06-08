@@ -2,7 +2,7 @@
 documentType: LandingData
 title: Xamarin.Forms Samples
 metadata:
-  description: Xamarin.Forms sample apps and code demos for mobile developers.
+  description: Xamarin.Forms sample apps and code demos to help you get started and understand concepts in Xamarin.Forms.
   author: conceptdev
   ms.author: crdun
   ms.date: 02/17/2018
@@ -14,7 +14,7 @@ abstract:
     - href: https://developer.xamarin.com/samples/xamarin-forms/all/
       text: All Xamarin.Forms Samples
 sections:
-- title: 
+- title:
   items:
    - type: list
      style: cards
@@ -58,7 +58,7 @@ sections:
        title: Xuzzle
      - href: https://developer.xamarin.com/samples/xamarin-forms/all/
        html: The complete set of Xamarin.Forms sample apps and code demos.
-       image: 
+       image:
          src: ~/media/shared/sample-download.svg
          href: https://developer.xamarin.com/samples/xamarin-forms/all/
        title: All Xamarin.Forms samples

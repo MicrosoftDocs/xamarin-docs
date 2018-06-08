@@ -1,6 +1,6 @@
 ---
 title: "Adding Intelligence with Cognitive Services"
-description: "Microsoft Cognitive Services are a set of APIs, SDKs, and services available to developers to make their applications more intelligent by adding features such as facial recognition, speech recognition, and language understanding. This article provides an introduction to the sample application that demonstrates how to invoke some of the Microsoft Cognitive Service APIs."
+description: "This article provides an introduction to a sample application that demonstrates how to invoke some of the Microsoft Cognitive Service APIs."
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
 ms.technology: xamarin-forms

@@ -1,5 +1,5 @@
 ---
-title: "Data Binding"
+title: "Xamarin.Forms Data Binding"
 description: "Data binding is the technique of linking properties of two objects so that changes in one property are automatically reflected in the other property. Data binding is an integral part of the Model-View-ViewModel (MVVM) application architecture."
 ms.prod: xamarin
 ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 01/05/2018
 ---
 
-# Data Binding
+# Xamarin.Forms Data Binding
 
 _Data binding is the technique of linking properties of two objects so that changes in one property are automatically reflected in the other property. Data binding is an integral part of the Model-View-ViewModel (MVVM) application architecture._
 

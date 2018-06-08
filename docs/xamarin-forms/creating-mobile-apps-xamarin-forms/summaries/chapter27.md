@@ -1,5 +1,6 @@
 ---
 title: "Summary of Chapter 27. Custom renderers"
+description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 27. Custom renderers"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7

@@ -1,6 +1,6 @@
 ---
-title: "Binding Value Converters"
-description: "Cast or convert values within the data binding"
+title: "Xamarin.Forms Binding Value Converters"
+description: "This article explains how to cast or convert values within a Xamarin.Forms data binding by implementing a value converter (which is also known as a binding converter, or binding value converter)."
 ms.prod: xamarin
 ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 01/05/2018
 ---
 
-# Binding Value Converters
+# Xamarin.Forms Binding Value Converters
 
 Data bindings usually transfer data from a source property to a target property, and in some cases from the target property to the source property. This transfer is straightforward when the source and target properties are of the same type, or when one type can be converted to the other type through an implicit conversion. When that is not the case, a type conversion must take place.
 

@@ -1,5 +1,6 @@
 ---
 title: "Xamarin.Forms Multiscreen Quickstart"
+description: "This article explains how to extend the Phoneword application by adding a second screen to keep track of the call history for the application."
 ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms

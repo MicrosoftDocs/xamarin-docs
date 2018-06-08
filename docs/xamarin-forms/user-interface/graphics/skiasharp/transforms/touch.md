@@ -1,6 +1,6 @@
 ---
 title: "Touch Manipulations"
-description: "Use matrix transforms to implement touch dragging, pinching, and rotation"
+description: "This article explains how to use matrix transforms to implement touch dragging, pinching, and rotation, and demonstrates this with sample code."
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
@@ -749,9 +749,9 @@ public partial class SingleFingerCornerScalePage : ContentPage
 }
 ```
 
-This `SKMatrix` object is modified by the touch logic shown below. 
+This `SKMatrix` object is modified by the touch logic shown below.
 
-The remainder of the code-behind file is the `TouchEffect` event handler. It begins by converting the current location of the finger to an `SKPoint` value. For the `Pressed` action type, the handler checks that no other finger is touching the screen, and that the finger is within the bounds of the bitmap. 
+The remainder of the code-behind file is the `TouchEffect` event handler. It begins by converting the current location of the finger to an `SKPoint` value. For the `Pressed` action type, the handler checks that no other finger is touching the screen, and that the finger is within the bounds of the bitmap.
 
 The crucial part of the code is an `if` statement involving two calls to the `Math.Pow` method. This math checks if the finger location is outside of an ellipse that fills the bitmap. If so, then that's a scaling operation. The finger is near one of the corners of the bitmap, and a pivot point is determined that is the opposite corner. If the finger is within this ellipse, it's a regular panning operation:
 
