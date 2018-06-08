@@ -32,18 +32,9 @@ These steps describe how to add CoreML to an iOS project. Refer to the [Mars Hab
 
 ### 1. Add the model to the project
 
-Add a compiled model (a directory with the **.modelc** extension) to the **Resources** directory of the project. The directory's contents should all have a build action of **CoreMLModel**:
+Add a CoreML model (a file with the **.mlmodel** extension) to the **Resources** directory of the project. 
 
-![The Resources folder should contain the compiled model](coreml-images/resources-modelc.png)
-
-The [samples](https://developer.xamarin.com/samples/monotouch/ios11/) use models compiled in Xcode 9 or manually using the following terminal command:
-
-```csharp
-xcrun coremlcompiler compile {model.mlmodel} {outputFolder}
-```
-
-> [!NOTE]
-> **.model** files _must_ be compiled to **.modelc** before they can used by CoreML
+In the model file's properties, its **Build action** is set to **CoreMLModel**. This means that it will be compiled into an **.mlmodelc** file when the application is built.
 
 ### 2. Load the model
 
