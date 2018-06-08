@@ -1,6 +1,6 @@
 ---
-title: "Grid"
-description: "Present views in grids."
+title: "Xamarin.Forms Grid"
+description: "This article explains how to use the Xamarin.Forms Grid class to present views in grids, which possess rows and columns."
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 10/26/2017
 ---
 
-# Grid
+# Xamarin.Forms Grid
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) supports arranging views into rows and columns. Rows and columns can be set to have proportional sizes or absolute sizes. The `Grid` layout should not be confused with traditional tables and is not intended to present tabular data. `Grid` does not have the concept of row, column or cell formatting. Unlike HTML tables, `Grid` is purely intended for laying out content.
 

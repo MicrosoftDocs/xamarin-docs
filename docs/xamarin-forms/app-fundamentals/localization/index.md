@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms Localization"
-description: "The built-in .NET localization framework can be used to build cross-platform multilingual applications with Xamarin.Forms."
+description: "The built-in .NET localization framework can be used to build cross-platform multilingual applications with Xamarin.Forms. Text and images can be localized, and applications can support a right-to-left flow direction."
 ms.prod: xamarin
 ms.assetid: 97BF843B-BDAA-4CEA-8189-6DB54B291D7F
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 04/13/2018
 ---
 
-# Localization
+# Xamarin.Forms Localization
 
 _The built-in .NET localization framework can be used to build cross-platform multilingual applications with Xamarin.Forms._
 

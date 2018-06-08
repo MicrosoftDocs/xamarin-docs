@@ -1,6 +1,6 @@
 ---
 title: "Part 5. From Data Bindings to MVVM"
-description: "The Model-View-ViewModel (MVVM) architectural pattern was invented with XAML in mind. The pattern enforces a separation between three software layers — the XAML user interface, called the View; the underlying data, called the Model; and an intermediary between the View and the Model, called the ViewModel. The View and the ViewModel are often connected through data bindings defined in the XAML file. The BindingContext for the View is usually an instance of the ViewModel."
+description: "The MVVM pattern enforces a separation between three software layers — the XAML user interface, called the View; the underlying data, called the Model; and an intermediary between the View and the Model, called the ViewModel."
 ms.prod: xamarin
 ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
 ms.technology: xamarin-forms
@@ -645,7 +645,7 @@ public class PageDataViewModel
         };
     }
 
-    public static IList<PageDataViewModel> All { private set; get; } 
+    public static IList<PageDataViewModel> All { private set; get; }
 }
 ```
 

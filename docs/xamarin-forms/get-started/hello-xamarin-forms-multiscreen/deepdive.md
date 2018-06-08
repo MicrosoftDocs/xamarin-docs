@@ -1,5 +1,6 @@
 ---
 title: "Xamarin.Forms Multiscreen Deep Dive"
+description: "This article introduces page navigation and data binding in a Xamarin.Forms application, and demonstrates their use in a multi-screen cross-platform application."
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: e4faa36c-6600-48c0-94c4-b4431103a4

@@ -1,6 +1,6 @@
 ---
 title: "Creating XAML Markup Extensions"
-description: "Define your own custom XAML markup extensions"
+description: "This article explains how to define your own custom Xamarin.Forms XAML markup extensions. A XAML markup extension is a class that implements the IMarkupExtension IMarkupExtension interface."
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
@@ -11,7 +11,7 @@ ms.date: 01/05/2018
 
 # Creating XAML Markup Extensions
 
-On the programmatic level, a XAML markup extension is a class that implements the [`IMarkupExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension/) or [`IMarkupExtension<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension%3CT%3E/) interface. You can explore the source code of the standard markup extensions described below in the [**MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) of the Xamarin.Forms GitHub repository. 
+On the programmatic level, a XAML markup extension is a class that implements the [`IMarkupExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension/) or [`IMarkupExtension<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension%3CT%3E/) interface. You can explore the source code of the standard markup extensions described below in the [**MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) of the Xamarin.Forms GitHub repository.
 
 It's also possible to define your own custom XAML markup extensions by deriving from `IMarkupExtension` or `IMarkupExtension<T>`. Use the generic form if the markup extension obtains a value of a particular type. This is the case with several of the Xamarin.Forms markup extensions:
 
@@ -21,7 +21,7 @@ It's also possible to define your own custom XAML markup extensions by deriving 
 - `BindingExtension` derives from `IMarkupExtension<BindingBase>`
 - `ConstraintExpression` derives from `IMarkupExtension<Constraint>`
 
-The two `IMarkupExtension` interfaces define only one method each, named `ProvideValue`: 
+The two `IMarkupExtension` interfaces define only one method each, named `ProvideValue`:
 
 ```csharp
 public interface IMarkupExtension
@@ -87,7 +87,7 @@ The **HSL Color Demo** page shows a variety of ways that `HslColorExtension` can
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout>
         <BoxView>
             <BoxView.Color>
@@ -116,7 +116,7 @@ Notice that when `HslColorExtension` is an XML tag, the four properties are set 
 
 ## A Markup Extension for Accessing Bitmaps
 
-The argument to `ProvideValue` is an object that implements the [`IServiceProvider`](https://developer.xamarin.com/api/type/System.IServiceProvider/) interface, which is defined in the .NET `System` namespace. This interface has one member, a method named `GetService` with a `Type` argument. 
+The argument to `ProvideValue` is an object that implements the [`IServiceProvider`](https://developer.xamarin.com/api/type/System.IServiceProvider/) interface, which is defined in the .NET `System` namespace. This interface has one member, a method named `GetService` with a `Type` argument.
 
 The `ImageResourceExtension` class shown below shows one possible use of `IServiceProvider` and `GetService` to obtain an `IXmlLineInfoProvider` object that can provide line and character information indicating where a particular error was detected. In this case, an exception is raised when the `Source` property has not been set:
 
@@ -147,7 +147,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` is helpful when a XAML file needs to access an image file stored as an embedded resource in the .NET Standard library project. It uses the `Source` property to call the static `ImageSource.FromResource` method. This method requires a fully-qualified resource name, which consists of the assembly name, the folder name, and the filename separated by periods. The `ImageResourceExtension` doesn't need the assembly name portion because it obtains the assembly name using reflection and prepends it to the `Source` property. Regardless, `ImageSource.FromResource` must be called from the assembly that contains the bitmap, which means that this XAML resource extension cannot be part of an external library unless the images are also in that library. (See the [**Embedded Images**](~/xamarin-forms/user-interface/images.md#embedded_images) article for more information on accessing bitmaps stored as embedded resources.) 
+`ImageResourceExtension` is helpful when a XAML file needs to access an image file stored as an embedded resource in the .NET Standard library project. It uses the `Source` property to call the static `ImageSource.FromResource` method. This method requires a fully-qualified resource name, which consists of the assembly name, the folder name, and the filename separated by periods. The `ImageResourceExtension` doesn't need the assembly name portion because it obtains the assembly name using reflection and prepends it to the `Source` property. Regardless, `ImageSource.FromResource` must be called from the assembly that contains the bitmap, which means that this XAML resource extension cannot be part of an external library unless the images are also in that library. (See the [**Embedded Images**](~/xamarin-forms/user-interface/images.md#embedded_images) article for more information on accessing bitmaps stored as embedded resources.)
 
 Although `ImageResourceExtension` requires the `Source` property to be set, the `Source` property is indicated in an attribute as the content property of the class. This means that the `Source=` part of the expression in curly braces can be omitted. In the **Image Resource Demo** page, the `Image` elements fetch two images using the folder name and the filename separated by periods:
 
@@ -162,7 +162,7 @@ Although `ImageResourceExtension` requires the `Source` property to be set, the 
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
+
         <Image Source="{local:ImageResource Images.SeatedMonkey.jpg}"
                Grid.Row="0" />
 
@@ -193,7 +193,7 @@ The `GetService` call with an argument of `typeof(IProvideValueTarget)` actually
 
 ## Conclusion
 
-XAML markup extensions play a vital role in XAML by extending the ability to set attributes from a variety of sources. Moreover, if the existing XAML markup extensions don't provide exactly what you need, you can also write your own. 
+XAML markup extensions play a vital role in XAML by extending the ability to set attributes from a variety of sources. Moreover, if the existing XAML markup extensions don't provide exactly what you need, you can also write your own.
 
 
 ## Related Links

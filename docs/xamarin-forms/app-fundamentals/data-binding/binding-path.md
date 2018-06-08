@@ -1,6 +1,6 @@
 ---
-title: "Binding Path"
-description: "Use data bindings to access sub-properties and collection members"
+title: "Xamarin.Forms Binding Path"
+description: "This article explains how to use Xamarin.Forms data bindings to access sub-properties and collection members with the Path property of the Binding class."
 ms.prod: xamarin
 ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 01/05/2018
 ---
 
-# Binding Path
+# Xamarin.Forms Binding Path
 
 In all the previous data-binding examples, the [`Path`](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/) property of the `Binding` class (or the [`Path`](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Path/) property of the `Binding` markup extension) has been set to a single property. It's actually possible to set `Path` to a *sub-property* (a property of a property), or to a member of a collection.
 
@@ -25,7 +25,7 @@ The `Time` property of `TimePicker` is of type `TimeSpan`, but perhaps you want 
 {Binding Source={x:Reference timePicker},
          Path=Time.TotalSeconds}
 ```
-         
+
 The `Time` property is of type `TimeSpan`, which has a `TotalSeconds` property. The `Time` and `TotalSeconds` properties are simply connected with a period. The items in the `Path` string always refer to properties and not to the types of these properties.
 
 That example and several others are shown in the **Path Variations** page:
@@ -46,7 +46,7 @@ That example and several others are shown in the **Path Variations** page:
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout Margin="10, 0">
         <TimePicker x:Name="timePicker" />
 
@@ -57,7 +57,7 @@ That example and several others are shown in the **Path Variations** page:
         <Label Text="{Binding Source={x:Reference page},
                               Path=Content.Children.Count,
                               StringFormat='There are {0} children in this StackLayout'}" />
-        
+
         <Label Text="{Binding Source={x:Static globe:CultureInfo.CurrentCulture},
                               Path=DateTimeFormat.DayNames[3],
                               StringFormat='The middle day of the week is {0}'}" />
@@ -152,7 +152,7 @@ That displays the type of the binding source, or `DataBindingDemos.PathVariation
 
 The type of the `Content` property is now revealed to be `Xamarin.Forms.StackLayout`. Add the `Children` property to the `Path` and the type is `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]`, which is a class internal to Xamarin.Forms, but obviously a collection type. Add an index to that and the type is `Xamarin.Forms.Label`. Continue in this way.
 
-As Xamarin.Forms processes the binding path, it installs a `PropertyChanged` handler on any object in the path that implements the `INotifyPropertyChanged` interface. For example, the final binding reacts to a change in the first `Label` because the `Text` property changes. 
+As Xamarin.Forms processes the binding path, it installs a `PropertyChanged` handler on any object in the path that implements the `INotifyPropertyChanged` interface. For example, the final binding reacts to a change in the first `Label` because the `Text` property changes.
 
 If a property in the binding path does not implement `INotifyPropertyChanged`, any changes to that property will be ignored. Some changes could entirely invalidate the binding path, so you should use this technique only when the string of properties and sub-properties never become invalid.
 

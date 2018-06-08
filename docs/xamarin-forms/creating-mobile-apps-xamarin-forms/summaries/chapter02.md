@@ -1,5 +1,6 @@
 ---
 title: "Summary of Chapter 2. Anatomy of an app"
+description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 2. Anatomy of an app"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
@@ -22,7 +23,7 @@ This chapter demonstrates how to create an application by focusing on the [`Labe
 
 ## Say hello
 
-With the Xamarin platform installed, you can create a new Xamarin.Forms solution in Visual Studio or Visual Studio for Mac. The [**Hello**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) solution uses a Portable Class Library for the common code. It 
+With the Xamarin platform installed, you can create a new Xamarin.Forms solution in Visual Studio or Visual Studio for Mac. The [**Hello**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) solution uses a Portable Class Library for the common code. It
 demonstrates a Xamarin.Forms solution created in Visual Studio with no modifications. The solution consists of six projects (the last two of which are not created with the current Xamarin.Forms solution templates):
 
 - [**Hello**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello), a Portable Class Library (PCL) shared by the other projects
@@ -139,11 +140,11 @@ The `Device.OnPlatform` methods are used to run platform-specific code or to sel
 
 The `Device.OnPlatform` methods, the `Device.OS` property, and the `TargetPlatform` enumeration are all now deprecated. Instead, use the [`Device.RuntimePlatform`](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/) property and compare the `string` return value with the following static fields:
 
-- [`iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/), the string "iOS" 
+- [`iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/), the string "iOS"
 - [`Android`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Android/), the string "Android"
 - [`UWP`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.UWP/), the string "UWP", referring to the Windows Runtime Platform
 - [`Windows`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Windows/), the string "Windows" for the Windows Runtime (Windows 8.1 and Windows Phone 8.1)
-- [`WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/), the string "WinPhone" for Windows Phone 8.0 
+- [`WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/), the string "WinPhone" for Windows Phone 8.0
 
 The [`Device.Idiom`](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.Idiom/) static read-only property is related. This returns a member of the [`TargetIdiom`](https://developer.xamarin.com/api/type/Xamarin.Forms.TargetIdiom/), which has these members:
 

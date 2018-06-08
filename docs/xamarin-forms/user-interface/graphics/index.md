@@ -1,6 +1,6 @@
 ---
-title: "Graphics"
-description: "How to incorporate graphics and game engine visuals into a Xamarin.Forms application."
+title: "Graphics in Xamarin.Forms"
+description: "This guide explains how to incorporate graphics and game engine visuals into a Xamarin.Forms application, using CocosSharp, SkiaShap, and UrhoSharp."
 ms.prod: xamarin
 ms.assetid: 167ec01a-fb9e-431e-a44d-a10eaf62bf39
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: chape
 ms.date: 02/01/2018
 ---
 
-# Graphics
+# Graphics in Xamarin.Forms
 
 _How to incorporate graphics and game engine visuals into a Xamarin.Forms application._
 

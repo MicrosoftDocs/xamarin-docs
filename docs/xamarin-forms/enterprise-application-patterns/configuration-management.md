@@ -1,5 +1,6 @@
 ---
 title: "Configuration Management"
+description: "This chapter explains how the eShopOnContainers mobile app implements configuration management to provide app settings and user settings."
 ms.prod: xamarin
 ms.assetid: 50d6e780-e768-47f8-9361-3af11e56b87b
 ms.technology: xamarin-forms

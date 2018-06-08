@@ -1,5 +1,6 @@
 ---
 title: "DataPages Controls Reference"
+description: "This article introduces the controls that are available in the Xamarin.Forms DataPages NuGet package."
 ms.prod: xamarin
 ms.assetid: 891615D0-E8BD-4ACC-A7F0-4C3725FBCC31
 ms.technology: xamarin-forms

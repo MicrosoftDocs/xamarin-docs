@@ -1,6 +1,6 @@
 ---
 title: "XAML Markup Extensions"
-description: "Extend the range of sources from which XAML attributes are set"
+description: "The article explains how to use Xamarin.Forms XAML markup extensions to extend the power and flexibility of XAML by allowing element attributes to be set from sources other than literal text strings."
 ms.prod: xamarin
 ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
 ms.technology: xamarin-forms
@@ -29,7 +29,7 @@ In either case, the text string set to the `Color` attribute is converted to a `
 
 You might prefer instead to set the `Color` attribute from a value stored in a resource dictionary, or from the value of a static property of a class that you've created, or from a property of type `Color` of another element on the page, or constructed from separate hue, saturation, and luminosity values.
 
-All these options are possible using XAML markup extensions. But don't let the phrase "markup extensions" scare you: XAML markup extensions are *not* extensions to XML. Even with XAML markup extensions, XAML is always legal XML. 
+All these options are possible using XAML markup extensions. But don't let the phrase "markup extensions" scare you: XAML markup extensions are *not* extensions to XML. Even with XAML markup extensions, XAML is always legal XML.
 
 A markup extension is really just a different way to express an attribute of an element. XAML markup extensions are usually identifiable by an attribute setting that is enclosed in curly braces:
 
@@ -45,7 +45,7 @@ This article is divided in two parts:
 
 Use the XAML markup extensions defined in Xamarin.Forms.
 
-## [Creating XAML Markup Extensions](creating.md) 
+## [Creating XAML Markup Extensions](creating.md)
 
 Write your own custom XAML markup extensions.
 

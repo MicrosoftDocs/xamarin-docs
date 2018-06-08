@@ -1,6 +1,6 @@
 ---
-title: "App Class"
-description: "Features of the default App class, which can be either C# or XAML"
+title: "Xamarin.Forms App Class"
+description: "This article explains features of the default App class, which includes a property to set to the initial page for the app, and a persistent dictionary for store simple values across lifecycle state changes."
 ms.prod: xamarin
 ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 02/19/2016
 ---
 
-# App Class
+# Xamarin.Forms App Class
 
 The `Application` base class offers the following features, which are exposed
 in your projects default `App` subclass:

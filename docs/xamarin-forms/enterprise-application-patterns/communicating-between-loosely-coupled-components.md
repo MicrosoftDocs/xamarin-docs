@@ -1,5 +1,6 @@
 ---
 title: "Communicating Between Loosely Coupled Components"
+description: "This chapter explains how the eShopOnContainers mobile app implements the publish-subscribe pattern, allowing message-based communication between components that are inconvenient to link by object and type references "
 ms.prod: xamarin
 ms.assetid: 1194af33-8a91-48d2-88b5-b84d77f2ce69
 ms.technology: xamarin-forms

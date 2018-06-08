@@ -1,5 +1,6 @@
 ---
 title: "Implementing a video player"
+description: "This article explains how to implement a video player application using Xamarin.Forms."
 ms.prod: xamarin
 ms.assetid: 0CE9BEE7-4F81-4A00-B9B3-5E2535CD3050
 ms.technology: xamarin-forms

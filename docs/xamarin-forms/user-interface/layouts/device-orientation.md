@@ -1,6 +1,6 @@
 ---
 title: "Device Orientation"
-description: "Understand how to lay out applications that look great in portrait and landscape orientations."
+description: "This article explains how to layout Xamarin.Forms applications that look great in portrait and landscape orientations."
 ms.prod: xamarin
 ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
 ms.technology: xamarin-forms
@@ -12,12 +12,6 @@ ms.date: 12/09/2015
 # Device Orientation
 
 It is important to consider how your application will be used and how landscape orientation can be incorporated to improve the user experience. Individual layouts can be designed to accomodate multiple orientations and best use the available space. At the application level, rotation can be disabled or enabled.
-
-This article will guide you through creating apps that take advantage of device orientation features and has the following sections:
-
-- **[Controlling Orientation](#Controlling_Orientation)** &ndash; understand how to control orientation at the app level across each platform.
-- **[Reacting to Changes in Orientation](#Reacting_to_Changes_in_Orientation)** &ndash; learn how to be notified of, and react to, changes in orientation.
-- **[Responsive Layout](#Responsive_Layout)** &ndash; learn how to create layouts that automatically work across landscape and portrait orientations.
 
 <a name="Controlling_Orientation" />
 

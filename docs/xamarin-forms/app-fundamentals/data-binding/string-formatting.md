@@ -1,6 +1,6 @@
 ---
-title: "String Formatting"
-description: "Use data bindings to format and display objects as strings"
+title: "Xamarin.Forms String Formatting"
+description: "This article explains how to use Xamarin.FOrms data bindings to format and display objects as strings. This is achieved by setting the StringFormat of the Binding to a standard .NET formatting string with a placeholder."
 ms.prod: xamarin
 ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 01/05/2018
 ---
 
-# String Formatting
+# Xamarin.Forms String Formatting
 
 Sometimes it's convenient to use data bindings to display the string representation of an object or value. For example, you might want to use a `Label` to display the current value of a `Slider`. In this data binding, the `Slider` is the source, and the target is the `Text` property of the `Label`.
 

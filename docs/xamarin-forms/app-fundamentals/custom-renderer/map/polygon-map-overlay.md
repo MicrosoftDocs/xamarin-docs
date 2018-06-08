@@ -1,6 +1,6 @@
 ---
 title: "Highlighting a Region on a Map"
-description: "This article explained how to add a polygon overlay to a map, to highlight a region on the map. Polygons are a closed shape and have their interiors filled in."
+description: "This article explains how to add a polygon overlay to a map, to highlight a region on the map. Polygons are a closed shape and have their interiors filled in."
 ms.prod: xamarin
 ms.assetid: E79EB2CF-8DD6-44A8-B47D-5F0A94FB0A63
 ms.technology: xamarin-forms

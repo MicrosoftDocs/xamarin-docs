@@ -1,6 +1,6 @@
 ---
 title: "Adding a Pan Gesture Recognizer"
-description: "The pan gesture is used for detecting dragging and is implemented with the PanGestureRecognizer class. A common scenario for the pan gesture is to horizontally and vertically drag an image, so that all of the image content can be viewed when it's being displayed in a viewport smaller than the image dimensions. This is accomplished by moving the image within the viewport, and is demonstrated in this article."
+description: "This article explains how to use a pan gesture to horizontally and vertically drag an image, so that all of the image content can be viewed when it's being displayed in a viewport smaller than the image dimensions."
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
 ms.technology: xamarin-forms

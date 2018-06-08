@@ -1,6 +1,6 @@
 ---
-title: "App Lifecycle"
-description: "How to respond to application lifecycle"
+title: "Xamarin.Forms App Lifecycle"
+description: "This article explains how to respond to the application lifecycle, including lifecycle methods, page navigation events, and modal navigation events."
 ms.prod: xamarin
 ms.assetid: 69B416CF-B243-4790-AB29-F030B32465BE
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 05/31/2018
 ---
 
-# App Lifecycle
+# Xamarin.Forms App Lifecycle
 
 The [`Application`](xref:Xamarin.Forms.Application) base class offers the following features:
 

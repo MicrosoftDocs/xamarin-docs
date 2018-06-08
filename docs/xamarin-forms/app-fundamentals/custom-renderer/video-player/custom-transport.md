@@ -1,5 +1,6 @@
 ---
 title: "Custom video transport controls"
+description: "This article explains how to implement custom transport controls in a video player application, using Xamarin.Forms."
 ms.prod: xamarin
 ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
 ms.technology: xamarin-forms

@@ -1,6 +1,6 @@
 ---
 title: "Hierarchical Navigation"
-description: "The NavigationPage class provides a hierarchical navigation experience where the user is able to navigate through pages, forwards and backwards, as desired. The class implements navigation as a last-in, first-out (LIFO) stack of Page objects. This article demonstrates how to use the NavigationPage class to perform navigation in a stack of pages."
+description: "This article demonstrates how to use the NavigationPage class to perform navigation in a stack of last-in, first-out (LIFO) pages."
 ms.prod: xamarin
 ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
@@ -43,7 +43,7 @@ The layout of a [`NavigationPage`](https://developer.xamarin.com/api/type/Xamari
 
 - On iOS, a navigation bar is present at the top of the page that displays a title, and that has a *Back* button that returns to the previous page.
 - On Android, a navigation bar is present at the top of the page that displays a title, an icon, and a *Back* button that returns to the previous page. The icon is defined in the `[Activity]` attribute that decorates the `MainActivity` class in the Android platform-specific project.
-- On the Universal Windows Platform, a navigation bar is present at the top of the page that displays a title. 
+- On the Universal Windows Platform, a navigation bar is present at the top of the page that displays a title.
 
 On all the platforms, the value of the [`Page.Title`](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/) property will be displayed as the page title.
 

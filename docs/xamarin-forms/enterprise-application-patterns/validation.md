@@ -1,5 +1,6 @@
 ---
-title: "Validation"
+title: "Validation in Enterprise Apps"
+description: "This chapter explains how the eShopOnContainers mobile app performs validation of user input. This includes specifying validation rules, triggering validation, and displaying validation errors."
 ms.prod: xamarin
 ms.assetid: 56e4f0fc-48d9-4033-91ec-173bb46a5e4d
 ms.technology: xamarin-forms
@@ -8,7 +9,7 @@ ms.author: dabritch
 ms.date: 08/07/2017
 ---
 
-# Validation
+# Validation in Enterprise Apps
 
 Any app that accepts input from users should ensure that the input is valid. An app could, for example, check for input that contains only characters in a particular range, is of a certain length, or matches a particular format. Without validation, a user can supply data that causes the app to fail. Validation enforces business rules, and prevents an attacker from injecting malicious data.
 

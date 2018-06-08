@@ -1,6 +1,6 @@
 ---
 title: "Checking Battery Status"
-description: "Use DependencyService to access battery information natively for each platform"
+description: "This article explains how to use the Xamarin.Forms DependencyService class to access battery information natively for each platform."
 ms.prod: xamarin
 ms.assetid: CF1C5A73-84ED-407D-BDC5-EB1D83D2D3DB
 ms.technology: xamarin-forms

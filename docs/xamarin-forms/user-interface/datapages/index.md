@@ -1,5 +1,6 @@
 ---
-title: "DataPages"
+title: "Xamarin.Forms DataPages"
+description: "This article introduces Xamarin.Forms DataPages, which provide an API to quickly and easily bind a data source to pre-built views."
 ms.prod: xamarin
 ms.assetid: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95
 ms.technology: xamarin-forms
@@ -8,7 +9,7 @@ ms.author: dabritch
 ms.date: 12/01/2017
 ---
 
-# DataPages
+# Xamarin.Forms DataPages
 
 ![](~/media/shared/preview.png "This API is currently in preview")
 
@@ -80,4 +81,3 @@ the following properties:
 There are two methods `MaskKey` and `UnmaskKey` that can be used
 to hide (or show) data item properties (ie. prevent them from being rendered).
 The key corresponds to the a named property on the data item object.
-

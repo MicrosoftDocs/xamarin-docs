@@ -1,6 +1,6 @@
 ---
 title: "Picking a Photo from the Picture Library"
-description: "Use DependencyService to pick a photo from the phone's picture library"
+description: "This article explains how to use the Xamarin.Forms DependencyService class to pick a photo from the phone's picture library."
 ms.prod: xamarin
 ms.assetid: 4F51B0E7-6A63-403C-B488-500CCBCE75DD
 ms.technology: xamarin-forms

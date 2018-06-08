@@ -1,5 +1,5 @@
 ---
-title: "Customizing a Map"
+title: "Customizing a Xamarin.Forms Map"
 description: "Xamarin.Forms.Maps provides a cross-platform abstraction for displaying maps that use the native map APIs on each platform, to provide a fast and familiar map experience for users."
 ms.prod: xamarin
 ms.assetid: CAF389DD-7AA8-4065-B56E-239A7E01CD1F
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 11/29/2017
 ---
 
-# Customizing a Map
+# Customizing a Xamarin.Forms Map
 
 _Xamarin.Forms.Maps provides a cross-platform abstraction for displaying maps that use the native map APIs on each platform, to provide a fast and familiar map experience for users._
 

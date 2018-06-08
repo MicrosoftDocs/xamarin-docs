@@ -1,6 +1,6 @@
 ---
-title: "Map"
-description: "Xamarin.Forms uses the native map APIs on each platform."
+title: "Xamarin.Forms Map"
+description: "This article explains how to use the Xamarin.Forms Map class to use the native map APIs on each platform to provide a familiar maps experience for users."
 ms.prod: xamarin
 ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 04/27/2016
 ---
 
-# Map
+# Xamarin.Forms Map
 
 _Xamarin.Forms uses the native map APIs on each platform._
 
@@ -84,7 +84,7 @@ To access location services on iOS, you must set the following keys in **Info.pl
 - iOS 10 and earlier
     - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – for using location services when the app is in use
     - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – for using location services at all times    
-    
+
 To support iOS 11 and earlier, you can include all three keys: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, and `NSLocationAlwaysUsageDescription`.
 
 The XML representation for these keys in **Info.plist** is shown below. You should update the `string` values to reflect how your application is using the location information:

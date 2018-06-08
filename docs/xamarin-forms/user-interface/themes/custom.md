@@ -1,5 +1,6 @@
 ---
-title: "Creating a Custom Theme"
+title: "Creating a Custom Xamarin.Forms Theme"
+description: "This article explains how to create a custom Xamarin.Forms Theme for referencing in an app."
 ms.prod: xamarin
 ms.assetid: 4FE08ADC-093F-47FA-B33C-20CF08B5D7E0
 ms.technology: xamarin-forms
@@ -8,7 +9,7 @@ ms.author: dabritch
 ms.date: 09/01/2017
 ---
 
-# Creating a Custom Theme
+# Creating a Custom Xamarin.Forms Theme
 
 ![](~/media/shared/preview.png "This API is currently in preview")
 

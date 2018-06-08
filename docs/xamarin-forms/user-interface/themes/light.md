@@ -1,5 +1,6 @@
 ---
-title: "Light Theme"
+title: "Xamarin.Forms Light Theme"
+description: "This article explains how to consume the Xamarin.Forms Light Theme in an app."
 ms.prod: xamarin
 ms.assetid: D5D16AE3-F51F-4359-B37A-E1087ECE512B
 ms.technology: xamarin-forms
@@ -8,7 +9,7 @@ ms.author: dabritch
 ms.date: 09/01/2017
 ---
 
-# Light Theme
+# Xamarin.Forms Light Theme
 
 ![](~/media/shared/preview.png "This API is currently in preview")
 
@@ -68,4 +69,3 @@ along with the markup that produces them.
 
 The [complete list of built-in classes](~/xamarin-forms/user-interface/themes/index.md)
 shows what styles are available for some common controls.
-

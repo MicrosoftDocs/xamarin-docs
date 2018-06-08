@@ -1,6 +1,6 @@
 ---
 title: "The Path Fill Types"
-description: "Discover the different effects possible with SkiaSharp path fill types"
+description: "This article examines the different effects possible with SkiaSharp path fill types, and demonstrates this with sample code."
 ms.prod: xamarin
 ms.assetid: 57103A7A-49A2-46AE-894C-7C2664682644
 ms.technology: xamarin-forms

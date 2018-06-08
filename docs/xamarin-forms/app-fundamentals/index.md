@@ -1,6 +1,6 @@
 ---
-title: "Application Fundamentals"
-description: "Exploring the fundamentals of Xamarin.Forms development"
+title: "Xamarin.Forms Application Fundamentals"
+description: "Exploring the fundamentals of Xamarin.Forms application development, including all the required core concepts, through to finishing touches such as accessibility and localization."
 ms.prod: xamarin
 ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 02/28/2017
 ---
 
-# Application Fundamentals
+# Xamarin.Forms Application Fundamentals
 
 ## [Accessibility](accessibility/index.md)
 

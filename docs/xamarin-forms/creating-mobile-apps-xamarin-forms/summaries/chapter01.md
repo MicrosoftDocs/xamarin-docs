@@ -1,5 +1,6 @@
 ---
 title: "Summary of Chapter 1. How does Xamarin.Forms fit in?"
+description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 1. How does Xamarin.Forms fit in?"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625

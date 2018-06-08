@@ -1,5 +1,6 @@
 ---
 title: "Summary of Chapter 28. Location and maps"
+description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 28. Location and maps"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4

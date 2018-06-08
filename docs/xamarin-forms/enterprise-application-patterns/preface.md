@@ -1,5 +1,6 @@
 ---
-title: "Preface"
+title: "Preface to Enterprise App Development"
+description: "This chapter provides a preface to Enterprise Application Patterns using Xamarin.Forms."
 ms.prod: xamarin
 ms.assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c
 ms.technology: xamarin-forms
@@ -8,7 +9,7 @@ ms.author: dabritch
 ms.date: 08/07/2017
 ---
 
-# Preface
+# Preface to Enterprise App Development
 
 This eBook provides guidance on building cross-platform enterprise apps using Xamarin.Forms. Xamarin.Forms is a cross-platform UI toolkit that allows developers to easily create native user interface layouts that can be shared across platforms, including iOS, Android, and the Universal Windows Platform (UWP). It provides a comprehensive solution for Business to Employee (B2E), Business to Business (B2B), and Business to Consumer (B2C) apps, providing the ability to share code across all target platforms and helping to lower the total cost of ownership (TCO).
 

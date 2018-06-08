@@ -11,8 +11,6 @@ ms.date: 08/30/2016
 
 # Introduction to CoreML in Xamarin.iOS
 
-_Machine learning for mobile apps on iOS 11_
-
 CoreML brings machine learning to iOS – apps can take advantage of
 trained machine learning models to perform all sorts of tasks, from
 problem solving to image recognition.
@@ -30,7 +28,7 @@ These steps describe how to add CoreML to an iOS project. Refer to the [Mars Hab
 
 ![Mars Habitat Price Predictor sample screenshot](coreml-images/marspricer-heading.png)
 
-### 1. Add the model to the project
+### 1. Add the CoreML model to the project
 
 Add a CoreML model (a file with the **.mlmodel** extension) to the **Resources** directory of the project. 
 
@@ -38,11 +36,11 @@ In the model file's properties, its **Build action** is set to **CoreMLModel**. 
 
 ### 2. Load the model
 
-Before using a model, load it using the `MLModel.FromUrl` static method:
+Load the model using the `MLModel.Create` static method:
 
 ```csharp
 var assetPath = NSBundle.MainBundle.GetUrlForResource("NameOfModel", "mlmodelc");
-model = MLModel.FromUrl(assetPath, out NSError error1);
+model = MLModel.Create(assetPath, out NSError error1);
 ```
 
 ### 3. Set the parameters
@@ -97,8 +95,7 @@ tasks.
 
 The steps below describe how CoreML and Vision are used together in the
 [CoreMLVision sample](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision/). The sample combines
-the [rectangles recognition](~/ios/platform/introduction-to-ios11/vision.md#rectangles) from the Vision framework with the _MNINSTClassifier_
-CoreML model to identify a handwritten digit in a photograph.
+the [rectangles recognition](~/ios/platform/introduction-to-ios11/vision.md#rectangles) from the Vision framework with the _MNINSTClassifier_ CoreML model to identify a handwritten digit in a photograph.
 
 ![Image recognition of number 3](coreml-images/vision3.png) ![Image recognition of number 5](coreml-images/vision5.png)
 
@@ -111,13 +108,15 @@ with the CoreML model:
 
 ```csharp
 // Load the ML model
-var assetPath = NSBundle.MainBundle.GetUrlForResource("MNISTClassifier", "mlmodelc");
-var mlModel = MLModel.FromUrl(assetPath, out NSError mlErr);
-var vModel = VNCoreMLModel.FromMLModel(mlModel, out NSError vnErr);
+var bundle = NSBundle.MainBundle;
+var assetPath = bundle.GetUrlForResource("MNISTClassifier", "mlmodelc");
+NSError mlErr, vnErr;
+var mlModel = MLModel.Create(assetPath, out mlErr);
+var model = VNCoreMLModel.FromMLModel(mlModel, out vnErr);
 
 // Initialize Vision requests
 RectangleRequest = new VNDetectRectanglesRequest(HandleRectangles);
-ClassificationRequest = new VNCoreMLRequest(vModel, HandleClassification);
+ClassificationRequest = new VNCoreMLRequest(model, HandleClassification);
 ```
 
 The class still needs to implement the `HandleRectangles` and `HandleClassification`
@@ -159,7 +158,7 @@ void HandleRectangles(VNRequest request, NSError error) {
   // Run the Core ML MNIST classifier -- results in handleClassification method
   var handler = new VNImageRequestHandler(correctedImage, new VNImageOptions());
   DispatchQueue.DefaultGlobalQueue.DispatchAsync(() => {
-    handler.Perform(new VNRequest[] { ClassificationRequest }, out NSError err);
+    handler.Perform(new VNRequest[] {ClassificationRequest}, out NSError err);
   });
 }
 ```
@@ -176,7 +175,7 @@ possible results ordered by confidence (highest confidence first):
 ```csharp
 void HandleClassification(VNRequest request, NSError error){
   var observations = request.GetResults<VNClassificationObservation>();
-  ... omitted error handling ...
+  // ... omitted error handling ...
   var best = observations[0]; // first/best classification result
   // render in UI
   DispatchQueue.MainQueue.DispatchAsync(()=>{
@@ -184,8 +183,6 @@ void HandleClassification(VNRequest request, NSError error){
   });
 }
 ```
-
-
 
 ## Samples
 
@@ -196,7 +193,6 @@ There are three CoreML samples to try:
 * The [Vision & CoreML sample](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision/) accepts an image parameter, and uses the Vision framework to identify square regions in the image, which are passed to a CoreML model that recognizes single digits.
 
 * Finally, the [CoreML Image Recognition sample](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLImageRecognition/) uses CoreML to identify features in a photo. By default it uses the smaller **SqueezeNet** model (5MB), but it's been written so that you can download and incorporate the larger **VGG16** model (553MB). For more information, see the [sample's readme](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
-
 
 ## Related Links
 

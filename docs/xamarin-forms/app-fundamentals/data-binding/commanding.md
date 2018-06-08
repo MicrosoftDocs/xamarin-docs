@@ -1,6 +1,6 @@
 ---
-title: "The Command Interface"
-description: "Implement the `Command` property with data bindings"
+title: "The Xamarin.Forms Command Interface"
+description: "This article explains how to implement the Command property with Xamarin.Forms data bindings. The commanding interface provides an alternative approach to implementing commands that is much better suited to the MVVM architecture."
 ms.prod: xamarin
 ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
 ms.technology: xamarin-forms
@@ -9,9 +9,9 @@ ms.author: dabritch
 ms.date: 01/05/2018
 ---
 
-# The Command Interface
+# The Xamarin.Forms Command Interface
 
-In the Model-View-ViewModel (MVVM) architecture, data bindings are defined between properties in the ViewModel, which is generally a class that derives from `INotifyPropertyChanged`, and properties in the View, which is generally the XAML file. Sometimes an application has needs that go beyond these property bindings by requiring the user to initiate commands that affect something in the ViewModel. These commands are generally signaled by button clicks or finger taps, and traditionally they are processed in the code-behind file in a handler for the `Clicked` event of the `Button` or the `Tapped` event of a `TapGestureRecognizer`. 
+In the Model-View-ViewModel (MVVM) architecture, data bindings are defined between properties in the ViewModel, which is generally a class that derives from `INotifyPropertyChanged`, and properties in the View, which is generally the XAML file. Sometimes an application has needs that go beyond these property bindings by requiring the user to initiate commands that affect something in the ViewModel. These commands are generally signaled by button clicks or finger taps, and traditionally they are processed in the code-behind file in a handler for the `Clicked` event of the `Button` or the `Tapped` event of a `TapGestureRecognizer`.
 
 The commanding interface provides an alternative approach to implementing commands that is much better suited to the MVVM architecture. The ViewModel itself can contain commands, which are methods that are executed in reaction to a specific activity in the View such as a `Button` click. Data bindings are defined between these commands and the `Button`.
 
@@ -28,7 +28,7 @@ The `Command` and `CommandParameter` properties are also defined by the followin
 - [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) and hence, [`ImageCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/), which derives from `TextCell`
 - [`TapGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)
 
-[`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) defines a [`SearchCommand`](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommand/) property of type `ICommand` and a [`SearchCommandParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommandParameter/) property. The [`RefreshCommand`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.RefreshCommand/) property of [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) is also of type `ICommand`. 
+[`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) defines a [`SearchCommand`](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommand/) property of type `ICommand` and a [`SearchCommandParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommandParameter/) property. The [`RefreshCommand`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.RefreshCommand/) property of [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) is also of type `ICommand`.
 
 All these commands can be handled within a ViewModel in a manner that doesn't depend on the particular user-interface object in the View.
 
@@ -53,7 +53,7 @@ To use the command interface, your ViewModel contains properties of type `IComma
 public ICommand MyCommand { private set; get; }
 ```
 
-The ViewModel must also reference a class that implements the `ICommand` interface. This class will be described shortly. In the View, the `Command` property of a `Button` is bound to that property: 
+The ViewModel must also reference a class that implements the `ICommand` interface. This class will be described shortly. In the View, the `Command` property of a `Button` is bound to that property:
 
 ```xaml
 <Button Text="Execute command"
@@ -132,7 +132,7 @@ public class PersonViewModel : INotifyPropertyChanged
 }
 ```
 
-The `PersonCollectionViewModel` shown below creates new objects of type `PersonViewModel` and allows the user to fill in the data. For that purpose, the class defines properties `IsEditing` of type `bool` and `PersonEdit` of type `PersonViewModel`. In addition, the class defines three properties of type `ICommand` and a property named `Persons` of type `IList<PersonViewModel>`: 
+The `PersonCollectionViewModel` shown below creates new objects of type `PersonViewModel` and allows the user to fill in the data. For that purpose, the class defines properties `IsEditing` of type `bool` and `PersonEdit` of type `PersonViewModel`. In addition, the class defines three properties of type `ICommand` and a property named `Persons` of type `IList<PersonViewModel>`:
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -195,7 +195,7 @@ Before examining the constructor of the `PersonCollectionViewModel` class, let's
         <Grid.BindingContext>
             <local:PersonCollectionViewModel />
         </Grid.BindingContext>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -212,7 +212,7 @@ Before examining the constructor of the `PersonCollectionViewModel` class, let's
         <!-- Entry Form -->
         <Grid Grid.Row="1"
               IsEnabled="{Binding IsEditing}">
-            
+
             <Grid BindingContext="{Binding PersonEdit}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -226,11 +226,11 @@ Before examining the constructor of the `PersonCollectionViewModel` class, let's
                 </Grid.ColumnDefinitions>
 
                 <Label Text="Name: " Grid.Row="0" Grid.Column="0" />
-                <Entry Text="{Binding Name}" 
+                <Entry Text="{Binding Name}"
                        Grid.Row="0" Grid.Column="1" />
 
                 <Label Text="Age: " Grid.Row="1" Grid.Column="0" />
-                <StackLayout Orientation="Horizontal" 
+                <StackLayout Orientation="Horizontal"
                              Grid.Row="1" Grid.Column="1">
                     <Stepper Value="{Binding Age}"
                              Maximum="100" />
@@ -311,7 +311,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
     {
         (SubmitCommand as Command).ChangeCanExecute();
     }
-    
+
     void RefreshCanExecutes()
     {
         (NewCommand as Command).ChangeCanExecute();
@@ -355,9 +355,9 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
             },
             canExecute: () =>
             {
-                return PersonEdit != null && 
-                       PersonEdit.Name != null && 
-                       PersonEdit.Name.Length > 1 && 
+                return PersonEdit != null &&
+                       PersonEdit.Name != null &&
+                       PersonEdit.Name.Length > 1 &&
                        PersonEdit.Age > 0;
             });
 
@@ -369,7 +369,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 }
 ```
 
-The `canExecute` function for `SubmitCommand` is called every time there's a property changed in the `PersonViewModel` object being edited. It returns `true` only when the `Name` property is at least one character long, and `Age` is greater than 0. At that time, the **Submit** button becomes enabled. 
+The `canExecute` function for `SubmitCommand` is called every time there's a property changed in the `PersonViewModel` object being edited. It returns `true` only when the `Name` property is at least one character long, and `Age` is greater than 0. At that time, the **Submit** button becomes enabled.
 
 The `execute` function for **Submit** removes the property-changed handler from the `PersonViewModel`, adds the object to the `Persons` collection, and returns everything to initial conditions.
 
@@ -397,7 +397,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
             canExecute: () =>
             {
                 return IsEditing;
-            }); 
+            });
     }
 
     ···
@@ -413,7 +413,7 @@ It isn't necessary to define the `execute` and `canExecute` methods as lambda fu
 
 ## Using Command Parameters
 
-It is sometimes convenient for one or more buttons (or other user-interface objects) to share the same `ICommand` property in the ViewModel. In this case, you use the `CommandParameter` property to distinguish between the buttons. 
+It is sometimes convenient for one or more buttons (or other user-interface objects) to share the same `ICommand` property in the ViewModel. In this case, you use the `CommandParameter` property to distinguish between the buttons.
 
 You can continue to use the `Command` class for these shared `ICommand` properties. The class defines an [alternative constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Command.Command/p/System.Action%7BSystem.Object%7D/System.Func%7BSystem.Object,System.Boolean%7D/) that accepts `execute` and `canExecute` methods with parameters of type `Object`. This is how the `CommandParameter` is passed to these methods.
 
@@ -438,7 +438,7 @@ The **Decimal Keyboard** page illustrates this technique by showing how to imple
         <Grid.BindingContext>
             <local:DecimalKeypadViewModel />
         </Grid.BindingContext>
-        
+
         <Grid.Resources>
             <ResourceDictionary>
                 <Style TargetType="Button">
@@ -461,51 +461,51 @@ The **Decimal Keyboard** page illustrates this technique by showing how to imple
                 Command="{Binding ClearCommand}" />
 
         <Button Text="&#x21E6;"
-                Grid.Row="1" Grid.Column="2" 
+                Grid.Row="1" Grid.Column="2"
                 Command="{Binding BackspaceCommand}" />
 
         <Button Text="7"
-                Grid.Row="2" Grid.Column="0" 
+                Grid.Row="2" Grid.Column="0"
                 Command="{Binding DigitCommand}"
                 CommandParameter="7" />
 
         <Button Text="8"
-                Grid.Row="2" Grid.Column="1" 
+                Grid.Row="2" Grid.Column="1"
                 Command="{Binding DigitCommand}"
                 CommandParameter="8" />
-        
+
         <Button Text="9"
-                Grid.Row="2" Grid.Column="2" 
+                Grid.Row="2" Grid.Column="2"
                 Command="{Binding DigitCommand}"
                 CommandParameter="9" />
 
         <Button Text="4"
-                Grid.Row="3" Grid.Column="0" 
+                Grid.Row="3" Grid.Column="0"
                 Command="{Binding DigitCommand}"
                 CommandParameter="4" />
 
         <Button Text="5"
-                Grid.Row="3" Grid.Column="1" 
+                Grid.Row="3" Grid.Column="1"
                 Command="{Binding DigitCommand}"
                 CommandParameter="5" />
 
         <Button Text="6"
-                Grid.Row="3" Grid.Column="2" 
+                Grid.Row="3" Grid.Column="2"
                 Command="{Binding DigitCommand}"
                 CommandParameter="6" />
 
         <Button Text="1"
-                Grid.Row="4" Grid.Column="0" 
+                Grid.Row="4" Grid.Column="0"
                 Command="{Binding DigitCommand}"
                 CommandParameter="1" />
 
         <Button Text="2"
-                Grid.Row="4" Grid.Column="1" 
+                Grid.Row="4" Grid.Column="1"
                 Command="{Binding DigitCommand}"
                 CommandParameter="2" />
 
         <Button Text="3"
-                Grid.Row="4" Grid.Column="2" 
+                Grid.Row="4" Grid.Column="2"
                 Command="{Binding DigitCommand}"
                 CommandParameter="3" />
 
@@ -515,7 +515,7 @@ The **Decimal Keyboard** page illustrates this technique by showing how to imple
                 CommandParameter="0" />
 
         <Button Text="&#x00B7;"
-                Grid.Row="5" Grid.Column="2" 
+                Grid.Row="5" Grid.Column="2"
                 Command="{Binding DigitCommand}"
                 CommandParameter="." />
     </Grid>
@@ -528,7 +528,7 @@ Here's the program in action:
 
 [![Decimal Keyboard](commanding-images/decimalkeyboard-small.png "Decimal Keyboard")](commanding-images/decimalkeyboard-large.png#lightbox "Decimal Keyboard")
 
-Notice that the button for the decimal point in all three screenshots is disabled because the entered number already contains a decimal point. 
+Notice that the button for the decimal point in all three screenshots is disabled because the entered number already contains a decimal point.
 
 The `DecimalKeypadViewModel` defines an `Entry` property of type `string` (which is the only property that triggers a `PropertyChanged` event) and three properties of type `ICommand`:
 
@@ -583,7 +583,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
             });
 
         ···
-    
+
     }
 
     void RefreshCanExecutes()
@@ -593,7 +593,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
     }
 
     ···
-    
+
 }
 ```
 
@@ -634,7 +634,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
     }
 
     ···
-    
+
 }
 ```
 
@@ -670,13 +670,13 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
     }
 
     ···
-    
+
 }
 ```
 
 The `execute` method appends the string argument to the `Entry` property. However, if the result begins with a zero (but not a zero and a decimal point) then that initial zero must be removed using the `Substring` function.
 
-The `canExecute` method returns `false` only if the argument is the decimal point (indicating that the decimal point is being pressed) and `Entry` already contains a decimal point. 
+The `canExecute` method returns `false` only if the argument is the decimal point (indicating that the decimal point is being pressed) and `Entry` already contains a decimal point.
 
 All the `execute` methods call `RefreshCanExecutes`, which then calls `ChangeCanExecute` for both `DigitCommand` and `ClearCommand`. This ensures that the decimal point and backspace buttons are enabled or disabled based on the current sequence of entered digits.
 
@@ -749,13 +749,13 @@ public partial class MainPage : ContentPage
 }
 ```
 
-The constructor sets the `NavigateCommand` property to an `execute` method that instantiates the `System.Type` parameter and then navigates to it. Because the `PushAsync` call requires an `await` operator, the `execute` method must be flagged as asynchronous. This is accomplished with the `async` keyword before the parameter list. 
+The constructor sets the `NavigateCommand` property to an `execute` method that instantiates the `System.Type` parameter and then navigates to it. Because the `PushAsync` call requires an `await` operator, the `execute` method must be flagged as asynchronous. This is accomplished with the `async` keyword before the parameter list.
 
 The constructor also sets the `BindingContext` of the page to itself so that the bindings reference the `NavigateCommand` in this class.
 
 The order of the code in this constructor makes a difference: The `InitializeComponent` call causes the XAML to be parsed, but at that time the binding to a property named `NavigateCommand` cannot be resolved because `BindingContext` is set to `null`. If the `BindingContext` is set in the constructor *before* `NavigateCommand` is set, then the binding can be resolved when `BindingContext` is set, but at that time, `NavigateCommand` is still `null`. Setting `NavigateCommand` after `BindingContext` will have no effect on the binding because a change to `NavigateCommand` doesn't fire a `PropertyChanged` event, and the binding doesn't know that `NavigateCommand` is now valid.
 
-Setting both `NavigateCommand` and `BindingContext` (in any order) prior to the call to `InitializeComponent` will work because both components of the binding are set when the XAML parser encounters the binding definition. 
+Setting both `NavigateCommand` and `BindingContext` (in any order) prior to the call to `InitializeComponent` will work because both components of the binding are set when the XAML parser encounters the binding definition.
 
 Data bindings can sometimes be tricky, but as you've seen in this series of articles, they are powerful and versatile, and help greatly to organize your code by separating underlying logic from the user interface.
 

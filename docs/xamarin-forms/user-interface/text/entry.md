@@ -1,6 +1,6 @@
 ---
-title: "Entry"
-description: "Single-line text or password input"
+title: "Xamarin.Forms Entry"
+description: "This article explains how to use the Xamarin.Forms Entry class to accept single-line text or password input in an application."
 ms.prod: xamarin
 ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 05/31/2018
 ---
 
-# Entry
+# Xamarin.Forms Entry
 
 _Single-line text or password input_
 

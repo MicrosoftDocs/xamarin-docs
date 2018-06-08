@@ -1,5 +1,5 @@
 ---
-title: "Master-Detail Page"
+title: "Xamarin.Forms Master-Detail Page"
 description: "The Xamarin.Forms MasterDetailPage is a page that manages two related pages of information – a master page that presents items, and a detail page that presents details about items on the master page. This article explains how to use a MasterDetailPage and navigate between its pages of information."
 ms.prod: xamarin
 ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 12/01/2017
 ---
 
-# Master-Detail Page
+# Xamarin.Forms Master-Detail Page
 
 _The Xamarin.Forms MasterDetailPage is a page that manages two related pages of information – a master page that presents items, and a detail page that presents details about items on the master page. This article explains how to use a MasterDetailPage and navigate between its pages of information._
 

@@ -1,6 +1,6 @@
 ---
-title: "WebView"
-description: "Present local or network web content and documents."
+title: "Xamarin.Forms WebView"
+description: "This article explains how to use the Xamarin.Forms WebView class to present local or network web content and documents to users."
 ms.prod: xamarin
 ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 08/09/2016
 ---
 
-# WebView
+# Xamarin.Forms WebView
 
 [WebView](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) is a view for displaying web and HTML content in your app. Unlike `OpenUri`, which takes the user to the web browser on the device, `WebView` displays the HTML content inside your app.
 

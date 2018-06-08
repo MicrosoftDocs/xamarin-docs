@@ -1,6 +1,6 @@
 ---
-title: "Styles"
-description: "Style text in Xamarin.Forms"
+title: "Xamarin.Forms Text Styles"
+description: "This article explains how to styling text in Xamarin.Forms applications. Styles can be defined once and used by many views, but a style can only be used with views of one type."
 ms.prod: xamarin
 ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
 ms.technology: xamarin-forms
@@ -9,21 +9,12 @@ ms.author: dabritch
 ms.date: 05/22/2017
 ---
 
-# Styles
+# Xamarin.Forms Text Styles
 
-_Style text in Xamarin.Forms_
-
+_Styling text in Xamarin.Forms_
 
 Styles can be used to adjust the appearance of labels, entries, and editors. Styles can be defined once and used by many views, but a style can only be used with views of one type.
-Styles can be given a `Key` and applied selectively using a specific
-    control's `Style` property.
-
-This article covers the following topics:
-
-- **[Built-In Styles](#Built-In_Styles)** &ndash; use built-in styles to style text-based views throughout your app.
-- **[Custom Styles](#Custom_Styles)** &ndash; define custom styles when the built-in options aren't enough.
-- **[Applying Styles](#Applying_Styles)** &ndash; apply both custom and built-in styles to your views.
-- **[Accessibility](#Accessibility)** &ndash; ensure that text respects accessibility settings.
+Styles can be given a `Key` and applied selectively using a specific control's `Style` property.
 
 <a name="Built-In_Styles" />
 

@@ -1,6 +1,6 @@
 ---
-title: "StackLayout"
-description: "Use StackLayout to present collections of views over one dimension."
+title: "Xamarin.Forms StackLayout"
+description: "This article explains how to use the Xamarin.Forms StackLayout class to present collections of views over one dimension."
 ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 11/25/2015
 ---
 
-# StackLayout
+# Xamarin.Forms StackLayout
 
 `StackLayout` organizes views in a one-dimensional line ("stack"), either horizontally or vertically. Views in a `StackLayout` can be sized based on the space in the layout using layout options. Positioning is determined by the order views were added to the layout and the layout options of the views.
 

@@ -1,6 +1,6 @@
 ---
-title: "Picker"
-description: "The Picker view is a control for selecting a text item from a list of data."
+title: "Xamarin.Forms Picker"
+description: "The Xamarin.Forms Picker displays a short list of items, from which the user can select an item. This article explains how to use the Picker class to select a text item from a list of data."
 ms.prod: xamarin
 ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 06/04/2018
 ---
 
-# Picker
+# Xamarin.Forms Picker
 
 _The Picker view is a control for selecting a text item from a list of data._
 

@@ -1,5 +1,6 @@
 ---
 title: "Summary of Chapter 22. Animation"
+description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 22. Animation"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695

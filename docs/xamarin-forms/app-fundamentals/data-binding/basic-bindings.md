@@ -1,6 +1,6 @@
 ---
-title: "Basic Bindings"
-description: "Data-binding targets, sources, and the binding context"
+title: "Xamarin.Forms Basic Bindings"
+description: "This article explains how to use Xamarin.Forms data binding, which links a pair of properties between two objects, at least one of which is usually a user-interface object. These two objects are called the target and the source."
 ms.prod: xamarin
 ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 01/05/2018
 ---
 
-# Basic Bindings
+# Xamarin.Forms Basic Bindings
 
 A Xamarin.Forms data binding links a pair of properties between two objects, at least one of which is usually a user-interface object. These two objects are called the *target* and the *source*:
 
@@ -43,7 +43,7 @@ Although data bindings are usually specified entirely in XAML, it's instructive 
 
 The `Slider` is set for a range of 0 to 360. The intent of this program is to rotate the `Label` by manipulating the `Slider`.
 
-Without data bindings, you would set the `ValueChanged` event of the `Slider` to an event handler that accesses the `Value` property of the `Slider` and sets that value to the `Rotation` property of the `Label`. The data binding automates that job; the event handler and the code within it are no longer necessary. 
+Without data bindings, you would set the `ValueChanged` event of the `Slider` to an event handler that accesses the `Value` property of the `Slider` and sets that value to the `Rotation` property of the `Label`. The data binding automates that job; the event handler and the code within it are no longer necessary.
 
 You can set a binding on an instance of any class that derives from [`BindableObject`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/), which includes `Element`, `VisualElement`, `View`, and `View` derivatives.  The binding is always set on the target object. The binding references the source object. To set the data binding, use the following two members of the target class:
 
@@ -69,7 +69,7 @@ public partial class BasicCodeBindingPage : ContentPage
 
 The `Label` object is the binding target so that's the object on which this property is set and on which the method is called. The `BindingContext` property indicates the binding source, which is the `Slider`.
 
-The `SetBinding` method is called on the binding target but specifies both the target property and the source property. The target property is specified as a `BindableProperty` object: `Label.RotationProperty`. The source property is specified as a string and indicates the `Value` property of `Slider`. 
+The `SetBinding` method is called on the binding target but specifies both the target property and the source property. The target property is specified as a `BindableProperty` object: `Label.RotationProperty`. The source property is specified as a string and indicates the `Value` property of `Slider`.
 
 The `SetBinding` method reveals one of the most important rules of data bindings:
 
@@ -116,7 +116,7 @@ The **Basic Xaml Binding** page is identical to **Basic Code Binding** except th
 Just as in code, the data binding is set on the target object, which is the `Label`. Two XAML markup extensions are involved. These are instantly recognizable by the curly brace delimiters:
 
 - The `x:Reference` markup extension is required to reference the source object, which is the `Slider` named `slider`.
-- The `Binding` markup extension links the `Rotation` property of the `Label` to the `Value` property of the `Slider`. 
+- The `Binding` markup extension links the `Rotation` property of the `Label` to the `Value` property of the `Slider`.
 
 See the article [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md) for more information about XAML markup extensions. The `x:Reference` markup extension is supported by the [`ReferenceExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.ReferenceExtension/) class; `Binding` is supported by the [`BindingExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.BindingExtension/) class. As the XML namespace prefixes indicate, `x:Reference` is part of the XAML 2009 specification, while `Binding` is part of Xamarin.Forms. Notice that no quotation marks appear within the curly braces.
 
@@ -181,13 +181,13 @@ public partial class AlternativeCodeBindingPage : ContentPage
 }
 ```
 
-The `Binding` constructor has 6 parameters, so the `source` parameter is specified with a named argument. The argument is the `slider` object. 
+The `Binding` constructor has 6 parameters, so the `source` parameter is specified with a named argument. The argument is the `slider` object.
 
 Running this program might be a little surprising:
 
 [![Alternative Code Binding](basic-bindings-images/alternativecodebinding-small.png "Alternative Code Binding")](basic-bindings-images/alternativecodebinding-large.png#lightbox "Alternative Code Binding")
 
-The iOS screen on the left shows how the screen looks when the page first appears. Where is the `Label`? 
+The iOS screen on the left shows how the screen looks when the page first appears. Where is the `Label`?
 
 The problem is that the `Slider` has an initial value of 0. This causes the `Scale` property of the `Label` to be also set to 0, overriding its default value of 1. This results in the `Label` being initially invisible. As the Android and Universal Windows Platform (UWP) screenshots demonstrate, you can manipulate the `Slider` to make the `Label` appear again, but its initial disappearance is disconcerting.
 
@@ -242,7 +242,7 @@ Although XAML markup extensions are usually delimited by curly braces, they can 
                  Path="Value" />
     </Label.Scale>
 </Label>
-``` 
+```
 
 Now the `Source` and `Path` properties are regular XAML attributes: The values appear within quotation marks and the attributes are not separated by a comma. The `x:Reference` markup extension can also become an object element:
 
@@ -263,9 +263,9 @@ Now the `Source` and `Path` properties are regular XAML attributes: The values a
 
 This syntax isn't common, but sometimes it's necessary when complex objects are involved.
 
-The examples shown so far set the `BindingContext` property and the `Source` property of `Binding` to an `x:Reference` markup extension to reference another view on the page. These two properties are of type `Object`, and they can be set to any object that includes properties that are suitable for binding sources. 
+The examples shown so far set the `BindingContext` property and the `Source` property of `Binding` to an `x:Reference` markup extension to reference another view on the page. These two properties are of type `Object`, and they can be set to any object that includes properties that are suitable for binding sources.
 
-In the articles ahead, you'll discover that you can set the `BindingContext` or `Source` property to an `x:Static` markup extension to reference the value of a static property or field, or a `StaticResource` markup extension to reference an object stored in a resource dictionary, or directly to an object, which is generally (but not always) an instance of a ViewModel. 
+In the articles ahead, you'll discover that you can set the `BindingContext` or `Source` property to an `x:Static` markup extension to reference the value of a static property or field, or a `StaticResource` markup extension to reference an object stored in a resource dictionary, or directly to an object, which is generally (but not always) an instance of a ViewModel.
 
 The `BindingContext` property can also be set to a `Binding` object so that the `Source` and `Path` properties of `Binding` define the binding context.
 
@@ -290,7 +290,7 @@ The **Binding Context Inheritance** sample is a simple demonstration of the inhe
 
         <StackLayout VerticalOptions="FillAndExpand"
                      BindingContext="{x:Reference slider}">
-            
+
             <Label Text="TEXT"
                    FontSize="80"
                    HorizontalOptions="Center"
@@ -305,14 +305,14 @@ The **Binding Context Inheritance** sample is a simple demonstration of the inhe
                      Rotation="{Binding Value}" />
         </StackLayout>
 
-        <Slider x:Name="slider" 
+        <Slider x:Name="slider"
                 Maximum="360" />
-        
+
     </StackLayout>
 </ContentPage>
 ```
 
-The `BindingContext` property of the `StackLayout` is set to the `slider` object. This binding context is inherited by both the `Label` and the `BoxView`, both of which have their `Rotation` properties set to the `Value` property of the `Slider`: 
+The `BindingContext` property of the `StackLayout` is set to the `slider` object. This binding context is inherited by both the `Label` and the `BoxView`, both of which have their `Rotation` properties set to the `Value` property of the `Slider`:
 
 [![Binding Context Inheritance](basic-bindings-images/bindingcontextinheritance-small.png "Binding Context Inheritance")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "Binding Context Inheritance")
 

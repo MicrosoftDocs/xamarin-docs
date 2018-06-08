@@ -1,5 +1,5 @@
 ---
-title: "Behaviors"
+title: "Xamarin.Forms Behaviors"
 description: "Behaviors lets you add functionality to user interface controls without having to subclass them. Behaviors are written in code and added to controls in XAML or code."
 ms.prod: xamarin
 ms.assetid: 42E32AD7-8E3B-48B3-B402-E75B758DA913
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 04/06/2016
 ---
 
-# Behaviors
+# Xamarin.Forms Behaviors
 
 _Behaviors lets you add functionality to user interface controls without having to subclass them. Behaviors are written in code and added to controls in XAML or code._
 
@@ -28,4 +28,3 @@ Xamarin.Forms behaviors are created by deriving from the [`Behavior`](https://de
 ## [Reusable Behaviors](reusable/index.md)
 
 Behaviors are reusable across more than one application. These articles explain how to create useful behaviors to perform commonly used functionality.
-

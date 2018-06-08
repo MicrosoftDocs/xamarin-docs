@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms XAML Basics"
-description: "Getting started with cross-platform markup for mobile devices"
+description: "This guide explains how to get started with cross-platform XAML for mobile devices. XAML allows developers to define user interfaces in Xamarin.Forms applications using markup rather than code."
 ms.prod: xamarin
 ms.assetid: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF
 ms.technology: xamarin-forms

@@ -1,6 +1,6 @@
 ---
-title: "MessagingCenter"
-description: "Xamarin.Forms includes a simple messaging service to send and receive messages."
+title: "Xamarin.Forms MessagingCenter"
+description: "This article explains how to use the Xamarin.Forms MessagingCenter to send and receive messages, to reduce coupling between classes such as view models."
 ms.prod: xamarin
 ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 07/01/2016
 ---
 
-# MessagingCenter
+# Xamarin.Forms MessagingCenter
 
 _Xamarin.Forms includes a simple messaging service to send and receive messages._
 

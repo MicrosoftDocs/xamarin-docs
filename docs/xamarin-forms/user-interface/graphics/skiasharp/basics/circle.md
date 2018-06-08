@@ -1,6 +1,6 @@
 ---
-title: "Drawing a Simple Circle"
-description: "Learn the basics of SkiaSharp drawing, including canvases and paint"
+title: "Drawing a Simple Circle in SkiaSharp"
+description: "This article explains the basics of SkiaSharp drawing, including canvases and paint, in Xamarin.Forms applications, and demonstrates this with sample code."
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
@@ -9,7 +9,7 @@ ms.author: chape
 ms.date: 03/10/2017
 ---
 
-# Drawing a Simple Circle
+# Drawing a Simple Circle in SkiaSharp
 
 _Learn the basics of SkiaSharp drawing, including canvases and paint_
 

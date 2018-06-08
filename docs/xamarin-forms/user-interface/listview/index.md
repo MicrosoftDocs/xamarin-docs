@@ -1,6 +1,6 @@
 ---
-title: "ListView"
-description: "Present your data in beautiful, interactive lists."
+title: "Xamarin.Forms ListView"
+description: "This guide introduces the Xamarin.Forms ListView, which can be used to present data in beautiful, interactive lists."
 ms.prod: xamarin
 ms.assetid: FEFDF7E0-720F-4BD1-863F-4477226AA695
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 12/14/2015
 ---
 
-# ListView
+# Xamarin.Forms ListView
 
 ListView is a view for presenting lists of data, especially long lists that require scrolling. This guide will show you how to use ListView:
 

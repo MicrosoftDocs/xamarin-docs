@@ -1,6 +1,6 @@
 ---
-title: "Platform Features"
-description: "Take advantage of platform-specific features with Xamarin.Forms"
+title: "Xamarin.Forms Platform Features"
+description: "This guide explains how to take advantage of platform-specific features in Xamarin.Forms applications by using a variety of techniques."
 ms.prod: xamarin
 ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 04/06/2018
 ---
 
-# Platform Features
+# Xamarin.Forms Platform Features
 
 Xamarin.Forms is extensible and lets you incorporate platform-specific features using [effects](~/xamarin-forms/app-fundamentals/effects/index.md), [custom renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md), the [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md), the [MessagingCenter](~/xamarin-forms/app-fundamentals/messaging-center.md), and more.
 

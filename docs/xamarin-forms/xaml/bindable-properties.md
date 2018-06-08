@@ -1,6 +1,6 @@
 ---
 title: "Bindable Properties"
-description: "In Xamarin.Forms, the functionality of common language runtime (CLR) properties is extended by bindable properties. A bindable property is a special type of property, where the property's value is tracked by the Xamarin.Forms property system. This article provides an introduction to bindable properties, and demonstrates how to create and consume them."
+description: "This article provides an introduction to bindable properties, and demonstrates how to create and consume them."
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
 ms.technology: xamarin-forms

@@ -1,6 +1,6 @@
 ---
 title: "ListView Performance"
-description: "Ensure great performance with your ListView-based app."
+description: "Although ListView is a powerful view for displaying data, it has some limitations. This article explains how to ensure great performance with a Xamarin.Forms ListView in an application."
 ms.prod: xamarin
 ms.assetid: 1B085639-652C-4862-86EB-5D55D32B9395
 ms.technology: xamarin-forms
@@ -14,11 +14,6 @@ ms.date: 12/11/2017
 When writing mobile applications, performance matters. Users have come to expect smooth scrolling and fast load times. Failing to meet your users' expectations will cost you ratings in the application store, or in the case of a line-of-business application, cost your organization time and money.
 
 Although [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) is a powerful view for displaying data, it has some limitations. Scrolling performance can suffer when using custom cells, especially when they contain deeply nested view hierarchies or use certain layouts that require a lot of measurement. Fortunately, there are techniques you can use to avoid poor performance.
-
-The following topics are discussed in this article:
-
-- **[Caching Strategy](#cachingstrategy)**
-- **[Improving ListView Performance](#improving-performance)**
 
 <a name="cachingstrategy" />
 

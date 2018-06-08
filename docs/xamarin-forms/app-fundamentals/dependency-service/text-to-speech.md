@@ -1,6 +1,6 @@
 ---
 title: "Implementing Text-to-Speech"
-description: "Use DependencyService to call into each platform's native text-to-speech API"
+description: "This article explains how to use the Xamarin.Forms DependencyService class to call into each platform's native text-to-speech API."
 ms.prod: xamarin
 ms.assetid: 1D6164F9-4ECE-43A6-B583-1F5D5EFC1DDF
 ms.technology: xamarin-forms

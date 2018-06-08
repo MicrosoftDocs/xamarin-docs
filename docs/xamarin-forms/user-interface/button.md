@@ -11,7 +11,7 @@ ms.date: 06/01/2018
 
 # Xamarin.Forms Button
 
-_The Button responds to a tap or click that directs an application to carry out a particular task._ 
+_The Button responds to a tap or click that directs an application to carry out a particular task._
 
 The [`Button`](xref:Xamarin.Forms.Button) is the most fundamental interactive control in all of Xamarin.Forms. The `Button` usually displays a short text string indicating a command, but it can also display a bitmap image, or a combination of text and an image. The user presses the `Button` with a finger or clicks it with a mouse to initiate that command.
 
@@ -19,7 +19,7 @@ Most of the topics discussed below correspond to pages in the [**ButtonDemos**](
 
 ## Handling button clicks
 
-`Button` defines a [`Clicked`](xref:Xamarin.Forms.Button.Clicked) event that is fired when the user taps the `Button` with a finger or mouse pointer. The event is fired when the finger or mouse button is released from the surface of the `Button`. The `Button` must have its [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) property set to `true` for it to respond to taps. 
+`Button` defines a [`Clicked`](xref:Xamarin.Forms.Button.Clicked) event that is fired when the user taps the `Button` with a finger or mouse pointer. The event is fired when the finger or mouse button is released from the surface of the `Button`. The `Button` must have its [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) property set to `true` for it to respond to taps.
 
 The **Basic Button Click** page in the [**ButtonDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) sample demonstrates how to instantiate a `Button` in XAML and handle its `Clicked` event. The **BasicButtonClickPage.xaml** file contains a `StackLayout` with both a `Label` and a `Button`:
 
@@ -29,18 +29,18 @@ The **Basic Button Click** page in the [**ButtonDemos**](https://developer.xamar
              x:Class="ButtonDemos.BasicButtonClickPage"
              Title="Basic Button Click">
     <StackLayout>
-        
+
         <Label x:Name="label"
                Text="Click the Button below"
                FontSize="Large"
-               VerticalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand"
                HorizontalOptions="Center" />
 
         <Button Text="Click to Rotate Text!"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
                 Clicked="OnButtonClicked" />
-     
+
     </StackLayout>
 </ContentPage>
 ```
@@ -131,7 +131,7 @@ button.Clicked += OnButtonClicked;
 
 ## Disabling the button
 
-Sometimes an application is in a particular state where a particular `Button` click is not a valid operation. In those cases, the `Button` should be disabled by setting its `IsEnabled` property to `false`. The classic example is an `Entry` control for a filename accompanied by a file-open `Button`: The `Button` should be enabled only if some text has been typed into the `Entry`. 
+Sometimes an application is in a particular state where a particular `Button` click is not a valid operation. In those cases, the `Button` should be disabled by setting its `IsEnabled` property to `false`. The classic example is an `Entry` control for a filename accompanied by a file-open `Button`: The `Button` should be enabled only if some text has been typed into the `Entry`.
 You can use a `DataTrigger` for this task, as shown in the [**Data Triggers**](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers) article.
 
 ## Using the command interface
@@ -195,15 +195,15 @@ The **BasicButtonCommand.xaml** file sets its `BindingContext` to an instance of
              xmlns:local="clr-namespace:ButtonDemos"
              x:Class="ButtonDemos.BasicButtonCommandPage"
              Title="Basic Button Command">
-    
+
     <ContentPage.BindingContext>
         <local:CommandDemoViewModel />
     </ContentPage.BindingContext>
-    
+
     <StackLayout>
         <Label Text="{Binding Number, StringFormat='Value is now {0}'}"
                FontSize="Large"
-               VerticalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand"
                HorizontalOptions="Center" />
 
         <Button Text="Multiply by 2"
@@ -351,7 +351,7 @@ The `Pressed` and `Released` events are not often used, but they can be used for
         <Label x:Name="label"
                Text="Press and hold the Button below"
                FontSize="Large"
-               VerticalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand"
                HorizontalOptions="Center" />
 
         <Button Text="Press to Rotate Text!"
@@ -402,7 +402,7 @@ The result is that the `Label` only rotates while a finger is in contact with th
 
 [![Press and Release Button](button-images/PressAndReleaseButton.png "Press and Release Button")](button-images/PressAndReleaseButton-Large.png)
 
-This kind of behavior has applications for games: A finger held on a `Button` might make an on screen object move in a particular direction. 
+This kind of behavior has applications for games: A finger held on a `Button` might make an on screen object move in a particular direction.
 
 <a name="button-appearance" />
 
@@ -416,7 +416,7 @@ The `Button` inherits or defines several properties that affect its appearance:
 - [`FontFamily`](xref:Xamarin.Forms.Button.FontFamily) is the font family used for the text
 - [`FontSize`](xref:Xamarin.Forms.Button.FontSize) is the size of the text
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes) indicates if the text is italic or bold
-- [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) is the width of the border 
+- [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) is the width of the border
 - [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) rounds the corners
 
 The effects of six of these properties (excluding `FontFamily` and `FontAttributes`) are demonstrated in the **Button Appearance** page. Another property, [`Image`](xref:Xamarin.Forms.Button.Image), is discussed in the section [**Using bitmaps with button**](#image-button).
@@ -443,7 +443,7 @@ All of the views and data bindings in the **Button Appearance** page are defined
 
         <StackLayout BindingContext="{x:Reference button}"
                      Padding="10">
-            
+
             <Slider x:Name="fontSizeSlider"
                     Maximum="48"
                     Minimum="1"
@@ -458,8 +458,8 @@ All of the views and data bindings in the **Button Appearance** page are defined
                     Minimum="-1"
                     Maximum="12"
                     Value="{Binding BorderWidth}" />
-            
-            <Label Text="{Binding Source={x:Reference borderWidthSlider}, 
+
+            <Label Text="{Binding Source={x:Reference borderWidthSlider},
                                   Path=Value,
                                   StringFormat='BorderWidth = {0:F0}'}"
                    HorizontalTextAlignment="Center" />
@@ -469,7 +469,7 @@ All of the views and data bindings in the **Button Appearance** page are defined
                     Maximum="24"
                     Value="{Binding CornerRadius}" />
 
-            <Label Text="{Binding Source={x:Reference cornerRadiusSlider}, 
+            <Label Text="{Binding Source={x:Reference cornerRadiusSlider},
                                   Path=Value,
                                   StringFormat='CornerRadius = {0:F0}'}"
                    HorizontalTextAlignment="Center" />
@@ -480,7 +480,7 @@ All of the views and data bindings in the **Button Appearance** page are defined
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -538,7 +538,7 @@ On UWP, selecting a `CornerRadius` that exceeds half the height of the `Button` 
 
 ## Creating a toggle button
 
-It is possible to subclass `Button` so that it works like an on-off switch: Tap the button once to toggle the button on and tap it 
+It is possible to subclass `Button` so that it works like an on-off switch: Tap the button once to toggle the button on and tap it
 again to toggle it off.
 
 The following `ToggleButton` class derives from `Button` and defines a new event named `Toggled` and a Boolean property named `IsToggled`. These are the same two properties defined by the Xamarin.Forms [`Switch`](xref:Xamarin.Forms.Switch):
@@ -583,13 +583,13 @@ class ToggleButton : Button
 }
 ```
 
-The `ToggleButton` constructor attaches a handler to the `Clicked` event so that it can change the value of the `IsToggled` property. The `OnIsToggledChanged` method fires the `Toggled` event. 
+The `ToggleButton` constructor attaches a handler to the `Clicked` event so that it can change the value of the `IsToggled` property. The `OnIsToggledChanged` method fires the `Toggled` event.
 
-The last line of the `OnIsToggledChanged` method calls the static `VisualStateManager.GoToState` method with the two text strings "ToggledOn" and "ToggledOff". You can read about this method and how your application can respond to visual states in the article [**The Xamarin.Forms Visual State Manager**](~/xamarin-forms/user-interface/visual-state-manager.md). 
+The last line of the `OnIsToggledChanged` method calls the static `VisualStateManager.GoToState` method with the two text strings "ToggledOn" and "ToggledOff". You can read about this method and how your application can respond to visual states in the article [**The Xamarin.Forms Visual State Manager**](~/xamarin-forms/user-interface/visual-state-manager.md).
 
-Because `ToggleButton` makes the call to `VisualStateManager.GoToState`, the class itself doesn't need to include any additional facilities to change the button's appearance based on its `IsToggled` state. That is the responsibility of the XAML that hosts the `ToggleButton`. 
+Because `ToggleButton` makes the call to `VisualStateManager.GoToState`, the class itself doesn't need to include any additional facilities to change the button's appearance based on its `IsToggled` state. That is the responsibility of the XAML that hosts the `ToggleButton`.
 
-The **Toggle Button Demo** page contains two instances of `ToggleButton`, including Visual State Manager markup that sets the `Text`, `BackgroundColor`, and `TextColor` of the button based on the visual state: 
+The **Toggle Button Demo** page contains two instances of `ToggleButton`, including Visual State Manager markup that sets the `Text`, `BackgroundColor`, and `TextColor` of the button based on the visual state:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -598,7 +598,7 @@ The **Toggle Button Demo** page contains two instances of `ToggleButton`, includ
              xmlns:local="clr-namespace:ButtonDemos"
              x:Class="ButtonDemos.ToggleButtonDemoPage"
              Title="Toggle Button Demo">
-    
+
     <ContentPage.Resources>
         <Style TargetType="local:ToggleButton">
             <Setter Property="VerticalOptions" Value="CenterAndExpand" />
@@ -617,7 +617,7 @@ The **Toggle Button Demo** page contains two instances of `ToggleButton`, includ
                             <Setter Property="TextColor" Value="Black" />
                         </VisualState.Setters>
                     </VisualState>
-                    
+
                     <VisualState Name="ToggledOn">
                         <VisualState.Setters>
                             <Setter Property="Text" Value=" Italic On " />
@@ -639,7 +639,7 @@ The **Toggle Button Demo** page contains two instances of `ToggleButton`, includ
                             <Setter Property="TextColor" Value="Black" />
                         </VisualState.Setters>
                     </VisualState>
-                    
+
                     <VisualState Name="ToggledOn">
                         <VisualState.Setters>
                             <Setter Property="Text" Value=" Bold On " />
@@ -707,9 +707,9 @@ Here's the program running on iOS, Android, and the UWP:
 
 The `Button` class defines an [`Image`](xref:Xamarin.Forms.Button.Image) property that allows you to display a bitmap image on the `Button`, either alone or in combination with text. You can also specify how the text and image are arranged.
 
-The `Image` property is of type [`FileImageSource`](xref:Xamarin.Forms.FileImageSource), which means that the bitmaps must be stored as resources in the individual platform projects, and not in the .NET Standard library project. 
+The `Image` property is of type [`FileImageSource`](xref:Xamarin.Forms.FileImageSource), which means that the bitmaps must be stored as resources in the individual platform projects, and not in the .NET Standard library project.
 
-Each platform supported by Xamarin.Forms allows images to be stored in multiple sizes for different pixel resolutions of the various devices that the application might run on. These multiple bitmaps are named or stored in such a way that the operating system can pick the best match for the device's video display resolution. 
+Each platform supported by Xamarin.Forms allows images to be stored in multiple sizes for different pixel resolutions of the various devices that the application might run on. These multiple bitmaps are named or stored in such a way that the operating system can pick the best match for the device's video display resolution.
 
 For a bitmap on a `Button`, the best size is usually between 32 and 64 device-independent units, depending on how large you want it to be. The images used in this example are based on a size of 48 device-independent units.
 
@@ -798,7 +798,7 @@ To avoid a lot of repetitious markup in the **ImageButtonDemo.xaml** file, an im
     <FlexLayout Direction="Column"
                 JustifyContent="SpaceEvenly"
                 AlignItems="Center">
-        
+
         <FlexLayout.Resources>
             <Style TargetType="Button">
                 <Setter Property="Image">
@@ -830,7 +830,7 @@ To avoid a lot of repetitious markup in the **ImageButtonDemo.xaml** file, an im
         <Button Text="Right - 20"
                 ContentLayout="Right, 20" />
 
-        <Button Text="Bottom - 20" 
+        <Button Text="Bottom - 20"
                 ContentLayout="Bottom, 20" />
     </FlexLayout>
 </ContentPage>

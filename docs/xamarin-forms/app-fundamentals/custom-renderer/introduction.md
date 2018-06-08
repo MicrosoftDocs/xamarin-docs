@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Custom Renderers"
-description: "Custom renderers provide a powerful approach for customizing the appearance and behavior of Xamarin.Forms controls. They can be used for small styling changes or sophisticated platform-specific layout and behavior customization. This article provides an introduction to custom renderers, and outlines the process for creating a custom renderer."
+description: "This article provides an introduction to custom renderers, and outlines the process for creating a custom renderer."
 ms.prod: xamarin
 ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD
 ms.technology: xamarin-forms

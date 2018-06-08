@@ -1,5 +1,6 @@
 ---
 title: "Playing a Web video"
+description: "This article explains how to play web videos in a video player application, using Xamarin.Forms."
 ms.prod: xamarin
 ms.assetid: 75781A10-865D-4BA8-8D6B-E3DA012922BC
 ms.technology: xamarin-forms
@@ -31,7 +32,7 @@ namespace FormsVideoLibrary
             set { SetValue(SourceProperty, value); }
             get { return (VideoSource)GetValue(SourceProperty); }
         }
-        
+
         // AutoPlay property
         public static readonly BindableProperty AutoPlayProperty =
             BindableProperty.Create(nameof(AutoPlay), typeof(bool), typeof(VideoPlayer), true);
@@ -164,7 +165,7 @@ namespace FormsVideoLibrary
             if (!String.IsNullOrWhiteSpace(value))
             {
                 Uri uri;
-                return Uri.TryCreate(value, UriKind.Absolute, out uri) && uri.Scheme != "file" ? 
+                return Uri.TryCreate(value, UriKind.Absolute, out uri) && uri.Scheme != "file" ?
                                 VideoSource.FromUri(value) : VideoSource.FromResource(value);
             }
 
@@ -477,7 +478,7 @@ Similarly, you can suppress the display of the transport controls by setting the
                    AreTransportControlsEnabled="False" />
 ```
 
-If you set both properties to `false`, then the video won't begin playing and there will be no way to start it! You would need to call `Play` from the code-behind file, or to create your own transport controls as described in the article [Implementing Custom Video Transport Controls](custom-transport.md). 
+If you set both properties to `false`, then the video won't begin playing and there will be no way to start it! You would need to call `Play` from the code-behind file, or to create your own transport controls as described in the article [Implementing Custom Video Transport Controls](custom-transport.md).
 
 The **App.xaml** file includes resources for two additional videos:
 
@@ -497,7 +498,7 @@ The **App.xaml** file includes resources for two additional videos:
 
             <video:UriVideoSource x:Key="Sintel"
                                   Uri="https://archive.org/download/Sintel/sintel-2048-stereo_512kb.mp4" />
-            
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

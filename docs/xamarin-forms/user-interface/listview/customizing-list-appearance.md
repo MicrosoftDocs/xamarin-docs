@@ -1,6 +1,6 @@
 ---
-title: "List Appearance"
-description: "Customize ListViews using headers, footers, groups, and variable height cells."
+title: "Customizing ListView Appearance"
+description: "This article explains how to customize ListViews in Xamarin.Forms applications by using headers, footers, groups, and variable height cells."
 ms.prod: xamarin
 ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 03/08/2016
 ---
 
-# List Appearance
+# Customizing ListView Appearance
 
 `ListView` has options for controlling the presentation of the overall list, in addition to the underlying `ViewCell`s. Options include:
 
