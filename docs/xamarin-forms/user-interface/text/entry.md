@@ -67,8 +67,53 @@ The options for the keyboard type are:
 - **Telephone** &ndash; used when entering telephone numbers
 - **Url** &ndash; used for entering file paths and web addresses
 
+The following will create an `Entry` with keyboard type [`Keyboard.Chat`](xref:Xamarin.Forms.Keyboard.Chat) in XAML:
+
+```xaml
+<Entry Keyboard="Chat" />
+```
+
+In C#:
+
+```csharp
+var entry = new Entry { Keyboard = Keyboard.Chat };
+```
+
 There is an [example of each keyboard](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/)
 in our Recipes section.
+
+For additional keyboard scenarios not covered by the above options, the [`Keyboard`](xref:Xamarin.Forms.Keyboard) class exposes the static method [`Create`](https://docs.microsoft.com/dotnet/api/xamarin.forms.keyboard.create), taking a collection of enum flags [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) and returning a new instance of [`Keyboard`](xref:Xamarin.Forms.Keyboard).
+
+The available enum values are:
+
+- **None** &ndash; no features are added to the keyboard
+- **CapitalizeSentence** &ndash; used for capitalizing the first words of sentences
+- **Spellcheck** &ndash; used for enabling spellcheck on text entered by the user
+- **Suggestions** &ndash; used for enabling suggested word completion on text entered by the user
+- **CapitalizeWord** &ndash; used for capitalizing words entered by the user
+- **CapitalizeCharacter** &ndash; used for capitalizing each character entered by the user
+- **CapitalizeNone** &ndash; no capitalization rules are enforced to the keyboard
+- **All** &ndash; used for capitalizing the first words of sentences, performing spellcheck and enabling suggested word completions on text entered by the user
+
+The following will create an Entry in XAML with a custom keyboard that capitalizes the first words of sentences and performs spellcheck:
+
+```xaml
+<Entry>
+    <Entry.Keyboard>
+        <Keyboard x:FactoryMethod="Create">
+            <x:Arguments>
+                <KeyboardFlags>CapitalizeSentence,Spellcheck</KeyboardFlags>
+            </x:Arguments>
+        </Keyboard>
+    </Entry.Keyboard>
+</Entry>
+```
+
+In C#:
+
+```csharp
+var entry = new Entry { Keyboard = Keyboard.Create(KeyboardFlags.CapitalizeSentence | KeyboardFlags.Spellcheck) };
+```
 
 ### Enabling and Disabling Spell Checking
 
