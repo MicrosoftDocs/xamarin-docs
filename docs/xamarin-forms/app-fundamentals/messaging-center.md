@@ -25,7 +25,7 @@ Xamarin.Forms `MessagingCenter` enables view models and other components to comm
 
 There are two parts to `MessagingCenter`:
 
--  **Subscribe** - Listen for messages with a certain signature and perform some action when they are received. Mulitple subscribers can be listening for the same message.
+-  **Subscribe** - Listen for messages with a certain signature and perform some action when they are received. Multiple subscribers can be listening for the same message.
 -  **Send** - Publish a message for listeners to act upon. If no listeners have subscribed then the message is ignored.
 
 
