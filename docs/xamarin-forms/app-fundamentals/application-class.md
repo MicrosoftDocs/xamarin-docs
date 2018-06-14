@@ -167,7 +167,7 @@ The code for each platform is shown in the following sections. The latest Xamari
 
 ### iOS Project
 
-The iOS `AppDelegate` class now inherits from `FormsApplicationDelegate`. It should:
+The iOS `AppDelegate` class inherits from `FormsApplicationDelegate`. It should:
 
 * Call `LoadApplication` with an instance of the `App` class.
 
@@ -191,13 +191,12 @@ public partial class AppDelegate :
 
 ### Android Project
 
-The Android `MainActivity` now inherits from `FormsApplicationActivity`. In the `OnCreate` override the `LoadApplication` method is called with an instance of the `App` class.
+The Android `MainActivity` inherits from `FormsAppCompatActivity`. In the `OnCreate` override the `LoadApplication` method is called with an instance of the `App` class.
 
 ```csharp
-[Activity (Label = "App Lifecycle Sample", Icon = "@drawable/icon", MainLauncher = true,
+[Activity (Label = "App Lifecycle Sample", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true,
     ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-public class MainActivity :
-    global::Xamarin.Forms.Platform.Android.FormsApplicationActivity // superclass new in 1.3
+public class MainActivity : FormsAppCompatActivity
 {
     protected override void OnCreate (Bundle bundle)
     {
@@ -210,22 +209,12 @@ public class MainActivity :
 }
 ```
 
-> [!NOTE]
-> There is a newer [`FormsAppCompatActivity`](~/xamarin-forms/platform/android/appcompat.md)
-> base class that can be used to better support Android Material Design.
-> This will become the default Android template in future, but you can follow
-> [these instructions](~/xamarin-forms/platform/android/appcompat.md)
-> to update your existing Android apps.
-
 ### Universal Windows Project (UWP) for Windows 10
 
 See [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md)
 for information about UWP support in Xamarin.Forms.
 
-The main page in the UWP project should inherit from `WindowsPage`. This means
-the XAML and C# for `MainPage` reference the `FormsApplicationPage` class as shown.
-
-The XAML uses a custom namespace so that the root element reflects the `FormsApplicationPage` class:
+The main page in the UWP project should inherit from `WindowsPage`:
 
 ```xaml
 <forms:WindowsPage

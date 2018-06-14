@@ -52,9 +52,8 @@ To control the orientation on Android, open **MainActivity.cs** and set the orie
 ```csharp
 namespace MyRotatingApp.Droid
 {
-    [Activity (Label = "MyRotatingApp.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
-    ScreenOrientation = ScreenOrientation.Landscape)] //This is what controls orientation
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
+    [Activity (Label = "MyRotatingApp.Droid", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Landscape)] //This is what controls orientation
+    public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate (Bundle bundle)
 ...

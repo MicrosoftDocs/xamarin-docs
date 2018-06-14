@@ -13,15 +13,15 @@ ms.date: 01/13/2016
 
 ## Platform Support
 
-The default Xamarin.Forms Android project uses an older style of control
+Originally, the default Xamarin.Forms Android project used an older style of control
 renderering that was common prior to Android 5.0. Applications built using
 the template have `FormsApplicationActivity` as the base class of their main
 activity.
 
 ## Material Design via AppCompat
 
-Xamarin.Forms also has an optional `FormsAppCompatActivity` that uses
-**AppCompat** features provided by Android to implement Material Design
+Xamarin.Forms Android projects now use `FormsAppCompatActivity` as the base class of their
+main activity. This class uses **AppCompat** features provided by Android to implement Material Design
 themes.
 
 To add Material Design themes to your Xamarin.Forms Android project, follow the

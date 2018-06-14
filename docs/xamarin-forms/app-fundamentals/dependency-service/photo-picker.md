@@ -144,7 +144,7 @@ An iOS application requires permission from the user to access the phone's photo
 The Android implementation uses the technique described in the [**Select an Image**](https://developer.xamarin.com/recipes/android/other_ux/pick_image/) recipe and the [sample code](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image). However, the method that is called when the user has selected an image from the picture library is an `OnActivityResult` override in a class that derives from `Activity`. For this reason, the normal [`MainActivity`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/MainActivity.cs) class in the Android project has been supplemented with a field, a property, and an override of the `OnActivityResult` method:
 
 ```csharp
-public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
+public class MainActivity : FormsAppCompatActivity
 {
     ...
     // Field, property, and method for Picture Picker
@@ -209,7 +209,7 @@ namespace DependencyServiceSample.Droid
 }
 ```
 
-This method accesses the `MainActivity` class for several purposes: for the `Instance` property, for the `PickImageId` field, for the `TaskCompletionSource` property, and to call `StartActivityForResult`. This method is defined by the `FormsApplicationActivity` class that is the base class of `MainActivity`.
+This method accesses the `MainActivity` class for several purposes: for the `Instance` property, for the `PickImageId` field, for the `TaskCompletionSource` property, and to call `StartActivityForResult`. This method is defined by the `FormsAppCompatActivity` class, which is the base class of `MainActivity`.
 
 <a name="UWP_Implementation" />
 

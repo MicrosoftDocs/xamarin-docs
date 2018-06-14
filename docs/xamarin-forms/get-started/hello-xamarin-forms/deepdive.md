@@ -148,16 +148,17 @@ The `FinishedLaunching` override initializes the Xamarin.Forms framework by call
 
 ### Android
 
-To launch the initial Xamarin.Forms page in Android, the Phoneword.Droid project includes code that creates an `Activity` with the `MainLauncher` attribute, with the activity inheriting from the `FormsApplicationActivity` class, as shown in the following code example:
+To launch the initial Xamarin.Forms page in Android, the Phoneword.Droid project includes code that creates an `Activity` with the `MainLauncher` attribute, with the activity inheriting from the `FormsAppCompatActivity` class, as shown in the following code example:
 
 ```csharp
 namespace Phoneword.Droid
 {
     [Activity(Label = "Phoneword",
               Icon = "@drawable/icon",
+              Theme = "@style/MainTheme"
               MainLauncher = true,
               ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
+    public class MainActivity : FormsAppCompatActivity
     {
         internal static MainActivity Instance { get; private set; }
 

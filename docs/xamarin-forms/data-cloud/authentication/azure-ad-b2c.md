@@ -113,7 +113,7 @@ using Microsoft.Identity.Client;
 namespace TodoAzure.Droid
 {
     ...
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
+    public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {

@@ -96,14 +96,14 @@ The `FinishedLoading` override initializes the Xamarin.Forms framework by callin
 
 #### Android
 
-To launch the initial Xamarin.Forms page in Android, the platform project includes code that creates an `Activity` with the `MainLauncher` attribute, with the activity inherting from the `FormsApplicationActivity` class, as demonstrated in the following code example:
+To launch the initial Xamarin.Forms page in Android, the platform project includes code that creates an `Activity` with the `MainLauncher` attribute, with the activity inherting from the `FormsAppCompatActivity` class, as demonstrated in the following code example:
 
 ```csharp
 namespace HelloXamarinFormsWorld.Android
 {
-    [Activity(Label = "HelloXamarinFormsWorld", MainLauncher = true,
+    [Activity(Label = "HelloXamarinFormsWorld", Theme = "@style/MainTheme", MainLauncher = true,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
+    public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
