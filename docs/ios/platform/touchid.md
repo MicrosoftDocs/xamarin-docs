@@ -117,7 +117,7 @@ In the previous sections, we looked at the theory behind access and authenticati
 
 ### Walkthrough
 
-So let’s look at adding some Touch ID Authentication to our application. In this walkthrough we are going to use the [Storyboard Table](https://developer.xamarin.com/samples/StoryboardTable/) sample. We want to make sure that only the device owner can add something to this list, we don’t want to clutter it up by letting anyone add an item!
+So let’s look at adding some Touch ID Authentication to our application. In this walkthrough we are going to update the [Storyboard Table](https://developer.xamarin.com/samples/StoryboardTable/) sample, adding local authentication so that it works like the [Storyboard Table – Local Authentication](https://developer.xamarin.com/samples/monotouch/StoryboardTable_LocalAuthentication/) sample, which only allows authenticated users to add chores to the list.
 
 1. Download the sample and run it in Visual Studio for Mac.
 2. Double Click on `MainStoryboard.Storyboard` to open the sample in the iOS Designer. With this sample, we want to add a new screen to our application, which will control the authentication. This will go before the current `MasterViewController`.
@@ -182,6 +182,6 @@ In this guide we looked at Keychain and how this works in iOS. We also explored 
 
 ## Related Links
 
-- [Touch ID sample](https://developer.xamarin.com/samples/StoryboardTable_LocalAuthentication)
+- [Storyboard Table – Local Authentication](https://developer.xamarin.com/samples/monotouch/StoryboardTable_LocalAuthentication/) 
 - [Keychain WWDC Sample](https://developer.xamarin.com/samples/KeychainTouchID/)
 - [Keychain (sample)](https://developer.xamarin.com/samples/Keychain/)
