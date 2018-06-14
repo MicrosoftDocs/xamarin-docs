@@ -57,6 +57,11 @@ The following data types are supported in **Preferences**:
 - **float**
 - **long**
 - **string**
+- **DateTime**
+
+## Implementation Details
+
+Values of `DateTime` are stored in a 64-bit binary (long integer) format using two methods defined by the `DateTime` class: The [`ToBinary`](xref:System.DateTime.ToBinary) method is used to encode the `DateTime` value, and the [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) method decodes the value. See the documentation of these methods for adjustments that might be made to decoded values when a `DateTime` is stored that is not a Coordinated Universal Time (UTC) value.
 
 ## Platform Implementation Specifics
 

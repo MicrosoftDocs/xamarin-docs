@@ -40,7 +40,9 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 * [Gyroscope](gyroscope.md?context=xamarin/xamarin-forms) – Track rotation around the device's three primary axes.
 * [Magnetometer](magnetometer.md?context=xamarin/xamarin-forms) – Detect device's orientation relative to Earth's magnetic field.
 * [Open Browser](open-browser.md?context=xamarin/xamarin-forms) – Quickly and easily open a browser to a specific website.
+* [Orientation Sensor](orientation-sensor.md?context=xamarin/xamarin-forms) – Retrieve the orientation of the device in three dimensional space.
 * [Phone Dialer](phone-dialer.md?context=xamarin/xamarin-forms) – Open the phone dialer.
+* [Platform](platform.md?content=xamarin/xamarin-forms) – Run code on the application's main thread. 
 * [Preferences](preferences.md?context=xamarin/xamarin-forms) – Quickly and easily add persistent preferences.
 * [Screen Lock](screen-lock.md?context=xamarin/xamarin-forms) – Keep the device screen awake.
 * [Secure Storage](secure-storage.md?context=xamarin/xamarin-forms) – Securely store data.
