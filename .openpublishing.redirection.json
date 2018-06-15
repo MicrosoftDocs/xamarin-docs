@@ -73,6 +73,10 @@
       "redirect_url": "/xamarin/xamarin-forms/platform/windows/installation"
     },
     {
+      "source_path": "docs/android/platform/embedding-net-in-java.md",
+      "redirect_url": "xamarin/tools/dotnet-embedding/android"
+    },
+    {
       "source_path": "docs/android/platform/fragments/implementing-with-fragments/supporting-pre-honeycomb.md",
       "redirect_url": "xamarin/android/platform/fragments/implementing-with-fragments/walkthrough"
     },
