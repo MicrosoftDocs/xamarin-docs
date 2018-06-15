@@ -227,7 +227,7 @@ The Xamarin plugin for Visual Studio does not currently support the Archiving wo
 1. Select **iOS Bundle Signing** and change the provisioning profile to an App Store provisioning profile:
 
 	![](publishing-to-the-app-store-images/ipa01.png "Select iOS Bundle Signing and change the provisioning profile to an App Store provisioning profile")
-1. Select **iOS IPA Options** and select **Ad-Hoc** from the **Configuration** dropdown list (If Ad-Hoc does not appear, select **Release** instead):
+1. Select **iOS IPA Options > Configuration > Ad-Hoc** (If **Ad-Hoc** is not a choice, select **Release** instead), and check the checkbox for building an IPA file:
 
 	![](publishing-to-the-app-store-images/imagevs02.png "Select Ad-Hoc from the Configuration dropdown list")
 
