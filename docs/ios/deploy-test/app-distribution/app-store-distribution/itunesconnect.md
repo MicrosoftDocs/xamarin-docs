@@ -11,7 +11,11 @@ ms.date: 03/19/2017
 
 # Configuring an App in iTunes Connect
 
-_This article covers the steps required to setup and maintain a Xamarin.iOS application in iTunes Connect so that it can be released for distribution on the App Store._
+> [!IMPORTANT]
+> Apple [has indicated](https://developer.apple.com/news/?id=05072018a) that
+> starting in July 2018, all apps and updates submitted to the App Store
+> must have been built with the iOS 11 SDK and 
+> [support the iPhone X display](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
 
 iTunes Connect is a suite of web-based tools for, among other things, managing  iOS applications on the App Store. A Xamarin.iOS application will need to be properly set up and configured in iTunes Connect before it can be submitted to Apple for review and ultimately released for sale or as a free app in the App Store.
 

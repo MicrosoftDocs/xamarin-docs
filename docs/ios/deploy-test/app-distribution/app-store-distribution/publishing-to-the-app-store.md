@@ -11,6 +11,12 @@ ms.date: 08/23/2017
 
 # Publishing Xamarin.iOS Apps to the App Store
 
+> [!IMPORTANT]
+> Apple [has indicated](https://developer.apple.com/news/?id=05072018a) that
+> starting in July 2018, all apps and updates submitted to the App Store
+> must have been built with the iOS 11 SDK and 
+> [support the iPhone X display](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+
 In order distribute applications to all iOS devices, Apple requires apps to be published through the *App Store*, making the App Store the one-stop shopping location for iOS applications. With over 500,000 applications in the store, developers of many types of applications capitalized on the massive success of this single point of distribution. The App Store is a turnkey solution, offering app developers both distribution and payment systems.
 
 The process of submitting an application to the App Store involves:

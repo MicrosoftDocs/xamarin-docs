@@ -31,6 +31,12 @@ All these scenarios require that applications be provisioned using the appropria
 
 ## App Store Distribution
 
+> [!IMPORTANT]
+> Apple [has indicated](https://developer.apple.com/news/?id=05072018a) that
+> starting in July 2018, all apps and updates submitted to the App Store
+> must have been built with the iOS 11 SDK and 
+> [support the iPhone X display](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+
 This is the main way that iOS applications are distributed to consumers on iOS devices. All apps submitted to the App Store require approval by Apple.
 
 Apps are submitted to the App Store through a portal called *iTunes Connect*. The [Configure your App in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) guide provides more information on how to set up and use this portal to prepare a Xamarin.iOS app for publishing in the App Store.
