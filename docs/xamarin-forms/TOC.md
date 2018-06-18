@@ -22,6 +22,7 @@
 ### [XAML Markup Extensions](xaml/markup-extensions/index.md)
 #### [Consuming XAML Markup Extensions](xaml/markup-extensions/consuming.md)
 #### [Creating XAML Markup Extensions](xaml/markup-extensions/creating.md)
+### [Field Modifiers](xaml/field-modifiers.md)
 ### [Passing Arguments](xaml/passing-arguments.md)
 ### [Bindable Properties](xaml/bindable-properties.md)
 ### [Attached Properties](xaml/attached-properties.md)

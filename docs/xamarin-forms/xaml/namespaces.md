@@ -6,7 +6,7 @@ ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 07/10/2017
+ms.date: 06/18/2018
 ---
 
 # XAML Namespaces in Xamarin.Forms
@@ -38,11 +38,12 @@ The following table outlines the `x` namespace attributes supported by Xamarin.F
 |`x:Arguments`|Specifies constructor arguments for a non-default constructor, or for a factory method object declaration.|
 |`x:Class`|Specifies the namespace and class name for a class defined in XAML. The class name must match the class name of the code-behind file. Note that this construct can only appear in the root element of a XAML file.|
 |`x:FactoryMethod`|Specifies a factory method that can be used to initialize an object.|
+|`x:FieldModifier`|Specifies the access level for generated fields for named XAML elements.|
 |`x:Key`|Specifies a unique user-defined key for each resource in a `ResourceDictionary`. The key's value is used to retrieve the XAML resource, and is typically used as the argument for the `StaticResource` markup extension.|
 |`x:Name`|Specifies a runtime object name for the XAML element. Setting `x:Name` is similar to declaring a variable in code.|
 |`x:TypeArguments`|Specifies the generic type arguments to the constructor of a generic type.|
 
-For more information about the `x:Arguments`, `x:FactoryMethod`, and `x:TypeArguments` attributes, see [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md).
+For more information about the `x:FieldModifier` attribute, see [Field Modifiers](~/xamarin-forms/xaml/field-modifiers.md). For more information about the `x:Arguments`, `x:FactoryMethod`, and `x:TypeArguments` attributes, see [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
 In XAML, namespace declarations inherit from parent element to child element. Therefore, when defining a namespace in the root element of a XAML file, all elements within that file inherit the namespace declaration.
 

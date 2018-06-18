@@ -107,7 +107,7 @@ The following XAML code example shows the declaration of the `MasterPage` object
              Icon="hamburger.png"
              Title="Personal Organiser">
     <StackLayout>
-        <ListView x:Name="listView">
+        <ListView x:Name="listView" x:FieldModifier="public">
            <ListView.ItemsSource>
                 <x:Array Type="{x:Type local:MasterPageItem}">
                     <local:MasterPageItem Title="Contacts" IconSource="contacts.png" TargetType="{x:Type local:ContactsPage}" />
@@ -215,7 +215,7 @@ public partial class MainPage : MasterDetailPage
     public MainPage ()
     {
         ...
-        masterPage.ListView.ItemSelected += OnItemSelected;
+        masterPage.listView.ItemSelected += OnItemSelected;
     }
 
     void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
@@ -223,7 +223,7 @@ public partial class MainPage : MasterDetailPage
         var item = e.SelectedItem as MasterPageItem;
         if (item != null) {
             Detail = new NavigationPage ((Page)Activator.CreateInstance (item.TargetType));
-            masterPage.ListView.SelectedItem = null;
+            masterPage.listView.SelectedItem = null;
             IsPresented = false;
         }
     }

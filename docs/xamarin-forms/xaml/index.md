@@ -6,7 +6,7 @@ ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 10/24/2016
+ms.date: 06/18/2018
 ---
 
 # eXtensible Application Markup Language (XAML)
@@ -41,6 +41,10 @@ XAML uses the `xmlns` XML attribute for namespace declarations. This article int
 ## [XAML Markup Extensions](markup-extensions/index.md)
 
 XAML includes markup extensions for setting attributes to values or objects beyond what can be expressed with simple strings. These include referencing constants, static properties and fields, resource dictionaries, and data bindings.
+
+## [Field Modifiers](field-modifiers.md)
+
+The `x:FieldModifier` namespace attribute specifies the access level for generated fields for named XAML elements.
 
 ## [Passing Arguments](passing-arguments.md)
 
