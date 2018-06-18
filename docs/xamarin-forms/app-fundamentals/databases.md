@@ -6,7 +6,7 @@ ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/31/2018
+ms.date: 06/18/2018
 ---
 
 # Xamarin.Forms Local Databases
@@ -31,7 +31,7 @@ This section shows how to add the SQLite.Net NuGet packages to a Xamarin.Forms s
 
 ### Xamarins.Forms .NET Standard or PCL Project
 
-To add SQLite support to a Xamarin.Forms project, use NuGet's search function to find **sqlite-net-pcl** and install the package:
+To add SQLite support to a Xamarin.Forms project, use NuGet's search function to find **sqlite-net-pcl** and install the latest package:
 
 ![Add NuGet SQLite.NET PCL Package](databases-images/vs2017-sqlite-pcl-nuget.png "Add NuGet SQLite.NET PCL Package")
 
@@ -42,7 +42,7 @@ There are a number of NuGet packages with similar names, the correct package has
 - **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!TIP]
-> Use the **sqlite-net-pcl** NuGet even in .NET Standard projects.
+> Use the **sqlite-net-pcl** NuGet package even in .NET Standard projects.
 
 Once the reference has been added, write an interface to abstract the platform-specific functionality, which is to determine the location of the database file. The interface used in the sample defines a single method:
 
@@ -122,15 +122,11 @@ public Task<int> DeleteItemAsync(TodoItem item)
 > [!NOTE]
 > The advantage of using the asynchronous SQLite.Net API is that database operations are moved to background threads. In addition, there's no need to write additional concurrency handling code because the API takes care of it.
 
-All the the data access code is written in the PCL project to be shared across all platforms. Only getting a local file path for the database requires platform-specific code, as outlined in the following sections.
+All of the data access code is written in the .NET Standard library project to be shared across all platforms. Only getting a local file path for the database requires platform-specific code, as outlined in the following sections.
 
 <a name="PCL_iOS" />
 
 ### iOS Project
-
-To configure the iOS application, add the same NuGet package to the iOS project using the *NuGet* window:
-
-![Add NuGet SQLite.NET PCL Package](databases-images/vsmac-sqlite-nuget.png "Add NuGet SQLite.NET PCL Package")
 
 The only code required is the `IFileHelper` implementation that determines the data file path. The following code places the SQLite database file in the **Library/Databases** folder within the application's sandbox. See the [iOS Working with the File System](~/ios/app-fundamentals/file-system.md) documentation for more information on the different directories that are available for storage.
 
@@ -162,11 +158,7 @@ Note that the code includes the `assembly:Dependency` attribute so that this imp
 
 ### Android Project
 
-To configure the Android application, add the same NuGet package to the Android project using the *NuGet* window:
-
-![](databases-images/vsmac-sqlite-nuget.png "Add NuGet SQLite.NET PCL Package")
-
-Once this reference has been added, the only code required is the `IFileHelper` implementation that determines the data file path.
+The only code required is the `IFileHelper` implementation that determines the data file path:
 
 ```csharp
 [assembly: Dependency(typeof(FileHelper))]
@@ -187,11 +179,7 @@ namespace Todo.Droid
 
 ### Windows 10 Universal Windows Platform (UWP)
 
-To configure the UWP application, add the same NuGet package to the UWP project using the *NuGet* window:
-
-![Add NuGet SQLite.NET PCL Package](databases-images/vs2017-sqlite-uwp-nuget.png "Add NuGet SQLite.NET PCL Package")
-
-Once the reference is added, implement the `IFileHelper` interface using the platform-specific `Windows.Storage` API to determine the data file path.
+Implement the `IFileHelper` interface using the platform-specific `Windows.Storage` API to determine the data file path:
 
 ```csharp
 using Windows.Storage;
