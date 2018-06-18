@@ -38,7 +38,7 @@ Follow these instructions to add a GTK# app that will run on the Windows desktop
 
     Press the **OK** button to create the project.
 
-4. In the **Solution Explorer**, right click the new GTK project and select **Manage NuGet Packages**. Select the **Browse** tab, click the **Include prerelease** checkbox, and search for **Xamarin.Forms** 3.0 or greater.
+4. In the **Solution Explorer**, right click the new GTK project and select **Manage NuGet Packages**. Select the **Browse** tab, and search for **Xamarin.Forms** 3.0 or greater.
 
     ![Select the Xamarin.Forms NuGet package](gtk-images/win/select-forms-nuget-package.png "Select the Xamarin.Forms NuGet package")
 
