@@ -68,7 +68,7 @@ However, there are many differences between Java and C#. For example:
 
 -   Java does not support preprocessor directives like `#define`.
 
--   Java does not support unsigned integer types, while C provides
+-   Java does not support unsigned integer types, while C# provides
     unsigned integer types such as `ulong`, `uint`, `ushort` and
     `byte`.
 
