@@ -155,7 +155,7 @@ Finally, you can draw a vertical line on one side of a paragraph of text by encl
         ···
 
     </Label>
-/StackLayout>
+</StackLayout>
 ```
 <a name="listingcolors" />
 
