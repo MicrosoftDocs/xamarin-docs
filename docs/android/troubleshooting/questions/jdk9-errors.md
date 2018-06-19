@@ -1,5 +1,5 @@
 ---
-title: "Xamarin.Android and JDK 9"
+title: "Xamarin.Android and Java Development Kit 9"
 description: "This article explains how to resolve Java Development Kit (JDK) 9 errors in Xamarin.Android."
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -7,10 +7,10 @@ ms.assetid: 7DCF0985-F77D-4A68-AC54-10C9846E189A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 06/18/2018
 ---
 
-# Xamarin.Android and JDK 9
+# Xamarin.Android and Java Development Kit 9
 
 _This article explains how to resolve Java Development Kit (JDK) 9 errors in Xamarin.Android._
 
@@ -59,10 +59,26 @@ If JDK 9 is installed, you must install Java JDK 8 (1.8). For
 information about how to install JDK 8, see
 [How do I update the Java Development Kit (JDK) version?](~/android/troubleshooting/questions/update-jdk.md)
 
+Note that you do not have to uninstall JDK 9; however, you must ensure
+that Xamarin is using JDK 8 rather than JDK 9. In Visual Studio, click
+**Tools > Options > Xamarin > Android Settings**. If **Java Development
+Kit Location** is not set to a JDK 8 location (such as **C:\\Program Files\\Java\\jdk1.8.0_111**), 
+click **Change** and set it to the location where JDK 8 is installed. In 
+Visual Studio for Mac, navigate to 
+**Preferences > Projects > SDK Locations > Android > Java SDK (JDK)** 
+and click **Browse** to update this path.
+
 ## Known Issues with JDK 9
 
 ### apksigner
 
-There is a known issue with apksigner and JDK 9 in which the `apksigner.bat` file invokes the `apksigner.jar` with `-Djava.ext.dirs` instead of `-classpath` which JDK 9 expects. It is recommended to use JDK 8 (1.8). For information about how to install JDK 8, see [How do I update the Java Development Kit (JDK) version?](~/android/troubleshooting/questions/update-jdk.md)
+There is a known issue with apksigner and JDK 9 in which the
+`apksigner.bat` file invokes the `apksigner.jar` with `-Djava.ext.dirs`
+instead of `-classpath` which JDK 9 expects. It is recommended to use
+JDK 8 (1.8). For information about how to install JDK 8, see
+[How do I update the Java Development Kit (JDK) version?](~/android/troubleshooting/questions/update-jdk.md)
 
-After uninstalling JDK 9, ensure that the following path is not set on your `PATH` environment variable as it will still point to JDK 9: `C:\ProgramData\Oracle\Java\javapath`. After removing it, `java -version` at a command line should show JDK 8.
+If you have installed JDK 9, ensure that the following path is not set on
+your `PATH` environment variable as it will still point to JDK 9:
+`C:\ProgramData\Oracle\Java\javapath`. After removing it, `java-version` at a 
+command line should show JDK 8.

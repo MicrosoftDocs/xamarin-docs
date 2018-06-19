@@ -7,7 +7,7 @@ ms.assetid: 4b3ac51d-18dd-4034-87b4-4365194e4ece
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 06/18/2018
 ---
 
 # How do I update the Java Development Kit (JDK) version?
@@ -42,7 +42,7 @@ steps to install and enable it:
     to point to the new JDK under **Tools > Options > Xamarin > Android
     Settings > Java Development Kit Location > Change**:
 
-    ![Path setting for the JDK in IDE Options Android Setting page](update-jdk-images/image4.png)
+    [![Path setting for the JDK in IDE Options Android Setting page](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
 
 Be sure to restart Visual Studio after updating the location.
 
