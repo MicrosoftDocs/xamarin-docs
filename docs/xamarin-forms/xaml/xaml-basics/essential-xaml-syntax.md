@@ -425,7 +425,7 @@ Within these tags, include an `OnPlatform` tag. `OnPlatform` is a generic class.
 </ContentPage>
 ```
 
-Now add `On` elements. For each onem set the `Platform` property and the `Value` property to markup for the `Thickness` property:
+Now add `On` elements. For each one set the `Platform` property and the `Value` property to markup for the `Thickness` property:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

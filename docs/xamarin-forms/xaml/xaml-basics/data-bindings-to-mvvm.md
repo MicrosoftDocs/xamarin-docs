@@ -285,7 +285,7 @@ The following XAML file contains a `BoxView` whose `Color` property is bound to 
 </ContentPage>
 ```
 
-The binding on each `Label` is the default `OneWay`. It only needs to display the value. But the binding on each `Slider` is `TwoWay`. This allows the `Slider` to be initialized from the ViewModel. Notice that the `Color` property is set to `Blue` when the ViewModel is instantiated. But a change in the `Slider` also needs to set a new value for the property in the ViewModel, which then calculates a new color.
+The binding on each `Label` is the default `OneWay`. It only needs to display the value. But the binding on each `Slider` is `TwoWay`. This allows the `Slider` to be initialized from the ViewModel. Notice that the `Color` property is set to `Aqua` when the ViewModel is instantiated. But a change in the `Slider` also needs to set a new value for the property in the ViewModel, which then calculates a new color.
 
 [![](data-bindings-to-mvvm-images/hslcolorscroll.png "MVVM using Two-Way Data Bindings")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM using Two-Way Data Bindings")
 

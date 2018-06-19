@@ -14,7 +14,7 @@ ms.date: 05/22/2017
 This article describes how Xamarin.Forms lets you specify font attributes
 (including weight and size) on controls that display text. Font information
 can be [specified in code](#Setting_Font_in_Code) or
-[specified in Xaml](#Setting_Font_in_Xaml).
+[specified in XAML](#Setting_Font_in_Xaml).
 It is also possible to use a [custom font](#Using_a_Custom_Font).
 
 <a name="Setting_Font_in_Code" />
@@ -53,7 +53,6 @@ You can also use the `NamedSize` enumeration which has four built-in options; Xa
 -  **Small**
 -  **Medium**
 -  **Large**
-
 
 The `NamedSize` enumeration can be used wherever a `FontSize` can be specified using the `Device.GetNamedSize` method to convert the value to a `double`:
 
@@ -101,7 +100,6 @@ fs.Spans.Add (new Span { Text=" and green!", ForegroundColor = Color.Green, Font
 labelFormatted.FormattedText = fs;
 ```
 
-
 ### Setting Font Info Per Platform
 
 Alternatively, the `Device.RuntimePlatform` property can be used to set different
@@ -118,16 +116,16 @@ A good source of font information for iOS is [iosfonts.com](http://iosfonts.com)
 
 <a name="Setting_Font_in_Xaml" />
 
-## Setting the Font in Xaml
+## Setting the Font in XAML
 
-Xamarin.Forms controls that display text all have a `Font` property that can be set in Xaml. The simplest way to set the font in Xaml is to use the named size enumeration values, as shown in this example:
+Xamarin.Forms controls that display text all have a `Font` property that can be set in XAML. The simplest way to set the font in XAML is to use the named size enumeration values, as shown in this example:
 
 ```xaml
 <Label Text="Login" FontSize="Large"/>
 <Label Text="Instructions" FontSize="Small"/>
 ```
 
-There is a built-in converter for the `Font` property that allows all font settings to be expressed as a string value in Xaml. The following examples show how you can specify font attributes and sizes in Xaml:
+There is a built-in converter for the `Font` property that allows all font settings to be expressed as a string value in XAML. The following examples show how you can specify font attributes and sizes in XAML:
 
 ```xaml
 <Label Text="Italics are supported" FontAttributes="Italic" />
@@ -135,11 +133,12 @@ There is a built-in converter for the `Font` property that allows all font setti
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-To specify multiple `Font` settings, combine the required settings into a single font attribute string. The font attribute string should be formatted as `"[font-face],[attributes],[size]"`. The order of the parameters is important, all parameters are optional, and multiple `attributes` can be specified, for example:
+To specify multiple `Font` settings, combine the required settings into a single `Font` attribute string. The font attribute string should be formatted as `"[font-face],[attributes],[size]"`. The order of the parameters is important, all parameters are optional, and multiple `attributes` can be specified, for example:
 
 ```xaml
-<Label Text="Small bold text" FontAttributes="Bold" FontSize="Micro" />
-<Label Text="Really big italic text" FontAttributes="Italic" FontSize="72" />
+<Label Text="Small bold text" Font="Bold, Micro" />
+<Label Text="Medium custom font" Font="MarkerFelt-Thin, 42" />
+<Label Text="Really big bold and italic text" Font="Bold, Italic, 72"  />
 ```
 
 The `FormattedString` class can also be used in XAML, as shown here:
@@ -257,7 +256,7 @@ even differently for each platform &ndash; when more fine-grained control is
 required. The `FormattedString` class can be used to construct a string containing
 different font specifications using the `Span` class.
 
-Font information can also be specified in Xaml using a correctly formatted font
+Font information can also be specified in XAML using a correctly formatted font
 attributes or the `FormattedString` element with `Span` children.
 
 
