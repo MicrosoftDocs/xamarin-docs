@@ -74,6 +74,24 @@ The first value can be cached by the operating system and so might not always
 reflect the user’s currently selected locale. Use the second value to obtain the
 currently selected locale.
 
+> [!NOTE]
+> Mono (the .NET runtime upon which Xamarin.iOS is based) and Apple’s iOS
+> APIs do not support identical sets of language/region combinations.
+> Because of this, it’s possible to select a language/region combination in
+> the iOS **Settings** app that does not map to a valid value in Mono. For
+> example, setting an iPhone’s language to English and its region to Spain
+> will cause the following APIs to yield different values:
+> 
+> - `CurrentThead.CurrentCulture`: en-US (Mono API)
+> - `CurrentThread.CurrentUICulture`: en-US (Mono API)
+> - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (Apple API)
+>
+> Since Mono uses `CurrentThread.CurrentUICulture` to select resources and
+> `CurrentThread.CurrentCulture` to format dates and currencies, 
+> Mono-based localization (for example, with .resx files) may not yield 
+> expected results for these language/region combinations. In these 
+> situations, rely on Apple's APIs to localize as necessary.
+
 ### NSCurrentLocaleDidChangeNotification
 
 iOS generates an `NSCurrentLocaleDidChangeNotification` when the user updates
