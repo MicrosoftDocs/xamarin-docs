@@ -13,6 +13,9 @@ ms.date: 09/20/2016
 
 _Azure Mobile Apps allow you to develop apps with scalable backends hosted in Azure App Service, with support for mobile authentication, offline sync, and push notifications. This article, which is only applicable to Azure Mobile Apps that use a Node.js backend, explains how to query, insert, update, and delete data stored in a table in an Azure Mobile Apps instance._
 
+> [!NOTE]
+> Starting on June 30, all new Azure Mobile Apps will be created with TLS 1.2 by default. In addition, it's also recommended that existing Azure Mobile Apps be reconfigured to use TLS 1.2. For information on how to enforce TLS 1.2 in an Azure Mobile App, see [Enforce TLS 1.2](/azure/app-service/app-service-web-tutorial-custom-ssl#enforce-tls-1112). For information on how to configure Xamarin projects to use TLS 1.2, see [Transport Layer Security (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md).
+
 For information on how to create an Azure Mobile Apps instance that can be consumed by Xamarin.Forms, see [Create a Xamarin.Forms app](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started/). After following these instructions, the downloadable sample application can be configured to consume the Azure Mobile Apps instance by setting the `Constants.ApplicationURL` to the URL of the Azure Mobile Apps instance. Then, when the sample application is run it will connect to the Azure Mobile Apps instance, as shown in the following screenshot:
 
 ![](azure-images/portal.png "Sample Application")
