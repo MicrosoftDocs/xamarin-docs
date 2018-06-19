@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
 author: topgenorth
 ms.author: toopge
-ms.date: 03/29/2017
+ms.date: 06/19/2018
 ---
 
 # Xamarin Inspector
 
-Xamarin Workbooks & Inspector bring an interactive C# console with tools to
-users. The Inspector integrates with the app debugging workflow of your IDE,
+The Xamarin Inspector integrates with the app debugging workflow of your IDE,
+allowing you to interactively execute C# code or inspect properties of your UI,
 serving as a debugging or diagnostics aid when inspecting your running app.
 
 Live app inspection is available for enterprise customers. Let us know if
@@ -22,7 +22,7 @@ you [run into any bugs](~/tools/inspector/install.md#reporting-bugs). We have a
 
 ## [Installation and Requirements](~/tools/inspector/install.md)
 
-Information on getting Xamarin Workbooks & Inspector installed on your Mac or
+Information on getting Xamarin Inspector installed on your Mac or
 Windows computer.
 
 ## [Inspecting Live Applications](~/tools/inspector/inspect.md)

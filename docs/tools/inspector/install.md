@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: topgenorth
 ms.author: toopge
-ms.date: 03/29/2017
+ms.date: 06/19/2018
 ---
 
 # Inspector Installation and Requirements
@@ -14,13 +14,18 @@ ms.date: 03/29/2017
 
 # [Windows](#tab/windows)
 
-1. Download and install [Xamarin Workbooks & Inspector for Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
-2. [Inspect your own app!](~/tools/inspector/inspect.md)
+1. Download and install [Visual Studio Enterprise](https://www.visualstudio.com/vs/)
+   and select the **Mobile development with .NET** workload.
+1. [Sign in](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio)
+   to enable your Enterprise subscription.
+1. [Inspect](~/tools/inspector/inspect.md) your own app!
 
 # [macOS](#tab/macos)
 
-1. Download and install [Xamarin Workbooks & Inspector for Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
-2. [Inspect your own app!](~/tools/inspector/inspect.md)
+1. Download and install [Visual Studio for Mac](https://www.visualstudio.com/vs/mac/).
+1. [Sign in](https://docs.microsoft.com/visualstudio/mac/activation)
+   to enable your Enterprise subscription.
+1. [Inspect](~/tools/inspector/inspect.md) your own app!
 
 -----
 
@@ -34,10 +39,8 @@ ms.date: 03/29/2017
 
 ### Supported IDEs
 
-- Xamarin Studio 6.2 or greater
-- Visual Studio for Mac Preview 4 or greater
-- Visual Studio 2015 with Xamarin 4.3.x or greater
-- Visual Studio 2017 with Xamarin workload
+- Visual Studio for Mac
+- Visual Studio 2017 with **Mobile development with .NET** workload
 
 Live app inspection is available for enterprise customers.
 
@@ -47,10 +50,10 @@ Live app inspection is available for enterprise customers.
 
 |App Platform|IDE Support|Notes|
 |--- |--- |--- |
-|Mac (Unified)|Only supported on Mac|
-|iOS (Unified)|Supported in XS and Visual Studio|Inspecting iOS apps from Windows requires the same version of Inspector to also be installed on the Mac build host.|
-|Android|Supported in XS and Visual Studio|Must target Android >= 4.0.3, with **fastdev** enabled.<br />Must use Google, Visual Studio, or Xamarin Android emulators. Android 7 emulators may not allow inspection at this time.|
-|WPF|Only supported in Visual Studio on Windows|
+|Mac|Only supported in Visual Studio for Mac|
+|iOS|Supported in Visual Studio 2017 and Visual Studio for Mac| |
+|Android|Supported in Visual Studio 2017 and Visual Studio for Mac|Must target Android >= 4.0.3, with **fastdev** enabled.<br />Must use Google, Visual Studio, or Xamarin Android emulators. Android 7 emulators may not allow inspection at this time.|
+|WPF|Only supported in Visual Studio 2017|
 
 <a name="reporting-bugs" />
 
@@ -69,11 +72,6 @@ This information is vital.
 Visual Studio For Mac
 
 - **Visual Studio > About Visual Studio > Show Details > Copy Information**
-- Paste into bug report
-
-Xamarin Studio
-
-- **Xamarin Studio > About Xamarin Studio > Show Details > Copy Information**
 - Paste into bug report
 
 Visual Studio
@@ -98,10 +96,6 @@ Explorer (Windows) directly from the main menu:
 Visual Studio For Mac
 
 - `~/Library/Logs/VisualStudio/7.0/Ide.log`
-
-Xamarin Studio
-
-- `~/Library/Logs/XamarinStudio-6.0/Ide.log`
 
 Visual Studio
 
@@ -128,53 +122,3 @@ you want to inspect. We need to know:
 - Does the device have network connectivity (check via web browser)?
 
 [client-bugs]: https://github.com/Microsoft/workbooks/issues/new
-
-## Uninstall
-
-### Windows
-
-Depending on how you acquired Workbooks & Inspector, you may have to perform
-two uninstallation procedures. Please check both of these to completely
-uninstall the software.
-
-#### Visual Studio Installer
-
-If you have Visual Studio 2017, open **Visual Studio Installer**, and look in
-**Individual Components** for **Xamarin Workbooks**. If it is checked, uncheck it
-and then click "Modify" to uninstall.
-
-#### System Uninstall
-
-If you installed Workbooks & Inspector yourself with a downloaded installer,
-it will need to be uninstalled via the **Apps & features**
-system settings page on Windows 10 or via **Add/Remove Programs** in the
-Control Panel on older versions of Windows.
-
-> **Start > Settings > System > Apps & features**
-
-![](install-images/windows-remove.png "Xamarin Workbooks and Inspector as listed in 'Apps & features'")
-
-**You should still follow the procedure for the Visual Studio Installer to make
-sure Workbooks & Inspector does not get reinstalled without your knowledge.**
-
-### macOS
-
-Starting with [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/),
-Xamarin Workbooks & Inspector can be uninstalled from a terminal by running:
-
-```bash
-sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
-```
-
-The uninstaller will detail the files and directories it will remove and
-ask for confirmation before proceeding.
-
-Pass the `-help` argument to the `uninstall` script for more advanced
-scenarios.
-
-For older versions, you will need to manually remove the following:
-
-1. Delete the Workbooks app at `"/Applications/Xamarin Workbooks.app"`
-2. Delete the Inspector app at `"Applications/Xamarin Inspector.app"`
-3. Delete the add-ins: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` and `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-4. Delete Inspector and supporting files here: `/Library/Frameworks/Xamarin.Interactive.framework` and `/Library/Frameworks/Xamarin.Inspector.framework`

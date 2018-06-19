@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 author: topgenorth
 ms.author: toopge
-ms.date: 03/30/2017
+ms.date: 06/19/2018
 ---
 
 # Debugging integrations
@@ -22,8 +22,8 @@ as there is no log viewer there.
 
 The client log is at the following locations on macOS and Windows:
 
-- Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
-- Windows: `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
+- Mac: `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
+- Windows: `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
 One thing to be aware of is that when loading integrations via the usual `#r` mechanism
 during development, the integration assembly will be picked up as a _dependency_ of the
@@ -46,7 +46,7 @@ To enable the developer tools for Xamarin Workbooks on Mac, run the following
 command in your terminal:
 
 ```shell
-defaults write com.xamarin.Inspector WebKitDeveloperExtras -bool true
+defaults write com.xamarin.Workbooks WebKitDeveloperExtras -bool true
 ```
 
 and then restart Xamarin Workbooks. Once you do so, you should see **Inspect Element** 

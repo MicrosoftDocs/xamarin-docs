@@ -5,14 +5,13 @@ ms.prod: xamarin
 ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: topgenorth
 ms.author: toopge
-ms.date: 03/29/2017
+ms.date: 06/19/2018
 ---
 
 # Inspecting Live Applications
 
 Live app inspection is available for enterprise customers.
 
-1. [Install Xamarin Workbooks & Inspector.](~/tools/inspector/install.md)
 1. Open any [supported app project](~/tools/inspector/install.md#supported-platforms) in Visual Studio for Mac or Visual Studio.
 1. Run your app in debug mode.
 1. Click the **Inspect** button in the IDE toolbar (in Visual Studio, the

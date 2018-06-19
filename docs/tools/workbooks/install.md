@@ -5,6 +5,7 @@ ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: topgenorth
 ms.author: toopge
+ms.date: 06/19/2018
 ---
 
 # Workbooks Installation and Requirements
@@ -39,8 +40,8 @@ ms.author: toopge
 
 |App Platform|OS Support|Notes|
 |--- |--- |--- |
-|Mac (Unified)|Only supported on Mac|
-|iOS (Unified)|Supported on Mac and Windows|Xamarin.iOS 11.0 and Xcode 9.0 or greater must be installed on Mac. Running iOS workbooks on Windows requires a Mac build host running all of the above, and the [Remoted iOS Simulator](~/tools/ios-simulator.md) installed on Windows.|
+|Mac|Only supported on Mac|
+|iOS|Supported on Mac and Windows|Xamarin.iOS 11.0 and Xcode 9.0 or greater must be installed on Mac. Running iOS workbooks on Windows requires a Mac build host running all of the above, and the [Remoted iOS Simulator](~/tools/ios-simulator.md) installed on Windows.|
 |Android|Supported on Mac and Windows|Must use Google, Visual Studio or Xamarin Android emulator, with a virtual device >= 5.0|
 |WPF|Only supported on Windows|
 |Console (.NET Framework)|Supported on Mac and Windows|
@@ -116,7 +117,7 @@ we'll need to know:
 
 ### Windows
 
-Depending on how you acquired Workbooks & Inspector, you may have to perform
+Depending on how you acquired Workbooks, you may have to perform
 two uninstallation procedures. Please check both of these to completely
 uninstall the software.
 
@@ -128,24 +129,24 @@ and then click **Modify** to uninstall.
 
 #### System Uninstall
 
-If you installed Workbooks & Inspector yourself with a downloaded installer,
+If you installed Workbooks yourself with a downloaded installer,
 it will need to be uninstalled via the **Apps & features**
 system settings page on Windows 10 or via **Add/Remove Programs** in the
 Control Panel on older versions of Windows.
 
 > **Start > Settings > System > Apps & features**
 
-![](install-images/windows-remove.png "Xamarin Workbooks and Inspector as listed in &quot;Apps &amp; features&quot;")
+![](install-images/windows-remove.png "Xamarin Workbooks as listed in &quot;Apps &amp; features&quot;")
 
 **You should still follow the procedure for the Visual Studio Installer to make
-sure Workbooks & Inspector does not get reinstalled without your knowledge.**
+sure Workbooks does not get reinstalled without your knowledge.**
 
 <a name="uninstall-macos" />
 
 ### macOS
 
 Starting with [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/),
-Xamarin Workbooks & Inspector can be uninstalled from a terminal by running:
+Xamarin Workbooks can be uninstalled from a terminal by running:
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
@@ -167,8 +168,8 @@ For older versions, you will need to manually remove the following:
 ## Downgrading
 
 The bundle identifier for **/Applications/Xamarin Workbooks.app** changed from
-`com.xamarin.Inspector` to `com.xamarin.Workbooks` in the 1.4 release to
-facilitate a future splitting of the Xamarin Workbooks & Inspector installers.
+`com.xamarin.Inspector` to `com.xamarin.Workbooks` in the 1.4 release, as
+Workbooks and Inspector are now fully split.
 
 Because of a bug in older installers, it is not possible to downgrade 1.4 or
 newer releases using the 1.3.2 or older installers.

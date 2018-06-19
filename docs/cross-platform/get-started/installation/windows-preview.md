@@ -27,7 +27,8 @@ versions of Xamarin functionality, including:
 - Xamarin.iOS
 - Xamarin.Android
 - Xamarin Profiler
-- Xamarin Workbooks/Inspector
+- Xamarin Workbooks
+- Xamarin Inspector
 - Xamarin Remote iOS Simulator
 
 The **Preview Installer** screenshot below shows both Preview and Release options (notice the grey version numbers: version 15.0 is release and version 15.1 is a Preview):

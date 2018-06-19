@@ -22,7 +22,7 @@ This guide can be used to uninstall each product individually by navigating to t
 - [Xamarin.Android](#uninstallandroid)
 - [Xamarin.iOS](#uninstallios)
 - [Xamarin.Mac](#uninstallmac)
-- [Inspector and Workbooks](#uninstallworkbooks)
+- [Workbooks](#uninstallworkbooks)
 - [Xamarin Profiler](#uninstallprofiler)
 - [Installer](#uninstallinstaller)
 
@@ -144,9 +144,9 @@ rm -rf ~/Library/Xamarin.Mac
 
 <a name="uninstallworkbooks" />
 
-### Uninstall Workbooks and Inspector
+### Uninstall Workbooks
 
-To remove Xamarin Inspector and Workbooks version 1.2.2 and above, use the following commands in Terminal:
+To remove Xamarin Workbooks version 1.2.2 and above, use the following commands in Terminal:
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
