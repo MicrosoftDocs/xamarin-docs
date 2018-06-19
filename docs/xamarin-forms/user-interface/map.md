@@ -113,15 +113,15 @@ After following those instructions, paste the API key in the
 **Properties/AndroidManifest.xml** file (view source and find/update the following element):
 
 ```xml
-<meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="YOUR_API_KEY"/>
+<application ...>
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR_API_KEY" />
+</application>
 ```
 
 Without a valid API key the maps control will display as a grey box on Android.
 
 > [!NOTE]
-> Remember to generate another key using the keystore file that is used to sign the Release version of any application that is uploaded to the Google Play store. The key you generate for development and debugging will not work and the app downloaded from Google Play will have broken map display. Also remember to regenerate the key if the app's **Package Name** changes.
+> Note that, in order for your APK to access Google Maps, you must include SHA-1 fingerprints and package names for every keystore (debug and release) that you use to sign your APK. For example, if you use one computer for debug and another computer for generating the release APK, you should include the SHA-1 certificate fingerprint from the debug keystore of the first computer and the SHA-1 certificate fingerprint from the release keystore of the second computer. Also remember to edit the key credentials if the app's **Package Name** changes. See [obtaining a Google Maps API v2 key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
 
 You'll also need to enable appropriate permissions by
   right-clicking on the Android project and selecting
