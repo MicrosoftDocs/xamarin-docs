@@ -6,7 +6,7 @@ ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/06/2018
+ms.date: 06/13/2018
 ---
 
 # Xamarin.Forms Multiscreen Quickstart

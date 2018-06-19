@@ -7,7 +7,7 @@ ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/10/2018
+ms.date: 06/13/2018
 ---
 
 # Xamarin.Forms Deep Dive
@@ -57,15 +57,11 @@ The projects are:
 
 ## Anatomy of a Xamarin.Forms Application
 
-The following screenshot shows the contents of the Phoneword PCL project in Visual Studio for Mac:
+The following screenshot shows the contents of the Phoneword .NET Standard library project in Visual Studio for Mac:
 
-![](deepdive-images/xs/pcl-project.png "Phoneword PCL Project Contents")
+![](deepdive-images/xs/library-project.png "Phoneword .NET Standard Library Project Contents")
 
-The project consists of three folders:
-
-- **References** – Contains the assemblies required to build and run the application. Expanding the .NET Portable Subset folder reveals references to .NET assemblies such as [System](http://msdn.microsoft.com/library/system%28v=vs.110%29.aspx), System.Core, and [System.Xml](http://msdn.microsoft.com/library/system.xml%28v=vs.110%29.aspx). Expanding the **From Packages** folder reveals references to the Xamarin.Forms assemblies.
-- **Packages** – The Packages directory houses [NuGet](https://www.nuget.org) packages that simplify the process of using third party libraries in your application. These packages can be updated to the latest releases by right-clicking the folder and selecting the update option in the pop-up menu.
-- **Properties** – Contains **AssemblyInfo.cs**, a .NET assembly metadata file. It is good practice to fill this file with some basic information about your application. For more information about this file, see [AssemblyInfo Class](http://msdn.microsoft.com/library/microsoft.visualbasic.applicationservices.assemblyinfo(v=vs.110).aspx) on MSDN.
+The project has a **Dependencies** node that contains **NuGet** and **SDK** nodes. The **NuGet** node contains the Xamarin.Forms NuGet package that has been added to the project, and the **SDK** node contains the `NETStandard.Library` metapackage that references the complete set of NuGet packages that define .NET Standard.
 
 -----
 
@@ -76,7 +72,6 @@ The project also consists of a number of files:
 - **IDialer.cs** – The `IDialer` interface, which specifies that the `Dial` method must be provided by any implementing classes.
 - **MainPage.xaml** – The XAML markup for the `MainPage` class, which defines the UI for the page shown when the application launches.
 - **MainPage.xaml.cs** – The code-behind for the `MainPage` class, which contains the business logic that is executed when the user interacts with the page.
-- **packages.config** – (Visual Studio for Mac only) An XML file that contains information about the NuGet packages being used by the project, to track required packages and their respective versions. Both Visual Studio for Mac and Visual Studio can be configured to automatically restore any missing NuGet packages when sharing the source code with other users. The content of this file is controlled by the NuGet package manager and should not be manually edited.
 - **PhoneTranslator.cs** – The business logic that is responsible for converting a phone word to a phone number, which is invoked from **MainPage.xaml.cs**.
 
 For more information about the anatomy of a Xamarin.iOS application, see [Anatomy of a Xamarin.iOS Application](~/ios/get-started/hello-ios/hello-ios-deepdive.md#anatomy). For more information about the anatomy of a Xamarin.Android application, see [Anatomy of a Xamarin.Android Application](~/android/get-started/hello-android/hello-android-deepdive.md#anatomy).
@@ -94,8 +89,6 @@ A Xamarin.Forms application is architected in the same way as a traditional cros
 A Xamarin.Forms application is architected in the same way as a traditional cross-platform application. Shared code is typically placed in a .NET Standard library, and platform-specific applications consume the shared code. The following diagram shows an overview of this relationship for the Phoneword application:
 
 ![](deepdive-images/xs/architecture.png "Phoneword Architecture")
-
-For more information about PCLs, see [Introduction to Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md).
 
 -----
 
@@ -153,19 +146,21 @@ To launch the initial Xamarin.Forms page in Android, the Phoneword.Droid project
 ```csharp
 namespace Phoneword.Droid
 {
-    [Activity(Label = "Phoneword",
-              Icon = "@drawable/icon",
-              Theme = "@style/MainTheme"
+    [Activity(Label = "Phoneword", 
+              Icon = "@mipmap/icon", 
+              Theme = "@style/MainTheme", 
               MainLauncher = true,
               ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : FormsAppCompatActivity
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         internal static MainActivity Instance { get; private set; }
 
         protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(bundle);
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
 
+            base.OnCreate(bundle);
             Instance = this;
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
