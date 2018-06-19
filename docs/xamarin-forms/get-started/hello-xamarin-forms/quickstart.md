@@ -350,7 +350,7 @@ Create the Phoneword application as follows:
 
     namespace Phoneword.Droid
     {
-        [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+        [Activity(Label = "Phoneword", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
         public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
         {
             internal static MainActivity Instance { get; private set; }
@@ -479,6 +479,7 @@ Create the Phoneword application as follows:
 37. If you have an iOS device and meet the Mac system requirements for Xamarin.Forms development, use a similar technique to deploy the app to the iOS device. Alternatively, deploy the app to the [iOS remote simulator](~/tools/ios-simulator.md).
 
     Note: phone calls are not supported on all the simulators.
+38. If you get compiler errors in any of the platform-specific projects (e.g., `CS0246 "The type or namespace name 'IDialer' could not be found..."`, you may just need to delete and re-add those projects' references to the **Phoneword** project.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
