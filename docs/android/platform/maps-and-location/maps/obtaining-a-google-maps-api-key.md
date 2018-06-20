@@ -151,12 +151,12 @@ After the **Google Developer Console** API project has been created, it is neces
 
    [![Maps SDK for Android Credentials message](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
-2. In the popup that is displayed after clicking **Create credentials** in the previous step, click the **API key** button:
+2. Choose the **API key** clicking on it:
 
    [![Add credentials to your project dialog](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
 
 3. After this button is clicked, the API key is generated. Next it is necessary to restrict this key so that only your app can call APIs
-   with this key. Click **Restrict key**:
+   with this key. Click **RESTRICT KEY**:
 
    [![Clicking Restrict Key on the Credentials page](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs-sml.png)](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs.png#lightbox)
 
@@ -180,7 +180,7 @@ After the **Google Developer Console** API project has been created, it is neces
 
    [![XamarinMapsDemoKey is shown in the API keys list](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs-sml.png)](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs.png#lightbox)
 
-## Connect the project to a bilable account
+## Connect the project to a billable account
 
 Starting from June,11 2018 the API key won't work if the project is not connected to a billable account, even if the service is still free for mobile apps.
 
