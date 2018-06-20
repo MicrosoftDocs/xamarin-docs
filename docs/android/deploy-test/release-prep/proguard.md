@@ -37,7 +37,9 @@ ProGuard processes input APK's using the following steps:
 
 3.  **Obfuscation step** &ndash; In native Android development, ProGuard renames classes and class 
     members that are not entry points. Retaining entry points ensures 
-    that they can still be accessed by their original names. Because the app is running from IL, this step is not supported for Xamarin Android.
+    that they can still be accessed by their original names. However, this 
+    step is not supported by Xamarin.Android because the app is compiled 
+    down to Intermediate Language (IL).
 
 4.  **Preverification step** &ndash; Performs checks on Java bytecodes 
     ahead of runtime and annotates class files for the benefit of the 
