@@ -1,6 +1,6 @@
 ---
 title: "ProGuard"
-description: "ProGuard is a Java class file shrinker, optimizer, obfuscator, and pre-verifier. It detects and removes unused code, analyzes and optimizes bytecode, then obfuscates classes and class members. This guide explains how ProGuard works, how to enable it in your project, and how to configure it. It also provides several examples of ProGuard configurations."
+description: "Xamarin.Android ProGuard is a Java class file shrinker, optimizer, and pre-verifier. It detects and removes unused code, analyzes and optimizes bytecode. This guide explains how ProGuard works, how to enable it in your project, and how to configure it. It also provides several examples of ProGuard configurations."
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
@@ -11,7 +11,7 @@ ms.date: 03/01/2018
 
 # ProGuard
 
-_ProGuard is a Java class file shrinker, optimizer, obfuscator, and pre-verifier. It detects and removes unused code, analyzes and optimizes bytecode, then obfuscates classes and class members. This guide explains how ProGuard works, how to enable it in your project, and how to configure it. It also provides several examples of ProGuard configurations._
+_Xamarin.Android ProGuard is a Java class file shrinker, optimizer, and pre-verifier. It detects and removes unused code, analyzes and optimizes bytecode. This guide explains how ProGuard works, how to enable it in your project, and how to configure it. It also provides several examples of ProGuard configurations._
 
 
 ## Overview
@@ -19,10 +19,9 @@ _ProGuard is a Java class file shrinker, optimizer, obfuscator, and pre-verifier
 ProGuard detects and removes unused classes, fields, methods, and 
 attributes from your packaged application. It can even do the same for 
 referenced libraries (this can help you avoid the 64k reference limit). 
-The ProGuard tool from the Android SDK will also optimize bytecode, 
-remove unused code instructions, and obfuscate the remaining classes, 
-fields, and methods with shorter names. ProGuard reads **input jars** and 
-then shrinks, optimizes, obfuscates, and pre-verifies them; it writes 
+The ProGuard tool from the Android SDK will also optimize bytecode 
+and remove unused code instructions. ProGuard reads **input jars** and 
+then shrinks, optimizes, and pre-verifies them; it writes 
 the results to one or more **output jars**. 
 
 ProGuard processes input APK's using the following steps: 
@@ -36,9 +35,9 @@ ProGuard processes input APK's using the following steps:
     points can be made private, static, or final, unused parameters can 
     be removed, and some methods may be inlined. 
 
-3.  **Obfuscation step** &ndash; ProGuard renames classes and class 
+3.  **Obfuscation step** &ndash; In native Android development, ProGuard renames classes and class 
     members that are not entry points. Retaining entry points ensures 
-    that they can still be accessed by their original names. 
+    that they can still be accessed by their original names. Because the app is running from IL, this step is not supported for Xamarin Android.
 
 4.  **Preverification step** &ndash; Performs checks on Java bytecodes 
     ahead of runtime and annotates class files for the benefit of the 
