@@ -185,11 +185,11 @@ Starting from June,11 2018 the API key won't work if the project is not connecte
 
 1. Open the **burger menu** and select the **Billing** page:
 
-[![select the burger menu billing section](obtaining-a-google-maps-api-key-images/13-goto-billing-vs-sml.png)](obtaining-a-google-maps-api-key-images/13-goto-billing-vs.png#lightbox)
+   [![select the burger menu billing section](obtaining-a-google-maps-api-key-images/13-goto-billing-vs-sml.png)](obtaining-a-google-maps-api-key-images/13-goto-billing-vs.png#lightbox)
 
 2. Link the project to a billing account (if you don't have, you'll be guided to create a new one after following this step) clicking on **Link a billing account** and then **CREATE BILLING ACCOUNT** on the shown popup:
 
-[![link projetc to billing account](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs-sml.png)](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs.png#lightbox)
+   [![link projetc to billing account](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs-sml.png)](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs.png#lightbox)
 
 ## Adding the Key to Your Project
 
