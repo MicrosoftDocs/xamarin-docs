@@ -40,6 +40,9 @@ In this document we'll examine how to use RESX files to store those strings and 
 
 The samples target English, French, Spanish, German, Chinese, Japanese, Russian, and Brazilian Portuguese languages. Applications can be translated into as few or as many languages as required.
 
+> [!NOTE]
+> On the Universal Windows Platform, RESW files should be used for push notification localization, rather than RESX files. For more information, see [UWP Localization](/windows/uwp/design/globalizing/globalizing-portal/).
+
 ### Adding Resources
 
 The first step in globalizing a Xamarin.Forms .NET Standard library application is adding the RESX resource files that will be used to store all the text used in the app. We need to add a RESX file that contains the default text, and then add additional RESX files for each language we wish to support.
@@ -523,6 +526,8 @@ Once you've implemented the dependency service and updated **Info.plist**, the i
 > language will be Brazilian Portuguese on iOS, unless code is written to change
 > this behavior (such as the `ToDotnetFallbackLanguage` above).
 
+For more information about iOS Localization, see [iOS Localization](~/ios/app-fundamentals/localization/index.md).
+
 #### Android Application Project
 
 Android exposes the currently selected locale via `Java.Util.Locale.Default`,
@@ -620,7 +625,6 @@ namespace UsingResxLocalization.Android
 > Developers should modify the `iOSToDotnetLanguage` and `ToDotnetFallbackLanguage`
 > methods to handle specific cases required for their supported languages.
 
-
 Once this code has been added to the Android application project, it will be able
 to automatically display translated strings.
 
@@ -630,6 +634,8 @@ to automatically display translated strings.
 > and select **Options > Build > Android Build** and ensure that the
 > **Fast assembly deployment** is NOT ticked. This option causes problems
 > with loading resources and should not be used if you are testing localized apps.
+
+For more information about Android localization, see [Android Localization](~/android/app-fundamentals/localization.md).
 
 #### Universal Windows Platform
 
@@ -650,6 +656,8 @@ This informs the resource manager of the app's default culture, therefore ensuri
 After updating the platform-specific projects as shown above and recompiling the app with translated RESX files, updated translations will be available in each app. Here is a screenshot from the sample code translated into Simplified Chinese:
 
 ![](text-images/simple-example-hans.png "Cross-Platform UIs Translated to Simplified Chinese")
+
+For more information about UWP localization, see [UWP Localization](/windows/uwp/design/globalizing/globalizing-portal/).
 
 ## Localizing XAML
 
@@ -790,7 +798,7 @@ All platforms will automatically resolve image references like these to localize
 
 ### iOS Application Project
 
-iOS uses a naming standard called Localization Projects or **.lproj** directories to contain image and string resources. These directories can contain localized versions of images used in the app, and also the **InfoPlist.strings** file that can be used to localize the app name.
+iOS uses a naming standard called Localization Projects or **.lproj** directories to contain image and string resources. These directories can contain localized versions of images used in the app, and also the **InfoPlist.strings** file that can be used to localize the app name. For more information about iOS Localization, see [iOS Localization](~/ios/app-fundamentals/localization/index.md).
 
 #### Images
 
@@ -814,7 +822,7 @@ When the application is run, the app name and the image are both localized:
 
 ### Android Application Project
 
-Android follows a different scheme for storing localized images using different **drawable** and **strings** directories with a language code suffix. When a four-letter locale code is required (such as zh-TW or pt-BR), note that Android requires an additional **r** following the dash/preceding the locale code (eg. zh-rTW or pt-rBR).
+Android follows a different scheme for storing localized images using different **drawable** and **strings** directories with a language code suffix. When a four-letter locale code is required (such as zh-TW or pt-BR), note that Android requires an additional **r** following the dash/preceding the locale code (eg. zh-rTW or pt-rBR). For more information about Android localization, see [Android Localization](~/android/app-fundamentals/localization.md).
 
 #### Images
 
@@ -850,7 +858,7 @@ The app now localizes the app name and image. Here's a screenshot of the result 
 
 ### Universal Windows Platform Application Projects
 
-The Universal Windows Platform possesses a resource infrastructure that simplifies the localization of images and the app name.
+The Universal Windows Platform possesses a resource infrastructure that simplifies the localization of images and the app name. For more information about UWP localization, see [UWP Localization](/windows/uwp/design/globalizing/globalizing-portal/).
 
 #### Images
 
@@ -873,5 +881,6 @@ Images are generally handled in a platform-specific way to take advantage of the
 - [Cross-Platform Localization](~/cross-platform/app-fundamentals/localization.md)
 - [iOS Localization](~/ios/app-fundamentals/localization/index.md)
 - [Android Localization](~/android/app-fundamentals/localization.md)
+- [UWP Localization](/windows/uwp/design/globalizing/globalizing-portal/)
 - [Using the CultureInfo class (MSDN)](http://msdn.microsoft.com/library/87k6sx8t%28v=vs.90%29.aspx)
 - [Locating and Using Resources for a Specific Culture (MSDN)](http://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)

@@ -28,9 +28,12 @@ Create the Phoneword application as follows:
 
     ![](quickstart-images/vs/new-solution.png "New Project")
 
-3. In the **New Project** dialog, click **Cross-Platform**, select the **Mobile App (Xamarin.Forms)** template, set the Name and Solution name to `Phoneword`, choose a suitable location for the project and click the **OK** button:
+3. In the **New Project** dialog, click **Cross-Platform**, select the **Mobile App (Xamarin.Forms)** template, set the Name to **Phoneword**, choose a suitable location for the project and click the **OK** button:
 
     ![](quickstart-images/vs/new-project.w157.png "Cross-Platform Project Templates")
+
+    > [!NOTE]
+    > Failing to name the solution **Phoneword** will result in numerous build errors.
 
 4. In the **New Cross Platform App** dialog, click **Blank App**, select **.NET Standard** as the Code Sharing Strategy, and click the **OK** button:
 
@@ -449,13 +452,16 @@ Create the Phoneword application as follows:
 
     ![](quickstart-images/xs/choose-template.png "Choose a Template")
 
-3. In the **Configure your Blank Forms app** dialog, name the new app `Phoneword`, ensure that the **Use .NET Standard** radio button is selected, and click the **Next** button:
+3. In the **Configure your Blank Forms app** dialog, name the new app **Phoneword**, ensure that the **Use .NET Standard** radio button is selected, and click the **Next** button:
 
     ![](quickstart-images/xs/configure-app.png "Configure the Forms Application")
 
-4. In the **Configure your new Blank Forms app** dialog, leave the Solution and Project names set to `Phoneword`, choose a suitable location for the project, and click the **Create** button to create the project:
+4. In the **Configure your new Blank Forms app** dialog, leave the Solution and Project names set to **Phoneword**, choose a suitable location for the project, and click the **Create** button to create the project:
 
     ![](quickstart-images/xs/configure-project.png "Configure the Forms Project")
+
+    > [!NOTE]
+    > Failing to name the solution and project **Phoneword** will result in numerous build errors.
 
 5. In the **Solution Pad**, double-click **MainPage.xaml** to open it:
 

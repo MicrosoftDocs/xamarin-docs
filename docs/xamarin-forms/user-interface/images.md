@@ -156,8 +156,11 @@ If you place embedded images into folders within your project, the folder names 
 The code to load an embedded image simply passes the **Resource ID** to the [`ImageSource.FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) method as shown below:
 
 ```csharp
-var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithImages.beach.jpg") };
+var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithImages.beach.jpg", typeof(EmbeddedImages).GetTypeInfo().Assembly) };
 ```
+
+> [!NOTE]
+> To support displaying embedded images in release mode on the Universal Windows Platform, it's necessary to use the overload of `ImageSource.FromResource` that specifies the source assembly in which to search for the image.
 
 Currently there is no implicit conversion for resource identifiers. Instead, you must use [`ImageSource.FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) or `new ResourceImageSource()` to load embedded images.
 
@@ -185,12 +188,15 @@ public class ImageResourceExtension : IMarkupExtension
    }
 
    // Do your translation lookup here, using whatever method you require
-   var imageSource = ImageSource.FromResource(Source);
+   var imageSource = ImageSource.FromResource(Source, typeof(ImageResourceExtension).GetTypeInfo().Assembly);
 
    return imageSource;
  }
 }
 ```
+
+> [!NOTE]
+> To support displaying embedded images in release mode on the Universal Windows Platform, it's necessary to use the overload of `ImageSource.FromResource` that specifies the source assembly in which to search for the image.
 
 To use this extension add a custom `xmlns` to the XAML, using the correct namespace and assembly values for the project. The image source can then be set using this syntax: `{local:ImageResource WorkingWithImages.beach.jpg}`. A complete XAML example is shown below:
 
@@ -227,10 +233,15 @@ foreach (var res in assembly.GetManifestResourceNames())
 }
 ```
 
-#### Images Embedded in Other Projects Don't Appear
+#### Images Embedded in Other Projects
 
-`Image.FromResource` only looks for images in the same assembly as the code calling `FromResource`. Using the debug code above you can determine which assemblies contain a specific resource
-by changing the `typeof()` statement to a `Type` known to be in each assembly.
+By default, the `ImageSource.FromResource` method only looks for images in the same assembly as the code calling the `ImageSource.FromResource` method. Using the debug code above you can determine which assemblies contain a specific resource by changing the `typeof()` statement to a `Type` known to be in each assembly.
+
+However, the source assembly being searched for an embedded image can be specified as an argument to the `ImageSource.FromResource` method:
+
+```csharp
+var imageSource = ImageSource.FromResource("filename.png", typeof(MyClass).GetTypeInfo().Assembly);
+```
 
 <a name="Downloading_Images" />
 
@@ -320,7 +331,6 @@ Refer to the documentation for [iOS Working with Images](~/ios/app-fundamentals/
 Xamarin.Forms offers a number of different ways to include images in a cross-platform application, allowing for the same image to be used across platforms or for platform-specific images to be specified. Downloaded images are also automatically cached, automating a common coding scenario.
 
 Application icon and splashscreen images are set-up and configured as for non-Xamarin.Forms applications - follow the same guidance used for platform-specific apps.
-
 
 ## Related Links
 
