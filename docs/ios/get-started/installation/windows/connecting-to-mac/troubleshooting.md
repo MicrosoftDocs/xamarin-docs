@@ -86,7 +86,7 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
     ssh amyb@10.1.8.95 'ls'
     ```
     
-	This should list the contents of your home directory on the Mac. If the `ls` command works correctly but the Visual Studio connection still fails, you can check the [Known Issues and Limitations](#knownissues) section about complications specific to Xamarin. If none of those match your problem, please [file a new bug report](https://bugzilla.xamarin.com/newbug) and attach the logs described under [Check the Verbose Log Files](#verboselogs).
+	This should list the contents of your home directory on the Mac. If the `ls` command works correctly but the Visual Studio connection still fails, you can check the [Known Issues and Limitations](#knownissues) section about complications specific to Xamarin. If none of those match your problem, please file a new bug report on Developer Community by going to **Help > Send Feedback > Report a problem** in Visual Studio and attach the logs described under [Check the Verbose Log Files](#verboselogs).
 
 10. If **step 8 fails**, you can run the following command in Terminal on the Mac to see if the SSH server is accepting _any_ connections:
 
