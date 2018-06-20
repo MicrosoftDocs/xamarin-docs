@@ -5,7 +5,7 @@ ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 06/20/2018
 ---
 
 # Obtaining a Google Maps API Key
@@ -124,11 +124,11 @@ You will use the SHA-1 fingerprint (listed after **SHA1**) later in this guide.
 
 After you have retrieved the SHA-1 fingerprint of the signing keystore, it is necessary to create a new project in the Google APIs console (or add the Google Maps Android API v2 service to an existing project).
 
-1. In a browser, navigate to the [Google Developers Console API & Services Dashboard](https://console.developers.google.com/apis/dashboard/) and click **Select a project**, then click on a project name or create a new one clicking on **NEW PROJECT**:
+1. In a browser, navigate to the [Google Developers Console API & Services Dashboard](https://console.developers.google.com/apis/dashboard/) and click **Select a project**. Click on a project name or create a new one by clicking **NEW PROJECT**:
 
    [![Google Developer Console CREATE PROJECT button](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs-sml.png)](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs.png#lightbox)
 
-2. If you choosed to create a new project, in the **New Project** dialog that appears, enter the project name. The dialog will manufacture a unique project ID that is based on your project name. Then click the **Create** button as shown in this example:
+2. If you created a new project, enter the project name in the **New Project** dialog that is displayed. This dialog will manufacture a unique project ID that is based on your project name. Next, click the **Create** button as shown in this example:
 
    [![New project is named XamarinMapsDemo](obtaining-a-google-maps-api-key-images/02-new-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/02-new-project-vs.png#lightbox)
 
@@ -136,22 +136,22 @@ After you have retrieved the SHA-1 fingerprint of the signing keystore, it is ne
 
    [![Clicking Google Maps Android API in the Library section](obtaining-a-google-maps-api-key-images/03-api-selection-vs-sml.png)](obtaining-a-google-maps-api-key-images/03-api-selection-vs.png#lightbox)
 
-4. From the **API Library** page, click **Maps SDK for Android** and on the next page click **ENABLE**
+4. From the **API Library** page, click **Maps SDK for Android**. On the next page, click **ENABLE**
    to turn on the service for this project:
 
    [![Clicking the ENABLE button in the Dashboard section](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
-At this point the API project has been created and the Google Maps Android API v2 has been added to it. However, you cannot use this API in your project until you create credentials for it. Next we will look at how to create an API key and white-list a Xamarin.Android application so that it is authorized to use this key.
+At this point the API project has been created and Google Maps Android API v2 has been added to it. However, you cannot use this API in your project until you create credentials for it. The next section explains how to create an API key and white-list a Xamarin.Android application so that it is authorized to use this key.
 
 ## Obtaining the API Key
 
 After the **Google Developer Console** API project has been created, it is necessary to create an Android API key. Xamarin.Android applications must have an API key before they are granted access to Android Map API v2.
 
-1. In the **Maps SDK for Android** page that is displayed (after clicking **ENABLE** in the previous step), go to the **Credentials** tab and click **Create credentials** button:
+1. In the **Maps SDK for Android** page that is displayed (after clicking **ENABLE** in the previous step), go to the **Credentials** tab and click the **Create credentials** button:
 
    [![Maps SDK for Android Credentials message](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
-2. Choose the **API key** clicking on it:
+2. Click **API key**:
 
    [![Add credentials to your project dialog](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
 
@@ -181,15 +181,15 @@ After the **Google Developer Console** API project has been created, it is neces
 
 ## Connect the project to a billable account
 
-Starting from June,11 2018 the API key won't work if the project is not connected to a billable account, even if the service is still free for mobile apps.
+Beginning June,11 2018, the API key will not work if the project is not connected to a billable account (even if the service is still free for mobile apps).
 
-1. Open the **burger menu** and select the **Billing** page:
+1. Click the hamburger menu button and select the **Billing** page:
 
-   [![select the burger menu billing section](obtaining-a-google-maps-api-key-images/13-goto-billing-vs-sml.png)](obtaining-a-google-maps-api-key-images/13-goto-billing-vs.png#lightbox)
+   [![Selecting the hamburger menu billing section](obtaining-a-google-maps-api-key-images/13-goto-billing-vs-sml.png)](obtaining-a-google-maps-api-key-images/13-goto-billing-vs.png#lightbox)
 
-2. Link the project to a billing account (if you don't have, you'll be guided to create a new one after following this step) clicking on **Link a billing account** and then **CREATE BILLING ACCOUNT** on the shown popup:
+2. Link the project to a billing account by clicking **Link a billing account** followed by **CREATE BILLING ACCOUNT** on the displayed popup (if you don't have an account, you will be guided to create a new one):
 
-   [![link projetc to billing account](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs-sml.png)](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs.png#lightbox)
+   [![Link project to billing account](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs-sml.png)](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs.png#lightbox)
 
 ## Adding the Key to Your Project
 
