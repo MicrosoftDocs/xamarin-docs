@@ -43,6 +43,10 @@ The `DependencyService` provides a simple locator so that you can code to interf
 
 Effects allow the native controls on each platform to be customized, and are typically used for small styling changes.
 
+## [Files](files.md)
+
+File handling with Xamarin.Forms can be achieved using code in a .NET Standard library, or by using embedded resources.
+
 ## [Gestures](gestures/index.md)
 
 The Xamarin.Forms [`GestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/) class supports tap, pinch, and pan gestures on user interface controls.
