@@ -27,7 +27,7 @@ No additional setup required.
 
 # [UWP](#tab/uwp)
 
-A Bing maps API key is required to use geocoding funcationality. Sign up for a free [Bing Maps](https://www.bingmapsportal.com/) account. Under **My account > My keys** create a new key and fill out information based on your application type (which should be "Public Windows App (UWP, 8.x, and earlier)" for UWP apps).
+A Bing maps API key is required to use geocoding funcationality. Sign up for a free [Bing Maps](https://www.bingmapsportal.com/) account. Under **My account > My keys** create a new key and fill out information based on your application type (which should be **Public Windows App (UWP, 8.x, and earlier)** for UWP apps).
 
 Early on in your application's life before calling any **Geocoding** methods set the API key:
 
