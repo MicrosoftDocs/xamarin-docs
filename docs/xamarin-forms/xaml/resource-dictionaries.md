@@ -247,7 +247,7 @@ When merged [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) resour
 
 1. The resources local to the resource dictionary.
 1. The resources contained in the resource dictionary that was merged via the deprecated [`MergedWith`](xref:Xamarin.Forms.ResourceDictionary.MergedWith) property.
-1. The resources contained in the resource dictionaries that were merged via the `MergedDictionaries` collection, in the order they are listed in the `MergedDictionaries` property.
+1. The resources contained in the resource dictionaries that were merged via the `MergedDictionaries` collection, in the reverse order they are listed in the `MergedDictionaries` property.
 
 > [!NOTE]
 > Searching resource dictionaries can be a computationally intensive task if an application contains multiple, large resource dictionaries. Therefore, to avoid unnecessary searching, you should ensure that each page in an application only uses resource dictionaries that are appropriate to the page.
