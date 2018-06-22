@@ -23,7 +23,6 @@ and re-installing the app. The following product types are restorable:
 -  Auto-renewable subscriptions
 -  Free subscriptions
 
-
 The restore process should update the records you keep on the device to
 fulfill your products. The customer can choose to restore at any time, on any of
 their devices. The restore process re-sends all prior transactions for that
@@ -48,9 +47,7 @@ public void Restore()
 StoreKit will send the restore request to Apple’s servers
 asynchronously.   
    
-   
-   
- Because the `CustomPaymentObserver` is registered as a transaction observer, it
+Because the `CustomPaymentObserver` is registered as a transaction observer, it
 will receive messages when Apple’s servers respond. The response will contain
 all the transactions this user has ever performed in this application (across
 all their devices). The code loops through each transaction, detects the
@@ -83,9 +80,7 @@ public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransac
 
 If there are no restorable products for the user, `UpdatedTransactions` is not called.   
    
-   
-   
- The simplest
+The simplest
 possible code to restore a given transaction in the sample does the same actions
 as when a purchase takes place, except that the `OriginalTransaction`
 property is used to access the Product ID:
@@ -150,8 +145,7 @@ built-in backup and recovery features of iOS, iTunes and iCloud. This will
 ensure that after a user restores a backup their previous purchases will be
 immediately available.   
    
-   
- Refer to Apple’s Secure Coding Guide
+Refer to Apple’s Secure Coding Guide
 for more iOS-specific guidelines.
 
 ## Receipt Verification and Server-Delivered Products
@@ -161,14 +155,10 @@ communicating directly with the App Store servers to conduct purchase
 transactions, which unlock features or capabilities already coded into the
 app.   
    
-   
-   
- Apple provides for an additional level of purchase
+Apple provides for an additional level of purchase
 security by allowing purchase receipts to be independently verified by another
 server, which can be useful to validate a request before delivering digital
 content as part of a purchase (such as a digital book or magazine).   
-   
-   
    
  **Built-In Products** – Like the examples in this
 document, the product being purchased exists as functionality shipped with the
@@ -199,35 +189,31 @@ new issues of a magazine. So that the application can discover these news
 products and display them to the user, the additional server should store and
 deliver this information.   
    
+[![](transactions-and-verification-images/image38.png "Getting Prices for Server-Delivered Products")](transactions-and-verification-images/image38.png#lightbox)   
    
-   
- [![](transactions-and-verification-images/image38.png "Getting Prices for Server-Delivered Products")](transactions-and-verification-images/image38.png#lightbox)   
-   
-   
-   
- 1. Product information must be stored in multiple places: on your server
+1. Product information must be stored in multiple places: on your server
 and in iTunes Connect. In addition, each product will have content files
 associated with it. These files will be delivered after a successful
 purchase.   
    
- 2. When the user wishes to purchase a product, the
+2. When the user wishes to purchase a product, the
 application must determine what products are available. This information may be
 cached, but should be delivered from a remote server where the master list of
 products is stored.   
    
- 3. The server returns a list of Product IDs for the
+3. The server returns a list of Product IDs for the
 application to parse.   
    
- 4. The application then determines which of these
+4. The application then determines which of these
 Product IDs to send to StoreKit to retrieve prices and descriptions.   
    
- 5. StoreKit sends the list of Product IDs to Apple’s servers.   
+5. StoreKit sends the list of Product IDs to Apple’s servers.   
    
- 6. The
+6. The
 iTunes servers respond with valid product information (description and current
 price).   
    
- 7. The application’s `SKProductsRequestDelegate`
+7. The application’s `SKProductsRequestDelegate`
 is passed the product information for display to the user.
 
 #### Purchasing Server-Delivered Products
@@ -240,37 +226,37 @@ the application.
    
  [![](transactions-and-verification-images/image39.png "Purchasing Server-Delivered Products")](transactions-and-verification-images/image39.png#lightbox)   
    
- 1. The app adds an `SKPayment` to the queue. If required the
+1. The app adds an `SKPayment` to the queue. If required the
 user will be prompted for their Apple ID, and asked to confirm the payment.   
    
- 2. StoreKit sends the request to the server for processing.   
+2. StoreKit sends the request to the server for processing.   
    
- 3. When the transaction is complete, the server responds with a transaction
+3. When the transaction is complete, the server responds with a transaction
 receipt.   
    
- 4. The `SKPaymentTransactionObserver` subclass
+4. The `SKPaymentTransactionObserver` subclass
 receives the receipt and processes it. Because the product must be downloaded
 from a server, the application initiates a network request to the remote
 server.   
    
- 5. The download request is accompanied by the receipt data so
+5. The download request is accompanied by the receipt data so
 that the remote server can verify it is authorized to access the content. The
 application’s network client waits for a response to this request.   
    
- 6. When the server receives a request for content, it parses out the receipt data and sends a request directly to the iTunes servers to verify the receipt is for a valid transaction. The server should use some logic to determine whether to send the request to the production or sandbox URL. Apple suggests always using the production URL and switching to sandbox if status: 21007 (sandbox receipt sent to production server) – refer to [Technical Note 2259 FAQ #16](https://developer.apple.com/library/ios/#technotes/tn2259/_index.html).   
+6. When the server receives a request for content, it parses out the receipt data and sends a request directly to the iTunes servers to verify the receipt is for a valid transaction. The server should use some logic to determine whether to send the request to the production or sandbox URL. Apple suggests always using the production URL and switching to sandbox if your receive status 21007 (sandbox receipt sent to production server). Refer to Apple's [Receipt Validation Programming Guide](https://developer.apple.com/library/archive/releasenotes/General/ValidateAppStoreReceipt/Chapters/ValidateRemotely.html) for more details.
    
- 7. iTunes will check
+7. iTunes will check
 the receipt and return a status of zero if it is valid.   
    
- 8. The server
+8. The server
 waits for iTunes’ response. If it receives a valid response, the code should
 locate the associated product content file to include in the response to the
 application.   
-   
- 9. The application receives and parses the response,
+  
+9. The application receives and parses the response,
 saving the product content to the device’s filesystem.   
    
- 10. The
+10. The
 application enables the product, and then calls StoreKit’s `FinishTransaction`. The application may then optionally display the
 purchased content (for example, show the first page of a purchased book or
 magazine issue).
@@ -288,9 +274,7 @@ Validating a receipt in server-side code can be done with a simple HTTP POST
 request/response that encompasses steps #5 through #8 in the workflow
 diagram.   
    
-   
-   
- Extract the `SKPaymentTansaction.TransactionReceipt` property in the app. This is
+Extract the `SKPaymentTansaction.TransactionReceipt` property in the app. This is
 the data that needs to be sent to iTunes for verification (step #5).
 
 Base64-encode the transaction receipt data (either in step #5 or #6).
@@ -321,39 +305,5 @@ object that was received by the app, so the server code can query this
 dictionary to retrieve information such as the product_id and quantity of the
 purchase.
 
-See Apple’s [Verifying Store Receipts](https://developer.apple.com/library/ios/#documentation/NetworkingInternet/Conceptual/StoreKitGuide/VerifyingStoreReceipts/VerifyingStoreReceipts.html#//apple_ref/doc/uid/TP40008267-CH104-SW1) documentation for additional
+See Apple’s [Receipt Validation Programming Guide](https://developer.apple.com/library/archive/releasenotes/General/ValidateAppStoreReceipt/Introduction.html) documentation for additional
 information.
-
-#### Using ASP.NET
-
-For C# developers there is a useful open-source project called [APNS-Sharp](https://github.com/Redth/APNS-Sharp) which
-includes receipt verification code that works in ASP.NET. In particular, the `Receipt.cs` and `ReceiptVerification.cs` files in the [ `Jdsoft.Apple.AppStore`](https://github.com/Redth/APNS-Sharp/tree/master/JdSoft.Apple.AppStore) directory can be added to
-a .NET website to easily implement steps #6 through #8 from the Server-Delivered
-Products workflow diagram.   
-   
-   
-   
- Communication with the iTunes
-servers uses JSON, which is easy to process in C#.   
-   
-   
-   
- Refer to
-Apple’s In-App Purchase [Receipt Validation](https://developer.apple.com/library/ios/#releasenotes/StoreKit/IAP_ReceiptValidation/_index.html) documentation for detailed information on
-how to verify that a receipt is valid.
-
-### 3rd Party Receipt Verification
-
-There are companies that offer platforms for receipt verification (and other
-things) that you can use instead of building your own server. Xamarin does not
-endorse these services; they’re simply mentioned here for reference.
-
-#### Urban Airship
-
-Urban Airship provides a number of different back-end services for iOS apps
-including receipt verification and push notifications.   
-   
- [http://urbanairship.com/products/in-app-purchase/](http://urbanairship.com/products/in-app-purchase/)
-
-
-
