@@ -234,9 +234,7 @@ you can write this code and it will also work:
 ```csharp
 [assembly:LinkerSafe]
 // ... assembly attribute should be at top, before source
-class LinkerSafeAttribute : System.Attribute {
-    public LinkerSafeAttribute : System.base {}
-}
+class LinkerSafeAttribute : System.Attribute {}
 ```
 
 ## Custom Linker Configuration
