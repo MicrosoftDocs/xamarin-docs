@@ -6,7 +6,7 @@ ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/18/2018
+ms.date: 06/21/2018
 ---
 
 # Xamarin.Forms Local Databases
@@ -15,7 +15,7 @@ _Xamarin.Forms supports database-driven applications using the SQLite database e
 
 ## Overview
 
-Xamarin.Forms applications can use the [SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/) package to incorporate database operations into shared code by referencing the `SQLite` classes that ship in the NuGet. Database operations can be defined in the .NET Standard library project of the Xamarin.Forms solution, with platform-specific projects returning a path to where the database will be stored.
+Xamarin.Forms applications can use the [SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/) package to incorporate database operations into shared code by referencing the `SQLite` classes that ship in the NuGet. Database operations can be defined in the .NET Standard library project of the Xamarin.Forms solution.
 
 The accompanying [sample application](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) is a simple Todo-list application. The following screenshots show how the sample appears on each platform:
 
@@ -25,13 +25,7 @@ The accompanying [sample application](https://github.com/xamarin/xamarin-forms-s
 
 ## Using SQLite
 
-This section shows how to add the SQLite.Net NuGet packages to a Xamarin.Forms solution, write methods to perform database operations, and use the [`DependencyService`](~/xamarin-forms/app-fundamentals/dependency-service/index.md) to determine a location to store the database on each platform.
-
-<a name="XamarinForms_PCL_Project" />
-
-### Xamarins.Forms .NET Standard or PCL Project
-
-To add SQLite support to a Xamarin.Forms project, use NuGet's search function to find **sqlite-net-pcl** and install the latest package:
+To add SQLite support to a Xamarin.Forms .NET Standard library, use NuGet's search function to find **sqlite-net-pcl** and install the latest package:
 
 ![Add NuGet SQLite.NET PCL Package](databases-images/vs2017-sqlite-pcl-nuget.png "Add NuGet SQLite.NET PCL Package")
 
@@ -41,19 +35,10 @@ There are a number of NuGet packages with similar names, the correct package has
 - **Id:** sqlite-net-pcl
 - **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
-> [!TIP]
-> Use the **sqlite-net-pcl** NuGet package even in .NET Standard projects.
+> [!NOTE]
+> Despite the package name, use the **sqlite-net-pcl** NuGet package even in .NET Standard projects.
 
-Once the reference has been added, write an interface to abstract the platform-specific functionality, which is to determine the location of the database file. The interface used in the sample defines a single method:
-
-```csharp
-public interface IFileHelper
-{
-  string GetLocalFilePath(string filename);
-}
-```
-
-Once the interface has been defined, use the [`DependencyService`](~/xamarin-forms/app-fundamentals/dependency-service/index.md) to obtain an implementation and get a local file path (note that this interface has not been implemented yet). The following code gets an implementation in the `App.Database` property:
+Once the reference has been added, add a property to the `App` class that returns a local file path for storing the database:
 
 ```csharp
 static TodoItemDatabase database;
@@ -64,14 +49,15 @@ public static TodoItemDatabase Database
   {
     if (database == null)
     {
-      database = new TodoItemDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("TodoSQLite.db3"));
+      database = new TodoItemDatabase(
+        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TodoSQLite.db3"));
     }
     return database;
   }
 }
 ```
 
-The `TodoItemDatabase` constructor is shown below:
+The `TodoItemDatabase` constructor, which takes the path for the database file as an argument, is shown below:
 
 ```csharp
 public TodoItemDatabase(string dbPath)
@@ -81,7 +67,7 @@ public TodoItemDatabase(string dbPath)
 }
 ```
 
-This approach creates a single database connection that is kept open while the application runs, therefore avoiding the expense of opening and closing the database file each time a database operation is performed.
+The advantage of exposing the database as a singleton is that a single database connection is created that's kept open while the application runs, therefore avoiding the expense of opening and closing the database file each time a database operation is performed.
 
 The remainder of the `TodoItemDatabase` class contains SQLite queries that run cross-platform. Example query code is shown below (more details on the syntax can be found in the
 [Using SQLite.NET](~/cross-platform/app-fundamentals/index.md) article):
@@ -122,87 +108,11 @@ public Task<int> DeleteItemAsync(TodoItem item)
 > [!NOTE]
 > The advantage of using the asynchronous SQLite.Net API is that database operations are moved to background threads. In addition, there's no need to write additional concurrency handling code because the API takes care of it.
 
-All of the data access code is written in the .NET Standard library project to be shared across all platforms. Only getting a local file path for the database requires platform-specific code, as outlined in the following sections.
-
-<a name="PCL_iOS" />
-
-### iOS Project
-
-The only code required is the `IFileHelper` implementation that determines the data file path. The following code places the SQLite database file in the **Library/Databases** folder within the application's sandbox. See the [iOS Working with the File System](~/ios/app-fundamentals/file-system.md) documentation for more information on the different directories that are available for storage.
-
-```csharp
-[assembly: Dependency(typeof(FileHelper))]
-namespace Todo.iOS
-{
-  public class FileHelper : IFileHelper
-  {
-    public string GetLocalFilePath(string filename)
-    {
-      string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-      string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
-
-      if (!Directory.Exists(libFolder))
-      {
-        Directory.CreateDirectory(libFolder);
-      }
-
-      return Path.Combine(libFolder, filename);
-    }
-  }
-}
-```
-
-Note that the code includes the `assembly:Dependency` attribute so that this implementation is discoverable by the `DependencyService`.
-
-<a name="PCL_Android" />
-
-### Android Project
-
-The only code required is the `IFileHelper` implementation that determines the data file path:
-
-```csharp
-[assembly: Dependency(typeof(FileHelper))]
-namespace Todo.Droid
-{
-  public class FileHelper : IFileHelper
-  {
-    public string GetLocalFilePath(string filename)
-    {
-        string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-        return Path.Combine(path, filename);
-    }
-  }
-}
-```
-
-<a name="PCL_UWP" />
-
-### Windows 10 Universal Windows Platform (UWP)
-
-Implement the `IFileHelper` interface using the platform-specific `Windows.Storage` API to determine the data file path:
-
-```csharp
-using Windows.Storage;
-...
-
-[assembly: Dependency(typeof(FileHelper))]
-namespace Todo.UWP
-{
-  public class FileHelper : IFileHelper
-  {
-    public string GetLocalFilePath(string filename)
-    {
-      return Path.Combine(ApplicationData.Current.LocalFolder.Path, filename);
-    }
-  }
-}
-```
-
 ## Summary
 
 Xamarin.Forms supports database-driven applications using the SQLite database engine, which makes it possible to load and save objects in shared code.
 
-This article focused on **accessing** a SQLite database using Xamarin.Forms. For more information on working with SQLite.Net itself, refer to the [SQLite.NET on Android](~/android/data-cloud/data-access/using-sqlite-orm.md) or [SQLite.NET on iOS](~/ios/data-cloud/data/using-sqlite-orm.md) documentation. Most SQLite.Net code is sharable across all platforms; only configuring the location of the SQLite database file requires platform-specific functionality.
+This article focused on **accessing** a SQLite database using Xamarin.Forms. For more information on working with SQLite.Net itself, refer to the [SQLite.NET on Android](~/android/data-cloud/data-access/using-sqlite-orm.md) or [SQLite.NET on iOS](~/ios/data-cloud/data/using-sqlite-orm.md) documentation.
 
 ## Related Links
 
