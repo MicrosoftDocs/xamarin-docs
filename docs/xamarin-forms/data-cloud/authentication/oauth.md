@@ -116,7 +116,7 @@ The following code example shows how to initialize a login presenter in the `Mai
 global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, bundle);
 ```
 
-The Portable Class Library (PCL) project can then invoke the login presenter as follows:
+The .NET Standard project can then invoke the login presenter as follows:
 
 ```csharp
 var presenter = new Xamarin.Auth.Presenters.OAuthLoginPresenter();
