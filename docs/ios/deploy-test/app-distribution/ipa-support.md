@@ -127,10 +127,10 @@ In certain cases, such as in a CI environment, it may be necessary to build you 
 
      ![](ipa-support-images/imagexs03.png "Select iTunesMetadata.plist from the list")
 
-1. Call **xbuild** (or **mdtool** for Classic API) directly and pass this property on the command line:
+1. Call **msbuild** directly and pass this property on the command line:
 
     ```bash
-    /Library/Frameworks/Mono.framework/Commands/xbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
+    /Library/Frameworks/Mono.framework/Commands/msbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
     ```
 
 # [Visual Studio](#tab/vswin)
@@ -173,7 +173,7 @@ A new **MSBuild** property `IpaPackageDir` has been added to make it easy to cus
 
 There are several possible ways to use the new property:
 
-For example, to output the **.ipa** file to the old default directory (as in Xamarin.iOS 9.6 and lower), you can set the `IpaPackageDir` property to `$(OutputPath)` using one of the following approaches. Both approaches are compatible with all Unified API Xamarin.iOS builds, including IDE builds as well as command line builds that use **xbuild**, **msbuild**, or **mdtool**:
+For example, to output the **.ipa** file to the old default directory (as in Xamarin.iOS 9.6 and lower), you can set the `IpaPackageDir` property to `$(OutputPath)` using one of the following approaches. Both approaches are compatible with all Unified API Xamarin.iOS builds, including IDE builds as well as command-line builds that use **msbuild**, **xbuild**, or **mdtool**:
 
 - The first option is to set the `IpaPackageDir` property within a `<PropertyGroup>` element in an **MSBuild** file. For example, you could add the following `<PropertyGroup>` to the bottom of the iOS app project **.csproj** file (just before the closing `</Project>` tag):
 
@@ -207,19 +207,17 @@ For example, to output the **.ipa** file to the old default directory (as in Xam
     </PropertyGroup>
     ```
 
-An alternate technique for **msbuild** or **xbuild** command line builds is to add a `/p:` command line argument to set the `IpaPackageDir` property. In this case note that **msbuild** does not expand `$()` expressions passed in on the command line, so it is not possible to use the `$(OutputPath)` syntax. You must instead provide a full path name. Mono's **xbuild** command does expand `$()` expressions, but it is still preferable to use a full path name because **xbuild** will eventually be deprecated in favor of the [cross-platform version of **msbuild**](http://www.mono-project.com/docs/about-mono/releases/4.4.0/#msbuild-preview-for-os-x) in future releases.
+An alternate technique for **msbuild** or **xbuild** command-line builds is to add a `/p:` argument to set the `IpaPackageDir` property. In this case note that **msbuild** does not expand `$()` expressions passed in on the command line, so it is not possible to use the `$(OutputPath)` syntax. You must instead provide a full path name. Mono's **xbuild** command does expand `$()` expressions, but it is still preferable to use a full path name because **xbuild** has been deprecated in favor of the [cross-platform version of **msbuild**](https://www.mono-project.com/docs/about-mono/releases/5.0.0/#msbuild).
 
 A complete example that uses this approach might look similar to the following on Windows:
-
 
 ```bash
 msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:ServerAddress="192.168.1.3" /p:ServerUser="macuser" /p:IpaPackageDir="%USERPROFILE%\Builds" /t:Build SingleViewIphone1.sln
 ```
-
 Or the following on Mac:
 
 ```bash
-xbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/Builds" /t:Build SingleViewIphone1.sln
+msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/Builds" /t:Build SingleViewIphone1.sln
 ```
 
 <a name="installipa" />

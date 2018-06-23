@@ -73,13 +73,13 @@ All encrypted values will be removed when the app is uninstalled from the device
 
 # [iOS](#tab/ios)
 
-[KeyChain](https://developer.xamarin.com/api/type/Android.Security.KeyChain/) is used to store values securely on iOS devices.  The `SecRecord` used to store the value has a `Service` value set to **[YOUR-APP-BUNDLE-ID].xamarinessentials**.
+[KeyChain](https://developer.xamarin.com/api/type/Security.SecKeyChain/) is used to store values securely on iOS devices.  The `SecRecord` used to store the value has a `Service` value set to **[YOUR-APP-BUNDLE-ID].xamarinessentials**.
 
 In some cases KeyChain data is synchronized with iCloud, and uninstalling the application may not remove the secure values from iCloud and other devices of the user.
 
 # [UWP](#tab/uwp)
 
-[DataProtectionProvider](https://docs.microsoft.com/en-us/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) is used to encryped values securely on UWP devices.
+[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) is used to encryped values securely on UWP devices.
 
 Encryped values are stored in `ApplicationData.Current.LocalSettings`, inside a container with a name of **[YOUR-APP-ID].xamarinessentials**.
 

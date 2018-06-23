@@ -90,7 +90,7 @@ Create the Phoneword application as follows:
 
             void OnTranslate (object sender, EventArgs e)
             {
-                translatedNumber = Core.PhonewordTranslator.ToNumber (phoneNumberText.Text);
+                translatedNumber = PhonewordTranslator.ToNumber (phoneNumberText.Text);
                 if (!string.IsNullOrWhiteSpace (translatedNumber)) {
                     callButton.IsEnabled = true;
                     callButton.Text = "Call " + translatedNumber;
@@ -134,7 +134,7 @@ Create the Phoneword application as follows:
     ```csharp
     using System.Text;
 
-    namespace Core
+    namespace Phoneword
     {
         public static class PhonewordTranslator
         {
@@ -514,7 +514,7 @@ Create the Phoneword application as follows:
 
             void OnTranslate (object sender, EventArgs e)
             {
-                translatedNumber = Core.PhonewordTranslator.ToNumber (phoneNumberText.Text);
+                translatedNumber = PhonewordTranslator.ToNumber (phoneNumberText.Text);
                 if (!string.IsNullOrWhiteSpace (translatedNumber)) {
                     callButton.IsEnabled = true;
                     callButton.Text = "Call " + translatedNumber;
@@ -558,7 +558,7 @@ Create the Phoneword application as follows:
     ```csharp
     using System.Text;
 
-    namespace Core
+    namespace Phoneword
     {
         public static class PhonewordTranslator
         {
