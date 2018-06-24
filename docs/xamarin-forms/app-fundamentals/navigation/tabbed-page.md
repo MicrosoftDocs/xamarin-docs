@@ -30,7 +30,7 @@ The layout of a [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Fo
     > [!NOTE]
   > Note that the `TabbedRenderer` for iOS has an overridable `GetIcon` method that can be used to load tab icons from a specified source. This override makes it possible to use SVG images as icons on a `TabbedPage`. In addition, selected and unselected versions of an icon can be provided.
 
-- On Android, the list of tabs appears at the top of the screen, and the detail area is below. The tab names are automatically capitalized, and the user can scroll the collection of tabs if there are too many to fit on one screen.
+- On Android, the list of tabs appears by default at the top of the screen, and the detail area is below. Since [Xamarin.Forms 3.1.0](https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-3.1/3.1.0/) it is possible to place tabs at the bottom of the screen by specyfing the [`TabbedPage.ToolbarPlacement`](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.toolbarplacementproperty?view=xamarin-forms) property to `Bottom`. The tab names are automatically capitalized, and the user can scroll the collection of tabs if there are too many to fit on one screen.
 
     > [!NOTE]
   > Note that when using AppCompat on Android, each tab will also display an icon. In addition, the `TabbedPageRenderer` for Android AppCompat has an overridable `SetTabIcon` method that can be used to load tab icons from a custom `Drawable`. This override makes it possible to use SVG images as icons on a `TabbedPage`.
