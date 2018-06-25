@@ -1,14 +1,15 @@
 ---
-title: "Maps API"
+title: "Using the Google Maps API in Your Application"
+description: "How to implement Google Maps API v2 features in your Xamarin.Android application."
 ms.prod: xamarin
 ms.assetid: C0589878-2D04-180E-A5B9-BB41D5AF6E02
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 06/25/2018
 ---
 
-# Maps API
+# Using the Google Maps API in your application
 
 Using the Maps application is great, but sometimes you want to include
 maps directly in your application. In addition to the built-in maps
@@ -440,9 +441,9 @@ class.
 
 Once a `CameraUpdate` object has been created, it is passed as a
 parameter to either the
-[GoogleMap.MoveCamera](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/GoogleMap.html#moveCamera(com.google.maps.CameraUpdate))
+[GoogleMap.MoveCamera](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/GoogleMap.html#moveCamera%28com.google.maps.CameraUpdate%29)
 or
-[GoogleMap.AnimateCamera](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/GoogleMap.html#animateCamera(com.google.maps.CameraUpdate))
+[GoogleMap.AnimateCamera](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/GoogleMap.html#animateCamera%28com.google.maps.CameraUpdate%29)
 methods. The `MoveCamera` method updates the map instantly while the
 `AnimateCamera` method provides a smooth, animated transition.
 
@@ -463,7 +464,7 @@ The Maps API provides a
 [CameraPosition](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.html)
 which will aggregate all of the possible values for the camera
 position. An instance of this class can be provided to the
-[CameraUpdateFactory.NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition(com.google.android.gms.maps.model.CameraPosition))
+[CameraUpdateFactory.NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition%28com.google.android.gms.maps.model.CameraPosition%29)
 method which will return a `CameraUpdate` object. The Maps API also
 includes the
 [CameraPosition.Builder](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html)
@@ -527,7 +528,7 @@ clicks.
 
 To add a marker to a map, it is necessary create a new
 [MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) object and then call the
-[AddMarker](http://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker(com.google.android.gms.maps.model.MarkerOptions))
+[AddMarker](http://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker%28com.google.android.gms.maps.model.MarkerOptions%29)
 method on a `GoogleMap` instance. This method will return a
 [Marker](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/model/Marker)
 object.
@@ -540,7 +541,7 @@ if (_map != null) {
     MarkerOptions markerOpt1 = new MarkerOptions();
     markerOpt1.SetPosition(new LatLng(50.379444, 2.773611));
     markerOpt1.SetTitle("Vimy Ridge");
-    _map.AddMarker(marker1);
+    _map.AddMarker(markerOpt1);
 }
 ```
 
@@ -571,7 +572,7 @@ class provides some helper methods to simplify the creation of a
 -   `FromBitmap(Bitmap image)` &ndash; Use the specified bitmap as the
     icon.
 
--   `FromFile(string fileName` &ndash; Create the custom icon from the
+-   `FromFile(string fileName)` &ndash; Create the custom icon from the
     file at the specified path.
 
 -   `FromResource(int resourceId)` &ndash; Create a custom icon from
@@ -589,7 +590,7 @@ if (_map != null)
     markerOpt1.SetPosition(new LatLng(50.379444, 2.773611));
     markerOpt1.SetTitle("Vimy Ridge");
     markerOpt1.InvokeIcon(BitmapDescriptorFactory.DefaultMarker (BitmapDescriptorFactory.HueCyan));
-    _map.AddMarker(marker1);
+    _map.AddMarker(markerOpt1);
 }
 ```
 
@@ -735,7 +736,7 @@ The following code snippet shows how to draw a circle:
 CircleOptions circleOptions = new CircleOptions ();
 circleOptions.InvokeCenter (new LatLng(37.4, -122.1));
 circleOptions.InvokeRadius (1000);
-_map.AddCircle (CircleOptions);
+_map.AddCircle (circleOptions);
 ```
 
 
@@ -858,4 +859,3 @@ respond to any of their integral user events.
 - [Google Maps Android API v2](https://developers.google.com/maps/documentation/android/)
 - [Google Play Services APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)
 - [Obtaining a Google Maps API key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Issue 57880: Google Play Services Updated but AVD not](https://code.google.com/p/android/issues/detail?id=57880)

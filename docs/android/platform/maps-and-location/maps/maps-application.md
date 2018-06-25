@@ -1,14 +1,15 @@
 ---
-title: "Maps Application"
+title: "Launching the Maps Application"
+description: "How to launch the built-in Maps application from within your Xamarin.Android app."
 ms.prod: xamarin
 ms.assetid: 929EACB8-8950-50E1-093C-43FB5F1F1CD5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/05/2017
+ms.date: 06/25/2018
 ---
 
-# Maps Application
+# Launching the Maps Application
 
 The simplest way to work with maps in Xamarin.Android is to leverage
 the built-in maps application shown below:
@@ -111,8 +112,8 @@ As you can see, there are several parameters supported, as listed below:
 -   `yaw` &ndash; Center-of-view of street view panorama, measured
     clockwise in degrees from North.
 
--   `zoom` &ndash; Zoom multiplier for street view panorama, where 1.0
-    = normal zoom, 2.0 = zoomed 2x, 3.0 = zoomed 4x, etc.
+-   `zoom` &ndash; Zoom multiplier for street view panorama, where 
+    1.0 = normal zoom, 2.0 = zoomed 2x, 3.0 = zoomed 4x, etc.
 
 -   `mz` &ndash; The map zoom level that will be used when going to the
     maps application from the street view.
