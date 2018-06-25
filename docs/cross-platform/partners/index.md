@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: F42526FF-2B0D-4A9D-B129-CECF680ED0DE
 author: conceptdev
 ms.author: crdun
-ms.date: 06/19/2017
+ms.date: 06/25/2018
 ---
 # Certified consulting partners to deliver mobile solutions
 
@@ -50,7 +50,6 @@ _Listed by primary location, many partners provide services across borders._
 |[Ciber US](http://www.ciber.com/)|Greenwood Village, USA|With cloud first digital transformation services, unique accelerators and focused talent services, we make your future possible.|
 |[Cie Digital Labs](http://www.ciedigital.com/)|Los Angeles, USA; Irvine, USA|Cie Digital Labs is passionate about understanding the business challenges our partners face and innovating new software solutions that bring measureable enterprise value|
 |[Clarity Ventures](https://www.clarity-ventures.com)|Austin, TX|Clarity is a well-rounded, professional, all service extension of your business. From the creative team designing anything from your business identity to screen-by-screen..|
-|[Code Mill Technologies](https://codemilltech.com/)|Madison, USA|Code Mill is a boutique consulting and training firm founded by Microsoft and Xamarin MVP Matt Soucoup. It specializes in Xamarin and Azure development |
 |[Cognizant Technology Solutions](http://www.cognizant.com)|Buenos Aires, Argentina; Auckland, New Zealand; Melbourne, Australia; Sydney, Australia; Brisbane, Australia; Brussels, Belgium; San Paulo, Brazil; Toronto, Canada; Shanghai, China; Heredia, Costa Rica; Jersey City, NJ, USA; San Francisco, CA, USA; Teaneck, NJ, USA|Cognizant combines a passion for client satisfaction, technology innovation, deep industry and business process expertise and a global, collaborative workforce that embodies the future of work|
 |[Coherent Solutions, Inc.](http://www.coherentsolutions.com)|New York, NY; Boston, MA; Minsk, Belarus|Coherent Solutions is a software development consulting and outsourcing company that solves customer business problems by bringing together global expertise, innovation, and creativity|
 |[Cruxlab](https://cruxlab.com/)|Los Angeles, USA|We create custom digital products for start-ups and enterprises, for end users and businesses|
@@ -59,10 +58,10 @@ _Listed by primary location, many partners provide services across borders._
 |[DEG](http://www.degdigital.com)|Overland Park, USA|DEG creates smart digital marketing, commerce, and collaboration strategies that empower organizations to amplify their competitive advantages and achieve their objectives|
 |[DevRabbit](http://www.devrabbit.com)|San Ramon, USA|DevRabbit is a US based Tech consulting firm that provides state-of-the-art solutions for Enterprise Mobility, Web Application Development and Cloud Consulting.|
 |[Digineer](http://www.digineer.com)|Plymouth, MN|Digineer provides enterprise project management, business analysis, app dev and business intelligence and staffing services|
-|[DigitasLBi Sverige AB](http://www.digitaslbi.com)|Boston, MA; Europe; Asia-Pasific;  Middle East; Africa|DigitasLBi is an international communications agency that helps companies navigate the digital world|
+|[DigitasLBi Sverige AB](http://www.digitaslbi.com)|Boston, MA; Europe; Asia-Pacific;  Middle East; Africa|DigitasLBi is an international communications agency that helps companies navigate the digital world|
 |[DMI](https://dminc.com/)|Bethesda, MD|Built to help enterprises reinvent themselves for the connected world, we offer a unique blend of capabilities and a fresh mindset designed to fuel innovation.|
 |[DOOR3](http://door3.com/)|New York, USA|In a world of creative agencies, large consulting firms and specialized implementation shops, we are different. We care about our business, but we care about our customers more.|
-|[DreamTeam Mobile](http://dreamteam-mobile.com)|Washington D.C., USA|DreamTeam Moible create native iOS, Android, Windows and Mac apps using Xamarin, Swift and React Native. We build native apps for multiple platforms with shared codebases|
+|[DreamTeam Mobile](http://dreamteam-mobile.com)|Washington D.C., USA|DreamTeam Mobile create native iOS, Android, Windows and Mac apps using Xamarin, Swift and React Native. We build native apps for multiple platforms with shared codebases|
 |[Durwella](http://www.durwella.com)|Houston, USA|Durwella is a software solutions company that focuses on scientific and engineering projects|
 |[EastBanc Technologies](http://www.eastbanctech.com)|Washington D.C., USA|EastBanc Technologies is a platform-agnostic, full-lifecycle software development company delivering flexible technology solutions|
 |[Edge Webware, Inc.](https://edgewebware.com)|Miamisburg, OH|Edge Webware, Inc. provides with web and mobile app design and/or development services|
@@ -73,7 +72,7 @@ _Listed by primary location, many partners provide services across borders._
 |[Endeavour Software Technologies Inc.](http://www.techendeavour.com)|Austin, TX|Endeavour's consultants assess Enterprise Mobile Maturity and help in addressing strategic mobility needs of the organization at all levels|
 |[Enhanced Systems Consulting](http://www.enhancedsystems.com)|Johnson City, TN|Enhanced Systems Consulting, Inc. provides expert design, development and integration services for companies seeking to create new business applications, or existing ones|
 |[Envoc](http://envoc.com/)|Baton Rouge, LA|We exist at the intersection of creativity and technology to deliver excellent experiences and innovation|
-|[EPAM Systems](https://www.epam.com)|Newtown, PA|EPAM Systems, Inc is a leading global product development and digital platform engineering services company|
+|[EPAM Systems](https://www.epam.com)|Newtown, PA; New York City; Philadelphia; Chicago; San Francisco; Los Angeles; London; Minsk; St Petersburg; Budapest|EPAM Systems, Inc is a leading global product development and digital platform engineering services company|
 |[Experis Ciber B.V.](http://www.ciber.com)|Troy, MI |Ciber is a global IT consulting company with over 2,900 employees and offices across North America and India|
 |[Fast Forward LLC](http://www.fastforward.sh/)|Salem, MA|Fast Forward develops applications across all major native operating systems, across all device types, and make the Internet of Things work|
 |[Fincons Group](http://www.finconsgroup.com)|Los Angeles, CA; New York, NY; London, UK|Fincoins Group services and solutions provide concrete responses to real needs of large accounts and SMEs, both for technologies and processes, guaranteeing the innovation they need.|
@@ -82,7 +81,7 @@ _Listed by primary location, many partners provide services across borders._
 |[FusionComputing, Inc.](http://www.fusioncomputing.com)|Douglasville, Georgia|We develop cross platform native applications so you can reach your customers on any device.|
 |[Griffin Solutions Group](http://griffinsolutionsgroup.com)|Alpharetta, GA|Griffin Solutions Group was founded because we have a passion for solving business issues. We apply years of experience in a multitude of industries to assist our clients in making the right technology decisions|
 |[Harman Connected Services, Inc.](http://www.harman.com)|Mountain View, CA; Hartford, CT; Seattle, WA; Newark, NJ; London, UK; Berlin, Germany; Moscow, Russia|Harman designs and engineers connected products and solutions for automakers, consumers, and enterprises worldwide, including connected car systems, audio and visual products, enterprise automation solutions; and connected services|
-|[HCL Technologies](https://www.hcltech.com/)|Noida, Uttar Pradesh, India; Mississauga, ON, Canada; New York, NY, USA; San Paulo, Brazil; Mexico City, CDMX, Mexico; London, UK; Sydney, Australia|HCL Technologies is a next-generation global technology company that helps enterprises reimagine their businesses for the digital age|
+|[HCL Technologies](https://www.hcltech.com/)|Noida, Uttar Pradesh, India; Mississauga, ON, Canada; New York, NY, USA; San Paulo, Brazil; Mexico City, CDMX, Mexico; London, UK; Sydney, Australia|HCL Technologies is a next-generation global technology company that helps enterprises re-imagine their businesses for the digital age|
 |[Hexaware Technologies Ltd](http://hexaware.com/)|Iselin, New Jersey|Hexaware is a global provider of IT, BPO and consulting services |
 |[High Technology Group, LLC](http://hightg.com)|Kansas City, Kansas|Custom software development company|
 |[Hitcents](http://hitcents.com)|Bowling Green, KY; Los Angeles, CA, USA; San Francisco, CA, USA; Shanghai, Shanghai, China|Hitcents doesn't just build apps; they build an EXPERIENCE that goes beyond just one platform. They also support the App 24/7, so any user, anywhere, can access your app.|
@@ -233,7 +232,7 @@ _Listed by primary location, many partners provide services across borders._
 |[Flow Pilots CVBA](http://www.flowpilots.com)|Antwerp, Belgium|Flow Pilots designs, builds, deploys and manages the digital tools that help their customers increase revenues, decrease costs or bring freedom and flexibility to their employees.|
 |[KENZE](http://www.kenze.be)|Mechelen, Belgium|Microsoft .NET projecten en gerelateerde technologieën.  De drie belangrijkste pijlers binnen de organisatie zijn mensen, kennis en mensenkennis, want zij vormen de basis voor kwalitatieve, succesvolle projecten en tevreden klanten. |
 |[Levelapp](http://www.levelapp.be)|Hoeilaart, Belgium|We are Levelapp a full mobile agency. we are acting as software developers. We create cross platforms applications that fit and propel your strategic vision. we deliver value to your customers, partners and employees. |
-|[Realdolmen](http://www.realdolmen.com/)|Huizingen, Belgium; Kontich, Belgium; Lummen, Belgium; Ghent, Belgium; Harelbeke, Belgium; Namur, Belgium; Mons, Belgium|Mobile is the new standard. Almost all companies need mobile services or applications to remain competitive. But a mobile strategy on its own isn’t enough; everything needs to be fully integrated in your general ICT infrastructure, including the cloud, security, ERP and so on. At Realdolmen we call this a Connected Business. <link>|
+|[Realdolmen](http://www.realdolmen.com/)|Huizingen, Belgium; Kontich, Belgium; Lummen, Belgium; Ghent, Belgium; Harelbeke, Belgium; Namur, Belgium; Mons, Belgium|Mobile is the new standard. Almost all companies need mobile services or applications to remain competitive. But a mobile strategy on its own isn’t enough; everything needs to be fully integrated in your general ICT infrastructure, including the cloud, security, ERP and so on. At Realdolmen we call this a Connected Business.|
 
 
 ## Brazil
@@ -568,7 +567,7 @@ _Listed by primary location, many partners provide services across borders._
 |[Billennium](http://billennium.pl/)|Warsaw, Poland |Billennium has many years of experience in developing innovative business tools and solutions.|
 |[Edge One Solutions Sp. z o.o.](http://www.edge1s.com)|Warsaw, Poland |We provide the skills and experience of highly qualified IT consultants. Within each service in our portfolio, we guarantee a flexible approach to client’s needs and expectations|
 |[NETBULLS Sp. z o.o.](http://www.netbulls.io)|Bialystok, Poland|Get your ideas to market skilfully. Without wasted £$€, time or excuses. |
-|[Sii](http://www.sii.pl/en)|Warsaw, Poland; Paris, France; Madrid, Spain; Berlin, Germany; Amsterdam, Netherlands; Brussels, Belgium; Luxembourg City, Luxembourg; Geneva, Switzerland; Marrakesh, Morocco; Prague, Czechia; Bucharest, Romania; Toronto, ON, Canada; Santiago, Santiago Metropolitan Region, Chile; Buenos Aires, Autonomous City of Buenos Aires, Argentina; Bogot√°, Bogota, Colombia; Delhi, India|Sii is the leading IT services company in Poland supporting digital transformation programs from its conception to the successful delivery and beyond. We provide expertise in delivering enterprise and consumer apps enabling device communication, big data handling and offline first.|
+|[Sii](http://www.sii.pl/en)|Warsaw, Poland; Paris, France; Madrid, Spain; Berlin, Germany; Amsterdam, Netherlands; Brussels, Belgium; Luxembourg City, Luxembourg; Geneva, Switzerland; Marrakesh, Morocco; Prague, Czechia; Bucharest, Romania; Toronto, ON, Canada; Santiago, Santiago Metropolitan Region, Chile; Buenos Aires, Autonomous City of Buenos Aires, Argentina; Bogotá, Bogota, Colombia; Delhi, India|Sii is the leading IT services company in Poland supporting digital transformation programs from its conception to the successful delivery and beyond. We provide expertise in delivering enterprise and consumer apps enabling device communication, big data handling and offline first.|
 
 
 ## Portugal
