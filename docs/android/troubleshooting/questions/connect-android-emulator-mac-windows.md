@@ -6,12 +6,12 @@ ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 06/21/2018
 ---
 
 # Is it possible to connect to Android emulators running on a Mac from a Windows VM?
 
-To connect to a Google Android Emulator running on a Mac from a Windows
+To connect to the Android Emulator running on a Mac from a Windows
 virtual machine, use the following steps:
 
 1.  Start the emulator on the Mac.

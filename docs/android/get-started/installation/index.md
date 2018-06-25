@@ -1,11 +1,12 @@
 ---
 title: "Installing and Setting Up Xamarin.Android"
+description: "How to install and configure Xamarin.Android to work with Visual Studio."
 ms.prod: xamarin
 ms.assetid: 4BE549B8-5696-2BA7-DA32-8C0EE90A879D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/25/2018
+ms.date: 06/22/2018
 ---
 
 # Setup and Installation
@@ -44,7 +45,7 @@ that you need for developing Xamarin.Android apps.
 
 ## [Android Emulator Setup](~/android/get-started/installation/android-emulator/index.md)
 
-These articles explain how to setup the Google Android Emulator for
+These articles explain how to setup the Android Emulator for
 testing and debugging Xamarin.Android applications.
 
 ## [Android Device Setup](~/android/get-started/installation/set-up-device-for-development.md)

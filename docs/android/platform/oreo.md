@@ -7,7 +7,7 @@ ms.technology: xamarin-android
 ms.custom: video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
+ms.date: 06/22/2018
 ---
 
 # Oreo Features
@@ -272,7 +272,7 @@ included in the device pull-down menu:
 
 For more information about configuring an Android emulator for testing
 and debugging, see
-[Debugging with the Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+[Debugging on the Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
 
 If you are using a physical device such as a Nexus or a Pixel, you can
 either update your device through automatic over the air (OTA) updates

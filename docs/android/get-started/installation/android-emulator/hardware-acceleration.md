@@ -1,23 +1,23 @@
 ---
 title: "Hardware Acceleration for Emulator Performance"
-description: "This article explains how to use your computer's hardware acceleration features to maximize Google Android Emulator performance."
+description: "This article explains how to use your computer's hardware acceleration features to maximize Android Emulator performance."
 ms.prod: xamarin
 ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/05/2018
+ms.date: 06/22/2018
 ---
 
 # Hardware Acceleration for Emulator Performance
 
 _This article explains how to use your computer's hardware acceleration
-features to maximize Google Android Emulator performance._
+features to maximize Android Emulator performance._
 
 ## Overview
 
 Visual Studio makes it easier for developers to test and debug their
-Xamarin.Android applications by using the Google Android Emulator in
+Xamarin.Android applications by using the Android Emulator in
 situations where an Android device is unavailable or impractical.
 However, the Android emulator runs too slowly if hardware acceleration
 is not available on the computer that runs it. You can drastically
@@ -29,7 +29,7 @@ of two virtualization technologies:
    is a virtualization feature of Windows that makes it possible to run 
    virtualized computer systems on a physical host computer. This
    is the recommended virtualization technology to use for accelerating
-   the Google Android Emulator. To learn more about Hyper-V,
+   the Android Emulator. To learn more about Hyper-V,
    see [Hyper-V on Windows 10](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/).
 
 2. **Intel's Hardware Accelerated Execution Manager (HAXM)**. 
@@ -37,7 +37,7 @@ of two virtualization technologies:
    This is the recommended virtualization engine for computers that
    are unable to run Hyper-V.
 
-The Google Android Emulator will automatically make use of hardware
+The Android Emulator will automatically make use of hardware
 acceleration if the following criteria are met:
 
 -   Hardware acceleration is available and enabled on the development
@@ -48,7 +48,7 @@ acceleration if the following criteria are met:
 
 For information about launching and debugging with the Android
 Emulator, see
-[Debugging with the Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+[Debugging on the Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
 
 ## Hyper-V
 
@@ -60,8 +60,8 @@ Emulator, see
 > Hyper-V support is currently in Preview.
 
 Developers who are using Windows 10 (April 2018 Update or later) are
-strongly encouraged to use Microsoft's Hyper-V to accelerate the Google
-Android Emulator. To use the Google Android Emulator with Hyper-V:
+strongly encouraged to use Microsoft's Hyper-V to accelerate the 
+Android Emulator. To use the Android Emulator with Hyper-V:
 
 1. **Update to Windows 10 April 2018 Update (build 1803) or later**.
    To verify which version of Windows is running, click in the
@@ -86,9 +86,9 @@ Android Emulator. To use the Google Android Emulator with Hyper-V:
 3. **Install
    [Visual Studio 15.8 Preview 1 or later](https://www.visualstudio.com/vs/preview/)**.
    This version of Visual Studio provides IDE support for
-   running the Google Android Emulator with Hyper-V.
+   running the Android Emulator with Hyper-V.
  
-4. **Install the Google Android emulator package 27.2.7 or later**. To
+4. **Install the Android Emulator package 27.2.7 or later**. To
    install this package, navigate to **Tools > Android > Android SDK
    Manager** in Visual Studio. Select the **Tools** tab and ensure that
    the Android Emulator version is at least 27.2.7. Also ensure that
@@ -143,23 +143,23 @@ on VT-enabled systems.
 
 If you are developing on a machine with an Intel CPU that has VT
 capabilities, you can take advantage of HAXM to greatly speed up the
-Google Android Emulator (if you're not sure whether your CPU supports VT,
+Android Emulator (if you're not sure whether your CPU supports VT,
 see [Does My Processor Supports Intel Virtualization Technology?](https://www.intel.com/content/www/us/en/support/processors/000005486.html)).
 
 > [!NOTE]
 > You can't run a VM-accelerated emulator inside another VM, such as a VM
-> hosted by VirtualBox, VMWare, or Docker. You must run the Google Android emulator
+> hosted by VirtualBox, VMWare, or Docker. You must run the Android emulator
 > [directly on your system hardware](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
-Before using the Google Android Emulator for the first time, it's a
-good idea to verify that HAXM is installed and available for the Google
+Before using the Android Emulator for the first time, it's a
+good idea to verify that HAXM is installed and available for the 
 Android Emulator to use.
 
 ### Verifying HAXM Installation
 
 You can check to see if HAXM is available by viewing the **Starting
 Android Emulator** window while the emulator starts. To start the
-Google Android Emulator, do the following:
+Android Emulator, do the following:
 
 # [Visual Studio](#tab/vswin)
 
@@ -174,13 +174,13 @@ Google Android Emulator, do the following:
     ![Performance Warning dialog that HAXM is not ready](hardware-acceleration-images/win/11-perf-warn.png)
 
    If a **Performance Warning** dialog like this is shown, see
-   [Performance Warnings](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#perfwarn)
+   [Performance Warnings](~/android/get-started/installation/android-emulator/troubleshooting.md#perfwarn)
    to identify the cause and resolve the underlying problem.
 
 3. Select an **x86** image (for example, **VisualStudio\_android-23\_x86\_phone**) and
    click **Start**:
 
-    ![Starting the Google Android Emulator with a default virtual device image](hardware-acceleration-images/win/02-start-default-avd.png)
+    ![Starting the Android Emulator with a default virtual device image](hardware-acceleration-images/win/02-start-default-avd.png)
 
 4. Watch for the **Starting Android Emulator** dialog window while the
    emulator starts up. If HAXM is installed, you will see the message,
@@ -210,13 +210,13 @@ Google Android Emulator, do the following:
     ![Performance Warning dialog that HAXM is not ready](hardware-acceleration-images/mac/04-avd-warning.png)
 
    If a **Performance Warning** dialog like this is shown, see
-   [Performance Warnings](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#perfwarn)
+   [Performance Warnings](~/android/get-started/installation/android-emulator/troubleshooting.md#perfwarn)
    to identify the cause and resolve the underlying problem.
 
 3. Select the **x86** image (for example,
    **Android\_Accelerated\_x86**) and click **Play**:
 
-    [![Starting the Google Android Emulator with a default virtual device image](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png#lightbox)
+    [![Starting the Android Emulator with a default virtual device image](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png#lightbox)
 
 3. Watch for the **Starting Android Emulator** dialog window while the
    emulator starts up. If HAXM is installed, you will see the message,
@@ -228,7 +228,6 @@ Google Android Emulator, do the following:
    If HAXM is not available on your computer (for example, if you see an
    error message like _Please ensure Intel HAXM is propertly installed and
    usable_), use the steps in the next section to install HAXM.
-
 
 -----
 
@@ -267,7 +266,7 @@ page. Use the following steps to download and install HAXM manually:
 
 ## Hardware Acceleration and AMD CPUs
 
-Because Google's Android emulator currently supports AMD hardware acceleration
+Because the Android emulator currently supports AMD hardware acceleration
 [only on Linux](https://developer.android.com/studio/run/emulator-acceleration.html#dependencies), hardware
 acceleration is not available for AMD-based computers running Windows.
 

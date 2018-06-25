@@ -6,7 +6,7 @@ ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/19/2018
+ms.date: 06/21/2018
 ---
 
 # Frequently Asked Questions
@@ -59,7 +59,7 @@ as well as alternative testing methods.
 
 ### [Is it possible to connect to Android emulators running on a Mac from a Windows VM?](connect-android-emulator-mac-windows.md)
 
-This guide covers methods when using a Google Android emulator.
+This guide covers methods when using the Android emulator.
 
 ## General Questions
 

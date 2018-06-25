@@ -7,7 +7,7 @@ ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/02/2018
+ms.date: 06/21/2018
 ---
 
 # Changes to the Android SDK Tooling
@@ -73,7 +73,7 @@ see [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.ht
 
 There is a new program called **avdmanager** in the **tools/bin**
 folder of your Android SDK. This tool is used to maintain the AVDs for
-the Google Android Emulator. For more information about using this
+the Android Emulator. For more information about using this
 tool, see [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
 
 ### Downgrading

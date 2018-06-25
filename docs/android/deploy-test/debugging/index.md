@@ -6,7 +6,7 @@ ms.assetid: A355A471-8195-4391-93FE-0000BCB17923
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
+ms.date: 06/22/2018
 ---
 
 # Debugging
@@ -22,18 +22,10 @@ many cases, it can be simpler and more cost effective to
 simulate/emulate Android hardware using one of the emulators
 described below.
 
-### [Debugging with the Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
+### [Debugging on the Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md)
 
-These articles explain how to use the default emulator that is provided
-with the Android SDK. This emulator is available for Visual Studio for
-Windows and Visual Studio for Mac.
-
-### [Visual Studio Android Emulator](~/android/deploy-test/debugging/visual-studio-android-emulator.md)
-
-This article explains how to debug and test your Xamarin.Android app
-using the Android emulator that is built into Visual Studio 2015. This
-emulator is a good choice if you are using Visual Studio 2015 and do
-not need custom device profiles.
+This article explains how launch the Android emulator from Visual
+Studio and run your app in a virtual device.
 
 ### [Debugging on a Device](~/android/deploy-test/debugging/debug-on-device.md)
 
@@ -52,4 +44,5 @@ describes how to use **logcat**.
 
 > [!WARNING]
 > Note that the **Xamarin Android Player** has been deprecated. For more information, see the [announcement in this
- blog post](https://blog.xamarin.com/live-from-dotnetconf-cycle-7-xamarin-studio-6-and-more/).
+ blog post](https://blog.xamarin.com/live-from-dotnetconf-cycle-7-xamarin-studio-6-and-more/). In addition, the
+**Visual Studio Android Emulator** has been deprecated as of Visual Studio 2017.

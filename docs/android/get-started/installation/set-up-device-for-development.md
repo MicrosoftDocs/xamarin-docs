@@ -6,7 +6,7 @@ ms.assetid: 9116A3AA-EA00-56AF-AE70-BAEEC045EF11
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/21/2017
+ms.date: 06/22/2018
 ---
 
 # Set Up Device for Development
@@ -140,7 +140,7 @@ To install the drivers on Windows 7:
     **Next** .
 
 7.  Click **Browse** and locate the USB driver folder (the Google USB
-    driver is located in **[Android SDK install path]\extras\google\usb_driver**.
+    driver is located in **[Android SDK install path]\extras\google\usb_driver**).
 
 8.  Click  **Next** to install the driver.
 

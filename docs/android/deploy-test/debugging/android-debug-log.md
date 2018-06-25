@@ -1,11 +1,12 @@
 ---
 title: "Android Debug Log"
+description: "How to use the debug log to debug Xamarin.Android applications."
 ms.prod: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/04/2018
+ms.date: 06/22/2018
 ---
 
 # Android Debug Log
@@ -23,7 +24,7 @@ The **Debug Log** tool provides a way to view log output while debugging an
 app through Visual Studio. The debug log supports the following devices:
 
 -   Physical Android phones, tablets, and wearables.
--   An Android Virtual device running on the Google Android Emulator. 
+-   An Android Virtual device running on the Android Emulator. 
 
 > [!NOTE]
 > The **Debug Log** tool does not work with Xamarin Live Player.
@@ -228,9 +229,8 @@ also contains the name of the application package:
 ^I.*ActivityManager.*Starting: Intent
 ```
 
-This is the line which corresponds to the start of an activity, and
-*most* (but not all) of the following messages should relate to the
-application.
+This is the line which corresponds to the start of an activity, and *most* 
+(but not all) of the following messages should relate to the application.
 
 Notice that every message contains the process identifier (pid) of 
 the process generating the message. In the above `ActivityManager` 

@@ -6,7 +6,7 @@ ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/02/2018
+ms.date: 06/22/2018
 ---
 
 # Setting up the Android SDK for Xamarin.Android
@@ -374,6 +374,5 @@ in Visual Studio for Mac.
 
 - [Changes to the Android SDK Tooling](~/android/troubleshooting/sdk-cli-tooling-changes.md)
 - [Understanding Android API levels](~/android/app-fundamentals/android-api-levels.md)
-- [SDK Tools Release Notes (Google)](https://developer.android.com/studiohttps://developer.xamarin.com/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
 - [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)

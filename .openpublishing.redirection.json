@@ -82,11 +82,23 @@
     },
     {
       "source_path": "docs/android/get-started/installation/android-emulator/google-emulator-manager.md",
-      "redirect_url": "/xamarin/android/get-started/installation/android-emulator/device-manager.md"
+      "redirect_url": "/xamarin/android/get-started/installation/android-emulator/device-manager"
     },
     {
       "source_path": "docs/android/get-started/installation/android-emulator/xamarin-device-manager.md",
-      "redirect_url": "/xamarin/android/get-started/installation/android-emulator/device-manager.md"
+      "redirect_url": "/xamarin/android/get-started/installation/android-emulator/device-manager"
+    },
+    {
+      "source_path": "docs/android/deploy-test/debugging/visual-studio-android-emulator.md",
+      "redirect_url": "/xamarin/android/deploy-test/debugging/debug-on-emulator/index"
+    },
+    {
+      "source_path": "docs/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md",
+      "redirect_url": "/xamarin/android/get-started/installation/android-emulator/troubleshooting"
+    },
+    {
+      "source_path": "docs/android/deploy-test/debugging/android-sdk-emulator/index.md",
+      "redirect_url": "/xamarin/android/deploy-test/debugging/debug-on-emulator"
     },
     {
       "source_path": "docs/ios/get-started/installation/windows/connecting-to-mac/visual-studio-ssh.md",

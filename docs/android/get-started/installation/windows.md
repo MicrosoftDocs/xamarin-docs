@@ -6,7 +6,7 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
+ms.date: 06/22/2018
 ---
 
 # Windows Installation
@@ -106,9 +106,9 @@ SDK Tools package.
 For more information about using the Xamarin Android SDK Manager, see
 [Android SDK Setup](~/android/get-started/installation/android-sdk.md).
 
-### Google Android Emulator
+### Android Emulator
 
-The [Google Android Emulator](https://developer.android.com/studio/run/emulator) can be helpful tool to develop and test a Xamarin.Android app. For example, a physical device such as a tablet may not be readily available during development, or a developer may want to run some integration tests on their computer before committing code.
+The [Android Emulator](https://developer.android.com/studio/run/emulator) can be helpful tool to develop and test a Xamarin.Android app. For example, a physical device such as a tablet may not be readily available during development, or a developer may want to run some integration tests on their computer before committing code.
 
 Emulating an Android device on a computer involves the following components:
 
@@ -121,10 +121,11 @@ A significant improvement in performance when developing on x86 based computers 
 1. Microsoft's Hyper-V &ndash; Available on computers running the Windows 10 April Update.
 2. Intel's Hardware Accelerated Execution Manager (HAXM) &ndash; Available on x86 computers running OS X, macOS, or older version of Windows.
 
-For more information about the Google Android Emulator, Hyper-V, and HAXM, please see [Hardware Acceleration for Emulator Performance](~/android/get-started/installation/android-emulator/hardware-acceleration.md) guide.
+For more information about the Android Emulator, Hyper-V, and HAXM, please see [Hardware Acceleration for Emulator Performance](~/android/get-started/installation/android-emulator/hardware-acceleration.md) guide.
 
 > [!NOTE]
-> On older versions of Windows, HAXM is not compatible with Hyper-V. In this scenario it is necessary to either [disable Hyper-V](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#disabling-hyper-v) or to use the slower emulator images that do not have the x86 optimizations.
+> On older versions of Windows, HAXM is not compatible with Hyper-V. In this scenario it is necessary 
+to either [disable Hyper-V](~/android/get-started/installation/android-emulator/troubleshooting.md#disable-hyperv) or to use the slower emulator images that do not have the x86 optimizations.
 
 
 <a name="device" />
