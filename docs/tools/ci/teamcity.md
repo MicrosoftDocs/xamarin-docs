@@ -136,7 +136,7 @@ test-cloud.exe <path-to-apk-or-ipa-file> <test-cloud-team-api-key> --devices <de
 
 When the test is run, the test results will be returned in the form of an NUnit style XML file called **report.xml**. TeamCity will display the information in the Build Log.
 
-For more information about how to submit UITests to Test Cloud, consult Xamarin’s guide on [Submitting Tests to Test Cloud](https://developer.xamarin.com/guides/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/).
+For more information about how to submit UITests to Test Cloud, consult this guide on [Preparing Xamarin.UITests for Upload](/appcenter/test-cloud/preparing-for-upload/uitest/).
 
 #### Submitting Calabash Tests to Test Cloud
 
@@ -203,6 +203,5 @@ Then we covered how to create a project in TeamCity that will queue a build each
 
 ## Related Links
 
-- [Submitting Tests to Xamarin Test Cloud (UITest)](https://developer.xamarin.com~/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/)
-- [Submitting Tests to Xamarin Test Cloud (Calabash)](https://developer.xamarin.com~/testcloud/calabash/working-with/submitting-tests-to-xamarin-test-cloud/)
+- [Preparing Xamarin.UITests fpr Upload](/appcenter/test-cloud/preparing-for-upload/uitest/)
 - [Installing and Configuring TeamCity](http://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)
