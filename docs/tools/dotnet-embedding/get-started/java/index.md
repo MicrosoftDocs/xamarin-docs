@@ -30,10 +30,10 @@ For Windows:
 
 For Android:
 
-* [Xamarin.Android 7.5](https://www.visualstudio.com/xamarin/) or later
+* [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/) or later
 * [Android Studio 3.x](https://developer.android.com/studio/index.html) with Java 1.8
 
-You can use [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) to edit and compile your C# code.
+You can use [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/) to edit and compile your C# code.
 
 > [!NOTE]
 > Earlier versions of Xcode, Visual Studio, Xamarin.Android, Android Studio, and Mono _might_ work, but are untested and unsupported.

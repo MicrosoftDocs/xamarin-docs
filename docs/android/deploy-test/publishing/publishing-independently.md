@@ -32,7 +32,7 @@ distribution of Xamarin.Android apps:
     only). This license includes enterprise capabilities, a standard or
     cloud subscription.
 
-Visit the [visualstudio.com](https://www.visualstudio.com/xamarin/) to download the
+Visit the [visualstudio.com](https://visualstudio.microsoft.com/xamarin/) to download the
 Community Edition or to learn more about purchasing the Professional
 and Enterprise editions.
 

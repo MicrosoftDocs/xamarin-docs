@@ -174,7 +174,7 @@ tutorials to learn how to create a working Xamarin.Android app.
 
 ## Related Links
 
-- [Download Visual Studio](https://www.visualstudio.com/vs/)
+- [Download Visual Studio](https://visualstudio.microsoft.com/vs/)
 - [Installing Visual Studio Tools for Xamarin](~/cross-platform/get-started/installation/windows.md)
 - [System Requirements](~/cross-platform/get-started/requirements.md)
 - [Android SDK Setup](~/android/get-started/installation/android-sdk.md)

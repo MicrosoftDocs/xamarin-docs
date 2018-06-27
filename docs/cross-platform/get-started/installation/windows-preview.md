@@ -17,7 +17,7 @@ the same way as earlier versions. Instead, there are just two options:
 - **Preview** – equivalent to the _Alpha_ and _Beta_ channels in Visual Studio for Mac
 
 > [!TIP] 
-> To try out pre-release features, you should [download the Visual Studio 2017 Preview installer](https://www.visualstudio.com/vs/preview/), which will offer the option to install **Preview**
+> To try out pre-release features, you should [download the Visual Studio 2017 Preview installer](https://visualstudio.microsoft.com/vs/preview/), which will offer the option to install **Preview**
 > versions of Visual Studio side-by-Side with the stable (Release) version. More information on What's new in Visual Studio 2017 can be found in the [release notes](/visualstudio/releasenotes/vs2017-preview-relnotes).
 
 The Preview version of Visual Studio may include corresponding Preview

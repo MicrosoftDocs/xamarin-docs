@@ -20,7 +20,7 @@ To use .NET Embedding with Objective-C, you'll need a Mac running:
 * Xcode 8.3.2 or later
 * [Mono 5.0](http://www.mono-project.com/download/)
 
-You can install [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) to edit and compile your C# code.
+You can install [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/) to edit and compile your C# code.
 
 > [!NOTE]
 > * Earlier versions of macOS, Xcode, and Mono _might_ work, but are

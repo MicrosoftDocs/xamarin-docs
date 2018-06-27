@@ -23,7 +23,7 @@ Live Reload is currently only available in Visual Studio 2017.
 
 ## Requirements
 
-* [Visual Studio 2017 version 15.7 or above](https://www.visualstudio.com/vs/) or above with the **Mobile development with .NET** workload.
+* [Visual Studio 2017 version 15.7 or above](https://visualstudio.microsoft.com/vs/) or above with the **Mobile development with .NET** workload.
 * [Xamarin.Forms 3.0.0 or above](https://www.nuget.org/packages/Xamarin.Forms/) or above.
 
 ## Getting Started

@@ -273,7 +273,7 @@ three-bar menu next to the **Launch** button.
 
 ### Visual Studio 2015 and earlier
 
-To uninstall Visual Studio 2015 completely, use [the support answer on visualstudio.com](https://www.visualstudio.com/vs/support/vs2015/uninstall-visual-studio-2015/).
+To uninstall Visual Studio 2015 completely, use [the support answer on visualstudio.com](https://visualstudio.microsoft.com/vs/support/vs2015/uninstall-visual-studio-2015/).
 
 Xamarin can be uninstalled from a Windows machine through **Control Panel**. Navigate to **Programs and Features** or **Programs > Uninstall a Program** as illustrated below:
 

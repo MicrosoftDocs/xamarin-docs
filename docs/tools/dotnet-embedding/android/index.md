@@ -22,7 +22,7 @@ incorporated into a native Java-based Android app.
 For Xamarin.Android to work with .NET Embedding, you need the following:
 
 -   **Xamarin.Android** &ndash;
-    [Xamarin.Android 7.5](https://www.visualstudio.com/xamarin/)
+    [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/)
     or later must be installed.
 
 -   **Android Studio** &ndash;
@@ -65,7 +65,7 @@ following steps:
 For Xamarin.Android to work with .NET Embedding, you need the following:
 
 -   **Xamarin.Android** &ndash;
-    [Xamarin.Android 7.5](https://www.visualstudio.com/xamarin/)
+    [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/)
     or later must be installed.
 
 -   **Android Studio** &ndash;

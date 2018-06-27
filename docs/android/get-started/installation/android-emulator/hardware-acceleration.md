@@ -84,7 +84,7 @@ Android Emulator. To use the Android Emulator with Hyper-V:
    change.
 
 3. **Install
-   [Visual Studio 15.8 Preview 1 or later](https://www.visualstudio.com/vs/preview/)**.
+   [Visual Studio 15.8 Preview 1 or later](https://visualstudio.microsoft.com/vs/preview/)**.
    This version of Visual Studio provides IDE support for
    running the Android Emulator with Hyper-V.
  

@@ -32,7 +32,7 @@ from within the IDE. For more information about using the Xamarin
 Profiler, see [Xamarin Profiler](~/tools/profiler/index.md).
 
 > [!NOTE]
-> You must be a [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) 
+> You must be a [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/) 
 > subscriber to unlock the Xamarin Profiler feature in either Visual Studio Enterprise 
 > on Windows or Visual Studio for Mac.
  

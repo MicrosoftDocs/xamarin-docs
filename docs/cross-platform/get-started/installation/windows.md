@@ -35,7 +35,7 @@ To achieve this, use the following steps:
 
 1. Download Visual Studio 2017 Community, Visual Studio Professional, or
    Visual Studio Enterprise from the
-   [Visual Studio](https://www.visualstudio.com/vs/) page (download
+   [Visual Studio](https://visualstudio.microsoft.com/vs/) page (download
    links are provided at the bottom).
 
 2. Double-click the downloaded package to start installation.

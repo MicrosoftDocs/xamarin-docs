@@ -43,14 +43,14 @@ There is an extensive ecosystem of commercial and open-source tools designed to 
 
 ### Visual Studio Team Services and Team Foundation Server
 
-[Visual Studio Team Services](https://www.visualstudio.com/products/visual-studio-team-services-vs) (VSTS) and [Team Foundation Server](http://msdn.microsoft.com/vstudio/ff637362.aspx) (TFS) are Microsoft's collaborative tools for continuous integration build services, task tracking, agile planning and reporting tools, and version control. With version control, VSTS and TFS can work with its own system (Team Foundation Version Control or TFVC) or with projects hosted on GitHub.
+[Visual Studio Team Services](https://visualstudio.microsoft.com/team-services/) (VSTS) and [Team Foundation Server](https://visualstudio.microsoft.com/tfs/) (TFS) are Microsoft's collaborative tools for continuous integration build services, task tracking, agile planning and reporting tools, and version control. With version control, VSTS and TFS can work with its own system (Team Foundation Version Control or TFVC) or with projects hosted on GitHub.
 
  - Visual Studio Team Services provides services via the cloud. It's primary advantage is that it requires no dedicated hardware or infrastructure and can be accessed from anywhere through web browsers and through popular development tools such as Visual Studio, making it appealing for teams that are geographically distributed. It is free for teams of five developers or less, after which additional licenses can be purchased to accommodate a growing team.
  - TFS is designed for on-premises Windows servers and accessed through a local network or a VPN connection to that network. Its primary advantage is that you fully control the configuration of the build servers and can install whatever additional software or services are needed. TFS has a free entry-level Express edition for small teams.
 
 Both TFS and VSTS are tightly integrated with Visual Studio and allow developers to perform many version control and CI tasks from within the comfort of a single IDE. The Team Explorer Everywhere plugin for Eclipse (see below) is also available. Visual Studio for Mac does not offer any support for TFS or VSTS.
 
-Visual Studio Team Service's build system has direct support for Xamarin projects, within which you create a build definition for each platform you wish to target (Android, iOS, and Windows). The appropriate Xamarin license is needed for each build definition. It's also possible to connect a local, Xamarin-capable TFS build server to Visual Studio Team Services for this purpose. With this setup, builds that are queued to VSTS will be delegated to the local server. For details, refer to [Deploy and configure a build server](https://msdn.microsoft.com/library/ms181712.aspx). Alternately, you can use another build tool such as Jenkins or Team City.
+Visual Studio Team Service's build system has direct support for Xamarin projects, within which you create a build definition for each platform you wish to target (Android, iOS, and Windows). The appropriate Xamarin license is needed for each build definition. It's also possible to connect a local, Xamarin-capable TFS build server to Visual Studio Team Services for this purpose. With this setup, builds that are queued to VSTS will be delegated to the local server. For details, refer to [Deploy and configure a build server](https://docs.microsoft.com/vsts/pipelines/agents/agents?view=vsts). Alternately, you can use another build tool such as Jenkins or Team City.
 
 A complete summary of all Application Lifecycle Management (ALM) features of Visual Studio, Visual Studio Team Services, and Team Foundation Server, see [Application Lifecycle Management with Xamarin Apps](https://msdn.microsoft.com/library/mt162217(v=vs.140).aspx) on MSDN.
 
@@ -102,7 +102,7 @@ It is also possible to link a local TFS server to a Visual Studio Team Services 
 
 ### Visual Studio Team Services and Jenkins
 
-If you use Jenkins to build your apps, you can store your code in Visual Studio Team Services or Team Foundation Server and continue to use Jenkins for your CI builds. You can trigger a Jenkins build when you push code to your team project's Git repository or when you check code in to TFVC. For details, see [Jenkins with Visual Studio Team Services](https://www.visualstudio.com/docs/marketplace/integrate/service-hooks/services/jenkins).
+If you use Jenkins to build your apps, you can store your code in Visual Studio Team Services or Team Foundation Server and continue to use Jenkins for your CI builds. You can trigger a Jenkins build when you push code to your team project's Git repository or when you check code in to TFVC. For details, see [Jenkins with Visual Studio Team Services](https://docs.microsoft.com/en-us/vsts/service-hooks/services/jenkins?view=vsts).
 
 [![](intro-to-ci-images/intro04-small.png "If you use Jenkins to build your apps, you can store your code in Visual Studio Team Services or Team Foundation Server and continue to use Jenkins for your CI builds")](intro-to-ci-images/intro04.png#lightbox)
 

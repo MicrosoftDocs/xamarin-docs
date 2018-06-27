@@ -33,7 +33,7 @@ external testing services. Some of these include:
 
 - [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/) - Cloud Testing services run on hundreds of real Android devices.
 
-- [Visual Studio Emulator for Android](https://www.visualstudio.com/en-us/features/msft-android-emulator-vs.aspx)
+- [Visual Studio Emulator for Android](https://visualstudio.microsoft.com/vs/msft-android-emulator/)
 
 - [Debugging on the Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md)
 

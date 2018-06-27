@@ -62,7 +62,7 @@ Check the following settings to resolve this:
 - Ensure the Platform is [supported](~/tools/profiler/index.md#Profiler_Support).
 - Ensure that you have the right license.
 - Ensure that you are logged in and properly authenticated.
-- [Visual Studio] You must be using [Visual Studio Enterprise](https://www.visualstudio.com/vs/enterprise/) and have a valid Enterprise license.
+- [Visual Studio] You must be using [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/enterprise/) and have a valid Enterprise license.
 
 #### I get an error when I try to launch the profiler
 
