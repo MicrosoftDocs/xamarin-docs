@@ -8,7 +8,6 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/07/2017
 ---
-
 # Introduction to watchOS 4
 
 Access new features of watchOS 4 in your apps:
@@ -26,7 +25,6 @@ Changes since watchOS 3:
 
 ## Related Links
 
-- [watchOS Samples](https://developer.xamarin.com/samples/watchos/all/)
-- [What's new in watchOS 4](https://developer.apple.com/watchos/)
-- [WatchKit (Apple)](https://developer.apple.com/documentation/watchkit)
-- [What's new in watchOS 4 (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/205/)
+* [watchOS Samples](https://developer.xamarin.com/samples/watchos/all/)
+* [WatchKit (Apple)](https://developer.apple.com/documentation/watchkit)
+* [What's new in watchOS 4 (Apple) (video)](https://developer.apple.com/videos/play/wwdc2017/205/)

@@ -13,6 +13,21 @@ ms.date: 10/19/2016
 
 Documents in this section cover working with key, platform-specific features of macOS in a Xamarin.Mac application.
 
+## [Introduction to macOS Mojave](~/mac/platform/introduction-to-macos-mojave/index.md)
+
+> [!WARNING]
+> Xamarin's macOS Mojave support is currently in preview, which means that
+> it may contain bugs, is not feature-complete, and may change. Use it for
+> experimentation only.
+
+This document provides a high-level overview of new and updated features in
+macOS Mojave that are available for use when building Xamarin.Mac
+applications.
+
+## [Introduction to macOS High Sierra](~/mac/platform/introduction-to-macos-high-sierra/index.md)
+
+This document describes new and enhanced features in macOS High Sierra.
+
 ## [Introduction to macOS Sierra](~/mac/platform/introduction-to-macos-sierra/index.md)
 
 macOS Sierra is the latest incarnation of Apple's desktop operating system for Mac. This document covers the changes from Mac OS X El Capitan and how to implement them in a Xamarin.Mac app.
@@ -26,7 +41,6 @@ to resolve any issues.
 ## [Introduction to OpenTK](~/mac/platform/opentk.md)
 
 OpenTK (The Open Toolkit) is an advanced, low-level C# library that makes working with OpenGL, OpenCL and OpenAL easier. OpenTK can be used for games, scientific applications or other projects that require 3D graphics, audio or computational functionality. This article gives a brief introduction to using OpenTK in a Xamarin.Mac app.
-
 
 ## [Introduction to Storyboards](~/mac/platform/storyboards/index.md)
 
