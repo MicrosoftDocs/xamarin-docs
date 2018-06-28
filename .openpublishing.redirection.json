@@ -143,6 +143,10 @@
     {
       "source_path": "docs/android/user-interface/layouts/tab-layout/creating-a-tabbed-ui.md",
       "redirect_url": "/xamarin/android/user-interface/layouts/tab-layout/with-action-bar"
+    },
+    {
+      "source_path": "docs/essentials/platform.md",
+      "redirect_url": "/xamarin/essentials/main-thread"
     }
   ]
 }

@@ -45,7 +45,7 @@ var height = metrics.Height;
 var density = metrics.Density;
 ```
 
-The **DeviceDisplay** class also exposes and event that can be subscribed to that triggers an event whenever any screen metric changes:
+The **DeviceDisplay** class also exposes an event that can be subscribed to that is triggered whenever any screen metric changes:
 
 ```csharp
 public class ScreenMetricsTest
@@ -56,7 +56,7 @@ public class ScreenMetricsTest
         DeviceDisplay.ScreenMetricsChanaged += OnScreenMetricsChanged;
     }
 
-    void OnScreenMetricsChanged(ScreenMetricsChanagedEventArgs  e)
+    void OnScreenMetricsChanged(ScreenMetricsChangedEventArgs  e)
     {
         // Process changes
         var metrics = e.Metrics;

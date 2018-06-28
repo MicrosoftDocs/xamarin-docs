@@ -21,6 +21,8 @@ Add a reference to Xamarin.Essentials in your class:
 using Xamarin.Essentials;
 ```
 
+## Obtaining Application Information:
+
 The following information is exposed through the API:
 
 ```csharp
@@ -36,6 +38,17 @@ var version = AppInfo.VersionString;
 // Application Build Number (1)
 var build = AppInfo.BuildString;
 ```
+
+## Displaying Application Settings
+
+The **AppInfo** class can also display a page of settings maintained by the operating system for the application:
+
+```csharp
+// Display settings page
+AppInfo.OpenSettings();
+```
+
+This settings page allows the user to change application permissions and perform other platform-specific tasks.
 
 ## API
 

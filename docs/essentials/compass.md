@@ -70,7 +70,7 @@ public class CompassTest
 - **Normal** – Default rate suitable for screen orientation changes.
 - **Ui** – Rate suitable for general user interface.
 
-If your event handler is not guaranteed to run on the UI thread, and if the event handler needs to access user-interface elements, use the [`Platform.BeginInvokeOnMainThread`](platform.md) method to run that code on the UI thread.
+If your event handler is not guaranteed to run on the UI thread, and if the event handler needs to access user-interface elements, use the [`MainThread.BeginInvokeOnMainThread`](main-thread.md) method to run that code on the UI thread.
 
 ## Platform Implementation Specifics
 

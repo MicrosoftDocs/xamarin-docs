@@ -55,6 +55,19 @@ To retrieve a value from secure storage:
 var oauthToken = await SecureStorage.GetAsync("oauth_token");
 ```
 
+To remove a specific key, call:
+
+```csharp
+SecureStorage.Remove("oauth_token");
+```
+
+To remove all keys, call:
+
+```csharp
+SecureStorage.RemoveAll();
+```
+
+
 ## Platform Implementation Specifics
 
 # [Android](#tab/android)

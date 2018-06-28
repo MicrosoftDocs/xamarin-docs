@@ -1,16 +1,19 @@
 ---
-title: "Xamarin.Essentials OrientationSensor"
+title: "Xamarin.Essentials: OrientationSensor"
 description: "The OrientationSensor class lets you monitor the orientation of a device in three-dimensional space."
 ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
 author: charlespetzold
 ms.author: chape
 ms.date: 05/21/2018
 ---
-# Xamarin.Essentials OrientationSensor
+# Xamarin.Essentials: OrientationSensor
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **OrientationSensor** class lets you monitor the orientation of a device in three dimensional space.
+
+> [!NOTE]
+> This class is for determining the orientation of a device in 3D space. If you need to determine if the device's video display is in portrait or landscape mode, use the `Orientation` property of the `ScreenMetrics` object available from the [`DeviceDisplay`](device-display.md) class.
 
 ## Using OrientationSensor
 
@@ -102,7 +105,7 @@ Examples:
 - **Normal** – Default rate suitable for screen orientation changes.
 - **Ui** – Rate suitable for general user interface.
 
-If your event handler is not guaranteed to run on the UI thread, and if the event handler needs to access user-interface elements, use the [`Platform.BeginInvokeOnMainThread`](platform.md) method to run that code on the UI thread.
+If your event handler is not guaranteed to run on the UI thread, and if the event handler needs to access user-interface elements, use the [`MainThread.BeginInvokeOnMainThread`](main-thread.md) method to run that code on the UI thread.
 
 ## API
 

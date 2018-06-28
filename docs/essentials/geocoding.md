@@ -56,7 +56,7 @@ try
     var location = locations?.FirstOrDefault();
     if (location != null)
     {
-        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}");
+        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
     }
 }
 catch (FeatureNotSupportedException fnsEx)
@@ -68,6 +68,8 @@ catch (Exception ex)
     // Handle exception that may have occured in geocoding
 }
 ```
+
+The altitude isn't always available. If it is not available, the `Altitude` property might be `null` or the value might be zero. If the altitude is available, the value is in meters above above sea level. 
 
 Getting [placemarks](xref:Xamarin.Essentials.Placemark) for an existing set of coordinates:
 
@@ -106,6 +108,10 @@ catch (Exception ex)
     // Handle exception that may have occurred in geocoding
 }
 ```
+
+## Distance between Two Locations
+
+The [`Location`](xref:Xamarin.Essentials.Location) and [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) classes define methods to calculate the distance between two locations. See the article [**Xamarin.Essentials: Geolocation**](geolocation.md#calculate-distance) for an example.
 
 ## API
 
