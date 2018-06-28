@@ -1,5 +1,5 @@
 ---
-title: "Getting Started with iOS 12 and tvOS 12"
+title: "Getting started with iOS 12 and tvOS 12"
 description: "This document describes how to get set up to build iOS 12 and tvOS 12 apps with Xamarin. It discusses how to download Xcode 10 and update Visual Studio for Mac and Visual Studio 2017."
 ms.prod: xamarin
 ms.assetid: 6C0F0133-1A5F-408B-8BCA-BDCA313A55C2

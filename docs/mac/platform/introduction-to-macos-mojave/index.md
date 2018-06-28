@@ -1,5 +1,5 @@
 ---
-title: "Introduction to macOS Sierra"
+title: "Introduction to macOS Mojave"
 description: "This document provides a high-level of overview of new and updated features in macOS Mojave for which Xamarin's preview release currently provides C# bindings."
 ms.prod: xamarin
 ms.assetid: 4A41CD85-C807-44C9-85AB-B5441B145A73
