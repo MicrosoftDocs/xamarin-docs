@@ -140,7 +140,7 @@ the customizations created earlier (in this case, landscape-only mode):
 ## Resource Qualifier Options
 
 **Resource Qualifier Options** can be accessed by clicking the
-down triangle icon to the right of the **Device Configuration**
+three dots to the right of the **Device Configuration**
 options:
 
 # [Visual Studio](#tab/vswin)
