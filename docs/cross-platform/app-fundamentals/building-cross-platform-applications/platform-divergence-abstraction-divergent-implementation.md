@@ -186,7 +186,7 @@ cross-platform functionality:
 
 -   **MvvmCross** -  [https://github.com/slodge/MvvmCross/](https://github.com/slodge/MvvmCross/)
 -   **Vernacular** (for localization) -  [https://github.com/rdio/vernacular/](https://github.com/rdio/vernacular/)
--   **MonoGame** (for XNA games) -  [http://monogame.codeplex.com/](http://monogame.codeplex.com/)
+-   **MonoGame** (for XNA games) -  [http://www.monogame.net](http://www.monogame.net)
 -   **NGraphics** - [NGraphics](https://github.com/praeclarum/NGraphics) and its precursor [https://github.com/praeclarum/CrossGraphics](https://github.com/praeclarum/CrossGraphics)
 
 
