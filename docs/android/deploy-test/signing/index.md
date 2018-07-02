@@ -82,13 +82,13 @@ The resulting keystore resides in the following location:
 
 **C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\*ALIAS*\\*ALIAS*.keystore**
 
-For example given chimp as the alias, the above steps would create a new signing
+For example, using **chimp** as the alias, the above steps would create a new signing
 key in the following location:
 
 **C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
 > [!NOTE]
-> Be sure to back up the resulting keystore file and used password in a
+> Be sure to back up the resulting keystore file and password in a
 > safe place &ndash; it is not included in the Solution. If you lose your
 > keystore file (for example, because you moved to another computer or 
 > reinstalled Windows), you will be unable to
@@ -126,7 +126,7 @@ key in the following location:
 
 
 > [!NOTE]
-> Be sure to back up the resulting keystore file and used password in a
+> Be sure to back up the resulting keystore file and password in a
 > safe place &ndash; it is not included in the Solution. If you lose your
 > keystore file (for example, because you moved to another computer or 
 > reinstalled macOS), you will be unable to
