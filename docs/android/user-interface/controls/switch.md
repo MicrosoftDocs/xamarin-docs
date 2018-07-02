@@ -1,11 +1,12 @@
 ---
 title: "Switch"
+description: "How to use the Switch widget in a Xamarin.Android application"
 ms.prod: xamarin
 ms.assetid: 6E1F3324-EC41-454A-AEC0-0208813C7E50
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
+ms.date: 06/29/2018
 ---
 
 # Switch
@@ -86,7 +87,5 @@ s.CheckedChange += delegate(object sender, CompoundButton.CheckedChangeEventArgs
 
 ## Related Links
 
-- [SwitchDemo (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ICS_Samples/SwitchDemo/)
+- [SwitchDemo (sample)](https://developer.xamarin.com/samples/monodroid/SwitchDemo/)
 - [Tab Layout Tutorial](~/android/user-interface/layouts/tab-layout/index.md)
-- [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 Platform](http://developer.android.com/sdk/android-4.0.html)
