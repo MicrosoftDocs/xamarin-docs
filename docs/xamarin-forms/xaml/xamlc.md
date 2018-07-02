@@ -6,7 +6,7 @@ ms.assetid: 9A2D10A6-5DFC-485F-A75A-2F7B98314025
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 01/21/2016
+ms.date: 07/02/2018
 ---
 
 # XAML Compilation in Xamarin.Forms
@@ -33,9 +33,7 @@ namespace PhotoApp
 }
 ```
 
-In this example, compile-time checking of all the XAML contained within the `PhotoApp` namespace will be performed,
-with XAML errors being reported at compile-time rather than run-time.
-The `assembly` prefix to the `XamlCompilation` attribute specifies that the attribute applies to the entire assembly.
+In this example, compile-time checking of all the XAML contained within the assembly will be performed, with XAML errors being reported at compile-time rather than run-time. Therefore, the `assembly` prefix to the `XamlCompilation` attribute specifies that the attribute applies to the entire assembly.
 
 The following code example demonstrates enabling XAMLC at the class level:
 
@@ -49,8 +47,7 @@ public class HomePage : ContentPage
 }
 ```
 
-In this example, compile-time checking of the XAML for the `HomePage`
-class will be performed and errors reported as part of the compilation process.
+In this example, compile-time checking of the XAML for the `HomePage` class will be performed and errors reported as part of the compilation process.
 
 > [!NOTE]
 > The `XamlCompilation` attribute and the `XamlCompilationOptions` enumeration reside in the `Xamarin.Forms.Xaml` namespace, which must be imported to use them.
