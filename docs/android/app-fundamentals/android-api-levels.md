@@ -6,7 +6,7 @@ ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/01/2018
+ms.date: 07/02/2018
 ---
 
 # Understanding Android API Levels
@@ -354,7 +354,7 @@ Android version will be the same as the Target Framework setting.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-To access the Target Framework setting in Visual Studio for Mac,
+To access the Minimum Android version in Visual Studio for Mac,
 right-click the project name and select **Options**; this opens the
 **Project Options** dialog. Navigate to **Build > Android Application**.
 Using the drop-down menu to the right of **Minimum Android version**,
@@ -406,11 +406,11 @@ version to **Use Compile using SDK version**.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-To access the Target Framework setting in Visual Studio for Mac,
-right-click the project name and select **Options**; this opens the
-**Project Options** dialog. Navigate to **Build > Android Application**.
-Using the drop-down menu to the right of **Target Android version**,
-you can set the Target Android version for your application:
+To access this setting in Visual Studio for Mac, right-click the
+project name and select **Options**; this opens the **Project Options**
+dialog. Navigate to **Build > Android Application**. Using the
+drop-down menu to the right of **Target Android version**, you can set
+the Target Android version for your application:
 
 [![Target Android version set to Automatic - use target framework version](android-api-levels-images/xs-target-version-sml.png)](android-api-levels-images/xs-target-version.png#lightbox)
 

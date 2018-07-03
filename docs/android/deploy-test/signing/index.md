@@ -1,26 +1,25 @@
 ---
 title: "Signing the Android Application Package"
+description: "How to sign the Android Application Package (APK) for publication"
 ms.prod: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/21/2018
+ms.date: 07/02/2018
 ---
 
 # Signing the Android Application Package
 
-# [Visual Studio](#tab/vswin)
-
-This section describes the integrated publishing
-workflow to sign the APK provided by Visual Studio. In
-[Preparing an App for Release](~/android/deploy-test/release-prep/index.md)
-the **Archive Manager** was used to build the app and place it in an
-archive for signing and publishing. This section explains how to create
-an Android signing identity, create a new signing certificate for
-Android applications, and publish the archived app *ad hoc* to disk.
-The resulting APK can be sideloaded into Android devices without going
+In [Preparing an App for Release](~/android/deploy-test/release-prep/index.md) 
+the **Archive Manager** was used to build the app and place it in an archive for
+signing and publishing. This section explains how to create an Android
+signing identity, create a new signing certificate for Android
+applications, and publish the archived app *ad hoc* to disk. The
+resulting APK can be sideloaded into Android devices without going
 through an app store.
+
+# [Visual Studio](#tab/vswin)
 
 In [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive),
 the **Distribution Channel** dialog presented two choices for
@@ -29,16 +28,6 @@ distribution. Select **Ad-Hoc**:
 [![Distribution Channel dialog](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
 # [Visual Studio for Mac](#tab/vsmac)
-
-In this section, we'll use Visual Studio for Mac's integrated publishing
-workflow to sign the APK. In
-[Preparing an App for Release](~/android/deploy-test/release-prep/index.md),
-we used the **Archive Manager** to build the app and place it in an
-archive for signing and publishing. In this section, we'll learn how to
-create an Android signing identity, create a new signing certificate
-for Android applications, and publish the archived app *ad hoc* to
-disk. The resulting APK can be sideloaded into Android devices without
-going through an app store.
 
 In [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive),
 the **Sign and Distribute...** dialog presented us with two choices for
