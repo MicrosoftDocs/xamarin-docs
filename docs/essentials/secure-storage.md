@@ -55,6 +55,10 @@ To retrieve a value from secure storage:
 var oauthToken = await SecureStorage.GetAsync("oauth_token");
 ```
 
+> [!NOTE]
+> If there is no value associated with the requested key, `GetAsync` will
+> return `null`.
+
 To remove a specific key, call:
 
 ```csharp
