@@ -89,5 +89,4 @@
 #### [Why doesn't Visual Studio include my referenced library project in my build?](troubleshooting/questions/vs-config-manager.md)
 
 ### [Updating Component References to NuGet](troubleshooting/component-nuget.md)
-### [Support Options](troubleshooting/support-options.md)
 ## [Samples](samples/index.yml)

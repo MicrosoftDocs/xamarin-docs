@@ -6,7 +6,7 @@ ms.prod: xamarin
 ms.assetid: 4513D391-9850-4CDC-BE9B-7FF4B14FEFFC
 author: asb3993
 ms.author: amburns
-ms.date: 02/18/2018
+ms.date: 05/10/2018
 ---
 
 # Xamarin Troubleshooting
@@ -20,10 +20,6 @@ Frequently Asked Questions about the Xamarin Platform, and answers specific to V
 ### [Updating Component References to NuGet](component-nuget.md)
 
 How to update existing Xamarin solutions to change Component references to NuGet packages.
-
-### [Support Options](support-options.md)
-
-Support options for Xamarin products.
 
 ## Product-Specific Questions
 

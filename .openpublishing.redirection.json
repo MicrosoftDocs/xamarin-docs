@@ -29,6 +29,10 @@
       "redirect_url": "/visualstudio/mac/connected-services"
     },
     {
+      "source_path": "docs/cross-platform/troubleshooting/support-options.md",
+      "redirect_url": "https://www.visualstudio.com/vs/support/"
+    },
+    {
       "source_path": "docs/cross-platform/troubleshooting/legacy-licenses/change-email.md",
       "redirect_url": "/xamarin/cross-platform/troubleshooting"
     },
