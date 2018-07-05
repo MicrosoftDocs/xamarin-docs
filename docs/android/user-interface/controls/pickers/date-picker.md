@@ -173,7 +173,7 @@ public class MainActivity : Activity
                                                                  {
                                                                      _dateDisplay.Text = time.ToLongDateString();
                                                                  });
-        frag.Show(FragmentManager, DatePickerFragment.TAG);
+        frag.Show(Activity.FragmentManager, DatePickerFragment.TAG);
     }
 }
 ```
