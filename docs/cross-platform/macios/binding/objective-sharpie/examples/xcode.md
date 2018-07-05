@@ -10,7 +10,6 @@ ms.date: 01/15/2016
 
 # Real-World Example using an Xcode Project
 
-
 **This example uses the [POP library from Facebook](https://github.com/facebook/pop).**
 
 New in version 3.0, Objective Sharpie supports Xcode projects as input. These projects specify the correct header files and compiler flags necessary to compile the native library, and thus necessary to bind it too. Objective Sharpie will select the first _target_ and its default configuration of a project if not instructed to do otherwise.
@@ -24,3 +23,7 @@ Cloning into 'pop'...
 $ <b>cd pop</b>
 $ <b>sharpie bind pop.xcodeproj -sdk iphoneos9.0</b></pre>
 
+## Related Links
+
+- [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

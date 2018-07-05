@@ -68,3 +68,5 @@ of Mac Binding Project support for a future release of Visual Studio for Mac.
 
 - [iOS Binding](~/ios/platform/binding-objective-c/index.md)
 - [Mac Binding](~/mac/platform/binding.md)
+- [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
