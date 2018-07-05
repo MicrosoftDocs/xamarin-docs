@@ -80,15 +80,15 @@ Xamarin.iOS for Visual Studio current doesn't support editing the `Info.plist` p
 1. Right-click on the `Info.plist` file in the **Solution Explorer** and select **Open with...**.
 2. Select the **Generic PList Editor** from the list of programs to open the file, then click **OK**.
 
-	[![](security-privacy-images/info02.png "Select a Privacy key")](security-privacy-images/info02.png#lightbox)
+	[![](security-privacy-images/InfoEditorSelectionVs.png "Select the Generic PList Editor")](security-privacy-images/InfoEditorSelectionVs.png#lightbox)
 3. Click the **+** button on the last row in the editor to add a new entry to the list. This will be called "Custom Property", with the Type set to `String` and an empty value.
 4. Click the property name, and a dropdown will appear.
 5. From the dropdown list, select a Privacy key (such as **Privacy - HomeKit Usage Description**): 
 
-	[![](security-privacy-images/info02.png "Select a Privacy key")](security-privacy-images/info02.png#lightbox)
+	[![](security-privacy-images/InfoPListEditorSelectKey.png "Select a Privacy key")](security-privacy-images/InfoPListEditorSelectKey.png#lightbox)
 6. Enter a description into the Value column for why the app wants to access the given feature or user information: 
 
-	[![](security-privacy-images/info03.png "Enter a description")](security-privacy-images/info03.png#lightbox)
+	[![](security-privacy-images/InfoPListSetValue.png "Enter a description")](security-privacy-images/InfoPListSetValue.png#lightbox)
 7. Save the changes to the file.
 
 # [Visual Studio for Mac](#tab/vsmac)
