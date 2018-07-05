@@ -53,13 +53,21 @@ User interface to share to external application that appears when request is mad
 
 ## Platform Differences
 
-| Platform | Difference |
-| --- | --- |
-| Android | Subject property is used for desired subject of a message. |
-| iOS | Subject not used. |
-| iOS | Title not used. |
-| UWP | Title will default to Application Name if not set. |
-| UWP | Subject not used. |
+# [Android](#tab/android)
+
+* `Subject` property is used for desired subject of a message.
+
+# [iOS](#tab/ios)
+
+* `Subject` not used.
+* `Title` not used. 
+
+# [UWP](#tab/uwp)
+
+* `Title` will default to Application Name if not set.
+* `Subject` not used.
+
+-----
 
 ## API
 

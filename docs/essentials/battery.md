@@ -126,11 +126,21 @@ public class BatteryTest
 
 ## Platform Differences
 
-| Platform | Difference |
-| --- | --- |
-| iOS | Device must be used to test APIs. |
-| iOS | Only will return Ac or Battery for PowerSource. |
-| UWP | Only will return Ac or Battery for PowerSource. |
+# [Android](#tab/android)
+
+No platform differences.
+
+# [iOS](#tab/ios)
+
+* Device must be used to test APIs. 
+* Only will return `Ac` or `Battery` for `PowerSource`. 
+* Not possible to cancel vibration.
+
+# [UWP](#tab/uwp)
+
+* Only will return `Ac` or `Battery` for `PowerSource`. 
+
+-----
 
 ## API
 

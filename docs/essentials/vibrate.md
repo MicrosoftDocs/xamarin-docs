@@ -96,11 +96,21 @@ catch (Exception ex)
 
 ## Platform Differences
 
-| Platform | Difference |
-| --- | --- |
-| iOS | Only vibrates when device is set to "Vibrate on ring". |
-| iOS | Always vibrates for 500 milliseconds. |
-| iOS | Not possible to cancel vibration. |
+# [Android](#tab/android)
+
+No platform differences.
+
+# [iOS](#tab/ios)
+
+* Only vibrates when device is set to "Vibrate on ring".
+* Always vibrates for 500 milliseconds.
+* Not possible to cancel vibration.
+
+# [UWP](#tab/uwp)
+
+No platform differences.
+
+-----
 
 ## API
 
