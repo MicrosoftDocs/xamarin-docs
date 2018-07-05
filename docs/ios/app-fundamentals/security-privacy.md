@@ -75,16 +75,21 @@ Take the following example of accessing HomeKit on iOS 10 (and greater), the dev
 
 # [Visual Studio](#tab/vswin)
 
-Xamarin.iOS for Visual Studio current doesn't support editing the security enhancement `Info.plist` settings from within the IDE, so the following workaround will be required:
+Xamarin.iOS for Visual Studio current doesn't support editing the `Info.plist` privacy keys from within the default iOS manifest editor. Instead you will need to use the generic PList editor, so do the following:
 
-1. Open the `Info.plist` file in an external text editor.
-2. Before the last `</dict>` node, add the following node: `<key>NSHomeKitUsageDescription</key>`
-3. Add the following node to provide the required description: `<string>Allows the app to control HomeKit enabled devices.</string>`
-4. The `Info.plist` file should look like the following: 
+1. Right-click on the `Info.plist` file in the **Solution Explorer** and select **Open with...**.
+2. Select the **Generic PList Editor** from the list of programs to open the file, then click **OK**.
 
-	[![](security-privacy-images/info02vs.png "The Info.plist file should look like the following")](security-privacy-images/info02vs.png#lightbox)
-4. Save the changes to the file.
-5. Return to Visual Studio and recompile's the app.
+	[![](security-privacy-images/info02.png "Select a Privacy key")](security-privacy-images/info02.png#lightbox)
+3. Click the **+** button on the last row in the editor to add a new entry to the list. This will be called "Custom Property", with the Type set to `String` and an empty value.
+4. Click the property name, and a dropdown will appear.
+5. From the dropdown list, select a Privacy key (such as **Privacy - HomeKit Usage Description**): 
+
+	[![](security-privacy-images/info02.png "Select a Privacy key")](security-privacy-images/info02.png#lightbox)
+6. Enter a description into the Value column for why the app wants to access the given feature or user information: 
+
+	[![](security-privacy-images/info03.png "Enter a description")](security-privacy-images/info03.png#lightbox)
+7. Save the changes to the file.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
