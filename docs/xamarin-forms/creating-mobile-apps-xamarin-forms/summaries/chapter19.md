@@ -51,8 +51,8 @@ The [**ListViewList**](https://github.com/xamarin/xamarin-forms-book-samples/tre
 
 On iOS and Android displays, a thin line separates the rows. You can control this with the [`SeparatorVisibiliy`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.SeparatorVisibility/) and [`SeparatorColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.SeparatorColor/) properties. `SeparatorVisibility` property is of type [`SeparatorVisbility`](https://developer.xamarin.com/api/type/Xamarin.Forms.SeparatorVisibility/), an enumeration with two members:
 
-- [`Default`](https://developer.xamarin.com/api/field/Xamarin.Forms.SeparatorVisibility.Default/), the default setting
-- [`None`](https://developer.xamarin.com/api/field/Xamarin.Forms.SeparatorVisibility.None/)
+- [`Default`](xref:Xamarin.Forms.SeparatorVisibility.Default), the default setting
+- [`None`](xref:Xamarin.Forms.SeparatorVisibility.None)
 
 ### Data binding the selected item
 
@@ -179,10 +179,10 @@ While the `ListView` generally displays multiple instances of the same type, the
 
 The `TableIntent` enumeration indicates how you intend to use the `TableView`:
 
-- [`Data`](https://developer.xamarin.com/api/field/Xamarin.Forms.TableIntent.Data/)
-- [`Form`](https://developer.xamarin.com/api/field/Xamarin.Forms.TableIntent.Form/)
-- [`Settings`](https://developer.xamarin.com/api/field/Xamarin.Forms.TableIntent.Settings/)
-- [`Menu`](https://developer.xamarin.com/api/field/Xamarin.Forms.TableIntent.Menu/)
+- [`Data`](xref:Xamarin.Forms.TableIntent.Data)
+- [`Form`](xref:Xamarin.Forms.TableIntent.Form)
+- [`Settings`](xref:Xamarin.Forms.TableIntent.Settings)
+- [`Menu`](xref:Xamarin.Forms.TableIntent.Menu)
 
 These members also suggest some uses for the `TableView`.
 

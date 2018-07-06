@@ -146,10 +146,10 @@ This indicates the type of keyboard that is displayed. Some keyboards are optimi
 The `Keyboard` class allows defining a keyboard with a static [`Keyboard.Create`](https://developer.xamarin.com/api/member/Xamarin.Forms.Keyboard.Create/p/Xamarin.Forms.KeyboardFlags/) method with an argument of type [`KeyboardFlags`](https://developer.xamarin.com/api/type/Xamarin.Forms.KeyboardFlags/), an enumeration with the following bit flags:
 
 - `None` set to 0
-- [`CapitalizeSentence`](https://developer.xamarin.com/api/field/Xamarin.Forms.KeyboardFlags.CapitalizeSentence/) set to 1
-- [`Spellcheck`](https://developer.xamarin.com/api/field/Xamarin.Forms.KeyboardFlags.Spellcheck/) set to 2
-- [`Suggestions`](https://developer.xamarin.com/api/field/Xamarin.Forms.KeyboardFlags.Suggestions/) set to 4
-- [`All`](https://developer.xamarin.com/api/field/Xamarin.Forms.KeyboardFlags.All/) set to \xFFFFFFFF
+- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) set to 1
+- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck) set to 2
+- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions) set to 4
+- [`All`](xref:Xamarin.Forms.KeyboardFlags.All) set to \xFFFFFFFF
 
 When using the multiline [`Editor`](https://developer.xamarin.com/api/type/Xamarin.Forms.Editor/) when a paragraph or more of text is expected, calling `Keyboard.Create` is a good approach to selecting a keyboard. For the single-line [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/), the following static read-only properties of `Keyboard` are useful:
 

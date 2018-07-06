@@ -110,7 +110,7 @@ Properties of native views can also use data binding. The following code example
 
 The page contains an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) whose [`IsEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsEnabled/) property binds to the `NativeSwitchPageViewModel.IsSwitchOn` property. The [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) of the page is set to a new instance of the `NativeSwitchPageViewModel` class in the code-behind file, with the ViewModel class implementing the `INotifyPropertyChanged` interface.
 
-The page also contains a native switch for each platform. Each native switch uses a [`TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/) binding to update the value of the `NativeSwitchPageViewModel.IsSwitchOn` property. Therefore, when the switch is off, the `Entry` is disabled, and when the switch is on, the `Entry` is enabled. The following screenshots show this functionality on each platform:
+The page also contains a native switch for each platform. Each native switch uses a [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) binding to update the value of the `NativeSwitchPageViewModel.IsSwitchOn` property. Therefore, when the switch is off, the `Entry` is disabled, and when the switch is on, the `Entry` is enabled. The following screenshots show this functionality on each platform:
 
 ![](xaml-images/native-switch-disabled.png "Native Switch Disabled")
 ![](xaml-images/native-switch-enabled.png "Native Switch Enabled")

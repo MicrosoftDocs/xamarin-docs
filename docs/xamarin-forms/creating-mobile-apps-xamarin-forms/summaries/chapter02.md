@@ -132,11 +132,11 @@ In the version of Xamarin.Forms used for the book, a `Padding` property specific
 
 The `Device.OnPlatform` methods are used to run platform-specific code or to select platform-specific values. Internally, they make use of the [`Device.OS`](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.OS/) static read-only property, which returns a member of the [`TargetPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.TargetPlatform/) enumeration:
 
-- [`iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetPlatform.iOS/)
-- [`Android`](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetPlatform.Android/)
-- [`Windows`](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetPlatform.Windows/) for Windows 8.1, Windows Phone 8.1, and all UWP devices.
-- [`WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetPlatform.WinPhone/), previously used to identify Windows Phone 8.0 but is now unused
-- [`Other`](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetPlatform.Other/) is unused
+- [`iOS`](xref:Xamarin.Forms.TargetPlatform.iOS)
+- [`Android`](xref:Xamarin.Forms.TargetPlatform.Android)
+- [`Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) for Windows 8.1, Windows Phone 8.1, and all UWP devices.
+- [`WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone), previously used to identify Windows Phone 8.0 but is now unused
+- [`Other`](xref:Xamarin.Forms.TargetPlatform.Other) is unused
 
 The `Device.OnPlatform` methods, the `Device.OS` property, and the `TargetPlatform` enumeration are all now deprecated. Instead, use the [`Device.RuntimePlatform`](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/) property and compare the `string` return value with the following static fields:
 
@@ -146,12 +146,12 @@ The `Device.OnPlatform` methods, the `Device.OS` property, and the `TargetPlatfo
 - [`Windows`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Windows/), the string "Windows" for the Windows Runtime (Windows 8.1 and Windows Phone 8.1)
 - [`WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/), the string "WinPhone" for Windows Phone 8.0
 
-The [`Device.Idiom`](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.Idiom/) static read-only property is related. This returns a member of the [`TargetIdiom`](https://developer.xamarin.com/api/type/Xamarin.Forms.TargetIdiom/), which has these members:
+The [`Device.Idiom`](xref:Xamarin.Forms.Device.Idiom) static read-only property is related. This returns a member of the [`TargetIdiom`](xref:Xamarin.Forms.TargetIdiom), which has these members:
 
-- [`Desktop`](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetIdiom.Desktop/)
-- [`Tablet`](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetIdiom.Tablet/)
-- [`Phone`](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetIdiom.Phone/)
-- [`Unsupported`](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetIdiom.Unsupported/) is unused
+- [`Desktop`](xref:Xamarin.Forms.TargetIdiom.Desktop)
+- [`Tablet`](xref:Xamarin.Forms.TargetIdiom.Tablet)
+- [`Phone`](xref:Xamarin.Forms.TargetIdiom.Phone)
+- [`Unsupported`](xref:Xamarin.Forms.TargetIdiom.Unsupported) is unused
 
 For iOS and Android, the cutoff between `Tablet` and `Phone` is a portrait width of 600 units. For the Windows platform, `Desktop` indicates a UWP application running under Windows 10, `Tablet` is a Windows 8.1 program, and `Phone` indicates a UWP application running under Windows 10 or a Windows Phone 8.1 application.
 
@@ -165,7 +165,7 @@ The `Padding` property is only available on [`Layout`](https://developer.xamarin
 
 You can center the `Label` within the `Page` (or put it in one of eight other places) by setting the [`HorizontalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) and [`VerticalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) properties of the `Label` to a value of type [`LayoutOptions`](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/). The `LayoutOptions` structure defines two properties:
 
-- An [`Alignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Alignment/) property of type [`LayoutAlignment`](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutAlignment/), an enumeration with four members: [`Start`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutAlignment.Start/), which means left or top depending on the orientation, [`Center`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutAlignment.Center/), [`End`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutAlignment.End/), which means right or bottom depending on the orientation, and [`Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutAlignment.Fill/).
+- An [`Alignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Alignment/) property of type [`LayoutAlignment`](xref:Xamarin.Forms.LayoutAlignment), an enumeration with four members: [`Start`](xref:Xamarin.Forms.LayoutAlignment.Start), which means left or top depending on the orientation, [`Center`](xref:Xamarin.Forms.LayoutAlignment.Center), [`End`](xref:Xamarin.Forms.LayoutAlignment.End), which means right or bottom depending on the orientation, and [`Fill`](xref:Xamarin.Forms.LayoutAlignment.Fill).
 
 - An [`Expands`](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Expands/) property of type `bool`.
 
@@ -188,11 +188,11 @@ Here's the result with the `HorizontalOptions` and `VerticalOptions` properties 
 
 ## Solution 5. Center the text within the Label
 
-You can also center the text (or place it in eight other locations on the page) by setting the [`HorizontalTextAlignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.HorizontalTextAlignment/) and [`VerticalTextAlignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.VerticalTextAlignment/) properties of `Label` to a member of the [`TextAlignment`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextAlignment/) enumeration:
+You can also center the text (or place it in eight other locations on the page) by setting the [`HorizontalTextAlignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.HorizontalTextAlignment/) and [`VerticalTextAlignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.VerticalTextAlignment/) properties of `Label` to a member of the [`TextAlignment`](xref:Xamarin.Forms.TextAlignment) enumeration:
 
-- [`Start`](https://developer.xamarin.com/api/field/Xamarin.Forms.TextAlignment.Start/), meaning left or top (depending on orientation)
-- [`Center`](https://developer.xamarin.com/api/field/Xamarin.Forms.TextAlignment.Center/)
-- [`End`](https://developer.xamarin.com/api/field/Xamarin.Forms.TextAlignment.End/), meaning right or bottom (depending on orientation)
+- [`Start`](xref:Xamarin.Forms.TextAlignment.Start), meaning left or top (depending on orientation)
+- [`Center`](xref:Xamarin.Forms.TextAlignment.Center)
+- [`End`](xref:Xamarin.Forms.TextAlignment.End), meaning right or bottom (depending on orientation)
 
 These two properties are defined only by `Label`, whereas the `HorizontalAlignment` and `VerticalAlignment` properties are defined by `View` and inherited by all `View` derivatives. The visual results might seem similar, but they are very different as the next chapter demonstrates.
 

@@ -21,7 +21,7 @@ Also introduced in this chapter are the [`ScrollView`](https://developer.xamarin
 
 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) derives from `Layout<View>` and inherits a [`Children`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) property of type `IList<View>`. You add multiple view items to this collection, and `StackLayout` displays them in a horizontal or vertical stack.
 
-Set the [`Orientation`](https://developer.xamarin.com/api/property/Xamarin.Forms.StackLayout.Orientation/) property of `StackLayout` to a member of the [`StackOrientation`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackOrientation/) enumeration, either [`Vertical`](https://developer.xamarin.com/api/field/Xamarin.Forms.StackOrientation.Vertical/) or [`Horizontal`](https://developer.xamarin.com/api/field/Xamarin.Forms.StackOrientation.Horizontal/). The default is `Vertical`.
+Set the [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) property of `StackLayout` to a member of the [`StackOrientation`](xref:Xamarin.Forms.StackOrientation) enumeration, either [`Vertical`](xref:Xamarin.Forms.StackOrientation.Vertical) or [`Horizontal`](xref:Xamarin.Forms.StackOrientation.Horizontal). The default is `Vertical`.
 
 Set the [`Spacing`](https://developer.xamarin.com/api/property/Xamarin.Forms.StackLayout.Spacing/) property of `StackLayout` to a `double` value to specify a spacing between the children. The default value is 6.
 
@@ -35,7 +35,7 @@ If a `StackLayout` contains too many children to display on a page, you can put 
 
 Set the [`Content`](https://developer.xamarin.com/api/property/Xamarin.Forms.ScrollView.Content/) property of `ScrollView` to the view you want to scroll. This is often a `StackLayout`, but it can be any view.
 
-Set the [`Orientation`](https://developer.xamarin.com/api/property/Xamarin.Forms.ScrollView.Orientation/) property of `ScrollView` to a member of the [`ScrollOrientation`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollOrientation/) property, [`Vertical`](https://developer.xamarin.com/api/field/Xamarin.Forms.ScrollOrientation.Vertical/), [`Horizontal`](https://developer.xamarin.com/api/field/Xamarin.Forms.ScrollOrientation.Horizontal/), or [`Both`](https://developer.xamarin.com/api/field/Xamarin.Forms.ScrollOrientation.Both/). The default is `Vertical`. If the content of a `ScrollView` is a `StackLayout`, the two orientations should be consistent.
+Set the [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) property of `ScrollView` to a member of the [`ScrollOrientation`](xref:Xamarin.Forms.ScrollOrientation) property, [`Vertical`](xref:Xamarin.Forms.ScrollOrientation.Vertical), [`Horizontal`](xref:Xamarin.Forms.ScrollOrientation.Horizontal), or [`Both`](xref:Xamarin.Forms.ScrollOrientation.Both). The default is `Vertical`. If the content of a `ScrollView` is a `StackLayout`, the two orientations should be consistent.
 
 The [**ReflectedColors**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ReflectedColors) sample demonstrates the use of `ScrollView` and `StackLayout` to display the available colors. The sample also demonstrates how to use .NET reflection to obtain all the public static properties and fields of the `Color` structure without the need to explicitly list them.
 
@@ -45,8 +45,8 @@ When a `StackLayout` stacks its children, each child occupies a particular slot 
 
 The `LayoutOptions` structure defines two properties:
 
-- [`Alignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Alignment/) of the enumeration type [`LayoutAlignment`](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutAlignment/) with four members, [`Start`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutAlignment.Start/), [`Center`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutAlignment.Center/), [`End`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutAlignment.End/), and [`Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutAlignment.Fill/)
-- [`Expands`](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Expands/) of type `bool`
+- [`Alignment`](xref:Xamarin.Forms.LayoutOptions.Alignment) of the enumeration type [`LayoutAlignment`](xref:Xamarin.Forms.LayoutAlignment) with four members, [`Start`](xref:Xamarin.Forms.LayoutAlignment.Start), [`Center`](xref:Xamarin.Forms.LayoutAlignment.Center), [`End`](xref:Xamarin.Forms.LayoutAlignment.End), and [`Fill`](xref:Xamarin.Forms.LayoutAlignment.Fill)
+- [`Expands`](xref:Xamarin.Forms.LayoutOptions.Expands) of type `bool`
 
 For your convenience, the `LayoutOptions` structure also defines eight static read-only fields of type `LayoutOptions` that encompass all combinations of the two instance properties:
 

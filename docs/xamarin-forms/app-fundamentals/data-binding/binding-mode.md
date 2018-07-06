@@ -48,15 +48,15 @@ The difference between the **Reverse Binding** sample and the earlier samples in
 
 ## The Default Binding Mode
 
-The binding mode is specified with a member of the [`BindingMode`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingMode/) enumeration:
+The binding mode is specified with a member of the [`BindingMode`](xref:Xamarin.Forms.BindingMode) enumeration:
 
-- [`Default`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.Default/)
-- [`TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/) &ndash; data goes both ways between source and target
-- [`OneWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWay/) &ndash; data goes from source to target
-- [`OneWayToSource`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; data goes from target to source
-- [`OneTime`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; data goes from source to target, but only when the `BindingContext` changes (new with Xamarin.Forms 3.0)
+- [`Default`](xref:Xamarin.Forms.BindingMode.Default)
+- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; data goes both ways between source and target
+- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; data goes from source to target
+- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; data goes from target to source
+- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; data goes from source to target, but only when the `BindingContext` changes (new with Xamarin.Forms 3.0)
 
-Every bindable property has a default binding mode that is set when the bindable property is created, and which is available from the [`DefaultBindingMode`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableProperty.DefaultBindingMode/) property of the `BindableProperty` object. This default binding mode indicates the mode in effect when that property is a data-binding target.
+Every bindable property has a default binding mode that is set when the bindable property is created, and which is available from the [`DefaultBindingMode`](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) property of the `BindableProperty` object. This default binding mode indicates the mode in effect when that property is a data-binding target.
 
 The default binding mode for most properties such as `Rotation`, `Scale`, and `Opacity` is `OneWay`. When these properties are data-binding targets, then the target property is set from the source.
 
@@ -105,7 +105,7 @@ Target properties with a binding mode of `OneTime` are updated only when the bin
 
 The **Simple Color Selector** page demonstrates the use of a simple ViewModel. Data bindings allow the user to select a color using three `Slider` elements for the hue, saturation, and luminosity.
 
-The ViewModel is the data-binding source. The ViewModel does *not* define bindable properties, but it does implement a notification mechanism that allows the binding infrastructure to be notified when the value of a property changes. This notification mechanism is the [`INotifyPropertyChanged`](https://developer.xamarin.com/api/type/System.ComponentModel.INotifyPropertyChanged/) interface, which defines a single property named [`PropertyChanged`](https://developer.xamarin.com/api/event/System.ComponentModel.INotifyPropertyChanged.PropertyChanged/). A class that implements this interface generally fires the event when one of its public properties changes value. The event does not need to be fired if the property never changes. (The `INotifyPropertyChanged` interface is also implemented by `BindableObject` and a `PropertyChanged` event is fired whenever a bindable property changes value.)
+The ViewModel is the data-binding source. The ViewModel does *not* define bindable properties, but it does implement a notification mechanism that allows the binding infrastructure to be notified when the value of a property changes. This notification mechanism is the [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) interface, which defines a single property named [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). A class that implements this interface generally fires the event when one of its public properties changes value. The event does not need to be fired if the property never changes. (The `INotifyPropertyChanged` interface is also implemented by `BindableObject` and a `PropertyChanged` event is fired whenever a bindable property changes value.)
 
 The `HslColorViewModel` class defines five properties: The `Hue`, `Saturation`, `Luminosity`, and `Color` properties are interrelated. When any one of the three color components changes value, the `Color` property is recalculated, and `PropertyChanged` events are fired for all four properties:
 
@@ -278,7 +278,7 @@ The binding context can be set in a variety of ways. Sometimes, the code-behind 
 
 ## Overriding the Binding Mode
 
-If the default binding mode on the target property is not suitable for a particular data binding, it's possible to override it by setting the [`Mode`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindingBase.Mode/) property of `Binding` (or the [`Mode`](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Mode/) property of the `Binding` markup extension) to one of the members of the `BindingMode` enumeration.
+If the default binding mode on the target property is not suitable for a particular data binding, it's possible to override it by setting the [`Mode`](xref:Xamarin.Forms.BindingBase.Mode) property of `Binding` (or the [`Mode`](xref:Xamarin.Forms.Xaml.BindingExtension.Mode) property of the `Binding` markup extension) to one of the members of the `BindingMode` enumeration.
 
 However, setting the `Mode` property to `TwoWay` doesn't always work as you might expect. For example, try modifying the **Alternative XAML Binding** XAML file to include `TwoWay` in the binding definition:
 

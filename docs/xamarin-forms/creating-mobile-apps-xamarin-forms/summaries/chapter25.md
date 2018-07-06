@@ -28,13 +28,13 @@ There are two fundamental ways to switch between these two pages:
 - *split* where the master and detail are side by side
 - *popover* where the detail page covers or partially covers the master page
 
-There are several variations of the *popover* approach (*slide*, *overlap*, and *swap*), but these are generally platform dependent. You can set the [`MasterDetailBehavior`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.MasterBehavior/) property of `MasterDetailPage` to a member of the [`MasterBehavior`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterBehavior/) enumeration:
+There are several variations of the *popover* approach (*slide*, *overlap*, and *swap*), but these are generally platform dependent. You can set the [`MasterDetailBehavior`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.MasterBehavior/) property of `MasterDetailPage` to a member of the [`MasterBehavior`](xref:Xamarin.Forms.MasterBehavior) enumeration:
 
-- [`Default`](https://developer.xamarin.com/api/field/Xamarin.Forms.MasterBehavior.Default/)
-- [`Split`](https://developer.xamarin.com/api/field/Xamarin.Forms.MasterBehavior.Split/)
-- [`SplitOnLandscape`](https://developer.xamarin.com/api/field/Xamarin.Forms.MasterBehavior.SplitOnLandscape/)
-- [`SplitOnPortrait`](https://developer.xamarin.com/api/field/Xamarin.Forms.MasterBehavior.SplitOnPortrait/)
-- [`Popover`](https://developer.xamarin.com/api/field/Xamarin.Forms.MasterBehavior.Popover/)
+- [`Default`](xref:Xamarin.Forms.MasterBehavior.Default)
+- [`Split`](xref:Xamarin.Forms.MasterBehavior.Split)
+- [`SplitOnLandscape`](xref:Xamarin.Forms.MasterBehavior.SplitOnLandscape)
+- [`SplitOnPortrait`](xref:Xamarin.Forms.MasterBehavior.SplitOnPortrait)
+- [`Popover`](xref:Xamarin.Forms.MasterBehavior.Popover)
 
 However, this property has no effect on phones. Phones always have a popover behavior. Only tablets and desktop windows can have a split behavior.
 

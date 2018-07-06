@@ -121,9 +121,9 @@ To disable horizontal and vertical scrolling, set the [`HasScrollEnabled`](https
 
 You can display different types of maps by setting the `Map` property [`MapType`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.MapType/) of type [`MapType`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapType/), an enumeration with three members:
 
-- [`Street`](https://developer.xamarin.com/api/field/Xamarin.Forms.Maps.MapType.Street/), the default
-- [`Satellite`](https://developer.xamarin.com/api/field/Xamarin.Forms.Maps.MapType.Satellite/)
-- [`Hybrid`](https://developer.xamarin.com/api/field/Xamarin.Forms.Maps.MapType.Hybrid/)
+- [`Street`](xref:Xamarin.Forms.Maps.MapType.Street), the default
+- [`Satellite`](xref:Xamarin.Forms.Maps.MapType.Satellite)
+- [`Hybrid`](xref:Xamarin.Forms.Maps.MapType.Hybrid)
 
 The [MapTypesPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypesPage.xaml) file shows how to use a radio button to select the map type. It makes use of the [`RadioButtonManager`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioButtonManager.cs) class in the [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) library and a class based on the [MapTypeRadioButton.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypeRadioButton.xaml) file.
 

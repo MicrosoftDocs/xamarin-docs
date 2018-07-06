@@ -25,9 +25,9 @@ The definition of a `Grid` in XAML generally begins with filling the [`RowDefini
 
 In XAML, the [`GridLengthTypeConverter`](https://developer.xamarin.com/api/type/Xamarin.Forms.GridLengthTypeConverter/) converts simple text strings into `GridLength` values. Behind the scenes, the [`GridLength` constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.GridLength.GridLength/p/System.Double/Xamarin.Forms.GridUnitType/) creates the `GridLength` value based on a number and a value of type [`GridUnitType`](https://developer.xamarin.com/api/type/Xamarin.Forms.GridUnitType/), an enumeration with three members:
 
-- [`Absolute`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Absolute/) &mdash; the width or height is specified in device-independent units (a number in XAML)
-- [`Auto`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Auto/) &mdash; the height or width is autosized based on cell contents ("Auto" in XAML)
-- [`Star`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Star/) &mdash; leftover height or width is allocated proportionally (a number with "\*", called *star*, in XAML)
+- [`Absolute`](xref:Xamarin.Forms.GridUnitType.Absolute) &mdash; the width or height is specified in device-independent units (a number in XAML)
+- [`Auto`](xref:Xamarin.Forms.GridUnitType.Auto) &mdash; the height or width is autosized based on cell contents ("Auto" in XAML)
+- [`Star`](xref:Xamarin.Forms.GridUnitType.Star) &mdash; leftover height or width is allocated proportionally (a number with "\*", called *star*, in XAML)
 
 Each child of the `Grid` must also be assigned a row and column (either explicitly or implicitly). Row spans and column spans are optional. These are all specified using attached bindable properties &mdash; properties that are defined by the `Grid` but set on children of the `Grid`. `Grid` defines four static attached bindable properties:
 

@@ -139,7 +139,7 @@ Each [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.Conten
 > [!NOTE]
 > The [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) does not support UI virtualization. Therefore, performance may be affected if the `CarouselPage` contains too many child elements.
 
-If a [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) is embedded into the [`Detail`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) page of a [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/), the [`MasterDetailPage.IsGestureEnabled`](https://developer.xamarin.com/api/field/Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty/) property should be set to `false` to prevent gesture conflicts between the `CarouselPage` and the `MasterDetailPage`.
+If a [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) is embedded into the [`Detail`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) page of a [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/), the [`MasterDetailPage.IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty) property should be set to `false` to prevent gesture conflicts between the `CarouselPage` and the `MasterDetailPage`.
 
 For more information about the [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/), see [Chapter 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) of Charles Petzold's Xamarin.Forms book.
 
@@ -236,7 +236,7 @@ Each [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.Conten
 > [!NOTE]
 > The [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) does not support UI virtualization. Therefore, performance may be affected if the `CarouselPage` contains too many child elements.
 
-If a [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) is embedded into the [`Detail`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) page of a [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/), the [`MasterDetailPage.IsGestureEnabled`](https://developer.xamarin.com/api/field/Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty/) property should be set to `false` to prevent gesture conflicts between the `CarouselPage` and the `MasterDetailPage`.
+If a [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) is embedded into the [`Detail`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) page of a [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/), the [`MasterDetailPage.IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty) property should be set to `false` to prevent gesture conflicts between the `CarouselPage` and the `MasterDetailPage`.
 
 For more information about the [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/), see [Chapter 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) of Charles Petzold's Xamarin.Forms book.
 

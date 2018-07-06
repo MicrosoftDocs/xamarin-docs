@@ -75,10 +75,10 @@ The [**WebViewDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree
 
 Set the [`Mode`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindingBase.Mode/) property of `Binding` to a member of the [`BindingMode`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingMode/) enumeration:
 
-- [`OneWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWay/) so that changes in the source property affect the target
-- [`OneWayToSource`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) so that changes in the target property affect the source
-- [`TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/) so that changes in the source and target affect each other
-- [`Default`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.Default/) to use the [`DefaultBindingMode`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableProperty.DefaultBindingMode/) specified when the target `BindableProperty` was created. If none was specified, the default is `OneWay` for normal bindable properties, and `OneWayToSource` for read-only bindable properties.
+- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) so that changes in the source property affect the target
+- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) so that changes in the target property affect the source
+- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) so that changes in the source and target affect each other
+- [`Default`](xref:Xamarin.Forms.BindingMode.Default) to use the [`DefaultBindingMode`](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) specified when the target `BindableProperty` was created. If none was specified, the default is `OneWay` for normal bindable properties, and `OneWayToSource` for read-only bindable properties.
 
 Properties that are likely to be the targets of data bindings in MVVM scenarios generally have a `DefaultBindingMode` of `TwoWay`. These are:
 

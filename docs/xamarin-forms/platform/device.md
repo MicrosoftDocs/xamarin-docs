@@ -11,7 +11,7 @@ ms.date: 10/24/2017
 
 # Xamarin.Forms Device Class
 
-The [`Device`](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) class contains a number of properties and methods to help developers customize layout and functionality on a per-platform basis.
+The [`Device`](xref:Xamarin.Forms.Device) class contains a number of properties and methods to help developers customize layout and functionality on a per-platform basis.
 
 In addition to methods and properties to target code at specific hardware types and sizes, the `Device` class includes the [BeginInvokeOnMainThread](#Device_BeginInvokeOnMainThread) method which should be used when interacting with UI controls from background threads.
 
@@ -19,9 +19,9 @@ In addition to methods and properties to target code at specific hardware types 
 
 ## Providing Platform-Specific Values
 
-Prior to Xamarin.Forms 2.3.4, the platform the application was running on could be obtained by examining the [`Device.OS`](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.OS/) property and comparing it to the [`TargetPlatform.iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetPlatform.iOS/), [`TargetPlatform.Android`](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetPlatform.Android/), [`TargetPlatform.WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetPlatform.WinPhone/), and [`TargetPlatform.Windows`](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetPlatform.Windows/) enumeration values. Similarly, one of the [`Device.OnPlatform`](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) overloads could be used to provide platform-specific values to a control.
+Prior to Xamarin.Forms 2.3.4, the platform the application was running on could be obtained by examining the [`Device.OS`](xref:Xamarin.Forms.Device.OS) property and comparing it to the [`TargetPlatform.iOS`](xref:Xamarin.Forms.TargetPlatform.iOS), [`TargetPlatform.Android`](xref:Xamarin.Forms.TargetPlatform.Android), [`TargetPlatform.WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone), and [`TargetPlatform.Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) enumeration values. Similarly, one of the [`Device.OnPlatform`](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) overloads could be used to provide platform-specific values to a control.
 
-However, since Xamarin.Forms 2.3.4 these APIs have been deprecated and replaced. The [`Device`](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) class now contains public string constants that identify platforms – [`Device.iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/), [`Device.Android`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Android/), [`Device.WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/) (deprecated), [`Device.WinRT`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinRT/) (deprecated), [`Device.UWP`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.UWP/), and [`Device.macOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.macOS/). Similarly, the  [`Device.OnPlatform`](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) overloads have been replaced with the [`OnPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) and [`On`](https://developer.xamarin.com/api/type/Xamarin.Forms.On/) APIs.
+However, since Xamarin.Forms 2.3.4 these APIs have been deprecated and replaced. The [`Device`](xref:Xamarin.Forms.Device) class now contains public string constants that identify platforms – [`Device.iOS`](xref:Xamarin.Forms.Device.iOS), [`Device.Android`](xref:Xamarin.Forms.Device.Android), [`Device.WinPhone`](xref:Xamarin.Forms.Device.WinPhone) (deprecated), [`Device.WinRT`](xref:Xamarin.Forms.Device.WinRT) (deprecated), [`Device.UWP`](xref:Xamarin.Forms.Device.UWP), and [`Device.macOS`](xref:Xamarin.Forms.Device.macOS). Similarly, the  [`Device.OnPlatform`](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) overloads have been replaced with the [`OnPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) and [`On`](xref:Xamarin.Forms.On) APIs.
 
 In C#, platform-specific values can be provided by creating a `switch` statement on the [`Device.RuntimePlatform`](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/) property, and then providing `case` statements for the required platforms:
 
@@ -41,7 +41,7 @@ switch (Device.RuntimePlatform)
 layout.Margin = new Thickness(5, top, 5, 0);
 ```
 
-The [`OnPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) and [`On`](https://developer.xamarin.com/api/type/Xamarin.Forms.On/) classes provide the same functionality in XAML:
+The [`OnPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) and [`On`](xref:Xamarin.Forms.On) classes provide the same functionality in XAML:
 
 ```xaml
 <StackLayout>
@@ -55,7 +55,7 @@ The [`OnPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatfo
 </StackLayout>
 ```
 
-The [`OnPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) class is a generic class and so must be instantiated with an `x:TypeArguments` attribute that matches the target type. In the [`On`](https://developer.xamarin.com/api/type/Xamarin.Forms.On/) class, the [`Platform`](https://developer.xamarin.com/api/property/Xamarin.Forms.On.Platform/) attribute can accept a single `string` value, or multiple comma-delimited `string` values.
+The [`OnPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) class is a generic class and so must be instantiated with an `x:TypeArguments` attribute that matches the target type. In the [`On`](xref:Xamarin.Forms.On) class, the [`Platform`](xref:Xamarin.Forms.On.Platform) attribute can accept a single `string` value, or multiple comma-delimited `string` values.
 
 > [!IMPORTANT]
 > Providing an incorrect `Platform` attribute value in the `On` class will not result in an error. Instead, the code will execute without the platform-specific value being applied.
@@ -64,7 +64,7 @@ The [`OnPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatfo
 
 ## Device.Idiom
 
-The `Device.Idiom` can be used to alter layouts or functionality depending on the device the application is running on. The [`TargetIdiom`](https://developer.xamarin.com/api/type/Xamarin.Forms.TargetIdiom/) enumeration contains the following values:
+The `Device.Idiom` can be used to alter layouts or functionality depending on the device the application is running on. The [`TargetIdiom`](xref:Xamarin.Forms.TargetIdiom) enumeration contains the following values:
 
 -  **Phone** – iPhone, iPod touch, and Android devices narrower than 600 dips^
 -  **Tablet** – iPad, Windows devices, and Android devices wider than 600 dips^
@@ -86,13 +86,13 @@ if (Device.Idiom == TargetIdiom.Phone) {
 
 ## Device.FlowDirection
 
-The [`Device.FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) value retrieves a [`FlowDirection`](https://developer.xamarin.com/api/type/Xamarin.Forms.FlowDirection/) enumeration value that represents the current flow direction being used by the device. Flow direction is the direction in which the UI elements on the page are scanned by the eye. The enumeration values are:
+The [`Device.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) value retrieves a [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) enumeration value that represents the current flow direction being used by the device. Flow direction is the direction in which the UI elements on the page are scanned by the eye. The enumeration values are:
 
-- [`LeftToRight`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.LeftToRight/)
-- [`RightToRight`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.RightToLeft/)
-- [`MatchParent`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.MatchParent/)
+- [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
+- [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
+- [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
-In XAML, the [`Device.FlowDirection`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) value can be retrieved by using the `x:Static` markup extension:
+In XAML, the [`Device.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) value can be retrieved by using the `x:Static` markup extension:
 
 ```xaml
 <ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
@@ -188,4 +188,4 @@ The Xamarin.Forms `Device` class allows fine-grained control over functionality 
 
 - [Device Sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
 - [Styles Sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
-- [Device](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/)
+- [Device](xref:Xamarin.Forms.Device)

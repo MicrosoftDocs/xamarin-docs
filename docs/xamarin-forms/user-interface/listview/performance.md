@@ -35,23 +35,23 @@ public enum ListViewCachingStrategy
 ```
 
 > [!NOTE]
-> The Universal Windows Platform (UWP) ignores the [`RetainElement`](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/) caching strategy, because it always uses caching to improve performance. Therefore, by default it behaves as if the [`RecycleElement`](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) caching strategy is applied.
+> The Universal Windows Platform (UWP) ignores the [`RetainElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement) caching strategy, because it always uses caching to improve performance. Therefore, by default it behaves as if the [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) caching strategy is applied.
 
 ### RetainElement
 
-The [`RetainElement`](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/) caching strategy specifies that the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) will generate a cell for each item in the list, and is the default `ListView` behavior. It should generally be used in the following circumstances:
+The [`RetainElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement) caching strategy specifies that the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) will generate a cell for each item in the list, and is the default `ListView` behavior. It should generally be used in the following circumstances:
 
 - When each cell has a large number of bindings (20-30+).
 - When the cell template changes frequently.
 - When testing reveals that the `RecycleElement` caching strategy results in a reduced execution speed.
 
-It's important to recognize the consequences of the [`RetainElement`](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/) caching strategy when working with custom cells. Any cell initialization code will need to run for each cell creation, which may be multiple times per second. In this circumstance, layout techniques that were fine on a page, like using multiple nested [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) instances, become performance bottlenecks when they are setup and destroyed in real time as the user scrolls.
+It's important to recognize the consequences of the [`RetainElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement) caching strategy when working with custom cells. Any cell initialization code will need to run for each cell creation, which may be multiple times per second. In this circumstance, layout techniques that were fine on a page, like using multiple nested [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) instances, become performance bottlenecks when they are setup and destroyed in real time as the user scrolls.
 
 <a name="recycleelement" />
 
 ### RecycleElement
 
-The [`RecycleElement`](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) caching strategy specifies that the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) will attempt to minimize its memory footprint and execution speed by recycling list cells. This mode does not always offer a performance improvement, and testing should be performed to determine any improvements. However, it is generally the preferred choice, and should be used in the following circumstances:
+The [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) caching strategy specifies that the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) will attempt to minimize its memory footprint and execution speed by recycling list cells. This mode does not always offer a performance improvement, and testing should be performed to determine any improvements. However, it is generally the preferred choice, and should be used in the following circumstances:
 
 - When each cell has a small to moderate number of bindings.
 - When each cell's [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) defines all of the cell data.
@@ -88,21 +88,21 @@ On iOS and Android, if cells use custom renderers, they must ensure that propert
 
 #### RecycleElement with a DataTemplateSelector
 
-When a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) uses a [`DataTemplateSelector`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) to select a [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/), the [`RecycleElement`](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) caching strategy does not cache `DataTemplate`s. Instead, a `DataTemplate` is selected for each item of data in the list.
+When a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) uses a [`DataTemplateSelector`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) to select a [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/), the [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) caching strategy does not cache `DataTemplate`s. Instead, a `DataTemplate` is selected for each item of data in the list.
 
 > [!NOTE]
-> The [`RecycleElement`](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) caching strategy has a pre-requisite, introduced in Xamarin.Forms 2.4, that when a [`DataTemplateSelector`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) is asked to select a [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) that each `DataTemplate` must return the same [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) type. For example, given a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) with a `DataTemplateSelector` that can return either `MyDataTemplateA` (where `MyDataTemplateA` returns a `ViewCell` of type `MyViewCellA`), or `MyDataTemplateB` (where `MyDataTemplateB` returns a `ViewCell` of type `MyViewCellB`), when `MyDataTemplateA` is returned it must return `MyViewCellA` or an exception will be thrown.
+> The [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) caching strategy has a pre-requisite, introduced in Xamarin.Forms 2.4, that when a [`DataTemplateSelector`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) is asked to select a [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) that each `DataTemplate` must return the same [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) type. For example, given a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) with a `DataTemplateSelector` that can return either `MyDataTemplateA` (where `MyDataTemplateA` returns a `ViewCell` of type `MyViewCellA`), or `MyDataTemplateB` (where `MyDataTemplateB` returns a `ViewCell` of type `MyViewCellB`), when `MyDataTemplateA` is returned it must return `MyViewCellA` or an exception will be thrown.
 
 ### RecycleElementAndDataTemplate
 
-The [`RecycleElementAndDataTemplate`](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/) caching strategy builds on the [`RecycleElement`](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) caching strategy by additionally ensuring that when a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) uses a [`DataTemplateSelector`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) to select a [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/), `DataTemplate`s are cached by the type of item in the list. Therefore, `DataTemplate`s are selected once per item type, instead of once per item instance.
+The [`RecycleElementAndDataTemplate`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate) caching strategy builds on the [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) caching strategy by additionally ensuring that when a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) uses a [`DataTemplateSelector`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) to select a [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/), `DataTemplate`s are cached by the type of item in the list. Therefore, `DataTemplate`s are selected once per item type, instead of once per item instance.
 
 > [!NOTE]
-> The [`RecycleElementAndDataTemplate`](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/) caching strategy has a pre-requisite that the `DataTemplate`s returned by the [`DataTemplateSelector`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) must use the [`DataTemplate`](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/) constructor that takes a `Type`.
+> The [`RecycleElementAndDataTemplate`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate) caching strategy has a pre-requisite that the `DataTemplate`s returned by the [`DataTemplateSelector`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) must use the [`DataTemplate`](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/) constructor that takes a `Type`.
 
 ### Setting the Caching Strategy
 
-The [`ListViewCachingStrategy`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListViewCachingStrategy/) enumeration value is specified with a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) constructor overload, as shown in the following code example:
+The [`ListViewCachingStrategy`](xref:Xamarin.Forms.ListViewCachingStrategy) enumeration value is specified with a [`ListView`](xref:Xamarin.Forms.ListView) constructor overload, as shown in the following code example:
 
 ```csharp
 var listView = new ListView(ListViewCachingStrategy.RecycleElement);

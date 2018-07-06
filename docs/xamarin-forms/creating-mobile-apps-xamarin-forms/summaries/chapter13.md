@@ -47,9 +47,9 @@ The [**WebBitmapXaml**](https://github.com/xamarin/xamarin-forms-book-samples/tr
 
 You can control how the bitmap is stretched by setting the [`Aspect`](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Aspect/) property of the `Image` to one of the following members of the [`Aspect`](https://developer.xamarin.com/api/type/Xamarin.Forms.Aspect/) enumeration:
 
-- [`AspectFit`](https://developer.xamarin.com/api/field/Xamarin.Forms.Aspect.AspectFit/): respects aspect ratio (default)
-- [`Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.Aspect.Fill/): fills area, does not respect aspect ratio
-- [`AspectFill`](https://developer.xamarin.com/api/type/Xamarin.Forms.Aspect.AspectFill/): fills area but respects aspect ratio, accomplished by cropping part of the bitmap
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit): respects aspect ratio (default)
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill): fills area, does not respect aspect ratio
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill): fills area but respects aspect ratio, accomplished by cropping part of the bitmap
 
 ### Embedded resources
 
@@ -171,7 +171,7 @@ The most important `ToolbarItem` properties are:
 
 - [`Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Text/) for text that might appear depending on platform and `Order`
 - [`Icon`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Icon/) of type `FileImageSource` for the image that might appear depending on platform and `Order`
-- [`Order`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Order/) of type [`ToolbarItemOrder`](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItemOrder/), an enumeration with three members, [`Default`](https://developer.xamarin.com/api/field/Xamarin.Forms.ToolbarItemOrder.Default/), [`Primary`](https://developer.xamarin.com/api/field/Xamarin.Forms.ToolbarItemOrder.Primary/), and [`Secondary`](https://developer.xamarin.com/api/field/Xamarin.Forms.ToolbarItemOrder.Secondary/).
+- [`Order`](xref:Xamarin.Forms.ToolbarItem.Order) of type [`ToolbarItemOrder`](xref:Xamarin.Forms.ToolbarItemOrder), an enumeration with three members, [`Default`](xref:Xamarin.Forms.ToolbarItemOrder.Default), [`Primary`](xref:Xamarin.Forms.ToolbarItemOrder.Primary), and [`Secondary`](xref:Xamarin.Forms.ToolbarItemOrder.Secondary).
 
 The number of `Primary` items should be limited to three or four. You should include a `Text` setting for all items. For most platforms, only the `Primary` items require an `Icon` but Windows 8.1 requires an `Icon` for all items. The icons should be 32 device-independent units square. The `FileImageSource` type indicates that they are platform-specific.
 

@@ -31,7 +31,7 @@ The `DatePicker` fires a [`DateSelected`](https://developer.xamarin.com/api/even
 
 Internally, the `DatePicker` ensures that `Date` is between `MinimumDate` and `MaximumDate`, inclusive. If `MinimumDate` or `MaximumDate` is set so that `Date` is not between them, `DatePicker` will adjust the value of `Date`.
 
-All eight properties are backed by [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) objects, which means that they can be styled, and the properties can be targets of data bindings. The `Date` property has a default binding mode of [`BindingMode.TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/), which means that it can be a target of a data binding in an application that uses the [Model-View-ViewModel (MVVM)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) architecture.
+All eight properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be styled, and the properties can be targets of data bindings. The `Date` property has a default binding mode of [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay), which means that it can be a target of a data binding in an application that uses the [Model-View-ViewModel (MVVM)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) architecture.
 
 ## Initializing the DateTime properties
 

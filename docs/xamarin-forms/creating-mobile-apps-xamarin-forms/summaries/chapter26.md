@@ -72,8 +72,8 @@ After the book was published, the `GetSizeRequest` method was deprecated and rep
 
 The `Measure` method accommodates the [`Margin`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) property and includes an argument of type [`MeasureFlag`](https://developer.xamarin.com/api/type/Xamarin.Forms.MeasureFlags/), which has two members:
 
-- [`IncludeMargins`](https://developer.xamarin.com/api/field/Xamarin.Forms.MeasureFlags.IncludeMargins/)
-- [`None`](https://developer.xamarin.com/api/field/Xamarin.Forms.MeasureFlags.None/) to not include margins
+- [`IncludeMargins`](xref:Xamarin.Forms.MeasureFlags.IncludeMargins)
+- [`None`](xref:Xamarin.Forms.MeasureFlags.None) to not include margins
 
 For many elements, `GetSizeRequest` or `Measure` obtains the native size of the element from its renderer. Both methods have parameters for width and height *constraints*. For example, a `Label` will use the width constraint to determine how to wrap multiple lines of text.
 

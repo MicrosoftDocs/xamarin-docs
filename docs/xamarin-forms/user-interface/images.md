@@ -40,9 +40,9 @@ Xamarin.Forms uses the [`Image`](https://developer.xamarin.com/api/type/Xamarin.
 
 The [`Aspect`](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Aspect/) property determines how the image will be scaled to fit the display area:
 
-- [`Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.Aspect.Fill/) - Stretches the image to completely and exactly fill the display area. This may result in the image being distorted.
-- [`AspectFill`](https://developer.xamarin.com/api/field/Xamarin.Forms.Aspect.AspectFill/) - Clips the image so that it fills the display area while preserving the aspect (ie. no distortion).
-- [`AspectFit`](https://developer.xamarin.com/api/field/Xamarin.Forms.Aspect.AspectFit/) - Letterboxes the image (if required) so that the entire image fits into the display area, with blank space added to the top/bottom or sides depending on the whether the image is wide or tall.
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill) - Stretches the image to completely and exactly fill the display area. This may result in the image being distorted.
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) - Clips the image so that it fills the display area while preserving the aspect (ie. no distortion).
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) - Letterboxes the image (if required) so that the entire image fits into the display area, with blank space added to the top/bottom or sides depending on the whether the image is wide or tall.
 
 Images can be loaded from a [local file](#Local_Images_in_Xaml), an [embedded resource](#embedded_images), or [downloaded](#Downloading_Images).
 
