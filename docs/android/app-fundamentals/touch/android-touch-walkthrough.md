@@ -194,7 +194,7 @@ to implement pinch-to-zoom.
                 _view._scaleFactor = 0.1f;
             }
 
-            _iconview.Invalidate();
+            _view.Invalidate();
             return true;
         }
     }
