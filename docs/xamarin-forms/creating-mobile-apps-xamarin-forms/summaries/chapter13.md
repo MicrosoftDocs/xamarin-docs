@@ -100,7 +100,7 @@ The "Do It Yourself" [**DiyGradientBitmap**](https://github.com/xamarin/xamarin-
 All the Xamarin.Forms platforms allow storing bitmaps in the platform application assemblies. When retrieved by a Xamarin.Forms application, these platform bitmaps are of type [`FileImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.FileImageSource/). You use them for:
 
 - the [`Icon`](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Icon/) property of [`MenuItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/)
-- the [`Icon`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Icon/) property of [`ToolbarItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/)
+- the [`Icon`](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Icon/) property of [`ToolbarItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/)
 - the [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) property of `Button`
 
 The platform assemblies already contain bitmaps for icons and splash screens:
@@ -175,7 +175,7 @@ The most important `ToolbarItem` properties are:
 
 The number of `Primary` items should be limited to three or four. You should include a `Text` setting for all items. For most platforms, only the `Primary` items require an `Icon` but Windows 8.1 requires an `Icon` for all items. The icons should be 32 device-independent units square. The `FileImageSource` type indicates that they are platform-specific.
 
-The `ToolbarItem` fires a [`Clicked`](https://developer.xamarin.com/api/event/Xamarin.Forms.MenuItem.Clicked/) event when tapped, much like a `Button`. `ToolbarItem` also supports [`Command`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Command/) and [`CommandParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.CommandParameter/) properties often used in connection with MVVM. (See [Chapter 18, MVVM](chapter18.md)).
+The `ToolbarItem` fires a [`Clicked`](https://developer.xamarin.com/api/event/Xamarin.Forms.MenuItem.Clicked/) event when tapped, much like a `Button`. `ToolbarItem` also supports [`Command`](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Command/) and [`CommandParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.CommandParameter/) properties often used in connection with MVVM. (See [Chapter 18, MVVM](chapter18.md)).
 
 Both iOS and Android require that a page that displays a toolbar be a [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) or a page navigated to by a `NavigationPage`. The [**ToolbarDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) program sets the `MainPage` property of its `App` class to the [`NavigationPage` constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.NavigationPage.NavigationPage/p/Xamarin.Forms.Page/) with a `ContentPage` argument, and demonstrates the construction and event handler of a toolbar.
 

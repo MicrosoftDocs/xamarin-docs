@@ -110,7 +110,7 @@ Some controls have properties that display an image, such as:
   > [!IMPORTANT]
   > On iOS, the [`Page.Icon`](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Icon/) property can't be populated from an image in an asset catalog image set. Instead, load icon images for the `Page.Icon` property from the **Resources** folder in the iOS project.
 
-- [`ToolbarItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/) - Has an [`Icon`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Icon/) property that can be set to a local file reference.
+- [`ToolbarItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/) - Has an [`Icon`](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Icon/) property that can be set to a local file reference.
 - [`ImageCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/) - Has an [`ImageSource`](https://developer.xamarin.com/api/property/Xamarin.Forms.ImageCell.ImageSource/) property that can be set to an image retrieved from a local file, an embedded resource, or a URI.
 
 <a name="embedded_images" />
