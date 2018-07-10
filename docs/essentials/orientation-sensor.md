@@ -98,14 +98,7 @@ Examples:
 
 * If the device is positioned so its left edge is on a table, and the top points north, the device has been rotated &ndash;90 degrees around the Y axis (or 90 degrees around the negative Y axis). The `Quaternion` value is (0, -0.707, 0, 0.707).
 
-## [Sensor Speed](xref:Xamarin.Essentials.SensorSpeed)
-
-- **Fastest** – Get the sensor data as fast as possible (not guaranteed to return on UI thread).
-- **Game** – Rate suitable for games (not guaranteed to return on UI thread).
-- **Normal** – Default rate suitable for screen orientation changes.
-- **Ui** – Rate suitable for general user interface.
-
-If your event handler is not guaranteed to run on the UI thread, and if the event handler needs to access user-interface elements, use the [`MainThread.BeginInvokeOnMainThread`](main-thread.md) method to run that code on the UI thread.
+[!include[](~/essentials/includes/sensor-speed.md)]
 
 ## API
 

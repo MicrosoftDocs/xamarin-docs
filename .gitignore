@@ -12,3 +12,4 @@ _repo.*/
 
 # WebStorm configuration files.
 .idea
+/.vs

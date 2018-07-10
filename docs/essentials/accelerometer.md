@@ -78,14 +78,7 @@ Examples:
 
 * When the device lies flat on a table and is pushed toward the sky with an acceleration of A m/s^2, the acceleration value is equal to A+9.81 which correspond to the acceleration of the device (+A m/s^2) minus the force of gravity (-9.81 m/s^2) and normalized in G. 
 
-## [Sensor Speed](xref:Xamarin.Essentials.SensorSpeed)
-
-- **Fastest** – Get the sensor data as fast as possible (not guaranteed to return on UI thread).
-- **Game** – Rate suitable for games (not guaranteed to return on UI thread).
-- **Normal** – Default rate suitable for screen orientation changes.
-- **Ui** – Rate suitable for general user interface.
-
-If your event handler is not guaranteed to run on the UI thread, and if the event handler needs to access user-interface elements, use the [`MainThread.BeginInvokeOnMainThread`](main-thread.md) method to run that code on the UI thread.
+[!include[](~/essentials/includes/sensor-speed.md)]
 
 ## API
 

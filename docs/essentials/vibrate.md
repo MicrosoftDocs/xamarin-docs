@@ -43,7 +43,7 @@ No additional setup required.
 
 # [UWP](#tab/uwp)
 
-No additional setup required.
+No platform differences.
 
 -----
 
