@@ -90,8 +90,7 @@ namespace ThemesDemo
     private static void OnChanged<TEffect, TProp>(BindableObject bindable, object oldValue, object newValue)
               where TEffect : Effect, new()
     {
-        var view = bindable as View;
-        if (view == null)
+        if (!(bindable is View view))
         {
             return;
         }
