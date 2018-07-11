@@ -107,6 +107,9 @@ Colors can also be easily referenced in XAML using the defined color names or th
 <Label Text="Tiny Alpha plus RGB" BackgroundColor="#C0F0" />
 ```
 
+> [!NOTE]
+> When using XAML compilation, color names are case insensitive and therefore can be written in lowercase. For more information about XAML compilation, see [XAML Compilation](~/xamarin-forms/xaml/xamlc.md).
+
 ## Summary
 
 The Xamarin.Forms `Color` class is used to create platform-aware color references. It can be used in shared code and XAML.

@@ -6,7 +6,7 @@ ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/22/2016
+ms.date: 07/10/2018
 ---
 
 # Xamarin.Forms ScrollView
@@ -65,13 +65,14 @@ Notice that when the user starts to enter text in the `Entry`, the view scrolls 
 
 ## Properties
 
-ScrollView has the following properties:
+`ScrollView` defines the following properties:
 
-- **Content** &ndash; gets or sets the view to display in the `ScrollView`.
-- **[ContentSize](https://developer.xamarin.com/api/type/Xamarin.Forms.Size/)** &ndash; read-only, gets the size of the content, which has a width and height component. This is a bindable property
-- **[Orientation](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollOrientation/)** &ndash; This is a [`ScrollOrientation`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollOrientation/), which is an enumeration that can be set to `Horizontal`, `Vertical`, or `Both`.
-- **ScrollX** &ndash; read-only, gets the current scroll position in the X dimension.
-- **ScrollY** &ndash; read-only, gets the current scroll position in the Y dimension.
+- [`ContentSize`](xref:Xamarin.Forms.ScrollView.ContentSizeProperty) gets a [`Size`](xref:Xamarin.Forms.Size) value that represents the size of the content.
+- [`Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) gets or sets a [`ScrollOrientation`](xref:Xamarin.Forms.ScrollOrientation) enumeration value that represents the scrolling direction of the `ScrollView`.
+- [`ScrollX`](xref:Xamarin.Forms.ScrollView.ScrollXProperty) gets a `double` that represents the current X scroll position.
+- [`ScrollY`](xref:Xamarin.Forms.ScrollView.ScrollYProperty) gets a `double` that represents the current Y scroll position.
+- [`HorizontalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.HorizontalScrollBarVisibilityProperty) gets or sets a [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) value that represents when the horizontal scroll bar is visible.
+- [`VerticalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.VerticalScrollBarVisibilityProperty) gets or sets a [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) value that represents when the vertical scroll bar is visible.
 
 ## Methods
 
@@ -96,7 +97,7 @@ The `IsAnimated` property specifies how the view will be scrolled. When set to t
 
 ## Events
 
-`ScrollView` exposes just one event, `Scrolled`. `Scrolled` is raised when the view has finished scrolling. The event handler for `Scrolled` takes `ScrolledEventArgs`, which has the `ScrollX` and `ScrollY` properties. The following demonstrates how to update a label with the current scroll position of a `ScrollView`:
+`ScrollView` defines just one event, `Scrolled`. `Scrolled` is raised when the view has finished scrolling. The event handler for `Scrolled` takes `ScrolledEventArgs`, which has the `ScrollX` and `ScrollY` properties. The following demonstrates how to update a label with the current scroll position of a `ScrollView`:
 
 ```csharp
 Label label = new Label { Text = "Position: " };

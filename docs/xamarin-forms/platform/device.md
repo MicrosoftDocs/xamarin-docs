@@ -70,6 +70,7 @@ The `Device.Idiom` can be used to alter layouts or functionality depending on th
 -  **Tablet** – iPad, Windows devices, and Android devices wider than 600 dips^
 -  **Desktop** – only returned in [UWP apps](~/xamarin-forms/platform/windows/installation/index.md) on Windows 10 desktop computers (returns `Phone` on mobile Windows devices, including in Continuum scenarios)
 -  **TV** – Tizen TV devices
+-  **Watch** – Tizen watch devices
 -  **Unsupported** – unused
 
 *^ dips is not necessarily the physical pixel count*

@@ -6,27 +6,18 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/09/2016
+ms.date: 07/10/2018
 ---
 
 # Xamarin.Forms WebView
 
-[WebView](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) is a view for displaying web and HTML content in your app. Unlike `OpenUri`, which takes the user to the web browser on the device, `WebView` displays the HTML content inside your app.
-
-This guide is composed of the following sections:
-
-- **[Content](#Content)** &ndash; WebView supports various content sources, including embedded HTML, web pages, and HTML strings.
-- **[Navigation](#Navigation)** &ndash; WebView includes support for navigating to a particular page and going back.
-- **[Events](#Events)** &ndash; Listen for and respond to actions taken by the user in WebView.
-- **[Performance](#Performance)** &ndash; Learn about the performance characteristics of WebView on each platform.
-- **[Permissions](#Permissions)** &ndash; Learn how to set permissions so that WebView will work in your app.
-- **[Layout](#Layout)** &ndash; WebView has some very particular requirements for how it is laid out. Learn how to make sure WebView displays properly:
+[`WebView`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) is a view for displaying web and HTML content in your app. Unlike `OpenUri`, which takes the user to the web browser on the device, `WebView` displays the HTML content inside your app.
 
 ![](webview-images/in-app-browser.png "In App Browser")
 
 ## Content
 
-WebView comes with support for the following types of content:
+`WebView` supports the following types of content:
 
 - HTML & CSS websites &ndash; WebView has full support for websites written using HTML & CSS, including JavaScript support.
 - Documents &ndash; Because WebView is implemented using native components on each platform, WebView is capable of showing documents that are viewable on each platform. That means that PDF files work on iOS and Android.
@@ -444,6 +435,39 @@ Grid *without* WidthRequest & HeightRequest. Grid is one of the few layouts that
 </Grid>
 ```
 
+## Invoking JavaScript
+
+The [`WebView`](xref:Xamarin.Forms.WebView) includes the ability to invoke a JavaScript function from C#, and return any result to the calling C# code. This is accomplished with the [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) method, which is shown in the following example from the [WebView](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView) sample:
+
+```csharp
+var numberEntry = new Entry { Text = "5" };
+var resultLabel = new Label();
+var webView = new WebView();
+...
+
+int number = int.Parse(numberEntry.Text);
+string result = await webView.EvaluateJavaScriptAsync($"factorial({number})");
+resultLabel.Text = $"Factorial of {number} is {result}.";
+```
+
+The [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) method evaluates the JavaScript that's specified as the argument, and returns any result as a `string`. In this example, the `factorial` JavaScript function is invoked, which returns the factorial of `number` as a result. This JavaScript function is defined in the local HTML file that the [`WebView`](xref:Xamarin.Forms.WebView) loads, and is shown in the following example:
+
+```html
+<html>
+<body>
+<script type="text/javascript">
+function factorial(num) {
+        if (num === 0 || num === 1)
+            return 1;
+        for (var i = num - 1; i >= 1; i--) {
+            num *= i;
+        }
+        return num;
+}
+</script>
+</body>
+</html>
+```
 
 ## Related Links
 

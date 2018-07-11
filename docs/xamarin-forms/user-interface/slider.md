@@ -6,7 +6,7 @@ ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 03/16/2018
+ms.date: 07/10/2018
 ---
 
 # Xamarin.Forms Slider
@@ -34,6 +34,16 @@ The [`ValueChangedEventArgs`](https://developer.xamarin.com/api/type/Xamarin.For
 
 > [!WARNING]
 > Do not use unconstrained horizontal layout options of `Center`, `Start`, or `End` with `Slider`. On both Android and the UWP, the `Slider` collapses to a bar of zero length, and on iOS, the bar is very short. Keep the default `HorizontalOptions` setting of `Fill`, and don't use a width of `Auto` when putting `Slider` in a `Grid` layout.
+
+The `Slider` also defines several properties that affect its appearance:
+
+- [`MinimumTrackColor`](xref:Xamarin.Forms.Slider.MinimumTrackColorProperty) is the bar color on the left side of the thumb.
+- [`MaximumTrackColor`](xref:Xamarin.Forms.Slider.MaximumTrackColorProperty) is the bar color on the right side of the thumb.
+- [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) is the thumb color. This property is not supported on the Universal Windows Platform.
+- [`ThumbImage`](xref:Xamarin.Forms.Slider.ThumbImageProperty) is the image to use for the thumb, of type [`FileImageSource`](xref:Xamarin.Forms.FileImageSource). This property is not supported on the Universal Windows Platform.
+
+> [!NOTE]
+> The `ThumbColor` and `ThumbImage` properties are mutually exclusive. If both properties are set, the `ThumbImage` property will take precedence.
 
 ## Basic Slider code and markup
 
@@ -277,6 +287,8 @@ The Android implementation of `Slider` is based on the Android [`SeekBar`](https
 The UWP implementation of `Slider` is based on the UWP [`Slider`](/uwp/api/windows.ui.xaml.controls.slider) control. The `StepFrequency` property of the UWP `Slider` is set to the difference of the `Maximum` and `Minimum` properties divided by 10, but not greater than 1.
 
 For example, for the default range of 0 to 1, the `StepFrequency` property is set to 0.1. As the `Slider` is manipulated, the `Value` property is restricted to 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, and 1.0. (This is evident in the last page in the [**SliderDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) sample.) When the difference between the `Maximum` and `Minimum` properties is 10 or greater, then `StepFrequency` is set to 1, and the `Value` property has integral values.
+
+In addition, the [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) and [`ThumbImage`](xref:Xamarin.Forms.Slider.ThumbImageProperty) properties are not supported on UWP.
 
 ### The StepSlider solution
 

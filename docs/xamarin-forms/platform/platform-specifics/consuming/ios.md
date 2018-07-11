@@ -61,6 +61,9 @@ The result is that a specified [`BlurEffectStyle`](https://developer.xamarin.com
 
 ![](ios-images/blur-effect.png "Blur Effect Platform-Specific")
 
+> [!NOTE]
+> When adding a blur effect to a [`VisualElement`](xref:Xamarin.Forms.VisualElement), touch events will still be received by the `VisualElement`.
+
 <a name="large_title" />
 
 ## Displaying Large Titles
