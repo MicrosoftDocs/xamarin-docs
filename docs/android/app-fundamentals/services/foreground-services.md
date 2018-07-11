@@ -98,6 +98,6 @@ If the service is halted with a call to `StopSelf` or `StopService`, the status 
 ## Related Links
 
 - [Android.App.Service](https://developer.xamarin.com/api/type/Android.App.Service/)
-- [Android.App.Service.StartForegrond](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/)
+- [Android.App.Service.StartForeground](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/)
 - [Local Notifications](~/android/app-fundamentals/notifications/local-notifications.md)
 - [ForegroundServiceDemo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/ForegroundServiceDemo/)
