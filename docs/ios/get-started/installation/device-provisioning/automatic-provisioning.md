@@ -66,9 +66,9 @@ To automatically sign your app for deployment on an iOS device, do the following
 
 1. Pair Visual Studio 2017 to a Mac as described in the [Pair to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) guide.
 
-2. Open the Provisioning options by selecting **Project > Provisioning Properties…**
+2. In the **Solution Explorer**, right-click the project name and select **Properties**. Then, navigate to the **iOS Bundle Signing** tab.
 
-3. Select the **Automatically Provisioning** scheme:
+3. Select the **Automatic Provisioning** scheme:
 
     ![Selection of the Automatic scheme](automatic-provisioning-images/prov4.png)
 
