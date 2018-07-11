@@ -6,7 +6,7 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/30/2018
+ms.date: 07/11/2018
 ---
 
 # Android Platform-Specifics
@@ -24,6 +24,7 @@ On Android, Xamarin.Forms contains the following platform-specifics:
 - Setting the input method editor options for the soft keyboard for an [`Entry`](xref:Xamarin.Forms.Entry). For more information, see [Setting Entry Input Method Editor Options](#entry-imeoptions).
 - Disabling legacy color mode on a supported [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [Disabling Legacy Color Mode](#legacy-color-mode).
 - Using the default padding and shadow values of Android buttons. For more information, see [Using Android Buttons](#button-padding-shadow).
+- Setting the toolbar placement and color on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). For more information, see [Setting TabbedPage Toolbar Placement and Color](#tabbedpage-toolbar).
 
 <a name="soft_input_mode" />
 
@@ -400,6 +401,49 @@ The result is that Xamarin.Forms buttons can use the default padding and shadow 
 ![](android-images/button-padding-and-shadow.png "Legacy color mode disabled")
 
 Note that in the screenshot above each [`Button`](xref:Xamarin.Forms.Button) has identical definitions, except that the right-hand `Button` uses the default padding and shadow values of Android buttons.
+
+<a name="tabbedpage-toolbar" />
+
+## Setting TabbedPage Toolbar Placement and Color
+
+These platform-specifics are used to set the placement and color of the toolbar on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). They are consumed in XAML by setting the [`TabbedPage.ToolbarPlacement`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.toolbarplacementproperty?view=xamarin-forms) attached property to a value of the [`ToolbarPlacement`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.toolbarplacement?view=xamarin-forms) enumeration, and the [`TabbedPage.BarItemColor`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.baritemcolorproperty?view=xamarin-forms) and [`TabbedPage.BarSelectedItemColor`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.barselecteditemcolorproperty?view=xamarin-forms) attached properties to a [`Color`](xref:Xamarin.Forms.Color):
+
+```xaml
+<TabbedPage ...
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarItemColor="Black"
+            android:TabbedPage.BarSelectedItemColor="Red">
+    ...
+</TabbedPage>
+```
+
+Alternatively, they can be consumed from C# using the fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom)
+             .SetBarItemColor(Color.Black)
+             .SetBarSelectedItemColor(Color.Red);
+```
+
+The `TabbedPage.On<Android>` method specifies that these platform-specifics will only run on Android. The [`TabbedPage.SetToolbarPlacement`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.settoolbarplacement?view=xamarin-forms) method, in the [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific/) namespace, is used to set the toolbar placement on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), with the [`ToolbarPlacement`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.toolbarplacement?view=xamarin-forms) enumeration providing the following values:
+
+- [`Default`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.toolbarplacement#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_ToolbarPlacement_Default) – indicates that the toolbar is placed at the default location on the page. This is the top of the page on phones, and the bottom of the page on other device idioms.
+- [`Top`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.toolbarplacement#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_ToolbarPlacement_Top) – indicates that the toolbar is placed at the top of the page.
+- [`Bottom`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.toolbarplacement#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_ToolbarPlacement_Bottom) – indicates that the toolbar is placed at the bottom of the page.
+
+In addition, the [`TabbedPage.SetBarItemColor`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.setbaritemcolor?view=xamarin-forms#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_TabbedPage_SetBarItemColor_Xamarin_Forms_IPlatformElementConfiguration_Xamarin_Forms_PlatformConfiguration_Android_Xamarin_Forms_TabbedPage__Xamarin_Forms_Color_) and [`TabbedPage.SetBarSelectedItemColor`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.setbarselecteditemcolor?view=xamarin-forms#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_TabbedPage_SetBarSelectedItemColor_Xamarin_Forms_IPlatformElementConfiguration_Xamarin_Forms_PlatformConfiguration_Android_Xamarin_Forms_TabbedPage__Xamarin_Forms_Color_) methods are used to set the color of toolbar items and selected toolbar items, respectively.
+
+> [!NOTE]
+> The [`GetToolbarPlacement`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.gettoolbarplacement?view=xamarin-forms#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_TabbedPage_GetToolbarPlacement_Xamarin_Forms_IPlatformElementConfiguration_Xamarin_Forms_PlatformConfiguration_Android_Xamarin_Forms_TabbedPage__), [`GetBarItemColor`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.getbaritemcolor?view=xamarin-forms#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_TabbedPage_GetBarItemColor_Xamarin_Forms_IPlatformElementConfiguration_Xamarin_Forms_PlatformConfiguration_Android_Xamarin_Forms_TabbedPage__), and [`GetBarSelectedItemColor`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.getbarselecteditemcolor?view=xamarin-forms#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_TabbedPage_GetBarSelectedItemColor_Xamarin_Forms_IPlatformElementConfiguration_Xamarin_Forms_PlatformConfiguration_Android_Xamarin_Forms_TabbedPage__) methods can be used to retrieve the placement and color of the [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) toolbar.
+
+The result is that the toolbar placement, the color of toolbar items, and the color of the selected toolbar item can be set on a [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/):
+
+![](android-images/tabbedpage-toolbar-placement.png)
 
 ## Summary
 

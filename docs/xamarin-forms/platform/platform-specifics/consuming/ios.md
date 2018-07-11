@@ -6,7 +6,7 @@ ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/30/2018
+ms.date: 07/11/2018
 ---
 
 # iOS Platform-Specifics
@@ -26,6 +26,8 @@ On iOS, Xamarin.Forms contains the following platform-specifics:
 - Controlling whether a [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) handles a touch gesture or passes it to its content. For more information, see [Delaying Content Touches in a ScrollView](#delay_content_touches).
 - Setting the separator style on a [`ListView`](xref:Xamarin.Forms.ListView). For more information, see [Setting the Separator Style on a ListView](#listview-separatorstyle).
 - Disabling legacy color mode on a supported [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [Disabling Legacy Color Mode](#legacy-color-mode).
+- Enabling a drop shadow on a [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [Enabling a Drop Shadow](#drop-shadow).
+- Enabling a [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) in a scrolling view to capture and share the pan gesture with the scrolling view. For more information, see [Enabling Simultaneous Pan Gesture Recognition](#simultaneous-pan-gesture).
 
 <a name="blur" />
 
@@ -548,10 +550,98 @@ The result is that the legacy color mode can be disabled, so that colors set on 
 > [!NOTE]
 > When setting a [`VisualStateGroup`](xref:Xamarin.Forms.VisualStateGroup) on a view, the legacy color mode is completely ignored. For more information about visual states, see [The Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 
+<a name="drop-shadow" />
+
+## Enabling a Drop Shadow
+
+This platform-specific is used to enable a drop shadow on a [`VisualElement`](xref:Xamarin.Forms.VisualElement). It's consumed in XAML by setting the [`VisualElement.IsShadowEnabled`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsShadowEnabledProperty) attached property to `true`, along with a number of additional optional attached properties that control the drop shadow:
+
+```xaml
+<ContentPage ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout Margin="20">
+        <BoxView ...
+                 ios:VisualElement.IsShadowEnabled="true"
+                 ios:VisualElement.ShadowColor="Purple"
+                 ios:VisualElement.ShadowOpacity="0.7"
+                 ios:VisualElement.ShadowRadius="12">
+            <ios:VisualElement.ShadowOffset>
+                <Size>
+                    <x:Arguments>
+                        <x:Double>10</x:Double>
+                        <x:Double>10</x:Double>
+                    </x:Arguments>
+                </Size>
+            </ios:VisualElement.ShadowOffset>
+         </BoxView>
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+Alternatively, it can be consumed from C# using the fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+var boxView = new BoxView { Color = Color.Aqua, WidthRequest = 100, HeightRequest = 100 };
+boxView.On<iOS>()
+       .SetIsShadowEnabled(true)
+       .SetShadowColor(Color.Purple)
+       .SetShadowOffset(new Size(10,10))
+       .SetShadowOpacity(0.7)
+       .SetShadowRadius(12);
+```
+
+The `VisualElement.On<iOS>` method specifies that this platform-specific will only run on iOS. The [`VisualElement.SetIsShadowEnabled`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetIsShadowEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},System.Boolean)) method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, is used to control whether a drop shadow is enabled on the `VisualElement`. In addition, the following methods can be invoked to control the drop shadow:
+
+- [`SetShadowColor`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetShadowColor(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},Xamarin.Forms.Color)) – sets the color of the drop shadow. The default color is [`Color.Default`](xref:Xamarin.Forms.Color.Default*).
+- [`SetShadowOffset`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetShadowOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},Xamarin.Forms.Size)) – sets the offset of the drop shadow. The offset changes the direction the shadow is cast, and is specified as a [`Size`](xref:Xamarin.Forms.Size) value. The `Size` structure values are expressed in device-independent units, with the first value being the distance to the left (negative value) or right (positive value), and the second value being the distance above (negative value) or below (positive value). The default value of this property is (0.0, 0.0), which results in the shadow being cast around every side of the `VisualElement`.
+- [`SetShadowOpacity`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetShadowOpacity(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},System.Double)) – sets the opacity of the drop shadow, with the value being in the range 0.0 (transparent) to 1.0 (opaque). The default opacity value is 0.5.
+- [`SetShadowRadius`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetShadowRadius(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},System.Double)) – sets the blur radius used to render the drop shadow. The default radius value is 10.0.
+
+> [!NOTE]
+> The state of a drop shadow can be queried by calling the [`GetIsShadowEnabled`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetIsShadowEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement})), [`GetShadowColor`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetShadowColor(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement})), [`GetShadowOffset`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetShadowOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement})), [`GetShadowOpacity`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetShadowOpacity(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement})), and [`GetShadowRadius`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetShadowRadius(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement})) methods.
+
+The result is that a drop shadow can be enabled on a [`VisualElement`](xref:Xamarin.Forms.VisualElement):
+
+![](ios-images/drop-shadow.png "Drop shadow enabled")
+
+<a name="simultaneous-pan-gesture" />
+
+## Enabling Simultaneous Pan Gesture Recognition
+
+When a [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) is attached to a view inside a scrolling view, all of the pan gestures are captured by the `PanGestureRecognizer` and aren't passed to the scrolling view. Therefore, the scrolling view will no longer scroll.
+
+This platform-specific enables a `PanGestureRecognizer` in a scrolling view to capture and share the pan gesture with the scrolling view. It's consumed in XAML by setting the [`Application.PanGestureRecognizerShouldRecognizeSimultaneously`](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.pangesturerecognizershouldrecognizesimultaneouslyproperty?view=xamarin-forms) attached property to `true`:
+
+```xaml
+<Application ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Application.PanGestureRecognizerShouldRecognizeSimultaneously="true">
+	...
+</Application>
+```
+
+Alternatively, it can be consumed from C# using the fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+Xamarin.Forms.Application.Current.On<iOS>().SetPanGestureRecognizerShouldRecognizeSimultaneously(true);
+```
+
+The `Application.On<iOS>` method specifies that this platform-specific will only run on iOS. The [`Application.SetPanGestureRecognizerShouldRecognizeSimultaneously`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.setpangesturerecognizershouldrecognizesimultaneously?view=xamarin-forms) method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, is used to control whether a pan gesture recognizer in a scrolling view will capture the pan gesture, or capture and share the pan gesture with the scrolling view. In addition, the [`Application.GetPanGestureRecognizerShouldRecognizeSimultaneously`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.getpangesturerecognizershouldrecognizesimultaneously?view=xamarin-forms) method can be used to return whether the pan gesture is shared with the scrolling view that contains the [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer).
+
+Therefore, with this platform-specific enabled, when a [`ListView`](xref:Xamarin.Forms.ListView) contains a [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer), both the `ListView` and the `PanGestureRecognizer` will receive the pan gesture and process it. However, with this platform-specific disabled, when a `ListView` contains a `PanGestureRecognizer`, the `PanGestureRecognizer` will capture the pan gesture and process it, and the `ListView` won't receive the pan gesture.
+
 ## Summary
 
 This article demonstrated how to consume the iOS platform-specifics that are built into Xamarin.Forms. Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects.
-
 
 ## Related Links
 

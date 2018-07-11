@@ -6,7 +6,7 @@ ms.assetid: 22B403C0-FE6D-498A-AE53-095E6C4B527C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/30/2018
+ms.date: 07/10/2018
 ---
 
 # Windows Platform-Specifics
@@ -15,17 +15,19 @@ _Platform-specifics allow you to consume functionality that's only available on 
 
 On the Universal Windows Platform (UWP), Xamarin.Forms contains the following platform-specifics:
 
-- Setting toolbar placement options. For more information, see [Changing the Toolbar Placement](#toolbar_placement).
+- Setting toolbar placement options. For more information, see [Changing the Page Toolbar Placement](#toolbar_placement).
 - Collapsing the [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) navigation bar. For more information, see [Collapsing a MasterDetailPage Navigation Bar](#collapsable_navigation_bar).
 - Enabling a [`WebView`](xref:Xamarin.Forms.WebView) to display JavaScript alerts in a UWP message dialog. For more information, see [Displaying JavaScript Alerts](#webview-javascript-alert).
 - Enabling a [`SearchBar`](xref:Xamarin.Forms.SearchBar) to interact with the spell check engine. For more information, see [Enabling SearchBar Spell Check](#searchbar-spellcheck).
 - Detecting reading order from text content in [`Entry`](xref:Xamarin.Forms.Entry), [`Editor`](xref:Xamarin.Forms.Editor), and [`Label`](xref:Xamarin.Forms.Label) instances. For more information, see [Detecting Reading Order from Content](#inputview-readingorder).
 - Disabling legacy color mode on a supported [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [Disabling Legacy Color Mode](#legacy-color-mode).
 - Enabling tap gesture support in a [`ListView`](xref:Xamarin.Forms.ListView). For more information, see [Enabling Tap Gesture Support in a ListView](#listview-selectionmode).
+- Enabling page icons to be displayed on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) toolbar. For more information, see [Enabling Icons on a TabbedPage](#tabbedpage-icons).
+- Setting an access key for a [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [Setting VisualElement Access Keys](#visualelement-accesskeys).
 
 <a name="toolbar_placement" />
 
-## Changing the Toolbar Placement
+## Changing the Page Toolbar Placement
 
 This platform-specific is used to change the placement of a toolbar on a [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/), and is consumed in XAML by setting the [`Page.ToolbarPlacement`](https://developer.xamarin.com/api/field/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page.ToolbarPlacementProperty/) attached property to a value of the [`ToolbarPlacement`](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement/) enumeration:
 
@@ -287,6 +289,153 @@ The `ListView.On<Windows>` method specifies that this platform-specific will onl
 In addition, the [`GetSelectionMode`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListView.GetSelectionMode(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.ListView})) method can be used to return the current [`ListViewSelectionMode`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode).
 
 The result is that a specified [`ListViewSelectionMode`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode) is applied to the [`ListView`](xref:Xamarin.Forms.ListView), which controls whether items in the `ListView` can respond to tap gestures, and hence whether the native `ListView` fires the `ItemClick` or `Tapped` event.
+
+<a name="tabbedpage-icons" />
+
+## Enabling Icons on a TabbedPage
+
+This platform-specific enables page icons to be displayed on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) toolbar, and provides the ability to optionally specify the icon size. It's consumed in XAML by setting the [`TabbedPage.HeaderIconsEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsEnabledProperty) attached property to `true`, and by optionally setting the [`TabbedPage.HeaderIconsSize`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsSizeProperty) attached property to a [`Size`](xref:Xamarin.Forms.Size) value:
+
+```xaml
+<TabbedPage ...
+            xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core"
+            windows:TabbedPage.HeaderIconsEnabled="true">
+    <windows:TabbedPage.HeaderIconsSize>
+        <Size>
+            <x:Arguments>
+                <x:Double>24</x:Double>
+                <x:Double>24</x:Double>
+            </x:Arguments>
+        </Size>
+    </windows:TabbedPage.HeaderIconsSize>
+    <ContentPage Title="Todo" Icon="todo.png">
+        ...
+    </ContentPage>
+    <ContentPage Title="Reminders" Icon="reminders.png">
+        ...
+    </ContentPage>
+    <ContentPage Title="Contacts" Icon="contacts.png">
+        ...
+    </ContentPage>
+</TabbedPage>
+```
+
+Alternatively, it can be consumed from C# using the fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
+...
+
+public class WindowsTabbedPageIconsCS : Xamarin.Forms.TabbedPage
+{
+  public WindowsTabbedPageIconsCS()
+	{
+    On<Windows>().SetHeaderIconsEnabled(true);
+    On<Windows>().SetHeaderIconsSize(new Size(24, 24));
+
+    Children.Add(new ContentPage { Title = "Todo", Icon = "todo.png" });
+    Children.Add(new ContentPage { Title = "Reminders", Icon = "reminders.png" });
+    Children.Add(new ContentPage { Title = "Contacts", Icon = "contacts.png" });
+  }
+}
+```
+
+The `TabbedPage.On<Windows>` method specifies that this platform-specific will only run on the Universal Windows Platform. The [`TabbedPage.SetHeaderIconsEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.SetHeaderIconsEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.TabbedPage},System.Boolean)) method, in the [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) namespace, is used to turn header icons on or off. The [`TabbedPage.SetHeaderIconsSize`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.SetHeaderIconsSize(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.TabbedPage},Xamarin.Forms.Size)) method optionally specifies the header icon size with a [`Size`](xref:Xamarin.Forms.Size) value.
+
+In addition, the `TabbedPage` class in the `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` namespace also has a [`EnableHeaderIcons`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.EnableHeaderIcons*) method that enables header icons, a [`DisableHeaderIcons`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.DisableHeaderIcons*) method that disables header icons, and a [`IsHeaderIconsEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.IsHeaderIconsEnabled*) method that returns a `boolean` value that indicates whether header icons are enabled.
+
+The result is that page icons can be displayed on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) toolbar, with the icon size being optionally set to a desired size:
+
+![TabbedPage icons enabled platform-specific](windows-images/tabbedpage-icons.png "TabbedPage icons enabled platform-specific")
+
+<a name="visualelement-accesskeys" />
+
+## Setting VisualElement Access Keys
+
+Access keys are keyboard shortcuts that improve the usability and accessibility of apps on the Universal Windows Platform by providing an intuitive way for users to quickly navigate and interact with the app's visible UI through a keyboard instead of via touch or a mouse. They are combinations of the Alt key and one or more alphanumeric keys, typically pressed sequentially. Keyboard shortcuts are automatically supported for access keys that use a single alphanumeric character.
+
+Access key tips are floating badges displayed next to controls that include access keys. Each access key tip contains the alphanumeric keys that activate the associated control. When a user presses the Alt key, the access key tips are displayed.
+
+This platform-specific is used to specify an access key for a [`VisualElement`](xref:Xamarin.Forms.VisualElement). It's consumed in XAML by setting the [`VisualElement.AccessKey`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyProperty) attached property to an alphanumeric value, and by optionally setting the [`VisualElement.AccessKeyPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyPlacementProperty) attached property to a value of the [`AccessKeyPlacement`](xref:Xamarin.Forms.AccessKeyPlacement) enumeration, the [`VisualElement.AccessKeyHorizontalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyHorizontalOffsetProperty) attached property to a `double`, and the [`VisualElement.AccessKeyVerticalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyVerticalOffsetProperty) attached property to a `double`:
+
+```xaml
+<TabbedPage ...
+            xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core">
+    <ContentPage Title="Page 1"
+                 windows:VisualElement.AccessKey="1">
+        <StackLayout Margin="20">
+            ...
+            <Switch windows:VisualElement.AccessKey="A" />
+            <Entry Placeholder="Enter text here"
+                   windows:VisualElement.AccessKey="B" />
+            ...
+            <Button Text="Access key F, placement top with offsets"
+                    Margin="20"
+                    Clicked="OnButtonClicked"
+                    windows:VisualElement.AccessKey="F"
+                    windows:VisualElement.AccessKeyPlacement="Top"
+                    windows:VisualElement.AccessKeyHorizontalOffset="20"
+                    windows:VisualElement.AccessKeyVerticalOffset="20" />
+            ...
+        </StackLayout>
+    </ContentPage>
+    ...
+</TabbedPage>
+```
+
+Alternatively, it can be consumed from C# using the fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
+...
+
+var page = new ContentPage { Title = "Page 1" };
+page.On<Windows>().SetAccessKey("1");
+
+var switchView = new Switch();
+switchView.On<Windows>().SetAccessKey("A");
+var entry = new Entry { Placeholder = "Enter text here" };
+entry.On<Windows>().SetAccessKey("B");
+...
+
+var button4 = new Button { Text = "Access key F, placement top with offsets", Margin = new Thickness(20) };
+button4.Clicked += OnButtonClicked;
+button4.On<Windows>()
+    .SetAccessKey("F")
+    .SetAccessKeyPlacement(AccessKeyPlacement.Top)
+    .SetAccessKeyHorizontalOffset(20)
+    .SetAccessKeyVerticalOffset(20);
+...
+```
+
+The `VisualElement.On<Windows>` method specifies that this platform-specific will only run on the Universal Windows Platform. The [`VisualElement.SetAccessKey`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKey(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},System.String)) method, in the [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) namespace, is used to set the access key value for the `VisualElement`. The [`VisualElement.SetAccessKeyPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKeyPlacement(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},Xamarin.Forms.AccessKeyPlacement)) method, optionally specifies the position to use for displaying the access key tip, with the [`AccessKeyPlacement`](xref:Xamarin.Forms.AccessKeyPlacement) enumeration providing the following possible values:
+
+- [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto) – indicates that the access key tip placement will be determined by the operating system.
+- [`Top`](xref:Xamarin.Forms.AccessKeyPlacement.Top) – indicates that the access key tip will appear above the top edge of the `VisualElement`.
+- [`Bottom`](xref:Xamarin.Forms.AccessKeyPlacement.Bottom) – indicates that the access key tip will appear below the lower edge of the `VisualElement`.
+- [`Right`](xref:Xamarin.Forms.AccessKeyPlacement.Right) – indicates that the access key tip will appear to the right of the right edge of the `VisualElement`.
+- [`Left`](xref:Xamarin.Forms.AccessKeyPlacement.Left) – indicates that the access key tip will appear to the left of the left edge of the `VisualElement`.
+- [`Center`](xref:Xamarin.Forms.AccessKeyPlacement.Center) – indicates that the access key tip will appear overlaid on the center of the `VisualElement`.
+
+> [!NOTE]
+> Typically, the [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto) key tip placement is sufficient, which includes support for adaptive user interfaces.
+
+The [`VisualElement.SetAccessKeyHorizontalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKeyHorizontalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},System.Double)) and [`VisualElement.SetAccessKeyVerticalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKeyVerticalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},System.Double)) methods can be used for more granular control of the access key tip location. The argument to the `SetAccessKeyHorizontalOffset` method indicates how far to move the access key tip left or right, and the argument to the `SetAccessKeyVerticalOffset` method indicates how far to move the access key tip up or down.
+
+>[!NOTE]
+> Access key tip offsets can't be set when the access key placement is set `Auto`.
+
+In addition, the [`GetAccessKey`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKey(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})), [`GetAccessKeyPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKeyPlacement(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})), [`GetAccessKeyHorizontalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKeyHorizontalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})), and [`GetAccessKeyVerticalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKeyVerticalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})) methods can be used to retrieve an access key value and it's location.
+
+The result is that access key tips can be displayed next to any [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances that define access keys, by pressing the Alt key:
+
+![VisualElement access keys platform-specific](windows-images/visualelement-accesskeys.png "VisualElement access keys platform-specific")
+
+When a user activates an access key, by pressing the Alt key followed by the access key, the default action for the `VisualElement` will be executed. For example, when a user activates the access key on a [`Switch`](xref:Xamarin.Forms.Switch), the `Switch` is toggled. When a user activates the access key on an [`Entry`](xref:Xamarin.Forms.Entry), the `Entry` gains focus. When a user activates the access key on a [`Button`](xref:Xamarin.Forms.Button), the event handler for the [`Clicked`](xref:Xamarin.Forms.Button.Clicked) event is executed.
+
+For more information about access keys, see [Access keys](/windows/uwp/design/input/access-keys#key-tip-positioning).
 
 ## Summary
 
