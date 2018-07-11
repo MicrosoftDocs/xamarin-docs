@@ -16,15 +16,19 @@ Authentication of your Apple ID is performed on the command line with [fastlane]
 
 The Apple Account dialog allows you to do the following:
 
-* **Create and Manage Certificates** 
-* **Create and Manage Provisioning Profiles** 
+* **Create and Manage Certificates**
+* **Create and Manage Provisioning Profiles**
 
 Information on how to do this is described in this guide.
 
-You can also use the iOS Automatic Provisioning tools to automatically create and manage your Signing Identities, App IDs, and Provisioning Profiles.
+> [!NOTE]
+> Xamarin's tools for Apple account management only display information
+> about paid Apple developer accounts. To learn how to test an app on a
+> device without a paid Apple developer account, please see the
+> [Free provisioning for Xamarin.iOS apps](~/ios/get-started/installation/device-provisioning/free-provisioning.md) guide.
 
-For more information on using these features, refer to the [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide.
-️
+You can also use the iOS Automatic Provisioning tools to automatically create and manage your Signing Identities, App IDs, and Provisioning Profiles. For more information on using these features, refer to the [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide.
+
 ## Requirements
 
 Apple account management is available on Visual Studio for Mac and Visual Studio 2017 (Version 15.7 and higher)
