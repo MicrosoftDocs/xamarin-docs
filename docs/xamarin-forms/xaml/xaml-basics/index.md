@@ -77,7 +77,7 @@ XAML has several advantages over equivalent code:
 Of course, there are also disadvantages, mostly related to limitations that are intrinsic to markup languages:
 
 -  XAML cannot contain code. All event handlers must be defined in a code file.
--  XAML cannot contain loops for repetitive processing. (However, several Xamarin.Forms visual objects—most notably  [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) —can generate multiple children based on the objects in its `ItemsSource` collection.)
+-  XAML cannot contain loops for repetitive processing. (However, several Xamarin.Forms visual objects—most notably  [`ListView`](xref:Xamarin.Forms.ListView) —can generate multiple children based on the objects in its `ItemsSource` collection.)
 -  XAML cannot contain conditional processing (However, a data-binding can reference a code-based binding converter that effectively allows some conditional processing.)
 -  XAML generally cannot instantiate classes that do not define a parameterless constructor. (However, there is sometimes a way around this restriction.)
 -  XAML generally cannot call methods. (Again, this restriction can sometimes be overcome.)

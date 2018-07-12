@@ -80,9 +80,9 @@ The `ViewModelBase` class stores the `NavigationService` instance in a `Navigati
 
 ### Handling Navigation Requests
 
-Xamarin.Forms provides the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) class, which implements a hierarchical navigation experience in which the user is able to navigate through pages, forwards and backwards, as desired. For more information about hierarchical navigation, see [Hierarchical Navigation](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
+Xamarin.Forms provides the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) class, which implements a hierarchical navigation experience in which the user is able to navigate through pages, forwards and backwards, as desired. For more information about hierarchical navigation, see [Hierarchical Navigation](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
-Rather than use the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) class directly, the eShopOnContainers app wraps the `NavigationPage` class in the `CustomNavigationView` class, as shown in the following code example:
+Rather than use the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) class directly, the eShopOnContainers app wraps the `NavigationPage` class in the `CustomNavigationView` class, as shown in the following code example:
 
 ```csharp
 public partial class CustomNavigationView : NavigationPage  
@@ -99,7 +99,7 @@ public partial class CustomNavigationView : NavigationPage
 }
 ```
 
-The purpose of this wrapping is for ease of styling the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) instance inside the XAML file for the class.
+The purpose of this wrapping is for ease of styling the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance inside the XAML file for the class.
 
 Navigation is performed inside view model classes by invoking one of the `NavigateToAsync` methods, specifying the view model type for the page being navigated to, as demonstrated in the following code example:
 
@@ -182,7 +182,7 @@ The `InternalNavigateToAsync` method performs navigation to a view model by firs
 
 When a view is instantiated, it's associated with its corresponding view model. For more information about how this occurs, see [Automatically Creating a View Model with a View Model Locator](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
 
-If the view being created is a `LoginView`, it's wrapped inside a new instance of the `CustomNavigationView` class and assigned to the [`Application.Current.MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) property. Otherwise, the `CustomNavigationView` instance is retrieved, and provided that it isn't null, the [`PushAsync`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) method is invoked to push the view being created onto the navigation stack. However, If the retrieved `CustomNavigationView` instance is `null`, the view being created is wrapped inside a new instance of the `CustomNavigationView` class and assigned to the `Application.Current.MainPage` property. This mechanism ensures that during navigation, pages are added correctly to the navigation stack both when it's empty, and when it contains data.
+If the view being created is a `LoginView`, it's wrapped inside a new instance of the `CustomNavigationView` class and assigned to the [`Application.Current.MainPage`](xref:Xamarin.Forms.Application.MainPage) property. Otherwise, the `CustomNavigationView` instance is retrieved, and provided that it isn't null, the [`PushAsync`](xref:Xamarin.Forms.NavigationPage) method is invoked to push the view being created onto the navigation stack. However, If the retrieved `CustomNavigationView` instance is `null`, the view being created is wrapped inside a new instance of the `CustomNavigationView` class and assigned to the `Application.Current.MainPage` property. This mechanism ensures that during navigation, pages are added correctly to the navigation stack both when it's empty, and when it contains data.
 
 > [!TIP]
 > Consider caching pages. Page caching results in memory consumption for views that are not currently displayed. However, without page caching it does mean that XAML parsing and construction of the page and its view model will occur every time a new page is navigated to, which can have a performance impact for a complex page. For a well-designed page that does not use an excessive number of controls, the performance should be sufficient. However, page caching might help if slow page loading times are encountered.
@@ -239,7 +239,7 @@ private async Task OrderDetailAsync(Order order)
 }
 ```
 
-This method invokes navigation to the `OrderDetailViewModel`, passing an `Order` instance that represents the order that the user selected on the `ProfileView` page. When the `NavigationService` class creates the `OrderDetailView`, the `OrderDetailViewModel` class is instantiated and assigned to the view's [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/). After navigating to the `OrderDetailView`, the `InternalNavigateToAsync` method executes the `InitializeAsync` method of the view's associated view model.
+This method invokes navigation to the `OrderDetailViewModel`, passing an `Order` instance that represents the order that the user selected on the `ProfileView` page. When the `NavigationService` class creates the `OrderDetailView`, the `OrderDetailViewModel` class is instantiated and assigned to the view's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext). After navigating to the `OrderDetailView`, the `InternalNavigateToAsync` method executes the `InitializeAsync` method of the view's associated view model.
 
 The `InitializeAsync` method is defined in the `ViewModelBase` class as a method that can be overridden. This method specifies an `object` argument that represents the data to be passed to a view model during a navigation operation. Therefore, view model classes that want to receive data from a navigation operation provide their own implementation of the `InitializeAsync` method to perform the required initialization. The following code example shows the `InitializeAsync` method from the `OrderDetailViewModel` class:
 
@@ -275,7 +275,7 @@ Navigation is usually triggered from a view by a user interaction. For example, 
 </WebView>
 ```
 
-At runtime, the `EventToCommandBehavior` will respond to interaction with the [`WebView`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/). When the `WebView` navigates to a web page, the [`Navigating`](https://developer.xamarin.com/api/event/Xamarin.Forms.WebView.Navigating/) event will fire, which will execute the `NavigateCommand` in the `LoginViewModel`. By default, the event arguments for the event are passed to the command. This data is converted as it's passed between source and target by the converter specified in the `EventArgsConverter` property, which returns the [`Url`](https://developer.xamarin.com/api/property/Xamarin.Forms.WebNavigationEventArgs.Url/) from the [`WebNavigatingEventArgs`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebNavigatingEventArgs/). Therefore, when the `NavigationCommand` is executed, the Url of the web page is passed as a parameter to the registered `Action`.
+At runtime, the `EventToCommandBehavior` will respond to interaction with the [`WebView`](xref:Xamarin.Forms.WebView). When the `WebView` navigates to a web page, the [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) event will fire, which will execute the `NavigateCommand` in the `LoginViewModel`. By default, the event arguments for the event are passed to the command. This data is converted as it's passed between source and target by the converter specified in the `EventArgsConverter` property, which returns the [`Url`](xref:Xamarin.Forms.WebNavigationEventArgs.Url) from the [`WebNavigatingEventArgs`](xref:Xamarin.Forms.WebNavigatingEventArgs). Therefore, when the `NavigationCommand` is executed, the Url of the web page is passed as a parameter to the registered `Action`.
 
 In turn, the `NavigationCommand` executes the `NavigateAsync` method, which is shown in the following code example:
 

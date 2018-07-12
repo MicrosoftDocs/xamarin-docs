@@ -11,7 +11,7 @@ ms.date: 07/10/2018
 
 # Xamarin.Forms WebView
 
-[`WebView`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) is a view for displaying web and HTML content in your app. Unlike `OpenUri`, which takes the user to the web browser on the device, `WebView` displays the HTML content inside your app.
+[`WebView`](xref:Xamarin.Forms.WebView) is a view for displaying web and HTML content in your app. Unlike `OpenUri`, which takes the user to the web browser on the device, `WebView` displays the HTML content inside your app.
 
 ![](webview-images/in-app-browser.png "In App Browser")
 
@@ -29,7 +29,7 @@ ms.date: 07/10/2018
 
 ### Websites
 
-To display a website from the internet, set the `WebView`'s [`Source`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebViewSource/) property to a string URL:
+To display a website from the internet, set the `WebView`'s [`Source`](xref:Xamarin.Forms.WebViewSource) property to a string URL:
 
 ```csharp
 var browser = new WebView {
@@ -81,7 +81,7 @@ See [App Transport Security](~/ios/app-fundamentals/ats.md) for more information
 
 ### HTML Strings
 
-If you want to present a string of HTML defined dynamically in code, you'll need to create an instance of [`HtmlWebViewSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.HtmlWebViewSource/):
+If you want to present a string of HTML defined dynamically in code, you'll need to create an instance of [`HtmlWebViewSource`](xref:Xamarin.Forms.HtmlWebViewSource):
 
 ```csharp
 var browser = new WebView();

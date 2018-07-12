@@ -10,7 +10,7 @@ ms.author: brumbaug
 
 # System.Data in Xamarin.iOS
 
-Xamarin.iOS 8.10 adds support for [System.Data](https://developer.xamarin.com/api/namespace/System.Data/), including the `Mono.Data.Sqlite.dll` ADO.NET provider. Support includes the addition of the following [assemblies](~/cross-platform/internals/available-assemblies.md):
+Xamarin.iOS 8.10 adds support for [System.Data](xref:System.Data), including the `Mono.Data.Sqlite.dll` ADO.NET provider. Support includes the addition of the following [assemblies](~/cross-platform/internals/available-assemblies.md):
 
 -  `System.Data.dll`
 -  `System.Data.Service.Client.dll`
@@ -140,12 +140,12 @@ Both **System.Data** and **Mono.Data.Sqlite** are missing some functionality.
 
 Functionality missing from **System.Data.dll** consists of:
 
--  Anything requiring  [System.CodeDom](https://developer.xamarin.com/api/namespace/System.CodeDom/) (e.g.  [System.Data.TypedDataSetGenerator](https://developer.xamarin.com/api/type/System.Data.TypedDataSetGenerator/) )
--  XML config file support (e.g.  [System.Data.Common.DbProviderConfigurationHandler](https://developer.xamarin.com/api/type/System.Data.Common.DbProviderConfigurationHandler/) )
--   [System.Data.Common.DbProviderFactories](https://developer.xamarin.com/api/type/System.Data.Common.DbProviderFactories/) (depends on XML config file support)
--   [System.Data.OleDb](https://developer.xamarin.com/api/namespace/System.Data.OleDb/)
--   [System.Data.Odbc](https://developer.xamarin.com/api/namespace/System.Data.Odbc/)
--  The  `System.EnterpriseServices.dll` dependency was  *removed* from  `System.Data.dll` , resulting in the removal of the  [SqlConnection.EnlistDistributedTransaction(ITransaction)](https://developer.xamarin.com/api/member/System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction/(System.EnterpriseServices.ITransaction)) method.
+-  Anything requiring  [System.CodeDom](xref:System.CodeDom) (e.g.  [System.Data.TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
+-  XML config file support (e.g.  [System.Data.Common.DbProviderConfigurationHandler](xref:System.Data.Common.DbProviderConfigurationHandler) )
+-   [System.Data.Common.DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (depends on XML config file support)
+-   [System.Data.OleDb](xref:System.Data.OleDb)
+-   [System.Data.Odbc](xref:System.Data.Odbc)
+-  The  `System.EnterpriseServices.dll` dependency was  *removed* from  `System.Data.dll` , resulting in the removal of the  [SqlConnection.EnlistDistributedTransaction(ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) method.
 
 
 <a name="Mono.Data.Sqlite" />
@@ -161,8 +161,8 @@ Older version of iOS ship with the following versions of SQLite:
 - **iOS 5** - version 3.7.7.
 - **iOS 4** - version 3.6.22.
 
-The most common issues appear to be related to database schema querying, e.g. determining at runtime which columns exist on a given table, such as `Mono.Data.Sqlite.SqliteConnection.GetSchema` (overriding [DbConnection.GetSchema](https://developer.xamarin.com/api/member/System.Data.Common.DbConnection.GetSchema/)) and `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` (overriding [DbDataReader.GetSchemaTable](https://developer.xamarin.com/api/member/System.Data.Common.DbDataReader.GetSchemaTable/)). In short, it seems that
-anything using [DataTable](https://developer.xamarin.com/api/type/System.Data.DataTable/) is unlikely to work.
+The most common issues appear to be related to database schema querying, e.g. determining at runtime which columns exist on a given table, such as `Mono.Data.Sqlite.SqliteConnection.GetSchema` (overriding [DbConnection.GetSchema](xref:System.Data.Common.DbConnection.GetSchema) and `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` (overriding [DbDataReader.GetSchemaTable](xref:System.Data.Common.DbDataReader.GetSchemaTable). In short, it seems that
+anything using [DataTable](xref:System.Data.DataTable) is unlikely to work.
 
 <a name="Data_Binding" />
 

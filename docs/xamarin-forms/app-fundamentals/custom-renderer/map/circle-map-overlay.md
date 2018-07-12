@@ -19,14 +19,14 @@ An overlay is a layered graphic on a map. Overlays support drawing graphical con
 
 ![](circle-map-overlay-images/screenshots.png)
 
-When a [`Map`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) control is rendered by a Xamarin.Forms application, in iOS the `MapRenderer` class is instantiated, which in turn instantiates a native `MKMapView` control. On the Android platform, the `MapRenderer` class instantiates a native `MapView` control. On the Universal Windows Platform (UWP), the `MapRenderer` class instantiates a native `MapControl`. The rendering process can be taken advantage of to implement platform-specific map customizations by creating a custom renderer for a `Map` on each platform. The process for doing this is as follows:
+When a [`Map`](xref:Xamarin.Forms.Maps.Map) control is rendered by a Xamarin.Forms application, in iOS the `MapRenderer` class is instantiated, which in turn instantiates a native `MKMapView` control. On the Android platform, the `MapRenderer` class instantiates a native `MapView` control. On the Universal Windows Platform (UWP), the `MapRenderer` class instantiates a native `MapControl`. The rendering process can be taken advantage of to implement platform-specific map customizations by creating a custom renderer for a `Map` on each platform. The process for doing this is as follows:
 
 1. [Create](#Creating_the_Custom_Map) a Xamarin.Forms custom map.
 1. [Consume](#Consuming_the_Custom_Map) the custom map from Xamarin.Forms.
 1. [Customize](#Customizing_the_Map) the map by creating a custom renderer for the map on each platform.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/") must be initialized and configured before use. For more information, see [`Maps Control`](~/xamarin-forms/user-interface/map.md)
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) must be initialized and configured before use. For more information, see [`Maps Control`](~/xamarin-forms/user-interface/map.md)
 
 For information about customizing a map using a custom renderer, see [Customizing a Map Pin](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
 
@@ -44,7 +44,7 @@ public class CustomCircle
 }
 ```
 
-Then, create a subclass of the [`Map`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) class, that adds a property of type `CustomCircle`:
+Then, create a subclass of the [`Map`](xref:Xamarin.Forms.Maps.Map) class, that adds a property of type `CustomCircle`:
 
 ```csharp
 public class CustomMap : Map
@@ -115,7 +115,7 @@ public partial class MapPage : ContentPage
 }
 ```
 
-This initialization adds [`Pin`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Pin/) and `CustomCircle` instances to the custom map, and positions the map's view with the [`MoveToRegion`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Map.MoveToRegion(Xamarin.Forms.Maps.MapSpan)/) method, which changes the position and zoom level of the map by creating a [`MapSpan`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapSpan/) from a [`Position`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Position/) and a [`Distance`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Distance/).
+This initialization adds [`Pin`](xref:Xamarin.Forms.Maps.Pin) and `CustomCircle` instances to the custom map, and positions the map's view with the [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) method, which changes the position and zoom level of the map by creating a [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) from a [`Position`](xref:Xamarin.Forms.Maps.Position) and a [`Distance`](xref:Xamarin.Forms.Maps.Distance).
 
 <a name="Customizing_the_Map" />
 
@@ -330,4 +330,4 @@ This article explained how to add a circular overlay to a map, to highlight a ci
 
 - [Circular Map Ovlerlay (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/)
 - [Customizing a Map Pin](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
-- [Xamarin.Forms.Maps](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/)
+- [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

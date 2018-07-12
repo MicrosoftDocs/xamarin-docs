@@ -49,7 +49,7 @@ File handling with Xamarin.Forms can be achieved using code in a .NET Standard l
 
 ## [Gestures](gestures/index.md)
 
-The Xamarin.Forms [`GestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/) class supports tap, pinch, and pan gestures on user interface controls.
+The Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) class supports tap, pinch, and pan gestures on user interface controls.
 
 ## [Localization](localization/index.md)
 

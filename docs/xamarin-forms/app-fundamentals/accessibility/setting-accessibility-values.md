@@ -25,7 +25,7 @@ Xamarin.Forms allows accessibility values to be set on user interface elements v
 These attached properties set native accessibility values so that a screen reader can speak about the element. For more information about attached properties, see [Attached Properties](~/xamarin-forms/xaml/attached-properties.md).
 
 > [!IMPORTANT]
-> Using the `AutomationProperties` attached properties may impact UI Test execution on Android. The [`AutomationId`](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.AutomationId/), `AutomationProperties.Name` and `AutomationProperties.HelpText` properties will both set the native `ContentDescription` property, with the `AutomationProperties.Name` and `AutomationProperties.HelpText` property values taking precedence over the `AutomationId` value (if both `AutomationProperties.Name` and `AutomationProperties.HelpText` are set, the values will be concatenated). This means that any tests looking for `AutomationId` will fail if `AutomationProperties.Name` or `AutomationProperties.HelpText` are also set on the element. In this scenario, UI Tests should be altered to look for the value of `AutomationProperties.Name` or `AutomationProperties.HelpText`, or a concatenation of both.
+> Using the `AutomationProperties` attached properties may impact UI Test execution on Android. The [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId), `AutomationProperties.Name` and `AutomationProperties.HelpText` properties will both set the native `ContentDescription` property, with the `AutomationProperties.Name` and `AutomationProperties.HelpText` property values taking precedence over the `AutomationId` value (if both `AutomationProperties.Name` and `AutomationProperties.HelpText` are set, the values will be concatenated). This means that any tests looking for `AutomationId` will fail if `AutomationProperties.Name` or `AutomationProperties.HelpText` are also set on the element. In this scenario, UI Tests should be altered to look for the value of `AutomationProperties.Name` or `AutomationProperties.HelpText`, or a concatenation of both.
 
 Each platform has a different screen reader to narrate the accessibility values:
 
@@ -61,7 +61,7 @@ AutomationProperties.SetIsInAccessibleTree(entry, true);
 ```
 
 > [!NOTE]
-> Note that the [`SetValue`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetValue/p/Xamarin.Forms.BindableProperty/System.Object/) method can also be used to set the `AutomationProperties.IsInAccessibleTree` attached property – `entry.SetValue(AutomationProperties.IsInAccessibleTreeProperty, true);`
+> Note that the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method can also be used to set the `AutomationProperties.IsInAccessibleTree` attached property – `entry.SetValue(AutomationProperties.IsInAccessibleTreeProperty, true);`
 
 <a name="name" />
 
@@ -83,7 +83,7 @@ AutomationProperties.SetName(activityIndicator, "Progress indicator");
 ```
 
 > [!NOTE]
-> Note that the [`SetValue`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetValue/p/Xamarin.Forms.BindableProperty/System.Object/) method can also be used to set the `AutomationProperties.Name` attached property – `activityIndicator.SetValue(AutomationProperties.NameProperty, "Progress indicator");`
+> Note that the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method can also be used to set the `AutomationProperties.Name` attached property – `activityIndicator.SetValue(AutomationProperties.NameProperty, "Progress indicator");`
 
 <a name="helptext" />
 
@@ -106,15 +106,15 @@ AutomationProperties.SetHelpText(button, "Tap to toggle the activity indicator")
 ```
 
 > [!NOTE]
-> Note that the [`SetValue`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetValue/p/Xamarin.Forms.BindableProperty/System.Object/) method can also be used to set the `AutomationProperties.HelpText` attached property – `button.SetValue(AutomationProperties.HelpTextProperty, "Tap to toggle the activity indicator");`
+> Note that the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method can also be used to set the `AutomationProperties.HelpText` attached property – `button.SetValue(AutomationProperties.HelpTextProperty, "Tap to toggle the activity indicator");`
 
-On some platforms, for edit controls such as an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/), the `HelpText` property can sometimes be omitted and replaced with placeholder text. For example, "Enter your name here" is a good candidate for the [`Entry.Placeholder`](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.Placeholder/) property that places the text in the control prior to the user's actual input.
+On some platforms, for edit controls such as an [`Entry`](xref:Xamarin.Forms.Entry), the `HelpText` property can sometimes be omitted and replaced with placeholder text. For example, "Enter your name here" is a good candidate for the [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) property that places the text in the control prior to the user's actual input.
 
 <a name="labeledby" />
 
 ## AutomationProperties.LabeledBy
 
-The `AutomationProperties.LabeledBy` attached property allows another element to define accessibility information for the current element. For example, a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) next to an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) can be used to describe what the `Entry` represents. This can be accomplished in XAML as follows:
+The `AutomationProperties.LabeledBy` attached property allows another element to define accessibility information for the current element. For example, a [`Label`](xref:Xamarin.Forms.Label) next to an [`Entry`](xref:Xamarin.Forms.Entry) can be used to describe what the `Entry` represents. This can be accomplished in XAML as follows:
 
 ```xaml
 <Label x:Name="label" Text="Enter your name: " />
@@ -132,7 +132,7 @@ AutomationProperties.SetLabeledBy(entry, nameLabel);
 ```
 
 > [!NOTE]
-> Note that the [`SetValue`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetValue/p/Xamarin.Forms.BindableProperty/System.Object/) method can also be used to set the `AutomationProperties.IsInAccessibleTree` attached property  – `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`
+> Note that the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method can also be used to set the `AutomationProperties.IsInAccessibleTree` attached property  – `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`
 
 ## Summary
 

@@ -13,13 +13,13 @@ ms.date: 11/29/2017
 
 _A ContentPage is a visual element that displays a single view and occupies most of the screen. This article demonstrates how to create a custom renderer for the ContentPage page, enabling developers to override the default native rendering with their own platform-specific customization._
 
-Every Xamarin.Forms control has an accompanying renderer for each platform that creates an instance of a native control. When a [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) is rendered by a Xamarin.Forms application, in iOS the `PageRenderer` class is instantiated, which in turn instantiates a native `UIViewController` control. On the Android platform, the `PageRenderer` class instantiates a `ViewGroup` control. On the Universal Windows Platform (UWP), the `PageRenderer` class instantiates a `FrameworkElement` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Every Xamarin.Forms control has an accompanying renderer for each platform that creates an instance of a native control. When a [`ContentPage`](xref:Xamarin.Forms.ContentPage) is rendered by a Xamarin.Forms application, in iOS the `PageRenderer` class is instantiated, which in turn instantiates a native `UIViewController` control. On the Android platform, the `PageRenderer` class instantiates a `ViewGroup` control. On the Universal Windows Platform (UWP), the `PageRenderer` class instantiates a `FrameworkElement` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
-The following diagram illustrates the relationship between the [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) and the corresponding native controls that implement it:
+The following diagram illustrates the relationship between the [`ContentPage`](xref:Xamarin.Forms.ContentPage) and the corresponding native controls that implement it:
 
 ![](contentpage-images/contentpage-classes.png "Relationship Between ContentPage Class and Implementing Native Controls")
 
-The rendering process can be taken advantage of to implement platform-specific customizations by creating a custom renderer for a [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) on each platform. The process for doing this is as follows:
+The rendering process can be taken advantage of to implement platform-specific customizations by creating a custom renderer for a [`ContentPage`](xref:Xamarin.Forms.ContentPage) on each platform. The process for doing this is as follows:
 
 1. [Create](#Creating_the_Xamarin.Forms_Page) a Xamarin.Forms page.
 1. [Consume](#Consuming_the_Xamarin.Forms_Page) the page from Xamarin.Forms.
@@ -31,7 +31,7 @@ Each item will now be discussed in turn, to implement a `CameraPage` that provid
 
 ## Creating the Xamarin.Forms Page
 
-An unaltered [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) can be added to the shared Xamarin.Forms project, as shown in the following XAML code example:
+An unaltered [`ContentPage`](xref:Xamarin.Forms.ContentPage) can be added to the shared Xamarin.Forms project, as shown in the following XAML code example:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -42,7 +42,7 @@ An unaltered [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Form
 </ContentPage>
 ```
 
-Similarly, the code-behind file for the [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) should also remain unaltered, as shown in the following code example:
+Similarly, the code-behind file for the [`ContentPage`](xref:Xamarin.Forms.ContentPage) should also remain unaltered, as shown in the following code example:
 
 ```csharp
 public partial class CameraPage : ContentPage
@@ -245,7 +245,7 @@ When implementing a custom renderer that derives from `PageRenderer` on UWP, the
 
 ## Summary
 
-This article has demonstrated how to create a custom renderer for the [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) page, enabling developers to override the default native rendering with their own platform-specific customization. A `ContentPage` is a visual element that displays a single view and occupies most of the screen.
+This article has demonstrated how to create a custom renderer for the [`ContentPage`](xref:Xamarin.Forms.ContentPage) page, enabling developers to override the default native rendering with their own platform-specific customization. A `ContentPage` is a visual element that displays a single view and occupies most of the screen.
 
 
 ## Related Links

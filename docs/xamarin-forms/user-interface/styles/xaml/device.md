@@ -15,14 +15,14 @@ _Xamarin.Forms includes six dynamic styles, known as device styles, in the Devic
 
 The *device* styles are:
 
-- [`BodyStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/)
-- [`CaptionStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.CaptionStyle/)
-- [`ListItemDetailTextStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.ListItemDetailTextStyle/)
-- [`ListItemTextStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.ListItemTextStyle/)
-- [`SubtitleStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.SubtitleStyle/)
-- [`TitleStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.TitleStyle/)
+- [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle)
+- [`CaptionStyle`](xref:Xamarin.Forms.Device.Styles.CaptionStyle)
+- [`ListItemDetailTextStyle`](xref:Xamarin.Forms.Device.Styles.ListItemDetailTextStyle)
+- [`ListItemTextStyle`](xref:Xamarin.Forms.Device.Styles.ListItemTextStyle)
+- [`SubtitleStyle`](xref:Xamarin.Forms.Device.Styles.SubtitleStyle)
+- [`TitleStyle`](xref:Xamarin.Forms.Device.Styles.TitleStyle)
 
-All six styles can only be applied to [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instances. For example, a `Label` that's displaying the body of a paragraph might set its [`Style`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) property to [`BodyStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/).
+All six styles can only be applied to [`Label`](xref:Xamarin.Forms.Label) instances. For example, a `Label` that's displaying the body of a paragraph might set its [`Style`](xref:Xamarin.Forms.VisualElement.Style) property to [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle).
 
 The following code example demonstrates using the *device* styles in a XAML page:
 
@@ -62,7 +62,7 @@ The device styles are bound to using the `DynamicResource` markup extension. The
 
 ![](device-images/device-styles.png "Device Styles on Each Platform")
 
-*Device* styles can also be derived from by setting the [`BaseResourceKey`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.BaseResourceKey/) property to the key name for the device style. In the code example above, `myBodyStyle` inherits from [`BodyStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/) and sets an accented text color. For more information about dynamic style inheritance, see [Dynamic Style Inheritance](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance).
+*Device* styles can also be derived from by setting the [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) property to the key name for the device style. In the code example above, `myBodyStyle` inherits from [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle) and sets an accented text color. For more information about dynamic style inheritance, see [Dynamic Style Inheritance](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance).
 
 The following code example demonstrates the equivalent page in C#:
 
@@ -102,7 +102,7 @@ public class DeviceStylesPageCS : ContentPage
 }
 ```
 
-The [`Style`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) property of each [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instance is set to the appropriate property from the [`Devices.Styles`](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/) class.
+The [`Style`](xref:Xamarin.Forms.VisualElement.Style) property of each [`Label`](xref:Xamarin.Forms.Label) instance is set to the appropriate property from the [`Devices.Styles`](xref:Xamarin.Forms.Device.Styles) class.
 
 ## Accessibility
 
@@ -118,7 +118,7 @@ The following screenshots demonstrate the device styles on each platform, with t
 
 ## Summary
 
-Xamarin.Forms includes six *dynamic* styles, known as *device* styles, in the [`Devices.Styles`](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/) class. All six styles can only be applied to [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instances.
+Xamarin.Forms includes six *dynamic* styles, known as *device* styles, in the [`Devices.Styles`](xref:Xamarin.Forms.Device.Styles) class. All six styles can only be applied to [`Label`](xref:Xamarin.Forms.Label) instances.
 
 
 ## Related Links
@@ -127,7 +127,7 @@ Xamarin.Forms includes six *dynamic* styles, known as *device* styles, in the [`
 - [XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Dynamic Styles (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
 - [Working with Styles (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
-- [Device.Styles](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/)
-- [ResourceDictionary](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)
-- [Style](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
-- [Setter](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/)
+- [Device.Styles](xref:Xamarin.Forms.Device.Styles)
+- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
+- [Style](xref:Xamarin.Forms.Style)
+- [Setter](xref:Xamarin.Forms.Setter)

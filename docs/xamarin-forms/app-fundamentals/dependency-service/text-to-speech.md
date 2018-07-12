@@ -11,7 +11,7 @@ ms.date: 09/18/2017
 
 # Implementing Text-to-Speech
 
-This article will guide you as you create a cross-platform app that uses [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) to access native text-to-speech APIs:
+This article will guide you as you create a cross-platform app that uses [`DependencyService`](xref:Xamarin.Forms.DependencyService) to access native text-to-speech APIs:
 
 - **[Creating the Interface](#Creating_the_Interface)** &ndash; understand how the interface is created in shared code.
 - **[iOS Implementation](#iOS_Implementation)** &ndash; learn how to implement the interface in native code for iOS.

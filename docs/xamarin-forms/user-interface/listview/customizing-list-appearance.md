@@ -30,8 +30,8 @@ To enable grouping:
 - Create a list of lists (a list of groups, each group being a list of elements).
 - Set the `ListView`'s `ItemsSource` to that list.
 - Set `IsGroupingEnabled` to true.
-- Set [`GroupDisplayBinding`](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupDisplayBinding/) to bind to the property of the groups that is being used as the title of the group.
-- [Optional] Set [`GroupShortNameBinding`](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/) to bind to the property of the groups that is being used as the short name for the group. The short name is used for the jump lists (right-side column on iOS).
+- Set [`GroupDisplayBinding`](xref:Xamarin.Forms.ListView.GroupDisplayBinding) to bind to the property of the groups that is being used as the title of the group.
+- [Optional] Set [`GroupShortNameBinding`](xref:Xamarin.Forms.ListView.GroupShortNameBinding) to bind to the property of the groups that is being used as the short name for the group. The short name is used for the jump lists (right-side column on iOS).
 
 Start by creating a class for the groups:
 
@@ -318,7 +318,7 @@ XAML:
 
 ### Runtime Resizing of Rows
 
-Individual `ListView` rows can be programmatically resized at runtime, provided that the `HasUnevenRows` property is set to `true`. The [`Cell.ForceUpdateSize`](https://developer.xamarin.com/api/member/Xamarin.Forms.Cell.ForceUpdateSize()/) method updates a cell's size, even when it isn't currently visible, as demonstrated in the following code example:
+Individual `ListView` rows can be programmatically resized at runtime, provided that the `HasUnevenRows` property is set to `true`. The [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize) method updates a cell's size, even when it isn't currently visible, as demonstrated in the following code example:
 
 ```csharp
 void OnImageTapped (object sender, EventArgs args)
@@ -333,7 +333,7 @@ void OnImageTapped (object sender, EventArgs args)
 }
 ```
 
-The `OnImageTapped` event handler is executed in response to an [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) in a cell being tapped, and increases the size of the `Image` displayed in the cell so that it's easily viewed.
+The `OnImageTapped` event handler is executed in response to an [`Image`](xref:Xamarin.Forms.Image) in a cell being tapped, and increases the size of the `Image` displayed in the cell so that it's easily viewed.
 
 ![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView with Runtime Row Resizing")
 

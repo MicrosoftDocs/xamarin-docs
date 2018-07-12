@@ -122,7 +122,7 @@ This unit test invokes the `InitializeAsync` method of the `OrderViewModel` clas
 
 ### Testing Message-based Communication
 
-View models that use the [`MessagingCenter`](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/) class to communicate between loosely-coupled classes can be unit tested by subscribing to the message being sent by the code under test, as demonstrated in the following code example:
+View models that use the [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class to communicate between loosely-coupled classes can be unit tested by subscribing to the message being sent by the code under test, as demonstrated in the following code example:
 
 ```csharp
 [Fact]  
@@ -143,7 +143,7 @@ public void AddCatalogItemCommandSendsAddProductMessageTest()
 }
 ```
 
-This unit test checks that the `CatalogViewModel` publishes the `AddProduct` message in response to its `AddCatalogItemCommand` being executed. Because the [`MessagingCenter`](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/) class supports multicast message subscriptions, the unit test can subscribe to the `AddProduct` message and execute a callback delegate in response to receiving it. This callback delegate, specified as a lambda expression, sets a `boolean` field that's used by the `Assert` statement to verify the behavior of the test.
+This unit test checks that the `CatalogViewModel` publishes the `AddProduct` message in response to its `AddCatalogItemCommand` being executed. Because the [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class supports multicast message subscriptions, the unit test can subscribe to the `AddProduct` message and execute a callback delegate in response to receiving it. This callback delegate, specified as a lambda expression, sets a `boolean` field that's used by the `Assert` statement to verify the behavior of the test.
 
 ### Testing Exception Handling
 
@@ -163,7 +163,7 @@ public void InvalidEventNameShouldThrowArgumentExceptionText()
 }
 ```
 
-This unit test will throw an exception, because the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) control does not have an event named `OnItemTapped`. The `Assert.Throws<T>` method is a generic method where `T` is the type of the expected exception. The argument passed to the `Assert.Throws<T>` method is a lambda expression that will throw the exception. Therefore, the unit test will pass provided that the lambda expression throws an `ArgumentException`.
+This unit test will throw an exception, because the [`ListView`](xref:Xamarin.Forms.ListView) control does not have an event named `OnItemTapped`. The `Assert.Throws<T>` method is a generic method where `T` is the type of the expected exception. The argument passed to the `Assert.Throws<T>` method is a lambda expression that will throw the exception. Therefore, the unit test will pass provided that the lambda expression throws an `ArgumentException`.
 
 >💡 **Tip**: Avoid writing unit tests that examine exception message strings. Exception message strings might change over time, and so unit tests that rely on their presence are regarded as brittle.
 

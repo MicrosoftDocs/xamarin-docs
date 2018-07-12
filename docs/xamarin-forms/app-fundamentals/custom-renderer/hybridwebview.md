@@ -13,13 +13,13 @@ ms.date: 11/29/2017
 
 _Xamarin.Forms custom user interface controls should derive from the View class, which is used to place layouts and controls on the screen. This article demonstrates how to create a custom renderer for a HybridWebView custom control, which demonstrates how to enhance the platform-specific web controls to allow C# code to be invoked from JavaScript._
 
-Every Xamarin.Forms view has an accompanying renderer for each platform that creates an instance of a native control. When a [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) is rendered by a Xamarin.Forms application in iOS, the `ViewRenderer` class is instantiated, which in turn instantiates a native `UIView` control. On the Android platform, the `ViewRenderer` class instantiates a `View` control. On the Universal Windows Platform (UWP), the `ViewRenderer` class instantiates a native `FrameworkElement` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Every Xamarin.Forms view has an accompanying renderer for each platform that creates an instance of a native control. When a [`View`](xref:Xamarin.Forms.View) is rendered by a Xamarin.Forms application in iOS, the `ViewRenderer` class is instantiated, which in turn instantiates a native `UIView` control. On the Android platform, the `ViewRenderer` class instantiates a `View` control. On the Universal Windows Platform (UWP), the `ViewRenderer` class instantiates a native `FrameworkElement` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
-The following diagram illustrates the relationship between the [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) and the corresponding native controls that implement it:
+The following diagram illustrates the relationship between the [`View`](xref:Xamarin.Forms.View) and the corresponding native controls that implement it:
 
 ![](hybridwebview-images/view-classes.png "Relationship Between the View Class and its Implementing Native Classes")
 
-The rendering process can be used to implement platform-specific customizations by creating a custom renderer for a [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) on each platform. The process for doing this is as follows:
+The rendering process can be used to implement platform-specific customizations by creating a custom renderer for a [`View`](xref:Xamarin.Forms.View) on each platform. The process for doing this is as follows:
 
 1. [Create](#Creating_the_HybridWebView) the `HybridWebView` custom control.
 1. [Consume](#Consuming_the_HybridWebView) the `HybridWebView`from Xamarin.Forms.
@@ -33,7 +33,7 @@ For more information about the process for invoking C# from JavaScript, see [Inv
 
 ## Creating the HybridWebView
 
-The `HybridWebView` custom control can be created by subclassing the [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) class, as shown in the following code example:
+The `HybridWebView` custom control can be created by subclassing the [`View`](xref:Xamarin.Forms.View) class, as shown in the following code example:
 
 ```csharp
 public class HybridWebView : View
@@ -131,7 +131,7 @@ public partial class HybridWebViewPage : ContentPage
 }
 ```
 
-This action calls the [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert/p/System.String/System.String/System.String/) method to display a modal pop-up that presents the name entered in the HTML page displayed by the `HybridWebView` instance.
+This action calls the [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) method to display a modal pop-up that presents the name entered in the HTML page displayed by the `HybridWebView` instance.
 
 A custom renderer can now be added to each application project to enhance the platform-specific web controls by allowing C# code to be invoked from JavaScript.
 
@@ -146,7 +146,7 @@ The process for creating the custom renderer class is as follows:
 1. Add an `ExportRenderer` attribute to the custom renderer class to specify that it will be used to render the Xamarin.Forms custom control. This attribute is used to register the custom renderer with Xamarin.Forms.
 
 > [!NOTE]
-> For most Xamarin.Forms elements, it is optional to provide a custom renderer in each platform project. If a custom renderer isn't registered, then the default renderer for the control's base class will be used. However, custom renderers are required in each platform project when rendering a [View](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) element.
+> For most Xamarin.Forms elements, it is optional to provide a custom renderer in each platform project. If a custom renderer isn't registered, then the default renderer for the control's base class will be used. However, custom renderers are required in each platform project when rendering a [View](xref:Xamarin.Forms.View) element.
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 

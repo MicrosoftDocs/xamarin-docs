@@ -17,19 +17,19 @@ _Xamarin.Forms provides a number of different page navigation experiences, depen
 
 ## [Hierarchical Navigation](hierarchical.md)
 
-The [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) class provides a hierarchical navigation experience where the user is able to navigate through pages, forwards and backwards, as desired. The class implements navigation as a last-in, first-out (LIFO) stack of [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) objects.
+The [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) class provides a hierarchical navigation experience where the user is able to navigate through pages, forwards and backwards, as desired. The class implements navigation as a last-in, first-out (LIFO) stack of [`Page`](xref:Xamarin.Forms.Page) objects.
 
 ## [TabbedPage](tabbed-page.md)
 
-The Xamarin.Forms [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) consists of a list of tabs and a larger detail area, with each tab loading content into the detail area.
+The Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) consists of a list of tabs and a larger detail area, with each tab loading content into the detail area.
 
 ## [CarouselPage](carousel-page.md)
 
-The Xamarin.Forms [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) is a page that users can swipe from side to side to navigate through pages of content, like a gallery.
+The Xamarin.Forms [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) is a page that users can swipe from side to side to navigate through pages of content, like a gallery.
 
 ## [MasterDetailPage](master-detail-page.md)
 
-The Xamarin.Forms [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) is a page that manages two pages of related information – a master page that presents items, and a detail page that presents details about items on the master page.
+The Xamarin.Forms [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) is a page that manages two pages of related information – a master page that presents items, and a detail page that presents details about items on the master page.
 
 ## [Modal Pages](modal.md)
 

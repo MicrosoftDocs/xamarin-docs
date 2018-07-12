@@ -58,7 +58,7 @@ Extend the Phoneword application as follows:
 
     ![](quickstart-images/vs/open-app-class.png "Open App.xaml.cs")
 
-6. In **App.xaml.cs**, import the `System.Collections.Generic` namespace, add the declaration of the `PhoneNumbers` property, initialize the property in the `App` constructor, and initialize the [`MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) property to be a [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/). The `PhoneNumbers` collection will be used to store a list of each translated phone number called by the application:
+6. In **App.xaml.cs**, import the `System.Collections.Generic` namespace, add the declaration of the `PhoneNumbers` property, initialize the property in the `App` constructor, and initialize the [`MainPage`](xref:Xamarin.Forms.Application.MainPage) property to be a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). The `PhoneNumbers` collection will be used to store a list of each translated phone number called by the application:
 
     ```csharp
     using System.Collections.Generic;
@@ -89,7 +89,7 @@ Extend the Phoneword application as follows:
 
     ![](quickstart-images/vs/open-mainpage-xaml.png "Open MainPage.xaml")
 
-8. In **MainPage.xaml**, add a [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) control at the end of the [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) control. The button will be used to navigate to the call history page:
+8. In **MainPage.xaml**, add a [`Button`](xref:Xamarin.Forms.Button) control at the end of the [`StackLayout`](xref:Xamarin.Forms.StackLayout) control. The button will be used to navigate to the call history page:
 
     ```xaml
     <StackLayout VerticalOptions="FillAndExpand"
@@ -204,7 +204,7 @@ Extend the Phoneword application as follows:
 
     ![](quickstart-images/xs/open-app-class.png "Open App.xaml.cs")
 
-7. In **App.xaml.cs**, import the `System.Collections.Generic` namespace, add the declaration of the `PhoneNumbers` property, initialize the property in the `App` constructor, and initialize the [`MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) property to be a [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/). The `PhoneNumbers` collection will be used to store a list of each translated phone number called by the application:
+7. In **App.xaml.cs**, import the `System.Collections.Generic` namespace, add the declaration of the `PhoneNumbers` property, initialize the property in the `App` constructor, and initialize the [`MainPage`](xref:Xamarin.Forms.Application.MainPage) property to be a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). The `PhoneNumbers` collection will be used to store a list of each translated phone number called by the application:
 
     ```csharp
     using System.Collections.Generic;
@@ -235,7 +235,7 @@ Extend the Phoneword application as follows:
 
     ![](quickstart-images/xs/open-mainpage-xaml.png "Open MainPage.xaml")
 
-9. In **MainPage.xaml**, add a [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) control at the end of the [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) control. The button will be used to navigate to the call history page:
+9. In **MainPage.xaml**, add a [`Button`](xref:Xamarin.Forms.Button) control at the end of the [`StackLayout`](xref:Xamarin.Forms.StackLayout) control. The button will be used to navigate to the call history page:
 
     ```xaml
     <StackLayout VerticalOptions="FillAndExpand"

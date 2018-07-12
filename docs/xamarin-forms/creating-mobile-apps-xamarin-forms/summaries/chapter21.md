@@ -23,14 +23,14 @@ In Xamarin.Forms, the scaling is isotropic; it affects the width and height unif
 
 Transforms are supported with eight properties of type `double` defined by the `VisualElement` class:
 
-- [`TranslationX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/)
-- [`TranslationY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/)
-- [`Scale`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Scale/)
-- [`Rotation`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Rotation/)
-- [`RotationX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.RotationX/)
-- [`RotationY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.RotationY/)
-- [`AnchorX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.AnchorX/)
-- [`AnchorY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.AnchorY/)
+- [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX)
+- [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY)
+- [`Scale`](xref:Xamarin.Forms.VisualElement.Scale)
+- [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation)
+- [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX)
+- [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY)
+- [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX)
+- [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
 All these properties are backed by bindable properties. They can be targets of data binding and styled. [**Chapter 22. Animation**](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) demonstrates how these properties can be animated, but some samples in this chapter show how you can animate them using the Xamarin.Forms [timer](~/xamarin-forms/platform/device.md#Device_StartTimer).
 
@@ -38,8 +38,8 @@ Transform properties affect only how the element is rendered, and do *not* affec
 
 ## The translation transform
 
-Nonzero values of the [`TranslationX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/)
-and [`TranslationY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) properties shift an element horizontally or vertically.
+Nonzero values of the [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX)
+and [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) properties shift an element horizontally or vertically.
 
 The [**TranslationDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/TranslationDemo) program allows you to experiment with these properties with two `Slider` elements that control the `TranslationX` and `TranslationY` properties of a `Frame`. The transform also affects all children of that `Frame`.
 
@@ -60,7 +60,7 @@ The [**ButtonGlide**](https://github.com/xamarin/xamarin-forms-book-samples/tree
 
 ## The scale transform
 
-The [`Scale`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Scale/) transform can increase or decrease the rendered size of the element. The default value is 1. A value of 0 causes the element to be invisible. Negative values cause the element to appear to be rotated 180 degrees. The `Scale` property does not affect the `Width` or `Height` properties of the element. Those values remain the same.
+The [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) transform can increase or decrease the rendered size of the element. The default value is 1. A value of 0 causes the element to be invisible. Negative values cause the element to appear to be rotated 180 degrees. The `Scale` property does not affect the `Width` or `Height` properties of the element. Those values remain the same.
 
 You can experiment with the `Scale` property using the [**SimpleScaleDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/SimpleScaleDemo) sample.
 
@@ -72,8 +72,8 @@ The [**ScaleToSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree
 
 The elements scaled in the previous three samples have all increased or decreased in size relative to the center of the element. In other words, the element increases or decreases in size the same in all directions. Only the point at the center of the element remains in the same location during the scaling.
 
-You can change the center of the scaling by setting the [`AnchorX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.AnchorX/) and
-[`AnchorY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.AnchorY/) properties. These properties are relative to the element itself. For `AnchorX`, a value of 0 refers to the left side of the element and 1 refers to the right side. Similarly for `AnchorY`, 0 is the top and 1 is the bottom. Both properties have default values of 0.5, which is the center.
+You can change the center of the scaling by setting the [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX) and
+[`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY) properties. These properties are relative to the element itself. For `AnchorX`, a value of 0 refers to the left side of the element and 1 refers to the right side. Similarly for `AnchorY`, 0 is the top and 1 is the bottom. Both properties have default values of 0.5, which is the center.
 
 The
 [**AnchoredScaleDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/AnchoredScaleDemo) sample allows you to experiment with the `AnchorX` and `AnchorY` properties as well as the `Scale` property.
@@ -82,7 +82,7 @@ On iOS, using non-default values of `AnchorX` and `AnchorY` properties is genera
 
 ## The rotation transform
 
-The [`Rotation`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Rotation/) property is specified in degrees and indicates clockwise rotation around a point of the element defined by `AnchorX` and `AnchorY`. The [**PlaneRotationDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/PlaneRotationDemo) allows you to experiment with these three properties.
+The [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) property is specified in degrees and indicates clockwise rotation around a point of the element defined by `AnchorX` and `AnchorY`. The [**PlaneRotationDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/PlaneRotationDemo) allows you to experiment with these three properties.
 
 ### Rotated text effects
 
@@ -112,7 +112,7 @@ The [**VerticalSliders**](https://github.com/xamarin/xamarin-forms-book-samples/
 
 ## 3D-ish rotations
 
-The [`RotationX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.RotationX/) property appears to rotate an element around a 3D X-axis so that the top and bottom of the element seem to move towards or away from the viewer. Similarly, the [`RotationY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.RotationY/) seems to rotate an element around the Y-axis to make the left and right sides of the element seem to move towards or away from the viewer.
+The [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX) property appears to rotate an element around a 3D X-axis so that the top and bottom of the element seem to move towards or away from the viewer. Similarly, the [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY) seems to rotate an element around the Y-axis to make the left and right sides of the element seem to move towards or away from the viewer.
 
 The `AnchorX` property affects `RotationY` but not `RotationX`. The `AnchorY` property affects `RotationX` but not `RotationY`. You can experiment with the [**ThreeDeeRotationDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ThreeDeeRotationDemo) sample to explore the interactions of these properties.
 

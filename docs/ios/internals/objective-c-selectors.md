@@ -35,7 +35,7 @@ The declaration (from Apple's documentation) is:
 ```
 
 -  The return type is *CGSize* for the Unified API.
--  The  *font* parameter is a  [UIFont](https://developer.xamarin.com/api/type/UIKit.UIFont/) (and a type (indirectly) derived from  [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) ), and is thus mapped to  [System.IntPtr](https://developer.xamarin.com/api/type/System.IntPtr/) .
+-  The  *font* parameter is a  [UIFont](https://developer.xamarin.com/api/type/UIKit.UIFont/) (and a type (indirectly) derived from  [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) ), and is thus mapped to  [System.IntPtr](xref:System.IntPtr) .
 -  The  *width* parameter, a  *CGFloat* , is mapped to *nfloat*.
 -  The  *lineBreakMode* parameter, a  *UILineBreakMode* , has already been bound in Xamarin.iOS as the  [UILineBreakMode enumeration](https://developer.xamarin.com/api/type/UIKit.UILineBreakMode/) .
 
@@ -176,7 +176,7 @@ The main [objc_msgSend()](http://developer.apple.com/mac/library/documentation/C
 
 Once you've decided which `objc_msgSend()` function(s) you need to
 call (and it may be more than one, e.g. for simulator and device), you can use a
-normal [`[DllImport]`](https://developer.xamarin.com/api/type/System.Runtime.InteropServices.DllImportAttribute/) method to declare the function for later
+normal [`[DllImport]`](xref:System.Runtime.InteropServices.DllImportAttribute) method to declare the function for later
 invocation.
 
 A set of pre-made `objc_msgSend()` declarations can be found in [`ObjCRuntime.Messaging`](https://developer.xamarin.com/api/type/ObjCRuntime.Messaging/).

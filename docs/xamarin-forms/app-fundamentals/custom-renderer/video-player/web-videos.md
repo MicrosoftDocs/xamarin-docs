@@ -47,7 +47,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-The `Source` property is of type `VideoSource`, which is patterned after the Xamarin.Forms [`ImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageSource/) abstract class, and its three derivatives, [`UriImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.UriImageSource/), [`FileImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.FileImageSource/), and [`StreamImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.StreamImageSource/). No stream option is available for the `VideoPlayer` however, because iOS and Android do not support playing a video from a stream.
+The `Source` property is of type `VideoSource`, which is patterned after the Xamarin.Forms [`ImageSource`](xref:Xamarin.Forms.ImageSource) abstract class, and its three derivatives, [`UriImageSource`](xref:Xamarin.Forms.UriImageSource), [`FileImageSource`](xref:Xamarin.Forms.FileImageSource), and [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource). No stream option is available for the `VideoPlayer` however, because iOS and Android do not support playing a video from a stream.
 
 ## Video sources
 

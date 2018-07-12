@@ -82,7 +82,7 @@ public void ReadText (string filename)
 
 The `StreamReader` class implements `IDisposable`, and the `finally` block calls the `StreamReader.Dispose` method to release the resource.
 
-For more information, see [IDisposable Interface](https://developer.xamarin.com/api/type/System.IDisposable/).
+For more information, see [IDisposable Interface](xref:System.IDisposable).
 
 <a name="events" />
 
@@ -377,5 +377,5 @@ This article described and discussed techniques for increasing the performance o
 - [Introduction to the Xamarin Profiler](~/tools/profiler/index.md)
 - [Xamarin.Forms Performance](~/xamarin-forms/deploy-test/performance.md)
 - [Async Support Overview](~/cross-platform/platform/async.md)
-- [IDisposable](https://developer.xamarin.com/api/type/System.IDisposable/)
+- [IDisposable](xref:System.IDisposable)
 - [Avoiding Common Pitfalls in Xamarin Apps (video)](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)

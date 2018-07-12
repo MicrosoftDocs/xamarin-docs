@@ -271,7 +271,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-This is similar to how the [`WebView`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) control uses the [`IWebViewController`](https://developer.xamarin.com/api/type/Xamarin.Forms.IWebViewController/) interface to implement the `CanGoBack` and `CanGoForward` properties. (See the source code of [`WebView`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/WebView.cs) and its renderers for details.)
+This is similar to how the [`WebView`](xref:Xamarin.Forms.WebView) control uses the [`IWebViewController`](xref:Xamarin.Forms.IWebViewController) interface to implement the `CanGoBack` and `CanGoForward` properties. (See the source code of [`WebView`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/WebView.cs) and its renderers for details.)
 
 This makes it possible for a class external to `VideoPlayer` to set the `Status` property by referencing the `IVideoPlayerController` interface. (You'll see the code shortly.) The property can be set from other classes as well, but it's unlikely to be set inadvertently. Most importantly, the `Status` property cannot be set through a data binding.
 

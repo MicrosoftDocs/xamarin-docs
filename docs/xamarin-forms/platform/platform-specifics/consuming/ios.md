@@ -15,15 +15,15 @@ _Platform-specifics allow you to consume functionality that's only available on 
 
 On iOS, Xamarin.Forms contains the following platform-specifics:
 
-- Blur support for any [`VisualElement`](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/). For more information, see [Applying Blur](#blur).
+- Blur support for any [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [Applying Blur](#blur).
 - Controlling whether the page title is displayed as a large title in the page navigation bar. For more information, see [Displaying Large Titles](#large_title).
 - Ensuring that page content is positioned on an area of the screen that is safe for all iOS devices. For more information, see [Enabling the Safe Area Layout Guide](#safe_area_layout).
 - A translucent navigation bar. For more information, see [Making the Navigation Bar Translucent](#translucent_navigation_bar).
-- Controlling whether the status bar text color on a [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) is adjusted to match the luminosity of the navigation bar. For more information, see [Adjusting the Status Bar Text Color Mode](#status_bar_color_mode).
-- Ensuring that inputted text fits into an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) by adjusting the font size. For more information, see [Adjusting the Font Size of an Entry](#adjust_font_size).
-- Controlling when item selection occurs in a [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/). For more information, see [Controlling Picker Item Selection](#picker_update_mode).
-- Setting the status bar visibility on a [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/). For more information, see [Setting the Status Bar Visibility on a Page](#set_status_bar_visibility).
-- Controlling whether a [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) handles a touch gesture or passes it to its content. For more information, see [Delaying Content Touches in a ScrollView](#delay_content_touches).
+- Controlling whether the status bar text color on a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is adjusted to match the luminosity of the navigation bar. For more information, see [Adjusting the Status Bar Text Color Mode](#status_bar_color_mode).
+- Ensuring that inputted text fits into an [`Entry`](xref:Xamarin.Forms.Entry) by adjusting the font size. For more information, see [Adjusting the Font Size of an Entry](#adjust_font_size).
+- Controlling when item selection occurs in a [`Picker`](xref:Xamarin.Forms.Picker). For more information, see [Controlling Picker Item Selection](#picker_update_mode).
+- Setting the status bar visibility on a [`Page`](xref:Xamarin.Forms.Page). For more information, see [Setting the Status Bar Visibility on a Page](#set_status_bar_visibility).
+- Controlling whether a [`ScrollView`](xref:Xamarin.Forms.ScrollView) handles a touch gesture or passes it to its content. For more information, see [Delaying Content Touches in a ScrollView](#delay_content_touches).
 - Setting the separator style on a [`ListView`](xref:Xamarin.Forms.ListView). For more information, see [Setting the Separator Style on a ListView](#listview-separatorstyle).
 - Disabling legacy color mode on a supported [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [Disabling Legacy Color Mode](#legacy-color-mode).
 - Enabling a drop shadow on a [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [Enabling a Drop Shadow](#drop-shadow).
@@ -33,7 +33,7 @@ On iOS, Xamarin.Forms contains the following platform-specifics:
 
 ## Applying Blur
 
-This platform-specific is used to blur the content layered beneath it, and is consumed in XAML by setting the [`VisualElement.BlurEffect`](https://developer.xamarin.com/api/field/Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.BlurEffectProperty/) attached property to a value of the [`BlurEffectStyle`](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle/) enumeration:
+This platform-specific is used to blur the content layered beneath it, and is consumed in XAML by setting the [`VisualElement.BlurEffect`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.BlurEffectProperty) attached property to a value of the [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) enumeration:
 
 ```xaml
 <ContentPage ...
@@ -57,9 +57,9 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 boxView.On<iOS>().UseBlurEffect(BlurEffectStyle.ExtraLight);
 ```
 
-The `BoxView.On<iOS>` method specifies that this platform-specific will only run on iOS. The [`VisualElement.UseBlurEffect`](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.UseBlurEffect/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement}/Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle/) method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, is used to apply the blur effect, with the [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) enumeration providing four values: [`None`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.None), [`ExtraLight`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.ExtraLight), [`Light`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Light), and [`Dark`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Dark).
+The `BoxView.On<iOS>` method specifies that this platform-specific will only run on iOS. The [`VisualElement.UseBlurEffect`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.UseBlurEffect(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle)) method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, is used to apply the blur effect, with the [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) enumeration providing four values: [`None`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.None), [`ExtraLight`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.ExtraLight), [`Light`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Light), and [`Dark`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Dark).
 
-The result is that a specified [`BlurEffectStyle`](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle/) is applied to the [`BoxView`](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) instance, which blurs the [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) layered beneath it:
+The result is that a specified [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) is applied to the [`BoxView`](xref:Xamarin.Forms.BoxView) instance, which blurs the [`Image`](xref:Xamarin.Forms.Image) layered beneath it:
 
 ![](ios-images/blur-effect.png "Blur Effect Platform-Specific")
 
@@ -93,9 +93,9 @@ var navigationPage = new Xamarin.Forms.NavigationPage(new iOSLargeTitlePageCS())
 navigationPage.On<iOS>().SetPrefersLargeTitles(true);
 ```
 
-The `NavigationPage.On<iOS>` method specifies that this platform-specific will only run on iOS. The `NavigationPage.SetPrefersLargeTitle` method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) namespace, controls whether large titles are enabled.
+The `NavigationPage.On<iOS>` method specifies that this platform-specific will only run on iOS. The `NavigationPage.SetPrefersLargeTitle` method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, controls whether large titles are enabled.
 
-Provided that large titles are enabled on the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/), all pages in the navigation stack will display large titles. This behavior can be overridden on pages by setting the `Page.LargeTitleDisplay` attached property to a value of the `LargeTitleDisplayMode` enumeration:
+Provided that large titles are enabled on the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), all pages in the navigation stack will display large titles. This behavior can be overridden on pages by setting the `Page.LargeTitleDisplay` attached property to a value of the `LargeTitleDisplayMode` enumeration:
 
 ```xaml
 <ContentPage ...
@@ -124,7 +124,7 @@ public class iOSLargeTitlePageCS : ContentPage
 }
 ```
 
-The `Page.On<iOS>` method specifies that this platform-specific will only run on iOS. The `Page.SetLargeTitleDisplay` method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) namespace, controls the large title behavior on the [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/), with the `LargeTitleDisplayMode` enumeration providing three possible values:
+The `Page.On<iOS>` method specifies that this platform-specific will only run on iOS. The `Page.SetLargeTitleDisplay` method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, controls the large title behavior on the [`Page`](xref:Xamarin.Forms.Page), with the `LargeTitleDisplayMode` enumeration providing three possible values:
 
 - `Always` – force the navigation bar and font size to use the large format.
 - `Automatic` – use the same style (large or small) as the previous item in the navigation stack.
@@ -147,7 +147,7 @@ switch (On<iOS>().LargeTitleDisplay())
 }
 ```
 
-The result is that a specified `LargeTitleDisplayMode` is applied to the [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/), which controls the large title behavior:
+The result is that a specified `LargeTitleDisplayMode` is applied to the [`Page`](xref:Xamarin.Forms.Page), which controls the large title behavior:
 
 ![](ios-images/large-title.png "Blur Effect Platform-Specific")
 
@@ -178,16 +178,16 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 On<iOS>().SetUseSafeArea(true);
 ```
 
-The `Page.On<iOS>` method specifies that this platform-specific will only run on iOS. The `Page.SetUseSafeArea` method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) namespace, controls whether the safe area layout guide is enabled.
+The `Page.On<iOS>` method specifies that this platform-specific will only run on iOS. The `Page.SetUseSafeArea` method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, controls whether the safe area layout guide is enabled.
 
 The result is that page content can be positioned on an area of the screen that is safe for all iPhones:
 
 [![](ios-images/safe-area-layout.png "Safe Area Layout Guide")](ios-images/safe-area-layout-large.png#lightbox "Safe Area Layout Guide")
 
 > [!NOTE]
-> The safe area defined by Apple is used in Xamarin.Forms to set the [`Page.Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Padding/) property, and will override any previous values of this property that have been set.
+> The safe area defined by Apple is used in Xamarin.Forms to set the [`Page.Padding`](xref:Xamarin.Forms.Page.Padding) property, and will override any previous values of this property that have been set.
 
-The safe area can be customized by retrieving its [`Thickness`](https://developer.xamarin.com/api/type/Xamarin.Forms.Thickness/) value with the `Page.SafeAreaInsets` method from the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) namespace. It can then be modified as required and re-assigned to the `Padding` property in the page constructor or [`OnAppearing`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnAppearing()/) override:
+The safe area can be customized by retrieving its [`Thickness`](xref:Xamarin.Forms.Thickness) value with the `Page.SafeAreaInsets` method from the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace. It can then be modified as required and re-assigned to the `Padding` property in the page constructor or [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) override:
 
 ```csharp
 protected override void OnAppearing()
@@ -204,7 +204,7 @@ protected override void OnAppearing()
 
 ## Making the Navigation Bar Translucent
 
-This platform-specific is used to change the transparency of the navigation bar, and is consumed in XAML by setting the [`NavigationPage.IsNavigationBarTranslucent`](https://developer.xamarin.com/api/field/Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.IsNavigationBarTranslucentProperty/) attached property to a `boolean` value:
+This platform-specific is used to change the transparency of the navigation bar, and is consumed in XAML by setting the [`NavigationPage.IsNavigationBarTranslucent`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.IsNavigationBarTranslucentProperty) attached property to a `boolean` value:
 
 ```xaml
 <NavigationPage ...
@@ -226,7 +226,7 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 (App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().EnableTranslucentNavigationBar();
 ```
 
-The `NavigationPage.On<iOS>` method specifies that this platform-specific will only run on iOS. The [`NavigationPage.EnableTranslucentNavigationBar`](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.EnableTranslucentNavigationBar/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage}/) method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) namespace, is used to make the navigation bar translucent. In addition, the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage/) class in the `Xamarin.Forms.PlatformConfiguration.iOSSpecific` namespace also has a [`DisableTranslucentNavigationBar`](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.DisableTranslucentNavigationBar/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage}/) method that restores the navigation bar to its default state, and a [`SetIsNavigationBarTranslucent`](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.SetIsNavigationBarTranslucent/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage}/System.Boolean/) method which can be used to toggle the navigation bar transparency by calling the [`IsNavigationBarTranslucent`](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.IsNavigationBarTranslucent/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage}/) method:
+The `NavigationPage.On<iOS>` method specifies that this platform-specific will only run on iOS. The [`NavigationPage.EnableTranslucentNavigationBar`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.EnableTranslucentNavigationBar(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage})) method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, is used to make the navigation bar translucent. In addition, the [`NavigationPage`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage) class in the `Xamarin.Forms.PlatformConfiguration.iOSSpecific` namespace also has a [`DisableTranslucentNavigationBar`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.DisableTranslucentNavigationBar(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage})) method that restores the navigation bar to its default state, and a [`SetIsNavigationBarTranslucent`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.SetIsNavigationBarTranslucent(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage},System.Boolean)) method which can be used to toggle the navigation bar transparency by calling the [`IsNavigationBarTranslucent`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.IsNavigationBarTranslucent(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage})) method:
 
 ```csharp
 (App.Current.MainPage as Xamarin.Forms.NavigationPage)
@@ -242,7 +242,7 @@ The result is that the transparency of the navigation bar can be changed:
 
 ## Adjusting the Status Bar Text Color Mode
 
-This platform-specific controls whether the status bar text color on a [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) is adjusted to match the luminosity of the navigation bar. It's consumed in XAML by setting the [`NavigationPage.StatusBarTextColorMode`](https://developer.xamarin.com/api/field/Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty/) attached property to a value of the [`StatusBarTextColorMode`](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode/) enumeration:
+This platform-specific controls whether the status bar text color on a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is adjusted to match the luminosity of the navigation bar. It's consumed in XAML by setting the [`NavigationPage.StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty) attached property to a value of the [`StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) enumeration:
 
 ```xaml
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -287,14 +287,14 @@ IsPresentedChanged += (sender, e) =>
 };
 ```
 
-The `NavigationPage.On<iOS>` method specifies that this platform-specific will only run on iOS. The [`NavigationPage.SetStatusBarTextColorMode`](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.SetStatusBarTextColorMode/p/Xamarin.Forms.IPlatformElementConfiguration%7BXamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage%7D/Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode/) method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) namespace, controls whether the status bar text color on the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) is adjusted to match the luminosity of the navigation bar, with the [`StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) enumeration providing two possible values:
+The `NavigationPage.On<iOS>` method specifies that this platform-specific will only run on iOS. The [`NavigationPage.SetStatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.SetStatusBarTextColorMode(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage},Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode)) method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, controls whether the status bar text color on the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is adjusted to match the luminosity of the navigation bar, with the [`StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) enumeration providing two possible values:
 
 - [`DoNotAdjust`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode.DoNotAdjust) – indicates that the status bar text color should not be adjusted.
 - [`MatchNavigationBarTextLuminosity`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode.MatchNavigationBarTextLuminosity) – indicates that the status bar text color should match the luminosity of the navigation bar.
 
-In addition, the [`GetStatusBarTextColorMode`](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.GetStatusBarTextColorMode/p/Xamarin.Forms.IPlatformElementConfiguration%7BXamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage%7D/) method can be used to retrieve the current value of the [`StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) enumeration that's applied to the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage).
+In addition, the [`GetStatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.GetStatusBarTextColorMode(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage})) method can be used to retrieve the current value of the [`StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) enumeration that's applied to the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage).
 
-The result is that the status bar text color on a [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) can be adjusted to match the luminosity of the navigation bar. In this example, the status bar text color changes as the user switches between the [`Master`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Master/) and [`Detail`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) pages of a [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/):
+The result is that the status bar text color on a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) can be adjusted to match the luminosity of the navigation bar. In this example, the status bar text color changes as the user switches between the [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) and [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) pages of a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage):
 
 ![](ios-images/status-bar-text-color-mode.png "Status Bar Text Color Mode Platform-Specific")
 
@@ -302,7 +302,7 @@ The result is that the status bar text color on a [`NavigationPage`](https://dev
 
 ## Adjusting the Font Size of an Entry
 
-This platform-specific is used to scale the font size of an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) to ensure that the inputted text fits in the control. It's consumed in XAML by setting the [`Entry.AdjustsFontSizeToFitWidth`](https://developer.xamarin.com/api/field/Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.AdjustsFontSizeToFitWidthProperty/) attached property to a `boolean` value:
+This platform-specific is used to scale the font size of an [`Entry`](xref:Xamarin.Forms.Entry) to ensure that the inputted text fits in the control. It's consumed in XAML by setting the [`Entry.AdjustsFontSizeToFitWidth`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.AdjustsFontSizeToFitWidthProperty) attached property to a `boolean` value:
 
 ```xaml
 <ContentPage ...
@@ -327,13 +327,13 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 entry.On<iOS>().EnableAdjustsFontSizeToFitWidth();
 ```
 
-The `Entry.On<iOS>` method specifies that this platform-specific will only run on iOS. The [`Entry.EnableAdjustsFontSizeToFitWidth`](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.EnableAdjustsFontSizeToFitWidth/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Entry}/) method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) namespace, is used to scale the font size of the inputted text to ensure that it fits in the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/). In addition, the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry/) class in the `Xamarin.Forms.PlatformConfiguration.iOSSpecific` namespace also has a [`DisableAdjustsFontSizeToFitWidth`](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.DisableAdjustsFontSizeToFitWidth/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Entry}/) method that disables this platform-specific, and a [`SetAdjustsFontSizeToFitWidth`](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.SetAdjustsFontSizeToFitWidth/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Entry}/System.Boolean/) method which can be used to toggle font size scaling by calling the [`AdjustsFontSizeToFitWidth`](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.AdjustsFontSizeToFitWidth/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Entry}/) method:
+The `Entry.On<iOS>` method specifies that this platform-specific will only run on iOS. The [`Entry.EnableAdjustsFontSizeToFitWidth`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.EnableAdjustsFontSizeToFitWidth(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Entry})) method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, is used to scale the font size of the inputted text to ensure that it fits in the [`Entry`](xref:Xamarin.Forms.Entry). In addition, the [`Entry`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry) class in the `Xamarin.Forms.PlatformConfiguration.iOSSpecific` namespace also has a [`DisableAdjustsFontSizeToFitWidth`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.DisableAdjustsFontSizeToFitWidth(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Entry})) method that disables this platform-specific, and a [`SetAdjustsFontSizeToFitWidth`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.SetAdjustsFontSizeToFitWidth(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Entry},System.Boolean)) method which can be used to toggle font size scaling by calling the [`AdjustsFontSizeToFitWidth`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.AdjustsFontSizeToFitWidth(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Entry})) method:
 
 ```csharp
 entry.On<iOS>().SetAdjustsFontSizeToFitWidth(!entry.On<iOS>().AdjustsFontSizeToFitWidth());
 ```
 
-The result is that the font size of the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) is scaled to ensure that the inputted text fits in the control:
+The result is that the font size of the [`Entry`](xref:Xamarin.Forms.Entry) is scaled to ensure that the inputted text fits in the control:
 
 ![](ios-images/entry-font-size.png "Adjust Entry Font Size Platform-Specific")
 
@@ -341,7 +341,7 @@ The result is that the font size of the [`Entry`](https://developer.xamarin.com/
 
 ## Controlling Picker Item Selection
 
-This platform-specific controls when item selection occurs in a [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/), allowing the user to specify that item selection occurs when browsing items in the control, or only once the **Done** button is pressed. It's consumed in XAML by setting the `Picker.UpdateMode` attached property to a value of the `UpdateMode` enumeration:
+This platform-specific controls when item selection occurs in a [`Picker`](xref:Xamarin.Forms.Picker), allowing the user to specify that item selection occurs when browsing items in the control, or only once the **Done** button is pressed. It's consumed in XAML by setting the `Picker.UpdateMode` attached property to a value of the `UpdateMode` enumeration:
 
 ```xaml
 <ContentPage ...
@@ -365,10 +365,10 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 picker.On<iOS>().SetUpdateMode(UpdateMode.WhenFinished);
 ```
 
-The `Picker.On<iOS>` method specifies that this platform-specific will only run on iOS. The `Picker.SetUpdateMode` method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) namespace, is used to control when item selection occurs, with the `UpdateMode` enumeration providing two possible values:
+The `Picker.On<iOS>` method specifies that this platform-specific will only run on iOS. The `Picker.SetUpdateMode` method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, is used to control when item selection occurs, with the `UpdateMode` enumeration providing two possible values:
 
-- `Immediately` – item selection occurs as the user browses items in the [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/). This is the default behavior in Xamarin.Forms.
-- `WhenFinished` – item selection only occurs once the user has pressed the **Done** button in the [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/).
+- `Immediately` – item selection occurs as the user browses items in the [`Picker`](xref:Xamarin.Forms.Picker). This is the default behavior in Xamarin.Forms.
+- `WhenFinished` – item selection only occurs once the user has pressed the **Done** button in the [`Picker`](xref:Xamarin.Forms.Picker).
 
 In addition, the `SetUpdateMode` method can be used to toggle the enumeration values by calling the `UpdateMode` method, which returns the current `UpdateMode`:
 
@@ -384,7 +384,7 @@ switch (picker.On<iOS>().UpdateMode())
 }
 ```
 
-The result is that a specified `UpdateMode` is applied to the [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/), which controls when item selection occurs:
+The result is that a specified `UpdateMode` is applied to the [`Picker`](xref:Xamarin.Forms.Picker), which controls when item selection occurs:
 
 [![](ios-images/picker-updatemode.png "Picker UpdateMode Platform-Specific")](ios-images/picker-updatemode-large.png#lightbox "Picker UpdateMode Plaform-Specific")
 
@@ -392,7 +392,7 @@ The result is that a specified `UpdateMode` is applied to the [`Picker`](https:/
 
 ## Setting the Status Bar Visibility on a Page
 
-This platform-specific is used to set the visibility of the status bar on a [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/), and it includes the ability to control how the status bar enters or leaves the `Page`. It's consumed in XAML by setting the `Page.PrefersStatusBarHidden` attached property to a value of the `StatusBarHiddenMode` enumeration, and optionally the `Page.PreferredStatusBarUpdateAnimation` attached property to a value of the `UIStatusBarAnimation` enumeration:
+This platform-specific is used to set the visibility of the status bar on a [`Page`](xref:Xamarin.Forms.Page), and it includes the ability to control how the status bar enters or leaves the `Page`. It's consumed in XAML by setting the `Page.PrefersStatusBarHidden` attached property to a value of the `StatusBarHiddenMode` enumeration, and optionally the `Page.PreferredStatusBarUpdateAnimation` attached property to a value of the `UIStatusBarAnimation` enumeration:
 
 ```xaml
 <ContentPage ...
@@ -414,22 +414,22 @@ On<iOS>().SetPrefersStatusBarHidden(StatusBarHiddenMode.True)
          .SetPreferredStatusBarUpdateAnimation(UIStatusBarAnimation.Fade);
 ```
 
-The `Page.On<iOS>` method specifies that this platform-specific will only run on iOS. The `Page.SetPrefersStatusBarHidden` method, in the `Xamarin.Forms.PlatformConfiguration.iOSSpecific` namespace, is used to set the visibility of the status bar on a [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) by specifying one of the `StatusBarHiddenMode` enumeration values: `Default`, `True`, or `False`. The `StatusBarHiddenMode.True` and `StatusBarHiddenMode.False` values set the status bar visibility regardless of device orientation, and the `StatusBarHiddenMode.Default` value hides the status bar in a vertically compact environment.
+The `Page.On<iOS>` method specifies that this platform-specific will only run on iOS. The `Page.SetPrefersStatusBarHidden` method, in the `Xamarin.Forms.PlatformConfiguration.iOSSpecific` namespace, is used to set the visibility of the status bar on a [`Page`](xref:Xamarin.Forms.Page) by specifying one of the `StatusBarHiddenMode` enumeration values: `Default`, `True`, or `False`. The `StatusBarHiddenMode.True` and `StatusBarHiddenMode.False` values set the status bar visibility regardless of device orientation, and the `StatusBarHiddenMode.Default` value hides the status bar in a vertically compact environment.
 
-The result is that the visibility of the status bar on a [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) can be set:
+The result is that the visibility of the status bar on a [`Page`](xref:Xamarin.Forms.Page) can be set:
 
 ![](ios-images/hide-status-bar.png "Status Bar Visibility Platform-Specific")
 
 > [!NOTE]
-> On a [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/), the specified `StatusBarHiddenMode` enumeration value will also update the status bar on all child pages. On all other [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)-derived types, the specified `StatusBarHiddenMode` enumeration value will only update the status bar on the current page.
+> On a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), the specified `StatusBarHiddenMode` enumeration value will also update the status bar on all child pages. On all other [`Page`](xref:Xamarin.Forms.Page)-derived types, the specified `StatusBarHiddenMode` enumeration value will only update the status bar on the current page.
 
-The `Page.SetPreferredStatusBarUpdateAnimation` method is used to set how the status bar enters or leaves the [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) by specifying one of the `UIStatusBarAnimation` enumeration values: `None`, `Fade`, or `Slide`. If the `Fade` or `Slide` enumeration value is specified, a 0.25 second animation executes as the status bar enters or leaves the `Page`.
+The `Page.SetPreferredStatusBarUpdateAnimation` method is used to set how the status bar enters or leaves the [`Page`](xref:Xamarin.Forms.Page) by specifying one of the `UIStatusBarAnimation` enumeration values: `None`, `Fade`, or `Slide`. If the `Fade` or `Slide` enumeration value is specified, a 0.25 second animation executes as the status bar enters or leaves the `Page`.
 
 <a name="delay_content_touches" />
 
 ## Delaying Content Touches in a ScrollView
 
-An implicit timer is triggered when a touch gesture begins in a [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) on iOS and the `ScrollView` decides, based on the user action within the timer span, whether it should handle the gesture or pass it to its content. By default, the iOS `ScrollView` delays content touches, but this can cause problems in some circumstances with the `ScrollView` content not winning the gesture when it should. Therefore, this platform-specific controls whether a `ScrollView` handles a touch gesture or passes it to its content. It's consumed in XAML by setting the `ScrollView.ShouldDelayContentTouches` attached property to a `boolean` value:
+An implicit timer is triggered when a touch gesture begins in a [`ScrollView`](xref:Xamarin.Forms.ScrollView) on iOS and the `ScrollView` decides, based on the user action within the timer span, whether it should handle the gesture or pass it to its content. By default, the iOS `ScrollView` delays content touches, but this can cause problems in some circumstances with the `ScrollView` content not winning the gesture when it should. Therefore, this platform-specific controls whether a `ScrollView` handles a touch gesture or passes it to its content. It's consumed in XAML by setting the `ScrollView.ShouldDelayContentTouches` attached property to a `boolean` value:
 
 ```xaml
 <MasterDetailPage ...
@@ -460,13 +460,13 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 scrollView.On<iOS>().SetShouldDelayContentTouches(false);
 ```
 
-The `ScrollView.On<iOS>` method specifies that this platform-specific will only run on iOS. The `ScrollView.SetShouldDelayContentTouches` method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) namespace, is used to control whether a [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) handles a touch gesture or passes it to its content. In addition, the `SetShouldDelayContentTouches` method can be used to toggle delaying content touches by calling the `ShouldDelayContentTouches` method to return whether content touches are delayed:
+The `ScrollView.On<iOS>` method specifies that this platform-specific will only run on iOS. The `ScrollView.SetShouldDelayContentTouches` method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, is used to control whether a [`ScrollView`](xref:Xamarin.Forms.ScrollView) handles a touch gesture or passes it to its content. In addition, the `SetShouldDelayContentTouches` method can be used to toggle delaying content touches by calling the `ShouldDelayContentTouches` method to return whether content touches are delayed:
 
 ```csharp
 scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDelayContentTouches());
 ```
 
-The result is that a [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) can disable delaying receiving content touches, so that in this scenario the [`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) receives the gesture rather than the [`Detail`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) page of the [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/):
+The result is that a [`ScrollView`](xref:Xamarin.Forms.ScrollView) can disable delaying receiving content touches, so that in this scenario the [`Slider`](xref:Xamarin.Forms.Slider) receives the gesture rather than the [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) page of the [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage):
 
 [![](ios-images/scrollview-delay-content-touches.png "ScrollView Delay Content Touches Platform-Specific")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Plaform-Specific")
 
@@ -647,4 +647,4 @@ This article demonstrated how to consume the iOS platform-specifics that are bui
 
 - [Creating Platform-Specifics](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
-- [iOSSpecific](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/)
+- [iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

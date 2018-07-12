@@ -13,13 +13,13 @@ ms.date: 07/10/2018
 
 _Use a Slider for selecting from a range of continuous values._
 
-The Xamarin.Forms [`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) is a horizontal bar that can be manipulated by the user to select a `double` value from a continuous range.
+The Xamarin.Forms [`Slider`](xref:Xamarin.Forms.Slider) is a horizontal bar that can be manipulated by the user to select a `double` value from a continuous range.
 
 The `Slider` defines three properties of type `double`:
 
-- [`Minimum`](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Minimum/) is the minimum of the range, with a default value of 0.
-- [`Maximum`](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Maximum/) is the maximum of the range, with a default value of 1.
-- [`Value`](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Value/) is the slider's value, which can range between `Minimum` and `Maximum` and has a default value of 0.
+- [`Minimum`](xref:Xamarin.Forms.Slider.Minimum) is the minimum of the range, with a default value of 0.
+- [`Maximum`](xref:Xamarin.Forms.Slider.Maximum) is the maximum of the range, with a default value of 1.
+- [`Value`](xref:Xamarin.Forms.Slider.Value) is the slider's value, which can range between `Minimum` and `Maximum` and has a default value of 0.
 
 All three properties are backed by `BindableProperty` objects. The `Value` property has a default binding mode of `BindingMode.TwoWay`, which means that it's suitable as a binding source in an application that uses the [Model-View-ViewModel (MVVM)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) architecture.
 
@@ -28,9 +28,9 @@ All three properties are backed by `BindableProperty` objects. The `Value` prope
 
 The `Slider` coerces the `Value` property so that it is between `Minimum` and `Maximum`, inclusive. If the `Minimum` property is set to a value greater than the `Value` property, the `Slider` sets the `Value` property to `Minimum`. Similarly, if `Maximum` is set to a value less than `Value`, then `Slider` sets the `Value` property to `Maximum`.
 
-`Slider` defines a [`ValueChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.Slider.ValueChanged/) event that is fired when the `Value` changes, either through user manipulation of the `Slider` or when the program sets the `Value` property directly. A `ValueChanged` event is also fired when the `Value` property is coerced as described in the previous paragraph.
+`Slider` defines a [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) event that is fired when the `Value` changes, either through user manipulation of the `Slider` or when the program sets the `Value` property directly. A `ValueChanged` event is also fired when the `Value` property is coerced as described in the previous paragraph.
 
-The [`ValueChangedEventArgs`](https://developer.xamarin.com/api/type/Xamarin.Forms.ValueChangedEventArgs/) object that accompanies the `ValueChanged` event has two properties, both of type `double`: [`OldValue`](https://developer.xamarin.com/api/property/Xamarin.Forms.ValueChangedEventArgs.OldValue/) and [`NewValue`](https://developer.xamarin.com/api/property/Xamarin.Forms.ValueChangedEventArgs.NewValue/). At the time the event is fired, the value of `NewValue` is the same as the `Value` property of the `Slider` object.
+The [`ValueChangedEventArgs`](xref:Xamarin.Forms.ValueChangedEventArgs) object that accompanies the `ValueChanged` event has two properties, both of type `double`: [`OldValue`](xref:Xamarin.Forms.ValueChangedEventArgs.OldValue) and [`NewValue`](xref:Xamarin.Forms.ValueChangedEventArgs.NewValue). At the time the event is fired, the value of `NewValue` is the same as the `Value` property of the `Slider` object.
 
 > [!WARNING]
 > Do not use unconstrained horizontal layout options of `Center`, `Start`, or `End` with `Slider`. On both Android and the UWP, the `Slider` collapses to a bar of zero length, and on iOS, the bar is very short. Keep the default `HorizontalOptions` setting of `Fill`, and don't use a width of `Auto` when putting `Slider` in a `Grid` layout.
@@ -503,4 +503,4 @@ The `StringFormat` component of the `Binding` markup extension is set for a form
 ## Related Links
 
 - [Slider Demos sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos)
-- [Slider API](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/)
+- [Slider API](xref:Xamarin.Forms.Slider)

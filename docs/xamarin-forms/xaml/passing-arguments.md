@@ -43,7 +43,7 @@ Arguments can be passed to a non-default constructor using the `x:Arguments` att
 - `x:Array`
 - `x:DateTime`
 
-The following code example demonstrates using the `x:Arguments` attribute with three [`Color`](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) constructors:
+The following code example demonstrates using the `x:Arguments` attribute with three [`Color`](xref:Xamarin.Forms.Color) constructors:
 
 ```xaml
 <BoxView HeightRequest="150" WidthRequest="150" HorizontalOptions="Center">
@@ -80,9 +80,9 @@ The following code example demonstrates using the `x:Arguments` attribute with t
 </BoxView>
 ```
 
-The number of elements within the `x:Arguments` tag, and the types of these elements, must match one of the [`Color`](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) constructors. The `Color` [constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/) with a single parameter requires a grayscale value from 0 (black) to 1 (white). The `Color` [constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/System.Double/System.Double/) with three parameters requires a red, green, and blue value ranging from 0 to 1. The `Color` [constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/System.Double/System.Double/System.Double/) with four parameters adds an alpha channel as the fourth parameter.
+The number of elements within the `x:Arguments` tag, and the types of these elements, must match one of the [`Color`](xref:Xamarin.Forms.Color) constructors. The `Color` [constructor](xref:Xamarin.Forms.Color.%23ctor(System.Double)) with a single parameter requires a grayscale value from 0 (black) to 1 (white). The `Color` [constructor](xref:Xamarin.Forms.Color.%23ctor(System.Double,System.Double,System.Double)) with three parameters requires a red, green, and blue value ranging from 0 to 1. The `Color` [constructor](xref:Xamarin.Forms.Color.%23ctor(System.Double,System.Double,System.Double,System.Double)) with four parameters adds an alpha channel as the fourth parameter.
 
-The following screenshots show the result of calling each [`Color`](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) constructor with the specified argument values:
+The following screenshots show the result of calling each [`Color`](xref:Xamarin.Forms.Color) constructor with the specified argument values:
 
 ![](passing-arguments-images/passing-arguments.png "BoxView.Color specified with x:Arguments")
 
@@ -92,7 +92,7 @@ The following screenshots show the result of calling each [`Color`](https://deve
 
 Factory methods can be called in XAML by specifying the method's name using the `x:FactoryMethod` attribute, and its arguments using the `x:Arguments` attribute. A factory method is a `public static` method that returns objects or values of the same type as the class or structure that defines the methods.
 
-The [`Color`](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) structure defines a number of factory methods, and the following code example demonstrates calling three of them:
+The [`Color`](xref:Xamarin.Forms.Color) structure defines a number of factory methods, and the following code example demonstrates calling three of them:
 
 ```xaml
 <BoxView HeightRequest="150" WidthRequest="150" HorizontalOptions="Center">
@@ -130,9 +130,9 @@ The [`Color`](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) struc
 </BoxView>
 ```
 
-The number of elements within the `x:Arguments` tag, and the types of these elements, must match the arguments of the factory method being called. The [`FromRgba`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/) factory method requires four [`Int32`](https://docs.microsoft.com/dotnet/api/system.int32) parameters, which represent the red, green, blue, and alpha values, ranging from 0 to 255 respectively. The [`FromHsla`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/) factory method requires four [`Double`](https://docs.microsoft.com/dotnet/api/system.double) parameters, which represent the hue, saturation, luminosity, and alpha values, ranging from 0 to 1 respectively. The [`FromHex`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/) factory method requires a [`String`](https://docs.microsoft.com/dotnet/api/system.string) that represents the hexadecimal (A)RGB color.
+The number of elements within the `x:Arguments` tag, and the types of these elements, must match the arguments of the factory method being called. The [`FromRgba`](xref:Xamarin.Forms.Color.FromRgba(System.Int32,System.Int32,System.Int32,System.Int32)) factory method requires four [`Int32`](https://docs.microsoft.com/dotnet/api/system.int32) parameters, which represent the red, green, blue, and alpha values, ranging from 0 to 255 respectively. The [`FromHsla`](xref:Xamarin.Forms.Color.FromHsla(System.Double,System.Double,System.Double,System.Double)) factory method requires four [`Double`](https://docs.microsoft.com/dotnet/api/system.double) parameters, which represent the hue, saturation, luminosity, and alpha values, ranging from 0 to 1 respectively. The [`FromHex`](xref:Xamarin.Forms.Color.FromHex(System.String)) factory method requires a [`String`](https://docs.microsoft.com/dotnet/api/system.string) that represents the hexadecimal (A)RGB color.
 
-The following screenshots show the result of calling each [`Color`](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) factory method with the specified argument values:
+The following screenshots show the result of calling each [`Color`](xref:Xamarin.Forms.Color) factory method with the specified argument values:
 
 ![](passing-arguments-images/factory-methods.png "BoxView.Color specified with x:FactoryMethod and x:Arguments")
 
@@ -156,7 +156,7 @@ Generic type arguments for the constructor of a generic type can be specified us
 </ContentPage>
 ```
 
-The [`OnPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) class is a generic class and must be instantiated with an `x:TypeArguments` attribute that matches the target type. In the [`On`](https://developer.xamarin.com/api/type/Xamarin.Forms.On/) class, the [`Platform`](https://developer.xamarin.com/api/property/Xamarin.Forms.On.Platform/) attribute can accept a single `string` value, or multiple comma-delimited `string` values. In this example, the [`StackLayout.Margin`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) property is set to a platform-specific [`Thickness`](https://developer.xamarin.com/api/type/Xamarin.Forms.Thickness/).
+The [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) class is a generic class and must be instantiated with an `x:TypeArguments` attribute that matches the target type. In the [`On`](xref:Xamarin.Forms.On) class, the [`Platform`](xref:Xamarin.Forms.On.Platform) attribute can accept a single `string` value, or multiple comma-delimited `string` values. In this example, the [`StackLayout.Margin`](xref:Xamarin.Forms.View.Margin) property is set to a platform-specific [`Thickness`](xref:Xamarin.Forms.Thickness).
 
 ## Summary
 

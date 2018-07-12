@@ -13,7 +13,7 @@ ms.date: 03/06/2017
 
 ## Overview
 
-[`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) allows apps to call into platform-specific functionality from shared code. This functionality enables Xamarin.Forms apps to do anything that a native app can do.
+[`DependencyService`](xref:Xamarin.Forms.DependencyService) allows apps to call into platform-specific functionality from shared code. This functionality enables Xamarin.Forms apps to do anything that a native app can do.
 
 `DependencyService` is a dependency resolver. In practice, an interface is defined and `DependencyService` finds the correct implementation of that interface from the various platform projects.
 

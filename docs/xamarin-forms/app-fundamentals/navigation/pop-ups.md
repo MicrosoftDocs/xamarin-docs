@@ -13,11 +13,11 @@ ms.date: 12/01/2017
 
 _Xamarin.Forms provides two pop-up-like user interface elements – an alert and an action sheet. This article demonstrates using the alert and action sheet APIs to ask users simple questions and to guide users through tasks._
 
-Displaying an alert or asking a user to make a choice is a common UI task. Xamarin.Forms has two methods on the [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) class for interacting with the user via a pop-up: [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)/) and [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/). They are rendered with appropriate native controls on each platform.
+Displaying an alert or asking a user to make a choice is a common UI task. Xamarin.Forms has two methods on the [`Page`](xref:Xamarin.Forms.Page) class for interacting with the user via a pop-up: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) and [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*). They are rendered with appropriate native controls on each platform.
 
 ## Displaying an Alert
 
-All Xamarin.Forms-supported platforms have a modal pop-up to alert the user or ask simple questions of them. To display these alerts in Xamarin.Forms, use the [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)/) method on any [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/). The following line of code shows a simple message to the user:
+All Xamarin.Forms-supported platforms have a modal pop-up to alert the user or ask simple questions of them. To display these alerts in Xamarin.Forms, use the [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) method on any [`Page`](xref:Xamarin.Forms.Page). The following line of code shows a simple message to the user:
 
 ```csharp
 DisplayAlert ("Alert", "You have been alerted", "OK");
@@ -27,7 +27,7 @@ DisplayAlert ("Alert", "You have been alerted", "OK");
 
 This example does not collect information from the user. The alert displays modally and once dismissed the user continues interacting with the application.
 
-The [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)/) method can also be used to capture a user's response by presenting two buttons and returning a `boolean`. To get a response from an alert, supply text for both buttons and `await` the method. After the user selects one of the options the answer will be returned to your code. Note the `async` and `await` keywords in the sample code below:
+The [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) method can also be used to capture a user's response by presenting two buttons and returning a `boolean`. To get a response from an alert, supply text for both buttons and `await` the method. After the user selects one of the options the answer will be returned to your code. Note the `async` and `await` keywords in the sample code below:
 
 ```csharp
 async void OnAlertYesNoClicked (object sender, EventArgs e)
@@ -41,9 +41,9 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 ## Guiding Users Through Tasks
 
-The [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) is a common UI element in iOS. The Xamarin.Forms [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) method lets you include this control in cross-platforms apps, rendering native alternatives in Android and UWP.
+The [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) is a common UI element in iOS. The Xamarin.Forms [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) method lets you include this control in cross-platforms apps, rendering native alternatives in Android and UWP.
 
-To display an action sheet, `await` [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) in any [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/), passing the message and button labels as strings. The method returns the string label of the button that was clicked by the user. A simple example is shown here:
+To display an action sheet, `await` [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) in any [`Page`](xref:Xamarin.Forms.Page), passing the message and button labels as strings. The method returns the string label of the button that was clicked by the user. A simple example is shown here:
 
 ```csharp
 async void OnActionSheetSimpleClicked (object sender, EventArgs e)
@@ -69,7 +69,7 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 
 ## Summary
 
-This article demonstrated using the alert and action sheet APIs to ask users simple questions and to guide users through tasks. Xamarin.Forms has two methods on the [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) class for interacting with the user via a pop-up: [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)/) and [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/), and they are both rendered with appropriate native controls on each platform.
+This article demonstrated using the alert and action sheet APIs to ask users simple questions and to guide users through tasks. Xamarin.Forms has two methods on the [`Page`](xref:Xamarin.Forms.Page) class for interacting with the user via a pop-up: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) and [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*), and they are both rendered with appropriate native controls on each platform.
 
 
 

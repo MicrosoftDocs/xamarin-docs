@@ -17,7 +17,7 @@ The support of bitmaps in SkiaSharp is quite extensive. This article covers only
 
 ![](bitmaps-images/bitmapssample.png "The display of two bitmaps")
 
-A SkiaSharp bitmap is an object of type [`SKBitmap`](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/). There are many ways to create a bitmap but this article restricts itself to the [`SKBitmap.Decode`](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/SkiaSharp.SKStream/) method, which loads the bitmap from an [`SKStream`](https://developer.xamarin.com/api/type/SkiaSharp.SKStream/) object that references a bitmap file. It is convenient to use the [`SKManagedStream`](https://developer.xamarin.com/api/type/SkiaSharp.SKManagedStream/) class that derives from `SKStream` because it has a constructor that accepts a .NET [`Stream`](https://developer.xamarin.com/api/type/System.IO.Stream/) object.
+A SkiaSharp bitmap is an object of type [`SKBitmap`](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/). There are many ways to create a bitmap but this article restricts itself to the [`SKBitmap.Decode`](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/SkiaSharp.SKStream/) method, which loads the bitmap from an [`SKStream`](https://developer.xamarin.com/api/type/SkiaSharp.SKStream/) object that references a bitmap file. It is convenient to use the [`SKManagedStream`](https://developer.xamarin.com/api/type/SkiaSharp.SKManagedStream/) class that derives from `SKStream` because it has a constructor that accepts a .NET [`Stream`](xref:System.IO.Stream) object.
 
 The **Basic Bitmaps** page in the **SkiaSharpFormsDemos** program demonstrates how to load bitmaps from three different sources:
 
@@ -50,7 +50,7 @@ public class BasicBitmapsPage : ContentPage
 
 ## Loading a Bitmap from the Web
 
-To load a bitmap based on a URL, you can use the [`WebRequest`](https://developer.xamarin.com/api/type/System.Net.WebRequest/) class, as shown in the following code executed in the `BasicBitmapsPage` constructor. The URL here points to an area on the Xamarin web site with some sample bitmaps. A package on the web site allows appending a specification for resizing the bitmap to a particular width:
+To load a bitmap based on a URL, you can use the [`WebRequest`](xref:System.Net.WebRequest) class, as shown in the following code executed in the `BasicBitmapsPage` constructor. The URL here points to an area on the Xamarin web site with some sample bitmaps. A package on the web site allows appending a specification for resizing the bitmap to a particular width:
 
 ```csharp
 Uri uri = new Uri("http://developer.xamarin.com/demo/IMG_3256.JPG?width=480");
@@ -88,7 +88,7 @@ The callback method passed to `BeginGetResponse` runs after the constructor has 
 
 In terms of code, the easiest approach to loading bitmaps is including a bitmap resource directly in your application. The **SkiaSharpFormsDemos** program includes a folder named **Media** containing a bitmap file named **monkey.png**. In the **Properties** dialog for this file, you must give such a file a **Build Action** of **Embedded Resource**!
 
-Each embedded resource has a *resource ID* that consists of the project name, the folder, and the filename, all connected by periods: **SkiaSharpFormsDemos.Media.monkey.png**. You can get access to this resource by specifying that resource ID as an argument to the [`GetManifestResourceStream`](https://developer.xamarin.com/api/member/System.Reflection.Assembly.GetManifestResourceStream/p/System.String/) method of the [`Assembly`](https://developer.xamarin.com/api/type/System.Reflection.Assembly/) class:
+Each embedded resource has a *resource ID* that consists of the project name, the folder, and the filename, all connected by periods: **SkiaSharpFormsDemos.Media.monkey.png**. You can get access to this resource by specifying that resource ID as an argument to the [`GetManifestResourceStream`](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) method of the [`Assembly`](xref:System.Reflection.Assembly) class:
 
 ```csharp
 string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";

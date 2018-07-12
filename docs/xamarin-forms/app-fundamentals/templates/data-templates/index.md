@@ -19,11 +19,11 @@ Xamarin.Forms data templates provide the ability to define the presentation of d
 
 ## [Creating a DataTemplate](creating.md)
 
-Data templates can be created inline, in a [`ResourceDictionary`](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), or from a custom type or appropriate Xamarin.Forms cell type. An inline template should be used if there's no need to reuse the data template elsewhere. Alternatively, a data template can be reused by defining it as a custom type, or as a control-level, page-level, or application-level resource.
+Data templates can be created inline, in a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), or from a custom type or appropriate Xamarin.Forms cell type. An inline template should be used if there's no need to reuse the data template elsewhere. Alternatively, a data template can be reused by defining it as a custom type, or as a control-level, page-level, or application-level resource.
 
 ## [Creating a DataTemplateSelector](selector.md)
 
-A [`DataTemplateSelector`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) can be used to choose a [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) at runtime based on the value of a data-bound property. This enables multiple `DataTemplate` instances to be applied to the same type of object, to customize the appearance of particular objects. This article demonstrates how to create and consume a `DataTemplateSelector`.
+A [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) can be used to choose a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) at runtime based on the value of a data-bound property. This enables multiple `DataTemplate` instances to be applied to the same type of object, to customize the appearance of particular objects. This article demonstrates how to create and consume a `DataTemplateSelector`.
 
 
 ## Related Links

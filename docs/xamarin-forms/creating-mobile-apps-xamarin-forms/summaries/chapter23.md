@@ -15,38 +15,38 @@ Triggers and behaviors are similar, in that they are both intended to be used in
 
 To support triggers and behaviors, both `VisualElement` and `Style` support two collection properties:
 
-- [`VisualElement.Triggers`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Triggers/) and [`Style.Triggers`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.Triggers/) of type `IList<TriggerBase>`
-- [`VisualElement.Behaviors`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Behaviors/) and [`Style.Behaviors`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.Behaviors/) of type `IList<Behavior>`
+- [`VisualElement.Triggers`](xref:Xamarin.Forms.VisualElement.Triggers) and [`Style.Triggers`](xref:Xamarin.Forms.Style.Triggers) of type `IList<TriggerBase>`
+- [`VisualElement.Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) and [`Style.Behaviors`](xref:Xamarin.Forms.Style.Behaviors) of type `IList<Behavior>`
 
 ## Triggers
 
-A trigger is a condition (a property change or the firing of an event) that results in a response (another property change or running some code). The `Triggers` property of `VisualElement` and `Style` is of type `IList<TriggersBase>`. [`TriggerBase`](https://developer.xamarin.com/api/type/Xamarin.Forms.TriggerBase/) is an abstract class from which four sealed classes derive:
+A trigger is a condition (a property change or the firing of an event) that results in a response (another property change or running some code). The `Triggers` property of `VisualElement` and `Style` is of type `IList<TriggersBase>`. [`TriggerBase`](xref:Xamarin.Forms.TriggerBase) is an abstract class from which four sealed classes derive:
 
-- [`Trigger`](https://developer.xamarin.com/api/type/Xamarin.Forms.Trigger/) for responses based on property changes
-- [`EventTrigger`](https://developer.xamarin.com/api/type/Xamarin.Forms.EventTrigger/) for responses based on event firings
-- [`DataTrigger`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTrigger/) for responses based on data bindings
-- [`MultiTrigger`](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiTrigger/) for responses based on multiple triggers
+- [`Trigger`](xref:Xamarin.Forms.Trigger) for responses based on property changes
+- [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) for responses based on event firings
+- [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) for responses based on data bindings
+- [`MultiTrigger`](xref:Xamarin.Forms.MultiTrigger) for responses based on multiple triggers
 
 The trigger is always set on the element whose property is being changed by the trigger.
 
 ### The simplest trigger
 
-The [`Trigger`](https://developer.xamarin.com/api/type/Xamarin.Forms.Trigger/) class checks for a change of a property value and responds by setting another property of the same element.
+The [`Trigger`](xref:Xamarin.Forms.Trigger) class checks for a change of a property value and responds by setting another property of the same element.
 
 `Trigger` defines three properties:
 
-- [`Property`](https://developer.xamarin.com/api/property/Xamarin.Forms.Trigger.Property/) of type `BindableProperty`
-- [`Value`](https://developer.xamarin.com/api/property/Xamarin.Forms.Trigger.Value/) of type `Object`
-- [`Setters`](https://developer.xamarin.com/api/property/Xamarin.Forms.Trigger.Setters/) of type `IList<SetterBase>`, the content property of `Trigger`
+- [`Property`](xref:Xamarin.Forms.Trigger.Property) of type `BindableProperty`
+- [`Value`](xref:Xamarin.Forms.Trigger.Value) of type `Object`
+- [`Setters`](xref:Xamarin.Forms.Trigger.Setters) of type `IList<SetterBase>`, the content property of `Trigger`
 
 In addition, `Trigger` requires that the following property inherited from `TriggerBase` be set:
 
-- [`TargetType`](https://developer.xamarin.com/api/property/Xamarin.Forms.TriggerBase.TargetType/) to indicate the type of the element on which the `Trigger` is attached
+- [`TargetType`](xref:Xamarin.Forms.TriggerBase.TargetType) to indicate the type of the element on which the `Trigger` is attached
 
 The `Property` and `Value` comprise the condition, and the `Setters` collection is the response. When the indicated `Property` has the value indicated by `Value`, then the `Setter` objects in the `Setters` collection are applied. When the `Property` has a different value, the setters are removed. `Setter` defines two properties that are the same as the first two properties of `Trigger`:
 
-- [`Property`](https://developer.xamarin.com/api/property/Xamarin.Forms.Setter.Property/) of type `BindableProperty`
-- [`Value`](https://developer.xamarin.com/api/property/Xamarin.Forms.Setter.Value/) of type `Object`
+- [`Property`](xref:Xamarin.Forms.Setter.Property) of type `BindableProperty`
+- [`Value`](xref:Xamarin.Forms.Setter.Value) of type `Object`
 
 The [**EntryPop**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EntryPop) sample demonstrates how a `Trigger` applied to an `Entry` can increase the size of the `Entry` via the `Scale` property when the `IsFocused` property of the `Entry` is `true`.
 
@@ -56,12 +56,12 @@ The [**StyledTriggers**](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 ### Trigger actions and animations
 
-It is also possible to run a little code based on a trigger. This code can be an animation that targets a property. One common way is to use an [`EventTrigger`](https://developer.xamarin.com/api/type/Xamarin.Forms.EventTrigger/), which defines two properties:
+It is also possible to run a little code based on a trigger. This code can be an animation that targets a property. One common way is to use an [`EventTrigger`](xref:Xamarin.Forms.EventTrigger), which defines two properties:
 
-- [`Event`](https://developer.xamarin.com/api/property/Xamarin.Forms.EventTrigger.Event/) of type `string`, the name of an event
-- [`Actions`](https://developer.xamarin.com/api/property/Xamarin.Forms.EventTrigger.Actions/) of type `IList<TriggerAction>`, a list of actions to run in response.
+- [`Event`](xref:Xamarin.Forms.EventTrigger.Event) of type `string`, the name of an event
+- [`Actions`](xref:Xamarin.Forms.EventTrigger.Actions) of type `IList<TriggerAction>`, a list of actions to run in response.
 
-To use this, you need to write a class that derives from [`TriggerAction<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.TriggerAction%3CT%3E/), generally `TriggerAction<VisualElement>`. You can define properties in this class. These are plain CLR properties rather than bindable properties because `TriggerAction` doesn't derive from `BindableObject`. You must override the [`Invoke`](https://developer.xamarin.com/api/member/Xamarin.Forms.TriggerAction%3CT%3E.Invoke/p/T/) method that is called when the action is invoked. The argument is the target element.
+To use this, you need to write a class that derives from [`TriggerAction<T>`](xref:Xamarin.Forms.TriggerAction`1), generally `TriggerAction<VisualElement>`. You can define properties in this class. These are plain CLR properties rather than bindable properties because `TriggerAction` doesn't derive from `BindableObject`. You must override the [`Invoke`](xref:Xamarin.Forms.TriggerAction`1.Invoke*) method that is called when the action is invoked. The argument is the target element.
 
 The [`ScaleAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ScaleAction.cs) class in the [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) library is an example. It calls the `ScaleTo` property to animate the `Scale` property of an element. Because one of its properties is of type `Easing`, the [`EasingConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/EasingConverter.cs) class lets you use the standard `Easing` static fields in XAML.
 
@@ -71,8 +71,8 @@ The [**CustomEasingSwell**](https://github.com/xamarin/xamarin-forms-book-sample
 
 You can also invoke actions using a `Trigger` (as distinguished from `EventTrigger`). This requires that you are aware that `TriggerBase` defines two collections:
 
-- [`EnterActions`](https://developer.xamarin.com/api/property/Xamarin.Forms.TriggerBase.EnterActions/) of type `IList<TriggerAction>`
-- [`ExitActions`](https://developer.xamarin.com/api/property/Xamarin.Forms.TriggerBase.ExitActions/) of type `IList<TriggerAction>`
+- [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) of type `IList<TriggerAction>`
+- [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) of type `IList<TriggerAction>`
 
 The [**EnterExitSwell**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EnterExitSwell) sample demonstrates how to use these collections.
 
@@ -89,13 +89,13 @@ The [`NumericValidationAction`](https://github.com/xamarin/xamarin-forms-book-sa
 
 ### Data triggers
 
-The [`DataTrigger`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTrigger/) is similar to the `Trigger` except that instead of monitoring a property for value changes, it monitors a data binding. This allows a property in one element to affect a property in another element.
+The [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) is similar to the `Trigger` except that instead of monitoring a property for value changes, it monitors a data binding. This allows a property in one element to affect a property in another element.
 
 `DataTrigger` defines three properties:
 
-- [`Binding`](https://developer.xamarin.com/api/property/Xamarin.Forms.DataTrigger.Binding/) of type `BindingBase`
-- [`Value`](https://developer.xamarin.com/api/property/Xamarin.Forms.DataTrigger.Value/) of type `Object`
-- [`Setters`](https://developer.xamarin.com/api/property/Xamarin.Forms.DataTrigger.Setters/) of type `IList<SetterBase>`
+- [`Binding`](xref:Xamarin.Forms.DataTrigger.Binding) of type `BindingBase`
+- [`Value`](xref:Xamarin.Forms.DataTrigger.Value) of type `Object`
+- [`Setters`](xref:Xamarin.Forms.DataTrigger.Setters) of type `IList<SetterBase>`
 
 The [**GenderColors**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/GenderColors) sample requires the [**SchoolOfFineArt**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/SchoolOfFineArt) library and sets the colors of the names of the students to blue or pink based on the `Sex` property:
 
@@ -105,15 +105,15 @@ The [**ButtonEnabler**](https://github.com/xamarin/xamarin-forms-book-samples/tr
 
 ### Combining conditions in the MultiTrigger
 
-The [`MultiTrigger`](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiTrigger/) is a collection of conditions. When they are all `true`, then setters are applied. The class defines two properties:
+The [`MultiTrigger`](xref:Xamarin.Forms.MultiTrigger) is a collection of conditions. When they are all `true`, then setters are applied. The class defines two properties:
 
-- [`Conditions`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiTrigger.Conditions/) of type `IList<Condition>`
-- [`Setters`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiTrigger.Setters/) of type `IList<Setter>`
+- [`Conditions`](xref:Xamarin.Forms.MultiTrigger.Conditions) of type `IList<Condition>`
+- [`Setters`](xref:Xamarin.Forms.MultiTrigger.Setters) of type `IList<Setter>`
 
-[`Condition`](https://developer.xamarin.com/api/type/Xamarin.Forms.Condition/) is an abstract class and has two descendent classes:
+[`Condition`](xref:Xamarin.Forms.Condition) is an abstract class and has two descendent classes:
 
-- [`PropertyCondition`](https://developer.xamarin.com/api/type/Xamarin.Forms.Condition/), which has [`Property`](https://developer.xamarin.com/api/property/Xamarin.Forms.PropertyCondition.Property/) and [`Value`](https://developer.xamarin.com/api/property/Xamarin.Forms.PropertyCondition.Value/) properties like `Trigger`
-- [`BindingCondition`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingCondition/), which has [`Binding`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindingCondition.Binding/) and [`Value`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindingCondition.Value/) properties like `DataTrigger`
+- [`PropertyCondition`](xref:Xamarin.Forms.Condition), which has [`Property`](xref:Xamarin.Forms.PropertyCondition.Property) and [`Value`](xref:Xamarin.Forms.PropertyCondition.Value) properties like `Trigger`
+- [`BindingCondition`](xref:Xamarin.Forms.BindingCondition), which has [`Binding`](xref:Xamarin.Forms.BindingCondition.Binding) and [`Value`](xref:Xamarin.Forms.BindingCondition.Value) properties like `DataTrigger`
 
 In the [**AndConditions**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/AndConditions) sample, a `BoxView` is only colored when four `Switch` elements are all turned on.
 
@@ -124,10 +124,10 @@ Combining AND and OR logic is not so easy and generally requires invisible `Swit
 
 ## Behaviors
 
-Anything you can do with a trigger, you can also do with a behavior, but behaviors always require a class that derives from [`Behavior<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/) and overrides the following two methods:
+Anything you can do with a trigger, you can also do with a behavior, but behaviors always require a class that derives from [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) and overrides the following two methods:
 
-- [`OnAttachedTo`](https://developer.xamarin.com/api/member/Xamarin.Forms.Behavior%3CT%3E.OnAttachedTo/p/T/)
-- [`OnDetachingFrom`](https://developer.xamarin.com/api/member/Xamarin.Forms.Behavior%3CT%3E.OnDetachingFrom/p/T/)
+- [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo*)
+- [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom*)
 
 The argument is the element that the behavior is attached to. Generally, the `OnAttachedTo` method attaches some event handlers, and `OnDetachingFrom` detaches them. Because such a class usually saves some state, it generally cannot be shared in a `Style`.
 

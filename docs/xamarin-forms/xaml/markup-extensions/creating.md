@@ -11,7 +11,7 @@ ms.date: 01/05/2018
 
 # Creating XAML Markup Extensions
 
-On the programmatic level, a XAML markup extension is a class that implements the [`IMarkupExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension/) or [`IMarkupExtension<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension%3CT%3E/) interface. You can explore the source code of the standard markup extensions described below in the [**MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) of the Xamarin.Forms GitHub repository.
+On the programmatic level, a XAML markup extension is a class that implements the [`IMarkupExtension`](xref:Xamarin.Forms.Xaml.IMarkupExtension) or [`IMarkupExtension<T>`](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) interface. You can explore the source code of the standard markup extensions described below in the [**MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) of the Xamarin.Forms GitHub repository.
 
 It's also possible to define your own custom XAML markup extensions by deriving from `IMarkupExtension` or `IMarkupExtension<T>`. Use the generic form if the markup extension obtains a value of a particular type. This is the case with several of the Xamarin.Forms markup extensions:
 
@@ -116,7 +116,7 @@ Notice that when `HslColorExtension` is an XML tag, the four properties are set 
 
 ## A Markup Extension for Accessing Bitmaps
 
-The argument to `ProvideValue` is an object that implements the [`IServiceProvider`](https://developer.xamarin.com/api/type/System.IServiceProvider/) interface, which is defined in the .NET `System` namespace. This interface has one member, a method named `GetService` with a `Type` argument.
+The argument to `ProvideValue` is an object that implements the [`IServiceProvider`](xref:System.IServiceProvider) interface, which is defined in the .NET `System` namespace. This interface has one member, a method named `GetService` with a `Type` argument.
 
 The `ImageResourceExtension` class shown below shows one possible use of `IServiceProvider` and `GetService` to obtain an `IXmlLineInfoProvider` object that can provide line and character information indicating where a particular error was detected. In this case, an exception is raised when the `Source` property has not been set:
 

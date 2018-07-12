@@ -19,11 +19,11 @@ In addition to methods and properties to target code at specific hardware types 
 
 ## Providing Platform-Specific Values
 
-Prior to Xamarin.Forms 2.3.4, the platform the application was running on could be obtained by examining the [`Device.OS`](xref:Xamarin.Forms.Device.OS) property and comparing it to the [`TargetPlatform.iOS`](xref:Xamarin.Forms.TargetPlatform.iOS), [`TargetPlatform.Android`](xref:Xamarin.Forms.TargetPlatform.Android), [`TargetPlatform.WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone), and [`TargetPlatform.Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) enumeration values. Similarly, one of the [`Device.OnPlatform`](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) overloads could be used to provide platform-specific values to a control.
+Prior to Xamarin.Forms 2.3.4, the platform the application was running on could be obtained by examining the [`Device.OS`](xref:Xamarin.Forms.Device.OS) property and comparing it to the [`TargetPlatform.iOS`](xref:Xamarin.Forms.TargetPlatform.iOS), [`TargetPlatform.Android`](xref:Xamarin.Forms.TargetPlatform.Android), [`TargetPlatform.WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone), and [`TargetPlatform.Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) enumeration values. Similarly, one of the [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) overloads could be used to provide platform-specific values to a control.
 
-However, since Xamarin.Forms 2.3.4 these APIs have been deprecated and replaced. The [`Device`](xref:Xamarin.Forms.Device) class now contains public string constants that identify platforms – [`Device.iOS`](xref:Xamarin.Forms.Device.iOS), [`Device.Android`](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`(deprecated), `Device.WinRT` (deprecated), [`Device.UWP`](xref:Xamarin.Forms.Device.UWP), and [`Device.macOS`](xref:Xamarin.Forms.Device.macOS). Similarly, the  [`Device.OnPlatform`](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) overloads have been replaced with the [`OnPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) and [`On`](xref:Xamarin.Forms.On) APIs.
+However, since Xamarin.Forms 2.3.4 these APIs have been deprecated and replaced. The [`Device`](xref:Xamarin.Forms.Device) class now contains public string constants that identify platforms – [`Device.iOS`](xref:Xamarin.Forms.Device.iOS), [`Device.Android`](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`(deprecated), `Device.WinRT` (deprecated), [`Device.UWP`](xref:Xamarin.Forms.Device.UWP), and [`Device.macOS`](xref:Xamarin.Forms.Device.macOS). Similarly, the  [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) overloads have been replaced with the [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) and [`On`](xref:Xamarin.Forms.On) APIs.
 
-In C#, platform-specific values can be provided by creating a `switch` statement on the [`Device.RuntimePlatform`](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/) property, and then providing `case` statements for the required platforms:
+In C#, platform-specific values can be provided by creating a `switch` statement on the [`Device.RuntimePlatform`](xref:Xamarin.Forms.Device.RuntimePlatform) property, and then providing `case` statements for the required platforms:
 
 ```csharp
 double top;
@@ -41,7 +41,7 @@ switch (Device.RuntimePlatform)
 layout.Margin = new Thickness(5, top, 5, 0);
 ```
 
-The [`OnPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) and [`On`](xref:Xamarin.Forms.On) classes provide the same functionality in XAML:
+The [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) and [`On`](xref:Xamarin.Forms.On) classes provide the same functionality in XAML:
 
 ```xaml
 <StackLayout>
@@ -55,7 +55,7 @@ The [`OnPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatfo
 </StackLayout>
 ```
 
-The [`OnPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) class is a generic class and so must be instantiated with an `x:TypeArguments` attribute that matches the target type. In the [`On`](xref:Xamarin.Forms.On) class, the [`Platform`](xref:Xamarin.Forms.On.Platform) attribute can accept a single `string` value, or multiple comma-delimited `string` values.
+The [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) class is a generic class and so must be instantiated with an `x:TypeArguments` attribute that matches the target type. In the [`On`](xref:Xamarin.Forms.On) class, the [`Platform`](xref:Xamarin.Forms.On.Platform) attribute can accept a single `string` value, or multiple comma-delimited `string` values.
 
 > [!IMPORTANT]
 > Providing an incorrect `Platform` attribute value in the `On` class will not result in an error. Instead, the code will execute without the platform-specific value being applied.
@@ -168,7 +168,7 @@ If the code inside the timer interacts with the user-interface (such as setting 
 
 ## Device.BeginInvokeOnMainThread
 
-User interface elements should never be accessed by background threads, such as code running in a timer or a completion handler for asynchronous operations like web requests. Any background code that needs to update the user interface should be wrapped inside [`BeginInvokeOnMainThread`](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/). This is the equivalent of `InvokeOnMainThread` on iOS, `RunOnUiThread` on Android, and `Dispatcher.RunAsync` on the Universal Windows Platform.
+User interface elements should never be accessed by background threads, such as code running in a timer or a completion handler for asynchronous operations like web requests. Any background code that needs to update the user interface should be wrapped inside [`BeginInvokeOnMainThread`](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)). This is the equivalent of `InvokeOnMainThread` on iOS, `RunOnUiThread` on Android, and `Dispatcher.RunAsync` on the Universal Windows Platform.
 
 The Xamarin.Forms code is:
 

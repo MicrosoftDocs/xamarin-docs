@@ -25,7 +25,7 @@ public void RotateDegrees (Single degrees)
 public Void RotateRadians (Single radians)
 ```
 
-A circle of 360 degrees is the same as 2π radians, so it's easy to convert between the two units. Use whichever is convenient. All the trigonometric functions in the static [`Math`](https://developer.xamarin.com/api/type/System.Math/) class use units of radians.
+A circle of 360 degrees is the same as 2π radians, so it's easy to convert between the two units. Use whichever is convenient. All the trigonometric functions in the static [`Math`](xref:System.Math) class use units of radians.
 
 Rotation is clockwise for increasing angles. (Although rotation on the Cartesian coordinate system is counter-clockwise by convention, clockwise rotation is consistent with Y coordinates increasing going down.) Negative angles and angles greater than 360 degrees are allowed.
 

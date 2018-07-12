@@ -33,17 +33,17 @@ The following platform-specific functionality is built into Xamarin.Forms:
 
 The process for consuming a platform-specific through XAML, or through the fluent code API is as follows:
 
-1. Add a `xmlns` declaration or `using` directive for the [`Xamarin.Forms.PlatformConfiguration`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration/) namespace.
+1. Add a `xmlns` declaration or `using` directive for the [`Xamarin.Forms.PlatformConfiguration`](xref:Xamarin.Forms.PlatformConfiguration) namespace.
 1. Add a `xmlns` declaration or `using` directive for the namespace that contains the platform-specific functionality:
-    1. On iOS, this is the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) namespace.
-    1. On Android, this is the [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific/) namespace. For Android AppCompat, this is the [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat/) namespace.
-    1. On the Universal Windows Platform, this is the [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.WindowsSpecific/) namespace.
-1. Apply the platform-specific from XAML, or from code with the `On<T>` fluent API. The value of `T` can be the [`iOS`](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.iOS/), [`Android`](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.Android/), or [`Windows`](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.Windows/) types from the [`Xamarin.Forms.PlatformConfiguration`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration/) namespace.
+    1. On iOS, this is the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace.
+    1. On Android, this is the [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) namespace. For Android AppCompat, this is the [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) namespace.
+    1. On the Universal Windows Platform, this is the [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) namespace.
+1. Apply the platform-specific from XAML, or from code with the `On<T>` fluent API. The value of `T` can be the [`iOS`](xref:Xamarin.Forms.PlatformConfiguration.iOS), [`Android`](xref:Xamarin.Forms.PlatformConfiguration.Android), or [`Windows`](xref:Xamarin.Forms.PlatformConfiguration.Windows) types from the [`Xamarin.Forms.PlatformConfiguration`](xref:Xamarin.Forms.PlatformConfiguration) namespace.
 
 > [!NOTE]
 > Note that attempting to consume a platform-specific on a platform where it is unavailable will not result in an error. Instead, the code will execute without the platform-specific being applied.
 
-Platform-specifics consumed through the `On<T>` fluent code API return [`IPlatformElementConfiguration`](https://developer.xamarin.com/api/type/Xamarin.Forms.IPlatformElementConfiguration%3CTPlatform,TElement%3E/) objects. This allows multiple platform-specifics to be invoked on the same object with method cascading.
+Platform-specifics consumed through the `On<T>` fluent code API return [`IPlatformElementConfiguration`](xref:Xamarin.Forms.IPlatformElementConfiguration`2) objects. This allows multiple platform-specifics to be invoked on the same object with method cascading.
 
 For more information about platform-specifics, see [Consuming Platform-Specifics](~/xamarin-forms/platform/platform-specifics/consuming/index.md) and [Creating Platform-Specifics](~/xamarin-forms/platform/platform-specifics/creating.md).
 
@@ -53,4 +53,4 @@ For more information about platform-specifics, see [Consuming Platform-Specifics
 - [Consuming Platform-Specifics](~/xamarin-forms/platform/platform-specifics/consuming/index.md)
 - [Creating Platform-Specifics](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
-- [PlatformConfiguration](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration/)
+- [PlatformConfiguration](xref:Xamarin.Forms.PlatformConfiguration)

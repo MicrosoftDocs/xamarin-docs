@@ -35,7 +35,7 @@ Xamarin projects can also consume [.NET Portable Class Libraries](~/cross-platfo
 > |Microsoft.CSharp.dll| |✓|✓|✓|
 > |Mono.CSharp.dll| |✓|✓|✓|
 > |Mono.Data.Sqlite.dll|ADO.NET provider for SQLite; see limitations.|✓|✓|✓|
-> |Mono.Data.Tds.dll|TDS Protocol support; used for [System.Data.SqlClient](https://developer.xamarin.com/api/namespace/System.Data.SqlClient/) support within [System.Data](https://developer.xamarin.com/api/namespace/System.Data/).|✓|✓|✓|
+> |Mono.Data.Tds.dll|TDS Protocol support; used for [System.Data.SqlClient](xref:System.Data.SqlClient) support within [System.Data](xref:System.Data).|✓|✓|✓|
 > |Mono.Dynamic.&#8203;Interpreter.dll| |✓| | |
 > |Mono.Security.dll|Cryptographic APIs.|✓|✓|✓|
 > |monotouch.dll|This assembly contains the C# binding to the CocoaTouch API. This is only available within Classic iOS Projects.|✓| | |

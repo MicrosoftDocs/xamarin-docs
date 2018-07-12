@@ -11,7 +11,7 @@ ms.date: 11/25/2015
 
 # Xamarin.Forms AbsoluteLayout
 
-[`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) positions and sizes child elements proportional to its own size and position or by absolute values. Child views may be positioned and sized using proportional values or static values, and proportional and static values can be mixed.
+[`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) positions and sizes child elements proportional to its own size and position or by absolute values. Child views may be positioned and sized using proportional values or static values, and proportional and static values can be mixed.
 
 [![](absolute-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](absolute-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
@@ -66,11 +66,11 @@ Views within an `AbsoluteLayout` are positioned using four values:
 
 Each of those values can be set as a [proportional](#Proportional_Values) value or an [absolute](#Absolute_Values) value.
 
-Values are specified as a combination of bounds and a flag. `LayoutBounds` is a [`Rectangle`](https://developer.xamarin.com/api/type/Xamarin.Forms.Rectangle/) consisting of four values: `x`, `y`, `width`, `height`.
+Values are specified as a combination of bounds and a flag. `LayoutBounds` is a [`Rectangle`](xref:Xamarin.Forms.Rectangle) consisting of four values: `x`, `y`, `width`, `height`.
 
 ### AbsoluteLayoutFlags
 
-[`AbsoluteLayoutFlags`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayoutFlags/) specifies how values will be interpreted and has the following predefined options:
+[`AbsoluteLayoutFlags`](xref:Xamarin.Forms.AbsoluteLayoutFlags) specifies how values will be interpreted and has the following predefined options:
 
 - **None** &ndash; interprets all values as absolute. This is the default value if no layout flags are specified.
 - **All** &ndash; interprets all values as proportional.
@@ -283,6 +283,6 @@ Notice that `AbsoluteLayout`s are nested, because in some cases nesting layouts 
 ## Related Links
 
 - [Creating Mobile Apps with Xamarin.Forms, Chapter 14](https://developer.xamarin.com/r/xamarin-forms/book/chapter14.pdf)
-- [AbsoluteLayout](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/)
+- [AbsoluteLayout](xref:Xamarin.Forms.AbsoluteLayout)
 - [Layout (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 - [BusinessTumble Example (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)

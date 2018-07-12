@@ -23,7 +23,7 @@ Attached behaviors are `static` classes with one or more attached properties. Th
 
 ## [Xamarin.Forms Behaviors](creating.md)
 
-Xamarin.Forms behaviors are created by deriving from the [`Behavior`](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/) or [`Behavior<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/) class. This article demonstrates how to create and consume Xamarin.Forms behaviors.
+Xamarin.Forms behaviors are created by deriving from the [`Behavior`](xref:Xamarin.Forms.Behavior) or [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) class. This article demonstrates how to create and consume Xamarin.Forms behaviors.
 
 ## [Reusable Behaviors](reusable/index.md)
 

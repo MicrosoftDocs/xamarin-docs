@@ -15,7 +15,7 @@ _The pan gesture is used for detecting dragging and is implemented with the PanG
 
 ## Overview
 
-To make a user interface element draggable with the pan gesture, create a [`PanGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.PanGestureRecognizer/) instance, handle the [`PanUpdated`](https://developer.xamarin.com/api/event/Xamarin.Forms.PanGestureRecognizer.PanUpdated/) event, and add the new gesture recognizer to the [`GestureRecognizers`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.GestureRecognizers/) collection on the user interface element. The following code example shows a `PanGestureRecognizer` attached to an [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) element:
+To make a user interface element draggable with the pan gesture, create a [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) instance, handle the [`PanUpdated`](xref:Xamarin.Forms.PanGestureRecognizer.PanUpdated) event, and add the new gesture recognizer to the [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) collection on the user interface element. The following code example shows a `PanGestureRecognizer` attached to an [`Image`](xref:Xamarin.Forms.Image) element:
 
 ```csharp
 var panGesture = new PanGestureRecognizer();
@@ -72,7 +72,7 @@ public class PanContainer : ContentView
 }
 ```
 
-This class can be wrapped around a user interface element so that the pan gesture will drag the wrapped user interface element. The following XAML code example shows the `PanContainer` wrapping an [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) element:
+This class can be wrapped around a user interface element so that the pan gesture will drag the wrapped user interface element. The following XAML code example shows the `PanContainer` wrapping an [`Image`](xref:Xamarin.Forms.Image) element:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -89,7 +89,7 @@ This class can be wrapped around a user interface element so that the pan gestur
 </ContentPage>
 ```
 
-The following code example shows how the `PanContainer` wraps an [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) element in a C# page:
+The following code example shows how the `PanContainer` wraps an [`Image`](xref:Xamarin.Forms.Image) element in a C# page:
 
 ```csharp
 public class HomePageCS : ContentPage
@@ -112,9 +112,9 @@ public class HomePageCS : ContentPage
 }
 ```
 
-In both examples, the [`WidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/) and [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) properties are set to the width and height values of the image being displayed.
+In both examples, the [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) and [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) properties are set to the width and height values of the image being displayed.
 
-When the [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) element receives a pan gesture, the displayed image will be dragged. The drag is performed by the `PanContainer.OnPanUpdated` method, which is shown in the following code example:
+When the [`Image`](xref:Xamarin.Forms.Image) element receives a pan gesture, the displayed image will be dragged. The drag is performed by the `PanContainer.OnPanUpdated` method, which is shown in the following code example:
 
 ```csharp
 void OnPanUpdated (object sender, PanUpdatedEventArgs e)
@@ -137,21 +137,21 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
 }
 ```
 
-This method updates the viewable content of the wrapped user interface element, based on the user's pan gesture. This is achieved by using the values of the [`TotalX`](https://developer.xamarin.com/api/property/Xamarin.Forms.PanUpdatedEventArgs.TotalX/) and [`TotalY`](https://developer.xamarin.com/api/property/Xamarin.Forms.PanUpdatedEventArgs.TotalY/) properties of the [`PanUpdatedEventArgs`](https://developer.xamarin.com/api/type/Xamarin.Forms.PanUpdatedEventArgs/) instance to calculate the direction and distance of the pan. The `App.ScreenWidth` and `App.ScreenHeight` properties provide the height and width of the viewport, and are set to the screen width and screen height values of the device by the respective platform-specific projects. The wrapped user element is then dragged by setting its [`TranslationX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/) and [`TranslationY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) properties to the calculated values.
+This method updates the viewable content of the wrapped user interface element, based on the user's pan gesture. This is achieved by using the values of the [`TotalX`](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalX) and [`TotalY`](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalY) properties of the [`PanUpdatedEventArgs`](xref:Xamarin.Forms.PanUpdatedEventArgs) instance to calculate the direction and distance of the pan. The `App.ScreenWidth` and `App.ScreenHeight` properties provide the height and width of the viewport, and are set to the screen width and screen height values of the device by the respective platform-specific projects. The wrapped user element is then dragged by setting its [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) and [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) properties to the calculated values.
 
-When panning content in an element that does not occupy the full screen, the height and width of the viewport can be obtained from the element's [`Height`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) and [`Width`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) properties.
+When panning content in an element that does not occupy the full screen, the height and width of the viewport can be obtained from the element's [`Height`](xref:Xamarin.Forms.VisualElement.Height) and [`Width`](xref:Xamarin.Forms.VisualElement.Width) properties.
 
 > [!NOTE]
 > Displaying high-resolution images can greatly increase an app's memory footprint. Therefore, they should only be created when required and should be released as soon as the app no longer requires them. For more information, see [Optimize Image Resources](~/xamarin-forms/deploy-test/performance.md#optimizeimages).
 
 ## Summary
 
-The pan gesture is used for detecting dragging and is implemented with the [`PanGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.PanGestureRecognizer/) class.
+The pan gesture is used for detecting dragging and is implemented with the [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) class.
 
 
 
 ## Related Links
 
 - [PanGesture (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PanGesture/)
-- [GestureRecognizer](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/)
-- [PanGestureRecognizer](https://developer.xamarin.com/api/type/Xamarin.Forms.PanGestureRecognizer/)
+- [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
+- [PanGestureRecognizer](xref:Xamarin.Forms.PanGestureRecognizer)

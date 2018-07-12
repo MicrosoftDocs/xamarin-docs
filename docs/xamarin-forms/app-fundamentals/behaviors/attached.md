@@ -19,14 +19,14 @@ An attached property is a special type of bindable property. They are defined in
 
 An attached property can define a `propertyChanged` delegate that will be executed when the value of the property changes, such as when the property is set on a control. When the `propertyChanged` delegate executes, it's passed a reference to the control on which it is being attached, and parameters that contain the old and new values for the property. This delegate can be used to add new functionality to the control that the property is attached to by manipulating the reference that is passed in, as follows:
 
-1. The `propertyChanged` delegate casts the control reference, which is received as a [`BindableObject`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/), to the control type that the behavior is designed to enhance.
+1. The `propertyChanged` delegate casts the control reference, which is received as a [`BindableObject`](xref:Xamarin.Forms.BindableObject), to the control type that the behavior is designed to enhance.
 1. The `propertyChanged` delegate modifies properties of the control, calls methods of the control, or registers event handlers for events exposed by the control, to implement the core behavior functionality.
 
 An issue with attached behaviors is that they are defined in a `static` class, with `static` properties and methods. This makes it difficult to create attached behaviors that have state. In addition, Xamarin.Forms behaviors have replaced attached behaviors as the preferred approach to behavior construction. For more information about Xamarin.Forms behaviors, see [Xamarin.Forms Behaviors](~/xamarin-forms/app-fundamentals/behaviors/creating.md) and [Reusable Behaviors](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
 
 ## Creating an Attached Behavior
 
-The sample application demonstrates a `NumericValidationBehavior`, which highlights the value entered by the user into an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control in red, if it's not a `double`. The behavior is shown in the following code example:
+The sample application demonstrates a `NumericValidationBehavior`, which highlights the value entered by the user into an [`Entry`](xref:Xamarin.Forms.Entry) control in red, if it's not a `double`. The behavior is shown in the following code example:
 
 ```csharp
 public static class NumericValidationBehavior
@@ -73,11 +73,11 @@ public static class NumericValidationBehavior
 }
 ```
 
-The `NumericValidationBehavior` class contains an attached property named `AttachBehavior` with a `static` getter and setter, which controls the addition or removal of the behavior to the control to which it will be attached. This attached property registers the `OnAttachBehaviorChanged` method that will be executed when the value of the property changes. This method registers or de-registers an event handler for the [`TextChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.Entry.TextChanged/) event, based on the value of the `AttachBehavior` attached property. The core functionality of the behavior is provided by the `OnEntryTextChanged` method, which parses the value entered into the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) by the user, and sets the `TextColor` property to red if the value isn't a `double`.
+The `NumericValidationBehavior` class contains an attached property named `AttachBehavior` with a `static` getter and setter, which controls the addition or removal of the behavior to the control to which it will be attached. This attached property registers the `OnAttachBehaviorChanged` method that will be executed when the value of the property changes. This method registers or de-registers an event handler for the [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) event, based on the value of the `AttachBehavior` attached property. The core functionality of the behavior is provided by the `OnEntryTextChanged` method, which parses the value entered into the [`Entry`](xref:Xamarin.Forms.Entry) by the user, and sets the `TextColor` property to red if the value isn't a `double`.
 
 ## Consuming an Attached Behavior
 
-The `NumericValidationBehavior` class can be consumed by adding the `AttachBehavior` attached property to an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control, as demonstrated in the following XAML code example:
+The `NumericValidationBehavior` class can be consumed by adding the `AttachBehavior` attached property to an [`Entry`](xref:Xamarin.Forms.Entry) control, as demonstrated in the following XAML code example:
 
 ```xaml
 <ContentPage ... xmlns:local="clr-namespace:WorkingWithBehaviors;assembly=WorkingWithBehaviors" ...>
@@ -87,7 +87,7 @@ The `NumericValidationBehavior` class can be consumed by adding the `AttachBehav
 </ContentPage>
 ```
 
-The equivalent [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) in C# is shown in the following code example:
+The equivalent [`Entry`](xref:Xamarin.Forms.Entry) in C# is shown in the following code example:
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter a System.Double" };
@@ -109,14 +109,14 @@ The `NumericValidationBehavior` class can be removed from a control by setting t
 <Entry Placeholder="Enter a System.Double" local:NumericValidationBehavior.AttachBehavior="false" />
 ```
 
-The equivalent [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) in C# is shown in the following code example:
+The equivalent [`Entry`](xref:Xamarin.Forms.Entry) in C# is shown in the following code example:
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter a System.Double" };
 NumericValidationBehavior.SetAttachBehavior (entry, false);
 ```
 
-At runtime, the `OnAttachBehaviorChanged` method will be executed when the value of the `AttachBehavior` attached property is set to `false`. The `OnAttachBehaviorChanged` method will then de-register the event handler for the [`TextChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.Entry.TextChanged/) event, ensuring that the behavior isn't executed as the user interacts with the control.
+At runtime, the `OnAttachBehaviorChanged` method will be executed when the value of the `AttachBehavior` attached property is set to `false`. The `OnAttachBehaviorChanged` method will then de-register the event handler for the [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) event, ensuring that the behavior isn't executed as the user interacts with the control.
 
 ## Summary
 

@@ -38,7 +38,7 @@ The key to using MVVM effectively lies in understanding how to factor app code i
 
 The view is responsible for defining the structure, layout, and appearance of what the user sees on screen. Ideally, each view is defined in XAML, with a limited code-behind that does not contain business logic. However, in some cases, the code-behind might contain UI logic that implements visual behavior that is difficult to express in XAML, such as animations.
 
-In a Xamarin.Forms application, a view is typically a [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)-derived or [`ContentView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/)-derived class. However, views can also be represented by a data template, which specifies the UI elements to be used to visually represent an object when it's displayed. A data template as a view does not have any code-behind, and is designed to bind to a specific view model type.
+In a Xamarin.Forms application, a view is typically a [`Page`](xref:Xamarin.Forms.Page)-derived or [`ContentView`](xref:Xamarin.Forms.ContentView)-derived class. However, views can also be represented by a data template, which specifies the UI elements to be used to visually represent an object when it's displayed. A data template as a view does not have any code-behind, and is designed to bind to a specific view model type.
 
 > [!TIP]
 > Avoid enabling and disabling UI elements in the code-behind. Ensure that view models are responsible for defining logical state changes that affect some aspects of the view's display, such as whether a command is available, or an indication that an operation is pending. Therefore, enable and disable UI elements by binding to view model properties, rather than enabling and disabling them in code-behind.
@@ -78,7 +78,7 @@ With view first composition the app is conceptually composed of views that conne
 With view model first composition the app is conceptually composed of view models, with a service being responsible for locating the view for a view model. View model first composition feels more natural to some developers, since the view creation can be abstracted away, allowing them to focus on the logical non-UI structure of the app. In addition, it allows view models to be created by other view models. However, this approach is often complex and it can become difficult to understand how the various parts of the app are created and associated.
 
 > [!TIP]
-> Keep view models and views independent. The binding of views to a property in a data source should be the view's principal dependency on its corresponding view model. Specifically, don't reference view types, such as [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) and [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/), from view models. By following the principles outlined here, view models can be tested in isolation, therefore reducing the likelihood of software defects by limiting scope.
+> Keep view models and views independent. The binding of views to a property in a data source should be the view's principal dependency on its corresponding view model. Specifically, don't reference view types, such as [`Button`](xref:Xamarin.Forms.Button) and [`ListView`](xref:Xamarin.Forms.ListView), from view models. By following the principles outlined here, view models can be tested in isolation, therefore reducing the likelihood of software defects by limiting scope.
 
 The following sections discuss the main approaches to connecting view models to views.
 
@@ -95,13 +95,13 @@ The simplest approach is for the view to declaratively instantiate its correspon
 </ContentPage>
 ```
 
-When the [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) is created, an instance of the `LoginViewModel` is automatically constructed and set as the view's [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/).
+When the [`ContentPage`](xref:Xamarin.Forms.ContentPage) is created, an instance of the `LoginViewModel` is automatically constructed and set as the view's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext).
 
 This declarative construction and assignment of the view model by the view has the advantage that it's simple, but has the disadvantage that it requires a default (parameter-less) constructor in the view model.
 
 ### Creating a View Model Programmatically
 
-A view can have code in the code-behind file that results in the view model being assigned to its [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) property. This is often accomplished in the view's constructor, as shown in the following code example:
+A view can have code in the code-behind file that results in the view model being assigned to its [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) property. This is often accomplished in the view's constructor, as shown in the following code example:
 
 ```csharp
 public LoginView()  
@@ -161,7 +161,7 @@ The `OnAutoWireViewModelChanged` method attempts to resolve the view model using
 -   View models are in a .ViewModels child namespace.
 -   View model names correspond with view names and end with "ViewModel".
 
-Finally, the `OnAutoWireViewModelChanged` method sets the [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) of the view type to the resolved view model type. For more information about resolving the view model type, see [Resolution](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#resolution).
+Finally, the `OnAutoWireViewModelChanged` method sets the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the view type to the resolved view model type. For more information about resolving the view model type, see [Resolution](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#resolution).
 
 This approach has the advantage that an app has a single class that is responsible for the instantiation of view models and their connection to views.
 
@@ -199,7 +199,7 @@ public abstract class ExtendedBindableObject : BindableObject
 }
 ```
 
-Xamarin.Form's [`BindableObject`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/) class implements the `INotifyPropertyChanged` interface, and provides an [`OnPropertyChanged`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.OnPropertyChanged/p/System.String/) method. The `ExtendedBindableObject` class provides the `RaisePropertyChanged` method to invoke property change notification, and in doing so uses the functionality provided by the `BindableObject` class.
+Xamarin.Form's [`BindableObject`](xref:Xamarin.Forms.BindableObject) class implements the `INotifyPropertyChanged` interface, and provides an [`OnPropertyChanged`](xref:Xamarin.Forms.BindableObject.OnPropertyChanged(System.String)) method. The `ExtendedBindableObject` class provides the `RaisePropertyChanged` method to invoke property change notification, and in doing so uses the functionality provided by the `BindableObject` class.
 
 Each view model class in the eShopOnContainers mobile app derives from the `ViewModelBase` class, which in turn derives from the `ExtendedBindableObject` class. Therefore, each view model class uses the `RaisePropertyChanged` method in the `ExtendedBindableObject` class to provide property change notification. The following code example shows how the eShopOnContainers mobile app invokes property change notification by using a lambda expression:
 
@@ -230,35 +230,35 @@ Behaviors also allow controls to be declaratively connected to a command. Howeve
 
 ### Implementing Commands
 
-View models typically expose command properties, for binding from the view, that are object instances that implement the `ICommand` interface. A number of Xamarin.Forms controls provide a `Command` property, which can be data bound to an `ICommand` object provided by the view model. The `ICommand` interface defines an `Execute` method, which encapsulates the operation itself, a `CanExecute` method, which indicates whether the command can be invoked, and a `CanExecuteChanged` event that occurs when changes occur that affect whether the command should execute. The [`Command`](https://developer.xamarin.com/api/type/Xamarin.Forms.Command/) and [`Command<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Command/) classes, provided by Xamarin.Forms, implement the `ICommand` interface, where `T` is the type of the arguments to `Execute` and `CanExecute`.
+View models typically expose command properties, for binding from the view, that are object instances that implement the `ICommand` interface. A number of Xamarin.Forms controls provide a `Command` property, which can be data bound to an `ICommand` object provided by the view model. The `ICommand` interface defines an `Execute` method, which encapsulates the operation itself, a `CanExecute` method, which indicates whether the command can be invoked, and a `CanExecuteChanged` event that occurs when changes occur that affect whether the command should execute. The [`Command`](xref:Xamarin.Forms.Command) and [`Command<T>`](xref:Xamarin.Forms.Command) classes, provided by Xamarin.Forms, implement the `ICommand` interface, where `T` is the type of the arguments to `Execute` and `CanExecute`.
 
-Within a view model, there should be an object of type [`Command`](https://developer.xamarin.com/api/type/Xamarin.Forms.Command/) or [`Command<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Command/) for each public property in the view model of type `ICommand`. The `Command` or `Command<T>` constructor requires an `Action` callback object that's called when the `ICommand.Execute` method is invoked. The `CanExecute` method is an optional constructor parameter, and is a `Func` that returns a `bool`.
+Within a view model, there should be an object of type [`Command`](xref:Xamarin.Forms.Command) or [`Command<T>`](xref:Xamarin.Forms.Command) for each public property in the view model of type `ICommand`. The `Command` or `Command<T>` constructor requires an `Action` callback object that's called when the `ICommand.Execute` method is invoked. The `CanExecute` method is an optional constructor parameter, and is a `Func` that returns a `bool`.
 
-The following code shows how a [`Command`](https://developer.xamarin.com/api/type/Xamarin.Forms.Command/) instance, which represents a register command, is constructed by specifying a delegate to the `Register` view model method:
+The following code shows how a [`Command`](xref:Xamarin.Forms.Command) instance, which represents a register command, is constructed by specifying a delegate to the `Register` view model method:
 
 ```csharp
 public ICommand RegisterCommand => new Command(Register);
 ```
 
-The command is exposed to the view through a property that returns a reference to an `ICommand`. When the `Execute` method is called on the [`Command`](https://developer.xamarin.com/api/type/Xamarin.Forms.Command/) object, it simply forwards the call to the method in the view model via the delegate that was specified in the `Command` constructor.
+The command is exposed to the view through a property that returns a reference to an `ICommand`. When the `Execute` method is called on the [`Command`](xref:Xamarin.Forms.Command) object, it simply forwards the call to the method in the view model via the delegate that was specified in the `Command` constructor.
 
-An asynchronous method can be invoked by a command by using the `async` and `await` keywords when specifying the command's `Execute` delegate. This indicates that the callback is a `Task` and should be awaited. For example, the following code shows how a [`Command`](https://developer.xamarin.com/api/type/Xamarin.Forms.Command/) instance, which represents a sign-in command, is constructed by specifying a delegate to the `SignInAsync` view model method:
+An asynchronous method can be invoked by a command by using the `async` and `await` keywords when specifying the command's `Execute` delegate. This indicates that the callback is a `Task` and should be awaited. For example, the following code shows how a [`Command`](xref:Xamarin.Forms.Command) instance, which represents a sign-in command, is constructed by specifying a delegate to the `SignInAsync` view model method:
 
 ```csharp
 public ICommand SignInCommand => new Command(async () => await SignInAsync());
 ```
 
-Parameters can be passed to the `Execute` and `CanExecute` actions by using the [`Command<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Command/) class to instantiate the command. For example, the following code shows how a `Command<T>` instance is used to indicate that the `NavigateAsync` method will require an argument of type `string`:
+Parameters can be passed to the `Execute` and `CanExecute` actions by using the [`Command<T>`](xref:Xamarin.Forms.Command) class to instantiate the command. For example, the following code shows how a `Command<T>` instance is used to indicate that the `NavigateAsync` method will require an argument of type `string`:
 
 ```csharp
 public ICommand NavigateCommand => new Command<string>(NavigateAsync);
 ```
 
-In both the [`Command`](https://developer.xamarin.com/api/type/Xamarin.Forms.Command/) and [`Command<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Command/) classes, the delegate to the `CanExecute` method in each constructor is optional. If a delegate isn't specified, the `Command` will return `true` for `CanExecute`. However, the view model can indicate a change in the command's `CanExecute` status by calling the `ChangeCanExecute` method on the `Command` object. This causes the `CanExecuteChanged` event to be raised. Any controls in the UI that are bound to the command will then update their enabled status to reflect the availability of the data-bound command.
+In both the [`Command`](xref:Xamarin.Forms.Command) and [`Command<T>`](xref:Xamarin.Forms.Command) classes, the delegate to the `CanExecute` method in each constructor is optional. If a delegate isn't specified, the `Command` will return `true` for `CanExecute`. However, the view model can indicate a change in the command's `CanExecute` status by calling the `ChangeCanExecute` method on the `Command` object. This causes the `CanExecuteChanged` event to be raised. Any controls in the UI that are bound to the command will then update their enabled status to reflect the availability of the data-bound command.
 
 #### Invoking Commands from a View
 
-The following code example shows how a [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) in the `LoginView` binds to the `RegisterCommand` in the `LoginViewModel` class by using a [`TapGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) instance:
+The following code example shows how a [`Grid`](xref:Xamarin.Forms.Grid) in the `LoginView` binds to the `RegisterCommand` in the `LoginViewModel` class by using a [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) instance:
 
 ```xaml
 <Grid Grid.Column="1" HorizontalOptions="Center">  
@@ -269,7 +269,7 @@ The following code example shows how a [`Grid`](https://developer.xamarin.com/ap
 </Grid>
 ```
 
-A command parameter can also be optionally defined using the [`CommandParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.TapGestureRecognizer.CommandParameter/) property. The type of the expected argument is specified in the `Execute` and `CanExecute` target methods. The [`TapGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) will automatically invoke the target command when the user interacts with the attached control. The command parameter, if provided, will be passed as the argument to the command's `Execute` delegate.
+A command parameter can also be optionally defined using the [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) property. The type of the expected argument is specified in the `Execute` and `CanExecute` target methods. The [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) will automatically invoke the target command when the user interacts with the attached control. The command parameter, if provided, will be passed as the argument to the command's `Execute` delegate.
 
 <a name="implementing_behaviors" />
 
@@ -279,11 +279,11 @@ Behaviors allow functionality to be added to UI controls without having to subcl
 
 A behavior that's attached to a control through attached properties is known as an *attached behavior*. The behavior can then use the exposed API of the element to which it is attached to add functionality to that control, or other controls, in the visual tree of the view. The eShopOnContainers mobile app contains the `LineColorBehavior` class, which is an attached behavior. For more information about this behavior, see [Displaying Validation Errors](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying_validation_errors).
 
-A Xamarin.Forms behavior is a class that derives from the [`Behavior`](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/) or [`Behavior<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/) class, where `T `is the type of the control to which the behavior should apply. These classes provide `OnAttachedTo` and `OnDetachingFrom` methods, which should be overridden to provide logic that will be executed when the behavior is attached to and detached from controls.
+A Xamarin.Forms behavior is a class that derives from the [`Behavior`](xref:Xamarin.Forms.Behavior) or [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) class, where `T `is the type of the control to which the behavior should apply. These classes provide `OnAttachedTo` and `OnDetachingFrom` methods, which should be overridden to provide logic that will be executed when the behavior is attached to and detached from controls.
 
-In the eShopOnContainers mobile app, the `BindableBehavior<T>` class derives from the [`Behavior<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/) class. The purpose of the `BindableBehavior<T>` class is to provide a base class for Xamarin.Forms behaviors that require the [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) of the behavior to be set to the attached control.
+In the eShopOnContainers mobile app, the `BindableBehavior<T>` class derives from the [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) class. The purpose of the `BindableBehavior<T>` class is to provide a base class for Xamarin.Forms behaviors that require the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the behavior to be set to the attached control.
 
-The `BindableBehavior<T>` class provides an overridable `OnAttachedTo` method that sets the [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) of the behavior, and an overridable `OnDetachingFrom` method that cleans up the `BindingContext`. In addition, the class stores a reference to the attached control in the `AssociatedObject` property.
+The `BindableBehavior<T>` class provides an overridable `OnAttachedTo` method that sets the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the behavior, and an overridable `OnDetachingFrom` method that cleans up the `BindingContext`. In addition, the class stores a reference to the attached control in the `AssociatedObject` property.
 
 The eShopOnContainers mobile app includes an `EventToCommandBehavior` class, which executes a command in response to an event occurring. This class derives from the `BindableBehavior<T>` class so that the behavior can bind to and execute an `ICommand` specified by a `Command` property when the behavior is consumed. The following code example shows the `EventToCommandBehavior` class:
 
@@ -335,7 +335,7 @@ The advantage of using the `EventToCommandBehavior` to execute a command when an
 
 #### Invoking Behaviors from a View
 
-The `EventToCommandBehavior` is particularly useful for attaching a command to a control that doesn't support commands. For example, the `ProfileView` uses the `EventToCommandBehavior` to execute the `OrderDetailCommand` when the [`ItemTapped`](https://developer.xamarin.com/api/event/Xamarin.Forms.ListView.ItemTapped/) event fires on the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) that lists the user's orders, as shown in the following code:
+The `EventToCommandBehavior` is particularly useful for attaching a command to a control that doesn't support commands. For example, the `ProfileView` uses the `EventToCommandBehavior` to execute the `OrderDetailCommand` when the [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) event fires on the [`ListView`](xref:Xamarin.Forms.ListView) that lists the user's orders, as shown in the following code:
 
 ```xaml
 <ListView>  
@@ -349,7 +349,7 @@ The `EventToCommandBehavior` is particularly useful for attaching a command to a
 </ListView>
 ```
 
-At runtime, the `EventToCommandBehavior` will respond to interaction with the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/). When an item is selected in the `ListView`, the [`ItemTapped`](https://developer.xamarin.com/api/event/Xamarin.Forms.ListView.ItemTapped/) event will fire, which will execute the `OrderDetailCommand` in the `ProfileViewModel`. By default, the event arguments for the event are passed to the command. This data is converted as it's passed between source and target by the converter specified in the `EventArgsConverter` property, which returns the [`Item`](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemTappedEventArgs.Item/) of the `ListView` from the [`ItemTappedEventArgs`](https://developer.xamarin.com/api/type/Xamarin.Forms.ItemTappedEventArgs/). Therefore, when the `OrderDetailCommand` is executed, the selected `Order` is passed as a parameter to the registered Action.
+At runtime, the `EventToCommandBehavior` will respond to interaction with the [`ListView`](xref:Xamarin.Forms.ListView). When an item is selected in the `ListView`, the [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) event will fire, which will execute the `OrderDetailCommand` in the `ProfileViewModel`. By default, the event arguments for the event are passed to the command. This data is converted as it's passed between source and target by the converter specified in the `EventArgsConverter` property, which returns the [`Item`](xref:Xamarin.Forms.ItemTappedEventArgs.Item) of the `ListView` from the [`ItemTappedEventArgs`](xref:Xamarin.Forms.ItemTappedEventArgs). Therefore, when the `OrderDetailCommand` is executed, the selected `Order` is passed as a parameter to the registered Action.
 
 For more information about behaviors, see [Behaviors](~/xamarin-forms/app-fundamentals/behaviors/index.md).
 

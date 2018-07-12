@@ -15,7 +15,7 @@ _In Xamarin.Forms, the functionality of common language runtime (CLR) properties
 
 ## Overview
 
-Bindable properties extend CLR property functionality by backing a property with a [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) type, instead of backing a property with a field. The purpose of bindable properties is to provide a property system that supports data binding, styles, templates, and values set through parent-child relationships. In addition, bindable properties can provide default values, validation of property values, and callbacks that monitor property changes.
+Bindable properties extend CLR property functionality by backing a property with a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) type, instead of backing a property with a field. The purpose of bindable properties is to provide a property system that supports data binding, styles, templates, and values set through parent-child relationships. In addition, bindable properties can provide default values, validation of property values, and callbacks that monitor property changes.
 
 Properties should be implemented as bindable properties to support one or more of the following features:
 
@@ -25,7 +25,7 @@ Properties should be implemented as bindable properties to support one or more o
 - Validating the value of the property.
 - Monitoring property changes.
 
-Examples of Xamarin.Forms bindable properties include [`Label.Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.Text/), [`Button.BorderRadius`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.BorderRadius/), and [`StackLayout.Orientation`](https://developer.xamarin.com/api/property/Xamarin.Forms.StackLayout.Orientation/). Each bindable property has a corresponding `public static readonly` property of type [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) that is exposed on the same class and that is the identifier of the bindable property. For example, the corresponding bindable property identifier for the `Label.Text` property is [`Label.TextProperty`](xref:Xamarin.Forms.Label.TextProperty).
+Examples of Xamarin.Forms bindable properties include [`Label.Text`](xref:Xamarin.Forms.Label.Text), [`Button.BorderRadius`](xref:Xamarin.Forms.Button.BorderRadius), and [`StackLayout.Orientation`](xref:Xamarin.Forms.StackLayout.Orientation). Each bindable property has a corresponding `public static readonly` property of type [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) that is exposed on the same class and that is the identifier of the bindable property. For example, the corresponding bindable property identifier for the `Label.Text` property is [`Label.TextProperty`](xref:Xamarin.Forms.Label.TextProperty).
 
 <a name="consuming-bindable-property" />
 
@@ -33,23 +33,23 @@ Examples of Xamarin.Forms bindable properties include [`Label.Text`](https://dev
 
 The process for creating a bindable property is as follows:
 
-1. Create a [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) instance with one of the [`BindableProperty.Create`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableProperty.Create/p/System.String/System.Type/System.Type/System.Object/Xamarin.Forms.BindingMode/Xamarin.Forms.BindableProperty+ValidateValueDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangedDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangingDelegate/Xamarin.Forms.BindableProperty+CoerceValueDelegate/Xamarin.Forms.BindableProperty+CreateDefaultValueDelegate/) method overloads.
-1. Define property accessors for the [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) instance.
+1. Create a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance with one of the [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create*) method overloads.
+1. Define property accessors for the [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance.
 
-Note that all [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) instances must be created on the UI thread. This means that only code that runs on the UI thread can get or set the value of a bindable property. However, `BindableProperty` instances can be accessed from other threads by marshaling to the UI thread with the [`Device.BeginInvokeOnMainThread`](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/) method.
+Note that all [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instances must be created on the UI thread. This means that only code that runs on the UI thread can get or set the value of a bindable property. However, `BindableProperty` instances can be accessed from other threads by marshaling to the UI thread with the [`Device.BeginInvokeOnMainThread`](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) method.
 
 ### Creating a Property
 
-To create a `BindableProperty` instance, the containing class must derive from the [`BindableObject`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/) class. However, the `BindableObject` class is high in the class hierarchy, so the majority of classes used for user interface functionality support bindable properties.
+To create a `BindableProperty` instance, the containing class must derive from the [`BindableObject`](xref:Xamarin.Forms.BindableObject) class. However, the `BindableObject` class is high in the class hierarchy, so the majority of classes used for user interface functionality support bindable properties.
 
-A bindable property can be created by declaring a `public static readonly` property of type [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/). The bindable property should be set to the returned value of one of the [`BindableProperty.Create`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableProperty.Create/p/System.String/System.Type/System.Type/System.Object/Xamarin.Forms.BindingMode/Xamarin.Forms.BindableProperty+ValidateValueDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangedDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangingDelegate/Xamarin.Forms.BindableProperty+CoerceValueDelegate/Xamarin.Forms.BindableProperty+CreateDefaultValueDelegate/) method overloads. The declaration should be within the body of [`BindableObject`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/) derived class, but outside of any member definitions.
+A bindable property can be created by declaring a `public static readonly` property of type [`BindableProperty`](xref:Xamarin.Forms.BindableProperty). The bindable property should be set to the returned value of one of the [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) method overloads. The declaration should be within the body of [`BindableObject`](xref:Xamarin.Forms.BindableObject) derived class, but outside of any member definitions.
 
-At a minimum, an identifier must be specified when creating a [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/), along with the following parameters:
+At a minimum, an identifier must be specified when creating a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), along with the following parameters:
 
-- The name of the [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/).
+- The name of the [`BindableProperty`](xref:Xamarin.Forms.BindableProperty).
 - The type of the property.
 - The type of the owning object.
-- The default value for the property. This ensures that the property always returns a particular default value when it is unset, and it can be different from the default value for the type of the property. The default value will be restored when the [`ClearValue`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.ClearValue/p/Xamarin.Forms.BindableProperty/) method is called on the bindable property.
+- The default value for the property. This ensures that the property always returns a particular default value when it is unset, and it can be different from the default value for the type of the property. The default value will be restored when the [`ClearValue`](xref:Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty)) method is called on the bindable property.
 
 The following code shows an example of a bindable property, with an identifier and values for the four required parameters:
 
@@ -58,9 +58,9 @@ public static readonly BindableProperty EventNameProperty =
   BindableProperty.Create ("EventName", typeof(string), typeof(EventToCommandBehavior), null);
 ```
 
-This creates a [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) instance named `EventName`, of type `string`. The property is owned by the `EventToCommandBehavior` class, and has a default value of `null`. The naming convention for bindable properties is that the bindable property identifier must match the property name specified in the `Create` method, with "Property" appended to it. Therefore, in the example above, the bindable property identifier is `EventNameProperty`.
+This creates a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance named `EventName`, of type `string`. The property is owned by the `EventToCommandBehavior` class, and has a default value of `null`. The naming convention for bindable properties is that the bindable property identifier must match the property name specified in the `Create` method, with "Property" appended to it. Therefore, in the example above, the bindable property identifier is `EventNameProperty`.
 
-Optionally, when creating a [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) instance, the following parameters can be specified:
+Optionally, when creating a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance, the following parameters can be specified:
 
 - The binding mode. This is used to specify the direction in which property value changes will propagate. In the default binding mode, changes will propagate from the *source* to the *target*.
 - A validation delegate that will be invoked when the property value is set. For more information, see [Validation Callbacks](#validation).
@@ -71,7 +71,7 @@ Optionally, when creating a [`BindableProperty`](https://developer.xamarin.com/a
 
 ### Creating Accessors
 
-Property accessors are required to use property syntax to access a bindable property. The `Get` accessor should return the value that's contained in the corresponding bindable property. This can be achieved by calling the [`GetValue`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.GetValue/p/Xamarin.Forms.BindableProperty/) method, passing in the bindable property identifier on which to get the value, and then casting the result to the required type. The `Set` accessor should set the value of the corresponding bindable property. This can be achieved by calling the [`SetValue`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetValue/p/Xamarin.Forms.BindableProperty/System.Object/) method, passing in the bindable property identifier on which to set the value, and the value to set.
+Property accessors are required to use property syntax to access a bindable property. The `Get` accessor should return the value that's contained in the corresponding bindable property. This can be achieved by calling the [`GetValue`](xref:Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)) method, passing in the bindable property identifier on which to get the value, and then casting the result to the required type. The `Set` accessor should set the value of the corresponding bindable property. This can be achieved by calling the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method, passing in the bindable property identifier on which to set the value, and the value to set.
 
 The following code example shows accessors for the `EventName` bindable property:
 
@@ -118,13 +118,13 @@ listView.Behaviors.Add (new EventToCommandBehavior {
 
 ## Advanced Scenarios
 
-When creating a [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) instance, there are a number of optional parameters that can be set to enable advanced bindable property scenarios. This section explores these scenarios.
+When creating a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance, there are a number of optional parameters that can be set to enable advanced bindable property scenarios. This section explores these scenarios.
 
 <a name="propertychanges" />
 
 ### Detecting Property Changes
 
-A `static` property-changed callback method can be registered with a bindable property by specifying the `propertyChanged` parameter for the [`BindableProperty.Create`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableProperty.Create/p/System.String/System.Type/System.Type/System.Object/Xamarin.Forms.BindingMode/Xamarin.Forms.BindableProperty+ValidateValueDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangedDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangingDelegate/Xamarin.Forms.BindableProperty+CoerceValueDelegate/Xamarin.Forms.BindableProperty+CreateDefaultValueDelegate/) method. The specified callback method will be invoked when the value of the bindable property changes.
+A `static` property-changed callback method can be registered with a bindable property by specifying the `propertyChanged` parameter for the [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) method. The specified callback method will be invoked when the value of the bindable property changes.
 
 The following code example shows how the `EventName` bindable property registers the `OnEventNameChanged` method as a property-changed callback method:
 
@@ -140,13 +140,13 @@ static void OnEventNameChanged (BindableObject bindable, object oldValue, object
 }
 ```
 
-In the property-changed callback method, the [`BindableObject`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/) parameter is used to denote which instance of the owning class has reported a change, and the values of the two `object` parameters represent the old and new values of the bindable property.
+In the property-changed callback method, the [`BindableObject`](xref:Xamarin.Forms.BindableObject) parameter is used to denote which instance of the owning class has reported a change, and the values of the two `object` parameters represent the old and new values of the bindable property.
 
 <a name="validation" />
 
 ### Validation Callbacks
 
-A `static` validation callback method can be registered with a bindable property by specifying the `validateValue` parameter for the [`BindableProperty.Create`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableProperty.Create/p/System.String/System.Type/System.Type/System.Object/Xamarin.Forms.BindingMode/Xamarin.Forms.BindableProperty+ValidateValueDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangedDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangingDelegate/Xamarin.Forms.BindableProperty+CoerceValueDelegate/Xamarin.Forms.BindableProperty+CreateDefaultValueDelegate/) method. The specified callback method will be invoked when the value of the bindable property is set.
+A `static` validation callback method can be registered with a bindable property by specifying the `validateValue` parameter for the [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) method. The specified callback method will be invoked when the value of the bindable property is set.
 
 The following code example shows how the `Angle` bindable property registers the `IsValidValue` method as a validation callback method:
 
@@ -169,7 +169,7 @@ Validation callbacks are provided with a value, and should return `true` if the 
 
 ### Coerce Value Callbacks
 
-A `static` coerce value callback method can be registered with a bindable property by specifying the `coerceValue` parameter for the [`BindableProperty.Create`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableProperty.Create/p/System.String/System.Type/System.Type/System.Object/Xamarin.Forms.BindingMode/Xamarin.Forms.BindableProperty+ValidateValueDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangedDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangingDelegate/Xamarin.Forms.BindableProperty+CoerceValueDelegate/Xamarin.Forms.BindableProperty+CreateDefaultValueDelegate/) method. The specified callback method will be invoked when the value of the bindable property changes.
+A `static` coerce value callback method can be registered with a bindable property by specifying the `coerceValue` parameter for the [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) method. The specified callback method will be invoked when the value of the bindable property changes.
 
 Coerce value callbacks are used to force a reevaluation of a bindable property when the value of the property changes. For example, a coerce value callback can be used to ensure that the value of one bindable property is not greater than the value of another bindable property.
 
@@ -209,7 +209,7 @@ public static readonly BindableProperty SizeProperty =
   defaultValueCreator: bindable => Device.GetNamedSize (NamedSize.Large, (Label)bindable));
 ```
 
-The `defaultValueCreator` parameter is set to a `Func` that invokes the [`Device.GetNamedSize`](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.GetNamedSize/p/Xamarin.Forms.NamedSize/System.Type/) method to return a `double` that represents the named size for the font that is used on a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) on the native platform.
+The `defaultValueCreator` parameter is set to a `Func` that invokes the [`Device.GetNamedSize`](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type)) method to return a `double` that represents the named size for the font that is used on a [`Label`](xref:Xamarin.Forms.Label) on the native platform.
 
 ## Summary
 
@@ -222,5 +222,5 @@ This article provided an introduction to bindable properties, and demonstrated h
 - [Event To Command Behavior (sample)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
 - [Validation Callback (sample)](https://developer.xamarin.com/samples/xamarin-forms/xaml/validationcallback/)
 - [Coerce Value Callback (sample)](https://developer.xamarin.com/samples/xamarin-forms/xaml/coercevaluecallback/)
-- [BindableProperty](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/)
-- [BindableObject](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/)
+- [BindableProperty](xref:Xamarin.Forms.BindableProperty)
+- [BindableObject](xref:Xamarin.Forms.BindableObject)

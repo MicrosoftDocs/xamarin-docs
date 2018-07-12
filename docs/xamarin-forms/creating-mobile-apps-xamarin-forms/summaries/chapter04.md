@@ -13,17 +13,17 @@ ms.date: 11/07/2017
 
 This chapter is primarily devoted to introducing the concept of *layout*, which is the overall term for the classes and techniques that Xamarin.Forms uses to organize the visual display of multiple views on the page.
 
-Layout involves several classes that derive from [`Layout`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/) and  [`Layout<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/). This chapter focuses on [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/).
+Layout involves several classes that derive from [`Layout`](xref:Xamarin.Forms.Layout) and  [`Layout<T>`](xref:Xamarin.Forms.Layout`1). This chapter focuses on [`StackLayout`](xref:Xamarin.Forms.StackLayout).
 
-Also introduced in this chapter are the [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/), [`Frame`](https://developer.xamarin.com/api/type/Xamarin.Forms.Frame/), and [`BoxView`](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) classes.
+Also introduced in this chapter are the [`ScrollView`](xref:Xamarin.Forms.ScrollView), [`Frame`](xref:Xamarin.Forms.Frame), and [`BoxView`](xref:Xamarin.Forms.BoxView) classes.
 
 ## Stacks of views
 
-[`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) derives from `Layout<View>` and inherits a [`Children`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) property of type `IList<View>`. You add multiple view items to this collection, and `StackLayout` displays them in a horizontal or vertical stack.
+[`StackLayout`](xref:Xamarin.Forms.StackLayout) derives from `Layout<View>` and inherits a [`Children`](xref:Xamarin.Forms.Layout`1) property of type `IList<View>`. You add multiple view items to this collection, and `StackLayout` displays them in a horizontal or vertical stack.
 
 Set the [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) property of `StackLayout` to a member of the [`StackOrientation`](xref:Xamarin.Forms.StackOrientation) enumeration, either [`Vertical`](xref:Xamarin.Forms.StackOrientation.Vertical) or [`Horizontal`](xref:Xamarin.Forms.StackOrientation.Horizontal). The default is `Vertical`.
 
-Set the [`Spacing`](https://developer.xamarin.com/api/property/Xamarin.Forms.StackLayout.Spacing/) property of `StackLayout` to a `double` value to specify a spacing between the children. The default value is 6.
+Set the [`Spacing`](xref:Xamarin.Forms.StackLayout.Spacing) property of `StackLayout` to a `double` value to specify a spacing between the children. The default value is 6.
 
 In code, you can add items to the `Children` collection of `StackLayout` in a `for` or `foreach` loop as demonstrated in the
 [**ColorLoop**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorLoop) sample, or you can initialize the `Children` collection with a list of the individual views as demonstrated in
@@ -31,9 +31,9 @@ In code, you can add items to the `Children` collection of `StackLayout` in a `f
 
 ## Scrolling content
 
-If a `StackLayout` contains too many children to display on a page, you can put the `StackLayout` in a [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) to allow scrolling.
+If a `StackLayout` contains too many children to display on a page, you can put the `StackLayout` in a [`ScrollView`](xref:Xamarin.Forms.ScrollView) to allow scrolling.
 
-Set the [`Content`](https://developer.xamarin.com/api/property/Xamarin.Forms.ScrollView.Content/) property of `ScrollView` to the view you want to scroll. This is often a `StackLayout`, but it can be any view.
+Set the [`Content`](xref:Xamarin.Forms.ScrollView.Content) property of `ScrollView` to the view you want to scroll. This is often a `StackLayout`, but it can be any view.
 
 Set the [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) property of `ScrollView` to a member of the [`ScrollOrientation`](xref:Xamarin.Forms.ScrollOrientation) property, [`Vertical`](xref:Xamarin.Forms.ScrollOrientation.Vertical), [`Horizontal`](xref:Xamarin.Forms.ScrollOrientation.Horizontal), or [`Both`](xref:Xamarin.Forms.ScrollOrientation.Both). The default is `Vertical`. If the content of a `ScrollView` is a `StackLayout`, the two orientations should be consistent.
 
@@ -50,14 +50,14 @@ The `LayoutOptions` structure defines two properties:
 
 For your convenience, the `LayoutOptions` structure also defines eight static read-only fields of type `LayoutOptions` that encompass all combinations of the two instance properties:
 
-- [`LayoutOptions.Start`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Start/)
-- [`LayoutOptions.Center`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Center/)
-- [`LayoutOptions.End`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.End/)
-- [`LayoutOptions.Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/)
-- [`LayoutOptions.StartAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.StartAndExpand/)
-- [`LayoutOptions.CenterAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.CenterAndExpand/)
-- [`LayoutOptions.EndAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.EndAndExpand/)
-- [`LayoutOptions.FillAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/)
+- [`LayoutOptions.Start`](xref:Xamarin.Forms.LayoutOptions.Start)
+- [`LayoutOptions.Center`](xref:Xamarin.Forms.LayoutOptions.Center)
+- [`LayoutOptions.End`](xref:Xamarin.Forms.LayoutOptions.End)
+- [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)
+- [`LayoutOptions.StartAndExpand`](xref:Xamarin.Forms.LayoutOptions.StartAndExpand)
+- [`LayoutOptions.CenterAndExpand`](xref:Xamarin.Forms.LayoutOptions.CenterAndExpand)
+- [`LayoutOptions.EndAndExpand`](xref:Xamarin.Forms.LayoutOptions.EndAndExpand)
+- [`LayoutOptions.FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand)
 
 The following discussion involves a `StackLayout` with a default vertical orientation. The horizontal `StackLayout` is analogous.
 
@@ -75,21 +75,21 @@ This is demonstrated in the [**VerticalOptionsDemo**](https://github.com/xamarin
 
 These two rectangular views are often used for presentation purposes.
 
-The [`Frame`](https://developer.xamarin.com/api/type/Xamarin.Forms.Frame/) view displays a rectangular frame around another view, which can be a layout such as `StackLayout`. `Frame` inherits a [`Content`](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) property from [`ContentView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) that you set to the view to be displayed within the `Frame`. The `Frame` is transparent by default. Set the following three properties to customize the frame's appearance:
+The [`Frame`](xref:Xamarin.Forms.Frame) view displays a rectangular frame around another view, which can be a layout such as `StackLayout`. `Frame` inherits a [`Content`](xref:Xamarin.Forms.ContentView.Content) property from [`ContentView`](xref:Xamarin.Forms.ContentView) that you set to the view to be displayed within the `Frame`. The `Frame` is transparent by default. Set the following three properties to customize the frame's appearance:
 
-- The [`OutlineColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.Frame.OutlineColor/) property to make it visible. It is common to set `OutlineColor` to `Color.Accent` when you don't know the underlying color scheme.
-- The [`HasShadow`](https://developer.xamarin.com/api/property/Xamarin.Forms.Frame.HasShadow/) property can be set to `true` to display a black shadow on iOS devices.
-- Set the [`Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) property to a `Thickness` value to leave a space between the frame and the frame's content. The default value is 20 units on all sides.
+- The [`OutlineColor`](xref:Xamarin.Forms.Frame.OutlineColor) property to make it visible. It is common to set `OutlineColor` to `Color.Accent` when you don't know the underlying color scheme.
+- The [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) property can be set to `true` to display a black shadow on iOS devices.
+- Set the [`Padding`](xref:Xamarin.Forms.Layout.Padding) property to a `Thickness` value to leave a space between the frame and the frame's content. The default value is 20 units on all sides.
 
 The `Frame` has default `HorizontalOptions` and `VerticalOptions` values of `LayoutOptions.Fill`, which means that the `Frame` will fill its container. With other settings, the size of the `Frame` is based on the size of its content.
 
 The `Frame` is demonstrated in the [**FramedText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FramedText) sample.
 
-The [`BoxView`](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) displays a rectangular area of color specified by its [`Color`](https://developer.xamarin.com/api/property/Xamarin.Forms.BoxView.Color/) property.
+The [`BoxView`](xref:Xamarin.Forms.BoxView) displays a rectangular area of color specified by its [`Color`](xref:Xamarin.Forms.BoxView.Color) property.
 
 If the `BoxView` is constrained (its `HorizontalOptions` and `VerticalOptions` properties have their default settings of `LayoutOptions.Fill`), the `BoxView` fills the space available for it. If the `BoxView` is unconstrained (with `HorizontalOptions` and `LayoutOptions` settings of `Start`, `Center`, or `End`), it has a default dimension of 40 units square. A `BoxView` can be constrained in one dimension and unconstrained in the other.
 
-Often, you'll set the the [`WidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/) and [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) properties of `BoxView` to give it a specific size. This is illustrated by the [**SizedBoxView**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) sample.
+Often, you'll set the the [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) and [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) properties of `BoxView` to give it a specific size. This is illustrated by the [**SizedBoxView**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) sample.
 
 You can use several instances of `StackLayout` to combine a `BoxView` and several `Label` instances in a `Frame` to display a particular color, and then put each of these views in a `StackLayout` in a `ScrollView` to create the attractive list of colors shown in the [**ColorBlocks**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) sample:
 

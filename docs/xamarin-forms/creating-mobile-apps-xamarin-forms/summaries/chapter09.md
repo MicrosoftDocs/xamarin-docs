@@ -27,11 +27,11 @@ A more structured approach to executing platform-specific code in the SAP is dem
 
 ## DependencyService and the Portable Class Library
 
-A library cannot normally access classes in application projects. This restriction seems to prevent the technique shown in **PlatInfoSap2** from being used in a PCL. However, Xamarin.Forms contains a class named [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) that uses .NET reflection to access public classes in the application project from the PCL.
+A library cannot normally access classes in application projects. This restriction seems to prevent the technique shown in **PlatInfoSap2** from being used in a PCL. However, Xamarin.Forms contains a class named [`DependencyService`](xref:Xamarin.Forms.DependencyService) that uses .NET reflection to access public classes in the application project from the PCL.
 
-The PCL must define an `interface` with the members it needs to use in each platform. Then, each of the platforms contains an implementation of that interface. The class that implements the interface must be identified with a [DependencyAttribute](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyAttribute/) on the assembly level.
+The PCL must define an `interface` with the members it needs to use in each platform. Then, each of the platforms contains an implementation of that interface. The class that implements the interface must be identified with a [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) on the assembly level.
 
-The PCL then uses the generic [`Get`](https://developer.xamarin.com/api/member/Xamarin.Forms.DependencyService.Get{T}/p/Xamarin.Forms.DependencyFetchTarget/) method of `DependencyService` to obtain an instance of the platform class that implements the interface.
+The PCL then uses the generic [`Get`](xref:Xamarin.Forms.DependencyService.Get*) method of `DependencyService` to obtain an instance of the platform class that implements the interface.
 
 This is demonstrated in the [**DisplayPlatformInfo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/DisplayPlatformInfo) sample.
 

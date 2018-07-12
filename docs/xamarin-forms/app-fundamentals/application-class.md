@@ -49,7 +49,7 @@ public partial class App : Application
 }
 ```
 
-As well as setting the [`MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) property, the code-behind must also call the `InitializeComponent` method to load and parse the associated XAML.
+As well as setting the [`MainPage`](xref:Xamarin.Forms.Application.MainPage) property, the code-behind must also call the `InitializeComponent` method to load and parse the associated XAML.
 
 ## MainPage Property
 

@@ -11,7 +11,7 @@ ms.date: 08/09/2016
 
 # Checking Device Orientation
 
-This article will guide you to use [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) to check the device orientation from shared code using the native APIs on each platform. This walkthrough is based on the existing `DeviceOrientation` plugin by Ali Özgür. See the [GitHub repo](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) for more information.
+This article will guide you to use [`DependencyService`](xref:Xamarin.Forms.DependencyService) to check the device orientation from shared code using the native APIs on each platform. This walkthrough is based on the existing `DeviceOrientation` plugin by Ali Özgür. See the [GitHub repo](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) for more information.
 
 - **[Creating the Interface](#Creating_the_Interface)** &ndash; understand how to the interface is created in shared code.
 - **[iOS Implementation](#iOS_Implementation)** &ndash; learn how to implement the interface in native code for iOS.

@@ -13,7 +13,7 @@ ms.date: 01/05/2018
 
 Data bindings usually transfer data from a source property to a target property, and in some cases from the target property to the source property. This transfer is straightforward when the source and target properties are of the same type, or when one type can be converted to the other type through an implicit conversion. When that is not the case, a type conversion must take place.
 
-In the [**String Formatting**](string-formatting.md) article, you saw how you can use the `StringFormat` property of a data binding to convert any type into a string. For other types of conversions, you need to write some specialized code in a class that implements the [`IValueConverter`](https://developer.xamarin.com/api/type/Xamarin.Forms.IValueConverter/) interface. (The Universal Windows Platform contains a similar class named [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/) in the `Windows.UI.Xaml.Data` namespace, but this `IValueConverter` is in the `Xamarin.Forms` namespace.) Classes that implement `IValueConverter` are called *value converters*, but they are also often referred to as *binding converters* or *binding value converters*.
+In the [**String Formatting**](string-formatting.md) article, you saw how you can use the `StringFormat` property of a data binding to convert any type into a string. For other types of conversions, you need to write some specialized code in a class that implements the [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) interface. (The Universal Windows Platform contains a similar class named [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/) in the `Windows.UI.Xaml.Data` namespace, but this `IValueConverter` is in the `Xamarin.Forms` namespace.) Classes that implement `IValueConverter` are called *value converters*, but they are also often referred to as *binding converters* or *binding value converters*.
 
 ## The IValueConverter Interface
 
@@ -36,7 +36,7 @@ public class IntToBoolConverter : IValueConverter
 }
 ```
 
-You set an instance of this class to the [`Converter`](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Converter/) property of the `Binding` class or to the [`Converter`](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Converter/) property of the `Binding` markup extension. This class becomes part of the data binding.
+You set an instance of this class to the [`Converter`](xref:Xamarin.Forms.Binding.Converter) property of the `Binding` class or to the [`Converter`](xref:Xamarin.Forms.Xaml.BindingExtension.Converter) property of the `Binding` markup extension. This class becomes part of the data binding.
 
 The `Convert` method is called when data moves from the source to the target in `OneWay` or `TwoWay` bindings. The `value` parameter is the object or value from the data-binding source. The method must return a value of the type of the data-binding target. The method shown here casts the `value` parameter to an `int` and then compares it with 0 for a `bool` return value.
 
@@ -237,7 +237,7 @@ It's also possible to use [`Triggers`](~/xamarin-forms/app-fundamentals/triggers
 
 ## Binding Converter Parameters
 
-The `Binding` class defines a [`ConverterParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.ConverterParameter/) property, and the `Binding` markup extension also defines a [`ConverterParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.ConverterParameter/) property. If this property is set, then the value is passed to the `Convert` and `ConvertBack` methods as the `parameter` argument. Even if the instance of the value converter is shared among several data bindings, the `ConverterParameter` can be different to perform somewhat different conversions.
+The `Binding` class defines a [`ConverterParameter`](xref:Xamarin.Forms.Binding.ConverterParameter) property, and the `Binding` markup extension also defines a [`ConverterParameter`](xref:Xamarin.Forms.Xaml.BindingExtension.ConverterParameter) property. If this property is set, then the value is passed to the `Convert` and `ConvertBack` methods as the `parameter` argument. Even if the instance of the value converter is shared among several data bindings, the `ConverterParameter` can be different to perform somewhat different conversions.
 
 The use of `ConverterParameter` is demonstrated with a color-selection program. In this case, the `RgbColorViewModel` has three properties of type `double` named `Red`, `Green`, and `Blue` that it uses to construct a `Color` value:
 

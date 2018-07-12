@@ -43,7 +43,7 @@ CocosSharp is a runtime-efficient library which includes the following features:
 
 CocosSharp’s primary focus is to simplify the creation of cross-platform 2D games; however, it can also be a great addition to Xamarin Form applications. Since games typically require efficient rendering and precise control over visuals, CocosSharp can be used to add powerful visualization and effects to non-game applications.
 
-Xamarin.Forms is built upon native, platform-specific UI systems. For example, [`Button`s](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) appear differently on iOS and Android, and may even differ by operating system version. By contrast, CocosSharp does not use any platform-specific visual objects, so all visual objects appear identical on all platforms. Of course, resolution and aspect ratio differ between devices, and this can impact how CocosSharp renders its visuals. These details will be discussed later in this guide.
+Xamarin.Forms is built upon native, platform-specific UI systems. For example, [`Button`s](xref:Xamarin.Forms.Button) appear differently on iOS and Android, and may even differ by operating system version. By contrast, CocosSharp does not use any platform-specific visual objects, so all visual objects appear identical on all platforms. Of course, resolution and aspect ratio differ between devices, and this can impact how CocosSharp renders its visuals. These details will be discussed later in this guide.
 
 More detailed information can be found in the [CocosSharp section](~/graphics-games/cocossharp/index.md).
 
@@ -148,7 +148,7 @@ On iOS, the `HomePage` appears as shown in the following image:
 
 ### 2. Adding a CocosSharpView
 
-The `CocosSharpView` class is used to embed CocosSharp into a Xamarin.Forms app. Since `CocosSharpView` inherits from the [Xamarin.Forms.View](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) class, it provides a familiar interface for layout, and it can be used within layout containers such as [Xamarin.Forms.Grid](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/). Add a new `CocosSharpView` to the project by completing the `CreateTopHalf` method:
+The `CocosSharpView` class is used to embed CocosSharp into a Xamarin.Forms app. Since `CocosSharpView` inherits from the [Xamarin.Forms.View](xref:Xamarin.Forms.View) class, it provides a familiar interface for layout, and it can be used within layout containers such as [Xamarin.Forms.Grid](xref:Xamarin.Forms.Grid). Add a new `CocosSharpView` to the project by completing the `CreateTopHalf` method:
 
 
 ```csharp

@@ -26,13 +26,13 @@ Three other XAML markup extensions have historically been supported by other XAM
 - `Binding` &ndash; establish a link between properties of two objects, as described in the article [**Data Binding**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 - `TemplateBinding` &ndash; performs data binding from a control template, as discussed in the article [**Binding from a Control Template**]/guides/xamarin-forms/application-fundamentals/templates/control-templates/template-binding/)
 
-The [`RelativeLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/) layout makes use of the custom markup extension [`ConstraintExpression`](https://developer.xamarin.com/api/type/Xamarin.Forms.ConstraintExpression/). This markup extension is described in the article [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
+The [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) layout makes use of the custom markup extension [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression). This markup extension is described in the article [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
 <a name="static" />
 
 ## x:Static Markup Extension
 
-The `x:Static` markup extension is supported by the [`StaticExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.StaticExtension/) class. The class has a single property named [`Member`](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.StaticExtension.Member/) of type `string` that you set to the name of a public constant, static property, static field, or enumeration member.
+The `x:Static` markup extension is supported by the [`StaticExtension`](xref:Xamarin.Forms.Xaml.StaticExtension) class. The class has a single property named [`Member`](xref:Xamarin.Forms.Xaml.StaticExtension.Member) of type `string` that you set to the name of a public constant, static property, static field, or enumeration member.
 
 One common way to use `x:Static` is to first define a class with some constants or static variables, such as this tiny `AppConstants` class in the [**MarkupExtensions**](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/) program:
 
@@ -138,7 +138,7 @@ Here's the sample running on all three platforms:
 
 ## x:Reference Markup Extension
 
-The `x:Reference` markup extension is supported by the [`ReferenceExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.ReferenceExtension/) class. The class has a single property named [`Name`](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.ReferenceExtension.Name/) of type `string` that you set to the name of an element on the page that has been given a name with `x:Name`. This `Name` property is the content property of `ReferenceExtension`, so `Name=` is not required when `x:Reference` appears in curly braces.
+The `x:Reference` markup extension is supported by the [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) class. The class has a single property named [`Name`](xref:Xamarin.Forms.Xaml.ReferenceExtension.Name) of type `string` that you set to the name of an element on the page that has been given a name with `x:Name`. This `Name` property is the content property of `ReferenceExtension`, so `Name=` is not required when `x:Reference` appears in curly braces.
 
 The `x:Reference` markup extension is used exclusively with data bindings, which are described in more detail in the article [**Data Binding**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
@@ -182,9 +182,9 @@ Both `x:Reference` expressions use the abbreviated version of the `ReferenceExte
 
 ## x:Type Markup Extension
 
-The `x:Type` markup extension is the XAML equivalent of the C# [`typeof`](/dotnet/csharp/language-reference/keywords/typeof/) keyword. It is supported by the [`TypeExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.TypeExtension/) class, which defines one property named [`TypeName`](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.TypeExtension.TypeName/) of type `string` that is set to a class or structure name. The `x:Type` markup extension returns the [`System.Type`](https://developer.xamarin.com/api/type/System.Type/) object of that class or structure. `TypeName` is the content property of `TypeExtension`, so `TypeName=` is not required when `x:Type` appears with curly braces.
+The `x:Type` markup extension is the XAML equivalent of the C# [`typeof`](/dotnet/csharp/language-reference/keywords/typeof/) keyword. It is supported by the [`TypeExtension`](xref:Xamarin.Forms.Xaml.TypeExtension) class, which defines one property named [`TypeName`](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) of type `string` that is set to a class or structure name. The `x:Type` markup extension returns the [`System.Type`](xref:System.Type) object of that class or structure. `TypeName` is the content property of `TypeExtension`, so `TypeName=` is not required when `x:Type` appears with curly braces.
 
-Within Xamarin.Forms, there are several properties that have arguments of type `Type`. Examples include the [`TargetType`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/) property of `Style`, and the [x:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) attribute used to specify arguments in generic classes. However, the XAML parser performs the `typeof` operation automatically, and the `x:Type` markup extension is not used in these cases.
+Within Xamarin.Forms, there are several properties that have arguments of type `Type`. Examples include the [`TargetType`](xref:Xamarin.Forms.Style.TargetType) property of `Style`, and the [x:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) attribute used to specify arguments in generic classes. However, the XAML parser performs the `typeof` operation automatically, and the `x:Type` markup extension is not used in these cases.
 
 One place where `x:Type` *is* required is with the `x:Array` markup extension, which is described in the [next section](#array).
 
@@ -320,7 +320,7 @@ The method that is executed when a `Button` is pressed creates a new instance of
 
 ## x:Array Markup Extension
 
-The `x:Array` markup extension allows you to define an array in markup. It is supported by the [`ArrayExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.ArrayExtension/) class, which defines two properties:
+The `x:Array` markup extension allows you to define an array in markup. It is supported by the [`ArrayExtension`](xref:Xamarin.Forms.Xaml.ArrayExtension) class, which defines two properties:
 
 - `Type` of type `Type`, which indicates the type of the elements in the array.
 - `Items` of type `IList`, which is a collection of the items themselves. This is the content property of `ArrayExtension`.
@@ -397,7 +397,7 @@ When defining arrays of common types like strings or numbers, use the tags liste
 
 ## x:Null Markup Extension
 
-The `x:Null` markup extension is supported by the [`NullExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.NullExtension/) class. It has no properties and is simply the XAML equivalent of the C# [`null`](/dotnet/csharp/language-reference/keywords/null/) keyword.
+The `x:Null` markup extension is supported by the [`NullExtension`](xref:Xamarin.Forms.Xaml.NullExtension) class. It has no properties and is simply the XAML equivalent of the C# [`null`](/dotnet/csharp/language-reference/keywords/null/) keyword.
 
 The `x:Null` markup extension is rarely needed and seldom used, but if you do find a need for it, you'll be glad that it exists.
 

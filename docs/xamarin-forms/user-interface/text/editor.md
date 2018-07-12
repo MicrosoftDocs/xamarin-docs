@@ -56,7 +56,7 @@ A [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) property value of 0 indi
 
 ### Keyboards
 
-The keyboard that is presented when users interact with an `Editor` can be set programmatically via the [``Keyboard``](https://developer.xamarin.com/api/type/Xamarin.Forms.Keyboard/) property.
+The keyboard that is presented when users interact with an `Editor` can be set programmatically via the [``Keyboard``](xref:Xamarin.Forms.Keyboard) property.
 
 The options for the keyboard type are:
 
@@ -138,8 +138,8 @@ Make sure that the background and text colors you choose are usable on each plat
 
 `Editor` exposes two events:
 
-- [TextChanged](http://developer.xamarin.com/api/event/Xamarin.Forms.Editor.TextChanged/) &ndash; raised when the text changes in the editor. Provides the text before and after the change.
-- [Completed](http://developer.xamarin.com/api/event/Xamarin.Forms.Editor.Completed/) &ndash; raised when the user has ended input by pressing the return key on the keyboard.
+- [TextChanged](xref:Xamarin.Forms.Editor.TextChanged) &ndash; raised when the text changes in the editor. Provides the text before and after the change.
+- [Completed](xref:Xamarin.Forms.Editor.Completed) &ndash; raised when the user has ended input by pressing the return key on the keyboard.
 
 ### Completed
 
@@ -240,4 +240,4 @@ Title="Editor Demo">
 ## Related Links
 
 - [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
-- [Editor API](https://developer.xamarin.com/api/type/Xamarin.Forms.Editor/)
+- [Editor API](xref:Xamarin.Forms.Editor)

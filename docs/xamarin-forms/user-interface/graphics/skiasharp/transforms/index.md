@@ -28,7 +28,7 @@ SkiaSharp also supports non-affine transforms (also called *projective* or *pers
 
 ## Differences between SkiaSharp and Xamarin.Forms Transforms
 
-Xamarin.Forms also supports transforms that are similar to those in SkiaSharp. The Xamarin.Forms [`VisualElement`](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/) class defines the following transform properties:
+Xamarin.Forms also supports transforms that are similar to those in SkiaSharp. The Xamarin.Forms [`VisualElement`](xref:Xamarin.Forms.VisualElement) class defines the following transform properties:
 
 - `TranslationX` and `TranslationY`
 - `Scale`

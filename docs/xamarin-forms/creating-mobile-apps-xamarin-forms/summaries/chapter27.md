@@ -35,17 +35,17 @@ You'll notice an important class named `ViewRenderer`. This is the class you der
 
 The iOS [`ViewRenderer<TView, TNativeView>`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/ViewRenderer.cs#L26) has generic arguments:
 
-- `TView` constrained to [`Xamarin.Forms.View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)
+- `TView` constrained to [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
 - `TNativeView` constrained to [`UIKit.UIView`](https://developer.xamarin.com/api/type/UIKit.UIView/)
 
 The Android [`ViewRenderer<TView, TNativeView>`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/ViewRenderer.cs#L14) has generic arguments:
 
-- `TView` constrained to [`Xamarin.Forms.View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)
+- `TView` constrained to [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
 - `TNativeView` constrained to [`Android.Views.View`](https://developer.xamarin.com/api/type/Android.Views.View/)
 
 The Windows Runtime [`ViewRenderer<TElement, TNativeElement>`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.WinRT/ViewRenderer.cs#L12) has differently named generic arguments:
 
-- `TElement` constrained to [`Xamarin.Forms.View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)
+- `TElement` constrained to [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
 - `TNativeElement` constrained to [`Windows.UI.Xaml.FrameworkElement`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx)
 
 When writing a renderer, you will be deriving a class from `View`, and then writing multiple `ViewRenderer` classes, one for each supported platform. Each platform-specific implementation will reference a native class that derives from the type you specify as the `TNativeView` or `TNativeElement` parameter.

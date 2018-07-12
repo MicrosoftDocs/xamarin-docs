@@ -24,9 +24,9 @@ Fast renderers reduce the inflation and rendering costs of a Xamarin.Forms contr
 
 Fast renderers are available for the following controls in Xamarin.Forms 2.4 on Android:
 
-- [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)
-- [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/)
-- [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)
+- [`Button`](xref:Xamarin.Forms.Button)
+- [`Image`](xref:Xamarin.Forms.Image)
+- [`Label`](xref:Xamarin.Forms.Label)
 
 Functionally, these fast renderers are no different to the original renderers. However, they are currently experimental and can only be used by adding the following line of code to your `MainActivity` class before calling `Forms.Init`:
 
@@ -37,7 +37,7 @@ Forms.SetFlags("FastRenderers_Experimental");
 > [!NOTE]
 > Fast renderers are only applicable to the app compat Android backend, so this setting will be ignored on pre-app compat activities.
 
-Performance improvements will vary for each application, depending upon the complexity of the layout. For example, performance improvements of x2 are possible when scrolling through a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) containing thousands of rows of data, where the cells in each row are made of controls that use fast renderers, which results in visibly smoother scrolling.
+Performance improvements will vary for each application, depending upon the complexity of the layout. For example, performance improvements of x2 are possible when scrolling through a [`ListView`](xref:Xamarin.Forms.ListView) containing thousands of rows of data, where the cells in each row are made of controls that use fast renderers, which results in visibly smoother scrolling.
 
 
 ## Related Links

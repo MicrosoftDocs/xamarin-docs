@@ -11,7 +11,7 @@ ms.date: 10/26/2017
 
 # Xamarin.Forms Grid
 
-[`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) supports arranging views into rows and columns. Rows and columns can be set to have proportional sizes or absolute sizes. The `Grid` layout should not be confused with traditional tables and is not intended to present tabular data. `Grid` does not have the concept of row, column or cell formatting. Unlike HTML tables, `Grid` is purely intended for laying out content.
+[`Grid`](xref:Xamarin.Forms.Grid) supports arranging views into rows and columns. Rows and columns can be set to have proportional sizes or absolute sizes. The `Grid` layout should not be confused with traditional tables and is not intended to present tabular data. `Grid` does not have the concept of row, column or cell formatting. Unlike HTML tables, `Grid` is purely intended for laying out content.
 
 [![](grid-images/layouts-sml.png "Xamarin.Forms Layouts")](grid-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
@@ -42,9 +42,9 @@ Unlike traditional tables, `Grid` does not infer the number and sizes of rows an
 
 ### Rows and Columns
 
-Row and column information is stored in `Grid`'s `RowDefinitions` & `ColumnDefinitions` properties, which are each collections of [`RowDefinition`](https://developer.xamarin.com/api/type/Xamarin.Forms.RowDefinition/) and [`ColumnDefinition`](https://developer.xamarin.com/api/type/Xamarin.Forms.ColumnDefinition/) objects, respectively. `RowDefinition` has a single property, `Height`, and `ColumnDefinition` has a single property, `Width`. The options for height and width are as follows:
+Row and column information is stored in `Grid`'s `RowDefinitions` & `ColumnDefinitions` properties, which are each collections of [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) and [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) objects, respectively. `RowDefinition` has a single property, `Height`, and `ColumnDefinition` has a single property, `Width`. The options for height and width are as follows:
 
-- **Auto** &ndash; automatically sizes to fit content in the row or column. Specified as [`GridUnitType.Auto`](https://developer.xamarin.com/api/type/Xamarin.Forms.GridUnitType/) in C# or as `Auto` in XAML.
+- **Auto** &ndash; automatically sizes to fit content in the row or column. Specified as [`GridUnitType.Auto`](xref:Xamarin.Forms.GridUnitType) in C# or as `Auto` in XAML.
 - **Proportional(*)** &ndash; sizes columns and rows as a proportion of the remaining space. Specified as a value and `GridUnitType.Star` in C# and as `#*` in XAML, with `#` being your desired value. Specifying one row/column with `*` will cause it to fill the available space.
 - **Absolute** &ndash; sizes columns and rows with specific, fixed height and width values. Specified as a value and `GridUnitType.Absolute` in C# and as `#` in XAML, with `#` being your desired value.
 
@@ -133,7 +133,7 @@ grid.Children.Add(bottomRight, 1, 1);
 
 The above code creates grid with four labels, two columns, and two rows. Note that each label will have the same size and that the rows will expand to use all available space.
 
-In the example above, views are added to the [`Grid.Children`](https://developer.xamarin.com/api/property/Xamarin.Forms.Grid.Children/) collection using the [`Add`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/) overload that specifies left and top arguments. When using the [`Add`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) overload that specifies left, right, top, and bottom arguments, while the left and top arguments will always refer to cells within the [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), the right and bottom arguments may appear to refer to cells that are outside the `Grid`. This is because the right argument must always be greater than the left argument, and the bottom argument must always be greater than the top argument. The following example shows equivalent code using both `Add` overloads:
+In the example above, views are added to the [`Grid.Children`](xref:Xamarin.Forms.Grid.Children) collection using the [`Add`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/) overload that specifies left and top arguments. When using the [`Add`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) overload that specifies left, right, top, and bottom arguments, while the left and top arguments will always refer to cells within the [`Grid`](xref:Xamarin.Forms.Grid), the right and bottom arguments may appear to refer to cells that are outside the `Grid`. This is because the right argument must always be greater than the left argument, and the bottom argument must always be greater than the top argument. The following example shows equivalent code using both `Add` overloads:
 
 ```csharp
 // left, top
@@ -379,6 +379,6 @@ public CalculatorGridCode ()
 ## Related Links
 
 - [Creating Mobile Apps with Xamarin.Forms, Chapter 17](https://developer.xamarin.com/r/xamarin-forms/book/chapter17.pdf)
-- [Grid](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/)
+- [Grid](xref:Xamarin.Forms.Grid)
 - [Layout (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 - [BusinessTumble Example (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)

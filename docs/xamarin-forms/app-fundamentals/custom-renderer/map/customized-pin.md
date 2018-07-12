@@ -13,13 +13,13 @@ ms.date: 11/29/2017
 
 _This article demonstrates how to create a custom renderer for the Map control, which displays a native map with a customized pin and a customized view of the pin data on each platform._
 
-Every Xamarin.Forms view has an accompanying renderer for each platform that creates an instance of a native control. When a [`Map`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) is rendered by a Xamarin.Forms application in iOS, the `MapRenderer` class is instantiated, which in turn instantiates a native `MKMapView` control. On the Android platform, the `MapRenderer` class instantiates a native `MapView` control. On the Universal Windows Platform (UWP), the `MapRenderer` class instantiates a native `MapControl`. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Every Xamarin.Forms view has an accompanying renderer for each platform that creates an instance of a native control. When a [`Map`](xref:Xamarin.Forms.Maps.Map) is rendered by a Xamarin.Forms application in iOS, the `MapRenderer` class is instantiated, which in turn instantiates a native `MKMapView` control. On the Android platform, the `MapRenderer` class instantiates a native `MapView` control. On the Universal Windows Platform (UWP), the `MapRenderer` class instantiates a native `MapControl`. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
-The following diagram illustrates the relationship between the [`Map`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) and the corresponding native controls that implement it:
+The following diagram illustrates the relationship between the [`Map`](xref:Xamarin.Forms.Maps.Map) and the corresponding native controls that implement it:
 
 ![](customized-pin-images/map-classes.png "Relationship Between the Map Control and the Implementing Native Controls")
 
-The rendering process can be used to implement platform-specific customizations by creating a custom renderer for a [`Map`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) on each platform. The process for doing this is as follows:
+The rendering process can be used to implement platform-specific customizations by creating a custom renderer for a [`Map`](xref:Xamarin.Forms.Maps.Map) on each platform. The process for doing this is as follows:
 
 1. [Create](#Creating_the_Custom_Map) a Xamarin.Forms custom map.
 1. [Consume](#Consuming_the_Custom_Map) the custom map from Xamarin.Forms.
@@ -28,13 +28,13 @@ The rendering process can be used to implement platform-specific customizations 
 Each item will now be discussed in turn, to implement a `CustomMap` renderer that displays a native map with a customized pin and a customized view of the pin data on each platform.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) must be initialized and configured before use. For more information, see [`Maps Control`](~/xamarin-forms/user-interface/map.md).
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) must be initialized and configured before use. For more information, see [`Maps Control`](~/xamarin-forms/user-interface/map.md).
 
 <a name="Creating_the_Custom_Map" />
 
 ## Creating the Custom Map
 
-A custom map control can be created by subclassing the [`Map`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) class, as shown in the following code example:
+A custom map control can be created by subclassing the [`Map`](xref:Xamarin.Forms.Maps.Map) class, as shown in the following code example:
 
 ```csharp
 public class CustomMap : Map
@@ -52,7 +52,7 @@ public class CustomPin : Pin
 }
 ```
 
-This class defines a `CustomPin` as inheriting the properties of the [`Pin`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Pin/) class, and adding a `Url` property.
+This class defines a `CustomPin` as inheriting the properties of the [`Pin`](xref:Xamarin.Forms.Maps.Pin) class, and adding a `Url` property.
 
 <a name="Consuming_the_Custom_Map" />
 
@@ -92,7 +92,7 @@ public class MapPageCS : ContentPage
 }
 ```
 
-The `CustomMap` instance will be used to display the native map on each platform. It's [`MapType`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.MapType/) property sets the display style of the [`Map`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/), with the possible values being defined in the [`MapType`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapType/) enumeration. For iOS and Android, the width and height of the map is set through properties of the `App` class that are initialized in the platform-specific projects.
+The `CustomMap` instance will be used to display the native map on each platform. It's [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) property sets the display style of the [`Map`](xref:Xamarin.Forms.Maps.Map), with the possible values being defined in the [`MapType`](xref:Xamarin.Forms.Maps.MapType) enumeration. For iOS and Android, the width and height of the map is set through properties of the `App` class that are initialized in the platform-specific projects.
 
 The location of the map, and the pins it contains, are initialized as shown in the following code example:
 
@@ -116,7 +116,7 @@ public MapPage ()
 }
 ```
 
-This initialization adds a custom pin and positions the map's view with the [`MoveToRegion`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Map.MoveToRegion(Xamarin.Forms.Maps.MapSpan)/) method, which changes the position and zoom level of the map by creating a [`MapSpan`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapSpan/) from a [`Position`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Position/) and a [`Distance`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Distance/).
+This initialization adds a custom pin and positions the map's view with the [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) method, which changes the position and zoom level of the map by creating a [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) from a [`Position`](xref:Xamarin.Forms.Maps.Position) and a [`Distance`](xref:Xamarin.Forms.Maps.Distance).
 
 A custom renderer can now be added to each application project to customize the native map controls.
 

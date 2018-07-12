@@ -13,7 +13,7 @@ ms.date: 09/11/2017
 
 _Xamarin.Forms data templates provide the ability to define the presentation of data on supported controls. This article provides an introduction to data templates, examining why they are necessary._
 
-Consider a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) that displays a collection of `Person` objects. The following code example shows the definition of the `Person` class:
+Consider a [`ListView`](xref:Xamarin.Forms.ListView) that displays a collection of `Person` objects. The following code example shows the definition of the `Person` class:
 
 ```csharp
 public class Person
@@ -24,7 +24,7 @@ public class Person
 }
 ```
 
-The `Person` class defines `Name`, `Age`, and `Location` properties, which can be set when a `Person` object is created. The [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) is used to display the collection of `Person` objects, as shown in the following XAML code example:
+The `Person` class defines `Name`, `Age`, and `Location` properties, which can be set when a `Person` object is created. The [`ListView`](xref:Xamarin.Forms.ListView) is used to display the collection of `Person` objects, as shown in the following XAML code example:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -49,12 +49,12 @@ The `Person` class defines `Name`, `Age`, and `Location` properties, which can b
 </ContentPage>
 ```
 
-Items are added to the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) in XAML by initializing the [`ItemsSource`](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemsSource/) property from an array of `Person` instances.
+Items are added to the [`ListView`](xref:Xamarin.Forms.ListView) in XAML by initializing the [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property from an array of `Person` instances.
 
 > [!NOTE]
 > Note that the `x:Array` element requires a `Type` attribute indicating the type of the items in the array.
 
-The equivalent C# page is shown in the following code example, which initializes the [`ItemsSource`](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemsSource/) property to a `List` of `Person` instances:
+The equivalent C# page is shown in the following code example, which initializes the [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property to a `List` of `Person` instances:
 
 ```csharp
 public WithoutDataTemplatePageCS()
@@ -81,7 +81,7 @@ public WithoutDataTemplatePageCS()
 }
 ```
 
-The [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) calls `ToString` when displaying the objects in the collection. Because there is no `Person.ToString` override, `ToString` returns the type name of each object, as shown in the following screenshots:
+The [`ListView`](xref:Xamarin.Forms.ListView) calls `ToString` when displaying the objects in the collection. Because there is no `Person.ToString` override, `ToString` returns the type name of each object, as shown in the following screenshots:
 
 ![](introduction-images/no-data-template.png "ListView without a Data Template")
 
@@ -98,32 +98,32 @@ public class Person
 }
 ```
 
-This results in the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) displaying the `Person.Name` property value for each object in the collection, as shown in the following screenshots:
+This results in the [`ListView`](xref:Xamarin.Forms.ListView) displaying the `Person.Name` property value for each object in the collection, as shown in the following screenshots:
 
 ![](introduction-images/override-tostring.png "ListView with a Data Template")
 
-The `Person.ToString` override could return a formatted string consisting of the `Name`, `Age`, and `Location` properties. However, this approach offers only a limited control over the appearance of each item of data. For more flexibility, a [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) can be created that defines the appearance of the data.
+The `Person.ToString` override could return a formatted string consisting of the `Name`, `Age`, and `Location` properties. However, this approach offers only a limited control over the appearance of each item of data. For more flexibility, a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) can be created that defines the appearance of the data.
 
 ## Creating a DataTemplate
 
-A [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) is used to specify the appearance of data, and typically uses data binding to display data. Its common usage scenario is when displaying data from a collection of objects in a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/). For example, when a `ListView` is bound to a collection of `Person` objects, the `ListView.ItemTemplate` property will be set to a `DataTemplate` that defines the appearance of each `Person` object in the `ListView`. The `DataTemplate` will contain elements that bind to property values of each `Person` object. For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) is used to specify the appearance of data, and typically uses data binding to display data. Its common usage scenario is when displaying data from a collection of objects in a [`ListView`](xref:Xamarin.Forms.ListView). For example, when a `ListView` is bound to a collection of `Person` objects, the `ListView.ItemTemplate` property will be set to a `DataTemplate` that defines the appearance of each `Person` object in the `ListView`. The `DataTemplate` will contain elements that bind to property values of each `Person` object. For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
-A [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) can be used as a value for the following properties:
+A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) can be used as a value for the following properties:
 
-- [`ListView.HeaderTemplate`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.HeaderTemplate/)
-- [`ListView.FooterTemplate`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.FooterTemplate/)
-- [`ListView.GroupHeaderTemplate`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupHeaderTemplate/)
-- [`ItemsView.ItemTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.ItemsView%3CTVisual%3E/), which is inherited by [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/).
-- [`MultiPage.ItemTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/), which is inherited by [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/), [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/), and [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/).
+- [`ListView.HeaderTemplate`](xref:Xamarin.Forms.ListView.HeaderTemplate)
+- [`ListView.FooterTemplate`](xref:Xamarin.Forms.ListView.FooterTemplate)
+- [`ListView.GroupHeaderTemplate`](xref:Xamarin.Forms.ListView.GroupHeaderTemplate)
+- [`ItemsView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1), which is inherited by [`ListView`](xref:Xamarin.Forms.ListView).
+- [`MultiPage.ItemTemplate`](xref:Xamarin.Forms.MultiPage`1), which is inherited by [`CarouselPage`](xref:Xamarin.Forms.CarouselPage), [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), and [`TabbedPage`](xref:Xamarin.Forms.TabbedPage).
 
 > [!NOTE]
-> Note that although the [`TableView`](https://developer.xamarin.com/api/type/Xamarin.Forms.TableView/) makes uses of [`Cell`](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) objects, it does not use a [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/). This is because data bindings are always set directly on `Cell` objects.
+> Note that although the [`TableView`](xref:Xamarin.Forms.TableView) makes uses of [`Cell`](xref:Xamarin.Forms.Cell) objects, it does not use a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). This is because data bindings are always set directly on `Cell` objects.
 
-A [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) that's placed as a direct child of the properties listed above is known as an *inline template*. Alternatively, a `DataTemplate` can be defined as a control-level, page-level, or application-level resource. Choosing where to define a [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) impacts where it can be used:
+A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) that's placed as a direct child of the properties listed above is known as an *inline template*. Alternatively, a `DataTemplate` can be defined as a control-level, page-level, or application-level resource. Choosing where to define a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) impacts where it can be used:
 
-- A [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) defined at the control level can only be applied to the control.
-- A [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) defined at the page level can be applied to multiple valid controls on the page.
-- A [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) defined at the application level can be applied to valid controls throughout the application.
+- A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) defined at the control level can only be applied to the control.
+- A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) defined at the page level can be applied to multiple valid controls on the page.
+- A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) defined at the application level can be applied to valid controls throughout the application.
 
 Data templates lower in the view hierarchy take precedence over those defined higher up when they share `x:Key` attributes. For example, an application-level data template will be overridden by a page-level data template, and a page-level data template will be overridden by a control-level data template, or an inline data template.
 
@@ -132,4 +132,4 @@ Data templates lower in the view hierarchy take precedence over those defined hi
 
 - [Cell Appearance](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
 - [Data Templates (sample)](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
-- [DataTemplate](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)
+- [DataTemplate](xref:Xamarin.Forms.DataTemplate)

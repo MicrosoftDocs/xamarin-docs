@@ -19,9 +19,9 @@ This is a list of the assemblies supported by Xamarin for your Xamarin.tvOS apps
 |---|---|---|
 |Mono.CompilerServices.SymbolWriter.dll|1.0|For compiler writers.|
 |Mono.Data.Sqlite.dll|1.2|ADO.NET provider for SQLite; see [limitations](~/ios/data-cloud/system.data.md).|
-|Mono.Data.Tds.dll|1.2|TDS Protocol support; used for [System.Data.SqlClient](https://developer.xamarin.com/api/namespace/System.Data.SqlClient/) support within [System.Data](~/ios/data-cloud/system.data.md).|
+|Mono.Data.Tds.dll|1.2|TDS Protocol support; used for [System.Data.SqlClient](xref:System.Data.SqlClient) support within [System.Data](~/ios/data-cloud/system.data.md).|
 |Mono.Security.dll|1.0|Cryptographic APIs.|
-|monotouch.dll|1.0|This assembly contains the [C# binding to the CocoaTouch API](https://developer.xamarin.com/api/root/ios-unified/).|
+|monotouch.dll|1.0|This assembly contains the [C# binding to the CocoaTouch API](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
 |mscorlib.dll|1.0|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |OpenTK.dll|1.0|The OpenGL/OpenAL object oriented APIs, [extended to provide iPhone device support](https://developer.xamarin.com/api/namespace/OpenGLES/).|
 |System.dll|1.0|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), plus types from the following namespaces: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.ComponentModel.Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System.Net.Cache</li> <li>System.Net.Mail</li> <li>System.Net.Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System.Timers</li></ul>|

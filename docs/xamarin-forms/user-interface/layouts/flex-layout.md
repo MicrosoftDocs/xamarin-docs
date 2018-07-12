@@ -18,7 +18,7 @@ The Xamarin.Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) is new in Xamari
 
 `FlexLayout` is similar to the Xamarin.Forms [`StackLayout`](~/xamarin-forms/user-interface/layouts/stack-layout.md) in that it can arrange its children horizontally and vertically in a stack. However, the `FlexLayout` is also capable of wrapping its children if there are too many to fit in a single row or column, and also has many options for orientation, alignment, and adapting to various screen sizes.
 
-`FlexLayout` derives from [`Layout<View>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) and inherits a [`Children`](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/) property of type `IList<View>`.
+`FlexLayout` derives from [`Layout<View>`](xref:Xamarin.Forms.Layout`1) and inherits a [`Children`](xref:Xamarin.Forms.Layout`1.Children) property of type `IList<View>`.
 
 `FlexLayout` defines six public bindable properties and five attached bindable properties that affect the size, orientation, and alignment of its child elements. (If you're not familiar with attached bindable properties, see the article **[Attached properties](~/xamarin-forms/xaml/attached-properties.md)**.) These properties are described in detail in the sections below on **[The bindable properties in detail](#bindable-properties)** and **[The attached bindable properties in detail](#attached-properties)**. However, this article begins with a section on some **[Common usage scenarios](#common-scenarios)** of `FlexLayout` that describes many of these properties more informally. Towards the end of the article, you'll see how to combine `FlexLayout` with [CSS style sheets](~/xamarin-forms/user-interface/styles/css/index.md).
 

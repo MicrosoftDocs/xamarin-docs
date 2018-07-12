@@ -38,13 +38,13 @@ In summary, a Xamarin.Forms programmer targeting phones and tablets can assume t
 - 160 units to the inch, equivalent to
 - 64 units to the centimeter
 
-The read-only [`Width`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) and [`Height`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) properties defined by `VisualElement` have default "mock" values of &ndash;1. Only when an element has been sized and accommodated in layout will these properties reflect the actual size of the element in device-independent units. This size includes any `Padding` set on the element but not the `Margin`.
+The read-only [`Width`](xref:Xamarin.Forms.VisualElement.Width) and [`Height`](xref:Xamarin.Forms.VisualElement.Height) properties defined by `VisualElement` have default "mock" values of &ndash;1. Only when an element has been sized and accommodated in layout will these properties reflect the actual size of the element in device-independent units. This size includes any `Padding` set on the element but not the `Margin`.
 
-A visual element fires the [`SizeChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.VisualElement.SizeChanged/) event when its `Width` or `Height` has changed. The [**WhatSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/WhatSize) sample uses this event to display the size of the program's screen.
+A visual element fires the [`SizeChanged`](xref:Xamarin.Forms.VisualElement.SizeChanged) event when its `Width` or `Height` has changed. The [**WhatSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/WhatSize) sample uses this event to display the size of the program's screen.
 
 ## Metrical sizes
 
-The [**MetricalBoxView**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/MetricalBoxView) uses [`WidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/) and [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) to display a `BoxView` one inch tall and one centimeter wide.
+The [**MetricalBoxView**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/MetricalBoxView) uses [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) and [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) to display a `BoxView` one inch tall and one centimeter wide.
 
 ## Estimated font sizes
 
@@ -57,13 +57,13 @@ It's possible to fit a block of text within a particular rectangle by calculatin
 - Line spacing is 120% of the font size (130% on the Windows platforms).
 - Average character width is 50% of the font size.
 
-The [**EstimatedFontSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EstimatedFontSize) sample demonstrates this technique. This program was written before the [`Margin`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) property was available, so it uses a [`ContentView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) with a [`Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) setting to simulate a margin.
+The [**EstimatedFontSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EstimatedFontSize) sample demonstrates this technique. This program was written before the [`Margin`](xref:Xamarin.Forms.View.Margin) property was available, so it uses a [`ContentView`](xref:Xamarin.Forms.ContentView) with a [`Padding`](xref:Xamarin.Forms.Layout.Padding) setting to simulate a margin.
 
 [![Triple screenshot of estimated font size](images/ch05fg07-small.png "Text Fit to Available Size")](images/ch05fg07-large.png#lightbox "Text Fit to Available Size")
 
 ## A fit-to-size clock
 
-The [**FitToSizeClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FitToSizeClock) sample demonstrates using  [`Device.StartTimer`](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.StartTimer/p/System.TimeSpan/System.Func%7BSystem.Boolean%7D/) to start a timer that periodically notifies the application when it's time to update the clock. The font size is set to one-sixth of the page width to make the display as large as possible.
+The [**FitToSizeClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FitToSizeClock) sample demonstrates using  [`Device.StartTimer`](xref:Xamarin.Forms.Device.StartTimer(System.TimeSpan,System.Func{System.Boolean})) to start a timer that periodically notifies the application when it's time to update the clock. The font size is set to one-sixth of the page width to make the display as large as possible.
 
 ## Accessibility issues
 
@@ -71,7 +71,7 @@ The **EstimatedFontSize** program and the **FitToSizeClock** program both contai
 
 ## Empirically fitting text
 
-Another way to fit text to a rectangle is to empirically calculate the rendered text size and adjust it up or down. The program in the book calls [`GetSizeRequest`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.GetSizeRequest/p/System.Double/System.Double/) on a visual element to obtain the element's desired size. That method has been deprecated, and programs should instead call [`Measure`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.Measure/p/System.Double/System.Double/Xamarin.Forms.MeasureFlags/).
+Another way to fit text to a rectangle is to empirically calculate the rendered text size and adjust it up or down. The program in the book calls [`GetSizeRequest`](xref:Xamarin.Forms.VisualElement.GetSizeRequest(System.Double,System.Double)) on a visual element to obtain the element's desired size. That method has been deprecated, and programs should instead call [`Measure`](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)).
 
 For a `Label`, the first argument should be the width of the container (to allow wrapping), while the second argument should be set to `Double.PositiveInfinity` to make the height unconstrained. The [**EmpiricalFontSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize) sample demonstrates this technique.
 

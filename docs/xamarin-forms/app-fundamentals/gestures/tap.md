@@ -15,7 +15,7 @@ _The tap gesture is used for tap detection and is implemented with the TapGestur
 
 ## Overview
 
-To make a user interface element clickable with the tap gesture, create a [`TapGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) instance, handle the [`Tapped`](https://developer.xamarin.com/api/event/Xamarin.Forms.TapGestureRecognizer.Tapped/) event and add the new gesture recognizer to the [`GestureRecognizers`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.GestureRecognizers/) collection on the user interface element. The following code example shows a `TapGestureRecognizer` attached to an [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) element:
+To make a user interface element clickable with the tap gesture, create a [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) instance, handle the [`Tapped`](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) event and add the new gesture recognizer to the [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) collection on the user interface element. The following code example shows a `TapGestureRecognizer` attached to an [`Image`](xref:Xamarin.Forms.Image) element:
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -25,19 +25,19 @@ tapGestureRecognizer.Tapped += (s, e) => {
 image.GestureRecognizers.Add(tapGestureRecognizer);
 ```
 
-By default the image will respond to single taps. Set the [`NumberOfTapsRequired`](https://developer.xamarin.com/api/property/Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired/) property to wait for a double-tap (or more taps if required).
+By default the image will respond to single taps. Set the [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) property to wait for a double-tap (or more taps if required).
 
 ```csharp
 tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
 ```
 
-When [`NumberOfTapsRequired`](https://developer.xamarin.com/api/property/Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired/) is set above one, the event handler will only be executed if the taps occur within a set period of time (this period is not configurable). If the second (or subsequent) taps do not occur within that period they are effectively ignored and the 'tap count' restarts.
+When [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) is set above one, the event handler will only be executed if the taps occur within a set period of time (this period is not configurable). If the second (or subsequent) taps do not occur within that period they are effectively ignored and the 'tap count' restarts.
 
 <a name="Using_Xaml" />
 
 ## Using Xaml
 
-A gesture recognizer can be added to a control in Xaml using attached properties. The syntax to add a [`TapGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) to an image is shown below (in this case defining a *double tap* event):
+A gesture recognizer can be added to a control in Xaml using attached properties. The syntax to add a [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) to an image is shown below (in this case defining a *double tap* event):
 
 ```xaml
 <Image Source="tapped.jpg">
@@ -67,7 +67,7 @@ void OnTapGestureRecognizerTapped(object sender, EventArgs args)
 
 ## Using ICommand
 
-Applications that use the Mvvm pattern typically use `ICommand` rather than wiring up event handlers directly. The [`TapGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) can easily support `ICommand` either by setting the binding in code:
+Applications that use the Mvvm pattern typically use `ICommand` rather than wiring up event handlers directly. The [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) can easily support `ICommand` either by setting the binding in code:
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -111,11 +111,11 @@ public class TapViewModel : INotifyPropertyChanged
 
 ## Summary
 
-The tap gesture is used for tap detection and is implemented with the [`TapGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) class. The number of taps can be specified to recognize double-tap (or triple-tap, or more taps) behavior.
+The tap gesture is used for tap detection and is implemented with the [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) class. The number of taps can be specified to recognize double-tap (or triple-tap, or more taps) behavior.
 
 
 ## Related Links
 
 - [TapGesture (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/TapGesture/)
-- [GestureRecognizer](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/)
-- [TapGestureRecognizer](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)
+- [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
+- [TapGestureRecognizer](xref:Xamarin.Forms.TapGestureRecognizer)

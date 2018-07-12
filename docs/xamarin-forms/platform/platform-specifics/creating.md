@@ -28,7 +28,7 @@ The result of exposing an Effect as a platform-specific is that the Effect can b
 > [!NOTE]
 > It's envisaged that vendors will use this technique to create their own platform-specifics, for ease of consumption by users. While users may choose to create their own platform-specifics, it should be noted that it requires more code than creating and consuming an Effect.
 
-The sample application demonstrates a `Shadow` platform-specific that adds a shadow to the text displayed by a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) control:
+The sample application demonstrates a `Shadow` platform-specific that adds a shadow to the text displayed by a [`Label`](xref:Xamarin.Forms.Label) control:
 
 ![](creating-images/screenshots.png "Shadow Platform-Specific")
 
@@ -131,7 +131,7 @@ namespace MyCompany.Forms.PlatformConfiguration.iOS
 }
 ```
 
-The `IsShadowed` attached property is used to add the `MyCompany.LabelShadowEffect` Effect to, and remove it from, the control that the `Shadow` class is attached to. This attached property registers the `OnIsShadowedPropertyChanged` method that will be executed when the value of the property changes. In turn, this method calls the `AttachEffect` or `DetachEffect` method to add or remove the effect based on the value of the `IsShadowed` attached property. The Effect is added to or removed from the control by modifying the control's [`Effects`](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/) collection.
+The `IsShadowed` attached property is used to add the `MyCompany.LabelShadowEffect` Effect to, and remove it from, the control that the `Shadow` class is attached to. This attached property registers the `OnIsShadowedPropertyChanged` method that will be executed when the value of the property changes. In turn, this method calls the `AttachEffect` or `DetachEffect` method to add or remove the effect based on the value of the `IsShadowed` attached property. The Effect is added to or removed from the control by modifying the control's [`Effects`](xref:Xamarin.Forms.Element.Effects) collection.
 
 > [!NOTE]
 > Note that the Effect is resolved by specifying a value that's a concatenation of the resolution group name and unique identifier that's specified on the Effect implementation. For more information, see [Creating an Effect](~/xamarin-forms/app-fundamentals/effects/creating.md).
@@ -170,13 +170,13 @@ namespace MyCompany.Forms.PlatformConfiguration.iOS
 }
 ```
 
-The `IsShadowed` and `SetIsShadowed` extension methods invoke the get and set accessors for the `IsShadowed` attached property, respectively. Each extension method operates on the `IPlatformElementConfiguration<iOS, FormsElement>` type, which specifies that the platform-specific can be invoked on [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instances from iOS.
+The `IsShadowed` and `SetIsShadowed` extension methods invoke the get and set accessors for the `IsShadowed` attached property, respectively. Each extension method operates on the `IPlatformElementConfiguration<iOS, FormsElement>` type, which specifies that the platform-specific can be invoked on [`Label`](xref:Xamarin.Forms.Label) instances from iOS.
 
 <a name="creating_the_effect" />
 
 ### Creating the Effect
 
-The `Shadow` platform-specific adds the `MyCompany.LabelShadowEffect` to a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/), and removes it. The following code example shows the `LabelShadowEffect` implementation for the iOS project:
+The `Shadow` platform-specific adds the `MyCompany.LabelShadowEffect` to a [`Label`](xref:Xamarin.Forms.Label), and removes it. The following code example shows the `LabelShadowEffect` implementation for the iOS project:
 
 ```csharp
 [assembly: ResolutionGroupName("MyCompany")]

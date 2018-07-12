@@ -55,5 +55,5 @@ In this example, compile-time checking of the XAML for the `HomePage` class will
 
 ## Related Links
 
-- [XamlCompilation](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.XamlCompilationAttribute/)
-- [XamlCompilationOptions](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.XamlCompilationOptions/)
+- [XamlCompilation](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute)
+- [XamlCompilationOptions](xref:Xamarin.Forms.Xaml.XamlCompilationOptions)

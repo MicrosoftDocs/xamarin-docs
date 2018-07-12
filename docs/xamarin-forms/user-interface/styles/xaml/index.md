@@ -17,15 +17,15 @@ Xamarin.Forms applications often contain multiple controls that have an identica
 
 ## [Explicit Styles](explicit.md)
 
-An *explicit* style is one that is selectively applied to controls by setting their [`Style`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) properties.
+An *explicit* style is one that is selectively applied to controls by setting their [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties.
 
 ## [Implicit Styles](implicit.md)
 
-An *implicit* style is one that's used by all controls of the same [`TargetType`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/), without requiring each control to reference the style.
+An *implicit* style is one that's used by all controls of the same [`TargetType`](xref:Xamarin.Forms.Style.TargetType), without requiring each control to reference the style.
 
 ## [Global Styles](application.md)
 
-Styles can be made available globally by adding them to the application's [`ResourceDictionary`](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/). This helps to avoid duplication of styles across pages or controls.
+Styles can be made available globally by adding them to the application's [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). This helps to avoid duplication of styles across pages or controls.
 
 ## [Style Inheritance](inheritance.md)
 
@@ -37,4 +37,4 @@ Styles do not respond to property changes, and remain unchanged for the duration
 
 ## [Device Styles](device.md)
 
-Xamarin.Forms includes six *dynamic* styles, known as *device* styles, in the [`Devices.Styles`](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/) class. All six styles can be applied to [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instances only.
+Xamarin.Forms includes six *dynamic* styles, known as *device* styles, in the [`Devices.Styles`](xref:Xamarin.Forms.Device.Styles) class. All six styles can be applied to [`Label`](xref:Xamarin.Forms.Label) instances only.

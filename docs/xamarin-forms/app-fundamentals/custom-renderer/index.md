@@ -23,11 +23,11 @@ Every Xamarin.Forms control has an accompanying renderer for each platform that 
 
 ## [Customizing an Entry](entry.md)
 
-The Xamarin.Forms [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control allows a single line of text to be edited. This article demonstrates how to create a custom renderer for the `Entry` control, enabling developers to override the default native rendering with their own platform-specific customization.
+The Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) control allows a single line of text to be edited. This article demonstrates how to create a custom renderer for the `Entry` control, enabling developers to override the default native rendering with their own platform-specific customization.
 
 ## [Customizing a ContentPage](contentpage.md)
 
-A [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) is a visual element that displays a single view and occupies most of the screen. This article demonstrates how to create a custom renderer for the `ContentPage` page, enabling developers to override the default native rendering with their own platform-specific customization.
+A [`ContentPage`](xref:Xamarin.Forms.ContentPage) is a visual element that displays a single view and occupies most of the screen. This article demonstrates how to create a custom renderer for the `ContentPage` page, enabling developers to override the default native rendering with their own platform-specific customization.
 
 ## [Customizing a Map](map/index.md)
 
@@ -35,15 +35,15 @@ Xamarin.Forms.Maps provides a cross-platform abstraction for displaying maps tha
 
 ## [Customizing a ListView](listview.md)
 
-A Xamarin.Forms [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) is a view that displays a collection of data as a vertical list. This article demonstrates how to create a custom renderer that encapsulates platform-specific list controls and native cell layouts, allowing more control over native list control performance.
+A Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) is a view that displays a collection of data as a vertical list. This article demonstrates how to create a custom renderer that encapsulates platform-specific list controls and native cell layouts, allowing more control over native list control performance.
 
 ## [Customizing a ViewCell](viewcell.md)
 
-A Xamarin.Forms [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) is a cell that can be added to a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) or [`TableView`](https://developer.xamarin.com/api/type/Xamarin.Forms.TableView/), which contains a developer-defined view. This article demonstrates how to create a custom renderer for a `ViewCell` that's hosted inside a Xamarin.Forms `ListView` control. This stops the Xamarin.Forms layout calculations from being repeatedly called during `ListView` scrolling.
+A Xamarin.Forms [`ViewCell`](xref:Xamarin.Forms.ViewCell) is a cell that can be added to a [`ListView`](xref:Xamarin.Forms.ListView) or [`TableView`](xref:Xamarin.Forms.TableView), which contains a developer-defined view. This article demonstrates how to create a custom renderer for a `ViewCell` that's hosted inside a Xamarin.Forms `ListView` control. This stops the Xamarin.Forms layout calculations from being repeatedly called during `ListView` scrolling.
 
 ## [Implementing a View](view.md)
 
-Xamarin.Forms custom user interfaces controls should derive from the [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) class, which is used to place layouts and controls on the screen. This article demonstrates how to create a custom renderer for a Xamarin.Forms custom control that's used to display a preview video stream from the device's camera.
+Xamarin.Forms custom user interfaces controls should derive from the [`View`](xref:Xamarin.Forms.View) class, which is used to place layouts and controls on the screen. This article demonstrates how to create a custom renderer for a Xamarin.Forms custom control that's used to display a preview video stream from the device's camera.
 
 ## [Implementing a HybridWebView](hybridwebview.md)
 

@@ -12,13 +12,13 @@ ms.date: 05/10/2018
 
 _Xamarin.Forms custom user interface controls should derive from the View class, which is used to place layouts and controls on the screen. This article demonstrates how to create a custom renderer for a Xamarin.Forms custom control that's used to display a preview video stream from the device's camera._
 
-Every Xamarin.Forms view has an accompanying renderer for each platform that creates an instance of a native control. When a [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) is rendered by a Xamarin.Forms application in iOS, the `ViewRenderer` class is instantiated, which in turn instantiates a native `UIView` control. On the Android platform, the `ViewRenderer` class instantiates a native `View` control. On the Universal Windows Platform (UWP), the `ViewRenderer` class instantiates a native `FrameworkElement` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Every Xamarin.Forms view has an accompanying renderer for each platform that creates an instance of a native control. When a [`View`](xref:Xamarin.Forms.View) is rendered by a Xamarin.Forms application in iOS, the `ViewRenderer` class is instantiated, which in turn instantiates a native `UIView` control. On the Android platform, the `ViewRenderer` class instantiates a native `View` control. On the Universal Windows Platform (UWP), the `ViewRenderer` class instantiates a native `FrameworkElement` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
-The following diagram illustrates the relationship between the [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) and the corresponding native controls that implement it:
+The following diagram illustrates the relationship between the [`View`](xref:Xamarin.Forms.View) and the corresponding native controls that implement it:
 
 ![](view-images/view-classes.png "Relationship Between the View Class and its Implementing Native Classes")
 
-The rendering process can be used to implement platform-specific customizations by creating a custom renderer for a [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) on each platform. The process for doing this is as follows:
+The rendering process can be used to implement platform-specific customizations by creating a custom renderer for a [`View`](xref:Xamarin.Forms.View) on each platform. The process for doing this is as follows:
 
 1. [Create](#Creating_the_Custom_Control) a Xamarin.Forms custom control.
 1. [Consume](#Consuming_the_Custom_Control) the custom control from Xamarin.Forms.
@@ -30,7 +30,7 @@ Each item will now be discussed in turn, to implement a `CameraPreview` renderer
 
 ## Creating the Custom Control
 
-A custom control can be created by subclassing the [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) class, as shown in the following code example:
+A custom control can be created by subclassing the [`View`](xref:Xamarin.Forms.View) class, as shown in the following code example:
 
 ```csharp
 public class CameraPreview : View
@@ -109,7 +109,7 @@ The process for creating the custom renderer class is as follows:
 1. Add an `ExportRenderer` attribute to the custom renderer class to specify that it will be used to render the Xamarin.Forms custom control. This attribute is used to register the custom renderer with Xamarin.Forms.
 
 > [!NOTE]
-> For most Xamarin.Forms elements, it is optional to provide a custom renderer in each platform project. If a custom renderer isn't registered, then the default renderer for the control's base class will be used. However, custom renderers are required in each platform project when rendering a [View](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) element.
+> For most Xamarin.Forms elements, it is optional to provide a custom renderer in each platform project. If a custom renderer isn't registered, then the default renderer for the control's base class will be used. However, custom renderers are required in each platform project when rendering a [View](xref:Xamarin.Forms.View) element.
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
@@ -321,7 +321,7 @@ Provided that the `Control` property is `null`, a new `CaptureElement` is instan
 
 ## Summary
 
-This article has demonstrated how to create a custom renderer for a Xamarin.Forms custom control that's used to display a preview video stream from the device's camera. Xamarin.Forms custom user interface controls should derive from the [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) class, which is used to place layouts and controls on the screen.
+This article has demonstrated how to create a custom renderer for a Xamarin.Forms custom control that's used to display a preview video stream from the device's camera. Xamarin.Forms custom user interface controls should derive from the [`View`](xref:Xamarin.Forms.View) class, which is used to place layouts and controls on the screen.
 
 
 ## Related Links

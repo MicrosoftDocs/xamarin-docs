@@ -26,11 +26,11 @@ Parameters can then be passed to the effect by adding the attached properties, a
 > [!NOTE]
 > An attached property is a special type of bindable property, defined in one class but attached to other objects, and recognizable in XAML as attributes that contain a class and a property name separated by a period. For more information, see [Attached Properties](~/xamarin-forms/xaml/attached-properties.md).
 
-The sample application demonstrates a `ShadowEffect` that adds a shadow to the text displayed by a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) control. In addition, the color of the shadow can be changed at runtime. The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
+The sample application demonstrates a `ShadowEffect` that adds a shadow to the text displayed by a [`Label`](xref:Xamarin.Forms.Label) control. In addition, the color of the shadow can be changed at runtime. The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
 ![](attached-properties-images/shadow-effect.png "Shadow Effect Project Responsibilities")
 
-A [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) control on the `HomePage` is customized by the `LabelShadowEffect` in each platform-specific project. Parameters are passed to each `LabelShadowEffect` through attached properties in the `ShadowEffect` class. Each `LabelShadowEffect` class derives from the `PlatformEffect` class for each platform. This results in a shadow being added to the text displayed by the `Label` control, as shown in the following screenshots:
+A [`Label`](xref:Xamarin.Forms.Label) control on the `HomePage` is customized by the `LabelShadowEffect` in each platform-specific project. Parameters are passed to each `LabelShadowEffect` through attached properties in the `ShadowEffect` class. Each `LabelShadowEffect` class derives from the `PlatformEffect` class for each platform. This results in a shadow being added to the text displayed by the `Label` control, as shown in the following screenshots:
 
 ![](attached-properties-images/screenshots.png "Shadow Effect on each Platform")
 
@@ -92,14 +92,14 @@ public static class ShadowEffect
 
 The `ShadowEffect` contains five attached properties, with `static` getters and setters for each attached property. Four of these properties represent parameters to be passed to each platform-specific `LabelShadowEffect`. The `ShadowEffect` class also defines a `HasShadow` attached property that is used to control the addition or removal of the effect to the control that the `ShadowEffect` class is attached to. This attached property registers the `OnHasShadowChanged` method that will be executed when the value of the property changes. This method adds or removes the effect based on the value of the `HasShadow` attached property.
 
-The nested `LabelShadowEffect` class, which subclasses the [`RoutingEffect`](https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/) class, supports effect addition and removal. The `RoutingEffect` class represents a platform-independent effect that wraps an inner effect that is usually platform-specific. This simplifies the effect removal process, since there is no compile-time access to the type information for a platform-specific effect. The `LabelShadowEffect` constructor calls the base class constructor, passing in a parameter consisting of a concatenation of the resolution group name, and the unique ID that was specified on each platform-specific effect class. This enables effect addition and removal in the `OnHasShadowChanged` method, as follows:
+The nested `LabelShadowEffect` class, which subclasses the [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) class, supports effect addition and removal. The `RoutingEffect` class represents a platform-independent effect that wraps an inner effect that is usually platform-specific. This simplifies the effect removal process, since there is no compile-time access to the type information for a platform-specific effect. The `LabelShadowEffect` constructor calls the base class constructor, passing in a parameter consisting of a concatenation of the resolution group name, and the unique ID that was specified on each platform-specific effect class. This enables effect addition and removal in the `OnHasShadowChanged` method, as follows:
 
-- **Effect addition** – a new instance of the `LabelShadowEffect` is added to the control's [`Effects`](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/) collection. This replaces using the [`Effect.Resolve`](https://developer.xamarin.com/api/member/Xamarin.Forms.Effect.Resolve/p/System.String/) method to add the effect.
-- **Effect removal**  – the first instance of the `LabelShadowEffect` in the control's [`Effects`](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/) collection is retrieved and removed.
+- **Effect addition** – a new instance of the `LabelShadowEffect` is added to the control's [`Effects`](xref:Xamarin.Forms.Element.Effects) collection. This replaces using the [`Effect.Resolve`](xref:Xamarin.Forms.Effect.Resolve(System.String)) method to add the effect.
+- **Effect removal**  – the first instance of the `LabelShadowEffect` in the control's [`Effects`](xref:Xamarin.Forms.Element.Effects) collection is retrieved and removed.
 
 ## Consuming the Effect
 
-Each platform-specific `LabelShadowEffect` can be consumed by adding the attached properties to a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) control, as demonstrated in the following XAML code example:
+Each platform-specific `LabelShadowEffect` can be consumed by adding the attached properties to a [`Label`](xref:Xamarin.Forms.Label) control, as demonstrated in the following XAML code example:
 
 ```xaml
 <Label Text="Label Shadow Effect" ...
@@ -115,7 +115,7 @@ Each platform-specific `LabelShadowEffect` can be consumed by adding the attache
 </Label>
 ```
 
-The equivalent [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) in C# is shown in the following code example:
+The equivalent [`Label`](xref:Xamarin.Forms.Label) in C# is shown in the following code example:
 
 ```csharp
 var label = new Label {
@@ -144,9 +144,9 @@ ShadowEffect.SetDistanceY (label, 5);
 ShadowEffect.SetColor (label, color));
 ```
 
-Setting the `ShadowEffect.HasShadow` attached property to `true` executes the `ShadowEffect.OnHasShadowChanged` method that adds or removes the `LabelShadowEffect` to the [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) control. In both code examples, the `ShadowEffect.Color` attached property provides platform-specific color values. For more information, see [Device Class](~/xamarin-forms/platform/device.md).
+Setting the `ShadowEffect.HasShadow` attached property to `true` executes the `ShadowEffect.OnHasShadowChanged` method that adds or removes the `LabelShadowEffect` to the [`Label`](xref:Xamarin.Forms.Label) control. In both code examples, the `ShadowEffect.Color` attached property provides platform-specific color values. For more information, see [Device Class](~/xamarin-forms/platform/device.md).
 
-In addition, a [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) allows the shadow color to be changed at runtime. When the `Button` is clicked, the following code changes the shadow color by setting the `ShadowEffect.Color` attached property:
+In addition, a [`Button`](xref:Xamarin.Forms.Button) allows the shadow color to be changed at runtime. When the `Button` is clicked, the following code changes the shadow color by setting the `ShadowEffect.Color` attached property:
 
 ```csharp
 ShadowEffect.SetColor (label, Color.Teal);
@@ -154,7 +154,7 @@ ShadowEffect.SetColor (label, Color.Teal);
 
 ### Consuming the Effect with a Style
 
-Effects that can be consumed by adding attached properties to a control can also be consumed by a style. The following XAML code example shows an *explicit* style for the shadow effect, that can be applied to [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) controls:
+Effects that can be consumed by adding attached properties to a control can also be consumed by a style. The following XAML code example shows an *explicit* style for the shadow effect, that can be applied to [`Label`](xref:Xamarin.Forms.Label) controls:
 
 ```xaml
 <Style x:Key="ShadowEffectStyle" TargetType="Label">
@@ -167,7 +167,7 @@ Effects that can be consumed by adding attached properties to a control can also
 </Style>
 ```
 
-The [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) can be applied to a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) by setting its [`Style`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) property to the `Style` instance using the `StaticResource` markup extension, as demonstrated in the following code example:
+The [`Style`](xref:Xamarin.Forms.Style) can be applied to a [`Label`](xref:Xamarin.Forms.Label) by setting its [`Style`](xref:Xamarin.Forms.VisualElement.Style) property to the `Style` instance using the `StaticResource` markup extension, as demonstrated in the following code example:
 
 ```xaml
 <Label Text="Label Shadow Effect" ... Style="{StaticResource ShadowEffectStyle}" />
@@ -397,7 +397,7 @@ namespace EffectsDemo.UWP
 }
 ```
 
-The Universal Windows Platform doesn't provide a shadow effect, and so the `LabelShadowEffect` implementation on both platforms simulates one by adding a second offset [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) behind the primary `Label`. The `OnAttached` method creates the new `Label` and sets some layout properties on the `Label`. It then calls methods that retrieve the attached property values using the `ShadowEffect` getters, and creates the shadow by setting the [`TextColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/), [`TranslationX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/), and [`TranslationY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) properties to control the color and location of the `Label`. The `shadowLabel` is then inserted offset behind the primary `Label`. This functionality is wrapped in a `try`/`catch` block in case the control that the effect is attached to does not have the `Control.Layer` properties. No implementation is provided by the `OnDetached` method because no cleanup is necessary.
+The Universal Windows Platform doesn't provide a shadow effect, and so the `LabelShadowEffect` implementation on both platforms simulates one by adding a second offset [`Label`](xref:Xamarin.Forms.Label) behind the primary `Label`. The `OnAttached` method creates the new `Label` and sets some layout properties on the `Label`. It then calls methods that retrieve the attached property values using the `ShadowEffect` getters, and creates the shadow by setting the [`TextColor`](xref:Xamarin.Forms.Label.TextColor), [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX), and [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) properties to control the color and location of the `Label`. The `shadowLabel` is then inserted offset behind the primary `Label`. This functionality is wrapped in a `try`/`catch` block in case the control that the effect is attached to does not have the `Control.Layer` properties. No implementation is provided by the `OnDetached` method because no cleanup is necessary.
 
 #### Responding to Property Changes
 
@@ -430,7 +430,7 @@ This article has demonstrated using attached properties to pass parameters to an
 ## Related Links
 
 - [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
-- [Effect](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)
-- [PlatformEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformEffect%3CTContainer,TControl%3E/)
-- [RoutingEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/)
+- [Effect](xref:Xamarin.Forms.Effect)
+- [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
+- [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
 - [Shadow Effect (sample)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffectruntimechange/)

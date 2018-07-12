@@ -15,7 +15,7 @@ _An attached property is a special type of bindable property, defined in one cla
 
 ## Overview
 
-Attached properties enable an object to assign a value for a property that its own class doesn't define. For example, child elements can use attached properties to inform their parent element of how they are to be presented in the user interface. The [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) control allows the row and column of a child to be specified by setting the `Grid.Row` and `Grid.Column` attached properties. `Grid.Row` and `Grid.Column` are attached properties because they are set on elements that are children of a `Grid`, rather than on the `Grid` itself.
+Attached properties enable an object to assign a value for a property that its own class doesn't define. For example, child elements can use attached properties to inform their parent element of how they are to be presented in the user interface. The [`Grid`](xref:Xamarin.Forms.Grid) control allows the row and column of a child to be specified by setting the `Grid.Row` and `Grid.Column` attached properties. `Grid.Row` and `Grid.Column` are attached properties because they are set on elements that are children of a `Grid`, rather than on the `Grid` itself.
 
 Bindable properties should be implemented as attached properties in the following scenarios:
 
@@ -28,14 +28,14 @@ For more information about bindable properties, see [Bindable Properties](~/xama
 
 The process for creating an attached property is as follows:
 
-1. Create a [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) instance with one of the [`CreateAttached`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableProperty.CreateAttached/p/System.String/System.Type/System.Type/System.Object/Xamarin.Forms.BindingMode/Xamarin.Forms.BindableProperty+ValidateValueDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangedDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangingDelegate/Xamarin.Forms.BindableProperty+CoerceValueDelegate/Xamarin.Forms.BindableProperty+CreateDefaultValueDelegate/) method overloads.
+1. Create a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance with one of the [`CreateAttached`](xref:Xamarin.Forms.BindableProperty.CreateAttached*) method overloads.
 1. Provide `static` `Get`*PropertyName* and `Set`*PropertyName* methods as accessors for the attached property.
 
 ### Creating a Property
 
-When creating an attached property for use on other types, the class where the property is created does not have to derive from [`BindableObject`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/). However, the *target* property for accessors should be of, or derive from, [`BindableObject`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/).
+When creating an attached property for use on other types, the class where the property is created does not have to derive from [`BindableObject`](xref:Xamarin.Forms.BindableObject). However, the *target* property for accessors should be of, or derive from, [`BindableObject`](xref:Xamarin.Forms.BindableObject).
 
-An attached property can be created by declaring a `public static readonly` property of type [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/). The bindable property should be set to the returned value of one of the [`BindableProperty.CreateAttached`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableProperty.CreateAttached/p/System.String/System.Type/System.Type/System.Object/Xamarin.Forms.BindingMode/Xamarin.Forms.BindableProperty+ValidateValueDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangedDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangingDelegate/Xamarin.Forms.BindableProperty+CoerceValueDelegate/Xamarin.Forms.BindableProperty+CreateDefaultValueDelegate/) method overloads. The declaration should be within the body of the owning class, but outside of any member definitions.
+An attached property can be created by declaring a `public static readonly` property of type [`BindableProperty`](xref:Xamarin.Forms.BindableProperty). The bindable property should be set to the returned value of one of the [`BindableProperty.CreateAttached`](xref:Xamarin.Forms.BindableProperty.CreateAttached(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) method overloads. The declaration should be within the body of the owning class, but outside of any member definitions.
 
 The following code shows an example of an attached property:
 
@@ -56,7 +56,7 @@ Static `Get`*PropertyName* and `Set`*PropertyName* methods are required as acces
 public static valueType GetPropertyName(BindableObject target)
 ```
 
-The `Get`*PropertyName* accessor should return the value that's contained in the corresponding `BindableProperty` field for the attached property. This can be achieved by calling the [`GetValue`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.GetValue/p/Xamarin.Forms.BindableProperty/) method, passing in the bindable property identifier on which to get the value, and then casting the resulting value to the required type.
+The `Get`*PropertyName* accessor should return the value that's contained in the corresponding `BindableProperty` field for the attached property. This can be achieved by calling the [`GetValue`](xref:Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)) method, passing in the bindable property identifier on which to get the value, and then casting the resulting value to the required type.
 
 The `Set`*PropertyName* accessor should conform to the following signature:
 
@@ -64,9 +64,9 @@ The `Set`*PropertyName* accessor should conform to the following signature:
 public static void SetPropertyName(BindableObject target, valueType value)
 ```
 
-The `Set`*PropertyName* accessor should set the value of the corresponding `BindableProperty` field for the attached property. This can be achieved by calling the [`SetValue`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetValue/p/Xamarin.Forms.BindableProperty/System.Object/) method, passing in the bindable property identifier on which to set the value, and the value to set.
+The `Set`*PropertyName* accessor should set the value of the corresponding `BindableProperty` field for the attached property. This can be achieved by calling the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method, passing in the bindable property identifier on which to set the value, and the value to set.
 
-For both accessors, the *target* object should be of, or derive from, [`BindableObject`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/).
+For both accessors, the *target* object should be of, or derive from, [`BindableObject`](xref:Xamarin.Forms.BindableObject).
 
 The following code example shows accessors for the `HasShadow` attached property:
 
@@ -109,7 +109,7 @@ ShadowEffect.SetHasShadow (label, true);
 
 ### Consuming an Attached Property with a Style
 
-Attached properties can also be added to a control by a style. The following XAML code example shows an *explicit* style that uses the `HasShadow` attached property, that can be applied to [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) controls:
+Attached properties can also be added to a control by a style. The following XAML code example shows an *explicit* style that uses the `HasShadow` attached property, that can be applied to [`Label`](xref:Xamarin.Forms.Label) controls:
 
 ```xaml
 <Style x:Key="ShadowEffectStyle" TargetType="Label">
@@ -119,7 +119,7 @@ Attached properties can also be added to a control by a style. The following XAM
 </Style>
 ```
 
-The [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) can be applied to a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) by setting its [`Style`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) property to the `Style` instance using the `StaticResource` markup extension, as demonstrated in the following code example:
+The [`Style`](xref:Xamarin.Forms.Style) can be applied to a [`Label`](xref:Xamarin.Forms.Label) by setting its [`Style`](xref:Xamarin.Forms.VisualElement.Style) property to the `Style` instance using the `StaticResource` markup extension, as demonstrated in the following code example:
 
 ```xaml
 <Label Text="Label Shadow Effect" Style="{StaticResource ShadowEffectStyle}" />
@@ -141,5 +141,5 @@ This article provided an introduction to attached properties, and demonstrated h
 - [Bindable Properties](~/xamarin-forms/xaml/bindable-properties.md)
 - [XAML Namespaces](~/xamarin-forms/xaml/namespaces.md)
 - [Shadow Effect (sample)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
-- [BindableProperty](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/)
-- [BindableObject](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/)
+- [BindableProperty](xref:Xamarin.Forms.BindableProperty)
+- [BindableObject](xref:Xamarin.Forms.BindableObject)

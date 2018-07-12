@@ -17,18 +17,18 @@ The commanding interface provides an alternative approach to implementing comman
 
 To allow a data binding between a `Button` and a ViewModel, the `Button` defines two properties:
 
-- [`Command`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Command/) of type <xref:System.Windows.Input.ICommand>
-- [`CommandParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.CommandParameter/) of type `Object`
+- [`Command`](xref:Xamarin.Forms.Button.Command) of type <xref:System.Windows.Input.ICommand>
+- [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter) of type `Object`
 
 To use the command interface, you define a data binding that targets the `Command` property of the `Button` where the source is a property in the ViewModel of type `ICommand`. The ViewModel contains code associated with that `ICommand` property that is executed when the button is clicked. You can set `CommandParameter` to arbitrary data to distinguish between multiple buttons if they are all bound to the same `ICommand` property in the ViewModel.
 
 The `Command` and `CommandParameter` properties are also defined by the following classes:
 
-- [`MenuItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/) and hence, [`ToolbarItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/), which derives from `MenuItem`
-- [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) and hence, [`ImageCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/), which derives from `TextCell`
-- [`TapGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)
+- [`MenuItem`](xref:Xamarin.Forms.MenuItem) and hence, [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem), which derives from `MenuItem`
+- [`TextCell`](xref:Xamarin.Forms.TextCell) and hence, [`ImageCell`](xref:Xamarin.Forms.ImageCell), which derives from `TextCell`
+- [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)
 
-[`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) defines a [`SearchCommand`](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommand/) property of type `ICommand` and a [`SearchCommandParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommandParameter/) property. The [`RefreshCommand`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.RefreshCommand/) property of [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) is also of type `ICommand`.
+[`SearchBar`](xref:Xamarin.Forms.SearchBar) defines a [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) property of type `ICommand` and a [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) property. The [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) property of [`ListView`](xref:Xamarin.Forms.ListView) is also of type `ICommand`.
 
 All these commands can be handled within a ViewModel in a manner that doesn't depend on the particular user-interface object in the View.
 
@@ -75,7 +75,7 @@ When your ViewModel defines a propety of type `ICommand`, the ViewModel must als
 
 You can write such a class yourself, or you can use a class that someone else has written. Because `ICommand` is part of Microsoft Windows, it has been used for years with Windows MVVM applications. Using a Windows class that implements `ICommand` allows you to share your ViewModels between Windows applications and Xamarin.Forms applications.
 
-If sharing ViewModels between Windows and Xamarin.Forms is not a concern, then you can use the [`Command`](https://developer.xamarin.com/api/type/Xamarin.Forms.Command/) or [`Command<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Command%3CT%3E/) class included in Xamarin.Forms to implement the `ICommand` interface. These classes allow you to specify the bodies of the `Execute` and `CanExecute` methods in class constructors. Use `Command<T>` when you use the `CommandParameter` property to distinguish between multiple views bound to the same `ICommand` property, and the simpler `Command` class when that isn't a requirement.
+If sharing ViewModels between Windows and Xamarin.Forms is not a concern, then you can use the [`Command`](xref:Xamarin.Forms.Command) or [`Command<T>`](xref:Xamarin.Forms.Command`1) class included in Xamarin.Forms to implement the `ICommand` interface. These classes allow you to specify the bodies of the `Execute` and `CanExecute` methods in class constructors. Use `Command<T>` when you use the `CommandParameter` property to distinguish between multiple views bound to the same `ICommand` property, and the simpler `Command` class when that isn't a requirement.
 
 ## Basic Commanding
 
@@ -280,7 +280,7 @@ The program does not have any facility for editing existing entries, and does no
 
 All the logic for the **New**, **Submit**, and **Cancel** buttons is handled in `PersonCollectionViewModel` through definitions of the `NewCommand`, `SubmitCommand`, and `CancelCommand` properties. The constructor of the `PersonCollectionViewModel` sets these three properties to objects of type `Command`.  
 
-A [constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Command.Command/p/System.Action/System.Func%7BSystem.Boolean%7D/) of the `Command` class allows you to pass arguments of type `Action` and `Func<bool>` corresponding to the `Execute` and `CanExecute` methods. It's easiest to define these actions and functions as lamda functions right in the `Command` constructor. Here is the definition of the `Command` object for the `NewCommand` property:
+A [constructor](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) of the `Command` class allows you to pass arguments of type `Action` and `Func<bool>` corresponding to the `Execute` and `CanExecute` methods. It's easiest to define these actions and functions as lamda functions right in the `Command` constructor. Here is the definition of the `Command` object for the `NewCommand` property:
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -415,9 +415,9 @@ It isn't necessary to define the `execute` and `canExecute` methods as lambda fu
 
 It is sometimes convenient for one or more buttons (or other user-interface objects) to share the same `ICommand` property in the ViewModel. In this case, you use the `CommandParameter` property to distinguish between the buttons.
 
-You can continue to use the `Command` class for these shared `ICommand` properties. The class defines an [alternative constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Command.Command/p/System.Action%7BSystem.Object%7D/System.Func%7BSystem.Object,System.Boolean%7D/) that accepts `execute` and `canExecute` methods with parameters of type `Object`. This is how the `CommandParameter` is passed to these methods.
+You can continue to use the `Command` class for these shared `ICommand` properties. The class defines an [alternative constructor](xref:Xamarin.Forms.Command.%23ctor(System.Action{System.Object},System.Func{System.Object,System.Boolean})) that accepts `execute` and `canExecute` methods with parameters of type `Object`. This is how the `CommandParameter` is passed to these methods.
 
-However, when using `CommandParameter`, it's easiest to use the generic [`Command<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Command%3CT%3E/) class to specify the type of the object set to `CommandParameter`. The `execute` and `canExecute` methods that you specify have parameters of that type.
+However, when using `CommandParameter`, it's easiest to use the generic [`Command<T>`](xref:Xamarin.Forms.Command`1) class to specify the type of the object set to `CommandParameter`. The `execute` and `canExecute` methods that you specify have parameters of that type.
 
 The **Decimal Keyboard** page illustrates this technique by showing how to implement a keypad for entering decimal numbers. The `BindingContext` for the `Grid` is a `DecimalKeypadViewModel`. The `Entry` property of this ViewModel is bound to the `Text` property of a `Label`. All the `Button` objects are bound to various commands in the ViewModel: `ClearCommand`, `BackspaceCommand`, and `DigitCommand`:
 

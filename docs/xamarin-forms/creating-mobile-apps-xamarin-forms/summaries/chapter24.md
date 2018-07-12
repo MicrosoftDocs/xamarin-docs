@@ -15,15 +15,15 @@ Many applications consist of multiple pages among which the user navigates. The 
 
 ## Modal pages and modeless pages
 
-`VisualElement` defines a [`Navigation`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Navigation/) property of type [`INavigation`](https://developer.xamarin.com/api/type/Xamarin.Forms.INavigation/), which includes the following two methods to navigate to a new page:
+`VisualElement` defines a [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property of type [`INavigation`](xref:Xamarin.Forms.INavigation), which includes the following two methods to navigate to a new page:
 
-- [`PushAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.PushAsync/p/Xamarin.Forms.Page/)
-- [`PushModalAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.PushModalAsync/p/Xamarin.Forms.Page/)
+- [`PushAsync`](xref:Xamarin.Forms.INavigation.PushAsync(Xamarin.Forms.Page))
+- [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync(Xamarin.Forms.Page))
 
 Both methods accept a `Page` instance as an argument and return a `Task` object. The following two methods navigate back to the previous page:
 
-- [`PopAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.PopAsync()/)
-- [`PopModalAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.PopModalAsync()/)
+- [`PopAsync`](xref:Xamarin.Forms.INavigation.PopAsync)
+- [`PopModalAsync`](xref:Xamarin.Forms.INavigation.PopModalAsync)
 
 If the user interface has its own **Back** button (as Android and Windows phones do) then it's not necessary for the application to call these methods.
 
@@ -31,9 +31,9 @@ Although these methods are available from any `VisualElement`, generally they ar
 
 Applications generally use modal pages when the user is required to supply some information on the page before returning to the previous page. Pages that are not modal are sometimes called modeless or *hierarchical*. Nothing in the page itself distinguishes it as modal or modeless; it's governed instead by the method used to navigate to it. To work across all platforms, a modal page must provide its own user interface for navigating back to the previous page.
 
-The [**ModelessAndModal**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ModelessAndModal) sample allows you to explore the difference between modeless and modal pages. Any application that uses page navigation must pass its home page to the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) constructor, generally in the program's `App` class. One bonus is that you no longer need to set a `Padding` on the page for iOS.
+The [**ModelessAndModal**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ModelessAndModal) sample allows you to explore the difference between modeless and modal pages. Any application that uses page navigation must pass its home page to the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) constructor, generally in the program's `App` class. One bonus is that you no longer need to set a `Padding` on the page for iOS.
 
-You will discover that for modeless pages, the page's [`Title`](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/) property is displayed. The iOS, Android, and the Windows tablet and desktop platforms all provide a user-interface element to navigate back to the previous page. Of course, Android, and Windows phone devices have a standard **Back** button to go back.
+You will discover that for modeless pages, the page's [`Title`](xref:Xamarin.Forms.Page.Title) property is displayed. The iOS, Android, and the Windows tablet and desktop platforms all provide a user-interface element to navigate back to the previous page. Of course, Android, and Windows phone devices have a standard **Back** button to go back.
 
 For modal pages, the page `Title` is not displayed, and no user-interface element is provided to go back to the previous page. Although you can use the Android and Windows phone standard **Back** button to return to the previous page, the modal page on the other platforms must provide its own mechanism to go back.
 
@@ -41,10 +41,10 @@ For modal pages, the page `Title` is not displayed, and no user-interface elemen
 
 Alternative versions of the various navigation methods are provided with a second Boolean argument that you set to `true` if you want the page transition to include an animation:
 
-- [PushAsync](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.PushAsync/p/Xamarin.Forms.Page/System.Boolean/)
-- [PushModalAsync](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.PushModalAsync/p/Xamarin.Forms.Page/System.Boolean/)
-- [PopAsync](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.PopAsync/p/System.Boolean/)
-- [PopModalAsync](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.PopModalAsync/p/System.Boolean/)
+- [PushAsync](xref:Xamarin.Forms.INavigation.PushAsync(Xamarin.Forms.Page,System.Boolean))
+- [PushModalAsync](xref:Xamarin.Forms.INavigation.PushModalAsync(Xamarin.Forms.Page,System.Boolean))
+- [PopAsync](xref:Xamarin.Forms.INavigation.PopAsync(System.Boolean))
+- [PopModalAsync](xref:Xamarin.Forms.INavigation.PopModalAsync(System.Boolean))
 
 However, the standard page-navigation methods include the animation by default, so these are only valuable for navigating to a particular page on startup (as discussed towards the end of this chapter) or when providing your own entrance animation (as discussed in [**Chapter22. Animation**](chapter22.md)).
 
@@ -52,30 +52,30 @@ However, the standard page-navigation methods include the animation by default, 
 
 `NavigationPage` includes two properties that you can set when you instantiate the class in your `App` method:
 
-- [`BarBackgroundColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.NavigationPage.BarBackgroundColor/)
-- [`BarTextColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.NavigationPage.BarTextColor/)
+- [`BarBackgroundColor`](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor)
+- [`BarTextColor`](xref:Xamarin.Forms.NavigationPage.BarTextColor)
 
 `NavigationPage` also includes four attached bindable properties that affect the particular page on which they are set:
 
-- [`SetHasBackButton`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.SetHasBackButton/p/Xamarin.Forms.Page/System.Boolean/) and [`GetHasBackButton`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.GetHasBackButton/p/Xamarin.Forms.Page/)
-- [`SetHasNavigationBar`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.SetHasNavigationBar/p/Xamarin.Forms.BindableObject/System.Boolean/) and [`GetHasNavigationBar`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.GetHasNavigationBar/p/Xamarin.Forms.BindableObject/)
-- [`SetBackButtonTitle`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.SetBackButtonTitle/p/Xamarin.Forms.BindableObject/System.String/) and [`GetBackButtonTitle`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.GetBackButtonTitle/p/Xamarin.Forms.BindableObject/) work on iOS only
-- [`SetTitleIcon`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.SetTitleIcon/p/Xamarin.Forms.BindableObject/Xamarin.Forms.FileImageSource/) and [`GetTitleIcon`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.GetTitleIcon/p/Xamarin.Forms.BindableObject/) work on iOS and Android only
+- [`SetHasBackButton`](xref:Xamarin.Forms.NavigationPage.SetHasBackButton(Xamarin.Forms.Page,System.Boolean)) and [`GetHasBackButton`](xref:Xamarin.Forms.NavigationPage.GetHasBackButton(Xamarin.Forms.Page))
+- [`SetHasNavigationBar`](xref:Xamarin.Forms.NavigationPage.SetHasNavigationBar(Xamarin.Forms.BindableObject,System.Boolean)) and [`GetHasNavigationBar`](xref:Xamarin.Forms.NavigationPage.GetHasNavigationBar(Xamarin.Forms.BindableObject))
+- [`SetBackButtonTitle`](xref:Xamarin.Forms.NavigationPage.SetBackButtonTitle(Xamarin.Forms.BindableObject,System.String)) and [`GetBackButtonTitle`](xref:Xamarin.Forms.NavigationPage.GetBackButtonTitle(Xamarin.Forms.BindableObject)) work on iOS only
+- [`SetTitleIcon`](xref:Xamarin.Forms.NavigationPage.SetTitleIcon(Xamarin.Forms.BindableObject,Xamarin.Forms.FileImageSource)) and [`GetTitleIcon`](xref:Xamarin.Forms.NavigationPage.GetTitleIcon(Xamarin.Forms.BindableObject)) work on iOS and Android only
 
 ### Exploring the mechanics
 
 The page navigation methods are all asynchronous and should be used with `await`. The completion doesn't indicate that page navigation has completed, but only that it's safe to examine the page-navigation stack.
 
-When one page navigates to another, the first page generally gets a call to its [`OnDisappearing`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnDisappearing()/) method, and the second page gets a call to its [`OnAppearing`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnAppearing()/) method. Similarly, when one page returns to another, the first page gets a call to its `OnDisappearing` method, and the second page generally gets a call to its `OnAppearing` method. The order of these calls (and the completion of the asynchronous methods that invokes the navigation) is platform dependent. The use of the word "generally" in the two preceding statements is due to Android modal-page navigation, in which these method calls don't occur.
+When one page navigates to another, the first page generally gets a call to its [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) method, and the second page gets a call to its [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) method. Similarly, when one page returns to another, the first page gets a call to its `OnDisappearing` method, and the second page generally gets a call to its `OnAppearing` method. The order of these calls (and the completion of the asynchronous methods that invokes the navigation) is platform dependent. The use of the word "generally" in the two preceding statements is due to Android modal-page navigation, in which these method calls don't occur.
 
 Also, calls to the `OnAppearing` and `OnDisappearing` methods don't necessarily indicate page navigation.
 
 The `INavigation` interface includes two collection properties that allow you to examine the navigation stack:
 
-- [`NavigationStack`](https://developer.xamarin.com/api/property/Xamarin.Forms.INavigation.NavigationStack/) of type `IReadOnlyList<Page>` for the modeless stack
-- [`ModalStack`](https://developer.xamarin.com/api/property/Xamarin.Forms.INavigation.ModalStack/) of type `IReadOnlyList<Page>` for the modal stack
+- [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack) of type `IReadOnlyList<Page>` for the modeless stack
+- [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) of type `IReadOnlyList<Page>` for the modal stack
 
-It is safest to access these stacks from the `Navigation` property of the `NavigationPage` (which should be the `App` class's [`MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) property). It is only safe to examine these stacks after the asynchronous page-navigation methods have completed. The [`CurrentPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.NavigationPage.CurrentPage/) property of the `NavigationPage` does not indicate the current page if the current page is a modal page, but indicates instead the last modeless page.
+It is safest to access these stacks from the `Navigation` property of the `NavigationPage` (which should be the `App` class's [`MainPage`](xref:Xamarin.Forms.Application.MainPage) property). It is only safe to examine these stacks after the asynchronous page-navigation methods have completed. The [`CurrentPage`](xref:Xamarin.Forms.NavigationPage.CurrentPage) property of the `NavigationPage` does not indicate the current page if the current page is a modal page, but indicates instead the last modeless page.
 
 The [**SinglePageNavigation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/SinglePageNavigation) sample lets you explore page navigation and the stacks, and the legal types of page navigations:
 
@@ -84,7 +84,7 @@ The [**SinglePageNavigation**](https://github.com/xamarin/xamarin-forms-book-sam
 
 ### Enforcing modality
 
-An application uses a modal page when it's necessary to obtain some information from the user. The user should be prohibited from returning to the previous page until that information is provided. On iOS, it's easy to provide a **Back** button and enable it only when the user has finished with the page. But for Android and Windows phone devices, the application should override the [`OnBackButtonPressed`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnBackButtonPressed()/) method and return `true` if program has handled the **Back** button itself, as demonstrated in the [**ModalEnforcement**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ModalEnforcement) sample.
+An application uses a modal page when it's necessary to obtain some information from the user. The user should be prohibited from returning to the previous page until that information is provided. On iOS, it's easy to provide a **Back** button and enable it only when the user has finished with the page. But for Android and Windows phone devices, the application should override the [`OnBackButtonPressed`](xref:Xamarin.Forms.Page.OnBackButtonPressed) method and return `true` if program has handled the **Back** button itself, as demonstrated in the [**ModalEnforcement**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ModalEnforcement) sample.
 
 The [**MvvmEnforcement**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/MvvmEnforcement) sample demonstrates how this works in an MVVM scenario.
 
@@ -104,9 +104,9 @@ The [**ViewGalleryInst**](https://github.com/xamarin/xamarin-forms-book-samples/
 
 [**StackManipulation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/StackManipulation) demonstrates several functions defined by `INavigation` that let you manipulate the navigation stack in a structured manner:
 
-- [`RemovePage`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.RemovePage/p/Xamarin.Forms.Page/)
-- [`InsertPageBefore`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.InsertPageBefore/p/Xamarin.Forms.Page/Xamarin.Forms.Page/)
-- [`PopToRootAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.PopToRootAsync()/) and [`PopToRootAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.PopToRootAsync/p/System.Boolean/) with optional animation
+- [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage(Xamarin.Forms.Page))
+- [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore(Xamarin.Forms.Page,Xamarin.Forms.Page))
+- [`PopToRootAsync`](xref:Xamarin.Forms.INavigation.PopToRootAsync) and [`PopToRootAsync`](xref:Xamarin.Forms.INavigation.PopToRootAsync(System.Boolean)) with optional animation
 
 ### Dynamic page generation
 
@@ -129,9 +129,9 @@ The *home* page can easily access public methods and properties in the *info* pa
 
 ### MessagingCenter
 
-The Xamarin.Forms [`MessagingCenter`](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/) class provides another way for two pages to communicate with each other. Messages are identified by a text string and can be accompanied by any object.
+The Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class provides another way for two pages to communicate with each other. Messages are identified by a text string and can be accompanied by any object.
 
-A program that wishes to receive messages from a particular type must subscribe to them using [`MessagingCenter.Subscribe`](https://developer.xamarin.com/api/member/Xamarin.Forms.MessagingCenter.Subscribe%7BTSender,TArgs%7D/p/System.Object/System.String/System.Action%7BTSender,TArgs%7D/TSender/) and specify a callback function. Later it can unsubscribe by calling [`MessagingCenter.Unsubscribe`](https://developer.xamarin.com/api/member/Xamarin.Forms.MessagingCenter.Unsubscribe%7BTSender,TArgs%7D/p/System.Object/System.String/). The callback function receives any message sent from the specified type with the specified name sent through the [`Send`](https://developer.xamarin.com/api/member/Xamarin.Forms.MessagingCenter.Send%7BTSender,TArgs%7D/p/TSender/System.String/TArgs/) method.
+A program that wishes to receive messages from a particular type must subscribe to them using [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) and specify a callback function. Later it can unsubscribe by calling [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*). The callback function receives any message sent from the specified type with the specified name sent through the [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method.
 
 The [**DateTransfer2**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/DataTransfer2) program demonstrates how to transfer data using the messaging center, but again this requires that the *info* page know the type of the *home* page.
 

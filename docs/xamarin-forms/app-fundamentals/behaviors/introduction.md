@@ -15,7 +15,7 @@ _Behaviors let you add functionality to user interface controls without having t
 
 Behaviors enable you to implement code that you would normally have to write as code-behind, because it directly interacts with the API of the control in such a way that it can be concisely attached to the control and packaged for reuse across more than one application. They can be used to provide a full range of functionality to controls, such as:
 
-- Adding an email validator to an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/).
+- Adding an email validator to an [`Entry`](xref:Xamarin.Forms.Entry).
 - Creating a rating control using a tap gesture recognizer.
 - Controlling an animation.
 - Adding an effect to a control.
@@ -24,7 +24,7 @@ Behaviors also enable more advanced scenarios. In the context of *commanding*, b
 
 Xamarin.Forms supports two different styles of behaviors:
 
-- **Xamarin.Forms behaviors** – classes that derive from the [`Behavior`](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/) or [`Behavior<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/) class, where `T` is the type of the control to which the behavior should apply. For more information about Xamarin.Forms behaviors, see [Xamarin.Forms Behaviors](~/xamarin-forms/app-fundamentals/behaviors/creating.md) and [Reusable Behaviors](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
+- **Xamarin.Forms behaviors** – classes that derive from the [`Behavior`](xref:Xamarin.Forms.Behavior) or [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) class, where `T` is the type of the control to which the behavior should apply. For more information about Xamarin.Forms behaviors, see [Xamarin.Forms Behaviors](~/xamarin-forms/app-fundamentals/behaviors/creating.md) and [Reusable Behaviors](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
 - **Attached behaviors** – `static` classes with one or more attached properties. For more information about attached behaviors, see [Attached Behaviors](~/xamarin-forms/app-fundamentals/behaviors/attached.md).
 
 This guide focuses on Xamarin.Forms behaviors because they are the preferred approach to behavior construction.
@@ -33,5 +33,5 @@ This guide focuses on Xamarin.Forms behaviors because they are the preferred app
 
 ## Related Links
 
-- [Behavior](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/)
-- [Behavior&lt;T&gt;](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/)
+- [Behavior](xref:Xamarin.Forms.Behavior)
+- [Behavior&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

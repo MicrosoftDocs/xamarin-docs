@@ -15,7 +15,7 @@ _The pinch gesture is used for performing interactive zoom and is implemented wi
 
 ## Overview
 
-To make a user interface element zoomable with the pinch gesture, create a [`PinchGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.PinchGestureRecognizer/) instance, handle the [`PinchUpdated`](https://developer.xamarin.com/api/event/Xamarin.Forms.PinchGestureRecognizer.PinchUpdated/) event, and add the new gesture recognizer to the [`GestureRecognizers`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.GestureRecognizers/) collection on the user interface element. The following code example shows a `PinchGestureRecognizer` attached to an [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) element:
+To make a user interface element zoomable with the pinch gesture, create a [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer) instance, handle the [`PinchUpdated`](xref:Xamarin.Forms.PinchGestureRecognizer.PinchUpdated) event, and add the new gesture recognizer to the [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) collection on the user interface element. The following code example shows a `PinchGestureRecognizer` attached to an [`Image`](xref:Xamarin.Forms.Image) element:
 
 ```csharp
 var pinchGesture = new PinchGestureRecognizer();
@@ -67,7 +67,7 @@ public class PinchToZoomContainer : ContentView
 }
 ```
 
-This class can be wrapped around a user interface element so that the pinch gesture will zoom the wrapped user interface element. The following XAML code example shows the `PinchToZoomContainer` wrapping an [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) element:
+This class can be wrapped around a user interface element so that the pinch gesture will zoom the wrapped user interface element. The following XAML code example shows the `PinchToZoomContainer` wrapping an [`Image`](xref:Xamarin.Forms.Image) element:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -86,7 +86,7 @@ This class can be wrapped around a user interface element so that the pinch gest
 </ContentPage>
 ```
 
-The following code example shows how the `PinchToZoomContainer` wraps an [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) element in a C# page:
+The following code example shows how the `PinchToZoomContainer` wraps an [`Image`](xref:Xamarin.Forms.Image) element in a C# page:
 
 ```csharp
 public class HomePageCS : ContentPage
@@ -105,7 +105,7 @@ public class HomePageCS : ContentPage
 }
 ```
 
-When the [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) element receives a pinch gesture, the displayed image will be zoomed-in or out. The zoom is performed by the `PinchZoomContainer.OnPinchUpdated` method, which is shown in the following code example:
+When the [`Image`](xref:Xamarin.Forms.Image) element receives a pinch gesture, the displayed image will be zoomed-in or out. The zoom is performed by the `PinchZoomContainer.OnPinchUpdated` method, which is shown in the following code example:
 
 ```csharp
 void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
@@ -155,15 +155,15 @@ void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
 }
 ```
 
-This method updates the zoom level of the wrapped user interface element based on the user's pinch gesture. This is achieved by using the values of the [`Scale`](https://developer.xamarin.com/api/property/Xamarin.Forms.PinchGestureUpdatedEventArgs.Scale/), [`ScaleOrigin`](https://developer.xamarin.com/api/property/Xamarin.Forms.PinchGestureUpdatedEventArgs.ScaleOrigin/) and [`Status`](https://developer.xamarin.com/api/property/Xamarin.Forms.PinchGestureUpdatedEventArgs.Status/) properties of the [`PinchGestureUpdatedEventArgs`](https://developer.xamarin.com/api/type/Xamarin.Forms.PinchGestureUpdatedEventArgs/) instance to calculate the scale factor to be applied at the origin of the pinch gesture. The wrapped user element is then zoomed at the origin of the pinch gesture by setting its [`TranslationX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/), [`TranslationY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/), and [`Scale`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Scale/) properties to the calculated values.
+This method updates the zoom level of the wrapped user interface element based on the user's pinch gesture. This is achieved by using the values of the [`Scale`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Scale), [`ScaleOrigin`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.ScaleOrigin) and [`Status`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Status) properties of the [`PinchGestureUpdatedEventArgs`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs) instance to calculate the scale factor to be applied at the origin of the pinch gesture. The wrapped user element is then zoomed at the origin of the pinch gesture by setting its [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX), [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY), and [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) properties to the calculated values.
 
 ## Summary
 
-The pinch gesture is used for performing interactive zoom and is implemented with the [`PinchGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.PinchGestureRecognizer/) class.
+The pinch gesture is used for performing interactive zoom and is implemented with the [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer) class.
 
 
 ## Related Links
 
 - [PinchGesture (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PinchGesture/)
-- [GestureRecognizer](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/)
-- [PinchGestureRecognizer](https://developer.xamarin.com/api/type/Xamarin.Forms.PinchGestureRecognizer/)
+- [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
+- [PinchGestureRecognizer](xref:Xamarin.Forms.PinchGestureRecognizer)

@@ -187,8 +187,8 @@ Be careful to make sure that the background and text colors you choose are usabl
 
 Entry exposes two events:
 
-- [TextChanged](http://developer.xamarin.com/api/event/Xamarin.Forms.Entry.TextChanged/) &ndash; raised when the text changes in the entry. Provides the text before and after the change.
-- [Completed](http://developer.xamarin.com/api/event/Xamarin.Forms.Entry.Completed/) &ndash; raised when the user has ended input by pressing the return key on the keyboard.
+- [TextChanged](xref:Xamarin.Forms.Entry.TextChanged) &ndash; raised when the text changes in the entry. Provides the text before and after the change.
+- [Completed](xref:Xamarin.Forms.Entry.Completed) &ndash; raised when the user has ended input by pressing the return key on the keyboard.
 
 ### Completed
 
@@ -245,4 +245,4 @@ entry.TextChanged += Entry_TextChanged;
 ## Related Links
 
 - [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
-- [Entry API](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/)
+- [Entry API](xref:Xamarin.Forms.Entry)

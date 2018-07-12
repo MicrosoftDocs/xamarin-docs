@@ -11,15 +11,15 @@ ms.date: 11/07/2017
 
 # Summary of Chapter 2. Anatomy of an app
 
-In a Xamarin.Forms application, objects that occupy space on the screen are known as *visual elements*, encapsulated by the [`VisualElement`](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/) class. Visual Elements can be split into three categories corresponding to these classes:
+In a Xamarin.Forms application, objects that occupy space on the screen are known as *visual elements*, encapsulated by the [`VisualElement`](xref:Xamarin.Forms.VisualElement) class. Visual Elements can be split into three categories corresponding to these classes:
 
-- [Page](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)
-- [Layout](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/)
-- [View](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)
+- [Page](xref:Xamarin.Forms.Page)
+- [Layout](xref:Xamarin.Forms.Layout)
+- [View](xref:Xamarin.Forms.View)
 
 A `Page` derivative occupies the entire screen, or nearly the entire screen. Often, the child of a page is a `Layout` derivative to organize child visual elements. The children of the `Layout` can be other `Layout` classes or `View` derivatives (often called *elements*), which are familiar objects such as text, bitmaps, sliders, buttons, list boxes, and so on.
 
-This chapter demonstrates how to create an application by focusing on the [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/), which is the `View` derivative that displays text.
+This chapter demonstrates how to create an application by focusing on the [`Label`](xref:Xamarin.Forms.Label), which is the `View` derivative that displays text.
 
 ## Say hello
 
@@ -39,7 +39,7 @@ In many of your Xamarin.Forms programs, you won't be modifying the application p
 
 ## Inside the files
 
-The visuals displayed by the **Hello** program are defined in the constructor of the [`App`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs) class. `App` derives from the Xamarin.Forms class [`Application`](https://developer.xamarin.com/api/type/Xamarin.Forms.Application/).
+The visuals displayed by the **Hello** program are defined in the constructor of the [`App`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs) class. `App` derives from the Xamarin.Forms class [`Application`](xref:Xamarin.Forms.Application).
 
 The **References** section of the **Hello** PCL project includes the following Xamarin.Forms assemblies:
 
@@ -107,18 +107,18 @@ In a PCL you can determine what platform you're running on at runtime, as you'll
 
 The [**Greetings**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings) solution demonstrates how to add a new C# file to the **Greetings** project. This file defines a class named `GreetingsPage` that derives from `ContentPage`. In this book, most projects contain a single `ContentPage` derivative whose name is the name of the project with the suffix `Page` appended.
 
-The `GreetingsPage` constructor instantiates a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) view, which is the Xamarin.Forms view that displays text. The [`Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.Text/) property is set to the text displayed by the `Label`. This program sets the `Label` to the `Content` property of `ContentPage`. The constructor of the `App` class then instantiates `GreetingsPage` and sets it to its `MainPage` property.
+The `GreetingsPage` constructor instantiates a [`Label`](xref:Xamarin.Forms.Label) view, which is the Xamarin.Forms view that displays text. The [`Text`](xref:Xamarin.Forms.Label.Text) property is set to the text displayed by the `Label`. This program sets the `Label` to the `Content` property of `ContentPage`. The constructor of the `App` class then instantiates `GreetingsPage` and sets it to its `MainPage` property.
 
 The text is displayed in the upper-left corner of the page. On iOS, this means that it overlaps the page's status bar. There are several solutions to this problem:
 
 ### Solution 1. Include padding on the page
 
-Set a [`Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Padding/) property on the page. `Padding` is of type [`Thickness`](https://developer.xamarin.com/api/type/Xamarin.Forms.Thickness/), a structure with four properties:
+Set a [`Padding`](xref:Xamarin.Forms.Page.Padding) property on the page. `Padding` is of type [`Thickness`](xref:Xamarin.Forms.Thickness), a structure with four properties:
 
-- [`Left`](https://developer.xamarin.com/api/property/Xamarin.Forms.Thickness.Left/)
-- [`Top`](https://developer.xamarin.com/api/property/Xamarin.Forms.Thickness.Top/)
-- [`Right`](https://developer.xamarin.com/api/property/Xamarin.Forms.Thickness.Right/)
-- [`Bottom`](https://developer.xamarin.com/api/property/Xamarin.Forms.Thickness.Bottom/)
+- [`Left`](xref:Xamarin.Forms.Thickness.Left)
+- [`Top`](xref:Xamarin.Forms.Thickness.Top)
+- [`Right`](xref:Xamarin.Forms.Thickness.Right)
+- [`Bottom`](xref:Xamarin.Forms.Thickness.Bottom)
 
 `Padding` defines an area inside a page where content is excluded. This allows the `Label` to avoid overwriting the iOS status bar.
 
@@ -128,9 +128,9 @@ Set a 'Padding' property only on iOS using an SAP with a C# preprocessor directi
 
 ### Solution 3. Include padding just for iOS (PCL or SAP)
 
-In the version of Xamarin.Forms used for the book, a `Padding` property specific to iOS in either a PCL or SAP can be selected using the [`Device.OnPlatform`](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) or [`Device.OnPlatform<T>`](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform%7BT%7D/p/T/T/T/) static method. These methods are now deprecated
+In the version of Xamarin.Forms used for the book, a `Padding` property specific to iOS in either a PCL or SAP can be selected using the [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) or [`Device.OnPlatform<T>`](xref:Xamarin.Forms.Device.OnPlatform*) static method. These methods are now deprecated
 
-The `Device.OnPlatform` methods are used to run platform-specific code or to select platform-specific values. Internally, they make use of the [`Device.OS`](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.OS/) static read-only property, which returns a member of the [`TargetPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.TargetPlatform/) enumeration:
+The `Device.OnPlatform` methods are used to run platform-specific code or to select platform-specific values. Internally, they make use of the [`Device.OS`](xref:Xamarin.Forms.Device.OS) static read-only property, which returns a member of the [`TargetPlatform`](xref:Xamarin.Forms.TargetPlatform) enumeration:
 
 - [`iOS`](xref:Xamarin.Forms.TargetPlatform.iOS)
 - [`Android`](xref:Xamarin.Forms.TargetPlatform.Android)
@@ -138,13 +138,13 @@ The `Device.OnPlatform` methods are used to run platform-specific code or to sel
 - [`WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone), previously used to identify Windows Phone 8.0 but is now unused
 - [`Other`](xref:Xamarin.Forms.TargetPlatform.Other) is unused
 
-The `Device.OnPlatform` methods, the `Device.OS` property, and the `TargetPlatform` enumeration are all now deprecated. Instead, use the [`Device.RuntimePlatform`](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/) property and compare the `string` return value with the following static fields:
+The `Device.OnPlatform` methods, the `Device.OS` property, and the `TargetPlatform` enumeration are all now deprecated. Instead, use the [`Device.RuntimePlatform`](xref:Xamarin.Forms.Device.RuntimePlatform) property and compare the `string` return value with the following static fields:
 
-- [`iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/), the string "iOS"
-- [`Android`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Android/), the string "Android"
-- [`UWP`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.UWP/), the string "UWP", referring to the Windows Runtime Platform
-- [`Windows`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Windows/), the string "Windows" for the Windows Runtime (Windows 8.1 and Windows Phone 8.1)
-- [`WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/), the string "WinPhone" for Windows Phone 8.0
+- [`iOS`](xref:Xamarin.Forms.Device.iOS), the string "iOS"
+- [`Android`](xref:Xamarin.Forms.Device.Android), the string "Android"
+- [`UWP`](xref:Xamarin.Forms.Device.UWP), the string "UWP", referring to the Windows Runtime Platform
+- `Windows`, the string "Windows" for the Windows Runtime (Windows 8.1 and Windows Phone 8.1, deprecated)
+- `WinPhone`, the string "WinPhone" for Windows Phone 8.0 (deprecated)
 
 The [`Device.Idiom`](xref:Xamarin.Forms.Device.Idiom) static read-only property is related. This returns a member of the [`TargetIdiom`](xref:Xamarin.Forms.TargetIdiom), which has these members:
 
@@ -157,28 +157,28 @@ For iOS and Android, the cutoff between `Tablet` and `Phone` is a portrait width
 
 ## Solution 3a. Set margin on the Label
 
-The [`Margin`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) property was introduced too late to be included in the book, but it is also of type `Thickness` and you can set it on the `Label` to define an area outside the view that is included in the calculation of the view's layout.
+The [`Margin`](xref:Xamarin.Forms.View.Margin) property was introduced too late to be included in the book, but it is also of type `Thickness` and you can set it on the `Label` to define an area outside the view that is included in the calculation of the view's layout.
 
-The `Padding` property is only available on [`Layout`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/) and [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) derivatives. The `Margin` property is available on all [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) derivatives.
+The `Padding` property is only available on [`Layout`](xref:Xamarin.Forms.Layout) and [`Page`](xref:Xamarin.Forms.Page) derivatives. The `Margin` property is available on all [`View`](xref:Xamarin.Forms.View) derivatives.
 
 ## Solution 4. Center the label within the page
 
-You can center the `Label` within the `Page` (or put it in one of eight other places) by setting the [`HorizontalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) and [`VerticalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) properties of the `Label` to a value of type [`LayoutOptions`](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/). The `LayoutOptions` structure defines two properties:
+You can center the `Label` within the `Page` (or put it in one of eight other places) by setting the [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties of the `Label` to a value of type [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions). The `LayoutOptions` structure defines two properties:
 
-- An [`Alignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Alignment/) property of type [`LayoutAlignment`](xref:Xamarin.Forms.LayoutAlignment), an enumeration with four members: [`Start`](xref:Xamarin.Forms.LayoutAlignment.Start), which means left or top depending on the orientation, [`Center`](xref:Xamarin.Forms.LayoutAlignment.Center), [`End`](xref:Xamarin.Forms.LayoutAlignment.End), which means right or bottom depending on the orientation, and [`Fill`](xref:Xamarin.Forms.LayoutAlignment.Fill).
+- An [`Alignment`](xref:Xamarin.Forms.LayoutOptions.Alignment) property of type [`LayoutAlignment`](xref:Xamarin.Forms.LayoutAlignment), an enumeration with four members: [`Start`](xref:Xamarin.Forms.LayoutAlignment.Start), which means left or top depending on the orientation, [`Center`](xref:Xamarin.Forms.LayoutAlignment.Center), [`End`](xref:Xamarin.Forms.LayoutAlignment.End), which means right or bottom depending on the orientation, and [`Fill`](xref:Xamarin.Forms.LayoutAlignment.Fill).
 
-- An [`Expands`](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Expands/) property of type `bool`.
+- An [`Expands`](xref:Xamarin.Forms.LayoutOptions.Expands) property of type `bool`.
 
 Generally these properties are not used directly. Instead, combinations of these two properties are provided by eight static read-only properties of type `LayoutOptions`:
 
-- [`LayoutOptions.Start`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Start/)
-- [`LayoutOptions.Center`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Center/)
-- [`LayoutOptions.End`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.End/)
-- [`LayoutOptions.Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/)
-- [`LayoutOptions.StartAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.StartAndExpand/)
-- [`LayoutOptions.CenterAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.CenterAndExpand/)
-- [`LayoutOptions.EndAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.EndAndExpand/)
-- [`LayoutOptions.FillAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/)
+- [`LayoutOptions.Start`](xref:Xamarin.Forms.LayoutOptions.Start)
+- [`LayoutOptions.Center`](xref:Xamarin.Forms.LayoutOptions.Center)
+- [`LayoutOptions.End`](xref:Xamarin.Forms.LayoutOptions.End)
+- [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)
+- [`LayoutOptions.StartAndExpand`](xref:Xamarin.Forms.LayoutOptions.StartAndExpand)
+- [`LayoutOptions.CenterAndExpand`](xref:Xamarin.Forms.LayoutOptions.CenterAndExpand)
+- [`LayoutOptions.EndAndExpand`](xref:Xamarin.Forms.LayoutOptions.EndAndExpand)
+- [`LayoutOptions.FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand)
 
 `HorizontalOptions` and `VerticalOptions` are the most important properties in Xamarin.Forms layout, and are discussed in more detail in [**Chapter 4. Scrolling the Stack**](chapter04.md).
 
@@ -188,7 +188,7 @@ Here's the result with the `HorizontalOptions` and `VerticalOptions` properties 
 
 ## Solution 5. Center the text within the Label
 
-You can also center the text (or place it in eight other locations on the page) by setting the [`HorizontalTextAlignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.HorizontalTextAlignment/) and [`VerticalTextAlignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.VerticalTextAlignment/) properties of `Label` to a member of the [`TextAlignment`](xref:Xamarin.Forms.TextAlignment) enumeration:
+You can also center the text (or place it in eight other locations on the page) by setting the [`HorizontalTextAlignment`](xref:Xamarin.Forms.Label.HorizontalTextAlignment) and [`VerticalTextAlignment`](xref:Xamarin.Forms.Label.VerticalTextAlignment) properties of `Label` to a member of the [`TextAlignment`](xref:Xamarin.Forms.TextAlignment) enumeration:
 
 - [`Start`](xref:Xamarin.Forms.TextAlignment.Start), meaning left or top (depending on orientation)
 - [`Center`](xref:Xamarin.Forms.TextAlignment.Center)

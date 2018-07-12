@@ -15,9 +15,9 @@ _Styles can inherit from other styles to reduce duplication and enable reuse._
 
 ## Style Inheritance in XAML
 
-Style inheritance is performed by setting the [`Style.BasedOn`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.BasedOn/) property to an existing [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/). In XAML, this is achieved by setting the `BasedOn` property to a `StaticResource` markup extension that references a previously created `Style`. In C#, this is achieved by setting the `BasedOn` property to a `Style` instance.
+Style inheritance is performed by setting the [`Style.BasedOn`](xref:Xamarin.Forms.Style.BasedOn) property to an existing [`Style`](xref:Xamarin.Forms.Style). In XAML, this is achieved by setting the `BasedOn` property to a `StaticResource` markup extension that references a previously created `Style`. In C#, this is achieved by setting the `BasedOn` property to a `Style` instance.
 
-Styles that inherit from a base style can include [`Setter`](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/) instances for new properties, or use them to override styles from the base style. In addition, styles that inherit from a base style must target the same type, or a type that derives from the type targeted by the base style. For example, if a base style targets [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) instances, styles that are based on the base style can target `View` instances or types that derive from the `View` class, such as [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) and [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) instances.
+Styles that inherit from a base style can include [`Setter`](xref:Xamarin.Forms.Setter) instances for new properties, or use them to override styles from the base style. In addition, styles that inherit from a base style must target the same type, or a type that derives from the type targeted by the base style. For example, if a base style targets [`View`](xref:Xamarin.Forms.View) instances, styles that are based on the base style can target `View` instances or types that derive from the `View` class, such as [`Label`](xref:Xamarin.Forms.Label) and [`Button`](xref:Xamarin.Forms.Button) instances.
 
 The following code demonstrates *explicit* style inheritance in a XAML page:
 
@@ -55,7 +55,7 @@ The following code demonstrates *explicit* style inheritance in a XAML page:
 </ContentPage>
 ```
 
-The `baseStyle` targets [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) instances, and sets the [`HorizontalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) and [`VerticalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) properties. The `baseStyle` is not set directly on any controls. Instead, `labelStyle` and `buttonStyle` inherit from it, setting additional bindable property values. The `labelStyle` and `buttonStyle` are then applied to the [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instances and [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) instance, by setting their [`Style`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) properties. This results in the appearance shown in the following screenshots:
+The `baseStyle` targets [`View`](xref:Xamarin.Forms.View) instances, and sets the [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties. The `baseStyle` is not set directly on any controls. Instead, `labelStyle` and `buttonStyle` inherit from it, setting additional bindable property values. The `labelStyle` and `buttonStyle` are then applied to the [`Label`](xref:Xamarin.Forms.Label) instances and [`Button`](xref:Xamarin.Forms.Button) instance, by setting their [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties. This results in the appearance shown in the following screenshots:
 
 [![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
 
@@ -103,7 +103,7 @@ In this example, `labelStyle` and `buttonStyle` are control level resources, whi
 
 ## Style Inheritance in C&#35;
 
-The equivalent C# page, where [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) instances are assigned directly to the [`Style`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) properties of the required controls, is shown in the following code example:
+The equivalent C# page, where [`Style`](xref:Xamarin.Forms.Style) instances are assigned directly to the [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties of the required controls, is shown in the following code example:
 
 ```csharp
 public class StyleInheritancePageCS : ContentPage
@@ -146,11 +146,11 @@ public class StyleInheritancePageCS : ContentPage
 }
 ```
 
-The `baseStyle` targets [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) instances, and sets the [`HorizontalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) and [`VerticalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) properties. The `baseStyle` is not set directly on any controls. Instead, `labelStyle` and `buttonStyle` inherit from it, setting additional bindable property values. The `labelStyle` and `buttonStyle` are then applied to the [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instances and [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) instance, by setting their [`Style`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) properties.
+The `baseStyle` targets [`View`](xref:Xamarin.Forms.View) instances, and sets the [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties. The `baseStyle` is not set directly on any controls. Instead, `labelStyle` and `buttonStyle` inherit from it, setting additional bindable property values. The `labelStyle` and `buttonStyle` are then applied to the [`Label`](xref:Xamarin.Forms.Label) instances and [`Button`](xref:Xamarin.Forms.Button) instance, by setting their [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties.
 
 ## Summary
 
-Styles can inherit from other styles to reduce duplication and enable reuse. Style inheritance is performed by setting the [`Style.BasedOn`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.BasedOn/) property to an existing [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/).
+Styles can inherit from other styles to reduce duplication and enable reuse. Style inheritance is performed by setting the [`Style.BasedOn`](xref:Xamarin.Forms.Style.BasedOn) property to an existing [`Style`](xref:Xamarin.Forms.Style).
 
 
 ## Related Links
@@ -158,6 +158,6 @@ Styles can inherit from other styles to reduce duplication and enable reuse. Sty
 - [XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Basic Styles (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
 - [Working with Styles (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
-- [ResourceDictionary](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)
-- [Style](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
-- [Setter](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/)
+- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
+- [Style](xref:Xamarin.Forms.Style)
+- [Setter](xref:Xamarin.Forms.Setter)

@@ -39,7 +39,7 @@ Xamarin.Forms now has preview support for macOS apps.
 
 ## [Native Forms](native-forms.md)
 
-Native Forms allow Xamarin.Forms [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derived pages to be consumed by native Xamarin.iOS, Xamarin.Android, and Universal Windows Platform (UWP) projects.
+Native Forms allow Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived pages to be consumed by native Xamarin.iOS, Xamarin.Android, and Universal Windows Platform (UWP) projects.
 
 ## [Native Views](native-views/index.md)
 

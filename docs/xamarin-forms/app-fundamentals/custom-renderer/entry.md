@@ -13,25 +13,25 @@ ms.date: 11/29/2017
 
 _The Xamarin.Forms Entry control allows a single line of text to be edited. This article demonstrates how to create a custom renderer for the Entry control, enabling developers to override the default native rendering with their own platform-specific customization._
 
-Every Xamarin.Forms control has an accompanying renderer for each platform that creates an instance of a native control. When an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control is rendered by a Xamarin.Forms application, in iOS the `EntryRenderer` class is instantiated, which in turns instantiates a native `UITextField` control. On the Android platform, the `EntryRenderer` class instantiates an `EditText` control. On the Universal Windows Platform (UWP), the `EntryRenderer` class instantiates a `TextBox` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Every Xamarin.Forms control has an accompanying renderer for each platform that creates an instance of a native control. When an [`Entry`](xref:Xamarin.Forms.Entry) control is rendered by a Xamarin.Forms application, in iOS the `EntryRenderer` class is instantiated, which in turns instantiates a native `UITextField` control. On the Android platform, the `EntryRenderer` class instantiates an `EditText` control. On the Universal Windows Platform (UWP), the `EntryRenderer` class instantiates a `TextBox` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
-The following diagram illustrates the relationship between the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control and the corresponding native controls that implement it:
+The following diagram illustrates the relationship between the [`Entry`](xref:Xamarin.Forms.Entry) control and the corresponding native controls that implement it:
 
 ![](entry-images/entry-classes.png "Relationship Between Entry Control and Implementing Native Controls")
 
-The rendering process can be taken advantage of to implement platform-specific customizations by creating a custom renderer for the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control on each platform. The process for doing this is as follows:
+The rendering process can be taken advantage of to implement platform-specific customizations by creating a custom renderer for the [`Entry`](xref:Xamarin.Forms.Entry) control on each platform. The process for doing this is as follows:
 
 1. [Create](#Creating_the_Custom_Entry_Control) a Xamarin.Forms custom control.
 1. [Consume](#Consuming_the_Custom_Control) the custom control from Xamarin.Forms.
 1. [Create](#Creating_the_Custom_Renderer_on_each_Platform) the custom renderer for the control on each platform.
 
-Each item will now be discussed in turn, to implement an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control that has a different background color on each platform.
+Each item will now be discussed in turn, to implement an [`Entry`](xref:Xamarin.Forms.Entry) control that has a different background color on each platform.
 
 <a name="Creating_the_Custom_Entry_Control" />
 
 ## Creating the Custom Entry Control
 
-A custom [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control can be created by subclassing the `Entry` control, as shown in the following code example:
+A custom [`Entry`](xref:Xamarin.Forms.Entry) control can be created by subclassing the `Entry` control, as shown in the following code example:
 
 ```csharp
 public class MyEntry : Entry
@@ -39,7 +39,7 @@ public class MyEntry : Entry
 }
 ```
 
-The `MyEntry` control is created in the .NET Standard library project and is simply an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control. Customization of the control will be carried out in the custom renderer, so no additional implementation is required in the `MyEntry` control.
+The `MyEntry` control is created in the .NET Standard library project and is simply an [`Entry`](xref:Xamarin.Forms.Entry) control. Customization of the control will be carried out in the custom renderer, so no additional implementation is required in the `MyEntry` control.
 
 <a name="Consuming_the_Custom_Control" />
 
@@ -82,7 +82,7 @@ public class MainPage : ContentPage
 }
 ```
 
-This code instantiates a new [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) object that will display a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) and `MyEntry` control centered both vertically and horizontally on the page.
+This code instantiates a new [`ContentPage`](xref:Xamarin.Forms.ContentPage) object that will display a [`Label`](xref:Xamarin.Forms.Label) and `MyEntry` control centered both vertically and horizontally on the page.
 
 A custom renderer can now be added to each application project to customize the control's appearance on each platform.
 
@@ -201,7 +201,7 @@ The call to the base class's `OnElementChanged` method instantiates a `TextBox` 
 
 ## Summary
 
-This article has demonstrated how to create a custom control renderer for the Xamarin.Forms [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control, enabling developers to override the default native rendering with their own platform-specific rendering. Custom renderers provide a powerful approach to customizing the appearance of Xamarin.Forms controls. They can be used for small styling changes or sophisticated platform-specific layout and behavior customization.
+This article has demonstrated how to create a custom control renderer for the Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) control, enabling developers to override the default native rendering with their own platform-specific rendering. Custom renderers provide a powerful approach to customizing the appearance of Xamarin.Forms controls. They can be used for small styling changes or sophisticated platform-specific layout and behavior customization.
 
 
 ## Related Links

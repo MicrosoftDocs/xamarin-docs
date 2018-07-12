@@ -17,7 +17,7 @@ App settings are data that an app creates and manages. It can include data such 
 
 User settings are the customizable settings of an app that affect the behavior of the app and don't require frequent re-adjustment. For example, an app might let the user specify where to retrieve data from, and how to display it on the screen.
 
-Xamarin.Forms includes a persistent dictionary that can be used to store settings data. This dictionary can be accessed using the [`Application.Current.Properties`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.Properties/) property, and any data that's placed into it is saved when the app goes into a sleep state, and is restored when the app resumes or starts up again. In addition, the [`Application`](https://developer.xamarin.com/api/type/Xamarin.Forms.Application/) class also has a [`SavePropertiesAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.Application.SavePropertiesAsync()/) method that allows an app to have its settings saved when required. For more information about this dictionary, see [Properties Dictionary](~/xamarin-forms/app-fundamentals/application-class.md#Properties_Dictionary).
+Xamarin.Forms includes a persistent dictionary that can be used to store settings data. This dictionary can be accessed using the [`Application.Current.Properties`](xref:Xamarin.Forms.Application.Properties) property, and any data that's placed into it is saved when the app goes into a sleep state, and is restored when the app resumes or starts up again. In addition, the [`Application`](xref:Xamarin.Forms.Application) class also has a [`SavePropertiesAsync`](xref:Xamarin.Forms.Application.SavePropertiesAsync) method that allows an app to have its settings saved when required. For more information about this dictionary, see [Properties Dictionary](~/xamarin-forms/app-fundamentals/application-class.md#Properties_Dictionary).
 
 A downside to storing data using the Xamarin.Forms persistent dictionary is that it's not easily data bound to. Therefore, the eShopOnContainers mobile app uses the Xam.Plugins.Settings library, available from [NuGet](https://www.nuget.org/packages/Xam.Plugins.Settings/). This library provides a consistent, type-safe, cross-platform approach for persisting and retrieving app and user settings, while using the native settings management provided by each platform. In addition, it's straightforward to use data binding to access settings data exposed by the library.
 
@@ -122,13 +122,13 @@ In the eShopOnContainers mobile app, the `SettingsView` exposes two user setting
 
 Data binding can be used to retrieve and set settings exposed by the `Settings` class. This is achieved by controls on the view binding to view model properties that in turn access properties in the `Settings` class, and raising a property changed notification if the settings value has changed. For information about how the eShopOnContainers mobile app constructs view models and associates them to views, see [Automatically Creating a View Model with a View Model Locator](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
 
-The following code example shows the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control from the `SettingsView` that allows the user to enter a base endpoint URL for the containerized microservices:
+The following code example shows the [`Entry`](xref:Xamarin.Forms.Entry) control from the `SettingsView` that allows the user to enter a base endpoint URL for the containerized microservices:
 
 ```xaml
 <Entry Text="{Binding Endpoint, Mode=TwoWay}" />
 ```
 
-This [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control binds to the `Endpoint` property of the `SettingsViewModel` class, using a two-way binding. The following code example shows the Endpoint property:
+This [`Entry`](xref:Xamarin.Forms.Entry) control binds to the `Endpoint` property of the `SettingsViewModel` class, using a two-way binding. The following code example shows the Endpoint property:
 
 ```csharp
 public string Endpoint  

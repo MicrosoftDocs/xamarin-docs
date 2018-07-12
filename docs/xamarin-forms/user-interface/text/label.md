@@ -28,7 +28,7 @@ The following sections cover setting properties of `Label` manually on a per-ins
 
 ## Truncation and Wrapping
 
-Labels can be set to handle text that can't fit on one line in one of several ways, exposed by the `LineBreakMode` property. [`LineBreakMode`](https://developer.xamarin.com/api/type/Xamarin.Forms.LineBreakMode/) is an enumeration of the following options:
+Labels can be set to handle text that can't fit on one line in one of several ways, exposed by the `LineBreakMode` property. [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode) is an enumeration of the following options:
 
 - **HeadTruncation** &ndash; truncates the head of the text, showing the end.
 - **CharacterWrap** &ndash; wraps text onto a new line at a character boundary.
@@ -89,7 +89,7 @@ Title="Label Demo">
 
 Labels expose a `FormattedText` property which allows you to present text with multiple fonts and colors in the same view.
 
-The `FormattedText` property is of type [`FormattedString`](https://developer.xamarin.com/api/type/Xamarin.Forms.FormattedString/). Formatted Strings are composed of one or more `Span`s, each one with the following properties:
+The `FormattedText` property is of type [`FormattedString`](xref:Xamarin.Forms.FormattedString). Formatted Strings are composed of one or more `Span`s, each one with the following properties:
 
 - **BackgroundColor** &ndash; can be used to set a background color, for example to achieve a highlighter effect.
 - **FontAttributes** &ndash; can be set to bold, italic, or neither.
@@ -150,4 +150,4 @@ Title="Label Demo">
 
 - [Creating Mobile Apps with Xamarin.Forms, Chapter 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
-- [Label API](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)
+- [Label API](xref:Xamarin.Forms.Label)

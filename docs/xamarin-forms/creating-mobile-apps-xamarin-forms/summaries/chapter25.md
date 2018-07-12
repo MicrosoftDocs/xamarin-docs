@@ -13,22 +13,22 @@ ms.date: 11/07/2017
 
 So far you've seen two classes that derive from `Page`: `ContentPage` and `NavigationPage`. This chapter presents two others:
 
-- [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) manages two pages, a master and a detail
-- [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) manages multiple child pages accessed through tabs
+- [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) manages two pages, a master and a detail
+- [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) manages multiple child pages accessed through tabs
 
 These page types provide more sophisticated navigation options than the
 `NavagationPage` discussed in [Chapter 24. Page Navigation](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter24.md).
 
 ## Master and Detail
 
-The [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) defines two properties of type `Page`: [`Master`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Master/) and [`Detail`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/). Generally you set each of these properties to a `ContentPage`. The `MasterDetailPage` displays and switches between these two pages.
+The [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) defines two properties of type `Page`: [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) and [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail). Generally you set each of these properties to a `ContentPage`. The `MasterDetailPage` displays and switches between these two pages.
 
 There are two fundamental ways to switch between these two pages:
 
 - *split* where the master and detail are side by side
 - *popover* where the detail page covers or partially covers the master page
 
-There are several variations of the *popover* approach (*slide*, *overlap*, and *swap*), but these are generally platform dependent. You can set the [`MasterDetailBehavior`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.MasterBehavior/) property of `MasterDetailPage` to a member of the [`MasterBehavior`](xref:Xamarin.Forms.MasterBehavior) enumeration:
+There are several variations of the *popover* approach (*slide*, *overlap*, and *swap*), but these are generally platform dependent. You can set the [`MasterDetailBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) property of `MasterDetailPage` to a member of the [`MasterBehavior`](xref:Xamarin.Forms.MasterBehavior) enumeration:
 
 - [`Default`](xref:Xamarin.Forms.MasterBehavior.Default)
 - [`Split`](xref:Xamarin.Forms.MasterBehavior.Split)
@@ -51,7 +51,7 @@ The
 
 The `Master` and `Detail` properties are defined with visual trees in the [SchoolAndDetailPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml) file, which derives from `MasterDetailPage`. This arrangement allows data bindings to be set between the master and detail pages.
 
-That XAML file also sets the [`IsPresented`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsPresented/) property of `MasterDetailPage` to `True`. This causes the master page to be displayed at startup; by default the detail page is displayed. The [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs) file sets `IsPresented` to `false` when an item is selected from the `ListView` in the master page. The detail page is then displayed:
+That XAML file also sets the [`IsPresented`](xref:Xamarin.Forms.MasterDetailPage.IsPresented) property of `MasterDetailPage` to `True`. This causes the master page to be displayed at startup; by default the detail page is displayed. The [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs) file sets `IsPresented` to `false` when an item is selected from the `ListView` in the master page. The detail page is then displayed:
 
 [![Triple screenshot of School And Detail](images/ch25fg09-small.png "Detail Page from a MasterDetailPage")](images/ch25fg09-large.png#lightbox "Detail Page from a MasterDetailPage")
 
@@ -59,8 +59,8 @@ That XAML file also sets the [`IsPresented`](https://developer.xamarin.com/api/p
 
 Although Xamarin.Forms provides a user interface for switching between the master and detail views, you can supply your own. To do so:
 
-- Set the [`IsGestureEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsGestureEnabled/) property to `false` to disable swiping
-- Override the [`ShouldShowToolbarButton`](https://developer.xamarin.com/api/member/Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton()/) method and return `false` to hide the toolbar buttons on Windows 8.1 and Windows Phone 8.1.
+- Set the [`IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabled) property to `false` to disable swiping
+- Override the [`ShouldShowToolbarButton`](xref:Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton) method and return `false` to hide the toolbar buttons on Windows 8.1 and Windows Phone 8.1.
 
 You must then provide a means to switch between the master and detail pages, such as demonstrated by the
 [**ColorsDetail**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/ColorsDetails) sample.
@@ -69,28 +69,28 @@ The [**MasterDetailTaps**](https://github.com/xamarin/xamarin-forms-book-samples
 
 ## TabbedPage
 
-The [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) is a collection of pages that you can switch among using tabs. It derives from `MultiPage<Page>` and defines no public properties or methods of its own. [`MultiPage<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/), however, does define a property:
+The [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) is a collection of pages that you can switch among using tabs. It derives from `MultiPage<Page>` and defines no public properties or methods of its own. [`MultiPage<T>`](xref:Xamarin.Forms.MultiPage`1), however, does define a property:
 
-- [`Children`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.Children/) property of type `IList<T>`
+- [`Children`](xref:Xamarin.Forms.MultiPage`1.Children) property of type `IList<T>`
 
 You fill this `Children` collection with page objects.
 
 Another approach allows you to define the `TabbedPage` children much like a `ListView` using these two properties that generate the tabbed pages automatically:
 
-- [`ItemsSource`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.ItemsSource/) of type `IEnumerable`
-- [`ItemTemplate`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.ItemTemplate/) of type `DataTemplate`
+- [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) of type `IEnumerable`
+- [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) of type `DataTemplate`
 
 However, this approach does not work well on iOS when the collection contains more than a few items.
 
 `MultiPage<T>` defines two more properties that let you keep track of which page is currently viewed:
 
-- [`CurrentPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.CurrentPage/) of type `T`, referring to the page
-- [`SelectedItem`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.SelectedItem/) of type `Object`, referring to the object in the `ItemsSource` collection
+- [`CurrentPage`](xref:Xamarin.Forms.MultiPage`1.CurrentPage) of type `T`, referring to the page
+- [`SelectedItem`](xref:Xamarin.Forms.MultiPage`1.SelectedItem) of type `Object`, referring to the object in the `ItemsSource` collection
 
 `MultiPage<T>` also defines two events:
 
-- [`PagesChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.MultiPage%3CT%3E.PagesChanged/) when the `ItemsSource` collection changes
-- [`CurrentPageChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.MultiPage%3CT%3E.CurrentPageChanged/) when the viewed page changes
+- [`PagesChanged`](xref:Xamarin.Forms.MultiPage`1.PagesChanged) when the `ItemsSource` collection changes
+- [`CurrentPageChanged`](xref:Xamarin.Forms.MultiPage`1.CurrentPageChanged) when the viewed page changes
 
 ### Discrete tab pages
 

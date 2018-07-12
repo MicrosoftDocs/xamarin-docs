@@ -26,10 +26,10 @@ A control that meets all the following requirements will be rendered on the desi
 1.  It is a direct or indirect subclass of  [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/) or  [UIViewController](https://developer.xamarin.com/api/type/UIKit.UIView/Controller). Other [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) subclasses will appear as an icon on the design surface.
 2.  It has a  [RegisterAttribute](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) to expose it to Objective-C.
 3.  It has  [the required IntPtr constructor](~/ios/internals/api-design/index.md).
-4.  It either implements the [IComponent](https://developer.xamarin.com/api/type/System.ComponentModel.IComponent/) interface or has a [DesignTimeVisibleAttribute](https://developer.xamarin.com/api/type/System.ComponentModel.DesignTimeVisibleAttribute/) set to True.
+4.  It either implements the [IComponent](xref:System.ComponentModel.IComponent) interface or has a [DesignTimeVisibleAttribute](xref:System.ComponentModel.DesignTimeVisibleAttribute) set to True.
 
 Controls defined in code that meet the above requirements will appear in the designer when their containing project is compiled for the simulator. By default, all custom controls will appear in the **Custom Components**
-section of the **Toolbox**. However the [CategoryAttribute](https://developer.xamarin.com/api/type/System.ComponentModel.CategoryAttribute/) can be applied to the custom control's class to specify a different section.
+section of the **Toolbox**. However the [CategoryAttribute](xref:System.ComponentModel.CategoryAttribute) can be applied to the custom control's class to specify a different section.
 
 The designer does not support loading third-party Objective-C libraries.
 
@@ -38,11 +38,11 @@ The designer does not support loading third-party Objective-C libraries.
 A property declared by a custom control will appear in the property panel if the following conditions are met:
 
 1.  The property has a public getter and setter.
-1.  The property has an  [ExportAttribute](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) as well as a  [BrowsableAttribute](https://developer.xamarin.com/api/type/System.ComponentModel.BrowsableAttribute/) set to True.
-1.  The property type is a numeric type, enumeration type, string, bool, [SizeF](https://developer.xamarin.com/api/type/System.Drawing.SizeF/), [UIColor](https://developer.xamarin.com/api/type/UIKit.UIColor/), or [UIImage](https://developer.xamarin.com/api/type/UIKit.UIImage/). This list of supported types may be expanded in the future.
+1.  The property has an  [ExportAttribute](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) as well as a  [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) set to True.
+1.  The property type is a numeric type, enumeration type, string, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](https://developer.xamarin.com/api/type/UIKit.UIColor/), or [UIImage](https://developer.xamarin.com/api/type/UIKit.UIImage/). This list of supported types may be expanded in the future.
 
 
-The property may also be decorated with a [DisplayNameAttribute](https://developer.xamarin.com/api/type/System.ComponentModel.DisplayNameAttribute/) to specify the label that is displayed for it in the property panel.
+The property may also be decorated with a [DisplayNameAttribute](xref:System.ComponentModel.DisplayNameAttribute) to specify the label that is displayed for it in the property panel.
 
 ## Initialization
 
@@ -143,7 +143,7 @@ On the design surface, a custom control must adhere to a few restrictions:
 -  Asynchronous operations, such as web requests, should not be performed in design mode. The design surface does not support animation or any other asynchronous updates to the control's UI.
 
 
-A custom control can implement [IComponent](https://developer.xamarin.com/api/type/System.ComponentModel.IComponent/) and use the [DesignMode](https://developer.xamarin.com/api/property/System.ComponentModel.ISite.DesignMode/) property to check if it is on the design
+A custom control can implement [IComponent](xref:System.ComponentModel.IComponent) and use the [DesignMode](xref:System.ComponentModel.ISite.DesignMode) property to check if it is on the design
 surface. In this example, the label will display "Design Mode" on the design surface and "Runtime" at runtime:
 
 ```csharp

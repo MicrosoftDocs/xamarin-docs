@@ -55,7 +55,7 @@ Just like WPF, the single required method is a `ProvideValue` method to return t
 
 ## Binding infrastructure
 
-One of the core concepts carried over is a data binding infrastructure to connect visual properties to .NET data properties. This enables architectural patterns such as MVVM. The basic design is identical - you have a bindable base class [BindableObject](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/), in WPF this is the [DependencyObject](https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx) class. This base class is used as the root ancestor for all objects that will participate as targets in data binding. The derived classes then expose [BindableProperty](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) objects which act as the backing storage for property values (these are defined as [DependencyProperty](https://msdn.microsoft.com/library/system.windows.dependencyproperty(v=vs.110).aspx) objects in WPF).
+One of the core concepts carried over is a data binding infrastructure to connect visual properties to .NET data properties. This enables architectural patterns such as MVVM. The basic design is identical - you have a bindable base class [BindableObject](xref:Xamarin.Forms.BindableObject), in WPF this is the [DependencyObject](https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx) class. This base class is used as the root ancestor for all objects that will participate as targets in data binding. The derived classes then expose [BindableProperty](xref:Xamarin.Forms.BindableProperty) objects which act as the backing storage for property values (these are defined as [DependencyProperty](https://msdn.microsoft.com/library/system.windows.dependencyproperty(v=vs.110).aspx) objects in WPF).
 
 ### Defining bindable properties
 
@@ -136,7 +136,7 @@ Both interfaces are fully supported in Xamarin.Forms bindings. Unlike many XAML-
 In addition, both environments support `SynchronziationContext` and `async`/`await` to do proper thread marshalling. WPF includes the `Dispatcher` class on all visual elements, Xamarin.Forms has a static method `Device.BeginInvokeOnMainThread` which can also be used (although `SynchronizationContext` is preferred for cross-platform coding).
 
 - Xamarin.Forms includes an `ObservableCollection<T>` which supports collection change notifications.
-- You can use `BindingBase.EnableCollectionSynchronization` to enable cross-thread updates for a collection. The API is slightly different from the WPF variation, [check the docs for usage details](https://developer.xamarin.com/api/member/Xamarin.Forms.BindingBase.EnableCollectionSynchronization/).
+- You can use `BindingBase.EnableCollectionSynchronization` to enable cross-thread updates for a collection. The API is slightly different from the WPF variation, [check the docs for usage details](xref:Xamarin.Forms.BindingBase.EnableCollectionSynchronization*).
 
 ## Data Templates
 

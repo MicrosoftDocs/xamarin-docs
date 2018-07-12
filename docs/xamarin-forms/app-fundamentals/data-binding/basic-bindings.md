@@ -45,14 +45,14 @@ The `Slider` is set for a range of 0 to 360. The intent of this program is to ro
 
 Without data bindings, you would set the `ValueChanged` event of the `Slider` to an event handler that accesses the `Value` property of the `Slider` and sets that value to the `Rotation` property of the `Label`. The data binding automates that job; the event handler and the code within it are no longer necessary.
 
-You can set a binding on an instance of any class that derives from [`BindableObject`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/), which includes `Element`, `VisualElement`, `View`, and `View` derivatives.  The binding is always set on the target object. The binding references the source object. To set the data binding, use the following two members of the target class:
+You can set a binding on an instance of any class that derives from [`BindableObject`](xref:Xamarin.Forms.BindableObject), which includes `Element`, `VisualElement`, `View`, and `View` derivatives.  The binding is always set on the target object. The binding references the source object. To set the data binding, use the following two members of the target class:
 
-- The [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) property specifies the source object.
-- The [`SetBinding`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/) method specifies the target property and source property.
+- The [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) property specifies the source object.
+- The [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) method specifies the target property and source property.
 
 In this example, the `Label` is the binding target, and the `Slider` is the binding source. Changes in the `Slider` source affect the rotation of the `Label` target. Data flows from the source to the target.
 
-The `SetBinding` method defined by `BindableObject` has an argument of type [`BindingBase`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingBase/) from which the [`Binding`](https://developer.xamarin.com/api/type/Xamarin.Forms.Binding/) class derives, but there are other `SetBinding` methods defined by the [`BindableObjectExtensions`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObjectExtensions/) class. The code-behind file in the **Basic Code Binding** sample uses a simpler [`SetBinding`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObjectExtensions.SetBinding/p/Xamarin.Forms.BindableObject/Xamarin.Forms.BindableProperty/System.String/) extension method from this class.
+The `SetBinding` method defined by `BindableObject` has an argument of type [`BindingBase`](xref:Xamarin.Forms.BindingBase) from which the [`Binding`](xref:Xamarin.Forms.Binding) class derives, but there are other `SetBinding` methods defined by the [`BindableObjectExtensions`](xref:Xamarin.Forms.BindableObjectExtensions) class. The code-behind file in the **Basic Code Binding** sample uses a simpler [`SetBinding`](xref:Xamarin.Forms.BindableObjectExtensions.SetBinding*) extension method from this class.
 
 ```csharp
 public partial class BasicCodeBindingPage : ContentPage
@@ -118,7 +118,7 @@ Just as in code, the data binding is set on the target object, which is the `Lab
 - The `x:Reference` markup extension is required to reference the source object, which is the `Slider` named `slider`.
 - The `Binding` markup extension links the `Rotation` property of the `Label` to the `Value` property of the `Slider`.
 
-See the article [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md) for more information about XAML markup extensions. The `x:Reference` markup extension is supported by the [`ReferenceExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.ReferenceExtension/) class; `Binding` is supported by the [`BindingExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.BindingExtension/) class. As the XML namespace prefixes indicate, `x:Reference` is part of the XAML 2009 specification, while `Binding` is part of Xamarin.Forms. Notice that no quotation marks appear within the curly braces.
+See the article [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md) for more information about XAML markup extensions. The `x:Reference` markup extension is supported by the [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) class; `Binding` is supported by the [`BindingExtension`](xref:Xamarin.Forms.Xaml.BindingExtension) class. As the XML namespace prefixes indicate, `x:Reference` is part of the XAML 2009 specification, while `Binding` is part of Xamarin.Forms. Notice that no quotation marks appear within the curly braces.
 
 It's easy to forget the `x:Reference` markup extension when setting the `BindingContext`. It's common to mistakenly set the property directly to the name of the binding source like this:
 
@@ -128,7 +128,7 @@ BindingContext="slider"
 
 But that's not right. That markup sets the `BindingContext` property to a `string` object whose characters spell "slider"!
 
-Notice that the source property is specified with the [`Path`](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Path/) property of `BindingExtension`, which corresponds with the [`Path`](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/) property of the [`Binding`](https://developer.xamarin.com/api/type/Xamarin.Forms.Binding/) class.
+Notice that the source property is specified with the [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) property of `BindingExtension`, which corresponds with the [`Path`](xref:Xamarin.Forms.Binding.Path) property of the [`Binding`](xref:Xamarin.Forms.Binding) class.
 
 The markup shown on the **Basic XAML Binding** page can be simplified: XAML markup extensions such as `x:Reference` and `Binding` can have *content property* attributes defined, which for XAML markup extensions means that the property name doesn't need to appear. The `Name` property is the content property of `x:Reference`, and the `Path` property is the content property of `Binding`, which means that they can be eliminated from the expressions:
 
@@ -167,7 +167,7 @@ This is demonstrated in the **Alternative Code Binding** sample. The XAML file i
 </ContentPage>
 ```
 
-The code-behind file sets the binding with the [`SetBinding`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/) method defined by `BindableObject`. The argument is a [constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Binding.Binding/p/System.String/Xamarin.Forms.BindingMode/Xamarin.Forms.IValueConverter/System.Object/System.String/System.Object/) for the [`Binding`](https://developer.xamarin.com/api/type/Xamarin.Forms.Binding/) class:
+The code-behind file sets the binding with the [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) method defined by `BindableObject`. The argument is a [constructor](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object)) for the [`Binding`](xref:Xamarin.Forms.Binding) class:
 
 ```csharp
 public partial class AlternativeCodeBindingPage : ContentPage

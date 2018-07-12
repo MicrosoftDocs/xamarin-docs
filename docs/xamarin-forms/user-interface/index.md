@@ -63,7 +63,7 @@ Adding maps requires an additional NuGet package download and some platform-spec
 
 ## [Picker](picker/index.md)
 
-The [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) view is a control for selecting a text item from a list of data.
+The [`Picker`](xref:Xamarin.Forms.Picker) view is a control for selecting a text item from a list of data.
 
 ## [Slider](slider.md)
 

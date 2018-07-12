@@ -54,7 +54,7 @@ XAMLC is disabled by default to ensure backwards compatibility. However, it can 
 
 ## Choose the Correct Layout
 
-A layout that's capable of displaying multiple children, but that only has a single child, is wasteful. For example, the following code example shows a [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) with a single child:
+A layout that's capable of displaying multiple children, but that only has a single child, is wasteful. For example, the following code example shows a [`StackLayout`](xref:Xamarin.Forms.StackLayout) with a single child:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -68,7 +68,7 @@ A layout that's capable of displaying multiple children, but that only has a sin
 </ContentPage>
 ```
 
-This is wasteful and the [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) element should be removed, as shown in the following code example:
+This is wasteful and the [`StackLayout`](xref:Xamarin.Forms.StackLayout) element should be removed, as shown in the following code example:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -80,7 +80,7 @@ This is wasteful and the [`StackLayout`](https://developer.xamarin.com/api/type/
 </ContentPage>
 ```
 
-In addition, don't attempt to reproduce the appearance of a specific layout by using combinations of other layouts, as this results in unnecessary layout calculations being performed. For example, don't attempt to reproduce a [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) layout by using a combination of [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) instances. The following code example shows an example of this bad practice:
+In addition, don't attempt to reproduce the appearance of a specific layout by using combinations of other layouts, as this results in unnecessary layout calculations being performed. For example, don't attempt to reproduce a [`Grid`](xref:Xamarin.Forms.Grid) layout by using a combination of [`StackLayout`](xref:Xamarin.Forms.StackLayout) instances. The following code example shows an example of this bad practice:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -110,7 +110,7 @@ In addition, don't attempt to reproduce the appearance of a specific layout by u
 </ContentPage>
 ```
 
-This is wasteful because unnecessary layout calculations are performed. Instead, the desired layout can be better achieved using a [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), as shown in the following code example:
+This is wasteful because unnecessary layout calculations are performed. Instead, the desired layout can be better achieved using a [`Grid`](xref:Xamarin.Forms.Grid), as shown in the following code example:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -158,7 +158,7 @@ Fast renderers reduce the inflation and rendering costs of Xamarin.Forms control
 
 ## Reduce Unnecessary Bindings
 
-Don't use bindings for content that can easily be set statically. There is no advantage in binding data that doesn't need to be bound, because bindings aren't cost efficient. For example, setting `Button.Text = "Accept"` has less overhead than binding [`Button.Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Text/) to a ViewModel `string` property with value "Accept".
+Don't use bindings for content that can easily be set statically. There is no advantage in binding data that doesn't need to be bound, because bindings aren't cost efficient. For example, setting `Button.Text = "Accept"` has less overhead than binding [`Button.Text`](xref:Xamarin.Forms.Button.Text) to a ViewModel `string` property with value "Accept".
 
 <a name="optimizelayout" />
 
@@ -166,36 +166,36 @@ Don't use bindings for content that can easily be set statically. There is no ad
 
 Xamarin.Forms 2 introduced an optimized layout engine that impacts layout updates. To obtain the best possible layout performance, follow these guidelines:
 
-- Reduce the depth of layout hierarchies by specifying [`Margin`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) property values, allowing the creation of layouts with fewer wrapping views. For more information, see [Margins and Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
-- When using a [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), try to ensure that as few rows and columns as possible are set to [`Auto`](https://developer.xamarin.com/api/property/Xamarin.Forms.GridLength.Auto/) size. Each auto-sized row or column will cause the layout engine to perform additional layout calculations. Instead, use fixed size rows and columns if possible. Alternatively, set rows and columns to occupy a proportional amount of space with the [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star) enumeration value, provided that the parent tree follows these layout guidelines.
-- Don't set the [`VerticalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) and [`HorizontalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) properties of a layout unless required. The default values of [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill) and [`LayoutOptions.FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand) allow for the best layout optimization. Changing these properties has a cost and consumes memory, even when setting them to the default values.
-- Avoid using a [`RelativeLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/) whenever possible. It will result in the CPU having to perform significantly more work.
-- When using an [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/), avoid using the [`AbsoluteLayout.AutoSize`](https://developer.xamarin.com/api/property/Xamarin.Forms.AbsoluteLayout.AutoSize/) property whenever possible.
-- When using a [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), ensure that only one child is set to [`LayoutOptions.Expands`](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Expands/). This property ensures that the specified child will occupy the largest space that the `StackLayout` can give to it, and it is wasteful to perform these calculations more than once.
-- Don't call any of the methods of the [`Layout`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/) class, as they result in expensive layout calculations being performed. Instead, it's likely that the desired layout behavior can be obtained by setting the [`TranslationX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/) and [`TranslationY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) properties. Alternatively, subclass the [`Layout<View>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) class to achieve the desired layout behavior.
-- Don't update any [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instances more frequently than required, as the change of size of the label can result in the entire screen layout being re-calculated.
-- Don't set the [`Label.VerticalTextAlignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.VerticalTextAlignment/) property unless required.
-- Set the [`LineBreakMode`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.LineBreakMode/) of any [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instances to [`NoWrap`](xref:Xamarin.Forms.LineBreakMode.NoWrap) whenever possible.
+- Reduce the depth of layout hierarchies by specifying [`Margin`](xref:Xamarin.Forms.View.Margin) property values, allowing the creation of layouts with fewer wrapping views. For more information, see [Margins and Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+- When using a [`Grid`](xref:Xamarin.Forms.Grid), try to ensure that as few rows and columns as possible are set to [`Auto`](xref:Xamarin.Forms.GridLength.Auto) size. Each auto-sized row or column will cause the layout engine to perform additional layout calculations. Instead, use fixed size rows and columns if possible. Alternatively, set rows and columns to occupy a proportional amount of space with the [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star) enumeration value, provided that the parent tree follows these layout guidelines.
+- Don't set the [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) and [`HorizontalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties of a layout unless required. The default values of [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill) and [`LayoutOptions.FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand) allow for the best layout optimization. Changing these properties has a cost and consumes memory, even when setting them to the default values.
+- Avoid using a [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) whenever possible. It will result in the CPU having to perform significantly more work.
+- When using an [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout), avoid using the [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) property whenever possible.
+- When using a [`StackLayout`](xref:Xamarin.Forms.StackLayout), ensure that only one child is set to [`LayoutOptions.Expands`](xref:Xamarin.Forms.LayoutOptions.Expands). This property ensures that the specified child will occupy the largest space that the `StackLayout` can give to it, and it is wasteful to perform these calculations more than once.
+- Don't call any of the methods of the [`Layout`](xref:Xamarin.Forms.Layout) class, as they result in expensive layout calculations being performed. Instead, it's likely that the desired layout behavior can be obtained by setting the [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) and [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) properties. Alternatively, subclass the [`Layout<View>`](xref:Xamarin.Forms.Layout`1) class to achieve the desired layout behavior.
+- Don't update any [`Label`](xref:Xamarin.Forms.Label) instances more frequently than required, as the change of size of the label can result in the entire screen layout being re-calculated.
+- Don't set the [`Label.VerticalTextAlignment`](xref:Xamarin.Forms.Label.VerticalTextAlignment) property unless required.
+- Set the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) of any [`Label`](xref:Xamarin.Forms.Label) instances to [`NoWrap`](xref:Xamarin.Forms.LineBreakMode.NoWrap) whenever possible.
 
 <a name="optimizelistview" />
 
 ## Optimize ListView Performance
 
-When using a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) control there are a number of user experiences that should be optimized:
+When using a [`ListView`](xref:Xamarin.Forms.ListView) control there are a number of user experiences that should be optimized:
 
 - **Initialization** – the time interval starting when the control is created, and ending when items are shown on screen.
 - **Scrolling** – the ability to scroll through the list and ensure that the UI doesn't lag behind touch gestures.
 - **Interaction** for adding, deleting, and selecting items.
 
-The [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) control requires an application to supply data and cell templates. How this is achieved will have a large impact on the performance of the control. For more information, see [ListView Performance](~/xamarin-forms/user-interface/listview/performance.md).
+The [`ListView`](xref:Xamarin.Forms.ListView) control requires an application to supply data and cell templates. How this is achieved will have a large impact on the performance of the control. For more information, see [ListView Performance](~/xamarin-forms/user-interface/listview/performance.md).
 
 <a name="optimizeimages" />
 
 ## Optimize Image Resources
 
-Displaying image resources can greatly increase the app's memory footprint. Therefore, they should only be created when required and should be released as soon as the application no longer requires them. For example, if an application is displaying an image by reading its data from a stream, ensure that stream is created only when it's required, and ensure that the stream is released when it's no longer required. This can be achieved by creating the stream when the page is created, or when the [`Page.Appearing`](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) event fires, and then disposing of the stream when the [`Page.Disappearing`](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Disappearing/) event fires.
+Displaying image resources can greatly increase the app's memory footprint. Therefore, they should only be created when required and should be released as soon as the application no longer requires them. For example, if an application is displaying an image by reading its data from a stream, ensure that stream is created only when it's required, and ensure that the stream is released when it's no longer required. This can be achieved by creating the stream when the page is created, or when the [`Page.Appearing`](xref:Xamarin.Forms.Page.Appearing) event fires, and then disposing of the stream when the [`Page.Disappearing`](xref:Xamarin.Forms.Page.Disappearing) event fires.
 
-When downloading an image for display with the [`ImageSource.FromUri`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromUri/p/System.Uri/) method, cache the downloaded image by ensuring that the [`UriImageSource.CachingEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.UriImageSource.CachingEnabled/) property is set to `true`. For more information, see [Working with Images](~/xamarin-forms/user-interface/images.md).
+When downloading an image for display with the [`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) method, cache the downloaded image by ensuring that the [`UriImageSource.CachingEnabled`](xref:Xamarin.Forms.UriImageSource.CachingEnabled) property is set to `true`. For more information, see [Working with Images](~/xamarin-forms/user-interface/images.md).
 
 For more information, see [Optimize Image Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages).
 
@@ -203,9 +203,9 @@ For more information, see [Optimize Image Resources](~/cross-platform/deploy-tes
 
 ## Reduce the Visual Tree Size
 
-Reducing the number of elements on a page will make the page render faster. There are two main techniques for achieving this. The first is to hide elements that aren't visible. The [`IsVisible`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsVisible/) property of each element determines whether the element should be part of the visual tree or not. Therefore, if an element isn't visible because it's hidden behind other elements, either remove the element or set its `IsVisible` property to `false`.
+Reducing the number of elements on a page will make the page render faster. There are two main techniques for achieving this. The first is to hide elements that aren't visible. The [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) property of each element determines whether the element should be part of the visual tree or not. Therefore, if an element isn't visible because it's hidden behind other elements, either remove the element or set its `IsVisible` property to `false`.
 
-The second technique is to remove unnecessary elements. For example, the following code example shows a page layout that displays a series of [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) elements:
+The second technique is to remove unnecessary elements. For example, the following code example shows a page layout that displays a series of [`Label`](xref:Xamarin.Forms.Label) elements:
 
 ```xaml
 <ContentPage.Content>
@@ -325,5 +325,5 @@ This article described and discussed techniques for increasing the performance o
 - [Fast Renderers](~/xamarin-forms/internals/fast-renderers.md)
 - [Layout Compression](~/xamarin-forms/user-interface/layouts/layout-compression.md)
 - [Xamarin.Forms Image Resizer Sample](https://developer.xamarin.com/samples/xamarin-forms/XamFormsImageResize/)
-- [XamlCompilation](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.XamlCompilation/)
-- [XamlCompilationOptions](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.XamlCompilationOptions/)
+- [XamlCompilation](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute)
+- [XamlCompilationOptions](xref:Xamarin.Forms.Xaml.XamlCompilationOptions)

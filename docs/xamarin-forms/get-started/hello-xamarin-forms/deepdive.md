@@ -113,7 +113,7 @@ namespace Phoneword
 }
 ```
 
-This code sets the `MainPage` property of the `App` class to a new instance of the [`MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) class. In addition, the [`XamlCompilation`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.XamlCompilationAttribute/) attribute turns on the XAML compiler, so that XAML is compiled directly into intermediate language. For more information, see [XAML Compilation](~/xamarin-forms/xaml/xamlc.md).
+This code sets the `MainPage` property of the `App` class to a new instance of the [`MainPage`](xref:Xamarin.Forms.Application.MainPage) class. In addition, the [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) attribute turns on the XAML compiler, so that XAML is compiled directly into intermediate language. For more information, see [XAML Compilation](~/xamarin-forms/xaml/xamlc.md).
 
 ## Launching the Application on Each Platform
 
@@ -209,14 +209,14 @@ The Xamarin.Forms application is loaded with the `LoadApplication` method.
 
 There are four main control groups used to create the user interface of a Xamarin.Forms application.
 
-1. **Pages** – Xamarin.Forms pages represent cross-platform mobile application screens. The Phoneword application uses the [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) class to display a single screen. For more information about pages, see [Xamarin.Forms Pages](~/xamarin-forms/user-interface/controls/pages.md).
-1. **Layouts** – Xamarin.Forms layouts are containers used to compose views into logical structures. The Phoneword application uses the [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) class to arrange controls in a horizontal stack. For more information about layouts, see [Xamarin.Forms Layouts](~/xamarin-forms/user-interface/controls/layouts.md).
-1. **Views** – Xamarin.Forms views are the controls displayed on the user interface, such as labels, buttons, and text entry boxes. The Phoneword application uses the [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/), [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/), and [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) controls. For more information about views, see [Xamarin.Forms Views](~/xamarin-forms/user-interface/controls/views.md).
+1. **Pages** – Xamarin.Forms pages represent cross-platform mobile application screens. The Phoneword application uses the [`ContentPage`](xref:Xamarin.Forms.ContentPage) class to display a single screen. For more information about pages, see [Xamarin.Forms Pages](~/xamarin-forms/user-interface/controls/pages.md).
+1. **Layouts** – Xamarin.Forms layouts are containers used to compose views into logical structures. The Phoneword application uses the [`StackLayout`](xref:Xamarin.Forms.StackLayout) class to arrange controls in a horizontal stack. For more information about layouts, see [Xamarin.Forms Layouts](~/xamarin-forms/user-interface/controls/layouts.md).
+1. **Views** – Xamarin.Forms views are the controls displayed on the user interface, such as labels, buttons, and text entry boxes. The Phoneword application uses the [`Label`](xref:Xamarin.Forms.Label), [`Entry`](xref:Xamarin.Forms.Entry), and [`Button`](xref:Xamarin.Forms.Button) controls. For more information about views, see [Xamarin.Forms Views](~/xamarin-forms/user-interface/controls/views.md).
 1. **Cells** – Xamarin.Forms cells are specialized elements used for items in a list, and describe how each item in a list should be drawn. The Phoneword application does not make use of any cells. For more information about cells, see [Xamarin.Forms Cells](~/xamarin-forms/user-interface/controls/cells.md).
 
 At runtime, each control will be mapped to its native equivalent, which is what will be rendered.
 
-When the Phoneword application is run on any platform, it displays a single screen that corresponds to a [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) in Xamarin.Forms. A `Page` represents a *ViewGroup* in Android, a *View Controller* in iOS, or a *Page* on the Universal Windows Platform. The Phoneword application also instantiates a [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) object that represents the `MainPage` class, whose XAML markup is shown in the following code example:
+When the Phoneword application is run on any platform, it displays a single screen that corresponds to a [`Page`](xref:Xamarin.Forms.Page) in Xamarin.Forms. A `Page` represents a *ViewGroup* in Android, a *View Controller* in iOS, or a *Page* on the Universal Windows Platform. The Phoneword application also instantiates a [`ContentPage`](xref:Xamarin.Forms.ContentPage) object that represents the `MainPage` class, whose XAML markup is shown in the following code example:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -233,13 +233,13 @@ When the Phoneword application is run on any platform, it displays a single scre
 </ContentPage>
 ```
 
-The `MainPage` class uses a [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) control to automatically arrange controls on the screen regardless of the screen size. Each child element is positioned one after the other, vertically in the order in which they are added. The `StackLayout` control contains a [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) control to display text on the page, an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control to accept textual user input, and two [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) controls used to execute code in response to touch events.
+The `MainPage` class uses a [`StackLayout`](xref:Xamarin.Forms.StackLayout) control to automatically arrange controls on the screen regardless of the screen size. Each child element is positioned one after the other, vertically in the order in which they are added. The `StackLayout` control contains a [`Label`](xref:Xamarin.Forms.Label) control to display text on the page, an [`Entry`](xref:Xamarin.Forms.Entry) control to accept textual user input, and two [`Button`](xref:Xamarin.Forms.Button) controls used to execute code in response to touch events.
 
 For more information about XAML in Xamarin.Forms, see [Xamarin.Forms XAML Basics](~/xamarin-forms/xaml/xaml-basics/index.md).
 
 ### Responding to User Interaction
 
-An object defined in XAML can fire an event that is handled in the code-behind file. The following code example shows the `OnTranslate` method in the code-behind for the `MainPage` class, which is executed in response to the [`Clicked`](https://developer.xamarin.com/api/event/Xamarin.Forms.Button.Clicked/) event firing on the *Translate* button.
+An object defined in XAML can fire an event that is handled in the code-behind file. The following code example shows the `OnTranslate` method in the code-behind for the `MainPage` class, which is executed in response to the [`Clicked`](xref:Xamarin.Forms.Button.Clicked) event firing on the *Translate* button.
 
 ```csharp
 void OnTranslate(object sender, EventArgs e)
@@ -267,13 +267,13 @@ The wiring of the translate button to the `OnTranslate` method occurs in the XAM
 
 The Phoneword application for Xamarin.Forms has introduced several concepts not covered in this article. These concepts include:
 
-- Enabling and disabling buttons. A [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) can be toggled on or off by changing its [`IsEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsEnabled/) property. For example, the following code example disables the `callButton`:
+- Enabling and disabling buttons. A [`Button`](xref:Xamarin.Forms.Button) can be toggled on or off by changing its [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) property. For example, the following code example disables the `callButton`:
 
     ```csharp
     callButton.IsEnabled = false;
     ```
 
-- Displaying an alert dialog. When the user presses the call **Button** the Phoneword application shows an *Alert Dialog* with the option to place or cancel a call. The [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert/p/System.String/System.String/System.String/System.String/) method is used to create the dialog, as shown in the following code example:
+- Displaying an alert dialog. When the user presses the call **Button** the Phoneword application shows an *Alert Dialog* with the option to place or cancel a call. The [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String,System.String)) method is used to create the dialog, as shown in the following code example:
 
     ```csharp
     await this.DisplayAlert (
@@ -283,7 +283,7 @@ The Phoneword application for Xamarin.Forms has introduced several concepts not 
             "No");
     ```
 
-- Accessing native features via the [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) class. The Phoneword application uses the `DependencyService` class to resolve the `IDialer` interface to platform-specific phone dialing implementations, as shown in the following code example from the Phoneword project:
+- Accessing native features via the [`DependencyService`](xref:Xamarin.Forms.DependencyService) class. The Phoneword application uses the `DependencyService` class to resolve the `IDialer` interface to platform-specific phone dialing implementations, as shown in the following code example from the Phoneword project:
 
     ```csharp
     async void OnCall (object sender, EventArgs e)
@@ -294,7 +294,7 @@ The Phoneword application for Xamarin.Forms has introduced several concepts not 
     }
     ```
 
-  For more information about the [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) class, see [Accessing Native Features via the DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
+  For more information about the [`DependencyService`](xref:Xamarin.Forms.DependencyService) class, see [Accessing Native Features via the DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
 - Placing a phone call with a URL. The Phoneword application uses `OpenURL` to launch the system phone app. The URL consists of a `tel:` prefix followed by the phone number to be called, as shown in the following code example from the iOS project:
 
@@ -302,7 +302,7 @@ The Phoneword application for Xamarin.Forms has introduced several concepts not 
     return UIApplication.SharedApplication.OpenUrl (new NSUrl ("tel:" + number));
     ```
 
-- Tweaking the platform layout. The [`Device`](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) class enables developers to customize the application layout and functionality on a per-platform basis, as shown in the following code example that uses different [`Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) values on different platforms to correctly display each page:
+- Tweaking the platform layout. The [`Device`](xref:Xamarin.Forms.Device) class enables developers to customize the application layout and functionality on a per-platform basis, as shown in the following code example that uses different [`Padding`](xref:Xamarin.Forms.Layout.Padding) values on different platforms to correctly display each page:
 
     ```xaml
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" ... >

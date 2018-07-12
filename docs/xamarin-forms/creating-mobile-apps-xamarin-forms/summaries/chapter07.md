@@ -19,7 +19,7 @@ Xamarin.Forms classes and structures become XML elements in XAML, and properties
 
 For properties of the basic data types (`string`, `double`, `bool`, and so forth), the XAML parser uses the standard `TryParse` methods to convert attribute settings to these types. The XAML parser can also easily handle enumeration types, and it can combine enumeration members if the enumeration type is flagged with the `Flags` attribute.
 
-To assist the XAML parser, more complex types (or properties of those types) can include a [`TypeConverterAttribute`](https://developer.xamarin.com/api/type/Xamarin.Forms.TypeConverterAttribute/) that identifies a class that derives from [`TypeConverter`](https://developer.xamarin.com/api/type/Xamarin.Forms.TypeConverter/) which supports conversion from string values to those types. For example, the [`ColorTypeConverter`](https://developer.xamarin.com/api/type/Xamarin.Forms.ColorTypeConverter/) converts color names and strings, such as "#rrggbb", into `Color` values.
+To assist the XAML parser, more complex types (or properties of those types) can include a [`TypeConverterAttribute`](xref:Xamarin.Forms.TypeConverterAttribute) that identifies a class that derives from [`TypeConverter`](xref:Xamarin.Forms.TypeConverter) which supports conversion from string values to those types. For example, the [`ColorTypeConverter`](xref:Xamarin.Forms.ColorTypeConverter) converts color names and strings, such as "#rrggbb", into `Color` values.
 
 ## Property-element syntax
 
@@ -41,13 +41,13 @@ The combination of XAML and code is demonstrated by the [**CodePlusXaml**](https
 
 ## The XAML compiler
 
-Xamarin.Forms has a XAML compiler, but its use is optional based on the use of a [`XamlCompilationAttribute`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.XamlCompilationAttribute/). If the XAML is not compiled, the XAML is parsed at build time, and the XAML file is embedded in the PCL, where it is also parsed at runtime. If the XAML is compiled, the build process converts the XAML into a binary form, and the runtime processing is more efficient.
+Xamarin.Forms has a XAML compiler, but its use is optional based on the use of a [`XamlCompilationAttribute`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute). If the XAML is not compiled, the XAML is parsed at build time, and the XAML file is embedded in the PCL, where it is also parsed at runtime. If the XAML is compiled, the build process converts the XAML into a binary form, and the runtime processing is more efficient.
 
 ## Platform specificity in the XAML file
 
-In XAML, the [`OnPlatform`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) class can be used to select platform-dependent markup. This is a generic class and must be instantiated with an `x:TypeArguments` attribute that matches the target type. The [`OnIdiom`](https://developer.xamarin.com/api/type/Xamarin.Forms.OnIdiom%3CT%3E/) class is similar but used much less often.
+In XAML, the [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) class can be used to select platform-dependent markup. This is a generic class and must be instantiated with an `x:TypeArguments` attribute that matches the target type. The [`OnIdiom`](xref:Xamarin.Forms.OnIdiom`1) class is similar but used much less often.
 
-The use of `OnPlatform` has changed since the book was published. It was originally used in conjunction with properties named `iOS`, `Android`, and `WinPhone`. It is now used with child [`On`](https://developer.xamarin.com/api/type/Xamarin.Forms.On/) objects. Set the [`Platform`](https://developer.xamarin.com/api/property/Xamarin.Forms.On.Platform/) property to a string consistent with the public `const` fields of the [`Device`](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) class. Set the [`Value`](https://developer.xamarin.com/api/property/Xamarin.Forms.On.Value/) property to a value consistent with the `x:TypeArguments` attribute of the `OnPlatform` tag.
+The use of `OnPlatform` has changed since the book was published. It was originally used in conjunction with properties named `iOS`, `Android`, and `WinPhone`. It is now used with child [`On`](xref:Xamarin.Forms.On) objects. Set the [`Platform`](xref:Xamarin.Forms.On.Platform) property to a string consistent with the public `const` fields of the [`Device`](xref:Xamarin.Forms.Device) class. Set the [`Value`](xref:Xamarin.Forms.On.Value) property to a value consistent with the `x:TypeArguments` attribute of the `OnPlatform` tag.
 
 `OnPlatform` is demonstrated in the [**ScaryColorList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/ScaryColorList) sample, so called because it contains blocks of nearly identical XAML. The existence of this repetitious markup suggests that techniques should be available to reduce it.
 
@@ -55,7 +55,7 @@ The use of `OnPlatform` has changed since the book was published. It was origina
 
 Some property elements occur quite frequently, such as the `<ContentPage.Content>` tag on the root element of a `ContentPage`, or the `<StackLayout.Children>` tag that encloses the children of `StackLayout`.
 
-Every class is allowed to identify one property with a [`ContentPropertyAttribute`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPropertyAttribute/) on the class. For this property, the property-element tags are not required. `ContentPage` defines its content property as `Content`, and `Layout<T>` (the class from which `StackLayout` derives) defines its content property as `Children`. These property element tags are not required.
+Every class is allowed to identify one property with a [`ContentPropertyAttribute`](xref:Xamarin.Forms.ContentPropertyAttribute) on the class. For this property, the property-element tags are not required. `ContentPage` defines its content property as `Content`, and `Layout<T>` (the class from which `StackLayout` derives) defines its content property as `Children`. These property element tags are not required.
 
 The property element of `Label` is `Text`.
 

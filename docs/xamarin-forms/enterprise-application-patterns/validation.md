@@ -21,7 +21,7 @@ In the context of the Model-ViewModel-Model (MVVM) pattern, a view model or mode
 
 View model properties that require validation are of type `ValidatableObject<T>`, and each `ValidatableObject<T>` instance has validation rules added to its `Validations` property. Validation is invoked from the view model by calling the `Validate` method of the `ValidatableObject<T>` instance, which retrieves the validation rules and executes them against the `ValidatableObject<T>` `Value` property. Any validation errors are placed into the `Errors` property of the `ValidatableObject<T>` instance, and the `IsValid` property of the `ValidatableObject<T>` instance is updated to indicate whether validation succeeded or failed.
 
-Property change notification is provided by the `ExtendedBindableObject` class, and so an [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control can bind to the `IsValid` property of `ValidatableObject<T>` instance in the view model class to be notified of whether or not the entered data is valid.
+Property change notification is provided by the `ExtendedBindableObject` class, and so an [`Entry`](xref:Xamarin.Forms.Entry) control can bind to the `IsValid` property of `ValidatableObject<T>` instance in the view model class to be notified of whether or not the entered data is valid.
 
 ## Specifying Validation Rules
 
@@ -199,7 +199,7 @@ Validation can also be triggered whenever a bound property changes. For example,
 </Entry>
 ```
 
-The [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control binds to the `UserName.Value` property of the `ValidatableObject<T>` instance, and the control's `Behaviors` collection has an `EventToCommandBehavior` instance added to it. This behavior executes the `ValidateUserNameCommand` in response to the [`TextChanged`] event firing on the `Entry`, which is raised when the text in the `Entry` changes. In turn, the `ValidateUserNameCommand` delegate executes the `ValidateUserName` method, which executes the `Validate` method on the `ValidatableObject<T>` instance. Therefore, every time the user enters a character in the `Entry` control for the username, validation of the entered data is performed.
+The [`Entry`](xref:Xamarin.Forms.Entry) control binds to the `UserName.Value` property of the `ValidatableObject<T>` instance, and the control's `Behaviors` collection has an `EventToCommandBehavior` instance added to it. This behavior executes the `ValidateUserNameCommand` in response to the [`TextChanged`] event firing on the `Entry`, which is raised when the text in the `Entry` changes. In turn, the `ValidateUserNameCommand` delegate executes the `ValidateUserName` method, which executes the `Validate` method on the `ValidatableObject<T>` instance. Therefore, every time the user enters a character in the `Entry` control for the username, validation of the entered data is performed.
 
 For more information about behaviors, see [Implementing Behaviors](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
 
@@ -215,7 +215,7 @@ The eShopOnContainers mobile app notifies the user of any validation errors by h
 
 ### Highlighting a Control that Contains Invalid Data
 
-The `LineColorBehavior` attached behavior is used to highlight [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) controls where validation errors have occurred. The following code example shows how the `LineColorBehavior` attached behavior is attached to an `Entry` control:
+The `LineColorBehavior` attached behavior is used to highlight [`Entry`](xref:Xamarin.Forms.Entry) controls where validation errors have occurred. The following code example shows how the `LineColorBehavior` attached behavior is attached to an `Entry` control:
 
 ```xaml
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">
@@ -229,7 +229,7 @@ The `LineColorBehavior` attached behavior is used to highlight [`Entry`](https:/
 </Entry>
 ```
 
-The [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control consumes an explicit style, which is shown in the following code example:
+The [`Entry`](xref:Xamarin.Forms.Entry) control consumes an explicit style, which is shown in the following code example:
 
 ```xaml
 <Style x:Key="EntryStyle"  
@@ -243,7 +243,7 @@ The [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) contr
 </Style>
 ```
 
-This style sets the `ApplyLineColor` and `LineColor` attached properties of the `LineColorBehavior` attached behavior on the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control. For more information about styles, see [Styles](~/xamarin-forms/user-interface/styles/index.md).
+This style sets the `ApplyLineColor` and `LineColor` attached properties of the `LineColorBehavior` attached behavior on the [`Entry`](xref:Xamarin.Forms.Entry) control. For more information about styles, see [Styles](~/xamarin-forms/user-interface/styles/index.md).
 
 When the value of the `ApplyLineColor` attached property is set, or changes, the `LineColorBehavior` attached behavior executes the `OnApplyLineColorChanged` method, which is shown in the following code example:
 
@@ -278,9 +278,9 @@ public static class LineColorBehavior
 }
 ```
 
-The parameters for this method provide the instance of the control that the behavior is attached to, and the old and new values of the `ApplyLineColor` attached property. The `EntryLineColorEffect` class is added to the control's [`Effects`](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/) collection if the `ApplyLineColor` attached property is `true`, otherwise it's removed from the control's `Effects` collection. For more information about behaviors, see [Implementing Behaviors](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
+The parameters for this method provide the instance of the control that the behavior is attached to, and the old and new values of the `ApplyLineColor` attached property. The `EntryLineColorEffect` class is added to the control's [`Effects`](xref:Xamarin.Forms.Element.Effects) collection if the `ApplyLineColor` attached property is `true`, otherwise it's removed from the control's `Effects` collection. For more information about behaviors, see [Implementing Behaviors](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
 
-The `EntryLineColorEffect` subclasses the [`RoutingEffect`](https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/) class, and is shown in the following code example:
+The `EntryLineColorEffect` subclasses the [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) class, and is shown in the following code example:
 
 ```csharp
 public class EntryLineColorEffect : RoutingEffect  
@@ -291,7 +291,7 @@ public class EntryLineColorEffect : RoutingEffect
 }
 ```
 
-The [`RoutingEffect`](https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/) class represents a platform-independent effect that wraps an inner effect that's platform-specific. This simplifies the effect removal process, since there is no compile-time access to the type information for a platform-specific effect. The `EntryLineColorEffect` calls the base class constructor, passing in a parameter consisting of a concatenation of the resolution group name, and the unique ID that's specified on each platform-specific effect class.
+The [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) class represents a platform-independent effect that wraps an inner effect that's platform-specific. This simplifies the effect removal process, since there is no compile-time access to the type information for a platform-specific effect. The `EntryLineColorEffect` calls the base class constructor, passing in a parameter consisting of a concatenation of the resolution group name, and the unique ID that's specified on each platform-specific effect class.
 
 The following code example shows the `eShopOnContainers.EntryLineColorEffect` implementation for iOS:
 
@@ -369,15 +369,15 @@ namespace eShopOnContainers.iOS.Effects
 }
 ```
 
-The `OnAttached` method retrieves the native control for the Xamarin.Forms [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control, and updates the line color by calling the `UpdateLineColor` method. The `OnElementPropertyChanged` override responds to bindable property changes on the `Entry` control by updating the line color if the attached `LineColor` property changes, or the [`Height`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) property of the `Entry` changes. For more information about effects, see [Effects](~/xamarin-forms/app-fundamentals/effects/index.md).
+The `OnAttached` method retrieves the native control for the Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) control, and updates the line color by calling the `UpdateLineColor` method. The `OnElementPropertyChanged` override responds to bindable property changes on the `Entry` control by updating the line color if the attached `LineColor` property changes, or the [`Height`](xref:Xamarin.Forms.VisualElement.Height) property of the `Entry` changes. For more information about effects, see [Effects](~/xamarin-forms/app-fundamentals/effects/index.md).
 
-When valid data is entered in the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control, it will apply a black line to the bottom of the control, to indicate that there is no validation error. Figure 6-3 shows an example of this.
+When valid data is entered in the [`Entry`](xref:Xamarin.Forms.Entry) control, it will apply a black line to the bottom of the control, to indicate that there is no validation error. Figure 6-3 shows an example of this.
 
 ![](validation-images/validation-blackline.png "Black line indicating no validation error")
 
 **Figure 6-3**: Black line indicating no validation error
 
-The [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control also has a [`DataTrigger`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTrigger/) added to its [`Triggers`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Triggers/) collection. The following code example shows the `DataTrigger`:
+The [`Entry`](xref:Xamarin.Forms.Entry) control also has a [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) added to its [`Triggers`](xref:Xamarin.Forms.VisualElement.Triggers) collection. The following code example shows the `DataTrigger`:
 
 ```xaml
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">  
@@ -394,26 +394,26 @@ The [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) contr
 </Entry>
 ```
 
-This [`DataTrigger`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTrigger/) monitors the `UserName.IsValid` property, and if it's value becomes `false`, it executes the [`Setter`](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/), which changes the `LineColor` attached property of the `LineColorBehavior` attached behavior to red. Figure 6-4 shows an example of this.
+This [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) monitors the `UserName.IsValid` property, and if it's value becomes `false`, it executes the [`Setter`](xref:Xamarin.Forms.Setter), which changes the `LineColor` attached property of the `LineColorBehavior` attached behavior to red. Figure 6-4 shows an example of this.
 
 ![](validation-images/validation-redline.png "Red line indicating validation error")
 
 **Figure 6-4**: Red line indicating validation error
 
-The line in the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control will remain red while the entered data is invalid, otherwise it will change to black to indicate that the entered data is valid.
+The line in the [`Entry`](xref:Xamarin.Forms.Entry) control will remain red while the entered data is invalid, otherwise it will change to black to indicate that the entered data is valid.
 
 For more information about Triggers, see [Triggers](~/xamarin-forms/app-fundamentals/triggers.md).
 
 ### Displaying Error Messages
 
-The UI displays validation error messages in Label controls below each control whose data failed validation. The following code example shows the [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) that displays a validation error message if the user has not entered a valid username:
+The UI displays validation error messages in Label controls below each control whose data failed validation. The following code example shows the [`Label`](xref:Xamarin.Forms.Label) that displays a validation error message if the user has not entered a valid username:
 
 ```xaml
 <Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}"  
        Style="{StaticResource ValidationErrorLabelStyle}" />
 ```
 
-Each [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) binds to the `Errors` property of the view model object that's being validated. The `Errors` property is provided by the `ValidatableObject<T>` class, and is of type `List<string>`. Because the `Errors` property can contain multiple validation errors, the `FirstValidationErrorConverter` instance is used to retrieve the first error from the collection for display.
+Each [`Label`](xref:Xamarin.Forms.Label) binds to the `Errors` property of the view model object that's being validated. The `Errors` property is provided by the `ValidatableObject<T>` class, and is of type `List<string>`. Because the `Errors` property can contain multiple validation errors, the `FirstValidationErrorConverter` instance is used to retrieve the first error from the collection for display.
 
 ## Summary
 

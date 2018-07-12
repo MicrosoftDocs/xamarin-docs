@@ -11,7 +11,7 @@ ms.date: 07/10/2018
 
 # Xamarin.Forms ScrollView
 
-[`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) contains layouts and enables them to scroll offscreen. `ScrollView` is also used to allow views to automatically move to the visible portion of the screen when the keyboard is showing.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) contains layouts and enables them to scroll offscreen. `ScrollView` is also used to allow views to automatically move to the visible portion of the screen when the keyboard is showing.
 
 [![](scroll-view-images/layouts-sml.png "Xamarin.Forms Layouts")](scroll-view-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 

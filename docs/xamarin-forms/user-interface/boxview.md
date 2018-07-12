@@ -11,7 +11,7 @@ ms.date: 12/07/2017
 
 # Xamarin.Forms BoxView
 
-[`BoxView`](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) renders a simple rectangle of a specified width, height, and color. You can use `BoxView` for decoration, rudimentary graphics, and for interaction with the user through touch.
+[`BoxView`](xref:Xamarin.Forms.BoxView) renders a simple rectangle of a specified width, height, and color. You can use `BoxView` for decoration, rudimentary graphics, and for interaction with the user through touch.
 
 Because Xamarin.Forms does not have a built-in vector graphics system, the `BoxView` helps to compensate. Some of the sample programs described in this article use `BoxView` for rendering graphics. The `BoxView` can be sized to resemble a line of a specific width and thickness, and then rotated by any angle using the `Rotation` property.
 
@@ -32,9 +32,9 @@ This article discusses the following topics:
 
 Very often you'll set the following three properties of `BoxView`:
 
-- [`Color`](https://developer.xamarin.com/api/property/Xamarin.Forms.BoxView.Color/) to set its color.
-- [`WidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/) to set the width of the `BoxView` in device-independent units.
-- [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) to set the height of the `BoxView`.
+- [`Color`](xref:Xamarin.Forms.BoxView.Color) to set its color.
+- [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) to set the width of the `BoxView` in device-independent units.
+- [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) to set the height of the `BoxView`.
 
 The `Color` property is of type `Color`; the property can be set to any `Color` value, including the 141 static read-only fields of named colors ranging alphabetically from `AliceBlue` to `YellowGreen`.
 
@@ -780,4 +780,4 @@ The `BoxView` might seem simple at first, but as you've seen, it can be quite ve
 - [Game of Life (sample)](https://developer.xamarin.com/samples/xamarin-forms/BoxView/GameOfLife)
 - [Dot-Matrix Clock (sample)](https://developer.xamarin.com/samples/xamarin-forms/BoxView/DotMatrixClock)
 - [BoxView Clock (sample)](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock)
-- [BoxView](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/)
+- [BoxView](xref:Xamarin.Forms.BoxView)

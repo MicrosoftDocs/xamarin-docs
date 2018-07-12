@@ -139,7 +139,7 @@ The method calculates a maximum radius based on the size of the display area, an
 
 [![](animation-images/pulsatingellipse-small.png "Triple screenshot of the Pulsating Ellipse page")](animation-images/pulsatingellipse-large.png#lightbox "Triple screenshot of the Pulsating Ellipse page")
 
-Notice that the `SKPaint` object is created in a `using` block. Like many SkiaSharp classes `SKPaint` derives from `SKObject`, which derives from `SKNativeObject`, which implements the [`IDisposable`](https://developer.xamarin.com/api/type/System.IDisposable/) interface. `SKPaint` overrides the `Dispose` method to release unmanaged resources.
+Notice that the `SKPaint` object is created in a `using` block. Like many SkiaSharp classes `SKPaint` derives from `SKObject`, which derives from `SKNativeObject`, which implements the [`IDisposable`](xref:System.IDisposable) interface. `SKPaint` overrides the `Dispose` method to release unmanaged resources.
 
  Putting `SKPaint` in a `using` block ensures that `Dispose` is called at the end of the block to free these unmanaged resources. This happens anyway when memory used by the `SKPaint` object is freed by the .NET garbage collector, but in animation code, it's best to be somewhat proactive in freeing memory in a more orderly way.
 

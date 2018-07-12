@@ -21,7 +21,7 @@ There are two XAML namespace declarations that are always within the root elemen
 xmlns="http://xamarin.com/schemas/2014/forms"
 ```
 
-The default namespace specifies that elements defined within the XAML file with no prefix refer to Xamarin.Forms classes, such as [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/).
+The default namespace specifies that elements defined within the XAML file with no prefix refer to Xamarin.Forms classes, such as [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 
 The second namespace declaration uses the `x` prefix, as shown in the following XAML code example:
 

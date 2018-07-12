@@ -11,7 +11,7 @@ ms.date: 01/05/2018
 
 # Xamarin.Forms Binding Path
 
-In all the previous data-binding examples, the [`Path`](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/) property of the `Binding` class (or the [`Path`](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Path/) property of the `Binding` markup extension) has been set to a single property. It's actually possible to set `Path` to a *sub-property* (a property of a property), or to a member of a collection.
+In all the previous data-binding examples, the [`Path`](xref:Xamarin.Forms.Binding.Path) property of the `Binding` class (or the [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) property of the `Binding` markup extension) has been set to a single property. It's actually possible to set `Path` to a *sub-property* (a property of a property), or to a member of a collection.
 
 For example, suppose your page contains a `TimePicker`:
 
@@ -88,7 +88,7 @@ In the second `Label`, the binding source is the page itself. The `Content` prop
 
 ## Paths with Indexers
 
-The binding in the third `Label` in the **Path Variations** pages references the [`CultureInfo`](https://developer.xamarin.com/api/type/System.Globalization.CultureInfo/) class in the `System.Globalization` namespace:
+The binding in the third `Label` in the **Path Variations** pages references the [`CultureInfo`](xref:System.Globalization.CultureInfo) class in the `System.Globalization` namespace:
 
 ```xaml
 <Label Text="{Binding Source={x:Static globe:CultureInfo.CurrentCulture},
@@ -96,7 +96,7 @@ The binding in the third `Label` in the **Path Variations** pages references the
                       StringFormat='The middle day of the week is {0}'}" />
 ```
 
-The source is set to the static `CultureInfo.CurrentCulture` property, which is an object of type `CultureInfo`. That class defines a property named `DateTimeFormat` of type [`DateTimeFormatInfo`](https://developer.xamarin.com/api/type/System.Globalization.DateTimeFormatInfo/) that contains a `DayNames` collection. The index selects the fourth item.
+The source is set to the static `CultureInfo.CurrentCulture` property, which is an object of type `CultureInfo`. That class defines a property named `DateTimeFormat` of type [`DateTimeFormatInfo`](xref:System.Globalization.DateTimeFormatInfo) that contains a `DayNames` collection. The index selects the fourth item.
 
 The fourth `Label` does something similar but for the culture associated with France. The `Source` property of the binding is set to `CultureInfo` object with a constructor:
 

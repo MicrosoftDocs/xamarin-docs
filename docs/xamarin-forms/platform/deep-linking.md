@@ -64,10 +64,10 @@ For more information, see [Deep Link Content with Xamarin.Forms URL Navigation](
 
 The process for indexing a page and exposing it to Google and Spotlight search is as follows:
 
-1. Create an [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) that contains the metadata required to index the page, along with a deep link to return to the page when the user selects the indexed content in search results.
-1. Register the [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance to index it for searching.
+1. Create an [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) that contains the metadata required to index the page, along with a deep link to return to the page when the user selects the indexed content in search results.
+1. Register the [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance to index it for searching.
 
-The following code example demonstrates how to create an [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance:
+The following code example demonstrates how to create an [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance:
 
 ```csharp
 AppLinkEntry GetAppLink (TodoItem item)
@@ -86,7 +86,7 @@ AppLinkEntry GetAppLink (TodoItem item)
 }
 ```
 
-The [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance contains a number of properties whose values are required to index the page and create a deep link. The [`Title`](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.Title/), [`Description`](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.Description/), and [`Thumbnail`](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.Thumbnail/) properties are used to identify the indexed content when it appears in search results. The [`IsLinkActive`](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.IsLinkActive/) property is set to `true` to indicate that the indexed content is currently being viewed. The [`AppLinkUri`](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.AppLinkUri/) property is a `Uri` that contains the information required to return to the current page and display the current `TodoItem`. The following example shows an example `Uri` for the sample application:
+The [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance contains a number of properties whose values are required to index the page and create a deep link. The [`Title`](xref:Xamarin.Forms.IAppLinkEntry.Title), [`Description`](xref:Xamarin.Forms.IAppLinkEntry.Description), and [`Thumbnail`](xref:Xamarin.Forms.IAppLinkEntry.Thumbnail) properties are used to identify the indexed content when it appears in search results. The [`IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) property is set to `true` to indicate that the indexed content is currently being viewed. The [`AppLinkUri`](xref:Xamarin.Forms.IAppLinkEntry.AppLinkUri) property is a `Uri` that contains the information required to return to the current page and display the current `TodoItem`. The following example shows an example `Uri` for the sample application:
 
 ```csharp
 http://deeplinking/DeepLinking.TodoItemPage?id=ec38ebd1-811e-4809-8a55-0d028fce7819
@@ -96,30 +96,30 @@ This `Uri` contains all the information required to launch the `deeplinking` app
 
 ## Registering Content for Indexing
 
-Once an [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance has been created, it must be registered for indexing to appear in search results. This is accomplished with the [`RegisterLink`](https://developer.xamarin.com/api/member/Xamarin.Forms.IAppLinks.RegisterLink/p/Xamarin.Forms.IAppLinkEntry/) method, as demonstrated in the following code example:
+Once an [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance has been created, it must be registered for indexing to appear in search results. This is accomplished with the [`RegisterLink`](xref:Xamarin.Forms.IAppLinks.RegisterLink(Xamarin.Forms.IAppLinkEntry)) method, as demonstrated in the following code example:
 
 ```csharp
 Application.Current.AppLinks.RegisterLink (appLink);
 ```
 
-This adds the [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance to the application's [`AppLinks`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) collection.
+This adds the [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance to the application's [`AppLinks`](xref:Xamarin.Forms.Application.AppLinks) collection.
 
 > [!NOTE]
 > The `RegisterLink` method can also be used to update the content that's been indexed for a page.
 
-Once an [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance has been registered for indexing, it can appear in search results. The following screenshot shows indexed content appearing in search results on the iOS platform:
+Once an [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance has been registered for indexing, it can appear in search results. The following screenshot shows indexed content appearing in search results on the iOS platform:
 
 ![](deep-linking-images/ios-search.png "Indexed Content in Search Results on iOS")
 
 ## De-registering Indexed Content
 
-The [`DeregisterLink`](https://developer.xamarin.com/api/member/Xamarin.Forms.IAppLinks.DeregisterLink/p/Xamarin.Forms.IAppLinkEntry/) method is used to remove indexed content from search results, as demonstrated in the following code example:
+The [`DeregisterLink`](xref:Xamarin.Forms.IAppLinks.DeregisterLink(Xamarin.Forms.IAppLinkEntry)) method is used to remove indexed content from search results, as demonstrated in the following code example:
 
 ```csharp
 Application.Current.AppLinks.DeregisterLink (appLink);
 ```
 
-This removes the [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance from the application's [`AppLinks`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) collection.
+This removes the [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance from the application's [`AppLinks`](xref:Xamarin.Forms.Application.AppLinks) collection.
 
 > [!NOTE]
 > On Android it's not possible to remove indexed content from search results.
@@ -128,7 +128,7 @@ This removes the [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin
 
 ## Responding to a Deep Link
 
-When indexed content appears in search results and is selected by a user, the `App` class for the application will receive a request to handle the `Uri` contained in the indexed content. This request can be processed in the [`OnAppLinkRequestReceived`](https://developer.xamarin.com/api/member/Xamarin.Forms.Application.OnAppLinkRequestReceived/p/System.Uri/) override, as demonstrated in the following code example:
+When indexed content appears in search results and is selected by a user, the `App` class for the application will receive a request to handle the `Uri` contained in the indexed content. This request can be processed in the [`OnAppLinkRequestReceived`](xref:Xamarin.Forms.Application.OnAppLinkRequestReceived(System.Uri)) override, as demonstrated in the following code example:
 
 ```csharp
 public class App : Application
@@ -160,13 +160,13 @@ public class App : Application
 }
 ```
 
-The [`OnAppLinkRequestReceived`](https://developer.xamarin.com/api/member/Xamarin.Forms.Application.OnAppLinkRequestReceived/p/System.Uri/) method checks that the received `Uri` is intended for the application, before parsing the `Uri` into the page to be navigated to and the parameter to be passed to the page. An instance of the page to be navigated to is created, and the `TodoItem` represented by the page parameter is retrieved. The [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) of the page to be navigated to is then set to the `TodoItem`. This ensures that when the `TodoItemPage` is displayed by the [`PushAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.PushAsync/p/Xamarin.Forms.Page/) method, it will be showing the `TodoItem` whose `ID` is contained in the deep link.
+The [`OnAppLinkRequestReceived`](xref:Xamarin.Forms.Application.OnAppLinkRequestReceived(System.Uri)) method checks that the received `Uri` is intended for the application, before parsing the `Uri` into the page to be navigated to and the parameter to be passed to the page. An instance of the page to be navigated to is created, and the `TodoItem` represented by the page parameter is retrieved. The [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the page to be navigated to is then set to the `TodoItem`. This ensures that when the `TodoItemPage` is displayed by the [`PushAsync`](xref:Xamarin.Forms.INavigation.PushAsync(Xamarin.Forms.Page)) method, it will be showing the `TodoItem` whose `ID` is contained in the deep link.
 
 ## Making Content Available for Search Indexing
 
-Each time the page represented by a deep link is displayed, the [`AppLinkEntry.IsLinkActive`](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.IsLinkActive/) property can be set to `true`. On iOS and Android this makes the [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance available for search indexing, and on iOS only, it also makes the `AppLinkEntry` instance available for Handoff. For more information about Handoff, see [Introduction to Handoff](~/ios/platform/handoff.md).
+Each time the page represented by a deep link is displayed, the [`AppLinkEntry.IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) property can be set to `true`. On iOS and Android this makes the [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance available for search indexing, and on iOS only, it also makes the `AppLinkEntry` instance available for Handoff. For more information about Handoff, see [Introduction to Handoff](~/ios/platform/handoff.md).
 
-The following code example demonstrates setting the [`AppLinkEntry.IsLinkActive`](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.IsLinkActive/) property to `true` in the [`Page.OnAppearing`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnAppearing()/) override:
+The following code example demonstrates setting the [`AppLinkEntry.IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) property to `true` in the [`Page.OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) override:
 
 ```csharp
 protected override void OnAppearing ()
@@ -178,7 +178,7 @@ protected override void OnAppearing ()
 }
 ```
 
-Similarly, when the page represented by a deep link is navigated away from, the [`AppLinkEntry.IsLinkActive`](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.IsLinkActive/) property can be set to `false`. On iOS and Android, this stops the [`AppLinkEntry`](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance being advertised for search indexing, and on iOS only, it also stops advertising the `AppLinkEntry` instance for Handoff. This can be accomplished in the [`Page.OnDisappearing`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnDisappearing()/) override, as demonstrated in the following code example:
+Similarly, when the page represented by a deep link is navigated away from, the [`AppLinkEntry.IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) property can be set to `false`. On iOS and Android, this stops the [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance being advertised for search indexing, and on iOS only, it also stops advertising the `AppLinkEntry` instance for Handoff. This can be accomplished in the [`Page.OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) override, as demonstrated in the following code example:
 
 ```csharp
 protected override void OnDisappearing ()
@@ -191,7 +191,7 @@ protected override void OnDisappearing ()
 
 ## Providing Data to Handoff
 
-On iOS, application-specific data can be stored when indexing the page. This is achieved by adding data to the [`KeyValues`](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.KeyValues/) collection, which is a `Dictionary<string, string>` for storing key-value pairs that are used in Handoff. Handoff is a way for the user to start an activity on one of their devices and continue that activity on another of their devices (as identified by the user's iCloud account). The following code shows an example of storing application-specific key-value pairs:
+On iOS, application-specific data can be stored when indexing the page. This is achieved by adding data to the [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValues) collection, which is a `Dictionary<string, string>` for storing key-value pairs that are used in Handoff. Handoff is a way for the user to start an activity on one of their devices and continue that activity on another of their devices (as identified by the user's iCloud account). The following code shows an example of storing application-specific key-value pairs:
 
 ```csharp
 var pageLink = new AppLinkEntry {
@@ -201,13 +201,13 @@ pageLink.KeyValues.Add("appName", App.AppName);
 pageLink.KeyValues.Add("companyName", "Xamarin");
 ```
 
-Values stored in the [`KeyValues`](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.KeyValues/) collection will be stored in the metadata for the indexed page, and will be restored when the user taps on a search result that contains a deep link (or when Handoff is used to view the content on another signed-in device).
+Values stored in the [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValues) collection will be stored in the metadata for the indexed page, and will be restored when the user taps on a search result that contains a deep link (or when Handoff is used to view the content on another signed-in device).
 
 In addition, values for the following keys can be specified:
 
 - `contentType` – a `string` that specifies the uniform type identifier of the indexed content. The recommended convention to use for this value is the type name of the page containing the indexed content.
 - `associatedWebPage` – a `string` that represents the web page to visit if the indexed content can also be viewed on the web, or if the application supports Safari's deep links.
-- `shouldAddToPublicIndex` – a `string` of either `true` or `false` that controls whether or not to add the indexed content to Apple's public cloud index, which can then be presented to users who haven't installed the application on their iOS device. However, just because content has been set for public indexing, it doesn't mean that it will be automatically added to Apple's public cloud index. For more information, see [Public Search Indexing](~/ios/platform/search/nsuseractivity.md). Note that this key should be set to `false` when adding personal data to the [`KeyValues`](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.KeyValues/) collection.
+- `shouldAddToPublicIndex` – a `string` of either `true` or `false` that controls whether or not to add the indexed content to Apple's public cloud index, which can then be presented to users who haven't installed the application on their iOS device. However, just because content has been set for public indexing, it doesn't mean that it will be automatically added to Apple's public cloud index. For more information, see [Public Search Indexing](~/ios/platform/search/nsuseractivity.md). Note that this key should be set to `false` when adding personal data to the [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValues) collection.
 
 > [!NOTE]
 > The `KeyValues` collection isn't used on the Android platform.
@@ -224,6 +224,6 @@ This article demonstrated how to use application indexing and deep linking to ma
 - [Deep Linking (sample)](https://developer.xamarin.com/samples/xamarin-forms/deeplinking/)
 - [iOS Search APIs](~/ios/platform/search/index.md)
 - [App-Linking in Android 6.0](~/android/platform/app-linking.md)
-- [AppLinkEntry](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/)
-- [IAppLinkEntry](https://developer.xamarin.com/api/type/Xamarin.Forms.IAppLinkEntry/)
-- [IAppLinks](https://developer.xamarin.com/api/type/Xamarin.Forms.IAppLinks/)
+- [AppLinkEntry](xref:Xamarin.Forms.AppLinkEntry)
+- [IAppLinkEntry](xref:Xamarin.Forms.IAppLinkEntry)
+- [IAppLinks](xref:Xamarin.Forms.IAppLinks)

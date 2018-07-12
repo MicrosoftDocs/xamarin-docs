@@ -13,13 +13,13 @@ ms.date: 11/29/2017
 
 _A Xamarin.Forms ListView is a view that displays a collection of data as a vertical list. This article demonstrates how to create a custom renderer that encapsulates platform-specific list controls and native cell layouts, allowing more control over native list control performance._
 
-Every Xamarin.Forms view has an accompanying renderer for each platform that creates an instance of a native control. When a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) is rendered by a Xamarin.Forms application, in iOS the `ListViewRenderer` class is instantiated, which in turn instantiates a native `UITableView` control. On the Android platform, the `ListViewRenderer` class instantiates a native `ListView` control. On the Universal Windows Platform (UWP), the `ListViewRenderer` class instantiates a native `ListView` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Every Xamarin.Forms view has an accompanying renderer for each platform that creates an instance of a native control. When a [`ListView`](xref:Xamarin.Forms.ListView) is rendered by a Xamarin.Forms application, in iOS the `ListViewRenderer` class is instantiated, which in turn instantiates a native `UITableView` control. On the Android platform, the `ListViewRenderer` class instantiates a native `ListView` control. On the Universal Windows Platform (UWP), the `ListViewRenderer` class instantiates a native `ListView` control. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
-The following diagram illustrates the relationship between the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) control and the corresponding native controls that implement it:
+The following diagram illustrates the relationship between the [`ListView`](xref:Xamarin.Forms.ListView) control and the corresponding native controls that implement it:
 
 ![](listview-images/listview-classes.png "Relationship Between the ListView Control and the Implementing Native Controls")
 
-The rendering process can be taken advantage of to implement platform-specific customizations by creating a custom renderer for a [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) on each platform. The process for doing this is as follows:
+The rendering process can be taken advantage of to implement platform-specific customizations by creating a custom renderer for a [`ListView`](xref:Xamarin.Forms.ListView) on each platform. The process for doing this is as follows:
 
 1. [Create](#Creating_the_Custom_ListView_Control) a Xamarin.Forms custom control.
 1. [Consume](#Consuming_the_Custom_Control) the custom control from Xamarin.Forms.
@@ -31,7 +31,7 @@ Each item will now be discussed in turn, to implement a `NativeListView` rendere
 
 ## Creating the Custom ListView Control
 
-A custom [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) control can be created by subclassing the `ListView` class, as shown in the following code example:
+A custom [`ListView`](xref:Xamarin.Forms.ListView) control can be created by subclassing the `ListView` class, as shown in the following code example:
 
 ```csharp
 public class NativeListView : ListView
@@ -129,7 +129,7 @@ public class MainPageCS : ContentPage
 The `NativeListView` custom control uses platform-specific custom renderers to display a list of data, which is populated through the `Items` property. Each row in the list contains three items of data – a name, a category, and an image filename. The layout of each row in the list is defined by the platform-specific custom renderer.
 
 > [!NOTE]
-> Because the `NativeListView` custom control will be rendered using platform-specific list controls that include scrolling ability, the custom control should not be hosted in scrollable layout controls such as the [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/).
+> Because the `NativeListView` custom control will be rendered using platform-specific list controls that include scrolling ability, the custom control should not be hosted in scrollable layout controls such as the [`ScrollView`](xref:Xamarin.Forms.ScrollView).
 
 A custom renderer can now be added to each application project to create platform-specific list controls and native cell layouts.
 
@@ -140,7 +140,7 @@ A custom renderer can now be added to each application project to create platfor
 The process for creating the custom renderer class is as follows:
 
 1. Create a subclass of the `ListViewRenderer` class that renders the custom control.
-1. Override the `OnElementChanged` method that renders the custom control and write logic to customize it. This method is called when the corresponding Xamarin.Forms [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) is created.
+1. Override the `OnElementChanged` method that renders the custom control and write logic to customize it. This method is called when the corresponding Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) is created.
 1. Add an `ExportRenderer` attribute to the custom renderer class to specify that it will be used to render the Xamarin.Forms custom control. This attribute is used to register the custom renderer with Xamarin.Forms.
 
 > [!NOTE]

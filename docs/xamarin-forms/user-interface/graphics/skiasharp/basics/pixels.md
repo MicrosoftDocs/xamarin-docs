@@ -24,7 +24,7 @@ Those circles *are* small in comparison with Xamarin.Forms sizes. By default, Sk
 The page in the [**SkewSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 program entitled **Surface Size** uses SkiaSharp text output to show the size of the display surface from three different sources:
 
-- The normal Xamarin.Forms [`Width`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) and [`Height`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) properties of the `SKCanvasView` object.
+- The normal Xamarin.Forms [`Width`](xref:Xamarin.Forms.VisualElement.Width) and [`Height`](xref:Xamarin.Forms.VisualElement.Height) properties of the `SKCanvasView` object.
 - The [`CanvasSize`](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKCanvasView.CanvasSize/) property of the `SKCanvasView` object.
 - The [`Size`](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Size/) property of the `SKImageInfo` value, which is consistent with the `Width` and `Height` properties used in the two previous pages.
 

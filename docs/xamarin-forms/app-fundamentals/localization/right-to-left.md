@@ -118,7 +118,7 @@ Xamarin.Forms right-to-left localization currently has a number of limitations:
 - [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) button location, toolbar item location, and transition animation is controlled by the device locale, rather than the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
 - [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) swipe direction does not flip.
 - [`Image`](xref:Xamarin.Forms.Image) visual content does not flip.
-- [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert/p/System.String/System.String/System.String/) and [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet/p/System.String/System.String/System.String/System.String[]/) orientation is controlled by the device locale, rather than the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
+- [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) and [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])) orientation is controlled by the device locale, rather than the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
 - [`WebView`](xref:Xamarin.Forms.WebView) content does not respect the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
 - A `TextDirection` property needs to be added, to control text alignment.
 

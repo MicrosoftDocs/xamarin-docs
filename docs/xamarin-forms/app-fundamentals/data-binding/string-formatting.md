@@ -13,11 +13,11 @@ ms.date: 01/05/2018
 
 Sometimes it's convenient to use data bindings to display the string representation of an object or value. For example, you might want to use a `Label` to display the current value of a `Slider`. In this data binding, the `Slider` is the source, and the target is the `Text` property of the `Label`.
 
-When displaying strings in code, the most powerful tool is the static [`String.Format`](https://developer.xamarin.com/api/member/System.String.Format/p/System.String/System.Object/) method. The formatting string includes formatting codes specific to various types of objects, and you can include other text along with the values being formatted. See the [Formatting Types in .NET](/dotnet/standard/base-types/formatting-types/) article for more information on string formatting.
+When displaying strings in code, the most powerful tool is the static [`String.Format`](xref:System.String.Format(System.String,System.Object)) method. The formatting string includes formatting codes specific to various types of objects, and you can include other text along with the values being formatted. See the [Formatting Types in .NET](/dotnet/standard/base-types/formatting-types/) article for more information on string formatting.
 
 ## The StringFormat Property
 
-This facility is carried over into data bindings: You set the [`StringFormat`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindingBase.StringFormat/) property of `Binding` (or the [`StringFormat`](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.StringFormat/) property of the `Binding` markup extension) to a standard .NET formatting string with one placeholder:
+This facility is carried over into data bindings: You set the [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) property of `Binding` (or the [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) property of the `Binding` markup extension) to a standard .NET formatting string with one placeholder:
 
 ```xaml
 <Slider x:Name="slider" />

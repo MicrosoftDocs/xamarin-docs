@@ -107,7 +107,7 @@ page layouts, or even to render entirely different pages on larger screens.
 
 ### Leveraging MasterDetailPage
 
-The [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/)
+The [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)
 is ideal for larger screens, especially on the iPad
 where it uses the [`UISplitViewController`](https://developer.xamarin.com/api/type/UIKit.UISplitViewController/)
 to provide a native iOS experience.

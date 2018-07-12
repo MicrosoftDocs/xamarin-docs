@@ -13,13 +13,13 @@ ms.date: 11/07/2017
 
 In Xamarin.Forms, styles allow multiple views to share a collection of property settings. This reduces markup and enables maintaining consistent visual themes.
 
-Styles are almost always defined and consumed in markup. An object of type [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) is instantiated in a resource dictionary and then set to the [`Style`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) property of a visual element using a `StaticResource` or `DyanamicResource` markup extension.
+Styles are almost always defined and consumed in markup. An object of type [`Style`](xref:Xamarin.Forms.Style) is instantiated in a resource dictionary and then set to the [`Style`](xref:Xamarin.Forms.VisualElement.Style) property of a visual element using a `StaticResource` or `DyanamicResource` markup extension.
 
 ## The basic Style
 
-A `Style` requires that its  [`TargetType`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/) be set to the type of the visual object it applies to. When a `Style` is instantiated in a resource dictionary (as is common) it also requires an `x:Key` attribute.
+A `Style` requires that its  [`TargetType`](xref:Xamarin.Forms.Style.TargetType) be set to the type of the visual object it applies to. When a `Style` is instantiated in a resource dictionary (as is common) it also requires an `x:Key` attribute.
 
-The `Style` has a content property of type [`Setters`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.Setters/), which is a collection of [`Setter`](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/) objects. Each `Setter` associates a [`Property`](https://developer.xamarin.com/api/property/Xamarin.Forms.Setter.Property/) with a [`Value`](https://developer.xamarin.com/api/property/Xamarin.Forms.Setter.Value/).
+The `Style` has a content property of type [`Setters`](xref:Xamarin.Forms.Style.Setters), which is a collection of [`Setter`](xref:Xamarin.Forms.Setter) objects. Each `Setter` associates a [`Property`](xref:Xamarin.Forms.Setter.Property) with a [`Value`](xref:Xamarin.Forms.Setter.Value).
 
 In XAML the `Property` setting is the name of a CLR property (such as the `Text` property of `Button`) but the styled property must be backed by a bindable property. Also, the property must be defined in the class indicated by the `TargetType` setting, or inherited by that class.
 
@@ -39,7 +39,7 @@ Although it's not common, you can instantiate and intialize `Style` objects in c
 
 ## Style inheritance
 
-`Style` has a [`BasedOn`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.BasedOn/) property that you can set to a `StaticResource` markup extension referencing another style. This allows styles to inherit from previous styles, and add or replace property settings. The [**StyleInheritance**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/StyleInheritance) sample demonstrates this.
+`Style` has a [`BasedOn`](xref:Xamarin.Forms.Style.BasedOn) property that you can set to a `StaticResource` markup extension referencing another style. This allows styles to inherit from previous styles, and add or replace property settings. The [**StyleInheritance**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/StyleInheritance) sample demonstrates this.
 
 If `Style2` is based on `Style1`, the `TargetType` of `Style2` must be the same as `Style1` or derived from `Style1`. The resource dictionary in which `Style1` is stored must be the same resource dictionary as `Style2` or a resource dictionary higher in the visual tree.
 
@@ -64,29 +64,29 @@ A style in a resource dictionary can be referenced by `DynamicResource` rather t
 You can use this technique to dynamically change styling or themes as the
 [**DynamicStyles**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/DynamicStyles) sample demonstrates.
 
-However, you cannot set the `BasedOn` property to a `DynamicResource` makeup extension because `BasedOn` isn't backed by a bindable property. To derive a style dynamically, do not set `BasedOn`. Instead, set the [`BaseResourceKey`](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.BaseResourceKey/) property to the dictionary key of the style you want to derive from. The [**DynamicStylesInheritance**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/DynaStylesInh) sample demonstrates this technique.
+However, you cannot set the `BasedOn` property to a `DynamicResource` makeup extension because `BasedOn` isn't backed by a bindable property. To derive a style dynamically, do not set `BasedOn`. Instead, set the [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) property to the dictionary key of the style you want to derive from. The [**DynamicStylesInheritance**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/DynaStylesInh) sample demonstrates this technique.
 
 ## Device styles
 
-The [`Device.Styles`](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/) nested class defines twelve static read-only fields for six styles with a `TargetType` of `Label` that you can use for common types of text usages.
+The [`Device.Styles`](xref:Xamarin.Forms.Device.Styles) nested class defines twelve static read-only fields for six styles with a `TargetType` of `Label` that you can use for common types of text usages.
 
 Six of these fields are of type `Style` that you can set directly to a `Style` property in code:
 
-- [`BodyStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/)
-- [`TitleStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.TitleStyle/)
-- [`SubtitleStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.SubtitleStyle/)
-- [`CaptionStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.CaptionStyle/)
-- [`ListItemTextStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.ListItemTextStyle/)
-- [`ListItemDetailTextStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.ListItemDetailTextStyle/)
+- [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle)
+- [`TitleStyle`](xref:Xamarin.Forms.Device.Styles.TitleStyle)
+- [`SubtitleStyle`](xref:Xamarin.Forms.Device.Styles.SubtitleStyle)
+- [`CaptionStyle`](xref:Xamarin.Forms.Device.Styles.CaptionStyle)
+- [`ListItemTextStyle`](xref:Xamarin.Forms.Device.Styles.ListItemTextStyle)
+- [`ListItemDetailTextStyle`](xref:Xamarin.Forms.Device.Styles.ListItemDetailTextStyle)
 
 The other six fields are of type `string` and can be used as dictionary keys for dynamic styles:
 
-- [`BodyStyleKey`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyleKey/) equal to "BodyStyle"
-- [`TitleStyleKey`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.TitleStyleKey/) equal to "TitleStyle"
-- [`SubtitleStyleKey`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.SubtitleStyleKey/) equal to "SubtitleStyle"
-- [`CaptionStyleKey`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.CaptionStyleKey/) equal to "CaptionStyle"
-- [`ListItemTextStyleKey`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.ListItemTextStyleKey/) equal to "ListItemTextStyle"
-- [`ListItemDetailTextStyleKey`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.ListItemDetailTextStyleKey/) equal to "ListItemDetailTextStyle"
+- [`BodyStyleKey`](xref:Xamarin.Forms.Device.Styles.BodyStyleKey) equal to "BodyStyle"
+- [`TitleStyleKey`](xref:Xamarin.Forms.Device.Styles.TitleStyleKey) equal to "TitleStyle"
+- [`SubtitleStyleKey`](xref:Xamarin.Forms.Device.Styles.SubtitleStyleKey) equal to "SubtitleStyle"
+- [`CaptionStyleKey`](xref:Xamarin.Forms.Device.Styles.CaptionStyleKey) equal to "CaptionStyle"
+- [`ListItemTextStyleKey`](xref:Xamarin.Forms.Device.Styles.ListItemTextStyleKey) equal to "ListItemTextStyle"
+- [`ListItemDetailTextStyleKey`](xref:Xamarin.Forms.Device.Styles.ListItemDetailTextStyleKey) equal to "ListItemDetailTextStyle"
 
 These styles are illustrated by the [**DeviceStylesList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/DeviceStylesList) sample.
 

@@ -83,7 +83,7 @@ VM.
 
 The Android APIs utilize the java.util collections extensively to
 provide lists, sets, and maps. We expose these elements using the
-[System.Collections.Generic](https://developer.xamarin.com/api/namespace/System.Collections.Generic/)
+[System.Collections.Generic](xref:System.Collections.Generic)
 interfaces in our binding. The fundamental mappings are:
 
 -   [java.util.Set<E>](http://developer.android.com/reference/java/util/Set.html) maps to
@@ -106,8 +106,8 @@ We have provided helper classes to facilitate faster copyless
 marshaling of these types. When possible, we recommend using these
 provided collections instead of the framework provided implementation,
 like
-[`List<T>`](https://developer.xamarin.com/api/type/System.Collections.Generic.List%601/) or
-[`Dictionary<TKey, TValue>`](https://developer.xamarin.com/api/type/System.Collections.Generic.Dictionary%602/). The
+[`List<T>`](xref:System.Collections.Generic.List`1) or
+[`Dictionary<TKey, TValue>`](xref:System.Collections.Generic.Dictionary`2). The
 [Android.Runtime](https://developer.xamarin.com/api/namespace/Android.Runtime/) implementations
 utilize a native Java collection internally and therefore do not
 require copying to and from a native collection when passing to an
@@ -200,7 +200,7 @@ any of the usual C# paradigms to the Click event.
 
 When the listener callback method has a void return, we create API
 elements based on an
-[EventHandler&lt;TEventArgs&gt;](https://developer.xamarin.com/api/type/System.EventHandler%601/)
+[EventHandler&lt;TEventArgs&gt;](xref:System.EventHandler`1)
 delegate. We generate an event like the above example for these
 listener types. However, if the listener callback returns a non-void
 and non- **boolean** value, events and EventHandlers are not used. We

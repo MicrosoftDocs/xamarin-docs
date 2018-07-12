@@ -122,7 +122,7 @@ Although this namespace provides bindings for the underlying
 Objective-C Foundation types, in a few cases we have mapped the
 underlying types to .NET types. For example:
 
-- Instead of dealing with  [NSString](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) and  [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), the runtime exposes these as C#  [string](https://developer.xamarin.com/api/type/System.String/)s and strongly typed  [array](https://developer.xamarin.com/api/type/System.Array/)s throughout the API.
+- Instead of dealing with  [NSString](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) and  [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), the runtime exposes these as C#  [string](xref:System.String)s and strongly typed  [array](xref:System.Array)s throughout the API.
 
 - Various helper APIs are exposed here to allow developers to bind third party Objective-C APIs, other iOS APIs or APIs that are not currently bound by Xamarin.iOS.
 
@@ -146,7 +146,7 @@ property.
 
 While Mono will provide garbage collection for all of your objects,
 the `Foundation.NSObject` implements the
-[System.IDisposable](https://developer.xamarin.com/api/type/System.IDisposable/)
+[System.IDisposable](xref:System.IDisposable)
 interface. This means that you can explicitly release the resources of
 any given NSObject without having to wait for the Garbage Collector to
 kick-in. This is important when you are using heavy NSObjects, for

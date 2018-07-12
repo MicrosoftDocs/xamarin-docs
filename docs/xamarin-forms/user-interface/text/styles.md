@@ -20,7 +20,7 @@ Styles can be given a `Key` and applied selectively using a specific control's `
 
 ## Built-In Styles
 
-Xamarin.Forms includes several [built-in](http://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/) styles for common scenarios:
+Xamarin.Forms includes several [built-in](xref:Xamarin.Forms.Device.Styles) styles for common scenarios:
 
 - `BodyStyle`
 - `CaptionStyle`
@@ -144,4 +144,4 @@ To ensure accessibility, make sure that built-in styles are used as the basis fo
 - [Creating Mobile Apps with Xamarin.Forms, Chapter 12](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
 - [Styles](~/xamarin-forms/user-interface/styles/index.md)
 - [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
-- [Style](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
+- [Style](xref:Xamarin.Forms.Style)

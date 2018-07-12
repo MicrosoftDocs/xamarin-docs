@@ -11,7 +11,7 @@ ms.date: 03/08/2016
 
 # Xamarin.Forms TableView
 
-[TableView](https://developer.xamarin.com/api/type/Xamarin.Forms.TableView/) is a view for displaying scrollable lists of data or choices where there are rows that don't share the same template. Unlike [ListView](~/xamarin-forms/user-interface/listview/index.md), TableView does not have the concept of an `ItemsSource`, so items must be added as children manually.
+[TableView](xref:Xamarin.Forms.TableView) is a view for displaying scrollable lists of data or choices where there are rows that don't share the same template. Unlike [ListView](~/xamarin-forms/user-interface/listview/index.md), TableView does not have the concept of an `ItemsSource`, so items must be added as children manually.
 
 This guide is composed of the following sections:
 
@@ -99,7 +99,7 @@ See [ListView Cell Appearance](~/xamarin-forms/user-interface/listview/customizi
 <a name="switchcell" />
 
 ### SwitchCell
-[`SwitchCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.SwitchCell/) is the control to use for presenting and capturing an on/off or `true`/`false` state.
+[`SwitchCell`](xref:Xamarin.Forms.SwitchCell) is the control to use for presenting and capturing an on/off or `true`/`false` state.
 
 SwitchCells have one line of text to edit and an on/off property. Both of these properties are bindable.
 
@@ -113,14 +113,14 @@ Note that the `SwitchCell` exposes the `OnChanged` event, allowing you to respon
 <a name="entrycell" />
 
 ### EntryCell
-[`EntryCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell/) is useful when you need to display text data that the user can edit. `EntryCell`s offer the following properties that can be customized:
+[`EntryCell`](xref:Xamarin.Forms.EntryCell) is useful when you need to display text data that the user can edit. `EntryCell`s offer the following properties that can be customized:
 
-- `Keyboard` &ndash; The keyboard to display while editing. There are options for things like numeric values, email, phone numbers, etc. [See the API docs](http://developer.xamarin.com/api/type/Xamarin.Forms.Keyboard/).
+- `Keyboard` &ndash; The keyboard to display while editing. There are options for things like numeric values, email, phone numbers, etc. [See the API docs](xref:Xamarin.Forms.Keyboard).
 - `Label` &ndash; The label text to display to the right of the text entry field.
 - `LabelColor` &ndash; The color of the label text.
 - `Placeholder` &ndash; Text to display in the entry field when it is null or empty. This text disappears when text entry begins.
 - `Text` &ndash; The text in the entry field.
-- `HorizontalTextAlignment` &ndash; The horizontal alignment of the text. Can be center, left, or right aligned. [See the API docs](http://developer.xamarin.com/api/type/Xamarin.Forms.TextAlignment/).
+- `HorizontalTextAlignment` &ndash; The horizontal alignment of the text. Can be center, left, or right aligned. [See the API docs](xref:Xamarin.Forms.TextAlignment).
 
 Note that `EntryCell` exposes the `Completed` event, which is fired when the user hits 'done' on the keyboard while editing text.
 
@@ -131,7 +131,7 @@ Note that `EntryCell` exposes the `Completed` event, which is fired when the use
 ## Custom Cells
 When the built-in cells aren't enough, custom cells can be used to present and capture data in the way that makes sense for your app. For example, you may want to present a slider to allow a user to choose the opacity of an image.
 
-All custom cells must derive from [`ViewCell`](http://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/), the same base class that all of the built-in cell types use.
+All custom cells must derive from [`ViewCell`](xref:Xamarin.Forms.ViewCell), the same base class that all of the built-in cell types use.
 
 This is an example of a custom cell:
 

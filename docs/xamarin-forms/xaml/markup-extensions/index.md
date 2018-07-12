@@ -25,7 +25,7 @@ Or, you can set it to a hexadecimal RGB color value:
 <BoxView Color="#FF0080" />
 ```
 
-In either case, the text string set to the `Color` attribute is converted to a `Color` value by the [`ColorTypeConverter`](https://developer.xamarin.com/api/type/Xamarin.Forms.ColorTypeConverter/) class.
+In either case, the text string set to the `Color` attribute is converted to a `Color` value by the [`ColorTypeConverter`](xref:Xamarin.Forms.ColorTypeConverter) class.
 
 You might prefer instead to set the `Color` attribute from a value stored in a resource dictionary, or from the value of a static property of a class that you've created, or from a property of type `Color` of another element on the page, or constructed from separate hue, saturation, and luminosity values.
 

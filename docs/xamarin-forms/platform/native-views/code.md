@@ -15,16 +15,16 @@ _Native views from iOS, Android, and UWP can be directly referenced from Xamarin
 
 ## Overview
 
-Any Xamarin.Forms control that allows `Content` to to be set, or that has a `Children` collection, can add platform-specific views. For example, an iOS `UILabel` can be directly added to the [`ContentView.Content`](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) property, or to the [`StackLayout.Children`](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/) collection. However, note that this functionality requires the use of `#if` defines in Xamarin.Forms Shared Project solutions, and isn't available from Xamarin.Forms .NET Standard library solutions.
+Any Xamarin.Forms control that allows `Content` to to be set, or that has a `Children` collection, can add platform-specific views. For example, an iOS `UILabel` can be directly added to the [`ContentView.Content`](xref:Xamarin.Forms.ContentView.Content) property, or to the [`StackLayout.Children`](xref:Xamarin.Forms.Layout`1.Children) collection. However, note that this functionality requires the use of `#if` defines in Xamarin.Forms Shared Project solutions, and isn't available from Xamarin.Forms .NET Standard library solutions.
 
-The following screenshots demonstrate platform-specific views having been added to a Xamarin.Forms [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/):
+The following screenshots demonstrate platform-specific views having been added to a Xamarin.Forms [`StackLayout`](xref:Xamarin.Forms.StackLayout):
 
 [![](code-images/screenshots-sml.png "StackLayout Containing Platform-Specific Views")](code-images/screenshots.png#lightbox "StackLayout Containing Platform-Specific Views")
 
 The ability to add platform-specific views to a Xamarin.Forms layout is enabled by two extension methods on each platform:
 
-- `Add` – adds a platform-specific view to the [`Children`](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/) collection of a layout.
-- `ToView` – takes a platform-specific view and wraps it as a Xamarin.Forms [`View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) that can be set as the `Content` property of a control.
+- `Add` – adds a platform-specific view to the [`Children`](xref:Xamarin.Forms.Layout`1.Children) collection of a layout.
+- `ToView` – takes a platform-specific view and wraps it as a Xamarin.Forms [`View`](xref:Xamarin.Forms.View) that can be set as the `Content` property of a control.
 
 Using these methods in a Xamarin.Forms shared project requires importing the appropriate platform-specific Xamarin.Forms namespace:
 
@@ -38,7 +38,7 @@ The following sections demonstrate how to add platform-specific views to a Xamar
 
 ### iOS
 
-The following code example demonstrates how to add a `UILabel` to a [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) and a [`ContentView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/):
+The following code example demonstrates how to add a `UILabel` to a [`StackLayout`](xref:Xamarin.Forms.StackLayout) and a [`ContentView`](xref:Xamarin.Forms.ContentView):
 
 ```csharp
 var uiLabel = new UILabel {
@@ -55,7 +55,7 @@ The example assumes that the `stackLayout` and `contentView` instances have prev
 
 ### Android
 
-The following code example demonstrates how to add a `TextView` to a [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) and a [`ContentView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/):
+The following code example demonstrates how to add a `TextView` to a [`StackLayout`](xref:Xamarin.Forms.StackLayout) and a [`ContentView`](xref:Xamarin.Forms.ContentView):
 
 ```csharp
 var textView = new TextView (MainActivity.Instance) { Text = originalText, TextSize = 14 };
@@ -67,7 +67,7 @@ The example assumes that the `stackLayout` and `contentView` instances have prev
 
 ### Universal Windows Platform
 
-The following code example demonstrates how to add a `TextBlock` to a [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) and a [`ContentView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/):
+The following code example demonstrates how to add a `TextBlock` to a [`StackLayout`](xref:Xamarin.Forms.StackLayout) and a [`ContentView`](xref:Xamarin.Forms.ContentView):
 
 ```csharp
 var textBlock = new TextBlock
@@ -108,7 +108,7 @@ public class CustomControl : UILabel
 }
 ```
 
-An instance of this view is added to a [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), as demonstrated in the following code example:
+An instance of this view is added to a [`StackLayout`](xref:Xamarin.Forms.StackLayout), as demonstrated in the following code example:
 
 ```csharp
 var customControl = new CustomControl {
@@ -145,7 +145,7 @@ SizeRequest? FixSize (NativeViewWrapperRenderer renderer, double width, double h
 }
 ```
 
-This method uses the width provided by the `CustomControl.SizeThatFits` method, but substitutes the height of 150 for a height of 70. When the `CustomControl` instance is added to the [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), the `FixSize` method can be specified as the `GetDesiredSizeDelegate` to fix the bad measurement provided by the `CustomControl` class:
+This method uses the width provided by the `CustomControl.SizeThatFits` method, but substitutes the height of 150 for a height of 70. When the `CustomControl` instance is added to the [`StackLayout`](xref:Xamarin.Forms.StackLayout), the `FixSize` method can be specified as the `GetDesiredSizeDelegate` to fix the bad measurement provided by the `CustomControl` class:
 
 ```csharp
 stackLayout.Children.Add (customControl, FixSize);
@@ -179,7 +179,7 @@ public class CustomControl : TextView
 }
 ```
 
-An instance of this view is added to a [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), as demonstrated in the following code example:
+An instance of this view is added to a [`StackLayout`](xref:Xamarin.Forms.StackLayout), as demonstrated in the following code example:
 
 ```csharp
 var customControl = new CustomControl (MainActivity.Instance) {
@@ -212,7 +212,7 @@ SizeRequest? FixSize (NativeViewWrapperRenderer renderer, int widthConstraint, i
 }
 ```
 
-This method uses the width provided by the `CustomControl.OnMeasure` method, but multiplies it by two. When the `CustomControl` instance is added to the [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), the `FixSize` method can be specified as the `GetDesiredSizeDelegate` to fix the bad measurement provided by the `CustomControl` class:
+This method uses the width provided by the `CustomControl.OnMeasure` method, but multiplies it by two. When the `CustomControl` instance is added to the [`StackLayout`](xref:Xamarin.Forms.StackLayout), the `FixSize` method can be specified as the `GetDesiredSizeDelegate` to fix the bad measurement provided by the `CustomControl` class:
 
 ```csharp
 stackLayout.Children.Add (customControl, FixSize);
@@ -277,7 +277,7 @@ public class CustomControl : Panel
 }
 ```
 
-An instance of this view is added to a [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), as demonstrated in the following code example:
+An instance of this view is added to a [`StackLayout`](xref:Xamarin.Forms.StackLayout), as demonstrated in the following code example:
 
 ```csharp
 var brokenControl = new CustomControl {
@@ -290,7 +290,7 @@ However, because the `CustomControl.ArrangeOverride` override always returns hal
 
 ![](code-images/winrt-bad-measurement.png "UWP CustomControl with Bad ArrangeOverride Implementation")
 
-A solution to this problem is to provide an `ArrangeOverrideDelegate` implementation, when adding the view to the [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), as demonstrated in the following code example:
+A solution to this problem is to provide an `ArrangeOverrideDelegate` implementation, when adding the view to the [`StackLayout`](xref:Xamarin.Forms.StackLayout), as demonstrated in the following code example:
 
 ```csharp
 stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, finalSize) =>

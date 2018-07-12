@@ -40,7 +40,7 @@ The [**ParameteredConstructorDemo**](https://github.com/xamarin/xamarin-forms-bo
 
 ### Can I call methods from XAML?
 
-The [**FactoryMethodDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FactoryMethodDemo) sample demonstrates how to use the `x:FactoryMethod` element to specify a factory method that is invoked to create an object. Such a factory method must be public and static, and it must create an object of the type in which it is defined. (For example the [`Color.FromRgb`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgb/p/System.Double/System.Double/System.Double/)) method qualifies because it is public and static and returns a value of type `Color`.) The arguments to the factory method are specified within `x:Arguments` tags.
+The [**FactoryMethodDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FactoryMethodDemo) sample demonstrates how to use the `x:FactoryMethod` element to specify a factory method that is invoked to create an object. Such a factory method must be public and static, and it must create an object of the type in which it is defined. (For example the [`Color.FromRgb`](xref:Xamarin.Forms.Color.FromRgb(System.Double,System.Double,System.Double)) method qualifies because it is public and static and returns a value of type `Color`.) The arguments to the factory method are specified within `x:Arguments` tags.
 
 ## The x:Name attribute
 
@@ -52,7 +52,7 @@ The same name cannot be used for multiple elements on the same page. This is a p
 
 ## Custom XAML-based views
 
-There are several ways to avoid repetition of markup in XAML. One common technique is to create a new XAML-based class that derives from [`ContentView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/). This technique is demonstrated in the [**ColorViewList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/ColorViewList) sample. The `ColorView` class derives from `ContentView` to display a particular color and its name, while the `ColorViewListPage` class derives from `ContentPage` as usual and explicitly creates 17 instances of `ColorView`.
+There are several ways to avoid repetition of markup in XAML. One common technique is to create a new XAML-based class that derives from [`ContentView`](xref:Xamarin.Forms.ContentView). This technique is demonstrated in the [**ColorViewList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/ColorViewList) sample. The `ColorView` class derives from `ContentView` to display a particular color and its name, while the `ColorViewListPage` class derives from `ContentPage` as usual and explicitly creates 17 instances of `ColorView`.
 
 Accessing the `ColorView` class in XAML requires another XML namespace declaration, commonly named `local` for classes in the same assembly.
 
@@ -62,9 +62,9 @@ Events can be assigned to event handlers in XAML, but the event handler itself m
 
 ## Tap gestures
 
-Any `View` object can obtain touch input and generate events from that input. The `View` class defines a [`GestureRecognizers`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.GestureRecognizers/) collection property that can contain one or more instances of classes that derive from [`GestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/).
+Any `View` object can obtain touch input and generate events from that input. The `View` class defines a [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) collection property that can contain one or more instances of classes that derive from [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer).
 
-The [`TapGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) generates [`Tapped`](https://developer.xamarin.com/api/event/Xamarin.Forms.TapGestureRecognizer.Tapped/) events. The [**MonkeyTap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/MonkeyTap) program demonstrates how to attach `TapGestureRecognizer` objects to four `BoxView` elements to create an imitation game:
+The [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) generates [`Tapped`](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) events. The [**MonkeyTap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/MonkeyTap) program demonstrates how to attach `TapGestureRecognizer` objects to four `BoxView` elements to create an imitation game:
 
 [![Triple screenshot of monkey tap](images/ch08fg07-small.png "Imitation Game")](images/ch08fg07-large.png#lightbox "Imitation Game")
 

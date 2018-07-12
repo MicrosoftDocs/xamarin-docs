@@ -15,17 +15,17 @@ ms.date: 11/07/2017
 
 Users expect graphical user interfaces to be responsive. This means that a program must process user-input events quickly. If that is not possible, then processing must be relegated to secondary threads of execution.
 
-Several sample programs in this book have used the [`WebRequest`](https://developer.xamarin.com/api/type/System.Net.WebRequest/) class. In this class the [`BeginGetReponse`](https://developer.xamarin.com/api/member/System.Net.WebRequest.BeginGetResponse/p/System.AsyncCallback/System.Object/) method starts a worker thread, which calls a callback function when it is complete. However, that callback function runs in the worker thread, so the program must call [`Device.BeginInvokeOnMainThread`](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/) method to access the user interface.
+Several sample programs in this book have used the [`WebRequest`](xref:System.Net.WebRequest) class. In this class the [`BeginGetReponse`](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)) method starts a worker thread, which calls a callback function when it is complete. However, that callback function runs in the worker thread, so the program must call [`Device.BeginInvokeOnMainThread`](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) method to access the user interface.
 
-A more modern approach to asynchronous processing is available in .NET and C#. This involves the [`Task`](https://developer.xamarin.com/api/type/System.Threading.Tasks.Task/) and [`Task<TResult>`](https://developer.xamarin.com/api/type/System.Threading.Tasks.Task%3CTResult%3E/) classes, and other types in the [`System.Threading`](https://developer.xamarin.com/api/namespace/System.Threading/) and [`System.Threading.Tasks`](https://developer.xamarin.com/api/namespace/System.Threading.Tasks/) namespaces, as well as the C# 5.0 `async` and `await` keywords. That's what this chapter focuses on.
+A more modern approach to asynchronous processing is available in .NET and C#. This involves the [`Task`](xref:System.Threading.Tasks.Task) and [`Task<TResult>`](xref:System.Threading.Tasks.Task`1) classes, and other types in the [`System.Threading`](xref:System.Threading) and [`System.Threading.Tasks`](xref:System.Threading.Tasks) namespaces, as well as the C# 5.0 `async` and `await` keywords. That's what this chapter focuses on.
 
 ## From callbacks to await
 
 The `Page` class itself contains three asynchronous methods to display alert boxes:
 
-- [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert/p/System.String/System.String/System.String/) returns a `Task` object
-- [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert/p/System.String/System.String/System.String/System.String/) returns a `Task<bool>` object
-- [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet/p/System.String/System.String/System.String/System.String[]/) returns a `Task<string>` object
+- [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) returns a `Task` object
+- [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String,System.String)) returns a `Task<bool>` object
+- [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])) returns a `Task<string>` object
 
 The `Task` objects indicate that these methods implement the Task-based Asynchronous Pattern, known as TAP. These `Task` objects are returned quickly from the method. The `Task<T>` return values constitute a "promise" that a value of type `TResult` will be available when the task completes. The `Task` return value indicates an asynchronous action that will complete but with no value returned.
 
@@ -53,16 +53,16 @@ sample demonstrates this.
 
 ### Saving program settings asynchronously
 
-The [**SaveProgramChanges**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/SaveProgramSettings) sample demonstrates the use of the [`SavePropertiesAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.Application.SavePropertiesAsync()/) method of `Application` to save program settings as they change without overriding the `OnSleep` method.
+The [**SaveProgramChanges**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/SaveProgramSettings) sample demonstrates the use of the [`SavePropertiesAsync`](xref:Xamarin.Forms.Application.SavePropertiesAsync) method of `Application` to save program settings as they change without overriding the `OnSleep` method.
 
 ### A platform-independent timer
 
-It's possible to use [`Task.Delay`](https://developer.xamarin.com/api/member/System.Threading.Tasks.Task.Delay/p/System.Int32/) to create a platform-independent timer. The
+It's possible to use [`Task.Delay`](xref:System.Threading.Tasks.Task.Delay(System.Int32)) to create a platform-independent timer. The
 [**TaskDelayClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/TaskDelayClock) sample demonstrates this.
 
 ## File input/output
 
-Traditionally, the .NET [`System.IO`](https://developer.xamarin.com/api/namespace/System.IO/) namespace has been the source of file I/O support. Although some methods in this namespace support asynchronous operations, most do not. The namespace also supports several simple method calls that perform sophisticated file I/O functions.
+Traditionally, the .NET [`System.IO`](xref:System.IO) namespace has been the source of file I/O support. Although some methods in this namespace support asynchronous operations, most do not. The namespace also supports several simple method calls that perform sophisticated file I/O functions.
 
 ### Good news and bad news
 
@@ -72,7 +72,7 @@ The Xamarin.iOS and Xamarin.Android libraries include a version of .NET that Xam
 
 However, if you search for these `System.IO` classes in a Xamarin.Forms PCL, you won't find them. The problem is that Microsoft completely revamped file I/O for the Windows Runtime API. Programs targeting Windows 8.1, Windows Phone 8.1, and the Universal Windows Platform do not use `System.IO` for file I/O.
 
-This means that you'll need to use the [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) (first discussed in [**Chapter 9. Platform-specific API calls**](chapter09.md) to implement file I/O.
+This means that you'll need to use the [`DependencyService`](xref:Xamarin.Forms.DependencyService) (first discussed in [**Chapter 9. Platform-specific API calls**](chapter09.md) to implement file I/O.
 
 ### A first shot at cross-platform file I/O
 
@@ -107,7 +107,7 @@ The **Xamarin.FormsBook.Platform** project contains the new [`IFileHelper`](http
 
 The **Xamarin.FormsBook.Platform.WinRT** project contains the [`FileHelper`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/FileHelper.cs) class for the Windows Runtime.
 
-The **Xamarin.FormsBook.Platform.iOS** project contains the [`FileHelper`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/FileHelper.cs) class for iOS. These methods must now be asynchronous. Some of the methods use the asynchronous versions of methods defined in `StreamWriter` and `StreamReader`: [`WriteAsync`](https://developer.xamarin.com/api/member/System.IO.StreamWriter.WriteAsync/p/System.String/) and [`ReadToEndAsync`](https://developer.xamarin.com/api/member/System.IO.StreamReader.ReadToEndAsync()/). Others convert a result to a `Task` object using the [`FromResult`](https://developer.xamarin.com/api/member/System.Threading.Tasks.Task.FromResult%7BTResult%7D/p/TResult/) method.
+The **Xamarin.FormsBook.Platform.iOS** project contains the [`FileHelper`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/FileHelper.cs) class for iOS. These methods must now be asynchronous. Some of the methods use the asynchronous versions of methods defined in `StreamWriter` and `StreamReader`: [`WriteAsync`](xref:System.IO.StreamWriter.WriteAsync(System.String)) and [`ReadToEndAsync`](xref:System.IO.StreamReader.ReadToEndAsync). Others convert a result to a `Task` object using the [`FromResult`](xref:System.Threading.Tasks.Task.FromResult*) method.
 
 The **Xamarin.FormsBook.Platform.Android** project contains a similar [`FileHelper`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/FileHelper.cs) class for Android.
 
@@ -119,15 +119,15 @@ The [**TextFileAsync**](https://github.com/xamarin/xamarin-forms-book-samples/tr
 
 ### Keeping it in the background
 
-Methods in libraries that make calls to multiple asynchronous methods &mdash; such as the `WriteFileAsync` and `ReadFileASync` methods in the Windows Runtime [`FileHelper`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/FileHelper.cs) class &mdash; can be made somewhat more efficient by using the [`ConfigureAwait`](https://developer.xamarin.com/api/member/System.Threading.Tasks.Task%3CTResult%3E.ConfigureAwait/p/System.Boolean/) method to avoid switching back to the user-interface thread.
+Methods in libraries that make calls to multiple asynchronous methods &mdash; such as the `WriteFileAsync` and `ReadFileASync` methods in the Windows Runtime [`FileHelper`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/FileHelper.cs) class &mdash; can be made somewhat more efficient by using the [`ConfigureAwait`](xref:System.Threading.Tasks.Task`1.ConfigureAwait(System.Boolean)) method to avoid switching back to the user-interface thread.
 
 ### Don't block the UI thread!
 
-Sometimes it's tempting to avoid the use of `ContinueWith` or `await` by using the [`Result`](https://developer.xamarin.com/api/property/System.Threading.Tasks.Task%3CTResult%3E.Result/) property on the methods. This should be avoided for it can block the UI thread or even hang the application.
+Sometimes it's tempting to avoid the use of `ContinueWith` or `await` by using the [`Result`](xref:System.Threading.Tasks.Task`1.Result) property on the methods. This should be avoided for it can block the UI thread or even hang the application.
 
 ## Your own awaitable methods
 
-You can run some code asynchronously by passing it to one of the [`Task.Run`](https://developer.xamarin.com/api/member/System.Threading.Tasks.Task.Run/p/System.Action/) methods. You can call `Task.Run` within an async method that handles some of the overhead.
+You can run some code asynchronously by passing it to one of the [`Task.Run`](xref:System.Threading.Tasks.Task.Run(System.Action)) methods. You can call `Task.Run` within an async method that handles some of the overhead.
 
 The various `Task.Run` patterns are discussed below.
 
@@ -139,13 +139,13 @@ The [**MandelbrotSet**](https://github.com/xamarin/xamarin-forms-book-samples/tr
 
 ### Marking progress
 
-To report progress from an asynchronous method, you can instantiate a [`Progress<T>`](https://developer.xamarin.com/api/type/System.Progress%3CT%3E/) class and define your asynchronous method to have an argument of type [`IProgress<T>`](https://developer.xamarin.com/api/type/System.IProgress%3CT%3E/). This is demonstrated in the [**MandelbrotProgress**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/MandelbrotProgress) sample.
+To report progress from an asynchronous method, you can instantiate a [`Progress<T>`](xref:System.Progress`1) class and define your asynchronous method to have an argument of type [`IProgress<T>`](xref:System.IProgress`1). This is demonstrated in the [**MandelbrotProgress**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/MandelbrotProgress) sample.
 
 ### Cancelling the job
 
-You can also write an asynchronous method to be cancellable. You begin with a class named [`CancellationTokenSource`](https://developer.xamarin.com/api/type/System.Threading.CancellationTokenSource/). The [`Token`](https://developer.xamarin.com/api/property/System.Threading.CancellationTokenSource.Token/) property is a value of type [`CancellationToken`](https://developer.xamarin.com/api/type/System.Threading.CancellationToken/). This is passed to the asynchronous function. A program calls the [`Cancel`](https://developer.xamarin.com/api/member/System.Threading.CancellationTokenSource.Cancel()/) method of `CancellationTokenSource` (generally in response to an action by the user) to cancel the asynchronous function.
+You can also write an asynchronous method to be cancellable. You begin with a class named [`CancellationTokenSource`](xref:System.Threading.CancellationTokenSource). The [`Token`](xref:System.Threading.CancellationTokenSource.Token) property is a value of type [`CancellationToken`](xref:System.Threading.CancellationToken). This is passed to the asynchronous function. A program calls the [`Cancel`](xref:System.Threading.CancellationTokenSource.Cancel) method of `CancellationTokenSource` (generally in response to an action by the user) to cancel the asynchronous function.
 
-The asynchronous method can periodically check the [`IsCancellationRequested`](https://developer.xamarin.com/api/property/System.Threading.CancellationToken.IsCancellationRequested/) property of `CancellationToken` and exit if the property is `true`, or simply call the [`ThrowIfCancellationRequested`](https://developer.xamarin.com/api/member/System.Threading.CancellationToken.ThrowIfCancellationRequested()/) method, in which case the method ends with an [`OperationCancelledException`](https://developer.xamarin.com/api/type/System.OperationCanceledException/).
+The asynchronous method can periodically check the [`IsCancellationRequested`](xref:System.Threading.CancellationToken.IsCancellationRequested) property of `CancellationToken` and exit if the property is `true`, or simply call the [`ThrowIfCancellationRequested`](xref:System.Threading.CancellationToken.ThrowIfCancellationRequested) method, in which case the method ends with an [`OperationCancelledException`](xref:System.OperationCanceledException).
 
 The [**MandelbrotCancellation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/MandelbrotCancellation) sample demonstrates the use of a cancellable function.
 
@@ -158,7 +158,7 @@ The
 
 ## Back to the web
 
-The [`WebRequest`](https://developer.xamarin.com/api/type/System.Net.WebRequest/) class used in some samples uses an old-fashioned asynchronous protocol called the Asynchronous Programming Model or APM. You can convert such a class to the modern TAP protocol using one of the `FromAsync` methods in the [`TaskFactory`](https://developer.xamarin.com/api/type/System.Threading.Tasks.TaskFactory%3CTResult%3E/) class. The
+The [`WebRequest`](xref:System.Net.WebRequest) class used in some samples uses an old-fashioned asynchronous protocol called the Asynchronous Programming Model or APM. You can convert such a class to the modern TAP protocol using one of the `FromAsync` methods in the [`TaskFactory`](xref:System.Threading.Tasks.TaskFactory`1) class. The
 [**ApmToTap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/ApmToTap)
 sample demonstrates this.
 

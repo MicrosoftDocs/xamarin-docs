@@ -177,19 +177,19 @@ Note the following aspects of the above code:
 
 ### [LayoutOptions](layout-options.md)
 
-The [`LayoutOptions`](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) structure can be used to define alignment and expansion for a view, relative to its parent.
+The [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) structure can be used to define alignment and expansion for a view, relative to its parent.
 
 ### [Margin and Padding](margin-and-padding.md)
 
-The [`Margin`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) and [`Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) properties control layout behavior when an element is rendered in the user interface.
+The [`Margin`](xref:Xamarin.Forms.View.Margin) and [`Padding`](xref:Xamarin.Forms.Layout.Padding) properties control layout behavior when an element is rendered in the user interface.
 
 <a name="input_transparency" />
 
 ### Input Transparency
 
-Each element has an [`InputTransparent`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.InputTransparent/) property that's used to define whether the element receives input. Its default value is `false`, ensuring that the element receives input.
+Each element has an [`InputTransparent`](xref:Xamarin.Forms.VisualElement.InputTransparent) property that's used to define whether the element receives input. Its default value is `false`, ensuring that the element receives input.
 
-When this property is set on a container class, such as a layout class, its value transfers to child elements. Therefore, setting the [`InputTransparent`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.InputTransparent/) property to `true` on a layout class will result in the elements within the layout not receiving input.
+When this property is set on a container class, such as a layout class, its value transfers to child elements. Therefore, setting the [`InputTransparent`](xref:Xamarin.Forms.VisualElement.InputTransparent) property to `true` on a layout class will result in the elements within the layout not receiving input.
 
 ### [Device Orientation](device-orientation.md)
 
@@ -205,7 +205,7 @@ page altogether for larger screens.
 
 ### [Creating a Custom Layout](custom.md)
 
-Xamarin.Forms defines four layout classes - [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/), [`RelativeLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/), and [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), and each arranges its children in a different way. However, sometimes its necessary to organize page content using a layout not provided by Xamarin.Forms. This article explains how to write a custom layout class, and demonstrates an orientation-sensitive `WrapLayout` class that arranges its children horizontally across the page, and then wraps the display of subsequent children to additional rows.
+Xamarin.Forms defines four layout classes - [`StackLayout`](xref:Xamarin.Forms.StackLayout), [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout), [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout), and [`Grid`](xref:Xamarin.Forms.Grid), and each arranges its children in a different way. However, sometimes its necessary to organize page content using a layout not provided by Xamarin.Forms. This article explains how to write a custom layout class, and demonstrates an orientation-sensitive `WrapLayout` class that arranges its children horizontally across the page, and then wraps the display of subsequent children to additional rows.
 
 ### [Layout Compression](layout-compression.md)
 

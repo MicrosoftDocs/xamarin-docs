@@ -57,9 +57,9 @@ and layout as normal Android packages, with the following additions:
     the assemblies are loaded from memory. This permits faster app
     startup, as assemblies do not need to be extracted prior to
     execution. - *Note:* Assembly location information such as
-    [Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/)
+    [Assembly.Location](xref:System.Reflection.Assembly.Location)
     and
-    [Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
+    [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
     *cannot be relied upon* in Release builds. They do not exist as
     distinct filesystem entries, and they have no usable location.
 
@@ -260,7 +260,7 @@ Order of events:
     *on the same instance created in (7)* .
 
 12. If the (IntPtr, JniHandleOwnership) constructor cannot be found, then a
-    System.MissingMethodException](https://developer.xamarin.com/api/type/System.MissingMethodException/)
+    System.MissingMethodException](xref:System.MissingMethodException)
     will be thrown.
 
 <a name="Premature_Dispose_Calls" />

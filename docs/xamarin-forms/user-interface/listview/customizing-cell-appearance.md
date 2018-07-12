@@ -32,7 +32,7 @@ Two additional cells, [`SwitchCell`](~/xamarin-forms/user-interface/tableview.md
 
 ### TextCell
 
-[`TextCell`](http://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) is a cell for displaying text, optionally with a second line as detail text.
+[`TextCell`](xref:Xamarin.Forms.TextCell) is a cell for displaying text, optionally with a second line as detail text.
 
 TextCells are rendered as native controls at runtime, so performance is very good compared to a custom `ViewCell`. TextCells are customizable, allowing you to set:
 
@@ -49,7 +49,7 @@ TextCells are rendered as native controls at runtime, so performance is very goo
 
 ### ImageCell
 
-[`ImageCell`](http://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/), like `TextCell`, can be used for displaying text and secondary detail text, and it offers great performance by using each platform's native controls. `ImageCell` differs from `TextCell` in that it displays an image to the left of the text.
+[`ImageCell`](xref:Xamarin.Forms.ImageCell), like `TextCell`, can be used for displaying text and secondary detail text, and it offers great performance by using each platform's native controls. `ImageCell` differs from `TextCell` in that it displays an image to the left of the text.
 
 `ImageCell` is useful when you need to display a list of data with a visual aspect, such as a list of contacts or movies. ImageCells are customizable, allowing you to set:
 
@@ -68,7 +68,7 @@ TextCells are rendered as native controls at runtime, so performance is very goo
 ## Custom Cells
 When the built-in cells don't provide the required layout, custom cells implemented the required layout. For example, you may want to present a cell with two labels that have equal weight. A `TextCell` would be insufficient because the `TextCell` has one label that is smaller. Most cell customizations add additional read-only data (such as additional labels, images or other display information).
 
-All custom cells must derive from [`ViewCell`](http://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/), the same base class that all of the built-in cell types use.
+All custom cells must derive from [`ViewCell`](xref:Xamarin.Forms.ViewCell), the same base class that all of the built-in cell types use.
 
 Xamarin.Forms 2 introduced a new [caching behavior](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy) on the `ListView` control which can be set to improve scrolling performance for some types of custom cells.
 
@@ -173,7 +173,7 @@ Note that the constructor for `DataTemplate` takes a type. The typeof operator g
 
 ### Binding Context Changes
 
-When binding to a custom cell type's [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) instances, the UI controls displaying the `BindableProperty` values should use the [`OnBindingContextChanged`](https://developer.xamarin.com/api/member/Xamarin.Forms.Cell.OnBindingContextChanged()/) override to set the data to be displayed in each cell, rather than the cell constructor, as demonstrated in the following code example:
+When binding to a custom cell type's [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instances, the UI controls displaying the `BindableProperty` values should use the [`OnBindingContextChanged`](xref:Xamarin.Forms.Cell.OnBindingContextChanged) override to set the data to be displayed in each cell, rather than the cell constructor, as demonstrated in the following code example:
 
 ```csharp
 public class CustomCell : ViewCell
@@ -216,9 +216,9 @@ public class CustomCell : ViewCell
 }
 ```
 
-The [`OnBindingContextChanged`](https://developer.xamarin.com/api/member/Xamarin.Forms.Cell.OnBindingContextChanged()/) override will be called when the [`BindingContextChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.BindableObject.BindingContextChanged/) event fires, in response to the value of the [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) property changing. Therefore, when the `BindingContext` changes, the UI controls displaying the [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) values should set their data. Note that the `BindingContext` should be checked for a `null` value, as this can be set by Xamarin.Forms for garbage collection, which in turn will result in the `OnBindingContextChanged` override being called.
+The [`OnBindingContextChanged`](xref:Xamarin.Forms.Cell.OnBindingContextChanged) override will be called when the [`BindingContextChanged`](xref:Xamarin.Forms.BindableObject.BindingContextChanged) event fires, in response to the value of the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) property changing. Therefore, when the `BindingContext` changes, the UI controls displaying the [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) values should set their data. Note that the `BindingContext` should be checked for a `null` value, as this can be set by Xamarin.Forms for garbage collection, which in turn will result in the `OnBindingContextChanged` override being called.
 
-Alternatively, UI controls can bind to the [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) instances to display their values, which removes the need to override the `OnBindingContextChanged` method.
+Alternatively, UI controls can bind to the [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instances to display their values, which removes the need to override the `OnBindingContextChanged` method.
 
 > [!NOTE]
 > When overriding `OnBindingContextChanged`, ensure that the base class's `OnBindingContextChanged` method is called so that registered delegates receive the `BindingContextChanged` event.
@@ -251,7 +251,7 @@ var listView = new ListView {
 };
 ```
 
-On iOS and Android, if the [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) is recycling elements and the custom cell uses a custom renderer, the custom renderer must correctly implement property change notification. When cells are reused their property values will change when the binding context is updated to that of an available cell, with `PropertyChanged` events being raised. For more information, see [Customizing a ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md). For more information about cell recycling, see [Caching Strategy](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy).
+On iOS and Android, if the [`ListView`](xref:Xamarin.Forms.ListView) is recycling elements and the custom cell uses a custom renderer, the custom renderer must correctly implement property change notification. When cells are reused their property values will change when the binding context is updated to that of an available cell, with `PropertyChanged` events being raised. For more information, see [Customizing a ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md). For more information about cell recycling, see [Caching Strategy](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy).
 
 ## Related Links
 

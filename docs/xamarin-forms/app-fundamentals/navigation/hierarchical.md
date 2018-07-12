@@ -29,23 +29,23 @@ To return back to the previous page, the application will pop the current page f
 
 ![](hierarchical-images/popping.png "Popping a Page from the Navigation Stack")
 
-Navigation methods are exposed by the [`Navigation`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Navigation/) property on any [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) derived types. These methods provide the ability to push pages onto the navigation stack, to pop pages from the navigation stack, and to perform stack manipulation.
+Navigation methods are exposed by the [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property on any [`Page`](xref:Xamarin.Forms.Page) derived types. These methods provide the ability to push pages onto the navigation stack, to pop pages from the navigation stack, and to perform stack manipulation.
 
 <a name="Performing_Navigation" />
 
 ## Performing Navigation
 
-In hierarchical navigation, the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) class is used to navigate through a stack of [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) objects. The following screenshots show the main components of the `NavigationPage` on each platform:
+In hierarchical navigation, the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) class is used to navigate through a stack of [`ContentPage`](xref:Xamarin.Forms.ContentPage) objects. The following screenshots show the main components of the `NavigationPage` on each platform:
 
 ![](hierarchical-images/navigationpage-components.png "NavigationPage Components")
 
-The layout of a [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) is dependent on the platform:
+The layout of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is dependent on the platform:
 
 - On iOS, a navigation bar is present at the top of the page that displays a title, and that has a *Back* button that returns to the previous page.
 - On Android, a navigation bar is present at the top of the page that displays a title, an icon, and a *Back* button that returns to the previous page. The icon is defined in the `[Activity]` attribute that decorates the `MainActivity` class in the Android platform-specific project.
 - On the Universal Windows Platform, a navigation bar is present at the top of the page that displays a title.
 
-On all the platforms, the value of the [`Page.Title`](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/) property will be displayed as the page title.
+On all the platforms, the value of the [`Page.Title`](xref:Xamarin.Forms.Page.Title) property will be displayed as the page title.
 
 > [!NOTE]
 > It's recommended that a `NavigationPage` should be populated with `ContentPage` instances only.
@@ -61,16 +61,16 @@ public App ()
 }
 ```
 
-This causes the `Page1Xaml` [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instance to be pushed onto the navigation stack, where it becomes the active page and the root page of the application. This is shown in the following screenshots:
+This causes the `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage) instance to be pushed onto the navigation stack, where it becomes the active page and the root page of the application. This is shown in the following screenshots:
 
 ![](hierarchical-images/mainpage.png "Root Page of Navigation Stack")
 
 > [!NOTE]
-> The [`RootPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.NavigationPage.RootPage/) property of a [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) instance provides access to the first page in the navigation stack.
+> The [`RootPage`](xref:Xamarin.Forms.NavigationPage.RootPage) property of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance provides access to the first page in the navigation stack.
 
 ### Pushing Pages to the Navigation Stack
 
-To navigate to `Page2Xaml`, it is necessary to invoke the [`PushAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)/) method on the [`Navigation`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Navigation/) property of the current page, as demonstrated in the following code example:
+To navigate to `Page2Xaml`, it is necessary to invoke the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) method on the [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property of the current page, as demonstrated in the following code example:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -83,22 +83,22 @@ This causes the `Page2Xaml` instance to be pushed onto the navigation stack, whe
 
 ![](hierarchical-images/secondpage.png "Page Pushed onto Navigation Stack")
 
-When the [`PushAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)/) method is invoked, the following events occur:
+When the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) method is invoked, the following events occur:
 
-- The page calling `PushAsync` has its [`OnDisappearing`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnDisappearing/) override invoked.
-- The page being navigated to has its [`OnAppearing`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnAppearing/) override invoked.
+- The page calling `PushAsync` has its [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) override invoked.
+- The page being navigated to has its [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) override invoked.
 - The `PushAsync` task completes.
 
 However, the precise order in which these events occur is platform dependent. For more information, see [Chapter 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) of Charles Petzold's Xamarin.Forms book.
 
 > [!NOTE]
-> Calls to the [`OnDisappearing`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnDisappearing/) and [`OnAppearing`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnAppearing/) overrides cannot be treated as guaranteed indications of page navigation. For example, on iOS, the `OnDisappearing` override is called on the active page when the application terminates.
+> Calls to the [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) and [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) overrides cannot be treated as guaranteed indications of page navigation. For example, on iOS, the `OnDisappearing` override is called on the active page when the application terminates.
 
 ### Popping Pages from the Navigation Stack
 
 The active page can be popped from the navigation stack by pressing the *Back* button on the device, regardless of whether this is a physical button on the device or an on-screen button.
 
-To programmatically return to the original page, the `Page2Xaml` instance must invoke the [`PopAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.PopAsync()/) method, as demonstrated in the following code example:
+To programmatically return to the original page, the `Page2Xaml` instance must invoke the [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) method, as demonstrated in the following code example:
 
 ```csharp
 async void OnPreviousPageButtonClicked (object sender, EventArgs e)
@@ -107,15 +107,15 @@ async void OnPreviousPageButtonClicked (object sender, EventArgs e)
 }
 ```
 
-This causes the `Page2Xaml` instance to be removed from the navigation stack, with the new topmost page becoming the active page. When the [`PopAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.PopAsync()/) method is invoked, the following events occur:
+This causes the `Page2Xaml` instance to be removed from the navigation stack, with the new topmost page becoming the active page. When the [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) method is invoked, the following events occur:
 
-- The page calling `PopAsync` has its [`OnDisappearing`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnDisappearing/) override invoked.
-- The page being returned to has its [`OnAppearing`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnAppearing/) override invoked.
+- The page calling `PopAsync` has its [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) override invoked.
+- The page being returned to has its [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) override invoked.
 - The `PopAsync` task returns.
 
 However, the precise order in which these events occur is platform dependent. For more information see [Chapter 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) of Charles Petzold's Xamarin.Forms book.
 
-As well as [`PushAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)/) and [`PopAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.PopAsync()/) methods, the [`Navigation`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Navigation/) property of each page also provides a [`PopToRootAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.PopToRootAsync()/) method, which is shown in the following code example:
+As well as [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) and [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) methods, the [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property of each page also provides a [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync) method, which is shown in the following code example:
 
 ```csharp
 async void OnRootPageButtonClicked (object sender, EventArgs e)
@@ -124,11 +124,11 @@ async void OnRootPageButtonClicked (object sender, EventArgs e)
 }
 ```
 
-This method pops all but the root [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) off the navigation stack, therefore making the root page of the application the active page.
+This method pops all but the root [`Page`](xref:Xamarin.Forms.Page) off the navigation stack, therefore making the root page of the application the active page.
 
 ### Animating Page Transitions
 
-The [`Navigation`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Navigation/) property of each page also provides overridden push and pop methods that include a `boolean` parameter that controls whether to display a page animation during navigation, as shown in the following code example:
+The [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property of each page also provides overridden push and pop methods that include a `boolean` parameter that controls whether to display a page animation during navigation, as shown in the following code example:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -156,7 +156,7 @@ Setting the `boolean` parameter to `false` disables the page-transition animatio
 
 ## Passing Data when Navigating
 
-Sometimes it's necessary for a page to pass data to another page during navigation. Two techniques for accomplishing this are passing data through a page constructor, and by setting the new page's [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) to the data. Each will now be discussed in turn.
+Sometimes it's necessary for a page to pass data to another page during navigation. Two techniques for accomplishing this are passing data through a page constructor, and by setting the new page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) to the data. Each will now be discussed in turn.
 
 ### Passing Data through a Page Constructor
 
@@ -169,7 +169,7 @@ public App ()
 }
 ```
 
-This code creates a `MainPage` instance, passing in the current date and time in ISO8601 format, which is wrapped in a [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) instance.
+This code creates a `MainPage` instance, passing in the current date and time in ISO8601 format, which is wrapped in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance.
 
 The `MainPage` instance receives the data through a constructor parameter, as shown in the following code example:
 
@@ -181,13 +181,13 @@ public MainPage (string date)
 }
 ```
 
-The data is then displayed on the page by setting the [`Label.Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.Text/) property, as shown in the following screenshots:
+The data is then displayed on the page by setting the [`Label.Text`](xref:Xamarin.Forms.Label.Text) property, as shown in the following screenshots:
 
 ![](hierarchical-images/passing-data-constructor.png "Data Passed Through a Page Constructor")
 
 ### Passing Data through a BindingContext
 
-An alternative approach for passing data to another page during navigation is by setting the new page's [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) to the data, as shown in the following code example:
+An alternative approach for passing data to another page during navigation is by setting the new page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) to the data, as shown in the following code example:
 
 ```csharp
 async void OnNavigateButtonClicked (object sender, EventArgs e)
@@ -205,7 +205,7 @@ async void OnNavigateButtonClicked (object sender, EventArgs e)
 }
 ```
 
-This code sets the [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) of the `SecondPage` instance to the `Contact` instance, and then navigates to the `SecondPage`.
+This code sets the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `SecondPage` instance to the `Contact` instance, and then navigates to the `SecondPage`.
 
 The `SecondPage` then uses data binding to display the `Contact` instance data, as shown in the following XAML code example:
 
@@ -267,7 +267,7 @@ public class SecondPageCS : ContentPage
 }
 ```
 
-The data is then displayed on the page by a series of [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) controls, as shown in the following screenshots:
+The data is then displayed on the page by a series of [`Label`](xref:Xamarin.Forms.Label) controls, as shown in the following screenshots:
 
 ![](hierarchical-images/passing-data-bindingcontext.png "Data Passed Through a BindingContext")
 
@@ -277,13 +277,13 @@ For more information about data binding, see [Data Binding Basics](~/xamarin-for
 
 ## Manipulating the Navigation Stack
 
-The [`Navigation`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Navigation/) property exposes a [`NavigationStack`](https://developer.xamarin.com/api/property/Xamarin.Forms.INavigation.NavigationStack/) property from which the pages in the navigation stack can be obtained. While Xamarin.Forms maintains access to the navigation stack, the `Navigation` property provides the [`InsertPageBefore`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.InsertPageBefore(Xamarin.Forms.Page,Xamarin.Forms.Page)/) and [`RemovePage`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.RemovePage(Xamarin.Forms.Page)/) methods for manipulating the stack by inserting pages or removing them.
+The [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property exposes a [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack) property from which the pages in the navigation stack can be obtained. While Xamarin.Forms maintains access to the navigation stack, the `Navigation` property provides the [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) and [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) methods for manipulating the stack by inserting pages or removing them.
 
-The [`InsertPageBefore`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.InsertPageBefore(Xamarin.Forms.Page,Xamarin.Forms.Page)/) method inserts a specified page in the navigation stack before an existing specified page, as shown in the following diagram:
+The [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) method inserts a specified page in the navigation stack before an existing specified page, as shown in the following diagram:
 
 ![](hierarchical-images/insert-page-before.png "Inserting a Page in the Navigation Stack")
 
-The [`RemovePage`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.RemovePage(Xamarin.Forms.Page)/) method removes the specified page from the navigation stack, as shown in the following diagram:
+The [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) method removes the specified page from the navigation stack, as shown in the following diagram:
 
 ![](hierarchical-images/remove-page.png "Removing a Page from the Navigation Stack")
 
@@ -305,11 +305,11 @@ async void OnLoginButtonClicked (object sender, EventArgs e)
 
 ```
 
-Provided that the user's credentials are correct, the `MainPage` instance is inserted into the navigation stack before the current page. The [`PopAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.PopAsync()/) method then removes the current page from the navigation stack, with the `MainPage` instance becoming the active page.
+Provided that the user's credentials are correct, the `MainPage` instance is inserted into the navigation stack before the current page. The [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) method then removes the current page from the navigation stack, with the `MainPage` instance becoming the active page.
 
 ## Summary
 
-This article demonstrated how to use the [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) class to perform navigation in a stack of pages. This class provides a hierarchical navigation experience where the user is able to navigate through pages, forwards and backwards, as desired. The class implements navigation as a last-in, first-out (LIFO) stack of [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) objects.
+This article demonstrated how to use the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) class to perform navigation in a stack of pages. This class provides a hierarchical navigation experience where the user is able to navigate through pages, forwards and backwards, as desired. The class implements navigation as a last-in, first-out (LIFO) stack of [`Page`](xref:Xamarin.Forms.Page) objects.
 
 
 ## Related Links
@@ -320,4 +320,4 @@ This article demonstrated how to use the [`NavigationPage`](https://developer.xa
 - [LoginFlow (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)
 - [How to Create a Sign In Screen Flow in Xamarin.Forms (Xamarin University Video) Sample](http://xamarinuniversity.blob.core.windows.net/lightninglectures/CreateASignIn.zip)
 - [How to Create a Sign In Screen Flow in Xamarin.Forms (Xamarin University Video)](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
-- [NavigationPage](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/)
+- [NavigationPage](xref:Xamarin.Forms.NavigationPage)

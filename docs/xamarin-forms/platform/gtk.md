@@ -206,7 +206,7 @@ GtkThemes.LoadCustomTheme ("Themes/gtkrc");
 
 ### Native Forms
 
-Native Forms allows Xamarin.Forms [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derived pages to be consumed by native projects, including GTK# projects. This can be accomplished by creating an instance of the [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derived page and converting it to the native GTK# type using the `CreateContainer` extension method:
+Native Forms allows Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived pages to be consumed by native projects, including GTK# projects. This can be accomplished by creating an instance of the [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page and converting it to the native GTK# type using the `CreateContainer` extension method:
 
 ```csharp
 var settingsView = new SettingsView().CreateContainer();

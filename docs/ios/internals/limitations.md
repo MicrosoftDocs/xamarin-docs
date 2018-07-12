@@ -92,9 +92,9 @@ This works for reference types (as the reflection+create a
 	device.
 
  **Workaround**: Manually implement
-	the [IEqualityComparer&lt;TKey&gt;](https://developer.xamarin.com/api/type/System.Collections.Generic.IEqualityComparer%601/) 
+	the [IEqualityComparer&lt;TKey&gt;](xref:System.Collections.Generic.IEqualityComparer`1) 
 	interface in a new type and provide an instance of that type
-	to the [Dictionary&lt;TKey, TValue&gt;](https://developer.xamarin.com/api/type/System.Collections.Generic.Dictionary%3CTKey,TValue%3E/) [(IEqualityComparer&lt;TKey&gt;)](https://developer.xamarin.com/api/type/System.Collections.Generic.IEqualityComparer%601/)
+	to the [Dictionary&lt;TKey, TValue&gt;](xref:System.Collections.Generic.Dictionary`2) [(IEqualityComparer&lt;TKey&gt;)](xref:System.Collections.Generic.IEqualityComparer`1)
 	constructor.
 
 
@@ -143,7 +143,7 @@ But the entire Reflection API, including Type.GetType
 To call a native function through a C# delegate, the delegate's declaration 
 must be decorated with one of the following attributes:
 
-- [UnmanagedFunctionPointerAttribute](https://developer.xamarin.com/api/type/System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute/) 
+- [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) 
   (preferred, since it is cross-platform and compatible with .NET Standard 
    1.1+)
 - [MonoNativeFunctionWrapperAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoNativeFunctionWrapperAttribute)

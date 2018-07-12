@@ -19,7 +19,7 @@ Effects allow the native controls on each platform to be customized, and are typ
 
 ## [Creating an Effect](creating.md)
 
-Effects simplify the customization of a control. This article demonstrates how to create an effect that changes the background color of the [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control when the control gains focus.
+Effects simplify the customization of a control. This article demonstrates how to create an effect that changes the background color of the [`Entry`](xref:Xamarin.Forms.Entry) control when the control gains focus.
 
 ## [Passing Parameters to an Effect](passing-parameters/index.md)
 
