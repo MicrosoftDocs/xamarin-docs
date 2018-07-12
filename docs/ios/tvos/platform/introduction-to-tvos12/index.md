@@ -21,9 +21,8 @@ ms.date: 06/25/2018
 > - Review the [getting started](~/ios/platform/introduction-to-ios12/get-started.md)
 >   guide for instructions on how to get started building iOS 12 and tvOS
 >   12 apps with Xamarin.
-> - For more information, read the
->   [release notes](https://releases.xamarin.com/preview-release-xcode-10-beta/)
->   for the Xamarin preview release.
+> - For more information, read the Xamarin preview
+>   [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
 
 This document provides a high-level overview of new and updated tvOS 12
 features for which Xamarin's preview release currently provides C# bindings.
@@ -53,4 +52,4 @@ interface, and other related classes and methods.
 - [tvOS – Apple Developer (Apple)](https://developer.apple.com/tvos/)
 - [What's new in tvOS 12 (Apple) (video)](https://developer.apple.com/videos/play/wwdc2018/208/)
 - [TV (Apple)](https://www.apple.com/tv/)
-- Xamarin preview [release notes](https://releases.xamarin.com/preview-release-xcode-10-beta/)
+- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)

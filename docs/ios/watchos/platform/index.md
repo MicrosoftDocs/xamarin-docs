@@ -10,9 +10,16 @@ ms.date: 06/25/2018
 ---
 # watchOS platform features
 
-This document links to various guides that describe watchOS platform
-features such as Apple Pay, notifications, complications, proactive
-suggestions, workout apps, and more.
+## [Introduction to watchOS 5](introduction-to-watchos5/index.md)
+
+> [!WARNING]
+> Xamarin's watchOS 5 support is currently in preview, which means
+> that it may contain bugs, is not feature-complete, and may change.
+> Use it for experimentation only.
+
+This document provides a high-level overview of new and updated features in
+watchOS 5 that are available for use when building watchOS apps with
+Xamarin.
 
 ## [Introduction to watchOS 4](introduction-to-watchos4.md)
 

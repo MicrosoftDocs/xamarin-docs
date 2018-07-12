@@ -6,7 +6,7 @@ ms.assetid: E9A7B68A-E164-4C5C-86AC-B2A3E7A30DA1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 06/25/2018
+ms.date: 07/08/2018
 ---
 # Getting started with macOS Mojave
 
@@ -18,9 +18,8 @@ ms.date: 06/25/2018
 > Use it for experimentation only.
 
 > [!NOTE]
-> For more information, read the
-> [release notes](https://releases.xamarin.com/preview-release-xcode-10-beta/)
-> for the Xamarin preview release.
+> For more information, read the Xamarin preview 
+> [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
 
 This document describes how to get set up to build macOS Mojave apps with
 Xamarin.Mac. It discusses how to download Xcode 10 and update Visual Studio
@@ -40,7 +39,7 @@ for Mac.
    Studio for Mac; it installs some tools that Xamarin requires.
 
 3. **Update Visual Studio for Mac** – Follow the
-   instructions in the [release notes](https://releases.xamarin.com/preview-release-xcode-10-beta/)
+   instructions on the [release blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
    to install the Xamarin preview.
 
 4. _(optional)_ **Install the latest macOS Mojave beta on your Mac** –
@@ -60,12 +59,10 @@ for Mac.
    > applications that call new macOS Mojave APIs:
    > - Read [Apple's release notes](https://developer.apple.com/download/)
    >   for the operating system update.
-   > - Read the [release notes](https://releases.xamarin.com/preview-release-xcode-10-beta/) 
-   >   for the Xamarin preview release. Note that this first preview does 
-   >   not include bindings for new macOS Mojave AppKit APIs 
-   >   (such as Dark Mode).
+   > - Read the Xamarin preview
+   >   [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
 
 ## Related links
 
 - [Download Xcode 10](https://developer.apple.com/download/)
-- Xamarin preview [release notes](https://releases.xamarin.com/preview-release-xcode-10-beta/)
+- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)

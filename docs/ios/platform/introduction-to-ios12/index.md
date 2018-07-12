@@ -6,7 +6,7 @@ ms.assetid: 99EA7090-315D-493C-87D3-26AB73D9E1A9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 06/25/2018
+ms.date: 07/08/2018
 ---
 # Introduction to iOS 12
 
@@ -20,9 +20,8 @@ ms.date: 06/25/2018
 > [!NOTE]
 > - Review the [getting started](get-started.md) guide for instructions
 >   on how to get started building iOS 12 apps with Xamarin.
-> - For more information, read the
->   [release notes](https://releases.xamarin.com/preview-release-xcode-10-beta/)
->   for the Xamarin preview release.
+> - For more information, read the Xamarin preview
+>   [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
 
 This document provides a high-level description of some iOS 12 APIs for
 which Xamarin's preview release provides C# bindings.
@@ -32,8 +31,9 @@ which Xamarin's preview release provides C# bindings.
 ARKit is the augmented reality framework included with iOS. ARKit 2 allows
 multiple users to interact with each other in an augmented reality scene,
 makes it possible to persist objects in space and return to them at a
-later time, and provides for 2D and 3D image recognition and tracking. iOS
-12 also provides AR Quick Look, a way to render usdz AR models in your apps.
+later time, and provides 2D image recognition and tracking and 3D
+object recognition. iOS 12 also provides AR Quick Look, a way to render
+usdz AR models in your apps.
 
 ## Siri shortcuts
 
@@ -42,6 +42,12 @@ applications with Siri. With Siri shortcuts, users can use voice commands
 to open content or kick off tasks in their apps. Siri will learn when
 certain shortcuts are more likely to be used and suggest them to the user
 via notifications.
+
+## Core ML 2
+
+Core ML 2 reduces application size through model quantization and flexible
+models, improves application performance with a new batch prediction API,
+and uses custom models to support advances in machine learning.
 
 ## Notification improvements
 
@@ -53,12 +59,11 @@ Notification content extensions in iOS 12 allow for custom user
 interfaces and dynamic actions. These features enable richer, more
 relevant experiences in user notifications.
 
-## Core ML 2: Natural Language framework
+## Natural Language framework
 
-That Natural Language framework, part of Core ML 2, enables applications
-to perform various types of language analysis. For example, it can be used
-to identify parts of speech and determine the language represented by a
-block of text.
+The Natural Language framework enables applications to perform various
+types of language analysis. For example, it can be used to identify parts
+of speech and determine the language represented by a block of text.
 
 ## CarPlay
 
@@ -79,8 +84,21 @@ fields.
 With iOS 12, third-party password manager applications can provide an
 extension to supply username and password values to login fields.
 
+## HealthKit updates
+
+iOS 11.3 introduced [Health Records](https://www.apple.com/healthcare/health-records/),
+which allows users to download their health record information from
+various healthcare institutions and view it on their iOS devices. iOS 12
+adds APIs that allow third-party applications to securely access this data.
+
+## iMessage App Presentation Contexts
+
+In iOS 12, iMessage apps support presentation contexts, which allow the
+apps to run as a normal iMessage app or in the context of a photo or
+video effect.
+
 ## Related links
 
 - [Get Ready for iOS 12 (Apple)](https://developer.apple.com/ios/)
 - [iOS 12 Preview (Apple)](https://www.apple.com/ios/ios-12-preview/)
-- Xamarin preview [release notes](https://releases.xamarin.com/preview-release-xcode-10-beta/)
+- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
