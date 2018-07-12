@@ -26,7 +26,7 @@ the Java APIs from C# or other .NET languages.
 
 These are some of our design principles for the Xamarin.Android binding
 
--  Conform to the  [.NET Framework Design Guidelines](http://msdn.microsoft.com/en-us/library/ms229042.aspx).
+-  Conform to the  [.NET Framework Design Guidelines](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
 
 -  Allow developers to subclass Java classes.
 
@@ -87,19 +87,19 @@ provide lists, sets, and maps. We expose these elements using the
 interfaces in our binding. The fundamental mappings are:
 
 -   [java.util.Set<E>](http://developer.android.com/reference/java/util/Set.html) maps to
-    system type [ICollection<T>](http://msdn.microsoft.com/en-us/library/92t2ye13.aspx),
+    system type [ICollection<T>](xref:System.Collections.Generic.ICollection`1),
     helper class [Android.Runtime.JavaSet<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaSet%601/).
 
 -   [java.util.List<E>](http://developer.android.com/reference/java/util/List.html) maps to
-    system type [IList<T>](http://msdn.microsoft.com/en-us/library/5y536ey6.aspx),
+    system type [IList<T>](xref:System.Collections.Generic.IList`1),
     helper class [Android.Runtime.JavaList<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaList%601/).
 
 -   [java.util.Map<K,V>](http://developer.android.com/reference/java/util/Map.html) maps to
-    system type [IDictionary<TKey,TValue>](http://msdn.microsoft.com/en-us/library/s4ys34ea.aspx),
+    system type [IDictionary<TKey,TValue>](xref:System.Collections.Generic.IDictionary`2),
     helper class [Android.Runtime.JavaDictionary<K,V>](https://developer.xamarin.com/api/type/Android.Runtime.JavaDictionary%602/).
 
 -   [java.util.Collection<E>](http://developer.android.com/reference/java/util/Collection.html) maps to
-    system type [ICollection<T>](http://msdn.microsoft.com/en-us/library/92t2ye13.aspx),
+    system type [ICollection<T>](xref:System.Collections.Generic.ICollection`1),
     helper class [Android.Runtime.JavaCollection<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaCollection%601/).
 
 We have provided helper classes to facilitate faster copyless
@@ -280,7 +280,7 @@ are notable examples.
 The `Runnable` interface contains a single void method,
 [run()](https://developer.xamarin.com/api/member/Java.Lang.Runnable.Run%28%29/). It therefore lends
 itself to binding in C# as a
-[System.Action](http://msdn.microsoft.com/en-us/library/system.action.aspx)
+[System.Action](xref:System.Action)
 delegate. We have provided overloads in the binding which accept an
 `Action` parameter for all API members which consume a `Runnable` in
 the native API, e.g.

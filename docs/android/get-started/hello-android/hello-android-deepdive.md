@@ -154,16 +154,16 @@ Look at the items inside the Project to see each folder and its purpose:
     file that describes all of the requirements for the Xamarin.Android
     application, including name, version number, and permissions. The
     **Properties** folder also houses
-    [AssemblyInfo.cs](http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.applicationservices.assemblyinfo(v=vs.110).aspx),
+    [AssemblyInfo.cs](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo),
     a .NET assembly metadata file. It is a good practice to fill this
     file with some basic information about your application.
 
 -   **References** &ndash; Contains the assemblies required to build
     and run the application. If you expand the References directory,
     you'll see references to .NET assemblies such as
-    [System](http://msdn.microsoft.com/en-us/library/system%28v=vs.110%29.aspx),
+    [System](xref:System),
     System.Core, and
-    [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml%28v=vs.110%29.aspx),
+    [System.Xml](xref:System.Xml),
     as well as a reference to Xamarin's Mono.Android assembly.
 
 

@@ -111,7 +111,7 @@ The following build targets are defined for Xamarin.Android projects:
 
 MSBuild properties control the behavior of the targets. They are 
 specified within the project file, e.g. **MyApp.csproj**, within 
-an [MSBuild PropertyGroup element](http://msdn.microsoft.com/en-us/library/t4w159bs.aspx). 
+an [MSBuild PropertyGroup element](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild).
 
 -   **Configuration** &ndash; Specifies the build configuration to use,
     such as "Debug" or "Release". The
@@ -139,7 +139,7 @@ an [MSBuild PropertyGroup element](http://msdn.microsoft.com/en-us/library/t4w15
     string or `Full`.
 
 -   **DebugType** &ndash; Specifies the
-    [type of debug symbols](http://msdn.microsoft.com/en-us/library/s5c8athz.aspx) 
+    [type of debug symbols](https://docs.microsoft.com/visualstudio/msbuild/csc-task)
     to generate as part of the build, which also impacts whether the
     Application is debuggable. Possible values include:
 
@@ -814,7 +814,7 @@ To use the keystore generated above, use the property group:
 ## Build Actions
 
 *Build actions* are 
-[applied to files](http://msdn.microsoft.com/en-us/library/bb629388.aspx) 
+[applied to files](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items) 
 within the project and control how the file is processed. 
 
 <a name="AndroidEnvironment" />

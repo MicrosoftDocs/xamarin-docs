@@ -18,9 +18,9 @@ developers to access the underlying system. The Mono runtime is written
 in the C language.
 
 You can be using the
-[System](http://msdn.microsoft.com/en-us/library/system.aspx),
-[System.IO](http://msdn.microsoft.com/en-us/library/system.io.aspx),
-[System.Net](http://msdn.microsoft.com/en-us/library/system.net.aspx)
+[System](xref:System),
+[System.IO](xref:System.IO),
+[System.Net](xref:System.Net)
 and the rest of the .NET class libraries to access the underlying Linux
 operating system facilities.
 
