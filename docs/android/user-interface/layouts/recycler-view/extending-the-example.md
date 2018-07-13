@@ -1,11 +1,12 @@
 ---
 title: "Extending the RecyclerView Example"
+description: "Adding item-click event handlers to the RecyclerView example app."
 ms.prod: xamarin
 ms.assetid: 707EE1CE-C164-485B-944C-82C6795E8A24
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 07/13/2018
 ---
 
 # Extending the RecyclerView Example
@@ -66,13 +67,19 @@ void OnItemClick (object sender, int position)
 
 Next, a line of code is needed to register the `OnItemClick` handler
 with `PhotoAlbumAdapter`. A good place to do this is immediately after
-`PhotoAlbumAdapter` is created (in the main activity's `OnCreate` method):
+`PhotoAlbumAdapter` is created: 
 
 ```csharp
 mAdapter = new PhotoAlbumAdapter (mPhotoAlbum);
 mAdapter.ItemClick += OnItemClick;
 
 ```
+
+In this basic example, handler registration takes place in the main
+activity's `OnCreate` method, but a production app might 
+register the handler in `OnResume` and unregister it in `OnPause`
+&ndash; see [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md) 
+for more information.
 
 `PhotoAlbumAdapter` will now call `OnItemClick` when it receives an item-click
 event. The next step is to create a handler in the adapter that raises this

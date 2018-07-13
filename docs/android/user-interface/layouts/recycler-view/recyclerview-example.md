@@ -1,15 +1,15 @@
 ---
 title: "A Basic RecyclerView Example"
+description: "An example app that demonstrates how to use RecyclerView."
 ms.prod: xamarin
 ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 07/13/2018
 ---
 
 # A Basic RecyclerView Example
-
 
 To understand how `RecyclerView` works in a typical application, this
 topic explores the
