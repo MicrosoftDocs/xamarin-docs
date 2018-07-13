@@ -21,33 +21,31 @@ illustrated below:
 
  [![](elements-api-walkthrough-images/01-task-list-app.png "Selecting the row will navigate to the detail screen that allows us to update the task description and the due date")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
- <a name="Elements_API_Walkthrough" />
+ ## Setting up MT.D
 
+MT.D is distributed with Xamarin.iOS. To use it, right-click on the
+**References** node of a Xamarin.iOS project in Visual Studio 2017 or
+Visual Studio for Mac and add a reference to the **MonoTouch.Dialog-1**
+assembly. Then, add `using MonoTouch.Dialog` statements in your source
+code as necessary.
 
-## Elements API Walkthrough
+## Elements API walkthrough
 
 In the [Introduction to MonoTouch Dialog](~/ios/user-interface/monotouch.dialog/index.md) article, we gained a solid understanding of the different
 parts of MT.D. Let’s use the Elements API to put them all together into an
 application.
 
- <a name="Setting_up_the_Multi-Screen_Application" />
-
-
-## Setting up the Multi-Screen Application
+## Setting up the multi-screen application
 
 To start the screen creation process, MonoTouch.Dialog creates a `DialogViewController`, and then adds a `RootElement`.
 
 To create a multi-screen application with MonoTouch.Dialog, we need to:
 
-1.  Create a  `UINavigationController.`
-1.  Create a  `DialogViewController.`
-1.  Add the  `DialogViewController` as the root of the  `UINavigationController.` 
-1.  Add a  `RootElement` to the  `DialogViewController.`
-1.  Add  `Sections` and  `Elements` to the  `RootElement.` 
-
-
- <a name="Using_A_UINavigationController" />
-
+1.  Create a `UINavigationController.`
+1.  Create a `DialogViewController.`
+1.  Add the `DialogViewController` as the root of the  `UINavigationController.` 
+1.  Add a `RootElement` to the  `DialogViewController.`
+1.  Add `Sections` and  `Elements` to the  `RootElement.` 
 
 ### Using A UINavigationController
 
@@ -85,10 +83,7 @@ present the screen shown below:
 
 Let’s see how to use MonoTouch.Dialog’s hierarchical structure of `Sections` and `Elements` to add more screens.
 
- <a name="Creating_the_Dialog_Screens" />
-
-
-### Creating the Dialog Screens
+### Creating the Dialog screens
 
 A `DialogViewController` is a `UITableViewController`
 subclass that MonoTouch.Dialog uses to add screens. MonoTouch.Dialog creates
@@ -97,9 +92,6 @@ can have `Section` instances that represent the sections of a table.
 The sections are made up of elements, other sections, or even other `RootElements`. By nesting `RootElements`,
 MonoTouch.Dialog automatically creates a navigation-style application, as
 we’ll see next.
-
- <a name="Using_DialogViewController" />
-
 
 ### Using DialogViewController
 
@@ -153,15 +145,10 @@ public class Task
 }
 ```
 
- []()
-
 The task’s `Name` property is used to create the `RootElement`’s caption along with a counter variable named `n` that is incremented for each new task. MonoTouch.Dialog turns the
 elements into the rows that are added to the `TableView` when each `taskElement` is added.
 
- <a name="Presenting_and_Managing_Dialog_Screens" />
-
-
-## Presenting and Managing Dialog Screens
+## Presenting and managing Dialog Screens
 
 We used a `RootElement` so that MonoTouch.Dialog would
 automatically create a new screen for each task’s details and navigate to it
@@ -185,9 +172,6 @@ preserved automatically. We can demonstrate this by editing the date and then
 navigating back and forth between the root screen and various task details,
 where the values in the detail screens are preserved.
 
- <a name="Summary" />
-
-
 ## Summary
 
 This article presented a walkthrough that showed how to use the
@@ -195,8 +179,7 @@ MonoTouch.Dialog Elements API. It covered the basic steps to create a
 multi-screen application with MT.D, including how to use a `DialogViewController` and how to add Elements and Sections to create
 screens. In addition, it showed how to use MT.D in conjunction with a `UINavigationController`.
 
-
-## Related Links
+## Related links
 
 - [MTDWalkthrough (sample)](https://developer.xamarin.com/samples/MTDWalkthrough/)
 - [Screencast - Miguel de Icaza creates an iOS login screen with MonoTouch.Dialog](http://youtu.be/3butqB1EG0c)

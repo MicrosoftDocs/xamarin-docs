@@ -79,6 +79,14 @@ including:
 -   **Elements Reference** – A comprehensive list of the built-in elements of MT.D. 
 -   **Advanced Usage** – This covers advanced features such as pull-to-refresh, search, background image loading, using LINQ to build out element hierarchies, and creating custom elements, cells, and controllers for use with MT.D. 
 
+## Setting up MT.D
+
+MT.D is distributed with Xamarin.iOS. To use it, right-click on the
+**References** node of a Xamarin.iOS project in Visual Studio 2017 or
+Visual Studio for Mac and add a reference to the **MonoTouch.Dialog-1**
+assembly. Then, add `using MonoTouch.Dialog` statements in your source
+code as necessary.
+
 ## Understanding the Pieces of MT.D
 
 Even when using the Reflection API, MT.D creates an Element hierarchy under

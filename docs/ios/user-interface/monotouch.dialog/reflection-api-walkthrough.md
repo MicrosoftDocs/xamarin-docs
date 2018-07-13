@@ -7,7 +7,6 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ---
-
 # Creating a Xamarin.iOS application using the Reflection API
 
 The MT.D Reflection API allows classes to be decorated with attributes that
@@ -17,10 +16,15 @@ doesn’t provide the fine-grained control that the elements API does, it
 reduces complexity by automatically building out the element hierarchy based on
 class decoration.
 
- <a name="Getting_Started_with_the_Reflection_API" />
+## Setting up MT.D
 
+MT.D is distributed with Xamarin.iOS. To use it, right-click on the
+**References** node of a Xamarin.iOS project in Visual Studio 2017 or
+Visual Studio for Mac and add a reference to the **MonoTouch.Dialog-1**
+assembly. Then, add `using MonoTouch.Dialog` statements in your source
+code as necessary.
 
-## Getting Started with the Reflection API
+## Getting started with the Reflection API
 
 Using the Reflection API is as simple as:
 
@@ -34,9 +38,7 @@ this example, we’ll build a simple data entry screen as shown below:
 
  [![](reflection-api-walkthrough-images/01-expense-entry.png "In this example, we'll build a simple data entry screen as shown here")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
 
- <a name="Creating_a_Class_with_MT.D_Attributes" />
-
-## Creating a Class with MT.D Attributes
+## Creating a class with MT.D attributes
 
 The first thing we need to use the Reflection API is a class decorated with
 attributes. These attributes will be used by MT.D internally to create objects
@@ -73,9 +75,6 @@ to the table with a text entry field and the specified caption. Similarly, the `
 right of the table cell. MT.D uses the field name, automatically adding a space,
 to create the caption in this case, since it is not specified in an
 attribute.
-
- <a name="Adding_the_BindingContext" />
-
 
 ## Adding the BindingContext
 
@@ -116,9 +115,6 @@ public override bool FinishedLaunching (UIApplication app,
 
 Running the application now results in the screen shown above being
 displayed.
-
- <a name="Adding_a_UINavigationController" />
-
 
 ### Adding a UINavigationController
 
@@ -179,7 +175,7 @@ use a `BindingContext` to bind data from a class to the element
 hierarchy that is created, as well as how to use MT.D with a `UINavigationController`.
 
 
-## Related Links
+## Related links
 
 - [MTDReflectionWalkthrough (sample)](https://developer.xamarin.com/samples/MTDReflectionWalkthrough/)
 - [Screencast - Miguel de Icaza creates an iOS login screen with MonoTouch.Dialog](http://youtu.be/3butqB1EG0c)

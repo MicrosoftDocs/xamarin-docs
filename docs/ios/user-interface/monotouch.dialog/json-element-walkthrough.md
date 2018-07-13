@@ -7,8 +7,7 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ---
-
-# Using JSON to create a User Interface in Xamarin.iOS
+# Using JSON to create a user interface in Xamarin.iOS
 
 _MonoTouch.Dialog (MT.D) includes support for dynamic UI generation via JSON data. In this tutorial, we’ll walk through how to use a JSONElement to create a user interface from JSON that is either included with an application, or loaded from a remote Url._
 
@@ -25,7 +24,15 @@ completely declared using JSON:
 Let’s revisit the example from the [Elements API Walkthrough](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) tutorial, showing how to add a task detail screen using
 JSON.
 
-## JSON Walkthrough
+## Setting up MT.D
+
+MT.D is distributed with Xamarin.iOS. To use it, right-click on the
+**References** node of a Xamarin.iOS project in Visual Studio 2017 or
+Visual Studio for Mac and add a reference to the **MonoTouch.Dialog-1**
+assembly. Then, add `using MonoTouch.Dialog` statements in your source
+code as necessary.
+
+## JSON walkthrough
 
 The example for this walkthrough allows tasks to be created. When a task is
 selected on the first screen, a detail screen is presented as shown:
@@ -72,10 +79,7 @@ Notice the JSON above includes an id for each element. Any element can
 include an id, to reference it at runtime. We’ll see how this is used
 in a moment when we show how to load the JSON in code.
 
- <a name="Loading_the_JSON_in_Code" />
-
-
-## Loading the JSON in Code
+## Loading the JSON in code
 
 Once the JSON has been defined, we need to load it into MT.D using the `JsonElement` class. Assuming a file with the JSON we created above
 has been added to the project with the name sample.json and given a build action
@@ -102,10 +106,7 @@ _addButton.Clicked += (sender, e) => {
 };
 ```
 
- <a name="Accessing_Elements_at_Runtime" />
-
-
-## Accessing Elements at Runtime
+## Accessing elements at runtime
 
 Recall we added an id to both elements when we declared them in the JSON
 file. We can use the id property to access each element at runtime to
@@ -139,10 +140,7 @@ _addButton.Clicked += (sender, e) => {
 };
 ```
 
- <a name="Loading_JSON_from_a_Url" />
-
-
-## Loading JSON from a Url
+## Loading JSON from a url
 
 MT.D also supports dynamically loading JSON from an external Url by simply
 passing the Url to the constructor of the `JsonElement`. MT.D will
@@ -190,9 +188,6 @@ navigates to the second view, as shown in the screenshot below:
 
  [![](json-element-walkthrough-images/04-json-web-example.png "The file will be retrieved and parsed by MT.D when the user navigates to the second view")](json-element-walkthrough-images/04-json-web-example.png#lightbox)
 
- <a name="Summary" />
-
-
 ## Summary
 
 This article showed how to create a using interface with MT.D from JSON. It
@@ -200,8 +195,7 @@ showed how to load JSON included in a file with the application as well as from
 a remote Url. It also showed how to access elements described in JSON at
 runtime.
 
-
-## Related Links
+## Related links
 
 - [MTDJsonDemo (sample)](https://developer.xamarin.com/samples/MTDJsonDemo/)
 - [Screencast - Miguel de Icaza creates an iOS login screen with MonoTouch.Dialog](http://youtu.be/3butqB1EG0c)
