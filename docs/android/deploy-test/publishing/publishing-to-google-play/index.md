@@ -230,7 +230,7 @@ information about how to manually upload an APK, see
 [Manually Uploading the APK](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md).
 
 [Creating a New Certificate](~/android/deploy-test/signing/index.md#newcert),
-discussed creatin a new certificate for signing Android apps. The
+discussed creating a new certificate for signing Android apps. The
 following steps outline how to publish a Xamarin.Android app to Google
 Play:
 
