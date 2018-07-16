@@ -103,7 +103,7 @@ supported (HAXM)** option:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-Beginning with Visual Studio for Mac build 7.2 (build 559) , a
+Beginning with Visual Studio for Mac version 7.2 (build 559) , a
 performance warning dialog may be displayed when you first deploy your
 app to the Android Emulator. These warning dialogs are explained below.
 
