@@ -37,7 +37,7 @@ Your project structure should now look like:
 
 Define your newly-created class as a subtype of `Urho.Application` and override its `Start` method:
 
-```csharp
+```fsharp
 namespace HelloWorldUrho1
 
 open Urho
@@ -70,7 +70,7 @@ Before this code can run, though, UrhoSharp must be initialized.
 
 Open the AppDelegate.fs file and modify the `FinishedLaunching` method as follows:
 
-```csharp
+```fsharp
 namespace HelloWorldUrho1
 
 open System
