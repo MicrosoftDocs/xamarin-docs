@@ -9,8 +9,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
 ---
-
-# Hello, iOS Multiscreen – Deep Dive
+# Hello, iOS Multiscreen – deep dive
 
 In the Quickstart walkthrough, we built and ran our first multi-screen Xamarin.iOS application. Now it’s time to develop a
 deeper understanding of iOS navigation and architecture.
@@ -20,7 +19,7 @@ Then we dive into the Navigation Controller and learn to use it to provide a fam
 
 <a name="Model_View_Controller" />
 
-## Model View Controller (MVC)
+## Model-View-Controller (MVC)
 
 In the [Hello, iOS](~/ios/get-started/hello-ios/index.md) tutorial, we learned that iOS applications have only one *Window* that View Controllers are in charge of loading their *Content View Hierarchies* into the Window. In the second
 Phoneword walkthrough, we added a second screen to our application and passed some data – a list of phone numbers –
@@ -32,7 +31,7 @@ In our example, data was collected in the first screen, passed from the first Vi
 the second screen. This separation of screens, View Controllers, and data follows the *Model, View, Controller (MVC)* pattern. In
 the next few sections, we discuss the benefits of the pattern, its components, and how we use it in our Phoneword application.
 
-### Benefits of the MVC Pattern
+### Benefits of the MVC pattern
 
 Model-View-Controller is a *design pattern* – a reusable architectural solution to a common problem or use case in code. MVC is an
 architecture for applications with a *Graphical User Interface (GUI)*. It assigns objects in the application one of three roles -
@@ -46,7 +45,6 @@ reuse code and views. Let’s jump in and take a look at each of the three roles
 
 > [!NOTE]
 > The MVC pattern is loosely analogous to the structure of ASP.NET pages or WPF applications. In these examples, the View is the component that is actually responsible for describing the UI and corresponds to the ASPX (HTML) page in ASP.NET or to XAML in a WPF application. The Controller is the component that is responsible for managing the View, which corresponds to the code-behind in ASP.NET or WPF.
-
 
 ### Model
 
@@ -65,7 +63,6 @@ not have any real Model data.
 > [!NOTE]
 > In some literature, the Model portion of the MVC pattern can refer to the entire application backend, not just the data that is displayed on the UI. In this guide we use a modern interpretation of the Model, but the distinction is not particularly important.
 
-
 ### View
 
 A View is the component that’s responsible for rendering the user interface. In nearly all platforms that use the MVC pattern, the user interface is composed of a hierarchy of views. We can think of a View in MVC as a view hierarchy with a single view – known as the root view - at the top of the hierarchy and any number of child views (known as or subviews) below it. In iOS, a screen’s Content View Hierarchy corresponds to the View component in MVC.
@@ -82,9 +79,9 @@ Controllers can also manage other Controllers. For example, one Controller might
 of Controllers to monitor their order and the transitions between them. In the next section, we’ll see an example of a Controller that manages other Controllers as we
 introduce a special type of iOS View Controller called a *Navigation Controller*.
 
-## Navigation Controller
+## Navigation controller
 
-In the Phoneword application, we used a *Navigation Controller* to help manage navigation between multiple screens. The Navigation Controller is a
+In the Phoneword application, we used a Navigation Controller to help manage navigation between multiple screens. The Navigation Controller is a
 specialized `UIViewController` represented by the `UINavigationController` class. Instead of managing a single Content View Hierarchy, the
 Navigation Controller manages other View Controllers, as well as its own special Content View Hierarchy in the form of a navigation
 toolbar that includes a title, back button, and other optional features.
@@ -106,35 +103,36 @@ The Navigation Controller serves three primary functions:
 	[![](hello-ios-multiscreen-deepdive-images/03.png "This diagram illustrates 'popping' a card off the stack")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
--  **Provides a Title Bar** – The top portion of the  **Navigation Controller** is called the  *Title Bar* . It’s responsible for displaying the View Controller title, as illustrated by the diagram below:  
+-  **Provides a Title Bar** – The top portion of the  Navigation Controller is called the  *Title Bar* . It’s responsible for displaying the View Controller title, as illustrated by the diagram below:  
 
 	[![](hello-ios-multiscreen-deepdive-images/04.png "The Title Bar is responsible for displaying the View Controller title")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
+### Root view controller
 
-
-
-### Root View Controller
-
-A **Navigation Controller** doesn’t manage a Content View Hierarchy, so it has nothing to display on its own.
-Instead, a **Navigation Controller** is paired with a *Root View Controller*:
+A Navigation Controller doesn’t manage a Content View Hierarchy, so it has nothing to display on its own.
+Instead, a Navigation Controller is paired with a *Root View Controller*:
 
  [![](hello-ios-multiscreen-deepdive-images/05.png "A Navigation Controller is paired with a Root View Controller")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
-The Root View Controller represents the first View Controller in the **Navigation Controller’s** stack, and the Root View Controller’s
+The Root View Controller represents the first View Controller in the Navigation Controller’s stack, and the Root View Controller’s
 Content View Hierarchy is the first Content View Hierarchy to be loaded into the Window. If we want to put our entire application on the
-Navigation Controller’s stack, we can move the Sourceless Segue to the **Navigation Controller** and set our first screen’s View Controller as the
+Navigation Controller’s stack, we can move the Sourceless Segue to the Navigation Controller and set our first screen’s View Controller as the
 Root View Controller, like we did in the Phoneword app:
 
  [![](hello-ios-multiscreen-deepdive-images/06.png "The Sourceless Segue sets the first screens View Controller as the Root View Controller")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
-### Additional Navigation Options
+### Additional navigation options
 
-The **Navigation Controller** is a common way of handling navigation in iOS, but it is not the only option. A [Tab Bar Controller](~/ios/user-interface/controls/creating-tabbed-applications.md)
-can split an application into different functional areas; a [Split View Controller](https://developer.xamarin.com/recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) can create Master/Detail Views;
-and a [Flyout Navigation Controller](http://components.xamarin.com/view/flyoutnavigation) creates navigation that the user can swipe in from the side. All of these can be
-combined with a **Navigation Controller** for an intuitive way to present content.
+The Navigation Controller is a common way of handling navigation in
+iOS, but it is not the only option. For example, a 
+[Tab Bar Controller](~/ios/user-interface/controls/creating-tabbed-applications.md)
+can split an application into different functional areas and a
+[Split View Controller](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers)
+can be used to create master/detail views. Combining Navigation Controllers
+with these other navigation paradigms allows for many flexible ways to
+present and navigate content in iOS.
 
-## Handling Transitions
+## Handling transitions
 
 In the Phoneword walkthrough, we handled the transition between the two View Controllers in two different ways – first with a Storyboard Segue and
 then programmatically. Let’s explore both these options in more detail.
@@ -186,7 +184,7 @@ public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
  }
 ```
 
-### Navigation Without Segues
+### Navigation without segues
 
 Transitioning from the first View Controller to the second in code is the same process as with a Segue, but several steps have to be done manually.
 First, we use `this.NavigationController` to get a reference to the Navigation Controller whose stack we are currently on. Then, we use the Navigation
@@ -228,14 +226,13 @@ CallHistoryButton.TouchUpInside += (object sender, EventArgs e) => {
 };
 ```
 
-## Additional Concepts Introduced in Phoneword
+## Additional concepts introduced in Phoneword
 
 The Phoneword application introduced several concepts not covered in this guide. These concepts include:
 
 -  **Automatic Creation of View Controllers** – When we enter a class name for the View Controller in the  **Properties Pad** , the iOS designer checks if that class exists and then generates the View Controller backing class for us. For more information on this and other iOS designer features, refer to the  [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) guide.
 -  **Table View Controller** – The  `CallHistoryController` is a Table View Controller. A Table View Controller contains a Table View, the most common layout and data display tool in iOS. Tables are beyond the scope of this guide. For more information on Table View Controllers, please refer to the  [Working with Tables and Cells](~/ios/user-interface/controls/tables/index.md) guide.
 -   **Storyboard ID** – Setting the Storyboard ID creates a View Controller class in Objective-C containing the code-behind for the View Controller in the Storyboard. We use the Storyboard ID to find the Objective-C class and instantiate the View Controller in the Storyboard. For more information on Storyboard IDs, please refer to the  [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) guide.
-
 
 ## Summary
 
@@ -246,8 +243,7 @@ role in powering iOS navigation. You now have the solid foundation you need to s
 
 Next, let’s learn to build cross-platform applications with Xamarin with the [Introduction to Mobile Development](~/cross-platform/get-started/introduction-to-mobile-development.md) and [Building Cross-Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) guides.
 
-
-## Related Links
+## Related links
 
 - [Hello, iOS (sample)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
 - [iOS Human Interface Guidelines](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)

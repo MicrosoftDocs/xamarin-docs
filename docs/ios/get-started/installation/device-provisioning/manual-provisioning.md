@@ -1,5 +1,5 @@
 ---
-title: "Manual Provisioning for Xamarin.iOS"
+title: "Manual provisioning for Xamarin.iOS"
 description: "Once Xamarin.iOS has been successfully installed, the next step in iOS development is to provision your iOS device. This guide explores using manual provisioning to set up development certificates and profiles."
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
@@ -8,23 +8,26 @@ author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
 ---
-
-# Manual Provisioning for Xamarin.iOS
+# Manual provisioning for Xamarin.iOS
 
 _Once Xamarin.iOS has been successfully installed, the next step in iOS development is to provision your iOS device. This guide explores using manual provisioning to set up development certificates and profiles._
 
-<a name="signingidentity" />
+> [!NOTE]
+> The instructions on this page are relevant for developers who have
+> paid access to the Apple Developer Program. If you have a free account,
+> please take a look at the [Free provisioning](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
+> guide for more information about on-device testing.
 
-## Creating a Signing Identity
+## Creating a signing identity
 
 The first step in setting up a development device is to create a signing identity. A signing identity consists of two things:
 
 - A Development Certificate
 - A private key
 
-Development certificates and associated [keys](#keypairs) are critical for an iOS developer: they establish your identity with Apple and associate you with a given device and profile for development, akin to putting your digital signature on your applications. Apple checks for certificates to control access to the devices you are allowed to deploy.
+Development certificates and associated [keys](#understanding-certificate-key-pairs) are critical for an iOS developer: they establish your identity with Apple and associate you with a given device and profile for development, akin to putting your digital signature on your applications. Apple checks for certificates to control access to the devices you are allowed to deploy.
 
-Development teams, certificates, and profiles can be managed by accessing the [Certificates, Identifiers & Profiles](https://developer.apple.com/account/overview.action) section of Apple's Members Center. Apple requires you to have a signing identity to build your code for device or simulator.  
+Development teams, certificates, and profiles can be managed by accessing the [Certificates, Identifiers & Profiles](https://developer.apple.com/account/overview.action) (login required) section of Apple's Member Center. Apple requires you to have a signing identity to build your code for device or simulator.  
 
 > [!IMPORTANT]
 > It is important to note that you can only have two iOS Development certificates at any one time. If you need to create any more, you will need to revoke an existing one. Any machine using a revoked certificate will not be able to sign their app.
@@ -65,9 +68,7 @@ To Generate a signing identity, do the following:
 
     [![](manual-provisioning-images/keychain.png "The Certificate in Keychain Access")](manual-provisioning-images/keychain.png#lightbox)
 
-<a name="keypairs" />
-
-### Understanding Certificate Key Pairs
+### Understanding certificate key pairs
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -84,13 +85,13 @@ The Developer Profile contains certificates, their associated keys, and any prov
 
 <a name="provisioning" />
 
-## Provisioning an iOS Device for Development
+## Provisioning an iOS Device for development
 
 Now that you’ve established your identity with Apple and have a development certificate, you must set up a provisioning profile and the required entities so it is possible to deploy an app to an Apple device. The device must be running a version of iOS that is supported by Xcode — it may be necessary to update the device, Xcode or both.
 
 <a name="adddevice" />
 
-## Add a Device
+## Add a device
 
 When creating a provisioning profile for development, we must state which devices can run the application. To enable this, up to 100 devices per calendar year can be added to our Developer Portal, and from here we can select the devices to be added to a particular provisioning profile. Follow the steps below on your Mac to add a device to the Developer Portal
 
@@ -131,10 +132,9 @@ Repeat the above steps for any iOS device that will be used to test or debug a X
 
 After adding the device to the developer portal, it is necessary to create a provisioning profile and add the device to it.
 
-
 <a name="provisioningprofile" />
 
-## Creating a Development Provisioning Profile
+## Creating a development provisioning profile
 
 As with the Development Certificate, Provisioning Profiles can be manually created through the [Certificates, Identifiers & Profiles](https://developer.apple.com/account/overview.action) section of Apple's Members Center.
 
@@ -152,7 +152,7 @@ Before creating a provisioning profile, an *App ID* must be made. An App ID is a
 
 3. Click the **Continue** button and following the on screen instructions to create the new App ID.
 
-### Provisioning Profile
+### Provisioning profile
 
 Once the App ID has been created, the Provisioning Profile can be produced. This Provisioning Profile contains information on *what* app (or apps, if it's a wildcard app ID) this profile relates to, *who* can use the profile (depending on what developer certificates are added), and *what* devices can install the app.
 
@@ -186,7 +186,7 @@ After the provisioning profile has been successfully created it may be necessary
 
 <a name="download" />
 
-## Downloading Profiles and Certificates in Xcode
+## Downloading profiles and certificates in Xcode
 
 Certificates and provisioning profiles that have been created in the Apple Developer Portal, may not automatically appear in Xcode. Therefore,
 it may be necessary to download them so they that they can be accessed by
@@ -218,7 +218,7 @@ The new certificates or provisioning profiles will be available in Visual Studio
 
 <a name="appservices" />
 
-## Provisioning for Application Services
+## Provisioning for application services
 
 Apple provides a selection of special Application Services, also called capabilities, that can be activated for a Xamarin.iOS application. These Application Services must be configured on both the iOS Provisioning Portal when the **App ID** is created and in the **Entitlements.plist** file that is part of the Xamarin.iOS application's project. For information on adding Application Services to your app, refer to the [Introduction to Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide and the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
 
@@ -226,9 +226,7 @@ Apple provides a selection of special Application Services, also called capabili
 * Create a new [provisioning profile](#provisioningprofile) that contains this App ID.
 * Set Entitlements in the Xamarin.iOS Project
 
-<a name="deploy" />
-
-## Deploying to a Device
+## Deploying to a device
 
 At this point provisioning should be complete, and the app is ready to be deployed to the device. To do this, follow the steps below:
 
@@ -275,8 +273,7 @@ If this is set to **Automatic**, Visual Studio for Mac will select the identity 
 
 This guide covered the steps required to setup the development environment for Xamarin.iOS. It explored how an application is code signed with information about the developer, their team, the devices that an app can run on, and individual app id.
 
-
-## Related Links
+## Related links
 
 - [Free Provisioning](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
 - [App Distribution](~/ios/deploy-test/app-distribution/index.md)
