@@ -48,6 +48,9 @@ Transforms allow graphics objects to be uniformly translated, scaled, rotated, o
 
 The exploration of paths continues with adding curves to a path objects, and exploiting other powerful path features. You'll see how you can specify an entire path in a concise text string, how to use path effects, and how to dig into path internals.
 
+## [SkiaSharp Bitmaps](bitmaps/index.md)
+
+Bitmaps are rectangular arrays of bits corresponding to the pixels of a display device. This series of articles shows how to load, save, display, create, draw on, animate, and access the bits of SkiaSharp bitmaps.
 
 ## Related Links
 

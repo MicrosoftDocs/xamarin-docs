@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 author: charlespetzold
 ms.author: chape
-ms.date: 09/14/2017
+ms.date: 07/17/2018
 ---
 
 # 2D Drawing With SkiaSharp
@@ -62,6 +62,14 @@ Learn how to work with cross platform graphics that render in Xamarin.Forms:
   * [Path Effects](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md)
   * [Paths and Text](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)
   * [Path Information and Enumeration](~/xamarin-forms/user-interface/graphics/skiasharp/curves/information.md)
+- [Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/index.md)
+  * [Displaying Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/displaying.md)
+  * [Creating and Drawing on Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/drawing.md)
+  * [Cropping Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/cropping.md)
+  * [Segmented Display of Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/segmented.md)
+  * [Saving Bitmaps to Files](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/saving.md)
+  * [Accessing Bitmap Pixel Bits](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/pixel-bits.md)
+  * [Animating Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/animating.md)
 
 ## [Platform Specific Notes](~/graphics-games/skiasharp/platform.md)
 
