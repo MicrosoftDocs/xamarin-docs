@@ -11,7 +11,7 @@ ms.date: 05/03/2018
 
 # Creating iOS User Interfaces in Code in Xamarin.iOS
 
-The user interface of an iOS app is like a storefront – the application typically gets one Window, but it can fill the Window up with as many objects at it needs, and the objects and arrangements can be changed depending on what the app wants to display. The objects in this scenario - the things that the user sees - are called Views. To build a single screen in an application, Views are stacked on top of each other in a Content View Hierarchy, and the hierarchy is managed by a single View Controller. Applications with multiple screens have multiple Content View Hierarchies, each with its own View Controller, and the application places Views in the Window to create a different Content View Hierarchy based on the screen that the user is on.
+The user interface of an iOS app is like a storefront – the application typically gets one Window, but it can fill the Window up with as many objects as it needs, and the objects and arrangements can be changed depending on what the app wants to display. The objects in this scenario - the things that the user sees - are called Views. To build a single screen in an application, Views are stacked on top of each other in a Content View Hierarchy, and the hierarchy is managed by a single View Controller. Applications with multiple screens have multiple Content View Hierarchies, each with its own View Controller, and the application places Views in the Window to create a different Content View Hierarchy based on the screen that the user is on.
 
 # [Visual Studio](#tab/vswin)
 
