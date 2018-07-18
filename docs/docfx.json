@@ -54,6 +54,11 @@
       "feedback_github_repo": "MicrosoftDocs/xamarin-docs",
       "feedback_product_url": "https://developercommunity.visualstudio.com/"
     },
+    "fileMetadata": {
+      "feedback_product_url": {
+        "essentials/**/**.md":"https://github.com/xamarin/Essentials/blob/master/PRODUCT-FEEDBACK.md"
+      }
+    },
     "template": [],
     "dest": "xamarin-docs"
   }
