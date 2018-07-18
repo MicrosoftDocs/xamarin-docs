@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Essentials: Phone Dialer"
-description: "The PhoneDialer class in Xamarin.Essentials enables an application to open a web link in the optimized system preferred browser or the external browser."
+description: "The PhoneDialer class in Xamarin.Essentials enables an application to open a phone number in the dialer"
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
@@ -11,7 +11,7 @@ ms.date: 05/04/2018
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
 
-The **PhoneDialer** class enables an application to open a web link in the optimized system preferred browser or the external browser.
+The **PhoneDialer** class enables an application to open a phone number in the dialer.
 
 ## Using Phone Dialer
 
