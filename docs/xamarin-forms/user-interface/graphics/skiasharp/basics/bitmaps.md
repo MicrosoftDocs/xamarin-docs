@@ -17,6 +17,8 @@ The support of bitmaps in SkiaSharp is quite extensive. This article covers only
 
 ![](bitmaps-images/bitmapssample.png "The display of two bitmaps")
 
+A much deeper exploration of bitmaps can be found in the section [SkiaSharp Bitmaps](../bitmaps/index.md).
+
 A SkiaSharp bitmap is an object of type [`SKBitmap`](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/). There are many ways to create a bitmap but this article restricts itself to the [`SKBitmap.Decode`](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/System.IO.Stream/) method, which loads the bitmap from a .NET `Stream` object.
 
 The **Basic Bitmaps** page in the **SkiaSharpFormsDemos** program demonstrates how to load bitmaps from three different sources:
