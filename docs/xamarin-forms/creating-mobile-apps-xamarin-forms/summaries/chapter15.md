@@ -234,9 +234,11 @@ The [**SetTimer**](https://github.com/xamarin/xamarin-forms-book-samples/tree/ma
 
 
 
-## Related Links
+## Related links
 
 - [Chapter 15 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf)
 - [Chapter 15 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
+- [Slider](~/xamarin-forms/user-interface/slider.md)
 - [Entry](~/xamarin-forms/user-interface/text/entry.md)
 - [Editor](~/xamarin-forms/user-interface/text/editor.md)
+- [DatePicker](~/xamarin-forms/user-interface/datepicker.md)

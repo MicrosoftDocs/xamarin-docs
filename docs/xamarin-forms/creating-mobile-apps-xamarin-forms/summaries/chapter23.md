@@ -186,7 +186,7 @@ The program also responds to changes in orientation between portrait and landsca
 
 
 
-## Related Links
+## Related links
 
 - [Chapter 23 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch23-Apr2016.pdf)
 - [Chapter 23 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)

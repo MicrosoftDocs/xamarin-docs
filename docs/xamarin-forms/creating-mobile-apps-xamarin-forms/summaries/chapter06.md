@@ -6,7 +6,7 @@ ms.technology: xamarin-forms
 ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
+ms.date: 07/18/2018
 ---
 
 # Summary of Chapter 6. Button clicks
@@ -75,10 +75,12 @@ A call to `OnStart` occurs during program startup. It is not necessary to wait u
 
 The [**PersistentKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/PersistentKeypad) sample is very similar to **SimplestKeypad** except that the program uses the `OnSleep` override to save the current keypad entry, and the page constructor to restore that data.
 
+> [!NOTE]
+> Another approach to saving program settings is provided by the Xamarin.Essentials [Preferences](~/essentials/preferences.md) class.
 
-
-## Related Links
+## Related links
 
 - [Chapter 6 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf)
 - [Chapter 6 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
 - [Chapter 6 F# samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
+- [Xamarin.Forms Button](~/xamarin-forms/user-interface/button.md)

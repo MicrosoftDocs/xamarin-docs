@@ -6,10 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
+ms.date: 07/18/2018
 ---
 
 # Summary of Chapter 16. Data binding
+
+> [!NOTE] 
+> Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
 
 Programmers often find themselves writing event handlers that detect when a property of one object has changed, and use that to change the value of a property in another object. This process can be automated with the technique of *data binding*. Data bindings are usually defined in XAML and become part of the definition of the user interface.
 
@@ -80,6 +83,9 @@ Set the [`Mode`](xref:Xamarin.Forms.BindingBase.Mode) property of `Binding` to a
 - [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) so that changes in the source and target affect each other
 - [`Default`](xref:Xamarin.Forms.BindingMode.Default) to use the [`DefaultBindingMode`](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) specified when the target `BindableProperty` was created. If none was specified, the default is `OneWay` for normal bindable properties, and `OneWayToSource` for read-only bindable properties.
 
+> [!NOTE]
+> The `BindingMode` enumeration now also includes `OnTime` for applying a binding only when the binding context changes and not when the source property changes.
+
 Properties that are likely to be the targets of data bindings in MVVM scenarios generally have a `DefaultBindingMode` of `TwoWay`. These are:
 
 - `Value` property of `Slider` and `Stepper`
@@ -128,7 +134,8 @@ The [**NewCheckBoxDemo**](https://github.com/xamarin/xamarin-forms-book-samples/
 
 
 
-## Related Links
+## Related links
 
 - [Chapter 16 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch16-Apr2016.pdf)
 - [Chapter 16 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16)
+- [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)

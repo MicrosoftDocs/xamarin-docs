@@ -98,7 +98,7 @@ The program initializes `Slider` elements to a range of 0 to 255, and uses data 
 
 
 
-## Related Links
+## Related links
 
 - [Chapter 17 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf)
 - [Chapter 17 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)

@@ -6,7 +6,7 @@ ms.technology: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
+ms.date: 07/19/2018
 ---
 
 # Summary of Chapter 4. Scrolling the stack
@@ -14,6 +14,9 @@ ms.date: 11/07/2017
 This chapter is primarily devoted to introducing the concept of *layout*, which is the overall term for the classes and techniques that Xamarin.Forms uses to organize the visual display of multiple views on the page.
 
 Layout involves several classes that derive from [`Layout`](xref:Xamarin.Forms.Layout) and  [`Layout<T>`](xref:Xamarin.Forms.Layout`1). This chapter focuses on [`StackLayout`](xref:Xamarin.Forms.StackLayout).
+
+> [!NOTE]
+> The [`FlexLayout`](~/xamarin-forms/user-interface/layouts/flex-layout.md) introduced in Xamarin.Forms 3.0 can be used in ways that are similar to `StackLayout` but with more flexibility.
 
 Also introduced in this chapter are the [`ScrollView`](xref:Xamarin.Forms.ScrollView), [`Frame`](xref:Xamarin.Forms.Frame), and [`BoxView`](xref:Xamarin.Forms.BoxView) classes.
 
@@ -101,14 +104,15 @@ Putting a `StackLayout` in a `ScrollView` is common, but putting a `ScrollView` 
 
 The trick is to give the `ScrollView` child of the `StackLayout` a `VerticalOptions` setting of `FillAndExpand`. This is demonstrated in the [**BlackCat**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCat) sample.
 
-The **BlackCat** sample also demonstrates how to define and access program resources that are embedded in the Portable Class Library (PCL). This can also be achieved with Shared Asset Projects (SAPs) but the process is a little trickier, as the [**BlackCatSap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) sample demonstrates.
+The **BlackCat** sample also demonstrates how to define and access program resources that are embedded in the shared library. This can also be achieved with Shared Asset Projects (SAPs) but the process is a little trickier, as the [**BlackCatSap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) sample demonstrates.
 
 
 
-## Related Links
+## Related links
 
 - [Chapter 4 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch04-Apr2016.pdf)
 - [Chapter 4 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
 - [Chapter 4 F# samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FS)
 - [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)
 - [ScrollView](~/xamarin-forms/user-interface/layouts/scroll-view.md)
+- [BoxView](~/xamarin-forms/user-interface/boxview.md)

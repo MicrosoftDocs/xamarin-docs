@@ -122,7 +122,7 @@ Also, for any of the three axis, if you point your left-hand thumb in the direct
 
 
 
-## Related Links
+## Related links
 
 - [Chapter 21 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch21-Apr2016.pdf)
 - [Chapter 21 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21)

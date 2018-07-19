@@ -6,7 +6,7 @@ ms.technology: xamarin-forms
 ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
+ms.date: 07/19/2018
 ---
 
 # Summary of Chapter 10. XAML markup extensions
@@ -86,9 +86,8 @@ The [`HslColorExtension`](https://github.com/xamarin/xamarin-forms-book-samples/
 
 The [**CustomExtensionDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/CustomExtensionDemo) sample demonstrates how to reference this library and use the custom markup extension.
 
-
-
-## Related Links
+## Related links
 
 - [Chapter 10 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf)
 - [Chapter 10 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
+- [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md)

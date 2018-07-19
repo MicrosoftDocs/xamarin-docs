@@ -6,7 +6,7 @@ ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
+ms.date: 07/18/2018
 ---
 
 # Summary of Chapter 3. Deeper into text
@@ -95,8 +95,6 @@ Finally, two static read-only properties define special color value:
 - iOS: Dark text on a light background
 - Android: Light text on a dark background (in the book) or dark text on a light background (for Material Design via AppCompat in the **master** branch of the sample code repository)
 - UWP: Dark text on a light background
-- Windows 8.1: Light text on a dark background
-- Windows Phone 8.1: Light text on a dark background
 
 The `Color.Accent` value results in a platform-specific (and sometimes user-selectable) color that is visible on either a dark or light background.
 
@@ -133,7 +131,7 @@ The [**NamedFontSizes**](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 
 
-## Related Links
+## Related links
 
 - [Chapter 3 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf)
 - [Chapter 3 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)

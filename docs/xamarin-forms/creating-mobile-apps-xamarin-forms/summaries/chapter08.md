@@ -6,7 +6,7 @@ ms.technology: xamarin-forms
 ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
+ms.date: 07/19/2018
 ---
 
 # Summary of Chapter 8. Code and XAML in harmony
@@ -70,10 +70,9 @@ The [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) generates 
 
 But the **MonkeyTap** program really needs sound. (See [the next chapter](chapter09.md).)
 
-
-
-## Related Links
+## Related links
 
 - [Chapter 8 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf)
 - [Chapter 8 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
 - [Chapter 8 F# sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FS/XamlKeypad)
+- [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md)

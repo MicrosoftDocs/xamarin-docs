@@ -110,7 +110,7 @@ However, this is problematic on iOS. Only a few of the items can be displayed, a
 
 
 
-## Related Links
+## Related links
 
 - [Chapter 25 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf)
 - [Chapter 25 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25)

@@ -6,10 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
+ms.date: 07/19/2018
 ---
 
 # Summary of Chapter 28. Location and maps
+
+> [!NOTE] 
+> Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
 
 Xamarin.Forms supports a [`Map`](xref:Xamarin.Forms.Maps.Map) element that derives from `View`. Because of the special platform requirements involved in using maps, they are implemented in a separate assembly, **Xamarin.Forms.Maps**, and involve a different namespace: `Xamarin.Forms.Maps`.
 
@@ -43,6 +46,9 @@ Map services use a variation of the Mercator projection called `Web Mercator`. T
 
 The Xamarin.Forms `Map` classes do not include a facility to obtain the user's geographic location, but this is often desirable when working with maps, so a dependency service must handle it.
 
+> [!NOTE]
+> Xamarin.Forms applications can instead use the [`Geolocation`](~/essentials/geolocation.md) class included in Xamarin.Essentials.
+
 ### The location tracker API
 
 The [**Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) solution contains code for a location tracker API. The [`GeographicLocation`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/GeographicLocation.cs) structure encapsulates a latitude and longitude. The [`ILocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/ILocationTracker.cs) interface defines two methods to start and pause the location tracker, and an event when a new location is available.
@@ -55,9 +61,9 @@ The iOS implementation of `ILocationTracker` is a [`LocationTracker`](https://gi
 
 The Android implementation of `ILocationTracker` is a [`LocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/LocationTracker.cs) class that makes use of the Android [`LocationManager`](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/) class.
 
-#### The Windows Runtime geo locator
+#### The UWP geo locator
 
-The Windows Runtime implementation of `ILocationTracker` is a [`LocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/LocationTracker.cs) class that makes use of the UWP [`Geolocator`](https://msdn.microsoft.com/library/windows/apps/br225534).
+The Universal Windows Platform implementation of `ILocationTracker` is a [`LocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/LocationTracker.cs) class that makes use of the UWP [`Geolocator`](/uwp/api/Windows.Devices.Geolocation.Geolocator).
 
 ### Display the phone's location
 
@@ -77,9 +83,9 @@ For iOS, the **info.plist** file must include items containing the text of a que
 
 Android applications that obtain the user's location must have an ACCESS_FILE_LOCATION permission in the AndroidManifest.xml file.
 
-#### Location permissions for the Windows Runtime
+#### Location permissions for the UWP
 
-A Windows or Windows Phone application must have a `location` device capability marked in the Package.appxmanifest file.
+A Universal Windows Platform application must have a `location` device capability marked in the Package.appxmanifest file.
 
 ## Working with Xamarin.Forms.Maps
 
@@ -105,9 +111,9 @@ An iOS application using `Map` needs two lines in the info.plist file.
 
 An authorization key is required for using Google Map services. This key is inserted in the **AndroidManifest.xml** file. In addition, the **AndroidManifest.xml** file requires `manifest` tags involved in obtaining the user's location.
 
-#### Enabling Windows Runtime maps
+#### Enabling UWP maps
 
-A Windows Runtime application requires an authorization key for using Bing Maps. This key is passed as an argument to the `Xamarin.FormsMaps.Init` method. The application must also be enabled for location services.
+A Universal Windows Platform application requires an authorization key for using Bing Maps. This key is passed as an argument to the `Xamarin.FormsMaps.Init` method. The application must also be enabled for location services.
 
 ### The unadorned map
 
@@ -225,8 +231,8 @@ The [GeocoderRoundTrip.xaml](https://github.com/xamarin/xamarin-forms-book-sampl
 
 
 
-## Related Links
+## Related links
 
 - [Chapter 28 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf)
 - [Chapter 28 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
-- [Map Control](~/xamarin-forms/user-interface/map.md)
+- [Xamarin.Forms Map](~/xamarin-forms/user-interface/map.md)

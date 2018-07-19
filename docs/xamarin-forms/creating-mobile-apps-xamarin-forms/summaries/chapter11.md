@@ -6,7 +6,7 @@ ms.technology: xamarin-forms
 ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
+ms.date: 07/19/2018
 ---
 
 # Summary of Chapter 11. The Bindable infrastructure
@@ -84,9 +84,8 @@ Then, define the CLR property `set` accesor as `private` to call a [`SetValue`](
 
 This is demonstrated in the [`CountedLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CountedLabel.cs) class used in the  [**BaskervillesCount**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/BaskervillesCount) sample.
 
-
-
-## Related Links
+## Related links
 
 - [Chapter 11 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf)
 - [Chapter 11 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
+- [Bindable Properties](~/xamarin-forms/xaml/bindable-properties.md)

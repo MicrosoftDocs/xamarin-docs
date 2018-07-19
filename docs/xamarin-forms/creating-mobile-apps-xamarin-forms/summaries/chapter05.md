@@ -6,10 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
+ms.date: 07/19/2018
 ---
 
 # Summary of Chapter 5. Dealing with sizes
+
+> [!NOTE] 
+> Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
 
 Several sizes in Xamarin.Forms have been encountered so far:
 
@@ -31,7 +34,10 @@ Programmers targeting Apple iPhone and iPad devices continue to work in units of
 
 Android is similar. Programmers work in units of *density-independent pixels* (dps), and the relationship between dps and pixels is based on 160 dps to the inch.
 
-The Windows Runtime has also established scaling factors that imply something close to 160 device-independent units to the inch.
+Windows phones and mobile devices have also established scaling factors that imply something close to 160 device-independent units to the inch.
+
+> [!NOTE]
+> Xamarin.Forms no longer supports any Windows-based phone or mobile device.
 
 In summary, a Xamarin.Forms programmer targeting phones and tablets can assume that all units of measurement are based on the following criterion:
 
@@ -77,7 +83,7 @@ For a `Label`, the first argument should be the width of the container (to allow
 
 
 
-## Related Links
+## Related links
 
 - [Chapter 5 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch05-Apr2016.pdf)
 - [Chapter 5 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)

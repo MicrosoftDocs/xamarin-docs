@@ -90,7 +90,8 @@ The `AdderViewModel` used in the **AddingMachine** sample also defines two metho
 
 
 
-## Related Links
+## Related links
 
 - [Chapter 18 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf)
 - [Chapter 18 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
+- [Enterprise Application Patterns using Xamarin.Forms eBook](~/xamarin-forms/enterprise-application-patterns/index.md)

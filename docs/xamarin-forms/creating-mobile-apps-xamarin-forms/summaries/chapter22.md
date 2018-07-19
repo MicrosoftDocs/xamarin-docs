@@ -199,7 +199,7 @@ It's sometimes useful to express animations in XAML and use them in conjunction 
 
 
 
-## Related Links
+## Related links
 
 - [Chapter 22 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf)
 - [Chapter 22 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22)

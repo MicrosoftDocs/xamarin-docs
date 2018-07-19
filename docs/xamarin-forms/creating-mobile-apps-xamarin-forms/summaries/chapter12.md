@@ -6,7 +6,7 @@ ms.technology: xamarin-forms
 ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
+ms.date: 07/19/2018
 ---
 
 # Summary of Chapter 12. Styles
@@ -90,9 +90,7 @@ The other six fields are of type `string` and can be used as dictionary keys for
 
 These styles are illustrated by the [**DeviceStylesList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/DeviceStylesList) sample.
 
-
-
-## Related Links
+## Related links
 
 - [Chapter 12 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch12-Apr2016.pdf)
 - [Chapter 12 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)

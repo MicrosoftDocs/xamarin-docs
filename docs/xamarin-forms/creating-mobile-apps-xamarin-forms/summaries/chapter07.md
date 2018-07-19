@@ -6,10 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
+ms.date: 07/19/2018
 ---
 
 # Summary of Chapter 7. XAML vs. code
+
+> [!NOTE] 
+> Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
 
 Xamarin.Forms supports an XML-based markup language called the Extensible Application Markup Language or XAML (pronounced "zammel"). XAML provides an alternative to C# in defining the layout of the user interface of a Xamarin.Forms application, and in defining bindings between user-interface elements and underlying data.
 
@@ -30,6 +33,9 @@ Sometimes a property must be set to an object that cannot be expressed as a simp
 ## Adding a XAML page to your project
 
 A Xamarin.Forms Portable Class Library can contain a XAML page when it is first created, or you can add a XAML page to an existing project. In the dialog to add a new item, choose the item that refers to a XAML page, or `ContentPage` and XAML. (Not a `ContentView`.)
+
+> [!NOTE] 
+> Visual Studio options have changed since this chapter was written.
 
 Two files are created: a XAML file with the filename extension .xaml, and a C# file with the extension .xaml.cs. The C# file is often referred to as the *code-behind* of the XAML file. The code-behind file is a partial class definition that derives from `ContentPage`. At build time, the XAML is parsed and another partial class definition is generated for the same class. This generated class includes a method named `InitializeComponent` that is called from the constructor of the code-behind file.
 
@@ -67,10 +73,9 @@ The [**TextVariations**](https://github.com/xamarin/xamarin-forms-book-samples/t
 
  [![Triple screenshot of text variations sharing](images/ch07fg03-small.png "Formatted Text Variations")](images/ch07fg03-large.png#lightbox "Formatted Text Variations")
 
-
-
-## Related Links
+## Related links
 
 - [Chapter 7 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf)
 - [Chapter 7 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
 - [Chapter 7 F# sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
+- [XAML Basics](~/xamarin-forms/xaml/xaml-basics/index.md)

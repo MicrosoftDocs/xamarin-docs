@@ -6,10 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
+ms.date: 07/18/2018
 ---
 
 # Summary of Chapter 19. Collection views
+
+> [!NOTE] 
+> Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
 
 Xamarin.Forms defines three views that maintain collections and display their elements:
 
@@ -34,6 +37,9 @@ You can also use `SelectedIndex` to initialize the selected item, but it must be
 ### Data binding the Picker
 
 The `SelectedIndex` property is backed by a bindable property but `Items` is not, so using data binding with a `Picker` is difficult. One solution is to use the `Picker` in combination with an [`ObjectToIndexConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ObjectToIndexConverter.cs) such as the one in the [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) library. The [**PickerBinding**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/PickerBinding) demonstrates how this works.
+
+> [!NOTE] 
+> The Xamarin.Forms `Picker` now includes `ItemsSource` and `SelectedItem` properties that support data binding. See [Picker](~/xamarin-forms/user-interface/picker/index.md).
 
 ## Rendering data with ListView
 
@@ -218,9 +224,10 @@ Another use of a `TableView` is a menu. The [**MenuCommands**](https://github.co
 
 
 
-## Related Links
+## Related links
 
 - [Chapter 19 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch19-Apr2016.pdf)
 - [Chapter 19 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19)
+- [Picker](~/xamarin-forms/user-interface/picker/index.md)
 - [ListView](~/xamarin-forms/user-interface/listview/index.md)
 - [TableView](~/xamarin-forms/user-interface/tableview.md)

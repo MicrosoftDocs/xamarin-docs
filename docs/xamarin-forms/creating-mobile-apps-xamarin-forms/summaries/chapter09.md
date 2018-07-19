@@ -6,10 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
+ms.date: 07/19/2018
 ---
 
 # Summary of Chapter 9. Platform-specific API calls
+
+> [!NOTE] 
+> Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
 
 It is sometimes necessary to run some code that varies by platform. This chapter explores the techniques.
 
@@ -27,11 +30,14 @@ A more structured approach to executing platform-specific code in the SAP is dem
 
 ## DependencyService and the Portable Class Library
 
-A library cannot normally access classes in application projects. This restriction seems to prevent the technique shown in **PlatInfoSap2** from being used in a PCL. However, Xamarin.Forms contains a class named [`DependencyService`](xref:Xamarin.Forms.DependencyService) that uses .NET reflection to access public classes in the application project from the PCL.
+> [!NOTE] 
+> Portable Class Libraries have been replaced by .NET Standard libraries. All the sample code from the book has been converted to use .NET standard libraries.
 
-The PCL must define an `interface` with the members it needs to use in each platform. Then, each of the platforms contains an implementation of that interface. The class that implements the interface must be identified with a [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) on the assembly level.
+A library cannot normally access classes in application projects. This restriction seems to prevent the technique shown in **PlatInfoSap2** from being used in a library. However, Xamarin.Forms contains a class named [`DependencyService`](xref:Xamarin.Forms.DependencyService) that uses .NET reflection to access public classes in the application project from the library.
 
-The PCL then uses the generic [`Get`](xref:Xamarin.Forms.DependencyService.Get*) method of `DependencyService` to obtain an instance of the platform class that implements the interface.
+The library must define an `interface` with the members it needs to use in each platform. Then, each of the platforms contains an implementation of that interface. The class that implements the interface must be identified with a [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) on the assembly level.
+
+The library then uses the generic [`Get`](xref:Xamarin.Forms.DependencyService.Get*) method of `DependencyService` to obtain an instance of the platform class that implements the interface.
 
 This is demonstrated in the [**DisplayPlatformInfo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/DisplayPlatformInfo) sample.
 
@@ -39,9 +45,7 @@ This is demonstrated in the [**DisplayPlatformInfo**](https://github.com/xamarin
 
 The [**MonkeyTapWithSound**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/MonkeyTapWithSound) sample adds beeps to the **MonkeyTap** program by accessing sound-generation facilities in each platform.
 
-
-
-## Related Links
+## Related links
 
 - [Chapter 9 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf)
 - [Chapter 9 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)

@@ -151,6 +151,10 @@
     {
       "source_path": "docs/essentials/platform.md",
       "redirect_url": "/xamarin/essentials/main-thread"
+    },
+    {
+      "source_path": "docs/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/creating-mobile-apps-xamarin-forms/index"
     }
   ]
 }

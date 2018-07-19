@@ -6,7 +6,7 @@ ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
+ms.date: 07/19/2018
 ---
 
 # Summary of Chapter 14. Absolute layout
@@ -94,8 +94,9 @@ The [**BouncingText**](https://github.com/xamarin/xamarin-forms-book-samples/tre
 
 
 
-## Related Links
+## Related links
 
 - [Chapter 14 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf)
 - [Chapter 14 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
 - [AbsoluteLayout](~/xamarin-forms/user-interface/layouts/absolute-layout.md)
+- [Attached Properties](~/xamarin-forms/xaml/attached-properties.md)
