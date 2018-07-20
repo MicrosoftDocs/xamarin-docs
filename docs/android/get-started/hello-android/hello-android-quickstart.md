@@ -7,12 +7,17 @@ ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
+ms.date: 07/20/2018
 ---
 
 # Hello, Android: Quickstart
 
-_In this two-part guide, you will build your first Xamarin.Android application (using Visual Studio or Visual Studio for Mac) and develop an understanding of the fundamentals of Android application development with Xamarin. Along the way, you will be introduced to the tools, concepts, and steps required to build and deploy a Xamarin.Android application._
+_In this two-part guide, you will build your first Xamarin.Android
+application (using Visual Studio or Visual Studio for Mac) and develop
+an understanding of the fundamentals of Android application development
+with Xamarin. Along the way, you will be introduced to the tools,
+concepts, and steps required to build and deploy a Xamarin.Android
+application._
 
 ## Hello, Android Quickstart
 
@@ -52,21 +57,11 @@ set.
 
 ## Configuring Emulators
 
-If you are using Google's Android SDK emulator, we recommend that
-you configure the emulator to use hardware acceleration. Instructions
-for configuring hardware acceleration are available in
+If you are using the Android emulator, we recommend that you configure
+the emulator to use hardware acceleration. Instructions for configuring
+hardware acceleration are available in
 [Hardware Acceleration for Emulator Performance](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
 
-# [Visual Studio](#tab/vswin)
-
-If you are using the Visual Studio Android Emulator, Hyper-V must be
-enabled on your computer. For more information about configuring the
-Visual Studio Android Emulator, see
-[System Requirements for the Visual Studio Emulator for Android](https://msdn.microsoft.com/en-us/library/mt228280.aspx).
-
-# [Visual Studio for Mac](#tab/vsmac)
-
------
 
 ## Walkthrough
 
@@ -75,18 +70,23 @@ Visual Studio Android Emulator, see
 Start Visual Studio.  Click **File > New > Project** to create a new project.
 
 In the **New Project** dialog, click the **Android App** template.
-Name the new project `Phoneword`. Click **OK** to create the new project:
+Name the new project `Phoneword`. Click **OK**:
 
-[![New project is Phoneword](hello-android-quickstart-images/vs/02-new-project-name-sml.w157.png)](hello-android-quickstart-images/vs/02-new-project-name.w157.png#lightbox)
+[![New project is Phoneword](hello-android-quickstart-images/vs/01-new-project-name-w157-sml.png)](hello-android-quickstart-images/vs/01-new-project-name-w157.png#lightbox)
+
+In the **New Android App** dialog, click **Blank App** and click **OK**
+to create the new project:
+
+[![Select the Blank App template](hello-android-quickstart-images/vs/02-blank-app-w157-sml.png)](hello-android-quickstart-images/vs/02-blank-app-w157.png#lightbox)
 
 ### Creating the Layout
 
 After the new project is created, expand the **Resources**
 folder and then the **layout** folder in the **Solution Explorer**.
-Double-click **Main.axml** to open it in the Android Designer. This
+Double-click **activity_main.axml** to open it in the Android Designer. This
 is the layout file for the app's screen:
 
-[![Open Main.axml](hello-android-quickstart-images/vs/04-open-layout-sml.png)](hello-android-quickstart-images/vs/04-open-layout.png#lightbox)
+[![Open activity main.axml](hello-android-quickstart-images/vs/04-open-layout-sml.png)](hello-android-quickstart-images/vs/04-open-layout.png#lightbox)
 
 From the **Toolbox** (the area on the left), enter `text` into the search
 field and drag a **Text (Large)** widget onto the design surface
@@ -143,7 +143,7 @@ Explorer** pane and choosing **Add > New Item...** as shown below:
 In the **Add New Item** dialog, select **Visual C# > Code > Code File**
 and name the new code file **PhoneTranslator.cs**:
 
-[![Add PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-sml.w157.png)](hello-android-quickstart-images/vs/14-add-class.w157.png#lightbox)
+[![Add PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-sml-w157.png)](hello-android-quickstart-images/vs/14-add-class-w157.png#lightbox)
 
 This creates a new empty C# class. Insert the following code into this file:
 
@@ -336,6 +336,8 @@ Finally, test the application by running it on an Android device or emulator and
 
 [![Screenshot of app when it is complete](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
 
+
+
 # [Visual Studio for Mac](#tab/vsmac)
 
 Launch Visual Studio for Mac from the **Applications** folder or from **Spotlight**. 
@@ -493,10 +495,11 @@ adding the backing code into the `MainActivity` class.
 Double-click **MainActivity.cs** in the **Solution Pad** to open it.
 
 Begin by adding an event handler to the **Translate** button. In the
-`MainActivity` class, find the `OnCreate` method. Add the
-button code inside `OnCreate`, below the `base.OnCreate(bundle)`
-and `SetContentView (Resource.Layout.Main)` calls. Remove the
-template button handling code so that the `OnCreate` method
+`MainActivity` class, find the `OnCreate` method. Add the button code
+inside `OnCreate`, below the `base.OnCreate(bundle)` and
+`SetContentView (Resource.Layout.Main)` calls. Remove any existing
+button handling code (i.e., code that references `Resource.Id.myButton`
+and creates a click handler for it) so that the `OnCreate` method
 resembles the following:
 
 ```csharp
