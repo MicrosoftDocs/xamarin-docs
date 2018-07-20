@@ -26,11 +26,11 @@ Xcode Instruments only runs on a Mac.
 
 Select the device and run the Instruments app:
 
-1.  Open the Xamarin.iOS project in Visual Studio for Mac.
-2.  Select the **Debug|iPhone** configuration.
-3.  Connect an iOS device to the computer.
-4.  In the **Run** menu, select **Upload to Device** . The application will now be built and uploaded to the device.
-5.  In the **Tools** menu, select **Launch Instruments**.
+1. Open the Xamarin.iOS project in Visual Studio for Mac.
+2. Select the **Debug|iPhone** configuration.
+3. Connect an iOS device to the computer.
+4. In the **Run** menu, select **Upload to Device** . The application will now be built and uploaded to the device.
+5. In the **Tools** menu, select **Launch Instruments**.
 
 
 Instruments will now open and display the following dialog:
@@ -66,4 +66,4 @@ This guide showed how to start Xcode Instruments to monitor an iOS app from with
 ## Related Links
 
 - [Instruments Walkthrough](~/ios/deploy-test/walkthrough-apples-instrument.md)
-- [Xamarin.iOS Garbage Collection](https://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/)
+- [Xamarin.iOS Garbage Collection (blog post)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
