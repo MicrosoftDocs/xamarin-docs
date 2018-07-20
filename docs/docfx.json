@@ -57,6 +57,10 @@
     "fileMetadata": {
       "feedback_product_url": {
         "essentials/**/**.md":"https://github.com/xamarin/Essentials/blob/master/PRODUCT-FEEDBACK.md"
+      },
+      "breadcrumb_path": {
+        "xamarin-forms/creating-mobile-apps-xamarin-forms/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json",
+        "xamarin-forms/enterprise-application-patterns/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json"
       }
     },
     "template": [],
