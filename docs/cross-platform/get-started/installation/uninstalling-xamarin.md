@@ -264,7 +264,7 @@ three-bar menu next to the **Launch** button.
 >
 > Under certain conditions, uninstalling one of the SxS instances can result in the incorrect removal of these features. This may degrade the performance of the Xamarin Platform on the Visual Studio instance(s) that remain on the system after the uninstallation of the SxS instance.
 >
->This isresolved by running the **Repair** option in the Visual Studio installer, which will re-install the missing components.
+>This is resolved by running the **Repair** option in the Visual Studio installer, which will re-install the missing components.
 
 
 ## Uninstalling older and unsupported products
