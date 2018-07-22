@@ -1,5 +1,5 @@
 ---
-title: "Preview with Microsoft's OpenJDK Distribution"
+title: "Microsoft's OpenJDK Distribution Preview"
 description: "A step-by-step guide to configuring Microsoft's distribution of OpenJDK."
 ms.prod: xamarin
 ms.assetid: B5F8503D-F4D1-44CB-8B29-187D1E20C979
