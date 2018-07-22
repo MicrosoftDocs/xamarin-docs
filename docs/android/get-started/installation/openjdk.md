@@ -6,12 +6,14 @@ ms.assetid: B5F8503D-F4D1-44CB-8B29-187D1E20C979
 ms.technology: xamarin-android
 author: vyedin
 ms.author: vyedin
-ms.date: 07/21/2018
+ms.date: 07/22/2018
 ---
 
 # Preview with Microsoft's OpenJDK Distribution
 
 _This guide describes the steps for switching to the preview release of Microsoft's distribution of OpenJDK._
+
+![](~/media/shared/preview.png)
 
 ## Overview
 
