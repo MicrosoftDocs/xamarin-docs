@@ -1,8 +1,8 @@
 ---
 title: "Preview with Microsoft's OpenJDK Distribution"
-description: "A step-by-step guide to configuring Micorsoft's distribution of OpenJDK."
+description: "A step-by-step guide to configuring Microsoft's distribution of OpenJDK."
 ms.prod: xamarin
-ms.assetid: TBD
+ms.assetid: B5F8503D-F4D1-44CB-8B29-187D1E20C979
 ms.technology: xamarin-android
 author: vyedin
 ms.author: vyedin
@@ -22,13 +22,13 @@ With Visual Studio 15.9 and Visual Studio for Mac 7.7, we are moving from Oracle
 
 - You will always have an OpenJDK version that works for Android development
 
-- Downloading JDK 9 or 10 won’t affect development experience
+- Downloading JDK 9 or 10 won’t affect the development experience
 
 - Significantly reduced download size and footprint
 
 - No more issues with 3rd party servers and installers
 
-If you’d like to move to the improve experience sooner, builds of our OpenJDK distribution are available for you to test on both Windows and Mac today. The setup is simple, and it is easy to revert back to the Oracle JDK at any time.
+If you’d like to move to the improved experience sooner, builds of our OpenJDK distribution are available for you to test on both Windows and Mac today. The setup is simple, and it is easy to revert back to the Oracle JDK at any time.
 
 ## Download
 
@@ -45,35 +45,34 @@ To get started, download the correct build for your system:
 
 Unzip to the correct location:
 
-- Mac: `$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.8`
-- Windows: `C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.8`
+- Mac: **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.8**
+- Windows: **C:\\Program Files\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.8**
 
 > [!IMPORTANT]
-> We are using build 1.8.0.8 in this example. The version you download may be newer.
+> This example uses build 1.8.0.8; however, the version you download may be newer.
 
 Point the IDE to the new JDK:
 
-- Mac: In `Tools > SDK Manager > Locations`, change the Java SDK (JDK) location to `$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.8`
+- Mac: Click **Tools > SDK Manager > Locations** and change the Java SDK (JDK) location to **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.8**.
 
-![](openjdk-images/vsm.png)
+![Setting the JDK path for OpenJDK on the Mac](openjdk-images/vsm.png)
 
 - Windows: In `Tools > Options > Xamarin > Android Settings`, change the JDK location to `C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.``0.``8`. 
 
-
-![](openjdk-images/vs.png)
+![Setting the JDK path for OpenJDK on Windows](openjdk-images/vs.png)
 
 ## Revert
 
-To revert, point the IDE to the previous Oracle JDK location and rebuild the solution. On Mac, this can be accomplished by clicking “Reset to Defaults”.
+To revert to the Oracle JDK, point the IDE to the previous Oracle JDK location and rebuild the solution. On Mac, this can be accomplished by clicking **Reset to Defaults**.
 
-If you encounter any issues with this distribution of OpenJDK, please report the issue using the feedback tool in your IDE so we can track and address it quickly.
+If you encounter any issues with this distribution of OpenJDK, please report the issue by using the feedback tool in your IDE so we can track and address it quickly.
 
 ## Known Issues & Planned Fix Dates
 
-the `JAVA_HOME` environment variable may not be correctly exported to SDK and Device manager. As a workaround, you can set this environment variable yourself for the machine. This is fixed in the 15.9 Previews.
+the `JAVA_HOME` environment variable may not be correctly exported to the SDK and the Device manager. As a workaround, you can set this environment variable yourself for the machine. This is fixed in the 15.9 Previews.
 
 ## Summary
 
-In this article, you learned how to configure your IDE to use the preview release of Microsoft's OpenJDK distribution, which is slated for stable release in fall 2018. If you encounter any issues with this distribution of OpenJDK, please report the issue using the feedback tool in your IDE so we can track and address it quickly. 
+In this article, you learned how to configure your IDE to use the preview release of Microsoft's OpenJDK distribution, which is slated for stable release in the fall of 2018. 
 
 
