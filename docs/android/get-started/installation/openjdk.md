@@ -15,7 +15,7 @@ _This guide describes the steps for switching to the preview release of Microsof
 
 ## Overview
 
-Beginning with Visual Studio 15.9 and Visual Studio for Mac 7.7, we are moving from Oracle’s JDK to a lightweight version of Open JDK meant solely for Android development:
+Beginning with Visual Studio 15.9 and Visual Studio for Mac 7.7, we are moving from Oracle’s JDK to a lightweight version of the OpenJDK that is intended solely for Android development:
 
 ![New workflow offering a web preview of OpenJDK in VS 15.8 Preview 5](openjdk-images/openjdk.png)
 
@@ -38,9 +38,9 @@ To get started, download the correct build for your system:
 > [!IMPORTANT]
 > TODO: set public links before publishing
 
-- Mac: http://xamarin-jenkins/view/OpenJDK/job/openjdk-mac/20/Azure/processDownloadRequest/20/microsoft_dist_openjdk_1.8.0.7.zip
-- Windows x86: http://xamarin-jenkins/view/OpenJDK/job/openjdk-win32/47/Azure/processDownloadRequest/47/microsoft_dist_openjdk_1.8.0.7.zip
-- Windows x64: http://xamarin-jenkins/view/OpenJDK/job/openjdk-win64/21/Azure/processDownloadRequest/21/microsoft_dist_openjdk_1.8.0.7.zip
+- **Mac** &ndash; http://xamarin-jenkins/view/OpenJDK/job/openjdk-mac/20/Azure/processDownloadRequest/20/microsoft_dist_openjdk_1.8.0.7.zip
+- **Windows x86** &ndash; http://xamarin-jenkins/view/OpenJDK/job/openjdk-win32/47/Azure/processDownloadRequest/47/microsoft_dist_openjdk_1.8.0.7.zip
+- **Windows x64** &ndash; http://xamarin-jenkins/view/OpenJDK/job/openjdk-win64/21/Azure/processDownloadRequest/21/microsoft_dist_openjdk_1.8.0.7.zip
 
 ## Configure
 
@@ -58,7 +58,7 @@ Point the IDE to the new JDK:
 
 ![Setting the JDK path for OpenJDK on the Mac](openjdk-images/vsm.png)
 
-- **Windows** &ndash; In `Tools > Options > Xamarin > Android Settings`, change the **Java Development Kit Location** to the full path of the OpenJDK installation. In the following example, this path is set to `C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.8`:
+- **Windows** &ndash; In `Tools > Options > Xamarin > Android Settings`, change the **Java Development Kit Location** to the full path of the OpenJDK installation. In the following example, this path is set to **C:\\Program Files\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.8**:
 
 ![Setting the JDK path for OpenJDK on Windows](openjdk-images/vs.png)
 
