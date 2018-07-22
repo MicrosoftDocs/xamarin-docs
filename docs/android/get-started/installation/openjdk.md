@@ -21,13 +21,13 @@ Beginning with Visual Studio 15.9 and Visual Studio for Mac 7.7, we are moving f
 
 The benefits of this move are:
 
-- You will always have an OpenJDK version that works for Android development
+- You will always have an OpenJDK version that works for Android development.
 
-- Downloading JDK 9 or 10 won’t affect the development experience
+- Downloading JDK 9 or 10 won’t affect the development experience.
 
-- Significantly reduced download size and footprint
+- Significantly reduced download size and footprint.
 
-- No more issues with 3rd party servers and installers
+- No more issues with 3rd party servers and installers.
 
 If you’d like to move to the improved experience sooner, builds of our OpenJDK distribution are available for you to test on both Windows and Mac today. The setup is simple, and it is easy to revert back to the Oracle JDK at any time.
 
@@ -54,19 +54,19 @@ Unzip to the correct location:
 
 Point the IDE to the new JDK:
 
-- **Mac** &ndash; Click **Tools > SDK Manager > Locations** and change the **Java SDK (JDK) location** to the full path of the OpenJDK installation. In the following example, this path is set to  **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.8**.
+- **Mac** &ndash; Click **Tools > SDK Manager > Locations** and change the **Java SDK (JDK) Location** to the full path of the OpenJDK installation. In the following example, this path is set to  **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.8**.
 
 ![Setting the JDK path for OpenJDK on the Mac](openjdk-images/vsm.png)
 
-- **Windows** &ndash; In `Tools > Options > Xamarin > Android Settings`, change the **Java Development Kit Location** to the full path of the OpenJDK installation. In the following example, this path is set to **C:\\Program Files\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.8**:
+- **Windows** &ndash; Click **Tools > Options > Xamarin > Android Settings** and change the **Java Development Kit Location** to the full path of the OpenJDK installation. In the following example, this path is set to **C:\\Program Files\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.8**:
 
 ![Setting the JDK path for OpenJDK on Windows](openjdk-images/vs.png)
 
 ## Revert
 
-To revert to the Oracle JDK, change the Java SDK location to the previously-used Oracle JDK path and rebuild the solution. On Mac, this can be accomplished by clicking **Reset to Defaults**.
+To revert to the Oracle JDK, change the Java SDK location to the previously-used Oracle JDK path and rebuild the solution. On Mac, you can revert to the Oracle JDK path by clicking **Reset to Defaults**.
 
-If you encounter any issues with this distribution of OpenJDK, please report issues by using the feedback tool in your IDE so we can track and address it quickly.
+If you encounter any issues with this distribution of the OpenJDK, please report issues by using the feedback tool in your IDE so we can track and address it quickly.
 
 ## Known Issues & Planned Fix Dates
 
