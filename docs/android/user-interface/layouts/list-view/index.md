@@ -79,7 +79,7 @@ Create an XML file named **list_item.xml** and save it inside the
 ```
 
 This file defines the layout for each item that will be placed in the
-[`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/).
+[`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/). Make sure that you change Build Action property for this file to Android Resource.
 
 Open `MainActivity.cs` and modify the class to extend
 [`ListActivity`](https://developer.xamarin.com/api/type/Android.App.ListActivity/) (instead of
