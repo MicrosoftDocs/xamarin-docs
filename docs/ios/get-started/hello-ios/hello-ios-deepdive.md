@@ -1,5 +1,5 @@
 ---
-title: "Hello, iOS – Deep Dive"
+title: "Hello, iOS – Deep dive"
 description: "This document takes a deeper look at the Hello, iOS sample application, considering its architecture, user interface, content view hierarchy, testing, deployment, and more."
 ms.topic: quickstart
 ms.prod: xamarin
@@ -9,32 +9,9 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
 ---
-
-# Hello, iOS – Deep Dive
+# Hello, iOS – Deep dive
 
 The Quickstart walkthrough, introduced building and running a basic Xamarin.iOS application. Now it’s time to develop a deeper understanding of how iOS applications work so you can build more sophisticated programs. This guide reviews the steps that in the Hello, iOS walkthrough to enable understanding of the fundamental concepts of iOS application development.
-
-The following topics are explored in this article:
-
-# [Visual Studio for Mac](#tab/vsmac)
-
-- **Introduction to Visual Studio for Mac** – Introduction to Visual Studio for Mac and creating a new application.
-- **Anatomy of a Xamarin.iOS Application** - Tour of the essential parts of a Xamarin.iOS application.
-- **Architecture and App Fundamentals** – A review of the parts of an iOS application and the relationship between them.
-- **User Interface (UI)** – Creating user interfaces with the iOS Designer.
-- **View Controllers and the View Lifecycle** – An introduction to the View Lifecycle and managing Content View Hierarchies with the View Controller.
-- **Testing, Deployment, and Finishing Touches** - Complete your application with advice on testing, deployment, generating artwork, and more.
-
-# [Visual Studio](#tab/vswin)
-
-- **Introduction to Visual Studio** – Introduction to Visual Studio and creating a new application.
-- **Anatomy of a Xamarin.iOS Application** - Tour of the essential parts of a Xamarin.iOS application.
-- **Architecture and App Fundamentals** – A review of the parts of an iOS application and the relationship between them.
-- **User Interface (UI)** – Creating user interfaces with the iOS Designer.
-- **View Controllers and the View Lifecycle** – An introduction to the View Lifecycle and managing Content View Hierarchies with the View Controller.
-- **Testing, Deployment, and Finishing Touches** - Complete your application with advice on testing, deployment, generating artwork, and more.
-
------
 
 This guide helps you develop the skills and knowledge required to build a single-screen iOS application. After working through it, you should have an understanding of the different parts of a Xamarin.iOS application and how they fit together.
 
@@ -60,9 +37,7 @@ Visual Studio organizes code into _Solutions_ and *Projects*. A Solution is a co
 
 -----
 
-<a name="anatomy" />
-
-## Anatomy of a Xamarin.iOS Application
+## Anatomy of a Xamarin.iOS application
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -91,7 +66,7 @@ In the [Hello, iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md) walkthr
 -  **Info.plist** – The `Info.plist` is where application properties such as the application name, icons, launch images, and more are set. This is a powerful file and a thorough introduction to it is available in the  [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) guide.
 -  **Entitlements.plist** - The entitlements property list lets us specify application  *capabilities* (also called App Store Technologies) such as iCloud, PassKit, and more. More information on the  `Entitlements.plist` can be found in the  [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) guide. For a general introduction to entitlements, refer to the  [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide.
 
-## Architecture and App Fundamentals
+## Architecture and app fundamentals
 
 Before an iOS application can load a user interface, two things need to be in place. First, the application needs to define an *entry point* – the first code that runs when the application’s process is loaded into memory. Second, it needs to define a class to handle application-wide events and interact with the operating system.
 
@@ -121,7 +96,7 @@ namespace Phoneword_iOS
 }
 ```
 
-### Application Delegate
+### Application delegate
 
 In iOS, the *Application Delegate* class handles system events; this class lives inside `AppDelegate.cs`. The `AppDelegate` class manages the application *Window*. The Window is a single instance of the `UIWindow` class that serves as a container for the user interface. By default, an application gets only one Window onto which to load its content, and the Window is attached to a *Screen* (single `UIScreen` instance) that provides the bounding rectangle matching the dimensions of the physical device screen.
 
@@ -152,13 +127,13 @@ namespace Phoneword_iOS
 
 Once the application has defined its Window, it can begin loading the user interface. The next section explores UI creation.
 
-## User Interface
+## User interface
 
 The user interface of an iOS app is like a storefront - the application typically gets one Window, but it can fill the Window up with as many objects at it needs, and the objects and arrangements can be changed depending on what the app wants to display. The objects in this scenario - the things that the user sees - are called Views. To build a single screen in an application, Views are stacked on top of each other in a *Content View Hierarchy*, and the hierarchy is managed by a single View Controller. Applications with multiple screens have multiple Content View Hierarchies, each with its own View Controller, and the application places Views in the Window to create a different Content View Hierarchy based on the screen that the user is on.
 
 This section dives into the user interface by describing Views, Content View Hierarchies, and the iOS Designer.
 
-### iOS Designer and Storyboards
+### iOS Designer and storyboards
 
 The iOS Designer is a visual tool for building user interfaces in Xamarin. The Designer can be launched by double-clicking on any Storyboard (.storyboard) file, which will open to a view that resembles the following screenshot:
 
@@ -234,7 +209,7 @@ The Subviews are highlighted in the diagram below:
 
 The next section breaks down the Content View Hierarchy represented by this Scene.
 
-## Content View Hierarchy
+## Content view hierarchy
 
 A _Content View Hierarchy_ is a stack of Views and Subviews managed by a single View Controller, as illustrated by the diagram below:
 
@@ -258,11 +233,11 @@ The diagram below illustrates the relationships between the Window, Views, Subvi
 
 In the next section discusses how to work with Views in code and learn to program for user interaction using View Controllers and the View Lifecycle.
 
-## View Controllers and the View Lifecycle
+## View controllers and the view lifecycle
 
 Every Content View Hierarchy has a corresponding View Controller to power user interaction. The role of the View Controller is to manage the Views in the Content View Hierarchy. The View Controller is not part of the Content View Hierarchy, and it's not an element in the interface. Rather, it provides the code that powers the user's interactions with the objects on the screen.
 
-### View Controllers and Storyboards
+### View controllers and storyboards
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -303,7 +278,7 @@ The `ViewController` now drives the interactions of the Content View Hierarchy a
 > [!NOTE]
 > For visual-only screens that don’t require user interaction, the **Class** property can be left blank in the **Properties Pad**. This sets the View Controller's backing class as the default implementation of a `UIViewController`, which is appropriate if you don’t plan on adding custom code.
 
-### View Lifecycle
+### View lifecycle
 
 The View Controller is in charge of loading and unloading Content View Hierarchies from the Window. When something of importance happens to a View in the Content View Hierarchy, the operating system notifies the View Controller through events in the View lifecycle. By overriding methods in the View lifecycle, you can interact with the objects on the screen and create a dynamic, responsive user interface.
 
@@ -317,9 +292,9 @@ These are the basic lifecycle methods and their function:
 
 When custom code is added to any stage of the Lifecycle, that Lifecycle method’s *base implementation* must be *overriden*. This is achieved by tapping into the existing Lifecycle method, which has some code already attached to it, and  extending it with additional code. The base implementation is called from inside the method to make sure the original code runs before the new code. An example of this is demonstrated in the next section.
 
-For more information on working with View Controllers, refer to Apple's [View Controller Programming Guide for iOS](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/ViewLoadingandUnloading/ViewLoadingandUnloading.html) and the [UIViewController reference](https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html).
+For more information on working with View Controllers, refer to Apple's [View Controller Programming Guide for iOS](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1) and the [UIViewController reference](https://developer.apple.com/documentation/uikit/uiviewcontroller?language=objc).
 
-### Responding to User Interaction
+### Responding to user interaction
 
 The most important role of the View Controller is responding to user interaction, such as button presses, navigation, and more. The simplest way to handle user interaction is to wire up a control to listen to user input and attach an event handler to respond to the input. For example, a button could be wired up to respond to a touch event, as demonstrated in the Phoneword app.
 
@@ -364,7 +339,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-## Additional Concepts Introduced in Phoneword
+## Additional concepts introduced in Phoneword
 
 The Phoneword application introduced several concepts not covered in this guide. These concepts include:
 
@@ -378,7 +353,7 @@ The Phoneword application introduced several concepts not covered in this guide.
   For more information on buttons, refer to the [Buttons](~/ios/user-interface/controls/buttons.md) guide.
 - **Dismiss the Keyboard** – When the user taps the Text Field, iOS displays the keyboard to let the user enter input. Unfortunately, there is no built-in functionality to dismiss the keyboard. The following code is added to the `TranslateButton` to dismiss the keyboard when the user presses the `TranslateButton`:
       PhoneNumberText.ResignFirstResponder ();
-  For another example of dismissing the keyboard, refer to the [Dismiss the Keyboard](https://developer.xamarin.com/recipes/ios/input/keyboards/dismiss_the_keyboard) recipe.
+  For another example of dismissing the keyboard, refer to the [Dismiss the Keyboard](https://github.com/xamarin/recipes/tree/master/Recipes/ios/input/keyboards/dismiss_the_keyboard) recipe.
 - **Place Phone Call with URL** – In the Phoneword app, an Apple URL scheme is used to launch the system phone app. The custom URL scheme consists of a “tel:” prefix and the translated phone number, as illustrated by the code below:
 
     ```csharp
@@ -398,19 +373,19 @@ The Phoneword application introduced several concepts not covered in this guide.
                 }
     ```
 
-For more information on iOS alert views, refer to the [Alert Controller recipe](https://developer.xamarin.com/recipes/ios/standard_controls/alertcontroller/).
+For more information on iOS alert views, refer to the [Alert Controller recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller).
 
-## Testing, Deployment, and Finishing Touches
+## Testing, deployment, and finishing touches
 
 Both Visual Studio for Mac and Visual Studio provide many options for testing and deploying an application. This section covers debugging options, demonstrates testing applications on device, and introduces tools for creating custom app icons and launch images.
 
-### Debugging Tools
+### Debugging tools
 
-Sometimes issues in application code are difficult to diagnose. To help diagnose complex code issues, you could [Set a Breakpoint](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/), [Step Through Code](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/), or [Output Information to the Log Window](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/).
+Sometimes issues in application code are difficult to diagnose. To help diagnose complex code issues, you could [Set a Breakpoint](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint), [Step Through Code](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code), or [Output Information to the Log Window](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window).
 
-### Deploy to a Device
+### Deploy to a device
 
-The iOS Simulator is a quick way to test an application. The Simulator has a number of useful optimizations for testing, including mock location, [simulating movement](https://developer.xamarin.com/recipes/ios/multitasking/test_location_changes_in_simulator/), and more. However, users will not consume the final app in a Simulator. All applications should be tested on real devices early and often.
+The iOS Simulator is a quick way to test an application. The Simulator has a number of useful optimizations for testing, including mock location, [simulating movement](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/test_location_changes_in_simulator), and more. However, users will not consume the final app in a Simulator. All applications should be tested on real devices early and often.
 
 A device takes time to provision and requires an Apple Developer Account. The [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide gives thorough instructions on getting a device ready for development.
 
@@ -433,7 +408,7 @@ The app will deploy to the iOS device:
 
 [![](hello-ios-deepdive-images/image1.png "The app will deploy to the iOS device and run")](hello-ios-deepdive-images/image1.png#lightbox)
 
-### Generate Custom Icons and Launch Images
+### Generate custom icons and launch images
 
 Not everyone has a designer available to create the custom icons and launch images an app needs to stand out. Here are several alternate approaches to generating custom app artwork:
 
@@ -460,8 +435,8 @@ Congratulations! You now have a solid understanding of the components of a Xamar
 In the [next tutorial in the Getting Started series](~/ios/get-started/hello-ios-multiscreen/index.md), you’ll extend our application to handle multiple screens. Along the way you’ll implement a Navigation Controller, learn about Storyboard Segues, and introduce the Model, View, Controller (MVC) pattern as you extend our application to handle multiple screens.
 
 
-## Related Links
+## Related links
 
 - [Hello, iOS (sample)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
-- [iOS Human Interface Guidelines](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
-- [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)
+- [iOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
+- [iOS Provisioning Portal](http://developer.apple.com/account/#/overview)
