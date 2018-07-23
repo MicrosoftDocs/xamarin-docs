@@ -54,7 +54,7 @@ This article explains how to setup a physical Android device and
 connect it to a development computer so that the device may be used to
 run and debug Xamarin.Android applications.
 
-## [Microsoft's OpenJDK Preview](~/android/get-started/installation/openjdk.md)
+## [Microsoft OpenJDK Preview](~/android/get-started/installation/openjdk.md)
 
 This guide describes the steps for switching to the preview release of Microsoft's distribution
 of the OpenJDK.
