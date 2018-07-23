@@ -9,9 +9,9 @@ ms.author: vyedin
 ms.date: 07/22/2018
 ---
 
-# Preview with Microsoft's OpenJDK Distribution
+# Microsoft's OpenJDK Distribution Preview
 
-_This guide describes the steps for switching to the preview release of Microsoft's distribution of OpenJDK._
+_This guide describes the steps for switching to the preview release of Microsoft's distribution of the OpenJDK._
 
 ![](~/media/shared/preview.png)
 
@@ -31,7 +31,7 @@ The benefits of this move are:
 
 - No more issues with 3rd party servers and installers.
 
-If you’d like to move to the improved experience sooner, builds of our OpenJDK distribution are available for you to test on both Windows and Mac today. The setup is simple, and it is easy to revert back to the Oracle JDK at any time.
+If you’d like to move to the improved experience sooner, builds of the Microsoft OpenJDK distribution are available for you to test on both Windows and Mac today. The setup is simple, and it is easy to revert back to the Oracle JDK at any time.
 
 ## Download
 
@@ -58,17 +58,17 @@ Point the IDE to the new JDK:
 
 - **Mac** &ndash; Click **Tools > SDK Manager > Locations** and change the **Java SDK (JDK) Location** to the full path of the OpenJDK installation. In the following example, this path is set to  **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.8**.
 
-![Setting the JDK path for OpenJDK on the Mac](openjdk-images/vsm.png)
+![Setting the JDK path for the Microsoft OpenJDK distribution on the Mac](openjdk-images/vsm.png)
 
 - **Windows** &ndash; Click **Tools > Options > Xamarin > Android Settings** and change the **Java Development Kit Location** to the full path of the OpenJDK installation. In the following example, this path is set to **C:\\Program Files\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.8**:
 
-![Setting the JDK path for OpenJDK on Windows](openjdk-images/vs.png)
+![Setting the JDK path for the Microsoft OpenJDK distribution on Windows](openjdk-images/vs.png)
 
 ## Revert
 
 To revert to the Oracle JDK, change the Java SDK location to the previously-used Oracle JDK path and rebuild the solution. On Mac, you can revert to the Oracle JDK path by clicking **Reset to Defaults**.
 
-If you encounter any issues with this distribution of the OpenJDK, please report issues by using the feedback tool in your IDE so we can track and address it quickly.
+If you have any problems with the Microsoft OpenJDK distribution, please report issues by using the feedback tool in your IDE so that they can be tracked and corrected quickly.
 
 ## Known Issues & Planned Fix Dates
 
