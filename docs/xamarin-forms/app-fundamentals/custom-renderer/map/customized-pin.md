@@ -235,7 +235,7 @@ The `GetViewForAnnotation` method is called when the location of the annotation 
 The `GetViewForAnnotation` method accepts an `IMKAnnotation` that contains the annotation's data and returns an `MKAnnotationView` for display on the map, and is shown in the following code example:
 
 ```csharp
-MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
+protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
 {
     MKAnnotationView annotationView = null;
 
@@ -268,12 +268,12 @@ This method ensures that the annotation will be displayed as a custom image, rat
 1. The `GetCustomPin` method is called to return the custom pin data for the annotation.
 1. To conserve memory, the annotation's view is pooled for reuse with the call to [`DequeueReusableAnnotation`](https://developer.xamarin.com/api/member/MapKit.MKMapView.DequeueReusableAnnotation/(System.String)/).
 1. The `CustomMKAnnotationView` class extends the `MKAnnotationView` class with `Id` and `Url` properties that correspond to identical properties in the `CustomPin` instance. A new instance of the `CustomMKAnnotationView` is created, provided that the annotation is `null`:
-  - The `CustomMKAnnotationView.Image` property is set to the image that will represent the annotation on the map.
-  - The `CustomMKAnnotationView.CalloutOffset` property is set to a `CGPoint` that specifies that the callout will be centered above the annotation.
-  - The `CustomMKAnnotationView.LeftCalloutAccessoryView` property is set to an image of a monkey that will appear to the left of the annotation title and address.
-  - The `CustomMKAnnotationView.RightCalloutAccessoryView` property is set to an *Information* button that will appear to the right of the annotation title and address.
-  - The `CustomMKAnnotationView.Id` property is set to the `CustomPin.Id` property returned by the `GetCustomPin` method. This enables the annotation to be identified so that it's [callout can be further customized](#Selecting_the_Annotation), if desired.
-  - The `CustomMKAnnotationView.Url` property is set to the `CustomPin.Url` property returned by the `GetCustomPin` method. The URL will be navigated to when the user [taps the button displayed in the right callout accessory view](#Tapping_on_the_Right_Callout_Accessory_View).
+    - The `CustomMKAnnotationView.Image` property is set to the image that will represent the annotation on the map.
+    - The `CustomMKAnnotationView.CalloutOffset` property is set to a `CGPoint` that specifies that the callout will be centered above the annotation.
+    - The `CustomMKAnnotationView.LeftCalloutAccessoryView` property is set to an image of a monkey that will appear to the left of the annotation title and address.
+    - The `CustomMKAnnotationView.RightCalloutAccessoryView` property is set to an *Information* button that will appear to the right of the annotation title and address.
+    - The `CustomMKAnnotationView.Id` property is set to the `CustomPin.Id` property returned by the `GetCustomPin` method. This enables the annotation to be identified so that it's [callout can be further customized](#Selecting_the_Annotation), if desired.
+    - The `CustomMKAnnotationView.Url` property is set to the `CustomPin.Url` property returned by the `GetCustomPin` method. The URL will be navigated to when the user [taps the button displayed in the right callout accessory view](#Tapping_on_the_Right_Callout_Accessory_View).
 1. The [`MKAnnotationView.CanShowCallout`](https://developer.xamarin.com/api/property/MapKit.MKAnnotationView.CanShowCallout/) property is set to `true` so that the callout is displayed when the annotation is tapped.
 1. The annotation is returned for display on the map.
 

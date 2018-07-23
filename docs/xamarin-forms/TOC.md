@@ -310,6 +310,7 @@
 ## [Advanced Concepts and Internals](internals/index.md)
 ### [Fast Renderers](internals/fast-renderers.md)
 ### [.NET Standard](internals/net-standard.md)
+### [Dependency Resolution](internals/dependency-resolution.md)
 ## [Troubleshooting](troubleshooting/index.md)
 ### [Frequently Asked Questions](troubleshooting/questions/index.md)
 #### [Can I update the Xamarin.Forms default template to a newer NuGet package?](troubleshooting/questions/update-forms-template.md)

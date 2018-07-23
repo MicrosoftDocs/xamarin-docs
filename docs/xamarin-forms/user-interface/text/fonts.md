@@ -76,30 +76,6 @@ The `FontAttribute` enumeration can be used as follows (you can specify a single
 label.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
 ```
 
-### FormattedString
-
-Some Xamarin.Forms controls (such as `Label`) also support different font attributes within a string using the `FormattedString` class. A `FormattedString` consists of one-or-more `Span`s, each of which can have its own formatting attributes.
-
-The `Span` class has the following attributes:
-
-* **Text** &ndash; the value to display
-* **FontFamily** &ndash; the font name
-* **FontSize** &ndash; the font size
-* **FontAttributes** &ndash; style information like *italic* and **bold**
-* **ForegroundColor** &ndash; text color
-* **BackgroundColor** &ndash; background color
-
-An example of creating and displaying a `FormattedString` is shown below &ndash; note that it is assigned to the labels' `FormattedText` property and not the `Text` property.
-
-```csharp
-var labelFormatted = new Label ();
-var fs = new FormattedString ();
-fs.Spans.Add (new Span { Text="Red, ", ForegroundColor = Color.Red, FontSize = 20, FontAttributes = FontAttributes.Italic });
-fs.Spans.Add (new Span { Text=" blue, ", ForegroundColor = Color.Blue, FontSize = 32 });
-fs.Spans.Add (new Span { Text=" and green!", ForegroundColor = Color.Green, FontSize = 12 });
-labelFormatted.FormattedText = fs;
-```
-
 ### Setting Font Info Per Platform
 
 Alternatively, the `Device.RuntimePlatform` property can be used to set different
@@ -139,22 +115,6 @@ To specify multiple `Font` settings, combine the required settings into a single
 <Label Text="Small bold text" Font="Bold, Micro" />
 <Label Text="Medium custom font" Font="MarkerFelt-Thin, 42" />
 <Label Text="Really big bold and italic text" Font="Bold, Italic, 72"  />
-```
-
-The `FormattedString` class can also be used in XAML, as shown here:
-
-```xaml
-<Label>
-    <Label.FormattedText>
-        <FormattedString>
-            <FormattedString.Spans>
-                <Span Text="Red, " ForegroundColor="Red" FontAttributes="Italic" FontSize="20" />
-                <Span Text=" blue, " ForegroundColor="Blue" FontSize="32" />
-                <Span Text=" and green! " ForegroundColor="Green" FontSize="12"/>
-            </FormattedString.Spans>
-        </FormattedString>
-    </Label.FormattedText>
-</Label>
 ```
 
 [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-values) can also be used in XAML to render a different font on each platform. The example below uses a custom font face on iOS (<span style="font-family:MarkerFelt-Thin">MarkerFelt-Thin</span>) and specifies only size/attributes on the other platforms:
@@ -253,12 +213,10 @@ You can also use [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#p
 Xamarin.Forms provides simple default settings to let you size text easily for
 all supported platforms. It also lets you specify font face and size &ndash;
 even differently for each platform &ndash; when more fine-grained control is
-required. The `FormattedString` class can be used to construct a string containing
-different font specifications using the `Span` class.
+required.
 
-Font information can also be specified in XAML using a correctly formatted font
-attributes or the `FormattedString` element with `Span` children.
-
+Font information can also be specified in XAML using correctly formatted font
+attributes.
 
 ## Related Links
 

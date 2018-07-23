@@ -1,17 +1,17 @@
 ---
 title: "ListView Interactivity"
-description: "This article explains how to add interactivity to a Xamarin.Forms ListView by implementing selections, swipe-to-delete, and pull-to-refresh."
+description: "This article explains how to add interactivity to a Xamarin.Forms ListView by implementing selections, context actions, and pull-to-refresh."
 ms.prod: xamarin
 ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/01/2018
+ms.date: 07/13/2018
 ---
 
 # ListView Interactivity
 
-ListView supports interacting with the data it presents through the following means:
+ListView supports interacting with the data it presents through the following approaches:
 
 - [**Selection & Taps**](#selectiontaps) &ndash; respond to taps and selections/deselections of items. Enable or disable row selection (enabled by default).
 - [**Context Actions**](#Context_Actions) &ndash; Expose functionality per item, for example, swipe-to-delete.
@@ -20,34 +20,41 @@ ListView supports interacting with the data it presents through the following me
 <a name="selectiontaps" />
 
 ## Selection & Taps
-`ListView` supports selection of one item at a time. Selection is on by default. When a user taps an item, two events are fired: `ItemTapped` and `ItemSelected`. Note that tapping the same item twice will not fire multiple `ItemSelected` events, but will fire multiple `ItemTapped` events. Also note that `ItemSelected` will be called if an item is deselected.
 
-Be aware that `ItemSelected` is called both when items are deselected and when they are selected. That means you'll need to check for null `SelectedItem` in your `ItemSelected` event handler before you can use it:
+The [`ListView`](xref:Xamarin.Forms.ListView) selection mode is controlled by setting the [`ListView.SelectionMode`](xref:Xamarin.Forms.ListView.SelectionMode) property to a value of the [`ListViewSelectionMode`](xref:Xamarin.Forms.ListViewSelectionMode) enumeration:
 
-```csharp
-void OnSelection (object sender, SelectedItemChangedEventArgs e)
-{
-  if (e.SelectedItem == null) {
-    return; //ItemSelected is called on deselection, which results in SelectedItem being set to null
-  }
-  DisplayAlert ("Item Selected", e.SelectedItem.ToString (), "Ok");
-  //((ListView)sender).SelectedItem = null; //uncomment line if you want to disable the visual selection state.
-}
-```
+- [`Single`](xref:Xamarin.Forms.ListViewSelectionMode.Single) indicates that a single item can be selected, with the selected item being highlighted. This is the default value.
+- [`None`](xref:Xamarin.Forms.ListViewSelectionMode.None) indicates that items cannot be selected.
+
+When a user taps an item, two events are fired:
+
+- [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) fires when a new item is selected.
+- [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) fires when an item is tapped.
+
+> [!NOTE]
+> Tapping the same item twice will fire two [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) events, but will only fire a single [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) event.
+
+When the [`SelectionMode`](xref:Xamarin.Forms.ListView.SelectionMode) property is set to [`Single`](xref:Xamarin.Forms.ListViewSelectionMode.Single), items in the [`ListView`](xref:Xamarin.Forms.ListView) can be selected, the [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) and [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) events will be fired, and the [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) property will be set to the value of the selected item.
+
+When the [`SelectionMode`](xref:Xamarin.Forms.ListView.SelectionMode) property is set to [`None`](xref:Xamarin.Forms.ListViewSelectionMode.None), items in the [`ListView`](xref:Xamarin.Forms.ListView) cannot be selected, the [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) event will not be fired, and the [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) property will remain `null`. However, [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) events will still be fired and the tapped item will be briefly highlighted during the tap.
+
+When an item has been selected and the [`SelectionMode`](xref:Xamarin.Forms.ListView.SelectionMode) property is changed from [`Single`](xref:Xamarin.Forms.ListViewSelectionMode.Single) to [`None`](xref:Xamarin.Forms.ListViewSelectionMode.None), the [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) property will be set to `null` and the [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) event will be fired with a `null` item.
+
+The following screenshots show a [`ListView`](xref:Xamarin.Forms.ListView) with the default selection mode:
+
+![](interactivity-images/selection-default.png "ListView with Selection Enabled")
 
 ### Disabling Selection
 
-If you want to disable selection, handle the `ItemSelected` event and set the `SelectedItem` property to null:
+To disable [`ListView`](xref:Xamarin.Forms.ListView) selection set the [`SelectionMode`](xref:Xamarin.Forms.ListView.SelectionMode) property to [`None`](xref:Xamarin.Forms.ListViewSelectionMode.None):
 
-```csharp
-SelectionDemoList.ItemSelected += (sender, e) => {
-    ((ListView)sender).SelectedItem = null;
-};
+```xaml
+<ListView ... SelectionMode="None" />
 ```
 
-With selection enabled:
-
-![](interactivity-images/selection-default.png "ListView with Selection Enabled")
+```csharp
+var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
+```
 
 <a name="Context_Actions" />
 

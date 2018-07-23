@@ -6,7 +6,7 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/31/2018
+ms.date: 07/16/2018
 ---
 
 # Xamarin.Forms Entry
@@ -54,27 +54,98 @@ var entry = new Entry { ... MaxLength = 10 };
 
 A [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) property value of 0 indicates that no input will be allowed, and a value of `int.MaxValue`, which is the default value for an [`Entry`](xref:Xamarin.Forms.Entry), indicates that there is no effective limit on the number of characters that may be entered.
 
-### Keyboards
+### Customizing the Keyboard
 
-The keyboard that is presented when users interact with an `Entry` can be set programmatically via the `Keyboard` property.
+The keyboard that's presented when users interact with an [`Entry`](xref:Xamarin.Forms.Entry) can be set programmatically via the [`Keyboard`](xref:Xamarin.Forms.InputView.Keyboard) property, to one of the following properties from the [`Keyboard`](xref:Xamarin.Forms.Keyboard) class:
 
-The options for the keyboard type are:
+- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat) – used for texting and places where emoji are useful.
+- [`Default`](xref:Xamarin.Forms.Keyboard.Default) – the default keyboard.
+- [`Email`](xref:Xamarin.Forms.Keyboard.Email) – used when entering email addresses.
+- [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric) – used when entering numbers.
+- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain) – used when entering text, without any [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) specified.
+- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone) – used when entering telephone numbers.
+- [`Text`](xref:Xamarin.Forms.Keyboard.Text) – used when entering text.
+- [`Url`](xref:Xamarin.Forms.Keyboard.Url) – used for entering file paths & web addresses.
 
-- **Default** &ndash; the default keyboard
-- **Chat** &ndash; used for texting & places where emoji are useful
-- **Email** &ndash; used when entering email addresses
-- **Numeric** &ndash; used when entering numbers
-- **Telephone** &ndash; used when entering telephone numbers
-- **Url** &ndash; used for entering file paths and web addresses
+This can be accomplished in XAML as follows:
 
-There is an [example of each keyboard](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/)
-in our Recipes section.
+```xaml
+<Entry Keyboard="Chat" />
+```
+
+The equivalent C# code is:
+
+```csharp
+var entry = new Entry { Keyboard = Keyboard.Chat };
+```
+
+Examples of each keyboard can be found in our [Recipes](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) repository.
+
+The [`Keyboard`](xref:Xamarin.Forms.Keyboard) class also has a [`Create`](xref:Xamarin.Forms.Keyboard.Create*) factory method that can be used to customize a keyboard by specifying capitalization, spellcheck, and suggestion behavior. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) enumeration values as specified as arguments to the method, with a customized `Keyboard` being returned. The `KeyboardFlags` enumeration contains the following values:
+
+- [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – no features are added to the keyboard.
+- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) – indicates that the first letter of the first word of each entered sentence will be automatically capitalized.
+- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck) – indicates that spellcheck will be performed on entered text.
+- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions) – indicates that word completions will be offered on entered text.
+- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord) – indicates that the first letter of each word will be automatically capitalized.
+- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter) – indicates that every character will be automatically capitalized.
+- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone) – indicates that no automatic capitalization will occur.
+- [`All`](xref:Xamarin.Forms.KeyboardFlags.All) – indicates that spellcheck, word completions, and sentence capitalization will occur on entered text.
+
+The following XAML code example shows how to customize the default [`Keyboard`](xref:Xamarin.Forms.Keyboard) to offer word completions and capitalize every entered character:
+
+```xaml
+<Entry Placeholder="Enter text here">
+    <Entry.Keyboard>
+        <Keyboard x:FactoryMethod="Create">
+            <x:Arguments>
+                <KeyboardFlags>Suggestions,CapitalizeCharacter</KeyboardFlags>
+            </x:Arguments>
+        </Keyboard>
+    </Entry.Keyboard>
+</Entry>
+```
+
+The equivalent C# code is:
+
+```csharp
+var entry = new Entry { Placeholder = "Enter text here" };
+entry.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
+```
+
+#### Customizing the Return Key
+
+The appearance of the return key on the soft keyboard, which is displayed when an [`Entry`](xref:Xamarin.Forms.Entry) has focus, can be customized by setting the [`ReturnType`](xref:Xamarin.Forms.Entry.ReturnType) property to a value of the [`ReturnType`](xref:Xamarin.Forms.ReturnType) enumeration:
+
+- [`Default`](xref:Xamarin.Forms.ReturnType.Default) – indicates that no specific return key is required and that the platform default will be used.
+- [`Done`](xref:Xamarin.Forms.ReturnType.Done) – indicates a "Done" return key.
+- [`Go`](xref:Xamarin.Forms.ReturnType.Go) – indicates a "Go" return key.
+- [`Next`](xref:Xamarin.Forms.ReturnType.Next) – indicates a "Next" return key.
+- [`Search`](xref:Xamarin.Forms.ReturnType.Search) – indicates a "Search" return key.
+- [`Send`](xref:Xamarin.Forms.ReturnType.Send) – indicates a "Send" return key.
+
+The following XAML example shows how to set the return key:
+
+```xaml
+<Entry ReturnType="Send" />
+```
+
+The equivalent C# code is:
+
+```csharp
+var entry = new Entry { ReturnType = ReturnType.Send };
+```
+
+> [!NOTE]
+> The exact appearance of the return key is dependent upon the platform. On iOS, the return key is a text-based button. However, on the Android and Universal Windows Platforms, the return key is a icon-based button.
+
+When the return key is pressed, the [`Completed`](xref:Xamarin.Forms.Entry.Completed) event fires and any `ICommand` specified by the [`ReturnCommand`](xref:Xamarin.Forms.Entry.ReturnCommand) property is executed. In addition, any `object` specified by the [`ReturnCommandParameter`](xref:Xamarin.Forms.Entry.ReturnCommandParameter) property will be passed to the `ICommand` as a parameter. For more information about commands, see [The Command Interface](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
 
 ### Enabling and Disabling Spell Checking
 
 The [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) property controls whether spell checking is enabled. By default, the property is set to `true`. As the user enters text, misspellings are indicated.
 
-However, for some text entry scenarios, such as entering a username, spell checking provides a negative experience and so should be disabled by setting the [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) property to `false`:
+However, for some text entry scenarios, such as entering a username, spell checking provides a negative experience and should be disabled by setting the [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) property to `false`:
 
 ```xaml
 <Entry ... IsSpellCheckEnabled="false" />
@@ -86,6 +157,23 @@ var entry = new Entry { ... IsSpellCheckEnabled = false };
 
 > [!NOTE]
 > When the [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) property is set to `false`, and a custom keyboard isn't being used, the native spell checker will be disabled. However, if a [`Keyboard`](xref:Xamarin.Forms.Keyboard) has been set that disables spell checking, such as [`Keyboard.Chat`](xref:Xamarin.Forms.Keyboard.Chat), the `IsSpellCheckEnabled` property is ignored. Therefore, the property cannot be used to enable spell checking for a `Keyboard` that explicitly disables it.
+
+### Enabling and Disabling Text Prediction
+
+The [`IsTextPredictionEnabled`](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) property controls whether text prediction and automatic text correction is enabled. By default, the property is set to `true`. As the user enters text, word predictions are presented.
+
+However, for some text entry scenarios, such as entering a username, text prediction and automatic text correction provides a negative experience and should be disabled by setting the [`IsTextPredictionEnabled`](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) property to `false`:
+
+```xaml
+<Entry ... IsTextPredictionEnabled="false" />
+```
+
+```csharp
+var entry = new Entry { ... IsTextPredictionEnabled = false };
+```
+
+> [!NOTE]
+> When the [`IsTextPredictionEnabled`](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) property is set to `false`, and a custom keyboard isn't being used, text prediction and automatic text correction is disabled. However, if a [`Keyboard`](xref:Xamarin.Forms.Keyboard) has been set that disables text prediction, the `IsTextPredictionEnabled` property is ignored. Therefore, the property cannot be used to enable text prediction for a `Keyboard` that explicitly disables it.
 
 ### Placeholders
 
@@ -137,7 +225,6 @@ var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 
 ![](entry-images/passwordplaceholder.png "Entry IsPassword and Placeholder Example")
 
-
 ### Colors
 
 Entry can be set to use a custom background and text colors via the following bindable properties:
@@ -187,12 +274,12 @@ Be careful to make sure that the background and text colors you choose are usabl
 
 Entry exposes two events:
 
-- [TextChanged](xref:Xamarin.Forms.Entry.TextChanged) &ndash; raised when the text changes in the entry. Provides the text before and after the change.
-- [Completed](xref:Xamarin.Forms.Entry.Completed) &ndash; raised when the user has ended input by pressing the return key on the keyboard.
+- [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) &ndash; raised when the text changes in the entry. Provides the text before and after the change.
+- [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; raised when the user has ended input by pressing the return key on the keyboard.
 
 ### Completed
 
-The `Completed` event is used to react to the completion of an interaction with an Entry. `Completed` is raised when the user ends input with a field by entering the return key on the keyboard. The handler for the event is a generic event handler, taking the sender and `EventArgs`:
+The `Completed` event is used to react to the completion of an interaction with an Entry. `Completed` is raised when the user ends input with a field by pressing the return key on the keyboard. The handler for the event is a generic event handler, taking the sender and `EventArgs`:
 
 ```csharp
 void Entry_Completed (object sender, EventArgs e)
@@ -213,6 +300,8 @@ and C#:
 var entry = new Entry ();
 entry.Completed += Entry_Completed;
 ```
+
+After the [`Completed`](xref:Xamarin.Forms.Entry.Completed) event fires, any `ICommand` specified by the [`ReturnCommand`](xref:Xamarin.Forms.Entry.ReturnCommand) property is executed, with the `object` specified by the [`ReturnCommandParameter`](xref:Xamarin.Forms.Entry.ReturnCommandParameter) property being passed to the `ICommand`.
 
 ### TextChanged
 

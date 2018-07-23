@@ -6,14 +6,14 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/31/2018
+ms.date: 07/13/2018
 ---
 
 # Xamarin.Forms Editor
 
 _Multi-line text input_
 
-The `Editor` control is used to accept multi-line input. This article will cover:
+The [`Editor`](xref:Xamarin.Forms.Editor) control is used to accept multi-line input. This article covers:
 
 - **[Customization](#customization)** &ndash; keyboard and color options.
 - **[Interactivity](#interactivity)** &ndash; events that can be listened for to provide interactivity.
@@ -22,7 +22,7 @@ The `Editor` control is used to accept multi-line input. This article will cover
 
 ### Setting and Reading Text
 
-The `Editor`, like other text-presenting views, exposes the `Text` property. This property can be used to set and read the text presented by the `Editor`. The following example demonstrates setting the `Text` property in XAML:
+The [`Editor`](xref:Xamarin.Forms.Editor), like other text-presenting views, exposes the `Text` property. This property can be used to set and read the text presented by the `Editor`. The following example demonstrates setting the `Text` property in XAML:
 
 ```xaml
 <Editor Text="I am an Editor" />
@@ -54,20 +54,86 @@ var editor = new Editor { ... MaxLength = 10 };
 
 A [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) property value of 0 indicates that no input will be allowed, and a value of `int.MaxValue`, which is the default value for an [`Editor`](xref:Xamarin.Forms.Editor), indicates that there is no effective limit on the number of characters that may be entered.
 
-### Keyboards
+### Auto-Sizing an Editor
 
-The keyboard that is presented when users interact with an `Editor` can be set programmatically via the [``Keyboard``](xref:Xamarin.Forms.Keyboard) property.
+An [`Editor`](xref:Xamarin.Forms.Editor) can be made to auto-size to its content by setting the [`Editor.AutoSize`](xref:Xamarin.Forms.Editor.AutoSize) property to [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges), which is a value of the [`EditoAutoSizeOption`](xref:Xamarin.Forms.EditorAutoSizeOption) enumeration. This enumeration has two values:
 
-The options for the keyboard type are:
+- [`Disabled`](xref:Xamarin.Forms.EditorAutoSizeOption.Disabled) indicates that automatic resizing is disabled, and is the default value.
+- [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) indicates that automatic resizing is enabled.
 
-- **Default** &ndash; the default keyboard
-- **Chat** &ndash; used for texting & places where emoji are useful
-- **Email** &ndash; used when entering email addresses
-- **Numeric** &ndash; used when entering numbers
-- **Telephone** &ndash; used when entering telephone numbers
-- **Url** &ndash; used for entering file paths & web addresses
+This can be accomplished in code as follows:
 
-There is an [example of each keyboard](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) in our Recipes section.
+```xaml
+<Editor Text="Enter text here" AutoSize="TextChanges" />
+```
+
+```csharp
+var editor = new Editor { Text = "Enter text here", AutoSize = EditorAutoSizeOption.TextChanges };
+```
+
+When auto-resizing is enabled, the height of the [`Editor`](xref:Xamarin.Forms.Editor) will increase when the user fills it with text, and the height will decrease as the user deletes text.
+
+> [!NOTE]
+> An [`Editor`](xref:Xamarin.Forms.Editor) will not auto-size if the [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) property has been set.
+
+### Customizing the Keyboard
+
+The keyboard that's presented when users interact with an [`Editor`](xref:Xamarin.Forms.Editor) can be set programmatically via the [`Keyboard`](xref:Xamarin.Forms.InputView.Keyboard) property, to one of the following properties from the [`Keyboard`](xref:Xamarin.Forms.Keyboard) class:
+
+- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat) – used for texting and places where emoji are useful.
+- [`Default`](xref:Xamarin.Forms.Keyboard.Default) – the default keyboard.
+- [`Email`](xref:Xamarin.Forms.Keyboard.Email) – used when entering email addresses.
+- [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric) – used when entering numbers.
+- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain) – used when entering text, without any [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) specified.
+- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone) – used when entering telephone numbers.
+- [`Text`](xref:Xamarin.Forms.Keyboard.Text) – used when entering text.
+- [`Url`](xref:Xamarin.Forms.Keyboard.Url) – used for entering file paths & web addresses.
+
+This can be accomplished in XAML as follows:
+
+```xaml
+<Editor Keyboard="Chat" />
+```
+
+The equivalent C# code is:
+
+```csharp
+var editor = new Editor { Keyboard = Keyboard.Chat };
+```
+
+Examples of each keyboard can be found in our [Recipes](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) repository.
+
+The [`Keyboard`](xref:Xamarin.Forms.Keyboard) class also has a [`Create`](xref:Xamarin.Forms.Keyboard.Create*) factory method that can be used to customize a keyboard by specifying capitalization, spellcheck, and suggestion behavior. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) enumeration values as specified as arguments to the method, with a customized `Keyboard` being returned. The `KeyboardFlags` enumeration contains the following values:
+
+- [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – no features are added to the keyboard.
+- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) – indicates that the first letter of the first word of each entered sentence will be automatically capitalized.
+- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck) – indicates that spellcheck will be performed on entered text.
+- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions) – indicates that word completions will be offered on entered text.
+- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord) – indicates that the first letter of each word will be automatically capitalized.
+- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter) – indicates that every character will be automatically capitalized.
+- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone) – indicates that no automatic capitalization will occur.
+- [`All`](xref:Xamarin.Forms.KeyboardFlags.All) – indicates that spellcheck, word completions, and sentence capitalization will occur on entered text.
+
+The following XAML code example shows how to customize the default [`Keyboard`](xref:Xamarin.Forms.Keyboard) to offer word completions and capitalize every entered character:
+
+```xaml
+<Editor>
+    <Editor.Keyboard>
+        <Keyboard x:FactoryMethod="Create">
+            <x:Arguments>
+                <KeyboardFlags>Suggestions,CapitalizeCharacter</KeyboardFlags>
+            </x:Arguments>
+        </Keyboard>
+    </Editor.Keyboard>
+</Editor>
+```
+
+The equivalent C# code is:
+
+```csharp
+var editor = new Editor();
+editor.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
+```
 
 ### Enabling and Disabling Spell Checking
 
