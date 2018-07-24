@@ -183,7 +183,7 @@ follows:
 ```
 
 This example has an
-[`ImageView`](https://developer.xamarin.com/recipes/android/controls/imageview) that requires a
+[`ImageView`](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) that requires a
 drawable resource named **flag**. The `ImageView` has its `src`
 attribute set to **@drawable/flag**. When the activity starts, Android
 will look inside the directory **Resource/Drawable** for a file named

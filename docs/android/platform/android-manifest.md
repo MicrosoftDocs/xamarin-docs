@@ -194,7 +194,7 @@ This example produces the following xml fragment:
 ### Permissions
 
 When you add permissions to the Android Manifest (as described in 
-[Add Permissions to Android Manifest](https://developer.xamarin.com/recipes/android/general/projects/add_permissions_to_android_manifest/)), 
+[Add Permissions to Android Manifest](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)), 
 these permissions are recorded in **Properties/AndroidManifest.xml**. 
 For example, if you set the `INTERNET` permission, the following 
 element is added to **Properties/AndroidManifest.xml**: 

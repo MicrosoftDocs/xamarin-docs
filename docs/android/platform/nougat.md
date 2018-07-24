@@ -125,7 +125,7 @@ only in the Alpha or Beta channel, you can switch to the Alpha or Beta
 channel (the Alpha and Beta channels also provide support for Android
 7.x). For information about how to change the
 updates (releases) channel, see
-[Changing the Updates Channel](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/).
+[Changing the Updates Channel](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel).
 
 
 

@@ -27,7 +27,7 @@ You can use the `AVAudioPlayer` to do the following:
 
 ## Playing Sounds in tvOS
 
-Because tvOS supports the same Audio Toolbox classes as iOS, please see our iOS [Playing Sound with AVAudioPlayer](http://developer.xamarin.com/recipes/ios/media/sound/avaudioplayer/) documentation for the full details of playing audio in a Xamarin.tvOS app.
+Because tvOS supports the same Audio Toolbox classes as iOS, please see our iOS [Playing Sound with AVAudioPlayer](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) documentation for the full details of playing audio in a Xamarin.tvOS app.
 
 
 

@@ -114,7 +114,7 @@ This causes the selected tab to be green:
 
 Using this API lets you customize the appearance of the Xamarin.Forms
 `TabbedPage` on iOS with very little code. Refer to the
-[Customize Tabs recipe](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/ios/customize-tabs/)
+[Customize Tabs recipe](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs)
 for more details on using a custom renderer to set a specific font for the tab.
 
 ### UISwitch
@@ -141,4 +141,4 @@ the [`UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appeara
 ## Related Links
 
 - [UIAppearance](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md)
-- [Customize Tabs](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/ios/customize-tabs/)
+- [Customize Tabs](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs)

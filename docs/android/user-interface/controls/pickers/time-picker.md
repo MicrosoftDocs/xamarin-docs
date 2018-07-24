@@ -133,7 +133,7 @@ and a
 dimensions to make the app simpler and easier to understand &ndash; a
 production app normally uses resources for these values (as can be seen
 in the
-[DatePicker](https://github.com/xamarin/recipes/blob/master/android/controls/datepicker/select_a_date/Resources/layout/Main.axml)
+[DatePicker](https://github.com/xamarin/recipes/blob/master/Recipes/android/controls/datepicker/select_a_date/Resources/layout/Main.axml)
 code example).
 
 Edit **MainActivity.cs** and replace its contents with the following

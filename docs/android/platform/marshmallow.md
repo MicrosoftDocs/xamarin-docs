@@ -142,7 +142,7 @@ Each of these steps is explained in the following sections:
 To update Xamarin so that it includes support for Android 6.0 
 Marshmallow, change the update channel to **Stable** and install 
 all updates. For more information about installing updates from the updates 
-channel, see [Change the Updates Channel](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/). 
+channel, see [Change the Updates Channel](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel). 
 
 
 ### Install the Android 6.0 SDK

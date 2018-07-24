@@ -603,7 +603,7 @@ Apple recommends that a .xib or Storyboard file is used for applications targeti
 
 For more information on creating a Launch Screen, refer to the documents below:
 
-- [Creating a Launch Screen Using a .xib](https://developer.xamarin.com/recipes/ios/general/templates/launchscreen-xib/)
+- [Creating a Launch Screen Using a .xib](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/templates/launchscreen-xib)
 - [Managing Launch Screens with Storyboards](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 > [!IMPORTANT]

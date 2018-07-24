@@ -180,4 +180,4 @@ In this article, we stepped through an example that tied graphics and animation 
 
 - [Core Animation](~/ios/platform/graphics-animation-ios/core-animation.md)
 - [Core Graphics](~/ios/platform/graphics-animation-ios/core-graphics.md)
-- [Core Animation recipes](https://developer.xamarin.com/recipes/ios/animation/coreanimation)
+- [Core Animation recipes](https://github.com/xamarin/recipes/tree/master/Recipes/ios/animation/coreanimation)

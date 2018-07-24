@@ -14,11 +14,11 @@ UrhoSharp can be programmed with F# using the same libraries and concepts used b
 
 Like many libraries that originated in the C++ world, many UrhoSharp functions return booleans or integers indicating success or failure. You should use `|> ignore` to ignore these values.
 
-The [sample program](https://github.com/xamarin/recipes/tree/master/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) is a "Hello World" for UrhoSharp from F#.
+The [sample program](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) is a "Hello World" for UrhoSharp from F#.
 
 ## Creating an empty project
 
-There are no F# templates for UrhoSharp yet available, so to create your own UrhoSharp project you can either start with the [sample](https://github.com/xamarin/recipes/tree/master/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) or follow these steps:
+There are no F# templates for UrhoSharp yet available, so to create your own UrhoSharp project you can either start with the [sample](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) or follow these steps:
 
 1. From Visual Studio for Mac, create a new **Solution**. Choose **iOS > App > Single View App** and select **F#** as the implementation language. 
 1. Delete the **Main.storyboard** file. Open the **Info.plist** file and in the **iPhone / iPod Deployment Info** pane, delete the `Main` string in the **Main Interface** dropdown.
@@ -109,4 +109,4 @@ The resulting program should look like:
 
 ## Related Links
 
-- [Browse on GitHub (sample)](https://github.com/xamarinhttps://developer.xamarin.com/recipes/tree/master/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp)
+- [Browse on GitHub (sample)](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp)

@@ -513,9 +513,9 @@ creating custom app icons for different screen densities.
 
 Issues in application code can be difficult to diagnose. To help
 diagnose complex code issues, you can
-[Set a Breakpoint](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/),
-[Step Through Code](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/), or
-[Output Information to the Log Window](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/).
+[Set a Breakpoint](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint),
+[Step Through Code](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code), or
+[Output Information to the Log Window](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window).
 
 
 ### Deploy to a Device

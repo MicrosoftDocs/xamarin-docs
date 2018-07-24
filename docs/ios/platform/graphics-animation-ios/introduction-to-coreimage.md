@@ -173,7 +173,7 @@ imgview.Image = ui;
 These screenshots show the result of the `CISepia` and `CIHueAdjust` filters that are demonstrated in the CoreImage.zip
 sample code.
 
-See the [Adjust Contract and Brightness of an Image Recipe](https://developer.xamarin.com/recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image) for an example of the `CIColorControls` filter.
+See the [Adjust Contract and Brightness of an Image Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image) for an example of the `CIColorControls` filter.
 
 ```csharp
 var uiimage = UIImage.FromFile("photo.JPG");
@@ -253,6 +253,6 @@ of different image filters available in the framework for you to use.
 ## Related Links
 
 - [Core Image (sample)](https://developer.xamarin.com/samples/CoreImage/)
-- [Adjust Contract and Brightness of an Image Recipe](https://developer.xamarin.com/recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
+- [Adjust Contract and Brightness of an Image Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
 - [Using Core Image Filters](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 - [CIFilter Class Reference](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.htm)

@@ -483,4 +483,4 @@ This article has demonstrated how to create a custom renderer for a `HybridWebVi
 ## Related Links
 
 - [CustomRendererHybridWebView (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
-- [Call C# from JavaScript](https://developer.xamarin.com/recipes/android/controls/webview/call_csharp_from_javascript/)
+- [Call C# from JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)

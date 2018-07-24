@@ -115,7 +115,7 @@ JavaScript for the
 [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) with
 [`JavaScriptEnabled`](https://developer.xamarin.com/api/property/Android.Webkit.WebSettings.JavaScriptEnabled/)
 `= true` (see the
-[Call C\# from JavaScript](https://developer.xamarin.com/recipes/android/controls/webview/call_csharp_from_javascript)
+[Call C\# from JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)
 recipe for information about how to call C\# functions from
 JavaScript). Finally, an initial web page is loaded with
 [`LoadUrl(String)`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/%2fM%2fLoadUrl).
@@ -174,6 +174,6 @@ Android Open Source Project and used according to terms described in the*
 
 ## Related Links
 
-- [Call C# from JavaScript](https://developer.xamarin.com/recipes/android/controls/webview/call_csharp_from_javascript)
+- [Call C# from JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)
 - [Android.Webkit.WebView](https://developer.xamarin.com/api/type/Android.Webkit.WebView)
 - [KeyEvent](https://developer.xamarin.com/api/type/Android.Webkit.WebView/Client)

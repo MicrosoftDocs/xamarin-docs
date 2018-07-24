@@ -218,5 +218,5 @@ The `ExecuteScalar` method’s return type is `object` – you should cast the r
 
 - [DataAccess Basic (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [iOS Data Recipes](https://developer.xamarin.com/recipes/ios/data/sqlite/)
+- [iOS Data Recipes](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
 - [Xamarin.Forms data access](~/xamarin-forms/app-fundamentals/databases.md)

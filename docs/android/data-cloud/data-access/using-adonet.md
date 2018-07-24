@@ -263,5 +263,5 @@ a reader object or a count of the number of rows affected.
 
 - [DataAccess Basic (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Android Data Recipes](https://developer.xamarin.com/recipes/android/data/)
+- [Android Data Recipes](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
 - [Xamarin.Forms data access](~/xamarin-forms/app-fundamentals/databases.md)

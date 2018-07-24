@@ -465,9 +465,9 @@ There are many opinions about which solution – .xib files, storyboards, or cod
 
 More documentation about using .xib files can be found in the following recipes:
 
-- [Using the View .xib Template](https://developer.xamarin.com/recipes/ios/general/templates/using_the_ios_view_xib_template/)
-- [Creating a Custom TableViewCell using a .xib](https://developer.xamarin.com/recipes/ios/content_controls/tables/custom-tableviewcell/)
-- [Creating a Launch Screen using a .xib](https://developer.xamarin.com/recipes/ios/general/templates/launchscreen-xib/)
+- [Using the View .xib Template](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/templates/using_the_ios_view_xib_template)
+- [Creating a Custom TableViewCell using a .xib](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/tables/custom-tableviewcell)
+- [Creating a Launch Screen using a .xib](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/templates/launchscreen-xib)
 
 For more information regarding the use of storyboards, refer to the [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md).
 

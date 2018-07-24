@@ -65,7 +65,7 @@ This produces a standard alert view, with the subview being ignored, as shown be
 
  ![](ios7-ui-images/alert.png "Sample UIAlertView")
  
- Note: UIAlertView was deprecated in iOS 8. View the [Alert Controller](https://developer.xamarin.com/recipes/ios/standard_controls/alertcontroller/) recipe on using an Alert View in iOS 8 and above.
+ Note: UIAlertView was deprecated in iOS 8. View the [Alert Controller](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller) recipe on using an Alert View in iOS 8 and above.
 
 ### UISegmentedControl
 

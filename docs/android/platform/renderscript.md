@@ -252,7 +252,7 @@ blurScript.ForEach(outputAllocation);
 ```
 
 You may wish to check out the
-[Blur an Image with Renderscript](https://developer.xamarin.com/recipes/android/other_ux/drawing/blur_an_image_with_renderscript/)
+[Blur an Image with Renderscript](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/drawing/blur_an_image_with_renderscript)
 recipe, it is a complete example of how to use an intrinsic script in
 Xamarin.Android.
 
@@ -270,6 +270,6 @@ steps in using an intrinsic script in a Xamarin.Android application.
 ## Related Links
 
 - [Android.Renderscripts namespace](https://developer.xamarin.com/api/namespace/Android.Renderscripts/)
-- [Blur an Image with Renderscript](https://developer.xamarin.com/recipes/android/other_ux/drawing/blur_an_image_with_renderscript/)
+- [Blur an Image with Renderscript](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/drawing/blur_an_image_with_renderscript)
 - [Renderscript](https://developer.android.com/guide/topics/renderscript/compute.html)
 - [Tutorial: Getting Started with Renderscript](https://software.intel.com/en-us/articles/renderscript-basic-sample-for-android-os)

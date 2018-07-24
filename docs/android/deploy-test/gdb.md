@@ -167,7 +167,7 @@ GNU gdb (GDB) 7.3.1-gg2
 The `INTERNET` permission is enabled by default in Debug apps. If it is
 not already present in your application, you may add it either by
 editing **Properties/AndroidManifest.xml** or by editing the
-[Project Properties](https://developer.xamarin.com/recipes/android/general/projects/add_permissions_to_android_manifest/).
+[Project Properties](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest).
 
 App debugging can be enabled by either setting the
 [ApplicationAttribute.Debugging](https://developer.xamarin.com/api/property/Android.App.ApplicationAttribute.Debuggable/)

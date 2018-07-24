@@ -214,4 +214,4 @@ This guide discussed how to add and check for permissions in an Android device. 
 
 - [List of Normal Permissions](https://developer.android.com/guide/topics/permissions/normal-permissions.html)
 - [Runtime Permissions Sample App](https://github.com/xamarin/monodroid-samples/tree/master/android-m/RuntimePermissions)
-- [Handling Permissions in Xamarin.Android](https://developer.xamarin.com/recipes/android/general/projects/add_permissions_to_android_manifest)
+- [Handling Permissions in Xamarin.Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)

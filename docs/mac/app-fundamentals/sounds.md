@@ -27,7 +27,7 @@ You can use the `AVAudioPlayer` class to do the following:
 
 ## Playing sounds in macOS
 
-Because macOS supports the same Audio Toolbox classes as iOS, please see our iOS [Playing Sound with AVAudioPlayer](https://developer.xamarin.com/recipes/ios/media/sound/avaudioplayer/) documentation for the full details of playing audio in a Xamarin.Mac app.
+Because macOS supports the same Audio Toolbox classes as iOS, please see our iOS [Playing Sound with AVAudioPlayer](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) documentation for the full details of playing audio in a Xamarin.Mac app.
 
 ## Related Links
 

@@ -66,7 +66,7 @@ this.PositionY += this.VelocityY * seconds;
 
 Consider that a game which runs at a lower frame rate will update the position of its objects less frequently. Therefore, each update will result in the objects moving further than they would if the game were updating more frequently. The `seconds` value accounts for this, by reporting how much time has passed since the last update.
 
-For an example of how to add time-based movement, see [this recipe covering time based movement](https://developer.xamarin.com/recipes/cross-platform/game_development/time_based_movement/).
+For an example of how to add time-based movement, see [this recipe covering time based movement](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/game_development/time_based_movement).
 
 
 ### Calculating positions using velocity

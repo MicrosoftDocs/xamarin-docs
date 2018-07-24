@@ -43,7 +43,7 @@ These articles will take a comprehensive look at working with tables, including:
 - [WorkingWithTables (sample)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables/)
 - [Tables in Storyboards (sample)](https://developer.xamarin.com/samples/monotouch/StoryboardTable/)
 - [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md)
-- [Storyboard a TableView Recipe](https://developer.xamarin.com/recipes/ios/general/storyboard/storyboard_a_tableview)
+- [Storyboard a TableView Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/storyboard_a_tableview)
 - [Introduction to MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/index.md)
 - [TableEditing sample on Github](https://github.com/xamarin/monotouch-samples/tree/master/TableEditing)
 - [TableParts sample on Github](https://github.com/xamarin/monotouch-samples/tree/master/TableParts)

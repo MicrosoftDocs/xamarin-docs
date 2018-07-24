@@ -60,7 +60,7 @@ searchBar.SearchButtonClicked += (sender, e) => {
             };
 ```
 
-For information on managing the presentation of the search bar and search results, refer to the [Search Controller ](https://developer.xamarin.com/recipes/ios/content_controls/search-controller/) recipe.
+For information on managing the presentation of the search bar and search results, refer to the [Search Controller ](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller) recipe.
 
 ## Using the Search Bar in the Designer
 
@@ -93,4 +93,4 @@ These properties are explained below:
 
 ## Related Links
 
-- [Search Controller](https://developer.xamarin.com/recipes/ios/content_controls/search-controller/)
+- [Search Controller](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller)

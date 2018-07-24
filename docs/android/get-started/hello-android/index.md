@@ -30,4 +30,4 @@ develop a fundamental understanding of how Android applications work.
 
 - [Android Getting Started](http://developer.android.com/training/index.html)
 - [Debugging in Visual Studio](https://docs.microsoft.com/visualstudio/debugger/)
-- [Visual Studio for Mac Recipes - Debugging](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/)
+- [Visual Studio for Mac Recipes - Debugging](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)

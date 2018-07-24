@@ -910,7 +910,7 @@ in an exception handler &ndash; an `OutOfMemoryError` exception might
 be thrown if the image is too large for Android to resize.
 
 For more about loading and decoding large bitmap images, see
-[Load Large Bitmaps Efficiently](https://developer.xamarin.com/recipes/android/resources/general/load_large_bitmaps_efficiently).
+[Load Large Bitmaps Efficiently](https://github.com/xamarin/recipes/tree/master/Recipes/android/resources/general/load_large_bitmaps_efficiently).
 
 
 ### Inbox Style

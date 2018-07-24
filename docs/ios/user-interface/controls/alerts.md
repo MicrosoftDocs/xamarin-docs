@@ -109,4 +109,4 @@ actionSheetButton.TouchUpInside += ((sender, e) => {
 ## Related Links
 
 - [Controls (sample)](https://developer.xamarin.com/samples/Controls/)
-- [Alert Controller](https://developer.xamarin.com/recipes/ios/standard_controls/alertcontroller/)
+- [Alert Controller](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)

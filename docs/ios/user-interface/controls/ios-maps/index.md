@@ -408,5 +408,5 @@ This article examined the *Map* *Kit* framework for iOS. First, it looked at how
 
 ## Related Links
 
-- [SearchController](https://developer.xamarin.com/recipes/ios/content_controls/search-controller/)
+- [SearchController](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller)
 - [MapDemo (sample)](https://developer.xamarin.com/samples/monotouch/MapDemo)

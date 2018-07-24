@@ -86,7 +86,7 @@ On the Universal Windows Platform (UWP), supported orientations are set in the *
 
 ## Reacting to Changes in Orientation
 
-Xamarin.Forms does not offer any native events for notifying your app of orientation changes in shared code. However, the `SizeChanged` event of the `Page` fires when either the width or height of the `Page` changes. When the width of the `Page` is greater than the height, the device is in landscape mode. For more information, see [Display an Image based on Screen Orientation](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/).
+Xamarin.Forms does not offer any native events for notifying your app of orientation changes in shared code. However, the `SizeChanged` event of the `Page` fires when either the width or height of the `Page` changes. When the width of the `Page` is greater than the height, the device is in landscape mode. For more information, see [Display an Image based on Screen Orientation](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation).
 
 > [!NOTE]
 > There is an existing, free NuGet package for receiving notifications of orientation changes in shared code. See the [GitHub repo](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) for more information.
@@ -470,4 +470,4 @@ Note the following:
 - [Layout (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 - [BusinessTumble Example (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
 - [Responsive Layout (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
-- [Display an Image based on Screen Orientation](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)
+- [Display an Image based on Screen Orientation](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)

@@ -40,9 +40,9 @@ This produces the following web view:
 For more information on using `UIWebView`, refer to the following recipes:
 
 
-- [Load a Web Page](https://developer.xamarin.com/recipes/ios/content_controls/web_view/load_a_web_page/)
-- [Load Local Content](https://developer.xamarin.com/recipes/ios/content_controls/web_view/load_local_content/)
-- [Load Non-Web Documents](https://developer.xamarin.com/recipes/ios/content_controls/web_view/load_non-web_documents/)
+- [Load a Web Page](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_a_web_page)
+- [Load Local Content](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_local_content)
+- [Load Non-Web Documents](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_non-web_documents)
 
 ## WKWebView
 
@@ -69,7 +69,7 @@ It is important to note that `WKWebView` is in the WebKit namespace, so you will
 
 `WKWebView` can also be used within Xamarin.Mac apps, and you therefore may want to consider using it if you are creating a cross-platform Mac/iOS app.
 
-The [Handle JavaScript Alerts](https://developer.xamarin.com/recipes/ios/content_controls/web_view/handle_javascript_alerts/) recipe also provides information on using WKWebView with Javascript
+The [Handle JavaScript Alerts](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/handle_javascript_alerts) recipe also provides information on using WKWebView with Javascript
 
 <a name="safariviewcontroller" />
 

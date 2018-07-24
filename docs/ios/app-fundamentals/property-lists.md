@@ -164,8 +164,8 @@ This article demonstrated using the graphical and advanced .plist editors to edi
 
 ## Related Links
 
-- [IDE](https://developer.xamarin.com/recipes/cross-platform/ide)
+- [IDE](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide)
 - [App Related Resources](http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html)
 - [Registering the File Types Your App Supports](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html)
 - [Implementing Custom URL Schemes](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html)
-- [About Asset Catalogs](https://developer.apple.com/library/ioshttps://developer.xamarin.com/recipes/xcode_help-image_catalog-1.0/Recipe.html)
+- [Asset Catalog Format Reference](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format/index.html#//apple_ref/doc/uid/TP40015170-CH18-SW1)

@@ -33,7 +33,7 @@ a program without the knowledge or cooperation from the debugged program.
 
 ## Setting Breakpoints
 
-When you are ready to start debugging your application the first step is to [set breakpoints your application](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/). This is done by clicking in the margin area of the editor, next to the line number of code you want to break at:
+When you are ready to start debugging your application the first step is to [set breakpoints your application](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). This is done by clicking in the margin area of the editor, next to the line number of code you want to break at:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -124,7 +124,7 @@ You can then enter the condition under which you want to breakpoint to occur:
 
 # [Visual Studio](#tab/vswin)
 
-To set a conditional breakpoint in Visual Studio 2015, first [set a regular breakpoint](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/). Right-click on the breakpoint to display its context menu:
+To set a conditional breakpoint in Visual Studio 2015, first [set a regular breakpoint](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). Right-click on the breakpoint to display its context menu:
 
  [![](debugging-in-xamarin-ios-images/image4vs.png "The breakpoint context menu")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
 
@@ -274,6 +274,6 @@ Mono's core class libraries.
 
 - [Debugging with Xamarin](/visualstudio/mac/debugging/)
 - [Data Visualizations](/visualstudio/mac/data-visualizations/)
-- [Set A Breakpoint](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/)
-- [Step Through Code](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/)
-- [Output Information to Log Window](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/)
+- [Set A Breakpoint](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)
+- [Step Through Code](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code)
+- [Output Information to Log Window](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)

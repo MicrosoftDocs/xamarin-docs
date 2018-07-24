@@ -75,7 +75,7 @@ Users can change this setting by navigating to <span class="uiitem">Settings > G
 
  [![](introduction-to-backgrounding-in-ios-images/settings-.png "Background App Refresh Settings")](introduction-to-backgrounding-in-ios-images/settings-.png#lightbox)
 
-Developers can check the Background Refresh Application status with the `BackgroundRefreshStatus` API. For an example, refer to the [Check Background Refresh Setting recipe](https://developer.xamarin.com/recipes/ios/multitasking/check_background_refresh_setting/).
+Developers can check the Background Refresh Application status with the `BackgroundRefreshStatus` API. For an example, refer to the [Check Background Refresh Setting recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/check_background_refresh_setting).
 
 We've covered the basics of the iOS Application Lifecycle, and features for controlling the Application Lifecycle. Next, let's see the iOS Application Lifecycle in action.
 

@@ -43,7 +43,7 @@ The following properties can be adjusted on the properties pad:
 
 ## Truncating and Wrapping
 
-For information on using the line breaks in iOS, refer to the [Truncate and Wrap text](https://developer.xamarin.com/recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text/) recipe.
+For information on using the line breaks in iOS, refer to the [Truncate and Wrap text](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text) recipe.
 
 <a name="Formatting_Text_and_Label"/>
 
@@ -69,7 +69,7 @@ label.AttributedText = new NSAttributedString(
             );
 ```
 
-For more information on styling text using `NSAttributedString` refer to the [Style Text](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/style_text/) recipe.
+For more information on styling text using `NSAttributedString` refer to the [Style Text](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) recipe.
 
 By default labels have the `Enabled` set to true, but it is possible to set it to disabled to give the user a hint that a certain control is disabled:
 
@@ -95,7 +95,7 @@ Which displays the text like this:
 
 ![Highlight and Shadow set on text](labels-images/image4.png)
 
-For more information on changing the font of a UILabel, refer to the [Change The Font](https://developer.xamarin.com/recipes/ios/standard_controls/labels/change_the_font/) recipe.
+For more information on changing the font of a UILabel, refer to the [Change The Font](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/change_the_font) recipe.
 
 
 

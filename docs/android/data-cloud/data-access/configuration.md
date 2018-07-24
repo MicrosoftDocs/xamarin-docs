@@ -41,7 +41,7 @@ string libraryPath = Path.Combine (documentsPath, "..", "Library"); // Library f
 var path = Path.Combine (libraryPath, sqliteFilename);
 ```
 
-For hints on using the file system in Android, refer to the [Browse Files](https://developer.xamarin.com/recipes/android/data/Files/Browse_Files) recipe. See the [Building Cross Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) document for more information on using compiler directives to write code specific to each platform.
+For hints on using the file system in Android, refer to the [Browse Files](https://github.com/xamarin/recipes/tree/master/Recipes/android/data/files/browse_files) recipe. See the [Building Cross Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) document for more information on using compiler directives to write code specific to each platform.
 
 ## Threading
 
@@ -64,5 +64,5 @@ All database access (reads, writes, updates, etc) should be wrapped with the sam
 
 - [DataAccess Basic (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Android Data Recipes](https://developer.xamarin.com/recipes/android/data/)
+- [Android Data Recipes](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
 - [Xamarin.Forms data access](~/xamarin-forms/app-fundamentals/databases.md)

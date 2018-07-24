@@ -238,4 +238,4 @@ In this article we looked at the animation capabilities provided via the *Core A
 - [Core Animation Sample](https://developer.xamarin.com/samples/monotouch/GraphicsAndAnimation/)
 - [Core Graphics](~/ios/platform/graphics-animation-ios/core-graphics.md)
 - [Graphics and Animation Walkthrough](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
-- [Core Animation](https://developer.xamarin.com/recipes/ios/animation/coreanimation)
+- [Core Animation](https://github.com/xamarin/recipes/tree/master/Recipes/ios/animation/coreanimation)

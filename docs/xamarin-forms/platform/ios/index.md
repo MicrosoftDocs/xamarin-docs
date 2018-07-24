@@ -33,9 +33,9 @@ into Xamarin.Forms apps for iOS.
 The following recipes show how to incorporate iOS 9 features into the
 iOS part of a Xamarin.Forms app:
 
-* [CoreSpotlight](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/ios/core-spotlight-search/)
+* [CoreSpotlight](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/core-spotlight-search)
 
-* [NSUserActivity](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/ios/nsuseractivity-search/)
+* [NSUserActivity](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/nsuseractivity-search)
 
 ![](images/corespotlight.png "iOS Spotlight Search")
 

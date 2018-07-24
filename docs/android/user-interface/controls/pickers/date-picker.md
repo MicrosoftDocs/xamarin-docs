@@ -194,4 +194,4 @@ interact with the host Activity to display the selected date.
 - [DatePicker](https://developer.xamarin.com/api/type/Android.Widget.DatePicker/)
 - [DatePickerDialog](https://developer.xamarin.com/api/type/Android.App.DatePickerDialog/)
 - [DatePickerDialog.IOnDateSetListener](https://developer.xamarin.com/api/type/Android.App.DatePickerDialog+IOnDateSetListener/)
-- [Select A Date](https://github.com/xamarinhttps://developer.xamarin.com/recipes/tree/master/android/controls/datepicker/select_a_date)
+- [Select A Date](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/datepicker/select_a_date)
