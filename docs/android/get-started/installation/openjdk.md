@@ -37,12 +37,10 @@ If you’d like to move to the improved experience sooner, builds of the Microso
 
 To get started, download the correct build for your system:
 
-> [!IMPORTANT]
-> TODO: set public links before publishing
 
-- **Mac** &ndash; http://xamarin-jenkins/view/OpenJDK/job/openjdk-mac/20/Azure/processDownloadRequest/20/microsoft_dist_openjdk_1.8.0.7.zip
-- **Windows x86** &ndash; http://xamarin-jenkins/view/OpenJDK/job/openjdk-win32/47/Azure/processDownloadRequest/47/microsoft_dist_openjdk_1.8.0.7.zip
-- **Windows x64** &ndash; http://xamarin-jenkins/view/OpenJDK/job/openjdk-win64/21/Azure/processDownloadRequest/21/microsoft_dist_openjdk_1.8.0.7.zip
+- **Mac** &ndash; https://dl.xamarin.com/OpenJDK/mac/microsoft-dist-openjdk-1.8.0.8.zip
+- **Windows x86** &ndash; https://dl.xamarin.com/OpenJDK/win32/microsoft-dist-openjdk-1.8.0.8.zip
+- **Windows x64** &ndash; https://dl.xamarin.com/OpenJDK/win64/microsoft-dist-openjdk-1.8.0.8.zip
 
 ## Configure
 
