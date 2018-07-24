@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 author: asb3993
 ms.author: amburns
-ms.date: 05/29/2018
+ms.date: 07/24/2018
 ---
 
 # Building HTML views using Razor Templates
@@ -45,6 +45,10 @@ Displaying HTML in a WebView control using Xamarin.Android is accomplished in ju
 ```csharp
 // webView is declared in an AXML layout file
 var webView = FindViewById<WebView> (Resource.Id.webView);
+
+// enable Javascript execution in your html view so you can provide "alerts" and other js
+webView.SetWebChromeClient(new WebChromeClient());
+
 var html = "<html><h1>Hello</h1><p>World</p></html>";
 webView.LoadDataWithBaseURL("file:///android_asset/", html, "text/html", "UTF-8", null);
 ```
