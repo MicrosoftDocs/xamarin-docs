@@ -19,6 +19,6 @@ Please note, updates will *only* be shown in these menus if you do not have the 
 
 ## Visual Studio for Mac
 
-1. Open **Visual Studio for Mac > Add-in Manager > Updates > IDE Extensions**
+1. Open **Visual Studio for Mac > Extensions > Updates > IDE Extensions**
 2. Select **NuGet Package Management**
 
