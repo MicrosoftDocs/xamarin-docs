@@ -1,6 +1,6 @@
 ---
-title: "Dependency Resolution in Xamarin.Forms"
-description: "This article explains how to inject a dependency resolution method into Xamarin.Forms, so that an application's dependency injection container has control over the construction and lifetime of custom renderers, effects, and DependencyService implementations."
+title: "Dependency resolution in Xamarin.Forms"
+description: "This article explains how to inject a dependency resolution method into Xamarin.Forms so that an application's dependency injection container has control over the construction and lifetime of custom renderers, effects, and DependencyService implementations."
 ms.prod: xamarin
 ms.assetid: 491B87DC-14CB-4ADC-AC6C-40A7627B2524
 ms.technology: xamarin-forms
@@ -9,9 +9,9 @@ ms.author: dabritch
 ms.date: 07/23/2018
 ---
 
-# Dependency Resolution in Xamarin.Forms
+# Dependency resolution in Xamarin.Forms
 
-_This article explains how to inject a dependency resolution method into Xamarin.Forms, so that an application's dependency injection container has control over the construction and lifetime of custom renderers, effects, and DependencyService implementations. The code examples are taken from the [Dependency Resolution](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/) sample._
+_This article explains how to inject a dependency resolution method into Xamarin.Forms so that an application's dependency injection container has control over the construction and lifetime of custom renderers, effects, and DependencyService implementations. The code examples are taken from the [Dependency Resolution](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/) sample._
 
 In the context of a Xamarin.Forms application that uses the Model-View-ViewModel (MVVM) pattern, a dependency injection container can be used for registering and resolving view models, and for registering services and injecting them into view models. During view model creation, the container injects any dependencies that are required. If those dependencies have not been created, the container creates and resolves the dependencies first. For more information about dependency injection, including examples of injecting dependencies into view models, see [Dependency Injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
 
@@ -50,7 +50,7 @@ public partial class App : Application
 In this example, the dependency resolution method is set to a lambda expression that uses the Autofac dependency injection container to resolve any types that have been registered with the container. Otherwise, `null` will be returned, which will result in Xamarin.Forms attempting to resolve the type.
 
 > [!NOTE]
-> The API used by a dependency injection container is specific to the container. The code examples in this article use Autofac as a dependency injection container, which provides the `IContainer` and `ContainerBuilder` types. Alternative dependency injection containers could equally be used, but would use different APIs than presented here.
+> The API used by a dependency injection container is specific to the container. The code examples in this article use Autofac as a dependency injection container, which provides the `IContainer` and `ContainerBuilder` types. Alternative dependency injection containers could equally be used, but would use different APIs than are presented here.
 
 Note that there is no requirement to set the dependency resolution method during application startup. It can be set at any time. The only constraint is that Xamarin.Forms needs to know about the dependency resolution method by the time that the application attempts to consume types stored in the dependency injection container. Therefore, if there are services in the dependency injection container that the application will require during startup, the dependency resolution method will have to be set early in the application's lifecycle. Similarly, if the dependency injection container manages the creation and lifetime of a particular [`Effect`](xref:Xamarin.Forms.Effect), Xamarin.Forms will need to know about the dependency resolution method before it attempts to create a view that uses that `Effect`.
 
@@ -165,7 +165,7 @@ void RegisterTypes()
 }
 ```
 
-In this example, the `App.RegisterTypeWithParameters` method registers the `VideoPlayerRenderer` with the dependency injection container, with the registration method ensuring that the `MainActivity` instance will be injected as the `Context` argument, and that the `Logger` type will be injected as the `ILogger` argument.
+In this example, the `App.RegisterTypeWithParameters` method registers the `VideoPlayerRenderer` with the dependency injection container. The registration method ensures that the `MainActivity` instance will be injected as the `Context` argument, and that the `Logger` type will be injected as the `ILogger` argument.
 
 ### Registering effects
 

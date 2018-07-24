@@ -301,7 +301,7 @@ Create the Phoneword application as follows:
     }
     ```
 
-    Save the changes to **PhoneDialer.cs** by pressing **CTRL+S**, and close the file.
+    Note that this code assumes that you are using the latest Android API. Save the changes to **PhoneDialer.cs** by pressing **CTRL+S**, and close the file.
 
 21. In **Solution Explorer**, in the **Phoneword.Android** project, double-click **MainActivity.cs** to open it, remove all of the template code and replace it with the following code:
 
@@ -724,7 +724,7 @@ Create the Phoneword application as follows:
     }
     ```
 
-    Save the changes to **PhoneDialer.cs** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
+    Note that this code assumes that you are using the latest Android API. Save the changes to **PhoneDialer.cs** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
 
 21. In the **Solution Pad**, in the **Phoneword.Droid** project, double click **MainActivity.cs** to open it, remove all of the template code and replace it with the following code:
 

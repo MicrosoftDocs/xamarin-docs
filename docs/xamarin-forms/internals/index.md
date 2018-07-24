@@ -21,4 +21,4 @@ This article explains how to convert a Xamarin.Forms application to use .NET Sta
 
 ## [Dependency Resolution](dependency-resolution.md)
 
-This article explains how to inject a dependency resolution method into Xamarin.Forms, so that an application's dependency injection container has control over the construction and lifetime of custom renderers, effects, and `DependencyService` implementations.
+This article explains how to inject a dependency resolution method into Xamarin.Forms so that an application's dependency injection container has control over the construction and lifetime of custom renderers, effects, and `DependencyService` implementations.
