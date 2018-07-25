@@ -5,9 +5,20 @@ ms.prod: xamarin
 ms.assetid: F42526FF-2B0D-4A9D-B129-CECF680ED0DE
 author: conceptdev
 ms.author: crdun
-ms.date: 06/25/2018
+ms.date: 07/16/2018
+hide_comments: true
+hideEdit: true
 ---
 # Certified consulting partners to deliver mobile solutions
+
+> [!TIP]
+> **Xamarin Consulting Partner Program has merged with the Microsoft Partner Network as of June 30, 2018.**
+>
+> Getting started with the [Microsoft Partner Network](https://partner.microsoft.com/):
+>
+> * If you’re not already a registered Microsoft Partner Network member, [enroll](https://partner.microsoft.com/membership) to become a partner.  
+> * Demonstrate your expertise by completing the [Application Development Competency](https://partner.microsoft.com/membership/application-development-competency) and/or the [Cloud Platform Competency](https://partner.microsoft.com/membership/cloud-platform-competency).
+> * Update your profile’s Specialties tags to include Xamarin, Android, iOS, Mobile Apps, and Mobile Applications Development so you’re discoverable as a [Microsoft solution provider](https://www.microsoft.com/solution-providers/home).
 
 Find a consulting partner to help you take your business mobile, ramp up with Visual Studio and Xamarin, and build higher quality mobile solutions. Long-term strategic partners are mobile experts who can guide you through any stage of the app lifecycle and will help you design, develop, and test high-performing cross-platform mobile apps.
 
