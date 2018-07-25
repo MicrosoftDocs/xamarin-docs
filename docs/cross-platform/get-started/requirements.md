@@ -3,14 +3,12 @@ title: "System Requirements"
 description: "This document lists the system requirements for building apps with Xamarin on both Mac and Windows computers. It also links to installation instructions."
 ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
-author: asb3993
-ms.author: amburns
-ms.date: 08/28/2017
+author: conceptdev
+ms.author: crdun
+ms.date: 07/24/2018
 ---
 
 # System Requirements
-
-_Pre-requisites for using Xamarin_
 
 Xamarin products rely upon the platform SDKs from Apple and Google to
 target iOS or Android, so our system requirements match theirs. This page
@@ -62,7 +60,6 @@ Apple Watch apps are deployed first to the paired iPhone).
 
 [!include[](~/cross-platform/includes/macos-testing.md)]
 
-
 <a name="windows" />
 
 ## Windows Requirements
@@ -70,18 +67,16 @@ Apple Watch apps are deployed first to the paired iPhone).
 Using a Windows computer for Xamarin development requires the following software/SDK versions.
 Check your operating system version (and confirm that you are not using an *Express* version of
 Visual Studio - if so, consider updating to a *Community* edition).
-Visual Studio 2015 and 2017 installers include an option to install Xamarin automatically.
+The Visual Studio 2017 installer includes an option to install Xamarin automatically (**Mobile development with .NET**).
 
 [!include[](~/cross-platform/includes/windows-requirements.md)]
 
-
 > [!NOTE]
 >
->* Xamarin for Visual Studio supports any Visual Studio 2015 or 2017 (Community, Professional, and Enterprise).
+>- Xamarin for Visual Studio supports any Visual Studio 2017 (Community, Professional, and Enterprise).
 >
->* To develop Xamarin.Forms apps for the Universal Windows Platform (UWP) requires
->  Windows 10 with Visual Studio 2015 or 2017.
-
+>- To develop Xamarin.Forms apps for the Universal Windows Platform (UWP) requires
+>  Windows 10 with Visual Studio 2017.
 
 ### Testing & Debugging on Windows
 
@@ -90,12 +85,6 @@ for testing and debugging (iOS devices must be connected to the Mac computer, no
 running Visual Studio).
 
 [!include[](~/cross-platform/includes/windows-testing.md)]
-
-
-> [!NOTE]
->
->* [Windows Phone 8.1 emulator download](https://www.microsoft.com/download/details.aspx?id=43719).
->* The Windows Phone 10 emulator is included with the Visual Studio 2015 UWP SDK.
 
 <a name="install" />
 
@@ -120,8 +109,7 @@ Specific [installation](~/cross-platform/get-started/installation/index.md) inst
 There's also additional information about
 [Xamarin.Forms requirements & supported platforms](~/xamarin-forms/get-started/installation.md).
 
-
 ## Related Links
 
-- [Download Xamarin](https://xamarin.com/download/)
+- [Download Xamarin](https://visualstudio.microsoft.com/xamarin/)
 - [Current Releases](https://developer.xamarin.com/releases/current/)
