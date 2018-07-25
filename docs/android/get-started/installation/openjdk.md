@@ -13,11 +13,11 @@ ms.date: 07/22/2018
 
 _This guide describes the steps for switching to the preview release of Microsoft's distribution of the OpenJDK._
 
-![](~/media/shared/preview.png)
+![Preview Feature](~/media/shared/preview.png)
 
 ## Overview
 
-Beginning with Visual Studio 15.9 and Visual Studio for Mac 7.7, we are moving from Oracle’s JDK to a lightweight version of the OpenJDK that is intended solely for Android development:
+Beginning with Visual Studio 15.9 and Visual Studio for Mac 7.7, Visual Studio Tools for Xamarin will move from Oracle’s JDK to a lightweight version of the OpenJDK that is intended solely for Android development:
 
 ![New workflow offering a web preview of OpenJDK in VS 15.8 Preview 5](openjdk-images/openjdk.png)
 
@@ -31,12 +31,11 @@ The benefits of this move are:
 
 - No more issues with 3rd party servers and installers.
 
-If you’d like to move to the improved experience sooner, builds of the Microsoft OpenJDK distribution are available for you to test on both Windows and Mac today. The setup is simple, and it is easy to revert back to the Oracle JDK at any time.
+If you’d like to move to the improved experience sooner, builds of the Microsoft OpenJDK distribution are available for you to test on both Windows and Mac. The setup process is described below, and you can revert back to the Oracle JDK at any time.
 
 ## Download
 
 To get started, download the correct build for your system:
-
 
 - **Mac** &ndash; https://dl.xamarin.com/OpenJDK/mac/microsoft-dist-openjdk-1.8.0.9.zip
 - **Windows x86** &ndash; https://dl.xamarin.com/OpenJDK/win32/microsoft-dist-openjdk-1.8.0.9.zip
@@ -70,10 +69,8 @@ If you have any problems with the Microsoft OpenJDK distribution, please report 
 
 ## Known Issues & Planned Fix Dates
 
-the `JAVA_HOME` environment variable may not be correctly exported to the SDK and the Device manager. As a workaround, you can set this environment variable to the location of the OpenJDK on your computer. This is fixed in the 15.9 Previews.
+The `JAVA_HOME` environment variable may not be correctly exported to the SDK and the Device Manager. As a workaround, you can set this environment variable to the location of the OpenJDK on your computer. This is fixed in the 15.9 Previews.
 
 ## Summary
 
-In this article, you learned how to configure your IDE to use the preview release of Microsoft's OpenJDK distribution, which is slated for stable release in the fall of 2018. 
-
-
+In this article, you learned how to configure your IDE to use the preview release of Microsoft's OpenJDK distribution, which is slated for stable release later in 2018.
