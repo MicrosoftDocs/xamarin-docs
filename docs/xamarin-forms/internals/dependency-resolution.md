@@ -106,7 +106,7 @@ When an application uses a dependency resolution method to resolve types from a 
 
 Following type registration from a platform project, the `IContainer` object must be built, which is accomplished by calling the `BuildContainer` method. This method invokes Autofac's `Build` method on the `ContainerBuilder` instance, which builds a new dependency injection container that contains the registrations that have been made.
 
-In the sections that follow, a `Logger` class, that implements the `ILogger` interface, is injected into class constructors. The `Logger` class implements simple logging functionality using the `Debug.WriteLine` method, and is used to demonstrate how services can be injected into custom renderers, effects, and [`DependencyService`](xref:Xamarin.Forms.DependencyService) implementations.
+In the sections that follow, a `Logger` class that implements the `ILogger` interface is injected into class constructors. The `Logger` class implements simple logging functionality using the `Debug.WriteLine` method, and is used to demonstrate how services can be injected into custom renderers, effects, and [`DependencyService`](xref:Xamarin.Forms.DependencyService) implementations.
 
 ### Registering custom renderers
 
