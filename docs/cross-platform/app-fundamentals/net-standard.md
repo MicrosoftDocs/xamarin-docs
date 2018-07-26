@@ -1,44 +1,44 @@
 ---
-title: "Using .NET Standard Libraries to Share Code"
+title: "Use .NET Standard Libraries to Share Code"
 description: "This document describes how to use .NET Standard Libraries to share code. It discusses creating a .NET Standard library, editing its settings, and using it in an application."
 ms.prod: xamarin
 ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
-author: asb3993
-ms.author: amburns
-ms.date: 04/12/2017
+author: conceptdev
+ms.author: crdun
+ms.date: 07/18/2018
 ---
+# .NET Standard Library code sharing
 
-# Using .NET Standard Libraries to Share Code
+.NET Standard libraries have a uniform API for all .NET Platforms including Xamarin and .NET Core. Create a single .NET Standard Library and use it from any runtime that supports the .NET Standard Platform. Refer to [this chart](https://docs.microsoft.com/dotnet/standard/net-standard#net-implementation-support) for details of supported platforms.
 
-## .NET Standard
+While .NET Standard versions 1.0 through 1.6 provide incrementally larger subsets of the .NET Framework, .NET Standard 2.0 provides
+the best level of support for Xamarin applications and for porting existing Portable Class Libraries.
 
-The .NET Standard Library is a formal specification of .NET APIs that are intended to be available on all .NET runtimes. The motivation behind the Standard Library is establishing greater uniformity in the .NET ecosystem.
-[ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) continues to establish uniformity for .NET runtime behavior, but there is no similar spec for the .NET Base Class Libraries (BCL) for .NET library implementations.
-
-You can think of it as a simplified, next generation of [Portable Class Library](https://msdn.microsoft.com/library/gg597391.aspx).
-It is a single library with a uniform API for all .NET Platforms including .NET Core. You just create a single .NET Standard Library and use it from any runtime that supports .NET Standard Platform.
-
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ## Visual Studio for Mac
 
-This section walks through how to create and use a .NET Standard Library using Visual Studio for Mac. Refer to the .NET Standard Library Example section for a complete implementation.
+This section walks through how to create and use a .NET Standard Library using Visual Studio for Mac.
 
 ### Creating a .NET Standard Library
 
 Adding a .NET Standard Library to your solution is fairly straight forward.
 
-1. In the Add New Project dialog, select the `.NET Core` category and then select `Class Library(.NET Core)`.
+1. In the **Add New Project** dialog, select the **.NET Core** category and then select **.NET Standard Library**:
 
-  **Note:** This template will be renamed to `.NET Standard` in a future version of Visual Studio for Mac.
+    ![Create a .NET Standard library](net-standard-images/vsm01-m157.png "Creating a New .NET Standard library")
 
-  ![Create a .NET Core class library](net-standard-images/vsm01-m157.png "Creating a New .NET Core Class Library")
+2. On the next screen, choose the target framework - **.NET Standard 2.0** is recommended:
 
-2. The .NET Standard Library project will appear as shown in the Solution Explorer. The Dependencies node will indicate that the library uses the [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
+    [![Choose .NET Standard 2.0](net-standard-images/vsm01a-m157-sml.png)](net-standard-images/vsm01a-m157.png#lightbox)
 
-  ![Dependencies node in the solution indicates .NET Standard](net-standard-images/vsm02-m157.png)
+3. On the final screen, type the project name and click **Create**.
 
-#### Editing .NET Standard Library Settings
+4. The .NET Standard Library project will appear as shown in the Solution Explorer. The Dependencies node will indicate that the library uses the [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
+
+    ![Dependencies node in the solution indicates .NET Standard](net-standard-images/vsm02-m157.png)
+
+#### Editing .NET Standard Library settings
 
 The .NET Standard Library settings can be viewed and changed by right-clicking on the project and selecting `Options` as shown in this screenshot:
 
@@ -48,41 +48,40 @@ Inside you can change your version of `netstandard` by changing the `Target Fram
 
 **Additionally:** You can edit the `.csproj` directly to change this value.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ## Visual Studio 2017 (Windows)
 
-This section walks through how to create and use a .NET Standard Library using Visual Studio. Refer to the .NET Standard Library Example section for a complete implementation.
+This section walks through how to create and use a .NET Standard Library using Visual Studio.
 
-### Creating a .NET Standard Library
-
-#### Visual Studio 2017
+### Creating a .NET Standard library
 
 Adding a .NET Standard Library to your solution is fairly straight forward.
 
-1. In the Add New Project dialog, select the `.NET Standard` category and then select `Class Library(.NET Standard)`.
+1. In the **New Project** dialog, select the **.NET Standard** category and then select **Class Library (.NET Standard)**.
 
-  ![Creating a New .NET Standard Class Library](net-standard-images/vs01-w157.png "Create new .NET Standard class library")
+    ![Creating a New .NET Standard Class Library](net-standard-images/vs01-w157.png "Create new .NET Standard class library")
 
 2. The .NET Standard Library project will appear as shown in the Solution Explorer. The Dependencies node will indicate that the library uses the [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
 
-  ![NETStandard.Library in the Project Folder](net-standard-images/vs02-w157.png ".NET Standard project in solution")
+    ![NETStandard.Library in the Project Folder](net-standard-images/vs02-w157.png ".NET Standard project in solution")
 
-#### Editing .NET Standard Library Settings
+### Editing .NET Standard library settings
 
-The .NET Standard Library settings can be viewed and changed by right-clicking on the project and selecting `Properties` as shown in this screenshot:
+The .NET Standard Library settings can be viewed and changed by right-clicking on the project and selecting **Properties** as shown in this screenshot:
 
 ![Edit .NET standard target frameworks in project properties](net-standard-images/vs03-w157.png "Reference a .NET Standard library the same way as other projects")
 
-Inside you can change your version of `netstandard` by changing the `Target Framework` dropdown value.
+**Additionally:** You can edit the `.csproj` directly to edit the `TargetFramework` element and change which version is targeted (eg. `<TargetFramework>netstandard2.0</TargetFramework>`).
 
-**Additionally:** You can edit the `.csproj` directly to change this value.
+### Using a .NET Standard Library project
 
-#### Using .NET Standard Library
-
-Once a .NET Standard Library has been created, you can add a reference to it from any compatible Application or Library project in the same way you normally add references. In Visual Studio, right-click on the References node and choose `Add Reference...` then switch to the `Solution : Projects` tab as shown:
+Once a .NET Standard Library has been created, you can add a reference to it from any compatible Application or Library project in the same way you normally add references. In Visual Studio, right-click on the References node and choose **Add Reference...** then switch to the **Projects > Solution** tab as shown:
 
 ![Referencing a .NET Standard Library](net-standard-images/vs04.png "In Visual Studio, right-click on the References node and choose Add Reference... then switch to the Solution  Projects tab as shown")
 
 -----
 
+## Related Links
+
+* [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) - detailed information and comparison to PCL.
