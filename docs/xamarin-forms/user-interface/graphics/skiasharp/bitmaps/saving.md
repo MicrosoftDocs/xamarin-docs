@@ -2,7 +2,7 @@
 title: "Saving SkiaSharp bitmaps to files"
 description: "Explore the various file formats supported by SkiaSharp for saving bitmaps in the user's photo library."
 ms.prod: xamarin
-ms.technology: xamarin-forms++++++
+ms.technology: xamarin-forms
 ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
 author: charlespetzold
 ms.author: chape
