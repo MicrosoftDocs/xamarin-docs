@@ -54,10 +54,10 @@ Do the following:
 2. Switch to the **Source** view.
 3. Add a **Bundle icons** key and leave the **Type** set to **Dictionary**.
 4. Add a `CFBundleAlternateIcons` key and set the **Type** to **Dictionary**.
-5. Add a `AppIcons2` key and set the **Type** to **Dictionary**. This will be the name of the new alternate app icon set.
+5. Add a `AppIcon2` key and set the **Type** to **Dictionary**. This will be the name of the new alternate app icon set.
 6. Add a `CFBundleIconFiles` key and set the **Type** to **Array**
 7. Add a new string to the `CFBundleIconFiles` array for each icon file leaving out the extension and the `@2x`, `@3x`, etc. suffixes (example `100_icon`). Repeat this step for every file that makes up the alternate icon set.
-8. Add a `UIPrerenderedIcon` key to the `AppIcons2` dictionary, set the **Type** to **Boolean** and the value to **No**.
+8. Add a `UIPrerenderedIcon` key to the `AppIcon2` dictionary, set the **Type** to **Boolean** and the value to **No**.
 9. Save the changes to the file.
 
 The resulting **Info.plist** file should look like the following when completed:

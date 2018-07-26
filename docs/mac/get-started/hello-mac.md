@@ -244,7 +244,7 @@ The `Info.plist` file contains information about the Xamarin.Mac app such as its
 
 [![](hello-mac-images/infoplist01.png "The Visual Studio for Mac plist editor")](hello-mac-images/infoplist01.png#lightbox)
 
-It also defines the _Storyboard_ that will be used to display the user interface for the Xamarin.Mac app under the **Main Interface** dropdown. In the case of the example above, `Main` in the dropdown relates to the `Main.storyboard` in the Project's Source Tree in the **Solution Explorer**. It also defines the App's Icons by specifying the *Asset Catalog* that contains them (AppIcons in this case).
+It also defines the _Storyboard_ that will be used to display the user interface for the Xamarin.Mac app under the **Main Interface** dropdown. In the case of the example above, `Main` in the dropdown relates to the `Main.storyboard` in the project's source tree in the **Solution Explorer**. It also defines the app's cons by specifying the *Asset Catalog* that contains them (**AppIcon** in this case).
 
 ### Entitlements.plist
 

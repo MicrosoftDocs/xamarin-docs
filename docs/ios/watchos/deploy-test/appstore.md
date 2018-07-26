@@ -168,7 +168,7 @@ Follow the [steps above](#xamarin_studio) to configure the
 
 ```csharp
 Invalid Icon - The watch application '...watchkitextension.appex/WatchApp.app'
-contains an icon file '...watchkitextension.appex/WatchApp.app/AppIcons27.5x27.5@2x.png'
+contains an icon file '...watchkitextension.appex/WatchApp.app/AppIcon27.5x27.5@2x.png'
 with an alpha channel. Icons should not have an alpha channel.
 ```
 
@@ -204,11 +204,11 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 ```
 
 Ensure you have the latest version of Visual Studio for Mac, and that your
-  **AppIcons.appiconset** contains a complete set of images. If you are
+  **AppIcon.appiconset** contains a complete set of images. If you are
   still seeing this error, view the source of the **Contents.json** to
   confirm it contains an entry for all the required images. Alternatively,
   once you have ensured you're using the latest version of Xamarin, delete
-  and re-create the **AppIcons.appiconset**.
+  and re-create the **AppIcon.appiconset**.
 
 > [!IMPORTANT]
 > There is a known bug in Visual Studio for Mac's Watch icon support: it expects an 88x88 pixel image for the **29x29@3x** image (which should be 87x87 pixels).

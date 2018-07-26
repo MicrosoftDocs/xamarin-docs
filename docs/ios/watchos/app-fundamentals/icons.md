@@ -6,6 +6,7 @@ ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 07/26/2018
 ---
 
 # Working with watchOS Icons in Xamarin
@@ -22,10 +23,10 @@ Apple Watch solutions require two sets of icons:
 
 | | | |
 |-|-|-|
-|iOS App Icon|Appears on the iPhone and starts the Parent app|![](icons-images/icon-ios.png)|
-|Watch App Icon|Appears on the Apple Watch home screen|![](icons-images/icon-home.png)|
-||Appears on Watch notifications|![](icons-images/notification-icon.png)|
-||Appears in the [iOS Apple Watch App](~/ios/watchos/app-fundamentals/settings.md)|![](icons-images/watch-app-sml.png)|
+|iOS App Icon|Appears on the iPhone and starts the Parent app|![iOS app icon](icons-images/icon-ios.png)|
+|Watch App Icon|Appears on the Apple Watch home screen|![watchOS app icon](icons-images/icon-home.png)|
+||Appears on Watch notifications|![watchOS notification icon](icons-images/notification-icon.png)|
+||Appears in the [iOS Apple Watch App](~/ios/watchos/app-fundamentals/settings.md)|![iOS Watch App icon](icons-images/watch-app-sml.png)|
 
 ## Configuring Your Solution
 
@@ -62,15 +63,15 @@ Once your [Parent app](~/ios/watchos/app-fundamentals/parent-app.md) has
 
  ![](icons-images/newasset.png "Add an asset catalog to the project")
 
-2. Double-click on the **AppIcons.appiconset/Contents.json** file
+2. Double-click on the **AppIcon.appiconset/Contents.json** file
 
-  ![](icons-images/xcassets-iconset-sml.png "The AppIcons contents")
+  ![](icons-images/xcassets-iconset-sml.png "The AppIcon contents")
 
 3. Add all the watchOS images, as shown in this screenshot:
 
   [![](icons-images/appicons-sml.png "Add all the watchOS images, as shown in this screenshot")](icons-images/appicons.png#lightbox)
 
-  Refer to [Apple's icon guidelines](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/IconandImageSizes.html) for the required sizes
+  Refer to [Apple's icon guidelines](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) for the required sizes
   (the dimensions are also shown on the screen). Remember
   that these icons will be automatically clipped to render
   in a circle.
@@ -84,7 +85,7 @@ Once your [Parent app](~/ios/watchos/app-fundamentals/parent-app.md) has
 
 ```xml
 <key>XSAppIconAssets</key>
-<string>Images.xcassets/AppIcons.appiconset</string>
+<string>Images.xcassets/AppIcon.appiconset</string>
 ```
 
 You can verify the icons are configured correct by checking
@@ -98,4 +99,4 @@ You can verify the icons are configured correct by checking
 
 ## Related Links
 
-- [Apple's Icon & Images guide](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/IconandImageSizes.html)
+- [Apple's watchOS icon & images guide](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/)

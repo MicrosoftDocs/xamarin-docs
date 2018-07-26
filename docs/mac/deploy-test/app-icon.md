@@ -18,9 +18,9 @@ _This article covers creating the images required for a Xamarin.Mac application'
 
 When working with C# and .NET in a Xamarin.Mac application, a developer has access to the same Image and Icon tools that a developer working in *Objective-C* and *Xcode* does.
 
-A great Icon should convey the main purpose of a Xamarin.Mac app and hint experience the user should expect when using the app. This article covers all of the steps necessary to create the Image Assets required for an Icon, packaging those assets into a `AppIcons.appiconset` file and consuming that file in a Xamarin.Mac app.
+A great Icon should convey the main purpose of a Xamarin.Mac app and hint experience the user should expect when using the app. This article covers all of the steps necessary to create the Image Assets required for an Icon, packaging those assets into a `AppIcon.appiconset` file and consuming that file in a Xamarin.Mac app.
 
-![The AppIcons.appiconset editor](app-icon-images/intro01.png "The AppIcons.appiconset editor")
+![The AppIcon.appiconset editor](app-icon-images/intro01.png "The AppIcon.appiconset editor")
 
 
 ## Application icon
@@ -80,7 +80,7 @@ Do the following:
 
 1. In the **Solution Pad**, open **Assets.xcassets** > **AppIcons.appiconset**: 
 
-	![Editing the AppIcons.appiconset](app-icon-images/intro01.png "Editing the AppIcons.appiconset")
+	![Editing the AppIcon.appiconset](app-icon-images/intro01.png "Editing the AppIcon.appiconset")
 2. For each icon size required, click the icon and select the corresponding image file that were created above: 
 
 	[![Selecting an icon image](app-icon-images/intro02.png "Selecting an icon image")](app-icon-images/intro02-large.png#lightbox)
@@ -89,12 +89,12 @@ Do the following:
 
 ## Using the icon
 
-Once the `AppIcons.appiconset` file has been built, it will need to assign it to the Xamarin.Mac project in Visual Studio for Mac.
+Once the `AppIcon.appiconset` file has been built, it will need to assign it to the Xamarin.Mac project in Visual Studio for Mac.
 
 Do the following:
 
 1. Double-click the **Info.plist** in the **Solution Pad** to open the **Project Options**.
-2. In the **Mac OS X Application Target** section and click the **App Icons** to select the `AppIcons.appiconset` file: 
+2. In the **Mac OS X Application Target** section and click the **App Icons** to select the `AppIcon.appiconset` file: 
 
 	[![Setting the icon set](app-icon-images/icon01.png "Setting the icon set")](app-icon-images/icon01-large.png#lightbox)
 3. Save the changes.
