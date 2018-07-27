@@ -6,6 +6,7 @@
 ## [Application Fundamentals](app-fundamentals/index.md)
 ### [Accessibility](app-fundamentals/accessibility.md)
 ### [Common Patterns and Idioms](app-fundamentals/patterns.md)
+### [Console apps](app-fundamentals/console.md)
 ### [macOS APIs](app-fundamentals/mac-apis.md)
 ### [.xib Files](app-fundamentals/xib.md)
 ### [.storyboard/.xib-less User Interface Design](app-fundamentals/xibless-ui.md)

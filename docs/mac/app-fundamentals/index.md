@@ -1,5 +1,5 @@
 ---
-title: "Xamarin.Mac Application fundamentals"
+title: "Xamarin.Mac application fundamentals"
 description: "This document links to guides that describe various concepts necessary to understand when developing Xamarin.Mac applications."
 ms.prod: xamarin
 ms.assetid: 5A36B3A7-F197-4AC3-A40D-B2C49362FF06
@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 12/17/2015
 ---
 
-# Xamarin.Mac Application fundamentals
+# Xamarin.Mac application fundamentals
 
 ## [Common patterns and idioms](~/mac/app-fundamentals/patterns.md)
 
@@ -18,6 +18,10 @@ Throughout the Apple APIs exposed via C#, certain idioms and patterns come up ov
 ## [Understanding Mac APIs](~/mac/app-fundamentals/mac-apis.md)
 
 For much of your time developing with Xamarin.Mac, you can think, read, and write in C# without much concern with the underlying Objective-C APIs. However, sometimes you’ll need to read the API documentation from Apple, translate an answer from Stack Overflow to a solution for your problem, or compare to an existing sample.
+
+## [Console apps](~/mac/app-fundamentals/console.md)
+
+You can also build "headless" console apps that access native macOS APIs using Xamarin.Mac.
 
 ## [Working with .xib files](~/mac/app-fundamentals/xib.md)
 
