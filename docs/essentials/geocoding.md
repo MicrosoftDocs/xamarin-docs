@@ -11,7 +11,7 @@ ms.date: 05/04/2018
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
 
-The **Geocoding** class provides APIs to geocode a placemark to a positional coordinates and reverse geocode coordincates to a placemark.
+The **Geocoding** class provides APIs to geocode a placemark to a positional coordinates and reverse geocode coordinates to a placemark.
 
 ## Getting Started
 
