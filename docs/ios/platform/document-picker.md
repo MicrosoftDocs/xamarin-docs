@@ -447,7 +447,7 @@ The following steps walkthrough the process of provisioning for iCloud.
 2. Create an App ID that contains the iCloud App Service.
 3. Create a Provisioning profile that includes this App ID.
 
-The [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) guide walks through the first two steps. To create a provisioning profile, follow the steps in the [Provisioning Profile](~/ios/get-started/installation/device-provisioning/index.md#Provisioning_Profile) guide.
+The [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) guide walks through the first two steps. To create a provisioning profile, follow the steps in the [Provisioning Profile](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) guide.
 
 
 

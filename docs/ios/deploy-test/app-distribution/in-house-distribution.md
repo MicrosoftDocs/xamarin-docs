@@ -93,7 +93,7 @@ As with any other Provisioning Profile you create, an App ID will be required to
 1. In the [Apple Developer Center](https://developer.apple.com/account/overview.action) browse to the *Certificate, Identifiers and Profiles* section. Select **App IDs** under **Identifiers**.
 2. Click the **+** button and provide a **Name** which will identify it in the Portal.
 3. The App prefix should be already set as your Team ID, and cannot be changed. Select either an Explicit or Wildcard App ID, and enter a Bundle ID in a reverse DNS format like: **Explicit**: com.[DomainName].[AppName] **Wildcard**:com.[DomainName].*
-4. Select any [App Services](~/ios/get-started/installation/device-provisioning/index.md#appservices) that your app requires.
+4. Select any [App Services](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services) that your app requires.
 5. Click the **Continue** button and following the on screen instructions to create the new App ID.
 
 Once you have the required components needed for creating a Distribution Profile, follow the steps below to create it:

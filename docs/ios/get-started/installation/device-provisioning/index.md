@@ -8,8 +8,7 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ---
-
-# Device Provisioning for Xamarin.iOS
+# Device provisioning for Xamarin.iOS
 
 While developing a Xamarin.iOS application it is essential to test it by deploying the app to a physical device, in addition to the simulator. Device-only bugs and performance issues can transpire when running on a device, due to hardware limits such as memory or network connectivity. To test on a physical device, the device must be *provisioned*, and Apple must be informed that the device will be used for testing.
 
@@ -23,7 +22,6 @@ Before deploying the application to a device, you need to have an active subscri
 
 - **Apple Developer Program** – Regardless of whether you are an individual or represent an organization, the Apple Developer Program allows you to develop, test, and distribute apps.
 - **Apple Developer Enterprise Program** – The Enterprise program is most suited to organizations that want to develop and distribute apps in-house only. Members of the Enterprise program do not have access to iTunes Connect, and apps created cannot be published to the App Store.
-
 
 To register for either of these programs, visit the [Apple Developer Portal](https://developer.apple.com/programs/enroll/) to register. Note that to register as an Apple developer, it is necessary to have an [Apple ID](https://appleid.apple.com/). This guide has been created with the assumption that you **are** a member of an Apple Developer Program.
 
@@ -39,9 +37,7 @@ When deploying an application to a device, a Provisioning Profile is also instal
 
 These steps ensure that everything that is created or used during the development process, including the applications and devices, can be traced back to an Apple Developer account.
 
-<a name="Provisioning_Profile" />
-
-## Provisioning your Device
+## Provisioning your device
 
 There are two ways to provision your iOS device:
 
@@ -49,18 +45,15 @@ There are two ways to provision your iOS device:
 
 * **Manually** – Signing Identities, App IDs, and Provisioning Profiles can be created and managed via the Apple Developer Portal, as described in [manual provisioning](manual-provisioning.md) guide. These artifacts can then be managed as described in the [Apple Account Management](~/cross-platform/macios/apple-account-management.md) guide.
 
-
-<a name="appservices" />
-
 ## Provisioning for Application Services
 
 Apple provides a selection of special Application Services, also called capabilities, that can be activated for a Xamarin.iOS application. These Application Services must be configured on both the iOS Provisioning Portal when the **App ID** is created and in the **Entitlements.plist** file that is part of the Xamarin.iOS application's project. For information on adding Application Services to your app, refer to the [Introduction to Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide and the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
 
 * Create an App ID with the required app services.
-* Create a new [provisioning profile](#Provisioning_Profile) that contains this App ID.
+* Create a new [provisioning profile](#provisioning-your-device) that contains this App ID.
 * Set Entitlements in the Xamarin.iOS Project
 
-## Related Links
+## Related links
 
 - [Free Provisioning](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
 - [App Distribution](~/ios/deploy-test/app-distribution/index.md)

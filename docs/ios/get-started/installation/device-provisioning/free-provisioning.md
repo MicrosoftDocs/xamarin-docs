@@ -40,7 +40,7 @@ To deploy your Xamarin.iOS applications to a device with free provisioning:
 - Your Xamarin.iOS app must use an explicit App ID, not a wildcard App ID.
 - The bundle identifier used in your Xamarin.iOS app must be unique and cannot have been used in another app previously. Any bundle identifier used with free provisioning **cannot** be re-used.
 - If you have already distributed an app, you cannot deploy that app with free provisioning.
-- If your app uses App Services, you will need to create a provisioning profile as detailed in the [device provisioning](~/ios/get-started/installation/device-provisioning/index.md#appservices) guide. 
+- If your app uses App Services, you will need to create a provisioning profile as detailed in the [device provisioning](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services) guide. 
 
 Take a look at the [Limitations](#limitations) section of this document
 for more information about limitations associated with free provisioning,
@@ -162,4 +162,4 @@ This guide explored the advantages and limitations of using free provisioning to
 ## Related links
 
 - [Device provisioning](~/ios/get-started/installation/device-provisioning/index.md)
-- [Provisioning for application services](~/ios/get-started/installation/device-provisioning/index.md#appservices)
+- [Provisioning for application services](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services)

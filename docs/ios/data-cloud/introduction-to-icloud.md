@@ -54,7 +54,7 @@ To correctly configure an application to access iCloud:
 
  [![](introduction-to-icloud-images/icloud-sml.png "Check iCloud as an allowed service")](introduction-to-icloud-images/icloud.png#lightbox)
 
-- **Create a new Provisioning Profile** - To create a Provisioning Profile, follow the steps outlined in the  [Device Provisioning guide](~/ios/get-started/installation/device-provisioning/index.md#Provisioning_Profile) .
+- **Create a new Provisioning Profile** - To create a Provisioning Profile, follow the steps outlined in the  [Device Provisioning guide](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) .
 
 - **Add the Container Identifier to Entitlements.plist** - the container identifier format is `TeamID.BundleID`. For more information refer to the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
 
