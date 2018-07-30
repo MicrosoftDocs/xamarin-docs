@@ -6,6 +6,7 @@ ms.assetid: 137313FB-3D29-428B-93C1-5A05DC8F7C03
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 04/03/2018
 ---
 
 # Error when submitting to App Store: “Invalid Bundle - Options not allowed to be embedded in bitcode are detected in the submission”

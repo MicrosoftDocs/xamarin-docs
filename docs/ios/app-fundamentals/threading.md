@@ -6,6 +6,7 @@ ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 06/05/2017
 ---
 
 # Threading in Xamarin.iOS

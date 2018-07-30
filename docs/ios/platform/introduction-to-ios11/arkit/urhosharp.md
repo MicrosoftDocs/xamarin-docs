@@ -6,7 +6,7 @@ ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 08/01/2016
+ms.date: 08/01/2017
 ---
 
 # Using ARKit with UrhoSharp in Xamarin.iOS

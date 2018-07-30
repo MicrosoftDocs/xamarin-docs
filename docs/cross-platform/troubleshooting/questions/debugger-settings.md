@@ -5,6 +5,7 @@ ms.prod: xamarin
 ms.assetid: 3A024E4E-ACA3-4C7A-ADEF-541665D15779
 author: asb3993
 ms.author: amburns
+ms.date: 05/08/2018
 ---
 
 # What project settings are required for the debugger?

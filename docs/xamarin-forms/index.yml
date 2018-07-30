@@ -5,8 +5,9 @@ metadata:
   description: Xamarin.Forms exposes the a complete cross-platform UI toolkit for .NET developers to build mobile, tablet, and desktop apps.
   author: conceptdev
   ms.author: crdun
-  ms.date: 04/25/2018
+  ms.date: 07/27/2018
   ms.topic: landing-page
+  ms.technology: xamarin-forms
 abstract:
   description: Xamarin.Forms exposes a complete cross-platform UI toolkit for .NET developers. Build fully native Android, iOS, and Universal Windows Platform apps using C# in Visual Studio.
   menu:

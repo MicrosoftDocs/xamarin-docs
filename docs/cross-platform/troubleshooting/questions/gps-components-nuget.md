@@ -5,11 +5,12 @@ ms.prod: xamarin
 ms.assetid: 5D962EB4-2CB3-4B7D-9D77-889DEACDAE02
 author: asb3993
 ms.author: amburns
+ms.date: 05/08/2018
 ---
 
 # Unifying Google Play Services Components and NuGet
 
-### History
+## History
 
 There used to be several Google Play Services Components and NuGet packages:
 
@@ -26,7 +27,7 @@ Google actually only ships two .jar files for Google Play Services:
 
 The discrepancy existed because our tooling didn't properly tell `aapt.exe` what the maximum resource API Level was to be used for a given app. This meant, we received compile errors if we tried using the Google Play Services (KitKat) binding on a lower API level like Gingerbread.
 
-### Unifying Google Play Services
+## Unifying Google Play Services
 
 In more recent versions of Xamarin.Android, we now tell `aapt.exe` what maximum resource version to use, so this problem goes away for us.
 

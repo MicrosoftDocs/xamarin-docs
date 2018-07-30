@@ -6,7 +6,7 @@ ms.assetid: 304AE5A3-518F-422F-BE24-92D62CE30F34
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 08/30/2016
+ms.date: 08/30/2017
 ---
 
 # New Features in MapKit on iOS 11

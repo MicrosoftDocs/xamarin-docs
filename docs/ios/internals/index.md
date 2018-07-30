@@ -6,6 +6,7 @@ ms.assetid: 951713CD-D6AD-981C-A09E-4F2C98588D8B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 06/05/2017
 ---
 
 # iOS Advanced Concepts and Internals

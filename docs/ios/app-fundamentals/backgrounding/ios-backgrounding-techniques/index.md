@@ -6,6 +6,7 @@ ms.assetid: 011A8D48-1CDC-486A-A2B0-C4946118E7A9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 03/18/2017
 ---
 
 # iOS Backgrounding Techniques

@@ -6,6 +6,7 @@ ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 03/18/2017
 ---
 
 # In-App Purchasing in Xamarin.iOS

@@ -6,6 +6,7 @@ ms.assetid: AE1BBDC6-4D3A-4471-876B-FE28B6E59A24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 04/03/2018
 ---
 
 # Why does my app submission fail with: Disallowed paths ( iTunesMetadata.plist ) found at ... ?

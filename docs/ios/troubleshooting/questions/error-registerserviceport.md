@@ -6,6 +6,7 @@ ms.assetid: 929A0080-B126-4744-BF88-A4A1EFBB6CC2
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 04/03/2018
 ---
 
 # iOS Designer Error with RegisterServicePort

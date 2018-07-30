@@ -6,6 +6,7 @@ ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 06/05/2017
 ---
 
 # Apple Pay in Xamarin.iOS

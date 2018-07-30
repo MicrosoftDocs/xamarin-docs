@@ -5,6 +5,7 @@ ms.prod: xamarin
 ms.assetid: 6375A371-3215-4A7C-B97B-A19E58BE96D6
 author: topgenorth
 ms.author: toopge
+ms.date: 03/30/2017
 ---
 
 # Xamarin Workbooks Editor Keyboard Shortcuts

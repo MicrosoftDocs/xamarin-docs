@@ -6,6 +6,7 @@ ms.assetid: F38BD21E-0C21-43FF-80A6-BB4A88DB88A5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 04/03/2018
 ---
 
 # How can I reenable developer options after updating iOS?

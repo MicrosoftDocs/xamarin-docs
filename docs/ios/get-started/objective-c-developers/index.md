@@ -6,6 +6,7 @@ ms.assetid: 9F3C86A3-403E-4025-99CA-99FCA86DC828
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 06/05/2017
 ---
 
 # Xamarin for Objective-C Developers

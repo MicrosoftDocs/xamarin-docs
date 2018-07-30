@@ -6,6 +6,7 @@ ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 06/05/2017
 ---
 
 # Using mtouch to Bundle Xamarin.iOS Apps

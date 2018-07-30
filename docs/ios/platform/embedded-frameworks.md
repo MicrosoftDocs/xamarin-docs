@@ -6,6 +6,7 @@ ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 06/05/2018
 ---
 
 # Embedded frameworks in Xamarin.iOS

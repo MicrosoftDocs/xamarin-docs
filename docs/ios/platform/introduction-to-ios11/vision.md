@@ -6,7 +6,7 @@ ms.assetid: 7273ED68-7B7D-4252-B3A0-02DB2E357A8C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 08/31/2016
+ms.date: 08/31/2017
 ---
 
 # Vision Framework in Xamarin.iOS

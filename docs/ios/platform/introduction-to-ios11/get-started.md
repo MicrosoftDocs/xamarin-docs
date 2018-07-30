@@ -6,7 +6,7 @@ ms.assetid: 794EA2C4-884B-42AC-B8C4-8C8E5474B660
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 09/19/2016
+ms.date: 09/19/2017
 ---
 
 # Getting Started with iOS 11

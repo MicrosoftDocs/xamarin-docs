@@ -6,7 +6,7 @@ ms.assetid: C74B2E94-177C-43D4-8D6C-9B528773C120
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 09/12/2016
+ms.date: 09/12/2017
 ---
 
 # Web Changes in iOS 11

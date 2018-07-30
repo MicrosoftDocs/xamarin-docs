@@ -6,6 +6,7 @@ ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 07/24/2018
 ---
 
 # Introduction to Backgrounding in iOS

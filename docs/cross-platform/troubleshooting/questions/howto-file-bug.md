@@ -6,15 +6,14 @@ ms.prod: xamarin
 ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
 author: asb3993
 ms.author: amburns
+ms.date: 06/05/2018
 ---
 
 # When and how should I file a bug report?
 
-
 File bugs in Xamarin's Bugzilla bug tracker here: [https://bugzilla.xamarin.com/enter_bug.cgi?classification=__all](https://bugzilla.xamarin.com/enter_bug.cgi?classification=__all).
 
 ## File a bug if...
-
 
 You have a set of steps you think the Xamarin engineers will be able to use to reproduce a problem that is caused by Xamarin.
 

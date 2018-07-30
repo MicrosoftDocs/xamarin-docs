@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: 84B67E31-B217-443D-89E5-CFE1923CB14E
 author: bradumbaugh
 ms.author: brumbaug
-dateupdated: 04/16/2018
+ms.date: 04/16/2018
 ---
 
 # Build optimizations

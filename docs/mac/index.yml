@@ -5,8 +5,9 @@ metadata:
   description: Xamarin.Mac exposes the complete macOS SDK for .NET developers.
   author: conceptdev
   ms.author: crdun
-  ms.date: 04/25/2018
+  ms.date: 07/27/2018
   ms.topic: landing-page
+  ms.technology: xamarin-mac
 abstract:
   description: Xamarin.Mac exposes the complete macOS SDK for .NET developers. Build fully native apps in Visual Studio for Mac.
   menu:

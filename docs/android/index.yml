@@ -5,8 +5,9 @@ metadata:
   description: Xamarin.Android exposes the complete Android SDK for .NET developers.
   author: conceptdev
   ms.author: crdun
-  ms.date: 04/25/2018
+  ms.date: 07/27/2018
   ms.topic: landing-page
+  ms.technology: xamarin-android
 abstract:
   description: Xamarin.Android exposes the complete Android SDK for .NET developers. Build fully native Android apps using C# or F# in Visual Studio.
   menu:

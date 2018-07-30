@@ -6,7 +6,7 @@ ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 08/30/2016
+ms.date: 08/30/2017
 ---
 
 # Introduction to CoreML in Xamarin.iOS

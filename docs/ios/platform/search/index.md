@@ -6,6 +6,7 @@ ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 03/20/2017
 ---
 
 # Search APIs in Xamarin.iOS

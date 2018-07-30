@@ -7,15 +7,16 @@ ms.assetid: 1DE5E667-A671-47CE-A0AC-F0D8B00ACFCE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 07/27/2018
 ---
 
 # Troubleshooting Xamarin.iOS
 
-##  [Troubleshooting](~/ios/troubleshooting/troubleshooting.md)
+## [Troubleshooting](~/ios/troubleshooting/troubleshooting.md)
 
 Troubleshooting tips and tricks
 
-##  [Xamarin.iOS Errors](~/ios/troubleshooting/mtouch-errors.md)
+## [Xamarin.iOS Errors](~/ios/troubleshooting/mtouch-errors.md)
 
 An errors reference guide, showing the most common errors you may experience when using Xamarin.iOS in Visual Studio for Mac
 

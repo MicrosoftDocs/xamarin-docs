@@ -6,6 +6,7 @@ ms.assetid: 386C9030-8865-48DE-8AF7-42909C7055E9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 04/03/2018
 ---
 
 # Can I use a Mac VM with Xamarin? 

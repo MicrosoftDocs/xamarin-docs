@@ -6,7 +6,7 @@ ms.assetid: 22C38EA6-6DA9-4B92-B41B-814E589033F6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 09/19/2016
+ms.date: 09/19/2017
 ---
 
 # Introduction to iOS 11

@@ -6,7 +6,7 @@ ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 08/30/2016
+ms.date: 08/30/2017
 ---
 
 # Introduction to ARKit in Xamarin.iOS

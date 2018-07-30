@@ -6,6 +6,7 @@ ms.assetid: BC629536-F179-4EC2-AD72-8F45081F8EE0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 06/05/2018
 ---
 
 # iOS Backgrounding Guidance

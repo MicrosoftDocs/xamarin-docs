@@ -6,6 +6,7 @@ ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 03/18/2017
 ---
 
 # iOS Backgrounding with Tasks

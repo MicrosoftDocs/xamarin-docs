@@ -6,6 +6,7 @@ ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 06/05/2018
 ---
 
 # Backgrounding in Xamarin.iOS

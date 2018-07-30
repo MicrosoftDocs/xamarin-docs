@@ -6,6 +6,7 @@ ms.assetid: 9D2AA00F-1EBD-40AA-87BF-0D7418E4B9EA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 06/05/2018
 ---
 
 # Where can I set my iOS SDK locations?

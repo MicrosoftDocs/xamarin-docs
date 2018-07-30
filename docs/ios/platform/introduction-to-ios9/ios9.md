@@ -6,6 +6,7 @@ ms.assetid: 69A05B0E-8A0A-489F-8165-B10AC46FAF3C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 03/19/2017
 ---
 
 # iOS 9 Compatibility

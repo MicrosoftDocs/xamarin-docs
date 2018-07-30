@@ -6,6 +6,7 @@ ms.assetid: 8805ABEC-48D4-4CCB-A226-3A5B2ECE4BF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
+ms.date: 04/03/2018
 ---
 
 # Why does my iOS 9 app fail with: System.Exception: Failed to marshal the Objective-C object?
