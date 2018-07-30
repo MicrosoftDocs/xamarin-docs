@@ -6,7 +6,7 @@ ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/23/2018
+ms.date: 07/27/2018
 ---
 
 # Platform Features
@@ -52,6 +52,13 @@ will discuss how to implement app-linking in an Android 6.0 application
 and how to configure a website to grant permissions to the mobile app
 to handle app-links for the domain.
 
+
+##  [Android P Preview](~/android/platform/android-p.md)
+
+This article provides an outline of the new features in the Android P
+Preview, explains how to prepare Xamarin.Android for Android P
+development, and provides example code that illustrates how to use key
+Android P features in Xamarin.Android apps.
 
 
 ##  [Android 8 Oreo](~/android/platform/oreo.md)
