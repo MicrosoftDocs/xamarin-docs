@@ -1,28 +1,28 @@
 ---
 title: "Dependency resolution in Xamarin.Forms"
-description: "This article explains how to inject a dependency resolution method into Xamarin.Forms so that an application's dependency injection container has control over the construction and lifetime of custom renderers, effects, and DependencyService implementations."
+description: "This article explains how to inject a dependency resolution method into Xamarin.Forms so that an application's dependency injection container has control over the creation and lifetime of custom renderers, effects, and DependencyService implementations."
 ms.prod: xamarin
 ms.assetid: 491B87DC-14CB-4ADC-AC6C-40A7627B2524
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/23/2018
+ms.date: 07/27/2018
 ---
 
 # Dependency resolution in Xamarin.Forms
 
-_This article explains how to inject a dependency resolution method into Xamarin.Forms so that an application's dependency injection container has control over the construction and lifetime of custom renderers, effects, and DependencyService implementations. The code examples are taken from the [Dependency Resolution](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/) sample._
+_This article explains how to inject a dependency resolution method into Xamarin.Forms so that an application's dependency injection container has control over the creation and lifetime of custom renderers, effects, and DependencyService implementations. The code examples in this article are taken from the [Dependency Resolution using Containers](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/) sample._
 
 In the context of a Xamarin.Forms application that uses the Model-View-ViewModel (MVVM) pattern, a dependency injection container can be used for registering and resolving view models, and for registering services and injecting them into view models. During view model creation, the container injects any dependencies that are required. If those dependencies have not been created, the container creates and resolves the dependencies first. For more information about dependency injection, including examples of injecting dependencies into view models, see [Dependency Injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
 
-Control over the creation and lifetime of types in platform projects is traditionally performed by Xamarin.Forms, which uses the `Activator.CreateInstance` method to create instances of custom renderers, effects, and [`DependencyService`](xref:Xamarin.Forms.DependencyService) implementations. Unfortunately, this limits developer control over the creation and lifetime of these types, and the ability to inject dependencies into them. However, this behavior can be changed by injecting a dependency resolution method into Xamarin.Forms that controls how types will be created – either by the application's dependency injection container, or by Xamarin.Forms.
+Control over the creation and lifetime of types in platform projects is traditionally performed by Xamarin.Forms, which uses the `Activator.CreateInstance` method to create instances of custom renderers, effects, and [`DependencyService`](xref:Xamarin.Forms.DependencyService) implementations. Unfortunately, this limits developer control over the creation and lifetime of these types, and the ability to inject dependencies into them. This behavior can be changed by injecting a dependency resolution method into Xamarin.Forms that controls how types will be created – either by the application's dependency injection container, or by Xamarin.Forms. However, note that there is no requirement to inject a dependency resolution method into Xamarin.Forms. Xamarin.Forms will continue to create and manage the lifetime of types in platform projects if a dependency resolution method isn't injected.
 
 > [!NOTE]
-> There is no requirement to inject a dependency resolution method into Xamarin.Forms. Xamarin.Forms will continue to create and manage the lifetime of types in platform projects if a dependency resolution method isn't injected.
+> While this article focuses on injecting a dependency resolution method into Xamarin.Forms that resolves registered types using a dependency injection container, it's also possible to inject a dependency resolution method that uses factory methods to resolve registered types. For more information, see the [Dependency Resolution using Factory Methods](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/FactoriesDemo/) sample.
 
 ## Injecting a dependency resolution method
 
-The [`DependencyResolver`](xref:Xamarin.Forms.Internals.DependencyResolver) class provides the ability to inject a dependency resolution method into Xamarin.Forms, using one of the [`ResolveUsing`](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) methods. Then, when Xamarin.Forms needs an instance of a particular type, the dependency resolution method is given the opportunity to provide the instance. If the dependency resolution method returns `null` for a requested type, Xamarin.Forms falls back to attempting to create the type instance itself using the `Activator.CreateInstance` method.
+The [`DependencyResolver`](xref:Xamarin.Forms.Internals.DependencyResolver) class provides the ability to inject a dependency resolution method into Xamarin.Forms, using the [`ResolveUsing`](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) method. Then, when Xamarin.Forms needs an instance of a particular type, the dependency resolution method is given the opportunity to provide the instance. If the dependency resolution method returns `null` for a requested type, Xamarin.Forms falls back to attempting to create the type instance itself using the `Activator.CreateInstance` method.
 
 The following example shows how to set the dependency resolution method with the [`ResolveUsing`](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) method:
 
@@ -92,6 +92,18 @@ public partial class App : Application
                 (pi, ctx) => pi.ParameterType == param2Type && pi.Name == param2Name,
                 (pi, ctx) => ctx.Resolve(param2Type))
         });
+    }
+
+    public static void RegisterTypeWithParameters<TInterface, T>(Type param1Type, object param1Value, Type param2Type, string param2Name) where TInterface : class where T : class, TInterface
+    {
+        builder.RegisterType<T>()
+               .WithParameters(new List<Parameter>()
+        {
+            new TypedParameter(param1Type, param1Value),
+            new ResolvedParameter(
+                (pi, ctx) => pi.ParameterType == param2Type && pi.Name == param2Name,
+                (pi, ctx) => ctx.Resolve(param2Type))
+        }).As<TInterface>();
     }
 
     public static void BuildContainer()
@@ -214,7 +226,7 @@ public interface IPhotoPicker
 
 In each platform project, the `PhotoPicker` class implements the `IPhotoPicker` interface using platform APIs. For more information about these dependency services, see [Picking a photo from the picture library](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md).
 
-On all three platforms, the `PhotoPicker` class has the following constructor, which requires an `ILogger` argument:
+On iOS and UWP, the `PhotoPicker` classes have the following constructor, which requires an `ILogger` argument:
 
 ```csharp
 public PhotoPicker(ILogger logger)
@@ -234,7 +246,32 @@ void RegisterTypes()
 }
 ```
 
-In this example, the `Logger` concrete type is registered via a mapping against its interface type, and the `PhotoPicker` type is also registered via a interface mapping. When the user navigates to the photo picking page and chooses to select a photo, the `OnSelectPhotoButtonClicked` handler is executed:
+In this example, the `Logger` concrete type is registered via a mapping against its interface type, and the `PhotoPicker` type is also registered via a interface mapping.
+
+The `PhotoPicker` constructor on the Android platform is slightly more complicated as it requires a `Context` argument in addition to the `ILogger` argument:
+
+```csharp
+public PhotoPicker(Context context, ILogger logger)
+{
+    _context = context ?? throw new ArgumentNullException(nameof(context));
+    _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+}
+```
+
+The following example shows the `RegisterTypes` method on the Android platform:
+
+```csharp
+void RegisterTypes()
+{
+    App.RegisterType<ILogger, Logger>();
+    App.RegisterTypeWithParameters<IPhotoPicker, Services.Droid.PhotoPicker>(typeof(Android.Content.Context), this, typeof(ILogger), "logger");
+    App.BuildContainer();
+}
+```
+
+In this example, the `App.RegisterTypeWithParameters` method registers the `PhotoPicker` with the dependency injection container. The registration method ensures that the `MainActivity` instance will be injected as the `Context` argument, and that the `Logger` type will be injected as the `ILogger` argument.
+
+When the user navigates to the photo picking page and chooses to select a photo, the `OnSelectPhotoButtonClicked` handler is executed:
 
 ```csharp
 async void OnSelectPhotoButtonClicked(object sender, EventArgs e)
@@ -257,7 +294,7 @@ When the [`DependencyService.Resolve<T>`](xref:Xamarin.Forms.DependencyService.R
 
 ## Related links
 
-- [Dependency resolution (sample)](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/)
+- [Dependency resolution using containers (sample)](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/)
 - [Dependency injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
 - [Implementing a video player](~/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md)
 - [Invoking events from effects](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)
