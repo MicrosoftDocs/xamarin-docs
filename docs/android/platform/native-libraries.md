@@ -46,17 +46,24 @@ to use:
 For more information about using native libraries, see
 [Interop with native libraries](http://www.mono-project.com/docs/advanced/pinvoke/).
 
-## Debugging Native Code with Visual Studio 2015
+## Debugging Native Code with Visual Studio 2017
 
-If you're using *Visual Studio 2015*, you don't have to modify your project files (as described above).
-You can build and debug C++ inside your Xamarin.Android solution, simply
-by adding a project reference to a C++ **Dynamic Shared Library (Android)** project.
+If you're using *Visual Studio 2017* or greater, you don't have to modify your project files as described above.
+You can build and debug C++ inside your Xamarin.Android solution by adding a project reference to 
+a C++ **Dynamic Shared Library (Android)** project. 
+
+To debug native C++ code in your project, follow these steps:
+
+1. Double-click project **Properties** and select the **Android Options** page.
+2. Scroll down to **Debugging options**.
+3. In the **Debugger** dropdown menu, select **C++** (instead of the default **.Net (Xamarin)**).
 
 Visual Studio C++ developers can see the [SanAngeles_NativeDebug](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)
-sample to try debugging C++ from Visual Studio 2015 with Xamarin; and refer to our [blog post](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) for more information.
+sample to try debugging C++ from Visual Studio 2017 with Xamarin; and refer to our [blog post](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) for more information.
 
 
 
 ## Related Links
 
 - [SanAngeles_NativeDebug (sample)](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)
+- [Developing Xamarin Android Native Applications](https://blogs.msdn.microsoft.com/vcblog/2015/02/23/developing-xamarin-android-native-applications/)
