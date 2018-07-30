@@ -44,10 +44,10 @@ public class EnergySaverTest
     public EnergySaverTest()
     {
         // Subscribe to changes of energy-saver status
-        Power.EnergySaverStatusChanaged += OnEnergySaverStatusChanaged;
+        Power.EnergySaverStatusChanged += OnEnergySaverStatusChanged;
     }
 
-    private void OnEnergySaverStatusChanaged(EnergySaverStatusChanagedEventArgs e)
+    private void OnEnergySaverStatusChanged(EnergySaverStatusChangedEventArgs e)
     {
         // Process change
         var status = e.EnergySaverStatus;

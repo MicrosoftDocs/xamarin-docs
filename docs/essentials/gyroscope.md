@@ -28,7 +28,7 @@ The Gyroscope functionality works by calling the `Start` and `Stop` methods to l
 public class GyroscopeTest
 {
     // Set speed delay for monitoring changes.
-    SensorSpeed speed = SensorSpeed.Ui;
+    SensorSpeed speed = SensorSpeed.UI;
 
     public GyroscopeTest()
     {
@@ -36,7 +36,7 @@ public class GyroscopeTest
         Gyroscope.ReadingChanged += Gyroscope_ReadingChanged;
     }
 
-    void Gyroscope_ReadingChanged(GyroscopeChangedEventArgs e)
+    void Gyroscope_ReadingChanged(object sender, GyroscopeChangedEventArgs e)
     {
         var data = e.Reading;
         // Process Angular Velocity X, Y, and Z

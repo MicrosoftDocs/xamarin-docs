@@ -24,7 +24,7 @@ The `Battery` permission is required and must be configured in the Android proje
 Open the **AssemblyInfo.cs** file under the **Properties** folder and add:
 
 ```csharp
-[assembly: UsesPermission(Android.Manifest.Permission.Battery)]
+[assembly: UsesPermission(Android.Manifest.Permission.BatteryStats)]
 ```
 
 OR Update Android Manifest:
@@ -32,10 +32,10 @@ OR Update Android Manifest:
 Open the **AndroidManifest.xml** file under the **Properties** folder and add the following inside of the **manifest** node.
 
 ```xml
-<uses-permission android:name="android.permission.BATTERY" />
+<uses-permission android:name="android.permission.BATTERY_STATS" />
 ```
 
-Or right click on the Anroid project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check the **Battery** permission. This will automatically update the **AndroidManifest.xml** file.
+Or right click on the Android project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check the **Battery** permission. This will automatically update the **AndroidManifest.xml** file.
 
 # [iOS](#tab/ios)
 
@@ -88,7 +88,7 @@ switch (source)
     case BatteryPowerSource.Battery:
         // Being powered by the battery
         break;
-    case BatteryPowerSource.Ac:
+    case BatteryPowerSource.AC:
         // Being powered by A/C unit
         break;
     case BatteryPowerSource.Usb:
@@ -133,12 +133,12 @@ No platform differences.
 # [iOS](#tab/ios)
 
 * Device must be used to test APIs. 
-* Only will return `Ac` or `Battery` for `PowerSource`. 
+* Only will return `AC` or `Battery` for `PowerSource`.
 * Not possible to cancel vibration.
 
 # [UWP](#tab/uwp)
 
-* Only will return `Ac` or `Battery` for `PowerSource`. 
+* Only will return `AC` or `Battery` for `PowerSource`.
 
 -----
 

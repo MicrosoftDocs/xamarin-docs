@@ -27,7 +27,7 @@ The Compass functionality works by calling the `Start` and `Stop` methods to lis
 public class CompassTest
 {
     // Set speed delay for monitoring changes.
-    SensorSpeed speed = SensorSpeed.Ui;
+    SensorSpeed speed = SensorSpeed.UI;
 
     public CompassTest()
     {
@@ -35,7 +35,7 @@ public class CompassTest
         Compass.ReadingChanged += Compass_ReadingChanged;
     }
 
-    void Compass_ReadingChanged(CompassChangedEventArgs e)
+    void Compass_ReadingChanged(object sender, CompassChangedEventArgs e)
     {
         var data = e.Reading;
         Console.WriteLine($"Reading: {data.HeadingMagneticNorth} degrees");
@@ -57,7 +57,7 @@ public class CompassTest
         }
         catch (Exception ex)
         {
-            // Some other exception has occured
+            // Some other exception has occurred
         }
     }
 }
@@ -69,11 +69,21 @@ public class CompassTest
 
 # [Android](#tab/android)
 
-Android does not provide a API for retrieving the compass heading. We utilize the accelerometer and magnetometer to calculate the magnetic north heading, which is recommended by Google. 
+Android does not provide a API for retrieving the compass heading. We utilize the accelerometer and magnetometer to calculate the magnetic north heading, which is recommended by Google.
 
 In rare instances, you maybe see inconsistent results because the sensors need to be calibrated, which involves moving your device in a figure-8 motion. The best way of doing this is to open Google Maps, tap on the dot for your location, and select **Calibrate compass**.
 
 Be aware that running multiple sensors from your app at the same time may adjust the sensor speed.
+
+## Low Pass Filter
+
+Due to how the Android compass values are updated and calculated there may be a need to smooth out the values. A _Low Pass Filter_ can be applied that averages the sine and cosine values of the angles and can be turned on by setting the `ApplyLowPassFilter` property on the `Compass` class:
+
+```csharp
+Compass.ApplyLowPassFilter = true;
+```
+
+This is only applied on the Android platform. More information can be read [here](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
 
 --------------
 

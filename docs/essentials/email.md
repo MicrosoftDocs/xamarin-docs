@@ -11,7 +11,7 @@ ms.date: 05/04/2018
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
 
-The **Email** class enables an application to open the default email application with a specified information including subject, body, and recepients (TO, CC, BCC).
+The **Email** class enables an application to open the default email application with a specified information including subject, body, and recipients (TO, CC, BCC).
 
 ## Using Email
 
@@ -38,7 +38,6 @@ public class EmailTest
                 //Cc = ccRecipients,
                 //Bcc = bccRecipients
             };
-            
             await Email.ComposeAsync(message);
         }
         catch (FeatureNotSupportedException fbsEx)
@@ -47,7 +46,7 @@ public class EmailTest
         }
         catch (Exception ex)
         {
-            // Some other exception occured
+            // Some other exception occurred
         }
     }
 }

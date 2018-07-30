@@ -39,7 +39,8 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 * [Geolocation](geolocation.md?context=xamarin/xamarin-forms) – Retrieve the device's GPS location.
 * [Gyroscope](gyroscope.md?context=xamarin/xamarin-forms) – Track rotation around the device's three primary axes.
 * [Magnetometer](magnetometer.md?context=xamarin/xamarin-forms) – Detect device's orientation relative to Earth's magnetic field.
-* [MainThread](main-thread.md?content=xamarin/xamarin-forms) – Run code on the application's main thread. 
+* [MainThread](main-thread.md?content=xamarin/xamarin-forms) – Run code on the application's main thread.
+* [Maps](maps.md?content=xamarin/xamarin-forms) – Open the maps application to a specific location.
 * [Open Browser](open-browser.md?context=xamarin/xamarin-forms) – Quickly and easily open a browser to a specific website.
 * [Orientation Sensor](orientation-sensor.md?context=xamarin/xamarin-forms) – Retrieve the orientation of the device in three dimensional space.
 * [Phone Dialer](phone-dialer.md?context=xamarin/xamarin-forms) – Open the phone dialer.

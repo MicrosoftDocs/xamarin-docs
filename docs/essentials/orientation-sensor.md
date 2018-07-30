@@ -30,7 +30,7 @@ The `OrientationSensor` is enabled by calling the `Start` method to monitor chan
 public class OrientationSensorTest
 {
     // Set speed delay for monitoring changes.
-    SensorSpeed speed = SensorSpeed.Ui;
+    SensorSpeed speed = SensorSpeed.UI;
 
     public OrientationSensorTest()
     {
@@ -38,7 +38,7 @@ public class OrientationSensorTest
         OrientationSensor.ReadingChanged += OrientationSensor_ReadingChanged;
     }
 
-    void OrientationSensor_ReadingChanged(AccelerometerChangedEventArgs e)
+    void OrientationSensor_ReadingChanged(object sender, OrientationSensorChangedEventArgs e)
     {
         var data = e.Reading;
         Console.WriteLine($"Reading: X: {data.Orientation.X}, Y: {data.Orientation.Y}, Z: {data.Orientation.Z}, W: {data.Orientation.W}");

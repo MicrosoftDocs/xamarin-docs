@@ -60,7 +60,7 @@ Or manually edit the file and add the following:
 
 # [UWP](#tab/uwp)
 
-You must set the `Location` permission for the application. This can be done by opening the **Package.appxmanifest** and selecing the **Capabilities** tab and checking **Location**.
+You must set the `Location` permission for the application. This can be done by opening the **Package.appxmanifest** and selecting the **Capabilities** tab and checking **Location**.
 
 -----
 

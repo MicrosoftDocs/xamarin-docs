@@ -33,7 +33,7 @@ public async Task SpeakNowDefaultSettings()
 
 public void SpeakNowDefaultSettings2()
 {
-    TextToSpeech.SpeakAsync("Hello World").ContinueWith((t) => 
+    TextToSpeech.SpeakAsync("Hello World").ContinueWith((t) =>
     {
         // Logic that will run after utterance finishes.
 
@@ -41,7 +41,8 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-This method takes in an optional CancellationToken to stop the utterance once it starts. 
+This method takes in an optional `CancellationToken` to stop the utterance once it starts.
+
 ```csharp
 CancellationTokenSource cts;
 public async Task SpeakNowDefaultSettings()
@@ -61,7 +62,7 @@ public void CancelSpeech()
 }
 ```
 
-Text-to-Speech will automatically queue speech requests from the same thread. 
+Text-to-Speech will automatically queue speech requests from the same thread.
 
 ```csharp
 bool isBusy = false;

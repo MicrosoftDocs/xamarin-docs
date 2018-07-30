@@ -79,6 +79,10 @@ All data is stored into [Shared Preferences](https://developer.android.com/train
 
 --------------
 
+## Persistence
+
+Uninstalling the application will cause all _Preferences_ to be removed. There is one exception to this, which for apps that target and run on Android 6.0 (API level 23) or later that are using [__Auto Backup__](https://developer.android.com/guide/topics/data/autobackup). This feature is on by default and preserves app data including __Shared Preferences__, which is what the **Preferences** API utilizes. You can disable this by following Google's [documentation](https://developer.android.com/guide/topics/data/autobackup).
+
 ## Limitations
 
 When storing a string, this API is intended to store small amounts of text.  Performance may be subpar if you try to use it to store large amounts of text.

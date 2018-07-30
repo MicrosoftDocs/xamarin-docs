@@ -21,7 +21,7 @@ Add a reference to Xamarin.Essentials in your class:
 using Xamarin.Essentials;
 ```
 
-The Browser functionality works by calling the `OpenAsync` method with the `Uri` and `BrowserLaunchType`.
+The Browser functionality works by calling the `OpenAsync` method with the `Uri` and `BrowserLaunchMode`.
 
 ```csharp
 
@@ -29,7 +29,7 @@ public class BrowserTest
 {
     public async Task OpenBrowser(Uri uri)
     {
-        await Browser.OpenAsync(uri, BrowserLaunchType.SystemPreferred);
+        await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
     }
 }
 ```
@@ -38,7 +38,7 @@ public class BrowserTest
 
 # [Android](#tab/android)
 
-The Launch Type determines how the browser is launched:
+The Launch Mode determines how the browser is launched:
 
 ## System Preferred
 
@@ -60,7 +60,7 @@ The standard `OpenUrl` on the main application is used to launch the default bro
 
 # [UWP](#tab/uwp)
 
-The user's default browser will always be launched regardless of the `BrowserLaunchType`.
+The user's default browser will always be launched regardless of the `BrowserLaunchMode`.
 
 --------------
 

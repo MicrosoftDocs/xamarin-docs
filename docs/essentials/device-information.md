@@ -24,7 +24,7 @@ using Xamarin.Essentials;
 The following information is exposed through the API:
 
 ```csharp
-// Device Model (SMG-950U)
+// Device Model (SMG-950U, iPhone10,6)
 var device = DeviceInfo.Model;
 
 // Manufacturer (Samsung)
@@ -67,7 +67,15 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## Device Type
 
-`DeviceInfo.DeviceType` correlates an enumeration to determine if the application is runing on a physical or vitual device. A virtual device is a simulator or emulator.
+`DeviceInfo.DeviceType` correlates an enumeration to determine if the application is running on a physical or virtual device. A virtual device is a simulator or emulator.
+
+## Platform Implementation Specifics
+
+# [iOS](#tab/ios)
+
+iOS does not expose an API for developers to get the name of the specific iOS device. Instead a hardware identifier is returned such as _iPhone10,6_ which refers to the iPhone X. A mapping of these identifers are not provided by Apple, but can be found on [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (a non-official source source).
+
+--------------
 
 ## API
 

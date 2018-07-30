@@ -53,7 +53,7 @@ public class ScreenMetricsTest
     public ScreenMetricsTest()
     {
         // Subscribe to changes of screen metrics
-        DeviceDisplay.ScreenMetricsChanaged += OnScreenMetricsChanged;
+        DeviceDisplay.ScreenMetricsChanged += OnScreenMetricsChanged;
     }
 
     void OnScreenMetricsChanged(ScreenMetricsChangedEventArgs  e)

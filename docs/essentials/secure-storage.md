@@ -46,13 +46,27 @@ using Xamarin.Essentials;
 To save a value for a given _key_ in secure storage:
 
 ```csharp
-await SecureStorage.SetAsync("oauth_token", "secret-oauth-token-value");
+try
+{
+  await SecureStorage.SetAsync("oauth_token", "secret-oauth-token-value");
+}
+catch (Exception ex)
+{
+  // Possible that device doesn't support secure storage on device.
+}
 ```
 
 To retrieve a value from secure storage:
 
 ```csharp
-var oauthToken = await SecureStorage.GetAsync("oauth_token");
+try
+{
+  var oauthToken = await SecureStorage.GetAsync("oauth_token");
+}
+catch (Exception ex)
+{
+  // Possible that device doesn't support secure storage on device.
+}
 ```
 
 > [!NOTE]
@@ -76,7 +90,7 @@ SecureStorage.RemoveAll();
 
 # [Android](#tab/android)
 
-The [Android KeyStore](https://developer.android.com/training/articles/keystore.html) is used to store the cipher key used to encrypt the value before it is saved into a [Shared Preferences](https://developer.android.com/training/data-storage/shared-preferences.html) with a filename of **[YOUR-APP-PACKAGE-ID].xamarinessentials**.  The key used in the shared preferences file is a _MD5 Hash_ of the key passed into the `SecureStorage` API's.
+The [Android KeyStore](https://developer.android.com/training/articles/keystore.html) is used to store the cipher key used to encrypt the value before it is saved into a [Shared Preferences](https://developer.android.com/training/data-storage/shared-preferences.html) with a filename of **[YOUR-APP-PACKAGE-ID].xamarinessentials**.  The key used in the shared preferences file is a _MD5 Hash_ of the key passed into the `SecureStorage` APIs.
 
 ## API Level 23 and Higher
 
@@ -86,7 +100,7 @@ On newer API levels, an **AES** key is obtained from the Android KeyStore and us
 
 On older API levels, the Android KeyStore only supports storing **RSA** keys, which is used with an **RSA/ECB/PKCS1Padding** cipher to encrypt an **AES** key (randomly generated at runtime) and stored in the shared preferences file under the key _SecureStorageKey_, if one has not already been generated.
 
-All encrypted values will be removed when the app is uninstalled from the device.
+**SecureStorage** uses the [Preferences](preferences.md) API and follows the same data persistence outlined in the [Preferences](preferences.md#persistence) documentation. If a device upgrades from API level 22 or lower to API level 23 and higher, this type of encryption will continue to be used unless the app is uninstalled or **RemoveAll** is called.
 
 # [iOS](#tab/ios)
 
@@ -96,11 +110,11 @@ In some cases KeyChain data is synchronized with iCloud, and uninstalling the ap
 
 # [UWP](#tab/uwp)
 
-[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) is used to encryped values securely on UWP devices.
+[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) is used to encrypted values securely on UWP devices.
 
-Encryped values are stored in `ApplicationData.Current.LocalSettings`, inside a container with a name of **[YOUR-APP-ID].xamarinessentials**.
+Encrypted values are stored in `ApplicationData.Current.LocalSettings`, inside a container with a name of **[YOUR-APP-ID].xamarinessentials**.
 
-Uninstalling the application will cause the _LocalSettings_, and all encrypted values to be removed as well.
+**SecureStorage** uses the [Preferences](preferences.md) API and follows the same data persistence outlined in the [Preferences](preferences.md#persistence) documentation.
 
 -----
 

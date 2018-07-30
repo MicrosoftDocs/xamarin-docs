@@ -67,9 +67,7 @@ var buildHistory = VersionTracking.BuildHistory;
 
 ## Platform Implementation Specifics
 
-All version information is stored using the [Preferences](preferences.md) API in Xamarin.Essentials and is stored with a filename of **[YOUR-APP-PACKAGE-ID].xamarinessentials**.
-
-Uninstalling the application will cause the _LocalSettings_, and all version tracking information to be removed.
+All version information is stored using the [Preferences](preferences.md) API in Xamarin.Essentials and is stored with a filename of **[YOUR-APP-PACKAGE-ID].xamarinessentials.versiontracking** and follows the same data persistence outlined in the [Preferences](preferences.md#persistence) documentation.
 
 ## API
 

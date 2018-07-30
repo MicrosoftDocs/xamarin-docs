@@ -60,7 +60,7 @@ User interface to share to external application that appears when request is mad
 # [iOS](#tab/ios)
 
 * `Subject` not used.
-* `Title` not used. 
+* `Title` not used.
 
 # [UWP](#tab/uwp)
 

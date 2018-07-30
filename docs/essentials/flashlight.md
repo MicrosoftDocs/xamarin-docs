@@ -37,7 +37,7 @@ Open the **AndroidManifest.xml** file under the **Properties** folder and add th
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-Or right click on the Anroid project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check the **FLASHLIGHT** and **CAMERA** permissions. This will automatically update the **AndroidManifest.xml** file.
+Or right click on the Android project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check the **FLASHLIGHT** and **CAMERA** permissions. This will automatically update the **AndroidManifest.xml** file.
 
 By adding these permissions [Google Play will automatically filter out devices](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) without specific hardware. You can get around this by adding the following to your AssemblyInfo.cs file in your Android project:
 
@@ -91,9 +91,9 @@ catch (Exception ex)
 
 ## Platform Implementation Specifics
 
-### [Android](#tab/android-specifics)
+### [Android](#tab/android)
 
-The Flashlight class has been optmized based on the device's operating system.
+The Flashlight class has been optimized based on the device's operating system.
 
 #### API Level 23 and Higher
 
@@ -103,11 +103,11 @@ On newer API levels, [Torch Mode](https://developer.android.com/reference/androi
 
 A camera surface texture is created to turn on or off the `FlashMode` of the camera unit. 
 
-### [iOS](#tab/ios-specifics)
+### [iOS](#tab/ios)
 
 [AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) is used to turn on and off the Torch and Flash mode of the device.
 
-### [UWP](#tab/uwp-specifics)
+### [UWP](#tab/uwp)
 
 [Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp) is used to detect the first lamp on the back of the device to turn on or off.
 

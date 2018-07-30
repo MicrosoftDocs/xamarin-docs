@@ -35,7 +35,7 @@ Open the **AndroidManifest.xml** file under the **Properties** folder and add th
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-Or right click on the Anroid project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check the **Access Network State** permission. This will automatically update the **AndroidManifest.xml** file.
+Or right click on the Android project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check the **Access Network State** permission. This will automatically update the **AndroidManifest.xml** file.
 
 # [iOS](#tab/ios)
 

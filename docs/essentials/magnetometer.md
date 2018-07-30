@@ -28,7 +28,7 @@ The Magnetometer functionality works by calling the `Start` and `Stop` methods t
 public class MagnetometerTest
 {
     // Set speed delay for monitoring changes.
-    SensorSpeed speed = SensorSpeed.Ui;
+    SensorSpeed speed = SensorSpeed.UI;
 
     public MagnetometerTest()
     {
@@ -36,7 +36,7 @@ public class MagnetometerTest
         Magnetometer.ReadingChanged += Magnetometer_ReadingChanged;
     }
 
-    void Magnetometerr_ReadingChanged(MagnetometerChangedEventArgs e)
+    void Magnetometer_ReadingChanged(object sender, MagnetometerChangedEventArgs e)
     {
         var data = e.Reading;
         // Process MagneticField X, Y, and Z

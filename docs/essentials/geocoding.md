@@ -27,7 +27,7 @@ No additional setup required.
 
 # [UWP](#tab/uwp)
 
-A Bing maps API key is required to use geocoding funcationality. Sign up for a free [Bing Maps](https://www.bingmapsportal.com/) account. Under **My account > My keys** create a new key and fill out information based on your application type (which should be **Public Windows App (UWP, 8.x, and earlier)** for UWP apps).
+A Bing Maps API key is required to use geocoding functionality. Sign up for a free [Bing Maps](https://www.bingmapsportal.com/) account. Under **My account > My keys** create a new key and fill out information based on your application type (which should be **Public Windows App (UWP, 8.x, and earlier)** for UWP apps).
 
 Early on in your application's life before calling any **Geocoding** methods set the API key:
 
@@ -65,11 +65,11 @@ catch (FeatureNotSupportedException fnsEx)
 }
 catch (Exception ex)
 {
-    // Handle exception that may have occured in geocoding
+    // Handle exception that may have occurred in geocoding
 }
 ```
 
-The altitude isn't always available. If it is not available, the `Altitude` property might be `null` or the value might be zero. If the altitude is available, the value is in meters above above sea level. 
+The altitude isn't always available. If it is not available, the `Altitude` property might be `null` or the value might be zero. If the altitude is available, the value is in meters above above sea level.
 
 Getting [placemarks](xref:Xamarin.Essentials.Placemark) for an existing set of coordinates:
 
