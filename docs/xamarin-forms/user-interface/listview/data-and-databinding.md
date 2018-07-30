@@ -6,22 +6,44 @@ ms.assetid: B5571660-1E82-4379-95C3-0725288CF5D9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
+ms.date: 07/30/2018
 ---
 
 # ListView Data Sources
 
-ListView is used for displaying lists of data. We'll learn about populating a ListView with data, and how we can bind to the selected item.
+A [`ListView`](xref:Xamarin.Forms.ListView) is used for displaying lists of data. We'll learn about populating a ListView with data, and how we can bind to the selected item.
 
 - **[Setting ItemsSource](#ItemsSource)** &ndash; uses a simple list or array.
 - **[Data Binding](#Data_Binding)** &ndash; establishes a relationship between a model and the ListView. Binding is ideal for the MVVM pattern.
 
 ## ItemsSource
-ListView is populated with data using the `ItemsSource` property, which can accept any collection implementing `IEnumerable`. The simplest way to populate a `ListView` involves using an array of strings:
+
+A [`ListView`](xref:Xamarin.Forms.ListView) is populated with data using the [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property, which can accept any collection implementing `IEnumerable`. The simplest way to populate a `ListView` involves using an array of strings:
+
+```xaml
+<ListView>
+      <ListView.ItemsSource>
+          <x:Array Type="{x:Type x:String}">
+            <x:String>mono</x:String>
+            <x:String>monodroid</x:String>
+            <x:String>monotouch</x:String>
+            <x:String>monorail</x:String>
+            <x:String>monodevelop</x:String>
+            <x:String>monotone</x:String>
+            <x:String>monopoly</x:String>
+            <x:String>monomodal</x:String>
+            <x:String>mononucleosis</x:String>
+          </x:Array>
+      </ListView.ItemsSource>
+</ListView>
+```
+
+The equivalent C# code is:
 
 ```csharp
 var listView = new ListView();
-listView.ItemsSource = new string[]{
+listView.ItemsSource = new string[]
+{
   "mono",
   "monodroid",
   "monotouch",
@@ -140,10 +162,6 @@ Often you'll want to bind to the selected item of a `ListView`, rather than use 
 
 Assuming `listView`'s `ItemsSource` is a list of strings, `SomeLabel` will have its text property bound to the `SelectedItem`.
 
-
-
 ## Related Links
 
 - [Two Way Binding (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
-- [1.4 release notes](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
-- [1.3 release notes](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)
