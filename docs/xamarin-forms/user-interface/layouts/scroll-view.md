@@ -17,11 +17,11 @@ ms.date: 07/10/2018
 
 This article covers:
 
-- **[Purpose](#Purpose)** &ndash; the purpose for `ScrollView` and when it is used.
-- **[Usage](#Usage)** &ndash; how to use `ScrollView` in practice.
-- **[Properties](#Properties)** &ndash; public properties that can be read and modified.
-- **[Methods](#Methods)** &ndash; public methods that can be called to scroll the view.
-- **[Events](#Events)** &ndash; events that can be used to listen to changes in the view's states.
+- **[Purpose](#purpose)** &ndash; the purpose for `ScrollView` and when it is used.
+- **[Usage](#usage)** &ndash; how to use `ScrollView` in practice.
+- **[Properties](#properties)** &ndash; public properties that can be read and modified.
+- **[Methods](#methods)** &ndash; public methods that can be called to scroll the view.
+- **[Events](#events)** &ndash; events that can be used to listen to changes in the view's states.
 
 ## Purpose
 
