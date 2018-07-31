@@ -170,9 +170,9 @@ Xamarin.iOS apps that have been localized using .NET mechanisms such as
 For more information about these **Info.plist** keys, take a look at Apple's
 [Information Property List Key Reference](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html).
 
-### LocalizedString method
+### GetLocalizedString method
 
-The `NSBundle.MainBundle.LocalizedString` method looks up localized text
+The `NSBundle.MainBundle.GetLocalizedString` method looks up localized text
 that has been stored in **.strings** files in the project. These files are
 organized by language, in specially named directories with an **.lproj** suffix.
 
@@ -378,11 +378,11 @@ The Spanish (**es**) localizations for the sample are shown below:
 
 In the application code, wherever a user interface's display text is
 set (whether it is a label's text, or an input's placeholder, etc) the code
-uses the iOS `LocalizedString` function to retrieve the correct translation
+uses the iOS `GetLocalizedString` function to retrieve the correct translation
 to display:
 
 ```csharp
-var localizedString = NSBundle.MainBundle.LocalizedString ("key", "optional");
+var localizedString = NSBundle.MainBundle.GetLocalizedString ("key", "optional");
 someControl.Text = localizedString;
 ```
 
