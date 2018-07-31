@@ -4,7 +4,7 @@ description: "This document links to various guides that describe Xamarin.Essent
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.date: 07/30/2018
 ---
 
 # Xamarin.Essentials
@@ -38,6 +38,7 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 * [Geocoding](geocoding.md?context=xamarin/xamarin-forms) – Geocode and reverse geocode addresses and coordinates.
 * [Geolocation](geolocation.md?context=xamarin/xamarin-forms) – Retrieve the device's GPS location.
 * [Gyroscope](gyroscope.md?context=xamarin/xamarin-forms) – Track rotation around the device's three primary axes.
+* [Launcher](launcher.md?context=xamarin/xamarin-forms) – Enables an application to open a URI by the system.
 * [Magnetometer](magnetometer.md?context=xamarin/xamarin-forms) – Detect device's orientation relative to Earth's magnetic field.
 * [MainThread](main-thread.md?content=xamarin/xamarin-forms) – Run code on the application's main thread.
 * [Maps](maps.md?content=xamarin/xamarin-forms) – Open the maps application to a specific location.
