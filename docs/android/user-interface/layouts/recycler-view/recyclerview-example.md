@@ -6,7 +6,7 @@ ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/13/2018
+ms.date: 07/30/2018
 ---
 
 # A Basic RecyclerView Example
@@ -470,10 +470,20 @@ app as shown in the following screenshots:
 
 [![Two screenshots of photo viewing app with vertically scrolling photo cards](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png#lightbox)
 
+If shadows are not being drawn (as seen in the above screenshot), edit
+**Properties/AndroidManifest.xml** and add the following attribute
+setting to the `<application>` element:
+
+```xml
+android:hardwareAccelerated="true"
+```
+
 This basic app only supports browsing of the photo album. It does not
 respond to item-touch events, nor does it handle changes in the
 underlying data. This functionality is added in
 [Extending the RecyclerView Example](~/android/user-interface/layouts/recycler-view/extending-the-example.md).
+
+
 
 
 ### Changing the LayoutManager
