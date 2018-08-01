@@ -1,66 +1,67 @@
 ---
 title: "PopUp Menu"
+description: "How to add a popup menu that is anchored to a particular view."
 ms.prod: xamarin
 ms.assetid: 1C58E12B-4634-4691-BF59-D5A3F6B0E6F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 08/18/2017
+ms.date: 07/31/2018
 ---
 
 # PopUp Menu
 
-The `PopupMenu` class adds support for displaying popup menus that are
-attached to a particular view. The following illustration shows a popup
-menu presented from a button, with the second item highlighted just as
-it is selected:
+The [PopupMenu](https://developer.xamarin.com/api/type/Android.Widget.PopupMenu/)
+(also called a _shortcut menu_) is a menu that is anchored to a
+particular view. In the following example, a single Activity contains a
+button. When the user taps the button, a three-item popup menu is
+displayed:
 
- [![Example of a PopopMenu with three three items](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png#lightbox)
-
-Android 4 added a couple of new features to `PopupMenu` that make
-it a bit easier to work with, namely:
-
--   **Inflate** &ndash; The Inflate method is now available directly on the PopupMenu class.
--   **DismissEvent** &ndash; The PopupMenu class now has a DismissEvent.
-
-Let's take a look at these improvements. In this example, we have a single
-Activity that contains a button. When the user clicks the button, a popup menu
-is displayed as shown below:
-
- [![Example of app running in an emulator with button and 3-item pop-up menu](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png#lightbox)
+[![Example of an app with a button and three-item pop-up menu](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
 
 
 ## Creating a Popup Menu
 
-When we create an instance of the `PopupMenu`, we need to pass its
-constructor a reference to the `Context`, as well as the view to which
-the menu is attached. In this case, we create the `PopupMenu` in the
-click event handler for our button, which is named `showPopupMenu`.
-This button is also the view to which we'll attach the `PopupMenu`,
-as shown in the following code:
+The first step is to create a menu resource file for the menu and place
+it in **Resources/menu**. For example, the following XML is the code
+for the three-item menu displayed in the previous screenshot,
+**Resources/menu/popup_menu.xml**:
 
-```csharp
-showPopupMenu.Click += (s, arg) => {
-    PopupMenu menu = new PopupMenu (this, showPopupMenu);
-}
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/item1"
+          android:title="item 1" />
+    <item android:id="@+id/item1"
+          android:title="item 2" />
+    <item android:id="@+id/item1"
+          android:title="item 3" />
+</menu>
 ```
 
-In Android 3, the code to inflate the menu from an XML resource
-required that you first get a reference to a `MenuInflator`, and then
-call its `Inflate` method with the resource ID of the XML that
-contained the menu and the menu instance to inflate into. Such an
-approach still works in Android 4 and later as the code below shows:
+Next, create an instance of `PopupMenu` and anchor it to its view. When
+you create an instance of `PopupMenu`, you pass its constructor a
+reference to the `Context` as well as the view to which the menu will
+be attached. As a result, the popup menu is anchored to this view
+during its construction.
+
+In the following example, the `PopupMenu` is created in the click event
+handler for the button (which is named `showPopupMenu`). This button is
+also the view to which the `PopupMenu` is anchored, as shown in the
+following code example:
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
     PopupMenu menu = new PopupMenu (this, showPopupMenu);
-    menu.MenuInflater.Inflate (Resource.Menu.popup_menu, menu.Menu);
 };
 ```
 
-As of Android 4 however, you can now call `Inflate` directly on the
-instance of the `PopupMenu`. This makes the code more concise as shown
-here:
+Finally, the popup menu must be *inflated* with the menu resource that
+was created earlier. In the following example, the call to the menu's
+[Inflate](https://developer.xamarin.com/api/member/Android.Views.LayoutInflater.Inflate/p/System.Int32/Android.Views.ViewGroup/)
+method is added and its
+[Show](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Show%28%29/)
+method is called to display it:
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -70,18 +71,17 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-In the code above, after inflating the menu we simply call `menu.Show`
-to display it on the screen.
-
 
 ## Handling Menu Events
 
-When the user selects a menu item, the `MenuItemClick` event will
-be raised and the menu will be dismissed. Tapping anywhere outside the menu will
-simply dismiss it. In either case, as of Android 4, when the menu is dismissed,
-its `DismissEvent` will be raised. The following code adds event
-handlers for both the `MenuItemClick` and `DismissEvent`
-events:
+When the user selects a menu item, the
+[MenuItemClick](https://developer.xamarin.com/api/event/Android.Widget.PopupMenu.MenuItemClick/)
+click event will be raised and the menu will be dismissed. Tapping
+anywhere outside the menu will simply dismiss it. In either case, when
+the menu is dismissed, its
+[DismissEvent](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Dismiss%28%29/)
+will be raised. The following code adds event handlers for both the
+`MenuItemClick` and `DismissEvent` events:
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -95,7 +95,7 @@ showPopupMenu.Click += (s, arg) => {
     menu.DismissEvent += (s2, arg2) => {
         Console.WriteLine ("menu dismissed");
     };
-            menu.Show ();
+    menu.Show ();
 };
 ```
 
@@ -104,5 +104,3 @@ showPopupMenu.Click += (s, arg) => {
 ## Related Links
 
 - [PopupMenuDemo (sample)](https://developer.xamarin.com/samples/monodroid/PopupMenuDemo/)
-- [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 Platform](http://developer.android.com/sdk/android-4.0.html)
