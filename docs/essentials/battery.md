@@ -114,7 +114,7 @@ public class BatteryTest
         Battery.BatteryChanged += Battery_BatteryChanged;
     }
 
-    void Battery_BatteryChanged(BatteryChangedEventArgs   e)
+    void Battery_BatteryChanged(object sender, BatteryChangedEventArgs   e)
     {
         var level = e.ChargeLevel;
         var state = e.State;
