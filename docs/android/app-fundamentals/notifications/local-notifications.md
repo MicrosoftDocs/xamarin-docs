@@ -560,8 +560,8 @@ For more information about creating pending intents, see
 [PendingIntent](https://developer.xamarin.com/api/type/Android.App.PendingIntent/).
 
 
-<a name="notif-chan" />
-
+<a name="notif-chan"></a>
+<a name="notification-channels"></a>
 ## Notification Channels
 
 Beginning with Android 8.0 (Oreo), you can use the *notification

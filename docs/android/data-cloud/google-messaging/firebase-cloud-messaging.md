@@ -6,7 +6,7 @@ ms.assetid: E5314D7F-2AAC-40DA-BEBA-27C834F078DD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
+ms.date: 07/31/2018
 ---
 
 # Firebase Cloud Messaging
@@ -19,8 +19,6 @@ This topic provides a high-level overview of how Firebase Cloud
 Messaging routes messages between your Xamarin.Android app and an app
 server, and it provides a step-by-step procedure for acquiring
 credentials so that your app can use FCM services.
-
-
 
 ## Overview
 
@@ -46,9 +44,7 @@ server (for example, to receive remote notifications). For more
 information about the different types of Firebase messages, see
 [About FCM Messages](https://firebase.google.com/docs/cloud-messaging/concept-options).
 
-
-
-## Firebase Cloud Messaging in Action
+## <a name="fcm-in-action"></a>Firebase Cloud Messaging in action
 
 When a downstream message is sent to a client app from an app server,
 the app server sends the message to an *FCM connection server* provided
@@ -67,24 +63,24 @@ FCM uses the following credentials to identify the app server and the
 client app, and it uses these credentials to authorize message
 transactions through FCM:
 
--   **Sender ID** &ndash; The *Sender ID* is a unique numerical value
+-   <a name="fcm-in-action-sender-id"></a>**Sender ID** &ndash; The *Sender ID* is a unique numerical value
     that is assigned when you create your Firebase project. The sender
     ID is used to identify each app server that can send messages to
     the client app. The sender ID is also your project number; you
     obtain the sender ID from the Firebase Console when you register
     your project. An example of a Sender ID is `496915549731`.
 
--   **API Key** &ndash; The *API key* gives the app server access to
+-   <a name="fcm-in-action-api-key"></a>**API Key** &ndash; The *API key* gives the app server access to
     Firebase services; FCM uses this key to authenticate the app
     server. This credential is also referred to as the *Server Key* or
     the *Web API Key*. An example of an API Key is
     `AJzbSyCTcpfRT1YRqbz-jIwp1h06YdauvewGDzk`.
 
--   **App ID** &ndash; The identity of your client app (independent of
+-   <a name="fcm-in-action-app-id"></a>**App ID** &ndash; The identity of your client app (independent of
     any given device) that registers to receive messages from FCM. An
     example of an App ID is `1:415712510732:android:0e1eb7a661af2460`.
 
--   **Registration Token** &ndash; The *Registration Token* (also
+-   <a name="fcm-in-action-registration-token"></a>**Registration Token** &ndash; The *Registration Token* (also
     referred to as the *Instance ID*) is the FCM identity of your
     client app on a given device. The registration token is generated
     at run time &ndash; your app receives a registration token when it
@@ -142,7 +138,7 @@ registration token.
 
 
 
-### Downstream Messaging
+### Downstream messaging
 
 The following diagram illustrates how Firebase Cloud Messaging stores
 and forwards downstream messages:
@@ -173,7 +169,7 @@ For detailed information about receiving downstream FCM messages on
 Android, see
 [Remote Notifications with FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
 
-### Topic Messaging
+### Topic messaging
 
 *Topic Messaging* makes it possible for an app server to send a message
 to multiple devices that have opted in to a particular topic. You can
@@ -201,7 +197,7 @@ For more information about Firebase topic messaging, see Google's
 
 <a name="setup_fcm" />
 
-## Setting Up Firebase Cloud Messaging
+## Setting up Firebase Cloud Messaging
 
 Before you can use FCM services in your app, you must create a new
 project (or import an existing project) via the
@@ -256,7 +252,7 @@ project to receive FCM push notification messages on Android, see
 
 
 
-## For Further Reading
+## For further reading
 
 -   Google's [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)
     provides an overview of Firebase Cloud Messaging's key
@@ -269,7 +265,7 @@ project to receive FCM push notification messages on Android, see
 -   [RFC 6120](https://tools.ietf.org/html/rfc6120) and [RFC 6121](https://tools.ietf.org/html/rfc6121)
     explain and define the Extensible Messaging and Presence Protocol (XMPP).
 
-
+-   [About FCM Messages](https://firebase.google.com/docs/cloud-messaging/concept-options) describes the different types of messages that can be sent with Firebase Cloud Messaging.
 
 ## Summary
 
