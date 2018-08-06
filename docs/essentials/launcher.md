@@ -26,7 +26,7 @@ To use the Launcher functionality call the `OpenAsync` method and pass in a `str
 ```csharp
 public class LauncherTest
 {
-    public async Task OpenRideShare()
+    public async Task OpenRideShareAsync()
     {
         var supportsUri = await Launcher.CanOpenAsync("lyft://");
         if (supportsUri)
