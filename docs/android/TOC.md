@@ -9,7 +9,7 @@
 ##### [Device Properties](get-started/installation/android-emulator/device-properties.md)
 ##### [Troubleshooting](get-started/installation/android-emulator/troubleshooting.md)
 #### [Android Device Setup](get-started/installation/set-up-device-for-development.md)
-#### [Microsoft OpenJDK Preview](get-started/installation/openjdk.md)
+#### [Microsoft Mobile OpenJDK Preview](get-started/installation/openjdk.md)
 ### [Hello, Android](get-started/hello-android/index.md)
 #### [Part 1: Quickstart](get-started/hello-android/hello-android-quickstart.md)
 #### [Part 2: Deep Dive](get-started/hello-android/hello-android-deepdive.md)
