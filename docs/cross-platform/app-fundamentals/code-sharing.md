@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: conceptdev
 ms.author: crdun
-ms.date: 07/18/2018
+ms.date: 08/06/2018
 ---
 # Sharing code overview
 
@@ -13,7 +13,7 @@ _This document compares the different methods of sharing code between cross-plat
 
 There are three methods for sharing code between cross-platform applications:
 
-- [**.NET Standard Libraries**](#Net_Standard) – .NET Standard projects can implement code to be shared across multiple platforms, and can access a large number of .NET APIs (depending on the version). .NET Standard 1.0 - 1.6 implement progressively larger sets of APIs, while .NET Standard 2.0 provides the best coverage of .
+- [**.NET Standard Libraries**](#Net_Standard) – .NET Standard projects can implement code to be shared across multiple platforms, and can access a large number of .NET APIs (depending on the version). .NET Standard 1.0 - 1.6 implement progressively larger sets of APIs, while .NET Standard 2.0 provides the best coverage of the .NET BCL (including the .NET APIs available in Xamarin apps).
 - [**Shared Projects**](#Shared_Projects) – Use the Shared Asset Project type to organize your source code, and use `#if` compiler directives as required to manage platform-specific requirements.
 - [**Portable Class Libraries**](#Portable_Class_Libraries) (deprecated) – Portable Class Libraries (PCLs) can target multiple platforms with a common API surface, and use Interfaces to provide platform-specific functionality. PCLs are deprecated in the latest versions of Visual Studio &ndash; use .NET Standard instead.
 
