@@ -199,7 +199,7 @@ Merged resource dictionaries combine one or more `ResourceDictionary` instances 
 > [!IMPORTANT]
 > `ResourceDictionary` also defines a [`MergedWith`](xref:Xamarin.Forms.ResourceDictionary.MergedWith) property. Do not use this property; it has been deprecated as of Xamarin.Forms 3.0.
 
-And instance of `MyResourceDictionary` can be merged into any application, page, or control level `ResourceDictionary`. The following XAML code example shows it being merged into a page level `ResourceDictionary` using the `MergedDictionaries` property:
+An instance of `MyResourceDictionary` can be merged into any application, page, or control level `ResourceDictionary`. The following XAML code example shows it being merged into a page level `ResourceDictionary` using the `MergedDictionaries` property:
 
 ```xaml
 <ContentPage ...>
