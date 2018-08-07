@@ -2,6 +2,7 @@
 title: "An Introduction to SkiaSharp"
 description: "This document provides a brief introduction to core SkiaSharp concepts. In particular, it discusses obtaining and drawing on an SKCanvas."
 ms.prod: xamarin
+ms.techonology: xamarin-skiasharp
 ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
 author: charlespetzold
 ms.author: chape

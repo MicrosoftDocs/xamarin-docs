@@ -2,7 +2,7 @@
 title: "Accessing SkiaSharp pixel bits"
 description: "Discover the various techniques for accessing and modifying the pixel bits of SkiaSharp bitmaps."
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
 author: charlespetzold
 ms.author: chape

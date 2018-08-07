@@ -3,7 +3,7 @@ title: "Paths and Text in SkiaSharp"
 description: "This article explores the intersection of SkiaSharp paths and text, and demonstrates this with sample code."
 ms.prod: xamarin
 ms.assetid: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 08/01/2017

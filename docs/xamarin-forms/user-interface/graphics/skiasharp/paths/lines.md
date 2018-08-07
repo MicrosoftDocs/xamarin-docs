@@ -3,7 +3,7 @@ title: "Lines and Stroke Caps"
 description: "This article explains how to use SkiaSharp to draw lines with different stroke caps in Xamarin.Forms applications, and demonstrates this with sample code."
 ms.prod: xamarin
 ms.assetid: 1F854DDD-5D1B-4DE4-BD2D-584439429FDB
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017

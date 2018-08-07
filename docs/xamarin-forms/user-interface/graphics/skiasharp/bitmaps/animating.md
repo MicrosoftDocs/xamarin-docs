@@ -2,7 +2,7 @@
 title: "Animating SkiaSharp bitmaps"
 description: "Learn how to perform bitmap animation by sequentially displaying a series of bitmaps, and rendering animated GIF files."
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
 author: charlespetzold
 ms.author: chape

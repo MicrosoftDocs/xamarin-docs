@@ -55,6 +55,10 @@
       "feedback_product_url": "https://developercommunity.visualstudio.com/"
     },
     "fileMetadata": {
+      "ms.technology": {
+        "essentials/**/**.md":"xamarin-essentials",
+        "xamarin-forms/user-interface/graphics/skiasharp/**/**.md": "xamarin-skiasharp"
+      },
       "feedback_product_url": {
         "essentials/**/**.md":"https://github.com/xamarin/Essentials/blob/master/PRODUCT-FEEDBACK.md"
       },

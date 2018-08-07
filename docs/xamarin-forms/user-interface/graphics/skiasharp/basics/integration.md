@@ -2,7 +2,7 @@
 title: "Integrating with Xamarin.Forms"
 description: "This article explains how to create SkiaSharp graphics that respond to touch and Xamarin.Forms elements, and demonstrates this with sample code."
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: charlespetzold
 ms.author: chape
