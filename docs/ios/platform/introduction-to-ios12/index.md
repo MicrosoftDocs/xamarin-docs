@@ -17,14 +17,13 @@ ms.date: 07/08/2018
 > may contain bugs, is not feature-complete, and may change. Use it for
 > experimentation only.
 
-> [!NOTE]
-> - Review the [getting started](get-started.md) guide for instructions
->   on how to get started building iOS 12 apps with Xamarin.
-> - For more information, read the Xamarin preview
->   [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
-
 This document provides a high-level description of some iOS 12 APIs for
 which Xamarin's preview release provides C# bindings.
+
+To get started building iOS 12 apps with Xamarin, take a look at:
+
+- The [getting started guide](get-started.md)
+- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
 
 ## ARKit 2
 
@@ -97,8 +96,14 @@ In iOS 12, iMessage apps support presentation contexts, which allow the
 apps to run as a normal iMessage app or in the context of a photo or
 video effect.
 
+## Vision framework
+
+The Vision framework includes an improved face detector that can detect
+faces in various orientations. Also, request revisions can now be used to
+select a specific Vision framework algorithm revision.
+
 ## Related links
 
 - [Get Ready for iOS 12 (Apple)](https://developer.apple.com/ios/)
 - [iOS 12 Preview (Apple)](https://www.apple.com/ios/ios-12-preview/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
+- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)

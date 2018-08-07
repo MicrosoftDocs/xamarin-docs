@@ -17,15 +17,20 @@ ms.date: 07/09/2018
 > may contain bugs, is not feature-complete, and may change. Use it for
 > experimentation only.
 
-> [!NOTE]
-> - Review the [getting started](~/ios/platform/introduction-to-ios12/get-started.md)
->   guide for instructions on how to get started building iOS 12, watchOS 5,
->   and tvOS 12 apps with Xamarin.
-> - For more information, read the Xamarin preview
->   [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
-
 This document provides a high-level description of some watchOS 5 APIs
 for which Xamarin's preview release provides C# bindings.
+
+To get started building watchOS 5 apps with Xamarin, take a look at:
+
+- The [getting started guide](~/ios/platform/introduction-to-ios12/get-started.md)
+- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+
+## Updated workout APIs
+
+Updated workout APIs in watchOS 5 provide new features for workout data
+collection, saving workouts to HealthKit, automatically continuing a
+workout after an app crashes, and working with a series of related
+quantity data.
 
 ## Shortcuts on the Siri watch face
 
@@ -33,15 +38,26 @@ In watchOS 5, the Siri watch face shows shortcuts that surface app content
 and functionality to users at convenient times. Siri learns over time to
 show relevant shortcuts when they are most likely to be used.
 
+## Background audio mode
+
+watchOS 5 makes it possible for third-party apps to play audio in the
+background through the AV Foundation framework.
+
 ## Movement Disorder API
 
 The Movement Disorder API, part of the CoreMotion framework in watchOS 5,
 allows watchOS applications to monitor, record, and query tremor and
 dyskinesia symptoms related to Parkinson's disease.
 
+## Natural Language framework
+
+The Natural Language framework enables applications to perform various
+types of language analysis. For example, it can be used to identify parts
+of speech and determine the language represented by a block of text.
+
 ## Related links
 
 - [watchOS – Apple Developer (Apple)](https://developer.apple.com/watchOS/)
 - [What's new in watchOS (Apple) (video)](https://developer.apple.com/videos/play/wwdc2018/206/)
 - [Watch (Apple)](https://www.apple.com/watch/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
+- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)

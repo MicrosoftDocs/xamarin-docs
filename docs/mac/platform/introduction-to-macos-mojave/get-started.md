@@ -15,11 +15,7 @@ ms.date: 07/08/2018
 > [!WARNING]
 > Xamarin's macOS Mojave support is currently in preview, which means
 > that it may contain bugs, is not feature-complete, and may change.
-> Use it for experimentation only.
-
-> [!NOTE]
-> For more information, read the Xamarin preview 
-> [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
+> Use it for experimentation only. 
 
 This document describes how to get set up to build macOS Mojave apps with
 Xamarin.Mac. It discusses how to download Xcode 10 and update Visual Studio
@@ -32,14 +28,11 @@ for Mac.
    of Xcode 10 from the
    [Apple Developer Portal](https://developer.apple.com/download/).
 
-   > [!NOTE]
-   > The macOS Mojave SDK is distributed with Xcode 10.
-
 2. **Run Xcode 10** – Run Xcode 10 before updating and running Visual
    Studio for Mac; it installs some tools that Xamarin requires.
 
 3. **Update Visual Studio for Mac** – Follow the
-   instructions on the [release blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
+   instructions on the [release blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
    to install the Xamarin preview.
 
 4. _(optional)_ **Install the latest macOS Mojave beta on your Mac** –
@@ -49,20 +42,20 @@ for Mac.
 
    > [!TIP]
    > Even if your app does not use any new macOS Mojave APIs, be sure to
-   > build it with the macOS Mojave SDK (installed with Xcode 10) and test
-   > it to make sure that everything works as expected. If an app doesn't
-   > call any new APIs, you can recompile it with the macOS Mojave SDK and
-   > test it without upgrading your Mac's operating system.
-
-   > [!IMPORTANT]
+   > build it with the macOS Mojave SDK and test it to make sure that
+   > everything works as expected. If an app doesn't call any new APIs,
+   > you can recompile it with the macOS Mojave SDK and test it without
+   > upgrading your Mac's operating system.
+   >
    > Before upgrading your Mac to macOS Mojave to build and test Xamarin.Mac
    > applications that call new macOS Mojave APIs:
+   >
    > - Read [Apple's release notes](https://developer.apple.com/download/)
    >   for the operating system update.
    > - Read the Xamarin preview
-   >   [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
+   >   [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/).
 
 ## Related links
 
 - [Download Xcode 10](https://developer.apple.com/download/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
+- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)

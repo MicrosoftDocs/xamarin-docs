@@ -17,15 +17,21 @@ ms.date: 06/25/2018
 > may contain bugs, is not feature-complete, and may change. Use it for
 > experimentation only.
 
-> [!NOTE]
-> - Review the [getting started](~/ios/platform/introduction-to-ios12/get-started.md)
->   guide for instructions on how to get started building iOS 12 and tvOS
->   12 apps with Xamarin.
-> - For more information, read the Xamarin preview
->   [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
-
 This document provides a high-level overview of new and updated tvOS 12
 features for which Xamarin's preview release currently provides C# bindings.
+
+To get started building tvOS 12 apps with Xamarin, take a look at:
+
+- The [getting started guide](~/ios/platform/introduction-to-ios12/get-started.md)
+- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+
+## TVUIKit
+
+tvOS 12 includes TVUIKit, a set of APIs that make it possible for tvOS
+developers to use common tvOS controls such as poster views, caption
+buttons, card views, and monogram views. tvOS 12 also introduces a
+property that allows labels to scroll text that is too long to be
+completely visible.
 
 ## Password AutoFill
 
@@ -46,10 +52,22 @@ custom applications through UIKit's `IUIFocusItemContainer` interface,
 the `UIFocusMovementHint` class, the `IUIFocusItemScrollableContainer`
 interface, and other related classes and methods.
 
+## Vision framework
+
+The Vision framework includes an improved face detector that can detect
+faces in various orientations. Also, request revisions can now be used to
+select a specific Vision framework algorithm revision.
+
+## Natural Language framework
+
+The Natural Language framework enables applications to perform various
+types of language analysis. For example, it can be used to identify parts
+of speech and determine the language represented by a block of text.
+
 ## Related links
 
 - [tvOS Samples](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS – Apple Developer (Apple)](https://developer.apple.com/tvos/)
 - [What's new in tvOS 12 (Apple) (video)](https://developer.apple.com/videos/play/wwdc2018/208/)
 - [TV (Apple)](https://www.apple.com/tv/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
+- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
