@@ -61,7 +61,7 @@ Open Xcode, create a new iOS Single View Application, name it **hello-from-cshar
 
 Open the **~/Projects/hello-from-csharp/output** directory in Finder, select **hello-from-csharp.framework**, drag it to the Xcode project and drop it just above the **hello-from-csharp** folder in the project.
 
-![Drag and drop framework]Images/hello-from-csharp-ios-drag-drop-framework.png)
+![Drag and drop framework](images/hello-from-csharp-ios-drag-drop-framework.png)
 
 Make sure **Copy items if needed** is checked in the dialog that pops up, and click **Finish**.
 
