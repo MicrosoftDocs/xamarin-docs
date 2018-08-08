@@ -90,8 +90,6 @@ Each of the environments mentioned in the previous section require their own cer
 10.  At this point we need to configure the Xamarin.iOS project to use this newly created provisioning profile. This is done from  **Project Options** dialog, under  **iOS Bundle Signing** tab, as showing in the following screenshot: 
 	[![](remote-notifications-in-ios-images/image11.png "Configure the Xamarin.iOS project to use this newly created provisioning profile")](remote-notifications-in-ios-images/image11.png#lightbox)
 
-
-
 At this point the application is configured to work with push notifications. However, there are still a few more steps required with the certificate. This certificate is in DER format that is not compatible with PushSharp, which requires a Personal Information Exchange (PKCS12) certificate. To convert the certificate so that it is usable by PushSharp, perform these final steps:
 
 1.  **Download the certificate file** - Login to the iOS Provisioning Portal, chose the Certificates tab, select the certificate associated with the correct provisioning profile and chose  **Download** .
