@@ -5,6 +5,7 @@ experimental: true
 experiment_id: "c2e6cc85-31f6-ebbb-0a42-039c28107c6f"
 title: Xamarin Documentation
 description: Xamarin lets you build native apps for Android, iOS, and macOS using .NET code and platform-specific user interfaces. Xamarin.Forms allows you to build native apps, with shared UI code written in C# or XAML.
+ms.date: 05/07/2018
 featureFlags:
 - clicktale
 ---
