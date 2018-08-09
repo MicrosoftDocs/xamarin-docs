@@ -21,7 +21,7 @@ As a general rule of thumb, applications should prefer to use the fused location
 
 ## Location fundamentals
 
-In Android, not matter what API you choose for working with location data, several concepts remain the same.This section introduces Location Providers and location-related permissions.
+In Android, no matter what API you choose for working with location data, several concepts remain the same. This section introduces Location Providers and location-related permissions.
 
 ### Location providers
 
