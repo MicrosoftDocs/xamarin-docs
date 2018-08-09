@@ -95,7 +95,7 @@ While taking into account the information above, the list below gives some infor
 - Additional Tips
   - Prefer Build over Rebuild, because Rebuild cleans before building. Cleaning can take a long time as it removes references which could be used.
   - Take advantage of the fact that the simulator does not enforce the sandbox. Having large resources such as videos or other assets included into your project can create costly file copy operations every time the app is launched in the simulator. Avoid these costly operations by placing these files in the home directory, and reference them in your application by the full file path.  
-  - When in doubt, use the `–time –time` flag to measure your change
+  - When in doubt, use the `--time --time` flag to measure your change
 
 The screenshot below illustrates how to set these options for the simulator in your iOS options:
 
@@ -135,7 +135,7 @@ Minimizing the app size can also reduce the build time. This is because removing
 Some things that should be avoided are:
 
 - Fat Binaries (debug) 
-- Disable the linker `–nolink` 
+- Disable the linker `--nolink` 
 - Disabling stripping 
   - Symbols `--nosymbolstrip` 
   - IL (release) `--nostrip`.  
@@ -149,7 +149,7 @@ Additional tips
 - Avoid deploying large static files on every build (debug) 
   - Use UIFileSharingEnabled (info.plist) 
     - Assets can be uploaded once 
-- When in doubt, use the `–time –time` flag to measure your change
+- When in doubt, use the `--time --time` flag to measure your change
 
 The screenshot below illustrates how to set these options for the simulator in your iOS options:
 
