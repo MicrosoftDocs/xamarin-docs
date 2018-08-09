@@ -145,17 +145,16 @@ New Xamarin.iOS projects automatically set up **Debug** and **Release** _build c
 
 # [Visual Studio](#tab/vswin)
 
-1. From the **Solution Explorer**, open **Info.plist**. Select **Manual Provisioning**. Save and close the file.
-2. Make sure that Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-3. Right-click on the **Project Name** in the **Solution Explorer**, select **Properties**, and navigate to the **iOS Build** tab.
-4. Set **Configuration** to **Release** and **Platform** to **iPhone**.
-5. To build with a specific iOS SDK, select it from the **SDK Version** list. Otherwise, leave this value at **Default**.
-6. Linking reduces the overall size of your application by stripping out unused code. In most cases, **Linker Behavior** should be set to the default value of **Link Framework SDKs only**. In some situations, such as when using some third-party libraries, it may be necessary to set this value to **Don't Link** to ensure that needed code is not removed. For more information, refer to the [Linking Xamarin.iOS apps](~/ios/deploy-test/linker.md) guide.
-7. Check **Optimize PNG images** to further decrease your application's size.
-8. Debugging should not be enabled, as it will make the build unnecessarily large.
-9. For iOS 11, select one of the device architectures that supports **ARM64**. For more information on building for 64-bit iOS devices, please see the **Enabling 64-Bit Builds of Xamarin.iOS Apps** section of the [32/64-bit platform considerations](~/cross-platform/macios/32-and-64/index.md) documentation.
-10. You may wish to use the **LLVM** compiler to build smaller and faster code. However, this option increases compile times.
-11. Based on your application's needs, you may also wish to adjust the type of **Garbage Collection** being used and set up for **Internationalization**.
+1. Make sure that Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+2. Right-click on the **Project Name** in the **Solution Explorer**, select **Properties**.
+3. Navigate to the **iOS Build** tab and and set **Configuration** to **Release** and **Platform** to **iPhone**.
+4. To build with a specific iOS SDK, select it from the **SDK Version** list. Otherwise, leave this value at **Default**.
+5. Linking reduces the overall size of your application by stripping out unused code. In most cases, **Linker Behavior** should be set to the default value of **Link Framework SDKs only**. In some situations, such as when using some third-party libraries, it may be necessary to set this value to **Don't Link** to ensure that needed code is not removed. For more information, refer to the [Linking Xamarin.iOS apps](~/ios/deploy-test/linker.md) guide.
+6. Check **Optimize PNG images** to further decrease your application's size.
+7. Debugging should not be enabled, as it will make the build unnecessarily large.
+8. For iOS 11, select one of the device architectures that supports **ARM64**. For more information on building for 64-bit iOS devices, please see the **Enabling 64-Bit Builds of Xamarin.iOS Apps** section of the [32/64-bit platform considerations](~/cross-platform/macios/32-and-64/index.md) documentation.
+9. You may wish to use the **LLVM** compiler to build smaller and faster code. However, this option increases compile times.
+10. Based on your application's needs, you may also wish to adjust the type of **Garbage Collection** being used and set up for **Internationalization**.
 
     After setting the options described above, your build settings should
     look similar to this:
@@ -164,18 +163,17 @@ New Xamarin.iOS projects automatically set up **Debug** and **Release** _build c
 
     Also take a look at ths [iOS build mechanics](~/ios/deploy-test/ios-build-mechanics.md) guide, which further describes build settings.
 
-12. Navigate to the **iOS Bundle Signing** tab. If the options here are not editable, make sure that **Manual Provisioning** is selected in the **Info.plist** file.
-13. Make sure that **Configuration** is set to **Release** and **Platform** is set to **iPhone**.
-14. Set **Signing Identity** to **Distribution (Automatic)**.
-15. For **Provisioning Profile**, select the App Store provisioning profile [created above](#create-and-install-an-app-store-provisioning-profile).
+11. Navigate to the **iOS Bundle Signing** tab. Make sure that **Configuration** is set to **Release**, **Platform** is set to **iPhone**, and that **Manual Provisioning** is selected.
+12. Set **Signing Identity** to **Distribution (Automatic)**.
+13. For **Provisioning Profile**, select the App Store provisioning profile [created above](#create-and-install-an-app-store-provisioning-profile).
 
     Your project's bundle signing options should now look similar to this:
 
     ![iOS Bundle Signing settings](publishing-to-the-app-store-images/bundleSigning-w157.png "iOS Bundle Signing settings")
 
-16. Navigate to the **iOS IPA Options** tab.
-17. Make sure that **Configuration** is set to **Release** and **Platform** is set to **iPhone**.
-18. Check the **Build iTunes Package Archive (IPA)** checkbox. This setting will cause each **Release** build (since that is the selected configuration) to generate an .ipa file. This file can be submitted to Apple for release on the App Store.
+14. Navigate to the **iOS IPA Options** tab.
+15. Make sure that **Configuration** is set to **Release** and **Platform** is set to **iPhone**.
+16. Check the **Build iTunes Package Archive (IPA)** checkbox. This setting will cause each **Release** build (since that is the selected configuration) to generate an .ipa file. This file can be submitted to Apple for release on the App Store.
 
     > [!NOTE]
     > **iTunes Metadata** and **iTunesArtwork** are not necessary for App
@@ -183,11 +181,11 @@ New Xamarin.iOS projects automatically set up **Debug** and **Release** _build c
     > [The iTunesMetadata.plist file in Xamarin.iOS apps](~/ios/deploy-test/app-distribution/itunesmetadata.md)
     > and [iTunes Artwork](~/ios/app-fundamentals/images-icons/app-icons.md#itunes-artwork).
 
-19. To specify an .ipa filename that differs from the Xamarin.iOS project name, enter it in the **Package Name** field.
+17. To specify an .ipa filename that differs from the Xamarin.iOS project name, enter it in the **Package Name** field.
 
     ![iOS Bundle Signing settings](publishing-to-the-app-store-images/ipaOptions-w157.png "iOS Bundle Signing settings")
 
-20. Save the build configuration and close it.
+18. Save the build configuration and close it.
 
 -----
 
