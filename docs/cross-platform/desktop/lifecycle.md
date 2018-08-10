@@ -70,7 +70,7 @@ BindableObject - base class for all bindable things
          View - layout + gesture support
 ```
 
-### View Lifcycle
+### View Lifecycle
 
 Xamarin.Forms is primarily oriented around mobile scenarios. As such, applications are _activated_, _suspended_, and _reactivated_ as the user interacts with them. This is similar to clicking away from the `Window` in a WPF application and there are a set of methods and corresponding events you can override or hook into to monitor this behavior.
 
