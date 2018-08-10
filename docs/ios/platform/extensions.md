@@ -9,8 +9,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
 ---
-
-# iOS Extensions in Xamarin.iOS
+# iOS extensions in Xamarin.iOS
 
 > [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
 
@@ -20,22 +19,7 @@ Extensions, as introduced in iOS 8, are specialized `UIViewControllers` that are
 
 All Extensions are installed in conjunction with a Container app (with both elements written using the 64-bit Unified APIs) and are activated from a particular Extension Point in a Host app. And since they will be used as supplements to existing system functions, they must be high performance, lean, and robust. 
 
-This article covers the following topics:
-
-- [Extension Points](#Extension-Points) - Lists the type of Extension Points available and the type of Extension that can be created for each point.
-- [Limitations](#Limitations) - Extensions have a number of limitations, some of which are universal to all types while other types of Extension may have specific limitations on their usage.
-- [Distributing, Installing, and Running Extensions](#Distributing-Installing-and-Running-Extensions) - Extensions are distributed from within a container app, which, in turn is submitted and distributed via the App Store. The Extension(s) distributed with the app are installed at that point, but the user must enable each Extension explicitly. The different types of Extensions are enabled in different ways.
-- [Extension Lifecycle](#Extension-Lifecycle) - An Extension's `UIViewController` will be instantiated and begin the normal View Controller lifecycle. However, unlike a normal app, Extensions are loaded, executed, and then terminated repeatedly.
-- [Creating an Extension](#Creating-an-Extension) - When developing an Extension, your solutions will contain at least two projects: the container app and one project for each Extension the container provides.
-- [Walkthrough](#Walkthrough) - Covers creating a simple **Today** widget Extension that provides its User Interface either using a Storyboard or in code, installing the Extension and testing it in the iOS Simulator.
-- [Communicating with the Host App](#Communicating-with-the-Host-App) - Briefly discusses communicating with the Host app from an Extension.
-- [Communicating with the Parent App](#Communicating-with-the-Parent-App) - Briefly discusses communicating with the Parent app from an Extension.
-- [Precautions and Considerations](#Precautions-and-Considerations) - List some know precautions and considerations that should be taken into account when designing and implementing an Extension.
- 
-
-<a name="Extension-Points" />
-
-## Extension Points
+## Extension points
 
 |Type|Description|Extension Point|Host App|
 |--- |--- |--- |--- |
@@ -47,8 +31,6 @@ This article covers the following topics:
 |Today|“Widgets” that appear on the Today screen or Notification Center|`com.apple.widget-extensions`|Today and Notification Center|
 
 [Additional extension points](~/ios/platform/introduction-to-ios10/index.md#app-extensions) were added in iOS 10.
-
-<a name="Limitations" />
 
 ## Limitations
 
@@ -67,9 +49,7 @@ The universal limitations are:
 
 For individual limitations, please see Apple's [App Extension Programming Guide](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/).
 
-<a name="Distributing-Installing-and-Running-Extensions" />
-
-## Distributing, Installing, and Running Extensions
+## Distributing, installing, and running extensions
 
 Extensions are distributed from within a container app, which, in turn is submitted and distributed via the App Store. The Extension(s) distributed with the app are installed at that point, but the user must enable each Extension explicitly. The different types of Extensions are enabled in different ways; several require the user to navigate to the **Settings** app and enable them from there. While others are enabled at point of use, such as enabling a Sharing Extension when sending a photo. 
 
@@ -77,9 +57,7 @@ The app in which the Extension is used (where the user encounters the Extension 
 
 Typically, the container app describes the extension and walks the user through the process of enabling it.
 
-<a name="Extension-Lifecycle" />
-
-## Extension Lifecycle
+## Extension lifecycle
 
 An Extension can be as simple as a single [UIViewController](https://developer.xamarin.com/api/type/UIKit.UIViewController/) or more complex Extensions that present multiple screens of UI. When the user encounters an _Extension Points_ (such as when sharing an image), they will have an opportunity to choose from the Extensions registered for that Extension Point. 
 
@@ -89,15 +67,11 @@ Extensions can communicate with their Host apps via an [NSExtensionContext](http
 
 By default, Extensions and their container apps can not communicate, despite being installed together. In some cases, the Container app is essentially an empty "shipping" container whose purpose is served once the Extension is installed. However, if circumstances dictate, the Container app and the Extension may share resources from a common area. Additionally, a **Today Extension** may request its Container app to open a URL. This behavior is shown in the [Evolve Countdown Widget](http://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
 
-<a name="Creating-an-Extension" />
-
-## Creating an Extension
+## Creating an extension
 
 Extensions (and their Container apps) must be 64-bit binaries and built using the Xamarin.iOS [Unified APIs](http://developer.xamarin.com/guides/cross-platform/macios/unified). When developing an Extension, your solutions will contain at least two projects: the container app and one project for each Extension the container provides. 
 
-<a name="Container-App-Project-Requirements" />
-
-### Container App Project Requirements
+### Container app project requirements
 
 The Container app used to install the Extension has the following requirements:
 
@@ -105,9 +79,7 @@ The Container app used to install the Extension has the following requirements:
 - It must be a complete app (must be able to launch and run successfully) even if it does nothing more than provide a way to install an Extension. 
 - It must have a Bundle Identifier that is the basis for the Bundle Identifier of the Extension project (see the section below for more details).
 
-<a name="Extension-Project-Requirements" />
-
-### Extension Project Requirements
+### Extension project requirements
 
 Additionally, the Extension's project has the following requirements:
 
@@ -115,9 +87,9 @@ Additionally, the Extension's project has the following requirements:
 
 	![](extensions-images/bundleidentifiers.png) 
 - It must define the key `NSExtensionPointIdentifier`, with an appropriate value (such as `com.apple.widget-extension` for a **Today** Notification Center widget), in its `Info.plist` file.
-- It must also define *either* the `NSExtensionMainStoryboard` key or the `NSPrincipalClass` key in its `Info.plist` file with an appropriate value:
+- It must also define *either* the `NSExtensionMainStoryboard` key or the `NSExtensionPrincipalClass` key in its `Info.plist` file with an appropriate value:
 	- Use the `NSExtensionMainStoryboard` key to specify the name of the Storyboard that presents the main UI for the Extension (minus `.storyboard`). For example, `Main` for the `Main.storyboard` file.
-	- Use the `NSPrincipalClass` key to specify the class that will be initialized when the Extension is started. The value must match the **Register** value of your `UIViewController`: 
+	- Use the `NSExtensionPrincipalClass` key to specify the class that will be initialized when the Extension is started. The value must match the **Register** value of your `UIViewController`: 
 
 	![](extensions-images/registerandprincipalclass.png)
 
@@ -126,17 +98,13 @@ Specific types of Extensions may have additional requirements. For instance, a *
 > [!IMPORTANT]
 > If you start your project using one the Extensions templates provided by Visual Studio for Mac, most (if not all) these requirements will be provided and met for you automatically by the template.
 
-<a name="Walkthrough" />
-
 ## Walkthrough 
 
 In following walkthrough, you will create an example **Today** widget that calculates the day and number of days remaining in the year:
 
 [![](extensions-images/carpediemscreenshot-sm.png "An example Today widget that calculates the day and number of days remaining in the year")](extensions-images/carpediemscreenshot.png#lightbox)
 
-<a name="Creating-the-Solution" />
-
-### Creating the Solution
+### Creating the solution
 
 To create the required solution, do the following:
 
@@ -163,15 +131,11 @@ The resulting Solution should now have two projects, as shown here:
 
 [![](extensions-images/today07.png "The resulting Solution should now have two projects, as shown here")](extensions-images/today07.png#lightbox)
 
-<a name="Creating-the-Extension-User-Interface" />
-
-### Creating the Extension User Interface
+### Creating the extension user interface
 
 Next, you will need to design the interface for your **Today** widget. This can either be done using a Storyboard or by creating the UI in code. Both methods will be covered below in detail.
 
-<a name="Using-Storyboards" />
-
-#### Using Storyboards
+#### Using storyboards
 
 To build the UI with a Storyboard, do the following:
 
@@ -183,9 +147,7 @@ To build the UI with a Storyboard, do the following:
 	[![](extensions-images/today09.png "Select the Label that was automatically added to the UI by template and give it the Name TodayMessage in the Widget tab of the Properties Explorer")](extensions-images/today09.png#lightbox)
 3. Save the changes to the Storyboard.
 
-<a name="Using-Code" />
-
-#### Using Code
+#### Using code
 
 To build the UI in code, do the following: 
 
@@ -198,9 +160,9 @@ To build the UI in code, do the following:
 3. Select the **Source View** (from the bottom of the screen) and open the `NSExtension` node: 
 
 	[![](extensions-images/code03.png "Select the Source View from the bottom of the screen and open the NSExtension node")](extensions-images/code03.png#lightbox)
-4. Remove the `NSExtensionMainStoryboard` key and add a `NSPrincipalClass` with the value `CodeBasedViewController`: 
+4. Remove the `NSExtensionMainStoryboard` key and add a `NSExtensionPrincipalClass` with the value `CodeBasedViewController`: 
 
-	[![](extensions-images/code04.png "Remove the NSExtensionMainStoryboard key and add a NSPrincipalClass with the value CodeBasedViewController")](extensions-images/code04.png#lightbox)
+	[![](extensions-images/code04.png "Remove the NSExtensionMainStoryboard key and add a NSExtensionPrincipalClass with the value CodeBasedViewController")](extensions-images/code04.png#lightbox)
 5. Save your changes.
 
 Next, edit the `CodeBasedViewController.cs` file and make it look like the following:
@@ -214,7 +176,7 @@ using CoreGraphics;
 
 namespace DaysRemaining
 {
-	[Register("CodeBasedViewContoller")]
+	[Register("CodeBasedViewController")]
 	public class CodeBasedViewController : UIViewController, INCWidgetProviding
 	{
 		public CodeBasedViewController ()
@@ -239,11 +201,9 @@ namespace DaysRemaining
 }
 ```
 
-Note that the `[Register("CodeBasedViewContoller")]` matches the value that you specified for the `NSPrincipalClass` above.
+Note that the `[Register("CodeBasedViewController")]` matches the value that you specified for the `NSExtensionPrincipalClass` above.
 
-<a name="Coding-the-Extension" />
-
-### Coding the Extension
+### Coding the extension
 
 With the User Interface created, open either the `TodayViewController.cs` or the `CodeBasedViewController.cs` file (based of the method used to create the User Interface above), change the **ViewDidLoad** method and make it look like the following:
 
@@ -270,9 +230,7 @@ If using the code based User Interface method, replace the `// Insert code to po
 
 Note how similar this process is to the normal process of writing an app. An Extension's `UIViewController` has the same lifecycle as a View Controller in an app, except Extensions do not have background modes and are not suspended when the user is finished using them. Instead, Extensions are repeatedly initialized and de-allocated as required.
 
-<a name="Creating-the-Container-App-User-Interface" />
-
-### Creating the Container App User Interface
+### Creating the container app user interface
 
 For this walkthrough, the container app is simply used as a method to ship and install the Extension and provides no functionality of its own. Edit the TodayContainer's `Main.storyboard` file and add some text defining the Extension's function and how to install it:
 
@@ -280,9 +238,7 @@ For this walkthrough, the container app is simply used as a method to ship and i
 
 Save the changes to the Storyboard.
 
-<a name="Testing-the-Extension" />
-
-### Testing the Extension
+### Testing the extension
 
 To test your Extension in the iOS Simulator, run the **TodayContainer** app. The container's main view will be displayed:
 
@@ -300,9 +256,7 @@ The new widget will be added to the **Today** view and the results will be displ
 
 [![](extensions-images/run04.png "The new widget will be added to the Today view and the results will be displayed")](extensions-images/run04.png#lightbox)
 
-<a name="Communicating-with-the-Host-App" />
-
-## Communicating with the Host App
+## Communicating with the host app
 
 The example Today Extension you created above does not communicate with its host app (the **Today** screen). If it did, it would use the [ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) property of the `TodayViewController` or `CodeBasedViewController` classes. 
 
@@ -312,9 +266,7 @@ Other Extension, such as Photo Editing extensions, may distinguish between the u
 
 For more information, please see Apple's [App Extension Programming Guide](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW1).
 
-<a name="Communicating-with-the-Parent-App" />
-
-## Communicating with the Parent App
+## Communicating with the parent app
 
 An App Group allows different applications (or an application and its extensions) to access a shared file storage location. App Groups can be used for data like:
 
@@ -323,8 +275,6 @@ An App Group allows different applications (or an application and its extensions
 - [Shared Files](~/ios/watchos/app-fundamentals/parent-app.md#files).
 
 For more information, please see the [App Groups](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) section of our **Working with Capabilities** documentation.
-
-<a name="MobileCoreServices" />
 
 ## MobileCoreServices
 
@@ -494,23 +444,17 @@ results.ObjectForKey("NSExtensionJavaScriptPreprocessingResultsKey");
 
 For more information, please see the [App Groups](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) section of our **Working with Capabilities** documentation.
 
-
-<a name="Precautions-and-Considerations" />
-
-## Precautions and Considerations
+## Precautions and considerations
 
 Extensions have significantly less memory available to them than do apps. They are expected to perform rapidly and with minimal intrusion to the user and the app they are hosted in. However, an Extension should also provide a distinctive, useful function to the consuming app with a branded UI that allow the user to identify the Extension's developer or Container app they belong to.
 
 Given these tight requirement, you should only deploy Extensions that have been thoroughly tested and optimized for performance and memory consumption. 
 
-<a name="Summary" />
-
 ## Summary
 
 This document has covered Extensions, what they are, the type of Extension Points and the known limitations imposed on an Extension by iOS. It discussed creating, distributing, installing and running Extensions and the Extension lifecycle. It provided a walkthrough of creating a simple **Today** widget showing two ways to create the widget's UI using either Storyboards or code. It showed how to test an extension in the iOS Simulator. Finally, it briefly discussed communicating with the Host App and a few precautions and considerations that should be taken when developing an extension. 
 
-
-## Related Links
+## Related links
 
 - [ContainerApp (sample)](https://developer.xamarin.com/samples/monotouch/intro-to-extensions)
 - [Creating extensions in Xamarin.iOS (video)](https://university.xamarin.com/lightninglectures/creating-extensions-in-ios)
