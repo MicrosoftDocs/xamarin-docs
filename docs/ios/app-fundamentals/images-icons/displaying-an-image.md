@@ -1,5 +1,5 @@
 ---
-title: "Displaying an Image in Xamarin.iOS"
+title: "Displaying an image in Xamarin.iOS"
 description: "This article covers including an image asset in a Xamarin.iOS app and displaying that image either by using C# code or by assigning it to a control in the iOS Designer."
 ms.prod: xamarin
 ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
@@ -8,32 +8,17 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/24/2018
 ---
-
-# Displaying an Image in Xamarin.iOS
+# Displaying an image in Xamarin.iOS
 
 _This article covers including an image asset in a Xamarin.iOS app and displaying that image either by using C# code or by assigning it to a control in the iOS Designer._
 
-This article covers the following topics in detail:
-
-- [Adding and Organizing Images in a Xamarin.iOS App](#adding-assets) - Covers image assets and how they can be included, organized and managed inside a Xamarin.iOS project.
-- [Adding Images to Asset Catalogs](#asset-catalogs) - Managing images with Asset Catalogs.
-	- [Using Vector Images in Asset Catalogs](#Using-Vector-Images-in-Asset-Catalogs) - Providing all of the image sizes with a single vector.
-- [Working with Template Images](#Working-with-Template-Images) - By setting an Image Asset to be a Template Image, the developer can easily colorize it to match changes to an app's UI theme by setting the image's `Tint` property.
-- [Using Images with Controls](#controls) - Covers using image assets included in a Xamarin.iOS project with UI controls such as `UIButton` and `UIImageView` and how to work with images in C# using the `UIImage` object's [FromBundle](#frombundle) method.
-- [Displaying an Image in a Storyboards](#Displaying-an-Image-in-a-Storyboards) - Provides an example of displaying an image using a Storyboard.
-- [Displaying an Image in Code](#Displaying-an-Image-in-Code) - Provides an example of displaying an image using C# code.
-
-<a name="adding-assets" />
-
-## Adding and Organizing Images in a Xamarin.iOS App
+## Adding and organizing images in a Xamarin.iOS app
 
 When adding an image for use in a Xamarin.iOS app, the developer will use an _Asset Catalog_ to support every iOS device and resolution required by an app.
 
 Added in iOS 7, **Asset Catalogs Image Sets** contain all the versions or representations of an image that are necessary to support various devices and scale factors for an app. Instead of relying on the image assets filename (see [Resolution Independent Images and Image Nomenclature](~/ios/app-fundamentals/images-icons/displaying-an-image.md)), **Image Sets** use a Json file to specify which image belongs to which device and/or resolution. This is the preferred way to manage and support images in iOS (from iOS 9 or greater).
 
-<a name="asset-catalogs" />
-
-## Adding Images to an Asset Catalog Image Set
+## Adding images to an asset catalog image set
 
 As stated above, an **Asset Catalogs Image Sets** contain all the versions or representations of an image that are necessary to support various devices and scale factors for an app. Instead of relying on the image assets filename, **Image Sets** use a Json file to specify which image belongs to which device and/or resolution.
 
@@ -50,7 +35,7 @@ To create a new image set and add images to it, do the following:
 3. Select the new image set and the editor will be displayed:
 
 	![](displaying-an-image-images/imageset03.png "The Image Set editor")
-4. From here, drag in images for each of the different devices and and resolutions required. (Note: that these resolutions match up to the resolutions specified in the [Image Sizes and Filenames](~/ios/app-fundamentals/images-icons/displaying-an-image.md) document.)
+4. From here, drag in images for each of the different devices and and resolutions required. 
 5. Double-click the new image set's **Name** in the **Assets List** to edit it: ![](displaying-an-image-images/imageset04.png "Editing the new image set's Name")
 
 When using an **Image Set** in the iOS Designer, simply select the set's name from the dropdown list in the Property Editor:
@@ -63,11 +48,11 @@ When using an **Image Set** in the iOS Designer, simply select the set's name fr
 
 	![](displaying-an-image-images/asset5.png "Click the Plus button")
 
-2. Select **Add Image Set** and the Image Set editor will be displayed for the new image set. From here, drag in images for each of the different devices and and resolutions required. (Note: that these resolutions match up to the resolutions specified in the [Image Sizes and Filenames](~/ios/app-fundamentals/images-icons/displaying-an-image.md) document):
+2. Select **Add Image Set** and the Image Set editor will be displayed for the new image set. From here, drag in images for each of the different devices and and resolutions required. 
 
 	![](displaying-an-image-images/asset7.png "The image set editor")
 
-### Renaming an Image Set
+### Renaming an image set
 
 To rename an Image Set, do the following:
 
@@ -93,9 +78,7 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 > [!IMPORTANT]
 > If the images assigned to an Image Set are not showing up correctly, ensure that the correct filename is being used with the `FromBundle` method (the **Image Set** and not the parent **Asset Catalog** name). For PNG images, the `.png` extension can be omitted. For other image formats, the extension is required (eg. `PurpleMonkey.jpg`).
 
-<a name="Using-Vector-Images-in-Asset-Catalogs" />
-
-### Using Vector Images in Asset Catalogs
+### Using vector images in asset catalogs
 
 As of iOS 8, special **Vector** class as been added to **Image Sets** that allows the developer to include a **PDF** formatted vector image in the cassette instead including individual bitmap files at the different resolutions. Using this method, supply a single vector file for the `@1x` resolution (formatted as a vector PDF file) and the `@2x` and `@3x` versions of the file will be generated at compile time and included in the application's bundle.
 
@@ -121,9 +104,7 @@ The following should be taken into consideration when using PDF vector images in
 - The size of the image cannot be adjusted once it has been set in the Asset Catalog. If the developer attempts to resize the image (either in code or by using Auto Layout and Size Classes) the image will be distorted just like any other bitmap.
 - Asset Catalogs are only compatible with iOS 7 and greater, if an app need to support iOS 6 or lower, it cannot use Asset Catalogs.
 
-<a name="Working-with-Template-Images" />
-
-## Working with Template Images
+## Working with template images
 
 Based on the design of an iOS app, there might be times when the developer needs to customize an icon or image inside of the User Interface to match a change in color scheme (for example, based on user preferences).
 
@@ -176,9 +157,7 @@ There are three possibly settings for `UIImage.RenderMode` via the `UIImageRende
 * `AlwaysTemplate` - Forces the image to be rendered as a Template Image by colorizing the pixels with the specified `Tint` color.
 * `Automatic` -  Either renders the image as a Template or Original based on the environment that it is used in. For example, if the image is used in a `UIToolBar`, `UINavigationBar`, `UITabBar` or `UISegmentControl` it will be treated as a Template.
 
-<a name="Adding-new-Assets-Collections" />
-
-## Adding new Assets Collections
+## Adding new assets collections
 
 When working with images in Assets Catalogs there might be times when a new collection will be required, instead of adding all of the app's images to the `Assets.xcassets` collection. For example, when designing On-Demand Resources.
 
@@ -200,16 +179,11 @@ To add a new Assets Catalog to the project:
 
 -----
 
-
 From here, the collection can be worked with in the same way as the default `Assets.xcassets` collection automatically included in the project.
 
-<a name="controls" />
-
-## Using Images with Controls
+## Using images with controls
 
 In addition to using images to support an app, iOS also uses images with app control types such as tab bars, toolbars, navigation bars, tables, and buttons. A simple way to make an image appear on a control is to assign a `UIImage` instance to the control’s `Image` property.
-
-<a name="frombundle" />
 
 ### FromBundle
 
@@ -235,9 +209,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 
 For more information about icons and images, see the Apple documentation on [Custom Icon and Image Creation Guidelines](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
 
-<a name="Displaying-an-Image-in-a-Storyboards" />
-
-## Displaying an Image in a Storyboards
+## Displaying an image in a storyboards
 
 Once an image has been added to a Xamarin.iOS Project using an Asset Catalogs, it can be easily displayed on a Storyboard using a `UIImageView` in the iOS Designer. For example, if the following Image Asset has been added:
 
@@ -289,10 +261,7 @@ Do the following to display it on a Storyboard:
 
 -----
 
-
-<a name="Displaying-an-Image-in-Code" />
-
-## Displaying an Image in Code
+## Displaying an image in code
 
 Just like displaying an image in a Storyboard, once an image has been added to a Xamarin.iOS Project using an Asset Catalogs, it can be easily displayed using C# code.
 
@@ -312,8 +281,8 @@ View.AddSubview (imageView);
 
 This code creates a new `UIImageView` and gives it an initial size and position. Then it loads the image from an Image Asset added to the project and adds the `UIImageView` to the parent `UIView` to display it.
 
-## Related Links
+## Related links
 
 - [Working with Images (sample)](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Custom Icon and Image Creation Guidelines](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)
+- [Image Size and Resolution (Apple)](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/)

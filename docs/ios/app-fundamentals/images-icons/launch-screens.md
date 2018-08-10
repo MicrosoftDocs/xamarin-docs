@@ -310,6 +310,6 @@ To use the new Storyboard as a launch screen, do the following:
 - [Dynamic Launch Screens (sample)](https://developer.xamarin.com/samples/monotouch/ios8/DynamicLaunchScreen/)
 - [Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [iOS Designer Basics](~/ios/user-interface/designer/index.md)
-- [Adding Images to an Asset Catalog Image Set](~/ios/app-fundamentals/images-icons/displaying-an-image.md#asset-catalogs)
+- [Adding Images to an Asset Catalog Image Set](~/ios/app-fundamentals/images-icons/displaying-an-image.md#adding-images-to-an-asset-catalog-image-set)
 - [Auto Layout with the Xamarin Designer for iOS](~/ios/user-interface/designer/designer-auto-layout.md)
 - [Human Interface Guidelines: Launch Screen](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)
