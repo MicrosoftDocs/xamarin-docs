@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
 author: topgenorth
 ms.author: toopge
-ms.date: 06/20/2017
+ms.date: 08/08/2017
 ---
 
 # Xamarin Live Player Samples
@@ -19,7 +19,7 @@ Xamarin.Forms samples that work with Xamarin Live Player.
 
 ### [Basic Calculator](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator/)
 
-This Xamarin.Forms app provides a simple calculator you can use on your Android or iOS device.
+This Xamarin.Forms app provides a simple calculator you can use on your Android device.
 
 ![Basic Calculator sample screenshot](samples-images/basic-calculator-sml.png)
 

@@ -5,14 +5,16 @@ ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: topgenorth
 ms.author: toopge
-ms.date: 05/10/2017
+ms.date: 08/08/2017
 ---
 
 # Xamarin Live Player for Xamarin.Forms
 
-The Xamarin Live Player helps you get started with Xamarin.Forms development by learning to build mobile apps that you can test on your Android or iOS device. Your code runs inside the Xamarin Live Player app – there is no need to set up emulators or to use cables to deploy the code! To get started, download the Xamarin Live Player, pair it to Visual Studio, and deploy your code, and test the app. 
+The Xamarin Live Player helps you get started with Xamarin.Forms development by learning to build mobile apps that you can test on your Android device. To get started, download the Xamarin Live Player, pair it to Visual Studio, and deploy your code, and test the app.
 
-The Xamarin Live Player is designed as a getting started sandbox for developers to get their ideas visualized on a device quickly. Since the source code is interpreted you may reach the [limitations](limitations.md) after some time and need to fully compile your app for device or emulator.
+The Xamarin Live Player Preview is designed as a getting started sandbox for developers to get their ideas visualized on a device quickly. Since the source code is interpreted you may reach the [limitations](limitations.md) after some time and need to fully compile your app for device or emulator.
+
+![Preview feature](~/media/shared/preview.png)
 
 ## Get started with Xamarin Live Player
 
@@ -20,8 +22,8 @@ The Xamarin Live Player is designed as a getting started sandbox for developers 
 
 1. Download the app by following the [Xamarin Live Player setup](install.md) instructions.
 2. Enable the *Xamarin Live Player* in **Preferences**, then select your device from the **Devices** list.
-2. Manage Live Player devices to scan a QR code to pair your device to Visual Studio.
-3. The app runs right on your phone or tablet.
+3. Manage Live Player devices to scan a QR code to pair your device to Visual Studio.
+4. The app runs right on your phone or tablet.
 
 ## [Xamarin Live Player setup](install.md)
 
@@ -45,5 +47,4 @@ Find help if things go wrong.
 
 ## Related Links
 
-- [Blog post](https://blog.xamarin.com/live-player/)
 - [Xamarin Live Player Samples](https://developer.xamarin.com/samples/xamarin-live-player/all/)

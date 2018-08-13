@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 author: topgenorth
 ms.author: toopge
-ms.date: 05/14/2018
+ms.date: 08/08/2018
 ---
 
 # Xamarin Live Player Setup
@@ -14,23 +14,13 @@ Xamarin Live Player lets you make live edits to your app and have those changes 
 
 ![Preview feature](~/media/shared/preview.png)
 
-## 1. Get the App
-
-# [Android](#tab/android)
+## 1. Get the Android App
 
 Xamarin Live Player is available for Android from Google Play:
 
 [ ![Available on Google Play](install-images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
 For Android devices without Google Play the Xamarin Live Player is available through [HockeyApp](https://aka.ms/xlp-hockeyapp) distribution. Additionally, early preview builds for Android can be installed directly from Google Play by opting in to the [open beta program](https://play.google.com/apps/testing/com.xamarin.live)
-
-# [iOS](#tab/ios)
-
-We encourage users to join the Xamarin Live Player app iOS Preview to enjoy quick access to the latest improvements through TestFlight. By accessing the Xamarin Live Player, you’re agreeing to the Microsoft [Terms of Use](https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx) & [Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement). Microsoft may use your contact information to provide updates and special offers about Xamarin and other Microsoft products and services. You can unsubscribe at any time.
-
-To access the Xamarin Live Player iOS Preview, please complete the [TestFlight registration information](https://fastring.xamarinliveplayer.com/), after which you will receive an email from TestFlight on how to install the Xamarin Live Player iOS Preview.
-
------
 
 # [Visual Studio](#tab/windows)
 
@@ -47,30 +37,31 @@ Xamarin Live Player requires:
 2. Go to **Tools > Options...** and select the **Xamarin > Other** tab.
 3. Tick **Enable Xamarin Live Player**:
 
-  ![Check the Enable Xamarin Live Player box in the Options window](install-images/vs2017-options.png)
+    ![Check the Enable Xamarin Live Player box in the Options window](install-images/vs2017-options.png)
 
-2. Create or open a Xamarin project (or a [sample](~/tools/live-player/samples.md)).
-3. Choose **Live Player** in the device list:
+4. Create or open a Xamarin project (or a [sample](~/tools/live-player/samples.md)).
+5. Choose **Live Player** in the device list:
 
-  ![Device list includes a Xamarin Live Player option](install-images/devices-empty-windows.png)
+    ![Device list includes a Xamarin Live Player option](install-images/devices-empty-windows.png)
 
-  * If you have already paired a device, it will be available as an option.
-  * Otherwise you'll be prompted to pair a device when required.
-4. Press the **Run** button, or select one of the following options from the **Run** or right-click menu:
+    - If you have already paired a device, it will be available as an option.
+    - Otherwise you'll be prompted to pair a device when required.
 
-  - **Start Without Debugging** – you can edit the app and see the changes occur on the device (app is restarted as changes are made and the file saved).
-  - **Start Debugging** – you can set breakpoints and inspect variables, but code cannot be edited.
+6. Press the **Run** button, or select one of the following options from the **Run** or right-click menu:
 
-  Alternatively, select **Tools > Xamarin Live Player > Live Run Current View**, which lets you edit the app and see the changes occur on the device. The current view is shown (instead of the application's main screen).
+    - **Start Without Debugging** – you can edit the app and see the changes occur on the device (app is restarted as changes are made and the file saved).
+    - **Start Debugging** – you can set breakpoints and inspect variables, but code cannot be edited.
 
-5. If a device is already paired and the Xamarin Live Player app is running on the device,
+    Alternatively, select **Tools > Xamarin Live Player > Live Run Current View**, which lets you edit the app and see the changes occur on the device. The current view is shown (instead of the application's main screen).
+
+7. If a device is already paired and the Xamarin Live Player app is running on the device,
     the code will execute straight away!
 
-  If no device is is paired, a QR code will appear with instructions on how to pair a device:
+    If no device is is paired, a QR code will appear with instructions on how to pair a device:
 
-  ![Pair a device window](install-images/manage-empty-windows.png)
+    ![Pair a device window](install-images/manage-empty-windows.png)
 
-  If the device cannot be contacted for pairing, an error may appear.
+    If the device cannot be contacted for pairing, an error may appear.
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -88,40 +79,38 @@ Xamarin Live Player requires:
 2. Go to **Visual Studio > Preferences...** and select the **Projects > Xamarin Live Player (Preview)** tab.
 3. Tick **Enable Xamarin Live Player**:
 
-  [![Check the Enable Xamarin Live Player box in the Options window](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
+    [![Check the Enable Xamarin Live Player box in the Options window](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
 
-2. Create or open a Xamarin project (or a [sample](~/tools/live-player/samples.md)).
-3. Choose **Live Player** in the device list.
+4. Create or open a Xamarin project (or a [sample](~/tools/live-player/samples.md)).
+5. Choose **Live Player** in the device list.
 
-  ![Device list includes a Xamarin Live Player option](install-images/devices.png)
+    ![Device list includes a Xamarin Live Player option](install-images/devices.png)
 
-  * If you have already paired a device, it will be available as an option.
-  * Otherwise you'll be prompted to pair a device when required.
-  * Choose **Xamarin Live Player Devices...** to manage the devices you wish to use with Xamarin Live Player.
+    - If you have already paired a device, it will be available as an option.
+    - Otherwise you'll be prompted to pair a device when required.
+    - Choose **Xamarin Live Player Devices...** to manage the devices you wish to use with Xamarin Live Player.
 
-4. Press the **Run** button, or select one of the following options from the **Run** or right-click menu:
+6. Press the **Run** button, or select one of the following options from the **Run** or right-click menu:
 
-  ![Run menu options](install-images/run-menu.png)
+    ![Run menu options](install-images/run-menu.png)
 
-  - **Start Without Debugging** – You can edit the app and see the changes occur on the device (app is restarted as changes are made and the file saved).
-  - **Start Debugging** – You can set breakpoints and inspect variables, but code cannot be edited.
-  - **Live Run Current View** – You can edit the app and see the changes occur on the device. The current view is shown (instead of the application's main screen).
+    - **Start Without Debugging** – You can edit the app and see the changes occur on the device (app is restarted as changes are made and the file saved).
+    - **Start Debugging** – You can set breakpoints and inspect variables, but code cannot be edited.
+    - **Live Run Current View** – You can edit the app and see the changes occur on the device. The current view is shown (instead of the application's main screen).
 
-5. If a device is already paired and the Xamarin Live Player app is running on the device, the code will execute straight away!
+7. If a device is already paired and the Xamarin Live Player app is running on the device, the code will execute straight away!
 
-  If no device is paired, a QR code will appear with instructions on how to pair a device:
+    If no device is paired, a QR code will appear with instructions on how to pair a device:
 
-  ![Pair a device window](install-images/manage-empty.png)
+    ![Pair a device window](install-images/manage-empty.png)
 
-  If the device cannot be contacted for pairing, an error will appear:
+    If the device cannot be contacted for pairing, an error will appear:
 
-  ![Cannot connect to device error message](install-images/error-cannot-connect.png)
-
+    ![Cannot connect to device error message](install-images/error-cannot-connect.png)
 
 -----
 
 If you experience any issues or can not connect, see [limitations and troubleshooting](~/tools/live-player/troubleshooting.md).
-
 
 ## Related Links
 

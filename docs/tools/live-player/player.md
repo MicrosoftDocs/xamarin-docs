@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: topgenorth
 ms.author: toopge
-ms.date: 05/14/2017
+ms.date: 08/08/2017
 ---
 
 # Xamarin Live Player App
@@ -16,19 +16,19 @@ Once you have installed the app on your phone, follow the
 [setup instructions](~/tools/live-player/install.md) to connect to your
 computer. Try one of the [sample apps](~/tools/live-player/samples.md) to get it working.
 
-On startup, the Xamarin Live Player app looks like this (on iOS and Android respectively):
+On startup, the Xamarin Live Player app looks like this:
 
-![Live Player iOS app screenshot](player-images/app-iphone-sml.png) ![Live Player Android app screenshot](player-images/app-android-sml.png)
+![Live Player Android app screenshot](player-images/app-android-sml.png)
 
 When you press **Pair to Visual Studio**, use the camera to scan the
 barcode showing on your computer:
 
-![Screenshot of the iOS barcode scanner](player-images/scan-iphone-sml.png) ![Screenshot of the Android barcode scanner](player-images/scan-android-sml.png)
+![Screenshot of the Android barcode scanner](player-images/scan-android-sml.png)
 
 If the connection is successful, the code should run on
 the device almost immediately (such as the [Calculator sample](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator)):
 
-![Sample calculator app running on device](player-images/basic-calculator-iphone-sml.png)
+![Sample calculator app running on device](player-images/basic-calculator-sml.png)
 
 ## Options
 
@@ -50,8 +50,7 @@ View logs to diagnose problems.
 
 ## Managing Devices
 
-To connect a device for the first time, follow the instructions in [Requirements & Setup](~/tools/live-player/install.md). You can pair multiple devices (for example an iOS
-and an Android), and manage them via the IDE.
+To connect a device for the first time, follow the instructions in [Requirements & Setup](~/tools/live-player/install.md). You can pair multiple devices and manage them via the IDE.
 
 # [Visual Studio](#tab/windows)
 

@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: 36A1531E-630A-4B7C-A333-4E67E5DC023C
 author: topgenorth
 ms.author: toopge
-ms.date: 03/29/2018
+ms.date: 08/08/2018
 ---
 
 # Limitations of Xamarin Live Player
@@ -13,23 +13,19 @@ ms.date: 03/29/2018
 ![Preview feature](~/media/shared/preview.png)
 
 ## Device Requirements
-The Xamarin Live Player app supports the following devices:
 
-# [Android](#tab/android)
+The Xamarin Live Player app supports the following Android devices:
 
 - Android 4.2 or later.
 - ARM-v7a, ARM-v8a, ARM64-v8a, x86, or x86_64 processor.
 
-# [iOS](#tab/ios)
-
-- iOS 9.0 or later.
-- ARM64 processor.
-
------
-
 ## Limitations
 
 There are some limitations on the things Xamarin Live Player can run, including the items below:
+
+### iOS
+
+Live Player is not available for iOS.
 
 ### Xamarin.Forms
 
@@ -38,11 +34,10 @@ There are some limitations on the things Xamarin Live Player can run, including 
 - Custom Controls with Custom Bindable Properties are not supported.
 - Embedded resources are not supported (ie. embedding images or other resources in a PCL).
 - Third party MVVM frameworks are not supported (ie. Prism, Mvvm Cross, Mvvm Light, etc.).
-- Asset Catalogs on iOS are not supported.
 
 ### Other project types
 
-- Live Player is not intended for native Android or iOS projects (that use Android XML or Storyboards for the user interface).
+- Live Player is not intended for native Android projects (that use Android XML for the user interface).
 
 ### Misc
 
@@ -50,7 +45,7 @@ There are some limitations on the things Xamarin Live Player can run, including 
 - Some system classes cannot be overridden (for example, you cannot implement a subclass).
 - Some platform features that require provisioning can't work in the Xamarin Live Player app (however it has been configured for common operations like photo gallery access).
 - Custom targets and build steps are ignored. For example, tools like Fody, Refit, AutoFac, and AutoMapper cannot be incorporated.
-- F# projects are not supported on Android and limited support on iOS
+- F# projects are not supported
 - Advanced scenarios with custom generic classes and interfaces may not be supported.
 
 Please report any additional issues on [bugzilla](https://aka.ms/live-player-report-issue).

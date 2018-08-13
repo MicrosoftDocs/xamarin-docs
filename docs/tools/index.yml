@@ -5,7 +5,7 @@ metadata:
   description: Tools to help make your Xamarin development experience better.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02-17-2018
+  ms.date: 08/08/2018
   ms.topic: landing-page
 abstract:
   description: Tools to help make your Xamarin development experience better.
@@ -22,36 +22,30 @@ sections:
     style: cards
     className: cardsC
     items:
-    - href: ~/tools/live-player/index.md
-      html: Get started with Xamarin in minutes using the Live Player app with Visual Studio.
-      image:
-        src: ~/media/index/xamarin-tools-live-player.svg?branch=master
-        href: ~/tools/live-player/index.md
-      title: Xamarin Live Player
-    - href: ~/tools/inspector/index.md
-      html: Understand and debug your user interface.
-      image:
-        src: ~/media/index/xamarin-tools-inspector.svg?branch=master
-        href: ~/tools/inspector/index.md
-      title: Xamarin Inspector
-    - href: ~/tools/workbooks/index.md
-      html: Learn C# and the Xamarin platform interactively.
-      image:
-        src: https://docs.microsoft.com/en-us/media/illustrations/dynamics-resource-library.svg
-        href: ~/tools/workbooks/index.md
-      title: Xamarin Workbooks
     - href: ~/tools/ios-simulator.md
       html: Interact with the iOS Simulator using Visual Studio on Windows.
       image:
         src: ~/media/index/xamarin-tools-windows-simulator.svg?branch=master
         href: ~/tools/ios-simulator.md
       title: iOS Simulator for Windows
+    - href: ~/tools/inspector/index.md
+      html: Understand and debug your user interface.
+      image:
+        src: ~/media/index/xamarin-tools-inspector.svg?branch=master
+        href: ~/tools/inspector/index.md
+      title: Xamarin Inspector
     - href: ~/tools/profiler/index.md
       html: Identify and fix performance issues. 
       image:
         src: ~/media/index/xamarin-tools-profiler.svg?branch=master
         href: ~/tools/profiler/index.md
       title: Xamarin Profiler
+    - href: ~/tools/workbooks/index.md
+      html: Learn C# and the Xamarin platform interactively.
+      image:
+        src: https://docs.microsoft.com/en-us/media/illustrations/dynamics-resource-library.svg
+        href: ~/tools/workbooks/index.md
+      title: Xamarin Workbooks
     - href: ~/tools/dotnet-embedding/index.md
       html: Allows your existing .NET code to be consumed from other programming languages.
       image:

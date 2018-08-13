@@ -5,7 +5,7 @@ experimental: true
 experiment_id: "c2e6cc85-31f6-ebbb-0a42-039c28107c6f"
 title: Xamarin Documentation
 description: Xamarin lets you build native apps for Android, iOS, and macOS using .NET code and platform-specific user interfaces. Xamarin.Forms allows you to build native apps, with shared UI code written in C# or XAML.
-ms.date: 05/07/2018
+ms.date: 08/08/2018
 featureFlags:
 - clicktale
 ---
@@ -1089,25 +1089,6 @@ featureFlags:
                     <li>
                         <a href="#architecture1"></a>
                         <ul id="architecture1" class="cardsC">
-                            <li>
-                                <a href="~/tools/live-player/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="Xamarin Live Player" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Xamarin Live Player</h3>
-                                                    <p>Get started with Xamarin in minutes using the Live Player app with Visual Studio.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
                             <li>
                                 <a href="~/tools/ios-simulator.md">
                                     <div class="cardSize">

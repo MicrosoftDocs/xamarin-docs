@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: topgenorth
 ms.author: toopge
-ms.date: 05/17/2017
+ms.date: 08/08/2018
 ---
 
 # Troubleshooting Xamarin Live Player
@@ -76,24 +76,6 @@ Open up the **PlayerDeviceList.xml** up in an editor such as Visual Studio or Vi
 </DeviceList>
 ```
 
-**Add iOS Device:**
-
-```xml
-<PlayerDevice>
-<SecretCode>ENTER-PAIR-CODE-HERE</SecretCode>
-<UniqueIdentifier>ENTER-GUID-HERE</UniqueIdentifier>
-<Name>iPhone Player</Name>
-<Platform>iOS</Platform>
-<AndroidApiLevel>0</AndroidApiLevel>
-<DebuggerEndPoint>ENTER-IP-HERE:37847</DebuggerEndPoint>
-<HostEndPoint />
-<NeedsAppInstall>false</NeedsAppInstall>
-<IsSimulator>false</IsSimulator>
-<SimulatorIdentifier />
-<LastConnectTimeUtc>2018-01-08T20:36:03.9492291Z</LastConnectTimeUtc>
-</PlayerDevice>
-```
-
 **Add Android Device:**
 
 ```xml
@@ -116,8 +98,8 @@ Open up the **PlayerDeviceList.xml** up in an editor such as Visual Studio or Vi
 
 ## "Type or namespace cannot be found" message in IDE
 
-Check that you have selected a **Startup Project** that matches your device type (iOS or Android)
-and that the configuration matches that device type (eg. **Debug|iPhone Simulator** for iOS).
+Check that you have selected a **Startup Project** that matches your device type (eg. Android)
+and that the configuration matches that device type (eg. **Debug** for Android).
 
 ## "Constructor on type 'InterpretedXamarin.Forms.Button' not found" message in Player
 
