@@ -25,7 +25,7 @@ The Wikipedia article on [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zi
 
 The cubic is the type of Bézier curve that most developers think of when the subject of Bézier curves comes up.
 
-You can add a cubic Bézier curve to an `SKPath` object using the [`CubicTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.CubicTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/SkiaSharp.SKPoint/) method with three `SKPoint` parameters, or the [`CubicTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.CubicTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/System.Single/) overload with separate `x` and `y` parameters:
+You can add a cubic Bézier curve to an `SKPath` object using the [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKPoint)) method with three `SKPoint` parameters, or the [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)) overload with separate `x` and `y` parameters:
 
 ```csharp
 public void CubicTo (SKPoint point1, SKPoint point2, SKPoint point3)
@@ -345,7 +345,7 @@ x(t) = (1 – t)²x₀ + 2t(1 – t)x₁ + t²x₂
 
 y(t) = (1 – t)²y₀ + 2t(1 – t)y₁ + t²y₂
 
-To add a quadratic Bézier curve to a path, use the [`QuadTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.QuadTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/) method or the [`QuadTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.QuadTo/p/System.Single/System.Single/System.Single/System.Single/) overload with separate `x` and `y` coordinates:
+To add a quadratic Bézier curve to a path, use the [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint)) method or the [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo(System.Single,System.Single,System.Single,System.Single)) overload with separate `x` and `y` coordinates:
 
 ```csharp
 public void QuadTo (SKPoint point1, SKPoint point2)
@@ -422,7 +422,7 @@ y(t) = ((1 – t)²y₀ + 2wt(1 – t)y₁ + t²y₂)) ÷ d(t)
 
 Rational quadratic Bézier curves are also called *conics* because they can exactly represent segments of any conic section &mdash; hyperbolas, parabolas, ellipses, and circles.
 
-To add a rational quadratic Bézier curve to a path, use the [`ConicTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/) method or the [`ConicTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/) overload with separate `x` and `y` coordinates:
+To add a rational quadratic Bézier curve to a path, use the [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) method or the [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo(System.Single,System.Single,System.Single,System.Single,System.Single)) overload with separate `x` and `y` coordinates:
 
 ```csharp
 public void ConicTo (SKPoint point1, SKPoint point2, Single weight)
@@ -547,5 +547,5 @@ It is unfortunate in this case that `ConicTo` does not support negative weights,
 
 ## Related Links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

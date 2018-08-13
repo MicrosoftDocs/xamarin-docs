@@ -17,7 +17,7 @@ One of the most important featues of the graphics path is the ability to define 
 
 ![](paths-images/connectedlinesexample.png "Two triangles showing the difference between connected and disconnected lines")
 
-A graphics path is encapsulated by the [`SKPath`](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) object. A path is a collection of one or more *contours*. Each contour is a collection of *connected* straight lines and curves. Contours are not connected to each other but they might visually overlap. Sometimes a single contour can overlap itself.
+A graphics path is encapsulated by the [`SKPath`](xref:SkiaSharp.SKPath) object. A path is a collection of one or more *contours*. Each contour is a collection of *connected* straight lines and curves. Contours are not connected to each other but they might visually overlap. Sometimes a single contour can overlap itself.
 
 A contour generally begins with a call to the following method of `SKPath`:
 
@@ -92,31 +92,31 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-The first contour consists of a call to [`MoveTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.MoveTo/p/System.Single/System.Single/) using X and Y coordinates rather than an `SKPoint` value, followed by three calls to [`LineTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.LineTo/p/System.Single/System.Single/) to draw the three sides of the triangle. The second contour has only two calls to `LineTo` but it finishes the contour with a call to [`Close`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Close()/), which closes the contour. The difference is significant:
+The first contour consists of a call to [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo(System.Single,System.Single)) using X and Y coordinates rather than an `SKPoint` value, followed by three calls to [`LineTo`](xref:SkiaSharp.SKPath.LineTo(System.Single,System.Single)) to draw the three sides of the triangle. The second contour has only two calls to `LineTo` but it finishes the contour with a call to [`Close`](xref:SkiaSharp.SKPath.Close), which closes the contour. The difference is significant:
 
 [![](paths-images/twotrianglecontours-small.png "Triple screenshot of the Two Triangle Contours page")](paths-images/twotrianglecontours-large.png#lightbox "Triple screenshot of the Two Triangle Contours page")
 
 As you can see, the first contour is obviously a series of three connected lines, but the end doesn't connect with the beginning. The two lines overlap at the top. The second contour is obviously closed, and was accomplished with one fewer `LineTo` calls because the `Close` method automatically adds a final line to close the contour.
 
-`SKCanvas` defines only one [`DrawPath`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawPath/p/SkiaSharp.SKPath/SkiaSharp.SKPaint/) method, which in this demonstration is called twice to fill and stroke the path. All contours are filled, even those that are not closed. For purposes of filling unclosed paths, a straight line is assumed to exist between the start and end points of the contours. If you remove the last `LineTo` from the first contour, or remove the `Close` call from the second contour, each contour will have only two sides but will be filled as if it were a triangle.
+`SKCanvas` defines only one [`DrawPath`](xref:SkiaSharp.SKCanvas.DrawPath(SkiaSharp.SKPath,SkiaSharp.SKPaint)) method, which in this demonstration is called twice to fill and stroke the path. All contours are filled, even those that are not closed. For purposes of filling unclosed paths, a straight line is assumed to exist between the start and end points of the contours. If you remove the last `LineTo` from the first contour, or remove the `Close` call from the second contour, each contour will have only two sides but will be filled as if it were a triangle.
 
 `SKPath` defines many other methods and properties. The following methods add entire contours to the path, which might be closed or not closed depending on the method:
 
 - `AddRect`
-- [`AddRoundedRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddRoundedRect/p/SkiaSharp.SKRect/System.Single/System.Single/SkiaSharp.SKPathDirection/)
-- [`AddCircle`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddCircle/p/System.Single/System.Single/System.Single/SkiaSharp.SKPathDirection/)
-- [`AddOval`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddOval/p/SkiaSharp.SKRect/SkiaSharp.SKPathDirection/)
-- [`AddArc`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddArc/p/SkiaSharp.SKRect/System.Single/System.Single/) to add a curve on the circumference of an ellipse
+- [`AddRoundedRect`](xref:SkiaSharp.SKPath.AddRoundedRect(SkiaSharp.SKRect,System.Single,System.Single,SkiaSharp.SKPathDirection))
+- [`AddCircle`](xref:SkiaSharp.SKPath.AddCircle(System.Single,System.Single,System.Single,SkiaSharp.SKPathDirection))
+- [`AddOval`](xref:SkiaSharp.SKPath.AddOval(SkiaSharp.SKRect,SkiaSharp.SKPathDirection))
+- [`AddArc`](xref:SkiaSharp.SKPath.AddArc(SkiaSharp.SKRect,System.Single,System.Single)) to add a curve on the circumference of an ellipse
 - `AddPath` to add another path to the current path
-- [`AddPathReverse`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddPathReverse/p/SkiaSharp.SKPath/) to add another path in reverse
+- [`AddPathReverse`](xref:SkiaSharp.SKPath.AddPathReverse(SkiaSharp.SKPath)) to add another path in reverse
 
 Keep in mind that an `SKPath` object defines only a geometry &mdash; a series of points and connections. Only when an `SKPath` is combined with an `SKPaint` object is the path rendered with a particular color, stroke width, and so forth. Also, keep in mind that the `SKPaint` object passed to the `DrawPath` method defines characteristics of the entire path. If you want to draw something requiring several colors, you must use a separate path for each color.
 
-Just as the appearance of the start and end of a line is defined by a stroke cap, the appearance of the connection between two lines is defined by a *stroke join*. You specify this by setting the [`StrokeJoin`](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeJoin/) property of `SKPaint` to a member of the [`SKStrokeJoin`](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeJoin/) enumeration:
+Just as the appearance of the start and end of a line is defined by a stroke cap, the appearance of the connection between two lines is defined by a *stroke join*. You specify this by setting the [`StrokeJoin`](xref:SkiaSharp.SKPaint.StrokeJoin) property of `SKPaint` to a member of the [`SKStrokeJoin`](xref:SkiaSharp.SKStrokeJoin) enumeration:
 
-- [`Miter`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Miter/) for a pointy join
-- [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Round/) for a rounded join
-- [`Bevel`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Bevel/) for a chopped-off join
+- [`Miter`](xref:SkiaSharp.SKStrokeJoin.Miter) for a pointy join
+- [`Round`](xref:SkiaSharp.SKStrokeJoin.Round) for a rounded join
+- [`Bevel`](xref:SkiaSharp.SKStrokeJoin.Bevel) for a chopped-off join
 
 The **Stroke Joins** page shows these three stroke joins with code similar to the **Stroke Caps** page. This is the `PaintSurface` event handler in the [`StrokeJoinsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) class:
 
@@ -186,10 +186,10 @@ Here's the program running on the three platforms:
 
 [![](paths-images/strokejoins-small.png "Triple screenshot of the Stroke Joins page")](paths-images/strokejoins-large.png#lightbox "Triple screenshot of the Stroke Joins page")
 
-The miter join consists of a sharp point where the lines connect. When two lines join at a small angle, the miter join can become quite long. To prevent excessively long miter joins, the length of the miter join is limited by the value of the [`StrokeMiter`](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeMiter/) property of `SKPaint`. A miter join that exceeds this length is chopped off to become a bevel join.
+The miter join consists of a sharp point where the lines connect. When two lines join at a small angle, the miter join can become quite long. To prevent excessively long miter joins, the length of the miter join is limited by the value of the [`StrokeMiter`](xref:SkiaSharp.SKPaint.StrokeMiter) property of `SKPaint`. A miter join that exceeds this length is chopped off to become a bevel join.
 
 
 ## Related Links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

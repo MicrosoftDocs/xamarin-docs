@@ -17,7 +17,7 @@ With the rotate transform, SkiaSharp graphics objects break free of the constrai
 
 ![](rotate-images/rotateexample.png "Text rotated around a center")
 
-For rotating a graphical object around the point (0, 0), SkiaSharp supports both a [`RotateDegrees`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateDegrees/p/System.Single/) method and a [`RotateRadians`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateRadians/p/System.Single/) method:
+For rotating a graphical object around the point (0, 0), SkiaSharp supports both a [`RotateDegrees`](xref:SkiaSharp.SKCanvas.RotateDegrees(System.Single)) method and a [`RotateRadians`](xref:SkiaSharp.SKCanvas.RotateRadians(System.Single)) method:
 
 ```csharp
 public void RotateDegrees (Single degrees)
@@ -55,7 +55,7 @@ Because rotation is centered around the upper-left corner of the canvas, for mos
 
 [![](rotate-images/basicrotate-small.png "Triple screenshot of the Basic Rotate page")](rotate-images/basicrotate-large.png#lightbox "Triple screenshot of the Basic Rotate page")
 
-Very often you'll want to rotate something centered around a specified pivot point using these versions of the [`RotateDegrees`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateDegrees/p/System.Single/System.Single/System.Single/) and [`RotateRadians`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateRadians/p/System.Single/System.Single/System.Single/) methods:
+Very often you'll want to rotate something centered around a specified pivot point using these versions of the [`RotateDegrees`](xref:SkiaSharp.SKCanvas.RotateDegrees(System.Single,System.Single,System.Single)) and [`RotateRadians`](xref:SkiaSharp.SKCanvas.RotateRadians(System.Single,System.Single,System.Single)) methods:
 
 ```csharp
 public void RotateDegrees (Single degrees, Single px, Single py)
@@ -364,5 +364,5 @@ The clock is certainly functional although the hands are rather crude:
 
 ## Related Links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

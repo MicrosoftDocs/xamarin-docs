@@ -17,12 +17,12 @@ Two contours in a path can overlap, and the lines that make up a single contour 
 
 ![](fill-types-images/filltypeexample.png "Five-pointed star partially filles")
 
-You have a little control over this. The filling algorithm is governed by the [`SKFillType`](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.FillType/) property of `SKPath`, which you set to a member of the [`SKPathFillType`](https://developer.xamarin.com/api/type/SkiaSharp.SKPathFillType/) enumeration:
+You have a little control over this. The filling algorithm is governed by the [`SKFillType`](xref:SkiaSharp.SKPath.FillType) property of `SKPath`, which you set to a member of the [`SKPathFillType`](xref:SkiaSharp.SKPathFillType) enumeration:
 
-- [`Winding`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.Winding/), the default
-- [`EvenOdd`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.EvenOdd/)
-- [`InverseWinding`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.InverseWinding/)
-- [`InverseEvenOdd`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.InverseEvenOdd/)
+- [`Winding`](xref:SkiaSharp.SKPathFillType.Winding), the default
+- [`EvenOdd`](xref:SkiaSharp.SKPathFillType.EvenOdd)
+- [`InverseWinding`](xref:SkiaSharp.SKPathFillType.InverseWinding)
+- [`InverseEvenOdd`](xref:SkiaSharp.SKPathFillType.InverseEvenOdd)
 
 Both the winding and even-odd algorithms determine if any enclosed area is filled or not filled based on a hypothetical line drawn from that area to infinity. That line crosses one or more boundary lines that make up the path. With the winding mode, if the number of boundary lines drawn in one direction balance out the number of lines drawn in the other direction, then the area is not filled. Otherwise the area is filled. The even-odd algorithm fills an area if the number of boundary lines is odd.
 
@@ -163,10 +163,10 @@ Normally, the path fill type should affect only fills and not strokes, but the t
 
 The Android and UWP screenshots show the typical even-odd and winding effects, but the order of the stroke and fill also affects the results.
 
-The winding algorithm is dependent on the direction that lines are drawn. Usually when you're creating a path, you can control that direction as you specify that lines are drawn from one point to another. However, the `SKPath` class also defines methods like `AddRect` and `AddCircle` that draw entire contours. To control how these objects are drawn, the methods include a parameter of type [`SKPathDirection`](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/), which has two members:
+The winding algorithm is dependent on the direction that lines are drawn. Usually when you're creating a path, you can control that direction as you specify that lines are drawn from one point to another. However, the `SKPath` class also defines methods like `AddRect` and `AddCircle` that draw entire contours. To control how these objects are drawn, the methods include a parameter of type [`SKPathDirection`](xref:SkiaSharp.SKPathDirection), which has two members:
 
-- [`Clockwise`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathDirection.Clockwise/)
-- [`CounterClockwise`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathDirection.CounterClockwise/)
+- [`Clockwise`](xref:SkiaSharp.SKPathDirection.Clockwise)
+- [`CounterClockwise`](xref:SkiaSharp.SKPathDirection.CounterClockwise)
 
 The methods in `SKPath` that include an `SKPathDirection` parameter give it a default value of `Clockwise`.
 
@@ -217,5 +217,5 @@ It's an interesting image created with a minimum of code:
 
 ## Related Links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

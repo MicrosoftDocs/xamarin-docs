@@ -893,6 +893,6 @@ This code effectively divides the area of the bitmap into an interior diamond sh
 
 ## Related Links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Invoking Events from Effects](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

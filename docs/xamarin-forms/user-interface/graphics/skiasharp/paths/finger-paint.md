@@ -163,7 +163,7 @@ Your finger paintings are only limited by your talent:
 
 ## Related Links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Touch-Tracking Effect Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)
 - [Invoking Events from Effects](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

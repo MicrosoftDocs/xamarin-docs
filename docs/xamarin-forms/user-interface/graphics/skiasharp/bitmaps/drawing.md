@@ -11,7 +11,7 @@ ms.date: 07/17/2018
 
 # Creating and drawing on SkiaSharp bitmaps
 
-You've seen how an application can load bitmaps from the Web, from application resources, and from the user's photo library. It's also possible to create new bitmaps within your application. The simplest approach involves one of the constructors of [`SKBitmap`](https://developer.xamarin.com/api/constructor/SkiaSharp.SKBitmap.SKBitmap/p/System.Int32/System.Int32/System.Boolean/):
+You've seen how an application can load bitmaps from the Web, from application resources, and from the user's photo library. It's also possible to create new bitmaps within your application. The simplest approach involves one of the constructors of [`SKBitmap`](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
 
 ```csharp
 SKBitmap bitmap = new SKBitmap(width, height);
@@ -32,7 +32,7 @@ The second approach is discussed in the article [**Accessing SkiaSharp Bitmap Pi
 
 ## Drawing on the bitmap
 
-Drawing on the surface of a bitmap is the same as drawing on a video display. To draw on a video display, you obtain an `SKCanvas` object from the `PaintSurface` event arguments. To draw on a bitmap, you create an `SKCanvas` object using the [`SKCanvas`](https://developer.xamarin.com/api/constructor/SkiaSharp.SKCanvas.SKCanvas/p/SkiaSharp.SKBitmap/) constructor:
+Drawing on the surface of a bitmap is the same as drawing on a video display. To draw on a video display, you obtain an `SKCanvas` object from the `PaintSurface` event arguments. To draw on a bitmap, you create an `SKCanvas` object using the [`SKCanvas`](xref:SkiaSharp.SKCanvas.%23ctor(SkiaSharp.SKBitmap)) constructor:
 
 ```csharp
 SKCanvas canvas = new SKCanvas(bitmap);
@@ -118,9 +118,9 @@ The documentation of the `Clear` methods of `SKCanvas` describes them with the s
 
 `Clear` exists in two different versions: 
 
-- The [`Clear`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Clear/p/SkiaSharp.SKColor/) method with an `SKColor` parameter replaces the pixels of the display surface with pixels of that color.
+- The [`Clear`](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor)) method with an `SKColor` parameter replaces the pixels of the display surface with pixels of that color.
 
-- The [`Clear`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Clear()/) method with no parameters replaces the pixels with the [`SKColors.Empty`](https://developer.xamarin.com/api/property/SkiaSharp.SKColors.Empty/) color, which is a color in which all the components (red, green, blue, and alpha) are set to zero. This color is sometimes referred to as "transparent black."
+- The [`Clear`](xref:SkiaSharp.SKCanvas.Clear) method with no parameters replaces the pixels with the [`SKColors.Empty`](xref:SkiaSharp.SKColors.Empty) color, which is a color in which all the components (red, green, blue, and alpha) are set to zero. This color is sometimes referred to as "transparent black."
 
 Calling `Clear` with no arguments on a new bitmap intializes the entire bitmap to be entirely transparent. Anything subsequently drawn on the bitmap will usually be opaque or partially opaque.
 
@@ -146,7 +146,7 @@ No `Draw` method ever makes a bitmap more transparent. Only `Clear` can do that.
 
 ## Bitmap color types
 
-The simplest `SKBitmap` constructor allows you to specify an integer pixel width and height for the bitmap. Other `SKBitmap` constructors are more complex. These constructors require arguments of two enumeration types: [`SKColorType`](https://developer.xamarin.com/api/type/SkiaSharp.SKColorType/) and [`SKAlphaType`](https://developer.xamarin.com/api/type/SkiaSharp.SKAlphaType/). Other constructors use the [`SKImageInfo`](https://developer.xamarin.com/api/type/SkiaSharp.SKImageInfo/) structure, which consolidates this information.
+The simplest `SKBitmap` constructor allows you to specify an integer pixel width and height for the bitmap. Other `SKBitmap` constructors are more complex. These constructors require arguments of two enumeration types: [`SKColorType`](xref:SkiaSharp.SKColorType) and [`SKAlphaType`](xref:SkiaSharp.SKAlphaType). Other constructors use the [`SKImageInfo`](xref:SkiaSharp.SKImageInfo) structure, which consolidates this information.
 
 The `SKColorType` enumeration has 9 members. Each of these members describes a particular way of storing the bitmap pixels:
 
@@ -156,7 +156,7 @@ The `SKColorType` enumeration has 9 members. Each of these members describes a p
 - `Argb4444` &mdash; each pixel is 16 bits, 4 each for alpha, red, green, and blue
 - `Rgba8888` &mdash; each pixel is 32 bits, 8 each for red, green, blue, and alpha
 - `Bgra8888` &mdash; each pixel is 32 bits, 8 each for blue, green, red, and alpha
-- `Index8` &mdash; each pixel is 8 bits and represents an index into an [`SKColorTable`](https://developer.xamarin.com/api/type/SkiaSharp.SKColorTable/)
+- `Index8` &mdash; each pixel is 8 bits and represents an index into an [`SKColorTable`](xref:SkiaSharp.SKColorTable)
 - `Gray8` &mdash; each pixel is 8 bits representing a gray shade from black to white
 - `RgbaF16` &mdash; each pixel is 64 bits, with red, green, blue, and alpha in a 16-bit floating-point format
 
@@ -591,5 +591,5 @@ Another common task that can be handled using similar techniques is cropping a b
 
 ## Related links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

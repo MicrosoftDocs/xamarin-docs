@@ -21,13 +21,13 @@ The skew transforms rectangles into parallelograms, but a skewed ellipse is stil
 
 Although Xamarin.Forms defines properties for translation, scaling, and rotations, there is no corresponding property in Xamarin.Forms for skew.
 
-The [`Skew`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Skew/p/System.Single/System.Single/) method of `SKCanvas` accepts two arguments for horizontal skew and vertical skew:
+The [`Skew`](xref:SkiaSharp.SKCanvas.Skew(System.Single,System.Single)) method of `SKCanvas` accepts two arguments for horizontal skew and vertical skew:
 
 ```csharp
 public void Skew (Single xSkew, Single ySkew)
 ```
 
-A second [`Skew`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Skew/p/SkiaSharp.SKPoint/) method combines those arguments in a single `SKPoint` value:
+A second [`Skew`](xref:SkiaSharp.SKCanvas.Skew(SkiaSharp.SKPoint)) method combines those arguments in a single `SKPoint` value:
 
 ```csharp
 public void Skew (SKPoint skew)
@@ -246,5 +246,5 @@ Now the shadow extends from the bottom of those descenders:
 
 ## Related Links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

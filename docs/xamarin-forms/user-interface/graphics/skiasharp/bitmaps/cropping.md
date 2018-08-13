@@ -13,7 +13,7 @@ ms.date: 07/17/2018
 
 The [**Creating and Drawing SkiaSharp Bitmaps**](drawing.md) article described how an `SKBitmap` object can be passed to an `SKCanvas` constructor. Any drawing method called on that canvas causes graphics to be rendered on the bitmap. These drawing methods include `DrawBitmap`, which means that this technique allows transferring part or all of one bitmap to another bitmap, perhaps with transforms applied.
 
-You can use that technique for cropping a bitmap by calling the [`DrawBitmap`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKRect/SkiaSharp.SKPaint/) method with source and destination rectangles:
+You can use that technique for cropping a bitmap by calling the [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint)) method with source and destination rectangles:
 
 ```csharp
 canvas.DrawBitmap(bitmap, sourceRect, destRect);
@@ -739,7 +739,7 @@ In the `OnDoneButtonClicked` method, the array created for the 15 bitmaps is of 
 ImageSource[] imgSources = new ImageSource[15];
 ```
 
-`ImageSource` is the Xamarin.Forms base type that encapsulates a bitmap. Fortunately, SkiaSharp allows converting from SkiaSharp bitmaps to Xamarin.Forms bitmaps. The **SkiaSharp.Views.Forms** assembly defines an [`SKBitmapImageSource`](https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.SKBitmapImageSource/) class that derives from `ImageSource` but can be created based on a SkiaSharp `SKBitmap` object. `SKBitmapImageSource` even defines conversions between `SKBitmapImageSource` and `SKBitmap`, and that's how `SKBitmap` objects are stored in an array as Xamarin.Forms bitmaps:
+`ImageSource` is the Xamarin.Forms base type that encapsulates a bitmap. Fortunately, SkiaSharp allows converting from SkiaSharp bitmaps to Xamarin.Forms bitmaps. The **SkiaSharp.Views.Forms** assembly defines an [`SKBitmapImageSource`](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) class that derives from `ImageSource` but can be created based on a SkiaSharp `SKBitmap` object. `SKBitmapImageSource` even defines conversions between `SKBitmapImageSource` and `SKBitmap`, and that's how `SKBitmap` objects are stored in an array as Xamarin.Forms bitmaps:
 
 ```csharp
 imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
@@ -757,5 +757,5 @@ Now you can put them back in the correct order. Any tiles in the same row or col
 
 ## Related links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

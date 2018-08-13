@@ -13,9 +13,9 @@ ms.date: 09/12/2017
 
 _Get information about paths and enumerate the contents_
 
-The [`SKPath`](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) class defines several properties and methods that allow you to obtain information about the path. The [`Bounds`](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/) and [`TightBounds`](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.TightBounds/) properties (and related methods) obtain the metrical dimensions of a path. The [`Contains`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Contains/p/System.Single/System.Single/) method lets you determine if a particular point is within a path.
+The [`SKPath`](xref:SkiaSharp.SKPath) class defines several properties and methods that allow you to obtain information about the path. The [`Bounds`](xref:SkiaSharp.SKPath.Bounds) and [`TightBounds`](xref:SkiaSharp.SKPath.TightBounds) properties (and related methods) obtain the metrical dimensions of a path. The [`Contains`](xref:SkiaSharp.SKPath.Contains(System.Single,System.Single)) method lets you determine if a particular point is within a path.
 
-It is sometimes useful to determine the total length of all the lines and curves that make up a path. This is not an algorithmically simple task, so an entire class named [`PathMeasure`](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) is devoted to it.
+It is sometimes useful to determine the total length of all the lines and curves that make up a path. This is not an algorithmically simple task, so an entire class named [`PathMeasure`](xref:SkiaSharp.SKPathMeasure) is devoted to it.
 
 It is also sometimes useful to obtain all the drawing operations and points that make up a path. At first, this facility might seem unnecessary: If your program has created the path, the program already knows the contents. However, you've seen that paths can also be created by [path effects](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) and by converting [text strings into paths](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md). You can also obtain all the drawing operations and points that make up these paths. One possibility is to apply an algorithmic transform to all the points. This allows techniques such as wrapping text around a hemisphere:
 
@@ -23,9 +23,9 @@ It is also sometimes useful to obtain all the drawing operations and points that
 
 ## Getting the Path Length
 
-In the article [**Paths and Text**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md) you saw how to use the [`DrawTextOnPath`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/) method to draw a text string whose baseline follows the course of a path. But what if you want to size the text so that it fits the path precisely? For drawing text around a circle, this is easy because the circumference of a circle is simple to calculate. But the circumference of an ellipse or the length of a Bézier curve is not so simple.
+In the article [**Paths and Text**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md) you saw how to use the [`DrawTextOnPath`](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) method to draw a text string whose baseline follows the course of a path. But what if you want to size the text so that it fits the path precisely? For drawing text around a circle, this is easy because the circumference of a circle is simple to calculate. But the circumference of an ellipse or the length of a Bézier curve is not so simple.
 
-The [`SKPathMeasure`](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) class can help. The [constructor](https://developer.xamarin.com/api/constructor/SkiaSharp.SKPathMeasure.SKPathMeasure/p/SkiaSharp.SKPath/System.Boolean/System.Single/) accepts an `SKPath` argument, and the [`Length`](https://developer.xamarin.com/api/property/SkiaSharp.SKPathMeasure.Length/) property reveals its length.
+The [`SKPathMeasure`](xref:SkiaSharp.SKPathMeasure) class can help. The [constructor](xref:SkiaSharp.SKPathMeasure.%23ctor(SkiaSharp.SKPath,System.Boolean,System.Single)) accepts an `SKPath` argument, and the [`Length`](xref:SkiaSharp.SKPathMeasure.Length) property reveals its length.
 
 This is demonstrated in the **Path Length** sample, which is based on the **Bezier Curve** page. The [**PathLengthPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml) file derives from `InteractivePage` and includes a touch interface:
 
@@ -123,11 +123,11 @@ Boolean GetPositionAndTangent (Single distance, out SKPoint position, out SKPoin
 Boolean GetMatrix (Single distance, out SKMatrix matrix, SKPathMeasureMatrixFlags flag)
 ```
 
-The [`SKPathMeasureMatrixFlags`](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasureMatrixFlags/) are:
+The [`SKPathMeasureMatrixFlags`](xref:SkiaSharp.SKPathMeasureMatrixFlags) are:
 
-- [`GetPosition`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathMeasureMatrixFlags.GetPosition/)
-- [`GetTangent`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathMeasureMatrixFlags.GetPositionAndTangent/)
-- [`GetPositionAndTangent`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathMeasureMatrixFlags.GetPositionAndTangent/)
+- [`GetPosition`](xref:SkiaSharp.SKPathMeasureMatrixFlags.GetPosition)
+- [`GetTangent`](xref:SkiaSharp.SKPathMeasureMatrixFlags.GetPositionAndTangent)
+- [`GetPositionAndTangent`](xref:SkiaSharp.SKPathMeasureMatrixFlags.GetPositionAndTangent)
 
 The **Unicycle Half-Pipe** page animates a stick figure on a unicycle that seems to ride back and forth along a cubic Bézier curve:
 
@@ -210,9 +210,9 @@ Notice that this value of `t` must be multiplied by the path length for the firs
 
 ## Enumerating the Path
 
-Two embedded classes of `SKPath` allow you to enumerate the contents of path. These classes are [`SKPath.Iterator`](https://developer.xamarin.com/api/type/SkiaSharp.SKPath+Iterator/) and [`SKPath.RawIterator`](https://developer.xamarin.com/api/type/SkiaSharp.SKPath+RawIterator/). The two classes are very similar, but `SKPath.Iterator` can eliminate elements in the path with a zero length, or close to a zero length. The `RawIterator` is used in the example below.
+Two embedded classes of `SKPath` allow you to enumerate the contents of path. These classes are [`SKPath.Iterator`](xref:SkiaSharp.SKPath.Iterator) and [`SKPath.RawIterator`](xref:SkiaSharp.SKPath.RawIterator). The two classes are very similar, but `SKPath.Iterator` can eliminate elements in the path with a zero length, or close to a zero length. The `RawIterator` is used in the example below.
 
-You can obtain an object of type `SKPath.RawIterator` by calling the [`CreateRawIterator`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.CreateRawIterator()/) method of `SKPath`. Enumerating through the path is accomplished by repeatedly calling the [`Next`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath+RawIterator.Next/p/SkiaSharp.SKPoint[]/) method. Pass to it an array of four `SKPoint` values:
+You can obtain an object of type `SKPath.RawIterator` by calling the [`CreateRawIterator`](xref:SkiaSharp.SKPath.CreateRawIterator) method of `SKPath`. Enumerating through the path is accomplished by repeatedly calling the [`Next`](xref:SkiaSharp.SKPath.RawIterator.Next*) method. Pass to it an array of four `SKPoint` values:
 
 ```csharp
 SKPoint[] points = new SKPoint[4];
@@ -220,15 +220,15 @@ SKPoint[] points = new SKPoint[4];
 SKPathVerb pathVerb = rawIterator.Next(points);
 ```
 
-The `Next` method returns a member of the [`SKPathVerb`](https://developer.xamarin.com/api/type/SkiaSharp.SKPathVerb/) enumeration. These values indicate the particular drawing command in the path. The number of valid points inserted in the array depends on this verb:
+The `Next` method returns a member of the [`SKPathVerb`](xref:SkiaSharp.SKPathVerb) enumeration. These values indicate the particular drawing command in the path. The number of valid points inserted in the array depends on this verb:
 
-- [`Move`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Move/) with a single point
-- [`Line`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Line/) with two points
-- [`Cubic`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Cubic/) with four points
-- [`Quad`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Quad/) with three points
-- [`Conic`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Conic/) with three points (and also call the [`ConicWeight`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath+RawIterator.ConicWeight/) method for the weight)
-- [`Close`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Close/) with one point
-- [`Done`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Done/)
+- [`Move`](xref:SkiaSharp.SKPathVerb.Move) with a single point
+- [`Line`](xref:SkiaSharp.SKPathVerb.Line) with two points
+- [`Cubic`](xref:SkiaSharp.SKPathVerb.Cubic) with four points
+- [`Quad`](xref:SkiaSharp.SKPathVerb.Quad) with three points
+- [`Conic`](xref:SkiaSharp.SKPathVerb.Conic) with three points (and also call the [`ConicWeight`](xref:SkiaSharp.SKPath.RawIterator.ConicWeight*) method for the weight)
+- [`Close`](xref:SkiaSharp.SKPathVerb.Close) with one point
+- [`Done`](xref:SkiaSharp.SKPathVerb.Done)
 
 The `Done` verb indicates that the enumeration is complete.
 
@@ -505,5 +505,5 @@ This is a very versatile technique. If the array of path effects described in th
 
 ## Related Links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
