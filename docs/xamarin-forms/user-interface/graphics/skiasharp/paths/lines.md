@@ -17,7 +17,7 @@ In SkiaSharp, rendering a single line is very different from rendering a series 
 
 ![](lines-images/strokecapsexample.png "The three stroke caps options")
 
-For drawing single lines, `SKCanvas` defines a simple [`DrawLine`](xref:SkiaSharp.SKCanvas.DrawLine(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint)) method whose arguments indicate the starting and ending coordinates of the line with an `SKPaint` object:
+For drawing single lines, `SKCanvas` defines a simple [`DrawLine`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawLine/p/System.Single/System.Single/System.Single/System.Single/SkiaSharp.SKPaint/) method whose arguments indicate the starting and ending coordinates of the line with an `SKPaint` object:
 
 ```csharp
 canvas.DrawLine (x0, y0, x1, y1, paint);
@@ -25,11 +25,11 @@ canvas.DrawLine (x0, y0, x1, y1, paint);
 
 By default, the `StrokeWidth` property of a newly instantiated `SKPaint` object is 0, which has the same effect as a value of 1 in rendering a line of one pixel in thickness. This appears very thin on high resolution devices such as phones, so you'll probably want to set the `StrokeWidth` to a larger value. But once you start drawing lines of a sizable thickness, that raises another issue: How should the starts and ends of these thick lines be rendered?
 
-The appearance of the starts and ends of lines is called a *line cap* or, in Skia, a *stroke cap*. The word "cap" in this context refers to a kind of hat &mdash; something that sits on the end of the line. You set the [`StrokeCap`](xref:SkiaSharp.SKPaint.StrokeCap) property of the `SKPaint` object to one of the following members of the [`SKStrokeCap`](xref:SkiaSharp.SKStrokeCap) enumeration:
+The appearance of the starts and ends of lines is called a *line cap* or, in Skia, a *stroke cap*. The word "cap" in this context refers to a kind of hat &mdash; something that sits on the end of the line. You set the [`StrokeCap`](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeCap/) property of the `SKPaint` object to one of the following members of the [`SKStrokeCap`](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeCap/) enumeration:
 
-- [`Butt`](xref:SkiaSharp.SKStrokeCap.Butt) (the default)
-- [`Square`](xref:SkiaSharp.SKStrokeCap.Round)
-- [`Round`](xref:SkiaSharp.SKStrokeCap.Round)
+- [`Butt`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Butt/) (the default)
+- [`Square`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
+- [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
 
 These are best illustrated with a sample program. The second section of the home page of the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program begins with a page titled **Stroke Caps** based on the [`StrokeCapsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) class. This page defines a `PaintSurface` event handler that loops through the three members of the `SKStrokeCap` enumeration, displaying both the name of the enumeration member and drawing a line using that stroke cap:
 
@@ -97,11 +97,11 @@ The `SKCanvas` class also includes another method for drawing multiple lines tha
 DrawPoints (SKPointMode mode, points, paint)
 ```
 
-The `points` parameter is an array of `SKPoint` values and `mode` is a member of the [`SKPointMode`](xref:SkiaSharp.SKPointMode) enumeration, which has three members:
+The `points` parameter is an array of `SKPoint` values and `mode` is a member of the [`SKPointMode`](https://developer.xamarin.com/api/type/SkiaSharp.SKPointMode/) enumeration, which has three members:
 
-- [`Points`](xref:SkiaSharp.SKPointMode.Points) to render the individual points
-- [`Lines`](xref:SkiaSharp.SKPointMode.Lines) to connect each pair of points
-- [`Polygon`](xref:SkiaSharp.SKPointMode.Polygon) to connect all consecutive points
+- [`Points`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Points/) to render the individual points
+- [`Lines`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Lines/) to connect each pair of points
+- [`Polygon`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Polygon/) to connect all consecutive points
 
 The **Multiple Lines** page demonstrates this method. The [`MultipleLinesPage` XAML file](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) instantiates two `Picker` views that let you select a member of the `SKPointMode` enumeration and a member of the `SKStrokeCap` enumeration:
 
@@ -238,5 +238,5 @@ Whether lines are connected or not connected is a crucial aspect of working with
 
 ## Related Links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

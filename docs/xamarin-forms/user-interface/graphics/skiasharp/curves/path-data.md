@@ -29,7 +29,7 @@ public static SKPath ParseSvgPathData(string svgPath)
 public string ToSvgPathData()
 ```
 
-The static [`ParseSvgPathData`](xref:SkiaSharp.SKPath.ParseSvgPathData(System.String)) method converts a string to an `SKPath` object, while [`ToSvgPathData`](xref:SkiaSharp.SKPath.ToSvgPathData) converts an `SKPath` object to a string.
+The static [`ParseSvgPathData`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ParseSvgPathData/p/System.String/) method converts a string to an `SKPath` object, while [`ToSvgPathData`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ToSvgPathData()/) converts an `SKPath` object to a string.
 
 Here's an SVG string for a five-pointed star centered on the point (0, 0) with a radius of 100:
 
@@ -139,9 +139,9 @@ All these commands are also available in "relative" versions, where the coordina
 
 This is the extent of the SVG path-data definition. There is no facility for repeating groups of commands or for performing any type of calculation. Commands for `ConicTo` or the other types of arc specifications are not available.
 
-The static [`SKPath.ParseSvgPathData`](xref:SkiaSharp.SKPath.ParseSvgPathData(System.String)) method expects a valid string of SVG commands. If any syntax error is detected, the method returns `null`. That is the only error indication.
+The static [`SKPath.ParseSvgPathData`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ParseSvgPathData/p/System.String/) method expects a valid string of SVG commands. If any syntax error is detected, the method returns `null`. That is the only error indication.
 
-The [`ToSvgPathData`](xref:SkiaSharp.SKPath.ToSvgPathData) method is handy for obtaining SVG path data from an existing `SKPath` object to transfer  to another program, or to store in a text-based file format such as XML. (The `ToSvgPathData` method is not demonstrated in sample code in this article.) Do *not* expect `ToSvgPathData` to return a string corresponding exactly to the method calls that created the path. In particular, you'll discover that arcs are converted to multiple `QuadTo` commands, and that's how they appear in the path data returned from `ToSvgPathData`.
+The [`ToSvgPathData`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ToSvgPathData()/) method is handy for obtaining SVG path data from an existing `SKPath` object to transfer  to another program, or to store in a text-based file format such as XML. (The `ToSvgPathData` method is not demonstrated in sample code in this article.) Do *not* expect `ToSvgPathData` to return a string corresponding exactly to the method calls that created the path. In particular, you'll discover that arcs are converted to multiple `QuadTo` commands, and that's how they appear in the path data returned from `ToSvgPathData`.
 
 The **Path Data Hello** page spells out the word "HELLO" using SVG path data. Both the `SKPath` and `SKPaint` objects are defined as fields in the [`PathDataHelloPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) class:
 
@@ -425,5 +425,5 @@ Something special is done with the second hand, however. Because the clock is up
 
 ## Related Links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

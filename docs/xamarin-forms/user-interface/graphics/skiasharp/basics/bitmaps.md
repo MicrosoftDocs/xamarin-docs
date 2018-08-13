@@ -19,7 +19,7 @@ The support of bitmaps in SkiaSharp is quite extensive. This article covers only
 
 A much deeper exploration of bitmaps can be found in the section [SkiaSharp Bitmaps](../bitmaps/index.md).
 
-A SkiaSharp bitmap is an object of type [`SKBitmap`](xref:SkiaSharp.SKBitmap). There are many ways to create a bitmap but this article restricts itself to the [`SKBitmap.Decode`](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) method, which loads the bitmap from a .NET `Stream` object.
+A SkiaSharp bitmap is an object of type [`SKBitmap`](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/). There are many ways to create a bitmap but this article restricts itself to the [`SKBitmap.Decode`](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/System.IO.Stream/) method, which loads the bitmap from a .NET `Stream` object.
 
 The **Basic Bitmaps** page in the **SkiaSharpFormsDemos** program demonstrates how to load bitmaps from three different sources:
 
@@ -145,7 +145,7 @@ Notice that the `Tapped` handler calls the `InvalidateSurface` method of the `SK
 
 The `PaintSurface` handler needs to display three bitmaps. The handler assumes that the phone is in portrait mode and divides the canvas vertically into three equal parts.
 
-The first bitmap is displayed with the simplest [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,System.Single,System.Single,SkiaSharp.SKPaint)) method. All you need to specify are the X and Y coordinates where the upper-left corner of the bitmap is to be positioned:
+The first bitmap is displayed with the simplest [`DrawBitmap`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/System.Single/System.Single/SkiaSharp.SKPaint/) method. All you need to specify are the X and Y coordinates where the upper-left corner of the bitmap is to be positioned:
 
 ```csharp
 public void DrawBitmap (SKBitmap bitmap, Single x, Single y, SKPaint paint = null)
@@ -153,7 +153,7 @@ public void DrawBitmap (SKBitmap bitmap, Single x, Single y, SKPaint paint = nul
 
 Although an `SKPaint` parameter is defined, it has a default value of `null` and you can ignore it. The pixels of the bitmap are simply transferred to the pixels of the display surface with a one-to-one mapping.
 
-A program can obtain the pixel dimensions of a bitmap with the [`Width`](xref:SkiaSharp.SKBitmap.Width) and [`Height`](xref:SkiaSharp.SKBitmap.Height) properties. These properties allow the program to calculate coordinates to position the bitmap in the center of the upper-third of the canvas:
+A program can obtain the pixel dimensions of a bitmap with the [`Width`](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Width/) and [`Height`](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Height/) properties. These properties allow the program to calculate coordinates to position the bitmap in the center of the upper-third of the canvas:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -174,13 +174,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-The other two bitmaps are displayed with a version of [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKPaint)) with an `SKRect` parameter:
+The other two bitmaps are displayed with a version of [`DrawBitmap`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKPaint/) with an `SKRect` parameter:
 
 ```csharp
 public void DrawBitmap (SKBitmap bitmap, SKRect dest, SKPaint paint = null)
 ```
 
-A third version of [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint)) has two `SKRect` arguments for specifying a rectangular subset of the bitmap to display, but that version isn't used in this article.
+A third version of [`DrawBitmap`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKRect/SkiaSharp.SKPaint/) has two `SKRect` arguments for specifying a rectangular subset of the bitmap to display, but that version isn't used in this article.
 
 Here's the code to display the bitmap loaded from an embedded resource bitmap:
 
@@ -241,6 +241,6 @@ If no bitmap has yet been loaded from the picture library, then the `else` block
 
 ## Related Links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Picking a Photo from the Picture Library](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

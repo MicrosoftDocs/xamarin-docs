@@ -19,13 +19,13 @@ Translation is also useful for animation and for simple text effects:
 
 ![](translate-images/translateexample.png "Text shadow, engraving, and embossing with translation")
 
-The [`Translate`](xref:SkiaSharp.SKCanvas.Translate(System.Single,System.Single)) method in `SKCanvas` has two parameters that cause subsequently drawn graphics objects to be shifted horizontally and vertically:
+The [`Translate`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Translate/p/System.Single/System.Single/) method in `SKCanvas` has two parameters that cause subsequently drawn graphics objects to be shifted horizontally and vertically:
 
 ```csharp
 public void Translate (Single dx, Single dy)
 ```
 
-These arguments may be negative. A second [`Translate`](xref:SkiaSharp.SKCanvas.Translate(SkiaSharp.SKPoint)) method combines the two translation values in a single `SKPoint` value:
+These arguments may be negative. A second [`Translate`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Translate/p/SkiaSharp.SKPoint/) method combines the two translation values in a single `SKPoint` value:
 
 ```csharp
 public void Translate (SKPoint point)
@@ -127,9 +127,9 @@ Each of the three examples shows a different way of negating the `Translate` cal
 
 The first example simply calls `Translate` again but with negative values. Because the `Translate` calls are cumulative, this sequence of calls simply restores the total translation to the default values of zero.
 
-The second example calls [`ResetMatrix`](xref:SkiaSharp.SKCanvas.ResetMatrix). This causes all transforms to return to their default state.
+The second example calls [`ResetMatrix`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ResetMatrix()/). This causes all transforms to return to their default state.
 
-The third example saves the state of the of the `SKCanvas` object with a call to [`Save`](xref:SkiaSharp.SKCanvas.Save) and then restores the state with a call to [`Restore`](xref:SkiaSharp.SKCanvas.Restore). This is the most versatile way to manipulate transforms for a series of drawing operations. These `Save` and `Restore` calls function like a stack: You can call `Save` multiple time, and then call `Restore` in reverse sequence to return to previous states. The `Save` method returns an integer, and you can pass that integer to [`RestoreToCount`](xref:SkiaSharp.SKCanvas.RestoreToCount*) to effectively call `Restore` multiple times. The [`SaveCount`](xref:SkiaSharp.SKCanvas.SaveCount) property returns the number of states currently saved on the stack.
+The third example saves the state of the of the `SKCanvas` object with a call to [`Save`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Save()/) and then restores the state with a call to [`Restore`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Restore/). This is the most versatile way to manipulate transforms for a series of drawing operations. These `Save` and `Restore` calls function like a stack: You can call `Save` multiple time, and then call `Restore` in reverse sequence to return to previous states. The `Save` method returns an integer, and you can pass that integer to [`RestoreToCount`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RestoreToCount/) to effectively call `Restore` multiple times. The [`SaveCount`](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.SaveCount/) property returns the number of states currently saved on the stack.
 
 However, you don't have to worry about transforms carrying over from one call of the `PaintSurface` handler to the next. Each new call to `PaintSurface` delivers a fresh `SKCanvas` object with default transforms.
 
@@ -297,5 +297,5 @@ Notice that the star maintains the same orientation as it revolves around the ce
 
 ## Related Links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

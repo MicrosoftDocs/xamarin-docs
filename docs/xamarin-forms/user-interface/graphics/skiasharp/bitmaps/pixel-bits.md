@@ -34,7 +34,7 @@ To allow you to see the performance differences between these techniques, the [*
 
 ### The SetPixel method
 
-If you only need to set or get several individual pixels, the [`SetPixel`](xref:SkiaSharp.SKBitmap.SetPixel(System.Int32,System.Int32,SkiaSharp.SKColor)) and [`GetPixel`](xref:SkiaSharp.SKBitmap.GetPixel(System.Int32,System.Int32)) methods are ideal. For each of these two methods, you specify the integer column and row. Regardless of the pixel format, these two methods let you obtain or set the pixel as an `SKColor` value:
+If you only need to set or get several individual pixels, the [`SetPixel`](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.SetPixel/p/System.Int32/System.Int32/SkiaSharp.SKColor/) and [`GetPixel`](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.GetPixel/p/System.Int32/System.Int32/) methods are ideal. For each of these two methods, you specify the integer column and row. Regardless of the pixel format, these two methods let you obtain or set the pixel as an `SKColor` value:
 
 ```csharp
 bitmap.SetPixel(col, row, color);
@@ -80,7 +80,7 @@ The `SetPixel` method is called 65,536 times, and regardless how efficient this 
 
 ### The Pixels property
 
-`SKBitmap` defines a [`Pixels`](xref:SkiaSharp.SKBitmap.Pixels) property that returns an array of `SKColor` values for the entire bitmap. You can also use `Pixels` to set an array of color values for the bitmap:
+`SKBitmap` defines a [`Pixels`](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Pixels/) property that returns an array of `SKColor` values for the entire bitmap. You can also use `Pixels` to set an array of color values for the bitmap:
 
 ```csharp
 SKColor[] pixels = bitmap.Pixels;
@@ -124,7 +124,7 @@ Notice that the index of the `pixels` array needs to be calculated from the `row
 
 ### The GetPixels pointer
 
-Potentially the most powerful technique to access the bitmap pixels is [`GetPixels`](xref:SkiaSharp.SKBitmap.GetPixels), not to be confused with the `GetPixel` method or the `Pixels` property. You'll immediately notice a difference with `GetPixels` in that it returns something not very common in C# programming:
+Potentially the most powerful technique to access the bitmap pixels is [`GetPixels`](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.GetPixels()/), not to be confused with the `GetPixel` method or the `Pixels` property. You'll immediately notice a difference with `GetPixels` in that it returns something not very common in C# programming:
 
 ```csharp
 IntPtr pixelsAddr = bitmap.GetPixels();
@@ -277,7 +277,7 @@ The only question is this: Is the integer format of the `SKColor` value in the o
 
 ### The SetPixels Method
 
-`SKBitmap` also defines a method named [`SetPixels`](xref:SkiaSharp.SKBitmap.SetPixels(System.IntPtr)), which you call like this:
+`SKBitmap` also defines a method named [`SetPixels`](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.SetPixels/p/System.IntPtr/), which you call like this:
 
 ```csharp
 bitmap.SetPixels(intPtr);
@@ -738,5 +738,5 @@ It's likely that the performance of this method could be improved even more by c
 
 ## Related links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

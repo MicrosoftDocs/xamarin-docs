@@ -13,7 +13,7 @@ ms.date: 03/10/2017
 
 _Learn about transforms for displaying SkiaSharp graphics_
 
-SkiaSharp supports traditional graphics transforms that are implemented as methods of the [`SKCanvas`](xref:SkiaSharp.SKCanvas) object. Mathematically, transforms alter the coordinates and sizes that you specify in `SKCanvas` drawing functions as the graphical objects are rendered. Transforms are often convenient for drawing repetitive graphics or for animation. Some techniques &mdash; such as rotating bitmaps or text &mdash; are not possible without the use of transforms.
+SkiaSharp supports traditional graphics transforms that are implemented as methods of the [`SKCanvas`](https://developer.xamarin.com/api/type/SkiaSharp.SKCanvas/) object. Mathematically, transforms alter the coordinates and sizes that you specify in `SKCanvas` drawing functions as the graphical objects are rendered. Transforms are often convenient for drawing repetitive graphics or for animation. Some techniques &mdash; such as rotating bitmaps or text &mdash; are not possible without the use of transforms.
 
 SkiaSharp transforms support the following operations:
 
@@ -81,5 +81,5 @@ Use non-affine transforms to rotate 2D objects in 3D space.
 
 ## Related Links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

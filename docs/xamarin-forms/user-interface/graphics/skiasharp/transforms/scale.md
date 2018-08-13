@@ -33,7 +33,7 @@ y' = sy · y
 
 The default values of the translate factors are 0; the default values of the scale factors are 1.
 
-The `SKCanvas` class defines four `Scale` methods. The first [`Scale`](xref:SkiaSharp.SKCanvas.Scale(System.Single)) method is for cases when you want the same horizontal and vertical scaling factor:
+The `SKCanvas` class defines four `Scale` methods. The first [`Scale`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/) method is for cases when you want the same horizontal and vertical scaling factor:
 
 ```csharp
 public void Scale (Single s)
@@ -41,14 +41,14 @@ public void Scale (Single s)
 
 This is known as *isotropic* scaling &mdash; scaling that is the same in both directions. Isotropic scaling preserves the object's aspect ratio.
 
-The second [`Scale`](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single)) method lets you specify different values for horizontal and vertical scaling:
+The second [`Scale`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/) method lets you specify different values for horizontal and vertical scaling:
 
 ```csharp
 public void Scale (Single sx, Single sy)
 ```
 
 This results in *anisotropic* scaling.
-The third [`Scale`](xref:SkiaSharp.SKCanvas.Scale(SkiaSharp.SKPoint)) method combines the two scaling factors in a single `SKPoint` value:
+The third [`Scale`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/SkiaSharp.SKPoint/) method combines the two scaling factors in a single `SKPoint` value:
 
 ```csharp
 public void Scale (SKPoint size)
@@ -108,7 +108,7 @@ The text, the width of the dashed line, the length of the dashes in that line, t
 
 Anisotropic scaling causes the stroke width to become different for lines aligned with the horizontal and vertical axes. (This is also evident from the first image on this page.) If you don't want the stroke width to be affected by the scaling factors, set it to 0 and it will always be one pixel wide regardless of the `Scale` setting.
 
-Scaling is relative to the upper-left corner of the canvas. This might be exactly what you want, but it might not be. Suppose you want to position the text and rectangle somewhere else on the canvas and you want to scale it relative to its center. In that case you can use the fourth version of the [`Scale`](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single,System.Single,System.Single)) method, which includes two additional parameters to specify the center of scaling:
+Scaling is relative to the upper-left corner of the canvas. This might be exactly what you want, but it might not be. Suppose you want to position the text and rectangle somewhere else on the canvas and you want to scale it relative to its center. In that case you can use the fourth version of the [`Scale`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/System.Single/System.Single/) method, which includes two additional parameters to specify the center of scaling:
 
 ```csharp
 public void Scale (Single sx, Single sy, Single px, Single py)
@@ -211,7 +211,7 @@ Keep in mind that the default values of `sx` and `sy` are 1. It's easy to convin
 
 When you combine `Translate` and `Scale` calls, the order matters. If the `Translate` comes after the `Scale`, the translation factors are effectively scaled by the scaling factors. If the `Translate` comes before the `Scale`, the translation factors are not scaled. This process becomes somewhat clearer (albeit more mathematical) when the subject of transform matrices is introduced.
 
-The `SKPath` class defines a read-only [`Bounds`](xref:SkiaSharp.SKPath.Bounds) property that returns an `SKRect` defining the extent of the coordinates in the path. For example, when the `Bounds` property is obtained from the hendecagram path created earlier, the `Left` and `Top` properties of the rectangle are approximately –100, the `Right` and `Bottom` properties are approximately 100, and the `Width` and `Height` properties are approximately 200. (Most of the actual values are a little less because the points of the stars are defined by a circle with a radius of 100 but only the top point is parallel with the horizontal or vertical axes.)
+The `SKPath` class defines a read-only [`Bounds`](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/) property that returns an `SKRect` defining the extent of the coordinates in the path. For example, when the `Bounds` property is obtained from the hendecagram path created earlier, the `Left` and `Top` properties of the rectangle are approximately –100, the `Right` and `Bottom` properties are approximately 100, and the `Width` and `Height` properties are approximately 200. (Most of the actual values are a little less because the points of the stars are defined by a circle with a radius of 100 but only the top point is parallel with the horizontal or vertical axes.)
 
 The availability of this information implies that it should be possible to derive scale and translate factors suitable for scaling a path to the size of the canvas. The [**Anisotropic Scaling**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs) page demonstrates this with the 11-pointed star. An *anisotropic* scale means that it's unequal in the horizontal and vertical directions, which means that the star won't retain its original aspect ratio. Here's the relevant code in the `PaintSurface` handler:
 
@@ -340,5 +340,5 @@ The code also displays the star ten more times, each time decreasing the scaling
 
 ## Related Links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

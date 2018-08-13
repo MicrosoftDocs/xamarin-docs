@@ -19,7 +19,7 @@ One common application of non-affine transforms is simulating the rotation of a 
 
 This job involves working with three-dimensional rotations, and then deriving a non-affine `SKMatrix` transform that performs these 3D rotations.
 
-It is hard to develop this `SKMatrix` transform working solely within two dimensions. The job becomes much easier when this 3-by-3 matrix is derived from a 4-by-4 matrix used in 3D graphics. SkiaSharp includes the [`SKMatrix44`](xref:SkiaSharp.SKMatrix44.PreConcat(SkiaSharp.SKMatrix44)) class for this purpose, but some background in 3D graphics is necessary for understanding 3D rotations and the 4-by-4 transform matrix.
+It is hard to develop this `SKMatrix` transform working solely within two dimensions. The job becomes much easier when this 3-by-3 matrix is derived from a 4-by-4 matrix used in 3D graphics. SkiaSharp includes the [`SKMatrix44`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.PreConcat/p/SkiaSharp.SKMatrix44/) class for this purpose, but some background in 3D graphics is necessary for understanding 3D rotations and the 4-by-4 transform matrix.
 
 A three-dimensional coordinate system adds a third axis called Z. Conceptually, the Z axis is at right angles to the screen. Coordinate points in 3D space are indicated with three numbers: (x, y, z). In the 3D coordinate system used in this article, increasing values of X are to the right and increasing values of Y go down, just as in two dimensions. Increasing positive Z values come out of the screen. The origin is the upper-left corner, just as in 2D graphics. You can think of the screen as an XY plane with the Z axis at right angles to this plane.
 
@@ -43,7 +43,7 @@ In working with a 4-by-4 matrix, it is convenient to identify the cells with the
 |  M41  M42  M43  M44  |
 </pre>
 
-However, the SkiaSharp `Matrix44` class is a little different. The only way to set or get individual cell values in `SKMatrix44` is by using the [`Item`](xref:SkiaSharp.SKMatrix44.Item(System.Int32,System.Int32)) indexer. The row and column indices are zero-based rather than one-based, and the rows and columns are swapped. The cell M14 in the above diagram is accessed using the indexer `[3, 0]` in a `SKMatrix44` object.
+However, the SkiaSharp `Matrix44` class is a little different. The only way to set or get individual cell values in `SKMatrix44` is by using the [`Item`](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix44.Item/p/System.Int32/System.Int32/) indexer. The row and column indices are zero-based rather than one-based, and the rows and columns are swapped. The cell M14 in the above diagram is accessed using the indexer `[3, 0]` in a `SKMatrix44` object.
 
 In a 3D graphics system, a 3D point (x, y, z) is converted to a 1-by-4 matrix for multiplying by the 4-by-4 transform matrix:
 
@@ -107,7 +107,7 @@ Rotation around the Z axis is the same as in 2D graphics:
 
 The direction of rotation is implied by the handedness of the coordinate system. This is a left-handed system, so if you point the thumb of your left hand towards increasing values for a particular axis — to the right for rotation around the X axis, down for rotation around the Y axis, and towards you for rotation around the Z axis — then the curve of your other fingers indicates the direction of rotation for positive angles.
 
-`SKMatrix44` has generalized static [`CreateRotation`](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single)) and [`CreateRotationDegrees`](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) methods that allow you to specify the axis around which the rotation occurs:
+`SKMatrix44` has generalized static [`CreateRotation`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/) and [`CreateRotationDegrees`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/) methods that allow you to specify the axis around which the rotation occurs:
 
 ```csharp
 public static SKMatrix44 CreateRotationDegrees (Single x, Single y, Single z, Single degrees)
@@ -215,7 +215,7 @@ y" = y / ((sin(α)/depth)·x + 1)
 
 When 2D objects are rotated with a positive angle around the Y axis, then positive X values recede to the background while negative X values come to the foreground. The X values seem to move closer to the Y axis (which is governed by the cosine value) as coordinates furthest from the Y axis becomes smaller or larger as they move further from the viewer or closer to the viewer.
 
-When using `SKMatrix44`, perform all the 3D rotation and perspective operations by multiplying various `SKMatrix44` values. Then you can extract a two-dimensional 3-by-3 matrix from the 4-by-4 matrix using the [`Matrix`](xref:SkiaSharp.SKMatrix44.Matrix) property of the `SKMatrix44` class. This property returns a familiar `SKMatrix` value.
+When using `SKMatrix44`, perform all the 3D rotation and perspective operations by multiplying various `SKMatrix44` values. Then you can extract a two-dimensional 3-by-3 matrix from the 4-by-4 matrix using the [`Matrix`](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix44.Matrix/) property of the `SKMatrix44` class. This property returns a familiar `SKMatrix` value.
 
 The **Rotation 3D** page lets you experiment with 3D rotation. The [**Rotation3DPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml) file instantiates four sliders to set rotation around the X, Y, and Z axes, and to set a depth value:
 
@@ -531,5 +531,5 @@ This 3D rotation is surrounded with several 2D transforms to move the center of 
 
 ## Related Links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

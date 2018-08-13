@@ -26,7 +26,7 @@ SkiaSharp for Xamarin.Forms is packaged as a NuGet package. After you've created
 
 If your Xamarin.Forms application targets iOS, use the project properties page to change the minimum deployment target to iOS 8.0.
 
-In any C# page that uses SkiaSharp you'll want to include a `using` directive for the [`SkiaSharp`](xref:SkiaSharp) namespace, which encompasses all the SkiaSharp classes, structures, and enumerations that you'll use in your graphics programming. You'll also want a `using` directive for the [`SkiaSharp.Views.Forms`](xref:SkiaSharp.Views.Forms) namespace for the classes specific to Xamarin.Forms. This is a much smaller namespace, with the most important class being [`SKCanvasView`](xref:SkiaSharp.Views.Forms.SKCanvasView). This class derives from the Xamarin.Forms `View` class and hosts your SkiaSharp graphics output.
+In any C# page that uses SkiaSharp you'll want to include a `using` directive for the [`SkiaSharp`](https://developer.xamarin.com/api/namespace/SkiaSharp/) namespace, which encompasses all the SkiaSharp classes, structures, and enumerations that you'll use in your graphics programming. You'll also want a `using` directive for the [`SkiaSharp.Views.Forms`](https://developer.xamarin.com/api/namespace/SkiaSharp.Views.Forms/) namespace for the classes specific to Xamarin.Forms. This is a much smaller namespace, with the most important class being [`SKCanvasView`](https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.SKCanvasView/). This class derives from the Xamarin.Forms `View` class and hosts your SkiaSharp graphics output.
 
 > [!IMPORTANT]
 > The `SkiaSharp.Views.Forms` namespace also contains an `SKGLView` class that derives from `View` but uses OpenGL for rendering graphics. For purposes of simplicity, this guide restricts itself to `SKCanvasView`, but using `SKGLView` instead is quite similar.
@@ -53,6 +53,6 @@ Bitmaps are rectangular arrays of bits corresponding to the pixels of a display 
 
 ## Related Links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [SkiaSharp with Xamarin.Forms Webinar (video)](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)

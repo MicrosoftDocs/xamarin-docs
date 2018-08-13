@@ -17,7 +17,7 @@ It's sometimes necessary to restrict the rendering of graphics to a particular a
 
 ![](clipping-images/clippingsample.png "Monkey through a keyhole")
 
-The *clipping area* is the area of the screen in which graphics are rendered. Anything that is displayed outside of the clipping area is not rendered. The clipping area is usually defined by an [`SKPath`](xref:SkiaSharp.SKPath) object but you can alternatively define a clipping area using an [`SKRegion`](xref:SkiaSharp.SKRegion) object. These two types of objects at first seem related because you can create a region from a path. However, you cannot create a path from a region, and they are very different internally: A path comprises a series of lines and curves, while a region is defined by a series of horizontal scan lines.
+The *clipping area* is the area of the screen in which graphics are rendered. Anything that is displayed outside of the clipping area is not rendered. The clipping area is usually defined by an [`SKPath`](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) object but you can alternatively define a clipping area using an [`SKRegion`](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) object. These two types of objects at first seem related because you can create a region from a path. However, you cannot create a path from a region, and they are very different internally: A path comprises a series of lines and curves, while a region is defined by a series of horizontal scan lines.
 
 The image above was created by the **Monkey through Keyhole** page. The  [`MonkeyThroughKeyholePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) class defines a path using SVG data and uses the constructor to load a bitmap from program resources:
 
@@ -99,15 +99,15 @@ The clipping path is subject to the transforms in effect when the `ClipPath` met
 
 ## Combining Clipping Paths
 
-Strictly speaking, the clipping area is not "set" by the `ClipPath` method. Instead, it is combined with the existing clipping path, which begins as a rectangle equal in size to the screen. You can obtain the rectangular bounds of the clipping area using the [`ClipBounds`](xref:SkiaSharp.SKCanvas.ClipBounds) property or the [`ClipDeviceBounds`](xref:SkiaSharp.SKCanvas.ClipDeviceBounds) property. The `ClipBounds` property returns an `SKRect` value that reflects any transforms that might be in effect. The `ClipDeviceBounds` property returns a `RectI` value. This is a rectangle with integer dimensions, and describes the clipping area in actual pixel dimensions.
+Strictly speaking, the clipping area is not "set" by the `ClipPath` method. Instead, it is combined with the existing clipping path, which begins as a rectangle equal in size to the screen. You can obtain the rectangular bounds of the clipping area using the [`ClipBounds`](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.ClipBounds/) property or the [`ClipDeviceBounds`](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.ClipDeviceBounds/) property. The `ClipBounds` property returns an `SKRect` value that reflects any transforms that might be in effect. The `ClipDeviceBounds` property returns a `RectI` value. This is a rectangle with integer dimensions, and describes the clipping area in actual pixel dimensions.
 
-Any call to `ClipPath` reduces the clipping area by combining the clipping area with a new area. The full syntax of the [`ClipPath`](xref:SkiaSharp.SKCanvas.ClipPath(SkiaSharp.SKPath,SkiaSharp.SKClipOperation,System.Boolean)) method is:
+Any call to `ClipPath` reduces the clipping area by combining the clipping area with a new area. The full syntax of the [`ClipPath`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipPath/p/SkiaSharp.SKPath/SkiaSharp.SKClipOperation/System.Boolean/) method is:
 
 ```csharp
 public void ClipPath(SKPath path, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
 ```
 
-There is also a [`ClipRect`](xref:SkiaSharp.SKCanvas.ClipRect(SkiaSharp.SKRect,SkiaSharp.SKClipOperation,System.Boolean)) method that combines the clipping area with a rectangle:
+There is also a [`ClipRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipRect/p/SkiaSharp.SKRect/SkiaSharp.SKClipOperation/System.Boolean/) method that combines the clipping area with a rectangle:
 
 ```csharp
 public Void ClipRect(SKRect rect, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
@@ -162,11 +162,11 @@ What's left is the intersection of these four circles:
 
 [![](clipping-images//fourcircleintersectclip-small.png "Triple screenshot of the Four Circle Intersect Clip page")](clipping-images/fourcircleintersectclip-large.png#lightbox "Triple screenshot of the Four Circle Intersect Clip page")
 
-The [`SKClipOperation`](xref:SkiaSharp.SKClipOperation) enumeration has only two members:
+The [`SKClipOperation`](https://developer.xamarin.com/api/type/SkiaSharp.SKClipOperation/) enumeration has only two members:
 
-- [`Difference`](xref:SkiaSharp.SKClipOperation.Difference) removes the specified path or rectangle from the existing clipping area
+- [`Difference`](https://developer.xamarin.com/api/field/SkiaSharp.SKClipOperation.Difference/) removes the specified path or rectangle from the existing clipping area
 
-- [`Intersect`](xref:SkiaSharp.SKClipOperation.Intersect) intersects the specified path or rectangle with the existing clipping area
+- [`Intersect`](https://developer.xamarin.com/api/field/SkiaSharp.SKClipOperation.Intersect/) intersects the specified path or rectangle with the existing clipping area
 
 If you replace the four `SKClipOperation.Intersect` arguments in the `FourCircleIntersectClipPage` class with `SKClipOperation.Difference`, you'll see the following:
 
@@ -243,33 +243,33 @@ Calling `DrawPaint` normally causes the entire canvas to be filled with that `SK
 
 ## Exploring Regions
 
-If you have explored the API documentation for `SKCanvas`, you might have noticed overloads of the `ClipPath` and `ClipRect` methods that are similar to the methods described above, but instead, have a parameter named [`SKRegionOperation`](xref:SkiaSharp.SKRegionOperation) rather than `SKClipOperation`. `SKRegionOperation` has six members, providing somewhat more flexibility in combining paths to form clipping areas:
+If you have explored the API documentation for `SKCanvas`, you might have noticed overloads of the `ClipPath` and `ClipRect` methods that are similar to the methods described above, but instead, have a parameter named [`SKRegionOperation`](https://developer.xamarin.com/api/type/SkiaSharp.SKRegionOperation/) rather than `SKClipOperation`. `SKRegionOperation` has six members, providing somewhat more flexibility in combining paths to form clipping areas:
 
-- [`Difference`](xref:SkiaSharp.SKRegionOperation.Difference)
+- [`Difference`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Difference/)
 
-- [`Intersect`](xref:SkiaSharp.SKRegionOperation.Intersect)
+- [`Intersect`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Intersect/)
 
-- [`Union`](xref:SkiaSharp.SKRegionOperation.Union)
+- [`Union`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Union/)
 
-- [`XOR`](xref:SkiaSharp.SKRegionOperation.XOR)
+- [`XOR`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.XOR/)
 
-- [`ReverseDifference`](xref:SkiaSharp.SKRegionOperation.ReverseDifference)
+- [`ReverseDifference`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.ReverseDifference/)
 
-- [`Replace`](xref:SkiaSharp.SKRegionOperation.Replace)
+- [`Replace`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Replace/)
 
 However, the overloads of `ClipPath` and `ClipRect` with `SKRegionOperation` parameters are obsolete and they cannot be used.
 
-You can still use the `SKRegionOperation` enumeration but it requires that you define a clipping area in terms of an [`SKRegion`](xref:SkiaSharp.SKRegion) object.
+You can still use the `SKRegionOperation` enumeration but it requires that you define a clipping area in terms of an [`SKRegion`](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) object.
 
-A newly created `SKRegion` object describes an empty area. Usually the first call on the object is [`SetRect`](xref:SkiaSharp.SKRegion.SetRect(SkiaSharp.SKRectI)) so that the region describe a rectangular area. The parameter to `SetRect` is a an `SKRectI` value &mdash; the rectangle value with integer properties. You can then call [`SetPath`](xref:SkiaSharp.SKRegion.SetPath(SkiaSharp.SKPath,SkiaSharp.SKRegion)) with an `SKPath` object. This creates a region that is the same as the interior of the path, but clipped to the initial rectangular region.
+A newly created `SKRegion` object describes an empty area. Usually the first call on the object is [`SetRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/) so that the region describe a rectangular area. The parameter to `SetRect` is a an `SKRectI` value &mdash; the rectangle value with integer properties. You can then call [`SetPath`](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/) with an `SKPath` object. This creates a region that is the same as the interior of the path, but clipped to the initial rectangular region.
 
-The `SKRegionOperation` enumeration only comes into play when you call one of the [`Op`](xref:SkiaSharp.SKRegion.Op(SkiaSharp.SKRegion,SkiaSharp.SKRegionOperation)) method overloads, such as this one:
+The `SKRegionOperation` enumeration only comes into play when you call one of the [`Op`](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.Op/p/SkiaSharp.SKRegion/SkiaSharp.SKRegionOperation/) method overloads, such as this one:
 
 ```csharp
 public Boolean Op(SKRegion region, SKRegionOperation op)
 ```
 
-The region that you're making the `Op` call on is combined with the region specified as a parameter based on the `SKRegionOperation` member. When you finally get a region suitable for clipping, you can set that as the clipping area of the canvas using the [`ClipRegion`](xref:SkiaSharp.SKCanvas.ClipRegion(SkiaSharp.SKRegion,SkiaSharp.SKClipOperation)) method of `SKCanvas`:
+The region that you're making the `Op` call on is combined with the region specified as a parameter based on the `SKRegionOperation` member. When you finally get a region suitable for clipping, you can set that as the clipping area of the canvas using the [`ClipRegion`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipRegion/p/SkiaSharp.SKRegion/SkiaSharp.SKClipOperation/) method of `SKCanvas`:
 
 ```csharp
 public void ClipRegion(SKRegion region, SKClipOperation operation = SKClipOperation.Intersect)
@@ -509,5 +509,5 @@ It doesn't really look like a four-leaf clover, but it's an image that might oth
 
 ## Related Links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

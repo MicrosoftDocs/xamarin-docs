@@ -39,7 +39,7 @@ For this page, the `SKCanvasView` class is instantiated in the [TapToggleFill.xa
 
 Notice the `skia` XML namespace declaration.
 
-The `Tapped` handler for the `TapGestureRecognizer` object simply toggles the value of a Boolean field and calls the [`InvalidateSurface`](xref:SkiaSharp.Views.Forms.SKCanvasView.InvalidateSurface) method of `SKCanvasView`:
+The `Tapped` handler for the `TapGestureRecognizer` object simply toggles the value of a Boolean field and calls the [`InvalidateSurface`](https://developer.xamarin.com/api/member/SkiaSharp.Views.Forms.SKCanvasView.InvalidateSurface()/) method of `SKCanvasView`:
 
 ```csharp
 bool showFill = true;
@@ -81,13 +81,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The `StrokeWidth` property has been set to 50 to accentuate the difference. You can also see the whole line width by drawing the interior first and then the outline. By default, graphics figures drawn later in the `PaintSurface` event handler obscure those drawn earlier in the handler.
 
-The **Color Explore** page demonstrates how you can also integrate SkiaSharp graphics with other Xamarin.Forms elements, and also demonstrates the difference between two alternative methods for defining colors in SkiaSharp. The static [`SKColor.FromHsl`](xref:SkiaSharp.SKColor.FromHsl(System.Single,System.Single,System.Single,System.Byte)) method creates an `SKColor` value based on the Hue-Saturation-Lightness model:
+The **Color Explore** page demonstrates how you can also integrate SkiaSharp graphics with other Xamarin.Forms elements, and also demonstrates the difference between two alternative methods for defining colors in SkiaSharp. The static [`SKColor.FromHsl`](https://developer.xamarin.com/api/member/SkiaSharp.SKColor.FromHsl/p/System.Single/System.Single/System.Single/System.Byte/) method creates an `SKColor` value based on the Hue-Saturation-Lightness model:
 
 ```csharp
 public static SKColor FromHsl (Single h, Single s, Single l, Byte a)
 ```
 
-The static [`SKColor.FromHsv`](xref:SkiaSharp.SKColor.FromHsv(System.Single,System.Single,System.Single,System.Byte)) method creates an `SKColor` value based on the similar Hue-Saturation-Value model:
+The static [`SKColor.FromHsv`](https://developer.xamarin.com/api/member/SkiaSharp.SKColor.FromHsv/p/System.Single/System.Single/System.Single/System.Byte/) method creates an `SKColor` value based on the similar Hue-Saturation-Value model:
 
 ```csharp
 public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
@@ -235,5 +235,5 @@ But the best way to get a feel for the two models is to experiment with them you
 
 ## Related Links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

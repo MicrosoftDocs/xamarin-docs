@@ -77,9 +77,9 @@ Learn how to work with cross platform graphics that render in Xamarin.Forms:
 This page describes the setup instructions for SkiaSharp on different platforms
 including iOS, Android, macOS, and Windows.
 
-## [API Documentation](https://docs.microsoft.com/dotnet/api/skiasharp)
+## [API Documentation](https://developer.xamarin.com/api/namespace/SkiaSharp/)
 
-You can browse the [API documentation](https://docs.microsoft.com/dotnet/api/skiasharp) for SkiaSharp.
+You can browse the [API documentation](https://developer.xamarin.com/api/namespace/SkiaSharp/) for SkiaSharp on our web site.
 
 ## Work in Progress
 

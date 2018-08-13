@@ -493,15 +493,15 @@ The code-behind file is not generalized to play any animated GIF file. It ignore
 
 The use of SkisSharp to extract the frames of an animated GIF file does not seem to be documented anywhere, so the description of the code that follows is more detailed than usual:
 
-The decoding of the animated GIF file occurs in the page's constructor, and requires that the `Stream` object referencing the bitmap be used to create an `SKManagedStream` object and then an [`SKCodec`](xref:SkiaSharp.SKCodec) object. The [`FrameCount`](xref:SkiaSharp.SKCodec.FrameCount) property indicates the number of frames that make up the animation. 
+The decoding of the animated GIF file occurs in the page's constructor, and requires that the `Stream` object referencing the bitmap be used to create an `SKManagedStream` object and then an [`SKCodec`](https://developer.xamarin.com/api/type/SkiaSharp.SKCodec/) object. The [`FrameCount`](https://developer.xamarin.com/api/property/SkiaSharp.SKCodec.FrameCount/) property indicates the number of frames that make up the animation. 
 
 These frames are eventually saved as individual bitmaps, so the constructor uses `FrameCount` to allocate an array of type `SKBitmap` as well as two `int` arrays for the duration of each frame and (to ease the animation logic) the accumulated durations.
 
-The [`FrameInfo`](xref:SkiaSharp.SKCodec.FrameInfo) property of `SKCodec` class is an array of [`SKCodecFrameInfo`](xref:SkiaSharp.SKCodecFrameInfo) values, one for each frame, but the only thing this program takes from that structure is the [`Duration`](xref:SkiaSharp.SKCodecFrameInfo.Duration) of the frame in milliseconds.
+The [`FrameInfo`](https://developer.xamarin.com/api/property/SkiaSharp.SKCodec.FrameInfo/) property of `SKCodec` class is an array of [`SKCodecFrameInfo`](https://developer.xamarin.com/api/type/SkiaSharp.SKCodecFrameInfo/) values, one for each frame, but the only thing this program takes from that structure is the [`Duration`](https://developer.xamarin.com/api/property/SkiaSharp.SKCodecFrameInfo.Duration/) of the frame in milliseconds.
 
-`SKCodec` defines a property named [`Info`](xref:SkiaSharp.SKCodec.Info) of type [`SKImageInfo`](xref:SkiaSharp.SKImageInfo), but that `SKImageInfo` value indicates (at least for this image) that the color type is `SKColorType.Index8`, which means that each pixel is an index into a color type. To avoid bothering with color tables, the program uses the [`Width`](xref:SkiaSharp.SKImageInfo.Width) and [`Height`](xref:SkiaSharp.SKImageInfo.Height) information from that structure to construct it's own full-color `ImageInfo` value. Each `SKBitmap` is created from that.
+`SKCodec` defines a property named [`Info`](https://developer.xamarin.com/api/property/SkiaSharp.SKCodec.Info/) of type [`SKImageInfo`](https://developer.xamarin.com/api/type/SkiaSharp.SKImageInfo/), but that `SKImageInfo` value indicates (at least for this image) that the color type is `SKColorType.Index8`, which means that each pixel is an index into a color type. To avoid bothering with color tables, the program uses the [`Width`](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Width/) and [`Height`](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Height/) information from that structure to construct it's own full-color `ImageInfo` value. Each `SKBitmap` is created from that.
 
-The `GetPixels` method of `SKBitmap` returns an `IntPtr` referencing the pixel bits of that bitmap. These pixel bits have not been set yet. That `IntPtr` is passed to one of the [`GetPixels`](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) methods of `SKCodec`. That method copies the frame from the GIF file into the memory space referenced by the `IntPtr`. The [`SKCodecOptions`](xref:SkiaSharp.SKCodecOptions.%23ctor(System.Int32,System.Boolean)) constructor indicates the frame number:
+The `GetPixels` method of `SKBitmap` returns an `IntPtr` referencing the pixel bits of that bitmap. These pixel bits have not been set yet. That `IntPtr` is passed to one of the [`GetPixels`](https://developer.xamarin.com/api/member/SkiaSharp.SKCodec.GetPixels/p/SkiaSharp.SKImageInfo/System.IntPtr/SkiaSharp.SKCodecOptions/) methods of `SKCodec`. That method copies the frame from the GIF file into the memory space referenced by the `IntPtr`. The [`SKCodecOptions`](https://developer.xamarin.com/api/constructor/SkiaSharp.SKCodecOptions.SKCodecOptions/p/System.Int32/System.Boolean/) constructor indicates the frame number:
 
 ```csharp
 public partial class AnimatedGifPage : ContentPage
@@ -652,6 +652,6 @@ Of course, you'll want to run the program yourself to see the animation.
 
 ## Related links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Mandelbrot Animation (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/MandelAnima/)
