@@ -19,7 +19,7 @@ Toolbars in macOS are added to the top section of a window and provide easy acce
 
 This article covers the basics of working with toolbars and toolbar items in a Xamarin.Mac application. 
 
-Before continuing, read through the [Hello, Mac](~/mac/get-started/hello-mac.md) article — specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections — as it covers key concepts and techniques that will be used throughout this guide.
+Before continuing, read through the [Hello, Mac](~/mac/get-started/hello-mac.md) article — specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections — as it covers key concepts and techniques that will be used throughout this guide.
 
 Also take a look at the [Exposing C# classes / methods to Objective-C](~/mac/internals/how-it-works.md) section of the [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) document. It explains the `Register` and `Export` attributes used to connect C# classes to Objective-C classes.
 

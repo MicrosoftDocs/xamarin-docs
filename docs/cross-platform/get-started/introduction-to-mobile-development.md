@@ -19,7 +19,7 @@ ways.
 
 This document is intended to introduce the Xamarin platform. To learn more about the *process* of building mobile applications from design through to testing, refer to the [Introduction to the Mobile Software Development Lifecycle](~/cross-platform/get-started/introduction-to-mobile-sdlc.md) document.
 
-Please refer to our [system requirements](~/cross-platform/get-started/requirements.md#mac)
+Please refer to our [system requirements](~/cross-platform/get-started/requirements.md#macos-requirements)
 to confirm you are able to install Xamarin.
 
 ## Introduction to Xamarin

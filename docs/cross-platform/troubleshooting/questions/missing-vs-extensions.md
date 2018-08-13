@@ -17,7 +17,7 @@ Ensure  a compatible version of Visual Studio is installed:
 -   Visual Studio 2017 (Community, Professional, or Enterprise)
 -   Visual Studio 2015 (Community, Professional, or Enterprise)
 
-See also the [Windows requirements](~/cross-platform/get-started/requirements.md#windows).
+See also the [Windows requirements](~/cross-platform/get-started/requirements.md#windows-requirements).
 
 ## Possible Fix 1: Change the installation to make sure the Visual Studio extensions are installed
 

@@ -30,7 +30,7 @@ Additionally, macOS provides a set of predefined images that can be used through
 
 [![An example run of the app](image-images/intro01.png "An example run of the app")](image-images/intro01-large.png#lightbox)
 
-In this article, we'll cover the basics of working with Images and Icons in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, as it covers key concepts and techniques that we'll be using in this article.
+In this article, we'll cover the basics of working with Images and Icons in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
 
 ## Adding images to a Xamarin.Mac project

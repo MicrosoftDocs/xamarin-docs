@@ -19,7 +19,7 @@ AppKit Controls are the UI Elements that are used to create the User Interface o
 
 [![](standard-controls-images/intro01.png "The example app main screen")](standard-controls-images/intro01.png#lightbox)
 
-In this article, we'll cover the basics of working with AppKit Controls in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, as it covers key concepts and techniques that we'll be using in this article.
+In this article, we'll cover the basics of working with AppKit Controls in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
 You may want to take a look at the [Exposing C# classes / methods to Objective-C](~/mac/internals/how-it-works.md) section of the [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) document as well, it explains the `Register` and `Export` commands used to wire-up your C# classes to Objective-C objects and UI Elements.
 
@@ -78,7 +78,7 @@ To create your User Interface, you'll drag UI Elements (AppKit Controls) from th
 
 [![](standard-controls-images/edit03.png "Selecting a Split View from the Library")](standard-controls-images/edit03.png#lightbox)
 
-For more information on creating a User Interface in Interface Builder, please see our [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) documentation.
+For more information on creating a User Interface in Interface Builder, please see our [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) documentation.
 
 <a name="Sizing_and_Positioning" />
 
@@ -211,7 +211,7 @@ Select the type of exposure to create and give the **Outlet** or **Action** a **
 [![](standard-controls-images/edit13.png "Configuring the Outlet or Action")](standard-controls-images/edit13.png#lightbox)
 
 
-For more information on working with **Outlets** and **Actions**, please see the [Outlets and Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) section of our [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) documentation.
+For more information on working with **Outlets** and **Actions**, please see the [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) section of our [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) documentation.
 
 <a name="Synchronizing_Changes_with_Xcode" />
 

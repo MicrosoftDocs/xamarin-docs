@@ -24,7 +24,7 @@ In this article we will be covering two ways to access SQLite data:
 
 [![An example of the running app](databases-images/intro01.png "An example of the running app")](databases-images/intro01-large.png#lightbox)
 
-In this article, we'll cover the basics of working with key-value coding and data binding with SQLite Databases in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, as it covers key concepts and techniques that we'll be using in this article.
+In this article, we'll cover the basics of working with key-value coding and data binding with SQLite Databases in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
 Since we will be using key-value coding and data binding, please work through the [Data binding and key-value coding](~/mac/app-fundamentals/databinding.md) first, as core techniques and concepts will be covered that will be used in this documentation and its sample application.
 

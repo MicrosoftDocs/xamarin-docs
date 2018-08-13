@@ -7,8 +7,7 @@ author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
 ---
-
-# HttpClient and SSL/TLS Implementation Selector for iOS/macOS
+# HttpClient and SSL/TLS implementation selector for iOS/macOS
 
 The **HttpClient Implementation Selector** for Xamarin.iOS, Xamarin.tvOS, and Xamarin.Mac controls which `HttpClient` implementation to use. You can switch to an implementation that uses iOS, tvOS, or macOS native transports (`NSUrlSession` or `CFNetwork`, depending on the OS). The upside is TLS 1.2-support, smaller binaries, and faster downloads; the downside is that it requires the event loop to be running for async operations to be executed.
 
@@ -19,9 +18,7 @@ Projects must reference the **System.Net.Http** assembly.
 >
 > In order to ensure your apps continue to work with these servers and services, **you should update your Xamarin projects with the `NSUrlSession` setting shown below, then re-build and re-deploy your apps** to your users.
 
-<a name="Selecting-a-HttpClient-Stack" />
-
-### Selecting a HttpClient Stack
+### Selecting an HttpClient stack
 
 To adjust the `HttpClient` being used by your app:
 
@@ -33,8 +30,6 @@ To adjust the `HttpClient` being used by your app:
 
 > [!TIP]
 > For TLS 1.2 support the `NSUrlSession` option is recommended.
-
-<a name="NSUrlSession" />
 
 ### NSUrlSession
 
@@ -51,8 +46,6 @@ The `NSURLSession`-based handler is based on the native `NSURLSession` framework
 - Requires iOS 7 or later.
 - Some `HttpClient` features/options are not available.
 
-<a name="CFNetwork" />
-
 ### CFNetwork
 
 The `CFNetwork`-based handler is based on the native `CFNetwork` framework available in iOS 6 and newer.
@@ -68,8 +61,6 @@ The `CFNetwork`-based handler is based on the native `CFNetwork` framework avail
 - Not available on watchOS.
 - Some HttpClient features/options are not available.
 
-<a name="Managed" />
-
 ### Managed
 
 The Managed handler is the fully managed HttpClient handler that has been shipped with previous version of Xamarin.
@@ -84,7 +75,7 @@ The Managed handler is the fully managed HttpClient handler that has been shippe
 - It typically much slower at things like encryption than the native APIs.
 - It requires more managed code, thus creating a larger app distributable.
 
-### Programmatically Setting the HttpMessageHandler
+### Programmatically setting the HttpMessageHandler
 
 In addition to the project-wide configuration shown above, you can also instantiate an `HttpClient` and inject the desired `HttpMessageHandler` through the constructor, as demonstrated in these code snippets:
 
@@ -102,15 +93,16 @@ HttpClient client = new HttpClient(new NSUrlSessionHandler());
 
 This makes it possible to use a different `HttpMessageHandler` from what is declared in the **Project Options** dialog.
 
-<a name="New-SSL-TLS-implementation-build-option" />
-<a name="Selecting-a-SSL-TLS-implementation" />
-<a name="Apple-TLS" />
-
 ## SSL/TLS implementation
 
 SSL (Secure Socket Layer) and its successor, TLS (Transport Layer Security), provide support for HTTP and other network connections via `System.Net.Security.SslStream`. Xamarin.iOS, Xamarin.tvOS or Xamarin.Mac's `System.Net.Security.SslStream` implementation will call Apple's native SSL/TLS implementation instead of using the managed implementation provided by Mono. Apple's native implementation supports TLS 1.2.
 
-<a name="App-Transport-Security" />
+> [!WARNING]
+> The upcoming Xamarin.Mac 4.8 release will only support macOS 10.9 or higher.
+> Previous versions of Xamarin.Mac supported macOS 10.7 or higher, but
+> these older macOS versions lack sufficient TLS infrastructure to support
+> TLS 1.2. To target macOS 10.7 or macOS 10.8, use Xamarin.Mac 4.6 or 
+> earlier.
 
 ## App Transport Security
 
@@ -122,7 +114,7 @@ Based on your HttpClient Stack and SSL/TLS Implementation selections, you may ne
 
 To find out more about ATS, please see our [App Transport Security guide](~/ios/app-fundamentals/ats.md).
 
-## Known Issues
+## Known issues
 
 This section will cover known issues with TLS support in Xamarin.iOS.
 
@@ -140,7 +132,7 @@ The following snippet is an example of what the `MtouchTlsProvider` setting may 
 <MtouchTlsProvider>Default</MtouchTlsProvider>
 ```
 
-## Related Links
+## Related links
 
 - [Transport Layer Security (TLS)](~/cross-platform/app-fundamentals/transport-layer-security.md)
 - [App Transport Security](~/ios/app-fundamentals/ats.md)

@@ -25,7 +25,7 @@ Menus are an integral part of a Mac application's user experience and commonly a
 
 [![An example menu](menu-images/intro01.png "An example menu")](menu-images/intro01-large.png#lightbox)
 
-In this article, we'll cover the basics of working with Cocoa menu bars, menus, and menu items in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, as it covers key concepts and techniques that we'll be using in this article.
+In this article, we'll cover the basics of working with Cocoa menu bars, menus, and menu items in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
 You may want to take a look at the [Exposing C# classes / methods to Objective-C](~/mac/internals/how-it-works.md) section of the [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) document as well, it explains the `Register` and `Export` attributes used to wire-up your C# classes to Objective-C objects and UI elements.
 
@@ -65,7 +65,7 @@ From here we can click on items such as the **Open** menu item in the **File** m
 
 [![Editing a menu's attributes](menu-images/defaultbar02.png "Editing a menu's attributes")](menu-images/defaultbar02-large.png#lightbox)
 
-We'll get into adding, editing, and deleting menus and items later in this article. For now we just want to see what menus and menu items are available by default and how they have been automatically exposed to code via a set of predefined outlets and actions (for more information see our [Outlets and Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) documentation).
+We'll get into adding, editing, and deleting menus and items later in this article. For now we just want to see what menus and menu items are available by default and how they have been automatically exposed to code via a set of predefined outlets and actions (for more information see our [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) documentation).
 
 For example, if we click on the **Connection Inspector** for the **Open** menu item we can see it is automatically wired up to the `openDocument:` action: 
 
