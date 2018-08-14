@@ -192,7 +192,7 @@ namespace CustomRenderer.Droid
 
 The call to the base class's `OnElementChanged` method instantiates an Android `ViewGroup` control, which is a group of views. The live camera stream is only rendered provided that the renderer isn't already attached to an existing Xamarin.Forms element, and provided that a page instance exists that is being rendered by the custom renderer.
 
-The page is then customized by invoking a series of methods that use the `Camera` API to provide the live stream from the camera and the ability to capture a photo, before the `AddView` method is invoked to add the live camera stream UI to the `ViewGroup`.
+The page is then customized by invoking a series of methods that use the `Camera` API to provide the live stream from the camera and the ability to capture a photo, before the `AddView` method is invoked to add the live camera stream UI to the `ViewGroup`. Note that on Android it's also necessary to override the `OnLayout` method to perform measure and layout operations on the view. For more information, see the [ContentPage renderer sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/).
 
 ### Creating the Page Renderer on UWP
 

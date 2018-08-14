@@ -59,7 +59,7 @@ Create the Phoneword application as follows:
         <StackLayout>
           <Label Text="Enter a Phoneword:" />
           <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
-          <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+          <Button Text="Translate" Clicked="OnTranslate" />
           <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
         </StackLayout>
     </ContentPage>
@@ -411,6 +411,8 @@ Create the Phoneword application as follows:
 
     ![](quickstart-images/vs/uwp-add-reference-extensions.png "Add Windows Mobile Extensions for UWP")
 
+    Note that v10.0.16299.0 of the Windows Mobile Extensions for UWP must be selected to use the `PhoneLine` class.
+
 29. In **Solution Explorer**, in the **Phoneword.UWP** project, double-click **Package.appxmanifest**:
 
     ![](quickstart-images/vs/uwp-manifest.png "Open the UWP Manifest")
@@ -483,7 +485,7 @@ Create the Phoneword application as follows:
         <StackLayout>
           <Label Text="Enter a Phoneword:" />
           <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
-          <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+          <Button Text="Translate" Clicked="OnTranslate" />
           <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
         </StackLayout>
     </ContentPage>
