@@ -48,7 +48,9 @@ Live Player is not available for iOS.
 - F# projects are not supported
 - Advanced scenarios with custom generic classes and interfaces may not be supported.
 
-Please report any additional issues on [bugzilla](https://aka.ms/live-player-report-issue).
+Use **Report a Problem** in [Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)
+or [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/report-a-problem)
+to report any issues with Xamarin Live Player.
 
 ## Related Links
 
