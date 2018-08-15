@@ -84,10 +84,10 @@ Each of the environments mentioned in the previous section require their own cer
 
 8.  To create a development provisioning profile, navigate to the **Provisioning Profiles** section and follow the steps to create it, using the App Id we have just created.
 
-9.  Once you've created the provisioning profile, open up  **Xcode Organizer** and refresh it. If the provisioning profile you created does not appear it may be necessary to download the profile from the iOS Provisioning Portal and manually import it. The following screen shot shows an example of the Organizer with the provision profile added: 
+9.  Once you've created the provisioning profile, open up  **Xcode Organizer** and refresh it. If the provisioning profile you created does not appear it may be necessary to download the profile from the iOS Provisioning Portal and manually import it. The following screen shot shows an example of the Organizer with the provision profile added:  
 	[![](remote-notifications-in-ios-images/image13new.png "This screen shot shows an example of the Organizer with the provision profile added")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
-10.  At this point we need to configure the Xamarin.iOS project to use this newly created provisioning profile. This is done from  **Project Options** dialog, under  **iOS Bundle Signing** tab, as showing in the following screenshot: 
+10.  At this point we need to configure the Xamarin.iOS project to use this newly created provisioning profile. This is done from **Project Options** dialog, under  **iOS Bundle Signing** tab, as showing in the following screenshot:  
 	[![](remote-notifications-in-ios-images/image11.png "Configure the Xamarin.iOS project to use this newly created provisioning profile")](remote-notifications-in-ios-images/image11.png#lightbox)
 
 At this point the application is configured to work with push notifications. However, there are still a few more steps required with the certificate. This certificate is in DER format that is not compatible with PushSharp, which requires a Personal Information Exchange (PKCS12) certificate. To convert the certificate so that it is usable by PushSharp, perform these final steps:
