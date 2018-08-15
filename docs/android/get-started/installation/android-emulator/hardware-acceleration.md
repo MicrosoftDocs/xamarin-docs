@@ -6,7 +6,7 @@ ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/22/2018
+ms.date: 08/14/2018
 ---
 
 # Hardware Acceleration for Emulator Performance
@@ -54,11 +54,6 @@ Emulator, see
 
 # [Visual Studio](#tab/vswin)
 
-![](~/media/shared/preview.png)
-
-> [!NOTE]
-> Hyper-V support is currently in Preview.
-
 Developers who are using Windows 10 (April 2018 Update or later) are
 strongly encouraged to use Microsoft's Hyper-V to accelerate the 
 Android Emulator. To use the Android Emulator with Hyper-V:
@@ -84,36 +79,20 @@ Android Emulator. To use the Android Emulator with Hyper-V:
    change.
 
 3. **Install
-   [Visual Studio 15.8 Preview 1 or later](https://visualstudio.microsoft.com/vs/preview/)**.
+   [Visual Studio 15.8 or later](https://visualstudio.microsoft.com/vs/)**.
    This version of Visual Studio provides IDE support for
    running the Android Emulator with Hyper-V.
  
-4. **Install the Android Emulator package 27.2.7 or later**. To
+4. **Install the Android Emulator package 27.2.9 or later**. To
    install this package, navigate to **Tools > Android > Android SDK
    Manager** in Visual Studio. Select the **Tools** tab and ensure that
-   the Android Emulator version is at least 27.2.7. Also ensure that
+   the Android Emulator version is at least 27.2.9. Also ensure that
    the Android SDK Tools version is 26.1.1 or later:
 
     [![Android SDKs and Tools dialog](hardware-acceleration-images/win/14-sdk-manager.w158-sml.png)](hardware-acceleration-images/win/14-sdk-manager.w158.png#lightbox)
 
-5. If the emulator version is at least 27.2.7 but less than 27.3.1,
-   the following workaround is required to use Hyper-V:
-
-    1.  In the **C:\\Users\\_username_\\.android** folder, create a file called **advancedFeatures.ini** 
-        (if it doesn't already exist).
-
-    2.  Add the following line to **advancedFeatures.ini**:
-        ```
-        WindowsHypervisorPlatform = on
-        ```
-
 
 ### Known Issues
-
--   If you are unable to update to emulator version 27.2.7 or later after
-    updating to a Visual Studio preview, you may have to
-    directly install the [preview installer](http://aka.ms/hyperv-emulator-dl)
-    to enable newer emulator versions.
 
 -   Performance may be reduced when using certain Intel and AMD-based
     processors.
