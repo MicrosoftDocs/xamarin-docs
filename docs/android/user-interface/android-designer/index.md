@@ -1,17 +1,23 @@
 ---
-title: "Android Designer"
-description: "This article covers the features of the Xamarin.Android Designer. It covers designer basics, showing how to use the Designer to lay out widgets visually and how to edit properties. It also shows how to use the Designer to work with user interfaces and resources across various configurations, such as themes, languages, and device configurations, as well as how to design for alternative views like landscape and portrait."
+title: "Xamarin.Android Designer"
+description: "This article describes the features of the Xamarin.Android Designer. It explains designer basics, demonstrating how to use the Designer to lay out widgets visually and edit properties. It also illustrates how to use the Designer to work with user interfaces and resources across various configurations, such as themes, languages, and device configurations, as well as how to design for alternative views like landscape and portrait."
 ms.prod: xamarin
 ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
+ms.date: 07/25/2018
 ---
 
-# Android Designer
+# Xamarin.Android Designer
 
-_This article covers the features of the Xamarin.Android Designer. It covers designer basics, showing how to use the Designer to lay out widgets visually and how to edit properties. It also shows how to use the Designer to work with user interfaces and resources across various configurations, such as themes, languages, and device configurations, as well as how to design for alternative views like landscape and portrait._
+_This article describes the features of the Xamarin.Android Designer.
+It explains designer basics, demonstrating how to use the Designer to
+lay out widgets visually and edit properties. It also illustrates how
+to use the Designer to work with user interfaces and resources across
+various configurations, such as themes, languages, and device
+configurations, as well as how to design for alternative views such as
+landscape and portrait._
 
 
 ## Overview
@@ -24,7 +30,7 @@ allows immediate feedback during UI creation, speeds up development, and makes
 the process of UI creation less laborious.
 
 This article surveys the many features of the Xamarin.Android Designer. It
-explains:
+explains the following:
 
 1.  The basics of using the Designer.
 2.  The various parts that make up the Designer.
@@ -54,19 +60,19 @@ explains:
 
 ## Summary
 
-This article discussed the feature set of the Xamarin.Android Designer. 
-It showed how to get started with the Designer, and explained its 
-various parts. It described how to load a layout, as well as how to add 
-and modify widgets, both by using the **Property Pad** and inline on 
-the Designer surface. It also explained how to work with various 
-resources and device configurations. Finally, it examined how to use 
-the Designer to develop user interfaces that are built specifically for 
-alternative views, such as landscape and portrait, as well as how to 
-resolve conflicts that may arise between such views. 
+This article discussed the feature set of the Xamarin.Android Designer.
+It showed how to get started with the Designer, and explained its
+various parts. It described how to load a layout, as well as how to add
+and modify widgets, by using both the **Designer Surface** as well as
+the **Source** view. It also explained how to work with various
+resources and device configurations. Finally, it examined how to use
+the Designer to develop user interfaces that are built specifically for
+alternative views, such as landscape and portrait, as well as how to
+resolve conflicts that may arise between such views.
 
 
 
-## Related Links
+## Related links
 
-- [Designer Walkthrough](~/android/user-interface/android-designer/designer-walkthrough.md)
-- [Android Resources](~/android/app-fundamentals/resources-in-android/index.md)
+- [Designer walkthrough](~/android/user-interface/android-designer/designer-walkthrough.md)
+- [Android resources](~/android/app-fundamentals/resources-in-android/index.md)
