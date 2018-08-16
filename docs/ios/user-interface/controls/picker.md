@@ -15,11 +15,11 @@ makes it possible to pick a value from a list by scrolling individual
 components of a wheel-like interface.
 
 Pickers are frequently used to select a date and time; Apple provides the
-[`UIDatePicker`](https://developer.xamarin.com/api/type/UIKit.UIDatePicker/) 
-subclass of the `UIDatePicker` for this purpose.
+[`UIDatePicker`](https://developer.xamarin.com/api/type/UIKit.UIDatePicker/)
+class for this purpose.
 
-The article describes how to implement and use the UIPickerView and
-UIDatePicker controls.
+The article describes how to implement and use the `UIPickerView` and
+`UIDatePicker` controls.
 
 ## UIPickerView
 
