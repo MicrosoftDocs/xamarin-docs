@@ -155,7 +155,7 @@ property. Just as with managed callable wrappers, global references can
 be explicitly freed by calling
 [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/).
 Unlike managed callable wrappers, *great care* should be taken before
-disposing of such instances, as *Dispose()*ing of the instance will
+disposing of such instances, as *Dispose()*-ing of the instance will
 break the mapping between the Java instance (an instance of an Android
 Callable Wrapper) and the managed instance.
 
