@@ -170,8 +170,8 @@ and artwork URLs that can be used to render the product in your app.
 
 Here are some examples:
 
--   **iBooks app*- [http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us) 
--   **Dot and the Kangaroo iBook*- [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us) 
+- **iBooks app** – [http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us) 
+- **Dot and the Kangaroo iBook** – [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us) 
 
 
 ### Enterprise Partner Feed
