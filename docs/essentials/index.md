@@ -25,6 +25,7 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 
 * [Accelerometer](accelerometer.md?context=xamarin/xamarin-forms) – Retrieve acceleration data of the device in three dimensional space.
 * [App Information](app-information.md?context=xamarin/xamarin-forms) – Find out information about the application.
+* [Barometer](barometer.md?context=xamarin/xamarin-forms) – Monitor the barometer for pressure changes.
 * [Battery](battery.md?context=xamarin/xamarin-forms) – Easily detect battery level, source, and state
 * [Clipboard](clipboard.md?context=xamarin/xamarin-forms) – Quickly and easily set or read text on the clipboard.
 * [Compass](compass.md?context=xamarin/xamarin-forms) – Monitor compass for changes.

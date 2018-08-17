@@ -36,12 +36,12 @@ public class MapsTest
 }
 ```
 
-When opening with a `Placemark` the following information is required:
+When opening with a `Placemark`, the following information is required:
 
-* `CountryName`
-* `AdminArea`
-* `Thoroughfare`
-* `Locality`
+- `CountryName`
+- `AdminArea`
+- `Thoroughfare`
+- `Locality`
 
 ```csharp
 public class MapsTest
@@ -64,7 +64,7 @@ public class MapsTest
 
 ## Extension Methods
 
-If you already have a reference to a `Location` or `Placemark` you can use the built-in extension method `OpenMapsAsync` with optional `MapsLaunchOptions`:
+If you already have a reference to a `Location` or `Placemark`, you can use the built-in extension method `OpenMapsAsync` with optional `MapsLaunchOptions`:
 
 ```csharp
 public class MapsTest
@@ -76,19 +76,36 @@ public class MapsTest
 }
 ```
 
+## Directions Mode
+
+If you call `OpenMapsAsync` without any `MapsLaunchOptions`, the map will launch to the location specified. Optionally, you can have a navigation route calculated from the device's current position. This is accomplished by setting the `MapDirectionsMode` on the `MapsLaunchOptions`:
+
+```csharp
+public class MapsTest
+{
+    public async Task NavigateToBuilding25()
+    {
+        var location = new Location(47.645160, -122.1306032);
+        var options =  new MapsLaunchOptions { MapDirectionsMode = MapDirectionsMode.Driving };
+
+        await Maps.OpenAsync(location, options);
+    }
+}
+```
+
 ## Platform Differences
 
 # [Android](#tab/android)
 
-* `MapDirectionsMode` is not supported and has no effect.
+- `MapDirectionsMode` supports Bicycling, Driving, and Walking.
 
 # [iOS](#tab/ios)
 
-* `MapDirectionsMode` is supported to set the default direction mode when the maps application is opened.
+- `MapDirectionsMode` supports Driving, Transit, and Walking.
 
 # [UWP](#tab/uwp)
 
-* `MapDirectionsMode` is not supported and has no effect.
+- `MapDirectionsMode` supports Driving, Transit, and Walking.
 
 --------------
 
@@ -96,15 +113,15 @@ public class MapsTest
 
 # [Android](#tab/android)
 
-Android uses the `geo:` Uri scheme to launch the maps application on the device. This may prompt the user to select from an existing app that supports this Uri scheme.  Xamarin.Essentials is tested with Google Maps which supports this scheme.
+Android uses the `geo:` Uri scheme to launch the maps application on the device. This may prompt the user to select from an existing app that supports this Uri scheme.  Xamarin.Essentials is tested with Google Maps, which supports this scheme.
 
 # [iOS](#tab/ios)
 
-No platform specific implementation details.
+No platform-specific implementation details.
 
 # [UWP](#tab/uwp)
 
-No platform specific implementation details.
+No platform-specific implementation details.
 
 --------------
 

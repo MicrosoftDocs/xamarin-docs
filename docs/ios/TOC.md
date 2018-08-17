@@ -196,6 +196,7 @@
 ### [Getting Started](~/essentials/get-started.md?context=xamarin/ios)
 ### [Accelerometer](~/essentials/accelerometer.md?context=xamarin/ios)
 ### [App Information](~/essentials/app-information.md?context=xamarin/ios)
+### [Barometer](~/essentials/barometer.md?context=xamarin/ios)
 ### [Battery](~/essentials/battery.md?context=xamarin/ios)
 ### [Clipboard](~/essentials/clipboard.md?context=xamarin/ios)
 ### [Compass](~/essentials/compass.md?context=xamarin/ios)

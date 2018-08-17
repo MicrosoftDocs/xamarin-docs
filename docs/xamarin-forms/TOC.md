@@ -247,6 +247,7 @@
 ### [Getting Started](~/essentials/get-started.md?context=xamarin/xamarin-forms)
 ### [Accelerometer](~/essentials/accelerometer.md?context=xamarin/xamarin-forms)
 ### [App Information](~/essentials/app-information.md?context=xamarin/xamarin-forms)
+### [Barometer](~/essentials/barometer.md?context=xamarin/xamarin-forms)
 ### [Battery](~/essentials/battery.md?context=xamarin/xamarin-forms)
 ### [Clipboard](~/essentials/clipboard.md?context=xamarin/xamarin-forms)
 ### [Compass](~/essentials/compass.md?context=xamarin/xamarin-forms)

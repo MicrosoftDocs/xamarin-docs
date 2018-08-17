@@ -1,0 +1,88 @@
+---
+title: "Xamarin.Essentials: Barometer"
+description: "The Barometer class in Xamarin.Essentials lets you monitor the device's barometer sensor, which measures pressure."
+ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 08/16/2018
+---
+
+# Xamarin.Essentials: Barometer
+
+![Pre-release NuGet](~/media/shared/pre-release.png)
+
+The **Barometer** class lets you monitor the device's barometer sensor, which measures pressure.
+
+## Using Barometer
+
+Add a reference to Xamarin.Essentials in your class:
+
+```csharp
+using Xamarin.Essentials;
+```
+
+The Barometer functionality works by calling the `Start` and `Stop` methods to listen for changes to the barometer's pressure reading in kilopascals. Any changes are sent back through the `ReadingChanged` event. Here is sample usage:
+
+```csharp
+
+public class BarometerTest
+{
+    // Set speed delay for monitoring changes.
+    SensorSpeed speed = SensorSpeed.UI;
+
+    public BarometerTest()
+    {
+        // Register for reading changes.
+        Barometer.ReadingChanged += Barometer_ReadingChanged;
+    }
+
+    void Barometer_ReadingChanged(object sender, BarometerChangedEventArgs e)
+    {
+        var data = e.Reading;
+        // Process Pressure
+        Console.WriteLine($"Reading: Pressure: {data.Pressure} kilopascals");
+    }
+
+    public void ToggleBarometer()
+    {
+        try
+        {
+            if (Barometer.IsMonitoring)
+              Barometer.Stop();
+            else
+              Barometer.Start(speed);
+        }
+        catch (FeatureNotSupportedException fnsEx)
+        {
+            // Feature not supported on device
+        }
+        catch (Exception ex)
+        {
+            // Other error has occurred.
+        }
+    }
+}
+```
+
+[!include[](~/essentials/includes/sensor-speed.md)]
+
+## Platform Implementation Specifics
+
+# [Android](#tab/android)
+
+No platform-specific implementation details.
+
+# [iOS](#tab/ios)
+
+This API uses [CMAltimeter](https://developer.apple.com/documentation/coremotion/cmaltimeter#//apple_ref/occ/cl/CMAltimeter) to monitor pressure changes, which is a hardware feature that was added to iPhone 6 and newer devices. A `FeatureNotSupportedException` will be thrown on devices that don't support the altimeter.
+
+# [UWP](#tab/uwp)
+
+No platform-specific implementation details.
+
+-----
+
+## API
+
+- [Barometer source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Barometer)
+- [Barometer API documentation](xref:Xamarin.Essentials.Barometer)
