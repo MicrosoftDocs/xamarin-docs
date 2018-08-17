@@ -13,8 +13,9 @@ ms.date: 07/08/2018
 ![Preview](~/media/shared/preview.png)
 
 > [!WARNING]
-> Xamarin's iOS 12 support is currently in preview, which means that it
-> may contain bugs, is not feature-complete, and may change. Use it for
+> Xamarin's support for the iOS 12, tvOS 12, and watchOS 5 SDKs distributed
+> with Xcode 10 is currently in preview, which means that that it may
+> contain bugs, is not feature complete, and may change. Use it for
 > experimentation only.
 
 This document provides a high-level description of some iOS 12 APIs for
@@ -34,7 +35,7 @@ later time, and provides 2D image recognition and tracking and 3D
 object recognition. iOS 12 also provides AR Quick Look, a way to render
 usdz AR models in your apps.
 
-## Siri shortcuts
+## [Siri shortcuts](siri-shortcuts.md)
 
 Siri shortcuts allow developers to more deeply integrate their
 applications with Siri. With Siri shortcuts, users can use voice commands
@@ -42,7 +43,7 @@ to open content or kick off tasks in their apps. Siri will learn when
 certain shortcuts are more likely to be used and suggest them to the user
 via notifications.
 
-## Core ML 2
+## [Core ML 2](coreml.md)
 
 Core ML 2 reduces application size through model quantization and flexible
 models, improves application performance with a new batch prediction API,
