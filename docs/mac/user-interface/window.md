@@ -757,7 +757,7 @@ To add a new Panel, do the following:
 5. Delete the existing Window and drag a Panel from the **Library Inspector** in the the **Interface Editor**: 
 
 	[![](window-images/panels01.png "Deleting the existing window")](window-images/panels01.png#lightbox)
-6. Hook the panel up to the **File's Owner*- **window*- **Outlet**: 
+6. Hook the panel up to the **File's Owner** - **window** - **Outlet**: 
 
 	[![](window-images/panels02.png "Dragging to wire up the panel")](window-images/panels02.png#lightbox)
 7. Switch to the **Identity Inspector** and set the Panel's class to `DocumentPanel`: 
