@@ -26,7 +26,7 @@ using SkiaSharp;
 using SkiaSharp.Views.Forms;
 ```
 
-The following constructor of the class creates an [`SKCanvasView`](https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.SKCanvasView/) object, attaches a handler for the [`PaintSurface`](https://developer.xamarin.com/api/event/SkiaSharp.Views.Forms.SKCanvasView.PaintSurface/) event, and sets the `SKCanvasView` object as the content of the page:
+The following constructor of the class creates an [`SKCanvasView`](xref:SkiaSharp.Views.Forms.SKCanvasView) object, attaches a handler for the [`PaintSurface`](xref:SkiaSharp.Views.Forms.SKCanvasView.PaintSurface) event, and sets the `SKCanvasView` object as the content of the page:
 
 ```csharp
 public SimpleCirclePage()
@@ -51,14 +51,14 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-The [`SKPaintSurfaceEventArgs`](https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs/) object that accompanies the event has two properties:
+The [`SKPaintSurfaceEventArgs`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs) object that accompanies the event has two properties:
 
-- [`Info`](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Info/) of type [`SKImageInfo`](https://developer.xamarin.com/api/type/SkiaSharp.SKImageInfo/)
-- [`Surface`](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Surface/) of type [`SKSurface`](https://developer.xamarin.com/api/type/SkiaSharp.SKSurface/)
+- [`Info`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Info) of type [`SKImageInfo`](xref:SkiaSharp.SKImageInfo)
+- [`Surface`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Surface) of type [`SKSurface`](xref:SkiaSharp.SKSurface)
 
 The `SKImageInfo` structure contains information about the drawing surface, most importantly, it's width and height in pixels. The `SKSurface` object represents the drawing surface itself. In this program, the drawing surface is a video display, but in other programs an `SKSurface` object can also represent a bitmap that you use SkiaSharp to draw on.
 
-The most important property of `SKSurface` is [`Canvas`](https://developer.xamarin.com/api/property/SkiaSharp.SKSurface.Canvas/) of type [`SKCanvas`](https://developer.xamarin.com/api/type/SkiaSharp.SKCanvas/). This class is a graphics drawing context that you use to perform the actual drawing. The `SKCanvas` object encapsulates a graphics state, which includes graphics transforms and clipping.
+The most important property of `SKSurface` is [`Canvas`](xref:SkiaSharp.SKSurface.Canvas) of type [`SKCanvas`](xref:SkiaSharp.SKCanvas). This class is a graphics drawing context that you use to perform the actual drawing. The `SKCanvas` object encapsulates a graphics state, which includes graphics transforms and clipping.
 
 Here's a typical start of a `PaintSurface` event handler:
 
@@ -75,9 +75,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-The [`Clear`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Clear()/) method clears the canvas with a transparent color. An overload lets you specify a background color for the canvas.
+The [`Clear`](xref:SkiaSharp.SKCanvas.Clear) method clears the canvas with a transparent color. An overload lets you specify a background color for the canvas.
 
-The goal here is to draw a red circle filled with blue. Because this particular graphic image contains two different colors, the job needs to be done in two steps. The first step is to draw the outline of the circle. To specify the color and other characteristic of the line, you create and initialize an [`SKPaint`](https://developer.xamarin.com/api/type/SkiaSharp.SKPaint/) object:
+The goal here is to draw a red circle filled with blue. Because this particular graphic image contains two different colors, the job needs to be done in two steps. The first step is to draw the outline of the circle. To specify the color and other characteristic of the line, you create and initialize an [`SKPaint`](xref:SkiaSharp.SKPaint) object:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -93,17 +93,17 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-The [`Style`](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.Style/) property indicates that you want to *stroke* a line (in this case the outline of the circle) rather than *fill* the interior. The three members of the [`SKPaintStyle`](https://developer.xamarin.com/api/type/SkiaSharp.SKPaintStyle/) enumeration are as follows:
+The [`Style`](xref:SkiaSharp.SKPaint.Style) property indicates that you want to *stroke* a line (in this case the outline of the circle) rather than *fill* the interior. The three members of the [`SKPaintStyle`](xref:SkiaSharp.SKPaintStyle) enumeration are as follows:
 
-- [`Fill`](https://developer.xamarin.com/api/field/SkiaSharp.SKPaintStyle.Fill/)
-- [`Stroke`](https://developer.xamarin.com/api/field/SkiaSharp.SKPaintStyle.Stroke/)
-- [`StrokeAndFill`](https://developer.xamarin.com/api/field/SkiaSharp.SKPaintStyle.StrokeAndFill/)
+- [`Fill`](xref:SkiaSharp.SKPaintStyle.Fill)
+- [`Stroke`](xref:SkiaSharp.SKPaintStyle.Stroke)
+- [`StrokeAndFill`](xref:SkiaSharp.SKPaintStyle.StrokeAndFill)
 
 The default is `Fill`. Use the third option to stroke the line and fill the interior with the same color.
 
-Set the [`Color`](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.Color/) property to a value of type [`SKColor`](https://developer.xamarin.com/api/type/SkiaSharp.SKColor/). One way to get an `SKColor` value is by converting a Xamarin.Forms `Color` value to an `SKColor` value using the extension method [`ToSKColor`](https://developer.xamarin.com/api/member/SkiaSharp.Views.Forms.Extensions.ToSKColor/p/Xamarin.Forms.Color/). The [`Extensions`](https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.Extensions/) class in the `SkiaSharp.Views.Forms` namespace includes other methods that convert between Xamarin.Forms values and SkiaSharp values.
+Set the [`Color`](xref:SkiaSharp.SKPaint.Color) property to a value of type [`SKColor`](xref:SkiaSharp.SKColor). One way to get an `SKColor` value is by converting a Xamarin.Forms `Color` value to an `SKColor` value using the extension method [`ToSKColor`](SkiaSharp.Views.Forms.Extensions.ToSKColor*). The [`Extensions`](xref:SkiaSharp.Views.Forms.Extensions) class in the `SkiaSharp.Views.Forms` namespace includes other methods that convert between Xamarin.Forms values and SkiaSharp values.
 
-The [`StrokeWidth`](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeWidth/) property indicates the thickness of the line. Here it's set to 25 pixels.
+The [`StrokeWidth`](xref:SkiaSharp.SKPaint.StrokeWidth) property indicates the thickness of the line. Here it's set to 25 pixels.
 
 You use that `SKPaint` object to draw the circle:
 
@@ -120,7 +120,7 @@ Coordinates are specified relative to the upper-left corner of the display surfa
 
 The first two arguments of `DrawCircle` indicate the X and Y coordinates of the center of the circle. These are assigned half the width and height of the display surface to put the center of the circle in the center of the display surface. The third argument specifies the circle's radius, and the last argument is the `SKPaint` object.
 
-To fill the interior of the circle, you can alter two properties of the `SKPaint` object and call `DrawCircle` again. This code also shows an alternative way to get an `SKColor` value from one of the many fields of the [`SKColors`](https://developer.xamarin.com/api/type/SkiaSharp.SKColors/) structure:
+To fill the interior of the circle, you can alter two properties of the `SKPaint` object and call `DrawCircle` again. This code also shows an alternative way to get an `SKColor` value from one of the many fields of the [`SKColors`](xref:SkiaSharp.SKColors) structure:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -148,5 +148,5 @@ The next sample in the [Integrating with Xamarin.Forms](~/xamarin-forms/user-int
 
 ## Related Links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

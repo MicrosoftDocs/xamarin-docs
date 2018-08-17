@@ -23,7 +23,7 @@ Despite the simplicity of that definition, there is no way to define an arc-draw
 
 ## The Angle Arc
 
-The angle arc approach to drawing arcs requires that you specify a rectangle that bounds an ellipse. The arc on the circumference of this ellipse is indicated by angles from the center of the ellipse making the beginning of the arc and its length. Two different methods draw angle arcs. These are the [`AddArc`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddArc/p/SkiaSharp.SKRect/System.Single/System.Single/) method and the [`ArcTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKRect/System.Single/System.Single/System.Boolean/) method:
+The angle arc approach to drawing arcs requires that you specify a rectangle that bounds an ellipse. The arc on the circumference of this ellipse is indicated by angles from the center of the ellipse making the beginning of the arc and its length. Two different methods draw angle arcs. These are the [`AddArc`](xref:SkiaSharp.SKPath.AddArc(SkiaSharp.SKRect,System.Single,System.Single)) method and the [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKRect,System.Single,System.Single,System.Boolean)) method:
 
 ```csharp
 public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
@@ -211,7 +211,7 @@ To see what it looks like without the "explosion," simply comment out the `Trans
 
 The second type of arc supported by `SKPath` is the *tangent arc*, so called because the arc is the circumference of a circle that is tangent to two connected lines.
 
-A tangent arc is added to a path with a call to the  [`ArcTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/) method with two `SKPoint` parameters, or the [`ArcTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/) overload with separate `Single` parameters for the points:
+A tangent arc is added to a path with a call to the  [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) method with two `SKPoint` parameters, or the [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,System.Single,System.Single)) overload with separate `Single` parameters for the points:
 
 ```csharp
 public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
@@ -488,7 +488,7 @@ Here's the program running on the three platforms:
 
 ## The Elliptical Arc
 
-The elliptical arc is added to a path with a call to the [`ArcTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKPoint/System.Single/SkiaSharp.SKPathArcSize/SkiaSharp.SKPathDirection/SkiaSharp.SKPoint/) method that has two `SKPoint` parameters, or the  [`ArcTo`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/System.Single/System.Single/System.Single/SkiaSharp.SKPathArcSize/SkiaSharp.SKPathDirection/System.Single/System.Single/) overload with separate X and Y coordinates:
+The elliptical arc is added to a path with a call to the [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKPathArcSize,SkiaSharp.SKPathDirection,SkiaSharp.SKPoint)) method that has two `SKPoint` parameters, or the  [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,SkiaSharp.SKPathArcSize,SkiaSharp.SKPathDirection,System.Single,System.Single)) overload with separate X and Y coordinates:
 
 ```csharp
 public void ArcTo (SKPoint r, Single xAxisRotate, SKPathArcSize largeArc, SKPathDirection sweep, SKPoint xy)
@@ -526,7 +526,7 @@ These two points can therefore be connected by an arc defined by the tilted elli
 
 ![](arcs-images/ellipticalarccolors.png "All four elliptical arcs")
 
-These four arcs are distinguished by the four combinations of the [`SKPathArcSize`](https://developer.xamarin.com/api/type/SkiaSharp.SKPathArcSize/) and [`SKPathDirection`](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/) enumeration type arguments to the `ArcTo` method:
+These four arcs are distinguished by the four combinations of the [`SKPathArcSize`](xref:SkiaSharp.SKPathArcSize) and [`SKPathDirection`](xref:SkiaSharp.SKPathDirection) enumeration type arguments to the `ArcTo` method:
 
 - red: SKPathArcSize.Large and SKPathDirection.Clockwise
 - green: SKPathArcSize.Small and SKPathDirection.Clockwise
@@ -662,5 +662,5 @@ Although the connections between the arcs and straight lines are mathematically 
 
 ## Related Links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

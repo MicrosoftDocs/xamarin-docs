@@ -21,13 +21,13 @@ Besides using a path effect to stroke a character outline, you can also create p
 
 ![](text-paths-images/pathsandtextsample.png "Text Path Effect")
 
-In the [previous article](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) you saw how the [`GetFillPath`](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetFillPath/p/SkiaSharp.SKPath/SkiaSharp.SKPath/SkiaSharp.SKRect/System.Single/) method of `SKPaint` can obtain an outline of a stroked path. You can also use this method with paths derived from character outlines.
+In the [previous article](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) you saw how the [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) method of `SKPaint` can obtain an outline of a stroked path. You can also use this method with paths derived from character outlines.
 
-Finally, this article demonstrates another intersection of paths and text: The [`DrawTextOnPath`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/) method of `SKCanvas` allows you to display a text string so that the baseline of the text follows a curved path.
+Finally, this article demonstrates another intersection of paths and text: The [`DrawTextOnPath`](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) method of `SKCanvas` allows you to display a text string so that the baseline of the text follows a curved path.
 
 ## Text to Path Conversion
 
-The [`GetTextPath`](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetTextPath/p/System.String/System.Single/System.Single/) method of `SKPaint` converts a character string to an `SKPath` object:
+The [`GetTextPath`](xref:SkiaSharp.SKPaint.GetTextPath(System.String,System.Single,System.Single)) method of `SKPaint` converts a character string to an `SKPath` object:
 
 ```csharp
 public SKPath GetTextPath (String text, Single x, Single y)
@@ -115,7 +115,7 @@ public class ClippingTextPage : ContentPage
 }
 ```
 
-Once the clipping path is set, the bitmap can be displayed, and it will be clipped to the character outlines. Notice the use of the [`AspectFill`](https://developer.xamarin.com/api/member/SkiaSharp.SKRect.AspectFill/p/SkiaSharp.SKSize/) method of `SKRect` that calculates a rectangle for filling the page while preserving the aspect ratio.
+Once the clipping path is set, the bitmap can be displayed, and it will be clipped to the character outlines. Notice the use of the [`AspectFill`](xref:SkiaSharp.SKRect.AspectFill(SkiaSharp.SKSize)) method of `SKRect` that calculates a rectangle for filling the page while preserving the aspect ratio.
 
 The **Text Path Effect** page converts a single ampersand character to a path to create a 1D path effect. A paint object with this path effect is then used to stroke the outline of a larger version of that same character:
 
@@ -204,7 +204,7 @@ That `MeasureText` call is used to center the character on the page. To avoid pr
 
 ## Outlines of Character Outlines
 
-Normally the [`GetFillPath`](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetFillPath/p/SkiaSharp.SKPath/SkiaSharp.SKPath/SkiaSharp.SKRect/System.Single/) method of `SKPaint` converts one path to another by applying  paint properties, most notably the stroke width and path effect. When used without path effects, `GetFillPath` effectively creates a path that outlines another path. This was demonstrated in the **Tap to Outline the Path** page in the [**Path Effects**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) article.
+Normally the [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) method of `SKPaint` converts one path to another by applying  paint properties, most notably the stroke width and path effect. When used without path effects, `GetFillPath` effectively creates a path that outlines another path. This was demonstrated in the **Tap to Outline the Path** page in the [**Path Effects**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) article.
 
 You can also call `GetFillPath` on the path returned from `GetTextPath` but at first you might not be entirely sure what that would look like.
 
@@ -272,7 +272,7 @@ Look closely and you'll see overlaps where the path outline makes a sharp corner
 
 Text is normally displayed on a horizontal baseline. Text can be rotated to run vertically or diagonally, but the baseline is still a straight line.
 
-There are times, however, when you want text to run along a curve. This is the purpose of the [`DrawTextOnPath`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/) method of `SKCanvas`:
+There are times, however, when you want text to run along a curve. This is the purpose of the [`DrawTextOnPath`](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) method of `SKCanvas`:
 
 ```csharp
 public Void DrawTextOnPath (String text, SKPath path, Single hOffset, Single vOffset, SKPaint paint)
@@ -323,5 +323,5 @@ The text itself was chosen to be somewhat circular as well: The word "circle" is
 
 ## Related Links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

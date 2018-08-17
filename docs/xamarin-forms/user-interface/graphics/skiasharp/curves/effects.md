@@ -13,7 +13,7 @@ ms.date: 07/29/2017
 
 _Discover the various path effects that allow paths to be used for stroking and filling_
 
-A *path effect* is an instance of the [`SKPathEffect`](https://developer.xamarin.com/api/type/SkiaSharp.SKPathEffect/) class that is created with one of eight static `Create` methods. The `SKPathEffect` object is then set to the [`PathEffect`](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.PathEffect/) property of an `SKPaint` object for a variety of interesting effects, for example, stroking a line with a small replicated path:
+A *path effect* is an instance of the [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) class that is created with one of eight static `Create` methods. The `SKPathEffect` object is then set to the [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) property of an `SKPaint` object for a variety of interesting effects, for example, stroking a line with a small replicated path:
 
 ![](effects-images/patheffectsample.png "The Linked Chain sample")
 
@@ -32,7 +32,7 @@ This article also demonstrates how to use the `GetFillPath` method of `SKPaint` 
 
 ## Dots and Dashes
 
-The use of the [`PathEffect.CreateDash`](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDash/p/System.Single[]/System.Single/) method was described in the article [**Dots and Dashes**](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md). The first argument of the method is an array containing an even number of two or more values, alternating between lengths of dashes and lengths of gaps between the dashes:
+The use of the [`PathEffect.CreateDash`](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) method was described in the article [**Dots and Dashes**](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md). The first argument of the method is an array containing an even number of two or more values, alternating between lengths of dashes and lengths of gaps between the dashes:
 
 ```csharp
 public static SKPathEffect CreateDash (Single[] intervals, Single phase)
@@ -240,7 +240,7 @@ The `PaintSurface` handler creates a elliptical path based on the size of the pa
 
 ## From Path to Path
 
-The [`GetFillPath`](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetFillPath/p/SkiaSharp.SKPath/SkiaSharp.SKPath/System.Single/) method of `SKPaint` turns one path into another based on settings in the `SKPaint` object. To see how this works, replace the `canvas.DrawPath` call in the previous program with the following code:
+The [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,System.Single)) method of `SKPaint` turns one path into another based on settings in the `SKPaint` object. To see how this works, replace the `canvas.DrawPath` call in the previous program with the following code:
 
 ```csharp
 SKPath newPath = new SKPath();
@@ -261,7 +261,7 @@ Try changing the `Style` setting in `newPaint` to `SKPaintStyle.Stroke` and you'
 
 ## Stroking with a Path
 
-The [`SKPathEffect.Create1DPath`](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.Create1DPath/p/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPath1DPathEffectStyle/) method is conceptually similar to `SKPathEffect.CreateDash` except that you specify a path rather than a pattern of dashes and gaps. This path is replicated multiple times to stroke the line or curve.
+The [`SKPathEffect.Create1DPath`](xref:SkiaSharp.SKPathEffect.Create1DPath(SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPath1DPathEffectStyle)) method is conceptually similar to `SKPathEffect.CreateDash` except that you specify a path rather than a pattern of dashes and gaps. This path is replicated multiple times to stroke the line or curve.
 
 The syntax is:
 
@@ -275,11 +275,11 @@ public static SKPathEffect Create1DPath (SKPath path, Single advance,
 
 In general, the path that you pass to `Create1DPath` will be small and centered around the point (0, 0). The `advance` parameter indicates the distance from the path centers as the path is replicated on the line. You usually set this argument to the approximate width of the path. The `phase` argument plays the same role here as it does in the `CreateDash` method.
 
-The [`SKPath1DPathEffectStyle`](https://developer.xamarin.com/api/type/SkiaSharp.SKPath1DPathEffectStyle/) has three members:
+The [`SKPath1DPathEffectStyle`](xref:SkiaSharp.SKPath1DPathEffectStyle) has three members:
 
-- [`Translate`](https://developer.xamarin.com/api/field/SkiaSharp.SKPath1DPathEffectStyle.Translate/)
-- [`Rotate`](https://developer.xamarin.com/api/field/SkiaSharp.SKPath1DPathEffectStyle.Rotate/)
-- [`Morph`](https://developer.xamarin.com/api/field/SkiaSharp.SKPath1DPathEffectStyle.Morph/)
+- [`Translate`](xref:SkiaSharp.SKPath1DPathEffectStyle.Translate)
+- [`Rotate`](xref:SkiaSharp.SKPath1DPathEffectStyle.Rotate)
+- [`Morph`](xref:SkiaSharp.SKPath1DPathEffectStyle.Morph)
 
 The `Translate` member causes the path to remain in the same orientation as it is replicated along a line or curve. For `Rotate`, the path is rotated based on a tangent to the curve. The path has its normal orientation for horizontal lines. `Morph` is similar to `Rotate` except that the path itself is also curved to match the curvature of the line being stroked.
 
@@ -698,7 +698,7 @@ As with the previous example of `GetFillPath`, you'll see that the results are t
 
 ## Hatching an Area
 
-The [`SKPathEffect.Create2DLines`](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.Create2DLine/p/System.Single/SkiaSharp.SKMatrix/) method fills an area with parallel lines, often called *hatch lines*. The method has the following syntax:
+The [`SKPathEffect.Create2DLines`](xref:SkiaSharp.SKPathEffect.Create2DLine(System.Single,SkiaSharp.SKMatrix)) method fills an area with parallel lines, often called *hatch lines*. The method has the following syntax:
 
 ```csharp
 public static SKPathEffect Create2DLine (Single width, SKMatrix matrix)
@@ -798,7 +798,7 @@ The Android screen doesn't really look like that: The scaling of the screenshot 
 
 ## Filling with a Path
 
-The [`SKPathEffect.Create2DPath`](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.Create2DPath/p/SkiaSharp.SKMatrix/SkiaSharp.SKPath/) allows you to fill an area with a path that is replicated horizontally and vertically, in effect tiling the area:
+The [`SKPathEffect.Create2DPath`](xref:SkiaSharp.SKPathEffect.Create2DPath(SkiaSharp.SKMatrix,SkiaSharp.SKPath)) allows you to fill an area with a path that is replicated horizontally and vertically, in effect tiling the area:
 
 ```csharp
 public static SKPathEffect Create2DPath (SKMatrix matrix, SKPath path)
@@ -856,7 +856,7 @@ Try setting the `Style` property of the `SKPaint` object to `Stroke`, and you'll
 
 ## Rounding Sharp Corners
 
-The **Rounded Heptagon** program presented in the [**Three Ways to Draw an Arc**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) article used a tangent arc to curve the points of a seven-sided figure. The **Another Rounded Heptagon** page shows a much easier approach that uses a path effect created from the [`SKPathEffect.CreateCorner`](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateCorner/p/System.Single/) method:
+The **Rounded Heptagon** program presented in the [**Three Ways to Draw an Arc**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) article used a tangent arc to curve the points of a seven-sided figure. The **Another Rounded Heptagon** page shows a much easier approach that uses a path effect created from the [`SKPathEffect.CreateCorner`](xref:SkiaSharp.SKPathEffect.CreateCorner(System.Single)) method:
 
 ```csharp
 public static SKPathEffect CreateCorner (Single radius)
@@ -925,7 +925,7 @@ You'll see that this rounded heptagon is identical to the earlier program. If yo
 
 ## Random Jitter
 
-Sometimes the flawless straight lines of computer graphics are not quite what you want, and a little randomness is desired. In that case, you'll want to try the [`SKPathEffect.CreateDiscrete`](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDiscrete/p/System.Single/System.Single/System.UInt32/) method:
+Sometimes the flawless straight lines of computer graphics are not quite what you want, and a little randomness is desired. In that case, you'll want to try the [`SKPathEffect.CreateDiscrete`](xref:SkiaSharp.SKPathEffect.CreateDiscrete(System.Single,System.Single,System.UInt32)) method:
 
 ```csharp
 public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, UInt32 seedAssist)
@@ -1068,7 +1068,7 @@ Here it is running in landscape mode on all three platforms:
 
 ## Path Outlining
 
-You've already seen two little examples of the [`GetFillPath`](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetFillPath/p/SkiaSharp.SKPath/SkiaSharp.SKPath/System.Single/) method of `SKPaint`, which also exists in an [overload](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetFillPath/p/SkiaSharp.SKPath/SkiaSharp.SKPath/SkiaSharp.SKRect/System.Single/):
+You've already seen two little examples of the [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,System.Single)) method of `SKPaint`, which also exists in an [overload](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)):
 
 ```csharp
 public Boolean GetFillPath (SKPath src, SKPath dst, Single resScale)
@@ -1219,7 +1219,7 @@ Another example using this technique is coming up next for the path used in a `S
 
 ## Combining Path Effects
 
-The two final static creation methods of `SKPathEffect` are [`SKPathEffect.CreateSum`](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateSum/p/SkiaSharp.SKPathEffect/SkiaSharp.SKPathEffect/) and [`SKPathEffect.CreateCompose`](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateCompose/p/SkiaSharp.SKPathEffect/SkiaSharp.SKPathEffect/):
+The two final static creation methods of `SKPathEffect` are [`SKPathEffect.CreateSum`](xref:SkiaSharp.SKPathEffect.CreateSum(SkiaSharp.SKPathEffect,SkiaSharp.SKPathEffect)) and [`SKPathEffect.CreateCompose`](xref:SkiaSharp.SKPathEffect.CreateCompose(SkiaSharp.SKPathEffect,SkiaSharp.SKPathEffect)):
 
 ```csharp
 public static SKPathEffect CreateSum (SKPathEffect first, SKPathEffect second)
@@ -1409,5 +1409,5 @@ Now that you've seen path effects that range from simple dots and dashes to stra
 
 ## Related Links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

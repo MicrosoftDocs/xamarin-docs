@@ -17,9 +17,9 @@ SkiaSharp lets you draw lines that are not solid but instead are composed of dot
 
 ![](dots-images/dottedlinesample.png "Dotted line")
 
-You do this with a *path effect*, which is an instance of the [`SKPathEffect`](https://developer.xamarin.com/api/type/SkiaSharp.SKPathEffect/) class that you set to the [`PathEffect`](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.PathEffect/) property of `SKPaint`. You can create a path effect (or combine path effects) using the static `Create` methods defined by `SKPathEffect`.
+You do this with a *path effect*, which is an instance of the [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) class that you set to the [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) property of `SKPaint`. You can create a path effect (or combine path effects) using the static `Create` methods defined by `SKPathEffect`.
 
-To draw dotted or dashed lines, you use the [`SKPathEffect.CreateDash`](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDash/p/System.Single[]/System.Single/) static method. There are two arguments: This first is an array of `float` values that indicate the lengths of the dots and dashes and the length of the spaces between them. This array must have an even number of elements, and there should be at least two elements. (There can be zero elements in the array but that results in a solid line.) If there are two elements, the first is the length of a dot or dash, and the second is the length of the gap before the next dot or dash. If there are more than two elements, then they are in this order: dash length, gap length, dash length, gap length, and so on.
+To draw dotted or dashed lines, you use the [`SKPathEffect.CreateDash`](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) static method. There are two arguments: This first is an array of `float` values that indicate the lengths of the dots and dashes and the length of the spaces between them. This array must have an even number of elements, and there should be at least two elements. (There can be zero elements in the array but that results in a solid line.) If there are two elements, the first is the length of a dot or dash, and the second is the length of the gap before the next dot or dash. If there are more than two elements, then they are in this order: dash length, gap length, dash length, gap length, and so on.
 
 Generally, you'll want to make the dash and gap lengths a multiple of the stroke width. If the stroke width is 10 pixels, for example, then the array { 10, 10 } will draw a dotted line where the dots and gaps are the same length as the stroke thickness.
 
@@ -215,5 +215,5 @@ You've now seen how to draw lines and to define curves using parametric equation
 
 ## Related Links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

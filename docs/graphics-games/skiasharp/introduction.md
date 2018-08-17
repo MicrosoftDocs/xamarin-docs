@@ -141,7 +141,7 @@ using (var paint = new SKPaint()) {
 
 ## More information
 
-More information about using SkiaSharp can be found on the [API documentation online](https://developer.xamarin.com/api/namespace/SkiaSharp/)
+More information about using SkiaSharp can be found on the [API documentation online](https://docs.microsoft.com/dotnet/api/skiasharp)
 
 
 ## Related Links

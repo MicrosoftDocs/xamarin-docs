@@ -21,7 +21,7 @@ These methods are generally used for rendering bitmaps that form part of user-in
 
 ## The nine-patch display 
 
-Conceptually, [`DrawBitmapNinePatch`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapNinePatch/p/SkiaSharp.SKBitmap/SkiaSharp.SKRectI/SkiaSharp.SKRect/SkiaSharp.SKPaint/) divides a bitmap into nine rectangles:
+Conceptually, [`DrawBitmapNinePatch`](xref:SkiaSharp.SKCanvas.DrawBitmapNinePatch(SkiaSharp.SKBitmap,SkiaSharp.SKRectI,SkiaSharp.SKRect,SkiaSharp.SKPaint)) divides a bitmap into nine rectangles:
 
 ![Nine Patch](segmented-images/NinePatch.png "Nine Patch")
 
@@ -114,14 +114,14 @@ SKRectI centerRect = new SKRectI(150, 150, 350, 350);
 
 The two `DrawBitmapLattice` methods are similar to `DrawBitmapNinePatch`, but they are generalized for any number of horizontal or vertical divisions. These divisions are defined by arrays of integers corresponding to pixels. 
 
-The [`DrawBitmapLattice`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapLattice/p/SkiaSharp.SKBitmap/System.Int32[]/System.Int32[]/SkiaSharp.SKRect/SkiaSharp.SKPaint/) method with parameters for these arrays of integers does not seem to work. The [`DrawBitmapLattice`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapLattice/p/SkiaSharp.SKBitmap/SkiaSharp.SKLattice/SkiaSharp.SKRect/SkiaSharp.SKPaint/) method with a parameter of type `SKLattice` does work, and that's the one used in the samples shown below.
+The [`DrawBitmapLattice`](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,System.Int32[],System.Int32[],SkiaSharp.SKRect,SkiaSharp.SKPaint)) method with parameters for these arrays of integers does not seem to work. The [`DrawBitmapLattice`](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,SkiaSharp.SKLattice,SkiaSharp.SKRect,SkiaSharp.SKPaint)) method with a parameter of type `SKLattice` does work, and that's the one used in the samples shown below.
 
-The [`SKLattice`](https://developer.xamarin.com/api/type/SkiaSharp.SKLattice/) structure defines four properties:
+The [`SKLattice`](xref:SkiaSharp.SKLattice) structure defines four properties:
 
-- [`XDivs`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.XDivs/), an array of integers
-- [`YDivs`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.YDivs/), an array of integers
-- [`Flags`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.Flags/), an array of `SKLatticeFlags`, an enumeration type
-- [`Bounds`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.Bounds/) of type `Nullable<SKRectI>` to specify an optional source rectangle within the bitmap
+- [`XDivs`](xref:SkiaSharp.SKLattice.XDivs), an array of integers
+- [`YDivs`](xref:SkiaSharp.SKLattice.YDivs), an array of integers
+- [`Flags`](xref:SkiaSharp.SKLattice.Flags), an array of `SKLatticeFlags`, an enumeration type
+- [`Bounds`](xref:SkiaSharp.SKLattice.Bounds) of type `Nullable<SKRectI>` to specify an optional source rectangle within the bitmap
 
 The `XDivs` array divides the width of the bitmap into vertical strips. The first strip extends from pixel 0 at the left to `XDivs[0]`. This strip is rendered in its pixel width. The second strip extends from `XDivs[0]` to `XDivs[1]`, and is stretched. The third strip extends from `XDivs[1]` to `XDivs[2]` and is rendered in its pixel width. The last strip extends from the last element of the array to the right edge of the bitmap. If the array has an even number of elements, then it's displayed in its pixel width. Otherwise, it's stretched. The total number of vertical strips is one more than the number of elements in the array.
 
@@ -129,7 +129,7 @@ The `YDivs` array is similar. It divides the height of the array into horizontal
 
 Together, the `XDivs` and `YDivs` array divide the bitmap into rectangles. The number of rectangles is equal to the product of the number of horizontal strips and the number of vertical strips.
 
-According to Skia documentation, the `Flags` array contains one element for each rectangle, first the top row of rectangles, then the second row, and so forth. The `Flags` array is of type [`SKLatticeFlags`](https://developer.xamarin.com/api/type/SkiaSharp.SKLatticeFlags/), an enumeration with the following members:
+According to Skia documentation, the `Flags` array contains one element for each rectangle, first the top row of rectangles, then the second row, and so forth. The `Flags` array is of type [`SKLatticeFlags`](xref:SkiaSharp.SKLatticeFlags), an enumeration with the following members:
 
 - `Default` with value 0
 - `Transparent` with value 1
@@ -220,5 +220,5 @@ The **Lattice Display** page generalizes the creation of the `Flags` array, allo
 
 ## Related links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

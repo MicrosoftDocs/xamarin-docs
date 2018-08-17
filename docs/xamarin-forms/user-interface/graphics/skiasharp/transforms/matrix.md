@@ -13,15 +13,15 @@ ms.date: 04/12/2017
 
 _Dive deeper into SkiaSharp transforms with the versatile transform matrix_
 
-All the transforms applied to the `SKCanvas` object are consolidated in a single instance of the [`SKMatrix`](https://developer.xamarin.com/api/type/SkiaSharp.SKMatrix/) structure. This is a standard 3-by-3 transform matrix similar to those in all modern 2D graphics systems.
+All the transforms applied to the `SKCanvas` object are consolidated in a single instance of the [`SKMatrix`](xref:SkiaSharp.SKMatrix) structure. This is a standard 3-by-3 transform matrix similar to those in all modern 2D graphics systems.
 
 As you've seen, you can use transforms in SkiaSharp without knowing about the transform matrix, but the transform matrix is important from a theoretical perspective, and it is crucial when using transforms to modify paths or for handling complex touch input, both of which are demonstrated in this article and the next.
 
 ![](matrix-images/matrixtransformexample.png "A bitmap subjected to an affine transform")
 
-The current transform matrix applied to the `SKCanvas` is available at any time by accessing the read-only [`TotalMatrix`](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.TotalMatrix/) property. You can set a new transform matrix using the [`SetMatrix`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.SetMatrix/p/SkiaSharp.SKMatrix/) method, and you can restore that transform matrix to default values by calling [`ResetMatrix`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ResetMatrix/).
+The current transform matrix applied to the `SKCanvas` is available at any time by accessing the read-only [`TotalMatrix`](xref:SkiaSharp.SKCanvas.TotalMatrix) property. You can set a new transform matrix using the [`SetMatrix`](xref:SkiaSharp.SKCanvas.SetMatrix(SkiaSharp.SKMatrix)) method, and you can restore that transform matrix to default values by calling [`ResetMatrix`](xref:SkiaSharp.SKCanvas.ResetMatrix).
 
-The only other `SKCanvas` member that directly works with the canvas's matrix transform is [`Concat`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Concat/p/SkiaSharp.SKMatrix@/) which concatenates two matrices by multiplying them together.
+The only other `SKCanvas` member that directly works with the canvas's matrix transform is [`Concat`](xref:SkiaSharp.SKCanvas.Concat(SkiaSharp.SKMatrix@)) which concatenates two matrices by multiplying them together.
 
 The default transform matrix is the identity matrix and consists of 1's in the diagonal cells and 0's everywhere else:
 
@@ -31,7 +31,7 @@ The default transform matrix is the identity matrix and consists of 1's in the d
 | 0  0  1 |
 </pre>
 
-You can create an identity matrix using the static  [`SKMatrix.MakeIdentity`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeIdentity()/) method:
+You can create an identity matrix using the static  [`SKMatrix.MakeIdentity`](xref:SkiaSharp.SKMatrix.MakeIdentity) method:
 
 ```csharp
 SKMatrix matrix = SKMatrix.MakeIdentity();
@@ -145,8 +145,8 @@ All these types of transforms are classified as *affine* transforms. Affine tran
 
 One big advantage with using the transform matrix is that composite transforms can be obtained by matrix multiplication, which is often referred to in the SkiaSharp documentation as *concatenation*. Many of the transform-related methods in `SKCanvas` refer to "pre-concatenation" or "pre-concat." This refers to the order of multiplication, which is important because matrix multiplication is not commutative.
 
-For example, the documentation for the [`Translate`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Translate/p/System.Single/System.Single/) method says that it "Pre-concats the current matrix with the specified translation,"
-while the documentation for the [`Scale`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/) method says that it "Pre-concats the current matrix with the specified scale."
+For example, the documentation for the [`Translate`](xref:SkiaSharp.SKCanvas.Translate(System.Single,System.Single)) method says that it "Pre-concats the current matrix with the specified translation,"
+while the documentation for the [`Scale`](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single)) method says that it "Pre-concats the current matrix with the specified scale."
 
 This means that the transform specified by the method call is the multiplier (the left-hand operand) and the current transform matrix is the multiplicand (the right-hand operand).
 
@@ -212,7 +212,7 @@ The `SKMatrix` structure defines nine read/write properties of type `float` corr
 │ TransX  TransY  Persp2 │
 </pre>
 
-`SKMatrix` also defines a property named [`Values`](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix.Values/) of type `float[]`. This property can be used to set or obtain the nine values in one shot in the order `ScaleX`, `SkewX`, `TransX`, `SkewY`, `ScaleY`, `TransY`, `Persp0`, `Persp1`, and `Persp2`.
+`SKMatrix` also defines a property named [`Values`](xref:SkiaSharp.SKMatrix.Values) of type `float[]`. This property can be used to set or obtain the nine values in one shot in the order `ScaleX`, `SkewX`, `TransX`, `SkewY`, `ScaleY`, `TransY`, `Persp0`, `Persp1`, and `Persp2`.
 
 The `Persp0`, `Persp1`, and `Persp2` cells are discussed in the article, [Non-Affine Transforms](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md). If these cells have their default values of 0, 0, and 1, then the transform is multiplied by a coordinate point like this:
 
@@ -232,14 +232,14 @@ This is the complete two-dimensional affine transform. The affine transform pres
 
 The `SKMatrix` structure defines several static methods to create `SKMatrix` values. These all return `SKMatrix` values:
 
-- [`MakeTranslation`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeTranslation/p/System.Single/System.Single/)
-- [`MakeScale`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeScale/p/System.Single/System.Single/)
-- [`MakeScale`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeScale/p/System.Single/System.Single/System.Single/System.Single/) with a pivot point
-- [`MakeRotation`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeRotation/p/System.Single/) for an angle in radians
-- [`MakeRotation`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeRotation/p/System.Single/System.Single/System.Single/) for an angle in radians with a pivot point
-- [`MakeRotationDegrees`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeRotationDegrees/p/System.Single/)
-- [`MakeRotationDegrees`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeRotationDegrees/p/System.Single/System.Single/System.Single/) with a pivot point
-- [`MakeSkew`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeSkew/p/System.Single/System.Single/)
+- [`MakeTranslation`](xref:SkiaSharp.SKMatrix.MakeTranslation(System.Single,System.Single))
+- [`MakeScale`](xref:SkiaSharp.SKMatrix.MakeScale(System.Single,System.Single))
+- [`MakeScale`](xref:SkiaSharp.SKMatrix.MakeScale(System.Single,System.Single,System.Single,System.Single)) with a pivot point
+- [`MakeRotation`](xref:SkiaSharp.SKMatrix.MakeRotation(System.Single)) for an angle in radians
+- [`MakeRotation`](xref:SkiaSharp.SKMatrix.MakeRotation(System.Single,System.Single,System.Single)) for an angle in radians with a pivot point
+- [`MakeRotationDegrees`](xref:SkiaSharp.SKMatrix.MakeRotationDegrees(System.Single))
+- [`MakeRotationDegrees`](xref:SkiaSharp.SKMatrix.MakeRotationDegrees(System.Single,System.Single,System.Single)) with a pivot point
+- [`MakeSkew`](xref:SkiaSharp.SKMatrix.MakeSkew(System.Single,System.Single))
 
 `SKMatrix` also defines several static methods that concatenate two matrices, which means to multiply them. These methods are named `Concat`, `PostConcat`, and `PreConcat`, and there are two versions of each. These methods have no return values; instead, they reference existing `SKMatrix` values through `ref` arguments. In the following example, `A`, `B`, and `R` (for "result") are all `SKMatrix` values.
 
@@ -295,7 +295,7 @@ This creates the following matrix:
 │ 100  100  1 │
 </pre>
 
-This is the scale transform multiplied by the translate transform. In this particular case, the `SKMatrix` structure provides a shortcut with a method named [`SetScaleTranslate`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.SetScaleTranslate/p/System.Single/System.Single/System.Single/System.Single/):
+This is the scale transform multiplied by the translate transform. In this particular case, the `SKMatrix` structure provides a shortcut with a method named [`SetScaleTranslate`](xref:SkiaSharp.SKMatrix.SetScaleTranslate(System.Single,System.Single,System.Single,System.Single)):
 
 ```csharp
 SKMatrix R = new SKMatrix();
@@ -318,7 +318,7 @@ SKMatrix.RotateDegrees(ref R, degrees, px, py);
 
 These methods do *not* concatenate a rotate transform to an existing transform. The methods set all the cells of the matrix. They are functionally identical to the `MakeRotation` and `MakeRotationDegrees` methods except that they don't instantiate the `SKMatrix` value.
 
-Suppose you have an `SKPath` object that you want to display, but you would prefer that it have a somewhat different orientation, or a different center point. You can modify all the coordinates of that path by calling the [`Transform`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Transform/p/SkiaSharp.SKMatrix/) method of `SKPath` with an `SKMatrix` argument. The **Path Transform** page demonstrates how to do this. The [`PathTransform`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/PathTransformPage.cs) class references the `HendecagramPath` object in a field but uses its constructor to apply a transform to that path:
+Suppose you have an `SKPath` object that you want to display, but you would prefer that it have a somewhat different orientation, or a different center point. You can modify all the coordinates of that path by calling the [`Transform`](xref:SkiaSharp.SKPath.Transform(SkiaSharp.SKMatrix)) method of `SKPath` with an `SKMatrix` argument. The **Path Transform** page demonstrates how to do this. The [`PathTransform`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/PathTransformPage.cs) class references the `HendecagramPath` object in a field but uses its constructor to apply a transform to that path:
 
 ```csharp
 public class PathTransformPage : ContentPage
@@ -406,7 +406,7 @@ The constructor of this program applies the matrix to the path with the followin
 transformedPath.Transform(matrix);
 ```
 
-The path does *not* retain this matrix as a property. Instead, it applies the transform to all of the coordinates of the path. If `Transform` is called again, the transform is applied again, and the only way you can go back is by applying another matrix that undoes the transform. Fortunately, the `SKMatrix` structure defines a [`TryInverse`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.TryInvert/p/SkiaSharp.SKMatrix/) method that obtains the matrix that reverses a given matrix:
+The path does *not* retain this matrix as a property. Instead, it applies the transform to all of the coordinates of the path. If `Transform` is called again, the transform is applied again, and the only way you can go back is by applying another matrix that undoes the transform. Fortunately, the `SKMatrix` structure defines a [`TryInvert`](xref:SkiaSharp.SKMatrix.TryInvert*) method that obtains the matrix that reverses a given matrix:
 
 ```csharp
 SKMatrix inverse;
@@ -647,5 +647,5 @@ Non-zero values of `Persp0` and `Persp1` result in transforms that move objects 
 
 ## Related Links
 
-- [SkiaSharp APIs](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
