@@ -11,7 +11,7 @@ ms.date: 05/04/2018
 
 ![Pre-release NuGet](~/media/shared/pre-release.png)
 
-The **Accelerometer** class lets you monitor the device's accelerometer sensor which indicates the acceleration of the device in three dimensional space.
+The **Accelerometer** class lets you monitor the device's accelerometer sensor, which indicates the acceleration of the device in three-dimensional space.
 
 ## Using Accelerometer
 
@@ -72,11 +72,11 @@ The X axis is horizontal and points to the right, the Y axis is vertical and poi
 
 Examples:
 
-* When the device lies flat on a table and is pushed on its left side toward the right, the x acceleration value is positive.
+- When the device lies flat on a table and is pushed on its left side toward the right, the x acceleration value is positive.
 
-* When the device lies flat on a table, the acceleration value is +1.00 G or (+9.81 m/s^2), which correspond to the acceleration of the device (0 m/s^2) minus the force of gravity (-9.81 m/s^2) and normalized as in G.
+- When the device lies flat on a table, the acceleration value is +1.00 G or (+9.81 m/s^2), which correspond to the acceleration of the device (0 m/s^2) minus the force of gravity (-9.81 m/s^2) and normalized as in G.
 
-* When the device lies flat on a table and is pushed toward the sky with an acceleration of A m/s^2, the acceleration value is equal to A+9.81 which correspond to the acceleration of the device (+A m/s^2) minus the force of gravity (-9.81 m/s^2) and normalized in G.
+- When the device lies flat on a table and is pushed toward the sky with an acceleration of A m/s^2, the acceleration value is equal to A+9.81 which corresponds to the acceleration of the device (+A m/s^2) minus the force of gravity (-9.81 m/s^2) and normalized in G.
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
