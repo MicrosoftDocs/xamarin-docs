@@ -112,7 +112,7 @@ async Task FetchNonBatchResults(int num)
 }
 ```
 
-### GetPrediction (new batch API)
+### GetPredictions (new batch API)
 
 The batch version of the test creates an `MLArrayBatchProvider` object
 from the input array (since this is a required input parameter for the
