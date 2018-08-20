@@ -94,6 +94,37 @@ When automatic signing has been enabled, Visual Studio for Mac will update these
     - This capability will be added to the app ID and a new provisioning profile with the updated app ID is generated.
     - Not all capabilities are currently supported. For more information on the ones that are supported, check out the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide.
 
+## Wildcard App IDs
+
+Starting with Visual Studio for Mac 7.6, automatic provisioning will by
+default attempt to create and use a wildcard App ID and provisioning
+profile instead of an explicit App ID based on the **Bundle Identifier**
+specified in **Info.plist**. Wildcard App IDs reduce the number of profiles
+and IDs to maintain in the Apple Developer Portal.
+
+In some cases, an app's entitlements require an explicit App ID. The
+following entitlements do not support wildcard App IDs:
+
+- App Groups
+- Associated Domains
+- Apple Pay
+- Game Center
+- HealthKit
+- HomeKit
+- Hotspot
+- In-App purchase
+- Multipath
+- NFC
+- Personal VPN
+- Push Notifications
+- Wireless Accessory Configuration
+
+If your app uses one of these entitlements, Visual Studio for Mac will
+attempt to create an explicit (instead of a wildcard) App ID.
+
+> [!NOTE]
+> Automatic provisioning with wildcard App IDs is currently only available
+> in Visual Studio for Mac.
 
 ## Related Links
 
