@@ -1,26 +1,24 @@
 ---
-title: "Working with Entitlements in Xamarin.iOS"
+title: "Working with entitlements in Xamarin.iOS"
 description: "Entitlements are special app capabilities and security permissions granted to applications that are correctly configured to use them."
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/15/2017
+ms.date: 08/13/2018
 ---
-
-# Working with Entitlements in Xamarin.iOS
+# Working with entitlements in Xamarin.iOS
 
 _Entitlements are special app capabilities and security permissions granted to applications that are correctly configured to use them._
 
 In iOS, apps run in a _sandbox_, which provides a set of rules that limit access between the application and certain system resources or user data. _Entitlements_ are used to request that the system expand the sandbox to give your app additional capabilities.
 
-To extend the capabilities of your app, an entitlement must be provided in your app’s Entitlements.plist file. Only certain capabilities can be extended and these are listed in the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide and described [below](#keyreference). Entitlements are passed to the system as a Key/Value pair, and generally only one is required per capability. The specific Keys and Values are described in the [Entitlement Key Reference](#keyreference) section later in this guide.
+To extend the capabilities of your app, an entitlement must be provided in your app’s Entitlements.plist file. Only certain capabilities can be extended and these are listed in the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide and described [below](#entitlement-key-reference). Entitlements are passed to the system as a Key/Value pair, and generally only one is required per capability. The specific Keys and Values are described in the [Entitlement key reference](#entitlement-key-reference) section later in this guide.
 Visual Studio for Mac and Visual Studio provide a clear interface for adding entitlements in a Xamarin.iOS app through the Entitlements.plist editor.
 This guide introduces the Entitlements.plist editor and how to use it. It also provides a reference of all the entitlements that can be added to an iOS project for each capability.
 
-## Entitlements and Provisioning
-
+## Entitlements and provisioning
 
 The Entitlements.plist file is used to specify entitlements and is used to sign the application bundle.
 
@@ -29,7 +27,7 @@ However, some additional provisioning is required to ensure that the app is code
 > [!IMPORTANT]
 > The Entitlements.plist file helps fill in the correct properties for an application using capabilities, but it can't generate a provisioning profile as it is not linked to an Apple developer account. You will still need to generate a provisioning profile using the developer portal to deploy and distribute the application.
 
-## Set Entitlements in a Xamarin.iOS Project
+## Set entitlements in a Xamarin.iOS project
 
 In addition to selecting and configuring the required application services when defining the App ID, the entitlements must also be configured in the Xamarin.iOS project by editing the **Info.plist** and **Entitlements.plist** files.
 
@@ -69,10 +67,7 @@ To configure the entitlements in Visual Studio, do the following:
 5. Select and configure any entitlements required for the Xamarin.iOS application so that they match the setup that was defined when the App ID was created.
 6. Save the changes to the **Entitlements.plist** file.
 
-
 -----
-
-<a name="add-new" />
 
 ## Adding a new Entitlements.plist file
 
@@ -87,9 +82,7 @@ To add an Entitlements.plist file to your Xamarin.iOS do the following:
 
 	![New File dialog](entitlements-images/image2.png)
 
-<a name="keyreference" />
-
-## Entitlement Key Reference
+## Entitlement key reference
 
 Entitlement keys can be added via the Source panel of the Entitlements.plist editor. The required keys will normally be added when using the Entitlements.plist editor but are listed below for reference.
 
@@ -148,7 +141,7 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
 ### Push Notifications
 
 - **Key**: aps-environment
-- **String**: `production` OR `development`
+- **String**: `development` or `production`
 
 ### Siri
 
@@ -201,6 +194,13 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
 - **Description**: Using the Wireless Accessory Configuration allows your app to configure MFi Wi-Fi accessories
     - **Key**: com.apple.external-accessory.wireless-configuration
     - **Boolean**: YES
+
+### ClassKit
+
+- **Description**: ClassKit enables teachers to view student progress on 
+assigned activities in your app.
+    - **Key**: com.apple.developer.ClassKit-environment
+    - **String**: `development` or `production`
 
 ## Summary
 
