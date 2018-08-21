@@ -85,6 +85,10 @@
       "redirect_url": "xamarin/android/platform/fragments/implementing-with-fragments/walkthrough"
     },
     {
+      "source_path": "docs/android/platform/android-p.md",
+      "redirect_url": "/xamarin/android/platform/pie"
+    },
+    {
       "source_path": "docs/android/get-started/installation/android-emulator/google-emulator-manager.md",
       "redirect_url": "/xamarin/android/get-started/installation/android-emulator/device-manager"
     },

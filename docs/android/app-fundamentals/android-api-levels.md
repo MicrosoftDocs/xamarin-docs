@@ -6,15 +6,15 @@ ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/02/2018
+ms.date: 08/21/2018
 ---
 
-# Understanding Android API Levels
+# Understanding Android API levels
 
 _Xamarin.Android has several Android API level settings that determine your app's compatibility with multiple versions of Android. This guide explains what these settings mean, how to configure them, and what effect they have on your app at run time._
 
 
-## Quick Start
+## Quick start
 
 Xamarin.Android exposes three Android API level project settings:
 
@@ -115,7 +115,7 @@ configuring API level settings for libraries.
 
 
 
-## Android Versions and API Levels
+## Android versions and API levels
 
 As the Android platform evolves and new Android versions are released,
 each Android version is assigned a unique integer identifier, called
@@ -125,87 +125,36 @@ as the most recent versions of Android, real-world Android apps must be
 designed to work with multiple Android API levels.
 
 
-### Android Versions
+### Android versions
 
 Each release of Android goes by multiple names:
 
--   The Android version, such as **Android 7.1**
--   A code name, such as _Nougat_
--   A corresponding API level, such as **API level 25**
+-   The Android version, such as **Android 9.0**
+-   A code (or dessert) name, such as _Pie_
+-   A corresponding API level, such as **API level 28**
 
 An Android code name may correspond to multiple versions and API levels
-(as seen in the list below), but each Android version corresponds to
+(as seen in the table below), but each Android version corresponds to
 exactly one API level.
 
 In addition, Xamarin.Android defines *build version codes* that map to
-the currently known Android API levels. The following list can help you
-translate between API level, Android version, code name, and
-Xamarin.Android build version code.
+the currently known Android API levels. The following table can help
+you translate between API level, Android version, code name, and
+Xamarin.Android build version code (build version codes are defined in
+the `Android.OS` namespace):
 
--   **API 27 (Android 8.1)** &ndash; _Oreo_, released December 2017. Build version code `Android.OS.BuildVersionCodes.OMr1`
+[!include[](~/android/includes/api-levels.md)]
 
--   **API 26 (Android 8.0)** &ndash; _Oreo_, released August 2017. Build version code `Android.OS.BuildVersionCodes.O`
-
--   **API 25 (Android 7.1)** &ndash; _Nougat_, released December 2016. Build version code `Android.OS.BuildVersionCodes.NMr1`
-
--   **API 24 (Android 7.0)** &ndash; _Nougat_, released August 2016. Build version code `Android.OS.BuildVersionCodes.N`
-
--   **API 23 (Android 6.0)** &ndash; _Marshmallow_, released August 2015. Build version code `Android.OS.BuildVersionCodes.M`
-
--   **API 22 (Android 5.1)** &ndash; _Lollipop_, released March 2015. Build version code `Android.OS.BuildVersionCodes.LollipopMr1`
-
--   **API 21 (Android 5.0)** &ndash; _Lollipop_, released November 2014. Build version code `Android.OS.BuildVersionCodes.Lollipop`
-
--   **API 20 (Android 4.4W)** &ndash; _Kitkat Watch_, released June 2014. Build version code `Android.OS.BuildVersionCodes.KitKatWatch`
-
--   **API 19 (Android 4.4)** &ndash; _Kitkat_, released October 2013. Build version code `Android.OS.BuildVersionCodes.KitKat`
-
--   **API 18 (Android 4.3)** &ndash; _Jelly Bean_, released July 2013. Build version code `Android.OS.BuildVersionCodes.JellyBeanMr2`
-
--   **API 17 (Android 4.2-4.2.2)** &ndash; _Jelly Bean_, released November 2012. Build version code `Android.OS.BuildVersionCodes.JellyBeanMr1`
-
--   **API 16 (Android 4.1-4.1.1)** &ndash; _Jelly Bean_, released June 2012. Build version code `Android.OS.BuildVersionCodes.JellyBean`
-
--   **API 15 (Android 4.0.3-4.0.4)** &ndash; _Ice Cream Sandwich_, released December 2011. Build version code `Android.OS.BuildVersionCodes.IceCreamSandwichMr1`
-
--   **API 14 (Android 4.0-4.0.2)** &ndash; _Ice Cream Sandwich_, released October 2011. Build version code `Android.OS.BuildVersionCodes.IceCreamSandwich`
-
--   **API 13 (Android 3.2)** &ndash; _Honeycomb_, released June 2011. Build version code `Android.OS.BuildVersionCodes.HoneyCombMr2`
-
--   **API 12 (Android 3.1.x)** &ndash; _Honeycomb_, released May 2011. Build version code `Android.OS.BuildVersionCodes.HoneyCombMr1`
-
--   **API 11 (Android 3.0.x)** &ndash; _Honeycomb_, released February 2011. Build version code `Android.OS.BuildVersionCodes.HoneyComb`
-
--   **API 10 (Android 2.3.3-2.3.4)** &ndash; _Gingerbread_, released February 2011. Build version code `Android.OS.BuildVersionCodes.GingerBreadMr1`
-
--   **API 9 (Android 2.3-2.3.2)** &ndash; _Gingerbread_, released November 2010. Build version code `Android.OS.BuildVersionCodes.GingerBread`
-
--   **API 8 (Android 2.2.x)** &ndash; _Froyo_, released June 2010. Build version code `Android.OS.BuildVersionCodes.Froyo`
-
--   **API 7 (Android 2.1.x)** &ndash; _Eclair_, released January 2010. Build version code `Android.OS.BuildVersionCodes.EclairMr1`
-
--   **API 6 (Android 2.0.1)** &ndash; _Eclair_, released December 2009. Build version code `Android.OS.BuildVersionCodes.Eclair01`
-
--   **API 5 (Android 2.0)** &ndash; _Eclair_, released November 2009. Build version code `Android.OS.BuildVersionCodes.Eclair`
-
--   **API 4 (Android 1.6)** &ndash; _Donut_, released September 2009. Build version code `Android.OS.BuildVersionCodes.Donut`
-
--   **API 3 (Android 1.5)** &ndash; _Cupcake_, released May 2009. Build version code `Android.OS.BuildVersionCodes.Cupcake`
-
--   **API 2 (Android 1.1)** &ndash; _Base_, released February 2009. Build version code `Android.OS.BuildVersionCodes.Base11`
-
--   **API 1 (Android 1.0)** &ndash; _Base_, released October 2008. Build version code `Android.OS.BuildVersionCodes.Base`
+As this table indicates, new Android versions are released frequently
+&ndash; sometimes more than one release per year. As a result, the
+universe of Android devices that might run your app includes of a wide
+variety of older and newer Android versions. How can you guarantee that
+your app will run consistently and reliably on so many different
+versions of Android? Android's API levels can help you manage this
+problem.
 
 
-As this list indicates, new Android versions are released frequently &ndash;
-sometimes several releases per year. As a result, the universe
-of Android devices that might run your app includes of a wide variety
-of older and newer Android versions. How can you guarantee that your
-app will run consistently and reliably on so many different versions of
-Android? Android's API levels can help you manage this problem.
-
-
-### Android API Levels
+### Android API levels
 
 Each Android device runs at exactly *one* API level &ndash; this API
 level is guaranteed to be unique per Android platform version. The API
@@ -233,7 +182,7 @@ minimum API level that you specify for your app, the Android device
 will prevent the user from installing your app.
 
 
-## Project API Level Settings
+## Project API level settings
 
 The following sections explain how to use the SDK Manager to prepare
 your development environment for the API levels you want to target,
@@ -242,7 +191,7 @@ Framework*, *Minimum Android version*, and *Target Android version*
 settings in Xamarin.Android.
 
 
-### Android SDK Platforms
+### Android SDK platforms
 
 Before you can select a Target or Minimum API level in Xamarin.Android,
 you must install the Android SDK platform version that corresponds to
@@ -260,13 +209,13 @@ see [Android SDK Setup](~/android/get-started/installation/android-sdk.md).
 
 The *Target Framework* (also known as `compileSdkVersion`) is the
 specific Android framework version (API level) that your app is
-compiled for at build time. This setting specifies what APIs your app
-*expects* to use when it runs, but it has no effect on which APIs are
-actually available to your app when it is installed. As a result,
+compiled for at build time. This setting specifies what APIs your 
+app *expects* to use when it runs, but it has no effect on which APIs 
+are actually available to your app when it is installed. As a result,
 changing the Target Framework setting does not change runtime behavior.
 
 The Target Framework identifies which library versions your application
-is linked against &ndash; this determines which APIs you can use in
+is linked against &ndash; this setting determines which APIs you can use in
 your app. For example, if you want to use the
 [NotificationBuilder.SetCategory](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetCategory/p/System.String/)
 method that was introduced in Android 5.0 Lollipop, you must set the
@@ -383,8 +332,8 @@ breaking it (this is how Android provides forward compatibility).
 
 The Target Framework and the Target Android version, while having very
 similar names, are not the same thing. The Target Framework setting
-communicates target API level information to Xamarin.Android for use at
-*compile time*, while the Target Android version communicates target
+communicates target API level information to Xamarin.Android for use 
+at *compile time*, while the Target Android version communicates target
 API level information to Android for use at *run time* (when the app is
 installed and running on a device).
 
@@ -435,7 +384,7 @@ documentation.
 
 <a name="runtimechecks" />
 
-## Runtime Checks for Android Versions
+## Runtime checks for Android versions
 
 As each new version of Android is released, the framework API is
 updated to provide new or replacement functionality. With few
@@ -482,9 +431,9 @@ In this example, our app's Target Framework is set to **Android 5.0
 4.1 (API Level 16)**. Because `SetCategory` is available in API level
 `Android.OS.BuildVersionCodes.Lollipop` and later, this example code
 will call `SetCategory` only when it is actually available &ndash; it
-will *not* attempt to call `SetCategory` when the API level is 16, 17,
-18, 19, or 20. The functionality is reduced on these earlier Android
-versions only to the extent that notifications are not sorted properly
+will *not* attempt to call `SetCategory` when the API level 
+is 16, 17, 18, 19, or 20. The functionality is reduced on these earlier 
+Android versions only to the extent that notifications are not sorted properly
 (because they are not categorized by type), yet the notifications are
 still published to alert the user. Our app still works, but its
 functionality is slightly diminished.
@@ -506,7 +455,7 @@ else
 There's no fast and simple rule that explains how to reduce or modify
 your app's functionality when it runs on older Android versions that
 are lacking one or more APIs. In some cases (such as in the
-`SetCategory` example above), it's sufficient to simply omit the API
+`SetCategory` example above), it's sufficient to omit the API
 call when it's not available. However, in other cases, you may need to
 implement alternate functionality for when
 `Android.OS.Build.VERSION.SdkInt` is detected to be less than the API
@@ -514,7 +463,7 @@ level that your app needs to present its optimum experience.
 
 <a name="libraries" />
 
-## API Levels and Libraries
+## API levels and libraries
 
 # [Visual Studio](#tab/vswin)
 
@@ -532,7 +481,7 @@ When you create a Xamarin.Android library project, there is no
 **Android Application** page where you can configure the Minimum
 Android version and the Target Android version &ndash; the Minimum
 Android version and Target Android version settings are not available.
-That is because there is no **Build > Android Application** page):
+That is because there is no **Build > Android Application** page:
 
 [![Build General page without Minimum and Target version options](android-api-levels-images/xs-library-options-sml.png)](android-api-levels-images/xs-library-options.png#lightbox)
 
@@ -541,8 +490,8 @@ That is because there is no **Build > Android Application** page):
 The Minimum Android version and Target Android version settings are
 not available because the resulting library is not a stand-alone app &ndash;
 the library could be run on any Android version, depending on the app
-that it is packaged with. You can specify how the library is to be
-*compiled*, but you can't predict which platform API level the library
+that it is packaged with. You can specify how the library is to 
+be *compiled*, but you can't predict which platform API level the library
 will be run on. With this in mind, the following best practices should
 be observed when consuming or creating libraries:
 
@@ -569,8 +518,9 @@ range of Android versions.
 
 This guide explained how Android API levels are used to manage app
 compatibility across different versions of Android. It provided
-detailed steps for configuring the Xamarin.Android *Target Framework*,
-*Minimum Android version*, and *Target Android version* project
+detailed steps for configuring the 
+Xamarin.Android *Target Framework*, *Minimum Android version*, 
+and *Target Android version* project
 settings. It provided instructions for using the Android SDK Manager to
 install SDK packages, included examples of how to write code to deal
 with different API levels at runtime, and explained how to manage API
