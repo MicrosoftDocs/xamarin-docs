@@ -105,6 +105,7 @@
 #### [Getting Started](platform/introduction-to-ios12/get-started.md)
 #### [Siri Shortcuts](platform/introduction-to-ios12/siri-shortcuts.md)
 #### [Core ML 2](platform/introduction-to-ios12/coreml.md)
+#### [Natural Language](platform/introduction-to-ios12/natural-language.md)
 ### [Introduction to iOS 11](platform/introduction-to-ios11/index.md)
 #### [Getting Started](platform/introduction-to-ios11/get-started.md)
 #### [Updating Your App to iOS 11](platform/introduction-to-ios11/updating-your-app/index.md)

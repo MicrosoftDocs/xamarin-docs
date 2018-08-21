@@ -35,7 +35,7 @@ command will open an app or run a background task.
 Shortcuts should be used to accelerate a user's ability to accomplish a
 common task – in many cases without even opening the app in question.
 
-## Soup Chef
+## Sample app: Soup Chef
 
 To better understand Siri Shortcuts, take a look at the [Soup Chef](https://developer.xamarin.com/samples/monotouch/ios12/SoupChef/)
 sample app. Soup Chef allows users to place orders from an imaginary soup

@@ -59,7 +59,7 @@ Notification content extensions in iOS 12 allow for custom user
 interfaces and dynamic actions. These features enable richer, more
 relevant experiences in user notifications.
 
-## Natural Language framework
+## [Natural Language framework](natural-language.md)
 
 The Natural Language framework enables applications to perform various
 types of language analysis. For example, it can be used to identify parts
