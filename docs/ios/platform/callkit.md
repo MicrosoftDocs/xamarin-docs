@@ -8,10 +8,7 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
 ---
-
 # CallKit in Xamarin.iOS
-
-_This article covers the new CallKit API that Apple released in iOS 10 and how to implement it in Xamarin.iOS VOIP apps._
 
 The new CallKit API in iOS 10 provides a way for VOIP apps to integrate with the iPhone UI and provide a familiar interface and experience to the end user. With this API users can view and interact with VOIP calls from the iOS device's Lock Screen and manage contacts using the Phone app's **Favorites** and **Recents** views.
 
@@ -21,7 +18,7 @@ According to Apple, CallKit is a new framework that will elevate 3rd party Voice
 
 Additionally, the CallKit API provides the ability to create App Extensions that can associate a phone number with a name (Caller ID) or tell the system when a number should be blocked (Call Blocking).
 
-### The Existing VOIP App Experience
+### The existing VOIP app experience
 
 Before discussing the new CallKit API and its abilities, take a look at the current user experience with a 3rd party VOIP app in iOS 9 (and lesser) using a fictitious VOIP app called MonkeyCall. MonkeyCall is a simple app that allows the user to send and receive VOIP calls using the existing iOS APIs.
 
@@ -31,7 +28,7 @@ If the user wanted to answer the call, they'd have to slide the MonkeyCall notif
 
 The experience is equally cumbersome if the phone is unlocked. Again, the incoming MonkeyCall call is displayed as a standard notification banner that slides in from the top of the screen. Since the notification is temporary, it can be easily missed by the user forcing them to either open the Notification Center and find the specific notification to answer then call or find and launch the MonkeyCall app manually.
 
-### The CallKit VOIP App Experience
+### The CallKit VOIP app experience
 
 By implementing the new CallKit APIs in the MonkeyCall app, the user's experience with an incoming VOIP call can be greatly improved in iOS 10. Take the example of the user receiving a VOIP call when their phone is locked from above. By implementing CallKit, the call will appear on the iPhone's Lock screen, just as it would if the call was being received from the built-in Phone app, with the full-screen, native UI and standard swipe-to-answer functionality.
 
@@ -41,8 +38,7 @@ CallKit provides additional functionality to MonkeyCall, allowing its VOIP calls
 
 The following sections will cover the CallKit architecture, the incoming and outgoing call flows and the CallKit API in detail.
 
-
-## The CallKit Architecture
+## The CallKit architecture
 
 In iOS 10, Apple has adopted CallKit in all of the System Services such that calls made on CarPlay, for example, are known to the System UI via CallKit. In the example given below, since MonkeyCall adopts CallKit, it is known to the System in the same way as these built-in System Services and gets all of the same features:
 
@@ -89,7 +85,7 @@ When the app wants to communicate local user actions to the system, it uses the 
 
 The following sections will show how to implement CallKit in a Xamarin.iOS VOIP app. For the sake of example, this document will be using code from the fictitious MonkeyCall VOIP app. The code presented here represents several supporting classes, the CallKit specific parts will covered in detail in the following sections.
 
-### The ActiveCall Class
+### The ActiveCall class
 
 The `ActiveCall` class is used by the MonkeyCall app to hold all of the information about a VOIP call that is currently active as follows:
 
@@ -217,7 +213,7 @@ namespace MonkeyCall
 
 `ActiveCall` holds several properties that define the state of the call and two events that can be raised when the call state changes. Since this is an example only, there are three methods used to simulated starting, answering and ending a call.
 
-### The StartCallRequest Class
+### The StartCallRequest class
 
 The `StartCallRequest` static class, provides a few helper methods that will be used when working with outgoing calls:
 
@@ -278,7 +274,7 @@ namespace MonkeyCall
 
 The `CallHandleFromURL` and `CallHandleFromActivity` classes are used in the AppDelegate to get the contact handle of the person being called in an outgoing call. For more information, please see the [Handling Outgoing Calls](#Handling-Outgoing-Calls) section below.
 
-### The ActiveCallManager Class
+### The ActiveCallManager class
 
 The `ActiveCallManager` class handles all open calls in the MonkeyCall app.
 
@@ -330,7 +326,7 @@ namespace MonkeyCall
 		{
 			// Scan for requested call
 			foreach (ActiveCall call in Calls) {
-				if (call.UUID == uuid) return call;
+				if (call.UUID.Equals(uuid)) return call;
 			}
 
 			// Not found
@@ -392,7 +388,7 @@ namespace MonkeyCall
 
 Again, since this is a simulation only, the `ActiveCallManager` only maintains a collection of `ActiveCall` objects and has a routine for finding a given call by its `UUID` property. It also includes methods to start, end and change the on-hold state of an outgoing call. For more information, please see the [Handling Outgoing Calls](#Handling-Outgoing-Calls) section below.
 
-### The ProviderDelegate Class
+### The ProviderDelegate class
 
 As discussed above, a `CXProvider` provides two-way communication between the app and the System for out-of-band notifications. The developer needs to provide a custom `CXProviderDelegate` and attach it to the `CXProvider` for the app to handle out-of-band CallKit events. MonkeyCall uses the following `CXProviderDelegate`:
 
@@ -656,7 +652,7 @@ public override void DidDeactivateAudioSession (CXProvider provider, AVFoundatio
 
 The rest of the code will be covered in detail in the sections that follow.
 
-### The AppDelegate Class
+### The AppDelegate class
 
 MonkeyCall uses the AppDelegate to hold instances of the `ActiveCallManager` and `CXProviderDelegate` that will be used throughout the app:
 
@@ -728,7 +724,7 @@ namespace MonkeyCall
 
 The `OpenUrl` and `ContinueUserActivity` override methods are used when the app is processing an outgoing call. For more information, please see the [Handling Outgoing Calls](#Handling-Outgoing-Calls) section below.
 
-## Handling Incoming Calls
+## Handling incoming calls
 
 There are several states and processes that an incoming VOIP call can go through during a typical incoming call workflow such as:
 
@@ -738,7 +734,7 @@ There are several states and processes that an incoming VOIP call can go through
 
 The following sections will take a detailed look at how an app can use CallKit to handle the incoming call workflow, again using the MonkeyCall VOIP app as an example.
 
-### Informing User of Incoming Call
+### Informing user of incoming call
 
 When a remote user has started a VOIP conversation with the local user, the following occurs:
 
@@ -773,7 +769,7 @@ public void ReportIncomingCall (NSUuid uuid, string handle)
 
 This code creates a new `CXCallUpdate` instance and attaches a handle to it that will identify the caller. Next, it uses the `ReportNewIncomingCall` method of the `CXProvider` class to inform the system of the call. If it is successful, the call is added to the app's collection of active calls, if it isn't, the error needs to be reported to the user.
 
-### User Answering Incoming Call
+### User answering incoming call
 
 If the user wants to answer the incoming VOIP call, the following occurs:
 
@@ -814,7 +810,7 @@ public override void PerformAnswerCallAction (CXProvider provider, CXAnswerCallA
 
 This code first searches for the given call in its list of active calls. If the call can't be found, the system is notified and the method exits. If it is found, the `AnswerCall` method of the `ActiveCall` class is called to start the call and the System is information if it succeeds or fails.
 
-### User Ending Incoming Call
+### User ending incoming call
 
 If the user wishes to terminate the call from within the app's UI, the following occurs:
 
@@ -858,13 +854,13 @@ public override void PerformEndCallAction (CXProvider provider, CXEndCallAction 
 
 This code first searches for the given call in its list of active calls. If the call can't be found, the system is notified and the method exits. If it is found, the `EndCall` method of the `ActiveCall` class is called to end the call and the System is information if it succeeds or fails. If successful, the call is removed from the collection of active calls.
 
-## Managing Multiple Calls
+## Managing multiple calls
 
 Most VOIP apps can handle multiple calls at once. For example, if there is currently an active VOIP call and the app gets notification that a there is a new incoming call, the user can pause or hang-up on the first call to answer the second one.
 
 In the situation give above, the System will send a `CXTransaction` to the app that will include a list of multiple actions (such as the `CXEndCallAction` and the `CXAnswerCallAction`). All of these actions will need to be fulfilled individually, so that the System can update the UI appropriately.
 
-## Handling Outgoing Calls
+## Handling outgoing calls
 
 If the user taps an entry from the Recents list (in the Phone app), for example, that is from a call belonging to the app, it will be sent a _Start Call Intent_ by the system:
 
@@ -877,7 +873,7 @@ If the user taps an entry from the Recents list (in the Phone app), for example,
 
 For more information on Intents, please see our [Intents and Intents UI Extensions](~/ios/platform/sirikit/understanding-sirikit.md) documentation. 
 
-### The Outgoing Call Lifecycle
+### The outgoing call lifecycle
 
 When working with CallKit and an outgoing call, the app will need to inform the System of the following lifecycle events:
 
@@ -987,7 +983,7 @@ public override void PerformStartCallAction (CXProvider provider, CXStartCallAct
 
 It creates an instance of the `ActiveCall` class (to hold information about the call in progress) and populates with the person being called. The `StartingConnectionChanged` and `ConnectedChanged` events are used to monitor and report the outgoing call lifecycle. The call is started and the System informed that the Action was fulfilled.
 
-### Ending an Outgoing Call
+### Ending an outgoing call
 
 When the user has finished with an outgoing call and wishes to end it, the following code can be used:
 
@@ -1025,7 +1021,7 @@ public void EndCall (ActiveCall call)
 
 If creates a `CXEndCallAction` with the UUID of the call to end, bundles it in a `CXTransaction` that is sent to the System using the `RequestTransaction` method of the `CXCallController` class. 
 
-## Additional CallKit Details
+## Additional CallKit details
 
 This section will cover some additional details that the developer will need to take into consideration when working with CallKit such as:
 
@@ -1034,7 +1030,7 @@ This section will cover some additional details that the developer will need to 
 - System Restrictions
 - VOIP Audio
 
-### Provider Configuration
+### Provider configuration
 
 The provider configuration allows an iOS 10 VOIP app to customize the user experience (inside the native In-Call UI) when working with CallKit.
 
@@ -1044,7 +1040,7 @@ An app can make the following types of customizations:
 - Enable video call support.
 - Customize the buttons on the In-Call UI by presenting its own masked image icon. User interaction with custom buttons is sent directly to the app to be processed. 
 
-### Action Errors
+### Action errors
 
 iOS 10 VOIP apps using CallKit need to handle Actions failing gracefully and keep the user informed of the Action state at all times. 
 
@@ -1059,7 +1055,7 @@ Additionally, an iOS 10 VOIP app will need to respond to _Timeout Errors_ that c
 
 There are several methods on the Provider Delegate (`CXProviderDelegate`) that should be overridden to gracefully handle this Timeout situations as well.
 
-### System Restrictions
+### System restrictions
 
 Based on the current state of the iOS device running the iOS 10 VOIP app, certain system restrictions may be enforced.
 
@@ -1105,7 +1101,7 @@ public class ProviderDelegate : CXProviderDelegate
 }
 ```
 
-### VOIP Audio
+### VOIP audio
 
 CallKit provides several benefits for handling the audio resources that an iOS 10 VOIP app will require during a live VOIP call. One of the biggest benefits is the app's audio session will have elevated priorities when running in iOS 10. This is the same priority level as the built in Phone and FaceTime apps and this enhanced priority level will prevent other running apps from interrupting the VOIP app's audio session.
 
@@ -1120,11 +1116,11 @@ During the lifecycle of a typical VOIP call using CallKit, the app will need to 
 3. The app informs the System that the Action has been fulfilled.
 4. Before the call connects, CallKit provides a high-priority `AVAudioSession` matching the configuration that the app requested. The app will be notified via the `DidActivateAudioSession` method of its `CXProviderDelegate`.
 
-## Working with Call Directory Extensions
+## Working with call directory extensions
 
 When working with CallKit, _Call Directory Extensions_ provide a way to add blocked call numbers and identify numbers that are specific to a given VOIP app to contacts in the Contact app on the iOS device.
 
-### Implementing a Call Directory Extension
+### Implementing a Call directory extension
 
 To implement a Call Directory Extension in a Xamarin.iOS app, do the following:
 
@@ -1152,7 +1148,6 @@ To implement a Call Directory Extension in a Xamarin.iOS app, do the following:
 4. Enter a **Name** for the extension and click the **OK** button
 
 -----
-
 
 This will add a `CallDirectoryHandler.cs` class to the project that looks like the following:
 
@@ -1254,13 +1249,10 @@ To set the blocked numbers use the `AddBlockingEntry` method of the `CXCallDirec
 
 To inform to Contact app of the contact numbers known to the VOIP app, use the `AddIdentificationEntry` method of the `CXCallDirectoryExtensionContext` class and provide both the number and an identifying label. Again, the numbers provided to the method _must_ be in numerically ascending order. For optimal performance and memory usage when there are many phone numbers, consider only loading a subset of numbers at a given time and using autorelease pool(s) to release objects allocated during each batch of numbers which are loaded.
 
-
 ## Summary
 
 This article has covered the new CallKit API that Apple released in iOS 10 and how to implement it in Xamarin.iOS VOIP apps. It has shown how CallKit allows an app to integrate into the iOS System, how it provides feature parity with built-in apps (such as Phone) and how it increases an app's visibility throughout iOS in locations such as the Lock and Home Screens, via Siri interactions and via the Contacts apps.
 
-
-
-## Related Links
+## Related links
 
 - [iOS 10 Samples](https://developer.xamarin.com/samples/ios/iOS10/)
