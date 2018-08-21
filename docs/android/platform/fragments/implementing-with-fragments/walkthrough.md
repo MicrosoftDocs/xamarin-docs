@@ -6,9 +6,9 @@ ms.assetid: ED368FA9-A34E-DC39-D535-5C34C32B9761
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/26/2018
+ms.date: 08/21/2018
 ---
-# Fragments walkthrough &ndash; phone]
+# Fragments walkthrough &ndash; phone
 
 This is the first part of a walkthrough that will create a  Xamarin.Android app that targets an Android device in portrait orientation. This walkthrough will discuss how to create fragments in Xamarin.Android and how to add them to a sample.
 
@@ -69,7 +69,7 @@ class Shakespeare
                                         "Now is the winter of our discontent Made glorious summer by this sun of York; And all the clouds that lour'd upon our house In the deep bosom of the ocean buried. Now are our brows bound with victorious wreaths; Our bruised arms hung up for monuments; Our stern alarums changed to merry meetings, Our dreadful marches to delightful measures. Grim-visaged war hath smooth'd his wrinkled front; And now, instead of mounting barded steeds To fright the souls of fearful adversaries, He capers nimbly in a lady's chamber To the lascivious pleasing of a lute. But I, that am not shaped for sportive tricks, Nor made to court an amorous looking-glass; I, that am rudely stamp'd, and want love's majesty To strut before a wanton ambling nymph; I, that am curtail'd of this fair proportion, Cheated of feature by dissembling nature, Deformed, unfinish'd, sent before my time Into this breathing world, scarce half made up, And that so lamely and unfashionable That dogs bark at me as I halt by them; Why, I, in this weak piping time of peace, Have no delight to pass away the time, Unless to spy my shadow in the sun And descant on mine own deformity: And therefore, since I cannot prove a lover, To entertain these fair well-spoken days, I am determined to prove a villain And hate the idle pleasures of these days. Plots have I laid, inductions dangerous, By drunken prophecies, libels and dreams, To set my brother Clarence and the king In deadly hate the one against the other: And if King Edward be as true and just As I am subtle, false and treacherous, This day should Clarence closely be mew'd up, About a prophecy, which says that 'G' Of Edward's heirs the murderer shall be. Dive, thoughts, down to my soul: here Clarence comes.",
                                         "To bait fish withal: if it will feed nothing else, it will feed my revenge. He hath disgraced me, and hindered me half a million; laughed at my losses, mocked at my gains, scorned my nation, thwarted my bargains, cooled my friends, heated mine enemies; and what's his reason? I am a Jew. Hath not a Jew eyes? hath not a Jew hands, organs, dimensions, senses, affections, passions? fed with the same food, hurt with the same weapons, subject to the same diseases, healed by the same means, warmed and cooled by the same winter and summer, as a Christian is? If you prick us, do we not bleed? if you tickle us, do we not laugh? if you poison us, do we not die? and if you wrong us, shall we not revenge? If we are like you in the rest, we will resemble you in that. If a Jew wrong a Christian, what is his humility? Revenge. If a Christian wrong a Jew, what should his sufferance be by Christian example? Why, revenge. The villany you teach me, I will execute, and it shall go hard but I will better the instruction.",
                                         "Virtue! a fig! 'tis in ourselves that we are thus or thus. Our bodies are our gardens, to the which our wills are gardeners: so that if we will plant nettles, or sow lettuce, set hyssop and weed up thyme, supply it with one gender of herbs, or distract it with many, either to have it sterile with idleness, or manured with industry, why, the power and corrigible authority of this lies in our wills. If the balance of our lives had not one scale of reason to poise another of sensuality, the blood and baseness of our natures would conduct us to most preposterous conclusions: but we have reason to cool our raging motions, our carnal stings, our unbitted lusts, whereof I take this that you call love to be a sect or scion.",
-                                        "Blow, winds, and crack your cheeks! rage! blow! You cataracts and hurricanoes, spout Till you have drench'd our steeples, drown'd the cocks! You sulphurous and thought-executing fires, Vaunt-couriers to oak-cleaving thunderbolts, Singe my white head! And thou, all-shaking thunder, Smite flat the thick rotundity o' the world! Crack nature's moulds, an germens spill at once, That make ingrateful man!" 
+                                        "Blow, winds, and crack your cheeks! rage! blow! You cataracts and hurricanoes, spout Till you have drench'd our steeples, drown'd the cocks! You sulphurous and thought-executing fires, Vaunt-couriers to oak-cleaving thunderbolts, Singe my white head! And thou, all-shaking thunder, Smite flat the thick rotundity o' the world! Crack nature's moulds, an germens spill at once, That make ingrateful man!"
                                     };
 }
 ```
@@ -168,7 +168,7 @@ When `PlayQuoteActivity` is created, it will instantiate a new `PlayQuoteFragmen
 
 ## 5. Create TitlesFragment
 
-The `TitlesFragment` will subclass a specialized fragment known as a `ListFragment` which encapsulates the logic for displaying a `ListView` in a fragment. A `ListFragment` exposes a `ListAdapter` property (used by the `ListView` to display its contents) and an event handler named `OnListItemClick` which allows the fragment to respond to clicks on a row that is displayed by the `ListView`. 
+The `TitlesFragment` will subclass a specialized fragment known as a `ListFragment` which encapsulates the logic for displaying a `ListView` in a fragment. A `ListFragment` exposes a `ListAdapter` property (used by the `ListView` to display its contents) and an event handler named `OnListItemClick` which allows the fragment to respond to clicks on a row that is displayed by the `ListView`.
 
 To get started, add a new fragment to the project and name it **TitlesFragment**:
 
@@ -229,7 +229,7 @@ When the Activity is created Android will invoke the `OnActivityCreated` method 
 
 ## Display TitlesFragment in MainActivity
 
-The final step is to display `TitlesFragment` within `MainActivity`. The Activity does not dynamically load the fragment. Instead the fragment will be statically loaded by declaring it in the layout file of the activity using a `fragment` element. The fragment to load is identified by setting the `android:name` attribute to the fragment class (includeing the namespace of the type). For example, to use the `TitlesFragment`, then `android:name` would be set to `FragmentSample.TitlesFragment`.
+The final step is to display `TitlesFragment` within `MainActivity`. The Activity does not dynamically load the fragment. Instead the fragment will be statically loaded by declaring it in the layout file of the activity using a `fragment` element. The fragment to load is identified by setting the `android:name` attribute to the fragment class (including the namespace of the type). For example, to use the `TitlesFragment`, then `android:name` would be set to `FragmentSample.TitlesFragment`.
 
 Edit the layout file **activity_mail.axml**, replacing the existing XML with the following:
 
@@ -242,7 +242,7 @@ Edit the layout file **activity_mail.axml**, replacing the existing XML with the
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <fragment
-        android:name="FragmentSample.TitleFragment"
+        android:name="FragmentSample.TitlesFragment"
         android:id="@+id/titles"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
