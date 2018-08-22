@@ -1,17 +1,17 @@
 ---
 title: "Platform Features of Xamarin.Android"
-description: "Documents in this section cover features specific to Android. Here you'll find topics such as using Fragments, working with maps and encapsulating data with Content Providers."
+description: "Documents in this section cover features specific to Android. Here you'll find topics such as using Fragments, working with maps, and encapsulating data with Content Providers."
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/27/2018
+ms.date: 08/21/2018
 ---
 
 # Platform Features
 
-_Documents in this section cover features specific to Android. Here you'll find topics such as using Fragments, working with maps and encapsulating data with Content Providers._
+_Documents in this section cover features specific to Android. Here you'll find topics such as using Fragments, working with maps, and encapsulating data with Content Providers._
 
 ## [Android Beam](~/android/platform/android-beam.md)
 
@@ -53,12 +53,12 @@ and how to configure a website to grant permissions to the mobile app
 to handle app-links for the domain.
 
 
-##  [Android P Preview](~/android/platform/android-p.md)
+##  [Android 9 Pie](~/android/platform/pie.md)
 
-This article provides an outline of the new features in the Android P
-Preview, explains how to prepare Xamarin.Android for Android P
-development, and provides example code that illustrates how to use key
-Android P features in Xamarin.Android apps.
+This article provides an outline of the new features in Android Pie,
+explains how to prepare Xamarin.Android for Android Pie development,
+and provides an example app that illustrates how to use the new Android
+Pie display cutout and notification features in Xamarin.Android apps.
 
 
 ##  [Android 8 Oreo](~/android/platform/oreo.md)
@@ -72,7 +72,7 @@ Android Oreo features in Xamarin.Android apps.
 
 ##  [Android 7 Nougat](~/android/platform/nougat.md)
 
-This article provides a high level overview of the new features
+This article provides a high-level overview of the new features
 introduced in Android 7.0 Nougat.
 
 
@@ -80,7 +80,7 @@ introduced in Android 7.0 Nougat.
 
 ##  [Android 6 Marshmallow](~/android/platform/marshmallow.md)
 
-This article provides a high level overview of the new features
+This article provides a high-level overview of the new features
 introduced in Android 6.0 Marshmallow.
 
 
@@ -107,7 +107,7 @@ you make the most out of KitKat.
 
 ##  [Android 4.1 Jelly Bean](~/android/platform/jelly-bean.md)
 
-This document will provide a high level overview of the new features
+This document will provide a high-level overview of the new features
 for developers that were introduced in Android 4.1. These features
 include: enhanced notifications, updates to Android Beam to share large
 files, updates to multimedia, peer-to-peer network discovery,
@@ -126,7 +126,7 @@ between applications and between devices.
 
 ##  [Working with the Android Manifest](android-manifest.md)
 
-This article introducts the AndroidManifest.xml file, and how it maybe
+This article introduces the AndroidManifest.xml file, and how it maybe
 be used to control functionality and describe the requirements of a
 Mono for Android application.
 
@@ -135,13 +135,13 @@ Mono for Android application.
 
 A ContentProvider encapsulates a data repository and provides an API to
 access it. The provider exists as part of an Android application that
-usually also provides a UI for displaying/managing the data. The key
-benefit of using a content provider is enabling other applications to
-easily access the encapsulated data using a provider client object
-(called a ContentResolver). Together a content provider and content
-resolver offer a consistent inter-application API for data access that
-is simple to build and consume. This document shows how to access and
-build ContentProviders with Xamarin.Android.
+also provides a UI for displaying/managing the data. The key benefit of
+using a content provider is enabling other applications to easily
+access the encapsulated data using a provider client object (called a
+ContentResolver). Together a content provider and content resolver
+offer a consistent inter-application API for data access that is simple
+to build and consume. This document shows how to access and build
+ContentProviders with Xamarin.Android.
 
 
 

@@ -134,7 +134,7 @@
 #### [Specialized Fragment Classes](platform/fragments/specialized-fragment-classes.md)
 #### [Providing Backwards Compatibility](platform/fragments/providing-backwards-compatibility.md)
 ### [App Linking](platform/app-linking.md)
-### [Android P Preview](platform/android-p.md)
+### [Android 9 Pie](platform/pie.md)
 ### [Android 8 Oreo](platform/oreo.md)
 ### [Android 7 Nougat](platform/nougat.md)
 ### [Android 6 Marshmallow](platform/marshmallow.md)
