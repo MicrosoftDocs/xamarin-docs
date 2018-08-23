@@ -8,8 +8,7 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
 ---
-
-# ARKit 2 in Xamarin.iOS 
+# ARKit 2 in Xamarin.iOS
 
 ![Preview](~/media/shared/preview.png)
 
@@ -22,7 +21,7 @@ ms.date: 08/22/2018
 ARKit has matured considerably since its introduction last year in iOS 11. First and foremost, you can now detect vertical as well as horizontal planes, which greatly improves the practicality of indoor augmented reality experiences. In addition, there are new capabilities:
 
 * Recognizing reference images and objects as the junction between the real world and digital imagery
-* A new lighting mode that simulates real-world lighting 
+* A new lighting mode that simulates real-world lighting
 * The ability to share and persist AR environments
 * A new file format preferred for storing AR content
 
@@ -40,7 +39,7 @@ The [Scanning and Detecting 3D Objects](https://github.com/xamarin/ios-samples/t
 * Object scanning
 * Storing an [`ARReferenceObject`](https://developer.xamarin.com/api/type/ARKit.ARReferenceObject/)
 
-Scanning a reference object is battery- and processor- intensive and older devices will often have trouble achieving stable tracking. 
+Scanning a reference object is battery- and processor- intensive and older devices will often have trouble achieving stable tracking.
 
 ### State management using NSNotification objects
 
@@ -51,14 +50,14 @@ This application uses a state machine that transitions between the following sta
 * `AppState.Scanning`
 * `AppState.Testing`
 
-And additionally uses an embedded set of states and transitions when in `AppState.Scanning` : 
+And additionally uses an embedded set of states and transitions when in `AppState.Scanning`:
 
 * `Scan.ScanState.Ready`
 * `Scan.ScanState.DefineBoundingBox`
 * `Scan.ScanState.Scanning`
 * `Scan.ScanState.AdjustingOrigin`
 
-The app uses a reactive architecture that posts state-transition notifications to [`NSNotificationCenter`](https://developer.xamarin.com/api/type/Foundation.NSNotificationCenter/) and subscribes to these notifications. The setup looks like this snippet from `ViewController.cs` :
+The app uses a reactive architecture that posts state-transition notifications to [`NSNotificationCenter`](https://developer.xamarin.com/api/type/Foundation.NSNotificationCenter/) and subscribes to these notifications. The setup looks like this snippet from `ViewController.cs`:
 
 ```csharp
 // Configure notifications for application state changes
@@ -81,21 +80,21 @@ A typical notification handler will update the UI and possibly modify the applic
 ```csharp
 private void ScanPercentageChanged(NSNotification notification)
 {
-	var pctNum = TryGet<NSNumber>(notification.UserInfo, BoundingBox.ScanPercentageUserKey);
-	if (pctNum == null)
-	{
-		return;
-	}
-	double percentage = pctNum.DoubleValue;
-	// Switch to the next state if scan is complete
-	if (percentage >= 100.0)
-	{
-		State.SwitchToNextState();
-	}
-	else
-	{
-		DispatchQueue.MainQueue.DispatchAsync(() => navigationBarController.SetNavigationBarTitle($"Scan ({percentage})"));
-	}
+    var pctNum = TryGet<NSNumber>(notification.UserInfo, BoundingBox.ScanPercentageUserKey);
+    if (pctNum == null)
+    {
+        return;
+    }
+    double percentage = pctNum.DoubleValue;
+    // Switch to the next state if scan is complete
+    if (percentage >= 100.0)
+    {
+        State.SwitchToNextState();
+    }
+    else
+    {
+        DispatchQueue.MainQueue.DispatchAsync(() => navigationBarController.SetNavigationBarTitle($"Scan ({percentage})"));
+    }
 }
 
 ```
@@ -105,22 +104,22 @@ Finally, `Enter{State}` methods modify the model and UX as appropriate to the ne
 ```csharp
 internal void EnterStateTesting()
 {
-	navigationBarController.SetNavigationBarTitle("Testing");
-	navigationBarController.ShowBackButton(false);
-	loadModelButton.Hidden = true;
-	flashlightButton.Hidden = false;
-	nextButton.Enabled = true;
-	nextButton.SetTitle("Share", UIControlState.Normal);
+    navigationBarController.SetNavigationBarTitle("Testing");
+    navigationBarController.ShowBackButton(false);
+    loadModelButton.Hidden = true;
+    flashlightButton.Hidden = false;
+    nextButton.Enabled = true;
+    nextButton.SetTitle("Share", UIControlState.Normal);
 
-	testRun = new TestRun(sessionInfo, sceneView);
-	TestObjectDetection();
-	CancelMaxScanTimeTimer();
+    testRun = new TestRun(sessionInfo, sceneView);
+    TestObjectDetection();
+    CancelMaxScanTimeTimer();
 }
-``` 
+```
 
 ### Custom visualization
 
-The app shows the low-level “point cloud” of the object contained within a bounding box projected onto a detected horizontal plane. 
+The app shows the low-level “point cloud” of the object contained within a bounding box projected onto a detected horizontal plane.
 
 This point cloud is available to developers in the [`ARFrame.RawFeaturePoints`](https://developer.xamarin.com/api/property/ARKit.ARFrame.RawFeaturePoints/) property. Visualizing the point cloud efficiently can be a tricky problem. Iterating over the points, then creating and placing a new SceneKit node for each point would kill the frame rate. Alternatively, if done asynchronously, there would be a lag. The sample maintains performance with a three-part strategy:
 
@@ -191,104 +190,104 @@ First, all of the gesture recognizers only activate after a threshold has been p
 // A custom rotation gesture recognizer that fires only when a threshold is passed
 internal partial class ThresholdRotationGestureRecognizer : UIRotationGestureRecognizer
 {
-	// The threshold after which this gesture is detected. 
-	const double threshold = Math.PI / 15; // (12°)
+    // The threshold after which this gesture is detected. 
+    const double threshold = Math.PI / 15; // (12°)
 
-	// Indicates whether the currently active gesture has exceeded the threshold
-	private bool thresholdExceeded = false;
+    // Indicates whether the currently active gesture has exceeded the threshold
+    private bool thresholdExceeded = false;
 
-	private double previousRotation = 0;
-	internal double RotationDelta { get; private set; }
+    private double previousRotation = 0;
+    internal double RotationDelta { get; private set; }
 
-	internal ThresholdRotationGestureRecognizer(IntPtr handle) : base(handle)
-	{
-	}
+    internal ThresholdRotationGestureRecognizer(IntPtr handle) : base(handle)
+    {
+    }
 
-	// Observe when the gesture's state changes to reset the threshold
-	public override UIGestureRecognizerState State
-	{
-		get => base.State;
-		set
-		{
-			base.State = value;
+    // Observe when the gesture's state changes to reset the threshold
+    public override UIGestureRecognizerState State
+    {
+        get => base.State;
+        set
+        {
+            base.State = value;
 
-			switch(value)
-			{
-				case UIGestureRecognizerState.Began :
-				case UIGestureRecognizerState.Changed :
-					break;
-				default :
-					// Reset threshold check
-					thresholdExceeded = false;
-					previousRotation = 0;
-					RotationDelta = 0;
-					break;
-			}
-		}
-	}
+            switch(value)
+            {
+                case UIGestureRecognizerState.Began :
+                case UIGestureRecognizerState.Changed :
+                    break;
+                default :
+                    // Reset threshold check
+                    thresholdExceeded = false;
+                    previousRotation = 0;
+                    RotationDelta = 0;
+                    break;
+            }
+        }
+    }
 
-	public override void TouchesMoved(NSSet touches, UIEvent evt)
-	{
-		base.TouchesMoved(touches, evt);
+    public override void TouchesMoved(NSSet touches, UIEvent evt)
+    {
+        base.TouchesMoved(touches, evt);
 
-		if (thresholdExceeded)
-		{
-			RotationDelta = Rotation - previousRotation;
-			previousRotation = Rotation;
-		}
+        if (thresholdExceeded)
+        {
+            RotationDelta = Rotation - previousRotation;
+            previousRotation = Rotation;
+        }
 
-		if (! thresholdExceeded && Math.Abs(Rotation) > threshold)
-		{
-			thresholdExceeded = true;
-			previousRotation = Rotation;
-		}
-	}
+        if (! thresholdExceeded && Math.Abs(Rotation) > threshold)
+        {
+            thresholdExceeded = true;
+            previousRotation = Rotation;
+        }
+    }
 }
 ```
 
-The second interesting thing being done in relation to gestures is the way that the bounding box is moved in relation to detected real-world planes. This aspect is discussed in [this Xamarin blog post](https://blog.xamarin.com/exploring-new-ios-12-arkit-capabilities-with-xamarin/). 
+The second interesting thing being done in relation to gestures is the way that the bounding box is moved in relation to detected real-world planes. This aspect is discussed in [this Xamarin blog post](https://blog.xamarin.com/exploring-new-ios-12-arkit-capabilities-with-xamarin/).
 
 ## Other new features in ARKit 2
 
-### More tracking configurations 
+### More tracking configurations
 
 Now, you can use any of the following as the basis for a mixed-reality experience:
 
 * Only the device accelerometer ([`AROrientationTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.AROrientationTrackingConfiguration/) : iOS 11)
-* Faces ([`ARFaceTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARFaceConfiguration/) : iOS 11) 
+* Faces ([`ARFaceTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARFaceConfiguration/) : iOS 11)
 * Reference Images ([`ARImageTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARImageTrackingConfiguration/) : iOS 12)
 * Scanning 3D objects ([`ARObjectScanningConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARObjectScanningConfiguration/) : iOS 12)
 * Visual inertial odometry ([`ARWorldTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARWorldTrackingConfiguration/) : improved in iOS 12)
 
-`AROrientationTrackingConfiguration`, discussed in [this blog post and F# sample](https://github.com/lobrien/FSharp_Face_AR), is the most limited and provides a poor mixed-reality experience, as it only places digital objects in relation to the device's motion, without trying to tie the device and screen into the real world. 
+`AROrientationTrackingConfiguration`, discussed in [this blog post and F# sample](https://github.com/lobrien/FSharp_Face_AR), is the most limited and provides a poor mixed-reality experience, as it only places digital objects in relation to the device's motion, without trying to tie the device and screen into the real world.
 
-The `ARImageTrackingConfiguration` allows you to recognize real-world 2D images (paintings, logos, etc.) and use those to anchor digital imagery: 
+The `ARImageTrackingConfiguration` allows you to recognize real-world 2D images (paintings, logos, etc.) and use those to anchor digital imagery:
 
 ```csharp
 var imagesAndWidths = new[] {
-	("cover1.jpg", 0.185F),
-	("cover2.jpg", 0.185F), 
-	 //...etc...
-	("cover100.jpg", 0.185F), 
+    ("cover1.jpg", 0.185F),
+    ("cover2.jpg", 0.185F),
+     //...etc...
+    ("cover100.jpg", 0.185F),
 };
 
 var referenceImages = new NSSet<ARReferenceImage>(
-	imagesAndWidths.Select( imageAndWidth =>
-	{
-	  // Tuples cannot be destructured in lambda arguments
-		var (image, width) = imageAndWidth;
-		// Read the image
-		var img = UIImage.FromFile(image).CGImage;
-		return new ARReferenceImage(img, ImageIO.CGImagePropertyOrientation.Up, width);
-	}).ToArray());
+    imagesAndWidths.Select( imageAndWidth =>
+    {
+      // Tuples cannot be destructured in lambda arguments
+        var (image, width) = imageAndWidth;
+        // Read the image
+        var img = UIImage.FromFile(image).CGImage;
+        return new ARReferenceImage(img, ImageIO.CGImagePropertyOrientation.Up, width);
+    }).ToArray());
 
 configuration.TrackingImages = referenceImages;
 ```
 
-There are two interesting aspects to this configuration: 
+There are two interesting aspects to this configuration:
 
 * It's efficient and can be used with a potentially large number of reference images
-* The digital imagery is anchored to the image, even if that image moves in the real world (e.g., if the cover of a book is recognized, it will track the book as it is pulled off the shelf, laid down, etc.). 
+* The digital imagery is anchored to the image, even if that image moves in the real world (e.g., if the cover of a book is recognized, it will track the book as it is pulled off the shelf, laid down, etc.).
 
 The `ARObjectScanningConfiguration` was discussed [previously](#recognizing-reference-objects) and is a developer-centric configuration for scanning 3D objects. It is highly processor and battery intensive and should not be used in end-user applications. The sample [Scanning and Detecting 3D Objects](https://github.com/xamarin/ios-samples/tree/master/ios12/ScanningAndDetecting3DObjects) demonstrates the use of this configuration. 
 
@@ -296,14 +295,14 @@ The final tracking configuration, `ARWorldTrackingConfiguration` , is the workho
 
 ### Environmental texturing
 
-ARKit 2 supports "environmental texturing" that uses captured imagery to estimate lighting and even apply specular highlights to shiny objects. The environmental cubemap is built up dynamically and, once the camera has looked in all directions, can produce an impressively realistic experience: 
+ARKit 2 supports "environmental texturing" that uses captured imagery to estimate lighting and even apply specular highlights to shiny objects. The environmental cubemap is built up dynamically and, once the camera has looked in all directions, can produce an impressively realistic experience:
 
 ![environmental texturing demo image](images/arkit_env_texturing.png)
 
 In order to use environmental texturing:
 
 * Your [`SCNMaterial`](https://developer.xamarin.com/api/type/SceneKit.SCNMaterial/) objects must use [`SCNLightingModel.PhysicallyBased`](https://developer.xamarin.com/api/property/SceneKit.SCNLightingModel.PhysicallyBased/) and assign a value in the range of 0 to 1 for [`Metalness.Contents`](https://developer.xamarin.com/api/property/SceneKit.SCNMaterial.Metalness/) and [`Roughness.Contents`](https://developer.xamarin.com/api/property/SceneKit.SCNMaterialProperty.Contents/) and
-* Your tracking configuration must set [`EnvironmentTexturing`](https://developer.xamarin.com/api/property/ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing/) = [AREnvironmentTexturing.Automatic`](https://developer.xamarin.com/api/field/ARKit.AREnvironmentTexturing.Automatic/) : 
+* Your tracking configuration must set [`EnvironmentTexturing`](https://developer.xamarin.com/api/property/ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing/) = [AREnvironmentTexturing.Automatic`](https://developer.xamarin.com/api/field/ARKit.AREnvironmentTexturing.Automatic/) :
 
 ```csharp
 var sphere = SCNSphere.Create(0.33F);
@@ -315,9 +314,9 @@ sphere.FirstMaterial.Roughness.Contents = new NSNumber(0.0F);
 // Session configuration:
 var configuration = new ARWorldTrackingConfiguration
 {
-	PlaneDetection = ARPlaneDetection.Horizontal | ARPlaneDetection.Vertical,
-	LightEstimationEnabled = true,
-	EnvironmentTexturing = AREnvironmentTexturing.Automatic
+    PlaneDetection = ARPlaneDetection.Horizontal | ARPlaneDetection.Vertical,
+    LightEstimationEnabled = true,
+    EnvironmentTexturing = AREnvironmentTexturing.Automatic
 };
 ```
 
@@ -336,19 +335,19 @@ var PersistentWorldPath => Environment.GetFolderPath(Environment.SpecialFolder.P
 var worldMap = await Session.GetCurrentWorldMapAsync();
 if (worldMap != null)
 {
-	var data = NSKeyedArchiver.ArchivedDataWithRootObject(worldMap, true, out var err);
-	if (err != null)
-	{
-		Console.WriteLine(err);
-	}
-	File.WriteAllBytes(PersistentWorldPath, data.ToArray());
+    var data = NSKeyedArchiver.ArchivedDataWithRootObject(worldMap, true, out var err);
+    if (err != null)
+    {
+        Console.WriteLine(err);
+    }
+    File.WriteAllBytes(PersistentWorldPath, data.ToArray());
 }
 ```
 
 To share or restore the world map:
 
-1. Load the data from the file, 
-2. Unarchive it into an `ARWorldMap` object, 
+1. Load the data from the file,
+2. Unarchive it into an `ARWorldMap` object,
 3. Use that as the value for the [`ARWorldTrackingConfiguration.InitialWorldMap`](https://developer.xamarin.com/api/property/ARKit.ARWorldTrackingConfiguration.InitialWorldMap/) property :
 
 ```csharp
@@ -357,10 +356,10 @@ var worldMap = (ARWorldMap)NSKeyedUnarchiver.GetUnarchivedObject(typeof(ARWorldM
 
 var configuration = new ARWorldTrackingConfiguration
 {
-	PlaneDetection = ARPlaneDetection.Horizontal | ARPlaneDetection.Vertical,
-	LightEstimationEnabled = true,
-	EnvironmentTexturing = AREnvironmentTexturing.Automatic,
-	InitialWorldMap = worldMap
+    PlaneDetection = ARPlaneDetection.Horizontal | ARPlaneDetection.Vertical,
+    LightEstimationEnabled = true,
+    EnvironmentTexturing = AREnvironmentTexturing.Automatic,
+    InitialWorldMap = worldMap
 };
 ```
 
@@ -368,7 +367,7 @@ The `ARWorldMap` only contains non-visible world-tracking data and the [`ARAncho
 
 ### Universal Scene Description file format
 
-The final headline feature of ARKit 2 is Apple's adoption of Pixar's [Universal Scene Description](https://graphics.pixar.com/usd/docs/Introduction-to-USD.html) file format. This format replaces Collada's DAE format as the preferred format for sharing and storing ARKit assets. Support for visualizing assets is built into iOS 12 and Mojave. The USDZ file extension is an uncompressed and unencrypted zip archive containing USD files. Pixar [provides tools for working with USD files](https://graphics.pixar.com/usd/docs/USD-Toolset.html#USDToolset-usdedit) but there is not yet a lot of third-party support. 
+The final headline feature of ARKit 2 is Apple's adoption of Pixar's [Universal Scene Description](https://graphics.pixar.com/usd/docs/Introduction-to-USD.html) file format. This format replaces Collada's DAE format as the preferred format for sharing and storing ARKit assets. Support for visualizing assets is built into iOS 12 and Mojave. The USDZ file extension is an uncompressed and unencrypted zip archive containing USD files. Pixar [provides tools for working with USD files](https://graphics.pixar.com/usd/docs/USD-Toolset.html#USDToolset-usdedit) but there is not yet a lot of third-party support.
 
 ## ARKit programming tips
 
@@ -382,7 +381,7 @@ All objects derived from `NSObject` are `IDisposable` and `NSObject` implements 
 
 In any 3D application, you're going to be dealing with 4x4 transformation matrices that compactly describe how to move, rotate, and shear an object through 3D space. In SceneKit, these are [`SCNMatrix4`](https://developer.xamarin.com/api/type/SceneKit.SCNMatrix4/) objects.  
 
-The [`SCNNode.Transform`](https://developer.xamarin.com/api/property/SceneKit.SCNNode.Transform/) property returns the `SCNMatrix4` transform matrix for the [`SCNNode`](https://developer.xamarin.com/api/type/SceneKit.SCNNode/) _as backed by_ the row-major `simdfloat4x4` type. So, for instance: 
+The [`SCNNode.Transform`](https://developer.xamarin.com/api/property/SceneKit.SCNNode.Transform/) property returns the `SCNMatrix4` transform matrix for the [`SCNNode`](https://developer.xamarin.com/api/type/SceneKit.SCNNode/) _as backed by_ the row-major `simdfloat4x4` type. So, for instance:
 
 ```csharp
 var node = new SCNNode { Position = new SCNVector3(2, 3, 4) };  
@@ -397,13 +396,11 @@ In Xamarin, the common type for manipulating transformation matrices is `NVector
 
 ![row-major vs column-major](images/arkit_row_vs_column.png)
 
-Being consistent with the choice of matrix interpretation is vital to proper behavior. Since 3D transform matrices are 4x4, consistency mistakes will not produce any kind of compile-time or even run-time exception — it's just that operations will act unexpectedly. If your SceneKit / ARKit objects seem to be stuck, fly away, or jitter, an incorrect transform matrix is a good possibility. The solution is simple: [`NMatrix4.Transpose`](https://developer.xamarin.com/api/member/OpenTK.NMatrix4.Transpose) will perform an in-place transposition of elements. 
+Being consistent with the choice of matrix interpretation is vital to proper behavior. Since 3D transform matrices are 4x4, consistency mistakes will not produce any kind of compile-time or even run-time exception — it's just that operations will act unexpectedly. If your SceneKit / ARKit objects seem to be stuck, fly away, or jitter, an incorrect transform matrix is a good possibility. The solution is simple: [`NMatrix4.Transpose`](https://developer.xamarin.com/api/member/OpenTK.NMatrix4.Transpose) will perform an in-place transposition of elements.
 
 ## Related links
 
-- [Sample app – Scanning and Detecting 3D Objects](https://developer.xamarin.com/samples/monotouch/iOS12/ScanningAndDetecting3DObjects/) 
+- [Sample app – Scanning and Detecting 3D Objects](https://developer.xamarin.com/samples/monotouch/iOS12/ScanningAndDetecting3DObjects/)
 - [What's new in ARKit 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/602/)
 - [Understanding ARKit Tracking and Detection (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/610/)
 - [Introduction to ARKit in Xamarin.iOS](https://docs.microsoft.com/en-us/xamarin/ios/platform/introduction-to-ios11/arkit/)
-
-
