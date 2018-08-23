@@ -27,7 +27,7 @@ The XAML Previewer is on by default and can be controlled from the **Tools > Opt
 
 [![ListView control preview in Visual Studio](xaml-previewer-images/xamlp-options-vs.png "Forms Previewer Options in Visual Studio")](xaml-previewer-images/xamlp-options-vs.png#lightbox "Forms Previewer Options in Visual Studio")
 
-When opening a XAML page the editor will be split based on the settings selected in the **Tools > Options > Xamarin > Forms Previewer** dialog. However, these preferences can be changed in the editor window.
+When opening a XAML page the editor will split based on the settings selected in the **Tools > Options > Xamarin > Forms Previewer** dialog. However, these preferences can be changed in the editor window.
 
 ## XAML Preview Controls
 
@@ -41,7 +41,7 @@ The bottom of the editor window has buttons to vertically and horizontally split
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-The **Preview** button is displayed on the editor when you open a XAML file. The preview pane can be shown or hidden by pressing the **Preview** button in the top-right corner of any XAML document window:
+The **Preview** button is displayed on the editor when you open a XAML page. The preview pane can be shown or hidden by pressing the **Preview** button in the top-right corner of any XAML document window:
 
 [![ListView control preview in Visual Studio for Mac](xaml-previewer-images/xamlp-list-sml.png "Forms Previewer in Visual Studio for Mac")](xaml-previewer-images/xamlp-list.png#lightbox "Forms Previewer in Visual Studio for Mac")
 
