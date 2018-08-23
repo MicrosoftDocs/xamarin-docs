@@ -23,15 +23,25 @@ There is more information in the [release notes](https://developer.xamarin.com/r
 
 # [Visual Studio](#tab/vswin)
 
-Use the **View > Other Windows > Xamarin.Forms Previewer** menu in Visual Studio
-to open the preview window. Use the **Window > New Vertical Tab Group**
-menu to position it side-by-side.
+The XAML Previewer is on by default and can be controlled from the **Tools > Options > Xamarin > Forms Previewer** dialog. In this dialog you can select the default document view and the split orientation.
 
-[![ListView control preview in Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "Forms Previewer in Visual Studio")](xaml-previewer-images/xamlp-list-vs.png#lightbox "Forms Previewer in Visual Studio")
+[![ListView control preview in Visual Studio](xaml-previewer-images/xamlp-options-vs.png "Forms Previewer Options in Visual Studio")](xaml-previewer-images/xamlp-options-vs.png#lightbox "Forms Previewer Options in Visual Studio")
+
+When opening a XAML page the editor will split based on the settings selected in the **Tools > Options > Xamarin > Forms Previewer** dialog. However, these preferences can be changed in the editor window.
+
+## XAML Preview Controls
+
+The top of the editor window has buttons to select which pane is in use, with the top button switching to the design pane and the bottom button switching to the source pane. The middle button swaps the pane order.
+
+[![ListView control preview in Visual Studio](xaml-previewer-images/xamlp-controls-vs.png "Forms Previewer Pane controls in Visual Studio")](xaml-previewer-images/xamlp-controls-vs.png#lightbox "Forms Previewer Pane controls in Visual Studio")
+
+The bottom of the editor window has buttons to vertically and horizontally split the panes, and to expand or collapse the current sub-pane.
+
+[![ListView control preview in Visual Studio](xaml-previewer-images/xamlp-controls2-vs.png "Forms Previewer Pane controls in Visual Studio")](xaml-previewer-images/xamlp-controls2-vs.png#lightbox "Forms Previewer Pane controls in Visual Studio")
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-The **Preview** button can be displayed on the editor by right-clicking a XAML file, and selecting **Open With > Forms Previewer**. The preview pane can then be shown or hidden by pressing the **Preview** button in the top-right corner of any XAML document window:
+The **Preview** button is displayed on the editor when you open a XAML page. The preview pane can be shown or hidden by pressing the **Preview** button in the top-right corner of any XAML document window:
 
 [![ListView control preview in Visual Studio for Mac](xaml-previewer-images/xamlp-list-sml.png "Forms Previewer in Visual Studio for Mac")](xaml-previewer-images/xamlp-list.png#lightbox "Forms Previewer in Visual Studio for Mac")
 
@@ -80,6 +90,7 @@ Check the following:
 * Project should be built (compiled) before attempting to preview XAML files.
 * The Designer Agent must be set-up the first time you preview a XAML file - a progress indicator will appear in the Previewer, along with progress messages, until this is ready.
 * Try closing and re-opening the XAML file.
+* Ensure that your `App` class has a parameterless constructor.
 
 ### Invalid XAML: The Android project needs to built before preview can be created
 
