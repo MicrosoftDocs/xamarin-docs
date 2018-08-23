@@ -31,7 +31,7 @@ When opening a XAML page the editor will be split based on the settings selected
 
 ## XAML Preview Controls
 
-The top of the editor window has buttons to select which pan is in use, with the top button switching to the design pane and the bottom button switching to the source pane.
+The top of the editor window has buttons to select which pane is in use, with the top button switching to the design pane and the bottom button switching to the source pane. The middle button swaps the pane order.
 
 [![ListView control preview in Visual Studio](xaml-previewer-images/xamlp-controls-vs.png "Forms Previewer Pane controls in Visual Studio")](xaml-previewer-images/xamlp-controls-vs.png#lightbox "Forms Previewer Pane controls in Visual Studio")
 
