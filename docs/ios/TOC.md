@@ -103,6 +103,7 @@
 ## [Platform Features](platform/index.md)
 ### [Introduction to iOS 12](platform/introduction-to-ios12/index.md)
 #### [Getting Started](platform/introduction-to-ios12/get-started.md)
+#### [ARKit 2](platform/introduction-to-ios12/arkit2.md)
 #### [Siri Shortcuts](platform/introduction-to-ios12/siri-shortcuts.md)
 #### [Core ML 2](platform/introduction-to-ios12/coreml.md)
 #### [Natural Language](platform/introduction-to-ios12/natural-language.md)
