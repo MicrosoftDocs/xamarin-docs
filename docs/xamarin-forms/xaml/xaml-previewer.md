@@ -23,19 +23,19 @@ There is more information in the [release notes](https://developer.xamarin.com/r
 
 # [Visual Studio](#tab/vswin)
 
-XAML Previewer is now on by default and as of 15.8.0 can be controlled from the **Tools > Options > Xamarin > Forms Previewer** in here you can select Default view and Split Orientation.
+The XAML Previewer is on by default can be controlled from the **Tools > Options > Xamarin > Forms Previewer** dialog. In this dialog you can select the default documnet view and the split orientation:
 
 [![ListView control preview in Visual Studio](xaml-previewer-images/xamlp-options-vs.png "Forms Previewer Options in Visual Studio")](xaml-previewer-images/xamlp-options-vs.png#lightbox "Forms Previewer Options in Visual Studio")
 
-When you open a XAML page to edit the screen will be split according the settings you select in the **Tools > Options** but you can change these during design time using the small controls between the panes.
+When opening a XAML page the editor will be split based on the settings selected in the **Tools > Options > Xamarin > Forms Previewer** dialog. However, these preferences can be changed in the editor window.
 
 ## XAML Preview Controls
 
-At the top you have the ability to select which pane is in use and this automatcially switches when you click into the pane.  The middle selection switches the panes.
+The top of the editor window has buttons to select which pan is in use, with the top button switching to the design pane and the bottom button switching to the source pane.
 
 [![ListView control preview in Visual Studio](xaml-previewer-images/xamlp-controls-vs.png "Forms Previewer Pane controls in Visual Studio")](xaml-previewer-images/xamlp-controls-vs.png#lightbox "Forms Previewer Pane controls in Visual Studio")
 
-At the bottom you have the ability to switch the split of the panes between Horizontal and Vertical and also collapse the current sub-pane.
+The bottom of the editor window has buttons to vertically and horizontally split the panes, and to expand or collapse the current sub-pane.
 
 [![ListView control preview in Visual Studio](xaml-previewer-images/xamlp-controls2-vs.png "Forms Previewer Pane controls in Visual Studio")](xaml-previewer-images/xamlp-controls2-vs.png#lightbox "Forms Previewer Pane controls in Visual Studio")
 
