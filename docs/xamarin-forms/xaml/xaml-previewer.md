@@ -23,7 +23,7 @@ There is more information in the [release notes](https://developer.xamarin.com/r
 
 # [Visual Studio](#tab/vswin)
 
-The XAML Previewer is on by default can be controlled from the **Tools > Options > Xamarin > Forms Previewer** dialog. In this dialog you can select the default documnet view and the split orientation:
+The XAML Previewer is on by default can be controlled from the **Tools > Options > Xamarin > Forms Previewer** dialog. In this dialog you can select the default documnet view and the split orientation.
 
 [![ListView control preview in Visual Studio](xaml-previewer-images/xamlp-options-vs.png "Forms Previewer Options in Visual Studio")](xaml-previewer-images/xamlp-options-vs.png#lightbox "Forms Previewer Options in Visual Studio")
 
@@ -90,6 +90,7 @@ Check the following:
 * Project should be built (compiled) before attempting to preview XAML files.
 * The Designer Agent must be set-up the first time you preview a XAML file - a progress indicator will appear in the Previewer, along with progress messages, until this is ready.
 * Try closing and re-opening the XAML file.
+* Ensure that your `App` class has a parameterless constructor.
 
 ### Invalid XAML: The Android project needs to built before preview can be created
 
