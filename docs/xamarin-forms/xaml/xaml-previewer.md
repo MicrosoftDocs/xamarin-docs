@@ -23,7 +23,7 @@ There is more information in the [release notes](https://developer.xamarin.com/r
 
 # [Visual Studio](#tab/vswin)
 
-The XAML Previewer is on by default can be controlled from the **Tools > Options > Xamarin > Forms Previewer** dialog. In this dialog you can select the default documnet view and the split orientation.
+The XAML Previewer is on by default and can be controlled from the **Tools > Options > Xamarin > Forms Previewer** dialog. In this dialog you can select the default document view and the split orientation.
 
 [![ListView control preview in Visual Studio](xaml-previewer-images/xamlp-options-vs.png "Forms Previewer Options in Visual Studio")](xaml-previewer-images/xamlp-options-vs.png#lightbox "Forms Previewer Options in Visual Studio")
 
