@@ -4,8 +4,8 @@ description: "This document describes updates to ARKit in iOS 12. It focuses on 
 ms.prod: xamarin
 ms.assetid: af758092-1523-4ab7-aa53-c37a81fb156a
 ms.technology: xamarin-ios
-author: larryobrien
-ms.author: lobrien
+author: lobrien
+ms.author: laobri
 ms.date: 08/22/2018
 ---
 
