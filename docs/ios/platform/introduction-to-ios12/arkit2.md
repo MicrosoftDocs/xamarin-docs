@@ -27,11 +27,11 @@ ARKit has matured considerably since its introduction last year in iOS 11. First
 
 ## Recognizing reference objects
 
-One showcase feature in ARKit 2 is the ability to recognize reference images and objects. Reference images can be loaded from normal image files ([discussed later](#more-tracking-configurations), but reference objects must be scanned, using the developer-focused [`ARObjectScanningConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARObjectScanningConfiguration/).
+One showcase feature in ARKit 2 is the ability to recognize reference images and objects. Reference images can be loaded from normal image files ([discussed later](#more-tracking-configurations)), but reference objects must be scanned, using the developer-focused [`ARObjectScanningConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARObjectScanningConfiguration/).
 
 ### Sample app: Scanning and detecting 3D objects
 
-The [Scanning and Detecting 3D Objects](https://github.com/xamarin/ios-samples/tree/master/ios12/ScanningAndDetecting3DObjects) sample is a port of an [Apple project](https://developer.apple.com/documentation/arkit/scanning_and_detecting_3d_objects?language=objc) that demonstrates:
+The [Scanning and Detecting 3D Objects](https://developer.xamarin.com/samples/monotouch/ios12/ScanningAndDetecting3DObjects/) sample is a port of an [Apple project](https://developer.apple.com/documentation/arkit/scanning_and_detecting_3d_objects?language=objc) that demonstrates:
 
 * Application state management using [`NSNotification`](https://developer.xamarin.com/api/type/Foundation.NSNotification/) objects
 * Custom visualization
@@ -184,7 +184,7 @@ The result looks like this:
 
 The user can scale, rotate, and drag the bounding box that surrounds the target object. There are two interesting things in the associated gesture recognizers.
 
-First, all of the gesture recognizers only activate after a threshold has been passed; for example, a finger has dragged so many pixels or the rotation exceeds some angle. The technique for this is straightforward: accumulate the move until the threshold is exceeded, then apply the move incrementally:
+First, all of the gesture recognizers activate only after a threshold has been passed; for example, a finger has dragged so many pixels or the rotation exceeds some angle. The technique is to accumulate the move until the threshold has been exceeded, then apply it incrementally:
 
 ```csharp
 // A custom rotation gesture recognizer that fires only when a threshold is passed
@@ -253,11 +253,11 @@ The second interesting thing being done in relation to gestures is the way that 
 
 Now, you can use any of the following as the basis for a mixed-reality experience:
 
-* Only the device accelerometer ([`AROrientationTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.AROrientationTrackingConfiguration/) : iOS 11)
-* Faces ([`ARFaceTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARFaceConfiguration/) : iOS 11)
-* Reference Images ([`ARImageTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARImageTrackingConfiguration/) : iOS 12)
-* Scanning 3D objects ([`ARObjectScanningConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARObjectScanningConfiguration/) : iOS 12)
-* Visual inertial odometry ([`ARWorldTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARWorldTrackingConfiguration/) : improved in iOS 12)
+* Only the device accelerometer ([`AROrientationTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.AROrientationTrackingConfiguration/), iOS 11)
+* Faces ([`ARFaceTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARFaceTrackingConfiguration/), iOS 11)
+* Reference Images ([`ARImageTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARImageTrackingConfiguration/), iOS 12)
+* Scanning 3D objects ([`ARObjectScanningConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARObjectScanningConfiguration/), iOS 12)
+* Visual inertial odometry ([`ARWorldTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARWorldTrackingConfiguration/), improved in iOS 12)
 
 `AROrientationTrackingConfiguration`, discussed in [this blog post and F# sample](https://github.com/lobrien/FSharp_Face_AR), is the most limited and provides a poor mixed-reality experience, as it only places digital objects in relation to the device's motion, without trying to tie the device and screen into the real world.
 
@@ -287,9 +287,9 @@ configuration.TrackingImages = referenceImages;
 There are two interesting aspects to this configuration:
 
 * It's efficient and can be used with a potentially large number of reference images
-* The digital imagery is anchored to the image, even if that image moves in the real world (e.g., if the cover of a book is recognized, it will track the book as it is pulled off the shelf, laid down, etc.).
+* The digital imagery is anchored to the image, even if that image moves in the real world (for example, if the cover of a book is recognized, it will track the book as it is pulled off the shelf, laid down, etc.).
 
-The `ARObjectScanningConfiguration` was discussed [previously](#recognizing-reference-objects) and is a developer-centric configuration for scanning 3D objects. It is highly processor and battery intensive and should not be used in end-user applications. The sample [Scanning and Detecting 3D Objects](https://github.com/xamarin/ios-samples/tree/master/ios12/ScanningAndDetecting3DObjects) demonstrates the use of this configuration. 
+The `ARObjectScanningConfiguration` was discussed [previously](#recognizing-reference-objects) and is a developer-centric configuration for scanning 3D objects. It is highly processor and battery intensive and should not be used in end-user applications. The sample [Scanning and Detecting 3D Objects](https://developer.xamarin.com/samples/monotouch/ios12/ScanningAndDetecting3DObjects/) demonstrates the use of this configuration. 
 
 The final tracking configuration, `ARWorldTrackingConfiguration` , is the workhorse of most mixed-reality experiences. This configuration uses "visual inertial odometry" to relate real-world "feature points" to digital imagery. Digital geometry or sprites are anchored relative to real-world horizontal and vertical planes or relative to detected `ARReferenceObject` instances. In this configuration, the world origin is the camera's original position in space with the Z-axis aligned to gravity, and digital objects "stay in place" relative to objects in the real world. 
 
@@ -320,7 +320,7 @@ var configuration = new ARWorldTrackingConfiguration
 };
 ```
 
-Although the perfectly reflective texture shown in the preceding code snippet is fun in a sample, environmental texturing is probably better used with restraint lest it trigger an "uncanny valley" response (the texture, of course, is only an estimate based on what the camera recorded).
+Although the perfectly reflective texture shown in the preceding code snippet is fun in a sample, environmental texturing is probably better used with restraint lest it trigger an "uncanny valley" response (the texture is only an estimate based on what the camera recorded).
  
 
 ### Shared and persistent AR experiences
@@ -348,7 +348,7 @@ To share or restore the world map:
 
 1. Load the data from the file,
 2. Unarchive it into an `ARWorldMap` object,
-3. Use that as the value for the [`ARWorldTrackingConfiguration.InitialWorldMap`](https://developer.xamarin.com/api/property/ARKit.ARWorldTrackingConfiguration.InitialWorldMap/) property :
+3. Use that as the value for the [`ARWorldTrackingConfiguration.InitialWorldMap`](https://developer.xamarin.com/api/property/ARKit.ARWorldTrackingConfiguration.InitialWorldMap/) property:
 
 ```csharp
 var data = NSData.FromArray(File.ReadAllBytes(PersistentWorldController.PersistenWorldPath));
@@ -363,11 +363,11 @@ var configuration = new ARWorldTrackingConfiguration
 };
 ```
 
-The `ARWorldMap` only contains non-visible world-tracking data and the [`ARAnchor`](https://developer.xamarin.com/api/type/ARKit.ARAnchor/) objects, it does _not_ contain digital assets. To share geometry or imagery, you'll have to develop your own strategy appropriate to your use-case (perhaps by storing/transmitting only the location and orientation of the geometry and applying it to static `SCNGeometry` or perhaps by storing/transmitting completely serialized objects). The benefit of the `ARWorldMap` is that assets, once placed relative to a shared `ARAnchor`, will appear consistently between devices or sessions.
+The `ARWorldMap` only contains non-visible world-tracking data and the [`ARAnchor`](https://developer.xamarin.com/api/type/ARKit.ARAnchor/) objects, it does _not_ contain digital assets. To share geometry or imagery, you'll have to develop your own strategy appropriate to your use-case (perhaps by storing/transmitting only the location and orientation of the geometry and applying it to static `SCNGeometry` or perhaps by storing/transmitting serialized objects). The benefit of the `ARWorldMap` is that assets, once placed relative to a shared `ARAnchor`, will appear consistently between devices or sessions.
 
 ### Universal Scene Description file format
 
-The final headline feature of ARKit 2 is Apple's adoption of Pixar's [Universal Scene Description](https://graphics.pixar.com/usd/docs/Introduction-to-USD.html) file format. This format replaces Collada's DAE format as the preferred format for sharing and storing ARKit assets. Support for visualizing assets is built into iOS 12 and Mojave. The USDZ file extension is an uncompressed and unencrypted zip archive containing USD files. Pixar [provides tools for working with USD files](https://graphics.pixar.com/usd/docs/USD-Toolset.html#USDToolset-usdedit) but there is not yet a lot of third-party support.
+The final headline feature of ARKit 2 is Apple's adoption of Pixar's [Universal Scene Description](https://graphics.pixar.com/usd/docs/Introduction-to-USD.html) file format. This format replaces Collada's DAE format as the preferred format for sharing and storing ARKit assets. Support for visualizing assets is built into iOS 12 and Mojave. The USDZ file extension is an uncompressed and unencrypted zip archive containing USD files. Pixar [provides tools for working with USD files](https://graphics.pixar.com/usd/docs/USD-Toolset.html#USDToolset-usdedit) but there is not yet much third-party support.
 
 ## ARKit programming tips
 
@@ -390,7 +390,7 @@ Console.WriteLine(xform);
 // Output is: "(1, 0, 0, 0)\n(0, 1, 0, 0)\n(0, 0, 1, 0)\n(2, 3, 4, 1)"
 ```  
 
-As you can see, the position is encoded in the bottom row's first 3 elements.
+As you can see, the position is encoded in the bottom row's first three elements.
 
 In Xamarin, the common type for manipulating transformation matrices is `NVector4`, which by convention is interpreted in a column-major way. That is to say, the translation/position component is expected in M14, M24, M34, not M41, M42, M43: 
 
