@@ -397,7 +397,7 @@ In Xamarin, the common type for manipulating transformation matrices is `NVector
 
 ![row-major vs column-major](images/arkit_row_vs_column.png)
 
-Being consistent with the choice of matrix interpretation is vital to proper behavior. Since 3D transform matrices are 4x4, consistency mistakes will not produce any kind of compile-time or even run-time exception — it's just that operations will act unexpectedly. If your SceneKit / ARKit objects seem to be stuck, fly away, or jitter, an incorrect transform matrix is a good possibility. The solution is simple: [`NMatrix4.Transpose`](https://developer.xamarin.com/api/member/OpenTK.NMatrix4.Transpose(\)) will perform an in-place transposition of elements. 
+Being consistent with the choice of matrix interpretation is vital to proper behavior. Since 3D transform matrices are 4x4, consistency mistakes will not produce any kind of compile-time or even run-time exception — it's just that operations will act unexpectedly. If your SceneKit / ARKit objects seem to be stuck, fly away, or jitter, an incorrect transform matrix is a good possibility. The solution is simple: [`NMatrix4.Transpose`](https://developer.xamarin.com/api/member/OpenTK.NMatrix4.Transpose) will perform an in-place transposition of elements. 
 
 ## Related links
 
