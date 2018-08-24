@@ -66,7 +66,11 @@ Xamarin.Essentials is available as a NuGet package that can be added to any exis
     In the Android project's `MainLauncher` or any `Activity` that is launched Xamarin.Essentials must be initialized in the `OnCreate` method:
 
     ```csharp
-    Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+    protected override void OnCreate(Bundle savedInstanceState) {
+        //...
+        base.OnCreate(savedInstanceState);
+        Xamarin.Essentials.Platform.Init(this, savedInstanceState); // add this line to your code
+        //...
     ```
 
     To handle runtime permissions on Android, Xamarin.Essentials must receive any `OnRequestPermissionsResult`. Add the following code to all `Activity` classes:
