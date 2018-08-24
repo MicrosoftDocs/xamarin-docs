@@ -24,7 +24,7 @@ which Xamarin's preview release provides C# bindings.
 To get started building iOS 12 apps with Xamarin, take a look at:
 
 - The [getting started guide](get-started.md)
-- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
 
 ## [ARKit 2](arkit2.md)
 
@@ -39,9 +39,9 @@ usdz AR models in your apps.
 
 Siri shortcuts allow developers to more deeply integrate their
 applications with Siri. With Siri shortcuts, users can use voice commands
-to open content or kick off tasks in their apps. Siri will learn when
-certain shortcuts are more likely to be used and suggest them to the user
-via notifications.
+to open content or initiate background tasks, or they can initiate
+these same tasks through shortcuts that Siri suggests on the lock
+screen.
 
 ## [Core ML 2](coreml.md)
 
@@ -65,24 +65,33 @@ The Natural Language framework enables applications to perform various
 types of language analysis. For example, it can be used to identify parts
 of speech and determine the language represented by a block of text.
 
-## CarPlay
+## Vision framework
 
-In iOS 12, third-party apps can deliver maps and turn-by-turn navigation
-instructions in CarPlay by using the new CarPlay framework.
+The Vision framework includes an improved face detector that can detect
+faces in various orientations. Also, request revisions can now be used to
+elect a specific Vision framework algorithm revision.
 
-## Automatic strong passwords
+## Photo and video APIs
 
-iOS 12 will suggest and store usernames and strong passwords for
-applications containing a create account screen. The suggested passwords
-can be generated based on a default, 20-character format or based on
-developer-specified password rules. This feature makes use of associated
-domains and specified content types on new username and new password
-fields.
+In iOS 12, the portrait segmentation API returns a portrait effects
+matte, a linear mask that delineates the foreground from the background
+of a portrait image and can be used to create various image effects. iOS
+12 also makes it is possible to use depth data from the TrueDepth camera
+for real-time video effects.
 
-## AutoFill Credential Provider Extensions
+## Passwords
 
-With iOS 12, third-party password manager applications can provide an
-extension to supply username and password values to login fields.
+iOS 12 makes it easier for users and developers to work with passwords:
+
+- Password AutoFill and automatic strong passwords make it possible to
+automatically generate, store, and use strong passwords in iOS
+applications when signing up for and logging into an application.
+- Security Code AutoFill makes it possible to use SMS-based authentication
+codes without manual cutting and pasting or memorization. 
+- The `ASWebAuthenticationSession` class streamlines the process of working
+with federated authentication services. 
+- Autofill Credential Provider extensions make it possible for third-party
+password applications to supply username and passwords to login fields.
 
 ## HealthKit updates
 
@@ -97,14 +106,25 @@ In iOS 12, iMessage apps support presentation contexts, which allow the
 apps to run as a normal iMessage app or in the context of a photo or
 video effect.
 
-## Vision framework
+## Network framework
 
-The Vision framework includes an improved face detector that can detect
-faces in various orientations. Also, request revisions can now be used to
-select a specific Vision framework algorithm revision.
+Network framework, the network stack underlying the `URLSession` APIs commonly
+used in iOS applications, is now available as a standalone framework,
+making it easier to work with TCP, UDP, TLS, IPv4/IPv6, and more.
+
+## CarPlay
+
+In iOS 12, third-party apps can deliver maps and turn-by-turn navigation
+instructions in CarPlay by using the new CarPlay framework.
+
+## Deprecations
+
+With iOS 12, Apple has deprecated OpenGL ES,
+[encouraging developers](https://developer.apple.com/ios/whats-new/)
+to adopt Metal.
 
 ## Related links
 
 - [Get Ready for iOS 12 (Apple)](https://developer.apple.com/ios/)
 - [iOS 12 Preview (Apple)](https://www.apple.com/ios/ios-12-preview/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)

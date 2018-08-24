@@ -34,7 +34,7 @@ update Visual Studio for Mac and Visual Studio 2017.
    Xamarin requires.
 
 3. **Update Visual Studio for Mac and Visual Studio 2017** – Follow the
-   instructions on the [release blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+   instructions on the [release blog](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
    to install the Xamarin preview.
 
 4. _(optional)_ **Install the latest iOS beta on your iOS devices** –
@@ -55,9 +55,9 @@ update Visual Studio for Mac and Visual Studio 2017.
    > - Read [Apple's release notes](https://developer.apple.com/download/)
    >   for the operating system updates.
    > - Read the Xamarin preview
-   >   [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/).
+   >   [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/).
 
 ## Related links
 
 - [Download Xcode 10](https://developer.apple.com/download/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)

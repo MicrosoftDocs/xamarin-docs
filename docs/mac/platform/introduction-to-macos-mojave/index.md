@@ -24,7 +24,7 @@ provides C# bindings.
 To get started building macOS Mojave apps with Xamarin, take a look at:
 
 - The [getting started guide](~/mac/platform/introduction-to-macos-mojave/get-started.md)
-- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
 
 ## Dark Mode
 
@@ -50,8 +50,21 @@ The Vision framework includes an improved face detector that can detect
 faces in various orientations. Also, request revisions can now be used to
 select a specific Vision framework algorithm revision.
 
+## Network framework
+
+Network framework, the network stack underlying the `URLSession` APIs
+commonly used in iOS applications, is now available as a standalone
+framework, making it easier to work with TCP, UDP, TLS, IPv4/IPv6, and
+more.
+
+## Deprecations
+
+With macOS Mojave, Apple has deprecated OpenGL ES and OpenCL,
+[encouraging developers](https://developer.apple.com/macos/whats-new/)
+to adopt Metal and Metal Performance Shaders.
+
 ## Related links
 
 - [Xamarin.Mac samples](https://developer.xamarin.com/samples/mac/)
 - [macOS – Apple Developer](https://developer.apple.com/macos/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)

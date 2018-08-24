@@ -23,16 +23,16 @@ for which Xamarin's preview release provides C# bindings.
 To get started building watchOS 5 apps with Xamarin, take a look at:
 
 - The [getting started guide](~/ios/platform/introduction-to-ios12/get-started.md)
-- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
 
-## Updated workout APIs
+## Workout improvements
 
-Updated workout APIs in watchOS 5 provide new features for workout data
+The workout APIs in watchOS 5 provide new features for workout data
 collection, saving workouts to HealthKit, automatically continuing a
 workout after an app crashes, and working with a series of related
 quantity data.
 
-## Shortcuts on the Siri watch face
+## Siri shortcuts
 
 In watchOS 5, the Siri watch face shows shortcuts that surface app content
 and functionality to users at convenient times. Siri learns over time to
@@ -60,4 +60,4 @@ of speech and determine the language represented by a block of text.
 - [watchOS – Apple Developer (Apple)](https://developer.apple.com/watchOS/)
 - [What's new in watchOS (Apple) (video)](https://developer.apple.com/videos/play/wwdc2018/206/)
 - [Watch (Apple)](https://www.apple.com/watch/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)

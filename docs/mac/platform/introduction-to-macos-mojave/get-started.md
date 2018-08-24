@@ -32,7 +32,7 @@ for Mac.
    Studio for Mac; it installs some tools that Xamarin requires.
 
 3. **Update Visual Studio for Mac** – Follow the
-   instructions on the [release blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+   instructions on the [release blog](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
    to install the Xamarin preview.
 
 4. _(optional)_ **Install the latest macOS Mojave beta on your Mac** –
@@ -53,9 +53,9 @@ for Mac.
    > - Read [Apple's release notes](https://developer.apple.com/download/)
    >   for the operating system update.
    > - Read the Xamarin preview
-   >   [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/).
+   >   [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/).
 
 ## Related links
 
 - [Download Xcode 10](https://developer.apple.com/download/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)

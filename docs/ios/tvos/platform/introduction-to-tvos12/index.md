@@ -23,7 +23,7 @@ features for which Xamarin's preview release currently provides C# bindings.
 To get started building tvOS 12 apps with Xamarin, take a look at:
 
 - The [getting started guide](~/ios/platform/introduction-to-ios12/get-started.md)
-- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
 
 ## TVUIKit
 
@@ -64,10 +64,16 @@ The Natural Language framework enables applications to perform various
 types of language analysis. For example, it can be used to identify parts
 of speech and determine the language represented by a block of text.
 
+## Deprecations
+
+With tvOS 12, Apple has deprecated OpenGL ES,
+[encouraging developers](https://developer.apple.com/tvos/whats-new/)
+to adopt Metal.
+
 ## Related links
 
 - [tvOS Samples](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS – Apple Developer (Apple)](https://developer.apple.com/tvos/)
 - [What's new in tvOS 12 (Apple) (video)](https://developer.apple.com/videos/play/wwdc2018/208/)
 - [TV (Apple)](https://www.apple.com/tv/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
