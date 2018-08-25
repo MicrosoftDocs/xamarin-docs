@@ -27,7 +27,7 @@ You can select one of these:
 
 -  cjk: for Chineese, Japanese and Korean
 -  mideast: Arabic, Hebrew, Turkish and Latin5.
--  other: Cyrillic, Baltic, Vietnamese, Ukranian and Thai
+-  other: Cyrillic, Baltic, Vietnamese, Ukrainian and Thai
 -  rare: EBCDIC encodings and other rare code pages
 -  west: Latin languages, Easter and Western European
 -  all
