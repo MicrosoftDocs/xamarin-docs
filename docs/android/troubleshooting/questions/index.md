@@ -6,7 +6,7 @@ ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/21/2018
+ms.date: 08/27/2018
 ---
 
 # Frequently Asked Questions
@@ -43,17 +43,12 @@ along with instructions for checking the JDK version.
 This guide provides example steps for installing the
 `Xamarin.Android.Support.v4` support library on Windows & Mac.
 
-### [How do I install Google Play Services in an emulator?](install-gps.md)
-
-This guide links to information on installing Google Play Services in
-Visual Studio's Android emulator.
-
 ### [What USB drivers do I need to debug Android on Windows?](android-drivers-debug-windows.md)
 
 To debug on an Android device when developing in Windows; you need to
 install a compatible USB driver. The Android SDK Manager includes the
 "Google USB Driver" by default, which adds support for Nexus devices.
-Other devices require USB drivers specifically published by the device
+Other devices require USB drivers published by the device
 manufacturer. This guide provides information on finding these drivers
 as well as alternative testing methods.
 
@@ -86,7 +81,7 @@ on release builds.
 `Support-v4` and `Support-v13` can not be used together in the same
 app, that is, they are mutually exclusive. This is because
 `Support-v13` actually contains all of the types and implementation of
-`Support-v4`. If you try and reference both in the same project you
+`Support-v4`. If you try and reference both in the same project, you
 will encounter duplicate type errors.
 
 ### [How do I resolve a PathTooLongException Error?](path-too-long-exception.md)
@@ -114,7 +109,7 @@ Xamarin.Android 4.20 added Android Lollipop Support.
 ### [Android.Support.v7.AppCompat - No resource found that matches the given name: attr 'android:actionModeShareDrawable'](missing-action-mode-share-drawable.md)
 
 This error may occur in older versions of Xamarin if some of the
-required Android SDK pacakages are missing.
+required Android SDK packages are missing.
 
 ### [Adjusting Java memory parameters for the Android designer](android-designer-java-memory.md)
 

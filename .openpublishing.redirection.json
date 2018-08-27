@@ -63,7 +63,7 @@
     {
       "source_path": "docs/xamarin-forms/data-cloud/authentication/aws.md",
       "redirect_url": "/xamarin/xamarin-forms/data-cloud/authentication"
-    },	
+    },
     {
       "source_path": "docs/xamarin/xamarin-forms/platform/windows/installation/phone.md",
       "redirect_url": "/xamarin/xamarin-forms/platform/windows/installation"
@@ -115,7 +115,7 @@
     {
       "source_path": "docs/ios/get-started/installation/windows/manual-installation.md",
       "redirect_url": "/xamarin/ios/get-started/installation/windows"
-    },	
+    },
     {
       "source_path": "docs/xamarin-forms/user-interface/styles/introduction.md",
       "redirect_url": "/xamarin/xamarin-forms/user-interface/styles/xaml/introduction"
@@ -159,6 +159,10 @@
     {
       "source_path": "docs/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/index.md",
       "redirect_url": "/xamarin/xamarin-forms/creating-mobile-apps-xamarin-forms/index"
+    },
+    {
+      "source_path": "docs/android/troubleshooting/questions/install-gps.md",
+      "redirect_url": "/xamarin/android/get-started/installation/android-emulator/"
     }
   ]
 }

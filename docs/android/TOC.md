@@ -268,7 +268,6 @@
 #### [How do I update the Java Development Kit (JDK) version?](troubleshooting/questions/update-jdk.md)
 #### [Can I use Java Development Kit (JDK) version 9?](troubleshooting/questions/jdk9-errors.md)
 #### [How can I manually install the Android Support libraries required by the Xamarin.Android.Support packages?](troubleshooting/questions/install-android-support-library.md)
-#### [How do I install Google Play Services in an emulator?](troubleshooting/questions/install-gps.md)
 #### [What USB drivers do I need to debug Android on Windows?](troubleshooting/questions/android-drivers-debug-windows.md)
 #### [Is it possible to connect to Android emulators running on a Mac from a Windows VM?](troubleshooting/questions/connect-android-emulator-mac-windows.md)
 #### [How do I automate an Android NUnit Test project?](troubleshooting/questions/automate-android-nunit-test.md)
