@@ -203,7 +203,7 @@ Generally, this means pinning at least two edges of the Stack View to expand and
 
 Additionally, you can specify constraints for the Stack View's **Height** and **Width**. In this case, the subviews will be laid out (sized) to fill the space specified by the Stack View as determined by the `Distribution` and `Alignment` properties.
 
-If the `BaselineRelativeArrangement` property is `true`, the subviews will be laid out based on the first or last subview's baseline, instead of using the **Top**, **Bottom** or **Center*- **Y** position. These are calculated on the Stack View's content as follows:
+If the `BaselineRelativeArrangement` property is `true`, the subviews will be laid out based on the first or last subview's baseline, instead of using the **Top**, **Bottom** or **Center**- **Y** position. These are calculated on the Stack View's content as follows:
 
  - A Vertical Stack View will return the first subview for the first baseline and the last for the last. If either of these subviews are themselves Stack Views, then their first or last baseline will be used.
  - A Horizontal Stack View will use its tallest subview for both the first and last baseline. If the tallest view is also a Stack View, it will use it's tallest subview as the baseline.
