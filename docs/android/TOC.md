@@ -4,7 +4,7 @@
 #### [Windows Installation](get-started/installation/windows.md)
 #### [Android SDK Setup](get-started/installation/android-sdk.md)
 #### [Android Emulator Setup](get-started/installation/android-emulator/index.md)
-##### [Hardware Acceleration](get-started/installation/android-emulator/hardware-acceleration.md)
+##### [Hardware Acceleration (Hyper-V & HAXM)](get-started/installation/android-emulator/hardware-acceleration.md)
 ##### [Device Manager](get-started/installation/android-emulator/device-manager.md)
 ##### [Device Properties](get-started/installation/android-emulator/device-properties.md)
 ##### [Troubleshooting](get-started/installation/android-emulator/troubleshooting.md)

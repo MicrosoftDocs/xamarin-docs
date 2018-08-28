@@ -6,7 +6,7 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/22/2018
+ms.date: 08/24/2018
 ---
 
 # Managing Virtual Devices with the Android Device Manager
@@ -62,8 +62,8 @@ clicking **Tools > Android > Android Device Manager**:
 
 [![Launching from the Tools menu](device-manager-images/win/04-tools-menu-sml.png)](device-manager-images/win/04-tools-menu.png#lightbox)
 
-If you see the following error dialog on launch, see 
-[Android Emulator Troubleshooting](~/android/get-started/installation/android-emulator/troubleshooting.md) for workaround
+If the following error dialog is presented on launch, see the
+[Troubleshooting](#troubleshooting) section for workaround
 instructions:
 
 ![Android SDK instance error](device-manager-images/win/32-sdk-error.png)
@@ -446,6 +446,8 @@ The additional options menu contains the following items:
 
 -----
 
+<a name="troubleshooting" />
+
 ## Troubleshooting
 
 The following sections explain how to diagnose and work around problems
@@ -463,18 +465,18 @@ Typically, the Android SDK is installed at the following location:
 If the SDK is not installed at this location, you may get this error when you launch
 the Android Device Manager:
 
-![Android SDK instance error](troubleshooting-images/win/01-sdk-error.png)
+![Android SDK instance error](device-manager-images/win/32-sdk-error.png)
 
 To work around this problem, do the following:
 
 1. From the Windows desktop, navigate to **C:\\Users\\*username*\\AppData\\Roaming\\XamarinDeviceManager**:
 
-    ![Android Device Manager log file location](troubleshooting-images/win/02-log-files.png)
+    ![Android Device Manager log file location](device-manager-images/win/33-log-files.png)
 
 2. Double-click to open one of the log files and locate the **Config
    file path**. For example:
 
-    [![Config file path in log file](troubleshooting-images/win/03-config-file-path-sml.png)](troubleshooting-images/win/03-config-file-path.png#lightbox)
+    [![Config file path in log file](device-manager-images/win/34-config-file-path-sml.png)](device-manager-images/win/34-config-file-path.png#lightbox)
 
 3. Navigate to this location and double-click **user.config** to open it. 
 
@@ -505,7 +507,7 @@ To work around this problem,
 
 4. Delete the **snapshot.pb** file:
 
-    ![Location of the snapshot.pb file](troubleshooting-images/win/05-delete-snapshot.png)
+    ![Location of the snapshot.pb file](device-manager-images/win/35-delete-snapshot.png)
 
 5. Restart the AVD. 
 
@@ -529,7 +531,7 @@ To work around this problem,
 
 4. Delete the **snapshot.pb** file:
 
-    [![Location of the snapshot.pb file](troubleshooting-images/mac/02-delete-snapshot-sml.png)](troubleshooting-images/mac/02-delete-snapshot.png#lightbox)
+    [![Location of the snapshot.pb file](device-manager-images/mac/31-delete-snapshot-sml.png)](device-manager-images/mac/31-delete-snapshot.png#lightbox)
 
 5. Restart the AVD. 
 
@@ -547,7 +549,7 @@ cannot be resolved using the above troubleshooting tips, please file a
 bug report by right-clicking the title bar and selecting **Generate Bug
 Report**:
 
-[![Location of menu item for filing a bug report](troubleshooting-images/win/04-bug-report-sml.png)](troubleshooting-images/win/04-bug-report.png#lightbox)
+[![Location of menu item for filing a bug report](device-manager-images/win/36-bug-report-sml.png)](device-manager-images/win/36-bug-report.png#lightbox)
 
 
 # [Visual Studio for Mac](#tab/vsmac)
@@ -556,7 +558,7 @@ If you find a problem with the Android Device Manager that
 cannot be resolved using the above troubleshooting tips, please file a
 bug report by clicking **Help > Generate Bug Report**:
 
-[![Location of menu item for filing a bug report](troubleshooting-images/mac/01-bug-report-sml.png)](troubleshooting-images/mac/01-bug-report.png#lightbox)
+[![Location of menu item for filing a bug report](device-manager-images/mac/32-bug-report-sml.png)](device-manager-images/mac/32-bug-report.png#lightbox)
 
 
 -----

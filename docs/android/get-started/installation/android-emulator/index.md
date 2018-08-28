@@ -1,17 +1,17 @@
 ---
 title: "Android Emulator Setup"
-description: "The Android Emulator can be run in a variety of configurations to simulate different devices. This guide explain how to prepare the Android Emulator for testing your app."
+description: "The Android Emulator can be run in a variety of configurations to simulate different devices. This guide explains how to prepare the Android Emulator for testing your app."
 ms.prod: xamarin
 ms.assetid: 889963B7-F4DA-41D9-9B8D-B733BB71A329
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/22/2018
+ms.date: 08/27/2018
 ---
 
 # Android Emulator Setup
 
-_This guide explain how to prepare the Android Emulator for testing your app._
+_This guide explains how to prepare the Android Emulator for testing your app._
 
 
 ## Overview
@@ -32,10 +32,11 @@ section explains common emulator problems and workarounds.
 
 ### [Hardware Acceleration for Emulator Performance](~/android/get-started/installation/android-emulator/hardware-acceleration.md)
 
-How to prepare your computer for maximum Android Emulator performance.
-Because the Android Emulator can be prohibitively slow without
-hardware acceleration, we recommend that you enable hardware
-acceleration on your computer before you use the emulator.
+How to prepare your computer for maximum Android Emulator performance
+by using either Hyper-V or HAXM virtualization technology. Because the
+Android Emulator can be prohibitively slow without hardware
+acceleration, we recommend that you enable hardware acceleration on
+your computer before you use the emulator.
 
 ### [Managing Virtual Devices with the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)
 
