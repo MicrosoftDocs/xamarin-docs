@@ -5,6 +5,7 @@ ms.prod: xamarin
 ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: conceptdev
 ms.author: crdun
+ms.custom: video
 ms.date: 07/18/2018
 ---
 # .NET Standard Library code sharing
@@ -22,7 +23,7 @@ This section walks through how to create and use a .NET Standard Library using V
 
 ### Creating a .NET Standard Library
 
-Adding a .NET Standard Library to your solution is fairly straight forward.
+You can add a .NET Standard Library to your solution with these steps:
 
 1. In the **Add New Project** dialog, select the **.NET Core** category and then select **.NET Standard Library**:
 
@@ -81,6 +82,10 @@ Once a .NET Standard Library has been created, you can add a reference to it fro
 ![Referencing a .NET Standard Library](net-standard-images/vs04.png "In Visual Studio, right-click on the References node and choose Add Reference... then switch to the Solution  Projects tab as shown")
 
 -----
+
+## .NET Standard and Xamarin.Forms for the .NET Developer (video)
+
+[!Video https://channel9.msdn.com/Shows/XamarinShow/NET-Standard-and-XamarinForms-for-the-NET-Developer/player]
 
 ## Related Links
 
