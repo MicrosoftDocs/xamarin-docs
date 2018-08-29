@@ -41,6 +41,10 @@ Before you start the automatic signing process, you should ensure that you have 
 > "authType" : "sa"
 >}
 >```
+Under the same circumstance, you alternatively might be presented with the following alert.
+> ```
+> Authentication Service Is Unavailable
+>```
 
 To automatically sign your app for deployment on an iOS device, do the following:
 
