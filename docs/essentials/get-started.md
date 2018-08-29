@@ -4,7 +4,8 @@ description: "Xamarin.Essentials provides a single cross-platform API that works
 ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.custom: video
+ms.date: 08/08/2018
 ---
 
 # Get Started with Xamarin.Essentials
@@ -95,6 +96,10 @@ Xamarin.Essentials is available as a NuGet package that can be added to any exis
     -----
 
 6. Follow the [Xamarin.Essentials guides](index.md) that enable you to copy and paste code snippets for each feature.
+
+## Xamarin.Essentials - Cross-Platform APIs for Mobile Apps (video)
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Snack-Pack-XamarinEssentials-Cross-Platform-APIs-for-Mobile-Apps/player]
 
 ## Other Resources
 

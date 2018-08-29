@@ -1090,7 +1090,7 @@ featureFlags:
                         <a href="#architecture1"></a>
                         <ul id="architecture1" class="cardsC">
                             <li>
-                                <a href="~/tools/ios-simulator.md">
+                                <a href="~/tools/ios-simulator/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

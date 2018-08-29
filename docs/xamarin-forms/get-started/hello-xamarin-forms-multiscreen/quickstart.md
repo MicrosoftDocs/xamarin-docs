@@ -155,7 +155,7 @@ Extend the Phoneword application as follows:
 
 13. In **Solution Explorer**, right click on the **Phoneword.Droid** project and select **Set as StartUp Project**.
 14. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside an Android emulator.
-15. If you have an iOS device and meet the Mac system requirements for Xamarin.Forms development, use a similar technique to deploy the app to the iOS device. Alternatively, deploy the app to the [iOS remote simulator](~/tools/ios-simulator.md).
+15. If you have an iOS device and meet the Mac system requirements for Xamarin.Forms development, use a similar technique to deploy the app to the iOS device. Alternatively, deploy the app to the [iOS remote simulator](~/tools/ios-simulator/index.md).
 
     Note: phone calls are not supported on all the simulators.
 

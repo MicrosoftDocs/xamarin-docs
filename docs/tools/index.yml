@@ -22,7 +22,7 @@ sections:
     style: cards
     className: cardsC
     items:
-    - href: ~/tools/ios-simulator.md
+    - href: ~/tools/ios-simulator/index.md.md
       html: Interact with the iOS Simulator using Visual Studio on Windows.
       image:
         src: ~/media/index/xamarin-tools-windows-simulator.svg?branch=master

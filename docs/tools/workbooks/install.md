@@ -41,7 +41,7 @@ ms.date: 06/19/2018
 |App Platform|OS Support|Notes|
 |--- |--- |--- |
 |Mac|Only supported on Mac|
-|iOS|Supported on Mac and Windows|Xamarin.iOS 11.0 and Xcode 9.0 or greater must be installed on Mac. Running iOS workbooks on Windows requires a Mac build host running all of the above, and the [Remoted iOS Simulator](~/tools/ios-simulator.md) installed on Windows.|
+|iOS|Supported on Mac and Windows|Xamarin.iOS 11.0 and Xcode 9.0 or greater must be installed on Mac. Running iOS workbooks on Windows requires a Mac build host running all of the above, and the [Remoted iOS Simulator](~/tools/ios-simulator/index.md) installed on Windows.|
 |Android|Supported on Mac and Windows|Must use Google, Visual Studio or Xamarin Android emulator, with a virtual device >= 5.0|
 |WPF|Only supported on Windows|
 |Console (.NET Framework)|Supported on Mac and Windows|

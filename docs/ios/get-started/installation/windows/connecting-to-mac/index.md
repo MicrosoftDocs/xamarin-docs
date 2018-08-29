@@ -324,6 +324,6 @@ applications with Xamarin.iOS.
 - [Connection Troubleshooting](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.md)
 - [Xamarin Mac Build Agent - Xamarin University Lightning Lecture](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
 - [Introduction to Xamarin.iOS for Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
-- [Remoted iOS Simulator for Windows](~/tools/ios-simulator.md)
+- [Remoted iOS Simulator for Windows](~/tools/ios-simulator/index.md)
 - [Wireless Deployment](~/ios/deploy-test/wireless-deployment.md)
 
