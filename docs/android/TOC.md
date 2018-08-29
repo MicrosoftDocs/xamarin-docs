@@ -100,6 +100,7 @@
 ##### [Date Picker](user-interface/controls/pickers/date-picker.md)
 ##### [Time Picker](user-interface/controls/pickers/time-picker.md)
 #### [Popup Menu](user-interface/controls/popup-menu.md)
+#### [RatingBar](user-interface/controls/ratingbar.md)
 #### [Spinner](user-interface/controls/spinner.md)
 #### [Switch](user-interface/controls/switch.md)
 #### [TextureView](user-interface/controls/texture-view.md)

@@ -6,7 +6,7 @@ ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 08/29/2018
 ---
 
 # Android Controls (Widgets)
@@ -110,6 +110,13 @@ time by using dialogs that are provided by Android.
 a particular view.
 
 ![Example PopUp Menu](images/popup-menu.png)
+
+
+## [RatingBar](~/android/user-interface/controls/ratingbar.md)
+
+A `RatingBar` is a UI element that displays a rating in stars.
+
+![Example of a RatingBar](ratingbar-images/01-ratingbar.png)
 
 
 ## [Spinner](~/android/user-interface/controls/spinner.md)
