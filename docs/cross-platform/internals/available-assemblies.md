@@ -16,16 +16,17 @@ Xamarin platforms are not ABI compatible with existing assemblies compiled for a
 
 Xamarin.Mac applications can be compiled in three modes: one that uses Xamarin's curated Mobile Profile, the Xamarin.Mac .NET 4.5 Framework which allows you target existing full desktop assemblies, and an unsupported one that uses the .NET API found in a system Mono installation. For more information, please see our [Target Frameworks](~/mac/platform/target-framework.md) documentation.
 
-
 ## .NET Standard Libraries
 
 In addition to the iOS, Android, and Mac bindings, Xamarin projects can consume [.NET Standard libraries](~/cross-platform/app-fundamentals/net-standard.md).
 
 ## Portable Class Libraries
- 
+
 Xamarin projects can also consume [.NET Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md), although this technology is being deprecated in favor of .NET Standard.
 
 ## Supported Assemblies
+
+These are the assemblies available in the **Reference Manager > Assemblies > Framework** (Visual Studio 2017) and **Edit References > Packages** (Visual Studio for Mac), and their compatibility with Xamarin platforms.
 
 > [!div class="mx-tdCol2BreakAll"]
 > |Assembly|API Compatibility|Xamarin iOS|Xamarin Android|Xamarin Mac|
@@ -73,4 +74,4 @@ Xamarin projects can also consume [.NET Portable Class Libraries](~/cross-platfo
 > |Xamarin.Android.&#8203;NUnitLite.dll| | |✓| |
 > |Mono.CompilerServices.&#8203;SymbolWriter.dll|For compiler writers.| | |✓|
 > |Xamarin.Mac.dll| | | |✓|
-> |System.&#8203;Drawing.dll|System.Drawing API - Classic API ONLY.System.Drawing is not supported in the Unified API for the Xamarin.Mac .NET 4.5 or Mobile frameworks.System.Drawing support can be added to iOS and OS X using the [sysdrawing-coregraphics](https://github.com/mono/sysdrawing-coregraphics) library|✓| |✓|
+> |System.&#8203;Drawing.dll|System.Drawing is not supported in the Unified API for the Xamarin.Mac, .NET 4.5, or Mobile frameworks. System.Drawing support can be added to iOS and macOS using the [sysdrawing-coregraphics](https://github.com/mono/sysdrawing-coregraphics) library|✓| |✓|
