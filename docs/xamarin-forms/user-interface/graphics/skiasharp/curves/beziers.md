@@ -106,7 +106,7 @@ y(t) = (1 – t)³y₀ + 3t(1 – t)²y₁ + 3t²(1 – t)y₂ + t³y₃
 
 The highest exponent of 3 confirms that these are cubic polynomials. It is easy to verify that when `t` equals 0, the point is (x₀, y₀), which is the start point, and when `t` equals 1, the point is (x₃, y₃), which is the end point. Near the start point (for low values of `t`), the first control point (x₁, y₁) has a strong effect, and near the end point (high values of 't') the second control point (x₂, y₂) has a strong effect.
 
-## Bézier Curve Approximation to Circular Arcs
+## Bezier Curve Approximation to Circular Arcs
 
 It is sometimes convenient to use a Bézier curve to render a circular arc. A cubic Bézier curve can approximate a circular arc very well up to a quarter circle, so four connected Bézier curves can define a whole circle. This approximation is discussed in two articles published over 25 years ago:
 

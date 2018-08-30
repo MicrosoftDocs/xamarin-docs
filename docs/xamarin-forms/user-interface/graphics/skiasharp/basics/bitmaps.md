@@ -151,7 +151,7 @@ The first bitmap is displayed with the simplest [`DrawBitmap`](xref:SkiaSharp.SK
 public void DrawBitmap (SKBitmap bitmap, Single x, Single y, SKPaint paint = null)
 ```
 
-Although an `SKPaint` parameter is defined, it has a default value of `null` and you can ignore it. The pixels of the bitmap are simply transferred to the pixels of the display surface with a one-to-one mapping.
+Although an `SKPaint` parameter is defined, it has a default value of `null` and you can ignore it. The pixels of the bitmap are simply transferred to the pixels of the display surface with a one-to-one mapping. You'll see an application for this `SKPaint` argument in the next section on [**SkiaSharp Transparency**](transparency.md).
 
 A program can obtain the pixel dimensions of a bitmap with the [`Width`](xref:SkiaSharp.SKBitmap.Width) and [`Height`](xref:SkiaSharp.SKBitmap.Height) properties. These properties allow the program to calculate coordinates to position the bitmap in the center of the upper-third of the canvas:
 
@@ -238,6 +238,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 If no bitmap has yet been loaded from the picture library, then the `else` block displays some text to prompt the user to tap the screen.
 
+You can display bitmaps with various degrees of transparency, and the next article on [**SkiaSharp Transparency**](transparency.md) describes how.
 
 ## Related Links
 

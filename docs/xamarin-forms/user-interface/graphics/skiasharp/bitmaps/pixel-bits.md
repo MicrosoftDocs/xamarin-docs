@@ -1,5 +1,5 @@
 ---
-title: "Accessing SkiaSharp pixel bits"
+title: "Accessing SkiaSharp bitmap pixel bits"
 description: "Discover the various techniques for accessing and modifying the pixel bits of SkiaSharp bitmaps."
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -9,7 +9,7 @@ ms.author: chape
 ms.date: 07/11/2018
 ---
 
-# Accessing SkiaSharp pixel bits
+# Accessing SkiaSharp bitmap pixel bits
 
 As you saw in the article [**Saving SkiaSharp bitmaps to files**](saving.md), bitmaps are generally stored in files in a compressed format, such as JPEG or PNG. In constrast, a SkiaSharp bitmap stored in memory is not compressed. It is stored as a sequential series of pixels. This uncompressed format facilitates the transfer of bitmaps to a display surface.
 
@@ -735,6 +735,54 @@ public partial class ColorAdjustmentPage : ContentPage
 ```
 
 It's likely that the performance of this method could be improved even more by creating separate methods for the various combinations of color types of the source and destination bitmaps, and avoid checking the type for every pixel. Another option is to have multiple `for` loops for the `col` variable based on the color type.
+
+## Posterization
+
+Another common job that involves accessing pixel bits is _posterization_. The number if colors encoded in a bitmap's pixels is reduced so that the result resembles a hand-drawn poster using a limited color palette.
+
+The **Posterize** page performs this process on one of the monkey images:
+
+```csharp
+public class PosterizePage : ContentPage
+{
+    SKBitmap bitmap =
+        BitmapExtensions.LoadBitmapResource(typeof(FillRectanglePage),
+                                            "SkiaSharpFormsDemos.Media.Banana.jpg");
+    public PosterizePage()
+    {
+        Title = "Posterize";
+
+        unsafe
+        {
+            uint* ptr = (uint*)bitmap.GetPixels().ToPointer();
+            int pixelCount = bitmap.Width * bitmap.Height;
+
+            for (int i = 0; i < pixelCount; i++)
+            {
+                *ptr++ &= 0xE0E0E0FF; 
+            }
+        }
+
+        SKCanvasView canvasView = new SKCanvasView();
+        canvasView.PaintSurface += OnCanvasViewPaintSurface;
+        Content = canvasView;
+    }
+
+    void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+    {
+        SKImageInfo info = args.Info;
+        SKSurface surface = args.Surface;
+        SKCanvas canvas = surface.Canvas;
+
+        canvas.Clear();
+        canvas.DrawBitmap(bitmap, info.Rect, BitmapStretch.Uniform;
+    }
+}
+```
+
+The code in the constructor accesses each pixel, performs a bitwise AND operation with the value 0xE0E0E0FF, and then stores the result back in the bitmap. The values 0xE0E0E0FF keeps the high 3 bits of each color component and sets the lower 5 bits to 0. Rather than 2<sup>24</sup> or 16,777,216 colors, the bitmap is reduced to 2<sup>9</sup> or 512 colors:
+
+[![Posterize](pixel-bits-images/Posterize.png "Posterize")](pixel-bits-images/Posterize-Large.png#lightbox)
 
 ## Related links
 

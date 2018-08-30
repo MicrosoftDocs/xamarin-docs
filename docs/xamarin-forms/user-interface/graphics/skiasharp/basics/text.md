@@ -13,7 +13,7 @@ ms.date: 03/10/2017
 
 _See how to determine the size of rendered text string to integrate text with SkiaSharp graphics_
 
-This article demonstrates how to measure text, possibly scale the text to a particular size, and integrate the text with other graphics:
+This article demonstrates how to measure text, scale the text to a particular size, and integrate text with other graphics:
 
 ![](text-images/textandgraphicsexample.png "Text surrounded by rectangles")
 
@@ -21,7 +21,7 @@ The SkiaSharp `Canvas` class also includes methods to draw a rectangle ([`DrawRe
 
 The **Framed Text** page centers a short text string on the page and surrounds it with a frame composed of a pair of rounded rectangles. The [`FramedTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/FramedTextPage.cs) class shows how it's done.
 
-In SkiaSharp you use the `SKPaint` class to set text and font attributes, but you can also use it to obtain the rendered size of text. The beginning of the following `PaintSurface` event handler calls two different `MeasureText` methods. The first [`MeasureText`](xref:SkiaSharp.SKPaint.MeasureText(System.String)) call has a simple `string` argument and returns the pixel width of the text based on the current font attributes. The program then calculates a new `TextSize` property of the `SKPaint` object based on that rendered width, the current `TextSize` property, and the width of the display area. This is intended to set `TextSize` so that the text string to be rendered at 90% of the width of the screen:
+In SkiaSharp, you use the `SKPaint` class to set text and font attributes, but you can also use it to obtain the rendered size of text. The beginning of the following `PaintSurface` event handler calls two different `MeasureText` methods. The first [`MeasureText`](xref:SkiaSharp.SKPaint.MeasureText(System.String)) call has a simple `string` argument and returns the pixel width of the text based on the current font attributes. The program then calculates a new `TextSize` property of the `SKPaint` object based on that rendered width, the current `TextSize` property, and the width of the display area. This calculation is intended to set `TextSize` so that the text string to be rendered at 90% of the width of the screen:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -78,7 +78,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-The `PaintSurface` handler concludes with two calls to `DrawRoundRect`, both of which require arguments of `SKRect`. This `SKRect` value is certainly similar to the `SKRect` value obtained from the `MeasureText` method, but it can't be the same. First, it needs to be a little larger so that the rounded rectangle doesn't draw over edges of the text, and secondly, it needs to be shifted in space so that the `Left` and `Top` values correspond to the upper-left corner where the rectangle is to be positioned. These two jobs are accomplished by `Offset` and `Inflate` methods defined by `SKRect`:
+The `PaintSurface` handler concludes with two calls to `DrawRoundRect`, both of which require arguments of `SKRect`. This `SKRect` value is certainly similar to the `SKRect` value obtained from the `MeasureText` method, but it can't be the same. First, it needs to be a little larger so that the rounded rectangle doesn't draw over edges of the text. Secondly, it needs to be shifted in space so that the `Left` and `Top` values correspond to the upper-left corner where the rectangle is to be positioned. These two jobs are accomplished by `Offset` and `Inflate` methods defined by `SKRect`:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -107,7 +107,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Following that, the remainder of the method is straight-forward. It creates another `SKPaint` object for the borders and calls `DrawRoundRect` twice. The second call uses a rectangle inflated by another 10 pixels. The first call specifies a corner radius of 20 pixels; the second has a corner radius of 30 pixels, so they seem to be parallel:
+Following that, the remainder of the method is straight-forward. It creates another `SKPaint` object for the borders and calls `DrawRoundRect` twice. The second call uses a rectangle inflated by another 10 pixels. The first call specifies a corner radius of 20 pixels. The second has a corner radius of 30 pixels, so they seem to be parallel:
 
  [![](text-images/framedtext-small.png "Triple screenshot of the Framed Text page")](text-images/framedtext-large.png#lightbox "Triple screenshot of the Framed Text page")
 
@@ -117,9 +117,9 @@ If you only need to center some text on the screen, you can do it approximately 
 
 Text itself can be treated much like a graphical option. One simple option is to display the outline of the text characters rather than the normal filled display:
 
-[![](text-images/outlinedtext-small.png "Triple screen shot of the Outlined Text page")](text-images/outlinedtext-large.png#lightbox "Triple screen shot of the Outlined Text page")
+[![](text-images/outlinedtext-small.png "Triple screen shot of the Outlined Text page")](text-images/outlinedtext-large.png#lightbox "Triple screenshot of the Outlined Text page")
 
-This is done simply by changing the normal `Style` property of the `SKPaint` object from its default setting of `SKPaintStyle.Fill` to `SKPaintStyle.Stroke` and by specifying a stroke width. The `PaintSurface` handler of the **Outlined Text** page shows how it's done:
+This is done simply by changing the normal `Style` property of the `SKPaint` object from its default setting of `SKPaintStyle.Fill` to `SKPaintStyle.Stroke`, and by specifying a stroke width. The `PaintSurface` handler of the **Outlined Text** page shows how it's done:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -158,8 +158,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
- In the past several articles, you You have now seen how to use SkiaSharp to draw text, circles, ellipses, and rounded rectangles. The next step is [SkiaSharp Lines and Paths](~/xamarin-forms/user-interface/graphics/skiasharp/paths/paths.md) in which you will learn how to draw connected lines in a graphics path.
-
+Another common graphical object is the bitmap. That's a large topic covered in depth in the section [**SkiaSharp Bitmaps**](../bitmaps/index.md), but the next article, [**Bitmap Basics in SkiaSharp**](bitmaps.md), provides a briefer introduction.
 
 ## Related Links
 

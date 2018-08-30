@@ -41,6 +41,9 @@ See how to determine the size of rendered text strings to integrate text with Sk
 
 Load bitmaps from various sources and display them.
 
+## [Transparency](transparency.md)
+
+Use transparency to combine multiple images into a composite scene.
 
 ## Related Links
 

@@ -121,7 +121,21 @@ DrawBitmap(SKBitmap bitmap, float x, float y, SKPaint paint = null)
 
 These two methods are functionally identical. The specified point indicates the location of the upper-left corner of the bitmap relative to the canvas. Because the pixel resolution of mobile devices is so high, smaller bitmaps usually appear quite tiny on these devices.
 
-The optional `SKPaint` parameter allows you to display the bitmap using blend modes or filter effects. These will be demonstrated in later articles.
+The optional `SKPaint` parameter allows you to display the bitmap using transparency. To do this, create an `SKPaint` object and set the `Color` property to any `SKColor` value with an alpha channel less than 1. For example:
+
+```csharp
+paint.Color = new SKColor(0, 0, 0, 0x80);
+```
+
+The 0x80 passed as the last argument indicates 50% transparency. You can also set an alpha channel on one of the pre-defined colors:
+
+```csharp
+paint.Color = SKColors.Red.WithAlpha(0x80);
+```
+
+However, the color itself is irrelevant. Only the alpha channel is examined when you use the `SKPaint` object in a `DrawBitmap` call.
+
+The `SKPaint` object also plays a role when displaying bitmaps using blend modes or filter effects. These are demonstrated in the articles [SkiaSharp compositing and blend modes](../effects/blend-modes/index.md) and [SkiaSharp image filters](../effects/image-filters.md).
 
 The **Pixel Dimensions** page in the **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** sample program displays a bitmap resource that is 320 pixels wide by 240 pixels high:
 

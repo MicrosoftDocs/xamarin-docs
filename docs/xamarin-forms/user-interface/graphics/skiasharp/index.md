@@ -51,6 +51,10 @@ The exploration of paths continues with adding curves to a path objects, and exp
 
 Bitmaps are rectangular arrays of bits corresponding to the pixels of a display device. This series of articles shows how to load, save, display, create, draw on, animate, and access the bits of SkiaSharp bitmaps.
 
+## [SkiaSharp Effects](effects/index.md)
+
+Effects are properties that alter the normal display of graphics, including linear and circular gradients, bitmap tiling, blend modes, blur and others.
+
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
