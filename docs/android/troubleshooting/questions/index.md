@@ -6,7 +6,7 @@ ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 08/27/2018
+ms.date: 08/29/2018
 ---
 
 # Frequently Asked Questions
@@ -31,11 +31,12 @@ Visual Studio for Mac or Visual Studio if needed.
 This article illustrates how to update the Java Development Kit (JDK)
 version on Windows and Mac.
 
-### [Can I use Java Development Kit (JDK) version 9?](jdk9-errors.md)
+### [Can I use Java Development Kit (JDK) version 9 or later?](jdk9-errors.md)
 
-Xamarin.Android requires JDK 8 rather than JDK 9. This article lists
-some common error messages that you may see if JDK 9 is installed,
-along with instructions for checking the JDK version.
+Xamarin.Android requires JDK 8 or the Microsoft Mobile OpenJDK. This
+article lists some common error messages that you may see if JDK 9 or
+later is installed, along with instructions for checking the JDK
+version.
 
 
 ### [How can I manually install the Android Support libraries required by the Xamarin.Android.Support packages?](install-android-support-library.md)

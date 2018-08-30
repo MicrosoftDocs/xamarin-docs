@@ -267,7 +267,7 @@
 #### [Which Android SDK packages should I install?](troubleshooting/questions/install-android-sdk-packages.md)
 #### [Where can I set my Android SDK locations?](troubleshooting/questions/android-sdk-location.md)
 #### [How do I update the Java Development Kit (JDK) version?](troubleshooting/questions/update-jdk.md)
-#### [Can I use Java Development Kit (JDK) version 9?](troubleshooting/questions/jdk9-errors.md)
+#### [Can I use Java Development Kit (JDK) version 9 or later?](troubleshooting/questions/jdk9-errors.md)
 #### [How can I manually install the Android Support libraries required by the Xamarin.Android.Support packages?](troubleshooting/questions/install-android-support-library.md)
 #### [What USB drivers do I need to debug Android on Windows?](troubleshooting/questions/android-drivers-debug-windows.md)
 #### [Is it possible to connect to Android emulators running on a Mac from a Windows VM?](troubleshooting/questions/connect-android-emulator-mac-windows.md)

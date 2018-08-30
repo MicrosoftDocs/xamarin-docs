@@ -7,7 +7,7 @@ ms.assetid: 4b3ac51d-18dd-4034-87b4-4365194e4ece
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/18/2018
+ms.date: 08/29/2018
 ---
 
 # How do I update the Java Development Kit (JDK) version?
@@ -19,8 +19,14 @@ _This article illustrates how to update the Java Development Kit (JDK) version o
 Xamarin.Android uses the Java Development Kit (JDK) to integrate with
 the Android SDK for building Android apps and running the Android
 designer. The latest versions of the Android SDK (API 24 and higher)
-require JDK 8 (1.8). If you have not yet updated to JDK 8, follow these
-steps to install and enable it:
+require JDK 8 (1.8). Alternately, you can install the
+[Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md). 
+The Microsoft Mobile OpenJDK will eventually replace JDK 8 for Xamarin.Android
+development.
+
+To update to the Microsoft Mobile OpenJDK, see
+[Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md). 
+To update to JDK 8, follow these steps:
 
 # [Visual Studio](#tab/vswin)
 
