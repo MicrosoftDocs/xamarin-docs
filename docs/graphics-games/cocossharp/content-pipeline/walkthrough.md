@@ -64,7 +64,7 @@ Once the project has been created, we'll run it to verify that it builds and tha
 
 ## Creating a content project
 
-Now that we have a game project, we can create a MonoGame Pipeline project. To do this, in the MonoGame Pipeline Tool select **File>New...** and navigate to your project's Content folder. For Android, the folder is located at **[project root]\BouncingGame.Android\Assets\Content\**. For iOS, the folder is located at **[project root]\BouncingGame.iOS\Content\**.
+Now that we have a game project, we can create a MonoGame Pipeline project. To do this, in the MonoGame Pipeline Tool select **File>New...** and navigate to your project's Content folder. For Android, the folder is located at **[project root]\BouncingGame.Android\Assets\Content\\**. For iOS, the folder is located at **[project root]\BouncingGame.iOS\Content\\**.
 
 Change the **File name** to **ContentProject** and click the **Save** button:
 
