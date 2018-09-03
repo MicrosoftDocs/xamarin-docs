@@ -19,7 +19,7 @@ Services that provide a client-server interface for clients to directly interact
 
 * **A service binder** &ndash; A service binder is a class that implements the [`Android.OS.IBinder`](https://developer.xamarin.com/api/type/Android.OS.IBinder) interface. Most applications will not implement this interface directly, instead they will extend the [`Android.OS.Binder`](https://developer.xamarin.com/api/type/Android.OS.Binder) class. This is the most common approach and is suitable for when the service and the client exist in the same process.
 * **Using a Messenger** &ndash; This technique is suitable for when the service might exist in a separate process. Instead, service requests are marshalled between the client and service via an [`Android.OS.Messenger`](https://developer.xamarin.com/api/type/Android.OS.Messenger). An [`Android.OS.Handler`](https://developer.xamarin.com/api/type/Android.OS.Handler) is created in the service which will handle the `Messenger` requests. This will be covered in another guide.
-* **Using AIDL** &ndash; This strikes terror in the heart of most Android developers, and will not be covered in this guide.
+* **Using AIDL** &ndash; This strikes terror into the heart of most Android developers, and will not be covered in this guide.
 
 Once a client has been bound to a service, communication between the two is occurs via `Android.OS.IBinder` object.  This object is responsible for the interface that will allow the client to interact with the service. It is not necessary for each Xamarin.Android application to implement this interface from scratch, the Android SDK provides the [`Android.OS.Binder`](https://developer.xamarin.com/api/type/Android.OS.Binder) class which takes care of most of the code required with marshalling the object between the client and the service.
 
@@ -120,7 +120,7 @@ namespace BoundServiceDemo
 }
 ```
 
-In the sample, the `OnCreate` method initializes an object that holds the logic for retrieving and formatting a timestamp that would be requested by a client. When the first client tries to bind to the service, Android will invoke the `OnBind` method. This service will instantiate a `TimestampServiceBinder` object that will allow the clients to access this instance of the running service. The `TimestampServiceBinder` class is discussed in the next section.
+In the sample, the `OnCreate` method initializes an object that holds the logic for retrieving and formatting a timestamp that would be requested by a client. When the first client tries to bind to the service, Android will invoke the `OnBind` method. This service will instantiate a `TimestampBinder` object that will allow the clients to access this instance of the running service. The `TimestampBinder` class is discussed in the next section.
 
 ### Implementing IBinder
 
