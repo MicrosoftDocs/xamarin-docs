@@ -20,7 +20,7 @@ This page explains how to connect these two worlds together to create great augm
 
 ## The Basics
 
-What we want to do is present 3D content on top of the world as seen by the iPhone.   The idea is to blend the contents coming from the phone’s camera with the 3D content, and as the user of the phone moves around the room to ensure that the 3D object behave as is they part of that room - this is done by anchoring the objects into this world.
+What we want to do is present 3D content on top of the world as seen by the iPhone/iPad.   The idea is to blend the contents coming from the device’s camera with the 3D content, and as the user of the device moves around the room to ensure that the 3D object behave as is they part of that room - this is done by anchoring the objects into this world.
 
 ![Animated figure in ARKit](urhosharp-images/image1.gif)
 
