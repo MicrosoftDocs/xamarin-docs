@@ -6,7 +6,7 @@ ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/25/2018
+ms.date: 09/04/2018
 ---
 
 # Xamarin.Android Designer basics
@@ -595,18 +595,6 @@ to perform operations on containers (which are not always easy to
 select on the Design Surface). Here is an example of a context menu:
 
 [![Example context menu when right-clicking the Design Surface](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png#lightbox)
-
-In this example, right-clicking a `TextView` opens a context menu that
-provides several options:
-
--   **RelativeLayout** &ndash; opens a submenu for editing the `RelativeLayout`
-    parent of the `TextView`.
-
--   **LinearLayout** &ndash; opens a submenu for editing the `LinearLayout`
-    parent of the `TextView`.
-
--   **Delete**, **Copy**, and **Cut** &ndash; operations that apply to the
-    right-clicked `TextView`.
 
 In this example, right-clicking a `TextView` opens a context menu that
 provides several options:
