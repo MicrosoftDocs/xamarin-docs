@@ -5,11 +5,17 @@ ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
+ms.date: 08/31/2018
 ---
 
 # Auto Complete
 
+`AutoCompleteTextView` is an editable text view element that shows
+completion suggestions automatically while the user is typing. The list
+of suggestions is displayed in a drop down menu from which the user can
+choose an item to replace the content of the edit box with.
+
+![Example of Auto Complete](images/auto-complete.png)
 
 ## Overview
 
@@ -224,6 +230,7 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 
 ### References
 
+-   [AutoCompleteTextView Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; Xamarin.Android sample project for the `AutoCompleteTextView`.
 -   [`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)
 -   [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
 
