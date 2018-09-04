@@ -84,7 +84,7 @@ Data binding works by keeping objects in sync as their bound values change. Inst
 For more information on data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) which is part four of the [Xamarin.Forms XAML Basics article series](~/xamarin-forms/xaml/xaml-basics/index.md).
 
 ### Binding Cells
-Properties of cells (and children of cells) can be bound to properties of objects in the `ItemsSource`. For example, a ListView could be used to present a list of employees with images.
+Properties of cells (and children of cells) can be bound to properties of objects in the `ItemsSource`. For example, a ListView could be used to present a list of employees.
 
 The employee class:
 
