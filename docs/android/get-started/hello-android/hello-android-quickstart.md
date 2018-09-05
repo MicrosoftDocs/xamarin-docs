@@ -135,7 +135,7 @@ place it under the **Button** widget. Change the `Text` property of the
 **TextView** to an empty string and set its `Id` property to
 `@+id/TranslatedPhoneword`:
 
-[![Set the properties on the text view.](hello-android-quickstart-images/vs/10-textview-properties-w158-sml.png)](hello-android-quickstart-images/vs/10-textview-properties-w158.png#lightbox)    
+[![Set the properties on the text view.](hello-android-quickstart-images/vs/10-textview-properties-w158-sml.png)](hello-android-quickstart-images/vs/10-textview-properties-w158.png#lightbox)
 
 Save your work by pressing **CTRL+S**.
 
@@ -317,6 +317,8 @@ Tap the **TRANSLATE** button to translate **1-855-XAMARIN** into a
 phone number:
 
 [![Screenshot of app running](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
+
+To run the app on an Android device, see how to [set up your device for development](~/android/get-started/installation/set-up-device-for-development.md).
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -609,6 +611,8 @@ After all the icons are copied to the Xamarin.Android project, open the **Projec
 Finally, test the application by running it on an Android device or emulator and translating a Phoneword:
 
 [![Screenshot of app when it is complete](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
+
+To run the app on an Android device, see how to [set up your device for development](~/android/get-started/installation/set-up-device-for-development.md).
 
 -----
 
