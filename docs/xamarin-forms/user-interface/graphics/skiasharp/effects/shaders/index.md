@@ -19,7 +19,7 @@ Discover how to stroke lines or fill areas with gradients composed of a gradual 
 
 ## [SkiaSharp circular gradients](circular-gradients.md)
 
-Learn about the different types of gradients based on circles.
+Learn about the different types of gradients based on circles, and use them for masks or specular highlights.
 
 ## [SkiaSharp bitmap tiling](bitmap-tiling.md)
 

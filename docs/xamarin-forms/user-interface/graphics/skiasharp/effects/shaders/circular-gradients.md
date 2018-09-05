@@ -205,7 +205,7 @@ If you filled the whole canvas with this gradient, you'd see that it's red withi
 
 ## Radial gradients for masking
 
-Like linear gradients, radial gradients can incorporate transparent or partially transparent colors. This featue is useful for a process called _masking_, which hides part of an image to accentuate another part of the image.
+Like linear gradients, radial gradients can incorporate transparent or partially transparent colors. This feature is useful for a process called _masking_, which hides part of an image to accentuate another part of the image.
 
 The **Radial Gradient Mask** page shows an example. The program loads one of the resource bitmaps. The `CENTER` and `RADIUS` fields were determined from an examination of the bitmap and reference an area that should be highlighted. The `PaintSurface` handler begins by calculating a rectangle to display the bitmap and then displays it in that rectangle:
 
@@ -276,6 +276,59 @@ After drawing the bitmap, some simple code converts `CENTER` and `RADIUS` to `ce
 [![Radial Gradient Mask](circular-gradients-images/RadialGradientMask.png "Radial Gradient Mask")](circular-gradients-images/RadialGradientMask-Large.png#lightbox)
 
 This approach is not the best way to mask a bitmap. The problem is that the mask mostly has a color of white, which was chosen to match the background of the canvas. If the background is some other color &mdash; or perhaps a gradient itself &mdash; it won't match. A better approach to masking is shown in the article [SkiaSharp Porter-Duff blend modes](../blend-modes/porter-duff.md).
+
+## Radial gradients for specular highlights
+
+When a light strikes a rounded surface, it reflects light in many directions, but some of the light bounces directly into the viewer's eye. This often creates the appearance of a fuzzy white area on the surface called a _specular highlight_.
+
+In three-dimensional graphics, specular highlights often result from the algorithms used to determine light paths and shading. In two-dimensional graphics, specular highlights are sometimes added to suggest the appearance of a 3D surface. A specular highlight can transform a flat red circle into a round red ball.
+
+The **Radial Specular Highlight** page uses a radial gradient to do precisely that. The `PaintSurface` handler beings by calculating a radius for the circle, and two `SKPoint` values &mdash; a `center` and an `offCenter` that is halfway between the center and the upper-left edge of the circle:
+
+```csharp
+public class RadialSpecularHighlightPage : ContentPage
+{
+    public RadialSpecularHighlightPage()
+    {
+        Title = "Radial Specular Highlight";
+
+        SKCanvasView canvasView = new SKCanvasView();
+        canvasView.PaintSurface += OnCanvasViewPaintSurface;
+        Content = canvasView;
+    }
+
+    void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+    {
+        SKImageInfo info = args.Info;
+        SKSurface surface = args.Surface;
+        SKCanvas canvas = surface.Canvas;
+
+        canvas.Clear();
+
+        float radius = 0.4f * Math.Min(info.Width, info.Height);
+        SKPoint center = new SKPoint(info.Rect.MidX, info.Rect.MidY);
+        SKPoint offCenter = center - new SKPoint(radius / 2, radius / 2);
+
+        using (SKPaint paint = new SKPaint())
+        {
+            paint.Shader = SKShader.CreateRadialGradient(
+                                offCenter,
+                                radius / 2,
+                                new SKColor[] { SKColors.White, SKColors.Red },
+                                null,
+                                SKShaderTileMode.Clamp);
+
+            canvas.DrawCircle(center, radius, paint);
+        }
+    }
+}
+```
+
+The `CreateRadialGradient` call creates a gradient that begins at that `offCenter` point with white and ends with red at a distance of half the radius. Here's what it looks like:
+
+[![Radial Specular Highlight](circular-gradients-images/RadialSpecularHighlight.png "Radial Specular Highlight")](circular-gradients-images/RadialSpecularHighlight-Large.png#lightbox)
+
+If you look closely at this gradient, you might decide that it is flawed. The gradient is centered around a particular point, and you might wish it were a little less symmetrical to reflect the rounded surface. In that case, you might prefer the specular highlight shown below in the section [**Conical gradients for specular highlights**](#conical-gradients-for-specular-highlights).
 
 ## The sweep gradient
 
@@ -517,7 +570,45 @@ The iOS screen at the left shows the effect of the `SKShaderTileMode` setting of
 
 The Android screen is similar but with an `SKShaderTileMode` of `Repeat`. Now it's clearer that the gradient begins inside the first circle and ends outside the second circle. The `Repeat` setting causes the gradient to repeat again with red inside the larger circle.
 
-The UWP screen shows what happens when the smaller circle is moved entirely inside the larger circle. The gradient stops being a cone and instead fills the whole area. The effect is similar to the radial gradient, but it's asymmetrical if the smaller circle is not exactly centered within the larger circle. 
+The UWP screen shows what happens when the smaller circle is moved entirely inside the larger circle. The gradient stops being a cone and instead fills the whole area. The effect is similar to the radial gradient, but it's asymmetrical if the smaller circle is not exactly centered within the larger circle.
+
+You might doubt the practical usefulness of the gradient when one circle is nested in another, but it's ideal for a specular highlight.
+
+## Conical gradients for specular highlights
+
+Earlier in this article you saw how to use a radial gradient to create a specular highlight. You can also use the two-point conical gradient for this purpose, and you might prefer how it looks:
+
+[![Conical Specular Highlight](circular-gradients-images/ConicalSpecularHighlight.png "Conical Specular Highlight")](circular-gradients-images/ConicalSpecularHighlight-Large.png#lightbox)
+
+The asymmetrical appearance better suggests the rounded surface of the object. 
+
+The drawing code in the **Conical Specular Highlight** page is the same as the **Radial Specular Highlight** page except for the shader:
+
+```csharp
+public class ConicalSpecularHighlightPage : ContentPage
+{
+    ···
+    void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+    {
+        ···
+        using (SKPaint paint = new SKPaint())
+        {
+            paint.Shader = SKShader.CreateTwoPointConicalGradient(
+                                offCenter,
+                                1,
+                                center,
+                                radius,
+                                new SKColor[] { SKColors.White, SKColors.Red },
+                                null,
+                                SKShaderTileMode.Clamp);
+
+            canvas.DrawCircle(center, radius, paint);
+        }
+    }
+}
+```
+
+The two circles have centers of `offCenter` and `center`. The circle centered at `center` is associated with a radius that encompasses the entire ball, but the circle centered at `offCenter` has a radius of just one pixel. The gradient effectively begins at that point and ends at the edge of the ball.
 
 ## Related links
 
