@@ -31,7 +31,7 @@ Set the [`MaskFilter`](xref:SkiaSharp.SKPaint.MaskFilter) property of `SKPaint` 
 
 ## [Image Filters](image-filters.md)
 
-Set the [`ImageFilter`](xref:SkiaSharp.SKPaint.ImageFilter) property of `SKPaint` to an object of type [`SKImageFilter`](xref:SkiaSharp.SKImageFilter) for blurring bitmaps and creating drop shadows.
+Set the [`ImageFilter`](xref:SkiaSharp.SKPaint.ImageFilter) property of `SKPaint` to an object of type [`SKImageFilter`](xref:SkiaSharp.SKImageFilter) for blurring bitmaps and creating drop shadows, embossing, or engraving effects.
 
 ## [Color Filters](color-filters.md)
 
