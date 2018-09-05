@@ -6,7 +6,7 @@ ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 09/04/2018
+ms.date: 09/05/2018
 ---
 
 # Xamarin.Android Designer basics
@@ -596,14 +596,14 @@ select on the Design Surface). Here is an example of a context menu:
 
 [![Example context menu when right-clicking the Design Surface](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png#lightbox)
 
-In this example, right-clicking a `TextView` opens a context menu that
+In this example, right-clicking a `Button` opens a context menu that
 provides several options:
 
 -   **LinearLayout** &ndash; opens a submenu for editing the `LinearLayout`
-    parent of the `TextView`.
+    parent of the `Button`.
 
--   **Delete**, **Copy**, and **Cut** &ndash; operations that apply to the
-    right-clicked `TextView`.
+-   **Cut**, **Copy**, and **Delete** &ndash; operations that apply to the
+    right-clicked `Button`.
 
 ### Zoom controls
 
