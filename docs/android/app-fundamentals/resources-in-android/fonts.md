@@ -5,7 +5,7 @@ ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 04/13/2018
+ms.date: 09/0/2018
 ---
 # Fonts
 
@@ -113,7 +113,7 @@ The `fontWeight` attribute corresponds to the CSS `font-weight` attribute and re
 * **Extra Bold** &ndash; 800
 * **Black** &ndash; 900
 
-Once a font family has been defined, it can be used declaratively by setting the `fontFamily`, `textStyle`, and `fontWeight` attributes in the layout file.  For example the following XML snippet sets a 400 weight font (normal) and an italic text style:
+Once a font family has been defined, it can be used declaratively by setting the `fontFamily`, `textStyle`, and `fontWeight` attributes in the layout file.  For example the following XML snippet sets a 600 weight font (normal) and an italic text style:
 
 ```xml
 <TextView

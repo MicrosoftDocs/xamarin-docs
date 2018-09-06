@@ -6,7 +6,7 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/14/2018
+ms.date: 09/06/2018
 ---
 
 # Splash Screen
@@ -312,4 +312,4 @@ launch activity.
 
 - [SplashScreen (sample)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
 - [layer-list Drawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
-- [ Material Design Patterns - Launch Screens](https://www.google.com/design/spec/patterns/launch-screens.html)
+- [ Material Design Patterns - Launch Screens](https://material.io/design/communication/launch-screen.html#usage)
