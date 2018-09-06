@@ -508,6 +508,12 @@ The passed in `UNNotificationResponse` class has an `ActionIdentifier` property 
 
 The `UserText` property holds the value of any user text input. The `Notification` property holds the originating Notification that includes the Request with the Trigger and Notification Content. The app can decide if it was a Local or Remote Notification based on the type of trigger.
 
+> [!NOTE]
+> iOS 12 makes it possible for a custom notification UI to modify its
+> action buttons at runtime. For more information, take a look at the
+> [dynamic notification action buttons](~/ios/platform/introduction-to-ios12/notifications/dynamic-actions.md)
+> documentation.
+
 ## Working with Service Extensions
 
 When working with Remote Notifications, _Service Extensions_ provide a way to enable end-to-end encryption inside of the Notification Payload. Service Extensions are a non-User Interface extension (available in iOS 10) that run in the background with the main purpose of augmenting or replacing the visible content of a Notification before it is presented to the user. 

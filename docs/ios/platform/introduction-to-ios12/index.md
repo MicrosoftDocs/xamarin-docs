@@ -49,35 +49,34 @@ Core ML 2 reduces application size through model quantization and flexible
 models, improves application performance with a new batch prediction API,
 and uses custom models to support advances in machine learning.
 
-## Notification improvements
+## [Notification improvements](notifications/index.md)
 
 In iOS 12, grouped notifications make it possible to present user
-notifications in app or thread-related groupings. Summary text can be
-used to provide further information about a notification group.
+notifications in app or thread-related groupings. Summary text provides
+further information about a notification group.
 
 Notification content extensions in iOS 12 allow for custom user
-interfaces and dynamic actions. These features enable richer, more
-relevant experiences in user notifications.
+interfaces and dynamic action buttons.
 
 ## [Natural Language framework](natural-language.md)
 
 The Natural Language framework enables applications to perform various
-types of language analysis. For example, it can be used to identify parts
-of speech and determine the language represented by a block of text.
+types of language analysis. For example, it can identify parts of speech
+and determine the language represented by a block of text.
 
 ## Vision framework
 
 The Vision framework includes an improved face detector that can detect
-faces in various orientations. Also, request revisions can now be used to
-elect a specific Vision framework algorithm revision.
+faces in various orientations. Also, request revisions can select
+specific Vision framework algorithm revision.
 
 ## Photo and video APIs
 
 In iOS 12, the portrait segmentation API returns a portrait effects
-matte, a linear mask that delineates the foreground from the background
-of a portrait image and can be used to create various image effects. iOS
-12 also makes it is possible to use depth data from the TrueDepth camera
-for real-time video effects.
+matte – a linear mask that delineates the foreground from the background
+of a portrait image and is useful in creating various image effects. iOS 12
+also makes it is possible to use depth data from the TrueDepth camera for
+real-time video effects.
 
 ## Passwords
 
@@ -119,9 +118,12 @@ instructions in CarPlay by using the new CarPlay framework.
 
 ## Deprecations
 
-With iOS 12, Apple has deprecated OpenGL ES,
-[encouraging developers](https://developer.apple.com/ios/whats-new/)
+With iOS 12, Apple has deprecated:
+
+- OpenGL ES, [encouraging developers](https://developer.apple.com/ios/whats-new/)
 to adopt Metal.
+- [`UIWebView`](https://developer.xamarin.com/api/type/UIKit.UIWebView/),
+[in favor of `WKWebView`](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
 
 ## Related links
 

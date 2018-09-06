@@ -8,12 +8,11 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
 ---
-
-# Advanced User Notifications in Xamarin.iOS
+# Advanced user notifications in Xamarin.iOS
 
 New to iOS 10, the User Notification framework allows for the delivery and handling of local and remote notifications. Using this framework, an app or app extension can schedule the delivery of local notifications by specifying a set of conditions such as location or time of day.
 
-## About User Notifications
+## About user notifications
 
 The new User Notification framework allows for the delivery and handling of local and remote notifications. Using this framework, an app or App Extension can schedule the delivery of local notifications by specifying a set of conditions such as location or time of day.
 
@@ -40,7 +39,7 @@ A Xamarin.iOS app has two types of User Notifications that it is able to send:
 
 For more information, please see our [Enhanced User Notifications](~/ios/platform/user-notifications/enhanced-user-notifications.md) documentation.
 
-## The New User Notification Interface
+## The new user notification interface
 
 User Notifications in iOS 10 are presented with a new UI design that provides more content such as a Title, Subtitle and optional Media Attachments that can be presented on the Lock Screen, as a Banner at the top of the device or in the Notification Center.
 
@@ -54,7 +53,7 @@ When the custom User Notification UI is displayed, if the user interacts with an
 
 New to iOS 10, the User Notification UI API allows a Xamarin.iOS app to easily take advantage of these new User Notification UI features.
 
-## Adding Media Attachments
+## Adding media attachments
 
 One of the more common items that get shared between users is photos, so iOS 10 added the ability to attach a Media Item (such as a photo) directly to a Notification, where it will be presented and readily available to the user along with the rest of the Notification's content.
 
@@ -140,11 +139,11 @@ Notification in iOS 10 support Media Attachments of images (static and GIFs), au
 > [!NOTE]
 > Care should be taken to optimize both the media size and the time it takes to download the media from the remote server (or to assemble the media for Local Notifications) as the system imposes strict limits to both when running the app's Service Extension. For example, consider sending a scaled down version of the image or a tiny clip of a video to be presented in the Notification.
 
-## Creating Custom User Interfaces
+## Creating custom user interfaces
 
 To create a custom User Interface for its User Notifications, the developer needs to add a Notification Content Extension (new to iOS 10) to the app's solution.
 
-The Notification Content Extension allows the developer to add their own views to the Notification UI and draw out any content they want. However, interactive UI widgets (such as Buttons or Text Fields) are **not** supported by the Notification UI and should never be added to a custom UI design.
+The Notification Content Extension allows the developer to add their own views to the Notification UI and draw out any content they want. Starting with iOS 12, Notification Content Extensions support interactive UI controls such as buttons and sliders. For more information, see the [interactive notifications in iOS 12](~/ios/platform/introduction-to-ios12/notifications/interactive.md) documentation.
 
 To support user interaction with a User Notification, Custom Actions should be created, registered with the system and attached to the Notification before it is scheduled with the system. The Notification Content Extension will be called to handle the processing of these actions. See the [Working with Notification Actions](~/ios/platform/user-notifications/enhanced-user-notifications.md) section of the [Enhanced User Notifications](~/ios/platform/user-notifications/enhanced-user-notifications.md) document for more details on Custom Actions.
 
@@ -154,7 +153,7 @@ When a User Notification with a Custom UI is presented to the user, it will have
 
 If the user interacts with the Custom Actions (presented below the Notification), the User Interface can be updated to give the user feedback as the what happened when they invoked a given action.
 
-### Adding a Notification Content Extension
+### Adding a notification content extension
 
 To implement a Custom User Notification UI in a Xamarin.iOS app, do the following:
 
@@ -236,7 +235,7 @@ namespace MonkeyChatNotifyExtension
 
 The `DidReceiveNotification` method is called when the Notification is expanded by the user so that the Notification Content Extension can populate the custom UI with the contents of the `UNNotification`. For the example above, a Label has been added to the view, exposed to code with the name `label` and is used to display the body of the Notification.
 
-### Setting the Notification Content Extension's Categories
+### Setting the Notification Content Extension's categories
 
 The system needs to be informed on how to find the app's Notification Content Extension based on the specific categories it responds to. Do the following:
 
@@ -273,7 +272,7 @@ Notification Content Extension Categories (`UNNotificationExtensionCategory`) us
 
 -----
 
-### Hiding the Default Notification Content
+### Hiding the default notification content
 
 In the situation where the Custom Notification UI will be displaying the same content as the default Notification (Title, Subtitle and Body displayed automatically at the bottom of the Notification UI), this default information can be hidden by adding the `UNNotificationExtensionDefaultContentHidden` key to the `NSExtensionAttributes` key as type **Boolean** with a value of `YES` in the Extension's `Info.plist` file:
 
@@ -287,12 +286,15 @@ In the situation where the Custom Notification UI will be displaying the same co
 
 -----
 
-### Designing the Custom UI
+### Designing the custom UI
 
 To design the Notification Content Extension's custom user interface, double-click the `MainInterface.storyboard` file to open it for editing in the iOS Designer, drag in the elements that you need to build the desired interface (such as `UILabels` and `UIImageViews`).
 
 > [!NOTE]
-> The Notification UI does _not_ support interactive controls such as text fields or buttons in a Notification Content Extension. While they can be added to the storyboard, the user will not be able to interact with them. To add user interaction to a Custom Notification UI, use custom actions instead.
+> As of iOS 12, a Notification Content Extension can include interactive
+> controls such as buttons and text fields. For more information, see
+> the [interactive notifications in iOS 12](~/ios/platform/introduction-to-ios12/notifications/interactive.md)
+> documentation.
 
 Once the UI has been laid out and the necessary controls exposed to C# code, open the `NotificationViewController.cs` for editing and modify the `DidReceiveNotification` method to populate the UI when the user expands the notification. For example:
 
@@ -350,7 +352,7 @@ namespace MonkeyChatNotifyExtension
 }
 ```
 
-### Setting the Content Area Size
+### Setting the content area size
 
 To adjust the size of the content area displayed to the user, the code below is setting the `PreferredContentSize` property in the `ViewDidLoad` method to the desired size. This size could also be adjusted by applying constraints to the View in the iOS Designer, it is left to the developer to pick the method that works best for them.
 
@@ -368,7 +370,7 @@ To eliminate this effect, edit the `Info.plist` file for the Extension and set t
 
 -----
 
-### Using Media Attachments in Custom UI
+### Using media attachments in custom UI
 
 Because Media Attachments (as seen in the [Adding Media Attachments](#Adding-Media-Attachments) section above) are part of the Notification Payload, they can be accessed and displayed in the Notification Content Extension just like they would be in the default Notification UI.
 
@@ -437,11 +439,9 @@ namespace MonkeyChatNotifyExtension
 
 Because the Media Attachment is managed by the system, it is outside of the app's sandbox. The extension needs to inform the system that it wants access to the file by calling the `StartAccessingSecurityScopedResource` method. When the extension is done with the file, it needs to call the `StopAccessingSecurityScopedResource` to release its connection.
 
-### Adding Custom Actions to a Custom UI
+### Adding custom actions to a custom UI
 
-As stated above, the Notification UI does not support user interaction so controls such as text fields or buttons are not supported in the UI design.
-
-Instead, the standard custom actions mechanism is used to add interactivity to a Custom Notification UI. See the [Working with Notification Actions](~/ios/platform/user-notifications/enhanced-user-notifications.md) section of the [Enhanced User Notifications](~/ios/platform/user-notifications/enhanced-user-notifications.md) document for more details on custom actions.
+Custom action buttons can be used to add interactivity to a Custom Notification UI. See the [Working with Notification Actions](~/ios/platform/user-notifications/enhanced-user-notifications.md) section of the [Enhanced User Notifications](~/ios/platform/user-notifications/enhanced-user-notifications.md) document for more details on custom actions.
 
 In addition to the custom actions, the Notification Content Extension can respond to the following built-in actions as well:
 
@@ -531,7 +531,7 @@ By adding the `Server.PostEventResponse` handler to the `DidReceiveNotification`
 completionHandler (UNNotificationContentExtensionResponseOption.DismissAndForwardAction);
 ```
 
-### Working with the Text Input Action in Custom UI
+### Working with the text input action in custom UI
 
 Depending on the design of the app and the Notification, there might be times that require the user to enter text into the Notification (such as replying to a message). A Notification Content Extension has access to the built-in text input action just like a standard notification does.
 
@@ -723,14 +723,11 @@ Server.PostEventResponse += (response) {
 };
 ```
 
-<a name="Summary" />
-
 ## Summary
 
 This article has taken an advanced look at using the new User Notification framework in a Xamarin.iOS app. It covered adding Media Attachments to both Local and Remote Notification and it covered using the new User Notification UI to create custom Notification UIs.
 
-
-## Related Links
+## Related links
 
 - [iOS 10 Samples](https://developer.xamarin.com/samples/ios/iOS10/)
 - [UserNotifications Framework Reference](https://developer.apple.com/reference/usernotifications)

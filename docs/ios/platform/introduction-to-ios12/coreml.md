@@ -20,10 +20,7 @@ ms.date: 08/15/2018
 
 Core ML is a machine learning technology available on iOS, macOS, tvOS,
 and watchOS. It allows apps to make predictions based on machine learning
-models. This document describes updates to Core ML available to Xamarin.iOS
-developers with iOS 12.
-
-## Batch processing
+models.
 
 In iOS 12, Core ML includes a batch processing API. This API makes Core
 ML more efficient and provides performance improvements in scenarios where
@@ -37,7 +34,9 @@ sample app. This sample uses a Core ML model trained to predict the cost
 of building a habitat on Mars, based on various inputs: number of solar
 panels, number of greenhouses, and number of acres.
 
-### Generate sample data
+The code snippets in this document come from this sample.
+
+## Generate sample data
 
 In `ViewController`, the sample app's `ViewDidLoad` method calls
 `LoadMLModel`, which loads the included Core ML model:
@@ -89,7 +88,7 @@ async void RunTest(int num)
 }
 ```
 
-### for loop
+## for loop
 
 The `for` loop version of the test naively iterates over the specified
 number of inputs, calling [`GetPrediction`](https://developer.xamarin.com/api/member/CoreML.MLModel.GetPrediction/) 
@@ -112,7 +111,7 @@ async Task FetchNonBatchResults(int num)
 }
 ```
 
-### GetPredictions (new batch API)
+## GetPredictions (new batch API)
 
 The batch version of the test creates an `MLArrayBatchProvider` object
 from the input array (since this is a required input parameter for the
@@ -141,7 +140,7 @@ async Task FetchBatchResults(int num)
 }
 ```
 
-### Results
+## Results
 
 On both simulator and device, `GetPredictions` finishes more quickly than
 the loop-based Core ML predictions.

@@ -1,0 +1,151 @@
+---
+title: "Notification management in Xamarin.iOS"
+description: "This document describes how to use Xamarin.iOS to take advantage of new notification management features introduced in iOS 12."
+ms.prod: xamarin
+ms.assetid: F1D90729-F85A-425B-B633-E2FA38FB4A0C
+ms.technology: xamarin-ios
+author: bradumbaugh
+ms.author: brumbaug
+ms.date: 9/4/2018
+---
+# Notification management in Xamarin.iOS
+
+![Preview](~/media/shared/preview.png)
+
+> [!WARNING]
+> Xamarin's support for the iOS 12, tvOS 12, and watchOS 5 SDKs distributed
+> with Xcode 10 is currently in preview, which means that that it may
+> contain bugs, is not feature complete, and may change. Use it for
+> experimentation only.
+
+In iOS 12, the operating system can deep link from Notification Center
+and the Settings app to an app's notification management screen. This
+screen should allow users to opt in and out of the various types of
+notifications the app sends.
+
+## Sample app: RedGreenNotifications
+
+To see an example of how notification management works, take a look at the
+[RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications) 
+sample app.
+
+This sample app sends two types of notifications – red and green – and
+provides a screen that allows users to opt in or out of either kind.
+
+Code snippets in this guide come from this sample app.
+
+## Notification management screen
+
+In the sample app, `ManageNotificationsViewController` defines a user
+interface that allows users to independently enable and disable red
+notifications and green notifications. It is a standard
+[`UIViewController`](https://developer.xamarin.com/api/type/UIKit.UIViewController/)
+containing a
+[`UISwitch`](https://developer.xamarin.com/api/type/UIKit.UISwitch/) for
+each notification type. Toggling the switch for either type of
+notification saves, in user defaults, the user's preference for that
+type of notification:
+
+```csharp
+partial void HandleRedNotificationsSwitchValueChange(UISwitch sender)
+{
+    NSUserDefaults.StandardUserDefaults.SetBool(sender.On, RedNotificationsEnabledKey);
+}
+```
+
+> [!NOTE]
+> The notification management screen also checks whether or not the user
+> has completely disabled notifications for the app. If so, it hides
+> the toggles for the individual notification types. To do this, the
+> notification management screen:
+>
+> - Calls [`UNUserNotificationCenter.Current.GetNotificationSettingsAsync`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.GetNotificationSettingsAsync()/)
+> and examines the [`AuthorizationStatus`](https://developer.xamarin.com/api/property/UserNotifications.UNNotificationSettings.AuthorizationStatus/)
+> property.
+> - Hides the toggles for the individual notification types if notifications
+> have been completely disabled for the app.
+> - Re-checks whether notifications have been disabled each time the
+> application moves to the foreground, since the user can enable/disable
+> notifications in iOS Settings at any time.
+
+The sample app's `ViewController` class, which sends the notifications,
+check's the user's preference before sending a local notification to
+ensure that the notification is of a type the user actually wants to
+receive:
+
+```csharp
+partial void HandleTapRedNotificationButton(UIButton sender)
+{
+    bool redEnabled = NSUserDefaults.StandardUserDefaults.BoolForKey(ManageNotificationsViewController.RedNotificationsEnabledKey);
+    if (redEnabled)
+    {
+        // ...
+```
+
+## Deep link
+
+iOS deep links to an app's notification management screen from
+Notification Center and the app's notification settings in the Settings
+app. To facilitate this, an app must:
+
+- Indicate that a notification management screen is available by passing
+`UNAuthorizationOptions.ProvidesAppNotificationSettings` to the app's
+notification authorization request.
+- Implement the `OpenSettings` method from
+[`IUNUserNotificationCenterDelegate`](https://developer.xamarin.com/api/type/UserNotifications.IUNUserNotificationCenterDelegate/).
+
+### Authorization request
+
+To indicate to the operating system that a notification management screen
+is available, an app should pass the
+`UNAuthorizationOptions.ProvidesAppNotificationSettings` option (along
+with any other notification delivery options it needs) to the
+`RequestAuthorization` method on the `UNUserNotificationCenter`.
+
+For example, in the sample app's `AppDelegate`:
+
+```csharp
+public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+{
+    // Request authorization to send notifications
+    UNUserNotificationCenter center = UNUserNotificationCenter.Current;
+    var options = UNAuthorizationOptions.ProvidesAppNotificationSettings | UNAuthorizationOptions.Alert | UNAuthorizationOptions.Sound | UNAuthorizationOptions.Provisional;
+    center.RequestAuthorization(options, (bool success, NSError error) =>
+    {
+        // ...
+```
+
+### OpenSettings method
+
+The `OpenSettings` method, called by the system to deep link to an app's
+notification management screen, should navigate the user directly to that
+screen.
+
+In the sample app, this method performs the segue to the
+`ManageNotificationsViewController` if necessary:
+
+```csharp
+[Export("userNotificationCenter:openSettingsForNotification:")]
+public void OpenSettings(UNUserNotificationCenter center, UNNotification notification)
+{
+    var navigationController = Window.RootViewController as UINavigationController;
+    if (navigationController != null)
+    {
+        var currentViewController = navigationController.VisibleViewController;
+        if (currentViewController is ViewController)
+        {
+            currentViewController.PerformSegue(ManageNotificationsViewController.ShowManageNotificationsSegue, this);
+        }
+
+    }
+}
+```
+
+## Related links
+
+- [Sample app – RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
+- [User Notifications framework in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
+- [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
+- [What's New in User Notifications (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
+- [Best Practices and What's New in User Notifications (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
+- [Generating a Remote Notification (Apple)](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification)
