@@ -7,7 +7,7 @@ ms.assetid: 4b3ac51d-18dd-4034-87b4-4365194e4ece
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 08/29/2018
+ms.date: 09/07/2018
 ---
 
 # How do I update the Java Development Kit (JDK) version?
@@ -46,9 +46,9 @@ To update to JDK 8, follow these steps:
 
 4.  Open Visual Studio and update the **Java Development Kit Location**
     to point to the new JDK under **Tools > Options > Xamarin > Android
-    Settings > Java Development Kit Location > Change**:
+    Settings > Java Development Kit Location**:
 
-    [![Path setting for the JDK in IDE Options Android Setting page](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
+    [![Path setting for the JDK in the Android Settings page](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
 
 Be sure to restart Visual Studio after updating the location.
 
@@ -66,9 +66,9 @@ Mac OS will automatically set the new JDK version as the default by
 updating **/System/Library/Frameworks/JavaVM.framework/Versions/Current**. 
 You can then double-check that the **Java SDK (JDK)** location is set to
 the expected default of **/usr** under **Visual Studio for Mac > Preferences >
-Projects > SDK Locations > Android > Java SDK (JDK) > Location**:
+Projects > SDK Locations > Android > Locations > Java SDK (JDK) Location**:
 
-![Setting the JDK location in the Android SDK Location page](update-jdk-images/image6.png)
+[![Setting the JDK location in the Android Locations tab](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
 
 -----
 
