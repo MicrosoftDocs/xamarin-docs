@@ -19,16 +19,16 @@ Two contours in a path can overlap, and the lines that make up a single contour 
 
 You have a little control over this. The filling algorithm is governed by the [`SKFillType`](xref:SkiaSharp.SKPath.FillType) property of `SKPath`, which you set to a member of the [`SKPathFillType`](xref:SkiaSharp.SKPathFillType) enumeration:
 
-- [`Winding`](xref:SkiaSharp.SKPathFillType.Winding), the default
-- [`EvenOdd`](xref:SkiaSharp.SKPathFillType.EvenOdd)
-- [`InverseWinding`](xref:SkiaSharp.SKPathFillType.InverseWinding)
-- [`InverseEvenOdd`](xref:SkiaSharp.SKPathFillType.InverseEvenOdd)
+- `Winding`, the default
+- `EvenOdd`
+- `InverseWinding`
+- `InverseEvenOdd`
 
 Both the winding and even-odd algorithms determine if any enclosed area is filled or not filled based on a hypothetical line drawn from that area to infinity. That line crosses one or more boundary lines that make up the path. With the winding mode, if the number of boundary lines drawn in one direction balance out the number of lines drawn in the other direction, then the area is not filled. Otherwise the area is filled. The even-odd algorithm fills an area if the number of boundary lines is odd.
 
 With many routine paths, the winding algorithm often fills all the enclosed areas of a path. The even-odd algorithm generally produces more interesting results.
 
-The classic example is a five-pointed star, as demonstrated in the **Five-Pointed Star** page. The [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) file instantiates two `Picker` views to select the path fill type and whether the path is stroked or filled or both, and in what order:
+The classic example is a five-pointed star, as demonstrated in the **Five-Pointed Star** page. The [**FivePointedStarPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) file instantiates two `Picker` views to select the path fill type and whether the path is stroked or filled or both, and in what order:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -165,8 +165,8 @@ The Android and UWP screenshots show the typical even-odd and winding effects, b
 
 The winding algorithm is dependent on the direction that lines are drawn. Usually when you're creating a path, you can control that direction as you specify that lines are drawn from one point to another. However, the `SKPath` class also defines methods like `AddRect` and `AddCircle` that draw entire contours. To control how these objects are drawn, the methods include a parameter of type [`SKPathDirection`](xref:SkiaSharp.SKPathDirection), which has two members:
 
-- [`Clockwise`](xref:SkiaSharp.SKPathDirection.Clockwise)
-- [`CounterClockwise`](xref:SkiaSharp.SKPathDirection.CounterClockwise)
+- `Clockwise`
+- `CounterClockwise`
 
 The methods in `SKPath` that include an `SKPathDirection` parameter give it a default value of `Clockwise`.
 

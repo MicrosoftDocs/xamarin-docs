@@ -17,7 +17,7 @@ SkiaSharp lets you draw lines that are not solid but instead are composed of dot
 
 ![](dots-images/dottedlinesample.png "Dotted line")
 
-You do this with a *path effect*, which is an instance of the [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) class that you set to the [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) property of `SKPaint`. You can create a path effect (or combine path effects) using the static `Create` methods defined by `SKPathEffect`.
+You do this with a *path effect*, which is an instance of the [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) class that you set to the [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) property of `SKPaint`. You can create a path effect (or combine path effects) using one of the static creation methods defined by `SKPathEffect`. (`SKPathEffect` is one of six effects supported by SkiaSharp; the others are described in the section [**SkiaSharp Effect**](../effects/index.md).)
 
 To draw dotted or dashed lines, you use the [`SKPathEffect.CreateDash`](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) static method. There are two arguments: This first is an array of `float` values that indicate the lengths of the dots and dashes and the length of the spaces between them. This array must have an even number of elements, and there should be at least two elements. (There can be zero elements in the array but that results in a solid line.) If there are two elements, the first is the length of a dot or dash, and the second is the length of the gap before the next dot or dash. If there are more than two elements, then they are in this order: dash length, gap length, dash length, gap length, and so on.
 
@@ -88,7 +88,7 @@ Dotted and dashed lines are demonstrated on the **Dots and Dashes** page. The [*
 
 The first three items in the `dashArrayPicker` assume that the stroke width is 10 pixels. The { 10, 10 } array is for a dotted line, { 30, 10 } is for a dashed line, and { 10, 10, 30, 10 } is for a dot-and-dash line. (The other three will be discussed shortly.)
 
-The [`DotsAndDashesPage` code-behind file](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) contains the `PaintSurface` event handler and a couple of helper routines for accessing the `Picker` views:
+The [`DotsAndDashesPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) code-behind file contains the `PaintSurface` event handler and a couple of helper routines for accessing the `Picker` views:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -164,54 +164,55 @@ The UWP screen shows that dotted and dashed line for a stroke cap of `Round`. Th
 
 So far no mention has been made of the second parameter to the `SKPathEffect.CreateDash` method. This parameter is named `phase` and it refers to an offset within the dot-and-dash pattern for the beginning of the line. For example, if the dash array is { 10, 10 } and the `phase` is 10, then the line begins with a gap rather than a dot.
 
-One interesting application of the `phase` parameter is in an animation. The **Animated Spiral** page is similar to the **Archimedean Spiral** page, except that the [`AnimatedSpiralPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) class animates the `phase` parameter. The page also demonstrates another approach to animation. The earlier example of the [`PulsatingEllipsePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) used the `Task.Delay` method to control the animation. This example uses instead the Xamarin.Forms `Device.Timer` method:
+One interesting application of the `phase` parameter is in an animation. The **Animated Spiral** page is similar to the **Archimedean Spiral** page, except that the [`AnimatedSpiralPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/AnimatedSpiralPage.cs) class animates the `phase` parameter using the Xamarin.Forms `Device.Timer` method:
 
 
 ```csharp
-const double cycleTime = 250;       // in milliseconds
-
-SKCanvasView canvasView;
-Stopwatch stopwatch = new Stopwatch();
-bool pageIsActive;
-float dashPhase;
-
-public AnimatedSpiralPage()
+public class AnimatedSpiralPage : ContentPage
 {
-    Title = "Animated Spiral";
+    const double cycleTime = 250;       // in milliseconds
 
-    canvasView = new SKCanvasView();
-    canvasView.PaintSurface += OnCanvasViewPaintSurface;
-    Content = canvasView;
-}
+    SKCanvasView canvasView;
+    Stopwatch stopwatch = new Stopwatch();
+    bool pageIsActive;
+    float dashPhase;
 
-protected override void OnAppearing()
-{
-    base.OnAppearing();
-    pageIsActive = true;
-    stopwatch.Start();
-
-    Device.StartTimer(TimeSpan.FromMilliseconds(33), () =>
+    public AnimatedSpiralPage()
     {
-        double t = stopwatch.Elapsed.TotalMilliseconds % cycleTime / cycleTime;
-        dashPhase = (float)(10 * t);
-        canvasView.InvalidateSurface();
+        Title = "Animated Spiral";
 
-        if (!pageIsActive)
+        canvasView = new SKCanvasView();
+        canvasView.PaintSurface += OnCanvasViewPaintSurface;
+        Content = canvasView;
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        pageIsActive = true;
+        stopwatch.Start();
+
+        Device.StartTimer(TimeSpan.FromMilliseconds(33), () =>
         {
-            stopwatch.Stop();
-        }
+            double t = stopwatch.Elapsed.TotalMilliseconds % cycleTime / cycleTime;
+            dashPhase = (float)(10 * t);
+            canvasView.InvalidateSurface();
 
-        return pageIsActive;
-    });
+            if (!pageIsActive)
+            {
+                stopwatch.Stop();
+            }
+
+            return pageIsActive;
+        });
+    }
+    ···  
 }
 ```
 
 Of course, you'll have to actually run the program to see the animation:
 
 [![](dots-images/animatedspiral-small.png "Triple screenshot of the Animated Spiral page")](dots-images/animatedspiral-large.png#lightbox "Triple screenshot of the Animated Spiral page")
-
-You've now seen how to draw lines and to define curves using parametric equations. A  section to be published later will cover the various types of curves that `SKPath` supports.
-
 
 ## Related Links
 

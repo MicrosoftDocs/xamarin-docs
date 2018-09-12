@@ -79,7 +79,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-The `StrokeWidth` property has been set to 50 to accentuate the difference. You can also see the whole line width by drawing the interior first and then the outline. By default, graphics figures drawn later in the `PaintSurface` event handler obscure those drawn earlier in the handler.
+The `StrokeWidth` property has been set to 50 to accentuate the difference. You can also see the whole line width by drawing the interior first and then the outline. By default, graphics figures that are drawn later in the `PaintSurface` event handler obscure those drawn earlier in the handler.
 
 The **Color Explore** page demonstrates how you can also integrate SkiaSharp graphics with other Xamarin.Forms elements, and also demonstrates the difference between two alternative methods for defining colors in SkiaSharp. The static [`SKColor.FromHsl`](xref:SkiaSharp.SKColor.FromHsl(System.Single,System.Single,System.Single,System.Byte)) method creates an `SKColor` value based on the Hue-Saturation-Lightness model:
 
@@ -95,7 +95,7 @@ public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
 
 In both cases, the `h` argument ranges from 0 to 360. The `s`, `l`, and `v` arguments range from 0 to 100. The `a` (alpha or opacity) argument ranges from 0 to 255.
 
-The [**ColorExplorePage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml) file creates two `SKCanvasView` objects in a `StackLayout` side-by-side with `Slider` and `Label` views that allow the user to select HSL and HSV color values:
+The [**ColorExplorePage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml) file creates two `SKCanvasView` objects in a `StackLayout` side by side with `Slider` and `Label` views that allow the user to select HSL and HSV color values:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

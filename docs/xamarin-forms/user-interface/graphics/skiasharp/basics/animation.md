@@ -13,14 +13,11 @@ ms.date: 03/10/2017
 
 _Discover how to animate your SkiaSharp graphics_
 
-You can animate SkiaSharp graphics in Xamarin.Forms by causing the `PaintSurface` method to be called very frequently, each time drawing the graphics a little differently. Here's an animation shown later in this article with concentric circles that seemingly expand from the center:
+You can animate SkiaSharp graphics in Xamarin.Forms by causing the `PaintSurface` method to be called periodically, each time drawing the graphics a little differently. Here's an animation shown later in this article with concentric circles that seemingly expand from the center:
 
 ![](animation-images/animationexample.png "Several concentric circles seemingly expanding from the center")
 
-The **Pulsating Ellipse** page in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program animates the two axes of an ellipse so that it appears to be pulsating, and you can even control the rate of this pulsation:
-
-
-The [**PulsatingEllipsePage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) file instantiates a Xamarin.Forms `Slider` and a `Label` to display the current value of the slider. This is a common way to integrate an `SKCanvasView` with other Xamarin.Forms views:
+The **Pulsating Ellipse** page in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program animates the two axes of an ellipse so that it appears to be pulsating, and you can even control the rate of this pulsation. The [**PulsatingEllipsePage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) file instantiates a Xamarin.Forms `Slider` and a `Label` to display the current value of the slider. This is a common way to integrate an `SKCanvasView` with other Xamarin.Forms views:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -102,7 +99,7 @@ async Task AnimationLoop()
 
 ```
 
-The `while` loop begins by obtaining a cycle time from the `Slider`. This is a time in seconds, for example, 5. The second statement calculates a value of `t` for *time*. For a `cycleTime` of 5, `t` increases from 0 to 1 every 5 seconds. The argument to the `Math.Sin` function in the second statement ranges from 0 to 2π every 5 seconds. The `Math.Sin` function returns a value ranging from 0 to 1 back to 0 and then to &ndash;1 and 0 every 5 seconds, but with values that change more slowly when the value is near 1 or –1. The value 1 is added so the values are always positive, and then it's divided by 2, so the values ranges from ½ to 1 to ½ to 0 to ½, but slower when the value is around 1 and 0. This is stored in the `scale` field, and the `SKCanvasView` is invalidated.
+The `while` loop begins by obtaining a cycle time from the `Slider`. This is a time in seconds, for example, 5. The second statement calculates a value of `t` for *time*. For a `cycleTime` of 5, `t` increases from 0 to 1 every 5 seconds. The argument to the `Math.Sin` function in the second statement ranges from 0 to 2π every 5 seconds. The `Math.Sin` function returns a value ranging from 0 to 1 back to 0 and then to &ndash;1 and 0 every 5 seconds, but with values that change more slowly when the value is near 1 or –1. The value 1 is added so the values are always positive, and then it's divided by 2, so the values range from ½ to 1 to ½ to 0 to ½, but slower when the value is around 1 and 0. This is stored in the `scale` field, and the `SKCanvasView` is invalidated.
 
 The `PaintSurface` method uses this `scale` value to calculate the two axes of the ellipse:
 
@@ -141,7 +138,7 @@ The method calculates a maximum radius based on the size of the display area, an
 
 Notice that the `SKPaint` object is created in a `using` block. Like many SkiaSharp classes `SKPaint` derives from `SKObject`, which derives from `SKNativeObject`, which implements the [`IDisposable`](xref:System.IDisposable) interface. `SKPaint` overrides the `Dispose` method to release unmanaged resources.
 
- Putting `SKPaint` in a `using` block ensures that `Dispose` is called at the end of the block to free these unmanaged resources. This happens anyway when memory used by the `SKPaint` object is freed by the .NET garbage collector, but in animation code, it's best to be somewhat proactive in freeing memory in a more orderly way.
+ Putting `SKPaint` in a `using` block ensures that `Dispose` is called at the end of the block to free these unmanaged resources. This happens anyway when memory used by the `SKPaint` object is freed by the .NET garbage collector, but in animation code, it's best to be proactive in freeing memory in a more orderly way.
 
  A better solution in this particular case would be to create two `SKPaint` objects once and save them as fields.
 
@@ -173,7 +170,7 @@ public class ExpandingCirclesPage : ContentPage
 }
 ```
 
-This program uses a different approach to animation based on the Xamarin.Forms `Device.StartTimer`. The `t` field is animated from 0 to 1 every `cycleTime` milliseconds:
+This program uses a different approach to animation based on the Xamarin.Forms `Device.StartTimer` method. The `t` field is animated from 0 to 1 every `cycleTime` milliseconds:
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage
@@ -207,7 +204,7 @@ public class ExpandingCirclesPage : ContentPage
 }
 ```
 
-The `PaintSurface` handler draws 5 concentric circles with animated radii. If the `baseRadius` variable is calculated as 100, then as `t` is animated from 0 to 1, the radii of the five circles increase from 0 to 100, 100 to 200, 200 to 300, 300 to 400, and 400 to 500. For most of the circles the `strokeWidth` is 50 but for the first circle, the `strokeWidth` animates from 0 to 50. For most of the circles, the color is blue, but for the last circle, the color is animated from blue to transparent:
+The `PaintSurface` handler draws five concentric circles with animated radii. If the `baseRadius` variable is calculated as 100, then as `t` is animated from 0 to 1, the radii of the five circles increase from 0 to 100, 100 to 200, 200 to 300, 300 to 400, and 400 to 500. For most of the circles the `strokeWidth` is 50 but for the first circle, the `strokeWidth` animates from 0 to 50. For most of the circles, the color is blue, but for the last circle, the color is animated from blue to transparent. Notice the fourth argument to the `SKColor` constructor that specifies the opacity:
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage

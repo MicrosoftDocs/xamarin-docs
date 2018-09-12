@@ -19,7 +19,7 @@ An `SKPath` object can be continually updated and displayed. This feature allows
 
 The touch support in Xamarin.Forms does not allow tracking individual fingers on the screen, so a Xamarin.Forms touch-tracking effect has been developed to provide additional touch support. This effect is described in the article [**Invoking Events from Effects**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). The sample program [**Touch-Tracking Effect Demos**](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/) includes two pages that use SkiaSharp, including a finger-painting program.
 
-The [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) solution includes this touch-tracking event. The .NET Standard library project includes the `TouchEffect` class, the `TouchActionType` enumeration, the `TouchActionEventHandler` delegate, and the `TouchActionEventArgs` class. Each of the platform projects include a `TouchEffect` class for that platform; the iOS project also contains a `TouchRecognizer` class.
+The [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) solution includes this touch-tracking event. The .NET Standard library project includes the `TouchEffect` class, the `TouchActionType` enumeration, the `TouchActionEventHandler` delegate, and the `TouchActionEventArgs` class. Each of the platform projects includes a `TouchEffect` class for that platform; the iOS project also contains a `TouchRecognizer` class.
 
 The **Finger Paint** page in **SkiaSharpFormsDemos** is a simplified implementation of finger painting. It does not allow selecting color or stroke width, it has no way to clear the canvas, and of course you can't save your artwork.
 
@@ -71,7 +71,7 @@ public partial class FingerPaintPage : ContentPage
 }
 ```
 
-As the name suggest, the `inProgressPaths` dictionary stores the paths that are currently being drawn by one or more fingers. The dictionary key is the touch ID that accompanies the touch events. The `completedPaths` field is a collection of paths that were finished when a finger drawing the path lifted from the screen.
+As the name suggests, the `inProgressPaths` dictionary stores the paths that are currently being drawn by one or more fingers. The dictionary key is the touch ID that accompanies the touch events. The `completedPaths` field is a collection of paths that were finished when a finger that was drawing the path lifted from the screen.
 
 The `TouchAction` handler manages these two collections. When a finger first touches the screen, a new `SKPath` is added to `inProgressPaths`. As that finger moves, additional points are added to the path. When the finger is released, the path is transferred to the `completedPaths` collection. You can paint with multiple fingers simultaneously. After each change to one of the paths or collections, the `SKCanvasView` is invalidated:
 
@@ -160,6 +160,7 @@ Your finger paintings are only limited by your talent:
 
 [![](finger-paint-images/fingerpaint-small.png "Triple screenshot of the Finger Paint page")](finger-paint-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
 
+You've now seen how to draw lines and to define curves using parametric equations. A later section on [**SkiaSharp Curves and Paths**](../curves/index.md) covers the various types of curves that `SKPath` supports. But a useful prerequisite is an exploration of [**SkiaSharp Transforms**](../transforms/index.md).
 
 ## Related Links
 

@@ -13,7 +13,7 @@ ms.date: 03/10/2017
 
 _Explore the SkiaSharp SKPath object for combining connected lines and curves_
 
-One of the most important featues of the graphics path is the ability to define when multiple lines should be connected and when they should not be connected. The difference can be quite visible, as the tops of these two triangles demonstrate:
+One of the most important features of the graphics path is the ability to define when multiple lines should be connected and when they should not be connected. The difference can be significant, as the tops of these two triangles demonstrate:
 
 ![](paths-images/connectedlinesexample.png "Two triangles showing the difference between connected and disconnected lines")
 
@@ -21,32 +21,32 @@ A graphics path is encapsulated by the [`SKPath`](xref:SkiaSharp.SKPath) object.
 
 A contour generally begins with a call to the following method of `SKPath`:
 
-- `MoveTo` to begin a new contour
+- [`MoveTo`](SkiaSharp.SKPath.MoveTo*) to begin a new contour
 
 The argument to that method is a single point, which you can express either as an `SKPoint` value or as separate X and Y coordinates. The `MoveTo` call establishes a point at the beginning of the contour and an initial *current point*. You can call the following methods to continue the contour with a line or curve from the current point to a point specified in the method, which then becomes the new current point:
 
-- `LineTo` to add a straight line to the path
-- `ArcTo` to add an arc, which is a line on the circumference of a circle or ellipse
-- `CubicTo` to add a cubic Bezier spline
-- `QuadTo` to add a quadratic Bezier spline
-- `ConicTo` to add a rational quadratic Bezier spline, which can accurately render conic sections (ellipses, parabolas, and hyperbolas)
+- [`LineTo`](SkiaSharp.SKPath.LineTo*) to add a straight line to the path
+- [`ArcTo`](SkiaSharp.SKPath.ArcTo*) to add an arc, which is a line on the circumference of a circle or ellipse
+- [`CubicTo`](SkiaSharp.SKPath.CubicTo*) to add a cubic Bezier spline
+- [`QuadTo`](SkiaSharp.SKPath.QuadTo*) to add a quadratic Bezier spline
+- [`ConicTo`](SkiaSharp.SKPath.ConicTo*) to add a rational quadratic Bezier spline, which can accurately render conic sections (ellipses, parabolas, and hyperbolas)
 
 None of these five methods contain all the information necessary to describe the line or curve. Each of these five methods works in conjunction with the current point established by the method call immediately preceding it. For example, the `LineTo` method adds a straight line to the contour based on the current point, so the parameter to `LineTo` is only a single point.
 
 The `SKPath` class also defines methods that have the same names as these six methods but with an `R` at the beginning:
 
-- `RMoveTo`
-- `RLineTo`
-- `RArcTo`
-- `RCubicTo`
-- `RQuadTo`
-- `RConicTo`
+- [`RMoveTo`]((SkiaSharp.SKPath.RMoveTo*))
+- [`RLineTo`](SkiaSharp.SKPath.RLineTo*)
+- [`RArcTo`](SkiaSharp.SKPath.RArcTo*)
+- [`RCubicTo`](SkiaSharp.SKPath.RCubicTo*)
+- [`RQuadTo`](SkiaSharp.SKPath.RQuadTo*)
+- [`RConicTo`](SkiaSharp.SKPath.RConicTo*)
 
-The `R` stands for *relative*. They have the same syntax as the corresponding methods without the `R` but are relative to the current point. These are handy for drawing similar parts of a path in a method that you call multiple times.
+The `R` stands for *relative*. These methods have the same syntax as the corresponding methods without the `R` but are relative to the current point. These are handy for drawing similar parts of a path in a method that you call multiple times.
 
 A contour ends with another call to `MoveTo` or `RMoveTo`, which begins a new contour, or a call to `Close`, which closes the contour. The `Close` method automatically appends a straight line from the current point to the first point of the contour, and marks the path as closed, which means that it will be rendered without any stroke caps.
 
-The difference between open and closed contours is illustrated in the **Two Triangle Contours** page, which uses an `SKPath` object with two contours to render two triangles. The first contour is open and the second is closed. Here's the [`TwoTriangleContours`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) class:
+The difference between open and closed contours is illustrated in the **Two Triangle Contours** page, which uses an `SKPath` object with two contours to render two triangles. The first contour is open and the second is closed. Here's the [`TwoTriangleContoursPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) class:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -102,21 +102,21 @@ As you can see, the first contour is obviously a series of three connected lines
 
 `SKPath` defines many other methods and properties. The following methods add entire contours to the path, which might be closed or not closed depending on the method:
 
-- `AddRect`
+- [`AddRect`](xref:SkiaSharp.SKPath.AddRect*)
 - [`AddRoundedRect`](xref:SkiaSharp.SKPath.AddRoundedRect(SkiaSharp.SKRect,System.Single,System.Single,SkiaSharp.SKPathDirection))
 - [`AddCircle`](xref:SkiaSharp.SKPath.AddCircle(System.Single,System.Single,System.Single,SkiaSharp.SKPathDirection))
 - [`AddOval`](xref:SkiaSharp.SKPath.AddOval(SkiaSharp.SKRect,SkiaSharp.SKPathDirection))
 - [`AddArc`](xref:SkiaSharp.SKPath.AddArc(SkiaSharp.SKRect,System.Single,System.Single)) to add a curve on the circumference of an ellipse
-- `AddPath` to add another path to the current path
+- [`AddPath`](xref:SkiaSharp.SKPath.AddPath*) to add another path to the current path
 - [`AddPathReverse`](xref:SkiaSharp.SKPath.AddPathReverse(SkiaSharp.SKPath)) to add another path in reverse
 
 Keep in mind that an `SKPath` object defines only a geometry &mdash; a series of points and connections. Only when an `SKPath` is combined with an `SKPaint` object is the path rendered with a particular color, stroke width, and so forth. Also, keep in mind that the `SKPaint` object passed to the `DrawPath` method defines characteristics of the entire path. If you want to draw something requiring several colors, you must use a separate path for each color.
 
 Just as the appearance of the start and end of a line is defined by a stroke cap, the appearance of the connection between two lines is defined by a *stroke join*. You specify this by setting the [`StrokeJoin`](xref:SkiaSharp.SKPaint.StrokeJoin) property of `SKPaint` to a member of the [`SKStrokeJoin`](xref:SkiaSharp.SKStrokeJoin) enumeration:
 
-- [`Miter`](xref:SkiaSharp.SKStrokeJoin.Miter) for a pointy join
-- [`Round`](xref:SkiaSharp.SKStrokeJoin.Round) for a rounded join
-- [`Bevel`](xref:SkiaSharp.SKStrokeJoin.Bevel) for a chopped-off join
+- `Miter` for a pointy join
+- `Round` for a rounded join
+- `Bevel` for a chopped-off join
 
 The **Stroke Joins** page shows these three stroke joins with code similar to the **Stroke Caps** page. This is the `PaintSurface` event handler in the [`StrokeJoinsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) class:
 

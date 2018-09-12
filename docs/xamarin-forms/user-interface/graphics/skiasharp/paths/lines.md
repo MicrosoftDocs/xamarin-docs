@@ -13,7 +13,7 @@ ms.date: 03/10/2017
 
 _Learn how to use SkiaSharp to draw lines with different stroke caps_
 
-In SkiaSharp, rendering a single line is very different from rendering a series of connected straight lines. Even when drawing single lines, however, it's often necessary to give the lines a particular stroke width, and the wider the line, the more important becomes the appearance of the end of the lines, called the *stroke cap*:
+In SkiaSharp, rendering a single line is very different from rendering a series of connected straight lines. Even when drawing single lines, however, it's often necessary to give the lines a particular stroke width. As these lines become wider, the appearance of the ends of the lines also becomes important. The appearance of the end of the line is called the *stroke cap*:
 
 ![](lines-images/strokecapsexample.png "The three stroke caps options")
 
@@ -23,15 +23,15 @@ For drawing single lines, `SKCanvas` defines a simple [`DrawLine`](xref:SkiaShar
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-By default, the `StrokeWidth` property of a newly instantiated `SKPaint` object is 0, which has the same effect as a value of 1 in rendering a line of one pixel in thickness. This appears very thin on high resolution devices such as phones, so you'll probably want to set the `StrokeWidth` to a larger value. But once you start drawing lines of a sizable thickness, that raises another issue: How should the starts and ends of these thick lines be rendered?
+By default, the [`StrokeWidth`](xref:SkiaSharp.SKPaint.StrokeWidth) property of a newly instantiated `SKPaint` object is 0, which has the same effect as a value of 1 in rendering a line of one pixel in thickness. This appears very thin on high-resolution devices such as phones, so you'll probably want to set the `StrokeWidth` to a larger value. But once you start drawing lines of a sizable thickness, that raises another issue: How should the starts and ends of these thick lines be rendered?
 
 The appearance of the starts and ends of lines is called a *line cap* or, in Skia, a *stroke cap*. The word "cap" in this context refers to a kind of hat &mdash; something that sits on the end of the line. You set the [`StrokeCap`](xref:SkiaSharp.SKPaint.StrokeCap) property of the `SKPaint` object to one of the following members of the [`SKStrokeCap`](xref:SkiaSharp.SKStrokeCap) enumeration:
 
-- [`Butt`](xref:SkiaSharp.SKStrokeCap.Butt) (the default)
-- [`Square`](xref:SkiaSharp.SKStrokeCap.Round)
-- [`Round`](xref:SkiaSharp.SKStrokeCap.Round)
+- `Butt` (the default)
+- `Square`
+- `Round`
 
-These are best illustrated with a sample program. The second section of the home page of the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program begins with a page titled **Stroke Caps** based on the [`StrokeCapsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) class. This page defines a `PaintSurface` event handler that loops through the three members of the `SKStrokeCap` enumeration, displaying both the name of the enumeration member and drawing a line using that stroke cap:
+These are best illustrated with a sample program. The **SkiaSharp Lines and Paths** section of the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program begins with a page titled **Stroke Caps** based on the [`StrokeCapsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) class. This page defines a `PaintSurface` event handler that loops through the three members of the `SKStrokeCap` enumeration, displaying both the name of the enumeration member and drawing a line using that stroke cap:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -85,7 +85,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-For each member of the `SKStrokeCap` enumeration, the handler draws two lines, one with a stroke thickness of 50 pixels and another line positioned on top with a stroke thickness of 2 pixels. This second line is intended to illustrate the geometric start and end of the line independent of the line thickness and a stroke cap:
+For each member of the `SKStrokeCap` enumeration, the handler draws two lines, one with a stroke thickness of 50 pixels and another line positioned on top with a stroke thickness of two pixels. This second line is intended to illustrate the geometric start and end of the line independent of the line thickness and a stroke cap:
 
 [![](lines-images/strokecaps-small.png "Triple screenshot of the Stroke Caps page")](lines-images/strokecaps-large.png#lightbox "Triple screenshot of the Stroke Caps page")
 
@@ -99,11 +99,11 @@ DrawPoints (SKPointMode mode, points, paint)
 
 The `points` parameter is an array of `SKPoint` values and `mode` is a member of the [`SKPointMode`](xref:SkiaSharp.SKPointMode) enumeration, which has three members:
 
-- [`Points`](xref:SkiaSharp.SKPointMode.Points) to render the individual points
-- [`Lines`](xref:SkiaSharp.SKPointMode.Lines) to connect each pair of points
-- [`Polygon`](xref:SkiaSharp.SKPointMode.Polygon) to connect all consecutive points
+- `Points` to render the individual points
+- `Lines` to connect each pair of points
+- `Polygon` to connect all consecutive points
 
-The **Multiple Lines** page demonstrates this method. The [`MultipleLinesPage` XAML file](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) instantiates two `Picker` views that let you select a member of the `SKPointMode` enumeration and a member of the `SKStrokeCap` enumeration:
+The **Multiple Lines** page demonstrates this method. The [**MultipleLinesPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) file instantiates two `Picker` views that let you select a member of the `SKPointMode` enumeration and a member of the `SKStrokeCap` enumeration:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

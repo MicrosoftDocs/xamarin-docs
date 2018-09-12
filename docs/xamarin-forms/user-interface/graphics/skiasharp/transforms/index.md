@@ -24,15 +24,15 @@ SkiaSharp transforms support the following operations:
 
 These are known as *affine* transforms. Affine transforms always preserve parallel lines and never cause a coordinate or size to become infinite. A square is never transformed into anything other than a parallelogram, and a circle is never transformed into anything other than an ellipse.
 
-SkiaSharp also supports non-affine transforms (also called *projective* or *perspective* transforms) based on a standard 3-by-3 transform matrix. A non-affine transform allows a square to be transformed into any convex quadrilateral (a four-sided figure with all interior angles less than 180 degrees). Non-affine transforms can cause coordinates or sizes to become infinite, but they are vital for 3D effects.
+SkiaSharp also supports non-affine transforms (also called *projective* or *perspective* transforms) based on a standard 3-by-3 transform matrix. A non-affine transform allows a square to be transformed into any convex quadrilateral, which is a four-sided figure with all interior angles less than 180 degrees. Non-affine transforms can cause coordinates or sizes to become infinite, but they are vital for 3D effects.
 
 ## Differences between SkiaSharp and Xamarin.Forms Transforms
 
 Xamarin.Forms also supports transforms that are similar to those in SkiaSharp. The Xamarin.Forms [`VisualElement`](xref:Xamarin.Forms.VisualElement) class defines the following transform properties:
 
-- `TranslationX` and `TranslationY`
-- `Scale`
-- `Rotation`, `RotationX`, and `RotationY`
+- [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) and [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY)
+- [`Scale`](xref:Xamarin.Forms.VisualElement.Scale)
+- [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation), [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX), and [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY)
 
 The `RotationX` and `RotationY` properties are perspective transforms that create quasi-3D effects.
 
@@ -44,7 +44,7 @@ The SkiaSharp transforms are relative to the upper-left corner of the `SKCanvas`
 
 The really big difference is that SKiaSharp transforms are *methods* while the Xamarin.Forms transforms are *properties*. This is a semantic difference beyond the syntactical difference: SkiaSharp transforms perform an operation while Xamarin.Forms transforms set a state. SkiaSharp transforms apply to subsequently drawn graphics objects, but not to graphics objects that are drawn before the transform is applied. In contrast, a Xamarin.Forms transform applies to a previously rendered element as soon as the property is set. SkiaSharp transforms are cumulative as the methods are called; Xamarin.Forms transforms are replaced when the property is set with another value.
 
-All the sample programs in this section appear under the heading **Transforms** in the home page of the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program, and in the [**Transforms**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) folder of the solution.
+All the sample programs in this section appear in the **SkiaSharp Transforms** section of the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program. Source code can be found in the [**Transforms**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) folder of the solution.
 
 ## [The Translate Transform](translate.md)
 
@@ -60,7 +60,7 @@ Explore the effects and animations possible with the SkiaSharp rotate transform.
 
 ## [The Skew Transform](skew.md)
 
-See how the skew transform can create tilted graphical objects in SkiaSharp.
+See how the skew transform can create tilted graphical object.
 
 ## [Matrix Transforms](matrix.md)
 

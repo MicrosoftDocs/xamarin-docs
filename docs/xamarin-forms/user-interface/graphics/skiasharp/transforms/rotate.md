@@ -25,9 +25,9 @@ public void RotateDegrees (Single degrees)
 public Void RotateRadians (Single radians)
 ```
 
-A circle of 360 degrees is the same as 2π radians, so it's easy to convert between the two units. Use whichever is convenient. All the trigonometric functions in the static [`Math`](xref:System.Math) class use units of radians.
+A circle of 360 degrees is the same as twoπ radians, so it's easy to convert between the two units. Use whichever is convenient. All the trigonometric functions in the .NET [`Math`](xref:System.Math) class use units of radians.
 
-Rotation is clockwise for increasing angles. (Although rotation on the Cartesian coordinate system is counter-clockwise by convention, clockwise rotation is consistent with Y coordinates increasing going down.) Negative angles and angles greater than 360 degrees are allowed.
+Rotation is clockwise for increasing angles. (Although rotation on the Cartesian coordinate system is counter-clockwise by convention, clockwise rotation is consistent with Y coordinates increasing going down as in SkiaSharp.) Negative angles and angles greater than 360 degrees are allowed.
 
 The transform formulas for rotation are more complex than those for translate and scale. For an angle of α, the transform formulas are:
 
@@ -35,7 +35,7 @@ x' = x•cos(α) – y•sin(α)
 
 y` = x•sin(α) + y•cos(α)
 
-The **Basic Rotate** page demonstrates the `RotateDegrees` method. The [`BasicRotate.xaml.cs`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicRotatePage.xaml.cs) file displays some text with its baseline centered on the page and rotates it based on a `Slider` with a range of –360 to 360. Here's the relevant part of the `PaintSurface` handler:
+The **Basic Rotate** page demonstrates the `RotateDegrees` method. The [**BasicRotate.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicRotatePage.xaml.cs) file displays some text with its baseline centered on the page and rotates it based on a `Slider` with a range of –360 to 360. Here's the relevant part of the `PaintSurface` handler:
 
 ```csharp
 using (SKPaint textPaint = new SKPaint
@@ -83,13 +83,13 @@ Now the text rotates around the point used to position the text, which is the ho
 
 [![](rotate-images/centeredrotate-small.png "Triple screenshot of the Centered Rotate page")](rotate-images/centeredrotate-large.png#lightbox "Triple screenshot of the Centered Rotate page")
 
-Just as with the centered version of the `Scale` method, the centered version of the `RotateDegrees` call is a shortcut:
+As with the centered version of the `Scale` method, the centered version of the `RotateDegrees` call is a shortcut. Here's the method:
 
 ```csharp
 RotateDegrees (degrees, px, py);
 ```
 
-This is equivalent to the following:
+That call is equivalent to the following:
 
 ```csharp
 canvas.Translate(px, py);
@@ -175,7 +175,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-The `xCenter` and `yCenter` values indicate the center of the canvas. The `yText` value is a little offset from that. This indicates the Y coordinate necessary to position the text so that it is truly vertically centered on the page. The `for` loop then sets a rotation centered on the center of the canvas. The rotation is in increments of 30 degrees. The text is drawn using the `yText` value. The number of blanks before the word "ROTATE" in the `text` value was determined empirically to make the connection between these 12 text strings appear to be a dodecagon.
+The `xCenter` and `yCenter` values indicate the center of the canvas. The `yText` value is a little offset from that. This value is the Y coordinate necessary to position the text so that it is truly vertically centered on the page. The `for` loop then sets a rotation based on the center of the canvas. The rotation is in increments of 30 degrees. The text is drawn using the `yText` value. The number of blanks before the word "ROTATE" in the `text` value was determined empirically to make the connection between these 12 text strings appear to be a dodecagon.
 
 One way to simplify this code is to increment the rotation angle by 30 degrees each time through the loop after the `DrawText` call. This eliminates the need for calls to `Save` and `Restore`. Notice that the `degrees` variable is no longer used within the body of the `for` block:
 
@@ -248,7 +248,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-The `revolveDegrees` and `rotateDegrees` fields are animated. This program uses a different animation technique based on the Xamarin.Forms `Animation` class. (This class is described in [Chapter 22 of *Creating Mobile Apps with Xamarin.Forms*](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf)) The `OnAppearing` override creates two `Animation` objects with callback methods and then calls `Commit` on them for an animation duration:
+The `revolveDegrees` and `rotateDegrees` fields are animated. This program uses a different animation technique based on the Xamarin.Forms [`Animation`](xref:Xamarin.Forms.Animation) class. (This class is described in [Chapter 22 of *Creating Mobile Apps with Xamarin.Forms*](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf)) The `OnAppearing` override creates two `Animation` objects with callback methods and then calls `Commit` on them for an animation duration:
 
 ```csharp
 protected override void OnAppearing()
@@ -266,7 +266,7 @@ protected override void OnAppearing()
 }
 ```
 
-The first `Animation` object animates `revolveDegrees` from 0 to 360 degrees over 10 seconds. The second one animates `rotateDegrees` from 0 to 360 degrees every 1 second and also invalidates the surface to generate another call to the `PaintSurface` handler. The `OnDisappearing` override cancels these two animations:
+The first `Animation` object animates `revolveDegrees` from 0 degrees to 360 degrees over 10 seconds. The second one animates `rotateDegrees` from 0 degrees to 360 degrees every 1 second and also invalidates the surface to generate another call to the `PaintSurface` handler. The `OnDisappearing` override cancels these two animations:
 
 ```csharp
 protected override void OnDisappearing()
@@ -306,8 +306,8 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         ...
     }
 }
+```
 
-```csharp
 There are 60 marks of two different sizes that must be drawn in a circle around the clock. The `DrawCircle` call draws that circle at the point (0, –90), which relative to the center of the clock corresponds to 12:00. The `RotateDegrees` call increments the rotation angle by 6 degrees after every tick mark. The `angle` variable is used solely to determine if a large circle or a small circle is drawn:
 
 ```csharp
@@ -361,6 +361,7 @@ The clock is certainly functional although the hands are rather crude:
 
 [![](rotate-images/uglyanalogclock-small.png "Triple screenshot of the Ugly Analog Clock Text page")](rotate-images/uglyanalogclock-large.png#lightbox "Triple screenshot of the Ugly Analog page")
 
+For a more attractive clock, see the article [**SVG Path Data in SkiaSharp**](../curves/path-data.md).
 
 ## Related Links
 

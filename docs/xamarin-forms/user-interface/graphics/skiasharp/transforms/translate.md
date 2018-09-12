@@ -1,6 +1,6 @@
 ---
 title: "The Translate Transform"
-description: "This article examiens how to use the translate transform to shift SkiaSharp graphics in Xamarin.Forms applications, and demonstrates this with sample code."
+description: "This article examines how to use the translate transform to shift SkiaSharp graphics in Xamarin.Forms applications, and demonstrates this with sample code."
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
@@ -31,7 +31,7 @@ These arguments may be negative. A second [`Translate`](xref:SkiaSharp.SKCanvas.
 public void Translate (SKPoint point)
 ```
 
-The **Accumulated Translate** page of the [**SkiaSharpForms**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) sample program demonstrates that multiple calls of the `Translate` method are cumulative. The [`AccumulatedTranslate`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) class displays 20 versions of the same rectangle, each one offset from the previous rectangle just enough so they stretch along the diagonal. Here's the `PaintSurface` event handler:
+The **Accumulated Translate** page of the [**SkiaSharpForms**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) sample program demonstrates that multiple calls of the `Translate` method are cumulative. The [`AccumulatedTranslatePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) class displays 20 versions of the same rectangle, each one offset from the previous rectangle just enough so they stretch along the diagonal. Here's the `PaintSurface` event handler:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -129,11 +129,13 @@ The first example simply calls `Translate` again but with negative values. Becau
 
 The second example calls [`ResetMatrix`](xref:SkiaSharp.SKCanvas.ResetMatrix). This causes all transforms to return to their default state.
 
-The third example saves the state of the of the `SKCanvas` object with a call to [`Save`](xref:SkiaSharp.SKCanvas.Save) and then restores the state with a call to [`Restore`](xref:SkiaSharp.SKCanvas.Restore). This is the most versatile way to manipulate transforms for a series of drawing operations. These `Save` and `Restore` calls function like a stack: You can call `Save` multiple time, and then call `Restore` in reverse sequence to return to previous states. The `Save` method returns an integer, and you can pass that integer to [`RestoreToCount`](xref:SkiaSharp.SKCanvas.RestoreToCount*) to effectively call `Restore` multiple times. The [`SaveCount`](xref:SkiaSharp.SKCanvas.SaveCount) property returns the number of states currently saved on the stack.
+The third example saves the state of the `SKCanvas` object with a call to [`Save`](xref:SkiaSharp.SKCanvas.Save) and then restores the state with a call to [`Restore`](xref:SkiaSharp.SKCanvas.Restore). This is the most versatile way to manipulate transforms for a series of drawing operations. These `Save` and `Restore` calls function like a stack: You can call `Save` multiple times, and then call `Restore` in reverse sequence to return to previous states. The `Save` method returns an integer, and you can pass that integer to [`RestoreToCount`](xref:SkiaSharp.SKCanvas.RestoreToCount*) to effectively call `Restore` multiple times. The [`SaveCount`](xref:SkiaSharp.SKCanvas.SaveCount) property returns the number of states currently saved on the stack.
+
+You can also use the [`SKAutoCanvasRestore`](xref:SkiaSharp.SKAutoCanvasRestore) class for restoring the canvas state. The constructor of this class is intended to be called in a `using` statement; the canvas state is automatically restored at the end of the `using` block. 
 
 However, you don't have to worry about transforms carrying over from one call of the `PaintSurface` handler to the next. Each new call to `PaintSurface` delivers a fresh `SKCanvas` object with default transforms.
 
-Another common use of the `Translate` transform is for rendering a visual object that has been originally created using coordinates that are convenient for drawing. For example, you might want to specify coordinates for an analog clock with a center at the point (0, 0). You can then use transforms to display it where you want it. This is demonstrated in the [**Hendecagram Array**] page. The [`HendecagramArrayPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramPage.cs) class begins by creating an `SKPath` object for an 11-pointed star. The `HendecagramPath` object is defined as public, static, and read-only so that it can be accessed from other demonstration programs. It is created in a static constructor:
+Another common use of the `Translate` transform is for rendering a visual object that has been originally created using coordinates that are convenient for drawing. For example, you might want to specify coordinates for an analog clock with a center at the point (0, 0). You can then use transforms to display the clock where you want it. This technique is demonstrated in the [**Hendecagram Array**] page. The [`HendecagramArrayPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramPage.cs) class begins by creating an `SKPath` object for an 11-pointed star. The `HendecagramPath` object is defined as public, static, and read-only so that it can be accessed from other demonstration programs. It is created in a static constructor:
 
 ```csharp
 public class HendecagramArrayPage : ContentPage
@@ -258,7 +260,7 @@ public class HendecagramAnimationPage : ContentPage
 }
 ```
 
-The `angle` field is animated from 0 to 360 degrees every 5 seconds. The `PaintSurface` handler uses the `angle` property in two ways: to specify the hue of the color in the `SKColor.FromHsl` method, and as an argument to the `Math.Sin` and `Math.Cos` methods to govern the location of the star:
+The `angle` field is animated from 0 degrees to 360 degrees every 5 seconds. The `PaintSurface` handler uses the `angle` property in two ways: to specify the hue of the color in the `SKColor.FromHsl` method, and as an argument to the `Math.Sin` and `Math.Cos` methods to govern the location of the star:
 
 ```csharp
 public class HendecagramAnimationPage : ContentPage

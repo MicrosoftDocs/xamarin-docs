@@ -20,7 +20,7 @@ In multi-touch environments such as those on mobile devices, users often use the
 ## Manipulating One Bitmap
 
 The **Touch Manipulation** page demonstrates touch manipulations on a single bitmap.
-This sample makes use of the touch-tracking effect presented in the article [Invoking Events from Effects](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
+This sample makes use of the touch-tracking effect presented in the article [**Invoking Events from Effects**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
 
 Several other files provide support for the **Touch Manipulation** page. The first is the [`TouchManipulationMode`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationMode.cs) enumeration, which indicates the different types of touch manipulation implemented by the code you'll be seeing:
 
@@ -845,7 +845,7 @@ public partial class SingleFingerCornerScalePage : ContentPage
 
 The `Moved` action type calculates a matrix corresponding to the touch activity from the time the finger pressed the screen up to this time. It concatenates that matrix with the matrix in effect at the time the finger first pressed the bitmap. The scaling operation is always relative to the corner opposite to the one that the finger touched.
 
-For small or oblong bitmaps, an interior ellipse might occupy most of the bitmap and leave very tiny areas at the corners to scale the bitmap. You might prefer a somewhat different approach, in which case you can replace that entire `if` block that sets `isScaling` to `true` with this code:
+For small or oblong bitmaps, an interior ellipse might occupy most of the bitmap and leave tiny areas at the corners to scale the bitmap. You might prefer a somewhat different approach, in which case you can replace that entire `if` block that sets `isScaling` to `true` with this code:
 
 ```csharp
 float halfHeight = rect.Height / 2;

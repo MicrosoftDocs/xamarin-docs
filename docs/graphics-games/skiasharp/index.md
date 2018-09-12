@@ -39,6 +39,7 @@ Learn how to work with cross platform graphics that render in Xamarin.Forms:
   * [Basic animation](~/xamarin-forms/user-interface/graphics/skiasharp/basics/animation.md)
   * [Integrating text and graphics](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md)
   * [Bitmap basics](~/xamarin-forms/user-interface/graphics/skiasharp/basics/bitmaps.md)
+  * [Transparency](~/xamarin-forms/user-interface/graphics/skiasharp/basics/transparency.md)
 - [Lines and Paths](~/xamarin-forms/user-interface/graphics/skiasharp/paths/index.md)
   * [Lines and stroke caps](~/xamarin-forms/user-interface/graphics/skiasharp/paths/lines.md)
   * [Path basics](~/xamarin-forms/user-interface/graphics/skiasharp/paths/paths.md)

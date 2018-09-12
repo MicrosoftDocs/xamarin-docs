@@ -33,11 +33,11 @@ In any C# page that uses SkiaSharp you'll want to include a `using` directive fo
 
 ## [SkiaSharp Drawing Basics](basics/index.md)
 
-Some of the simplest graphics figures you can draw with SkiaSharp are circles, ovals, and rectangles. In displaying these figures, you will learn about SkiaSharp coordinates, sizes, and colors.
+Some of the simplest graphics figures you can draw with SkiaSharp are circles, ovals, and rectangles. In displaying these figures, you will learn about SkiaSharp coordinates, sizes, and colors. The display of text and bitmaps is more complex, but these articles also introduce those techniques.
 
 ## [SkiaSharp Lines and Paths](paths/index.md)
 
-A graphics path is a series of connected straight lines and curves. Paths can be stroked, filled, or both. This topic encompasses many aspects of line drawing, including stroke ends and joins, and dashed and dotted lines, but stops short of curve geometries.
+A graphics path is a series of connected straight lines and curves. Paths can be stroked, filled, or both. This article encompasses many aspects of line drawing, including stroke ends and joins, and dashed and dotted lines, but stops short of curve geometries.
 
 ## [SkiaSharp Transforms](transforms/index.md)
 
@@ -53,7 +53,7 @@ Bitmaps are rectangular arrays of bits corresponding to the pixels of a display 
 
 ## [SkiaSharp Effects](effects/index.md)
 
-Effects are properties that alter the normal display of graphics, including linear and circular gradients, bitmap tiling, blend modes, blur and others.
+Effects are properties that alter the normal display of graphics, including linear and circular gradients, bitmap tiling, blend modes, blur, and others.
 
 ## Related Links
 

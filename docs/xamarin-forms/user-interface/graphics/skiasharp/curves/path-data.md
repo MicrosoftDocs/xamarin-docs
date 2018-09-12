@@ -13,15 +13,15 @@ ms.date: 05/24/2017
 
 _Define paths using text strings in the Scalable Vector Graphics format_
 
-The `SKPath` class supports the definition of entire path objects from text strings in a format established by the Scalable Vector Graphics (SVG) specification. You'll see later in this article how you can represent an entire path such as this one in a text string:
+The [`SKPath`](xref:SkiaSharp.SKPath) class supports the definition of entire path objects from text strings in a format established by the Scalable Vector Graphics (SVG) specification. You'll see later in this article how you can represent an entire path such as this one in a text string:
 
 ![](path-data-images/pathdatasample.png "A sample path defined with SVG path data")
 
 SVG is an XML-based graphics programming language for web pages. Because SVG must allow paths to be defined in markup rather than a series of function calls, the SVG standard includes an extremely concise way of specifying an entire graphics path as a text string.
 
-Within SkiaSharp, this format is referred to as "SVG path-data." The format is also supported in Windows XAML-based programming environments, including the Windows Presentation Foundation and the Universal Windows Platform, where it is known as the [Path Markup Syntax](https://msdn.microsoft.com/library/ms752293%28v=vs.110%29.aspx) or the [Move and draw commands syntax](/windows/uwp/xaml-platform/move-draw-commands-syntax/). It can also serve as an exchange format for vector graphics images, particularly in text-based files such as XML.
+Within SkiaSharp, this format is referred to as "SVG path-data." The format is also supported in Windows XAML-based programming environments, including the Windows Presentation Foundation and the Universal Windows Platform, where it is known as the [Path Markup Syntax](/dotnet/framework/wpf/graphics-multimedia/path-markup-syntax) or the [Move and draw commands syntax](/windows/uwp/xaml-platform/move-draw-commands-syntax/). It can also serve as an exchange format for vector graphics images, particularly in text-based files such as XML.
 
-SkiaSharp defines two methods with the words `SvgPathData` in their names:
+The [`SKPath`](xref:SkiaSharp.SKPath) class defines two methods with the words `SvgPathData` in their names:
 
 ```csharp
 public static SKPath ParseSvgPathData(string svgPath)
@@ -33,13 +33,13 @@ The static [`ParseSvgPathData`](xref:SkiaSharp.SKPath.ParseSvgPathData(System.St
 
 Here's an SVG string for a five-pointed star centered on the point (0, 0) with a radius of 100:
 
-```csharp
+```
 "M 0 -100 L 58.8 90.9, -95.1 -30.9, 95.1 -30.9, -58.8 80.9 Z"
 ```
 
-The letters are commands that build an `SKPath` object. `M` indicates a `MoveTo` call, `L` is `LineTo`, and `Z` is `Close` to close a contour. Each number pair provides an X and Y coordinate of a point. Notice that the `L` command is followed by multiple points separated by commas. In a series of coordinates and points, commas and whitespace are treated identically. Some programmers prefer to put commas between the X and Y coordinates rather than between the points, but commas or spaces are only required to avoid ambiguity. This is perfectly legal:
+The letters are commands that build an `SKPath` object: `M` indicates a `MoveTo` call, `L` is `LineTo`, and `Z` is `Close` to close a contour. Each number pair provides an X and Y coordinate of a point. Notice that the `L` command is followed by multiple points separated by commas. In a series of coordinates and points, commas and whitespace are treated identically. Some programmers prefer to put commas between the X and Y coordinates rather than between the points, but commas or spaces are only required to avoid ambiguity. This is perfectly legal:
 
-```csharp
+```
 "M0-100L58.8 90.9-95.1-30.9 95.1-30.9-58.8 80.9Z"
 ```
 
@@ -47,7 +47,7 @@ The syntax of SVG path data is formally documented in [Section 8.3 of the SVG sp
 
 ## **MoveTo**
 
-```csharp
+```
 M x y
 ```
 
@@ -55,7 +55,7 @@ This begins a new contour in the path by setting the current position. Path data
 
 ## **LineTo**
 
-```csharp
+```
 L x y ...
 ```
 
@@ -63,7 +63,7 @@ This command adds a straight line (or lines) to the path and sets the new curren
 
 ## **Horizontal LineTo**
 
-```csharp
+```
 H x ...
 ```
 
@@ -71,7 +71,7 @@ This command adds a horizontal line to the path and sets the new current positio
 
 ## **Vertical Line**
 
-```csharp
+```
 V y ...
 ```
 
@@ -79,7 +79,7 @@ This command adds a vertical line to the path and sets the new current position 
 
 ## **Close**
 
-```csharp
+```
 Z
 ```
 
@@ -89,7 +89,7 @@ The `C` command closes the contour by adding a straight line from the current po
 
 The command to add an elliptical arc to the contour is by far the most complex command in the entire SVG path-data specification. It is the only command in which numbers can represent something other than coordinate values:
 
-```csharp
+```
 A rx ry rotation-angle large-arc-flag sweep-flag x y ...
 ```
 
@@ -103,7 +103,7 @@ The arc is drawn to the point (*x*, *y*), which becomes the new current position
 
 ## **CubicTo**
 
-```csharp
+```
 C x1 y1 x2 y2 x3 y3 ...
 ```
 
@@ -113,7 +113,7 @@ Multiple Bézier curves can be specified by a single `C` command. The number of 
 
 There is also a "smooth" Bézier curve command:
 
-```csharp
+```
 S x2 y2 x3 y3 ...
 ```
 
@@ -121,7 +121,7 @@ This command should follow a regular Bézier command (although that's not strict
 
 ## **QuadTo**
 
-```csharp
+```
 Q x1 y1 x2 y2 ...
 ```
 
@@ -129,7 +129,7 @@ For quadratic Bézier curves, the number of points must be a multiple of 2. The 
 
 There is also a smooth quadratic curve command:
 
-```csharp
+```
 T x2 y2 ...
 ```
 
@@ -325,7 +325,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-The hour and minute hands now have enclosed areas, so to make those hands distinct from each other, they are drawn with both an black outline and gray fill using the `handStrokePaint` and `handFillPaint` objects.
+The hour and minute hands now have enclosed areas. To make those hands distinct from each other, they are drawn with both a black outline and gray fill using the `handStrokePaint` and `handFillPaint` objects.
 
 In the earlier **Ugly Analog Clock** sample, the little circles that marked the hours and minutes were drawn in a loop. In this **Pretty Analog Clock** sample, an entirely different approach is used: the hour and minute marks are dotted lines drawn with the `minuteMarkPaint` and `hourMarkPaint` objects:
 
@@ -354,9 +354,9 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-The [**Dots and Dashes**](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) guide discussed how you can use the `SKPathEffect.CreateDash` method to create a dashed line. The first argument is a `float` array that generally has two elements: The first element is the length of the dashes, and the second element is the gap between the dashes. When the `StrokeCap` property is set to `SKStrokeCap.Round`, then the rounded ends of the dash effectively lengthen the dash length by the stroke width on both sides of the dash. Thus, setting the first array element to 0 creates a dotted line.
+The [**Dots and Dashes**](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) article discussed how you can use the [`SKPathEffect.CreateDash`](xref:SkiaSharp.SKPathEffect.CreateDash*) method to create a dashed line. The first argument is a `float` array that generally has two elements: The first element is the length of the dashes, and the second element is the gap between the dashes. When the `StrokeCap` property is set to `SKStrokeCap.Round`, then the rounded ends of the dash effectively lengthen the dash length by the stroke width on both sides of the dash. Thus, setting the first array element to 0 creates a dotted line.
 
-The distance between these dots is governed by the second array element. As you'll see shortly, these two `SKPaint` objects are used to draw circles with a radius of 90 units. The circumference of this circle is therefore 180π, which means that the 60 minute marks must appear every 3π units, which is the second value in the `float` array in `minuteMarkPaint`. The twelve hour marks must appear every 15π units, which is the value in the second `float` array.
+The distance between these dots is governed by the second array element. As you'll see shortly, these two `SKPaint` objects are used to draw circles with a radius of 90 units. The circumference of this circle is therefore 180π, which means that the 60 minute marks must appear every 3π units, which is the second value in the `float` array in `minuteMarkPaint`. The 12 hour marks must appear every 15π units, which is the value in the second `float` array.
 
 The `PrettyAnalogClockPage` class sets a timer to invalidate the surface every 16 milliseconds, and the `PaintSurface` handler is called at that rate. The earlier definitions of the `SKPath` and `SKPaint` objects allow for very clean drawing code:
 

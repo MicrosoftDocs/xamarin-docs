@@ -19,7 +19,7 @@ One common application of non-affine transforms is simulating the rotation of a 
 
 This job involves working with three-dimensional rotations, and then deriving a non-affine `SKMatrix` transform that performs these 3D rotations.
 
-It is hard to develop this `SKMatrix` transform working solely within two dimensions. The job becomes much easier when this 3-by-3 matrix is derived from a 4-by-4 matrix used in 3D graphics. SkiaSharp includes the [`SKMatrix44`](xref:SkiaSharp.SKMatrix44.PreConcat(SkiaSharp.SKMatrix44)) class for this purpose, but some background in 3D graphics is necessary for understanding 3D rotations and the 4-by-4 transform matrix.
+It is hard to develop this `SKMatrix` transform working solely within two dimensions. The job becomes much easier when this 3-by-3 matrix is derived from a 4-by-4 matrix used in 3D graphics. SkiaSharp includes the [`SKMatrix44`](xref:SkiaSharp.SKMatrix44) class for this purpose, but some background in 3D graphics is necessary for understanding 3D rotations and the 4-by-4 transform matrix.
 
 A three-dimensional coordinate system adds a third axis called Z. Conceptually, the Z axis is at right angles to the screen. Coordinate points in 3D space are indicated with three numbers: (x, y, z). In the 3D coordinate system used in this article, increasing values of X are to the right and increasing values of Y go down, just as in two dimensions. Increasing positive Z values come out of the screen. The origin is the upper-left corner, just as in 2D graphics. You can think of the screen as an XY plane with the Z axis at right angles to this plane.
 
@@ -436,7 +436,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-The `OnAppearing` override defines three Xamarin.Forms `Animation` objects to animate the `xRotationDegrees`, `yRotationDegrees`, and `zRotationDegrees` fields at different rates. Notice that the periods of these animations are set to prime numbers — 5 seconds, 7 seconds, and 11 seconds — so the overall combination only repeats every 385 seconds, or more than 10 minutes:
+The `OnAppearing` override defines three Xamarin.Forms `Animation` objects to animate the `xRotationDegrees`, `yRotationDegrees`, and `zRotationDegrees` fields at different rates. Notice that the periods of these animations are set to prime numbers (5 seconds, 7 seconds, and 11 seconds) so the overall combination only repeats every 385 seconds, or more than 10 minutes:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage

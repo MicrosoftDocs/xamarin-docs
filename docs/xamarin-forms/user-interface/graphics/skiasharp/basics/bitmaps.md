@@ -89,13 +89,13 @@ protected override async void OnAppearing()
 }
 ```
 
-Android will raise an exception when using the `Stream` returned from `GetStreamAsync` in the `SKBitmap.Decode` method because it's performing a lengthy operation on a main thread. For this reason, the contents of the bitmap file are copied to a `MemoryStream` object using `CopyToAsync`.
+The Android operating system raises an exception when using the `Stream` returned from `GetStreamAsync` in the `SKBitmap.Decode` method because it's performing a lengthy operation on a main thread. For this reason, the contents of the bitmap file are copied to a `MemoryStream` object using `CopyToAsync`.
 
-The static `SKBitmap.Decode` method is responsible for decoding bitmap files. It works with JPEG, PNG, GIF, and several other popular bitmap formats, and stores the results in an internal SkiaSharp format. At this point, the `SKCanvasView` needs to be invalidated to allow the `PaintSurface` handler to update the display. 
+The static `SKBitmap.Decode` method is responsible for decoding bitmap files. It works with JPEG, PNG, and GIF bitmap formats, and stores the results in an internal SkiaSharp format. At this point, the `SKCanvasView` needs to be invalidated to allow the `PaintSurface` handler to update the display. 
 
 ## Loading a Bitmap Resource
 
-In terms of code, the easiest approach to loading bitmaps is including a bitmap resource directly in your application. The **SkiaSharpFormsDemos** program includes a folder named **Media** containing a bitmap file named **monkey.png**. In the **Properties** dialog for this file, you must give such a file a **Build Action** of **Embedded Resource**!
+In terms of code, the easiest approach to loading bitmaps is including a bitmap resource directly in your application. The **SkiaSharpFormsDemos** program includes a folder named **Media** containing several bitmap files, including one named **monkey.png**. For bitmaps stored as program resources, you must use the **Properties** dialog to give the file a **Build Action** of **Embedded Resource**!
 
 Each embedded resource has a *resource ID* that consists of the project name, the folder, and the filename, all connected by periods: **SkiaSharpFormsDemos.Media.monkey.png**. You can get access to this resource by specifying that resource ID as an argument to the [`GetManifestResourceStream`](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) method of the [`Assembly`](xref:System.Reflection.Assembly) class:
 
@@ -117,7 +117,7 @@ It's also possible for the user to load a photo from the device's picture librar
 
 The **IPhotoLibrary.cs** file in the **SkiaSharpFormsDemos** project and the three **PhotoLibrary.cs** files in the platform projects have been adapted from that article. In addition, the Android **MainActivity.cs** file has been modified as described in the article, and the iOS project has been given permission to access the photo library with two lines towards the bottom of the **info.plist** file.
 
-The `BasicBitmapsPage` constructor adds a `TapGestureRecognizer` to the `SKCanvasView` to be notified of taps. On receipt of a tap, the `Tapped` handler gets access to the picture-picker dependency service and calls `GetImageStreamAsync`. If a `Stream` object is returned, then the contents are copied into a `MemoryStream`, as required by some of the platforms. The rest of the code is similar to the two other techniques:
+The `BasicBitmapsPage` constructor adds a `TapGestureRecognizer` to the `SKCanvasView` to be notified of taps. On receipt of a tap, the `Tapped` handler gets access to the picture-picker dependency service and calls `PickPhotoAsync`. If a `Stream` object is returned, then it is passed to the `SKBitmap.Decode` method:
 
 ```csharp
 // Add tap gesture recognizer
@@ -139,7 +139,7 @@ tapRecognizer.Tapped += async (sender, args) =>
 canvasView.GestureRecognizers.Add(tapRecognizer);
 ```
 
-Notice that the `Tapped` handler calls the `InvalidateSurface` method of the `SKCanvasView` object. This generates a new call to the `PaintSurface` handler.
+Notice that the `Tapped` handler also calls the `InvalidateSurface` method of the `SKCanvasView` object. This generates a new call to the `PaintSurface` handler.
 
 ## Displaying the Bitmaps
 

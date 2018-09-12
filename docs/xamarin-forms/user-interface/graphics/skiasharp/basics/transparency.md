@@ -13,7 +13,7 @@ ms.date: 08/23/2018
 
 As you've seen, the [`SKPaint`](xref:SkiaSharp.SKPaint) class includes a [`Color`](xref:SkiaSharp.SKPaint.Color) property of type [`SKColor`](xref:SkiaSharp.SKColor). `SKColor` includes an alpha channel, so anything that you color with an `SKColor` value can be partially transparent. 
 
-Some transparency was demonstrated in the [**Basic Animation in SkiaSharp**](animation.md) article. This article goes somewhat deeper into transparency to combine multiple objects in a single scene. 
+Some transparency was demonstrated in the [**Basic Animation in SkiaSharp**](animation.md) article. This article goes somewhat deeper into transparency to combine multiple objects in a single scene, a technique sometimes known as _blending_. More advanced blending techniques are discussed in the articles in the [**SkiaSharp shaders**](../effects/shaders/index.md) section.
 
 You can set the transparency level when you first create a color using the four-parameter [`SKColor`](xref:SkiaSharp.SKColor.%23ctor(System.Byte,System.Byte,System.Byte,System.Byte)) constructor:
 
@@ -39,14 +39,14 @@ public class CodeMoreCodePage : ContentPage
     Stopwatch stopwatch = new Stopwatch();
     double transparency;
 
-	public CodeMoreCodePage ()
-	{
+    public CodeMoreCodePage ()
+    {
         Title = "Code More Code";
 
         canvasView = new SKCanvasView();
         canvasView.PaintSurface += OnCanvasViewPaintSurface;
         Content = canvasView;
-	}
+    }
 
     protected override void OnAppearing()
     {

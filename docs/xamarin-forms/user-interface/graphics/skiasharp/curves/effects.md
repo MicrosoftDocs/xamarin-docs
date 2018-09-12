@@ -13,7 +13,7 @@ ms.date: 07/29/2017
 
 _Discover the various path effects that allow paths to be used for stroking and filling_
 
-A *path effect* is an instance of the [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) class that is created with one of eight static `Create` methods. The `SKPathEffect` object is then set to the [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) property of an `SKPaint` object for a variety of interesting effects, for example, stroking a line with a small replicated path:
+A *path effect* is an instance of the [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) class that is created with one of eight static creation methods defined by the class. The `SKPathEffect` object is then set to the [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) property of an [`SKPaint`](xref:SkiaSharp.SKPaint) object for a variety of interesting effects, for example, stroking a line with a small replicated path:
 
 ![](effects-images/patheffectsample.png "The Linked Chain sample")
 
@@ -28,7 +28,7 @@ Path effects allow you to:
 
 In addition, you can combine two or more path effects.
 
-This article also demonstrates how to use the `GetFillPath` method of `SKPaint` to convert one path into another path by applying properties of `SKPaint`, including `StrokeWidth` and `PathEffect`. This results in some interesting techniques, such as obtaining a path that is an outline of another path. `GetFillPath` is also helpful in connection with path effects.
+This article also demonstrates how to use the [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath*) method of `SKPaint` to convert one path into another path by applying properties of `SKPaint`, including `StrokeWidth` and `PathEffect`. This results in some interesting techniques, such as obtaining a path that is an outline of another path. `GetFillPath` is also helpful in connection with path effects.
 
 ## Dots and Dashes
 
@@ -40,7 +40,7 @@ public static SKPathEffect CreateDash (Single[] intervals, Single phase)
 
 These values are *not* relative to the stroke width. For example, if the stroke width is 10, and you want a line composed of square dashes and square gaps, set the `intervals` array to { 10, 10 }. The `phase` argument indicates where within the dash pattern the line begins. In this example, if you want the line to begin with the square gap, set `phase` to 10.
 
-The ends of the dashes are affected by the `StrokeCap` property of `SKPaint`. For wide stroke widths, it is very common to set this property to `SKStrokeCap.Round` to round the ends of the dashes. In this case, the values in the `intervals` array do *not* include the extra length resulting from the rounding, which means that a circular dot requires specifying a width of zero. For a stroke width of 10, to create a line with circular dots and gaps between the dots of the same diameter, use an `intervals` array of { 0, 20 }.
+The ends of the dashes are affected by the `StrokeCap` property of `SKPaint`. For wide stroke widths, it is very common to set this property to `SKStrokeCap.Round` to round the ends of the dashes. In this case, the values in the `intervals` array do *not* include the extra length resulting from the rounding. This fact means that a circular dot requires specifying a width of zero. For a stroke width of 10, to create a line with circular dots and gaps between the dots of the same diameter, use an `intervals` array of { 0, 20 }.
 
 The **Animated Dotted Text** page is similar to the **Outlined Text** page described in the article [**Integrating Text and Graphics**](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md) in that it displays outlined text characters by setting the `Style` property of the `SKPaint` object to `SKPaintStyle.Stroke`. In addition, **Animated Dotted Text** uses `SKPathEffect.CreateDash` to give this outline a dotted appearance, and the program also animates the `phase` argument of the `SKPathEffect.CreateDash` method to make the dots seem to travel around the text characters. Here's the page in landscape mode:
 
@@ -146,9 +146,9 @@ Towards the end of the method, the `SKPathEffect.CreateDash` method is called us
 
 Alternatively, you can set the `SKPathEffect` object to the `SKPaint` object prior to measuring the text and centering it on the page. In that case, however, the animated dots and dashes cause some variation in the size of the rendered text, and the text tends to vibrate a little. (Try it!)
 
-You'll also notice that as the animated dots circle around the text characters, there is a certain point in each closed curve where the dots seem to pop in and out of existence. This is where the path that defines the character outline begins and ends. If the path length is not an integral multiple of the length of the dash pattern (in this case 20 pixels) then only part of that pattern can fit at the end of the path.
+You'll also notice that as the animated dots circle around the text characters, there is a certain point in each closed curve where the dots seem to pop in and out of existence. This is where the path that defines the character outline begins and ends. If the path length is not an integral multiple of the length of the dash pattern (in this case 20 pixels), then only part of that pattern can fit at the end of the path.
 
-It's possible to adjust the length of the dash pattern to fit the length of the path, but that requires determining the length of the path, a technique that be covered in a future article.
+It's possible to adjust the length of the dash pattern to fit the length of the path, but that requires determining the length of the path, a technique that is covered in the article [**Path Information and Enumeration**](information.md).
 
 The **Dot / Dash Morph** program animates the dash pattern itself so that dashes seem to divide into dots, which combine to form dashes again:
 
@@ -236,7 +236,7 @@ public class DotDashMorphPage : ContentPage
 }
 ```
 
-The `PaintSurface` handler creates a elliptical path based on the size of the page, and executes a long section of code that sets the `dashArray` and `phase` variables. As the animated variable `t` ranges from 0 to 1, the `if` blocks break up that time into four quarters, and in each of those quarters, `tsub` also ranges from 0 to 1. At the very end, the program creates the `SKPathEffect` and sets it to the `SKPaint` object for drawing.
+The `PaintSurface` handler creates an elliptical path based on the size of the page, and executes a long section of code that sets the `dashArray` and `phase` variables. As the animated variable `t` ranges from 0 to 1, the `if` blocks break up that time into four quarters, and in each of those quarters, `tsub` also ranges from 0 to 1. At the very end, the program creates the `SKPathEffect` and sets it to the `SKPaint` object for drawing.
 
 ## From Path to Path
 
@@ -255,7 +255,7 @@ canvas.DrawPath(newPath, newPaint);
 
 In this new code, the `GetFillPath` call converts the `ellipsePath` (which is just an oval) into `newPath`, which is then displayed with `newPaint`. The `newPaint` object is created with all default property settings except that the `Style` property is set based on the Boolean return value from `GetFillPath`.
 
-The visuals are identical except for the color, which is set in `ellipsePaint` but not `newPaint`. Rather than the simple ellipse defined in `ellipsePath`, `newPath` contains numerous path contours that define the series of dots and dashes. This is the result of applying various properties of `ellipsePaint` — `StrokeWidth`, `StrokeCap`, and `PathEffect` — to `ellipsePath` and putting the resultant path in `newPath`. The `GetFillPath` method returns a Boolean value indicating whether or not the destination path is to be filled; in this example, the return value is `true` for filling the path.
+The visuals are identical except for the color, which is set in `ellipsePaint` but not `newPaint`. Rather than the simple ellipse defined in `ellipsePath`, `newPath` contains numerous path contours that define the series of dots and dashes. This is the result of applying various properties of `ellipsePaint` (specifically, `StrokeWidth`, `StrokeCap`, and `PathEffect`) to `ellipsePath` and putting the resultant path in `newPath`. The `GetFillPath` method returns a Boolean value indicating whether or not the destination path is to be filled; in this example, the return value is `true` for filling the path.
 
 Try changing the `Style` setting in `newPaint` to `SKPaintStyle.Stroke` and you'll see the individual path contours outlined with a one-pixel-width line.
 
@@ -270,16 +270,13 @@ public static SKPathEffect Create1DPath (SKPath path, Single advance,
                                          Single phase, SKPath1DPathEffectStyle style)
 ```
 
-> [!IMPORTANT]
-> Watch out: There is an overload of `Create1DPath` that is defined with an enumeration argument of type `SkPath1DPathEffect` with a lowercase 'k.' This name is an error, and consequently that enumeration and method are deprecated, but it is very easy for the deprecated method to become part of your code, and it is difficult to see exactly what is wrong.
-
-In general, the path that you pass to `Create1DPath` will be small and centered around the point (0, 0). The `advance` parameter indicates the distance from the path centers as the path is replicated on the line. You usually set this argument to the approximate width of the path. The `phase` argument plays the same role here as it does in the `CreateDash` method.
+In general, the path that you pass to `Create1DPath` will be small and centered around the point (0, 0). The `advance` parameter indicates the distance between the centers of the path as the path is replicated on the line. You usually set this argument to the approximate width of the path. The `phase` argument plays the same role here as it does in the `CreateDash` method.
 
 The [`SKPath1DPathEffectStyle`](xref:SkiaSharp.SKPath1DPathEffectStyle) has three members:
 
-- [`Translate`](xref:SkiaSharp.SKPath1DPathEffectStyle.Translate)
-- [`Rotate`](xref:SkiaSharp.SKPath1DPathEffectStyle.Rotate)
-- [`Morph`](xref:SkiaSharp.SKPath1DPathEffectStyle.Morph)
+- `Translate`
+- `Rotate`
+- `Morph`
 
 The `Translate` member causes the path to remain in the same orientation as it is replicated along a line or curve. For `Rotate`, the path is rotated based on a tangent to the curve. The path has its normal orientation for horizontal lines. `Morph` is similar to `Rotate` except that the path itself is also curved to match the curvature of the line being stroked.
 
@@ -541,7 +538,7 @@ public class LinkedChainPage : ContentPage
 
 This program defines the path used in `Create1DPath` to have its (0, 0) point in the center. This seems reasonable because the (0, 0) point of the path is aligned with the line or curve that it's adorning. However, you can use a non-centered (0, 0) point for some special effects.
 
-The **Conveyor Belt** page creates a path resembling an oblong conveyor belt with a curved top and bottom this is sized to the dimensions of the window. That path is stroked with a simple `SKPaint` object 20 pixels wide and colored gray, and then stroked again with another `SKPaint` object with an `SKPathEffect` object referencing a path resembling a little bucket:
+The **Conveyor Belt** page creates a path resembling an oblong conveyor belt with a curved top and bottom that is sized to the dimensions of the window. That path is stroked with a simple `SKPaint` object 20 pixels wide and colored gray, and then stroked again with another `SKPaint` object with an `SKPathEffect` object referencing a path resembling a little bucket:
 
 [![](effects-images/conveyorbelt-small.png "Triple screenshot of the Conveyor Belt page")](effects-images/conveyorbelt-large.png#lightbox "Triple screenshot of the Conveyor Belt page")
 
@@ -708,7 +705,7 @@ The `width` argument specifies the stroke width of the hatch lines. The `matrix`
 
 By default, hatch lines are horizontal. If the `matrix` parameter contains rotation, the hatch lines are rotated clockwise.
 
-The **Hatch Fill** page demonstrates this path effect. The [`HatchFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) class defines three path effects as fields, the first for horizontal hatch lines with a width of 3 pixels with a scaling factor indicating that they are spaced 6 pixels apart. The separation between the lines is therefore 3 pixels. The second path effect is for vertical hatch lines with a width of 6 pixels spaced 24 pixels apart (so the separation is 18 pixels), and the third is for diagonal hatch lines 12 pixels wide spaced 36 pixels apart.
+The **Hatch Fill** page demonstrates this path effect. The [`HatchFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) class defines three path effects as fields, the first for horizontal hatch lines with a width of 3 pixels with a scaling factor indicating that they are spaced 6 pixels apart. The separation between the lines is therefore three pixels. The second path effect is for vertical hatch lines with a width of six pixels spaced 24 pixels apart (so the separation is 18 pixels), and the third is for diagonal hatch lines 12 pixels wide spaced 36 pixels apart.
 
 ```csharp
 public class HatchFillPage : ContentPage
@@ -808,7 +805,7 @@ The `SKMatrix` scaling factors indicate the horizontal and vertical spacing of t
 
 The replicated path is normally aligned with the left and top edges of the screen rather than the area being filled. You can override this behavior by providing translation factors between 0 and the scaling factors to specify horizontal and vertical offsets from the left and top sides.
 
-The **Path Tile Fill** page demonstrates this path effect. The path used for tiling the area is defined as a field in the [`PathFileFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) class. The horizontal and vertical coordinates range from –40 to 40, which means that this path is 80 pixels square:
+The **Path Tile Fill** page demonstrates this path effect. The path used for tiling the area is defined as a field in the [`PathTileFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) class. The horizontal and vertical coordinates range from –40 to 40, which means that this path is 80 pixels square:
 
 ```csharp
 public class PathTileFillPage : ContentPage
@@ -854,6 +851,8 @@ Notice that these tiles always appear whole and are never truncated. On the firs
 
 Try setting the `Style` property of the `SKPaint` object to `Stroke`, and you'll see the individual tiles outlined rather than filled.
 
+It's also possible to fill an area with a tiled bitmap, as shown in the article [**SkiaSharp bitmap tiling**](../effects/shaders/bitmap-tiling.md).
+
 ## Rounding Sharp Corners
 
 The **Rounded Heptagon** program presented in the [**Three Ways to Draw an Arc**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) article used a tangent arc to curve the points of a seven-sided figure. The **Another Rounded Heptagon** page shows a much easier approach that uses a path effect created from the [`SKPathEffect.CreateCorner`](xref:SkiaSharp.SKPathEffect.CreateCorner(System.Single)) method:
@@ -862,7 +861,7 @@ The **Rounded Heptagon** program presented in the [**Three Ways to Draw an Arc**
 public static SKPathEffect CreateCorner (Single radius)
 ```
 
-Although the single argument is named `radius` you must set it to half the desired corner radius. (This is a characteristic of the underlying Skia code.)
+Although the single argument is named `radius`, you must set it to half the desired corner radius. (This is a characteristic of the underlying Skia code.)
 
 Here's the `PaintSurface` handler in the [`AnotherRoundedHeptagonPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/AnotherRoundedHeptagonPage.cs) class:
 
@@ -940,7 +939,7 @@ The **Jitter Experiment** page allows you to experiment with different values in
 
 [![](effects-images/jitterexperiment-small.png "Triple screenshot of the Jitter Experiment page")](effects-images/jitterexperiment-large.png#lightbox "Triple screenshot of the JitterExperiment page")
 
-The program is straightfoward. The [**JitterExperimentPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) file instantiates two `Slider` elements and an `SKCanvasView`:
+The program is straightforward. The [**JitterExperimentPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) file instantiates two `Slider` elements and an `SKCanvasView`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -1068,17 +1067,17 @@ Here it is running in landscape mode on all three platforms:
 
 ## Path Outlining
 
-You've already seen two little examples of the [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,System.Single)) method of `SKPaint`, which also exists in an [overload](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)):
+You've already seen two little examples of the [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath*) method of `SKPaint`, which exists two versions:
 
 ```csharp
-public Boolean GetFillPath (SKPath src, SKPath dst, Single resScale)
+public Boolean GetFillPath (SKPath src, SKPath dst, Single resScale = 1)
 
-public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resScale)
+public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resScale = 1)
 ```
 
 Only the first two arguments are required. The method accesses the path referenced by the `src` argument, modifies the path data based on the stroke properties in the `SKPaint` object (including the `PathEffect` property), and then writes the results into the `dst` path. The `resScale` parameter allows reducing the precision to create a smaller destination path, and the `cullRect` argument can eliminate contours outside a rectangle.
 
-One basic use of this method does not involve path effects at all. If the `SKPaint` object has its `Style` property set to `SKPaintStyle.Stroke`, and does *not* have its `PathEffect` set, then `GetFillPath` creates a path that represents an *outline* of the source path as if it had been stroked by the paint properties.
+One basic use of this method does not involve path effects at all: If the `SKPaint` object has its `Style` property set to `SKPaintStyle.Stroke`, and does *not* have its `PathEffect` set, then `GetFillPath` creates a path that represents an *outline* of the source path as if it had been stroked by the paint properties.
 
 For example, if the `src` path is a simple circle of radius 500, and the `SKPaint` object specifies a stroke width of 100, then the `dst` path becomes two concentric circles, one with a radius of 450 and the other with a radius of 550. The method is called `GetFillPath` because filling this `dst` path is the same as stroking the `src` path. But you can also stroke the `dst` path to see the path outlines.
 
@@ -1215,7 +1214,7 @@ using (SKPath linkPath = new SKPath())
 
 The `outlinePath` object is then the recipient of the outline of `linkPath` when it is stroked with the properties specified in `strokePaint`.
 
-Another example using this technique is coming up next for the path used in a `SKPathEffect.Create2DPath` methods.
+Another example using this technique is coming up next for the path used in a  method.
 
 ## Combining Path Effects
 
@@ -1377,7 +1376,7 @@ public class DashedHatchLinesPage : ContentPage
 }
 ```
 
-The `PaintSurface` handler need to contain only the standard overhead plus one call to `DrawOval`:
+The `PaintSurface` handler needs to contain only the standard overhead plus one call to `DrawOval`:
 
 ```csharp
 public class DashedHatchLinesPage : ContentPage

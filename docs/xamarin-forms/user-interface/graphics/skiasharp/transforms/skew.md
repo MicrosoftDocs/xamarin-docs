@@ -17,7 +17,7 @@ In SkiaSharp, the skew transform tilts graphical objects, such as the shadow in 
 
 ![](skew-images/skewexample.png "An example of skewing from the Skew Shadow Text program")
 
-The skew transforms rectangles into parallelograms, but a skewed ellipse is still an ellipse.
+The skew turns a rectangle into a parallelogram, but a skewed ellipse is still an ellipse.
 
 Although Xamarin.Forms defines properties for translation, scaling, and rotations, there is no corresponding property in Xamarin.Forms for skew.
 
@@ -67,7 +67,7 @@ Values of the `xSkew` argument shift the bottom of the text right for positive v
 
 [![](skew-images/skewexperiment-small.png "Triple screenshot of the Skew Experiment page")](skew-images/skewexperiment-large.png#lightbox "Triple screenshot of the Skew Experiment page")
 
-If `xSkew` is the negative of `ySkew`, the result is rotation, but also scaled somewhat as the UWP display indicates.
+If the `xSkew` value is the negative of the `ySkew` value, the result is rotation, but also scaled somewhat as the UWP display indicates.
 
 The transform formulas are as follows:
 
@@ -97,7 +97,7 @@ x' = x + xSkew · (y – py)
 
 y' = ySkew · (x – px) + y
 
-If `ySkew` is zero, and you're only specifying a non-zero value of `xSkew`, then `px` value is not used. The value is irrelevant, and similarly for `ySkew` and `py`.
+If `ySkew` is zero, then the `px` value is not used. The value is irrelevant, and similarly for `ySkew` and `py`.
 
 You might feel more comfortable specifying skew as an angle of tilt, such as the angle α in this diagram:
 
@@ -105,7 +105,7 @@ You might feel more comfortable specifying skew as an angle of tilt, such as the
 
 The ratio of the 150-pixel shift to the 100-pixel vertical is the tangent of that angle, in this example 56.3 degrees.
 
-The XAML file of the **Skew Angle Experiment** page is similar to the **Skew Angle** page except that the `Slider` elements range from –90 to 90 degrees. The [`SkewAngleExperiment`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) code-behind file centers the text on the page and uses `Translate` to set a center of skewing to the center of the page. A short `SkewDegrees` method at the bottom of the code converts angles to skew values:
+The XAML file of the **Skew Angle Experiment** page is similar to the **Skew Angle** page except that the `Slider` elements range from –90 degrees to 90 degrees. The [`SkewAngleExperiment`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) code-behind file centers the text on the page and uses `Translate` to set a center of skewing to the center of the page. A short `SkewDegrees` method at the bottom of the code converts angles to skew values:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -219,11 +219,11 @@ The shadow is displayed first and then the text:
 
 [![](skew-images/skewshadowtext1-small.png "Triple screenshot of the Skew Shadow Text page")](skew-images/skewshadowtext1-large.png#lightbox "Triple screenshot of the Skew Shadow Text page")
 
-The vertical coordinate passed to the `DrawText` method indicates the position of the text relative to the baseline. That is the same vertical coordinate used for the center of skewing. This technique will not work if the text string contains descenders. For example, subsitute the word "quirky" for "Shadow" and here's the result:
+The vertical coordinate passed to the `DrawText` method indicates the position of the text relative to the baseline. That is the same vertical coordinate used for the center of skewing. This technique will not work if the text string contains descenders. For example, substitute the word "quirky" for "Shadow" and here's the result:
 
 [![](skew-images/skewshadowtext2-small.png "Triple screenshot of the Skew Shadow Text page with an alternative word with descenders")](skew-images/skewshadowtext2-large.png#lightbox "Triple screenshot of the Skew Shadow Text page with an alternative word with descenders")
 
-The shadow and text are still aligned at the baseline, but the effect just looks wrong. To fix it you need to obtain the text bounds:
+The shadow and text are still aligned at the baseline, but the effect just looks wrong. To fix it, you need to obtain the text bounds:
 
 ```csharp
 SKRect textBounds = new SKRect();

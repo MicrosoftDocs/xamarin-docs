@@ -57,6 +57,8 @@ In this equation, you do not want the value of z' becoming zero:
 
 z` = Persp0·x + Persp1·y + Persp2
 
+Consequently, these values have some practical restrictions: 
+
 The `Persp2` cell can either be zero or not zero. If `Persp2` is zero, then z' is zero for the point (0, 0), and that's usually not desirable because that point is very common in two-dimensional graphics. If `Persp2` is not equal to zero, then there is no loss of generality if `Persp2` is fixed at 1. For example, if you determine that `Persp2` should be 5, then you can simply divide all the cells in the matrix by 5, which makes `Persp2` equal to 1, and the result will be the same.
 
 For these reasons, `Persp2` is often fixed at 1, which is the same value in the identity matrix.
@@ -387,9 +389,9 @@ Here are some examples:
 
 [![](non-affine-images/tapertransform-small.png "Triple screenshot of the Taper Transform page")](non-affine-images/tapertransform-large.png#lightbox "Triple screenshot of the Taper Transform page")
 
-Another type of generalized non-affine transforms is 3D rotation, which is demonstrated in the next article, [3D Rotations](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md).
+Another type of generalized non-affine transforms is 3D rotation, which is demonstrated in the next article, [**3D Rotations**](3d-rotation.md).
 
-The non-affine transform can transform a rectangle into any convex quadrilateral. This is demonstrated by the **Show Non-Affine Matrix** page. It is very similar to the **Show Affine Matrix** page from the [Matrix Transforms](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md) article except that it has a fourth `TouchPoint` object to manipulate the fourth corner of the bitmap:
+The non-affine transform can transform a rectangle into any convex quadrilateral. This is demonstrated by the **Show Non-Affine Matrix** page. It is very similar to the **Show Affine Matrix** page from the [**Matrix Transforms**](matrix.md) article except that it has a fourth `TouchPoint` object to manipulate the fourth corner of the bitmap:
 
 [![](non-affine-images/shownonaffinematrix-small.png "Triple screenshot of the Show Non-Affine Matrix page")](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple screenshot of the Show Non-Affine Matrix page")
 
@@ -454,11 +456,11 @@ For ease of calculation, this method obtains the total transform as a product of
 
 The final coordinates at the right are the four points associated with the four touch points. These are the final coordinates of the corners of the bitmap.
 
-W and H represent the width and height of the bitmap. The first transform (`S`) simply scales the bitmap to a 1-pixel square. The second transform is the non-affine transform `N`, and the third is the affine transform `A`. That affine transform is based on three points, so it's just like the earlier affine [`ComputeMatrix`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) method and doesn't involve the fourth row with the (a, b) point.
+W and H represent the width and height of the bitmap. The first transform `S` simply scales the bitmap to a 1-pixel square. The second transform is the non-affine transform `N`, and the third is the affine transform `A`. That affine transform is based on three points, so it's just like the earlier affine [`ComputeMatrix`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) method and doesn't involve the fourth row with the (a, b) point.
 
 The `a` and `b` values are calculated so that the third transform is affine. The code obtains the inverse of the affine transform and then uses that to map the lower-right corner. That's the point (a, b).
 
-Another use of non-affine transforms is to mimic three-dimensional graphics. In the next article, [3D Rotations](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md) you see how to rotate a two-dimensional graphic in 3D space.
+Another use of non-affine transforms is to mimic three-dimensional graphics. In the next article, [**3D Rotations**](3d-rotation.md) you see how to rotate a two-dimensional graphic in 3D space.
 
 
 ## Related Links

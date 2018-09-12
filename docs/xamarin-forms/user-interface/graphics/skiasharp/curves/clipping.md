@@ -17,7 +17,7 @@ It's sometimes necessary to restrict the rendering of graphics to a particular a
 
 ![](clipping-images/clippingsample.png "Monkey through a keyhole")
 
-The *clipping area* is the area of the screen in which graphics are rendered. Anything that is displayed outside of the clipping area is not rendered. The clipping area is usually defined by an [`SKPath`](xref:SkiaSharp.SKPath) object but you can alternatively define a clipping area using an [`SKRegion`](xref:SkiaSharp.SKRegion) object. These two types of objects at first seem related because you can create a region from a path. However, you cannot create a path from a region, and they are very different internally: A path comprises a series of lines and curves, while a region is defined by a series of horizontal scan lines.
+The *clipping area* is the area of the screen in which graphics are rendered. Anything that is displayed outside of the clipping area is not rendered. The clipping area is usually defined by a rectangle or an [`SKPath`](xref:SkiaSharp.SKPath) object, but you can alternatively define a clipping area using an [`SKRegion`](xref:SkiaSharp.SKRegion) object. These two types of objects at first seem related because you can create a region from a path. However, you cannot create a path from a region, and they are very different internally: A path comprises a series of lines and curves, while a region is defined by a series of horizontal scan lines.
 
 The image above was created by the **Monkey through Keyhole** page. The  [`MonkeyThroughKeyholePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) class defines a path using SVG data and uses the constructor to load a bitmap from program resources:
 
@@ -99,7 +99,7 @@ The clipping path is subject to the transforms in effect when the `ClipPath` met
 
 ## Combining Clipping Paths
 
-Strictly speaking, the clipping area is not "set" by the `ClipPath` method. Instead, it is combined with the existing clipping path, which begins as a rectangle equal in size to the screen. You can obtain the rectangular bounds of the clipping area using the [`ClipBounds`](xref:SkiaSharp.SKCanvas.ClipBounds) property or the [`ClipDeviceBounds`](xref:SkiaSharp.SKCanvas.ClipDeviceBounds) property. The `ClipBounds` property returns an `SKRect` value that reflects any transforms that might be in effect. The `ClipDeviceBounds` property returns a `RectI` value. This is a rectangle with integer dimensions, and describes the clipping area in actual pixel dimensions.
+Strictly speaking, the clipping area is not "set" by the `ClipPath` method. Instead, it is combined with the existing clipping path, which begins as a rectangle equal in size to the canvas. You can obtain the rectangular bounds of the clipping area using the [`ClipBounds`](xref:SkiaSharp.SKCanvas.ClipBounds) property or the [`ClipDeviceBounds`](xref:SkiaSharp.SKCanvas.ClipDeviceBounds) property. The `ClipBounds` property returns an `SKRect` value that reflects any transforms that might be in effect. The `ClipDeviceBounds` property returns a `RectI` value. This is a rectangle with integer dimensions, and describes the clipping area in actual pixel dimensions.
 
 Any call to `ClipPath` reduces the clipping area by combining the clipping area with a new area. The full syntax of the [`ClipPath`](xref:SkiaSharp.SKCanvas.ClipPath(SkiaSharp.SKPath,SkiaSharp.SKClipOperation,System.Boolean)) method is:
 
@@ -164,9 +164,9 @@ What's left is the intersection of these four circles:
 
 The [`SKClipOperation`](xref:SkiaSharp.SKClipOperation) enumeration has only two members:
 
-- [`Difference`](xref:SkiaSharp.SKClipOperation.Difference) removes the specified path or rectangle from the existing clipping area
+- `Difference` removes the specified path or rectangle from the existing clipping area
 
-- [`Intersect`](xref:SkiaSharp.SKClipOperation.Intersect) intersects the specified path or rectangle with the existing clipping area
+- `Intersect` intersects the specified path or rectangle with the existing clipping area
 
 If you replace the four `SKClipOperation.Intersect` arguments in the `FourCircleIntersectClipPage` class with `SKClipOperation.Difference`, you'll see the following:
 
@@ -243,31 +243,29 @@ Calling `DrawPaint` normally causes the entire canvas to be filled with that `SK
 
 ## Exploring Regions
 
-If you have explored the API documentation for `SKCanvas`, you might have noticed overloads of the `ClipPath` and `ClipRect` methods that are similar to the methods described above, but instead, have a parameter named [`SKRegionOperation`](xref:SkiaSharp.SKRegionOperation) rather than `SKClipOperation`. `SKRegionOperation` has six members, providing somewhat more flexibility in combining paths to form clipping areas:
+You can also define a clipping area in terms of an [`SKRegion`](xref:SkiaSharp.SKRegion) object.
 
-- [`Difference`](xref:SkiaSharp.SKRegionOperation.Difference)
+A newly created `SKRegion` object describes an empty area. Usually the first call on the object is [`SetRect`](xref:SkiaSharp.SKRegion.SetRect(SkiaSharp.SKRectI)) so that the region describes a rectangular area. The parameter to `SetRect` is an `SKRectI` value &mdash; a rectangle with integer coordinates because it specifies the rectangle in terms of pixels. You can then call [`SetPath`](xref:SkiaSharp.SKRegion.SetPath(SkiaSharp.SKPath,SkiaSharp.SKRegion)) with an `SKPath` object. This creates a region that is the same as the interior of the path, but clipped to the initial rectangular region.
 
-- [`Intersect`](xref:SkiaSharp.SKRegionOperation.Intersect)
-
-- [`Union`](xref:SkiaSharp.SKRegionOperation.Union)
-
-- [`XOR`](xref:SkiaSharp.SKRegionOperation.XOR)
-
-- [`ReverseDifference`](xref:SkiaSharp.SKRegionOperation.ReverseDifference)
-
-- [`Replace`](xref:SkiaSharp.SKRegionOperation.Replace)
-
-However, the overloads of `ClipPath` and `ClipRect` with `SKRegionOperation` parameters are obsolete and they cannot be used.
-
-You can still use the `SKRegionOperation` enumeration but it requires that you define a clipping area in terms of an [`SKRegion`](xref:SkiaSharp.SKRegion) object.
-
-A newly created `SKRegion` object describes an empty area. Usually the first call on the object is [`SetRect`](xref:SkiaSharp.SKRegion.SetRect(SkiaSharp.SKRectI)) so that the region describe a rectangular area. The parameter to `SetRect` is a an `SKRectI` value &mdash; the rectangle value with integer properties. You can then call [`SetPath`](xref:SkiaSharp.SKRegion.SetPath(SkiaSharp.SKPath,SkiaSharp.SKRegion)) with an `SKPath` object. This creates a region that is the same as the interior of the path, but clipped to the initial rectangular region.
-
-The `SKRegionOperation` enumeration only comes into play when you call one of the [`Op`](xref:SkiaSharp.SKRegion.Op(SkiaSharp.SKRegion,SkiaSharp.SKRegionOperation)) method overloads, such as this one:
+The region can also be modified by calling one of the [`Op`](xref:SkiaSharp.SKRegion.Op*) method overloads, such as this one:
 
 ```csharp
 public Boolean Op(SKRegion region, SKRegionOperation op)
 ```
+
+The [`SKRegionOperation`](xref:SkiaSharp.SKRegionOperation) enumeration is similar to `SKClipOperation` but it has more members:
+
+- `Difference`
+
+- `Intersect`
+
+- `Union`
+
+- `XOR`
+
+- `ReverseDifference`
+
+- `Replace`
 
 The region that you're making the `Op` call on is combined with the region specified as a parameter based on the `SKRegionOperation` member. When you finally get a region suitable for clipping, you can set that as the clipping area of the canvas using the [`ClipRegion`](xref:SkiaSharp.SKCanvas.ClipRegion(SkiaSharp.SKRegion,SkiaSharp.SKClipOperation)) method of `SKCanvas`:
 
@@ -359,9 +357,9 @@ Here's a big difference between the `ClipPath` method and the `ClipRegion` metho
 
 To understand the rationale for this difference, it's helpful to understand what a region is. If you've thought about how the clip operations or region operations might be implemented internally, it probably seems very complicated. Several potentially very complex paths are being combined, and the outline of the resultant path is likely an algorithmic nightmare.
 
-But this job is simplified considerably if each path is reduced to a series of horizontal scan lines, such as those in old-fashioned vacuum tube TVs. Each scan line is simply a horizontal line with a start point and an end point. For example, a circle with a radius of 10 can be decomposed into 20 horizontal scan lines, each of which starts at the left part of the circle and ends at the right part. Combining two circles with any region operation becomes very simple because it's simply a matter of examining the start and end coordinates of each pair of corresponding scan lines.
+This job is simplified considerably if each path is reduced to a series of horizontal scan lines, such as those in old-fashioned vacuum tube TVs. Each scan line is simply a horizontal line with a start point and an end point. For example, a circle with a radius of 10 pixels can be decomposed into 20 horizontal scan lines, each of which starts at the left part of the circle and ends at the right part. Combining two circles with any region operation becomes very simple because it's simply a matter of examining the start and end coordinates of each pair of corresponding scan lines.
 
-This is what a region is: A series of horizontal scan lines that defines an area.
+This is what a region is: A series of horizontal scan lines that define an area.
 
 However, when an area is reduced to a series of scan lines, these scan lines are based on a particular pixel dimension. Strictly speaking, the region is not a vector graphics object. It is closer in nature to a compressed monochrome bitmap than to a path. Consequently, regions cannot be scaled or rotated without losing fidelity, and for this reason they are not transformed when used for clipping areas.
 

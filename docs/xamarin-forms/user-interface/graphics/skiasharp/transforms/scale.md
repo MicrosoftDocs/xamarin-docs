@@ -13,7 +13,7 @@ ms.date: 03/23/2017
 
 _Discover the SkiaSharp scale transform for scaling objects to various sizes_
 
-As you've seen in [The Translate Transform](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/translate.md) article, the translate transform can move a graphical object from one location to another. In contrast, the scale transform changes the size of the graphical object:
+As you've seen in [**The Translate Transform**](translate.md) article, the translate transform can move a graphical object from one location to another. In contrast, the scale transform changes the size of the graphical object:
 
 ![](scale-images/scaleexample.png "A tall word scaled in size")
 
@@ -56,7 +56,7 @@ public void Scale (SKPoint size)
 
 The fourth `Scale` method will be described shortly.
 
-The **Basic Scale** page demonstrates the `Scale` method. The [**BasicScalePage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) XAML file contains two `Slider` elements that let you select horizontal and vertical scaling factors between 0 and 10. The [**BasicScalePage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) code-behind file uses those values to call `Scale` before displaying a rounded rectangle stroked with a dashed line and sized to fit some text in the upper-left corner of the canvas:
+The **Basic Scale** page demonstrates the `Scale` method. The [**BasicScalePage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) file contains two `Slider` elements that let you select horizontal and vertical scaling factors between 0 and 10. The [**BasicScalePage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) code-behind file uses those values to call `Scale` before displaying a rounded rectangle stroked with a dashed line and sized to fit some text in the upper-left corner of the canvas:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -166,7 +166,7 @@ The upper-left corner of the rounded rectangle is positioned `margin` pixels fro
 The `Slider` elements in this program have a range of &ndash;10 to 10. As you can see,
 negative values of vertical scaling (such as on the Android screen in the center) cause objects to flip around the horizontal axis that passes through the center of scaling. Negative values of horizontal scaling (such as in the UWP screen on the right) cause objects to flip around the vertical axis that passes through the center of scaling.
 
-This fourth version of the `Scale` method is actually a shortcut. You might want to see how this works by replacing the `Scale` method in this code with the following:
+The version of the [`Scale`](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single,System.Single,System.Single)) method with pivot points is a shortcut for a series of three `Translate` and `Scale` calls. You might want to see how this works by replacing the `Scale` method in the **Centered Scale** page with the following:
 
 ```csharp
 canvas.Translate(-px, -py);
@@ -187,7 +187,7 @@ If you're familiar with this exercise in other graphics programming systems, you
 
 With the successive `Scale` and `Translate` calls, the center of the rounded rectangle is still in the upper-left corner, but you can now scale it relative to the upper-left corner of the canvas, which is also the center of the rounded rectangle.
 
-Now, before that `Scale` call add another `Translate` call with the centering values:
+Now, before that `Scale` call, add another `Translate` call with the centering values:
 
 ```csharp
 canvas.Translate(px, py);
@@ -333,7 +333,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-The code also displays the star ten more times, each time decreasing the scaling factor by 10% and progressively changing the color from red to blue:
+The code also displays the star 10 more times, each time decreasing the scaling factor by 10% and progressively changing the color from red to blue:
 
 [![](scale-images/isotropicscaling-small.png "Triple screenshot of the Isotropic Scaling page")](scale-images/isotropicscaling-large.png#lightbox "Triple screenshot of the Isotropic Scaling page")
 

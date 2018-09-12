@@ -17,7 +17,7 @@ This article demonstrates how to measure text, scale the text to a particular si
 
 ![](text-images/textandgraphicsexample.png "Text surrounded by rectangles")
 
-The SkiaSharp `Canvas` class also includes methods to draw a rectangle ([`DrawRect`](xref:SkiaSharp.SKCanvas.DrawRect(SkiaSharp.SKRect,SkiaSharp.SKPaint)) and a rectangle with rounded corners ([`DrawRoundRect`](xref:SkiaSharp.SKCanvas.DrawRoundRect(SkiaSharp.SKRect,System.Single,System.Single,SkiaSharp.SKPaint)). These methods require the rectangle to be defined as an `SKRect` value.
+That image also includes a rounded rectangle. The SkiaSharp `Canvas` class includes [`DrawRect`](xref:SkiaSharp.SKCanvas.DrawRect*) methods to draw a rectangle and [`DrawRoundRect`](xref:SkiaSharp.SKCanvas.DrawRoundRect*) methods to draw a rectangle with rounded corners. These methods allow the rectangle to be defined as an `SKRect` value or in other ways.
 
 The **Framed Text** page centers a short text string on the page and surrounds it with a frame composed of a pair of rounded rectangles. The [`FramedTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/FramedTextPage.cs) class shows how it's done.
 
@@ -60,7 +60,7 @@ The `Left` and `Top` properties of the `SKRect` structure indicate the coordinat
 - `Width` = 664.8214
 - `Height` = 88;
 
-Keep in mind that the X and Y coordinates you pass to the `DrawText` method specify the left side of the text at the baseline. The `Top` value indicates that the text extends 68 pixels above that baseline and (subtracting 68 it from 88) 20 pixels below the baseline. The `Left` value of 6 indicates that the text begins 6 pixels to the right of the X value in the `DrawText` call. This allows for normal inter-character spacing. If you want to display the text snugly in the upper-left corner of the display, pass the negatives of these `Left` and `Top` values as the X and Y coordinates of `DrawText`, in this example, &ndash;6 and 68.
+Keep in mind that the X and Y coordinates you pass to the `DrawText` method specify the left side of the text at the baseline. The `Top` value indicates that the text extends 68 pixels above that baseline and (subtracting 68 it from 88) 20 pixels below the baseline. The `Left` value of 6 indicates that the text begins six pixels to the right of the X value in the `DrawText` call. This allows for normal inter-character spacing. If you want to display the text snugly in the upper-left corner of the display, pass the negatives of these `Left` and `Top` values as the X and Y coordinates of `DrawText`, in this example, &ndash;6 and 68.
 
 The `SKRect` structure defines several handy properties and methods, some of which are used in the remainder of the `PaintSurface` handler. The `MidX` and `MidY` values indicate the coordinates of the center of the rectangle. (In the iPhone 7 example, those values are 338.4107 and &ndash;24.) The following code uses these values for the easiest calculation of coordinates to center text on the display:
 
@@ -78,7 +78,14 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-The `PaintSurface` handler concludes with two calls to `DrawRoundRect`, both of which require arguments of `SKRect`. This `SKRect` value is certainly similar to the `SKRect` value obtained from the `MeasureText` method, but it can't be the same. First, it needs to be a little larger so that the rounded rectangle doesn't draw over edges of the text. Secondly, it needs to be shifted in space so that the `Left` and `Top` values correspond to the upper-left corner where the rectangle is to be positioned. These two jobs are accomplished by `Offset` and `Inflate` methods defined by `SKRect`:
+The `SKImageInfo` info structure also defines a [`Rect`](xref:SkiaSharp.SKImageInfo.Rect) property of type `SKRect`, so you can also calculate `xText` and `yText` like this:
+
+```csharp
+float xText = info.Rect.MidX - textBounds.MidX;
+float yText = info.Rect.MidY - textBounds.MidY;
+```
+
+The `PaintSurface` handler concludes with two calls to `DrawRoundRect`, both of which require arguments of `SKRect`. This `SKRect` value is based on the `SKRect` value obtained from the `MeasureText` method, but it can't be the same. First, it needs to be a little larger so that the rounded rectangle doesn't draw over edges of the text. Secondly, it needs to be shifted in space so that the `Left` and `Top` values correspond to the upper-left corner where the rectangle is to be positioned. These two jobs are accomplished by the [`Offset`](xref:SkiaSharp.SKRect.Offset*) and [`Inflate`](xref:SkiaSharp.SKRect.Inflate*) methods defined by `SKRect`:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -113,13 +120,13 @@ Following that, the remainder of the method is straight-forward. It creates anot
 
 You can turn your phone or simulator sideways to see the text and frame increase in size.
 
-If you only need to center some text on the screen, you can do it approximately without measuring the text by setting the `TextAlign` property of `SKPaint` to `SKTextAlign.Center`. The X coordinate you specify in the `DrawText` method then indicates where the horizontal center of the text is positioned. If you pass the midpoint of the screen to the `DrawText` method, the text will be horizontally centered and *nearly* vertically centered because the baseline will be vertically centered.
+If you only need to center some text on the screen, you can do it approximately without measuring the text. Instead, set the [`TextAlign`](xref:SkiaSharp.SKPaint.TextAlign) property of `SKPaint` to the enumeration member [`SKTextAlign.Center`](xref:SkiaSharp.SKTextAlign). The X coordinate you specify in the `DrawText` method then indicates where the horizontal center of the text is positioned. If you pass the midpoint of the screen to the `DrawText` method, the text will be horizontally centered and *nearly* vertically centered because the baseline will be vertically centered.
 
-Text itself can be treated much like a graphical option. One simple option is to display the outline of the text characters rather than the normal filled display:
+Text can be treated much like any other graphical object. One simple option is to display the outline of the text characters:
 
 [![](text-images/outlinedtext-small.png "Triple screen shot of the Outlined Text page")](text-images/outlinedtext-large.png#lightbox "Triple screenshot of the Outlined Text page")
 
-This is done simply by changing the normal `Style` property of the `SKPaint` object from its default setting of `SKPaintStyle.Fill` to `SKPaintStyle.Stroke`, and by specifying a stroke width. The `PaintSurface` handler of the **Outlined Text** page shows how it's done:
+This is accomplished simply by changing the normal `Style` property of the `SKPaint` object from its default setting of `SKPaintStyle.Fill` to `SKPaintStyle.Stroke`, and by specifying a stroke width. The `PaintSurface` handler of the **Outlined Text** page shows how it's done:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

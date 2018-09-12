@@ -15,11 +15,13 @@ _Explore how to use SkiaSharp to render cubic, quadratic, and conic Bézier curv
 
 The Bézier curve is named after Pierre Bézier (1910 – 1999), a French engineer at the automotive company Renault, who used the curve for the computer-assisted design of car bodies.
 
-Bézier curves are known for being well-suited to interactive design: They are well behaved &mdash; in other words, there aren't singularities that cause the curve to become infinite or unwieldy &mdash; and they are generally aesthetically pleasing. Character outlines of computer-based fonts are usually defined with Bézier curves:
+Bézier curves are known for being well-suited to interactive design: They are well behaved &mdash; in other words, there aren't singularities that cause the curve to become infinite or unwieldy &mdash; and they are generally aesthetically pleasing:
 
 ![](beziers-images/beziersample.png "A sample Bezier curve")
 
-The Wikipedia article on [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) contains some useful information. The term *Bézier curve* actually refers to a family of similar curves. SkiaSharp supports three types of Bézier curves, called the *cubic*, the *quadratic*, and the *conic*. The conic is also known as the *rational quadratic*.
+Character outlines of computer-based fonts are usually defined with Bézier curves.
+
+The Wikipedia article on [**Bézier curve**](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) contains some useful background information. The term *Bézier curve* actually refers to a family of similar curves. SkiaSharp supports three types of Bézier curves, called the *cubic*, the *quadratic*, and the *conic*. The conic is also known as the *rational quadratic*.
 
 ## The Cubic Bézier Curve
 
@@ -40,7 +42,7 @@ The curve begins at the current point of the contour. The complete cubic Bezier 
 - second control point: `point2` in the `CubicTo` call
 - end point: `point3` in the `CubicTo` call
 
-The resultant curve begins at the start point and ends at the end point. The curve generally does not pass through the two control points; instead they function much like magnets to pull the curve towards them.
+The resultant curve begins at the start point and ends at the end point. The curve generally does not pass through the two control points; instead the control points function much like magnets to pull the curve towards them.
 
 The best way to get a feel for the cubic Bézier curve is by experimentation. This is the purpose of the **Bezier Curve** page, which derives from `InteractivePage`. The [**BezierCurvePage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCurvePage.xaml) file instantiates the `SKCanvasView` and a `TouchEffect`. The [**BezierCurvePage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCurvePage.xaml.cs) code-behind file creates four `TouchPoint` objects in its constructor. The `PaintSurface` event handler creates an `SKPath` to render a Bézier curve based on the four `TouchPoint` objects, and also draws dotted tangent lines from the control points to the end points:
 
@@ -96,7 +98,7 @@ A path contour can contain multiple connected cubic Bézier curves, but the conn
 - the end point of the first curve, which is also the start point of the second curve
 - the first control point of the second curve
 
-In the next article on [**SVG Path Data**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) you'll discover a facility to ease the definition of smooth connected Bézier curves.
+In the next article on [**SVG Path Data**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md), you'll discover a facility to ease the definition of smooth connected Bézier curves.
 
 It is sometimes useful to know the underlying parametric equations that render a cubic Bézier curve. For *t* ranging from 0 to 1, the parametric equations are as follows:
 
@@ -198,7 +200,7 @@ float Magnitude(SKPoint v)
 
 ```
 
-The start and end points (`point0` and `point3`) are calculated based on the normal parametric equations for the circle. Because the circle is centered at (0, 0), these points can also be treated as radial vectors from the center of the circle to the circumference. The control points are on lines that are tangent to the circle, so they are at right angles to these radial vectors. A vector at a right angle is simply the original vector with the X and Y coordinates swapped and one of them made negative.
+The start and end points (`point0` and `point3`) are calculated based on the normal parametric equations for the circle. Because the circle is centered at (0, 0), these points can also be treated as radial vectors from the center of the circle to the circumference. The control points are on lines that are tangent to the circle, so they are at right angles to these radial vectors. A vector at a right angle to another is simply the original vector with the X and Y coordinates swapped and one of them made negative.
 
 Here's the program running on the three platforms with three different angles:
 

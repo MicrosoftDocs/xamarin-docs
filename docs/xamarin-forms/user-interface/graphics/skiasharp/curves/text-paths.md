@@ -15,13 +15,13 @@ _Explore the intersection of paths and text_
 
 In modern graphics systems, text fonts are collections of character outlines, usually defined by quadratic Bézier curves. Consequently, many modern graphics systems include a facility to convert text characters into a graphics path.
 
-You've already seen that you can stroke the outlines of text characters as well as fill them. This allows you to display these character outlines with a particular stroke width and even a path effect as described in the [**Path Effects**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) article. But it is also possible to convert a character string into an `SKPath` object. This means that text outlines can be used for clipping with techniques that were described in the [**Clipping with Paths and Regions**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md) article.
+You've already seen that you can stroke the outlines of text characters as well as fill them. This allows you to display these character outlines with a particular stroke width and even a path effect as described in the [**Path Effects**](effects.md) article. But it is also possible to convert a character string into an `SKPath` object. This means that text outlines can be used for clipping with techniques that were described in the [**Clipping with Paths and Regions**](clipping.md) article.
 
-Besides using a path effect to stroke a character outline, you can also create path effects that are based on a paths are derived from character strings, and you can even combine the two effects:
+Besides using a path effect to stroke a character outline, you can also create path effects that are based on a path that is derived from a character string, and you can even combine the two effects:
 
 ![](text-paths-images/pathsandtextsample.png "Text Path Effect")
 
-In the [previous article](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) you saw how the [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) method of `SKPaint` can obtain an outline of a stroked path. You can also use this method with paths derived from character outlines.
+In the previous article on [**Path Effects**](effects.md), you saw how the [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) method of `SKPaint` can obtain an outline of a stroked path. You can also use this method with paths derived from character outlines.
 
 Finally, this article demonstrates another intersection of paths and text: The [`DrawTextOnPath`](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) method of `SKCanvas` allows you to display a text string so that the baseline of the text follows a curved path.
 
@@ -68,7 +68,7 @@ public class ClippingTextPage : ContentPage
 }
 ```
 
-The `PaintSurface` handler begins by creating an `SKPaint` object suitable for text. The `Typeface` property is set as well as the `TextSize`, although for this particular application the `TextSize` property is purely arbirtrary. Also notice there is no `Style` setting.
+The `PaintSurface` handler begins by creating an `SKPaint` object suitable for text. The `Typeface` property is set as well as the `TextSize`, although for this particular application the `TextSize` property is purely arbitrary. Also notice there is no `Style` setting.
 
 The `TextSize` and `Style` property settings are not necessary because this `SKPaint` object is used solely for the `GetTextPath` call using the text string "CODE". The handler then measures the resultant `SKPath` object and applies three transforms to center it and scale it to the size of the page. The path can then be set as the clipping path:
 
@@ -280,7 +280,7 @@ public Void DrawTextOnPath (String text, SKPath path, Single hOffset, Single vOf
 
 The text specified in the first argument is made to run along the path specified as the second argument. You can begin the text at an offset from the beginning of the path with the `hOffset` argument. Normally the path forms the baseline of the text: Text ascenders are on one side of the path, and text descenders are on the other. But you can offset the text baseline from the path with the `vOffset` argument.
 
-This method has no facility to provide guidance on setting the `TextSize` property of `SKPaint` to make the text sized perfectly to run from the beginning of the path to the end. Sometimes you can figure out that text size on your own. Other times you'll need to use path-measuring functions to be described in a future article.
+This method has no facility to provide guidance on setting the `TextSize` property of `SKPaint` to make the text sized perfectly to run from the beginning of the path to the end. Sometimes you can figure out that text size on your own. Other times you'll need to use path-measuring functions to be described in the next article on [**Path Information and Enumeration**](information.md).
 
 The **Circular Text** program wraps text around a circle. It's easy to determine the circumference of a circle, so it's easy to size the text to fit exactly. The `PaintSurface` handler of the [`CircularTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CircularTextPage.cs) class calculates a radius of a circle based on the size of the page. That circle becomes `circularPath`:
 

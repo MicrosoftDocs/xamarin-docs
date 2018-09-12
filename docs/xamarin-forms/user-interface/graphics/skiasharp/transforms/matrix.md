@@ -137,13 +137,13 @@ When α is 0 degrees, it's the identity matrix. When α is 180 degrees, the tran
 |  0   0   1 |
 </pre>
 
-A 180 degree rotation is equivalent to flipping an object horizontally and vertically, which is also accomplished by setting scale factors of –1.
+A 180-degree rotation is equivalent to flipping an object horizontally and vertically, which is also accomplished by setting scale factors of –1.
 
-All these types of transforms are classified as *affine* transforms. Affine transforms never involve the third column of the matrix, which remains at the default values of 0, 0, and 1. The article [Non-Affine Transforms](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md) discusses non-affine transforms.
+All these types of transforms are classified as *affine* transforms. Affine transforms never involve the third column of the matrix, which remains at the default values of 0, 0, and 1. The article [**Non-Affine Transforms**](non-affine.md) discusses non-affine transforms.
 
 ## Matrix Multiplication
 
-One big advantage with using the transform matrix is that composite transforms can be obtained by matrix multiplication, which is often referred to in the SkiaSharp documentation as *concatenation*. Many of the transform-related methods in `SKCanvas` refer to "pre-concatenation" or "pre-concat." This refers to the order of multiplication, which is important because matrix multiplication is not commutative.
+One significant advantage with using the transform matrix is that composite transforms can be obtained by matrix multiplication, which is often referred to in the SkiaSharp documentation as *concatenation*. Many of the transform-related methods in `SKCanvas` refer to "pre-concatenation" or "pre-concat." This refers to the order of multiplication, which is important because matrix multiplication is not commutative.
 
 For example, the documentation for the [`Translate`](xref:SkiaSharp.SKCanvas.Translate(System.Single,System.Single)) method says that it "Pre-concats the current matrix with the specified translation,"
 while the documentation for the [`Scale`](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single)) method says that it "Pre-concats the current matrix with the specified scale."
@@ -202,7 +202,7 @@ The three transform matrices are multiplied in reverse order from how the method
 | –px  –py  1 |   |  0   0   1 |   | px  py  1 |   | px–px·sx  py–py·sy  1 |
 </pre>
 
-### The SKMatrix Structure
+## The SKMatrix Structure
 
 The `SKMatrix` structure defines nine read/write properties of type `float` corresponding to the nine cells of the transform matrix:
 
@@ -214,7 +214,7 @@ The `SKMatrix` structure defines nine read/write properties of type `float` corr
 
 `SKMatrix` also defines a property named [`Values`](xref:SkiaSharp.SKMatrix.Values) of type `float[]`. This property can be used to set or obtain the nine values in one shot in the order `ScaleX`, `SkewX`, `TransX`, `SkewY`, `ScaleY`, `TransY`, `Persp0`, `Persp1`, and `Persp2`.
 
-The `Persp0`, `Persp1`, and `Persp2` cells are discussed in the article, [Non-Affine Transforms](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md). If these cells have their default values of 0, 0, and 1, then the transform is multiplied by a coordinate point like this:
+The `Persp0`, `Persp1`, and `Persp2` cells are discussed in the article [**Non-Affine Transforms**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md). If these cells have their default values of 0, 0, and 1, then the transform is multiplied by a coordinate point like this:
 
 <pre>
               │ ScaleX  SkewY   0 │
@@ -241,7 +241,7 @@ The `SKMatrix` structure defines several static methods to create `SKMatrix` val
 - [`MakeRotationDegrees`](xref:SkiaSharp.SKMatrix.MakeRotationDegrees(System.Single,System.Single,System.Single)) with a pivot point
 - [`MakeSkew`](xref:SkiaSharp.SKMatrix.MakeSkew(System.Single,System.Single))
 
-`SKMatrix` also defines several static methods that concatenate two matrices, which means to multiply them. These methods are named `Concat`, `PostConcat`, and `PreConcat`, and there are two versions of each. These methods have no return values; instead, they reference existing `SKMatrix` values through `ref` arguments. In the following example, `A`, `B`, and `R` (for "result") are all `SKMatrix` values.
+`SKMatrix` also defines several static methods that concatenate two matrices, which means to multiply them. These methods are named [`Concat`](xref:SkiaSharp.SKMatrix.Concat*), [`PostConcat`](xref:SkiaSharp.SKMatrix.PostConcat*), and [`PreConcat`](xref:SkiaSharp.SKMatrix.PreConcat*), and there are two versions of each. These methods have no return values; instead, they reference existing `SKMatrix` values through `ref` arguments. In the following example, `A`, `B`, and `R` (for "result") are all `SKMatrix` values.
 
 The two `Concat` methods are called like this:
 
@@ -279,7 +279,7 @@ These calls perform the following operation:
 
 A = B × A
 
-The versions of these method calls with all `ref` arguments are slightly more efficient in calling the underlying implementations, but it might be confusing to someone reading your code and assuming that anything with a `ref` argument is modified by the method. Moreover, it's often convenient to pass an argument that is a result of one of the `Make` methods, for example:
+The versions of these methods with all `ref` arguments are slightly more efficient in calling the underlying implementations, but it might be confusing to someone reading your code and assuming that anything with a `ref` argument is modified by the method. Moreover, it's often convenient to pass an argument that is a result of one of the `Make` methods, for example:
 
 ```csharp
 SKMatrix result;
@@ -343,7 +343,7 @@ public class PathTransformPage : ContentPage
 }
 ```
 
-The `HendecagramPath` object has a center at (0, 0), and the eleven points of the star extend outward from that center by 100 units in all directions. This means that the path has both positive and negative coordinates. The **Path Transform** page prefers to work with a star three times as large, and with all positive coordinates. Moreover, it doesn't want one point of the star to point straight up. It wants instead for one point of the star to point straight down. (Because the star has eleven points, it can't have both.) This requires rotating the star by 360 degrees divided by 22.
+The `HendecagramPath` object has a center at (0, 0), and the 11 points of the star extend outward from that center by 100 units in all directions. This means that the path has both positive and negative coordinates. The **Path Transform** page prefers to work with a star three times as large, and with all positive coordinates. Moreover, it doesn't want one point of the star to point straight up. It wants instead for one point of the star to point straight down. (Because the star has 11 points, it can't have both.) This requires rotating the star by 360 degrees divided by 22.
 
 The constructor builds an `SKMatrix` object from three separate transforms using the `PostConcat` method with the following pattern, where A, B, and C are instances of `SKMatrix`:
 
@@ -431,7 +431,7 @@ SKRect transformedRect = matrix.MapRect(rect);
 
 If you use that last method, keep in mind that the `SKRect` structure is not capable of representing a rotated rectangle. The method only makes sense for an `SKMatrix` value representing translation and scaling.
 
-### Interactive Experimentation
+## Interactive Experimentation
 
 One way to get a feel for the affine transform is by interactively moving three corners of a bitmap around the screen and seeing what transform results. This is the idea behind the **Show Affine Matrix** page. This page requires two other classes that are also used in other demonstrations:
 
@@ -588,9 +588,9 @@ The iOS screen below shows the bitmap when the page is first loaded, while the t
 
 Although it seems as if the touch points drag the corners of the bitmap, that's only an illusion. The matrix calculated from the touch points transforms the bitmap so that the corners coincide with the touch points.
 
-It is more natural for users to move, resize, and rotate bitmaps not by dragging the corners, but by using one or two fingers directly on the object to drag, pinch, and rotate. This is covered in the next article [Touch Manipulation](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/touch.md).
+It is more natural for users to move, resize, and rotate bitmaps not by dragging the corners, but by using one or two fingers directly on the object to drag, pinch, and rotate. This is covered in the next article [**Touch Manipulation**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/touch.md).
 
-### The Reason for the 3-by-3 Matrix
+## The Reason for the 3-by-3 Matrix
 
 It might be expected that a two-dimensional graphics system would require only a 2-by-2 transform matrix:
 
@@ -642,7 +642,7 @@ The `SKMatrix` structure in SkiaSharp defines properties for that third row:
               │ TransX  TransY  Persp2 │
 </pre>
 
-Non-zero values of `Persp0` and `Persp1` result in transforms that move objects off the two-dimensional plane where Z equals 1. What happens when those objects are moved back to that plane is covered in the article on [Non-Affine Transforms](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md).
+Non-zero values of `Persp0` and `Persp1` result in transforms that move objects off the two-dimensional plane where Z equals 1. What happens when those objects are moved back to that plane is covered in the article on [**Non-Affine Transforms**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md).
 
 
 ## Related Links

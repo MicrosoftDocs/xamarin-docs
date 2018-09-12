@@ -139,6 +139,7 @@
 ###### [Basic Animation](user-interface/graphics/skiasharp/basics/animation.md)
 ###### [Integrating Text and Graphics](user-interface/graphics/skiasharp/basics/text.md)
 ###### [Bitmap Basics](user-interface/graphics/skiasharp/basics/bitmaps.md)
+###### [Transparency](user-interface/graphics/skiasharp/basics/transparency.md)
 ##### [SkiaSharp Lines and Paths](user-interface/graphics/skiasharp/paths/index.md)
 ###### [Lines and Stroke Caps](user-interface/graphics/skiasharp/paths/lines.md)
 ###### [Path Basics](user-interface/graphics/skiasharp/paths/paths.md)

@@ -1,6 +1,6 @@
 ---
 title: "Drawing a Simple Circle in SkiaSharp"
-description: "This article explains the basics of SkiaSharp drawing, including canvases and paint, in Xamarin.Forms applications, and demonstrates this with sample code."
+description: "This article explains the basics of SkiaSharp drawing, including canvases and paint objects, in Xamarin.Forms applications, and demonstrates this with sample code."
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
@@ -11,7 +11,7 @@ ms.date: 03/10/2017
 
 # Drawing a Simple Circle in SkiaSharp
 
-_Learn the basics of SkiaSharp drawing, including canvases and paint_
+_Learn the basics of SkiaSharp drawing, including canvases and paint objects_
 
 This article introduces the concepts of drawing graphics in Xamarin.Forms using SkiaSharp, including creating an `SKCanvasView` object to host the graphics, handling the `PaintSurface` event, and using a `SKPaint` object to specify color and other drawing attributes.
 
@@ -41,7 +41,7 @@ public SimpleCirclePage()
 
 The `SKCanvasView` occupies the entire content area of the page. You can alternatively combine an `SKCanvasView` with other Xamarin.Forms `View` derivatives, as you'll see in other examples.
 
-The `PaintSurface` event handler is where you do all your drawing. This method is generally called multiple times while your program is running, so it should maintain all the information necessary to recreate the graphics display:
+The `PaintSurface` event handler is where you do all your drawing. This method can be called multiple times while your program is running, so it should maintain all the information necessary to recreate the graphics display:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -56,7 +56,7 @@ The [`SKPaintSurfaceEventArgs`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventAr
 - [`Info`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Info) of type [`SKImageInfo`](xref:SkiaSharp.SKImageInfo)
 - [`Surface`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Surface) of type [`SKSurface`](xref:SkiaSharp.SKSurface)
 
-The `SKImageInfo` structure contains information about the drawing surface, most importantly, it's width and height in pixels. The `SKSurface` object represents the drawing surface itself. In this program, the drawing surface is a video display, but in other programs an `SKSurface` object can also represent a bitmap that you use SkiaSharp to draw on.
+The `SKImageInfo` structure contains information about the drawing surface, most importantly, its width and height in pixels. The `SKSurface` object represents the drawing surface itself. In this program, the drawing surface is a video display, but in other programs an `SKSurface` object can also represent a bitmap that you use SkiaSharp to draw on.
 
 The most important property of `SKSurface` is [`Canvas`](xref:SkiaSharp.SKSurface.Canvas) of type [`SKCanvas`](xref:SkiaSharp.SKCanvas). This class is a graphics drawing context that you use to perform the actual drawing. The `SKCanvas` object encapsulates a graphics state, which includes graphics transforms and clipping.
 
@@ -118,7 +118,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Coordinates are specified relative to the upper-left corner of the display surface. X coordinates increase to the right and Y coordinates increase going down. In discussion about graphics, often the mathematical notation (x, y) is used to denote a point. The point (0, 0) is the upper-left corner of the display surface and is often called the *origin*.
 
-The first two arguments of `DrawCircle` indicate the X and Y coordinates of the center of the circle. These are assigned half the width and height of the display surface to put the center of the circle in the center of the display surface. The third argument specifies the circle's radius, and the last argument is the `SKPaint` object.
+The first two arguments of `DrawCircle` indicate the X and Y coordinates of the center of the circle. These are assigned to half the width and height of the display surface to put the center of the circle in the center of the display surface. The third argument specifies the circle's radius, and the last argument is the `SKPaint` object.
 
 To fill the interior of the circle, you can alter two properties of the `SKPaint` object and call `DrawCircle` again. This code also shows an alternative way to get an `SKColor` value from one of the many fields of the [`SKColors`](xref:SkiaSharp.SKColors) structure:
 
@@ -139,7 +139,12 @@ Here's the program running on iOS, Android, and the Universal Windows Platform:
 
 When running the program yourself, you can turn the phone or simulator sideways to see how the graphic is redrawn. Each time the graphic needs to be redrawn, the `PaintSurface` event handler is called again.
 
-An `SKPaint` object is little more than a collection of graphics drawing properties. These objects are very lightweight. You can reuse `SKPaint` objects as this program does, or you can create multiple `SKPaint` objects for various combinations of drawing properties. You can create and initialize these objects outside of the `PaintSurface` event handler, and you can save them as fields in your page class.
+It's also possible to color graphical objects with gradients or bitmap tiles. These options are discussed in the section on [**SkiaSharp shaders**](../effects/shaders/index.md).
+
+An `SKPaint` object is little more than a collection of graphics drawing properties. These objects are lightweight. You can reuse `SKPaint` objects as this program does, or you can create multiple `SKPaint` objects for various combinations of drawing properties. You can create and initialize these objects outside of the `PaintSurface` event handler, and you can save them as fields in your page class.
+
+> [!NOTE]
+> The `SKPaint` class defines an [`IsAntialias`](xref:SkiaSharp.SKPaint.IsAntialias) to enable anti-aliasing in the rendering of your graphics. Anti-aliasing generally results in visually smoother edges, so you'll probably want to set this property to `true` in most of your `SKPaint` objects. For purposes of simplicity, this property is _not_ set in most of the sample pages.
 
 Although the width of the circle's outline is specified as 25 pixels &mdash; or one-quarter of the radius of the circle &mdash; it appears to be thinner, and there's a good reason for that: Half the width of the line is obscured by the blue circle. The arguments to the `DrawCircle` method define the abstract geometric coordinates of a circle. The blue interior is sized to that dimension to the nearest pixel, but the 25-pixel-wide outline straddles the geometric circle &mdash; half on the inside and half on the outside.
 

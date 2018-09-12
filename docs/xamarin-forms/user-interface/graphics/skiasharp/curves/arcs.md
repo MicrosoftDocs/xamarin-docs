@@ -19,11 +19,11 @@ An arc is a curve on the circumference of an ellipse, such as the rounded parts 
 
 Despite the simplicity of that definition, there is no way to define an arc-drawing function that satisfies every need, and hence, no consensus among graphics systems of the best way to draw an arc. For this reason, the `SKPath` class does not restrict itself to just one approach.
 
-`SKPath` defines an `AddArc` method, five different `ArcTo` methods, and two relative `RArcTo` methods. These methods fall into three categories, representing three very different approaches to specifying an arc. Which one you use depends on the information available to define the arc, and how this arc fits in with the other graphics that you're drawing.
+`SKPath` defines an [`AddArc`](xref:SkiaSharp.SKPath.AddArc*) method, five different [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*) methods, and two relative [`RArcTo`](xref:SkiaSharp.SKPath.RArcTo*) methods. These methods fall into three categories, representing three very different approaches to specifying an arc. Which one you use depends on the information available to define the arc, and how this arc fits in with the other graphics that you're drawing.
 
 ## The Angle Arc
 
-The angle arc approach to drawing arcs requires that you specify a rectangle that bounds an ellipse. The arc on the circumference of this ellipse is indicated by angles from the center of the ellipse making the beginning of the arc and its length. Two different methods draw angle arcs. These are the [`AddArc`](xref:SkiaSharp.SKPath.AddArc(SkiaSharp.SKRect,System.Single,System.Single)) method and the [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKRect,System.Single,System.Single,System.Boolean)) method:
+The angle arc approach to drawing arcs requires that you specify a rectangle that bounds an ellipse. The arc on the circumference of this ellipse is indicated by angles from the center of the ellipse that indicate the beginning of the arc and its length. Two different methods draw angle arcs. These are the [`AddArc`](xref:SkiaSharp.SKPath.AddArc(SkiaSharp.SKRect,System.Single,System.Single)) method and the [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKRect,System.Single,System.Single,System.Boolean)) method:
 
 ```csharp
 public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
@@ -39,15 +39,15 @@ Both methods begin with an `SKRect` value that defines both the location and siz
 
 The arc is a part of the circumference of this ellipse.
 
-The `startAngle` argument is a clockwise angle in degrees relative to a horizontal line drawn from the center of the ellipse to the right. The `sweepAngle` argument is relative to the `startAngle`. Here are `startAngle` and `sweepAngle` values of 60 and 100 degrees, respectively:
+The `startAngle` argument is a clockwise angle in degrees relative to a horizontal line drawn from the center of the ellipse to the right. The `sweepAngle` argument is relative to the `startAngle`. Here are `startAngle` and `sweepAngle` values of 60 degrees and 100 degrees, respectively:
 
 ![](arcs-images/anglearcangles.png "The angles that define an angle arc")
 
-The arc begins at the start angle. Its length is governed by the sweep angle:
+The arc begins at the start angle. Its length is governed by the sweep angle. The arc is shown here in red:
 
 ![](arcs-images/anglearchighlight.png "The highlighted angle arc")
 
-The curve added to the path with the `AddArc` or `ArcTo` method is simply that part of the ellipse's circumference, shown here in red:
+The curve added to the path with the `AddArc` or `ArcTo` method is simply that part of the ellipse's circumference:
 
 ![](arcs-images/anglearc.png "The angle arc by itself")
 
@@ -219,7 +219,7 @@ public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
 public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 ```
 
-This `ArcTo` method is similar to the PostScript [`arct`](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) (page 532 in the PDF document) function and the iOS [`AddArcToPoint`](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArcToPoint/p/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) method.
+This `ArcTo` method is similar to the PostScript [`arct`](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) (page 532) function and the iOS [`AddArcToPoint`](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArcToPoint/p/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) method.
 
 The `ArcTo` method involves three points:
 
@@ -245,7 +245,7 @@ If the two lines meet at any angle, that circle can be inserted between those li
 
 ![](arcs-images/tangentarctangentcircle.png "The tangent arc circle between the two lines")
 
-The curve that is added to the contour does not touch either of the points specified in the `ArcTo` method. It consists of a straight line from the current point to the first tangent point, and an arc that ends at the second tangent point:
+The curve that is added to the contour does not touch either of the points specified in the `ArcTo` method. It consists of a straight line from the current point to the first tangent point, and an arc that ends at the second tangent point, shown here in red:
 
 ![](arcs-images/tangentarchighlight.png "The highlighted tangent arc between the two lines")
 
@@ -498,7 +498,7 @@ public void ArcTo (Single rx, Single ry, Single xAxisRotate, SKPathArcSize large
 
 The elliptical arc is consistent with the [elliptical arc](http://www.w3.org/TR/SVG11/paths.html#PathDataEllipticalArcCommands) included in Scalable Vector Graphics (SVG) and the Universal Windows Platform [`ArcSegment`](/uwp/api/Windows.UI.Xaml.Media.ArcSegment/) class.
 
-These `ArcTo` methods draw an arc between two points, which is the current point of the contour, and the last parameter to the `ArcTo` method (the `xy` parameter or the separate `x` and `y` parameters):
+These `ArcTo` methods draw an arc between two points, which are the current point of the contour, and the last parameter to the `ArcTo` method (the `xy` parameter or the separate `x` and `y` parameters):
 
 ![](arcs-images/ellipticalarcpoints.png "The two points that defined an elliptical arc")
 
@@ -657,8 +657,7 @@ To get a tighter fit, use the `TightBounds` property, which excludes the control
 
 [![](arcs-images/arcinfinitytightbounds-small.png "Triple screenshot of the Arc Infinity page with tight bounds")](arcs-images/arcinfinitytightbounds-large.png#lightbox "Triple screenshot of the Arc Infinity page with tight bounds")
 
-Although the connections between the arcs and straight lines are mathematically smooth, the change from arc to straight line might seem a little abrupt. A better infinity sign is presented in the next page.
-
+Although the connections between the arcs and straight lines are mathematically smooth, the change from arc to straight line might seem a little abrupt. A better infinity sign is presented in the next article on [**Three Types of Bézier Curves**](beziers.md).
 
 ## Related Links
 
