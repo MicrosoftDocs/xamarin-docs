@@ -28,7 +28,7 @@ Xamarin.Forms must be initialized by calling the `Forms.Init` method before a na
 > [!NOTE]
 > The **NativeForms** sample application solution does not contain any Xamarin.Forms projects. Instead, it consists of a Xamarin.iOS project, a Xamarin.Android project, and a UWP project. Each project is a native project that uses Native Forms to consume [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived pages. However, there's no reason why the native projects couldn't consume `ContentPage`-derived pages from a .NET Standard library project or Shared Project.
 
-When using Native Forms, Xamarin.Forms features such as [`DependencyService`](xref:Xamarin.Forms.DependencyService), [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter), and the data binding engine, all still work.
+When using Native Forms, Xamarin.Forms features such as [`DependencyService`](xref:Xamarin.Forms.DependencyService), [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter), and the data binding engine, all still work. However, page navigation must be performed using the native navigation API.
 
 ## iOS
 

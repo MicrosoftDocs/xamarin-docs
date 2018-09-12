@@ -69,8 +69,7 @@ public TodoItemDatabase(string dbPath)
 
 The advantage of exposing the database as a singleton is that a single database connection is created that's kept open while the application runs, therefore avoiding the expense of opening and closing the database file each time a database operation is performed.
 
-The remainder of the `TodoItemDatabase` class contains SQLite queries that run cross-platform. Example query code is shown below (more details on the syntax can be found in the
-[Using SQLite.NET](~/cross-platform/app-fundamentals/index.md) article):
+The remainder of the `TodoItemDatabase` class contains SQLite queries that run cross-platform. Example query code is shown below (more details on the syntax can be found in [Using SQLite.NET with Xamarin.iOS](~/ios/data-cloud/data/using-sqlite-orm.md).
 
 ```csharp
 public Task<List<TodoItem>> GetItemsAsync()
