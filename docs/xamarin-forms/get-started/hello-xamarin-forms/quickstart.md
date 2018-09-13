@@ -7,7 +7,7 @@ ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/13/2018
+ms.date: 09/13/2018
 ---
 
 # Xamarin.Forms Quickstart
@@ -344,15 +344,33 @@ Create the Phoneword application as follows:
 
     Save the changes to the manifest by pressing **CTRL+S**, and close the file.
 
-24. In **Solution Explorer**, right click on the **Phoneword.UWP** project and select **Add > New Item...**:
+24. In **Solution Explorer**, right click on the **Phoneword.UWP** project and select **Properties**:
 
-    ![](quickstart-images/vs/add-new-item-uwp.png "Add New Item")
+    ![](quickstart-images/vs/uwp-project-properties.png "Project Properties")
 
-25. In the **Add New Item** dialog, select **Visual C# > Code > Class**, name the new file **PhoneDialer**, and click the **Add** button:
+25. In the **Project Properties** window, change the **Target version** and **Min version** drop-downs to build 17134 of Windows 10:
+
+    ![](quickstart-images/vs/uwp-target-versions.png "Build Target Properties")
+
+26. In **Solution Explorer**, in the **Phoneword.UWP** project, right-click **References**, and select **Add Reference...**:
+
+    ![](quickstart-images/vs/uwp-add-reference.png "Add Reference")
+
+27. In the **Reference Manager** dialog, check the checkbox for **Universal Windows > Extensions > Windows Mobile Extensions for UWP**, and click the **OK** button:
+
+    ![](quickstart-images/vs/uwp-add-reference-extensions.png "Add Windows Mobile Extensions for UWP")
+
+    Note that v10.0.17134.0 of the Windows Mobile Extensions for UWP must be selected to build against build 17134 of Windows 10.
+
+28. In **Solution Explorer**, right click on the **Phoneword.UWP** project and select **Add > New Item...**:
+
+    ![](quickstart-images/vs/add-new-item-uwp.png "Add New Item")    
+
+29. In the **Add New Item** dialog, select **Visual C# > Code > Class**, name the new file **PhoneDialer**, and click the **Add** button:
 
     ![](quickstart-images/vs/new-phone-dialer-uwp.w157.png "Add New Class")
 
-26. In **PhoneDialer.cs**, remove all of the template code and replace it with the following code. This code creates the `Dial` method, and helper methods, that will be used on the Universal Windows Platform to dial a translated phone number:
+30. In **PhoneDialer.cs**, remove all of the template code and replace it with the following code. This code creates the `Dial` method, and helper methods, that will be used on the Universal Windows Platform to dial a translated phone number:
 
     ```csharp
     using Phoneword.UWP;
@@ -403,44 +421,34 @@ Create the Phoneword application as follows:
 
     Save the changes to **PhoneDialer.cs** by pressing **CTRL+S**, and close the file.
 
-27. In **Solution Explorer**, in the **Phoneword.UWP** project, right-click **References**, and select **Add Reference...**:
-
-    ![](quickstart-images/vs/uwp-add-reference.png "Add Reference")
-
-28. In the **Reference Manager** dialog, select **Universal Windows > Extensions > Windows Mobile Extensions for UWP**, and click the **OK** button:
-
-    ![](quickstart-images/vs/uwp-add-reference-extensions.png "Add Windows Mobile Extensions for UWP")
-
-    Note that v10.0.16299.0 of the Windows Mobile Extensions for UWP must be selected to use the `PhoneLine` class.
-
-29. In **Solution Explorer**, in the **Phoneword.UWP** project, double-click **Package.appxmanifest**:
+31. In **Solution Explorer**, in the **Phoneword.UWP** project, double-click **Package.appxmanifest**:
 
     ![](quickstart-images/vs/uwp-manifest.png "Open the UWP Manifest")
 
-30. In the **Capabilities** page, enable the **Phone Call** capability. This gives the application permission to place a phone call:
+32. In the **Capabilities** page, enable the **Phone Call** capability. This gives the application permission to place a phone call:
 
     ![](quickstart-images/vs/uwp-manifest-changed.png "Enable Phone Call Capability")
 
     Save the changes to the manifest by pressing **CTRL+S**, and close the file.
 
-31. In Visual Studio, select the **Build > Build Solution** menu item (or press **CTRL+SHIFT+B**). The application will build and a success message will appear in the Visual Studio status bar:
+33. In Visual Studio, select the **Build > Build Solution** menu item (or press **CTRL+SHIFT+B**). The application will build and a success message will appear in the Visual Studio status bar:
 
     ![](quickstart-images/vs/build-successful.png "Build Successful")
 
     If there are errors, repeat the previous steps and correct any mistakes until the application builds successfully.
 
-32. In **Solution Explorer**, right click on the **Phoneword.UWP** project and select **Set as StartUp Project**:
+34. In **Solution Explorer**, right click on the **Phoneword.UWP** project and select **Set as StartUp Project**:
 
     ![](quickstart-images/vs/uwp-set-as-startup-project.png "Set as StartUp Project")
 
-33. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application:
+35. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application:
 
     ![](quickstart-images/vs/start.png "Visual Studio Toolbar")
     ![](quickstart-images/vs/phone-result-uwp.png "Phoneword Application UWP")
 
-34. In **Solution Explorer**, right click on the **Phoneword.Android** project and select **Set as StartUp Project**.
-35. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside an Android emulator.
-36. If you have an iOS device and meet the Mac system requirements for Xamarin.Forms development, use a similar technique to deploy the app to the iOS device. Alternatively, deploy the app to the [iOS remote simulator](~/tools/ios-simulator/index.md).
+36. In **Solution Explorer**, right click on the **Phoneword.Android** project and select **Set as StartUp Project**.
+37. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside an Android emulator.
+38. If you have an iOS device and meet the Mac system requirements for Xamarin.Forms development, use a similar technique to deploy the app to the iOS device. Alternatively, deploy the app to the [iOS remote simulator](~/tools/ios-simulator/index.md).
 
     Note: phone calls are not supported on all the simulators.
 
