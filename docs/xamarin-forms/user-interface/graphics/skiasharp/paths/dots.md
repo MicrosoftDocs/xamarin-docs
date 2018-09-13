@@ -30,8 +30,9 @@ Dotted and dashed lines are demonstrated on the **Dots and Dashes** page. The [*
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
-             x:Class="SkiaSharpFormsDemos.DotsAndDashesPage"
+             xmlns:skia="clr-namespace:SkiaSharp;assembly=SkiaSharp"
+             xmlns:skiaforms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="SkiaSharpFormsDemos.Paths.DotsAndDashesPage"
              Title="Dots and Dashes">
     <Grid>
         <Grid.RowDefinitions>
@@ -49,11 +50,13 @@ Dotted and dashed lines are demonstrated on the **Dots and Dashes** page. The [*
                 Grid.Row="0"
                 Grid.Column="0"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
-            <Picker.Items>
-                <x:String>Butt</x:String>
-                <x:String>Round</x:String>
-                <x:String>Square</x:String>
-            </Picker.Items>
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type skia:SKStrokeCap}">
+                    <x:Static Member="skia:SKStrokeCap.Butt" />
+                    <x:Static Member="skia:SKStrokeCap.Round" />
+                    <x:Static Member="skia:SKStrokeCap.Square" />
+                </x:Array>
+            </Picker.ItemsSource>
             <Picker.SelectedIndex>
                 0
             </Picker.SelectedIndex>
@@ -64,29 +67,31 @@ Dotted and dashed lines are demonstrated on the **Dots and Dashes** page. The [*
                 Grid.Row="0"
                 Grid.Column="1"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
-            <Picker.Items>
-                <x:String>10, 10</x:String>
-                <x:String>30, 10</x:String>
-                <x:String>10, 10, 30, 10</x:String>
-                <x:String>0, 20</x:String>
-                <x:String>20, 20</x:String>
-                <x:String>0, 20, 20, 20</x:String>
-            </Picker.Items>
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>10, 10</x:String>
+                    <x:String>30, 10</x:String>
+                    <x:String>10, 10, 30, 10</x:String>
+                    <x:String>0, 20</x:String>
+                    <x:String>20, 20</x:String>
+                    <x:String>0, 20, 20, 20</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
             <Picker.SelectedIndex>
                 0
             </Picker.SelectedIndex>
         </Picker>
 
-        <skia:SKCanvasView x:Name="canvasView"
-                           PaintSurface="OnCanvasViewPaintSurface"
-                           Grid.Row="1"
-                           Grid.Column="0"
-                           Grid.ColumnSpan="2" />
+        <skiaforms:SKCanvasView x:Name="canvasView"
+                                PaintSurface="OnCanvasViewPaintSurface"
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2" />
     </Grid>
 </ContentPage>
 ```
 
-The first three items in the `dashArrayPicker` assume that the stroke width is 10 pixels. The { 10, 10 } array is for a dotted line, { 30, 10 } is for a dashed line, and { 10, 10, 30, 10 } is for a dot-and-dash line. (The other three will be discussed shortly.)
+ The first three items in the `dashArrayPicker` assume that the stroke width is 10 pixels. The { 10, 10 } array is for a dotted line, { 30, 10 } is for a dashed line, and { 10, 10, 30, 10 } is for a dot-and-dash line. (The other three will be discussed shortly.)
 
 The [`DotsAndDashesPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) code-behind file contains the `PaintSurface` event handler and a couple of helper routines for accessing the `Picker` views:
 
@@ -104,9 +109,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         Style = SKPaintStyle.Stroke,
         Color = SKColors.Blue,
         StrokeWidth = 10,
-        StrokeCap = (SKStrokeCap)Enum.Parse(typeof(SKStrokeCap),
-                        strokeCapPicker.Items[strokeCapPicker.SelectedIndex]),
-
+        StrokeCap = (SKStrokeCap)strokeCapPicker.SelectedItem,
         PathEffect = SKPathEffect.CreateDash(GetPickerArray(dashArrayPicker), 20)
     };
 
@@ -116,17 +119,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     path.LineTo(0.2f * info.Width, 0.8f * info.Height);
     path.LineTo(0.8f * info.Width, 0.2f * info.Height);
 
-    canvas.DrawPath(path, paint);
-}
-
-T GetPickerItem<T>(Picker picker)
-{
-    if (picker.SelectedIndex == -1)
-    {
-        return default(T);
-    }
-
-    return (T)Enum.Parse(typeof(T), picker.Items[picker.SelectedIndex]);
+    canvas.DrawPath(path, paint); 
 }
 
 float[] GetPickerArray(Picker picker)
@@ -136,8 +129,8 @@ float[] GetPickerArray(Picker picker)
         return new float[0];
     }
 
-    string[] strs = picker.Items[picker.SelectedIndex].Split(new char[] { ' ', ',' },
-                                                             StringSplitOptions.RemoveEmptyEntries);
+    string str = (string)picker.SelectedItem;
+    string[] strs = str.Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
     float[] array = new float[strs.Length];
 
     for (int i = 0; i < strs.Length; i++)
