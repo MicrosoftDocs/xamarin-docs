@@ -1,6 +1,7 @@
 ---
 title: "Xamarin.Forms Multiscreen Quickstart"
 description: "This article explains how to extend the Phoneword application by adding a second screen to keep track of the call history for the application."
+zone_pivot_groups: platform
 ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms
@@ -15,9 +16,9 @@ This quickstart demonstrates how to extend the Phoneword application by adding a
 
 [![](quickstart-images/intro-app-examples-sml.png "Phoneword Application")](quickstart-images/intro-app-examples.png#lightbox "Phoneword Application")
 
-Extend the Phoneword application as follows:
+::: zone pivot="windows"
 
-# [Visual Studio](#tab/vswin)
+## Update the app with Visual Studio
 
 1. Launch Visual Studio. On the start page click **Open Project...**, and in the **Open Project** dialog select the solution file for the Phoneword project:
 
@@ -157,9 +158,13 @@ Extend the Phoneword application as follows:
 14. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside an Android emulator.
 15. If you have an iOS device and meet the Mac system requirements for Xamarin.Forms development, use a similar technique to deploy the app to the iOS device. Alternatively, deploy the app to the [iOS remote simulator](~/tools/ios-simulator/index.md).
 
-    Note: phone calls are not supported on all the simulators.
+    > [!NOTE]
+    > Phone calls are not supported in device emulators.
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
+
+## Update the app with Visual Studio for Mac
 
 1. Launch Visual Studio for Mac. On the start page click **Open...**, and in the dialog select the solution file for the Phoneword project:
 
@@ -309,12 +314,12 @@ Extend the Phoneword application as follows:
 
     ![](quickstart-images/xs/phone-result-android.png "Android Emulator")
 
-    Note: phone calls are not supported in Android emulators.
+    > [!NOTE]
+    > Phone calls are not supported in device emulators.
 
------
+::: zone-end
 
 Congratulations on completing a multiscreen Xamarin.Forms application. The [next topic](~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/deepdive.md) in this guide reviews the steps that were taken in this walkthrough to develop an understanding of page navigation and data binding using Xamarin.Forms.
-
 
 ## Related Links
 

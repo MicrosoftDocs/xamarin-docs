@@ -1,6 +1,7 @@
 ---
 title: "Xamarin.Forms Quickstart"
 description: "This article explains how to create an application that translates an alphanumeric phone number entered by the user into a numeric phone number, and that calls the number."
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8
@@ -16,9 +17,9 @@ This walkthrough demonstrates how to create an application that translates an al
 
 [![](quickstart-images/intro-app-examples-sml.png "Phoneword Application")](quickstart-images/intro-app-examples.png#lightbox "Phoneword Application")
 
-Create the Phoneword application as follows:
+::: zone pivot="windows"
 
-# [Visual Studio](#tab/vswin)
+## Get started with Visual Studio
 
 1. In the **Start** screen, launch Visual Studio. This opens the start page:
 
@@ -33,7 +34,8 @@ Create the Phoneword application as follows:
     ![](quickstart-images/vs/new-project.w157.png "Cross-Platform Project Templates")
 
     > [!NOTE]
-    > Failing to name the solution **Phoneword** will result in numerous build errors.
+    > The C# and XAML snippets in this quickstart require the solution be named **Phoneword**.
+    > Using a different solution name will result in numerous build errors when you copy code from these instructions into the projects.
 
 4. In the **New Cross Platform App** dialog, click **Blank App**, select **.NET Standard** as the Code Sharing Strategy, and click the **OK** button:
 
@@ -450,9 +452,13 @@ Create the Phoneword application as follows:
 37. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside an Android emulator.
 38. If you have an iOS device and meet the Mac system requirements for Xamarin.Forms development, use a similar technique to deploy the app to the iOS device. Alternatively, deploy the app to the [iOS remote simulator](~/tools/ios-simulator/index.md).
 
-    Note: phone calls are not supported on all the simulators.
+    > [!WARNING]
+    > Phone calls are not supported on all the simulators.
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
+
+## Get started with Visual Studio for Mac
 
 1. Launch Visual Studio for Mac, and on the start page click **New Project...** to create a new project:
 
@@ -471,7 +477,8 @@ Create the Phoneword application as follows:
     ![](quickstart-images/xs/configure-project.png "Configure the Forms Project")
 
     > [!NOTE]
-    > Failing to name the solution and project **Phoneword** will result in numerous build errors.
+    > The C# and XAML snippets in this quickstart require the solution be named **Phoneword**.
+    > Using a different solution name will result in numerous build errors when you copy code from these instructions into the projects.
 
 5. In the **Solution Pad**, double-click **MainPage.xaml** to open it:
 
@@ -797,12 +804,12 @@ Create the Phoneword application as follows:
 
     ![](quickstart-images/xs/phoneword-result-android.png "Android Emulator")
 
-    Note: phone calls are not supported in Android emulators.
+    > [!WARNING]
+    > Phone calls are not supported in Android emulators.
 
------
+::: zone-end
 
 Congratulations on completing a Xamarin.Forms application. The [next topic](~/xamarin-forms/get-started/hello-xamarin-forms/deepdive.md) in this guide reviews the steps that were taken in this walkthrough to gain an understanding of the fundamentals of application development using Xamarin.Forms.
-
 
 ## Related Links
 

@@ -1,6 +1,7 @@
 ---
 title: "Xamarin.Forms Deep Dive"
 description: "This article examines the fundamentals of application development using Xamarin.Forms. Topics covered included the anatomy of a Xamarin.Forms application, architecture and application fundamentals, and the user interface."
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
@@ -14,20 +15,18 @@ ms.date: 06/13/2018
 
 In the [Xamarin.Forms Quickstart](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md), the Phoneword application was built. This article reviews what has been built to gain an understanding of the fundamentals of how Xamarin.Forms applications work.
 
-# [Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 ## Introduction to Visual Studio
 
-Visual Studio is a powerful IDE from Microsoft. It features a fully integrated visual designer, a text editor complete with refactoring tools, an assembly browser, source code integration, and more. This article focuses on using some of the basic Visual Studio features with the Xamarin plug-in.
-
-Visual Studio organizes code into *Solutions* and *Projects*. A Solution is a container that can hold one or more Projects. A Project can be an application, a supporting library, a test application, and more. The Phoneword application consists of one solution containing four projects, as shown in the following screenshot.
+Visual Studio organizes code into *Solutions* and *Projects*. A solution is a container that can hold one or more projects. A project can be an application, a supporting library, a test application, and more. The Phoneword application consists of one solution containing four projects, as shown in the following screenshot:
 
 ![](deepdive-images/vs/solution.png "Visual Studio Solution Explorer")
 
 The projects are:
 
 - Phoneword – This project is the .NET Standard library project that holds all of the shared code and shared UI.
-- Phoneword.Android – This project holds Android specific code and is the entry point for the Android application.
+- Phoneword.Android – This project holds Android-specific code and is the entry point for the Android application.
 - Phoneword.iOS – This project holds iOS specific code and is the entry point for the iOS application.
 - Phoneword.UWP – This project holds Universal Windows Platform (UWP) specific code and is the entry point for the UWP application.
 
@@ -37,15 +36,19 @@ The following screenshot shows the contents of the Phoneword .NET Standard libra
 
 ![](deepdive-images/vs/net-standard-project.png "Phoneword .NET Standard Project Contents")
 
-The project has a **Dependencies** node that contains **NuGet** and **SDK** nodes. The **NuGet** node contains the Xamarin.Forms NuGet package that has been added to the project, and the **SDK** node contains the `NETStandard.Library` metapackage that references the complete set of NuGet packages that define .NET Standard.
+The project has a **Dependencies** node that contains **NuGet** and **SDK** nodes:
 
-# [Visual Studio for Mac](#tab/vsmac)
+- **NuGet** &ndash; the Xamarin.Forms NuGet package that has been added to the project.
+- **SDK** &ndash; the `NETStandard.Library` metapackage that references the complete set of NuGet packages that define .NET Standard.
+
+::: zone-end
+::: zone pivot="macos"
 
 ## Introduction to Visual Studio for Mac
 
-Visual Studio for Mac is a free, open-source IDE similar to Visual Studio. It features a fully integrated visual designer, a text editor complete with refactoring tools, an assembly browser, source code integration, and more. For more information about Visual Studio for Mac, see [Introducing Visual Studio for Mac](/visualstudio/mac/).
+Visual Studio for Mac is a free, open-source IDE. For more information about Visual Studio for Mac, see [Introducing Visual Studio for Mac](/visualstudio/mac/).
 
-Visual Studio for Mac follows the Visual Studio practice of organizing code into *Solutions* and *Projects*. A Solution is a container that can hold one or more Projects. A Project can be an application, a supporting library, a test application, and more. The Phoneword application consists of one solution containing three projects, as shown in the following screenshot.
+Visual Studio for Mac follows the Visual Studio practice of organizing code into *Solutions* and *Projects*. A solution is a container that can hold one or more projects. A project can be an application, a supporting library, a test application, and more. The Phoneword application consists of one solution containing three projects, as shown in the following screenshot:
 
 ![](deepdive-images/xs/solution.png "Visual Studio for Mac Solution Pane")
 
@@ -61,9 +64,12 @@ The following screenshot shows the contents of the Phoneword .NET Standard libra
 
 ![](deepdive-images/xs/library-project.png "Phoneword .NET Standard Library Project Contents")
 
-The project has a **Dependencies** node that contains **NuGet** and **SDK** nodes. The **NuGet** node contains the Xamarin.Forms NuGet package that has been added to the project, and the **SDK** node contains the `NETStandard.Library` metapackage that references the complete set of NuGet packages that define .NET Standard.
+The project has a **Dependencies** node that contains **NuGet** and **SDK** nodes:
 
------
+- **NuGet** &ndash; the Xamarin.Forms NuGet package that has been added to the project.
+- **SDK** &ndash; the `NETStandard.Library` metapackage that references the complete set of NuGet packages that define .NET Standard.
+
+::: zone-end
 
 The project also consists of a number of files:
 
@@ -78,19 +84,20 @@ For more information about the anatomy of a Xamarin.iOS application, see [Anatom
 
 ## Architecture and Application Fundamentals
 
-# [Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 A Xamarin.Forms application is architected in the same way as a traditional cross-platform application. Shared code is typically placed in a .NET Standard library, and platform-specific applications consume the shared code. The following diagram shows an overview of this relationship for the Phoneword application:
 
 ![](deepdive-images/vs/architecture.png "Phoneword Architecture")
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 A Xamarin.Forms application is architected in the same way as a traditional cross-platform application. Shared code is typically placed in a .NET Standard library, and platform-specific applications consume the shared code. The following diagram shows an overview of this relationship for the Phoneword application:
 
 ![](deepdive-images/xs/architecture.png "Phoneword Architecture")
 
------
+::: zone-end
 
 To maximize the reuse of startup code, Xamarin.Forms applications have a single class named `App` that is responsible for instantiating the first page that will be displayed by the application on each platform, as shown in the following code example:
 
