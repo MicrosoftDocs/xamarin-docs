@@ -1,6 +1,7 @@
 ---
 title: "Hardware Acceleration for Emulator Performance (Hyper-V & HAXM)"
 description: "This article explains how to use your computer's hardware acceleration features to maximize Android Emulator performance."
+zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
@@ -9,12 +10,10 @@ ms.author: mamcle
 ms.date: 08/27/2018
 ---
 
-# Hardware Acceleration for Emulator Performance (Hyper-V & HAXM)
+# Hardware acceleration for emulator performance (Hyper-V & HAXM)
 
 _This article explains how to use your computer's hardware acceleration
 features to maximize Android Emulator performance._
-
-## Overview
 
 Visual Studio makes it easier for developers to test and debug their
 Xamarin.Android applications by using the Android emulator in
@@ -25,8 +24,9 @@ improve the performance of the Android emulator by using special x86
 virtual device images in conjunction with the virtualization features
 of your computer.
 
+::: zone pivot="windows"
 
-# [Visual Studio](#tab/vswin)
+## Accelerating Android emulators on Windows
 
 The following virtualization technologies are available for
 accelerating the Android emulator:
@@ -46,14 +46,13 @@ computer, then HAXM can be used. The Android emulator will
 automatically make use of hardware acceleration if the following
 criteria are met:
 
--   Hardware acceleration is available and enabled on your development
+- Hardware acceleration is available and enabled on your development
     computer.
 
--   The emulator is running a system image created for
+- The emulator is running a system image created for
     an **x86**-based virtual device.
 
 > [!IMPORTANT]
-> 
 > You can't run a VM-accelerated emulator inside another VM, such as 
 > a VM hosted by VirtualBox, VMWare, or Docker. You must run the Android 
 > emulator [directly on your system hardware](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
@@ -76,18 +75,18 @@ Hyper-V runs on the Windows Hypervisor Platform. To use the Android
 emulator with Hyper-V, your computer must meet the following criteria
 to support the Windows Hypervisor Platform:
 
--   Your computer hardware must meet the following requirements:
+- Your computer hardware must meet the following requirements:
 
-    -   A 64-bit Intel or AMD Ryzen CPU with Second Level Address Translation (SLAT).
-    -   CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs).
-    -   Minimum of 4-GB memory.
+    - A 64-bit Intel or AMD Ryzen CPU with Second Level Address Translation (SLAT).
+    - CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs).
+    - Minimum of 4-GB memory.
 
--   In your computer's BIOS, the following items must be enabled:
+- In your computer's BIOS, the following items must be enabled:
 
-    -   Virtualization Technology (may have a different label depending on motherboard manufacturer).
-    -   Hardware Enforced Data Execution Prevention.
+    - Virtualization Technology (may have a different label depending on motherboard manufacturer).
+    - Hardware Enforced Data Execution Prevention.
 
--   Your computer must be updated to Windows 10 April 2018 update
+- Your computer must be updated to Windows 10 April 2018 update
     (build 1803) or later. You can verify that your Windows version
     is up-to-date by using the following steps: 
 
@@ -209,9 +208,10 @@ Android emulator
 [Troubleshooting](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vswin#accel-issues-win)
 guide.
 
+::: zone-end
+::: zone pivot="macos"
 
-
-# [Visual Studio for Mac](#tab/vsmac)
+## Accelerating Android emulators on macOS
 
 The following virtualization technologies are available for
 accelerating the Android emulator:
@@ -231,10 +231,10 @@ Framework is not available on your Mac, then HAXM can be used. The
 Android emulator will automatically make use of hardware acceleration
 if the following criteria are met:
 
--   Hardware acceleration is available and enabled on the development
+- Hardware acceleration is available and enabled on the development
     computer.
 
--   The emulator is running a system image created for
+- The emulator is running a system image created for
     an **x86**-based virtual device.
 
 > [!IMPORTANT]
@@ -255,9 +255,9 @@ emulator, see
 To use the Android emulator with the Hypervisor Framework, your Mac must 
 meet the following criteria:
 
--   Your Mac must be running macOS 10.10 or later.
+- Your Mac must be running macOS 10.10 or later.
 
--   Your Mac's CPU must be able to support the Hypervisor Framework.
+- Your Mac's CPU must be able to support the Hypervisor Framework.
 
 If your Mac meets these criteria, the Android emulator will
 automatically use the Hypervisor Framework for acceleration (even if
@@ -340,8 +340,8 @@ Android emulator
 [Troubleshooting](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vsmac#accel-issues-mac)
 guide.
 
------
+::: zone-end
 
 ## Related Links
 
-* [Run Apps on the Android Emulator](https://developer.android.com/studio/run/emulator)
+- [Run Apps on the Android Emulator](https://developer.android.com/studio/run/emulator)

@@ -1,6 +1,7 @@
 ---
 title: "Managing Virtual Devices with the Android Device Manager"
 description: "This article explains how to use the Android Device Manager to create and configure Android Virtual Devices (AVDs) that emulate physical Android devices. You can use these virtual devices to run and test your app without having to rely on a physical device."
+zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
@@ -16,8 +17,6 @@ and configure Android Virtual Devices (AVDs) that emulate physical Android
 devices. You can use these virtual devices to run and test your app
 without having to rely on a physical device._
 
-## Overview
-
 After you have verified that hardware acceleration is enabled (as
 described in
 [Hardware Acceleration for Emulator Performance](~/android/get-started/installation/android-emulator/hardware-acceleration.md)),
@@ -25,7 +24,9 @@ the next step is to use the _Android Device Manager_ (also referred to
 as the _Xamarin Android Device Manager_) to create virtual devices that
 you can use to test and debug your app.
 
-# [Visual Studio](#tab/vswin)
+::: zone pivot="windows"
+
+## Android Device Manager on Windows
 
 This article explains how to use the Android Device Manager to create,
 duplicate, customize, and launch Android virtual devices.
@@ -264,10 +265,10 @@ The additional options menu contains the following items:
   ![Delete device dialog](device-manager-images/win/28-delete-device-w158.png)
 
 
+::: zone-end
+::: zone pivot="macos"
 
-
-
-# [Visual Studio for Mac](#tab/vsmac)
+## Android Device Manager on macOS
 
 This article explains how to use the Android Device Manager to create,
 duplicate, customize, and launch Android virtual devices.
@@ -660,8 +661,7 @@ bug report by clicking **Help > Report a Problem**:
 
 [![Location of menu item for filing a bug report](device-manager-images/mac/31-bug-report-sml.png)](device-manager-images/mac/31-bug-report.png#lightbox)
 
-
------
+::: zone-end
 
 ## Summary
 

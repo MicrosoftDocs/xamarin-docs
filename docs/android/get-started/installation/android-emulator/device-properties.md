@@ -1,6 +1,7 @@
 ---
 title: "Editing Android Virtual Device Properties"
 description: "This article explains how to use the Android Device Manager to edit the profile properties of an Android virtual device."
+zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 3E33C136-8042-4184-A40C-3200D8CD99CB
 ms.technology: xamarin-android
@@ -14,8 +15,9 @@ ms.date: 05/30/2018
 _This article explains how to use the Android Device Manager to edit the
 profile properties of an Android virtual device._
 
+::: zone pivot="windows"
 
-# [Visual Studio](#tab/vswin)
+## Android Device Manager on Windows
 
 The **Android Device Manager** supports the editing of individual
 Android virtual device profile properties. The **New Device** and
@@ -52,8 +54,10 @@ You can change properties by using the following guidelines:
 
     ![Changing an integer property](device-properties-images/win/03-integer-value.png)
 
+::: zone-end
+::: zone pivot="macos"
 
-# [Visual Studio for Mac](#tab/vsmac)
+## Android Device Manager on macOS
 
 The **Android Device Manager** supports the editing of individual
 Android virtual device profile properties. The **New Device** and
@@ -90,7 +94,7 @@ You can change properties by using the following guidelines:
 
     ![Changing an integer property](device-properties-images/mac/03-integer-value.png)
 
------
+::: zone-end
 
 The following table provides a detailed explanation of the properties
 listed in the **New Device** and **Device Editor** screens:

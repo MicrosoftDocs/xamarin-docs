@@ -1,6 +1,7 @@
 ---
 title: "Android Emulator Troubleshooting"
 description: "This article explains how to diagnose and work around problems that may occur when using the Android Emulator."
+zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 4F053CC9-9378-47CB-8002-978A6558C4D0
 ms.technology: xamarin-android
@@ -9,17 +10,16 @@ ms.author: mamcle
 ms.date: 08/27/2018
 ---
 
-# Android Emulator Troubleshooting
+# Android emulator troubleshooting
 
 _This article describes the most common warning messages and issues
 that occur while configuring and running the Android Emulator. In
 addition, it describes solutions for resolving these errors as well as
 various troubleshooting tips to help you diagnose emulator problems._
 
+::: zone pivot="windows"
 
-# [Visual Studio](#tab/vswin)
-
-## Deployment issues
+## Deployment issues on Windows
 
 Some error messages may be displayed by the emulator when you deploy
 your app. The most common errors and solutions are explained here.
@@ -77,8 +77,8 @@ packages. When you create a virtual device (see
 [Managing Virtual Devices with the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)),
 be sure to select one or both of the following options:
 
--   **Google APIs** &ndash; includes Google Play Services in the virtual device.
--   **Google Play Store** &ndash; includes Google Play Store in the virtual device.
+- **Google APIs** &ndash; includes Google Play Services in the virtual device.
+- **Google Play Store** &ndash; includes Google Play Store in the virtual device.
 
 For example, this virtual device will include Google Play Services and Google Play Store:
 
@@ -95,9 +95,9 @@ For example, this virtual device will include Google Play Services and Google Pl
 
 Performance issues are typically caused by one of the following problems:
 
--   The emulator is running without hardware acceleration.
+- The emulator is running without hardware acceleration.
 
--   The virtual device running in the emulator is not using an x86-based system image.
+- The virtual device running in the emulator is not using an x86-based system image.
 
 The following sections cover these scenarios in more detail.
 
@@ -181,11 +181,12 @@ displayed when you run the **emulator-check.exe accel** command:
 ```cmd
 VT feature disabled in BIOS/UEFI
 ```
+
 To correct this problem, reboot into your computer's BIOS and enable the
 following options:
 
--   Virtualization Technology (may have a different label depending on motherboard manufacturer).
--   Hardware Enforced Data Execution Prevention.
+- Virtualization Technology (may have a different label depending on motherboard manufacturer).
+- Hardware Enforced Data Execution Prevention.
 
 If hardware acceleration is enabled and the BIOS is configured
 properly, the emulator should run successfully with hardware acceleration.
@@ -488,14 +489,13 @@ Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel 
 
 
 
+::: zone-end
+::: zone pivot="macos"
 
-
-# [Visual Studio for Mac](#tab/vsmac)
-
-## Deployment issues
+## Deployment issues on macOS
 
 Some error messages may be displayed by the emulator when you deploy
-your app. The most common errors and solutions are explained here.
+your app. The most common errors and solutions are explained below.
 
 ### Deployment errors
 
@@ -538,7 +538,6 @@ the following steps:
 If **An MMIO access error has occurred** is displayed,
 restart the emulator.
 
-
 <a name="gps-mac" />
 
 ## Missing Google Play Services
@@ -550,8 +549,8 @@ packages. When you create a virtual device (see
 [Managing Virtual Devices with the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)),
 be sure to select one or both of the following:
 
--   **Google APIs** &ndash; includes Google Play Services in the virtual device.
--   **Google Play Store** &ndash; includes Google Play Store in the virtual device.
+- **Google APIs** &ndash; includes Google Play Services in the virtual device.
+- **Google Play Store** &ndash; includes Google Play Store in the virtual device.
 
 For example, this virtual device will include Google Play Services and Google Play Store:
 
@@ -568,9 +567,9 @@ For example, this virtual device will include Google Play Services and Google Pl
 
 Performance issues are typically caused by one of the following problems:
 
--   The emulator is running without hardware acceleration.
+- The emulator is running without hardware acceleration.
 
--   The virtual device running in the emulator is not using an x86-based system image.
+- The virtual device running in the emulator is not using an x86-based system image.
 
 The following sections cover these scenarios in more detail.
 
@@ -695,5 +694,4 @@ that HAXM was not found:
 Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel Corporation)] not present on the system
 ```
 
------
-
+::: zone-end
