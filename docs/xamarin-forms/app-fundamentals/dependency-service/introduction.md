@@ -6,7 +6,7 @@ ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/06/2017
+ms.date: 09/15/2018
 ---
 
 # Introduction to DependencyService
@@ -15,7 +15,10 @@ ms.date: 03/06/2017
 
 [`DependencyService`](xref:Xamarin.Forms.DependencyService) allows apps to call into platform-specific functionality from shared code. This functionality enables Xamarin.Forms apps to do anything that a native app can do.
 
-`DependencyService` is a dependency resolver. In practice, an interface is defined and `DependencyService` finds the correct implementation of that interface from the various platform projects.
+`DependencyService` is a service locator. In practice, an interface is defined and `DependencyService` finds the correct implementation of that interface from the various platform projects.
+
+> [!NOTE]
+> By default, the [`DependencyService`](xref:Xamarin.Forms.DependencyService) will only resolve platform implementations that have parameterless constructors. However, a dependency resolution method can be injected into Xamarin.Forms that uses a dependency injection container or factory methods to resolve platform implementations. This approach can be used to resolve platform implementations that have constructors with parameters. For more information, see [Dependency resolution in Xamarin.Forms](~/xamarin-forms/internals/dependency-resolution.md).
 
 ## How DependencyService Works
 
@@ -147,7 +150,6 @@ The [sample UsingDependencyService solution](https://developer.xamarin.com/sampl
 
 > [!NOTE]
 > You **must** provide an implementation in every platform project. If no Interface implementation is registered, then the `DependencyService` will be unable to resolve the `Get<T>()` method at runtime.
-
 
 ## Related Links
 
