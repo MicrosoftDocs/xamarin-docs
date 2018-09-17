@@ -5,7 +5,7 @@ ms.assetid: 7BACCB36-8E3E-4E5D-B8EF-56A639839FD2
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
+ms.date: 08/17/2018
 ---
 
 # Getting Started with Fingerprint Authentication
@@ -49,7 +49,6 @@ In the previous snippet, the `context` is any Android `Android.Content.Context`.
 ## Checking for Eligibility
 
 An application must perform several checks to ensure that it is possible to use fingerprint authentication. In total, there are five conditions that the application uses to check for eligibility:  
- 
 
 **API level 23** &ndash; The Fingerprint APIs require API level 23
 or higher. The `FingerprintManagerCompat` class will wrap the API
@@ -67,7 +66,7 @@ if (!fingerprintManager.IsHardwareDetected)
     // Code omitted
 }
 ```
-    
+
 **Device Is Secured** &ndash; The user must have the device secured
 with a screen lock. If the user has not secured the device with a
 screen lock and security is important to the application, then the
@@ -115,16 +114,14 @@ else
 }
 ```
 
-An application should check conditions 3, 4, and 5 each time it wishes
-to use fingerprint authentication. The first two conditions can be
-checked the first time an application is run on a device and the
-results saved (in shared preferences for example).
+Checking all of these conditions each time the application offers authentication options
+will ensure the user gets the best user experience. Changes or upgrades to their device
+or operating system might affect the availability of fingerprint authentication. If you
+choose to cache the results of any of these checks, make sure to cater for upgrade scenarios.
 
 For more information on how to request permissions in Android 6.0,
 consult the Android guide
 [Requesting Permissions at Run-Time](http://developer.android.com/training/permissions/requesting.html).
-
-
 
 ## Related Links
 
