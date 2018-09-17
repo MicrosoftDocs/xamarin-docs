@@ -4,9 +4,9 @@ description: "This document describes how to work with events, protocols, and de
 ms.prod: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 03/18/2017
+author: conceptdev
+ms.author: crdun
+ms.date: 09/17/2017
 ---
 
 # Events, Protocols and Delegates in Xamarin.iOS
@@ -30,20 +30,18 @@ protocol that the UITableView would call to populate itself.
 In this article you’ll learn about all these topics, giving you a solid
 foundation for handling callback scenarios in Xamarin.iOS, including:
 
--  **Events** – Using .NET events with UIKit controls.
--  **Protocols** – Learning what protocols are and how they are used, and creating an example that provides data for a map annotation.
--  **Delegates** – Learning about Objective-C delegates by extending the map example to handle user interaction that includes an annotation, then learning the difference between strong and weak delegates and when to use each of these.
+- **Events** – Using .NET events with UIKit controls.
+- **Protocols** – Learning what protocols are and how they are used, and creating an example that provides data for a map annotation.
+- **Delegates** – Learning about Objective-C delegates by extending the map example to handle user interaction that includes an annotation, then learning the difference between strong and weak delegates and when to use each of these.
 
 To illustrate protocols and delegates, we’ll build a simple map application
 that adds an annotation to a map as shown here:
 
- [![](delegates-protocols-and-events-images/01-map.png "An example of a simple map application that adds an annotation to a map")](delegates-protocols-and-events-images/01-map.png#lightbox)
- [![](delegates-protocols-and-events-images/04-annotation-with-callout.png "An example annotation added to a map")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+[![](delegates-protocols-and-events-images/01-map-sml.png "An example of a simple map application that adds an annotation to a map")](delegates-protocols-and-events-images/01-map.png#lightbox)
+[![](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "An example annotation added to a map")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 Before tackling this app, let’s get started by looking at .NET events under
 the UIKit.
-
-<a name=".NET_Events_with_UIKit" />
 
 ## .NET Events with UIKit
 
@@ -56,6 +54,7 @@ aButton.TouchUpInside += (o,s) => {
     Console.WriteLine("button touched");
 };
 ```
+
 You could also implement this with a C# 2.0-style anonymous method like this
 one:
 
@@ -65,36 +64,32 @@ aButton.TouchUpInside += delegate {
 };
 ```
 
-The preceding code is wired up in the ViewDidLoad method of the
-UIViewContoller. The aButton variable references a button, which you could add
-either in the iOS Designer or with code. The following figure shows this button
-as it is added in iOS Designer, taken from the sample that accompanies this
-article:
+The preceding code is wired up in the `ViewDidLoad` method of the
+UIViewContoller. The `aButton` variable references a button, which you could add
+either in the iOS Designer or with code. The following figure shows a button
+that has been added in the iOS Designer:
 
- [![](delegates-protocols-and-events-images/02-interface-builder-outlet.png "A button added in iOS Designer")](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
+[![](delegates-protocols-and-events-images/02-interface-builder-outlet-sml.png "A button added in iOS Designer")](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
 
 Xamarin.iOS also supports the target-action style of connecting your code to an
-interaction that occurs with a control. To create a target-action for the Hello button,
+interaction that occurs with a control. To create a target-action for the **Hello** button,
 double click it in the iOS Designer. The UIViewController's code-behind file will be displayed
 and the developer will be asked to select a location to insert the connecting method:
 
- [![](delegates-protocols-and-events-images/03-interface-builder-action.png "The UIViewControllers code-behind file")](delegates-protocols-and-events-images/03-interface-builder-action.png#lightbox)
+[![](delegates-protocols-and-events-images/03-interface-builder-action-sml.png "The UIViewControllers code-behind file")](delegates-protocols-and-events-images/03-interface-builder-action.png#lightbox)
 
 After a location is selected, a new method is created and wired-up to the control. In the following
 example, a message will be written to the console when the button is clicked:
 
- [![](delegates-protocols-and-events-images/05-interface-builder-action.png "A message will be written to the console when the button is clicked")](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
+[![](delegates-protocols-and-events-images/05-interface-builder-action-sml.png "A message will be written to the console when the button is clicked")](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
 
 For more details about the iOS target-action pattern, see the Target-Action
-section of “ [Core Application Competencies for iOS](http://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html)” in Apple’s iOS
+section of [Core Application Competencies for iOS](http://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) in Apple’s iOS
 Developer Library.
 
 For more information about how to use the iOS Designer with Xamarin.iOS, see
-the “ [iOS Designer Overview](~/ios/user-interface/designer/index.md)”
+the [iOS Designer Overview](~/ios/user-interface/designer/index.md)
 documentation.
-
- <a name="Events" />
-
 
 ## Events
 
@@ -105,16 +100,13 @@ Objective-C APIs.
 The following section shows how you would capture the TouchDown event on a button,
 depending on how much control you need.
 
- <a name="C#_Style" />
-
-
 ## C# Style
 
 Using the delegate syntax:
 
 ```csharp
 UIButton button = MakeTheButton ();
-button.TouchDown += delegate {    
+button.TouchDown += delegate {
     Console.WriteLine ("Touched");
 };
 ```
@@ -142,9 +134,6 @@ void handler (object sender, EventArgs args)
 button1.TouchDown += handler;
 button2.TouchDown += handler;
 ```
-
-<a name="Monitoring_more_than_one_kind_of_Event" />
-
 
 ## Monitoring more than one kind of Event
 
@@ -178,9 +167,6 @@ button.AddTarget (this, new Selector ("MySelector"), UIControlEvent.TouchDown);
 Please note, if you implement the instance method in an inherited base class,
 it must be a public method.
 
- <a name="Protocols" />
-
-
 ## Protocols
 
 A protocol is an Objective-C language feature that provides a list of method
@@ -193,9 +179,6 @@ can implement multiple interfaces.
 Apple uses protocols throughout iOS to define contracts for classes to adopt,
 while abstracting away the implementing class from the caller, thus operating
 just like a C# interface. Protocols are used both in non-delegate scenarios (such as with the `MKAnnotation` example shown next), and with delegates (as presented later in this document, in the Delegates section).
-
- <a name="Protocols_with_Monotouch" />
-
 
 ### Protocols with Xamarin.ios
 
@@ -213,9 +196,9 @@ appears when the user taps on the annotation (as shown in the screenshot below)
 comes from the `Title` property in the class that implements the
 protocol:
 
- [![](delegates-protocols-and-events-images/04-annotation-with-callout.png "Example text for the callout when the user taps on the annotation")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+ [![](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "Example text for the callout when the user taps on the annotation")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
-As described in the next section, Protocols Deep Dive, Xamarin.iOS binds
+As described in the next section, [Protocols Deep Dive](#protocols-deep-dive), Xamarin.iOS binds
 protocols to abstract classes. For the `MKAnnotation` protocol, the
 bound C# class is named `MKAnnotation` to mimic the name of
 the protocol, and it is a subclass of `NSObject`, the root base class
@@ -267,19 +250,19 @@ coordinate in the constructor and returns a string for the title:
 /// </summary>
 public class SampleMapAnnotation : MKAnnotation
 {
-    string _title;
+    string title;
 
     public SampleMapAnnotation (CLLocationCoordinate2D coordinate)
     {
         Coordinate = coordinate;
-        _title = "Sample";
+        title = "Sample";
     }
 
     public override CLLocationCoordinate2D Coordinate { get; set; }
 
     public override string Title {
         get {
-            return _title;
+            return title;
         }
     }
 }
@@ -293,7 +276,7 @@ instance, as shown in the following code:
 ```csharp
 //an arbitrary coordinate used for demonstration here
 var sampleCoordinate =
-new CLLocationCoordinate2D (42.3467512, -71.0969456);
+    new CLLocationCoordinate2D (42.3467512, -71.0969456); // Boston
 
 //create an annotation and add it to the map
 map.AddAnnotation (new SampleMapAnnotation (sampleCoordinate));
@@ -307,9 +290,6 @@ map.
 The `MKAnnotation` protocol provides a known set of capabilities
 across any objects that implement it, without the consumer (the map in this
 case) needing to know about implementation details. This streamlines adding a variety of possible annotations to a map.
-
- <a name="Protocols_Deep_Dive" />
-
 
 ### Protocols Deep Dive
 
@@ -357,9 +337,6 @@ the article [Binding Objective-C Types](~/ios/platform/binding-objective-c/index
 We’re not through with protocols yet, though. They’re also used in iOS as
 the basis for Objective-C delegates, which is the topic of the next section.
 
- <a name="Delegates" />
-
-
 ## Delegates
 
 iOS uses Objective-C delegates to implement the delegation pattern, in which
@@ -375,9 +352,6 @@ respond within the application. You can work through an example of this type of 
 
 At this point, you may be wondering how a class determines what methods to call on its delegate. This is another place where you use protocols. Usually,
 the methods available for a delegate come from the protocols they adopt.
-
- <a name="How_Protocols_are_used_with_Delegates" />
-
 
 ### How Protocols are used with Delegates
 
@@ -402,9 +376,6 @@ You’ll use this shortly in an example to respond to the annotation after it is
 selected, but first let’s discuss the difference between strong and weak
 delegates.
 
- <a name="Strong_Delegates_vs._Weak_Delegates" />
-
-
 ### Strong Delegates vs. Weak Delegates
 
 The delegates we’ve looked at so far are strong delegates, meaning they are
@@ -419,9 +390,6 @@ WeakDelegate property instead of to the Delegate property. A weak delegate
 offers you the flexibility to take your delegate class down a different
 inheritance hierarchy. Let’s look at a Xamarin.iOS example that uses both strong
 and weak delegates.
-
- <a name="Example_using_a_Delegate_with_Xamarin.iOS" />
-
 
 ### Example Using a Delegate with Xamarin.iOS
 
@@ -525,9 +493,6 @@ expense of type safety. If you were to make a mistake in the selector that was
 passed to the `ExportAttribute`, you wouldn’t find out until
 runtime.
 
- <a name="Events_and_Delegates" />
-
-
 ### Events and Delegates
 
 Delegates are used for callbacks in iOS similarly to the way .NET uses
@@ -557,9 +522,6 @@ map.DidSelectAnnotationView += (s,e) => {
 };
 ```
 
- <a name="Summary" />
-
-
 ## Summary
 
 This article covered how to use events, protocols, and delegates in
@@ -569,7 +531,6 @@ interfaces and how Xamarin.iOS uses them. Finally, we examined Objective-C
 delegates from a Xamarin.iOS perspective. We saw how Xamarin.iOS supports both
 strongly and weakly typed delegates, and how to bind .NET events to delegate
 methods.
-
 
 ## Related Links
 
