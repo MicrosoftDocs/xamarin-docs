@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: F42526FF-2B0D-4A9D-B129-CECF680ED0DE
 author: conceptdev
 ms.author: crdun
-ms.date: 07/16/2018
+ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
 ---
@@ -131,7 +131,7 @@ _Listed by primary location, many partners provide services across borders._
 |[Ness](http://www.ness.com/)|San Jose, CA, USA|Ness Digital Engineering provides digital transformation and custom software product engineering services to help organizations envision, build, and continually evolve their digital platforms to enter new markets, capture new revenue and gain operational efficiencies. |
 |[Neudesic](http://www.neudesic.com)|Irvine, CA; Atlanta, GA; Austin, TX; Chicago, IL; Dallas, TX; Denver, CO; Houston, TX; Los Angeles, CA; New York, NY; Philadelphia, PA; Phoenix, AZ; Portland, OR; Seattle, WA|Neudesic is a leading National Systems Integrator and trusted Microsoft partner, recognized by independent research firms for our capabilities and expertise around Microsoft technology. We also maintain strategic alliances with other industry leaders like Theobald, AWS, Dell, Xamarin, Metalogix, Nintex and others. By working in close partnership with our alliances ‚Äî blending our expertise with their tools and technology ‚Äî Neudesic is able to deliver the best possible solution to every business challenge.|
 |[NIIT Technologies](http://www.niit-tech.com)|Atlanta, GA, USA; Noida, Uttar Pradesh, India; London, UK; Madrid, Spain; Singapore|NIIT Technologies is a global IT solutions organization addressing the requirements of clients across the Americas, Europe, Asia, and Australia. NIIT Technologies services clients in travel and transportation, banking and financial services, insurance, manufacturing, and media verticals, offering a range of services. Focused on Digital Services, the Company is helping businesses design agile, scalable, and digital operating models.  We provide a wide range of best-in-class solutions and effective services that are spread across the digital services value chain including Experience, Analytics and Integration.|
-|[Nous Infosystems](http://nousinfosystems.com)|Edison, NJ |New projects are always welcome. |
+|[Nous Infosystems](http://nousinfosystems.com)|Edison, NJ & San Ramon, CA, USA; Bentford, UK; Mississauga, ON, Canada; Mainz, Germany; Bengaluru, Coimbatore, India; Dubai, UAE|Nous, a leading Xamarin partner, empowers its customers to easily adopt the powerful Xamarin platform and utilize their existing business teams, tools and C#/.NET codes efficiently to go live on mobile. We offer end-to-end enterprise mobility services User experience & Design, Xamarin Advisory services, Application Development services, Testing and Support services.|
 |[Noutash Consulting Inc.](http://www.noutashconsulting.ca/)|Scarborough, ON|Our consultants specialize in creating original, creative mobile applications that are both beautiful and highly functional.|
 |[Oakwood](http://www.oakwoodsys.com/)|Kansas City, MO, USA|We customize software with a unique set of tools, technologies, capabilities and best practices.  Designed to your unique specifications and requirements.|
 |[Odessian, LLC](http://www.odessian.com)|Peoria, IL|Our professionals are skilled at matching technology to problems. We bring a variety of industry prospectives to create a best-of-class solution that is right for your business.|
