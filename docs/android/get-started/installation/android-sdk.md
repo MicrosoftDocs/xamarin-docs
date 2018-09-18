@@ -58,8 +58,7 @@ several JDK alternatives to choose from:
     if you are developing specifically for API level 23 or earlier.
 
 -   If you are using Visual Studio 15.8 Preview 5 or later, you can try
-    using the Microsoft distribution of the
-    [Microsoft distribution of the OpenJDK](openjdk.md) (currently in preview) 
+    using [Microsoft's Mobile OpenJDK Distribution](openjdk.md) (currently in preview) 
     rather than JDK 8.
 
 > [!IMPORTANT]
@@ -220,8 +219,7 @@ several JDK alternatives to choose from:
     if you are developing specifically for API level 23 or earlier.
 
 -   If you are using Visual Studio for Mac 7.7 or later, you can try
-    using the Microsoft distribution of the
-    [Microsoft distribution of the OpenJDK](openjdk.md) (currently in preview) 
+    using [Microsoft's Mobile OpenJDK Distribution](openjdk.md) (currently in preview) 
     rather than JDK 8.
 
 > [!IMPORTANT]
