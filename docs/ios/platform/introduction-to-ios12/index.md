@@ -13,10 +13,7 @@ ms.date: 07/08/2018
 This document provides a high-level description of some iOS 12 APIs for
 which Xamarin's preview release provides C# bindings.
 
-To get started building iOS 12 apps with Xamarin, take a look at:
-
-- The [getting started guide](get-started.md)
-- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
+To get started building iOS 12 apps with Xamarin, see the [getting started guide](get-started.md)
 
 ## [ARKit 2](arkit2.md)
 
@@ -120,5 +117,4 @@ to adopt Metal.
 ## Related links
 
 - [Get Ready for iOS 12 (Apple)](https://developer.apple.com/ios/)
-- [iOS 12 Preview (Apple)](https://www.apple.com/ios/ios-12-preview/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
+

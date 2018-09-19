@@ -395,4 +395,4 @@ Being consistent with the choice of matrix interpretation is vital to proper beh
 - [Sample app – Scanning and Detecting 3D Objects](https://developer.xamarin.com/samples/monotouch/iOS12/ScanningAndDetecting3DObjects/)
 - [What's new in ARKit 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/602/)
 - [Understanding ARKit Tracking and Detection (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/610/)
-- [Introduction to ARKit in Xamarin.iOS](https://docs.microsoft.com/en-us/xamarin/ios/platform/introduction-to-ios11/arkit/)
+- [Introduction to ARKit in Xamarin.iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/arkit/)
