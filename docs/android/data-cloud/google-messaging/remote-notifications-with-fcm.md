@@ -220,10 +220,11 @@ directory of your project:
 3.  Select **google-services.json** in the **Solution Explorer** window.
 
 4.  In the **Properties** pane, set the **Build Action** to
-    **GoogleServicesJson** (if the **GoogleServicesJson** build action is
-    not shown, save and close the Solution, then reopen it):
+    **GoogleServicesJson**:
 
     [![Setting the build action to GoogleServicesJson](remote-notifications-with-fcm-images/04-google-services-json-vs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-vs.png#lightbox)
+
+> NOTE: if the **GoogleServicesJson** build action is not shown, save and close the Solution, then reopen it
 
 # [Visual Studio for Mac](#tab/vsmac)
 
