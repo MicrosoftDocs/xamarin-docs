@@ -12,11 +12,6 @@ ms.date: 06/25/2018
 
 ## [Introduction to iOS 12](~/ios/platform/introduction-to-ios12/index.md)
 
-> [!WARNING]
-> Xamarin's iOS 12 support is currently in preview, which means
-> that it may contain bugs, is not feature-complete, and may change.
-> Use it for experimentation only.
-
 This document describes iOS 12 features available for use when building
 Xamarin.iOS applications.
 

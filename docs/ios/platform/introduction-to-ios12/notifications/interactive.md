@@ -4,19 +4,11 @@ description: "With iOS 12, it is possible to create interactive user interfaces 
 ms.prod: xamarin
 ms.assetid: E3562E1B-E0EF-4C99-9F51-59DE22AFDE46
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 9/4/2018
 ---
 # Interactive notification user interfaces in Xamarin.iOS
-
-![Preview](~/media/shared/preview.png)
-
-> [!WARNING]
-> Xamarin's support for the iOS 12, tvOS 12, and watchOS 5 SDKs distributed
-> with Xcode 10 is currently in preview, which means that that it may
-> contain bugs, is not feature complete, and may change. Use it for
-> experimentation only.
 
 [Notification content extensions](~/ios/platform/user-notifications/advanced-user-notifications.md),
 introduced in iOS 10, make it possible to create custom user interfaces

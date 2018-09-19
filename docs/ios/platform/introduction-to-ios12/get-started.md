@@ -1,46 +1,36 @@
 ---
-title: "Getting started with iOS 12, tvOS 12, and watchOS 5"
+title: "Get started with iOS 12, tvOS 12, and watchOS 5"
 description: "This document describes how to get set up to build iOS 12, tvOS 12, and watchOS 5 apps with Xamarin. It discusses how to download Xcode 10 and update Visual Studio for Mac and Visual Studio 2017."
 ms.prod: xamarin
 ms.assetid: 6C0F0133-1A5F-408B-8BCA-BDCA313A55C2
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 08/07/2018
+author: lobrien
+ms.author: laobri
+ms.date: 09/19/2018
 ---
-# Getting started with iOS 12, tvOS 12, and watchOS 5
+# Get started with iOS 12, tvOS 12, and watchOS 5
 
-![Preview](~/media/shared/preview.png)
-
-> [!WARNING]
-> Xamarin's support for the iOS 12, tvOS 12, and watchOS 5 SDKs distributed
-> with Xcode 10 is currently in preview, which means that that it may
-> contain bugs, is not feature complete, and may change. Use it for
-> experimentation only.
-
-This document describes how to get set up to build Xamarin apps that call
-APIs released with Xcode 10. It discusses how to download Xcode 10 and
-update Visual Studio for Mac and Visual Studio 2017.
+This document describes how to start building Xamarin apps that call
+APIs released with Xcode 10, for iOS 12, tvOS 12, and watchOS 5.
 
 ## Download and install
 
-1. **Install the latest Xcode 10 beta** –
+1. **Install Xcode 10** –
    Registered Apple developers can download and install the latest version
    of Xcode 10 from the
-   [Apple Developer Portal](https://developer.apple.com/download/).
+   [Apple Developer Portal](https://developer.apple.com/download/) or the **App Store**.
 
 2. **Run Xcode 10** – Run Xcode 10 before updating and running Visual
    Studio for Mac or Visual Studio 2017, as it installs some tools that
    Xamarin requires.
 
-3. **Update Visual Studio for Mac and Visual Studio 2017** – Follow the
-   instructions on the [release blog](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
-   to install the Xamarin preview.
+3. **Update Visual Studio for Mac and Visual Studio 2017** – Ensure you have the latest stable version of Xamarin.
 
-4. _(optional)_ **Install the latest iOS beta on your iOS devices** –
+4. _(optional)_ **Install iOS 12 on your iOS devices** –
+
    For device testing of apps that use APIs introduced with the Xcode 10,
    registered Apple developers can [download](https://developer.apple.com/download)
-   and install the latest developer betas on their devices.
+   and install the operating system on their devices.
 
    > [!TIP]
    > Even if your app does not use any new APIs, be sure to build it with
@@ -60,4 +50,3 @@ update Visual Studio for Mac and Visual Studio 2017.
 ## Related links
 
 - [Download Xcode 10](https://developer.apple.com/download/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)

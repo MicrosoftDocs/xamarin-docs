@@ -4,19 +4,11 @@ description: "This document describes how to use Siri Shortcuts in iOS 12. It di
 ms.prod: xamarin
 ms.assetid: 86424F79-3A7D-436E-927D-9A3267DA333B
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/08/2018
 ---
 # Siri Shortcuts in Xamarin.iOS
-
-![Preview](~/media/shared/preview.png)
-
-> [!WARNING]
-> Xamarin's support for the iOS 12, tvOS 12, and watchOS 5 SDKs distributed
-> with Xcode 10 is currently in preview, which means that that it may
-> contain bugs, is not feature complete, and may change. Use it for
-> experimentation only.
 
 In [iOS 10](~/ios/platform/sirikit/index.md), Apple introduced SiriKit,
 making it possible to build messaging, VoIP calling, payments, workouts,

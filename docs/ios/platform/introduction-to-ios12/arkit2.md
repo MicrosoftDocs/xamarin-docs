@@ -10,14 +10,6 @@ ms.date: 08/22/2018
 ---
 # ARKit 2 in Xamarin.iOS
 
-![Preview](~/media/shared/preview.png)
-
-> [!WARNING]
-> Xamarin's support for the iOS 12, tvOS 12, and watchOS 5 SDKs distributed
-> with Xcode 10 is currently in preview, which means that that it may
-> contain bugs, is not feature complete, and may change. Use it for
-> experimentation only.
-
 ARKit has matured considerably since its introduction last year in iOS 11. First and foremost, you can now detect vertical as well as horizontal planes, which greatly improves the practicality of indoor augmented reality experiences. In addition, there are new capabilities:
 
 * Recognizing reference images and objects as the junction between the real world and digital imagery
