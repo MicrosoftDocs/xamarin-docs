@@ -88,10 +88,7 @@ snippet is an example of a `drawable` resource using a `layer-list`:
 </layer-list>
 ```
 
-This `layer-list` will center the splash screen image **splash.png** on
-a background specified by the `@color/splash_background` resource.
-Place this file in the **Resources/drawable** folder (for example,
-**Resources/drawable/splash_screen.xml**).
+This `layer-list` will center the splash image **splash.png** on the background specified by the `@color/splash_background` resource. Place this XML file in the **Resources/drawable** folder (for example, **Resources/drawable/splash_screen.xml**).
 
 After the splash screen drawable has been created, the next step is to
 create a theme for the splash screen.
