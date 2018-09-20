@@ -15,6 +15,48 @@ _Display text in Xamarin.Forms_
 
 The [`Label`](xref:Xamarin.Forms.Label) view is used for displaying text, both single and multi-line. Labels can have custom fonts (families, sizes, and options) and colored text.
 
+## Colors
+
+Labels can be set to use a custom text color via the bindable [`TextColor`](xref:Xamarin.Forms.Label.TextColor) property.
+
+Special care is necessary to ensure that colors will be usable on each platform. Because each platform has different defaults for text and background colors, you'll need to be careful to pick a default that works on each.
+
+The following XAML example sets the text color of a `Label`:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TextSample.LabelPage"
+             Title="Label Demo">
+    <StackLayout Padding="5,10">
+      <Label TextColor="#77d065" FontSize = "20" Text="This is a green label." />
+    </StackLayout>
+</ContentPage>
+```
+
+The equivalent C# code is:
+
+```csharp
+public partial class LabelPage : ContentPage
+{
+    public LabelPage ()
+    {
+        InitializeComponent ();
+
+        var layout = new StackLayout { Padding = new Thickness(5,10) };
+        var label = new Label { Text="This is a green label.", TextColor = Color.FromHex("#77d065"), FontSize = 20 };
+        layout.Children.Add(label);
+        this.Content = layout;
+    }
+}
+```
+
+The following screenshots show the result of setting the `TextColor` property:
+
+![](label-images/textcolor.png "Label TextColor Example")
+
+For more information about colors, see [Colors](~/xamarin-forms/user-interface/colors.md).
+
 <a name="Truncation_and_Wrapping" />
 
 ## Truncation and Wrapping
@@ -31,48 +73,6 @@ Labels can be set to handle text that can't fit on one line in one of several wa
 ## Fonts
 
 For more information about specifying fonts on a `Label`, see [Fonts](~/xamarin-forms/user-interface/text/fonts.md).
-
-## Colors
-
-`Label`s can be set to use a custom text color via the bindable [`TextColor`](xref:Xamarin.Forms.Label.TextColor) property.
-
-Special care is necessary to ensure that colors will be usable on each platform. Because each platform has different defaults for text and background colors, you'll need to be careful to pick a default that works on each.
-
-Use the following XAML to set the text color of a label:
-
-```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TextSample.LabelPage"
-             Title="Label Demo">
-    <StackLayout Padding="5,10">
-      <Label TextColor="#77d065" FontSize = "20" Text="This is a label." />
-    </StackLayout>
-</ContentPage>
-```
-
-The equivalent C# code is:
-
-```csharp
-public partial class LabelPage : ContentPage
-{
-    public LabelPage ()
-    {
-        InitializeComponent ();
-
-        var layout = new StackLayout { Padding = new Thickness(5,10) };
-        var label = new Label { Text="This is a label.", TextColor = Color.FromHex("#77d065"), FontSize = 20 };
-        layout.Children.Add(label);
-        this.Content = layout;
-    }
-}
-```
-
-The following screenshots show the result of setting the `TextColor` property:
-
-![](label-images/textcolor.png "Label TextColor Example")
-
-For more information about colors, see [Colors](~/xamarin-forms/user-interface/colors.md).
 
 <a name="Formatted_Text" />
 
@@ -105,7 +105,7 @@ The following XAML example demonstrates a `FormattedText` property that consists
         <Label LineBreakMode="WordWrap">
             <Label.FormattedText>
                 <FormattedString>
-                    <Span Text="Red Bold, " TextColor="Red" FontAttributes="Bold" LineHeight="1.8" />
+                    <Span Text="Red Bold, " TextColor="Red" FontAttributes="Bold" />
                     <Span Text="default, " Style="{DynamicResource BodyStyle}">
                         <Span.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding TapCommand}" />
@@ -129,7 +129,7 @@ public class LabelPageCode : ContentPage
         var layout = new StackLayout{ Padding = new Thickness (5, 10) };
         ...
         var formattedString = new FormattedString ();
-        formattedString.Spans.Add (new Span{ Text = "Red bold, ", ForegroundColor = Color.Red, FontAttributes = FontAttributes.Bold, LineHeight = 1.8 });
+        formattedString.Spans.Add (new Span{ Text = "Red bold, ", ForegroundColor = Color.Red, FontAttributes = FontAttributes.Bold });
 
         var span = new Span { Text = "default, " };
         span.GestureRecognizers.Add(new TapGestureRecognizer { Command = new Command(async () => await DisplayAlert("Tapped", "This is a tapped Span.", "OK")) });
@@ -150,6 +150,77 @@ Note that a [`Span`](xref:Xamarin.Forms.Span) can also respond to any gestures t
 The following screenshots show the result of setting the `FormattedString` property to three `Span` instances:
 
 ![](label-images/formattedtext.png "Label FormattedText Example")
+
+## Line Height
+
+The vertical height of a [`Label`](xref:Xamarin.Forms.Label) and a [`Span`](xref:Xamarin.Forms.Span) can be customized by setting the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) property or [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) to a `double` value. On iOS and Android these values are multipliers of the original line height, and on the Universal Windows Platform (UWP) the `Label.LineHeight` property value is a multiplier of the label font size.
+
+> [!NOTE]
+> - On iOS, the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) and [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) properties change the line height of text that fits on a single line, and text that wraps onto multiple lines.
+> - On Android, the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) and [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) properties only change the line height of text that wraps onto multiple lines.
+> - On UWP, the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) property changes the line height of text that wraps onto multiple lines, and the [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) property has no effect.
+
+The following XAML example demonstrates setting the [`LineHeight`](xref:Xamarin.Forms.Label.LineHeight) property on a [`Label`](xref:Xamarin.Forms.Label):
+
+```xaml
+<Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
+       LineBreakMode="WordWrap"
+       LineHeight="1.8" />
+```
+
+The equivalent C# code is:
+
+```csharp
+var label =
+{
+  Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus.", LineBreakMode = LineBreakMode.WordWrap,
+  LineHeight = 1.8
+};
+```
+
+The following screenshots show the result of setting the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) property to 1.8:
+
+![](label-images/label-lineheight.png "Label LineHeight Example")
+
+The following XAML example demonstrates setting the [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) property on a [`Span`](xref:Xamarin.Forms.Span):
+
+```xaml
+<Label LineBreakMode="WordWrap">
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a tincidunt sem. Phasellus mollis sit amet turpis in rutrum. Sed aliquam ac urna id scelerisque. "
+                  LineHeight="1.8"/>
+            <Span Text="Nullam feugiat sodales elit, et maximus nibh vulputate id."
+                  LineHeight="1.8" />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+```
+
+The equivalent C# code is:
+
+```csharp
+var formattedString = new FormattedString();
+formattedString.Spans.Add(new Span
+{
+  Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a tincidunt sem. Phasellus mollis sit amet turpis in rutrum. Sed aliquam ac urna id scelerisque. ",
+  LineHeight = 1.8
+});
+formattedString.Spans.Add(new Span
+{
+  Text = "Nullam feugiat sodales elit, et maximus nibh vulputate id.",
+  LineHeight = 1.8
+});
+var label = new Label
+{
+  FormattedText = formattedString,
+  LineBreakMode = LineBreakMode.WordWrap
+};
+```
+
+The following screenshots show the result of setting the [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) property to 1.8:
+
+![](label-images/span-lineheight.png "Span LineHeight Example")
 
 ## Styling a Label
 

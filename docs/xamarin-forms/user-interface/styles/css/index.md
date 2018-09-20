@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/26/2018
+ms.date: 09/20/2018
 ---
 # Styling Xamarin.Forms apps using Cascading Style Sheets (CSS)
 
@@ -371,6 +371,7 @@ The following CSS properties are supported by Xamarin.Forms (in the **Values** c
 |`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_double_  \| _namedsize_ \| `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
 |`height`|`VisualElement`|_double_ \| `initial` |`min-height: 250;`|
+|`line-height`|`Label`, `Span`|_double_ \| `initial` |`line-height: 1.8;`|
 |`margin`|`View`|_thickness_ \| `initial` |`margin: 6 12;`|
 |`margin-left`|`View`|_thickness_ \| `initial` |`margin-left: 3;`|
 |`margin-top`|`View`|_thickness_ \| `initial` |`margin-top: 2;`|
