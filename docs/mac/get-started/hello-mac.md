@@ -22,11 +22,11 @@ This article will introduce the key concepts needed to create a Mac app using Xa
 
 The following concepts will be covered:
 
--  **Visual Studio for Mac**  – Introduction to the Visual Studio for Mac and how to create Xamarin.Mac applications with it.
--  **Anatomy of a Xamarin.Mac Application** – What a Xamarin.Mac application consists of.
--  **Xcode’s Interface Builder** – How to use Xcode’s Interface Builder to define an app’s user interface.
--  **Outlets and Actions** – How to use Outlets and Actions to wire up controls in the user interface.
--  **Deployment/Testing** – How to run and test a Xamarin.Mac app.
+- **Visual Studio for Mac**  – Introduction to the Visual Studio for Mac and how to create Xamarin.Mac applications with it.
+- **Anatomy of a Xamarin.Mac Application** – What a Xamarin.Mac application consists of.
+- **Xcode’s Interface Builder** – How to use Xcode’s Interface Builder to define an app’s user interface.
+- **Outlets and Actions** – How to use Outlets and Actions to wire up controls in the user interface.
+- **Deployment/Testing** – How to run and test a Xamarin.Mac app.
 
 ## Requirements
 
@@ -55,29 +55,29 @@ To get started, do the following:
 
 1. Start Visual Studio for Mac:
 
-	[![](hello-mac-images/setup01.png "The main Visual Studio for Mac Interface")](hello-mac-images/setup01.png#lightbox)
+    [![](hello-mac-images/setup01.png "The main Visual Studio for Mac Interface")](hello-mac-images/setup01.png#lightbox)
 
 2. Click on the **New Solution...** link in the upper left hand corner of the screen to open the **New Project** dialog box:
 
-	[![](hello-mac-images/setup03.png "Creating a new Solution in Visual Studio for Mac")](hello-mac-images/setup02.png#lightbox)
+    [![](hello-mac-images/setup03.png "Creating a new Solution in Visual Studio for Mac")](hello-mac-images/setup02.png#lightbox)
 
 3. Select **Mac** > **App** > **Cocoa App** and click the **Next** button:
 
-	[![](hello-mac-images/setup03.png "Selecting a Cocoa App")](hello-mac-images/setup03.png#lightbox)
+    [![](hello-mac-images/setup03.png "Selecting a Cocoa App")](hello-mac-images/setup03.png#lightbox)
 
 4. Enter `Hello_Mac` for the **App Name**, and keep everything else as default. Click **Next**:
 
-	[![](hello-mac-images/setup05.png "Setting the name of the app")](hello-mac-images/setup05.png#lightbox)
+    [![](hello-mac-images/setup05.png "Setting the name of the app")](hello-mac-images/setup05.png#lightbox)
 
 4. When creating a solution that would house several different Projects, the developer might want to set a different **Solution Name** here, but for the sake of this example, leave it set to the default of being the same as the **Project Name**:
 
-	[![](hello-mac-images/setup04.png "Verifying the new Solution details")](hello-mac-images/setup04.png#lightbox)
+    [![](hello-mac-images/setup04.png "Verifying the new Solution details")](hello-mac-images/setup04.png#lightbox)
 
 5. Click the **Create** button.
 
 Visual Studio for Mac will create the new Xamarin.Mac app and display the default files that get added to the app's solution:
 
- [![](hello-mac-images/project01.png "The new Solution default view")](hello-mac-images/project01.png#lightbox)
+[![](hello-mac-images/project01.png "The new Solution default view")](hello-mac-images/project01.png#lightbox)
 
 Visual Studio for Mac uses **Solutions** and **Projects**, the exact same way that Visual Studio does. A solution is a container that can hold one or more projects; projects can include applications, supporting libraries, test applications, etc. In this case, Visual Studio for Mac has created both a solution and an application project automatically.
 
@@ -89,13 +89,13 @@ If you're familiar with iOS programming, there are a lot of similarities. In fac
 
 Take a look at the files in the project:
 
--   `Main.cs` – This contains the main entry point of the app. When the app is launched, this contains the very first class and method that is run.
--   `AppDelegate.cs` – This file contains the main app class that is responsible for listening to events from the operating system.
--   `Info.plist` – This file contains app properties such as the application name, icons, etc.
--   `Entitlements.plist` - This files contains the entitlements for the app and allows access to things such as Sandboxing and iCloud support.
--  `Main.storyboard` – Defines the user interface (Windows and Menus) for an app and lays out the interconnections between Windows via Segues. Storyboards are XML files that contain the definition of views (user interface elements). This file can be created and maintained by Interface Builder inside of Xcode.
--   `ViewController.cs` – This is the controller for the main window. Controllers will be covered in detail in another article, but for now, a controller can be thought of the main engine of any particular view.
--   `ViewController.designer.cs` – This file contains plumbing code that helps integrate with the main screen’s user interface.
+- `Main.cs` – This contains the main entry point of the app. When the app is launched, this contains the very first class and method that is run.
+- `AppDelegate.cs` – This file contains the main app class that is responsible for listening to events from the operating system.
+- `Info.plist` – This file contains app properties such as the application name, icons, etc.
+- `Entitlements.plist` - This files contains the entitlements for the app and allows access to things such as Sandboxing and iCloud support.
+- `Main.storyboard` – Defines the user interface (Windows and Menus) for an app and lays out the interconnections between Windows via Segues. Storyboards are XML files that contain the definition of views (user interface elements). This file can be created and maintained by Interface Builder inside of Xcode.
+- `ViewController.cs` – This is the controller for the main window. Controllers will be covered in detail in another article, but for now, a controller can be thought of the main engine of any particular view.
+- `ViewController.designer.cs` – This file contains plumbing code that helps integrate with the main screen’s user interface.
 
 The following sections, will take a quick look through some of these files. Later, they will be explored in more detail, but it’s a good idea to understand their basics now.
 
@@ -214,13 +214,13 @@ using Foundation;
 
 namespace Hello_Mac
 {
-	[Register ("ViewController")]
-	partial class ViewController
-	{
-		void ReleaseDesignerOutlets ()
-		{
-		}
-	}
+    [Register ("ViewController")]
+    partial class ViewController
+    {
+        void ReleaseDesignerOutlets ()
+        {
+        }
+    }
 }
 ```
 
@@ -300,14 +300,14 @@ Within the **Properties** section, there are eight different *Inspector Tabs*, a
 
 From left-to-right, these tabs are:
 
--   **File Inspector** – The File Inspector shows file information, such as the file name and location of the Xib file that is being edited.
--   **Quick Help** – The Quick Help tab provides contextual help based on what is selected in Xcode.
--   **Identity Inspector** – The Identity Inspector provides information about the selected control/view.
--   **Attributes Inspector** – The Attributes Inspector allows the developer to customize various attributes of the selected control/view.
--   **Size Inspector** – The Size Inspector allows the developer to control the size and resizing behavior of the selected control/view.
--   **Connections Inspector** – The Connections Inspector shows the **Outlet** and **Action** connections of the selected controls. Outlets and Actions will be discussed in detail below.
--   **Bindings Inspector** – The Bindings Inspector allows the developer to configure controls so that their values are automatically bound to data models.
--   **View Effects Inspector** – The View Effects Inspector allows the developer to specify effects on the controls, such as animations.
+- **File Inspector** – The File Inspector shows file information, such as the file name and location of the Xib file that is being edited.
+- **Quick Help** – The Quick Help tab provides contextual help based on what is selected in Xcode.
+- **Identity Inspector** – The Identity Inspector provides information about the selected control/view.
+- **Attributes Inspector** – The Attributes Inspector allows the developer to customize various attributes of the selected control/view.
+- **Size Inspector** – The Size Inspector allows the developer to control the size and resizing behavior of the selected control/view.
+- **Connections Inspector** – The Connections Inspector shows the **Outlet** and **Action** connections of the selected controls. Outlets and Actions will be discussed in detail below.
+- **Bindings Inspector** – The Bindings Inspector allows the developer to configure controls so that their values are automatically bound to data models.
+- **View Effects Inspector** – The View Effects Inspector allows the developer to specify effects on the controls, such as animations.
 
 Use the **Library** section to find controls and objects to place into the designer to graphically build the user interface:
 
@@ -321,31 +321,31 @@ Do the following:
 
 1. In Xcode, drag a **Push Button** from the **Library Section**:
 
-	[![](hello-mac-images/xcode07.png "Selecting a NSButton from the Library Inspector")](hello-mac-images/xcode07.png#lightbox)
+    [![](hello-mac-images/xcode07.png "Selecting a NSButton from the Library Inspector")](hello-mac-images/xcode07.png#lightbox)
 
 2. Drop the button onto the **View** (under the **Window Controller**) in the **Interface Editor**:
 
-	[![](hello-mac-images/xcode08.png "Adding a Button to the interface design")](hello-mac-images/xcode08.png#lightbox)
+    [![](hello-mac-images/xcode08.png "Adding a Button to the interface design")](hello-mac-images/xcode08.png#lightbox)
 
 3. Click on the **Title** property in the **Attribute Inspector** and change the button's title to `Click Me`:
 
-	[![](hello-mac-images/xcode09.png "Setting the button's properties")](hello-mac-images/xcode09.png#lightbox)
+    [![](hello-mac-images/xcode09.png "Setting the button's properties")](hello-mac-images/xcode09.png#lightbox)
 
 4. Drag a **Label** from the **Library Section**:
 
-	[![](hello-mac-images/xcode10.png "Selecting a Label from the Library Inspector")](hello-mac-images/xcode10.png#lightbox)
+    [![](hello-mac-images/xcode10.png "Selecting a Label from the Library Inspector")](hello-mac-images/xcode10.png#lightbox)
 
 5. Drop the label onto the **Window** beside the button in the **Interface Editor**:
 
-	[![](hello-mac-images/xcode11.png "Adding a Label to the Interface Design")](hello-mac-images/xcode11.png#lightbox)
+    [![](hello-mac-images/xcode11.png "Adding a Label to the Interface Design")](hello-mac-images/xcode11.png#lightbox)
 
 6. Grab the right handle on the label and drag it until it is near the edge of the window:
 
-	[![](hello-mac-images/xcode12.png "Resizing the Label")](hello-mac-images/xcode12.png#lightbox)
+    [![](hello-mac-images/xcode12.png "Resizing the Label")](hello-mac-images/xcode12.png#lightbox)
 
 7. Select the Button just added in the **Interface Editor**, and click the **Constraints Editor** icon and the bottom of the window:
 
-	[![](hello-mac-images/xcode13.png "Adding constraints to the button")](hello-mac-images/xcode13.png#lightbox)
+    [![](hello-mac-images/xcode13.png "Adding constraints to the button")](hello-mac-images/xcode13.png#lightbox)
 
 8. At the top of the editor, click the **Red I-Beams** at the top and left. As the Window is resized, this will keep the Button in the same location at the top left corner of the screen.
 
@@ -355,7 +355,7 @@ Do the following:
 
 11. Select the Label and click the **Constraints Editor** icon again:
 
-	[![](hello-mac-images/xcode14.png "Adding constraints to the label")](hello-mac-images/xcode14.png#lightbox)
+    [![](hello-mac-images/xcode14.png "Adding constraints to the label")](hello-mac-images/xcode14.png#lightbox)
 
 12. By clicking **Red I-Beams** at the top, right and left of the **Constraints Editor**, tells the label to be stuck to its given X and Y locations and to grow and shrink as the window is resized in the running application.
 
@@ -377,8 +377,8 @@ With the user interface created, the developer will need to expose the UI items 
 
 So what are **Outlets** and **Actions**? In traditional .NET user interface programming, a control in the user interface is automatically exposed as a property when it’s added. Things work differently in Mac, simply adding a control to a view doesn’t make it accessible to code. The developer must explicitly expose the UI element to code. In order do this, Apple provides two options:
 
--   **Outlets** – Outlets are analogous to properties. If the developer wires up a control to an Outlet, it’s exposed to the code via a property, so they can do things like attach event handlers, call methods on it, etc.
--   **Actions** – Actions are analogous to the command pattern in WPF. For example, when an Action is performed on a control, say a button click, the control will automatically call a method in the code. Actions are powerful and convenient because the developer can wire up many controls to the same Action.
+- **Outlets** – Outlets are analogous to properties. If the developer wires up a control to an Outlet, it’s exposed to the code via a property, so they can do things like attach event handlers, call methods on it, etc.
+- **Actions** – Actions are analogous to the command pattern in WPF. For example, when an Action is performed on a control, say a button click, the control will automatically call a method in the code. Actions are powerful and convenient because the developer can wire up many controls to the same Action.
 
 In Xcode, **Outlets** and **Actions** are added directly in code via *Control-dragging*. More specifically, this means that to create an **Outlet** or **Action**, the developer will choose a control element to add an **Outlet** or **Action** to, hold down the **Control** key on the keyboard, and drag that control directly into the code.
 
@@ -396,7 +396,7 @@ Do the following:
 
 1. In Xcode at the far right top-hand corner of the screen, click the **Double Circle** button to open the **Assistant Editor**:
 
-	[![](hello-mac-images/outlet01.png "Displaying the Assistant Editor")](hello-mac-images/outlet01.png#lightbox)
+    [![](hello-mac-images/outlet01.png "Displaying the Assistant Editor")](hello-mac-images/outlet01.png#lightbox)
 
 2. The Xcode will switch to a split-view mode with the **Interface Editor** on one side and a **Code Editor** on the other.
 
@@ -404,25 +404,25 @@ Do the following:
 
 4. At the top of the **Code Editor** click on the **Automatic Link** and select the `ViewController.h` file:
 
-	[![](hello-mac-images/outlet02.png "Selecting the correct file")](hello-mac-images/outlet02.png#lightbox)
+    [![](hello-mac-images/outlet02.png "Selecting the correct file")](hello-mac-images/outlet02.png#lightbox)
 
 5. Xcode should now have the correct file selected:
 
-	[![](hello-mac-images/outlet03.png "Viewing the ViewController.h file")](hello-mac-images/outlet03.png#lightbox)
+    [![](hello-mac-images/outlet03.png "Viewing the ViewController.h file")](hello-mac-images/outlet03.png#lightbox)
 
 6. **The last step was very important!** If the developer didn't have the correct file selected, they won't be able to create **Outlets** and **Actions** or they will be exposed to the wrong class in C#!
 
 7. In the **Interface Editor**, hold down the **Control** key on the keyboard and click-drag the label created above onto the code editor just below the `@interface ViewController : NSViewController {}` code:
 
-	[![](hello-mac-images/outlet04.png "Dragging to create an Outlet")](hello-mac-images/outlet04.png#lightbox)
+    [![](hello-mac-images/outlet04.png "Dragging to create an Outlet")](hello-mac-images/outlet04.png#lightbox)
 
 8. A dialog box will be displayed. Leave the **Connection** set to **Outlet** and enter `ClickedLabel` for the **Name**:
 
-	[![](hello-mac-images/outlet05.png "Defining the Outlet")](hello-mac-images/outlet05.png#lightbox)
+    [![](hello-mac-images/outlet05.png "Defining the Outlet")](hello-mac-images/outlet05.png#lightbox)
 
 9. Click the **Connect** button to create the **Outlet**:
 
-	[![](hello-mac-images/outlet06.png "Viewing the final Outlet")](hello-mac-images/outlet06.png#lightbox)
+    [![](hello-mac-images/outlet06.png "Viewing the final Outlet")](hello-mac-images/outlet06.png#lightbox)
 
 10. Save the changes to the file.
 
@@ -435,19 +435,19 @@ Do the following:
 1. Ensure that Xcode is still in the **Assistant Editor** and the **ViewController.h** file is visible in the **Code Editor**.
 2. In the **Interface Editor**, hold down the **Control** key on the keyboard and click-drag the button created above onto the code editor just below the `@property (assign) IBOutlet NSTextField *ClickedLabel;` code:
 
-	[![](hello-mac-images/action01.png "Dragging to create an Action")](hello-mac-images/action01.png#lightbox)
+    [![](hello-mac-images/action01.png "Dragging to create an Action")](hello-mac-images/action01.png#lightbox)
 
 3. Change the **Connection** type to **Action**:
 
-	[![](hello-mac-images/action02.png "Defining the Action")](hello-mac-images/action02.png#lightbox)
+    [![](hello-mac-images/action02.png "Defining the Action")](hello-mac-images/action02.png#lightbox)
 
 4. Enter `ClickedButton` as the **Name**:
 
-	[![](hello-mac-images/action03.png "Naming the new Action")](hello-mac-images/action03.png#lightbox)
+    [![](hello-mac-images/action03.png "Naming the new Action")](hello-mac-images/action03.png#lightbox)
 
 5. Click the **Connect** button to create **Action**:
 
-	[![](hello-mac-images/action04.png "Viewing the final Action")](hello-mac-images/action04.png#lightbox)
+    [![](hello-mac-images/action04.png "Viewing the final Action")](hello-mac-images/action04.png#lightbox)
 
 6. Save the changes to the file.
 
@@ -501,10 +501,10 @@ First, create a class-level variable in the `ViewController` class to track the 
 ```csharp
 namespace Hello_Mac
 {
-	public partial class ViewController : NSViewController
-	{
-		private int numberOfTimesClicked = 0;
-		...
+    public partial class ViewController : NSViewController
+    {
+        private int numberOfTimesClicked = 0;
+        ...
 ```
 
 Next, in the same class (`ViewController`), override the `ViewDidLoad` method and add some code to set the initial message for the label:
@@ -512,10 +512,10 @@ Next, in the same class (`ViewController`), override the `ViewDidLoad` method an
 ```csharp
 public override void ViewDidLoad ()
 {
-	base.AwakeFromNib ();
+    base.ViewDidLoad ();
 
-	// Set the initial value for the label
-	ClickedLabel.StringValue = "Button has not been clicked yet.";
+    // Set the initial value for the label
+    ClickedLabel.StringValue = "Button has not been clicked yet.";
 }
 ```
 
@@ -527,8 +527,8 @@ Next, add the code to respond to the user clicking the button. Add the following
 ```csharp
 partial void ClickedButton (Foundation.NSObject sender) {
 
-	// Update counter and label
-	ClickedLabel.StringValue = string.Format("The button has been clicked {0} time{1}.",++numberOfTimesClicked, (numberOfTimesClicked < 2) ? "" : "s");
+    // Update counter and label
+    ClickedLabel.StringValue = string.Format("The button has been clicked {0} time{1}.",++numberOfTimesClicked, (numberOfTimesClicked < 2) ? "" : "s");
 }
 ```
 
@@ -540,8 +540,8 @@ It’s time to build and run the app to make sure it runs as expected. The devel
 
 Whenever an app is built, the developer can choose what kind of build they want:
 
--   **Debug** – A debug build is compiled into an **.app** (application) file with a bunch of extra metadata that allows the developer to debug what’s happening while the app is running.
--   **Release** – A release build also creates an **.app** file, but it doesn’t include debug information, so it’s smaller and executes faster.
+- **Debug** – A debug build is compiled into an **.app** (application) file with a bunch of extra metadata that allows the developer to debug what’s happening while the app is running.
+- **Release** – A release build also creates an **.app** file, but it doesn’t include debug information, so it’s smaller and executes faster.
 
 The developer can select the type of build from the **Configuration Selector** at the upper left hand corner of the Visual Studio for Mac screen:
 
@@ -557,9 +557,9 @@ If there weren't any errors,  a **Build Succeeded** message will be displayed in
 
 There are three ways to run the app:
 
--  Press **⌘+Enter**.
--  From the **Run** menu, choose **Debug**.
--  Click the **Play** button in the Visual Studio for Mac toolbar (just above the **Solution Explorer**).
+- Press **⌘+Enter**.
+- From the **Run** menu, choose **Debug**.
+- Click the **Play** button in the Visual Studio for Mac toolbar (just above the **Solution Explorer**).
 
 The app will build (if it hasn’t been built already), start in debug mode and display its main interface window:
 
