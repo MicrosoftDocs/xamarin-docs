@@ -26,7 +26,7 @@ sample app.
 
 This sample app simulates conversations with various friends, sending a
 notification for each message and grouping them by thread. It also
-demonstrates how unthreaded notifications land in an application-level 
+demonstrates how unthreaded notifications land in an application-level
 group.
 
 Code snippets in this guide come from this sample app.
@@ -68,7 +68,7 @@ public void WillPresentNotification(UNUserNotificationCenter center, UNNotificat
 ```
 
 The [`UNNotificationPresentationOptions.Alert`](https://developer.xamarin.com/api/type/UserNotifications.UNNotificationPresentationOptions/)
-parameter indicates that the app should show the alert but not play a sound 
+parameter indicates that the app should show the alert but not play a sound
 or update a badge.
 
 ## Threaded notifications

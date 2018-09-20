@@ -6,7 +6,7 @@ ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/07/2017
+ms.date: 07/26/2018
 ---
 
 # Xamarin.Forms BoxView
@@ -30,13 +30,16 @@ This article discusses the following topics:
 
 ## Setting BoxView Color and Size
 
-Very often you'll set the following three properties of `BoxView`:
+Typically you'll set the following properties of `BoxView`:
 
 - [`Color`](xref:Xamarin.Forms.BoxView.Color) to set its color.
+- [`CornerRadius`](xref:Xamarin.Forms.BoxView.CornerRadius) to set its corner radius.
 - [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) to set the width of the `BoxView` in device-independent units.
 - [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) to set the height of the `BoxView`.
 
 The `Color` property is of type `Color`; the property can be set to any `Color` value, including the 141 static read-only fields of named colors ranging alphabetically from `AliceBlue` to `YellowGreen`.
+
+The `CornerRadius` property is of type [`CornerRadius`](xref:Xamarin.Forms.CornerRadius); the property can be set to a single `double` uniform corner radius value, or a `CornerRadius` structure defined by four `double` values that are applied to the top left, top right, bottom left, and bottom right of the `BoxView`.
 
 The `WidthRequest` and `HeightRequest` properties only play a role if the `BoxView` is *unconstrained* in layout. This is the case when the layout container needs to know the child's size, for example, when the `BoxView` is a child of an auto-sized cell in the `Grid` layout. A `BoxView` is also unconstrained when its `HorizontalOptions` and `VerticalOptions` properties are set to values other than `LayoutOptions.Fill`. If the `BoxView` is unconstrained, but the `WidthRequest` and `HeightRequest` properties are not set, then the width or height are set to default values of 40 units, or about 1/4 inch on mobile devices.
 
@@ -53,6 +56,7 @@ The [**BasicBoxView**](https://developer.xamarin.com/samples/xamarin-forms/BoxVi
              x:Class="BasicBoxView.MainPage">
 
     <BoxView Color="CornflowerBlue"
+             CornerRadius="10"
              WidthRequest="160"
              HeightRequest="160"
              VerticalOptions="Center"

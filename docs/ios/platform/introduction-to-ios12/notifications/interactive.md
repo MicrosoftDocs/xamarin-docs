@@ -59,7 +59,7 @@ configuration:
 
 Note the following features:
 
-- The `UNNotificationExtensionCategory` array specifies the type of 
+- The `UNNotificationExtensionCategory` array specifies the type of
 notification categories the content extension handles.
 - In order to support interactive content, the notification content
 extension sets the `UNNotificationExtensionUserInteractionEnabled`
@@ -76,7 +76,7 @@ view controller. In the sample app, the view controller is of type
 and a slider. The storyboard associates these controls with handlers defined
 in **NotificationViewController.cs**:
 
-- The **Launch App** button handler calls the 
+- The **Launch App** button handler calls the
 `PerformNotificationDefaultAction` action method on `ExtensionContext`,
 which launches the app:
 
@@ -101,7 +101,7 @@ which launches the app:
             // ...
     ```
 
-- The **Dismiss Notification** button handler calls 
+- The **Dismiss Notification** button handler calls
 `DismissNotificationContentExtension` on `ExtensionContext`, which closes
 the notification:
 
@@ -123,7 +123,7 @@ removes it from Notification Center:
     }
     ```
 
-- The method that handles value changes on the slider updates the alpha of 
+- The method that handles value changes on the slider updates the alpha of
 the image displayed in the notification's interface:
 
     ```csharp

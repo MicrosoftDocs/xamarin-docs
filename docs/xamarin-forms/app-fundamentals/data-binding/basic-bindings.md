@@ -193,6 +193,9 @@ The problem is that the `Slider` has an initial value of 0. This causes the `Sca
 
 You'll discover in the [next article](binding-mode.md) how to avoid this problem by initializing the `Slider` from the default value of the `Scale` property.
 
+> [!NOTE]
+> The [`VisualElement`](xref:Xamarin.Forms.VisualElement) class also defines [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) and [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) properties, which can scale the `VisualElement` differently in the horizontal and vertical directions.
+
 The **Alternative XAML Binding** page shows the equivalent binding entirely in XAML:
 
 ```xaml

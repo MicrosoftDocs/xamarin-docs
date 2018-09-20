@@ -83,7 +83,7 @@ async void RunTest(int num)
 ## for loop
 
 The `for` loop version of the test naively iterates over the specified
-number of inputs, calling [`GetPrediction`](https://developer.xamarin.com/api/member/CoreML.MLModel.GetPrediction/) 
+number of inputs, calling [`GetPrediction`](https://developer.xamarin.com/api/member/CoreML.MLModel.GetPrediction/)
 for each and discarding the result. The method times how long it takes to
 make the predictions:
 
@@ -139,7 +139,7 @@ the loop-based Core ML predictions.
 
 ## Related links
 
-- [Sample app – MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer) 
+- [Sample app – MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer)
 - [What's new in Core ML, Part 1 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/708/)
 - [What's new in Core ML, Part 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/709/)
 - [Introduction to Core ML in Xamarin.iOS](https://docs.microsoft.com/en-us/xamarin/ios/platform/introduction-to-ios11/coreml)

@@ -1,5 +1,5 @@
 ---
-title: "Adding a Pinch Gesture Recognizer"
+title: "Adding a pinch gesture recognizer"
 description: "This article explains how to use the pinch gesture to perform interactive zoom of an image at the pinch location."
 ms.prod: xamarin
 ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
@@ -9,11 +9,9 @@ ms.author: dabritch
 ms.date: 01/21/2016
 ---
 
-# Adding a Pinch Gesture Recognizer
+# Adding a pinch gesture recognizer
 
 _The pinch gesture is used for performing interactive zoom and is implemented with the PinchGestureRecognizer class. A common scenario for the pinch gesture is to perform interactive zoom of an image at the pinch location. This is accomplished by scaling the content of the viewport, and is demonstrated in this article._
-
-## Overview
 
 To make a user interface element zoomable with the pinch gesture, create a [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer) instance, handle the [`PinchUpdated`](xref:Xamarin.Forms.PinchGestureRecognizer.PinchUpdated) event, and add the new gesture recognizer to the [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) collection on the user interface element. The following code example shows a `PinchGestureRecognizer` attached to an [`Image`](xref:Xamarin.Forms.Image) element:
 
@@ -44,7 +42,7 @@ void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
 }
 ```
 
-## Creating a PinchToZoom Container
+## Creating a PinchToZoom container
 
 Handling the pinch gesture to perform a zoom operation requires some math to transform the user interface. This section contains a generalized helper class to perform the math, which can be used to interactively zoom any user interface element. The following code example shows the `PinchToZoomContainer` class:
 
@@ -156,11 +154,6 @@ void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
 ```
 
 This method updates the zoom level of the wrapped user interface element based on the user's pinch gesture. This is achieved by using the values of the [`Scale`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Scale), [`ScaleOrigin`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.ScaleOrigin) and [`Status`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Status) properties of the [`PinchGestureUpdatedEventArgs`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs) instance to calculate the scale factor to be applied at the origin of the pinch gesture. The wrapped user element is then zoomed at the origin of the pinch gesture by setting its [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX), [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY), and [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) properties to the calculated values.
-
-## Summary
-
-The pinch gesture is used for performing interactive zoom and is implemented with the [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer) class.
-
 
 ## Related Links
 

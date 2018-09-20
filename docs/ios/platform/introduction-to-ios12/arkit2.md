@@ -126,20 +126,20 @@ internal static SCNGeometry CreateVisualization(NVector3[] points, UIColor color
   {
     return null;
   }
- 
+
   unsafe
   {
     var stride = sizeof(float) * 3;
- 
+
     // Pin the data down so that it doesn't move
     fixed (NVector3* pPoints = &amp;points[0])
     {
       // Important: Don't unpin until after `SCNGeometry.Create`, because geometry creation is lazy
-  
+
       // Grab a pointer to the data and treat it as a byte buffer of the appropriate length
       var intPtr = new IntPtr(pPoints);
       var pointData = NSData.FromBytes(intPtr, (System.nuint) (stride * points.Length));
- 
+
       // Create a geometry source (factory) configured properly for the data (3 vertices)
       var source = SCNGeometrySource.FromData(
         pointData,
@@ -151,14 +151,14 @@ internal static SCNGeometry CreateVisualization(NVector3[] points, UIColor color
         0,
         stride
       );
- 
+
       // Create geometry element
       // The null and bytesPerElement = 0 look odd, but this is just a template object
       var template = SCNGeometryElement.FromData(null, SCNGeometryPrimitiveType.Point, points.Length, 0);
       template.PointSize = 0.001F;
       template.MinimumPointScreenSpaceRadius = size;
       template.MaximumPointScreenSpaceRadius = size;
- 
+
       // Stitch the data (source) together with the template to create the new object
       var pointsGeometry = SCNGeometry.Create(new[] { source }, new[] { template });
       pointsGeometry.Materials = new[] { Utilities.Material(color) };
@@ -182,7 +182,7 @@ First, all of the gesture recognizers activate only after a threshold has been p
 // A custom rotation gesture recognizer that fires only when a threshold is passed
 internal partial class ThresholdRotationGestureRecognizer : UIRotationGestureRecognizer
 {
-    // The threshold after which this gesture is detected. 
+    // The threshold after which this gesture is detected.
     const double threshold = Math.PI / 15; // (12°)
 
     // Indicates whether the currently active gesture has exceeded the threshold
@@ -281,9 +281,9 @@ There are two interesting aspects to this configuration:
 * It's efficient and can be used with a potentially large number of reference images
 * The digital imagery is anchored to the image, even if that image moves in the real world (for example, if the cover of a book is recognized, it will track the book as it is pulled off the shelf, laid down, etc.).
 
-The `ARObjectScanningConfiguration` was discussed [previously](#recognizing-reference-objects) and is a developer-centric configuration for scanning 3D objects. It is highly processor and battery intensive and should not be used in end-user applications. The sample [Scanning and Detecting 3D Objects](https://developer.xamarin.com/samples/monotouch/ios12/ScanningAndDetecting3DObjects/) demonstrates the use of this configuration. 
+The `ARObjectScanningConfiguration` was discussed [previously](#recognizing-reference-objects) and is a developer-centric configuration for scanning 3D objects. It is highly processor and battery intensive and should not be used in end-user applications. The sample [Scanning and Detecting 3D Objects](https://developer.xamarin.com/samples/monotouch/ios12/ScanningAndDetecting3DObjects/) demonstrates the use of this configuration.
 
-The final tracking configuration, `ARWorldTrackingConfiguration` , is the workhorse of most mixed-reality experiences. This configuration uses "visual inertial odometry" to relate real-world "feature points" to digital imagery. Digital geometry or sprites are anchored relative to real-world horizontal and vertical planes or relative to detected `ARReferenceObject` instances. In this configuration, the world origin is the camera's original position in space with the Z-axis aligned to gravity, and digital objects "stay in place" relative to objects in the real world. 
+The final tracking configuration, `ARWorldTrackingConfiguration` , is the workhorse of most mixed-reality experiences. This configuration uses "visual inertial odometry" to relate real-world "feature points" to digital imagery. Digital geometry or sprites are anchored relative to real-world horizontal and vertical planes or relative to detected `ARReferenceObject` instances. In this configuration, the world origin is the camera's original position in space with the Z-axis aligned to gravity, and digital objects "stay in place" relative to objects in the real world.
 
 ### Environmental texturing
 
@@ -313,7 +313,7 @@ var configuration = new ARWorldTrackingConfiguration
 ```
 
 Although the perfectly reflective texture shown in the preceding code snippet is fun in a sample, environmental texturing is probably better used with restraint lest it trigger an "uncanny valley" response (the texture is only an estimate based on what the camera recorded).
- 
+
 
 ### Shared and persistent AR experiences
 
@@ -384,7 +384,7 @@ Console.WriteLine(xform);
 
 As you can see, the position is encoded in the bottom row's first three elements.
 
-In Xamarin, the common type for manipulating transformation matrices is `NVector4`, which by convention is interpreted in a column-major way. That is to say, the translation/position component is expected in M14, M24, M34, not M41, M42, M43: 
+In Xamarin, the common type for manipulating transformation matrices is `NVector4`, which by convention is interpreted in a column-major way. That is to say, the translation/position component is expected in M14, M24, M34, not M41, M42, M43:
 
 ![row-major vs column-major](images/arkit_row_vs_column.png)
 

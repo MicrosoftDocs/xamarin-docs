@@ -6,7 +6,7 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/16/2018
+ms.date: 09/20/2018
 ---
 
 # Xamarin.Forms Label
@@ -80,7 +80,7 @@ For more information about colors, see [Colors](~/xamarin-forms/user-interface/c
 
 Labels expose a [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) property which allows the presentation of text with multiple fonts and colors in the same view.
 
-The `FormattedText` property is of type [`FormattedString`](xref:Xamarin.Forms.FormattedString), which comprises one or more [`Span`](xref:Xamarin.Forms.Span) instances, set via the [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) property. Each `Span` possesses the following properties:
+The `FormattedText` property is of type [`FormattedString`](xref:Xamarin.Forms.FormattedString), which comprises one or more [`Span`](xref:Xamarin.Forms.Span) instances, set via the [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) property. Each `Span` possesses the following important properties:
 
 - [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) – the color of the span background.
 - [`Font`](xref:Xamarin.Forms.Span.Font) – the font for the text in the span.
@@ -88,11 +88,12 @@ The `FormattedText` property is of type [`FormattedString`](xref:Xamarin.Forms.F
 - [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily) – the font family to which the font for the text in the span belongs.
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – the size of the font for the text in the span.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) – the color for the text in the span. This property is obsolete and has been replaced by the `TextColor` property.
+- [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) – a collection of gesture recognizers that will respond to gestures on the span.
 - [`Style`](xref:Xamarin.Forms.Span.Style) – the style to apply to the span.
 - [`Text`](xref:Xamarin.Forms.Span.Text) – the text of the span.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – the color for the text in the span.
 
-The following XAML example demonstrates a `FormattedText` property that consists of three `Span` instances:
+The following XAML example demonstrates a `FormattedText` property that consists of three [`Span`](xref:Xamarin.Forms.Span) instances:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -101,11 +102,15 @@ The following XAML example demonstrates a `FormattedText` property that consists
              Title="Label Demo - XAML">
     <StackLayout Padding="5,10">
         ...
-        <Label>
+        <Label LineBreakMode="WordWrap">
             <Label.FormattedText>
                 <FormattedString>
-                    <Span Text="Red Bold, " TextColor="Red" FontAttributes="Bold" />
-                    <Span Text="default, " Style="{DynamicResource BodyStyle}" />
+                    <Span Text="Red Bold, " TextColor="Red" FontAttributes="Bold" LineHeight="1.8" />
+                    <Span Text="default, " Style="{DynamicResource BodyStyle}">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TapCommand}" />
+                        </Span.GestureRecognizers>
+                    </Span>
                     <Span Text="italic small." FontAttributes="Italic" FontSize="Small" />
                 </FormattedString>
             </Label.FormattedText>
@@ -124,8 +129,11 @@ public class LabelPageCode : ContentPage
         var layout = new StackLayout{ Padding = new Thickness (5, 10) };
         ...
         var formattedString = new FormattedString ();
-        formattedString.Spans.Add (new Span{ Text = "Red bold, ", ForegroundColor = Color.Red, FontAttributes = FontAttributes.Bold });
-        formattedString.Spans.Add (new Span { Text = "default, ", Style = Device.Styles.BodyStyle });
+        formattedString.Spans.Add (new Span{ Text = "Red bold, ", ForegroundColor = Color.Red, FontAttributes = FontAttributes.Bold, LineHeight = 1.8 });
+
+        var span = new Span { Text = "default, " };
+        span.GestureRecognizers.Add(new TapGestureRecognizer { Command = new Command(async () => await DisplayAlert("Tapped", "This is a tapped Span.", "OK")) });
+        formattedString.Spans.Add(span);
         formattedString.Spans.Add (new Span { Text = "italic small.", FontAttributes = FontAttributes.Italic, FontSize =  Device.GetNamedSize(NamedSize.Small, typeof(Label)) });
 
         layout.Children.Add (new Label { FormattedText = formattedString });
@@ -134,8 +142,10 @@ public class LabelPageCode : ContentPage
 }
 ```
 
-> [!NOTE]
+> [!IMPORTANT]
 > The [`Text`](xref:Xamarin.Forms.Span.Text) property of a `Span` can be set through data binding. For more information, see [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+
+Note that a [`Span`](xref:Xamarin.Forms.Span) can also respond to any gestures that are added to the span's [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) collection. For example, a [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) has been added to the second `Span` in the above code examples. Therefore, when this `Span` is tapped the `TapGestureRecognizer` will respond by executing the `ICommand` defined by the [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) property. For more information about gesture recognizers, see [Xamarin.Forms Gestures](~/xamarin-forms/app-fundamentals/gestures/index.md).
 
 The following screenshots show the result of setting the `FormattedString` property to three `Span` instances:
 

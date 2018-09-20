@@ -71,7 +71,7 @@ partial void HandleDetermineLanguageButtonTap(UIButton sender)
 
 ### Language probabilities
 
-Tap the **Language probabilities** button to fetch a list of language 
+Tap the **Language probabilities** button to fetch a list of language
 hypotheses for the user input.
 
 The `HandleLanguageProbabilitiesButtonTap` method of the
@@ -301,6 +301,6 @@ enum API documentation.
 
 ## Related links
 
-- [Sample app – XamarinNL](https://developer.xamarin.com/samples/monotouch/iOS12/XamarinNL) 
+- [Sample app – XamarinNL](https://developer.xamarin.com/samples/monotouch/iOS12/XamarinNL)
 - [Introducing Natural Language Framework](https://developer.apple.com/videos/play/wwdc2018/713/)
 - [Natural Language (Apple)](https://developer.apple.com/documentation/naturallanguage?language=objc)

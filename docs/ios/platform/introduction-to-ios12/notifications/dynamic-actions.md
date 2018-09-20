@@ -38,12 +38,12 @@ Create and register notification categories while an application launches.
 For example, in the [sample app](#sample-app-redgreennotifications), the
 `FinishedLaunching` method of `AppDelegate` does the following:
 
-- Defines one category for red notifications and another for green 
+- Defines one category for red notifications and another for green
 notifications
 - Registers these categories by calling the
 [`SetNotificationCategories`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.SetNotificationCategories/)
 method of `UNUserNotificationCenter`
-- Attaches a single 
+- Attaches a single
 [`UNNotificationAction`](https://developer.xamarin.com/api/type/UserNotifications.UNNotificationAction/)
 to each category
 
@@ -107,7 +107,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 ```
 
 Then, `AppDelegate` implements
-[`DidReceiveNotificationResponse`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse/) 
+[`DidReceiveNotificationResponse`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse/)
 to handle action button taps:
 
 ```csharp
@@ -152,7 +152,7 @@ already-existing action button.
 
 > [!NOTE]
 > A notification content extension can respond to an action button tap in
-> its view controller's [`DidReceiveNotificationResponse`](https://developer.xamarin.com/api/member/UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse/) 
+> its view controller's [`DidReceiveNotificationResponse`](https://developer.xamarin.com/api/member/UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse/)
 > method, declared as part of
 > [IUNNotificationContentExtension](https://developer.xamarin.com/api/type/UserNotificationsUI.IUNNotificationContentExtension/).
 >
@@ -199,7 +199,7 @@ public void DidReceiveNotificationResponse(UNNotificationResponse response, Acti
         if (rotationButtonTaps % 9 == 0)
         {
             ExtensionContext.SetNotificationActions(new UNNotificationAction[] { rotationAction });
-        } 
+        }
         else if (rotationButtonTaps % 9 == 1)
         {
             var resetRotationAction = UNNotificationAction.FromIdentifier("reset-rotation-action", "Reset rotation", UNNotificationActionOptions.None);

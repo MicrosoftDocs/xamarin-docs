@@ -85,6 +85,9 @@ The following screenshots show the scaling in progress on each platform:
 
 ![](simple-images/scaleto.png "Scaling Animation")
 
+> [!NOTE]
+> The [`VisualElement`](xref:Xamarin.Forms.VisualElement) class also defines [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) and [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) properties, which can scale the `VisualElement` differently in the horizontal and vertical directions. These properties can be animated with the [`Animation`](xref:Xamarin.Forms.Animation) class. For more information, see [Custom Animations in Xamarin.Forms](custom.md).
+
 ### Relative Scaling
 
 The following code example demonstrates using the [`RelScaleTo`](xref:Xamarin.Forms.ViewExtensions.RelScaleTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) method to animate the [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) property of an [`Image`](xref:Xamarin.Forms.Image):

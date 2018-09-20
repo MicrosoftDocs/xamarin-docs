@@ -1,5 +1,5 @@
 ---
-title: "Adding a Tap Gesture Gesture Recognizer"
+title: "Adding a tap gesture recognizer"
 description: "This article explains how to use the tap gesture for tap detection in a Xamarin.Forms application. Tap detection is implemented with the TapGestureRecognizer class."
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
@@ -9,11 +9,9 @@ ms.author: dabritch
 ms.date: 01/21/2016
 ---
 
-# Adding a Tap Gesture Gesture Recognizer
+# Adding a tap gesture recognizer
 
 _The tap gesture is used for tap detection and is implemented with the TapGestureRecognizer class._
-
-## Overview
 
 To make a user interface element clickable with the tap gesture, create a [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) instance, handle the [`Tapped`](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) event and add the new gesture recognizer to the [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) collection on the user interface element. The following code example shows a `TapGestureRecognizer` attached to an [`Image`](xref:Xamarin.Forms.Image) element:
 
@@ -67,7 +65,7 @@ void OnTapGestureRecognizerTapped(object sender, EventArgs args)
 
 ## Using ICommand
 
-Applications that use the Mvvm pattern typically use `ICommand` rather than wiring up event handlers directly. The [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) can easily support `ICommand` either by setting the binding in code:
+Applications that use the Model-View-ViewModel (MVVM) pattern typically use `ICommand` rather than wiring up event handlers directly. The [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) can easily support `ICommand` either by setting the binding in code:
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -108,10 +106,6 @@ public class TapViewModel : INotifyPropertyChanged
     //region INotifyPropertyChanged code omitted
 }
 ```
-
-## Summary
-
-The tap gesture is used for tap detection and is implemented with the [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) class. The number of taps can be specified to recognize double-tap (or triple-tap, or more taps) behavior.
 
 
 ## Related Links

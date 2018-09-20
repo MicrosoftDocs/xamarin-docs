@@ -195,6 +195,9 @@ However, the binding for the `Scale` property is `TwoWay`. This is because the `
 
  [![](data-binding-basics-images/slidertransforms.png "Backwards Bindings")](data-binding-basics-images/slidertransforms-large.png#lightbox "Backwards Bindings")
 
+ > [!NOTE]
+ > The [`VisualElement`](xref:Xamarin.Forms.VisualElement) class also has [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) and [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) properties, which scale the `VisualElement` on the x-axis and y-axis respectively.
+
 ## Bindings and Collections
 
 Nothing illustrates the power of XAML and data bindings better than a templated `ListView`.

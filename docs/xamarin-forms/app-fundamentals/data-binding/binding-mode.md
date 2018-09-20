@@ -308,6 +308,9 @@ You can set the binding mode to `OneWayToSource` in the **Alternative XAML Bindi
 
 Now the `Slider` is initialized to 1 (the default value of `Scale`) but manipulating the `Slider` doesn't affect the `Scale` property, so this is not very useful.
 
+> [!NOTE]
+> The [`VisualElement`](xref:Xamarin.Forms.VisualElement) class also defines [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) and [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) properties, which can scale the `VisualElement` differently in the horizontal and vertical directions.
+
 A very useful application of overriding the default binding mode with `TwoWay` involves the `SelectedItem` property of `ListView`. The default binding mode is `OneWayToSource`. When a data binding is set on the `SelectedItem` property to reference a source property in a ViewModel, then that source property is set from the `ListView` selection. However, in some circumstances, you might also want the `ListView` to be initialized from the ViewModel.
 
 The **Sample Settings** page demonstrates this technique. This page represents a simple implementation of application settings, which are very often defined in a ViewModel, such as this `SampleSettingsViewModel` file:

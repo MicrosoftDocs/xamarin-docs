@@ -6,20 +6,12 @@ ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2017
+ms.date: 08/14/2018
 ---
 
 # Hierarchical Navigation
 
 _The NavigationPage class provides a hierarchical navigation experience where the user is able to navigate through pages, forwards and backwards, as desired. The class implements navigation as a last-in, first-out (LIFO) stack of Page objects. This article demonstrates how to use the NavigationPage class to perform navigation in a stack of pages._
-
-This article discusses the following topics:
-
-- [Performing navigation](#Performing_Navigation) – creating the root page, pushing pages to the navigation stack, popping pages from the navigation stack, and animating page transitions.
-- [Passing data when navigating](#Passing_Data_when_Navigating) – passing data through a page constructor, and through a `BindingContext`.
-- [Manipulating the navigation stack](#Manipulating_the_Navigation_Stack) – manipulating the stack by inserting or removing pages.
-
-## Overview
 
 To move from one page to another, an application will push a new page onto the navigation stack, where it will become the active page, as shown in the following diagram:
 
@@ -307,10 +299,58 @@ async void OnLoginButtonClicked (object sender, EventArgs e)
 
 Provided that the user's credentials are correct, the `MainPage` instance is inserted into the navigation stack before the current page. The [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) method then removes the current page from the navigation stack, with the `MainPage` instance becoming the active page.
 
-## Summary
+## Displaying Views in the Navigation Bar
 
-This article demonstrated how to use the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) class to perform navigation in a stack of pages. This class provides a hierarchical navigation experience where the user is able to navigate through pages, forwards and backwards, as desired. The class implements navigation as a last-in, first-out (LIFO) stack of [`Page`](xref:Xamarin.Forms.Page) objects.
+Any Xamarin.Forms [`View`](xref:Xamarin.Forms.View) can be displayed in the navigation bar of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). This is accomplished by setting the [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) attached property to a `View`. This attached property can be set on any [`Page`](xref:Xamarin.Forms.Page), and when the `Page` is pushed onto a `NavigationPage`, the `NavigationPage` will respect the value of the property.
 
+The following example, taken from the [Title View sample](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/), shows how to set the [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) attached property from XAML:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigationPageTitleView.TitleViewPage">
+    <NavigationPage.TitleView>
+        <Slider HeightRequest="44" WidthRequest="300" />
+    </NavigationPage.TitleView>
+    ...
+</ContentPage>
+```
+
+Here is the equivalent C# code:
+
+```csharp
+public class TitleViewPage : ContentPage
+{
+    public TitleViewPage()
+    {
+        var titleView = new Slider { HeightRequest = 44, WidthRequest = 300 };
+        NavigationPage.SetTitleView(this, titleView);
+        ...
+    }
+}
+```
+
+This results in a [`Slider`](xref:Xamarin.Forms.Slider) being displayed in the navigation bar on the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage):
+
+[![Slider TitleView](hierarchical-images/titleview-small.png "Slider TitleView")](hierarchical-images/titleview-large.png#lightbox "Slider TitleView")
+
+> [!IMPORTANT]
+> Many views won't appear in the navigation bar unless the size of the view is specified with the [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) and [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) properties. Alternatively, the view can be wrapped in a [`StackLayout`](xref:Xamarin.Forms.StackLayout) with the [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties set to appropriate values.
+
+Note that, because the [`Layout`](xref:Xamarin.Forms.Layout) class derives from the [`View`](xref:Xamarin.Forms.View) class, the [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) attached property can be set to display a layout class that contains multiple views. On iOS and the Universal Windows Platform (UWP), the height of the navigation bar can't be changed, and so clipping will occur if the view displayed in the navigation bar is larger than the default size of the navigation bar. However, on Android, the height of the navigation bar can be changed by setting the [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) bindable property to a `double` representing the new height. For more information, see [Setting the Navigation Bar Height on a NavigationPage](~/xamarin-forms/platform/platform-specifics/consuming/android.md#navigationpage-barheight).
+
+Alternatively, an extended navigation bar can be suggested by placing some of the content in the navigation bar, and some in a view at the top of the page content that you color match to the navigation bar. In addition, on iOS the separator line and shadow that's at the bottom of the navigation bar can be removed by setting the [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) bindable property to `true`. For more information, see [Hiding the Navigation Bar Separator on a NavigationPage](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#navigationpage-hideseparatorbar).
+
+> [!NOTE]
+> The [`BackButtonTitle`](xref:Xamarin.Forms.NavigationPage.BackButtonTitleProperty), [`Title`](xref:Xamarin.Forms.Page.Title), [`TitleIcon`](xref:Xamarin.Forms.NavigationPage.TitleIconProperty), and [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) properties can all define values that occupy space on the navigation bar. While the navigation bar size varies by platform and screen size, setting all of these properties will result in conflicts due to the limited space available. Instead of attempting to use a combination of these properties, you may find that you can better achieve your desired navigation bar design by only setting the `TitleView` property.
+
+### Limitations
+
+There are a number of limitations to be aware of when displaying a [`View`](xref:Xamarin.Forms.View) in the navigation bar of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage):
+
+- On iOS, views placed in the navigation bar of a `NavigationPage` appear in a different position depending on whether large titles are enabled. For more information about enabling large titles, see [Displaying Large Titles](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#large_title).
+- On Android, placing views in the navigation bar of a `NavigationPage` can only be accomplished in apps that use app-compat.
+- It's not recommended to place large and complex views, such as [`ListView`](xref:Xamarin.Forms.ListView) and [`TableView`](xref:Xamarin.Forms.TableView), in the navigation bar of a `NavigationPage`.
 
 ## Related Links
 
@@ -318,6 +358,7 @@ This article demonstrated how to use the [`NavigationPage`](xref:Xamarin.Forms.N
 - [Hierarchical (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
 - [PassingData (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
 - [LoginFlow (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)
+- [TitleView (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/)
 - [How to Create a Sign In Screen Flow in Xamarin.Forms (Xamarin University Video) Sample](http://xamarinuniversity.blob.core.windows.net/lightninglectures/CreateASignIn.zip)
 - [How to Create a Sign In Screen Flow in Xamarin.Forms (Xamarin University Video)](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

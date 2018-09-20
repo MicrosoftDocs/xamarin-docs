@@ -180,6 +180,9 @@ Tapping either of the `DatePicker` displays invokes the platform date picker. Th
 
 [![Days Between Dates Select](datepicker-images/DaysBetweenDatesSelect.png "Days Between Dates Select")](datepicker-images/DaysBetweenDatesSelect-Large.png#lightbox "Days Between Dates Select")
 
+> [!TIP]
+> On Android, the `DatePicker` dialog can be customized by overriding the `CreateDatePickerDialog` method in a custom renderer. This allows, for example, additional buttons to be added to the dialog. 
+
 After two dates are selected, the application displays the number of days between those dates:
 
 [![Days Between Dates Result](datepicker-images/DaysBetweenDatesResult.png "Days Between Dates Result")](datepicker-images/DaysBetweenDatesResult-Large.png#lightbox "Days Between Dates Result")

@@ -6,7 +6,7 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/05/2018
+ms.date: 08/16/2018
 ---
 
 # Xamarin.Forms Data Binding
@@ -34,7 +34,7 @@ Data bindings are explored in the following series of articles:
 
 ## [Basic Bindings](basic-bindings.md)
 
-Learn the difference between the data-binding target and source, and see simple data bindings in code and XAML.
+Learn the difference between the data binding target and source, and see simple data bindings in code and XAML.
 
 ## [Binding Mode](binding-mode.md)
 
@@ -52,11 +52,13 @@ Dive deeper into the `Path` property of the data binding to access sub-propertie
 
 Use binding value converters to alter values within the data binding.
 
+## [Binding Fallbacks](binding-fallbacks.md)
+
+Make data bindings more robust by defining fallback values to use if the binding process fails.
+
 ## [The Command Interface](commanding.md)
 
 Implement the `Command` property with data bindings.
-
-
 
 ## Related Links
 

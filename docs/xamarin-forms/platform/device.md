@@ -6,7 +6,7 @@ ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2017
+ms.date: 08/01/2018
 ---
 
 # Xamarin.Forms Device Class
@@ -55,16 +55,18 @@ The [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) and [`On`](xref:Xamarin.Form
 </StackLayout>
 ```
 
-The [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) class is a generic class and so must be instantiated with an `x:TypeArguments` attribute that matches the target type. In the [`On`](xref:Xamarin.Forms.On) class, the [`Platform`](xref:Xamarin.Forms.On.Platform) attribute can accept a single `string` value, or multiple comma-delimited `string` values.
+The [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) class is a generic class that must be instantiated with an `x:TypeArguments` attribute that matches the target type. In the [`On`](xref:Xamarin.Forms.On) class, the [`Platform`](xref:Xamarin.Forms.On.Platform) attribute can accept a single `string` value, or multiple comma-delimited `string` values.
 
 > [!IMPORTANT]
 > Providing an incorrect `Platform` attribute value in the `On` class will not result in an error. Instead, the code will execute without the platform-specific value being applied.
+
+Alternatively, the `OnPlatform` markup extension can be used in XAML to customize UI appearance on a per-platform basis. For more information, see [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
 
 <a name="Device_Idiom" />
 
 ## Device.Idiom
 
-The `Device.Idiom` can be used to alter layouts or functionality depending on the device the application is running on. The [`TargetIdiom`](xref:Xamarin.Forms.TargetIdiom) enumeration contains the following values:
+The `Device.Idiom` property can be used to alter layouts or functionality depending on the device the application is running on. The [`TargetIdiom`](xref:Xamarin.Forms.TargetIdiom) enumeration contains the following values:
 
 -  **Phone** – iPhone, iPod touch, and Android devices narrower than 600 dips^
 -  **Tablet** – iPad, Windows devices, and Android devices wider than 600 dips^
@@ -75,7 +77,7 @@ The `Device.Idiom` can be used to alter layouts or functionality depending on th
 
 *^ dips is not necessarily the physical pixel count*
 
-`Idiom` is especially useful for building layouts that take advantage of larger screens, like this:
+The `Idiom` property is especially useful for building layouts that take advantage of larger screens, like this:
 
 ```csharp
 if (Device.Idiom == TargetIdiom.Phone) {
@@ -84,6 +86,25 @@ if (Device.Idiom == TargetIdiom.Phone) {
     // layout views horizontally for a larger display (tablet or desktop)
 }
 ```
+
+The [`OnIdiom`](xref:Xamarin.Forms.OnIdiom`1) class provides the same functionality in XAML:
+
+```xaml
+<StackLayout>
+    <StackLayout.Margin>
+        <OnIdiom x:TypeArguments="Thickness">
+            <OnIdiom.Phone>0,20,0,0</OnIdiom.Phone>
+            <OnIdiom.Tablet>0,40,0,0</OnIdiom.Tablet>
+            <OnIdiom.Desktop>0,60,0,0</OnIdiom.Desktop>
+        </OnIdiom>
+    </StackLayout.Margin>
+    ...
+</StackLayout>
+```
+
+The [`OnIdiom`](xref:Xamarin.Forms.OnPlatform`1) class is a generic class that must be instantiated with an `x:TypeArguments` attribute that matches the target type.
+
+Alternatively, the `OnIdiom` markup extension can be used in XAML to customize UI appearance based on the idiom of the device the application is running on. For more information, see [OnIdiom Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom).
 
 ## Device.FlowDirection
 

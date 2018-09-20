@@ -75,9 +75,9 @@ iOS 12 makes it easier for users and developers to work with passwords:
 automatically generate, store, and use strong passwords in iOS
 applications when signing up for and logging into an application.
 - Security Code AutoFill makes it possible to use SMS-based authentication
-codes without manual cutting and pasting or memorization. 
+codes without manual cutting and pasting or memorization.
 - The `ASWebAuthenticationSession` class streamlines the process of working
-with federated authentication services. 
+with federated authentication services.
 - Autofill Credential Provider extensions make it possible for third-party
 password applications to supply username and passwords to login fields.
 
@@ -117,4 +117,3 @@ to adopt Metal.
 ## Related links
 
 - [Get Ready for iOS 12 (Apple)](https://developer.apple.com/ios/)
-

@@ -1,28 +1,32 @@
 ---
-title: "Xamarin.Forms Gestures"
-description: "This guide explains how Xamarin.Forms gesture recognizers can be used to detect user interaction with many elements of a Xamarin.Forms application."
+title: "Xamarin.Forms gestures"
+description: "This guide explains how Xamarin.Forms gesture recognizers can be used to detect user interaction with views in a Xamarin.Forms application."
 ms.prod: xamarin
 ms.assetid: 0E197A51-2304-4C09-A710-C7FF24A89F15
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/21/2016
+ms.date: 07/25/2018
 ---
 
-# Xamarin.Forms Gestures
+# Xamarin.Forms gestures
 
-_Gesture recognizers can be used to detect user interaction with many elements of a Xamarin.Forms application._
+_Gesture recognizers can be used to detect user interaction with views in a Xamarin.Forms application._
 
-The Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) class supports tap, pinch, and pan gestures on user interface controls.
+The Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) class supports tap, pinch, pan, and swipe gestures on [`View`](xref:Xamarin.Forms.View) instances.
 
-## [Adding a Tap Gesture Recognizer](tap.md)
+## [Adding a tap gesture recognizer](tap.md)
 
-The tap gesture is used for tap detection and is implemented with the [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) class.
+A tap gesture is used for tap detection and is recognized with the [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) class.
 
-## [Adding a Pinch Gesture Recognizer](pinch.md)
+## [Adding a pinch gesture recognizer](pinch.md)
 
-The pinch gesture is used for performing interactive zoom and is implemented with the [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer) class.
+A pinch gesture is used for performing interactive zoom and is recognized with the [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer) class.
 
-## [Adding a Pan Gesture Recognizer](pan.md)
+## [Adding a pan gesture recognizer](pan.md)
 
-The pan gesture is used for detecting dragging and is implemented with the [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) class.
+A pan gesture is used for detecting the movement of fingers around the screen and applying that movement to content, and is recognized with the [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) class.
+
+## [Adding a swipe gesture recognizer](swipe.md)
+
+A swipe gesture occurs when a finger is moved across the screen in a horizontal or vertical direction, and is often used to initiate navigation through content. Swipe gestures are recognized with the [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) class.

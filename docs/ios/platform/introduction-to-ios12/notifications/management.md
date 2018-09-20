@@ -18,7 +18,7 @@ notifications the app sends.
 ## Sample app: RedGreenNotifications
 
 To see an example of how notification management works, take a look at the
-[RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications) 
+[RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
 sample app.
 
 This sample app sends two types of notifications – red and green – and
