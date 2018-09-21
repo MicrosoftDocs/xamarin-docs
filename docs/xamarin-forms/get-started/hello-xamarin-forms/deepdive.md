@@ -46,9 +46,7 @@ The project has a **Dependencies** node that contains **NuGet** and **SDK** node
 
 ## Introduction to Visual Studio for Mac
 
-Visual Studio for Mac is a free, open-source IDE. For more information about Visual Studio for Mac, see [Introducing Visual Studio for Mac](/visualstudio/mac/).
-
-Visual Studio for Mac follows the Visual Studio practice of organizing code into *Solutions* and *Projects*. A solution is a container that can hold one or more projects. A project can be an application, a supporting library, a test application, and more. The Phoneword application consists of one solution containing three projects, as shown in the following screenshot:
+[Visual Studio for Mac](/visualstudio/mac/) follows the Visual Studio practice of organizing code into *Solutions* and *Projects*. A solution is a container that can hold one or more projects. A project can be an application, a supporting library, a test application, and more. The Phoneword application consists of one solution containing three projects, as shown in the following screenshot:
 
 ![](deepdive-images/xs/solution.png "Visual Studio for Mac Solution Pane")
 
@@ -178,6 +176,8 @@ namespace Phoneword.Droid
 
 The `OnCreate` override initializes the Xamarin.Forms framework by calling the `Init` method. This causes the Android-specific implementation of Xamarin.Forms to be loaded in the application before the Xamarin.Forms application is loaded. In addition, the `MainActivity` class stores a reference to itself in the `Instance` property. The `Instance` property is known as the local context, and is referenced from the `PhoneDialer` class.
 
+::: zone pivot="windows"
+
 ## Universal Windows Platform
 
 In Universal Windows Platform (UWP) applications, the `Init` method that initializes the Xamarin.Forms framework is invoked from the `App` class:
@@ -211,6 +211,8 @@ The Xamarin.Forms application is loaded with the `LoadApplication` method.
 
 > [!NOTE]
 > Universal Windows Platform (UWP) apps can be built with Xamarin.Forms, but only using Visual Studio on Windows.
+
+::: zone-end
 
 ## User Interface
 
