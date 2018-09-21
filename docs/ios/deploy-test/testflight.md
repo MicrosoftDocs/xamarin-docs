@@ -45,7 +45,7 @@ You can confirm that your distribution profile contains the beta entitlement whe
 
 The following workflow describes the steps needed to start using TestFlight for Beta testing of your app:
 
-1. For new apps, create an [iTunes Connect record](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) .
+1. For new apps, create an [iTunes Connect record](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md).
 2. [Archive and Publish](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) your application to iTunes Connect.
 3. Manage Beta Testing:
 	- Add Metadata.
