@@ -168,7 +168,7 @@ The following XAML code example shows the `SwipeContainer` class wrapping a [`Bo
 <ContentPage ...>
     <StackLayout>
         <local:SwipeContainer Swipe="OnSwiped" ...>
-            <BoxView olor="Teal" ... />
+            <BoxView Color="Teal" ... />
         </local:SwipeContainer>
     </StackLayout>
 </ContentPage>
