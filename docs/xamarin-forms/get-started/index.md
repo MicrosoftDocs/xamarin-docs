@@ -36,7 +36,7 @@ This guide extends the previously created application by introducing navigation 
 
 ## [Introduction To Xamarin.Forms](introduction-to-xamarin-forms.md)
 
-This article discusses some of the key concepts for developing applications using Xamarin.Forms, including [Views and Layouts](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md#Views_and_Layouts), the [ListView](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md#Lists_in_Xamarin_Forms) control, [Data Binding](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md#Data_Binding) and [Navigation](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md#Navigation).
+This article discusses some of the key concepts for developing applications using Xamarin.Forms, including [Views and Layouts](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md#user-interface), the [ListView](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md#lists-in-xamarinforms) control, [Data Binding](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md#data-binding) and [Navigation](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md#navigation).
 
 ## Get Started with Xamarin University
 
