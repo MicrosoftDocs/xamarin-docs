@@ -40,6 +40,10 @@ sections:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
       text: Multi-screen Apps
       href: ~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
+    - image:
+        src: https://docs.microsoft.com/en-us/media/common/i_mobile-app-developement.svg
+      text: Android Pie
+      href: ~/android/platform/pie.md
 - title: Guides
   items:
   - type: list
