@@ -116,6 +116,8 @@ No. In fact, you can even start all your supported application targets (Android,
 * Only supported in Visual Studio.
 * Linking must be set to **Don't Link** or **Link Framework SDKs Only** 
 * Reloading app-wide resources (i.e. **App.xaml** or shared resource dictionaries), app navigation is reset. This will be fixed in the next preview release.
+* Reloading of ContentView currently requires reloading the containing page. This will be fixed in the next preview release.
+* Elements containing AutomationId may cause a reload failure.
 * Editing XAML while debugging UWP may cause a runtime crash. Workaround: Use **Start without Debugging (Ctrl + F5)** instead of **Start Debugging (F5)**.
 
 ## Troubleshooting
