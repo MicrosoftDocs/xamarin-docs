@@ -32,4 +32,3 @@ The second part of this guide reviews what has been built, to develop an underst
 - [Visual Studio for Mac Recipes - Debugging](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)
 - [Free Self-Guided Learning (video)](https://university.xamarin.com/self-guided)
 - [Getting Started with Xamarin (video)](https://developer.xamarin.com/videos/)
-- [Hello, Xamarin.Forms iOS Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/getting-started/GettingStartedWithXamarinForms-ios.workbook)

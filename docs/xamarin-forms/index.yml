@@ -16,10 +16,6 @@ abstract:
       text: Xamarin.Forms Samples
     - href: https://developer.xamarin.com/releases/xamarin-forms/
       text: Release Notes
-    - href: https://developers.google.com/
-      text: Googles's Developer Documentation
-    - href: https://developer.apple.com/documentation/
-      text: Apple's Developer Documentation
     - href: /visualstudio/
       text: Visual Studio 
 sections:
@@ -34,6 +30,10 @@ sections:
         src: https://docs.microsoft.com/media/common/i_setup.svg
       text: Setup
       href: ~/xamarin-forms/get-started/installation.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      text: First App
+      href: ~/xamarin-forms/get-started/first-app.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
       text: Quickstart
