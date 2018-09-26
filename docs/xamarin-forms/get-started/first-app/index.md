@@ -36,7 +36,7 @@ Follow these steps along with the video above:
 
 5. Edit **MainPage.xaml**, adding this XAML before the end of the `</StackPanel>`:
 
-    ```csharp
+    ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
     ```
 
@@ -85,7 +85,7 @@ Follow these steps along with the video above:
 
 5. Edit **MainPage.xaml**, adding this XAML before the end of the `</StackPanel>`:
 
-    ```csharp
+    ```xaml
     <Button Text="Click Me" Clicked="Handle_Clicked" />
     ```
 
