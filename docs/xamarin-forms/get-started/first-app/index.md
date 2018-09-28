@@ -121,5 +121,5 @@ You can download the completed code from the [samples gallery](https://developer
 - [Hello, Xamarin.Forms](~/xamarin-forms/get-started/hello-xamarin-forms/index.md) &ndash; Build a more functional app.
 - [Hello, Xamarin.Forms Multi-screen](~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/index.md) &ndash; Build an app that navigates between two screens.
 - [Xamarin.Forms Samples](~/xamarin-forms/samples/index.yml) &ndash; Download and run code examples and sample apps.
-- [Introduction to Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md) &ndash; 
-- [Creating Mobile Apps ebook](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; download the PDF and run additional samples.
+- [Introduction to Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md) &ndash; Beginners guide to Xamarin.Forms.
+- [Creating Mobile Apps ebook](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; In-depth chapters that teach Xamarin.Forms development, available as a PDF and including hundreds of additional samples.
