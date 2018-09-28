@@ -2,8 +2,8 @@
 title: "Xamarin.Essentials: Power Energy Saver Status"
 description: "The Power class allows a program to obtain the energy-saver status to determine if the device is operating in a low-power mode."
 ms.assetid: C176D177-8B77-4A9C-9F3B-27852A8DCD5F
-author: charlespetzold
-ms.author: chape
+author: jamesmontemagno
+ms.author: jamont
 ms.date: 06/27/2018
 ---
 

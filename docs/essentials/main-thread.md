@@ -2,8 +2,8 @@
 title: "Xamarin.Essentials: MainThread"
 description: "The MainThread class allows applications to run code on the main execution thread."
 ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
-author: charlespetzold
-ms.author: chape
+author: jamesmontemagno
+ms.author: jamont
 ms.date: 06/26/2018
 ---
 
