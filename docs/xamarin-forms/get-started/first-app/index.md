@@ -114,6 +114,8 @@ Follow these steps along with the video above:
 
 ::: zone-end
 
+You can download the completed code from the [samples gallery](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/) or view it on [GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/FirstApp).
+
 ## Next Steps
 
 - [Hello, Xamarin.Forms](~/xamarin-forms/get-started/hello-xamarin-forms/index.md) &ndash; Build a more functional app.
