@@ -24,7 +24,7 @@ The application using `DependencyService` will have the following structure:
 ![](device-orientation-images/orientation-diagram.png "DependencyService Application Structure")
 
 > [!NOTE]
-> It is possible to detect whether the device is in portrait or landscape orientation in shared code, as demonstrated in [Device Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation). The method described in this article uses native features to get more information about orientation, including whether the device is upside down.
+> It is possible to detect whether the device is in portrait or landscape orientation in shared code, as demonstrated in [Device Orientation](~/xamarin-forms/user-interface/layouts/device-orientation.md#Reacting_to_Changes_in_Orientation). The method described in this article uses native features to get more information about orientation, including whether the device is upside down.
 
 <a name="Creating_the_Interface" />
 
