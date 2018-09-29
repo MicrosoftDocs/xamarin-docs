@@ -1,0 +1,30 @@
+- name: Enterprise Application Patterns eBook
+  href: index.md
+  expanded: true
+  items: 
+    - name: Preface
+      href: preface.md
+    - name: Introduction
+      href: introduction.md
+    - name: MVVM
+      displayName: Model, View, ViewModel
+      href: mvvm.md
+    - name: Dependency Injection
+      displayName: DI
+      href: dependency-injection.md
+    - name: Communicating Between Loosely Coupled Components
+      href: communicating-between-loosely-coupled-components.md
+    - name: Navigation
+      href: navigation.md
+    - name: Validation
+      href: validation.md
+    - name: Configuration Management
+      href: configuration-management.md
+    - name: Containerized Microservices
+      href: containerized-microservices.md
+    - name: Authentication and Authorization
+      href: authentication-and-authorization.md
+    - name: Accessing Remote Data
+      href: accessing-remote-data.md
+    - name: Unit Testing
+      href: unit-testing.md
