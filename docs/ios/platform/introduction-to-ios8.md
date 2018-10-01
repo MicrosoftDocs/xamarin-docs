@@ -4,8 +4,8 @@ description: "With iOS 8, Apple has provided a plethora of new frameworks and AP
 ms.prod: xamarin
 ms.assetid: 33AD66C0-3743-49FE-9DCE-88ED3A16BA63
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/14/2017
 ---
 

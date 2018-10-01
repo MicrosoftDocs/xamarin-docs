@@ -4,8 +4,8 @@ description: "This guide introduces the Xamarin Designer for iOS. It demonstrate
 ms.prod: xamarin
 ms.assetid: E7045E41-0DEF-416B-BCDB-52502350F61C
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 01/31/2018
 ---
 

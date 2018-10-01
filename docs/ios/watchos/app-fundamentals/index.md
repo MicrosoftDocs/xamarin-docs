@@ -4,8 +4,8 @@ description: "This document provides links to various documents that describe co
 ms.prod: xamarin
 ms.assetid: 156D6D1C-83CA-4088-BA08-40B22312269C
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ---
 
 # watchOS Application Fundamentals

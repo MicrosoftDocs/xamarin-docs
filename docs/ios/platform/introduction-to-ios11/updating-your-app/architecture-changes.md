@@ -4,8 +4,8 @@ description: "This document describes the deprecation of 32-bit apps in iOS 11. 
 ms.prod: xamarin
 ms.assetid: 55F62F3F-8570-402B-B7D9-2875F76CB946
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/13/2016
 ---
 

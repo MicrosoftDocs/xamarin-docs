@@ -4,8 +4,8 @@ description: "This document describes unified storyboards in Xamarin.iOS. Unifie
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/20/2017
 ---
 

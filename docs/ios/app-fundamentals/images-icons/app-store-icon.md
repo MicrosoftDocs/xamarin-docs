@@ -4,8 +4,8 @@ description: "This document describes how to use asset catalogs to manage an App
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/26/2017
 ---
 

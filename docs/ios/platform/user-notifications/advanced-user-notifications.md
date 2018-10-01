@@ -4,8 +4,8 @@ description: "This article takes a deeper look at the User Notifications framewo
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/03/2018
 ---
 # Advanced user notifications in Xamarin.iOS

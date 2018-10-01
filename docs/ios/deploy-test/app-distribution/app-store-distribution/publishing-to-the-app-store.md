@@ -4,8 +4,8 @@ description: "This document describes how to configure, build, and publish a Xam
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/25/2018
 ---
 # Publishing Xamarin.iOS apps to the App Store

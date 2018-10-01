@@ -4,8 +4,8 @@ description: "This article covers working with Handoff in a Xamarin.iOS app to t
 ms.prod: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ---
 
 # Handoff in Xamarin.iOS

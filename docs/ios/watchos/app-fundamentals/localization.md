@@ -4,8 +4,8 @@ description: "This document describes how to localize watchOS apps built with Xa
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ---
 
 # Working with watchOS Localization in Xamarin

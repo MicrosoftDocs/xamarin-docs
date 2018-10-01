@@ -4,8 +4,8 @@ description: "This document describes the Xamarin.iOS type registrar, which make
 ms.prod: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 8/29/2018
 ---
 # Type registrar for Xamarin.iOS

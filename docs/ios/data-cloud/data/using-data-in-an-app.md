@@ -4,8 +4,8 @@ description: "This document describes the DataAccess_Adv sample, which demonstra
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 10/11/2016
 ---
 

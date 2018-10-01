@@ -4,8 +4,8 @@ description: "This document provides a walkthrough of building a simple watchOS 
 ms.prod: xamarin
 ms.assetid: AD1DA488-51AB-420A-A0B7-3AE69A964A40
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 12/14/2016
 ---
 

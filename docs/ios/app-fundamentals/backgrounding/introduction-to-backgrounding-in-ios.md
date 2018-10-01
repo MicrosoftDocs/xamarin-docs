@@ -4,8 +4,8 @@ description: "This document describes backgrounding in iOS: application states, 
 ms.prod: xamarin
 ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 07/24/2018
 ---
 

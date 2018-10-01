@@ -4,8 +4,8 @@ description: "This document provides a high-level of overview of new and updated
 ms.prod: xamarin
 ms.assetid: 4A41CD85-C807-44C9-85AB-B5441B145A73
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 07/08/2018
 ---
 # Introduction to macOS Mojave

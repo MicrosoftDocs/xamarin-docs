@@ -4,8 +4,8 @@ description: "These articles show how include a Message App Extension in a Xamar
 ms.prod: xamarin
 ms.assetid: 00AF2D4C-9BA8-4265-A11F-989C93BDF723
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/29/2016
 ---
 

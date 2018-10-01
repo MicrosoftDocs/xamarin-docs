@@ -4,8 +4,8 @@ description: "This document describes the internal workings of Xamarin.Mac. In p
 ms.prod: xamarin
 ms.assetid: C2053ABB-6DBF-4233-AEEA-B72FC6A81FE1
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/25/2017
 ---
 

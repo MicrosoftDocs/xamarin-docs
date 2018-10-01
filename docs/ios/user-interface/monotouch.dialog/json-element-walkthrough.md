@@ -4,8 +4,8 @@ description: "MonoTouch.Dialog (MT.D) includes support for dynamic UI generation
 ms.prod: xamarin
 ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ---
 # Using JSON to create a user interface in Xamarin.iOS
 

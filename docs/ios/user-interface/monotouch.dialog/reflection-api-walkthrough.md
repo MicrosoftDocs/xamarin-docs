@@ -4,8 +4,8 @@ description: "This document describes the MonoTouch.Dialog attribute-based Refle
 ms.prod: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ---
 # Creating a Xamarin.iOS application using the Reflection API
 

@@ -4,8 +4,8 @@ description: "This document discusses changes made to WebKit and the Safari Serv
 ms.prod: xamarin
 ms.assetid: C74B2E94-177C-43D4-8D6C-9B528773C120
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/12/2017
 ---
 

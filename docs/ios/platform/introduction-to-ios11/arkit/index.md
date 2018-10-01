@@ -4,8 +4,8 @@ description: "This document describes augmented reality in iOS 11 with ARKit. It
 ms.prod: xamarin
 ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/30/2017
 ---
 

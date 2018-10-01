@@ -4,8 +4,8 @@ description: "This document describes how to use the iOS 11 Vision Framework in 
 ms.prod: xamarin
 ms.assetid: 7273ED68-7B7D-4252-B3A0-02DB2E357A8C
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/31/2017
 ---
 

@@ -4,8 +4,8 @@ description: "This document describes how to set up a Windows machine, set up a 
 ms.prod: xamarin
 ms.assetid: abf85d3e-a365-44a2-b1a4-6c572c7f76dd
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 04/16/2018
 ---
 

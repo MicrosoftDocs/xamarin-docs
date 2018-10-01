@@ -4,8 +4,8 @@ description: "This document describes how to install and use watchOS with Xamari
 ms.prod: xamarin
 ms.assetid: 69F21F15-198D-4B42-A703-21D35CAB0CCA
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 12/05/2017
 ---
 

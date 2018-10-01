@@ -4,8 +4,8 @@ description: "App Transport Security (ATS) enforces secure connections between i
 ms.prod: xamarin
 ms.assetid: F8C5E444-2D05-4D9B-A2EF-EB052CD6F007
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/13/2017
 ---
 

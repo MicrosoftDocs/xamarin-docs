@@ -4,8 +4,8 @@ description: "This document describes additional framework changes introduced in
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ---
 
 # Additional iOS 9 Frameworks Changes

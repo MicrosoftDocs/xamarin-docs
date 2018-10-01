@@ -4,8 +4,8 @@ description: "This document describes how to work with CloudKit in Xamarin.iOS. 
 ms.prod: xamarin
 ms.assetid: 66B207F2-FAA0-4551-B43B-3DB9F620C397
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/11/2016
 ---
 

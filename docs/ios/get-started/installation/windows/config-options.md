@@ -4,8 +4,8 @@ description: "This article describes how to configure Visual Studio 2017 for Xam
 ms.prod: xamarin
 ms.assetid: 22D82244-890D-4325-B3CC-C0AC49130BCA
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 04/16/2018
 ---
 

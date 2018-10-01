@@ -4,8 +4,8 @@ description: "This document discusses how to link native C libraries into a Xama
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 07/28/2016
 ---
 

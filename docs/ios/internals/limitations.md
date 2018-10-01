@@ -4,8 +4,8 @@ description: "This document describes the limitations of Xamarin.iOS, discussing
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 04/09/2018
 ---
 

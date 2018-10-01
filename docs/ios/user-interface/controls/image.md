@@ -4,8 +4,8 @@ description: "This document describes how to display images in Xamarin.iOS. It c
 ms.prod: xamarin
 ms.assetid: 67CA8DB6-769D-42BB-A137-3AF933789FE1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 07/13/2018
 ---
 # Displaying images with Xamarin.iOS

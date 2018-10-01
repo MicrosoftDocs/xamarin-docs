@@ -4,8 +4,8 @@ description: "This article builds upon the information presented in the Introduc
 ms.prod: xamarin
 ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ---
 
 # Creating a Xamarin.iOS application using the Elements API

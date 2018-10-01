@@ -4,8 +4,8 @@ description: "This document describes iCloud and its use in Xamarin.iOS applicat
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/09/2016
 ---
 

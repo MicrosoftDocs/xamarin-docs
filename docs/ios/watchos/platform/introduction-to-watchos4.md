@@ -4,8 +4,8 @@ description: "This document provides a high-level introduction to watchOS 4, des
 ms.prod: xamarin
 ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 10/07/2017
 ---
 # Introduction to watchOS 4

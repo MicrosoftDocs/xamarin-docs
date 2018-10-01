@@ -4,8 +4,8 @@ description: "This document describes how to work with SiriKit in iOS 11. In par
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/07/2017
 ---
 

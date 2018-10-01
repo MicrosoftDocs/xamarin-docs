@@ -4,8 +4,8 @@ description: "This document describes internationalization encodings in Xamarin.
 ms.prod: xamarin
 ms.assetid: F5117294-28BB-4583-B6A0-A339B050FDE1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ---
 
 # Internationalization Encodings in Xamarin.iOS
