@@ -1,5 +1,5 @@
 ---
-title: "Getting Started With Xamarin"
+title: "Get Started With Xamarin"
 description: "This document links to various guides that describe how to get started with Xamarin development. The linked content discusses how to build a first app, provides a general introduction to mobile development, and takes a look at training with Xamarin University."
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
@@ -9,7 +9,7 @@ ms.author: amburns
 ms.date: 04/10/2017
 ---
 
-# Getting Started With Xamarin
+# Get Started With Xamarin
 
 Before you begin, check out the [system requirements](requirements.md)
 and [installation instructions](installation/index.md) to make sure everything's
