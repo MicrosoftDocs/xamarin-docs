@@ -109,11 +109,14 @@ namespace DependencyServiceSample.iOS
                 NSData data = image.AsJPEG(1);
                 Stream stream = data.AsStream();
 
+                UnregisterEventHandlers();
+
                 // Set the Stream as the completion of the Task
                 taskCompletionSource.SetResult(stream);
             }
             else
             {
+                UnregisterEventHandlers();
                 taskCompletionSource.SetResult(null);
             }
             imagePicker.DismissModalViewController(true);
@@ -121,8 +124,15 @@ namespace DependencyServiceSample.iOS
 
         void OnImagePickerCancelled(object sender, EventArgs args)
         {
+            UnregisterEventHandlers();
             taskCompletionSource.SetResult(null);
             imagePicker.DismissModalViewController(true);
+        }
+
+        void UnregisterEventHandlers()
+        {
+            imagePicker.FinishedPickingMedia -= OnImagePickerFinishedPickingMedia;
+            imagePicker.Canceled -= OnImagePickerCancelled;
         }
     }
 }
