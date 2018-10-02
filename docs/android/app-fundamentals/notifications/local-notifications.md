@@ -1194,5 +1194,3 @@ For guidelines about designing notifications for Android, see
 - [NotificationManager](https://developer.xamarin.com/api/type/Android.App.NotificationManager/)
 - [NotificationCompat.Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html)
 - [PendingIntent](https://developer.xamarin.com/api/type/Android.App.PendingIntent/)
-
-
