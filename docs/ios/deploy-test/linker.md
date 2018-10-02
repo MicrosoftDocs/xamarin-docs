@@ -69,7 +69,7 @@ a workaround whenever the linker contains a bug that prevents your
 application to run. If your application only works with *-nolink*,
 please submit a [bug report](http://bugzilla.xamarin.com).
 
-This correspond to the *-nolink* option when using the command-line
+This corresponds to the *-nolink* option when using the command-line
 tool mtouch.
 
 <a name="Link_SDK_assemblies_only" />

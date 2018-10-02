@@ -28,4 +28,4 @@ For information about how to add Tizen .NET project to an existing Xamarin.Forms
 
 ## Samples
 
-Samsung maintains a fork of the [Xamarin.Forms samples with Tizen projects added](https://github.com/Samsung/xamarin-forms-samples), and there is a separate repository [Tizen-Csharp-Samples](https://github.com/Samsung/Tizen-CSharp-Samples) that contains additional projects, including Wearable- and TV-specific demos.
+Samsung maintains a fork of the [Xamarin.Forms samples with Tizen projects added](https://github.com/Samsung/xamarin-forms-samples), and there is a separate repository [Tizen-Csharp-Samples](https://github.com/Samsung/Tizen-CSharp-Samples) that contains additional projects, including Wearable and TV-specific demos.
