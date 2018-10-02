@@ -3,8 +3,8 @@ title: "3D Coordinates in MonoGame"
 description: "Understanding the 3D coordinate system is an important step in developing 3D games. MonoGame provides a number of classes for positioning, orienting, and scaling objects in 3D space."
 ms.prod: xamarin
 ms.assetid: A4130995-48FD-4E2E-9C2B-ADCEFF35BE3A
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/28/2017
 ---
 # 3D Coordinates in MonoGame

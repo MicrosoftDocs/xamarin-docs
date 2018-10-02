@@ -4,8 +4,8 @@ description: "This document discusses hosting UrhoSharp in a Xamarin.Forms appli
 description: "Xamarin.Forms-specific setup for UrhoSharp."
 ms.prod: xamarin
 ms.assetid: B630B8BE-3D8D-4CDB-BDB0-9709052AA46C
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
 ---
 

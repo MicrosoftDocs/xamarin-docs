@@ -4,8 +4,8 @@ description: "This document describes platform-specific details relevant to Skia
 ms.prod: xamarin
 ms.techonology: xamarin-skiasharp
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
 ---
 

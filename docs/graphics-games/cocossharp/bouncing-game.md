@@ -3,8 +3,8 @@ title: "BouncingGame details"
 description: "This document provides a walkthrough for the creation of BouncingGame, a simple bouncing ball game built with CocosSharp."
 ms.prod: xamarin
 ms.assetid: AC9FD56F-6E4A-40DA-8168-45A761D869FD
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2018
 ---
 

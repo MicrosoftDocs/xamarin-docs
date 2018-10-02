@@ -3,8 +3,8 @@ title: "Drawing 3D Graphics with Vertices in MonoGame"
 description: "MonoGame supports using arrays of vertices to define how a 3D object is rendered on a per-point basis. Users can take advantage of vertex arrays to create dynamic geometry, implement special effects, and improve the efficiency of their rendering through culling."
 ms.prod: xamarin
 ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/28/2017
 ---
 # Drawing 3D Graphics with Vertices in MonoGame

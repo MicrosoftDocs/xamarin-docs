@@ -3,8 +3,8 @@ title: "Introduction to Game Development with Xamarin"
 description: "This document provides a high-level overview of game development with Xamarin, describing both how games are made and a sampling of technologies available for use with Xamarin.iOS and Xamarin.Android."
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
 ---
 

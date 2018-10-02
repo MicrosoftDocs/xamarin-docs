@@ -3,8 +3,8 @@ title: "UrhoSharp Mac Support"
 description: "This document discusses macOS support for UrhoSharp. It describes how to create a project and provides a link to some sample code."
 ms.prod: xamarin
 ms.assetid: 95FFBD36-14E9-4C17-B1E8-9A04E81E824D
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
 ---
 # UrhoSharp Mac Support

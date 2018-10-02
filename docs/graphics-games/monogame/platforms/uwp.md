@@ -3,8 +3,8 @@ title: "Creating a MonoGame UWP project"
 description: "MonoGame can be used to create games and apps for Universal Windows Platform, targeting multiple devices with one codebase and one set of content."
 ms.prod: xamarin
 ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/28/2017
 ---
 # Creating a MonoGame UWP project

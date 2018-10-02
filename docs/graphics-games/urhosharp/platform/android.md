@@ -3,8 +3,8 @@ title: "UrhoSharp Android Support"
 description: "This document describes Android-specific setup and feature-related information for UrhoSharp. In particular, it discusses supported architectures, how to create a project, configuring and launching Urho, and custom embedding of Urho."
 ms.prod: xamarin
 ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
 ---
 # UrhoSharp Android Support

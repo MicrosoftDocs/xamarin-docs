@@ -3,8 +3,8 @@ title: "Improving frame rate with CCSpriteSheet"
 description: "CCSpriteSheet provides functionality for combining and using many image files in one texture. Reducing texture count can improve a game’s load times and framerate."
 ms.prod: xamarin
 ms.assetid: A1334030-750C-4C60-8B84-1A8A54B0D00E
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
 ---
 

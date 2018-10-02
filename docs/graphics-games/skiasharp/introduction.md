@@ -4,8 +4,8 @@ description: "This document provides a brief introduction to core SkiaSharp conc
 ms.prod: xamarin
 ms.techonology: xamarin-skiasharp
 ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 09/14/2017
 ---
 

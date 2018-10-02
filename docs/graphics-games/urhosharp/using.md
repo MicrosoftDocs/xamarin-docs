@@ -3,8 +3,8 @@ title: "Using UrhoSharp To Build A 3D Game"
 description: "This document provides an overview of UrhoSharp, describing scenes, components, shapes, cameras, actions, user input, sound, and more."
 ms.prod: xamarin
 ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
 ---
 

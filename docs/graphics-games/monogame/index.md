@@ -3,8 +3,8 @@ title: "Monogame Framework"
 description: "This document links to various guides that describe game development with MonoGame: an overview, discussions about 3D graphics and gamepads, and a look at platform-specific considerations."
 ms.prod: xamarin
 ms.assetid: 35EC29CE-538B-4844-BACC-E51823EFF3B5
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
 ---
 

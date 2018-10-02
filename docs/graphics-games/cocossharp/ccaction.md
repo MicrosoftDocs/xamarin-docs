@@ -3,8 +3,8 @@ title: "Animating with CCAction"
 description: "The CCAction class simplifies adding animations to CocosSharp games. These animations can be used to implement functionality or to add polish."
 ms.prod: xamarin
 ms.assetid: 74DBD02A-6F10-4104-A61B-08CB49B733FB
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
 ---
 

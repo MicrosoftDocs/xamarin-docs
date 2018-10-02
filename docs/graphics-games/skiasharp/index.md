@@ -4,8 +4,8 @@ description: "This document provides an overview of cross-platform 2D drawing wi
 ms.prod: xamarin
 ms.techonology: xamarin-skiasharp
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 07/17/2018
 ---
 

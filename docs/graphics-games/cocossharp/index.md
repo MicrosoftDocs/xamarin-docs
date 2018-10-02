@@ -3,8 +3,8 @@ title: "CocosSharp 2D Game Engine"
 description: "This document links to various articles about game development with CocosSharp. Linked content describes sample apps, drawing, animation, and more."
 ms.prod: xamarin
 ms.assetid: 5E72869D-3541-408B-AB64-D34C777AFB79
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2018
 ---
 

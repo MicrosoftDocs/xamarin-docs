@@ -3,8 +3,8 @@ title: "Programming UrhoSharp with F#"
 description: "This document describes how to create a simple hello world UrhoSharp application using F# in Visual Studio for Mac."
 ms.prod: xamarin
 ms.assetid: F976AB09-0697-4408-999A-633977FEFF64
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
 ---
 

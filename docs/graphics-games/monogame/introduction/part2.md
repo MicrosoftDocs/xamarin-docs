@@ -3,8 +3,8 @@ title: "Part 2 – Implementing the WalkingGame"
 description: "This walkthrough shows how to add game logic and content to an empty MonoGame project to create a demo of an animated sprite moving with touch input."
 ms.prod: xamarin
 ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/28/2017
 ---
 # Part 2 – Implementing the WalkingGame
