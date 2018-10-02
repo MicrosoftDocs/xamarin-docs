@@ -132,7 +132,7 @@ You can download it and get more information at the [AngryNinjas Github page](ht
 
 ## MonoGame
 
-MonoGame is an open-source, cross platform version of Microsoft’s XNA API. MonoGame can be used to make games for iOS, Android, Mac OS X, Linux, Windows, Windows RT, and Windows Phone.
+MonoGame is an open-source, cross platform version of Microsoft’s XNA API. MonoGame can be used to make games for iOS, Android, Mac OS X, Linux, Windows, Windows RT, PS4, PSVita, Xbox One, and Switch.
 
 Unlike CocosSharp, MonoGame is technically not a game engine, but rather a game development API. This means that working with MonoGame requires directly managing game objects, manually drawing objects, and implementing common objects such as cameras and *scene graphs* (the parent child hierarchy between game objects). To help understand the distinction, consider that CocosSharp is built on top of MonoGame. MonoGame generalizes some of the platform-specific technology, such as graphics, rendering, and audio, while CocosSharp provides code for organizing and implementing game logic.
 
