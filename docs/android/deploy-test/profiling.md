@@ -5,8 +5,8 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8C823FEE-A6F6-4C31-9EB6-E51407A2FD8E
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/03/2018
 ---
  

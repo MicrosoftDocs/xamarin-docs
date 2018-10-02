@@ -4,8 +4,8 @@ description: "Building blocks for creating Xamarin.Android User Interfaces"
 ms.prod: xamarin
 ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/29/2018
 ---
 

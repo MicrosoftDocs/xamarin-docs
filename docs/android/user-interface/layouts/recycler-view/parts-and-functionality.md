@@ -4,8 +4,8 @@ description: "An overview of the RecyclerView layout manager, adapter, and view 
 ms.prod: xamarin
 ms.assetid: 54F999BE-2732-4BC7-A466-D17373961C48
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 07/13/2018
 ---
 

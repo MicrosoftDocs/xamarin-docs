@@ -4,8 +4,8 @@ description: "The Java ecosystem includes a diverse and immense collection of co
 ms.prod: xamarin
 ms.assetid: 7B5B8695-1C49-19BF-AE99-948CDCBD2A20
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 01/18/2017
 ---
 

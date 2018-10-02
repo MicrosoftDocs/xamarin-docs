@@ -1,15 +1,15 @@
 ---
-title: "Getting Started with Android Wear"
+title: "Get Started with Android Wear"
 description: "The guides in this section introduce Android Wear, describe how to install and configure your computer for Wear development, and provide steps to help you create and run your first Android Wear app."
 ms.prod: xamarin
 ms.assetid: 8B9DC98A-773F-4E06-84A7-BA8208C4E864
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 12/18/2017
 ---
 
-# Getting Started with Android Wear
+# Get Started with Android Wear
 
 _The guides in this section introduce Android Wear, describe how to install and configure your computer for Wear development, and provide steps to help you create and run your first Android Wear app._
 

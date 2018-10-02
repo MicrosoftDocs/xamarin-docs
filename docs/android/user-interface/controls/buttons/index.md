@@ -4,8 +4,8 @@ description: "Implementing UI elements that the user taps to perform an action"
 ms.prod: xamarin
 ms.assetid: 4FBB7789-A8DA-4B8B-A46C-849181388A8D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/18/2017
 ---
 

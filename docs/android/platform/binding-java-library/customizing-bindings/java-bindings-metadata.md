@@ -4,8 +4,8 @@ description: "C# code in Xamarin.Android calls Java libraries through bindings, 
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/09/2018
 ---
 

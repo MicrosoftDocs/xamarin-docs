@@ -3,8 +3,8 @@ title: "Xamarin.Android vs. Desktop - Differences in the Mono Runtime"
 ms.prod: xamarin
 ms.assetid: F953F9B4-3596-8B3A-A8E4-8219B5B9F7CA
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
 ---
 

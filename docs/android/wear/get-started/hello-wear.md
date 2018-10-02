@@ -4,8 +4,8 @@ description: "Create your first Android Wear app and run it on a Wear emulator o
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/10/2018
 ---
 

@@ -4,8 +4,8 @@ description: "How to get started developing apps for Android 9 Pie using Xamarin
 ms.prod: xamarin
 ms.assetid: 6575DD32-9DC8-44E6-85EF-1F8BD07D3780
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/21/2018
 ---
 

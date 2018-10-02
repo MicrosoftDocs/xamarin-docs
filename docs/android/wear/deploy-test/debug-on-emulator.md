@@ -4,8 +4,8 @@ description: "These articles explain how to debug a Xamarin.Android Wear applica
 ms.prod: xamarin
 ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/21/2018
 ---
 

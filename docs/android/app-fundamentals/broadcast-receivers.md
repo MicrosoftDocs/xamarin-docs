@@ -4,8 +4,8 @@ description: "This section discusses how to use a Broadcast Receiver."
 ms.prod: xamarin
 ms.assetid: B2727160-12F2-43EE-84B5-0B15C8FCF4BD
 ms.technology: xamarin-android
-author: topgenorth
-ms.author: toopge
+author: conceptdev
+ms.author: crdun
 ms.date: 04/20/2018
 ---
 

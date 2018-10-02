@@ -3,8 +3,8 @@ title: "Building Apps"
 ms.prod: xamarin
 ms.assetid: F14D737A-8AAA-4416-ADA4-029D5A1B5076
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 10/13/2017
 ---
 

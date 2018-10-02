@@ -4,8 +4,8 @@ description: "A third option for using Java in a Xamarin.Android application is 
 ms.prod: xamarin
 ms.assetid: 39E528BD-010F-47FC-BE48-8E7848E30454
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/05/2016
 ---
 

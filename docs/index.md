@@ -87,11 +87,11 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Getting Started" src="~/media/index/xamarin-cross-platform-get-started.svg?branch=master" data-linktype="external">
+                                                        <img alt="Get Started" src="~/media/index/xamarin-cross-platform-get-started.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Getting Started</h3>
+                                                    <h3>Get Started</h3>
                                                     <p>Tutorials to get you up and running with Xamarin.Forms. Make sure everything is installed correctly, and build your first app.</p>
                                                 </div>
                                             </div>
@@ -320,11 +320,11 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Getting Started" src="~/media/index/xamarin-android-get-started.svg?branch=master" data-linktype="external">
+                                                        <img alt="Get Started" src="~/media/index/xamarin-android-get-started.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Getting Started with Android</h3>
+                                                    <h3>Get Started with Android</h3>
                                                     <p>Tutorials to get you up and running with Xamarin.Android. Make sure everything is installed correctly, and build your first app.</p>
                                                 </div>
                                             </div>
@@ -515,11 +515,11 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Getting Started" src="~/media/index/xamarin-ios-get-started.svg?branch=master" data-linktype="external">
+                                                        <img alt="Get Started" src="~/media/index/xamarin-ios-get-started.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Getting Started with iOS</h3>
+                                                    <h3>Get Started with iOS</h3>
                                                     <p>Tutorials to get you up and running with Xamarin.iOS. Make sure everything is installed correctly, and build your first app.</p>
                                                 </div>
                                             </div>
@@ -729,11 +729,11 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Getting Started" src="~/media/index/xamarin-mac-get-started.svg?branch=master" data-linktype="external">
+                                                        <img alt="Get Started" src="~/media/index/xamarin-mac-get-started.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Getting Started with Mac</h3>
+                                                    <h3>Get Started with Mac</h3>
                                                     <p>Tutorials to get you up and running with Xamarin.Mac. Make sure everything is installed correctly, and build your first app.</p>
                                                 </div>
                                             </div>
@@ -867,11 +867,11 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Getting Started" src="~/media/index/xamarin-cross-platform-get-started.svg?branch=master" data-linktype="external">
+                                                        <img alt="Get Started" src="~/media/index/xamarin-cross-platform-get-started.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Getting Started</h3>
+                                                    <h3>Get Started</h3>
                                                     <p>Get started building cross-platform apps for desktop and mobile platforms using Xamarin for Android, iOS, macOS, UWP, and more.</p>
                                                 </div>
                                             </div>

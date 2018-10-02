@@ -3,8 +3,8 @@ title: "Default Resources"
 ms.prod: xamarin
 ms.assetid: 762572F0-173A-D994-0510-8F36BEF3D487
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/13/2018
 ---
 

@@ -4,8 +4,8 @@ description: "Selecting Calendar Dates using the DatePickerDialog and DialogFrag
 ms.prod: xamarin
 ms.assetid: F2BCD8D4-8957-EA53-C5A8-6BB603ADB47B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 01/22/2018
 ---
 

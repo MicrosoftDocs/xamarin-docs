@@ -5,8 +5,8 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/07/2018
 ---
 
@@ -29,50 +29,49 @@ This guide will touch upon the following topics:
 
 # [Visual Studio](#tab/vswin)
 
--   **Introduction to Visual Studio** &ndash; Introduction to Visual Studio
+- **Introduction to Visual Studio** &ndash; Introduction to Visual Studio
     and creating a new Xamarin.Android application.
 
--   **Anatomy of a Xamarin.Android Application** - Tour of the
+- **Anatomy of a Xamarin.Android Application** - Tour of the
     essential parts of a Xamarin.Android application.
 
--   **App Fundamentals and Architecture Basics** &ndash; Introduction to
+- **App Fundamentals and Architecture Basics** &ndash; Introduction to
     Activities, the Android Manifest, and the general flavor of Android
     development.
 
--   **User Interface (UI)** &ndash; Creating user interfaces with the
+- **User Interface (UI)** &ndash; Creating user interfaces with the
     Android Designer.
 
--   **Activities and the Activity Lifecycle** &ndash; An introduction to
+- **Activities and the Activity Lifecycle** &ndash; An introduction to
     the Activity Lifecycle and wiring up the user interface in code.
 
--   **Testing, Deployment, and Finishing Touches** &ndash; Complete your
+- **Testing, Deployment, and Finishing Touches** &ndash; Complete your
     application with advice on testing, deployment, generating artwork,
     and more.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
--   **Introduction to Visual Studio for Mac** &ndash; Introduction to Xamarin
+- **Introduction to Visual Studio for Mac** &ndash; Introduction to Xamarin
     Studio and creating a new Xamarin.Android application.
 
--   **Anatomy of a Xamarin.Android Application** &ndash; Tour of the
+- **Anatomy of a Xamarin.Android Application** &ndash; Tour of the
     essential parts of a Xamarin.Android application.
 
--   **App Fundamentals and Architecture Basics** &ndash; Introduction
+- **App Fundamentals and Architecture Basics** &ndash; Introduction
     to Activities, the Android Manifest, and the general flavor of
     Android development.
 
--   **User Interface (UI)** &ndash; Creating user interfaces with the
+- **User Interface (UI)** &ndash; Creating user interfaces with the
     Android Designer.
 
--   **Activities and the Activity Lifecycle** &ndash; An introduction
+- **Activities and the Activity Lifecycle** &ndash; An introduction
     to the Activity Lifecycle and wiring up the user interface in code.
 
--   **Testing, Deployment, and Finishing Touches** &ndash; Complete
+- **Testing, Deployment, and Finishing Touches** &ndash; Complete
     your application with advice on testing, deployment, generating
     artwork, and more.
 
 -----
-
 
 This guide helps you develop the skills and knowledge required to build
 a single-screen Android application. After you work through it, you

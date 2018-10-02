@@ -3,8 +3,8 @@ title: "ToggleButton"
 ms.prod: xamarin
 ms.assetid: 9ADA8FCF-63ED-897A-DD56-D7D86535A92C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
 ---
 

@@ -5,8 +5,8 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/14/2018
 ---
 
@@ -28,22 +28,21 @@ this:
 
 [![Screenshot of app when it is complete](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
 
-
 ## Requirements
 
 To follow along with this walkthrough, you will need the following:
 
 # [Visual Studio](#tab/vswin)
 
--   Windows 7 or later (Windows 10 is recommended).
+- Windows 7 or later (Windows 10 is recommended).
 
--   Visual Studio 2017 Community, Professional, or Enterprise (version 15.8 or later).
+- Visual Studio 2017 Community, Professional, or Enterprise (version 15.8 or later).
 
 # [Visual Studio for Mac](#tab/vsmac)
 
--   The latest version of Visual Studio for Mac.
+- The latest version of Visual Studio for Mac.
 
--   A Mac running macOS Sierra (10.12) or later.
+- A Mac running macOS Sierra (10.12) or later.
 
 -----
 
@@ -59,7 +58,6 @@ If you are using the Android emulator, we recommend that you configure
 the emulator to use hardware acceleration. Instructions for configuring
 hardware acceleration are available in
 [Hardware Acceleration for Emulator Performance](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
-
 
 ## Walkthrough
 

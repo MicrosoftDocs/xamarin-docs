@@ -4,8 +4,8 @@ description: "This section contains guides that describe how to implement Xamari
 ms.prod: xamarin
 ms.assetid: 85E8DF92-D160-4763-A7D3-458B4C31635F
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/12/2018
 ---
 

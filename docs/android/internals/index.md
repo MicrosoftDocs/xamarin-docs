@@ -4,8 +4,8 @@ description: "Underlying architecture behind Xamarin.Android and it's API design
 ms.prod: xamarin
 ms.assetid: CC6A0D52-E9FA-4270-B3FA-84660621D6D5
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 05/21/2018
 ---
 

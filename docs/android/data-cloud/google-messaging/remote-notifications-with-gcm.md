@@ -4,8 +4,8 @@ description: "This walkthrough provides a step-by-step explanation of how to use
 ms.prod: xamarin
 ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/12/2018
 ---
 

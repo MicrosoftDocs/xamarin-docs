@@ -4,8 +4,8 @@ description: "Firebase Cloud Messaging (FCM) is a service that facilitates messa
 ms.prod: xamarin
 ms.assetid: E5314D7F-2AAC-40DA-BEBA-27C834F078DD
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 07/31/2018
 ---
 

@@ -4,8 +4,8 @@ description: "This guide discusses how to schedule background work using the And
 ms.prod: xamarin
 ms.assetid: 673BB8C3-C5CC-43EC-BA8F-758F15D986C9
 ms.technology: xamarin-android
-author: topgenorth
-ms.author: toopge
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2018
 ---
 

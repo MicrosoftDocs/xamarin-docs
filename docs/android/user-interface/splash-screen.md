@@ -4,8 +4,8 @@ description: "An Android app takes some time to to start up, especially when the
 ms.prod: xamarin
 ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 09/06/2018
 ---
 

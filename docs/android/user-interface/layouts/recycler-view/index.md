@@ -4,8 +4,8 @@ description: "RecyclerView is a view group for displaying collections; it is des
 ms.prod: xamarin
 ms.assetid: 91EF0BD2-3306-47E1-9B39-627A1787762F
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 01/03/2018
 ---
 

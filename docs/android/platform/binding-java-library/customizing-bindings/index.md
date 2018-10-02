@@ -4,8 +4,8 @@ description: "You can customize an Xamarin.Android binding by editing the metada
 ms.prod: xamarin
 ms.assetid: 63C5078D-9E42-4F70-AF8C-8CEEA84FB6AF
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 09/25/2017
 ---
 

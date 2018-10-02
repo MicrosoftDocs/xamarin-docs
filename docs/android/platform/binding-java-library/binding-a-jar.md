@@ -4,8 +4,8 @@ description: "This walkthrough provides step-by-step instructions for creating a
 ms.prod: xamarin
 ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/11/2018
 ---
 

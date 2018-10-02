@@ -3,8 +3,8 @@ title: "Introduction to data storage on Android"
 ms.prod: xamarin
 ms.assetid: FDAC0771-4749-4758-865A-F1BD190CA54B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/28/2017
 ---
 # Introduction
