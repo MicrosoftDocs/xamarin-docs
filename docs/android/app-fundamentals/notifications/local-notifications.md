@@ -20,14 +20,14 @@ _This section shows how to implement local notifications in Xamarin.Android. It 
 Android provides two system-controlled areas for displaying
 notification icons and notification information to the user. When a
 notification is first published, its icon is displayed in 
-the *notification area*, as shown in the following screen shot:
+the *notification area*, as shown in the following screenshot:
 
 ![Example notification area on a device](local-notifications-images/01-notification-shade.png)
 
 To obtain details about the notification, the user can open the
 notification drawer (which expands each notification icon to reveal
 notification content) and perform any actions associated with the
-notifications. The following screen shot shows a *notification drawer*
+notifications. The following screenshot shows a *notification drawer*
 that corresponds to the notification area displayed above:
 
 [![Example notification drawer displaying three notifications](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
@@ -77,15 +77,15 @@ displayed as a badge over the large icon:
 ![Simple notification photo](local-notifications-images/04-simple-notification-photo.png)
 
 Beginning with Android 5.0, notifications can also appear on the
-lockscreen:
+lock screen:
 
-[![Example lockscreen notification](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
+[![Example lock screen notification](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
 
-The user can double-tap the lockscreen notification to unlock the
+The user can double-tap the lock screen notification to unlock the
 device and jump to the app that originated that notification, or swipe
 to dismiss the notification. Apps can set the visibility level of a
-notification to control what is shown on the lockscreen, and users can
-choose whether to allow sensitive content to be shown in lockscreen
+notification to control what is shown on the lock screen, and users can
+choose whether to allow sensitive content to be shown in lock screen
 notifications.
 
 Android 5.0 introduced a high-priority notification presentation format
@@ -102,7 +102,7 @@ of the currently running activity.
 Android includes support for notification metadata so that
 notifications can be sorted and displayed intelligently. Notification
 metadata also controls how notifications are presented on the
-lockscreen and in Heads-up format. Applications can set the following
+lock screen and in Heads-up format. Applications can set the following
 types of notification metadata:
 
 -   **Priority** &ndash; The priority level determines how and when
@@ -111,11 +111,11 @@ types of notification metadata:
     notifications.
 
 -   **Visibility** &ndash; Specifies how much notification content is
-    to be displayed when the notification appears on the lockscreen.
+    to be displayed when the notification appears on the lock screen.
 
 -   **Category** &ndash; Informs the system how to handle the
     notification in various circumstances, such as when the device is
-    in *Do not Disturb* mode.
+    in *Do Not Disturb* mode.
 
 **Note:** **Visibility** and **Category** were introduced in Android
 5.0 and are not available in earlier versions of Android. Beginning
@@ -168,13 +168,12 @@ require immediate attention, and a separate "quieter" channel that is
 used for informational messages.
 
 The **YouTube** app that is installed with Android Oreo
-lists two notification categories: **Download notifications** and
-**General notifications**:
+lists two notification categories: **Download notifications** and **General notifications**:
 
 [![Notification screens for YouTube in Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
 Each of these categories corresponds to a notification channel. The
-YouTube app implements a **Download notifications** channel and a
+YouTube app implements a **Download Notifications**  channel and a
 **General Notifications** channel. The user can tap **Download
 notifications**, which displays the settings screen for the app's
 download notifications channel:
@@ -232,7 +231,7 @@ options in a notification, such as:
 -   The priority of the notification: minimum, low, default, high, or
     maximum. On Android 8.0 and higher, the priority is set via a [_notification channel_](#notification-channels).
 
--   The visibility of the notification on the lockscreen: public,
+-   The visibility of the notification on the lock screen: public,
     private, or secret.
 
 -   Category metadata that helps Android classify and filter the
@@ -994,21 +993,21 @@ notification, Android will not display it in Heads-up format.
 ### Visibility settings
 
 Beginning with Android 5.0, the *visibility* setting is available to
-control how much notification content appears on the secure lockscreen.
+control how much notification content appears on the secure lock screen.
 Xamarin.Android defines the following enumerations for setting
 notification visibility:
 
 -   `NotificationVisibility.Public` &ndash; The full content of the
-    notification is displayed on the secure lockscreen.
+    notification is displayed on the secure lock screen.
 
 -   `NotificationVisibility.Private` &ndash; Only essential information
-    is displayed on the secure lockscreen (such as the notification
+    is displayed on the secure lock screen (such as the notification
     icon and the name of the app that posted it), but the rest of the
     notification's details are hidden. All notifications default to
     `NotificationVisibility.Private`.
 
 -   `NotificationVisibility.Secret` &ndash; Nothing is displayed on the
-    secure lockscreen, not even the notification icon. The notification
+    secure lock screen, not even the notification icon. The notification
     content is available only after the user unlocks the device.
 
 To set the visibility of a notification, apps call the `SetVisibility`
@@ -1021,16 +1020,16 @@ builder.SetVisibility (NotificationVisibility.Private);
 ```
 
 When a `Private` notification is posted, only the name and icon of the
-app is displayed on the secure lockscreen. Instead of the notification
+app is displayed on the secure lock screen. Instead of the notification
 message, the user sees "Unlock your device to see this notification":
 
 ![Unlock your device notification message](local-notifications-images/25-lockscreen-private.png)
 
 In this example, **NotificationsLab** is the name of the originating
 app. This redacted version of the notification appears only when the
-lockscreen is secure (i.e., secured via PIN, pattern, or password)
-&ndash; if the lockscreen is not secure, the full content of the
-notification is available on the lockscreen.
+Lock screen is secure (i.e., secured via PIN, pattern, or password)
+&ndash; if the lock screen is not secure, the full content of the
+notification is available on the lock screen.
 
 
 ### Category settings
@@ -1152,9 +1151,9 @@ is available &ndash; it will not call `SetCategory` when the API level is
 less than 21.
 
 
-### Lockscreen visibility
+### Lock screen visibility
 
-Because Android did not support lockscreen notifications before Android
+Because Android did not support lock screen notifications before Android
 5.0 (API level 21), `NotificationCompat.Builder` does not support the
 `SetVisibility` method. As explained above for `SetCategory`, your code
 can check the API level at runtime and call `SetVisiblity` only when it
@@ -1176,7 +1175,7 @@ notifications in large icon, *Big Text*, *Image* and *Inbox* formats,
 how to set notification metadata settings such as priority, visibility,
 and category, and how to launch an activity from a notification. This
 article also described how these notification settings work with the
-new Heads-up, lockscreen, and *Do not disturb* features introduced in
+new Heads-up, lock screen, and *Do not disturb* features introduced in
 Android 5.0. Finally, you learned how to use
 `NotificationCompat.Builder` to maintain notification compatibility
 with earlier versions of Android.
@@ -1195,3 +1194,5 @@ For guidelines about designing notifications for Android, see
 - [NotificationManager](https://developer.xamarin.com/api/type/Android.App.NotificationManager/)
 - [NotificationCompat.Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html)
 - [PendingIntent](https://developer.xamarin.com/api/type/Android.App.PendingIntent/)
+
+
