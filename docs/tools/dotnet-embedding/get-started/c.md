@@ -3,8 +3,8 @@ title: "Getting started with C"
 description: "This document describes how to use .NET Embedding to embed .NET code in a C application. It discusses how to use .NET Embedding in both Visual Studio 2017 and Visual Studio for Mac."
 ms.prod: xamarin
 ms.assetid: 2A27BE0F-95FB-4C3A-8A43-72540179AA85
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 04/19/2018
 ---
 

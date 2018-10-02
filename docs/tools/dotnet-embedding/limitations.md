@@ -3,8 +3,8 @@ title: ".NET Embedding Limitations"
 description: "This document describes limitations of .NET Embedding, the tool that allows you to consume .NET code in other programming languages."
 ms.prod: xamarin
 ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
 ---
 

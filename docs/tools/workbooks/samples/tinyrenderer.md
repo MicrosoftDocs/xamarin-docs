@@ -3,8 +3,8 @@ title: "TinyRenderer Workbooks"
 description: "This document describes the TinyRenderer workbooks, which work with OpenGL. These workbooks run on both Windows and Mac."
 ms.prod: xamarin
 ms.assetid: E4E17836-94C2-436F-ADD8-104AC574D22B
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
 ---
 

@@ -3,8 +3,8 @@ title: ".NET Embedding"
 description: ".NET Embedding allows your existing .NET Code (C#, F#, and others) to be consumed by code written in other programming languages."
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
 ---
 

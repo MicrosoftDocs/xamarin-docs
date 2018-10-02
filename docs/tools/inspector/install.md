@@ -3,8 +3,8 @@ title: "Inspector Installation and Requirements"
 description: "This document describes how to install the Xamarin Inspector and discusses supported operating system, IDEs, and app platforms."
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 06/19/2018
 ---
 

@@ -4,8 +4,8 @@ description: "This document links to sample workbooks to use when learning how t
 ms.prod: xamarin
 ms.assetid: DE1609F8-0D39-4EA0-8666-0468FCF77ACC
 ms.custom: xamu-video
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
 ---
 

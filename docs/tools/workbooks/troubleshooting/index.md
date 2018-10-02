@@ -3,8 +3,8 @@ title: "Troubleshooting Xamarin Workbooks"
 description: "This document links to various guides that provide troubleshooting information for working with Xamarin Workbooks. Linked content discusses general known issues, issues with Android workbooks, and provides support-related resources."
 ms.prod: xamarin
 ms.assetid: 1706EA2C-7A94-4E30-BD4D-A2F31070554F
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
 ---
 

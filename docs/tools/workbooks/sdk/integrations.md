@@ -3,8 +3,8 @@ title: "Advanced Integration Topics"
 description: "This document describes advanced topics related to Xamarin Workbooks integrations. It discusses the Xamarin.Workbook.Integrations NuGet package and API exposure within a Xamarin Workbook."
 ms.prod: xamarin
 ms.assetid: 002CE0B1-96CC-4AD7-97B7-43B233EF57A6
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
 ---
 

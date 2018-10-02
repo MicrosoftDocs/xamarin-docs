@@ -3,8 +3,8 @@ title: "Getting started with Java"
 description: "This document describes how to get started using .NET Embedding with Java. It discusses system requirements, installation, and supported platforms."
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/28/2018
 ---
 

@@ -3,8 +3,8 @@ title: "Known Issues & Workarounds"
 description: "This document describes known issues and workarounds for Xamarin Workbooks. It discusses CultureInfo issues, JSON issues, and more."
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
 ---
 

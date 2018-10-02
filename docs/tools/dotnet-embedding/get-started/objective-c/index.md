@@ -3,8 +3,8 @@ title: "Getting started with Objective-C"
 description: "This document describes how get started using .NET Embedding with Objective-C. It discusses requirements, installing .NET Embedding from NuGet, and supported platforms."
 ms.prod: xamarin
 ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
 ---
 

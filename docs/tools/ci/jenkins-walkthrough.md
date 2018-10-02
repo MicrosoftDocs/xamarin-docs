@@ -3,8 +3,8 @@ title: "Using Jenkins with Xamarin"
 description: "This document describes how to use Jenkins for continuous integration with Xamarin applications. It discusses how to install, configure, and use Jenkins."
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/23/2017
 ---
 

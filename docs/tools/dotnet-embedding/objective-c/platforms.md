@@ -3,8 +3,8 @@ title: "Objective-C Platforms"
 description: "This document describes the various platforms that .NET Embedding can target when working with Objective-C code. It discusses macOS, iOS, tvOS, and watchOS."
 ms.prod: xamarin
 ms.assetid: 43253BE4-A03A-4646-9A14-32C05174E672
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
 ---
 

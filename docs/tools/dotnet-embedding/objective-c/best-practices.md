@@ -3,8 +3,8 @@ title: ".NET Embedding best practices for Objective-C"
 description: "This document describes various best practices for using .NET Embedding with Objective-C. It discusses exposing a subset of the managed code, exposing a chunkier API, naming, and more."
 ms.prod: xamarin
 ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
 ---
 

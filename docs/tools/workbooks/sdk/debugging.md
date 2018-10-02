@@ -3,8 +3,8 @@ title: "Debugging integrations"
 description: "This document describes how to debug Xamarin Workbooks integrations, both agent-side and client-side on Windows and Mac."
 ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 06/19/2018
 ---
 

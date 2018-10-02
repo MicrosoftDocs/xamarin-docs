@@ -3,8 +3,8 @@ title: "Getting started with macOS"
 description: "This document describes how get started using .NET Embedding with macOS. It discusses requirements, and presents a sample application to demonstrate how to bind the managed assembly and use the generated output in an Xcode project."
 ms.prod: xamarin
 ms.assetid: AE51F523-74F4-4EC0-B531-30B71C4D36DF
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
 ---
 

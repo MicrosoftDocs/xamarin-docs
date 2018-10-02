@@ -3,8 +3,8 @@ title: "Limitations of Xamarin Live Player"
 description: "This document describes limitations of the Xamarin Live Player. It discusses device requirements, features it works with, project types, and other miscellaneous topics."
 ms.prod: xamarin
 ms.assetid: 36A1531E-630A-4B7C-A333-4E67E5DC023C
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 08/08/2018
 ---
 

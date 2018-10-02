@@ -3,8 +3,8 @@ title: "Architecture Overview"
 description: "This document describes the architecture of Xamarin Workbooks, examining how the interactive agent and interactive client work together."
 ms.prod: xamarin
 ms.assetid: 6C0226BE-A0C4-4108-B482-0A903696AB04
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
 ---
 

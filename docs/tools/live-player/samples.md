@@ -3,8 +3,8 @@ title: "Xamarin Live Player Samples"
 description: "This document links to sample applications to use when testing out the Xamarin Live Player. Linked samples include a basic calculator and a bug sweeper game."
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 08/08/2017
 ---
 

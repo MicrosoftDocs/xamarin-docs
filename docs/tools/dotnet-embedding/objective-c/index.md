@@ -3,8 +3,8 @@ title: "Objective-C Support"
 description: "This document provides a description of the support for Objective-C in .NET Embedding. It discusses Automatic Reference Counting, NSString, Protocols, NSObject protocol, exceptions, and more."
 ms.prod: xamarin
 ms.assetid: 3367A4A4-EC88-4B75-96D0-51B1FCBCE614
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
 ---
 

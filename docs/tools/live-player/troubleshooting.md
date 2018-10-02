@@ -3,8 +3,8 @@ title: "Troubleshooting Xamarin Live Player"
 description: "This document describes known issues with the Xamarin Live Player and potential fixes. It discusses connection issues, configuration issues, and more."
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 08/08/2018
 ---
 

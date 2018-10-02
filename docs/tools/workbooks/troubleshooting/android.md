@@ -3,8 +3,8 @@ title: "Troubleshooting Xamarin Workbooks on Android"
 description: "This document provides troubleshooting tips for working with Xamarin Workbooks on Android. It discusses emulator support, workbooks that won't load, and other topics."
 ms.prod: xamarin
 ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
 ---
 

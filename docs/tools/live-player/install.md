@@ -3,8 +3,8 @@ title: "Xamarin Live Player Setup"
 description: "This document describes how to set up the Xamarin Live Player and use it to make live edits to a running application."
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 08/08/2018
 ---
 
