@@ -47,6 +47,32 @@ Preferences.Clear();
 
 In addition to these methods each take in an optional `sharedName` that can be used to create additional containers for preference. Read the platform implementation specifics below.
 
+## Data Binding
+
+You can also use a Preference in a view model property for use with XAML data binding. 
+
+#### View model
+```csharp
+public bool IsMySettingActive
+{
+    get => Preferences.Get("IsMySettingActiveKey", default(bool));
+    set
+    {
+        if (IsMySettingActive == value)
+            return;
+
+        Preferences.Set("IsMySettingActiveKey", value);
+        OnPropertyChanged();
+    }
+}
+
+```
+#### View
+```xml
+<Switch IsToggled="{Binding IsMySettingActive, Mode=TwoWay}"/>
+```
+
+
 ## Supported Data Types
 
 The following data types are supported in **Preferences**:
