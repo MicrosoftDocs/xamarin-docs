@@ -55,7 +55,7 @@ There are a wide variety of open-source plug-ins available on Github, Nuget, and
 
 ## [Tizen](tizen.md)
 
-Tizen .NET enables you to build .NET applications with Xamarin.Forms and the Tizen .NET framework.
+Tizen .NET enables you to build .NET applications with Xamarin.Forms and the Tizen .NET Framework.
 
 ## [Windows](windows/index.md)
 
