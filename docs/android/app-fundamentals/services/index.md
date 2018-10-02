@@ -62,7 +62,7 @@ Starting in Android 8.0 (API level 26), an Android application no longer have th
 
 There are some situations where, even though an app is in the background,  Android will wake up the app and relax these restrictions for a few minutes, allowing the app to perform some work:
 * A high priority Firebase Cloud Message is received by the app.
-* The app receives a broadcast, such as 
+* The app receives a broadcast. 
 * The application receives an executes a `PendingIntent` in response to a Notification.
 
 Existing Xamarin.Android applications may have to change how they perform background work to avoid any issues that might arise on Android 8.0. Here are some practical alterantives to an Android service:
