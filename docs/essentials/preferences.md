@@ -51,7 +51,8 @@ In addition to these methods each take in an optional `sharedName` that can be u
 
 You can also use a Preference in a view model property for use with XAML data binding. 
 
-#### View model
+### View model
+
 ```csharp
 public bool IsMySettingActive
 {
@@ -65,9 +66,10 @@ public bool IsMySettingActive
         OnPropertyChanged();
     }
 }
-
 ```
-#### View
+
+### View
+
 ```xml
 <Switch IsToggled="{Binding IsMySettingActive, Mode=TwoWay}"/>
 ```
