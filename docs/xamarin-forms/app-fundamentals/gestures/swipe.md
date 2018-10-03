@@ -1,5 +1,5 @@
 ---
-title: "Adding a swipe gesture tecognizer"
+title: "Adding a swipe gesture recognizer"
 description: "This article explains how to recognize a swipe gesture occurring on a view."
 ms.prod: xamarin
 ms.assetid: 164976C2-1429-49FB-9EB6-621E2681C19B
