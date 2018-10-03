@@ -4,8 +4,8 @@ description: "This article explains how to use matrix transforms to implement to
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 09/14/2018
 ---
 

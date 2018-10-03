@@ -4,8 +4,8 @@ description: "This article examines how to use the translate transform to shift 
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
 ---
 

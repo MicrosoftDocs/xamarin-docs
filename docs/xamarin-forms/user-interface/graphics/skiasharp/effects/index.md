@@ -4,8 +4,8 @@ description: "Learn how to alter the normal display of graphics with gradients, 
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: B3E06572-8E2A-49FA-90D1-444C394CD516
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 08/22/2018
 ---
 

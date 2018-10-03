@@ -4,8 +4,8 @@ description: "Learn about the different types of gradients based on circles."
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 400AE23A-6A0B-4FA8-BD6B-DE4146B04732
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 08/23/2018
 ---
 

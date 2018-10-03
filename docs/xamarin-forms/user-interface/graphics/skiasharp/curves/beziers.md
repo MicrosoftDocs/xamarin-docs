@@ -4,8 +4,8 @@ description: "This article explains how to use SkiaSharp to render cubic, quadra
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/25/2017
 ---
 

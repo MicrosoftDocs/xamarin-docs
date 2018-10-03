@@ -4,8 +4,8 @@ description: "This article explains how to get information about SkiaSharp paths
 ms.prod: xamarin
 ms.assetid: 8E8C5C6A-F324-4155-8652-7A77D231B3E5
 ms.technology: xamarin-skiasharp
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 09/12/2017
 ---
 

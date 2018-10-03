@@ -252,25 +252,6 @@ featureFlags:
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/samples/index.yml">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Samples" src="https://docs.microsoft.com/en-us/media/illustrations/team-services-dev-ops-test.svg" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Sample Apps</h3>
-                                                    <p>Complete apps and code demos for Xamarin.Forms, running on Android, iOS, and Windows.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -302,6 +283,44 @@ featureFlags:
                                                 <div class="cardText">
                                                     <h3>Enterprise eBook</h3>
                                                     <p>Architectural guidance for developing adaptable, maintainable, and testable Xamarin.Forms enterprise applications.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/xamarin-forms/user-interface/graphics/skiasharp/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter x-hidden-focus">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img alt="SkiaSharp Graphics in Xamarin.Forms" src="~/media/index/xamarin-graphics-skia.svg?branch=master" data-linktype="external">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>SkiaSharp Graphics ebook</h3>
+                                                    <p>Cross-platform vector graphics and animation with SkiaSharp.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/xamarin-forms/samples/index.yml">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter x-hidden-focus">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img alt="Samples" src="https://docs.microsoft.com/en-us/media/illustrations/team-services-dev-ops-test.svg" data-linktype="external">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Sample Apps</h3>
+                                                    <p>Complete apps and code demos for Xamarin.Forms, running on Android, iOS, and Windows.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1004,7 +1023,7 @@ featureFlags:
                         <a href="#architecture1"></a>
                         <ul id="architecture1" class="cardsC">
                             <li>
-                                <a href="~/graphics-games/skiasharp/index.md">
+                                <a href="~/xamarin-forms/user-interface/graphics/skiasharp/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

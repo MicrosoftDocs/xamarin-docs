@@ -4,8 +4,8 @@ description: "This article examines the different effects possible with SkiaShar
 ms.prod: xamarin
 ms.assetid: 57103A7A-49A2-46AE-894C-7C2664682644
 ms.technology: xamarin-skiasharp
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
 ---
 

@@ -1,15 +1,16 @@
 ---
+redirect_url: /xamarin/xamarin-forms/user-interface/graphics/skiasharp/
 title: "2D Drawing With SkiaSharp"
 description: "This document provides an overview of cross-platform 2D drawing with SkiaSharp. It links to various guides that describe SkiaSharp and its various APIs."
 ms.prod: xamarin
 ms.techonology: xamarin-skiasharp
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
-author: conceptdev
-ms.author: crdun
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
 ---
 
-# 2D Drawing With SkiaSharp
+# 2D drawing With SkiaSharp
 
 SkiaSharp provides a powerful C# API for doing 2D graphics. It is
 powered by [Google’s Skia library](http://skia.org), the
@@ -30,61 +31,7 @@ graphics, text, bitmaps, and use image filters.
 
 ## [SkiaSharp Tutorials for Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)
 
-Learn how to work with cross platform graphics that render in Xamarin.Forms:
-
-- [Drawing Basics](~/xamarin-forms/user-interface/graphics/skiasharp/basics/index.md)
-  * [Drawing a simple circle](~/xamarin-forms/user-interface/graphics/skiasharp/basics/circle.md)
-  * [Integrating with Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md)
-  * [Pixels and device-independent units](~/xamarin-forms/user-interface/graphics/skiasharp/basics/pixels.md)
-  * [Basic animation](~/xamarin-forms/user-interface/graphics/skiasharp/basics/animation.md)
-  * [Integrating text and graphics](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md)
-  * [Bitmap basics](~/xamarin-forms/user-interface/graphics/skiasharp/basics/bitmaps.md)
-  * [Transparency](~/xamarin-forms/user-interface/graphics/skiasharp/basics/transparency.md)
-- [Lines and Paths](~/xamarin-forms/user-interface/graphics/skiasharp/paths/index.md)
-  * [Lines and stroke caps](~/xamarin-forms/user-interface/graphics/skiasharp/paths/lines.md)
-  * [Path basics](~/xamarin-forms/user-interface/graphics/skiasharp/paths/paths.md)
-  * [The path fill types](~/xamarin-forms/user-interface/graphics/skiasharp/paths/fill-types.md)
-  * [Polylines and parametric equations](~/xamarin-forms/user-interface/graphics/skiasharp/paths/polylines.md)
-  * [Dots and dashes](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md)
-  * [Finger Painting](~/xamarin-forms/user-interface/graphics/skiasharp/paths/finger-paint.md)
-- [Transforms](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/index.md)
-  * [The translate transform](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/translate.md)
-  * [The scale transform](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/scale.md)
-  * [The rotate transform](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md)
-  * [The skew transform](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/skew.md)
-  * [Matrix transforms](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md)
-  * [Touch manipulations](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/touch.md)
-  * [Non-affine transforms](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md)
-  * [3D rotation](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md)
-- [Curves and Paths](~/xamarin-forms/user-interface/graphics/skiasharp/curves/index.md)
-  * [Three Ways to Draw an Arc](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md)
-  * [Three Types of Bézier Curves](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md)
-  * [SVG Path Data](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md)
-  * [Clipping with Paths and Regions](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md)
-  * [Path Effects](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md)
-  * [Paths and Text](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)
-  * [Path Information and Enumeration](~/xamarin-forms/user-interface/graphics/skiasharp/curves/information.md)
-- [Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/index.md)
-  * [Displaying Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/displaying.md)
-  * [Creating and Drawing on Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/drawing.md)
-  * [Cropping Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/cropping.md)
-  * [Segmented Display of Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/segmented.md)
-  * [Saving Bitmaps to Files](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/saving.md)
-  * [Accessing Bitmap Pixel Bits](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/pixel-bits.md)
-  * [Animating Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/animating.md)
-- [Effects](~/xamarin-forms/user-interface/graphics/skiasharp/effects/index.md)
-  * [Shaders](~/xamarin-forms/user-interface/graphics/skiasharp/effects/shaders/index.md)
-    + [Linear Gradient](~/xamarin-forms/user-interface/graphics/skiasharp/effects/shaders/linear-gradient.md)
-    + [Circular Gradients](~/xamarin-forms/user-interface/graphics/skiasharp/effects/shaders/circular-gradients.md)
-    + [Bitmap Tiling](~/xamarin-forms/user-interface/graphics/skiasharp/effects/shaders/bitmap-tiling.md)
-    + [Noise](~/xamarin-forms/user-interface/graphics/skiasharp/effects/shaders/noise.md)
-  * [Blend Modes](~/xamarin-forms/user-interface/graphics/skiasharp/effects/blend-modes/index.md)
-    + [Porter-Duff Blend Modes](~/xamarin-forms/user-interface/graphics/skiasharp/effects/blend-modes/porter-duff.md)
-    + [Separable Blend Modes](~/xamarin-forms/user-interface/graphics/skiasharp/effects/blend-modes/separable.md)
-    + [Non-Separable Blend Modes](~/xamarin-forms/user-interface/graphics/skiasharp/effects/blend-modes/non-separable.md)
-  * [Mask Filters](~/xamarin-forms/user-interface/graphics/skiasharp/effects/mask-filters.md)
-  * [Image Filters](~/xamarin-forms/user-interface/graphics/skiasharp/effects/image-filters.md)
-  * [Color Filters](~/xamarin-forms/user-interface/graphics/skiasharp/effects/color-filters.md)
+Learn how to work with cross platform graphics that render in Xamarin.Forms.
 
 ## [Platform Specific Notes](~/graphics-games/skiasharp/platform.md)
 

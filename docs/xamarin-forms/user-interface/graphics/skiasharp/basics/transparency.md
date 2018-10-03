@@ -4,8 +4,8 @@ description: "Use transparency to combine multiple objects in a single scene."
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: B62F9487-C30E-4C63-BAB1-4C091FF50378
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 08/23/2018
 ---
 

@@ -4,8 +4,8 @@ description: "Discover the various techniques for accessing and modifying the pi
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/11/2018
 ---
 

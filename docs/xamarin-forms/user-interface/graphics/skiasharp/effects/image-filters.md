@@ -4,8 +4,8 @@ description: "Learn how to use the image filter to create blurs and drop shadows
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 08/27/2018
 ---
 

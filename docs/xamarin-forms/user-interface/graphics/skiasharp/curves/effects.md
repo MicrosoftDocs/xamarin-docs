@@ -4,8 +4,8 @@ description: "This article explains the various SkiaSharp path effects that allo
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/29/2017
 ---
 

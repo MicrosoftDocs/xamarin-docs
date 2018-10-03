@@ -4,8 +4,8 @@ description: "This article explains how to define SkiaSharp paths using text str
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/24/2017
 ---
 

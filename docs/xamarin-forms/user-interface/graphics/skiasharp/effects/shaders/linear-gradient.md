@@ -4,8 +4,8 @@ description: "Discover how to stroke lines or fill areas with gradients composed
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 20A2A8C4-FEB7-478D-BF57-C92E26117B6A
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 08/23/2018
 ---
 

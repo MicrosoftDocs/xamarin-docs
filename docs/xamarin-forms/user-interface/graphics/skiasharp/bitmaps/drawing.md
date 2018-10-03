@@ -4,8 +4,8 @@ description: "Learn how to create SkiaSharp bitmaps and then draw on these bitma
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
 ---
 

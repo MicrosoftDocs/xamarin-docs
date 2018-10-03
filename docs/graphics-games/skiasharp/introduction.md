@@ -1,23 +1,22 @@
 ---
-title: "An Introduction to SkiaSharp"
+title: "SkiaSharp platform-independent examples"
 description: "This document provides a brief introduction to core SkiaSharp concepts. In particular, it discusses obtaining and drawing on an SKCanvas."
 ms.prod: xamarin
 ms.techonology: xamarin-skiasharp
 ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
-author: conceptdev
-ms.author: crdun
-ms.date: 09/14/2017
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/03/2018
 ---
 
-# An Introduction to SkiaSharp
+# SkiaSharp platform-independent examples
 
-_This provides a brief introduction to the concepts behind SkiaSharp_
+_This provides a brief platform-independent introduction to the concepts behind SkiaSharp_
 
 SkiaSharp provides a rich and powerful 2D graphics API that can be
 used to render into 2D buffers.  You can use these to implement custom
 user interface elements and 2D graphics that can be incorporated into
-your application.  SkiaSharp is a .NET binding to the [Skia](https://skia.org) library and inherits the features and
-power of this library.
+your application. SkiaSharp is a .NET binding to the [Skia](https://skia.org) library and inherits the features and power of this library.
 
 The library is currently available as a cross-platform [NuGet Package](https://www.nuget.org/packages/SkiaSharp), you
 can add it to your project by adding the NuGet reference.
@@ -83,7 +82,7 @@ using (var paint = new SKPaint ()) {
 }
 ```
 
-### Drawing Text
+### Drawing text
 
 ```csharp
 // clear the canvas / fill with white
@@ -101,7 +100,7 @@ using (var paint = new SKPaint ()) {
 }
 ```
 
-### Drawing Bitmaps
+### Drawing bitmaps
 
 ```csharp
 Stream fileStream = File.OpenRead ("MyImage.png");
@@ -117,7 +116,7 @@ using (var paint = new SKPaint()) {
 }
 ```
 
-### Drawing with Image Filters
+### Drawing with image filters
 
 ```csharp
 Stream fileStream = File.OpenRead ("MyImage.png"); // open a stream to an image file
@@ -141,9 +140,4 @@ using (var paint = new SKPaint()) {
 
 ## More information
 
-More information about using SkiaSharp can be found on the [API documentation online](https://docs.microsoft.com/dotnet/api/skiasharp)
-
-
-## Related Links
-
-- [SkiaSharp iOS Workbook](https://developer.xamarin.com/workbooks/graphics/skiasharp/logo/skialogo-ios.workbook)
+More information about using SkiaSharp can be found in the [API documentation](https://docs.microsoft.com/dotnet/api/skiasharp)

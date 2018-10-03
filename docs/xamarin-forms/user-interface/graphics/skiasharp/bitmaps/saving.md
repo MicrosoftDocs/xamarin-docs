@@ -4,8 +4,8 @@ description: "Explore the various file formats supported by SkiaSharp for saving
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/10/2018
 ---
 

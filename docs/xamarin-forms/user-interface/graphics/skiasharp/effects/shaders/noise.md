@@ -4,8 +4,8 @@ description: "Generate Perlin noise shaders and combine with other shaders."
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 90C2D00A-2876-43EA-A836-538C3318CF93
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 08/23/2018
 ---
 

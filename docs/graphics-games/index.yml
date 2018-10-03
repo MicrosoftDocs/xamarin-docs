@@ -22,10 +22,10 @@ sections:
     style: cards
     className: cardsC
     items:
-    - href: ~/graphics-games/skiasharp/index.md
+    - href: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
       image:
         src: ~/media/index/xamarin-graphics-skia.svg
-        href: ~/graphics-games/skiasharp/index.md
+        href: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
       title: SkiaSharp
       html: Cross-platform 2D graphics for mobile and desktop.
     - href: ~/graphics-games/urhosharp/index.md

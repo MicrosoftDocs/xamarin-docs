@@ -4,8 +4,8 @@ description: "Learn how to perform bitmap animation by sequentially displaying a
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/12/2018
 ---
 

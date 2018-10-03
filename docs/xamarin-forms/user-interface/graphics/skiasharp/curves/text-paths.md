@@ -4,8 +4,8 @@ description: "This article explores the intersection of SkiaSharp paths and text
 ms.prod: xamarin
 ms.assetid: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B
 ms.technology: xamarin-skiasharp
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 08/01/2017
 ---
 

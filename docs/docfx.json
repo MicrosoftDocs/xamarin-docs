@@ -64,7 +64,8 @@
       },
       "breadcrumb_path": {
         "xamarin-forms/creating-mobile-apps-xamarin-forms/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json",
-        "xamarin-forms/enterprise-application-patterns/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json"
+        "xamarin-forms/enterprise-application-patterns/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json",
+        "xamarin-forms/user-interface/graphics/skiasharp/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json"
       }
     },
     "template": [],

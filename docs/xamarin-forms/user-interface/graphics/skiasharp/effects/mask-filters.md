@@ -4,8 +4,8 @@ description: "Learn how to use the mask filter to create blurs and other alpha e
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 940422A1-8BC0-4039-8AD7-26C61320F858
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 08/27/2018
 ---
 

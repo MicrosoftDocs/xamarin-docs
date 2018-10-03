@@ -4,8 +4,8 @@ description: "This article explains how to use your fingers to paint on the Skia
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/05/2017
 ---
 
@@ -136,7 +136,7 @@ The `PaintSurface` handler then simply renders both collections of paths. The ea
 ```csharp
 public partial class FingerPaintPage : ContentPage
 {
-    ,,,
+    ...
     void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {
         SKCanvas canvas = args.Surface.Canvas;

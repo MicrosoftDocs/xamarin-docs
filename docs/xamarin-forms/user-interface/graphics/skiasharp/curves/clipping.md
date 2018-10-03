@@ -4,8 +4,8 @@ description: "This article explains how to use SkiaSharp paths to clip graphics 
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 06/16/2017
 ---
 

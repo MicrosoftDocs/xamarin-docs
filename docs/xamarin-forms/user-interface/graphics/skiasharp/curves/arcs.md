@@ -4,8 +4,8 @@ description: "This article explains how to use SkiaSharp to define arcs in three
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/10/2017
 ---
 

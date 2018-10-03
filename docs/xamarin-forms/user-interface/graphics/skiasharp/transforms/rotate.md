@@ -4,8 +4,8 @@ description: "This article explores the effects and animations possible with the
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/23/2017
 ---
 

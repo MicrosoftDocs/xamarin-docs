@@ -4,8 +4,8 @@ description: "This article explores how to master the intricacies of drawing dot
 ms.prod: xamarin
 ms.assetid: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078
 ms.technology: xamarin-skiasharp
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
 ---
 

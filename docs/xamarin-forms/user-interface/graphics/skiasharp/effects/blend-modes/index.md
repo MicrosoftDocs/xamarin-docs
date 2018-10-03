@@ -4,8 +4,8 @@ description: "Use blend modes to define what happens when graphical objects are 
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: CE1B222E-A2D0-4016-A532-EC1E59EE3D6B
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 08/23/2018
 ---
 

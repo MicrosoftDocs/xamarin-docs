@@ -1,15 +1,15 @@
 ---
-title: "SkiaSharp Platform-Specific Notes"
+title: "SkiaSharp platform-specific notes"
 description: "This document describes platform-specific details relevant to SkiaSharp. It provides sample code for iOS, Android, macOS, Windows, and Xamarin.Forms."
 ms.prod: xamarin
 ms.techonology: xamarin-skiasharp
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
-author: conceptdev
-ms.author: crdun
-ms.date: 03/24/2017
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/03/2018
 ---
 
-# SkiaSharp Platform-Specific Notes
+# SkiaSharp platform-specific notes
 
 The examples below allocate the image buffers manually, this is done
 to illustrate a common platform pattern which is to draw on a existing
@@ -18,6 +18,26 @@ RBGA buffer provided by the platform.
 You do not need to use this idiom if you do not want to.  There is an
 overload that will create and manage the backing storage for your
 image for you.
+
+## Android
+
+```csharp
+var width = (float)skiaView.Width;
+var height = (float)skiaView.Height;
+
+using (var bitmap = Bitmap.CreateBitmap (canvas.Width, canvas.Height, Bitmap.Config.Argb8888)) {
+  try {
+    using (var surface = SKSurface.Create (canvas.Width, canvas.Height, SKColorType.Rgba_8888, SKAlphaType.Premul, bitmap.LockPixels (), canvas.Width * 4)) {
+      var skcanvas = surface.Canvas;
+      skcanvas.Scale (((float)canvas.Width)/width, ((float)canvas.Height)/height);
+      // DoDraw (skcanvas);
+    }
+  } finally {
+    bitmap.UnlockPixels ();
+  }
+  canvas.DrawBitmap (bitmap, 0, 0, null);
+}
+```
 
 ## iOS
 
@@ -48,26 +68,6 @@ try {
   if (buff != IntPtr.Zero) {
     System.Runtime.InteropServices.Marshal.FreeCoTaskMem (buff);
   }
-}
-```
-
-## Android
-
-```csharp
-var width = (float)skiaView.Width;
-var height = (float)skiaView.Height;
-
-using (var bitmap = Bitmap.CreateBitmap (canvas.Width, canvas.Height, Bitmap.Config.Argb8888)) {
-  try {
-    using (var surface = SKSurface.Create (canvas.Width, canvas.Height, SKColorType.Rgba_8888, SKAlphaType.Premul, bitmap.LockPixels (), canvas.Width * 4)) {
-      var skcanvas = surface.Canvas;
-      skcanvas.Scale (((float)canvas.Width)/width, ((float)canvas.Height)/height);
-      // DoDraw (skcanvas);
-    }
-  } finally {
-    bitmap.UnlockPixels ();
-  }
-  canvas.DrawBitmap (bitmap, 0, 0, null);
 }
 ```
 
@@ -115,11 +115,3 @@ using (var bitmap = new Bitmap(width, height, PixelFormat.Format32bppPArgb)) {
   e.Graphics.DrawImage(bitmap, new Rectangle(0, 0, Width, Height));
 }
 ```
-
-## Xamarin.Forms
-
-To include SkiaSharp in your Xamarin.Forms applications see the guide [Using SkiaSharp in Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
-
-## Related Links
-
-- [SkiaSharp iOS Workbook](https://developer.xamarin.com/workbooks/graphics/skiasharp/logo/skialogo-ios.workbook)

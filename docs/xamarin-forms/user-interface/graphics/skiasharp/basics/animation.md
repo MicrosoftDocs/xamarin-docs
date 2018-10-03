@@ -4,8 +4,8 @@ description: "This article explains how to animate your SkiaSharp graphics in Xa
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
 ---
 

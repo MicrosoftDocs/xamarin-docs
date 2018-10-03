@@ -4,8 +4,8 @@ description: "Use color filters to convert colors with transforms or tables."
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 08/28/2018
 ---
 

@@ -4,8 +4,8 @@ description: "Learn how to display SkiaSharp bitmaps in pixel sizes and expanded
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
 ---
 

@@ -4,8 +4,8 @@ description: "This article explains the basics of SkiaSharp drawing, including c
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
 ---
 

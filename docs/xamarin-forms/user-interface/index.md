@@ -41,9 +41,9 @@ DataPages provide an API to quickly and easily bind a data source to pre-built v
 
 The `DatePicker` allows a user to select a date within a specified range. It is implemented using the date picker supported by the particular platform that the program is run on.
 
-## [Graphics](graphics/index.md)
+## [Graphics with SkiaSharp](graphics/skiasharp/index.md)
 
-How to incorporate graphics and game engine visuals into a Xamarin.Forms application.
+How to incorporate graphics into a Xamarin.Forms application using SkiaSharp.
 
 ## [Images](images.md)
 

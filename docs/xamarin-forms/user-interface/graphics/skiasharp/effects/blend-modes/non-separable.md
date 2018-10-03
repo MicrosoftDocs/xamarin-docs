@@ -4,8 +4,8 @@ description: "Use the non-separable blend modes to alter hue, saturation, or lum
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 08/23/2018
 ---
 

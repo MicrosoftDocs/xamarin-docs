@@ -4,8 +4,8 @@ description: "Use shaders to create gradients, bitmap tiles, and Perlin noise."
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 272B1BEB-0CBC-4E81-A3B9-A9C69AEE3722
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 08/23/2018
 ---
 

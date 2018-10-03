@@ -4,8 +4,8 @@ description: "This article explores the differences between SkiaSharp coordinate
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 02/09/2017
 ---
 

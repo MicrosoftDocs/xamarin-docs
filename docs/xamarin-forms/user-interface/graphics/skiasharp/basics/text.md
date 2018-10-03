@@ -4,8 +4,8 @@ description: "This article explains how to determine the size of rendered text s
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
 ---
 
