@@ -18,8 +18,8 @@ Continuous Integration (CI) avoid such complexities by merging every developer's
 
 Continuous integration systems have two main parts:
 
--  **Version Control** – Version Control (VC), also called source control or source code management, consolidates all of a project's code into a single shared repository and keeps a full history of every change to every file. This repository, often referred to as the *mainline* or *master* branch, contains the source code that will ultimately be used to build the production or release version of the app. There are many open source and commercial products for this task, which typically allow teams or individuals to fork a copy of the code into secondary branches where they can make extensive changes or conduct experiments without risk to the master branch. Once changes in a secondary branch are validated, they can then be all together merged back into the master branch.
--  **Continuous Integration Server** – The Continuous Integration Server is responsible for collecting all of a project's artifacts (source code, images, videos, databases, automated tests, etc.), compiling the app, and running the automated tests. Again, there are many open source and commercial CI server tools.
+- **Version Control** – Version Control (VC), also called source control or source code management, consolidates all of a project's code into a single shared repository and keeps a full history of every change to every file. This repository, often referred to as the *mainline* or *master* branch, contains the source code that will ultimately be used to build the production or release version of the app. There are many open source and commercial products for this task, which typically allow teams or individuals to fork a copy of the code into secondary branches where they can make extensive changes or conduct experiments without risk to the master branch. Once changes in a secondary branch are validated, they can then be all together merged back into the master branch.
+- **Continuous Integration Server** – The Continuous Integration Server is responsible for collecting all of a project's artifacts (source code, images, videos, databases, automated tests, etc.), compiling the app, and running the automated tests. Again, there are many open source and commercial CI server tools.
 
 Developers typically have a working copy of one or more branches on their workstations, where work is initially done. Once an appropriate set of work is complete, the changes are "checked into" or "committed" to the appropriate branch, which propagates them to the working copies of other developers. This is how a team ensures that they're all working on the same code.
 
@@ -41,24 +41,22 @@ There is an extensive ecosystem of commercial and open-source tools designed to 
 
 ## Version Control
 
-### Visual Studio Team Services and Team Foundation Server
+### Azure DevOps and Team Foundation Server
 
-[Visual Studio Team Services](https://visualstudio.microsoft.com/team-services/) (VSTS) and [Team Foundation Server](https://visualstudio.microsoft.com/tfs/) (TFS) are Microsoft's collaborative tools for continuous integration build services, task tracking, agile planning and reporting tools, and version control. With version control, VSTS and TFS can work with its own system (Team Foundation Version Control or TFVC) or with projects hosted on GitHub.
+[Azure DevOps](https://azure.microsoft.com/services/devops/) and [Team Foundation Server](https://visualstudio.microsoft.com/tfs/) (TFS) are Microsoft's collaborative tools for continuous integration build services, task tracking, agile planning and reporting tools, and version control. With version control, Azure DevOps and TFS can work with its own system (Team Foundation Version Control or TFVC) or with projects hosted on GitHub.
 
- - Visual Studio Team Services provides services via the cloud. It's primary advantage is that it requires no dedicated hardware or infrastructure and can be accessed from anywhere through web browsers and through popular development tools such as Visual Studio, making it appealing for teams that are geographically distributed. It is free for teams of five developers or less, after which additional licenses can be purchased to accommodate a growing team.
- - TFS is designed for on-premises Windows servers and accessed through a local network or a VPN connection to that network. Its primary advantage is that you fully control the configuration of the build servers and can install whatever additional software or services are needed. TFS has a free entry-level Express edition for small teams.
+- Visual Studio Team Services provides services via the cloud. It's primary advantage is that it requires no dedicated hardware or infrastructure and can be accessed from anywhere through web browsers and through popular development tools such as Visual Studio, making it appealing for teams that are geographically distributed. It is free for teams of five developers or less, after which additional licenses can be purchased to accommodate a growing team.
+- TFS is designed for on-premises Windows servers and accessed through a local network or a VPN connection to that network. Its primary advantage is that you fully control the configuration of the build servers and can install whatever additional software or services are needed. TFS has a free entry-level Express edition for small teams.
 
-Both TFS and VSTS are tightly integrated with Visual Studio and allow developers to perform many version control and CI tasks from within the comfort of a single IDE. The Team Explorer Everywhere plugin for Eclipse (see below) is also available. Visual Studio for Mac does not offer any support for TFS or VSTS.
+Both TFS and Azure DevOps are tightly integrated with Visual Studio and allow developers to perform many version control and CI tasks from within the comfort of a single IDE. The Team Explorer Everywhere plugin for Eclipse (see below) is also available. Visual Studio for Mac has [a preview of TFVC available](/visualstudio/mac/tf-version-control/).
 
-Visual Studio Team Service's build system has direct support for Xamarin projects, within which you create a build definition for each platform you wish to target (Android, iOS, and Windows). The appropriate Xamarin license is needed for each build definition. It's also possible to connect a local, Xamarin-capable TFS build server to Visual Studio Team Services for this purpose. With this setup, builds that are queued to VSTS will be delegated to the local server. For details, refer to [Deploy and configure a build server](https://docs.microsoft.com/vsts/pipelines/agents/agents?view=vsts). Alternately, you can use another build tool such as Jenkins or Team City.
+[Azure DevOps Pipelines](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/) has direct support for Xamarin projects, within which you create a build definition for each platform you wish to target (Android, iOS, and Windows). The appropriate Xamarin license is needed for each build definition. It's also possible to connect a local, Xamarin-capable TFS build server to Azure DevOps for this purpose. With this setup, builds that are queued to Azure DevOps will be delegated to the local server. For details, refer to [Build and release agents](https://docs.microsoft.com/azure/devops/pipelines/agents/agents). Alternately, you can use another build tool such as Jenkins or Team City.
 
-A complete summary of all Application Lifecycle Management (ALM) features of Visual Studio, Visual Studio Team Services, and Team Foundation Server, see [Application Lifecycle Management with Xamarin Apps](https://msdn.microsoft.com/library/mt162217(v=vs.140).aspx) on MSDN.
-
+A complete summary of all Application Lifecycle Management (ALM) features of Visual Studio, Azure DevOps, and Team Foundation Server, see [DevOps with Xamarin Apps](https://docs.microsoft.com/visualstudio/cross-platform/application-lifecycle-management-alm-with-xamarin-apps).
 
 ### Team Explorer Everywhere
 
-[Team Explorer Everywhere](http://msdn.microsoft.com/library/gg413285.aspx) brings the power of Team Foundation Server and Visual Studio Team Services to teams developing outside of Visual Studio. It allows developers to connect to team projects on premises or in the cloud from Eclipse or the cross-platform command line client for OS X and Linux. Team Explorer Everywhere provides full access to version control (including Git), work items, and build capabilities for non-Windows platforms.
-
+[Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) brings the power of Team Foundation Server and Visual Studio Team Services to teams developing outside of Visual Studio. It allows developers to connect to team projects on premises or in the cloud from Eclipse or the cross-platform command line client for OS X and Linux. Team Explorer Everywhere provides full access to version control (including Git), work items, and build capabilities for non-Windows platforms.
 
 ### Git
 
@@ -68,41 +66,39 @@ Git can operate entirely through a web browsers, or through [GUI clients](http:/
 
 Visual Studio 2015 and Visual Studio for Mac provide native support for Git; for older versions, Microsoft provides a [downloadable extension for Git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c). As noted above, Visual Studio Team Services and TFS can use Git for version control instead of TFVC.
 
-
 ### Subversion
 
 [Subversion](http://subversion.apache.org) (SVN) is a popular, open source version control system that has been in use since 2000. SVN runs on all modern versions of OS X, Windows, FreeBSD, Linux, and Unix. Visual Studio for Mac has native support for SVN. There are third party extensions that bring SVN support to Visual Studio.
-
 
 ## Continuous Integration Environments
 
 Setting up a continuous integration environment means combining a version control system with a build service.  For the latter, the two most common ones are:
 
-- [Team Foundation Build](https://msdn.microsoft.com/Library/vs/alm/Build/overview) is the build system of Visual Studio Team Services and TFS. It is tightly integrated with Visual Studio, which makes it convenient for developers to trigger builds, automatically run tests, and see the results.
+- [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/) is the build system of Azure DevOps and TFS. It is tightly integrated with Visual Studio, which makes it convenient for developers to trigger builds, automatically run tests, and see the results.
 - Jenkins is an open-source CI server that with a rich ecosystem of plugins to support all kinds of software development. It runs on Windows and Mac OS X. Jenkins is not integrated with any specific IDE. Instead, it is configured and managed via a web interface. Jenkins CI is also easy to install and configure which makes it appealing to small teams.
 
-You can use TFS/VSTS by itself, or you can use Jenkins in combination with TFS/VSTS or Git as described in the following sections.
+You can use TFS/Azure DevOps by itself, or you can use Jenkins in combination with TFS/Azure DevOps or Git as described in the following sections.
 
 ### Visual Studio Team Services and Team Foundation Server
 
 As discussed, Visual Studio Team Services and Team Foundation Server provides both version control and build services. Build services always require a Xamarin Business or Enterprise license for each target platform.
 
-With Visual Studio Team Services, you create a separate build definition for each target platform and enter the appropriate license there. Once configured, VSTS will run builds and tests in the cloud. See [Team Foundation Build](https://msdn.microsoft.com/Library/vs/alm/Build/overview) for more details.
+With Visual Studio Team Services, you create a separate build definition for each target platform and enter the appropriate license there. Once configured, Azure DevOps will run builds and tests in the cloud. See [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/) for more details.
 
 With Team Foundation Server, you configure a build machine as follows for specific target platforms:
 
-- **Android and Windows:** Install Visual Studio and the Xamarin tools (for Android and Windows both) and configure with your Xamarin licenses. It is also necessary to move the Android SDK to a shared location on the server where the TFS build agent can find it. For details, see [Configuring TFVC](https://docs.microsoft.com/vsts/tfvc/overview).
+- **Android and Windows:** Install Visual Studio and the Xamarin tools (for Android and Windows both) and configure with your Xamarin licenses. It is also necessary to move the Android SDK to a shared location on the server where the TFS build agent can find it. For details, see [Configuring TFVC](https://docs.microsoft.com/azure/devops/repos/tfvc/overview).
 - **iOS and Xamarin:** Install Visual Studio and the Xamarin tools on the Windows server with the appropriate license. Then install Visual Studio for Mac on a network-accessible Mac OS X machine, which will serve as a build host and create the final app package (IPA for iOS, APP for OS X).
 
 The following diagram illustrates this topography:
 
 [![](intro-to-ci-images/intro03-small.png "This diagram illustrates this topography")](intro-to-ci-images/intro03.png#lightbox)
 
-It is also possible to link a local TFS server to a Visual Studio Team Services project so that VSTS builds are delegated to the local server. For details, see [Deploy and configure a build server](http://msdn.microsoft.com/library/ms181712.aspx) on MSDN.
+It is also possible to link a local TFS server to a Visual Studio Team Services project so that Azure DevOps builds are delegated to the local server. For details, see [Build and release agents](https://docs.microsoft.com/azure/devops/pipelines/agents/agents/).
 
 ### Visual Studio Team Services and Jenkins
 
-If you use Jenkins to build your apps, you can store your code in Visual Studio Team Services or Team Foundation Server and continue to use Jenkins for your CI builds. You can trigger a Jenkins build when you push code to your team project's Git repository or when you check code in to TFVC. For details, see [Jenkins with Visual Studio Team Services](https://docs.microsoft.com/en-us/vsts/service-hooks/services/jenkins?view=vsts).
+If you use Jenkins to build your apps, you can store your code in Visual Studio Team Services or Team Foundation Server and continue to use Jenkins for your CI builds. You can trigger a Jenkins build when you push code to your team project's Git repository or when you check code in to TFVC. For details, see [Jenkins with Azure DevOps](https://docs.microsoft.com/azure/devops/service-hooks/services/jenkins).
 
 [![](intro-to-ci-images/intro04-small.png "If you use Jenkins to build your apps, you can store your code in Visual Studio Team Services or Team Foundation Server and continue to use Jenkins for your CI builds")](intro-to-ci-images/intro04.png#lightbox)
 
@@ -113,9 +109,8 @@ Another common CI environment can be entirely OS X based. This scenario involves
 [![](intro-to-ci-images/intro05-small.png "This is very similar to the Visual Studio Team Services + Jenkins environment discussed in the previous section")](intro-to-ci-images/intro05.png#lightbox)
 
 > [!IMPORTANT]
-> **Note: Jenkins is [not supported by Xamarin](~/cross-platform/troubleshooting/questions/xamarin-jenkins.md).**
-
+> **Jenkins is [not supported by Microsoft](~/cross-platform/troubleshooting/questions/xamarin-jenkins.md).**
 
 # Summary
 
-This document introduced the concept of continuous integration and the advantages it brings to software development teams. The importance of version control was discussed along with the role and responsibilities of the build server. The document then went on to discuss some of the tools that can be use for source code control and build servers. We also introduced App Center Test, which helps developers publish great apps by running automated tests that will prove the quality and functionality of their apps. More detailed documentation on submitting apps and tests to App Center can be found [here](https://docs.microsoft.com/appcenter/test-cloud). Finally, to help understand how all these tools and components fit together, we outlined several different CI environments that organizations might establish for continuous integration. For more information using Visual Studio Team Services and Team Foundation Server with Xamarin projects, see [Configuring TFVC](https://docs.microsoft.com/vsts/tfvc/overview) and this [Continuous Integration introduction](https://docs.microsoft.com/vsts/build-release/actions/ci-cd-part-1). Likewise, if you're using Jenkins, see [Using Jenkins with Xamarin](~/tools/ci/jenkins-walkthrough.md) for detailed information on setting up a continuous integration.
+This document introduced the concept of continuous integration and the advantages it brings to software development teams. The importance of version control was discussed along with the role and responsibilities of the build server. The document then went on to discuss some of the tools that can be use for source code control and build servers. We also introduced App Center Test, which helps developers publish great apps by running automated tests that will prove the quality and functionality of their apps. More detailed documentation on submitting apps and tests to App Center can be found [here](https://docs.microsoft.com/appcenter/test-cloud). Finally, to help understand how all these tools and components fit together, we outlined several different CI environments that organizations might establish for continuous integration. For more information using Visual Studio Team Services and Team Foundation Server with Xamarin projects, see [Configuring TFVC](https://docs.microsoft.com/azure/devops/repos/tfvc/overview/) and this [Continuous Integration introduction](https://docs.microsoft.com/azure/devops/pipelines/get-started-designer/). Likewise, if you're using Jenkins, see [Using Jenkins with Xamarin](~/tools/ci/jenkins-walkthrough.md) for detailed information on setting up a continuous integration.

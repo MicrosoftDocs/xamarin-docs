@@ -18,13 +18,12 @@ This guide shows how to install Jenkins on a dedicated computer running OS X, an
 
 Once Jenkins is configured and any necessary plugins have been installed, we will create one or more jobs to compile the Xamarin.Android and Xamarin.iOS projects. A job is a collection of steps and metadata required to perform some work. A job typically consists of the following:
 
--  **Source Code Management (SCM)** – This is a meta-data entry in the Jenkins configuration files that contains information on how to connect to source code control and what files to retrieve.
--  **Triggers** – Triggers are used to start a job based on certain actions, such as when a developer commits changes to the source code repository.
--  **Build Instructions** – This is a plugin or a script that will compile the source code and produce a binary that can be installed on mobile devices.
--  **Optional Build Actions** – This could include running unit tests, performing static analysis on the code, signing code, or starting another job to perform other build related work.
--  **Notifications** – A job may send out some kind of notification about the status of a build.
--  **Security** – Although optional, it is strongly recommended that the Jenkins security features also be enabled.
-
+- **Source Code Management (SCM)** – This is a meta-data entry in the Jenkins configuration files that contains information on how to connect to source code control and what files to retrieve.
+- **Triggers** – Triggers are used to start a job based on certain actions, such as when a developer commits changes to the source code repository.
+- **Build Instructions** – This is a plugin or a script that will compile the source code and produce a binary that can be installed on mobile devices.
+- **Optional Build Actions** – This could include running unit tests, performing static analysis on the code, signing code, or starting another job to perform other build related work.
+- **Notifications** – A job may send out some kind of notification about the status of a build.
+- **Security** – Although optional, it is strongly recommended that the Jenkins security features also be enabled.
 
 This guide will walk through how to setup a Jenkins server covering each of these points. By the end of it, we should have a good understanding of how to setup and configure Jenkins to create IPA and APK’s for our Xamarin mobile projects.
 
@@ -36,11 +35,11 @@ The build server for Xamarin mobile apps is set up very much like a developer’
 
 The following diagram illustrates all of these elements on a typical Jenkins build server:
 
- [![](jenkins-walkthrough-images/image1.png "This diagram illustrates all of these elements on a typical Jenkins build server")](jenkins-walkthrough-images/image1.png#lightbox)
+[![](jenkins-walkthrough-images/image1.png "This diagram illustrates all of these elements on a typical Jenkins build server")](jenkins-walkthrough-images/image1.png#lightbox)
 
-iOS applications can only be built and signed on a computer running Mac OS X. A Mac Mini is a reasonable lower-cost option, but any computer capable of running OS X 10.10 (Yosemite) or higher is sufficient.
+iOS applications can only be built and signed on a computer running macOS. A Mac Mini is a reasonable lower-cost option, but any computer capable of running OS X 10.10 (Yosemite) or higher is sufficient.
 
-If TFS is being used for source code control, you will want to install [Team Explorer Everywhere](http://www.microsoft.com/en-ca/download/details.aspx?id=40785), available from Microsoft. Team Explorer Everywhere provides cross-platform access to TFS at the Terminal in OS X.
+If TFS is being used for source code control, you will want to install [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/). Team Explorer Everywhere provides cross-platform access to TFS at the Terminal in macOS.
 
 [!include[](~/tools/ci/includes/firewall-information.md)]
 
@@ -48,83 +47,80 @@ If TFS is being used for source code control, you will want to install [Team Exp
 
 The first task to using Jenkins is to install it. There are three ways to run Jenkins on OS X:
 
--  As a daemon, running in the background.
--  Inside a servlet container such as Tomcat, Jetty, or JBoss.
--  As a normal process running under a user account.
-
+- As a daemon, running in the background.
+- Inside a servlet container such as Tomcat, Jetty, or JBoss.
+- As a normal process running under a user account.
 
 Most traditional continuous integration applications run in the background, either as a daemon (on OS X or \*nix) or as a service (on Windows). This is suitable for scenarios where there is no GUI interaction required, and where the setup of the build environment can be easily performed. Mobile apps also require keystores and signing certificates that might be problematic to access when Jenkins is running as a daemon. Because of these concerns, this document focuses on the third scenario – running Jenkins under a user account on the build server.
 
 Jenkins.App is a handy way to install Jenkins. This is an AppleScript wrapper that simplifies the starting and stopping of a Jenkins server. Instead of running in a bash shell, Jenkins runs as an app with icon in the Dock, as shown in the following screenshot:
 
- [![](jenkins-walkthrough-images/image2.png "Instead of running in a bash shell, Jenkins runs as an app with icon in the Dock, as shown in this screenshot")](jenkins-walkthrough-images/image2.png#lightbox)
+[![](jenkins-walkthrough-images/image2.png "Instead of running in a bash shell, Jenkins runs as an app with icon in the Dock, as shown in this screenshot")](jenkins-walkthrough-images/image2.png#lightbox)
 
 Starting or stopping Jenkins is as simple as starting or stopping Jenkins.App.
 
 To install Jenkins.App, download the latest version from the project’s download page, pictured in the screenshot below:
 
- [![](jenkins-walkthrough-images/image3.png "App, download the latest version from the projects download page, pictured in this screenshot")](jenkins-walkthrough-images/image3.png#lightbox)
+[![](jenkins-walkthrough-images/image3.png "App, download the latest version from the projects download page, pictured in this screenshot")](jenkins-walkthrough-images/image3.png#lightbox)
 
 Extract the zip file to the `/Applications` folder on your build server, and start it just like any other OS X application.
 The first time you start up Jenkins.App, it will present a dialog informing you that it will download Jenkins:
 
- [![](jenkins-walkthrough-images/image4.png "App, it will present a dialog informing you that it will download Jenkins")](jenkins-walkthrough-images/image4.png#lightbox)
+[![](jenkins-walkthrough-images/image4.png "App, it will present a dialog informing you that it will download Jenkins")](jenkins-walkthrough-images/image4.png#lightbox)
 
 Once Jenkins.App has finished its download, it will display another dialog asking you if you would like to customize the Jenkins startup, as seen in the following screenshot:
 
- [![](jenkins-walkthrough-images/image5.png "App has finished its download, it will display another dialog asking you if you would like to customize the Jenkins startup, as seen in this screenshot")](jenkins-walkthrough-images/image5.png#lightbox)
+[![](jenkins-walkthrough-images/image5.png "App has finished its download, it will display another dialog asking you if you would like to customize the Jenkins startup, as seen in this screenshot")](jenkins-walkthrough-images/image5.png#lightbox)
 
 Customizing Jenkins is optional and does not have to be performed each time the app is started – the default settings for Jenkins will work for most situations.
 
 If it is necessary to customize Jenkins, click on the **Change defaults** button. This will present you with two consecutive dialogs: one that asks for Java command line parameters, and another that asks for Jenkins command line parameters. The following two screenshots show these two dialogs:
 
- [![](jenkins-walkthrough-images/image6.png "This screenshot shows the dialogs")](jenkins-walkthrough-images/image6.png#lightbox)
+[![](jenkins-walkthrough-images/image6.png "This screenshot shows the dialogs")](jenkins-walkthrough-images/image6.png#lightbox)
 
- [![](jenkins-walkthrough-images/image7.png "This screenshot shows the dialogs")](jenkins-walkthrough-images/image7.png#lightbox)
+[![](jenkins-walkthrough-images/image7.png "This screenshot shows the dialogs")](jenkins-walkthrough-images/image7.png#lightbox)
 
-Once Jenkins is running, you may want to set it as a login item so that it will start up each time the user logins in to the computer. You can do this by right-clicking on the Jenkins icon in the Dock and choosing **Options…Open at Login**, as shown in the following screenshot:
+Once Jenkins is running, you may want to set it as a login item so that it will start up each time the user logins in to the computer. You can do this by right-clicking on the Jenkins icon in the Dock and choosing **Options... > Open at Login**, as shown in the following screenshot:
 
- [![](jenkins-walkthrough-images/image8.png "You can do this by right-clicking on the Jenkins icon in the Dock and choosing OptionsOpen at Login, as shown in this screenshot")](jenkins-walkthrough-images/image8.png#lightbox)
+[![](jenkins-walkthrough-images/image8.png "You can do this by right-clicking on the Jenkins icon in the Dock and choosing OptionsOpen at Login, as shown in this screenshot")](jenkins-walkthrough-images/image8.png#lightbox)
 
-This will cause Jenkins.App to automatically launch each time the user logs in, but not when the computer boots up. It is possible to specify a user account that OS X will use to automatically login with at boot time. Open the **System Preferences**, and select the **User & Groups** icon as shown in this screenshot:
+This will cause Jenkins.App to automatically launch each time the user logs in, but not when the computer boots up. It is possible to specify a user account that OS X will use to automatically login with at boot time. Open the **System Preferences**, and select the **Users & Groups** icon as shown in this screenshot:
 
- [![](jenkins-walkthrough-images/image9.png "Open the System Preferences, and select the User  Groups icon as shown in this screenshot")](jenkins-walkthrough-images/image9.png#lightbox)
+[![](jenkins-walkthrough-images/image9.png "Open the System Preferences, and select the User  Groups icon as shown in this screenshot")](jenkins-walkthrough-images/image9.png#lightbox)
 
 Click on the **Login Options** button, and then choose the account that OS X will use for login at boot time.
 
 At this point Jenkins has been installed. However, if we want to build Xamarin mobile applications, we will need to install some plugins.
 
-
 ### Installing Plugins
 
 When the Jenkins.App installer has completed, it will start Jenkins and launch the web browser with the URL http://localhost:8080, as shown in the screenshot below:
 
- [![](jenkins-walkthrough-images/image10.png "8080, as shown in this screenshot")](jenkins-walkthrough-images/image10.png#lightbox)
+[![](jenkins-walkthrough-images/image10.png "8080, as shown in this screenshot")](jenkins-walkthrough-images/image10.png#lightbox)
 
 From this page, select **Jenkins > Manage Jenkins > Manage Plugins** from the menu in the upper left hand corner, as shown in the screenshot below:
 
- [![](jenkins-walkthrough-images/image11.png "From this page, select Jenkins  Manage Jenkins  Manage Plugins from the menu in the upper left hand corner")](jenkins-walkthrough-images/image11.png#lightbox)
+[![](jenkins-walkthrough-images/image11.png "From this page, select Jenkins  Manage Jenkins  Manage Plugins from the menu in the upper left hand corner")](jenkins-walkthrough-images/image11.png#lightbox)
 
 This will display the **Jenkins Plugin Manager** page. If you click on the Available tab, you will see a list of over 600 plugins that can be downloaded and installed. This is pictured in the screenshot below:
 
- [![](jenkins-walkthrough-images/image12.png "If you click on the Available tab, you will see a list of over 600 plugins that can be downloaded and installed")](jenkins-walkthrough-images/image12.png#lightbox)
+[![](jenkins-walkthrough-images/image12.png "If you click on the Available tab, you will see a list of over 600 plugins that can be downloaded and installed")](jenkins-walkthrough-images/image12.png#lightbox)
 
 Scrolling through all 600 plugins to find a few can be tedious and error prone. Jenkins provides a Filter search field in the upper right-hand corner of the interface. Using this Filter field to search will simplify locating and installed one or all of the following plugins:
 
--  **Jenkins MSBuild Plugin** – This plugin makes it possible to build Visual Studio and Visual Studio for Mac solutions (.sln) and projects (.csproj).
--  **Environment Injector Plugin** – This is an optional but useful plugin that makes it possible to set environment variables at the job and build level. It also offers extra protection for variables such as the passwords used to code sign the application. It is sometimes abbreviated as the  *EnvInject Plugin* .
--  **Team Foundation Server Plugin** – This is an optional plugin that is only required if you are using Team Foundation Server or Team Foundation Services for source code control.
+- **Jenkins MSBuild Plugin** – This plugin makes it possible to build Visual Studio and Visual Studio for Mac solutions (.sln) and projects (.csproj).
+- **Environment Injector Plugin** – This is an optional but useful plugin that makes it possible to set environment variables at the job and build level. It also offers extra protection for variables such as the passwords used to code sign the application. It is sometimes abbreviated as the  *EnvInject Plugin* .
+- **Team Foundation Server Plugin** – This is an optional plugin that is only required if you are using Team Foundation Server or Team Foundation Services for source code control.
 
 Jenkins supports Git without any extra plugins.
 
 After installing all of the plugins, you’ll want to restart Jenkins and configure the global settings for each plugin. The global settings for a plugin can be found by selecting **Jenkins > Manage Jenkins > Configure System** from the upper left hand corner, as shown in the screenshot below:
 
- [![](jenkins-walkthrough-images/image13.png "The global settings for a plugin can be found by selecting Jenkins / Manage Jenkins / Configure System from the upper left hand corner")](jenkins-walkthrough-images/image13.png#lightbox)
+[![](jenkins-walkthrough-images/image13.png "The global settings for a plugin can be found by selecting Jenkins / Manage Jenkins / Configure System from the upper left hand corner")](jenkins-walkthrough-images/image13.png#lightbox)
 
 When you select this menu option, you will be taken to the **Configure System [Jenkins]** page. This page contains sections to configure Jenkins itself and to set some of the global plugin values.  The screenshot below illustrates an example of this page:
 
- [![](jenkins-walkthrough-images/image14.png "This screenshot illustrates an example of this page")](jenkins-walkthrough-images/image14.png#lightbox)
-
+[![](jenkins-walkthrough-images/image14.png "This screenshot illustrates an example of this page")](jenkins-walkthrough-images/image14.png#lightbox)
 
 #### Configuring the MSBuild Plugin
 
@@ -138,23 +134,27 @@ Click on this button, and fill out the **Name** and **Path** to **MSBuild** fiel
 
 This section is mandatory if you intend to use TFS for your source code control.
 
-In order for an OS X workstation to interact with a TFS server, Team Explorer Everywhere must be installed on the workstation. Team Explorer Everywhere is a set of tools from Microsoft that includes a cross-platform command line client for accessing TFS. Team Explorer Everywhere can be downloaded from Microsoft and installed in three steps:
+In order for an macOS workstation to interact with a TFS server, [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) must be installed on the workstation. Team Explorer Everywhere is a set of tools from Microsoft that includes a cross-platform command line client for accessing TFS. Team Explorer Everywhere can be downloaded from Microsoft and installed in three steps:
 
 1. Unzip the archive file to a directory that is accessible to the user account. For example, you might unzip the file to **~/tee**.
 2. Configure the shell or system path to include the folder that holds the files that were unzipped in step one above. For example,
 
-		echo export PATH~/tee/:$PATH' >> ~/.bash_profile
+    ```
+    echo export PATH~/tee/:$PATH' >> ~/.bash_profile
+    ```
 
 3. To confirm that Team Explorer Everywhere is installed, open a terminal session, and execute the `tf` command. If tf is properly configured, you will see the following output in your terminal session:
 
-		$ tf
-		Team Explorer Everywhere Command Line Client (version 11.0.0.201306181526)
-
-		Available commands and their options:
+    ```
+    $ tf
+    Team Explorer Everywhere Command Line Client (version 11.0.0.201306181526)
+    
+    Available commands and their options:
+    ```
 
 Once the command line client for TFS is installed, Jenkins must be configured with the full path to the `tf` command line client. Scroll down the **Configure System [Jenkins]** page until you find the Team Foundation Server section, as shown in the following screenshot:
 
- [![](jenkins-walkthrough-images/image17.png "Scroll down the Configure System Jenkins page until you find the Team Foundation Server section")](jenkins-walkthrough-images/image17.png#lightbox)
+[![](jenkins-walkthrough-images/image17.png "Scroll down the Configure System Jenkins page until you find the Team Foundation Server section")](jenkins-walkthrough-images/image17.png#lightbox)
 
 Enter the full path to the `tf` command, and click the **Save** button.
 
@@ -164,29 +164,30 @@ When first installed, Jenkins has security disabled, so it is possible for any u
 
 Security settings can be found by selecting **Jenkins > Manage Jenkins > Configure Global Security**, as shown in this screenshot:
 
- [![](jenkins-walkthrough-images/image18.png "Security settings can be found by selecting Jenkins / Manage Jenkins / Configure Global Security")](jenkins-walkthrough-images/image18.png#lightbox)
+[![](jenkins-walkthrough-images/image18.png "Security settings can be found by selecting Jenkins / Manage Jenkins / Configure Global Security")](jenkins-walkthrough-images/image18.png#lightbox)
 
 On the **Configure Global Security** page, check the **Enable Security** checkbox and the **Access Control** form should appear, similar to the next screenshot:
 
- [![](jenkins-walkthrough-images/image19.png "On the Configure Global Security page, check the Enable Security checkbox and the Access Control form should appear, similar to this screenshot")](jenkins-walkthrough-images/image19.png#lightbox)
+[![](jenkins-walkthrough-images/image19.png "On the Configure Global Security page, check the Enable Security checkbox and the Access Control form should appear, similar to this screenshot")](jenkins-walkthrough-images/image19.png#lightbox)
 
 Toggle the radio button for **Jenkins’ own user database** in the **Security Realm Section**, and ensure that **Allow users to sign up** is also checked, as illustrated in the following screenshot:
 
- [![](jenkins-walkthrough-images/image20.png "Toggle the radio button for Jenkins own user database in the Security Realm Section, and ensure that Allow users to sign up is also checked")](jenkins-walkthrough-images/image20.png#lightbox)
+[![](jenkins-walkthrough-images/image20.png "Toggle the radio button for Jenkins own user database in the Security Realm Section, and ensure that Allow users to sign up is also checked")](jenkins-walkthrough-images/image20.png#lightbox)
 
 Finally, restart Jenkins and create a new account. The first account that is created is the root account, and this account will be automatically promoted to an administrator. Navigate back to the **Configure Global Security** page, and check off the **Matrix-based security** radio button. The root account should be granted full access, and the anonymous account should be given read-only access, as shown in the following screenshot:
 
- [![](jenkins-walkthrough-images/image21.png "The root account should be granted full access, and the anonymous account should be given read-only access")](jenkins-walkthrough-images/image21.png#lightbox)
+[![](jenkins-walkthrough-images/image21.png "The root account should be granted full access, and the anonymous account should be given read-only access")](jenkins-walkthrough-images/image21.png#lightbox)
 
 Once these settings are saved and Jenkins is restarted, security will be turned on.
-
 
 #### Disabling Security
 
 In the event of a forgotten password or Jenkins-wide lockout, it is possible to disable security by following these steps:
 
-1. Stop Jenkins. If you are using Jenkins.app, you can do this by right-clicking on the Jenkins.App icon in the Dock, and selecting Quit from the menu that pops up: 
-	![](jenkins-walkthrough-images/image19.png "App icon in the Dock, and selecting Quit from the menu that pops up")
+1. Stop Jenkins. If you are using Jenkins.app, you can do this by right-clicking on the Jenkins.App icon in the Dock, and selecting Quit from the menu that pops up:
+
+    ![App icon in the Dock, and selecting Quit from the menu that pops up](jenkins-walkthrough-images/image19.png)
+
 2. Open the file **~/.jenkins/config.xml** in a text editor.
 3. Change the value of the `<usesecurity></usesecurity>` element from `true` to `false`.
 4. Delete the `<authorizationstrategy></authorizationstrategy>` and the `<securityrealm></securityrealm>` elements from the file.
@@ -197,7 +198,6 @@ In the event of a forgotten password or Jenkins-wide lockout, it is possible to 
 At the top level, Jenkins organizes all of the various tasks required to build software into a *job*. A job also has metadata associated with it, providing information about the build such as how to get the source code, how often the build should run, any special variables that are necessary for building, and how to notify developers if the build fails.
 
 Jobs are created by selecting **Jenkins > New Job** from the menu in the upper right hand corner, as shown in the following screenshot:
-
 
 ![](jenkins-walkthrough-images/image22.png "Jobs are created by selecting Jenkins  New Job from the menu in the upper right hand corner")
 
@@ -216,9 +216,9 @@ This folder contains all the files and artifacts specific to the job such as log
 
 Once the initial job has been created, it must be configured with one or more of the following:
 
- - The source code management system must be specified.
- - One or more *build actions* must be added to the project. These are the steps or tasks required to build the application.
- - The job must be assigned one *build trigger* – a set of instructions informing Jenkins how often to retrieve the code and build the final project.
+- The source code management system must be specified.
+- One or more *build actions* must be added to the project. These are the steps or tasks required to build the application.
+- The job must be assigned one *build trigger* – a set of instructions informing Jenkins how often to retrieve the code and build the final project.
 
 ### Configuring Source Code Control
 
@@ -239,7 +239,6 @@ Once the changes are saved, Git configuration is complete.
 This section only applies to TFS users.
 
 Click on the **Team Foundation Server** radio button and the TFS configuration section should appear, similar to what is in the following screenshot:
-
 
 ![](jenkins-walkthrough-images/image26.png "Click on the Team Foundation Server radio button and the TFS configuration section should appear")
 
@@ -271,7 +270,9 @@ To help with troubleshooting problems that might arise as part of the build, Jen
 
 Jenkins will retrieve the entire source code into a special folder called a *workspace*. This directory can be found inside the folder at the following location:
 
-	~/.jenkins/jobs/[JOB NAME]/workspace
+    ```
+    ~/.jenkins/jobs/[JOB NAME]/workspace
+    ```
 
 The path to the workspace will be stored in an environment variable named `$WORKSPACE`.
 
@@ -290,7 +291,6 @@ Polling SCM is a popular trigger because it provides quick feedback when a devel
 
 Periodic builds are often used to create a version of the application that can be distributed to testers. For example, a periodic build might be scheduled for Friday evening so that members of the QA team can test the work of the previous week.
 
-
 ### Compiling a Xamarin.iOS Applications
 Xamarin.iOS projects can be compiled at the command line using `xbuild` or `msbuild`. The shell command will execute in the context of the user account that is running Jenkins. It is important that the user account has access to the provisioning profile so that the application can be properly packaged for distribution. It is possible to add this shell command to the job configuration page.
 
@@ -298,15 +298,14 @@ Scroll down to the **Build** section. Click the **Add build step** button and se
 
 ![](jenkins-walkthrough-images/image33.png "Click the Add build step button and select Execute shell")
 
-
 [!include[](~/tools/ci/includes/commandline-compile-of-xamarin-ios-ipa.md)]
 
 ### Building a Xamarin.Android Project
 
 Building a Xamarin.Android project is very similar in concept to building a Xamarin.iOS project. To create an APK from a Xamarin.Android project, Jenkins must be configured to perform the following two steps:
 
- - Compile the project using the MSBuild plugin
- - Sign and zip align the APK with a valid release keystore.
+- Compile the project using the MSBuild plugin
+- Sign and zip align the APK with a valid release keystore.
 
 These two steps will be covered in more detail in the next two sections.
 
@@ -320,10 +319,11 @@ Once the build step is added to the project, fill in the form fields that appear
 
 ![](jenkins-walkthrough-images/image37.png "Once the build step is added to the project, fill in the form fields that appear")
 
-
 This build step will execute `xbuild` in the **$WORKSPACE** folder. The MSBuild Build File is set to the **Xamarin.Android.csproj** file. The **Command Line Arguments** specify a release build of the target **PackageForAndroid**. The product of this step will be an APK that at the following location:
 
+    ```
     $WORKSPACE/[PROJECT NAME]/bin/Release
+    ```
 
 The following screenshot shows an example of this APK:
 
@@ -352,7 +352,9 @@ As described in the Requirements section, these environment variables can be set
 
 In the **Properties Content** form field that will appear, environment variables are added, one per line, in the following format:
 
-	ENVIRONMENT_VARIABLE_NAME = value
+    ```
+    ENVIRONMENT_VARIABLE_NAME = value
+    ```
 
 The following screenshot shows the environment variables that are required for signing the APK:
 
@@ -368,9 +370,10 @@ Immediately before the **Build** section of the job configuration is a **Build E
 
 Once the environment variables have been initialized, the next step is to add a build step for signing and zip aligning the APK. Immediately after the build step to insert the environment variables will be another **Execute shell** command build that will execute `jarsigner` and `zipalign`. Each command will take up one line, as shown in the following snippet:
 
-
-	jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore $KEYSTORE_FILE -storepass $STORE_PASS -signedjar $SIGNED_APK $INPUT_APK $KEYSTORE_ALIAS
-	zipalign -f -v 4 $SIGNED_APK $FINAL_APK
+    ```
+    jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore $KEYSTORE_FILE -storepass $STORE_PASS -signedjar $SIGNED_APK $INPUT_APK $KEYSTORE_ALIAS
+    zipalign -f -v 4 $SIGNED_APK $FINAL_APK
+    ```
 
 The following screenshot shows an example of how to enter the `jarsigner` and `zipalign` commands into the step:
 
@@ -382,13 +385,11 @@ Once all the build actions are in place, it is good practice to trigger a manual
 
 Automated tests can be submitted to Test Cloud using shell commands. For more information about setting up a Test Run in Xamarin Test Cloud, see this guide for using [Xamarin.UITest](/appcenter/test-cloud/preparing-for-upload/uitest/).
 
-
 ## Summary
 
-In this guide we introduced Jenkins as a build server on Mac OS X, and configured it to compile and prepare Xamarin mobile applications for release. We installed Jenkins on a Mac OS X computer along with several plugins to support the build process. We created and configured a job that will pull code from either TFS or Git, and then compile that code into a release ready application. We also explored two different ways to schedule when jobs should be run.
+In this guide we introduced Jenkins as a build server on macOS, and configured it to compile and prepare Xamarin mobile applications for release. We installed Jenkins on a macOS computer along with several plugins to support the build process. We created and configured a job that will pull code from either TFS or Git, and then compile that code into a release ready application. We also explored two different ways to schedule when jobs should be run.
 
 ## Related Links
 
-- [Continuous Integration](https://developer.xamarin.com~/testcloud/ci/)
-- [Submitting Tests to Xamarin Test Cloud](https://developer.xamarin.com~/testcloud/submitting/)
-- [Why Is Jenkins Not Supported By Xamarin?](~/cross-platform/troubleshooting/questions/xamarin-jenkins.md)
+- [Continuous Integration](~/tools/ci/index.md)
+- [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/)
