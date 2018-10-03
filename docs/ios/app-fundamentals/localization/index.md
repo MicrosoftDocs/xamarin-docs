@@ -16,7 +16,7 @@ _This document covers the localization features of the iOS SDK and how to access
 Refer to the [Internationalization Encodings](encodings.md) for instructions on including
 character sets/code pages in applications that must process non-Unicode data.
 
-## iOS Platform Features
+## iOS platform features
 
 This section describes some of the localization features in iOS. Skip to the
 [next section](#basics) to see specific code and examples.
@@ -98,9 +98,7 @@ iOS generates an `NSCurrentLocaleDidChangeNotification` when the user updates
 their locale. Applications can listen for this notification while they are
 running and can make appropriate changes to the UI.
 
-<a name="basics" />
-
-## Localization Basics in iOS
+## Localization basics in iOS
 
 The following features of iOS are easily leveraged in Xamarin to provide
 localized resources for display to the user. Refer to the [TaskyL10n sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
@@ -174,13 +172,13 @@ For more information about these **Info.plist** keys, take a look at Apple's
 
 The `NSBundle.MainBundle.GetLocalizedString` method looks up localized text
 that has been stored in **.strings** files in the project. These files are
-organized by language, in specially named directories with an **.lproj** suffix.
+organized by language, in specially named directories with an **.lproj** suffix (note the first letter of the extension is a lower-case "L").
 
 #### .strings file locations
 
 - **Base.lproj** is the directory that contains resources for the default language.
   It is often located in the project root (but can also be placed in the **Resources** folder).
-- **<language>.lproj** directories are created for each supported language, usually
+- **&lt;language&gt;.lproj** directories are created for each supported language, usually
   in the **Resources** folder.
 
 There can be a number of different **.strings** files in each language directory:
@@ -204,9 +202,9 @@ The syntax for localized string values is:
 
 You should escape the following characters in strings:
 
-* `\"`	quote
-* `\\`	backslash
-* `\n`	newline
+* `\"` quote
+* `\\` backslash
+* `\n` newline
 
 This is an example **es/Localizable.strings** (ie. Spanish) file from the sample:
 
@@ -228,9 +226,9 @@ To localize an image in iOS:
 
 1. Refer to the image in code, for example:
 
-  ```csharp
-  UIImage.FromBundle("flag");
-  ```
+    ```csharp
+    UIImage.FromBundle("flag");
+    ```
 
 2. Place the default image file **flag.png** in **Base.lproj**
   (the native development language directory).
@@ -242,8 +240,7 @@ To localize an image in iOS:
 If an image is not present for a particular language, iOS will fall back to the
 default native language folder and load the image from there.
 
-
-#### Launch Images
+#### Launch images
 
 Use the standard naming conventions for the launch images (and the XIB or
 Storyboard for iPhone 6 models) when placing them in
@@ -271,7 +268,7 @@ Other keys that you can use to [localize application-specific strings](https://d
 - CFBundleShortVersionString
 - NSHumanReadableCopyright
 
-### Dates and Times
+### Dates and times
 
 Although it is possible to use the built-in .NET date and time functions
 (along with the current `CultureInfo`) to format dates and times for a
@@ -317,19 +314,19 @@ date and time formatting, check both **iPhone Language** and **Region** settings
 
 <a name="rtl" />
 
-### Right-to-Left (RTL) Layout
+### Right-to-Left (RTL) layout
 
 iOS provides a number of features to assist in building RTL-aware apps:
 
-* Use auto layout's `leading` and `trailing` attributes for control aligment
+- Use auto layout's `leading` and `trailing` attributes for control aligment
   (which corresponds to left and right for English, but is reversed for RTL languages).
   The [`UIStackView`](~/ios/user-interface/controls/uistackview.md)
   control is particularly useful for laying out controls to be RTL-aware.
-* Use `TextAlignment = UITextAlignment.Natural` for text alignment (which will be left
+- Use `TextAlignment = UITextAlignment.Natural` for text alignment (which will be left
   for most languages but right for RTL).
-* `UINavigationController` automatically flips the back button and reverses swipe direction.
+- `UINavigationController` automatically flips the back button and reverses swipe direction.
 
-The following screenshots show the 
+The following screenshots show the
 [localized Tasky sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) 
 in Arabic and Hebrew (although English has been entered in the fields):
 
@@ -344,7 +341,7 @@ way as LTR text.
 
 <a name="code"/>
 
-## Localizing the UI in Code
+## Localizing the UI in code
 
 The [Tasky (localized in code)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
 sample shows how to localize an application where the user-interface is
@@ -388,12 +385,12 @@ someControl.Text = localizedString;
 
 <a name="storyboard"/>
 
-## Localizing Storyboard UIs
+## Localizing storyboard UIs
 
 The sample [Tasky (localized storyboard)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard)
 shows how to localize text on controls in a storyboard.
 
-### Project Structure
+### Project structure
 
 The **Base.lproj** directory contains the storyboard, and should also contain
 any images used in the application.
@@ -412,8 +409,8 @@ have been localized, to override the one present in **Base.lproj**.
 When creating and editing controls in a storyboard, select each control
 and check the ID to use for localization:
 
-* In Visual Studio for Mac, it's located in the **Properties Pad** and is called **Localization ID**.
-* In Xcode, it's called **Object ID**.
+- In Visual Studio for Mac, it's located in the **Properties Pad** and is called **Localization ID**.
+- In Xcode, it's called **Object ID**.
 
 This string value often has a form such as "NF3-h8-xmR", as shown in the
 following screenshot:
