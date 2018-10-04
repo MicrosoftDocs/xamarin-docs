@@ -62,12 +62,14 @@ The following XAML code example shows a [`TabbedPage`](xref:Xamarin.Forms.Tabbed
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:local="clr-namespace:TabbedPageWithNavigationPage;assembly=TabbedPageWithNavigationPage"
             x:Class="TabbedPageWithNavigationPage.MainPage">
-    <local:TodayPage />
-    <NavigationPage Title="Schedule" Icon="schedule.png">
-        <x:Arguments>
-            <local:SchedulePage />
-        </x:Arguments>
-    </NavigationPage>
+    <TabbedPage.Children>
+        <local:TodayPage />
+        <NavigationPage Title="Schedule" Icon="schedule.png">
+            <x:Arguments>
+                <local:SchedulePage />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
 </TabbedPage>
 ```
 
