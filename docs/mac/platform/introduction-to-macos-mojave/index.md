@@ -1,30 +1,19 @@
 ---
 title: "Introduction to macOS Mojave"
-description: "This document provides a high-level of overview of new and updated features in macOS Mojave for which Xamarin's preview release currently provides C# bindings."
+description: "This document provides a high-level of overview of new and updated features in macOS Mojave."
 ms.prod: xamarin
 ms.assetid: 4A41CD85-C807-44C9-85AB-B5441B145A73
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
-ms.date: 07/08/2018
+ms.date: 10/05/2018
 ---
 # Introduction to macOS Mojave
 
-![Preview](~/media/shared/preview.png)
-
-> [!WARNING]
-> Xamarin's support for the macOS Mojave SDK distributed with Xcode 10
-> is currently in preview, which means that it may contain bugs, 
-> is not feature complete, and may change. Use it for experimentation only.
-
 This document provides a high-level of overview of new and updated
-features in macOS Mojave for which Xamarin's preview release currently
-provides C# bindings.
+features in macOS Mojave.
 
-To get started building macOS Mojave apps with Xamarin, take a look at:
-
-- The [getting started guide](~/mac/platform/introduction-to-macos-mojave/get-started.md)
-- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
+To get started building macOS Mojave apps with Xamarin, take a look at the [getting started guide](~/mac/platform/introduction-to-macos-mojave/get-started.md) for [Xamarin.Mac 5.0](https://developer.xamarin.com/releases/mac/xamarin.mac_5/xamarin.mac_5.0/).
 
 ## Dark Mode
 
@@ -67,4 +56,4 @@ to adopt Metal and Metal Performance Shaders.
 
 - [Xamarin.Mac samples](https://developer.xamarin.com/samples/mac/)
 - [macOS – Apple Developer](https://developer.apple.com/macos/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
+- [Xamarin.Mac 5.0 release notes](https://developer.xamarin.com/releases/mac/xamarin.mac_5/xamarin.mac_5.0/)

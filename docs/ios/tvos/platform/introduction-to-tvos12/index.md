@@ -6,24 +6,13 @@ ms.assetid: 037F7FFF-2155-4017-B99A-839CE7EC5C9C
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 06/25/2018
+ms.date: 10/05/2018
 ---
 # Introduction to tvOS 12
 
-![Preview](~/media/shared/preview.png)
+This document provides a high-level overview of new and updated tvOS 12.
 
-> [!WARNING]
-> Xamarin's tvOS 12 support is currently in preview, which means that it
-> may contain bugs, is not feature-complete, and may change. Use it for
-> experimentation only.
-
-This document provides a high-level overview of new and updated tvOS 12
-features for which Xamarin's preview release currently provides C# bindings.
-
-To get started building tvOS 12 apps with Xamarin, take a look at:
-
-- The [getting started guide](~/ios/platform/introduction-to-ios12/get-started.md)
-- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
+To get started building tvOS 12 apps with Xamarin, take a look at the [getting started guide](~/ios/platform/introduction-to-ios12/get-started.md).
 
 ## TVUIKit
 
@@ -76,4 +65,3 @@ to adopt Metal.
 - [tvOS – Apple Developer (Apple)](https://developer.apple.com/tvos/)
 - [What's new in tvOS 12 (Apple) (video)](https://developer.apple.com/videos/play/wwdc2018/208/)
 - [TV (Apple)](https://www.apple.com/tv/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)

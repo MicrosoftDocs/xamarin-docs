@@ -6,18 +6,13 @@ ms.assetid: FB705CAD-B43C-4374-B139-92AB81185429
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 06/25/2018
+ms.date: 10/05/2018
 ---
 # tvOS platform features
 
 These guides describe the features found in specific tvOS releases.
 
 ## [Introduction to tvOS 12](~/ios/tvos/platform/introduction-to-tvos12/index.md)
-
-> [!WARNING]
-> Xamarin's tvOS 12 support is currently in preview, which means
-> that it may contain bugs, is not feature-complete, and may change.
-> Use it for experimentation only.
 
 This document provides a high-level overview of new and updated features in
 tvOS 12 that are available for use when building tvOS apps with Xamarin.

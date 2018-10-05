@@ -6,19 +6,11 @@ ms.assetid: 775BE4E4-F408-4620-AED9-2B48C7B27F38
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 07/09/2018
+ms.date: 10/05/2018
 ---
 # Introduction to watchOS 5
 
- ![Preview](~/media/shared/preview.png)
-
-> [!WARNING]
-> Xamarin's watchOS 5 support is currently in preview, which means that it
-> may contain bugs, is not feature-complete, and may change. Use it for
-> experimentation only.
-
-This document provides a high-level description of some watchOS 5 APIs
-for which Xamarin's preview release provides C# bindings.
+This document provides a high-level description of some watchOS 5 APIs.
 
 To get started building watchOS 5 apps with Xamarin, take a look at:
 
@@ -60,4 +52,3 @@ of speech and determine the language represented by a block of text.
 - [watchOS – Apple Developer (Apple)](https://developer.apple.com/watchOS/)
 - [What's new in watchOS (Apple) (video)](https://developer.apple.com/videos/play/wwdc2018/206/)
 - [Watch (Apple)](https://www.apple.com/watch/)
-- Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)

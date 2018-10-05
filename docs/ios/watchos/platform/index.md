@@ -6,16 +6,11 @@ ms.assetid: 13F23E01-BAED-43EB-A70E-3B30EF53D379
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 06/25/2018
+ms.date: 10/05/2018
 ---
 # watchOS platform features
 
 ## [Introduction to watchOS 5](introduction-to-watchos5/index.md)
-
-> [!WARNING]
-> Xamarin's watchOS 5 support is currently in preview, which means
-> that it may contain bugs, is not feature-complete, and may change.
-> Use it for experimentation only.
 
 This document provides a high-level overview of new and updated features in
 watchOS 5 that are available for use when building watchOS apps with

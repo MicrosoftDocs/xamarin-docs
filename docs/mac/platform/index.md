@@ -6,19 +6,14 @@ ms.assetid: 37451F65-672A-4512-8DDD-06CCDE9E5A12
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
-ms.date: 10/19/2016
+ms.date: 10/05/2018
 ---
 
-# macOS Platform Features
+# macOS platform features
 
 Documents in this section cover working with key, platform-specific features of macOS in a Xamarin.Mac application.
 
 ## [Introduction to macOS Mojave](~/mac/platform/introduction-to-macos-mojave/index.md)
-
-> [!WARNING]
-> Xamarin's macOS Mojave support is currently in preview, which means that
-> it may contain bugs, is not feature-complete, and may change. Use it for
-> experimentation only.
 
 This document provides a high-level overview of new and updated features in
 macOS Mojave that are available for use when building Xamarin.Mac
@@ -42,11 +37,11 @@ to resolve any issues.
 
 OpenTK (The Open Toolkit) is an advanced, low-level C# library that makes working with OpenGL, OpenCL and OpenAL easier. OpenTK can be used for games, scientific applications or other projects that require 3D graphics, audio or computational functionality. This article gives a brief introduction to using OpenTK in a Xamarin.Mac app.
 
-## [Introduction to Storyboards](~/mac/platform/storyboards/index.md)
+## [Introduction to storyboards](~/mac/platform/storyboards/index.md)
 
 Storyboards allow you to develop a User Interface for your Xamarin.Mac app that not only includes the window definitions and controls, but also contains the links between different windows (via segues) and view states. This article gives an introduction to using Storyboards in a Xamarin.Mac app.
 
-## [Xamarin.Mac Extension Support](~/mac/platform/extensions.md)
+## [Xamarin.Mac extension support](~/mac/platform/extensions.md)
 
 In Xamarin.Mac 2.10 preview support was added for multiple macOS extension points:
 
