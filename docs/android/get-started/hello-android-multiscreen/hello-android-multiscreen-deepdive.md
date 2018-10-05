@@ -7,30 +7,24 @@ ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 02/15/2018
+ms.date: 10/05/2018
 ---
 
 # Hello, Android Multiscreen: Deep Dive
 
-_In this two-part guide, the basic Phoneword application (created in the Hello, Android guide) is expanded to handle a second screen. Along the way, the basic Android Application Building Blocks are introduced. A deeper dive into Android architecture is included to help you develop a better understanding of Android application structure and functionality._
-
-## Hello, Android Multiscreen Deep Dive
+_In this two-part guide, the basic Phoneword application (created in the Hello, Android guide) is expanded to handle a second screen. Along the way, the basic Android application building blocks are introduced. A deeper dive into Android architecture is included to help you develop a better understanding of Android application structure and functionality._
 
 In the
 [Hello, Android Multiscreen Quickstart](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md),
 you built and ran your first multi-screen Xamarin.Android application.
-Now it's time to develop a deeper understanding of Android navigation
-and architecture so that you can build more complex applications.
 
-In this guide you will explore more advanced Android architecture as
-Android *Application Building Blocks* are introduced. Android
+In this guide you will explore more advanced Android architecture. Android
 navigation with *Intents* is explained, and Android hardware navigation
 options are explored. New additions to the Phoneword app are dissected
 as you develop a more holistic view of the application's relationship
 with the operating system and other applications.
 
-
-## Android Architecture Basics
+## Android architecture basics
 
 In the [Hello, Android Deep Dive](~/android/get-started/hello-android/hello-android-deepdive.md),
 you learned that Android applications are unique programs because they
@@ -41,8 +35,7 @@ into Android architecture expands your understanding of how Android
 applications are constructed by introducing the Android Application
 Building Blocks and their functions.
 
-
-### Android Application Blocks
+### Android application building blocks
 
 An Android application consists of a collection of special Android
 classes called *Application Blocks* bundled together with any number of
@@ -53,7 +46,7 @@ Application Blocks form the backbone of Android applications because
 they allow you to do things you couldn't normally accomplish with a
 regular class. The two most important ones are _Activities_ and _Services_:
 
--   **Activity** &ndash; An Activity corresponds to a screen with a user
+- **Activity** &ndash; An Activity corresponds to a screen with a user
     interface, and it is conceptually similar to a web page in a web
     application. For example, in a newsfeed application, the login
     screen would be the first Activity, the scrollable list of news
@@ -62,7 +55,7 @@ regular class. The two most important ones are _Activities_ and _Services_:
     [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md)
     guide.
 
--   **Service** &ndash; Android Services support Activities by taking over
+- **Service** &ndash; Android Services support Activities by taking over
     long-running tasks and running them in the background. Services
     don't have a user interface and are used to handle tasks that
     aren't tied to screens &ndash; for example, playing a song in the
@@ -71,7 +64,6 @@ regular class. The two most important ones are _Activities_ and _Services_:
     [Creating Services](~/android/app-fundamentals/services/index.md) and
     [Android Services](~/android/app-fundamentals/services/index.md)
     guides.
-
 
 An Android application may not use all types of Blocks, and often has
 several Blocks of one type. For example, the Phoneword application from
@@ -100,7 +92,6 @@ sending Intents back and forth, you can get Blocks to coordinate complex
 actions such as launching the camera app to take and save, gathering
 location information, or navigating from one screen to the next.
 
-
 ### AndroidManifest.XML
 
 When you add a Block to the application, it is registered with a
@@ -121,14 +112,13 @@ Phoneword, an additional Activity was added; it was launched from the
 first Activity using an Intent. The next section explores how
 Intents help to create navigation in Android applications.
 
-## Android Navigation
+## Android navigation
 
 Intents were used to navigate between screens. It's time to
 dive into this code to see how Intents work and understand their role
 in Android navigation.
 
-
-### Launching a Second Activity with an Intent
+### Launching a second activity with an intent
 
 In the Phoneword application, an Intent was used to launch a second
 screen (Activity). Start by creating an Intent, passing in the
@@ -160,8 +150,7 @@ translationHistoryButton.Click += (sender, e) =>
 };
 ```
 
-
-## Additional Concepts Introduced in Phoneword
+## Additional concepts introduced in phoneword
 
 The Phoneword application introduced several concepts not covered in
 this guide. These concepts include:
@@ -200,7 +189,6 @@ they are covered in the very comprehensive
 deals specifically with using built-in `ListActivity` and
 `ArrayAdapter` classes to create and populate a `ListView` without
 defining a custom layout, as was done in the Phoneword example.
-
 
 ## Summary
 

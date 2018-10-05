@@ -1,20 +1,19 @@
 ---
 title: "Hello, Android: Deep Dive"
 description: "In this two-part guide, you'll build your first Xamarin.Android application and develop an understanding of the fundamentals of Android application development with Xamarin. Along the way, you will be introduced to the tools, concepts, and steps required to build and deploy a Xamarin.Android application."
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 02/07/2018
+ms.date: 10/05/2018
 ---
 
 # Hello, Android: Deep Dive
 
 _In this two-part guide, you'll build your first Xamarin.Android application and develop an understanding of the fundamentals of Android application development with Xamarin. Along the way, you will be introduced to the tools, concepts, and steps required to build and deploy a Xamarin.Android application._
-
-## Hello, Android Deep Dive
 
 In the
 [Hello, Android Quickstart](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md),
@@ -27,7 +26,7 @@ understanding of Android application development.
 
 This guide will touch upon the following topics:
 
-# [Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 - **Introduction to Visual Studio** &ndash; Introduction to Visual Studio
     and creating a new Xamarin.Android application.
@@ -49,10 +48,11 @@ This guide will touch upon the following topics:
     application with advice on testing, deployment, generating artwork,
     and more.
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
-- **Introduction to Visual Studio for Mac** &ndash; Introduction to Xamarin
-    Studio and creating a new Xamarin.Android application.
+- **Introduction to Visual Studio for Mac** &ndash; Introduction to Visual
+    Studio for Mac and creating a new Xamarin.Android application.
 
 - **Anatomy of a Xamarin.Android Application** &ndash; Tour of the
     essential parts of a Xamarin.Android application.
@@ -71,14 +71,14 @@ This guide will touch upon the following topics:
     your application with advice on testing, deployment, generating
     artwork, and more.
 
------
+::: zone-end
 
 This guide helps you develop the skills and knowledge required to build
 a single-screen Android application. After you work through it, you
 should understand the different parts of a Xamarin.Android application
 and how they fit together.
 
-# [Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 ## Introduction to Visual Studio
 
@@ -95,9 +95,10 @@ library, a test application, and more. In the **Phoneword** app, you added
 a new Android Project using the **Android Application** template to the
 **Phoneword** Solution created in the
 [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md)
-guide. 
+guide.
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 ## Introduction to Visual Studio for Mac
 
@@ -119,13 +120,13 @@ Solution created in the
 [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md)
 guide.
 
------
+::: zone-end
 
 <a name="anatomy" />
 
-## Anatomy of a Xamarin.Android Application
+## Anatomy of a Xamarin.Android application
 
-# [Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 The following screenshot lists the Solution's contents. This is the
 Solution Explorer, which contains the directory structure and all of
@@ -133,7 +134,8 @@ the files associated with the Solution:
 
 [![Solution Explorer](hello-android-deepdive-images/vs/02-solution-structure-sml.png)](hello-android-deepdive-images/vs/02-solution-structure.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 The following screenshot lists the Solution's contents. This is the
 Solution Pad, which contains the directory structure and all of the
@@ -141,14 +143,14 @@ files associated with the Solution:
 
 [![Solution Pad](hello-android-deepdive-images/xs/02-solution-structure-sml.png)](hello-android-deepdive-images/xs/02-solution-structure.png#lightbox)
 
------
+::: zone-end
 
 A Solution called **Phoneword** was created and the Android project
 **Phoneword** was placed inside of it.
 
 Look at the items inside the Project to see each folder and its purpose:
 
--   **Properties** &ndash; Contains the
+- **Properties** &ndash; Contains the
     [AndroidManifest.xml](~/android/platform/android-manifest.md)
     file that describes all of the requirements for the Xamarin.Android
     application, including name, version number, and permissions. The
@@ -157,7 +159,7 @@ Look at the items inside the Project to see each folder and its purpose:
     a .NET assembly metadata file. It is a good practice to fill this
     file with some basic information about your application.
 
--   **References** &ndash; Contains the assemblies required to build
+- **References** &ndash; Contains the assemblies required to build
     and run the application. If you expand the References directory,
     you'll see references to .NET assemblies such as
     [System](xref:System),
@@ -165,15 +167,14 @@ Look at the items inside the Project to see each folder and its purpose:
     [System.Xml](xref:System.Xml),
     as well as a reference to Xamarin's Mono.Android assembly.
 
-
--   **Assets** &ndash; Contains the files the application needs to run
+- **Assets** &ndash; Contains the files the application needs to run
     including fonts, local data files, and text files. Files included
     here are accessible through the generated `Assets` class. For more
     information on Android Assets, see the Xamarin
     [Using Android Assets](~/android/app-fundamentals/resources-in-android/android-assets.md)
     guide.
 
--   **Resources** &ndash; Contains application resources such as
+- **Resources** &ndash; Contains application resources such as
     strings, images, and layouts. You can access these resources in code
     through the generated `Resource` class. The
     [Android Resources](~/android/app-fundamentals/resources-in-android/index.md)
@@ -188,31 +189,42 @@ The **Resources** directory contains four folders named **drawable**,
 
 The items are summarized in the table below:
 
--   **drawable** &ndash; The drawable directories house
+- **drawable** &ndash; The drawable directories house
     [drawable resources](http://developer.android.com/guide/topics/resources/drawable-resource.html)
     such as images and bitmaps.
 
--   **mipmap** &ndash; The mipmap directory holds drawable files for different launcher icon densities. In the default template, the drawable directory houses the application icon file, **Icon.png**.
+- **mipmap** &ndash; The mipmap directory holds drawable files for different launcher icon densities. In the default template, the drawable directory houses the application icon file, **Icon.png**.
 
 
--   **layout** &ndash; The layout directory contains _Android designer
+::: zone pivot="windows"
+
+- **layout** &ndash; The layout directory contains _Android designer
+    files_ (.axml) that define the user interface for each screen or
+    Activity. The template creates a default layout called
+    **activity_main.axml**.
+
+::: zone-end
+::: zone pivot="macos"
+
+- **layout** &ndash; The layout directory contains _Android designer
     files_ (.axml) that define the user interface for each screen or
     Activity. The template creates a default layout called
     **Main.axml**.
 
--   **values** &ndash; This directory houses XML files that store
+::: zone-end
+
+- **values** &ndash; This directory houses XML files that store
     simple values such as strings, integers, and colors. The template
     creates a file to store string values called **Strings.xml**.
 
--   **Resource.designer.cs** &ndash; Also known as the `Resource`
+- **Resource.designer.cs** &ndash; Also known as the `Resource`
     class, this file is a partial class that holds the unique IDs
     assigned to each resource. It is automatically created by the
     Xamarin.Android tools and is regenerated as necessary. This file
     should not be manually edited, as Xamarin.Android will overwrite
     any manual changes made to it.
 
-
-## App Fundamentals and Architecture Basics
+## App fundamentals and architecture basics
 
 Android applications do not have a single entry point; that is, there
 is no single line of code in the application that the operating system
@@ -231,8 +243,7 @@ Android app: the first screen. In
 the full complexities of Android architecture are explored as
 different ways to launch an application are discussed.
 
-
-### Phoneword Scenario - Starting with an Activity
+### Phoneword scenario - starting with an activity
 
 When you open the **Phoneword** application for the first time in an
 emulator or device, the operating system creates the first
@@ -263,38 +274,42 @@ better understanding of the diagram above. This exploration begins with
 the user interface as it discusses the Android designer and layout
 files.
 
-
 ## User Interface
 
-`Main.axml` is the user interface layout file for the first screen in
+::: zone pivot="windows"
+
+**activity_main.axml** is the user interface layout file for the first screen in
+the application. The .axml indicates that this is an Android designer
+file (AXML stands for *Android XML*). The name *Main* is arbitrary from
+Android's point of view &ndash; the layout file could have been named
+something else. When you open **activity_main.axml** in the IDE, it brings up the
+visual editor for Android layout files called the *Android Designer*:
+
+[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
+
+In the **Phoneword** app, the **TranslateButton**'s ID is set to
+`@+id/TranslateButton`:
+
+[![TranslateButton id setting](hello-android-deepdive-images/vs/04-translatebutton-sml.png "TranslateButton id setting")](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
+
+::: zone-end
+::: zone pivot="macos"
+
+**Main.axml** is the user interface layout file for the first screen in
 the application. The .axml indicates that this is an Android designer
 file (AXML stands for *Android XML*). The name *Main* is arbitrary from
 Android's point of view &ndash; the layout file could have been named
 something else. When you open **Main.axml** in the IDE, it brings up the
 visual editor for Android layout files called the *Android Designer*:
 
-# [Visual Studio](#tab/vswin)
-
-[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
-
-# [Visual Studio for Mac](#tab/vsmac)
-
 [![Android Designer](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
-
------
 
 In the **Phoneword** app, the **TranslateButton**'s ID is set to
 `@+id/TranslateButton`:
 
-# [Visual Studio](#tab/vswin)
-
-[![TranslateButton id setting](hello-android-deepdive-images/vs/04-translatebutton-sml.png "TranslateButton id setting")](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
-
-# [Visual Studio for Mac](#tab/vsmac)
-
 [![TranslateButton id setting](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png#lightbox)
 
------
+::: zone-end
 
 When you set the `id` property of the **TranslateButton**, the Android
 Designer maps the **TranslateButton** control to the `Resource` class
@@ -306,8 +321,7 @@ controls. All you need to know for now is that the code representation
 of a control is linked to the visual representation of the control in
 the designer via the `id` property.
 
-
-### Source View
+### Source view
 
 Everything defined on the design surface is translated into XML for
 Xamarin.Android to use. The Android Designer provides a source view
@@ -315,15 +329,16 @@ that contains the XML that was generated from the visual designer. You
 can view this XML by switching to the **Source** panel in the lower left
 of the designer view, as illustrated by the screenshot below:
 
-# [Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 [![Designer source view](hello-android-deepdive-images/vs/05-source-view-sml.png "Designer source view")](hello-android-deepdive-images/vs/05-source-view.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 [![Designer source view](hello-android-deepdive-images/xs/05-source-view-sml.png)](hello-android-deepdive-images/xs/05-source-view.png#lightbox)
 
------
+::: zone-end
 
 This XML source code should contain the **Text (Large)**, **Plain
 Text**, and the two **Button** elements. For a more in-depth tour of
@@ -336,7 +351,6 @@ have now been covered. Next, it's time to jump into the code that
 powers the user interface as Activities and the Activity Lifecycle are
 explored.
 
-
 ## Activities and the Activity Lifecycle
 
 The `Activity` class contains the code that powers the user interface.
@@ -346,8 +360,7 @@ This section introduces the `Activity` class, discusses the Activity
 Lifecycle, and dissects the code that powers the user interface in the
 **Phoneword** application.
 
-
-### Activity Class
+### Activity class
 
 The **Phoneword** application has only one screen (Activity). The class
 that powers the screen is called `MainActivity` and lives in the
@@ -369,9 +382,9 @@ public class MainActivity : Activity
 }
 ```
 
-The `Activity` Attribute registers the Activity with the Android 
-Manifest; this lets Android know that this class is part of the 
-**Phoneword** application managed by this manifest. The `Label` 
+The `Activity` Attribute registers the Activity with the Android
+Manifest; this lets Android know that this class is part of the
+**Phoneword** application managed by this manifest. The `Label`
 property sets the text that will be displayed at the top of the screen.
 
 The `MainLauncher` property tells Android to display this Activity when
@@ -384,7 +397,7 @@ Now that the basics of `MainActivity` have been covered, it's time to
 dive deeper into the Activity code by introducing the _Activity
 Lifecycle_.
 
-### Activity Lifecycle
+### Activity lifecycle
 
 In Android, Activities go through different stages of a lifecycle
 depending on their interactions with the user. Activities can be
@@ -400,25 +413,24 @@ Activity loads, how it reacts to the user, and even what happens after
 it disappears from the device screen. For example, you can override the
 lifecycle methods in the diagram above to perform some important tasks:
 
--   **OnCreate** &ndash; Creates views, initializes variables, and 
-    performs other prep work that must be done before the user sees the 
-    Activity. This method is called only once when the Activity is 
+- **OnCreate** &ndash; Creates views, initializes variables, and
+    performs other prep work that must be done before the user sees the
+    Activity. This method is called only once when the Activity is
     loaded into memory. 
 
--   **OnResume** &ndash; Performs any tasks that must happen every 
-    time the Activity returns to the device screen. 
+- **OnResume** &ndash; Performs any tasks that must happen every
+    time the Activity returns to the device screen.
 
--   **OnPause** &ndash; Performs any tasks that must happen every time
+- **OnPause** &ndash; Performs any tasks that must happen every time
     the Activity leaves the device screen.
 
-
-When you add custom code to a lifecycle method in the `Activity`, you 
-*override* that lifecycle method's *base implementation*. You tap into 
-the existing lifecycle method (which has some code already attached to 
-it), and you extend that method with your own code. You call the base 
-implementation from inside your method to ensure that the original code 
-runs before your new code. An example of this is illustrated in the 
-next section. 
+When you add custom code to a lifecycle method in the `Activity`, you
+*override* that lifecycle method's *base implementation*. You tap into
+the existing lifecycle method (which has some code already attached to
+it), and you extend that method with your own code. You call the base
+implementation from inside your method to ensure that the original code
+runs before your new code. An example of this is illustrated in the
+next section.
 
 The Activity Lifecycle is an important and complex part of Android. If
 you'd like to learn more about Activities after you finish the _Getting
@@ -426,7 +438,6 @@ Started_ series, read the
 [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md)
 guide. In this guide, the next focus is the first stage of the Activity
 Lifecycle, `OnCreate`.
-
 
 ### OnCreate
 
@@ -446,10 +457,27 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
+::: zone pivot="windows"
+
 In the **Phoneword** app, the first thing to do in `OnCreate` is load the
 user interface created in the Android Designer. To load the UI, call
 `SetContentView` and pass it the *resource layout name* for the layout
-file: `Main.axml`. The layout is located at `Resource.Layout.Main`:
+file: **activity_main.axml**. The layout is located at `Resource.Layout.activity_main`:
+
+```csharp
+SetContentView (Resource.Layout.activity_main);
+```
+
+When `MainActivity` starts up, it creates a view that is based on the
+contents of the **activity_main.axml** file.
+
+::: zone-end
+::: zone pivot="macos"
+
+In the **Phoneword** app, the first thing to do in `OnCreate` is load the
+user interface created in the Android Designer. To load the UI, call
+`SetContentView` and pass it the *resource layout name* for the layout
+file: **Main.axml**. The layout is located at `Resource.Layout.Main`:
 
 ```csharp
 SetContentView (Resource.Layout.Main);
@@ -462,6 +490,8 @@ matched to the Activity name &ndash; *Main*.axml is the layout for
 as you begin to add more screens to the application, you'll find that
 this naming convention makes it easier to match the code file to the
 layout file.
+
+::: zone-end
 
 After the layout file is prepared, you can start looking up controls.
 To look up a control, call `FindViewById` and pass in the resource ID
@@ -476,8 +506,7 @@ TextView translatedPhoneWord = FindViewById<TextView>(Resource.Id.TranslatedPhon
 Now that you have references to the controls in the layout file, you can
 start programming them to respond to user interaction.
 
-
-### Responding to User Interaction
+### Responding to user interaction
 
 In Android, the `Click` event listens for the user's touch. In this 
 app, the `Click` event is handled with a lambda, but a delegate or a 
@@ -500,15 +529,14 @@ translateButton.Click += (sender, e) =>
 };
 ```
 
-## Testing, Deployment, and Finishing Touches
+## Testing, deployment, and finishing touches
 
 Both Visual Studio for Mac and Visual Studio provide many options for testing
 and deploying an application. This section covers debugging options,
 demonstrates testing applications on a device, and introduces tools for
 creating custom app icons for different screen densities.
 
-
-### Debugging Tools
+### Debugging tools
 
 Issues in application code can be difficult to diagnose. To help
 diagnose complex code issues, you can
@@ -516,8 +544,7 @@ diagnose complex code issues, you can
 [Step Through Code](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code), or
 [Output Information to the Log Window](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window).
 
-
-### Deploy to a Device
+### Deploy to a device
 
 The emulator is a good start for deploying and testing an application,
 but users will not consume the final app in an emulator. It's a good
@@ -529,7 +556,7 @@ to be configured for development. The
 guide provides thorough instructions on getting a device ready for
 development.
 
-# [Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 After the device is configured, you can deploy to it by plugging it in,
 selecting it from the **Select Device** dialog, and starting the
@@ -537,7 +564,8 @@ application:
 
 ![Select debug device](hello-android-deepdive-images/vs/06-select-device.png "Select debug device")
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 After the device is configured, you can deploy to it by plugging it in,
 pressing **Start (Play)**, selecting it from the **Select Device**
@@ -545,14 +573,13 @@ dialog, and pressing **OK**:
 
 [![Select debug device](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
 
------
+::: zone-end
 
 This launches the application on the device:
 
 [![Enter Phoneword](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
 
-
-### Set Icons for Different Screen Densities
+### Set icons for different screen densities
 
 Android devices come in different screen sizes and resolutions, and not
 all images look good on all screens. For example, here is a screenshot
@@ -568,78 +595,78 @@ densities, *mdpi* for medium, *hdpi* for high, and *xhdpi*, *xxhdpi*, *xxxhdpi* 
 screens. Icons of varying sizes are stored in the appropriate
 **mipmap-** folders:
 
-# [Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 ![mipmap folders](hello-android-deepdive-images/vs/07-mipmap-folders.png "mipmap folders")
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="windows"
 
 [![Mipmap folders](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png#lightbox)
 
------
+::: zone-end
 
 Android will pick the icon with the appropriate density:
 
 [![Icons at appropriate density](hello-android-deepdive-images/07-appropriate-density-sml.png)](hello-android-deepdive-images/07-appropriate-density.png#lightbox)
 
-### Generate Custom Icons
+### Generate custom icons
 
 Not everyone has a designer available to create the custom icons and
 launch images that an app needs to stand out. Here are several alternate
 approaches to generating custom app artwork:
 
-# [Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
--   [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html)
+- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html)
     &ndash; A web-based, in-browser generator for all types of Android
     icons, with links to other useful community tools. It works best in
     Google Chrome.
 
--   Visual Studio &ndash; You can use this to create a simple icon set
+- Visual Studio &ndash; You can use this to create a simple icon set
     for your app directly in the IDE.
 
--   [Glyphish](http://www.glyphish.com/) &ndash; High-quality prebuilt
+- [Glyphish](http://www.glyphish.com/) &ndash; High-quality prebuilt
     icon sets for free download and purchase.
 
--   [Fiverr](http://www.fiverr.com/) &ndash; Choose from a variety of
+- [Fiverr](http://www.fiverr.com/) &ndash; Choose from a variety of
     designers to create an icon set for you, starting at $5. Can be hit
     or miss but a good resource if you need icons designed on the fly.
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
--   [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html)
+- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html)
     &ndash; A web-based, in-browser generator for all types of Android
     icons, with links to other useful community tools. It works best in
     Google Chrome.
 
--   [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12)
+- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12)
     &ndash; Sketch is a Mac app for designing user interfaces, icons,
     and more. This is the app that was used to design the Xamarin App Icons
     and Launch Images set. Sketch 3 is available on the App Store and
     costs about $80. You can try out the free
     [Sketch Tool](http://bohemiancoding.com/sketch/tool/) as well.
 
--   [Pixelmator](http://www.pixelmator.com/) &ndash; A versatile image
+- [Pixelmator](http://www.pixelmator.com/) &ndash; A versatile image
     editing app for Mac that costs about $30.
 
--   [Glyphish](http://www.glyphish.com/) &ndash; High-quality prebuilt
+- [Glyphish](http://www.glyphish.com/) &ndash; High-quality prebuilt
     icon sets for free download and purchase.
 
--   [Fiverr](http://www.fiverr.com/) &ndash; Choose from a variety of
+- [Fiverr](http://www.fiverr.com/) &ndash; Choose from a variety of
     designers to create an icon set for you, starting at $5. Can be hit
     or miss but a good resource if you need icons designed on the fly.
 
------
+::: zone-end
 
 For more information about icon sizes and requirements, refer to the
 [Android Resources](~/android/app-fundamentals/resources-in-android/index.md)
 guide.
 
-# [Visual Studio](#tab/vswin)
+::: zone pivot="macos"
 
-# [Visual Studio for Mac](#tab/vsmac)
-
-### Adding Google Play Services Packages
+### Adding Google Play Services packages
 
 _Google Play Services_ is a set of add-on libraries that allows Android
 developers to take advantage of the most recent features from Google
@@ -668,7 +695,7 @@ packages are installed:
 
 [![License acceptance](hello-android-deepdive-images/xs/10-license-acceptance-sml.png)](hello-android-deepdive-images/xs/10-license-acceptance.png#lightbox)
 
------
+::: zone-end
 
 ## Summary
 

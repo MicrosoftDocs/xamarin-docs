@@ -1,69 +1,67 @@
 ---
 title: "Hello, Android: Quickstart"
 description: "In this two-part guide, you will build your first Xamarin.Android application (using Visual Studio or Visual Studio for Mac) and develop an understanding of the fundamentals of Android application development with Xamarin. Along the way, you will be introduced to the tools, concepts, and steps required to build and deploy a Xamarin.Android application."
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 08/14/2018
+ms.date: 10/05/2018
 ---
 
 # Hello, Android: Quickstart
 
-_In this two-part guide, you will build your first Xamarin.Android
-application (using Visual Studio or Visual Studio for Mac) and develop
-an understanding of the fundamentals of Android application development
-with Xamarin. Along the way, you will be introduced to the tools,
-concepts, and steps required to build and deploy a Xamarin.Android
-application._
+_In this two-part guide, you will build your first Xamarin.Android application with Visual Studio and develop an understanding of the fundamentals of Android application development with Xamarin._
 
-## Hello, Android Quickstart
-
-In this walkthrough, you will create an application that translates an
+You will create an application that translates an
 alphanumeric phone number (entered by the user) into a numeric phone
 number and display the numeric phone number to the user. The final application looks like
 this:
 
 [![Screenshot of app when it is complete](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
 
-## Requirements
+::: zone pivot="windows"
+
+## Windows requirements
 
 To follow along with this walkthrough, you will need the following:
 
-# [Visual Studio](#tab/vswin)
-
-- Windows 7 or later (Windows 10 is recommended).
+- Windows 10.
 
 - Visual Studio 2017 Community, Professional, or Enterprise (version 15.8 or later).
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
+
+## macOS requirements
+
+To follow along with this walkthrough, you will need the following:
 
 - The latest version of Visual Studio for Mac.
 
-- A Mac running macOS Sierra (10.12) or later.
+- A Mac running macOS High Sierra (10.13) or later.
 
------
+::: zone-end
 
 This walkthrough assumes that the latest version of Xamarin.Android is
 installed and running on your platform of choice. For a guide to
 installing Xamarin.Android, refer to the
 [Xamarin.Android Installation](~/android/get-started/installation/index.md) guides.
 
-
-## Configuring Emulators
+## Configuring emulators
 
 If you are using the Android emulator, we recommend that you configure
 the emulator to use hardware acceleration. Instructions for configuring
 hardware acceleration are available in
 [Hardware Acceleration for Emulator Performance](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
 
-## Walkthrough
+## Create the project
 
-# [Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
-Start Visual Studio.  Click **File > New > Project** to create a new project.
+Start Visual Studio. Click **File > New > Project** to create a new project.
 
 In the **New Project** dialog, click the **Android App** template.
 Name the new project `Phoneword` and click **OK**:
@@ -75,14 +73,14 @@ to create the new project:
 
 [![Select the Blank App template](hello-android-quickstart-images/vs/02-blank-app-w158-sml.png)](hello-android-quickstart-images/vs/02-blank-app-w158.png#lightbox)
 
-### Creating the Layout
+## Create a layout
 
 After the new project is created, expand the **Resources**
 folder and then the **layout** folder in the **Solution Explorer**.
 Double-click **activity_main.axml** to open it in the Android Designer. This
 is the layout file for the app's screen:
 
-[![Open activity main.axml](hello-android-quickstart-images/vs/03-open-layout-w158-sml.png)](hello-android-quickstart-images/vs/03-open-layout-w158.png#lightbox)
+[![Open activity axml file](hello-android-quickstart-images/vs/03-open-layout-w158-sml.png)](hello-android-quickstart-images/vs/03-open-layout-w158.png#lightbox)
 
 From the **Toolbox** (the area on the left), enter `text` into the search
 field and drag a **Text (Large)** widget onto the design surface
@@ -137,7 +135,7 @@ place it under the **Button** widget. Change the `Text` property of the
 
 Save your work by pressing **CTRL+S**.
 
-### Writing Translation Code
+## Write some code
 
 The next step is to add some code to translate phone numbers from
 alphanumeric to numeric. Add a new file to the project by
@@ -215,7 +213,7 @@ namespace Core
 Save the changes to the **PhoneTranslator.cs** file by clicking 
 **File > Save** (or by pressing **CTRL+S**), then close the file.
 
-### Wiring up the Interface
+## Wire up the user interface
 
 The next step is to add code to wire up the user interface by inserting
 backing code into the `MainActivity` class. Begin by wiring up the
@@ -242,7 +240,7 @@ namespace Phoneword
             base.OnCreate(savedInstanceState);
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.Main);
 
             // New code will go here
         }
@@ -294,7 +292,7 @@ matches the project name (`Phoneword`) and then completely rebuild
 the solution. If you still get build errors, verify that you have
 installed the latest Visual Studio updates.
 
-### Setting the App Name 
+## Set the app name
 
 You should now have a working application &ndash; it's time to set the
 name of the app. Expand the **values** folder (inside the **Resources**
@@ -308,7 +306,7 @@ to `Phone Word` as shown here:
 </resources>
 ```
 
-### Running the App
+## Run the app
 
 Test the application by running it on an Android device or emulator.
 Tap the **TRANSLATE** button to translate **1-855-XAMARIN** into a
@@ -318,7 +316,8 @@ phone number:
 
 To run the app on an Android device, see how to [set up your device for development](~/android/get-started/installation/set-up-device-for-development.md).
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 Launch Visual Studio for Mac from the **Applications** folder or from
 **Spotlight**.
@@ -339,7 +338,7 @@ In the **Configure your new Android App** dialog, leave the Solution
 and Project names set to `Phoneword` and click **Create** to create
 the project.
 
-### Creating the Layout
+## Create a layout
 
 After the new project is created, expand the **Resources** folder
 and then the **layout** folder in the **Solution** pad.
@@ -392,7 +391,7 @@ Drag a **TextView** from the **Toolbox** to the design surface and place it unde
 
 Save your work by pressing **&#8984; + S**.
 
-### Writing Translation Code
+## Write some code
 
 Now, add some code to translate phone numbers from
 alphanumeric to numeric. Add a new file to the project by
@@ -469,7 +468,7 @@ choosing **File > Save** (or by pressing **&#8984; + S**), then
 close the file. Ensure that there are no compile-time errors by
 rebuilding the solution.
 
-### Wiring up the Interface
+## Wire up the user interface
 
 The next step is to add code to wire up the user interface by
 adding the backing code into the `MainActivity` class.
@@ -558,7 +557,7 @@ completely rebuild the solution. If you still get build errors,
 verify that you have installed the latest Xamarin.Android and
 Visual Studio for Mac updates.
 
-### Setting the Label and App Icon
+## Set the label and app icon
 
 Now that you have a working application, it's time to add the
 finishing touches! Start by editing the `Label` for `MainActivity`.
@@ -578,7 +577,7 @@ namespace Phoneword
 }
 ```
 
-Now it's time to set the application icon. By default, Visual Studio for Mac will provide a default icon for the project. Let's delete these files from the solution, and replace them with a different icon. Expand the **Resources** folder in the **Solution Pad**. Notice that there are five folders that are prefixed with **mipmap-**, and that each of these folders contains a single **Icon.png** file:
+Now it's time to set the application icon. By default, Visual Studio for Mac will provide a default icon for the project. Delete these files from the solution, and replace them with a different icon. Expand the **Resources** folder in the **Solution Pad**. Notice that there are five folders that are prefixed with **mipmap-**, and that each of these folders contains a single **Icon.png** file:
 
 [![mipmap- folders and Icon.png files](hello-android-quickstart-images/xs/23-mipmap-folders-sml.png)](hello-android-quickstart-images/xs/23-mipmap-folders.png#lightbox)
 
@@ -604,7 +603,7 @@ After all the icons are copied to the Xamarin.Android project, open the **Projec
 
 [![Setting the project icon](hello-android-quickstart-images/xs/28-set-project-icon-sml.png)](hello-android-quickstart-images/xs/28-set-project-icon.png#lightbox)
 
-### Running the App
+## Run the app
 
 Finally, test the application by running it on an Android device or emulator and translating a Phoneword:
 
@@ -612,14 +611,13 @@ Finally, test the application by running it on an Android device or emulator and
 
 To run the app on an Android device, see how to [set up your device for development](~/android/get-started/installation/set-up-device-for-development.md).
 
------
+::: zone-end
 
 Congratulations on completing your first Xamarin.Android application!
 Now it's time to dissect the tools and skills you have just learned. Next up is the
 [Hello, Android Deep Dive](~/android/get-started/hello-android/hello-android-deepdive.md).
 
-
-## Related Links
+## Related links
 
 - [Xamarin Android App Icons (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
 - [Phoneword (sample)](https://developer.xamarin.com/samples/monodroid/Phoneword)

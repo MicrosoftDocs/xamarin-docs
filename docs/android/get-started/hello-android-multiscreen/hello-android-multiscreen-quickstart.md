@@ -1,20 +1,19 @@
 ---
 title: "Hello, Android Multiscreen: Quickstart"
 description: "This two-part guide expands the Phoneword application to handle a second screen. Along the way, basic Android Application Building Blocks are introduced with a deeper dive into Android architecture."
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 04/30/2018
+ms.date: 10/05/2018
 ---
 
 # Hello, Android Multiscreen: Quickstart
 
 _This two-part guide expands the Phoneword application to handle a second screen. Along the way, basic Android Application Building Blocks are introduced with a deeper dive into Android architecture._
-
-## Hello, Android Multiscreen Quickstart
 
 In the walkthrough portion of this guide, you'll add a second screen to the
 [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) application to keep track of
@@ -30,7 +29,6 @@ The accompanying
 reviews what was built and discusses architecture, navigation, and
 other new Android concepts encountered along the way.
 
-
 ## Requirements
 
 Because this guide picks up where [Hello, Android](~/android/get-started/hello-android/index.md)
@@ -44,15 +42,15 @@ If you would like to jump directly into the walkthrough below, you can download 
 
 In this walkthrough you'll add a **Translation History** screen to the **Phoneword** application.
 
-# [Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 Start by opening the **Phoneword** application in Visual Studio and editing the **Main.axml**
 file from the **Solution Explorer**.
 
-### Updating the Layout
+### Updating the layout
 
 From the **Toolbox**, drag a **Button** onto the design surface and
-place it below the **TranslatedPhoneWord** TextView. In the **Properties** pane, change the button **Id** to `@+id/TranslationHistoryButton` 
+place it below the **TranslatedPhoneWord** TextView. In the **Properties** pane, change the button **Id** to `@+id/TranslationHistoryButton`
 
 [![Drag a new button](hello-android-multiscreen-quickstart-images/vs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/vs/02-new-button.png#lightbox)
 
@@ -92,7 +90,7 @@ to become darker on the design surface:
 
 [![Disable translation history button](hello-android-multiscreen-quickstart-images/vs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/vs/06-enabled-false.png#lightbox)
 
-### Creating the Second Activity
+### Creating the second activity
 
 Create a second Activity to power the second screen. In the
 **Solution Explorer**, right-click the **Phoneword** project and
@@ -132,7 +130,7 @@ programmatically, so you don't need to create a new layout file
 for this Activity. This is discussed in more detail in the
 [Hello, Android Multiscreen Deep Dive](~/android/get-started/hello-android/hello-android-deepdive.md).
 
-### Adding Translation History Code
+### Adding a list
 
 This app collects phone numbers (that the user has translated on the
 first screen) and passes them to the second screen. The phone numbers
@@ -202,21 +200,22 @@ translateButton.Click += (sender, e) =>
 
 Save and build the application to make sure there are no errors.
 
-### Running the App
+### Running the app
 
 Deploy the application to an emulator or device. The following
 screenshots illustrate the running **Phoneword** application:
 
 [![Example screenshots](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 Start by opening the **Phoneword** project  in Visual Studio for Mac and editing the **Main.axml** file from the **Solution Pad**.
 
-### Updating the Layout
+### Updating the layout
 
 From the **Toolbox**, drag a **Button** onto the design surface and
-place it below the **TranslatedPhoneWord** TextView. In the **Properties** pad, change the button **Id** to `@+id/TranslationHistoryButton` 
+place it below the **TranslatedPhoneWord** TextView. In the **Properties** pad, change the button **Id** to `@+id/TranslationHistoryButton`:
 
 [![Drag a new button](hello-android-multiscreen-quickstart-images/xs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/xs/02-new-button.png#lightbox)
 
@@ -227,13 +226,11 @@ button's text shows up correctly:
 
 [![Set the translation history button text](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png#lightbox)
 
-
 Expand the **values** node under the **Resources** folder in the
 **Solution Pad** and double-click the string resources file,
 **Strings.xml**:
 
 [![Open Strings](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file.png#lightbox)
-
 
 Add the `translationHistory` string name and value to the **Strings.xml**
 file and save it:
@@ -259,7 +256,7 @@ will cause the button to become darker on the design surface:
 
 [![Disable translation history button](hello-android-multiscreen-quickstart-images/xs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/xs/06-enabled-false.png#lightbox)
 
-### Creating the Second Activity
+### Creating the second activity
 
 Create a second Activity to power the second screen. In the **Solution Pad**, click the gray gear icon next to the **Phoneword** project and choose **Add > New File...**:
 
@@ -295,7 +292,7 @@ programmatically, so you don't have to create a new layout file for
 this Activity. This is explained in more detail in the
 [Hello, Android Multiscreen Deep Dive](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md).
 
-### Adding Translation History Code
+### Adding a list
 
 This app collects phone numbers (that the user has translated on the
 first screen) and passes them to the second screen. The phone numbers
@@ -361,22 +358,21 @@ translateButton.Click += (sender, e) =>
 };
 ```
 
-### Running the App
+### Running the app
 
 Deploy the application to an emulator or device. The following
 screenshots illustrate the running **Phoneword** application:
 
 [![Example screenshots](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
------
+::: zone-end
 
 Congratulations on completing your first multi-screen Xamarin.Android
 application! Now it's time to dissect the tools and skills you just
 learned &ndash; next up is the
 [Hello, Android Multiscreen Deep Dive](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md).
 
-
-## Related Links
+## Related links
 
 - [Xamarin App Icons & Launch Screens (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
 - [Phoneword (sample)](https://developer.xamarin.com/samples/monodroid/Phoneword)
