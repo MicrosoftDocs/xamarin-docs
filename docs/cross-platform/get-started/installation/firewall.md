@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
 author: asb3993
 ms.author: amburns
-ms.date: 12/02/2016
+ms.date: 10/05/2018
 ---
 
 # Xamarin Firewall Configuration Instructions
@@ -20,36 +20,31 @@ In order for Xamarin products to install and work properly, certain endpoints mu
 
 The following known addresses will need to be added in order for the software to install properly when using the latest release of the Xamarin installer:
 
--  xamarin.com (installer manifests)
--  dl.xamarin.com (Package download location)
--  dl.google.com (to download the Android SDK)
--  download.oracle.com (JDK)
--  visualstudio.com (Setup packages download location)
--  go.microsoft.com (Setup URL resolution)
--  aka.ms (Setup URL resolution)
+- xamarin.com (installer manifests)
+- dl.xamarin.com (Package download location)
+- dl.google.com (to download the Android SDK)
+- download.oracle.com (JDK)
+- visualstudio.com (Setup packages download location)
+- go.microsoft.com (Setup URL resolution)
+- aka.ms (Setup URL resolution)
 
 If you are using a Mac and are encountering Xamarin.Android install issues, please ensure that macOS is able to download Java.
 
+### NuGet (including Xamarin.Forms)
 
-### Components Store and NuGet (including Xamarin.Forms)
+The following addresses will need to be added to access NuGet (Xamarin.Forms is packaged as a NuGet):
 
-The following addresses will need to be added to access the Xamarin Component Store
-  or NuGet (Xamarin.Forms is packaged as a NuGet):
+- www\.nuget.org (to access NuGet)
+- az320820.vo.msecnd.net (NuGet downloads)
+- dl-ssl.google.com (Google components for Android and Xamarin.Forms)
 
--  components.xamarin.com (to use Xamarin Components Store)
--  xampubdl.blob.core.windows.net (hosts Components Store downloads)
--  www\.nuget.org (to access NuGet)
--  az320820.vo.msecnd.net (NuGet downloads)
--  dl-ssl.google.com (Google components)
-
-
-### Software Updates
+### Software updates
 
 The following addresses will need to be added to ensure that software updates can download properly:
 
--  software.xamarin.com (updater service)
--  download.visualstudio.microsoft.com
--  dl.xamarin.com
+- software.xamarin.com (updater service)
+- download.visualstudio.microsoft.com
+- dl.xamarin.com
 
 ## Xamarin Mac Agent
 
