@@ -140,7 +140,7 @@ byte* ptr = (byte*)pixelsAddr.ToPointer();
 
 The `ptr` variable is of type _byte pointer_. This `ptr` variable allows you to access the individual bytes of memory that are used to store the bitmap's pixels. You use code like this to read a byte from this memory or write a byte to the memory:
 
-```sharp
+```csharp
 byte pixelComponent = *ptr;
 
 *ptr = pixelComponent;
