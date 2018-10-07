@@ -380,10 +380,11 @@ downward compatibility with older versions of Android.
 ## Related Links
 
 - [ThemeSwitcher (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/ThemeSwitcher)
-- [Introduction to Lollipop](~/android/platform/lollipop.md)
-- [CardView](~/android/user-interface/controls/card-view.md)
-- [Alternate Resources](~/android/app-fundamentals/resources-in-android/alternate-resources.md)
-- [Android L Developer Preview](http://developer.android.com/preview/index.html)
+- [Introduction to Lollipop](../platform/lollipop.md)
+- [CardView](controls/card-view.md)
+- [Alternate Resources](../app-fundamentals/resources-in-android/alternate-resources.md)
+- [Android Lollipop Preview](https://developer.android.com/about/versions/lollipop)
+- [Android Pie Developer Preview](https://developer.android.com/about/preview)
 - [Material Design](http://developer.android.com/preview/material/index.html)
-- [Material Design Principles](http://static.googleusercontent.com/media/www.google.com/en/us/design/material-design.pdf)
+- [Material Design Principles](https://storage.googleapis.com/support-kms-prod/0198B37F7E72AD96CF20CEA598279D7D1E53)
 - [Maintaining Compatibility](http://developer.android.com/preview/material/compatibility.html)
