@@ -27,7 +27,7 @@ There are some restrictions to be aware of:
 - CoreNFC can only be tested on real devices (not on the simulator).
 
 This page describes the configuration required to use CoreNFC
-and shows how to use the API using the ["TFCTagReader" sample code](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/).
+and shows how to use the API using the ["NFCTagReader" sample code](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/).
 
 ## Configuration
 
