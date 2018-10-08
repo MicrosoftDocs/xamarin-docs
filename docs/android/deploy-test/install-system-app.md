@@ -92,7 +92,7 @@ system app.
    **/system/lib/** folder on the custom ROM.
 
 4. **Copy the APK file to /system/app** &ndash; The final step is
-   to copy the APK file to the **/system/app** folder on the the ROM.
+   to copy the APK file to the **/system/app** folder on the ROM.
 
 
 ## Summary

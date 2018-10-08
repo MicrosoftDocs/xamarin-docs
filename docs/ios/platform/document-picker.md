@@ -682,7 +682,7 @@ namespace DocPicker
 				}
 				else
 				{	
-					// Yes, inform caller and save location the the Application Container
+					// Yes, inform caller and save location the Application Container
 					HasiCloud = true;
 					iCloudUrl = uburl;
 					Console.WriteLine("Connected to iCloud");

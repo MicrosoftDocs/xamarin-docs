@@ -83,7 +83,7 @@ point of your Xamarin.Forms app. Remember to include `Imports Xamarin.Forms` and
 
 9. Now we need to point the iOS and Android projects at the new Visual Basic project.
 Right-click on the **References** node in the iOS and Android projects to open the
-**Reference Manager**. Un-tick the the C# portable library and tick the VB portable library
+**Reference Manager**. Un-tick the C# portable library and tick the VB portable library
 (don't forget, do this for both the iOS and Android projects).
 
    [![](xamarin-forms-images/add-vb-8-sml.png "Remove old project reference, add Visual Basic reference")](xamarin-forms-images/add-vb-8.png#lightbox)

@@ -210,7 +210,7 @@ public MainPage ()
 }
 ```
 
-Running this application on iOS, Android, or the Windows platforms and pressing the button will result in the the button's text updating with the device's orientation.
+Running this application on iOS, Android, or the Windows platforms and pressing the button will result in the button's text updating with the device's orientation.
 
 ![](device-orientation-images/orientation.png "Device Orientation Sample")
 

@@ -490,7 +490,7 @@ this:
 
 Android attempts to improve the performance of `ListView` scrolling by
 caching layout information. If you have long scrolling lists of data
-you should also set the the `android:cacheColorHint` property on the
+you should also set the `android:cacheColorHint` property on the
 `ListView` declaration in the Activity's AXML definition (to the same
 color value as your custom row layout's background). Failure to
 include this hint could result in a 'flicker' as the user scrolls

@@ -53,7 +53,7 @@ code.
 
 ## [Localization](~/ios/app-fundamentals/localization/index.md)
 
-This guide covers the the addition of encodings to a Xamarin.iOS application to
+This guide covers the addition of encodings to a Xamarin.iOS application to
 support internationalization.
 
 ## [Working with property lists](~/ios/app-fundamentals/index.md)
@@ -67,7 +67,7 @@ Apple has made several enhancements to both security and privacy in iOS 10 (and 
 ## [Threading](~/ios/app-fundamentals/threading.md)
 
 This article discusses threading in a Xamarin.iOS application, and talks a bit
-about the the .NET thread pool, responsive applications, and garbage
+about the .NET thread pool, responsive applications, and garbage
 collection.
 
 ## [Touch](~/ios/app-fundamentals/touch/index.md)

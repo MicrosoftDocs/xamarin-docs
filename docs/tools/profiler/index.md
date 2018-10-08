@@ -212,7 +212,7 @@ At the top of the profiler is the allocations chart, which displays the amount o
 
 There are different data views in the Allocations instrument, which allow developers to analyze how their application is using and freeing memory. These views are described below:
 
- -   **Allocations** – This displays a list of all allocations and groups them by class name. This provides a great overview of classes and methods being used, how often they are used, and the collective size of the classes used. Double clicking on a class will show the the memory allocated : 
+ -   **Allocations** – This displays a list of all allocations and groups them by class name. This provides a great overview of classes and methods being used, how often they are used, and the collective size of the classes used. Double clicking on a class will show the memory allocated : 
 
 # [Visual Studio for Mac](#tab/vsmac)
 

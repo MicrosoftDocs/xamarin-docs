@@ -138,7 +138,7 @@ textView1.Typeface = typeface;
 textView1.Text = "Changed the font";
 ```
 
-The `GetFont` method will automatically load the the first font within a font family.  To load a font that matches a specific style, use the `Typeface.Create` method. This method will try to load a font that matches the specified style. As an example, this snippet will try to load a bold `Typeface` object from a font family that is defined in **Resources/fonts**:
+The `GetFont` method will automatically load the first font within a font family.  To load a font that matches a specific style, use the `Typeface.Create` method. This method will try to load a font that matches the specified style. As an example, this snippet will try to load a bold `Typeface` object from a font family that is defined in **Resources/fonts**:
 
 ```csharp
 var typeface = Typeface.Create("<FONT FAMILY NAME>", Android.Graphics.TypefaceStyle.Bold);

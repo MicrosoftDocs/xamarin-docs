@@ -597,7 +597,7 @@ following actions:
     Wrapper was constructed in Java code, and the class binding is
     being constructed to contain the created Android Callable Wrapper
     instance. For example, when Android creates a
-    `mono.samples.helloworld.HelloAndroid` instance, the the Android
+    `mono.samples.helloworld.HelloAndroid` instance, the Android
     Callable Wrapper will be created first , and the Java
     `HelloAndroid` constructor will create an instance of the
     corresponding `Mono.Samples.HelloWorld.HelloAndroid` type, with the

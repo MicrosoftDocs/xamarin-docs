@@ -344,7 +344,7 @@ PresentViewController(picker,true,null);
 
 ### The Contact View Controller
 
-The The Contact View Controller (`CNContactViewController`) class provides a controller to present a standard Contact View to the end user. The Contact view can display new New, Unknown or Existing contacts and the type must be specified before the view is displayed by calling the correct static constructor (`FromNewContact`, `FromUnknownContact`, `FromContact`). For Example:
+the Contact View Controller (`CNContactViewController`) class provides a controller to present a standard Contact View to the end user. The Contact view can display new New, Unknown or Existing contacts and the type must be specified before the view is displayed by calling the correct static constructor (`FromNewContact`, `FromUnknownContact`, `FromContact`). For Example:
 
 ```csharp
 // Create a new contact view

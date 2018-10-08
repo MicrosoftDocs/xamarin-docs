@@ -75,7 +75,7 @@ You should add the images used for the menu to the watch app project
 <!--
 ### Design Time Items
 
-Menu items added the the storyboard can be shown and hidden programmatically.
+Menu items added the storyboard can be shown and hidden programmatically.
 -->
 
 ### Adding at Runtime

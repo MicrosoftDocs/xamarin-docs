@@ -136,7 +136,7 @@ This results in an entry being included in the **AndroidManifest.xml** file &nda
 </service>
 ```
 
-With the basics of a Xamarin.Android service out of the way, let's examine the the different subtypes of services in more detail.
+With the basics of a Xamarin.Android service out of the way, let's examine the different subtypes of services in more detail.
 
 
 ## Related Links

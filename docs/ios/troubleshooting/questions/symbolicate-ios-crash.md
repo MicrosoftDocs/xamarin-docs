@@ -16,7 +16,7 @@ the .dSYM file that's needed to symbolicate crash reports will be placed in
 the same directory hierarchy as your app's project file (.csproj). The exact
 location depends on your project's build settings:
 
-- If you have enabled device-specific builds, the the .dSYM can be found in 
+- If you have enabled device-specific builds, the .dSYM can be found in 
 the following directory:
 
     **&lt;project directory&gt;/bin/&lt;platform&gt;/&lt;configuration&gt;/device-builds/&lt;device&gt;-&lt;os-version&gt;/**

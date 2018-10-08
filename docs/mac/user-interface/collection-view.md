@@ -370,7 +370,7 @@ public override bool Selected
 
 A Collection View Data Source (`NSCollectionViewDataSource`) provides all of the data for a Collection View and creates and populates a Collection View Cell (using the `.xib` prototype) as required for each item in the collection.
 
-Add a new class the the project, call it `CollectionViewDataSource` and make it look like the following:
+Add a new class the project, call it `CollectionViewDataSource` and make it look like the following:
 
 ```csharp
 using System;

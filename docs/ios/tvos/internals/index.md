@@ -41,7 +41,7 @@ Explains how the linker works to ensure the smallest possible application packag
 
 ###  [Localization and Internationalization](~/ios/app-fundamentals/localization/index.md)
 
-This guide covers the the addition of encodings to a Xamarin.iOS application to support internationalization.
+This guide covers the addition of encodings to a Xamarin.iOS application to support internationalization.
 
 ###  [mtouch](~/ios/deploy-test/mtouch.md)
 

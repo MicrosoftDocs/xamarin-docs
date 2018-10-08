@@ -56,7 +56,7 @@ yet downloaded the **google-services.json** file), see
 To run the example app, you will need an Android test device or
 emulator that is compatibile with Firebase. Firebase Cloud Messaging
 supports clients running on Android 4.0 or higher, and
-these devices must also have the the Google Play Store app installed
+these devices must also have the Google Play Store app installed
 (Google Play Services 9.2.1 or later is required). If you do not yet
 have the Google Play Store app installed on your device, visit the
 [Google Play](https://support.google.com/googleplay) web site to
@@ -1022,7 +1022,7 @@ class. For example:
 FirebaseInstanceId.Instance.DeleteInstanceId();
 ```
 
-This method call deletes the the instance ID and the data associated
+This method call deletes the instance ID and the data associated
 with it. As a result, the periodic sending of FCM data to the device is
 halted.
 

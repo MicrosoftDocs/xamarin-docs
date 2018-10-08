@@ -46,7 +46,7 @@ Each of these steps will be discussed in the following sections in more detail.
 
 ### Extend the `Service` Class
 
-To create a service using Xamarin.Android, it is necessary to subclass `Service` and to adorn the the class with the [`ServiceAttribute`](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute). The attribute is used by the Xamarin.Android build tools to properly register the service in the app's **AndroidManifest.xml** file
+To create a service using Xamarin.Android, it is necessary to subclass `Service` and to adorn the class with the [`ServiceAttribute`](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute). The attribute is used by the Xamarin.Android build tools to properly register the service in the app's **AndroidManifest.xml** file
 Much like an activity, a bound service has it's own lifecycle and callback methods associated with the significant events in it's lifecycle. The following list is an example of some of the more common callback methods that a service will implement:
 
 * `OnCreate` &ndash; This method is invoked by Android as it is instantiating the service. It is used to initialize any variables or objects that are required by the service during it's lifetime. This method is optional.
