@@ -266,7 +266,7 @@ to the top of the file:
   ![](hello-ios-quickstart-images/image27new.png "Press Start")
 
   > [!NOTE]
-  > At present, due to a requirement from Apple, it may be necessary to have a a development certificate or *signing identity* to build you code for device or simulator. Follow the steps in the [Device Provisioning guide](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) to set this up.
+  > At present, due to a requirement from Apple, it may be necessary to have a development certificate or *signing identity* to build you code for device or simulator. Follow the steps in the [Device Provisioning guide](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) to set this up.
 
 28. This will launch the application inside the iOS Simulator:
 

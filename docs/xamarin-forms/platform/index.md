@@ -59,7 +59,7 @@ Tizen .NET enables you to build .NET applications with Xamarin.Forms and the Tiz
 
 ## [Windows](windows/index.md)
 
-Xamarin.Forms has support for the Universal Windows Platform (UWP) on Windows 10. This article describes how to add a a UWP project to an existing Xamarin.Forms solution.
+Xamarin.Forms has support for the Universal Windows Platform (UWP) on Windows 10. This article describes how to add a UWP project to an existing Xamarin.Forms solution.
 
 ## [WPF](wpf.md)
 
