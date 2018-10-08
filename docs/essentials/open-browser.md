@@ -52,7 +52,7 @@ An `Intent` will be used to request the Uri be opened through the systems normal
 
 ## System Preferred
 
-[SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) is used to to load the Uri and keep navigation awareness.
+[SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) is used to load the Uri and keep navigation awareness.
 
 ## External
 

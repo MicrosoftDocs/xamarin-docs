@@ -178,7 +178,7 @@ so changing it has no effect and it should be left as it is (position
 at origin, no rotation, no scaling.)
 
 [`Scene`](https://developer.xamarin.com/api/type/Urho.Node/) nodes can be freely reparented. In contrast components always
-belong to to the node they attached to, and can not be moved between
+belong to the node they attached to, and can not be moved between
 nodes. Both nodes and components provide a [`Remove()`](https://developer.xamarin.com/api/member/Urho.Node.Remove()/) function to
 accomplish this without having to go through the parent. Once the node
 is removed, no operations on the node or component in question are

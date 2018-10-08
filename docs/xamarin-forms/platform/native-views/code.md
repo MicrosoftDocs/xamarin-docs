@@ -15,7 +15,7 @@ _Native views from iOS, Android, and UWP can be directly referenced from Xamarin
 
 ## Overview
 
-Any Xamarin.Forms control that allows `Content` to to be set, or that has a `Children` collection, can add platform-specific views. For example, an iOS `UILabel` can be directly added to the [`ContentView.Content`](xref:Xamarin.Forms.ContentView.Content) property, or to the [`StackLayout.Children`](xref:Xamarin.Forms.Layout`1.Children) collection. However, note that this functionality requires the use of `#if` defines in Xamarin.Forms Shared Project solutions, and isn't available from Xamarin.Forms .NET Standard library solutions.
+Any Xamarin.Forms control that allows `Content` to be set, or that has a `Children` collection, can add platform-specific views. For example, an iOS `UILabel` can be directly added to the [`ContentView.Content`](xref:Xamarin.Forms.ContentView.Content) property, or to the [`StackLayout.Children`](xref:Xamarin.Forms.Layout`1.Children) collection. However, note that this functionality requires the use of `#if` defines in Xamarin.Forms Shared Project solutions, and isn't available from Xamarin.Forms .NET Standard library solutions.
 
 The following screenshots demonstrate platform-specific views having been added to a Xamarin.Forms [`StackLayout`](xref:Xamarin.Forms.StackLayout):
 

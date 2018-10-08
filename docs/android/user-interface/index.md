@@ -40,7 +40,7 @@ phone number.
 
 ## [Splash Screen](~/android/user-interface/splash-screen.md)
 
-An Android app takes some time to to start up, especially when the app
+An Android app takes some time to start up, especially when the app
 is first launched on a device. A splash screen may display start up
 progress to the user. This guide explains how to create a splash
 screen for your app.
