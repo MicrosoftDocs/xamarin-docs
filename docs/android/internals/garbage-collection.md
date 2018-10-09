@@ -536,7 +536,7 @@ do have a significant fixed cost, so you don't want to trigger them too
 often, and should have a pause time of a few milliseconds. 
 
 If your application has a "duty cycle" in which the same thing is done 
-over and over, it may be advisable to manually peform a minor 
+over and over, it may be advisable to manually perform a minor 
 collection once the duty cycle has ended. Example duty cycles include: 
 
 -  The rendering cycle of a single game frame.
