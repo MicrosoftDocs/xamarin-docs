@@ -283,12 +283,12 @@ With your build settings properly configured and iTunes Connect awaiting your su
 
 4. To find the .ipa file on the Windows machine, right-click on the Xamarin.iOS project name in the Visual Studio 2017 **Solution Explorer** and choose **Open Folder in File Explorer**. Then, in the just-opened Windows **File Explorer**, navigate to the **bin/iPhone/Release** subdirectory. Unless you have [customized the .ipa file output location](#customize-the-ipa-location), it should be in this directory.
 5. To instead view the .ipa file on the Mac build host, right-click the Xamarin.iOS project name in the Visual Studio 2017 **Solution Explorer** (on Windows) and select **Show IPA File on Build Server**. This will open a **Finder** window on the Mac build host with the .ipa file selected.
-6. On the Mac build host, open **Application Launcher**. In Xcode, select **Xcode > Open Developer Tool > Application Launcher**.
+6. On the Mac build host, open **Application Loader**. In Xcode, select **Xcode > Open Developer Tool > Application Loader**.
 
     > [!NOTE]
     > For more information about the tool, take a look at [Apple's docs about Application Loader](https://help.apple.com/itc/apploader/#/apdS673accdb).
 
-7. Log in to Application Launcher (note that you must [create an app-specific password](https://support.apple.com/ht204397) for your Apple ID).
+7. Log in to Application Loader (note that you must [create an app-specific password](https://support.apple.com/ht204397) for your Apple ID).
 8. Select **Deliver Your App** and click the **Choose** button:
 
     ![Select Deliver Your App ](publishing-to-the-app-store-images/publishvs01.png "Select Deliver Your App")
