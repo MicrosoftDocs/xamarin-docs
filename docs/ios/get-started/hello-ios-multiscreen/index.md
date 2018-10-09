@@ -7,18 +7,17 @@ ms.assetid: 79f57ac0-37d0-4593-9dcf-fca93ad0be65
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 12/02/2016
+ms.date: 10/05/2018
 ---
-
 # Hello, iOS Multiscreen
 
-##  [Part 1: Quickstart](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
+## [Part 1: Quickstart](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
 
-In the first part of this guide we’ll add a second screen to our Phoneword application to keep track of the history of numbers called using our app.
+The first part of this guide adds a second screen to the Phoneword sample application to keep track of the history of numbers entered.
 
-##  [Part 2: Deep Dive](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
+## [Part 2: Deep Dive](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
 
-In the second part of this document, we’ll review what we’ve built and discuss architecture, navigation, and other new iOS concepts that we encounter along the way.
+The second part of this document explains what was built and discusses architecture, navigation, and other new iOS concepts encountered along the way.
 
 ## Related Links
 

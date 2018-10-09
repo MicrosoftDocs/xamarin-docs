@@ -1,5 +1,5 @@
 # [Xamarin.iOS](index.yml)
-## [Getting Started](get-started/index.md)
+## [Get Started](get-started/index.md)
 ### [Setup and Installation](get-started/installation/index.md)
 #### [Mac](get-started/installation/mac.md)
 #### [Windows](get-started/installation/windows/index.md)

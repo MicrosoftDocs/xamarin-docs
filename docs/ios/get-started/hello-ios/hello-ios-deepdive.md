@@ -1,13 +1,14 @@
 ---
 title: "Hello, iOS – Deep dive"
 description: "This document takes a deeper look at the Hello, iOS sample application, considering its architecture, user interface, content view hierarchy, testing, deployment, and more."
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 61ba3a7e-fe11-4439-8bc8-9809512b8eff
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 03/19/2017
+ms.date: 10/05/2018
 ---
 # Hello, iOS – Deep dive
 
@@ -15,56 +16,58 @@ The Quickstart walkthrough, introduced building and running a basic Xamarin.iOS 
 
 This guide helps you develop the skills and knowledge required to build a single-screen iOS application. After working through it, you should have an understanding of the different parts of a Xamarin.iOS application and how they fit together.
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 ## Introduction to Visual Studio for Mac
 
 Visual Studio for Mac is a free, open-source IDE that combines features from Visual Studio and XCode. It features a fully integrated visual designer, a text editor complete with refactoring tools, an assembly browser, source code integration, and more. This guide introduces some basic Visual Studio for Mac features, but if you're new to Visual Studio for Mac, check out the [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/) documentation.
 
-Visual Studio for Mac follows the Visual Studio practice of organizing code into *Solutions* and *Projects*. A Solution is a container that can hold one or more Projects. A Project can be an application (such as iOS or Android), a supporting library, a test application, and more. In the Phoneword app, a new iPhone Project was added using the **Single View Application** template. The initial Solution looked like this:
+Visual Studio for Mac follows the Visual Studio practice of organizing code into *solutions* and *projects*. A solution is a container that can hold one or more projects. A project can be an application (such as iOS or Android), a supporting library, a test application, and more. In the Phoneword app, a new iPhone project was added using the **Single View Application** template. The initial solution looked like this:
 
-![](hello-ios-deepdive-images/image30.png "A screenshot of the initial Solution")
+![](hello-ios-deepdive-images/image30.png "A screenshot of the initial solution")
 
-# [Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 ## Introduction to Visual Studio
 
-Visual Studio is a powerful IDE from Microsoft. It features a fully integrated visual designer, a text editor complete with refactoring tools, an assembly browser, source code integration, and more. This guide introduces some basic Visual Studio features with the Xamarin plug-in.
+Visual Studio is a powerful IDE from Microsoft. It features a fully integrated visual designer, a text editor complete with refactoring tools, an assembly browser, source code integration, and more. This guide introduces some basic Visual Studio features with Xamarin Tools for Visual Studio.
 
-Visual Studio organizes code into _Solutions_ and *Projects*. A Solution is a container that can hold one or more Projects. A Project can be an application (such as iOS or Android), a supporting library, a test application, and more. In the Phoneword app, a new iPhone Project was added using the **Single View Application** template. The initial Solution looked like this:
+Visual Studio organizes code into solutions and projects. A solution is a container that can hold one or more projects. A project can be an application (such as iOS or Android), a supporting library, a test application, and more. In the Phoneword app, a new iPhone project was added using the **Single View Application** template. The initial solution looked like this:
 
-![](hello-ios-deepdive-images/vs-image30.png "A screenshot of the initial Solution")
+![](hello-ios-deepdive-images/vs-image30.png "A screenshot of the initial solution")
 
------
+::: zone-end
 
 ## Anatomy of a Xamarin.iOS application
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone pivot="macos"
 
-On the left is the *Solution Pad*, which contains the directory structure and all the files associated with the Solution:
+On the left is the **solution Pad**, which contains the directory structure and all the files associated with the solution:
 
-![](hello-ios-deepdive-images/image31.png "The Solution Pad, which contains the directory structure and all the files associated with the Solution")
+![](hello-ios-deepdive-images/image31.png "The solution Pad, which contains the directory structure and all the files associated with the solution")
 
-# [Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
-On the right is the *Solution Pane*, which contains the directory structure and all the files associated with the Solution:
+On the right is the **solution Pane**, which contains the directory structure and all the files associated with the solution:
 
-![](hello-ios-deepdive-images/vs-image31.png "The Solution Pane, which contains the directory structure and all the files associated with the Solution")
+![](hello-ios-deepdive-images/vs-image31.png "The solution Pane, which contains the directory structure and all the files associated with the solution")
 
------
+::: zone-end
 
-In the [Hello, iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md) walkthrough, you created a Solution called **Phoneword** and placed an iOS Project - **Phoneword_iOS** - inside it. The items inside the Project include:
+In the [Hello, iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md) walkthrough, you created a solution called **Phoneword** and placed an iOS project - **Phoneword_iOS** - inside it. The items inside the project include:
 
--  **References** - Contains the assemblies required to build and run the application. Expand the directory to see references to .NET assemblies such as  [System](http://msdn.microsoft.com/library/system%28v=vs.110%29.aspx) , System.Core, and  [System.Xml](http://msdn.microsoft.com/library/system.xml%28v=vs.110%29.aspx) , as well as a reference to Xamarin's Xamarin.iOS assembly.
--  **Packages** - The Packages directory contains ready-made NuGet packages.
--  **Resources** - The Resources folder stores other media.
--  **Main.cs** – This contains the main entry point of the application. To start the application, the name of the main application class, the  `AppDelegate`, is passed in .
--  **AppDelegate.cs** – This file contains the main application class and is responsible for creating the Window, building the user interface, and listening to events from the operating system.
--  **Main.storyboard** - The Storyboard contains the visual design of the application’s user interface. Storyboard files open in a graphical editor called the iOS Designer.
--  **ViewController.cs** – The View Controller powers the screen (View) that a user sees and touches. The View Controller is responsible for handling interactions between the user and the View.
--  **ViewController.designer.cs** – The `designer.cs` is an auto-generated file that serves as the glue between controls in the View and their code representations in the View Controller. Because this is an internal plumbing file, the IDE will overwrite any manual changes and most of the time this file can be ignored. For more information on the relationship between the visual Designer and the backing code, refer to the  [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) guide.
--  **Info.plist** – The `Info.plist` is where application properties such as the application name, icons, launch images, and more are set. This is a powerful file and a thorough introduction to it is available in the  [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) guide.
--  **Entitlements.plist** - The entitlements property list lets us specify application  *capabilities* (also called App Store Technologies) such as iCloud, PassKit, and more. More information on the  `Entitlements.plist` can be found in the  [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) guide. For a general introduction to entitlements, refer to the  [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide.
+- **References** - Contains the assemblies required to build and run the application. Expand the directory to see references to .NET assemblies such as  [System](https://docs.microsoft.com/dotnet/api/system), System.Core, and [System.Xml](https://docs.microsoft.com/dotnet/api/system.xml), as well as a reference to the Xamarin.iOS assembly.
+- **Packages** - The packages directory contains ready-made NuGet packages.
+- **Resources** - The resources folder stores other media.
+- **Main.cs** – This contains the main entry point of the application. To start the application, the name of the main application class, the  `AppDelegate`, is passed in .
+- **AppDelegate.cs** – This file contains the main application class and is responsible for creating the Window, building the user interface, and listening to events from the operating system.
+- **Main.storyboard** - The Storyboard contains the visual design of the application’s user interface. Storyboard files open in a graphical editor called the iOS Designer.
+- **ViewController.cs** – The view controller powers the screen (View) that a user sees and touches. The view controller is responsible for handling interactions between the user and the View.
+- **ViewController.designer.cs** – The `designer.cs` is an auto-generated file that serves as the glue between controls in the View and their code representations in the view controller. Because this is an internal plumbing file, the IDE will overwrite any manual changes and most of the time this file can be ignored. For more information on the relationship between the visual Designer and the backing code, refer to the  [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) guide.
+- **Info.plist** – The **Info.plist** is where application properties such as the application name, icons, launch images, and more are set. This is a powerful file and a thorough introduction to it is available in the [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) guide.
+- **Entitlements.plist** - The entitlements property list lets us specify application *capabilities* (also called App Store Technologies) such as iCloud, PassKit, and more. More information on the  **Entitlements.plist** can be found in the  [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) guide. For a general introduction to entitlements, refer to the  [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide.
 
 ## Architecture and app fundamentals
 
@@ -74,11 +77,9 @@ This section studies the relationships illustrated in the following diagram:
 
 [![](hello-ios-deepdive-images/image32.png "The Architecture and App Fundamentals relationships are illustrated in this diagram")](hello-ios-deepdive-images/image32.png#lightbox)
 
-Let's start at the beginning and learn what happens at application startup.
+### Main method
 
-### Main
-
-The main entry point of an iOS application is the `Main.cs` file. `Main.cs` contains a static Main method that creates a new Xamarin.iOS application instance and passes the name of the *Application Delegate* class that will handle OS events. The template code for the static `Main` method appears below:
+The main entry point of an iOS application is the `Application` class. The `Application` class is defined in the **Main.cs** file and contains a static `Main` method. It creates a new Xamarin.iOS application instance and passes the name of the *Application Delegate* class that will handle OS events. The template code for the static `Main` method appears below:
 
 ```csharp
 using System;
@@ -98,7 +99,7 @@ namespace Phoneword_iOS
 
 ### Application delegate
 
-In iOS, the *Application Delegate* class handles system events; this class lives inside `AppDelegate.cs`. The `AppDelegate` class manages the application *Window*. The Window is a single instance of the `UIWindow` class that serves as a container for the user interface. By default, an application gets only one Window onto which to load its content, and the Window is attached to a *Screen* (single `UIScreen` instance) that provides the bounding rectangle matching the dimensions of the physical device screen.
+In iOS, the *Application Delegate* class handles system events; this class lives inside **AppDelegate.cs**. The `AppDelegate` class manages the application *Window*. The Window is a single instance of the `UIWindow` class that serves as a container for the user interface. By default, an application gets only one Window onto which to load its content, and the Window is attached to a *Screen* (single `UIScreen` instance) that provides the bounding rectangle matching the dimensions of the physical device screen.
 
 The *AppDelegate* is also responsible for subscribing to system updates about important application events such as when the app finishes launching or when memory is low.
 
@@ -129,7 +130,7 @@ Once the application has defined its Window, it can begin loading the user inter
 
 ## User interface
 
-The user interface of an iOS app is like a storefront - the application typically gets one Window, but it can fill the Window up with as many objects at it needs, and the objects and arrangements can be changed depending on what the app wants to display. The objects in this scenario - the things that the user sees - are called Views. To build a single screen in an application, Views are stacked on top of each other in a *Content View Hierarchy*, and the hierarchy is managed by a single View Controller. Applications with multiple screens have multiple Content View Hierarchies, each with its own View Controller, and the application places Views in the Window to create a different Content View Hierarchy based on the screen that the user is on.
+The user interface of an iOS app is like a storefront - the application typically gets one Window, but it can fill the Window up with as many objects at it needs, and the objects and arrangements can be changed depending on what the app wants to display. The objects in this scenario - the things that the user sees - are called Views. To build a single screen in an application, Views are stacked on top of each other in a *Content View Hierarchy*, and the hierarchy is managed by a single view controller. Applications with multiple screens have multiple Content View Hierarchies, each with its own view controller, and the application places Views in the Window to create a different Content View Hierarchy based on the screen that the user is on.
 
 This section dives into the user interface by describing Views, Content View Hierarchies, and the iOS Designer.
 
@@ -137,31 +138,32 @@ This section dives into the user interface by describing Views, Content View Hie
 
 The iOS Designer is a visual tool for building user interfaces in Xamarin. The Designer can be launched by double-clicking on any Storyboard (.storyboard) file, which will open to a view that resembles the following screenshot:
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 ![](hello-ios-deepdive-images/image33.png "iOS Designer Interface")
 
-A *Storyboard* is a file that contains the visual designs of our application’s screens as well as the transitions and relationships between the screens. The representation of an application’s screen in a Storyboard is called a _Scene_. Each Scene represents a View Controller and the stack of Views that it manages (Content View Hierarchy). When a new **Single View Application** Project is created from a template, Visual Studio for Mac automatically generates a Storyboard file called `Main.storyboard` and populates it with a single Scene, as illustrated by the screenshot below:
+A *Storyboard* is a file that contains the visual designs of our application’s screens as well as the transitions and relationships between the screens. The representation of an application’s screen in a Storyboard is called a _Scene_. Each Scene represents a view controller and the stack of Views that it manages (Content View Hierarchy). When a new **Single View Application** project is created from a template, Visual Studio for Mac automatically generates a Storyboard file called `Main.storyboard` and populates it with a single Scene, as illustrated by the screenshot below:
 
 ![](hello-ios-deepdive-images/image34.png "Visual Studio for Mac automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene")
 
-The black bar at the bottom of the Storyboard screen can be selected to choose the View Controller for the Scene. The View Controller is an instance of the `UIViewController` class that contains the backing code for the Content View Hierarchy. Properties on this View Controller can be viewed and set inside the **Properties Pad**, as illustrated by the screenshot below:
+The black bar at the bottom of the Storyboard screen can be selected to choose the view controller for the Scene. The view controller is an instance of the `UIViewController` class that contains the backing code for the Content View Hierarchy. Properties on this view controller can be viewed and set inside the **Properties Pad**, as illustrated by the screenshot below:
 
 ![](hello-ios-deepdive-images/image35.png "The Properties Pane")
 
-# [Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 ![](hello-ios-deepdive-images/vs-image33.png "iOS Designer Interface")
 
-A *Storyboard* is a file that contains the visual designs of our application’s screens as well as the transitions and relationships between the screens. The representation of an application’s screen in a Storyboard is called a _Scene_. Each Scene represents a View Controller and the stack of Views that it manages (Content View Hierarchy). When a new **Single View Application** Project is created from a template, Visual Studio automatically generates a Storyboard file called `Main.storyboard` and populates it with a single Scene, as illustrated by the screenshot below:
+A *Storyboard* is a file that contains the visual designs of our application’s screens as well as the transitions and relationships between the screens. The representation of an application’s screen in a Storyboard is called a _Scene_. Each Scene represents a view controller and the stack of Views that it manages (Content View Hierarchy). When a new **Single View Application** project is created from a template, Visual Studio automatically generates a Storyboard file called `Main.storyboard` and populates it with a single Scene, as illustrated by the screenshot below:
 
 ![](hello-ios-deepdive-images/vs-image34.png "Visual Studio automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene")
 
-The bar at the bottom of the Storyboard screen can be selected to choose the View Controller for the Scene. The View Controller is an instance of the `UIViewController` class that contains the backing code for the Content View Hierarchy. Properties on this View Controller can be viewed and set inside the **Properties Pane**, as illustrated by the screenshot below:
+The bar at the bottom of the Storyboard screen can be selected to choose the view controller for the Scene. The view controller is an instance of the `UIViewController` class that contains the backing code for the Content View Hierarchy. Properties on this view controller can be viewed and set inside the **Properties Pane**, as illustrated by the screenshot below:
 
 ![](hello-ios-deepdive-images/vs-image35.png "The Properties Pane")
 
------
+::: zone-end
 
 The _View_ can be selected by clicking inside the white part of the Scene. The View is an instance of the `UIView` class that defines an area of the screen and provides interfaces for working with the content in that area. The default View is a single *Root View* that fills the whole device screen.
 
@@ -169,99 +171,104 @@ To the left of the Scene is a gray arrow with a flag icon, as illustrated by the
 
  [![](hello-ios-deepdive-images/image37.png "A gray arrow with a flag icon")](hello-ios-deepdive-images/image37.png#lightbox)
 
-The gray arrow represents a Storyboard transition called a *Segue* (pronounced “seg-way”). Since this Segue has no origin, it is called a *Sourceless Segue*. A Sourceless Segue points to the first Scene whose Views gets loaded into our application's Window at application startup. The Scene and the Views inside it will be the first thing that the user sees when the app loads.
+The gray arrow represents a storyboard transition called a *Segue* (pronounced “seg-way”). Since this segue has no origin, it is called a *Sourceless Segue*. A sourceless segue points to the first scene whose views get loaded into the application's window at application startup. The scene and the views inside it will be the first thing that the user sees when the app loads.
 
-When building a user interface, additional Views can be dragged from the **Toolbox** onto the main View on the design surface, as illustrated by the screenshot below:
+When building a user interface, additional Views can be dragged from the **Toolbox** onto the main view on the design surface, as illustrated by the screenshot below:
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 ![](hello-ios-deepdive-images/image38.png "Additional Views can be dragged from the Toolbox onto the main View on the design surface")
 
-# [Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 ![](hello-ios-deepdive-images/vs-image38.png "Additional Views can be dragged from the Toolbox onto the main View on the design surface")
 
------
+::: zone-end
 
-These additional Views are called *Subviews*. Together, the root View and Subviews are part of a *Content View Hierarchy* that is managed by the `ViewController`. The outline of all the elements in the Scene can be viewed by examining it in the **Document Outline** pad:
+These additional Views are called *Subviews*. Together, the root view and subviews are part of a *Content View Hierarchy* that is managed by the `ViewController`. The outline of all the elements in the scene can be viewed by examining it in the **Document Outline** pad:
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 ![](hello-ios-deepdive-images/image39.png "The Document Outline pad")
 
-# [Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 ![](hello-ios-deepdive-images/vs-image39.png "The Document Outline pad")
 
------
+::: zone-end
 
 The Subviews are highlighted in the diagram below:
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 ![](hello-ios-deepdive-images/image40.png "The Subviews are highlighted in the diagram")
 
-# [Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 ![](hello-ios-deepdive-images/vs-image40.png "The Subviews are highlighted in the diagram")
 
------
+::: zone-end
 
 The next section breaks down the Content View Hierarchy represented by this Scene.
 
 ## Content view hierarchy
 
-A _Content View Hierarchy_ is a stack of Views and Subviews managed by a single View Controller, as illustrated by the diagram below:
+A _Content View Hierarchy_ is a stack of Views and Subviews managed by a single view controller, as illustrated by the diagram below:
 
  [![](hello-ios-deepdive-images/image41.png "The Content View Hierarchy")](hello-ios-deepdive-images/image41.png#lightbox)
 
 We can make the Content View Hierarchy of our `ViewController` easier to see by temporarily changing the background color of the root View to yellow in the View section of the **Properties Pad**, as illustrated by the screenshot below:
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 ![](hello-ios-deepdive-images/image42.png "Changing the background color of the root View to yellow in the View section of the Properties Pad")
 
-# [Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 ![](hello-ios-deepdive-images/vs-image42.png "Changing the background color of the root View to yellow in the View section of the Properties Pad")
 
------
+::: zone-end
 
-The diagram below illustrates the relationships between the Window, Views, Subviews, and View Controller that bring the user interface to the device screen:
+The diagram below illustrates the relationships between the Window, Views, Subviews, and view controller that bring the user interface to the device screen:
 
- [![](hello-ios-deepdive-images/image43.png "The relationships between the Window, Views, Subviews, and View Controller")](hello-ios-deepdive-images/image43.png#lightbox)
+[![](hello-ios-deepdive-images/image43.png "The relationships between the Window, Views, Subviews, and view controller")](hello-ios-deepdive-images/image43.png#lightbox)
 
-In the next section discusses how to work with Views in code and learn to program for user interaction using View Controllers and the View Lifecycle.
+In the next section discusses how to work with Views in code and learn to program for user interaction using view controllers and the View lifecycle.
 
 ## View controllers and the view lifecycle
 
-Every Content View Hierarchy has a corresponding View Controller to power user interaction. The role of the View Controller is to manage the Views in the Content View Hierarchy. The View Controller is not part of the Content View Hierarchy, and it's not an element in the interface. Rather, it provides the code that powers the user's interactions with the objects on the screen.
+Every Content View Hierarchy has a corresponding view controller to power user interaction. The role of the view controller is to manage the Views in the Content View Hierarchy. The view controller is not part of the Content View Hierarchy, and it's not an element in the interface. Rather, it provides the code that powers the user's interactions with the objects on the screen.
 
 ### View controllers and storyboards
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone pivot="macos"
 
-The View Controller is represented in a Storyboard as a bar at the bottom of the Scene. Selecting the View Controller brings up its properties in the **Properties Pad**:
+The view controller is represented in a Storyboard as a bar at the bottom of the Scene. Selecting the view controller brings up its properties in the **Properties Pad**:
 
-![](hello-ios-deepdive-images/image44.png "Selecting the View Controller brings up its properties in the Properties Pane")
+![](hello-ios-deepdive-images/image44.png "Selecting the view controller brings up its properties in the Properties Pane")
 
-A custom View Controller class for the Content View Hierarchy represented by this Scene can be set by editing the **Class** property in the **Identity** section of the **Properties Pad**. For example, our **Phoneword** application sets the `ViewController` as the View Controller for our first screen, as illustrated by the screenshot below:
+A custom view controller class for the Content View Hierarchy represented by this Scene can be set by editing the **Class** property in the **Identity** section of the **Properties Pad**. For example, our **Phoneword** application sets the `ViewController` as the view controller for our first screen, as illustrated by the screenshot below:
 
-![](hello-ios-deepdive-images/image45new.png "The Phoneword application sets the ViewController as the View Controller")
+![](hello-ios-deepdive-images/image45new.png "The Phoneword application sets the ViewController as the view controller")
 
-# [Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
-The View Controller is represented in a Storyboard as a bar at the bottom of the Scene. Selecting the View Controller brings up its properties in the **Properties Pane**:
+The view controller is represented in a Storyboard as a bar at the bottom of the Scene. Selecting the view controller brings up its properties in the **Properties Pane**:
 
-![](hello-ios-deepdive-images/vs-image44.png "Selecting the View Controller brings up its properties in the Properties Pane")
+![](hello-ios-deepdive-images/vs-image44.png "Selecting the view controller brings up its properties in the Properties Pane")
 
-A custom View Controller class for the Content View Hierarchy represented by this Scene can be set by editing the **Class** property in the **Identity** section of the **Properties Pane**. For example, our **Phoneword** application sets the `ViewController` as the View Controller for our first screen, as illustrated by the screenshot below:
+A custom view controller class for the Content View Hierarchy represented by this Scene can be set by editing the **Class** property in the **Identity** section of the **Properties Pane**. For example, our **Phoneword** application sets the `ViewController` as the view controller for our first screen, as illustrated by the screenshot below:
 
-![](hello-ios-deepdive-images/vs-image45.png "The Phoneword application sets the ViewController as the View Controller")
+![](hello-ios-deepdive-images/vs-image45.png "The Phoneword application sets the ViewController as the view controller")
 
------
+::: zone-end
 
-This links the Storyboard representation of the View Controller to the `ViewController` C# class. Open the `ViewController.cs` file and notice View Controller is a *subclass* of `UIViewController`, as illustrated by the code below:
+This links the Storyboard representation of the view controller to the `ViewController` C# class. Open the `ViewController.cs` file and notice view controller is a *subclass* of `UIViewController`, as illustrated by the code below:
 
 ```csharp
 public partial class ViewController : UIViewController
@@ -273,37 +280,36 @@ public partial class ViewController : UIViewController
 }
 ```
 
-The `ViewController` now drives the interactions of the Content View Hierarchy associated with this View Controller in the Storyboard. Next you’ll learn about the View Controller's role in managing the Views by introducing a process called the View lifecycle.
+The `ViewController` now drives the interactions of the content view hierarchy associated with this view controller in the storyboard. Next you’ll learn about the view controller's role in managing the Views by introducing a process called the view lifecycle.
 
 > [!NOTE]
-> For visual-only screens that don’t require user interaction, the **Class** property can be left blank in the **Properties Pad**. This sets the View Controller's backing class as the default implementation of a `UIViewController`, which is appropriate if you don’t plan on adding custom code.
+> For visual-only screens that don’t require user interaction, the **Class** property can be left blank in the **Properties Pad**. This sets the view controller's backing class as the default implementation of a `UIViewController`, which is appropriate if you don’t plan on adding custom code.
 
 ### View lifecycle
 
-The View Controller is in charge of loading and unloading Content View Hierarchies from the Window. When something of importance happens to a View in the Content View Hierarchy, the operating system notifies the View Controller through events in the View lifecycle. By overriding methods in the View lifecycle, you can interact with the objects on the screen and create a dynamic, responsive user interface.
+The view controller is in charge of loading and unloading content view hierarchies from the window. When something of importance happens to a view in the content view hierarchy, the operating system notifies the view controller through events in the view lifecycle. By overriding methods in the view lifecycle, you can interact with the objects on the screen and create a dynamic, responsive user interface.
 
 These are the basic lifecycle methods and their function:
 
--  **ViewDidLoad** - Called  *once* the first time the View Controller loads its Content View Hierarchy into memory. This is a good place to do initial setup because it is when Subviews first become available in code.
--  **ViewWillAppear** - Called every time a View Controller's View is about to be added to a Content View Hierarchy and appear on the screen.
--  **ViewWillDisappear** - Called every time a View Controller's View is about to be removed from a Content View Hierarchy and disappear from the screen. This lifecycle event is used for cleanup and saving state.
--  **ViewDidAppear** and  **ViewDidDisappear** - Called when a View gets added or removed from the Content View Hierarchy, respectively.
+- **ViewDidLoad** - Called  *once* the first time the view controller loads its Content View Hierarchy into memory. This is a good place to do initial setup because it is when Subviews first become available in code.
+- **ViewWillAppear** - Called every time a view controller's View is about to be added to a Content View Hierarchy and appear on the screen.
+- **ViewWillDisappear** - Called every time a view controller's View is about to be removed from a Content View Hierarchy and disappear from the screen. This lifecycle event is used for cleanup and saving state.
+- **ViewDidAppear** and  **ViewDidDisappear** - Called when a View gets added or removed from the Content View Hierarchy, respectively.
 
+When custom code is added to any stage of the lifecycle, that lifecycle method’s *base implementation* must be *overridden*. This is achieved by tapping into the existing lifecycle method, which has some code already attached to it, and  extending it with additional code. The base implementation is called from inside the method to make sure the original code runs before the new code. An example of this is demonstrated in the next section.
 
-When custom code is added to any stage of the Lifecycle, that Lifecycle method’s *base implementation* must be *overriden*. This is achieved by tapping into the existing Lifecycle method, which has some code already attached to it, and  extending it with additional code. The base implementation is called from inside the method to make sure the original code runs before the new code. An example of this is demonstrated in the next section.
-
-For more information on working with View Controllers, refer to Apple's [View Controller Programming Guide for iOS](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1) and the [UIViewController reference](https://developer.apple.com/documentation/uikit/uiviewcontroller?language=objc).
+For more information on working with view controllers, refer to Apple's [view controller Programming Guide for iOS](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1) and the [UIViewController reference](https://developer.apple.com/documentation/uikit/uiviewcontroller?language=objc).
 
 ### Responding to user interaction
 
-The most important role of the View Controller is responding to user interaction, such as button presses, navigation, and more. The simplest way to handle user interaction is to wire up a control to listen to user input and attach an event handler to respond to the input. For example, a button could be wired up to respond to a touch event, as demonstrated in the Phoneword app.
+The most important role of the view controller is responding to user interaction, such as button presses, navigation, and more. The simplest way to handle user interaction is to wire up a control to listen to user input and attach an event handler to respond to the input. For example, a button could be wired up to respond to a touch event, as demonstrated in the Phoneword app.
 
-Now that there is have a deeper understanding of Views and View Controllers, let's explore how this works.
-In the `Phoneword_iOS` Project, a button was added called `TranslateButton` to the Content View Hierarchy:
+Now that there is have a deeper understanding of Views and view controllers, let's explore how this works.
+In the `Phoneword_iOS` project, a button was added called `TranslateButton` to the Content View Hierarchy:
 
- [![](hello-ios-deepdive-images/image1.png "A button was added called TranslateButton to the Content View Hierarchy")](hello-ios-deepdive-images/image1.png#lightbox)
+[![](hello-ios-deepdive-images/image1.png "A button was added called TranslateButton to the Content View Hierarchy")](hello-ios-deepdive-images/image1.png#lightbox)
 
-When a **Name** is assigned to the **Button** control in the **Properties Pad**, the iOS designer automatically mapped it to a control in the **ViewController.designer.cs**, making the `TranslateButton` available inside the `ViewController` class. Controls first become available in the `ViewDidLoad` stage of the View Lifecycle, so this lifecycle method is used to respond to the user's touch:
+When a **Name** is assigned to the **Button** control in the **Properties Pad**, the iOS designer automatically mapped it to a control in the **ViewController.designer.cs**, making the `TranslateButton` available inside the `ViewController` class. Controls first become available in the `ViewDidLoad` stage of the View lifecycle, so this lifecycle method is used to respond to the user's touch:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -348,12 +354,23 @@ The Phoneword application introduced several concepts not covered in this guide.
     ```csharp
     CallButton.SetTitle ("Call", UIControlState.Normal);
     ```
+
 - **Enable and Disable Buttons** – **Buttons** can be in an `Enabled` or `Disabled` state. A disabled **Button** won’t respond to user input. For example, the following code disables the `CallButton`:
-      CallButton.Enabled = false;
-  For more information on buttons, refer to the [Buttons](~/ios/user-interface/controls/buttons.md) guide.
+
+    ```csharp
+    CallButton.Enabled = false;
+    ```
+
+    For more information on buttons, refer to the [Buttons](~/ios/user-interface/controls/buttons.md) guide.
+
 - **Dismiss the Keyboard** – When the user taps the Text Field, iOS displays the keyboard to let the user enter input. Unfortunately, there is no built-in functionality to dismiss the keyboard. The following code is added to the `TranslateButton` to dismiss the keyboard when the user presses the `TranslateButton`:
-      PhoneNumberText.ResignFirstResponder ();
-  For another example of dismissing the keyboard, refer to the [Dismiss the Keyboard](https://github.com/xamarin/recipes/tree/master/Recipes/ios/input/keyboards/dismiss_the_keyboard) recipe.
+
+    ```csharp
+    PhoneNumberText.ResignFirstResponder ();
+    ```
+
+    For another example of dismissing the keyboard, refer to the [Dismiss the Keyboard](https://github.com/xamarin/recipes/tree/master/Recipes/ios/input/keyboards/dismiss_the_keyboard) recipe.
+
 - **Place Phone Call with URL** – In the Phoneword app, an Apple URL scheme is used to launch the system phone app. The custom URL scheme consists of a “tel:” prefix and the translated phone number, as illustrated by the code below:
 
     ```csharp
@@ -363,7 +380,8 @@ The Phoneword application introduced several concepts not covered in this guide.
         // show alert Controller
     }
     ```
-- **Show an Alert** – When a user tries to place a phone call on a device that doesn’t support calls – for example the Simulator or an iPod Touch – an alert dialog is displayed to let the user know the phone call can’t be placed. The code below creates and populates an alert controller:
+
+- **Show an Alert** – When a user tries to place a phone call on a device that doesn’t support calls – for example the simulator or an iPod Touch – an alert dialog is displayed to let the user know the phone call can’t be placed. The code below creates and populates an alert controller:
 
     ```csharp
     if (!UIApplication.SharedApplication.OpenUrl (url)) {
@@ -373,7 +391,7 @@ The Phoneword application introduced several concepts not covered in this guide.
                 }
     ```
 
-For more information on iOS alert views, refer to the [Alert Controller recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller).
+    For more information on iOS alert views, refer to the [Alert Controller recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller).
 
 ## Testing, deployment, and finishing touches
 
@@ -394,15 +412,16 @@ A device takes time to provision and requires an Apple Developer Account. The [D
 
 Once the device is provisioned, you can deploy to it by plugging it in, changing the target in the build toolbar to the iOS Device, and pressing **Start** ( **Play**) as illustrated by the following screenshot:
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 ![](hello-ios-deepdive-images/image46new.png "Pressing Start/Play")
 
-# [Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 ![](hello-ios-deepdive-images/vs-image46.png "Pressing Start/Play")
 
------
+::: zone-end
 
 The app will deploy to the iOS device:
 
@@ -412,20 +431,21 @@ The app will deploy to the iOS device:
 
 Not everyone has a designer available to create the custom icons and launch images an app needs to stand out. Here are several alternate approaches to generating custom app artwork:
 
-# [Visual Studio for Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 - [**Sketch**](https://www.sketchapp.com") – Sketch is a Mac app for designing user interfaces, icons, and more. This is the app that was used to design the Xamarin App Icons and Launch Images set. Sketch 3 is available on the App Store. You can try out the free [Sketch Tool](http://bohemiancoding.com/sketch/tool/) as well.
 - [**Pixelmator**](http://www.pixelmator.com/) – A versatile image editing app for Mac that costs about $30.
 - [**Glyphish**](http://www.glyphish.com/) – High-quality prebuilt icon sets for free download and purchase.
 - [**Fiverr**](http://www.fiverr.com/) – Choose from a variety of designers to create an icon set for you, starting at $5.  Can be hit or miss but a good resource if you need icons designed on the fly
 
-# [Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 * Visual Studio – You can use this to create a simple icon set for your app directly in the IDE.
 - [**Glyphish**](http://www.glyphish.com/) – High-quality prebuilt icon sets for free download and purchase.
 - [**Fiverr**](http://www.fiverr.com/) – Choose from a variety of designers to create an icon set for you, starting at $5.  Can be hit or miss but a good resource if you need icons designed on the fly
 
------
+::: zone-end
 
 For more information about icon and launch image sizes and requirements, refer to the [Working with Images guide](~/ios/app-fundamentals/images-icons/index.md).
 
@@ -433,7 +453,6 @@ For more information about icon and launch image sizes and requirements, refer t
 
 Congratulations! You now have a solid understanding of the components of a Xamarin.iOS application as well as the tools used to create them.
 In the [next tutorial in the Getting Started series](~/ios/get-started/hello-ios-multiscreen/index.md), you’ll extend our application to handle multiple screens. Along the way you’ll implement a Navigation Controller, learn about Storyboard Segues, and introduce the Model, View, Controller (MVC) pattern as you extend our application to handle multiple screens.
-
 
 ## Related links
 

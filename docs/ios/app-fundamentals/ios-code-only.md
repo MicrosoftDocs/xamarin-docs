@@ -9,7 +9,7 @@ ms.author: laobri
 ms.date: 05/03/2018
 ---
 
-# Creating iOS User Interfaces in Code in Xamarin.iOS
+# Creating iOS user interfaces in code in Xamarin.iOS
 
 The user interface of an iOS app is like a storefront – the application typically gets one Window, but it can fill the Window up with as many objects as it needs, and the objects and arrangements can be changed depending on what the app wants to display. The objects in this scenario - the things that the user sees - are called Views. To build a single screen in an application, Views are stacked on top of each other in a Content View Hierarchy, and the hierarchy is managed by a single View Controller. Applications with multiple screens have multiple Content View Hierarchies, each with its own View Controller, and the application places Views in the Window to create a different Content View Hierarchy based on the screen that the user is on.
 
@@ -31,11 +31,11 @@ These view hierarchies can be constructed using the [Xamarin Designer for iOS](~
 
 -----
 
-## Creating a Code-Only Project
+## Creating a code-only project
 
 # [Visual Studio](#tab/vswin)
 
-## iOS Blank Project Template
+## iOS blank project template
 
 First, create an iOS project in Visual Studio using the **File > New Project > Visual C# > iPhone & iPad > iOS App (Xamarin)** project, shown below:
 
@@ -49,7 +49,6 @@ The Empty Project template adds 4 files to the project:
 
 [![Project Files](ios-code-only-images/empty-project.w157-sml.png "Project Files")](ios-code-only-images/empty-project.w157.png#lightbox)
 
-
 1. **AppDelegate.cs** - Contains a  `UIApplicationDelegate` subclass,  `AppDelegate` , which is used to handle application events from iOS. The application window is created in the `AppDelegate`'s  `FinishedLaunching` method.
 1. **Main.cs** - Contains the entry point for the application, which specifies the class for the  `AppDelegate` .
 1. **Info.plist** - Property list file that contains application configuration information.
@@ -58,7 +57,7 @@ The Empty Project template adds 4 files to the project:
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-## iOS Templates
+## iOS templates
 
 
 Visual Studio for Mac does not provide an Empty template. All templates come with Storyboard support, which Apple recommends as the primary way to create a UI. However, it is possible to create your UI completely in code. 
@@ -67,67 +66,65 @@ The steps below guide you through removing the Storyboard from an application:
 
 
 1. Use the Single View App template to create a new iOS Project:
-	
-	[![](ios-code-only-images/single-view-app.png "Use the Single View App template")](ios-code-only-images/single-view-app.png#lightbox)
+
+    [![](ios-code-only-images/single-view-app.png "Use the Single View App template")](ios-code-only-images/single-view-app.png#lightbox)
 
 1. Delete the `Main.Storyboard` and `ViewController.cs` files. Do **not** delete the `LaunchScreen.Storyboard`. The View Controller should be deleted as it is the code behind for the view controller that is created in the Storyboard:
 1. Make sure to select **Delete** from the pop-up dialog:
-	
-	[![](ios-code-only-images/delete.png "Select Delete from the pop-up dialog")](ios-code-only-images/delete.png#lightbox)
+
+    [![](ios-code-only-images/delete.png "Select Delete from the pop-up dialog")](ios-code-only-images/delete.png#lightbox)
 
 1. In the Info.plist, delete the information inside the **Deployment Info > Main Interface** option:
-	
-	[![](ios-code-only-images/main-interface.png "Delete the information inside the Main Interface option")](ios-code-only-images/main-interface.png#lightbox)
+
+    [![](ios-code-only-images/main-interface.png "Delete the information inside the Main Interface option")](ios-code-only-images/main-interface.png#lightbox)
 
 1. Finally, add the following code to your `FinishedLaunching` method in the AppDelegate class:
-	    
-	    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-	    {
-	        // create a new window instance based on the screen size
-	        window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-	        // make the window visible
-	        window.MakeKeyAndVisible();
+        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        {
+            // create a new window instance based on the screen size
+            window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-	        return true;
-	    }
+            // make the window visible
+            window.MakeKeyAndVisible();
+
+            return true;
+        }
 
 The code that was added to the `FinishedLaunching` method in step 5 above, is the minimum amount of code required to create a Window for your iOS application.
 
 
 -----
 
-
-
-iOS applications are built using the [MVC pattern](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md#Model_View_Controller). The first screen that an application displays is created from the window's root view controller. See the [Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md) guide for more details on the MVC pattern itself.
+iOS applications are built using the [MVC pattern](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md#model-view-controller-mvc). The first screen that an application displays is created from the window's root view controller. See the [Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md) guide for more details on the MVC pattern itself.
 
 The implementation for the `AppDelegate` added by the template creates the application window, of which there is only one for every iOS application, and makes it visible with the following code:
 
 ```csharp
 public class AppDelegate : UIApplicationDelegate
 {
-	public override UIWindow Window
-	        {
-	            get;
-	            set;
-	        }
+    public override UIWindow Window
+            {
+                get;
+                set;
+            }
 
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
-	    // create a new window instance based on the screen size
-	    window = new UIWindow(UIScreen.MainScreen.Bounds);
+        // create a new window instance based on the screen size
+        window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-	    // make the window visible
-	    window.MakeKeyAndVisible();
+        // make the window visible
+        window.MakeKeyAndVisible();
 
-	    return true;
+        return true;
     }
 }
 ```
 
 If you were to run this application now, you would likely get an exception thrown stating that `Application windows are expected to have a root view controller at the end of application launch`. Let's add a Controller and make it the app's Root View Controller.
 
-## Adding a Controller
+## Adding a controller
 
 Your app can contain many View Controllers, but it needs to have one Root View Controller to control all the View Controllers.  Add a controller to the window by creating a `UIViewController` instance and setting it to the `window.RootViewController` property:
 
@@ -202,7 +199,7 @@ This produces the controller nested within the navigation controller as shown be
 
  [![](ios-code-only-images/image2.png "The controller nested within the navigation controller")](ios-code-only-images/image2.png#lightbox)
 
-## Creating a View Controller
+## Creating a view vontroller
 
 Now that we've seen how to add a controller as the `RootViewController` of the window, let's see how to create a custom view controller in code.
 
@@ -226,15 +223,13 @@ using UIKit;
 
 namespace CodeOnlyDemo
 {
-	class CustomViewController : UIViewController
-	{
-	}
+    class CustomViewController : UIViewController
+    {
+    }
 }
 ```
 
-<a name="Initializing_the_View"/>
-
-## Initializing the View
+## Initializing the view
 
 `UIViewController` contains a method called `ViewDidLoad` that is called when the View controller is first loaded into memory. This is an appropriate place to do initialization of the view, such as setting it's properties.
 
@@ -247,34 +242,34 @@ using UIKit;
 
 namespace CodyOnlyDemo
 {
-	public class CustomViewController : UIViewController
-	{
-		public CustomViewController ()
-		{
-		}
+    public class CustomViewController : UIViewController
+    {
+        public CustomViewController ()
+        {
+        }
 
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
-			View.BackgroundColor = UIColor.White;
-			Title = "My Custom View Controller";
+            View.BackgroundColor = UIColor.White;
+            Title = "My Custom View Controller";
 
-			var btn = UIButton.FromType (UIButtonType.System);
-			btn.Frame = new CGRect (20, 200, 280, 44);
-			btn.SetTitle ("Click Me", UIControlState.Normal);
+            var btn = UIButton.FromType (UIButtonType.System);
+            btn.Frame = new CGRect (20, 200, 280, 44);
+            btn.SetTitle ("Click Me", UIControlState.Normal);
 
-			var user = new UIViewController ();
-			user.View.BackgroundColor = UIColor.Magenta;
+            var user = new UIViewController ();
+            user.View.BackgroundColor = UIColor.Magenta;
 
-			btn.TouchUpInside += (sender, e) => {
-				this.NavigationController.PushViewController (user, true);
-			};
+            btn.TouchUpInside += (sender, e) => {
+                this.NavigationController.PushViewController (user, true);
+            };
 
-			View.AddSubview (btn);
+            View.AddSubview (btn);
 
-		}
-	}
+        }
+    }
 }
 ```
 
@@ -296,7 +291,7 @@ Clicking the button, will _push_ a new View Controller onto the navigation stack
 
 [![](ios-code-only-images/customvca.png "A new View Controller pushed onto the navigation stack")](ios-code-only-images/customvca.png#lightbox)
 
-## Building the View Hierarchy
+## Building the view hierarchy
 
 In the example above, we started to create a user interface in code by adding a button to the View Controller.
 
@@ -304,7 +299,7 @@ iOS user interfaces are comprised of a view hierarchy. Additional views, such as
 
 For example, let's edit the `CustomViewController` to create a login screen where the user can enter a username and password. The screen will consist of two text fields and a button.
 
-### Adding the Text Fields
+### Adding the text fields
 
 First, remove the button and event handler that was added in the [Initializing the View](#Initializing_the_View) section. 
 
@@ -313,26 +308,26 @@ Add a control for the username by creating and initializing a `UITextField` and 
 ```csharp
 class CustomViewController : UIViewController
 {
-	UITextField usernameField;
+    UITextField usernameField;
 
-	public override void ViewDidLoad()
-	{
-		base.ViewDidLoad();
+    public override void ViewDidLoad()
+    {
+        base.ViewDidLoad();
 
-		View.BackgroundColor = UIColor.Gray;
+        View.BackgroundColor = UIColor.Gray;
 
-		nfloat h = 31.0f;
-		nfloat w = View.Bounds.Width;
+        nfloat h = 31.0f;
+        nfloat w = View.Bounds.Width;
 
-		usernameField = new UITextField
-		{
-			Placeholder = "Enter your username",
-			BorderStyle = UITextBorderStyle.RoundedRect,
-			Frame = new CGRect(10, 82, w - 20, h)
-		};
+        usernameField = new UITextField
+        {
+            Placeholder = "Enter your username",
+            BorderStyle = UITextBorderStyle.RoundedRect,
+            Frame = new CGRect(10, 82, w - 20, h)
+        };
 
-		View.AddSubview(usernameField);
-	}
+        View.AddSubview(usernameField);
+    }
 }
 ```
 
@@ -370,7 +365,7 @@ Setting `SecureTextEntry = true` hides the text entered in the `UITextField` by 
 
  [![](ios-code-only-images/image4a.png "Setting SecureTextEntry true hides the text entered by the user")](ios-code-only-images/image4a.png#lightbox)
 
-### Adding the Button
+### Adding the button
 
 Next, we'll add a button so the user can submit the username and password. The button is added to the view hierarchy like any other control, by passing it as an argument to the parent view's `AddSubview` method again.
 
@@ -383,7 +378,7 @@ submitButton.Frame = new CGRect (10, 170, w - 20, 44);
 submitButton.SetTitle ("Submit", UIControlState.Normal);
 
 submitButton.TouchUpInside += (sender, e) => {
-	Console.WriteLine ("Submit button pressed");
+    Console.WriteLine ("Submit button pressed");
 };
 
 View.AddSubview(submitButton);
@@ -408,7 +403,7 @@ submitButton.Layer.CornerRadius = 5f;
 With these changes, the view will look like this:
 
 [![](ios-code-only-images/image6.png "An example run of the view")](ios-code-only-images/image6.png#lightbox)
- 
+
 ## Adding multiple views to the view hierarchy
 
 iOS provides a facility to add multiple views to the view hierarchy by using `AddSubviews`.
@@ -417,9 +412,9 @@ iOS provides a facility to add multiple views to the view hierarchy by using `Ad
 View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton }); 
 ```
 
-## Adding Button Functionality
+## Adding button functionality
 
-When a button is clicked, your users will expect something to happen. For example, an alert is shown or navigation is performed to another screen. 
+When a button is clicked, your users will expect something to happen. For example, an alert is shown or navigation is performed to another screen.
 
 Let's add some code to push a second view controller onto the navigation stack.
 
@@ -434,8 +429,8 @@ Then, add the functionality to the `TouchUpInside` event:
 
 ```csharp
 submitButton.TouchUpInside += (sender, e) => {
-				this.NavigationController.PushViewController (loginVC, true);
-			};
+                this.NavigationController.PushViewController (loginVC, true);
+            };
 ```
 
 The navigation is illustrated below:
@@ -461,11 +456,11 @@ foreach(var subview in View.Subviews)
 
 This, however will not work if the view being iterated for is a `UIView` as all views will come back as being a `UIView` as the objects added to the parent view themselves inherit `UIView`.
 
-## Handling Rotation
+## Handling rotation
 
 If the user rotates the device to landscape, the controls do not resize appropriately, as the following screenshot illustrates:
 
- [![](ios-code-only-images/image7.png "If the user rotates the device to landscape, the controls do not resize appropriately")](ios-code-only-images/image7.png#lightbox)
+[![](ios-code-only-images/image7.png "If the user rotates the device to landscape, the controls do not resize appropriately")](ios-code-only-images/image7.png#lightbox)
 
 One way to fix this is by setting the `AutoresizingMask` property on each view. In this case we want the controls to stretch horizontally, so we would set each `AutoresizingMask`. The following example is for `usernameField`, but the same would need to be applied to each gadget in the view hierarchy.
 
@@ -475,9 +470,9 @@ usernameField.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 
 Now when we rotate the device or simulator, everything stretches to fill the additional space, as shown below:
 
- [![](ios-code-only-images/image8.png "All the controls stretch to fill the additional space")](ios-code-only-images/image8.png#lightbox)
+[![](ios-code-only-images/image8.png "All the controls stretch to fill the additional space")](ios-code-only-images/image8.png#lightbox)
 
-## Creating Custom Views
+## Creating custom views
 
 In addition to using controls that are part of UIKit, custom views can also be used. A custom view can be created by inheriting from `UIView` and overriding `Draw`. Let's create a custom view and add it to the view hierarchy to demonstrate.
 
@@ -492,9 +487,9 @@ using System;
 
 namespace CodeOnlyDemo
 {
-	class CircleView : UIView
-	{
-	}
+    class CircleView : UIView
+    {
+    }
 }
 ```
 
@@ -507,24 +502,24 @@ We can add drawing code to our view by adding such code inside the overridden `D
 ```csharp
 public override void Draw(CGRect rect)
 {
-	base.Draw(rect);
+    base.Draw(rect);
 
-	//get graphics context
-	using (var g = UIGraphics.GetCurrentContext())
-	{
-		// set up drawing attributes
-		g.SetLineWidth(10.0f);
-		UIColor.Green.SetFill();
-		UIColor.Blue.SetStroke();
+    //get graphics context
+    using (var g = UIGraphics.GetCurrentContext())
+    {
+        // set up drawing attributes
+        g.SetLineWidth(10.0f);
+        UIColor.Green.SetFill();
+        UIColor.Blue.SetStroke();
 
-		// create geometry
-		var path = new CGPath();
-		path.AddArc(Bounds.GetMidX(), Bounds.GetMidY(), 50f, 0, 2.0f * (float)Math.PI, true);
+        // create geometry
+        var path = new CGPath();
+        path.AddArc(Bounds.GetMidX(), Bounds.GetMidY(), 50f, 0, 2.0f * (float)Math.PI, true);
 
-		// add geometry to graphics context and draw
-		g.AddPath(path);
-		g.DrawPath(CGPathDrawingMode.FillStroke);
-	}
+        // add geometry to graphics context and draw
+        g.AddPath(path);
+        g.DrawPath(CGPathDrawingMode.FillStroke);
+    }
 }
 ```
 
@@ -533,7 +528,7 @@ Since `CircleView` is a `UIView`, we can also set `UIView` properties as well. F
 ```csharp
 public CircleView()
 {
-	BackgroundColor = UIColor.White;
+    BackgroundColor = UIColor.White;
 }
 ```
 
@@ -573,7 +568,7 @@ submitButton.TouchUpInside += delegate
 {
     Console.WriteLine("Submit button clicked");
 
-   	//circleController is declared as class variable
+    //circleController is declared as class variable
     circleController = new CircleController();
     PresentViewController(circleController, true, null);
 };
@@ -581,19 +576,19 @@ submitButton.TouchUpInside += delegate
 
 Now, when we run the application and tap the submit button, the new view with a circle is displayed:
 
- [![](ios-code-only-images/circles.png "The new view with a circle is displayed")](ios-code-only-images/circles.png#lightbox)
+[![](ios-code-only-images/circles.png "The new view with a circle is displayed")](ios-code-only-images/circles.png#lightbox)
 
-## Creating a Launch Screen
+## Creating a launch screen
 
-A [launch screen](~/ios/app-fundamentals/images-icons/launch-screens.md) is displayed when your app starts up as a way to display to your users that it is responsive. Because a launch screen is displayed when your app is loading, it cannot be created in code as the application is still being loaded into memory. 
+A [launch screen](~/ios/app-fundamentals/images-icons/launch-screens.md) is displayed when your app starts up as a way to display to your users that it is responsive. Because a launch screen is displayed when your app is loading, it cannot be created in code as the application is still being loaded into memory.
 
 # [Visual Studio](#tab/vswin)
 
-When your create an iOS Project in Visual Studio, a Launch Screen is provided for you in the form of a .xib file, which can be found in the **Resources** folder inside your project. 
+When you create an iOS Project in Visual Studio, a Launch Screen is provided for you in the form of a .xib file, which can be found in the **Resources** folder inside your project.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-When your create an iOS Project in Visual Studio for Mac, a Launch Screen is provided for you in the form of a Storyboard file. 
+When you create an iOS Project in Visual Studio for Mac, a Launch Screen is provided for you in the form of a Storyboard file.
 
 -----
 
@@ -609,7 +604,7 @@ For more information on creating a Launch Screen, refer to the documents below:
 > [!IMPORTANT]
 > As of iOS 9, Apple recommends that Storyboards should be used as the primary method of creating a Launch Screen.
 
-### Creating a Launch Image for pre-iOS 8 applications
+### Creating a launch image for pre-iOS 8 applications
 
 A static image can be used in addition to a .xib or Storyboard launch screen if you application targets versions previous to iOS 8. 
 
@@ -617,8 +612,6 @@ This static image can be set in the Info.plist file, or as an Asset Catalog (for
 
 > [!IMPORTANT]
 > If your app has no Launch Screen, you may notice that it doesn't fully fit the screen. If this is the case, you should make sure to include, at least, a 640x1136 image named `Default-568@2x.png` to your Info.plist. 
-
-
 
 ## Summary
 
@@ -631,9 +624,6 @@ This article discussed how to develop iOS applications programmatically in Visua
 This article discussed how to develop iOS applications programmatically in Visual Studio for Mac. We looked at how to build up a project from a Single View template, discussing how to create and add a root view controller to the window. We then showed how to use controls from UIKit to create a view hierarchy within a controller to develop an application screen. Next we examined how to make the views lay out appropriately in different orientations and we saw how to create a custom view by subclassing `UIView`, as well as how to load the view within a controller. Finally we explored how to add a launch screen to an application.
 
 -----
-
-
-
 
 ## Related Links
 
