@@ -16,7 +16,7 @@ _This article covers including an image asset in a Xamarin.iOS app and displayin
 
 When adding an image for use in a Xamarin.iOS app, the developer will use an _Asset Catalog_ to support every iOS device and resolution required by an app.
 
-Added in iOS 7, **Asset Catalogs Image Sets** contain all the versions or representations of an image that are necessary to support various devices and scale factors for an app. Instead of relying on the image assets filename (see [Resolution Independent Images and Image Nomenclature](~/ios/app-fundamentals/images-icons/displaying-an-image.md)), **Image Sets** use a Json file to specify which image belongs to which device and/or resolution. This is the preferred way to manage and support images in iOS (from iOS 9 or greater).
+Added in iOS 7, **Asset Catalogs Image Sets** contain all the versions or representations of an image that are necessary to support various devices and scale factors for an app. Instead of relying on the image assets filename, **Image Sets** use a Json file to specify which image belongs to which device and/or resolution. This is the preferred way to manage and support images in iOS (from iOS 9 or greater).
 
 ## Adding images to an asset catalog image set
 
