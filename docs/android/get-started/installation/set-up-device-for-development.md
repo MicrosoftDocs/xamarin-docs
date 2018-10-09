@@ -188,7 +188,7 @@ ways to do so:
 By default, the
 [Android Debug Bridge](http://developer.android.com/tools/help/adb.html) (*ADB*)
 is configured to communicate with an Android device via USB. It is
-possible to to reconfigure it to use TCP/IP instead of USB. To
+possible to reconfigure it to use TCP/IP instead of USB. To
 do this, both the device and the computer must be on the same WiFi
 network. To setup your environment to debug over WiF issue these steps
 from the command line:

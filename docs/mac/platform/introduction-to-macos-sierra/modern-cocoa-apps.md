@@ -613,7 +613,7 @@ public override void MouseDown (NSEvent theEvent)
 }
 ```
 
-This code uses the `TrackEventsMatching` method of the `NSWindow` that the UI element is attached to to intercept the `LeftMouseUp` and `LeftMouseDragged` events. For a `LeftMouseUp` event, the UI element responds as normal. For the `LeftMouseDragged` event, the event is passed to the `NSWindow`'s `PerformWindowDrag` method to move the window on screen.
+This code uses the `TrackEventsMatching` method of the `NSWindow` that the UI element is attached to intercept the `LeftMouseUp` and `LeftMouseDragged` events. For a `LeftMouseUp` event, the UI element responds as normal. For the `LeftMouseDragged` event, the event is passed to the `NSWindow`'s `PerformWindowDrag` method to move the window on screen.
 
 Calling the `PerformWindowDrag` method of the `NSWindow` class provides the following benefits:
 

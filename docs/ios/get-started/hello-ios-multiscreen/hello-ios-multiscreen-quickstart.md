@@ -177,7 +177,7 @@ and changing the **View Controller Title** to **Call History** in the **Properti
   ![](hello-ios-multiscreen-quickstart-images/18new.png "Change the View Controller Title to Call History in the Properties Pad")
 
 16. When the application is run, the **Call History Button** will open the **Call History** screen,
-  but the Table View will be empty because there is no code to to keep track of and display the phone numbers.
+  but the Table View will be empty because there is no code to keep track of and display the phone numbers.
 
   This app will store the phone numbers as a list of strings.
 
@@ -448,7 +448,7 @@ This walkthrough will add a Call History screen to our **Phoneword** application
 
 
 16. When the application is run, the **Call History Button** will open the **Call History** screen,
-  but the Table View will be empty because there is no code to to keep track of and display the phone numbers.
+  but the Table View will be empty because there is no code to keep track of and display the phone numbers.
 
   This app will store the phone numbers as a list of strings.
 
