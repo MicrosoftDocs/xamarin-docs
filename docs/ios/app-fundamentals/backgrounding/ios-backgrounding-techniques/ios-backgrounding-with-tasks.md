@@ -15,7 +15,7 @@ The simplest way to perform backgrounding on iOS is to break your backgrounding 
 
 Background tasks can be broken up into three categories:
 
-1.  **Background-Safe Tasks** - Called anywhere in the the application where you have a task you don't want interrupted should the application enter the background.
+1.  **Background-Safe Tasks** - Called anywhere in the application where you have a task you don't want interrupted should the application enter the background.
 1.  **DidEnterBackground Tasks** - Called during the  `DidEnterBackground` application lifecycle method to assist in cleanup and state saving.
 1.  **Background Transfers (iOS 7+)** - A special type of background task used to perform network transfers on iOS 7. Unlike regular tasks, background transfers do not have a pre-determined time limit.
 

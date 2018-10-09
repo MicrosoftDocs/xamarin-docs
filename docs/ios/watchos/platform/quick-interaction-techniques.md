@@ -236,7 +236,7 @@ Notification from the user's iPhone will be forward to the Apple Watch when the 
 * The iPhone's screen is off.
 * The Apple Watch is being worn and has been unlocked.
 
-In watchOS 3, Local Notifications can be scheduled on the Apple Watch and are only delivered on the watch. It is up the the developer to schedule a corresponding iPhone Notification if it is required by the app.
+In watchOS 3, Local Notifications can be scheduled on the Apple Watch and are only delivered on the watch. It is up the developer to schedule a corresponding iPhone Notification if it is required by the app.
 
 By including the same Notification Identifier on both the Apple Watch and iPhone versions of the Notifications, it prevents duplicate Notifications from being displayed on the watch. The Apple Watch version of the Notification will take precedence over the iPhone version.
 

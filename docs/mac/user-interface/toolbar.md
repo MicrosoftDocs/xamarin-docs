@@ -163,7 +163,7 @@ The following properties are available:
 - **Label** - Text to display for the item in the toolbar
 - **Palette Label** - Text to display for the item in the **Allowed Toolbar Items** area
 - **Tag** - An optional, unique identifier that helps identify the item in code.
-- **Identifier** - Defines the the toolbar item type. A custom value can be used to select a toolbar item in code.
+- **Identifier** - Defines the toolbar item type. A custom value can be used to select a toolbar item in code.
 - **Selectable** - If checked, the item will act like an on/off button.
 
 > [!IMPORTANT]

@@ -204,7 +204,7 @@ In iOS 8 (and later), the developer can create a special Unified Storyboard to p
 
 9. Set the **Background** color of the View Controller's main View. Select
    the View by clicking in the middle of the View Controller and adjust the
-   background color using the the **Properties Window**:
+   background color using the **Properties Window**:
     
     ![A single View with a purple background color](launch-screens-images/launch09-vs.png)
 

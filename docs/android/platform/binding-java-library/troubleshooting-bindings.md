@@ -371,7 +371,7 @@ The fix for this is to manually load the **.so** library with a call to
 `Java.Lang.JavaSystem.LoadLibrary`. For example assuming that a
 Xamarin.Android project has shared library **libpocketsphinx_jni.so**
 included in the binding project with a build action of
-**EmbeddedNativeLibrary**, the the following snippet (executed 
+**EmbeddedNativeLibrary**, the following snippet (executed 
 before using the shared library) will load the **.so** library:
 
 ```csharp

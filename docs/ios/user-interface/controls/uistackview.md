@@ -15,7 +15,7 @@ ms.date: 03/20/2017
 _This article covers using the new UIStackView control in a Xamarin.iOS app to manage a set of subviews in either a horizontally or vertically arranged stack._
 
 > [!IMPORTANT]
-> Please note that while StackView is supported in the iOS Designer, you may encounter usability bugs when using the Stable channel. Switching the the Beta or Alpha channels should alleviate this issue. We have decided to present this walkthrough using Xcode until the fixes required are implemented in the Stable channel.
+> Please note that while StackView is supported in the iOS Designer, you may encounter usability bugs when using the Stable channel. Switching the Beta or Alpha channels should alleviate this issue. We have decided to present this walkthrough using Xcode until the fixes required are implemented in the Stable channel.
 
 The Stack View control (`UIStackView`) leverages the power of Auto Layout and Size Classes
 to manage a stack of subviews, either horizontally or vertically, which dynamically

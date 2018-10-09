@@ -102,7 +102,7 @@ The API documentation should be the default doclet from Java8, Java7 or Java6 SD
 
 It may be necessary to include a **.so** library in a Xamarin.Android binding project as a part of binding a Java libary. When the wrapped Java code executes, Xamarin.Android will fail to make the JNI call and the error message _java.lang.UnsatisfiedLinkError: Native method not found:_ will appear in the logcat out for the application.
 
-The fix for this is to manually load the **.so** library with a call to `Java.Lang.JavaSystem.LoadLibrary`. For example assuming that a Xamarin.Android project has shared library **libpocketsphinx_jni.so** included in the binding project with a build action of **EmbeddedNativeLibrary**, the the following snippet (executed before using the shared library) will load the **.so** library:
+The fix for this is to manually load the **.so** library with a call to `Java.Lang.JavaSystem.LoadLibrary`. For example assuming that a Xamarin.Android project has shared library **libpocketsphinx_jni.so** included in the binding project with a build action of **EmbeddedNativeLibrary**, the following snippet (executed before using the shared library) will load the **.so** library:
 
 ```csharp
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");

@@ -363,7 +363,7 @@ We are now ready to start updating the label!
 
 ### How controls are accessed
 
-If you select the `ViewController.designer.cs` in the **Solution Explorer** you'll be able to see how the the `ClickedLabel` label and the `Clicked` event handler have been mapped to an **Outlet** and **Action** in C#:
+If you select the `ViewController.designer.cs` in the **Solution Explorer** you'll be able to see how the `ClickedLabel` label and the `Clicked` event handler have been mapped to an **Outlet** and **Action** in C#:
 
 [![](hello-tvos-images/accesscontrol.png "Outlets and Actions")](hello-tvos-images/accesscontrol.png#lightbox)
 

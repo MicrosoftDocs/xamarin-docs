@@ -90,7 +90,7 @@ to do any extra work.
 An Allocation will contain one or more
 [Android.Renderscripts.Elements](https://developer.xamarin.com/api/type/Android.Renderscripts.Element/).
 Elements are a specialized type that describe data in each Allocation.
-The Element types of the output Allocation must match the the types of
+The Element types of the output Allocation must match the types of
 the input Element. When executing, a Renderscript will iterate over
 each Element in the input Allocation in parallel, and write the results
 to the output Allocation. There are two types of Elements:

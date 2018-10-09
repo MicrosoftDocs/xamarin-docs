@@ -259,7 +259,7 @@ included in the device pull-down menu:
     hardware profile
     [no]** you can enter **no** and accept the default hardware
     profile. If you say **yes**, **avdmanager** will prompt you with a
-    list of questions for customizing the the hardware profile.
+    list of questions for customizing the hardware profile.
 
 After you use **avdmanager** to create your virtual device, it will be
 included in the device pull-down menu:

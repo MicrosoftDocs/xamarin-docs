@@ -77,7 +77,7 @@ menu to choose the Android device to monitor:
 
 After the device is selected, the **Device Log** tool automatically adds
 log entries from a running app &ndash; these log entries are shown in
-the the table of log entries. Switching between devices stops and
+the table of log entries. Switching between devices stops and
 starts device logging. Note that an Android project must be loaded
 before any devices will appear in the device selector. If the device
 does not appear in the device selector, verify that it is available in
@@ -123,7 +123,7 @@ menu to choose the Android device to monitor:
 
 After the device is selected, the **Device Log** tool automatically adds
 log entries from a running app &ndash; these log entries are shown in
-the the table of log entries. Switching between devices stops and
+the table of log entries. Switching between devices stops and
 starts device logging. Note that an Android project must be loaded
 before any devices will appear in the device selector. If the device
 does not appear in the device selector, verify that it is available in

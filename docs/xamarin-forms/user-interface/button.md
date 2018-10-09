@@ -733,7 +733,7 @@ For the Android project, the bitmaps all have the same name, but they are stored
 
 These were given a **Build Action** of **AndroidResource**.
 
-In the the UWP project, bitmaps can be stored anywhere in the project, but they are generally stored in a custom folder or the **Assets** existing folder. The UWP project contains these bitmaps:
+In the UWP project, bitmaps can be stored anywhere in the project, but they are generally stored in a custom folder or the **Assets** existing folder. The UWP project contains these bitmaps:
 
 - A 48-pixel square bitmap stored as **/Assets/MonkeyFace.scale-100.png**
 - A 96-pixel square bitmap stored as **/Assets/MonkeyFace.scale-200.png**

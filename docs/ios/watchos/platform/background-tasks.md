@@ -419,7 +419,7 @@ namespace MonkeySoccer.MonkeySoccerExtension
 }
 ```
 
-When initialized, it keeps a handle to both the `ExtensionDelegate` and the `WKRefreshBackgroundTask` that spawned it. It overrides the `DidFinishDownloading` method to handle the download completing. Then uses the `CompleteTask` method of the `ExtensionDelegate` to inform the the Task that it has completed and remove it from the collection of pending tasks. See [Handling Background Tasks](#Handling-Background-Tasks) above.
+When initialized, it keeps a handle to both the `ExtensionDelegate` and the `WKRefreshBackgroundTask` that spawned it. It overrides the `DidFinishDownloading` method to handle the download completing. Then uses the `CompleteTask` method of the `ExtensionDelegate` to inform the Task that it has completed and remove it from the collection of pending tasks. See [Handling Background Tasks](#Handling-Background-Tasks) above.
 
 <a name="Scheduling-a-Snapshot-Update" />
 

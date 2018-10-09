@@ -363,7 +363,7 @@ Finished Loading:
 
 ## Performance
 
-Recent advances have seen each of the popular web browsers adopt technologies like hardware accelerated rendering and JavaScript compilation. Unfortunately, due to security restrictions, most of those advancements were not available in the the iOS-equaivalent of `WebView`, `UIWebView`. Xamarin.Forms `WebView` uses `UIWebView`. If that's a problem, you'll need to write a custom renderer that uses `WKWebView`, which supports faster browsing. Note that `WKWebView` is only supported on iOS 8 and newer.
+Recent advances have seen each of the popular web browsers adopt technologies like hardware accelerated rendering and JavaScript compilation. Unfortunately, due to security restrictions, most of those advancements were not available in the iOS-equaivalent of `WebView`, `UIWebView`. Xamarin.Forms `WebView` uses `UIWebView`. If that's a problem, you'll need to write a custom renderer that uses `WKWebView`, which supports faster browsing. Note that `WKWebView` is only supported on iOS 8 and newer.
 
 WebView on Android by default is about as fast as the built-in browser.
 

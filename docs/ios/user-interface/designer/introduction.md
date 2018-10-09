@@ -204,7 +204,7 @@ The blue dotted line in the example above provides a horizontal center visual al
 
 #### Context menu commands
 
-A context menu is available both on the design surface and in the **Document Outline**. This menu provides commands for the the selected control and its parent, which is helpful when working with views in a nested hierarchy:
+A context menu is available both on the design surface and in the **Document Outline**. This menu provides commands for the selected control and its parent, which is helpful when working with views in a nested hierarchy:
 
 [![The context menu on the design surface](introduction-images/10-contextmenudesignsurface-vsmac.png "The context menu on the design surface")](introduction-images/10-contextmenudesignsurface-vsmac-large.png#lightbox)
 
