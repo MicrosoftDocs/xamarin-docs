@@ -32,7 +32,7 @@ XAML can be optionally compiled directly into intermediate language (IL) with th
 
 ## [XAML Previewer](xaml-previewer.md)
 
-The [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer.md) announced at Xamarin Evolve 2016 is available for testing in the Alpha channel.
+The [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer.md) renders a live preview of a page side-by-side with the XAML markup, allowing you to see your user interface rendered as you type.
 
 ## [XAML Namespaces](namespaces.md)
 
