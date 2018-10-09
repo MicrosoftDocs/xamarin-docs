@@ -124,24 +124,27 @@ protected override void OnActivityResult(int requestCode, Result resultVal, Inte
         if (resultVal == Result.Ok)
         {
             var matches = data.GetStringArrayListExtra(RecognizerIntent.ExtraResults);
-             if (matches.Count != 0)
-             {
-                  string textInput = textBox.Text + matches[0];
-                  textBox.Text = textInput;
-                  switch(matches[0].Substring(0,5).ToLower())
-                  {
-                     case "north":
-                      MovePlayer(0);
-                     break;
-                   case "south":
-                     MovePlayer(1);
-                     break;
-             }
-             else
-                  textBox.Text = "No speech was recognised";
+            if (matches.Count != 0)
+            {
+                string textInput = textBox.Text + matches[0];
+                textBox.Text = textInput;
+                switch (matches[0].Substring(0, 5).ToLower())
+                {
+                    case "north":
+                        MovePlayer(0);
+                        break;
+                    case "south":
+                        MovePlayer(1);
+                        break;
+                }
+            }
+            else
+            {
+                textBox.Text = "No speech was recognised";
+            }
         }
-   }
-    base.OnActivityResult(requestCode, resultVal, data);
+        base.OnActivityResult(requestCode, resultVal, data);
+    }
 }
 ```
 
