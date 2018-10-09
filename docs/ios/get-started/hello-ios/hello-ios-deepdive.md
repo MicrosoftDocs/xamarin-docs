@@ -390,7 +390,7 @@ The iOS Simulator is a quick way to test an application. The Simulator has a num
 A device takes time to provision and requires an Apple Developer Account. The [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide gives thorough instructions on getting a device ready for development.
 
 > [!NOTE]
-> At present, due to a requirement from Apple, it is necessary to have a a development certificate or _signing identity_ to build you code for device or simulator. Follow the steps in the [Device Provisioning guide](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) to set this up.
+> At present, due to a requirement from Apple, it is necessary to have a development certificate or _signing identity_ to build you code for device or simulator. Follow the steps in the [Device Provisioning guide](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) to set this up.
 
 Once the device is provisioned, you can deploy to it by plugging it in, changing the target in the build toolbar to the iOS Device, and pressing **Start** ( **Play**) as illustrated by the following screenshot:
 

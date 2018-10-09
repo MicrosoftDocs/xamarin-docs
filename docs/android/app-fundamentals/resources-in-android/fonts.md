@@ -67,7 +67,7 @@ When there are many similar font files (for example, the same font with differen
 
 A font family is a set of fonts that have different weights and styles. For example, there might be separate font files for bold or italic fonts. The font family is defined by `font` elements in an XML file that is kept in the  **Resources/font** directory. Each font family should have it's own XML file.
 
-To create a a font family, first add all the fonts to the **Resources/font** folder. Then create a new XML file in the font folder for the font family. The name of the XML file has no affinity or relationship to the fonts being referenced; the resource file can be any legal Android resource file name. This XML file will have a root `font-family` element that contains one or more `font` elements. Each `font` element declares the attributes of a font.
+To create a font family, first add all the fonts to the **Resources/font** folder. Then create a new XML file in the font folder for the font family. The name of the XML file has no affinity or relationship to the fonts being referenced; the resource file can be any legal Android resource file name. This XML file will have a root `font-family` element that contains one or more `font` elements. Each `font` element declares the attributes of a font.
 
 The following XML is an example of a font family for the _Sources Sans Pro_ font that defines many different font weights. This is saved as file in the **Resources/font** folder named **sourcesanspro.xml**:
 

@@ -125,7 +125,7 @@ The constructor for creating the Sprite does not include the ".png" extension wh
 
 #### Content in platform-specific projects
 
-Unlike most of the code files which can be in a a PCL, content files must be added to each platform-specific project. CocosSharp requires this for two reasons:
+Unlike most of the code files which can be in a PCL, content files must be added to each platform-specific project. CocosSharp requires this for two reasons:
 
 1. Each platform has different **Build actions**. Content added to iOS projects should use the **BundleResource** build action. Content added to Android projects should use the **AndroidAsset** build action.
 2. Some platforms require platform-specific file formats. For example, font .xnb files differ between iOS and Android, as we'll see later in this walkthrough.
