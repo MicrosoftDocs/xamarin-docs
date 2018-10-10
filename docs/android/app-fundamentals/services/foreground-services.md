@@ -73,7 +73,7 @@ public override StartCommandResult OnStartCommand(Intent intent, StartCommandFla
 }
 ```
 
-The previous notification will display a status bar notification that that is similar to the following:
+The previous notification will display a status bar notification that is similar to the following:
 
 ![Image showing the notification in the status bar](foreground-services-images/foreground-services-01.png "Image showing the notification in the status bar")
 
