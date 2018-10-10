@@ -116,7 +116,3 @@ sections:
     - title: Samples
       href: https://developer.xamarin.com/samples/android/all/
       html: <p><a href="https://developer.xamarin.com/samples/android/all/">Android Samples</a></p>
-    - title: Workbooks
-      href: https://developer.xamarin.com/workbooks#android
-      html: <p><a href="https://developer.xamarin.com/workbooks#android">Android Workbooks</a></p>
-    

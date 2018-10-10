@@ -170,4 +170,4 @@ Running this application on iOS, Android, or the UWP and pressing the button wil
 
 - [Using DependencyService (sample)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 - [DependencyServiceSample](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample/)
-- [Text to Speech Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/application-fundamentals/text-to-speech/text-to-speech.workbook)
+

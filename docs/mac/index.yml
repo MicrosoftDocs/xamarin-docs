@@ -88,6 +88,5 @@ sections:
       html: <p><a href="https://developer.xamarin.com/api/root/monomac-lib/">Mac API docs</a></p><p><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=xamarinmac-3.0">Base Class Library</a></p>
     - title: Samples
       html: <p><a href="https://developer.xamarin.com/samples/mac/all/">Mac Samples</a></p>
-    - title: Workbooks
-      html: <p><a href="https://developer.xamarin.com/workbooks#mac">Mac Workbooks</a></p>
+
     

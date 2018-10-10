@@ -162,4 +162,4 @@ This article has shown some simple file operations for saving and loading text o
 - [FilesSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
 - [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples)
 - [Working with the File System in Xamarin.iOS](~/ios/app-fundamentals/file-system.md)
-- [Files Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/application-fundamentals/files/files.workbook)
+

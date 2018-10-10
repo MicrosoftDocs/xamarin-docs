@@ -48,4 +48,4 @@ This article discusses some of the key concepts for developing applications usin
 
 - [Free Self-Guided Learning (video)](https://university.xamarin.com/self-guided)
 - [Getting Started with Xamarin (video)](https://developer.xamarin.com/videos/)
-- [Hello, Xamarin.Forms iOS Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/getting-started/GettingStartedWithXamarinForms-ios.workbook)
+

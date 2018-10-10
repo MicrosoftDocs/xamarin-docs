@@ -798,8 +798,3 @@ latest version.
 This documentation contains original content from Xamarin Inc, but
 draws extensively from the open source documentation for the Urho3D
 project and contains screenshots from the Cocos2D project.
-
-## Related Links
-
-- [Planet Earth Workbook](https://developer.xamarin.com/workbooks/graphics/urhosharp/planetearth/planetearth.workbook)
-- [Exploring Coordinates Workbook](https://developer.xamarin.com/workbooks/graphics/urhosharp/coordinates/ExploringUrhoCoordinates.workbook)

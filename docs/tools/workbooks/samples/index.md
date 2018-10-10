@@ -41,11 +41,6 @@ The video covers the creation of a simple 3D scene, shows how to assign physical
 Learn the basics of `View` property animation in Xamarin.Android.
 
 
-<!--[![](images/skia0-sml.png "Android")](images/skia0.png#lightbox)
-
-SkiaSharp provides a powerful C# API for doing 2D graphics. See how to use Skia to draw in your apps.-->
-
-
 ## Related Links
 
 - [Sample links](https://developer.xamarin.com/workbooks)

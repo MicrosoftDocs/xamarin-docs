@@ -117,4 +117,4 @@ This article focused on **accessing** a SQLite database using Xamarin.Forms. For
 
 - [Todo Sample](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
 - [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/)
-- [Database Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/application-fundamentals/database/database.workbook)
+

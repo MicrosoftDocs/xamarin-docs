@@ -122,7 +122,4 @@ sections:
     - title: Samples
       href: https://developer.xamarin.com/samples
       html: <p><a href="https://developer.xamarin.com/samples/ios/all/">iOS Samples</a></p><p><a href="https://developer.xamarin.com/samples/ios/all/">watchOS Samples</a></p><p><a href="https://developer.xamarin.com/samples/ios/all/">tvOS Samples</a></p>
-    - title: Workbooks
-      href: https://developer.xamarin.com/workbooks
-      html: <p><a href="https://developer.xamarin.com/workbooks#ios">iOS Workbooks</a></p>
     

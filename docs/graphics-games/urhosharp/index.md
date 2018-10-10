@@ -54,9 +54,6 @@ use UrhoSharp.
 - **FormsSample** showcases how to use UrhoSharp in Xamarin.Forms applications.
 
 All the samples run on Android, iOS, Mac and Windows.
-There are also a number of UrhoSharp [Workbooks](https://developer.xamarin.com/workbooks/) including
-[Planet Earth](https://developer.xamarin.com/workbooks/graphics/urhosharp/planetearth/planetearth.workbook) and
-[Exploring Coordinates](https://developer.xamarin.com/workbooks/graphics/urhosharp/coordinates/ExploringUrhoCoordinates.workbook).
 
 ## Copyright
 
@@ -68,7 +65,3 @@ project and contains screenshots from the Cocos2D project.
 
 The UrhoSharp license is available at the [http://download.xamarin.com/content/licenses/URHO.LICENSE](http://download.xamarin.com/content/licenses/URHO.LICENSE)
 
-## Related Links
-
-- [Planet Earth Workbook](https://developer.xamarin.com/workbooks/graphics/urhosharp/planetearth/planetearth.workbook)
-- [Exploring Coordinates Workbook](https://developer.xamarin.com/workbooks/graphics/urhosharp/coordinates/ExploringUrhoCoordinates.workbook)
