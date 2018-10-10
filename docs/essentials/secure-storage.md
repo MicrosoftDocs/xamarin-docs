@@ -23,11 +23,14 @@ No additional setup required.
 
 # [iOS](#tab/ios)
 
-When developing on the iOS simulator, enable the **Keychain** entitlement and add a keychain access group for the application's bundle identifier.
+When developing on the **iOS simulator**, enable the **Keychain** entitlement and add a keychain access group for the application's bundle identifier. 
 
 Open the **Entitlements.plist** in the iOS project and find the **Keychain** entitlement and enable it. This will automatically add the application's identifier as a group.
 
 In the project properties, under **iOS Bundle Signing** set the **Custom Entitlements** to **Entitlements.plist**.
+
+> [!TIP]
+> When deploying to an iOS device this entitlement is not required and should be removed.
 
 # [UWP](#tab/uwp)
 
