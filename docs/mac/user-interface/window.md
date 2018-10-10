@@ -342,14 +342,14 @@ using Foundation;
 
 namespace SourceWriter
 {
-	public class EditorWidowDelegate : NSWindowDelegate
+	public class EditorWindowDelegate : NSWindowDelegate
 	{
 		#region Computed Properties
 		public NSWindow Window { get; set;}
 		#endregion
 
 		#region constructors
-		public EditorWidowDelegate (NSWindow window)
+		public EditorWindowDelegate (NSWindow window)
 		{
 			// Initialize
 			this.Window = window;
@@ -422,7 +422,7 @@ Use the following code to attach an instance of this delegate to your window:
 
 ```csharp
 // Set delegate
-Window.Delegate = new EditorWidowDelegate(Window);
+Window.Delegate = new EditorWindowDelegate(Window);
 ```
 
 ### Saving Changes Before Closing the App
@@ -484,7 +484,7 @@ This code creates a new version of our Window Controller, loads the new Window, 
 
 If we open the **Windows** menu, you can see the application is automatically tracking and handling our open windows:
 
-[![](window-images/display05.png "The widows menu")](window-images/display05.png#lightbox)
+[![](window-images/display05.png "The windows menu")](window-images/display05.png#lightbox)
 
 For more information on working with Menus in a Xamarin.Mac application, please see our [Working with Menus](~/mac/user-interface/menu.md) documentation.
 
