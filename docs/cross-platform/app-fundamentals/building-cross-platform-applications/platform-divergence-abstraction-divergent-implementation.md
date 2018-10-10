@@ -28,15 +28,9 @@ makes sense to design apps to use those features.
 See the Platform Capabilities documentation for an overview of how the
 platforms differ in functionality.
 
- <a name="Examples_of_Platform_Divergence" />
+## Examples of Platform Divergence
 
-
-### Examples of Platform Divergence
-
- <a name="Fundamental_elements_that_exist_across_platforms" />
-
-
-#### Fundamental elements that exist across platforms
+### Fundamental elements that exist across platforms
 
 There are some characteristics of mobile applications that are universal.
 These are higher-level concepts that are generally true of all devices and can
@@ -48,14 +42,10 @@ therefore form the basis of your application’s design:
 -  Editing single views of data
 -  Navigating back
 
-
 When designing your high-level screen flow you can base a common user
 experience on these concepts.
 
- <a name="platform-specific_attributes" />
-
-
-#### Platform-specific attributes
+### Platform-specific attributes
 
 In addition to the basic elements that exist on all platforms, you will need
 to address key platform differences in your design. You may need to consider
@@ -67,11 +57,7 @@ to address key platform differences in your design. You may need to consider
 -   **Touch and gestures** – Operating system support for gesture recognition varies, especially in older versions of each operating system. Earlier versions of Android have very limited support for touch operations, meaning that supporting older devices may require separate code
 -   **Push notifications** – There are different capabilities/implementations on each platform (eg. Live Tiles on Windows).
 
-
- <a name="Device-specific_features" />
-
-
-#### Device-specific features
+### Device-specific features
 
 Determine what the minimum features required for the application must be; or
 when decide what additional features to take advantage of on each platform. Code
@@ -85,11 +71,7 @@ location or choose from a map):
 -   **Twitter and Facebook** – only ‘built-in’ on iOS5 and iOS6 respectively. On earlier versions and other platforms you will need to provide your own authentication functions and interface directly with each services’ API.
 -   **Near Field Communications (NFC)** – Only on (some) Android phones (at time of writing).
 
-
- <a name="Dealing_with_Platform_Divergence" />
-
-
-### Dealing with Platform Divergence
+## Dealing with Platform Divergence
 
 There are two different approaches to supporting multiple platforms from the
 same code-base, each with its own set of benefits and disadvantages.
@@ -97,14 +79,7 @@ same code-base, each with its own set of benefits and disadvantages.
 -   **Platform Abstraction** – Business Façade pattern, provides a unified access across platforms and abstracts the particular platform implementations into a single, unified API.
 -   **Divergent Implementation** – Invocation of specific platform features via divergent implementations via architectural tools such as interfaces and inheritance or conditional compilation.
 
-
- <a name="Platform_Abstraction" />
-
-
 ## Platform Abstraction
-
- <a name="Class_Abstraction" />
-
 
 ### Class Abstraction
 
@@ -114,9 +89,6 @@ shared code with class abstractions is particularly suited to Portable Class
 Libraries because they have a limited subset of the framework available to them
 and cannot contain compiler directives to support platform-specific code
 branches.
-
- <a name="Interfaces" />
-
 
 #### Interfaces
 
@@ -142,9 +114,6 @@ through multiple method parameters or otherwise pushed down through the call
 chain. If the shared code uses lots of different interfaces then they must all
 be created and set in the shared code somewhere.
 
- <a name="Inheritance" />
-
-
 #### Inheritance
 
 The shared code could implement abstract or virtual classes that could be
@@ -159,46 +128,18 @@ with the additional advantage that the base class can contain some
 implementation code (perhaps an entire platform agnostic implementation that can
 be optionally extended).
 
-<a name="Xamarin.Forms" />
-
-### Xamarin.Forms
+## Xamarin.Forms
 
 See the [Xamarin.Forms](~/xamarin-forms/get-started/index.md) documentation.
 
-
-### Plug-in Cross-Platform Functionality
-
-You can also extend cross-platform apps in a consistent way using plugins.
-
-Linked from our [plugins github](https://github.com/xamarin/plugins),
-most plugins are open-source projects (typically available for installation
-via Nuget) that help you implement a variety of platform-specific functionality
-from battery status to settings with a common API that is easy to consume
-in Xamarin Platform and Xamarin.Forms apps.
-
-
-<a name="Other_Cross-Platform_Libraries" />
-
 ### Other Cross-Platform Libraries
 
-There are a number of 3rd party libraries available that provide
-cross-platform functionality:
+These libraries also offer cross-platform functionality for C# developers:
 
--   **MvvmCross** -  [https://github.com/slodge/MvvmCross/](https://github.com/slodge/MvvmCross/)
--   **Vernacular** (for localization) -  [https://github.com/rdio/vernacular/](https://github.com/rdio/vernacular/)
--   **MonoGame** (for XNA games) -  [http://www.monogame.net](http://www.monogame.net)
--   **NGraphics** - [NGraphics](https://github.com/praeclarum/NGraphics) and its precursor [https://github.com/praeclarum/CrossGraphics](https://github.com/praeclarum/CrossGraphics)
+- [**Xamarin.Essentials**](~/essentials/index.md) – Cross-platform APIs for common features.
+- [**SkiaSharp**](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) – Cross-platform 2D graphics.
 
-
- <a name="Divergent_Implementation" />
-
-
-### Divergent Implementation
-
- <a name="Conditional_Compilation" />
-
-
-#### Conditional Compilation
+## Conditional Compilation
 
 There are some situations where your shared code will still need to work
 differently on each platform, possibly accessing classes or features that behave
@@ -215,10 +156,7 @@ these symbols).
 // Xamarin iOS or Android-specific code
 #endif
 ```
-
-<a name="iOS" />
-
-##### iOS
+#### iOS
 
 Xamarin.iOS defines `__IOS__` which you can use to detect iOS devices.
 
@@ -240,9 +178,7 @@ There are also Watch- and TV-specific symbols:
 #endif
 ```
 
-<a name="Android" />
-
-##### Android
+#### Android
 
 Code that should only be compiled into Xamarin.Android applications can use
 the following
@@ -265,7 +201,7 @@ will be sufficient.
 #endif
 ```
 
-##### Mac
+#### Mac
 
 There is not currently a built-in symbol for Xamarin.Mac, but you can
 add your own in the Mac app project **Options > Build > Compiler** in the
@@ -276,18 +212,18 @@ example `__MAC__`)
 <PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>
 ```
 
-<a name="Windows_Phone" />
+#### Universal Windows Platform (UWP)
 
-##### Windows Phone
+Use `WINDOWS_UWP`. There are no underscores surrounding the string like the Xamarin
+platform symbols.
 
-Windows Phone apps defines two symbols – `WINDOWS_PHONE` and `SILVERLIGHT` – that can be used to target code to the
-platform. These don't have the underscores surrounding them like the Xamarin
-platform symbols do.
+```csharp
+#if WINDOWS_UWP
+// UWP-specific code
+#endif
+```
 
-
-<a name="Using_Conditional_Compilation" />
-
-##### Using Conditional Compilation
+#### Using Conditional Compilation
 
 A simple case-study example of conditional compilation is setting the file
 location for the SQLite database file. The three platforms have slightly
@@ -330,4 +266,3 @@ public static string DatabaseFilePath {
 
 The result is a class that can be built and used on all platforms,
 placing the SQLite database file in a different location on each platform.
-
