@@ -27,7 +27,7 @@ feel as though you are listening to the author explain the concepts to you.
 #### Inappropriate Style
 
 One might see the contrast between a conversational style and the style one finds with
-more academic treatments of technical topics. Those resources are beneficial, but the authors
+more academic treatments of technical topics. Those resources are very useful, but the authors
 have written those articles in a very different style than our documentation. When one reads
 an academic journal, one finds a very different tone and a very different style of writing.
 One feels that they are reading a dry account of a very dry topic.
@@ -41,7 +41,7 @@ is a more academic style. You see the difference immediately.
 
 You should write your articles as though you are speaking directly to the reader. You
 should use the second person often (as I just have in these two sentences). Writing in second person doesn't
-always mean using the word 'you'in your sentence. Write directly to the reader. Write imperative sentences.
+always mean using the word 'you'. Write directly to the reader. Write imperative sentences.
 Tell your reader what you want them to learn.
 
 #### Inappropriate Style
