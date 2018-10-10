@@ -40,13 +40,13 @@ is a more academic style. You see the difference immediately.
 #### Appropriate Style
 
 You should write your articles as though you are speaking directly to the reader. You
-should use second person often (as I just have in these two sentences). 2nd person doesn't
+should use the second person often (as I just have in these two sentences). Writing in second person doesn't
 always mean using the word 'you'. Write directly to the reader. Write imperative sentences.
 Tell your reader what you want them to learn.
 
 #### Inappropriate Style
 
-An author could also choose to write in third person. In that model, an author must find some
+An author could also choose to write in the third person. In that model, an author must find some
 pronoun or noun to use when referring to the reader. A reader might often find this third
 person style less engaging and less enjoyable to read.
 
@@ -55,7 +55,7 @@ in second person. You probably found that much easier to read.
 
 ### Use Active Voice
 
-Write your articles in active voice. Active voice means that the subject of the sentence performs
+Write your articles in the active voice. Active voice means that the subject of the sentence performs
 the action (verb) of that sentence. It contrasts with passive voice, where the sentence is arranged
 such that the subject of the sentence is acted upon. Contrast these two examples:
 
@@ -75,7 +75,7 @@ You are reaching an international audience with your articles. Please take into 
 they may not have the English vocabulary you have.
 
 However, you are still writing for technical professionals. You can assume that your readers
-have programming knowledge and the specific vocabulary for programming terms. Object Oriented
+have programming knowledge and the specific vocabulary for programming terms. Object-Oriented
 Programming, Class, and Object, Function and Method will all be familiar terms. However, not everyone
 reading your articles will have a formal computer science degree. Terms like 'idempotent' probably
 need to be defined if you use it:
