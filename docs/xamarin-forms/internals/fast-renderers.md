@@ -27,6 +27,7 @@ Fast renderers are available for the following controls in Xamarin.Forms 2.4 on 
 - [`Button`](xref:Xamarin.Forms.Button)
 - [`Image`](xref:Xamarin.Forms.Image)
 - [`Label`](xref:Xamarin.Forms.Label)
+- [`Frame`](xref:Xamarin.Forms.Frame)
 
 Functionally, these fast renderers are no different to the original renderers. However, they are currently experimental and can only be used by adding the following line of code to your `MainActivity` class before calling `Forms.Init`:
 
