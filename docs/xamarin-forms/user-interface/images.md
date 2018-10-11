@@ -22,7 +22,7 @@ This document discusses the following topics:
 - [ **Local images**](#Local_Images) - displaying images shipped with the application, including resolving native resolutions like iOS Retina, Android or UWP high-DPI versions of an image.
 - [ **Embedded images**](#Embedded_Images) - displaying images embedded as an assembly resource.
 - [ **Downloaded images**](#Downloading_Images) - downloading and displaying images.
-- [ **Icons and splashscreens**](#Icons_and_splashscreens) - platform-specific icons and start-up images.
+- [ **Icons and splash screens**](#Icons_and_splashscreens) - platform-specific icons and start-up images.
 
 ## Displaying Images
 
@@ -310,19 +310,19 @@ Built-in caching makes it very easy to support scenarios like scrolling lists of
 
 <a name="Icons_and_splashscreens" />
 
-## Icons and splashscreens
+## Icons and splash screens
 
-While not related to the [`Image`](xref:Xamarin.Forms.Image) view, application icons and splashscreens are also an important use of images in Xamarin.Forms projects.
+While not related to the [`Image`](xref:Xamarin.Forms.Image) view, application icons and splash screens are also an important use of images in Xamarin.Forms projects.
 
-Setting icons and splashscreens for Xamarin.Forms apps is done in each of the application projects. This means generating correctly sized images for iOS, Android, and UWP. These images should be named and located according to each platforms' requirements.
+Setting icons and splash screens for Xamarin.Forms apps is done in each of the application projects. This means generating correctly sized images for iOS, Android, and UWP. These images should be named and located according to each platforms' requirements.
 
 ## Icons
 
 See the [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md), [Google Iconography](http://developer.android.com/design/style/iconography.html), and [Guidelines for tile and icon assets](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) for more information on creating these application resources.
 
-## Splashscreens
+## Splash screens
 
-Only iOS and UWP applications require a splashscreen (also called a startup screen or default image).
+Only iOS and UWP applications require a splash screen (also called a startup screen or default image).
 
 Refer to the documentation for [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md) and [Splash screens](/windows/uwp/launch-resume/splash-screens/) on the Windows Dev Center.
 
@@ -330,7 +330,7 @@ Refer to the documentation for [iOS Working with Images](~/ios/app-fundamentals/
 
 Xamarin.Forms offers a number of different ways to include images in a cross-platform application, allowing for the same image to be used across platforms or for platform-specific images to be specified. Downloaded images are also automatically cached, automating a common coding scenario.
 
-Application icon and splashscreen images are set-up and configured as for non-Xamarin.Forms applications - follow the same guidance used for platform-specific apps.
+Application icon and splash screen images are set-up and configured as for non-Xamarin.Forms applications - follow the same guidance used for platform-specific apps.
 
 ## Related Links
 
