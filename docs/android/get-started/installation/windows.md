@@ -118,13 +118,13 @@ Emulating an Android device on a computer involves the following components:
 
 A significant improvement in performance when developing on x86 based computers can be achieved by using special emulator images that are optimized for x86 architecture and one of two virtualization technologies:
 
-1. Microsoft's Hyper-V &ndash; Available on computers running the Windows 10 April Update.
-2. Intel's Hardware Accelerated Execution Manager (HAXM) &ndash; Available on x86 computers running OS X, macOS, or older version of Windows.
+1. Microsoft's Hyper-V &ndash; Available on computers running the Windows 10 April 2018 Update or later.
+2. Intel's Hardware Accelerated Execution Manager (HAXM) &ndash; Available on x86 computers running OS X, macOS, or older versions of Windows.
 
 For more information about the Android Emulator, Hyper-V, and HAXM, please see [Hardware Acceleration for Emulator Performance](~/android/get-started/installation/android-emulator/hardware-acceleration.md) guide.
 
 > [!NOTE]
-> On older versions of Windows, HAXM is not compatible with Hyper-V. In this scenario it is necessary 
+> On versions of Windows prior to Windows 10 April 2018 Update, HAXM is not compatible with Hyper-V. In this scenario it is necessary 
 to either [disable Hyper-V](~/android/get-started/installation/android-emulator/troubleshooting.md#disable-hyperv) or to use the slower emulator images that do not have the x86 optimizations.
 
 
