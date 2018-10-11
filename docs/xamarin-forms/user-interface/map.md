@@ -192,7 +192,7 @@ Valid `MapType` values are:
 
 ### Map Region and MapSpan
 
-As shown in the code snippet above, supplying a `MapSpan` instance to a map constructor sets the initial view (center point and zoom level) of the map when it is loaded. The `MoveToRegion` method on the map class can then be used to changed the position or zoom level of the map. There are two ways to create a new `MapSpan` instance:
+As shown in the code snippet above, supplying a `MapSpan` instance to a map constructor sets the initial view (center point and zoom level) of the map when it is loaded. The `MoveToRegion` method on the map class can then be used to change the position or zoom level of the map. There are two ways to create a new `MapSpan` instance:
 
 -  **MapSpan.FromCenterAndRadius()** - static method to create a span from a  `Position` and specifying a  `Distance` .
 -  **new MapSpan ()** - constructor that uses a  `Position` and the degress of latitude and longitude to display.
