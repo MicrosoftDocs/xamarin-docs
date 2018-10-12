@@ -62,7 +62,7 @@ On a certain cadence, we push all commits from master branch into the live site 
 Below is a short list of guiding rules that you should keep in mind when you are contributing to the .NET documentation.
 
 - **DON'T** surprise us with big pull requests. Instead, file an issue and start a discussion so we can agree on a direction before you invest a large amount of time.
-- **DO** read the [style guide](./contributing-guidelines/template.md) and [voice and tone](./styleguide/voice-tone.md) guidelines.
+- **DO** read the [style guide](./contributing-guidelines/template.md) and [voice and tone](./contributing-guidelines/voice-tone.md) guidelines.
 - **DO** use the [template](./contributing-guidelines/template.md) file as the starting point of your work.
 - **DO** create a separate branch on your fork before working on the articles.
 - **DO** follow the [GitHub Flow workflow](https://guides.github.com/introduction/flow/).
