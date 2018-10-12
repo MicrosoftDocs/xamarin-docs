@@ -19,7 +19,40 @@ To access the **SecureStorage** functionality, the following platform-specific s
 
 # [Android](#tab/android)
 
-No additional setup required.
+> [!TIP]
+> [Auto Backup for Apps](https://developer.android.com/guide/topics/data/autobackup) is a feature of Android 6.0 (API level 23) and later that backs up user's app data (shared preferences, files in the app's internal storage, and other specific files). Data is restored when an app is re-installed or installed on a new device. This can impact `SecureStorage` which utilizes share preferences that are backed up and can not be decrypted when the restore occurs. Xamarin.Essentials automatically handle this case by removing the key so it can be reset, but you can take an additional step by disabling Auto Backup.
+
+### Enable or disable backup
+You can choose to disable Auto Backup for your entire application by setting the `android:allowBackup` setting in the `AndroidManifest.xml` file. This approach is only recommended if you plan on restoring data in another way. 
+```xml
+<manifest ... >
+    ...
+    <application android:allowBackup="true" ... >
+        ...
+    </application>
+</manifest>
+```
+
+### Selective Backup
+Auto Backup can be configured to disable specific content from backing up. You can create a custom rule set to exclude `SecureStore` items from being backed up.
+
+1. Set the `android:fullBackupContent` attribute in your `AndroidManifest.xml`
+
+```xml
+<application ...
+    android:fullBackupContent="@xml/auto_backup_rules">
+</application>
+```
+
+2. Create a new XML file named `auto_backup_rules.xml` in `Resources/xml`. Then set the following content that includes all shared preferences except for `SecureStorage`.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <include domain="sharedpref" path="."/>
+    <exclude domain="sharedpref" path="${applicationId}.xamarinessentials.xml"/>
+</full-backup-content>
+```
 
 # [iOS](#tab/ios)
 
