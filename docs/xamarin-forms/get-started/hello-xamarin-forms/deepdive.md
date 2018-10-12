@@ -236,7 +236,7 @@ When the Phoneword application is run on any platform, it displays a single scre
         <StackLayout>
             <Label Text="Enter a Phoneword:" />
             <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
-            <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+            <Button x:Name="translateButton" Text="Translate" Clicked="OnTranslate" />
             <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
         </StackLayout>
 </ContentPage>
@@ -269,7 +269,7 @@ The `OnTranslate` method translates the phoneword into its corresponding phone n
 The wiring of the translate button to the `OnTranslate` method occurs in the XAML markup for the `MainPage` class:
 
 ```xaml
-<Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+<Button x:Name="translateButton" Text="Translate" Clicked="OnTranslate" />
 ```
 
 ## Additional Concepts Introduced in Phoneword
