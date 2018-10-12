@@ -139,7 +139,7 @@ Xamarin.Forms.Forms.Init(e, assembliesToInclude);
 // replaces Xamarin.Forms.Forms.Init(e);
 ```
 
-Add a reference to each assembly that is referenced by the app.
+Add an entry for each assembly that you have added as a reference in the Solution Explorer, either via a direct reference or a NuGet.
 
 #### Dependency Services and .NET Native Compilation
 
