@@ -45,6 +45,30 @@ public class SmsTest
 }
 ```
 
+Additionally, you can pass in multiple receipients to a `SmsMessage`:
+
+```csharp
+public class SmsTest
+{
+    public async Task SendSms(string messageText, string[] recipients)
+    {
+        try
+        {
+            var message = new SmsMessage(messageText, recipients);
+            await Sms.ComposeAsync(message);
+        }
+        catch (FeatureNotSupportedException ex)
+        {
+            // Sms is not supported on this device.
+        }
+        catch (Exception ex)
+        {
+            // Other error has occurred.
+        }
+    }
+}
+
+
 ## API
 
 - [Sms source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Sms)
