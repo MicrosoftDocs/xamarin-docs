@@ -235,7 +235,7 @@ The user interface on iOS, Android, and the Universal Windows Platform (UWP) ren
 #### Testing a Specific Language
 
 It can be tricky to switch the simulator or a device to different languages,
-particulary during development when you want to test different cultures quickly.
+particularly during development when you want to test different cultures quickly.
 
 You can force a specific language to be loaded by setting the `Culture` as shown
 in this code snippet:
@@ -474,7 +474,7 @@ public class Localize : UsingResxLocalization.ILocalize
 > [!NOTE]
 > The `try/catch` blocks in the `GetCurrentCultureInfo` method
 > mimic the fallback behavior typically used with locale specifiers – if the
-> exact match is not found, look for a close match based just on the langauge (first
+> exact match is not found, look for a close match based just on the language (first
 > block of characters in the locale).
 >
 > In the case of Xamarin.Forms, some locales are valid in iOS but do not correspond
@@ -616,7 +616,7 @@ namespace UsingResxLocalization.Android
 > [!NOTE]
 > The `try/catch` blocks in the `GetCurrentCultureInfo` method
 > mimic the fallback behavior typically used with locale specifiers – if the
-> exact match is not found, look for a close match based just on the langauge (first
+> exact match is not found, look for a close match based just on the language (first
 > block of characters in the locale).
 >
 > In the case of Xamarin.Forms, some locales are valid in Android but do not correspond
