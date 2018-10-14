@@ -828,7 +828,7 @@ using Foundation;
 
 namespace SourceWriter
 {
-	public class PreferenceWidowDelegate : NSWindowDelegate
+	public class PreferenceWindowDelegate : NSWindowDelegate
 	{
 		#region Application Access
 		public static AppDelegate App {
@@ -841,7 +841,7 @@ namespace SourceWriter
 		#endregion
 
 		#region constructors
-		public PreferenceWidowDelegate (NSWindow window)
+		public PreferenceWindowDelegate (NSWindow window)
 		{
 			// Initialize
 			this.Window = window;
@@ -888,7 +888,7 @@ namespace SourceWriter
 			base.WindowDidLoad ();
 
 			// Initialize
-			Window.Delegate = new PreferenceWidowDelegate(Window);
+			Window.Delegate = new PreferenceWindowDelegate(Window);
 			Toolbar.SelectedItemIdentifier = "General";
 		}
 		#endregion
