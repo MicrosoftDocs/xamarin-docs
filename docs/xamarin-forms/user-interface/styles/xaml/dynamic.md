@@ -117,8 +117,6 @@ public class DynamicStylesPageCS : ContentPage
 
 In C#, the [`SearchBar`](xref:Xamarin.Forms.SearchBar) instances use the [`SetDynamicResource`](xref:Xamarin.Forms.Element.SetDynamicResource*) method to reference `searchBarStyle`. The `OnButtonClicked` event handler code is identical to the XAML example, and when executed, `searchBarStyle` will switch between `blueSearchBarStyle` and `greenSearchBarStyle`.
 
-<a name="dynamic-style-inheritance">
-
 ## Dynamic Style Inheritance
 
 Deriving a style from a dynamic style can't be achieved using the [`Style.BasedOn`](xref:Xamarin.Forms.Style.BasedOn) property. Instead, the [`Style`](xref:Xamarin.Forms.Style) class includes the [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) property, which can be set to a dictionary key whose value might dynamically change.
