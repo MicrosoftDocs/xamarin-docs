@@ -163,7 +163,10 @@
     {
       "source_path": "docs/android/troubleshooting/questions/install-gps.md",
       "redirect_url": "/xamarin/android/get-started/installation/android-emulator/"
+    },
+    {
+      "source_path": "docs/android/troubleshooting/questions/enable-axml-intellisense.md",
+      "redirect_url": "/xamarin/android/troubleshooting/questions/"
     }
   ]
 }
-
