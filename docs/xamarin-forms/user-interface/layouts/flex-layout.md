@@ -481,7 +481,7 @@ Like `AlignItems`, the `AlignContent` property also aligns children on the cross
 
 [![The Experiment Page: Align Content](flex-layout-images/ExperimentAlignContent.png "The Experiment Page - Align Content")](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
 
-In the iOS screnshot, both rows are at the top; in the Android screenshot they're in the center; and in the UWP screenshot they're at the bottom. The rows can also be spaced in various ways:
+In the iOS screenshot, both rows are at the top; in the Android screenshot they're in the center; and in the UWP screenshot they're at the bottom. The rows can also be spaced in various ways:
 
 [![The Experiment Page:  Align Content 2](flex-layout-images/ExperimentAlignContent2.png "The Experiment Page - Align Content 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
 
