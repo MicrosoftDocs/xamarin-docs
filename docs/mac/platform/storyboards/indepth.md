@@ -226,7 +226,7 @@ Like View Controllers, Window Controllers implement the `PerformSegue`, `Prepare
 
 Window Controller are responsible for the following features of a macOS app:
 
-- They manage a specific Widow.
+- They manage a specific Window.
 - They manage the Window's Title Bar and Toolbar (if available).
 - They manage the Content View Controller to display the contents of the Window.
 
