@@ -20,15 +20,15 @@ To access the **SecureStorage** functionality, the following platform-specific s
 # [Android](#tab/android)
 
 > [!TIP]
-> [Auto Backup for Apps](https://developer.android.com/guide/topics/data/autobackup) is a feature of Android 6.0 (API level 23) and later that backs up user's app data (shared preferences, files in the app's internal storage, and other specific files). Data is restored when an app is re-installed or installed on a new device. This can impact `SecureStorage` which utilizes share preferences that are backed up and can not be decrypted when the restore occurs. Xamarin.Essentials automatically handle this case by removing the key so it can be reset, but you can take an additional step by disabling Auto Backup.
+> [Auto Backup for Apps](https://developer.android.com/guide/topics/data/autobackup) is a feature of Android 6.0 (API level 23) and later that backs up user's app data (shared preferences, files in the app's internal storage, and other specific files). Data is restored when an app is re-installed or installed on a new device. This can impact `SecureStorage` which utilizes share preferences that are backed up and can not be decrypted when the restore occurs. Xamarin.Essentials automatically handles this case by removing the key so it can be reset, but you can take an additional step by disabling Auto Backup.
 
 ### Enable or disable backup
-You can choose to disable Auto Backup for your entire application by setting the `android:allowBackup` setting in the `AndroidManifest.xml` file. This approach is only recommended if you plan on restoring data in another way.
+You can choose to disable Auto Backup for your entire application by setting the `android:allowBackup` setting to false in the `AndroidManifest.xml` file. This approach is only recommended if you plan on restoring data in another way.
 
 ```xml
 <manifest ... >
     ...
-    <application android:allowBackup="true" ... >
+    <application android:allowBackup="false" ... >
         ...
     </application>
 </manifest>
