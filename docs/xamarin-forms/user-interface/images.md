@@ -19,10 +19,10 @@ Platform-specific images are also required for icons and splash screens; these n
 
 This document discusses the following topics:
 
-- [ **Local images**](#Local_Images) - displaying images shipped with the application, including resolving native resolutions like iOS Retina, Android or UWP high-DPI versions of an image.
-- [ **Embedded images**](#Embedded_Images) - displaying images embedded as an assembly resource.
-- [ **Downloaded images**](#Downloading_Images) - downloading and displaying images.
-- [ **Icons and splash screens**](#Icons_and_splashscreens) - platform-specific icons and start-up images.
+- [ **Local images**](#local-images) - displaying images shipped with the application, including resolving native resolutions like iOS Retina, Android or UWP high-DPI versions of an image.
+- [ **Embedded images**](#embedded-images) - displaying images embedded as an assembly resource.
+- [ **Downloaded images**](#downloading-images) - downloading and displaying images.
+- [ **Icons and splash screens**](#icons-and-splash-screens) - platform-specific icons and start-up images.
 
 ## Displaying Images
 
@@ -45,8 +45,6 @@ The [`Aspect`](xref:Xamarin.Forms.Image.Aspect) property determines how the imag
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) - Letterboxes the image (if required) so that the entire image fits into the display area, with blank space added to the top/bottom or sides depending on the whether the image is wide or tall.
 
 Images can be loaded from a [local file](#Local_Images), an [embedded resource](#embedded-images), or [downloaded](#Downloading_Images).
-
-<a name="Local_Images" />
 
 ## Local Images
 
@@ -84,8 +82,6 @@ image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("
 > [!IMPORTANT]
 > To use the same image filename across all platforms the name must be valid on all platforms. Android drawables have naming restrictions – only lowercase letters, numbers, underscore, and period are allowed – and for cross-platform compatibility this must be followed on all the other platforms too. The example filename **waterfront.png**
 follows the rules, but examples of invalid filenames include "water front.png", "WaterFront.png", "water-front.png", and "wåterfront.png".
-
-<a name="Native_Resolutions" />
 
 ### Native Resolutions (Retina and High-DPI)
 
@@ -166,8 +162,6 @@ The following screenshots show the result of displaying an embedded image on eac
 
 [![ResourceImageSource](images-images/resource-sml.png "Sample Application Displaying an Embedded Image")](images-images/resource.png#lightbox "Sample Application Displaying an Embedded Image")
 
-<a name="Embedded_Images_in_Xaml" />
-
 ### Using XAML
 
 Because there is no built-in type converter from `string` to `ResourceImageSource`, these types of images cannot be natively loaded by XAML. Instead, a simple custom XAML markup extension can be written to load images using a **Resource ID** specified in XAML:
@@ -214,8 +208,6 @@ To use this extension add a custom `xmlns` to the XAML, using the correct namesp
 
 ### Troubleshooting Embedded Images
 
-<a name="Debugging_Embedded_Images" />
-
 #### Debugging Code
 
 Because it is sometimes difficult to understand why a particular image resource isn't being loaded, the following debug code can be added temporarily to an application to help confirm the resources are correctly configured. It will output all known resources embedded in the given assembly to the <span class="UIItem">Console</span> to help debug resource loading issues.
@@ -240,8 +232,6 @@ However, the source assembly being searched for an embedded image can be specifi
 ```csharp
 var imageSource = ImageSource.FromResource("filename.png", typeof(MyClass).GetTypeInfo().Assembly);
 ```
-
-<a name="Downloading_Images" />
 
 ## Downloading Images
 
@@ -278,8 +268,6 @@ The following screenshots show the result of displaying a remote image on each p
 
 [![Downloaded ImageSource](images-images/download-sml.png "Sample Application Displaying a Downloaded Image")](images-images/download.png#lightbox "Sample Application Displaying a Downloaded Image")
 
-<a name="Image_Caching" />
-
 ### Downloaded Image Caching
 
 A [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) also supports caching of downloaded images, configured through the following properties:
@@ -305,8 +293,6 @@ webImage.Source = new UriImageSource
 ```
 
 Built-in caching makes it very easy to support scenarios like scrolling lists of images, where you can set (or bind) an image in each cell and let the built-in cache take care of re-loading the image when the cell is scrolled back into view.
-
-<a name="Icons_and_splashscreens" />
 
 ## Icons and splash screens
 
