@@ -131,9 +131,7 @@
 #### [Get Started](user-interface/datapages/get-started.md)
 #### [Controls Reference](user-interface/datapages/controls.md)
 ### [DatePicker](user-interface/datepicker.md)
-
 ### [Graphics with SkiaSharp](user-interface/graphics/skiasharp/index.md)
-
 ### [Images](user-interface/images.md)
 ### [Layouts](user-interface/layouts/index.md)
 #### [StackLayout](user-interface/layouts/stack-layout.md)
@@ -180,6 +178,7 @@
 #### [Light Theme](user-interface/themes/light.md)
 #### [Dark Theme](user-interface/themes/dark.md)
 #### [Creating a Custom Theme](user-interface/themes/custom.md)
+### [TimePicker](user-interface/timepicker.md)
 ### [Visual State Manager](user-interface/visual-state-manager.md)
 ### [WebView](user-interface/webview.md)
 ## [Platform Features](platform/index.md)

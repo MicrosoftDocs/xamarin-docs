@@ -6,7 +6,7 @@ ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/07/2017
+ms.date: 10/16/2018
 ---
 
 # Xamarin.Forms User Interface Views
@@ -39,7 +39,7 @@ DataPages provide an API to quickly and easily bind a data source to pre-built v
 
 ## [DatePicker](datepicker.md)
 
-The `DatePicker` allows a user to select a date within a specified range. It is implemented using the date picker supported by the particular platform that the program is run on.
+The `DatePicker` allows a user to select a date within a specified range. It is implemented using the date picker supported by the particular platform that the application is run on.
 
 ## [Graphics with SkiaSharp](graphics/skiasharp/index.md)
 
@@ -84,6 +84,10 @@ Xamarin.Forms has several views for presenting and receiving text. Text views ca
 ## [Themes](themes/index.md)
 
 Xamarin.Forms Themes define a specific visual appearance for the standard controls. Once you add a theme to the application's resource dictionary, the appearance of the standard controls will change.
+
+## [TimePicker](timepicker.md)
+
+The `TimePicker` allows a user to select a time. It is implemented using the time picker supported by the particular platform that the application is run on.
 
 ## [Visual State Manager](visual-state-manager.md)
 

@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms DatePicker"
-description: "The DatePicker is Xamarin.Forms view that allows the user to select a date. This article explains how to consume a DatePicker in a Xamarin.Forms application."
+description: "The DatePicker is a Xamarin.Forms view that allows the user to select a date. This article explains how to consume a DatePicker in a Xamarin.Forms application."
 ms.prod: xamarin
 ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
 ms.technology: xamarin-forms
@@ -11,7 +11,7 @@ ms.date: 06/04/2018
 
 # Xamarin.Forms DatePicker
 
-_A Xamarin.Forms view that allows the user to select a date_
+_A Xamarin.Forms view that allows the user to select a date._
 
 The Xamarin.Forms [`DatePicker`](xref:Xamarin.Forms.DatePicker) invokes the platform's date-picker control and allows the user to select a date. `DatePicker` defines eight properties:
 
@@ -181,7 +181,7 @@ Tapping either of the `DatePicker` displays invokes the platform date picker. Th
 [![Days Between Dates Select](datepicker-images/DaysBetweenDatesSelect.png "Days Between Dates Select")](datepicker-images/DaysBetweenDatesSelect-Large.png#lightbox "Days Between Dates Select")
 
 > [!TIP]
-> On Android, the `DatePicker` dialog can be customized by overriding the `CreateDatePickerDialog` method in a custom renderer. This allows, for example, additional buttons to be added to the dialog. 
+> On Android, the `DatePicker` dialog can be customized by overriding the `CreateDatePickerDialog` method in a custom renderer. This allows, for example, additional buttons to be added to the dialog.
 
 After two dates are selected, the application displays the number of days between those dates:
 
