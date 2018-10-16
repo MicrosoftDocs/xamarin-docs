@@ -220,7 +220,7 @@ backing code into the `MainActivity` class. Begin by wiring up the
 **Translate** button. In the `MainActivity` class, find the `OnCreate`
 method. The next step is to add the button code inside `OnCreate`,
 below the `base.OnCreate(savedInstanceState)` and
-`SetContentView(Resource.Layout.Main)` calls. First, modify the
+`SetContentView(Resource.Layout.activity_main)` calls. First, modify the
 template code so that the `OnCreate` method resembles the following:
 
 ```csharp
@@ -240,7 +240,7 @@ namespace Phoneword
             base.OnCreate(savedInstanceState);
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.activity_main);
 
             // New code will go here
         }
