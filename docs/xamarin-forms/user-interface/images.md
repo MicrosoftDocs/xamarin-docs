@@ -44,7 +44,7 @@ The [`Aspect`](xref:Xamarin.Forms.Image.Aspect) property determines how the imag
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) - Clips the image so that it fills the display area while preserving the aspect (ie. no distortion).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) - Letterboxes the image (if required) so that the entire image fits into the display area, with blank space added to the top/bottom or sides depending on the whether the image is wide or tall.
 
-Images can be loaded from a [local file](#Local_Images), an [embedded resource](#Embedded_Images), or [downloaded](#Downloading_Images).
+Images can be loaded from a [local file](#Local_Images), an [embedded resource](#embedded-images), or [downloaded](#Downloading_Images).
 
 <a name="Local_Images" />
 
@@ -112,8 +112,6 @@ Some controls have properties that display an image, such as:
 
 - [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) - Has an [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) property that can be set to a local file reference.
 - [`ImageCell`](xref:Xamarin.Forms.ImageCell) - Has an [`ImageSource`](xref:Xamarin.Forms.ImageCell.ImageSource) property that can be set to an image retrieved from a local file, an embedded resource, or a URI.
-
-<a name="Embedded_Images" />
 
 ## Embedded Images
 
