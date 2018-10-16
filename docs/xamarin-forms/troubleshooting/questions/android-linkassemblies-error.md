@@ -28,6 +28,6 @@ The resolution to this issue is to make sure you have the latest supported Andro
 1.  Right click on the Android project.
 2.  Go to **Application** in the project options.
 3.  Set the **Compile using Android version** & **Target Android version** settings to **Use Latest Platform** / **Use Compile using SDK version**.
-4.  Set the **Minimum Android to target** setting to API 15 or higher.
+4.  Set the **Minimum Android to target** setting to API 19 or higher.
 
 Once you've updated those settings, please clean and rebuild your project to ensure your changes are picked up.
