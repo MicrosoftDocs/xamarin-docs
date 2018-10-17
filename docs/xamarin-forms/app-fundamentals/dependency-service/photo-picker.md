@@ -281,7 +281,7 @@ Button pickPictureButton = new Button
 stack.Children.Add(pickPictureButton);
 ```
 
-The `Clicked` handler uses the `DependencyService` class to call `GetImageStreamAsync`. This results in a call in the platform project. If the method returns a `Stream` object, then the handler creates an `Image` element for that picture with a `TabGestureRecognizer`, and replaces the `StackLayout` on the page with that `Image`:
+The `Clicked` handler uses the `DependencyService` class to call `GetImageStreamAsync`. This results in a call in the platform project. If the method returns a `Stream` object, then the handler creates an `Image` element for that picture with a `TapGestureRecognizer`, and replaces the `StackLayout` on the page with that `Image`:
 
 ```csharp
 pickPictureButton.Clicked += async (sender, e) =>
