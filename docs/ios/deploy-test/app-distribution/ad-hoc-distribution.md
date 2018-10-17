@@ -109,11 +109,11 @@ Once you have the required components needed for creating a Distribution Profile
 
 7. Click the **Generate** button to create the new profile and finalize the process.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 You may have to quit Visual Studio for Mac and have Xcode refresh its list of available Signing Identities and Provisioning Profiles (by following the instructions in the [Downloading Profiles and Certificates in Xcode](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) section) before a new Distribution Profile is available in Visual Studio for Mac.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 You may have to quit Visual Studio and have Xcode (on the Build Host's Mac) refresh its list of available Signing Identities and Provisioning Profiles (by following the instructions in the [Downloading Profiles and Certificates in Xcode](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) section) before a new Distribution Profile is available in Visual Studio.
 
@@ -125,7 +125,7 @@ You may have to quit Visual Studio and have Xcode (on the Build Host's Mac) refr
 
 When you are ready to do a final build of a Xamarin.iOS application, select the Distribution Profile that was created above.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
  In Visual Studio for Mac, do the following:
 
@@ -141,7 +141,7 @@ When you are ready to do a final build of a Xamarin.iOS application, select the 
 	![](ad-hoc-distribution-images/releasexs03.png "Select the Signing Identity and Distribution Profile")
 5. Click the **OK** button to save the changes.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
  In Visual Studio, do the following:
 
 1. Right-click the project name in the **Solution Explorer** and select **Properties** to open it for edit.

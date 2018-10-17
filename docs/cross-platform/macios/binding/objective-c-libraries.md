@@ -41,7 +41,7 @@ project to experiment with bindings.
 
 ## Getting started
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 The easiest way to create a binding is to create a Xamarin.iOS Binding Project.
 You can do this from Visual Studio for Mac by selecting the project type,
@@ -49,7 +49,7 @@ You can do this from Visual Studio for Mac by selecting the project type,
 
 [![](objective-c-libraries-images/00-sml.png "Do this from Visual Studio for Mac by selecting the project type, iOS Library Bindings Library")](objective-c-libraries-images/00.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 The easiest way to create a binding is to create a Xamarin.iOS Binding Project.
 You can do this from Visual Studio on Windows by selecting the project type,

@@ -24,7 +24,7 @@ Before you start, create a new Xamarin.Forms solution, or use an existing Xamari
 
 GTK# for macOS and Linux is installed as part of [Mono](http://www.mono-project.com/download/stable/). GTK# for .NET can be installed on Windows with the [GTK# Installer](http://www.mono-project.com/download/stable/#download-win).
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Follow these instructions to add a GTK# app that will run on the Windows desktop:
 
@@ -105,7 +105,7 @@ Follow these instructions to add a GTK# app that will run on the Windows desktop
 
     ![GTK# Game of Life](gtk-images/win/gtk-gameoflife.png "GTK# Game of Life")
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Follow these instructions to add a GTK# app that will run on the Mac desktop:
 

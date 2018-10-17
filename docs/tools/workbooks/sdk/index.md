@@ -31,11 +31,11 @@ want to provide the best integration on all the available agents, past and
 future, you'll want to choose a broadly supported set of libraries. We recommend
 using the "Portable Library" template for the broadest support:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![Portable Library Template Visual Studio for Mac](images/xamarin-studio-pcl.png)](images/xamarin-studio-pcl.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![Portable Library Template Visual Studio](images/visual-studio-pcl.png)](images/visual-studio-pcl.png#lightbox)
 
@@ -49,11 +49,11 @@ platforms for your portable library:
 Once you create the library project, add a reference to our
 `Xamarin.Workbooks.Integration` NuGet library via the NuGet Package Manager.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![NuGet Visual Studio for Mac](images/xamarin-studio-nuget.png)](images/xamarin-studio-nuget.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![NuGet Visual Studio](images/visual-studio-nuget.png)](images/visual-studio-nuget.png#lightbox)
 
@@ -182,11 +182,11 @@ reference it from any workbook and see it in action. In the screenshot below,
 we've packaged the sample integration that we built in this document and
 installed the NuGet package in a workbook:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![Workbook with Integration](images/mac-workbooks-integrated.png)](images/mac-workbooks-integrated.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![Workbook with Integration](images/windows-workbooks-integrated.png)](images/windows-workbooks-integrated.png#lightbox)
 

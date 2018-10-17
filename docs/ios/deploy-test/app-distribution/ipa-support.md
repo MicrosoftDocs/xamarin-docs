@@ -49,7 +49,7 @@ Please see the [iTunes Artwork](~/ios/app-fundamentals/images-icons/app-icons.md
 
 ## Creating an IPA
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Creating an IPA is now built into the new publishing workflow. To do this, follow the instructions below to archive your app, sign it, and save your IPA.
 
@@ -133,7 +133,7 @@ In certain cases, such as in a CI environment, it may be necessary to build you 
     /Library/Frameworks/Mono.framework/Commands/msbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
     ```
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Once the provisioning profile has been created and selected, the optional **iTunesMetadata.plist** file has been created and the iTunes Artwork set in Visual Studio, you can build an IPA for distribution. Next, you'll need to configure your project. Do the following:
 
@@ -228,11 +228,11 @@ The resulting IPA Package can be delivered to your test users for installing on 
 
 The new iOS application will be shown in the **My Apps** section, where you can right-click on it and get information about the application:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
  ![](ipa-support-images/installxs01.png "The new iOS application in the My Apps section")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
  ![](ipa-support-images/installvs01.png "The new iOS application in the My Apps section")
 

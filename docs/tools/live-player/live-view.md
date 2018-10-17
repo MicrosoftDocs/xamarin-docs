@@ -65,7 +65,7 @@ Before you can use the Xamarin Live Player with your Android device, you'll need
 
 ## Deploying to Android Emulator
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Open the XAML page that you want to live preview in the Visual Studio 2017 editor:
 
@@ -79,7 +79,7 @@ Before you can use the Xamarin Live Player with your Android device, you'll need
 
     ![](live-view-images/vs-image3.png)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Open the XAML page that you want to live preview in the Visual Studio for Mac editor:
 

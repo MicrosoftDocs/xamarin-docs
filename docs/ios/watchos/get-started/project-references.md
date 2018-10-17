@@ -69,11 +69,11 @@ This screenshot
 	is the **Watch Extension's** Info.plist file, showing the
 	**Watch App's** identifier as well:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 	
 ![](project-references-images/infoplist-extension.png "This screenshot is the Watch Extension's Info.plist file")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 	
 ![](project-references-images/infoplist-extension-vs.png "This screenshot is the Watch Extension's Info.plist file")
 

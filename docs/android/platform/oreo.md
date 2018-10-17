@@ -74,7 +74,7 @@ Each of these steps is explained in the following sections:
 
 To add Android Oreo support to Visual Studio, do the following:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 -   If you are using Visual Studio 2017: 
 
@@ -90,7 +90,7 @@ To add Android Oreo support to Visual Studio, do the following:
     won't impact development for new platforms. This will give you an
     interface for managing your Android SDK for older versions of VS.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 -   Update to the latest stable version of Visual Studio 2017 for Mac as explained in
     [Updating Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/update).
@@ -109,7 +109,7 @@ Xamarin Android SDK Manager to install the SDK platform for **Android
 8.0 - Oreo** or later. You must also install Android SDK Tools 26.0 or
 later.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Start the SDK Manager (in Visual Studio, click **Tools >
    Android > Android SDK Manager**).
@@ -126,7 +126,7 @@ later.
 
     [![Selecting Android SDK Tools 26 in the Android SDK Manager](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Start the SDK Manager (in Visual Studio for Mac, click **Tools > SDK Manager**).
 
@@ -169,11 +169,11 @@ installing Android SDK Tools 26.0 or later, you may get the following
 error dialog, which instructs you to use the command line AVD manager
 tool **avdmanager** instead:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![Android Emulator Manager warning dialog](oreo-images/win/03-avd-warning.png)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![Android Emulator Manager warning dialog](oreo-images/mac/03-avd-warning.png)
 
@@ -197,7 +197,7 @@ follow the steps in the next section.
 To use **avdmanager** to create a new virtual device, follow these
 steps:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1.  Open a Command Prompt window and set `JAVA_HOME` to the location of
     the Java SDK on your computer. For a typical Xamarin installation,
@@ -236,7 +236,7 @@ included in the device pull-down menu:
 
 [![New AVD added to device pull-down menu](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1.  Open a **Terminal** window and change to the location of the
     Android SDK tools directory on your Mac. For a typical Xamarin

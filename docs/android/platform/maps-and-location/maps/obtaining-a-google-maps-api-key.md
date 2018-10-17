@@ -32,7 +32,7 @@ Typically, this means you will have to determine the SHA-1 fingerprint
 for the debug keystore, and then the SHA-1 fingerprint for the keystore
 that is used to sign your application for release.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 By default the keystore that is used to sign debug versions of a
 Xamarin.Android application can be found at the following location:
@@ -45,7 +45,7 @@ directory:
 
 **C:\\Program Files (x86)\\Java\\jdk[VERSION]\\bin\\keytool.exe**
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 By default the keystore that is used to sign debug versions of a
 Xamarin.Android application can be found at the following location:
@@ -73,13 +73,13 @@ keytool -list -v -keystore [STORE FILENAME] -alias [KEY NAME] -storepass [STORE 
 For the default debug key (which is automatically created for you for
 debugging), use this command:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ```cmd
 keytool.exe -list -v -keystore "C:\Users\[USERNAME]\AppData\Local\Xamarin\Mono for Android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
 ```
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ```bash
 keytool -list -v -keystore /Users/[USERNAME]/.local/share/Xamarin/Mono\ for\ Android/debug.keystore -alias androiddebugkey -storepass android -keypass android

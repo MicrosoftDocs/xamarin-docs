@@ -32,7 +32,7 @@ methods that are called through reflection, or dynamically instantiated. Several
 
 ## Linker Behavior
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 The linking process can be customized via the linker behavior
 dropdown in **Project Options**. To access
@@ -41,7 +41,7 @@ below:
 
 [![](linker-images/image1.png "Linker Options")](linker-images/image1.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 The linking process can be customized via the linker behavior dropdown in the **Project Properties** in Visual Studio.
 

@@ -135,13 +135,13 @@ All Android apps must declare one of the two permissions for external storage in
 > [!NOTE]
 > If the user grants `WRITE_EXTERNAL_STORAGE`, then `READ_EXTERNAL_STORAGE` is also implicitly granted. It is not necessary to request both permissions in **AndroidManifest.xml**.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 The permissions may also be added using the **Android Manifest** tab of the **solution properties**:
 
 ![Solution Explorer - Required Permissions for Visual Studio 2017](./images/required-permissions.w157.png)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 The permissions may also be added using the **Android Manifest** tab of the **solution properties pad**:
 

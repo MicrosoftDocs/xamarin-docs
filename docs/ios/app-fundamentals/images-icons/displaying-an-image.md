@@ -24,7 +24,7 @@ As stated above, an **Asset Catalogs Image Sets** contain all the versions or re
 
 To create a new image set and add images to it, do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. In the **Solution Explorer**, double-click the `Assets.xcassets` file to open it for editing:
 
@@ -42,7 +42,7 @@ When using an **Image Set** in the iOS Designer, simply select the set's name fr
 
 ![](displaying-an-image-images/imageset06.png "Select an image set's name from the dropdown list")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Open the Asset Catalog from the **Solution Explorer**, and in the top left corner, click the **Plus** button:
 
@@ -82,11 +82,11 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 
 As of iOS 8, special **Vector** class as been added to **Image Sets** that allows the developer to include a **PDF** formatted vector image in the cassette instead including individual bitmap files at the different resolutions. Using this method, supply a single vector file for the `@1x` resolution (formatted as a vector PDF file) and the `@2x` and `@3x` versions of the file will be generated at compile time and included in the application's bundle.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![](displaying-an-image-images/imageset05.png "Vector Images in the Asset Catalogs editor")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![](displaying-an-image-images/asset8.png "Vector Images in the Asset Catalogs editor")
 
@@ -110,11 +110,11 @@ Based on the design of an iOS app, there might be times when the developer needs
 
 To easily achieve this effect, switch the _Render Mode_ of the Image Asset to **Template Image**:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](displaying-an-image-images/templateimage01.png "The Render Mode set to Template Image")](displaying-an-image-images/templateimage01.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](displaying-an-image-images/templateimage01vs.png "The Render Mode set to Template")](displaying-an-image-images/templateimage01vs.png#lightbox)
 
@@ -122,11 +122,11 @@ To easily achieve this effect, switch the _Render Mode_ of the Image Asset to **
 
 From the iOS Designer, assign the Image Asset to a UI control, then set the **Tint** to colorize the image:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](displaying-an-image-images/templateimage03.png "Set the Tint to colorize the image")](displaying-an-image-images/templateimage03.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](displaying-an-image-images/templateimage03vs.png "Set the Tint to colorize the image")](displaying-an-image-images/templateimage03vs.png#lightbox)
 
@@ -163,14 +163,14 @@ When working with images in Assets Catalogs there might be times when a new coll
 
 To add a new Assets Catalog to the project:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Right-click on the **Project Name** in the **Solution Explorer** and select **Add** > **New File...**
 2. Select **iOS** > **Asset Catalog**, enter a **Name** for the collection and click the **New** button:
 
 	![](displaying-an-image-images/asset01.png "Creating a new Asset Catalog")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. In the Solution Explorer, right-click on **Asset Catalogs** folder, and select **Add > New Asset Catalog**.
 2. Give it a name and click **Add**:
@@ -213,7 +213,7 @@ For more information about icons and images, see the Apple documentation on [Cus
 
 Once an image has been added to a Xamarin.iOS Project using an Asset Catalogs, it can be easily displayed on a Storyboard using a `UIImageView` in the iOS Designer. For example, if the following Image Asset has been added:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![](displaying-an-image-images/display01.png "A sample Image Asset has been added")
 
@@ -236,7 +236,7 @@ Do the following to display it on a Storyboard:
 7. Drag the "T" shaped handle on each edge of the **Image View** to the corresponding side of the screen to "pin" the image to the sides. In this way, the **Image View** will shrink and grow as the screen is resized.
 8. Save the changes to the Storyboard.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![](displaying-an-image-images/display01vs.png "A sample Image Asset has been added")
 

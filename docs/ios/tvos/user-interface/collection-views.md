@@ -90,7 +90,7 @@ The easiest way to work with a Collection View in your Xamarin.tvOS app, is to a
 
 Let's do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 	
 1. Start a new **Single View tvOS App** in Visual Studio for Mac.
@@ -130,7 +130,7 @@ Let's do the following:
 1. Save your changes.
 	
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 	
 1. Start a new **Single View tvOS App** in Visual Studio.

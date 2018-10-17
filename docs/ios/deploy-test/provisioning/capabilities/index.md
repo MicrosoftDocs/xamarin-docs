@@ -68,7 +68,7 @@ This section explains how to use Visual Studio's automatic provisioning or the D
 
 ## Using the IDE
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Capabilities are added to the **Entitlements.plist** in Visual Studio for Mac. To add capabilities, use the following steps:
 
@@ -88,7 +88,7 @@ Capabilities are added to the **Entitlements.plist** in Visual Studio for Mac. T
 
     ![Add capabilities to entitlements.plist file](images/image18.png)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Capabilities are added to the **Entitlements.plist**. To add capabilities in Visual Studio 2017, use the following steps:
 

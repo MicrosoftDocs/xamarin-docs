@@ -23,7 +23,7 @@ please check [here](http://releases.xamarin.com/).
 
 ## "Missing android.jar for API Level 21" in Android L Preview
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 The following error message (or similar) may show up:
 
@@ -52,7 +52,7 @@ There are a few workarounds for this issue:
     2.  Extract [1] into **C:\\Users\\<username>\\AppData\\Local\\Android\\android-sdk\\platforms** 
         to create an **android-L** folder.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 The following error message (or similar) may show up:
 

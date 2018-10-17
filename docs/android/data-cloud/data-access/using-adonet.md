@@ -20,11 +20,11 @@ SQLite, such as `CREATE TABLE`, `INSERT` and `SELECT` statements.
 To use access SQLite via ADO.NET you must add `System.Data` and `Mono.Data.Sqlite`
 references to your Android project, as shown here:
 
-# [Visual Studio](#tab/vswin) 
+# [Visual Studio](#tab/windows) 
 
 ![Android references in Visual Studio](using-adonet-images/image7.png "Android references in Visual Studio") 
 
-# [Visual Studio for Mac](#tab/vsmac) 
+# [Visual Studio for Mac](#tab/macos) 
 
 ![Android references in Visual Studio for Mac](using-adonet-images/image5.png "Android references in Visual Studio for Mac") 
 

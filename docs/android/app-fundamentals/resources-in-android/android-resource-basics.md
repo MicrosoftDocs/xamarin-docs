@@ -15,11 +15,11 @@ them; at a minimum they often have the user interface layouts in the
 form of XML files. When a Xamarin.Android application is first created,
 default resources are setup by the Xamarin.Android project template:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![Resource files](android-resource-basics-images/01-resource-files-vs.png)
  
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![Resource files](android-resource-basics-images/01-resource-files-xs.png)
  
@@ -57,11 +57,11 @@ resources for German locales were added to a project. When
 **Strings.xml** was added to the file, the **Build Action** was
 automatically set to **AndroidResource** by the Xamarin.Android tools:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![Build action for Strings.xml set to AndroidResource](android-resource-basics-images/02-build-action-vs.png)
  
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![Build action for Strings.xml set to AndroidResource](android-resource-basics-images/02-build-action-xs.png)
  

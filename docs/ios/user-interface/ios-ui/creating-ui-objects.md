@@ -36,11 +36,11 @@ Whichever method you use, control properties and events can still be manipulated
 
 To start creating your user interface in the iOS Designer, double-click on a storyboard file. Controls can be dragged onto the design surface from the **Toolbox** as illustrated below:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
  [![](creating-ui-objects-images/image2b.png "Toolbox Pad")](creating-ui-objects-images/image2b.png#lightbox)
  
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
  [![](creating-ui-objects-images/image2b-vs.png "Toolbox Pad - Visual Stuio")](creating-ui-objects-images/image2b.png#lightbox)
  
@@ -58,11 +58,11 @@ If you are unfamiliar with using Interface Builder, refer to Apple's [Interface 
 
 To open a Storyboard in Xcode, right-click to access the context menu for the storyboard file and choose to open with the **Xcode Interface Builder**:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
  [![](creating-ui-objects-images/imagexcode.png "Storyboard context menu - Xcode")](creating-ui-objects-images/imagexcode.png#lightbox)
  
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](creating-ui-objects-images/imagexcode-vs.png "Storyboard context menu - Xcode")](creating-ui-objects-images/imagexcode-vs.png#lightbox)
 

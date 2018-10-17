@@ -18,7 +18,7 @@ provides a familiar set of APIs for writing unit tests.
 
 ## Setting up a Test Project
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 To setup a unit testing framework for your project, all you need to do is to
 add to your solution a project of type **iOS Unit Tests Project**. Do this
@@ -28,7 +28,7 @@ list select **iOS > Tests > Unified API > iOS Unit Tests Project**
 
 ![](touch.unit-images/00.png "Choose either C# or F#")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 To setup a unit testing framework for your project, all you need to do is to
 add to your solution a project of type **iOS Unit Tests Project**. Do this
@@ -43,11 +43,11 @@ The above will create a basic project that contains a basic runner program
 and which references the new MonoTouch.NUnitLite assembly, your project will
 look like this:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![](touch.unit-images/01.png "The project in the Solution Explorer")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![](touch.unit-images/01a.png "The project in the Solution Explorer")
 

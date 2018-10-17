@@ -520,7 +520,7 @@ The following sections explain how to diagnose and work around problems
 that may occur when using the Android Device Manager to configure
 virtual devices.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ### Android SDK in Non-Standard Location
 
@@ -600,7 +600,7 @@ After these changes are made, the AVD will restart in a state that
 allows Wi-Fi to work again.
 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ### Wrong Version of Android SDK Tools
 
@@ -643,7 +643,7 @@ allows Wi-Fi to work again.
 
 ### Generating a Bug Report
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 If you find a problem with the Android Device Manager that
 cannot be resolved using the above troubleshooting tips, please file a
@@ -653,7 +653,7 @@ Report**:
 [![Location of menu item for filing a bug report](device-manager-images/win/34-bug-report-sml.png)](device-manager-images/win/34-bug-report.png#lightbox)
 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 If you find a problem with the Android Device Manager that
 cannot be resolved using the above troubleshooting tips, please file a

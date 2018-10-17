@@ -100,7 +100,7 @@ Follow these steps below to test your Xamarin.iOS app with free provisioning.
 
 ### Deploy your Xamarin.iOS app
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Connect your iOS device to the Mac build host via USB or [wirelessly](~/ios/deploy-test/wireless-deployment.md).
 2. In the Visual Studio for Mac **Solution Pad**, double-click on **Info.plist**.
@@ -120,7 +120,7 @@ Follow these steps below to test your Xamarin.iOS app with free provisioning.
 9. Click **OK** to save and close the **Project Options**.
 10. Select your iOS device and run the app.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Make sure that Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Connect your iOS device to the Mac build host via USB or [wirelessly](~/ios/deploy-test/wireless-deployment.md).

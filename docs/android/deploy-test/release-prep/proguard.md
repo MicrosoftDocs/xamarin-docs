@@ -402,7 +402,7 @@ wrong encoding. ProGuard cannot handle _byte order mark_ (BOM) which
 may be present in text files. If a BOM is present, then ProGuard will 
 exit with the above error. 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 To prevent this problem, edit the custom configuration file from a text 
 editor that will allow the file to be saved without a BOM. To solve 
@@ -412,7 +412,7 @@ this problem, ensure that your text editor has its encoding set to
 BOM by selecting the **Encoding &gt; Encode in UTF-8 Without BOM** when 
 saving the file. 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 To prevent this problem, save your custom configuration file from a 
 text editor that allows you to omit the BOM. 

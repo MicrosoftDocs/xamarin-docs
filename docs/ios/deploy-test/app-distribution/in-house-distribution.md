@@ -120,11 +120,11 @@ Once you have the required components needed for creating a Distribution Profile
 
 7. Click the **Generate** button to create the new profile and finalize the process.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
  You may have to quit Visual Studio for Mac and have Xcode refresh it's list of available Signing Identities and Provisioning Profiles (by following the instructions in [Requesting Signing Identities](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) section) before a new Distribution Profile is available in Visual Studio for Mac.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 You may have to quit Visual Studio and have Xcode (on the Build Host's Mac) refresh its list of available Signing Identities and Provisioning Profiles (by following the instructions in the [Requesting Signing Identities](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) section) before a new Distribution Profile is available in Visual Studio.
 

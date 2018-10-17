@@ -26,7 +26,7 @@ In addition to the Title (that is displayed in the center), Navigation Bars can 
 
 The easiest way to work with Navigation Bars in a Xamarin.tvOS app is to add them to the app's UI using the iOS Designer.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. In the **Solution Pad**, double-click `Main.storyboard` file and open it for editing.
 1. Drag a **Navigation Bar** from the **Toolbox** and drop it on the View at the top of the screen: 
@@ -44,7 +44,7 @@ The easiest way to work with Navigation Bars in a Xamarin.tvOS app is to add the
 1. Save your changes.
 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 
 1. In the **Solution Explorer**, double-click `Main.storyboard` file and open it for editing.

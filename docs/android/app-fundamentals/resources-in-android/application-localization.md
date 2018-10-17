@@ -45,11 +45,11 @@ android:text="@string/hello"
 In the example above, the string for the button was loaded from the
 resources by providing the resource ID for the string:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![Resource strings for three languages](application-localization-images/02-resource-strings-vs.png)
  
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![Resource strings for three languages](application-localization-images/02-resource-strings-xs.png)
  

@@ -42,7 +42,7 @@ You must have an Apple Developer account to use this feature. More information o
 
 ## Adding an Apple developer account
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. To open the account management dialog go to **Visual Studio > Preferences > Apple Developer Account**:
 
@@ -66,7 +66,7 @@ You must have an Apple Developer account to use this feature. More information o
 
     ![View details screen showing signing identities and provisioning profiles on your machine](apple-account-management-images/image6.png)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Before you begin adding your Apple ID to Visual Studio 2017, make sure that your development environment is [Paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
@@ -107,11 +107,11 @@ To create a new signing identity, select the **Create  Certificate** drop-down b
 
 If an option in the drop-down is greyed out and unselected, it means that you do not have the correct team permissions to create this type of certificate.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![create certificate options](apple-account-management-images/image8.png)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![create certificate options](apple-account-management-images/prov3.png)
 
@@ -121,11 +121,11 @@ If an option in the drop-down is greyed out and unselected, it means that you do
 
 The team details dialog also displays a list of all provisioning profiles connected to your developer account. You can download all provisioning profiles to your local machine by pressing the **Download all Profiles** button
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![Download provisioning profiles section](apple-account-management-images/image9.png)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![Download provisioning profiles section](apple-account-management-images/prov4.png)
 

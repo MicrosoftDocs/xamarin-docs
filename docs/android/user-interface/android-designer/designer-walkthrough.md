@@ -40,7 +40,7 @@ by using the Designer's **Properties** pane. Finally, you'll see how
 the design looks when the app runs on a device or emulator.
 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ### Creating a new project
 
@@ -363,7 +363,7 @@ app appears when running on a device:
 
 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ### Creating a new project
 

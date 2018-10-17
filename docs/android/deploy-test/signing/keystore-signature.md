@@ -21,7 +21,7 @@ file. This file is generated when Xamarin.Android is first
 installed.The steps below detail the process for finding the MD5 or
 SHA1 signature of the default Xamarin.Android **debug.keystore** file.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Locate the Xamarin **debug.keystore** file that is used to sign the
 app. By default, the keystore that is used to sign debug versions of
@@ -64,7 +64,7 @@ Certificate fingerprints:
 ```
 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Locate the Xamarin **debug.keystore** file that is used to sign the
 app. By default, the keystore that is used to sign debug versions of
@@ -128,7 +128,7 @@ The process for release builds that are signed with a custom
 by Xamarin.Android. Replace your own values for the keystore password,
 and alias name from when the release keystore file was created.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 When the Visual Studio **Distribute**
 wizard is used to sign a Xamarin.Android app, the resulting keystore resides in the following location:
@@ -143,7 +143,7 @@ For more information about signing a Xamarin.Android app, see
 [Signing the Android Application Package](~/android/deploy-test/signing/index.md).
 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 When the Visual Studio for Mac **Sign and Distribute...**
 wizard to sign your app, the resulting keystore resides in the following location:

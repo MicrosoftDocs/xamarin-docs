@@ -90,7 +90,7 @@ There are several layout types that work well with Stack View controls. Accordin
 
 The easiest way to work with Stack Views in a Xamarin.tvOS app is to add them to the app's UI using the iOS Designer.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. In the **Solution Pad**, double-clicking the `Main.storyboard` file and open it for editing.
 1. Design the layout of your individual elements that you are going to add to the Stack View: 
@@ -114,7 +114,7 @@ The easiest way to work with Stack Views in a Xamarin.tvOS app is to add them to
 1. Assign **Names** in the **Widget Tab** of the **Properties Explorer** to work with your UI controls in C# code.
 1. Save your changes.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. In the **Solution Explorer**, double-clicking the `Main.storyboard` file and open it for editing.
 1. Design the layout of your individual elements that you are going to add to the Stack View: 

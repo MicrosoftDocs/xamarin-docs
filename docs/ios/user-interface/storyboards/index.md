@@ -160,7 +160,7 @@ Once the transition has finished, the user will see the `CallHistoryController` 
 
 On occasion you may need to add a Storyboard to a previously non-storyboard file. Once Doing this in Visual Studio for Mac can be streamlined by following the steps below:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Create a new Storyboard file by browsing to **File > New File > iOS > Storyboard**, as illustrated below: 
     
@@ -179,7 +179,7 @@ On occasion you may need to add a Storyboard to a previously non-storyboard file
             set;
             }
             
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Create a new Storyboard file by right-clicking on the project to **Add > New File > iOS > Empty Storyboard**, as illustrated below: 
     

@@ -47,11 +47,11 @@ Profiling is helpful in all types of development, but it is especially crucial i
 
 The Xamarin Profiler provides developers with a way to profile applications from inside Visual Studio for Mac or Visual Studio. The profiler collects and displays information about the app, which can then be used by the developer to analyze an application’s behavior. There are a number of different ways to profile an application with the Xamarin Profiler, namely memory profiling and statistical sampling. These are carried out through the Allocations and Time Profiler instruments respectively.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Currently, the Xamarin Profiler can be used to test Xamarin.iOS, Xamarin.Android, and Xamarin.Mac applications on Mac (Via Visual Studio for Mac). The profiler is a separate process from the IDE, and so, in addition to launching from Visual Studio for Mac, it can be used as a standalone application to examine .exe and `.mlpd` files which have been produced from the [mono log profiler](http://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Currently, the Xamarin Profiler can be used to test Xamarin.Android apps on Windows (via Visual Studio and Visual Studio for Mac). The profiler is a separate process from the IDE, and so, in addition to launching from Visual Studio, it can be used as a standalone application to examine .exe and `.mlpd` files which have been produced from the [mono log profiler](http://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
@@ -92,13 +92,13 @@ Before you can successfully Profile your app, you will need to allow Profiling i
 
  - iOS:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
   **Build > iOS Debug > Enable Profiling**
 
   ![](images/ios-options-mac.png "iOS Options Dialog in Visual Studio for Mac")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
   **Properties > iOS Build > Enable Profiling**
 
@@ -108,13 +108,13 @@ Before you can successfully Profile your app, you will need to allow Profiling i
 
  - Android:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
   **Build > Android Debug > Enable Developer Instrumentation**
 
   ![Android Options Dialog in Visual Studio for Mac](images/android-project-options.png)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
   **Build > Android Debug > Enable Developer Instrumentation**
 
@@ -126,7 +126,7 @@ Before you can successfully Profile your app, you will need to allow Profiling i
 
 The Xamarin Profiler can be launched from your IDE when you are profiling your iOS or Android application, or as a standalone application.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 #### Launching from Visual Studio for Mac
 
@@ -135,7 +135,7 @@ The Xamarin Profiler can be launched from your IDE when you are profiling your i
 
   ![](images/start-profiling-xs.png "Launching the Profiler from Visual Studio for Mac")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 #### Launching from Visual Studio
 
@@ -156,13 +156,13 @@ The Profiler can be used to measure memory and performance. It achieves this thr
 
 To save a profiling session at any time, choose **File > Save As...** from the Profiler Menu bar. This saves the file in _mlpd_ format, a special, highly compressed format for profiling data.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 After it has been installed the Xamarin Profiler can be found in your Applications folder as illustrated in the screenshot below:
 
 ![](images/applications.png "Open standalone Profiler from Mac")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 After it has been installed the Xamarin Profiler application can be found in your Application directory:
 
@@ -178,11 +178,11 @@ For more information, see [Generating .mlpd Files ](~/tools/profiler/troubleshoo
 
 The Xamarin Profiler is composed of five sections as illustrated below:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](images/profiler-mac-sml.png "Profiler sections in Visual Studio for Mac")](images/profiler-mac.png#lightbox) 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](images/profiler-vs.png "Profiler sections in Visual Studio")](images/profiler-vs.png#lightbox)
 
@@ -200,11 +200,11 @@ The allocations instrument provides detailed information about objects in the ap
 
 At the top of the profiler is the allocations chart, which displays the amount of memory allocated at regular intervals during the profiling. Currently the allocations graph is the total number of allocations and NOT the size of the heap at that point in time. In a sense, it will never go down, it will only ever increase. This includes objects allocated on the stack. Depending on the runtime version used, the chart can look different – even for the same app.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](images/allocations1.png "Allocations Instrument")](images/allocations1.png#lightbox) 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](images/allocations1-vs.png "Allocations Instrument")](images/allocations1-vs.png#lightbox)
 
@@ -214,11 +214,11 @@ There are different data views in the Allocations instrument, which allow develo
 
  -   **Allocations** – This displays a list of all allocations and groups them by class name. This provides a great overview of classes and methods being used, how often they are used, and the collective size of the classes used. Double clicking on a class will show the memory allocated : 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
   [![](images/allocations3.png "Allocations Tab")](images/allocations3.png#lightbox) 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
   [![](images/allocations2-vs.png "Allocations Tab")](images/allocations2-vs.png#lightbox)
 
@@ -230,11 +230,11 @@ The Inspector view for Allocations provides options for filtering and grouping o
     1.  **Inverted Call Tree** – This considers the stack trace from top to bottom. This is a convenient view option as it indicates the deepest methods where the CPU has been spending its time.
     2.  **Separate by thread** – This option organizes the call tree by thread.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
   [![](images/allocations2.png "Call Tree Tab")](images/allocations2.png#lightbox) 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
   [![](images/allocations3-vs.png "Call Tree Tab")](images/allocations3-vs.png#lightbox)
 
@@ -242,11 +242,11 @@ The Inspector view for Allocations provides options for filtering and grouping o
 
  -   **Snapshots** – This pane displays information about memory snapshots. To generate these while profiling a live application, click the _Camera_ button in the toolbar at each point that you'd like to see what memory is retained and released. You can then click each snapshot to explore what is happening under the hood. Note that snapshots can only be taken when live profiling an app. 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
   [![](images/allocations4.png "Snapshots Tab")](images/allocations4.png#lightbox) 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
   [![](images/allocations4-vs.png "Snapshots Tab")](images/allocations4-vs.png#lightbox)
 
@@ -258,13 +258,13 @@ The Time Profiler instrument measures exactly how much time is spent in each met
 
 The plot chart, as shown in the screenshot below, displays the number of samples received by the app as it runs:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![Time Profiler Instrument](images/time1.png)](images/time1.png#lightbox) 
 
 [![Time Profiler Instrument – Samples List](images/time3.png)](images/time3.png#lightbox) 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![Time Profiler Instrument](images/time1-vs.png)](images/time1-vs.png#lightbox) 
 
@@ -274,11 +274,11 @@ The plot chart, as shown in the screenshot below, displays the number of samples
 
 - **Call Tree** – Shows amount of time spent in each method:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
   [![](images/time2.png "Time Profiler Instrument – Call Tree")](images/time2.png#lightbox) 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
   [![](images/time2-vs.png "Time Profiler Instrument – Call Tree")](images/time2-vs.png#lightbox) 
 
@@ -288,11 +288,11 @@ The plot chart, as shown in the screenshot below, displays the number of samples
 
 Through the use of C# and F# managed code, it can be quite common, and unfortunately quite easy to create references to objects which will never be disposed. This instrument allows you to pinpoint those objects, and display the cycles referenced in your application.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![Cycles Instrument](images/cycles.m751-sml.png)](images/cycles.m751.png#lightbox) 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![Cycles Instrument](images/cycles-vs-sml.png)](images/cycles-vs.png#lightbox) 
 
@@ -305,11 +305,11 @@ Currently, only the default Debug configurations can be profiled.
 If you profile an app with any other configuration, you will be presented with the following message dialog:
 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![Profiling Error Dialog](images/image001.png)](images/image001.png#lightbox) 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](images/image1vs.png "Profiling Error Dialog")](images/image1vs.png#lightbox) 
 

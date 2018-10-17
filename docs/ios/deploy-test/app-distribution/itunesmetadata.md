@@ -280,7 +280,7 @@ The following keys are included in all `iTunesMetadata.plist` files for iOS appl
 
 ## Creating an iTunesMetadata.plist File
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
  When working with an `iTunesMetadata.plist` file in Visual Studio for Mac, you have two options:
 
@@ -332,7 +332,7 @@ Do the following:
 6. In the Open File Dialog, select the `iTunesMetadata.plist` file that was created above and click the **OK** button.
 7. Leave the **Build Action** of this file set to **None**.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 The Xamarin plugin for Visual Studio only supports a visual editor for `Info.plist` and `Entitlement.plist` files, so you'll need to create your `iTunesMetadata.plist` file in a standard text editor and manually include it in your Xamarin.iOS project.
 

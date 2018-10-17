@@ -31,7 +31,7 @@ However, some additional provisioning is required to ensure that the app is code
 
 In addition to selecting and configuring the required application services when defining the App ID, the entitlements must also be configured in the Xamarin.iOS project by editing the **Info.plist** and **Entitlements.plist** files.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 To configure the entitlements in Visual Studio for Mac, do the following:
 
@@ -48,7 +48,7 @@ To configure the entitlements in Visual Studio for Mac, do the following:
 5. Select and configure any entitlements required for the Xamarin.iOS application so that they match the setup that was defined when the App ID was created.
 6. Save the changes to the **Entitlements.plist** file.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 To configure the entitlements in Visual Studio, do the following:
 

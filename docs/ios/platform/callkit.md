@@ -1124,7 +1124,7 @@ When working with CallKit, _Call Directory Extensions_ provide a way to add bloc
 
 To implement a Call Directory Extension in a Xamarin.iOS app, do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Open the app's solution in Visual Studio for Mac.
 2. Right-click on the Solution Name in the **Solution Explorer** and select **Add** > **Add New Project**.
@@ -1138,7 +1138,7 @@ To implement a Call Directory Extension in a Xamarin.iOS app, do the following:
 
 	[![](callkit-images/calldir03.png "Creating the project")](callkit-images/calldir03.png#lightbox) 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Open the app's solution in Visual Studio.
 2. Right-click on the Solution Name in the **Solution Explorer** and select **Add** > **Add New Project**.

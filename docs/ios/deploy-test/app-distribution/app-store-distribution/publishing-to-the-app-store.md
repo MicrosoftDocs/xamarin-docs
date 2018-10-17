@@ -112,7 +112,7 @@ For detailed instructions, see the [Creating a distribution profile](~/ios/get-s
 
 New Xamarin.iOS projects automatically set up **Debug** and **Release** _build configurations_. To properly configure the **Release** build, follow these steps:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. From the **Solution Pad**, open **Info.plist**. Select **Manual Provisioning**. Save and close the file.
 2. Right-click on the **Project Name** in the **Solution Pad**, select **Options**, and navigate to the **iOS Build** tab.
@@ -143,7 +143,7 @@ New Xamarin.iOS projects automatically set up **Debug** and **Release** _build c
 
 15. Click **OK** to save changes to the project properties.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Make sure that Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Right-click on the **Project Name** in the **Solution Explorer**, select **Properties**.
@@ -199,7 +199,7 @@ To learn how to do this, read the [Configuring an app in iTunes Connect](~/ios/d
 
 With your build settings properly configured and iTunes Connect awaiting your submission, you can now build your app and submit it to Apple.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. In Visual Studio for Mac, select the **Release** build configuration and a device (not a simulator) for which to build.
 
@@ -263,7 +263,7 @@ With your build settings properly configured and iTunes Connect awaiting your su
     >
     > For a workaround to this error, take a look at [this post in the Xamarin Forums](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1).
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 > [!NOTE]
 > Visual Studio 2017 does not currently support the **Archive for

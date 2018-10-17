@@ -60,11 +60,11 @@ Create a new Android Wear 1.0 project called **WatchFace**
 (for more information about creating new Xamarin.Android projects,
 see [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md)):
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![New project dialog](creating-a-watchface-images/03-wear-project-vs-sml.png "Select Wear App in the New Project dialog")](creating-a-watchface-images/03-wear-project-vs.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![New project dialog](creating-a-watchface-images/03-wear-project-xs-sml.png "Select Wear App in the New Project dialog")](creating-a-watchface-images/03-wear-project-xs.png#lightbox)
 
@@ -73,24 +73,24 @@ see [Hello, Android](~/android/get-started/hello-android/hello-android-quickstar
 
 Set the package name to `com.xamarin.watchface`:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![Package name setting](creating-a-watchface-images/04-package-name-vs.png "Set the package name to com.xamarin.watchface")](creating-a-watchface-images/04-package-name-vs.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![Package name setting](creating-a-watchface-images/04-package-name-xs.png "Set the package name to com.xamarin.watchface")](creating-a-watchface-images/04-package-name-xs.png#lightbox)
 
 -----
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 In addition, scroll down and enable the **INTERNET** and **WAKE_LOCK**
 permissions:
 
 [![Required permissions](creating-a-watchface-images/05-required-permissions-vs.png "Enable INTERNET and WAKE_LOCK permissions")](creating-a-watchface-images/05-required-permissions-vs.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Set the Minimum Android version to **Android 5.1 (API level 22)**.
 Also, enable the **Internet** and **WakeLock** permissions:
@@ -105,7 +105,7 @@ be added to the **drawables** folder later in this walkthrough.
 
 ## Add the Xamarin.Android Wear Package
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Start the NuGet Package Manager (in Visual Studio, right-click
 **References** in the **Solution Explorer** and select **Manage NuGet
@@ -118,7 +118,7 @@ Next, if **Xamarin.Android.Support.v13** is installed, uninstall it:
 
 [![NuGet Package Manager remove](creating-a-watchface-images/07-uninstall-v13-sml.png "Remove Xamarin.Support.v13")](creating-a-watchface-images/07-uninstall-v13.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Start the NuGet Package Manager (in Visual Studio for Mac, right-click
 **Packages** in the **Solution Pane** and select **Add Packages ...**).
@@ -197,13 +197,13 @@ the actual implementation of the watch face.
 
 ### Add the CanvasWatchFaceService
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Add a new file called **MyWatchFaceService.cs** (in Visual Studio,
 right-click **WatchFace** in the **Solution Explorer**, click **Add >
 New Item...**, and select **Class**).
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Add a new file called **MyWatchFaceService.cs** (in Visual Studio for Mac,
 right-click the **WatchFace** project, click **Add >
@@ -426,11 +426,11 @@ following XML:
 
 Set this file's build action to **AndroidResource**:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![Build Action](creating-a-watchface-images/10-android-resource-vs.png "Set build action to AndroidResource")](creating-a-watchface-images/10-android-resource-vs.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![Build Action](creating-a-watchface-images/10-android-resource-xs.png "Set build action to AndroidResource")](creating-a-watchface-images/10-android-resource-xs.png#lightbox)
 

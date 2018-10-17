@@ -52,13 +52,13 @@ documentation. Additionally, the following is required to complete the steps pre
 
 ## Installing the Xcode Command Line Tools
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 
 As stated above, we'll be using Xcode Command Line Tools (specifically `make` and `lipo`) in this walkthrough. The `make` command is a very common Unix utility that will automate the compilation of executable programs and libraries by using a _makefile_ that specifies how the program should be built. The `lipo` command is an OS X command line utility for creating multi-architecture files; it will combine multiple `.a` files into one file that can be used by all hardware architectures.
 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 
 As stated above, we'll be using Xcode Command Line Tools on the **Mac Build Host** (specifically `make` and `lipo`) in this walkthrough. The `make` command is a very common Unix utility that will automate the compilation of executable programs and libraries by using a _makefile_ to specifies how to build the program. The `lipo` command is an OS X command line utility for creating multi-architecture files; it will combine multiple `.a` files into one file that can be used by all hardware architectures.
@@ -250,7 +250,7 @@ Before we can use **Objective-Sharpie** to automate the binding process, we need
 
 Let's do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Start Visual Studio for Mac.
 1. From the **File** menu, select **New** > **Solution...**:
@@ -272,7 +272,7 @@ The solution will be created and two default files will be included:
 ![](walkthrough-images/bind03.png "The solution structure in the Solution Explorer")
 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 
 1. Start Visual Studio.
@@ -304,7 +304,7 @@ Now we have our base Binding Project ready, we need to add the Fat Binary librar
 
 Follow these steps to add the library:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Right-click on the **Native References** folder in the Solution Pad and select **Add Native References**:
 
@@ -317,7 +317,7 @@ Follow these steps to add the library:
 
 	![](walkthrough-images/bind04.png "Including a file")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Copy the `libInfColorPickerSDK.a` from your **Mac Build Host** and paste it into your binding project.
 
@@ -353,13 +353,13 @@ The next thing we need to do is to create the API definitions for the InfColorPi
 
 ## Using Objective Sharpie
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 
 Objective Sharpie is a command line tool (provided by Xamarin) that can assist in creating the definitions required to bind a 3rd party Objective-C library to C#. In this section, we'll use Objective Sharpie to create the initial **ApiDefinition.cs** for the InfColorPicker project.
 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 
 Objective Sharpie is a command line tool (provided by Xamarin) that can assist in creating the definitions required to bind a 3rd party Objective-C library to C#. In this section, we'll use Objective Sharpie on our **Mac Build Host** to create the initial **ApiDefinition.cs** for the InfColorPicker project.
@@ -463,7 +463,7 @@ And the **InfColorPicker.enums.cs** and **InfColorPicker.cs** files will be crea
 
 [![](walkthrough-images/os06.png "The InfColorPicker.enums.cs and InfColorPicker.cs files")](walkthrough-images/os06.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 
 Open both of these files in the Binding project that we created above. Copy the contents of the **InfColorPicker.cs** file and paste it into the **ApiDefinition.cs** file, replacing the existing `namespace ...` code block with the contents of the **InfColorPicker.cs** file (leaving the `using` statements intact):
@@ -471,7 +471,7 @@ Open both of these files in the Binding project that we created above. Copy the 
 ![](walkthrough-images/os07.png "The InfColorPickerControllerDelegate file")
 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 
 Open both of these files in the Binding project that we created above. Copy the contents of the **InfColorPicker.cs** file (from the **Mac Build Host**) and paste it into the **ApiDefinition.cs** file, replacing the existing `namespace ...` code block with the contents of the **InfColorPicker.cs** file (leaving the `using` statements intact).
@@ -499,7 +499,7 @@ Next, we do the same thing with the contents of the `InfColorPicker.enums.cs` fi
 
 You may also find that Objective Sharpie has annotated the binding with `[Verify]` attributes. These attributes indicate that you should verify that Objective Sharpie did the correct thing by comparing the binding with the original C/Objective-C declaration (which will be provided in a comment above the bound declaration). Once you have verified the bindings, you should remove the verify attribute. For more information, refer to the [Verify](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) guide.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 
 At this point, our binding project should be complete and ready to build. Let's build our binding project and make sure that we ended up with no errors:
@@ -507,7 +507,7 @@ At this point, our binding project should be complete and ready to build. Let's 
 [Build the binding project and make sure there are no errors](walkthrough-images/os12.png)
 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 
 At this point, our binding project should be complete and ready to build. Let's build our binding project and make sure that we ended up with no errors.
@@ -521,7 +521,7 @@ At this point, our binding project should be complete and ready to build. Let's 
 
 Follow these steps to create a sample iPhone application to use the iOS Binding Library created above:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. **Create Xamarin.iOS Project** - Add a new Xamarin.iOS project called **InfColorPickerSample** to the solution, as shown in the following screenshots:
 
@@ -543,7 +543,7 @@ Follow these steps to create a sample iPhone application to use the iOS Binding 
 
 1. When asked, copy the **.xib** file into the project.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. **Create Xamarin.iOS Project** - Add a new Xamarin.iOS project named **InfColorPickerSample** using the **Single View App** template:
 

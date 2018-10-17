@@ -70,11 +70,11 @@ To Generate a signing identity, do the following:
 
 ### Understanding certificate key pairs
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 The Developer Profile contains certificates, their associated keys, and any provisioning profiles associated with the account. There are actually two versions of a Developer Profile — one is on the Developer Portal, and the other lives on a local Mac. The difference between the two is the type of keys they contain: _the Profile on the Portal houses all the public keys associated with your certificates, while the copy on your local Mac contains all the private keys_. For the certificates to be valid, the key pairs must match. Keep a backup of the Developer Profile on the local Mac, because if the private keys are lost, all the certificates and provisioning profiles will need to be regenerated.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 The Developer Profile contains certificates, their associated keys, and any provisioning profiles associated with the account. There are actually two versions of a Developer Profile — one is on the Developer Portal, and the other lives on a Mac. The difference between the two is the type of keys they contain: _the Profile on the Portal houses all the public keys associated with your certificates, while the copy on your the Mac contains all the private keys_. For the certificates to be valid, the key pairs must match. Keep a backup of the Developer Profile on from the Xamarin Build Host's Mac, because if the private keys are lost, all the certificates and provisioning profiles will need to be regenerated.
 
@@ -204,12 +204,12 @@ Visual Studio for Mac and Visual Studio. To update and download any certificates
 
 The new certificates or provisioning profiles will be available in Visual Studio for Mac or Visual Studio and ready to use.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 > [!IMPORTANT]
 > It may be necessary to stop and restart Visual Studio for Mac before it will see any new or modified certificates or profiles updated by Xcode.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 > [!IMPORTANT]
 > It may be necessary to stop and restart Visual Studio before it will see any new or modified certificates or profiles updated by Xcode.
@@ -230,7 +230,7 @@ Apple provides a selection of special Application Services, also called capabili
 
 At this point provisioning should be complete, and the app is ready to be deployed to the device. To do this, follow the steps below:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 > [!IMPORTANT]
 > Before you begin, make sure to select **Manual Provisioning** in the **Info.plist**.
@@ -249,7 +249,7 @@ If this is set to **Automatic**, Visual Studio for Mac will select the identity 
 4. Make sure to set the build configuration to **iPhone** / **iPad**, rather the simulator.
 5. Click **Run** in Visual Studio for Mac and view the app running on the device.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 > [!IMPORTANT]
 > Before you begin, make sure to select **Manual Provisioning** in **Project > Provisioning Properties…**.

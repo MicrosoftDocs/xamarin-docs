@@ -31,7 +31,7 @@ The following property names correspond to the indicated java
 - **AndroidDesignerJavaRendererPermSize** -XX:MaxPermSize
 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1.  Open your solution in Visual Studio.
 
@@ -71,7 +71,7 @@ The following property names correspond to the indicated java
 
 8.  Restart Visual Studio and reopen your solution.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1.  Open your solution in Visual Studio for Mac to ensure the solution
     directory contains a `.userprefs` file.

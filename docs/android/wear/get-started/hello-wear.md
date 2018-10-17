@@ -23,11 +23,11 @@ Follow these steps to create your first Xamarin.Android Wear app:
 
 Create a new **Android Wear Application**:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![Creating a new Android Wear Application in the New Project dialog](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![Creating a new Android Wear Application in the New Solution dialog](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
@@ -42,14 +42,14 @@ double-check that you have installed a supported Android SDK.
 
 ### 2. Choose the correct **Target Framework**
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Ensure that **Minimum Android to target** is set to **Android 5.0 
 (Lollipop)** or later: 
 
 [![Setting the Target Framework to Android 5.0 in Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Ensure the target framework is set to **Android 5.0 (Lollipop)** or later:
 
@@ -157,11 +157,11 @@ sure to choose the correct Android Wear device or AVD before you start
 debugging. After selecting the device, click the Play button to
 deploy the app to the emulator or device.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![Choosing a Wear AVD in Visual Studio device menu](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![Choosing a Wear AVD in Visual Studio for Mac device menu](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 

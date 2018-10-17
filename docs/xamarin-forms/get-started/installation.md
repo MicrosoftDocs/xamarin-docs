@@ -47,13 +47,13 @@ You should have the latest Android SDK Tools and Android API platform installed.
 Additionally, the target/compile version for Android projects **must** be set to *Use latest installed platform*. However the minimum version can be set to API 19 so you can continue to support devices
 that use Android 4.4 and newer. These values are set in the **Project Options**:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 **Project Options > Application > Application Properties**
 
 ![](installation-images/options-android-vs-sml.png "Android build options in Visual Studio")
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 **Build > General**
 

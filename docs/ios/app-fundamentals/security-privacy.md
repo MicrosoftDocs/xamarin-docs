@@ -67,7 +67,7 @@ Take the following example of accessing HomeKit on iOS 10 (and greater), the dev
 
 ![An example NSHomeKitUsageDescription alert](security-privacy-images/info01.png "An example NSHomeKitUsageDescription alert")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Xamarin.iOS for Visual Studio currently doesn't support editing the **Info.plist** privacy keys from within the default iOS manifest editor. Instead you will need to use the generic PList editor, so do the following:
 
@@ -85,7 +85,7 @@ Xamarin.iOS for Visual Studio currently doesn't support editing the **Info.plist
 	![Enter a description](security-privacy-images/InfoPListSetValue.png "Enter a description")
 7. Save the changes to the file.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 To set any of the Privacy keys, do the following:
 

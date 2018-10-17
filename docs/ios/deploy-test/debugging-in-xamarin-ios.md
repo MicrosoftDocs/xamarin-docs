@@ -35,11 +35,11 @@ a program without the knowledge or cooperation from the debugged program.
 
 When you are ready to start debugging your application the first step is to [set breakpoints your application](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). This is done by clicking in the margin area of the editor, next to the line number of code you want to break at:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](debugging-in-xamarin-ios-images/debugging1.png "Setting Breakpoints")](debugging-in-xamarin-ios-images/debugging1.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](debugging-in-xamarin-ios-images/debugging1a.png "Setting Breakpoints")](debugging-in-xamarin-ios-images/debugging1a.png#lightbox)
 
@@ -47,13 +47,13 @@ When you are ready to start debugging your application the first step is to [set
 
 You can view all the breakpoints that have been set in your code by going to the **Breakpoints pad**:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](debugging-in-xamarin-ios-images/image0a.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0a.png#lightbox)
 
  If the Breakpoints pad does not display automatically, you can make it visible by selecting _View > Debug Windows > Breakpoints_
  
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](debugging-in-xamarin-ios-images/image0.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0.png#lightbox)
 
@@ -63,12 +63,12 @@ You can view all the breakpoints that have been set in your code by going to the
 
 Before you begin debugging any application, always ensure that the configuration is set to **Debug**, as this contains a helpful set of tools to support debugging such as breakpoints, using data visualizers, and viewing the call stack:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](debugging-in-xamarin-ios-images/debugging7.png "Debugging on simulator")](debugging-in-xamarin-ios-images/debugging7.png#lightbox)
 [![](debugging-in-xamarin-ios-images/debugging7a.png "Debugging on a physical device")](debugging-in-xamarin-ios-images/debugging7a.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](debugging-in-xamarin-ios-images/debugging7c.png "Debugging on simulator")](debugging-in-xamarin-ios-images/debugging7c.png#lightbox)
 [![](debugging-in-xamarin-ios-images/debugging7d.png "Debugging on a physical device")](debugging-in-xamarin-ios-images/debugging7d.png#lightbox)
@@ -78,11 +78,11 @@ Before you begin debugging any application, always ensure that the configuration
 ## Start Debugging
 To start debugging, select the target device or similar in your IDE:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](debugging-in-xamarin-ios-images/debugging7b.png "Select the target device")](debugging-in-xamarin-ios-images/debugging7b.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](debugging-in-xamarin-ios-images/debugging7e.png "Select the target device")](debugging-in-xamarin-ios-images/debugging7e.png#lightbox)
 
@@ -104,7 +104,7 @@ Debugging tools, such as inspecting the values of objects, can be used at this p
 
 You can also set rules dictating the circumstances under which a breakpoint should occur, this is know as adding a *conditional breakpoint*.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 To set a conditional breakpoint, access the  **Breakpoint Properties window**, which can be done in two ways:
 
@@ -122,7 +122,7 @@ You can then enter the condition under which you want to breakpoint to occur:
 
 [![](debugging-in-xamarin-ios-images/image6.png "Enter the condition for the breakpoint to occur")](debugging-in-xamarin-ios-images/image6.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 To set a conditional breakpoint in Visual Studio 2015, first [set a regular breakpoint](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). Right-click on the breakpoint to display its context menu:
 
@@ -142,7 +142,7 @@ For more information on using breakpoint conditions in earlier versions of Visua
 
 When a breakpoint has been reached, the Debug tools enable you to get control over the program’s execution. The IDE will display four buttons, allowing you to run and step through the code.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 In Visual Studio for Mac they will look like the following:
 
@@ -155,7 +155,7 @@ These are:
 - **Step Into** – This will also execute the next line of code. If the next line is a function call, Step Into will stop at the first line of the function, allowing you to continue line-by-line debugging of the function. If the next line is not a function, it will behave the same as Step Over.
 - **Step Out** – This will return to the line where the current function was called.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 In Visual Studio they will look like the following:
 
@@ -248,7 +248,7 @@ Xamarin.iOS ships with the source code for Mono's class libraries, and you can
 use this to single step from the debugger to see how things are working under
 the hood.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Since this feature consumes more memory during debugging, this is turned off
 by default.
@@ -258,7 +258,7 @@ To enable this feature, make sure the **Debug project code only; do not step int
 
 [![](debugging-in-xamarin-ios-images/debugging6.png "Debugging Mono's Class Libraries")](debugging-in-xamarin-ios-images/debugging6.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 To debug the class libraries in Visual Studio, you must disable **Just My Code** under the _Debug > Options_ menu. In the _Debugging > General_ node, clear the **Enable Just My Code** checkbox:
 

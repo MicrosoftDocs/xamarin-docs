@@ -61,7 +61,7 @@ allow an Android application to be published without one. The `Icon`
 property of the `Application` attribute is used to specify the
 application icon for a Xamarin.Android project.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 In Visual Studio 2015 and later, specify the application icon through
 the **Android Manifest** section of project **Properties**, as shown in
@@ -69,7 +69,7 @@ the following screenshot:
 
 [![Set the application icon](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 In Visual Studio for Mac, it is also possible to specify the
 application icon through the **Android Application** section of
@@ -122,7 +122,7 @@ versioning, Android recognizes two different types of information:
     installed on their device. This value is stored in the 
     **AndroidManifest.xml** file as `android:versionName`. 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 In Visual Studio, these values can be set in the **Android Manifest**
 section of project **Properties**, as shown in the following
@@ -130,7 +130,7 @@ screenshot:
 
 [![Set the version number](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 These values can be set via the **Build > Android Application** section
 of **Project Options** as shown in the following screenshot:
@@ -168,7 +168,7 @@ experiences an 83% reduction in the final size of its APK:
 
 -   Configuration: SDK Assemblies Only &ndash; Xamarin.Android 4.2.5 Size = 3.0 MB.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Set linker options through the **Android Options** section of the project
 **Properties**:
@@ -189,7 +189,7 @@ controlling the linker:
     that are required by the application, and not just the ones
     required by Xamarin.Android.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Set linker options through the **Linker** tab in the **Android Build**
 section of **Project Options**, as shown in the following screenshot:
@@ -241,11 +241,11 @@ custom *ProguardConfiguration* build actions. You can add a custom
 ProGuard configuration file to your project, right-click it, and select 
 it as a build action as shown in this example: 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![Proguard Build Action](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![Proguard Build Action](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
 
@@ -312,7 +312,7 @@ list as described in
 
 ### Application Protection with Dotfuscator
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Even with [debugging disabled](#Disable_Debugging), it is still possible for
 attackers to re-package an application, adding or removing
@@ -334,7 +334,7 @@ To configure Dotfuscator CE, please see
 Once it is configured, Dotfuscator CE will automatically protect each
 build that is created.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Even with [debugging disabled](#Disable_Debugging), it is still possible for
 attackers to re-package an application, adding or removing
@@ -407,14 +407,14 @@ first be enabled (on the
 
 ## Set Packaging Properties
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Packaging properties can be set in the **Android Options** section of
 project **Properties**, as shown in the following screenshot:
 
 [![Packaging Properties](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Packaging properties can be set in the **Project Options**, as shown in
 the following screenshot:
@@ -476,7 +476,7 @@ For more information about Multi-Dex, see
 
 ## Compile
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 After all of the above steps are completed, the app is ready for
 compilation. Select **Build > Rebuild Solution** to verify that it
@@ -485,7 +485,7 @@ produce an APK.
 
 [Signing the App Package](~/android/deploy-test/signing/index.md) discusses packaging and signing in more detail.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 After all of the above steps are completed, compile the application
 (select **Build > Build All**) to verify that it builds successfully
@@ -498,7 +498,7 @@ in Release mode. Note that this step does not yet produce an APK.
 
 ## Archive for Publishing
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 To begin the publishing process, right-click the project in **Solution
 Explorer** and select the **Archive...** context menu item:
@@ -578,7 +578,7 @@ It is possible to choose one of the following distribution channels:
 
 * **Google Play** &ndash; Publishes a signed APK to Google Play. Continue to [Publishing to Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) to learn how to sign and publish an APK in the Google Play store.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 To begin the publishing process, select **Build > Archive for Publishing**:
 

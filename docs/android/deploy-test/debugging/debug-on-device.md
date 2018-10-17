@@ -31,7 +31,7 @@ configuration and the external device is selected in the IDE, this will
 ensure that the necessary debug symbols are available and that the IDE 
 can connect to the running application: 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![Debug configuration selected](debug-on-device-images/image1-vs.png)
 
@@ -47,7 +47,7 @@ application:
 
 ![Breakpoint reached](debug-on-device-images/image3-vs.png)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![Debug configuration selected](debug-on-device-images/image1-xs.png)
 

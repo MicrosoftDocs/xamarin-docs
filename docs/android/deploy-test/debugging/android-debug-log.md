@@ -36,7 +36,7 @@ disconnected from Visual Studio).
 
 ## Accessing the Debug Log from Visual Studio
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 To open the **Device Log** tool, click **Device Log (logcat)** icon on the
 toolbar:
@@ -84,7 +84,7 @@ does not appear in the device selector, verify that it is available in
 the Visual Studio device drop-down menu next to the **Start** button.
 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 To open the **Device Log**, click **View > Pads > Device Log**:
 
@@ -134,7 +134,7 @@ the Visual Studio device drop-down menu next to the **Start** button.
 
 ## Accessing from the Command Line
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Another option is to view the debug log via the command line. Open a
 command prompt window and navigate to the Android SDK platform-tools
@@ -148,7 +148,7 @@ log can be viewed by entering the following command:
 $ adb logcat
 ```
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Another option is to view the debug log via the command line. Open a 
 Terminal window and navigate to the Android SDK platform-tools folder 

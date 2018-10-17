@@ -156,7 +156,7 @@ New to iOS 10, the developer must inform the OS what environment Push Notificati
 
 To provide the required entitlement, do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Double-click the `Entitlements.plist` file in the **Solution Pad** to open it for editing.
 2. Switch to the **Source** view: 
@@ -168,7 +168,7 @@ To provide the required entitlement, do the following:
 	[![](enhanced-user-notifications-images/setup02.png "The aps-environment Property")](enhanced-user-notifications-images/setup02.png#lightbox)
 5. Save the changes to the file.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Double-click the `Entitlements.plist` file in the **Solution Explorer** to open it for editing.
 3. Click the **+** button to add a new key.
@@ -531,7 +531,7 @@ Some potential uses of Service Extensions include:
 
 To implement a Service Extension in a Xamarin.iOS app, do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Open the app's solution in Visual Studio for Mac.
 2. Right-click on the Solution Name in the **Solution Pad** and select **Add** > **Add New Project**.
@@ -545,7 +545,7 @@ To implement a Service Extension in a Xamarin.iOS app, do the following:
 
 	[![](enhanced-user-notifications-images/extension04.png "Adjust the Project Name and/or Solution Name")](enhanced-user-notifications-images/extension04.png#lightbox) 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Open the app's solution in Visual Studio.
 2. Right-click on the Solution Name in the **Solution Explorer** and select **Add > New Project...**.

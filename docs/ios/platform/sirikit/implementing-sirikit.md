@@ -63,7 +63,7 @@ In the case of the example app MonkeyChat, the data models and processing code s
 
 Do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Start Visual Studio for Mac and open the MonkeyChat app.
 2. Right-click on the Solution Name in the **Solution Pad** and select **Add** > **New Project...**: 
@@ -83,7 +83,7 @@ Do the following:
 
 	[![](implementing-sirikit-images/prep06.png "The DataModels and Processors folders in the Solution Explorer")](implementing-sirikit-images/prep06.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Start Visual Studio and open the MonkeyChat app.
 2. Right-click on the Solution Name in the **Solution Explorer** and select **Add** > **New Project...**.
@@ -159,7 +159,7 @@ Any Xamarin.iOS app that includes SiriKit integration, must have the correct ent
 
 Do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Double-click the `Entitlements.plist` file in the **Solution Explorer** to open it for editing.
 2. Switch to the **Source** tab.
@@ -173,7 +173,7 @@ Do the following:
 	[![](implementing-sirikit-images/setup02.png "Select the Entitlements.plist file in the Custom Entitlements field")](implementing-sirikit-images/setup02.png#lightbox)
 7. Click the **OK** button to save the changes.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Double-click the `Entitlements.plist` file in the **Solution Explorer** to open it for editing.
 3. Add the `com.apple.developer.siri` **Property**, set the **Type** to `Boolean` and the **Value** to `Yes`: 
@@ -245,13 +245,13 @@ Do the following on your Mac:
 
 Before the app adds any User Specific Vocabulary or the Intents Extensions connects to Siri, it must requests authorization from the user to access Siri.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Edit the app's `Info.plist` file, switch to the **Source** view and add the `NSSiriUsageDescription` key with a string value describing how the app will use Siri and what types of data will be sent. For example, the MonkeyChat app might say "MonkeyChat contacts will be sent to Siri":
 
 [![](implementing-sirikit-images/request01.png "The NSSiriUsageDescription in the Info.plist editor")](implementing-sirikit-images/request01.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Edit the app's `Info.plist` file and add the `NSSiriUsageDescription` key with a string value describing how the app will use Siri and what types of data will be sent. For example, the MonkeyChat app might say "MonkeyChat contacts will be sent to Siri":
 
@@ -449,7 +449,7 @@ For a full list of acceptable values and required file structure, please see App
 
 To add a `AppIntentVocabulary.plist` file to the app project, do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Right-click the Project Name in the **Solution Explorer** and select **Add** > **New File...** > **iOS**:
 
@@ -513,7 +513,7 @@ To add a `AppIntentVocabulary.plist` file to the app project, do the following:
 	[![](implementing-sirikit-images/plist19.png "Add a few String keys with example uses of the term")](implementing-sirikit-images/plist19.png#lightbox)
 23. Repeat the above steps for any Intents the app need to provide example usage of.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Right-click the Project Name in the **Solution Explorer** and select **Add > New Item... > Apple > Property List > Info.plist**:
 
@@ -601,7 +601,7 @@ For more information, please see our [The Intents Extension Reference](~/ios/pla
 
 To add an Intents Extension to the solution, do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Right-click on the **Solution Name** in the **Solution Pad** and select **Add** > **Add New Project...**.
 2. From the dialog box select **iOS** > **Extensions** > **Intent Extension** and click the **Next** button: 
@@ -617,7 +617,7 @@ To add an Intents Extension to the solution, do the following:
 
 	[![](implementing-sirikit-images/intents08.png "Select the name of the common shared code library project")](implementing-sirikit-images/intents08.png#lightbox)
 	
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Right-click on the **Solution Name** in the **Solution Explorer** and select **Add** > **Add New Project...**.
 2. From the dialog box select **Visual C# > iOS Extensions > Intent Extension** and click the **Next** button:
@@ -645,11 +645,11 @@ Just like any typical App Extension, the app will have the existing keys of `NSE
 
 To configure the Intent Extension's `Info.plist` file, double-click it in the **Solution Explorer** to open it for editing. Next, switch to the **Source** view then expand the `NSExtension` and `NSExtensionAttributes` keys in the editor:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](implementing-sirikit-images/intents02.png "The NSExtension and NSExtensionAttributes keys in the editor")](implementing-sirikit-images/intents02.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](implementing-sirikit-images/intents02w.png "The NSExtension and NSExtensionAttributes keys in the editor")](implementing-sirikit-images/intents02w.png#lightbox)
 
@@ -657,11 +657,11 @@ To configure the Intent Extension's `Info.plist` file, double-click it in the **
 
 Expand the `IntentsSupported` key and add the name of any Intent Class this extension will support. For the example MonkeyChat app, it supports the `INSendMessageIntent`:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](implementing-sirikit-images/intents09.png "The INSendMessageIntent key")](implementing-sirikit-images/intents09.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](implementing-sirikit-images/intents09w.png "The INSendMessageIntent key")](implementing-sirikit-images/intents09w.png#lightbox)
 
@@ -669,11 +669,11 @@ Expand the `IntentsSupported` key and add the name of any Intent Class this exte
 
 If the app optionally requires that the user be logged on to the device to use a given intent, expand the `IntentRestrictedWhileLocked` key and add the Class names of the Intents that have restricted access. For the example MonkeyChat app, the user must be logged in to send a chat message so we have added `INSendMessageIntent`:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](implementing-sirikit-images/intents10.png "The added INSendMessageIntent key")](implementing-sirikit-images/intents10.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](implementing-sirikit-images/intents10w.png "The added INSendMessageIntent key")](implementing-sirikit-images/intents10w.png#lightbox)
 
@@ -865,7 +865,7 @@ For more information, please see our [The Intents UI Extension Reference](~/ios/
 
 To add an Intents UI Extension to the solution, do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Right-click on the **Solution Name** in the **Solution Pad** and select **Add** > **Add New Project...**.
 2. From the dialog box select **iOS** > **Extensions** > **Intent UI Extension** and click the **Next** button: 
@@ -881,7 +881,7 @@ To add an Intents UI Extension to the solution, do the following:
 
 	[![](implementing-sirikit-images/intents14.png "Select the name of the common shared code library project")](implementing-sirikit-images/intents14.png#lightbox)
 	
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Right-click on the **Solution Name** in the **Solution Explorer** and select **Add** > **Add New Project...**
 2. From the dialog box select **iOS** > **Extensions** > **Intent UI Extension** and click the **Next** button.
@@ -900,13 +900,13 @@ Just like any typical App Extension, the app will have the existing keys of `NSE
 
 **IntentsSupported** is required and consists of an array of Intent Class names that the app want to support from the Intent Extension.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 To configure the Intent UI Extension's `Info.plist` file, double-click it in the **Solution Explorer** to open it for editing. Next, switch to the **Source** view then expand the `NSExtension` and `NSExtensionAttributes` keys in the editor:
 
 [![](implementing-sirikit-images/intents04.png "The NSExtension and NSExtensionAttributes keys in the editor")](implementing-sirikit-images/intents04.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 To configure the Intent UI Extension's `Info.plist` file, double-click it in the **Solution Explorer** to open it for editing. Expand the `NSExtension` and `NSExtensionAttributes` keys in the editor:
 
@@ -916,11 +916,11 @@ To configure the Intent UI Extension's `Info.plist` file, double-click it in the
 
 Expand the `IntentsSupported` key and add the name of any Intent Class this extension will support. For the example MonkeyChat app, it supports the `INSendMessageIntent`:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](implementing-sirikit-images/intents15.png "The INSendMessageIntent key")](implementing-sirikit-images/intents15.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](implementing-sirikit-images/intents15w.png "The INSendMessageIntent key")](implementing-sirikit-images/intents15w.png#lightbox)
 

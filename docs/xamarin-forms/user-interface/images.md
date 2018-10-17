@@ -115,7 +115,7 @@ Embedded images are also shipped with an application (like local images) but ins
 
 To embed an image in a project, right-click to add new items and select the image/s you wish to add. By default the image will have **Build Action: None**; this needs to be set to **Build Action: EmbeddedResource**.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![](images-images/vs-buildaction.png "Set Build Action: EmbeddedResource")
 
@@ -127,7 +127,7 @@ The IDE has generated this default by concatenating the **Default Namespace**
 for this project with the filename, using a period (.) between each value.
 <!-- https://msdn.microsoft.com/library/ms950960.aspx -->
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![](images-images/xs-buildaction.png "Set Build Action: EmbeddedResource")
 

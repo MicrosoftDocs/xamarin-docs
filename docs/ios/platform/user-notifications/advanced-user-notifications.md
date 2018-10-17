@@ -157,7 +157,7 @@ If the user interacts with the Custom Actions (presented below the Notification)
 
 To implement a Custom User Notification UI in a Xamarin.iOS app, do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Open the app's solution in Visual Studio for Mac.
 2. Right-click on the Solution Name in the **Solution Pad** and select **Add** > **Add New Project**.
@@ -171,7 +171,7 @@ To implement a Custom User Notification UI in a Xamarin.iOS app, do the followin
 
 	[![](advanced-user-notifications-images/notify03.png "Adjust the Project Name and/or Solution Name")](advanced-user-notifications-images/notify03.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Open the app's solution in Visual Studio for Mac.
 2. Right-click on the Solution Name in the **Solution Explorer** and select **Add > New Project...**.
@@ -239,7 +239,7 @@ The `DidReceiveNotification` method is called when the Notification is expanded 
 
 The system needs to be informed on how to find the app's Notification Content Extension based on the specific categories it responds to. Do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Double-click the Extension's `Info.plist` file in the **Solution Pad** to open it for editing.
 2. Switch to the **Source** view.
@@ -249,7 +249,7 @@ The system needs to be informed on how to find the app's Notification Content Ex
 	[![](advanced-user-notifications-images/customui02.png "Add the UNNotificationExtensionCategory key")](advanced-user-notifications-images/customui02.png#lightbox)
 5. Save your changes.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Double-click the Extension's `Info.plist` file in the **Solution Explorer** to open it for editing.
 3. Expand the `NSExtension` key.
@@ -262,11 +262,11 @@ The system needs to be informed on how to find the app's Notification Content Ex
 
 Notification Content Extension Categories (`UNNotificationExtensionCategory`) use the same category values that are used to register Notification Actions. In the situation where the app will use the same UI for multiple categories, switch the `UNNotificationExtensionCategory` to the type **Array** and provide all of the categories required. For example:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](advanced-user-notifications-images/customui03.png "Notification Content Extension Categories")](advanced-user-notifications-images/customui03.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](advanced-user-notifications-images/customui03w.png "Notification Content Extension Categories")](advanced-user-notifications-images/customui03w.png#lightbox)
 
@@ -276,11 +276,11 @@ Notification Content Extension Categories (`UNNotificationExtensionCategory`) us
 
 In the situation where the Custom Notification UI will be displaying the same content as the default Notification (Title, Subtitle and Body displayed automatically at the bottom of the Notification UI), this default information can be hidden by adding the `UNNotificationExtensionDefaultContentHidden` key to the `NSExtensionAttributes` key as type **Boolean** with a value of `YES` in the Extension's `Info.plist` file:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](advanced-user-notifications-images/customui04.png "Finding default information")](advanced-user-notifications-images/customui04.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](advanced-user-notifications-images/customui04w.png "Finding default information")](advanced-user-notifications-images/customui04w.png#lightbox)
 
@@ -360,11 +360,11 @@ Because the Notification system is already running before the Notification Conte
 
 To eliminate this effect, edit the `Info.plist` file for the Extension and set the `UNNotificationExtensionInitialContentSizeRatio` key of the `NSExtensionAttributes` key to type **Number** with a value representing the desired ratio. For example:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](advanced-user-notifications-images/customui05.png "The UNNotificationExtensionInitialContentSizeRatio key")](advanced-user-notifications-images/customui05.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](advanced-user-notifications-images/customui05w.png "The UNNotificationExtensionInitialContentSizeRatio key")](advanced-user-notifications-images/customui05w.png#lightbox)
 

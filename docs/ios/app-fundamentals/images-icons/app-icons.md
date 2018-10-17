@@ -104,7 +104,7 @@ For icons, a special `AppIcon` image set can be added to the `Assets.xcassets` f
 
 To use an Asset Catalog, do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Double-click the `Info.plist` file in the **Solution Explorer** to open it for editing.
 2. Scroll down to the **App Icons** section.
@@ -121,7 +121,7 @@ To use an Asset Catalog, do the following:
 7. Click the **Open** button to include the image in the project and set it in the xcasset.
 8. Repeat for all images required.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Double-click the **Info.plist** file in the **Solution Explorer**:
 
@@ -150,7 +150,7 @@ For an existing Xamarin.iOS app using the `Info.plist` file to manage it's icons
 
 Do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Double-Click the `Info.plist` file in the **Solution Explorer** to open it for editing.
 2. Scroll down to the **App Icons** section.
@@ -161,7 +161,7 @@ Do the following:
 
      ![](app-icons-images/migrate03.png "The AppIcons Image Set in the Assets.xcassets")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Double-Click the `Info.plist` file in the **Solution Explorer** to open it for editing.
 2. Click on the iPhone Icons section: 
@@ -182,7 +182,7 @@ If using the Ad-Hoc method of delivering the app (either for corporate users or 
 
 To specify the iTunes Artwork, do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Double-click the `Info.plist` file in the **Solution Explorer** to open it for editing.
 2. Scroll to the **iTunes Artwork** section of the editor: 
@@ -191,7 +191,7 @@ To specify the iTunes Artwork, do the following:
 3. For any missing image, click on the thumbnail in the editor, select the image file for the desired iTunes artwork from the Open File dialog box and click the **OK** button.
 4. Repeat this step until all needed images have been specified for the app.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Double-click the `Info.plist` file in the **Solution Explorer** to open it for editing.
 

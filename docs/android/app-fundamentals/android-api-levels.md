@@ -42,7 +42,7 @@ Existing apps will be required to target API level 26 or higher
 beginning in November 2018. For more information, see
 [Improving app security and performance on Google Play for years to come](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Normally, all three Xamarin.Android API levels are set to the same
 value. On the **Application** page, set **Compile using Android version
@@ -71,7 +71,7 @@ Level 14 thru API level 25:
 
 [![Compile using API level 25 Nougat, Minimum Android version set to API level 14](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Normally, all three Xamarin.Android API levels are set to the same
 value. Set **Target framework** to the latest stable API version (or,
@@ -233,7 +233,7 @@ app to be compiled at that support library's minimum API level or
 greater. 
 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 To access the Target Framework setting in Visual Studio, open the
 project properties in **Solution Explorer** and select the
@@ -244,7 +244,7 @@ project properties in **Solution Explorer** and select the
 Set the Target Framework by selecting an API level in the drop-down
 menu under **Compile using Android version** as shown above.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 To access the Target Framework setting in Visual Studio for Mac,
 right-click the project name and select **Options**; this opens the
@@ -288,7 +288,7 @@ only on devices that are recent enough to support them.
 guide, explains how to add these runtime checks to your code.
 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 To access the Minimum Android version setting in Visual Studio, open
 the project properties in **Solution Explorer** and select the
@@ -301,7 +301,7 @@ application:
 If you select **Use Compile using SDK version**, the Minimum
 Android version will be the same as the Target Framework setting.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 To access the Minimum Android version in Visual Studio for Mac,
 right-click the project name and select **Options**; this opens the
@@ -337,7 +337,7 @@ at *compile time*, while the Target Android version communicates target
 API level information to Android for use at *run time* (when the app is
 installed and running on a device).
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 To access this setting in Visual Studio, open the project properties in
 **Solution Explorer** and select the **Android Manifest** page. In the
@@ -353,7 +353,7 @@ you to use new APIs prior to working through the behavior changes. For
 most developers, we *do not* recommend setting the Target Android
 version to **Use Compile using SDK version**.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 To access this setting in Visual Studio for Mac, right-click the
 project name and select **Options**; this opens the **Project Options**
@@ -465,7 +465,7 @@ level that your app needs to present its optimum experience.
 
 ## API levels and libraries
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 When you create a Xamarin.Android library project (such as a class
 library or a bindings library), you can configure only the Target
@@ -475,7 +475,7 @@ Android version settings are not available. That is because there is no
 
 [![Only the Compile using Android version option is available](android-api-levels-images/vs-library-options-sml.png)](android-api-levels-images/vs-library-options.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 When you create a Xamarin.Android library project, there is no
 **Android Application** page where you can configure the Minimum

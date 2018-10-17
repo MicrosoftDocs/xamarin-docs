@@ -19,7 +19,7 @@ additional languages. All resource types can be qualified, including
 the layout itself._
 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ## Resource qualifier options
 
@@ -157,7 +157,7 @@ For more information about resource types, see
 
 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ## Resource qualifier options
 

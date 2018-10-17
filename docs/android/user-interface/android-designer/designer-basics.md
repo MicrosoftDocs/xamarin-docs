@@ -16,7 +16,7 @@ to launch the Designer, describes the Design Surface, and details how
 to use the Properties pane to edit widget properties._
 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ## Launching the Designer
 
@@ -470,7 +470,7 @@ Surface**).
 
 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ## Launching the Designer
 

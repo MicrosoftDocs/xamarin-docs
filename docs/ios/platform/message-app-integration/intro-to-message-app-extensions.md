@@ -110,7 +110,7 @@ What are the benefits of creating a Custom Sticker Experience?
 
 To creating a Custom Sticker Experience, do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Start Visual Studio for Mac.
 2. Open the solution to add a Message App Extension to. 
@@ -124,7 +124,7 @@ To creating a Custom Sticker Experience, do the following:
 
 	[![](intro-to-message-app-extensions-images/message03.png "Click the Create button")](intro-to-message-app-extensions-images/message03.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Start Visual Studio.
 2. Open the solution to add a Message App Extension.
@@ -150,7 +150,7 @@ The developer can further customize the sticker experience for the user by provi
 
 Do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. In the **Solution Pad**, right-click on the Extension's project name and select **Add** > **New File...** > **iOS | Apple Watch** > **Interface Controller**.
 2. Enter `StickerBrowserViewController` for the **Name** and click the **New** button: 
@@ -158,7 +158,7 @@ Do the following:
 	[![](intro-to-message-app-extensions-images/browser01.png "Enter StickerBrowserViewController for the Name")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. Open the `StickerBrowserViewController.cs` file for editing.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. In the **Solution Explorer**, right-click on the Extension's project name and select **Add** > **New File...** > **iOS | Apple Watch** > **Interface Controller**.
 2. Enter `StickerBrowserViewController` for the **Name** and click the **New** button: 

@@ -27,7 +27,7 @@ For more information about how this works, see
 
 ## How to Specify Supported Architectures
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Typically, you explicitly select an architecture (or architectures)
 when your app is configured for **Release**. When your app is
@@ -43,7 +43,7 @@ to support). Click the **Advanced** button and, under **Supported architectures*
 
 [![Selecting armeabi and armeabi-v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Typically, you explicitly select an architecture (or architectures)
 when your app is configured for **Release**. When your app is

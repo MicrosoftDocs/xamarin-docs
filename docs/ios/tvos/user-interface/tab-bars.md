@@ -53,7 +53,7 @@ Each Category (Tab) in the Tab Bar is represented by a Tab Bar Item (`UITabBarIt
 
 The easiest way to work with Tab Bars in a Xamarin.tvOS app is to add them to the app's UI using the iOS Designer.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 	
 1. Start a new Xamarin.tvOS app and select **tvOS** > **App** > **Tabbed App**: 
 
@@ -78,7 +78,7 @@ The easiest way to work with Tab Bars in a Xamarin.tvOS app is to add them to th
 1. Name any UI controls that you want to expose in C# code.
 1. Save your changes.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 	
 1. Start a new Xamarin.tvOS app and select **tvOS** > **App** > **Tabbed App**: 
 

@@ -14,11 +14,11 @@ _This guide covers how to downgrade NUnit 3.0 to NUnit 2.6.4 using NuGet._
 
 Developers that are writing tests in Visual Studio for Mac or using Xamarin.UITest should be using [NUnit 2.6.4](http://nunit.org/index.php?p=docHome&r=2.6.4) as NUnit 3.0 or higher is not compatible with Visual Studio for Mac or Xamarin.UITest. Attempting to run unit tests in Visual Studio for Mac or Xamarin.UITests with NUnit 3.0 will fail.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 This guide will discuss how to install NUnit 2.6.4 using NuGet for Visual Studio for Mac. These steps will also uninstall NUnit 3.0 if necessary.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 This guide will discuss how to downgrade NUnit 3.0 to NUnit 2.6.4 using NuGet in Visual Studio 2015.
 
@@ -28,7 +28,7 @@ This guide will discuss how to downgrade NUnit 3.0 to NUnit 2.6.4 using NuGet in
 
 This guide assumes that there is an existing solution with a mobile app project and a test project.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ## Installing NUnit 2.6.4 in Visual Studio for Mac
 
@@ -53,7 +53,7 @@ It is possible to confirm that NUnit 2.6.4 has been installed by inspecting the 
 This guide discussed how to downgrade NUnit 3.0 to NUnit 2.6.4 in Visual Studio for Mac using the Package Manager Console.
 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ## Installing NUnit 2.6.4 in Visual Studio
 

@@ -63,7 +63,7 @@ The easiest way to work with Table Views in a Xamarin.tvOS app is to create and 
 
 To get started, do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 	
 1. In Visual Studio for Mac, start a new tvOS app project and select **tvOS** > **App** > **Single View App** and click the **Next** button: 
 
@@ -108,7 +108,7 @@ To get started, do the following:
 	[![](table-views-images/table15.png "The UI layout")](table-views-images/table15.png#lightbox)
 1. Save your Changes to the Storyboard.
 	
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 	
 1. In Visual Studio, start a new tvOS app project and select **tvOS** > **Single View App** and enter a name for your app. Click the **Okay** button to create a new solution: 
 
@@ -159,13 +159,13 @@ To make working with the information that the Table View will display easier and
 
 Take the example of a travel booking app that contains a list of **Cities**, each that contains a unique list of **Attractions** that the user can select. The user will be able to mark an attraction as a *Favorite*, select to get *Directions* to an attraction and *Book a Flight* to a given city.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 To create the Data Model for an **Attraction**, right-click on the Project Name in the **Solution Pad** and select **Add** > **New File...**. Enter `AttractionInformation` for the **Name** and click the **New** button: 
 
 [![](table-views-images/data01.png "Enter AttractionInformation for the Name")](table-views-images/data01.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 To create the Data Model for an **Attraction**, right-click on the Project Name in the **Solution Explorer** and select **Add** > **New Item...**. Select **Class** and enter `AttractionInformation` for the **Name** and click the **Add** button: 
 
@@ -207,13 +207,13 @@ namespace tvTable
 
 This class provides the properties to store the information about a given **Attraction**.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Next, right-click on the Project Name in the **Solution Pad** again and select **Add** > **New File...**. Enter `CityInformation` for the **Name** and click the **New** button: 
 
 [![](table-views-images/data02.png "Enter CityInformation for the Name")](table-views-images/data02.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Next, right-click on the Project Name in the **Solution Explorer** again and select **Add** > **New Item...**. Enter `CityInformation` for the **Name** and click the **Add** button: 
 

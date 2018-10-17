@@ -19,7 +19,7 @@ applications, and publish the archived app *ad hoc* to disk. The
 resulting APK can be sideloaded into Android devices without going
 through an app store.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 In [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive),
 the **Distribution Channel** dialog presented two choices for
@@ -27,7 +27,7 @@ distribution. Select **Ad-Hoc**:
 
 [![Distribution Channel dialog](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 In [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive),
 the **Sign and Distribute...** dialog presented us with two choices for
@@ -43,7 +43,7 @@ distribution. Select **Ad-Hoc** and click **Next**:
 
 ## Create a New Certificate
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 After **Ad-Hoc** is selected, Visual Studio opens the **Signing
 Identity** page of the dialog as shown in the next screenshot. To
@@ -86,7 +86,7 @@ key in the following location:
 For more information about the keystore, see
 [Finding your Keystore's MD5 or SHA1 Signature](~/android/deploy-test/signing/keystore-signature.md).
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 After clicking **Ad-Hoc**, Visual Studio for Mac opens the **Android Signing 
 Identity** dialog as shown in the next screenshot. To publish the .APK, 
@@ -130,7 +130,7 @@ For more information about the keystore, see
 
 ## Sign the APK
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 When **Create** is clicked, a new key store (containing a new
 certificate) will be saved and listed under **Signing Identity** as shown
@@ -169,7 +169,7 @@ app, **MyApp.MyApp.apk**:
 
 [![APK shown in Windows Explorer](images/vs/09-generated-app-vs-sml.png)](images/vs/09-generated-app-vs.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 
 As seen here, a new certificate was added to the key store. To publish

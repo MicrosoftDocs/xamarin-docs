@@ -159,11 +159,11 @@ Implementations of the interface for each platform must then be provided.
 
 On iOS, the web content should be located in the project's root directory or **Resources** directory with build action *BundleResource*, as demonstrated below:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![](webview-images/ios-vs.png "Local Files on iOS")
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![](webview-images/ios-xs.png "Local Files on iOS")
 
@@ -186,11 +186,11 @@ namespace WorkingWithWebview.iOS{
 
 On Android, place HTML, CSS, and images in the Assets folder with build action *AndroidAsset* as demonstrated below:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![](webview-images/android-vs.png "Local Files on Android")
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![](webview-images/android-xs.png "Local Files on Android")
 

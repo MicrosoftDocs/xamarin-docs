@@ -13,7 +13,7 @@ ms.date: 05/03/2018
 
 The user interface of an iOS app is like a storefront – the application typically gets one Window, but it can fill the Window up with as many objects as it needs, and the objects and arrangements can be changed depending on what the app wants to display. The objects in this scenario - the things that the user sees - are called Views. To build a single screen in an application, Views are stacked on top of each other in a Content View Hierarchy, and the hierarchy is managed by a single View Controller. Applications with multiple screens have multiple Content View Hierarchies, each with its own View Controller, and the application places Views in the Window to create a different Content View Hierarchy based on the screen that the user is on.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 The diagram below illustrates the relationships between the Window, Views, Subviews, and View Controller that bring the user interface to the device screen: 
 
@@ -21,7 +21,7 @@ The diagram below illustrates the relationships between the Window, Views, Subvi
 
 These view hierarchies can be constructed using the [Xamarin Designer for iOS](~/ios/user-interface/designer/index.md) in Visual Studio, however it is good to have a fundamental understanding of how to work entirely in code. This article walks through some basic points to get up and running with code-only user interface development.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 The diagram below illustrates the relationships between the Window, Views, Subviews, and View Controller that bring the user interface to the device screen: 
 
@@ -33,7 +33,7 @@ These view hierarchies can be constructed using the [Xamarin Designer for iOS](~
 
 ## Creating a code-only project
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ## iOS blank project template
 
@@ -55,7 +55,7 @@ The Empty Project template adds 4 files to the project:
 1. **Entitlements.plist** – Property list file that contains information about the capabilities and permissions of the application.
 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ## iOS templates
 
@@ -205,11 +205,11 @@ Now that we've seen how to add a controller as the `RootViewController` of the w
 
 Add a new class named `CustomViewController` as shown below:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](ios-code-only-images/customviewcontroller.w157-sml.png "Add a new class named CustomViewController")](ios-code-only-images/customviewcontroller.w157.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](ios-code-only-images/new-file.png "Add a new class named CustomViewController")](ios-code-only-images/new-file.png#lightbox)
 
@@ -582,11 +582,11 @@ Now, when we run the application and tap the submit button, the new view with a 
 
 A [launch screen](~/ios/app-fundamentals/images-icons/launch-screens.md) is displayed when your app starts up as a way to display to your users that it is responsive. Because a launch screen is displayed when your app is loading, it cannot be created in code as the application is still being loaded into memory.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 When you create an iOS Project in Visual Studio, a Launch Screen is provided for you in the form of a .xib file, which can be found in the **Resources** folder inside your project.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 When you create an iOS Project in Visual Studio for Mac, a Launch Screen is provided for you in the form of a Storyboard file.
 
@@ -615,11 +615,11 @@ This static image can be set in the Info.plist file, or as an Asset Catalog (for
 
 ## Summary
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 This article discussed how to develop iOS applications programmatically in Visual Studio. We looked at how to build up a project from an empty project template, discussing how to create and add a root view controller to the window. We then showed how to use controls from UIKit to create a view hierarchy within a controller to develop an application screen. Next we examined how to make the views lay out appropriately in different orientations and we saw how to create a custom view by subclassing `UIView`, as well as how to load the view within a controller. Finally we explored how to add a launch screen to an application.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 This article discussed how to develop iOS applications programmatically in Visual Studio for Mac. We looked at how to build up a project from a Single View template, discussing how to create and add a root view controller to the window. We then showed how to use controls from UIKit to create a view hierarchy within a controller to develop an application screen. Next we examined how to make the views lay out appropriately in different orientations and we saw how to create a custom view by subclassing `UIView`, as well as how to load the view within a controller. Finally we explored how to add a launch screen to an application.
 

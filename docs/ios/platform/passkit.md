@@ -454,7 +454,7 @@ The **Entitlements.plist** file should be included in all recent Xamarin.iOS pro
 
 To set entitlements do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Double-click on the **Entitlements.plist** file in the Solution Pad to open the Entitlements.plist editor:
 
@@ -467,7 +467,7 @@ Under the Wallet section, select the **Enable Wallet** option
 
 The default option is for your app to allow all pass types. However, it is possible to restrict your app and only allow a subset of team pass types. To enable this select the **Allow subset of team pass types** and enter the pass type identifier of the subset that you wish to allow.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Double-click the **Entitlements.plist** file to open the XML source file.
 

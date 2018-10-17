@@ -82,7 +82,7 @@ you specified a package name for the FCM-enabled app. This package name
 also serves as the [*application ID*](./firebase-cloud-messaging.md#fcm-in-action-app-id) that is associated with the [API
 key](firebase-cloud-messaging.md#fcm-in-action-api-key). Configure the app to use this package name:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1.  Open the properties for the **FCMClient** project.
 
@@ -95,7 +95,7 @@ In the following example, the package name is set to `com.xamarin.fcmexample`:
 While you are updating the **Android Manifest**, also check to be sure that the
 `Internet` permission is enabled.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1.  Open the properties for the **FCMClient** project.
 
@@ -120,7 +120,7 @@ Because Firebase Cloud Messaging depends on Google Play Services, the
 NuGet package must be added to the Xamarin.Android project. You will need
 version 29.0.0.2 or later.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1.  In Visual Studio, right-click **References > Manage NuGet Packages ...**.
 
@@ -130,7 +130,7 @@ version 29.0.0.2 or later.
 
     [![Installing Google Play Services Base](remote-notifications-with-fcm-images/02-google-play-services-vs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-vs.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1.  In Visual Studio for Mac, right-click **Packages > Add Packages...**.
 
@@ -166,7 +166,7 @@ To receive messages from FCM, the
 NuGet package must be added to the app project. Without this package, an Android
 application cannot receive messages from FCM servers.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1.  In Visual Studio, right-click **References > Manage NuGet Packages ...**.
 
@@ -176,7 +176,7 @@ application cannot receive messages from FCM servers.
 
     [![Installing Xamarin Firebase Messaging](remote-notifications-with-fcm-images/03-firebase-messaging-vs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-vs.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1.  In Visual Studio for Mac, right-click **Packages > Add Packages...**.
 
@@ -209,7 +209,7 @@ observe transactions with FMS.
 The next step is to add the **google-services.json** file to the root
 directory of your project:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1.  Copy **google-services.json** to the project folder.
 
@@ -227,7 +227,7 @@ directory of your project:
     > [!NOTE] 
     > If the **GoogleServicesJson** build action is not shown, save and close the solution, then reopen it.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1.  Copy **google-services.json** to the project folder.
 

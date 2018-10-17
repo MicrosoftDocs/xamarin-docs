@@ -21,14 +21,14 @@ Wireless deployment is available as a feature in both Visual Studio for Mac and 
 
 To use wireless deployment, you must have the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 - macOS 10.12.4
 - The latest version of Visual Studio for Mac
 - Xcode 9.0 or later
 - A device with iOS 11.0 or tvOS 11.0 and later
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 - The latest version of Visual Studio
 - A device with iOS 11.0 or tvOS 11.0 and later

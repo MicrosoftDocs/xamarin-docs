@@ -93,7 +93,7 @@ Once the iTunes Connect record has been created, you will be able to upload new 
 
 First, build your [final distributable](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) in the IDE, then [submit your app to Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) through either the Application Loader, or the archive function in Xcode.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ###  Create an Archive
 
@@ -121,7 +121,7 @@ First, build your [final distributable](~/ios/deploy-test/app-distribution/app-s
 
  Refer to the [Submitting your App to Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) section for more information on these steps.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ###  Building your final distributable
  As the Xamarin plugin for Visual Studio does not support archiving Xamarin.iOS apps for publishing to the App Store, there are two options for publishing an iOS application from Visual Studio. These are:

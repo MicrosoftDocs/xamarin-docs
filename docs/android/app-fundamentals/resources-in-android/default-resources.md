@@ -17,7 +17,7 @@ the most common type of resource to create. They're organized into
 sub-directories of the **Resources** directory according to their
 resource type:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![Default resource files](default-resources-images/01-resource-files-vs.png)
 
@@ -76,7 +76,7 @@ A complete list of resource types is provided below:
    time by the application.
 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![Default resource files](default-resources-images/01-resource-files-xs.png)
 

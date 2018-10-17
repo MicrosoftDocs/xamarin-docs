@@ -20,11 +20,11 @@ To use access SQLite via ADO.NET you must add `System.Data` and `Mono.Data.Sqlit
 references to your iOS project, as shown here
 (for samples in Visual Studio for Mac and Visual Studio):
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
  ![](using-adonet-images/image4.png "Assembly References in Visual Studio for Mac")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
   ![](using-adonet-images/image6.png "Assembly References in Visual Studio")
 

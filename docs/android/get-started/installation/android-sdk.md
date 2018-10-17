@@ -29,7 +29,7 @@ development with .NET** workload) helps you download the latest Android
 components that you need for developing your Xamarin.Android app. It
 replaces Google's standalone SDK Manager, which has been deprecated.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ## Requirements
 
@@ -198,7 +198,7 @@ click **Microsoft (Recommended)**. This restores the list of packages
 and tools to the default selection.
 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ## Requirements
 

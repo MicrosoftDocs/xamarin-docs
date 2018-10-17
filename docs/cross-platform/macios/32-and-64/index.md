@@ -37,7 +37,7 @@ use the [Unified API](~/cross-platform/macios/unified/index.md)
 
 For Xamarin.iOS mobile applications that have been converted to the Unified API, developers must manually update the build settings to target 64-bit:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. In the **Solution Pad**, double-click the app's project to open the **Project Options** window.
 2. Select **iOS Build**.
@@ -52,7 +52,7 @@ For Xamarin.iOS mobile applications that have been converted to the Unified API,
 5. Click **OK**.
 6. Perform a clean build.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. In the **Solution Explorer**, right-click the app's project and select **Properties**.
 2. Select **iOS Build**.

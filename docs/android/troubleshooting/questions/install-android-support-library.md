@@ -13,7 +13,7 @@ ms.date: 02/16/2018
 
 ## Example steps for Xamarin.Android.Support.v4 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Download the desired Xamarin.Android.Support NuGet package (for
 example by installing it with the NuGet package manager).
@@ -87,7 +87,7 @@ property string 'Version' = string('23.4.0.0')}
 property string 'Version' = string('23.4.0.0')}
 ```
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Download the desired Xamarin.Android.Support NuGet package (for
 example by installing it with the NuGet package manager).

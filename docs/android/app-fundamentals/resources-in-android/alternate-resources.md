@@ -31,11 +31,11 @@ by a dash. For example, the screenshot below shows a simple project
 that has alternate resources for various configurations such as locale,
 screen density, screen size, and orientation:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![Alternate resources](alternate-resources-images/alternate-resources-vs.png)
  
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![Alternate resources](alternate-resources-images/alternate-resources-xs.png)
  

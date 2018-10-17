@@ -16,7 +16,7 @@ qualifiers. For example, creating a version of a layout that is only
 used when the device is in landscape mode and a layout version that is
 only for portrait mode._
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ## Creating alternative layouts
 
@@ -194,7 +194,7 @@ were applied in the **large-land** layout.
 
 
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ## Creating alternative layouts
 

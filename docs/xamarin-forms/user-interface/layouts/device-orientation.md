@@ -23,7 +23,7 @@ When using Xamarin.Forms, the supported method of controlling device orientation
 
 On iOS, device orientation is configured for applications using the **Info.plist** file. This file will include orientation settings for iPhone & iPod, as well as settings for iPad if the app includes it as a target. The following are instructions specific to your IDE. Use the IDE options at the top of this document to select which instructions you'd like to see:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 In Visual Studio, open the iOS project and open **Info.plist**. The file will open into a configuration panel, starting with the iPhone Deployment Info tab:
 
@@ -33,7 +33,7 @@ To configure iPad orientation, select the **iPad Deployment Info** tab at the to
 
 ![Supported Device Orientations in Visual Studio](device-orientation-images/orientation-vs-ipad.png)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 In Visual Studio for Mac, open the iOS project and open **Info.plist**. Under the **Application** tab, sections will be available to set orientation:
 

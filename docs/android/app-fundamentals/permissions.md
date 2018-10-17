@@ -73,7 +73,7 @@ Permissions are added to the  **AndroidManifest.xml** with the `uses-permission`
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 It is possible to declare the permissions using the tool support built into Visual Studio:
 
@@ -89,7 +89,7 @@ It is possible to declare the permissions using the tool support built into Visu
 
     [![Example CAMERA permissions selected](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 It is possible to declare the permissions using the tool support built into Visual Studio for Mac:
 

@@ -29,7 +29,7 @@ A list of popular Xamarin [plugins and libraries](https://github.com/xamarin/Xam
 
 The 15.6 release of Visual Studio and 7.4 release of Visual Studio for Mac no longer support components in your project. 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 If you load a project into Visual Studio, the following dialog is displayed, explaining that you must remove any components from your project manually:
 
@@ -66,7 +66,7 @@ To remove a component from your project:
 
 6. Repeat the steps above for each project in your solution.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 If you load a project into Visual Studio for Mac, the following dialog is displayed, explaining that you must remove any components from your project manually:
 

@@ -32,7 +32,7 @@ for various devices and orientations.
 
 In iOS 8 (and later), the developer can create a special Unified Storyboard to provide the Launch Screen instead of using one or more static launch images. When creating a launch Storyboard in the iOS Designer, use Size Classes and Auto Layout to define different layouts for different display environments. By using Size Classes and Auto Layout, the developer can create a single launch screen that looks good on all devices and display environments.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. In Visual Studio for Mac, create a new project by selecting **File > New
    Solution** and then choosing **Single View App**: 
@@ -134,7 +134,7 @@ In iOS 8 (and later), the developer can create a special Unified Storyboard to p
 13. Save the changes to the Storyboard. Run the app on a simulator or
     device, and the Launch Screen will be visible as the app is launching.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Create a new project. In Visual Studio, select **File > New > Project > Visual C# > iPhone & iPad > iOS App (Xamarin)**:
 
@@ -268,7 +268,7 @@ guide.
 
 ## Migrating to Launch Screen Storyboards
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 When updating an existing app to use Storyboards for its Launch Screens, right click the **Project Name** in the **Solution Explorer** and select **Add** > **New File...**. Select **iOS** > **Launch Screen** and click the **New** button:
 
@@ -286,7 +286,7 @@ To use the new Storyboard as a launch screen, do the following:
 
 	![](launch-screens-images/storyboard08.png "Setting the launch screen to the storyboard")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Right-click on the project name in the **Solution Explorer** and select **Add** > **New File...**: 
 

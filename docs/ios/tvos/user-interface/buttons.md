@@ -56,7 +56,7 @@ Apple has the following suggestions when creating the titles for your Buttons:
 
 The easiest way to work with buttons in a Xamarin.tvOS app is to add them to the app's UI using the Xamarin Designer for iOS.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
@@ -78,7 +78,7 @@ The easiest way to work with buttons in a Xamarin.tvOS app is to add them to the
 1. Save the changes to all files.
 
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Button** from the **Library** and drop it on the View: 

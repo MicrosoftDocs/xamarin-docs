@@ -127,7 +127,7 @@ You *must* provide a test JSON payload when
 	testing notification mode in the iOS Simulator. Set the path in the
 	**Custom Execution Arguments** window in Visual Studio for Mac.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Visual Studio for Mac will display additional options when a
 	watch extension is set as the **Startup project**.
@@ -142,7 +142,7 @@ This opens the **Execution Arguments** window which contains a **WatchKit**
 	
 [![](notifications-images/runwith-execargs-sml.png "Select Notification Payload Default")](notifications-images/runwith-execargs.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 To set the test notification payload in Visual Studio
  	right-click on the watch extension to edit

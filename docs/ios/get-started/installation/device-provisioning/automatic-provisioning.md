@@ -15,12 +15,12 @@ _Once Xamarin.iOS has been successfully installed, the next step in iOS developm
 
 ## Requirements
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 - Visual Studio for Mac 7.3 or greater
 - Xcode 9 or greater
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 - Visual Studio 2017 Version 15.7 (or greater)
 
@@ -48,7 +48,7 @@ Before you start the automatic signing process, you should ensure that you have 
 
 To automatically sign your app for deployment on an iOS device, do the following:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 1. Open an iOS project in Visual Studio for Mac.
 
@@ -66,7 +66,7 @@ To automatically sign your app for deployment on an iOS device, do the following
 
     If the automatic signing fails the **Automatic signing pad** will display the reason for the error.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 1. Pair Visual Studio 2017 to a Mac as described in the [Pair to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) guide.
 

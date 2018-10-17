@@ -28,7 +28,7 @@ Apple has the following suggestions when using a Page Control:
 
 The easiest way to work with Page Controls in a Xamarin.tvOS app is to add them to the app's UI using the iOS Designer.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 	
 1. In the **Solution Pad**, double-click the `Main.storyboard` file and open it for editing.
@@ -45,7 +45,7 @@ The easiest way to work with Page Controls in a Xamarin.tvOS app is to add them 
 1. Save your changes.
 	
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 	
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.

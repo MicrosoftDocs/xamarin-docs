@@ -42,7 +42,7 @@ Resources offer several advantages to an Android application:
 When a new Xamarin.Android project is started, a special directory called
 Resources is created, along with some subdirectories:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![Resources folder and contents](images/resources-folder-vs.png)
 
@@ -50,7 +50,7 @@ In the image above, the application resources are organized according
 to their type into these subdirectories: images will go in the
 **drawable** directory; views go in the **layout** subdirectory, etc.
  
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![Resources folder and contents](images/resources-folder-xs.png)
 

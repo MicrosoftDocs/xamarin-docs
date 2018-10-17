@@ -166,7 +166,7 @@ application.
 
 ### Publishing to Google Play
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Xamarin Android 7.0 introduces an integrated workflow for publishing
 apps to Google Play from Visual Studio. If you are using a version of
@@ -217,7 +217,7 @@ Play Developer account:
 The next section explains how to create a new Google API project and generate the
 needed _Client ID_ and _Client secret_.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Visual Studio for Mac has an integrated workflow for publishing
 apps to Google Play. If you are using a version of Xamarin Studio
@@ -313,7 +313,7 @@ and paste into the **Sign and Distribute** dialog in the next step.
 
 #### Register Google API Access
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Use the Client ID and Client secret to complete the **Google Play API Account** dialog in
 Visual Studio for Mac. It is possible to give the account a description &ndash; this makes
@@ -390,7 +390,7 @@ dialog for subsequent APK updates.  For more information, see
 To resolve this error, rebuild the app with a different version number
 and resubmit it to Google Play via the **Distribution Channel** dialog.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 Use the Client ID and Client secret to complete the **Google Play API Account** dialog in
 Visual Studio for Mac. It is possible to give the account a description &ndash; this makes

@@ -36,11 +36,11 @@ A watch app consists of three projects:
 The [Watch Kit Catalog sample](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 	solution looks like this in Xamarin.Studio:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![](installation-images/catalog-solution.png "The solution in Visual Studio")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![](installation-images/catalog-solution-vs.png "The solution in Visual Studio")
 
@@ -94,11 +94,11 @@ Double-click on the watch app's **Interface.storyboard** to edit
 	and UI controls onto the storyboard from the **Toolbox** and
 	configure them using the **Properties** pad:
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![](installation-images/iosdesigner-sml.png "The storyboard in the Designer")](installation-images/iosdesigner.png#lightbox)
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![](installation-images/iosdesigner-sml-vs.png "The storyboard in the Designer")](installation-images/iosdesigner-vs.png#lightbox)
 
@@ -108,11 +108,11 @@ You should give each new interface controller a **Class**
 	by selecting it and then entering the name in the **Properties**
 	pad (this will create the required C# codebehind files automatically):
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![](installation-images/iosdesigner-classname.png "Give each new interface controller a Class")
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![](installation-images/iosdesigner-classname-vs.png "Give each new interface controller a Class")
 
@@ -124,13 +124,13 @@ Create segues by **Ctrl + dragging** from a button, table
 
 ### Using Xcode on the Mac
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 You can continue to use Xcode to build your user interface
 	by right-clicking on the Interface.storyboard file
 	and selecting **Open With > Xcode Interface Builder**:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Visual Studio users can also use Xcode to build their user interface
 	by switching over to use the Mac Build Host directly.

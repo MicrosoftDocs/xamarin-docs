@@ -75,11 +75,11 @@ The Calabash assembly makes uses of non-public Apple API's which will cause apps
 
 The following screenshot shows the `ENABLE_TEST_CLOUD` compiler variable set for Debug builds:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![](uitest-and-test-cloud-images/12-compiler-directive-vs.png "Build Options")
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![](uitest-and-test-cloud-images/11-compiler-directive-xs.png "Compiler Options")
 
@@ -97,9 +97,9 @@ For information about writing UITests, see [UITest documentation](/appcenter/tes
 
 Before any UITests can be written, the Xamarin.Forms application user interface must be scriptable. Ensure that all controls in the user interface have a `AutomationId` so that they can be referenced in test code.
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ### Adding a UITest Project to a New Solution
 
@@ -128,7 +128,7 @@ The shorter form `app.Query("MyButton")` also works.
 
 ### Adding a UITest Project to an Existing Solution
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 Visual Studio has a template to help add a Xamarin.UITest project to an existing Xamarin.Forms solution:
 
@@ -151,7 +151,7 @@ Visual Studio has a template to help add a Xamarin.UITest project to an existing
 
     This will allow the **NUnitTestAdapter** to run the UITests for the Android app from Visual Studio.
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 It is possible to add a new Xamarin.UITest project to an existing solution manually:
 

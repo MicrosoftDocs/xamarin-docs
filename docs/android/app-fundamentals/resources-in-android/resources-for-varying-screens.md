@@ -87,11 +87,11 @@ pixelated.
 
 Supported screen sixes are declared in the **Properites/AndroidManifest.xml** file of the solution:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 [![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 [![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
 
@@ -132,11 +132,11 @@ higher should be using these newer qualifiers.
 For example, if a layout required a minimum 700 dp of screen width, the
 alternate layout would go in a folder **layout-sw700dp**:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![Layout folder for 700 dp screen width](resources-for-varying-screens-images/03-layout-sw700dp-vs.png)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![Layout folder for 700 dp screen width](resources-for-varying-screens-images/03-layout-sw700dp-xs.png)
 
@@ -160,11 +160,11 @@ various screen sizes that are available in most devices. For example,
 in the image below, there are alternate resources for the four
 different screen sizes:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![Alternate resources for four screen sizes](resources-for-varying-screens-images/04-layout-large-vs.png)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![Alternate resources for four screen sizes](resources-for-varying-screens-images/04-layout-large-xs.png)
 
@@ -187,11 +187,11 @@ For applications that will span the old and the new API levels, it may
 be necessary to create alternate resources using both sets of
 qualifiers as shown in the following screenshot:
 
-# [Visual Studio](#tab/vswin)
+# [Visual Studio](#tab/windows)
 
 ![Alternate resources with both qualifiers](resources-for-varying-screens-images/05-both-qualifiers-vs.png)
 
-# [Visual Studio for Mac](#tab/vsmac)
+# [Visual Studio for Mac](#tab/macos)
 
 ![Alternate resources with both qualifiers](resources-for-varying-screens-images/05-both-qualifiers-xs.png)
 
