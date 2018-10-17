@@ -73,7 +73,7 @@ A complete list of resource types is provided below:
 
 -  **xml** &ndash; XML files that are similar in function to the .NET
    configuration files. These are arbitrary XML that can be read at run
-   time by the application
+   time by the application.
 
 
 # [Visual Studio for Mac](#tab/vsmac)
@@ -106,7 +106,8 @@ A complete list of resource types is provided below:
 -  **font** &ndash; Starting in API level 26, it is possible to embed
    fonts as a resource in an Android application. The Support Library
    26 will backport fonts to API level 14. Embedding fonts allows
-   applications to
+   applications to load custom fonts directly from XML layouts without
+   needing to import them as assets before use.
 
 -  **mipmap** &ndash; Drawable resources are a general
    concept for graphics that can be compiled into the application and
