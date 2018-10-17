@@ -157,6 +157,7 @@
 #### [Setting a Picker's ItemsSource Property](user-interface/picker/populating-itemssource.md)
 #### [Adding Data to a Picker's Items Collection](user-interface/picker/populating-items.md)
 ### [Slider](user-interface/slider.md)
+### [Stepper](user-interface/stepper.md)
 ### [Styles](user-interface/styles/index.md)
 #### [Styling Xamarin.Forms Apps using XAML Styles](user-interface/styles/xaml/index.md)
 ##### [Introduction](user-interface/styles/xaml/introduction.md)

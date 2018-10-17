@@ -39,8 +39,8 @@ The `Slider` also defines several properties that affect its appearance:
 
 - [`MinimumTrackColor`](xref:Xamarin.Forms.Slider.MinimumTrackColorProperty) is the bar color on the left side of the thumb.
 - [`MaximumTrackColor`](xref:Xamarin.Forms.Slider.MaximumTrackColorProperty) is the bar color on the right side of the thumb.
-- [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) is the thumb color. 
-- [`ThumbImage`](xref:Xamarin.Forms.Slider.ThumbImageProperty) is the image to use for the thumb, of type [`FileImageSource`](xref:Xamarin.Forms.FileImageSource). 
+- [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) is the thumb color.
+- [`ThumbImage`](xref:Xamarin.Forms.Slider.ThumbImageProperty) is the image to use for the thumb, of type [`FileImageSource`](xref:Xamarin.Forms.FileImageSource).
 
 > [!NOTE]
 > The `ThumbColor` and `ThumbImage` properties are mutually exclusive. If both properties are set, the `ThumbImage` property will take precedence.
@@ -104,7 +104,7 @@ Here's the program running on iOS, Android, and Universal Windows Platform (UWP)
 
 [![Basic Slider Code](slider-images/BasicSliderCode.png "Basic Slider Code")](slider-images/BasicSliderCode-Large.png#lightbox)
 
-The second `Label` displays the text "(uninitialized)" until the `Slider` is manipulated, which cases the first `ValueChanged` event to be fired. Notice that the number of decimal places that are displayed is different for the three platforms. These differences are related to the platform implementations of the `Slider` and are discussed later in this article in the section [Platform implementation differences](#implementations).
+The second `Label` displays the text "(uninitialized)" until the `Slider` is manipulated, which causes the first `ValueChanged` event to be fired. Notice that the number of decimal places that are displayed is different for the three platforms. These differences are related to the platform implementations of the `Slider` and are discussed later in this article in the section [Platform implementation differences](#implementations).
 
 ### Creating a Slider in XAML
 
@@ -223,7 +223,7 @@ Slider slider = new Slider
 };
 ```
 
-Setting `Maximum` to 20 is not a problem because it is greater than the default `Minimum` setting of 0. When `Minimum` is set, the value is less than the `Maximum` value of 20.
+Setting `Maximum` to 20 is not a problem because it is greater than the default `Minimum` value of 0. When `Minimum` is set, the value is less than the `Maximum` value of 20.
 
 The same problem exists in XAML. Set the properties in an order that ensures that `Maximum` is always greater than `Minimum`:
 

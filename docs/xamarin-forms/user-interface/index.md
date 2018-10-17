@@ -6,7 +6,7 @@ ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/16/2018
+ms.date: 10/17/2018
 ---
 
 # Xamarin.Forms User Interface Views
@@ -68,6 +68,10 @@ The [`Picker`](xref:Xamarin.Forms.Picker) view is a control for selecting a text
 ## [Slider](slider.md)
 
 The `Slider` allows a user to select a numeric value from a continuous range.
+
+## [Stepper](stepper.md)
+
+The `Stepper` allows a user to select a numeric value from a range of values. It consists of two buttons labeled with minus and plus signs. Manipulating the two buttons changes the selected value incrementally.
 
 ## [Styles](styles/index.md)
 
