@@ -24,7 +24,6 @@ If you'd like to build an app using native UI technologies (like Android XML or 
 
 - [Android Quick Start](~/android/get-started/hello-android/hello-android-quickstart.md)
 - [iOS Quick Start](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
-- [Getting Started with Mac](~/mac/get-started/hello-mac.md)
 
 ## Getting Started with Mobile Development
 
