@@ -539,7 +539,7 @@ view `Intent` information when the app is launched from a notification:
 
 [![Log Token button added to app screen](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png#lightbox)
 
-### Log tokes
+### Log tokens
 
 The code added in this step is intended only for demonstration purposes
 &ndash; a production client app would have no need to log registration
@@ -564,8 +564,8 @@ logTokenButton.Click += delegate {
 };
 ```
 
-This code logs the current token to the output window when the **Log
-Token** button is tapped.
+This code logs the current token to the output window when the **Log Token**
+button is tapped.
 
 ### Handle notification intents
 
