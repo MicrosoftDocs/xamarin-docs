@@ -17,13 +17,6 @@ Images are a crucial part of application navigation, usability, and branding. Xa
 
 Platform-specific images are also required for icons and splash screens; these need to be configured on a per-platform basis.
 
-This document discusses the following topics:
-
-- [ **Local images**](#local-images) - displaying images shipped with the application, including resolving native resolutions like iOS Retina, Android or UWP high-DPI versions of an image.
-- [ **Embedded images**](#embedded-images) - displaying images embedded as an assembly resource.
-- [ **Downloaded images**](#downloading-images) - downloading and displaying images.
-- [ **Icons and splash screens**](#icons-and-splash-screens) - platform-specific icons and start-up images.
-
 ## Displaying Images
 
 Xamarin.Forms uses the [`Image`](xref:Xamarin.Forms.Image) view to display images on a page. It has two important properties:
@@ -48,7 +41,9 @@ Images can be loaded from a [local file](#Local_Images), an [embedded resource](
 
 ## Local Images
 
-Image files can be added to each application project and referenced from Xamarin.Forms shared code. To use a single image across all apps, *the same filename must be used on every platform*, and it should be a valid Android resource name (ie. only lowercase letters, numerals, the underscore, and the period are allowed).
+Image files can be added to each application project and referenced from Xamarin.Forms shared code. This method of distributing images is required when images are platform-specific, such as when using different resolutions on different platforms, or slightly different designs.
+
+To use a single image across all apps, *the same filename must be used on every platform*, and it should be a valid Android resource name (ie. only lowercase letters, numerals, the underscore, and the period are allowed).
 
 - **iOS** - The preferred way to manage and support images since iOS 9 is to use **Asset Catalog Image Sets**, which should contain all of the versions of an image that are necessary to support various devices and scale factors for an application. For more information, see [Adding Images to an Asset Catalog Image Set](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 - **Android** - Place images in the  **Resources/drawable** directory with **Build Action: AndroidResource**. High- and low-DPI versions of an image can also be supplied (in appropriately named **Resources** subdirectories such as **drawable-ldpi**, **drawable-hdpi**, and **drawable-xhdpi**).
@@ -111,7 +106,7 @@ Some controls have properties that display an image, such as:
 
 ## Embedded Images
 
-Embedded images are also shipped with an application (like local images) but instead of having a copy of the image in each application's file structure the image file is embedded in the assembly as a resource. This method of distributing images is particularly suited to creating components, as the image is bundled with the code.
+Embedded images are also shipped with an application (like local images) but instead of having a copy of the image in each application's file structure the image file is embedded in the assembly as a resource. This method of distributing images is recommended when identical images are used on each platform, and is particularly suited to creating components, as the image is bundled with the code.
 
 To embed an image in a project, right-click to add new items and select the image/s you wish to add. By default the image will have **Build Action: None**; this needs to be set to **Build Action: EmbeddedResource**.
 
