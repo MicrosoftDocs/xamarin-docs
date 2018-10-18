@@ -59,17 +59,13 @@ It's usually best to send back all of the information from the **Copy Informatio
 
 Open the Android SDK Manager, and take a screenshot of the top **Tools** section.
 
-![](https://kb.xamarin.com/customer/portal/attachments/337323 "Screenshot of the Android SDK Manager > Tools folder")
-
 #### Visual Studio for Mac
 
 **Tools > Open Android SDK Manager**
 
 #### Visual Studio
 
-Select the SDK Manager toolbar icon:
-
-![](https://kb.xamarin.com/customer/portal/attachments/420238 "Start Android SDK Manager toolbar icon in Visual Studio")
+**Tools > Android > Open Android SDK Manager...**
 
 ## <a id="ide-and-installer-logs" name="ide-and-installer-logs" />IDE and installer logs
 
@@ -139,21 +135,13 @@ These are the logs from the `XamarinInstaller.dmg` installer.
 
 1.  Enable [diagnostic MSBuild output](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output).
 
-2.  For iOS apps, also enable **verbose mtouch output** by adding `-v -v -v -v` under **Project Properties > iOS Build > General [tab] > Additional Options > Additional mtouch arguments**.
-
-    **Visual Studio (Windows)**
-
-    [![](https://kb.xamarin.com/customer/portal/attachments/337319 "Enter four dash v into the additional mtouch arguments input field")](https://kb.xamarin.com/customer/portal/attachments/337319)
-
-    **Visual Studio for Mac**
-
-    [![](https://kb.xamarin.com/customer/portal/attachments/337316 "Enter four dash v into the additional mtouch arguments input field")](https://kb.xamarin.com/customer/portal/attachments/337316)
+2.  For iOS apps, also enable **verbose mtouch output** by adding `-v -v -v -v` under **Project Properties > iOS Build > General (tab) > Additional Options > Additional mtouch arguments**.
 
 3.  Clean and rebuild the project.
 
 4.  Copy and paste the build output from the IDE into a text file.
      - Visual Studio (Windows): **View > Output > Show output from: Build**
-     - Visual Studio for Mac: **View > Pads > Errors > Build Output [tab]**
+     - Visual Studio for Mac: **View > Pads > Errors > Build Output (tab)**
 
 ## <a id="debug-logs-for-xamarin-apps" name="debug-logs-for-xamarin-apps" />Debug logs for Xamarin.Android and Xamarin.iOS apps
 
@@ -161,16 +149,11 @@ These are the logs from the `XamarinInstaller.dmg` installer.
 
 **View > Pads > Application Output**
 
-![](https://kb.xamarin.com/customer/portal/attachments/337290 "Application Output pad icon in Visual Studio for Mac")
-
-
 (Note that this menu item will only appear after the app has been launched.)
 
 ### Visual Studio
 
 **View > Output > Show output from: Debug**
-
-![](https://kb.xamarin.com/customer/portal/attachments/337292 "Output pad showing Debug option in Visual Studio")
 
 ### <a id="adb-logcat" name="adb-logcat" />Android [`adb`](http://developer.android.com/tools/help/adb.html) logcat logs
 
@@ -180,25 +163,23 @@ See also the [Android Debug Log](~/android/deploy-test/debugging/android-debug-l
 
 #### Visual Studio
 
-1.  **Tools > Android > Start Android Adb Command Prompt**
-2.  Clean the log: `adb logcat -c`
-3.  Reproduce the issue.
-4.  Output the log: `adb logcat -vtime -d > "%USERPROFILE%\Desktop\android_logcat.txt"`
+1. **Tools > Android > Start Android Adb Command Prompt**
+2. Clean the log: `adb logcat -c`
+3. Reproduce the issue.
+4. Output the log: `adb logcat -vtime -d > "%USERPROFILE%\Desktop\android_logcat.txt"`
 
 #### Visual Studio for Mac
 
-1.  **Tools > Open Android SDK Command Prompt**
-2.  Clean the log: `adb logcat -c`
-3.  Reproduce the issue.
-4.  Output the log: `adb logcat -vtime -d > ~/Desktop/android_logcat.txt`
+1. **Tools > Open Android SDK Command Prompt**
+2. Clean the log: `adb logcat -c`
+3. Reproduce the issue.
+4. Output the log: `adb logcat -vtime -d > ~/Desktop/android_logcat.txt`
 
 ### <a id="ios-simulator-logs" name="ios-simulator-logs" />iOS simulator logs (on Mac)
 
-*   To access the system log, select **Debug > Open System Log...** in the iOS Simulator app.
+* To access the system log, select **Debug > Open System Log...** in the iOS Simulator app.
 
-	![](https://kb.xamarin.com/customer/portal/attachments/382617 "Debug menu showing the Open System Log option")
-
-*   To view crash reports from the simulator, open Console.app and navigate to `~/Library/Logs > DiagnosticReports`.
+* To view crash reports from the simulator, open Console.app and navigate to `~/Library/Logs > DiagnosticReports`.
 
 ### <a id="ios-device-logs" name="ios-device-logs" />iOS device logs (on Mac)
 
@@ -206,12 +187,12 @@ See also the [Android Debug Log](~/android/deploy-test/debugging/android-debug-l
 
 **View > Pads > iOS Device Log**
 
-#### Xcode 
+#### Xcode
 
 **Window > Devices > ${DeviceName}**
 
-Crash reports are available under the **View Device Logs** button. The system log for the device appears at the bottom of the window under the disclosure arrow <img alt="Disclosure arrow" src="https://kb.xamarin.com/customer/portal/attachments/382618" style="width: 15px; height: 12px;" />.
+Crash reports are available under the **View Device Logs** button. The system log for the device appears at the bottom of the window under the disclosure arrow.
 
 #### Xcode 5
 
-**Window > Organizer > Devices [tab] > ${DeviceName}**
+**Window > Organizer > Devices (tab) > ${DeviceName}**
