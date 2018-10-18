@@ -133,11 +133,11 @@ and alias name from when the release keystore file was created.
 When the Visual Studio **Distribute**
 wizard is used to sign a Xamarin.Android app, the resulting keystore resides in the following location:
 
-**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\alias\\alias.keystore**
+**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\*alias*\\*alias*.keystore**
 
 For example, if you followed the steps in [Create a New Certificate](~/android/deploy-test/signing/index.md#newcertvs) to create a new signing key, the resulting example keystore resides in the following location:
 
-**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\chimp\\chimp.keystore**
+**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
 For more information about signing a Xamarin.Android app, see
 [Signing the Android Application Package](~/android/deploy-test/signing/index.md).
