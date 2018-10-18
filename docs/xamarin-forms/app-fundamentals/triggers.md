@@ -257,7 +257,6 @@ This can be done with an `IValueConverter`. The converter
     code below transforms the `Text.Length` binding into a
     `bool` that indicates whether a field is empty or not:
 
-
 ```csharp
 public class MultiTriggerConverter : IValueConverter
 {
@@ -293,7 +292,7 @@ The XAML is shown below. Note the following differences
 
 * The button has `IsEnabled="false"` set by default.
 * The multi trigger conditions use the converter to
-    turn the `Text.Length` value into a boolean.
+    turn the `Text.Length` value into a `boolean`.
 * When all the conditions are `true`, the setter
     makes the button's `IsEnabled` property `true`.
 
@@ -329,7 +328,6 @@ These screenshots show the difference between the two multi
     just one `Entry` is enough to enable the **Save** button.
     In the bottom part of the screens, the **Login** button
     remains inactive until both fields contain data.
-
 
 ![](triggers-images/multi-requireall.png "MultiTrigger Examples")
 

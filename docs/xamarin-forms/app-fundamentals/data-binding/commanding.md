@@ -17,7 +17,7 @@ The commanding interface provides an alternative approach to implementing comman
 
 To allow a data binding between a `Button` and a ViewModel, the `Button` defines two properties:
 
-- [`Command`](xref:Xamarin.Forms.Button.Command) of type <xref:System.Windows.Input.ICommand>
+- [`Command`](xref:Xamarin.Forms.Button.Command) of type [`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand)
 - [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter) of type `Object`
 
 To use the command interface, you define a data binding that targets the `Command` property of the `Button` where the source is a property in the ViewModel of type `ICommand`. The ViewModel contains code associated with that `ICommand` property that is executed when the button is clicked. You can set `CommandParameter` to arbitrary data to distinguish between multiple buttons if they are all bound to the same `ICommand` property in the ViewModel.
@@ -34,7 +34,7 @@ All these commands can be handled within a ViewModel in a manner that doesn't de
 
 ## The ICommand Interface
 
-The <xref:System.Windows.Input.ICommand>  interface is not part of Xamarin.Forms. It is defined instead in the [System.Windows.Input](xref:System.Windows.Input) namespace, and consists of two methods and one event:
+The [`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand) interface is not part of Xamarin.Forms. It is defined instead in the [System.Windows.Input](xref:System.Windows.Input) namespace, and consists of two methods and one event:
 
 ```csharp
 public interface ICommand
@@ -71,7 +71,7 @@ The `Button` also attaches a handler on the `CanExecuteChanged` event of `IComma
 
 ## The Command Class
 
-When your ViewModel defines a propety of type `ICommand`, the ViewModel must also contain or reference a class that implements the `ICommand` interface. This class must contain or reference the `Execute` and `CanExecute` methods, and fire the `CanExecuteChanged` event whenever the `CanExecute` method might return a different value.
+When your ViewModel defines a property of type `ICommand`, the ViewModel must also contain or reference a class that implements the `ICommand` interface. This class must contain or reference the `Execute` and `CanExecute` methods, and fire the `CanExecuteChanged` event whenever the `CanExecute` method might return a different value.
 
 You can write such a class yourself, or you can use a class that someone else has written. Because `ICommand` is part of Microsoft Windows, it has been used for years with Windows MVVM applications. Using a Windows class that implements `ICommand` allows you to share your ViewModels between Windows applications and Xamarin.Forms applications.
 
@@ -280,7 +280,7 @@ The program does not have any facility for editing existing entries, and does no
 
 All the logic for the **New**, **Submit**, and **Cancel** buttons is handled in `PersonCollectionViewModel` through definitions of the `NewCommand`, `SubmitCommand`, and `CancelCommand` properties. The constructor of the `PersonCollectionViewModel` sets these three properties to objects of type `Command`.  
 
-A [constructor](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) of the `Command` class allows you to pass arguments of type `Action` and `Func<bool>` corresponding to the `Execute` and `CanExecute` methods. It's easiest to define these actions and functions as lamda functions right in the `Command` constructor. Here is the definition of the `Command` object for the `NewCommand` property:
+A [constructor](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) of the `Command` class allows you to pass arguments of type `Action` and `Func<bool>` corresponding to the `Execute` and `CanExecute` methods. It's easiest to define these actions and functions as lambda functions right in the `Command` constructor. Here is the definition of the `Command` object for the `NewCommand` property:
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -373,7 +373,7 @@ The `canExecute` function for `SubmitCommand` is called every time there's a pro
 
 The `execute` function for **Submit** removes the property-changed handler from the `PersonViewModel`, adds the object to the `Persons` collection, and returns everything to initial conditions.
 
-The `execute` function for the **Cancel** button does everything that the **Submit** button does execept add the object to the collection:
+The `execute` function for the **Cancel** button does everything that the **Submit** button does except add the object to the collection:
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -688,7 +688,6 @@ If you'd like to use the commanding interface with views that don't support it, 
 
 Commanding is convenient for implementing navigation menus, such as that in the [**Data Binding Demos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) program itself. Here's part of **MainPage.xaml**:
 
-
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -758,8 +757,6 @@ The order of the code in this constructor makes a difference: The `InitializeCom
 Setting both `NavigateCommand` and `BindingContext` (in any order) prior to the call to `InitializeComponent` will work because both components of the binding are set when the XAML parser encounters the binding definition.
 
 Data bindings can sometimes be tricky, but as you've seen in this series of articles, they are powerful and versatile, and help greatly to organize your code by separating underlying logic from the user interface.
-
-
 
 ## Related Links
 
