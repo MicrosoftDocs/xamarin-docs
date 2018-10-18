@@ -132,7 +132,7 @@ Could not create the symlink mentioned in the error message.
 
 ### EM0026 Could not parse the command line argument `A`: *
 
-The syntax given for the command line option `A` could not be parsed by the tool. It is likely incorrect. Please check the documentation, or help, for the correct syntax.
+The syntax given for the command line option `A` could not be parsed by the tool. Please check the documentation for the correct syntax.
 
 <a name="EM0099" />
 
