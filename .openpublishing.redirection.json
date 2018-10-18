@@ -167,6 +167,10 @@
     {
       "source_path": "docs/android/troubleshooting/questions/enable-axml-intellisense.md",
       "redirect_url": "/xamarin/android/troubleshooting/questions/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/app-fundamentals/accessibility/setting-accessibility-values.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/accessibility/automation-properties"
     }
   ]
 }

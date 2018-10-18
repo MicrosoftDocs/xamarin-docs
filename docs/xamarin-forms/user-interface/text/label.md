@@ -6,14 +6,45 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/20/2018
+ms.date: 10/04/2018
 ---
 
 # Xamarin.Forms Label
 
 _Display text in Xamarin.Forms_
 
-The [`Label`](xref:Xamarin.Forms.Label) view is used for displaying text, both single and multi-line. Labels can have custom fonts (families, sizes, and options) and colored text.
+The [`Label`](xref:Xamarin.Forms.Label) view is used for displaying text, both single and multi-line. Labels can have text decorations, colored text, and use custom fonts (families, sizes, and options).
+
+## Text decorations
+
+Underline and strikethrough text decorations can be applied to [`Label`](xref:Xamarin.Forms.Label) instances by setting the `Label.TextDecoration` property to one or more `TextDecoration` enumeration members:
+
+- `None`
+- `Underline`
+- `Strikethrough`
+
+The following XAML example demonstrates setting the `Label.TextDecoration` property:
+
+```xaml
+<Label Text="This is underlined text." TextDecorations="Underline"  />
+<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />
+<Label Text="This is underlined text with strikethrough." TextDecorations="Underline, Strikethrough" />
+```
+
+The equivalent C# code is:
+
+```csharp
+var underlineLabel = new Label { Text = "This is underlined text.", TextDecorations = TextDecorations.Underline };
+var strikethroughLabel = new Label { Text = "This is text with strikethrough.", TextDecorations = TextDecorations.Strikethrough };
+var bothLabel = new Label { Text = "This is underlined text with strikethrough.", TextDecorations = TextDecorations.Underline | TextDecorations.Strikethrough };
+```
+
+The following screenshots show the `TextDecoration` enumeration members applied to [`Label`](xref:Xamarin.Forms.Label) instances:
+
+![](label-images/label-textdecorations.png "Labels with Text Decorations")
+
+> [!NOTE]
+> Text decorations can also be applied to [`Span`](xref:Xamarin.Forms.Span) instances. For more information about the `Span` class, see [Formatted Text](#Formatted_Text).
 
 ## Colors
 
@@ -57,9 +88,13 @@ The following screenshots show the result of setting the `TextColor` property:
 
 For more information about colors, see [Colors](~/xamarin-forms/user-interface/colors.md).
 
+## Fonts
+
+For more information about specifying fonts on a `Label`, see [Fonts](~/xamarin-forms/user-interface/text/fonts.md).
+
 <a name="Truncation_and_Wrapping" />
 
-## Truncation and Wrapping
+## Truncation and wrapping
 
 Labels can be set to handle text that can't fit on one line in one of several ways, exposed by the `LineBreakMode` property. [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode) is an enumeration with the following values:
 
@@ -70,17 +105,43 @@ Labels can be set to handle text that can't fit on one line in one of several wa
 - **TailTruncation** &ndash; shows the beginning of the text, truncating the end.
 - **WordWrap** &ndash; wraps text at the word boundary.
 
-## Fonts
+## Displaying a specific number of lines
 
-For more information about specifying fonts on a `Label`, see [Fonts](~/xamarin-forms/user-interface/text/fonts.md).
+The number of lines displayed by a [`Label`](xref:Xamarin.Forms.Label) can be specified by setting the `Label.MaxLines` property to a `int` value:
+
+- When `MaxLines` is 0, the `Label` respects the value of the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) property to either show just one line, possibly truncated, or all lines with all text.
+- When `MaxLines` is 1, the result is identical to setting the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) property to [`NoWrap`](xref:Xamarin.Forms.LineBreakMode), [`HeadTruncation`](xref:Xamarin.Forms.LineBreakMode), [`MiddleTruncation`](xref:Xamarin.Forms.LineBreakMode), or [`TailTruncation`](xref:Xamarin.Forms.LineBreakMode). However, the `Label` will respect the value of the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) property with regard to placement of an ellipsis, if applicable.
+- When `MaxLines` is greater than 1, the `Label` will display up to the specified number of lines, while respecting the value of the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) property with regard to placement of an ellipsis, if applicable. However, setting the `MaxLines` property to a value greater than 1 has no effect if the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) property is set to [`NoWrap`](xref:Xamarin.Forms.LineBreakMode).
+
+The following XAML example demonstrates setting the `MaxLines` property on a [`Label`](xref:Xamarin.Forms.Label):
+
+```xaml
+<Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
+       LineBreakMode="WordWrap"
+       MaxLines="2" />
+```
+
+The equivalent C# code is:
+
+```csharp
+var label =
+{
+  Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus.", LineBreakMode = LineBreakMode.WordWrap,
+  MaxLines = 2
+};
+```
+
+The following screenshots show the result of setting the `MaxLines` property to 2, when the text is long enough to occupy more than 2 lines:
+
+![](label-images/label-maxlines.png "Label MaxLines Example")
 
 <a name="Formatted_Text" />
 
-## Formatted Text
+## Formatted text
 
 Labels expose a [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) property which allows the presentation of text with multiple fonts and colors in the same view.
 
-The `FormattedText` property is of type [`FormattedString`](xref:Xamarin.Forms.FormattedString), which comprises one or more [`Span`](xref:Xamarin.Forms.Span) instances, set via the [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) property. Each `Span` possesses the following important properties:
+The `FormattedText` property is of type [`FormattedString`](xref:Xamarin.Forms.FormattedString), which comprises one or more [`Span`](xref:Xamarin.Forms.Span) instances, set via the [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) property. The following `Span` properties can be used to set visual appearance:
 
 - [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) – the color of the span background.
 - [`Font`](xref:Xamarin.Forms.Span.Font) – the font for the text in the span.
@@ -88,10 +149,13 @@ The `FormattedText` property is of type [`FormattedString`](xref:Xamarin.Forms.F
 - [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily) – the font family to which the font for the text in the span belongs.
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – the size of the font for the text in the span.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) – the color for the text in the span. This property is obsolete and has been replaced by the `TextColor` property.
-- [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) – a collection of gesture recognizers that will respond to gestures on the span.
+- [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) - the multiplier to apply to the default line height of the span. For more information, see [Line Height](#line-height).
 - [`Style`](xref:Xamarin.Forms.Span.Style) – the style to apply to the span.
 - [`Text`](xref:Xamarin.Forms.Span.Text) – the text of the span.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – the color for the text in the span.
+- `TextDecoration` - the decorations to apply to the text in the span. For more information, see [Text Decorations](#text-decorations).
+
+In addition, the [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) property can be used to define a collection of gesture recognizers that will respond to gestures on the [`Span`](xref:Xamarin.Forms.Span).
 
 The following XAML example demonstrates a `FormattedText` property that consists of three [`Span`](xref:Xamarin.Forms.Span) instances:
 
@@ -151,7 +215,7 @@ The following screenshots show the result of setting the `FormattedString` prope
 
 ![](label-images/formattedtext.png "Label FormattedText Example")
 
-## Line Height
+## Line height
 
 The vertical height of a [`Label`](xref:Xamarin.Forms.Label) and a [`Span`](xref:Xamarin.Forms.Span) can be customized by setting the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) property or [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) to a `double` value. On iOS and Android these values are multipliers of the original line height, and on the Universal Windows Platform (UWP) the `Label.LineHeight` property value is a multiplier of the label font size.
 
@@ -222,12 +286,13 @@ The following screenshots show the result of setting the [`Span.LineHeight`](xre
 
 ![](label-images/span-lineheight.png "Span LineHeight Example")
 
-## Styling a Label
+## Styling labels
 
-The previous sections covered setting [`Label`](xref:Xamarin.Forms.Label) properties on a per-instance basis. However, sets of properties can be grouped into one style that is consistently applied to one or many views. This can increase readability of code and make design changes easier to implement. For more information, see [Styles](~/xamarin-forms/user-interface/text/styles.md).
+The previous sections covered setting [`Label`](xref:Xamarin.Forms.Label) and [`Span`](xref:Xamarin.Forms.Span) properties on a per-instance basis. However, sets of properties can be grouped into one style that is consistently applied to one or many views. This can increase readability of code and make design changes easier to implement. For more information, see [Styles](~/xamarin-forms/user-interface/text/styles.md).
 
-## Related Links
+## Related links
 
-- [Creating Mobile Apps with Xamarin.Forms, Chapter 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Creating Mobile Apps with Xamarin.Forms, Chapter 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [Label API](xref:Xamarin.Forms.Label)
+- [Span API](xref:Xamarin.Forms.Span)

@@ -6,7 +6,7 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/03/2018
+ms.date: 10/01/2018
 ---
 
 # Android Platform-Specifics
@@ -305,6 +305,7 @@ The result is that a specified [`MixedContentHandling`](xref:Xamarin.Forms.Platf
 On Android, the following platform-specific functionality is provided for Xamarin.Forms pages:
 
 - Setting the height of the navigation bar on a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). For more information, see [Setting the Navigation Bar Height on a NavigationPage](#navigationpage-barheight).
+- Disabling transition animations when navigating through pages in a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). For more information, see [Disabling Page Transition Animations in a TabbedPage](#tabbedpage-transition-animations).
 - Enabling swiping between pages in a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). For more information, see [Enabling Swiping Between Pages in a TabbedPage](#enable_swipe_paging).
 - Setting the toolbar placement and color on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). For more information, see [Setting TabbedPage Toolbar Placement and Color](#tabbedpage-toolbar).
 
@@ -343,6 +344,36 @@ The `NavigationPage.On<Android>` method specifies that this platform-specific wi
 The result is that the height of the navigation bar on a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) can be set:
 
 ![](android-images/navigationpage-barheight.png "NavigationPage navigation bar height")
+
+<a name="tabbedpage-transition-animations" />
+
+### Disabling Page Transition Animations in a TabbedPage
+
+This platform-specific is used to disable transition animations when navigating through pages, either programmatically or when using the tab bar, in a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). It's consumed in XAML by setting the `TabbedPage.IsSmoothScrollEnabled` bindable property to `false`:
+
+```xaml
+<TabbedPage ...
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.IsSmoothScrollEnabled="false">
+    ...
+</TabbedPage>
+```
+
+Alternatively, it can be consumed from C# using the fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+On<Android>().SetIsSmoothScrollEnabled(false);
+```
+
+The `TabbedPage.On<Android>` method specifies that this platform-specific will only run on Android. The `TabbedPage.SetIsSmoothScrollEnabled` method, in the [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) namespace, is used to control whether transition animations will be displayed when navigating between pages in a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). In addition, the `TabbedPage` class in the `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` namespace also has the following methods:
+
+- `IsSmoothScrollEnabled`, which is used to retrieve whether transition animations will be displayed when navigating between pages in a `TabbedPage`.
+- `EnableSmoothScroll`, which is used to enable transition animations when navigating between pages in a `TabbedPage`.
+- `DisableSmoothScroll`, which is used to disable transition animations when navigating between pages in a `TabbedPage`.
 
 <a name="enable_swipe_paging" />
 

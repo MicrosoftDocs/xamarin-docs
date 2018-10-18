@@ -6,7 +6,7 @@ ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/06/2018
+ms.date: 10/01/2018
 ---
 
 # iOS Platform-Specifics
@@ -372,6 +372,7 @@ On iOS, the following platform-specific functionality is provided for Xamarin.Fo
 - Controlling whether the page title is displayed as a large title in the page navigation bar. For more information, see [Displaying Large Titles](#large_title).
 - Setting the status bar visibility on a [`Page`](xref:Xamarin.Forms.Page). For more information, see [Setting the Status Bar Visibility on a Page](#set_status_bar_visibility).
 - Ensuring that page content is positioned on an area of the screen that is safe for all iOS devices. For more information, see [Enabling the Safe Area Layout Guide](#safe_area_layout).
+- Setting the presentation style of modal pages on an iPad. For more information, see [Setting the Modal Page Presentation Style on an iPad](#modal-page-presentation-style).
 
 <a name="navigationpage-hideseparatorbar" />
 
@@ -676,6 +677,51 @@ protected override void OnAppearing()
     Padding = safeInsets;
 }
 ```
+
+<a name="modal-page-presentation-style" />
+
+### Setting the Modal Page Presentation Style on an iPad
+
+This platform-specific is used to set the presentation style of a modal page on an iPad. It's consumed in XAML by setting the `Page.ModalPresentationStyle` bindable property to a `UIModalPresentationStyle` enumeration value:
+
+```xaml
+<ContentPage ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.ModalPresentationStyle="FormSheet">
+    ...
+</ContentPage>
+```
+
+Alternatively, it can be consumed from C# using the fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+public class iOSModalFormSheetPageCS : ContentPage
+{
+    public iOSModalFormSheetPageCS()
+    {
+        On<iOS>().SetModalPresentationStyle(UIModalPresentationStyle.FormSheet);
+        ...
+    }
+}
+```
+
+The `Page.On<iOS>` method specifies that this platform-specific will only run on iOS. The `Page.SetModalPresentationStyle` method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, is used to set the modal presentation style on a [`Page`](xref:Xamarin.Forms.Page) by specifying one of the following `UIModalPresentationStyle` enumeration values:
+
+- `FullScreen`, which sets the modal presentation style to encompass the whole screen. By default, modal pages are displayed using this presentation style.
+- `FormSheet`, which sets the modal presentation style to be centered on and smaller than the screen.
+
+In addition, the `GetModalPresentationStyle` method can be used to retrieve the current value of the `UIModalPresentationStyle` enumeration that's applied to the [`Page`](xref:Xamarin.Forms.Page).
+
+The result is that the the modal presentation style on a [`Page`](xref:Xamarin.Forms.Page) can be set:
+
+[![](ios-images/modal-presentation-style-small.png "Modal Presentation Styles on an iPad")](ios-images/modal-presentation-style-large.png#lightbox "Modal Presentation Styles on an iPad")
+
+> [!NOTE]
+> Pages that use this platform-specific to set the modal presentation style must use modal navigation. For more information, see [Xamarin.Forms Modal Pages](~/xamarin-forms/app-fundamentals/navigation/modal.md).
 
 ## Layouts
 

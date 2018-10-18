@@ -1,6 +1,6 @@
 ---
-title: "Setting Accessibility Values on User Interface Elements"
-description: "This article explains how to use the AutomationProperties class, so that a screen reader can speak about the elements on the page."
+title: "Automation Properties"
+description: "This article explains how to use the AutomationProperties class in a Xamarin.Forms application, so that a screen reader can speak about the elements on the page."
 ms.prod: xamarin
 ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
 ms.technology: xamarin-forms
@@ -9,13 +9,11 @@ ms.author: dabritch
 ms.date: 10/24/2017
 ---
 
-# Setting Accessibility Values on User Interface Elements
+# Automation Properties in Xamarin.Forms
 
 _Xamarin.Forms allows accessibility values to be set on user interface elements by using attached properties from the AutomationProperties class, which in turn set native accessibility values. This article explains how to use the AutomationProperties class, so that a screen reader can speak about the elements on the page._
 
-## Overview
-
-Xamarin.Forms allows accessibility values to be set on user interface elements via the following attached properties:
+Xamarin.Forms allows automation properties to be set on user interface elements via the following attached properties:
 
 - `AutomationProperties.IsInAccessibleTree` – indicates whether the element is available to an accessible application. For more information, see [AutomationProperties.IsInAccessibleTree](#isinaccessibletree).
 - `AutomationProperties.Name` – a short description of the element that serves as a speakable identifier for the element. For more information, see [AutomationProperties.Name](#name).
@@ -133,11 +131,6 @@ AutomationProperties.SetLabeledBy(entry, nameLabel);
 
 > [!NOTE]
 > Note that the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method can also be used to set the `AutomationProperties.IsInAccessibleTree` attached property  – `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`
-
-## Summary
-
-This article explained how to set accessibility values on user interface elements in a Xamarin.Forms application by using attached properties from the `AutomationProperties` class. These attached properties set native accessibility values so that a screen reader can speak about the elements on the page.
-
 
 ## Related Links
 

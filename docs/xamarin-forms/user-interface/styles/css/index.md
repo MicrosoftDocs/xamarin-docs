@@ -7,15 +7,19 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/20/2018
+ms.date: 09/28/2018
 ---
 # Styling Xamarin.Forms apps using Cascading Style Sheets (CSS)
 
 _Xamarin.Forms supports styling visual elements using Cascading Style Sheets (CSS)._
 
-Xamarin.Forms 3.0 introduces the ability to style an app using CSS. A style sheet consists of a list of rules, with each rule consisting of one or more selectors and a declaration block. A declaration block consists of a list of declarations in braces, with each declaration consisting of a property, a colon, and a value. When there are multiple declarations in  a block, a semi-colon is inserted as a separator. The following code example shows some Xamarin.Forms compliant CSS:
+Xamarin.Forms applications can be styled using CSS. A style sheet consists of a list of rules, with each rule consisting of one or more selectors and a declaration block. A declaration block consists of a list of declarations in braces, with each declaration consisting of a property, a colon, and a value. When there are multiple declarations in  a block, a semi-colon is inserted as a separator. The following code example shows some Xamarin.Forms compliant CSS:
 
 ```css
+navigationpage {
+    -xf-bar-background-color: lightgray;
+}
+
 ^contentpage {
     background-color: lightgray;
 }
@@ -70,9 +74,6 @@ The [MonkeyAppCSS](https://developer.xamarin.com/samples/xamarin-forms/UserInter
 
 [![MonkeyApp Detail Page with CSS styling](css-images/MonkeyAppDetailPage.png "MonkeyApp Detail Page with CSS styling")](css-images/MonkeyAppDetailPage-Large.png#lightbox "MonkeyApp Detail Page with CSS styling")
 
-> [!NOTE]
-> It's not currently possible to style the background color of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) using a style sheet. Therefore, in the sample application the [`NavigationPage.BarBackgroundColor`](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) property is set in code.
-
 ## Consuming a style sheet
 
 The process for adding a style sheet to a solution is as follows:
@@ -86,23 +87,22 @@ There are a number of approaches that can be used to load a style sheet.
 
 ### XAML
 
-A style sheet can be loaded and parsed with the [`StyleSheet`](xref:Xamarin.Forms.StyleSheets.StyleSheet) class before being added to the [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) for the page:
+A style sheet can be loaded and parsed with the [`StyleSheet`](xref:Xamarin.Forms.StyleSheets.StyleSheet) class before being added to a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary):
 
 ```xaml
-<ContentPage ...>
-    <ContentPage.Resources>
+<Application ...>
+	<Application.Resources>
         <StyleSheet Source="/Assets/styles.css" />
-    </ContentPage.Resources>
-    ...
-</ContentPage>
+	</Application.Resources>
+</Application>
 ```
 
 The [`StyleSheet.Source`](xref:Xamarin.Forms.Xaml.StyleSheetExtension.Source) property specifies the style sheet as a URI relative to the location of the enclosing XAML file, or relative to the project root if the URI starts with a `/`.
 
 > [!WARNING]
-> The CSS file will fail to load if it's build action is not set to  **EmbeddedResource**.
+> The CSS file will fail to load if its build action is not set to  **EmbeddedResource**.
 
-Alternatively, the style sheet can be loaded and parsed with the [`StyleSheet`](xref:Xamarin.Forms.StyleSheets.StyleSheet) class by inlining it in a `CDATA` section:
+Alternatively, a style sheet can be loaded and parsed with the [`StyleSheet`](xref:Xamarin.Forms.StyleSheets.StyleSheet) class, before being added to a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), by inlining it in a `CDATA` section:
 
 ```xaml
 <ContentPage ...>
@@ -119,9 +119,11 @@ Alternatively, the style sheet can be loaded and parsed with the [`StyleSheet`](
 </ContentPage>
 ```
 
+For more information about resource dictionaries, see [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md).
+
 ### C#
 
-In C#, a style sheet can be loaded as an embedded resource and added to the [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) for the page:
+In C#, a style sheet can be loaded as an embedded resource and added to a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary):
 
 ```csharp
 public partial class MyPage : ContentPage
@@ -139,7 +141,7 @@ public partial class MyPage : ContentPage
 
 The first argument to the `StyleSheet.FromAssemblyResource` method is the assembly containing the style sheet, while the second argument is a `string` representing the resource identifier. The resource identifier can be obtained from the **Properties** window when the CSS file is selected.
 
-Alternatively, the style sheet can be loaded from a `StringReader` and added to the [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) for the page:
+Alternatively, a style sheet can be loaded from a `StringReader` and added to a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary):
 
 ```csharp
 public partial class MyPage : ContentPage
@@ -360,34 +362,69 @@ The following CSS properties are supported by Xamarin.Forms (in the **Values** c
 
 |Property|Applies to|Values|Example|
 |---|---|---|---|
+|`align-content`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial` |`align-content: space-between;`|
+|`align-items`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| `flex-end` \| `initial` |`align-items: flex-start;`|
+|`align-self`|`VisualElement`| `auto` \| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| `flex-end` \| `initial`|`align-self: flex-end;`|
 |`background-color`|`VisualElement`|_color_ \| `initial` |`background-color: springgreen;`|
 |`background-image`|`Page`|_string_ \| `initial` |`background-image: bg.png;`|
 |`border-color`|`Button`, `Frame`|_color_ \| `initial`|`border-color: #9acd32;`|
-|`border-radius`|`BoxView`|_double_\| `intial` |`border-radius: 10;`|
+|`border-radius`|`BoxView`|_double_ \| `intial` |`border-radius: 10;`|
 |`border-width`|`Button`|_double_ \| `initial` |`border-width: .5;`|
-|`color`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`|_color_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
+|`color`|`ActivityIndicator`, `BoxView`, `Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_color_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
+|`column-gap`|`Grid`|_double_ \| `initial`|`column-gap: 9;`|
 |`direction`|`VisualElement`|`ltr` \| `rtl` \| `inherit` \| `initial` |`direction: rtl;`|
+|`flex-direction`|`FlexLayout`| `column` \| `columnreverse` \| `row` \| `rowreverse` \| `row-reverse` \| `column-reverse` \| `initial`|`flex-direction: column-reverse;`|
+|`flex-basis`|`VisualElement`|_float_ \| `auto` \| `initial`. In addition, a percentage in the range 0% to 100% can be specified with the `%` sign.|`flex-basis: 25%;`|
+|`flex-grow`|`VisualElement`|_float_ \| `initial`|`flex-grow: 1.5;`|
+|`flex-shrink`|`VisualElement`|_float_ \| `initial`|`flex-shrink: 1;`|
+|`flex-wrap`|`VisualElement`| `nowrap` \| `wrap` \| `reverse` \| `wrap-reverse` \| `initial`|`flex-wrap: wrap-reverse;`|
 |`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_string_ \| `initial` |`font-family: Consolas;`|
 |`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_double_  \| _namedsize_ \| `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
 |`height`|`VisualElement`|_double_ \| `initial` |`min-height: 250;`|
+|`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial`|`justify-content: flex-end;`|
 |`line-height`|`Label`, `Span`|_double_ \| `initial` |`line-height: 1.8;`|
 |`margin`|`View`|_thickness_ \| `initial` |`margin: 6 12;`|
 |`margin-left`|`View`|_thickness_ \| `initial` |`margin-left: 3;`|
 |`margin-top`|`View`|_thickness_ \| `initial` |`margin-top: 2;`|
 |`margin-right`|`View`|_thickness_ \| `initial` |`margin-right: 1;`|
 |`margin-bottom`|`View`|_thickness_ \| `initial` |`margin-bottom: 6;`|
+|`max-lines`|`Label`|_int_ \| `initial`|`max-lines: 2;`|
 |`min-height`|`VisualElement`|_double_ \| `initial` |`min-height: 50;`|
 |`min-width`|`VisualElement`|_double_ \| `initial` |`min-width: 112;`|
 |`opacity`|`VisualElement`|_double_ \| `initial` |`opacity: .3;`|
+|`order`|`VisualElement`|_int_ \| `initial`|`order: -1;`|
 |`padding`|`Layout`, `Page`|_thickness_ \| `initial` |`padding: 6 12 12;`|
 |`padding-left`|`Layout`, `Page`|_double_ \| `initial`|`padding-left: 3;`|
 |`padding-top`|`Layout`, `Page`| _double_ \| `initial` |`padding-top: 4;`|
 |`padding-right`|`Layout`, `Page`| _double_ \| `initial` |`padding-right: 2;`|
 |`padding-bottom`|`Layout`, `Page`| _double_ \| `initial` |`padding-bottom: 6;`|
-|`text-align`| `Entry`, `EntryCell`, `Label`, `SearchBar`|`left` \| `right` \| `center` \| `start` \| `end` \| `initial`. `left` and `right` should be avoided in right-to-left environments.| `text-align: right;`|
+|`position`|`FlexLayout`| `relative` \| `absolute` \| `initial`|`position: absolute;`|
+|`row-gap`|`Grid`| _double_ \| `initial`|`row-gap: 12;`|
+|`text-align`| `Entry`, `EntryCell`, `Label`, `SearchBar`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`. `left` and `right` should be avoided in right-to-left environments.| `text-align: right;`|
+|`text-decoration`|`Label`, `Span`|`none` \| `underline` \| `strikethrough` \| `line-through` \| `initial`|`text-decoration: underline, line-through;`|
+|`transform`|`VisualElement`| `none`, `rotate`, `rotateX`, `rotateY`, `scale`, `scaleX`, `scaleY`, `translate`, `translateX`, `translateY`, `initial` |`transform: rotate(180), scaleX(2.5);`|
+|`transform-origin`|`VisualElement`| _double_, _double_ \| `initial` |`transform-origin: 7.5, 12.5;`|
+|`vertical-align`|`Label`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`|`vertical-align: bottom;`|
 |`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial `|`visibility: hidden;`|
 |`width`|`VisualElement`|_double_ \| `initial`|`min-width: 320;`|
+
+The following Xamarin.Forms specific CSS properties are also supported (in the **Values** column, types are _italic_, while string literals are `gray`):
+
+|Property|Applies to|Values|Example|
+|---|---|---|---|
+|`-xf-placeholder`|`Entry`, `Editor`, `SearchBar`|_quoted text_ \| `initial` |`-xf-placeholder: Enter name;`|
+|`-xf-placeholder-color`|`Entry`, `Editor`, `SearchBar`|_color_ \| `initial` |`-xf-placeholder-color: green;`|
+|`-xf-max-length`|`Entry`, `Editor`|_int_ \| `initial` |`-xf-max-length: 20;`|
+|`-xf-bar-background-color`|`NavigationPage`, `TabbedPage`|_color_ \| `initial` |`-xf-bar-background-color: teal;`|
+|`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_color_ \| `initial` |`-xf-bar-text-color: gray`|
+|`-xf-orientation`|`ScrollView`, `StackLayout`| `horizontal` \| `vertical` \| `both` \| `initial`. `both` is only supported on a `ScrollView`. |`-xf-orientation: horizontal;`|
+|`-xf-horizontal-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-horizontal-scroll-bar-visibility: never;`|
+|`-xf-vertical-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-vertical-scroll-bar-visbility: always;`|
+|`-xf-min-track-color`|`Slider`|_color_ \| `initial` |`-xf-min-track-color: yellow;`|
+|`-xf-max-track-color`|`Slider`|_color_ \| `initial` |`-xf-max-track-color: red;`|
+|`-xf-thumb-color`|`Slider`|_color_ \| `initial` |`-xf-thumb-color: limegreen;`|
+|`-xf-spacing`|`StackLayout`|_double_ \| `initial` |`-xf-spacing: 8;`|
 
 > [!NOTE]
 > `initial` is a valid value for all properties. It clears the value (resets to default) that was set from another style.
@@ -444,4 +481,5 @@ The exact meaning of each `namedsize` value is platform-dependent and view-depen
 ## Related Links
 
 - [MonkeyAppCSS (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/)
+- [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md)

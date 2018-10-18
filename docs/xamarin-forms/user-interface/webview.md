@@ -6,7 +6,7 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2018
+ms.date: 10/02/2018
 ---
 
 # Xamarin.Forms WebView
@@ -363,9 +363,14 @@ Finished Loading:
 
 ## Performance
 
-Recent advances have seen each of the popular web browsers adopt technologies like hardware accelerated rendering and JavaScript compilation. Unfortunately, due to security restrictions, most of those advancements were not available in the iOS-equaivalent of `WebView`, `UIWebView`. Xamarin.Forms `WebView` uses `UIWebView`. If that's a problem, you'll need to write a custom renderer that uses `WKWebView`, which supports faster browsing. Note that `WKWebView` is only supported on iOS 8 and newer.
+The popular web browsers now adopt technologies like hardware accelerated rendering and JavaScript compilation. On iOS, by default, the Xamarin.Forms `WebView` is implemented by the `UIWebView` class, and many of these technologies are unavailable in this implementation. However, an application can opt-in to using the iOS `WkWebView` class to implement the Xamarin.Forms `WebView`, which supports faster browsing. This can be achieved by adding the following code to the **AssemblyInfo.cs** file in the iOS platform project for the application:
 
-WebView on Android by default is about as fast as the built-in browser.
+```csharp
+// Opt-in to using WkWebView instead of UIWebView.
+[assembly: ExportRenderer(typeof(WebView), typeof(Xamarin.Forms.Platform.iOS.WkWebViewRenderer))]
+```
+
+`WebView` on Android by default is about as fast as the built-in browser.
 
 The [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) uses the Microsoft Edge rendering engine. Desktop and tablet devices should see the same performance as using the Edge browser itself.
 

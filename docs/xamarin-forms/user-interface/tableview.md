@@ -6,7 +6,7 @@ ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
+ms.date: 10/04/2018
 ---
 
 # Xamarin.Forms TableView
@@ -211,7 +211,67 @@ The C# above is doing a lot. Let's break it down:
 
 Note that a class for the custom cell is never defined. Instead, the `ViewCell`'s view property is set for a particular instance of `ViewCell`.
 
+## Row Height
 
+The [`TableView`](xref:Xamarin.Forms.TableView) class has two properties that can be used to change the row height of cells:
+
+- [`RowHeight`](xref:Xamarin.Forms.TableView.RowHeight) – sets the height of each row to an `int`.
+- [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) – rows have varying heights if set to `true`. Note that when setting this property to `true`, row heights will automatically be calculated and applied by Xamarin.Forms.
+
+When the height of content in a cell in a [`TableView`](xref:Xamarin.Forms.TableView) is changed, the row height is implicitly updated on Android and the Universal Windows Platform (UWP). However, on iOS it must be forced to update by setting the [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) property to `true` and by calling the [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize) method.
+
+The following XAML example shows a [`TableView`](xref:Xamarin.Forms.TableView) that contains a [`ViewCell`](xref:Xamarin.Forms.ViewCell):
+
+```xaml
+<ContentPage ...>
+    <TableView ...
+               HasUnevenRows="true">
+        <TableRoot>
+            ...
+            <TableSection ...>
+                ...
+                <ViewCell x:Name="_viewCell"
+                          Tapped="OnViewCellTapped">
+                    <Grid Margin="15,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Text="Tap this cell." />
+                        <Label x:Name="_target"
+                               Grid.Row="1"
+                               Text="The cell has changed size."
+                               IsVisible="false" />
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
+```
+
+When the [`ViewCell`](xref:Xamarin.Forms.ViewCell) is tapped, the `OnViewCellTapped` event handler is executed:
+
+```csharp
+void OnViewCellTapped(object sender, EventArgs e)
+{
+    _target.IsVisible = !_target.IsVisible;
+    _viewCell.ForceUpdateSize();
+}
+```
+
+The `OnViewCellTapped` event handler shows or hides the second [`Label`](xref:Xamarin.Forms.Label) in the [`ViewCell`](xref:Xamarin.Forms.ViewCell), and explicitly updates the cell's size by calling the [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize) method.
+
+The following screenshots show the cell prior to being tapped upon:
+
+![](tableview-images/cell-beforeresize.png "ViewCell before being resized")
+
+The following screenshots show the cell after being tapped upon:
+
+![](tableview-images/cell-afterresize.png "ViewCell after being resized")
+
+> [!IMPORTANT]
+> There is a strong possibility of performance degradation if this feature is overused.
 
 ## Related Links
 
