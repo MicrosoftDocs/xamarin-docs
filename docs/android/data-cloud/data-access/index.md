@@ -18,24 +18,24 @@ _Most applications have some requirement to save data on the device locally. Unl
 Most applications have some requirement to save data on the device
 locally. Unless the amount of data is trivially small, this usually
 requires a database and a data layer in the application to manage
-database access. Android both has the Sqlite database engine "built
+database access. Android both has the SQLite database engine "built
 in" and access to the data is simplified by Xamarin's platform
 which comes with the SQLite Data Provider.
 
 Xamarin.Android support database access APIs such as:
 
--  ADO.NET framework.
--  SQLite-NET 3rd party library.
+- ADO.NET framework.
+- SQLite-NET 3rd party library.
 
 The majority of the code in this section is completely cross-platform
 and will run on iOS or Android without modification. There are two
 sample apps discussed:
 
--  [**DataAccess_Basic**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
+- [**DataAccess_Basic**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
    &ndash; Simple data operations writes the results to a text display
    control;
 
--  [**DataAccess_Advanced**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
+- [**DataAccess_Advanced**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
    &ndash; Integrates data operations into a small working application that
    lists and edits a simple data structure.
 
