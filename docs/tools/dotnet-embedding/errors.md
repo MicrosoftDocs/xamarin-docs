@@ -191,7 +191,7 @@ In such cases only two generated `init` selectors will be created, both calling 
 
 ### EM1030: Method `M` is not generated because return type `T` is not supported.
 
-This is a **warning** that the method `M` will be ignored (i.e. nothing will be generated) because it's return type `T` is not supported.
+This is a **warning** that the method `M` will be ignored (i.e. nothing will be generated) because its return type `T` is not supported.
 
 There should be an earlier warning giving more information why type `T` is not supported.
 
@@ -220,7 +220,7 @@ public class MyType {
 }
 ```
 
-In such cases only two generated `Increment` selectors will be created, both calling into Mono, but no wrapper for the later will exist.
+In such cases only two generated `Increment` selectors will be created, both calling into Mono, but no wrapper for the latter will exist.
 
 <a name="EM1033" />
 
@@ -232,7 +232,7 @@ This is a **warning** that the method `M` is not generated because another metho
 
 ### EM1034: Extension method `M` is not generated inside a category because they cannot be created on primitive type `T`. A normal, static method was generated.
 
-This is a **warning** that an extension method on a primivite type (e.g. `System.Int32`) was found. In Objective-C it is not possible to create categories on a primitive type. Instead, the generator will be produce a normal static method.
+This is a **warning** that an extension method on a primivite type (e.g. `System.Int32`) was found. In Objective-C it is not possible to create categories on a primitive type. Instead, the generator will produce a normal static method.
 
 <a name="EM1040" />
 
