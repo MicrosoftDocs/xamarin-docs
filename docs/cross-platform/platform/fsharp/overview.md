@@ -47,8 +47,7 @@ Check out the [list of samples](~/cross-platform/platform/fsharp/samples.md) to 
 There is a plethora of information online for getting up to speed with the F#
 language, covering all proficiencies. Listed below are a few of our recommendations:
 
--  [F# Open Organization](http://fsharp.org)
--  [F# Learning Portal](http://tryfsharp.org)
+-  [F# Software Foundation](http://fsharp.org)
 -  [Visual F# Development Portal](http://go.microsoft.com/fwlink/?LinkID=234174)
 -  [Visual F# Code Gallery](http://go.microsoft.com/fwlink/?LinkID=124614)
 -  [Visual F# Math/Stats Programming](http://go.microsoft.com/fwlink/?LinkId=235173)
