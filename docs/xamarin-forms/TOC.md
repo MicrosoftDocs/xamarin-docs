@@ -19,7 +19,6 @@
 ### [XAML Compilation](xaml/xamlc.md)
 ### [XAML Toolbox](xaml/toolbox.md)
 ### [XAML Previewer](xaml/xaml-previewer.md)
-### [Live Reload](xaml/live-reload.md)
 ### [XAML Namespaces](xaml/namespaces.md)
 ### [XAML Markup Extensions](xaml/markup-extensions/index.md)
 #### [Consuming XAML Markup Extensions](xaml/markup-extensions/consuming.md)
