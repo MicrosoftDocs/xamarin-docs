@@ -151,6 +151,19 @@ public class HomePageCS : ContentPage
 }
 ```
 
+You can also bind to the view model properties directly, so that you don't need to delcare `BindableProperty`s for `HeaderText` and `FooterText` on the `ContentPage`, by binding the control template to Parent.BindingContext._PropertyName_ e.g.:
+
+```xaml
+<ControlTemplate x:Key="TealTemplate">
+  <Grid>
+    ...
+    <Label Text="{TemplateBinding Parent.BindingContext.HeaderText}" ... />
+    ...
+    <Label Text="{TemplateBinding Parent.BindingContext.FooterText}" ... />
+  </Grid>
+</ControlTemplate>
+```
+
 For more information about data binding to ViewModels, see [From Data Bindings to MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 
 ## Summary
