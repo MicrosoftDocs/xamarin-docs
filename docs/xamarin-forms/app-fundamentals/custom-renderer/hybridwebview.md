@@ -6,7 +6,7 @@ ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2017
+ms.date: 10/19/2018
 ---
 
 # Implementing a HybridWebView
@@ -323,7 +323,7 @@ namespace CustomRenderer.Droid
 {
     public class HybridWebViewRenderer : ViewRenderer<HybridWebView, Android.Webkit.WebView>
     {
-        const string JavaScriptFunction = "function invokeCSharpAction(data){jsBridge.invokeAction(data);}";
+        const string JavascriptFunction = "function invokeCSharpAction(data){jsBridge.invokeAction(data);}";
         Context _context;
 
         public HybridWebViewRenderer(Context context) : base(context)
@@ -339,6 +339,7 @@ namespace CustomRenderer.Droid
             {
                 var webView = new Android.Webkit.WebView(_context);
                 webView.Settings.JavaScriptEnabled = true;
+                webView.SetWebViewClient(new JavascriptWebViewClient($"javascript: {JavascriptFunction}"));
                 SetNativeControl(webView);
             }
             if (e.OldElement != null)
@@ -350,31 +351,42 @@ namespace CustomRenderer.Droid
             if (e.NewElement != null)
             {
                 Control.AddJavascriptInterface(new JSBridge(this), "jsBridge");
-                Control.LoadUrl(string.Format("file:///android_asset/Content/{0}", Element.Uri));
-                InjectJS(JavaScriptFunction);
-            }
-        }
-
-        void InjectJS(string script)
-        {
-            if (Control != null)
-            {
-                Control.LoadUrl(string.Format("javascript: {0}", script));
+                Control.LoadUrl($"file:///android_asset/Content/{Element.Uri}");
             }
         }
     }
 }
 ```
 
-The `HybridWebViewRenderer` class loads the web page specified in the `HybridWebView.Uri` property into a native [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) control, and the `invokeCSharpAction` JavaScript function is injected into the web page, after the web page has loaded, with the `InjectJS` method. Once the user enters their name and clicks the HTML `button` element, the `invokeCSharpAction` JavaScript function is executed. This functionality is achieved as follows:
+The `HybridWebViewRenderer` class loads the web page specified in the `HybridWebView.Uri` property into a native [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) control, and the `invokeCSharpAction` JavaScript function is injected into the web page, after the web page has finished loading, with the `OnPageFinished` override in the `JavascriptWebViewClient` class:
+
+```csharp
+public class JavascriptWebViewClient : WebViewClient
+{
+    string _javascript;
+
+    public JavascriptWebViewClient(string javascript)
+    {
+        _javascript = javascript;
+    }
+
+    public override void OnPageFinished(WebView view, string url)
+    {
+        base.OnPageFinished(view, url);
+        view.EvaluateJavascript(_javascript, null);
+    }
+}
+```
+
+Once the user enters their name and clicks the HTML `button` element, the `invokeCSharpAction` JavaScript function is executed. This functionality is achieved as follows:
 
 - Provided that the `Control` property is `null`, the following operations are carried out:
-  - A native [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) instance is created, and JavaScript is enabled in the control.
+  - A native [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) instance is created, JavaScript is enabled in the control, and a `JavascriptWebViewClient` instance is set as the implementation of `WebViewClient`.
   - The `SetNativeControl` method is called to assign a reference to the native [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) control to the `Control` property.
 - Provided that the custom renderer is attached to a new Xamarin.Forms element:
   - The [`WebView.AddJavascriptInterface`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.AddJavascriptInterface/p/Java.Lang.Object/System.String/) method injects a new `JSBridge` instance into the main frame of the WebView's JavaScript context, naming it `jsBridge`. This allows methods in the `JSBridge` class to be accessed from JavaScript.
   - The [`WebView.LoadUrl`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.LoadUrl/p/System.String/) method loads the HTML file that's specified by the `HybridWebView.Uri` property. The code specifies that the file is stored in the `Content` folder of the project.
-  - The `InjectJS` method is invoked to inject the `invokeCSharpAction` JavaScript function into the web page.
+  - In the `JavascriptWebViewClient` class, the `invokeCSharpAction` JavaScript function is injected into the web page once the page has finished loading.
 - When the element the renderer is attached to changes:
   - Resources are released.
 
@@ -396,7 +408,8 @@ public class JSBridge : Java.Lang.Object
   {
     HybridWebViewRenderer hybridRenderer;
 
-    if (hybridWebViewRenderer != null && hybridWebViewRenderer.TryGetTarget (out hybridRenderer)) {
+    if (hybridWebViewRenderer != null && hybridWebViewRenderer.TryGetTarget (out hybridRenderer))
+    {
       hybridRenderer.Element.InvokeAction (data);
     }
   }
@@ -409,9 +422,6 @@ The class must derive from `Java.Lang.Object`, and methods that are exposed to J
 > Projects that use the `[Export]` attribute must include a reference to `Mono.Android.Export`, or a compiler error will result.
 
 Note that the `JSBridge` class maintains a `WeakReference` to the `HybridWebViewRenderer` class. This is to avoid creating a circular reference between the two classes. For more information see [Weak References](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx) on MSDN.
-
-> [!IMPORTANT]
-> On Android Oreo ensure that the Android manifest sets the **Target Android version** to **Automatic**. Otherwise, running this code will result in the error message "invokeCSharpAction is not defined".
 
 ### Creating the Custom Renderer on UWP
 
