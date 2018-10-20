@@ -85,8 +85,8 @@ public class Picasso
     public RequestCreator load (String path) { ... };
     ...
 }
+```
 
-```csharp
 After we generate a Bindings Library for **picasso-2.x.x.jar**,
 we can call these methods from C#. For example:
 
