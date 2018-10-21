@@ -35,6 +35,22 @@ public class LauncherTest
 }
 ```
 
+## Platform Differences
+
+# [Android](#tab/android)
+
+Calling the `CanOpenAsync` method does not add any delay as it returns immediately. The `Result` of that Task is available immediately after the call.
+
+# [iOS](#tab/ios)
+
+Calling the `CanOpenAsync` method does not add any delay as it returns immediately. The `Result` of that Task is available immediately after the call.
+
+# [UWP](#tab/uwp)
+
+No platform differences.
+
+-----
+
 ## API
 
 - [Launcher source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
