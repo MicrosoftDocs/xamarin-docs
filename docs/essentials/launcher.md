@@ -45,6 +45,11 @@ Calling the `CanOpenAsync` method does not add any delay as it returns immediate
 
 Calling the `CanOpenAsync` method does not add any delay as it returns immediately. The `Result` of that Task is available immediately after the call.
 
+If the destination application on this device has never been opened by your application before, iOS will prompt the user once to allow your app to open it.
+
+More information about this function is available on the [iOS Documentation](https://developer.apple.com/documentation/uikit/uiapplication/1622952-canopenurl)
+
+
 # [UWP](#tab/uwp)
 
 No platform differences.
