@@ -26,24 +26,30 @@ using Xamarin.Essentials;
 In addition to basic device information the **DeviceDisplay** class contains information about the device's screen and orientation.
 
 ```csharp
-// Get Metrics
-var metrics = DeviceDisplay.ScreenMetrics;
+MainThread.BeginInvokeOnMainThread(() =>
+{
+    // Get Metrics
+    var metrics = DeviceDisplay.ScreenMetrics;
 
-// Orientation (Landscape, Portrait, Square, Unknown)
-var orientation = metrics.Orientation;
+    // Orientation (Landscape, Portrait, Square, Unknown)
+    var orientation = metrics.Orientation;
 
-// Rotation (0, 90, 180, 270)
-var rotation = metrics.Rotation;
+    // Rotation (0, 90, 180, 270)
+    var rotation = metrics.Rotation;
 
-// Width (in pixels)
-var width = metrics.Width;
+    // Width (in pixels)
+    var width = metrics.Width;
 
-// Height (in pixels)
-var height = metrics.Height;
+    // Height (in pixels)
+    var height = metrics.Height;
 
-// Screen density
-var density = metrics.Density;
+    // Screen density
+    var density = metrics.Density;
+});
 ```
+
+> [!TIP]
+> **DeviceDisplay.ScreenMetrics** has to be called from the main thread, otherwise a `UIKit.UIKitThreadAccessException` will be thrown on iOS.
 
 The **DeviceDisplay** class also exposes an event that can be subscribed to that is triggered whenever any screen metric changes:
 
