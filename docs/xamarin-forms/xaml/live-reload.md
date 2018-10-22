@@ -21,6 +21,8 @@ Because your app is compiled when using Live Reload, it works with all libraries
 
 Live Reload is currently only available in Visual Studio 2017.
 
+[![Join the chat at https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Requirements
 
 * [Visual Studio 2017 version 15.7 or above](https://visualstudio.microsoft.com/vs/) with the **Mobile development with .NET** workload.
