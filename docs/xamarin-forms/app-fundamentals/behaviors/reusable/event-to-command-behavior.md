@@ -190,4 +190,4 @@ This article demonstrated using a Xamarin.Forms behavior to invoke a command whe
 
 - [EventToCommand Behavior (sample)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
 - [Behavior](xref:Xamarin.Forms.Behavior)
-- [Behavior<T>](xref:Xamarin.Forms.Behavior`1)
+- [Behavior&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

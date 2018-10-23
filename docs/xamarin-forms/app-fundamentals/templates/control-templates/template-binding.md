@@ -151,7 +151,7 @@ public class HomePageCS : ContentPage
 }
 ```
 
-You can also bind to the view model properties directly, so that you don't need to delcare `BindableProperty`s for `HeaderText` and `FooterText` on the `ContentPage`, by binding the control template to Parent.BindingContext._PropertyName_ e.g.:
+You can also bind to the view model properties directly, so that you don't need to declare `BindableProperty`s for `HeaderText` and `FooterText` on the `ContentPage`, by binding the control template to Parent.BindingContext._PropertyName_ e.g.:
 
 ```xaml
 <ControlTemplate x:Key="TealTemplate">
@@ -169,8 +169,6 @@ For more information about data binding to ViewModels, see [From Data Bindings t
 ## Summary
 
 This article demonstrated using template bindings to perform data binding from a control template. Template bindings allow controls in a control template to data bind to public properties, enabling property values on controls in the control template to be easily changed.
-
-
 
 ## Related Links
 

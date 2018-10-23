@@ -33,7 +33,7 @@
 ## [Application Fundamentals](app-fundamentals/index.md)
 ### [Accessibility](app-fundamentals/accessibility/index.md)
 #### [Automation Properties](app-fundamentals/accessibility/automation-properties.md)
-#### [Keyboard Accesssibility](app-fundamentals/accessibility/keyboard.md)
+#### [Keyboard Navigation](app-fundamentals/accessibility/keyboard.md)
 ### [App Class](app-fundamentals/application-class.md)
 ### [App Lifecycle](app-fundamentals/app-lifecycle.md)
 ### [Behaviors](app-fundamentals/behaviors/index.md)

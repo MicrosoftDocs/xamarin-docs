@@ -19,7 +19,7 @@ The [Android accessibility](~/android/app-fundamentals/accessibility.md) and [iO
 
 Xamarin.Forms does not currently have *built-in* support for all of the accessibility APIs available on each of the underlying platforms. However, it does support setting automation properties on user interface elements to support screen reader and navigation assistance tools, which is one of the most important parts of building accessible applications. For more information, see [Automation Properties](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md).
 
-Xamarin.Forms applications can also have the tab order of controls specified, in order to improve usability and accessibility. For more information, see [Keyboard Accessibility](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md).
+Xamarin.Forms applications can also have the tab order of controls specified. For more information, see [Keyboard Navigation](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md).
 
 Other accessibility APIs (such as [PostNotification on iOS](~/ios/app-fundamentals/accessibility.md)) may be better suited to a [`DependencyService`](~/xamarin-forms/app-fundamentals/dependency-service/index.md) or [Custom Renderer](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) implementation. These are not covered in this guide.
 

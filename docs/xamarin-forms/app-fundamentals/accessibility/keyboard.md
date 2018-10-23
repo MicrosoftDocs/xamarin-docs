@@ -1,6 +1,6 @@
 ---
-title: "Keyboard Accessibility"
-description: "Rather than using the default tab sequence, it's sometimes necessary to tune the accessibility of your UI by specifying the tab sequence with a combination of the TabIndex and IsTapStop properties."
+title: "Keyboard Navigation"
+description: "Rather than using the default tab sequence, it's sometimes necessary to tune your UI by specifying the tab sequence with a combination of the TabIndex and IsTapStop properties."
 ms.prod: xamarin
 ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
 ms.technology: xamarin-forms
@@ -9,11 +9,11 @@ ms.author: dabritch
 ms.date: 10/15/2018
 ---
 
-# Keyboard Accessibility in Xamarin.Forms
+# Keyboard Navigation in Xamarin.Forms
 
-Users who use screen readers, or have mobility issues, can have difficulty using applications that don't provide appropriate keyboard access. Xamarin.Forms applications can have an expected tab order specified to improve their usability and accessibility. Specifying a tab order for controls enables keyboard navigation, prepares application pages to receive input in a particular order, and permits screen readers to read focusable elements to the user.
+Some users can have difficulty using applications that don't provide appropriate keyboard access. Specifying a tab order for controls enables keyboard navigation and prepares application pages to receive input in a particular order.
 
-By default, the tab order of controls is the same order in which they are listed in XAML, or programmatically added to a child collection. This order is the order in which the controls will be read by screen readers, and often this default order is the best order. However, the default order is not always the same as the expected order, as shown in the following XAML code example:
+By default, the tab order of controls is the same order in which they are listed in XAML, or programmatically added to a child collection. This order is the order in which the controls will be navigated through with a keyboard, and often this default order is the best order. However, the default order is not always the same as the expected order, as shown in the following XAML code example:
 
 ```xaml
 <Grid>
