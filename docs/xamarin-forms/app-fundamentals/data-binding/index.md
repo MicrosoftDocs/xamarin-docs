@@ -6,7 +6,7 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/16/2018
+ms.date: 10/23/2018
 ---
 
 # Xamarin.Forms Data Binding
@@ -59,6 +59,10 @@ Make data bindings more robust by defining fallback values to use if the binding
 ## [The Command Interface](commanding.md)
 
 Implement the `Command` property with data bindings.
+
+## [Compiled Bindings](compiled-bindings.md)
+
+Use compiled bindings to improve data binding performance.
 
 ## Related Links
 

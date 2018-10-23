@@ -11,7 +11,7 @@ ms.date: 08/16/2018
 
 # Xamarin.Forms Binding Fallbacks
 
-Sometimes data bindings fail, because the binding source can't be resolved, or because the binding succeeds but returns a `null` value. While these scenarios can be handled with value converters, or other additional code, data bindings can be made more robust by defining fallback values to use if the binding process fails. This can be accomplished by defining the [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) and [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) properties in a binding expression. Because these properties reside in the [`BindingBase`](xref:Xamarin.Forms.BindingBase) class, they can be used both with the `Binding` markup extension, and through code.
+Sometimes data bindings fail, because the binding source can't be resolved, or because the binding succeeds but returns a `null` value. While these scenarios can be handled with value converters, or other additional code, data bindings can be made more robust by defining fallback values to use if the binding process fails. This can be accomplished by defining the [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) and [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) properties in a binding expression. Because these properties reside in the [`BindingBase`](xref:Xamarin.Forms.BindingBase) class, they can be used with bindings, compiled bindings, and with the `Binding` markup extension.
 
 > [!NOTE]
 > Use of the [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) and [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) properties in a binding expression is optional.

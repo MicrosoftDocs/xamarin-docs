@@ -73,6 +73,7 @@
 #### [Binding Value Converters](app-fundamentals/data-binding/converters.md)
 #### [Binding Fallbacks](app-fundamentals/data-binding/binding-fallbacks.md)
 #### [The Command Interface](app-fundamentals/data-binding/commanding.md)
+#### [Compiled Bindings](app-fundamentals/data-binding/compiled-bindings.md)
 ### [DependencyService](app-fundamentals/dependency-service/index.md)
 #### [Introduction](app-fundamentals/dependency-service/introduction.md)
 #### [Implementing Text-to-Speech](app-fundamentals/dependency-service/text-to-speech.md)
