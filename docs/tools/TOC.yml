@@ -107,6 +107,8 @@
       items: 
         - name: Introduction to Continuous Integration
           href: ci/intro-to-ci.md
+        - name: DevOps with Xamarin
+          href: ci/devops.md
         - name: Using App Center Build with Xamarin
           href: /appcenter/build/xamarin/
         - name: Using TeamCity with Xamarin

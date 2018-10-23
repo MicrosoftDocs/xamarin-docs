@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
 author: lobrien
 ms.author: laobri
-ms.date: 10/03/2018
+ms.date: 10/23/2018
 ---
 
 # Introduction to Continuous Integration with Xamarin
@@ -15,6 +15,10 @@ ms.date: 10/03/2018
 ## [Introduction To Continuous Integration](~/tools/ci/intro-to-ci.md)
 
 This section covers the different components involved with continuous integration and their relationships. It outlines the continuous integration environments that are discussed in the specific sections below.
+
+## [DevOps with Xamarin](~/tools/ci/devops.md)
+
+This section identifies which DevOps features in Azure and Visual Studio you can expect to work well with a Xamarin project.
 
 ## Working with Continuous Integration Environments
 
