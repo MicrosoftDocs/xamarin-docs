@@ -171,6 +171,14 @@
     {
       "source_path": "docs/xamarin-forms/app-fundamentals/accessibility/setting-accessibility-values.md",
       "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/accessibility/automation-properties"
+    },
+    {
+      "source_path": "docs/tools/workbooks/samples/index.md",
+      "redirect_url": "/xamarin/tools/workbooks/"
+    },
+    {
+      "source_path": "docs/tools/workbooks/samples/tinyrenderer.md",
+      "redirect_url": "/xamarin/tools/workbooks/"
     }
   ]
 }

@@ -42,12 +42,12 @@ download the referenced packages.
 
 There are some known limitations with NuGet package support in Workbooks:
 
-  * Native libraries are supported only on iOS, and only when linked with
-    the managed library.
-  * Packages which depend on `.targets` files or PowerShell scripts will likely
-    fail to work as expected.
-  * To remove or modify a package dependency, edit the workbook's manifest with
-    a text editor. Proper package management is on the way.
+- Native libraries are supported only on iOS, and only when linked with
+  the managed library.
+- Packages which depend on `.targets` files or PowerShell scripts will likely
+  fail to work as expected.
+- To remove or modify a package dependency, edit the workbook's manifest with
+  a text editor. Proper package management is on the way.
 
 ### Xamarin.Forms Support
 
@@ -84,12 +84,12 @@ We've also extended the Markdown block quote syntax slightly to improve presenta
 adding an emoji as the first character in your block quote, you can influence the background
 color of the quote:
 
-- `> [!NOTE]
->` will render as a note with a blue background
-- `> [!IMPORTANT]
->` will render as a warning with a yellow background
-- `> [!WARNING]
->` will render as a problem with a red background
+- `> [!NOTE]`
+    > will render as a note with a blue background
+- `> [!IMPORTANT]`
+    > will render as a warning with a yellow background
+- `> [!WARNING]`
+    > will render as a problem with a red background
 
 You can also link to headers in the Workbook document. We generate anchors for each header,
 with the anchor ID being the header text, processed as follows:
@@ -122,6 +122,7 @@ cells this is a rich-text content editor with a context sensitive
 formatting and authoring toolbar.
 
 ### Buffer
+
 The actual text content of an editor.
 
 ### Compiler Diagnostics
