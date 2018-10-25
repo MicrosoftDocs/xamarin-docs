@@ -93,7 +93,6 @@ The binding support and engine are more similar to the Silverlight implementatio
     - ValidationRules collection
     - XPath
     - XmlNamespaceManager
-- `Binding.Mode` does not support `OneTime`, instead just use `OneWay`.
 
 #### RelativeSource
 

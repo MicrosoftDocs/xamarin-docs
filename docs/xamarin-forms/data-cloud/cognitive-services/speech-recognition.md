@@ -22,7 +22,7 @@ The Microsoft Speech API has two components:
 
 This article focuses on performing speech recognition via the REST API. While the client and service libraries support returning partial results, the REST API can only return a single recognition result, without any partial results.
 
-An API key must be obtained to use the Microsoft Speech API. This can be obtained at [Try Cognitive Services](https://azure.microsoft.com/try/cognitive-services/).
+An API key must be obtained to use the Microsoft Speech API. This can be obtained from the Azure [portal](https://portal.azure.com/). For more information, see [Create a Cognitive Services account in the Azure portal](/azure/cognitive-services/cognitive-services-apis-create-account).
 
 For more information about the Microsoft Speech API, see [Microsoft Speech API Documentation](/azure/cognitive-services/speech/home/).
 

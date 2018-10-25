@@ -6,15 +6,17 @@ ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/23/2018
+ms.date: 10/25/2018
 ---
 
 # Xamarin.Forms Compiled Bindings
 
+_Compiled bindings are resolved more quickly than classic bindings, therefore improving data binding performance in Xamarin.Forms applications._
+
 Data bindings have two main problems:
 
 1. There's no compile-time validation of binding expressions. Instead, bindings are resolved at runtime. Therefore, any invalid bindings aren't detected until runtime when the application doesn't behave as expected or error messages appear.
-1. They aren't cost efficient. Bindings are resolved at runtime using general-purpose object inspection, and the overhead of doing this varies from platform to platform.
+1. They aren't cost efficient. Bindings are resolved at runtime using general-purpose object inspection (reflection), and the overhead of doing this varies from platform to platform.
 
 Compiled bindings improve data binding performance in Xamarin.Forms applications by resolving binding expressions at compile-time rather than runtime. In addition, this compile-time validation of binding expressions enables a better developer troubleshooting experience because invalid bindings are reported as build errors.
 
@@ -26,7 +28,7 @@ The process for using compiled bindings is to:
 > [!NOTE]
 > It's recommended to set the `x:DataType` attribute at the same level in the view hierarchy as the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) is set.
 
-At XAML compile time, any invalid binding expressions will be reported as build errors. However, the XAML compiler will only report a build error for the first invalid binding expression that it encounters. Any valid binding expressions that are defined on the `VisualElement` or its children will be compiled. Compiling a binding expression generates compiled code that will get a value from a property on the *source*, and set it on the property on the *target* that's specified in the markup. In addition, depending on the binding expression, the generated code may observe changes in the value of the *source* property and refresh the *target* property, and may push changes from the *target* back to the *source*.
+At XAML compile time, any invalid binding expressions will be reported as build errors. However, the XAML compiler will only report a build error for the first invalid binding expression that it encounters. Any valid binding expressions that are defined on the `VisualElement` or its children will be compiled, regardless of whether the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) is set in XAML or code. Compiling a binding expression generates compiled code that will get a value from a property on the *source*, and set it on the property on the *target* that's specified in the markup. In addition, depending on the binding expression, the generated code may observe changes in the value of the *source* property and refresh the *target* property, and may push changes from the *target* back to the *source*.
 
 > [!IMPORTANT]
 > Compiled bindings are currently disabled for any binding expressions that define the [`Source`](xref:Xamarin.Forms.Binding.Source) property. This is because the `Source` property is always set using the `x:Reference` markup extension, which can't be resolved at compile time.
@@ -157,10 +159,10 @@ For more information about the `x:Null` markup expression, see [x:Null Markup Ex
 
 Compiled bindings improve data binding performance, with the performance benefit varying. Unit testing reveals that:
 
-- A compiled binding that uses property-change notification is resolved approximately 8 times quicker than a classic binding.
-- A compiled binding that doesn't use property-change notification is resolved approximately 20 times quicker than a classic binding.
-- Setting the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) on a compiled binding that uses property change notification is approximately 5 times quicker than setting the `BindingContext` on a classic binding.
-- Setting the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) on a compiled binding that doesn't use property change notification is approximately 7 times quicker than setting the `BindingContext` on a classic binding.
+- A compiled binding that uses property-change notification (i.e. a `OneWay`, `OneWayToSource`, or `TwoWay` binding) is resolved approximately 8 times quicker than a classic binding.
+- A compiled binding that doesn't use property-change notification (i.e. a `OneTime` binding) is resolved approximately 20 times quicker than a classic binding.
+- Setting the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) on a compiled binding that uses property change notification (i.e. a `OneWay`, `OneWayToSource`, or `TwoWay` binding) is approximately 5 times quicker than setting the `BindingContext` on a classic binding.
+- Setting the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) on a compiled binding that doesn't use property change notification (i.e. a `OneTime` binding) is approximately 7 times quicker than setting the `BindingContext` on a classic binding.
 
 These performance differences can be magnified on mobile devices, dependent upon the platform being used, the version of the operating system being used, and the device on which the application is running.
 
