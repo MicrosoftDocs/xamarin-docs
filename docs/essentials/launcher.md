@@ -39,16 +39,15 @@ public class LauncherTest
 
 # [Android](#tab/android)
 
-Calling the `CanOpenAsync` method does not add any delay as it returns immediately. The `Result` of that Task is available immediately after the call.
+The Task returned from `CanOpenAsync` completes immediately.
 
 # [iOS](#tab/ios)
 
-Calling the `CanOpenAsync` method does not add any delay as it returns immediately. The `Result` of that Task is available immediately after the call.
+If the destination application on this device has never been opened by `OpenAsync` from your application before, iOS will prompt the user once to allow your app to open it.
 
-If the destination application on this device has never been opened by your application before, iOS will prompt the user once to allow your app to open it.
+The Task returned from `CanOpenAsync` completes immediately.
 
-More information about this function is available on the [iOS Documentation](https://developer.apple.com/documentation/uikit/uiapplication/1622952-canopenurl)
-
+More information about the iOS implementation is available [here](https://developer.xamarin.com/api/member/UIKit.UIApplication.CanOpenUrl/p/Foundation.NSUrl/)
 
 # [UWP](#tab/uwp)
 
