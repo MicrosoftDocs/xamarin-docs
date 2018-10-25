@@ -17,13 +17,10 @@ Xamarin Live Reload enables you to **make changes to your XAML and see them refl
 
 Because your app is compiled when using Live Reload, it works with all libraries and third-party controls. Live Reload works on all platforms Xamarin.Forms supports, including Android, iOS, and UWP, and works on all valid deployment targets, including simulators, emulators, and physical devices.
 
-> [!Video https://www.youtube.com/embed/-5WJZpeXlC8]
-
-~~Live Reload is currently only available in Visual Studio 2017.~~
-
-[Live Reload is no longer available.](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
-
-[![Join the chat at https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+> [!NOTE]
+> [The Live Reload Preview has ended](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
+>
+> There is a discussion about this on [![Join the chat at https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Requirements
 
