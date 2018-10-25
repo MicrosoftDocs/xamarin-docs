@@ -19,7 +19,9 @@ Because your app is compiled when using Live Reload, it works with all libraries
 
 > [!Video https://www.youtube.com/embed/-5WJZpeXlC8]
 
-Live Reload is currently only available in Visual Studio 2017.
+~~Live Reload is currently only available in Visual Studio 2017.~~
+
+[Live Reload is no longer available.](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
 
 [![Join the chat at https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
