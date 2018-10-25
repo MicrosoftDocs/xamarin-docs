@@ -35,6 +35,26 @@ public class LauncherTest
 }
 ```
 
+## Platform Differences
+
+# [Android](#tab/android)
+
+The Task returned from `CanOpenAsync` completes immediately.
+
+# [iOS](#tab/ios)
+
+If the destination application on this device has never been opened by `OpenAsync` from your application before, iOS will prompt the user once to allow your app to open it.
+
+The Task returned from `CanOpenAsync` completes immediately.
+
+More information about the iOS implementation is available [here](https://developer.xamarin.com/api/member/UIKit.UIApplication.CanOpenUrl/p/Foundation.NSUrl/)
+
+# [UWP](#tab/uwp)
+
+No platform differences.
+
+-----
+
 ## API
 
 - [Launcher source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
