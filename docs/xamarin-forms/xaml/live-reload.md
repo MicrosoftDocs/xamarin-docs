@@ -1,26 +1,21 @@
 ---
-title: "Live Reload"
+title: "Xamarin Live Reload (Preview)"
 description: "See changes to your XAML reflected live, without requiring another compile and deploy."
 ms.prod: xamarin
 ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
 ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
-ms.date: 05/11/2018
+robots: noindex
+ms.date: 10/26/2018
 ---
 
-# Xamarin Live Reload
-
-![Preview](~/media/shared/preview.png)
-
-Xamarin Live Reload enables you to **make changes to your XAML and see them reflected live, without requiring another compile and deploy**. Any changes made to your XAML will be redeployed on save and reflected on your deploy target.
-
-Because your app is compiled when using Live Reload, it works with all libraries and third-party controls. Live Reload works on all platforms Xamarin.Forms supports, including Android, iOS, and UWP, and works on all valid deployment targets, including simulators, emulators, and physical devices.
+# Xamarin Live Reload (Preview)
 
 > [!NOTE]
-> [The Live Reload Preview has ended](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
->
-> There is a discussion about this on [![Join the chat at https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+> The preview of Xamarin Live Reload has ended, and we want to thank everyone for your feedback and comments. Please read through our [roadmap](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap) for Visual Studio 2019 to learn more about new productivity features that we are working on for Xamarin.Forms. This extension will remain available for Visual Studio 2017, but will not be receiving future updates.
+
+Xamarin Live Reload enables you to **make changes to your XAML and see them reflected live, without requiring another compile and deploy**. Any changes made to your XAML will be redeployed on save and reflected on your deploy target.
 
 ## Requirements
 
@@ -81,7 +76,7 @@ Live Reload works with changes to any XAML file. Changes to C# or adding/removin
 ## Frequently Asked Questions 
 ### Is Xamarin Live Reload available on Visual Studio for Mac? 
 
-The initial preview release of Xamarin Live Reload is only available for Visual Studio 2017. Support for Visual Studio for Mac is planned for a future release.
+No, preview release of Xamarin Live Reload is only available for Visual Studio 2017.
 
 ### Does this work with all libraries, such as Prism? 
 
@@ -89,7 +84,7 @@ Because your app is compiled, Live Reload works with all libraries, such as Pris
 
 ### What changes does Live Reload redeploy? 
 
-Live Reload only applies changes made to XAML or CSS. If you make changes to a C# file, a recompile will be required. Support for reloading C# is planned for a future release.
+Live Reload only applies changes made to XAML or CSS. If you make changes to a C# file, a recompile will be required. 
 
 ### What platforms are supported? 
 
@@ -116,8 +111,8 @@ No. In fact, you can even start all your supported application targets (Android,
 
 * Only supported in Visual Studio.
 * Linking must be set to **Don't Link** or **Link Framework SDKs Only** 
-* Reloading app-wide resources (i.e. **App.xaml** or shared resource dictionaries), app navigation is reset. This will be fixed in the next preview release.
-* Reloading of ContentView currently requires reloading the containing page. This will be fixed in the next preview release.
+* Reloading app-wide resources (i.e. **App.xaml** or shared resource dictionaries), app navigation is reset. 
+* Reloading of ContentView currently requires reloading the containing page.
 * Elements containing AutomationId may cause a reload failure.
 * Editing XAML while debugging UWP may cause a runtime crash. Workaround: Use **Start without Debugging (Ctrl + F5)** instead of **Start Debugging (F5)**.
 
