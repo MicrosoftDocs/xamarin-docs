@@ -79,7 +79,7 @@ That example and several others are shown in the **Path Variations** page:
 
         <Label Text="{Binding Source={x:Reference page},
                               Path=Content.Children[1].Text.Length,
-                              StringFormat='The first Label has {0} characters'}" />
+                              StringFormat='The second Label has {0} characters'}" />
     </StackLayout>
 </ContentPage>
 ```
