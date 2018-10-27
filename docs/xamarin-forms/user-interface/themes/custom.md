@@ -205,7 +205,7 @@ namespace ThemesDemo.Droid
 
         protected override bool CanBeApplied()
         {
-            return Container != null && (int)Android.OS.Build.VERSION.SdkInt >= 21;
+            return Container != null && Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop;
         }
 
         protected override void OnAttachedInternal()
