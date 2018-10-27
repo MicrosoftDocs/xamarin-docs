@@ -17,13 +17,13 @@ The [`Label`](xref:Xamarin.Forms.Label) view is used for displaying text, both s
 
 ## Text decorations
 
-Underline and strikethrough text decorations can be applied to [`Label`](xref:Xamarin.Forms.Label) instances by setting the `Label.TextDecoration` property to one or more `TextDecoration` enumeration members:
+Underline and strikethrough text decorations can be applied to [`Label`](xref:Xamarin.Forms.Label) instances by setting the `Label.TextDecorations` property to one or more `TextDecorations` enumeration members:
 
 - `None`
 - `Underline`
 - `Strikethrough`
 
-The following XAML example demonstrates setting the `Label.TextDecoration` property:
+The following XAML example demonstrates setting the `Label.TextDecorations` property:
 
 ```xaml
 <Label Text="This is underlined text." TextDecorations="Underline"  />
@@ -39,7 +39,7 @@ var strikethroughLabel = new Label { Text = "This is text with strikethrough.", 
 var bothLabel = new Label { Text = "This is underlined text with strikethrough.", TextDecorations = TextDecorations.Underline | TextDecorations.Strikethrough };
 ```
 
-The following screenshots show the `TextDecoration` enumeration members applied to [`Label`](xref:Xamarin.Forms.Label) instances:
+The following screenshots show the `TextDecorations` enumeration members applied to [`Label`](xref:Xamarin.Forms.Label) instances:
 
 ![](label-images/label-textdecorations.png "Labels with Text Decorations")
 
@@ -153,7 +153,7 @@ The `FormattedText` property is of type [`FormattedString`](xref:Xamarin.Forms.F
 - [`Style`](xref:Xamarin.Forms.Span.Style) – the style to apply to the span.
 - [`Text`](xref:Xamarin.Forms.Span.Text) – the text of the span.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – the color for the text in the span.
-- `TextDecoration` - the decorations to apply to the text in the span. For more information, see [Text Decorations](#text-decorations).
+- `TextDecorations` - the decorations to apply to the text in the span. For more information, see [Text Decorations](#text-decorations).
 
 In addition, the [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) property can be used to define a collection of gesture recognizers that will respond to gestures on the [`Span`](xref:Xamarin.Forms.Span).
 
