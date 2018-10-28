@@ -11,8 +11,8 @@ ms.date: 07/19/2018
 
 # Creating Mobile Apps with Xamarin.Forms book
 
-<p><img src="Images/Cover-sml.png" title="Creating Mobile Apps with Xamarin.Forms Book" align="left" />The book 
-<i>Creating Mobile Apps with Xamarin.Forms</i> by Charles Petzold is a guide for learning how to write Xamarin.Forms applications. The only prerequisite is knowlege of the C# programming language. The book provides an extensive exploration into the Xamarin.Forms user interface and also covers animation, MVVM, triggers, behaviors, custom layouts, custom renderers, and much more. 
+<p><img src="images/cover-sml.png" title="Creating Mobile Apps with Xamarin.Forms Book" align="left" />The book 
+<i>Creating Mobile Apps with Xamarin.Forms</i> by Charles Petzold is a guide for learning how to write Xamarin.Forms applications. The only prerequisite is knowledge of the C# programming language. The book provides an extensive exploration into the Xamarin.Forms user interface and also covers animation, MVVM, triggers, behaviors, custom layouts, custom renderers, and much more. 
 
 The book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the [material is outdated](#ways-in-which-the-book-is-outdated), and some topics are no longer entirely correct or complete. 
 
