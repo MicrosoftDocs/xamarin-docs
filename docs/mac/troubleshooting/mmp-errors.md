@@ -18,9 +18,9 @@ E.g. parameters, environment, missing tools.
 
 <a name="MM0000" />
 
-#### MM0000: Unexpected error - Please file a bug report at http://bugzilla.xamarin.com
+#### MM0000: Unexpected error - Please file a bug report at https://github.com/xamarin/xamarin-macios/issues/new
 
-An unexpected error condition occurred. Please [file a bug report](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) with as much information as possible, including:
+An unexpected error condition occurred. Please [file a bug report](https://github.com/xamarin/xamarin-macios/issues/new) with as much information as possible, including:
 
 * Full build logs, with maximum verbosity (e.g. `-v -v -v -v` in the **Additional mmp arguments**);
 * A minimal test case that reproduce the error; and
