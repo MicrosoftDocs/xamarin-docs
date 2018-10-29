@@ -136,7 +136,7 @@ section.
 The [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/)
 type is the foundation for all the Objective-C bindings. Xamarin.iOS types mirror
 two classes of types from the iOS CocoaTouch APIs: the C types (typically
-refered to as CoreFoundation types) and the Objective-C types (these all derive
+referred to as CoreFoundation types) and the Objective-C types (these all derive
 from the NSObject class).
 
 For each type that mirrors an unmanaged type, it is possible to obtain
