@@ -67,7 +67,7 @@ performance reasons this is the default setting when your IDE targets
 for the iOS simulator. For devices builds this should only be used as
 a workaround whenever the linker contains a bug that prevents your
 application to run. If your application only works with *-nolink*,
-please submit a [bug report](http://bugzilla.xamarin.com).
+please submit a [bug report](https://github.com/xamarin/xamarin-macios/issues/new).
 
 This corresponds to the *-nolink* option when using the command-line
 tool mtouch.
