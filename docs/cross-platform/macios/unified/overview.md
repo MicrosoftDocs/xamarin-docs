@@ -333,7 +333,7 @@ It also allowed some API to be more precise and easy to use, e.g.:
 
     public virtual void SelectionDidChange (IUITextInput uiTextInput);
 
-Such API are now easier to us, without refering to documentation, and your IDE code completion will provide you with more useful suggestions based on the protocol/interface.
+Such API are now easier to us, without referring to documentation, and your IDE code completion will provide you with more useful suggestions based on the protocol/interface.
 
 #### NSCoding Protocol
 
