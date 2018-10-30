@@ -209,7 +209,7 @@ The following error will appear in the **Application Output** if you try to
 launch to a simulator that does not have a paired watch:
 
 ```csharp
-error MT0000: Unexpected error - Please file a bug report at http://bugzilla.xamarin.com
+error MT0000: Unexpected error - Please file a bug report at https://github.com/xamarin/xamarin-macios/issues/new
 error HE0020: Could not find a paired Watch device for the iOS device 'iPhone 6'.
 ```
 

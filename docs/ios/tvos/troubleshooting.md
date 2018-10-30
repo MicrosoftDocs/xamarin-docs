@@ -27,7 +27,7 @@ The current release of Xamarin's tvOS support has the following known issues:
 	- **Potential Workaround** – Downgrade the Mono framework version available in our Stable channel.
 - **Xamarin Visual Studio & Xamarin.iOS** – When deploying WatchKit applications in Visual studio, the error `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist` may appear.
 
-Please report any bugs you find to [Bugzilla](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Please report any bugs you find on [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 ## Troubleshooting
 
