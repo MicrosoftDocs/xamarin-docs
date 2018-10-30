@@ -36,7 +36,7 @@ code and a locale code, separated by an underscore. For reference, here is a [li
 
 Common examples include:
 
-* `en_US` for English (United Statees)
+* `en_US` for English (United States)
 * `es_ES` for Spanish (Spain)
 * `ja_JP` for Japanese (Japan)
 * `zh_CN` for Chinese (China)
