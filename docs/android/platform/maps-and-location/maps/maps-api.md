@@ -14,7 +14,7 @@ ms.date: 09/07/2018
 Using the Maps application is great, but sometimes you want to include
 maps directly in your application. In addition to the built-in maps
 application, Google also offers a
-[native mapping API for Android](hhttps://developers.google.com/maps/documentation/android-sdk/intro).
+[native mapping API for Android](https://developers.google.com/maps/documentation/android-sdk/intro).
 The Maps API is suitable for cases where you want to maintain more
 control over the mapping experience. Things that are possible with the
 Maps API include:
