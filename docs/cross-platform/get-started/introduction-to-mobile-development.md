@@ -117,12 +117,12 @@ The next step is to start building the app using one of these guides:
 
 * [**Hello, iOS**](~/ios/get-started/hello-ios/index.md)
 
-![](introduction-to-mobile-development-images/ios.png "Hello, iOS")
+![](https://github.com/MicrosoftDocs/xamarin-docs/blob/live/docs/cross-platform/get-started/introduction-to-mobile-development-images/ios.png "Hello, iOS")
 
 
 * [**Hello, Android**](~/android/get-started/hello-android/index.md)
 
-![](introduction-to-mobile-development-images/android.png "Hello, Android")
+![](https://github.com/MicrosoftDocs/xamarin-docs/blob/live/docs/cross-platform/get-started/introduction-to-mobile-development-images/android.png "Hello, Android")
 
 
 * [**Introduction to Xamarin.Forms**](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
