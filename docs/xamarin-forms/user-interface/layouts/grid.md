@@ -17,12 +17,12 @@ ms.date: 10/26/2017
 
 This article will cover:
 
-- **[Purpose](#Purpose)** &ndash; common uses for `Grid`.
-- **[Usage](#Usage)** &ndash; how to use `Grid` to achieve your desired design.
-  - **[Rows and Columns](#Rows_and_Columns)** &ndash; specify rows and columns for the `Grid`.
-  - **[Placing Views](#Placing_Views)** &ndash; add views to the grid at specific rows and columns.
-  - **[Spacing](#Spacing)** &ndash; configure the spaces between rows and columns.
-  - **[Spans](#Spans)** &ndash; configure elements to span across multiple rows or columns.
+- **[Purpose](#purpose)** &ndash; common uses for `Grid`.
+- **[Usage](#usage)** &ndash; how to use `Grid` to achieve your desired design.
+  - **[Rows and Columns](#rows-and-columns)** &ndash; specify rows and columns for the `Grid`.
+  - **[Placing Views](#placing-views-in-a-grid)** &ndash; add views to the grid at specific rows and columns.
+  - **[Spacing](#spacing)** &ndash; configure the spaces between rows and columns.
+  - **[Spans](#spans)** &ndash; configure elements to span across multiple rows or columns.
 
 ![](grid-images/grid.png "Grid Exploration")
 
@@ -37,8 +37,6 @@ This article will cover:
 ## Usage
 
 Unlike traditional tables, `Grid` does not infer the number and sizes of rows and columns from the content. Instead, `Grid` has `RowDefinitions` and `ColumnDefinitions` collections. These hold definitions of how many rows and columns will be laid out. Views are added to `Grid` with specified row and column indices, which identify which row and column a view should be placed in.
-
-<a name="Rows_and_Columns" />
 
 ### Rows and Columns
 
@@ -78,8 +76,6 @@ grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUni
 grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength(200)});
 grid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (200) });
 ```
-
-<a name="Placing_Views" />
 
 ### Placing Views in a Grid
 
