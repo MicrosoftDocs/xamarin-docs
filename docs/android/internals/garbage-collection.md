@@ -240,7 +240,7 @@ collect the data for benchmarking:
 
 To specify which `GC_BRIDGE` option an application should us, pass 
 `bridge-implementation=old`, `bridge-implementation=new` or 
-`bridge-implementation=tarjan` to the `MONO_GC_PARAMS` enviroment 
+`bridge-implementation=tarjan` to the `MONO_GC_PARAMS` environment 
 variable, for example: 
 
 ```shell
