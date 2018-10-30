@@ -17,12 +17,12 @@ ms.date: 10/26/2017
 
 This article will cover:
 
-- **[Purpose](#Purpose)** &ndash; common uses for `Grid`.
-- **[Usage](#Usage)** &ndash; how to use `Grid` to achieve your desired design.
+- **[Purpose](#purpose)** &ndash; common uses for `Grid`.
+- **[Usage](#usage)** &ndash; how to use `Grid` to achieve your desired design.
   - **[Rows and Columns](#Rows_and_Columns)** &ndash; specify rows and columns for the `Grid`.
   - **[Placing Views](#Placing_Views)** &ndash; add views to the grid at specific rows and columns.
-  - **[Spacing](#Spacing)** &ndash; configure the spaces between rows and columns.
-  - **[Spans](#Spans)** &ndash; configure elements to span across multiple rows or columns.
+  - **[Spacing](#spacing)** &ndash; configure the spaces between rows and columns.
+  - **[Spans](#spans)** &ndash; configure elements to span across multiple rows or columns.
 
 ![](grid-images/grid.png "Grid Exploration")
 
