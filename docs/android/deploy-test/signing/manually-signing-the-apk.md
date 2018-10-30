@@ -68,7 +68,7 @@ The only solution to the problem caused by a lost keystore would be to
 create a new keystore, re-sign the APK with the new key, and then
 submit a new application. Then the old application would have to be
 removed from Google Play. Likewise, if this new keystore is compromised
-or publically distributed, then it is possible for unofficial or
+or publicly distributed, then it is possible for unofficial or
 malicious versions of an application to be distributed.
 
 
