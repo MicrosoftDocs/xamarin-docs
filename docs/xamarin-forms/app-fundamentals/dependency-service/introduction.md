@@ -37,7 +37,7 @@ The structure of the application is explained by the following diagram:
 
 ### Interface
 
-The interface you design will define how you interact with platform-specific functionality. Be careful if you are developing a component to be shared as a component or Nuget package. API design can make or break a package. The example below specifies a simple interface for speaking text that allows for flexibility in specifying the words to be spoken but leaves the implementation to be customized for each platform:
+The interface you design will define how you interact with platform-specific functionality. Be careful if you are developing a component to be shared as a component or NuGet package. API design can make or break a package. The example below specifies a simple interface for speaking text that allows for flexibility in specifying the words to be spoken but leaves the implementation to be customized for each platform:
 
 ```csharp
 public interface ITextToSpeech {

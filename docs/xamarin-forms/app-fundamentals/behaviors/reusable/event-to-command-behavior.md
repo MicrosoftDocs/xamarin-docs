@@ -20,7 +20,7 @@ The `EventToCommandBehavior` class is a reusable Xamarin.Forms custom behavior t
 The following behavior properties must be set to use the behavior:
 
 - **EventName** – the name of the event the behavior listens to.
-- **Command** – the **ICommand** to be executed. The behavior expects to find the `ICommand` instance on the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the attached control, which may be inherited from a parent element.
+- **Command** – the `ICommand` to be executed. The behavior expects to find the `ICommand` instance on the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the attached control, which may be inherited from a parent element.
 
 The following optional behavior properties can also be set:
 

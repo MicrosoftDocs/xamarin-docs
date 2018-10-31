@@ -35,13 +35,12 @@ Messages have a string `message` parameter that is used as way to *address* mess
 
 The API for `MessagingCenter` is simple:
 
--  Subscribe&lt;TSender> (object subscriber, string message, Action&lt;TSender> callback, TSender source = null)
--  Subscribe&lt;TSender, TArgs> (object subscriber, string message, Action&lt;TSender, TArgs> callback, TSender source = null)
--  Send&lt;TSender> (TSender sender, string message)
--  Send&lt;TSender, TArgs> (TSender sender, string message, TArgs args)
--  Unsubscribe&lt;TSender, TArgs> (object subscriber, string message)
--  Unsubscribe&lt;TSender> (object subscriber, string message)
-
+- `Subscribe<TSender> (object subscriber, string message, Action<TSender> callback, TSender source = null)`
+- `Subscribe<TSender, TArgs> (object subscriber, string message, Action<TSender, TArgs> callback, TSender source = null)`
+- `Send<TSender> (TSender sender, string message)`
+- `Send<TSender, TArgs> (TSender sender, string message, TArgs args)`
+- `Unsubscribe<TSender, TArgs> (object subscriber, string message)`
+- `Unsubscribe<TSender> (object subscriber, string message)`
 
 These methods are explained below.
 

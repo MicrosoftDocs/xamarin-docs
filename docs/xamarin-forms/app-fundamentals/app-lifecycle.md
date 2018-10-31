@@ -31,7 +31,7 @@ The [`Application`](xref:Xamarin.Forms.Application) class contains three virtual
 * **OnResume** - Called when the application is resumed, after being sent to the background.
 
 Note that there is *no* method for application termination.
-  Under normal circumstances (ie. not a crash) application
+  Under normal circumstances (i.e. not a crash) application
   termination will happen from the *OnSleep* state, without
   any additional notifications to your code.
 
@@ -90,7 +90,7 @@ There are four events on the [`Application`](xref:Xamarin.Forms.Application) cla
 > [!NOTE]
 > To implement the application lifecycle methods and modal navigation events,
 > all pre-`Application` methods
-> of creating a Xamarin.Forms app (ie. applications written in version
+> of creating a Xamarin.Forms app (i.e. applications written in version
 > 1.2 or older that use a static `GetMainPage` method)
 > have been updated to create a default `Application` which is
 > set as the parent of `MainPage`.

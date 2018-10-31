@@ -89,7 +89,7 @@ However, including the class name is a good reminder of the target object.
 
 As you manipulate the `Slider`, the `Label` rotates accordingly:
 
-[![Basice Code Binding](basic-bindings-images/basiccodebinding-small.png "Basic Code Binding")](basic-bindings-images/basiccodebinding-large.png#lightbox "Basic Code Binding")
+[![Basic Code Binding](basic-bindings-images/basiccodebinding-small.png "Basic Code Binding")](basic-bindings-images/basiccodebinding-large.png#lightbox "Basic Code Binding")
 
 The **Basic Xaml Binding** page is identical to **Basic Code Binding** except that it defines the entire data binding in XAML:
 
