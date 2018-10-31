@@ -51,7 +51,7 @@ One-way communication occurs when a client creates a `Message` object and dispat
 This guide will discuss the details of implementing an out-of-process service. It will discuss how to implement a service that is meant to run in its own process and how a client may communicate with that service using the `Messenger` framework. It will also briefly discuss two-way communication: the client sending a message to a service and the service sending a message back to the client. Because services can be shared between different applications, this guide will also discuss one technique for limiting client access to the service by using Android permissions.
 
 > [!IMPORTANT]
-> [Bugzilla 51940 - Services with isolated processes and custom Application class fail to resolve overloads properly](https://bugzilla.xamarin.com/show_bug.cgi?id=51940) reports that a Xamarin.Android service will not start up properly when the `IsolatedProcess` is set to `true`. This guide is provided for a reference. A Xamarin.Android application should still be able to communicate with an out-of-process service that is written in Java.
+> [Bugzilla 51940/GitHub 1950 - Services with isolated processes and custom Application class fail to resolve overloads properly](https://github.com/xamarin/xamarin-android/issues/1950) reports that a Xamarin.Android service will not start up properly when the `IsolatedProcess` is set to `true`. This guide is provided for a reference. A Xamarin.Android application should still be able to communicate with an out-of-process service that is written in Java.
 
 ## Requirements
 
