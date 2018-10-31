@@ -834,7 +834,7 @@ With all of the above code in place, if the following collection of `LanguageFor
 
 ```csharp
 // Define formatting commands
-FormattingCommands.Add(new LanguageFormatCommand("Stong","**","**"));
+FormattingCommands.Add(new LanguageFormatCommand("Strong","**","**"));
 FormattingCommands.Add(new LanguageFormatCommand("Emphasize","_","_"));
 FormattingCommands.Add(new LanguageFormatCommand("Inline Code","`","`"));
 FormattingCommands.Add(new LanguageFormatCommand("Code Block","```\n","\n```"));
@@ -856,8 +856,8 @@ FormattingCommands.Add (Headings);
 
 FormattingCommands.Add(new LanguageFormatCommand ());
 FormattingCommands.Add(new LanguageFormatCommand("Link","[","]()"));
-FormattingCommands.Add(new LanguageFormatCommand("Image","![]("-")"));
-FormattingCommands.Add(new LanguageFormatCommand("Image Link","[ ![]("-")](linkimagehere/index.md)"));
+FormattingCommands.Add(new LanguageFormatCommand("Image","![](",")"));
+FormattingCommands.Add(new LanguageFormatCommand("Image Link","[ ![](",")](LinkImageHere)"));
 ```
 
 And that collection passed to the `AssembleMenu` function (with the **Format** Menu set as the base), the following dynamic menus and menu items would be created:
