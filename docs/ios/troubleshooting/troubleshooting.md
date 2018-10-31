@@ -7,7 +7,7 @@ ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 05/22/0201
+ms.date: 05/22/2018
 ---
 
 # Troubleshooting Tips for Xamarin.iOS 
