@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **Compass** class lets you monitor the device's magnetic north heading.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Compass
 
 Add a reference to Xamarin.Essentials in your class:

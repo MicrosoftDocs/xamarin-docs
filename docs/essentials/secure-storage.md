@@ -13,7 +13,9 @@ ms.date: 05/04/2018
 
 The **SecureStorage** class helps securely store simple key/value pairs.
 
-## Getting Started
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
 
 To access the **SecureStorage** functionality, the following platform-specific setup is required:
 

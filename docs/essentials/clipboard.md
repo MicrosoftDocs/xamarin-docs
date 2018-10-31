@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **Clipboard** class lets you copy and paste text to the system clipboard between applications.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Clipboard
 
 Add a reference to Xamarin.Essentials in your class:

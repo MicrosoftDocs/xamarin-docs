@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **PhoneDialer** class enables an application to open a phone number in the dialer.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Phone Dialer
 
 Add a reference to Xamarin.Essentials in your class:

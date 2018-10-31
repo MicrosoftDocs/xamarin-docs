@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **Accelerometer** class lets you monitor the device's accelerometer sensor, which indicates the acceleration of the device in three-dimensional space.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Accelerometer
 
 Add a reference to Xamarin.Essentials in your class:

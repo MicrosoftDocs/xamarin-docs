@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **Preferences** class helps to store application preferences in a key/value store.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Preferences
 
 Add a reference to Xamarin.Essentials in your class:

@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **DataTransfer** class enables an application to share data such as text and web links to other applications on the device.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Data Transfer
 
 Add a reference to Xamarin.Essentials in your class:

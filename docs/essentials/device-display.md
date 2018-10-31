@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **DeviceDisplay** class provides information about the device's screen metrics the application is running on.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using DeviceDisplay
 
 Add a reference to Xamarin.Essentials in your class:
@@ -63,6 +67,23 @@ public class ScreenMetricsTest
     }
 }
 ```
+
+## Platform Differences
+
+# [Android](#tab/android)
+
+No differences.
+
+# [iOS](#tab/ios)
+
+* Accessing `ScreenMetrics` must be done on the UI thread or else an exception will be thrown. You can use the [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) method to run that code on the UI thread.
+
+# [UWP](#tab/uwp)
+
+No differences.
+
+--------------
+
 
 ## API
 

@@ -19,6 +19,10 @@ Most operating systems — including iOS, Android, and the Universal Windows Pla
 
 Applications sometimes need to use events that call the event handler on a secondary thread of execution. (The Xamarin.Essentials classes [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md), and [`OrientationSensor`](orientation-sensor.md) all might return information on a secondary thread when used with faster speeds.) If the event handler needs to access user-interface elements, it must run that code on the main thread. The **MainThread** class allows the application to run this code on the main thread.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Running Code on the Main Thread
 
 Add a reference to Xamarin.Essentials in your class:

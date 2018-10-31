@@ -13,6 +13,10 @@ ms.date: 07/25/2018
 
 The **Launcher** class enables an application to open a URI by the system. This is often used when deep linking into another application's custom URI schemes. If you are looking to open the browser to a website then you should refer to the **[Browser](open-browser.md)** API.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Launcher
 
 Add a reference to Xamarin.Essentials in your class:

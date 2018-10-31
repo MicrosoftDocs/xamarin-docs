@@ -13,7 +13,9 @@ ms.date: 05/04/2018
 
 The **Connectivity** class lets you monitor for changes in the device's network conditions, check the current network access, and how it is currently connected.
 
-## Getting Started
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
 
 To access the **Connectivity** functionality the following platform specific setup is required.
 

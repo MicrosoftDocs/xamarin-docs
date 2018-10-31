@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **DeviceInfo** class provides information about the device the application is running on.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using DeviceInfo
 
 Add a reference to Xamarin.Essentials in your class:

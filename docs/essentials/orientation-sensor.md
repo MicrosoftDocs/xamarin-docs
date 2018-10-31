@@ -15,6 +15,10 @@ The **OrientationSensor** class lets you monitor the orientation of a device in 
 > [!NOTE]
 > This class is for determining the orientation of a device in 3D space. If you need to determine if the device's video display is in portrait or landscape mode, use the `Orientation` property of the `ScreenMetrics` object available from the [`DeviceDisplay`](device-display.md) class.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using OrientationSensor
 
 Add a reference to Xamarin.Essentials in your class:

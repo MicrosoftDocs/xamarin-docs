@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **FileSystem** class contains a series of helpers to find the application's cache and data directories and open files inside of the app package.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using File System Helpers
 
 Add a reference to Xamarin.Essentials in your class:

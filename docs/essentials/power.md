@@ -19,6 +19,10 @@ Devices that run on batteries can be put into a low-power energy-saver mode. Som
 
 For Android devices, the **Power** class returns meaningful information only for Android version 5.0 (Lollipop) and above.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using the Power class
 
 Add a reference to Xamarin.Essentials in your class:

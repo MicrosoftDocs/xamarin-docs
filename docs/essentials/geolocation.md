@@ -13,7 +13,9 @@ ms.date: 05/04/2018
 
 The **Geolocation** class provides APIs to retrieve the device's current geolocation coordinates.
 
-## Getting Started
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
 
 To access the **Geolocation** functionality, the following platform-specific setup is required:
 

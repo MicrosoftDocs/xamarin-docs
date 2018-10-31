@@ -13,7 +13,9 @@ ms.date: 05/04/2018
 
 The **Flashlight** class has the ability to turn on or off the device's camera flash to turn it into a flashlight.
 
-## Getting Started
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
 
 To access the **Flashlight** functionality the following platform specific setup is required.
 

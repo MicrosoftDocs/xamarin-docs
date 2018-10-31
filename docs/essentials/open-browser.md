@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **Browser** class enables an application to open a web link in the optimized system preferred browser or the external browser.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Browser
 
 Add a reference to Xamarin.Essentials in your class:

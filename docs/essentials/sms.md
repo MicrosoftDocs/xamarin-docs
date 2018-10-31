@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **Sms** class enables an application to open the default SMS application with a specified message to send to a recipient.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Sms
 
 Add a reference to Xamarin.Essentials in your class:

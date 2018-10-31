@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **ScreenLock** class can request to keep the screen from falling asleep when the application is running.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using ScreenLock
 
 Add a reference to Xamarin.Essentials in your class:

@@ -13,6 +13,10 @@ ms.date: 07/25/2018
 
 The **Maps** class enables an application to open the installed maps application to a specific location or placemark.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Maps
 
 Add a reference to Xamarin.Essentials in your class:

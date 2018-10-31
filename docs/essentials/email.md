@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **Email** class enables an application to open the default email application with a specified information including subject, body, and recipients (TO, CC, BCC).
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Email
 
 Add a reference to Xamarin.Essentials in your class:

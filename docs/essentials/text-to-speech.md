@@ -13,6 +13,10 @@ ms.date: 08/30/2018
 
 The **TextToSpeech** class enables an application to utilize the built-in text-to-speech engines to speak back text from the device and also to query available languages that the engine can support.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Text-to-Speech
 
 Add a reference to Xamarin.Essentials in your class:

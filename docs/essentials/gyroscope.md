@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **Gyroscope** class lets you monitor the device's gyroscope sensor which is the rotation around the device's three primary axes.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Gyroscope
 
 Add a reference to Xamarin.Essentials in your class:

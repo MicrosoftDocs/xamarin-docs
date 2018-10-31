@@ -13,6 +13,10 @@ ms.date: 08/16/2018
 
 The **Barometer** class lets you monitor the device's barometer sensor, which measures pressure.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Barometer
 
 Add a reference to Xamarin.Essentials in your class:

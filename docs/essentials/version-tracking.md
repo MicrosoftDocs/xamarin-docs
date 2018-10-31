@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **VersionTracking** class lets you check the applications version and build numbers along with seeing additional information such as if it is the first time the application launched ever or for the current version, get the previous build information, and more.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using Version Tracking
 
 Add a reference to Xamarin.Essentials in your class:

@@ -13,6 +13,10 @@ ms.date: 05/04/2018
 
 The **AppInfo** class provides information about your application.
 
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
+
 ## Using AppInfo
 
 Add a reference to Xamarin.Essentials in your class:

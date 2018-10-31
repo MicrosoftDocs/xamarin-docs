@@ -13,7 +13,9 @@ ms.date: 05/04/2018
 
 The **Battery** class lets you check the device's battery information and monitor for changes.
 
-## Getting Started
+## Get started
+
+[!include[](~/essentials/includes/get-started.md)]
 
 To access the **Battery** functionality the following platform specific setup is required.
 
