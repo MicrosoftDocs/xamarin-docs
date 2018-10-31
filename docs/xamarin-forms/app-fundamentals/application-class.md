@@ -224,7 +224,7 @@ The main page in the UWP project should inherit from `WindowsPage`:
 </forms:WindowsPage>
 ```
 
-The C# codebehind's construction must call `LoadApplication` to create an
+The C# code behind construction must call `LoadApplication` to create an
 instance of your Xamarin.Forms `App`. Note that it is good practice to
 explicitly use the application namespace to qualify the `App` because UWP applications
 also have their own `App` class unrelated to Xamarin.Forms.

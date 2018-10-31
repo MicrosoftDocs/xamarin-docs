@@ -41,7 +41,7 @@ blank database file and then to instantiate `SqliteCommand` objects
 that we can use to execute SQL instructions against the database.
 
 **Creating a Blank Database** &ndash; Call the `CreateFile` method
-with a valid (ie. writeable) file path. You should check whether
+with a valid (i.e. writeable) file path. You should check whether
 the file already exists before calling this method, otherwise a new
 (blank) database will be created over the top of the old one, and
 the data in the old file will be lost.
@@ -173,7 +173,7 @@ public static string DoSomeDataAccess ()
 Because SQLite allows arbitrary SQL commands to be run against the
 data, you can perform whatever `CREATE`, `INSERT`, `UPDATE`, `DELETE`,
 or `SELECT` statements you like. You can read about the SQL commands
-supported by SQLite at the Sqlite website. The SQL statements are 
+supported by SQLite at the SQLite website. The SQL statements are 
 run using one of three methods on an `SqliteCommand` object:
 
 -   **ExecuteNonQuery** &ndash; Typically used for table creation or data
