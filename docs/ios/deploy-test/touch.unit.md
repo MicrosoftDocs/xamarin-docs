@@ -16,9 +16,7 @@ Unit testing with Xamarin.iOS is done using the Touch.Unit framework that includ
 both an iOS test runner as well as a modified version of NUnit called [Touch.Unit](https://github.com/xamarin/Touch.Unit) that
 provides a familiar set of APIs for writing unit tests.
 
-## Setting up a Test Project
-
-# [Visual Studio for Mac](#tab/macos)
+## Setting up a test project in Visual Studio for Mac
 
 To setup a unit testing framework for your project, all you need to do is to
 add to your solution a project of type **iOS Unit Tests Project**. Do this
@@ -28,30 +26,11 @@ list select **iOS > Tests > Unified API > iOS Unit Tests Project**
 
 ![](touch.unit-images/00.png "Choose either C# or F#")
 
-# [Visual Studio](#tab/windows)
-
-To setup a unit testing framework for your project, all you need to do is to
-add to your solution a project of type **iOS Unit Tests Project**. Do this
-by right-clicking on your solution and selecting **Add > New Project...**. From the
-list select **Visual C# > iOS > Unit Test App (iOS)**.
-
-![](touch.unit-images/00a.png "Unit Test App iOS")
-
------
-
 The above will create a basic project that contains a basic runner program
 and which references the new MonoTouch.NUnitLite assembly, your project will
 look like this:
 
-# [Visual Studio for Mac](#tab/macos)
-
 ![](touch.unit-images/01.png "The project in the Solution Explorer")
-
-# [Visual Studio](#tab/windows)
-
-![](touch.unit-images/01a.png "The project in the Solution Explorer")
-
------
 
 The `AppDelegate.cs` class contains the test runner, and it looks like
 this:
@@ -60,27 +39,30 @@ this:
 [Register ("AppDelegate")]
 public partial class AppDelegate : UIApplicationDelegate
 {
-        UIWindow window;
-        TouchRunner runner;
+    UIWindow window;
+    TouchRunner runner;
 
-        public override bool FinishedLaunching (UIApplication app, NSDictionary options)
-        {
-                // create a new window instance based on the screen size
-                window = new UIWindow (UIScreen.MainScreen.Bounds);
-                runner = new TouchRunner (window);
+    public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+    {
+        // create a new window instance based on the screen size
+        window = new UIWindow (UIScreen.MainScreen.Bounds);
+        runner = new TouchRunner (window);
 
-                // register every tests included in the main application/assembly
-                runner.Add (System.Reflection.Assembly.GetExecutingAssembly ());
+        // register every tests included in the main application/assembly
+        runner.Add (System.Reflection.Assembly.GetExecutingAssembly ());
 
-                window.RootViewController = new UINavigationController (runner.GetViewController ());
+        window.RootViewController = new UINavigationController (runner.GetViewController ());
 
-                // make the window visible
-                window.MakeKeyAndVisible ();
+        // make the window visible
+        window.MakeKeyAndVisible ();
 
-                return true;
-        }
+        return true;
+    }
 }
 ```
+
+> [!NOTE]
+> The iOS Unit Test project type is not available in Visual Studio 2017 on Windows.
 
 ## Writing Some Tests
 
@@ -102,28 +84,28 @@ using NUnit.Framework;
 
 namespace Fixtures {
 
-        [TestFixture]
-        public class Tests {
+    [TestFixture]
+    public class Tests {
 
-                [Test]
-                public void Pass ()
-                {
-                        Assert.True (true);
-                }
-
-                [Test]
-                public void Fail ()
-                {
-                        Assert.False (true);
-                }
-
-                [Test]
-                [Ignore ("another time")]
-                public void Ignore ()
-                {
-                        Assert.True (false);
-                }
+        [Test]
+        public void Pass ()
+        {
+                Assert.True (true);
         }
+
+        [Test]
+        public void Fail ()
+        {
+                Assert.False (true);
+        }
+
+        [Test]
+        [Ignore ("another time")]
+        public void Ignore ()
+        {
+                Assert.True (false);
+        }
+    }
 }
 ```
 
@@ -135,11 +117,10 @@ or **Run Item**.
 The test runner allows you to see which tests are registered and select
 individually which tests can be executed.
 
-[![](touch.unit-images/02.png "The list of registered tests")](touch.unit-images/02.png#lightbox) 
+[![](touch.unit-images/02-sml.png "The list of registered tests")](touch.unit-images/02.png#lightbox) 
+[![](touch.unit-images/03-sml.png "An individual text")](touch.unit-images/03.png#lightbox) 
 
-[![](touch.unit-images/03.png "An individual text")](touch.unit-images/03.png#lightbox) 
-
-[![](touch.unit-images/04.png "The run results")](touch.unit-images/04.png#lightbox)
+[![](touch.unit-images/04-sml.png "The run results")](touch.unit-images/04.png#lightbox)
 
 You can run individual test fixtures by selecting the text fixture from the
 nested views, or you can run all of your tests with "Run Everything". If you run
@@ -148,7 +129,7 @@ one ignored test. This is what the report looks like, and you can drill down
 directly to the failing tests and find out more information about the
 failure:
 
-[![](touch.unit-images/05.png "A sample report")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "A sample report")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "A sample report")](touch.unit-images/05.png#lightbox)
+[![](touch.unit-images/05-sml.png "A sample report")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/06-sml.png "A sample report")](touch.unit-images/06.png#lightbox) [![](touch.unit-images/07-sml.png "A sample report")](touch.unit-images/07.png#lightbox)
 
 You can also look at the Application Output window in your IDE to see
 which tests are being executed and their current status.
@@ -167,12 +148,7 @@ main entry point are the [Assert class](https://developer.xamarin.com/api/type/N
 In addition to the assert class methods, the unit testing functionality is
 split on the following namespaces that are part of NUnitLite:
 
--   [NUnit.Framework](https://developer.xamarin.com/api/namespace/NUnit.Framework/)
--   [NUnit.Constraints](https://developer.xamarin.com/api/namespace/NUnit.Framework.Constraints/)
--   [NUnitLite](https://developer.xamarin.com/api/namespace/NUnitLite/)
--   [NUniteLite.Runner](https://developer.xamarin.com/api/namespace/NUnitLite.Runner/)
-
-
-The Xamarin.iOS-specific unit test runner is documented here:
-
--   [NUnit.UI.TouchRunner](https://developer.xamarin.com/api/type/NUnit.UI.TouchRunner/)
+- [NUnit.Framework](https://developer.xamarin.com/api/namespace/NUnit.Framework/)
+- [NUnit.Constraints](https://developer.xamarin.com/api/namespace/NUnit.Framework.Constraints/)
+- [NUnitLite](https://developer.xamarin.com/api/namespace/NUnitLite/)
+- [NUniteLite.Runner](https://developer.xamarin.com/api/namespace/NUnitLite.Runner/)
