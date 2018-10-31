@@ -1138,7 +1138,7 @@ conditionally call `SetCategory` when the API level is equal to or
 greater than Android 5.0 (API level 21):
 
 ```csharp
-if ((int) Android.OS.Build.Version.SdkInt >= BuildVersionCodes.Lollipop) {
+if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
     builder.SetCategory (Notification.CategoryEmail);
 }
 ```
@@ -1160,7 +1160,7 @@ can check the API level at runtime and call `SetVisiblity` only when it
 is available:
 
 ```csharp
-if ((int) Android.OS.Build.Version.SdkInt >= 21) {
+if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
     builder.SetVisibility (Notification.Public);
 }
 ```
