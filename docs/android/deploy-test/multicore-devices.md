@@ -13,7 +13,6 @@ ms.date: 02/05/2018
 
 _Android can run on several different computer architectures. This document discusses the different CPU architectures that may be employed for a Xamarin.Android application. This document will also explain how Android applications are packaged to support different CPU architectures. The Application Binary Interface (ABI) will be introduced, and guidance will be provided regarding which ABIs to use in a Xamarin.Android application._
 
-
 ## Overview
 
 Android allows for the creation of "fat binaries," a single `.apk`
@@ -29,25 +28,23 @@ Specifically, each Android application will support at least one
 specific to embedded software programs. A typical EABI will describe
 things such as:
 
--   The CPU instruction set.
+- The CPU instruction set.
 
--   The endianness of memory stores and loads at run time.
+- The endianness of memory stores and loads at run time.
 
--   The binary format of object files and program libraries, as well as
+- The binary format of object files and program libraries, as well as
     which type of content is allowed or supported in these files and
     libraries.
 
--   The various conventions used to pass data between application code
+- The various conventions used to pass data between application code
     and the system (for example: how registers and/or the stack are
     used when functions are called, alignment constraints, etc.)
 
--   Alignment and size constraints for enum types, structures, fields,
+- Alignment and size constraints for enum types, structures, fields,
     and arrays.
 
--   The list of function symbols available to your machine code at run
+- The list of function symbols available to your machine code at run
     time, generally from a very specific selected set of libraries.
-
-
 
 ### armeabi and Thread Safety
 
@@ -65,12 +62,9 @@ there is an `armeabi-v7a` directory present and the device is an
 > [!NOTE]
 > Xamarin.Android will ensure that `.so` are added to the APK in the correct order. This bug should not be an issue for users of Xamarin.Android.
 
-
 ### ABI Descriptions
 
 Each ABI supported by Android is identified by a unique name.
-
-
 
 #### armeabi
 
@@ -86,8 +80,6 @@ should not be used on multi-CPU `armeabi-v7a`devices (described
 below). Using `aremabi` code on a single-core `armeabi-v7a` device is
 safe.
 
-
-
 #### armeabi-v7a
 
 This is another ARM-based CPU instruction set that extends the
@@ -98,8 +90,6 @@ performance improvements over an application that uses `armeabi`.
 
 **Note:** `armeabi-v7a` machine code will not run on ARMv5 devices.
 
-
-
 #### arm64-v8a
 
 This is a 64-bit instruction set that is based on the ARMv8 CPU
@@ -107,8 +97,6 @@ architecture. This architecture is used in the *Nexus 9*.
 Xamarin.Android 5.1 provides experimental support for
 this architecture (for more information, see
 [Experimental Features](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features)).
-
-
 
 #### x86
 
@@ -118,14 +106,11 @@ the Pentium Pro instruction set, including the MMX, SSE, SSE2, and SSE3
 instruction sets. It does not include any other optional IA-32 instruction set
 extensions such as:
 
--  the MOVBE instruction.
--  Supplemental SSE3 extension (SSSE3).
--  any variant of SSE4.
+- the MOVBE instruction.
+- Supplemental SSE3 extension (SSSE3).
+- any variant of SSE4.
 
-
-**Note:** Google TV, although it runs on x86, is not supported by Android's NDK or
-
-
+**Note:** Google TV, although it runs on x86, is not supported by Android's NDK.
 
 #### x86_64
 
@@ -133,7 +118,6 @@ This is the name of an ABI for CPUs that support the 64-bit x86
 instruction set (also referred to as *x64* or *AMD64*). Xamarin.Android
 5.1 provides experimental support for this architecture (for more
 information, see [Experimental Features](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features)).
-
 
 #### mips
 
@@ -143,8 +127,6 @@ supported by Android.
 
 **Note:** MIPS devices are not currently supported by Xamarin.Android,
 but will be in a future release.
-
-
 
 #### APK File Format
 
@@ -158,47 +140,43 @@ Xamarin.Android can be seen in the screenshot below:
 
 A quick description of the contents of the `.apk` file:
 
--   **AndroidManifest.xml** &ndash; This is the `AndroidManifest.xml` file,
+- **AndroidManifest.xml** &ndash; This is the `AndroidManifest.xml` file,
     in binary XML format.
 
--   **classes.dex** &ndash; This contains the application code, compiled
+- **classes.dex** &ndash; This contains the application code, compiled
     into the `dex` file format that is used by the Android runtime VM.
 
--   **resources.arsc** &ndash; This file contains all of the precompiled
+- **resources.arsc** &ndash; This file contains all of the precompiled
     resources for the application.
 
--   **lib** &ndash; This directory holds the compiled code for each ABI. It
+- **lib** &ndash; This directory holds the compiled code for each ABI. It
     will contain one subfolder for each ABI that was described in the
     previous section. In the screenshot above, the `.apk` in question
     has native libraries for both `armeabi-v7a` and for `x86` .
 
--   **META-INF** &ndash; This directory (if present) is used to store
+- **META-INF** &ndash; This directory (if present) is used to store
     signing information, package, and extension configuration data.
 
--   **res** &ndash; This directory holds the resources that were not
+- **res** &ndash; This directory holds the resources that were not
     compiled into `resources.arsc` .
 
 > [!NOTE]
 > The file `libmonodroid.so` is the native library required by all Xamarin.Android applications.
 
-
-
 #### Android Device ABI Support
 
 Each Android device supports executing native code in up to two ABIs:
 
--   **The "primary" ABI** &ndash; This corresponds to the machine code
+- **The "primary" ABI** &ndash; This corresponds to the machine code
     used in the system image.
 
--   **A "secondary" ABI** &ndash; This is an optional ABI that is also
+- **A "secondary" ABI** &ndash; This is an optional ABI that is also
     supported by the system image.
-
 
 For example, a typical ARMv5TE device will only have a primary ABI of
 `armeabi`, while an ARMv7 device would specify a primary ABI of
 `armeabi-v7a` and a secondary ABI of `armeabi`. A typical x86 device
 would only specify a primary ABI of `x86`.
-
 
 ### Android Native Library Installation
 
@@ -209,8 +187,6 @@ extracted into the app's native library directory, typically
 
 Android's native library installation behavior varies dramatically between
 Android versions.
-
-
 
 #### Installing Native Libraries: Pre-Android 4.0
 
@@ -252,7 +228,6 @@ lib/armeabi-v7a/libone.so
 lib/armeabi-v7a/libtwo.so
 ```
 
-
 #### Installing Native Libraries: Android 4.0 &ndash; Android 4.0.3
 
 Android 4.0 Ice Cream Sandwich changes the extraction logic. It will
@@ -260,11 +235,10 @@ enumerate all native libraries, see if the file's basename has already been
 extracted, and if both of the following conditions are met, then the library
 will be extracted:
 
--   It hasn't already been extracted.
+- It hasn't already been extracted.
 
--   The native library's ABI matches the target's primary or
+- The native library's ABI matches the target's primary or
     secondary ABI.
-
 
 Meeting these conditions allows "merging" behavior; that is, if we have
 an `.apk` with the following contents:
@@ -335,29 +309,23 @@ $APP/lib/libone.so # from armeabi
 $APP/lib/libtwo.so # from armeabi-v7a
 ```
 
-
 ### Xamarin.Android and ABIs
 
 Xamarin.Android supports the following architectures:
 
--  `armeabi`
--  `armeabi-v7a`
--  `x86`
+- `armeabi`
+- `armeabi-v7a`
+- `x86`
 
 Xamarin.Android provides experimental support for the following architectures:
 
--  `arm64-v8a`
--  `x86_64`
+- `arm64-v8a`
+- `x86_64`
 
-
-Note that 64-bit runtimes are *not* required to run your app 
-on 64-bit devices. For more information about experimental features in
-Xamarin.Android 5.1, see
-[Experimental Features](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features).
+> [!NOTE]
+> From August 2018 new apps will be required to target API level 26, and from August 2019 apps will be [required to provide 64-bit versions](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html) in addition to the 32-bit version.
 
 Xamarin.Android does not currently provide support for `mips`.
-
-
 
 ### Declaring Supported ABI's
 
@@ -380,12 +348,10 @@ tab, as shown in the following screenshot:
 There are some situations when it may be necessary to declare
 additional ABI support such as when:
 
--   Deploying the application to an `x86` device.
+- Deploying the application to an `x86` device.
 
--   Deploying the application to an `armeabi-v7a` device to
+- Deploying the application to an `armeabi-v7a` device to
     ensure thread safety.
-
-
 
 ## Summary
 
@@ -396,7 +362,6 @@ It then went on to discuss how to specify ABI support in a
 Xamarin.Android application and highlighted the issues that arise 
 when using Xamarin.Android applications on an `armeabi-v7a` device that 
 are intended only for `armeabi`.
-
 
 ## Related Links
 
