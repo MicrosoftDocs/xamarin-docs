@@ -15,9 +15,8 @@ _Behaviors are reusable across more than one application. These articles explain
 
 ## [Reusable EffectBehavior](effect-behavior.md)
 
-Behaviors are a useful approach for adding an effect to a control, removing boiler-plate effect handling code from code-behind files. This article demonstrates using a Xamarin.Forms behavior to add an effect to a control.
+Behaviors are a useful approach for adding an effect to a control, removing boiler-plate effect handling code from code-behind files. This article demonstrates creating and consuming a Xamarin.Forms behavior to add an effect to a control.
 
 ## [Reusable EventToCommandBehavior](event-to-command-behavior.md)
 
-Behaviors can be used to associate commands with controls that were not designed to interact with commands. This article demonstrates using a Xamarin.Forms behavior to invoke a command when an event fires.
-
+Behaviors can be used to associate commands with controls that were not designed to interact with commands. This article demonstrates creating and consuming a Xamarin.Forms behavior to invoke a command when an event fires.

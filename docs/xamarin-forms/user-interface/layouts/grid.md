@@ -147,10 +147,10 @@ grid.Children.Add(bottomRight, 1, 2, 1, 2);
 
 ### Spacing
 
-`Grid` has properties to control spacing between rows and columns.  The following properties are available for customizing the `Grid`:
+`Grid` has properties to control spacing between rows and columns. The following properties are available for customizing the `Grid`:
 
-- **ColumnSpacing** &ndash; the amount of space between columns.
-- **RowSpacing** &ndash; the amount of space between rows.
+- **ColumnSpacing** &ndash; the amount of space between columns. The default value of this property is 6.
+- **RowSpacing** &ndash; the amount of space between rows. The default value of this property is 6.
 
 The following XAML specifies a `Grid` with two columns, one row, and 5 px of spacing between columns:
 

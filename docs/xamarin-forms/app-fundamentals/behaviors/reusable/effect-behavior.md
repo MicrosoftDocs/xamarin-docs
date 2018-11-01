@@ -1,6 +1,6 @@
 ---
 title: "Reusable EffectBehavior"
-description: "Behaviors are a useful approach for adding an effect to a control, removing boiler-plate effect handling code from code-behind files. This article demonstrates using a Xamarin.Forms behavior to add an effect to a control."
+description: "Behaviors are a useful approach for adding an effect to a control, removing boiler-plate effect handling code from code-behind files. This article demonstrates creating and consuming a Xamarin.Forms behavior to add an effect to a control."
 ms.prod: xamarin
 ms.assetid: A909B24D-960A-4023-AFF6-4B9256C55ADD
 ms.technology: xamarin-forms
@@ -11,7 +11,7 @@ ms.date: 04/06/2016
 
 # Reusable EffectBehavior
 
-_Behaviors are a useful approach for adding an effect to a control, removing boiler-plate effect handling code from code-behind files. This article demonstrates using a Xamarin.Forms behavior to add an effect to a control._
+_Behaviors are a useful approach for adding an effect to a control, removing boiler-plate effect handling code from code-behind files. This article demonstrates creating and consuming a Xamarin.Forms behavior to add an effect to a control._
 
 ## Overview
 
@@ -23,6 +23,9 @@ The following behavior properties must be set to use the behavior:
 - **Name** – the value of the [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) attribute for the effect class.
 
 For more information about effects, see [Effects](~/xamarin-forms/app-fundamentals/effects/index.md).
+
+> [!NOTE]
+> The `EffectBehavior` is a custom class that can be located in the [Effect Behavior sample](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/), and is not part of Xamarin.Forms.
 
 ## Creating the Behavior
 
