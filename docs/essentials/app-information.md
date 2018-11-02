@@ -49,7 +49,7 @@ The **AppInfo** class can also display a page of settings maintained by the oper
 
 ```csharp
 // Display settings page
-AppInfo.OpenSettings();
+AppInfo.ShowSettingsUI();
 ```
 
 This settings page allows the user to change application permissions and perform other platform-specific tasks.
