@@ -22,7 +22,7 @@ a network-accessible Mac to build Xamarin.iOS applications.
 
 Visual Studio 2017's Pair to Mac feature discovers, connects to,
 authenticates with, and remembers Mac build hosts so that Windows-based
-iOS developers can work productively. 
+iOS developers can work productively.
 
 Pair to Mac enables the following development workflow:
 
@@ -45,14 +45,15 @@ Pair to Mac enables the following development workflow:
 
 > [!NOTE]
 > 
-> Before following the instructions in this guide, complete the following
-> steps: 
+> Before following the instructions in this guide, complete the following steps:
 > 
 > - On a Windows machine, [install Visual Studio 2017](~/cross-platform/get-started/installation/windows.md)
 > - On a Mac, [install Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) and [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
+>    - _You must manually open Xcode after installing_ so that it can add any additional components.
 >
 > If you would prefer not to install Visual Studio for Mac, Visual Studio 2017
 > can automatically configure the Mac build host with Xamarin.iOS and Mono.
+> You must still install and run Xcode.
 > For more information, see [Automatic Mac provisioning](#automatic-mac-provisioning).
 
 ## Enable remote login on the Mac
@@ -104,7 +105,7 @@ Now that remote login is enabled, connect Visual Studio 2017 to the Mac.
 3. Select a Mac in the list. Click **Connect**. 
 
 4. Enter your username and password.
-    
+
     - The first time you connect to any paticular Mac, you are 
       prompted to enter your username and password for that machine:
 
@@ -128,7 +129,7 @@ Now that remote login is enabled, connect Visual Studio 2017 to the Mac.
     provisioning](#automatic-mac-provisioning) for more details.
 
 6. Look for the connection status icon.
-    
+
     - When Visual Studio 2017 is connected to a Mac, that Mac's item
       in the **Pair to Mac** dialog displays an icon indicating that
       it is currently connected:
@@ -142,7 +143,7 @@ Now that remote login is enabled, connect Visual Studio 2017 to the Mac.
       > menu that allows you to **Connect...**, **Forget this Mac**, or 
       > **Disconnect**:
       >
-      > ![The Pair to Mac context menus](images/contextmenu.png "The Pair to Mac context menus") 
+      > ![The Pair to Mac context menus](images/contextmenu.png "The Pair to Mac context menus")
       >
       > If you choose **Forget this Mac**, your credentials for the selected 
       > Mac will be forgotten. To reconnect to that Mac, you will need to re-enter 
@@ -169,7 +170,7 @@ add it manually:
         [![The Mac's IP address in System Preferences > Sharing](images/sharing-ipaddress.png "The Mac's IP address in System Preferences > Sharing")](images/sharing.png#lightbox)
 
     - Alternatively, use the command line. In Terminal, issue this command: 
-   
+
         ```bash
         $ ipconfig getifaddr en0
         196.168.1.8
@@ -198,7 +199,7 @@ add it manually:
 
 ## Automatic Mac provisioning
 
-Starting with [Visual Studio 2017 version 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), 
+Starting with [Visual Studio 2017 version 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning),
 Pair to Mac automatically provisions a Mac with software necessary for
 building Xamarin.iOS applications: Mono, Xamarin.iOS (the software
 framework, not the Visual Studio for Mac IDE), and various Xcode-related
@@ -230,7 +231,7 @@ screenshots (click to zoom):
 |---|---|---|---|
 |Mono|[![Missing Mono installation](images/mono-missing.png "Missing Mono installation")](images/mono-missing-large.png#lightbox)|[![Downloading Mono](images/mono-downloading.png "Downloading Mono")](images/mono-downloading-large.png#lightbox)|[![Installing Mono](images/mono-installing.png "Installing Mono")](images/mono-installing-large.png#lightbox)|
 
-### Xamarin.iOS 
+### Xamarin.iOS
 
 Pair to Mac upgrades Xamarin.iOS on the Mac to match the version
 installed on the Windows machine.
@@ -285,7 +286,7 @@ at the Visual Studio 2017 IDE logs, stored in
 **%LOCALAPPDATA%\Xamarin\Logs\15.0**. These logs may contain error messages
 to help you better diagnose the failure or get support.
 
-## Build iOS apps from the Windows command-line 
+## Build iOS apps from the Windows command-line
 
 Pair to Mac supports building Xamarin.iOS applications from the command
 line. For example:
@@ -293,16 +294,17 @@ line. For example:
 ```bash
 C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamUser /p:Platform=iPhoneSimulator /p:ServerPassword=mypassword
 ```
+
 The parameters passed to `msbuild` in the above example are:
 
 - `ServerAddress` – The IP address of the Mac build host.
 - `ServerUser` – The username to use when logging in to the Mac build host.
   Use your system username rather than your full name.
 - `ServerPassword` – The password to use when logging in to the Mac build host.
- 
+
 > [!NOTE]
 > Visual Studio 2017 stores `msbuild` in the following directory:
-> **C:\Program Files (x86)\Microsoft Visual Studio\2017\<Version>\MSBuild\15.0\Bin**
+> **C:\Program Files (x86)\Microsoft Visual Studio\2017\\&lt;Version&gt;\MSBuild\15.0\Bin**
 
 The first time Pair to Mac logs in to a particular Mac build host from
 either Visual Studio 2017 or the command-line, it sets up SSH keys. With these
@@ -326,4 +328,3 @@ applications with Xamarin.iOS.
 - [Introduction to Xamarin.iOS for Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 - [Remoted iOS Simulator for Windows](~/tools/ios-simulator/index.md)
 - [Wireless Deployment](~/ios/deploy-test/wireless-deployment.md)
-
