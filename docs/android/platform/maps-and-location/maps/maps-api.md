@@ -43,7 +43,7 @@ Several steps need to be taken before you can use the Maps API, including:
 
 ### <a name="obtain-maps-key" />Obtain a Google Maps API Key
 
-The final step is to get a Google Maps API key (note that you cannot
+The initial step is to get a Google Maps API key (note that you cannot
 reuse an API key from the legacy Google Maps v1 API). For information about
 how to obtain and use the API key with Xamarin.Android, see 
 [Obtaining A Google Maps API Key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
