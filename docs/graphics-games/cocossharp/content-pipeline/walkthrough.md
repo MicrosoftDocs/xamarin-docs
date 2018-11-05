@@ -79,7 +79,7 @@ Let’s look at some of the most important options for the content project.
 
 ### Output folder
 
-This is the folder (relative to the content project itself) where the output **.xnb** files will be saved. To keep things simple, we’ll use the same folder to hold our input and output files. In other words we’ll change the **Output Folder** to be **.\** :
+This is the folder (relative to the content project itself) where the output **.xnb** files will be saved. To keep things simple, we’ll use the same folder to hold our input and output files. In other words we’ll change the **Output Folder** to be **.\\** :
 
 ![](walkthrough-images/image10.png "")
 
