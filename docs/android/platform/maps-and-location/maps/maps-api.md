@@ -243,7 +243,7 @@ Similar to other Fragment classes, there are two ways to add a
               class="com.google.android.gms.maps.MapFragment" />
     ```
 
--   **Programmaatically** - The `MapFragment` can be programmatically instantiated using the [`MapFragment.NewInstance`](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance()) method and then added to an Activity. This snippet shows the simplest way to instantiate a `MapFragment` object and add to an Activity:
+-   **Programmatically** - The `MapFragment` can be programmatically instantiated using the [`MapFragment.NewInstance`](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance()) method and then added to an Activity. This snippet shows the simplest way to instantiate a `MapFragment` object and add to an Activity:
     
     ```csharp
         var mapFrag = MapFragment.NewInstance();
