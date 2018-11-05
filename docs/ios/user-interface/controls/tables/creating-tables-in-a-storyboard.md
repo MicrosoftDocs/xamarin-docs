@@ -78,7 +78,7 @@ replacing it with a UITableViewController. Follow these steps:
 
 1.  Select the bar at the bottom of the View Controller and delete it.
 2.  Drag a **Navigation Controller** and a **Table View Controller** onto the Storyboard from the Toolbox. 
-3.  Create a segue from the Root View Controller to the second Table View Controller that was just added. To create the segue, Control+drag *from the Detail cell* to the newly added UITableViewController. Choose the option  **Show*** under  **Segue Selection**. 
+3.  Create a segue from the Root View Controller to the second Table View Controller that was just added. To create the segue, Control+drag *from the Detail cell* to the newly added UITableViewController. Choose the option  **Show** under  **Segue Selection**. 
 4.  Select the new segue you created and give it an identifier to reference this segue in code. Click on the segue and enter `TaskSegue` for the  **Identifier** in the  **Properties Pad**, like this:    
   [![Naming segue in property panel](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
