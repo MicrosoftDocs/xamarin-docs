@@ -5,11 +5,10 @@ ms.assetid: E592AA32-5E83-B7E5-1753-12416551B23C
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 03/09/2018
+ms.date: 11/05/2018
 ---
 
 # Command Line Emulator
-
 
 ## Running the Android emulator from the command line
 
@@ -38,4 +37,4 @@ plenty of space to get the Xamarin.Android platform installed on the emulator
 as by default the size of the emulator is small.
 
 You can find out more information on extra parameters on the Android site
-here - [http://developer.android.com/guide/developing/tools/emulator.html](http://developer.android.com/guide/developing/tools/emulator.html)
+here - [https://developer.android.com/studio/run/emulator-commandline](https://developer.android.com/studio/run/emulator-commandline)
