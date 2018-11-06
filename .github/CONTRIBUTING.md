@@ -16,7 +16,7 @@ To make corrections and small updates - you can click the **Edit** button on any
 
 2. Create a `branch` for your changes.
 
-3. Write your content. Refer to the [template](./contributing-guidelines/template.md) and [style guide](./contributing-guidelines/voice-tone.md).
+3. Write your content. Refer to the [template](../contributing-guidelines/template.md) and [style guide](../contributing-guidelines/voice-tone.md).
 
 4. Submit a Pull Request (PR) from your branch to `MicrosoftDocs/xamarin-docs/live`.
 
@@ -35,7 +35,7 @@ For large contributions and new content, [open an issue](https://github.com/Micr
 
 **Get feedback on your proposal via the issue before starting to write.**
 
-If it's a new topic, you can use the [template file](./contributing-guidelines/template.md) as your starting point. It contains the writing guidelines and also explains the metadata required for each article, such as author information.
+If it's a new topic, you can use the [template file](../contributing-guidelines/template.md) as your starting point. It contains the writing guidelines and also explains the metadata required for each article, such as author information.
 
 For images and other static resources, add them to the subfolder called **<mypage>-images**. If you are creating a new folder for content, add an images folder to the new folder.
 
