@@ -757,7 +757,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 			// Wireup events
 			button.Activated += (sender, e) => {
 				// Get button and product
-				var btw = sender as NSButton;
+				var btn = sender as NSButton;
 				var product = DataSource.Products [(int)btn.Tag];
 
 				// Configure alert
@@ -798,8 +798,8 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 		break;
 	case "Action":
 		foreach (NSView subview in view.Subviews) {
-			var btw = subview as NSButton;
-			if (btw != null) {
+			var btn = subview as NSButton;
+			if (btn != null) {
 				btn.Tag = row;
 			}
 		}
@@ -832,7 +832,7 @@ The Button's `Tag` property is used to hold the number of the Row that is curren
 // Wireup events
 button.Activated += (sender, e) => {
 	// Get button and product
-	var btw = sender as NSButton;
+	var btn = sender as NSButton;
 	var product = DataSource.Products [(int)btn.Tag];
 
 	// Configure alert
@@ -878,8 +878,8 @@ case "Details":
 	break;
 case "Action":
 	foreach (NSView subview in view.Subviews) {
-		var btw = subview as NSButton;
-		if (btw != null) {
+		var btn = subview as NSButton;
+		if (btn != null) {
 			btn.Tag = row;
 		}
 	}
