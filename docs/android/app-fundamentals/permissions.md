@@ -189,7 +189,7 @@ public override void OnRequestPermissionsResult(int requestCode, string[] permis
         if ((grantResults.Length == 1) && (grantResults[0] == Permission.Granted)) {
             // Location permission has been granted, okay to retrieve the location of the device.
             Log.Info(TAG, "Location permission has now been granted.");
-            Snackbar.Make(layout, Resource.String.permision_available_camera, Snackbar.LengthShort).Show();            
+            Snackbar.Make(layout, Resource.String.permission_available_camera, Snackbar.LengthShort).Show();            
         } 
         else 
         {
