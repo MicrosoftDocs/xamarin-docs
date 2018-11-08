@@ -19,7 +19,7 @@ Please follow these steps to check your environment settings:
 2. Go to **Build > Advanced...** Set Debug Information to **Full**
 3. Settings for each platform:
    - Go to **Android Options > Debugging Options**. Tick the **Enable Developer Instrumentation** box.
-   - Go to **iOS Build > Debugging Options**. Tick the **Enable Debugging** box.
+   - Go to **iOS Debug > Debugging & Instrumentation**. Tick the **Enable Debugging** box.
 
 ## Visual Studio for Mac
 1. Open the Project options
