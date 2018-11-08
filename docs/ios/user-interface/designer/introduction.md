@@ -455,6 +455,14 @@ After making edits in Xcode Interface Builder, save the file and return to Visua
 
 # [Visual Studio](#tab/windows)
 
+## Revert to Xcode
+
+It is possible to use the iOS Designer and Xcode Interface Builder interchangeably, however Xcode Interface Builder is only available on Mac. To open a storyboard or .xib file in Xcode Interface Builder on a Mac, open the solution containing the Xamarin.iOS project in [Visual Studio for Mac](/visualstudio/mac/), right-click on the file and select **Open With > Xcode Interface Builder**, as illustrated by the screenshot below:
+
+[![Opening a storyboard in Xcode Interface Builder](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "Opening a storyboard in Xcode Interface Builder")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png#lightbox)
+
+After making edits in Xcode Interface Builder, save the file and return to Visual Studio for Mac. The changes will sync to the Xamarin.iOS project.
+
 -----
 
 ## .xib support
