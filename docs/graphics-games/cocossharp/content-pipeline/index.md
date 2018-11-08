@@ -5,6 +5,7 @@ ms.prod: xamarin
 ms.assetid: 2BC895E5-BDFD-443D-A96D-86BA7042CB70
 author: conceptdev
 ms.author: crdun
+ms.date: 03/27/2017
 ---
 
 # CocosSharp Content Pipeline

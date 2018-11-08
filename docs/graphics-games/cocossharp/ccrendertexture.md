@@ -5,6 +5,7 @@ ms.prod: xamarin
 ms.assetid: F02147C2-754B-4FB4-8BE0-8261F1C5F574
 author: conceptdev
 ms.author: crdun
+ms.date: 03/27/2017
 ---
 
 # Performance and visual effects with CCRenderTexture
