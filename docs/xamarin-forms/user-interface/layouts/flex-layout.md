@@ -579,7 +579,7 @@ The iOS screenshot at the left shows the two `Label` elements being given height
 
 The [`Grow`](xref:Xamarin.Forms.FlexLayout.GrowProperty) attached bindable property is of type `int`. The default value is 0, and the value must be greater than or equal to 0.
 
-The `Grow` property plays a role when when the `Wrap` property is set to `NoWrap` and the row of children has a total width less than the width of the `FlexLayout`, or the column of children has a shorter height than the `FlexLayout`. The `Grow` property indicates how to apportion the leftover space among the children.
+The `Grow` property plays a role when the `Wrap` property is set to `NoWrap` and the row of children has a total width less than the width of the `FlexLayout`, or the column of children has a shorter height than the `FlexLayout`. The `Grow` property indicates how to apportion the leftover space among the children.
 
 In the **Grow Experiment** page, five `Label` elements of alternating colors are arranged in a column, and two `Slider` elements allow you to adjust the `Grow` property of the second and fourth `Label`. The iOS screenshot at the far left shows the default `Grow` properties of 0:
 
