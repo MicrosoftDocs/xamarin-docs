@@ -75,7 +75,7 @@ stay awake mode.
 
 ## Install USB Drivers
 
-This step is not necessary for OS X. Just connect the device to the the
+This step is not necessary for OS X. Just connect the device to the
 Mac with a USB cable.
 
 It may be necessary to install some extra drivers before a Windows

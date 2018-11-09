@@ -716,7 +716,7 @@ The `Page.On<iOS>` method specifies that this platform-specific will only run on
 
 In addition, the `GetModalPresentationStyle` method can be used to retrieve the current value of the `UIModalPresentationStyle` enumeration that's applied to the [`Page`](xref:Xamarin.Forms.Page).
 
-The result is that the the modal presentation style on a [`Page`](xref:Xamarin.Forms.Page) can be set:
+The result is that the modal presentation style on a [`Page`](xref:Xamarin.Forms.Page) can be set:
 
 [![](ios-images/modal-presentation-style-small.png "Modal Presentation Styles on an iPad")](ios-images/modal-presentation-style-large.png#lightbox "Modal Presentation Styles on an iPad")
 
