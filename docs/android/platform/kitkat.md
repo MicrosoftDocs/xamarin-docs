@@ -602,7 +602,7 @@ the top right corner of the screen, and looks like this:
 [![Example screenshot of Print menu item dispalyed in the top right corner of the screen](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
 
 
-Additonal menu items can be defined in the *menu*directory under
+Additional menu items can be defined in the *menu*directory under
 *Resources*. The code below defines a sample menu item called
 [Print](https://developer.xamarin.com/api/type/Android.Print.PrintManager/):
 
