@@ -247,7 +247,7 @@ The two types of retry policies are identified by these int values:
 It is possible to define a custom `RetryStrategy` with the `FirebaseJobDispatcher.NewRetryStrategy` method. It takes three parameters:
 
 1. `int policy` &ndash; The _policy_ is one of the previous `RetryStrategy` values, `RetryStrategy.RetryPolicyLinear`, or `RetryStrategy.RetryPolicyExponential`.
-2. `int intialBackoffSeconds` &ndash; The _initial backoff_ is a delay, in seconds, that is required before trying to run the job again. The default value for this is 30 seconds. 
+2. `int initialBackoffSeconds` &ndash; The _initial backoff_ is a delay, in seconds, that is required before trying to run the job again. The default value for this is 30 seconds. 
 3. `int maximumBackoffSeconds` &ndash; The _maximum backoff_ value declares the maximum number of seconds to delay before trying to run the job again. The default value is 3600 seconds. 
 
 ```csharp

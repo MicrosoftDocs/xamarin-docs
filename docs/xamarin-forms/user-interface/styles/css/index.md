@@ -368,7 +368,7 @@ The following CSS properties are supported by Xamarin.Forms (in the **Values** c
 |`background-color`|`VisualElement`|_color_ \| `initial` |`background-color: springgreen;`|
 |`background-image`|`Page`|_string_ \| `initial` |`background-image: bg.png;`|
 |`border-color`|`Button`, `Frame`|_color_ \| `initial`|`border-color: #9acd32;`|
-|`border-radius`|`BoxView`|_double_ \| `intial` |`border-radius: 10;`|
+|`border-radius`|`BoxView`|_double_ \| `initial` |`border-radius: 10;`|
 |`border-width`|`Button`|_double_ \| `initial` |`border-width: .5;`|
 |`color`|`ActivityIndicator`, `BoxView`, `Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_color_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
 |`column-gap`|`Grid`|_double_ \| `initial`|`column-gap: 9;`|
@@ -420,7 +420,7 @@ The following Xamarin.Forms specific CSS properties are also supported (in the *
 |`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_color_ \| `initial` |`-xf-bar-text-color: gray`|
 |`-xf-orientation`|`ScrollView`, `StackLayout`| `horizontal` \| `vertical` \| `both` \| `initial`. `both` is only supported on a `ScrollView`. |`-xf-orientation: horizontal;`|
 |`-xf-horizontal-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-horizontal-scroll-bar-visibility: never;`|
-|`-xf-vertical-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-vertical-scroll-bar-visbility: always;`|
+|`-xf-vertical-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-vertical-scroll-bar-visibility: always;`|
 |`-xf-min-track-color`|`Slider`|_color_ \| `initial` |`-xf-min-track-color: yellow;`|
 |`-xf-max-track-color`|`Slider`|_color_ \| `initial` |`-xf-max-track-color: red;`|
 |`-xf-thumb-color`|`Slider`|_color_ \| `initial` |`-xf-thumb-color: limegreen;`|
