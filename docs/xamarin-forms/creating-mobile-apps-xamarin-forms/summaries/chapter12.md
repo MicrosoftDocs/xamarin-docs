@@ -35,7 +35,7 @@ Event handlers cannot be set in a `Style`. The `GestureRecognizers` property can
 
 ## Styles in code
 
-Although it's not common, you can instantiate and intialize `Style` objects in code. This is demonstrated by the [**BasicStyleCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyleCode) sample.
+Although it's not common, you can instantiate and initialize `Style` objects in code. This is demonstrated by the [**BasicStyleCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyleCode) sample.
 
 ## Style inheritance
 

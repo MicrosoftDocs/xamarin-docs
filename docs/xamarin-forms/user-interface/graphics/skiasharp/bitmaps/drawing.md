@@ -122,7 +122,7 @@ The documentation of the `Clear` methods of `SKCanvas` describes them with the s
 
 - The [`Clear`](xref:SkiaSharp.SKCanvas.Clear) method with no parameters replaces the pixels with the [`SKColors.Empty`](xref:SkiaSharp.SKColors.Empty) color, which is a color in which all the components (red, green, blue, and alpha) are set to zero. This color is sometimes referred to as "transparent black."
 
-Calling `Clear` with no arguments on a new bitmap intializes the entire bitmap to be entirely transparent. Anything subsequently drawn on the bitmap will usually be opaque or partially opaque.
+Calling `Clear` with no arguments on a new bitmap initializes the entire bitmap to be entirely transparent. Anything subsequently drawn on the bitmap will usually be opaque or partially opaque.
 
 Here's something to try: In the **Hello Bitmap** page, replace the `Clear` method applied to the `bitmapCanvas` with this one:
 
