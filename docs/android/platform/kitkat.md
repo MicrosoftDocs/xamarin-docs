@@ -444,7 +444,7 @@ experience will continue as normal.
 
 This change requires two actions on the developer side: first, apps
 that require content from providers need to be updated to a new way of
-reqesting content. Second, applications that write data to a
+requesting content. Second, applications that write data to a
 `ContentProvider` need to be modified to use the new framework. Both
 scenarios depend on the new
 [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
