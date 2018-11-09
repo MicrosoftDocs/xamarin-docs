@@ -39,7 +39,7 @@ The Firebase Job Dispatcher is a library from Google that provides a fluent API 
 * A `Firebase.JobDispatcher.RetryStrategy` contains information about what should be done when a job fails to execute properly. The retry strategy specifies how long to wait before trying to run the job again. 
 * A `Firebase.JobDispatcher.Constraint` is an optional value that describes a condition that must be met before the job can run, such as the device is on an unmetered network or charging.
 * The `Firebase.JobDispatcher.Job` is an API that unifies the previous APIs in to a unit-of-work that can be scheduled by the `JobDispatcher`. The `Job.Builder` class is used to instantiate a `Job`.
-* A `Firebasee.JobDispatcher.JobDispatcher` uses the previous three APIs to schedule the work with the operating system and to provide a way to cancel jobs, if necessary.
+* A `Firebase.JobDispatcher.JobDispatcher` uses the previous three APIs to schedule the work with the operating system and to provide a way to cancel jobs, if necessary.
 
 To schedule work with the Firebase Job Dispatcher, a Xamarin.Android application must encapsulate the code in a type that extends the `JobService` class. `JobService` has three lifecycle methods that that can be called during the lifetime of the job:
 
@@ -172,7 +172,7 @@ Each of these topics will be discussed more in the following sections.
 
 <a name="Passing_Parameters_to_a_Job" />
 
-#### Passing jarameters to a job
+#### Passing parameters to a job
 
 Parameters are passed to a job by creating a `Bundle` that is passed along with the `Job.Builder.SetExtras` method:
 
