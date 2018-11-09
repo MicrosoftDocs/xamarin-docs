@@ -55,7 +55,7 @@ One of the [`Encode`](xref:SkiaSharp.SKImage.Encode) methods defined by `SKImage
 
 ## Platform-specific code for saving bitmap files
 
-When you encode an `SKBitmap` object into a particular file format, generally you'll be be left with a stream object of some sort, or an array of data. Some of the `Encode` methods (including the one with no parameters defined by `SKImage`) return an [`SKData`](xref:SkiaSharp.SKData) object, which can be converted to an array of bytes using the [`ToArray`](xref:SkiaSharp.SKData.ToArray) method. This data must then be saved to a file. 
+When you encode an `SKBitmap` object into a particular file format, generally you'll be left with a stream object of some sort, or an array of data. Some of the `Encode` methods (including the one with no parameters defined by `SKImage`) return an [`SKData`](xref:SkiaSharp.SKData) object, which can be converted to an array of bytes using the [`ToArray`](xref:SkiaSharp.SKData.ToArray) method. This data must then be saved to a file. 
 
 Saving to a file in application local storage is quite easy because you can use standard `System.IO` classes and methods for this task. This technique is demonstrated in the article [**Animating SkiaSharp Bitmaps**](animating.md#bitmap-animation) in connection with animating a series of bitmaps of the Mandelbrot set.
 
