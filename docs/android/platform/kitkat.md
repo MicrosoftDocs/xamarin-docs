@@ -387,7 +387,7 @@ TransitionManager.Go (scene1, transition);
 ### Translucent UI
 
 KitKat gives you more control over theming your app with optional
-transclucent status and navigation bars. You can change the
+translucent status and navigation bars. You can change the
 translucency of system UI elements in the same XML file you use to
 define your Android theme. KitKat introduces the following properties:
 
