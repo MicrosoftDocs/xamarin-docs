@@ -172,7 +172,7 @@ Each of these topics will be discussed more in the following sections.
 
 <a name="Passing_Parameters_to_a_Job" />
 
-#### Passing jarameters to a job
+#### Passing parameters to a job
 
 Parameters are passed to a job by creating a `Bundle` that is passed along with the `Job.Builder.SetExtras` method:
 
