@@ -368,7 +368,7 @@ The following CSS properties are supported by Xamarin.Forms (in the **Values** c
 |`background-color`|`VisualElement`|_color_ \| `initial` |`background-color: springgreen;`|
 |`background-image`|`Page`|_string_ \| `initial` |`background-image: bg.png;`|
 |`border-color`|`Button`, `Frame`|_color_ \| `initial`|`border-color: #9acd32;`|
-|`border-radius`|`BoxView`|_double_ \| `intial` |`border-radius: 10;`|
+|`border-radius`|`BoxView`|_double_ \| `initial` |`border-radius: 10;`|
 |`border-width`|`Button`|_double_ \| `initial` |`border-width: .5;`|
 |`color`|`ActivityIndicator`, `BoxView`, `Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_color_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
 |`column-gap`|`Grid`|_double_ \| `initial`|`column-gap: 9;`|
