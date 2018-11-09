@@ -1001,7 +1001,7 @@ In addition to the changes described above, KitKat allows you to:
    [`RemoteController`](https://developer.xamarin.com/api/type/Android.Media.RemoteController/)
    APIs.
 
-For more information on the above API changes, please refer to the the
+For more information on the above API changes, please refer to the
 Google [Android 4.4 APIs](http://developer.android.com/about/versions/android-4.4.html)
 overview.
 
