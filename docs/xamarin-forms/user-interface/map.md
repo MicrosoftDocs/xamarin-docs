@@ -35,7 +35,7 @@ Map functionality can be further enhanced by creating a [map custom renderer](~/
 
 ## Maps Initialization
 
-When adding maps to a Xamarin.Forms application, **Xamarin.Forms.Maps** is a a
+When adding maps to a Xamarin.Forms application, **Xamarin.Forms.Maps** is a
 separate NuGet package that you should add to every project in the solution.
 On Android, this also has a dependency on GooglePlayServices (another NuGet)
 which is downloaded automatically when you add Xamarin.Forms.Maps.
