@@ -14,7 +14,7 @@ ms.date: 02/15/2018
 ## Overview 
 
 The `Toolbar` can do more than replace the action bar &ndash; it can be 
-used multiple times within an Activity, it can be be customized for 
+used multiple times within an Activity, it can be customized for 
 placement anywhere on the screen, and it can be configured to span only 
 a partial width of the screen. The examples below illustrate how to 
 create a second `Toolbar` and place it at the bottom of the screen. 
