@@ -55,7 +55,7 @@ The [**ListViewList**](https://github.com/xamarin/xamarin-forms-book-samples/tre
 
 ### The row separator
 
-On iOS and Android displays, a thin line separates the rows. You can control this with the [`SeparatorVisibiliy`](xref:Xamarin.Forms.ListView.SeparatorVisibility) and [`SeparatorColor`](xref:Xamarin.Forms.ListView.SeparatorColor) properties. `SeparatorVisibility` property is of type [`SeparatorVisbility`](xref:Xamarin.Forms.SeparatorVisibility), an enumeration with two members:
+On iOS and Android displays, a thin line separates the rows. You can control this with the [`SeparatorVisibility`](xref:Xamarin.Forms.ListView.SeparatorVisibility) and [`SeparatorColor`](xref:Xamarin.Forms.ListView.SeparatorColor) properties. `SeparatorVisibility` property is of type [`SeparatorVisibility`](xref:Xamarin.Forms.SeparatorVisibility), an enumeration with two members:
 
 - [`Default`](xref:Xamarin.Forms.SeparatorVisibility.Default), the default setting
 - [`None`](xref:Xamarin.Forms.SeparatorVisibility.None)
