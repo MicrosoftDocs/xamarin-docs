@@ -41,7 +41,7 @@ The Firebase Job Dispatcher is a library from Google that provides a fluent API 
 * The `Firebase.JobDispatcher.Job` is an API that unifies the previous APIs in to a unit-of-work that can be scheduled by the `JobDispatcher`. The `Job.Builder` class is used to instantiate a `Job`.
 * A `Firebase.JobDispatcher.JobDispatcher` uses the previous three APIs to schedule the work with the operating system and to provide a way to cancel jobs, if necessary.
 
-To schedule work with the Firebase Job Dispatcher, a Xamarin.Android application must encapsulate the code in a type that extends the `JobService` class. `JobService` has three lifecycle methods that that can be called during the lifetime of the job:
+To schedule work with the Firebase Job Dispatcher, a Xamarin.Android application must encapsulate the code in a type that extends the `JobService` class. `JobService` has three lifecycle methods that can be called during the lifetime of the job:
 
 * **`bool OnStartJob(IJobParameters parameters)`** &ndash; This method is where the work will occur and should always be implemented. It runs on the main thread. This method will return `true` if there is work remaining, or `false` if the work is done. 
 * **`bool OnStopJob(IJobParameters parameters)`** &ndash; This is called when the job is stopped for some reason. It should return `true` if the job should be rescheduled for later.
