@@ -387,7 +387,7 @@ TransitionManager.Go (scene1, transition);
 ### Translucent UI
 
 KitKat gives you more control over theming your app with optional
-transclucent status and navigation bars. You can change the
+translucent status and navigation bars. You can change the
 translucency of system UI elements in the same XML file you use to
 define your Android theme. KitKat introduces the following properties:
 
@@ -444,7 +444,7 @@ experience will continue as normal.
 
 This change requires two actions on the developer side: first, apps
 that require content from providers need to be updated to a new way of
-reqesting content. Second, applications that write data to a
+requesting content. Second, applications that write data to a
 `ContentProvider` need to be modified to use the new framework. Both
 scenarios depend on the new
 [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
@@ -484,7 +484,7 @@ StartActivityForResult (intent, save_request_code);
 Calling `StartActivityForResult` launches the SAF UI, which the user
 can then browse to choose an image:
 
-[![Example screenshot of an app using the Storage Access Framework for browing to an image](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
+[![Example screenshot of an app using the Storage Access Framework for browsing to an image](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
 
 After the user has chosen an image, `OnActivityResult` returns the
 `Android.Net.Uri` of the chosen file. The code sample below displays
