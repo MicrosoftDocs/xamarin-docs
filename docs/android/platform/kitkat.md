@@ -599,7 +599,7 @@ The print option will typically appear in the Activity's
 The options menu lets users perform actions on an Activity. It is in
 the top right corner of the screen, and looks like this:
 
-[![Example screenshot of Print menu item dispalyed in the top right corner of the screen](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
+[![Example screenshot of Print menu item displayed in the top right corner of the screen](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
 
 
 Additonal menu items can be defined in the *menu*directory under
