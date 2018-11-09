@@ -125,7 +125,7 @@ public static class JobSchedulerHelpers
     }
 }
 
-// Sample usage - creates a JobBuilder for a DownloadJob andsets the Job ID to 1.
+// Sample usage - creates a JobBuilder for a DownloadJob and sets the Job ID to 1.
 var jobBuilder = this.CreateJobBuilderUsingJobId<DownloadJob>(1);
 
 var jobInfo = jobBuilder.Build();  // creats a JobInfo object.
