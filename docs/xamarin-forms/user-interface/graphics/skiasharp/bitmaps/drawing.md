@@ -489,7 +489,7 @@ The rotated bitmap is just large enough to include the entire original bitmap, b
 
 Another operation commonly performed on bitmaps is called _flipping_. Conceptually, the bitmap is rotated in three dimensions around a vertical axis or horizontal axis through the center of the bitmap. Vertical flipping creates a mirror image.
 
-The **Bitmap Flipper** page in the **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** application demonstates these processes. The XAML file contains an `SKCanvasView` and two buttons for flipping vertically and horizontally:
+The **Bitmap Flipper** page in the **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** application demonstrates these processes. The XAML file contains an `SKCanvasView` and two buttons for flipping vertically and horizontally:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
