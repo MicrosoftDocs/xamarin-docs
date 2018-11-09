@@ -484,7 +484,7 @@ StartActivityForResult (intent, save_request_code);
 Calling `StartActivityForResult` launches the SAF UI, which the user
 can then browse to choose an image:
 
-[![Example screenshot of an app using the Storage Access Framework for browing to an image](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
+[![Example screenshot of an app using the Storage Access Framework for browsing to an image](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
 
 After the user has chosen an image, `OnActivityResult` returns the
 `Android.Net.Uri` of the chosen file. The code sample below displays
