@@ -199,7 +199,7 @@ The following XML snippet shows how to add a GestureOverlayView declaratively:
 
 The `GestureOverlayView` has several events that will be raised during
 the process of drawing a gesture. The most interesting event is
-`GesturePeformed`. This event is raised when the user has completed
+`GesturePerformed`. This event is raised when the user has completed
 drawing their gesture.
 
 When this event is raised, the Activity asks a `GestureLibrary` to try
