@@ -224,7 +224,7 @@ public partial class BitmapScalingPage : ContentPage
                         if (!float.IsNaN(scaleX) && !float.IsInfinity(scaleX) &&
                             !float.IsNaN(scaleY) && !float.IsInfinity(scaleY))
                         {
-                            // If smething bad hasn't happened, calculate a scale and translation matrix
+                            // If something bad hasn't happened, calculate a scale and translation matrix
                             SKMatrix scaleMatrix = 
                                 SKMatrix.MakeScale(scaleX, scaleY, pivotPoint.X, pivotPoint.Y);
 
