@@ -181,7 +181,7 @@ public override bool OnStartJob(JobParameters jobParameters)
 
 To schedule a job, a Xamarin.Android application will get a reference to the `JobScheduler` system service and call the `JobScheduler.Schedule` method with the `JobInfo` object that was created in the previous step. `JobScheduler.Schedule` will immediately return with one of two integer values:
 
-* **JobScheduler.ResultSuccess** &ndash; The job has been succesfully scheduled. 
+* **JobScheduler.ResultSuccess** &ndash; The job has been successfully scheduled. 
 * **JobScheduler.ResultFailure** &ndash; The job could not be scheduled. This is typically caused by conflicting `JobInfo` parameters.
 
 This code is an example of scheduling a job and notifying the user of the results of the scheduling attempt:
