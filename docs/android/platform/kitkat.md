@@ -301,7 +301,7 @@ XML is as follows:
 ```
 
 The example above uses `merge` to make the view code shorter and
-simplify the view heirarchy. You can read more about `merge` layouts
+simplify the view hierarchy. You can read more about `merge` layouts
 [here](http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html).
 
 A Scene is created by calling
