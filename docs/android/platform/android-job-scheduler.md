@@ -206,7 +206,7 @@ It is possible to cancel all the jobs that have been scheduled, or just a single
 
 ```csharp
 // Cancel all jobs
-jobSchduler.CancelAll(); 
+jobScheduler.CancelAll(); 
 
 // to cancel a job with jobID = 1
 jobScheduler.Cancel(1)
