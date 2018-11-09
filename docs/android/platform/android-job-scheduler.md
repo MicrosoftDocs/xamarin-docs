@@ -37,7 +37,7 @@ The Android Job Scheduler is a framework built in to the Android operating syste
 * An `Android.App.Job.JobService` is an abstract class that must be extended with the logic that will run the job on the main thread of the application. This means that the `JobService` is responsible for how the work is to be performed asynchronously.
 * An `Android.App.Job.JobInfo` object holds the criteria to guide Android when the job should run.
 
-To schedule work with the Android Job Scheduler, a Xamarin.Android application must encapsulate the code in a class that extends the `JobService` class. `JobService` has three lifecycle methods that that can be called during the lifetime of the job:
+To schedule work with the Android Job Scheduler, a Xamarin.Android application must encapsulate the code in a class that extends the `JobService` class. `JobService` has three lifecycle methods that can be called during the lifetime of the job:
 
 * **bool OnStartJob(JobParameters parameters)** &ndash; This method is called by the `JobScheduler` to perform work, and runs on the main thread of the application. It is the responsibility of the `JobService` to asynchronously perform the work and  `true` if there is work remaining, or `false` if the work is done.
     

@@ -117,7 +117,7 @@ This interface provides six methods for the various gestures:
 In many cases applications may only be interested in a subset of
 gestures. In this case, applications should extend the class
 GestureDetector.SimpleOnGestureListener and override the methods that
-correspond to the events that that they are interested in.
+correspond to the events that they are interested in.
 
 ## Custom Gestures
 
