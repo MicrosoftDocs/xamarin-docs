@@ -15,7 +15,7 @@ _File handling with Xamarin.Forms can be achieved using code in a .NET Standard 
 
 ## Overview
 
-Xamarin.Forms code runs on multiple platforms - each of which has its own filesystem. Previously, this meant that that reading and writing files was most easily performed using the native file APIs on each platform. Alternatively, embedded resources are a simpler solution to distribute data files with an app. However, with .NET Standard 2.0 it's possible to share file access code in .NET Standard libraries.
+Xamarin.Forms code runs on multiple platforms - each of which has its own filesystem. Previously, this meant that reading and writing files was most easily performed using the native file APIs on each platform. Alternatively, embedded resources are a simpler solution to distribute data files with an app. However, with .NET Standard 2.0 it's possible to share file access code in .NET Standard libraries.
 
 For information on handling image files, refer to the [Working with Images](~/xamarin-forms/user-interface/images.md) page.
 
