@@ -128,7 +128,7 @@ public static class JobSchedulerHelpers
 // Sample usage - creates a JobBuilder for a DownloadJob and sets the Job ID to 1.
 var jobBuilder = this.CreateJobBuilderUsingJobId<DownloadJob>(1);
 
-var jobInfo = jobBuilder.Build();  // creats a JobInfo object.
+var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 ```
 
 A powerful feature of the Android Job Scheduler is the ability to control when a job runs or under what conditions a job may run. The following table describes some of the methods on `JobInfo.Builder` that allow an app to influence when a job can run:  
