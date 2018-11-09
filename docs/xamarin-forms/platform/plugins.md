@@ -60,7 +60,7 @@ In the past, a cross-platform plugin generally consisted of the following compon
 Read James Montemagno's [blog post](https://blog.xamarin.com/creating-reusable-plugins-for-xamarin-forms/)
 describing the process of creating plugins for Xamarin.
 
-More recently, plugins can be be created with a single multi-targeted platform. This approach is discussed in James Montemagno's [blog post](https://montemagno.com/converting-xamarin-libraries-to-sdk-style-multi-targeted-projects/). This approach is used in James Montemagno's plugins linked above, and is also the format used in **Xamarin.Essentials**.
+More recently, plugins can be created with a single multi-targeted platform. This approach is discussed in James Montemagno's [blog post](https://montemagno.com/converting-xamarin-libraries-to-sdk-style-multi-targeted-projects/). This approach is used in James Montemagno's plugins linked above, and is also the format used in **Xamarin.Essentials**.
 
 It is a preferable to avoid referencing Xamarin.Forms directly from a plug-in.
 This can create version-conflict issues when other developers attempt to use
