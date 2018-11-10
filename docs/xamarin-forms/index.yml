@@ -51,7 +51,7 @@ sections:
     - href: ~/xamarin-forms/get-started/index.md
       html: Tutorials to get you up and running with Xamarin.Forms. Make sure everything is installed correctly, and build your first Xamarin.Forms apps.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/xamarin-forms/get-started/index.md
       title: Getting Started
     - href: ~/xamarin-forms/xaml/
@@ -81,7 +81,7 @@ sections:
     - href: ~/essentials/index.md?context=xamarin/xamarin-forms
       html: Cross-platform APIs for common tasks like file access, device info, hardware features, and more.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_multi-connect.svg
+        src: https://docs.microsoft.com/media/common/i_multi-connect.svg
         href: ~/essentials/index.md?context=xamarin/xamarin-forms
       title: Xamarin.Essentials
     - href: ~/xamarin-forms/data-cloud/
@@ -99,7 +99,7 @@ sections:
     - href: ~/xamarin-forms/internals/
       html: Additional information about Xamarin.Forms internals and assistance with features like localization and accessibility.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_config-tools.svg
+        src: https://docs.microsoft.com/media/common/i_config-tools.svg
         href: ~/xamarin-forms/internals/
       title: Advanced Concepts & Internals
 - title: Reference

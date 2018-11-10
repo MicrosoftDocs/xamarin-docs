@@ -111,7 +111,7 @@ A camera surface texture is created to turn on or off the `FlashMode` of the cam
 
 ### [UWP](#tab/uwp)
 
-[Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp) is used to detect the first lamp on the back of the device to turn on or off.
+[Lamp](https://docs.microsoft.com/uwp/api/windows.devices.lights.lamp) is used to detect the first lamp on the back of the device to turn on or off.
 
 -----
 

@@ -289,7 +289,7 @@ This provides maximum flexibility for the translator:
 
 #### Machine translation
 
-To build translation features into your app, consider the [Azure Translator Text API](https://azure.microsoft.com/en-au/services/cognitive-services/translator-text-api/).
+To build translation features into your app, consider the [Azure Translator Text API](https://azure.microsoft.com/services/cognitive-services/translator-text-api/).
 
 For testing purposes you could use one of the many online translation tools to include some localized text in your app during development:
 

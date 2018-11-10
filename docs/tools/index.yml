@@ -43,7 +43,7 @@ sections:
     - href: ~/tools/workbooks/index.md
       html: Learn C# and the Xamarin platform interactively.
       image:
-        src: https://docs.microsoft.com/en-us/media/illustrations/dynamics-resource-library.svg
+        src: https://docs.microsoft.com/media/illustrations/dynamics-resource-library.svg
         href: ~/tools/workbooks/index.md
       title: Xamarin Workbooks
     - href: ~/tools/dotnet-embedding/index.md

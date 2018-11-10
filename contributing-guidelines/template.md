@@ -365,7 +365,7 @@ And they'll render like this:
 [button links](../docs/core/index.md)
 ```
 
-You can see an example of buttons in action at the [Intune docs](https://docs.microsoft.com/en-us/intune/get-started/choose-how-to-enroll-devices).
+You can see an example of buttons in action at the [Intune docs](https://docs.microsoft.com/intune/get-started/choose-how-to-enroll-devices).
 
 ### Selectors
 
@@ -385,4 +385,4 @@ You can see an example of selectors in action at the [Intune docs](https://docs.
 [Next](../docs/csharp/expression-trees-translating.md)
 ```
 
-You can see an example of step-by-steps in action at the [Advanced Threat Analytics docs](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/install-ata-step2).
+You can see an example of step-by-steps in action at the [Advanced Threat Analytics docs](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/install-ata-step2).

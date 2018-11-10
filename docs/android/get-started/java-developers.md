@@ -160,7 +160,7 @@ typically associated with a C# project. Assemblies contain intermediate
 code (IL) that is just-in-time compiled at runtime.
 
 For more information about assemblies, see the MSDN
-[Assemblies and the Global Assembly Cache](https://msdn.microsoft.com/en-us/library/ms173099.aspx)
+[Assemblies and the Global Assembly Cache](https://msdn.microsoft.com/library/ms173099.aspx)
 topic.
 
 
@@ -231,7 +231,7 @@ contrast, the .NET common language runtime (CLR) provides explicit
 support for generic types, which means that C# has access to type
 information at runtime. In day-to-day Xamarin.Android development, the
 importantance of this distinction is not often apparent, but if you 
-are using [reflection](https://msdn.microsoft.com/en-us/library/ms173183.aspx),
+are using [reflection](https://msdn.microsoft.com/library/ms173183.aspx),
 you will depend on this feature to access type information at
 run time.
 
@@ -249,7 +249,7 @@ control that is defined in the layout as **Label**, then returns it as
 a `TextView` type.
 
 For more information about generics, see the MSDN
-[Generics](https://msdn.microsoft.com/en-us/library/512aeb7t.aspx) topic.
+[Generics](https://msdn.microsoft.com/library/512aeb7t.aspx) topic.
 Note that there are some limitations in Xamarin.Android support for
 generic C# classes; for more information, see
 [Limitations](~/android/internals/limitations.md).
@@ -342,8 +342,8 @@ you precede the class name with `sealed` &ndash; in Java, you precede the
 class name with `final`.
 
 For more about C# class definitions, see the MSDN
-[Classes and Structs](https://msdn.microsoft.com/en-us/library/x9afc042.aspx) and
-[Inheritance](https://msdn.microsoft.com/en-us/library/x9afc042.aspx) topics.
+[Classes and Structs](https://msdn.microsoft.com/library/x9afc042.aspx) and
+[Inheritance](https://msdn.microsoft.com/library/x9afc042.aspx) topics.
 
 
 <a name="properties" />
@@ -395,7 +395,7 @@ example, you can define a property that has public read access
 but private write access.
 
 For more information about C# properties, see the MSDN
-[Properties](https://msdn.microsoft.com/en-us/library/x9fsa0sw.aspx)
+[Properties](https://msdn.microsoft.com/library/x9fsa0sw.aspx)
 topic.
 
 
@@ -462,7 +462,7 @@ access modifiers. However, C# supports two additional access modifiers:
     have access).
 
 For more information about C# access modifiers, see the MSDN
-[Access Modifiers](https://msdn.microsoft.com/en-us/library/ms173121.aspx)
+[Access Modifiers](https://msdn.microsoft.com/library/ms173121.aspx)
 topic.
 
 
@@ -493,7 +493,7 @@ declare virtual methods and override them:
     indicate that a virtual base-class method is being overridden.
 
 For more information about C#'s support for polymorphism, see the MSDN
-[Polymorphism](https://msdn.microsoft.com/en-us/library/ms173152.aspx)
+[Polymorphism](https://msdn.microsoft.com/library/ms173152.aspx)
 topic.
 
 
@@ -546,7 +546,7 @@ expression into an anonymous method that is called whenever button
 click events take place.
 
 For more information about C# and lambda expressions, see the MSDN
-[Lambda Expressions](https://msdn.microsoft.com/en-us/library/bb397687.aspx)
+[Lambda Expressions](https://msdn.microsoft.com/library/bb397687.aspx)
 topic.
 
 
@@ -568,7 +568,7 @@ object of the event. In C#, event handlers are essentially nothing more
 than methods that are invoked through delegates.
 
 For more information about delegates, see the MSDN
-[Delegates](https://msdn.microsoft.com/en-us/library/ms173171.aspx) topic.
+[Delegates](https://msdn.microsoft.com/library/ms173171.aspx) topic.
 
 In C#, events are *multicast*; that is, more than one listener can be
 notified when an event takes place. This difference is observed when
@@ -710,7 +710,7 @@ completes (which may take several seconds), execution resumes where the
 displays the downloaded image on the caller's (UI) thread.
 
 For an introduction to `async`/`await` in C#, see the MSDN
-[Asynchronous Programming with Async and Await](https://msdn.microsoft.com/en-us/library/hh191443.aspx) topic.
+[Asynchronous Programming with Async and Await](https://msdn.microsoft.com/library/hh191443.aspx) topic.
 For more information about Xamarin support of asynchronous programming
 features, see
 [Async Support Overview](~/cross-platform/platform/async.md).
@@ -726,17 +726,17 @@ counterpart in C#, as listed in this table:
 
 |Java|C#|Description|
 |---|---|---|
-|`boolean`|[bool](https://msdn.microsoft.com/en-us/library/c8f5xwh7.aspx)|Used for declaring the boolean values true and false.|
+|`boolean`|[bool](https://msdn.microsoft.com/library/c8f5xwh7.aspx)|Used for declaring the boolean values true and false.|
 |`extends`|`:`|Precedes the class and interfaces to inherit from.|
 |`implements`|`:`|Precedes the class and interfaces to inherit from.|
-|`import`|[using](https://msdn.microsoft.com/en-us/library/zhdeatwt.aspx)|Imports types from a namespace, also used for creating a namespace alias.|
-|`final`|[sealed](https://msdn.microsoft.com/en-us/library/88c54tsw.aspx)|Prevents class derivation; prevents methods and properties from being overridden in derived classes.|
-|`instanceof`|[is](https://msdn.microsoft.com/en-us/library/scekt9xw.aspx)|Evaluates whether an object is compatible with a given type.|
-|`native`|[extern](https://msdn.microsoft.com/en-us/library/e59b22c5.aspx)|Declares a method that is implemented externally.|
-|`package`|[namespace](https://msdn.microsoft.com/en-us/library/z2kcy19k.aspx)|Declares a scope for a related set of objects.|
-|`T...`|[params T](https://msdn.microsoft.com/en-us/library/w5zay9db.aspx)|Specifies a method parameter that takes a variable number of arguments.|
-|`super`|[base](https://msdn.microsoft.com/en-us/library/hfw7t1ce.aspx)|Used to access members of the parent class from within a derived class.|
-|`synchronized`|[lock](https://msdn.microsoft.com/en-us/library/c5kehkcz.aspx)|Wraps a critical section of code with lock acquisition and release.|
+|`import`|[using](https://msdn.microsoft.com/library/zhdeatwt.aspx)|Imports types from a namespace, also used for creating a namespace alias.|
+|`final`|[sealed](https://msdn.microsoft.com/library/88c54tsw.aspx)|Prevents class derivation; prevents methods and properties from being overridden in derived classes.|
+|`instanceof`|[is](https://msdn.microsoft.com/library/scekt9xw.aspx)|Evaluates whether an object is compatible with a given type.|
+|`native`|[extern](https://msdn.microsoft.com/library/e59b22c5.aspx)|Declares a method that is implemented externally.|
+|`package`|[namespace](https://msdn.microsoft.com/library/z2kcy19k.aspx)|Declares a scope for a related set of objects.|
+|`T...`|[params T](https://msdn.microsoft.com/library/w5zay9db.aspx)|Specifies a method parameter that takes a variable number of arguments.|
+|`super`|[base](https://msdn.microsoft.com/library/hfw7t1ce.aspx)|Used to access members of the parent class from within a derived class.|
+|`synchronized`|[lock](https://msdn.microsoft.com/library/c5kehkcz.aspx)|Wraps a critical section of code with lock acquisition and release.|
 
 
 Also, there are many keywords that are unique to C# and have no
@@ -747,29 +747,29 @@ are reading through Xamarin.Android
 
 |C#|Description|
 |---|---|
-|[as](https://msdn.microsoft.com/en-us/library/cscsdfbt.aspx)|Performs conversions between compatible reference types or nullable types.|
-|[async](https://msdn.microsoft.com/en-us/library/hh156513.aspx)|Specifies that a method or lambda expression is asynchronous.|
-|[await](https://msdn.microsoft.com/en-us/library/hh156528.aspx)|Suspends the execution of a method until a task completes.|
-|[byte](https://msdn.microsoft.com/en-us/library/5bdb6693.aspx)|Unsigned 8-bit integer type.|
-|[delegate](https://msdn.microsoft.com/en-us/library/900fyy8e.aspx)|Used to encapsulate a method or anonymous method.|
-|[enum](https://msdn.microsoft.com/en-us/library/sbbt4032.aspx)|Declares an enumeration, a set of named constants.|
-|[event](https://msdn.microsoft.com/en-us/library/8627sbea.aspx)|Declares an event in a publisher class.|
-|[fixed](https://msdn.microsoft.com/en-us/library/f58wzh21.aspx)|Prevents a variable from being relocated.|
+|[as](https://msdn.microsoft.com/library/cscsdfbt.aspx)|Performs conversions between compatible reference types or nullable types.|
+|[async](https://msdn.microsoft.com/library/hh156513.aspx)|Specifies that a method or lambda expression is asynchronous.|
+|[await](https://msdn.microsoft.com/library/hh156528.aspx)|Suspends the execution of a method until a task completes.|
+|[byte](https://msdn.microsoft.com/library/5bdb6693.aspx)|Unsigned 8-bit integer type.|
+|[delegate](https://msdn.microsoft.com/library/900fyy8e.aspx)|Used to encapsulate a method or anonymous method.|
+|[enum](https://msdn.microsoft.com/library/sbbt4032.aspx)|Declares an enumeration, a set of named constants.|
+|[event](https://msdn.microsoft.com/library/8627sbea.aspx)|Declares an event in a publisher class.|
+|[fixed](https://msdn.microsoft.com/library/f58wzh21.aspx)|Prevents a variable from being relocated.|
 |`get`|Defines an accessor method that retrieves the value of a property.|
-|[in](https://msdn.microsoft.com/en-us/library/dd469484.aspx)|Enables a parameter to accept a less derived type in a generic interface.|
-|[object](https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx)|An alias for the Object type in the .NET framework.|
-|[out](https://msdn.microsoft.com/en-us/library/t3c3bfhx.aspx)|Parameter modifier or generic type parameter declaration.|
-|[override](https://msdn.microsoft.com/en-us/library/ebca9ah3.aspx)|Extends or modifies the implementation of an inherited member.|
-|[partial](https://msdn.microsoft.com/en-us/library/6b0scde8.aspx)|Declares a definition to be split into multiple files, or splits a method definition from its implementation.|
-|[readonly](https://msdn.microsoft.com/en-us/library/acdd6hb7.aspx)|Declares that a class member can be assigned only at declaration time or by the class constructor.|
-|[ref](https://msdn.microsoft.com/en-us/library/14akc2c7.aspx)|Causes an argument to be passed by reference rather than by value.|
-|[set](https://msdn.microsoft.com/en-us/library/ms228368.aspx)|Defines an accessor method that sets the value of a property.|
-|[string](https://msdn.microsoft.com/en-us/library/362314fe.aspx)|Alias for the String type in the .NET framework.|
-|[struct](https://msdn.microsoft.com/en-us/library/ah19swz4.aspx)|A value type that encapsulates a group of related variables.|
-|[typeof](https://msdn.microsoft.com/en-us/library/58918ffs.aspx)|Obtains the type of an object.|
-|[var](https://msdn.microsoft.com/en-us/library/bb383973.aspx)|Declares an implicitly-typed local variable.|
-|[value](https://msdn.microsoft.com/en-us/library/a1khb4f8.aspx)|References the value that client code wants to assign to a property.|
-|[virtual](https://msdn.microsoft.com/en-us/library/9fkccyh4.aspx)|Allows a method to be overridden in a derived class.|
+|[in](https://msdn.microsoft.com/library/dd469484.aspx)|Enables a parameter to accept a less derived type in a generic interface.|
+|[object](https://msdn.microsoft.com/library/9kkx3h3c.aspx)|An alias for the Object type in the .NET framework.|
+|[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx)|Parameter modifier or generic type parameter declaration.|
+|[override](https://msdn.microsoft.com/library/ebca9ah3.aspx)|Extends or modifies the implementation of an inherited member.|
+|[partial](https://msdn.microsoft.com/library/6b0scde8.aspx)|Declares a definition to be split into multiple files, or splits a method definition from its implementation.|
+|[readonly](https://msdn.microsoft.com/library/acdd6hb7.aspx)|Declares that a class member can be assigned only at declaration time or by the class constructor.|
+|[ref](https://msdn.microsoft.com/library/14akc2c7.aspx)|Causes an argument to be passed by reference rather than by value.|
+|[set](https://msdn.microsoft.com/library/ms228368.aspx)|Defines an accessor method that sets the value of a property.|
+|[string](https://msdn.microsoft.com/library/362314fe.aspx)|Alias for the String type in the .NET framework.|
+|[struct](https://msdn.microsoft.com/library/ah19swz4.aspx)|A value type that encapsulates a group of related variables.|
+|[typeof](https://msdn.microsoft.com/library/58918ffs.aspx)|Obtains the type of an object.|
+|[var](https://msdn.microsoft.com/library/bb383973.aspx)|Declares an implicitly-typed local variable.|
+|[value](https://msdn.microsoft.com/library/a1khb4f8.aspx)|References the value that client code wants to assign to a property.|
+|[virtual](https://msdn.microsoft.com/library/9fkccyh4.aspx)|Allows a method to be overridden in a derived class.|
 
 
 <a name="interop" />
@@ -796,9 +796,9 @@ For more information about these techniques, see
 
 ## For Further Reading
 
-The MSDN [C# Programming Guide](https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx) is a
+The MSDN [C# Programming Guide](https://msdn.microsoft.com/library/67ef8sbd.aspx) is a
 great way to get started in learning the C# programming language, and you can use
-the [C# Reference](https://msdn.microsoft.com/en-us/library/618ayhy6.aspx)
+the [C# Reference](https://msdn.microsoft.com/library/618ayhy6.aspx)
 to look up particular C# language features.
 
 In the same way that Java knowledge is at least as much about
@@ -806,7 +806,7 @@ familiarity with the Java class libraries as knowing the Java language,
 practical knowledge of C# requires some familiarity with the .NET
 framework. Microsoft's
 [Moving to C# and the .NET Framework, for Java
-Developers](https://www.microsoft.com/en-us/download/details.aspx?id=6073)
+Developers](https://www.microsoft.com/download/details.aspx?id=6073)
 learning packet is a good way to learn more about the .NET framework from a Java
 perspective (while gaining a deeper understanding of C#).
 
@@ -838,6 +838,6 @@ study.
 ## Related Links
 
 - [Java Integration Overview](~/android/platform/java-integration/index.md)
-- [C# Programming Guide](https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx)
-- [C# Reference](https://msdn.microsoft.com/en-us/library/618ayhy6.aspx)
-- [Moving to C# and the .NET Framework, for Java Developers](https://www.microsoft.com/en-us/download/details.aspx?id=6073)
+- [C# Programming Guide](https://msdn.microsoft.com/library/67ef8sbd.aspx)
+- [C# Reference](https://msdn.microsoft.com/library/618ayhy6.aspx)
+- [Moving to C# and the .NET Framework, for Java Developers](https://www.microsoft.com/download/details.aspx?id=6073)

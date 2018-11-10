@@ -55,7 +55,7 @@ sections:
       - href: ~/cross-platform/get-started/index.md
         html: Tutorials to get you up and running with Xamarin. Make sure everything is installed correctly, and build your first apps.
         image:
-          src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+          src: https://docs.microsoft.com/media/common/i_get-started.svg
           href: ~/cross-platform/get-started/index.md
         title: Getting Started
       - href: ~/cross-platform/platform
@@ -73,7 +73,7 @@ sections:
       - href: ~/cross-platform/deploy-test/performance.md
         html: Guidelines for app performance and security.
         image:
-          src: https://docs.microsoft.com/en-us/media/common/i_code-performance.svg
+          src: https://docs.microsoft.com/media/common/i_code-performance.svg
           href: ~/cross-platform/deploy-test/performance.md
         title: Performance & Security
       - href: ~/cross-platform/deploy-test/
@@ -85,7 +85,7 @@ sections:
       - href: ~/cross-platform/desktop/
         html: Guidance for .NET desktop developers interested in building mobile apps.
         image:
-          src: https://docs.microsoft.com/en-us/media/common/i_xplat-code.svg
+          src: https://docs.microsoft.com/media/common/i_xplat-code.svg
           href: ~/cross-platform/desktop/
         title: Desktop Developers
 - title: Platforms

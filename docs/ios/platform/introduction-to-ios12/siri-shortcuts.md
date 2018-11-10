@@ -925,7 +925,7 @@ With these changes in place, the app will run on an iOS device.
 
 ### Automatic provisioning
 
-Note that you can use [automatic provisioning](https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning)
+Note that you can use [automatic provisioning](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning)
 to accomplish many of these provisioning tasks directly in the IDE.
 However, automatic provisioning does not set up app groups. You will need
 to manually configure the **Entitlements.plist** files with the name of
