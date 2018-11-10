@@ -763,7 +763,7 @@ guide):
 ```csharp
 [Service(Exported=true, Permission="android.permissions.BIND_NFC_SERVICE"),
 	IntentFilter(new[] {"android.nfc.cardemulation.HOST_APDU_SERVICE"}),
-	MetaData("andorid.nfc.cardemulation.host.apdu_service",
+	MetaData("android.nfc.cardemulation.host.apdu_service",
 	Resource="@xml/hceservice")]
 
 class HceService : HostApduService
