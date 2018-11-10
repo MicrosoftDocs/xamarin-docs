@@ -235,7 +235,7 @@ with a non-Thumb version of your static library to mitigate this issue.
 
 The [] suffix indicates that you or the class library are calling a method on
 an array through a generic collection, such as IEnumerable<>,
-ICollection<> or IList<>. As a workaround, you can explicitely force
+ICollection<> or IList<>. As a workaround, you can explicitly force
 the AOT compiler to include such method by calling the method yourself, and by
 making sure that this code is executed before the call that triggered the
 exception. In this case, you could write:
