@@ -753,7 +753,7 @@ To add a new Panel, do the following:
 3. Enter `DocumentPanel` for the **Name** and click the **New** button.
 4. Double-click the `DocumentPanel.xib` file to open it for editing in Interface Builder: 
 
-	[![](window-images/new02.png "Editing the pannel")](window-images/new02.png#lightbox)
+	[![](window-images/new02.png "Editing the panel")](window-images/new02.png#lightbox)
 5. Delete the existing Window and drag a Panel from the **Library Inspector** in the **Interface Editor**: 
 
 	[![](window-images/panels01.png "Deleting the existing window")](window-images/panels01.png#lightbox)
