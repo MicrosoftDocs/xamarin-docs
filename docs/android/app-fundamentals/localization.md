@@ -20,7 +20,7 @@ This section describes the main localization features of Android. Skip to the
 
 ### Locale
 
-Users choose their language in **Settings > Langauge & input**. This
+Users choose their language in **Settings > Language & input**. This
 selection controls both the language displayed and regional settings
 used (eg. for date and number formatting).
 
