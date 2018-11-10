@@ -471,7 +471,7 @@ version that will be used in building your app. This setting can be found in **P
 New projects in Visual Studio for Mac use the oldest installed SDK as their default SDK
 setting, and if the SDK specified does not exist, Visual Studio for Mac will use the
 closest it can find to build your app. This was done so that  projects
-would not always requre the newest SDK. However, this currently results in the
+would not always require the newest SDK. However, this currently results in the
 3.2 SDK being used - which results in the iPad simulator being used.
 
 To fix this by using the 4.0 SDK, go to **Project
