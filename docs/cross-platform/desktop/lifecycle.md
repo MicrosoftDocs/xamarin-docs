@@ -78,7 +78,7 @@ Xamarin.Forms is primarily oriented around mobile scenarios. As such, applicatio
 |--- |--- |--- |
 |Initial activation|ctor + Window.OnLoaded|ctor + Page.OnStart|
 |Shown|Window.IsVisibleChanged|Page.Appearing|
-|Hidden|Window.IsVisibleChanged|Page.Disapearing|
+|Hidden|Window.IsVisibleChanged|Page.Disappearing|
 |Suspend/Lost focus|Window.OnDeactivated|Page.OnSleep|
 |Activated/Got focus|Window.OnActivated|Page.OnResume|
 |Closed|Window.OnClosing + Window.OnClosed|n/a|
