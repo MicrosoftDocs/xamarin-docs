@@ -57,7 +57,7 @@ Xamarin Live Player requires:
 7. If a device is already paired and the Xamarin Live Player app is running on the device,
     the code will execute straight away!
 
-    If no device is is paired, a QR code will appear with instructions on how to pair a device:
+    If no device is paired, a QR code will appear with instructions on how to pair a device:
 
     ![Pair a device window](install-images/manage-empty-windows.png)
 

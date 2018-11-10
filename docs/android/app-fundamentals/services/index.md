@@ -54,7 +54,7 @@ It is also possible to run a service in it's own process on the same device, thi
 
 ### Background Execution Limits in Android 8.0
 
-Starting in Android 8.0 (API level 26), an Android application no longer have the ability to run freely in the background. When in the foreground, an app can start and run services without restriction. When an application moves into the background, Android will grant the app a certain amount of time to start and use services. Once that time has elapsed, the app can no longer start any services and any services that were started will be terminated. At this point is is not possible for the app to perform any work. Android considers an application to be in the foreground if one of the following conditions are met:
+Starting in Android 8.0 (API level 26), an Android application no longer have the ability to run freely in the background. When in the foreground, an app can start and run services without restriction. When an application moves into the background, Android will grant the app a certain amount of time to start and use services. Once that time has elapsed, the app can no longer start any services and any services that were started will be terminated. At this point it is not possible for the app to perform any work. Android considers an application to be in the foreground if one of the following conditions are met:
 
 * There is a visible activity (either started or paused).
 * The app has started a foreground service.
