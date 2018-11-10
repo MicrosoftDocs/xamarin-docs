@@ -132,7 +132,7 @@ below. In this example, the emulator is running a blank app called
 The emulator may be left running: it is not necessary to shut it down
 and wait for it to restart each time the app is launched. The first
 time a Xamarin.Android app is run in the emulator, the Xamarin.Android
-shared runtime for the targetted API level is installed, followed by
+shared runtime for the targeted API level is installed, followed by
 the application. The runtime installation may take a few moments, so
 please be patient. Installation of the runtime takes place only when
 the first Xamarin.Android app is deployed to the emulator &ndash;
