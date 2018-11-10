@@ -13,7 +13,7 @@ ms.date: 03/14/2017
 
 _This article covers working with outline views in a Xamarin.Mac application. It describes creating and maintaining outline views in Xcode and Interface Builder and working with them programmatically._
 
-When working with C# and .NET in a Xamarin.Mac application, you have access to the same Outline Views that a developer working in in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Outline Views (or optionally create them directly in C# code).
+When working with C# and .NET in a Xamarin.Mac application, you have access to the same Outline Views that a developer working in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Outline Views (or optionally create them directly in C# code).
 
 An Outline View is a type of Table that allows the user expand or collapse rows of hierarchical data. Like a Table View, an Outline View displays data for a set of related items, with rows representing individual items and columns representing the attributes of those items. Unlike a Table View, items in an Outline View are not in a flat list, they are organized in a hierarchy, like files and folders on a hard drive.
 

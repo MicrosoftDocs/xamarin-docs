@@ -13,7 +13,7 @@ ms.date: 03/14/2017
 
 _This article covers working with table views in a Xamarin.Mac application. It describes creating table views in Xcode and Interface Builder and interacting with them in code._
 
-When working with C# and .NET in a Xamarin.Mac application, you have access to the same Table Views that a developer working in in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Table Views (or optionally create them directly in C# code).
+When working with C# and .NET in a Xamarin.Mac application, you have access to the same Table Views that a developer working in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Table Views (or optionally create them directly in C# code).
 
 A Table View displays data in a tabular format containing one or more columns of information in multiple rows. Based on the type of Table View being created, the user can sort by column, reorganize columns, add columns, remove columns or edit the data contained within the table.
 

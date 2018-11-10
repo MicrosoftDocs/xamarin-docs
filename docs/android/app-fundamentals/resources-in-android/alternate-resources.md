@@ -90,7 +90,7 @@ The possible qualifiers are listed below for reference:
   This value may change as the user rotates the device. Covered in more
   detail in
   [Creating Resources for Varying Screens](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
-  Available in in API level 13 (Android 3.2) and above. Example: the
+  Available in API level 13 (Android 3.2) and above. Example: the
   qualifier w720dp is used to target devices that have a width of least
   720dp.
 
@@ -98,7 +98,7 @@ The possible qualifiers are listed below for reference:
   format h*N*dp, where *N* is the height in dp. This value may change as
   the user rotates the device. Covered in more detail in 
   [Creating Resources for Varying Screens](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
-  Available in in API
+  Available in API
   level 13 (Android 3.2) and above. For example, the qualifier h720dp
   is used to target devices that have a height of least 720dp
 
