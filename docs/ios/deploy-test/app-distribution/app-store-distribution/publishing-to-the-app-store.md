@@ -147,7 +147,7 @@ New Xamarin.iOS projects automatically set up **Debug** and **Release** _build c
 
 1. Make sure that Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Right-click on the **Project Name** in the **Solution Explorer**, select **Properties**.
-3. Navigate to the **iOS Build** tab and and set **Configuration** to **Release** and **Platform** to **iPhone**.
+3. Navigate to the **iOS Build** tab and set **Configuration** to **Release** and **Platform** to **iPhone**.
 4. To build with a specific iOS SDK, select it from the **SDK Version** list. Otherwise, leave this value at **Default**.
 5. Linking reduces the overall size of your application by stripping out unused code. In most cases, **Linker Behavior** should be set to the default value of **Link Framework SDKs only**. In some situations, such as when using some third-party libraries, it may be necessary to set this value to **Don't Link** to ensure that needed code is not removed. For more information, refer to the [Linking Xamarin.iOS apps](~/ios/deploy-test/linker.md) guide.
 6. Check **Optimize PNG images** to further decrease your application's size.

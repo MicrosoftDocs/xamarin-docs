@@ -480,7 +480,7 @@ is donated to Siri.
 
 The call to the `order.Intent` getter fetches an `OrderSoupIntent` that
 represents the order by setting its `Quantity`, `Soup`, `Options`, and
-image, and and an invocation phrase to use as a suggestion when the user
+image, and an invocation phrase to use as a suggestion when the user
 records a phrase for Siri to associate with the intent:
 
 ```csharp

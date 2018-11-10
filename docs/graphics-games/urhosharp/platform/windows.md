@@ -1,6 +1,6 @@
 ---
 title: "UrhoSharp Windows Support"
-description: "This document discusses Windows support for UrhoSharp. It describes how to create a project, configure and and launch Urho, integrate with WPF, and integrate with UWP."
+description: "This document discusses Windows support for UrhoSharp. It describes how to create a project, configure and launch Urho, integrate with WPF, and integrate with UWP."
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
 author: conceptdev

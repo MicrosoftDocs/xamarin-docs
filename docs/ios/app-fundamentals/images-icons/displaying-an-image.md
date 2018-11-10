@@ -35,7 +35,7 @@ To create a new image set and add images to it, do the following:
 3. Select the new image set and the editor will be displayed:
 
 	![](displaying-an-image-images/imageset03.png "The Image Set editor")
-4. From here, drag in images for each of the different devices and and resolutions required. 
+4. From here, drag in images for each of the different devices and resolutions required. 
 5. Double-click the new image set's **Name** in the **Assets List** to edit it: ![](displaying-an-image-images/imageset04.png "Editing the new image set's Name")
 
 When using an **Image Set** in the iOS Designer, simply select the set's name from the dropdown list in the Property Editor:
@@ -48,7 +48,7 @@ When using an **Image Set** in the iOS Designer, simply select the set's name fr
 
 	![](displaying-an-image-images/asset5.png "Click the Plus button")
 
-2. Select **Add Image Set** and the Image Set editor will be displayed for the new image set. From here, drag in images for each of the different devices and and resolutions required. 
+2. Select **Add Image Set** and the Image Set editor will be displayed for the new image set. From here, drag in images for each of the different devices and resolutions required. 
 
 	![](displaying-an-image-images/asset7.png "The image set editor")
 
