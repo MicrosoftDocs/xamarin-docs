@@ -753,7 +753,7 @@ the HCE code as a `Service`. An HCE Service implements the
 
 
 An HCE Service also needs to be registered with the application's
-manifest, and decorated with the proper permissons, intent filter, and
+manifest, and decorated with the proper permissions, intent filter, and
 metadata. The following code is an example of a `HostApduService`
 registered with the Android Manifest using the `Service` attribute (for
 more information on attributes, refer to the Xamarin
