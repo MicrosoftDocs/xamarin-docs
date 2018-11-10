@@ -339,7 +339,7 @@ With the Custom View still selected, switch to the **Identity Inspector** and ch
 
 [![](custom-controls-images/custom04.png "Setting the View's class")](custom-controls-images/custom04.png#lightbox)
 
-Switch to the **Assistant Editor** and create an **Outlet** for the custom control (making sure to bind it in the `ViewControler.h` file and not the `.m` file):
+Switch to the **Assistant Editor** and create an **Outlet** for the custom control (making sure to bind it in the `ViewController.h` file and not the `.m` file):
 
 [![](custom-controls-images/custom05.png "Configuring a new Outlet")](custom-controls-images/custom05.png#lightbox)
 
