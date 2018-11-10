@@ -713,7 +713,7 @@ content to a PDF, as illustrated by the screenshots below:
 
 ## Hardware
 
-KitKat adds several APIs to accomodate new device features. The most
+KitKat adds several APIs to accommodate new device features. The most
 notable of these are Host-Based Card Emulation and the new
 `SensorManager`.
 
