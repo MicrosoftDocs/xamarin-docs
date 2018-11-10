@@ -43,7 +43,7 @@ All the animation methods in `ViewExtensions` return `Task<bool>` objects. This 
 
 ### Composite animations
 
-You can mix awaited and non-awaited animations to create composite animations. These are the  animations in `ViewExtensions` that target the `TranslatonX`, `TranslationY`, and `Scale` transform properties:
+You can mix awaited and non-awaited animations to create composite animations. These are the  animations in `ViewExtensions` that target the `TranslationX`, `TranslationY`, and `Scale` transform properties:
 
 - [`TranslateTo`](xref:Xamarin.Forms.ViewExtensions.TranslateTo(Xamarin.Forms.VisualElement,System.Double,System.Double,System.UInt32,Xamarin.Forms.Easing))
 - [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))
