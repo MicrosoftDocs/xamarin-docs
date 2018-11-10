@@ -216,7 +216,7 @@ There are two basic way that we can add user input to our custom control: **Over
 
 #### Handling User Input with Override Methods
 
-Objects that inherit from `NSControl` (or `NSView`) have several override methods for handling mouse or keyboard input. For our example control, we want to flip the state of the switch between **On** and **Off** when the user clicks on the control with the left mouse button. We can add the following override methods to the `NSFliwSwitch` class to handle this:
+Objects that inherit from `NSControl` (or `NSView`) have several override methods for handling mouse or keyboard input. For our example control, we want to flip the state of the switch between **On** and **Off** when the user clicks on the control with the left mouse button. We can add the following override methods to the `NSFlipSwitch` class to handle this:
 
 ```csharp
 #region Mouse Handling Methods
