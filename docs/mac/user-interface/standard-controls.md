@@ -503,7 +503,7 @@ FeedbackLabel.StringValue = string.Format("Stepper Value: {0:###}",TickedSlider.
 The specialty controls (such as Color Well and Image Well) have specific properties for their value types. For Example:
 
 ```csharp
-CollorWell.Color = NSColor.Red;
+ColorWell.Color = NSColor.Red;
 ImageWell.Image = NSImage.ImageNamed ("tag.png");
 
 ```
