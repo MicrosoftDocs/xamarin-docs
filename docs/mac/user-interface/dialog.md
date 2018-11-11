@@ -1085,7 +1085,7 @@ The user can expand the dialog:
 
 [![](dialog-images/save04.png "An expanded save sheet")](dialog-images/save04.png#lightbox)
 
-For more more information on working with the Save Dialog, please see Apple's [NSSavePanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSSavePanel_Class/index.html#//apple_ref/doc/uid/TP40004098) documentation.
+For more information on working with the Save Dialog, please see Apple's [NSSavePanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSSavePanel_Class/index.html#//apple_ref/doc/uid/TP40004098) documentation.
 
 <a name="Summary" />
 
