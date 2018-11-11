@@ -49,7 +49,7 @@ This chapter presents a `NavigationService` class, which is used to perform view
 
 Any app that accepts input from users should ensure that the input is valid. Without validation, a user can supply data that causes the app to fail. Validation enforces business rules, and prevents an attacker from injecting malicious data.
 
-In the context of the Model-ViewModel-Model (MVVM) pattern, a view model or model will often be required to perform data validation and signal any validation errors to the view so that the user can correct them.
+In the context of the Model-View-ViewModel (MVVM) pattern, a view model or model will often be required to perform data validation and signal any validation errors to the view so that the user can correct them.
 
 ## [Configuration Management](configuration-management.md)
 
