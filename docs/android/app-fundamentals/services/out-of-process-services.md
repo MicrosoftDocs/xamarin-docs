@@ -144,7 +144,7 @@ Once the `ServiceAttribute` has been set, the service needs to implement a `Hand
 
 ### Implementing a Handler
 
-To process client requests, the service must implement a `Handler` and override the `HandleMessage` methodThis is the method takes a `Message` instance which which encapsulates the method call from the client and translates that call into some action or task that the service will perform. The `Message` object exposes a property called `What` which is an integer value, the meaning of which is shared between the client and the service and relates to some task that the service is to perform for the client.
+To process client requests, the service must implement a `Handler` and override the `HandleMessage` methodThis is the method takes a `Message` instance which encapsulates the method call from the client and translates that call into some action or task that the service will perform. The `Message` object exposes a property called `What` which is an integer value, the meaning of which is shared between the client and the service and relates to some task that the service is to perform for the client.
 
 The following code snippet from the sample application shows one example of `HandleMessage`. In this example, there are two actions that a client can request of the service:
 
