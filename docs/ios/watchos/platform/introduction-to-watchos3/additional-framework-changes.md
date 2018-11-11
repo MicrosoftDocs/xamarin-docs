@@ -33,7 +33,7 @@ For more information, please see Apple's [Core Data Framework Reference](https:/
 
 The following enhancements have be made to the Core Motion framework for watch OS 3:
 
-- The new Device Motion event uses the accelerometer and gyroscope to provide motion and orientation updates. the app app can register for this updated (at rates of up to 100Hz).
+- The new Device Motion event uses the accelerometer and gyroscope to provide motion and orientation updates. The app can register for this update (at rates of up to 100Hz).
 - The new Pedometer event enables fast, real-time notifications when the user pauses and resumes running. Use the [CMPedometer](https://developer.apple.com/reference/coremotion/cmpedometer) to register for foreground or background pedometer events.
 
 

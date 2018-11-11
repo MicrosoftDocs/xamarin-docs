@@ -143,7 +143,7 @@ The structured Intent will contain the following information:
 
 Every Domain has as set of know *Actions* that can be performed within them and based on the Domain and the Action, zero to many parameters might be included in the Intent sent to the app.
 
-The Intent is then sent to the App Extension for processing. As a result of processing the Intent, the app will generate an **IntentResponse** which will be bundled with the Intent and include parameters describing what the app app did with the Intent.
+The Intent is then sent to the App Extension for processing. As a result of processing the Intent, the app will generate an **IntentResponse** which will be bundled with the Intent and include parameters describing what the app did with the Intent.
 
 Each IntentResponse will also include a **Response Code** which tells Siri if the app was able to complete the request or not. Some Domains have very specific error response codes that can be sent as well.
 
