@@ -404,7 +404,7 @@ Refer to the Storyboards.Conditional solution in the [Manual Storyboards sample]
 
 ## Using Storyboard References
 
-A Storyboard Reference allows you to take a large, complex Storyboard design and break it into smaller Storyboards that get referenced from the original, thus removing removing complexity and making the resulting individual Storyboards easier to design and maintain.
+A Storyboard Reference allows you to take a large, complex Storyboard design and break it into smaller Storyboards that get referenced from the original, thus removing complexity and making the resulting individual Storyboards easier to design and maintain.
 
 Additionally, a Storyboard Reference can provide an _anchor_ to another scene within the same Storyboard or a specific scene on a different one.
 
