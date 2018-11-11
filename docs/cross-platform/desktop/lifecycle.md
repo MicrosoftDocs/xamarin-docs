@@ -174,7 +174,7 @@ If you do not define the `ResourceDictionary`, a runtime error is generated.
 
 ## Styles
 
-Styles are also fully supported in Xamarin.Forms and can be used to theme the Xamarin.Forms elements that make up the UI. They support triggers (property, event and data), inheritance through `BasedOn`, and resource lookups for values. Styles are applied to elements either explicitly through the `Style` property, or implicitely by not supplying a resource key - just like WPF.
+Styles are also fully supported in Xamarin.Forms and can be used to theme the Xamarin.Forms elements that make up the UI. They support triggers (property, event and data), inheritance through `BasedOn`, and resource lookups for values. Styles are applied to elements either explicitly through the `Style` property, or implicitly by not supplying a resource key - just like WPF.
 
 ### Device Styles
 
