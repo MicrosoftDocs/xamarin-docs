@@ -11,7 +11,7 @@ ms.date: 03/14/2017
 
 # Creating Custom Controls in Xamarin.Mac
 
-When working with C# and .NET in a Xamarin.Mac application, you have access to the same User Controls that a developer working in in *Objective-C*, *Swift* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your User Controls (or optionally create them directly in C# code).
+When working with C# and .NET in a Xamarin.Mac application, you have access to the same User Controls that a developer working in *Objective-C*, *Swift* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your User Controls (or optionally create them directly in C# code).
 
 While macOS provides a wealth of built-in User Controls, there might be times that you need to create a custom control to provide functionality not provided out-of-the-box or to match a custom UI theme (such as a game interface).
 
