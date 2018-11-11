@@ -873,7 +873,7 @@ D/MyGcmListenerService(16103): Message: Hello, Xamarin!
 In addition, you should notice that a new notification icon has 
 appeared in the notification tray: 
 
-[![Notiication icon appears on device](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
+[![Notification icon appears on device](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
 
 When you open the notification tray to view notifications, you should see our
 remote notification:
