@@ -129,7 +129,7 @@ The [**TryAwaitableAnimation**](https://github.com/xamarin/xamarin-forms-book-sa
 
 ## Deeper into animations
 
-The Xamarin.Forms animation system can be a little confusing. In addition to the `Easing` class, the animation system comprises the `ViewExtensions`, `Animation`, and `AnimationExtension` classses.
+The Xamarin.Forms animation system can be a little confusing. In addition to the `Easing` class, the animation system comprises the `ViewExtensions`, `Animation`, and `AnimationExtension` classes.
 
 ### ViewExtensions class
 
