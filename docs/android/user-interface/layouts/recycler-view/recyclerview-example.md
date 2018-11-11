@@ -507,7 +507,7 @@ scrolling is horizontal rather than vertical:
 
 [![Example screenshot of app with horizontally-scrolling photos in a grid](recyclerview-example-images/04-gridlayoutmanager-sml.png)](recyclerview-example-images/04-gridlayoutmanager.png#lightbox)
 
-By changing only one line of code, is is possible to modify the
+By changing only one line of code, it is possible to modify the
 photo-viewing app to use a different layout with different behavior.
 Notice that neither the adapter code nor the layout XML had to be
 modified to change the layout style. 

@@ -100,7 +100,7 @@ Xamarin.Mac startup logic will differ depending on whether embedded or system Mo
 
 ## Generator
 
-Xamarin.Mac contains definitions for every Mac API. You can browse through any of these on the [MaciOS github repo](https://github.com/xamarin/xamarin-macios/tree/master/src). These definitions contain interfaces with attributes, as well as any necessary methods and properties. For example, the following code is is used to define an NSBox in the [AppKit namespace](https://github.com/xamarin/xamarin-macios/blob/master/src/appkit.cs#L1465-L1526). Notice that it is an interface with a number of methods and properties:
+Xamarin.Mac contains definitions for every Mac API. You can browse through any of these on the [MaciOS github repo](https://github.com/xamarin/xamarin-macios/tree/master/src). These definitions contain interfaces with attributes, as well as any necessary methods and properties. For example, the following code is used to define an NSBox in the [AppKit namespace](https://github.com/xamarin/xamarin-macios/blob/master/src/appkit.cs#L1465-L1526). Notice that it is an interface with a number of methods and properties:
 
 ```csharp
 [BaseType (typeof (NSView))]

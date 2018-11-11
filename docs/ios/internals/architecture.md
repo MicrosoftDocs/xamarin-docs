@@ -181,7 +181,7 @@ to do is to actually start adding controls and make the app interactive.
 Xamarin.iOS contains definitions for every single iOS API. You can
 browse through any of these on the [MaciOS github repo](https://github.com/xamarin/xamarin-macios/tree/master/src). These definitions contain
 interfaces with attributes, as well as any necessary methods and properties. For
-example, the following code is is used to define a UIToolbar in the UIKit
+example, the following code is used to define a UIToolbar in the UIKit
 [namespace](https://github.com/xamarin/xamarin-macios/blob/master/src/uikit.cs#L11277-L11327). Notice that it is an interface with a number of methods and
 properties:
 
