@@ -54,7 +54,7 @@ To automatically sign your app for deployment on an iOS device, do the following
 
 2. Open the **Info.plist** file.
 
-3. In the **Signing** section, select select **Automatic Provisioning**:
+3. In the **Signing** section, select **Automatic Provisioning**:
 
     ![Team selector dropdown](automatic-provisioning-images/image2.png)
 

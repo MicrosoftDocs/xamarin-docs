@@ -99,7 +99,7 @@ We'll add the files directly to the root **Content** folder for both iOS and And
 
 ![The Add File to Folder dialog](bouncing-game-images/image2.png "The Add File to Folder dialog")
 
-Next, we'll add the file to the Android project. Right-click or Control-click on the Content folder (which is in the **Assets** folder on Android projects) and select select **Add** > **Add Files...**. This time, navigate to the iOS project's **Content** folder. When asked about how to add the file, select the **Add a link** option:
+Next, we'll add the file to the Android project. Right-click or Control-click on the Content folder (which is in the **Assets** folder on Android projects) and select **Add** > **Add Files...**. This time, navigate to the iOS project's **Content** folder. When asked about how to add the file, select the **Add a link** option:
 
 ![The Add File to Folder dialog](bouncing-game-images/addalink.png "The Add file to Folder dialog")
 
