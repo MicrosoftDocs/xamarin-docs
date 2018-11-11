@@ -13,7 +13,7 @@ ms.date: 03/14/2017
 
 _This article covers working with windows and panels in a Xamarin.Mac application. It describes creating windows and panels in Xcode and Interface Builder, loading them from storyboards and .xib files, and working with them programmatically._
 
-When working with C# and .NET in a Xamarin.Mac application, you have access to the same Windows and Panels that a developer working in in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Windows and Panels (or optionally create them directly in C# code).
+When working with C# and .NET in a Xamarin.Mac application, you have access to the same Windows and Panels that a developer working in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Windows and Panels (or optionally create them directly in C# code).
 
 Based on its purpose, a Xamarin.Mac application can present one or more Windows on screen to manage and coordinate the information it displays and works with. The principal functions of a window are:
 

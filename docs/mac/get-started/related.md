@@ -21,7 +21,7 @@ In addition to the Mac section of [developer.xamarin.com](~/mac/get-started/inde
 
 ## User Interface
 
-When working with C# and .NET in a Xamarin.Mac application, the Developer has access to the same User Interface controls that a developer working in in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, the developer can use Xcode's _Interface Builder_ to create and maintain an app's User Interfaces (or optionally create them directly in C# code).
+When working with C# and .NET in a Xamarin.Mac application, the Developer has access to the same User Interface controls that a developer working in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, the developer can use Xcode's _Interface Builder_ to create and maintain an app's User Interfaces (or optionally create them directly in C# code).
 
 The guides listed below give detailed information about working with macOS elements in a Xamarin.Mac application:
 
