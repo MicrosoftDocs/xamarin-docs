@@ -11,7 +11,7 @@ ms.date: 12/09/2015
 
 # Device Orientation
 
-It is important to consider how your application will be used and how landscape orientation can be incorporated to improve the user experience. Individual layouts can be designed to accomodate multiple orientations and best use the available space. At the application level, rotation can be disabled or enabled.
+It is important to consider how your application will be used and how landscape orientation can be incorporated to improve the user experience. Individual layouts can be designed to accommodate multiple orientations and best use the available space. At the application level, rotation can be disabled or enabled.
 
 <a name="Controlling_Orientation" />
 

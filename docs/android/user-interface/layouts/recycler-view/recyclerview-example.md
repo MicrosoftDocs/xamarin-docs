@@ -149,7 +149,7 @@ This code resides in the main activity's `OnCreate` method. The
 constructor to the layout manager requires a *context*, so the
 `MainActivity` is passed using `this` as seen above.
 
-Instead of using the predefind `LinearLayoutManager`, you can
+Instead of using the predefined `LinearLayoutManager`, you can
 plug in a custom layout manager that displays two `CardView` items
 side-by-side, implementing a page-turning animation effect to traverse
 through the collection of photos. Later in this guide, you will see an
