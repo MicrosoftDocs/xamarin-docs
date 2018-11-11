@@ -42,7 +42,7 @@ There are four different types of Android services:
 
 * **`IntentService`** &ndash; An _`IntentService`_ is a specialized subclass of the `Service` class that simplifies service creation and usage. An `IntentService` is meant to handle individual autonomous calls. Unlike a service, which can concurrently handle multiple calls, an `IntentService` is more like a _work queue processor_ &ndash; work is queued up and an `IntentService` processes each job one at a time on a single worker thread. Typically, an`IntentService` is not bound to an Activity or a Fragment. 
 
-* **Started Service** &ndash; A _started service_ is a service that has been started by some other Android component (such as an Activity) and is run continously in the background until something explicitly tells the service to stop. Unlike a bound service, a started service does not have any clients directly bound to it. For this reason, it is important to design started services so that they may be gracefully restarted as necessary.
+* **Started Service** &ndash; A _started service_ is a service that has been started by some other Android component (such as an Activity) and is run continuously in the background until something explicitly tells the service to stop. Unlike a bound service, a started service does not have any clients directly bound to it. For this reason, it is important to design started services so that they may be gracefully restarted as necessary.
 
 * **Hybrid Service** &ndash; A _hybrid service_ is a service that has the characteristics of a _started service_ and a _bound service_. A hybrid service can be started by when a component binds to it or it may be started by some event. A client component may or may not be bound to the hybrid service. A hybrid service will keep running until it is explicitly told to stop, or until there are no more clients bound to it.
 
@@ -65,7 +65,7 @@ There are some situations where, even though an app is in the background,  Andro
 * The app receives a broadcast. 
 * The application receives an executes a `PendingIntent` in response to a Notification.
 
-Existing Xamarin.Android applications may have to change how they perform background work to avoid any issues that might arise on Android 8.0. Here are some practical alterantives to an Android service:
+Existing Xamarin.Android applications may have to change how they perform background work to avoid any issues that might arise on Android 8.0. Here are some practical alternatives to an Android service:
 
 * **Schedule work to run in the background using the Android Job Scheduler or the [Firebase Job Dispatcher](~/android/platform/firebase-job-dispatcher.md)** &ndash; These two libraries provide a framework for applications to segregate background work in to _jobs_, a discrete unit of work. Apps can then schedule the job with the operating system along with some criteria about when the job can run.
 * **Start the service in the foreground** &ndash; a foreground service is useful for when the app must perform some task in the background and the user may need to periodically interact with that task. The foreground service will display a persistent notification so that the user is aware that the app is running a background task and also provides a way to monitor or interact with the task. An example of this would be a podcasting app that is playing back a podcast to the user or perhaps downloading a podcast episode so that it can be enjoyed later. 
