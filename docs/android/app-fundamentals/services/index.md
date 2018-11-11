@@ -65,7 +65,7 @@ There are some situations where, even though an app is in the background,  Andro
 * The app receives a broadcast. 
 * The application receives an executes a `PendingIntent` in response to a Notification.
 
-Existing Xamarin.Android applications may have to change how they perform background work to avoid any issues that might arise on Android 8.0. Here are some practical alterantives to an Android service:
+Existing Xamarin.Android applications may have to change how they perform background work to avoid any issues that might arise on Android 8.0. Here are some practical alternatives to an Android service:
 
 * **Schedule work to run in the background using the Android Job Scheduler or the [Firebase Job Dispatcher](~/android/platform/firebase-job-dispatcher.md)** &ndash; These two libraries provide a framework for applications to segregate background work in to _jobs_, a discrete unit of work. Apps can then schedule the job with the operating system along with some criteria about when the job can run.
 * **Start the service in the foreground** &ndash; a foreground service is useful for when the app must perform some task in the background and the user may need to periodically interact with that task. The foreground service will display a persistent notification so that the user is aware that the app is running a background task and also provides a way to monitor or interact with the task. An example of this would be a podcasting app that is playing back a podcast to the user or perhaps downloading a podcast episode so that it can be enjoyed later. 
