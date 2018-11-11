@@ -380,7 +380,7 @@ Within each of the three `FlexLayout` views, a blank `Label` precedes the `Butto
 ## The bindable properties in detail
 
 Now that you've seen some common applications of `FlexLayout`, the properties of `FlexLayout` can be explored in more detail. 
-`FlexLayout` defines six bindable properties that you set on the `FlexLayout` itself, either in code or XAML, to control orientatin and alignment. (One of these properties, [`Position`](xref:Xamarin.Forms.FlexLayout.Position), is not covered in this article.)
+`FlexLayout` defines six bindable properties that you set on the `FlexLayout` itself, either in code or XAML, to control orientation and alignment. (One of these properties, [`Position`](xref:Xamarin.Forms.FlexLayout.Position), is not covered in this article.)
 
 You can experiment with the five remaining bindable properties using the **Experiment** page of the **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** sample. This page allows you to add or remove children from a `FlexLayout` and to set combinations of the five bindable properties. All the children of the `FlexLayout` are `Label` views of various colors and sizes, with the `Text` property set to a number corresponding to its position in the `Children` collection.
 
@@ -603,7 +603,7 @@ The **Shrink Experiment** page creates a `FlexLayout` with a single row of five 
 
 In the Android screenshot, the `Shrink` value for the second `Label` is set to 0, and that `Label` is displayed in its full width. Also, the fourth `Label` is given a `Shrink` value greater than one, and it has shrunk. The UWP screenshot shows both `Label` elements being given a `Shrink` value of 0 to allow them to be displayed in their full size, if that is possible.
 
-You can set both the `Grow` and `Shrink` values to accomodate situations where the aggregate child sizes might sometimes be less than or sometimes greater than the size of the `FlexLayout`.
+You can set both the `Grow` and `Shrink` values to accommodate situations where the aggregate child sizes might sometimes be less than or sometimes greater than the size of the `FlexLayout`.
 
 ## CSS styling with FlexLayout
 

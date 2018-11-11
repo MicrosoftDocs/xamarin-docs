@@ -13,7 +13,7 @@ ms.date: 03/14/2017
 
 _This article covers working with the standard AppKit controls such as buttons, labels, text fields, check boxes, and segmented controls in a Xamarin.Mac application. It describes adding them to an interface with Interface Builder and interacting with them in code._
 
-When working with C# and .NET in a Xamarin.Mac application, you have access to the same AppKit Controls that a developer working in in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Appkit Controls (or optionally create them directly in C# code).
+When working with C# and .NET in a Xamarin.Mac application, you have access to the same AppKit Controls that a developer working in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Appkit Controls (or optionally create them directly in C# code).
 
 AppKit Controls are the UI Elements that are used to create the User Interface of your Xamarin.Mac application. They consist of elements such as Buttons, Labels, Text Fields, Check Boxes and Segmented Controls and cause instant actions or visible results when a user manipulates them.
 

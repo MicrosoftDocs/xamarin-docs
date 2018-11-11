@@ -156,7 +156,7 @@ End Class
 ```
 
 > [!NOTE]
-> This code is is an example of a very basic data-storage mechanism.
+> This code is an example of a very basic data-storage mechanism.
 > It is provided to demonstrate how a Portable Class Library can code 
 > against an interface to access platform-specific functionality 
 > (in this case, loading and saving an Xml file). It it not intended to be 

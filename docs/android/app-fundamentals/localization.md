@@ -250,7 +250,7 @@ German that allows for very long text labels.
 Android 4.2 introduced support for
 [right to left (RTL) languages](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html)
 if you set the application setting `android:supportsRtl="true"`. The
-resource qualifier `"ldrtl"` can be included in a direcory name to
+resource qualifier `"ldrtl"` can be included in a directory name to
 contain custom layouts that are designed for RTL display.
 
 For more information on resource directory naming and fallback, refer
@@ -274,7 +274,7 @@ Android 4.2 and newer provides full support for RTL layouts, described
 in detail in the
 [Native RTL Support blog](http://android-developers.blogspot.dk/2013/03/native-rtl-support-in-android-42.html).
 
-When using Android 4.2 (API level 17) and newer, aligment values can be
+When using Android 4.2 (API level 17) and newer, alignment values can be
 specified with `start` and `end` instead of `left` and `right` (for
 example `android:paddingStart`). There are also new APIs like
 `LayoutDirection`, `TextDirection`, and `TextAlignment` to help build

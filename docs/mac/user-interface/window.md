@@ -13,7 +13,7 @@ ms.date: 03/14/2017
 
 _This article covers working with windows and panels in a Xamarin.Mac application. It describes creating windows and panels in Xcode and Interface Builder, loading them from storyboards and .xib files, and working with them programmatically._
 
-When working with C# and .NET in a Xamarin.Mac application, you have access to the same Windows and Panels that a developer working in in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Windows and Panels (or optionally create them directly in C# code).
+When working with C# and .NET in a Xamarin.Mac application, you have access to the same Windows and Panels that a developer working in *Objective-C* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your Windows and Panels (or optionally create them directly in C# code).
 
 Based on its purpose, a Xamarin.Mac application can present one or more Windows on screen to manage and coordinate the information it displays and works with. The principal functions of a window are:
 
@@ -279,7 +279,7 @@ For example:
 MyWindow.PerformClose(this);
 ```
 
-Would attempt to close the `MyWindow` `NSWindow` instance. If it was successful, the window will be closed, else the alert sound will be emitted and the will will stay open.
+Would attempt to close the `MyWindow` `NSWindow` instance. If it was successful, the window will be closed, else the alert sound will be emitted and the will stay open.
 
 <a name="Close" />
 
@@ -372,7 +372,7 @@ namespace SourceWriter
 				alert.AddButton ("Cancel");
 				var result = alert.RunSheetModal (Window);
 
-				// Take action based on resu;t
+				// Take action based on result
 				switch (result) {
 				case 1000:
 					// Grab controller
@@ -753,7 +753,7 @@ To add a new Panel, do the following:
 3. Enter `DocumentPanel` for the **Name** and click the **New** button.
 4. Double-click the `DocumentPanel.xib` file to open it for editing in Interface Builder: 
 
-	[![](window-images/new02.png "Editing the pannel")](window-images/new02.png#lightbox)
+	[![](window-images/new02.png "Editing the panel")](window-images/new02.png#lightbox)
 5. Delete the existing Window and drag a Panel from the **Library Inspector** in the **Interface Editor**: 
 
 	[![](window-images/panels01.png "Deleting the existing window")](window-images/panels01.png#lightbox)
