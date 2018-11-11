@@ -45,7 +45,7 @@ frameworks — have not been updated to 64-bit.
 > uncover various programming errors. In particular it may change the size and
 > alignment of data structures, which would affect p/invoke signatures and
 > native code linked in your project. Consider reviewing any build warnings
-> given and test your application throughly afterwards to catch potential
+> given and test your application thoroughly afterwards to catch potential
 > issues.
 
 #### Example error resulting from a dynamically-linked third-party dependency that does not target 64-bit:

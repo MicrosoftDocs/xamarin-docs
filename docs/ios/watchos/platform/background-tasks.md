@@ -686,7 +686,7 @@ Apple has the following suggestions:
 - When testing an app in the watchOS Simulator, none of the Task budgets will be enforced so an app can refresh as much as needed to properly test a feature.
 - Always test on real Apple Watch hardware to ensure that the app isn't running past its budgets before publishing to iTunes Connect.
 - Apple suggests keeping the Apple Watch on the charger while testing and debugging.
-- Ensure that both cold launching and resuming an app are throughly tested.
+- Ensure that both cold launching and resuming an app are thoroughly tested.
 - Verify that all app Tasks are being completed.
 - Vary the number of apps that are pinned in the Dock to test both the best and worst case scenarios.
 
