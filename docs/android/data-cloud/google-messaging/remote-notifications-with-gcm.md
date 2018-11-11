@@ -160,7 +160,7 @@ before it can receive notifications from Google Cloud Messaging:
     GCM still uses `c2dm` in many of its permission strings.) 
 
 -   `android.permission.WAKE_LOCK` &ndash; (Optional) Prevents the 
-    device CPU from from going to sleep while listening for a message. 
+    device CPU from going to sleep while listening for a message. 
 
 -   `android.permission.INTERNET` &ndash; Grants internet access so the 
     client app can communicate with GCM. 
