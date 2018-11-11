@@ -78,7 +78,7 @@ property to
 **C#**
 
 In C#, set the `LabelFor` property to the resource ID of the
-control this this content describes (typically this property is
+control that this content describes (typically this property is
 set on a label and references some other input control):
 
 ```csharp
