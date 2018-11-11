@@ -429,7 +429,7 @@ screen:
    installed virtual devices while displaying a **Creating** progress
    indicator during device creation:
 
-   [![Creation progress indictator](device-manager-images/mac/19-creating-the-device-m76-sml.png)](device-manager-images/mac/19-creating-the-device-m76.png#lightbox)
+   [![Creation progress indicator](device-manager-images/mac/19-creating-the-device-m76-sml.png)](device-manager-images/mac/19-creating-the-device-m76.png#lightbox)
 
 10. When the creation process is complete, the new device is shown in
     the list of installed virtual devices with a **Start** button,
