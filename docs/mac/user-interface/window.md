@@ -279,7 +279,7 @@ For example:
 MyWindow.PerformClose(this);
 ```
 
-Would attempt to close the `MyWindow` `NSWindow` instance. If it was successful, the window will be closed, else the alert sound will be emitted and the will will stay open.
+Would attempt to close the `MyWindow` `NSWindow` instance. If it was successful, the window will be closed, else the alert sound will be emitted and the will stay open.
 
 <a name="Close" />
 
@@ -372,7 +372,7 @@ namespace SourceWriter
 				alert.AddButton ("Cancel");
 				var result = alert.RunSheetModal (Window);
 
-				// Take action based on resu;t
+				// Take action based on result
 				switch (result) {
 				case 1000:
 					// Grab controller
