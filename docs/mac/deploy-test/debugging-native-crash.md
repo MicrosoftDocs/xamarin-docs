@@ -154,7 +154,7 @@ Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
 
 ```
 
-This guide will help you track down bugs of this nature if they crop up, correctly report them so they can be fixed, and work around them in your your code until then.
+This guide will help you track down bugs of this nature if they crop up, correctly report them so they can be fixed, and work around them in your code until then.
 
 ### Locating
 

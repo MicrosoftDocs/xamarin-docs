@@ -21,7 +21,7 @@ compatible and will not require any changes.
 
 ## Targeting 64-bit
 
-1. Open the **Project Options** window for your your Xamarin.Mac app:
+1. Open the **Project Options** window for your Xamarin.Mac app:
 
    ![The contextual menu for the project](mac-64-bit-images/1-contextual_menu-vsmac.png "The contextual menu for the project")
 
