@@ -699,7 +699,7 @@ that generates the print document from the content, and
 [`PrintAttributes`](https://developer.xamarin.com/api/type/Android.Print.PrintAttributes/)
 (`null` in the example above). You can specify `PrintAttributes` to
 help lay out content on the printed page, although the default
-attributes should handle most scenarions.
+attributes should handle most scenarios.
 
 Calling `Print` loads the print UI, which lists options for the print
 job. The UI gives users the option of printing or saving the HTML
