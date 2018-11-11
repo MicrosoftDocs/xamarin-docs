@@ -145,7 +145,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 }
 ```
 
-Optionally, you can override the `ShouldPerfromSegue` method and control whether or not the Segue is actually executed via C# code. For manually presented View Controllers, call their `DismissController` method to remove them from display when they are no longer needed.
+Optionally, you can override the `ShouldPerformSegue` method and control whether or not the Segue is actually executed via C# code. For manually presented View Controllers, call their `DismissController` method to remove them from display when they are no longer needed.
 
 <a name="Creating-Custom-Segues" />
 
@@ -222,7 +222,7 @@ Window Controllers contain and control the different Window types that your macO
 2. The `Storyboard` property will contain the Storyboard that the Window Controller was loaded from, else `null` if not loaded from a Storyboard.
 3. You can call the `DismissController` method to close the given Window and remove it from view.
 
-Like View Controllers, Window Controllers implement the `PerformSegue`, `PrepareForSegue` and the `ShouldPerfromSegue` methods and can be used as the source of a Segue operation.
+Like View Controllers, Window Controllers implement the `PerformSegue`, `PrepareForSegue` and the `ShouldPerformSegue` methods and can be used as the source of a Segue operation.
 
 Window Controller are responsible for the following features of a macOS app:
 
