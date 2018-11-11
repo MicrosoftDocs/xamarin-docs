@@ -666,7 +666,7 @@ bug report by clicking **Help > Report a Problem**:
 ## Summary
 
 This guide introduced the Android Device Manager available in Visual
-Studio Tools for Xamarin and and Visual Studio for Mac. It explained
+Studio Tools for Xamarin and Visual Studio for Mac. It explained
 essential features such as starting and stopping the Android emulator,
 selecting an Android virtual device (AVD) to run, creating new virtual
 devices, and how to edit a virtual device. It explained how to
