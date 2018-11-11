@@ -410,7 +410,7 @@ Notice in particular that this project includes:
 - **ApiDefinitions.cs** – A file generated above by Objective Sharpie and
 added to this project. This file's **Build Action** is set to
 **ObjcBindingApiDefinition**.
-- **StructsAndEnums.cs** – Another file genrated above by Objective
+- **StructsAndEnums.cs** – Another file generated above by Objective
 Sharpie and added to this project. This file's **Build Action** is set to
 **ObjcBindingCoreSource**.
 - A **Native Reference** to **libOrderSoupIntentStaticLib.a**, the static
