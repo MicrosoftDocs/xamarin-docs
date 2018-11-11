@@ -464,7 +464,7 @@ public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkou
 
 Also new to watchOS 3, are the Motion Paused (`HKWorkoutEventType.MotionPaused`) and Motion Resumed (`HKWorkoutEventType.MotionResumed`) events. These events are raised automatically by HealthKit during a running workout when the user starts and stops moving.
 
-When the app receives a Motion Paused event, it should stop collecting data until the user resumes motion and the Motion Resumes event is received. App app should not pause the Workout session in response to a Motion Paused event.
+When the app receives a Motion Paused event, it should stop collecting data until the user resumes motion and the Motion Resumes event is received. App should not pause the Workout session in response to a Motion Paused event.
 
 > [!IMPORTANT]
 > The Motion Paused and Motion Resume events are only supported for the RunningWorkout Activity Type (`HKWorkoutActivityType.Running`).
