@@ -839,7 +839,7 @@ The screenshot below depicts the step counter in action:
 
 You can create a `SensorManager` by calling
 `GetSystemService(SensorService)` and casting the result as a
-`SensorManager`. To use the step counter, call `GetDeafultSensor` on
+`SensorManager`. To use the step counter, call `GetDefaultSensor` on
 the `SensorManager`. You can register the sensor and listen to changes
 in step count with the help of the
 [`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
@@ -972,7 +972,7 @@ In addition to the changes described above, KitKat allows you to:
 
 -  *Read Dynamically Changing Text* - Denote parts of UI that update
    dynamically with new text as "live regions" with the new
-   [ `accesibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+   [ `accessibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
    attribute so the new text will be read automatically in
    accessibility mode.
 
