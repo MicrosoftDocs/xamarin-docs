@@ -103,7 +103,7 @@ Once the group is created, it can be referenced in your
   **App ID** configuration. Remember to include it both the
   iOS App and Watch Extension **App IDs**.
 
-![Available consifurations](images/appgroups-sml.png)
+![Available configurations](images/appgroups-sml.png)
 
 Do **not** enable App Groups in the Apple Watch App ID. It is not
   required to be enabled on the watch itself.
