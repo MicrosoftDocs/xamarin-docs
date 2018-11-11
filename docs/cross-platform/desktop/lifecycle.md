@@ -178,7 +178,7 @@ Styles are also fully supported in Xamarin.Forms and can be used to theme the Xa
 
 ### Device Styles
 
-WPF has a set of predefined properties (stored as static values on a set of static classes such as `SystemColors`) which dictate system colors, fonts and metrics in the form of values and resource keys. Xamarin.Forms is similar, but defines a set of [Device Styles](~/xamarin-forms/user-interface/styles/device.md) to represent the same things. These styles are supplied by the frameowrk and set to values based on the runtime environment (e.g. accessibility).
+WPF has a set of predefined properties (stored as static values on a set of static classes such as `SystemColors`) which dictate system colors, fonts and metrics in the form of values and resource keys. Xamarin.Forms is similar, but defines a set of [Device Styles](~/xamarin-forms/user-interface/styles/device.md) to represent the same things. These styles are supplied by the framework and set to values based on the runtime environment (e.g. accessibility).
 
 **WPF**
 
