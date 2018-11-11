@@ -18,7 +18,7 @@ _ViewPager is a layout manager that lets you implement gestural navigation. Gest
 
 `ViewPager` is often used in conjunction with fragments so that it is 
 easier to manage the lifecycle of each page in the `ViewPager`. In this 
-walkthrough, `ViewPager` is used to create an an app called 
+walkthrough, `ViewPager` is used to create an app called 
 **FlashCardPager** that presents a series of math problems on flash 
 cards. Each flash card is implemented as a fragment. The user swipes 
 left and right through the flash cards and taps on a math problem to 
