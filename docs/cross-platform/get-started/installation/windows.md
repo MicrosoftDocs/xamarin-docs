@@ -26,7 +26,7 @@ see a **Xamarin** menu item as shown in this screenshot:
 You can also click **Help > About Microsoft Visual Studio** and scroll
 through the list of installed products to see if Xamarin is installed:
 
-![Visual Studio 2015 installed products screen](windows-images/13-xamarin-is-installed.png "Visual Visual Studio 2015 installed products screen")
+![Visual Studio 2015 installed products screen](windows-images/13-xamarin-is-installed.png "Visual Studio 2015 installed products screen")
 
 For more information about locating version information, see
 [Where can I find my version information and logs?](~/cross-platform/troubleshooting/questions/version-logs.md)
