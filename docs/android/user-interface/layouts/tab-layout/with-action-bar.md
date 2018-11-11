@@ -28,7 +28,7 @@ ActionBar tabs to Xamarin.Android applications targeting Android 2.1 to
 Android 2.3. 
 
 Note that `Toolbar` is a newer and more generalized action bar component
-that you should use instead of of `ActionBar` (`Toolbar` was designed to
+that you should use instead of `ActionBar` (`Toolbar` was designed to
 replace `ActionBar`). For more information, see
 [Toolbar](~/android/user-interface/controls/tool-bar/index.md). 
 

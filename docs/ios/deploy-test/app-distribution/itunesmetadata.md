@@ -15,13 +15,13 @@ _This article covers the iTunesMetadata.plist file used to provide information t
 
 When an iOS application is created in iTune Connect (either for sale or free release from the iTunes App Store), the developer can specify information such as the application's genre, sub genre, copyright notice, supported iOS devices and required device capabilities. For iOS applications that are delivered either to testers or Enterprise user via ad hoc distribution, this information is missing.
 
-To supply the missing information to an Ad Hoc distribution, an optional `iTunesMetadata.plist` file can be created and included in the applications IPA file. This plist file is a specially formatted XML file (see Apple's [Propert List Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) for more information) that contains key/value pairs defining information about a given iOS application.
+To supply the missing information to an Ad Hoc distribution, an optional `iTunesMetadata.plist` file can be created and included in the applications IPA file. This plist file is a specially formatted XML file (see Apple's [Property List Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) for more information) that contains key/value pairs defining information about a given iOS application.
 
 <a name="iTunesMetadata_contents" />
 
 ## The iTunesMetadata.plist Contents
 
-The following is an example of of typical `iTunesMetadata.plist` file used to define the iTunes information for an Ad Hoc distribution:
+The following is an example of typical `iTunesMetadata.plist` file used to define the iTunes information for an Ad Hoc distribution:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

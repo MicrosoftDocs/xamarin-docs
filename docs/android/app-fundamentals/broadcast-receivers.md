@@ -92,7 +92,7 @@ public class MySampleBroadcastReceiver : BroadcastReceiver
 }
 ```
 
-Apps that target Android 8.0 (API level 26) or higher may not statically register for an implicit broadcast. Apps may still statically register for an explicit broadcast. There is a small list of of implicit broadcasts that are exempt from this restriction. These exceptions are described in the [Implicit Broadcast Exceptions](https://developer.android.com/guide/components/broadcast-exceptions.html) guide in the Android documentation. Apps that are interested in implicit broadcasts must do so dynamically using the `RegisterReceiver` method. This is described next.
+Apps that target Android 8.0 (API level 26) or higher may not statically register for an implicit broadcast. Apps may still statically register for an explicit broadcast. There is a small list of implicit broadcasts that are exempt from this restriction. These exceptions are described in the [Implicit Broadcast Exceptions](https://developer.android.com/guide/components/broadcast-exceptions.html) guide in the Android documentation. Apps that are interested in implicit broadcasts must do so dynamically using the `RegisterReceiver` method. This is described next.
 
 ### Context-Registering a Broadcast Receiver
 
