@@ -884,7 +884,7 @@ Congratulations, your app has received its first remote notification!
 
 Note that GCM messages will no longer be received if the app is 
 force-stopped. To resume notifications after a force-stop, the app must 
-be manully restarted. For more information about this Android policy, see 
+be manually restarted. For more information about this Android policy, see 
 [Launch controls on stopped applications](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) 
 and this 
 [stack overflow post](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
