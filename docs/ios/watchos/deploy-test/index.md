@@ -48,7 +48,7 @@ All three projects require a matching Distribution Provisioning Profile,
 
 ### Explicit App IDs
 
-Create an **App ID** for each each project's Bundle ID (which will look like
+Create an **App ID** for each project's Bundle ID (which will look like
   this on the iOS Dev Center):
 
 ![The Bundle IDs in the iOS Dev Center](images/appids-specific-sml.png)
