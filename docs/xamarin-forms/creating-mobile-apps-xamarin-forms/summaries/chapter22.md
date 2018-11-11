@@ -157,7 +157,7 @@ The [**ConcurrentAnimations**](https://github.com/xamarin/xamarin-forms-book-sam
 
 ### Beyond the high-level animation methods
 
-The [**ConcurrentAnimations**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/ConcurrentAnimations) sample also demonstrates how to perform animations that go beyond the properties targetted by the `ViewExtensions` methods. In one example, a series of periods get longer; in another example, a `BackgroundColor` property is animated.
+The [**ConcurrentAnimations**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/ConcurrentAnimations) sample also demonstrates how to perform animations that go beyond the properties targeted by the `ViewExtensions` methods. In one example, a series of periods get longer; in another example, a `BackgroundColor` property is animated.
 
 ### More of your own awaitable methods
 
