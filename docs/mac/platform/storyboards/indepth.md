@@ -63,7 +63,7 @@ Several new methods have been added to the `NSViewController` class to support S
 - `ViewDidDisappear` - This method is called directly after the view has been removed from the screen.
 - `UpdateViewConstraints` - This method is called when the constraints that define a view auto layout position and size need to be updated.
 - `ViewWillLayout` - This method is called just before the subviews of this view are laid out on screen.
-- `ViewDidLayout` - This method is called directly after the subviews of view view are laid out on screen.
+- `ViewDidLayout` - This method is called directly after the subviews of view are laid out on screen.
 
 <a name="The-Responder-Chain" />
 
