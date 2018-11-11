@@ -244,14 +244,14 @@ and changing the **view controller Title** to **Call History** in the **Properti
           // set the view controller that’s powering the screen we’re
           // transitioning to
 
-          var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+          var callHistoryController = segue.DestinationViewController as CallHistoryController;
 
           //set the table view controller’s list of phone numbers to the
           // list of dialed phone numbers
 
-          if (callHistoryContoller != null)
+          if (callHistoryController != null)
           {
-            callHistoryContoller.PhoneNumbers = PhoneNumbers;
+            callHistoryController.PhoneNumbers = PhoneNumbers;
           }
         }
       }
@@ -496,14 +496,14 @@ This walkthrough will add a Call History screen to our **Phoneword** application
           // set the view controller that’s powering the screen we’re
           // transitioning to
 
-          var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+          var callHistoryController = segue.DestinationViewController as CallHistoryController;
 
           //set the table view controller’s list of phone numbers to the
           // list of dialed phone numbers
 
-          if (callHistoryContoller != null)
+          if (callHistoryController != null)
           {
-            callHistoryContoller.PhoneNumbers = PhoneNumbers;
+            callHistoryController.PhoneNumbers = PhoneNumbers;
           }
         }
       }

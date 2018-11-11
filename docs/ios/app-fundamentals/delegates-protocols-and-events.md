@@ -65,7 +65,7 @@ aButton.TouchUpInside += delegate {
 ```
 
 The preceding code is wired up in the `ViewDidLoad` method of the
-UIViewContoller. The `aButton` variable references a button, which you could add
+UIViewController. The `aButton` variable references a button, which you could add
 either in the iOS Designer or with code. The following figure shows a button
 that has been added in the iOS Designer:
 
