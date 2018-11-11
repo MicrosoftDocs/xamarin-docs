@@ -460,7 +460,7 @@ your method, somewhere that will live beyond your method.
 ## Project Always Runs in the iPad Simulator
 
 The iPhone SDK 4.0 installer installs 2 SDKs - the 3.2 SDK, for building
-iPad-only apps, and the 4.0 SDK, used for bulding iPhone and Universal apps. It
+iPad-only apps, and the 4.0 SDK, used for building iPhone and Universal apps. It
 also installs a 3.2 simulator, which simulates only an iPad, and a 4.0 simulator
 that simulates iPhone or iPhone 4. All older SDKs and simulators are
 removed.
