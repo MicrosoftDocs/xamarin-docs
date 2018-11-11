@@ -19,7 +19,7 @@ latest version of Android available from Google. Android Oreo offers
 many new features of interest to Xamarin.Android developers. These
 features include notification channels, notification badges, custom
 fonts in XML, downloadable fonts, autofill, and picture in picture
-(PIP). Android Oreo includes new APIs for these new capabilties, and
+(PIP). Android Oreo includes new APIs for these new capabilities, and
 these APIs are available to Xamarin.Android apps when you use
 Xamarin.Android 8.0 and later.
 
