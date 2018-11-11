@@ -254,7 +254,7 @@ location information.
 
 When the fused location provider detects a change in the availability
 of location data, it will call the
-`LocationProvider.OnLocationAvaibility(LocationAvailability
+`LocationProvider.OnLocationAvailability(LocationAvailability
 locationAvailability)` method. If the
 `LocationAvailability.IsLocationAvailable` property returns `true`,
 then it can be assumed that the device location results reported by
