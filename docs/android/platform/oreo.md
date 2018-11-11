@@ -84,7 +84,7 @@ To add Android Oreo support to Visual Studio, do the following:
     2. Use the [SDK Manager](~/android/get-started/installation/android-sdk.md) to install 
        API level 26.0 or later.
 
--   If you are using Visual Studio 2015, we we recommend downgrading
+-   If you are using Visual Studio 2015, we recommend downgrading
     SDK Tools to 25 and using the old Google Emulator manager GUI. SDK
     tools 25 can still be used alongside API 26, 27, and newer, and
     won't impact development for new platforms. This will give you an
