@@ -231,7 +231,7 @@ To use a bound service, a client (such as an Activity) must instantiate an objec
 * **An `Intent`** &ndash; The Intent should explicitly identify which service to connect to.
 * **An `IServiceConnection` Object** &ndash; This object is an intermediary that provides callback methods to notify the client when the bound service is started  and stopped.
 * **[`Android.Content.Bind`](https://developer.xamarin.com/api/type/Android.Content.Bind/)
- enum** &ndash; This parameter is a set of flags are are used by the system to when bind the object. The most commonly used value is [`Bind.AutoCreate`](https://developer.xamarin.com/api/field/Android.Content.Bind.AutoCreate/), which will automatically start the service if it isn't already running.
+ enum** &ndash; This parameter is a set of flags are used by the system to when bind the object. The most commonly used value is [`Bind.AutoCreate`](https://developer.xamarin.com/api/field/Android.Content.Bind.AutoCreate/), which will automatically start the service if it isn't already running.
 
 The following Code snippet is an example of how to start a bound service in an Activity using an explicit intent:
 
