@@ -48,7 +48,7 @@ It is technically possible to render to two separate platform views (e.g. define
 
 ### Views
 
-The visual hierachy for both frameworks is similar. WPF is a bit deeper due to it's support for WYSIWYG documents.
+The visual hierarchy for both frameworks is similar. WPF is a bit deeper due to its support for WYSIWYG documents.
 
 **WPF**
 
