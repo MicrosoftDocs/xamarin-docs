@@ -71,7 +71,7 @@ A service that is meant to run in its own process is, fundamentally, still a bou
 
 1. `Exported` &ndash; This property must be set to `true` to allow other applications to interact with the service. The default value of this property is `false`.
 2. `Process` &ndash; This property must be set. It is used to specify the name of the process that the service will run in.
-3. `IsolatedProcess` &ndash; This property will enable extra security, telling Android to run the service in an isolated sandbox with minimal permission to iteract with the rest of the system. See [Bugzilla 51940 - Services with isolated processes and custom Application class fail to resolve overloads properly](https://bugzilla.xamarin.com/show_bug.cgi?id=51940).
+3. `IsolatedProcess` &ndash; This property will enable extra security, telling Android to run the service in an isolated sandbox with minimal permission to interact with the rest of the system. See [Bugzilla 51940 - Services with isolated processes and custom Application class fail to resolve overloads properly](https://bugzilla.xamarin.com/show_bug.cgi?id=51940).
 4. `Permission` &ndash; It is possible to control client access to the service by specifying a permission that clients must request (and be granted).
 
 To run a service its own process, the `Process` property on the `ServiceAttribute` must be set to the name of the service. To interact with outside applications, the `Exported` property should be set to `true`. If `Exported` is `false`, then only clients in the same APK (i.e. the same application) and running in the same process will be able to interact with the service.
