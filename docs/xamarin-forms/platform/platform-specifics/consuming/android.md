@@ -265,7 +265,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 The result is that fast scrolling through data in a [`ListView`](xref:Xamarin.Forms.ListView) can be enabled, which changes the size of the scroll thumb:
 
-[![](android-images/fastscroll.png "ListView FastScroll Platform-Specific")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
+[![](android-images/fastscroll.png "ListView FastScroll Platform-Specific")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Platform-Specific")
 
 <a name="webview-mixed-content" />
 
@@ -485,7 +485,7 @@ The `Application.On<Android>` method specifies that this platform-specific will 
 
 The result is that the soft keyboard input area operating mode can be set when an input control has focus:
 
-[![](android-images/pan-resize.png "Soft Keyboard Operating Mode Platform-Specific")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
+[![](android-images/pan-resize.png "Soft Keyboard Operating Mode Platform-Specific")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Platform-Specific")
 
 <a name="disable_lifecycle_events" />
 
