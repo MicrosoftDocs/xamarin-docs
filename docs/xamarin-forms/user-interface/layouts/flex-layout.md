@@ -603,7 +603,7 @@ The **Shrink Experiment** page creates a `FlexLayout` with a single row of five 
 
 In the Android screenshot, the `Shrink` value for the second `Label` is set to 0, and that `Label` is displayed in its full width. Also, the fourth `Label` is given a `Shrink` value greater than one, and it has shrunk. The UWP screenshot shows both `Label` elements being given a `Shrink` value of 0 to allow them to be displayed in their full size, if that is possible.
 
-You can set both the `Grow` and `Shrink` values to accomodate situations where the aggregate child sizes might sometimes be less than or sometimes greater than the size of the `FlexLayout`.
+You can set both the `Grow` and `Shrink` values to accommodate situations where the aggregate child sizes might sometimes be less than or sometimes greater than the size of the `FlexLayout`.
 
 ## CSS styling with FlexLayout
 
