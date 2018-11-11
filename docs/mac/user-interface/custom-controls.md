@@ -11,7 +11,7 @@ ms.date: 03/14/2017
 
 # Creating Custom Controls in Xamarin.Mac
 
-When working with C# and .NET in a Xamarin.Mac application, you have access to the same User Controls that a developer working in in *Objective-C*, *Swift* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your User Controls (or optionally create them directly in C# code).
+When working with C# and .NET in a Xamarin.Mac application, you have access to the same User Controls that a developer working in *Objective-C*, *Swift* and *Xcode* does. Because Xamarin.Mac integrates directly with Xcode, you can use Xcode's _Interface Builder_ to create and maintain your User Controls (or optionally create them directly in C# code).
 
 While macOS provides a wealth of built-in User Controls, there might be times that you need to create a custom control to provide functionality not provided out-of-the-box or to match a custom UI theme (such as a game interface).
 
@@ -216,7 +216,7 @@ There are two basic way that we can add user input to our custom control: **Over
 
 #### Handling User Input with Override Methods
 
-Objects that inherit from `NSControl` (or `NSView`) have several override methods for handling mouse or keyboard input. For our example control, we want to flip the state of the switch between **On** and **Off** when the user clicks on the control with the left mouse button. We can add the following override methods to the `NSFliwSwitch` class to handle this:
+Objects that inherit from `NSControl` (or `NSView`) have several override methods for handling mouse or keyboard input. For our example control, we want to flip the state of the switch between **On** and **Off** when the user clicks on the control with the left mouse button. We can add the following override methods to the `NSFlipSwitch` class to handle this:
 
 ```csharp
 #region Mouse Handling Methods
@@ -339,7 +339,7 @@ With the Custom View still selected, switch to the **Identity Inspector** and ch
 
 [![](custom-controls-images/custom04.png "Setting the View's class")](custom-controls-images/custom04.png#lightbox)
 
-Switch to the **Assistant Editor** and create an **Outlet** for the custom control (making sure to bind it in the `ViewControler.h` file and not the `.m` file):
+Switch to the **Assistant Editor** and create an **Outlet** for the custom control (making sure to bind it in the `ViewController.h` file and not the `.m` file):
 
 [![](custom-controls-images/custom05.png "Configuring a new Outlet")](custom-controls-images/custom05.png#lightbox)
 

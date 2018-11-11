@@ -235,7 +235,7 @@ with a non-Thumb version of your static library to mitigate this issue.
 
 The [] suffix indicates that you or the class library are calling a method on
 an array through a generic collection, such as IEnumerable<>,
-ICollection<> or IList<>. As a workaround, you can explicitely force
+ICollection<> or IList<>. As a workaround, you can explicitly force
 the AOT compiler to include such method by calling the method yourself, and by
 making sure that this code is executed before the call that triggered the
 exception. In this case, you could write:
@@ -460,7 +460,7 @@ your method, somewhere that will live beyond your method.
 ## Project Always Runs in the iPad Simulator
 
 The iPhone SDK 4.0 installer installs 2 SDKs - the 3.2 SDK, for building
-iPad-only apps, and the 4.0 SDK, used for bulding iPhone and Universal apps. It
+iPad-only apps, and the 4.0 SDK, used for building iPhone and Universal apps. It
 also installs a 3.2 simulator, which simulates only an iPad, and a 4.0 simulator
 that simulates iPhone or iPhone 4. All older SDKs and simulators are
 removed.
@@ -471,7 +471,7 @@ version that will be used in building your app. This setting can be found in **P
 New projects in Visual Studio for Mac use the oldest installed SDK as their default SDK
 setting, and if the SDK specified does not exist, Visual Studio for Mac will use the
 closest it can find to build your app. This was done so that  projects
-would not always requre the newest SDK. However, this currently results in the
+would not always require the newest SDK. However, this currently results in the
 3.2 SDK being used - which results in the iPad simulator being used.
 
 To fix this by using the 4.0 SDK, go to **Project

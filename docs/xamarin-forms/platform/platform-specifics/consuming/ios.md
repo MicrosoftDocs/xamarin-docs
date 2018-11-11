@@ -327,7 +327,7 @@ switch (picker.On<iOS>().UpdateMode())
 
 The result is that a specified `UpdateMode` is applied to the [`Picker`](xref:Xamarin.Forms.Picker), which controls when item selection occurs:
 
-[![](ios-images/picker-updatemode.png "Picker UpdateMode Platform-Specific")](ios-images/picker-updatemode-large.png#lightbox "Picker UpdateMode Plaform-Specific")
+[![](ios-images/picker-updatemode.png "Picker UpdateMode Platform-Specific")](ios-images/picker-updatemode-large.png#lightbox "Picker UpdateMode Platform-Specific")
 
 <a name="slider-updateontap" />
 
@@ -772,7 +772,7 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 The result is that a [`ScrollView`](xref:Xamarin.Forms.ScrollView) can disable delaying receiving content touches, so that in this scenario the [`Slider`](xref:Xamarin.Forms.Slider) receives the gesture rather than the [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) page of the [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage):
 
-[![](ios-images/scrollview-delay-content-touches.png "ScrollView Delay Content Touches Platform-Specific")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Plaform-Specific")
+[![](ios-images/scrollview-delay-content-touches.png "ScrollView Delay Content Touches Platform-Specific")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Platform-Specific")
 
 ## Application
 

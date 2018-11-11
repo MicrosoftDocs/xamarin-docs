@@ -318,7 +318,7 @@ date and time formatting, check both **iPhone Language** and **Region** settings
 
 iOS provides a number of features to assist in building RTL-aware apps:
 
-- Use auto layout's `leading` and `trailing` attributes for control aligment
+- Use auto layout's `leading` and `trailing` attributes for control alignment
   (which corresponds to left and right for English, but is reversed for RTL languages).
   The [`UIStackView`](~/ios/user-interface/controls/uistackview.md)
   control is particularly useful for laying out controls to be RTL-aware.

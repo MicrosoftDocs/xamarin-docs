@@ -13,7 +13,7 @@ ms.date: 03/14/2017
 
 _This article covers working with alerts in a Xamarin.Mac application. It describes creating and displaying alerts from C# code and responding to user interactions._
 
-When working with C# and .NET in a Xamarin.Mac application, you have access to the same Alerts that a developer working in in *Objective-C* and *Xcode* does. 
+When working with C# and .NET in a Xamarin.Mac application, you have access to the same Alerts that a developer working in *Objective-C* and *Xcode* does. 
 
 An alert is a special type of dialog that appears when a serious problem occurs (such as an error) or as a warning (such as preparing to delete a file). Because an alert is a dialog, it also requires a user response before it can be closed.
 

@@ -11,7 +11,7 @@ ms.date: 12/09/2015
 
 # Device Orientation
 
-It is important to consider how your application will be used and how landscape orientation can be incorporated to improve the user experience. Individual layouts can be designed to accomodate multiple orientations and best use the available space. At the application level, rotation can be disabled or enabled.
+It is important to consider how your application will be used and how landscape orientation can be incorporated to improve the user experience. Individual layouts can be designed to accommodate multiple orientations and best use the available space. At the application level, rotation can be disabled or enabled.
 
 <a name="Controlling_Orientation" />
 
@@ -91,7 +91,7 @@ Xamarin.Forms does not offer any native events for notifying your app of orienta
 > [!NOTE]
 > There is an existing, free NuGet package for receiving notifications of orientation changes in shared code. See the [GitHub repo](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) for more information.
 
-Alternatively, it's possible to override the [`OnSizeAllocated`](xref:Xamarin.Forms.Page.OnSizeAllocated*) method on a `Page`, inserting any layout change logic there. The `OnSizeAllocated` method is called whenever a `Page` is allocated a new size, which happens whenver the device is rotated. Note that the base implementation of `OnSizeAllocated` performs important layout functions, so it is important to call the base implementation in the override:
+Alternatively, it's possible to override the [`OnSizeAllocated`](xref:Xamarin.Forms.Page.OnSizeAllocated*) method on a `Page`, inserting any layout change logic there. The `OnSizeAllocated` method is called whenever a `Page` is allocated a new size, which happens whenever the device is rotated. Note that the base implementation of `OnSizeAllocated` performs important layout functions, so it is important to call the base implementation in the override:
 
 ```csharp
 protected override void OnSizeAllocated(double width, double height)
