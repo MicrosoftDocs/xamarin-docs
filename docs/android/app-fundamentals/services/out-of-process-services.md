@@ -183,7 +183,7 @@ It is also possible to package parameters for the service in the `Message`. This
 
 ### Instantiating the Messenger
 
-As previously discussed, deserializing the `Message` object and invoking `Handler.HandleMessage` is the responsibilty of the `Messenger` object. The `Messenger` class also provides an `IBinder` object that the client will use to send messages to the service.  
+As previously discussed, deserializing the `Message` object and invoking `Handler.HandleMessage` is the responsibility of the `Messenger` object. The `Messenger` class also provides an `IBinder` object that the client will use to send messages to the service.  
 
 When the service starts, it will instantiate the `Messenger` and inject the `Handler`. A good place to perform this initialization is on the `OnCreate` method of the service. This code snippet is one example of a service that initializes its own `Handler` and `Messenger`:
 
