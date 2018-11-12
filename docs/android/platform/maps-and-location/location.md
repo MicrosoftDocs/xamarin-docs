@@ -336,9 +336,9 @@ that we can call it at various points in the Activity lifecycle.
 
 ### Request location updates from the LocationManager
 
-Once the application has a reference to the `LocationManager`, it needs to tell the `LocationManager` what type of location information that are required, and how often that information is to be updated. Do this by calling `RequestionLocationUpdates` on the `LocationManager` object, and passing in some criteria for updates and a callback that will receive the location updates. This callback is a type that must implement the `ILocationListener` interface (described in more detail later in this guide).
+Once the application has a reference to the `LocationManager`, it needs to tell the `LocationManager` what type of location information that are required, and how often that information is to be updated. Do this by calling `RequestLocationUpdates` on the `LocationManager` object, and passing in some criteria for updates and a callback that will receive the location updates. This callback is a type that must implement the `ILocationListener` interface (described in more detail later in this guide).
 
-The `RequestionLocationUpdates` method tells the system location Service that your application would like to start receiving location updates. This method allows you to specify the provider, as well as time and distance thresholds to control update frequency. For example, the method below requests location updates from the GPS location provider every 2000 milliseconds, and only when the location changes more than 1 metre:
+The `RequestLocationUpdates` method tells the system location Service that your application would like to start receiving location updates. This method allows you to specify the provider, as well as time and distance thresholds to control update frequency. For example, the method below requests location updates from the GPS location provider every 2000 milliseconds, and only when the location changes more than 1 metre:
 
 ```csharp
 // For this example, this method is part of a class that implements ILocationListener, described below
