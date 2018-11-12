@@ -84,7 +84,7 @@ sample app and [UITouch Class Reference](https://developer.apple.com/library/pre
 
 3D Touch provides new ways for a user to interact with information within your app quicker than ever, without having to navigate from their current location.
 
-For example, if your app is displaying a table of messages, the user can press hard on on an item to preview its content in an overlay view (which Apple refers to as a *Peek*).
+For example, if your app is displaying a table of messages, the user can press hard on an item to preview its content in an overlay view (which Apple refers to as a *Peek*).
 
 [![](3d-touch-images/peekandpop01.png "An example of Peeking at content")](3d-touch-images/peekandpop01.png#lightbox)
 
@@ -194,7 +194,7 @@ public override void ViewDidLoad ()
 
 	// Check to see if 3D Touch is available
 	if (TraitCollection.ForceTouchCapability == UIForceTouchCapability.Available) {
-		// Regiser for Peek and Pop
+		// Register for Peek and Pop
 		RegisterForPreviewingWithDelegate(new PreviewingDelegate(this), View);
 	}
 	...
