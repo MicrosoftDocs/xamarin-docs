@@ -530,16 +530,16 @@ namespace SourceWriter
 	public class AppPreferences : NSObject
 	{
 		#region Computed Properties
-		[Export("DefaultLangauge")]
+		[Export("DefaultLanguage")]
 		public int DefaultLanguage {
 			get { 
-				var value = LoadInt ("DefaultLangauge", 0);
+				var value = LoadInt ("DefaultLanguage", 0);
 				return value; 
 			}
 			set {
-				WillChangeValue ("DefaultLangauge");
-				SaveInt ("DefaultLangauge", value, true);
-				DidChangeValue ("DefaultLangauge");
+				WillChangeValue ("DefaultLanguage");
+				SaveInt ("DefaultLanguage", value, true);
+				DidChangeValue ("DefaultLanguage");
 			}
 		}
 
