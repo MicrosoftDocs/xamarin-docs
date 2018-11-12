@@ -194,7 +194,7 @@ public override void ViewDidLoad ()
 
 	// Check to see if 3D Touch is available
 	if (TraitCollection.ForceTouchCapability == UIForceTouchCapability.Available) {
-		// Regiser for Peek and Pop
+		// Register for Peek and Pop
 		RegisterForPreviewingWithDelegate(new PreviewingDelegate(this), View);
 	}
 	...
