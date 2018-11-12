@@ -140,7 +140,7 @@ At a high level, it achieves this by executing the following tasks:
 - Create an app bundle structure.
 - Copy in your managed assemblies.
 - If linking is enabled, run the managed linker to optimize your assemblies by removing unused parts.
-- Create a launcher application, linking in the launcher code talked about along with the register code if in static mode.
+- Create a launcher application, linking in the launcher code talked about along with the registrar code if in static mode.
 
 This is then run as part of the user build process that compiles user code into an assembly that reference's Xamarin.Mac.dll and runs `mmp` to make it a package
 
