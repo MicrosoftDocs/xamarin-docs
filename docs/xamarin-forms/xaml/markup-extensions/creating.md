@@ -4,8 +4,8 @@ description: "This article explains how to define your own custom Xamarin.Forms 
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 01/05/2018
 ---
 

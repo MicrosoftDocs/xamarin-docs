@@ -4,8 +4,8 @@ description: "Learn Xamarin.Forms application development with the electronic ve
 ms.prod: xamarin
 ms.assetid: CDE99818-689B-4376-9DC4-C4102AC0F931
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/19/2018
 ---
 

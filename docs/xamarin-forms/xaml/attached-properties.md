@@ -4,8 +4,8 @@ description: "This article provides an introduction to attached properties, and 
 ms.prod: xamarin
 ms.assetid: 6E9DCDC3-A0E4-46A6-BAA9-4FEB6DF8A5A8
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 06/02/2016
 ---
 

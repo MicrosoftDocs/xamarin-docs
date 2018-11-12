@@ -4,8 +4,8 @@ description: "The MVVM pattern enforces a separation between three software laye
 ms.prod: xamarin
 ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 10/25/2017
 ---
 

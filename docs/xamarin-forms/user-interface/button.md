@@ -4,8 +4,8 @@ description: "The Button responds to a tap or click that directs an application 
 ms.prod: xamarin
 ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/26/2018
 ---
 

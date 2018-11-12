@@ -4,8 +4,8 @@ description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 18. MV
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 11/07/2017
 ---
 

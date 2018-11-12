@@ -4,8 +4,8 @@ description: "This guide explains how to incorporate graphics and game engine vi
 ms.prod: xamarin
 ms.assetid: 167ec01a-fb9e-431e-a44d-a10eaf62bf39
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 02/01/2018
 ---
 

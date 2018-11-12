@@ -4,8 +4,8 @@ description: "Data bindings allow properties of two objects to be linked so that
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 10/25/2017
 ---
 

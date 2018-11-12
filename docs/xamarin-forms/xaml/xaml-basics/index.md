@@ -4,8 +4,8 @@ description: "This guide explains how to get started with cross-platform XAML fo
 ms.prod: xamarin
 ms.assetid: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 10/25/2017
 ---
 

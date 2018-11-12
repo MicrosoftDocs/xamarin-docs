@@ -4,8 +4,8 @@ description: "This article explains how to use the XAML Previewer to see your Xa
 ms.prod: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/31/2018
 ---
 

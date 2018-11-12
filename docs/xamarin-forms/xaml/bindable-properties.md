@@ -4,8 +4,8 @@ description: "This article provides an introduction to bindable properties, and 
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 06/02/2016
 ---
 

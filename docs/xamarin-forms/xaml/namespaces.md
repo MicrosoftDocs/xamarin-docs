@@ -4,8 +4,8 @@ description: "XAML uses the xmlns XML attribute for namespace declarations. This
 ms.prod: xamarin
 ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 08/21/2018
 ---
 

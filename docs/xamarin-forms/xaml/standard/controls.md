@@ -4,8 +4,8 @@ description: "This article explores the XAML standard controls available in Xama
 ms.prod: xamarin
 ms.assetid: 287E6631-D1C5-46C5-8905-AB53D34E365D
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 11/15/2017
 ---
 

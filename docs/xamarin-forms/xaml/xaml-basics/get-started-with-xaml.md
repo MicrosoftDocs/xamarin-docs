@@ -4,8 +4,8 @@ description: "In a Xamarin.Forms application, XAML is mostly used to define the 
 ms.prod: xamarin
 ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/10/2018
 ---
 

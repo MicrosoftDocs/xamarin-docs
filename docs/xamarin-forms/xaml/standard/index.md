@@ -4,8 +4,8 @@ description: "This article explains how to get started with exploring the XAML S
 ms.prod: xamarin
 ms.assetid: 24382DF1-BE70-4608-B86F-B79FB23E4A78
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 11/15/2017
 ---
 

@@ -4,8 +4,8 @@ description: "The Xamarin.Forms Slider is a horizontal bar that can be manipulat
 ms.prod: xamarin
 ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/10/2018
 ---
 

@@ -4,8 +4,8 @@ description: "The DatePicker is a Xamarin.Forms view that allows the user to sel
 ms.prod: xamarin
 ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 06/04/2018
 ---
 

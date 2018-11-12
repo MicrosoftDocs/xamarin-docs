@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
 ms.technology: xamarin-forms
 ms.custom: xamu-video
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/07/2018
 ---
 

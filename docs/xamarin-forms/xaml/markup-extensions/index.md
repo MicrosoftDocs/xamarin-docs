@@ -4,8 +4,8 @@ description: "The article explains how to use Xamarin.Forms XAML markup extensio
 ms.prod: xamarin
 ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 01/05/2018
 ---
 

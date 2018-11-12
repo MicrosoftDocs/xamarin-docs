@@ -4,8 +4,8 @@ description: "This article explains how XAML can be optionally compiled directly
 ms.prod: xamarin
 ms.assetid: 9A2D10A6-5DFC-485F-A75A-2F7B98314025
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 08/22/2018
 ---
 

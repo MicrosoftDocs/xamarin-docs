@@ -4,8 +4,8 @@ description: "XAML is a declarative markup language that can be used to define u
 ms.prod: xamarin
 ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 06/18/2018
 ---
 
