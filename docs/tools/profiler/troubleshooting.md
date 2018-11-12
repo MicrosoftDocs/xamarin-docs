@@ -74,7 +74,7 @@ It is normally due to being unable to launch to the Simulator / Emulator. Try an
 
 #### To watch a specific thread
 
-If you have a thread that you wanted to specifically watch, it would be ideal to name the thread at the very beginning of its creation so that get get `ThreadName` instead of `0x0`. For example to set the thread name as UI, you could use the following code:
+If you have a thread that you wanted to specifically watch, it would be ideal to name the thread at the very beginning of its creation to get `ThreadName` instead of `0x0`. For example to set the thread name as `UI`, you could use the following code:
 
 ```csharp
 RunOnUiThread (() => {
