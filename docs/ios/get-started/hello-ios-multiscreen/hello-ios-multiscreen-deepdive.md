@@ -157,14 +157,14 @@ iOS calls `PrepareForSegue` right before the transition occurs and passes the Se
 At this point, we have to manually set the Segue’s destination view controller. The following code gets a handle to the Destination view controller and casts it to the proper class - CallHistoryController, in this case:
 
 ```csharp
-CallHistoryController callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+CallHistoryController callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
 Finally, we pass the list of phone numbers (the Model) from the `ViewController` to the `CallHistoryController` by setting
 the `PhoneHistory` property of the `CallHistoryController` to the list of dialed phone numbers:
 
 ```csharp
-callHistoryContoller.PhoneNumbers = PhoneNumbers;
+callHistoryController.PhoneNumbers = PhoneNumbers;
 ```
 
 The complete code for passing data using a Segue is as follows:
@@ -174,10 +174,10 @@ public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
 {
     base.PrepareForSegue (segue, sender);
 
-    var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+    var callHistoryController = segue.DestinationViewController as CallHistoryController;
 
-    if (callHistoryContoller != null) {
-         callHistoryContoller.PhoneNumbers = PhoneNumbers;
+    if (callHistoryController != null) {
+         callHistoryController.PhoneNumbers = PhoneNumbers;
     }
  }
 ```
