@@ -6,7 +6,7 @@ ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/11/2018
+ms.date: 11/09/2018
 ---
 
 # Xamarin.Forms in Xamarin Native Projects
@@ -20,7 +20,7 @@ The process for consuming a Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.Con
 1. Add the Xamarin.Forms NuGet package to the native project.
 1. Add the [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page, and any dependencies, to the native project.
 1. Call the `Forms.Init` method.
-1. Construct an instance of the [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page and convert it to the appropriate native type using one of the following extension methods: `CreateViewController` for iOS, `CreateFragment` or `CreateSupportFragment` for Android, or `CreateFrameworkElement` for UWP.
+1. Construct an instance of the [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page and convert it to the appropriate native type using one of the following extension methods: `CreateViewController` for iOS, `CreateSupportFragment` for Android, or `CreateFrameworkElement` for UWP.
 1. Navigate to the native type representation of the [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page using the native navigation API.
 
 Xamarin.Forms must be initialized by calling the `Forms.Init` method before a native project can construct a [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page. Choosing when to do this primarily depends on when it's most convenient in your application flow – it could be performed at application startup, or just before the `ContentPage`-derived page is constructed. In this article, and the accompanying sample applications, the `Forms.Init` method is called at application startup.
@@ -129,8 +129,8 @@ public class MainActivity : AppCompatActivity
         SetSupportActionBar(toolbar);
         SupportActionBar.Title = "Phoneword";
 
-        var mainPage = new PhonewordPage().CreateFragment(this);
-        FragmentManager
+        var mainPage = new PhonewordPage().CreateSupportFragment(this);
+        SupportFragmentManager
             .BeginTransaction()
             .Replace(Resource.Id.fragment_frame_layout, mainPage)
             .Commit();
@@ -146,13 +146,10 @@ The `OnCreate` method performs the following tasks:
 - A reference to the `MainActivity` class is stored in the `static` `Instance` field. This is to provide a mechanism for other classes to call methods defined in the `MainActivity` class.
 - The `Activity` content is set from a layout resource. In the sample application, the layout consists of a `LinearLayout` that contains a `Toolbar`, and a `FrameLayout` to act as a fragment container.
 - The `Toolbar` is retrieved and set as the action bar for the `Activity`, and the action bar title is set.
-- The `PhonewordPage` class, which is a Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page defined in XAML, is constructed and converted to a `Fragment` using the `CreateFragment` extension method.
-- The `FragmentManager` class creates and commits a transaction that replaces the `FrameLayout` instance with the `Fragment` for the `PhonewordPage` class.
+- The `PhonewordPage` class, which is a Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page defined in XAML, is constructed and converted to a `Fragment` using the `CreateSupportFragment` extension method.
+- The `SupportFragmentManager` class creates and commits a transaction that replaces the `FrameLayout` instance with the `Fragment` for the `PhonewordPage` class.
 
 For more information about Fragments, see [Fragments](~/android/platform/fragments/index.md).
-
-> [!NOTE]
-> In addition to the `CreateFragment` extension method, Xamarin.Forms also includes a `CreateSupportFragment` method. The `CreateFragment` method creates a `Android.App.Fragment` that can be used in applications that target API 11 and greater. The `CreateSupportFragment` method creates a `Android.Support.V4.App.Fragment` that can be used in applications that target API versions prior to 11.
 
 Once the `OnCreate` method has executed, the UI defined in the Xamarin.Forms `PhonewordPage` class will be displayed, as shown in the following screenshot:
 
@@ -172,8 +169,8 @@ The `static` `MainActivity.Instance` field allows the `MainActivity.NavigateToCa
 ```csharp
 public void NavigateToCallHistoryPage()
 {
-    var callHistoryPage = new CallHistoryPage().CreateFragment(this);
-    FragmentManager
+    var callHistoryPage = new CallHistoryPage().CreateSupportFragment(this);
+    SupportFragmentManager
         .BeginTransaction()
         .AddToBackStack(null)
         .Replace(Resource.Id.fragment_frame_layout, callHistoryPage)
@@ -181,7 +178,7 @@ public void NavigateToCallHistoryPage()
 }
 ```
 
-The `NavigateToCallHistoryPage` method converts the Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page to a `Fragment` with the `CreateFragment` extension method, and adds the `Fragment` to the fragment back stack. Therefore, the UI defined in the Xamarin.Forms `CallHistoryPage` will be displayed, as shown in the following screenshot:
+The `NavigateToCallHistoryPage` method converts the Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page to a `Fragment` with the `CreateSupportFragment` extension method, and adds the `Fragment` to the fragment back stack. Therefore, the UI defined in the Xamarin.Forms `CallHistoryPage` will be displayed, as shown in the following screenshot:
 
 [![](native-forms-images/android-callhistorypage.png "Android CallHistoryPage")](native-forms-images/android-callhistorypage-large.png#lightbox "Android CallHistoryPage")
 
@@ -189,12 +186,12 @@ When the `CallHistoryPage` is displayed, tapping the back arrow will pop the `Fr
 
 ### Enabling Back Navigation Support
 
-The `FragmentManager` class has a `BackStackChanged` event that fires whenever the content of the fragment back stack changes. The `OnCreate` method in the `MainActivity` class contains an anonymous event handler for this event:
+The `SupportFragmentManager` class has a `BackStackChanged` event that fires whenever the content of the fragment back stack changes. The `OnCreate` method in the `MainActivity` class contains an anonymous event handler for this event:
 
 ```csharp
-FragmentManager.BackStackChanged += (sender, e) =>
+SupportFragmentManager.BackStackChanged += (sender, e) =>
 {
-    bool hasBack = FragmentManager.BackStackEntryCount > 0;
+    bool hasBack = SupportFragmentManager.BackStackEntryCount > 0;
     SupportActionBar.SetHomeButtonEnabled(hasBack);
     SupportActionBar.SetDisplayHomeAsUpEnabled(hasBack);
     SupportActionBar.Title = hasBack ? "Call History" : "Phoneword";
@@ -206,9 +203,9 @@ This event handler displays a back button on the action bar provided that there'
 ```csharp
 public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
 {
-    if (item.ItemId == global::Android.Resource.Id.Home && FragmentManager.BackStackEntryCount > 0)
+    if (item.ItemId == global::Android.Resource.Id.Home && SupportFragmentManager.BackStackEntryCount > 0)
     {
-        FragmentManager.PopBackStack();
+        SupportFragmentManager.PopBackStack();
         return true;
     }
     return base.OnOptionsItemSelected(item);
