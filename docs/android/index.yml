@@ -41,7 +41,7 @@ sections:
       text: Multi-screen Apps
       href: ~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
     - image:
-        src: https://docs.microsoft.com/en-us/media/common/i_mobile-app-developement.svg
+        src: https://docs.microsoft.com/media/common/i_mobile-app-developement.svg
       text: Android Pie
       href: ~/android/platform/pie.md
 - title: Guides
@@ -53,7 +53,7 @@ sections:
     - href: ~/android/get-started/index.md
       html: Tutorials to get you up and running with Xamarin.Android. Make sure everything is installed correctly, and build your first Mac apps.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/android/get-started/index.md
       title: Getting Started
     - href: ~/android/app-fundamentals/
@@ -77,7 +77,7 @@ sections:
     - href: ~/essentials/index.md?context=xamarin/android
       html: Cross-platform APIs for mobile applications.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_multi-connect.svg
+        src: https://docs.microsoft.com/media/common/i_multi-connect.svg
         href: ~/essentials/index.md?context=xamarin/android
       title: Xamarin.Essentials
     - href: ~/android/data-cloud/
@@ -95,7 +95,7 @@ sections:
     - href: ~/android/internals/
       html: Additional information about Xamarin.Android internals and assistance with features like localization and accessibility.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_advanced.svg
+        src: https://docs.microsoft.com/media/common/i_advanced.svg
         href: ~/android/internals/
       title: Advanced Concepts & Internals
     - href: ~/android/wear/
@@ -112,7 +112,7 @@ sections:
     items:
     - title: API
       href: https://developer.xamarin.com/api/root/MonoAndroid-lib/
-      html: <p><a href="https://developer.xamarin.com/api/root/MonoAndroid-lib/">Android API docs</a></p><p><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=xamarinandroid-7.1">Base Class Library</a></p>
+      html: <p><a href="https://developer.xamarin.com/api/root/MonoAndroid-lib/">Android API docs</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">Base Class Library</a></p>
     - title: Samples
       href: https://developer.xamarin.com/samples/android/all/
       html: <p><a href="https://developer.xamarin.com/samples/android/all/">Android Samples</a></p>

@@ -367,7 +367,7 @@ The final headline feature of ARKit 2 is Apple's adoption of Pixar's [Universal 
 
 In ARKit, it's crucial to manually manage resources. Not only does this allow high frame-rates, it actually is _necessary_ to avoid a confusing "screen freeze." The ARKit framework is lazy about supplying a new camera frame ([`ARSession.CurrentFrame`](https://developer.xamarin.com/api/property/ARKit.ARSession.CurrentFrame/)). Until the current [`ARFrame`](https://developer.xamarin.com/api/type/ARKit.ARFrame/) has had `Dispose()` called on it, ARKit will not supply a new frame! This causes the video to "freeze" even though the rest of the app is responsive. The solution is to always access `ARSession.CurrentFrame` with a `using` block or manually call `Dispose()` on it.
 
-All objects derived from `NSObject` are `IDisposable` and `NSObject` implements the [Dispose pattern](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/dispose-pattern), so you should typically follow [this pattern for implementing `Dispose` on a derived class](https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-dispose).
+All objects derived from `NSObject` are `IDisposable` and `NSObject` implements the [Dispose pattern](https://docs.microsoft.com/dotnet/standard/design-guidelines/dispose-pattern), so you should typically follow [this pattern for implementing `Dispose` on a derived class](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose).
 
 ### Manipulating transform matrices
 

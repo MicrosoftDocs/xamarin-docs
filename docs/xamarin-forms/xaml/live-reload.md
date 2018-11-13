@@ -13,7 +13,7 @@ ms.date: 10/26/2018
 # Xamarin Live Reload (Preview)
 
 > [!NOTE]
-> The preview of Xamarin Live Reload has ended, and we want to thank everyone for your feedback and comments. Please read through our [roadmap](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap) for Visual Studio 2019 to learn more about new productivity features that we are working on for Xamarin.Forms. This extension will remain available for Visual Studio 2017, but will not be receiving future updates.
+> The preview of Xamarin Live Reload has ended, and we want to thank everyone for your feedback and comments. Please read through our [roadmap](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) for Visual Studio 2019 to learn more about new productivity features that we are working on for Xamarin.Forms. This extension will remain available for Visual Studio 2017, but will not be receiving future updates.
 
 Xamarin Live Reload enables you to **make changes to your XAML and see them reflected live, without requiring another compile and deploy**. Any changes made to your XAML will be redeployed on save and reflected on your deploy target.
 

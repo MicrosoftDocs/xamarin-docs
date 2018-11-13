@@ -18,7 +18,7 @@ _Get started building your first Azure Function that interacts with Xamarin.Form
 
 ## Step-by-step instructions
 
-In addition to the video, you can follow these instructions to [build your first Function using Visual Studio 2017](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-your-first-function-visual-studio).
+In addition to the video, you can follow these instructions to [build your first Function using Visual Studio 2017](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
 
 ## [Visual Studio for Mac](#tab/macos)
 
@@ -26,7 +26,7 @@ In addition to the video, you can follow these instructions to [build your first
 
 ## Step-by-step instructions
 
-In addition to this video, there is a [step-by-step tutorial](https://docs.microsoft.com/en-us/visualstudio/mac/azure-functions-lab)
+In addition to this video, there is a [step-by-step tutorial](https://docs.microsoft.com/visualstudio/mac/azure-functions-lab)
 that shows how to create and debug Azure Functions within Visual Studio for Mac.
 
 -----

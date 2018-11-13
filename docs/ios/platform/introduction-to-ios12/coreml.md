@@ -142,6 +142,6 @@ the loop-based Core ML predictions.
 - [Sample app – MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer)
 - [What's new in Core ML, Part 1 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/708/)
 - [What's new in Core ML, Part 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/709/)
-- [Introduction to Core ML in Xamarin.iOS](https://docs.microsoft.com/en-us/xamarin/ios/platform/introduction-to-ios11/coreml)
+- [Introduction to Core ML in Xamarin.iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)
 - [Core ML (Apple)](https://developer.apple.com/documentation/coreml?language=objc)
 - [Working with Core ML Models](https://developer.apple.com/machine-learning/build-run-models/)
