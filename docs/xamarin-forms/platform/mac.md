@@ -86,6 +86,7 @@ Follow these instructions to add a Mac app that will run on macOS Sierra and mac
         {
             Forms.Init();
             LoadApplication(new App());
+            base.DidFinishLaunching(notification); 
         }
     }
     ```
