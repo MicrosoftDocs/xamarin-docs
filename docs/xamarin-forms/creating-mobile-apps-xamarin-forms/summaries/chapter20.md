@@ -18,7 +18,7 @@ ms.date: 07/18/2018
 
 Users expect graphical user interfaces to be responsive. This means that a program must process user-input events quickly. If that is not possible, then processing must be relegated to secondary threads of execution.
 
-Several sample programs in this book have used the [`WebRequest`](xref:System.Net.WebRequest) class. In this class the [`BeginGetReponse`](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)) method starts a worker thread, which calls a callback function when it is complete. However, that callback function runs in the worker thread, so the program must call [`Device.BeginInvokeOnMainThread`](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) method to access the user interface.
+Several sample programs in this book have used the [`WebRequest`](xref:System.Net.WebRequest) class. In this class the [`BeginGetResponse`](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)) method starts a worker thread, which calls a callback function when it is complete. However, that callback function runs in the worker thread, so the program must call [`Device.BeginInvokeOnMainThread`](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) method to access the user interface.
 
 > [!NOTE]
 > Xamarin.Forms programs should use [`HttpClient`](xref:System.Net.Http.HttpClient) rather than [`WebRequest`](xref:System.Net.WebRequest) for accessing files over the internet. `HttpClient` supports asynchronous operations.
