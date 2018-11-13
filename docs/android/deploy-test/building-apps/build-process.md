@@ -307,7 +307,7 @@ when packaging Release applications.
     - `btls`: Use
       [Boring SSL](https://boringssl.googlesource.com/boringssl) for
       TLS communication with
-      [HttpWebRequest](https://msdn.microsoft.com/library/system.net.httpwebrequest.aspx).
+      [HttpWebRequest](xref:System.Net.HttpWebRequest).
       This allows use of TLS 1.2 on all Android versions.
 
     - `legacy`: Use the historical managed SSL implementation for
