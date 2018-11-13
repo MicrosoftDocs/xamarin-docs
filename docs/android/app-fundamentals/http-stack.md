@@ -167,7 +167,7 @@ the BoringSSL library.
 
 There are three ways that a Xamarin.Android application can control the TLS settings:
 
-1. Select the HttpClient implmentation and default TLS library in the Project Options.
+1. Select the HttpClient impelmentation and default TLS library in the Project Options.
 2. Programatically using `Xamarin.Android.Net.AndroidClientHandler`.
 3. Declare environment variables (optional).
 
