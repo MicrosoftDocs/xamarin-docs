@@ -36,7 +36,7 @@ The following property names correspond to the indicated java
 1.  Open your solution in Visual Studio.
 
 2.  Select each Android project one-by-one in the Solution Explorer and
-    click [Show All Files](https://msdn.microsoft.com/library/4afxey9h.aspx)
+    click [Show All Files](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90))
     twice on each project. You can skip projects that do not contain
     any `.axml` layout files. This step will ensure that each project
     directory contains a `.csproj.user` file.

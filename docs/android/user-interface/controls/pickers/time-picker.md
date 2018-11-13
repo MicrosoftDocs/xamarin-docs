@@ -370,7 +370,7 @@ hour format:
 [![TimePicker dialog in 24-Hour format](time-picker-images/05-24hr-time-dialog-sml.png)](time-picker-images/05-24hr-time-dialog.png#lightbox)
 
 Because the handler calls
-[DateTime.ToShortTimeString](https://msdn.microsoft.com/library/system.datetime.toshortdatestring%28v=vs.110%29.aspx)
+[DateTime.ToShortTimeString](xref:System.DateTime.ToShortDateString*)
 to print the time to the Activity's `TextView`, the time is still printed
 in the default 12-hour AM/PM format.
 

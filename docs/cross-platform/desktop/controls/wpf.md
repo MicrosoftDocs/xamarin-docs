@@ -55,7 +55,7 @@ Just like WPF, the single required method is a `ProvideValue` method to return t
 
 ## Binding infrastructure
 
-One of the core concepts carried over is a data binding infrastructure to connect visual properties to .NET data properties. This enables architectural patterns such as MVVM. The basic design is identical - you have a bindable base class [BindableObject](xref:Xamarin.Forms.BindableObject), in WPF this is the [DependencyObject](https://msdn.microsoft.com/library/system.windows.dependencyobject(v=vs.110).aspx) class. This base class is used as the root ancestor for all objects that will participate as targets in data binding. The derived classes then expose [BindableProperty](xref:Xamarin.Forms.BindableProperty) objects which act as the backing storage for property values (these are defined as [DependencyProperty](https://msdn.microsoft.com/library/system.windows.dependencyproperty(v=vs.110).aspx) objects in WPF).
+One of the core concepts carried over is a data binding infrastructure to connect visual properties to .NET data properties. This enables architectural patterns such as MVVM. The basic design is identical - you have a bindable base class [BindableObject](xref:Xamarin.Forms.BindableObject), in WPF this is the [DependencyObject](xref:System.Windows.DependencyObject) class. This base class is used as the root ancestor for all objects that will participate as targets in data binding. The derived classes then expose [BindableProperty](xref:Xamarin.Forms.BindableProperty) objects which act as the backing storage for property values (these are defined as [DependencyProperty](xref:System.Windows.DependencyProperty) objects in WPF).
 
 ### Defining bindable properties
 
