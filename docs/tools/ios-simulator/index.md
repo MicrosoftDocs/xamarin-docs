@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
 author: lobrien
 ms.author: laobri
-ms.date: 05/11/2018
+ms.date: 11/14/2018
 ---
 
 # Remoted iOS Simulator for Windows
@@ -31,13 +31,11 @@ Watch [this video](deploy.md) for a step-by-step guide.
 The toolbar at the top of the simulator's window contains a number of 
 useful buttons:
 
-- **Home** – Simulates the home button on an iOS device
-- **Lock** – Locks the simulator (swipe to unlock)
-- **Screenshot** – Saves a screenshot of the simulator
-- [**Settings**](#settings) – Displays keyboard, location, and other 
-  settings
-- [**Other options**](#other-options) – Brings up various simulator options 
-  such as rotation and shake gestures
+- **Home** – Simulates the home button on an iOS device.
+- **Lock** – Locks the simulator (swipe to unlock).
+- **Screenshot** – Saves a screenshot of the simulator (stored in **Pictures\Xamarin\iOS Simulator\**).
+- [**Settings**](#settings) – Displays keyboard, location, and other settings.
+- [**Other options**](#other-options) – Brings up various simulator options such as rotation, shake gestures, and Touch ID.
 
     [![](images/maps-app-sml.png "iOS simulator maps example")](images/maps-app.png#lightbox)
 
