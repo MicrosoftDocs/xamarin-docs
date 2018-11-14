@@ -56,6 +56,23 @@ public class EmailTest
 }
 ```
 
+
+## Platform Differences
+
+# [Android](#tab/android)
+
+No platform differences.
+
+# [iOS](#tab/ios)
+
+No platform differences.
+
+# [UWP](#tab/uwp)
+
+Only supports `PlainText` as the `BodyFormat` attempting to send `Html` will throw a `FeatureNotSupportedException`.
+
+-----
+
 ## API
 
 - [Email source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
