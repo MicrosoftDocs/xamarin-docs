@@ -44,9 +44,10 @@ to learn how to add support for more encoding.
 The member was likely removed by the linker, and thus doesn't exist in the
 assembly at runtime.  There are several solutions to this:
 
--  Add the  [[Preserve]](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute)  attribute to the member.  This will prevent the linker from removing it.
--  When invoking  [mtouch](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29) , use the  **-nolink**  or  **-linksdkonly**  options. -    **-nolink**   disables all linking.
--    **-linksdkonly**   will only link Xamarin.iOS-provided assemblies, such as  *monotouch.dll* or xamarin.ios.dll .
+- Add the [`[Preserve]`](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) attribute to the member.  This will prevent the linker from removing it.
+- When invoking [**mtouch**](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29), use the **-nolink** or **-linksdkonly** options:
+  - **-nolink** disables all linking.
+  - **-linksdkonly** will only link Xamarin.iOS-provided assemblies, such as **xamarin.ios.dll**, while preserving all types in user-created assemblies (ie. your app projects).
 
 Note that assemblies are linked so that the resulting executable is smaller;
 thus, disabling linking may result in a larger executable than is desirable.
