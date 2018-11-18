@@ -171,7 +171,7 @@ click **set up a merchant account** and follow the instructions.
 ### Manage Countries
 
 The next section, **Manage Countries**, provides control over what
-countries an app may be distibuted to:
+countries an app may be distributed to:
 
 [![Manage countries dialog](manually-uploading-the-apk-images/13-manage-countries-sml.png)](manually-uploading-the-apk-images/13-manage-countries.png#lightbox)
 
