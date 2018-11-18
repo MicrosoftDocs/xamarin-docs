@@ -179,7 +179,7 @@ tool **avdmanager** instead:
 
 -----
 
-This message is displayed because Google no longer provides a standlone
+This message is displayed because Google no longer provides a standalone
 GUI AVD manager that supports API 26.0 and later. For Android 8.0 Oreo,
 you must use either the Xamarin Android Emulator Manager or the
 command-line `avdmanager` tool to create virtual devices for Android
