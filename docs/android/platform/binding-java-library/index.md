@@ -86,7 +86,7 @@ list summarizes these build actions:
 
 * `EmbeddedReferenceJar` &ndash; Embeds a reference **.jar** into the resulting Bindings Library .DLL. Use this build action when you want to create C# bindings for both the input **.jar** (or .AAR) and all of its reference **.jar**(s) in your Bindings Library.
 
-* `EmbeddedNativeLibrary` &ndash; Embeds a native **.so** into the binding. This build action is used for **.so** files that are required by the **.jar** file being bound. It may be necessary to manually load the **.so** library before executing code from the Java libary. This is described below.
+* `EmbeddedNativeLibrary` &ndash; Embeds a native **.so** into the binding. This build action is used for **.so** files that are required by the **.jar** file being bound. It may be necessary to manually load the **.so** library before executing code from the Java library. This is described below.
 
 These build actions are explained in more detail in the following guides.
 
@@ -100,7 +100,7 @@ The API documentation should be the default doclet from Java8, Java7 or Java6 SD
 
 ## Including a Native Library in a Binding
 
-It may be necessary to include a **.so** library in a Xamarin.Android binding project as a part of binding a Java libary. When the wrapped Java code executes, Xamarin.Android will fail to make the JNI call and the error message _java.lang.UnsatisfiedLinkError: Native method not found:_ will appear in the logcat out for the application.
+It may be necessary to include a **.so** library in a Xamarin.Android binding project as a part of binding a Java library. When the wrapped Java code executes, Xamarin.Android will fail to make the JNI call and the error message _java.lang.UnsatisfiedLinkError: Native method not found:_ will appear in the logcat out for the application.
 
 The fix for this is to manually load the **.so** library with a call to `Java.Lang.JavaSystem.LoadLibrary`. For example assuming that a Xamarin.Android project has shared library **libpocketsphinx_jni.so** included in the binding project with a build action of **EmbeddedNativeLibrary**, the following snippet (executed before using the shared library) will load the **.so** library:
 

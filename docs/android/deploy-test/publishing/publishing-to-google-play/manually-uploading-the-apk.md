@@ -255,7 +255,7 @@ applications:
 -   [uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html) 
     &ndash; This element specifies that certain shared libraries must 
     be present on the device, for example Google Maps. This element may 
-    also be specified with the `Android.App.UsesLibaryAttribute`. For 
+    also be specified with the `Android.App.UsesLibraryAttribute`. For 
     example: 
 
     ```csharp

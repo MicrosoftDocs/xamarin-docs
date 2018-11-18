@@ -167,7 +167,7 @@ this gesture file is to load the file into a GestureLibrary, as shown
 in the following snippet:
 
 ```csharp
-GestureLibary myGestures = GestureLibraries.FromRawResources(this, Resource.Raw.gestures);
+GestureLibrary myGestures = GestureLibraries.FromRawResources(this, Resource.Raw.gestures);
 if (!myGestures.Load())
 {
 	// The library didn't load, so close the activity.
