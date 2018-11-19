@@ -6,7 +6,7 @@ ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2017
+ms.date: 10/24/2018
 ---
 
 # Customizing a Map Pin
@@ -417,9 +417,10 @@ protected override MarkerOptions CreateMarker(Pin pin)
 }
 ```
 
-This method creates a new `MarkerOption` instance for each `Pin` instance. After setting the position, label, and address of the marker, its icon is set with the `SetIcon` method. This method takes a `BitmapDescriptor` object containing the data necessary to render the icon, with the `BitmapDescriptorFactory` class providing helper methods to simplify the creation of the `BitmapDescriptor`.
+This method creates a new `MarkerOption` instance for each `Pin` instance. After setting the position, label, and address of the marker, its icon is set with the `SetIcon` method. This method takes a `BitmapDescriptor` object containing the data necessary to render the icon, with the `BitmapDescriptorFactory` class providing helper methods to simplify the creation of the `BitmapDescriptor`. For more information about using the `BitmapDescriptorFactory` class to customize a marker, see [Customizing a Marker](~/android/platform/maps-and-location/maps/maps-api.md).
 
-For more information about using the `BitmapDescriptorFactory` class to customize a marker, see [Customizing a Marker](~/android/platform/maps-and-location/maps/maps-api.md).
+> [!NOTE]
+> If required, the `GetMarkerForPin` method can be invoked in your map renderer to retrieve a `Marker` from a `Pin`.
 
 <a name="Customizing_the_Info_Window" />
 

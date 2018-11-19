@@ -6,7 +6,7 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 18/10/2018
+ms.date: 13/11/2018
 ---
 
 # Xamarin.Forms Views
@@ -66,6 +66,13 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 |     |     |
 | --- | --- |
 | [`Button`](xref:Xamarin.Forms.Button) is a rectangular object that displays text, and which fires a [`Clicked`](xref:Xamarin.Forms.Button.Clicked) event when it's been pressed.<br /><br />[API Documentation](xref:Xamarin.Forms.Button) / [Guide](~/xamarin-forms/user-interface/button.md) / [Sample](https://developer.xamarin.com/samples/UserInterface/ButtonDemos/) | [![Button Example](views-images/Button.png "Button Example")](views-images/Button-Large.png#lightbox "Button Example")<br /> [C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ButtonDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ButtonDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ButtonDemoPage.xaml.cs) |
+|     |     |
+
+### ImageButton
+
+|     |     |
+| --- | --- |
+| `ImageButton` is a rectangular object that displays an image, and which fires a `Clicked` event when it's been pressed.<br /><br /> [Guide](~/xamarin-forms/user-interface/imagebutton.md) / [Sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/) | [![ImageButton Example](views-images/ImageButton.png "ImageButton Example")](views-images/ImageButton-Large.png#lightbox "ImageButton Example")<br /> [C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageButtonDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml.cs) |
 |     |     |
 
 ### SearchBar

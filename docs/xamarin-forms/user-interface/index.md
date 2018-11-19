@@ -6,7 +6,7 @@ ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/17/2018
+ms.date: 11/14/2018
 ---
 
 # Xamarin.Forms User Interface Views
@@ -48,6 +48,10 @@ How to incorporate graphics into a Xamarin.Forms application using SkiaSharp.
 ## [Images](images.md)
 
 Images can be shared across platforms with Xamarin.Forms, they can be loaded specifically for each platform, or they can be downloaded for display.
+
+## [ImageButon](imagebutton.md)
+
+The `ImageButton` displays an image and responds to a tap or click that directs an application to carry out a particular task.
 
 ## [Layouts](layouts/index.md)
 

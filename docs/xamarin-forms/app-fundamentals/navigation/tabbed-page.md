@@ -6,7 +6,7 @@ ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2017
+ms.date: 10/24/2018
 ---
 
 # Xamarin.Forms Tabbed Page
@@ -27,13 +27,13 @@ The layout of a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), and its tabs, is 
 
 - On iOS, the list of tabs appears at the bottom of the screen, and the detail area is above. Each tab also has an icon image which should be a 30x30 PNG with transparency for normal resolution, 60x60 for high resolution, and 90x90 for iPhone 6 Plus resolution. If there are more than five tabs, a *More* tab will appear, which can be used to access the additional tabs. For more information about loading images in a Xamarin.Forms application, see [Working with Images](~/xamarin-forms/user-interface/images.md). For more information about icon requirements, see [Creating Tabbed Applications](~/ios/user-interface/controls/creating-tabbed-applications.md).
 
-    > [!NOTE]
+  > [!NOTE]
   > Note that the `TabbedRenderer` for iOS has an overridable `GetIcon` method that can be used to load tab icons from a specified source. This override makes it possible to use SVG images as icons on a `TabbedPage`. In addition, selected and unselected versions of an icon can be provided.
 
 - On Android, the list of tabs appears at the top of the screen by default, and the detail area is below. However, the tab list can be moved to the bottom of the screen with a platform-specific. For more information, see [Setting TabbedPage Toolbar Placement and Color](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar).
 
-    > [!NOTE]
-  > Note that when using AppCompat on Android, each tab will also display an icon. In addition, the `TabbedPageRenderer` for Android AppCompat has an overridable `SetTabIcon` method that can be used to load tab icons from a custom `Drawable`. This override makes it possible to use SVG images as icons on a `TabbedPage`.
+  > [!NOTE]
+  > Note that when using AppCompat on Android, each tab will also display an icon. In addition, the `TabbedPageRenderer` for Android AppCompat has an overridable `GetIconDrawable` method that can be used to load tab icons from a custom `Drawable`. This override makes it possible to use SVG images as icons on a `TabbedPage`, and works with both top and bottom tab bars. Alternatively, the overridable `SetTabIcon` method can be used to load tab icons from a custom `Drawable` for top tab bars.
 
 - On Windows tablet form-factors, the tabs aren't always visible and users need to swipe-down (or right-click, if they have a mouse attached) to view the tabs in a `TabbedPage` (as shown below).
 

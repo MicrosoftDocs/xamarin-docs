@@ -6,7 +6,7 @@ ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/26/2018
+ms.date: 11/19/2018
 ---
 
 # Xamarin.Forms Button
@@ -417,7 +417,7 @@ The `Button` inherits or defines several properties that affect its appearance:
 - [`FontSize`](xref:Xamarin.Forms.Button.FontSize) is the size of the text
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes) indicates if the text is italic or bold
 - [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) is the width of the border
-- [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) rounds the corners
+- [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) is the corner radius of the `Button`
 
 > [!NOTE]
 > The `Button` class also has [`Margin`](xref:Xamarin.Forms.View.Margin) and [`Padding`](xref:Xamarin.Forms.Button.Padding) properties that control the layout behavior of the `Button`. For more information, see [Margin and Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
@@ -538,6 +538,40 @@ To see the `Button` border, you'll need to set a `BorderColor` to something othe
 On iOS, you'll notice that large border widths intrude into the interior of the `Button` and interfere with the display of text. If you choose to use a border with an iOS `Button`, you'll probably want to begin and end the `Text` property with spaces to retain its visibility.
 
 On UWP, selecting a `CornerRadius` that exceeds half the height of the `Button` raises an exception.
+
+## Button visual states
+
+[`Button`](xref:Xamarin.Forms.Button) has a `Pressed` [`VisualState`](xref:Xamarin.Forms.VisualState) that can be used to initiate a visual change to the `Button` when pressed by the user, provided that it's enabled.
+
+The following XAML example shows how to define a visual state for the `Pressed` state:
+
+```xaml
+<Button Text="Click me!"
+        ...>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:Name="CommonStates">
+            <VisualState x:Name="Normal">
+                <VisualState.Setters>
+                    <Setter Property="Scale"
+                            Value="1" />
+                </VisualState.Setters>
+            </VisualState>
+
+            <VisualState x:Name="Pressed">
+                <VisualState.Setters>
+                    <Setter Property="Scale"
+                            Value="0.8" />
+                </VisualState.Setters>
+            </VisualState>
+
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+</ImageButton>
+```
+
+The `Pressed` [`VisualState`](xref:Xamarin.Forms.VisualState) specifies that when the [`Button`](xref:Xamarin.Forms.Button) is pressed, its [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) property will be changed from its default value of 1 to 0.8. The `Normal` `VisualState` specifies that when the `Button` is in a normal state, its `Scale` property will be set to 1. Therefore, the overall effect is that when the `Button` is pressed, it's rescaled to be slightly smaller, and when the `Button` is released, it's rescaled to its default size.
+
+For more information about visual states, see [The Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## Creating a toggle button
 

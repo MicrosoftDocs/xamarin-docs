@@ -6,7 +6,7 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/01/2018
+ms.date: 11/19/2018
 ---
 
 # Android Platform-Specifics
@@ -138,6 +138,7 @@ On Android, the following platform-specific functionality is provided for Xamari
 
 - Using the default padding and shadow values of Android buttons. For more information, see [Using Android Buttons](#button-padding-shadow).
 - Setting the input method editor options for the soft keyboard for an [`Entry`](xref:Xamarin.Forms.Entry). For more information, see [Setting Entry Input Method Editor Options](#entry-imeoptions).
+- Enabling a drop shadow on a `ImageButton`. For more information, see [Enabling a Drop Shadow on a ImageButton](#imagebutton-drop-shadow).
 - Enabling fast scrolling in a [`ListView`](xref:Xamarin.Forms.ListView) For more information, see [Enabling Fast Scrolling in a ListView](#fastscroll).
 - Controlling whether a [`WebView`](xref:Xamarin.Forms.WebView) can display mixed content. For more information, see [Enabling Mixed Content in a WebView](#webview-mixed-content).
 
@@ -222,6 +223,67 @@ The `Entry.On<Android>` method specifies that this platform-specific will only r
 The result is that a specified [`ImeFlags`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) value is applied to the soft keyboard for the [`Entry`](xref:Xamarin.Forms.Entry), which sets the input method editor options:
 
 [![Entry input method editor platform-specific](android-images/entry-imeoptions.png "Entry input method editor platform-specific")](android-images/entry-imeoptions-large.png#lightbox "Entry input method editor platform-specific")
+
+<a name="imagebutton-drop-shadow" />
+
+### Enabling a Drop Shadow on a ImageButton
+
+This platform-specific is used to enable a drop shadow on a `ImageButton`. It's consumed in XAML by setting the `ImageButton.IsShadowEnabled` bindable property to `true`, along with a number of additional optional bindable properties that control the drop shadow:
+
+```xaml
+<ContentPage ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout Margin="20">
+       <ImageButton ...
+                    Source="XamarinLogo.png"
+                    BackgroundColor="GhostWhite"
+                    android:ImageButton.IsShadowEnabled="true"
+                    android:ImageButton.ShadowColor="Gray"
+                    android:ImageButton.ShadowRadius="12">
+            <android:ImageButton.ShadowOffset>
+                <Size>
+                    <x:Arguments>
+                        <x:Double>10</x:Double>
+                        <x:Double>10</x:Double>
+                    </x:Arguments>
+                </Size>
+            </android:ImageButton.ShadowOffset>
+        </ImageButton>
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+Alternatively, it can be consumed from C# using the fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+var imageButton = new Xamarin.Forms.ImageButton { Source = "XamarinLogo.png", BackgroundColor = Color.GhostWhite, ... };
+imageButton.On<Android>()
+           .SetIsShadowEnabled(true)
+           .SetShadowColor(Color.Gray)
+           .SetShadowOffset(new Size(10, 10))
+           .SetShadowRadius(12);
+```
+
+> [!IMPORTANT]
+> A drop shadow is drawn as part of the `ImageButton` background, and the background is only drawn if the `BackgroundColor` property is set. Therefore, a drop shadow will not be drawn if the `ImageButton.BackgroundColor` property isn't set.
+
+The `ImageButton.On<Android>` method specifies that this platform-specific will only run on Android. The `ImageButton.SetIsShadowEnabled` method, in the [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) namespace, is used to control whether a drop shadow is enabled on the `ImageButton`. In addition, the following methods can be invoked to control the drop shadow:
+
+- `SetShadowColor` – sets the color of the drop shadow. The default color is [`Color.Default`](xref:Xamarin.Forms.Color.Default*).
+- `SetShadowOffset` – sets the offset of the drop shadow. The offset changes the direction the shadow is cast, and is specified as a [`Size`](xref:Xamarin.Forms.Size) value. The `Size` structure values are expressed in device-independent units, with the first value being the distance to the left (negative value) or right (positive value), and the second value being the distance above (negative value) or below (positive value). The default value of this property is (0.0, 0.0), which results in the shadow being cast around every side of the `ImageButton`.
+- `SetShadowRadius`– sets the blur radius used to render the drop shadow. The default radius value is 10.0.
+
+> [!NOTE]
+> The state of a drop shadow can be queried by calling the `GetIsShadowEnabled`, `GetShadowColor`, `GetShadowOffset`, and `GetShadowRadius` methods.
+
+The result is that a drop shadow can be enabled on a `ImageButton`:
+
+![](android-images/imagebutton-drop-shadow.png "ImageButton with drop shadow")
 
 <a name="fastscroll" />
 
