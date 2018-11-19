@@ -422,7 +422,7 @@ If an initial dispose pass causes `childViews` to have an invalid
 `Handle`, the `for` loop access will throw an `ArgumentException`. By 
 adding an explicit `Handle` null check before the first `childViews` 
 access, the following `Dispose` method prevents the exception from 
-occuring: 
+occurring: 
 
 ```csharp
 class MyClass : Java.Lang.Object, ISomeInterface 
