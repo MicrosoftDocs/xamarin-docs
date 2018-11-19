@@ -26,7 +26,7 @@ The Xamarin.Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) is new in Xamari
 
 ## Common usage scenarios
 
-The **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** sample program contains several pages that demonstate some common uses of `FlexLayout` and allows you to experiment with its properties.
+The **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** sample program contains several pages that demonstrate some common uses of `FlexLayout` and allows you to experiment with its properties.
 
 ### Using FlexLayout for a simple stack
 
