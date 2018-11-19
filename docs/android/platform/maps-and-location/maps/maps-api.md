@@ -285,7 +285,7 @@ There are five different types of maps available from the Google Maps
 API:
 
 -  **Normal** - This is the default map type. It shows roads and
-   important natural features along with some artifical points of
+   important natural features along with some artificial points of
    interest (such as buildings and bridges).
 
 -  **Satellite** - This map shows satellite photography.
