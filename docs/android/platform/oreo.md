@@ -374,7 +374,7 @@ Beginning with Android Oreo, apps can request fonts from a provider rather
 than bundling them into the APK. Fonts are downloaded from the network
 only as needed. This feature reduces APK size, conserving phone memory
 and cellular data usage. You can also use this feature on Android API
-versions 14 and higher by installing the Android Support Libary 26
+versions 14 and higher by installing the Android Support Library 26
 package.
 
 When your app needs a font, you create a `FontsRequest` object

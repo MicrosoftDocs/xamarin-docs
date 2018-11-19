@@ -39,7 +39,7 @@ If you later need platform-specific functionality, [platform-specific projects c
 5. Right-click on the new library project and then select **Options**. The **Build > General** section
   allows the **Target Framework** to be set – choose a .NET Portable PCL profile or a .NET Standard version:
 
-  [![](single-codebase-images/single-choose-type-sml.png "Choose PCL or .NET Standard for libary type")](single-codebase-images/single-choose-type.png#lightbox)
+  [![](single-codebase-images/single-choose-type-sml.png "Choose PCL or .NET Standard for library type")](single-codebase-images/single-choose-type.png#lightbox)
 
 6. Also in the **Project Options** window, open the **NuGet Package > Metadata** section and enter the [required metadata](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)
   (as well as any optional metadata):
