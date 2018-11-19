@@ -69,7 +69,7 @@ This interface is implemented by the hosting `DialogFragment`
 (`TimePickerFragment`, described below). Clicking the **Cancel**
 button causes the fragment and dialog to be dismissed.
 
-`DialogFragment` returns the selected time to the hosting Actvity in
+`DialogFragment` returns the selected time to the hosting Activity in
 one of three ways:
 
 1. **Invoking a method or setting a property** &ndash; The Activity can

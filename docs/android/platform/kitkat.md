@@ -583,7 +583,7 @@ a web view with `WebView.CreatePrintDocumentAdapter`. Printing web
 content is a coordinated effort between a
 [`WebViewClient`](https://developer.xamarin.com/api/type/Android.Webkit.WebViewClient/) that
 waits for the HTML content to load and lets the Activity know to make
-the print option available in the options menu, and the Actvity, which
+the print option available in the options menu, and the Activity, which
 waits for the user to select the Print option and calls `Print`on the
 `PrintManager`. This section covers the basic setup required to print
 on-screen HTML content.
