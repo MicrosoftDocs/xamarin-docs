@@ -406,7 +406,7 @@ This XML does the following:
     by the watch picker selection screen.
 
 4.  Includes an `intent-filter` to let Android know that
-    `MyWatchFaceSevice` will be displaying a watch face.
+    `MyWatchFaceService` will be displaying a watch face.
 
 That completes the code for the basic `WatchFace` example. The next
 step is to add the necessary resources.
