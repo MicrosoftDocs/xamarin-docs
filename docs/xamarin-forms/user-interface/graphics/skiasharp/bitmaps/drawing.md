@@ -164,7 +164,7 @@ The two formats where each pixel is 32 pixels (4 bytes) are often called _full-c
 
 These days, programmers almost always use full-color bitmaps and don't bother with other formats. The exception is the `RgbaF16` format, which allows greater color resolution than even the full-color formats. However, this format is used for specialized purposes, such as medical imaging, and doesn't make much sense when used with standard full-color displays.
 
-This series of articles will restrict itself to the `SKBitmap` color formats used by default when no `SKColorType` member is specfied. This default format is based on the underlying platform. For the platforms supported by Xamarin.Forms, the default color type is:
+This series of articles will restrict itself to the `SKBitmap` color formats used by default when no `SKColorType` member is specified. This default format is based on the underlying platform. For the platforms supported by Xamarin.Forms, the default color type is:
 
 - `Rgba8888` for iOS and Android
 - `Bgra8888` for the UWP

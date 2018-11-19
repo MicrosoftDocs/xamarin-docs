@@ -527,7 +527,7 @@ The `Order` property allows you to change the order that the children of the `Fl
 
 ### The Basis Property
 
-The [`Basis`](xref:Xamarin.Forms.FlexLayout.BasisProperty) attached bindable property indicates the amount of space that is allocated to a child of the `FlexLayout` on the main axis. The size specfied by the `Basis` property is the size along the main axis of the parent `FlexLayout`. Therefore, `Basis` indicates the width of a child when the children are arranged in rows, or the height when the children are arranged in columns.
+The [`Basis`](xref:Xamarin.Forms.FlexLayout.BasisProperty) attached bindable property indicates the amount of space that is allocated to a child of the `FlexLayout` on the main axis. The size specified by the `Basis` property is the size along the main axis of the parent `FlexLayout`. Therefore, `Basis` indicates the width of a child when the children are arranged in rows, or the height when the children are arranged in columns.
 
 The `Basis` property is of type [`FlexBasis`](xref:Xamarin.Forms.FlexBasis), a structure. The size can be specified in either device-independent units or as a percentage of the size of the `FlexLayout`. The default value of the `Basis` property is the static property `FlexBasis.Auto`, which means that the child's requested width or height is used.
 
