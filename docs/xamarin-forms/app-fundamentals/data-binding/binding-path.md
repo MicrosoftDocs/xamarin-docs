@@ -129,7 +129,7 @@ Finally, the last example is similar to the second, except that it references on
 
 That child is a `Label`, which has a `Text` property of type `String`, which has a `Length` property. The first `Label` reports the `TimeSpan` set in the `TimePicker`, so when that text changes, the final `Label` changes as well.
 
-Here's the program running on all three platforms:
+Here's the program running:
 
 [![Path Variations](binding-path-images/pathvariations-small.png "Path Variations")](binding-path-images/pathvariations-large.png#lightbox "Path Variations")
 

@@ -17,7 +17,7 @@ To load these resources, create an instance of `ResourceVideoSource` by setting 
 
 ## Storing the video files
 
-Storing a video file in the platform project is different for the three platforms:
+Storing a video file in the platform project is different for each platform.
 
 ### iOS video resources
 
@@ -166,9 +166,9 @@ The **Play Video Resource** page in the **VideoPlayerDemos** solution uses the `
 </ContentPage>
 ```
 
-If the iOS resource is stored in the **Resources** folder, and if the UWP resource is stored in the root folder of the project, you can use the same filename for the three platforms. If that is the case, then you can set that name directly to the `Source` property of `VideoPlayer`.
+If the iOS resource is stored in the **Resources** folder, and if the UWP resource is stored in the root folder of the project, you can use the same filename for each platform. If that is the case, then you can set that name directly to the `Source` property of `VideoPlayer`.
 
-Here's that page running on the three platforms:
+Here's that page running:
 
 [![Play Video Resource](loading-resources-images/playvideoresource-small.png "Play Video Resource")](loading-resources-images/playvideoresource-large.png#lightbox "Play Video Resource")
 

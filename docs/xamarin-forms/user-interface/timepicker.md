@@ -153,7 +153,7 @@ The `SetTriggerTime` method calculates a timer time based on the `DateTime.Today
 
 The timer ticks every second, executing the `OnTimerTick` method that checks whether the [`Switch`](xref:Xamarin.Forms.Switch) is on and whether the current time is greater than or equal to the timer time. When the timer time occurs, the [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) method presents an alert dialog to the user as a reminder.
 
-When the sample is first run, the [`TimePicker`](xref:Xamarin.Forms.TimePicker) view is initialized to 11am. Tapping the `TimePicker` invokes the platform time picker. The three platforms implement the time picker in very different ways, but each approach is familiar to users of that platform:
+When the sample is first run, the [`TimePicker`](xref:Xamarin.Forms.TimePicker) view is initialized to 11am. Tapping the `TimePicker` invokes the platform time picker. The platforms implement the time picker in very different ways, but each approach is familiar to users of that platform:
 
 [![Select Time](timepicker-images/timepicker-open.png "Select Time")](timepicker-images/timepicker-open-large.png#lightbox "Select Time")
 

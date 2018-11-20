@@ -804,7 +804,7 @@ In XAML, you need specify only the enumeration member, or the spacing, or both i
         ContentLayout="Right, 20" />
 ```
 
-The **Image Button Demo** page uses `OnPlatform` to specify different filenames for the iOS, Android, and UWP bitmap files. If you want to use the same filename for all three platforms and avoid the use of `OnPlatform`, you'll need to store the UWP bitmaps in the root directory of the project.
+The **Image Button Demo** page uses `OnPlatform` to specify different filenames for the iOS, Android, and UWP bitmap files. If you want to use the same filename for each platform and avoid the use of `OnPlatform`, you'll need to store the UWP bitmaps in the root directory of the project.
 
 The first `Button` on the **Image Button Demo** page sets the `Image` property but not the `Text` property:
 

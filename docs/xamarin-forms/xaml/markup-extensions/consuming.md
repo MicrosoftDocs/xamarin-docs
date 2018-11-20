@@ -132,7 +132,7 @@ The final example displays the `Device.RuntimePlatform` value. The `Environment.
 </Label>
 ```
 
-Here's the sample running on all three platforms:
+Here's the sample running:
 
 [![x:Static Demo](consuming-images/staticdemo-small.png "x:Static Demo")](consuming-images/staticdemo-large.png#lightbox "x:Static Demo")
 
@@ -176,7 +176,7 @@ The **x:Reference Demo** page shows two uses of `x:Reference` with data bindings
 </ContentPage>
 ```
 
-Both `x:Reference` expressions use the abbreviated version of the `ReferenceExtension` class name and eliminate the `Name=` part of the expression. In the first example, the `x:Reference` markup extension is embedded in the `Binding` markup extension. Notice that the `Source` and `StringFormat` settings are separated by commas. Here's the program running on all three platforms:
+Both `x:Reference` expressions use the abbreviated version of the `ReferenceExtension` class name and eliminate the `Name=` part of the expression. In the first example, the `x:Reference` markup extension is embedded in the `Binding` markup extension. Notice that the `Source` and `StringFormat` settings are separated by commas. Here's the program running:
 
 [![x:Reference Demo](consuming-images/referencedemo-small.png "x:Reference Demo")](consuming-images/referencedemo-large.png#lightbox "x:Reference Demo")
 
@@ -444,7 +444,7 @@ The **x:Null Demo** page illustrates one scenario when `x:Null` might be conveni
 
 Then you discover that for one of the `Label` elements, you want all the property settings in the implicit `Style` except for the `FontFamily`, which you want to be the default value. You could define another `Style` for that purpose but a simpler approach is simply to set the `FontFamily` property of the particular `Label` to `x:Null`, as demonstrated in the center `Label`.
 
-Here's the program running on the three platforms:
+Here's the program running:
 
 [![x:Null Demo](consuming-images/nulldemo-small.png "x:Null Demo")](consuming-images/nulldemo-large.png#lightbox "x:Null Demo")
 
@@ -488,7 +488,7 @@ The **OnPlatform Demo** page shows how to use the `OnPlatform` markup extension:
 
 In this example, all three `OnPlatform` expressions use the abbreviated version of the `OnPlatformExtension` class name. The three `OnPlatform` markup extensions set the [`Color`](xref:Xamarin.Forms.BoxView.Color), [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest), and [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) properties of the [`BoxView`](xref:Xamarin.Forms.BoxView) to different values on iOS, Android, and UWP. The markup extensions also provide default values for these properties on the platforms that aren't specified, while eliminating the `Default=` part of the expression. Notice that the markup extension properties that are set are separated by commas.
 
-Here's the program running on all three platforms:
+Here's the program running:
 
 [![OnPlatform Demo](consuming-images/onplatformdemo-small.png "OnPlatform Demo")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform Demo")
 
@@ -526,7 +526,7 @@ The **OnIdiom Demo** page shows how to use the `OnIdiom` markup extension:
 
 In this example, all three `OnIdiom` expressions use the abbreviated version of the `OnIdiomExtension` class name. The three `OnIdiom` markup extensions set the [`Color`](xref:Xamarin.Forms.BoxView.Color), [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest), and [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) properties of the [`BoxView`](xref:Xamarin.Forms.BoxView) to different values on the phone, tablet, and desktop idioms. The markup extensions also provide default values for these properties on the idioms that aren't specified, while eliminating the `Default=` part of the expression. Notice that the markup extension properties that are set are separated by commas.
 
-Here's the program running on all three platforms:
+Here's the program running:
 
 [![OnIdiom Demo](consuming-images/onidiomdemo-small.png "OnIdiom Demo")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom Demo")
 

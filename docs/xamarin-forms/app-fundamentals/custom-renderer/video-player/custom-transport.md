@@ -207,7 +207,7 @@ namespace FormsVideoLibrary.UWP
 
 Implementing the **Play**, **Pause**, and **Stop** functions is not sufficient for supporting transport controls. Often the **Play** and **Pause** commands are implemented with the same button that changes its appearance to indicate whether the video is currently playing or paused. Moreover, the button shouldn't even be enabled if the video has not yet loaded.
 
-These requirements imply that the video player needs to make available a current status indicating if it's playing or paused, or if it's not yet ready to play a video. (The three platforms also support properties that indicate if the video can be paused, or can be moved to a new position, but these properties are applicable for streaming video rather than video files, so they are not supported in the `VideoPlayer` described here.)
+These requirements imply that the video player needs to make available a current status indicating if it's playing or paused, or if it's not yet ready to play a video. (Each platform also supports properties that indicate if the video can be paused, or can be moved to a new position, but these properties are applicable for streaming video rather than video files, so they are not supported in the `VideoPlayer` described here.)
 
 The **VideoPlayerDemos** project includes a `VideoStatus` enumeration with three members:
 
@@ -527,7 +527,7 @@ For that reason, the 0x23F5 codepoint can't be used for **Play**. A good substit
 
 - 0x25B6 (black right-pointing triangle) or &#x25B6; for **Play**
 
-This is supported by all three platforms except that it's a plain black triangle that does not resemble the 3D appearance of **Pause** and **Stop**. One possibility is to follow the 0x25B6 codepoint with a variant code:
+This is supported by each platform except that it's a plain black triangle that does not resemble the 3D appearance of **Pause** and **Stop**. One possibility is to follow the 0x25B6 codepoint with a variant code:
 
 - 0x25B6 followed by 0xFE0F (variant 16) or &#x25B6;&#xFE0F; for **Play**
 

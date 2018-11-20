@@ -15,7 +15,7 @@ Applications that animate SkiaSharp graphics generally call `InvalidateSurface` 
 
 However, if the graphics are too complex to be rendered in 16 milliseconds, the animation can become jittery. The programmer might choose to reduce the refresh rate to 30 times or 15 times a second, but sometimes even that's not enough. Sometimes graphics are so complex that they simply can't be rendered in real time.
 
-One solution is to prepare for the animation beforehand by rendering the individual frames of the animation on a series of bitmaps. To display the animation, it's only necessary to display these bitmaps sequentially 60 times a second. 
+One solution is to prepare for the animation beforehand by rendering the individual frames of the animation on a series of bitmaps. To display the animation, it's only necessary to display these bitmaps sequentially 60 times a second.
 
 Of course, that's potentially a lot of bitmaps, but that is how big-budget 3D animated movies are made. The 3D graphics are much too complex to be rendered in real time. A lot of processing time is required to render each frame. What you see when you watch the movie is essentially a series of bitmaps.
 
@@ -29,7 +29,7 @@ The second example shows how to use SkiaSharp to render an animated GIF file.
 
 The Mandelbrot Set is visually fascinating but computionally lengthy. (For a discussion of the Mandelbrot Set and the mathematics used here, see [Chapter 20 of _Creating Mobile Apps with Xamarin.Forms_](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) starting on page 666. The following description assumes that background knowledge.)
 
-The [**Mandelbrot Animation**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/MandelAnima/) sample uses bitmap animation to simulate a continuous zoom of a fixed point in the Mandelbrot Set. Zooming in is followed by zooming out, and then the cycle repeats forever or until you end the program. 
+The [**Mandelbrot Animation**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/MandelAnima/) sample uses bitmap animation to simulate a continuous zoom of a fixed point in the Mandelbrot Set. Zooming in is followed by zooming out, and then the cycle repeats forever or until you end the program.
 
 The program prepares for this animation by creating up to 50 bitmaps that it stores in application local storage. Each bitmap encompasses half the width and height of the complex plane as the previous bitmap. (In the program, these bitmaps are said to represent integral _zoom levels_.) The bitmaps are then displayed in sequence. The scaling of each bitmap is animated to provide a smooth progression from one bitmap to another.
 
@@ -145,7 +145,7 @@ The **Mandelbrot Animation** XAML file includes two `Label` views, a `ProgressBa
 
             <Button x:Name="deleteButton"
                     Text="Delete All"
-                    HorizontalOptions="EndAndExpand" 
+                    HorizontalOptions="EndAndExpand"
                     Clicked="OnDeleteButtonClicked" />
         </StackLayout>
     </StackLayout>
@@ -174,7 +174,7 @@ public partial class MainPage : ContentPage
 
 At some point, you'll probably want to change the `COUNT` value to 50 to see the full range of the animation. Values above 50 are not useful. Around a zoom level of 48 or so, the resolution of double-precision floating-point numbers becomes insufficient for the Mandelbrot Set calculation. This problem is discussed on page 684 of _Creating Mobile Apps with Xamarin.Forms_.
 
-The `center` value is very important. This is the focus of the animation zoom. The three values in the file are those used in the three final screenshots in Chapter 20 of _Creating Mobile Apps with Xamarin.Forms_ on page 684, but you can experiment with the program in that chapter to come up with one of your own values. 
+The `center` value is very important. This is the focus of the animation zoom. The three values in the file are those used in the three final screenshots in Chapter 20 of _Creating Mobile Apps with Xamarin.Forms_ on page 684, but you can experiment with the program in that chapter to come up with one of your own values.
 
 The **Mandelbrot Animation** sample stores these `COUNT` bitmaps in local application storage. Fifty bitmaps require over 20 megabytes of storage on your device, so you might want to know how much storage these bitmaps are occupying, and at some point you might want to delete them all. That's the purpose of these two methods at the bottom of the `MainPage` class:
 
@@ -217,10 +217,10 @@ public partial class MainPage : ContentPage
 {
     ···
     // File path for storing each bitmap in local storage
-    string FolderPath() => 
+    string FolderPath() =>
         Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
-    string FilePath(int zoomLevel) => 
+    string FilePath(int zoomLevel) =>
         Path.Combine(FolderPath(),
                      String.Format("R{0}I{1}Z{2:D2}.png", center.Real, center.Imaginary, zoomLevel));
 
@@ -287,7 +287,7 @@ public partial class MainPage : ContentPage
 
                 CancellationToken cancelToken = cancelTokenSource.Token;
 
-                // Do the (generally lengthy) Mandelbrot calculation 
+                // Do the (generally lengthy) Mandelbrot calculation
                 BitmapInfo bitmapInfo =
                     await Mandelbrot.CalculateAsync(center,
                                                     4 / Math.Pow(2, zoomLevel),
@@ -371,7 +371,7 @@ Notice that the program stores these bitmaps in local application storage rather
 
 After all the bitmaps have been created or loaded into memory, the method starts a `Stopwatch` object and calls `Device.StartTimer`. The `OnTimerTick` method is called every 16 milliseconds.
 
-`OnTimerTick` calculates a `time` value in milliseconds that ranges from 0 to 6000 times `COUNT`, which apportions six seconds for the display of each bitmap. The `progress` value uses the `Math.Sin` value to create a sinusoidal animation that will be slower at the beginning of the cycle, and slower at the end as it reverses direction. 
+`OnTimerTick` calculates a `time` value in milliseconds that ranges from 0 to 6000 times `COUNT`, which apportions six seconds for the display of each bitmap. The `progress` value uses the `Math.Sin` value to create a sinusoidal animation that will be slower at the beginning of the cycle, and slower at the end as it reverses direction.
 
 The `progress` value ranges from 0 to `COUNT`. This means that the integer part of `progress` is an index into the `bitmaps` array, while the fractional part of `progress` indicates a zoom level for that particular bitmap. These values are stored in the `bitmapIndex` and `bitmapProgress` fields, and are displayed by the `Label` and `Slider` in the XAML file. The `SKCanvasView` is invalidated to update the bitmap display:
 
@@ -443,7 +443,7 @@ public partial class MainPage : ContentPage
             SKBitmap bitmap = bitmaps[bitmapIndex];
             int width = bitmap.Width;
             int height = bitmap.Height;
-            SKRect sourceRect = new SKRect(fraction * width, fraction * height, 
+            SKRect sourceRect = new SKRect(fraction * width, fraction * height,
                                            (1 - fraction) * width, (1 - fraction) * height);
 
             // Display the bitmap
@@ -454,7 +454,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Here's the program running on all three platforms:
+Here's the program running:
 
 [![Mandelbrot Animation](animating-images/MandelbrotAnimation.png "Mandelbrot Animation")](animating-images/MandelbrotAnimation-Large.png#lightbox)
 
@@ -477,7 +477,7 @@ The [SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/Sk
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <skia:SKCanvasView x:Name="canvasView" 
+        <skia:SKCanvasView x:Name="canvasView"
                            Grid.Row="0"
                            PaintSurface="OnCanvasViewPaintSurface" />
 
@@ -489,11 +489,11 @@ The [SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/Sk
 </ContentPage>
 ```
 
-The code-behind file is not generalized to play any animated GIF file. It ignores some of the information that is available, in particular a repetition count, and simply plays the animated GIF in a loop. 
+The code-behind file is not generalized to play any animated GIF file. It ignores some of the information that is available, in particular a repetition count, and simply plays the animated GIF in a loop.
 
 The use of SkisSharp to extract the frames of an animated GIF file does not seem to be documented anywhere, so the description of the code that follows is more detailed than usual:
 
-The decoding of the animated GIF file occurs in the page's constructor, and requires that the `Stream` object referencing the bitmap be used to create an `SKManagedStream` object and then an [`SKCodec`](xref:SkiaSharp.SKCodec) object. The [`FrameCount`](xref:SkiaSharp.SKCodec.FrameCount) property indicates the number of frames that make up the animation. 
+The decoding of the animated GIF file occurs in the page's constructor, and requires that the `Stream` object referencing the bitmap be used to create an `SKManagedStream` object and then an [`SKCodec`](xref:SkiaSharp.SKCodec) object. The [`FrameCount`](xref:SkiaSharp.SKCodec.FrameCount) property indicates the number of frames that make up the animation.
 
 These frames are eventually saved as individual bitmaps, so the constructor uses `FrameCount` to allocate an array of type `SKBitmap` as well as two `int` arrays for the duration of each frame and (to ease the animation logic) the accumulated durations.
 
@@ -557,10 +557,10 @@ public partial class AnimatedGifPage : ContentPage
                 totalDuration += durations[frame];
             }
 
-            // Calculate the accumulated durations 
+            // Calculate the accumulated durations
             for (int frame = 0; frame < durations.Length; frame++)
             {
-                accumulatedDurations[frame] = durations[frame] + 
+                accumulatedDurations[frame] = durations[frame] +
                     (frame == 0 ? 0 : accumulatedDurations[frame - 1]);
             }
         }
@@ -636,7 +636,7 @@ public partial class AnimatedGifPage : ContentPage
         SKCanvas canvas = surface.Canvas;
 
         canvas.Clear(SKColors.Black);
-            
+
         // Get the bitmap and center it
         SKBitmap bitmap = bitmaps[currentFrame];
         canvas.DrawBitmap(bitmap,info.Rect, BitmapStretch.Uniform);

@@ -32,7 +32,7 @@ namespace FormsVideoLibrary
 
 The members of this class (and the `IVideoPlayerController` interface) are described in the articles that follow.
 
-Each of the three platforms contains a class named `VideoPlayerRenderer` that contains the platform-specific code to implement a video player. The primary task of this renderer is to create a video player for that platform.
+Each of the platforms contains a class named `VideoPlayerRenderer` that contains the platform-specific code to implement a video player. The primary task of this renderer is to create a video player for that platform.
 
 ### The iOS player view controller
 
@@ -274,7 +274,7 @@ The two event handlers are detached in the `Dispose` event for the renderer.
 
 ## Showing the transport controls
 
-All the video players included in the three platforms support a default set of transport controls that include buttons for playing and pausing, and a bar to indicate the current position within the video, and to move to a new position.
+All the video players included in the platforms support a default set of transport controls that include buttons for playing and pausing, and a bar to indicate the current position within the video, and to move to a new position.
 
 The `VideoPlayer` class defines a property named `AreTransportControlsEnabled` and sets the default value to `true`:
 
@@ -307,7 +307,7 @@ Properties such as `AreTransportControlsEnabled` are handled in platform rendere
 
 - If the property in `VideoPlayer` later changes, then the `OnElementPropertyChanged` method in the renderer is called. This allows the renderer to update the platform video player based on the new property setting.
 
-Here's how the `AreTransportControlsEnabled` property is handled in the three platforms:
+The following sections discuss how the `AreTransportControlsEnabled` property is handled on each platform.
 
 ### iOS playback controls
 

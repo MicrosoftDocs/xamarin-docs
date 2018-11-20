@@ -144,7 +144,7 @@ public VideoPlayerRenderer(ILogger logger)
 }
 ```
 
-On all three platforms, type registration with the dependency injection container is performed by the `RegisterTypes` method, which is invoked prior to the platform loading the application with the `LoadApplication(new App())` method. The following example shows the `RegisterTypes` method on the iOS platform:
+On all the platforms, type registration with the dependency injection container is performed by the `RegisterTypes` method, which is invoked prior to the platform loading the application with the `LoadApplication(new App())` method. The following example shows the `RegisterTypes` method on the iOS platform:
 
 ```csharp
 void RegisterTypes()
@@ -191,7 +191,7 @@ boxView.Effects.Add(touchEffect);
 
 The `TouchEffect` class is a [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) that's implemented on each platform by a `TouchEffect` class that's a `PlatformEffect`. The platform `TouchEffect` class provides the functionality for dragging the `BoxView` around the page. For more information about these effect classes, see [Invoking events from effects](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
 
-On all three platforms, the `TouchEffect` class has the following constructor, which requires an `ILogger` argument:
+On all the platforms, the `TouchEffect` class has the following constructor, which requires an `ILogger` argument:
 
 ```csharp
 public TouchEffect(ILogger logger)
@@ -200,7 +200,7 @@ public TouchEffect(ILogger logger)
 }
 ```
 
-On all three platforms, type registration with the dependency injection container is performed by the `RegisterTypes` method, which is invoked prior to the platform loading the application with the `LoadApplication(new App())` method. The following example shows the `RegisterTypes` method on the Android platform:
+On all the platforms, type registration with the dependency injection container is performed by the `RegisterTypes` method, which is invoked prior to the platform loading the application with the `LoadApplication(new App())` method. The following example shows the `RegisterTypes` method on the Android platform:
 
 ```csharp
 void RegisterTypes()
@@ -235,7 +235,7 @@ public PhotoPicker(ILogger logger)
 }
 ```
 
-On all three platforms, type registration with the dependency injection container is performed by the `RegisterTypes` method, which is invoked prior to the platform loading the application with the `LoadApplication(new App())` method. The following example shows the `RegisterTypes` method on UWP:
+On all the platforms, type registration with the dependency injection container is performed by the `RegisterTypes` method, which is invoked prior to the platform loading the application with the `LoadApplication(new App())` method. The following example shows the `RegisterTypes` method on UWP:
 
 ```csharp
 void RegisterTypes()

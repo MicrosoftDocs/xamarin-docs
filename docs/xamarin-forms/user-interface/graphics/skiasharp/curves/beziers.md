@@ -84,7 +84,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Here it is running on all three platforms:
+Here it is running:
 
 [![](beziers-images/beziercurve-small.png "Triple screenshot of the Bezier Curve page")](beziers-images/beziercurve-large.png#lightbox "Triple screenshot of the Bezier Curve page")
 
@@ -202,7 +202,7 @@ float Magnitude(SKPoint v)
 
 The start and end points (`point0` and `point3`) are calculated based on the normal parametric equations for the circle. Because the circle is centered at (0, 0), these points can also be treated as radial vectors from the center of the circle to the circumference. The control points are on lines that are tangent to the circle, so they are at right angles to these radial vectors. A vector at a right angle to another is simply the original vector with the X and Y coordinates swapped and one of them made negative.
 
-Here's the program running on the three platforms with three different angles:
+Here's the program running with different angles:
 
 [![](beziers-images/beziercirculararc-small.png "Triple screenshot of the Bezier Circular Arc page")](beziers-images/beziercirculararc-large.png#lightbox "Triple screenshot of the Bezier Circular Arc page")
 
@@ -284,7 +284,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-The points are interpolated based on a sinusoidally oscillating value of `t`. The interpolated points are then used to construct a series of four connected Bézier curves. Here's the animation running on the three platforms showing the progress from a circle to a square:
+The points are interpolated based on a sinusoidally oscillating value of `t`. The interpolated points are then used to construct a series of four connected Bézier curves. Here's the animation running:
 
 [![](beziers-images/squaringthecircle-small.png "Triple screenshot of the Squaring the Circle page")](beziers-images/squaringthecircle-large.png#lightbox "Triple screenshot of the Squaring the Circle page")
 
@@ -333,7 +333,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 It might be a good exercise to plot these coordinates on graph paper to see how they are related. The infinity sign is centered around the point (0, 0), and the two loops have centers of (–150, 0) and (150, 0) and radii of 100. In the series of `CubicTo` commands, you can see X coordinates of control points taking on values of –95 and –205 (those values are –150 plus and minus 55), 205 and 95 (150 plus and minus 55), as well as 250 and –250 for the right and left sides. The only exception is when the infinity sign crosses itself in the center. In that case, control points have coordinates with a combination of 50 and –50 to straighten out the curve near the center.
 
-Here's the infinity sign on all three platforms:
+Here's the infinity sign:
 
 [![](beziers-images/bezierinfinity-small.png "Triple screenshot of the Bézier Infinity page")](beziers-images/bezierinfinity-large.png#lightbox "Triple screenshot of the Bézier Infinity page")
 
@@ -396,7 +396,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-And here it is running on all three platforms:
+And here it is running:
 
 [![](beziers-images/quadraticcurve-small.png "Triple screenshot of the Quadratic Curve page")](beziers-images/quadraticcurve-large.png#lightbox "Triple screenshot of the Quadratic Curve page")
 
@@ -474,7 +474,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Here it is running on all three platforms:
+Here it is running:
 
 [![](beziers-images/coniccurve-small.png "Triple screenshot of the Conic Curve page")](beziers-images/coniccurve-large.png#lightbox "Triple screenshot of the Conic Curve page")
 

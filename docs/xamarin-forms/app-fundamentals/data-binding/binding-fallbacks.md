@@ -39,7 +39,7 @@ Rather than defining [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackVa
 > [!NOTE]
 > It's not possible to set the `FallbackValue` property with a binding expression.
 
-Here's the program running on all three platforms:
+Here's the program running:
 
 ![FallbackValue Binding](binding-fallbacks-images/bindingunavailable-detail-cropped.png "FallbackValue Binding")
 
@@ -88,7 +88,7 @@ Rather than defining [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNu
 > [!NOTE]
 > It's not possible to set the `TargetNullValue` property with a binding expression.
 
-Here's the program running on all three platforms:
+Here's the program running:
 
 [![TargetNullValue Binding](binding-fallbacks-images/bindingunavailable-small.png "TargetNullValue Binding")](binding-fallbacks-images/bindingunavailable-large.png#lightbox "TargetNullValue Binding")
 

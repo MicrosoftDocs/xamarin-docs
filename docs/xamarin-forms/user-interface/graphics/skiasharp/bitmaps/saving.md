@@ -39,7 +39,7 @@ The [`SKBitmap`](xref:SkiaSharp.SKBitmap) class contains several methods named `
 
 In addition, the [`SKCodec`](xref:SkiaSharp.SKCodec) class has two methods named `Create` that can create an `SKCodec` object from a compressed source and allow an application to get more involved in the decoding process. (The `SKCodec` class is shown in the article [**Animating SkiaSharp Bitmaps**](animating.md#gif-animation) in connection with decoding an animated GIF file.)
 
-When encoding a bitmap, more information is required: The encoder must know the particular file format the application wants to use (JPEG or PNG or something else). If a lossy format is desired, the encode must also know the desired level of quality. 
+When encoding a bitmap, more information is required: The encoder must know the particular file format the application wants to use (JPEG or PNG or something else). If a lossy format is desired, the encode must also know the desired level of quality.
 
 The `SKBitmap` class defines one [`Encode`](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) method with the following syntax:
 
@@ -55,7 +55,7 @@ One of the [`Encode`](xref:SkiaSharp.SKImage.Encode) methods defined by `SKImage
 
 ## Platform-specific code for saving bitmap files
 
-When you encode an `SKBitmap` object into a particular file format, generally you'll be left with a stream object of some sort, or an array of data. Some of the `Encode` methods (including the one with no parameters defined by `SKImage`) return an [`SKData`](xref:SkiaSharp.SKData) object, which can be converted to an array of bytes using the [`ToArray`](xref:SkiaSharp.SKData.ToArray) method. This data must then be saved to a file. 
+When you encode an `SKBitmap` object into a particular file format, generally you'll be left with a stream object of some sort, or an array of data. Some of the `Encode` methods (including the one with no parameters defined by `SKImage`) return an [`SKData`](xref:SkiaSharp.SKData) object, which can be converted to an array of bytes using the [`ToArray`](xref:SkiaSharp.SKData.ToArray) method. This data must then be saved to a file.
 
 Saving to a file in application local storage is quite easy because you can use standard `System.IO` classes and methods for this task. This technique is demonstrated in the article [**Animating SkiaSharp Bitmaps**](animating.md#bitmap-animation) in connection with animating a series of bitmaps of the Mandelbrot set.
 
@@ -76,7 +76,7 @@ This interface also defines the `PickPhotoAsync` method, which is used to open t
 
 For `SavePhotoAsync`, the first argument is an array of bytes that contains the bitmap already encoded into a particular file format, such as JPEG or PNG. It's possible that an application might want to isolate all the bitmaps it creates into a particular folder, which is specified in the next parameter, followed by the file name. The method returns a Boolean indicating success or not.
 
-Here's how `SavePhotoAsync` is implemented on the three platforms:
+The following sections discuss how `SavePhotoAsync` is implemented on each platform.
 
 ### The iOS implementation
 
@@ -102,7 +102,7 @@ public class PhotoLibrary : IPhotoLibrary
 }
 ```
 
-Unfortunately, there is no way to specify a file name or folder for the image. 
+Unfortunately, there is no way to specify a file name or folder for the image.
 
 The **Info.plist** file in the iOS project requires a key indicating that it adds images to the photo library:
 
@@ -271,7 +271,7 @@ using (SKManagedWStream wstream = new SKManagedWStream(memStream))
 }
 ```
 
-The `SKManagedWStream` class derives from `SKWStream` (which stands for "writable stream"). The `Encode` method writes the encoded bitmap file into that stream. The comments in that code refer to some error checking you might need to perform. 
+The `SKManagedWStream` class derives from `SKWStream` (which stands for "writable stream"). The `Encode` method writes the encoded bitmap file into that stream. The comments in that code refer to some error checking you might need to perform.
 
 The **Save File Formats** page in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) application uses similar code to allow you to experiment with saving a bitmap in the various formats.
 
@@ -336,7 +336,7 @@ The XAML file contains an `SKCanvasView` that displays a bitmap, while the rest 
                    HorizontalOptions="FillAndExpand" />
         </StackLayout>
 
-        <Button Text="Save" 
+        <Button Text="Save"
                 Clicked="OnButtonClicked">
             <Button.Triggers>
                 <DataTrigger TargetType="Button"
@@ -430,9 +430,9 @@ public partial class SaveFileFormatsPage : ContentPage
 
 The `Clicked` handler for the `Button` does all the real work. It obtains two arguments for `Encode` from the `Picker` and `Slider`, and then uses the code shown earlier to create an `SKManagedWStream` for the `Encode` method. The two `Entry` views furnish folder and file names for the `SavePhotoAsync` method.
 
-Most of this method is devoted to handling problems or errors. If `Encode` creates an empty array, it means that the particular file format isn't supported. If `SavePhotoAsync` returns `false`, then the file wasn't successfully saved. 
+Most of this method is devoted to handling problems or errors. If `Encode` creates an empty array, it means that the particular file format isn't supported. If `SavePhotoAsync` returns `false`, then the file wasn't successfully saved.
 
-Here is the program running on the three platforms:
+Here is the program running:
 
 [![Save File Formats](saving-images/SaveFileFormats.png "Save File Formats")](saving-images/SaveFileFormats-Large.png#lightbox)
 
@@ -683,7 +683,7 @@ public partial class FingerPaintSavePage : ContentPage
 }
 ```
 
-The **Save** button handler uses the simplified [`Encode`](xref:SkiaSharp.SKImage.Encode) method from `SKImage`. This method encodes using the PNG format. The `SKImage` object is created based on `saveBitmap`, and the `SKData` object contains the encoded PNG file. 
+The **Save** button handler uses the simplified [`Encode`](xref:SkiaSharp.SKImage.Encode) method from `SKImage`. This method encodes using the PNG format. The `SKImage` object is created based on `saveBitmap`, and the `SKData` object contains the encoded PNG file.
 
 The `ToArray` method of `SKData` obtains an array of bytes. This is what is passed to the `SavePhotoAsync` method, along with a fixed folder name, and a unique filename constructed from the current date and time.
 

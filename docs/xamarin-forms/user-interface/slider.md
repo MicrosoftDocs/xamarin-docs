@@ -104,7 +104,7 @@ Here's the program running on iOS, Android, and Universal Windows Platform (UWP)
 
 [![Basic Slider Code](slider-images/BasicSliderCode.png "Basic Slider Code")](slider-images/BasicSliderCode-Large.png#lightbox)
 
-The second `Label` displays the text "(uninitialized)" until the `Slider` is manipulated, which causes the first `ValueChanged` event to be fired. Notice that the number of decimal places that are displayed is different for the three platforms. These differences are related to the platform implementations of the `Slider` and are discussed later in this article in the section [Platform implementation differences](#implementations).
+The second `Label` displays the text "(uninitialized)" until the `Slider` is manipulated, which causes the first `ValueChanged` event to be fired. Notice that the number of decimal places that are displayed is different for each platform. These differences are related to the platform implementations of the `Slider` and are discussed later in this article in the section [Platform implementation differences](#implementations).
 
 ### Creating a Slider in XAML
 

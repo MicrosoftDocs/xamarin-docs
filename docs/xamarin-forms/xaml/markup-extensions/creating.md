@@ -172,7 +172,7 @@ Although `ImageResourceExtension` requires the `Source` property to be set, the 
 </ContentPage>
 ```
 
-Here's the program running on all three platforms:
+Here's the program running:
 
 [![Image Resource Demo](creating-images/imageresourcedemo-small.png "Image Resource Demo")](creating-images/imageresourcedemo-large.png#lightbox "Image Resource Demo")
 

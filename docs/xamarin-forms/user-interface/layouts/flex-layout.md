@@ -182,7 +182,7 @@ public partial class PhotoWrappingPage : ContentPage
 }
 ```
 
-Here's the program running on the three platforms, progressively scrolled from top to bottom:
+Here's the program running, progressively scrolled from top to bottom:
 
 [![The Photo Wrapping Page](flex-layout-images/PhotoWrapping.png "The Photo Wrapping Page")](flex-layout-images/PhotoWrapping-Large.png#lightbox)
 
@@ -237,7 +237,7 @@ The **Holy Grail Layout** page of the **[FlexLayoutDemos](https://developer.xama
 </ContentPage>
 ```
 
-Here it is running on the three platforms:
+Here it is running:
 
 [![The Holy Grail Layout Page](flex-layout-images/HolyGrailLayout.png "The Holy Grail Layout Page")](flex-layout-images/HolyGrailLayout-Large.png#lightbox)
 
@@ -379,7 +379,7 @@ Within each of the three `FlexLayout` views, a blank `Label` precedes the `Butto
 
 ## The bindable properties in detail
 
-Now that you've seen some common applications of `FlexLayout`, the properties of `FlexLayout` can be explored in more detail. 
+Now that you've seen some common applications of `FlexLayout`, the properties of `FlexLayout` can be explored in more detail.
 `FlexLayout` defines six bindable properties that you set on the `FlexLayout` itself, either in code or XAML, to control orientation and alignment. (One of these properties, [`Position`](xref:Xamarin.Forms.FlexLayout.Position), is not covered in this article.)
 
 You can experiment with the five remaining bindable properties using the **Experiment** page of the **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** sample. This page allows you to add or remove children from a `FlexLayout` and to set combinations of the five bindable properties. All the children of the `FlexLayout` are `Label` views of various colors and sizes, with the `Text` property set to a number corresponding to its position in the `Children` collection.
@@ -730,7 +730,7 @@ button {
 
 Several `FlexLayout` attached bindable properties are referenced here. In the `label.empty` selector, you'll see the `flex-grow` attribute, which styles an empty `Label` to provide some blank space above the `Button`. The `image` selector contains an `order` attribute and an `align-self` attribute, both of which correspond to `FlexLayout` attached bindable properties.
 
-You've seen that you can set properties directly on the `FlexLayout` and you can set attached bindable properties on the children of a `FlexLayout`. Or, you can set these properties indirectly using traditional XAML-based styles or CSS styles. What's important is to know and understand these properties. These properties are what makes the `FlexLayout` truly flexible. 
+You've seen that you can set properties directly on the `FlexLayout` and you can set attached bindable properties on the children of a `FlexLayout`. Or, you can set these properties indirectly using traditional XAML-based styles or CSS styles. What's important is to know and understand these properties. These properties are what makes the `FlexLayout` truly flexible.
 
 ## FlexLayout with Xamarin.University
 

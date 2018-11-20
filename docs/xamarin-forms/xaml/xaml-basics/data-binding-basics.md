@@ -322,7 +322,7 @@ Much better. Now all that’s needed is to spruce up the item template with more
 </ContentPage>
 ```
 
-Notice the use of `OnPlatform` to define the size of a `BoxView` and the height of the `ListView` rows. Although the values for all three platforms are the same, the markup could easily be adapted for other values to fine-tune the display.
+Notice the use of `OnPlatform` to define the size of a `BoxView` and the height of the `ListView` rows. Although the values for all the platforms are the same, the markup could easily be adapted for other values to fine-tune the display.
 
 ## Binding Value Converters
 

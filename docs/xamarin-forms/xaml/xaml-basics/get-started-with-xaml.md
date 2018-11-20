@@ -1,6 +1,6 @@
 ---
 title: "Part 1. Getting Started with XAML"
-description: "In a Xamarin.Forms application, XAML is mostly used to define the visual contents of a page and works together with a code-behind file." 
+description: "In a Xamarin.Forms application, XAML is mostly used to define the visual contents of a page and works together with a code-behind file."
 ms.prod: xamarin
 ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
@@ -21,7 +21,7 @@ To begin editing your first XAML file, use Visual Studio or Visual Studio for Ma
 
 # [Visual Studio](#tab/windows)
 
-In Windows, use Visual Studio to select **File > New > Project** from the menu. In the **New Project** dialog, select **Visual C# > Cross Platform** at the left, and then **Mobile App (Xamarin.Forms)** from the list in the center. 
+In Windows, use Visual Studio to select **File > New > Project** from the menu. In the **New Project** dialog, select **Visual C# > Cross Platform** at the left, and then **Mobile App (Xamarin.Forms)** from the list in the center.
 
 ![](get-started-with-xaml-images/win/newprojectdialog.w157.png "New Project Dialog")
 
@@ -31,7 +31,7 @@ On the next screen, select the **Blank App** template and the **.NET Standard** 
 
 ![](get-started-with-xaml-images/win/newcrossplatformapp.png "New App Dialog")
 
-Press **OK**. 
+Press **OK**.
 
 Four projects are created in the solution: the **XamlSamples** .NET Standard library, **XamlSamples.Android**, **XamlSamples.iOS**, and the Universal Windows Platform solution, **XamlSamples.UWP**.
 
@@ -47,7 +47,7 @@ In the next dialog, give the project a name of **XamlSamples** (or whatever you 
 
 ![](get-started-with-xaml-images/mac/newprojectdialog2.png "New Project Dialog 2")
 
-Press **Next**. 
+Press **Next**.
 
 In the following dialog, you can select a location for the project:
 
@@ -55,7 +55,7 @@ In the following dialog, you can select a location for the project:
 
 Press **Create**
 
-Three projects are created in the solution: the **XamlSamples** .NET Standard library, **XamlSamples.Android**, and **XamlSamples.iOS**. 
+Three projects are created in the solution: the **XamlSamples** .NET Standard library, **XamlSamples.Android**, and **XamlSamples.iOS**.
 
 -----
 
@@ -70,7 +70,7 @@ Within the **XamlSamples** .NET Standard library are a pair of files with the fo
 - **App.xaml**, the XAML file; and
 - **App.xaml.cs**, a C# *code-behind* file associated with the XAML file.
 
-You'll need to click the arrow next to **App.xaml** to see the code-behind file. 
+You'll need to click the arrow next to **App.xaml** to see the code-behind file.
 
 Both **App.xaml** and **App.xaml.cs** contribute to a class named `App` that derives from `Application`. Most other classes with XAML files contribute to a class that derives from `ContentPage`; those files use XAML to define the visual contents of an entire page. This is true of the other two files in the **XamlSamples** project:
 
@@ -87,8 +87,8 @@ The **MainPage.xaml** file looks like this (although the formatting might be a l
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin Forms!" 
-               VerticalOptions="Center" 
+        <Label Text="Welcome to Xamarin Forms!"
+               VerticalOptions="Center"
                HorizontalOptions="Center" />
     </StackLayout>
 
@@ -124,7 +124,7 @@ namespace XamlSamples
 }
 ```
 
-The `MainPage` class derives from `ContentPage`, but notice the `partial` class definition. This suggests that there should be another partial class definition for `MainPage`, but where is it? And what is that `InitializeComponent` method? 
+The `MainPage` class derives from `ContentPage`, but notice the `partial` class definition. This suggests that there should be another partial class definition for `MainPage`, but where is it? And what is that `InitializeComponent` method?
 
 When Visual Studio builds the project, it parses the XAML file to generate a C# code file. If you look in the **XamlSamples\XamlSamples\obj\Debug** directory, you’ll find a file named **XamlSamples.MainPage.xaml.g.cs**. The ‘g’ stands for generated. This is the other partial class definition of `MainPage` that contains the definition of the `InitializeComponent` method called from the `MainPage` constructor. These two partial `MainPage` class definitions can then be compiled together. Depending on whether the XAML is compiled or not, either the XAML file or a binary form of the XAML file is embedded in the executable.
 
@@ -132,7 +132,7 @@ At runtime, code in the particular platform project calls a `LoadApplication` me
 
 Although you normally don’t need to spend much time with generated code files, sometimes runtime exceptions are raised on code in the generated files, so you should be familiar with them.
 
-When you compile and run this program, the `Label` element appears in the center of the page as the XAML suggests. The three platforms from left to right are iOS, Android, and UWP:
+When you compile and run this program, the `Label` element appears in the center of the page as the XAML suggests:
 
 [![](get-started-with-xaml-images/xamlsamples.png "Default Xamarin.Forms display")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "Default Xamarin.Forms display")
 
@@ -154,7 +154,7 @@ To add other XAML-based `ContentPage` classes to your project, select the **Xaml
 
 -----
 
-Two files are added to the project, **HelloXamlPage.xaml** and the code-behind file **HelloXamlPage.xaml.cs**. 
+Two files are added to the project, **HelloXamlPage.xaml** and the code-behind file **HelloXamlPage.xaml.cs**.
 
 ## Setting Page Content
 
@@ -165,7 +165,7 @@ Edit the **HelloXamlPage.xaml** file so that the only tags are those for `Conten
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamlSamples.HelloXamlPage">
     <ContentPage.Content>
-        
+
     </ContentPage.Content>
 </ContentPage>
 ```

@@ -281,7 +281,7 @@ public class PathDataCatPage : ContentPage
 }
 ```
 
-Here's the program running on all three platforms:
+Here's the program running:
 
 [![](path-data-images/pathdatacat-small.png "Triple screenshot of the Path Data Cat page")](path-data-images/pathdatacat-large.png#lightbox "Triple screenshot of the Path Data Cat page")
 

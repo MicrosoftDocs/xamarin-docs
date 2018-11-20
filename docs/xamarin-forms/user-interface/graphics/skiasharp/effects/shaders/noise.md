@@ -15,7 +15,7 @@ Simple vector graphics tend to look unnatural. The straight lines, smooth curves
 
 ![Perlin Noise sample](noise-images/NoiseSample.png "Perlin Noise Sample")
 
-As you can see, each pixel is not a random color value. The continuity from pixel to pixel results in random shapes. 
+As you can see, each pixel is not a random color value. The continuity from pixel to pixel results in random shapes.
 
 The support of Perlin noise in Skia is based on a W3C specification for CSS and SVG. Section 8.20 of [**Filter Effects Module Level 1**](http://www.w3.org/TR/filter-effects-1/#feTurbulenceElement) includes the underlying Perlin noise algorithms in C code.
 
@@ -31,7 +31,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
 
 Both methods also exist in overloaded versions with an additional `SKPointI` parameter. The section [**Tiling Perlin noise**](#tiling-perlin-noise) discusses these overloads.
 
-The two `baseFrequency` arguments are positive values defined in the SkiaSharp documentation as ranging from 0 to 1, but they can be set to higher values as well. The higher the value, the greater the change in the random image in the horizontal and vertical directions. 
+The two `baseFrequency` arguments are positive values defined in the SkiaSharp documentation as ranging from 0 to 1, but they can be set to higher values as well. The higher the value, the greater the change in the random image in the horizontal and vertical directions.
 
 The `numOctaves` value is an integer of 1 or higher. It relates to an iteration factor in the algorithms. Each additional octave contributes an effect that is half of the previous octave, so the effect decreases with higher octave values.
 
@@ -46,7 +46,7 @@ The **Perlin Noise** page in the [**SkiaSharpFormsDemos**)](https://developer.xa
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Effects.PerlinNoisePage"
              Title="Perlin Noise">
-    
+
     <StackLayout>
         <skia:SKCanvasView x:Name="canvasView"
                            VerticalOptions="FillAndExpand"
@@ -59,7 +59,7 @@ The **Perlin Noise** page in the [**SkiaSharpFormsDemos**)](https://developer.xa
 
         <Label x:Name="baseFrequencyXText"
                HorizontalTextAlignment="Center" />
-        
+
         <Slider x:Name="baseFrequencyYSlider"
                 Maximum="4"
                 Margin="10, 0"
@@ -67,7 +67,7 @@ The **Perlin Noise** page in the [**SkiaSharpFormsDemos**)](https://developer.xa
 
         <Label x:Name="baseFrequencyYText"
                HorizontalTextAlignment="Center" />
-        
+
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="Center"
                      Margin="10">
@@ -76,7 +76,7 @@ The **Perlin Noise** page in the [**SkiaSharpFormsDemos**)](https://developer.xa
                                   Path=Value,
                                   StringFormat='Number of Octaves: {0:F0}'}"
                    VerticalOptions="Center" />
-            
+
             <Stepper x:Name="octavesStepper"
                      Minimum="1"
                      ValueChanged="OnStepperValueChanged" />
@@ -136,7 +136,7 @@ public partial class PerlinNoisePage : ContentPage
 
         using (SKPaint paint = new SKPaint())
         {
-            paint.Shader = 
+            paint.Shader =
                 SKShader.CreatePerlinNoiseFractalNoise(baseFreqX,
                                                        baseFreqY,
                                                        numOctaves,
@@ -145,7 +145,7 @@ public partial class PerlinNoisePage : ContentPage
             SKRect rect = new SKRect(0, 0, info.Width, info.Height / 2);
             canvas.DrawRect(rect, paint);
 
-            paint.Shader = 
+            paint.Shader =
                 SKShader.CreatePerlinNoiseTurbulence(baseFreqX,
                                                      baseFreqY,
                                                      numOctaves,
@@ -188,7 +188,7 @@ These methods create a repeating pattern of the specified size. In each tile, th
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Effects.TiledPerlinNoisePage"
              Title="Tiled Perlin Noise">
-             
+
     <StackLayout>
         <skia:SKCanvasView x:Name="canvasView"
                            VerticalOptions="FillAndExpand"
@@ -252,7 +252,7 @@ public partial class TiledPerlinNoisePage : ContentPage
                 using (SKPaint paint = new SKPaint())
                 {
                     paint.Shader = SKShader.CreatePerlinNoiseTurbulence(
-                                        0.02f, 0.02f, 1, seed, 
+                                        0.02f, 0.02f, 1, seed,
                                         new SKPointI(TILE_SIZE, TILE_SIZE));
 
                     bitmapCanvas.DrawRect(tileRect, paint);
@@ -262,13 +262,13 @@ public partial class TiledPerlinNoisePage : ContentPage
             // Draw tiled bitmap shader on canvas
             using (SKPaint paint = new SKPaint())
             {
-                paint.Shader = SKShader.CreateBitmap(bitmap, 
-                                                     SKShaderTileMode.Repeat, 
+                paint.Shader = SKShader.CreateBitmap(bitmap,
+                                                     SKShaderTileMode.Repeat,
                                                      SKShaderTileMode.Repeat);
                 canvas.DrawRect(info.Rect, paint);
             }
 
-            // Draw rectangle showing tile 
+            // Draw rectangle showing tile
             using (SKPaint paint = new SKPaint())
             {
                 paint.Style = SKPaintStyle.Stroke;
@@ -285,22 +285,22 @@ public partial class TiledPerlinNoisePage : ContentPage
 After the bitmap has been created, another `SKPaint` object is used to create a tiled bitmap pattern by calling `SKShader.CreateBitmap`. Notice the two arguments of `SKShaderTileMode.Repeat`:
 
 ```csharp
-paint.Shader = SKShader.CreateBitmap(bitmap, 
-                                     SKShaderTileMode.Repeat, 
+paint.Shader = SKShader.CreateBitmap(bitmap,
+                                     SKShaderTileMode.Repeat,
                                      SKShaderTileMode.Repeat);
 ```
 
-This shader is used to cover the canvas. Finally, another `SKPaint` object is used to stroke a rectangle showing the size of the original bitmap. 
+This shader is used to cover the canvas. Finally, another `SKPaint` object is used to stroke a rectangle showing the size of the original bitmap.
 
-Only the `seed` parameter is selectable from the user interface. If the same `seed` pattern is used in the three platforms, they would show the same pattern. Different `seed` values result in different patterns:
+Only the `seed` parameter is selectable from the user interface. If the same `seed` pattern is used on each platform, they would show the same pattern. Different `seed` values result in different patterns:
 
 [![Tiled Perlin Noise](noise-images/TiledPerlinNoise.png "Tiled Perlin Noise")](noise-images/TiledPerlinNoise-Large.png#lightbox)
 
-The 200-pixel square pattern in the upper-left corner flows seamlessly into the other tiles. 
+The 200-pixel square pattern in the upper-left corner flows seamlessly into the other tiles.
 
 ## Combining multiple shaders
 
-The `SKShader` class includes a [`CreateColor`](xref:SkiaSharp.SKShader.CreateColor*) method that creates a shader with a specified solid color. This shader is not very useful by itself because you can simply set that color to the `Color` property of the `SKPaint` object and set the `Shader` property to null. 
+The `SKShader` class includes a [`CreateColor`](xref:SkiaSharp.SKShader.CreateColor*) method that creates a shader with a specified solid color. This shader is not very useful by itself because you can simply set that color to the `Color` property of the `SKPaint` object and set the `Shader` property to null.
 
 This `CreateColor` method becomes useful in another method that `SKShader` defines. This method is [`CreateCompose`](xref:SkiaSharp.SKShader.CreateCompose(SkiaSharp.SKShader,SkiaSharp.SKShader)), which combines two shaders. Here's the syntax:
 

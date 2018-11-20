@@ -114,7 +114,7 @@ If you need to display left or right curly braces in your formatting string, sim
 
 The last section sets the `BindingContext` to the value of `Math.PI` and displays it with default formatting and two different types of numeric formatting.
 
-Here's the program running on all three platforms:
+Here's the program running:
 
 [![String Formatting](string-formatting-images/stringformatting-small.png "String Formatting")](string-formatting-images/stringformatting-large.png#lightbox "String Formatting")
 

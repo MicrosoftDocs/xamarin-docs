@@ -11,7 +11,7 @@ ms.date: 07/19/2018
 
 # Summary of Chapter 28. Location and maps
 
-> [!NOTE] 
+> [!NOTE]
 > Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
 
 Xamarin.Forms supports a [`Map`](xref:Xamarin.Forms.Maps.Map) element that derives from `View`. Because of the special platform requirements involved in using maps, they are implemented in a separate assembly, **Xamarin.Forms.Maps**, and involve a different namespace: `Xamarin.Forms.Maps`.
@@ -189,7 +189,7 @@ The [LongitudeZoomPage.xaml](https://github.com/xamarin/xamarin-forms-book-sampl
 
 ### The Phone's location
 
-The [`IsShowingUser`](xref:Xamarin.Forms.Maps.Map.IsShowingUser) property of `Map` works a little differently on the three platforms as the [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) file demonstrates:
+The [`IsShowingUser`](xref:Xamarin.Forms.Maps.Map.IsShowingUser) property of `Map` works a little differently on each platform as the [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) file demonstrates:
 
 - On iOS, a blue dot indicates the phone's location but you must manually navigate there
 - On Android, an icon is displayed that when pushed moves the map to the phone's location

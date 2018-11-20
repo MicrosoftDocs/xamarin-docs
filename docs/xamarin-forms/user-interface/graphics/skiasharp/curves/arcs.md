@@ -407,7 +407,7 @@ public partial class TangentArcPage : InteractivePage
 }
 ```
 
-Here's the **Tangent Arc** page running on all three platforms:
+Here's the **Tangent Arc** page running:
 
 [![](arcs-images/tangentarc-small.png "Triple screenshot of the Tangent Arc page")](arcs-images/tangentarc-large.png#lightbox "Triple screenshot of the Tangent Arc page")
 
@@ -482,7 +482,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-Here's the program running on the three platforms:
+Here's the program running:
 
 [![](arcs-images/roundedheptagon-small.png "Triple screenshot of the Rounded Heptagon page")](arcs-images/roundedheptagon-large.png#lightbox "Triple screenshot of the Rounded Heptagon page")
 
@@ -577,7 +577,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-Here it is running on the three platforms:
+Here it is running:
 
 [![](arcs-images/ellipticalarc-small.png "Triple screenshot of the Elliptical Arc page")](arcs-images/ellipticalarc-large.png#lightbox "Triple screenshot of the Elliptical Arc page")
 

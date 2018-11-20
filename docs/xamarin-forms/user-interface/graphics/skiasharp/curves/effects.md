@@ -918,7 +918,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-You can use this effect with either stroking or filling based on the `Style` property of the `SKPaint` object. Here it is on all three platforms:
+You can use this effect with either stroking or filling based on the `Style` property of the `SKPaint` object. Here it is running:
 
 [![](effects-images/anotherroundedheptagon-small.png "Triple screenshot of the Another Rounded Heptagon page")](effects-images/anotherroundedheptagon-large.png#lightbox "Triple screenshot of the Another Rounded Heptagon page")
 
@@ -1063,7 +1063,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Here it is running in landscape mode on all three platforms:
+Here it is running in landscape mode:
 
 [![](effects-images/jittertext-small.png "Triple screenshot of the Jitter Text page")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
 

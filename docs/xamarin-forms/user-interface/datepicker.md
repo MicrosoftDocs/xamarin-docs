@@ -176,7 +176,7 @@ When the sample is first run, both `DatePicker` views are initialized to today's
 
 [![Days Between Dates Start](datepicker-images/DaysBetweenDatesStart.png "Days Between Dates Start")](datepicker-images/DaysBetweenDatesStart-Large.png#lightbox "Days Between Dates Start")
 
-Tapping either of the `DatePicker` displays invokes the platform date picker. The three platforms implement this date picker in very different ways, but each approach is familiar to users of that platform:
+Tapping either of the `DatePicker` displays invokes the platform date picker. The platforms implement this date picker in very different ways, but each approach is familiar to users of that platform:
 
 [![Days Between Dates Select](datepicker-images/DaysBetweenDatesSelect.png "Days Between Dates Select")](datepicker-images/DaysBetweenDatesSelect-Large.png#lightbox "Days Between Dates Select")
 

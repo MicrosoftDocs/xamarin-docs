@@ -246,7 +246,7 @@ Here’s the complete GridDemoPage.xaml file:
 
 The `Grid.Row` and `Grid.Column` settings of 0 are not required but are generally included for purposes of clarity.
 
-Here’s what it looks like on all three platforms:
+Here’s what it looks like:
 
 [![](essential-xaml-syntax-images/griddemo.png "Grid Layout")](essential-xaml-syntax-images/griddemo-large.png#lightbox "Grid Layout")
 
