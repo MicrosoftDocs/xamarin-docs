@@ -417,14 +417,14 @@ namespace MonkeyCall
 			// Define handle types
 			var handleTypes = new [] { (NSNumber)(int)CXHandleType.PhoneNumber };
 
-			// Get Image Mask
-			var maskImage = UIImage.FromFile ("telephone_receiver.png");
+			// Get Image Template
+			var templateImage = UIImage.FromFile ("telephone_receiver.png");
 
 			// Setup the initial configurations
 			Configuration = new CXProviderConfiguration ("MonkeyCall") {
 				MaximumCallsPerCallGroup = 1,
 				SupportedHandleTypes = new NSSet<NSNumber> (handleTypes),
-				IconMaskImageData = maskImage.AsPNG(),
+				IconTemplateImageData = templateImage.AsPNG(),
 				RingtoneSound = "musicloop01.wav"
 			};
 
@@ -453,14 +453,14 @@ namespace MonkeyCall
 			activeCall.StartingConnectionChanged += (call) => {
 				if (call.isConnecting) {
 					// Inform system that the call is starting
-					Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNsDate());
+					Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNSDate());
 				}
 			};
 
 			activeCall.ConnectedChanged += (call) => {
 				if (call.isConnected) {
 					// Inform system that the call has connected
-					provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNsDate ());
+					provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNSDate ());
 				}
 			};
 
@@ -953,14 +953,14 @@ public override void PerformStartCallAction (CXProvider provider, CXStartCallAct
 	activeCall.StartingConnectionChanged += (call) => {
 		if (call.IsConnecting) {
 			// Inform system that the call is starting
-			Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNsDate());
+			Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNSDate());
 		}
 	};
 
 	activeCall.ConnectedChanged += (call) => {
 		if (call.IsConnected) {
 			// Inform system that the call has connected
-			Provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNsDate ());
+			Provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNSDate ());
 		}
 	};
 
