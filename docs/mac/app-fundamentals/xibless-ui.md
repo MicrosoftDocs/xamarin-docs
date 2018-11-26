@@ -29,7 +29,7 @@ When you create a new Xamarin.Mac Cocoa application, you get a standard blank, w
 
 To switch to a Xibless window for an application, do the following:
 
-1. Open the application that you want to stop using `.stroyboard` or .xib files to define the user interface in Visual Studio for Mac.
+1. Open the application that you want to stop using `.storyboard` or .xib files to define the user interface in Visual Studio for Mac.
 2. In the **Solution Pad**, right-click on the **Main.storyboard** or **MainWindow.xib** file and select **Remove**: 
 
 	![Removing the main storyboard or window](xibless-ui-images/switch01.png "Removing the main storyboard or window")
