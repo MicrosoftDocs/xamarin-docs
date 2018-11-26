@@ -284,7 +284,7 @@ _Listed by primary location, many partners provide services across borders._
 
 | Partner | Locations | Description |
 | --- | --- | --- |
-|[High View Software](http://www.highviewsoft.com)|Beijing, China|Visionsoft Software is focusing on providing cross-platform APP and cloud-based service program design, development, implementation, technical training and other consulting services|
+|[High View Software](http://www.highviewsoft.com)|Beijing, China|High View Software is focusing on providing cross-platform APP and cloud-based service program design, development, implementation, technical training and other consulting services|
 
 
 ## Colombia
