@@ -21,7 +21,7 @@ The benefits of this move are:
 
 - You will always have an OpenJDK version that works for Android development.
 
-- Downloading JDK 9+ won’t affect the development experience.
+- Downloading Oracle's JDK 9 or greater won’t affect the development experience.
 
 - Reduced download size and footprint.
 
@@ -62,15 +62,13 @@ Point the IDE to the new JDK:
 
 ## Known Issues
 
-This is a new feature that affects all Android developers, and we are working hard to resolve issues as quickly as possible. Here are some of the known scenarios and how you can work through them to unblock yourself while we fix things on our end.
-
 ### Package 'OpenJDKV1.RegKey,version=1.8.0.9,chip=x64' failed to install
 
-This may be an issue in some corporate environments. OpenJDK is already on the machine - follow the troubleshooting steps above to point your IDE to the correct location. You can follow the status of the issues [here](https://developercommunity.visualstudio.com/content/problem/382549/packageidopenjdkv1regkeypackageactioninstallreturn.html).
+This may be an issue in some corporate environments. OpenJDK is already on the machine - follow the [troubleshooting steps above](#troubleshooting) to point your IDE to the correct location. You can follow the status of the issues [here](https://developercommunity.visualstudio.com/content/problem/382549/packageidopenjdkv1regkeypackageactioninstallreturn.html).
 
 ### "unknown update type: zip" when upgrading Visual Studio for Mac to 7.7
 
-this issue may come up if trying to upgrade an older version of Visual Studio for Mac to 7.7. To work around it, uncheck OpenJDK in the updater, install the rest of the update, and check for updates again to get the OpenJDK package. If you're still having issues, you can follow the troubleshooting steps above to install OpenJDK manually.
+This issue may come up if trying to upgrade an older version of Visual Studio for Mac to 7.7. To work around it, uncheck OpenJDK in the updater, install the rest of the update, and check for updates again to get the OpenJDK package. If you're still having issues, you can follow the [troubleshooting steps above](#troubleshooting) to install OpenJDK manually. Please file a bug with logs attached if you encounter this issue.
 
 ## Summary
 
