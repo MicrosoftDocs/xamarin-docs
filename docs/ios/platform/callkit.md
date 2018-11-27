@@ -600,11 +600,11 @@ When an instance of this delegate is created, it's passed the `ActiveCallManager
 var handleTypes = new [] { (NSNumber)(int)CXHandleType.PhoneNumber };
 ```
 
-And it gets the mask that will be applied to the app's icon when a call is in progress:
+And it gets the template image that will be applied to the app's icon when a call is in progress:
 
 ```csharp
-// Get Image Mask
-var maskImage = UIImage.FromFile ("telephone_receiver.png");
+// Get Image Template
+var templateImage = UIImage.FromFile ("telephone_receiver.png");
 ```
 
 These values get bundled into a `CXProviderConfiguration` that will be used to configure the `CXProvider`:
@@ -614,7 +614,7 @@ These values get bundled into a `CXProviderConfiguration` that will be used to c
 Configuration = new CXProviderConfiguration ("MonkeyCall") {
 	MaximumCallsPerCallGroup = 1,
 	SupportedHandleTypes = new NSSet<NSNumber> (handleTypes),
-	IconMaskImageData = maskImage.AsPNG(),
+	IconTemplateImageData = templateImage.AsPNG(),
 	RingtoneSound = "musicloop01.wav"
 };
 ```
@@ -1038,7 +1038,7 @@ An app can make the following types of customizations:
 
 - Display a localized name.
 - Enable video call support.
-- Customize the buttons on the In-Call UI by presenting its own masked image icon. User interaction with custom buttons is sent directly to the app to be processed. 
+- Customize the buttons on the In-Call UI by presenting its own template image icon. User interaction with custom buttons is sent directly to the app to be processed. 
 
 ### Action errors
 
