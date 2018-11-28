@@ -13,7 +13,7 @@ ms.date: 02/17/2016
 
 ## [Introduction](introduction.md)
 
-Xamarin.Forms applications often contain multiple controls that have an identical appearance. Setting the appearance of each individual control can be repetitive and error prone. Instead, styles can be created that customize control appearance by grouping and settings properties available on the control type.
+Xamarin.Forms applications often contain multiple controls that have an identical appearance. Setting the appearance of each individual control can be repetitive and error prone. Instead, styles can be created that customize control appearance by grouping and setting properties available on the control type.
 
 ## [Explicit Styles](explicit.md)
 
