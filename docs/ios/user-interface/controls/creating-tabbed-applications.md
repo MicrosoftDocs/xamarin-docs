@@ -106,7 +106,7 @@ namespace TabbedApplication {
 
                 public TabController ()
                 {
-						tab1 = new UIViewController();
+			tab1 = new UIViewController();
                         tab1.Title = "Green";
                         tab1.View.BackgroundColor = UIColor.Green;
 
@@ -145,23 +145,23 @@ following code for the `AppDelegate`:
 
 ```csharp
 [Register ("AppDelegate")]
-        public partial class AppDelegate : UIApplicationDelegate
-        {
-                UIWindow window;
-                TabController tabController;
+public partial class AppDelegate : UIApplicationDelegate
+{
+	UIWindow window;
+	TabController tabController;
 
-                public override bool FinishedLaunching (UIApplication app, NSDictionary options)
-                {
-                        window = new UIWindow (UIScreen.MainScreen.Bounds);
+	public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+	{
+		window = new UIWindow (UIScreen.MainScreen.Bounds);
 
-                        var tabController = new TabController ();
-                        window.RootViewController = tabController;
+		tabController = new TabController ();
+		window.RootViewController = tabController;
 
-                        window.MakeKeyAndVisible ();
-            
-                        return true;
-                }
-        }
+		window.MakeKeyAndVisible ();
+
+		return true;
+	}
+}
 ```
 
 If we run the application now, the `UITabBarController` will load
@@ -355,9 +355,9 @@ We now need to tell the View Controller to hide the button when the event fires 
 
 ```csharp
 partial void InitialActionCompleted (UIButton sender)
-    {
-      aButton.Hidden = true;  
-    }
+{
+	aButton.Hidden = true;  
+}
 ```
 
 Save the file, and run the application. We should see screen one appear and the button disappear on Touch Up.
@@ -398,7 +398,6 @@ public override void ViewDidLoad ()
      if (ParentViewController != null){
        aButton.Hidden = true;
      }
-
 }
 ```
 
