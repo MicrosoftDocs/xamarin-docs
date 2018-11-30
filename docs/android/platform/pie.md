@@ -28,7 +28,7 @@ for testing. It also provides an outline of the new features in Android
 Pie and provides example source code that illustrates how to use some
 of the key Android Pie features.
 
-![Preview](~/media/shared/preview.png)
+
 
 Xamarin.Android 9.0 provides preview support for Android Pie. For more
 information about Xamarin.Android support for Android Pie, see the
