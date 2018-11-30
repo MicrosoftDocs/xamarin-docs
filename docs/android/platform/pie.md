@@ -28,9 +28,7 @@ for testing. It also provides an outline of the new features in Android
 Pie and provides example source code that illustrates how to use some
 of the key Android Pie features.
 
-
-
-Xamarin.Android 9.0 provides preview support for Android Pie. For more
+Xamarin.Android 9.0 provides support for Android Pie. For more
 information about Xamarin.Android support for Android Pie, see the
 [Android P Developer Preview 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1)
 release notes.
@@ -230,7 +228,7 @@ the location and shape of the cutout so that your app does not attempt
 to display content in this non-functional area.
 
 For more information about the new cutout features in Android P, see 
-[Display cutout support](https://developer.android.com/preview/features#cutout).
+[Display cutout support](https://developer.android.com/about/versions/pie/android-9.0#cutout).
 
 
 
@@ -347,7 +345,7 @@ positioning APIs introduced in Android P, see
 Many newer Android devices have dual-front and/or dual-back cameras
 that are useful for such features as stereo vision, enhanced visual
 effects, and improved zoom capability. Android P introduces a new
-[Multi-Camera](https://developer.android.com/preview/features#camera)
+[Multi-Camera](https://developer.android.com/about/versions/pie/android-9.0#camera)
 API that makes it possible for your app to use a *logical camera* 
 (or *logical multi-camera*) that is backed by two or more physical cameras.
 To determine if the device supports a logical multi camera, you can
@@ -361,7 +359,7 @@ class that can be used to help reduce delays during initial capture and
 eliminate the need to start and start the camera stream.
 
 For more information about Multi-Camera support in Android P, see 
-[Multi-camera support and camera updates](https://developer.android.com/preview/features#camera).
+[Multi-camera support and camera updates](https://developer.android.com/about/versions/pie/android-9.0#camera).
 
 
 ### Other features
@@ -404,7 +402,7 @@ following list is a brief summary of these changes:
 -  Directly accessing another app's data directory by path is no longer allowed.
 
 For more information about behavior changes for apps targeting Android P,
-see [Behavior Changes](https://developer.android.com/preview/behavior-changes.html#p-apps).
+see [Behavior Changes](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps).
 
 
 ## Sample code
