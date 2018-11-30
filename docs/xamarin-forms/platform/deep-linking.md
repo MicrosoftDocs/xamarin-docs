@@ -1,18 +1,18 @@
 ---
 title: "Application Indexing and Deep Linking"
-description: "This article demonstrates how to use application indexing and deep linking to make Xamarin.Forms application content searchable on iOS and Android devices."
+description: "This article explains how to use application indexing and deep linking to make Xamarin.Forms application content searchable on iOS and Android devices."
 ms.prod: xamarin
 ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
 ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/11/2016
+ms.date: 11/28/2018
 ---
 
 # Application Indexing and Deep Linking
 
-_Application indexing allows applications that would otherwise be forgotten after a few uses to stay relevant by appearing in search results. Deep linking allows applications to respond to a search result that contains application data, typically by navigating to a page referenced from a deep link. This article demonstrates how to use application indexing and deep linking to make Xamarin.Forms application content searchable on iOS and Android devices._
+_Application indexing allows applications that would otherwise be forgotten after a few uses to stay relevant by appearing in search results. Deep linking allows applications to respond to a search result that contains application data, typically by navigating to a page referenced from a deep link. This article explains how to use application indexing and deep linking to make Xamarin.Forms application content searchable on iOS and Android devices._
 
 > [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
 
@@ -27,10 +27,10 @@ The sample application demonstrates a Todo list application where the data is st
 
 Each `TodoItem` instance created by the user is indexed. Platform-specific search can then be used to locate indexed data from the application. When the user taps on a search result item for the application, the application is launched, the `TodoItemPage` is navigated to, and the `TodoItem` referenced from the deep link is displayed.
 
-For more information about using an SQLite database, see [Working with a Local Database](~/xamarin-forms/app-fundamentals/databases.md).
+For more information about using an SQLite database, see [Xamarin.Forms Local Databases](~/xamarin-forms/app-fundamentals/databases.md).
 
 > [!NOTE]
-> Xamarin.Forms application indexing and deep linking functionality is only available on the iOS and Android platforms, and requires iOS 9 and API 23 respectively.
+> Xamarin.Forms application indexing and deep linking functionality is only available on the iOS and Android platforms, and requires a minimum of iOS 9 and API 23 respectively.
 
 ## Setup
 
@@ -38,7 +38,15 @@ The following sections provide any additional setup instructions for using this 
 
 ### iOS
 
-On the iOS platform, there's no additional setup required to use this functionality.
+On the iOS platform, ensure that your iOS platform project sets the **Entitlements.plist** file as the custom entitlements file for signing the bundle.
+
+To use iOS Universal Links:
+
+1. Add an Associated Domains entitlement to your app, with the `applinks` key, including all the domains your app will support.
+1. Add an Apple App Site Association file to your website.
+1. Add the `applinks` key to the Apple App Site Association file.
+
+For more information, see [Allowing Apps and Websites to Link to Your Content](https://developer.apple.com/documentation/uikit/core_app/allowing_apps_and_websites_to_link_to_your_content) on developer.apple.com.
 
 ### Android
 
@@ -51,12 +59,20 @@ On the Android platform, there are a number of prerequisites that must be met to
 Once these prerequisites are met, the following additional setup is required to use Xamarin.Forms application indexing and deep linking on the Android platform:
 
 1. Install the [Xamarin.Forms.AppLinks](https://www.nuget.org/packages/Xamarin.Forms.AppLinks/) NuGet package into the Android application project.
-1. In the `MainActivity.cs` file, import the `Xamarin.Forms.Platform.Android.AppLinks` namespace.
+1. In the **MainActivity.cs** file, add a declaration to use the `Xamarin.Forms.Platform.Android.AppLinks` namespace.
+1. In the **MainActivity.cs** file, add a declaration to use the `Firebase` namespace.
+1. In a web browser, create a new project via the [Firebase Console](https://console.firebase.google.com/).
+1. In the Firebase Console, add Firebase to your Android app, and enter the required data.
+1. Download the resulting **google-services.json** file.
+1. Add the **google-services.json** file to the root directory of the Android project, and set its **Build Action** to **GoogleServicesJson**.
 1. In the `MainActivity.OnCreate` override, add the following line of code underneath `Forms.Init(this, bundle)`:
 
 ```csharp
-AndroidAppLinks.Init (this);
+FirebaseApp.InitializeApp(this);
+AndroidAppLinks.Init(this);
 ```
+
+When **google-services.json** is added to the project (and the *GoogleServicesJson** build action is set), the build process extracts the client ID and API key and then adds these credentials to the generated manifest file.
 
 For more information, see [Deep Link Content with Xamarin.Forms URL Navigation](https://blog.xamarin.com/deep-link-content-with-xamarin-forms-url-navigation/) on the Xamarin blog.
 
@@ -70,29 +86,33 @@ The process for indexing a page and exposing it to Google and Spotlight search i
 The following code example demonstrates how to create an [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance:
 
 ```csharp
-AppLinkEntry GetAppLink (TodoItem item)
+AppLinkEntry GetAppLink(TodoItem item)
 {
-  var pageType = GetType ().ToString ();
-  var pageLink = new AppLinkEntry {
-    Title = item.Name,
-    Description = item.Notes,
-    AppLinkUri = new Uri (string.Format ("http://{0}/{1}?id={2}",
-      App.AppName, pageType, WebUtility.UrlEncode (item.ID)), UriKind.RelativeOrAbsolute),
-    IsLinkActive = true,
-    Thumbnail = ImageSource.FromFile ("monkey.png")
-  };
+    var pageType = GetType().ToString();
+    var pageLink = new AppLinkEntry
+    {
+        Title = item.Name,
+        Description = item.Notes,
+        AppLinkUri = new Uri($"http://{App.AppName}/{pageType}?id={item.ID}", UriKind.RelativeOrAbsolute),
+        IsLinkActive = true,
+        Thumbnail = ImageSource.FromFile("monkey.png")
+    };
 
-  return pageLink;
+    pageLink.KeyValues.Add("contentType", "TodoItemPage");
+    pageLink.KeyValues.Add("appName", App.AppName);
+    pageLink.KeyValues.Add("companyName", "Xamarin");
+
+    return pageLink;
 }
 ```
 
 The [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance contains a number of properties whose values are required to index the page and create a deep link. The [`Title`](xref:Xamarin.Forms.IAppLinkEntry.Title), [`Description`](xref:Xamarin.Forms.IAppLinkEntry.Description), and [`Thumbnail`](xref:Xamarin.Forms.IAppLinkEntry.Thumbnail) properties are used to identify the indexed content when it appears in search results. The [`IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) property is set to `true` to indicate that the indexed content is currently being viewed. The [`AppLinkUri`](xref:Xamarin.Forms.IAppLinkEntry.AppLinkUri) property is a `Uri` that contains the information required to return to the current page and display the current `TodoItem`. The following example shows an example `Uri` for the sample application:
 
 ```csharp
-http://deeplinking/DeepLinking.TodoItemPage?id=ec38ebd1-811e-4809-8a55-0d028fce7819
+http://deeplinking/DeepLinking.TodoItemPage?id=2
 ```
 
-This `Uri` contains all the information required to launch the `deeplinking` app, navigate to the `DeepLinking.TodoItemPage`, and display the `TodoItem` that has an `ID` of `ec38ebd1-811e-4809-8a55-0d028fce7819`.
+This `Uri` contains all the information required to launch the `deeplinking` app, navigate to the `DeepLinking.TodoItemPage`, and display the `TodoItem` that has an `ID` of 2.
 
 ## Registering Content for Indexing
 
@@ -133,30 +153,28 @@ When indexed content appears in search results and is selected by a user, the `A
 ```csharp
 public class App : Application
 {
-  ...
+    ...
+    protected override async void OnAppLinkRequestReceived(Uri uri)
+    {
+        string appDomain = "http://" + App.AppName.ToLowerInvariant() + "/";
+        if (!uri.ToString().ToLowerInvariant().StartsWith(appDomain, StringComparison.Ordinal))
+            return;
 
-  protected override async void OnAppLinkRequestReceived (Uri uri)
-  {
-    string appDomain = "http://" + App.AppName.ToLowerInvariant () + "/";
-    if (!uri.ToString ().ToLowerInvariant ().StartsWith (appDomain)) {
-      return;
+        string pageUrl = uri.ToString().Replace(appDomain, string.Empty).Trim();
+        var parts = pageUrl.Split('?');
+        string page = parts[0];
+        string pageParameter = parts[1].Replace("id=", string.Empty);
+
+        var formsPage = Activator.CreateInstance(Type.GetType(page));
+        var todoItemPage = formsPage as TodoItemPage;
+        if (todoItemPage != null)
+        {
+            var todoItem = await App.Database.GetItemAsync(int.Parse(pageParameter));
+            todoItemPage.BindingContext = todoItem;
+            await MainPage.Navigation.PushAsync(formsPage as Page);
+        }
+        base.OnAppLinkRequestReceived(uri);
     }
-
-    string pageUrl = uri.ToString ().Replace (appDomain, string.Empty).Trim ();
-    var parts = pageUrl.Split ('?');
-    string page = parts [0];
-    string pageParameter = parts [1].Replace ("id=", string.Empty);
-
-    var formsPage = Activator.CreateInstance (Type.GetType (page));
-    var todoItemPage = formsPage as TodoItemPage;
-    if (todoItemPage != null) {
-      var todoItem = App.Database.Find (pageParameter);
-      todoItemPage.BindingContext = todoItem;
-      await MainPage.Navigation.PushAsync (formsPage as Page);
-    }
-
-    base.OnAppLinkRequestReceived (uri);
-  }
 }
 ```
 
@@ -169,23 +187,25 @@ Each time the page represented by a deep link is displayed, the [`AppLinkEntry.I
 The following code example demonstrates setting the [`AppLinkEntry.IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) property to `true` in the [`Page.OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) override:
 
 ```csharp
-protected override void OnAppearing ()
+protected override void OnAppearing()
 {
-  appLink = GetAppLink (BindingContext as TodoItem);
-  if (appLink != null) {
-    appLink.IsLinkActive = true;
-  }
+    appLink = GetAppLink(BindingContext as TodoItem);
+    if (appLink != null)
+    {
+        appLink.IsLinkActive = true;
+    }
 }
 ```
 
 Similarly, when the page represented by a deep link is navigated away from, the [`AppLinkEntry.IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) property can be set to `false`. On iOS and Android, this stops the [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance being advertised for search indexing, and on iOS only, it also stops advertising the `AppLinkEntry` instance for Handoff. This can be accomplished in the [`Page.OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) override, as demonstrated in the following code example:
 
 ```csharp
-protected override void OnDisappearing ()
+protected override void OnDisappearing()
 {
-  if (appLink != null) {
-    appLink.IsLinkActive = false;
-  }
+    if (appLink != null)
+    {
+        appLink.IsLinkActive = false;
+    }
 }
 ```
 
@@ -194,8 +214,9 @@ protected override void OnDisappearing ()
 On iOS, application-specific data can be stored when indexing the page. This is achieved by adding data to the [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValues) collection, which is a `Dictionary<string, string>` for storing key-value pairs that are used in Handoff. Handoff is a way for the user to start an activity on one of their devices and continue that activity on another of their devices (as identified by the user's iCloud account). The following code shows an example of storing application-specific key-value pairs:
 
 ```csharp
-var pageLink = new AppLinkEntry {
-  ...  
+var pageLink = new AppLinkEntry
+{
+    ...
 };
 pageLink.KeyValues.Add("appName", App.AppName);
 pageLink.KeyValues.Add("companyName", "Xamarin");
@@ -216,8 +237,7 @@ For more information about Handoff, see [Introduction to Handoff](~/ios/platform
 
 ## Summary
 
-This article demonstrated how to use application indexing and deep linking to make Xamarin.Forms application content searchable on iOS and Android devices. Application indexing allows applications to stay relevant by appearing in search results that would otherwise be forgotten about after a few uses.
-
+This article explained how to use application indexing and deep linking to make Xamarin.Forms application content searchable on iOS and Android devices. Application indexing allows applications to stay relevant by appearing in search results that would otherwise be forgotten about after a few uses.
 
 ## Related Links
 
