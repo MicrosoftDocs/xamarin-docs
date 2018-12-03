@@ -257,4 +257,5 @@ This article covered the setup required to prepare a Xamarin.iOS application for
 - [The iTunesMetadata.plist File](~/ios/deploy-test/app-distribution/itunesmetadata.md)
 - [Troubleshooting](~/ios/deploy-test/troubleshooting.md)
 - [iTunes Artwork](~/ios/app-fundamentals/images-icons/app-icons.md#itunes)
-- [Distributing Enterprise Apps for iOS Devices](http://developer.apple.com/library/ios/#featuredarticles/FA_Wireless_Enterprise_App_Distribution/Introduction/Introduction.html)
+- [Develop and distribute enterprise apps (Apple)](https://help.apple.com/xcode/mac/current/#/devba5e7054d)
+- [Distributing Enterprise Apps (WWDC Video)](https://developer.apple.com/videos/play/wwdc2014/705/)
