@@ -4,6 +4,7 @@
 #### [Mac](get-started/installation/mac.md)
 #### [Windows](get-started/installation/windows/index.md)
 ##### [Pair to Mac](get-started/installation/windows/connecting-to-mac/index.md)
+###### [Visual Studio 2019 preview pairing](get-started/installation/windows/connecting-to-mac/2019-preview.md)
 ###### [Connection Troubleshooting](get-started/installation/windows/connecting-to-mac/troubleshooting.md)
 ##### [Introduction to Xamarin.iOS for Visual Studio](get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 ##### [Configuring Visual Studio](get-started/installation/windows/config-options.md)
