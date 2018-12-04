@@ -10,7 +10,6 @@ ms.date: 03/21/2018
 
 # Preparing an Application for Release
 
-
 After an application has been coded and tested, it is necessary to
 prepare a package for distribution. The first task in preparing 
 this package is to build the application for release, which mainly 
@@ -93,7 +92,6 @@ Normally, `using Android.App` is declared at the top of
 **AssemblyInfo.cs** (the namespace of the `Application` attribute is
 `Android.App`); however, you may need to add this `using` statement if
 it is not already present.
-
 
 <a name="Versioning" />
 
@@ -216,7 +214,6 @@ The options for controlling the linker are as follows:
 Linking can produce some unintended side effects, so it is important
 that an application be re-tested in Release mode on a physical device.
 
-
 ### ProGuard
 
 *ProGuard* is an Android SDK tool that links and obfuscates Java code. 
@@ -306,7 +303,6 @@ that was available in the Debug build, verify that you have explicitly
 enabled this permission in the **Required permissions** 
 list as described in 
 [Permissions](~/android/app-fundamentals/permissions.md). 
- 
 
 <a name="dotfuscator" id="dotfuscator" />
 
@@ -389,7 +385,6 @@ configured for Release mode, and it is disabled by default. For more
 information about AOT Compilation, see
 [AOT](http://www.mono-project.com/docs/advanced/aot/).
 
-
 #### LLVM Optimizing Compiler
 
 The _LLVM Optimizing Compiler_ will create smaller and faster compiled
@@ -401,7 +396,7 @@ first be enabled (on the
 
 
 > [!NOTE]
-> The **LLVM Optimizing Compiler** option requires a Business license.  
+> The **LLVM Optimizing Compiler** option requires an Enterprise license.  
 
 <a name="Set_Packaging_Properties" />
 
@@ -431,7 +426,6 @@ that determine how the app is
 [how it is protected from tampering](#protect_app), and how it can be
 packaged to support different architectures and size restrictions.
 
-
 ### Specify Supported Architectures
 
 When preparing a Xamarin.Android app for release, it is necessary to
@@ -439,7 +433,6 @@ specify the CPU architectures that are supported. A single APK can
 contain machine code to support multiple, different architectures. See
 [CPU Architectures](~/android/app-fundamentals/cpu-architectures.md)
 for details about supporting multiple CPU architectures.
-
 
 ### Generate One Package (.APK) per Selected ABI
 
@@ -449,7 +442,6 @@ supported ABI's (selected on the **Advanced** tab, as described in
 rather than a single, large APK for all supported ABI's. This option is
 available only when the project is configured for Release mode, and it
 is disabled by default.
-
 
 ### Multi-Dex
 
@@ -493,7 +485,6 @@ in Release mode. Note that this step does not yet produce an APK.
 
 -----
 
-
 <a name="archive" />
 
 ## Archive for Publishing
@@ -516,7 +507,6 @@ solution and archives all Xamarin projects that can generate an
 archive:
 
 [![Archive All](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
-
 
 Both **Archive** and **Archive All** automatically launch the **Archive
 Manager**. To launch the **Archive Manager** directly, click the
@@ -600,7 +590,6 @@ resulting **Sign and Distribute** dialog presents two choices:
 
 [![Sign and Distribute](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 
-
 From here, it is possible to select the distribution channel:
 
 -   **Ad-Hoc** &ndash; Saves a signed APK to disk so it can be
@@ -619,7 +608,6 @@ From here, it is possible to select the distribution channel:
     to learn how to sign and publish an APK in the Google Play store.
 
 -----
-
 
 ## Related Links
 
