@@ -181,16 +181,16 @@
       "redirect_url": "/xamarin/tools/workbooks/"
     },
     {
-      "source_path": "docs/xamarin-forms/essentials/data-transfer.md",
-      "redirect_url": "/xamarin/xamarin-forms/essentials/share/"
+      "source_path": "docs/essentials/data-transfer.md",
+      "redirect_url": "/xamarin/essentials/share/"
     },
     {
-      "source_path": "docs/xamarin-forms/essentials/power.md",
-      "redirect_url": "/xamarin/xamarin-forms/essentials/battery/"
+      "source_path": "docs/essentials/power.md",
+      "redirect_url": "/xamarin/essentials/battery/"
     },
     {
-      "source_path": "docs/xamarin-forms/essentials/screen-lock.md",
-      "redirect_url": "/xamarin/xamarin-forms/essentials/device-display/"
+      "source_path": "docs/essentials/screen-lock.md",
+      "redirect_url": "/xamarin/essentials/device-display/"
     }
   ]
 }
