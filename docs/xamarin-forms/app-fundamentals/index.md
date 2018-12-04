@@ -6,7 +6,7 @@ ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/28/2017
+ms.date: 12/03/2018
 ---
 
 # Xamarin.Forms Application Fundamentals
@@ -66,6 +66,10 @@ Xamarin.Forms `MessagingCenter` enables view models and other components to comm
 ## [Navigation](navigation/index.md)
 
 Xamarin.Forms provides a number of different page navigation experiences, depending upon the `Page` type being used.
+
+## [Shell](shell.md)
+
+Xamarin.Forms Shell is a container for applications, that provides fundamental UI features that most applications require, leaving you to focus on the application's core workload.
 
 ## [Templates](templates/index.md)
 

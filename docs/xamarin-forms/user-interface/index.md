@@ -25,6 +25,10 @@ The `BoxView` is just a simple colored rectangle, but it can be used for decorat
 
 The `Button` responds to a tap or click that directs an application to carry out a particular task.
 
+## [CollectionView](collectionview.md)
+
+The `CollectionView` is a flexible and performant view for presenting lists of data using different layout specifications.
+
 ## [Colors](colors.md)
 
 Defining and using colors across platforms can be tricky when each platform has its own standards and defaults.
@@ -97,6 +101,10 @@ Xamarin.Forms Themes define a specific visual appearance for the standard contro
 
 The `TimePicker` allows a user to select a time. It is implemented using the time picker supported by the particular platform that the application is run on.
 
+## [Visual](visual.md)
+
+This article introduces Xamarin.Forms Visual, which renders views identically, or largely identically, on iOS and Android.
+
 ## [Visual State Manager](visual-state-manager.md)
 
 The Visual State Manager provides a structured way to trigger changes in the user interface from code, including layout that adapts to changes in device orientation or size.
@@ -104,7 +112,6 @@ The Visual State Manager provides a structured way to trigger changes in the use
 ## [WebView](webview.md)
 
 Xamarin.Forms uses the native web browser control on each platform, and can display websites, local resources, and generated Html strings.
-
 
 ## Related Links
 
