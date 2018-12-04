@@ -179,6 +179,18 @@
     {
       "source_path": "docs/tools/workbooks/samples/tinyrenderer.md",
       "redirect_url": "/xamarin/tools/workbooks/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/essentials/data-transfer.md",
+      "redirect_url": "/xamarin/xamarin-forms/essentials/share/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/essentials/power.md",
+      "redirect_url": "/xamarin/xamarin-forms/essentials/battery/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/essentials/screen-lock.md",
+      "redirect_url": "/xamarin/xamarin-forms/essentials/device-display/"
     }
   ]
 }

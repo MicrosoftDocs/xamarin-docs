@@ -4,12 +4,10 @@ description: "This document describes the Vibration class in Xamarin.Essentials,
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Vibration
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **Vibration** class lets you start and stop the vibrate functionality for a desired amount of time.
 

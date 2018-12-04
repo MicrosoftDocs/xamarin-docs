@@ -4,11 +4,9 @@ description: "The OrientationSensor class lets you monitor the orientation of a 
 ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/21/2018
+ms.date: 11/04/2018
 ---
 # Xamarin.Essentials: OrientationSensor
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **OrientationSensor** class lets you monitor the orientation of a device in three dimensional space.
 

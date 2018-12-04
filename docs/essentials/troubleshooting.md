@@ -4,19 +4,17 @@ description: "This document describes how to troubleshoot issues encountered whe
 ms.assetid: 2E474FAF-F841-4E3C-B815-F7ABD8EE3361
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 06/26/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Troubleshooting
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 ## Error: Version conflict detected for Xamarin.Android.Support.Compat
 
 The following error may occur when updating NuGet packages (or adding a new package) with a Xamarin.Forms
 project that uses Xamarin.Essentials:
 
-```
+```error
 NU1107: Version conflict detected for Xamarin.Android.Support.Compat. Reference the package directly from the project to resolve this issue. 
  MyApp -> Xamarin.Essentials 0.8.0-preview -> Xamarin.Android.Support.CustomTabs 27.0.2.1 -> Xamarin.Android.Support.Compat (= 27.0.2.1) 
  MyApp -> Xamarin.Forms 3.1.0.583944 -> Xamarin.Android.Support.v4 25.4.0.2 -> Xamarin.Android.Support.Compat (= 25.4.0.2).

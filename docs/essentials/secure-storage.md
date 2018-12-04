@@ -4,12 +4,10 @@ description: "This document describes the SecureStorage class in Xamarin.Essenti
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Secure Storage
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **SecureStorage** class helps securely store simple key/value pairs.
 

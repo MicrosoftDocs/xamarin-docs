@@ -4,14 +4,12 @@ description: "This document describes the Battery class in Xamarin.Essentials, w
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Battery
 
-![Pre-release NuGet](~/media/shared/pre-release.png)
-
-The **Battery** class lets you check the device's battery information and monitor for changes.
+The **Battery** class lets you check the device's battery information and monitor for changes and provides information about the device's energy-saver status, which indicates if the device is running in a low-power mode. Applications should avoid background processing if the device's energy-saver status is on.
 
 ## Get started
 
@@ -60,7 +58,7 @@ using Xamarin.Essentials;
 Check current battery information:
 
 ```csharp
-var level = Battery.ChargeLevel; // returns 0.0 to 1.0 or -1.0 if unable to determine.
+var level = Battery.ChargeLevel; // returns 0.0 to 1.0 or 1.0 when on AC or no battery.
 
 var state = Battery.State;
 
@@ -116,7 +114,7 @@ public class BatteryTest
         Battery.BatteryChanged += Battery_BatteryChanged;
     }
 
-    void Battery_BatteryChanged(object sender, BatteryChangedEventArgs   e)
+    void Battery_BatteryChanged(object sender, BatteryInfoChangedEventArgs   e)
     {
         var level = e.ChargeLevel;
         var state = e.State;
@@ -125,6 +123,39 @@ public class BatteryTest
     }
 }
 ```
+
+Devices that run on batteries can be put into a low-power energy-saver mode. Sometimes devices are switched into this mode automatically, for example, when the battery drops below 20% capacity. The operating system responds to energy-saver mode by reducing activities that tend to deplete the battery. Applications can help by avoiding background processing or other high-power activities when energy-saver mode is on.
+
+You can also obtain the current energy-saver status of the device using the static `Battery.EnergySaverStatus` property:
+
+```csharp
+// Get energy saver status
+var status = Battery.EnergySaverStatus;
+```
+
+This property returns a member of the `EnergySaverStatus` enumeration, which is either `On`, `Off`, or `Unknown`. If the property returns `On`, the application should avoid background processing or other activities that might consume a lot of power.
+
+The application should also install an event handler. The **Battery** class exposes an event that is triggered when the energy-saver status changes:
+
+```csharp
+public class EnergySaverTest
+{
+    public EnergySaverTest()
+    {
+        // Subscribe to changes of energy-saver status
+        Batter.EnergySaverStatusChanged += OnEnergySaverStatusChanged;
+    }
+
+    private void OnEnergySaverStatusChanged(EnergySaverStatusChangedEventArgs e)
+    {
+        // Process change
+        var status = e.EnergySaverStatus;
+    }
+}
+```
+
+If the energy-saver status changes to `On`, the application should stop performing background processing. If the status changes to `Unknown` or `Off`, the application can resume background processing.
+
 
 ## Platform Differences
 

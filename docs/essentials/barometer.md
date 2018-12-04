@@ -4,12 +4,10 @@ description: "The Barometer class in Xamarin.Essentials lets you monitor the dev
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 08/16/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Barometer
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **Barometer** class lets you monitor the device's barometer sensor, which measures pressure.
 
@@ -25,7 +23,7 @@ Add a reference to Xamarin.Essentials in your class:
 using Xamarin.Essentials;
 ```
 
-The Barometer functionality works by calling the `Start` and `Stop` methods to listen for changes to the barometer's pressure reading in kilopascals. Any changes are sent back through the `ReadingChanged` event. Here is sample usage:
+The Barometer functionality works by calling the `Start` and `Stop` methods to listen for changes to the barometer's pressure reading in hectopascals. Any changes are sent back through the `ReadingChanged` event. Here is sample usage:
 
 ```csharp
 
@@ -44,7 +42,7 @@ public class BarometerTest
     {
         var data = e.Reading;
         // Process Pressure
-        Console.WriteLine($"Reading: Pressure: {data.Pressure} kilopascals");
+        Console.WriteLine($"Reading: Pressure: {data.PressureInHectopascals} hectopascals");
     }
 
     public void ToggleBarometer()

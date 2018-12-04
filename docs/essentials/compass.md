@@ -4,12 +4,10 @@ description: "This document describes the Compass class in Xamarin.Essentials, w
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Compass
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **Compass** class lets you monitor the device's magnetic north heading.
 
@@ -81,13 +79,13 @@ Be aware that running multiple sensors from your app at the same time may adjust
 
 ## Low Pass Filter
 
-Due to how the Android compass values are updated and calculated there may be a need to smooth out the values. A _Low Pass Filter_ can be applied that averages the sine and cosine values of the angles and can be turned on by setting the `ApplyLowPassFilter` property on the `Compass` class:
+Due to how the Android compass values are updated and calculated there may be a need to smooth out the values. A _Low Pass Filter_ can be applied that averages the sine and cosine values of the angles and can be turned on by using the `Start` method overload which accepts the `bool applyLowPassFilter` parameter:
 
 ```csharp
-Compass.ApplyLowPassFilter = true;
+Compass.Start(SensorSpeed.UI, applyLowPassFilter: true);
 ```
 
-This is only applied on the Android platform. More information can be read [here](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
+This is only applied on the Android platform, and the parameter is ignored on iOS and UWP.  More information can be read [here](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
 
 --------------
 

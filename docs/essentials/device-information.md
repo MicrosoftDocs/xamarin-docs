@@ -4,12 +4,10 @@ description: "This document describes the DeviceInfo class in Xamarin.Essentials
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Device Information
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **DeviceInfo** class provides information about the device the application is running on.
 
@@ -52,22 +50,23 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## [Platforms](xref:Xamarin.Essentials.DeviceInfo.Platforms)
 
-`DeviceInfo.Platform` correlates to a constant string that maps to the operating system. The values can be checked with the `Platforms` class:
+`DeviceInfo.Platform` correlates to a constant string that maps to the operating system. The values can be checked with the `DevicePlatform` struct:
 
-- **DeviceInfo.Platforms.iOS** – iOS
-- **DeviceInfo.Platforms.Android** – Android
-- **DeviceInfo.Platforms.UWP** – UWP
-- **DeviceInfo.Platforms.Unsupported** – Unsupported
+- **DevicePlatform.iOS** – iOS
+- **DevicePlatform.Android** – Android
+- **DevicePlatform.UWP** – UWP
+- **DevicePlatform.Unknown** – Unknown
 
 ## [Idioms](xref:Xamarin.Essentials.DeviceInfo.Idioms)
 
-`DeviceInfo.Idiom` correlates a constant string that maps to the type of device the application is running on. The values can be checked with the `Idioms` class:
+`DeviceInfo.Idiom` correlates a constant string that maps to the type of device the application is running on. The values can be checked with the `DeviceIdiom` struct:
 
-- **DeviceInfo.Idioms.Phone** – Phone
-- **DeviceInfo.Idioms.Tablet** – Tablet
-- **DeviceInfo.Idioms.Desktop** – Desktop
-- **DeviceInfo.Idioms.TV** – TV
-- **DeviceInfo.Idioms.Unsupported** – Unsupported
+- **DeviceIdiom.Phone** – Phone
+- **DeviceIdiom.Tablet** – Tablet
+- **DeviceIdiom.Desktop** – Desktop
+- **DeviceIdiom.TV** – TV
+- **DeviceIdiom.Watch** – Watch
+- **DeviceIdiom.Unknown** – Unknown
 
 ## Device Type
 

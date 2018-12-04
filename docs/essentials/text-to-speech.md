@@ -4,12 +4,10 @@ description: "The TextToSpeech class in Xamarin.Essentials enables an applicatio
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 08/30/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Text-to-Speech
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **TextToSpeech** class enables an application to utilize the built-in text-to-speech engines to speak back text from the device and also to query available languages that the engine can support.
 
@@ -92,12 +90,12 @@ public void SpeakMultiple()
 
 ### Speech Settings
 
-For more control over how the audio is spoken back with `SpeakSettings` that allows setting the volume, pitch, and locale.
+For more control over how the audio is spoken back with `SpeechOptions` that allows setting the volume, pitch, and locale.
 
 ```csharp
 public async Task SpeakNow()
 {
-    var settings = new SpeakSettings()
+    var settings = new SpeechOptions()
         {
             Volume = .75,
             Pitch = 1.0
@@ -126,7 +124,7 @@ public async Task SpeakNow()
     // Grab the first locale
     var locale = locales.FirstOrDefault();
 
-    var settings = new SpeakSettings()
+    var settings = new SpeechOptions()
         {
             Volume = .75,
             Pitch = 1.0,
