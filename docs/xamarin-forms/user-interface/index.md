@@ -49,7 +49,7 @@ How to incorporate graphics into a Xamarin.Forms application using SkiaSharp.
 
 Images can be shared across platforms with Xamarin.Forms, they can be loaded specifically for each platform, or they can be downloaded for display.
 
-## [ImageButon](imagebutton.md)
+## [ImageButton](imagebutton.md)
 
 The `ImageButton` displays an image and responds to a tap or click that directs an application to carry out a particular task.
 
