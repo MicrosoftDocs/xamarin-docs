@@ -199,7 +199,7 @@ This produces the controller nested within the navigation controller as shown be
 
  [![](ios-code-only-images/image2.png "The controller nested within the navigation controller")](ios-code-only-images/image2.png#lightbox)
 
-## Creating a view vontroller
+## Creating a view controller
 
 Now that we've seen how to add a controller as the `RootViewController` of the window, let's see how to create a custom view controller in code.
 

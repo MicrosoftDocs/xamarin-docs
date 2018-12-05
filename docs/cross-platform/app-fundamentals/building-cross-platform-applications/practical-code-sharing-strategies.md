@@ -289,7 +289,7 @@ var response = await myClient.SendAsync(request);
 The `WebClient` class provides a simple API to retrieve remote
 data from remote servers.
 
-Universal Windows Platofrm operations *must* be async, even though Xamarin.iOS and
+Universal Windows Platform operations *must* be async, even though Xamarin.iOS and
 Xamarin.Android support synchronous operations (which can be done on background
 threads).
 
