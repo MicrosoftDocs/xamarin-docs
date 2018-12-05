@@ -167,7 +167,6 @@ No platform differences.
 
 * Device must be used to test APIs. 
 * Only will return `AC` or `Battery` for `PowerSource`.
-* Not possible to cancel vibration.
 
 # [UWP](#tab/uwp)
 
