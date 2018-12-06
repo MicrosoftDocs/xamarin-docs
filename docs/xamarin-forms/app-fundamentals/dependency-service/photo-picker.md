@@ -11,6 +11,8 @@ ms.date: 03/06/2017
 
 # Picking a Photo from the Picture Library
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample)
+
 This article walks through the creation of an application that allows the user to pick a photo from the phone's picture library. Because Xamarin.Forms does not include this functionality, it is necessary to use [`DependencyService`](xref:Xamarin.Forms.DependencyService) to access native APIs on each platform.  This article will cover the following steps for using `DependencyService` for this task:
 
 - **[Creating the Interface](#Creating_the_Interface)** &ndash; understand how the interface is created in shared code.

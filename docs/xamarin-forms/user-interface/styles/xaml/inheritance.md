@@ -11,6 +11,8 @@ ms.date: 02/17/2016
 
 # Style Inheritance in Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+
 _Styles can inherit from other styles to reduce duplication and enable reuse._
 
 ## Style Inheritance in XAML

@@ -11,6 +11,8 @@ ms.date: 09/01/2017
 
 # Xamarin.Forms Themes
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/Themes/ThemesDemo)
+
 ![](~/media/shared/preview.png "This API is currently in preview")
 
 Xamarin.Forms Themes were announced at Evolve 2016 and are available as a

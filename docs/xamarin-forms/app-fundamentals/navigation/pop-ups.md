@@ -11,6 +11,8 @@ ms.date: 12/01/2017
 
 # Displaying Pop-ups
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Pop-ups/)
+
 _Xamarin.Forms provides two pop-up-like user interface elements – an alert and an action sheet. This article demonstrates using the alert and action sheet APIs to ask users simple questions and to guide users through tasks._
 
 Displaying an alert or asking a user to make a choice is a common UI task. Xamarin.Forms has two methods on the [`Page`](xref:Xamarin.Forms.Page) class for interacting with the user via a pop-up: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) and [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*). They are rendered with appropriate native controls on each platform.

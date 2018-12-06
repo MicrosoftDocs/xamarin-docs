@@ -11,6 +11,8 @@ ms.date: 07/17/2018
 
 # Bitmap Basics in SkiaSharp
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Load bitmaps from various sources and display them._
 
 The support of bitmaps in SkiaSharp is quite extensive. This article covers only the basics &mdash; how to load bitmaps and how to display them:

@@ -11,6 +11,8 @@ ms.date: 11/07/2017
 
 # Summary of Chapter 23. Triggers and behaviors
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
+
 Triggers and behaviors are similar, in that they are both intended to be used in XAML files to simplify element interactions beyond the use of data bindings, and to extend the functionality of XAML elements. Both triggers and behaviors are almost always used with visual user-interface objects.
 
 To support triggers and behaviors, both `VisualElement` and `Style` support two collection properties:

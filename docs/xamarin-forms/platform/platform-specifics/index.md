@@ -11,6 +11,8 @@ ms.date: 10/01/2018
 
 # Platform-Specifics
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+
 _Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects._
 
 The following platform-specific functionality is provided for Xamarin.Forms views, pages, and layouts:

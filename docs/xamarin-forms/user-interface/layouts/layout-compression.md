@@ -11,6 +11,8 @@ ms.date: 12/13/2017
 
 # Layout Compression
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutcompression/)
+
 _Layout compression removes specified layouts from the visual tree in an attempt to improve page rendering performance. This article explains how to enable layout compression and the benefits it can bring._
 
 ## Overview

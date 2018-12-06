@@ -11,6 +11,8 @@ ms.date: 03/10/2017
 
 # Integrating Text and Graphics
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _See how to determine the size of rendered text string to integrate text with SkiaSharp graphics_
 
 This article demonstrates how to measure text, scale the text to a particular size, and integrate text with other graphics:

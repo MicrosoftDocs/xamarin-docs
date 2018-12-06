@@ -11,6 +11,8 @@ ms.date: 11/07/2017
 
 # Summary of Chapter 17. Mastering the Grid
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
+
 The [`Grid`](xref:Xamarin.Forms.Grid) is a powerful layout mechanism that arranges its children into rows and columns of cells. Unlike the similar HTML `table` element, the `Grid` is solely for purposes of layout rather than presentation.
 
 ## The basic Grid

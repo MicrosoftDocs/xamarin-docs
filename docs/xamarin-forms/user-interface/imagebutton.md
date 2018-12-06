@@ -11,6 +11,8 @@ ms.date: 11/19/2018
 
 # Xamarin.Forms ImageButton
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+
 _The ImageButton displays an image and responds to a tap or click that directs an application to carry out a particular task._
 
 The `ImageButton` view combines the [`Button`](xref:Xamarin.Forms.Button) view and [`Image`](xref:Xamarin.Forms.Image) view to create a button whose content is an image. The user presses the `ImageButton` with a finger or clicks it with a mouse to direct the application to carry out a particular task. However, unlike the `Button` view, the `ImageButton` view has no concept of text and text appearance.

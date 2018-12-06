@@ -11,6 +11,8 @@ ms.date: 11/14/2018
 
 # Xamarin.Forms User Interface Views
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/FormsGallery/)
+
 _How to use the views provided by Xamarin.Forms_
 
 ## [Animation](animation/index.md)

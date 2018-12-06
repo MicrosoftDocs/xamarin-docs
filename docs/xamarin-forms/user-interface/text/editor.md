@@ -11,6 +11,8 @@ ms.date: 07/31/2018
 
 # Xamarin.Forms Editor
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+
 _Multi-line text input_
 
 The [`Editor`](xref:Xamarin.Forms.Editor) control is used to accept multi-line input. This article covers:

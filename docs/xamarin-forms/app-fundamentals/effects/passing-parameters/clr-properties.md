@@ -11,6 +11,8 @@ ms.date: 08/05/2016
 
 # Passing Effect Parameters as Common Language Runtime Properties
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+
 _Common Language Runtime (CLR) properties can be used to define effect parameters that don't respond to runtime property changes. This article demonstrates using CLR properties to pass parameters to an effect._
 
 The process for creating effect parameters that don't respond to runtime property changes is as follows:

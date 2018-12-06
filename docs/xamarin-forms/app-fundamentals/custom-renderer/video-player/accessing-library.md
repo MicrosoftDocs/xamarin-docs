@@ -11,6 +11,8 @@ ms.date: 02/12/2018
 
 # Accessing the device's video library
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+
 Most modern mobile devices and desktop computers have the ability to record videos using the device's camera. The videos that a user creates are then stored as files on the device. These files can be retrieved from the image library and played by the `VideoPlayer` class just like any other video.
 
 ## The photo picker dependency service

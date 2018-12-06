@@ -11,6 +11,8 @@ ms.date: 09/06/2016
 
 # Localization
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
+
 _Xamarin.Forms apps can be localized using .NET resources files._
 
 ## Overview

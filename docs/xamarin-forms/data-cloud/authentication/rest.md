@@ -11,6 +11,8 @@ ms.date: 05/22/2017
 
 # Authenticating a RESTful Web Service
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST/)
+
 _HTTP supports the use of several authentication mechanisms to control access to resources. Basic authentication provides access to resources to only those clients that have the correct credentials. This article demonstrates how to use basic authentication to protect access to RESTful web service resources._
 
 The accompanying Xamarin.Forms sample application consumes a Xamarin-hosted REST service that provides read-only access to the web service. Therefore, the operations that create, update, and delete data will not alter the data consumed in the application. However, a hostable version of the REST service is available in the *TodoRESTService* folder in the sample application, and instructions on setting up the service can be found there. This hostable version of the REST service provides full create, update, read, and delete access to the data.

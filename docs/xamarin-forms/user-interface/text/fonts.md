@@ -11,6 +11,8 @@ ms.date: 05/22/2017
 
 # Fonts in Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFonts/)
+
 This article describes how Xamarin.Forms lets you specify font attributes
 (including weight and size) on controls that display text. Font information
 can be [specified in code](#Setting_Font_in_Code) or

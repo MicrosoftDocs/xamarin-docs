@@ -11,6 +11,8 @@ ms.date: 02/09/2017
 
 # Pixels and Device-Independent Units
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Explore the differences between SkiaSharp coordinates and Xamarin.Forms coordinates_
 
 This article explores the differences in the coordinate system used in SkiaSharp and Xamarin.Forms. You can obtain information to convert between the two coordinate systems and also draw graphics that fill a particular area:

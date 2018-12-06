@@ -11,6 +11,8 @@ ms.date: 05/24/2017
 
 # SVG Path Data in SkiaSharp
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Define paths using text strings in the Scalable Vector Graphics format_
 
 The [`SKPath`](xref:SkiaSharp.SKPath) class supports the definition of entire path objects from text strings in a format established by the Scalable Vector Graphics (SVG) specification. You'll see later in this article how you can represent an entire path such as this one in a text string:

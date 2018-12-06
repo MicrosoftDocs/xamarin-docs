@@ -11,6 +11,8 @@ ms.date: 05/21/2018
 
 # Resource Dictionaries
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/xaml/resourcedictionaries/)
+
 _XAML resources are definitions of objects that can be shared and re-used throughout a Xamarin.Forms application._
 
 These resource objects are stored in a resource dictionary. This article describes how to create and consume a resource dictionary, and how to merge resource dictionaries.

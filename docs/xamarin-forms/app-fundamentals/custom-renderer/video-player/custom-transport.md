@@ -11,6 +11,8 @@ ms.date: 02/12/2018
 
 # Custom video transport controls
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+
 The transport controls of a video player include the buttons that perform the functions **Play**, **Pause**, and **Stop**. These buttons are generally identified with familiar icons rather than text, and the **Play** and **Pause** functions are generally combined into one button.
 
 By default, the `VideoPlayer` displays transport controls supported by each platform. When you set the `AreTransportControlsEnabled` property to `false`, these controls are suppressed. You can then control the `VideoPlayer` programmatically or supply your own transport controls.

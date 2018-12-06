@@ -11,6 +11,8 @@ ms.date: 07/18/2018
 
 # Summary of Chapter 20. Async and file I/O
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
+
 > [!NOTE] 
 > Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
 

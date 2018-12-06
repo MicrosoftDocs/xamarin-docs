@@ -11,6 +11,8 @@ ms.date: 07/01/2016
 
 # Xamarin.Forms Triggers
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/WorkingWithTriggers)
+
 Triggers allow
     you to express actions declaratively in XAML that
     change the appearance of controls based on events

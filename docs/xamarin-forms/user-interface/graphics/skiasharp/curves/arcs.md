@@ -11,6 +11,8 @@ ms.date: 05/10/2017
 
 # Three Ways to Draw an Arc
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Learn how to use SkiaSharp to define arcs in three different ways_
 
 An arc is a curve on the circumference of an ellipse, such as the rounded parts of this infinity sign:

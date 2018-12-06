@@ -11,6 +11,8 @@ ms.date: 12/01/2017
 
 # Getting Started with DataPages
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)
+
 ![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]

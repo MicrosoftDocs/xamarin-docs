@@ -11,6 +11,8 @@ ms.date: 02/12/2018
 
 # Implementing a video player
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+
 It is sometimes desirable to play video files in a Xamarin.Forms application. This series of articles discusses how to write custom renderers for iOS, Android, and the Universal Windows Platform (UWP) for a Xamarin.Forms class named `VideoPlayer`.
 
 In the [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) sample, all the files that implement and support `VideoPlayer` are in folders named `FormsVideoLibrary` and identified with the namespace `FormsVideoLibrary` or namespaces that begin `FormsVideoLibrary`. This organization and naming should make it easy to copy the video player files into your own Xamarin.Forms solution.

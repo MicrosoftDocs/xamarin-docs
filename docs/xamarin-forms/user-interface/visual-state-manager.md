@@ -12,6 +12,8 @@ ms.date: 05/07/2018
 
 # The Xamarin.Forms Visual State Manager
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)
+
 _Use the Visual State Manager to make changes to XAML elements based on visual states set from code._
 
 The Visual State Manager (VSM) is new in Xamarin.Forms 3.0. The VSM provides a structured way to make visual changes to the user interface from code. In most cases, the user interface of the application is defined in XAML, and this XAML includes markup describing how the Visual State Manager affects the visuals of the user interface.

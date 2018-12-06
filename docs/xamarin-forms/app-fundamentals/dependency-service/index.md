@@ -11,6 +11,8 @@ ms.date: 03/06/2017
 
 # Xamarin.Forms DependencyService
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/UsingDependencyService)
+
 _Xamarin.Forms allows developers to define behavior in platform-specific projects. DependencyService then finds the right platform implementation, allowing shared code to access the native functionality._
 
 This guide is composed of the following articles:

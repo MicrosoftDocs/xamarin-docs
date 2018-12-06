@@ -11,6 +11,8 @@ ms.date: 07/10/2018
 
 # Saving SkiaSharp bitmaps to files
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 After a SkiaSharp application has created or modified a bitmap, the application might want to save the bitmap to the user's photo library:
 
 ![Saving Bitmaps](saving-images/SavingSample.png "Saving Bitmaps")

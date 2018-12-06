@@ -11,6 +11,8 @@ ms.date: 07/18/2018
 
 # Summary of Chapter 3. Deeper into text
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)
+
 This chapter explores the [`Label`](xref:Xamarin.Forms.Label) view in more depth, including color, fonts, and formatting.
 
 ## Wrapping paragraphs

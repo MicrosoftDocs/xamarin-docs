@@ -11,6 +11,8 @@ ms.date: 11/07/2017
 
 # Summary of Chapter 22. Animation
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22)
+
 You've seen that you can create your own animations using the Xamarin.Forms timer or `Task.Delay`, but it is generally easier using the animation facilities provided by Xamarin.Forms. Three classes implement these animations:
 
 - [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions), the high-level approach

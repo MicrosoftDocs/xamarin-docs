@@ -11,6 +11,8 @@ ms.date: 01/12/2016
 
 # Xamarin.Forms Pages
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/FormsGallery/)
+
 _Xamarin.Forms Pages represent cross-platform mobile application screens._
 
 All the page types that are described below derive from the Xamarin.Forms [`Page`](xref:Xamarin.Forms.Page) class. These visual elements occupy all or most of the screen. A `Page` object represents a `ViewController` in iOS and a `Page` in the Universal Windows Platform. On Android, each page takes up the screen like an `Activity`, but Xamarin.Forms pages are *not* `Activity` objects.

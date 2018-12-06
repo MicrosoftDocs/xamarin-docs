@@ -11,6 +11,8 @@ ms.date: 04/06/2016
 
 # Attached Behaviors
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/behaviors/attachednumericvalidationbehavior/)
+
 _Attached behaviors are static classes with one or more attached properties. This article demonstrates how to create and consume attached behaviors._
 
 ## Overview

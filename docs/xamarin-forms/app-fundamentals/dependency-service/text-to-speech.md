@@ -11,6 +11,8 @@ ms.date: 09/18/2017
 
 # Implementing Text-to-Speech
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
+
 This article will guide you as you create a cross-platform app that uses [`DependencyService`](xref:Xamarin.Forms.DependencyService) to access native text-to-speech APIs:
 
 - **[Creating the Interface](#Creating_the_Interface)** &ndash; understand how the interface is created in shared code.
@@ -170,4 +172,3 @@ Running this application on iOS, Android, or the UWP and pressing the button wil
 
 - [Using DependencyService (sample)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 - [DependencyServiceSample](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample/)
-

@@ -11,6 +11,8 @@ ms.date: 03/08/2016
 
 # Customizing ListView Appearance
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
+
 `ListView` has options for controlling the presentation of the overall list, in addition to the underlying `ViewCell`s. Options include:
 
 - [**Grouping**](#Grouping) &ndash; group items in ListView for easier navigation and improved organization.
