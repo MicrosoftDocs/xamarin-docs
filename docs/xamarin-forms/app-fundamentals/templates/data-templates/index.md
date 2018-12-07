@@ -11,6 +11,8 @@ ms.date: 09/11/2017
 
 # Xamarin.Forms Data Templates
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
+
 _A DataTemplate is used to specify the appearance of data on supported controls, and typically binds to the data to be displayed._
 
 ## [Introduction](introduction.md)

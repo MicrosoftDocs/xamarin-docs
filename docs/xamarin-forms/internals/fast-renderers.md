@@ -11,6 +11,8 @@ ms.date: 10/24/2017
 
 # Xamarin.Forms Fast Renderers
 
+![Preview](~/media/shared/preview.png)
+
 _This article introduces fast renderers, which reduce the inflation and rendering costs of a Xamarin.Forms control on Android by flattening the resulting native control hierarchy._
 
 Traditionally, most of the original control renderers on Android are composed of two views:

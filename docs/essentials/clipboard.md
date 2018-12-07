@@ -4,12 +4,10 @@ description: "This document describes the Clipboard class in Xamarin.Essentials,
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Clipboard
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **Clipboard** class lets you copy and paste text to the system clipboard between applications.
 
@@ -34,7 +32,7 @@ var hasText = Clipboard.HasText;
 To set text to the **Clipboard**:
 
 ```csharp
-Clipboard.SetText("Hello World");
+await Clipboard.SetTextAsync("Hello World");
 ```
 
 To read text from the **Clipboard**:

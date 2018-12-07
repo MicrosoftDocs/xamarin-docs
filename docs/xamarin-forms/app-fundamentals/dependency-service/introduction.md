@@ -11,6 +11,8 @@ ms.date: 09/15/2018
 
 # Introduction to DependencyService
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
+
 ## Overview
 
 [`DependencyService`](xref:Xamarin.Forms.DependencyService) allows apps to call into platform-specific functionality from shared code. This functionality enables Xamarin.Forms apps to do anything that a native app can do.

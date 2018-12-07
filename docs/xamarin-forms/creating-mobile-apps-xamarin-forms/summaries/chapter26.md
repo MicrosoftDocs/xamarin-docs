@@ -11,6 +11,8 @@ ms.date: 11/07/2017
 
 # Summary of Chapter 26. Custom layouts
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26)
+
 Xamarin.Forms includes several classes derived from [`Layout<View>`](xref:Xamarin.Forms.Layout`1):
 
 * `StackLayout`,

@@ -4,12 +4,10 @@ description: "The PhoneDialer class in Xamarin.Essentials enables an application
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Phone Dialer
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **PhoneDialer** class enables an application to open a phone number in the dialer.
 

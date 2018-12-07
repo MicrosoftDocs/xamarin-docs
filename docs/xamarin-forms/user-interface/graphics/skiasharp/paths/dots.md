@@ -11,6 +11,8 @@ ms.date: 03/10/2017
 
 # Dots and Dashes in SkiaSharp
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Master the intricacies of drawing dotted and dashed lines in SkiaSharp_
 
 SkiaSharp lets you draw lines that are not solid but instead are composed of dots and dashes:

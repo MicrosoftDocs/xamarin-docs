@@ -4,12 +4,10 @@ description: "The FileSystem class in Xamarin.Essentials contains a series of he
 ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: File System Helpers
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **FileSystem** class contains a series of helpers to find the application's cache and data directories and open files inside of the app package.
 

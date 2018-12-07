@@ -11,6 +11,8 @@ ms.date: 11/07/2017
 
 # Summary of Chapter 25. Page varieties
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25)
+
 So far you've seen two classes that derive from `Page`: `ContentPage` and `NavigationPage`. This chapter presents two others:
 
 - [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) manages two pages, a master and a detail

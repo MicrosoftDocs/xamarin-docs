@@ -11,6 +11,8 @@ ms.date: 07/19/2018
 
 # Summary of Chapter 14. Absolute layout
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
+
 Like `StackLayout`, [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) derives from `Layout<View>` and inherits a `Children` property. `AbsoluteLayout` implements a layout system that requires the programmer to specify the positions of its children and, optionally, their size. The position is specified by the upper-left corner of the child relative to the upper-left corner of the `AbsoluteLayout` in device-independent units. `AbsoluteLayout` also implements a proportional positioning and sizing feature.
 
 `AbsoluteLayout` should be regarded as a special-purpose layout system to be used only when the programmer can impose a size on the children (for example, `BoxView` elements) or when the element's size doesn't affect the positioning of other children. The `HorizontalOptions` and `VerticalOptions` properties have no effect on children of an `AbsoluteLayout`.

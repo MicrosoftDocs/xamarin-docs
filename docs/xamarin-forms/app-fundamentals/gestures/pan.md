@@ -11,6 +11,8 @@ ms.date: 01/21/2016
 
 # Adding a pan gesture recognizer
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PanGesture/)
+
 _The pan gesture is used for detecting the movement of fingers around the screen and applying that movement to content, and is implemented with the `PanGestureRecognizer` class. A common scenario for the pan gesture is to horizontally and vertically pan an image, so that all of the image content can be viewed when it's being displayed in a viewport smaller than the image dimensions. This is accomplished by moving the image within the viewport, and is demonstrated in this article._
 
 To make a user interface element moveable with the pan gesture, create a [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) instance, handle the [`PanUpdated`](xref:Xamarin.Forms.PanGestureRecognizer.PanUpdated) event, and add the new gesture recognizer to the [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) collection on the user interface element. The following code example shows a `PanGestureRecognizer` attached to an [`Image`](xref:Xamarin.Forms.Image) element:

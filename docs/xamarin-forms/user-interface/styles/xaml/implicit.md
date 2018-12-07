@@ -11,6 +11,8 @@ ms.date: 02/17/2016
 
 # Implicit Styles in Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+
 _An implicit style is one that's used by all controls of the same TargetType, without requiring each control to reference the style._
 
 ## Creating an Implicit Style in XAML

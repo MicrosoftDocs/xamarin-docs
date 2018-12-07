@@ -11,6 +11,8 @@ ms.date: 08/01/2018
 
 # Consuming XAML Markup Extensions
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+
 XAML markup extensions help enhance the power and flexibility of XAML by allowing element attributes to be set from a variety of sources. Several XAML markup extensions are part of the XAML 2009 specification. These appear in XAML files with the customary `x` namespace prefix, and are commonly referred to with this prefix. This article discusses the following markup extensions:
 
 - [`x:Static`](#static) – reference static properties, fields, or enumeration members.

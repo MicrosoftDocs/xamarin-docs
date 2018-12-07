@@ -9,7 +9,7 @@ ms.author: laobri
 ms.date: 05/29/2018
 ---
 
-# Pair to Mac for Xamarin.iOS Development
+# Pair to Mac for Xamarin.iOS development
 
 _This guide describes how to use Pair to Mac to connect Visual Studio 2017 
 to a Mac build host._

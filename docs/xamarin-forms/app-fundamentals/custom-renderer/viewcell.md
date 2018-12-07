@@ -11,6 +11,8 @@ ms.date: 12/07/2016
 
 # Customizing a ViewCell
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/viewcell/)
+
 _A Xamarin.Forms ViewCell is a cell that can be added to a ListView or TableView, which contains a developer-defined view. This article demonstrates how to create a custom renderer for a ViewCell that's hosted inside a Xamarin.Forms ListView control. This stops the Xamarin.Forms layout calculations from being repeatedly called during ListView scrolling._
 
 Every Xamarin.Forms cell has an accompanying renderer for each platform that creates an instance of a native control. When a [`ViewCell`](xref:Xamarin.Forms.ViewCell) is rendered by a Xamarin.Forms application, in iOS the `ViewCellRenderer` class is instantiated, which in turn instantiates a native `UITableViewCell` control. On the Android platform, the `ViewCellRenderer` class instantiates a native `View` control. On the Universal Windows Platform (UWP), the `ViewCellRenderer` class instantiates a native `DataTemplate`. For more information about the renderer and native control classes that Xamarin.Forms controls map to, see [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).

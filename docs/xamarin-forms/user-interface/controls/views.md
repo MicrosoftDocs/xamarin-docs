@@ -11,6 +11,8 @@ ms.date: 13/11/2018
 
 # Xamarin.Forms Views
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/FormsGallery/)
+
 _Xamarin.Forms views are the building blocks of cross-platform mobile user interfaces._
 
 Views are user-interface objects such as labels, buttons, and sliders that are commonly known as *controls* or *widgets* in other graphical programming environments. The views supported by Xamarin.Forms all derive from the [`View`](xref:Xamarin.Forms.View) class. They can be divided into several categories:

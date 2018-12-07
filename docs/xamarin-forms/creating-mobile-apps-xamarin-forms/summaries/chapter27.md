@@ -11,6 +11,8 @@ ms.date: 07/18/2018
 
 # Summary of Chapter 27. Custom renderers
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27)
+
 > [!NOTE] 
 > Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
 

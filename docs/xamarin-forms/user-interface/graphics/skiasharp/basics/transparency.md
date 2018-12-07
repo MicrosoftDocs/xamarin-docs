@@ -11,6 +11,8 @@ ms.date: 08/23/2018
 
 # SkiaSharp transparency
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 As you've seen, the [`SKPaint`](xref:SkiaSharp.SKPaint) class includes a [`Color`](xref:SkiaSharp.SKPaint.Color) property of type [`SKColor`](xref:SkiaSharp.SKColor). `SKColor` includes an alpha channel, so anything that you color with an `SKColor` value can be partially transparent. 
 
 Some transparency was demonstrated in the [**Basic Animation in SkiaSharp**](animation.md) article. This article goes somewhat deeper into transparency to combine multiple objects in a single scene, a technique sometimes known as _blending_. More advanced blending techniques are discussed in the articles in the [**SkiaSharp shaders**](../effects/shaders/index.md) section.

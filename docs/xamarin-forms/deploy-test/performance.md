@@ -324,6 +324,5 @@ This article described and discussed techniques for increasing the performance o
 - [ListView Performance](~/xamarin-forms/user-interface/listview/performance.md)
 - [Fast Renderers](~/xamarin-forms/internals/fast-renderers.md)
 - [Layout Compression](~/xamarin-forms/user-interface/layouts/layout-compression.md)
-- [Xamarin.Forms Image Resizer Sample](https://developer.xamarin.com/samples/xamarin-forms/XamFormsImageResize/)
 - [XamlCompilation](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute)
 - [XamlCompilationOptions](xref:Xamarin.Forms.Xaml.XamlCompilationOptions)

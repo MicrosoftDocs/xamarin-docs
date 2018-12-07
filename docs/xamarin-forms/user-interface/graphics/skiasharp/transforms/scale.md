@@ -11,6 +11,8 @@ ms.date: 03/23/2017
 
 # The Scale Transform
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Discover the SkiaSharp scale transform for scaling objects to various sizes_
 
 As you've seen in [**The Translate Transform**](translate.md) article, the translate transform can move a graphical object from one location to another. In contrast, the scale transform changes the size of the graphical object:

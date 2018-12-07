@@ -11,6 +11,8 @@ ms.date: 04/06/2016
 
 # Reusable EffectBehavior
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
+
 _Behaviors are a useful approach for adding an effect to a control, removing boiler-plate effect handling code from code-behind files. This article demonstrates creating and consuming a Xamarin.Forms behavior to add an effect to a control._
 
 ## Overview

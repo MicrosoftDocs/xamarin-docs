@@ -11,6 +11,8 @@ ms.date: 04/27/2016
 
 # Xamarin.Forms Map
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/WorkingWithMaps/)
+
 _Xamarin.Forms uses the native map APIs on each platform._
 
 Xamarin.Forms.Maps uses the native map APIs on each platform. This provides a

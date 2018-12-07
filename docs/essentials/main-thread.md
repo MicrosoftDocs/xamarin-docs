@@ -4,12 +4,10 @@ description: "The MainThread class allows applications to run code on the main e
 ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 06/26/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: MainThread
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **MainThread** class allows applications to run code on the main thread of execution, and to determine if a particular block of code is currently running on the main thread.
 

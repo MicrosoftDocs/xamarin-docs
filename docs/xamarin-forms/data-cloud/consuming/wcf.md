@@ -11,6 +11,8 @@ ms.date: 09/20/2016
 
 # Consuming a Windows Communication Foundation (WCF) Web Service
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
+
 _WCF is Microsoft's unified framework for building service-oriented applications. It enables developers to build secure, reliable, transacted, and interoperable distributed applications. This article demonstrates how to consume an WCF Simple Object Access Protocol (SOAP) service from a Xamarin.Forms application._
 
 WCF describes a service with a variety of different contracts which include the following:

@@ -11,6 +11,8 @@ ms.date: 08/15/2017
 
 # Colors in Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/WorkingWithColors)
+
 _Xamarin.Forms provides a flexible cross-platform Color class._
 
 This article introduces the various ways the `Color` class can be used in Xamarin.Forms.

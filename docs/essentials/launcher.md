@@ -4,12 +4,10 @@ description: "The Launcher class in Xamarin.Essentials enables an application to
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 07/25/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Launcher
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **Launcher** class enables an application to open a URI by the system. This is often used when deep linking into another application's custom URI schemes. If you are looking to open the browser to a website then you should refer to the **[Browser](open-browser.md)** API.
 

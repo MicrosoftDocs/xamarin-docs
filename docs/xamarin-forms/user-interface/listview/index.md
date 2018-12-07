@@ -11,7 +11,9 @@ ms.date: 12/14/2015
 
 # Xamarin.Forms ListView
 
-ListView is a view for presenting lists of data, especially long lists that require scrolling. This guide will show you how to use ListView:
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/WorkingWithListview)
+
+View is a view for presenting lists of data, especially long lists that require scrolling. This guide will show you how to use ListView:
 
 1. **[Data Sources](data-and-databinding.md)** &ndash;  Populate a ListView with data, with or without data binding.
 2. **[Cell Appearance](customizing-cell-appearance.md)** &ndash; Customize the appearance of the built-in cells or create your own custom cell.

@@ -11,6 +11,8 @@ ms.date: 10/04/2018
 
 # Xamarin.Forms Label
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+
 _Display text in Xamarin.Forms_
 
 The [`Label`](xref:Xamarin.Forms.Label) view is used for displaying text, both single and multi-line. Labels can have text decorations, colored text, and use custom fonts (families, sizes, and options).

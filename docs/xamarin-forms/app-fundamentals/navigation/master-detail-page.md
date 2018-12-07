@@ -11,6 +11,8 @@ ms.date: 12/01/2017
 
 # Xamarin.Forms Master-Detail Page
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Navigation/MasterDetailPage/)
+
 _The Xamarin.Forms MasterDetailPage is a page that manages two related pages of information – a master page that presents items, and a detail page that presents details about items on the master page. This article explains how to use a MasterDetailPage and navigate between its pages of information._
 
 ## Overview

@@ -12,6 +12,8 @@ ms.date: 06/13/2018
 
 # Xamarin.Forms Multiscreen Quickstart
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/PhonewordMultiscreen/)
+
 This quickstart demonstrates how to extend the Phoneword application by adding a second screen to keep track of the call history for the application. The final application is shown below:
 
 [![](quickstart-images/intro-app-examples-sml.png "Phoneword Application")](quickstart-images/intro-app-examples.png#lightbox "Phoneword Application")

@@ -11,6 +11,8 @@ ms.date: 07/19/2018
 
 # Summary of Chapter 11. The Bindable infrastructure
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
+
 Every C# programmer is familiar with C# *properties*. Properties contain a *set* accessor and/or a *get* accessor. They are often called *CLR properties* for the Common Language Runtime.
 
 Xamarin.Forms defines an enhanced property definition called a *bindable property* encapsulated by the [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) class and supported by the [`BindableObject`](xref:Xamarin.Forms.BindableObject) class. These classes are related but quite distinct: The `BindableProperty` is used to define the property itself; `BindableObject` is like `object` in that it is a base class for classes that define bindable properties.

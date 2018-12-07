@@ -4,12 +4,10 @@ description: "The Accelerometer class in Xamarin.Essentials lets you monitor the
 ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Accelerometer
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **Accelerometer** class lets you monitor the device's accelerometer sensor, which indicates the acceleration of the device in three-dimensional space.
 

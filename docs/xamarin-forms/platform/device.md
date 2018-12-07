@@ -11,6 +11,8 @@ ms.date: 08/01/2018
 
 # Xamarin.Forms Device Class
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
+
 The [`Device`](xref:Xamarin.Forms.Device) class contains a number of properties and methods to help developers customize layout and functionality on a per-platform basis.
 
 In addition to methods and properties to target code at specific hardware types and sizes, the `Device` class includes the [BeginInvokeOnMainThread](#Device_BeginInvokeOnMainThread) method which should be used when interacting with UI controls from background threads.

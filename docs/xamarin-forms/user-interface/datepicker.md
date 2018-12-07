@@ -11,6 +11,8 @@ ms.date: 06/04/2018
 
 # Xamarin.Forms DatePicker
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
+
 _A Xamarin.Forms view that allows the user to select a date._
 
 The Xamarin.Forms [`DatePicker`](xref:Xamarin.Forms.DatePicker) invokes the platform's date-picker control and allows the user to select a date. `DatePicker` defines eight properties:

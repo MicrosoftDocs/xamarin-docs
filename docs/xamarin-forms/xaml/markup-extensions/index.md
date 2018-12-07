@@ -11,6 +11,8 @@ ms.date: 01/05/2018
 
 # XAML Markup Extensions
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+
 XAML markup extensions help extend the power and flexibility of XAML by allowing element attributes to be set from sources other than literal text strings.
 
 For example, normally you set the `Color` property of `BoxView` like this:

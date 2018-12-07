@@ -11,6 +11,8 @@ ms.date: 11/23/2016
 
 # Creating Platform-Specifics
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/)
+
 _Vendors can create their own platform-specifics with Effects. An Effect provides the specific functionality, which is then exposed through a platform-specific. The result is an Effect that can be more easily consumed through XAML, and through a fluent code API. This article demonstrates how to expose an Effect through a platform-specific._
 
 ## Overview

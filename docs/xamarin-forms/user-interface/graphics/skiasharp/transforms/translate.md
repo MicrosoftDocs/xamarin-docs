@@ -11,6 +11,8 @@ ms.date: 03/10/2017
 
 # The Translate Transform
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Learn how to use the translate transform to shift SkiaSharp graphics_
 
 The simplest type of transform in SkiaSharp is the *translate* or *translation* transform. This transform shifts graphical objects in the horizontal and vertical directions. In a sense, translation is the most unnecessary transform because you can usually accomplish the same effect by simply changing the coordinates that you're using in the drawing function. When rendering a path, however, all the coordinates are encapsulated in the path, so it's much easier applying a translate transform to shift the entire path.

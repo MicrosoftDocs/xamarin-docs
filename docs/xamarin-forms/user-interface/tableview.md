@@ -11,6 +11,8 @@ ms.date: 10/04/2018
 
 # Xamarin.Forms TableView
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TableView)
+
 [TableView](xref:Xamarin.Forms.TableView) is a view for displaying scrollable lists of data or choices where there are rows that don't share the same template. Unlike [ListView](~/xamarin-forms/user-interface/listview/index.md), TableView does not have the concept of an `ItemsSource`, so items must be added as children manually.
 
 This guide is composed of the following sections:

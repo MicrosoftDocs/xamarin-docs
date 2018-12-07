@@ -11,6 +11,8 @@ ms.date: 02/12/2018
 
 # Binding video sources to the player
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+
 When the `Source` property of the `VideoPlayer` view is set to a new video file, the existing video stops playing and the new video begins. This is demonstrated by the **Select Web Video** page of the [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) sample. The page includes a `ListView` with the titles of the three videos referenced from the **App.xaml** file:
 
 ```xaml

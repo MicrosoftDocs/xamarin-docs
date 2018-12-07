@@ -11,6 +11,8 @@ ms.date: 03/10/2017
 
 # Drawing a Simple Circle in SkiaSharp
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Learn the basics of SkiaSharp drawing, including canvases and paint objects_
 
 This article introduces the concepts of drawing graphics in Xamarin.Forms using SkiaSharp, including creating an `SKCanvasView` object to host the graphics, handling the `PaintSurface` event, and using a `SKPaint` object to specify color and other drawing attributes.

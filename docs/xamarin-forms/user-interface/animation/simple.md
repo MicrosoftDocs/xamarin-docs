@@ -11,6 +11,8 @@ ms.date: 10/27/2017
 
 # Simple Animations in Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/basic/)
+
 _The ViewExtensions class provides extension methods that can be used to construct simple animations. This article demonstrates creating and canceling animations using the ViewExtensions class._
 
 

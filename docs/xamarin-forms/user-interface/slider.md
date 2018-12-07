@@ -11,6 +11,8 @@ ms.date: 07/10/2018
 
 # Xamarin.Forms Slider
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos)
+
 _Use a Slider for selecting from a range of continuous values._
 
 The Xamarin.Forms [`Slider`](xref:Xamarin.Forms.Slider) is a horizontal bar that can be manipulated by the user to select a `double` value from a continuous range.

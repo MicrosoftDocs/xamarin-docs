@@ -11,6 +11,8 @@ ms.date: 03/10/2017
 
 # The Path Fill Types
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Discover the different effects possible with SkiaSharp path fill types_
 
 Two contours in a path can overlap, and the lines that make up a single contour can overlap. Any enclosed area can potentially be filled, but you might not want to fill all the enclosed areas. Here's an example:

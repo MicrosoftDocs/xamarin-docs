@@ -12,6 +12,8 @@ ms.date: 05/07/2018
 
 # The Xamarin.Forms FlexLayout
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)
+
 _Use FlexLayout for stacking or wrapping a collection of child views._
 
 The Xamarin.Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) is new in Xamarin.Forms version 3.0. It is based on the CSS [Flexible Box Layout Module](http://www.w3.org/TR/css-flexbox-1/), commonly known as _flex layout_ or _flex-box_, so called because it includes many flexible options to arrange children within the layout.

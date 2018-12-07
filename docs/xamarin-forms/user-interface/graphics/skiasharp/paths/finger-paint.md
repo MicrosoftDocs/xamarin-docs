@@ -11,6 +11,8 @@ ms.date: 04/05/2017
 
 # Finger Painting in SkiaSharp
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Use your fingers to paint on the canvas._
 
 An `SKPath` object can be continually updated and displayed. This feature allows a path to be used for interactive drawing, such as in a finger-painting program.

@@ -11,6 +11,8 @@ ms.date: 03/10/2017
 
 # Basic Animation in SkiaSharp
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Discover how to animate your SkiaSharp graphics_
 
 You can animate SkiaSharp graphics in Xamarin.Forms by causing the `PaintSurface` method to be called periodically, each time drawing the graphics a little differently. Here's an animation shown later in this article with concentric circles that seemingly expand from the center:

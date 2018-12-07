@@ -12,6 +12,8 @@ ms.date: 11/28/2018
 
 # Application Indexing and Deep Linking
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/deeplinking/)
+
 _Application indexing allows applications that would otherwise be forgotten after a few uses to stay relevant by appearing in search results. Deep linking allows applications to respond to a search result that contains application data, typically by navigating to a page referenced from a deep link. This article explains how to use application indexing and deep linking to make Xamarin.Forms application content searchable on iOS and Android devices._
 
 > [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]

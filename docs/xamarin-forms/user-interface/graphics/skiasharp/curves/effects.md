@@ -11,6 +11,8 @@ ms.date: 07/29/2017
 
 # Path Effects in SkiaSharp
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Discover the various path effects that allow paths to be used for stroking and filling_
 
 A *path effect* is an instance of the [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) class that is created with one of eight static creation methods defined by the class. The `SKPathEffect` object is then set to the [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) property of an [`SKPaint`](xref:SkiaSharp.SKPaint) object for a variety of interesting effects, for example, stroking a line with a small replicated path:

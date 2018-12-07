@@ -11,6 +11,8 @@ ms.date: 09/12/2017
 
 # Path Information and Enumeration
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Get information about paths and enumerate the contents_
 
 The [`SKPath`](xref:SkiaSharp.SKPath) class defines several properties and methods that allow you to obtain information about the path. The [`Bounds`](xref:SkiaSharp.SKPath.Bounds) and [`TightBounds`](xref:SkiaSharp.SKPath.TightBounds) properties (and related methods) obtain the metrical dimensions of a path. The [`Contains`](xref:SkiaSharp.SKPath.Contains(System.Single,System.Single)) method lets you determine if a particular point is within a path.

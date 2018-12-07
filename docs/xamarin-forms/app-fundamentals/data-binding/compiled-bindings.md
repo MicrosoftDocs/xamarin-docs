@@ -11,6 +11,8 @@ ms.date: 10/25/2018
 
 # Xamarin.Forms Compiled Bindings
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+
 _Compiled bindings are resolved more quickly than classic bindings, therefore improving data binding performance in Xamarin.Forms applications._
 
 Data bindings have two main problems:

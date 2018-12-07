@@ -11,7 +11,9 @@ ms.date: 07/19/2018
 
 # Summary of Chapter 5. Dealing with sizes
 
-> [!NOTE] 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)
+
+> [!NOTE]
 > Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
 
 Several sizes in Xamarin.Forms have been encountered so far:

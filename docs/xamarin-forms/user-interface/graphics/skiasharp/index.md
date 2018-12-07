@@ -10,6 +10,8 @@ ms.date: 09/11/2017
 
 # SkiaSharp Graphics in Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Use SkiaSharp for 2D graphics in your Xamarin.Forms applications_
 
 SkiaSharp is a 2D graphics system for .NET and C# powered by the open-source Skia graphics engine that is used extensively in Google products. You can use SkiaSharp in your Xamarin.Forms applications to draw 2D vector graphics, bitmaps, and text. See the [2D Drawing](~/graphics-games/skiasharp/index.md) guide for more general information about the SkiaSharp library and some other tutorials.

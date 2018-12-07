@@ -11,6 +11,8 @@ ms.date: 05/25/2017
 
 # Three Types of Bézier Curves
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Explore how to use SkiaSharp to render cubic, quadratic, and conic Bézier curves_
 
 The Bézier curve is named after Pierre Bézier (1910 – 1999), a French engineer at the automotive company Renault, who used the curve for the computer-assisted design of car bodies.

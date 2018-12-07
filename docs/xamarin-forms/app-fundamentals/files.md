@@ -11,6 +11,8 @@ ms.date: 06/21/2018
 
 # File Handling in Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
+
 _File handling with Xamarin.Forms can be achieved using code in a .NET Standard library, or by using embedded resources._
 
 ## Overview

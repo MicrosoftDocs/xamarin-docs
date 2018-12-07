@@ -11,6 +11,8 @@ ms.date: 07/19/2018
 
 # Summary of Chapter 8. Code and XAML in harmony
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
+
 This chapter explores XAML more deeply, and particularly how code and XAML interact.
 
 ## Passing arguments

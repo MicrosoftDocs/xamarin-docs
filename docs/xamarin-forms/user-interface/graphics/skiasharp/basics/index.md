@@ -11,6 +11,8 @@ ms.date: 03/10/2017
 
 # SkiaSharp Drawing Basics
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Learn the basics of SkiaSharp graphics concepts and coordinates_
 
 After you have added the SkiaSharp NuGet package to your Xamarin.Forms application, you can begin using SkiaSharp graphics. The [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) solution includes numerous pages that demonstrate SkiaSharp programming techniques in progressively more advanced lessons.

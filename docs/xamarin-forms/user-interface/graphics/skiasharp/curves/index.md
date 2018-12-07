@@ -11,6 +11,8 @@ ms.date: 05/24/2017
 
 # SkiaSharp Curves and Paths
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Learn how to use SkiaSharp to draw curves and use path features_
 
 The exploration of [`SKPath`](xref:SkiaSharp.SKPath) methods and properties began in the [**SkiaSharp Lines and Paths**](../paths/index.md) article. The articles here continue with methods that add curves to an `SKPath` object, and exploit other powerful path features. You'll see how you can specify an entire path in a concise text string, how to use path effects, and how to dig into path internals.

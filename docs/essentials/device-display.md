@@ -4,14 +4,12 @@ description: "This document describes the DeviceDisplay class in Xamarin.Essenti
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Device Display Information
 
-![Pre-release NuGet](~/media/shared/pre-release.png)
-
-The **DeviceDisplay** class provides information about the device's screen metrics the application is running on.
+The **DeviceDisplay** class provides information about the device's screen metrics the application is running on and can request to keep the screen from falling asleep when the application is running.
 
 ## Get started
 
@@ -25,45 +23,57 @@ Add a reference to Xamarin.Essentials in your class:
 using Xamarin.Essentials;
 ```
 
-## Screen Metrics
+## Main Display Info
 
 In addition to basic device information the **DeviceDisplay** class contains information about the device's screen and orientation.
 
 ```csharp
 // Get Metrics
-var metrics = DeviceDisplay.ScreenMetrics;
+var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
 
 // Orientation (Landscape, Portrait, Square, Unknown)
-var orientation = metrics.Orientation;
+var orientation = mainDisplayInfo.Orientation;
 
 // Rotation (0, 90, 180, 270)
-var rotation = metrics.Rotation;
+var rotation = mainDisplayInfo.Rotation;
 
 // Width (in pixels)
-var width = metrics.Width;
+var width = mainDisplayInfo.Width;
 
 // Height (in pixels)
-var height = metrics.Height;
+var height = mainDisplayInfo.Height;
 
 // Screen density
-var density = metrics.Density;
+var density = mainDisplayInfo.Density;
 ```
 
 The **DeviceDisplay** class also exposes an event that can be subscribed to that is triggered whenever any screen metric changes:
 
 ```csharp
-public class ScreenMetricsTest
+public class DisplayInfoTest
 {
-    public ScreenMetricsTest()
+    public DisplayInfoTest()
     {
         // Subscribe to changes of screen metrics
-        DeviceDisplay.ScreenMetricsChanged += OnScreenMetricsChanged;
+        DeviceDisplay.MainDisplayInfoChanged += OnMainDisplayInfoChanged;
     }
 
-    void OnScreenMetricsChanged(ScreenMetricsChangedEventArgs  e)
+    void OnMainDisplayInfoChanged(DisplayInfoChangedEventArgs  e)
     {
         // Process changes
-        var metrics = e.Metrics;
+        var displayInfo = e.DisplayInfo;
+    }
+}
+```
+
+The **DeviceDisplay** class exposes a `bool` property called `KeepScreenOn` that can be set to attempt to keep the device's display from turning off or locking.
+
+```csharp
+public class KeepScreenOnTest
+{
+    public void ToggleScreenLock()
+    {
+        DeviceDisplay.KeepScreenOn = !DeviceDisplay.KeepScreenOn;
     }
 }
 ```
@@ -76,7 +86,7 @@ No differences.
 
 # [iOS](#tab/ios)
 
-* Accessing `ScreenMetrics` must be done on the UI thread or else an exception will be thrown. You can use the [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) method to run that code on the UI thread.
+* Accessing `DeviceDisplay` must be done on the UI thread or else an exception will be thrown. You can use the [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) method to run that code on the UI thread.
 
 # [UWP](#tab/uwp)
 

@@ -11,6 +11,8 @@ ms.date: 07/19/2018
 
 # Summary of Chapter 4. Scrolling the stack
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
+
 This chapter is primarily devoted to introducing the concept of *layout*, which is the overall term for the classes and techniques that Xamarin.Forms uses to organize the visual display of multiple views on the page.
 
 Layout involves several classes that derive from [`Layout`](xref:Xamarin.Forms.Layout) and  [`Layout<T>`](xref:Xamarin.Forms.Layout`1). This chapter focuses on [`StackLayout`](xref:Xamarin.Forms.StackLayout).

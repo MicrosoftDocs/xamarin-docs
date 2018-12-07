@@ -12,6 +12,8 @@ ms.date: 10/24/2018
 
 # Automate Xamarin.Forms testing with App Center
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UsingUITest/)
+
 _Xamarin UITest component can be used with Xamarin.Forms to write UI tests to run in the cloud on hundreds of devices._
 
 ## Overview

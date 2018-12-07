@@ -11,6 +11,8 @@ ms.date: 06/16/2017
 
 # Clipping with Paths and Regions
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Use paths to clip graphics to specific areas, and to create regions_
 
 It's sometimes necessary to restrict the rendering of graphics to a particular area. This is known as *clipping*. You can use clipping for special effects, such as this image of a monkey seen through a keyhole:

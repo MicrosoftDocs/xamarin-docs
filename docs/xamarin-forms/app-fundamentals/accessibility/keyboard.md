@@ -11,6 +11,8 @@ ms.date: 10/15/2018
 
 # Keyboard Navigation in Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+
 Some users can have difficulty using applications that don't provide appropriate keyboard access. Specifying a tab order for controls enables keyboard navigation and prepares application pages to receive input in a particular order.
 
 By default, the tab order of controls is the same order in which they are listed in XAML, or programmatically added to a child collection. This order is the order in which the controls will be navigated through with a keyboard, and often this default order is the best order. However, the default order is not always the same as the expected order, as shown in the following XAML code example:

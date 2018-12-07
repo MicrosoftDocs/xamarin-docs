@@ -11,6 +11,8 @@ ms.date: 11/29/2017
 
 # Highlighting a Circular Area on a Map
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/)
+
 _This article explains how to add a circular overlay to a map, to highlight a circular area of the map._
 
 ## Overview

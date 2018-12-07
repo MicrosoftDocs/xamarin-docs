@@ -4,12 +4,10 @@ description: "This document describes the Geolocation class in Xamarin.Essential
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Geolocation
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **Geolocation** class provides APIs to retrieve the device's current geolocation coordinates.
 
@@ -151,7 +149,7 @@ The following table outlines accuracy per platform:
 | iOS | 1000 |
 | UWP | 300 - 3000 |
 
-### Medium (default)
+### Medium (Default)
 
 | Platform | Distance (in meters) |
 | --- | --- |
@@ -186,7 +184,7 @@ Here's an example:
 ```csharp
 Location boston = new Location(42.358056, -71.063611);
 Location sanFrancisco = new Location(37.783333, -122.416667);
-double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Miles);
+double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnit.Miles);
 ```
 
 The `Location` constructor has latitude and longitude arguments in that order. Positive latitude values are north of the equator, and positive longitude values are east of the Prime Meridian. Use the final argument to `CalculateDistance` to specify miles or kilometers. The `Location` class also defines `KilometersToMiles` and `MilesToKilometers` methods for converting between the two units.

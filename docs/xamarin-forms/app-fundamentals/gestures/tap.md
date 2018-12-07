@@ -11,6 +11,8 @@ ms.date: 01/21/2016
 
 # Adding a tap gesture recognizer
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/TapGesture/)
+
 _The tap gesture is used for tap detection and is implemented with the TapGestureRecognizer class._
 
 To make a user interface element clickable with the tap gesture, create a [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) instance, handle the [`Tapped`](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) event and add the new gesture recognizer to the [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) collection on the user interface element. The following code example shows a `TapGestureRecognizer` attached to an [`Image`](xref:Xamarin.Forms.Image) element:

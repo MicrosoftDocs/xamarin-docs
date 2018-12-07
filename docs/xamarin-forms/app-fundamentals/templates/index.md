@@ -18,11 +18,3 @@ Xamarin.Forms control templates provide the ability to easily theme and re-theme
 ## [Data Templates](data-templates/index.md)
 
 Xamarin.Forms data templates provide the ability to define the presentation of data on supported controls.
-
-
-## Related Links
-
-- [Introduction To Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [Xamarin.Forms Gallery (sample)](https://developer.xamarin.com/samples/FormsGallery/)
-- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/tag/Xamarin.Forms/)
-- [Xamarin.Forms API Documentation](xref:Xamarin.Forms)

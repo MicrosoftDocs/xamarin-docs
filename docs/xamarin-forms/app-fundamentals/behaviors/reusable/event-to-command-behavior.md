@@ -11,6 +11,8 @@ ms.date: 11/09/2018
 
 # Reusable EventToCommandBehavior
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+
 _Behaviors can be used to associate commands with controls that were not designed to interact with commands. This article demonstrates creating and consuming a Xamarin.Forms behavior to invoke a command when an event fires._
 
 ## Overview

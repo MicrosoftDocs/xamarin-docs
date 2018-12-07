@@ -11,6 +11,8 @@ ms.date: 02/12/2018
 
 # Loading application resource videos
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+
 The custom renderers for the `VideoPlayer` view are capable of playing video files that have been embedded in the individual platform projects as application resources. However, the current version of `VideoPlayer` cannot access resources embedded in a .NET Standard library.
 
 To load these resources, create an instance of `ResourceVideoSource` by setting the `Path` property to the filename (or the folder and filename) of the resource. Alternatively, you can call the static `VideoSource.FromResource` method to reference the resource. Then, set the `ResourceVideoSource` object to the `Source` property of `VideoPlayer`.

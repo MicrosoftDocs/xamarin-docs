@@ -11,6 +11,8 @@ ms.date: 03/08/2016
 
 # Binding from a Xamarin.Forms ControlTemplate
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebinding/)
+
 _Template bindings allow controls in a control template to data bind to public properties, enabling property values on controls in the control template to be easily changed. This article demonstrates using template bindings to perform data binding from a control template._
 
 A [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) is used to bind a control's property in a control template to a bindable property on the parent of the *target* view that owns the control template. For example, rather than defining the text displayed by [`Label`](xref:Xamarin.Forms.Label) instances inside the [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate), you could use a template binding to bind the [`Label.Text`](xref:Xamarin.Forms.Label.Text) property to bindable properties that define the text to be displayed.

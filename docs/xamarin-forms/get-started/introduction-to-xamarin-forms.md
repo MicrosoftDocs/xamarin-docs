@@ -11,6 +11,8 @@ ms.date: 09/25/2018
 
 # An Introduction to Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/GettingStarted/)
+
 _Xamarin.Forms is a framework that allows developers to build cross-platform applications for Android, iOS, and Windows. Code and user interface definitions are shared across platforms, but rendered with native controls. This article provides an introduction to Xamarin.Forms and how to get started writing applications with C# and XAML in Visual Studio._
 
 Xamarin.Forms applications use [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) projects to contain the shared code, and separate application projects to consume the shared code and build the output required for each platform. When you create new Xamarin.Forms app, the solution will contain the shared code project (containing C# and XAML files) plus the platform-specific projects as shown in this screenshot:

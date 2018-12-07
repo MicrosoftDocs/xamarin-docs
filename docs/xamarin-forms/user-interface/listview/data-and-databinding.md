@@ -11,6 +11,8 @@ ms.date: 07/30/2018
 
 # ListView Data Sources
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
+
 A [`ListView`](xref:Xamarin.Forms.ListView) is used for displaying lists of data. We'll learn about populating a ListView with data, and how we can bind to the selected item.
 
 - **[Setting ItemsSource](#ItemsSource)** &ndash; uses a simple list or array.

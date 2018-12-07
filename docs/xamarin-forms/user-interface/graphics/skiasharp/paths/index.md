@@ -11,6 +11,8 @@ ms.date: 03/10/2017
 
 # SkiaSharp Lines and Paths
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 _Use SkiaSharp to draw lines and graphics paths_
 
 The [previous section](~/xamarin-forms/user-interface/graphics/skiasharp/basics/index.md) demonstrated that the SkiaSharp `SKCanvas` class includes several methods to draw circles, ovals, rectangles, rounded rectangles, text, and bitmaps. This section and later sections cover the various classes connected with creating and rendering *graphics paths*.

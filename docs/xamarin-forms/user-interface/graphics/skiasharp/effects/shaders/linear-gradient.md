@@ -11,6 +11,8 @@ ms.date: 08/23/2018
 
 # The SkiaSharp linear gradient
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 The [`SKPaint`](xref:SkiaSharp.SKPaint) class defines a [`Color`](xref:SkiaSharp.SKPaint.Color) property that is used to stroke lines or fill areas with a solid color. You can alternatively stroke lines or fill areas with _gradients_, which are gradual blends of colors:
 
 ![Linear Gradient Sample](linear-gradient-images/LinearGradientSample.png "Linear Gradient Sample")

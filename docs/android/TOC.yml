@@ -394,8 +394,6 @@
           href: ~/essentials/compass.md?context=xamarin/android
         - name: Connectivity
           href: ~/essentials/connectivity.md?context=xamarin/android
-        - name: Data Transfer
-          href: ~/essentials/data-transfer.md?context=xamarin/android
         - name: Device Display Information
           href: ~/essentials/device-display.md?context=xamarin/android
         - name: Device Information
@@ -426,14 +424,12 @@
           href: ~/essentials/orientation-sensor.md?context=xamarin/android
         - name: Phone Dialer
           href: ~/essentials/phone-dialer.md?context=xamarin/android
-        - name: Power
-          href: ~/essentials/power.md?context=xamarin/android
         - name: Preferences
           href: ~/essentials/preferences.md?context=xamarin/android
-        - name: Screen Lock
-          href: ~/essentials/screen-lock.md?context=xamarin/android
         - name: Secure Storage
           href: ~/essentials/secure-storage.md?context=xamarin/android
+        - name: Share
+          href: ~/essentials/share.md?context=xamarin/android
         - name: SMS
           href: ~/essentials/sms.md?context=xamarin/android
         - name: Text-to-Speech

@@ -11,6 +11,8 @@ ms.date: 02/17/2016
 
 # Device Styles in Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
+
 _Xamarin.Forms includes six dynamic styles, known as device styles, in the Device.Styles class._
 
 The *device* styles are:

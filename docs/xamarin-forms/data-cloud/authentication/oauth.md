@@ -11,6 +11,8 @@ ms.date: 06/19/2017
 
 # Authenticating Users with an Identity Provider
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
+
 _Xamarin.Auth is a cross-platform SDK for authenticating users and storing their accounts. It includes OAuth authenticators that provide support for consuming identity providers such as Google, Microsoft, Facebook, and Twitter. This article explains how to use Xamarin.Auth to manage the authentication process in a Xamarin.Forms application._
 
 OAuth is an open standard for authentication, and enables a resource owner to notify a resource provider that permission should be granted to a third party to access their information without sharing the resource owners identity. An example of this would be enabling a user to notify an identity provider (such as Google, Microsoft, Facebook, or Twitter) that permission should be granted to an application to access their data, without sharing the user's identity. It is commonly used as an approach for users to sign-in to websites and applications using an identity provider, but without exposing their password to the website or application.

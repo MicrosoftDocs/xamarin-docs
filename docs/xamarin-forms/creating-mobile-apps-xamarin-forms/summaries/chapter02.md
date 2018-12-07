@@ -11,7 +11,9 @@ ms.date: 07/17/2018
 
 # Summary of Chapter 2. Anatomy of an app
 
-> [!NOTE] 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
+
+> [!NOTE]
 > Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
 
 In a Xamarin.Forms application, objects that occupy space on the screen are known as *visual elements*, encapsulated by the [`VisualElement`](xref:Xamarin.Forms.VisualElement) class. Visual Elements can be split into three categories corresponding to these classes:
@@ -26,9 +28,9 @@ This chapter demonstrates how to create an application by focusing on the [`Labe
 
 ## Say hello
 
-With the Xamarin platform installed, you can create a new Xamarin.Forms solution in Visual Studio or Visual Studio for Mac. The [**Hello**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) solution uses a Portable Class Library for the common code. 
+With the Xamarin platform installed, you can create a new Xamarin.Forms solution in Visual Studio or Visual Studio for Mac. The [**Hello**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) solution uses a Portable Class Library for the common code.
 
-> [!NOTE] 
+> [!NOTE]
 > Portable Class Libraries have been replaced by .NET Standard libraries. All the sample code from the book has been converted to use .NET standard libraries.
 
 This sample demonstrates a Xamarin.Forms solution created in Visual Studio with no modifications. The solution consists of six projects:
@@ -40,8 +42,8 @@ This sample demonstrates a Xamarin.Forms solution created in Visual Studio with 
 - [**Hello.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Windows), an application project for Windows 8.1
 - [**Hello.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.WinPhone), an application project for Windows Phone 8.1
 
-> [!NOTE] 
-> Xamarin.Forms no longer supports Windows 8.1, Windows Phone 8.1, or Windows 10 Mobile, but Xamarin.Forms applications do run on the Windows 10 desktop. 
+> [!NOTE]
+> Xamarin.Forms no longer supports Windows 8.1, Windows Phone 8.1, or Windows 10 Mobile, but Xamarin.Forms applications do run on the Windows 10 desktop.
 
 You can make any of these application projects the startup project, and then build and run the program on a device or simulator.
 
@@ -51,7 +53,7 @@ In many of your Xamarin.Forms programs, you won't be modifying the application p
 
 The visuals displayed by the **Hello** program are defined in the constructor of the [`App`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs) class. `App` derives from the Xamarin.Forms class [`Application`](xref:Xamarin.Forms.Application).
 
-> [!NOTE] 
+> [!NOTE]
 > The Visual Studio solution templates for Xamarin.Forms create a page with a XAML file. XAML is not covered in this book until [Chapter 7](chapter07.md).
 
 The **References** section of the **Hello** PCL project includes the following Xamarin.Forms assemblies:
@@ -69,8 +71,8 @@ The **References** sections of the five application projects include additional 
 - **Xamarin.Forms.Platform.WinRT.Tablet**
 - **Xamarin.Forms.Platform.WinRT.Phone**
 
-> [!NOTE] 
-> The **References** sections of these projects no longer list the assemblies. Instead, the project file contains a **PackageReference** tags referencing the Xamarin.Forms NuGet package. The **References** section in Visual Studio lists the **Xamarin.Forms** package rather than the Xamarin.Forms assemblies. 
+> [!NOTE]
+> The **References** sections of these projects no longer list the assemblies. Instead, the project file contains a **PackageReference** tags referencing the Xamarin.Forms NuGet package. The **References** section in Visual Studio lists the **Xamarin.Forms** package rather than the Xamarin.Forms assemblies.
 
 Each of the application projects contains a call to the static `Forms.Init` method in the `Xamarin.Forms` namespace. This initializes the Xamarin.Forms library. A different version of `Forms.Init` is defined for each platform. The calls to this method can be found in the following classes:
 
@@ -90,7 +92,7 @@ Otherwise, these application projects are normal "do nothing" programs.
 
 It's possible to create a Xamarin.Forms solution with the common code in either a Portable Class Library (PCL) or a Shared Asset Project (SAP). To create an SAP solution, select the Shared option in Visual Studio. The  [**HelloSap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/HelloSap) solution demonstrates the SAP template with no modifications.
 
-> [!NOTE] 
+> [!NOTE]
 > Portable Class Libraries has been replaced by .NET Standard libraries. All the sample code from the book has been converted to use .NET standard libraries. Otherwise, the PCL and .NET Standard libraries are conceptually very similar.
 
 The library approach bundles all the common code in a library project referenced by the platform application projects. With the SAP approach, the common code effectively exists in all the platform application projects and is shared among them.

@@ -4,12 +4,10 @@ description: "This document describes the Preferences class in Xamarin.Essential
 ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Preferences
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **Preferences** class helps to store application preferences in a key/value store.
 

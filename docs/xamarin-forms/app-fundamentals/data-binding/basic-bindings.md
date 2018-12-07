@@ -11,6 +11,8 @@ ms.date: 01/05/2018
 
 # Xamarin.Forms Basic Bindings
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+
 A Xamarin.Forms data binding links a pair of properties between two objects, at least one of which is usually a user-interface object. These two objects are called the *target* and the *source*:
 
 - The *target* is the object (and property) on which the data binding is set.

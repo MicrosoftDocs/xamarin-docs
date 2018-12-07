@@ -11,6 +11,8 @@ ms.date: 10/24/2016
 
 # Creating an Effect
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/effects/focuseffect/)
+
 _Effects simplify the customization of a control. This article demonstrates how to create an effect that changes the background color of the Entry control when the control gains focus._
 
 The process for creating an effect in each platform-specific project is as follows:

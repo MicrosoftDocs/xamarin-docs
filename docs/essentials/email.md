@@ -4,12 +4,10 @@ description: "The Email class in Xamarin.Essentials enables an application to op
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
+ms.date: 11/04/2018
 ---
 
 # Xamarin.Essentials: Email
-
-![Pre-release NuGet](~/media/shared/pre-release.png)
 
 The **Email** class enables an application to open the default email application with a specified information including subject, body, and recipients (TO, CC, BCC).
 
@@ -61,7 +59,7 @@ public class EmailTest
 
 # [Android](#tab/android)
 
-No platform differences.
+Not all email clients for Android support `Html`, since there is no way to detect this we recommend using `PlainText` when sending emails.
 
 # [iOS](#tab/ios)
 

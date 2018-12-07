@@ -11,6 +11,8 @@ ms.date: 07/12/2018
 
 # Animating SkiaSharp bitmaps
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 Applications that animate SkiaSharp graphics generally call `InvalidateSurface` on the `SKCanvasView` at a fixed rate, often every 16 milliseconds. Invalidating the surface triggers a call to the `PaintSurface` handler to redraw the display. As the visuals are redrawn 60 times a second, they appear to be smoothly animated.
 
 However, if the graphics are too complex to be rendered in 16 milliseconds, the animation can become jittery. The programmer might choose to reduce the refresh rate to 30 times or 15 times a second, but sometimes even that's not enough. Sometimes graphics are so complex that they simply can't be rendered in real time.

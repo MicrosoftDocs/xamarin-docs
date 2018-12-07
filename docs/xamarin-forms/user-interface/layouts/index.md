@@ -12,6 +12,8 @@ ms.date: 10/26/2017
 
 # Layouts in Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+
 Xamarin.Forms has several layouts and features for organizing content on screen.
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]

@@ -33,7 +33,7 @@ useful buttons:
 
 - **Home** – Simulates the home button on an iOS device.
 - **Lock** – Locks the simulator (swipe to unlock).
-- **Screenshot** – Saves a screenshot of the simulator (stored in **Pictures\Xamarin\iOS Simulator\**).
+- **Screenshot** – Saves a screenshot of the simulator (stored in **Pictures\Xamarin\iOS Simulator\\**).
 - [**Settings**](#settings) – Displays keyboard, location, and other settings.
 - [**Other options**](#other-options) – Brings up various simulator options such as rotation, shake gestures, and Touch ID.
 

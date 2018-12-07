@@ -11,6 +11,8 @@ ms.date: 02/17/2016
 
 # Global Styles in Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+
 _Styles can be made available globally by adding them to the application's resource dictionary. This helps to avoid duplication of styles across pages or controls._
 
 ## Creating a Global Style in XAML

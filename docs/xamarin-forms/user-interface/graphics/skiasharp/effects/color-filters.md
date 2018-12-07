@@ -11,6 +11,8 @@ ms.date: 08/28/2018
 
 # SkiaSharp color filters
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 Color filters can translate colors in a bitmap (or other image) to other colors for effects such as posterization:
 
 ![Color Filters Example](color-filters-images/ColorFiltersExample.png "Color Filters Example")

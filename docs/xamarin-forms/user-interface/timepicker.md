@@ -11,6 +11,8 @@ ms.date: 10/16/2018
 
 # Xamarin.Forms TimePicker
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker/)
+
 _A Xamarin.Forms view that allows the user to select a time._
 
 The Xamarin.Forms [`TimePicker`](xref:Xamarin.Forms.TimePicker) invokes the platform's time-picker control and allows the user to select a time. `TimePicker` defines the following properties:

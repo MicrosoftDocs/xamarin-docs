@@ -5,7 +5,7 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 03/14/2018
+ms.date: 12/03/2018
 ---
 
 # Build Process
@@ -111,7 +111,7 @@ The following build targets are defined for Xamarin.Android projects:
 
 MSBuild properties control the behavior of the targets. They are 
 specified within the project file, e.g. **MyApp.csproj**, within 
-an [MSBuild PropertyGroup element](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild).
+an [MSBuild PropertyGroup element](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild). 
 
 -   **Configuration** &ndash; Specifies the build configuration to use,
     such as "Debug" or "Release". The
@@ -139,7 +139,7 @@ an [MSBuild PropertyGroup element](https://docs.microsoft.com/visualstudio/msbui
     string or `Full`.
 
 -   **DebugType** &ndash; Specifies the
-    [type of debug symbols](https://docs.microsoft.com/visualstudio/msbuild/csc-task)
+    [type of debug symbols](https://docs.microsoft.com/visualstudio/msbuild/csc-task) 
     to generate as part of the build, which also impacts whether the
     Application is debuggable. Possible values include:
 
@@ -154,7 +154,10 @@ an [MSBuild PropertyGroup element](https://docs.microsoft.com/visualstudio/msbui
     `DebugSymbols` property controls whether or not the Application is
     debuggable.
 
-
+    - **AndroidGenerateLayoutBindings** &ndash; Enables generation of [layout code-behind](https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/LayoutCodeBehind.md)
+	  if set to `true` or disables it completely if set to `false`. The
+	  default value is `false`.
+	
 ### Install Properties
 
 Install properties control the behavior of the `Install` and
@@ -205,6 +208,28 @@ when packaging Release applications.
     Support for this property was added after Xamarin.Android 7.1.
 
     This property is `False` by default.
+
+-   **AndroidD8JarPath** &ndash; The path to `d8.jar` for use with the
+    d8 dex-compiler. Defaults to a path in the Xamarin.Android
+    installation. For further information see our documentation on [D8
+    and R8][d8-r8].
+
+-   **AndroidDexTool** &ndash; An enum-style property with valid
+    values of `dx` or `d8`. Indicates which Android [dex][dex]
+    compiler is used during the Xamarin.Android build process.
+    Currently defaults to `dx`. For further information see our
+    documentation on [D8 and R8][d8-r8].
+
+    [dex]: https://source.android.com/devices/tech/dalvik/dalvik-bytecode
+    [d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
+
+-   **AndroidEnableDesugar** &ndash; A boolean property that
+    determines if `desugar` is enabled. Android does not currently
+    support all Java 8 features, and the default toolchain implements
+    the new language features by performing bytecode transformations,
+    called `desugar`, on the output of the `javac` compiler. Defaults
+    to `False` if using `AndroidDexTool=dx` and defaults to `True` if
+    using `AndroidDexTool=d8`.
 
 -   **AndroidEnableMultiDex** &ndash; A boolean property that
     determines whether or not multi-dex support will be used in the
@@ -356,6 +381,22 @@ when packaging Release applications.
     <AndroidLinkSkip>Assembly1;Assembly2</AndroidLinkSkip>
     ```
 
+-   **AndroidLinkTool** &ndash; An enum-style property with valid
+    values of `proguard` or `r8`. Indicates which code shrinker is
+    used for Java code. Currently defaults to an empty string, or
+    `proguard` if `$(AndroidEnableProguard)` is `True`. For further
+    information see our documentation on [D8 and R8][d8-r8].
+
+    [d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
+
+-   **LinkerDumpDependencies** &ndash; A bool property which enables
+    generating of linker dependencies file. This file can be used as
+    input for
+    [illinkanalyzer](https://github.com/mono/linker/tree/master/analyzer)
+    tool.
+
+    The default value is False.
+
 -   **AndroidManagedSymbols** &ndash; A boolean property that controls
     whether sequence points are generated so that file name and line
     number information can be extracted from `Release` stack traces.
@@ -368,6 +409,11 @@ when packaging Release applications.
     During the build, any other necessary values will be merged into to
     produce the actual `AndroidManifest.xml`.
     The `$(AndroidManifest)` must contain the package name in the `/manifest/@package` attribute.
+
+-   **AndroidR8JarPath** &ndash; The path to `r8.jar` for use with the
+    r8 dex-compiler and shrinker. Defaults to a path in the
+    Xamarin.Android installation. For further information see our
+    documentation on [D8 and R8][d8-r8].
 
 -   **AndroidSdkBuildToolsVersion** &ndash; The Android SDK 
     build-tools package provides the **aapt** and **zipalign** tools,
@@ -392,7 +438,6 @@ when packaging Release applications.
 
     Supported values include:
 
-    -   `armeabi`
     -   `armeabi-v7a`
     -   `x86`
     -   `arm64-v8a`: Requires Xamarin.Android 5.1 and later.
@@ -426,7 +471,7 @@ when packaging Release applications.
 
     When this property is `False`, then the
     `$(AndroidFastDeploymentType)` MSBuild property also controls what
-    will be embedded into the `.apk`, which can impact deployment and
+    will be embeded into the `.apk`, which can impact deployment and
     rebuild times.
 
 -   **EnableLLVM** &ndash; A boolean property that determines whether
@@ -455,11 +500,13 @@ when packaging Release applications.
 -   **JavaMaximumHeapSize** &ndash; Specifies the value of the **java**
     `-Xmx` parameter value to use when building the `.dex` file as part
     of the packaging process. If not specified, then the `-Xmx` option
-    is not provided to **java**.
+    supplies **java** with a value of `1G`. This was found to be commonly
+    required on Windows in comparison to other platforms.
 
     Specifying this property is necessary if the
     [`_CompileDex` target throws a `java.lang.OutOfMemoryError`](https://bugzilla.xamarin.com/show_bug.cgi?id=18327).
 
+    Customize the value by changing:
     ```xml
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     ```
@@ -584,8 +631,7 @@ when packaging Release applications.
     
     Pre-defined key items
 
-    -   **abi**  &ndash; Inserts the targeted abi for the app
-        -   1 &ndash; `armeabi`
+    -   **abi**  &ndash; Inserts the targetted abi for the app
         -   2 &ndash; `armeabi-v7a`
         -   3 &ndash; `x86`
         -   4 &ndash; `arm64-v8a`
@@ -611,7 +657,7 @@ when packaging Release applications.
     allows the developer to define custom items to use with the
     `AndroidVersionCodePattern`. They are in the form of a `key=value`
     pair. All items in the `value` should be integer values. For
-    example: `screen=23;target=$(_SupportedApiLevel)`. As you can see
+    example: `screen=23;target=$(_AndroidApiLevel)`. As you can see
     you can make use of existing or custom MSBuild properties in the
     string.
 
@@ -640,6 +686,84 @@ when packaging Release applications.
     the developer to provide additional arguments to the `apksigner` tool.
 
     Added in Xamarin.Android 8.2.
+
+-  **AndroidLintEnabled** &ndash; A bool property which allows the developer to 
+    run the android `lint` tool as part of the packaging process.
+
+    -   **AndroidLintEnabledIssues** &ndash; A comma seperated list of lint issues to enable.
+
+    -   **AndroidLintDisabledIssues** &ndash; A comma seperated list of lint issues to disable.
+
+    -   **AndroidLintCheckIssues** &ndash; A comma seperated list of lint issues to check. 
+       Note: only these issues will be checked.
+
+    -   **AndroidLintConfig** &ndash; This is a Build action for a lint style config file. This
+       can be used to enabled/disable issues to check. Multiple files can use this build
+       action as their contents will be merged.
+
+    See [Lint Help](http://www.androiddocs.com/tools/help/lint.html) for more details on
+    the android `lint` tooling.
+
+-  **AndroidGenerateJniMarshalMethods** &ndash; A bool property which
+   enables generating of JNI marshal methods as part of the build
+   process. This greatly reduces the System.Reflection usage in the
+   binding helper code.
+
+   By default this will be set to False. If the developers wish to use
+   the new JNI marshal methods feature, they can set
+
+    ```xml
+    <AndroidGenerateJniMarshalMethods>True</AndroidGenerateJniMarshalMethods>
+    ```
+
+    in their csproj. Alternatively provide the property on the command
+    line via
+
+    `/p:AndroidGenerateJniMarshalMethods=True`
+
+    **Experimental**. Added in Xamarin.Android 9.2.
+    The default value is False.
+
+- **AndroidGenerateJniMarshalMethodsAdditionalArguments** &ndash; A
+   string property which can be used to add additional parameters to
+   the `jnimarshalmethod-gen.exe` invocation.  This is useful for
+   debugging, so that options such as `-v`, `-d`, or `--keeptemp` can
+   be used.
+
+   Default value is empty string. It can be set in the csproj file or
+   on the command line. For example:
+
+    ```xml
+    <AndroidGenerateJniMarshalMethodsAdditionalArguments>-v -d --keeptemp</AndroidGenerateJniMarshalMethodsAdditionalArguments>
+    ```
+
+   or:
+
+    `/p:AndroidGenerateJniMarshalMethodsAdditionalArguments="-v -d --keeptemp"`
+
+    Added in Xamarin.Android 9.2.
+
+- **AndroidMultiDexClassListExtraArgs** &ndash; A string property
+    which allows developers to pass additional arguments to the 
+    `com.android.multidex.MainDexListBuilder` when generating the 
+    `multidex.keep` file. 
+
+    One specific case is if you are getting the following error
+    during the `dx` compilation.
+
+        com.android.dex.DexException: Too many classes in --main-dex-list, main dex capacity exceeded
+
+    If you are getting this error you can add the following to the
+    .csproj.
+
+    ```xml
+    <DxExtraArguments>--force-jumbo </DxExtraArguments>
+    <AndroidMultiDexClassListExtraArgs>--disable-annotation-resolution-workaround</AndroidMultiDexClassListExtraArgs>
+    ```
+
+    this should allow the `dx` step to succeed.
+
+    Added in Xamarin.Android 8.3.
 
 ### Binding Project Build Properties
 
@@ -675,7 +799,7 @@ The following MSBuild properties are used with
 -   **AndroidCodegenTarget** &ndash; A string property which controls the code generation target ABI. Possible values include:
 
     - **XamarinAndroid**: Uses the JNI binding API present in since
-      Mono for Android 1.0. Binding assemblies built with
+      Mono for Android 1.0. Binding assemblies built with 
       Xamarin.Android 5.0 or later can only run on Xamarin.Android 5.0
       or later (API/ABI additions), but the *source* is compatible with
       prior product versions.
@@ -696,9 +820,7 @@ The following MSBuild properties are used with
       - `jmethodID` caching of Java Callable Wrapper constructors for
         managed subclasses.
 
-    The default value is `XamarinAndroid`.
-
-    The default value will change in a future release.
+    The default value is `XAJavaInterop1`.
 
 
 ### Resource Properties
@@ -729,8 +851,41 @@ resources.
     including this property and setting it to `True`. When this
     property is set, the build process pre-crunches the .png files.
 
+    Note: This option is not compatible with the `$(AndroidUseAapt2)`
+    option. If `$(AndroidUseAapt2)` is enabled, this functionality
+    will be disabled. If you wish to continue to use this feature
+    please set `$(AndroidUseAapt2)` to `False`.
+
     **Experimental**. Added in Xamarin.Android 7.0.
 
+-  **AndroidUseAapt2** &ndash; A bool property which allows the developer to
+    control the use of the `aapt2` tool for packaging.
+    By default this will be set to false and we will use `aapt`.
+    If the developer wishes to use the new `aapt2` functionality
+    they can set
+        
+    ```xml
+    <AndroidUseAapt2>True</AndroidUseAapt2>
+    ```
+        
+    in their csproj. Alternatively provide the property on the command line 
+    via
+
+    `/p:AndroidUseAapt2=True`
+
+    Added in Xamarin.Android 8.3.
+
+-   **AndroidAapt2CompileExtraArgs** &ndash; Specifies additional
+    command-line options to pass to the **aapt2 compile** command when
+    processing Android assets and resources.
+
+    Added in Xamarin.Android 9.1.
+
+-   **AndroidAapt2LinkExtraArgs** &ndash; Specifies additional
+    command-line options to pass to the **aapt2 link** command when
+    processing Android assets and resources.
+
+    Added in Xamarin.Android 9.1.
 
 <a name="Signing_Properties" />
 
@@ -887,6 +1042,23 @@ distinct resource names.
 </ItemGroup>
 ```
 
+### AndroidBoundLayout
+
+Indicates that the layout file is to have code-behind generated for it in case when
+the `AndroidGenerateLayoutBindings` property is set to `false`. In all other aspects
+it is identical to `AndroidResource` described above. This action can be used **only**
+with layout files:
+
+```xml
+<AndroidBoundLayout Include="Resources\layout\Main.axml" />
+```
+
+### AndroidFragmentType
+
+Specifies the default fully qualified type to be used for all `<fragment>` layout 
+elements when generating the layout bindings code. The property defaults to the standard
+Android `Android.App.Fragment` type.
+
 
 ### AndroidNativeLibrary
 
@@ -903,8 +1075,8 @@ built for. There are two ways this can be done:
 
 With path sniffing, the parent directory name of the native library is 
 used to specify the ABI that the library targets. Thus, if you add 
-`lib/armeabi/libfoo.so` to the build, then the ABI will be "sniffed" as 
-`armeabi`. 
+`lib/armeabi-v7a/libfoo.so` to the build, then the ABI will be "sniffed" as 
+`armeabi-v7a`. 
 
 
 #### Item Attribute Name
@@ -914,7 +1086,7 @@ used to specify the ABI that the library targets. Thus, if you add
 ```xml
 <ItemGroup>
   <AndroidNativeLibrary Include="path/to/libfoo.so">
-    <Abi>armeabi</Abi>
+    <Abi>armeabi-v7a</Abi>
   </AndroidNativeLibrary>
 </ItemGroup>
 ```
@@ -930,7 +1102,18 @@ which are required to get Google Play and other services working.
 Files with this Build action will be treated in a similar fashion too
 the embedded resources found in Library projects. The .aar will be 
 extracted into the intermediate directory. Then any assets, resource
-and .jar files will be included in the appropriate item groups.  
+and .jar files will be included in the appropriate item groups. 
+
+### AndroidLintConfig
+
+The Build action 'AndroidLintConfig' should be used in conjunction with 
+the `AndroidLintEnabled` build property. Files with this build action
+will be merged together and passed to the android `lint` tooling. They
+should be xml files which contain information on which tests to 
+enabled/disabled.
+
+See the [lint documentation](http://www.androiddocs.com/tools/help/lint.html)
+for more details.
 
 ### Content
 

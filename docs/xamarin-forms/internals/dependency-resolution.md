@@ -11,6 +11,8 @@ ms.date: 07/27/2018
 
 # Dependency resolution in Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/)
+
 _This article explains how to inject a dependency resolution method into Xamarin.Forms so that an application's dependency injection container has control over the creation and lifetime of custom renderers, effects, and DependencyService implementations. The code examples in this article are taken from the [Dependency Resolution using Containers](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/) sample._
 
 In the context of a Xamarin.Forms application that uses the Model-View-ViewModel (MVVM) pattern, a dependency injection container can be used for registering and resolving view models, and for registering services and injecting them into view models. During view model creation, the container injects any dependencies that are required. If those dependencies have not been created, the container creates and resolves the dependencies first. For more information about dependency injection, including examples of injecting dependencies into view models, see [Dependency Injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).

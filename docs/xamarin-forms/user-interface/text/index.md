@@ -11,6 +11,8 @@ ms.date: 10/26/2018
 
 # Text in Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+
 _Using Xamarin.Forms to enter or display text._
 
 Xamarin.Forms has three primary views for working with text:

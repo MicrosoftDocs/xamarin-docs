@@ -11,6 +11,8 @@ ms.date: 11/19/2018
 
 # Xamarin.Forms Button
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos)
+
 _The Button responds to a tap or click that directs an application to carry out a particular task._
 
 The [`Button`](xref:Xamarin.Forms.Button) is the most fundamental interactive control in all of Xamarin.Forms. The `Button` usually displays a short text string indicating a command, but it can also display a bitmap image, or a combination of text and an image. The user presses the `Button` with a finger or clicks it with a mouse to initiate that command.

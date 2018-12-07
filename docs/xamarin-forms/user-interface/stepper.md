@@ -11,6 +11,8 @@ ms.date: 10/17/2018
 
 # Xamarin.Forms Stepper
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
+
 _Use a Stepper for selecting a numeric value from a range of values._
 
 The Xamarin.Forms [`Stepper`](xref:Xamarin.Forms.Stepper) consists of two buttons labeled with minus and plus signs. These buttons can be manipulated by the user to incrementally select a `double` value from a range of values.

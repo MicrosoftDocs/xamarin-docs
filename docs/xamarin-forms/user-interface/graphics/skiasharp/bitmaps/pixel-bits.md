@@ -11,6 +11,8 @@ ms.date: 07/11/2018
 
 # Accessing SkiaSharp bitmap pixel bits
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
 As you saw in the article [**Saving SkiaSharp bitmaps to files**](saving.md), bitmaps are generally stored in files in a compressed format, such as JPEG or PNG. In constrast, a SkiaSharp bitmap stored in memory is not compressed. It is stored as a sequential series of pixels. This uncompressed format facilitates the transfer of bitmaps to a display surface.
 
 The memory block occupied by a SkiaSharp bitmap is organized in a very straightforward manner: It begins with the first row of pixels, from left to right, and then continues with the second row. For full-color bitmaps, each pixel consists of four bytes, which means that the total memory space required by the bitmap is four times the product of its width and height.

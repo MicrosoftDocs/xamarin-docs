@@ -11,6 +11,8 @@ ms.date: 12/11/2017
 
 # ListView Performance
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
+
 When writing mobile applications, performance matters. Users have come to expect smooth scrolling and fast load times. Failing to meet your users' expectations will cost you ratings in the application store, or in the case of a line-of-business application, cost your organization time and money.
 
 Although [`ListView`](xref:Xamarin.Forms.ListView) is a powerful view for displaying data, it has some limitations. Scrolling performance can suffer when using custom cells, especially when they contain deeply nested view hierarchies or use certain layouts that require a lot of measurement. Fortunately, there are techniques you can use to avoid poor performance.

@@ -11,6 +11,8 @@ ms.date: 07/13/2018
 
 # ListView Interactivity
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
+
 ListView supports interacting with the data it presents through the following approaches:
 
 - [**Selection & Taps**](#selectiontaps) &ndash; respond to taps and selections/deselections of items. Enable or disable row selection (enabled by default).

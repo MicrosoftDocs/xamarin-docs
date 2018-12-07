@@ -11,6 +11,8 @@ ms.date: 11/19/2018
 ---
 # Styling Xamarin.Forms apps using Cascading Style Sheets (CSS)
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/)
+
 _Xamarin.Forms supports styling visual elements using Cascading Style Sheets (CSS)._
 
 Xamarin.Forms applications can be styled using CSS. A style sheet consists of a list of rules, with each rule consisting of one or more selectors and a declaration block. A declaration block consists of a list of declarations in braces, with each declaration consisting of a property, a colon, and a value. When there are multiple declarations in  a block, a semi-colon is inserted as a separator. The following code example shows some Xamarin.Forms compliant CSS:
