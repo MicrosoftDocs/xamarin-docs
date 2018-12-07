@@ -56,7 +56,7 @@ This settings page allows the user to change application permissions and perform
 
 # [Android](#tab/android)
 
-App information is taken from the `AndroidManifest.xml` for the follow fields:
+App information is taken from the `AndroidManifest.xml` for the following fields:
 
 - **Build** – `android:versionCode` in `manifest` node
 - **Name** - `android:label` in the `application` node
@@ -65,7 +65,7 @@ App information is taken from the `AndroidManifest.xml` for the follow fields:
 
 # [iOS](#tab/ios)
 
-App information is taken from the `Info.plist` for the follow fields:
+App information is taken from the `Info.plist` for the following fields:
 
 - **Build** – `CFBundleVersion`
 - **Name** - `CFBundleDisplayName` if set, else `CFBundleName`
@@ -74,7 +74,7 @@ App information is taken from the `Info.plist` for the follow fields:
 
 # [UWP](#tab/uwp)
 
-App information is taken from the `Package.appxmanifest` for the follow fields:
+App information is taken from the `Package.appxmanifest` for the following fields:
 
 - **Build** – Uses the `Build` from the `Version` on the `Identity` node
 - **Name** - `DisplayName` on the `Properties` node
