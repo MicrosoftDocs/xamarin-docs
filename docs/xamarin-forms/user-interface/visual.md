@@ -42,7 +42,7 @@ Functionally, the material renderers are no different to the default renderers. 
 Forms.SetFlags("Visual_Experimental");
 ```
 
-In addition, on iOS, your platform project must have the [Xamarin.iOS.MaterialComponents](https://www.nuget.org/packages/Xamarin.iOS.MaterialComponents/) NuGet package installed. On Android, your platform project must use v28 of the support libraries, and set its theme to inherit from a Material Components theme or continue to inherit from an AppCompat theme while adding some new theme attributes to the theme. For more information, see [Getting started with Material Components for Android](https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md).
+In addition, on iOS, your platform project must have the [Xamarin.iOS.MaterialComponents](https://www.nuget.org/packages/Xamarin.iOS.MaterialComponents/) NuGet package installed. On Android, Visual works with API 29 only, your platform project must use v28 of the support libraries, and set its theme to inherit from a Material Components theme or continue to inherit from an AppCompat theme while adding some new theme attributes to the theme. For more information, see [Getting started with Material Components for Android](https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md).
 
 The following screenshots show a user interface that includes the four views for which material renderers exist, but rendered using the default renderers:
 
