@@ -92,7 +92,7 @@ The following XAML shows a simple example of a `Shell` file:
                 <local:HomePage />
             </ShellContent>
         </ShellSection>
-    <ShellItem>
+    </ShellItem>
 </Shell>
 ```
 
