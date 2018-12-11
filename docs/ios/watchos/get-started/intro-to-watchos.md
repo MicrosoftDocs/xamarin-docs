@@ -175,7 +175,7 @@ Check out the documentation from Apple:
 ## Related Links
 
 - [watchOS 3 Catalog (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [watchOS 1 Catalog (sample)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/)
+- [watchOS 1 Catalog (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 - [Setup and Install](~/ios/watchos/get-started/installation.md)
 - [First Watch App video](http://blog.xamarin.com/your-first-watch-kit-app/)
 - [Apple's Developing for Watch Kit guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)

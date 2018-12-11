@@ -175,7 +175,7 @@ It is also possible to use the
 
 ### Example Notification Payload
 
-In the [Watch Kit Catalog](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/) sample
+In the [Watch Kit Catalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) sample
 	there is an example payload JSON file **NotificationPayload.json**
 	(listed below).
 
@@ -203,5 +203,5 @@ In the [Watch Kit Catalog](https://developer.xamarin.com/samples/monotouch/Watch
 ## Related Links
 
 - [WatchNotifications (local notifications) (sample)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)
-- [WatchKitCatalog (sample)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/)
+- [WatchKitCatalog (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 - [Apple's Watch Kit Notifications docs](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

@@ -145,5 +145,5 @@ PresentController (controllerNames, contexts);
 
 ## Related Links
 
-- [WatchKitCatalog (sample)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/)
-- [WatchTables (sample)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchTables/)
+- [WatchKitCatalog (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchTables (sample)](https://developer.xamarin.com//samples/monotouch/watchOS/WatchTables/)

@@ -279,4 +279,4 @@ When testing with a watch, change the watch's language
 
 ## Related Links
 
-- [WatchLocalization (sample)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchLocalization/)
+- [WatchLocalization (sample)](https://developer.xamarin.com//samples/monotouch/watchOS/WatchLocalization/)

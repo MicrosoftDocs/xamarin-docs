@@ -46,7 +46,7 @@ The [Watch Kit Catalog sample](https://developer.xamarin.com/samples/monotouch/w
 
 -----
 
-Download and run the [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/) sample to get started.
+Download and run the [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) sample to get started.
 	Screens from the sample can be found on the [Controls](~/ios/watchos/user-interface/index.md)
 	page.
 

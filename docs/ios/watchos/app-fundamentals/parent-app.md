@@ -172,7 +172,7 @@ Download the C# version [WormHoleSharp](https://github.com/Clancey/WormHoleSharp
 
 ## Related Links
 
-- [GpsWatch (sample)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/)
+- [GpsWatch (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 - [WormHoleSharp (sample)](https://github.com/Clancey/WormHoleSharp)
 - [Apple's WKInterfaceController reference](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
 - [Apple's Sharing Data with Your Containing App](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)
