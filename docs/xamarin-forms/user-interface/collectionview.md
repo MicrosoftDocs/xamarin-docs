@@ -6,7 +6,7 @@ ms.assetid: 2BC9B223-2D5C-4B09-849C-B9D578954557
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/04/2018
+ms.date: 12/11/2018
 ---
 
 # Xamarin.Forms CollectionView
@@ -72,6 +72,22 @@ public class Monkey
     public string ImageUrl { get; set; }
 }
 ```
+
+## Providing a view for the empty state
+
+When the `CollectionView` doesn't have any data to display, a suitable message can be displayed to the user. This is accomplished by setting the `CollectionView.EmptyView` property to an `object` that will be displayed when the collection specified by the `ItemSource` property is empty:
+
+```xaml
+<CollectionView ItemsSource="{Binding EmptyMonkeys}">
+    <CollectionView.EmptyView>
+        <Label Text="No items to display" />
+    </CollectionView.EmptyView>
+</CollectionView>
+```
+
+The `EmptyView` property can be set to a `string`, a binding, or a view, and so can include interactive content if required.
+
+In addition, the `EmptyViewTemplate` property can be set to a `DataTemplate` that will be used to format the `EmptyView`.
 
 ## Defining list item appearance
 
@@ -344,6 +360,24 @@ A `CollectionView` can display its items in a horizontal grid by setting its `It
 By default, a horizontal `GridItemsLayout` will display items in a single row. However, this example sets the `GridItemsLayout.Span` property to 4. This results in a four-row grid, which grows horizontally as new items are added:
 
 [![CollectionView horizontal grid layout](collectionview-images/horizontal-grid.png "CollectionView horizontal grid layout")](collectionview-images/horizontal-grid-large.png#lightbox)
+
+## Scrolling
+
+`CollectionView` can scroll requested items into view with the `ScrollTo` method. This method scrolls the item at the specified index into view:
+
+```csharp
+_collectionView.ScrollTo(12);
+```
+
+Alternatively, an overload of this method can be used to scroll the specified item into view:
+
+```csharp
+var viewModel = BindingContext as MonkeysViewModel;
+var monkey = viewModel.Monkeys.FirstOrDefault(m => m.Name == "Proboscis Monkey");
+_collectionView.ScrollTo(monkey);
+```
+
+Both overloads allow additional arguments to be specified that indicate the group the item is in, the exact position of the item after the scroll has completed (start, center, end), and whether to animate the scroll.
 
 ## Related links
 
