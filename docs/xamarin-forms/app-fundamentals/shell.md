@@ -6,7 +6,7 @@ ms.assetid: 1A674212-72DB-4AA4-B626-A4EC135AD1A0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2018
+ms.date: 12/11/2018
 ---
 
 # Xamarin.Forms Shell
@@ -45,7 +45,7 @@ Within each `ContentPage`, additional `ContentPage` instances can be added to an
 
 ## Bootstrapping a Shell application
 
-A Shell application is bootstrapped by setting the `MainPage` property of the `App` class to a new `Shell` instance:
+A Shell application is bootstrapped by setting the `MainPage` property of the `App` class to an instance of a Shell file:
 
 ```csharp
 namespace TailwindTraders.Mobile
@@ -57,13 +57,13 @@ namespace TailwindTraders.Mobile
             InitializeComponent();
 
             Forms.SetFlags("Shell_Experimental");
-            MainPage = new Shell();
+            MainPage = new TheShell();
         }
     }
 }
 ```
 
-The `Shell` class is a XAML file that describes the visual structure of your application.
+The `TheShell` class is a XAML file that describes the visual structure of your application.
 
 > [!IMPORTANT]
 > Shell is currently experimental, and can only be used by adding `Forms.SetFlags("Shell_Experimental");` to either your `App` class, prior to creating the `Shell` instance, or to your platform project, prior to invoking the `Forms.Init` method.
@@ -78,13 +78,13 @@ A Shell file consists of three hierarchical elements:
 
 None of these elements represent any user interface, but rather the organization of the application's visual structure. Shell will take these elements and produce the navigation user interface for the content.
 
-The following XAML shows a simple example of a `Shell` file:
+The following XAML shows a simple example of a Shell file:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:TailwindTraders"
-       x:Class=" TailwindTraders.Shell"
+       xmlns:local="clr-namespace:TailwindTraders.Mobile.Features.Shell"
+       x:Class="TailwindTraders.Mobile.Features.Shell.TheShell"
        Title="TailwindTraders">
     <ShellItem Title="Home">
         <ShellSection>
@@ -112,8 +112,8 @@ The number of items in the flyout can be increased by adding more `ShellItem` in
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:TailwindTraders"
-       x:Class=" TailwindTraders.Shell"
+       xmlns:local="clr-namespace:TailwindTraders.Mobile.Features.Shell"
+       x:Class="TailwindTraders.Mobile.Features.Shell.TheShell"
        Title="TailwindTraders">
     <ShellItem Title="Home">
         <ShellSection>
@@ -344,7 +344,7 @@ Tabs can be styled using XAML styles, or by supplying a custom renderer. For exa
 
 Shell includes a URI-based navigation experience. URIs provide an improved navigation experience that permits navigation to any page in the application, without having to follow a set navigation hierarchy. In addition, it also provides the ability to navigate backwards without having to visit all of the pages on the navigation stack.
 
-This URI-based navigation is accomplished with routes, which are URI segments used to navigate within the application. The `Shell` file must declare a route scheme, a route host, and a route:
+This URI-based navigation is accomplished with routes, which are URI segments used to navigate within the application. The Shell file must declare a route scheme, a route host, and a route:
 
 ```xaml
 <Shell ...
@@ -357,9 +357,9 @@ This URI-based navigation is accomplished with routes, which are URI segments us
 
 Combined, the `RouteScheme`, `RouteHost`, and `Route` property values form the `app://www.microsoft.com/tailwindtraders` root URI.
 
-Each element in the `Shell` class can also define a route property that can be used in programmatic navigation.
+Each element in the Shell file can also define a route property that can be used in programmatic navigation.
 
-In the `Shell` constructor, or any other location that runs before a route is invoked, additional routes can be explicitly registered for any pages that aren't represented by a Shell element (such as `MenuItem` instances):
+In the Shell file constructor, or any other location that runs before a route is invoked, additional routes can be explicitly registered for any pages that aren't represented by a Shell element (such as `MenuItem` instances):
 
 ```csharp
 Routing.RegisterRoute("productcategory", typeof(ProductCategoryPage));
