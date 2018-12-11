@@ -301,64 +301,6 @@ You can query both the GREF and WREF counts by querying the `JniRuntime` object.
 
 
 
-## Offline Activation
-
-If you're unable to activate Xamarin.Android on Windows, or unable to
-install the full version of Xamarin.Android on Mac OS X, please see the [Offline Activation](~/android/get-started/installation/index.md) page.
-
-
-
-## Can't upgrade to Indie/Business from Trial Account
-
-If you recently purchased Xamarin.Android and previously started a Xamarin.Android Trial, you may need to complete the following steps to get this license change picked up by Visual Studio for Mac or Visual Studio.
-
--  Close Visual Studio for Mac/Visual Studio
--  Remove all files from ~/Library/MonoAndroid on Mac or %PROGRAMDATA%\Mono for Android\License\ for Windows
--  Re-open Visual Studio for Mac/Visual Studio and build a Xamarin.Android project
-
-
-This should get you up and running. If you continue to have problems, you may want to try an [Offline Activation](~/android/get-started/installation/index.md) to complete the activation of your workstation.
-
-
-
-## Receiving 'Activation Incomplete Error Message
-
-This issue may occur when using Xamarin.Android for Visual Studio. To resolve this issue, please send the logs from the following location to *contact@xamarin.com*.
-
--  Log location: **%LocalAppData%\\Xamarin\\Logs**
-
-
-
-
-## Receiving 'Error Retrieving Update Information' Error Message
-
-From time to time, an update will fail with this following error, which will often occur when checking for updates:
-
-A majority of the time, this error can be resolved simply by logging out of your Xamarin account, and then logging back in.
-
-To accomplish this, please find your platform of choice below and follow the steps:
-
-**On Mac:**
-1. Open Visual Studio for Mac
-2. Select Visual Studio for Mac > Account...
-3. Click Log Out
-4. Click Log In
-5. Enter Your Credentials
-6. Check for Updates
-
-**On PC using Visual Studo:**
-1. Open Visual Studio
-2. Select Tools > Xamarin Account
-3. Click Log Out
-4. Click Log In
-5. Enter Your Credentials
-6. Check for Updates
-
-If this error message continues to appear, please e-mail **contact@xamarin.com**.
-
-
-
-
 ## Android Debug Logs
 
 The [Android Debug Logs](~/android/deploy-test/debugging/android-debug-log.md) may provide additional context regarding any runtime errors you're
