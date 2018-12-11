@@ -14,7 +14,7 @@ abstract:
     items:
     - href: ~/xamarin-forms/samples/
       text: Xamarin.Forms Samples
-    - href: https://developer.xamarin.com/releases/xamarin-forms/
+    - href: https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/
       text: Release Notes
     - href: /visualstudio/
       text: Visual Studio 

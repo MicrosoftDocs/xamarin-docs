@@ -14,7 +14,7 @@ abstract:
     items:
     - href: ~/android/samples/
       text: Android Samples
-    - href: https://developer.xamarin.com/releases/android/
+    - href: https://docs.microsoft.com/xamarin/android/release-notes/
       text: Release Notes
     - href: https://developers.google.com/
       text: Googles's Developer Documentation

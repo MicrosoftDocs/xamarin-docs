@@ -649,6 +649,6 @@
             - name: Packaging
               href: wear/deploy-test/packaging.md
     - name: Release Notes
-      href: https://developer.xamarin.com/releases/android/
+      href: https://docs.microsoft.com/xamarin/android/release-notes/
     - name: Samples
       href: samples/index.yml

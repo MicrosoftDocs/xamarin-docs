@@ -14,7 +14,7 @@ abstract:
     items:
     - href: ~/ios/samples/index.yml
       text: iOS Samples
-    - href: https://developer.xamarin.com/releases/ios/
+    - href: https://docs.microsoft.com/xamarin/ios/release-notes/
       text: Release Notes
     - href: https://developer.apple.com/documentation/
       text: Apple's Developer Documentation

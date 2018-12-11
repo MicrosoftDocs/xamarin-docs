@@ -441,5 +441,5 @@
 #### [Assemblies](tvos/internals/assemblies.md)
 #### [Frameworks](tvos/internals/frameworks.md)
 
-## [Release Notes](https://developer.xamarin.com/releases/ios/)
+## [Release Notes](https://docs.microsoft.com/xamarin/ios/release-notes/)
 ## [Samples](samples/index.yml)

@@ -13,7 +13,7 @@ abstract:
     items:
     - href: https://visualstudio.com/
       text: Visual Studio
-    - href: https://developer.xamarin.com/releases/#mac
+    - href: https://docs.microsoft.com/xamarin/mac/release-notes/
       text: Release Notes
 sections:
 - title: Tools

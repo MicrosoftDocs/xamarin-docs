@@ -44,4 +44,4 @@ for Mac.
 ## Related links
 
 - [Download Xcode 10](https://developer.apple.com/download/)
-- [Xamarin.Mac 5.0 release notes](https://developer.xamarin.com/releases/mac/xamarin.mac_5/xamarin.mac_5.0/)
+- [Xamarin.Mac 5.0 release notes](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)

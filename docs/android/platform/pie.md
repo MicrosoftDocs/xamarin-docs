@@ -30,7 +30,7 @@ of the key Android Pie features.
 
 Xamarin.Android 9.0 provides support for Android Pie. For more
 information about Xamarin.Android support for Android Pie, see the
-[Android P Developer Preview 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1)
+[Android P Developer Preview 3](https://docs.microsoft.com/xamarin/android/release-notes/9/9.0/#android-p-dp1)
 release notes.
 
 ## Requirements

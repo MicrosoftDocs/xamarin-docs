@@ -64,4 +64,3 @@ on the [NuGet GitHub repository](https://github.com/NuGet/Home/wiki/NuGetizer-30
 - [NuGetizer-3000 Use Cases](https://github.com/NuGet/Home/wiki/NuGetizer-Core-Scenarios)
 - [Manually Create NuGet Packages for Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
 - [NuGet Documentation](https://docs.microsoft.com/nuget/)
-- [Release Notes](https://developer.xamarin.com/releases/studio/xamarin.studio_6.2/xamarin.studio_6.2/#NuGetizer_3000)
