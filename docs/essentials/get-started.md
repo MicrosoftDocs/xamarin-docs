@@ -43,9 +43,6 @@ Xamarin.Essentials is available as a NuGet package that can be added to any exis
 
     In the Solution Explorer panel, right click on the project name and select **Add > Add NuGet Packages...**. Search for **Xamarin.Essentials** and install the package into **ALL** projects including Android, iOS, and .NET Standard libraries.
 
-    > [!TIP]
-    > Check the **Show pre-release packages** box while the [**Xamarin.Essentials** NuGet](https://www.nuget.org/packages/Xamarin.Essentials) is in preview.
-
     -----
 
 4. Add a reference to Xamarin.Essentials in any C# class to reference the APIs.
