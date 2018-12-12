@@ -556,23 +556,3 @@ To check the build action, right click on the .xib file and choose **Build Actio
 When including 3rd party libraries in your Xamarin.iOS app, you might get an error in the form "System.NotSupportedException: No data is available for encoding 437" when trying to compile and run the app. For example, libraries, such as `Ionic.Zip.ZipFile`, may throw this exception during operation.
 
 This can be solved by opening the options for the Xamarin.iOS project, going to **iOS Build** > **Internationalization** and checking the **West** internationalization.
-
-
-
-<a name="Can't_upgrade_to_Indie/Business_from_Trial_Account" />
-
-
-## Can't upgrade to Indie/Business from Trial Account
-
-If you recently purchased Xamarin.iOS and previously started a Xamarin.iOS Trial, you may need to complete the following steps to get this license change picked up by Visual Studio for Mac or Visual Studio.
-
--  Close Visual Studio for Mac/Visual Studio
--  Remove all files from ~/Library/MonoTouch on Mac or %PROGRAMDATA%\MonoTouch\License\ for Windows
--  Re-open Visual Studio for Mac/Visual Studio and build a Xamarin.iOS project
-
-
-## Receiving 'Activation Incomplete' Error Message
-
-This issue may occur when using Xamarin.iOS for Visual Studio. To resolve this issue, please send the logs from the following location to [contact@xamarin.com](mailto:contact@xamarin.com).
-
--  Log location: %LocalAppData%/Xamarin/Logs
