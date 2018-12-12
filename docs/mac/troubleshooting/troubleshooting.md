@@ -106,10 +106,6 @@ Enter `Entitlements` for the name and click the **New** button. If your project 
 
 [![Verifying the overwrite of a file](troubleshooting-images/entitlements04.png "Verifying the overwrite of a file")](troubleshooting-images/entitlements04-large.png#lightbox)
 
-## Contacting support (business or enterprise licenses)
-
-If you have a business or enterprise license, you are eligible to request help directly from Xamarin engineers via support tickets. See [xamarin.com/support](http://xamarin.com/support) for details.
-
 ## Community support on the forums
 
 The community of developers using Xamarin products is amazing and many visit our [Xamarin.Mac forums](http://forums.xamarin.com/categories/mac) to share experiences and their expertise. In addition, Xamarin engineers periodically visit the forum to help.
