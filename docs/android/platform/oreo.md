@@ -98,7 +98,7 @@ To add Android Oreo support to Visual Studio, do the following:
 -----
 
 For more information about Xamarin support for Android Oreo, see the
-[Xamarin.Android 8.0 release notes](https://developer.xamarin.com/releases/android/xamarin.android_8/xamarin.android_8.0/).
+[Xamarin.Android 8.0 release notes](https://docs.microsoft.com/xamarin/android/release-notes/8/8.0/).
 
 
 

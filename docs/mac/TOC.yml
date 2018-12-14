@@ -222,6 +222,6 @@
         - name: Error messages (mmp)
           href: troubleshooting/mmp-errors.md
     - name: Release Notes
-      href: https://developer.xamarin.com/releases/mac/
+      href: https://docs.microsoft.com/xamarin/mac/release-notes/
     - name: Samples
       href: samples/index.yml

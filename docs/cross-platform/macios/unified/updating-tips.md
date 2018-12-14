@@ -3,18 +3,14 @@ title: "Tips for Updating Code to the Unified API"
 description: "This document discusses common errors and various tips useful when updating an application to use Xamarin's Unified API."
 ms.prod: xamarin
 ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
+ms.date: 03/29/2017
 author: asb3993
 ms.author: amburns
 ---
 
 # Tips for Updating Code to the Unified API
 
-Using the automated migration tool in Visual Studio for Mac
-	will convert iOS and Mac projects to reference the
-	Unified API (either Xamarin.iOS.dll or Xamarin.Mac.dll)
-	and make a lot of the required code changes for you
-	(see the [Xamarin Studio release notes section
-	'Classic to Unified API code migration tool'](http://developer.xamarin.com/releases/studio/xamarin.studio_5.7/xamarin.studio_5.7/) for specific details).
+When updating older Xamarin solutions to the Unified API, the following errors might be encountered.
 
 ## NSInvalidArgumentException Could Not Find storyboard Error
 

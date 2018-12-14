@@ -14,7 +14,7 @@ abstract:
     items:
     - href: ~/mac/samples/index.yml
       text: Mac Samples
-    - href: https://developer.xamarin.com/releases/mac/
+    - href: https://docs.microsoft.com/xamarin/mac/release-notes/
       text: Release Notes
     - href: https://developer.apple.com/documentation/
       text: Apple's Developer Documentation

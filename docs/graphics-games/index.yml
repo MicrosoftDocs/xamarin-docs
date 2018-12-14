@@ -13,7 +13,7 @@ abstract:
     items:
     - href: https://developer.xamarin.com/samples/
       text: Samples
-    - href: https://developer.xamarin.com/releases/
+    - href: https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/
       text: Release Notes
 sections:
 - title: 
