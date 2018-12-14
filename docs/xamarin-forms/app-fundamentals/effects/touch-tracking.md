@@ -6,7 +6,7 @@ ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/01/2017
+ms.date: 12/14/2018
 ---
 
 # Invoking Events from Effects
@@ -348,6 +348,9 @@ static Dictionary<long, TouchRecognizer> idToTouchDictionary =
 ```
 
 Much of the structure of this `TouchRecognizer` class is similar to the Android `TouchEffect` class.
+
+> [!IMPORTANT]
+> Many of the views in `UIKit` do not have touch enabled by default. Touch can be enabled by adding `view.UserInteractionEnabled = true;` to the `OnAttached` override in the `TouchEffect` class in the iOS project. This should occur after the `UIView` is obtained that corresponds to the element the effect is attached to.
 
 ## Putting the Touch Effect to Work
 
