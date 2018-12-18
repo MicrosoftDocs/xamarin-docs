@@ -22,7 +22,7 @@ sections:
 - title: Get Started
   items:
   - type: paragraph
-    text: Learn how to build your first Xamarin.Forms app with Xamarin and C#, targetting Android, iOS, and the Universal Windows Platform.
+    text: Learn how to build your first Xamarin.Forms app with Xamarin and C#, targeting Android, iOS, and the Universal Windows Platform.
   - type: list
     style: icon48
     items:
