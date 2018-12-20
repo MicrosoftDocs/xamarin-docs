@@ -214,22 +214,23 @@ MyIcon.Image = NSImage.ImageNamed ("MessageIcon");
 Add the following public function to your View Controller:
 
 ```csharp
-public NSImage ImageTintedWithColor (NSImage image, NSColor tint)
-{
-	var tintedImage = image.Copy () as NSImage;
-	var frame = new CGRect (0, 0, image.Size.Width, image.Size.Height);
+public NSImage ImageTintedWithColor(NSImage sourceImage, NSColor tintColor)
+	=> NSImage.ImageWithSize(sourceImage.Size, false, rect => {
+		// Draw the original source image
+		sourceImage.DrawInRect(rect, CGRect.Empty, NSCompositingOperation.SourceOver, 1f);
 
-	// Apply tint
-	tintedImage.LockFocus ();
-	tint.Set ();
-	NSGraphics.RectFill (frame, NSCompositingOperation.SourceAtop);
-	tintedImage.UnlockFocus ();
-	tintedImage.Template = false;
+		// Apply tint
+		tintColor.Set();
+		NSGraphics.RectFill(rect, NSCompositingOperation.SourceAtop);
 
-	// Return tinted image
-	return tintedImage;
-}
+		return true;
+	});
 ```
+
+> [!IMPORTANT]
+> Particularly with the advent of Dark Mode in macOS Mojave, it is important to avoid the `LockFocus` API when reating custom-rendered `NSImage` objects. Such images become static and will not be automatically updated to account for appearance or display density changes.
+>
+> By employing the handler-based mechanism above, re-rendering for dynamic conditions will happen automatically when the `NSImage` is hosted, for example, in an `NSImageView`.
 
 Finally, to tint a Template Image, call this function against the image to colorize:
 
