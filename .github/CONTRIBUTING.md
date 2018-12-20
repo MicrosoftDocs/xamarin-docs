@@ -47,7 +47,7 @@ For images and other static resources, add them to the subfolder called **<mypag
           /mypage-images
               some-image.png
 
-Be sure to follow the proper Markdown syntax. See the [style guide](./contributing-guidelines/template.md) for more information.
+Be sure to follow the proper Markdown syntax. See the [style guide](../contributing-guidelines/template.md) for more information.
 
 The actual submission steps are the same as for small changes ([above](#process-for-contributing)).
 
@@ -62,8 +62,8 @@ On a certain cadence, we push all commits from master branch into the live site 
 Below is a short list of guiding rules that you should keep in mind when you are contributing to the .NET documentation.
 
 - **DON'T** surprise us with big pull requests. Instead, file an issue and start a discussion so we can agree on a direction before you invest a large amount of time.
-- **DO** read the [style guide](./contributing-guidelines/template.md) and [voice and tone](./contributing-guidelines/voice-tone.md) guidelines.
-- **DO** use the [template](./contributing-guidelines/template.md) file as the starting point of your work.
+- **DO** read the [style guide](../contributing-guidelines/template.md) and [voice and tone](../contributing-guidelines/voice-tone.md) guidelines.
+- **DO** use the [template](../contributing-guidelines/template.md) file as the starting point of your work.
 - **DO** create a separate branch on your fork before working on the articles.
 - **DO** follow the [GitHub Flow workflow](https://guides.github.com/introduction/flow/).
 - **DO** blog and tweet (or whatever) about your contributions, frequently!
