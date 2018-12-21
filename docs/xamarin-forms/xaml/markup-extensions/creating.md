@@ -1,6 +1,6 @@
 ---
 title: "Creating XAML Markup Extensions"
-description: "This article explains how to define your own custom Xamarin.Forms XAML markup extensions. A XAML markup extension is a class that implements the IMarkupExtension IMarkupExtension interface."
+description: "This article explains how to define your own custom Xamarin.Forms XAML markup extensions. A XAML markup extension is a class that implements the IMarkupExtension or IMarkupExtension<T> interface."
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms

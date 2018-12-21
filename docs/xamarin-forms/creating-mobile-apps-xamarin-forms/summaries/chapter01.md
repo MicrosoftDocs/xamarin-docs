@@ -20,7 +20,7 @@ One of the most unpleasant jobs in programming is porting a code base from one p
 
 ## Cross-platform mobile development
 
-This problem is common when targeting mobile platforms. Currently, there exist two major mobile platforms, the Apple family of iPhones and iPads running the iOS operating system, and the Android operating system that runs on a variety of phones and tablets. Another significant platform is Microsoft's Universal Windows Platform (UWP), which allows a single program to target both Windows 10 and Windows 10 Mobile.
+This problem is common when targeting mobile platforms. Currently, there exist two major mobile platforms, the Apple family of iPhones and iPads running the iOS operating system, and the Android operating system that runs on a variety of phones and tablets. Another significant platform is Microsoft's Universal Windows Platform (UWP), which allows a single program to target both Windows 10.
 
 A software vendor that wishes to target these platforms must deal with different user-interface paradigms, three different development environments, three different programming interfaces, and&mdash;perhaps most awkwardly&mdash;three different programming languages: Objective-C for the iPhone and iPad, Java for Android, and C# for Windows.
 
@@ -37,16 +37,14 @@ Developers can use the Xamarin platform to write applications in C# that target 
 
 ## Introducing Xamarin.Forms
 
-When targeting multiple mobile platforms, Xamarin.Forms allows even more code sharing. A single program written for Xamarin.Forms can target five distinct platforms:
+When targeting multiple mobile platforms, Xamarin.Forms allows even more code sharing. A single program written for Xamarin.Forms can target these platforms:
 
 - iOS for programs that run on the iPhone, iPad, and iPod touch
 - Android for programs that run on Android phones and tablets
-- the Universal Windows Platform to target Windows 10 and Windows 10 Mobile
-- the Windows Runtime API of Windows 8.1
-- the Windows Runtime API of Windows Phone 8.1
+- the Universal Windows Platform to target Windows 10
 
 > [!NOTE]
-> Xamarin.Forms no longer supports Windows 8.1, Windows Phone 8.1, or Windows 10 Mobile, but Xamarin.Forms applications do run on the Windows 10 desktop. There is also preview support for the [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK#](~/xamarin-forms/platform/gtk.md), and [Tizen](/xamarin-forms/platform/tizen.md) platforms.
+> Xamarin.Forms no longer supports Windows 8.1, Windows Phone 8.1, or Windows 10 Mobile, but Xamarin.Forms applications do run on the Windows 10 desktop. There is also preview support for the [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK#](~/xamarin-forms/platform/gtk.md), and [Tizen](~/xamarin-forms/platform/tizen.md) platforms.
 
 The bulk of a Xamarin.Forms program exists in a library or an SAP. Each of the platforms consists of a small application stub that calls into this shared code.
 
@@ -54,10 +52,7 @@ The Xamarin.Forms APIs map to native controls on each platform, so that each pla
 
 [![Triple screenshot of platform visuals sharing](images/ch01fg03-small.png "Xamarin.Forms Controls on Each Platform")](images/ch01fg03-large.png#lightbox "Xamarin.Forms Controls on Each Platform")
 
-The screenshots from left to right show an iPhone, an Android phone, and a Windows 10 Mobile phone.
-
-> [!NOTE]
-> Xamarin.Forms no longer supports Windows 10 Mobile.
+The screenshots from left to right show an iPhone and an Android phone:
 
 On each screen, the page contains a Xamarin.Forms [`Label`](xref:Xamarin.Forms.Label) for displaying text, a [`Button`](xref:Xamarin.Forms.Button) for initiating actions, a [`Switch`](xref:Xamarin.Forms.Switch) for choosing an on/off value, and a [`Slider`](xref:Xamarin.Forms.Slider) for specifying a value within a continuous range. All four of those views are children of a [`StackLayout`](xref:Xamarin.Forms.StackLayout) on a [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 

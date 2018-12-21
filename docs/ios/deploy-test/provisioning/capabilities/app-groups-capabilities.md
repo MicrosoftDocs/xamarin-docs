@@ -29,12 +29,12 @@ To create a new App Group, do the following:
 
 1.	Visit Apple's [iOS Developer Center](https://developer.apple.com/account/), open your **Account** and log in.
 2.	Select **Certificates, IDs & Profiles**.
-3.	Under **Identifiers** select **App Groups** and click the **+** button to create a new group.
+3.	Under **Identifiers** select **App Groups** and click the **+** button to create a new group.
 4.	Enter a **Name** and an **Identifier** for the new group and click the **Continue** button: 
    
     ![Add App Group details](app-groups-capabilities-images/image52.png)
 
-5.	Click the **Register** button to create the group and the **Done** to return to the list of registered App Groups.
+5.	Click the **Register** button to create the group and the **Done** to return to the list of registered App Groups.
 
 ## Configure an App to use App Groups
 
@@ -43,15 +43,15 @@ With the App Group created, configure the App IDs so that the apps can use it.
 Do the following:
 
 1.	Visit Apple's [iOS Developer Center](https://developer.apple.com/account/), and log in with an Apple Developer Account.
-2.	From the **Program Resources** menu, select **Certificates, IDs & Profiles**.
-3.	Under **Identifiers** select **App IDs** and click the **+** button to create a new ID.
+2.	From the **Program Resources** menu, select **Certificates, IDs & Profiles**.
+3.	Under **Identifiers** select **App IDs** and click the **+** button to create a new ID.
 4.	Enter a Name for the App ID and give it an Explicit App ID.
-5.	Under **App Services** enable **App Groups**, then click the Continue button:
+5.	Under **App Services** enable **App Groups**, then click the Continue button:
 
     ![Add App Group App Services](app-groups-capabilities-images/image53.png)
 
 6.	Verify the settings and click the **Register** button to create the App ID.
-7.	Click the **Done** button to return to the list of registered App IDs.
+7.	Click the **Done** button to return to the list of registered App IDs.
 8.	Select the newly created App ID from the list and click the **Edit** button:
 
     ![Select App ID from list](app-groups-capabilities-images/image54.png)
@@ -64,7 +64,7 @@ Do the following:
 
     ![Add App Group](app-groups-capabilities-images/image56.png)
 
-11.	Click the **Assign** button, then the **Done** button to return to the list of registered App IDs.
+11.	Click the **Assign** button, then the **Done** button to return to the list of registered App IDs.
 12.	Repeat these steps for any Apps (or Extensions) that will be using the App Group.
 
 ## Next Steps
