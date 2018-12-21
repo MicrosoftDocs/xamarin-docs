@@ -66,7 +66,7 @@ The `Slider` contains an `x:Name` attribute that is referenced by the two `Label
 
 The `x:Reference` binding extension defines a property named `Name` to set to the name of the referenced element, in this case `slider`. However, the `ReferenceExtension` class that defines the `x:Reference` markup extension also defines a `ContentProperty` attribute for `Name`, which means that it isn’t explicitly required. Just for variety, the first `x:Reference` includes “Name=” but the second does not:
 
-```csharp
+```xaml
 BindingContext="{x:Reference Name=slider}"
 …
 BindingContext="{x:Reference slider}"
@@ -74,7 +74,7 @@ BindingContext="{x:Reference slider}"
 
 The `Binding` markup extension itself can have several properties, just like the `BindingBase` and `Binding` class. The `ContentProperty` for `Binding` is `Path`, but the “Path=” part of the markup extension can be omitted if the path is the first item in the `Binding` markup extension. The first example has “Path=” but the second example omits it:
 
-```csharp
+```xaml
 Rotation="{Binding Path=Value}"
 …
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
@@ -82,7 +82,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 The properties can all be on one line or separated into multiple lines:
 
-```csharp
+```xaml
 Text="{Binding Value,
                StringFormat='The angle is {0:F0} degrees'}"
 ```
@@ -91,7 +91,7 @@ Do whatever is convenient.
 
 Notice the `StringFormat` property in the second `Binding` markup extension. In Xamarin.Forms, bindings do not perform any implicit type conversions, and if you need to display a non-string object as a string you must provide a type converter or use `StringFormat`. Behind the scenes, the static `String.Format` method is used to implement `StringFormat`. That’s potentially a problem, because .NET formatting specifications involve curly braces, which are also used to delimit markup extensions. This creates a risk of confusing the XAML parser. To avoid that, put the entire formatting string in single quotation marks:
 
-```csharp
+```xaml
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 ```
 
