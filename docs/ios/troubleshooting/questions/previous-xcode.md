@@ -17,7 +17,7 @@ The current version of Xcode can be accessed either through the App store, or th
 
 ## Older versions
 
-Older versions of Xcode can be found by logging into the [Apple Developer Downloads page](https://developer.apple.com/downloads/) and searching for the version of Xcode you need.
+Older versions of Xcode can be found by logging into the [Apple Developer Downloads page](https://developer.apple.com/downloads/more/) and searching for the version of Xcode you need.
 
 ## Related links
 - [Xamarin System Requirements](~/cross-platform/get-started/requirements.md)
