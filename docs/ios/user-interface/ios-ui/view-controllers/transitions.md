@@ -46,7 +46,7 @@ However, setting the `ModalPresentationStyle` and `TransitioningDelegate` result
 showTwo.TouchUpInside += (object sender, EventArgs e) => {
 
 	controllerTwo = new ControllerTwo () {
-	    ModalPresentationStyle = UIModalPresentationStyle.Custom;
+	    ModalPresentationStyle = UIModalPresentationStyle.Custom
         };
 
 	transitioningDelegate = new TransitioningDelegate ();
@@ -94,22 +94,22 @@ public class CustomTransitionAnimator : UIViewControllerAnimatedTransitioning
 	}
 
 	public override void AnimateTransition (IUIViewControllerContextTransitioning transitionContext)
-		{
-			var inView = transitionContext.ContainerView;
-			var toVC = transitionContext.GetViewControllerForKey (UITransitionContext.ToViewControllerKey);
-			var toView = toVC.View;
+	{
+		var inView = transitionContext.ContainerView;
+		var toVC = transitionContext.GetViewControllerForKey (UITransitionContext.ToViewControllerKey);
+		var toView = toVC.View;
 
-			inView.AddSubview (toView);
+		inView.AddSubview (toView);
 
-			var frame = toView.Frame;
-			toView.Frame = CGRect.Empty;
+		var frame = toView.Frame;
+		toView.Frame = CGRect.Empty;
 
-			UIView.Animate (TransitionDuration (transitionContext), () => {
-				toView.Frame = new CGRect (20, 20, frame.Width - 40, frame.Height - 40);
-			}, () => {
-				transitionContext.CompleteTransition (true);
-			});
-		}
+		UIView.Animate (TransitionDuration (transitionContext), () => {
+			toView.Frame = new CGRect (20, 20, frame.Width - 40, frame.Height - 40);
+		}, () => {
+			transitionContext.CompleteTransition (true);
+		});
+	}
 }
 ```
 
@@ -156,8 +156,8 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 	};
 
 	viewController = new ImagesCollectionViewController (layout) {
-	        UseLayoutToLayoutNavigationTransitions = false;
-        }
+	        UseLayoutToLayoutNavigationTransitions = false
+        };
 
 	navController = new UINavigationController (viewController);
 
@@ -179,13 +179,13 @@ ImagesCollectionViewController controller2;
 public override void ItemSelected (UICollectionView collectionView, NSIndexPath indexPath)
 {
 	// UseLayoutToLayoutNavigationTransitions when item is selected
-		circleLayout = new CircleLayout (Monkeys.Instance.Count){
-				ItemSize = new CGSize (100, 100)
-			};
+	circleLayout = new CircleLayout (Monkeys.Instance.Count){
+		ItemSize = new CGSize (100, 100)
+	};
 			
 	controller2 = new ImagesCollectionViewController (circleLayout) {
-	    UseLayoutToLayoutNavigationTransitions = true;
-        }
+	    UseLayoutToLayoutNavigationTransitions = true
+        };
 
 	NavigationController.PushViewController (controller2, true);
 }
