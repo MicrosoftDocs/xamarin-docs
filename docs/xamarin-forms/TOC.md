@@ -30,6 +30,7 @@
 ### [Resource Dictionaries](xaml/resource-dictionaries.md)
 ### [XAML Standard (Preview)](xaml/standard/index.md)
 #### [Controls](xaml/standard/controls.md)
+### [Loading XAML at Runtime](xaml/runtime-load.md)
 ## [Application Fundamentals](app-fundamentals/index.md)
 ### [Accessibility](app-fundamentals/accessibility/index.md)
 #### [Automation Properties](app-fundamentals/accessibility/automation-properties.md)
