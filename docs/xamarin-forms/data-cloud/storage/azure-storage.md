@@ -1,12 +1,12 @@
 ---
 title: "Storing and Accessing Data in Azure Storage"
-description: "Azure Storage is a scalable cloud storage solution that can be used to store unstructured, and structured data. This article demonstrates how to use Xamarin.Forms to store text and binary data in Azure Storage, and how to access the data."
+description: "Azure Storage is a scalable cloud storage solution that can be used to store unstructured, and structured data. This article explains how to use Xamarin.Forms to store text and binary data in Azure Storage, and how to access the data."
 ms.prod: xamarin
 ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2017
+ms.date: 12/28/2018
 ---
 
 # Storing and Accessing Data in Azure Storage
@@ -14,8 +14,6 @@ ms.date: 06/16/2017
 [![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
 
 _Azure Storage is a scalable cloud storage solution that can be used to store unstructured, and structured data. This article demonstrates how to use Xamarin.Forms to store text and binary data in Azure Storage, and how to access the data._
-
-## Overview
 
 Azure Storage provides four storage services:
 
@@ -64,9 +62,6 @@ The process for integrating an Azure Storage account into a Xamarin.Forms applic
 1. Add the [Azure Storage Client Library](https://www.nuget.org/packages/WindowsAzure.Storage/) to the Xamarin.Forms application.
 1. Configure the storage connection string. For more information, see [Connecting to Azure Storage](#connecting).
 1. Add `using` directives for the `Microsoft.WindowsAzure.Storage` and `Microsoft.WindowsAzure.Storage.Blob` namespaces to classes that will access Azure Storage.
-
-> [!NOTE]
-> While this sample uses a Shared Access Project, the Azure Storage Client Library now also supports being consumed from a Portable Class Library (PCL) project.
 
 <a name="connecting" />
 
@@ -258,15 +253,10 @@ public static async Task<bool> DeleteFileAsync(ContainerType containerType, stri
 
 After retrieving a container reference, the method retrieves a blob reference for the specified blob. The blob is then deleted with the `DeleteIfExistsAsync` method.
 
-## Summary
-
-This article demonstrated how to use Xamarin.Forms to store text and binary data in Azure Storage, and how to access the data. Azure Storage is a scalable cloud storage solution that can be used for storing unstructured, and structured data.
-
-
 ## Related Links
 
 - [Azure Storage (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
 - [Introduction to Storage](https://azure.microsoft.com/documentation/articles/storage-introduction/)
 - [How to use Blob Storage from Xamarin](https://azure.microsoft.com/documentation/articles/storage-xamarin-blob-storage/)
 - [Using Shared Access Signatures (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
-- [Windows Azure Storage](https://www.nuget.org/packages/WindowsAzure.Storage/)
+- [Windows Azure Storage (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)
