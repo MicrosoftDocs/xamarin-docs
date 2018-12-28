@@ -116,7 +116,7 @@ How the Intent is dispatched depends on the type of service and will be discusse
 
 ### Creating an Intent Filter for Implicit Intents
 
-To associate a service with a implicit Intent, an Android app must provide some meta-data to identify the capabilities of the service. This meta-data is provided by  _intent filters_. Intent filters contain some information, such as an action or a type of data, that must be present in an Intent to start a service. In Xamarin.Android, the intent filter is registered in **AndroidManifest.xml** by decorating a service with the [`IntentFilterAttribute`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/). For example, the following code adds an intent filter with an associated action of `com.xamarin.DemoService`:
+To associate a service with an implicit Intent, an Android app must provide some meta-data to identify the capabilities of the service. This meta-data is provided by  _intent filters_. Intent filters contain some information, such as an action or a type of data, that must be present in an Intent to start a service. In Xamarin.Android, the intent filter is registered in **AndroidManifest.xml** by decorating a service with the [`IntentFilterAttribute`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/). For example, the following code adds an intent filter with an associated action of `com.xamarin.DemoService`:
 
 ```csharp
 [Service]
