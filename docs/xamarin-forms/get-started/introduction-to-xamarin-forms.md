@@ -421,7 +421,7 @@ class EmployeeCell : ViewCell
         var twitterLabel = new Label
         {
            HorizontalOptions = LayoutOptions.FillAndExpand,
-           Font = Fonts.Twitter
+           FontSize = 24
         };
         twitterLabel.SetBinding(Label.TextProperty, "Twitter");
 
