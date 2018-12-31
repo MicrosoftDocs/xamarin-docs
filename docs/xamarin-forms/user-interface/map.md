@@ -228,7 +228,7 @@ var pin = new Pin {
 map.Pins.Add(pin);
 ```
 
- `PinType` can be set to one of the following values, which may affect the way the pin in rendered (depending on the platform):
+ `PinType` can be set to one of the following values, which may affect the way the pin is rendered (depending on the platform):
 
 -  Generic
 -  Place
