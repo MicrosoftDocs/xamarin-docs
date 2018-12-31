@@ -92,7 +92,7 @@ applications are built against the Silverlight/Moonlight .NET Profile. In fact,
 the Xamarin Mobile profile is equivalent to the Silverlight 4.0 profile with a
 bunch of BCL classes added back in.
 
-For a full list of available assemblies and classes, see the [Xamarin.iOS Assembly List](~/cross-platform/internals/available-assemblies.md) and the [Xamarin.Android Assembly List](~/cross-platform/internals/available-assemblies?context=xamarin/android)
+For a full list of available assemblies and classes, see the [Xamarin.iOS Assembly List](~/cross-platform/internals/available-assemblies.md?context=xamarin/ios) and the [Xamarin.Android Assembly List](~/cross-platform/internals/available-assemblies.md?context=xamarin/android)
 
 In addition to the BCL, these .dlls include wrappers for nearly the entire
 iOS SDK and Android SDK that allows the underlying SDK APIs to be invoked
