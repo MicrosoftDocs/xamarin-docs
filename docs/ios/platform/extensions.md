@@ -446,7 +446,7 @@ For more information, please see the [App Groups](~/ios/deploy-test/provisioning
 
 ## Precautions and considerations
 
-Extensions have significantly less memory available to them than do apps. They are expected to perform rapidly and with minimal intrusion to the user and the app they are hosted in. However, an Extension should also provide a distinctive, useful function to the consuming app with a branded UI that allow the user to identify the Extension's developer or Container app they belong to.
+Extensions have significantly less memory available to them than apps do. They are expected to perform rapidly and with minimal intrusion to the user and the app they are hosted in. However, an Extension should also provide a distinctive, useful function to the consuming app with a branded UI that allow the user to identify the Extension's developer or Container app they belong to.
 
 Given these tight requirement, you should only deploy Extensions that have been thoroughly tested and optimized for performance and memory consumption. 
 
