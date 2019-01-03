@@ -54,7 +54,7 @@ how to obtain and use the API key with Xamarin.Android, see
 Google Play Services is a technology from Google that allows Android
 applications to take advantage of various Google features such as
 Google+, In-App Billing, and Maps. These features are accessible on
-Android devices as background services,f which are contained in the
+Android devices as background services, which are contained in the
 [Google Play Services APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en).
 
 Android applications interact with Google Play Services through the
