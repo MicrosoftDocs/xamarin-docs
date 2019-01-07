@@ -11,7 +11,7 @@ ms.date: 03/14/2017
 
 # Xamarin.Mac Extension Support
 
-In Xamarin.Mac 2.10 preview support was added for multiple macOS extension points:
+In Xamarin.Mac 2.10 support was added for multiple macOS extension points:
 
 - Finder
 - Share
@@ -54,10 +54,10 @@ An example Xamarin.Mac project containing small, working samples of each extensi
 
 ## Summary
 
-This article has taken a quick look at working with extensions in a Xamarin.Max version 2.10 (and greater) app.
+This article has taken a quick look at working with extensions in a Xamarin.Mac version 2.10 (and greater) app.
 
 ## Related Links
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
-- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [macOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)
