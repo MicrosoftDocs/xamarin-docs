@@ -262,8 +262,8 @@ DefinesPresentationContext = true;
 
 //Set the search bar in the navigation bar
 NavigationItem.TitleView = searchController.SearchBar;
+```
 
-```csharp
 Note that you are responsible for incorporating the search bar object into the user interface. In this example, we assigned it to the TitleView of the navigation bar, but if you do not use a navigation controller in your application you will have to find another place to display it.
 
 In this code snippet, we created another custom view controller – `searchResultsController` –  that displays the search results and then we used this object to create our search controller object. We also created a new search updater, which becomes active when the user interacts with the search bar. It receives notifications about searches with each keystroke and is responsible for updating the UI.
