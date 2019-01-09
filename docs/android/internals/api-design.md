@@ -548,9 +548,9 @@ By doing this, we are able to offer IntelliSense selection of the
 potential values.
 
 The above example becomes:
-[Activity.RequestWindowFeature (WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/)).
+[Activity.RequestWindowFeature(WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/).
 
 Note that this is a very manual process to figure out which constants
 belong together, and which APIs consume these constants. Please file
-bugs for any constants use in the API that would be better expressed as
+bugs for any constants used in the API that would be better expressed as
 an enumeration.
