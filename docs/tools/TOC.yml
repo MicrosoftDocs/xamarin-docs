@@ -20,6 +20,8 @@
       items: 
         - name: Deploy to the iOS Simulator
           href: ios-simulator/deploy.md
+        - name: Release notes
+          href: /xamarin/tools/ios-simulator/release-notes/?context=xamarin/tools
     - name: Inspector
       href: inspector/index.md
       items: 
@@ -27,11 +29,15 @@
           href: inspector/install.md
         - name: Inspecting Live Applications
           href: inspector/inspect.md
+        - name: Release notes
+          href: /xamarin/tools/inspector/release-notes/
     - name: Profiler
       href: profiler/index.md
       items: 
         - name: Troubleshooting
           href: profiler/troubleshooting.md
+        - name: Release notes
+          href: /xamarin/tools/profiler/release-notes/
     - name: Workbooks
       href: workbooks/index.md
       items: 
@@ -66,6 +72,8 @@
               href: workbooks/sdk/debugging.md
             - name: Sample Integrations
               href: workbooks/sdk/samples.md
+        - name: Release notes
+          href: /xamarin/tools/inspector/release-notes/
     - name: .NET Embedding
       href: dotnet-embedding/index.md
       items: 
@@ -102,6 +110,8 @@
               href: dotnet-embedding/objective-c/platforms.md
         - name: Limitations
           href: dotnet-embedding/limitations.md
+        - name: Release notes
+          href: /xamarin/tools/dotnet-embedding/release-notes/
     - name: Continuous Integration
       href: ci/index.md
       items: 
