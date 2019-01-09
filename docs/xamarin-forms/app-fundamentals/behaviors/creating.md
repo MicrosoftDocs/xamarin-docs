@@ -13,7 +13,7 @@ ms.date: 04/06/2016
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
 
-_Xamarin.Forms behaviors are created by deriving from the Behavior or Behavior<T> class. This article demonstrates how to create and consume Xamarin.Forms behaviors._
+_Xamarin.Forms behaviors are created by deriving from the Behavior or Behavior&lt;T&gt; class. This article demonstrates how to create and consume Xamarin.Forms behaviors._
 
 ## Overview
 
