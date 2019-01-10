@@ -53,7 +53,7 @@ The following screenshot shows the default tab order for this code example:
 The tab order here is row-based, and is the order the controls are listed in the XAML. Therefore, pressing the Tab key navigates through forename [`Entry`](xref:Xamarin.Forms.Entry) instances, followed by surname `Entry` instances. However, a more intuitive experience would be to use a column-first tab navigation, so that pressing the Tab key navigates through forename-surname pairs. This can be achieved by specifying the tab order of the input controls.
 
 > [!NOTE]
-> On the Universal Windows Platform, keyboard shortcuts can be defined that provide an intuitive way for users to quickly navigate and interact with the application's visible UI through a keyboard instead of via touch or a mouse. For more information, see [Setting VisualElement Access Keys](~/xamarin-forms/platform/platform-specifics/consuming/windows.md#visualelement-accesskeys).
+> On the Universal Windows Platform, keyboard shortcuts can be defined that provide an intuitive way for users to quickly navigate and interact with the application's visible UI through a keyboard instead of via touch or a mouse. For more information, see [Setting VisualElement Access Keys](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
 ## Setting the tab order
 

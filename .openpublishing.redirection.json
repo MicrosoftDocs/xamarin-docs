@@ -191,6 +191,54 @@
     {
       "source_path": "docs/essentials/screen-lock.md",
       "redirect_url": "/xamarin/essentials/device-display/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/platform-features/deep-linking.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/deep-linking"
+    },
+    {
+      "source_path": "docs/xamarin-forms/platform-features/platform-specifics/ios.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform-features/ios"
+    },
+    {
+      "source_path": "docs/xamarin-forms/platform-features/platform-specifics/android.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform-features/android"
+    },
+    {
+      "source_path": "docs/xamarin-forms/platform-features/platform-specifics/windows.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform-features/windows"
+    },
+    {
+      "source_path": "docs/xamarin-forms/platform-features/platform-specifics/creating/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform-features/platform-specifics"
+    },
+    {
+      "source_path": "docs/xamarin-forms/platform-features/plugins.md",
+      "redirect_url": "/xamarin/essentials"
+    },	
+    {
+      "source_path": "docs/xamarin-forms/platform-features/gtk.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform-features/other/gtk"
+    },
+    {
+      "source_path": "docs/xamarin-forms/platform-features/mac.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform-features/other/mac"
+    },
+    {
+      "source_path": "docs/xamarin-forms/platform-features/tizen.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform-features/other/tizen"
+    },
+    {
+      "source_path": "docs/xamarin-forms/platform-features/wpf.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform-features/other/wpf"
+    },
+    {
+      "source_path": "docs/xamarin-forms/platform-features/android/appcompat.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform-features/android/appcompat-material-design"
+    },
+    {
+      "source_path": "docs/xamarin-forms/platform-features/ios/theme.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform-features/ios/formatting"
     }
   ]
 }
