@@ -143,7 +143,7 @@ public class EnergySaverTest
     public EnergySaverTest()
     {
         // Subscribe to changes of energy-saver status
-        Batter.EnergySaverStatusChanged += OnEnergySaverStatusChanged;
+        Battery.EnergySaverStatusChanged += OnEnergySaverStatusChanged;
     }
 
     private void OnEnergySaverStatusChanged(EnergySaverStatusChangedEventArgs e)
