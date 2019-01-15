@@ -4,7 +4,8 @@ description: "This document describes the Preferences class in Xamarin.Essential
 ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 01/15/2019
+ms.custom: video
 ---
 
 # Xamarin.Essentials: Preferences
@@ -93,3 +94,9 @@ When storing a string, this API is intended to store small amounts of text.  Per
 
 - [Preferences source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Preferences)
 - [Preferences API documentation](xref:Xamarin.Essentials.Preferences)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Preferences-Essential-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
