@@ -193,52 +193,52 @@
       "redirect_url": "/xamarin/essentials/device-display/"
     },
     {
-      "source_path": "docs/xamarin-forms/platform-features/deep-linking.md",
+      "source_path": "docs/xamarin-forms/platform/deep-linking.md",
       "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/deep-linking"
     },
     {
-      "source_path": "docs/xamarin-forms/platform-features/platform-specifics/ios.md",
-      "redirect_url": "/xamarin/xamarin-forms/platform-features/ios"
+      "source_path": "docs/xamarin-forms/platform/platform-specifics/ios.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform/ios"
     },
     {
-      "source_path": "docs/xamarin-forms/platform-features/platform-specifics/android.md",
-      "redirect_url": "/xamarin/xamarin-forms/platform-features/android"
+      "source_path": "docs/xamarin-forms/platform/platform-specifics/android.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform/android"
     },
     {
-      "source_path": "docs/xamarin-forms/platform-features/platform-specifics/windows.md",
-      "redirect_url": "/xamarin/xamarin-forms/platform-features/windows"
+      "source_path": "docs/xamarin-forms/platform/platform-specifics/windows.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform/windows"
     },
     {
-      "source_path": "docs/xamarin-forms/platform-features/platform-specifics/creating/index.md",
-      "redirect_url": "/xamarin/xamarin-forms/platform-features/platform-specifics"
+      "source_path": "docs/xamarin-forms/platform/platform-specifics/creating/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform/platform-specifics"
     },
     {
-      "source_path": "docs/xamarin-forms/platform-features/plugins.md",
+      "source_path": "docs/xamarin-forms/platform/plugins.md",
       "redirect_url": "/xamarin/essentials"
     },	
     {
-      "source_path": "docs/xamarin-forms/platform-features/gtk.md",
-      "redirect_url": "/xamarin/xamarin-forms/platform-features/other/gtk"
+      "source_path": "docs/xamarin-forms/platform/gtk.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform/other/gtk"
     },
     {
-      "source_path": "docs/xamarin-forms/platform-features/mac.md",
-      "redirect_url": "/xamarin/xamarin-forms/platform-features/other/mac"
+      "source_path": "docs/xamarin-forms/platform/mac.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform/other/mac"
     },
     {
-      "source_path": "docs/xamarin-forms/platform-features/tizen.md",
-      "redirect_url": "/xamarin/xamarin-forms/platform-features/other/tizen"
+      "source_path": "docs/xamarin-forms/platform/tizen.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform/other/tizen"
     },
     {
-      "source_path": "docs/xamarin-forms/platform-features/wpf.md",
-      "redirect_url": "/xamarin/xamarin-forms/platform-features/other/wpf"
+      "source_path": "docs/xamarin-forms/platform/wpf.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform/other/wpf"
     },
     {
-      "source_path": "docs/xamarin-forms/platform-features/android/appcompat.md",
-      "redirect_url": "/xamarin/xamarin-forms/platform-features/android/appcompat-material-design"
+      "source_path": "docs/xamarin-forms/platform/android/appcompat.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform/android/appcompat-material-design"
     },
     {
-      "source_path": "docs/xamarin-forms/platform-features/ios/theme.md",
-      "redirect_url": "/xamarin/xamarin-forms/platform-features/ios/formatting"
+      "source_path": "docs/xamarin-forms/platform/ios/theme.md",
+      "redirect_url": "/xamarin/xamarin-forms/platform/ios/formatting"
     }
   ]
 }
