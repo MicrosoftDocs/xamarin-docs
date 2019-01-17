@@ -56,7 +56,6 @@ namespace TailwindTraders.Mobile
         {
             InitializeComponent();
 
-            Forms.SetFlags("Shell_Experimental");
             MainPage = new TheShell();
         }
     }
@@ -66,7 +65,46 @@ namespace TailwindTraders.Mobile
 The `TheShell` class is a XAML file that describes the visual structure of your application.
 
 > [!IMPORTANT]
-> Shell is currently experimental, and can only be used by adding `Forms.SetFlags("Shell_Experimental");` to either your `App` class, prior to creating the `Shell` instance, or to your platform project, prior to invoking the `Forms.Init` method.
+> Shell is currently experimental, and can only be used by adding `Forms.SetFlags("Shell_Experimental");` to your platform project, prior to invoking the `Forms.Init` method.
+
+# [Android](#tab/android)
+
+```csharp
+public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+{
+    protected override void OnCreate(Bundle savedInstanceState)
+    {
+        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
+
+        TabLayoutResource = Resource.Layout.Tabbar;
+        ToolbarResource = Resource.Layout.Toolbar;
+
+        base.OnCreate(savedInstanceState);
+
+        global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+        LoadApplication(new App());
+    }
+}
+```
+
+# [iOS](#tab/ios)
+
+```csharp
+public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+{
+    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+    {
+        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
+
+        global::Xamarin.Forms.Forms.Init();
+        LoadApplication(new App());
+
+        return base.FinishedLaunching(app, options);
+    }
+}
+```
+
+----
 
 ## Shell file hierarchy
 
