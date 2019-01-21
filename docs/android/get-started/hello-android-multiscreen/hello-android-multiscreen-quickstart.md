@@ -175,7 +175,7 @@ translationHistoryButton.Click += (sender, e) =>
 ```
 
 Update the **Translate** button to add the phone number to the list of
-`phoneNumbers`. The `Click` handler for the `TranslateHistoryButton`
+`phoneNumbers`. The `Click` handler for the `translateButton`
 should resemble the following code:
 
 ```csharp
