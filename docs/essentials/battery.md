@@ -111,10 +111,10 @@ public class BatteryTest
     public BatteryTest()
     {
         // Register for battery changes, be sure to unsubscribe when needed
-        Battery.BatteryChanged += Battery_BatteryChanged;
+        Battery.BatteryInfoChanged += Battery_BatteryInfoChanged;
     }
 
-    void Battery_BatteryChanged(object sender, BatteryInfoChangedEventArgs   e)
+    void Battery_BatteryInfoChanged(object sender, BatteryInfoChangedEventArgs   e)
     {
         var level = e.ChargeLevel;
         var state = e.State;
@@ -143,7 +143,7 @@ public class EnergySaverTest
     public EnergySaverTest()
     {
         // Subscribe to changes of energy-saver status
-        Batter.EnergySaverStatusChanged += OnEnergySaverStatusChanged;
+        Battery.EnergySaverStatusChanged += OnEnergySaverStatusChanged;
     }
 
     private void OnEnergySaverStatusChanged(EnergySaverStatusChangedEventArgs e)

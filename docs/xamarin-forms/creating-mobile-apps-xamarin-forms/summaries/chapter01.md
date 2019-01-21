@@ -44,7 +44,7 @@ When targeting multiple mobile platforms, Xamarin.Forms allows even more code sh
 - the Universal Windows Platform to target Windows 10
 
 > [!NOTE]
-> Xamarin.Forms no longer supports Windows 8.1, Windows Phone 8.1, or Windows 10 Mobile, but Xamarin.Forms applications do run on the Windows 10 desktop. There is also preview support for the [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK#](~/xamarin-forms/platform/gtk.md), and [Tizen](~/xamarin-forms/platform/tizen.md) platforms.
+> Xamarin.Forms no longer supports Windows 8.1, Windows Phone 8.1, or Windows 10 Mobile, but Xamarin.Forms applications do run on the Windows 10 desktop. There is also preview support for the [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK#](~/xamarin-forms/platform/other/gtk.md), and [Tizen](~/xamarin-forms/platform/other/tizen.md) platforms.
 
 The bulk of a Xamarin.Forms program exists in a library or an SAP. Each of the platforms consists of a small application stub that calls into this shared code.
 

@@ -101,7 +101,7 @@ Follow these instructions to add a GTK# app that will run on the Windows desktop
 
     ![Change the project output type](gtk-images/win/change-project-output-type.png "Change the project output type")
 
-13. In the **Solution Explorer**, right-click the WPF project and select **Set as Startup Project**. Press F5 to run the program with the Visual Studio debugger on the Windows desktop:
+13. In the **Solution Explorer**, right-click the GTK project and select **Set as Startup Project**. Press F5 to run the program with the Visual Studio debugger on the Windows desktop:
 
     ![GTK# Game of Life](gtk-images/win/gtk-gameoflife.png "GTK# Game of Life")
 

@@ -81,7 +81,7 @@ progress2.TrackTintColor = UIColor.FromRGB (197,255,132);
 ## Using UIAppearance in Xamarin.Forms
 
 The Appearance API can be useful when
-[styling the iOS app](~/xamarin-forms/platform/ios/theme.md#uiappearance)
+[styling the iOS app](~/xamarin-forms/platform/ios/formatting.md#uiappearance)
 in Xamarin.Forms solutions. A few lines in the `AppDelegate` class can help
 to implement a specific color scheme without having to create a
 [custom renderer](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
@@ -90,19 +90,19 @@ to implement a specific color scheme without having to create a
 
 iOS allows many visual attributes of the user interface controls to be “themed” using the *UIAppearance* APIs to force
 all instances of a particular control to have the same appearance. This is exposed as an Appearance property on many user
-interface control classes, not on individual instances of the control. Setting a display property on the static 
+interface control classes, not on individual instances of the control. Setting a display property on the static
 `Appearance` property affects all controls of that type in your application.
 
 To better understand the concept, consider an example.
 
-To change a specific `UISegmentedControl` to have a Magenta tint, we 
+To change a specific `UISegmentedControl` to have a Magenta tint, we
 would reference the specific control on our screen like this in `ViewDidLoad`:
 
 ```csharp
 sg1.TintColor = UIColor.Magenta;
 ```
 
-Alternatively, set the value in the Properties pad of the Designer: 
+Alternatively, set the value in the Properties pad of the Designer:
 
 [![](introduction-to-the-appearance-api-images/propertiespadtint.png "Properties Pad Tint")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
 
@@ -110,7 +110,7 @@ The image below illustrates that this sets the tint on only the control named 's
 
 [![](introduction-to-the-appearance-api-images/image53.png "Setting the individual control tint")](introduction-to-the-appearance-api-images/image53.png#lightbox)
 
-To set many controls in this way would be completely inefficient, so we can instead set the static `Appearance` property on 
+To set many controls in this way would be completely inefficient, so we can instead set the static `Appearance` property on
 the class itself. This is shown in the code below:
 
 ```csharp
@@ -130,4 +130,4 @@ Refer to the [Introduction to the Appearance API](~/ios/user-interface/ios-ui/in
 
 - [Appearance (sample)](https://developer.xamarin.com/samples/monotouch/Appearance/)
 - [UIAppearance Protocol Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/)
-- [Appearance in Xamarin.Forms](~/xamarin-forms/platform/ios/theme.md#uiappearance)
+- [Appearance in Xamarin.Forms](~/xamarin-forms/platform/ios/formatting.md#uiappearance)

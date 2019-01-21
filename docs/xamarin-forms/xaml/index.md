@@ -61,3 +61,7 @@ An attached property is a special type of bindable property, defined in one clas
 ## [Resource Dictionaries](resource-dictionaries.md)
 
 XAML resources are definitions of objects that can be used more than once. A [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) allows resources to be defined in a single location, and re-used throughout a Xamarin.Forms application. This article demonstrates how to create and consume a `ResourceDictionary`, and how to merge one `ResourceDictionary` into another.
+
+## [Loading XAML at Runtime](runtime-load.md)
+
+XAML can be loaded and parsed at runtime with the [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) extension methods.

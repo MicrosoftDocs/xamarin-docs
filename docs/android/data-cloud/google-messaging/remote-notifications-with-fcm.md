@@ -180,7 +180,7 @@ application cannot receive messages from FCM servers.
 
 1.  In Visual Studio for Mac, right-click **Packages > Add Packages...**.
 
-2.  Check **Show pre-release packages** and search for **Xamarin.Firebase.Messaging**.
+2.  Search for **Xamarin.Firebase.Messaging**.
 
 3.  Install this package into the **FCMClient** project:
 
@@ -1043,9 +1043,7 @@ Make sure to call FirebaseApp.initializeApp(Context) first.
 
 This is a known problem that you can work around by cleaning the
 solution and rebuilding the project (**Build > Clean Solution**,
-**Build > Rebuild Solution**). For more information, see this
-[forum discussion](https://forums.xamarin.com/discussion/96263/default-firebaseapp-is-not-initialized-in-this-process).
-
+**Build > Rebuild Solution**).
 
 ## Summary
 

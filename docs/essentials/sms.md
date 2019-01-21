@@ -32,7 +32,7 @@ public class SmsTest
     {
         try
         {
-            var message = new SmsMessage(messageText, recipient);
+            var message = new SmsMessage(messageText, new []{ recipient });
             await Sms.ComposeAsync(message);
         }
         catch (FeatureNotSupportedException ex)
