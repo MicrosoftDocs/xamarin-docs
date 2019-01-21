@@ -172,7 +172,7 @@ they are stored in the underlying database include:
 -   **[Ignore]** &ndash; Causes SQLite.NET to ignore this property.
     This is particularly useful for properties that have a type that
     cannot be stored in the database, or properties that model
-    collections that cannot be resolved automatically be SQLite.
+    collections that cannot be resolved automatically by SQLite.
 
 -   **[Unique]** &ndash; Ensures that the values in the underlying
     database column are unique.
