@@ -178,3 +178,9 @@ No platform differences.
 
 - [Battery source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Battery)
 - [Battery API documentation](xref:Xamarin.Essentials.Battery)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Battery-Essential-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
