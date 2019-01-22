@@ -81,7 +81,21 @@ The `[assembly]` attribute registers the class as an implementation of the `ITex
 
 ## Android Implementation
 
-The Android code is more complex than the iOS version: it requires the implementing class to inherit from Android-specific `Java.Lang.Object` and to implement the `IOnInitListener` interface as well. It also requires access to the current Android context, which is exposed by the `MainActivity.Instance` property.
+The Android code is more complex than the iOS version. It requires access to the current Android context, which is exposed by the `MainActivity.Instance` property:
+
+```csharp
+public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+{
+    internal static MainActivity Instance { get; private set; }
+
+    protected override void OnCreate(Bundle bundle)
+    {
+        ...
+    }
+}
+```
+
+It also requires the implementing class to inherit from Android-specific `Java.Lang.Object` and to implement the `IOnInitListener` interface as well.
 
 ```csharp
 [assembly: Dependency(typeof(TextToSpeechImplementation))]
