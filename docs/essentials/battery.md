@@ -4,7 +4,8 @@ description: "This document describes the Battery class in Xamarin.Essentials, w
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 01/22/2019
+ms.custom: video
 ---
 
 # Xamarin.Essentials: Battery
