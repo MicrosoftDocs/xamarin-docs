@@ -6,7 +6,8 @@ ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/05/2018
+ms.date: 01/22/2019
+ms.custom: video
 ---
 
 # Xamarin.Forms Basic Bindings
@@ -328,3 +329,9 @@ In the [next article](binding-mode.md), you'll see how the *binding mode* can ch
 
 - [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 - [Data binding chapter from Xamarin.Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/XamarinForms-101-Data-Binding/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
