@@ -392,7 +392,7 @@ public Rectangle CurrentRectangle
         AnimationFrame currentFrame = null;
 
         // See if we can find the frame
-        TimeSpan accumulatedTime;
+        TimeSpan accumulatedTime = new TimeSpan();
         foreach(var frame in frames)
         {
             if (accumulatedTime + frame.Duration >= timeIntoAnimation)
