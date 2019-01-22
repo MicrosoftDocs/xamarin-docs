@@ -7,7 +7,8 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 09/06/2018
+ms.custom: video
+ms.date: 01/22/2019
 ---
 
 # Managing Virtual Devices with the Android Device Manager
@@ -681,3 +682,9 @@ provided troubleshooting tips for common problems.
 - [SDK Tools Release Notes (Google)](https://developer.android.com/studio/releases/sdk-tools)
 - [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/How-to-Create-and-Manage-Your-Own-Android-Emulators/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
