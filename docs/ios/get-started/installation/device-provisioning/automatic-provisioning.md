@@ -6,7 +6,8 @@ ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 05/22/2018
+ms.custom: video
+ms.date: 01/22/2019
 ---
 
 # Automatic Provisioning for Xamarin.iOS
@@ -136,3 +137,9 @@ attempt to create an explicit (instead of a wildcard) App ID.
 - [App Distribution](~/ios/deploy-test/app-distribution/index.md)
 - [Troubleshooting](~/ios/deploy-test/troubleshooting.md)
 - [Apple - App Distribution Guide](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Snack-Pack-Simplified-iOS-Provisioning-in-Visual-Studio-with-fastlane/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

@@ -4,7 +4,8 @@ description: "This document describes the Battery class in Xamarin.Essentials, w
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 01/22/2019
+ms.custom: video
 ---
 
 # Xamarin.Essentials: Battery
@@ -178,3 +179,9 @@ No platform differences.
 
 - [Battery source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Battery)
 - [Battery API documentation](xref:Xamarin.Essentials.Battery)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Battery-Essential-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
