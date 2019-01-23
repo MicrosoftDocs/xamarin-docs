@@ -21,16 +21,16 @@ An App Group allows different applications (or an application and its extensions
 
 ## Configure a new App Group
 
-The shared location is configured using an [App Group](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19), which is configured in the **Certificates, Identifiers & Profiles** section on [Apple Developer Center](https://developer.apple.com/account/). This value must also be referenced in each project's Entitlements.plist.
+The shared location is configured using an [App Group](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19), which is configured in the **Certificates, Identifiers & Profiles** section on [Apple Developer Center](https://developer.apple.com/account/). This value must also be referenced in each project's Entitlements.plist.
 
 The app group will have an identifier, which is typically the Bundle ID with a group. prefix. For example, the Bundle ID `com.xamarin.WatchSettings` would have the app group `group.com.xamarin.WatchSettings`.
 
 To create a new App Group, do the following:
 
-1.	Visit Apple's [iOS Developer Center](https://developer.apple.com/account/), open your **Account** and log in.
+1.	Visit Apple's [iOS Developer Center](https://developer.apple.com/account/), open your **Account** and log in.
 2.	Select **Certificates, IDs & Profiles**.
 3.	Under **Identifiers** select **App Groups** and click the **+** button to create a new group.
-4.	Enter a **Name** and an **Identifier** for the new group and click the **Continue** button: 
+4.	Enter a **Name** and an **Identifier** for the new group and click the **Continue** button: 
    
     ![Add App Group details](app-groups-capabilities-images/image52.png)
 
@@ -50,17 +50,17 @@ Do the following:
 
     ![Add App Group App Services](app-groups-capabilities-images/image53.png)
 
-6.	Verify the settings and click the **Register** button to create the App ID.
+6.	Verify the settings and click the **Register** button to create the App ID.
 7.	Click the **Done** button to return to the list of registered App IDs.
-8.	Select the newly created App ID from the list and click the **Edit** button:
+8.	Select the newly created App ID from the list and click the **Edit** button:
 
     ![Select App ID from list](app-groups-capabilities-images/image54.png)
 
-9.	Under Service **App Group**, click the **Edit** button:
+9.	Under Service **App Group**, click the **Edit** button:
 
     ![Select App ID from list](app-groups-capabilities-images/image55.png)
 
-10.	Select the App Group that was created above and click the **Continue** button:
+10.	Select the App Group that was created above and click the **Continue** button:
 
     ![Add App Group](app-groups-capabilities-images/image56.png)
 
@@ -73,6 +73,6 @@ The list below describes additional steps that may need to be taken:
 
 * Use the framework namespace in your app.
 * Add the required entitlements to your App. Information on the entitlements required and how to add them is detailed in the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
-* In the App's **iOS Bundle Signing**, ensure that the **Custom Entitlements** is set to **Entitlements.plist**. This is _not_ the default setting for Debug and iOS Simulator builds.
+* In the App's **iOS Bundle Signing**, ensure that the **Custom Entitlements** is set to **Entitlements.plist**. This is _not_ the default setting for Debug and iOS Simulator builds.
 
 If you encounter issues with app services, refer to the [Troubleshooting](~/ios/deploy-test/provisioning/capabilities/index.md) section of the main guide.
