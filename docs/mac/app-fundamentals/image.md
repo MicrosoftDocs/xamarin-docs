@@ -77,7 +77,7 @@ The following should be taken into consideration when using PDF vector images in
 - This is not full vector support as the PDF will be rasterized to a bitmap at compile time and the bitmaps shipped in the final application.
 - You cannot adjust the size of the image once it has been set in the Asset Catalog. If you attempt to resize the image (either in code or by using Auto Layout and Size Classes) the image will be distorted just like any other bitmap.
 
-When using an **Image Set** in Xcode's Interface Builder, you can simply select the set's name from the dropdown list in the **Attribute Inspector**:**
+When using an **Image Set** in Xcode's Interface Builder, you can simply select the set's name from the dropdown list in the **Attribute Inspector**:
 
 ![Selecting an image set in Xcode's Interface Builder](image-images/imageset06.png "Selecting an image set in Xcode's Interface Builder")
 
