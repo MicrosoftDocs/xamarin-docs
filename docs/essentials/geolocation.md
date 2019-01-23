@@ -90,7 +90,7 @@ catch (FeatureNotSupportedException fnsEx)
 {
     // Handle not supported on device exception
 }
-catch (FeatureNotEnableException fneEx)
+catch (FeatureNotEnabledException fneEx)
 {
     // Handle not enabled on device exception
 }
@@ -123,7 +123,7 @@ catch (FeatureNotSupportedException fnsEx)
 {
     // Handle not supported on device exception
 }
-catch (FeatureNotEnableException fneEx)
+catch (FeatureNotEnabledException fneEx)
 {
     // Handle not enabled on device exception
 }
