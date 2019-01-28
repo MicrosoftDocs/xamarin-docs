@@ -6,6 +6,7 @@ ms.assetid: 003F25C1-B430-4339-9C95-7DF527EBC699
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
+ms.date: 11/25/2015
 ---
 
 # Floating Point Operations in Xamarin.iOS

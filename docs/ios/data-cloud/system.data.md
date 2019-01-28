@@ -6,6 +6,7 @@ ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
+ms.date: 11/25/2015
 ---
 
 # System.Data in Xamarin.iOS

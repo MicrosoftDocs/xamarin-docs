@@ -6,6 +6,7 @@ ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
+ms.date: 11/25/2015
 ---
 
 # New Reference Counting System in Xamarin.iOS

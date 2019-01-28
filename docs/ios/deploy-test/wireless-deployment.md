@@ -6,7 +6,8 @@ ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 02/09/2018
+ms.custom: video
+ms.date: 01/22/2019
 ---
 
 # Wireless Deployment for Xamarin.iOS and tvOS Apps
@@ -101,3 +102,9 @@ Wireless debugging is automatically enabled after wireless deployment, so you ca
 ## Related Links
 
 - [Pair a wireless device with Xcode](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/devbc48d1bad)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Debug-to-iOS-Devices-Over-Wi-Fi/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

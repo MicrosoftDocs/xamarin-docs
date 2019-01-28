@@ -90,6 +90,10 @@ catch (FeatureNotSupportedException fnsEx)
 {
     // Handle not supported on device exception
 }
+catch (FeatureNotEnabledException fneEx)
+{
+    // Handle not enabled on device exception
+}
 catch (PermissionException pEx)
 {
     // Handle permission exception
@@ -118,6 +122,10 @@ try
 catch (FeatureNotSupportedException fnsEx)
 {
     // Handle not supported on device exception
+}
+catch (FeatureNotEnabledException fneEx)
+{
+    // Handle not enabled on device exception
 }
 catch (PermissionException pEx)
 {
@@ -184,10 +192,10 @@ Here's an example:
 ```csharp
 Location boston = new Location(42.358056, -71.063611);
 Location sanFrancisco = new Location(37.783333, -122.416667);
-double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnit.Miles);
+double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Miles);
 ```
 
-The `Location` constructor has latitude and longitude arguments in that order. Positive latitude values are north of the equator, and positive longitude values are east of the Prime Meridian. Use the final argument to `CalculateDistance` to specify miles or kilometers. The `Location` class also defines `KilometersToMiles` and `MilesToKilometers` methods for converting between the two units.
+The `Location` constructor has latitude and longitude arguments in that order. Positive latitude values are north of the equator, and positive longitude values are east of the Prime Meridian. Use the final argument to `CalculateDistance` to specify miles or kilometers. The `UnitConverters` class also defines `KilometersToMiles` and `MilesToKilometers` methods for converting between the two units.
 
 ## API
 

@@ -74,6 +74,8 @@
               href: app-fundamentals/nuget-multiplatform-libraries/metadata.md
         - name: NuGet Packages (Manual)
           href: app-fundamentals/nuget-manual.md
+        - name: Use C/C++ Libraries in Cross-Platform Apps
+          href: cpp/index.md
     - name: Language Support
       href: platform/index.md
       items: 
@@ -127,6 +129,7 @@
           href: deploy-test/installing-nunit-using-nuget.md
         - name: Multi Process Debugging
           href: deploy-test/multi-process-debugging.md
+
     - name: Desktop Developers
       displayName: Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP Developers
       href: desktop/index.md
