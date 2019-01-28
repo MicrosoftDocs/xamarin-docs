@@ -10,12 +10,12 @@ ms.date: 08/14/2018
 ---
 # Picker control in Xamarin.iOS
 
-A [`UIPickerView`](https://developer.xamarin.com/api/type/UIKit.UIPickerView/)
+A [`UIPickerView`](xref:UIKit.UIPickerView)
 makes it possible to pick a value from a list by scrolling individual
 components of a wheel-like interface.
 
 Pickers are frequently used to select a date and time; Apple provides the
-[`UIDatePicker`](https://developer.xamarin.com/api/type/UIKit.UIDatePicker/)
+[`UIDatePicker`](xref:UIKit.UIDatePicker)
 class for this purpose.
 
 The article describes how to implement and use the `UIPickerView` and
@@ -58,10 +58,10 @@ public override void ViewDidLoad()
 }
 ```
 
-The [`UIPickerViewModel`](https://developer.xamarin.com/api/type/UIKit.UIPickerViewModel/) 
+The [`UIPickerViewModel`](xref:UIKit.UIPickerViewModel) 
 base class implements two interfaces,
-[`IUIPickerDataSource`](https://developer.xamarin.com/api/type/UIKit.IUIPickerViewDataSource/)
-and [`IUIPickerViewDelegate`](https://developer.xamarin.com/api/type/UIKit.IUIPickerViewDelegate/),
+[`IUIPickerDataSource`](xref:UIKit.IUIPickerViewDataSource)
+and [`IUIPickerViewDelegate`](xref:UIKit.IUIPickerViewDelegate),
 which declare various methods that specify a picker's data and how it
 handles interaction:
 
@@ -132,14 +132,14 @@ selection:
 ![Picker with two components](picker-images/image3.png "Picker with two components")
 
 To specify the number of components in a picker, use the 
-[`GetComponentCount`](https://developer.xamarin.com/api/member/UIKit.UIPickerViewModel.GetComponentCount/p/UIKit.UIPickerView/) 
+[`GetComponentCount`](xref:UIKit.UIPickerViewModel.GetComponentCount(UIKit.UIPickerView)) 
 method.
 
 ### Customizing a picker's appearance
 
 To customize the appearance of a picker, use the
 [`UIPickerView.UIPickerViewAppearance`](https://developer.xamarin.com/api/type/UIKit.UIPickerView+UIPickerViewAppearance/)
-class or override the [`GetView`](https://developer.xamarin.com/api/member/UIKit.UIPickerViewModel.GetView/p/UIKit.UIPickerView/System.nint/System.nint/UIKit.UIView/) and [`GetRowHeight`](https://developer.xamarin.com/api/member/UIKit.UIPickerViewModel.GetRowHeight/p/UIKit.UIPickerView/System.nint/) 
+class or override the [`GetView`](xref:UIKit.UIPickerViewModel.GetView(UIKit.UIPickerView,System.nint,System.nint,UIKit.UIView)) and [`GetRowHeight`](xref:UIKit.UIPickerViewModel.GetRowHeight(UIKit.UIPickerView,System.nint)) 
 methods in the `UIPickerViewModel`.
 
 ## UIDatePicker
@@ -170,8 +170,8 @@ the **Toolbox** to the design surface.
 
 #### Minimum and maximum date
 
-[`MinimumDate`](https://developer.xamarin.com/api/property/UIKit.UIDatePicker.MinimumDate/) 
-and [`MaximumDate`](https://developer.xamarin.com/api/property/UIKit.UIDatePicker.MaximumDate/) 
+[`MinimumDate`](xref:UIKit.UIDatePicker.MinimumDate) 
+and [`MaximumDate`](xref:UIKit.UIDatePicker.MaximumDate) 
 limit the range of dates available in the date picker. For example, the
 following code constrains a date picker to the sixty years leading up to
 the present moment:
@@ -195,7 +195,7 @@ datePickerView.MaximumDate = NSDate.Now;
 
 #### Minute interval
 
-The [`MinuteInterval`](https://developer.xamarin.com/api/property/UIKit.UIDatePicker.MinuteInterval/) 
+The [`MinuteInterval`](xref:UIKit.UIDatePicker.MinuteInterval) 
 property sets the interval at which the picker will display minutes:
 
 ```csharp
@@ -205,7 +205,7 @@ datePickerView.MinuteInterval = 10;
 #### Mode
 
 Date pickers support four 
-[modes](https://developer.xamarin.com/api/type/UIKit.UIDatePickerMode/),
+[modes](xref:UIKit.UIDatePickerMode),
 described below:
 
 ##### UIDatePickerMode.Time
@@ -287,9 +287,9 @@ dateLabel.Text = "Alarm set for:" + coundownTimeformat.ToString(finishCountdown)
 #### NSDateFormatter
 
 To format an `NSDate`, use an
-[`NSDateFormatter`](https://developer.xamarin.com/api/type/Foundation.NSDateFormatter/).
+[`NSDateFormatter`](xref:Foundation.NSDateFormatter).
 
-To use an `NSDateFormatter`, call its [`ToString`](https://developer.xamarin.com/api/member/Foundation.NSDateFormatter.ToString/p/Foundation.NSDate/) 
+To use an `NSDateFormatter`, call its [`ToString`](xref:Foundation.NSDateFormatter.ToString(Foundation.NSDate)) 
 method. For example:
 
 ```csharp
@@ -303,7 +303,7 @@ var formattedDate = formatter.ToString(d);
 
 ##### DateFormat
 
-The [`DateFormat`](https://developer.xamarin.com/api/property/Foundation.NSDateFormatter.DateFormat/)
+The [`DateFormat`](xref:Foundation.NSDateFormatter.DateFormat)
 property (a string) of an `NSDateFormatter` allows for a
 customizable date format specification:
 
@@ -314,8 +314,8 @@ dateFormat.DateFormat = "yyyy-MM-dd";
 
 ##### TimeStyle
 
-The [`TimeStyle`](https://developer.xamarin.com/api/property/Foundation.NSDateFormatter.TimeStyle/) 
-property (an [`NSDateFormatterStyle`](https://developer.xamarin.com/api/type/Foundation.NSDateFormatterStyle/)) 
+The [`TimeStyle`](xref:Foundation.NSDateFormatter.TimeStyle) 
+property (an [`NSDateFormatterStyle`](xref:Foundation.NSDateFormatterStyle) 
 of an `NSDateFormatter` specifies time formatting based on predetermined 
 styles:
 
@@ -333,7 +333,7 @@ Various `NSDateFormatterStyle` values display times as follows:
 
 ##### DateStyle
 
-The [`DateStyle`](https://developer.xamarin.com/api/property/Foundation.NSDateFormatter.DateStyle/)
+The [`DateStyle`](xref:Foundation.NSDateFormatter.DateStyle)
 property (an `NSDateFormatterStyle`) of an `NSDateFormatter` specifies
 date formatting based on predetermined styles:
 

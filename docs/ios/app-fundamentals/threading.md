@@ -44,7 +44,7 @@ Typically developers use threads when they need to create
 Access to UI elements should be limited to the same thread
 	that is running the main loop for your application. If you
 	want to make changes to the main UI from a thread, you should
-	queue the code by using [NSObject.InvokeOnMainThread](https://developer.xamarin.com/api/type/Foundation.NSObject/), like this:
+	queue the code by using [NSObject.InvokeOnMainThread](xref:Foundation.NSObject), like this:
 
 ```csharp
 MyThreadedRoutine ()  

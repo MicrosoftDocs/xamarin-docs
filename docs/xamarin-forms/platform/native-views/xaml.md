@@ -177,7 +177,7 @@ The following code example demonstrates both techniques:
 </ContentPage>
 ```
 
-The [`UIFont.FromName`](https://developer.xamarin.com/api/member/UIKit.UIFont.FromName/) factory method is used to set the [`UILabel.Font`](https://developer.xamarin.com/api/property/UIKit.UILabel.Font/) property to a new [`UIFont`](https://developer.xamarin.com/api/type/UIKit.UIFont/) on iOS. The `UIFont` name and size are specified by the method arguments that are children of the `x:Arguments` attribute.
+The [`UIFont.FromName`](xref:UIKit.UIFont.FromName*) factory method is used to set the [`UILabel.Font`](xref:UIKit.UILabel.Font) property to a new [`UIFont`](xref:UIKit.UIFont) on iOS. The `UIFont` name and size are specified by the method arguments that are children of the `x:Arguments` attribute.
 
 The [`Typeface.Create`](https://developer.xamarin.com/api/member/Android.Graphics.Typeface.Create/p/System.String/Android.Graphics.TypefaceStyle/) factory method is used to set the [`TextView.Typeface`](https://developer.xamarin.com/api/property/Android.Widget.TextView.Typeface/) property to a new [`Typeface`](https://developer.xamarin.com/api/type/Android.Graphics.Typeface/) on Android. The `Typeface` family name and style are specified by the method arguments that are children of the `x:Arguments` attribute.
 
@@ -326,7 +326,7 @@ On iOS and Android the native pickers use methods to setup the controls. Therefo
 
 ### iOS
 
-The iOS implementation subclasses the [`UIPickerView`](https://developer.xamarin.com/api/type/UIKit.UIPickerView/) view, and exposes properties and an event that can be easily consumed from XAML:
+The iOS implementation subclasses the [`UIPickerView`](xref:UIKit.UIPickerView) view, and exposes properties and an event that can be easily consumed from XAML:
 
 ```csharp
 public class MyUIPickerView : UIPickerView
@@ -371,7 +371,7 @@ public class MyUIPickerView : UIPickerView
 }
 ```
 
-The `MyUIPickerView` class exposes `ItemsSource` and `SelectedItem` properties, and a `SelectedItemChanged` event. A [`UIPickerView`](https://developer.xamarin.com/api/type/UIKit.UIPickerView/) requires an underlying [`UIPickerViewModel`](https://developer.xamarin.com/api/type/UIKit.UIPickerViewModel/) data model, which is accessed by the `MyUIPickerView` properties and event. The `UIPickerViewModel` data model is provided by the `PickerModel` class:
+The `MyUIPickerView` class exposes `ItemsSource` and `SelectedItem` properties, and a `SelectedItemChanged` event. A [`UIPickerView`](xref:UIKit.UIPickerView) requires an underlying [`UIPickerViewModel`](xref:UIKit.UIPickerViewModel) data model, which is accessed by the `MyUIPickerView` properties and event. The `UIPickerViewModel` data model is provided by the `PickerModel` class:
 
 ```csharp
 class PickerModel : UIPickerViewModel
@@ -414,7 +414,7 @@ class PickerModel : UIPickerViewModel
 }
 ```
 
-The `PickerModel` class provides the underlying storage for the `MyUIPickerView` class, via the `Items` property. Whenever the selected item in the `MyUIPickerView` changes, the [`Selected`](https://developer.xamarin.com/api/member/UIKit.UIPickerViewModel.Selected/) method is executed, which updates the selected index and fires the `ItemChanged` event. This ensures that the `SelectedItem` property will always return the last item picked by the user. In addition, the `PickerModel` class overrides methods that are used to setup the `MyUIPickerView` instance.
+The `PickerModel` class provides the underlying storage for the `MyUIPickerView` class, via the `Items` property. Whenever the selected item in the `MyUIPickerView` changes, the [`Selected`](xref:UIKit.UIPickerViewModel.Selected*) method is executed, which updates the selected index and fires the `ItemChanged` event. This ensures that the `SelectedItem` property will always return the last item picked by the user. In addition, the `PickerModel` class overrides methods that are used to setup the `MyUIPickerView` instance.
 
 ### Android
 

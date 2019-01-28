@@ -79,7 +79,7 @@ These properties are explained below:
 
 - **Text, Placeholder, Prompt** – These properties are used to suggest and instruct how users should use the search bar. For example, if your app displayed a list of stores you could use the prompt property to advise that users can "Enter a city, story name, or Zip Code"
 - **Search Style** – You can set the search bar to either be **Prominent** or **Minimal**. Using the prominent will tint everything else on screen, except for the search bar, causing the focus to be drawn to the search bar. The minimal style search bar will blend in with its surroundings.
-- **Capabilities** – Enabling these properties only displays the UI element. The functionality must be implemented for these by raising the correct event as detailed in the [Search Bar API docs](https://developer.xamarin.com/api/type/UIKit.UISearchBar/)
+- **Capabilities** – Enabling these properties only displays the UI element. The functionality must be implemented for these by raising the correct event as detailed in the [Search Bar API docs](xref:UIKit.UISearchBar)
     - Shows Search Results / Bookmarks button – Shows a Search Results or Bookmarks icon on the search bar
     - Shows Cancel button – Allows users to exit out of the search function. It is recommended that this is selected.
     - Shows Scope Bar – This allows users to limit the scope of their search. For example, when searching in the music app the user can select whether they want to search Apple Music or their Library for a particular song or artist. To display various options, add an array of titles to the **ScopeBarTitles** property.

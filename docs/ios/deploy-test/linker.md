@@ -217,7 +217,7 @@ is linker friendly or not.
 If you have a library in your project, or you are a developer of
 reusable libraries and you want the linker to treat your assembly as
 linkable, all you have to do is add the assembly-level attribute
-[`LinkerSafe`](https://developer.xamarin.com/api/type/Foundation.LinkerSafeAttribute/),
+[`LinkerSafe`](xref:Foundation.LinkerSafeAttribute),
 like this:
 
 ```csharp

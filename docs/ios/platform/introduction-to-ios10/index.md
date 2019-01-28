@@ -130,7 +130,7 @@ iOS 10 presents new ways of driving engagement to an app by allowing the system 
 - Siri Interactions
 - QuickType Suggestions 
 
-An app exposes this functionality to the system using a collection of technologies such as [NSUserActivity](https://developer.xamarin.com/api/type/Foundation.NSUserActivity/), web markup, Core Spotlight, MapKit, Media Player and UIKit.
+An app exposes this functionality to the system using a collection of technologies such as [NSUserActivity](xref:Foundation.NSUserActivity), web markup, Core Spotlight, MapKit, Media Player and UIKit.
 
 To find out more, please see our [Introduction to Proactive Suggestions](~/ios/platform/search/proactive-suggestions.md) guide.
 
@@ -193,11 +193,11 @@ New for iOS 10, the Video Subscriber Account framework allows apps that support 
 
 iOS 10 extends the support for extended-range pixel formats and wide-gamut color spaces throughout the system including frameworks such as Core Graphics, Core Image, Metal and AVFoundation. Support for devices with wide color displays is further eased by providing this behavior throughout the entire graphics stack.
 
-Additionally, [UIKit](https://developer.xamarin.com/api/namespace/UIKit/) has been modified to work in the new extended **sRGB** colorspace, making it easier to mix colors in wide color gamuts without significant performance loss.
+Additionally, [UIKit](xref:UIKit) has been modified to work in the new extended **sRGB** colorspace, making it easier to mix colors in wide color gamuts without significant performance loss.
 
 Apple offers the following best practices when working with wide colors:
 
-- [UIColor](https://developer.xamarin.com/api/type/UIKit.UIColor/) now uses the sRGB color space and will no longer clamp values to the `0.0` to `1.0` range. If the app relies on the previous clamp behavior, it will need to be modified for iOS 10.
+- [UIColor](xref:UIKit.UIColor) now uses the sRGB color space and will no longer clamp values to the `0.0` to `1.0` range. If the app relies on the previous clamp behavior, it will need to be modified for iOS 10.
 - The drawing environment will be configured for the sRGB color space when performing custom `UIView` drawing on an iPad Pro.
 - If the app performs custom rendering of `UIImages`, use the new [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) class to specify the use of the extended-range or standard-range formats.
 - When using a low-level API such as Core Graphics or Metal to provide image processing, the developer should use an extended range color space and pixel format that supports 16-bit floating point values. Where necessary, the developer will have to manually clamp color component values.
@@ -224,7 +224,7 @@ The following APIs have been deprecated in iOS 10:
 - The `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` and `CKFetchRecordChangesOperation` classes have been deprecated in CloudKit for iOS 10. Use the [CKDiscoverAllUserIdentitiesOperation](https://developer.xamarin.com/api/type/CloudKit.CKDiscoverUserIdentitiesOperation/), [CKUserIdentity](https://developer.xamarin.com/api/type/CloudKit.CKUserIdentity/) and [CKFetchRecordZoneChangesOperation](https://developer.xamarin.com/api/type/CloudKit.CKFetchRecordZoneChangesOperation/) classes (which support record sharing) instead.
 - Several [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) APIs (such as zone-based and query-based subscriptions) have been deprecated. Use the [CKRecordZoneSubscription](https://developer.xamarin.com/api/type/CloudKit.CKRecordZoneSubscription/) and [CKQuerySubscription](https://developer.xamarin.com/api/type/CloudKit.CKQuerySubscription/) APIs instead.
 - [NSPersistentStoreCoordnator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) symbols related to ubiquitous content have been deprecated.
-- `ADBannerView`, `ADInterstitialAd` and related symbols in the [UIViewController](https://developer.xamarin.com/api/type/UIKit.UIViewController/) class have been deprecated.
+- `ADBannerView`, `ADInterstitialAd` and related symbols in the [UIViewController](xref:UIKit.UIViewController) class have been deprecated.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) symbols related to floating point values have been deprecated.
 - The `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` and `UIUserNotificationSettings` classes of UIKit have been deprecated. Use the [User Notifications](#User-Notifications) framework instead.
 - The `HandleActionForLocalNotification`, `HandleActionForRemoteNotification`, `DidReceiveLocalNotification` and `DidReceiveRemoteNotification` WatchKit methods have been deprecated. Use the `HandleActionForNotification` and `DidReceiveNotification` methods instead.

@@ -33,7 +33,7 @@ public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
 public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean forceMoveTo)
 ```
 
-These methods are identical to the Android [`AddArc`](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) and [`ArcTo`](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) methods. The iOS [`AddArc`](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArc/p/System.Boolean/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) method is similar but is restricted to arcs on the circumference of a circle rather than generalized to an ellipse.
+These methods are identical to the Android [`AddArc`](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) and [`ArcTo`](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) methods. The iOS [`AddArc`](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) method is similar but is restricted to arcs on the circumference of a circle rather than generalized to an ellipse.
 
 Both methods begin with an `SKRect` value that defines both the location and size of an ellipse:
 
@@ -221,7 +221,7 @@ public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
 public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 ```
 
-This `ArcTo` method is similar to the PostScript [`arct`](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) (page 532) function and the iOS [`AddArcToPoint`](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArcToPoint/p/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) method.
+This `ArcTo` method is similar to the PostScript [`arct`](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) (page 532) function and the iOS [`AddArcToPoint`](xref:CoreGraphics.CGPath.AddArcToPoint(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat)) method.
 
 The `ArcTo` method involves three points:
 

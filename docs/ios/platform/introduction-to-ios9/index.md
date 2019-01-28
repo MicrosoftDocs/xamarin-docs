@@ -34,7 +34,7 @@ To find out more, please see our [Introduction to 3D Touch](~/ios/platform/3d-to
 
 New to iOS 9, App Transport Security (ATS) enforces secure connections between internet resources (such as the app's back-end server) and your app. ATS ensures that all internet communications conform to secure connection best practices, thereby preventing accidental disclosure of sensitive information either directly through your app or a library that it is consuming.
 
-Since ATS is enabled by default in apps built for iOS 9 and OS X 10.11 (El Capitan), all connections using [NSUrlConnection](https://developer.xamarin.com/api/type/Foundation.NSUrlConnection/), [CFUrl](https://developer.xamarin.com/api/type/CoreFoundation.CFUrl/) or [NSUrlSession](https://developer.xamarin.com/api/type/Foundation.NSUrlSession/) will be subject to ATS security requirements. If your connections do not meet these requirement, they will fail with an exception.
+Since ATS is enabled by default in apps built for iOS 9 and OS X 10.11 (El Capitan), all connections using [NSUrlConnection](xref:Foundation.NSUrlConnection), [CFUrl](xref:CoreFoundation.CFUrl) or [NSUrlSession](xref:Foundation.NSUrlSession) will be subject to ATS security requirements. If your connections do not meet these requirement, they will fail with an exception.
 
 To find out more about ATS, please see our [App Transport Security](~/ios/app-fundamentals/ats.md) guide.
 
@@ -74,7 +74,7 @@ For more information, please see our [Search Enhancements](~/ios/platform/search
 
 ## New Stack View
 
-The Stack View control ([UIStackView](https://developer.xamarin.com/api/type/UIKit.UIStackView/)) leverages the power of Auto Layout and Size Classes to manage a stack of subviews (either horizontally or vertically) that dynamically responds to the iOS device's orientation and screen size.
+The Stack View control ([UIStackView](xref:UIKit.UIStackView) leverages the power of Auto Layout and Size Classes to manage a stack of subviews (either horizontally or vertically) that dynamically responds to the iOS device's orientation and screen size.
 
 By using Stack View control, the amount of work required to layout a user interface is greatly reduced. The layout of all subviews attached to a Stack View are managed automatically based on developer defined properties such as axis, distribution, alignment and spacing.
 
@@ -83,7 +83,7 @@ For more information, please see our [Introduction to Stack View](~/ios/user-int
 
 ## Collection View Changes
 
-In iOS 9, the Collection View ([UICollectionView](https://developer.xamarin.com/api/type/UIKit.UICollectionView/)) now supports drag reordering of items out of the box by adding a new default gesture recognizer and several new supporting methods.
+In iOS 9, the Collection View ([UICollectionView](xref:UIKit.UICollectionView) now supports drag reordering of items out of the box by adding a new default gesture recognizer and several new supporting methods.
 
 Using these new methods, you can easily implement drag-to-reorder in your Collection View and have the option of customizing the items appearance during any stage of the reordering process.
 
@@ -146,9 +146,9 @@ For more information, please see our [Introduction to Touch ID](~/ios/platform/t
 
 In iOS 9, Apple has made presenting a flipped user interface easier than ever by providing full support for right-to-left languages. This includes the following:
 
-- Standard [UIKit](https://developer.xamarin.com/api/namespace/UIKit/) controls will automatically flip right-to-left based on the iOS devices locale and language settings.
-- The [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/) class provides attributes that allow you to define how a given view should appear when flipped right-to-left.
-- The ability to flip an image programmatically by using the [FlipsForRightToLeftLayoutDirection](https://developer.xamarin.com/api/property/UIKit.UIImage.FlipsForRightToLeftLayoutDirection/) property of the [UIImage](https://developer.xamarin.com/api/type/UIKit.UIImage/) class.
+- Standard [UIKit](xref:UIKit) controls will automatically flip right-to-left based on the iOS devices locale and language settings.
+- The [UIView](xref:UIKit.UIView) class provides attributes that allow you to define how a given view should appear when flipped right-to-left.
+- The ability to flip an image programmatically by using the [FlipsForRightToLeftLayoutDirection](xref:UIKit.UIImage.FlipsForRightToLeftLayoutDirection) property of the [UIImage](xref:UIKit.UIImage) class.
 
 For more information, please see Apple's [Supporting Right-to-Left Languages](https://developer.apple.com/library/prerelease/ios/documentation/MacOSX/Conceptual/BPInternational/SupportingRight-To-LeftLanguages/SupportingRight-To-LeftLanguages.html#//apple_ref/doc/uid/10000171i-CH17) documentation.
 

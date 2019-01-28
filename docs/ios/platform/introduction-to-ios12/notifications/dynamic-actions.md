@@ -41,10 +41,10 @@ For example, in the [sample app](#sample-app-redgreennotifications), the
 - Defines one category for red notifications and another for green
 notifications
 - Registers these categories by calling the
-[`SetNotificationCategories`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.SetNotificationCategories/)
+[`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
 method of `UNUserNotificationCenter`
 - Attaches a single
-[`UNNotificationAction`](https://developer.xamarin.com/api/type/UserNotifications.UNNotificationAction/)
+[`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
 to each category
 
 The following sample code shows how this works:
@@ -82,14 +82,14 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 ```
 
 Based on this code, any notification whose
-[`Content.CategoryIdentifier`](https://developer.xamarin.com/api/property/UserNotifications.UNNotificationContent.CategoryIdentifier/)
+[`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
 is "red-category" or "green-category" will, by default, show a
 **Rotate 20°** action button.
 
 ## In-app handling of notification action buttons
 
 `UNUserNotificationCenter` has a `Delegate` property of type
-[`IUNUserNotificationCenterDelegate`](https://developer.xamarin.com/api/type/UserNotifications.UNUserNotificationCenterDelegate_Extensions/).
+[`IUNUserNotificationCenterDelegate`](xref:UserNotifications.IUNUserNotificationCenterDelegate).
 
 In the sample app, `AppDelegate` sets itself as the user notification
 center's delegate in `FinishedLaunching`:
@@ -107,7 +107,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 ```
 
 Then, `AppDelegate` implements
-[`DidReceiveNotificationResponse`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse/)
+[`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
 to handle action button taps:
 
 ```csharp
@@ -143,7 +143,7 @@ defines the custom interface for a notification.
 
 This view controller can use the `GetNotificationActions` and
 `SetNotificationActions` methods on its
-[`ExtensionContext`](https://developer.xamarin.com/api/property/UIKit.UIViewController.ExtensionContext/)
+[`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
 property to access and modify the notification's action buttons.
 
 In the sample app, the notification content extension's view controller

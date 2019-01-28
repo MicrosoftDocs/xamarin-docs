@@ -23,8 +23,8 @@ The Xamarin Designer for iOS is a powerful tool for visualizing an application's
 
 A control that meets all the following requirements will be rendered on the design surface:
 
-1.  It is a direct or indirect subclass of  [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/) or  [UIViewController](https://developer.xamarin.com/api/type/UIKit.UIView/Controller). Other [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) subclasses will appear as an icon on the design surface.
-2.  It has a  [RegisterAttribute](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) to expose it to Objective-C.
+1.  It is a direct or indirect subclass of  [UIView](xref:UIKit.UIView) or  [UIViewController](xref:UIKit.UIViewController). Other [NSObject](xref:Foundation.NSObject) subclasses will appear as an icon on the design surface.
+2.  It has a  [RegisterAttribute](xref:Foundation.RegisterAttribute) to expose it to Objective-C.
 3.  It has  [the required IntPtr constructor](~/ios/internals/api-design/index.md).
 4.  It either implements the [IComponent](xref:System.ComponentModel.IComponent) interface or has a [DesignTimeVisibleAttribute](xref:System.ComponentModel.DesignTimeVisibleAttribute) set to True.
 
@@ -38,17 +38,17 @@ The designer does not support loading third-party Objective-C libraries.
 A property declared by a custom control will appear in the property panel if the following conditions are met:
 
 1.  The property has a public getter and setter.
-1.  The property has an  [ExportAttribute](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) as well as a  [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) set to True.
-1.  The property type is a numeric type, enumeration type, string, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](https://developer.xamarin.com/api/type/UIKit.UIColor/), or [UIImage](https://developer.xamarin.com/api/type/UIKit.UIImage/). This list of supported types may be expanded in the future.
+1.  The property has an  [ExportAttribute](xref:Foundation.ExportAttribute) as well as a  [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) set to True.
+1.  The property type is a numeric type, enumeration type, string, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](xref:UIKit.UIColor), or [UIImage](xref:UIKit.UIImage). This list of supported types may be expanded in the future.
 
 
 The property may also be decorated with a [DisplayNameAttribute](xref:System.ComponentModel.DisplayNameAttribute) to specify the label that is displayed for it in the property panel.
 
 ## Initialization
 
-For `UIViewController` subclasses, you should use the [ViewDidLoad](https://developer.xamarin.com/api/member/UIKit.UIViewController.ViewDidLoad/) method for code that depends on views you created in the designer.
+For `UIViewController` subclasses, you should use the [ViewDidLoad](xref:UIKit.UIViewController.ViewDidLoad) method for code that depends on views you created in the designer.
 
-For `UIView` and other `NSObject` subclasses, the [AwakeFromNib](https://developer.xamarin.com/api/member/Foundation.NSObject.AwakeFromNib/) method
+For `UIView` and other `NSObject` subclasses, the [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) method
 is the recommended place to perform initialization of your custom control after it is loaded from the layout file. This is because any custom properties set in the property panel will not be set when the control's constructor is run, but they will be set before `AwakeFromNib` is called:
 
 
@@ -139,7 +139,7 @@ To fix the above situation, either initialize the `Counter` property elsewhere (
 
 On the design surface, a custom control must adhere to a few restrictions:
 
--  App bundle resources are not available in design mode. Images are available when loaded through  [UIImage methods](https://developer.xamarin.com/api/type/UIKit.UIImage/%2fM) .
+-  App bundle resources are not available in design mode. Images are available when loaded through  [UIImage methods](xref:UIKit.UIImage) .
 -  Asynchronous operations, such as web requests, should not be performed in design mode. The design surface does not support animation or any other asynchronous updates to the control's UI.
 
 

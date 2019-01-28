@@ -40,7 +40,7 @@ cell = new UITableViewCell (UITableViewCellStyle.Default, cellIdentifier);
 //cell = new UITableViewCell (UITableViewCellStyle.Value2, cellIdentifier);
 ```
 
-[Supported properties](http://developer.xamarin.com/api/type/UIKit.UITableViewCell/) of the cell style can then be set:
+[Supported properties](xref:UIKit.UITableViewCell) of the cell style can then be set:
 
 ```csharp
 cell.TextLabel.Text = tableItems[indexPath.Row].Heading;

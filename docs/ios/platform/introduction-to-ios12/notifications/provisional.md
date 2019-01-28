@@ -28,7 +28,7 @@ Take a look at the [RedGreenNotifications](https://developer.xamarin.com/samples
 
 To send provisional notifications, provide
 `UNAuthorizationOptions.Provisional` as an option to the
-[`RequestAuthorization`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.RequestAuthorization/)
+[`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)
 method of `UNUserNotificationCenter`:
 
 ```csharp

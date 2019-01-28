@@ -41,7 +41,7 @@ You'll notice an important class named `ViewRenderer`. This is the class you der
 The iOS [`ViewRenderer<TView, TNativeView>`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/ViewRenderer.cs#L25) has generic arguments:
 
 - `TView` constrained to [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
-- `TNativeView` constrained to [`UIKit.UIView`](https://developer.xamarin.com/api/type/UIKit.UIView/)
+- `TNativeView` constrained to [`UIKit.UIView`](xref:UIKit.UIView)
 
 The Android [`ViewRenderer<TView, TNativeView>`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/ViewRenderer.cs#L17) has generic arguments:
 

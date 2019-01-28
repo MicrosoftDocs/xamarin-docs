@@ -72,7 +72,7 @@ Apple included the following changes to the Foundation framework in iOS 9:
 
 ### Changes to NSBundle
 
-The following changes have been made to the [NSBundle](https://developer.xamarin.com/api/type/Foundation.NSBundle/) class for iOS 9:
+The following changes have been made to the [NSBundle](xref:Foundation.NSBundle) class for iOS 9:
 
 * `GetPreservationPriorityForTag (NSString tag)` - Gets the current preservation priority for resources with the given tag. Valid values are in the range `0.0` to `1.0`, resources with the lowest priority will be purged first.
 * `SetPreservationPriorityForTag (double priority, NSSet tags)` - Sets the current preservation priority for resources with the given tags. Valid values are in the range `0.0` to `1.0`, resources with the lowest priority will be purged first.
@@ -81,7 +81,7 @@ For more information, please see Apple's [NSBundle Reference](https://developer.
 
 ### Changes to NSProcessInfo
 
-Each process running on an iOS device has a single, _Process Information Agent_ (PIA). Use the [NSProcessInfo](https://developer.xamarin.com/api/type/Foundation.NSProcessInfo/) class to provide information about the current PIA and control power and thermal management for a given process.
+Each process running on an iOS device has a single, _Process Information Agent_ (PIA). Use the [NSProcessInfo](xref:Foundation.NSProcessInfo) class to provide information about the current PIA and control power and thermal management for a given process.
 
 For example, to control the automatic termination of a process you can use the following code:
 
@@ -100,7 +100,7 @@ For more information, please see Apple's [NSProcessInfo Reference](https://devel
 
 ### Reacting to Low Power Mode
 
-Use the `LowPowerModeEnabled` property of the [NSProcessInfo](https://developer.xamarin.com/api/type/Foundation.NSProcessInfo/) class to determine if the Low Power Mode has been enabled on the iOS device that the app is running on. For example:
+Use the `LowPowerModeEnabled` property of the [NSProcessInfo](xref:Foundation.NSProcessInfo) class to determine if the Low Power Mode has been enabled on the iOS device that the app is running on. For example:
 
 ```csharp
 // Is the device in low power mode?
@@ -172,7 +172,7 @@ Apple included the following changes to the [Safari Services](https://developer.
 
 - You can now use the new [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) class to display web content within a Xamarin.iOS app. It provides the ability to share website data and cookies with the Safari app and includes several of Safari's features (such as Reader and AutoFill). [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) features a **Done** button that will return users to your app when they are finished viewing the web content.
 
-Because the [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) class is tailored for displaying a single page of web content, you should consider using it to replace any [WKWebKit](https://developer.xamarin.com/api/type/WebKit.WKWebView/) or [UIWebView](https://developer.xamarin.com/api/type/UIKit.UIWebView/) controls within your existing Xamarin.iOS apps.
+Because the [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) class is tailored for displaying a single page of web content, you should consider using it to replace any [WKWebKit](xref:WebKit.WKWebView) or [UIWebView](xref:UIKit.UIWebView) controls within your existing Xamarin.iOS apps.
 
 ### Displaying a Website
 
@@ -188,7 +188,7 @@ PresentViewController(controller, true, null);
 
 ## UIKit Framework Changes
 
-Apple has included many enhancements to several elements of the [UIKit](https://developer.xamarin.com/api/namespace/UIKit/) framework for iOS 9. The following sections will detail those changes.
+Apple has included many enhancements to several elements of the [UIKit](xref:UIKit) framework for iOS 9. The following sections will detail those changes.
 
 ### 3D Touch Events
 
@@ -200,7 +200,7 @@ For more information, please see our [Introduction to 3D Touch](~/ios/platform/3
 
 ### Document Open-in-Place Functionality
 
-By using either the `FinishedLaunching (application, launchOptions)` or `WillFinishLaunching (Application, launchOptions)` methods of the [UIApplicationDelegate](https://developer.xamarin.com/api/type/UIKit.UIApplicationDelegate/) class, you can now open a document and modify it in place (as opposed to working on a copy).
+By using either the `FinishedLaunching (application, launchOptions)` or `WillFinishLaunching (Application, launchOptions)` methods of the [UIApplicationDelegate](xref:UIKit.UIApplicationDelegate) class, you can now open a document and modify it in place (as opposed to working on a copy).
 
 To support the new open-in-place functionality, add the `LSSupportsOpeningDocumentsInPlace` key to your Xamarin.iOS app's **Info.plist** file with a value of `YES`.
 
@@ -218,7 +218,7 @@ The new `NSDataAsset` class allows a Xamarin.iOS app to fetch content tailored t
 
 ### New Layout Anchors
 
-The new `NSLayoutAnchor` and `NSLayoutDimension` layout anchor classes work with the new anchor properties of the [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/) class (such as `LeadingAnchor` and `WidthAnchor`) to make layout easier in iOS 9.
+The new `NSLayoutAnchor` and `NSLayoutDimension` layout anchor classes work with the new anchor properties of the [UIView](xref:UIKit.UIView) class (such as `LeadingAnchor` and `WidthAnchor`) to make layout easier in iOS 9.
 
 Please see our [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) documentation for more information on working with AutoLayout and Size Classes in a Xamarin.iOS app and Apple's [NSLayoutAnchor Reference](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor), [NSLayoutDimension Reference](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) and [UIView Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) for more information.
 
@@ -228,11 +228,11 @@ The new `UILayoutGuide` class can be used to provide readable content margins an
 
 ### Text Input in Notifications Modifications
 
-The [UIUserNotificationAction](https://developer.xamarin.com/api/type/UIKit.UIUserNotificationAction/) class has a new `Behavior` property that can be used to support text input from notifications.
+The [UIUserNotificationAction](xref:UIKit.UIUserNotificationAction) class has a new `Behavior` property that can be used to support text input from notifications.
 
 ### UIApplicationDelegate Changes
 
-While not formally deprecated by Apple, they suggest replacing all calls to the `FinishedLaunching (UIApplication application)` method of the [UIApplicationDelegate](https://developer.xamarin.com/api/type/UIKit.UIApplicationDelegate/) class with either the `FinishedLaunching (UIApplication application, NSDictionary launchOptions)` or `WillFinishLaunching (UIApplication application, NSDictionary launchOptions)` methods.
+While not formally deprecated by Apple, they suggest replacing all calls to the `FinishedLaunching (UIApplication application)` method of the [UIApplicationDelegate](xref:UIKit.UIApplicationDelegate) class with either the `FinishedLaunching (UIApplication application, NSDictionary launchOptions)` or `WillFinishLaunching (UIApplication application, NSDictionary launchOptions)` methods.
 
 Please see Apple's [UIApplicationDelegate Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intf/UIApplicationDelegate) for more details.
 
@@ -248,7 +248,7 @@ Please see Apple's [UIAttachment Reference](https://developer.apple.com/library/
 
 ### UIPickerView and UIDatePicker Changes
 
-Prior to iOS 9, the [UIPickerView](https://developer.xamarin.com/api/type/UIKit.UIPickerView/) and the [UIDatePicker](https://developer.xamarin.com/api/type/UIKit.UIDatePicker/) controls were non-resizable and would automatically resize to fill the width of their container (usually the width of the iOS device the app was running on).
+Prior to iOS 9, the [UIPickerView](xref:UIKit.UIPickerView) and the [UIDatePicker](xref:UIKit.UIDatePicker) controls were non-resizable and would automatically resize to fill the width of their container (usually the width of the iOS device the app was running on).
 
 In iOS 9, this automatic resizing no longer occurs and the controls will be rendered at a 320 point width on all iOS devices, regardless of screen size and orientation.
 

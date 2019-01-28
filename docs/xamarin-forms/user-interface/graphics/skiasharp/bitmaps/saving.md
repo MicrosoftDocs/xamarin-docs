@@ -82,7 +82,7 @@ The following sections discuss how `SavePhotoAsync` is implemented on each platf
 
 ### The iOS implementation
 
-The iOS implementation of `SavePhotoAsync` uses the [`SaveToPhotosAlbum`](https://developer.xamarin.com/api/member/UIKit.UIImage.SaveToPhotosAlbum/) method of `UIImage`:
+The iOS implementation of `SavePhotoAsync` uses the [`SaveToPhotosAlbum`](xref:UIKit.UIImage.SaveToPhotosAlbum*) method of `UIImage`:
 
 ```csharp
 public class PhotoLibrary : IPhotoLibrary

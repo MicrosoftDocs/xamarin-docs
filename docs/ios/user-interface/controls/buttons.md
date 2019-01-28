@@ -78,7 +78,7 @@ button.TouchUpInside += (sender, e) => {
 > [!NOTE]
 > `TouchUpInside` is not the only available button event. `UIButton` is a
 > child class of `UIControl`, which defines
-> [many different events](https://developer.xamarin.com/api/type/UIKit.UIControlEvent/).
+> [many different events](xref:UIKit.UIControlEvent).
 
 ### Using the iOS Designer to specify button event handlers
 
@@ -100,7 +100,7 @@ specified programmatically or with the iOS Designer.
 
 > [!NOTE]
 > For a complete list of all `UIControlState` values, take a look at the
-> [`UIKit.UIControlState enumeration`](https://developer.xamarin.com/api/type/UIKit.UIControlState/)
+> [`UIKit.UIControlState enumeration`](xref:UIKit.UIControlState)
 > documentation.
 
 For example, to set the title color and shadow color for

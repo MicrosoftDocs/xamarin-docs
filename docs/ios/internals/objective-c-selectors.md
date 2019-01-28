@@ -39,11 +39,11 @@ The declaration (from Apple's documentation) is:
 This API has the following characteristics:
 
 - The return type is `CGSize` for the Unified API.
-- The `font` parameter is a [UIFont](https://developer.xamarin.com/api/type/UIKit.UIFont/) (and a type (indirectly) derived from [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/)), and is mapped to [System.IntPtr](xref:System.IntPtr).
+- The `font` parameter is a [UIFont](xref:UIKit.UIFont) (and a type (indirectly) derived from [NSObject](xref:Foundation.NSObject), and is mapped to [System.IntPtr](xref:System.IntPtr).
 - The `width` parameter, a `CGFloat`, is mapped to `nfloat`.
 - The `lineBreakMode` parameter, a [`UILineBreakMode`](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc),
 has already been bound in Xamarin.iOS as the
-[`UILineBreakMode`](https://developer.xamarin.com/api/type/UIKit.UILineBreakMode/)
+[`UILineBreakMode`](xref:UIKit.UILineBreakMode)
 enumeration.
 
 Putting it all together, the `objc_msgSend` declaration should match:
@@ -163,7 +163,7 @@ required for the selector. The instance and selector arguments must be
 `System.IntPtr`, and all remaining arguments must match the type the
 selector expects, for example an `nint` for an `int`, or a
 `System.IntPtr` for all `NSObject`-derived types. Use the
-[`NSObject.Handle`](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/)
+[`NSObject.Handle`](xref:Foundation.NSObject.Handle)
 property to obtain an `IntPtr` for an Objective-C type instance.
 
 There is more than one `objc_msgSend` function:

@@ -285,7 +285,7 @@ public MainViewController (IntPtr handle) : base (handle)
 ```
 
 
-When creating a Storyboard using the Designer, the IDE will automatically add the [[Register]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) attribute at the top of the `designer.cs` class, and pass in a string identifier, which is identical to the Storyboard ID specified in the previous step. This will link the C# to the relevant scene in the Storyboard.
+When creating a Storyboard using the Designer, the IDE will automatically add the [[Register]](xref:Foundation.RegisterAttribute) attribute at the top of the `designer.cs` class, and pass in a string identifier, which is identical to the Storyboard ID specified in the previous step. This will link the C# to the relevant scene in the Storyboard.
 
 At some point you might want to add an existing class which was **not** created in the designer. In this case, you would Register this class as normal:
 

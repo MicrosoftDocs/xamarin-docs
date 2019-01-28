@@ -45,7 +45,7 @@ This interface is implemented in all the platforms using platform-specific code.
 
 ## iOS Implementation
 
-The iOS implementation of the `IPicturePicker` interface uses the [`UIImagePickerController`](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) as described in the [**Choose a Photo from the Gallery**](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery) recipe and [sample code](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery).
+The iOS implementation of the `IPicturePicker` interface uses the [`UIImagePickerController`](xref:UIKit.UIImagePickerController) as described in the [**Choose a Photo from the Gallery**](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery) recipe and [sample code](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery).
 
 The iOS implementation is contained in the [`PicturePickerImplementation`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/iOS/PicturePickerImplementation.cs) class in the iOS project of the sample code. To make this class visible to the `DependencyService` manager, the class must be identified with an [`assembly`] attribute of type `Dependency`, and the class must be public and explicitly implement the `IPicturePicker` interface:
 

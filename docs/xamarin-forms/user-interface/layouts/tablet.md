@@ -109,7 +109,7 @@ page layouts, or even to render entirely different pages on larger screens.
 
 The [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)
 is ideal for larger screens, especially on the iPad
-where it uses the [`UISplitViewController`](https://developer.xamarin.com/api/type/UIKit.UISplitViewController/)
+where it uses the [`UISplitViewController`](xref:UIKit.UISplitViewController)
 to provide a native iOS experience.
 
 Review [this Xamarin blog post](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/)

@@ -89,14 +89,14 @@ The **Info.plist** file also contains the following:
 ```
 
 This `NSUserActivityTypes` key/value pair indicates that Soup Chef knows
-how to handle an `OrderSoupIntent`, and an [`NSUserActivity`](https://developer.xamarin.com/api/type/Foundation.NSUserActivity/)
-having an [`ActivityType`](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.ActivityType/)
+how to handle an `OrderSoupIntent`, and an [`NSUserActivity`](xref:Foundation.NSUserActivity)
+having an [`ActivityType`](xref:Foundation.NSUserActivity.ActivityType)
 of "com.xamarin.SoupChef.viewMenu".
 
 Activities and custom intents passed to the app itself, as opposed to its
 extensions, are handled in the `AppDelegate`
-(a [`UIApplicationDelegate`](https://developer.xamarin.com/api/type/UIKit.UIApplicationDelegate/))
-by the [`ContinueUserActivity`](https://developer.xamarin.com/api/member/UIKit.UIApplicationDelegate.ContinueUserActivity/)
+(a [`UIApplicationDelegate`](xref:UIKit.UIApplicationDelegate)
+by the [`ContinueUserActivity`](xref:UIKit.UIApplicationDelegate.ContinueUserActivity*)
 method.
 
 ### Entitlements.plist
@@ -116,7 +116,7 @@ following:
 This configuration indicates that the app uses the
 "group.com.xamarin.SoupChef" app group. The **SoupChefIntents** app
 extension uses this same app group, which allows the two projects to share
-[`NSUserDefaults`](https://developer.xamarin.com/api/type/Foundation.NSUserDefaults/)
+[`NSUserDefaults`](xref:Foundation.NSUserDefaults)
 data.
 
 The `com.apple.developer.siri` key indicates that the app interacts with
@@ -135,7 +135,7 @@ screen you'd like the shortcut to open.
 ### Setting up an NSUserActivity
 
 On the menu screen, `SoupMenuViewController` creates an `NSUserActivity`
-and assigns it to the view controller's [`UserActivity`](https://developer.xamarin.com/api/property/UIKit.UIResponder.UserActivity/)
+and assigns it to the view controller's [`UserActivity`](xref:UIKit.UIResponder.UserActivity)
 property:
 
 ```csharp
@@ -187,10 +187,10 @@ Note the following in particular:
 
 - Setting `EligibleForPrediction` to `true` indicates that Siri can
 predict this activity and surface it as a shortcut.
-- The [`ContentAttributeSet`](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.ContentAttributeSet/)
+- The [`ContentAttributeSet`](xref:Foundation.NSUserActivity.ContentAttributeSet)
 array is a standard [`CSSearchableItemAttributeSet`](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/)
 used to include an `NSUserActivity` in iOS search results.
-- [`SuggestedInvocationPhrase`](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.SuggestedInvocationPhrase/)
+- [`SuggestedInvocationPhrase`](xref:Foundation.NSUserActivity.SuggestedInvocationPhrase)
 is a phrase that Siri will suggest to the user as a potential choice when
 assigning a phrase to a shortcut.
 
@@ -798,7 +798,7 @@ used to record and assign voice shortcuts is provided by iOS and requires
 little custom code.
 
 In `OrderDetailViewController`, when a user taps the table's **Add to Siri**
-row, the [`RowSelected`](https://developer.xamarin.com/api/member/UIKit.UITableViewSource.RowSelected/)
+row, the [`RowSelected`](xref:UIKit.UITableViewSource.RowSelected*)
 method presents a screen to either add or edit a voice shortcut:
 
 ```csharp
