@@ -58,7 +58,7 @@ The [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) property can be se
 </ListView>
 ```
 
-The child of an inline [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) must be of, or derive from, type [`ViewCell`](xref:Xamarin.Forms.ViewCell). Layout inside the `ViewCell` is managed here by a [`Grid`](xref:Xamarin.Forms.Grid). The `Grid` contains three [`Label`](xref:Xamarin.Forms.Label) instances that bind their [`Text`](xref:Xamarin.Forms.Label.Text) properties to the appropriate properties of each `Person` object in the collection.
+The child of an inline [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) must be of, or derive from, type [`Cell`](xref:Xamarin.Forms.Cell). This example uses a [`ViewCell`](xref:Xamarin.Forms.ViewCell), which derives from `Cell`. Layout inside the `ViewCell` is managed here by a [`Grid`](xref:Xamarin.Forms.Grid). The `Grid` contains three [`Label`](xref:Xamarin.Forms.Label) instances that bind their [`Text`](xref:Xamarin.Forms.Label.Text) properties to the appropriate properties of each `Person` object in the collection.
 
 The equivalent C# code is shown in the following code example:
 
