@@ -62,7 +62,7 @@ Xamarin.Essentials is available as a NuGet package that can be added to any exis
     protected override void OnCreate(Bundle savedInstanceState) {
         //...
         base.OnCreate(savedInstanceState);
-        Xamarin.Essentials.Platform.Init(this, savedInstanceState); // add this line to your code
+        Xamarin.Essentials.Platform.Init(this, savedInstanceState); // add this line to your code, it may also be called: bundle
         //...
     ```
 
