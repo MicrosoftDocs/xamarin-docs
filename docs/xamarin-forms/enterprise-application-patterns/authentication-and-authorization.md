@@ -48,7 +48,7 @@ The eShopOnContainers mobile app communicates with the identity microservice, wh
 
 ### Adding IdentityServer to a Web Application
 
-In order for an ASP.NET Core web application to use IdentityServer 4, it must be added to the web application's Visual Studio solution. For more information, see [Setup and Overview](https://identityserver4.readthedocs.io/en/release/quickstarts/0_overview.html) in the IdentityServer documentation.
+In order for an ASP.NET Core web application to use IdentityServer 4, it must be added to the web application's Visual Studio solution. For more information, see [Overview](https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html) in the IdentityServer documentation.
 
 Once IdentityServer is included in the web application's Visual Studio solution, it must be added to the web application's HTTP request processing pipeline, so that it can serve requests to OpenID Connect and OAuth 2.0 endpoints. This is achieved in the `Configure` method in the web application's `Startup` class, as demonstrated in the following code example:
 
@@ -94,7 +94,7 @@ After calling the `services.AddIdentityServer` method, additional fluent APIs ar
 
 >💡 **Tip**: Dynamically load the IdentityServer 4 configuration. IdentityServer 4's APIs allow for configuring IdentityServer from an in-memory list of configuration objects. In the eShopOnContainers reference application, these in-memory collections are hard-coded into the application. However, in production scenarios they can be loaded dynamically from a configuration file or from a database.
 
-For information about configuring IdentityServer to use ASP.NET Core Identity, see [Using ASP.NET Core Identity](https://identityserver4.readthedocs.io/en/release/quickstarts/6_aspnet_identity.html) in the IdentityServer documentation.
+For information about configuring IdentityServer to use ASP.NET Core Identity, see [Using ASP.NET Core Identity](https://identityserver4.readthedocs.io/en/latest/quickstarts/8_aspnet_identity.html) in the IdentityServer documentation.
 
 #### Configuring API Resources
 
@@ -111,7 +111,7 @@ public static IEnumerable<ApiResource> GetApis()
 }
 ```
 
-This method specifies that IdentityServer should protect the orders and basket APIs. Therefore, IdentityServer managed access tokens will be required when making calls to these APIs. For more information about the `ApiResource` type, see [API Resource](https://identityserver4.readthedocs.io/en/release/reference/api_resource.html#refapiresource) in the IdentityServer 4 documentation.
+This method specifies that IdentityServer should protect the orders and basket APIs. Therefore, IdentityServer managed access tokens will be required when making calls to these APIs. For more information about the `ApiResource` type, see [API Resource](https://identityserver4.readthedocs.io/en/latest/reference/api_resource.html) in the IdentityServer 4 documentation.
 
 #### Configuring Identity Resources
 
@@ -133,7 +133,7 @@ The OpenID Connect specification specifies some [standard identity resources](ht
 > [!NOTE]
 > The `IdentityResources` class supports all of the scopes defined in the OpenID Connect specification (openid, email, profile, telephone, and address).
 
-IdentityServer also supports defining custom identity resources. For more information, see [Defining custom identity resources](https://identityserver4.readthedocs.io/en/release/topics/resources.html#defining-custom-identity-resources) in the IdentityServer documentation. For more information about the `IdentityResource` type, see [Identity Resource](https://identityserver4.readthedocs.io/en/release/reference/identity_resource.html) in the IdentityServer 4 documentation.
+IdentityServer also supports defining custom identity resources. For more information, see [Defining custom identity resources](http://docs.identityserver.io/en/latest/topics/resources.html#defining-custom-identity-resources) in the IdentityServer documentation. For more information about the `IdentityResource` type, see [Identity Resource](https://identityserver4.readthedocs.io/en/latest/reference/identity_resource.html) in the IdentityServer 4 documentation.
 
 #### Configuring Clients
 
@@ -209,7 +209,7 @@ The authentication flow between a client and IdentityServer can be configured by
 > [!TIP]
 > Use the hybrid authentication flow. The hybrid authentication flow mitigates a number of attacks that apply to the browser channel, and is the recommended flow for native applications that want to retrieve access tokens (and possibly refresh tokens).
 
-For more information about authentication flows, see [Grant Types](https://identityserver4.readthedocs.io/en/release/topics/grant_types.html) in the IdentityServer 4 documentation.
+For more information about authentication flows, see [Grant Types](https://identityserver4.readthedocs.io/en/latest/topics/grant_types.html) in the IdentityServer 4 documentation.
 
 ### Performing Authentication
 
@@ -274,7 +274,7 @@ public string CreateAuthorizationRequest()
 
 ```
 
-This method creates the URI for IdentityServer's [authorization endpoint](https://identityserver4.readthedocs.io/en/release/endpoints/authorize.html), with the required parameters. The authorization endpoint is at `/connect/authorize` on port 5105 of the base endpoint exposed as a user setting. For more information about user settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
+This method creates the URI for IdentityServer's [authorization endpoint](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html), with the required parameters. The authorization endpoint is at `/connect/authorize` on port 5105 of the base endpoint exposed as a user setting. For more information about user settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
 > [!NOTE]
 > The attack surface of the eShopOnContainers mobile app is reduced by implementing the Proof Key for Code Exchange (PKCE) extension to OAuth. PKCE protects the authorization code from being used if it’s intercepted. This is achieved by the client generating a secret verifier, a hash of which is passed in the authorization request, and which is presented unhashed when redeeming the authorization code. For more information about PKCE, see [Proof Key for Code Exchange by OAuth Public Clients](https://tools.ietf.org/html/rfc7636) on the Internet Engineering Task Force web site.
@@ -310,7 +310,7 @@ private async Task NavigateAsync(string url)
 }
 ```
 
-This method parses the authentication response that's contained in the return URI, and provided that a valid authorization code is present, it makes a request to IdentityServer's [token endpoint](https://identityserver4.readthedocs.io/en/release/endpoints/token.html), passing the authorization code, the PKCE secret verifier, and other required parameters. The token endpoint is at `/connect/token` on port 5105 of the base endpoint exposed as a user setting. For more information about user settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
+This method parses the authentication response that's contained in the return URI, and provided that a valid authorization code is present, it makes a request to IdentityServer's [token endpoint](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html), passing the authorization code, the PKCE secret verifier, and other required parameters. The token endpoint is at `/connect/token` on port 5105 of the base endpoint exposed as a user setting. For more information about user settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
 >💡 **Tip**: Validate return URIs. Although the eShopOnContainers mobile app doesn't validate the return URI, the best practice is to validate that the return URI refers to a known location , to prevent open-redirect attacks.
 
@@ -355,7 +355,7 @@ public string CreateLogoutRequest(string token)
 }
 ```
 
-This method creates the URI to IdentityServer's [end session endpoint](https://identityserver4.readthedocs.io/en/release/endpoints/endsession.html#refendsession), with the required parameters. The end session endpoint is at `/connect/endsession` on port 5105 of the base endpoint exposed as a user setting. For more information about user settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
+This method creates the URI to IdentityServer's [end session endpoint](https://identityserver4.readthedocs.io/en/latest/endpoints/endsession.html#refendsession), with the required parameters. The end session endpoint is at `/connect/endsession` on port 5105 of the base endpoint exposed as a user setting. For more information about user settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
 The returned URI is stored in the `LoginUrl` property of the `LoginViewModel` class. While the `IsLogin` property is `true`, the [`WebView`](xref:Xamarin.Forms.WebView) in the `LoginView` is visible. The `WebView` data binds its [`Source`](xref:Xamarin.Forms.WebView.Source) property to the `LoginUrl` property of the `LoginViewModel` class, and so makes a sign-out request to IdentityServer when the `LoginUrl` property is set to IdentityServer's end session endpoint. When IdentityServer receives this request, provided that the user is signed-in, sign-out occurs. Authentication is tracked with a cookie managed by the cookie authentication middleware from ASP.NET Core. Therefore, signing out of IdentityServer removes the authentication cookie and sends a post logout redirect URI back to the client.
 
@@ -373,7 +373,7 @@ private async Task NavigateAsync(string url)
 }
 ```
 
-This method clears both the identity token and the access token from application settings, and sets the `IsLogin` property to `false`, which causes the [`WebView`](xref:Xamarin.Forms.WebView) on the `LoginView` page to become invisible. Finally, the `LoginUrl` property is set to the URI of IdentityServer's [authorization endpoint](https://identityserver4.readthedocs.io/en/release/endpoints/authorize.html), with the required parameters, in preparation for the next time the user initiates a sign-in.
+This method clears both the identity token and the access token from application settings, and sets the `IsLogin` property to `false`, which causes the [`WebView`](xref:Xamarin.Forms.WebView) on the `LoginView` page to become invisible. Finally, the `LoginUrl` property is set to the URI of IdentityServer's [authorization endpoint](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html), with the required parameters, in preparation for the next time the user initiates a sign-in.
 
 For information about page navigation, see [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md). For information about how [`WebView`](xref:Xamarin.Forms.WebView) navigation causes a view model method to be executed, see [Invoking Navigation using Behaviors](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors). For information about application settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
