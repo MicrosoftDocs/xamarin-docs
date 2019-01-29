@@ -4,7 +4,8 @@ description: "This document describes the AppInfo class in Xamarin.Essentials, w
 ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 01/29/2019
+ms.custom: video
 ---
 
 # Xamarin.Essentials: App Information
@@ -88,3 +89,9 @@ App information is taken from the `Package.appxmanifest` for the following field
 
 - [AppInfo source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/AppInfo)
 - [AppInfo API documentation](xref:Xamarin.Essentials.AppInfo)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/App-Information-Essential-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
