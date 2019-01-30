@@ -98,7 +98,7 @@ Specific [installation](~/cross-platform/get-started/installation/index.md) inst
 - [Xamarin.Mac](~/mac/get-started/installation.md)
 
 There's also additional information about
-[Xamarin.Forms requirements & supported platforms](~/xamarin-forms/get-started/installation.md).
+[Xamarin.Forms requirements & supported platforms](~/get-started/installation.md).
 
 ## Related links
 

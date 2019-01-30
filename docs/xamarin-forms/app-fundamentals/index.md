@@ -82,8 +82,3 @@ Control templates provide the ability to easily theme and re-theme application p
 ## [Triggers](triggers.md)
 
 Update controls by responding to property changes and events in XAML.
-
-
-## Related Links
-
-- [Introduction To Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)

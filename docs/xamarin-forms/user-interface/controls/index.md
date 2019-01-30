@@ -30,6 +30,5 @@ In the four articles on [**Pages**](pages.md), [**Layouts**](layouts.md), [**Vie
 
 ## Related Links
 
-- [Introduction To Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Xamarin.Forms FormsGallery sample](https://developer.xamarin.com/samples/FormsGallery/)
 - [API Documentation](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
