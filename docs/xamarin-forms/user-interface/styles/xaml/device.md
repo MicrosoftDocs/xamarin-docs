@@ -118,12 +118,7 @@ The following screenshots demonstrate the device styles on each platform, with t
 
 ![](device-images/maximum-size.png "Accessible Large Device Styles on Each Platform")
 
-## Summary
-
-Xamarin.Forms includes six *dynamic* styles, known as *device* styles, in the [`Devices.Styles`](xref:Xamarin.Forms.Device.Styles) class. All six styles can only be applied to [`Label`](xref:Xamarin.Forms.Label) instances.
-
-
-## Related Links
+## Related links
 
 - [Text Styles](~/xamarin-forms/user-interface/text/styles.md)
 - [XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

@@ -15,7 +15,7 @@ ms.date: 02/17/2016
 
 _Styles can inherit from other styles to reduce duplication and enable reuse._
 
-## Style Inheritance in XAML
+## Style inheritance in XAML
 
 Style inheritance is performed by setting the [`Style.BasedOn`](xref:Xamarin.Forms.Style.BasedOn) property to an existing [`Style`](xref:Xamarin.Forms.Style). In XAML, this is achieved by setting the `BasedOn` property to a `StaticResource` markup extension that references a previously created `Style`. In C#, this is achieved by setting the `BasedOn` property to a `Style` instance.
 
@@ -64,7 +64,7 @@ The `baseStyle` targets [`View`](xref:Xamarin.Forms.View) instances, and sets th
 > [!NOTE]
 > An implicit style can be derived from an explicit style, but an explicit style can't be derived from an implicit style.
 
-### Respecting the Inheritance Chain
+### Respecting the inheritance chain
 
 A style can only inherit from styles at the same level, or above, in the view hierarchy. This means that:
 
@@ -103,7 +103,7 @@ This inheritance chain is demonstrated in the following code example:
 
 In this example, `labelStyle` and `buttonStyle` are control level resources, while `baseStyle` is a page level resource. However, while `labelStyle` and `buttonStyle` inherit from `baseStyle`, it's not possible for `baseStyle` to inherit from `labelStyle` or `buttonStyle`, due to their respective locations in the view hierarchy.
 
-## Style Inheritance in C&#35;
+## Style inheritance in C&#35;
 
 The equivalent C# page, where [`Style`](xref:Xamarin.Forms.Style) instances are assigned directly to the [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties of the required controls, is shown in the following code example:
 
@@ -150,12 +150,7 @@ public class StyleInheritancePageCS : ContentPage
 
 The `baseStyle` targets [`View`](xref:Xamarin.Forms.View) instances, and sets the [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties. The `baseStyle` is not set directly on any controls. Instead, `labelStyle` and `buttonStyle` inherit from it, setting additional bindable property values. The `labelStyle` and `buttonStyle` are then applied to the [`Label`](xref:Xamarin.Forms.Label) instances and [`Button`](xref:Xamarin.Forms.Button) instance, by setting their [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties.
 
-## Summary
-
-Styles can inherit from other styles to reduce duplication and enable reuse. Style inheritance is performed by setting the [`Style.BasedOn`](xref:Xamarin.Forms.Style.BasedOn) property to an existing [`Style`](xref:Xamarin.Forms.Style).
-
-
-## Related Links
+## Related links
 
 - [XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Basic Styles (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)

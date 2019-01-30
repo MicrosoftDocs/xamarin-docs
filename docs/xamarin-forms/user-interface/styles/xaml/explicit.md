@@ -15,7 +15,7 @@ ms.date: 02/17/2016
 
 _An explicit style is one that is selectively applied to controls by setting their Style properties._
 
-## Creating an Explicit Style in XAML
+## Create an explicit style in XAML
 
 To declare a [`Style`](xref:Xamarin.Forms.Style) at the page level, a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) must be added to the page and then one or more `Style` declarations can be included in the `ResourceDictionary`. A `Style` is made *explicit* by giving its declaration an `x:Key` attribute, which gives it a descriptive key in the `ResourceDictionary`. *Explicit* styles must then be applied to specific visual elements by setting their [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties.
 
@@ -65,7 +65,7 @@ The [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) defines three 
 
 In addition, the final [`Label`](xref:Xamarin.Forms.Label) has a [`Style`](xref:Xamarin.Forms.Style) applied to it, but also overrides the [`TextColor`](xref:Xamarin.Forms.Label.TextColor) property to a different `Color` value.
 
-### Creating an Explicit Style at the Control Level
+### Create an explicit style at the control level
 
 In addition to creating *explicit* styles at the page level, they can also be created at the control level, as shown in the following code example:
 
@@ -92,7 +92,7 @@ In this example, the *explicit* [`Style`](xref:Xamarin.Forms.Style) instances ar
 
 For information about creating styles in an application's [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), see [Global Styles](~/xamarin-forms/user-interface/styles/application.md).
 
-## Creating an Explicit Style in C&#35;
+## Create an explicit style in C&#35;
 
 [`Style`](xref:Xamarin.Forms.Style) instances can be added to a page's [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) collection in C# by creating a new [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), and then by adding the `Style` instances to the `ResourceDictionary`, as shown in the following code example:
 
@@ -176,13 +176,7 @@ public class ExplicitStylesPageCS : ContentPage
 
 The constructor defines three *explicit* styles that are applied to the page's [`Label`](xref:Xamarin.Forms.Label) instances. Each `Style` is used to display text in a different color, while also setting the font size and horizontal and vertical layout options. Each `Style` is applied to a different `Label` by setting its [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties. In addition, the final `Label` has a `Style` applied to it, but also overrides the `TextColor` property to a different `Color` value.
 
-## Summary
-
-A [`Style`](xref:Xamarin.Forms.Style) is made *explicit* by giving its declaration an `x:Key` attribute, and then selectively applying it to controls by setting their [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties.
-
-
-
-## Related Links
+## Related links
 
 - [XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Basic Styles (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)

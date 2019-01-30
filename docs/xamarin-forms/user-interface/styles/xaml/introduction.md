@@ -83,7 +83,7 @@ Each [`Label`](xref:Xamarin.Forms.Label) instance has identical property values 
 
 Setting the appearance of each individual control can be repetitive and error prone. Instead, a style can be created that defines the appearance, and then applied to the required controls.
 
-## Creating a Style
+## Create a style
 
 The [`Style`](xref:Xamarin.Forms.Style) class groups a collection of property values into one object that can then be applied to multiple visual element instances. This helps to reduce repetitive markup, and allows an applications appearance to be more easily changed.
 
@@ -130,12 +130,7 @@ The articles in this section demonstrate and explain how to create and apply *ex
 >
 > Prior to Xamarin.Forms 2.2, the [`StyleId`](xref:Xamarin.Forms.Element.StyleId) property was used to identify individual elements in an application for identification in UI testing, and in theme engines such as Pixate. However, Xamarin.Forms 2.2 has introduced the [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) property, which has superseded the [`StyleId`](xref:Xamarin.Forms.Element.StyleId) property. For more information, see [Automate Xamarin.Forms testing with Xamarin.UITest and Test Cloud](~/xamarin-forms/deploy-test/uitest-and-test-cloud.md).
 
-## Summary
-
-Xamarin.Forms applications often contain multiple controls that have an identical appearance. Setting the appearance of each individual control can be repetitive and error prone. Instead, styles can be created that customize control appearance by grouping and settings properties available on the control type.
-
-
-## Related Links
+## Related links
 
 - [XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Style](xref:Xamarin.Forms.Style)
