@@ -201,7 +201,7 @@ In this example, the first [`BoxView`](xref:Xamarin.Forms.BoxView) is styled to 
 ![](style-class-images/boxviews.png "BoxViews styled with style classes")
 
 > [!IMPORTANT]
-> Multiple style classes can be applied to a control because the [`StyleClass`](xref:Xamarin.Forms.VisualElement.StyleClass) property is of type `IList<string>`.
+> Multiple style classes can be applied to a control because the [`StyleClass`](xref:Xamarin.Forms.VisualElement.StyleClass) property is of type `IList<string>`. When this occurs, style classes are applied in ascending list order. Therefore, when multiple style classes set identical properties, the property in the style class that's in the highest list position will take precedence.
 
 The equivalent C# code is:
 
