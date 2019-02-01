@@ -117,5 +117,4 @@ Xamarin.Forms uses the native web browser control on each platform, and can disp
 
 ## Related Links
 
-- [Introduction To Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Xamarin.Forms Gallery (sample)](https://developer.xamarin.com/samples/FormsGallery/)

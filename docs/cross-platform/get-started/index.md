@@ -18,7 +18,7 @@ ready to go.
 ## Build Your First App
 
 > [!div class="nextstepaction"]
-> [Xamarin.Forms Quickstart](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md)
+> [Xamarin.Forms Quickstart](~/get-started/quickstarts/single-page.md)
 
 If you'd like to build an app using native UI technologies (like Android XML or Xcode Storyboards), try one of these platform-specific guides:
 

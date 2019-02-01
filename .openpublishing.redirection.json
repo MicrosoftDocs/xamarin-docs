@@ -239,6 +239,46 @@
     {
       "source_path": "docs/xamarin-forms/platform/ios/theme.md",
       "redirect_url": "/xamarin/xamarin-forms/platform/ios/formatting"
-    }
+    },
+    {
+      "source_path": "docs/xamarin-forms/get-started/index.md",
+      "redirect_url": "/xamarin/get-started"
+    },	
+    {
+      "source_path": "docs/xamarin-forms/get-started/installation.md",
+      "redirect_url": "/xamarin/get-started/installation"
+    },
+    {
+      "source_path": "docs/xamarin-forms/get-started/first-app/index.md",
+      "redirect_url": "/xamarin/get-started/first-app"
+    },
+    {
+      "source_path": "docs/xamarin-forms/get-started/hello-xamarin-forms/index.md",
+      "redirect_url": "/xamarin/get-started"
+    },	
+    {
+      "source_path": "docs/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md",
+      "redirect_url": "/xamarin/get-started/quickstarts/single-page"
+    },	
+    {
+      "source_path": "docs/xamarin-forms/get-started/hello-xamarin-forms/deepdive.md",
+      "redirect_url": "/xamarin/get-started/quickstarts/deepdive"
+    },
+    {
+      "source_path": "docs/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/index.md",
+      "redirect_url": "/xamarin/get-started"
+    },
+    {
+      "source_path": "docs/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/quickstart.md",
+      "redirect_url": "/xamarin/get-started/quickstarts/multi-page"
+    },	
+    {
+      "source_path": "docs/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/deepdive.md",
+      "redirect_url": "/xamarin/get-started/quickstarts/deepdive"
+    },
+    {
+      "source_path": "docs/xamarin-forms/get-started/introduction-to-xamarin-forms.md",
+      "redirect_url": "/xamarin/get-started/quickstarts/deepdive"
+    }	
   ]
 }

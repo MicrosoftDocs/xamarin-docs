@@ -42,13 +42,13 @@ is exerting and respond to the different pressure levels.
 
 ## Pressure Sensitivity
 
-As stated above, by using new properties of the [UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/) class you can measure the amount of pressure the user is applying to the iOS device's screen and use this information in your user interface. For example, making a brush stroke more translucent or opaque based on the amount of pressure.
+As stated above, by using new properties of the [UITouch](xref:UIKit.UITouch) class you can measure the amount of pressure the user is applying to the iOS device's screen and use this information in your user interface. For example, making a brush stroke more translucent or opaque based on the amount of pressure.
 
 [![](3d-touch-images/pressure01.png "A brush stroke rendered as more translucent or opaque based on the amount of pressure")](3d-touch-images/pressure01.png#lightbox)
 
 As a result of 3D Touch, if your app is running on iOS 9 (or greater) and the iOS device is capable of supporting 3D Touch, changes in pressure will cause the `TouchesMoved` event to be raised.
 
-For example, when monitoring the `TouchesMoved` event of a [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/), you can use the following code to get the current pressure that the user is applying to the screen:
+For example, when monitoring the `TouchesMoved` event of a [UIView](xref:UIKit.UIView), you can use the following code to get the current pressure that the user is applying to the screen:
 
 ```csharp
 public override void TouchesMoved (NSSet touches, UIEvent evt)
@@ -67,7 +67,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 }
 ```
 
-The `MaximumPossibleForce` property returns the highest possible value for the `Force` property of the [UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/) based on the iOS device that the app is running on.
+The `MaximumPossibleForce` property returns the highest possible value for the `Force` property of the [UITouch](xref:UIKit.UITouch) based on the iOS device that the app is running on.
 
 > [!IMPORTANT]
 > Changes in pressure will cause the `TouchesMoved` event to be raised, even if the X/Y coordinates have not changed. Because of this change in behavior, your iOS apps should be prepared for the `TouchesMoved` event to be invoked more often and for the X/Y coordinates to be the same as the last `TouchesMoved` call.

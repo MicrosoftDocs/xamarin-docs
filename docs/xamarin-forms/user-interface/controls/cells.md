@@ -56,7 +56,6 @@ Xamarin.Forms supports the following cell types:
 
 ## Related Links
 
-- [Introduction To Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Xamarin.Forms FormsGallery sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 - [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [Xamarin.Forms API Documentation](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

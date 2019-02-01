@@ -17,10 +17,10 @@ by Xamarin.iOS.
 
 During startup, Xamarin.iOS will register:
 
-- Classes with a [[Register]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) attribute as Objective-C classes.
-- Classes with a [[Category]](https://developer.xamarin.com/api/type/CRuntime.CategoryAttribute) attribute as Objective-C categories.
-- Interfaces with a [[Protocol]](https://developer.xamarin.com/api/type/Foundation.ProtocolAttribute/) attribute as Objective-C protocols.
-- Members with an [[Export]](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/), making it possible for Objective-C to access them.
+- Classes with a [[Register]](xref:Foundation.RegisterAttribute) attribute as Objective-C classes.
+- Classes with a [[Category]](xref:ObjCRuntime.CategoryAttribute) attribute as Objective-C categories.
+- Interfaces with a [[Protocol]](xref:Foundation.ProtocolAttribute) attribute as Objective-C protocols.
+- Members with an [[Export]](xref:Foundation.ExportAttribute), making it possible for Objective-C to access them.
 
 For example, consider the managed `Main` method common in Xamarin.iOS
 applications:

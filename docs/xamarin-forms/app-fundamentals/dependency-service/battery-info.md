@@ -72,7 +72,7 @@ Coding against this interface in the shared code will allow the Xamarin.Forms ap
 
 ## iOS Implementation
 
-The `IBattery` interface must be implemented in each platform-specific application project. The iOS implementation will use the native [`UIDevice`](https://developer.xamarin.com/api/type/UIKit.UIDevice/) APIs to access battery information. Note that the following class has a parameterless constructor so that the `DependencyService` can create new instances:
+The `IBattery` interface must be implemented in each platform-specific application project. The iOS implementation will use the native [`UIDevice`](xref:UIKit.UIDevice) APIs to access battery information. Note that the following class has a parameterless constructor so that the `DependencyService` can create new instances:
 
 ```csharp
 using UIKit;

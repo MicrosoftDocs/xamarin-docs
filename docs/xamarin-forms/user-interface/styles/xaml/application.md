@@ -15,7 +15,7 @@ ms.date: 02/17/2016
 
 _Styles can be made available globally by adding them to the application's resource dictionary. This helps to avoid duplication of styles across pages or controls._
 
-## Creating a Global Style in XAML
+## Create a global style in XAML
 
 By default, all Xamarin.Forms applications created from a template use the **App** class to implement the [`Application`](xref:Xamarin.Forms.Application) subclass. To declare a [`Style`](xref:Xamarin.Forms.Style) at the application level, in the application's [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) using XAML, the default **App** class must be replaced with a XAML **App** class and associated code-behind. For more information, see [Working with the App Class](~/xamarin-forms/app-fundamentals/application-class.md).
 
@@ -61,7 +61,7 @@ This results in the appearance shown in the following screenshots:
 
 For information about creating styles in a page's [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), see [Explicit Styles](~/xamarin-forms/user-interface/styles/explicit.md) and [Implicit Styles](~/xamarin-forms/user-interface/styles/implicit.md).
 
-### Overriding Styles
+### Override styles
 
 Styles lower in the view hierarchy take precedence over those defined higher up. For example, setting a [`Style`](xref:Xamarin.Forms.Style) that sets [`Button.TextColor`](xref:Xamarin.Forms.Button.TextColor) to `Red` at the application level will be overridden by a page level style that sets `Button.TextColor` to `Green`. Similarly, a page level style will be overridden by a control level style. In addition, if `Button.TextColor` is set directly on a control property, this will take precedence over any styles. This precedence is demonstrated in the following code example:
 
@@ -97,7 +97,7 @@ The original `buttonStyle`, defined at application level, is overridden by the `
 
 [![](application-images/application-styles-2.png "Overriding Styles Example")](application-images/application-styles-2-large.png#lightbox "Overriding Styles Example")
 
-## Creating a Global Style in C&#35;
+## Create a global style in C&#35;
 
 [`Style`](xref:Xamarin.Forms.Style) instances can be added to the application's [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) collection in C# by creating a new [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), and then by adding the `Style` instances to the `ResourceDictionary`, as shown in the following code example:
 
@@ -145,13 +145,7 @@ public class ApplicationStylesPageCS : ContentPage
 
 The `buttonStyle` is applied to the [`Button`](xref:Xamarin.Forms.Button) instances by setting their [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties, and controls the appearance of the `Button` instances.
 
-## Summary
-
-Styles can be made available globally by adding them to the application's [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). This helps to avoid duplication of styles across pages or controls.
-
-
-
-## Related Links
+## Related links
 
 - [XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Basic Styles (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)

@@ -26,11 +26,11 @@ As stated above, ATS ensures that all internet communications in iOS 9 and OS X 
 
 For existing apps, implement the `HTTPS` protocol whenever possible. For new Xamarin.iOS apps, you should use `HTTPS` exclusively when communicating with internet resources. Additionally, high-level API communication must be encrypted using TLS version 1.2 with forward secrecy.
 
-Any connection made with [NSUrlConnection](https://developer.xamarin.com/api/type/Foundation.NSUrlConnection/), [CFUrl](https://developer.xamarin.com/api/type/CoreFoundation.CFUrl/) or [NSUrlSession](https://developer.xamarin.com/api/type/Foundation.NSUrlSession/) will use ATS by default in apps built for iOS 9 and OS X 10.11 (El Capitan).
+Any connection made with [NSUrlConnection](xref:Foundation.NSUrlConnection), [CFUrl](xref:CoreFoundation.CFUrl) or [NSUrlSession](xref:Foundation.NSUrlSession) will use ATS by default in apps built for iOS 9 and OS X 10.11 (El Capitan).
 
 ## Default ATS Behavior
 
-Since ATS is enabled by default in apps built for iOS 9 and OS X 10.11 (El Capitan), all connections using [NSUrlConnection](https://developer.xamarin.com/api/type/Foundation.NSUrlConnection/), [CFUrl](https://developer.xamarin.com/api/type/CoreFoundation.CFUrl/) or [NSUrlSession](https://developer.xamarin.com/api/type/Foundation.NSUrlSession/) will be subject to ATS security requirements. If your connections do not meet these requirement, they will fail with an exception.
+Since ATS is enabled by default in apps built for iOS 9 and OS X 10.11 (El Capitan), all connections using [NSUrlConnection](xref:Foundation.NSUrlConnection), [CFUrl](xref:CoreFoundation.CFUrl) or [NSUrlSession](xref:Foundation.NSUrlSession) will be subject to ATS security requirements. If your connections do not meet these requirement, they will fail with an exception.
 
 ### ATS Connection Requirements
 

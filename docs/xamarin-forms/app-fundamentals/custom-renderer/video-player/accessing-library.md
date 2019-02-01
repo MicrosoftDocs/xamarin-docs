@@ -35,7 +35,7 @@ Each of the platforms contains a class named `VideoPicker` that implements this 
 
 ### The iOS video picker
 
-The iOS `VideoPicker` uses the iOS [`UIImagePickerController`](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) to access the image library, specifying that it should be restricted to videos (referred to as "movies") in the iOS `MediaType` property. Notice that `VideoPicker` explicitly implements the `IVideoPicker` interface. Notice also the `Dependency` attribute that identifies this class as a dependency service. These are the two requirements that allow Xamarin.Forms to find the dependency service in the platform project:
+The iOS `VideoPicker` uses the iOS [`UIImagePickerController`](xref:UIKit.UIImagePickerController) to access the image library, specifying that it should be restricted to videos (referred to as "movies") in the iOS `MediaType` property. Notice that `VideoPicker` explicitly implements the `IVideoPicker` interface. Notice also the `Dependency` attribute that identifies this class as a dependency service. These are the two requirements that allow Xamarin.Forms to find the dependency service in the platform project:
 
 ```csharp
 using System;

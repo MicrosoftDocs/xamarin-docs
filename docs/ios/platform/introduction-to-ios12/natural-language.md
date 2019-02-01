@@ -19,7 +19,7 @@ people, places, and organizations.
 The Natural Language framework can also use custom Core ML models to
 classify and tag text in specialized contexts.
 
-The [NSLinguisticTagger](https://developer.xamarin.com/api/type/Foundation.NSLinguisticTagger/)
+The [NSLinguisticTagger](xref:Foundation.NSLinguisticTagger)
 class is still available. However, the Natural Language framework is the
 preferred mechanism to use for Natural Language processing.
 
@@ -174,7 +174,7 @@ token is associated with a word or sentence in the original text.
 `ShowTokens` splits the user's input into tokens by calling the
 [`GetTokens`](https://developer.xamarin.com/api/member/NaturalLanguage.NLTokenizer.GetTokens/)
 method of an `NLTokenizer`. This method returns an array of
-[`NSValue`](https://developer.xamarin.com/api/type/Foundation.NSValue/)
+[`NSValue`](xref:Foundation.NSValue)
 objects, each wrapping an `NSRange` value corresponding to a token in
 the original text.
 

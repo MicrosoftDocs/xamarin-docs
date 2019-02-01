@@ -151,7 +151,7 @@ The following enhancements have been made to the ReplayKit framework in iOS 10:
 
 The following enhancements have been made to the SceneKit framework in iOS 10:
 
-- The [SCNCamera](https://developer.xamarin.com/api/type/SceneKit.SCNCamera/) class can provide greater realism by using HDR features and effects. Use adaptive exposure to create automatic effects or use vignetting, color fringing and color grading to add fillmatic effects to the game.
+- The [SCNCamera](xref:SceneKit.SCNCamera) class can provide greater realism by using HDR features and effects. Use adaptive exposure to create automatic effects or use vignetting, color fringing and color grading to add fillmatic effects to the game.
 - SceneKit now includes a new Physically Based Rendering (PBR) system for more realistic results with simpler asset authoring.
 - Use the new [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) shading model to product a wide range of realistic shading effects while requiring only three fundamental properties (`Diffuse`, `Metalness` and `Roughness`).
 - Since PBR shading works best with environment-based lighting, use the `LightingEnvironment` property to assign image-based lighting to an entire scene.
@@ -186,8 +186,8 @@ See the [iOSTenThree Sample](https://developer.xamarin.com/samples/monotouch/iOS
 
 The following enhancements have been made to the UIKit framework in iOS 10:
 
-- The new [UIPasteboard](https://developer.xamarin.com/api/type/UIKit.UIPasteboard/) API provides new options (such as lifetime limitations) and will automatically declare compatible content types for common class types.
-- New fully interactive, object-based, interruptible animation support has been added and can be linked to gestures. Pleas see Apple's [UIViewAnimating Protocol Reference](https://developer.apple.com/reference/uikit/uiviewanimating), [UIViewPropertyAnimator Class Reference](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [UITimingCurveProvider Protocol Reference](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [UICubicTimingParameters Class Reference](https://developer.apple.com/reference/uikit/uicubictimingparameters) and [UISpringTimingParameter Class Reference](https://developer.apple.com/reference/uikit/uispringtimingparameters) for more information.
+- The new [UIPasteboard](xref:UIKit.UIPasteboard) API provides new options (such as lifetime limitations) and will automatically declare compatible content types for common class types.
+- New fully interactive, object-based, interruptible animation support has been added and can be linked to gestures. Please see Apple's [UIViewAnimating Protocol Reference](https://developer.apple.com/reference/uikit/uiviewanimating), [UIViewPropertyAnimator Class Reference](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [UITimingCurveProvider Protocol Reference](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [UICubicTimingParameters Class Reference](https://developer.apple.com/reference/uikit/uicubictimingparameters) and [UISpringTimingParameter Class Reference](https://developer.apple.com/reference/uikit/uispringtimingparameters) for more information.
 - The new `UIPreviewInteraction` and `UIPreviewInteractionDelegate` allow the developer app to provide a custom interface for peek and pop operations.
 - The new `UIAccessibilityCustomRotor` class allows the app to provide custom, context-specific functionality to assistive technologies such as Voice Over.
 - Use the `UIAccessibilityIsAssistiveTouchRunning` and `UIAccessibilityAssistiveTouchStatusDidChangeNotification` symbols to determine if AssistiveTouch is enabled.

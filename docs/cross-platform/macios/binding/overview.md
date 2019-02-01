@@ -94,19 +94,19 @@ API defintions that can be built into bindings.
 
 ## How Binding Works
 
-It is possible to use the [[Register]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) attribute,
-[[Export]](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) attribute, and
+It is possible to use the [[Register]](xref:Foundation.RegisterAttribute) attribute,
+[[Export]](xref:Foundation.ExportAttribute) attribute, and
 [manual Objective-C selector invocation](~/ios/internals/objective-c-selectors.md)
 together to manually bind new (previously unbound) Objective-C types.
 
 First, find a type that you wish to bind. For discussion purposes (and
-simplicity), we'll bind the [NSEnumerator](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) type (which has already been bound in [Foundation.NSEnumerator](https://developer.xamarin.com/api/type/Foundation.NSEnumerator/); the implementation below
+simplicity), we'll bind the [NSEnumerator](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) type (which has already been bound in [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); the implementation below
 is just for example purposes).
 
 Second, we need to create the C# type. We'll likely want to place this into a
 namespace; since Objective-C doesn't support namespaces, we'll need to use the
 `[Register]` attribute to change the type name that Xamarin.iOS will register with
-the Objective-C runtime. The C# type must also inherit from [Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/):
+the Objective-C runtime. The C# type must also inherit from [Foundation.NSObject](xref:Foundation.NSObject):
 
 ```csharp
 namespace Example.Binding {

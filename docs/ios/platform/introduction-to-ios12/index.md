@@ -111,7 +111,7 @@ With iOS 12, Apple has deprecated:
 
 - OpenGL ES, [encouraging developers](https://developer.apple.com/ios/whats-new/)
 to adopt Metal.
-- [`UIWebView`](https://developer.xamarin.com/api/type/UIKit.UIWebView/),
+- [`UIWebView`](xref:UIKit.UIWebView),
 [in favor of `WKWebView`](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
 
 ## Related links

@@ -103,7 +103,7 @@ iOS 10 presents new ways of driving engagement to an app by allowing the system 
 - Siri Interactions
 - QuickType Suggestions 
 
-An app exposes this functionality to the system using a collection of technologies such as [NSUserActivity](https://developer.xamarin.com/api/type/Foundation.NSUserActivity/), web markup, Core Spotlight, MapKit, Media Player and UIKit.
+An app exposes this functionality to the system using a collection of technologies such as [NSUserActivity](xref:Foundation.NSUserActivity), web markup, Core Spotlight, MapKit, Media Player and UIKit.
 
 To find out more, please see our [Proactive Suggestions](~/ios/platform/search/proactive-suggestions.md) guide.
 

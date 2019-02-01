@@ -35,7 +35,7 @@ sections:
         href: ~/tools/inspector/index.md
       title: Xamarin Inspector
     - href: ~/tools/profiler/index.md
-      html: Identify and fix performance issues. 
+      html: Identify and fix performance issues.
       image:
         src: ~/media/index/xamarin-tools-profiler.svg?branch=master
         href: ~/tools/profiler/index.md
@@ -60,7 +60,7 @@ sections:
     items:
     - title: Xamarin.Forms
       href: ~/xamarin-forms/index.md
-      html: <p><a href="~/xamarin-forms/get-started/index.md">Get Started</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/xamarin-forms/user-interface/index.md">User Interface</a><br /><a href="~/xamarin-forms/platform/index.md">Platform Features</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/xamarin-forms/internals/index.md">Advanced Concepts & Internals</a></p>
+      html: <p><a href="~/get-started/quickstarts/index.md">Get Started</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/xamarin-forms/user-interface/index.md">User Interface</a><br /><a href="~/xamarin-forms/platform/index.md">Platform Features</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/xamarin-forms/internals/index.md">Advanced Concepts & Internals</a></p>
     - title: Android
       href: ~/android/index.md
       html: <p><a href="~/android/get-started/index.md">Get Started</a><br /><a href="~/android/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/android/user-interface/index.md">User Interface</a><br /><a href="~/android/platform/index.md">Platform Features</a><br /><a href="~/android/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/android/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/android/internals/index.md">Advanced Concepts & Internals</a></p>

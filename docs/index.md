@@ -13,7 +13,7 @@ featureFlags:
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="~/xamarin-forms/get-started/index.md">
+                <a href="~/get-started/index.md">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -81,7 +81,7 @@ featureFlags:
                         <a data-default="true" href="#XamarinForms">Xamarin.Forms</a>
                         <ul id="XamarinForms" class="cardsC">
                             <li>
-                                <a href="~/xamarin-forms/get-started/index.md">
+                                <a href="~/get-started/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

@@ -20,7 +20,7 @@ This document describes techniques that can be used to improve performance and m
 
 ## Avoid strong circular references
 
-In some situations it's possible to create strong reference cycles that could prevent objects from having their memory reclaimed by the garbage collector. For example, consider the case where an [`NSObject`](https://developer.xamarin.com/api/type/Foundation.NSObject/)-derived subclass, such as a class that inherits from [`UIView`](https://developer.xamarin.com/api/type/UIKit.UIView/), is added to an `NSObject`-derived container and is strongly referenced from Objective-C, as shown in the following code example:
+In some situations it's possible to create strong reference cycles that could prevent objects from having their memory reclaimed by the garbage collector. For example, consider the case where an [`NSObject`](xref:Foundation.NSObject)-derived subclass, such as a class that inherits from [`UIView`](xref:UIKit.UIView), is added to an `NSObject`-derived container and is strongly referenced from Objective-C, as shown in the following code example:
 
 ```csharp
 class Container : UIView
@@ -51,7 +51,7 @@ container.AddSubview (new MyView (container));
 
 When this code creates the `Container` instance, the C# object will have a strong reference to an Objective-C object. Similarly, the `MyView` instance will also have a strong reference to an Objective-C object.
 
-In addition, the call to `container.AddSubview` will increase the reference count on the unmanaged `MyView` instance. When this happens, the Xamarin.iOS runtime creates a `GCHandle` instance to keep the `MyView` object in managed code alive, because there is no guarantee that any managed objects will keep a reference to it. From a managed code perspective, the `MyView` object would be reclaimed after the [`AddSubview`](https://developer.xamarin.com/api/member/UIKit.UIView.AddSubview/p/UIKit.UIView/) call were it not for the `GCHandle`.
+In addition, the call to `container.AddSubview` will increase the reference count on the unmanaged `MyView` instance. When this happens, the Xamarin.iOS runtime creates a `GCHandle` instance to keep the `MyView` object in managed code alive, because there is no guarantee that any managed objects will keep a reference to it. From a managed code perspective, the `MyView` object would be reclaimed after the [`AddSubview`](xref:UIKit.UIView.AddSubview(UIKit.UIView)) call were it not for the `GCHandle`.
 
 The unmanaged `MyView` object will have a `GCHandle` pointing to the managed object, known as a *strong link*. The managed object will contain a reference to the `Container` instance. In turn the `Container` instance will have a managed reference to the `MyView` object.
 
@@ -106,7 +106,7 @@ for example, when setting the
 [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/)
 property or the
 [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/)
-in the [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/) class.
+in the [`UITableView`](xref:UIKit.UITableView) class.
 
 In the case of classes that are created purely for the sake of
 implementing a protocol, for example the
@@ -236,7 +236,7 @@ For more information, see [Rules to Avoid Retain Cycles](http://www.cocoawithlov
 
 ## Optimize table views
 
-Users expect smooth scrolling and fast load times for [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/) instances. However, scrolling performance can suffer when cells contain deeply nested view hierarchies, or when cells contain complex layouts. However, there are techniques that can be used to avoid poor `UITableView` performance:
+Users expect smooth scrolling and fast load times for [`UITableView`](xref:UIKit.UITableView) instances. However, scrolling performance can suffer when cells contain deeply nested view hierarchies, or when cells contain complex layouts. However, there are techniques that can be used to avoid poor `UITableView` performance:
 
 - Reuse cells. For more information, see [Reuse Cells](#reusecells).
 - Reduce the number of subviews.
@@ -245,11 +245,11 @@ Users expect smooth scrolling and fast load times for [`UITableView`](https://de
 - Make the cell, and any other views, opaque.
 - Avoid image scaling and gradients.
 
-Collectively these techniques can help to keep [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/) instances scrolling smoothly.
+Collectively these techniques can help to keep [`UITableView`](xref:UIKit.UITableView) instances scrolling smoothly.
 
 ### Reuse cells
 
-When displaying hundreds of rows in a [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/), it would be a waste of memory to create hundreds of [`UITableViewCell`](https://developer.xamarin.com/api/type/UIKit.UITableViewCell/) objects when only a small number of them are displayed on screen at once. Instead, only the cells visible on screen can be loaded into memory, with the **content** being loaded into these reused cells. This prevents the instantiation of hundreds of additional objects, saving time and memory.
+When displaying hundreds of rows in a [`UITableView`](xref:UIKit.UITableView), it would be a waste of memory to create hundreds of [`UITableViewCell`](xref:UIKit.UITableViewCell) objects when only a small number of them are displayed on screen at once. Instead, only the cells visible on screen can be loaded into memory, with the **content** being loaded into these reused cells. This prevents the instantiation of hundreds of additional objects, saving time and memory.
 
 Therefore, when a cell disappears from the screen its view can be placed in a queue for reuse, as shown in the following code example:
 
@@ -267,13 +267,13 @@ class MyTableSource : UITableViewSource
 }
 ```
 
-As the user scrolls, the [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/) calls the `GetCell` override to request new views to display. This override then calls the [`DequeueReusableCell`](https://developer.xamarin.com/api/member/UIKit.UITableView.DequeueReusableCell/p/Foundation.NSString/) method and if a cell is available for reuse it will be returned.
+As the user scrolls, the [`UITableView`](xref:UIKit.UITableView) calls the `GetCell` override to request new views to display. This override then calls the [`DequeueReusableCell`](xref:UIKit.UITableView.DequeueReusableCell(Foundation.NSString)) method and if a cell is available for reuse it will be returned.
 
 For more information, see [Cell Reuse](~/ios/user-interface/controls/tables/populating-a-table-with-data.md) in [Populating a Table with Data](~/ios/user-interface/controls/tables/populating-a-table-with-data.md).
 
 ## Use opaque views
 
-Ensure that any views that have no transparency defined have their [`Opaque`](https://developer.xamarin.com/api/property/UIKit.UIView.Opaque/) property set. This will ensure that the views are optimally rendered by the drawing system. This is particularly important when a view is embedded in a [`UIScrollView`](https://developer.xamarin.com/api/type/UIKit.UIScrollView/), or is part of a complex animation. Otherwise the drawing system will composite the views with other content, which can noticeably impact on performance.
+Ensure that any views that have no transparency defined have their [`Opaque`](xref:UIKit.UIView.Opaque) property set. This will ensure that the views are optimally rendered by the drawing system. This is particularly important when a view is embedded in a [`UIScrollView`](xref:UIKit.UIScrollView), or is part of a complex animation. Otherwise the drawing system will composite the views with other content, which can noticeably impact on performance.
 
 ## Avoid fat XIBs
 
@@ -281,7 +281,7 @@ Although XIBs have largely been replaced by storyboards, there are some circumst
 
 ## Optimize image resources
 
-Images are some of the most expensive resources that applications use, and are often captured at high resolutions. Therefore, when displaying an image from the app's bundle in a [`UIImageView`](https://developer.xamarin.com/api/type/UIKit.UIImageView/), ensure that the image and `UIImageView` are identically sized. Scaling images at runtime can be an expensive operation, particularly if the `UIImageView` is embedded in a [`UIScrollView`](https://developer.xamarin.com/api/type/UIKit.UIScrollView/).
+Images are some of the most expensive resources that applications use, and are often captured at high resolutions. Therefore, when displaying an image from the app's bundle in a [`UIImageView`](xref:UIKit.UIImageView), ensure that the image and `UIImageView` are identically sized. Scaling images at runtime can be an expensive operation, particularly if the `UIImageView` is embedded in a [`UIScrollView`](xref:UIKit.UIScrollView).
 
 For more information, see [Optimize Image Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages) in the [Cross-Platform Performance](~/cross-platform/deploy-test/memory-perf-best-practices.md) guide.
 

@@ -6,7 +6,7 @@ ms.assetid: 02A75F3B-4389-49D4-A2F4-AFD473A4A161
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/17/2016
+ms.date: 01/30/2019
 ---
 
 # Implicit Styles in Xamarin.Forms
@@ -15,7 +15,7 @@ ms.date: 02/17/2016
 
 _An implicit style is one that's used by all controls of the same TargetType, without requiring each control to reference the style._
 
-## Creating an Implicit Style in XAML
+## Create an implicit style in XAML
 
 To declare a [`Style`](xref:Xamarin.Forms.Style) at the page level, a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) must be added to the page and then one or more `Style` declarations can be included in the `ResourceDictionary`. A `Style` is made *implicit* by not specifying an `x:Key` attribute. The style will then be applied to visual elements that match the `TargetType` exactly, but not to elements that are derived from the `TargetType` value.
 
@@ -52,7 +52,7 @@ The [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) defines a sing
 
 In addition, the fourth [`Entry`](xref:Xamarin.Forms.Entry) overrides the [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) and [`TextColor`](xref:Xamarin.Forms.Entry.TextColor) properties of the implicit style to different `Color` values.
 
-### Creating an Implicit Style at the Control Level
+### Create an implicit style at the control level
 
 In addition to creating *implicit* styles at the page level, they can also be created at the control level, as shown in the following code example:
 
@@ -79,7 +79,7 @@ In this example, the *implicit* [`Style`](xref:Xamarin.Forms.Style) is assigned 
 
 For information about creating styles in an application's [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), see [Global Styles](~/xamarin-forms/user-interface/styles/application.md).
 
-## Creating an Implicit Style in C&#35;
+## Create an implicit style in C&#35;
 
 [`Style`](xref:Xamarin.Forms.Style) instances can be added to a page's [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) collection in C# by creating a new [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), and then by adding the `Style` instances to the `ResourceDictionary`, as shown in the following code example:
 
@@ -114,13 +114,42 @@ public class ImplicitStylesPageCS : ContentPage
 
 The constructor defines a single *implicit* style that's applied to the page's [`Entry`](xref:Xamarin.Forms.Entry) instances. The `Style` is used to display blue text on a yellow background, while also setting other appearance options. The `Style` is added to the page's [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) without specifying a `key` string. Therefore, the `Style` is applied to all the `Entry` instances implicitly as they match the [`TargetType`](xref:Xamarin.Forms.Style.TargetType) property of the `Style` exactly. However, the `Style` is not applied to the `CustomEntry` instance, which is a subclassed `Entry`.
 
-## Summary
+## Apply a style to derived types
 
-An *implicit* style is one that's used by all visual elements of the same [`TargetType`](xref:Xamarin.Forms.Style.TargetType), without requiring each control to reference the style. A `Style` is made *implicit* by not specifying an `x:Key` attribute. Instead, the `x:Key` attribute will automatically become the value of the [`TargetType`](xref:Xamarin.Forms.Style.TargetType) property.
+The [`Style.ApplyToDerivedTypes`](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) property enables a style to be applied to controls that are derived from the base type referenced by the [`TargetType`](xref:Xamarin.Forms.Style.TargetType) property. Therefore, setting this property to `true` enables a single style to target multiple types, provided that the types derive from the base type specified in the `TargetType` property.
 
+The following example shows an implicit style that sets the background color of [`Button`](xref:Xamarin.Forms.Button) instances to red:
 
+```xaml
+<Style TargetType="Button"
+       ApplyToDerivedTypes="True">
+    <Setter Property="BackgroundColor"
+            Value="Red" />
+</Style>
+```
 
-## Related Links
+Placing this style in a page-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) will result in it being applied to all [`Button`](xref:Xamarin.Forms.Button) instances on the page, and also to any controls that derive from `Button`. However, if the [`ApplyToDerivedTypes`](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) property remained unset, the style would only be applied to `Button` instances.
+
+The equivalent C# code is:
+
+```csharp
+var buttonStyle = new Style(typeof(Button))
+{
+    ApplyToDerivedTypes = true,
+    Setters =
+    {
+        new Setter
+        {
+            Property = VisualElement.BackgroundColorProperty,
+            Value = Color.Red
+        }
+    }
+};
+
+Resources = new ResourceDictionary { buttonStyle };
+```
+
+## Related links
 
 - [XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Basic Styles (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)

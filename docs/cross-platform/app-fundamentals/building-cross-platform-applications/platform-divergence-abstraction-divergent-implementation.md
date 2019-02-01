@@ -130,7 +130,7 @@ be optionally extended).
 
 ## Xamarin.Forms
 
-See the [Xamarin.Forms](~/xamarin-forms/get-started/index.md) documentation.
+See the [Xamarin.Forms](~/get-started/index.md) documentation.
 
 ### Other Cross-Platform Libraries
 

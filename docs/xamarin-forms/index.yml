@@ -17,7 +17,7 @@ abstract:
     - href: https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/
       text: Release Notes
     - href: /visualstudio/
-      text: Visual Studio 
+      text: Visual Studio
 sections:
 - title: Get Started
   items:
@@ -29,30 +29,38 @@ sections:
     - image:
         src: https://docs.microsoft.com/media/common/i_setup.svg
       text: Setup
-      href: ~/xamarin-forms/get-started/installation.md
+      href: ~/get-started/installation.md
     - image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       text: First App
-      href: ~/xamarin-forms/get-started/first-app.md
+      href: ~/get-started/first-app/index.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Quickstart
-      href: ~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md
+      text: App Quickstart
+      href: ~/get-started/quickstarts/single-page.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Multi-screen Apps
-      href: ~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/quickstart.md
+      text: Multi-page Quickstart
+      href: ~/get-started/quickstarts/multi-page.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
+      text: Local Database Quickstart
+      href: ~/get-started/quickstarts/database.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
+      text: Styling Quickstart
+      href: ~/get-started/quickstarts/styling.md
 - title: Guides
   items:
   - type: list
     style: cards
     className: cardsB
     items:
-    - href: ~/xamarin-forms/get-started/index.md
+    - href: ~/get-started/quickstarts/index.md
       html: Tutorials to get you up and running with Xamarin.Forms. Make sure everything is installed correctly, and build your first Xamarin.Forms apps.
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/xamarin-forms/get-started/index.md
+        href: ~/get-started/quickstarts/index.md
       title: Getting Started
     - href: ~/xamarin-forms/xaml/
       html: Build user interfaces declaratively and share across mobile and desktop platforms.

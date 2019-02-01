@@ -14,7 +14,7 @@ abstract:
     - href: ~/cross-platform/samples/index.yml
       text: Xamarin Samples
     - href: /visualstudio/
-      text: Visual Studio 
+      text: Visual Studio
     - href: /visualstudio/mac/
       text: Visual Studio for Mac
 
@@ -33,7 +33,7 @@ sections:
     - image:
         src: ~/media/icons/i_desktop-phone.svg
       text: Xamarin.Forms
-      href: ~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md
+      href: ~/get-started/quickstarts/index.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
       text: Android
@@ -96,7 +96,7 @@ sections:
     items:
     - title: Xamarin.Forms
       href: ~/xamarin-forms/index.yml
-      html: <p><a href="~/xamarin-forms/get-started/index.md">Get Started</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/xamarin-forms/user-interface/index.md">User Interface</a><br /><a href="~/xamarin-forms/platform/index.md">Platform Features</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/xamarin-forms/internals/index.md">Advanced Concepts & Internals</a></p>
+      html: <p><a href="~/get-started/quickstarts/index.md">Get Started</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/xamarin-forms/user-interface/index.md">User Interface</a><br /><a href="~/xamarin-forms/platform/index.md">Platform Features</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/xamarin-forms/internals/index.md">Advanced Concepts & Internals</a></p>
     - title: Android
       href: ~/android/index.yml
       html: <p><a href="~/android/get-started/index.md">Get Started</a><br /><a href="~/android/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/android/user-interface/index.md">User Interface</a><br /><a href="~/android/platform/index.md">Platform Features</a><br /><a href="~/android/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/android/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/android/internals/index.md">Advanced Concepts & Internals</a></p>

@@ -24,7 +24,7 @@ All Extensions are installed in conjunction with a Container app (with both elem
 |Type|Description|Extension Point|Host App|
 |--- |--- |--- |--- |
 |Action|Specialized editor or viewer for a particular media type|`com.apple.ui-services`|Any|
-|Document Provider|Allows app to use a remote document store|`com.apple.fileprovider-ui`|Apps using a [UIDocumentPickerViewController](https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/)|
+|Document Provider|Allows app to use a remote document store|`com.apple.fileprovider-ui`|Apps using a [UIDocumentPickerViewController](xref:UIKit.UIDocumentPickerViewController)|
 |Keyboard|Alternate keyboards|`com.apple.keyboard-service`|Any|
 |Photo Editing|Photo manipulation and editing|`com.apple.photo-editing`|Photos.app editor|
 |Share|Shares data with social networks, messaging services, etc.|`com.apple.share-services`|Any|
@@ -42,8 +42,8 @@ The universal limitations are:
 - Extensions cannot use [extended background modes](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_3_ios_backgrounding_techniques/registering_applications_to_run_in_background/)
 - Extensions cannot access the device’s cameras or microphones (although they may access existing media files)
 - Extensions cannot receive Air Drop data (although they can transmit data via Air Drop)
-- [UIActionSheet](https://developer.xamarin.com/api/type/UIKit.UIActionSheet/) and [UIAlertView](https://developer.xamarin.com/api/type/UIKit.UIAlertView/) are not available; extensions must use [UIAlertController](https://developer.xamarin.com/api/type/UIKit.UIAlertController/)
-- Several members of [UIApplication](https://developer.xamarin.com/api/type/UIKit.UIApplication/) are unavailable: [UIApplication.SharedApplication](https://developer.xamarin.com/api/property/UIKit.UIApplication.SharedApplication/), `UIApplication.OpenURL`, `UIApplication.BeginIgnoringInteractionEvents` and `UIApplication.EndIgnoringInteractionEvents`
+- [UIActionSheet](xref:UIKit.UIActionSheet) and [UIAlertView](xref:UIKit.UIAlertView) are not available; extensions must use [UIAlertController](xref:UIKit.UIAlertController)
+- Several members of [UIApplication](xref:UIKit.UIApplication) are unavailable: [UIApplication.SharedApplication](xref:UIKit.UIApplication.SharedApplication), [UIApplication.OpenUrl](xref:UIKit.UIApplication.OpenUrl(Foundation.NSUrl)), [UIApplication.BeginIgnoringInteractionEvents](xref:UIKit.UIApplication.BeginIgnoringInteractionEvents) and [UIApplication.EndIgnoringInteractionEvents](xref:UIKit.UIApplication.EndIgnoringInteractionEvents)
 - iOS enforces a 16 MB memory usage limit on Today's extensions.
 - By default keyboard extensions don't have access to the network. This affects debugging on device (the restriction is not enforced in the simulator), since Xamarin.iOS requires network access for debugging to work. It's possible to request network access by setting the `Requests Open Access` value in the project's Info.plist to `Yes`. Please see Apple's [Custom Keyboard Guide](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html) for more information about keyboard extension limitations.
 
@@ -59,11 +59,11 @@ Typically, the container app describes the extension and walks the user through 
 
 ## Extension lifecycle
 
-An Extension can be as simple as a single [UIViewController](https://developer.xamarin.com/api/type/UIKit.UIViewController/) or more complex Extensions that present multiple screens of UI. When the user encounters an _Extension Points_ (such as when sharing an image), they will have an opportunity to choose from the Extensions registered for that Extension Point. 
+An Extension can be as simple as a single [UIViewController](xref:UIKit.UIViewController) or more complex Extensions that present multiple screens of UI. When the user encounters an _Extension Points_ (such as when sharing an image), they will have an opportunity to choose from the Extensions registered for that Extension Point. 
 
 If they choose one of your app's Extensions, its `UIViewController` will be instantiated and begin the normal View Controller lifecycle. However, unlike a normal app, which are suspended but not generally terminated when the user finishes interacting with them, Extensions are loaded, executed, and then terminated repeatedly.
 
-Extensions can communicate with their Host apps via an [NSExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) object. Some Extensions have operations that receive asynchronous callbacks with the results. These callbacks will be executed on background threads and the Extension must take this into consideration; for instance, by using [NSObject.InvokeOnMainThread](https://developer.xamarin.com/api/member/Foundation.NSObject.InvokeOnMainThread/) if they want to update the user interface. See the [Communicating with the Host App](#Communicating-with-the-Host-App) section below for more details.
+Extensions can communicate with their Host apps via an [NSExtensionContext](xref:Foundation.NSExtensionContext) object. Some Extensions have operations that receive asynchronous callbacks with the results. These callbacks will be executed on background threads and the Extension must take this into consideration; for instance, by using [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) if they want to update the user interface. See the [Communicating with the Host App](#Communicating-with-the-Host-App) section below for more details.
 
 By default, Extensions and their container apps can not communicate, despite being installed together. In some cases, the Container app is essentially an empty "shipping" container whose purpose is served once the Extension is installed. However, if circumstances dictate, the Container app and the Extension may share resources from a common area. Additionally, a **Today Extension** may request its Container app to open a URL. This behavior is shown in the [Evolve Countdown Widget](http://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
 
@@ -258,11 +258,11 @@ The new widget will be added to the **Today** view and the results will be displ
 
 ## Communicating with the host app
 
-The example Today Extension you created above does not communicate with its host app (the **Today** screen). If it did, it would use the [ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) property of the `TodayViewController` or `CodeBasedViewController` classes. 
+The example Today Extension you created above does not communicate with its host app (the **Today** screen). If it did, it would use the [ExtensionContext](xref:Foundation.NSExtensionContext) property of the `TodayViewController` or `CodeBasedViewController` classes. 
 
-For Extensions that will receive data from their host apps, the data is in the form of an array of [NSExtensionItem](https://developer.xamarin.com/api/type/Foundation.NSExtensionItem/) objects stored in the [InputItems](https://developer.xamarin.com/api/property/Foundation.NSExtensionContext.InputItems/) property of the [ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) of the Extension's `UIViewController`.
+For Extensions that will receive data from their host apps, the data is in the form of an array of [NSExtensionItem](xref:Foundation.NSExtensionItem) objects stored in the [InputItems](xref:Foundation.NSExtensionContext.InputItems) property of the [ExtensionContext](xref:Foundation.NSExtensionContext) of the Extension's `UIViewController`.
 
-Other Extension, such as Photo Editing extensions, may distinguish between the user completing or cancelling usage. This will be signaled back to the host app via the [CompleteRequest](https://developer.xamarin.com/api/member/Foundation.NSExtensionContext.CompleteRequest/) and [CancelRequest](https://developer.xamarin.com/api/member/Foundation.NSExtensionContext.CancelRequest/) methods of [ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) property.
+Other Extension, such as Photo Editing extensions, may distinguish between the user completing or cancelling usage. This will be signaled back to the host app via the [CompleteRequest](xref:Foundation.NSExtensionContext.CompleteRequest*) and [CancelRequest](xref:Foundation.NSExtensionContext.CancelRequest*) methods of [ExtensionContext](xref:Foundation.NSExtensionContext) property.
 
 For more information, please see Apple's [App Extension Programming Guide](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW1).
 

@@ -107,7 +107,7 @@ This is a new binding, designed specifically for the iOS, based on the experienc
 
 #### Foundation
 
-The [Foundation](https://developer.xamarin.com/api/namespace/Foundation/)
+The [Foundation](xref:Foundation)
 namespace provides the basic data types designed to interoperate with the
 Objective-C Foundation framework that is part of the iOS and it is the base
 for object oriented programming in Objective-C.
@@ -116,7 +116,7 @@ Xamarin.iOS mirrors in C# the hierarchy of classes from
 Objective-C. For example, the Objective-C base class
 [NSObject](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html)
 is usable from C# via
-[Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/).
+[Foundation.NSObject](xref:Foundation.NSObject).
 
 Although this namespace provides bindings for the underlying
 Objective-C Foundation types, in a few cases we have mapped the
@@ -133,7 +133,7 @@ section.
 
 ##### NSObject
 
-The [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/)
+The [NSObject](xref:Foundation.NSObject)
 type is the foundation for all the Objective-C bindings. Xamarin.iOS types mirror
 two classes of types from the iOS CocoaTouch APIs: the C types (typically
 referred to as CoreFoundation types) and the Objective-C types (these all derive
@@ -141,7 +141,7 @@ from the NSObject class).
 
 For each type that mirrors an unmanaged type, it is possible to obtain
 the native object through the
-[Handle](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/)
+[Handle](xref:Foundation.NSObject.Handle)
 property.
 
 While Mono will provide garbage collection for all of your objects,
@@ -154,7 +154,7 @@ example, UIImages that might hold pointers to large blocks of data.
 
 If your type needs to perform deterministic finalization, override the
 [NSObject.Dispose(bool)
-method](https://developer.xamarin.com/api/type/Foundation.NSObject/%2fM%2fDispose)
+method](xref:Foundation.NSObject.Dispose(System.Boolean))
 The parameter to Dispose is "bool disposing", and if set to true it
 means that your Dispose method is being called because the user
 explicitly called Dispose () on the object. If the value is false,
@@ -258,7 +258,7 @@ itself. If you want to preserve the whole type, you can use the syntax [Preserve
 
 #### UIKit
 
-The [UIKit](https://developer.xamarin.com/api/namespace/UIKit/)
+The [UIKit](xref:UIKit)
 namespace contains a one-to-one mapping to all of the UI components that make up
 CocoaTouch in the form of C# classes. The API has been modified to follow the
 conventions used in the C# language.
@@ -398,9 +398,9 @@ For many types, Xamarin.iOS will automatically create an appropriate delegate
 which will forward the `UIWebViewDelegate` calls onto C# events. For
 `UIWebView`:
 
--  The  [webViewDidStartLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) method is mapped to the  [UIWebView.LoadStarted](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadStarted/) event.
--  The  [webViewDidFinishLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) method is mapped to the  [UIWebView.LoadFinished](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadFinished/) event.
--  The  [webView:didFailLoadWithError](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) method is mapped to the  [UIWebView.LoadError](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadError/) event.
+-  The  [webViewDidStartLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) method is mapped to the  [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) event.
+-  The  [webViewDidFinishLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) method is mapped to the  [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) event.
+-  The  [webView:didFailLoadWithError](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) method is mapped to the  [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) event.
 
 For example, this simple program records the start and end times when loading a web view:
 
@@ -442,8 +442,8 @@ when the textfield calls `ResignFirstResponder`).
 
 ##### Strongly Typed via a Delegate Property
 
-If you would prefer not to use events, you can provide your own [UIWebViewDelegate](https://developer.xamarin.com/api/type/UIKit.UIWebViewDelegate/)
-subclass and assign it to the [UIWebView.Delegate](https://developer.xamarin.com/api/property/UIKit.UIWebView.Delegate/)
+If you would prefer not to use events, you can provide your own [UIWebViewDelegate](xref:UIKit.UIWebViewDelegate)
+subclass and assign it to the [UIWebView.Delegate](xref:UIKit.UIWebView.Delegate)
 property. Once UIWebView.Delegate has been assigned, the UIWebView event
 dispatch mechanism will no longer function, and the UIWebViewDelegate methods
 will be invoked when the corresponding events occur.
@@ -478,12 +478,12 @@ The above will create a UIWebViewer and it will instruct it to send messages
 to an instance of Notifier, a class that we created to respond to messages.
 
 This pattern is also used to control behavior for certain controls, for
-example in the UIWebView case, the [UIWebView.ShouldStartLoad](https://developer.xamarin.com/api/property/UIKit.UIWebView.ShouldStartLoad/)
+example in the UIWebView case, the [UIWebView.ShouldStartLoad](xref:UIKit.UIWebView.ShouldStartLoad)
 property allows the `UIWebView` instance to control whether the `UIWebView` will
 load a page or not.
 
-The pattern is also used to provide the data on demand for a few controls. For example, the [UITableView](https://developer.xamarin.com/api/type/UIKit.UITableView/)
-control is a powerful table-rendering control – and both the look and the contents are driven by an instance of a [UITableViewDataSource](https://developer.xamarin.com/api/type/UIKit.UITableView/DataSource)
+The pattern is also used to provide the data on demand for a few controls. For example, the [UITableView](xref:UIKit.UITableView)
+control is a powerful table-rendering control – and both the look and the contents are driven by an instance of a [UITableViewDataSource](xref:UIKit.UITableViewDataSource)
 
 <a name="WeakDelegate"/>
 
@@ -496,7 +496,7 @@ Xamarin.iOS's binding, a corresponding `WeakDelegate` property is also
 exposed.
 
 When using the `WeakDelegate`, you are responsible for properly
-decorating your class using the [Export](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/)
+decorating your class using the [Export](xref:Foundation.ExportAttribute)
 attribute to specify the selector. For example:
 
 ```csharp

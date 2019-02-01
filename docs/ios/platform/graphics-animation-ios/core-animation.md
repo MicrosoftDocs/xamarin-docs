@@ -44,7 +44,7 @@ This section discusses UIKit animation features including:
 
  `UIViewController` provides built-in support for transitioning between view controllers through the `PresentViewController` method. When using `PresentViewController`, the transition to the second controller can optionally be animated.
 
-For example, consider an application with two controllers, where touching a button in the first controller calls `PresentViewController` to display a second controller. To control what transition animation is used to show the second controller, simply set its [`ModalTransitionStyle`](https://developer.xamarin.com/api/type/UIKit.UIModalTransitionStyle/) property as shown below:
+For example, consider an application with two controllers, where touching a button in the first controller calls `PresentViewController` to display a second controller. To control what transition animation is used to show the second controller, simply set its [`ModalTransitionStyle`](xref:UIKit.UIModalTransitionStyle) property as shown below:
 
 ```csharp
 SecondViewController vc2 = new SecondViewController {
@@ -85,7 +85,7 @@ UIView.Transition (
 	completion: () => { Console.WriteLine ("transition complete"); });
 ```
 
-`UIView.Transition` also takes a `duration` parameter that controls how long the animation runs, as well as [`options`](https://developer.xamarin.com/api/type/UIKit.UIViewAnimationOptions/) to specify things such as the animation to use and the easing function. Additionally, you can specify a completion handler that will be called when the animation completes.
+`UIView.Transition` also takes a `duration` parameter that controls how long the animation runs, as well as [`options`](xref:UIKit.UIViewAnimationOptions) to specify things such as the animation to use and the easing function. Additionally, you can specify a completion handler that will be called when the animation completes.
 
 The screenshot below show the animated transition between the image views when `TransitionFlipFromTop` is used:
 

@@ -15,7 +15,7 @@ _This document demonstrates how to track touch events from multiple fingers_
 
 There are times when a multi-touch application needs to track individual fingers as they move simultaneously on the screen. One typical application is a finger-paint program. You want the user to be able to draw with a single finger, but also to draw with multiple fingers at once. As your program processes multiple touch events, it needs to distinguish between these fingers.
 
-When a finger first touches the screen, iOS creates a [`UITouch`](https://developer.xamarin.com/api/type/UIKit.UITouch/) object for that finger. This object remains the same as the finger moves on the screen and then lifts from the screen, at which point the object is disposed. To keep track of fingers, a program should avoid storing this `UITouch` object directly. Instead, it can use the [`Handle`](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/) property of type `IntPtr` to uniquely identify these `UITouch` objects.
+When a finger first touches the screen, iOS creates a [`UITouch`](xref:UIKit.UITouch) object for that finger. This object remains the same as the finger moves on the screen and then lifts from the screen, at which point the object is disposed. To keep track of fingers, a program should avoid storing this `UITouch` object directly. Instead, it can use the [`Handle`](xref:Foundation.NSObject.Handle) property of type `IntPtr` to uniquely identify these `UITouch` objects.
 
 Almost always, a program that tracks individual fingers maintains a dictionary for touch tracking. For an iOS program, the dictionary key is the `Handle` value that identifies a particular finger. The dictionary value depends on the application. In the [FingerPaint](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint) program, each finger stroke (from touch to release) is associated with an object that contains all the information necessary to render the line drawn with that finger. The program defines a small `FingerPaintPolyline` class for this purpose:
 
@@ -35,7 +35,7 @@ class FingerPaintPolyline
 }
 ```
 
-Each polyline has a color, a stroke width, and an iOS graphics [`CGPath`](https://developer.xamarin.com/api/type/CoreGraphics.CGPath/) object to accumulate and render multiple points of the line as it's being drawn.
+Each polyline has a color, a stroke width, and an iOS graphics [`CGPath`](xref:CoreGraphics.CGPath) object to accumulate and render multiple points of the line as it's being drawn.
 
 
 All the rest of the code shown below is contained in a `UIView` derivative named `FingerPaintCanvasView`. That class maintains a dictionary of objects of type `FingerPaintPolyline` during the time that they are actively being drawn by one or more fingers:
@@ -56,11 +56,11 @@ The objects in this `List` are in the same order that they were drawn.
 
 `FingerPaintCanvasView` overrides five methods defined by `View`:
 
-- [`TouchesBegan`](https://developer.xamarin.com/api/member/UIKit.UIResponder.TouchesBegan/p/Foundation.NSSet/UIKit.UIEvent/)
-- [`TouchesMoved`](https://developer.xamarin.com/api/member/UIKit.UIResponder.TouchesMoved/p/Foundation.NSSet/UIKit.UIEvent/)
-- [`TouchesEnded`](https://developer.xamarin.com/api/member/UIKit.UIResponder.TouchesEnded/p/Foundation.NSSet/UIKit.UIEvent/)
-- [`TouchesCancelled`](https://developer.xamarin.com/api/member/UIKit.UIResponder.TouchesCancelled/p/Foundation.NSSet/UIKit.UIEvent/)
-- [`Draw`](https://developer.xamarin.com/api/member/UIKit.UIView.Draw/p/CoreGraphics.CGRect/)
+- [`TouchesBegan`](xref:UIKit.UIResponder.TouchesBegan(Foundation.NSSet,UIKit.UIEvent))
+- [`TouchesMoved`](xref:UIKit.UIResponder.TouchesMoved(Foundation.NSSet,UIKit.UIEvent))
+- [`TouchesEnded`](xref:UIKit.UIResponder.TouchesEnded(Foundation.NSSet,UIKit.UIEvent))
+- [`TouchesCancelled`](xref:UIKit.UIResponder.TouchesCancelled(Foundation.NSSet,UIKit.UIEvent))
+- [`Draw`](xref:UIKit.UIView.Draw(CoreGraphics.CGRect))
 
 The various `Touches` overrides accumulate the points that make up the polylines.
 

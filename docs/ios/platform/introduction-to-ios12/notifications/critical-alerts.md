@@ -37,9 +37,9 @@ a chance to opt in to critical alerts.
 
 The following code requests permission to send both critical alerts and
 standard notifications and sounds by passing the appropriate
-[`UNAuthorizationOptions`](https://developer.xamarin.com/api/type/UserNotifications.UNAuthorizationOptions/)
+[`UNAuthorizationOptions`](xref:UserNotifications.UNAuthorizationOptions)
 values to
-[`RequestAuthorization`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.RequestAuthorization/):
+[`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*):
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -56,7 +56,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 ## Local critical alerts
 
 To send a local critical alert, create a
-[`UNMutableNotificationContent`](https://developer.xamarin.com/api/type/UserNotifications.UNMutableNotificationContent/)
+[`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
 and set its `Sound` property to either:
 
 - `UNNotificationSound.DefaultCriticalSound`, which uses the default

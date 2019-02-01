@@ -15,7 +15,7 @@ The `UILabel` control is used for displaying single and multi-line, read only te
 
 ## Implementing a Label
 
-A new label is created by instantiating a [`UILabel`](https://developer.xamarin.com/api/type/UIKit.UILabel/):
+A new label is created by instantiating a [`UILabel`](xref:UIKit.UILabel):
 
 ```csharp
 UILabel label = new UILabel();

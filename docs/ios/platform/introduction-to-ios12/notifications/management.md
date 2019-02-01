@@ -31,9 +31,9 @@ Code snippets in this guide come from this sample app.
 In the sample app, `ManageNotificationsViewController` defines a user
 interface that allows users to independently enable and disable red
 notifications and green notifications. It is a standard
-[`UIViewController`](https://developer.xamarin.com/api/type/UIKit.UIViewController/)
+[`UIViewController`](xref:UIKit.UIViewController)
 containing a
-[`UISwitch`](https://developer.xamarin.com/api/type/UIKit.UISwitch/) for
+[`UISwitch`](xref:UIKit.UISwitch) for
 each notification type. Toggling the switch for either type of
 notification saves, in user defaults, the user's preference for that
 type of notification:
@@ -51,8 +51,8 @@ partial void HandleRedNotificationsSwitchValueChange(UISwitch sender)
 > the toggles for the individual notification types. To do this, the
 > notification management screen:
 >
-> - Calls [`UNUserNotificationCenter.Current.GetNotificationSettingsAsync`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.GetNotificationSettingsAsync()/)
-> and examines the [`AuthorizationStatus`](https://developer.xamarin.com/api/property/UserNotifications.UNNotificationSettings.AuthorizationStatus/)
+> - Calls [`UNUserNotificationCenter.Current.GetNotificationSettingsAsync`](xref:UserNotifications.UNUserNotificationCenter.GetNotificationSettingsAsync)
+> and examines the [`AuthorizationStatus`](xref:UserNotifications.UNNotificationSettings.AuthorizationStatus)
 > property.
 > - Hides the toggles for the individual notification types if notifications
 > have been completely disabled for the app.
@@ -84,7 +84,7 @@ app. To facilitate this, an app must:
 `UNAuthorizationOptions.ProvidesAppNotificationSettings` to the app's
 notification authorization request.
 - Implement the `OpenSettings` method from
-[`IUNUserNotificationCenterDelegate`](https://developer.xamarin.com/api/type/UserNotifications.IUNUserNotificationCenterDelegate/).
+[`IUNUserNotificationCenterDelegate`](xref:UserNotifications.IUNUserNotificationCenterDelegate).
 
 ### Authorization request
 
