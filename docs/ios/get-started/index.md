@@ -24,6 +24,8 @@ To build for Xamarin.iOS, the following are required:
 
 The latest version of Xcode can be downloaded from the [iOS Developer Center](https://developer.apple.com/devcenter/ios/index.action#downloads) (login required), or via the Mac App Store:
 
+![Screenshot of Xcode listing page in Mac App Store](installation/images/xcode.png "Xcode in the Mac App Store")
+
 ## Getting Started Series
 
 ### [Setup and Installation](~/ios/get-started/installation/index.md)
