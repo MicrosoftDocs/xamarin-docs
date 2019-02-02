@@ -8,7 +8,7 @@ ms.technology: xamarin-forms
 ms.custom: video
 author: conceptdev
 ms.author: crdun
-ms.date: 09/24/2018
+ms.date: 02/02/2019
 ---
 # Build your first Xamarin.Forms App
 
@@ -19,6 +19,8 @@ _Watch this video and follow along to create your first mobile app with Xamarin.
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Building-Your-First-Android--iOS-App-in-Visual-Studio-2017/player]
 
 ## Step-by-step instructions for Windows
+
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
 
 Follow these steps along with the video above:
 
@@ -34,7 +36,7 @@ Follow these steps along with the video above:
 
 4. Launch Android emulator by pressing the debug button (or the **Debug > Start Debugging** menu item).
 
-5. Edit **MainPage.xaml**, adding this XAML before the end of the `</StackPanel>`:
+5. Edit **MainPage.xaml**, adding this XAML before the end of the `</StackLayout>`:
 
     ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
@@ -67,6 +69,8 @@ Follow these steps along with the video above:
 
 ## Step-by-step instructions for Mac
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+
 Follow these steps along with the video above:
 
 1. Choose **File > New Solution...** or press the **New Project...** button, then select **Multiplatform > App > Blank Forms App**:
@@ -83,7 +87,7 @@ Follow these steps along with the video above:
 
 4. Launch Android emulator by pressing the debug button (or **Run > Start Debugging**).
 
-5. Edit **MainPage.xaml**, adding this XAML before the end of the `</StackPanel>`:
+5. Edit **MainPage.xaml**, adding this XAML before the end of the `</StackLayout>`:
 
     ```xaml
     <Button Text="Click Me" Clicked="Handle_Clicked" />
