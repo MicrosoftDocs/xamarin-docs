@@ -115,6 +115,7 @@ The XAML above is doing a lot. Let's break it down:
 - The custom cell is nested inside a `DataTemplate`, which is inside `ListView.ItemTemplate`. This is the same process as using any other cell.
 - `ViewCell` is the type of the custom cell. The child of the `DataTemplate` element must be of or derive from type `ViewCell`.
 - Notice that inside the `ViewCell`, layout is managed by a `StackLayout`. This layout allows us to customize the background color. Note that any property of `StackLayout` that is bindable can be bound inside a custom cell, although that is not shown here.
+-Inside the `ViewCell`, layout can be managed by any xamarin forms layout. 
 
 ### C&num;
 
