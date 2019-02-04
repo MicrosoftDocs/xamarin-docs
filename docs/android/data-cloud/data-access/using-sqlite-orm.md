@@ -267,20 +267,22 @@ SQLite to use the **Serialized** threading mode. It's important to set
 this mode early in your application (for example, at the beginning of
 the `OnCreate` method).
 
-To change the threading mode, call `SqliteConnection.SetConfig`. For 
-example, this line of code configures SQLite for **Serialized** mode: 
+To change the threading mode, call `SqliteConnection.SetConfig`. For
+example, this line of code configures SQLite for **Serialized** mode:
 
 ```csharp
+using using Mono.Data.Sqlite;
+...
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
 
-The Android version of SQLite has a limitation that requires a few more 
-steps. If the call to `SqliteConnection.SetConfig` produces a SQLite 
-exception such as `library used incorrectly`, then you must use the 
+The Android version of SQLite has a limitation that requires a few more
+steps. If the call to `SqliteConnection.SetConfig` produces a SQLite
+exception such as `library used incorrectly`, then you must use the
 following workaround:
 
 1.  Link to the native **libsqlite.so** library so that the
-   `sqlite3_shutdown` and `sqlite3_initialize` APIs are made 
+   `sqlite3_shutdown` and `sqlite3_initialize` APIs are made
     available to the app:
 
     ```csharp
@@ -291,20 +293,21 @@ following workaround:
     internal static extern int sqlite3_initialize();
     ```
 
-
 2.  At the very beginning of the `OnCreate` method, add this code
     to shutdown SQLite, configure it for **Serialized** mode, and
     reinitialize SQLite:
 
     ```csharp
+    using using Mono.Data.Sqlite;
+    ...
     sqlite3_shutdown();
     SqliteConnection.SetConfig(SQLiteConfig.Serialized);
     sqlite3_initialize();
     ```
 
-This workaround also works for the `Mono.Data.Sqlite` library. For more 
-information about SQLite and multi-threading, see 
-[SQLite and Multiple Threads](https://www.sqlite.org/threadsafe.html). 
+This workaround also works for the `Mono.Data.Sqlite` library. For more
+information about SQLite and multi-threading, see
+[SQLite and Multiple Threads](https://www.sqlite.org/threadsafe.html).
 
 ## Related Links
 
