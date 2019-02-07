@@ -29,10 +29,10 @@ Store and send it to Apple for review. In particular, it describes:
 > - Building your app and submitting it to Apple
 
 > [!IMPORTANT]
-> Apple [has indicated](https://developer.apple.com/news/?id=05072018a) that
-> starting in July 2018, all apps and updates submitted to the App Store
-> must have been built with the iOS 11 SDK and
-> [must support the iPhone X display](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+> Apple [has indicated](https://developer.apple.com/ios/submit/) that
+> starting in March 2019, all apps and updates submitted to the App Store
+> must have been built with the iOS 12.1 SDK or later, included in Xcode 10.1 or later.
+> Apps should also support the iPhone XS and 12.9" iPad Pro screen sizes.
 
 ## App Store guidelines
 

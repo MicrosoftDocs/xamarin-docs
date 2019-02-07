@@ -12,10 +12,10 @@ ms.date: 03/19/2017
 # Configuring an App in iTunes Connect
 
 > [!IMPORTANT]
-> Apple [has indicated](https://developer.apple.com/news/?id=05072018a) that
-> starting in July 2018, all apps and updates submitted to the App Store
-> must have been built with the iOS 11 SDK and 
-> [support the iPhone X display](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+> Apple [has indicated](https://developer.apple.com/ios/submit/) that
+> starting in March 2019, all apps and updates submitted to the App Store
+> must have been built with the iOS 12.1 SDK or later, included in Xcode 10.1 or later.
+> Apps should also support the iPhone XS and 12.9" iPad Pro screen sizes.
 
 iTunes Connect is a suite of web-based tools for, among other things, managing  iOS applications on the App Store. A Xamarin.iOS application will need to be properly set up and configured in iTunes Connect before it can be submitted to Apple for review and ultimately released for sale or as a free app in the App Store.
 
