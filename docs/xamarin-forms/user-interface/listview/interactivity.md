@@ -6,18 +6,14 @@ ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/13/2018
+ms.date: 12/14/2018
 ---
 
 # ListView Interactivity
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
 
-ListView supports interacting with the data it presents through the following approaches:
-
-- [**Selection & Taps**](#selectiontaps) &ndash; respond to taps and selections/deselections of items. Enable or disable row selection (enabled by default).
-- [**Context Actions**](#Context_Actions) &ndash; Expose functionality per item, for example, swipe-to-delete.
-- [**Pull-to-Refresh**](#Pull_to_Refresh) &ndash; Implement the pull-to-refresh idiom that users have come to expect from native experiences.
+[`ListView`](xref:Xamarin.Forms.ListView) supports interacting with the data it presents.
 
 <a name="selectiontaps" />
 
@@ -61,6 +57,7 @@ var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 <a name="Context_Actions" />
 
 ## Context Actions
+
 Often, users will want to take action on an item in a `ListView`. For example, consider a list of emails in the Mail app. On iOS, you can swipe to delete a message::
 
 ![](interactivity-images/context-default.png "ListView with Context Actions")
@@ -146,38 +143,47 @@ public void OnDelete (object sender, EventArgs e) {
 <a name="Pull_to_Refresh" />
 
 ## Pull to Refresh
-Users have come to expect that pulling down on a list of data will refresh that list. `ListView` supports this out-of-the-box. To enable pull-to-refresh functionality, set `IsPullToRefreshEnabled` to true:
+
+Users have come to expect that pulling down on a list of data will refresh that list. [`ListView`](xref:Xamarin.Forms.ListView) supports this out-of-the-box. To enable pull-to-refresh functionality, set [`IsPullToRefreshEnabled`](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) to `true`:
+
+```xaml
+<ListView ...
+          IsPullToRefreshEnabled="true" />
+```
+
+The equivalent C# code is:
 
 ```csharp
 listView.IsPullToRefreshEnabled = true;
 ```
 
-Pull-to-Refresh as the user is pulling:
+A spinner appears during the refresh, which is black by default. However, the spinner color can be changed on iOS and Android by setting the `RefreshControlColor` property to a [`Color`](xref:Xamarin.Forms.Color):
+
+```xaml
+<ListView ...
+          IsPullToRefreshEnabled="true"
+          RefreshControlColor="Red" />
+```
+
+The equivalent C# code is:
+
+```csharp
+listView.RefreshControlColor = Color.Red;
+```
+
+The following screenshots show pull-to-refresh as the user is pulling:
 
 ![](interactivity-images/refresh-start.png "ListView Pull to Refresh In-Progress")
 
-Pull-to-Refresh as the user has released the pull. This is what the user sees while you're updating list:
+The following screenshots show pull-to-refresh after the user has released the pull, with the spinner being shown while the [`ListView`](xref:Xamarin.Forms.ListView) is updating:
+
 ![](interactivity-images/refresh-in-progress.png "ListView Pull to Refresh Complete")
 
-ListView exposes a few events that allow you to respond to pull-to-refresh events.
+[`ListView`](xref:Xamarin.Forms.ListView) fires the [`Refreshing`](xref:Xamarin.Forms.ListView.Refreshing) event to initiate the refresh, and the [`IsRefreshing`](xref:Xamarin.Forms.ListView.IsRefreshing) property will be set to `true`. Whatever code is required to refresh the contents of the `ListView` should then be executed by the event handler for the `Refreshing` event, or by the method executed by the [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand). Once the `ListView` is refreshed, the `IsRefreshing` property should be set to `false`, or the [`EndRefresh`](xref:Xamarin.Forms.ListView.EndRefresh) method should be called, to indicate that the refresh is complete.
 
--  The `RefreshCommand` will be invoked and the `Refreshing`
-  event called. `IsRefreshing` will be set to `true`.
--  You should perform whatever code is required to
-  refresh the contents of the list view, either in the command
-  or event.
--  When refreshing is complete, call `EndRefresh` or
-  set `IsRefreshing` to `false` to tell the list view
-  that you're done.
-
-The `CanExecute` property is respected, which gives you a way
-  to control whether the pull-to-refresh command should
-  be enabled.
-
-
+> [!NOTE]
+> When defining a [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand), the `CanExecute` method of the command can be specified to enable or disable the command.
 
 ## Related Links
 
 - [ListView Interactivity (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
-- [1.4 release notes](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
-- [1.3 release notes](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

@@ -6,19 +6,14 @@ ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
+ms.date: 12/13/2018
 ---
 
 # Customizing ListView Appearance
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
 
-`ListView` has options for controlling the presentation of the overall list, in addition to the underlying `ViewCell`s. Options include:
-
-- [**Grouping**](#Grouping) &ndash; group items in ListView for easier navigation and improved organization.
-- [**Headers and Footers**](#Headers_and_Footers) &ndash; display information at the beginning and end of the view that scrolls with the other items.
-- [**Row Separators**](#Row_Separators) &ndash; show or hide separator lines between items.
-- [**Variable Height Rows**](#Row_Heights) &ndash; by default all rows are the same height, but this can be changed to allow rows with differing heights to be displayed.
+[`ListView`](xref:Xamarin.Forms.ListView) has the ability to control the presentation of the list, in addition to the [`ViewCell`](xref:Xamarin.Forms.ViewCell) instances for each row in the list.
 
 <a name="Grouping" />
 
@@ -80,7 +75,7 @@ static PageTypeGroup()
 }
 ```
 
-In the above code we can also call `Add` on elements of `groups`,
+In the above code, we can also call `Add` on elements of `groups`,
 which are instances of type `PageTypeGroup`. This is possible because
 `PageTypeGroup` inherits from `List<PageModel>`. This is an example of the
 list of lists pattern noted above.
@@ -209,6 +204,14 @@ To create a customized header and footer, define the Header and Footer views:
 ```
 
 ![](customizing-list-appearance-images/header-custom.png "ListView with Customized Header and Footer")
+
+## Scrollbar Visibility
+
+[`ListView`](xref:Xamarin.Forms.ListView) has `HorizontalScrollBarVisibility` and `VerticalScrollBarVisibility` properties, which get or set a [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) value that represents when the horizontal, or vertical, scroll bar is visible. Both properties can be set to the following values:
+
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indicates the default scroll bar behavior for the platform, and is the default value for the `HorizontalScrollBarVisibility` and `VerticalScrollBarVisibility` properties.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indicates that scroll bars will be visible, even when the content doesn't fit in the view.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indicates that scroll bars will not be visible, event if the content does not fit in the view.
 
 <a name="Row_Separators" />
 

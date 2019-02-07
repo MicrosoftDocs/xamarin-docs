@@ -13,21 +13,15 @@ ms.date: 12/14/2015
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/WorkingWithListview)
 
-View is a view for presenting lists of data, especially long lists that require scrolling. This guide will show you how to use ListView:
-
-1. **[Data Sources](data-and-databinding.md)** &ndash;  Populate a ListView with data, with or without data binding.
-2. **[Cell Appearance](customizing-cell-appearance.md)** &ndash; Customize the appearance of the built-in cells or create your own custom cell.
-3. **[List Appearance](customizing-list-appearance.md)** &ndash; Customize the appearance of ListView. Set headers and footers, enable groups and change the height of rows.
-4. **[Interactivity](interactivity.md)** &ndash; Handle taps and selections, implement pull-to-refresh, and add contextual actions.
-5. **[Performance](performance.md)** &ndash; Avoid performance problems.
+[`ListView`](xref:Xamarin.Forms.ListView) is a view for presenting lists of data, especially long lists that require scrolling.
 
 ## Use Cases
+
 Make sure ListView is the right control for your needs. ListView can be used in any situation where you are displaying scrollable lists of data. ListViews support context actions and data binding.
 
 ListView should not be confused with [TableView](~/xamarin-forms/user-interface/tableview.md). The TableView control is a better option whenever you have a non-bound list of options or data. For example, the iOS settings app, which has a mostly predefined set of options, is better suited to use TableView than ListView.
 
 Also note that a ListView is best suited for homogeneous data &ndash; that is, all data should be of the same type. This is because only one type of cell can be used for each row in the list. TableViews can support multiple cell types, so they are a better option when you need to mix views.
-
 
 ## Components
 ListView has a number of components available to exercise the native functionality of each platform. Each of these components is described below:
@@ -57,7 +51,6 @@ ListView supports a number of interaction styles, including:
 ![](images/context-default.png "ListView with Context Actions")
 
 To learn more about the interactivity features of ListView, see [Actions & Interactivity with ListView](interactivity.md).
-
 
 ## Related Links
 

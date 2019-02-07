@@ -6,7 +6,7 @@ ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2017
+ms.date: 12/18/2018
 ---
 
 # Automation Properties in Xamarin.Forms
@@ -133,6 +133,43 @@ AutomationProperties.SetLabeledBy(entry, nameLabel);
 
 > [!NOTE]
 > Note that the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method can also be used to set the `AutomationProperties.IsInAccessibleTree` attached property  – `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`
+
+## Accessibility intricacies
+
+The following sections describe the intricacies of setting accessibility values on certain controls.
+
+### NavigationPage
+
+On Android, to set the text that screen readers will read for the back arrow in the action bar in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), set the `AutomationProperties.Name` and `AutomationProperties.HelpText` properties on a [`Page`](xref:Xamarin.Forms.Page). However, note that this will not have an effect on OS back buttons.
+
+### MasterDetailPage
+
+On iOS and the Universal Windows Platform (UWP), to set the text that screen readers will read for the toggle button on a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), either set the `AutomationProperties.Name`, and `AutomationProperties.HelpText` properties on the `MasterDetailPage`, or on the `Icon` property of the `Master` page.
+
+On Android, to set the text that screen readers will read for the toggle button on a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), add string resources to the Android project:
+
+```xml
+<resources>
+	    <string name="app_name">Xamarin Forms Control Gallery</string>
+	    <string name="btnMDPAutomationID_open">Open Side Menu message</string>
+	    <string name="btnMDPAutomationID_close">Close Side Menu message</string>
+</resources>
+```
+
+Then set the `AutomationId` property of the `Icon` property of the `Master` page to the appropriate string:
+
+```csharp
+var master = new ContentPage { ... };
+master.Icon.AutomationId = "btnMDPAutomationID";
+```
+
+### ToolbarItem
+
+On iOS, Android, and UWP, screen readers will read the `Text` property value of [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) instances, provided that `AutomationProperties.Name` or `AutomationProperties.HelpText` values aren't defined.
+
+On iOS and UWP the `AutomationProperties.Name` property value will replace the `Text` property value that is read by the screen reader.
+
+On Android, the `AutomationProperties.Name` and/or `AutomationProperties.HelpText` property values will completely replace the `Text` property value that is both visible and read by the screen reader. Note that this is a limitation of APIs less than 26.
 
 ## Related Links
 

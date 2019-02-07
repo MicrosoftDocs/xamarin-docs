@@ -6,7 +6,7 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/04/2018
+ms.date: 12/13/2018
 ---
 
 # Xamarin.Forms Label
@@ -141,7 +141,7 @@ The following screenshots show the result of setting the `MaxLines` property to 
 
 ## Formatted text
 
-Labels expose a [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) property which allows the presentation of text with multiple fonts and colors in the same view.
+Labels expose a [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) property that allows the presentation of text with multiple fonts and colors in the same view.
 
 The `FormattedText` property is of type [`FormattedString`](xref:Xamarin.Forms.FormattedString), which comprises one or more [`Span`](xref:Xamarin.Forms.Span) instances, set via the [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) property. The following `Span` properties can be used to set visual appearance:
 
@@ -288,6 +288,119 @@ The following screenshots show the result of setting the [`Span.LineHeight`](xre
 
 ![](label-images/span-lineheight.png "Span LineHeight Example")
 
+## Hyperlinks
+
+The text displayed by [`Label`](xref:Xamarin.Forms.Label) and [`Span`](xref:Xamarin.Forms.Span) instances can be turned into hyperlinks with the following approach:
+
+1. Set the `TextColor` and `TextDecoration` properties of the [`Label`](xref:Xamarin.Forms.Label) or [`Span`](xref:Xamarin.Forms.Span).
+1. Add a [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) to the [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) collection of the [`Label`](xref:Xamarin.Forms.Label) or [`Span`](xref:Xamarin.Forms.Span), whose [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) property binds to a `ICommand`, and whose [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) property contains the URL to open.
+1. Define the `ICommand` that will be executed by the [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer).
+1. Write the code that will be executed by the `ICommand`.
+
+The following code example, taken from the [Hyperlink Demos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) sample, shows a [`Label`](xref:Xamarin.Forms.Label) whose content is set from multiple [`Span`](xref:Xamarin.Forms.Span) instances:
+
+```xaml
+<Label>
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Alternatively, click " />
+            <Span Text="here"
+                  TextColor="Blue"
+                  TextDecorations="Underline">
+                <Span.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://docs.microsoft.com/xamarin/" />
+                </Span.GestureRecognizers>
+            </Span>
+            <Span Text=" to view Xamarin documentation." />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+```
+
+In this example, the first and third [`Span`](xref:Xamarin.Forms.Span) instances comprise text, while the second `Span` represents a tappable hyperlink. It has its text color set to blue, and has an underline text decoration. This creates the appearance of a hyperlink, as shown in the following screenshots:
+
+[![Hyperlinks](label-images/hyperlinks-small.png "Hyperlinks")](label-images/hyperlinks-large.png#lightbox)
+
+When the hyperlink is tapped, the [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) will respond by executing the `ICommand` defined by its [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) property. In addition, the URL specified by the [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) property will be passed to the `ICommand` as a parameter.
+
+The code-behind for the XAML page contains the `TapCommand` implementation:
+
+```csharp
+public partial class MainPage : ContentPage
+{
+    public ICommand TapCommand => new Command<string>(OpenBrowser);
+
+    public MainPage()
+    {
+        InitializeComponent();
+        BindingContext = this;
+    }
+
+    void OpenBrowser(string url)
+    {
+        Device.OpenUri(new Uri(url));
+    }
+}
+```
+
+The `TapCommand` executes the `OpenBrowser` method, passing the [`TapGestureRecognizer.CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) property value as a parameter. In turn, this method calls the [`Device.OpenUri`](xref:Xamarin.Forms.Device.OpenUri*) method to open the URL in a web browser. Therefore, the overall effect is that when the hyperlink is tapped on the page, a web browser appears and the URL associated with the hyperlink is navigated to.
+
+### Creating a reusable hyperlink class
+
+The previous approach to creating a hyperlink requires writing repetitive code every time you require a hyperlink in your application. However, both the [`Label`](xref:Xamarin.Forms.Label) and [`Span`](xref:Xamarin.Forms.Span) classes can be sub-classed to create `HyperlinkLabel` and `HyperlinkSpan` classes, with the gesture recognizer and text formatting code added there.
+
+The following code example, taken from the [Hyperlink Demos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) sample, shows a `HyperlinkSpan` class:
+
+```csharp
+public class HyperlinkSpan : Span
+{
+    public static readonly BindableProperty UrlProperty =
+        BindableProperty.Create(nameof(Url), typeof(string), typeof(HyperlinkSpan), null);
+
+    public string Url
+    {
+        get { return (string)GetValue(UrlProperty); }
+        set { SetValue(UrlProperty, value); }
+    }
+
+    public HyperlinkSpan()
+    {
+        TextDecorations = TextDecorations.Underline;
+        TextColor = Color.Blue;
+        GestureRecognizers.Add(new TapGestureRecognizer
+        {
+            Command = new Command(() => Device.OpenUri(new Uri(Url)))
+        });
+    }
+}
+```
+
+The `HyperlinkSpan` class defines a `Url` property, and associated [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), and the constructor sets the hyperlink appearance and the [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) that will respond when the hyperlink is tapped. When a `HyperlinkSpan` is tapped, the `TapGestureRecognizer` will respond by executing the [`Device.OpenUri`](xref:Xamarin.Forms.Device.OpenUri*) method to open the URL, specified by the `Url` property, in a web browser.
+
+The `HyperlinkSpan` class can be consumed by adding an instance of the class to the XAML:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HyperlinkDemo"
+             x:Class="HyperlinkDemo.MainPage">
+    <StackLayout>
+        ...
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Alternatively, click " />
+                    <local:HyperlinkSpan Text="here"
+                                         Url="https://docs.microsoft.com/appcenter/" />
+                    <Span Text=" to view AppCenter documentation." />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>
+```
+
 ## Styling labels
 
 The previous sections covered setting [`Label`](xref:Xamarin.Forms.Label) and [`Span`](xref:Xamarin.Forms.Span) properties on a per-instance basis. However, sets of properties can be grouped into one style that is consistently applied to one or many views. This can increase readability of code and make design changes easier to implement. For more information, see [Styles](~/xamarin-forms/user-interface/text/styles.md).
@@ -295,6 +408,7 @@ The previous sections covered setting [`Label`](xref:Xamarin.Forms.Label) and [`
 ## Related links
 
 - [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Hyperlinks (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Hyperlinks)
 - [Creating Mobile Apps with Xamarin.Forms, Chapter 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [Label API](xref:Xamarin.Forms.Label)
 - [Span API](xref:Xamarin.Forms.Span)

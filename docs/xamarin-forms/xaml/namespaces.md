@@ -91,10 +91,11 @@ The namespace prefix is then specified when declaring an instance of a type from
 </ListView>
 ```
 
+For information about defining a custom namespace schema, see [XAML Custom Namespace Schemas](custom-namespace-schemas.md).
+
 ## Summary
 
 This article introduced the XAML namespace syntax, and demonstrated how to declare a XAML namespace to access a type. XAML uses the `xmlns` XML attribute for namespace declarations, and types can be referenced in XAML by declaring a XAML namespace with a prefix.
-
 
 ## Related Links
 
