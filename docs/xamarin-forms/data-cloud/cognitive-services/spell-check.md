@@ -150,6 +150,11 @@ This code iterates through the `FlaggedTokens` collection and replaces any missp
 
 ![](spell-check-images/after-spell-check.png "After Spell Check")
 
+> [!NOTE]
+> The example above uses `Replace` for simplicity, but across a large amount of text it
+> could replace the wrong token. The API provides the `offset` value which should be
+> used in production apps to identify the correct location in the source text to perform an update.
+
 ## Summary
 
 This article explained how to use the Bing Spell Check REST API to correct spelling errors in a Xamarin.Forms application. Bing Spell Check performs contextual spell checking for text, providing inline suggestions for misspelled words.
