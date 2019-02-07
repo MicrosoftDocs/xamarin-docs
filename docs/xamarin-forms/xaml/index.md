@@ -38,6 +38,10 @@ The [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer.md) renders a live prev
 
 XAML uses the `xmlns` XML attribute for namespace declarations. This article introduces the XAML namespace syntax, and demonstrates how to declare a XAML namespace to access a type.
 
+## [XAML Custom Namespace Schemas](custom-namespace-schemas.md)
+
+A XAML custom namespace schema can be defined with the `XmlnsDefinitionAttribute` class, which specifies a mapping between a custom URL and one or more CLR namespaces. The custom namespace schema can then be used in XAML namespace declarations.
+
 ## [XAML Markup Extensions](markup-extensions/index.md)
 
 XAML includes markup extensions for setting attributes to values or objects beyond what can be expressed with simple strings. These include referencing constants, static properties and fields, resource dictionaries, and data bindings.

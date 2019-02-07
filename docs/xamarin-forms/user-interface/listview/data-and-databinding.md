@@ -15,9 +15,6 @@ ms.date: 07/30/2018
 
 A [`ListView`](xref:Xamarin.Forms.ListView) is used for displaying lists of data. We'll learn about populating a ListView with data, and how we can bind to the selected item.
 
-- **[Setting ItemsSource](#ItemsSource)** &ndash; uses a simple list or array.
-- **[Data Binding](#Data_Binding)** &ndash; establishes a relationship between a model and the ListView. Binding is ideal for the MVVM pattern.
-
 ## ItemsSource
 
 A [`ListView`](xref:Xamarin.Forms.ListView) is populated with data using the [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property, which can accept any collection implementing `IEnumerable`. The simplest way to populate a `ListView` involves using an array of strings:
