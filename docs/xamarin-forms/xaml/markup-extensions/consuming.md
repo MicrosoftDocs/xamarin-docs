@@ -28,7 +28,7 @@ Additional XAML markup extensions have historically been supported by other XAML
 - `StaticResource` &ndash; reference objects from a resource dictionary, as described in the article  [**Resource Dictionaries**](~/xamarin-forms/xaml/resource-dictionaries.md).
 - `DynamicResource` &ndash; respond to changes in objects in a resource dictionary, as described in the article [**Dynamic Styles**](~/xamarin-forms/user-interface/styles/dynamic.md).
 - `Binding` &ndash; establish a link between properties of two objects, as described in the article [**Data Binding**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding` &ndash; performs data binding from a control template, as discussed in the article [**Binding from a Control Template**](/guides/xamarin-forms/application-fundamentals/templates/control-templates/template-binding/).
+- `TemplateBinding` &ndash; performs data binding from a control template, as discussed in the article [**Binding from a Control Template**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md).
 
 The [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) layout makes use of the custom markup extension [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression). This markup extension is described in the article [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
