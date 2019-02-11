@@ -58,7 +58,7 @@ public class DisplayInfoTest
         DeviceDisplay.MainDisplayInfoChanged += OnMainDisplayInfoChanged;
     }
 
-    void OnMainDisplayInfoChanged(DisplayInfoChangedEventArgs  e)
+    void OnMainDisplayInfoChanged(object sender, DisplayInfoChangedEventArgs  e)
     {
         // Process changes
         var displayInfo = e.DisplayInfo;
