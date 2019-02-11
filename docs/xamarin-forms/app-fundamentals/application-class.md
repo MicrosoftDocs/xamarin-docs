@@ -239,4 +239,4 @@ public sealed partial class MainPage
 
 Note that `Forms.Init()` must be called from **App.xaml.cs** in the UWP project.
 
-For more information, see [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md), which includes steps to add a UWP project to an existing Xamarin.Forms solution that doesn't currently target UWP.
+For more information, see [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md), which includes steps to add a UWP project to an existing Xamarin.Forms solution that doesn't target UWP.
