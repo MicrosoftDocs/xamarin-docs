@@ -56,11 +56,11 @@ sections:
     style: cards
     className: cardsB
     items:
-    - href: ~/get-started/quickstarts/index.md
+    - href: ~/get-started/index.md
       html: Tutorials to get you up and running with Xamarin.Forms. Make sure everything is installed correctly, and build your first Xamarin.Forms apps.
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/get-started/quickstarts/index.md
+        href: ~/get-started/index.md
       title: Getting Started
     - href: ~/xamarin-forms/xaml/
       html: Build user interfaces declaratively and share across mobile and desktop platforms.
