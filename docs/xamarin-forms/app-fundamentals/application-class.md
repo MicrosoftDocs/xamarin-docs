@@ -211,9 +211,6 @@ public class MainActivity : FormsAppCompatActivity
 
 ### Universal Windows Project (UWP) for Windows 10
 
-See [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md)
-for information about UWP support in Xamarin.Forms.
-
 The main page in the UWP project should inherit from `WindowsPage`:
 
 ```xaml
@@ -242,3 +239,5 @@ public sealed partial class MainPage
 ```
 
 Note that `Forms.Init()` must be called in **App.xaml.cs** around line 63.
+
+For more information, see [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md), which includes steps to add a UWP project to an existing Xamarin.Forms solution that doesn't currently target UWP.
