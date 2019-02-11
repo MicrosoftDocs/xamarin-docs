@@ -336,7 +336,7 @@ Follow these steps to use Interface Builder:
 
     [![](hello-mac-images/xcode12.png "Resizing the Label")](hello-mac-images/xcode12.png#lightbox)
 
-7. Select the Button just added in the **Interface Editor**, and click the **Constraints Editor** icon and the bottom of the window:
+7. Select the Button just added in the **Interface Editor**, and click the **Constraints Editor** icon at the bottom of the window:
 
     [![](hello-mac-images/xcode13.png "Adding constraints to the button")](hello-mac-images/xcode13.png#lightbox)
 

@@ -14,10 +14,10 @@ ms.date: 08/23/2017
 Once a Xamarin.iOS app has been developed, the next step in the software development lifecycle is to distribute the app to users using the iTunes App Store. This is the most common way of distributing applications. By publishing an application in Apple’s App Store, it can be made available to consumers worldwide.
 
 > [!IMPORTANT]
-> Apple [has indicated](https://developer.apple.com/news/?id=05072018a) that
-> starting in July 2018, all apps and updates submitted to the App Store
-> must have been built with the iOS 11 SDK and 
-> [support the iPhone X display](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+> Apple [has indicated](https://developer.apple.com/ios/submit/) that
+> starting in March 2019, all apps and updates submitted to the App Store
+> must have been built with the iOS 12.1 SDK or later, included in Xcode 10.1 or later.
+> Apps should also support the iPhone XS and 12.9" iPad Pro screen sizes.
 
 Distributing an application – just as with developing an application – requires that applications be provisioned using the appropriate *provisioning profile*. Provisioning profiles are files that contain code signing information, as well as the identity of the application and the intended distribution mechanism. They also contain information about what devices the app can be deployed to for the non-App Store distribution.
 
