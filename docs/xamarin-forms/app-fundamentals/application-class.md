@@ -164,7 +164,6 @@ This class is then instantiated in each platform-specific project and passed to 
 `LoadApplication` method which is where the `MainPage` is loaded and displayed to the user.
 The code for each platform is shown in the following sections. The latest Xamarin.Forms solution templates already contain all this code, preconfigured for your app.
 
-
 ### iOS Project
 
 The iOS `AppDelegate` class inherits from `FormsApplicationDelegate`. It should:
@@ -238,6 +237,6 @@ public sealed partial class MainPage
  }
 ```
 
-Note that `Forms.Init()` must be called in **App.xaml.cs** around line 63.
+Note that `Forms.Init()` must be called from **App.xaml.cs** in the UWP project.
 
 For more information, see [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md), which includes steps to add a UWP project to an existing Xamarin.Forms solution that doesn't currently target UWP.
