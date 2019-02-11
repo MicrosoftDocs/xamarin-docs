@@ -412,7 +412,7 @@ public ICommand ProductTypeCommand { get; } = new Command<string>(NavigateToProd
 
 static void NavigateToProductType(string typeId)
 {
-  (App.Current.MainPage as Xamarin.Forms.Shell).GoToAsync($"app:///tailwindtraders/productcategory?id={typeId}", true);
+  (App.Current.MainPage as Xamarin.Forms.Shell).GoToAsync($"app://tailwindtraders/productcategory?id={typeId}", true);
 }
 ```
 
