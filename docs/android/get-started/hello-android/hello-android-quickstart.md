@@ -15,6 +15,8 @@ ms.date: 10/05/2018
 
 _In this two-part guide, you will build your first Xamarin.Android application with Visual Studio and develop an understanding of the fundamentals of Android application development with Xamarin._
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/monodroid/Phoneword/)
+
 You will create an application that translates an
 alphanumeric phone number (entered by the user) into a numeric phone
 number and display the numeric phone number to the user. The final application looks like
@@ -81,6 +83,14 @@ Double-click **activity_main.axml** to open it in the Android Designer. This
 is the layout file for the app's screen:
 
 [![Open activity axml file](hello-android-quickstart-images/vs/03-open-layout-w158-sml.png)](hello-android-quickstart-images/vs/03-open-layout-w158.png#lightbox)
+
+> [!TIP]
+> Newer releases of Visual Studio contain a slightly different app template.
+>
+> 1. Instead of **activity_main.axml**, the layout is in **content_main.axml**.
+> 2. The default layout will be a `RelativeLayout`. For the rest of the steps on this page to work
+>    you should change the `<RelativeLayout>` tag to `<LinearLayout>` and add another attribute
+>    `android:orientation="vertical"` to the `LinearLayout` opening tag.
 
 From the **Toolbox** (the area on the left), enter `text` into the search
 field and drag a **Text (Large)** widget onto the design surface
