@@ -75,7 +75,7 @@ Public files are files that exist on external storage that are not stored in the
 This document will refer to the storage directory for public files on external storage as _PUBLIC\_EXTERNAL\_STORAGE_.
 
 
-Android also supports the concept of application directories on _PUBLIC\_EXTERNAL\_STORAGE_. These directories are exactly the same as the application diretories for `_PRIVATE\_EXTERNAL\_STORAGE_` and are described in the table in the previous section. The method `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` will return a `Java.IO.File` object that correspond to a public application directory. The `directoryType` parameter is a mandatory parameter and cannot be `null`.
+Android also supports the concept of application directories on _PUBLIC\_EXTERNAL\_STORAGE_. These directories are exactly the same as the application directories for `_PRIVATE\_EXTERNAL\_STORAGE_` and are described in the table in the previous section. The method `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` will return a `Java.IO.File` object that correspond to a public application directory. The `directoryType` parameter is a mandatory parameter and cannot be `null`.
 
 For example, calling `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath` will return a string which will resemble:
 
