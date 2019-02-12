@@ -59,11 +59,11 @@ This 1-by-3 matrix is then multiplied by the transform matrix, and the result is
 
 Using standard matrix multiplication, the converted points are as follows:
 
-x' = x
+`x' = x`
 
-y' = y
+`y' = y`
 
-z' = 1
+`z' = 1`
 
 That's the default transform.
 
@@ -85,9 +85,9 @@ The multiplication is now as follows:
 
 Here are the transform formulas:
 
-x' = x + tx
+`x' = x + tx`
 
-y' = y + ty
+`y' = y + ty`
 
 Scaling factors have a default value of 1. When you call the `Scale` method on a new `SKCanvas` object, the resultant transform matrix contains the `sx` and `sy` arguments in the diagonal cells:
 
@@ -99,9 +99,9 @@ Scaling factors have a default value of 1. When you call the `Scale` method on a
 
 The transform formulas are as follows:
 
-x' = sx · x
+`x' = sx · x`
 
-y' = sy · y
+`y' = sy · y`
 
 The transform matrix after calling `Skew` contains the two arguments in the matrix cells adjacent to the scaling factors:
 
@@ -113,9 +113,9 @@ The transform matrix after calling `Skew` contains the two arguments in the matr
 
 The transform formulas are:
 
-x' = x + xSkew · y
+`x' = x + xSkew · y`
 
-y' = ySkew · x + y
+`y' = ySkew · x + y`
 
 For a call to `RotateDegrees` or `RotateRadians` for an angle of α, the transform matrix is as follows:
 
@@ -127,9 +127,9 @@ For a call to `RotateDegrees` or `RotateRadians` for an angle of α, the transfo
 
 Here are the transform formulas:
 
-x' = cos(α) · x - sin(α) · y
+`x' = cos(α) · x - sin(α) · y`
 
-y' = sin(α) · x - cos(α) · y
+`y' = sin(α) · x - cos(α) · y`
 
 When α is 0 degrees, it's the identity matrix. When α is 180 degrees, the transform matrix is as follows:
 
@@ -224,11 +224,11 @@ The `Persp0`, `Persp1`, and `Persp2` cells are discussed in the article [**Non-A
               │ TransX  TransY  1 │
 </pre>
 
-x' = ScaleX · x + SkewX · y + TransX
+`x' = ScaleX · x + SkewX · y + TransX`
 
-y' = SkewX · x + ScaleY · y + TransY
+`y' = SkewX · x + ScaleY · y + TransY`
 
-z' = 1
+`z' = 1`
 
 This is the complete two-dimensional affine transform. The affine transform preserves parallel lines, which means that a rectangle is never transformed into anything other than a parallelogram.
 
@@ -255,7 +255,7 @@ SKMatrix.Concat(ref R, ref A, ref B);
 
 These perform the following multiplication:
 
-R = B × A
+`R = B × A`
 
 The other methods have only two parameters. The first parameter is modified, and on return from the method call, contains the product of the two matrices. The two `PostConcat` methods are called like this:
 
@@ -267,7 +267,7 @@ SKMatrix.PostConcat(ref A, ref B);
 
 These calls perform the following operation:
 
-A = A × B
+`A = A × B`
 
 The two `PreConcat` methods are similar:
 
@@ -279,7 +279,7 @@ SKMatrix.PreConcat(ref A, ref B);
 
 These calls perform the following operation:
 
-A = B × A
+`A = B × A`
 
 The versions of these methods with all `ref` arguments are slightly more efficient in calling the underlying implementations, but it might be confusing to someone reading your code and assuming that anything with a `ref` argument is modified by the method. Moreover, it's often convenient to pass an argument that is a result of one of the `Make` methods, for example:
 
@@ -357,7 +357,7 @@ SKMatrix.PostConcat(ref A, C);
 
 This is a series of successive multiplications, so the result is as follows:
 
-A × B × C
+`A × B × C`
 
 The consecutive multiplications aid in understanding what each transform does. The scale transform increases the size of the path coordinates by a factor of 3, so the coordinates range from –300 to 300. The rotate transform rotates the star around its origin. The translate transform then shifts it by 300 pixels right and down, so all the coordinates become positive.
 
