@@ -4,7 +4,8 @@ description: "The Share class in Xamarin.Essentials enables an application to sh
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 02/12/2019
+ms.custom: video
 ---
 
 # Xamarin.Essentials: Share
@@ -75,3 +76,9 @@ User interface to share to external application that appears when request is mad
 
 - [Share source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Share)
 - [Share API documentation](xref:Xamarin.Essentials.Share)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Share-Essential-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

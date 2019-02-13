@@ -4,7 +4,8 @@ description: "This document describes the Clipboard class in Xamarin.Essentials,
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 02/12/2019
+ms.custom: video
 ---
 
 # Xamarin.Essentials: Clipboard
@@ -45,3 +46,9 @@ var text = await Clipboard.GetTextAsync();
 
 - [Clipboard source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Clipboard)
 - [Clipboard API documentation](xref:Xamarin.Essentials.Clipboard)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Clipboard-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
