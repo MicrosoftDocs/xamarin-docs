@@ -13,3 +13,4 @@ _repo.*/
 # WebStorm configuration files.
 .idea
 /.vs
+.vscode/settings.json
