@@ -68,10 +68,10 @@ transparency, and appearance options.
 
 The lifecycle of a `WKInterfaceController` object involves the following calls:
 
-- [Awake](https://developer.xamarin.com/api/member/WatchKit.WKInterfaceController.Awake/) : You should perform most of your initialization in this method.
-- [WillActivate](https://developer.xamarin.com/api/member/WatchKit.WKInterfaceController.WillActivate/) : Called shortly before the Watch App appears to the user. Use this method to perform last-moment initialization, start animations, etc.
+- [Awake](xref:WatchKit.WKInterfaceController.Awake*) : You should perform most of your initialization in this method.
+- [WillActivate](xref:WatchKit.WKInterfaceController.WillActivate) : Called shortly before the Watch App appears to the user. Use this method to perform last-moment initialization, start animations, etc.
 - At this point, the Watch App appears and the Extension begins responding to user input and updating the Watch App’s display per your application logic.
-- [DidDeactivate](https://developer.xamarin.com/api/member/WatchKit.WKInterfaceController.DidDeactivate/) After the Watch App has been dismissed by the user, this method is called. After this method returns, user interface controls cannot be modified until the next time `WillActivate` is called. This method will also be called if the connection to the iPhone is broken.
+- [DidDeactivate](xref:WatchKit.WKInterfaceController.DidDeactivate) After the Watch App has been dismissed by the user, this method is called. After this method returns, user interface controls cannot be modified until the next time `WillActivate` is called. This method will also be called if the connection to the iPhone is broken.
 - After the extension has been deactivated, it is inaccessible to your program. Pending asynchronous functions **will not** be called. Watch Kit Extensions may not use background processing modes. If the program is reactivated by the user but the app has not been terminated by the operating system, the first method called will be `WillActivate`.
 
 ![](intro-to-watchos-images/wkinterfacecontrollerlifecycle.png "Application Lifecycle overview")

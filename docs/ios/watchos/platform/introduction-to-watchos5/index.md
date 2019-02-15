@@ -1,6 +1,6 @@
 ---
 title: "Introduction to watchOS 5"
-description: "This document provides a high-level description of some watchOS 5 APIs for which Xamarin's preview release provides C# bindings."
+description: "This document provides a high-level description of some watchOS 5 APIs for Xamarin."
 ms.prod: xamarin
 ms.assetid: 775BE4E4-F408-4620-AED9-2B48C7B27F38
 ms.technology: xamarin-ios
@@ -12,10 +12,7 @@ ms.date: 10/05/2018
 
 This document provides a high-level description of some watchOS 5 APIs.
 
-To get started building watchOS 5 apps with Xamarin, take a look at:
-
-- The [getting started guide](~/ios/platform/introduction-to-ios12/get-started.md)
-- The Xamarin preview [release blog post](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
+To get started building watchOS 5 apps with Xamarin, refer to the [getting started guide](~/ios/platform/introduction-to-ios12/get-started.md)
 
 ## Workout improvements
 

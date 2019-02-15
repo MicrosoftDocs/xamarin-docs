@@ -11,7 +11,7 @@ ms.date: 03/17/2017
 
 # watchOS Image Controls in Xamarin
 
-watchOS provides a [`WKInterfaceImage`](https://developer.xamarin.com/api/type/WatchKit.WKInterfaceImage/) control to display
+watchOS provides a [`WKInterfaceImage`](xref:WatchKit.WKInterfaceImage) control to display
 	images and simple animations. Some controls
 	can also have a background image (such as
 	buttons, groups, and interface controllers).
