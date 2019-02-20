@@ -63,13 +63,13 @@ The 4×5 matrix is multiplied by the 5×1 matrix, and the product is a 4×1 matr
 
 Here are the separate formulas for R', G', B', and A':
 
-R' = M11·R + M12·G + M13·B + M14·A + M15 
+`R' = M11·R + M12·G + M13·B + M14·A + M15` 
 
-G' = M21·R + M22·G + M23·B + M24·A + M25 
+`G' = M21·R + M22·G + M23·B + M24·A + M25` 
 
-B' = M31·R + M32·G + M33·B + M34·A + M35 
+`B' = M31·R + M32·G + M33·B + M34·A + M35` 
 
-A' = M41·R + M42·G + M43·B + M44·A + M45 
+`A' = M41·R + M42·G + M43·B + M44·A + M45` 
 
 Most of the matrix consists of multiplicative factors that are generally in the range of 0 to 2. However, the last column (M15 through M45) contains values that are added in the formulas. These values generally range from 0 to 255. The results are clamped between the values of 0 and 255.
 
@@ -84,13 +84,13 @@ The identity matrix is:
 
 This causes no change to the colors. The transform formulas are:
 
-R' = R 
+`R' = R` 
 
-G' = G
+`G' = G`
 
-B' = B
+`B' = B`
 
-A' = A
+`A' = A`
 
 The M44 cell is very important because it preserves opacity. It is generally the case that M41, M42, and M43 are all zero, because you probably don't want opacity to be based on the red, green, and blue values. But if M44 is zero, then A' will be zero, and nothing will be visible.
 
@@ -229,11 +229,11 @@ public static SKColorFilter CreateTable (byte[] tableA, byte[] tableR, byte[] ta
 
 The arrays always contain 256 entries. In the `CreateTable` method with one table, the same table is used for the red, green, and blue components. It's a simple look-up table: If the source color is (R, G, B), and the destination color is (R', B', G'), then the destination components are obtained by indexing `table` with the source components:
 
-R' = table[R]
+`R' = table[R]`
 
-G' = table[G]
+`G' = table[G]`
 
-B' = table[B]
+`B' = table[B]`
 
 In the second method, each of four color components can have a separate color table, or the same color tables might be shared among two or more components.
 

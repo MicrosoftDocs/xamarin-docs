@@ -411,13 +411,13 @@ Look very close and you'll see that those aren't actually circles. Each link in 
 
 A chain or cable of uniform weight distribution hangs in the form of a catenary. An arch built in the form of an inverted catenary benefits from an equal distribution of pressure from the weight of an arch. The catenary has a seemingly simple mathematical description:
 
-y = a · cosh(x / a)
+`y = a · cosh(x / a)`
 
 The *cosh* is the hyperbolic cosine function. For *x* equal to 0, *cosh* is zero and *y* equals *a*. That's the center of the catenary. Like the *cosine* function, *cosh* is said to be *even*, which means that *cosh(–x)* equals *cosh(x)*, and values increase for increasing positive or negative arguments. These values describe the curves that form the sides of the catenary.
 
 Finding the proper value of *a* to fit the catenary to the dimensions of the phone's page is not a direct calculation. If *w* and *h* are the width and height of a rectangle, the optimum value of *a* satisfies the following equation:
 
-cosh(w / 2 / a) = 1 + h / a
+`cosh(w / 2 / a) = 1 + h / a`
 
 The following method in the [`LinkedChainPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) class incorporates that equality by referring to the two expressions on the left and right of the equal sign as `left` and `right`. For small values of *a*, `left` is greater than `right`; for large values of *a*, `left` is less than `right`. The `while` loop narrows in on an optimum value of *a*:
 

@@ -58,25 +58,25 @@ In a 3D graphics system, a 3D point (x, y, z) is converted to a 1-by-4 matrix fo
 
 Analogous to 2D transforms that take place in three dimensions, 3D transforms are assumed to take place in four dimensions. The fourth dimension is referred to as W, and the 3D space is assumed to exist within the 4D space where W coordinates are equal to 1. The transform formulas are as follows:
 
-x' = M11·x + M21·y + M31·z + M41
+`x' = M11·x + M21·y + M31·z + M41`
 
-y' = M12·x + M22·y + M32·z + M42
+`y' = M12·x + M22·y + M32·z + M42`
 
-z' = M13·x + M23·y + M33·z + M43
+`z' = M13·x + M23·y + M33·z + M43`
 
-w' = M14·x + M24·y + M34·z + M44
+`w' = M14·x + M24·y + M34·z + M44`
 
 It's obvious from the transform formulas that the cells `M11`, `M22`, `M33` are scaling factors in the X, Y, and Z directions, and `M41`, `M42`, and `M43` are translation factors in the X, Y, and Z directions.
 
 To convert these coordinates back to the 3D space where W equals 1, the x', y', and z' coordinates are all divided by w':
 
-x" = x' / w'
+`x" = x' / w'`
 
-y" = y' / w'
+`y" = y' / w'`
 
-z" = z' / w'
+`z" = z' / w'`
 
-w" = w' / w' = 1
+`w" = w' / w' = 1`
 
 That division by w' provides perspective in 3D space. If w' equals 1, then no perspective occurs.
 
@@ -135,7 +135,7 @@ The reason for the argument name `depth` will be evident shortly. That code crea
 
 The transform formulas result in the following calculation of w':
 
-w' = –z / depth + 1
+`w' = –z / depth + 1`
 
 This serves to reduce X and Y coordinates when values of Z are less than zero (conceptually behind the XY plane) and to increase X and Y coordinates for positive values of Z. When the Z coordinate equals `depth`, then w' is zero, and coordinates become infinite. Three-dimensional graphics systems are built around a camera metaphor, and the `depth` value here represents the distance of the camera from the origin of the coordinate system. If a graphical object has a Z coordinate that is `depth` units from the origin, it is conceptually touching the lens of the camera and becomes infinitely large.
 
@@ -168,9 +168,9 @@ w' = M14·x + M24·y + M44
 
 Moreover, the z' coordinate is irrelevant here as well. When a 3D object is displayed in a 2D graphics system, it is collapsed to a two-dimensional object by ignoring the Z coordinate values. The transform formulas are really just these two:
 
-x" = x' / w'
+`x" = x' / w'`
 
-y" = y' / w'
+`y" = y' / w'`
 
 This means that the third row *and* third column of the 4-by-4 matrix can be ignored.
 
@@ -203,17 +203,17 @@ Now it can be used to transform a 2D point:
 
 The transform formulas are:
 
-x' = cos(α)·x
+`x' = cos(α)·x`
 
-y' = y
+`y' = y`
 
-z' = (sin(α)/depth)·x + 1
+`z' = (sin(α)/depth)·x + 1`
 
 Now divide everything by z':
 
-x" = cos(α)·x / ((sin(α)/depth)·x + 1)
+`x" = cos(α)·x / ((sin(α)/depth)·x + 1)`
 
-y" = y / ((sin(α)/depth)·x + 1)
+`y" = y / ((sin(α)/depth)·x + 1)`
 
 When 2D objects are rotated with a positive angle around the Y axis, then positive X values recede to the background while negative X values come to the foreground. The X values seem to move closer to the Y axis (which is governed by the cosine value) as coordinates furthest from the Y axis becomes smaller or larger as they move further from the viewer or closer to the viewer.
 

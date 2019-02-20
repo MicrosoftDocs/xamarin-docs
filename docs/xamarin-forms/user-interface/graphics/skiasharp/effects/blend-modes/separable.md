@@ -128,17 +128,17 @@ As you experiment with this program, you'll discover that these two blend modes 
 
 For the `Lighten` mode, if the destination pixel is the RGB color value (Dr, Dg, Db), and the source pixel is the color (Sr, Sg, Sb), then the output is (Or, Og, Ob) calculated as follows:
 
- Or = max(Dr, Sr)
- Og = max(Dg, Sg)
- Ob = max(Db, Sb)
+ `Or = max(Dr, Sr)`
+ `Og = max(Dg, Sg)`
+ `Ob = max(Db, Sb)`
 
 For red, green, and blue separately, the result is the greater of the destination and source. This produces the effect of lightening the dark areas of the destination first.
 
 The `Darken` mode is similar except that the result is the lesser of the destination and source:
 
- Or = min(Dr, Sr)
- Og = min(Dg, Sg)
- Ob = min(Db, Sb)
+ `Or = min(Dr, Sr)`
+ `Og = min(Dg, Sg)`
+ `Ob = min(Db, Sb)`
 
 The red, green, and blue components are each handled separately, which is why these blend modes are referred to as the _separable_ blend modes. For this reason, the abbreviations **Dc** and **Sc** can be used for the destination and source colors, and it's understood that calculations apply to each of the red, green, and blue components separately.
 

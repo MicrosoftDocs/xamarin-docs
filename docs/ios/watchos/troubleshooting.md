@@ -12,9 +12,7 @@ ms.date: 03/17/2017
 
 # watchOS Troubleshooting
 
-This page contains additional information and workarounds for features
-	still under development. Some of these workarounds apply only to our preview
-	releases.
+This page contains additional information and workarounds for issues you may encounter.
 
 - [Known Issues](#knownissues)
 

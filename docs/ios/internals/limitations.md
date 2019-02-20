@@ -11,7 +11,7 @@ ms.date: 04/09/2018
 
 # Limitations of Xamarin.iOS
 
-Since applications on the iPhone using Xamarin.iOS are compiled to static code,
+Since applications using Xamarin.iOS are compiled to static code,
 	it is not possible to use any facilities that require code generation at
 	runtime.
 
@@ -53,58 +53,13 @@ class Foo<T> : UIView {
 > While generic subclasses of NSObjects are possible, there are a few limitations. Read the [Generic subclasses of NSObject](~/ios/internals/api-design/nsobject-generics.md) document for more information
 
 
-
-### P/Invokes in Generic Types
-
-P/Invokes in generic classes aren't supported:
-
-```csharp
-class GenericType<T> {
-    [DllImport ("System")]
-    public static extern int getpid ();
-}
-```
-
- <a name="Property.SetInfo_on_a_Nullable_Type_is_not_supported" />
-
-
-### Property.SetInfo on a Nullable Type is not supported
-
-Using Reflection's Property.SetInfo to set the value on a
-	Nullable&lt;T&gt; is not currently supported.
-
- <a name="Value_types_as_Dictionary_Keys" />
-
-
-### Value types as Dictionary Keys
-
-Using a value type as a Dictionary&lt;TKey, TValue&gt; key
-	is problematic, as the default Dictionary constructor attempts
-	to use
-	EqualityComparer&lt;TKey&gt;.Default. EqualityComparer&lt;TKey&gt;.Default,
-	in turn, attempts to use Reflection to instantiate a new type
-	which implements the IEqualityComparer&lt;TKey&gt;
-	interface.
-
-This works for reference types (as the reflection+create a
-	new type step is skipped), but for value types it crashes and
-	burns rather quickly once you attempt to use it on the
-	device.
-
- **Workaround**: Manually implement
-	the [IEqualityComparer&lt;TKey&gt;](xref:System.Collections.Generic.IEqualityComparer`1) 
-	interface in a new type and provide an instance of that type
-	to the [Dictionary&lt;TKey, TValue&gt;](xref:System.Collections.Generic.Dictionary`2) [(IEqualityComparer&lt;TKey&gt;)](xref:System.Collections.Generic.IEqualityComparer`1)
-	constructor.
-
-
  <a name="No_Dynamic_Code_Generation" />
 
 
 ## No Dynamic Code Generation
 
-Since the iPhone's kernel prevents an application from generating code
-	dynamically Mono on the iPhone does not support any form of dynamic code
+Since the iOS kernel prevents an application from generating code
+	dynamically, Xamarin.iOS does not support any form of dynamic code
 	generation. These include:
 
 -  The System.Reflection.Emit is not available.
@@ -131,7 +86,7 @@ The lack of System.Reflection. **Emit** means that no code that
 	confuse **Reflection.Emit**
 	with **Reflection**. Reflection.Emit is about
 	generating code dynamically and have that code JITed and
-	compiled to native code. Due to the limitations on the iPhone
+	compiled to native code. Due to the limitations on iOS
 	(no JIT compilation) this is not supported.
 
 But the entire Reflection API, including Type.GetType

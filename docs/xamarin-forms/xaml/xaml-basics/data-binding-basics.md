@@ -109,6 +109,7 @@ The solution to this and other problems involves the `Mode` property, which is s
 - `OneWay` — values are transferred from the source to the target
 - `OneWayToSource` — values are transferred from the target to the source
 - `TwoWay` — values are transferred both ways between source and target
+- `OneTime` — data goes from source to target, but only when the `BindingContext` changes
 
 The following program demonstrates one common use of the `OneWayToSource` and `TwoWay` binding modes. Four `Slider` views are intended to control the `Scale`, `Rotate`, `RotateX`, and `RotateY` properties of a `Label`. At first, it seems as if these four properties of the `Label` should be data-binding targets because each is being set by a `Slider`. However, the `BindingContext` of `Label` can be only one object, and there are four different sliders.
 

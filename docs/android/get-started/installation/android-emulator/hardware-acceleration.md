@@ -36,9 +36,8 @@ accelerating the Android emulator:
    is a virtualization feature of Windows that makes it possible to run
    virtualized computer systems on a physical host computer.
 
-2. **Intel's Hardware Accelerated Execution Manager (HAXM)**. 
-   [HAXM](https://software.intel.com/articles/intel-hardware-accelerated-execution-manager-intel-haxm)
-   is a virtualization engine for computers running Intel CPUs.
+2. **Intel's Hardware Accelerated Execution Manager (HAXM)**.
+   HAXM is a virtualization engine for computers running Intel CPUs.
 
 For optimum performance, it is recommended that you use Hyper-V to
 accelerate the Android emulator. If Hyper-V is not available on your

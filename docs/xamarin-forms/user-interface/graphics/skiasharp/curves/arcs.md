@@ -102,9 +102,9 @@ As you can see, both the start angle and the sweep angle can take on negative va
 
 This approach to generating an arc is algorithmically the simplest, and it's easy to derive the parametric equations that describe the arc. Knowing the size and location of the ellipse, and the start and sweep angles, the start and end points of the arc can be calculated using simple trigonometry:
 
-x = oval.MidX + (oval.Width / 2) * cos(angle)
+`x = oval.MidX + (oval.Width / 2) * cos(angle)`
 
-y = oval.MidY + (oval.Height / 2) * sin(angle)
+`y = oval.MidY + (oval.Height / 2) * sin(angle)`
 
 The `angle` value is either `startAngle` or `startAngle + sweepAngle`.
 
@@ -601,9 +601,9 @@ The radius of the circle is 100 units, and the hypotenuse of the triangle is 150
 
 The coordinates of the tangent point can then be calculated using this information:
 
-x = 112·cos(41.8) = 83
+`x = 112·cos(41.8) = 83`
 
-y = 112·sin(41.8) = 75
+`y = 112·sin(41.8) = 75`
 
 The four tangent points are all that's necessary to draw an infinity sign centered on the point (0, 0) with circle radii of 100:
 

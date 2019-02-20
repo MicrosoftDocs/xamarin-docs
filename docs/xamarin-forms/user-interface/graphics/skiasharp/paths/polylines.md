@@ -21,21 +21,21 @@ In the [**SkiaSharp Curves and Paths**](../curves/index.md) section of this guid
 
 Generally it's best to define a curve in terms of a pair of parametric equations. These are equations for X and Y coordinates that depend on a third variable, sometimes called `t` for time. For example, the following parametric equations define a circle with a radius of 1 centered at the point (0, 0) for *t* from 0 to 1:
 
-x = cos(2πt)
+`x = cos(2πt)`
 
-y = sin(2πt)
+`y = sin(2πt)`
 
  If you want a radius larger than 1, you can simply multiply the sine and cosine values by that radius, and if you need to move the center to another location, add those values:
 
-x = xCenter + radius·cos(2πt)
+`x = xCenter + radius·cos(2πt)`
 
-y = yCenter + radius·sin(2πt)
+`y = yCenter + radius·sin(2πt)`
 
 For an ellipse with the axes parallel to the horizontal and vertical, two radii are involved:
 
-x = xCenter + xRadius·cos(2πt)
+`x = xCenter + xRadius·cos(2πt)`
 
-y = yCenter + yRadius·sin(2πt)
+`y = yCenter + yRadius·sin(2πt)`
 
 You can then put the equivalent SkiaSharp code in a loop that calculates the various points and adds those to a path. The following SkiaSharp code creates an `SKPath` object for an ellipse that fills the display surface. The loop cycles through the 360 degrees directly. The center is half the width and height of the display surface, and so are the two radii:
 

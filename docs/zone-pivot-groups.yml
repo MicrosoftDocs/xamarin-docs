@@ -8,3 +8,13 @@ groups:
       title: Visual Studio 2017
     - id: macos
       title: Visual Studio for Mac
+- id: platform-dev16
+  title: Platform
+  prompt: Choose your development environment
+  pivots:
+    - id: windows
+      title: Visual Studio 2017
+    - id: macos
+      title: Visual Studio for Mac
+    - id: win-dev16
+      title: Visual Studio 2019 (Preview)
