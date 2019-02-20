@@ -14,8 +14,7 @@ ms.date: 05/03/2017
 
 ![Preview](~/media/shared/preview.png)
 
-Before you start, create (or use an existing) Xamarin.Forms project.
-You can only add Mac apps using Visual Studio for Mac.
+Before you start, create (or use an existing) Xamarin.Forms project. You can only add Mac apps using Visual Studio for Mac.
 
 > [!VIDEO https://youtube.com/embed/mvQ7jzaNseM]
 
@@ -33,14 +32,13 @@ Follow these instructions to add a Mac app that will run on macOS Sierra and mac
 
 4. Review the configuration and press **Create**. These steps are shown in below:
 
-  ![Animated instructions showing how to add a Cocoa app](mac-images/add-macos-proj.gif)
+    ![Animated instructions showing how to add a Cocoa app](mac-images/add-macos-proj.gif)
 
-5. In the Mac project, right-click on **Packages > Add Packages...** to add the
-  [Xamarin.Forms/2.3.5.235-pre2](https://www.nuget.org/packages/Xamarin.Forms/2.3.5.235-pre2) NuGet. You should also update the other projects to this version.
+5. In the Mac project, right-click on **Packages > Add Packages...** to add the [Xamarin.Forms](https://www.nuget.org/packages/Xamarin.Forms/) NuGet. You should also update the other projects to use the same version of the Xamarin.Forms NuGet package.
 
 6. In the Mac project, right-click on **References** and add a reference to the Xamarin.Forms project (either Shared Project or .NET Standard library project).
 
-  ![Add a reference to the Xamarin.Forms shared code project](mac-images/references-sml.png)
+    ![Add a reference to the Xamarin.Forms shared code project](mac-images/references-sml.png)
 
 7. Update **Main.cs** to initialize the `AppDelegate`:
 
@@ -86,16 +84,16 @@ Follow these instructions to add a Mac app that will run on macOS Sierra and mac
         {
             Forms.Init();
             LoadApplication(new App());
-            base.DidFinishLaunching(notification); 
+            base.DidFinishLaunching(notification);
         }
     }
     ```
 
 9. Double-click **Main.storyboard** to edit in Xcode. Select the **Window** and _uncheck_ the **Is Initial Controller** checkbox (this is because the code above creates a window):
 
-  [![Uncheck the Is Initial Controller checkbox in Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
+    [![Uncheck the Is Initial Controller checkbox in Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
 
-  You can edit the menu system in the storyboard to remove unwanted items.
+    You can edit the menu system in the storyboard to remove unwanted items.
 
 10. Finally, add any local resources (eg. image files) from the existing platform projects that are required.
 
@@ -133,26 +131,11 @@ This is a Preview, so you should expect that not everything is production ready.
 
 ### Not all NuGets are ready for macOS
 
-Packages must target "xamarinmac20" to work in a macOS project. You may find that some of the libraries you use do not yet support macOS.
-
-In this case, you'll need to send a request to the project's maintainer to add it. Until they have support, you may need to look for alternatives.
+You may find that some of the libraries you use do not yet support macOS. In this case, you'll need to send a request to the project's maintainer to add it. Until they have support, you may need to look for alternatives.
 
 ### Missing Xamarin.Forms Features
 
-Not all Xamarin.Forms features are complete in this preview; here is a list of some of the functionality that is not yet implemented:
-
-* Footer
-* Image – Aspect
-* ListView – ScrollTo, UnevenRows support, refreshing, SeparatorColor, SeparatorVisibility
-* MasterDetailPage – BackgroundColor
-* Navigation – InsertPageBefore
-* OpenGLRenderer
-* Picker – Bindable/Observable implementation
-* TabbedPage – BarBackgroundColor, BarTextColor
-* TableView – UnevenRows
-* ViewCell – IsEnabled, ForceUpdateSize
-* WebView – most WebNavigationEvents
-
+Not all Xamarin.Forms features are complete in this preview. For more information, see [Platform Support macOS Status](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support-macOS-Status) in the [Xamarin.Forms](https://github.com/xamarin/Xamarin.Forms) GitHub repository.
 
 ## Related Links
 
