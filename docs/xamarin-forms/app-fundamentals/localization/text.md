@@ -397,13 +397,14 @@ underscore before instantiating the `CultureInfo` class:
 
 namespace UsingResxLocalization.iOS
 {
-public class Localize : UsingResxLocalization.ILocalize
+    public class Localize : UsingResxLocalization.ILocalize
     {
         public void SetLocale (CultureInfo ci)
         {
             Thread.CurrentThread.CurrentCulture = ci;
             Thread.CurrentThread.CurrentUICulture = ci;
         }
+
         public CultureInfo GetCurrentCultureInfo ()
         {
             var netLanguage = "en";
@@ -435,9 +436,12 @@ public class Localize : UsingResxLocalization.ILocalize
             }
             return ci;
         }
+
         string iOSToDotnetLanguage(string iOSLanguage)
         {
-            var netLanguage = iOSLanguage;
+            // .NET cultures don't support underscores
+            string netLanguage = iOSLanguage.Replace("_", "-");
+
             //certain languages need to be converted to CultureInfo equivalent
             switch (iOSLanguage)
             {
@@ -453,6 +457,7 @@ public class Localize : UsingResxLocalization.ILocalize
             }
             return netLanguage;
         }
+
         string ToDotnetFallbackLanguage (PlatformCulture platCulture)
         {
             var netLanguage = platCulture.LanguageCode; // use the first part of the identifier (two chars, usually);
@@ -490,7 +495,6 @@ public class Localize : UsingResxLocalization.ILocalize
 >
 > Developers should modify the `iOSToDotnetLanguage` and `ToDotnetFallbackLanguage`
 > methods to handle specific cases required for their supported languages.
-
 
 There are some system-defined user-interface elements that are automatically
 translated by iOS, such as the **Done** button on the `Picker` control. To

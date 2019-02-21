@@ -43,7 +43,7 @@ The behavior of the navigation experience between master and detail pages is pla
 
 - On iOS, the detail page *slides* to the right as the master page slides from the left, and the left part of the detail page is still visible.
 - On Android, the detail and master pages are *overlaid* on each other.
-- On UWP, the detail and master pages are *swapped*.
+- On UWP, the master page slides from the left over part of the detail page, provided that the [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) property is set to `Popover`. For more information, see [Controlling the Detail Page Display Behavior](#Controlling_the_Detail_Page_Display_Behavior).
 
 Similar behavior will be observed in landscape mode, except that the master page on iOS and Android has a similar width as the master page in portrait mode, so more of the detail page will be visible.
 
@@ -286,7 +286,6 @@ However, the value of the [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage
 ## Summary
 
 This article demonstrated how to use a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) and navigate between its pages of information. The Xamarin.Forms `MasterDetailPage` is a page that manages two pages of related information – a master page that presents items, and a detail page that presents details about items on the master page.
-
 
 ## Related Links
 
