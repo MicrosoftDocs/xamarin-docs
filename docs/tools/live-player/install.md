@@ -16,11 +16,7 @@ Xamarin Live Player lets you make live edits to your app and have those changes 
 
 ## 1. Get the Android App
 
-Xamarin Live Player is available for Android from Google Play:
-
-[ ![Available on Google Play](install-images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
-
-For Android devices without Google Play the Xamarin Live Player is available through [HockeyApp](https://aka.ms/xlp-hockeyapp) distribution. Additionally, early preview builds for Android can be installed directly from Google Play by opting in to the [open beta program](https://play.google.com/apps/testing/com.xamarin.live)
+Xamarin Live Player is available for Android by intalling directly from [HockeyApp](https://aka.ms/xlp-hockeyapp).
 
 # [Visual Studio](#tab/windows)
 
