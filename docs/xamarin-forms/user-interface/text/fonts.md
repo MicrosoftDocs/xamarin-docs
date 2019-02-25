@@ -96,27 +96,19 @@ A good source of font information for iOS is [iosfonts.com](http://iosfonts.com)
 
 ## Setting the Font in XAML
 
-Xamarin.Forms controls that display text all have a `Font` property that can be set in XAML. The simplest way to set the font in XAML is to use the named size enumeration values, as shown in this example:
+Xamarin.Forms controls that display text all have a `FontSize` property that can be set in XAML. The simplest way to set the font in XAML is to use the named size enumeration values, as shown in this example:
 
 ```xaml
 <Label Text="Login" FontSize="Large"/>
 <Label Text="Instructions" FontSize="Small"/>
 ```
 
-There is a built-in converter for the `Font` property that allows all font settings to be expressed as a string value in XAML. The following examples show how you can specify font attributes and sizes in XAML:
+There is a built-in converter for the `FontSize` property that allows all font settings to be expressed as a string value in XAML. In addition, the `FontAttributes` property can be used to specify font attributes:
 
 ```xaml
 <Label Text="Italics are supported" FontAttributes="Italic" />
 <Label Text="Biggest NamedSize" FontSize="Large" />
 <Label Text="Use size 72" FontSize="72" />
-```
-
-To specify multiple `Font` settings, combine the required settings into a single `Font` attribute string. The font attribute string should be formatted as `"[font-face],[attributes],[size]"`. The order of the parameters is important, all parameters are optional, and multiple `attributes` can be specified, for example:
-
-```xaml
-<Label Text="Small bold text" Font="Bold, Micro" />
-<Label Text="Medium custom font" Font="MarkerFelt-Thin, 42" />
-<Label Text="Really big bold and italic text" Font="Bold, Italic, 72"  />
 ```
 
 [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-values) can also be used in XAML to render a different font on each platform. The example below uses a custom font face on iOS (<span style="font-family:MarkerFelt-Thin">MarkerFelt-Thin</span>) and specifies only size/attributes on the other platforms:
