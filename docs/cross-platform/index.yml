@@ -53,11 +53,11 @@ sections:
     className: cardsB
     items:
       - href: ~/cross-platform/get-started/index.md
-        html: Tutorials to get you up and running with Xamarin. Make sure everything is installed correctly, and build your first apps.
+        html: Introduction to mobile app development with Xamarin.
         image:
           src: https://docs.microsoft.com/media/common/i_get-started.svg
           href: ~/cross-platform/get-started/index.md
-        title: Getting Started
+        title: Building Mobile Apps
       - href: ~/cross-platform/platform
         html: Xamarin supports C#, F#, and the Razor templating engine.
         image:
@@ -88,21 +88,3 @@ sections:
           src: https://docs.microsoft.com/media/common/i_xplat-code.svg
           href: ~/cross-platform/desktop/
         title: Desktop Developers
-- title: Platforms
-  items:
-  - type: list
-    style: cards
-    className: cardsD
-    items:
-    - title: Xamarin.Forms
-      href: ~/xamarin-forms/index.yml
-      html: <p><a href="~/get-started/quickstarts/index.md">Get Started</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/xamarin-forms/user-interface/index.md">User Interface</a><br /><a href="~/xamarin-forms/platform/index.md">Platform Features</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/xamarin-forms/internals/index.md">Advanced Concepts & Internals</a></p>
-    - title: Android
-      href: ~/android/index.yml
-      html: <p><a href="~/android/get-started/index.md">Get Started</a><br /><a href="~/android/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/android/user-interface/index.md">User Interface</a><br /><a href="~/android/platform/index.md">Platform Features</a><br /><a href="~/android/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/android/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/android/internals/index.md">Advanced Concepts & Internals</a></p>
-    - title: iOS
-      href: ~/ios/index.yml
-      html: <p><a href="~/ios/get-started/index.md">Get Started</a><br /><a href="~/ios/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/ios/user-interface/index.md">User Interface</a><br /><a href="~/ios/platform/index.md">Platform Features</a><br /><a href="~/ios/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/ios/data-cloud/index.md">Data & Cloud Services</a><br /><a href="~/ios/internals/index.md">Advanced Concepts & Internals</a></p>
-    - title: Mac
-      href: ~/mac/index.yml
-      html: <p><a href="~/mac/get-started/index.md">Get Started</a><br /><a href="~/mac/app-fundamentals/index.md">App Fundamentals</a><br /><a href="~/mac/user-interface/index.md">User Interface</a><br /><a href="~/mac/platform/index.md">Platform Features</a><br /><a href="~/mac/deploy-test/index.md">Deployment & Testing</a><br /><a href="~/mac/internals/index.md">Advanced Concepts & Internals</a></p>

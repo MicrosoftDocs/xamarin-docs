@@ -47,7 +47,7 @@ Pair to Mac enables the following development workflow:
 > 
 > Before following the instructions in this guide, complete the following steps:
 > 
-> - On a Windows machine, [install Visual Studio 2017](~/cross-platform/get-started/installation/windows.md)
+> - On a Windows machine, [install Visual Studio 2017](~/get-started/installation/windows.md)
 > - On a Mac, [install Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) and [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 >    - _You must manually open Xcode after installing_ so that it can add any additional components.
 >

@@ -13,7 +13,7 @@ ms.date: 11/27/2018
 
 # Xamarin.Forms Quickstart Deep Dive
 
-In the [Xamarin.Forms Quickstart](~/get-started/index.md), the Notes application was built. This article reviews what has been built to gain an understanding of the fundamentals of how Xamarin.Forms applications work.
+In the [Xamarin.Forms Quickstart](~/get-started/index.yml), the Notes application was built. This article reviews what has been built to gain an understanding of the fundamentals of how Xamarin.Forms applications work.
 
 ::: zone pivot="windows"
 
@@ -368,7 +368,7 @@ For more information about hierarchical navigation, see [Hierarchical Navigation
 
 Data binding is used to simplify how a Xamarin.Forms application displays and interacts with its data. It establishes a connection between the user interface and the underlying application. The [`BindableObject`](xref:Xamarin.Forms.BindableObject) class contains much of the infrastructure to support data binding.
 
-Data binding connects two objects, called the *source* and the *target*. The *source* object provides the data. The *target* object will consume (and often display) data from the source object. For example, a [`Editor`](xref:Xamarin.Forms.Editor) (*target* object) will commonly bind its [`Text`](xref:Xamarin.Forms.Editor.Text) property to a public `string` property in a *source* object. The following diagram illustrates the binding relationship:
+Data binding connects two objects, called the *source* and the *target*. The *source* object provides the data. The *target* object will consume (and often display) data from the source object. For example, an [`Editor`](xref:Xamarin.Forms.Editor) (*target* object) will commonly bind its [`Text`](xref:Xamarin.Forms.Editor.Text) property to a public `string` property in a *source* object. The following diagram illustrates the binding relationship:
 
 ![](deepdive-images/data-binding.png "Data Binding")
 

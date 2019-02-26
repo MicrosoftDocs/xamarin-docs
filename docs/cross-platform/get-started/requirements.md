@@ -91,14 +91,14 @@ A complete list of our current product versions is available on the
 page also outlines the individual product versions (and links to the release notes)
 for our beta and alpha channels.
 
-Specific [installation](~/cross-platform/get-started/installation/index.md) instructions for each platform are available here:
+Specific [installation](~/get-started/installation/index.md) instructions for each platform are available here:
 
 - [Xamarin.iOS](~/ios/get-started/installation/index.md)
 - [Xamarin.Android](~/android/get-started/installation/index.md)
 - [Xamarin.Mac](~/mac/get-started/installation.md)
 
 There's also additional information about
-[Xamarin.Forms requirements & supported platforms](~/get-started/installation.md).
+[Xamarin.Forms requirements & supported platforms](~/get-started/requirements.md).
 
 ## Related links
 

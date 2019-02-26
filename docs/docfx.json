@@ -63,6 +63,8 @@
         "essentials/**/**.md":"https://github.com/xamarin/Essentials/blob/master/PRODUCT-FEEDBACK.md"
       },
       "breadcrumb_path": {
+        "get-started/tutorials/**/*.yml": "/xamarin/breadcrumb/tutorials/toc.json",
+        "get-started/tutorials/index.yml": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json",
         "xamarin-forms/creating-mobile-apps-xamarin-forms/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json",
         "xamarin-forms/enterprise-application-patterns/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json",
         "xamarin-forms/user-interface/graphics/skiasharp/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json"

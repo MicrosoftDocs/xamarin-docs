@@ -38,7 +38,7 @@ these steps:
     Xamarin.iOS works with Visual Studio 2017 Community, Professional, 
     and Enterprise editions, on a standalone or virtual machine.
     
-    - [Install Visual Studio 2017](~/cross-platform/get-started/installation/windows.md).
+    - [Install Visual Studio 2017](~/get-started/installation/windows.md).
 
 2. Set up Mac (Install Xcode and Visual Studio for Mac)
 

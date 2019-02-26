@@ -33,12 +33,12 @@ There are a number of configuration options available, so you can decide which w
 -  Use a Mac as your main development machine and run a Windows virtual machine with Visual Studio installed. We recommend using
 VM software such as [Parallels](http://www.parallels.com/products/desktop/) or [VMWare](http://www.vmware.com/products/fusion/) .
 -  Use a Mac just as a build host. In this scenario it would be connected to the same network as a Windows machine with
-the [necessary](~/cross-platform/get-started/installation/windows.md#installation) tools installed.
+the [necessary](~/get-started/installation/windows.md#installation) tools installed.
 
 In either case, you should follow these steps:
 
 - [Install Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
-- [Install Xamarin tools on Windows](~/cross-platform/get-started/installation/windows.md)
+- [Install Xamarin tools on Windows](~/get-started/installation/windows.md)
 
 ## Connecting to the Mac
 

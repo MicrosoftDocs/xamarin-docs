@@ -33,7 +33,7 @@ The quickstart walks through how to create a cross-platform Xamarin.Forms applic
 - Knowledge of C#.
 - (optional) A paired Mac to build the application on iOS.
 
-For more information about these prerequisites, see [Installing Xamarin](~/cross-platform/get-started/installation/index.md). For information about connecting Visual Studio 2017 to a Mac build host, see [Pair to Mac for Xamarin.iOS development](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+For more information about these prerequisites, see [Installing Xamarin](~/get-started/installation/index.md). For information about connecting Visual Studio 2017 to a Mac build host, see [Pair to Mac for Xamarin.iOS development](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 ## Get started with Visual Studio
 
@@ -87,7 +87,7 @@ For more information about these prerequisites, see [Installing Xamarin](~/cross
     </ContentPage>
     ```
 
-    This code declaratively defines the user interface for the page, which consists of a [`Label`](xref:Xamarin.Forms.Label) to display text, a [`Editor`](xref:Xamarin.Forms.Editor) for text input, and two [`Button`](xref:Xamarin.Forms.Button) instances that direct the application to save or delete a file. The two `Button` instances are horizontally laid out in a [`Grid`](xref:Xamarin.Forms.Grid), with the `Label`, `Editor`, and `Grid` being vertically laid out in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). For more information about creating the user interface, see [User interface](deepdive.md#user-interface) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
+    This code declaratively defines the user interface for the page, which consists of a [`Label`](xref:Xamarin.Forms.Label) to display text, an [`Editor`](xref:Xamarin.Forms.Editor) for text input, and two [`Button`](xref:Xamarin.Forms.Button) instances that direct the application to save or delete a file. The two `Button` instances are horizontally laid out in a [`Grid`](xref:Xamarin.Forms.Grid), with the `Label`, `Editor`, and `Grid` being vertically laid out in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). For more information about creating the user interface, see [User interface](deepdive.md#user-interface) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
 
     Save the changes to **MainPage.xaml** by pressing **CTRL+S**, and close the file.
 
@@ -183,7 +183,7 @@ For more information about these prerequisites, see [Installing Xamarin](~/cross
 - Xcode (latest release).
 - Knowledge of C#.
 
-For more information about these prerequisites, see [Installing Xamarin](~/cross-platform/get-started/installation/index.md).
+For more information about these prerequisites, see [Installing Xamarin](~/get-started/installation/index.md).
 
 ## Get started with Visual Studio for Mac
 
@@ -241,7 +241,7 @@ For more information about these prerequisites, see [Installing Xamarin](~/cross
     </ContentPage>
     ```
 
-    This code declaratively defines the user interface for the page, which consists of a [`Label`](xref:Xamarin.Forms.Label) to display text, a [`Editor`](xref:Xamarin.Forms.Editor) for text input, and two [`Button`](xref:Xamarin.Forms.Button) instances that direct the application to save or delete a file. The two `Button` instances are horizontally laid out in a [`Grid`](xref:Xamarin.Forms.Grid), with the `Label`, `Editor`, and `Grid` being vertically laid out in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). For more information about creating the user interface, see [User interface](deepdive.md#user-interface) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
+    This code declaratively defines the user interface for the page, which consists of a [`Label`](xref:Xamarin.Forms.Label) to display text, an [`Editor`](xref:Xamarin.Forms.Editor) for text input, and two [`Button`](xref:Xamarin.Forms.Button) instances that direct the application to save or delete a file. The two `Button` instances are horizontally laid out in a [`Grid`](xref:Xamarin.Forms.Grid), with the `Label`, `Editor`, and `Grid` being vertically laid out in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). For more information about creating the user interface, see [User interface](deepdive.md#user-interface) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
 
     Save the changes to **MainPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
 

@@ -1,0 +1,29 @@
+### YamlMime:Tutorial
+title: Xamarin.Forms Label Tutorial
+metadata:
+  title: Xamarin.Forms Label Tutorial
+  description: Learn how to display text, with the Xamarin.Forms Label view, in both single and multiple lines.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 01/31/2019
+  author: davidbritch
+  ms.author: dabritch
+items:
+- durationInMinutes: 1
+  content: |
+    [!INCLUDE [](includes/intro.md)]
+- title: Create a label
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/create.md)]
+- title: Change appearance
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/appearance.md)]
+- title: Present formatted text
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/formatted-text.md)]
+- content: |
+    [!INCLUDE [](includes/completed.md)]

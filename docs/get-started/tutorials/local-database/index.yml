@@ -1,0 +1,29 @@
+### YamlMime:Tutorial
+title: Xamarin.Forms Local Database Tutorial
+metadata:
+  title: Xamarin.Forms Local Database Tutorial
+  description: Learn how to use the SQLite.NET NuGet package to incorporate local database operations into a Xamarin.Forms application.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 12/02/2019
+  author: davidbritch
+  ms.author: dabritch
+items:
+- durationInMinutes: 1
+  content: |
+    [!INCLUDE [](includes/intro.md)]
+- title: Add SQLite.NET
+  durationInMinutes: 3
+  content: |
+    [!INCLUDE [](includes/add-sqlite.md)]
+- title: Create data access classes
+  durationInMinutes: 5
+  content: |
+    [!INCLUDE [](includes/create-data-access-classes.md)]
+- title: Consume data access classes
+  durationInMinutes: 3
+  content: |
+    [!INCLUDE [](includes/consume-data-access-classes.md)]
+- content: |
+    [!INCLUDE [](includes/completed.md)]

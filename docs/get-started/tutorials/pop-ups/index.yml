@@ -1,0 +1,25 @@
+### YamlMime:Tutorial
+title: Xamarin.Forms Pop-ups Tutorial
+metadata:
+  title: Xamarin.Forms Pop-ups Tutorial
+  description: Learn how to display alerts and action sheets with Xamarin.Forms, to ask users simple questions, and to guide users through tasks.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 02/19/2019
+  author: davidbritch
+  ms.author: dabritch
+items:
+- durationInMinutes: 1
+  content: |
+    [!INCLUDE [](includes/intro.md)]
+- title: Display an alert
+  durationInMinutes: 3
+  content: |
+    [!INCLUDE [](includes/display-alert.md)]
+- title: Display an action sheet
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/display-action-sheet.md)]
+- content: |
+    [!INCLUDE [](includes/completed.md)]

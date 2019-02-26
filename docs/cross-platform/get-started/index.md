@@ -9,13 +9,13 @@ ms.author: amburns
 ms.date: 04/10/2017
 ---
 
-# Get Started With Xamarin
+# Building Mobile Apps
 
 Before you begin, check out the [system requirements](requirements.md)
-and [installation instructions](installation/index.md) to make sure everything's
+and [installation instructions](~/get-started/installation/index.md) to make sure everything's
 ready to go.
 
-## Build Your First App
+## Build your first app
 
 > [!div class="nextstepaction"]
 > [Xamarin.Forms Quickstart](~/get-started/quickstarts/single-page.md)
@@ -60,4 +60,4 @@ Learn more about Visual Studio for Mac, the Integrated Development Environment (
 ## Related Links
 
 - [System Requirements](requirements.md)
-- [Installation Instructions](~/cross-platform/get-started/installation/index.md)
+- [Installation Instructions](~/get-started/installation/index.md)

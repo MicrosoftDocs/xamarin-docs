@@ -37,5 +37,5 @@ that covers Visual Studio for Mac and Xamarin.
 
 ## Related Links
 
-- [Uninstalling Xamarin](~/cross-platform/get-started/installation/uninstalling-xamarin.md)
+- [Uninstalling Xamarin](~/get-started/installation/uninstalling-xamarin.md)
 - [Xamarin Firewall Configuration Instructions](firewall.md)

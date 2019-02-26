@@ -119,11 +119,11 @@ The next step is to start building the app using one of these guides:
 
 ![](introduction-to-mobile-development-images/android.png "Hello, Android")
 
-* [**Get Started with Xamarin.Forms**](~/get-started/index.md)
+* [**Get Started with Xamarin.Forms**](~/get-started/index.yml)
 
 ## Summary
 
-This document has merely introduced the Xamarin platform. The real fun starts when you get your first app up-and-running. Check out the [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md), and [Get Started with Xamarin.Forms](~/get-started/index.md) guides to begin.
+This document has merely introduced the Xamarin platform. The real fun starts when you get your first app up-and-running. Check out the [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md), and [Get Started with Xamarin.Forms](~/get-started/index.yml) guides to begin.
 
 ## Related Links
 

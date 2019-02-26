@@ -1,0 +1,29 @@
+### YamlMime:Tutorial
+title: Xamarin.Forms Web Service Tutorial
+metadata:
+  title: Xamarin.Forms Web Service Tutorial
+  description: Learn how to consume REST-based web services from Xamarin.Forms applications.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 13/02/2019
+  author: davidbritch
+  ms.author: dabritch
+items:
+- durationInMinutes: 1
+  content: |
+    [!INCLUDE [](includes/intro.md)]
+- title: Add Newtonsoft.Json
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/add-newtonsoft-json.md)]
+- title: Create web service classes
+  durationInMinutes: 6
+  content: |
+    [!INCLUDE [](includes/create-web-service-classes.md)]
+- title: Consume web service classes
+  durationInMinutes: 5
+  content: |
+    [!INCLUDE [](includes/consume-web-service-classes.md)]
+- content: |
+    [!INCLUDE [](includes/completed.md)]

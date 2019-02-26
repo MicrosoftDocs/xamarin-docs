@@ -29,7 +29,7 @@ sections:
     - image:
         src: https://docs.microsoft.com/media/common/i_setup.svg
       text: Setup
-      href: ~/get-started/installation.md
+      href: ~/get-started/requirements.md
     - image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       text: First App
@@ -56,18 +56,6 @@ sections:
     style: cards
     className: cardsB
     items:
-    - href: ~/get-started/index.md
-      html: Tutorials to get you up and running with Xamarin.Forms. Make sure everything is installed correctly, and build your first Xamarin.Forms apps.
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/get-started/index.md
-      title: Getting Started
-    - href: ~/xamarin-forms/xaml/
-      html: Build user interfaces declaratively and share across mobile and desktop platforms.
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-        href: ~/xamarin-forms/xaml/
-      title: XAML
     - href: ~/xamarin-forms/app-fundamentals/
       html: Everything you need to know to build Xamarin.Forms apps, such as working with files, images, databases, and more.
       image:
@@ -80,6 +68,12 @@ sections:
         src: ~/media/icons/i_user-interface.svg
         href: ~/xamarin-forms/user-interface/
       title: User Interface
+    - href: ~/xamarin-forms/xaml/
+      html: Build user interfaces declaratively and share across mobile and desktop platforms.
+      image:
+        src: ~/media/icons/i_xaml-forms.svg
+        href: ~/xamarin-forms/xaml/
+      title: XAML
     - href: ~/xamarin-forms/platform/
       html: Working with Xamarin.Forms platform features, such as Custom Renderers, and other important features of each release.
       image:

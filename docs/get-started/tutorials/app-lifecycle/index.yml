@@ -1,0 +1,25 @@
+### YamlMime:Tutorial
+title: Xamarin.Forms App Lifecycle Tutorial
+metadata:
+  title: Xamarin.Forms App Lifecycle Tutorial
+  description: Learn about the Xamarin.Forms app lifecycle, and how to persist data across lifecycle state changes.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 08/02/2019
+  author: davidbritch
+  ms.author: dabritch
+items:
+- durationInMinutes: 1
+  content: |
+    [!INCLUDE [](includes/intro.md)]
+- title: Respond to lifecycle state changes
+  durationInMinutes: 3
+  content: |
+    [!INCLUDE [](includes/lifecycle.md)]
+- title: Persist data across lifecycle state changes
+  durationInMinutes: 4
+  content: |
+    [!INCLUDE [](includes/persist-data.md)]
+- content: |
+    [!INCLUDE [](includes/completed.md)]
