@@ -11,8 +11,6 @@ ms.date: 03/12/2018
 
 # Xamarin.Forms Visual
 
-![Preview](~/media/shared/preview.png)
-
 _This article introduces Xamarin.Forms Visual, which renders views identically, or largely identically, on iOS and Android._
 
 Many developers want to create Xamarin.Forms applications that look identical, or largely identical, on iOS and Android. Xamarin.Forms 4.0-pre1 includes a mechanism for including additional renderers that implement a visual appearance, with applications opting into the appearance through a `Visual` property:
