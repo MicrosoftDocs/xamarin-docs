@@ -220,14 +220,7 @@ needed _Client ID_ and _Client secret_.
 # [Visual Studio for Mac](#tab/macos)
 
 Visual Studio for Mac has an integrated workflow for publishing
-apps to Google Play. If you are using a version of Xamarin Studio
-earlier than 5.9, you must manually upload your APK via the Google Play
-Developer Console and then use the **Publish to Google Play** dialog
-for subsequent APK updates. Also, you must have at least one APK
-already uploaded before you can use **Publish to Google Play**. If you
-have not yet uploaded your first APK, you must upload it manually. For
-information about how to manually upload an APK, see
-[Manually Uploading the APK](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md).
+apps to Google Play.
 
 [Creating a New Certificate](~/android/deploy-test/signing/index.md#newcert),
 discussed creating a new certificate for signing Android apps. The
