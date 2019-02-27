@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms Visual"
-description: "This article introduces Xamarin.Forms Visual, which renders views identically, or largely identically, on iOS and Android."
+description: "This article introduces Xamarin.Forms Visual, which allows users to more easily define how they want controls to visuall rendere."
 ms.prod: xamarin
 ms.assetid: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59
 ms.technology: xamarin-forms
@@ -11,48 +11,65 @@ ms.date: 03/12/2018
 
 # Xamarin.Forms Visual
 
-_This article introduces Xamarin.Forms Visual, which renders views identically, or largely identically, on iOS and Android._
-
-Many developers want to create Xamarin.Forms applications that look identical, or largely identical, on iOS and Android. Xamarin.Forms 4.0-pre1 includes a mechanism for including additional renderers that implement a visual appearance, with applications opting into the appearance through a `Visual` property:
-
-```xaml
-<ContentPage ...
-             Visual="Material">
-    ...
-</ContentPage>    
-```
+_This article introduces Xamarin.Forms Visual which allows users to create renderers that can be specified at runtime._
 
 Renderers that implement the visual appearance are then used to renderer views, rather than the default renderers. At renderer selection time, the `Visual` property of the view is inspected and included in the renderer selection process. In addition, if the `Visual` property changes at runtime, the specified renderer is recreated along with any children.
 
 > [!IMPORTANT]
 > The `Visual` property is defined in the `VisualElement` class, with views inheriting the `Visual` property value from their parents. Therefore, setting the `Visual` property on a `ContentPage` ensures that any supported views in the page will use that visual appearance. In addition, the `Visual` property can be overridden on a view.
 
-Xamarin.Forms 4.0-pre1 includes an experimental visual appearance based on material design, with the renderers being known as the material renderers. Material renderers are currently included for the following views on iOS and Android:
+Xamarin.Forms 3.6 includes a visual appearance based on material design, with the renderers being known as the material renderers. 
 
-- [`Button`](xref:Xamarin.Forms.Button)
-- [`Entry`](xref:Xamarin.Forms.Entry)
-- [`Frame`](xref:Xamarin.Forms.Frame)
-- [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)
+### Creating your own Visual
 
-Functionally, the material renderers are no different to the default renderers. However, they are currently experimental and can only be used by adding the following line of code to your `AppDelegate` class on iOS, or to your `MainActivity` class on Android, before calling `Forms.Init`:
+In your cross platform library create a Visual type that the user can use to mark a Xamarin Forms Element
 
-```csharp
-Forms.SetFlags("Visual_Experimental");
+```C#
+public class CustomVisual : IVisual
+{
+}
+
 ```
 
-In addition, on iOS, your platform project must have the [Xamarin.iOS.MaterialComponents](https://www.nuget.org/packages/Xamarin.iOS.MaterialComponents/) NuGet package installed. On Android, Visual works with API 29 only, your platform project must use v28 of the support libraries, and set its theme to inherit from a Material Components theme or continue to inherit from an AppCompat theme while adding some new theme attributes to the theme. For more information, see [Getting started with Material Components for Android](https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md).
+Now that you have created this type users can easily mark any Xamarin Forms Element
 
-The following screenshots show a user interface that includes the four views for which material renderers exist, but rendered using the default renderers:
+```xaml
+<ContentPage ...
+             Visual="Custom">
+    ...
+</ContentPage>
+```
 
-[![Default renderers](visual-images/default-renderers.png "Views using default renderers")](visual-images/default-renderers-large.png#lightbox)
+```c#
+var contentPage = new ContentPage();
+contentPage.Visual = new CustomVisual();
+```
 
-The following screenshots show the same user interface rendered using the material renderers:
+Now you just have to register the visual type against a custom renderer on the platform you want a custom renderer for
 
-[![Material renderers](visual-images/material-renderers.png "Views using material renderers")](visual-images/material-renderers-large.png#lightbox)
 
-> [!NOTE]
-> With material renderers the rendered controls remain native controls, and therefore there will still be user interface differences between platforms for areas such as fonts, shadows, colors, and elevation.
+```C#
+using Xamarin.Forms.Material.Android
 
-## Related Links
+[assembly: ExportRenderer(typeof(ContentPage), typeof(CustomPageRenderer), new[] { typeof(CustomVisual) })]
+namespace MyApp.Android
+{
+    public class CustomPageRenderer : PageRenderer
 
-- [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
+```
+
+### Registering your own name for a visual
+
+At some point there may be conflicts between different Visual Libraries or maybe you just want to refer to a visual by a different name. In this case you can use an assembly attribute to register a different name for a given visual
+
+```C#
+[assembly: Visual("MyMaterialName", typeof(VisualMarker.MaterialVisual))]
+```
+
+Which will now let you do the following
+```xaml
+<ContentPage ...
+             Visual="MyMaterialName">
+    ...
+</ContentPage>
+```

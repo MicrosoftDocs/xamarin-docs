@@ -22,6 +22,11 @@ Many developers want to create Xamarin.Forms applications that look identical, o
 </ContentPage>
 ```
 
+```c#
+var contentPage = new ContentPage();
+contentPage.Visual = VisualMarker.Material;
+```
+
 Renderers that implement the visual appearance are then used to renderer views, rather than the default renderers. At renderer selection time, the `Visual` property of the view is inspected and included in the renderer selection process. In addition, if the `Visual` property changes at runtime, the specified renderer is recreated along with any children.
 
 > [!IMPORTANT]
