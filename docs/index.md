@@ -104,7 +104,7 @@ featureFlags:
                                         <div class="card">
                                             <div class="cardText">
                                                 <h3>Quickstart</h3>
-                                                <h4>Follow these guides to build your first cross-platform Android & iOS app with Xamarin.Forms, 5 minutes at a time</h4>
+                                                <h4>Follow these guides to build your first cross-platform Android & iOS app with Xamarin.Forms, 5 minutes at a time.</h4>
                                                 <table cellpadding="0" cellspacing="0" border="0">
                                                     <tr>
                                                         <td style="border-top-color:transparent!important;padding-left:0;">
@@ -129,7 +129,7 @@ featureFlags:
                                                                 </li>
                                                                  <li>
                                                                     <a class="barLink" href="~/get-started/quickstarts/styling.md">
-                                                                        <img src="https://review.docs.microsoft.com/xamarin/media/icons/i_user-interface.svg" alt="">
+                                                                        <img src="https://docs.microsoft.com/xamarin/media/icons/i_user-interface.svg" alt="">
                                                                         Style the app
                                                                     </a>
                                                                 </li>
@@ -744,6 +744,36 @@ featureFlags:
                         </ul>
                     </li>
                 </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="container centered pageFooter">
+        <h2>Keep in touch with us</h2>
+        <ul class="links">
+           <li>
+                <a href="http://blog.xamarin.com/">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a href="https://forums.xamarin.com/">
+                    Forums
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/xamarinhq">
+                    Twitter
+                </a>
+            </li>
+            <li>
+                <a href="https://stackoverflow.com/questions/tagged/xamarin">
+                    Stack Overflow
+                </a>
+            </li>
+            <li>
+                <a href="https://dotnet.microsoft.com/platform/community">
+                    Developer Community
+                </a>
             </li>
         </ul>
     </div>
