@@ -49,7 +49,7 @@ There are a few workarounds for this issue:
 3. Temporarily downgrade back to the Android API Level 21 "L" preview [1]:
 
     1.  Delete the **%LOCALAPPDATA%\\Android\\android-sdk\\platforms\\android-21** 
-    2.  Extract [1] into **C:\\Users\\<username>\\AppData\\Local\\Android\\android-sdk\\platforms** 
+    2.  Extract [1] into **C:\\Users\\\<username>\\AppData\\Local\\Android\\android-sdk\\platforms** 
         to create an **android-L** folder.
 
 # [Visual Studio for Mac](#tab/macos)
