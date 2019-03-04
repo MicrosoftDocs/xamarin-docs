@@ -50,7 +50,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly:ResolutionGroupName ("MyCompany")]
-[assembly:ExportEffect (typeof(FocusEffect), "FocusEffect")]
+[assembly:ExportEffect (typeof(FocusEffect), nameof(FocusEffect)]
 namespace EffectsDemo.iOS
 {
     public class FocusEffect : PlatformEffect
@@ -103,7 +103,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly:ResolutionGroupName ("MyCompany")]
-[assembly:ExportEffect (typeof(FocusEffect), "FocusEffect")]
+[assembly:ExportEffect (typeof(FocusEffect), nameof(FocusEffect)]
 namespace EffectsDemo.Droid
 {
     public class FocusEffect : PlatformEffect
@@ -157,7 +157,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
 
 [assembly: ResolutionGroupName("MyCompany")]
-[assembly: ExportEffect(typeof(FocusEffect), "FocusEffect")]
+[assembly: ExportEffect(typeof(FocusEffect), nameof(FocusEffect)]
 namespace EffectsDemo.UWP
 {
     public class FocusEffect : PlatformEffect
@@ -212,7 +212,7 @@ The `FocusEffect` class in the .NET Standard library supports effect consumption
 ```csharp
 public class FocusEffect : RoutingEffect
 {
-    public FocusEffect () : base ("MyCompany.FocusEffect")
+    public FocusEffect () : base ($"MyCompany.{nameof(FocusEffect)}")
     {
     }
 }
@@ -239,7 +239,7 @@ The `FocusEffect` is attached to the `Entry` instance by adding the effect to th
 public HomePageCS ()
 {
   ...
-  entry.Effects.Add (Effect.Resolve ("MyCompany.FocusEffect"));
+  entry.Effects.Add (Effect.Resolve ($"MyCompany.{nameof(FocusEffect)}"));
   ...
 }
 ```
