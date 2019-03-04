@@ -25,7 +25,7 @@ UWP apps can be distributed through the Microsoft Store, side loading the app pa
 
 ## [Publishing Mac apps](~/mac/deploy-test/publishing-to-the-app-store/index.md)
 
-Mac apps can be distributd via the Mac App Store, or directly.
+Mac apps can be distributed via the Mac App Store, or directly.
 
 ## [Performance](performance.md)
 
