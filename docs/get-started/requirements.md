@@ -12,7 +12,7 @@ ms.date: 05/23/2018
 
 _Platform and development system requirements for Xamarin.Forms._
 
-Refer to the [Installation](~/cross-platform/get-started/installation/index.md) article for an overview of installation and setup practices that apply across platforms.
+Refer to the [Installation](installation/index.md) article for an overview of installation and setup practices that apply across platforms.
 
 ## Target platforms
 
@@ -51,17 +51,17 @@ that use Android 4.4 and newer. These values are set in the **Project Options**:
 
 **Project Options > Application > Application Properties**
 
-![](installation-images/options-android-vs-sml.png "Android build options in Visual Studio")
+![](requirements-images/options-android-vs-sml.png "Android build options in Visual Studio")
 
 # [Visual Studio for Mac](#tab/macos)
 
 **Build > General**
 
-![](installation-images/options-general-sml.png "Build > General")
+![](requirements-images/options-general-sml.png "Build > General")
 
 **Build > Android Application**
 
-![](installation-images/options-android-sml.png "Build > Android Application")
+![](requirements-images/options-android-sml.png "Build > Android Application")
 
 -----
 

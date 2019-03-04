@@ -42,7 +42,7 @@ start building your first Xamarin.Android application.
 
 For detailed information on installing Xamarin for use with Visual
 Studio on Windows, see the
-[Windows Install](~/cross-platform/get-started/installation/windows.md)
+[Windows Install](~/get-started/installation/windows.md)
 guide.
 
 
@@ -175,7 +175,7 @@ tutorials to learn how to create a working Xamarin.Android app.
 ## Related Links
 
 - [Download Visual Studio](https://visualstudio.microsoft.com/vs/)
-- [Installing Visual Studio Tools for Xamarin](~/cross-platform/get-started/installation/windows.md)
+- [Installing Visual Studio Tools for Xamarin](~/get-started/installation/windows.md)
 - [System Requirements](~/cross-platform/get-started/requirements.md)
 - [Android SDK Setup](~/android/get-started/installation/android-sdk.md)
 - [Android Emulator Setup](~/android/get-started/installation/android-emulator/index.md)

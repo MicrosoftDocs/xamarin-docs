@@ -1,0 +1,33 @@
+### YamlMime:Tutorial
+title: Xamarin.Forms ListView Tutorial
+metadata:
+  title: Xamarin.Forms ListView Tutorial
+  description: Learn how to present lists of data, using the Xamarin.Forms ListView.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 06/02/2019
+  author: davidbritch
+  ms.author: dabritch
+items:
+- durationInMinutes: 1
+  content: |
+    [!INCLUDE [](includes/intro.md)]
+- title: Create a listview
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/create.md)]
+- title: Populate with data
+  durationInMinutes: 4
+  content: |
+    [!INCLUDE [](includes/populate-data.md)]
+- title: Respond to item selection
+  durationInMinutes: 3
+  content: |
+    [!INCLUDE [](includes/item-selection.md)]
+- title: Customize cell appearance
+  durationInMinutes: 3
+  content: |
+    [!INCLUDE [](includes/customize-cell-appearance.md)]
+- content: |
+    [!INCLUDE [](includes/completed.md)]

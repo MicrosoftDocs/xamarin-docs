@@ -1,0 +1,29 @@
+### YamlMime:Tutorial
+title: Xamarin.Forms Editor Tutorial
+metadata:
+  title: Xamarin.Forms Editor Tutorial
+  description: Learn how to accept multi-line text input, using the Xamarin.Forms Editor view.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 04/02/2019
+  author: davidbritch
+  ms.author: dabritch
+items:
+- durationInMinutes: 1
+  content: |
+    [!INCLUDE [](includes/intro.md)]
+- title: Create a editor
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/create.md)]
+- title: Respond to text changes
+  durationInMinutes: 3
+  content: |
+    [!INCLUDE [](includes/text-changes.md)]
+- title: Customize behavior
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/behavior.md)]
+- content: |
+    [!INCLUDE [](includes/completed.md)]

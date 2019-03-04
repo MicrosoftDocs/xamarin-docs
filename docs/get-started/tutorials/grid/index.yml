@@ -1,0 +1,29 @@
+### YamlMime:Tutorial
+title: Xamarin.Forms Grid Tutorial
+metadata:
+  title: Xamarin.Forms Grid Tutorial
+  description: Learn how to organize views into rows and columns, with the Xamarin.Forms Grid, which can have proportional or absolute sizes.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 08/02/2019
+  author: davidbritch
+  ms.author: dabritch
+items:
+- durationInMinutes: 1
+  content: |
+    [!INCLUDE [](includes/intro.md)]
+- title: Create a grid
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/create.md)]
+- title: Specify columns and rows
+  durationInMinutes: 4
+  content: |
+    [!INCLUDE [](includes/columns-rows.md)]
+- title: Span multiple columns or rows
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/span-columns-rows.md)]
+- content: |
+    [!INCLUDE [](includes/completed.md)]

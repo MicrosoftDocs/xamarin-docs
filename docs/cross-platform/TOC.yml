@@ -1,38 +1,21 @@
 - name: Cross-Platform
   href: index.yml
   expanded: true
-  items: 
-    - name: Get Started
+  items:
+    - name: Building Mobile Apps
       href: get-started/index.md
       expanded: true
-      items: 
+      items:
         - name: Requirements
           displayName: System requirements
           href: get-started/requirements.md
-        - name: Installation
-          href: get-started/installation/index.md
-          items: 
-            - name: Installing Xamarin on Windows
-              href: get-started/installation/windows.md
-              items: 
-                - name: Installing Xamarin Previews (Windows)
-                  href: get-started/installation/windows-preview.md
-            - name: Installing Visual Studio for Mac
-              href: /visualstudio/mac/installation/
-              items: 
-                - name: Installing Xamarin Previews (Mac)
-                  href: /visualstudio/mac/update/
-            - name: Xamarin Firewall Configuration Instructions
-              href: get-started/installation/firewall.md
-            - name: Uninstalling Xamarin
-              href: get-started/installation/uninstalling-xamarin.md
         - name: Introduction to Mobile Development
           href: get-started/introduction-to-mobile-development.md
         - name: Introduction to the Mobile SDLC
           href: get-started/introduction-to-mobile-sdlc.md
         - name: Building Cross-Platform Applications
           href: app-fundamentals/building-cross-platform-applications/index.md
-          items: 
+          items:
             - name: Overview
               href: app-fundamentals/building-cross-platform-applications/overview.md
             - name: Part 1 - Understanding the Xamarin Mobile Platform
@@ -51,7 +34,7 @@
               href: app-fundamentals/building-cross-platform-applications/case-study-tasky.md
     - name: Sharing Code
       href: app-fundamentals/index.md
-      items: 
+      items:
         - name: Overview
           href: app-fundamentals/code-sharing.md
         - name: .NET Standard
@@ -63,7 +46,7 @@
         - name: NuGet Multiplatform Library Projects
           displayName: Nugetizer 3000
           href: app-fundamentals/nuget-multiplatform-libraries/index.md
-          items: 
+          items:
             - name: Existing Library Projects
               href: app-fundamentals/nuget-multiplatform-libraries/existing-library.md
             - name: New Multiplatform Library
@@ -78,23 +61,23 @@
           href: cpp/index.md
     - name: Language Support
       href: platform/index.md
-      items: 
+      items:
         - name: C#
-          items: 
+          items:
             - name: Async Support Overview
               href: platform/async.md
             - name: C# 6 Language Features
               href: platform/csharp-six.md
         - name: F#
           href: platform/fsharp/index.md
-          items: 
+          items:
             - name: Getting Started
               href: platform/fsharp/overview.md
             - name: F# Samples
               href: platform/fsharp/samples.md
         - name: Visual Basic.NET
           href: platform/visual-basic/index.md
-          items: 
+          items:
             - name: Xamarin iOS and Android
               href: platform/visual-basic/native-apps.md
             - name: Xamarin.Forms
@@ -103,10 +86,10 @@
           href: platform/razor-html-templates/index.md
     - name: Performance & Security
       href: deploy-test/performance.md
-      items: 
+      items:
         - name: Performance
           href: deploy-test/memory-perf-best-practices.md
-          items: 
+          items:
             - name: Android Performance
               href: ~/android/deploy-test/performance.md?context=xamarin/cross-platform
             - name: iOS Performance
@@ -115,14 +98,14 @@
               href: ~/mac/deploy-test/performance.md?context=xamarin/cross-platform
         - name: Transport Layer Security (TLS)
           href: app-fundamentals/transport-layer-security.md
-          items: 
+          items:
             - name: Android
               href: ~/android/app-fundamentals/http-stack.md?context=xamarin/cross-platform
             - name: iOS and Mac
               href: ~/cross-platform/macios/http-stack.md?context=xamarin/cross-platform
     - name: Deployment & Debugging
       href: deploy-test/index.md
-      items: 
+      items:
         - name: Custom Linker Configuration
           href: deploy-test/linker.md
         - name: Installing NUnit 2.6.4 using NuGet
@@ -133,12 +116,12 @@
     - name: Desktop Developers
       displayName: Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP Developers
       href: desktop/index.md
-      items: 
+      items:
         - name: App lifecycle comparison
           href: desktop/lifecycle.md
         - name: UI controls comparison
           href: desktop/controls/index.md
-          items: 
+          items:
             - name: WPF vs Xamarin.Forms
               href: desktop/controls/wpf.md
         - name: Porting guidance
@@ -147,11 +130,11 @@
           href: desktop/samples.md
     - name: Troubleshooting
       href: troubleshooting/index.md
-      items: 
+      items:
         - name: Frequently Asked Questions
           displayName: FAQ
           href: troubleshooting/questions/index.md
-          items: 
+          items:
             - name: How can I view what libraries are supported in a PCL?
               href: troubleshooting/questions/pcl-support-libraries.md
             - name: PCL Reflection API
@@ -177,7 +160,7 @@
             - name: What project settings are required for the debugger?
               href: troubleshooting/questions/debugger-settings.md
         - name: Visual Studio Questions
-          items: 
+          items:
             - name: Deploy checkboxes disabled in Configuration Manager
               href: troubleshooting/questions/deploy-checkboxes.md
             - name: Missing Visual Studio extensions after installation

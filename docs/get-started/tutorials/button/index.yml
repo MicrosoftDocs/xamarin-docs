@@ -1,0 +1,29 @@
+### YamlMime:Tutorial
+title: Xamarin.Forms Button Tutorial
+metadata:
+  title: Xamarin.Forms Button Tutorial
+  description: Learn how to respond to a tap or click of a Xamarin.Forms Button, that directs an application to carry out a particular task.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 01/30/2019
+  author: davidbritch
+  ms.author: dabritch
+items:
+- durationInMinutes: 1
+  content: |
+    [!INCLUDE [](includes/intro.md)]
+- title: Create a button
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/create.md)]
+- title: Handle clicks
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/clicks.md)]
+- title: Change appearance
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/appearance.md)]
+- content: |
+    [!INCLUDE [](includes/completed.md)]

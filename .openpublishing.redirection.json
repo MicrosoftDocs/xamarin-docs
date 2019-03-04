@@ -279,6 +279,26 @@
     {
       "source_path": "docs/xamarin-forms/get-started/introduction-to-xamarin-forms.md",
       "redirect_url": "/xamarin/get-started/quickstarts/deepdive"
-    }	
+    },
+    {
+      "source_path": "docs/cross-platform/get-started/installation/index.md",
+      "redirect_url": "/xamarin/get-started/installation"
+    },	
+    {
+      "source_path": "docs/cross-platform/get-started/installation/firewall.md",
+      "redirect_url": "/xamarin/get-started/installation/firewall"
+    },
+    {
+      "source_path": "docs/cross-platform/get-started/installation/uninstalling-xamarin.md",
+      "redirect_url": "/xamarin/get-started/installation/uninstalling-xamarin"
+    },	
+    {
+      "source_path": "docs/cross-platform/get-started/installation/windows-preview.md",
+      "redirect_url": "/xamarin/get-started/installation/windows-preview"
+    },
+    {
+      "source_path": "docs/cross-platform/get-started/installation/windows.md",
+      "redirect_url": "/xamarin/get-started/installation/windows"
+    }
   ]
 }

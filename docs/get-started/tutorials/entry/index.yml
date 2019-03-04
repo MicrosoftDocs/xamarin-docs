@@ -1,0 +1,29 @@
+### YamlMime:Tutorial
+title: Xamarin.Forms Entry Tutorial
+metadata:
+  title: Xamarin.Forms Entry Tutorial
+  description: Learn how to accept single-line text input, using the Xamarin.Forms Entry view.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 02/01/2019
+  author: davidbritch
+  ms.author: dabritch
+items:
+- durationInMinutes: 1
+  content: |
+    [!INCLUDE [](includes/intro.md)]
+- title: Create a entry
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/create.md)]
+- title: Respond to text changes
+  durationInMinutes: 3
+  content: |
+    [!INCLUDE [](includes/text-changes.md)]
+- title: Customize behavior
+  durationInMinutes: 2
+  content: |
+    [!INCLUDE [](includes/behavior.md)]
+- content: |
+    [!INCLUDE [](includes/completed.md)]
