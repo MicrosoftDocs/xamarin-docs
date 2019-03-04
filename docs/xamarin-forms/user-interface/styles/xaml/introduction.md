@@ -128,7 +128,7 @@ The articles in this section demonstrate and explain how to create and apply *ex
 > [!NOTE]
 > **What is StyleId?**
 >
-> Prior to Xamarin.Forms 2.2, the [`StyleId`](xref:Xamarin.Forms.Element.StyleId) property was used to identify individual elements in an application for identification in UI testing, and in theme engines such as Pixate. However, Xamarin.Forms 2.2 has introduced the [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) property, which has superseded the [`StyleId`](xref:Xamarin.Forms.Element.StyleId) property. For more information, see [Automate Xamarin.Forms testing with Xamarin.UITest and Test Cloud](~/xamarin-forms/deploy-test/uitest-and-test-cloud.md).
+> Prior to Xamarin.Forms 2.2, the [`StyleId`](xref:Xamarin.Forms.Element.StyleId) property was used to identify individual elements in an application for identification in UI testing, and in theme engines such as Pixate. However, Xamarin.Forms 2.2 introduced the [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) property, which has superseded the [`StyleId`](xref:Xamarin.Forms.Element.StyleId) property.
 
 ## Related links
 
