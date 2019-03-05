@@ -30,7 +30,7 @@ public class CustomVisual : IVisual
 }
 ```
 
-Now that you have created this type users can easily mark any Xamarin Forms Element
+Now that you have created this type, users can mark any Xamarin Forms Element
 
 ```xaml
 <ContentPage ...
