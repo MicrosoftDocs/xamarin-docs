@@ -269,7 +269,7 @@ UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
 
 ## Handling Foreground App Notifications
 
-New to iOS 10, an app can handle Notifications differently when it is in the foreground and a Notification is triggered. By providing a `UNUserNotificationCenterDelegate` and implementing the `UserNotificationCenter` method, the app can take over responsibility for displaying the Notification. For example:
+New to iOS 10, an app can handle Notifications differently when it is in the foreground and a Notification is triggered. By providing a `UNUserNotificationCenterDelegate` and implementing the `WillPresentNotification` method, the app can take over responsibility for displaying the Notification. For example:
 
 ```csharp
 using System;
