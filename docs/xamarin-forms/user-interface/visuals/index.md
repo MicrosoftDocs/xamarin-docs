@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms Visual"
-description: "This article introduces Xamarin.Forms Visual, which allows users to more easily define how they want controls to visuall rendere."
+description: "This article introduces Xamarin.Forms Visual, which allows users to create renderers that can be chosen via the Visual property on VisualElement."
 ms.prod: xamarin
 ms.assetid: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59
 ms.technology: xamarin-forms
@@ -11,24 +11,23 @@ ms.date: 03/12/2018
 
 # Xamarin.Forms Visual
 
-_This article introduces Xamarin.Forms Visual which allows users to create renderers that can be specified at runtime._
+_This article introduces Xamarin.Forms Visual, which allows users to create renderers that can be chosen via the `Visual` property on `VisualElement`._
 
-Renderers that implement the visual appearance are then used to renderer views, rather than the default renderers. At renderer selection time, the `Visual` property of the view is inspected and included in the renderer selection process. In addition, if the `Visual` property changes at runtime, the specified renderer is recreated along with any children.
+Renderers that specify a `VisualType` as part of the `ExportRendererAttribute` are then used to renderer views, rather than the default renderers. At renderer selection time, the `Visual` property of the view is inspected and included in the renderer selection process. Currently the `Visual` cannot be changed after the control has been rendered but this will be fixed in an upcoming release.
 
 > [!IMPORTANT]
 > The `Visual` property is defined in the `VisualElement` class, with views inheriting the `Visual` property value from their parents. Therefore, setting the `Visual` property on a `ContentPage` ensures that any supported views in the page will use that visual appearance. In addition, the `Visual` property can be overridden on a view.
 
-Xamarin.Forms 3.6 includes a visual appearance based on material design, with the renderers being known as the material renderers. 
+Xamarin.Forms 3.6 includes a visual appearance based on material design.
 
 ### Creating your own Visual
 
-In your cross platform library create a Visual type that the user can use to mark a Xamarin Forms Element
+In your cross platform library create a type that inherits from `IVisual` that the user can use to mark a `VisualElement`
 
 ```C#
 public class CustomVisual : IVisual
 {
 }
-
 ```
 
 Now that you have created this type users can easily mark any Xamarin Forms Element
@@ -45,8 +44,7 @@ var contentPage = new ContentPage();
 contentPage.Visual = new CustomVisual();
 ```
 
-Now you just have to register the visual type against a custom renderer on the platform you want a custom renderer for
-
+Register the visual type as part of the platforms `ExportRenderAttribute`
 
 ```C#
 using Xamarin.Forms.Material.Android
@@ -60,13 +58,14 @@ namespace MyApp.Android
 
 ### Registering your own name for a visual
 
-At some point there may be conflicts between different Visual Libraries or maybe you just want to refer to a visual by a different name. In this case you can use an assembly attribute to register a different name for a given visual
+At some point there may be conflicts between different Visual Libraries or perhaps you just want to refer to a visual by a different name. In this case you can use an assembly attribute to register a different name for a given visual
 
 ```C#
 [assembly: Visual("MyMaterialName", typeof(VisualMarker.MaterialVisual))]
 ```
 
 Which will now let you do the following
+
 ```xaml
 <ContentPage ...
              Visual="MyMaterialName">
