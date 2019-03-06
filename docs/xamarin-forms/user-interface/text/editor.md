@@ -6,7 +6,7 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/13/2018
+ms.date: 02/26/2018
 ---
 
 # Xamarin.Forms Editor
@@ -53,6 +53,22 @@ The [`Editor`](xref:Xamarin.Forms.Editor) can be set to show placeholder text wh
 ```csharp
 var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Color.Olive };
 ```
+
+### Preventing Text Entry
+
+Users can be prevented from modifying the text in an [`Editor`](xref:Xamarin.Forms.Editor) by setting the `IsReadOnly` property, which has a default value of `false`, to `true`:
+
+```xaml
+<Editor Text="This is a read-only Editor"
+        IsReadOnly="true" />
+```
+
+```csharp
+var editor= new Editor { Text = "This is a read-only Editor", IsReadOnly = true });
+```
+
+> [!NOTE]
+> The `IsReadonly` property does not alter the visual appearance of an [`Editor`](xref:Xamarin.Forms.Editor), unlike the `IsEnabled` property that also changes the visual appearance of the `Editor` to gray.
 
 ### Limiting Input Length
 

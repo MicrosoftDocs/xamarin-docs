@@ -6,7 +6,7 @@ ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/07/2018
+ms.date: 02/22/2019
 ---
 
 # iOS Platform Features
@@ -25,8 +25,11 @@ The following platform-specific functionality is provided for Xamarin.Forms view
 
 The following platform-specific functionality is provided for Xamarin.Forms views on iOS:
 
+- Setting the [`Cell`](xref:Xamarin.Forms.Cell) background color. For more information, see [Cell Background Color on iOS](cell-background-color.md).
 - Ensuring that inputted text fits into an [`Entry`](xref:Xamarin.Forms.Entry) by adjusting the font size. For more information, see [Entry Font Size on iOS](entry-font-size.md).
 - Setting the cursor color in a [`Entry`](xref:Xamarin.Forms.Entry). For more information, see [Entry Cursor Color on iOS](entry-cursor-color.md).
+- Controlling whether [`ListView`](xref:Xamarin.Forms.ListView) header cells float during scrolling. For more information, see [ListView Group Header Style on iOS](listview-group-header-style.md).
+- Controlling whether row animations are disabled when the [`ListView`](xref:Xamarin.Forms.ListView) items collection is being updated. For more information, see [ListView Row Animations on iOS](listview-row-animations.md).
 - Setting the separator style on a [`ListView`](xref:Xamarin.Forms.ListView). For more information, see [ListView Separator Style on iOS](listview-separator-style.md).
 - Controlling when item selection occurs in a [`Picker`](xref:Xamarin.Forms.Picker). For more information, see [Picker Item Selection on iOS](picker-selection.md).
 - Enabling the [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) property to be set by tapping on a position on the [`Slider`](xref:Xamarin.Forms.Slider) bar, rather than by having to drag the `Slider` thumb. For more information, see [Slider Thumb Tap on iOS](slider-thumb.md).

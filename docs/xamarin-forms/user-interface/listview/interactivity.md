@@ -6,7 +6,7 @@ ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/14/2018
+ms.date: 02/27/2019
 ---
 
 # ListView Interactivity
@@ -29,8 +29,10 @@ When a user taps an item, two events are fired:
 - [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) fires when a new item is selected.
 - [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) fires when an item is tapped.
 
+Tapping the same item twice will fire two [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) events, but will only fire a single [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) event.
+
 > [!NOTE]
-> Tapping the same item twice will fire two [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) events, but will only fire a single [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) event.
+> The [`ItemTappedEventArgs`](xref:Xamarin.Forms.ItemTappedEventArgs) class, which contains the event arguments for the [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) event, has [`Group`](xref:Xamarin.Forms.ItemTappedEventArgs.Group) and [`Item`](xref:Xamarin.Forms.ItemTappedEventArgs.Item) properties, and an `ItemIndex` property whose value represents the index in the [`ListView`](xref:Xamarin.Forms.ListView) of the tapped item. Similarly, the [`SelectedItemChangedEventArgs`](xref:Xamarin.Forms.SelectedItemChangedEventArgs) class, which contains the event arguments for the [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) event, has a [`SelectedItem`](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) property, and a `SelectedItemIndex` property whose value represents the index in the `ListView` of the selected item.
 
 When the [`SelectionMode`](xref:Xamarin.Forms.ListView.SelectionMode) property is set to [`Single`](xref:Xamarin.Forms.ListViewSelectionMode.Single), items in the [`ListView`](xref:Xamarin.Forms.ListView) can be selected, the [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) and [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) events will be fired, and the [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) property will be set to the value of the selected item.
 

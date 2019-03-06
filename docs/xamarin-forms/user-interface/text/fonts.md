@@ -6,22 +6,18 @@ ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
+ms.date: 03/04/2019
 ---
 
 # Fonts in Xamarin.Forms
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFonts/)
 
-This article describes how Xamarin.Forms lets you specify font attributes
-(including weight and size) on controls that display text. Font information
-can be [specified in code](#Setting_Font_in_Code) or
-[specified in XAML](#Setting_Font_in_Xaml).
-It is also possible to use a [custom font](#Using_a_Custom_Font).
+This article describes how Xamarin.Forms lets you specify font attributes (including weight and size) on controls that display text. Font information can be [specified in code](#Setting_Font_in_Code) or [specified in XAML](#Setting_Font_in_Xaml). It's' also possible to use a [custom font](#Using_a_Custom_Font), and [display font icons](#display-font-icons).
 
 <a name="Setting_Font_in_Code" />
 
-## Setting Font in Code
+## Set the font in code
 
 Use the three font-related properties of any controls that display text:
 
@@ -41,7 +37,7 @@ var about = new Label {
 
 <a name="FontSize" />
 
-### Font Size
+### Font size
 
 The `FontSize` property can be set to a double value, for instance:
 
@@ -64,7 +60,7 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 
 <a name="FontAttributes" />
 
-### Font Attributes
+### Font attributes
 
 Font styles such as **bold** and *italic* can be set on the `FontAttributes` property. The following values are currently supported:
 
@@ -78,7 +74,7 @@ The `FontAttribute` enumeration can be used as follows (you can specify a single
 label.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
 ```
 
-### Setting Font Info Per Platform
+### Set font info per platform
 
 Alternatively, the `Device.RuntimePlatform` property can be used to set different
 font names on each platform, as demonstrated in this code:
@@ -94,7 +90,7 @@ A good source of font information for iOS is [iosfonts.com](http://iosfonts.com)
 
 <a name="Setting_Font_in_Xaml" />
 
-## Setting the Font in XAML
+## Set the font in XAML
 
 Xamarin.Forms controls that display text all have a `FontSize` property that can be set in XAML. The simplest way to set the font in XAML is to use the named size enumeration values, as shown in this example:
 
@@ -129,7 +125,7 @@ When specifying a custom font face, it is always a good idea to use `OnPlatform`
 
 <a name="Using_a_Custom_Font" />
 
-## Using a Custom Font
+## Use a custom font
 
 Using a font other than the built-in typefaces requires some platform-specific coding. This screenshot shows the custom font **Lobster** from [Google's open-source fonts](https://www.google.com/fonts) rendered using Xamarin.Forms.
 
@@ -200,19 +196,51 @@ You can also use [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#p
 </Label>
 ```
 
-<a name="Summary" />
+## Display font icons
 
-## Summary
+Font icons can be displayed by Xamarin.Forms applications by specifying the font icon data in a `FontImageSource` object. This class, which derives from the [`ImageSource`](xref:Xamarin.Forms.ImageSource) class, has the following properties:
 
-Xamarin.Forms provides simple default settings to let you size text easily for
-all supported platforms. It also lets you specify font face and size &ndash;
-even differently for each platform &ndash; when more fine-grained control is
-required.
+- `Glyph` – the unicode character value of the font icon, specified as a `string`.
+- `Size` – a `double` value that indicates the size, in device-independent units, of the rendered font icon. The default value is 30.
+- `FontFamily` – a `string` representing the font family to which the font icon belongs.
+- `Color` – an optional [`Color`](xref:Xamarin.Forms.Color) value to be used when displaying the font icon.
 
-Font information can also be specified in XAML using correctly formatted font
-attributes.
+This data is used to create a PNG, which can be displayed by any view that can display an `ImageSource`. This approach permits font icons, such as emojis, to be displayed by multiple views, as opposed to limiting font icon display to a single text presenting view, such as a [`Label`](xref:Xamarin.Forms.Label).
 
-## Related Links
+> [!IMPORTANT]
+> Font icons can only currently be specified by their unicode character representation.
+
+The following XAML example has a single font icon being displayed by an [`Image`](xref:Xamarin.Forms.Image) view:
+
+```xaml
+<Image BackgroundColor="#D1D1D1">
+    <Image.Source>
+        <FontImageSource Glyph="&#xf30c;"
+                         FontFamily="{OnPlatform iOS=Ionicons, Android=ionicons.ttf#}"
+                         Size="44" />
+    </Image.Source>
+</Image>
+```
+
+This code displays an XBox icon, from the Ionicons font family, in an [`Image`](xref:Xamarin.Forms.Image) view. Note that while the unicode character for this icon is `\uf30c`, it has to be escaped in XAML and so becomes `&#xf30c;`. The equivalent C# code is:
+
+```csharp
+Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };
+image.Source = new FontImageSource
+{
+    Glyph = "\uf30c",
+    FontFamily = Device.RuntimePlatform == Device.iOS ? "Ionicons" : "ionicons.ttf#",
+    Size = 44
+};
+```
+
+The following screenshots, from the [Bindable Layouts](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/) sample, show several font icons being displayed by a bindable layout:
+
+![Screenshot of font icons being displayed, on iOS and Android](fonts-images/font-image-source.png "Font icons being displayed in an Image view")
+
+## Related links
 
 - [FontsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFonts/)
 - [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text/)
+- [Bindable Layouts (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/)
+- [Bindable Layouts](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

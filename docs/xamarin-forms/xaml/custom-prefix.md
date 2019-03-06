@@ -1,0 +1,33 @@
+---
+title: "XAML Namespace Recommended Prefixes in Xamarin.Forms"
+description: "The XmlnsPrefixAttribute class can be used by control authors to specify a recommended prefix to associate with a XAML namespace, for XAML usage."
+ms.prod: xamarin
+ms.assetid: 7B315BEC-7A35-48F4-A9C7-EF40255E95FF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/28/2019
+---
+
+# XAML Namespace Recommended Prefixes in Xamarin.Forms
+
+The `XmlnsPrefixAttribute` class can be used by control authors to specify a recommended prefix to associate with a XAML namespace, for XAML usage. The prefix is useful when supporting object tree serialization to XAML, or when interacting with a design environment that has XAML editing features. For example:
+
+- XAML text editors could use the `XmlnsPrefixAttribute` as a hint for an initial XAML namespace `xmlns` mapping.
+- XAML design environments could use the `XmlnsPrefixAttribute` to add mappings to the XAML when dragging objects out of a toolbox and onto a visual design surface.
+
+Recommended namespace prefixes should be defined at the assembly level with the `XmlnsPrefixAttribute` constructor, which takes two arguments: a string that specifies the identifier of a XAML namespace, and a string that specifies a recommended prefix:
+
+```csharp
+[assembly: XmlnsPrefix("http://xamarin.com/schemas/2014/forms", "xf")]
+```
+
+Prefixes should use short strings, because the prefix is typically applied to all serialized elements that come from the XAML namespace. Therefore, the prefix string length can have a noticeable effect on the size of the serialized XAML output.
+
+> [!NOTE]
+> More than one `XmlnsPrefixAttribute` can be applied to an assembly. For example, if you have an assembly that defines types for more than one XAML namespace, you could define different prefix values for each XAML namespace.
+
+## Related links
+
+- [XAML Custom Namespace Schemas](custom-namespace-schemas.md)
+- [XAML Namespaces in Xamarin.Forms](namespaces.md)
