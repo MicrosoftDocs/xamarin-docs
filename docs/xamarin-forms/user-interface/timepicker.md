@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms TimePicker"
-description: "The TimPicker is a Xamarin.Forms view that allows the user to select a time. This article explains how to consume a TimePicker in a Xamarin.Forms application."
+description: "The TimePicker is a Xamarin.Forms view that allows the user to select a time. This article explains how to consume a TimePicker in a Xamarin.Forms application."
 ms.prod: xamarin
 ms.assetid: 2E99FB23-B82D-4EB4-AFB3-5002E736E7B2
 ms.technology: xamarin-forms
