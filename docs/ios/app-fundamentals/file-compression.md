@@ -10,7 +10,7 @@ ms.date: 04/03/2019
 ---
 # File system compression in Xamarin.iOS
 
-As of iOS 9.0 + and Mac OS X 10.11+ applications can use the Compression Framework to compress (encode) and decompress (decode) data. Within
+As of iOS 9.0+ and Mac OS X 10.11+ applications can use the Compression Framework to compress (encode) and decompress (decode) data. Within
 Xamarin this framework has been binded following the Stream API. This allows developers to interact with the compress and decompressed data
 as if they were normal streams without the need to use callbacks or delegates.
 
@@ -85,5 +85,5 @@ static void CompressExample ()
 
 ## Async support
 
-The CompressionStream supports all the async operations that are supported by the System.IO.DeglateStream, this means that developers can use
-the async keyword to perform the compress/decompress operations without blocking the main UI thread.
+The CompressionStream supports all the async operations that are supported by the System.IO.DeflateStream, this means that developers can use
+the async keyword to perform the compress/decompress operations without blocking the UI thread.
