@@ -10,7 +10,6 @@ ms.date: 12/03/2018
 
 # Build Process
 
-
 ## Overview
 
 The Xamarin.Android build process is responsible for gluing everything
@@ -20,7 +19,6 @@ supporting the `AndroidAsset`, `AndroidResource`, and other
 [build actions](#Build_Actions), generating
 [Android-callable wrappers](~/android/platform/java-integration/android-callable-wrappers.md),
 and generating a `.apk` for execution on Android devices.
-
 
 ## Application Packages
 
@@ -62,7 +60,7 @@ re-synchronized to the target device.
 
 Fast deployment is known to fail on devices which block `adb` from 
 synchronizing to the directory 
-`/data/data/@PACKAGE_NAME@/files/.__override__`. 
+`/data/data/@PACKAGE_NAME@/files/.__override__`.
 
 Fast deployment is enabled by default, and may be disabled in Debug builds
 by setting the `$(EmbedAssembliesIntoApk)` property to `True`.
@@ -392,7 +390,7 @@ when packaging Release applications.
 -   **LinkerDumpDependencies** &ndash; A bool property which enables
     generating of linker dependencies file. This file can be used as
     input for
-    [illinkanalyzer](https://github.com/mono/linker/tree/master/analyzer)
+    [illinkanalyzer](https://github.com/mono/linker/blob/master/src/analyzer/README.md)
     tool.
 
     The default value is False.
