@@ -6,16 +6,17 @@ ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/04/2018
+ms.date: 02/26/2019
 ---
 
 # Xamarin.Forms Picker
 
 _The Picker view is a control for selecting a text item from a list of data._
 
-The Xamarin.Forms [`Picker`](xref:Xamarin.Forms.Picker) displays a short list of items, from which the user can select an item. `Picker` defines eight properties:
+The Xamarin.Forms [`Picker`](xref:Xamarin.Forms.Picker) displays a short list of items, from which the user can select an item. `Picker` defines the following properties:
 
 - [`Title`](xref:Xamarin.Forms.Picker.Title) of type `string`, which defaults to `null`.
+- `TitleColor` of type [`Color`](xref:Xamarin.Forms.Color), the color used to display the `Title` text.
 - [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) of type `IList`, the source list of items to display, which defaults to `null`.
 - [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) of type `int`, the index of the selected item, which defaults to -1.
 - [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) of type `object`, the selected item, which defaults to `null`.
@@ -24,7 +25,7 @@ The Xamarin.Forms [`Picker`](xref:Xamarin.Forms.Picker) displays a short list of
 - [`FontFamily`](xref:Xamarin.Forms.Picker.FontFamily) of type `string`, which defaults to `null`.
 - [`FontSize`](xref:Xamarin.Forms.Picker.FontSize) of type `double`, which defaults to -1.0.
 
-All eight properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be styled, and the properties can be targets of data bindings. The [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) and [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) properties have a default binding mode of [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay), which means that they can be targets of data bindings in an application that uses the [Model-View-ViewModel (MVVM)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) architecture. For information about setting font properties, see [Fonts](~/xamarin-forms/user-interface/text/fonts.md).
+All of the properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be styled, and the properties can be targets of data bindings. The [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) and [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) properties have a default binding mode of [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay), which means that they can be targets of data bindings in an application that uses the [Model-View-ViewModel (MVVM)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) architecture. For information about setting font properties, see [Fonts](~/xamarin-forms/user-interface/text/fonts.md).
 
 A [`Picker`](xref:Xamarin.Forms.Picker) doesn't show any data when it's first displayed. Instead, the value of its [`Title`](xref:Xamarin.Forms.Picker.Title) property is shown as a placeholder on the iOS and Android platforms:
 
@@ -40,9 +41,9 @@ The [`Picker`](xref:Xamarin.Forms.Picker) fires a [`SelectedIndexChanged`](xref:
 
 There are two techniques for populating a [`Picker`](xref:Xamarin.Forms.Picker) with data:
 
-- Setting the [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) property to the data to be displayed. This is the recommended technique, which was introduced in Xamarin.Forms 2.3.4. For more information, see [Setting a Picker's ItemsSource Property](populating-itemssource.md).
+- Setting the [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) property to the data to be displayed. This is the recommended technique. For more information, see [Setting a Picker's ItemsSource Property](populating-itemssource.md).
 - Adding the data to be displayed to the [`Items`](xref:Xamarin.Forms.Picker.Items) collection. This technique was the original process for populating a [`Picker`](xref:Xamarin.Forms.Picker) with data. For more information, see [Adding Data to a Picker's Items Collection](populating-items.md).
 
-## Related Links
+## Related links
 
 - [Picker](xref:Xamarin.Forms.Picker)

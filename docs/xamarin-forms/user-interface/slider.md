@@ -6,7 +6,7 @@ ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2018
+ms.date: 02/27/2019
 ---
 
 # Xamarin.Forms Slider
@@ -33,6 +33,8 @@ The `Slider` coerces the `Value` property so that it is between `Minimum` and `M
 `Slider` defines a [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) event that is fired when the `Value` changes, either through user manipulation of the `Slider` or when the program sets the `Value` property directly. A `ValueChanged` event is also fired when the `Value` property is coerced as described in the previous paragraph.
 
 The [`ValueChangedEventArgs`](xref:Xamarin.Forms.ValueChangedEventArgs) object that accompanies the `ValueChanged` event has two properties, both of type `double`: [`OldValue`](xref:Xamarin.Forms.ValueChangedEventArgs.OldValue) and [`NewValue`](xref:Xamarin.Forms.ValueChangedEventArgs.NewValue). At the time the event is fired, the value of `NewValue` is the same as the `Value` property of the `Slider` object.
+
+`Slider` also defines `DragStarted` and `DragCompleted` events, that are fired at the beginning and end of the drag action. Unlike the [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) event, the `DragStarted` and `DragCompleted` events are only fired through user manipulation of the `Slider`. When the `DragStarted` event fires, the `DragStartedCommand`, of type `ICommand`, is executed. Similarly, when the `DragCompleted` event fires, the `DragCompletedCommand`, of type `ICommand`, is executed.
 
 > [!WARNING]
 > Do not use unconstrained horizontal layout options of `Center`, `Start`, or `End` with `Slider`. On both Android and the UWP, the `Slider` collapses to a bar of zero length, and on iOS, the bar is very short. Keep the default `HorizontalOptions` setting of `Fill`, and don't use a width of `Auto` when putting `Slider` in a `Grid` layout.

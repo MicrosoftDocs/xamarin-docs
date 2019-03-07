@@ -39,7 +39,7 @@ The [`Aspect`](xref:Xamarin.Forms.Image.Aspect) property determines how the imag
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) - Clips the image so that it fills the display area while preserving the aspect (ie. no distortion).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) - Letterboxes the image (if required) so that the entire image fits into the display area, with blank space added to the top/bottom or sides depending on whether the image is wide or tall.
 
-Images can be loaded from a [local file](#Local_Images), an [embedded resource](#embedded-images), or [downloaded](#Downloading_Images).
+Images can be loaded from a [local file](#Local_Images), an [embedded resource](#embedded-images), or [downloaded](#Downloading_Images). In addition, font icons can be displayed by the [`Image`](xref:Xamarin.Forms.Image) view by specifying the font icon data in a `FontImageSource` object. For more information, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) in the [Fonts](~/xamarin-forms/user-interface/text/fonts.md) guide.
 
 ## Local Images
 
@@ -300,6 +300,8 @@ Setting icons and splash screens for Xamarin.Forms apps is done in each of the a
 ## Icons
 
 See the [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md), [Google Iconography](http://developer.android.com/design/style/iconography.html), and [Guidelines for tile and icon assets](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) for more information on creating these application resources.
+
+In addition, font icons can be displayed by the [`Image`](xref:Xamarin.Forms.Image) view by specifying the font icon data in a `FontImageSource` object. For more information, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) in the [Fonts](~/xamarin-forms/user-interface/text/fonts.md) guide.
 
 ## Splash screens
 

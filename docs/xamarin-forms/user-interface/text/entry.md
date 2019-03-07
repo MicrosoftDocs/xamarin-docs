@@ -6,7 +6,7 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/27/2018
+ms.date: 02/26/2018
 ---
 
 # Xamarin.Forms Entry
@@ -53,6 +53,22 @@ var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive
 
 > [!NOTE]
 > The width of an `Entry` can be defined by setting its `WidthRequest` property. Do not depend on the width of an `Entry` being defined based on the value of its `Text` property.
+
+### Preventing Text Entry
+
+Users can be prevented from modifying the text in an [`Entry`](xref:Xamarin.Forms.Entry) by setting the `IsReadOnly` property, which has a default value of `false`, to `true`:
+
+```xaml
+<Entry Text="This is a read-only Entry"
+       IsReadOnly="true" />
+```
+
+```csharp
+var entry = new Entry { Text = "This is a read-only Entry", IsReadOnly = true });
+```
+
+> [!NOTE]
+> The `IsReadonly` property does not alter the visual appearance of an [`Entry`](xref:Xamarin.Forms.Entry), unlike the `IsEnabled` property that also changes the visual appearance of the `Entry` to gray.
 
 ### Limiting Input Length
 

@@ -96,10 +96,7 @@ The rationale is that a binding on the `SelectedItem` property should result in 
 
 ### One-Time Bindings
 
-Several properties have a default binding mode of `OneTime`. These are:
-
-- `IsTextPredictionEnabled` property of `Entry`
-- `Text`, `BackgroundColor`, and `Style` properties of `Span`.
+Several properties have a default binding mode of `OneTime`, including the `IsTextPredictionEnabled` property of `Entry`.
 
 Target properties with a binding mode of `OneTime` are updated only when the binding context changes. For bindings on these target properties, this simplifies the binding infrastructure because it is not necessary to monitor changes in the source properties.
 

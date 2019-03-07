@@ -61,7 +61,7 @@ See the [Editor](editor.md) article for more information.
 
 ## [Fonts](fonts.md)
 
-The `Label` control supports different font settings using the built-in fonts on each platform or custom fonts included with your app. See the [Fonts](fonts.md) article for more detailed information.
+Many controls support different font settings using the built-in fonts on each platform, or custom fonts included with your app. See the [Fonts](fonts.md) article for more detailed information.
 
 <a name="Styles" />
 

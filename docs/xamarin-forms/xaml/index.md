@@ -6,7 +6,7 @@ ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/18/2018
+ms.date: 02/28/2019
 ---
 
 # eXtensible Application Markup Language (XAML)
@@ -41,6 +41,10 @@ XAML uses the `xmlns` XML attribute for namespace declarations. This article int
 ## [XAML Custom Namespace Schemas](custom-namespace-schemas.md)
 
 A XAML custom namespace schema can be defined with the `XmlnsDefinitionAttribute` class, which specifies a mapping between a custom URL and one or more CLR namespaces. The custom namespace schema can then be used in XAML namespace declarations.
+
+## [XAML Namespace Recommended Prefixes](custom-prefix.md)
+
+The `XmlnsPrefixAttribute` class can be used by control authors to specify a recommended prefix to associate with a XAML namespace, for XAML usage.
 
 ## [XAML Markup Extensions](markup-extensions/index.md)
 

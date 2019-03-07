@@ -6,7 +6,7 @@ ms.assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/11/2017
+ms.date: 02/26/2019
 ---
 
 # Setting a Picker's ItemsSource Property
@@ -17,12 +17,14 @@ _The Picker view is a control for selecting a text item from a list of data. Thi
 
 Xamarin.Forms 2.3.4 has enhanced the [`Picker`](xref:Xamarin.Forms.Picker) view by adding the ability to populate it with data by setting its [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) property, and to retrieve the selected item from the [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) property. In addition, the color of the text for the selected item can be changed by setting the [`TextColor`](xref:Xamarin.Forms.Picker.TextColor) property to a [`Color`](xref:Xamarin.Forms.Color).
 
-## Populating a Picker with Data
+## Populating a Picker with data
 
 A [`Picker`](xref:Xamarin.Forms.Picker) can be populated with data by setting its [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) property to an `IList` collection. Each item in the collection must be of, or derived from, type `object`. Items can be added in XAML by initializing the `ItemsSource` property from an array of items:
 
 ```xaml
-<Picker x:Name="picker" Title="Select a monkey">
+<Picker x:Name="picker"
+        Title="Select a monkey"
+        TitleColor="Red">
   <Picker.ItemsSource>
     <x:Array Type="{x:Type x:String}">
       <x:String>Baboon</x:String>
@@ -52,11 +54,11 @@ monkeyList.Add("Golden Lion Tamarin");
 monkeyList.Add("Howler Monkey");
 monkeyList.Add("Japanese Macaque");
 
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.ItemsSource = monkeyList;
 ```
 
-## Responding to Item Selection
+## Responding to item selection
 
 A [`Picker`](xref:Xamarin.Forms.Picker) supports selection of one item at a time. When a user selects an item, the [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) event fires, the [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) property is updated to an integer representing the index of the selected item in the list, and the [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) property is updated to the `object` representing the selected item. The [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) property is a zero-based number indicating the item the user selected. If no item is selected, which is the case when the [`Picker`](xref:Xamarin.Forms.Picker) is first created and initialized, `SelectedIndex` will be -1.
 
@@ -96,18 +98,21 @@ This method obtains the [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedInde
 > [!NOTE]
 > A [`Picker`](xref:Xamarin.Forms.Picker) can be initialized to display a specific item by setting the [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) or [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) properties. However, these properties must be set after initializing the [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) collection.
 
-## Populating a Picker with Data Using Data Binding
+## Populating a Picker with data using data binding
 
 A [`Picker`](xref:Xamarin.Forms.Picker) can be also populated with data by using data binding to bind its [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) property to an `IList` collection. In XAML this is achieved with the [`Binding`](xref:Xamarin.Forms.Xaml.BindingExtension) markup extension:
 
 ```xaml
-<Picker Title="Select a monkey" ItemsSource="{Binding Monkeys}" ItemDisplayBinding="{Binding Name}" />
+<Picker Title="Select a monkey"
+        TitleColor="Red"
+        ItemsSource="{Binding Monkeys}"
+        ItemDisplayBinding="{Binding Name}" />
 ```
 
 The equivalent C# code is shown below:
 
 ```csharp
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
 picker.ItemDisplayBinding = new Binding("Name");
 ```
@@ -126,12 +131,13 @@ public class Monkey
 
 When binding to a list of objects, the [`Picker`](xref:Xamarin.Forms.Picker) must be told which property to display from each object. This is achieved by setting the [`ItemDisplayBinding`](xref:Xamarin.Forms.Picker.ItemDisplayBinding) property to the required property from each object. In the code examples above, the `Picker` is set to display each `Monkey.Name` property value.
 
-### Responding to Item Selection
+### Responding to item selection
 
 Data binding can be used to set an object to the [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) property value when it changes:
 
 ```xaml
 <Picker Title="Select a monkey"
+        TitleColor="Red"
         ItemsSource="{Binding Monkeys}"
         ItemDisplayBinding="{Binding Name}"
         SelectedItem="{Binding SelectedMonkey}" />
@@ -144,7 +150,7 @@ Data binding can be used to set an object to the [`SelectedItem`](xref:Xamarin.F
 The equivalent C# code is shown below:
 
 ```csharp
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
 picker.SetBinding(Picker.SelectedItemProperty, "SelectedMonkey");
 picker.ItemDisplayBinding = new Binding("Name");
@@ -169,11 +175,7 @@ The [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) property data binds
 > [!NOTE]
 > Note that the [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) and [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) properties both support two-way bindings by default.
 
-## Summary
-
-The [`Picker`](xref:Xamarin.Forms.Picker) view is a control for selecting a text item from a list of data. This article explained how to populate a `Picker` with data by setting the [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) property, and how to respond to item selection by the user. This approach, which was introduced in Xamarin.Forms 2.3.4, is the recommended approach for interacting with a `Picker`.
-
-## Related Links
+## Related links
 
 - [Picker Demo (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
 - [Monkey App (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/MonkeyAppPicker/)

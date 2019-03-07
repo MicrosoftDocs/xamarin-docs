@@ -6,7 +6,7 @@ ms.assetid: 3C840F64-A430-457D-A4B2-3D7AF46F9DBE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/11/2017
+ms.date: 02/26/2019
 ---
 
 # Adding Data to a Picker's Items Collection
@@ -15,12 +15,13 @@ ms.date: 04/11/2017
 
 _The Picker view is a control for selecting a text item from a list of data. This article explains how to populate a Picker with data by adding it to the Items collection, and how to respond to item selection by the user._
 
-## Populating a Picker with Data
+## Populating a Picker with data
 
 Prior to Xamarin.Forms 2.3.4, the process for populating a [`Picker`](xref:Xamarin.Forms.Picker) with data was to add the data to be displayed to the read-only [`Items`](xref:Xamarin.Forms.Picker.Items) collection, which is of type `IList<string>`. Each item in the collection must be of type `string`. Items can be added in XAML by initializing the `Items` property with a list of `x:String` items:
 
 ```xaml
-<Picker Title="Select a monkey">
+<Picker Title="Select a monkey"
+        TitleColor="Red">
   <Picker.Items>
     <x:String>Baboon</x:String>
     <x:String>Capuchin Monkey</x:String>
@@ -36,7 +37,7 @@ Prior to Xamarin.Forms 2.3.4, the process for populating a [`Picker`](xref:Xamar
 The equivalent C# code is shown below:
 
 ```csharp
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.Items.Add("Baboon");
 picker.Items.Add("Capuchin Monkey");
 picker.Items.Add("Blue Monkey");
@@ -48,7 +49,7 @@ picker.Items.Add("Japanese Macaque");
 
 In addition to adding data using the `Items.Add` method, data can also be inserted into the collection by using the `Items.Insert` method.
 
-## Responding to Item Selection
+## Responding to item selection
 
 A [`Picker`](xref:Xamarin.Forms.Picker) supports selection of one item at a time. When a user selects an item, the [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) event fires, and the [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) property is updated to an integer representing the index of the selected item in the list. The `SelectedIndex` property is a zero-based number indicating the item that the user selected. If no item is selected, which is the case when the `Picker` is first created and initialized, `SelectedIndex` will be -1.
 
@@ -75,12 +76,7 @@ This method obtains the [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedInde
 > [!NOTE]
 > A [`Picker`](xref:Xamarin.Forms.Picker) can be initialized to display a specific item by setting the [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) property. However, the `SelectedIndex` property must be set after initializing the [`Items`](xref:Xamarin.Forms.Picker.Items) collection.
 
-## Summary
-
-The [`Picker`](xref:Xamarin.Forms.Picker) view is a control for selecting a text item from a list of data. This article explained how to populate a `Picker` with data by adding it to the [`Items`](xref:Xamarin.Forms.Picker.Items) collection, and how to respond to item selection by the user. This was the process for using a `Picker` prior to Xamarin.Forms 2.3.4.
-
-
-## Related Links
+## Related links
 
 - [Picker Demo (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
 - [Picker](xref:Xamarin.Forms.Picker)
