@@ -46,6 +46,9 @@ The following table outlines the `x` namespace attributes supported by Xamarin.F
 
 For more information about the `x:DataType` attribute, see [Compiled Bindings](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md). For more information about the `x:FieldModifier` attribute, see [Field Modifiers](~/xamarin-forms/xaml/field-modifiers.md). For more information about the `x:Arguments`, `x:FactoryMethod`, and `x:TypeArguments` attributes, see [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
+> [!NOTE]
+> In addition to the namespace attributes listed above, Xamarin.Forms also includes markup extensions that can be consumed through the `x` namespace prefix. For more information, see [Consuming XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/consuming.md).
+
 In XAML, namespace declarations inherit from parent element to child element. Therefore, when defining a namespace in the root element of a XAML file, all elements within that file inherit the namespace declaration.
 
 ## Declaring Namespaces for Types
