@@ -6,15 +6,31 @@ ms.assetid: 705c9fa4-12ef-4ee0-ab3e-8319ee9944c5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/31/2016
+ms.date: 03/04/2019
 ---
 
 # Xamarin.Forms Deployment and Testing
+
+## [Publishing iOS apps](~/ios/deploy-test/app-distribution/index.md)
+
+iOS apps can be distributed through Apple's App Store, in-house, and through ad-hoc channels.
+
+## [Publishing Android apps](~/android/deploy-test/publishing/index.md)
+
+Android apps can be distributed through channels such as e-mail, a private web server, Google Play, or the Amazon App Store for Android.
+
+## [Publishing Universal Windows Platform apps](/windows/uwp/packaging/)
+
+UWP apps can be distributed through the Microsoft Store, side loading the app package directly to a device, or via Web Install.
+
+## [Publishing Mac apps](~/mac/deploy-test/publishing-to-the-app-store/index.md)
+
+Mac apps can be distributed via the Mac App Store, or directly.
 
 ## [Performance](performance.md)
 
 There are many techniques for increasing the performance of Xamarin.Forms apps. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application.
 
-## [Automated Testing with Xamarin.UITest and App Center](uitest-and-test-cloud.md)
+## [Automated Testing with Visual Studio App Center](/appcenter/test-cloud/)
 
-Xamarin Test Cloud's **UITest** component can be used with Xamarin.Forms to write UI tests to run in the cloud on hundreds of devices.
+App Center Test is a test automation service for native and hybrid mobile apps, also known as Test Cloud.
