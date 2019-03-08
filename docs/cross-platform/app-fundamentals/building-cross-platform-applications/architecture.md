@@ -69,4 +69,4 @@ Each of the patterns will be examined in more detail as their practical use
 is illustrated in the case studies. Wikipedia has more detailed descriptions of
 the [MVVM](https://en.wikipedia.org/wiki/Model–view–viewmodel),
 [MVC](https://en.wikipedia.org/wiki/Model–view–controller),
-[Facade](http://en.wikipedia.org/wiki/Facade_pattern), [Singleton](http://en.wikipedia.org/wiki/Singleton_pattern), [Strategy](http://en.wikipedia.org/wiki/Strategy_pattern) and [Provider](http://en.wikipedia.org/wiki/Provider_model) patterns (and of [Design Patterns](http://en.wikipedia.org/wiki/Design_Patterns) generally).
+[Facade](https://en.wikipedia.org/wiki/Facade_pattern), [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern), [Strategy](https://en.wikipedia.org/wiki/Strategy_pattern) and [Provider](https://en.wikipedia.org/wiki/Provider_model) patterns (and of [Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns) generally).

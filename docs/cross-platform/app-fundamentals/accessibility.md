@@ -37,7 +37,7 @@ by each platform:
 ## Accessibility Checklist
 
 Follow these tips to ensure that your apps are accessible to
-the widest audience possible. Check out the [Android Accessibility Testing Checklist](http://developer.android.com/training/accessibility/testing.html)
+the widest audience possible. Check out the [Android Accessibility Testing Checklist](https://developer.android.com/training/accessibility/testing.html)
 and [Apple's Accessibility page](http://www.apple.com/accessibility/)
 for additional information.
 

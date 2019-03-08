@@ -6,7 +6,7 @@ ms.assetid: E3562E1B-E0EF-4C99-9F51-59DE22AFDE46
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 9/4/2018
+ms.date: 09/04/2018
 ---
 # Interactive notification user interfaces in Xamarin.iOS
 

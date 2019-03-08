@@ -135,7 +135,7 @@ The **Unicycle Half-Pipe** page animates a stick figure on a unicycle that seems
 
 [![](information-images/unicyclehalfpipe-small.png "Triple screenshot of the Unicycle Half-Pipe page")](information-images/unicyclehalfpipe-large.png#lightbox "Triple screenshot of the Unicycle Half-Pipe page")
 
-The `SKPaint` object used for stroking both the half-pipe and the unicycle is defined as a field in the [`UnicycleHalfPipePage`]() class. Also defined is the `SKPath` object for the unicycle:
+The `SKPaint` object used for stroking both the half-pipe and the unicycle is defined as a field in the `UnicycleHalfPipePage` class. Also defined is the `SKPath` object for the unicycle:
 
 ```csharp
 public class UnicycleHalfPipePage : ContentPage
@@ -248,7 +248,7 @@ It is sometimes desirable to apply an algorithmic transform to a path to malform
 
 Most of these letters consist of straight lines, yet these straight lines have apparently been twisted into curves. How is this possible?
 
-The key is that the original straight lines are broken into a series of smaller straight lines. These individual smaller straight lines can then be manipulated in different ways to form a curve. 
+The key is that the original straight lines are broken into a series of smaller straight lines. These individual smaller straight lines can then be manipulated in different ways to form a curve.
 
 To help with this process, the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) sample contains a static [`PathExtensions`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) class with an `Interpolate` method that breaks down a straight line into numerous short lines that are only one unit in length. In addition, the class contains several methods that convert the three types of Bézier curves into a series of tiny straight lines that approximate the curve. (The parametric formulas were presented in the article [**Three Types of Bézier Curves**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) This process is called _flattening_ the curve:
 

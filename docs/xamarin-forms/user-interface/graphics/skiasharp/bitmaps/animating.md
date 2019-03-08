@@ -503,7 +503,7 @@ The [`FrameInfo`](xref:SkiaSharp.SKCodec.FrameInfo) property of `SKCodec` class 
 
 `SKCodec` defines a property named [`Info`](xref:SkiaSharp.SKCodec.Info) of type [`SKImageInfo`](xref:SkiaSharp.SKImageInfo), but that `SKImageInfo` value indicates (at least for this image) that the color type is `SKColorType.Index8`, which means that each pixel is an index into a color type. To avoid bothering with color tables, the program uses the [`Width`](xref:SkiaSharp.SKImageInfo.Width) and [`Height`](xref:SkiaSharp.SKImageInfo.Height) information from that structure to construct it's own full-color `ImageInfo` value. Each `SKBitmap` is created from that.
 
-The `GetPixels` method of `SKBitmap` returns an `IntPtr` referencing the pixel bits of that bitmap. These pixel bits have not been set yet. That `IntPtr` is passed to one of the [`GetPixels`](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) methods of `SKCodec`. That method copies the frame from the GIF file into the memory space referenced by the `IntPtr`. The [`SKCodecOptions`](xref:SkiaSharp.SKCodecOptions.%23ctor(System.Int32,System.Boolean)) constructor indicates the frame number:
+The `GetPixels` method of `SKBitmap` returns an `IntPtr` referencing the pixel bits of that bitmap. These pixel bits have not been set yet. That `IntPtr` is passed to one of the [`GetPixels`](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) methods of `SKCodec`. That method copies the frame from the GIF file into the memory space referenced by the `IntPtr`. The [`SKCodecOptions`](xref:SkiaSharp.SKCodecOptions) constructor indicates the frame number:
 
 ```csharp
 public partial class AnimatedGifPage : ContentPage

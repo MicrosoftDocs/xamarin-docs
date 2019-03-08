@@ -149,7 +149,7 @@ Notice how the XML attributes define each View's behavior. Try
 experimenting with different values for `android:layout_weight` to see
 how the screen real estate is distributed based on the weight of each
 element. See the
-[Common Layout Objects](http://developer.android.com/guide/topics/ui/declaring-layout.html)
+[Common Layout Objects](https://developer.android.com/guide/topics/ui/declaring-layout.html)
 document for more about how
 [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
 handles the `android:layout_weight` attribute.

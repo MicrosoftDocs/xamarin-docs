@@ -141,7 +141,7 @@ across activity instances when an activity is restarted (e.g. due to a
 configuration change) rather that reload the data again.
 
 Earlier Android versions can also use the `CursorLoader` class by using the
-[v4 support libraries](http://developer.android.com/tools/support-library/index.html).
+[v4 support libraries](https://developer.android.com/tools/support-library/index.html).
 
 
 

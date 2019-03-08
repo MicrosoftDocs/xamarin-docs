@@ -81,7 +81,7 @@ Check out these video links that discuss Xamarin.Android with Wear support:
 
 |Description|Screenshot|
 |--- |--- |
-|[Android L and So Much More](http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; The Android L Developer Preview introduced a plethora of new APIs for developers to take advantage of, including Material Design, notifications, and new animations, to name a few.|![Video screenshot of presentation](images/video-android-l.png)|
+|[Android L and So Much More](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; The Android L Developer Preview introduced a plethora of new APIs for developers to take advantage of, including Material Design, notifications, and new animations, to name a few.|![Video screenshot of presentation](images/video-android-l.png)|
 |[C# is in my Ears and in my Eyes: Google Glass and Android Wear](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; Wearable computing might seem like something from the future (or an Inspector Gadget episode), but many people are already embracing the future today! C# developers know this and already have the tools and skills to harness the power of wearable devices (from Evolve 2014).|![Video screenshot of presentation](images/video-eyes-ears.png)|
 |[What's new in Xamarin.Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, Android Wear, Android TV, Android Auto, Material Design, and ART; what does this mean to you as a Xamarin developer? from Evolve 2014.|![Video screenshot of presentation](Images/video-whats-new.png)|
 
@@ -89,13 +89,13 @@ Check out these video links that discuss Xamarin.Android with Wear support:
 <!--
 
 March 18
-http://blog.xamarin.com/android-wear/
+https://blog.xamarin.com/android-wear/
 
 August 14
-http://blog.xamarin.com/android-l-developer-preview-android-wear-support/
+https://blog.xamarin.com/android-l-developer-preview-android-wear-support/
 
 August 27
-http://blog.xamarin.com/tips-for-your-first-android-wear-app/
+https://blog.xamarin.com/tips-for-your-first-android-wear-app/
 
 Watch Face
 https://github.com/Redth/Xamarin.Wear.WatchFace

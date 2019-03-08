@@ -94,7 +94,7 @@ has been invoked.
 
 Android 4.1 improves on the application stack navigation that was introduced
 in Android 3.0. By specifying the `ParentName` property of the `ActivityAttribute`, Android can open the proper parent Activity when
-the user presses the [Up button](http://developer.android.com/design/patterns/navigation.html#up-vs-back) on the action bar - Android will instantiate the
+the user presses the [Up button](https://developer.android.com/design/patterns/navigation.html#up-vs-back) on the action bar - Android will instantiate the
 Activity specified by the `ParentName` property. This allows
 applications to preserve hierarchy of activities that make a given task.
 
@@ -376,6 +376,6 @@ discussed some of the new permissions that have been introduced with Android
 ## Related Links
 
 - [Time Animation Example (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TimeAnimatorExample/)
-- [Android 4.1 APIs](http://developer.android.com/about/versions/android-4.1.html)
-- [Tasks and Back Stacks](http://developer.android.com/guide/components/tasks-and-back-stack.html)
-- [Navigation with Back and Up](http://developer.android.com/design/patterns/navigation.html)
+- [Android 4.1 APIs](https://developer.android.com/about/versions/android-4.1.html)
+- [Tasks and Back Stacks](https://developer.android.com/guide/components/tasks-and-back-stack.html)
+- [Navigation with Back and Up](https://developer.android.com/design/patterns/navigation.html)

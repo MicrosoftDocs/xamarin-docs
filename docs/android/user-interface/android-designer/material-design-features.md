@@ -127,7 +127,7 @@ In this example, the **Default Theme** inherits from a style that uses
 `@color/background_material_light` but overrides it with
 `color/material_grey_50`, which has a color code value of `#fffafafa`.
 For more information about style inheritance, see
-[Styles and Themes](http://developer.android.com/guide/topics/ui/themes.html#Inheritance).
+[Styles and Themes](https://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 ### Color Picker
 
@@ -398,7 +398,7 @@ In this example, the **Default Theme** inherits from a style that uses
 `@color/background_material_dark` but overrides it with
 `color/material_grey_850`, which has a color code value of `#ff303030`.
 For more information about style inheritance, see
-[Styles and Themes](http://developer.android.com/guide/topics/ui/themes.html#Inheritance).
+[Styles and Themes](https://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 ### Color Picker
 

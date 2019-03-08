@@ -433,7 +433,7 @@ System.Net.ServicePointManager.ServerCertificateValidationCallback +=
 (se, cert, chain, sslerror) => { return true; };
 ```
 
-This maintains transport encryption while ignoring the server-side certificate validation. However, this approach effectively disregards the trust concerns associated with the certificate and may not be appropriate. For more information, see [Using Trusted Roots Respectfully](http://www.mono-project.com/UsingTrustedRootsRespectfully) on [mono-project.com](http://www.mono-project.com).
+This maintains transport encryption while ignoring the server-side certificate validation. However, this approach effectively disregards the trust concerns associated with the certificate and may not be appropriate. For more information, see [Using Trusted Roots Respectfully](https://www.mono-project.com/UsingTrustedRootsRespectfully) on [mono-project.com](https://www.mono-project.com).
 
 <a name="Calling_a_WCF_Service_with_Client_Credential_Security" />
 
@@ -465,4 +465,4 @@ This guide demonstrated how to consume different web service technologies. Topic
 - [WebServices Sample](https://developer.xamarin.com/samples/mobile/WebServices/WebServiceSamples/)
 - [Web Services in Xamarin.Forms](~/xamarin-forms/data-cloud/index.md)
 - [ServiceModel Metadata Utility Tool (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
-- [BasicHttpBinding](http://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)
+- [BasicHttpBinding](https://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)

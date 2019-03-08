@@ -74,7 +74,7 @@ with the higher resolution or density images and then scale down.
 
 Declaring the screen size ensures that only supported devices can
 download the application. This is accomplished by setting the
-[supports-screens](http://developer.android.com/guide/topics/manifest/supports-screens-element.html)
+[supports-screens](https://developer.android.com/guide/topics/manifest/supports-screens-element.html)
 element in the **AndroidManifest.xml** file. This element is used to
 specify what screen sizes are supported by the application. A given
 screen is considered to be supported if the application can properly place
@@ -97,7 +97,7 @@ Supported screen sixes are declared in the **Properites/AndroidManifest.xml** fi
 
 -----
 
-Edit **AndroidManifest.xml** to include [supports-screens](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+Edit **AndroidManifest.xml** to include [supports-screens](https://developer.android.com/guide/topics/manifest/supports-screens-element.html):
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -241,7 +241,7 @@ tips can help minimize the effort necessary to support various devices:
 
 - **Only design and develop for what you need** &ndash; There are many different devices out there, but some exist in rare form factors
   that may take significant effort to design and develop for. The
-  [**Screen Size and Density**](http://developer.android.com/resources/dashboard/screens.html)
+  [**Screen Size and Density**](https://developer.android.com/resources/dashboard/screens.html)
   dashboard is a page provided by Google that provides data on
   breakdown of the screen size/screen density matrix. This breakdown
   provides insight on how to development effort on supporting screens.

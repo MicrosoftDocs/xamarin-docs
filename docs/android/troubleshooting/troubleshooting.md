@@ -79,7 +79,7 @@ Android will write many messages to the
 Xamarin.Android uses Android system properties to control the
 generation of additional messages to the Android Debug Log. Android
 system properties can be set through the *setprop* command within the
-[Android Debug Bridge (adb)](http://developer.android.com/guide/developing/tools/adb.html):
+[Android Debug Bridge (adb)](https://developer.android.com/guide/developing/tools/adb.html):
 
 ```shell
 adb shell setprop PROPERTY_NAME PROPERTY_VALUE

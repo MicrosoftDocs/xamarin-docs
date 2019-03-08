@@ -53,7 +53,7 @@ For more information about Azure Notification Hubs, see [Azure Notification Hubs
 The process for integrating an Azure Notification Hub into an Azure Mobile Apps instance is as follows:
 
 1. Create an Azure Mobile Apps instance. For more information, see [Consuming an Azure Mobile App](~/xamarin-forms/data-cloud/consuming/azure.md).
-1. Configure a notification hub. For more information, see [Configure a notification hub](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#create-hub).
+1. Configure a notification hub. For more information, see [Configure a notification hub](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#configure-hub).
 1. Update the Azure Mobile Apps instance to send push notifications. For more information, see [Update the server project to send push notifications](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#update-the-server-project-to-send-push-notifications).
 1. Register with each PNS.
 1. Configure the notification hub to communicate with each PNS.

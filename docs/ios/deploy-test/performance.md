@@ -11,7 +11,7 @@ ms.date: 01/29/2016
 
 # Xamarin.iOS performance
 
-Poor application performance presents itself in many ways. It can make an application seem unresponsive, can cause slow scrolling, and can reduce battery life. However, optimizing performance involves more than just implementing efficient code. The user's experience of application performance must also be considered. For example, ensuring that operations execute without blocking the user from performing other activities can help to improve the user's experience. 
+Poor application performance presents itself in many ways. It can make an application seem unresponsive, can cause slow scrolling, and can reduce battery life. However, optimizing performance involves more than just implementing efficient code. The user's experience of application performance must also be considered. For example, ensuring that operations execute without blocking the user from performing other activities can help to improve the user's experience.
 
 This document describes techniques that can be used to improve performance and memory usage in Xamarin.iOS applications.
 
@@ -101,7 +101,7 @@ the parent keeps the child alive through the call done to
 `container.AddSubView`.
 
 This also happens in iOS APIs that use the delegate or data
-source pattern, where a peer class contains the implementation; 
+source pattern, where a peer class contains the implementation;
 for example, when setting the
 [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/)
 property or the
@@ -155,7 +155,7 @@ The following is another example of using `[Weak]` in context of the
 pattern:
 
 ```csharp
-public class MyViewController : UIViewController 
+public class MyViewController : UIViewController
 {
 	WKWebView webView;
 
@@ -170,7 +170,7 @@ public class MyViewController : UIViewController
 	}
 }
 
-public class UIDelegate : WKUIDelegate 
+public class UIDelegate : WKUIDelegate
 {
 	[Weak] MyViewController controller;
 
@@ -211,7 +211,7 @@ class MyContainer : UIView
 For a child object that keeps strong reference to its parent, clear the reference to the parent in the `Dispose` implementation:
 
 ```csharp
-class MyChild : UIView 
+class MyChild : UIView
 {
     MyContainer container;
     public MyChild (MyContainer container)
@@ -232,13 +232,13 @@ There's also a good discussion in this blog post:
 
 ### More information
 
-For more information, see [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) on Cocoa With Love, [Is this a bug in MonoTouch GC](http://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) on StackOverflow, and [Why can't MonoTouch GC kill managed objects with refcount > 1?](http://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) on StackOverflow.
+For more information, see [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) on Cocoa With Love, [Is this a bug in MonoTouch GC](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) on StackOverflow, and [Why can't MonoTouch GC kill managed objects with refcount > 1?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) on StackOverflow.
 
 ## Optimize table views
 
 Users expect smooth scrolling and fast load times for [`UITableView`](xref:UIKit.UITableView) instances. However, scrolling performance can suffer when cells contain deeply nested view hierarchies, or when cells contain complex layouts. However, there are techniques that can be used to avoid poor `UITableView` performance:
 
-- Reuse cells. For more information, see [Reuse Cells](#reusecells).
+- Reuse cells. For more information, see [Reuse Cells](#reuse-cells).
 - Reduce the number of subviews.
 - Cache cell content that is retrieved from a web service.
 - Cache the height of any rows if they aren't identical.

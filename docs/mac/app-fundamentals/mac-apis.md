@@ -63,7 +63,7 @@ Now that you’ve found the Objective-C selector you need to invoke, the next st
 
 3. You can use the [Xamarin.Mac API online documentation](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .
 
-4. Miguel provides a "Rosetta Stone" view of the Xamarin.Mac APIs [here](http://tirania.org/tmp/rosetta.html) that you can search through for a given API. If your API is not AppKit or macOS specific, you may find it there.
+4. Miguel provides a "Rosetta Stone" view of the Xamarin.Mac APIs [here](https://tirania.org/tmp/rosetta.html) that you can search through for a given API. If your API is not AppKit or macOS specific, you may find it there.
 
 <!--
 Note: In some cases, the assembly browser can hit a bug where it will open but not jump to the right definition. Keep that tab open, switch back to your source code and try again.

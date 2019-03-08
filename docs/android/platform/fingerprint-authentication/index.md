@@ -20,7 +20,7 @@ The arrival of fingerprint scanners on Android devices provides applications wit
 
 The FingerprintManager APIs target devices with a fingerprint scanner and are running API level 23 (Android 6.0) or higher. The APIs are found in the `Android.Hardware.Fingerprints` namespace. The Android Support Library v4 provides versions of the fingerprint APIs meant for older versions of Android. The compatibility APIs are found in the `Android.Support.v4.Hardware.Fingerprint` namespace, are distributed through the [Xamarin.Android.Support.v4 NuGet package](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
 
-The [FingerprintManager](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (and its Support Library counterpart, [FingerprintManagerCompat](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) is the primary class for using the fingerprint scanning hardware. This class is an Android SDK wrapper around the system level service that manages interactions with the hardware itself. It is responsible for starting the fingerprint scanner and for responding to feedback from the scanner. This class has a fairly straightforward interface with only three members:
+The [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (and its Support Library counterpart, [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) is the primary class for using the fingerprint scanning hardware. This class is an Android SDK wrapper around the system level service that manages interactions with the hardware itself. It is responsible for starting the fingerprint scanner and for responding to feedback from the scanner. This class has a fairly straightforward interface with only three members:
 
 * **`Authenticate`** &ndash; This method will initialize the hardware scanner and start the service in the background, waiting for the user to scan their fingerprint.
 * **`EnrolledFingerprints`** &ndash; This property will return `true` if the user has registered one or more fingerprints with the device.
@@ -56,8 +56,8 @@ A fingerprint must already be enrolled with the device for each user that is to 
 
 - [Fingerprint Guide Sample App](https://developer.xamarin.com/samples/monodroid/FingerprintGuide/)
 - [Fingerprint Dialog Sample](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog/)
-- [Requesting Permissions at Runtime](http://developer.android.com/training/permissions/requesting.html)
-- [android.hardware.fingerprint](http://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
-- [android.support.v4.hardware.fingerprint](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)
+- [Requesting Permissions at Runtime](https://developer.android.com/training/permissions/requesting.html)
+- [android.hardware.fingerprint](https://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
+- [android.support.v4.hardware.fingerprint](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)
 - [Android.Content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
 - [Fingerprint and payments API (video)](https://youtu.be/VOn7VrTRlA4)

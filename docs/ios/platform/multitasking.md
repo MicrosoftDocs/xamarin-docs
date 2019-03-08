@@ -192,7 +192,7 @@ If we run this app on an iPad with an hardware keyboard attached and the user ty
 
 [![](multitasking-images/keyboard03.png "The keyboard shortcuts popup")](multitasking-images/keyboard03.png#lightbox)
 
-Please see the sample [MultiTask app](http://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) for an example implementation.
+Please see the sample [MultiTask app](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) for an example implementation.
 
 <a name="Resource-Management-Considerations" />
 

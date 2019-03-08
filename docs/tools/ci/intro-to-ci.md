@@ -35,10 +35,6 @@ The [App Center Test](https://docs.microsoft.com/appcenter/test-cloud) addresses
 
 [![](intro-to-ci-images/intro02-small.png "Once these tests are uploaded to App Center, the CI server can run them automatically as part of a CI process as shown in this diagram")](intro-to-ci-images/intro02.png#lightbox)
 
-# Components of Continuous Integration
-
-There is an extensive ecosystem of commercial and open-source tools designed to support CI. This section explains a few of the most common ones.
-
 ## Version Control
 
 ### Azure DevOps and Team Foundation Server
@@ -110,7 +106,3 @@ Another common CI environment can be entirely OS X based. This scenario involves
 
 > [!IMPORTANT]
 > **Jenkins is [not supported by Microsoft](~/cross-platform/troubleshooting/questions/xamarin-jenkins.md).**
-
-# Summary
-
-This document introduced the concept of continuous integration and the advantages it brings to software development teams. The importance of version control was discussed along with the role and responsibilities of the build server. The document then went on to discuss some of the tools that can be use for source code control and build servers. We also introduced App Center Test, which helps developers publish great apps by running automated tests that will prove the quality and functionality of their apps. More detailed documentation on submitting apps and tests to App Center can be found [here](https://docs.microsoft.com/appcenter/test-cloud). Finally, to help understand how all these tools and components fit together, we outlined several different CI environments that organizations might establish for continuous integration. For more information using Visual Studio Team Services and Team Foundation Server with Xamarin projects, see [Configuring TFVC](https://docs.microsoft.com/azure/devops/repos/tfvc/overview/) and this [Continuous Integration introduction](https://docs.microsoft.com/azure/devops/pipelines/get-started-designer/). Likewise, if you're using Jenkins, see [Using Jenkins with Xamarin](~/tools/ci/jenkins-walkthrough.md) for detailed information on setting up a continuous integration.

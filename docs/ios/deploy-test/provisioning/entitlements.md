@@ -62,7 +62,7 @@ To configure the entitlements in Visual Studio, do the following:
 
     ![](entitlements-images/servicevs02.png "Editing the Entitlements")
 
-    Alternatively, double-clicking on the **Entitlements.plist** file will open the XML Source editor which will allow you to set the Entitlement property and key value as detailed in the [Entitlements Reference](#keyreference) section below.
+    Alternatively, double-clicking on the **Entitlements.plist** file will open the XML Source editor which will allow you to set the Entitlement property and key value as detailed in the [Entitlement key Reference](#entitlement-key-reference) section below.
 
 5. Select and configure any entitlements required for the Xamarin.iOS application so that they match the setup that was defined when the App ID was created.
 6. Save the changes to the **Entitlements.plist** file.
@@ -119,8 +119,8 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
     - The $`(TeamIdentifierPrefix)` and `$(CFBundleIdentifier)` placeholders can be used and will be substituted for the correct values at build time.
 
 > [!IMPORTANT]
-> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
-> to help developers properly handle the European Union's General Data 
+> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/)
+> to help developers properly handle the European Union's General Data
 > Protection Regulation (GDPR).
 
 ### App Groups
@@ -197,7 +197,7 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
 
 ### ClassKit
 
-- **Description**: ClassKit enables teachers to view student progress on 
+- **Description**: ClassKit enables teachers to view student progress on
 assigned activities in your app.
     - **Key**: com.apple.developer.ClassKit-environment
     - **String**: `development` or `production`

@@ -6,6 +6,7 @@ ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
+ms.date: 03/17/2017
 ---
 
 # Working with watchOS Localization in Xamarin

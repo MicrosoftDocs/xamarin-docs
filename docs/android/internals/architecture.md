@@ -80,7 +80,7 @@ to allow Android to call into managed code.
 ## Android Callable Wrappers
 
 - **Android callable wrappers** are a
-  [JNI](http://en.wikipedia.org/wiki/Java_Native_Interface) bridge
+  [JNI](https://en.wikipedia.org/wiki/Java_Native_Interface) bridge
   which are used any time the Android runtime needs to invoke managed
   code. Android callable wrappers are how virtual methods can be
   overridden and Java interfaces can be implemented. See the
@@ -193,7 +193,7 @@ virtual methods from a constructor always invoke the most derived
 method implementation. For example, the
 [TextView(Context, AttributeSet, int) constructor](https://developer.xamarin.com/api/constructor/Android.Widget.TextView.TextView/p/Android.Content.Context/Android.Util.IAttributeSet/System.Int32/)
 invokes the virtual method
-[TextView.getDefaultMovementMethod()](http://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()),
+[TextView.getDefaultMovementMethod()](https://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()),
 which is bound as the
 [TextView.DefaultMovementMethod property](https://developer.xamarin.com/api/property/Android.Widget.TextView.DefaultMovementMethod/).
 Thus, if a type
@@ -225,7 +225,7 @@ Order of events:
     *LogTextBox* .
 
 3.  The *monodroid.apidemo.LogTextBox* constructor executes the
-    [android.widget.TextView](http://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29)
+    [android.widget.TextView](https://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29)
     constructor.
 
 4.  The *TextView* constructor invokes
@@ -338,11 +338,11 @@ When an activity, service, etc. is launched, Android will first check
 to see if there is already a process running to host the
 activity/service/etc. If no such process exists, then a new process
 will be created, the
-[AndroidManifest.xml](http://developer.android.com/guide/topics/manifest/manifest-intro.html)
+[AndroidManifest.xml](https://developer.android.com/guide/topics/manifest/manifest-intro.html)
 is read, and the type specified in the
-[/manifest/application/@android:name](http://developer.android.com/guide/topics/manifest/application-element.html#nm)
+[/manifest/application/@android:name](https://developer.android.com/guide/topics/manifest/application-element.html#nm)
 attribute is loaded and instantiated. Next, all types specified by the
-[/manifest/application/provider/@android:name](http://developer.android.com/guide/topics/manifest/provider-element.html#nm)
+[/manifest/application/provider/@android:name](https://developer.android.com/guide/topics/manifest/provider-element.html#nm)
 attribute values are instantiated and have their
 [ContentProvider.attachInfo%28)](https://developer.xamarin.com/api/member/Android.Content.ContentProvider.AttachInfo/p/Android.Content.Context/Android.Content.PM.ProviderInfo/)
 method invoked. Xamarin.Android hooks into this by adding a
@@ -359,17 +359,17 @@ as the Application instance is created before Mono can be initialized.)
 Once process initialization has completed, `AndroidManifest.xml` is
 consulted to find the class name of the activity/service/etc. to
 launch. For example, the
-[/manifest/application/activity/@android:name attribute](http://developer.android.com/guide/topics/manifest/activity-element.html#nm)
+[/manifest/application/activity/@android:name attribute](https://developer.android.com/guide/topics/manifest/activity-element.html#nm)
 is used to determine the name of an Activity to load. For Activities,
 this type must inherit
 [android.app.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/).
 The specified type is loaded via
-[Class.forName()](http://developer.android.com/reference/java/lang/Class.html#forName(java.lang.String))
+[Class.forName()](https://developer.android.com/reference/java/lang/Class.html#forName(java.lang.String))
 (which requires that the type be a Java type, hence the Android
 Callable Wrappers), then instantiated. Creation of an Android Callable
 Wrapper instance will trigger creation of an instance of the
 corresponding C# type. Android will then invoke
-[Activity.onCreate(Bundle)](http://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle))
+[Activity.onCreate(Bundle)](https://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle))
 , which will cause the corresponding
 [Activity.OnCreate(Bundle)](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
 to be invoked, and you're off to the races.

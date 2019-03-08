@@ -176,5 +176,5 @@ newer releases using the 1.3.2 or older installers.
 
 To downgrade from 1.4 or newer to 1.3.2 or older:
 
-1. [Uninstall Workbooks & Inspector manually](#macOS)
+1. [Uninstall Workbooks & Inspector manually](#uninstall-macos)
 2. Run the 1.3.2 or older `.pkg` installer

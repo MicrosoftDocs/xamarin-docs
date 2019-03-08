@@ -223,7 +223,7 @@ It is recommended that you read the design guidelines relevant to the
 platforms you are targeting:
 
 -   **iOS** –  [Apple's Human Interface Guidelines](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html)
--   **Android** –  [Google's User Interface Guidelines](http://developer.android.com/guide/practices/ui_guidelines/index.html)
+-   **Android** –  [Google's User Interface Guidelines](https://developer.android.com/guide/practices/ui_guidelines/index.html)
 -   **Windows** –  [User Experience Design Guidelines for Windows](https://developer.microsoft.com/windows/design)
 
 
@@ -298,7 +298,7 @@ documentation for [linking native libraries](~/ios/platform/native-interop.md) i
 
 ### C++ via CppSharp
 
-Miguel explains CXXI (now called [CppSharp](https://github.com/mono/CppSharp)) on his [blog](http://tirania.org/blog/archive/2011/Dec-19.html). An
+Miguel explains CXXI (now called [CppSharp](https://github.com/mono/CppSharp)) on his [blog](https://tirania.org/blog/archive/2011/Dec-19.html). An
 alternative to binding to a C++ library directly is to create a C wrapper and
 bind to that via P/Invoke.
 

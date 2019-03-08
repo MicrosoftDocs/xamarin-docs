@@ -44,7 +44,7 @@ to use:
 ```
 
 For more information about using native libraries, see
-[Interop with native libraries](http://www.mono-project.com/docs/advanced/pinvoke/).
+[Interop with native libraries](https://www.mono-project.com/docs/advanced/pinvoke/).
 
 ## Debugging Native Code with Visual Studio 2017
 

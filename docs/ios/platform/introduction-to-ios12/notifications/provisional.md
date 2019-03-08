@@ -6,7 +6,7 @@ ms.assetid: 5DCB36B9-2637-48AE-8FC0-F6124F08AC48
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 9/4/2018
+ms.date: 09/04/2018
 ---
 # Provisional notifications in Xamarin.iOS
 

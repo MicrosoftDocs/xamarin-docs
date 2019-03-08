@@ -145,7 +145,7 @@ It is possible for an application to respond to `Button` taps without handling t
 
 This approach is particularly suitable in connection with data-binding, and particularly when implementing the Model-View-ViewModel (MVVM) architecture. These topics are discussed in the articles [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md), [From Data Bindings to MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md), and [MVVM](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 
-In an MVVM application, the ViewModel defines properties of type `ICommand` that are then connected to the XAML `Button` elements with data bindings. Xamarin.Forms also defines [`Command`]((xref:Xamarin.Forms.Command`1)) and [`Command<T>`](xref:Xamarin.Forms.Command`1) classes that implement the `ICommand` interface and assist the ViewModel in defining properties of type `ICommand`.
+In an MVVM application, the ViewModel defines properties of type `ICommand` that are then connected to the XAML `Button` elements with data bindings. Xamarin.Forms also defines [`Command`]((xref:Xamarin.Forms.Command)) and [`Command<T>`](xref:Xamarin.Forms.Command`1) classes that implement the `ICommand` interface and assist the ViewModel in defining properties of type `ICommand`.
 
 Commanding is described in greater detail in the article [**The Command Interface**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) but the **Basic Button Command** page in the [**ButtonDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) sample shows the basic approach.
 

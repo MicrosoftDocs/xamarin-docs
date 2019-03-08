@@ -18,7 +18,7 @@ drawables. Layout controls including `ScrollView`, `LinearLayout`, and
 This page links to the Android-Wear-specific controls from the 
 [wearable UI library](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary) 
 available in Xamarin projects via the 
-[Wearable Support](http://www.nuget.org/packages/Xamarin.Android.Wear/) 
+[Wearable Support](https://www.nuget.org/packages/Xamarin.Android.Wear/) 
 NuGet package. These controls include the following:
 
 -   **GridViewPager** &ndash; Create a two-dimensional navigation

@@ -612,6 +612,6 @@ the contents of a specified URL, either local or remote using the `"html"` type.
 {
         "type": "html",
         "caption": "Miguel's blog",
-        "url": "http://tirania.org/blog" 
+        "url": "https://tirania.org/blog" 
 }
 ```

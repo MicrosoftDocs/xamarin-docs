@@ -22,7 +22,7 @@ Before you start, create a new Xamarin.Forms solution, or use an existing Xamari
 
 ## Adding a GTK# App
 
-GTK# for macOS and Linux is installed as part of [Mono](http://www.mono-project.com/download/stable/). GTK# for .NET can be installed on Windows with the [GTK# Installer](http://www.mono-project.com/download/stable/#download-win).
+GTK# for macOS and Linux is installed as part of [Mono](https://www.mono-project.com/download/stable/). GTK# for .NET can be installed on Windows with the [GTK# Installer](https://www.mono-project.com/download/stable/#download-win).
 
 # [Visual Studio](#tab/windows)
 

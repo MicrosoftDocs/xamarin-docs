@@ -110,7 +110,7 @@ if (permissionResult == Android.Content.PM.Permission.Granted)
 else
 {
     // No permission. Go and ask for permissions and don't start the scanner. See
-    // http://developer.android.com/training/permissions/requesting.html
+    // https://developer.android.com/training/permissions/requesting.html
 }
 ```
 
@@ -121,13 +121,13 @@ choose to cache the results of any of these checks, make sure to cater for upgra
 
 For more information on how to request permissions in Android 6.0,
 consult the Android guide
-[Requesting Permissions at Run-Time](http://developer.android.com/training/permissions/requesting.html).
+[Requesting Permissions at Run-Time](https://developer.android.com/training/permissions/requesting.html).
 
 ## Related Links
 
 - [Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
 - [ContextCompat](https://developer.xamarin.com/api/type/Android.Support.V4.Content.ContextCompat/)
 - [KeyguardManager](https://developer.xamarin.com/api/type/Android.App.KeyguardManager/)
-- [FingerprintManager](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
-- [FingerprintManagerCompat](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
-- [Requesting Permissions at Run-Time](http://developer.android.com/training/permissions/requesting.html)
+- [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
+- [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
+- [Requesting Permissions at Run-Time](https://developer.android.com/training/permissions/requesting.html)

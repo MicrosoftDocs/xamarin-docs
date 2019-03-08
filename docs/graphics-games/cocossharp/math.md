@@ -261,7 +261,7 @@ This code results in the following behavior:
 
 Notice that the code above passes the Y parameter first, then the X parameter, when calling the `Atan2` method. This is backwards from the usual X, Y ordering of position coordinates. For more information [see the Atan2 docs](https://msdn.microsoft.com/library/system.math.atan2(v=vs.110).aspx).
 
-It’s also worth noting that the return value from `Atan2` is in radians, which is another unit used to measure angles. This guide doesn’t cover the details of radians, but keep in mind that all trigonometric functions in the `System.Math` namespace use radians, so any values must be converted to degrees before being used on CocosSharp objects. More information on radians can be found [in the radian Wikipedia page](http://en.wikipedia.org/wiki/Radian).
+It’s also worth noting that the return value from `Atan2` is in radians, which is another unit used to measure angles. This guide doesn’t cover the details of radians, but keep in mind that all trigonometric functions in the `System.Math` namespace use radians, so any values must be converted to degrees before being used on CocosSharp objects. More information on radians can be found [in the radian Wikipedia page](https://en.wikipedia.org/wiki/Radian).
 
 #### Forward angle
 

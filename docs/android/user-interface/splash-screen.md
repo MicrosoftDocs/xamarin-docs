@@ -69,7 +69,7 @@ splash screen Activity. It is necessary to use a bitmapped image (such
 as a PNG or JPG) for the image to display.
 
 In this guide, we use a
-[Layer List](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
+[Layer List](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
 to center the splash screen image in the application. The following
 snippet is an example of a `drawable` resource using a `layer-list`:
 
@@ -308,5 +308,5 @@ launch activity.
 ## Related Links
 
 - [SplashScreen (sample)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
-- [layer-list Drawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
+- [layer-list Drawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
 - [ Material Design Patterns - Launch Screens](https://material.io/design/communication/launch-screen.html#usage)

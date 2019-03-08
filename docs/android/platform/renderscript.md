@@ -19,7 +19,7 @@ Renderscript is a programming framework created by Google for the
 purpose of improving the performance of Android applications that
 require extensive computational resources. It is a low level, high
 performance API based on
-[C99](http://en.wikipedia.org/wiki/C99). Because it is a low level API
+[C99](https://en.wikipedia.org/wiki/C99). Because it is a low level API
 that will run on CPUs, GPUs, or DSPs, Renderscript is well suited for
 Android apps that may need to perform any of the following:
 

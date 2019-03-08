@@ -533,5 +533,5 @@ learned in the [Hello, iOS Multiscreen Deep Dive](~/ios/get-started/hello-ios-mu
 ## Related Links
 
 - [Hello, iOS (sample)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
-- [iOS Human Interface Guidelines](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
+- [iOS Human Interface Guidelines](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)

@@ -6,7 +6,7 @@ ms.assetid: 137C719D-6D97-4D5B-9877-F6F35BF85FF0
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 9/4/2018
+ms.date: 09/04/2018
 ---
 # Notifications in iOS 12
 

@@ -110,4 +110,4 @@ screenshot below, see the [Android Beam demo](https://developer.xamarin.com/samp
 
 - [Android Beam Demo (sample)](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/)
 - [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 Platform](http://developer.android.com/sdk/android-4.0.html)
+- [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

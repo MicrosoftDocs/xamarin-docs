@@ -100,7 +100,7 @@ Google Nexus devices (with the exception of the Galaxy Nexus) require
 the Google USB Driver. The driver for the Galaxy Nexus is
 [distributed by Samsung](http://www.samsung.com/us/support/downloads/).
 All other Android devices should use the
-[USB driver from their respective manufacturer](http://developer.android.com/tools/extras/oem-usb.html#Drivers).
+[USB driver from their respective manufacturer](https://developer.android.com/tools/extras/oem-usb.html#Drivers).
 
 Install the **Google USB Driver** package by starting the Android SDK
 Manager, and expanding the **Extras** folder, as can be seen in the
@@ -186,7 +186,7 @@ ways to do so:
 ### Connecting over WiFi
 
 By default, the
-[Android Debug Bridge](http://developer.android.com/tools/help/adb.html) (*ADB*)
+[Android Debug Bridge](https://developer.android.com/tools/help/adb.html) (*ADB*)
 is configured to communicate with an Android device via USB. It is
 possible to reconfigure it to use TCP/IP instead of USB. To
 do this, both the device and the computer must be on the same WiFi
@@ -242,9 +242,9 @@ connect the device to a computer using either USB or WiFi.
 
 ## Related Links
 
-- [Android Debug Bridge](http://developer.android.com/tools/help/adb.html)
-- [Using Hardware Devices](http://developer.android.com/tools/device.html)
+- [Android Debug Bridge](https://developer.android.com/tools/help/adb.html)
+- [Using Hardware Devices](https://developer.android.com/tools/device.html)
 - [Samsung Driver Downloads](http://www.samsung.com/us/support/downloads/)
-- [OEM USB Drivers](http://developer.android.com/tools/extras/oem-usb.html#Drivers)
-- [Google USB Driver](http://developer.android.com/sdk/win-usb.html)
+- [OEM USB Drivers](https://developer.android.com/tools/extras/oem-usb.html#Drivers)
+- [Google USB Driver](https://developer.android.com/sdk/win-usb.html)
 - [XDA Developers : Windows 8 - ADB/fastboot driver problem solved](http://forum.xda-developers.com/showthread.php?t=1583801)

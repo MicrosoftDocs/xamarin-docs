@@ -97,6 +97,6 @@ Xamarin.Essentials is available as a NuGet package that can be added to any exis
 
 We recommend developers new to Xamarin visit [getting started with Xamarin development](~/cross-platform/getting-started/index.md).
 
-Visit the [Xamarin.Essentials GitHub Repository](http://github.com/xamarin/Essentials) to see the current source code, what is coming next, run samples, and clone the repository. Community contributions are welcome!
+Visit the [Xamarin.Essentials GitHub Repository](https://github.com/xamarin/Essentials) to see the current source code, what is coming next, run samples, and clone the repository. Community contributions are welcome!
 
 Browse through the [API documentation](xref:Xamarin.Essentials) for every feature of Xamarin.Essentials.

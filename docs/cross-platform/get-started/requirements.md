@@ -87,7 +87,7 @@ follow the [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/
 installation instructions.
 
 A complete list of our current product versions is available on the
-[current releases page](http://developer.xamarin.com/releases/current/). This
+[current releases page](https://developer.xamarin.com/releases/current/). This
 page also outlines the individual product versions (and links to the release notes)
 for our beta and alpha channels.
 

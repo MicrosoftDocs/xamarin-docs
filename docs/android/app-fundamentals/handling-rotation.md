@@ -406,5 +406,5 @@ manually.
 
 - [Rotation Demo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/RotationDemo/)
 - [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md)
-- [Handling Runtime Changes](http://developer.android.com/guide/topics/resources/runtime-changes.html)
+- [Handling Runtime Changes](https://developer.android.com/guide/topics/resources/runtime-changes.html)
 - [Fast Screen Orientation Change](http://android-developers.blogspot.com/2009/02/faster-screen-orientation-change.html)

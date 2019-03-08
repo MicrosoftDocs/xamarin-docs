@@ -199,7 +199,7 @@ to learn how add localized string files to an application project.
 
 ## Testing Accessibility
 
-Follow [these steps](http://developer.android.com/training/accessibility/testing.html#how-to)
+Follow [these steps](https://developer.android.com/training/accessibility/testing.html#how-to)
 to enable TalkBack and Explore by Touch to test accessibility on Android devices.
 
 You may need to install [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)
@@ -209,4 +209,4 @@ from Google Play if it does not appear in **Settings > Accessibility**.
 ## Related Links
 
 - [Cross-platform Accessibility](~/cross-platform/app-fundamentals/accessibility.md)
-- [Android Accessibility APIs](http://developer.android.com/guide/topics/ui/accessibility/index.html)
+- [Android Accessibility APIs](https://developer.android.com/guide/topics/ui/accessibility/index.html)

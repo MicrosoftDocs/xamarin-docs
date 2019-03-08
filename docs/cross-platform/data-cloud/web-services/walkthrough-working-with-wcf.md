@@ -13,7 +13,7 @@ ms.date: 02/17/2018
 _This walkthrough covers how a mobile application built with Xamarin can consume a WCF web service using the BasicHttpBinding class._
 
 
-It is a common requirement for mobile applications to be able to communicate with backend systems. There are many choices and options for backend frameworks, one of which is [Windows Communication Foundation](http://msdn.microsoft.com/library/ms731082.aspx) (WCF). This walkthrough will provide an example of how a Xamarin mobile application can consume a WCF service using the `BasicHttpBinding` class. The walkthrough includes the following topics:
+It is a common requirement for mobile applications to be able to communicate with backend systems. There are many choices and options for backend frameworks, one of which is [Windows Communication Foundation](https://msdn.microsoft.com/library/ms731082.aspx) (WCF). This walkthrough will provide an example of how a Xamarin mobile application can consume a WCF service using the `BasicHttpBinding` class. The walkthrough includes the following topics:
 
 1.  **Create a WCF Service** - In this section we will create a very basic WCF service having two methods. The first method will take a string parameter, while the other method will take a C# object. This section will also discuss how to configure a developer's workstation to allow remote access to the WCF service.
 1.  **Create a Xamarin.Android Application** - Once the WCF service has been created, we will create a simple Xamarin.Android application that will use the WCF service. This section will cover how to create a WCF service proxy class to facilitate communication with the WCF service.

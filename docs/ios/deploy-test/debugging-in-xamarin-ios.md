@@ -26,7 +26,7 @@ The Xamarin.iOS debugger is integrated into your IDE and it allows
 developers to debug Xamarin.iOS applications built with any of the managed
 languages supported by Xamarin.iOS in the simulator and on the device.
 
-The Xamarin.iOS debugger uses the [Mono Soft Debugger](http://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/), which means that the generated code
+The Xamarin.iOS debugger uses the [Mono Soft Debugger](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/), which means that the generated code
 and the Mono runtime cooperate with the IDE to provide a debugging
 experience. This is different than hard debuggers like LLDB or MDB which control
 a program without the knowledge or cooperation from the debugged program.

@@ -164,7 +164,7 @@ Install properties control the behavior of the `Install` and
 -   **AdbTarget** &ndash; Specifies the Android target device the
     Android package may be installed to or removed from. The value of
     this property is the same as the
-    [`adb` Target Device option](http://developer.android.com/tools/help/adb.html#issuingcommands):
+    [`adb` Target Device option](https://developer.android.com/tools/help/adb.html#issuingcommands):
 
     ```bash
     # Install package onto emulator via -e
@@ -239,7 +239,7 @@ when packaging Release applications.
 
 -   **AndroidEnableSGenConcurrent** &ndash; A boolean property that
     determines whether or not Mono's
-    [concurrent GC collector](http://www.mono-project.com/docs/about-mono/releases/4.8.0/#concurrent-sgen)
+    [concurrent GC collector](https://www.mono-project.com/docs/about-mono/releases/4.8.0/#concurrent-sgen)
     will be used.
 
     Support for this property was added in Xamarin.Android 7.2.
@@ -484,7 +484,7 @@ when packaging Release applications.
     property is `True`.
 
 -   **EnableProguard** &ndash; A boolean property that determines
-    whether or not [proguard](http://developer.android.com/tools/help/proguard.html)
+    whether or not [proguard](https://developer.android.com/tools/help/proguard.html)
     is run as part of the packaging process to link Java code.
 
     Support for this property was added in Xamarin.Android 5.1.

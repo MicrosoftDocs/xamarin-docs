@@ -320,7 +320,7 @@ notification:
 The following code example illustrates how to use
 `NotificationCompat.Builder` to generate a basic notification. Notice that
 `NotificationCompat.Builder` methods support
-[method chaining](http://en.wikipedia.org/wiki/Method_chaining); that
+[method chaining](https://en.wikipedia.org/wiki/Method_chaining); that
 is, each method returns the builder object so you can use the result of
 the last method call to invoke the next method call:
 
@@ -496,7 +496,7 @@ A notification remains visible until one of three things happens:
 -   The application calls `NotificationManager.CancelAll`.
 
 For more about updating Android notifications, see
-[Modify a Notification](http://developer.android.com/training/notify-user/managing.html#Updating).
+[Modify a Notification](https://developer.android.com/training/notify-user/managing.html#Updating).
 
 
 ### Starting an activity from a notification
@@ -563,7 +563,7 @@ activity.
 In a production app, your app must handle the *back stack* when the
 user presses the **Back** button within the notification activity (if
 you are not familiar with Android tasks and the back stack, see
-[Tasks and Back Stack](http://developer.android.com/guide/components/tasks-and-back-stack.html)).
+[Tasks and Back Stack](https://developer.android.com/guide/components/tasks-and-back-stack.html)).
 In most cases, navigating backward out of the notification activity
 should return the user out of the app and back to Home screen. To
 manage the back stack, your app uses the
@@ -1181,7 +1181,7 @@ Android 5.0. Finally, you learned how to use
 with earlier versions of Android.
 
 For guidelines about designing notifications for Android, see
-[Notifications](http://developer.android.com/guide/topics/ui/notifiers/notifications.html).
+[Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
 
 ## Related Links
@@ -1189,7 +1189,7 @@ For guidelines about designing notifications for Android, see
 - [NotificationsLab (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/NotificationsLab/)
 - [LocalNotifications (sample)](https://developer.xamarin.com/samples/monodroid/LocalNotifications/)
 - [Local Notifications In Android Walkthrough](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md)
-- [Notifying the User](http://developer.android.com/training/notify-user/index.html)
+- [Notifying the User](https://developer.android.com/training/notify-user/index.html)
 - [Notification](https://developer.xamarin.com/api/type/Android.App.Notification/)
 - [NotificationManager](https://developer.xamarin.com/api/type/Android.App.NotificationManager/)
 - [NotificationCompat.Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html)

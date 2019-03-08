@@ -10,7 +10,7 @@ ms.date: 03/23/2017
 
 # Visual Basic.NET in Xamarin iOS and Android
 
-The [TaskyPortable](/samples/mobile/VisualBasic/TaskyPortableVB/) sample application demonstrates how Visual Basic code compiled into a Portable Class Library can be used with Xamarin. Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone:
+The [TaskyPortableVB](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB) sample application demonstrates how Visual Basic code compiled into a Portable Class Library can be used with Xamarin. Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone:
 
  [![](native-apps-images/image5.png "iOS, Android, and Windows phones running an app built with Visual Basic")](native-apps-images/image5.png#lightbox)
 
@@ -23,7 +23,7 @@ This guide discusses how Visual Basic has been implemented in the
 Xamarin sample for iOS and Android.
 
 > [!NOTE]
-> Review the instructions on [Visual Basic.NET PCLs](/guides/cross-platform/application_fundamentals/pcl/portable_visual_basic_net/) before continuing with this guide.
+> Review the instructions on [Portable Visual Basic.NET](index.md) before continuing with this guide.
 
 ## VisualBasicPortableLibrary
 
@@ -157,9 +157,9 @@ End Class
 
 > [!NOTE]
 > This code is an example of a very basic data-storage mechanism.
-> It is provided to demonstrate how a Portable Class Library can code 
-> against an interface to access platform-specific functionality 
-> (in this case, loading and saving an Xml file). It it not intended to be 
+> It is provided to demonstrate how a Portable Class Library can code
+> against an interface to access platform-specific functionality
+> (in this case, loading and saving an Xml file). It it not intended to be
 > a production-quality database alternative.
 
 ## iOS, Android and Windows Phone Application Projects
@@ -335,4 +335,4 @@ This article has demonstrated how consume Visual Basic code in Xamarin applicati
 ## Related Links
 
 - [TaskyPortableVB (sample)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB)
-- [Cross-Platform Development with the .NET Framework (Microsoft)](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)
+- [Cross-Platform Development with the .NET Framework (Microsoft)](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)

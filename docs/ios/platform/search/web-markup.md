@@ -209,7 +209,7 @@ Finally, the following HTML would add an action to get directions from the searc
 
 ```
 
-For more information, please see Apple's [App Search Developer Site](http://developer.apple.com/ios/search/).
+For more information, please see Apple's [App Search Developer Site](https://developer.apple.com/ios/search/).
 
 
 

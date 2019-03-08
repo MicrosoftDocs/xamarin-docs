@@ -54,8 +54,8 @@ The following rules apply when adding qualifiers to a resource type:
 The possible qualifiers are listed below for reference:
 
 - **MCC and MNC** &ndash; The
-  [mobile country code](http://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC)
-  and optionally the [mobile network code](http://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). The
+  [mobile country code](https://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC)
+  and optionally the [mobile network code](https://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). The
   SIM card will provide the MCC, while the network the device is
   connected to will provide the MNC. Although it is possible to target
   locales using the mobile country code, the recommend approach is to
@@ -66,9 +66,9 @@ The possible qualifiers are listed below for reference:
   see <http://mcc-mnc.com/>.
 
 - **Language** &ndash; The two-letter
-  [ISO 639-1 language code](http://en.wikipedia.org/wiki/ISO_639-1) and
+  [ISO 639-1 language code](https://en.wikipedia.org/wiki/ISO_639-1) and
   optionally followed by the two-letter
-  [ISO-3166-alpha-2 region code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
+  [ISO-3166-alpha-2 region code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
   If both qualifiers are provided, then they are separated by an
   `-r`. For example, to target French-speaking locales then the
   qualifier of `fr` is used. To target French-Canadian locales, the
@@ -200,7 +200,7 @@ The possible qualifiers are listed below for reference:
 
 
 For more complete information about resource qualifiers see
-[Providing Resources](http://developer.android.com/guide/topics/resources/providing-resources.html)
+[Providing Resources](https://developer.android.com/guide/topics/resources/providing-resources.html)
 on the Android Developers website.
 
 

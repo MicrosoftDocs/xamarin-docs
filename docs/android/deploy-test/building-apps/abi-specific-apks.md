@@ -41,7 +41,7 @@ delivered to a device based on the application's version code and other
 metadata contained with **AndroidManifest.XML**. For specific details and
 restrictions on how Google Play supports multiple APKs for an
 application, consult
-[Google's documentation on multiple APK support](http://developer.android.com/google/play/publishing/multiple-apks.html).
+[Google's documentation on multiple APK support](https://developer.android.com/google/play/publishing/multiple-apks.html).
 
 This guide will address how to script the building multiple APKs for a
 Xamarin.Android application, each APK targeting a specific ABI. It will
@@ -64,7 +64,7 @@ script these steps using
 Google recommends a particular algorithm for the version code that uses
 a seven digit version code (please see the section *Using a version
 code scheme* in the
-[Multiple APK support document](http://developer.android.com/google/play/publishing/multiple-apks.html)).
+[Multiple APK support document](https://developer.android.com/google/play/publishing/multiple-apks.html)).
 By expanding this version code scheme to eight digits, it is possible
 to include some ABI information into the version code that will ensure
 that Google Play will distribute the correct APK to a device. The
@@ -274,4 +274,4 @@ that has it's build scripted using Rake.
 
 - [OneABIPerAPK (sample)](https://developer.xamarin.com/samples/OneABIPerAPK/)
 - [Publishing an Application](~/android/deploy-test/publishing/index.md)
-- [Multiple APK Support for Google Play](http://developer.android.com/google/play/publishing/multiple-apks.html)
+- [Multiple APK Support for Google Play](https://developer.android.com/google/play/publishing/multiple-apks.html)

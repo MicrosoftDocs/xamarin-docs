@@ -460,7 +460,7 @@ One, two, three, or four `thickness` values are supported, each separated by whi
 - Four values indicate top, then right, then bottom, then left thickness.
 
 > [!NOTE]
-> CSS `thickness` values differ from XAML [`Thickness`](/api/type/Xamarin.Forms.Thickness/) values. For example, in XAML a two-value `Thickness` indicates horizontal then vertical thickness, while a four-value `Thickness` indicates left, then top, then right, then bottom thickness. In addition, XAML `Thickness` values are comma delimited.
+> CSS `thickness` values differ from XAML [`Thickness`](xref:Xamarin.Forms.Thickness) values. For example, in XAML a two-value `Thickness` indicates horizontal then vertical thickness, while a four-value `Thickness` indicates left, then top, then right, then bottom thickness. In addition, XAML `Thickness` values are comma delimited.
 
 ### NamedSize
 

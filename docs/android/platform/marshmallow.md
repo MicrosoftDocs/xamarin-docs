@@ -22,7 +22,7 @@ Xamarin.Android apps.
 
 ## Overview
 
-[Android 6.0 Marshmallow](http://developer.android.com/about/versions/marshmallow/index.html),
+[Android 6.0 Marshmallow](https://developer.android.com/about/versions/marshmallow/index.html),
 is the next major Android release after Android Lollipop.
 Xamarin.Android supports Android Marshmallow and includes:
 
@@ -30,7 +30,7 @@ Xamarin.Android supports Android Marshmallow and includes:
     APIs for the new features described below; these APIs are available 
     to Xamarin.Android apps when you target API Level 23. For more 
     information about Android 6.0 APIs, see 
-    [Android 6.0 APIs](http://developer.android.com/preview/api-overview.html). 
+    [Android 6.0 APIs](https://developer.android.com/preview/api-overview.html). 
 
 [![Hero images of tablets and phones running Marshmallow](marshmallow-images/android-m-hero-sml.png)](marshmallow-images/android-m-hero.png#lightbox)
 
@@ -109,13 +109,13 @@ in Xamarin-based apps:
     installed via the Android SDK Manager.
 
 -   **Java Developer Kit** &ndash; Xamarin.Android requires
-    [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) or
+    [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) or
     later if you are developing for API level 24 or greater (JDK 1.8 also supports API levels earlier
     than 24, including Marshmallow). The 64-bit version of JDK 1.8 is required if you
     are using custom controls or the Forms Previewer.
 
 You can continue to use 
-[JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) 
+[JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) 
 if you are developing specifically for API level 23 or earlier. 
 
 
@@ -164,7 +164,7 @@ use the Android SDK Manager to install the Android 6.0 SDK:
 You must install Android SDK Tools revision 24.3.4 or later.
 For more information about using the Android SDK Manager to install the
 Android 6.0 SDK, see
-[SDK Manager](http://developer.android.com/tools/help/sdk-manager.html).
+[SDK Manager](https://developer.android.com/tools/help/sdk-manager.html).
 
 
 
@@ -199,7 +199,7 @@ For example, this virtual device is configured to emulate a Nexus 5:
 If you are using a physical device such as a Nexus 5, 6, or 9, you can
 install a preview image of Android Marshmallow. For more information about
 updating your device to Android Marshmallow, see
-[Hardware System Images](http://developer.android.com/preview/download.html#images).
+[Hardware System Images](https://developer.android.com/preview/download.html#images).
 
 
 
@@ -395,7 +395,7 @@ feel. This library includes the following components:
     navigation in your app.
 
 To take advantage of the
-[Design Support Library](http://developer.android.com/tools/support-library/features.html#design)
+[Design Support Library](https://developer.android.com/tools/support-library/features.html#design)
 in your Xamarin.Android app, download and install the Xamarin 
 [Xamarin Support Library Design](https://www.nuget.org/packages/Xamarin.Android.Support.Design/)
 NuGet package.
@@ -429,7 +429,7 @@ preview-release NuGet packages:
     *App Invites* feature, which makes it possible for users to share 
     their app with friends. For more information about this feature, 
     see 
-    [Expand Your App's Reach with Google's App Invites](http://blog.xamarin.com/expand-your-apps-reach-with-googles-app-invites/). 
+    [Expand Your App's Reach with Google's App Invites](https://blog.xamarin.com/expand-your-apps-reach-with-googles-app-invites/). 
 
 -   [Android Support Libraries](https://www.nuget.org/packages?q=xamarin+support+library) 
     &ndash; These NuGets offer features that are only available for 
@@ -454,7 +454,7 @@ Xamarin.Android development.
 
 ## Related Links
 
-- [Android 6.0 Marshmallow](http://developer.android.com/about/versions/marshmallow/index.html)
+- [Android 6.0 Marshmallow](https://developer.android.com/about/versions/marshmallow/index.html)
 - [Get the Android SDK](https://developer.android.com/sdk/index.html#Other)
 - [Feature Overview](https://developer.android.com/preview/api-overview.html)
 - [Release Notes](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1.99/)

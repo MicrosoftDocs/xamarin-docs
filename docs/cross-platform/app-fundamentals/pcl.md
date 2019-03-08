@@ -61,7 +61,7 @@ This includes profiles that are combinations of:
 - UWP apps
 
 You can read more about the different profiles' capabilities on
-[Microsoft’s website](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)
+[Microsoft’s website](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)
 and see another community member's [PCL profile summary](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY)
 which includes supported framework info and other notes.
 

@@ -76,7 +76,7 @@ Additionally, apps should be evaluated in the context of the mobile form factor:
 -   **Form/Mobility** – How will this app work in a mobile form factor? How can I add value using mobile technologies such as location awareness, the camera, etc.?
 
 To help with designing the functionality of an app, it can be useful to
-define Actors and [Use Cases](http://en.wikipedia.org/wiki/Use_case). Actors are roles within
+define Actors and [Use Cases](https://en.wikipedia.org/wiki/Use_case). Actors are roles within
 an application and are often users. Use cases are typically actions or
 intents.
 
@@ -104,7 +104,7 @@ When creating UX mockups, it’s important to consider the interface
 guidelines for the various platforms that the app will target. The app should "feel at home" on each platform. The official design guidelines for each platform are:
 
 1.   **Apple** -  [Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
-1.   **Android** –  [Design Guidelines](http://developer.android.com/design/index.html)
+1.   **Android** –  [Design Guidelines](https://developer.android.com/design/index.html)
 1.   **UWP** –  [UWP Design basics](https://docs.microsoft.com/windows/uwp/design/basics/)
 
 For example, each app has a metaphor for switching between sections in an
@@ -360,7 +360,7 @@ those permissions, notifies the user that the application is requesting those
 permissions, and then allows the user to continue or cancel the installation.
 This is an essential step in the Android distribution model, because of the open
 application store model, since applications are not curated the way they are for
-iOS, for instance. For a list of application permissions, see the [Manifest Permissions](http://developer.android.com/reference/android/Manifest.permission.html) reference article in the Android Documentation.
+iOS, for instance. For a list of application permissions, see the [Manifest Permissions](https://developer.android.com/reference/android/Manifest.permission.html) reference article in the Android Documentation.
 
 ### Windows Considerations
 
@@ -398,5 +398,5 @@ design, testing, and deployment.
 
 - [Introduction to Mobile Development](~/cross-platform/get-started/introduction-to-mobile-development.md)
 - [Hello, iOS](~/ios/get-started/hello-ios/index.md)
-- [Hello, Android](http://developer.xamarin.com/get-started-droid/)
+- [Hello, Android](https://developer.xamarin.com/get-started-droid/)
 - [Application Fundamentals](~/cross-platform/app-fundamentals/index.md)

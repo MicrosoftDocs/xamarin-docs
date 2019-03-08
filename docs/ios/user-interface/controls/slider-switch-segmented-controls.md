@@ -47,9 +47,9 @@ The customized slider looks like this:
  [![](slider-switch-segmented-controls-images/image27a.png "Custom Slider")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
-> There is currently a [bug](http://stackoverflow.com/a/19496179) causing the `ThumbTint` to not 
+> There is currently a [bug](https://stackoverflow.com/a/19496179) causing the `ThumbTint` to not 
 render at run time as expected. You can add the following line of code **before** the code above as a 
-workaround. [[Source](http://stackoverflow.com/a/21396794)]:
+workaround. [[Source](https://stackoverflow.com/a/21396794)]:
 >
 > `slider1.SetThumbImage(UIImage.FromBundle("thumb.png"),UIControlState.Normal);`
 > 
