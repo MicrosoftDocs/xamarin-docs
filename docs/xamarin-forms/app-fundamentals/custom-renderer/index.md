@@ -58,4 +58,3 @@ This article shows how to write renderers to implement a custom `VideoPlayer` co
 
 - [Effects](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Custom Renderers (Xamarin University Video)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)
-- [Custom Renderers (Xamarin University Video) Sample](http://bit.ly/xf-customrenderer)
