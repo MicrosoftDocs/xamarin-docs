@@ -44,7 +44,7 @@ You can browse the [API documentation for UrhoSharp](https://developer.xamarin.c
 
 ## Samples
 
-We have created [samples on GitHub](http://github.com/xamarin/urho-samples) illustrating how to
+We have created [samples on GitHub](https://github.com/xamarin/urho-samples) illustrating how to
 use UrhoSharp.
 
 - **FeatureSamples** shows more than 40 individual samples that showcase specific features of Urho.

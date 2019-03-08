@@ -69,7 +69,7 @@ features in Xamarin-based apps:
 
 -  **Java JDK 1.8** &ndash; JDK 1.7 can be used if you are specifically 
     targetting API level 23 and earlier. JDK 1.8 is available from 
-   [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+   [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 To learn how to configure an Android 5.0 app project, 
 see [Setting Up an Android 5.0 Project](~/android/platform/lollipop.md).

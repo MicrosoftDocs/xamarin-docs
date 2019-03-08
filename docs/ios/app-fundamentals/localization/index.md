@@ -19,12 +19,12 @@ character sets/code pages in applications that must process non-Unicode data.
 ## iOS platform features
 
 This section describes some of the localization features in iOS. Skip to the
-[next section](#basics) to see specific code and examples.
+[next section](#Localization-basics-in-iOS) to see specific code and examples.
 
 ### Language
 
 Users choose their language in the **Settings** app. This setting affects the
-language strings and images displayed by the operating system and in apps. 
+language strings and images displayed by the operating system and in apps.
 
 To determine the language being used in an app, get the first element
 of `NSBundle.MainBundle.PreferredLocalizations`:
@@ -34,8 +34,8 @@ var lang = NSBundle.MainBundle.PreferredLocalizations[0];
 ```
 
 This value will be a language code such as `en` for English, `es` for Spanish,
-`ja` for Japanese, etc. The value returned is restricted to one of the 
-localizations supported by the application (using fallback rules to 
+`ja` for Japanese, etc. The value returned is restricted to one of the
+localizations supported by the application (using fallback rules to
 determine the best match).
 
 Application code does not always need to check for this value – Xamarin and iOS both
@@ -43,10 +43,10 @@ provide features that help to automatically provide the correct string or resour
 for the user's language. These features are described in the remainder of this document.
 
 > [!NOTE]
-> Use `NSLocale.PreferredLanguages` to determine the user's language 
+> Use `NSLocale.PreferredLanguages` to determine the user's language
 > preferences, regardless of the localizations supported by
 > the app. The values returned by this method changed in iOS 9; see
-> [Technical Note TN2418](https://developer.apple.com/library/content/technotes/tn2418/_index.html) 
+> [Technical Note TN2418](https://developer.apple.com/library/content/technotes/tn2418/_index.html)
 > for details.
 
 ### Locale
@@ -81,15 +81,15 @@ currently selected locale.
 > the iOS **Settings** app that does not map to a valid value in Mono. For
 > example, setting an iPhone’s language to English and its region to Spain
 > will cause the following APIs to yield different values:
-> 
+>
 > - `CurrentThead.CurrentCulture`: en-US (Mono API)
 > - `CurrentThread.CurrentUICulture`: en-US (Mono API)
 > - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (Apple API)
 >
 > Since Mono uses `CurrentThread.CurrentUICulture` to select resources and
-> `CurrentThread.CurrentCulture` to format dates and currencies, 
-> Mono-based localization (for example, with .resx files) may not yield 
-> expected results for these language/region combinations. In these 
+> `CurrentThread.CurrentCulture` to format dates and currencies,
+> Mono-based localization (for example, with .resx files) may not yield
+> expected results for these language/region combinations. In these
 > situations, rely on Apple's APIs to localize as necessary.
 
 ### NSCurrentLocaleDidChangeNotification
@@ -106,21 +106,21 @@ to see how to implement these ideas.
 
 ### Specifying default and supported languages in Info.plist
 
-In [Technical Q&A QA1828: How iOS Determines the Language For Your App](https://developer.apple.com/library/content/qa/qa1828/_index.html), 
+In [Technical Q&A QA1828: How iOS Determines the Language For Your App](https://developer.apple.com/library/content/qa/qa1828/_index.html),
 Apple describes how iOS selects a language to use in an app. The following
 factors impact which language is displayed:
 
 - The user's preferred languages (found in the **Settings** app)
 - The localizations bundled with the app (.lproj folders)
-- `CFBundleDevelopmentRegion` (**Info.plist** value specifying the default 
+- `CFBundleDevelopmentRegion` (**Info.plist** value specifying the default
   language for the app)
-- `CFBundleLocalizations` (**Info.plist** array specifying all supported 
+- `CFBundleLocalizations` (**Info.plist** array specifying all supported
    localizations)
 
 As indicated in the Technical Q&A, `CFBundleDevelopmentRegion` represents an
 app's default region and language. If the app doesn't explicitly support any
 of a user's preferred languages, it will use the language specified by this
-field. 
+field.
 
 > [!IMPORTANT]
 > iOS 11 applies this language selection mechanism more strictly than did
@@ -130,15 +130,15 @@ field.
 > may display a different language in iOS 11 than it did in iOS 10.
 
 If `CFBundleDevelopmentRegion` has not been specified in the **Info.plist**
-file, the Xamarin.iOS build tools currently use a default value of 
+file, the Xamarin.iOS build tools currently use a default value of
 `en_US`. While this may change in a future release, it means that the
 default language is English.
 
-To ensure that your app selects an expected language, take the following 
+To ensure that your app selects an expected language, take the following
 steps:
 
-- Specify a default language. Open **Info.plist** and use the **Source** 
-  view to set a value for the `CFBundleDevelopmentRegion` key; in XML, it 
+- Specify a default language. Open **Info.plist** and use the **Source**
+  view to set a value for the `CFBundleDevelopmentRegion` key; in XML, it
   should look similar to the following:
 
 ```xml
@@ -327,10 +327,10 @@ iOS provides a number of features to assist in building RTL-aware apps:
 - `UINavigationController` automatically flips the back button and reverses swipe direction.
 
 The following screenshots show the
-[localized Tasky sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) 
+[localized Tasky sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
 in Arabic and Hebrew (although English has been entered in the fields):
 
-[![](images/rtl-ar-sml.png "Localization in Arabic")](images/rtl-ar.png#lightbox "Arabic") 
+[![](images/rtl-ar-sml.png "Localization in Arabic")](images/rtl-ar.png#lightbox "Arabic")
 
 [![](images/rtl-he-sml.png "Localization in Hebrew")](images/rtl-he.png#lightbox "Hebrew")
 
@@ -442,14 +442,14 @@ property; and `UIButton`s default text is set using `normalTitle`:
 
 > [!IMPORTANT]
 > Using a storyboard with size classes may result in translations that do
-> not appear in the application. [Apple's Xcode Release Notes](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html) 
+> not appear in the application. [Apple's Xcode Release Notes](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html)
 > indicate that a storyboard or XIB will not localize correctly if three things
-> are true: it uses size classes, the base localization and the build target 
-> are set to Universal, and the build targets iOS 7.0. The fix is to 
-> duplicate your  storyboard strings file into two identical files: 
+> are true: it uses size classes, the base localization and the build target
+> are set to Universal, and the build targets iOS 7.0. The fix is to
+> duplicate your  storyboard strings file into two identical files:
 > **MainStoryboard~iphone.strings** and **MainStoryboard~ipad.strings**, as
 > shown in the following screenshot:
-> 
+>
 > ![](images/xs-dup-strings.png "Strings files")
 
 <a name="appstore" />

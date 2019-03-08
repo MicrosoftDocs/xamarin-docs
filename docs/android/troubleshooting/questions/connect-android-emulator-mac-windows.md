@@ -33,7 +33,7 @@ virtual machine, use the following steps:
     ```
 
     The odd-numbered port is the one used to connect to `adb`. See also
-    [http://developer.android.com/tools/devices/emulator.html#emulatornetworking](http://developer.android.com/tools/devices/emulator.html#emulatornetworking).
+    [https://developer.android.com/tools/devices/emulator.html#emulatornetworking](https://developer.android.com/tools/devices/emulator.html#emulatornetworking).
 
 4.  _Option 1_: Use
     [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
@@ -126,7 +126,7 @@ causes the app to exit immediately after launch.
 
 In theory, another approach would be to use `adb`'s built-in capability
 to connect to an `adb` server running on a remote machine (see for
-example [http://stackoverflow.com/a/18551325](http://stackoverflow.com/a/18551325)).
+example [https://stackoverflow.com/a/18551325](https://stackoverflow.com/a/18551325)).
 But the Xamarin.Android IDE extensions do not currently provide a way
 to configure that option.
 

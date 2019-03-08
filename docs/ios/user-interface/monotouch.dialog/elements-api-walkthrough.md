@@ -190,5 +190,5 @@ screens. In addition, it showed how to use MT.D in conjunction with a `UINavigat
 - [JSON Element Walkthrough](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
 - [MonoTouch Dialog on Github](https://github.com/migueldeicaza/MonoTouch.Dialog)
 - [TweetStation Application](https://github.com/migueldeicaza/TweetStation)
-- [UITableViewController Class Reference](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
-- [UINavigationController Class Reference](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
+- [UITableViewController Class Reference](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
+- [UINavigationController Class Reference](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

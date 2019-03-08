@@ -26,7 +26,7 @@ This guide uses the Xamarin.Forms .NET Standard library template as an example, 
 
     Example: `<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`
 
-4.  Change the "name" element of the main [multi-project template file](http://msdn.microsoft.com/library/ms185308.aspx) (`Xamarin.Forms.PCL.vstemplate`) to make it unique. For example:
+4.  Change the "name" element of the main [multi-project template file](https://msdn.microsoft.com/library/ms185308.aspx) (`Xamarin.Forms.PCL.vstemplate`) to make it unique. For example:
     > <Name>Blank App (Xamarin.Forms Portable) - 2.1.0.6529</Name>
 
 5.  Re-zip the whole template folder. Make sure to match the original file structure of the `.zip` file. The `Xamarin.Forms.PCL.vstemplate` file should be at the top of the `.zip` file, not within any folders.
@@ -36,5 +36,5 @@ This guide uses the Xamarin.Forms .NET Standard library template as an example, 
 
 7.  Copy the new zipped-up template folder into the new "Mobile Apps" directory.
 
-8.  Download the NuGet package that matches the version from step 3. For example, [http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529](http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529) (see also [http://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file](http://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file)), and copy it into the appropriate subfolder of the Xamarin Visual Studio extensions folder:
+8.  Download the NuGet package that matches the version from step 3. For example, [http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529](http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529) (see also [https://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file](https://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file)), and copy it into the appropriate subfolder of the Xamarin Visual Studio extensions folder:
     > `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Xamarin\Xamarin\[Xamarin Version]\Packages`

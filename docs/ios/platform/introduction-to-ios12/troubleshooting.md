@@ -41,4 +41,4 @@ To discuss questions about how to implement specific iOS 12 features in
 Xamarin.iOS, take a look at:
 
 - The [Xamarin Forums](http://forums.xamarin.com/categories/ios)
-- [Stack Overflow](http://stackoverflow.com/search?tab=newest&q=xamarin)
+- [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=xamarin)

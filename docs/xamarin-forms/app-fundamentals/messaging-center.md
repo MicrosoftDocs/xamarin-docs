@@ -30,7 +30,6 @@ There are two parts to `MessagingCenter`:
 -  **Subscribe** - Listen for messages with a certain signature and perform some action when they are received. Multiple subscribers can be listening for the same message.
 -  **Send** - Publish a message for listeners to act upon. If no listeners have subscribed then the message is ignored.
 
-
 The `MessagingService` is a static class with `Subscribe` and `Send` methods that are used throughout the solution.
 
 Messages have a string `message` parameter that is used as way to *address* messages. The `Subscribe` and `Send` methods use generic parameters to further control how messages are delivered - two messages with the same `message` text but different generic type arguments will not be delivered to the same subscriber.
@@ -51,6 +50,8 @@ These methods are explained below.
 ## Using the MessagingCenter
 
 Messages may be sent as a result of user-interaction (like a button click), a system event (like controls changing state) or some other incident (like an asynchronous download completing). Subscribers might be listening to change the appearance of the user interface, save data or trigger some other operation.
+
+For more information about using the `MessagingCenter` class, see [Communicating Between Loosely Coupled Components](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md).
 
 ### Simple String Message
 
@@ -109,3 +110,4 @@ The MessagingCenter is a simple way to reduce coupling, especially between view 
 
 - [MessagingCenterSample](https://developer.xamarin.com/samples/UsingMessagingCenter)
 - [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples)
+- [Communicating Between Loosely Coupled Components](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)

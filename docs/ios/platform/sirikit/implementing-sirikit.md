@@ -204,7 +204,7 @@ Because of the strict security that Apple has placed around the SiriKit framewor
 
 Do the following on your Mac:
 
-1. In a web browser, navigate to [http://developer.apple.com](http://developer.apple.com) and log into your account.
+1. In a web browser, navigate to [https://developer.apple.com](https://developer.apple.com) and log into your account.
 2. Click on **Certificates**, **Identifiers** and **Profiles**.
 3. Select **Provisioning Profiles** and select **App IDs**, then click the **+** button.
 4. Enter a **Name** for the new Profile.

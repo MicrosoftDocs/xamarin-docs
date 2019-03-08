@@ -15,7 +15,7 @@ The user interface of an iOS app is like a storefront – the application typica
 
 # [Visual Studio](#tab/windows)
 
-The diagram below illustrates the relationships between the Window, Views, Subviews, and View Controller that bring the user interface to the device screen: 
+The diagram below illustrates the relationships between the Window, Views, Subviews, and View Controller that bring the user interface to the device screen:
 
 [![](ios-code-only-images/image9.png "This diagram illustrates the relationships between the Window, Views, Subviews, and View Controller")](ios-code-only-images/image9.png#lightbox)
 
@@ -23,7 +23,7 @@ These view hierarchies can be constructed using the [Xamarin Designer for iOS](~
 
 # [Visual Studio for Mac](#tab/macos)
 
-The diagram below illustrates the relationships between the Window, Views, Subviews, and View Controller that bring the user interface to the device screen: 
+The diagram below illustrates the relationships between the Window, Views, Subviews, and View Controller that bring the user interface to the device screen:
 
 [![](ios-code-only-images/image9.png "This diagram illustrates the relationships between the Window, Views, Subviews, and View Controller")](ios-code-only-images/image9.png#lightbox)
 
@@ -60,9 +60,9 @@ The Empty Project template adds 4 files to the project:
 ## iOS templates
 
 
-Visual Studio for Mac does not provide an Empty template. All templates come with Storyboard support, which Apple recommends as the primary way to create a UI. However, it is possible to create your UI completely in code. 
+Visual Studio for Mac does not provide an Empty template. All templates come with Storyboard support, which Apple recommends as the primary way to create a UI. However, it is possible to create your UI completely in code.
 
-The steps below guide you through removing the Storyboard from an application: 
+The steps below guide you through removing the Storyboard from an application:
 
 
 1. Use the Single View App template to create a new iOS Project:
@@ -286,7 +286,7 @@ Window.RootViewController = navController;
 Now when the application loads, the `CustomViewController` is loaded inside a navigation controller:
 
  [![](ios-code-only-images/customvc.png "The CustomViewController is loaded inside a navigation controller")](ios-code-only-images/customvc.png#lightbox)
- 
+
 Clicking the button, will _push_ a new View Controller onto the navigation stack:
 
 [![](ios-code-only-images/customvca.png "A new View Controller pushed onto the navigation stack")](ios-code-only-images/customvca.png#lightbox)
@@ -301,7 +301,7 @@ For example, let's edit the `CustomViewController` to create a login screen wher
 
 ### Adding the text fields
 
-First, remove the button and event handler that was added in the [Initializing the View](#Initializing_the_View) section. 
+First, remove the button and event handler that was added in the [Initializing the View](#initializing-the-view) section. 
 
 Add a control for the username by creating and initializing a `UITextField` and then adding it to the view hierarchy, as shown below:
 
@@ -354,7 +354,7 @@ public class CustomViewController : UIViewController
             SecureTextEntry = true
         };
 
-      View.AddSubview(usernameField); 
+      View.AddSubview(usernameField);
       View.AddSubview(passwordField);
    }
 }
@@ -409,7 +409,7 @@ With these changes, the view will look like this:
 iOS provides a facility to add multiple views to the view hierarchy by using `AddSubviews`.
 
 ```csharp
-View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton }); 
+View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 ```
 
 ## Adding button functionality
@@ -606,12 +606,12 @@ For more information on creating a Launch Screen, refer to the documents below:
 
 ### Creating a launch image for pre-iOS 8 applications
 
-A static image can be used in addition to a .xib or Storyboard launch screen if you application targets versions previous to iOS 8. 
+A static image can be used in addition to a .xib or Storyboard launch screen if you application targets versions previous to iOS 8.
 
 This static image can be set in the Info.plist file, or as an Asset Catalog (for iOS 7) in your application. You will need to provide separate images for each device size (320x480, 640x960, 640x1136) that your application may run on. For more information on Launch Screen sizes, view the [Launch Screen Images](~/ios/app-fundamentals/images-icons/launch-screens.md) guide.
 
 > [!IMPORTANT]
-> If your app has no Launch Screen, you may notice that it doesn't fully fit the screen. If this is the case, you should make sure to include, at least, a 640x1136 image named `Default-568@2x.png` to your Info.plist. 
+> If your app has no Launch Screen, you may notice that it doesn't fully fit the screen. If this is the case, you should make sure to include, at least, a 640x1136 image named `Default-568@2x.png` to your Info.plist.
 
 ## Summary
 

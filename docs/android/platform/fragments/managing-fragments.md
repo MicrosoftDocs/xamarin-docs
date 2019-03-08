@@ -52,7 +52,7 @@ the state of these transactions will be lost when the Activity is
 restored.
 
 It's possible to save the Fragment transactions to the Activity's
-[back stack](http://developer.android.com/guide/topics/fundamentals/tasks-and-back-stack.html)
+[back stack](https://developer.android.com/guide/topics/fundamentals/tasks-and-back-stack.html)
 by making a call to `FragmentTransaction.AddToBackStack()`. This allows
 the user to navigate backwards through Fragment changes when the
 **Back** button is pressed. Without a call to this method, Fragments

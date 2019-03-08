@@ -47,5 +47,5 @@ The [second part of this walkthrough](./walkthrough-landscape.md) will discuss a
 
 - [FragmentsWalkthrough (sample)](https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/)
 - [Designer Overview](~/android/user-interface/android-designer/index.md)
-- [Implementing Fragments](http://developer.android.com/guide/topics/fundamentals/fragments.html)
-- [Support Package](http://developer.android.com/sdk/compatibility-library.html)
+- [Implementing Fragments](https://developer.android.com/guide/topics/fundamentals/fragments.html)
+- [Support Package](https://developer.android.com/sdk/compatibility-library.html)

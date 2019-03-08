@@ -197,7 +197,7 @@ waiting for debugger to connect
 check if any of the NuGets that have been included in your
   project have a dependency on **Microsoft.Bcl.Build**. This
   is automatically added with some Microsoft-published libraries
-  including the popular [Microsoft Http Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http/).
+  including the popular [Microsoft Http Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http/).
 
 The **Microsoft.Bcl.Build.targets** file that is added to the
   **.csproj** can interfere with the packaging of iOS

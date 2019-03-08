@@ -105,13 +105,13 @@ It is important to realize that there are some situations where Android may inva
 * The user has disabled the screen lock.
 * The user has changed the screen lock (the type of the screenlock or the PIN/pattern used).
 
-When this happens, `Cipher.Init` will throw a [`KeyPermanentlyInvalidatedException`](http://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html). The above sample code will trap that exception, delete the key, and then create a new one.
+When this happens, `Cipher.Init` will throw a [`KeyPermanentlyInvalidatedException`](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html). The above sample code will trap that exception, delete the key, and then create a new one.
 
 The next section will discuss how to create the key and store it on the device.
 
 ## Creating a Secret Key
 
-The `CryptoObjectHelper` class uses the Android [`KeyGenerator`](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/) to create a key and store it on the device. The `KeyGenerator` class can create the key, but needs some meta-data about the type of key to create. This information is provided by an instance of the [`KeyGenParameterSpec`](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) class. 
+The `CryptoObjectHelper` class uses the Android [`KeyGenerator`](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/) to create a key and store it on the device. The `KeyGenerator` class can create the key, but needs some meta-data about the type of key to create. This information is provided by an instance of the [`KeyGenParameterSpec`](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) class. 
 
 A `KeyGenerator` is instantiated using the `GetInstance` factory method. The sample code uses the [_Advanced Encryption Standard_](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (_AES_) as the encryption algorithm. AES will break the data up into blocks of a fixed size and encrypt each of those blocks.
 
@@ -155,12 +155,12 @@ Now that we have seen how to create a `CryptoObject`, lets move on to see how th
 ## Related Links
 
 - [Cipher](https://developer.xamarin.com/api/type/Javax.Crypto.Cipher/)
-- [FingerprintManager.CryptoObject](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
-- [FingerprintManagerCompat.CryptoObject](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
+- [FingerprintManager.CryptoObject](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
+- [FingerprintManagerCompat.CryptoObject](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
 - [KeyGenerator](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/)
-- [KeyGenParameterSpec](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)
-- [KeyGenParameterSpec.Builder](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
-- [KeyPermanentlyInvalidatedException](http://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)
-- [KeyProperties](http://developer.android.com/reference/android/security/keystore/KeyProperties.html)
+- [KeyGenParameterSpec](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)
+- [KeyGenParameterSpec.Builder](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
+- [KeyPermanentlyInvalidatedException](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)
+- [KeyProperties](https://developer.android.com/reference/android/security/keystore/KeyProperties.html)
 - [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
 - [RFC 2315 - PCKS #7](https://tools.ietf.org/html/rfc2315)

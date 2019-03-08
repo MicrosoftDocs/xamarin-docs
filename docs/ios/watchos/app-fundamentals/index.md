@@ -1,11 +1,12 @@
 ---
 title: "watchOS Application Fundamentals"
-description: "This document provides links to various documents that describe concepts fundamental to watchOS application development using Xamarin." 
+description: "This document provides links to various documents that describe concepts fundamental to watchOS application development using Xamarin."
 ms.prod: xamarin
 ms.assetid: 156D6D1C-83CA-4088-BA08-40B22312269C
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
+ms.date: 03/17/2017
 ---
 
 # watchOS Application Fundamentals
@@ -42,4 +43,3 @@ Preview and optimize your user interface for both available watch sizes.
 ##  [Settings](~/ios/watchos/app-fundamentals/settings.md)
 
 Add a settings screen for your watch app.
-

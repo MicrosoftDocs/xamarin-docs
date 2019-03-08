@@ -107,8 +107,8 @@ After using the migration tool, you may still get some
  	with the starndard .NET `Action`. Some simple (single parameter) delegates
  	have also been replaced with `Action<T>`.
 
-Finally, refer to the [Classic v Unified API differences](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
- 	to look up changes to APIs in your code. Searching [this page](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+Finally, refer to the [Classic v Unified API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+ 	to look up changes to APIs in your code. Searching [this page](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
  	will help find Classic APIs and what they've been updated to.
 
 **Note:** the `MonoTouch.Dialog` namespace remains the same

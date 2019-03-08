@@ -23,26 +23,26 @@ A graphics path is encapsulated by the [`SKPath`](xref:SkiaSharp.SKPath) object.
 
 A contour generally begins with a call to the following method of `SKPath`:
 
-- [`MoveTo`](SkiaSharp.SKPath.MoveTo*) to begin a new contour
+- [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo*) to begin a new contour
 
 The argument to that method is a single point, which you can express either as an `SKPoint` value or as separate X and Y coordinates. The `MoveTo` call establishes a point at the beginning of the contour and an initial *current point*. You can call the following methods to continue the contour with a line or curve from the current point to a point specified in the method, which then becomes the new current point:
 
-- [`LineTo`](SkiaSharp.SKPath.LineTo*) to add a straight line to the path
-- [`ArcTo`](SkiaSharp.SKPath.ArcTo*) to add an arc, which is a line on the circumference of a circle or ellipse
-- [`CubicTo`](SkiaSharp.SKPath.CubicTo*) to add a cubic Bezier spline
-- [`QuadTo`](SkiaSharp.SKPath.QuadTo*) to add a quadratic Bezier spline
-- [`ConicTo`](SkiaSharp.SKPath.ConicTo*) to add a rational quadratic Bezier spline, which can accurately render conic sections (ellipses, parabolas, and hyperbolas)
+- [`LineTo`](xref:SkiaSharp.SKPath.LineTo*) to add a straight line to the path
+- [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*) to add an arc, which is a line on the circumference of a circle or ellipse
+- [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo*) to add a cubic Bezier spline
+- [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo*) to add a quadratic Bezier spline
+- [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo*) to add a rational quadratic Bezier spline, which can accurately render conic sections (ellipses, parabolas, and hyperbolas)
 
 None of these five methods contain all the information necessary to describe the line or curve. Each of these five methods works in conjunction with the current point established by the method call immediately preceding it. For example, the `LineTo` method adds a straight line to the contour based on the current point, so the parameter to `LineTo` is only a single point.
 
 The `SKPath` class also defines methods that have the same names as these six methods but with an `R` at the beginning:
 
-- [`RMoveTo`]((SkiaSharp.SKPath.RMoveTo*))
-- [`RLineTo`](SkiaSharp.SKPath.RLineTo*)
-- [`RArcTo`](SkiaSharp.SKPath.RArcTo*)
-- [`RCubicTo`](SkiaSharp.SKPath.RCubicTo*)
-- [`RQuadTo`](SkiaSharp.SKPath.RQuadTo*)
-- [`RConicTo`](SkiaSharp.SKPath.RConicTo*)
+- [`RMoveTo`](xref:SkiaSharp.SKPath.RMoveTo*)
+- [`RLineTo`](xref:SkiaSharp.SKPath.RLineTo*)
+- [`RArcTo`](xref:SkiaSharp.SKPath.RArcTo*)
+- [`RCubicTo`](xref:SkiaSharp.SKPath.RCubicTo*)
+- [`RQuadTo`](xref:SkiaSharp.SKPath.RQuadTo*)
+- [`RConicTo`](xref:SkiaSharp.SKPath.RConicTo*)
 
 The `R` stands for *relative*. These methods have the same syntax as the corresponding methods without the `R` but are relative to the current point. These are handy for drawing similar parts of a path in a method that you call multiple times.
 

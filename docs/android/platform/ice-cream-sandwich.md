@@ -80,5 +80,5 @@ user profile data.
 - [TextureViewDemo (sample)](https://developer.xamarin.com/samples/monodroid/TextureViewDemo/)
 - [CalendarDemo (sample)](https://developer.xamarin.com/samples/monodroid/CalendarDemo/)
 - [Tab Layout Tutorial](~/android/user-interface/layouts/tab-layout/index.md)
-- [Ice Cream Sandwich](http://developer.android.com/about/versions/android-4.0-highlights.html)
-- [Android 4.0 Platform](http://developer.android.com/about/versions/android-4.0.html)
+- [Ice Cream Sandwich](https://developer.android.com/about/versions/android-4.0-highlights.html)
+- [Android 4.0 Platform](https://developer.android.com/about/versions/android-4.0.html)

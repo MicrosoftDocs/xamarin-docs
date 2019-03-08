@@ -15,7 +15,7 @@ _This guide walks through creating the necessary certificates and identifiers th
 
 ## Certificates and identifiers
 
-Visit the [Apple Developer Member Center](http://developer.apple.com) to configure the Mac for development. The main menu is shown below:
+Visit the [Apple Developer Member Center](https://developer.apple.com) to configure the Mac for development. The main menu is shown below:
 
 [![The Apple Developer Member Center](certificates-identifiers-images/devcenter01.png "The Apple Developer Member Center")](certificates-identifiers-images/devcenter01-large.png#lightbox)
 

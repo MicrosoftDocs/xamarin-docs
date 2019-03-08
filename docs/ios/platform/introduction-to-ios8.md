@@ -146,7 +146,7 @@ For more information, please see our [SpriteKit](~/ios/platform/gaming/spritekit
 ## Other Changes
 As well as the major changes in iOS 8 that are described above, Apple has additionally updated many existing frameworks. These are detailed below:
 
-- **[Core Image](https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImagingRef/index.html#//apple_ref/doc/uid/TP40001171)** – Apple has expanded upon its image processing framework by adding better support for the detection of rectangular regions, and QR codes inside images. Mike Bluestein explores this in his blog post entitled [Image Detection in iOS 8](http://blog.xamarin.com/image-detection-in-ios-8/)
+- **[Core Image](https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImagingRef/index.html#//apple_ref/doc/uid/TP40001171)** – Apple has expanded upon its image processing framework by adding better support for the detection of rectangular regions, and QR codes inside images. Mike Bluestein explores this in his blog post entitled [Image Detection in iOS 8](https://blog.xamarin.com/image-detection-in-ios-8/)
 
 ## Deprecated APIs
 With all the improvements made in iOS 8, a number of APIs have deprecated. Some of these are detailed below.

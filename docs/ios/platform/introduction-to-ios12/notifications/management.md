@@ -6,7 +6,7 @@ ms.assetid: F1D90729-F85A-425B-B633-E2FA38FB4A0C
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 9/4/2018
+ms.date: 09/04/2018
 ---
 # Notification management in Xamarin.iOS
 

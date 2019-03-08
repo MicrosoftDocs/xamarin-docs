@@ -65,11 +65,11 @@ next to a path that you want to change, then navigate to the new
 location.
 
 Xamarin.Android uses
-[JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html),
+[JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html),
 which is required if you are developing for API level 24 or greater
 (JDK 8 also supports API levels earlier than 24). You can continue to
 use
-[JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+[JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 if you are developing specifically for API level 23 or earlier.
 
 > [!IMPORTANT]

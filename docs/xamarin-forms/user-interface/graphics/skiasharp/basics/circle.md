@@ -103,7 +103,7 @@ The [`Style`](xref:SkiaSharp.SKPaint.Style) property indicates that you want to 
 
 The default is `Fill`. Use the third option to stroke the line and fill the interior with the same color.
 
-Set the [`Color`](xref:SkiaSharp.SKPaint.Color) property to a value of type [`SKColor`](xref:SkiaSharp.SKColor). One way to get an `SKColor` value is by converting a Xamarin.Forms `Color` value to an `SKColor` value using the extension method [`ToSKColor`](SkiaSharp.Views.Forms.Extensions.ToSKColor*). The [`Extensions`](xref:SkiaSharp.Views.Forms.Extensions) class in the `SkiaSharp.Views.Forms` namespace includes other methods that convert between Xamarin.Forms values and SkiaSharp values.
+Set the [`Color`](xref:SkiaSharp.SKPaint.Color) property to a value of type [`SKColor`](xref:SkiaSharp.SKColor). One way to get an `SKColor` value is by converting a Xamarin.Forms `Color` value to an `SKColor` value using the extension method [`ToSKColor`](xref:SkiaSharp.Views.Forms.Extensions.ToSKColor*). The [`Extensions`](xref:SkiaSharp.Views.Forms.Extensions) class in the `SkiaSharp.Views.Forms` namespace includes other methods that convert between Xamarin.Forms values and SkiaSharp values.
 
 The [`StrokeWidth`](xref:SkiaSharp.SKPaint.StrokeWidth) property indicates the thickness of the line. Here it's set to 25 pixels.
 

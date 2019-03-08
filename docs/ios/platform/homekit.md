@@ -47,7 +47,7 @@ Because of the security requirements imposed by HomeKit, a Xamarin.iOS app that 
 
 Do the following:
 
-1. Log into the [Apple Developer Portal](http://developer.apple.com).
+1. Log into the [Apple Developer Portal](https://developer.apple.com).
 2. Click on **Certificates, Identifiers & Profiles**.
 3. If you haven't already done so, click on **Identifiers** and create an ID for your app (e.g. `com.company.appname`), else edit your existing ID.
 4. Ensure that the **HomeKit** service has been checked for the given ID: 

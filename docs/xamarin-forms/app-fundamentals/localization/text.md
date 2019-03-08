@@ -17,7 +17,7 @@ _Xamarin.Forms apps can be localized using .NET resources files._
 
 ## Overview
 
-The built-in mechanism for localizing .NET applications uses [RESX files](http://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx) and the classes in the `System.Resources` and `System.Globalization` namespaces. The RESX files containing translated strings are embedded in the Xamarin.Forms assembly, along with a compiler-generated class that provides strongly-typed access to the translations. The translated text can then be retrieved in code.
+The built-in mechanism for localizing .NET applications uses [RESX files](https://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx) and the classes in the `System.Resources` and `System.Globalization` namespaces. The RESX files containing translated strings are embedded in the Xamarin.Forms assembly, along with a compiler-generated class that provides strongly-typed access to the translations. The translated text can then be retrieved in code.
 
 ### Sample Code
 
@@ -838,7 +838,7 @@ This screenshot shows the Android sample with a some localized drawables and str
 
 Note that Android does not use zh-Hans and zh-Hant codes for Simplified and Traditional Chinese; instead, it only supports country-specific codes zh-CN and zh-TW.
 
-To support different resolution images for high-density screens, create additional language folders with `-*dpi` suffixes, such as **drawables-es-mdpi**, **drawables-es-xdpi**, **drawables-es-xxdpi**, etc. See [Providing Alternative Android Resources](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources) for more information.
+To support different resolution images for high-density screens, create additional language folders with `-*dpi` suffixes, such as **drawables-es-mdpi**, **drawables-es-xdpi**, **drawables-es-xxdpi**, etc. See [Providing Alternative Android Resources](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources) for more information.
 
 #### App Name
 
@@ -888,5 +888,5 @@ Images are generally handled in a platform-specific way to take advantage of the
 - [iOS Localization](~/ios/app-fundamentals/localization/index.md)
 - [Android Localization](~/android/app-fundamentals/localization.md)
 - [UWP Localization](/windows/uwp/design/globalizing/globalizing-portal/)
-- [Using the CultureInfo class (MSDN)](http://msdn.microsoft.com/library/87k6sx8t%28v=vs.90%29.aspx)
-- [Locating and Using Resources for a Specific Culture (MSDN)](http://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)
+- [Using the CultureInfo class (MSDN)](https://msdn.microsoft.com/library/87k6sx8t%28v=vs.90%29.aspx)
+- [Locating and Using Resources for a Specific Culture (MSDN)](https://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)

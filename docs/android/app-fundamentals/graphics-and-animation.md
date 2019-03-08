@@ -101,7 +101,7 @@ in the user-interface, and ensuring there is text-content or
 descriptions for pictorial elements of the UI.
 
 Refer to
-[Google's Accessibility Guide](http://developer.android.com/guide/topics/ui/accessibility/) for
+[Google's Accessibility Guide](https://developer.android.com/guide/topics/ui/accessibility/) for
 more information on how to utilize Android's accessibility APIs.
 
 
@@ -139,31 +139,31 @@ At runtime, an Android application will load these resources and use
 the instructions contained in these XML files to create 2D graphics.
 Android defines several different types of Drawable Resources:
 
--   [ShapeDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape)
+-   [ShapeDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape)
     &ndash; This is a Drawable object that draws a primitive geometric shape
     and applies a limited set of graphical effects on that shape. They
     are very useful for things such as customizing Buttons or setting
     the background of TextViews. We will see an example of how to use a
     `ShapeDrawable` later in this article.
 
--   [StateListDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#StateList)
+-   [StateListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#StateList)
     &ndash; This is a Drawable Resource that will change appearance based on
     the state of a widget/control. For example, a button may change its
     appearance depending on whether it is pressed or not.
 
--   [LayerDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
+-   [LayerDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
     &ndash; This Drawable Resource that will stack several other drawables one
     on top of another. An example of a *LayerDrawable* is shown in the
     following screenshot:
 
     ![LayerDrawable example](graphics-and-animation-images/image1.png)
 
--   [TransitionDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Transition)
+-   [TransitionDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Transition)
     &ndash; This is a *LayerDrawable* but with one difference. A
     *TransitionDrawable* is able to animate one layer showing up over
     top another.
 
--   [LevelListDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList)
+-   [LevelListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList)
     &ndash; This is very similar to a *StateListDrawable* in that it will
     display an image based on certain conditions. However, unlike a
     *StateListDrawable*, the *LevelListDrawable* displays an image
@@ -172,17 +172,17 @@ Android defines several different types of Drawable Resources:
     of the WiFi signal changes, the drawable that is displayed will
     change accordingly.
 
--   [ScaleDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Clip)
+-   [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip)
     &ndash; As their name implies, these Drawables provide both scaling and
     clipping functionality. The *ScaleDrawable* will scale another
     Drawable, while the *ClipDrawable* will clip another Drawable.
 
--   [InsetDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Inset)
+-   [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset)
     &ndash; This Drawable will apply insets on the sides of another Drawable
     resource. It is used when a View needs a background that is smaller
     than the View's actual bounds.
 
--   XML [BitmapDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap)
+-   XML [BitmapDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap)
     &ndash; This file is a set of instructions, in XML, that are to be
     performed on an actual bitmap. Some actions that Android can
     perform are tiling, dithering, and anti-aliasing. One of the very
@@ -256,7 +256,7 @@ something similar to the following screenshot:
 
 For more details about the XML elements and syntax of Drawable
 Resources, consult
-[Google's documentation](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
+[Google's documentation](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
 
 
 ### Using the Canvas Drawing API
@@ -685,7 +685,7 @@ API's for creating animations in Android.
 ## Related Links
 
 - [Animation Demo (sample)](https://developer.xamarin.com/samples/monodroid/AnimationDemo)
-- [Animation and Graphics](http://developer.android.com/guide/topics/graphics/index.html)
+- [Animation and Graphics](https://developer.android.com/guide/topics/graphics/index.html)
 - [Using Animations to Bring your Mobile Apps to Life](http://youtu.be/ikSk_ILg3d0)
 - [AnimationDrawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.AnimationDrawable/)
 - [Canvas](https://developer.xamarin.com/api/type/Android.Graphics.Canvas/)

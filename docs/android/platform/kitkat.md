@@ -153,7 +153,7 @@ older API versions should work as expected, testing applications that
 use the `WebView` class is highly recommended. For more information
 about affected WebView APIs refer to the Android
 [Migrating to WebView in Android
-4.4](http://developer.android.com/guide/webapps/migrating.html)
+4.4](https://developer.android.com/guide/webapps/migrating.html)
 documentation.
 
 <a name="user_experience" />
@@ -360,7 +360,7 @@ screenshot below:
 
 The following code sample defines a transition that animates for 5
 seconds and uses the
-[overshoot interpolator](http://developer.android.com/reference/android/views/animation/OvershootInterpolator.html):
+[overshoot interpolator](https://developer.android.com/reference/android/views/animation/OvershootInterpolator.html):
 
 ```xml
 <changeBounds
@@ -548,7 +548,7 @@ written in .NET.
 
 For more information on loading, creating, and editing content with the
 Storage Access Framework, refer to the
-[Android documentation for the Storage Access Framework](http://developer.android.com/guide/topics/providers/document-provider.html).
+[Android documentation for the Storage Access Framework](https://developer.android.com/guide/topics/providers/document-provider.html).
 
 ### Printing
 
@@ -595,7 +595,7 @@ Note that loading and printing web content requires the Internet permission:
 ##### Print Menu Item
 
 The print option will typically appear in the Activity's
-[options menu](http://developer.android.com/guide/topics/ui/menus.html#options-menu).
+[options menu](https://developer.android.com/guide/topics/ui/menus.html#options-menu).
 The options menu lets users perform actions on an Activity. It is in
 the top right corner of the screen, and looks like this:
 
@@ -922,7 +922,7 @@ or check to ensure the returned value of `GetDefaultSensor` isn't
 KitKat includes new screen recording capabilities so that developers
 can record applications in action. Screen recording is available
 through the
-[Android Debug Bridge (ADB)](http://developer.android.com/tools/help/adb.html)
+[Android Debug Bridge (ADB)](https://developer.android.com/tools/help/adb.html)
 client, which can be downloaded as part of the Android SDK.
 
 To record your screen, connect your device; then, locate your Android
@@ -951,7 +951,7 @@ when the recording is complete.
 In addition to the changes described above, KitKat allows you to:
 
 -  *Use the Full Screen* - KitKat introduces a new
-   [Immersive mode](http://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int))
+   [Immersive mode](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int))
    for browsing content, playing games, and running other applications
    that could benefit from a full-screen experience.
 
@@ -962,7 +962,7 @@ In addition to the changes described above, KitKat allows you to:
    your app.
 
 -  *Mirror Drawable Resources* - Drawable resources have a new
-   [`autoMirrored`](http://developer.android.com/reference/android/R.attr.html#autoMirrored)
+   [`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
    attribute that tells the system create a mirrored version for images
    that require flipping for left-to-right layouts.
 
@@ -972,7 +972,7 @@ In addition to the changes described above, KitKat allows you to:
 
 -  *Read Dynamically Changing Text* - Denote parts of UI that update
    dynamically with new text as "live regions" with the new
-   [ `accessibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+   [ `accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
    attribute so the new text will be read automatically in
    accessibility mode.
 
@@ -1002,7 +1002,7 @@ In addition to the changes described above, KitKat allows you to:
    APIs.
 
 For more information on the above API changes, please refer to the
-Google [Android 4.4 APIs](http://developer.android.com/about/versions/android-4.4.html)
+Google [Android 4.4 APIs](https://developer.android.com/about/versions/android-4.4.html)
 overview.
 
 
@@ -1024,5 +1024,5 @@ KitKat API changes and additions.
 ## Related Links
 
 - [KitKat Sample](https://developer.xamarin.com/samples/KitKat/)
-- [Android 4.4 APIs](http://developer.android.com/about/versions/android-4.4.html)
-- [Android KitKat](http://developer.android.com/about/versions/kitkat.html)
+- [Android 4.4 APIs](https://developer.android.com/about/versions/android-4.4.html)
+- [Android KitKat](https://developer.android.com/about/versions/kitkat.html)

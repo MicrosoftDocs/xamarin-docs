@@ -215,7 +215,7 @@ A handler for the `Prepared` event is attached in this method and detached in th
 
 ### The UWP media element
 
-In the Universal Windows Platform (UWP), the most common video player is [`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/). That documentation of `MediaElement` indicates that the [`MediaPlayerElement`](/uwp/api/windows.ui.xaml.controls.mediaplayerelement/) should be used instead when it's only necessary to support versions of Windows 10 beginning with build 1607.
+In the Universal Windows Platform (UWP), the most common video player is [`MediaElement`](xref:Windows.UI.Xaml.Controls.MediaElement). That documentation of `MediaElement` indicates that the [`MediaPlayerElement`](xref:Windows.UI.Xaml.Controls.MediaPlayerElement) should be used instead when it's only necessary to support versions of Windows 10 beginning with build 1607.
 
 The `OnElementChanged` override needs to create a `MediaElement`, set a couple of event handlers, and pass the `MediaElement` object to `SetNativeControl`:
 
@@ -419,7 +419,7 @@ namespace FormsVideoLibrary.Droid
 
 ### The UWP Transport Controls property
 
-The UWP `MediaElement` defines a property named [`AreTransportControlsEnabled`](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_AreTransportControlsEnabled), so that property is set from the `VideoPlayer` property of the same name:
+The UWP `MediaElement` defines a property named [`AreTransportControlsEnabled`](xref:Windows.UI.Xaml.Controls.MediaElement.AreTransportControlsEnabled*), so that property is set from the `VideoPlayer` property of the same name:
 
 ```csharp
 namespace FormsVideoLibrary.UWP

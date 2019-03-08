@@ -70,7 +70,7 @@ that is then displayed on the map. For example, the URI
 
 
 For more information about geo URI schemes, see
-[Show a location on a map](http://developer.android.com/guide/components/intents-common.html#Maps).
+[Show a location on a map](https://developer.android.com/guide/components/intents-common.html#Maps).
 
 
 ## Street View

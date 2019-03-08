@@ -30,7 +30,7 @@ Tile maps have existed in game development for decades, but are still commonly u
 
 ![](tiled-images/image2.png "A visualized view of how tile sets are used by adding a grid to the tile set that will be used in the demo")
 
-Tile maps arrange the individual tiles from tile sets. We should note that each tile map does not need to store its own copy of the tile set – rather, multiple tile maps can reference the same tile set. This means that aside from the tile set, tile maps require very little memory. This enables the creation of a large number of tile maps, even when they are used to create a large game play area, such as a [scrolling platformer](http://en.wikipedia.org/wiki/Platform_game) environment. The following shows possible arrangements using the same tile set:
+Tile maps arrange the individual tiles from tile sets. We should note that each tile map does not need to store its own copy of the tile set – rather, multiple tile maps can reference the same tile set. This means that aside from the tile set, tile maps require very little memory. This enables the creation of a large number of tile maps, even when they are used to create a large game play area, such as a [scrolling platformer](https://en.wikipedia.org/wiki/Platform_game) environment. The following shows possible arrangements using the same tile set:
 
 ![](tiled-images/image3.png "This image shows possible arrangements using the same tile set")
 

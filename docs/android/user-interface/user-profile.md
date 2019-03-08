@@ -132,4 +132,4 @@ in Android, and it offers an additional level of device personalization.
 
 - [ContactsProviderDemo (sample)](https://developer.xamarin.com/samples/monodroid/ContactsProviderDemo/)
 - [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 Platform](http://developer.android.com/sdk/android-4.0.html)
+- [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

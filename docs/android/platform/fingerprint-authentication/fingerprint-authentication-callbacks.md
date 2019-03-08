@@ -103,7 +103,7 @@ Note that `OnAuthenticationError` will be invoked when the fingerprint scan is c
 
 ## Help Codes and Error Message Ids 
 
-A list and description of the error codes and help codes may be found in the [Android SDK documentation](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) for the FingerprintManager class. Xamarin.Android represents these values with the `Android.Hardware.Fingerprints.FingerprintState` enum:
+A list and description of the error codes and help codes may be found in the [Android SDK documentation](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) for the FingerprintManager class. Xamarin.Android represents these values with the `Android.Hardware.Fingerprints.FingerprintState` enum:
 
 
 -   **`AcquiredGood`** &ndash; (value 0) The image acquired was good.
@@ -158,5 +158,5 @@ A list and description of the error codes and help codes may be found in the [An
 ## Related Links
 
 - [Cipher](https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html)
-- [AuthenticationCallback](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html)
-- [AuthenticationCallback](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.AuthenticationCallback.html)
+- [AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html)
+- [AuthenticationCallback](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.AuthenticationCallback.html)

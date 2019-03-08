@@ -292,7 +292,7 @@ Congratulations! At this point you have completed the Android local
 notification walkthrough and you have a working sample that you can
 refer to. There is a lot more to notifications than we have shown here,
 so if you want more information, take a look at
-[Google's documentation on notifications](http://developer.android.com/guide/topics/ui/notifiers/notifications.html).
+[Google's documentation on notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
 
 ## Summary

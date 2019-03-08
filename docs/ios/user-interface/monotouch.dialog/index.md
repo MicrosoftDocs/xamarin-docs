@@ -498,7 +498,7 @@ will load the contents on demand. These are created by using the `JsonElement` c
 the url to load the contents from:
 
 ```csharp
-var je = new JsonElement ("Dynamic Data", "http://tirania.org/tmp/demo.json");
+var je = new JsonElement ("Dynamic Data", "https://tirania.org/tmp/demo.json");
 ```
 
 The other form creates the data from a local file or an existing `System.Json.JsonObject` that you have already parsed:
@@ -750,5 +750,5 @@ allows creating elements dynamically from JSON.
 - [Walkthrough: Using a JSON Element to create a User Interface](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
 - [MonoTouch.Dialog JSON Markup](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)
 - [MonoTouch Dialog on Github](https://github.com/migueldeicaza/MonoTouch.Dialog)
-- [UITableViewController Class Reference](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
-- [UINavigationController Class Reference](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
+- [UITableViewController Class Reference](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
+- [UINavigationController Class Reference](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

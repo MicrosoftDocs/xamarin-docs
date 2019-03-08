@@ -85,7 +85,7 @@ You'll need to use one of the following methods to install the tools:
 	- The tools will be downloaded and installed from Apple's servers:
 		[![](walkthrough-images/xcode02.png "Downloading the tools")](walkthrough-images/xcode02.png#lightbox)
 
-- **Downloads for Apple Developers** - The Command Line Tools package is available the [Downloads for Apple Developers]() web page. Log in with your Apple ID, then search for and download the Command Line Tools:
+- **Downloads for Apple Developers** - The Command Line Tools package is available the [Downloads for Apple Developers](https://developer.apple.com/downloads/index.action) web page. Log in with your Apple ID, then search for and download the Command Line Tools:
 [![](walkthrough-images/xcode03.png "Finding the Command Line Tools")](walkthrough-images/xcode03.png#lightbox)
 
 With the Command Line Tools installed, we're ready to continue on with the walkthrough.
@@ -185,7 +185,7 @@ Creating a fat binary is a three step process:
 
 While these three steps are rather straightforward, and it may be necessary to repeat them in the future when the Objective-C library receives updates or if we require bug fixes. If you decide to automate these steps, it will simplify the future maintenance and support of the iOS binding project.
 
-There are many tools available to automate such tasks - a shell script, [rake](http://rake.rubyforge.org/), [xbuild](http://www.mono-project.com/docs/tools+libraries/tools/xbuild/), and [make](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). When we installed the Xcode Command Line tools, we also installed make, so that is the build system that will be used for this walkthrough. Here is a **Makefile** that you can use to create a multi-architecture shared library that will work on an iOS device and the simulator for the any library:
+There are many tools available to automate such tasks - a shell script, [rake](http://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/), and [make](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). When we installed the Xcode Command Line tools, we also installed make, so that is the build system that will be used for this walkthrough. Here is a **Makefile** that you can use to create a multi-architecture shared library that will work on an iOS device and the simulator for the any library:
 
 ```bash
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
@@ -734,6 +734,6 @@ This article walked through the process of creating and using a Xamarin.iOS bind
 - [Binding Details](~/cross-platform/macios/binding/overview.md)
 - [Binding Types Reference Guide](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin for Objective-C Developers](~/ios/get-started/objective-c-developers/index.md)
-- [Framework Design Guidelines](http://msdn.microsoft.com/library/ms229042.aspx)
+- [Framework Design Guidelines](https://msdn.microsoft.com/library/ms229042.aspx)
 - [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
 - [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

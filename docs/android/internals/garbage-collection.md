@@ -11,7 +11,7 @@ ms.date: 03/15/2018
 # Garbage Collection
 
 Xamarin.Android uses Mono's 
-[Simple Generational garbage collector](http://www.mono-project.com/docs/advanced/garbage-collector/sgen/). 
+[Simple Generational garbage collector](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/). 
 This is a mark-and-sweep garbage collector with two generations and a *large 
 object space*, with two kinds of collections: 
 
@@ -129,7 +129,7 @@ Peer objects are logically present within both the Android runtime and Mono
 VM's. For example, an 
 [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) 
 managed peer instance will have a corresponding 
-[android.app.Activity](http://developer.android.com/reference/android/app/Activity.html) 
+[android.app.Activity](https://developer.android.com/reference/android/app/Activity.html) 
 framework peer Java instance. All objects that inherit from 
 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 
 can be expected to have representations within both VMs. 
@@ -204,7 +204,7 @@ significant pauses, it's worth investigating one of the following three
 GC Bridge implementations: 
 
 -   **Tarjan** - A completely new design of the GC Bridge 
-    based on [Robert Tarjan's algorithm and backwards reference propagation](http://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm).
+    based on [Robert Tarjan's algorithm and backwards reference propagation](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm).
     It has the best performance under our simulated workloads, but it also has 
     the larger share of experimental code. 
 
@@ -212,7 +212,7 @@ GC Bridge implementations:
     instances of quadratic behavior but keeping the core algorithm 
     (based on 
     [Kosaraju's 
-    algorithm](http://en.wikipedia.org/wiki/Kosaraju's_algorithm) for 
+    algorithm](https://en.wikipedia.org/wiki/Kosaraju's_algorithm) for 
     finding strongly connected components). 
 
 -   **Old** - The original implementation (considered the most 
@@ -335,7 +335,7 @@ returns will refer to a Framework peer, *not* a User peer. The
 relationship between the managed 
 [Drawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.Drawable/) 
 and framework 
-[Drawable](http://developer.android.com/reference/android/graphics/drawable/Drawable.html) 
+[Drawable](https://developer.android.com/reference/android/graphics/drawable/Drawable.html) 
 instances, allowing the Java instance to be collected as soon as the 
 Android runtime needs to. This would *not* be safe if Peer instance 
 referred to a User peer; here we're using "external" information to 

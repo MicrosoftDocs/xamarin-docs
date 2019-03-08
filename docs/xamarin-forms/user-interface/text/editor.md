@@ -254,6 +254,9 @@ Make sure that the background and text colors you choose are usable on each plat
 - [TextChanged](xref:Xamarin.Forms.Editor.TextChanged) &ndash; raised when the text changes in the editor. Provides the text before and after the change.
 - [Completed](xref:Xamarin.Forms.Editor.Completed) &ndash; raised when the user has ended input by pressing the return key on the keyboard.
 
+> [!NOTE]
+> The [`VisualElement`](xref:Xamarin.Forms.VisualElement) class, from which [`Entry`](xref:Xamarin.Forms.Entry) inherits, also has [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) and [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) events.
+
 ### Completed
 
 The `Completed` event is used to react to the completion of an interaction with an `Editor`. `Completed` is raised when the user ends input with a field by entering the return key on the keyboard. The handler for the event is a generic event handler, taking the sender and `EventArgs`:

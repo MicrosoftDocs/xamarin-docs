@@ -32,7 +32,7 @@ The finished game will look like this:
 
 Game entities are classes that define objects needing rendering, collision, physics, or artificial intelligence logic. Fortunately, the entities present in a game’s code base often match the conceptual objects in a game. When this is true, identifying the entities needed in a game can be more easily accomplished. 
 
-For example, a space themed [shoot ‘em up game](http://en.wikipedia.org/wiki/Shoot_%27em_up) may include the following entities:
+For example, a space themed [shoot ‘em up game](https://en.wikipedia.org/wiki/Shoot_%27em_up) may include the following entities:
 
  - `PlayerShip`
  - `EnemyShip`

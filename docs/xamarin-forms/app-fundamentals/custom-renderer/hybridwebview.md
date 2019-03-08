@@ -6,7 +6,7 @@ ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/19/2018
+ms.date: 03/07/2019
 ---
 
 # Implementing a HybridWebView
@@ -235,6 +235,8 @@ The web page allows a user to enter their name in an `input` element, and provid
 
 The `invokeCSharpAction` JavaScript function is not defined in the web page, and will be injected into it by each custom renderer.
 
+On iOS, this HTML file resides in the Content folder of the platform project, with a build action of **BundleResource**. On Android, this HTML file resides in the Assets/Content folder of the platform project, with a build action of **AndroidAsset**.
+
 <a name="Invoking_C_from_JavaScript" />
 
 ### Invoking C# from JavaScript
@@ -314,6 +316,16 @@ This functionality is achieved as follows:
 
 > [!NOTE]
 > The `WKWebView` class is only supported in iOS 8 and later.
+
+In addition, **Info.plist** must be updated to include the following values:
+
+```
+<key>NSAppTransportSecurity</key>
+<dict>
+	<key>NSAllowsArbitraryLoads</key>
+	<true/>
+</dict>
+```
 
 ### Creating the Custom Renderer on Android
 

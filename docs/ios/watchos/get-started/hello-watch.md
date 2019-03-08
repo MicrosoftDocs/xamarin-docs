@@ -169,4 +169,4 @@ When the Simulator launches, press the button to increment the label.
 
 - [Getting Started (sample)](https://developer.xamarin.com/samples/monotouch/WatchKit/GettingStarted/)
 - [Setup and Installation](~/ios/watchos/get-started/installation.md)
-- [First Watch App video](http://blog.xamarin.com/your-first-watch-kit-app/)
+- [First Watch App video](https://blog.xamarin.com/your-first-watch-kit-app/)

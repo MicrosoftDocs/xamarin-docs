@@ -254,7 +254,7 @@ For more information, see [Async Support Overview](~/cross-platform/platform/asy
 
 Managed languages such as C# use garbage collection to reclaim memory that is allocated to objects that are no longer in use. The two garbage collectors used by the Xamarin platform are:
 
-- [**SGen**](http://www.mono-project.com/docs/advanced/garbage-collector/sgen/) – This is a generational garbage collector and is the default garbage collector on the Xamarin platform.
+- [**SGen**](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/) – This is a generational garbage collector and is the default garbage collector on the Xamarin platform.
 - [**Boehm**](http://www.hboehm.info/gc/) – This is a conservative, non-generational garbage collector. It is the default garbage collector used for Xamarin.iOS applications that use the Classic API.
 
 SGen utilizes one of three heaps to allocate space for objects:

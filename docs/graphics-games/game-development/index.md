@@ -20,12 +20,12 @@ This article covers the following topics:
 - **Game development technology** – Here we’ll list some of the cross-platform technologies available that can improve your productivity as a game developer.
 
 
-# Game vs. Non-Game Programming Concepts
+## Game vs. Non-Game Programming Concepts
 
 Programmers moving into game development are often confronted with new concepts and development patterns. This section presents a high-level view of some of these concepts.
 
 
-## The Game Loop
+### The Game Loop
 
 A typical game requires constant movement or change to be happening on the screen in response to both user interaction and automatic game logic. This is achieved through what is typically referred to as a *game loop*. A game loop is some type of looping statement (such as a while-loop) which runs at a very high frequency, such as 30 or 60 *frames per second*.
 
@@ -49,7 +49,7 @@ Common types of logic that may be performed every-frame include:
 Keep in mind that many of the activities listed above can change the state of the entire application, whereas many non-game apps tend to change state in response to events being raised.
 
 
-## Content Loading and Unloading
+### Content Loading and Unloading
 
 Manually loading and unloading (or disposing) content may be needed depending on which technology you are using in development. Manually loading and unloading of assets may be necessary for a number of reasons:
 
@@ -60,7 +60,7 @@ Manually loading and unloading (or disposing) content may be needed depending on
 Custom file formats may need processing at load time, requiring custom loading code.
 
 
-## Math
+### Math
 
 Many games require more advanced mathematics than non-game applications. Of course, the level of math depends on the complexity of the game. In general 3D games require more math than 2D. Fortunately you can always get started with simple games and learn as you go. Game development can be a great way to learn math!
 
@@ -77,14 +77,14 @@ Trigonometric functions (such as Sine and Cosine) are commonly used in 2D games 
 If you are planning on making a 3D game then you will likely need to be familiar with concepts from Linear Algebra (for rotation and movement in 3D space) as well as some Calculus (for implementing acceleration).
 
 
-## Content Pipelines
+### Content Pipelines
 
 The term *content pipeline* refers to the process that a file takes to get from its format when authored (such as a .png image file) to its final format when used in a game. The ending format depends on which type of content is being used as well as which technology is being used to present the content.
 
 Some content pipelines may be very fast and require no manual effort. For example, most game engines and APIs can load the .png file format in its unprocessed format. On the other hand, more complicated formats (such as 3D models) may need to be processed into a different format before being loaded, and this processing can take some time depending on the asset’s size and complexity.
 
 
-# Game Development Teams
+## Game Development Teams
 
 Game development introduces new roles and titles for individuals involved in the process. Most game developers are not able to satisfy the broad set of skills required to release a full game, so a number of disciplines exist. Keep in mind that this is not a full list of areas of development – just some of the more common ones.
 
@@ -95,7 +95,7 @@ Game development introduces new roles and titles for individuals involved in the
 - **Sound Designer** – Sound designers are responsible for a game’s audio assets. Some teams may differentiate between individuals responsible for creating sound effects and composers, while smaller teams may have a single individual responsible for all audio.
 
 
-# Creating a Game Idea
+## Creating a Game Idea
 
 Designing a game may appear to be easy to do – after all the only requirement is "make something fun." Unfortunately, many developers find themselves at a loss when it comes time to create an idea from which to launch development.
 
@@ -110,12 +110,12 @@ Another technique for generating new ideas is to consider a specific genre, such
 Remaking existing games is also an educational experience, although this may limit the finished product’s commercial viability. The process of creating a game, even one which is an accurate clone, provides a valuable educational experience.
 
 
-# Game Development Technology
+## Game Development Technology
 
 Developers using Xamarin.Android and Xamarin.iOS have a wide range of technologies available to them to assist in game development. This section will discuss some of the most popular cross-platform solutions.
 
 
-## CocosSharp
+### CocosSharp
 
 CocosSharp is an open-source, cross-platform version of the Cocos 2D game engine. The engine provides access to Android, iOS, Mac OS X, Windows Desktop, Windows RT and Windows Phone.
 
@@ -130,7 +130,7 @@ The game Angry Ninjas is created with CocosSharp, and it can be a good starting 
 You can download it and get more information at the [AngryNinjas Github page](https://github.com/xamarin/AngryNinjas).
 
 
-## MonoGame
+### MonoGame
 
 MonoGame is an open-source, cross platform version of Microsoft’s XNA API. MonoGame can be used to make games for iOS, Android, Mac OS X, Linux, Windows, Windows RT, PS4, PSVita, Xbox One, and Switch.
 
@@ -151,7 +151,7 @@ Bastion:
 To start working with MonoGame, head over to our [MonoGame Guides](~/graphics-games/monogame/index.md).
 
 
-## UrhoSharp
+### UrhoSharp
 
 UrhoSharp is a cross-platform high-level 3D and 2D engine that can be used
 to create animated 3D and 2D scenes for your applications using geometries,
@@ -161,18 +161,13 @@ materials, lights and cameras.
 
 Check out the [UrhoSharp Guides](~/graphics-games/urhosharp/index.md) to get started.
 
-## Additional Technology
+### Additional Technology
 
 The technologies highlighted above is only a sample of the technologies available. Other notable technologies include:
 
-- **Sprite Kit** – Xamarin provides support for Apple’s Sprite Kit game framework, which gives you access to all of the functionality of the native API. Since Sprite Kit is technology created by Apple, it provides deep integration with the rest of the iOS ecosystem. Of course, Sprite Kit is not cross-platform so it cannot be used on Android. For more information on using Sprite Kit, see this post:  [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
-- **Scene Kit** – Xamarin also provides support for Apple’s Scene Kit framework, which simplifies implementing 3D graphics into iOS apps. Scene Kit is also technology provided by Apple, so it has both the integration and platform-specific considerations mentioned above for Sprite Kit. For more information on Scene Kit, see this post: [http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
+- **Sprite Kit** – Xamarin provides support for Apple’s Sprite Kit game framework, which gives you access to all of the functionality of the native API. Since Sprite Kit is technology created by Apple, it provides deep integration with the rest of the iOS ecosystem. Of course, Sprite Kit is not cross-platform so it cannot be used on Android. For more information on using Sprite Kit, see this post:  [https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
+- **Scene Kit** – Xamarin also provides support for Apple’s Scene Kit framework, which simplifies implementing 3D graphics into iOS apps. Scene Kit is also technology provided by Apple, so it has both the integration and platform-specific considerations mentioned above for Sprite Kit. For more information on Scene Kit, see this post: [https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
 - **OpenTK –** OpenTK (which stands for Open Tool Kit) provides low-level OpenGL access to iOS, Apple, and Mac hardware. For more information on OpenTK, see the main page at:  [http://www.opentk.com/](http://www.opentk.com/)
-
-
-# Summary
-
-This article covers the main concepts of game development and provides information on how to get started making your first game. Once you’ve finished this article, the next steps are to pick your technology and begin working through our series of tutorials linked in the appropriate sections above.
 
 ## Related Links
 

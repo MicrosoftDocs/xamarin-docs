@@ -253,7 +253,7 @@ You can use this
 [NuGet package](https://www.nuget.org/packages/name.atsushieno.proguard.facebook/5.3.0) 
 to install a newer version of `proguard.jar`. 
 For more information about updating the default Android SDK `proguard.jar`, see this 
-[Stack Overflow](http://stackoverflow.com/questions/39514518/xamarin-android-proguard-unsupported-class-version-number-52-0/39514706#39514706) discussion.
+[Stack Overflow](https://stackoverflow.com/questions/39514518/xamarin-android-proguard-unsupported-class-version-number-52-0/39514706#39514706) discussion.
 
 You can find all versions of ProGuard at the 
 [SourceForge page](https://sourceforge.net/projects/proguard/files/). 
@@ -433,7 +433,7 @@ This guide explained how ProGuard works in Xamarin.Android, how to
 enable it in your app project, and how to configure it. It provided 
 example ProGuard configurations, and it described solutions to common 
 problems. For more information about the ProGuard tool and Android, see 
-[Shrink Your Code and Resources](http://developer.android.com/tools/help/proguard.html). 
+[Shrink Your Code and Resources](https://developer.android.com/tools/help/proguard.html). 
 
 
 ## Related Links

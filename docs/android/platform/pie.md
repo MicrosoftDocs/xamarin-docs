@@ -47,7 +47,7 @@ Xamarin-based apps:
     installed as part of the **Mobile development with .NET** workload).
 
 -   **Java Developer Kit** &ndash; Xamarin Android 9.0 development
-    requires [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+    requires [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
     (or you can try the preview of Microsoft's distribution of the
     [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 is
     automatically installed as part of the **Mobile development with .NET**

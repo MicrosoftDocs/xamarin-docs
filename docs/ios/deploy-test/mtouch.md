@@ -133,7 +133,7 @@ the problem.
 ### Deploying to a Device
 
 To deploy to your device you need to provision your device as described in
-Apple's [Managing Devices](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html) document. Once your device has been
+Apple's [Managing Devices](https://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html) document. Once your device has been
 properly provisioned, you can use the mtouch command to deploy a compiled ".app"
 into your device. You do this using this command:
 

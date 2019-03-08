@@ -30,7 +30,7 @@ To update to JDK 8, follow these steps:
 
 # [Visual Studio](#tab/windows)
 
-1.  Download JDK 8 (1.8) from the [Oracle website](http://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1.  Download JDK 8 (1.8) from the [Oracle website](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
     ![Screenshot of the JDK download page on the Oracle website](update-jdk-images/image1.png)
 
@@ -54,7 +54,7 @@ Be sure to restart Visual Studio after updating the location.
 
 # [Visual Studio for Mac](#tab/macos)
 
-1.  Download JDK 8 (1.8) from the [Oracle website](http://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1.  Download JDK 8 (1.8) from the [Oracle website](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
     ![Screenshot of the JDK download page on the Oracle website](update-jdk-images/image1.png)
 

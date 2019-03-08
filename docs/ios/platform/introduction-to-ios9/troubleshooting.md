@@ -41,7 +41,7 @@ If the same Storyboard in run in iOS 9, it will result in an exception in the fo
 
 iOS 9 enforces layouts to use either **Right** & **Left** _or_ **Leading** & **Trailing** attributes but *not* both. To fix this issue, change all layout constraints to use the same attribute set inside your Storyboard file.
 
-For more information, please see the [iOS 9 constraint error](http://stackoverflow.com/questions/32692841/ios-9-constraint-error) Stack Overflow discussion.
+For more information, please see the [iOS 9 constraint error](https://stackoverflow.com/questions/32692841/ios-9-constraint-error) Stack Overflow discussion.
 
 ## ERROR ITMS-90535: Unexpected CFBundleExecutable Key
 
@@ -53,7 +53,7 @@ This issues can usually be solved by finding the named bundle in the project the
 
 After making these changes, do a clean and rebuild the entire project. You should be able to submit to iTunes Connect without issue after making these changes.
 
-For more information, please see this [Stack Overflow](http://stackoverflow.com/questions/32096130/unexpected-cfbundleexecutable-key) discussion.
+For more information, please see this [Stack Overflow](https://stackoverflow.com/questions/32096130/unexpected-cfbundleexecutable-key) discussion.
 
 ## CFNetwork SSLHandshake failed (-9824) Error
 

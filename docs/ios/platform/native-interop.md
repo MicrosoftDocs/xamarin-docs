@@ -143,7 +143,7 @@ There are two kinds of native libraries available on iOS:
 -  Static libraries that you ship with your application.
 
 
-To access methods defined in either one of those, you use [Mono's P/Invoke functionality](http://www.mono-project.com/docs/advanced/pinvoke/) which is the same technology that you
+To access methods defined in either one of those, you use [Mono's P/Invoke functionality](https://www.mono-project.com/docs/advanced/pinvoke/) which is the same technology that you
 would use in .NET, which is roughly:
 
 -  Determine which C function you want to invoke

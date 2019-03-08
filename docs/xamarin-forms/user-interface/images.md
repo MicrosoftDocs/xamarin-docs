@@ -39,7 +39,7 @@ The [`Aspect`](xref:Xamarin.Forms.Image.Aspect) property determines how the imag
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) - Clips the image so that it fills the display area while preserving the aspect (ie. no distortion).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) - Letterboxes the image (if required) so that the entire image fits into the display area, with blank space added to the top/bottom or sides depending on whether the image is wide or tall.
 
-Images can be loaded from a [local file](#Local_Images), an [embedded resource](#embedded-images), or [downloaded](#Downloading_Images). In addition, font icons can be displayed by the [`Image`](xref:Xamarin.Forms.Image) view by specifying the font icon data in a `FontImageSource` object. For more information, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) in the [Fonts](~/xamarin-forms/user-interface/text/fonts.md) guide.
+Images can be loaded from a [local file](#local-images), an [embedded resource](#embedded-images), or [downloaded](#downloading-images). In addition, font icons can be displayed by the [`Image`](xref:Xamarin.Forms.Image) view by specifying the font icon data in a `FontImageSource` object. For more information, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) in the [Fonts](~/xamarin-forms/user-interface/text/fonts.md) guide.
 
 ## Local Images
 
@@ -88,7 +88,7 @@ The preferred way to manage images since iOS 9 is to drag images for each resolu
 
 Prior to iOS 9, retina versions of the image could be placed in the **Resources** folder - two and three times the resolution with a **@2x** or **@3x** suffixes on the filename before the file extension (eg. **myimage@2x.png**). However, this method of working with images in an iOS app has been deprecated by Apple. For more information, see [Image Sizes and Filenames](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
-Android alternate resolution images should be placed in [specially-named directories](http://developer.android.com/guide/practices/screens_support.html) in the Android project, as shown in the following screenshot:
+Android alternate resolution images should be placed in [specially-named directories](https://developer.android.com/guide/practices/screens_support.html) in the Android project, as shown in the following screenshot:
 
 [![Android Multiple-Resolution Image Location](images-images/xs-highdpisolution-sml.png "Android Multiple-Resolution Image Location")](images-images/xs-highdpisolution.png#lightbox "Android Multiple-Resolution Image Location")
 
@@ -299,7 +299,7 @@ Setting icons and splash screens for Xamarin.Forms apps is done in each of the a
 
 ## Icons
 
-See the [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md), [Google Iconography](http://developer.android.com/design/style/iconography.html), and [Guidelines for tile and icon assets](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) for more information on creating these application resources.
+See the [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md), [Google Iconography](https://developer.android.com/design/style/iconography.html), and [Guidelines for tile and icon assets](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) for more information on creating these application resources.
 
 In addition, font icons can be displayed by the [`Image`](xref:Xamarin.Forms.Image) view by specifying the font icon data in a `FontImageSource` object. For more information, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) in the [Fonts](~/xamarin-forms/user-interface/text/fonts.md) guide.
 
@@ -319,5 +319,5 @@ Application icon and splash screen images are set-up and configured as for non-X
 
 - [WorkingWithImages (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/)
 - [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md)
-- [Android Iconography](http://developer.android.com/design/style/iconography.html)
+- [Android Iconography](https://developer.android.com/design/style/iconography.html)
 - [Guidelines for tile and icon assets](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/)

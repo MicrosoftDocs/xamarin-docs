@@ -109,7 +109,7 @@ The book sometimes makes references to the _Windows Runtime_. This is a term tha
 
 A .NET Standard 2.0 library does not support any version of Windows 10 Mobile. Therefore, a Xamarin.Forms application using a .NET Standard library will not run on a Windows 10 Mobile device. Xamarin.Forms applications continue to run on the Windows 10 desktop, versions 10.0.16299.0 and above.
 
-Xamarin.Forms has preview support for the [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK#](~/xamarin-forms/platform/other/gtk.md), and [Tizen](/xamarin-forms/platform/other/tizen.md) platforms.
+Xamarin.Forms has preview support for the [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK#](~/xamarin-forms/platform/other/gtk.md), and [Tizen](~/xamarin-forms/platform/other/tizen.md) platforms.
 
 ### Chapter summaries
 

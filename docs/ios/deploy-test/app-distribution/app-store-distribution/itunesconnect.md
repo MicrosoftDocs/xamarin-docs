@@ -357,7 +357,7 @@ This article describes how to use iTunes Connect to prepare a Xamarin.iOS applic
 ## Related Links
 
 - [Working with Images](~/ios/app-fundamentals/images-icons/index.md)
-- [iOS App Development Workflow Guide: Distributing Applications](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html)
+- [iOS App Development Workflow Guide: Distributing Applications](https://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html)
 - [App Store Submission Tips](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [App Store Review Guidelines](https://developer.apple.com/appstore/resources/approval/guidelines.html)
 - [iTunes Connect Developer Guide](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/About.html#//apple_ref/doc/uid/TP40011225-CH1-SW1)

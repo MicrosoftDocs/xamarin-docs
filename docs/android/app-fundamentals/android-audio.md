@@ -163,7 +163,7 @@ Recording audio with the `MediaRecorder` requires the following steps:
 3. Set the output file audio format using the
    [SetOutputFormat](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetOutputFormat/p/Android.Media.OutputFormat/)
    method. For a list of supported audio types see
-   [Android Supported Media Formats](http://developer.android.com/guide/appendix/media-formats.html).
+   [Android Supported Media Formats](https://developer.android.com/guide/appendix/media-formats.html).
 
 4. Call the
    [SetAudioEncoder](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetAudioEncoder/p/Android.Media.AudioEncoder/)
@@ -286,7 +286,7 @@ focus is used to determine whether or not it is OK to play or record
 audio.
 
 For more information about audio focus, see
-[Managing Audio Focus](http://developer.android.com/training/managing-audio/audio-focus.html).
+[Managing Audio Focus](https://developer.android.com/training/managing-audio/audio-focus.html).
 
 
 

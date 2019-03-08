@@ -92,7 +92,7 @@ If the user presses harder, they will enter the regular message view (which is r
 
 ### Checking for 3D Touch Availability
 
-When working with a [UIViewController]() you can use the following code to see if the iOS device the app is running on supports 3D Touch:
+When working with a `UIViewController` you can use the following code to see if the iOS device the app is running on supports 3D Touch:
 
 ```csharp
 public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
@@ -107,7 +107,7 @@ public override void TraitCollectionDidChange(UITraitCollection previousTraitCol
         ...
 ```
 
-This method may be called before *or after* `ViewDidLoad()`. 
+This method may be called before *or after* `ViewDidLoad()`.
 
 ### Handling Peek and Pop
 
@@ -292,7 +292,7 @@ Here we are defining two static Quick Action items with the following keys:
 * `UIApplicationShortcutItemType` - Is a string value that we will use to identify the item in our app. See the following section for more information.
 
 > [!IMPORTANT]
-> Quick Action shortcut items that are set in the `Info.plist` file cannot be accessed with the `Application.ShortcutItems` property. They are only passed in to the `HandleShortcutItem` event handler. 
+> Quick Action shortcut items that are set in the `Info.plist` file cannot be accessed with the `Application.ShortcutItems` property. They are only passed in to the `HandleShortcutItem` event handler.
 
 
 

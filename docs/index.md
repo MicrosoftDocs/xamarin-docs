@@ -3,6 +3,8 @@ layout: HubPage
 hide_bc: true
 title: Xamarin Documentation
 description: Xamarin lets you build native apps for Android, iOS, and macOS using .NET code and platform-specific user interfaces. Xamarin.Forms allows you to build native apps, with shared UI code written in C# or XAML.
+author: conceptdev
+ms.author: crdun
 ms.date: 02/12/2019
 featureFlags:
 - clicktale
@@ -751,7 +753,7 @@ featureFlags:
         <h2>Keep in touch with us</h2>
         <ul class="links">
            <li>
-                <a href="http://blog.xamarin.com/">
+                <a href="https://blog.xamarin.com/">
                     Blog
                 </a>
             </li>

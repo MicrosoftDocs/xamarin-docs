@@ -207,7 +207,7 @@ For any other image format, include the extension with the name. For example:
 TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 ```
 
-For more information about icons and images, see the Apple documentation on [Custom Icon and Image Creation Guidelines](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
+For more information about icons and images, see the Apple documentation on [Custom Icon and Image Creation Guidelines](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
 
 ## Displaying an image in a storyboards
 

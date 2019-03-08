@@ -101,6 +101,6 @@ This article will take a comprehensive look at using resources and cover the fol
 ## Related Links
 
 - [Using Android Assets](~/android/app-fundamentals/resources-in-android/android-assets.md)
-- [Application Fundamentals](http://developer.android.com/guide/topics/fundamentals.html)
-- [Application Resources](http://developer.android.com/guide/topics/resources/index.html)
-- [Supporting Multiple Screens](http://developer.android.com/guide/practices/screens_support.html)
+- [Application Fundamentals](https://developer.android.com/guide/topics/fundamentals.html)
+- [Application Resources](https://developer.android.com/guide/topics/resources/index.html)
+- [Supporting Multiple Screens](https://developer.android.com/guide/practices/screens_support.html)

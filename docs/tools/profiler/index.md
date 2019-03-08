@@ -14,7 +14,7 @@ _This guide explores the key features of the Xamarin Profiler. It look at profil
 
 An application’s success depends on the end user experience. As a developer you might have implemented some really awesome features in your app, but if the app is sluggish or full of crashes, the user will likely get rid of it.
 
-Historically, Mono has featured a powerful command-line profiler for gathering information about programs running in the Mono runtime called the [Mono log profiler](http://www.mono-project.com/docs/debug+profile/profile/profiler/). The Xamarin Profiler a graphical interface for the Mono log profiler, and supports profiling Android, iOS, tvOS, and Mac applications on Mac, and Android, iOS, and tvOS applications on Windows.
+Historically, Mono has featured a powerful command-line profiler for gathering information about programs running in the Mono runtime called the [Mono log profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/). The Xamarin Profiler a graphical interface for the Mono log profiler, and supports profiling Android, iOS, tvOS, and Mac applications on Mac, and Android, iOS, and tvOS applications on Windows.
 
 The Xamarin Profiler has a number of instruments available for profiling — Allocations, Cycles, and Time Profiler. This guide explores what these instruments measure and how they analyze your application, and clarifies the meaning of the data presented on each screen.
 
@@ -49,11 +49,11 @@ The Xamarin Profiler provides developers with a way to profile applications from
 
 # [Visual Studio for Mac](#tab/macos)
 
-Currently, the Xamarin Profiler can be used to test Xamarin.iOS, Xamarin.Android, and Xamarin.Mac applications on Mac (Via Visual Studio for Mac). The profiler is a separate process from the IDE, and so, in addition to launching from Visual Studio for Mac, it can be used as a standalone application to examine .exe and `.mlpd` files which have been produced from the [mono log profiler](http://www.mono-project.com/docs/debug+profile/profile/profiler/).
+Currently, the Xamarin Profiler can be used to test Xamarin.iOS, Xamarin.Android, and Xamarin.Mac applications on Mac (Via Visual Studio for Mac). The profiler is a separate process from the IDE, and so, in addition to launching from Visual Studio for Mac, it can be used as a standalone application to examine .exe and `.mlpd` files which have been produced from the [mono log profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
 # [Visual Studio](#tab/windows)
 
-Currently, the Xamarin Profiler can be used to test Xamarin.Android apps on Windows (via Visual Studio and Visual Studio for Mac). The profiler is a separate process from the IDE, and so, in addition to launching from Visual Studio, it can be used as a standalone application to examine .exe and `.mlpd` files which have been produced from the [mono log profiler](http://www.mono-project.com/docs/debug+profile/profile/profiler/).
+Currently, the Xamarin Profiler can be used to test Xamarin.Android apps on Windows (via Visual Studio and Visual Studio for Mac). The profiler is a separate process from the IDE, and so, in addition to launching from Visual Studio, it can be used as a standalone application to examine .exe and `.mlpd` files which have been produced from the [mono log profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
 -----
 
@@ -319,7 +319,7 @@ Select **Update** to continue.
 
 ### SGen Garbage Collector and Profiling
 
-The [SGen](http://www.mono-project.com/docs/advanced/garbage-collector/sgen/) garbage collector is used for all Xamarin platforms.
+The [SGen](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/) garbage collector is used for all Xamarin platforms.
 
 SGen is a generational GC, which allocates objects of an application into three heaps — Nursery, Major Heap and the Large Object Space. This allows for speedier execution of garbage collection. SGen is currently the default GC for Xamarin.Android, and Xamarin.iOS Unified applications.
 

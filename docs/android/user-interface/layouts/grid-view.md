@@ -24,7 +24,7 @@ Start a new project named **HelloGridView**.
 
 Find some photos you'd like to use, or
 [download these sample
-images](http://developer.android.com/shareables/sample_images.zip). Add
+images](https://developer.android.com/shareables/sample_images.zip). Add
 the image files to the project's **Resources/Drawable** directory. In
 the **Properties** window, set the Build Action for each to
 **AndroidResource**.

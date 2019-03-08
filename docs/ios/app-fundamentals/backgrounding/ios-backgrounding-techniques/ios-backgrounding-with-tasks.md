@@ -62,7 +62,7 @@ public override void DidEnterBackground (UIApplication application) {
 We begin by overriding the `DidEnterBackground` method in the `AppDelegate`, where we register our task via `BeginBackgroundTask` as we did in the previous example. Next, we spawn a new thread and perform our long-running task. Note that the `EndBackgroundTask` call is now made from inside the long-running task, since the `DidEnterBackground` method will have already returned.
 
 > [!IMPORTANT]
-> iOS uses a [watchdog mechanism](http://developer.apple.com/library/ios/qa/qa1693/_index.html) to ensure that an application's UI remains responsive. An application that spends too much time in `DidEnterBackground` will become unresponsive in the UI. Kicking off tasks to run in the background allows `DidEnterBackground` to return in a timely manner, keeping the UI responsive and preventing the watchdog from killing the application.
+> iOS uses a [watchdog mechanism](https://developer.apple.com/library/ios/qa/qa1693/_index.html) to ensure that an application's UI remains responsive. An application that spends too much time in `DidEnterBackground` will become unresponsive in the UI. Kicking off tasks to run in the background allows `DidEnterBackground` to return in a timely manner, keeping the UI responsive and preventing the watchdog from killing the application.
 
 
 ## Handling Background Task Time Limits
