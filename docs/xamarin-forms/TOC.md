@@ -326,7 +326,7 @@
 ### [Publishing UWP apps](/windows/uwp/packaging/)
 ### [Publishing Mac apps](~/mac/deploy-test/publishing-to-the-app-store/index.md)
 ### [Performance](deploy-test/performance.md)
-### [Automated Testing with Visual Studio App Center](/appcenter/test-cloud/)
+### [Automated Testing with Visual Studio App Center](/appcenter/test-cloud/uitest/get-started-xamarin-forms)
 ## [Advanced Concepts and Internals](internals/index.md)
 ### [Dependency Resolution](internals/dependency-resolution.md)
 ### [Fast Renderers](internals/fast-renderers.md)
