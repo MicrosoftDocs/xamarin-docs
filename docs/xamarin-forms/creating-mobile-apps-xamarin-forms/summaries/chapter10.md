@@ -35,7 +35,7 @@ These four XAML markup extensions are supported by many implementations of XAML,
 
 - `StaticResource` supported by [`StaticResourceExtension`](xref:Xamarin.Forms.Xaml.StaticResourceExtension)
 - `DynamicResource` supported by [`DynamicResourceExtension`](xref:Xamarin.Forms.Xaml.DynamicResourceExtension)
-- `Binding` supported by [`BindingExtension`](xref:Xamarin.Forms.Xaml.BindingExtension)&mdash;discussed in [Chapter 16. Data binding](#chapter16)
+- `Binding` supported by [`BindingExtension`](xref:Xamarin.Forms.Xaml.BindingExtension)&mdash;discussed in [Chapter 16. Data binding](chapter16.md)
 - `TemplateBinding` supported by [`TemplateBindingExtension`](xref:Xamarin.Forms.Xaml.TemplateBindingExtension)&mdash;not covered in the book
 
 An additional XAML markup extension is included in Xamarin.Forms in connection with [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout):

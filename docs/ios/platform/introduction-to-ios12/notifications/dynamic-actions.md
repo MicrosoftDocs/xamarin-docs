@@ -6,7 +6,7 @@ ms.assetid: 6B34AD78-5117-42D0-B6E7-C8B4B453EAFF
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 9/4/2018
+ms.date: 09/04/2018
 ---
 # Dynamic notification action buttons in Xamarin.iOS
 

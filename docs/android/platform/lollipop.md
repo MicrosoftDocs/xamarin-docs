@@ -76,13 +76,13 @@ Xamarin-based apps:
     installed via the Android SDK Manager.
 
 -   **Java Developer Kit** &ndash; Xamarin.Android requires
-    [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) or
+    [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) or
     later if you are developing for API level 24 or greater (JDK 1.8 also supports API levels earlier
     than 24, including Lollipop). The 64-bit version of JDK 1.8 is required if you
     are using custom controls or the Forms Previewer.
 
 You can continue to use
-[JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+[JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 if you are developing specifically for API level 23 or earlier.
 
 
@@ -110,7 +110,7 @@ that targets Android 5.0:
     [![Installing Android 5.0 SDK packages in the Android SDK Manager](lollipop-images/android-l-sdk-pkgs-sml.png)](lollipop-images/android-l-sdk-pkgs.png#lightbox)
 
    For more information about using the Android SDK Manager, see
-   [SDK Manager](http://developer.android.com/tools/help/sdk-manager.html).
+   [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html).
 
 4. Create a new Xamarin.Android project. If you are new to Android
    development with Xamarin, see
@@ -171,7 +171,7 @@ instead of Dalvik. ART implements several major new features:
 Existing apps should work without change under ART &ndash; except for apps 
 that exploit techniques unique to the previous Dalvik runtime, which may not 
 work under ART. For more information about these changes, 
-see [Verifying App Behavior on the Android Runtime (ART)](http://developer.android.com/guide/practices/verifying-apps-art.html).
+see [Verifying App Behavior on the Android Runtime (ART)](https://developer.android.com/guide/practices/verifying-apps-art.html).
 
 
 ### Notification Changes
@@ -212,7 +212,7 @@ Android 5.0 requires the following steps:
 
 If your notifications present transport controls, display media playback status, 
 use `RemoteControlClient`, or call `ActivityManager.GetRecentTasks`, see 
-[Important Behavior Changes](http://developer.android.com/preview/api-overview.html#Behaviors) 
+[Important Behavior Changes](https://developer.android.com/preview/api-overview.html#Behaviors) 
 for more information about updating your notifications for Android 5.0.
 
 For information about creating notifications in Android, see 
@@ -280,7 +280,7 @@ of the animation can be customized for longer or shorter lengths of
 time.
 
 For more on touch feedback animations in Android 5.0, 
-see [Customize Touch Feedback](http://developer.android.com/training/material/animations.html#Touch).
+see [Customize Touch Feedback](https://developer.android.com/training/material/animations.html#Touch).
 
 
 ### Activity Transition Animations
@@ -337,7 +337,7 @@ Shared element transitions support multiple types of animations, such as:
 -   Changing the size and scale type for a view.
 
 For more about activity transition animations in Android 5.0, see 
-[Customize Activity Transitions](http://developer.android.com/training/material/animations.html#Transitions).
+[Customize Activity Transitions](https://developer.android.com/training/material/animations.html#Transitions).
 
 
 ### View State Transition Animations
@@ -355,7 +355,7 @@ following techniques:
     that runs when the state of a view changes.
 
 For more about view state transition animations in 
-Android 5.0, see [Animate View State Changes](http://developer.android.com/training/material/animations.html#ViewState).
+Android 5.0, see [Animate View State Changes](https://developer.android.com/training/material/animations.html#ViewState).
 
 
 ### Reveal Effect
@@ -377,7 +377,7 @@ Reveal animations can be reversed; that is, the clipping circle can
 shrink to hide the view rather than enlarge to reveal the view.
 
 For more information on the Android 5.0 reveal effect in, 
-see [Use the Reveal Effect](http://developer.android.com/training/material/animations.html#Reveal).
+see [Use the Reveal Effect](https://developer.android.com/training/material/animations.html#Reveal).
 
 
 ### Curved Motion
@@ -401,7 +401,7 @@ You can use the new `PathInterpolator` class to specify how motion interpolation
 takes place. `PathInterpolator` is an interpolator that traverses animation paths 
 according to specified control points and motion curves. For more information about 
 how to specify curved motion settings in Android 5.0, 
-see [Use Curved Motion](http://developer.android.com/training/material/animations.html#CurvedMotion).
+see [Use Curved Motion](https://developer.android.com/training/material/animations.html#CurvedMotion).
 
 
 ## View Shadows & Elevation
@@ -426,7 +426,7 @@ its layout `elevation` setting plus a `translationZ` property that you
 can set through a `ViewPropertyAnimator` method call.
 
 For more about view shadows in Android 5.0, 
-see [Defining Shadows and Clipping Views](http://developer.android.com/training/material/shadows-clipping.html).
+see [Defining Shadows and Clipping Views](https://developer.android.com/training/material/shadows-clipping.html).
 
 
 ## Color Features
@@ -464,7 +464,7 @@ set to a light gray:
 ![Examples of the above logo with different tint settings](lollipop-images/drawable-tinting.png)
 
 For more about drawable tinting in Android 5.0, 
-see [Drawable Tinting](http://developer.android.com/training/material/drawables.html#DrawableTint).
+see [Drawable Tinting](https://developer.android.com/training/material/drawables.html#DrawableTint).
 
 
 ### Prominent Color Extraction
@@ -500,7 +500,7 @@ squares is included to illustrate the palette colors that were
 extracted from the image.
 
 For more about color extraction in Android 5.0, 
-see [Extracting Prominent Colors from an Image](http://developer.android.com/training/material/drawables.html#ColorExtract).
+see [Extracting Prominent Colors from an Image](https://developer.android.com/training/material/drawables.html#ColorExtract).
 
 
 ## New UI Widgets
@@ -667,7 +667,7 @@ The following APIs make these new features possible:
 -   `CaptureResult` &ndash; Provides the results of an image capture operation.
 
 For more about the new camera APIs in Android 5.0, 
-see [Media](http://developer.android.com/about/versions/android-5.0.html#Media).
+see [Media](https://developer.android.com/about/versions/android-5.0.html#Media).
 
 ### Audio Playback
 
@@ -685,7 +685,7 @@ Android 5.0 updates the `AudioTrack` class for better audio playback:
      multithreading for some apps.
 
 For more about `AudioTrack` improvements in Android 5.0, 
-see [Media](http://developer.android.com/about/versions/android-5.0.html#Media).
+see [Media](https://developer.android.com/about/versions/android-5.0.html#Media).
 
 ### Media Playback Control
 
@@ -708,7 +708,7 @@ to associate a media session with rich notification content (such as
 extracting and showing album art).
 
 For more about the new media playback control features in Android 5.0, 
-see [Media](http://developer.android.com/about/versions/android-5.0.html#Media).
+see [Media](https://developer.android.com/about/versions/android-5.0.html#Media).
 
 ### Storage
 
@@ -728,7 +728,7 @@ applications to work with directories and documents:
     call the new `Android.Content.Context.GetExternalMediaDirs` method.
 
 For more about new storage APIs in Android 5.0, 
-see [Storage](http://developer.android.com/preview/api-overview.html#Storage).
+see [Storage](https://developer.android.com/preview/api-overview.html#Storage).
 
 ### Wireless & Connectivity
 
@@ -744,7 +744,7 @@ Android 5.0 adds the following API enhancements for wireless and connectivity:
     functionality for sharing data with other devices.
 
 For more about the new wireless and connectivity APIs in Android 5.0, 
-see [Wireless and Connectivity](http://developer.android.com/preview/api-overview.html#Wireless).
+see [Wireless and Connectivity](https://developer.android.com/preview/api-overview.html#Wireless).
 
 ### Job Scheduling
 
@@ -756,7 +756,7 @@ to that task, such as downloading a large file when the device is
 connected over a Wi-Fi network instead of a metered network.
 
 For more about the new job scheduling APIs in Android 5.0, 
-see [Scheduling Jobs](http://developer.android.com/preview/api-overview.html#JobScheduler).
+see [Scheduling Jobs](https://developer.android.com/preview/api-overview.html#JobScheduler).
 
 ## Summary
 
@@ -789,7 +789,7 @@ excellent introduction for learning how to create Android projects.
 
 ## Related Links
 
-- [Android L Developer Preview](http://developer.android.com/preview/index.html)
+- [Android L Developer Preview](https://developer.android.com/preview/index.html)
 - [Get the Android SDK](https://developer.android.com/sdk/index.html#Other)
-- [Material Design](http://developer.android.com/preview/material/index.html)
+- [Material Design](https://developer.android.com/preview/material/index.html)
 - [Material Design Principles](http://static.googleusercontent.com/media/www.google.com/en/us/design/material-design.pdf)

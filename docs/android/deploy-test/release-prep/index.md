@@ -383,7 +383,7 @@ The **AOT Compilation** option requires an Enterprise license or
 higher. **AOT compilation** is available only when the project is
 configured for Release mode, and it is disabled by default. For more
 information about AOT Compilation, see
-[AOT](http://www.mono-project.com/docs/advanced/aot/).
+[AOT](https://www.mono-project.com/docs/advanced/aot/).
 
 #### LLVM Optimizing Compiler
 
@@ -462,7 +462,7 @@ necessary, i.e.the app still references more than 65K Java methods even
 after using ProGuard.
 
 For more information about Multi-Dex, see
-[Configure Apps with Over 64K Methods](http://developer.android.com/tools/building/multidex.html).
+[Configure Apps with Over 64K Methods](https://developer.android.com/tools/building/multidex.html).
 
 <a name="Compile" />
 
@@ -613,6 +613,6 @@ From here, it is possible to select the distribution channel:
 
 - [Multi-Core Devices and Xamarin.Android](~/android/deploy-test/multicore-devices.md)
 - [CPU Architectures](~/android/app-fundamentals/cpu-architectures.md)
-- [AOT](http://www.mono-project.com/docs/advanced/aot/)
-- [Shrink Your Code and Resources](http://developer.android.com/tools/help/proguard.html)
-- [Configure Apps with Over 64K Methods](http://developer.android.com/tools/building/multidex.html)
+- [AOT](https://www.mono-project.com/docs/advanced/aot/)
+- [Shrink Your Code and Resources](https://developer.android.com/tools/help/proguard.html)
+- [Configure Apps with Over 64K Methods](https://developer.android.com/tools/building/multidex.html)

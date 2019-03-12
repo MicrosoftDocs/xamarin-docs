@@ -34,11 +34,11 @@ Xbox One games can be developed on retail Xbox One hardware. Additional software
 Once all required resources have been installed and developer mode has been enabled on the Windows 10 machine, we can create a new MonoGame project using Visual Studio by following these steps:
 
 1. Select **File** > **New** > **Project...**
-1. Select the **Installed** > **Templates** > **Visual C#** > **MonoGame** category: 
+1. Select the **Installed** > **Templates** > **Visual C#** > **MonoGame** category:
 
     ![](uwp-images/image1.png "MonoGame category")
 
-1. Select the **MonoGame Windows 10 Universal Project** option: 
+1. Select the **MonoGame Windows 10 Universal Project** option:
 
     ![](uwp-images/image2.png "Select the MonoGame Windows 10 Universal Project option")
 
@@ -70,7 +70,7 @@ UWP projects can deploy to any Windows 10 device from the same project. After se
 
 ![](uwp-images/remote.png "UWP apps can be deployed by switching the target to Remote Machine and entering the Xbox Ones IP address")
 
-On Xbox One, the white border represents the non-safe area for TVs. For more information, see the [safe area section](#Safe_Area_on_Xbox_One).
+On Xbox One, the white border represents the non-safe area for TVs. For more information, see the [safe area section](#safe-area-on-xbox-one).
 
 ![](uwp-images/safearea.png "On Xbox One, the white border represents the non-safe area for TVs")
 
@@ -86,7 +86,7 @@ The MonoGame template for Xbox One considers the safe area and renders it as a w
 
 Content in MonoGame projects can be referenced directly from file or through the [MonoGame Content Pipeline](~/graphics-games/cocossharp/content-pipeline/index.md). Small game projects may benefit from the simplicity of loading from file. Larger projects will benefit from using the content pipeline to optimize content to reduce size and load times. Unlike XNA on the Xbox 360, the `System.IO.File` class is available on Xbox One UWP apps.
 
-For more information on loading content using the content pipeline, see the [Content Pipeline Guide](~/graphics-games/cocossharp/content-pipeline/index.md). 
+For more information on loading content using the content pipeline, see the [Content Pipeline Guide](~/graphics-games/cocossharp/content-pipeline/index.md).
 
 ### Loading Content From File
 

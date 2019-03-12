@@ -88,7 +88,7 @@ press the **Enter** key, the toast will be displayed as shown on the right:
 
 [![Examples of entering text into EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
-*Portions of this page are modifications based on work created and* [ *shared by the Android Open Source Project*](http://code.google.com/policies.html) *and used according to terms described in the* [ *Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/) *. This tutorial is based on the* [ *Android Form Stuff tutorial*](http://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
+*Portions of this page are modifications based on work created and* [ *shared by the Android Open Source Project*](http://code.google.com/policies.html) *and used according to terms described in the* [ *Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/) *. This tutorial is based on the* [ *Android Form Stuff tutorial*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
 
 
 ## Related Links

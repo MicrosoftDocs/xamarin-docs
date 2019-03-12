@@ -271,7 +271,7 @@ With this code in place, the Manual Camera Controls can be easily implemented fo
 
 By allowing the end user to take controls of the focus directly, an application can provide more artistic control over the image taken.
 
-For example, a professional photographer can soften the focus of an image to achieve a [Bokeh Effect](http://en.wikipedia.org/wiki/Bokeh):
+For example, a professional photographer can soften the focus of an image to achieve a [Bokeh Effect](https://en.wikipedia.org/wiki/Bokeh):
 
 [![](intro-to-manual-camera-controls-images/image2.png "A Bokeh Effect")](intro-to-manual-camera-controls-images/image2.png#lightbox)
 
@@ -512,7 +512,7 @@ Before discussing the details of controlling exposure in an IOS 8 application. L
 The three basic elements that come together to control exposure are:
 
 -  **Shutter Speed** – This is the length of time that the shutter is open to let light onto the camera sensor. The shorter the time the shutter is open, the less light is let in and the crisper the image is (less motion blur). The longer the shutter is open, the more light is let in and the more motion blur that occurs.
--  **ISO Mapping** – This is a term borrowed from film photography and refers to the sensitivity of the chemicals in the film to light. Low ISO values in film have less grain and finer color reproduction; low ISO values on digital sensors have less sensor noise but less brightness. The higher the ISO value, the brighter the image but with more sensor noise. “ISO” on a digital sensor is a measure of [electronic gain](http://en.wikipedia.org/wiki/Gain), not a physical feature. 
+-  **ISO Mapping** – This is a term borrowed from film photography and refers to the sensitivity of the chemicals in the film to light. Low ISO values in film have less grain and finer color reproduction; low ISO values on digital sensors have less sensor noise but less brightness. The higher the ISO value, the brighter the image but with more sensor noise. “ISO” on a digital sensor is a measure of [electronic gain](https://en.wikipedia.org/wiki/Gain), not a physical feature. 
 -  **Lens Aperture** – This is the size of the lens opening. On all iOS devices the lens aperture is fixed, so the only two values that can be used to adjust exposure are Shutter Speed and ISO.
 
 
@@ -812,7 +812,7 @@ The new iOS 8 Exposure API allows the application to take control of the process
 
 Before discussing the details of controlling white balance in an IOS 8 application. Let's take a quick look at how white balance works:
 
-In the study of color perception, the [CIE 1931 RGB color space and CIE 1931 XYZ color space](http://en.wikipedia.org/wiki/CIE_1931_color_space) are the first mathematically defined color spaces. They were created by the International Commission on Illumination (CIE) in 1931.
+In the study of color perception, the [CIE 1931 RGB color space and CIE 1931 XYZ color space](https://en.wikipedia.org/wiki/CIE_1931_color_space) are the first mathematically defined color spaces. They were created by the International Commission on Illumination (CIE) in 1931.
 
 [![](intro-to-manual-camera-controls-images/image17.png "The CIE 1931 RGB color space and CIE 1931 XYZ color space")](intro-to-manual-camera-controls-images/image17.png#lightbox)
 
@@ -820,7 +820,7 @@ The above chart shows us all of the colors visible to the human eye, from deep b
 
 As visible in the graph, there are X and Y values that can be plotted on the graph that would be outside of the range of human vision, and as a result these colors cannot be reproduced by a camera.
 
-The smaller curve in the above chart is called the [Planckian Locus](http://en.wikipedia.org/wiki/Planckian_locus), which expresses the color temperature (in degrees kelvin), with higher numbers on the blue side (hotter) and lower numbers on the red side (cooler). These are useful for typical lighting situations.
+The smaller curve in the above chart is called the [Planckian Locus](https://en.wikipedia.org/wiki/Planckian_locus), which expresses the color temperature (in degrees kelvin), with higher numbers on the blue side (hotter) and lower numbers on the red side (cooler). These are useful for typical lighting situations.
 
 In mixed lighting conditions, the white balance adjustments will need to deviate from the Planckian Locus to make the required changes. In these situations the adjustment will need to be shifted either to the green or red/magenta side of the CIE scale.
 

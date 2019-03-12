@@ -6,7 +6,7 @@ ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 8/29/2018
+ms.date: 08/29/2018
 ---
 # Type registrar for Xamarin.iOS
 
@@ -167,7 +167,7 @@ Below are some examples of the errors caught by the new registrar.
 
     ```csharp
     [Register]
-    class MyDemo : NSObject 
+    class MyDemo : NSObject
     {
         [Export ("foo:")]
         void Foo (NSString str);
@@ -202,7 +202,7 @@ Below are some examples of the errors caught by the new registrar.
 Some things to keep in mind about the new registrar:
 
 - Some third-party libraries must be updated to work with the new
-registration system. See [required modifications](#required_modifications)
+registration system. See [required modifications](#required-modifications)
 below for more details.
 
 - A short-term downside is also that Clang must be used if the Accounts
@@ -228,7 +228,7 @@ project's **iOS Build** settings:
 - `--registrar:dynamic` – default for simulator builds
 
 > [!NOTE]
-> Xamarin's Classic API supported other options such as 
+> Xamarin's Classic API supported other options such as
 > `--registrar:legacystatic` and `--registrar:legacydynamic`. However,
 > these options are not supported by the Unified API.
 
@@ -236,12 +236,14 @@ project's **iOS Build** settings:
 
 The old registration system has the following drawbacks:
 
-- There was no (native) static reference to Objective-C classes and methods in third-party native libraries, which meant that we couldn't ask the native linker to remove third-party native code that wasn't actually used (because everything would be removed). This is the reason for the `-force_load libNative.a` that every third-party binding had to do (or the equivalent `ForceLoad=true` in the 
+- There was no (native) static reference to Objective-C classes and methods in third-party native libraries, which meant that we couldn't ask the native linker to remove third-party native code that wasn't actually used (because everything would be removed). This is the reason for the `-force_load libNative.a` that every third-party binding had to do (or the equivalent `ForceLoad=true` in the
 `[LinkWith]` attribute).
 - You could export two managed types with the same Objective-C name with no warning. A rare scenario was to end up with two `AppDelegate` classes in different namespaces. At runtime it would be completely random which one was picked (in fact, it varied between runs of an app that wasn't even rebuilt - which made for a very puzzling and frustrating debugging experience).
 - You could export two methods with the same Objective-C signature. Yet again which one would be called from Objective-C was random (but this problem wasn't as common as the previous one, mostly because the only way to actually experience this bug was to override the unlucky managed method).
 - The set of methods that was exported was slightly different between dynamic and static builds.
 - It does not work properly when exporting generic classes (which exact generic implementation executed at runtime would be random, effectively resulting in undetermined behavior).
+
+<a name="required-modifications" />
 
 ## New registrar: required changes to bindings
 

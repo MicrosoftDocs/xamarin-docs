@@ -17,7 +17,7 @@ This is the getting started page for Java, which covers the basics for all suppo
 To use .NET Embedding with Java you will need:
 
 * Java 1.8 or later
-* [Mono 5.0](http://www.mono-project.com/download/)
+* [Mono 5.0](https://www.mono-project.com/download/)
 
 For Mac:
 

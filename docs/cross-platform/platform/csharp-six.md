@@ -47,13 +47,13 @@ platforms and exercises the various features.
 ## Compiler
 
 The Mono C# 6 compiler is included in Mono 4.0 and later, which is
-[freely available for download](http://www.mono-project.com/download/).
+[freely available for download](https://www.mono-project.com/download/).
 Visual Studio for Mac automatically updates the Mono installation on your system.
 
 Windows users must have [Visual Studio 2015 or 2017^](https://visualstudio.microsoft.com/) installed
 to compile C# 6 code (even if you choose Xamarin Studio for Windows as your IDE).
 
-^ or *[Microsoft Build Tools 2015](http://www.microsoft.com/download/details.aspx?id=48159)*
+^ or *[Microsoft Build Tools 2015](https://www.microsoft.com/download/details.aspx?id=48159)*
 for command line compilation or build servers, for example.
 
 ## Using C# 6

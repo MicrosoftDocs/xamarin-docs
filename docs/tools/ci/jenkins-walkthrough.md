@@ -148,7 +148,7 @@ In order for an macOS workstation to interact with a TFS server, [Team Explorer 
     ```
     $ tf
     Team Explorer Everywhere Command Line Client (version 11.0.0.201306181526)
-    
+
     Available commands and their options:
     ```
 
@@ -226,7 +226,7 @@ The first task Jenkins does is retrieve the source code from the source code man
 
 #### Using Git for Source Code Control
 
-If you are using TFS for source code control, [skip](#Using_TFS_for_Source_Code_Management) this section and proceed to the next section using TFS.
+If you are using TFS for source code control, [skip](#Using-TFS-for-Source-Code-Management) this section and proceed to the next section using TFS.
 
 Jenkins supports Git out of the box – no extra plugins are necessary. To use Git, click on the **Git** radio button and enter the URL for the Git repository, as shown in the following screenshot:
 

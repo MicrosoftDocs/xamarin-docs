@@ -105,7 +105,7 @@ class Demo {
 ```
 
 > [!IMPORTANT]
-> As mentioned in the code sample above, it is bad practice to embed strings in SQL commands because it makes your code vulnerable to [SQL injection](http://en.wikipedia.org/wiki/SQL_injection).
+> As mentioned in the code sample above, it is bad practice to embed strings in SQL commands because it makes your code vulnerable to [SQL injection](https://en.wikipedia.org/wiki/SQL_injection).
 
 
 ### Using Command Parameters

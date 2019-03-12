@@ -113,7 +113,7 @@ for tips on maintaining compatibility.
 
 By default, Android gives your application a title bar when it is run. 
 The value used for this is 
-[`/manifest/application/activity/@android:label`](http://developer.android.com/guide/topics/manifest/activity-element.html#label). 
+[`/manifest/application/activity/@android:label`](https://developer.android.com/guide/topics/manifest/activity-element.html#label). 
 In most cases, this value will differ from your class name. To specify your app's label on the title bar, 
 use the [`Label`](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Label/) property.
 For example: 
@@ -236,7 +236,7 @@ in Visual Studio).
 
 The Android manifest provides a way for you to describe the 
 capabilities of your activity. This is done via 
-[Intents](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) 
+[Intents](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) 
 and the 
 [`[IntentFilter]`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 
 custom attribute. You can specify which actions are appropriate for 
@@ -333,18 +333,18 @@ section of
 
 ## List of Custom Attributes
 
--   [Android.App.ActivityAttribute](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/) : Generates a  [/manifest/application/activity](http://developer.android.com/guide/topics/manifest/activity-element.html) XML fragment 
--   [Android.App.ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/) : Generates a  [/manifest/application](http://developer.android.com/guide/topics/manifest/application-element.html) XML fragment 
--   [Android.App.InstrumentationAttribute](https://developer.xamarin.com/api/type/Android.App.InstrumentationAttribute/) : Generates a  [/manifest/instrumentation](http://developer.android.com/guide/topics/manifest/instrumentation-element.html) XML fragment 
--   [Android.App.IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) : Generates a  [//intent-filter](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) XML fragment 
--   [Android.App.MetaDataAttribute](https://developer.xamarin.com/api/type/Android.App.MetaDataAttribute/) : Generates a  [//meta-data](http://developer.android.com/guide/topics/manifest/meta-data-element.html) XML fragment 
--   [Android.App.PermissionAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionAttribute/) : Generates a  [//permission](http://developer.android.com/guide/topics/manifest/permission-element.html) XML fragment 
--   [Android.App.PermissionGroupAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionGroupAttribute/) : Generates a  [//permission-group](http://developer.android.com/guide/topics/manifest/permission-group-element.html) XML fragment 
--   [Android.App.PermissionTreeAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionTreeAttribute/) : Generates a  [//permission-tree](http://developer.android.com/guide/topics/manifest/permission-tree-element.html) XML fragment 
--   [Android.App.ServiceAttribute](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute/) : Generates a  [/manifest/application/service](http://developer.android.com/guide/topics/manifest/service-element.html) XML fragment 
--   [Android.App.UsesLibraryAttribute](https://developer.xamarin.com/api/type/Android.App.UsesLibraryAttribute/) : Generates a  [/manifest/application/uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html) XML fragment 
--   [Android.App.UsesPermissionAttribute](https://developer.xamarin.com/api/type/Android.App.UsesPermissionAttribute/) : Generates a  [/manifest/uses-permission](http://developer.android.com/guide/topics/manifest/uses-permission-element.html) XML fragment 
--   [Android.Content.BroadcastReceiverAttribute](https://developer.xamarin.com/api/type/Android.Content.BroadcastReceiverAttribute/) : Generates a  [/manifest/application/receiver](http://developer.android.com/guide/topics/manifest/receiver-element.html) XML fragment 
--   [Android.Content.ContentProviderAttribute](https://developer.xamarin.com/api/type/Android.Content.ContentProviderAttribute/) : Generates a  [/manifest/application/provider](http://developer.android.com/guide/topics/manifest/provider-element.html) XML fragment 
--   [Android.Content.GrantUriPermissionAttribute](https://developer.xamarin.com/api/type/Android.Content.GrantUriPermissionAttribute/) : Generates a  [/manifest/application/provider/grant-uri-permission](http://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) XML fragment
+-   [Android.App.ActivityAttribute](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/) : Generates a  [/manifest/application/activity](https://developer.android.com/guide/topics/manifest/activity-element.html) XML fragment 
+-   [Android.App.ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/) : Generates a  [/manifest/application](https://developer.android.com/guide/topics/manifest/application-element.html) XML fragment 
+-   [Android.App.InstrumentationAttribute](https://developer.xamarin.com/api/type/Android.App.InstrumentationAttribute/) : Generates a  [/manifest/instrumentation](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) XML fragment 
+-   [Android.App.IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) : Generates a  [//intent-filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) XML fragment 
+-   [Android.App.MetaDataAttribute](https://developer.xamarin.com/api/type/Android.App.MetaDataAttribute/) : Generates a  [//meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html) XML fragment 
+-   [Android.App.PermissionAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionAttribute/) : Generates a  [//permission](https://developer.android.com/guide/topics/manifest/permission-element.html) XML fragment 
+-   [Android.App.PermissionGroupAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionGroupAttribute/) : Generates a  [//permission-group](https://developer.android.com/guide/topics/manifest/permission-group-element.html) XML fragment 
+-   [Android.App.PermissionTreeAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionTreeAttribute/) : Generates a  [//permission-tree](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) XML fragment 
+-   [Android.App.ServiceAttribute](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute/) : Generates a  [/manifest/application/service](https://developer.android.com/guide/topics/manifest/service-element.html) XML fragment 
+-   [Android.App.UsesLibraryAttribute](https://developer.xamarin.com/api/type/Android.App.UsesLibraryAttribute/) : Generates a  [/manifest/application/uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) XML fragment 
+-   [Android.App.UsesPermissionAttribute](https://developer.xamarin.com/api/type/Android.App.UsesPermissionAttribute/) : Generates a  [/manifest/uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) XML fragment 
+-   [Android.Content.BroadcastReceiverAttribute](https://developer.xamarin.com/api/type/Android.Content.BroadcastReceiverAttribute/) : Generates a  [/manifest/application/receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) XML fragment 
+-   [Android.Content.ContentProviderAttribute](https://developer.xamarin.com/api/type/Android.Content.ContentProviderAttribute/) : Generates a  [/manifest/application/provider](https://developer.android.com/guide/topics/manifest/provider-element.html) XML fragment 
+-   [Android.Content.GrantUriPermissionAttribute](https://developer.xamarin.com/api/type/Android.Content.GrantUriPermissionAttribute/) : Generates a  [/manifest/application/provider/grant-uri-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) XML fragment
 

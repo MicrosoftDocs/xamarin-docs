@@ -233,7 +233,7 @@ The following is required to use Xamarin.Forms for cross-platform UIs that will 
 
 As in a standard cross-platform application, the existing 32 bit data types should be used in any shared, cross-platform code for most all situations. The new Native Data Types should only be used when making a call to a Mac or iOS API where support for architecture-aware types are required.
 
-For more details, see our [Updating Existing Xamarin.Forms Apps](http://developer.xamarin.com/guides/cross-platform/macios/updating-xamarin-forms-apps/) documentation.
+For more details, see our [Updating Existing Xamarin.Forms Apps](https://developer.xamarin.com/guides/cross-platform/macios/updating-xamarin-forms-apps/) documentation.
 
 ## Summary
 

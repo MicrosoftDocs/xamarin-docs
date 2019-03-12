@@ -21,7 +21,7 @@ Apple [fixed](https://developer.apple.com/library/content/documentation/Xcode/Co
 
 The `ibtool` command in Xcode 6.0 had a bug on OS X 10.10 Yosemite. Xamarin.iOS uses Xcode's `ibtool` to compile storyboards and `XIB` files.
 
-More information about the bug in relation to Xcode can be found on the following Stack Overflow post: [http://stackoverflow.com/questions/25754763/cant-open-storyboard](http://stackoverflow.com/questions/25754763/cant-open-storyboard)
+More information about the bug in relation to Xcode can be found on the following Stack Overflow post: [https://stackoverflow.com/questions/25754763/cant-open-storyboard](https://stackoverflow.com/questions/25754763/cant-open-storyboard)
 
 ### Error message
 
@@ -51,7 +51,7 @@ You can change this element and add a `LogicalName` so that the image will inste
 </BundleResource>
 ```
 
-In Visual Studio for Mac the `LogicalName` can also be set using the `Resource ID` field for the image under **View > Pads > Properties**. (See also: [http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545](http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545))
+In Visual Studio for Mac the `LogicalName` can also be set using the `Resource ID` field for the image under **View > Pads > Properties**. (See also: [https://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545](https://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545))
 
 After this change, you will need to update the storyboard and `.xib` files to use the new top-level image paths. Visual Studio for Mac will automatically update the list of autocompletions for the `Image` property in the iOS Designer. In Visual Studio, you'll need to edit the path by hand. The iOS Designer will then display this as a missing image, but the project will build and run correctly.
 

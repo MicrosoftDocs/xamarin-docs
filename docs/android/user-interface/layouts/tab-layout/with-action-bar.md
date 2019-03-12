@@ -42,7 +42,7 @@ Android APIs.
 
 Some of the ActionBar APIs have been back ported to API level 7
 (Android 2.1) and are available via the
-[V7 AppCompat Library](http://developer.android.com/tools/support-library/features.html#v7-appcompat),
+[V7 AppCompat Library](https://developer.android.com/tools/support-library/features.html#v7-appcompat),
 which is made available to Xamarin.Android apps via the
 [Xamarin Android Support Library - V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
 package.
@@ -251,8 +251,8 @@ versions of Android.
 - [ActionBarTabs (sample)](https://developer.xamarin.com/samples/monodroid/UserInterface/ActionBarTabs/)
 - [Toolbar](~/android/user-interface/controls/tool-bar/index.md)
 - [Fragments](~/android/platform/fragments/index.md)
-- [ActionBar](http://developer.android.com/guide/topics/ui/actionbar.html)
-- [ActionBarActivity](http://developer.android.com/reference/android/support/v7/app/ActionBarActivity.html)
-- [Action Bar Pattern](http://developer.android.com/design/patterns/actionbar.html)
-- [Android v7 AppCompat](http://developer.android.com/tools/support-library/features.html#v7-appcompat)
+- [ActionBar](https://developer.android.com/guide/topics/ui/actionbar.html)
+- [ActionBarActivity](https://developer.android.com/reference/android/support/v7/app/ActionBarActivity.html)
+- [Action Bar Pattern](https://developer.android.com/design/patterns/actionbar.html)
+- [Android v7 AppCompat](https://developer.android.com/tools/support-library/features.html#v7-appcompat)
 - [Xamarin.Android Support Library v7 AppCompat NuGet Package](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)

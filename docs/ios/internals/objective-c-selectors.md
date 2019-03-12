@@ -16,7 +16,7 @@ to instance methods, and class selectors to static methods.
 
 Unlike normal C functions (and like C++ member functions), you cannot
 directly invoke a selector using
-[P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/) Instead,
+[P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/) Instead,
 selectors are sent to an Objective-C class or instance using the
 [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
 function.

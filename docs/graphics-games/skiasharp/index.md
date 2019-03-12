@@ -52,4 +52,4 @@ bindings of Skia to provide full coverage to the APIs.
 
 To help us guide our binding efforts, please leave comments or
 suggestions as issues on the GitHub repository
-[http://github.com/mono/SkiaSharp](http://github.com/mono/SkiaSharp).
+[https://github.com/mono/SkiaSharp](https://github.com/mono/SkiaSharp).

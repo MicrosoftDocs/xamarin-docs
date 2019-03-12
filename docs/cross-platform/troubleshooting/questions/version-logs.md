@@ -95,7 +95,7 @@ These are the logs from the `XamarinInstaller.exe` installer.
 msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 ```
 
-Reference: [Command-Line Options](http://msdn.microsoft.com/library/aa367988.aspx)
+Reference: [Command-Line Options](https://msdn.microsoft.com/library/aa367988.aspx)
 
 #### <a id="visual-studio-startup-verbose-logs" name="visual-studio-startup-verbose-logs" />Visual Studio startup, verbose logs
 
@@ -103,7 +103,7 @@ Reference: [Command-Line Options](http://msdn.microsoft.com/library/aa367988.asp
 devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 ```
 
-Reference: [/Log (devenv.exe)](http://msdn.microsoft.com/library/ms241272.aspx)
+Reference: [/Log (devenv.exe)](https://msdn.microsoft.com/library/ms241272.aspx)
 
 ### <a id="mac-logs" name="mac-logs" />Mac logs
 
@@ -155,7 +155,7 @@ These are the logs from the `XamarinInstaller.dmg` installer.
 
 **View > Output > Show output from: Debug**
 
-### <a id="adb-logcat" name="adb-logcat" />Android [`adb`](http://developer.android.com/tools/help/adb.html) logcat logs
+### <a id="adb-logcat" name="adb-logcat" />Android [`adb`](https://developer.android.com/tools/help/adb.html) logcat logs
 
 After running the `adb` command, attach back the **android_logcat.txt** file from your Desktop. These instructions assume you have only one device attached.
 

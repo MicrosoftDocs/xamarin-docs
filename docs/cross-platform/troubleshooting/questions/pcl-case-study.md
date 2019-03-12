@@ -73,7 +73,7 @@ The `portable-net45+win8+wp8+wpa81` version of the library does not reference **
 
 It is _possible_ to get the build to complete "successfully" (with linking enabled) in older versions of Xamarin.iOS or in Xamarin.Android on Mac if you include a reference to the `System.Diagnostics.Tracing.dll` _reference assembly_ \[1\] rather than the _facade assembly_ \[2], but unfortunately this is not a "correct" workaround. Reference assemblies are only meant to be used when building _portable libraries_, not platform-specific code like apps. Attempting to _run_ the code contained in reference assemblies (rather than just build against it) is likely to produce unexpected results. The correct fix will be for the Mono team to add the missing `WriteEvent(System.Int32,System.Object[])` overload to the [`EventSource`](https://github.com/mono/mono/blob/master/mcs/class/corlib/System.Diagnostics.Tracing/EventSource.cs) type ([Bug 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337)). For now the best option is to switch to the `portable-net45+win8+wp8+wpa81` version of the Microsoft TPL Dataflow library as discussed in the Workaround section above.
 
-(For anyone who might be reading this article after seeing a related older, briefer answer from StackOverflow (<http://stackoverflow.com/a/23591322/2561894>), note that the distinction between reference assemblies and facade assembly was _not_ mentioned there.)
+(For anyone who might be reading this article after seeing a related older, briefer answer from StackOverflow (<https://stackoverflow.com/a/23591322/2561894>), note that the distinction between reference assemblies and facade assembly was _not_ mentioned there.)
 
 **\[1\] "Reference assembly" locations**
 

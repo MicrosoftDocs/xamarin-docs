@@ -36,7 +36,7 @@ For more information about Azure Cosmos DB, see the [Azure Cosmos DB Documentati
 
 The process for integrating an Azure Cosmos DB document database into a Xamarin.Forms application is as follows:
 
-1. Create a Cosmos DB account. For more information, see [Create an Azure Cosmos DB account](/azure/cosmos-db/sql-api-dotnetcore-get-started#step-1-create-an-azure-cosmos-db-account).
+1. Create a Cosmos DB account. For more information, see [Create an Azure Cosmos DB account](/azure/cosmos-db/sql-api-dotnetcore-get-started#create-an-azure-cosmos-account).
 1. Add the [Azure Cosmos DB .NET Standard client library](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) NuGet package to the platform projects in the Xamarin.Forms solution.
 1. Add `using` directives for the `Microsoft.Azure.Documents`, `Microsoft.Azure.Documents.Client`, and `Microsoft.Azure.Documents.Linq` namespaces to classes that will access the Cosmos DB account.
 

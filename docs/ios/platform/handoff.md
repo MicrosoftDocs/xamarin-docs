@@ -6,6 +6,7 @@ ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
+ms.date: 03/19/2017
 ---
 
 # Handoff in Xamarin.iOS
@@ -107,24 +108,24 @@ Because of the security requirements imposed by Handoff, a Xamarin.iOS app that 
 
 Do the following:
 
-1. Log into the [Apple Developer Portal](http://developer.apple.com).
+1. Log into the [Apple Developer Portal](https://developer.apple.com).
 2. Click on **Certificates, Identifiers & Profiles**.
 3. If you haven't already done so, click on **Identifiers** and create an ID for your app (e.g. `com.company.appname`), else edit your existing ID.
-4. Ensure that the **iCloud** service has been checked for the given ID: 
+4. Ensure that the **iCloud** service has been checked for the given ID:
 
 	[![](handoff-images/provision01.png "Enable the iCloud service for the given ID")](handoff-images/provision01.png#lightbox)
 5. Save your changes.
-4. Click on **Provisioning Profiles** > **Development** and create a new development provisioning profile for you app: 
+4. Click on **Provisioning Profiles** > **Development** and create a new development provisioning profile for you app:
 
 	[![](handoff-images/provision02.png "Create a new development provisioning profile for the app")](handoff-images/provision02.png#lightbox)
 5. Either download and install the new provisioning profile or use Xcode to download and install the profile.
-6. Edit your Xamarin.iOS project options and ensure that you are using the provisioning profile that you just created: 
+6. Edit your Xamarin.iOS project options and ensure that you are using the provisioning profile that you just created:
 
 	[![](handoff-images/provision03.png "Select the provisioning profile just created")](handoff-images/provision03.png#lightbox)
-7. Next, edit your **Info.plist** file and ensure that you are using the App ID that was used to create the provisioning profile: 
+7. Next, edit your **Info.plist** file and ensure that you are using the App ID that was used to create the provisioning profile:
 
 	[![](handoff-images/provision04.png "Set App ID")](handoff-images/provision04.png#lightbox)
-8. Scroll to the **Background Modes** section and check the following items: 
+8. Scroll to the **Background Modes** section and check the following items:
 
 	[![](handoff-images/provision05.png "Enable the required background modes")](handoff-images/provision05.png#lightbox)
 9. Save the changes to all files.
@@ -461,7 +462,7 @@ This JSON file contains a dictionary that specifies a list of app IDs in the for
 }
 ```
 
-To sign the JSON file (so that it has the correct `Content-Type` of `application/pkcs7-mime`), use the **Terminal** app and a `openssl` command with a certificate and key issued by a certificate authority trusted by iOS (see [http://support.apple.com/kb/ht5012](http://support.apple.com/kb/ht5012) for a list). For example:
+To sign the JSON file (so that it has the correct `Content-Type` of `application/pkcs7-mime`), use the **Terminal** app and a `openssl` command with a certificate and key issued by a certificate authority trusted by iOS (see [https://support.apple.com/kb/ht5012](https://support.apple.com/kb/ht5012) for a list). For example:
 
 ```csharp
 echo '{"activitycontinuation":{"apps":["YWBN8XTPBJ.com.company.FirstApp",

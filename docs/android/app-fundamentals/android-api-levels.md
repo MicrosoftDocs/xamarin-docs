@@ -535,5 +535,5 @@ Xamarin.Android build version codes.
 - [Android SDK Setup](~/android/get-started/installation/android-sdk.md)
 - [SDK CLI Tooling Changes](~/android/troubleshooting/sdk-cli-tooling-changes.md)
 - [Picking your compileSdkVersion, minSdkVersion, and targetSdkVersion](https://medium.com/google-developers/picking-your-compilesdkversion-minsdkversion-targetsdkversion-a098a0341ebd)
-- [What is API Level?](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
+- [What is API Level?](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
 - [Codenames, Tags, and Build Numbers](https://source.android.com/source/build-numbers)

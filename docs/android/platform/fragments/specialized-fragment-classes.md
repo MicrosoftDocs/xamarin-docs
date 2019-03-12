@@ -238,7 +238,7 @@ the [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferen
 it will show a hierarchy of preferences to the user in a
 Fragment. As the user interacts with the preferences, they will be
 automatically saved to
-[SharedPreferences](http://developer.android.com/reference/android/content/SharedPreferences.html).
+[SharedPreferences](https://developer.android.com/reference/android/content/SharedPreferences.html).
 In Android 3.0 or higher applications, use the `PreferenceFragment` to
 deal with preferences in applications. The following picture shows an
 example of a `PreferenceFragment`:

@@ -21,4 +21,4 @@ If you think you have found a bug in Xamarin.iOS, report the issue [on GitHub](h
 
 ## Forums and StackOverflow
 
-For answers to specific questions about using or implementing a specific iOS 11 feature in Xamarin.iOS, the Xamarin [iOS Forum](http://forums.xamarin.com/categories/ios) provides a wealth of information. [StackOverflow](http://stackoverflow.com/search?tab=newest&q=xamarin) is another good source of users-helping-users information.
+For answers to specific questions about using or implementing a specific iOS 11 feature in Xamarin.iOS, the Xamarin [iOS Forum](http://forums.xamarin.com/categories/ios) provides a wealth of information. [StackOverflow](https://stackoverflow.com/search?tab=newest&q=xamarin) is another good source of users-helping-users information.

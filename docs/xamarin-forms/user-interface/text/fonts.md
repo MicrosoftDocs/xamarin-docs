@@ -137,7 +137,7 @@ The steps required for each platform are outlined below. When including custom f
 
 It is possible to display a custom font by first ensuring that it is loaded,
 then referring to it by name using the Xamarin.Forms `Font` methods.
-Follow the instructions in [this blog post](http://blog.xamarin.com/custom-fonts-in-ios/):
+Follow the instructions in [this blog post](https://blog.xamarin.com/custom-fonts-in-ios/):
 
 1. Add the font file with **Build Action: BundleResource**, and
 2. Update the **Info.plist** file (**Fonts provided by application**, or `UIAppFonts`, key), then

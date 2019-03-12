@@ -28,12 +28,12 @@ The following is required to create Xamarin-based Android Wear apps:
     via the Android SDK Manager.
 
 -   **Java Developer Kit** &ndash; Xamarin Android development requires
-    [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+    [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
     if you are developing for API level 24 or greater (JDK 1.8
     also supports API levels earlier than 24).
 
 You can continue to use
-[JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+[JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 if you are developing specifically for API level 23 or earlier.
 
 > [!IMPORTANT]

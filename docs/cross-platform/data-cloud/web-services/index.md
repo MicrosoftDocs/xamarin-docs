@@ -14,12 +14,6 @@ _This guide demonstrates how to consume different web service technologies. Topi
 
 To function correctly, many mobile applications are dependent on the cloud, and so integrating web services into mobile applications is a common scenario. The Xamarin platform supports consuming different web service technologies, and includes in-built and third-party support for consuming RESTful, ASMX, and Windows Communication Foundation (WCF) services.
 
-This article discusses the following topics:
-
-- [REST Services](#rest)
-- [ASP.Net Web Services (ASMX)](#asmx)
-- [WCF Services](#wcf)
-
 For customers using Xamarin.Forms, there are complete examples using each of these technologies in the [Xamarin.Forms Web Services](~/xamarin-forms/data-cloud/index.md)
 documentation.
 
@@ -32,10 +26,6 @@ documentation.
 > these requirements, they will fail with an exception.
 
 You can opt-out of ATS if it is not possible to use the `HTTPS` protocol and secure communication for internet resources. This can be achieved by updating the app's **Info.plist** file. For more information see [App Transport Security](~/ios/app-fundamentals/ats.md).
-
-
-
-<a name="rest" />
 
 ## REST
 
@@ -357,9 +347,8 @@ WCF describes a service with a variety of different contracts which include the 
 
 There are differences between ASP.NET Web Services (ASMX) and WCF, but it is important to understand that WCF supports the same capabilities that ASMX provides – SOAP messages over HTTP.
 
-In general, the Xamarin platform supports the same client-side subset of WCF that ships with the Silverlight runtime. This includes the most common encoding and protocol implementations of WCF — text-encoded SOAP messages over the HTTP transport protocol using the `BasicHttpBinding` class. In addition, WCF support requires the use of tools only available in a Windows environment to generate the proxy.
-
-For more information about using the Xamarin platform to consume a WCF web service with the `BasicHttpBinding` class, see [Walkthrough - Working with WCF](walkthrough-working-with-wcf.md).
+> [!IMPORTANT]
+> The Xamarin platform support for WCF is limited to text-encoded SOAP messages over HTTP/HTTPS using the `BasicHttpBinding` class. In addition, WCF support requires the use of tools only available in a Windows environment to generate the proxy.
 
 ### Generating a Proxy
 
@@ -433,7 +422,7 @@ System.Net.ServicePointManager.ServerCertificateValidationCallback +=
 (se, cert, chain, sslerror) => { return true; };
 ```
 
-This maintains transport encryption while ignoring the server-side certificate validation. However, this approach effectively disregards the trust concerns associated with the certificate and may not be appropriate. For more information, see [Using Trusted Roots Respectfully](http://www.mono-project.com/UsingTrustedRootsRespectfully) on [mono-project.com](http://www.mono-project.com).
+This maintains transport encryption while ignoring the server-side certificate validation. However, this approach effectively disregards the trust concerns associated with the certificate and may not be appropriate. For more information, see [Using Trusted Roots Respectfully](https://www.mono-project.com/UsingTrustedRootsRespectfully) on [mono-project.com](https://www.mono-project.com).
 
 <a name="Calling_a_WCF_Service_with_Client_Credential_Security" />
 
@@ -456,13 +445,8 @@ In the example above, if you get the message “Ran out of trampolines of type 0
 
 For more information about HTTP basic authentication, although in the context of a REST web service, see [Authenticating a RESTful Web Service](~/xamarin-forms/data-cloud/authentication/rest.md).
 
-## Summary
-
-This guide demonstrated how to consume different web service technologies. Topics covered include communicating with REST services, SOAP services, and Windows Communication Foundation services.
-
 ## Related Links
 
-- [WebServices Sample](https://developer.xamarin.com/samples/mobile/WebServices/WebServiceSamples/)
 - [Web Services in Xamarin.Forms](~/xamarin-forms/data-cloud/index.md)
 - [ServiceModel Metadata Utility Tool (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
-- [BasicHttpBinding](http://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)
+- [BasicHttpBinding](https://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)

@@ -22,21 +22,21 @@ This is a list of the assemblies supported by Xamarin for your Xamarin.tvOS apps
 |Mono.Data.Tds.dll|1.2|TDS Protocol support; used for [System.Data.SqlClient](xref:System.Data.SqlClient) support within [System.Data](~/ios/data-cloud/system.data.md).|
 |Mono.Security.dll|1.0|Cryptographic APIs.|
 |monotouch.dll|1.0|This assembly contains the [C# binding to the CocoaTouch API](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
-|mscorlib.dll|1.0|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|mscorlib.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |OpenTK.dll|1.0|The OpenGL/OpenAL object oriented APIs, [extended to provide iPhone device support](https://developer.xamarin.com/api/namespace/OpenGLES/).|
-|System.dll|1.0|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), plus types from the following namespaces: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.ComponentModel.Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System.Net.Cache</li> <li>System.Net.Mail</li> <li>System.Net.Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System.Timers</li></ul>|
-|System.Core.dll|1.0|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.Data.dll|1.2|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx), [with some functionality removed](~/ios/data-cloud/system.data.md).|
+|System.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), plus types from the following namespaces: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.ComponentModel.Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System.Net.Cache</li> <li>System.Net.Mail</li> <li>System.Net.Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System.Timers</li></ul>|
+|System.Core.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.Data.dll|1.2|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx), [with some functionality removed](~/ios/data-cloud/system.data.md).|
 |System.Data.Service.Client.dll|3.x|Full oData client.|
 |System.Drawing|1.0|System.Drawing API - Classic API ONLY.<br />_System.Drawing is not supported in the Unified API for the Xamarin.Mac .NET 4.5 or Mobile frameworks._|
-|System.Json.dll|1.1|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.Runtime.Serialization.dll|?|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.ServiceModel.dll|1.1|[WCF](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) stack as present in [Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.ServiceModel.Web.dll|?|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), plus types from the following namespaces: <ul><li>System</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
-|System.Transactions.dll|1.2|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx); part of [System.Data](https://docs.microsoft.com/xamarin/ios/data-cloud/system.data) support.|
+|System.Json.dll|1.1|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.Runtime.Serialization.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.ServiceModel.dll|1.1|[WCF](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) stack as present in [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.ServiceModel.Web.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), plus types from the following namespaces: <ul><li>System</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
+|System.Transactions.dll|1.2|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx); part of [System.Data](https://docs.microsoft.com/xamarin/ios/data-cloud/system.data) support.|
 |System.Web.Services|1.1|[Basic Web services](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) from the .NET 3.5 profile, with the server features removed.|
-|System.Xml.dll|1.0|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|
-|System.Xml.Linq.dll|1.0|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|
+|System.Xml.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
+|System.Xml.Linq.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
 
 <a name="Summary" />
 

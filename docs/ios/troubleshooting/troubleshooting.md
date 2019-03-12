@@ -533,7 +533,7 @@ This can happen when application names include a '.' (dot) in their name.
 This is forbidden as the executable name in CFBundleExecutable - even if it can
 works in many other cases (like devices).
 
- *"The value should not include any extension on the name."- [http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
+ *"The value should not include any extension on the name."- [https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
 
 ## Error: "Custom attribute type 0x43 is not supported" when double clicking .xib files
 

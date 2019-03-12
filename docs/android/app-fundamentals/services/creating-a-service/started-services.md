@@ -86,4 +86,4 @@ Multiple callers can request that a service be started. If there is an outstandi
 - [Android.Content.Intent](https://developer.xamarin.com/api/type/Android.Content.Intent)
 - [Android.OS.Handler](https://developer.xamarin.com/api/type/Android.OS.Handler/)
 - [Android.Widget.Toast](https://developer.xamarin.com/api/type/Android.Widget.Toast/)
-- [Status Bar Icons](http://developer.android.com/guide/practices/ui_guidelines/icon_design_status_bar.html)
+- [Status Bar Icons](https://developer.android.com/guide/practices/ui_guidelines/icon_design_status_bar.html)

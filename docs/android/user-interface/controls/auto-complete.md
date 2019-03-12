@@ -240,5 +240,5 @@ described in the*
 [ *Creative Commons 2.5 Attribution
 License*](http://creativecommons.org/licenses/by/2.5/) *. This tutorial
 is based on the*
-[ *Android Auto Complete tutorial*](http://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
+[ *Android Auto Complete tutorial*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
 *.*

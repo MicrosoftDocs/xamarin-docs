@@ -136,7 +136,7 @@ Some of these are shown in the screenshot below:
 
 The last two are required because applications
   require a network connection to download map data. Read about Android
-  [permissions](http://developer.android.com/reference/android/Manifest.permission.html)
+  [permissions](https://developer.android.com/reference/android/Manifest.permission.html)
   to learn more.
 
 ### Universal Windows Platform

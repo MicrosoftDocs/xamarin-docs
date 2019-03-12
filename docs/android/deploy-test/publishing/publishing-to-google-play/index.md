@@ -258,7 +258,7 @@ First, sign into your
 [Google Play Developer account](https://play.google.com/apps/publish).
 If you do not already have a
 Google Play Developer account, see [Get Started with
-Publishing](http://developer.android.com/distribute/googleplay/start.html).
+Publishing](https://developer.android.com/distribute/googleplay/start.html).
 Also, the Google Play Developer API [Getting Started](https://developers.google.com/android-publisher/getting_started)
 explains how to use the Google Play Developer API. After you sign into
 the Google Play Developer Console, click **Settings**:

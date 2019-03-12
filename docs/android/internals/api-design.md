@@ -86,19 +86,19 @@ provide lists, sets, and maps. We expose these elements using the
 [System.Collections.Generic](xref:System.Collections.Generic)
 interfaces in our binding. The fundamental mappings are:
 
--   [java.util.Set<E>](http://developer.android.com/reference/java/util/Set.html) maps to
+-   [java.util.Set<E>](https://developer.android.com/reference/java/util/Set.html) maps to
     system type [ICollection<T>](xref:System.Collections.Generic.ICollection`1),
     helper class [Android.Runtime.JavaSet<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaSet%601/).
 
--   [java.util.List<E>](http://developer.android.com/reference/java/util/List.html) maps to
+-   [java.util.List<E>](https://developer.android.com/reference/java/util/List.html) maps to
     system type [IList<T>](xref:System.Collections.Generic.IList`1),
     helper class [Android.Runtime.JavaList<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaList%601/).
 
--   [java.util.Map<K,V>](http://developer.android.com/reference/java/util/Map.html) maps to
+-   [java.util.Map<K,V>](https://developer.android.com/reference/java/util/Map.html) maps to
     system type [IDictionary<TKey,TValue>](xref:System.Collections.Generic.IDictionary`2),
     helper class [Android.Runtime.JavaDictionary<K,V>](https://developer.xamarin.com/api/type/Android.Runtime.JavaDictionary%602/).
 
--   [java.util.Collection<E>](http://developer.android.com/reference/java/util/Collection.html) maps to
+-   [java.util.Collection<E>](https://developer.android.com/reference/java/util/Collection.html) maps to
     system type [ICollection<T>](xref:System.Collections.Generic.ICollection`1),
     helper class [Android.Runtime.JavaCollection<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaCollection%601/).
 
@@ -387,14 +387,14 @@ constants. The *Parcelable* interface methods are placed into the
 The *Parcelable* interface constants are placed into the
 [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/)
 type. The nested
-[android.os.Parcelable.ClassLoaderCreator <t></t>](http://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html)
+[android.os.Parcelable.ClassLoaderCreator <t></t>](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html)
 and
-[android.os.Parcelable.Creator <t></t>](http://developer.android.com/reference/android/os/Parcelable.Creator.html)
+[android.os.Parcelable.Creator <t></t>](https://developer.android.com/reference/android/os/Parcelable.Creator.html)
 types are currently not bound due to limitations in our generics
 support; if they were supported, they would be present as the
 *Android.OS.IParcelableClassLoaderCreator* and
 *Android.OS.IParcelableCreator* interfaces. For example, the nested
-[android.os.IBinder.DeathRecpient](http://developer.android.com/reference/android/os/IBinder.DeathRecipient.html)
+[android.os.IBinder.DeathRecpient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html)
 interface is bound as the
 [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/)
 interface.
@@ -404,7 +404,7 @@ interface.
 > Beginning with Xamarin.Android 1.9, Java interface
 constants are <em>duplicated</em> in an effort to simplify porting Java
 code. This helps to improve porting Java code that relies on
-[android provider](http://developer.android.com/reference/android/provider/package-summary.html)
+[android provider](https://developer.android.com/reference/android/provider/package-summary.html)
 interface constants.
 
 In addition to the above types, there are four further changes:
@@ -426,7 +426,7 @@ For the *android.os.Parcelable* interface, this means that there will
 now be an
 [*Android.OS.Parcelable*](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) type to
 contain the constants. For example, the
-[Parcelable.CONTENTS_FILE_DESCRIPTOR](http://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR)
+[Parcelable.CONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR)
 constant will be bound as the
 [ *Parcelable.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/)
 constant, instead of as the *ParcelableConsts.ContentsFileDescriptor*
@@ -435,7 +435,7 @@ constant.
 For interfaces containing constants which implement other interfaces
 containing yet more constants, the union of all constants is now
 generated. For example, the
-[android.provider.MediaStore.Video.VideoColumns](http://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html)
+[android.provider.MediaStore.Video.VideoColumns](https://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html)
 interface implements the
 [android.provider.MediaStore.MediaColumns](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumns/)
 interface. However, prior to 1.9, the
@@ -474,9 +474,9 @@ Xamarin.Android 3.0.
 
 Images, layout descriptions, binary blobs and string dictionaries can
 be included in your application as
-[resource files](http://developer.android.com/guide/topics/resources/providing-resources.html).
+[resource files](https://developer.android.com/guide/topics/resources/providing-resources.html).
 Various Android APIs are designed to
-[operate on the resource IDs](http://developer.android.com/guide/topics/resources/accessing-resources.html)
+[operate on the resource IDs](https://developer.android.com/guide/topics/resources/accessing-resources.html)
 instead of dealing with images, strings or binary blobs directly.
 
 For example, a sample Android app that contains a user interface layout
@@ -540,7 +540,7 @@ the documentation to see which constants are appropriate values, which
 is less than ideal.
 
 For example, consider
-[Activity.requestWindowFeature(int featureID)](http://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int)).
+[Activity.requestWindowFeature(int featureID)](https://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int)).
 
 In these cases, we endeavor to group related constants together into a
 .NET enumeration, and remap the method to take the enumeration instead.

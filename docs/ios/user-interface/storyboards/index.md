@@ -528,5 +528,5 @@ This article introduces the concept of Storyboards and how they can be beneficia
 
 - [Manual Storyboard (sample)](https://developer.xamarin.com/samples/ManualStoryboard/)
 - [Introduction to iOS Designer](~/ios/user-interface/designer/introduction.md)
-- [Converting to Storyboards](http://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
+- [Converting to Storyboards](https://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
 - [UIStoryboard Class Reference](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)

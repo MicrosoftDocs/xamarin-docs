@@ -102,7 +102,7 @@ Bindings Generator to influence the creation of the binding assembly.
 The metadata format uses
 [XPath](https://www.w3.org/TR/xpath/) syntax and is nearly identical to
 the *GAPI Metadata* described in
-[GAPI Metadata](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+[GAPI Metadata](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
 guide. This implementation is almost a complete implementation of XPath
 1.0 and thus supports items in the 1.0 standard. This file is a
 powerful XPath based mechanism to change, add, hide, or move any
@@ -466,4 +466,4 @@ used.
 
 - [Working with JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Binding a Java Library](~/android/platform/binding-java-library/index.md)
-- [GAPI Metadata](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [GAPI Metadata](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)

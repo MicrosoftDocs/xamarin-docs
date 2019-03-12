@@ -13,7 +13,7 @@ ms.date: 06/12/2017
 The usefulness of Fragments would be limited without backwards
 compatibility with pre-Android 3.0 (API Level 11) devices. To provide
 this capability, Google introduced the
-[Support Library](http://developer.android.com/sdk/compatibility-library.html)
+[Support Library](https://developer.android.com/sdk/compatibility-library.html)
 (originally called the *Android Compatibility Library* when it was
 released) which backports some of the APIs from newer versions of
 Android to older versions of Android. It is the Android Support Package

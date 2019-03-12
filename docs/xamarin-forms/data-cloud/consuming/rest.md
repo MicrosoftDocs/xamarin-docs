@@ -111,7 +111,7 @@ The `HttpClient.GetAsync` method is used to send the GET request to the web serv
 public async Task<List<TodoItem>> RefreshDataAsync ()
 {
   ...
-  // RestUrl = http://developer.xamarin.com:8081/api/todoitems/
+  // RestUrl = https://developer.xamarin.com:8081/api/todoitems/
   var uri = new Uri (string.Format (Constants.RestUrl, string.Empty));
   ...
   var response = await client.GetAsync (uri);
@@ -134,7 +134,7 @@ The `HttpClient.PostAsync` method is used to send the POST request to the web se
 ```csharp
 public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 {
-  // RestUrl = http://developer.xamarin.com:8081/api/todoitems/
+  // RestUrl = https://developer.xamarin.com:8081/api/todoitems/
   var uri = new Uri (string.Format (Constants.RestUrl, string.Empty));
 
   ...
@@ -190,7 +190,7 @@ The `HttpClient.DeleteAsync` method is used to send the DELETE request to the we
 ```csharp
 public async Task DeleteTodoItemAsync (string id)
 {
-  // RestUrl = http://developer.xamarin.com:8081/api/todoitems/{0}
+  // RestUrl = https://developer.xamarin.com:8081/api/todoitems/{0}
   var uri = new Uri (string.Format (Constants.RestUrl, id));
   ...
   var response = await client.DeleteAsync (uri);

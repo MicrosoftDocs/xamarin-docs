@@ -31,8 +31,8 @@ var lang = Resources.Configuration.Locale; // eg. "es_ES"
 ```
 
 This value will be a locale identifier that contains both a language
-code and a locale code, separated by an underscore. For reference, here is a [list of Java locales](http://www.oracle.com/technetwork/java/javase/locales-137662.html) and
-[Android-supported locales via StackOverflow](http://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android).
+code and a locale code, separated by an underscore. For reference, here is a [list of Java locales](https://www.oracle.com/technetwork/java/javase/locales-137662.html) and
+[Android-supported locales via StackOverflow](https://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android).
 
 Common examples include:
 
@@ -220,7 +220,7 @@ Valid `quantity` switches are:
 * many
 * other
 
-They're described in more detail in the [Android docs](http://developer.android.com/guide/topics/resources/string-resource.html#Plurals).
+They're described in more detail in the [Android docs](https://developer.android.com/guide/topics/resources/string-resource.html#Plurals).
 If a given language does not require 'special' handling, those `quantity` strings
 will be ignored (for example, English only uses `one` and `other`; specifying a `zero`
 string will have no effect, it will not be used).
@@ -255,7 +255,7 @@ contain custom layouts that are designed for RTL display.
 
 For more information on resource directory naming and fallback, refer
 to the Android docs for
-[providing alternative resources](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
+[providing alternative resources](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
 
 ### App name
@@ -328,7 +328,7 @@ guide](~/cross-platform/app-fundamentals/localization.md).
 ## Related Links
 
 - [Tasky (localized in code) (sample)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
-- [Android Localizing with Resources](http://developer.android.com/guide/topics/resources/localization.html)
+- [Android Localizing with Resources](https://developer.android.com/guide/topics/resources/localization.html)
 - [Cross-Platform Localization Overview](~/cross-platform/app-fundamentals/localization.md)
 - [Xamarin.Forms Localization](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [iOS Localization](~/ios/app-fundamentals/localization/index.md)

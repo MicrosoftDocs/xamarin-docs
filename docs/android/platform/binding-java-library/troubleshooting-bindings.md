@@ -386,7 +386,7 @@ with Java Bindings and explained how to resolve them.
 
 ## Related Links
 
-- [Library Projects](http://developer.android.com/tools/projects/index.html#LibraryProjects)
+- [Library Projects](https://developer.android.com/tools/projects/index.html#LibraryProjects)
 - [Working with JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Enable Diagnostic Output](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output)
 - [Xamarin for Android Developers](~/android/get-started/java-developers.md)

@@ -114,7 +114,7 @@ for object oriented programming in Objective-C.
 
 Xamarin.iOS mirrors in C# the hierarchy of classes from
 Objective-C. For example, the Objective-C base class
-[NSObject](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html)
+[NSObject](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html)
 is usable from C# via
 [Foundation.NSObject](xref:Foundation.NSObject).
 
@@ -122,7 +122,7 @@ Although this namespace provides bindings for the underlying
 Objective-C Foundation types, in a few cases we have mapped the
 underlying types to .NET types. For example:
 
-- Instead of dealing with  [NSString](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) and  [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), the runtime exposes these as C#  [string](xref:System.String)s and strongly typed  [array](xref:System.Array)s throughout the API.
+- Instead of dealing with  [NSString](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) and  [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), the runtime exposes these as C#  [string](xref:System.String)s and strongly typed  [array](xref:System.Array)s throughout the API.
 
 - Various helper APIs are exposed here to allow developers to bind third party Objective-C APIs, other iOS APIs or APIs that are not currently bound by Xamarin.iOS.
 
@@ -385,9 +385,9 @@ delegates are offered:
 2.  [Strongly typed via a `Delegate` property](#StrongDelegate)
 3.  [Loosely typed via a `WeakDelegate` property](#WeakDelegate)
 
-For example, consider the [UIWebView](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html)
-class. This dispatches to a [UIWebViewDelegate](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html)
-instance, which is assigned to the [delegate](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate)
+For example, consider the [UIWebView](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html)
+class. This dispatches to a [UIWebViewDelegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html)
+instance, which is assigned to the [delegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate)
 property.
 
 <a name="Via_Events" />
@@ -398,9 +398,9 @@ For many types, Xamarin.iOS will automatically create an appropriate delegate
 which will forward the `UIWebViewDelegate` calls onto C# events. For
 `UIWebView`:
 
--  The  [webViewDidStartLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) method is mapped to the  [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) event.
--  The  [webViewDidFinishLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) method is mapped to the  [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) event.
--  The  [webView:didFailLoadWithError](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) method is mapped to the  [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) event.
+-  The  [webViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) method is mapped to the  [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) event.
+-  The  [webViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) method is mapped to the  [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) event.
+-  The  [webView:didFailLoadWithError](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) method is mapped to the  [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) event.
 
 For example, this simple program records the start and end times when loading a web view:
 
@@ -877,7 +877,7 @@ public Foo (NSCoder coder)
 This constructor is provided for the cases where the object is being
 initialized from an NSCoding instance. For more information, see
 Apple's [Archives and Serialization Programming
-Guide.](http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/Archiving/index.html#//apple_ref/doc/uid/10000047i)
+Guide.](https://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/Archiving/index.html#//apple_ref/doc/uid/10000047i)
 
 #### Exceptions
 
@@ -918,7 +918,7 @@ pointing to a 2 megabyte image) and other important and finite resources
 
 NSObject implements the IDisposable interface and also the [.NET
 Dispose
-pattern](http://msdn.microsoft.com/library/fs2xkftw.aspx). This
+pattern](https://msdn.microsoft.com/library/fs2xkftw.aspx). This
 allows developers that subclass NSObject to override the Dispose
 behavior and release their own resources on demand. For example,
 consider this view controller that keeps around a bunch of images:

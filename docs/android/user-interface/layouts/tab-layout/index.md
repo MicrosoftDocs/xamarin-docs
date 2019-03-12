@@ -42,6 +42,6 @@ has several API's for tabbed interfaces:
 
 ## Related Links
 
-- [Material Design - Tabs](https://material.io/guidelines/components/tabs.html)- [ActionBar](http://developer.android.com/guide/topics/ui/actionbar.html)
+- [Material Design - Tabs](https://material.io/guidelines/components/tabs.html)- [ActionBar](https://developer.android.com/guide/topics/ui/actionbar.html)
 - [Android Support Library v7 AppCompat NuGet Package](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
-- [v7 appcompat library](http://developer.android.com/tools/support-library/features.html#v7-appcompat)
+- [v7 appcompat library](https://developer.android.com/tools/support-library/features.html#v7-appcompat)

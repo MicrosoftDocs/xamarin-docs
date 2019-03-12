@@ -44,7 +44,7 @@ the notification drawer it starts up a second Activity.
  Messaging can be used to implement remote notifications (also called
  push notifications) in Xamarin.Android applications.
 
-[Notifications](http://developer.android.com/guide/topics/ui/notifiers/notifications.html) 
+[Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) 
  &ndash; This Android Developer topic is the definitive guide for 
  Android notifications. It includes a design considerations section 
  that helps you design your notifications so that they conform to the 

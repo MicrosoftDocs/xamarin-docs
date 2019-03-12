@@ -446,7 +446,7 @@ namespace FormsVideoLibrary.Droid
 
 ### The UWP status setting
 
-The UWP `VideoPlayerRenderer` makes use of the `UpdateStatus` event, but it does not need it for setting the `Status` property. The `MediaElement` defines a [`CurrentStateChanged`](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_CurrentStateChanged) event that allows the renderer to be notified when the [`CurrentState`](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_CurrentState) property has changed. The property is detached in the `Dispose` override:
+The UWP `VideoPlayerRenderer` makes use of the `UpdateStatus` event, but it does not need it for setting the `Status` property. The `MediaElement` defines a [`CurrentStateChanged`](xref:Windows.UI.Xaml.Controls.MediaElement.CurrentStateChanged) event that allows the renderer to be notified when the [`CurrentState`](xref:Windows.UI.Xaml.Controls.MediaElement.CurrentState*) property has changed. The property is detached in the `Dispose` override:
 
 ```csharp
 namespace FormsVideoLibrary.UWP

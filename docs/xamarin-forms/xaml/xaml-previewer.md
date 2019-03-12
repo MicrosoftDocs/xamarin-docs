@@ -16,7 +16,7 @@ _See your Xamarin.Forms layouts rendered as you type!_
 
 ## Requirements
 
-Projects require the latest Xamarin.Forms NuGet package for the XAML Previewer to work. Previewing Android apps requires [JDK 1.8 x64](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Projects require the latest Xamarin.Forms NuGet package for the XAML Previewer to work. Previewing Android apps requires [JDK 1.8 x64](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 There is more information in the [release notes](https://developer.xamarin.com/releases/studio/xamarin.studio_6.2/xamarin.studio_6.2/#Xamarin_Forms_Previewer).
 

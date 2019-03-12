@@ -38,7 +38,7 @@ characterInstance.YVelocity = gamePadState.ThumbSticks.Left.Y * characterInstanc
 
 ### Example: Detecting Pushes
 
-`GamePadState` provides information about the current state of the controller, such as whether a certain button is pressed. Certain actions, such as making a character jump, require checking if the button was pushed (was not down last frame, but is down this frame) or released (was down last frame, but not down this frame). 
+`GamePadState` provides information about the current state of the controller, such as whether a certain button is pressed. Certain actions, such as making a character jump, require checking if the button was pushed (was not down last frame, but is down this frame) or released (was down last frame, but not down this frame).
 
 To perform this type of logic, local variables that store the previous frame’s `GamePadState` and the current frame’s `GamePadState` must be created. The following example shows how to store and use the previous frame’s `GamePadState` to implement jumping:
 
@@ -53,7 +53,7 @@ protected override void Update(GameTime gameTime)
     // store off the last state before reading the new one:
     lastFrameGamePadState = currentGamePadState;
     currentGamePadState = GamePad.GetState(PlayerIndex.One);
-    bool wasAButtonPushed = 
+    bool wasAButtonPushed =
 currentGamePadState.Buttons.A == ButtonState.Pressed
         && lastFrameGamePadState.Buttons.A == ButtonState.Released;
     if(wasAButtonPushed)
@@ -83,7 +83,7 @@ if(!hasBButton || !hasXButton)
 iOS apps support wireless game controller input.
 
 > [!IMPORTANT]
-> The NuGet packages for MonoGame 3.5 do not include support for wireless game controllers. Using the GamePad class on iOS requires building MonoGame 3.5 from source or using the MonoGame 3.6 NuGet binaries. 
+> The NuGet packages for MonoGame 3.5 do not include support for wireless game controllers. Using the GamePad class on iOS requires building MonoGame 3.5 from source or using the MonoGame 3.6 NuGet binaries.
 
 ### iOS Game Controller
 
@@ -99,7 +99,7 @@ Apple TV games can use the Siri Remote or wireless game controllers for input.
 
 *Siri Remote* is the native input device for Apple TV. Although values from the Siri Remote can be read through events (as shown in the [Siri Remote and Bluetooth Controllers guide](~/ios/tvos/platform/remote-bluetooth.md)), the `GamePad` class can return values from the Siri Remote.
 
-Notice that `GamePad` can only read input from the play button and touch surface: 
+Notice that `GamePad` can only read input from the play button and touch surface:
 
 ![](input-images/image2.png "Notice that GamePad can only read input from the play button and touch surface")
 
@@ -107,7 +107,7 @@ Since the touch surface movement is read through the `DPad` property, movement v
 
 ### Apple TV Game Controller
 
-Game controllers for Apple TV behave identically to game controllers for iOS apps. For more information, see the [iOS Game Controller section](#iOS_Game_Controller). 
+Game controllers for Apple TV behave identically to game controllers for iOS apps. For more information, see the [iOS Game Controller section](#iOS-game-controller). 
 
 ## Xbox One
 

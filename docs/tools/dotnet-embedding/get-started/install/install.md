@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: 47106AF3-AC6E-4A0E-B30B-9F73C116DDB3
 author: chamons
 ms.author: chhamo
-ms.date: 4/18/2018
+ms.date: 04/18/2018
 ---
 
 # Installing .NET Embedding
@@ -28,10 +28,10 @@ Now that the NuGet is installed, you can run the tooling by hand.
 - Change directory to your solution root
 - The tooling is installed in:
     - **./packages/Embeddinator-4000.[VERSION]/tools/objcgen** (Objective-C)
-    - **./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe** (Java/C) 
-- On macOS, **objcgen** can be run directly. 
+    - **./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe** (Java/C)
+- On macOS, **objcgen** can be run directly.
 - On Windows, **Embeddinator-4000.exe** can be run directly.
-- On macOS, **Embeddinator-4000.exe** needs to be run with **mono**: 
+- On macOS, **Embeddinator-4000.exe** needs to be run with **mono**:
     - `mono ./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe`
 
 Each command invocation will need a number of paramaters listed in the platform-specific documentation.
@@ -93,8 +93,8 @@ rm -Rf '${SolutionDir}/output/'
 ![Custom Build Action](images/visualstudiocustombuild.png)
 
 > [!NOTE]
-> The generated binding will be placed in the directory indicated by the 
-> `--outdir` or `--out` parameter. The generated binding name may vary as 
+> The generated binding will be placed in the directory indicated by the
+> `--outdir` or `--out` parameter. The generated binding name may vary as
 > some platforms have limitations on package names.
 
 #### Visual Studio 2017

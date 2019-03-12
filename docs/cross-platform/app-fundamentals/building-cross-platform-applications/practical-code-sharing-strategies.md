@@ -244,7 +244,7 @@ implemented in Xamarin.iOS and Xamarin.Android to allow common file-access code
 to be written. The `System.IO.IsolatedStorage` class can be
 referenced across all three platforms in a [Shared Project](~/cross-platform/app-fundamentals/shared-projects.md).
 
-Refer to the [Isolated Storage Overview for Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) for more information.
+Refer to the [Isolated Storage Overview for Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) for more information.
 
 The Isolated Storage APIs are not available in [Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md). One alternative for PCL is the [PCLStorage NuGet](https://pclstorage.codeplex.com/)
 
@@ -353,7 +353,7 @@ Actions a mobile app might take in these situations include:
 -  Even if the network is available, it is good practice to verify connectivity with the target server before initiating other requests. This will prevent the app’s network operations from timing out repeatedly and also allow a more informative error message to be displayed to the user.
 
 
-There is a [Xamarin.iOS sample](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) available (which is based on Apple’s [Reachability sample code](http://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html)
+There is a [Xamarin.iOS sample](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) available (which is based on Apple’s [Reachability sample code](https://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html)
 ) to help detect network availability.
 
 
@@ -491,7 +491,7 @@ Both the iOS and Android syntax requires a ‘context’ class to be
 available which means the code needs to pass this object into any methods that
 require a callback on the UI thread.
 
-To make UI thread calls in shared code, follow the [IDispatchOnUIThread example](http://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (courtesy of [@follesoe](http://jonas.follesoe.no/)). Declare and program
+To make UI thread calls in shared code, follow the [IDispatchOnUIThread example](https://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (courtesy of [@follesoe](http://jonas.follesoe.no/)). Declare and program
 to an `IDispatchOnUIThread` interface in the shared code and then
 implement the platform-specific classes as shown here:
 

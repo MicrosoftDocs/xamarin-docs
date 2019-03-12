@@ -18,6 +18,6 @@ ms.date: 03/19/2017
 
 - [Introduction to Mobile Development](~/cross-platform/get-started/introduction-to-mobile-development.md)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Creating Development Provisioning Profiles](http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/DevPortalGuide/CreatingandDownloadingDevelopmentProvisioningProfiles/CreatingandDownloadingDevelopmentProvisioningProfiles.html)
-- [Provisioning Using Organizer](http://developer.apple.com/library/ios/#recipes/xcode_help-devices_organizer/articles/provision_device_for_development-generic.html)
-- [Provisioning Using Portal](http://developer.apple.com/library/ios/#recipes/ProvisioningPortal_Recipes/DownloadingaProvisioningProfile/DownloadingaProvisioningProfile.html)
+- [Creating Development Provisioning Profiles](https://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/DevPortalGuide/CreatingandDownloadingDevelopmentProvisioningProfiles/CreatingandDownloadingDevelopmentProvisioningProfiles.html)
+- [Provisioning Using Organizer](https://developer.apple.com/library/ios/#recipes/xcode_help-devices_organizer/articles/provision_device_for_development-generic.html)
+- [Provisioning Using Portal](https://developer.apple.com/library/ios/#recipes/ProvisioningPortal_Recipes/DownloadingaProvisioningProfile/DownloadingaProvisioningProfile.html)

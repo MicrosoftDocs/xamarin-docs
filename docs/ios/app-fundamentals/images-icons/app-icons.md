@@ -207,4 +207,4 @@ To specify the iTunes Artwork, do the following:
 
 - [Working with Images (sample)](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Custom Icon and Image Creation Guidelines](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))
+- [Custom Icon and Image Creation Guidelines](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))

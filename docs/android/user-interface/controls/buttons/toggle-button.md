@@ -77,5 +77,5 @@ method.
 
 ## Related Links
 
-- [ToggleButton](http://developer.android.com/reference/android/widget/ToggleButton.html)
-- [Switch](http://developer.android.com/reference/android/widget/Switch.html)
+- [ToggleButton](https://developer.android.com/reference/android/widget/ToggleButton.html)
+- [Switch](https://developer.android.com/reference/android/widget/Switch.html)

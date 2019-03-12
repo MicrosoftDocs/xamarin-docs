@@ -17,12 +17,12 @@ To debug on an Android device when developing in Windows; you need to
 install a compatible USB driver. The Android SDK Manager includes the
 "Google USB Driver" by default, which adds support for Nexus devices as
 described here:
-[http://developer.android.com/sdk/win-usb.html](http://developer.android.com/sdk/win-usb.html)
+[https://developer.android.com/sdk/win-usb.html](https://developer.android.com/sdk/win-usb.html)
 
 Other devices require USB drivers specifically published by the device
 manufacturer. Some links for the most common manufacturers are included
 in this guide:
-[http://developer.android.com/tools/extras/oem-usb.html](http://developer.android.com/tools/extras/oem-usb.html)
+[https://developer.android.com/tools/extras/oem-usb.html](https://developer.android.com/tools/extras/oem-usb.html)
 
 ## Alternatives
 

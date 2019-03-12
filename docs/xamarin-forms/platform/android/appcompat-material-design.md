@@ -123,7 +123,7 @@ directory and paste in their contents from below:
 A few properties for the tabs have been set including the tab’s gravity to `fill` and
 mode to `fixed`.
 If you have a lot of tabs you may want to switch this to scrollable - read through the
-Android [TabLayout documentation](http://developer.android.com/reference/android/support/design/widget/TabLayout.html)
+Android [TabLayout documentation](https://developer.android.com/reference/android/support/design/widget/TabLayout.html)
 to learn more.
 
 **Resources/layout/Toolbar.axml**

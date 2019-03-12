@@ -6,6 +6,7 @@ ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
+ms.date: 03/19/2017
 ---
 
 # Additional iOS 9 Frameworks Changes
@@ -62,8 +63,8 @@ For more information, please see the following documents:
 - [CloudKit Catalog: An Introduction to CloudKit (Cocoa and JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) - Apple's sample app using CloudKit and CloudKit JS.
 
 > [!IMPORTANT]
-> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
-> to help developers properly handle the European Union's General Data 
+> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/)
+> to help developers properly handle the European Union's General Data
 > Protection Regulation (GDPR).
 
 ## Foundation Framework Additions
@@ -192,9 +193,9 @@ Apple has included many enhancements to several elements of the [UIKit](xref:UIK
 
 ### 3D Touch Events
 
-New to iOS 9 and the iPhone 6s and iPhone 6s Plus, 3D Touch adds pressure sensitive gestures to your iOS apps. As a result, if your app is running on iOS 9 (or greater) and the iOS device is capable of supporting 3D Touch, changes in pressure will cause the `TouchesMoved` event to be raised. 
+New to iOS 9 and the iPhone 6s and iPhone 6s Plus, 3D Touch adds pressure sensitive gestures to your iOS apps. As a result, if your app is running on iOS 9 (or greater) and the iOS device is capable of supporting 3D Touch, changes in pressure will cause the `TouchesMoved` event to be raised.
 
-Because of this change in behavior, your iOS apps should be prepared for the `TouchesMoved` event to be invoked more often, even if the X/Y coordinates have not changed. 
+Because of this change in behavior, your iOS apps should be prepared for the `TouchesMoved` event to be invoked more often, even if the X/Y coordinates have not changed.
 
 For more information, please see our [Introduction to 3D Touch](~/ios/platform/3d-touch.md) guide.
 

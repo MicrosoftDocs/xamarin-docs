@@ -16,7 +16,7 @@ how to implement the 2D picker navigation pattern for Android Wear.
 ![Example screenshot of GridViewPager on a square display](gridviewpager-images/gridviewpager.png)
 
 First add the
-[Xamarin Android Wear Support](http://www.nuget.org/packages/Xamarin.Android.Wear/)
+[Xamarin Android Wear Support](https://www.nuget.org/packages/Xamarin.Android.Wear/)
 NuGet package to your project.
 
 The layout XML looks like this:
@@ -30,9 +30,9 @@ The layout XML looks like this:
 ```
 
 Create a
-[`GridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
+[`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
 (or subclass such as
-[`FragmentGridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
+[`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
 to supply views to display as the user navigates.
 
 The

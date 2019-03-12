@@ -63,7 +63,7 @@ you can use in Xamarin apps.
 This means that Objective Sharpie has the full power of Clang
 (the C/Objective-C/C++ compiler that actually compiles the native library
 you would bind) and all of its internal knowledge of the header files for binding.
-Instead of translating the parsed [AST](http://en.wikipedia.org/wiki/Abstract_syntax_tree)
+Instead of translating the parsed [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree)
 to object code, Objective Sharpie translates the AST to a C# binding "scaffold"
 suitable for input to the `bmac` and `btouch` Xamarin binding tools.
 

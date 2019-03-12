@@ -111,7 +111,7 @@ process:
 When an application starts up, it should check to see if the 
 appropriate expansion files exist on the current device. If they do 
 not, then the application must make a request from Google Play’s 
-[Application Licensing](http://developer.android.com/google/play/licensing/index.html). 
+[Application Licensing](https://developer.android.com/google/play/licensing/index.html). 
 This check is made by using the *License Verification Library (LVL)*, 
 and must be made for both free and licensed applications. The LVL is 
 primarily used by paid applications to enforce license restrictions. 

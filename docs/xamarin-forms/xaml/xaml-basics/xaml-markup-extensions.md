@@ -6,7 +6,7 @@ ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
-ms.date: 3/27/2018
+ms.date: 03/27/2018
 ---
 
 # Part 3. XAML Markup Extensions

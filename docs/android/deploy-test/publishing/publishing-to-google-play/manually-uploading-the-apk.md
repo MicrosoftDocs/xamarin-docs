@@ -225,7 +225,7 @@ app is filtered in the Google Play store. The following lists
 manifest elements and attributes that can be used to filter
 applications:
 
--   [supports-screen](http://developer.android.com/guide/topics/manifest/supports-screens-element.html) 
+-   [supports-screen](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) 
     &ndash; Google Play will use the attributes to determine if an 
     application can be deployed to a device based on the screen size. 
     Google Play will assume that Android can adapt smaller layout to 
@@ -237,13 +237,13 @@ applications:
     and that the application supports all screen sizes. This element 
     must be added to **AndroidManifest.xml** manually. 
 
--   [uses-configuration](http://developer.android.com/guide/topics/manifest/uses-configuration-element.html) 
+-   [uses-configuration](https://developer.android.com/guide/topics/manifest/uses-configuration-element.html) 
     &ndash; This manifest element is used to request certain hardware 
     features, such as the type of keyboard, navigation devices, a touch 
     screen, etc. This element must be added to **AndroidManifest.xml** 
     manually. 
 
--   [uses-feature](http://developer.android.com/guide/topics/manifest/uses-feature-element.html) 
+-   [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element.html) 
     &ndash; This manifest element declares hardware or software 
     features that a device must have in order for the application to 
     function. This attribute is informational only. Google Play will 
@@ -252,7 +252,7 @@ applications:
     means (manually or downloading). This element must be added to 
     **AndroidManifest.xml** manually. 
 
--   [uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html) 
+-   [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) 
     &ndash; This element specifies that certain shared libraries must 
     be present on the device, for example Google Maps. This element may 
     also be specified with the `Android.App.UsesLibraryAttribute`. For 
@@ -262,7 +262,7 @@ applications:
     [assembly: UsesLibrary("com.google.android.maps", true)]
     ```
 
--   [uses-permission](http://developer.android.com/guide/topics/manifest/uses-permission-element.html) 
+-   [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) 
     &ndash; This element is used to infer certain hardware features 
     that are required for the application to run that may not have been 
     properly declared with a `<uses-feature>` element. For example, 
@@ -276,12 +276,12 @@ applications:
     [assembly: UsesPermission(Manifest.Permission.Camera)]
     ```
 
--   [uses-sdk](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html) 
+-   [uses-sdk](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html) 
     &ndash; The element is used to declare the minimum Android API 
     Level required for the application. This element may set in the 
     Xamarin.Android options of a Xamarin.Android project. 
 
--   [compatible-screens](http://developer.android.com/guide/topics/manifest/compatible-screens-element.html) 
+-   [compatible-screens](https://developer.android.com/guide/topics/manifest/compatible-screens-element.html) 
     &ndash; This element is used to filter applications that do not 
     match the screen size and density specified by this element. Most 
     applications should not use this filter. It is intended for 
@@ -289,7 +289,7 @@ applications:
     strict controls on application distribution. The `<support-screen>` 
     attribute mentioned above is preferred. 
 
--   [supports-gl-texture](http://developer.android.com/guide/topics/manifest/supports-gl-texture-element.html) 
+-   [supports-gl-texture](https://developer.android.com/guide/topics/manifest/supports-gl-texture-element.html) 
     &ndash; This element is used to declare GL texture compression 
     formations that the application requires. Most applications should 
     not use this filter. It is intended for specific high performance 

@@ -214,7 +214,7 @@ below:
     XML attribute. When it is specified, the inflated View instance tries
     to look up the Java method.
 
--   The [java.io.Serializable](http://developer.android.com/reference/java/io/Serializable.html)
+-   The [java.io.Serializable](https://developer.android.com/reference/java/io/Serializable.html)
     interface requires `readObject` and `writeObject` methods. Since
     they are not members of this interface, our corresponding managed
     implementation does not expose these methods to Java code.
@@ -374,7 +374,7 @@ the `CLASS` token.
 ### Binding Fields
 
 Java fields are exposed as C# properties, for example the Java field
-[java.lang.System.in](http://developer.android.com/reference/java/lang/System.html#in)
+[java.lang.System.in](https://developer.android.com/reference/java/lang/System.html#in)
 is bound as the C# property
 [Java.Lang.JavaSystem.In](https://developer.xamarin.com/api/property/Java.Lang.JavaSystem.In/).
 Furthermore, since JNI distinguishes between static fields and instance
@@ -386,7 +386,7 @@ Field binding involves three sets of methods:
     for returning a field handle that the *get field value* and *set
     field value* methods will use. Obtaining the field id requires
     knowing the declaring type, the name of the field, and the
-    [JNI type signature](#_JNI_Type_Signatures) of the field.
+    [JNI type signature](#JNI_Type_Signatures) of the field.
 
 1.  The *get field value* methods. These methods require the field
     handle and are responsible for reading the field's value from Java.
@@ -429,18 +429,18 @@ methods which will convert a JNI reference into the desired type.
 
 Java methods are exposed as C# methods and as C# properties. For
 example, the Java method
-[java.lang.Runtime.runFinalizersOnExit](http://developer.android.com/reference/java/lang/Runtime.html#runFinalizersOnExit(boolean))
+[java.lang.Runtime.runFinalizersOnExit](https://developer.android.com/reference/java/lang/Runtime.html#runFinalizersOnExit(boolean))
 method is bound as the
 [Java.Lang.Runtime.RunFinalizersOnExit](https://developer.xamarin.com/api/member/Java.Lang.Runtime.RunFinalizersOnExit/)
 method, and the
-[java.lang.Object.getClass](http://developer.android.com/reference/java/lang/Object.html#getClass)
+[java.lang.Object.getClass](https://developer.android.com/reference/java/lang/Object.html#getClass)
 method is bound as the
 [Java.Lang.Object.Class](https://developer.xamarin.com/api/property/Java.Lang.Object.Class/)
 property.
 
 Method invocation is a two-step process:
 
-1.  The  *get method id* for the method to invoke. The  *get method id* method is responsible for returning a method handle that the method invocation methods will use. Obtaining the method id requires knowing the declaring type, the name of the method, and the  [JNI type signature](#_JNI_Type_Signatures) of the method.
+1.  The  *get method id* for the method to invoke. The  *get method id* method is responsible for returning a method handle that the method invocation methods will use. Obtaining the method id requires knowing the declaring type, the name of the method, and the  [JNI type signature](#JNI_Type_Signatures) of the method.
 
 1.  Invoke the method.
 
@@ -471,7 +471,7 @@ Binding a static method involves using `JNIEnv.GetStaticMethodID` to
 obtain a method handle, then using the appropriate
 `JNIEnv.CallStatic*Method` method, depending on the method's return
 type. The following is an example of a binding for the
-[Runtime.getRuntime](http://developer.android.com/reference/java/lang/Runtime.html#getRuntime())
+[Runtime.getRuntime](https://developer.android.com/reference/java/lang/Runtime.html#getRuntime())
 method:
 
 ```csharp
@@ -617,7 +617,7 @@ following actions:
 
 
 For example, consider the
-[java.lang.Integer(int)](http://developer.android.com/reference/java/lang/Integer.html#Integer(int))
+[java.lang.Integer(int)](https://developer.android.com/reference/java/lang/Integer.html#Integer(int))
 constructor. This is bound as:
 
 ```csharp
@@ -1185,11 +1185,11 @@ The reason for preferring instance members has to do with
 Java behavior as well; it hasn't been tested.) `JNIEnv.GetMethodID`
 returns null when looking up a method that comes from an implemented
 interface and not the declared interface. Consider the
-[java.util.SortedMap&lt;K, V&gt;](http://developer.android.com/reference/java/util/SortedMap.html)
+[java.util.SortedMap&lt;K, V&gt;](https://developer.android.com/reference/java/util/SortedMap.html)
 Java interface, which implements the
-[java.util.Map&lt;K, V&gt;](http://developer.android.com/reference/java/util/Map.html)
+[java.util.Map&lt;K, V&gt;](https://developer.android.com/reference/java/util/Map.html)
 interface. Map provides a
-[clear](http://developer.android.com/reference/java/util/Map.html#clear())
+[clear](https://developer.android.com/reference/java/util/Map.html#clear())
 method, thus a seemingly reasonable `Invoker` definition for SortedMap
 would be:
 
@@ -2007,10 +2007,10 @@ The JNI type signature would be:
 
 In general, it is *strongly* recommended to use the `javap` command to
 determine JNI signatures. For example, the JNI Type Signature of the
-[java.lang.Thread.State.valueOf(String)](http://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String))
+[java.lang.Thread.State.valueOf(String)](https://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String))
 method is "(Ljava/lang/String;)Ljava/lang/Thread$State;", while the JNI
 Type Signature of the
-[java.lang.Thread.State.values](http://developer.android.com/reference/java/lang/Thread.State.html#values)
+[java.lang.Thread.State.values](https://developer.android.com/reference/java/lang/Thread.State.html#values)
 method is "()[Ljava/lang/Thread$State;". Watch out for the trailing
 semicolons; those *are* part of the JNI type signature.
 
@@ -2053,15 +2053,15 @@ Simplified type references can only be used in
 [JNIEnv.FindClass(string)](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.FindClass/(System.String)).
 There are two ways to derive a simplified type reference:
 
-1.  From a fully-qualified Java name, replace every `'.'` within 
-    the package name and before the type name with `'/'` , and 
+1.  From a fully-qualified Java name, replace every `'.'` within
+    the package name and before the type name with `'/'` , and
     every `'.'` within a type name with `'$'` .
 
 1.  Read the output of `'unzip -l android.jar | grep JavaName'` .
 
 
 Either of the two will result in the Java type
-[java.lang.Thread.State](http://developer.android.com/reference/java/lang/Thread.State.html)
+[java.lang.Thread.State](https://developer.android.com/reference/java/lang/Thread.State.html)
 being mapped to the simplified type reference `java/lang/Thread$State`.
 
 
@@ -2069,7 +2069,7 @@ being mapped to the simplified type reference `java/lang/Thread$State`.
 
 A type reference is a built-in type reference or a simplified type
 reference with an `'L'` prefix and a `';'` suffix. For the Java type
-[java.lang.String](http://developer.android.com/reference/java/lang/String.html),
+[java.lang.String](https://developer.android.com/reference/java/lang/String.html),
 the simplified type reference is `"java/lang/String"`, while the type
 reference is `"Ljava/lang/String;"`.
 
@@ -2133,7 +2133,7 @@ with generics, not with how JNI looks up and invokes generic members.
 There is no difference between a generic type or member and a
 non-generic type or member when interacting through JNI. For example,
 the generic type
-[java.lang.Class&lt;T&gt;](http://developer.android.com/reference/java/lang/Class.html)
+[java.lang.Class&lt;T&gt;](https://developer.android.com/reference/java/lang/Class.html)
 is also the "raw" generic type `java.lang.Class`, both of which have
 the same simplified type reference, `"java/lang/Class"`.
 

@@ -30,7 +30,7 @@ For Xamarin.Android to work with .NET Embedding, you need the following:
     later must be installed.
 
 -   **Java Developer Kit** &ndash;
-    [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+    [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
     or later must be installed.
 
 
@@ -73,11 +73,11 @@ For Xamarin.Android to work with .NET Embedding, you need the following:
     later must be installed.
 
 -   **Java Developer Kit** &ndash;
-    [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+    [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
     or later must be installed.
 
 -   **Mono** &ndash;
-    [Mono 5.0](http://www.mono-project.com/download/) or later must be
+    [Mono 5.0](https://www.mono-project.com/download/) or later must be
     installed (mono is installed with Visual Studio for Mac).
 
 

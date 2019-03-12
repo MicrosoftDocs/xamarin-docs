@@ -190,7 +190,7 @@ The **Resources** directory contains four folders named **drawable**,
 The items are summarized in the table below:
 
 - **drawable** &ndash; The drawable directories house
-    [drawable resources](http://developer.android.com/guide/topics/resources/drawable-resource.html)
+    [drawable resources](https://developer.android.com/guide/topics/resources/drawable-resource.html)
     such as images and bitmaps.
 
 - **mipmap** &ndash; The mipmap directory holds drawable files for different launcher icon densities. In the default template, the drawable directory houses the application icon file, **Icon.png**.
