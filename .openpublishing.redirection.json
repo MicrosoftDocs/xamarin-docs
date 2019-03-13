@@ -301,7 +301,7 @@
       "redirect_url": "/xamarin/get-started/installation/windows"
     },
     {
-      "source_path": "docs/cross-platform/data-cloud/walkthrough-working-with-wcf.md",
+      "source_path": "docs/cross-platform/data-cloud/web-services/walkthrough-working-with-wcf.md",
       "redirect_url": "/xamarin/xamarin-forms/data-cloud/consuming/wcf"
     }
   ]

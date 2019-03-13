@@ -210,8 +210,8 @@ To create a customized header and footer, define the Header and Footer views:
 [`ListView`](xref:Xamarin.Forms.ListView) has `HorizontalScrollBarVisibility` and `VerticalScrollBarVisibility` properties, which get or set a [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) value that represents when the horizontal, or vertical, scroll bar is visible. Both properties can be set to the following values:
 
 - [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indicates the default scroll bar behavior for the platform, and is the default value for the `HorizontalScrollBarVisibility` and `VerticalScrollBarVisibility` properties.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indicates that scroll bars will be visible, even when the content doesn't fit in the view.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indicates that scroll bars will not be visible, event if the content does not fit in the view.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indicates that scroll bars will be visible, even when the content fits in the view.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indicates that scroll bars will not be visible, even if the content doesn't fit in the view.
 
 <a name="Row_Separators" />
 
