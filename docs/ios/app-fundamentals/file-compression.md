@@ -27,7 +27,7 @@ the dependencies as well as ensuring that the compresison operations will be sup
 
 ## General file decompression
 
-As previously mentioned, the Compression Framework has been binded following the stream API. This means that in order to compress data, the developer can use
+As previously mentioned, the Compression Framework has been bound following the stream API. This means that in order to compress data, the developer can use
 the normal patterns used in other IO APIs within .Net. The following sample shows how to decompress data with the Compression Framework which is very similar
 to the API found in the `System.IO.Compression.DeflateStream` API.
 
@@ -44,12 +44,12 @@ using (var reader = new StreamReader (decompressing))
 }
 ```
 
-As with other `System.IO.Streams`, the `CompressionStream` implementes the IDisposable interface, and therefore developers should ensure that resources are 
-freed once they are not longed required.
+As with other `System.IO.Streams`, the `CompressionStream` implements the IDisposable interface, and therefore developers should ensure that resources are 
+freed once they are no longer required.
 
 ## General file compression
 
-The Compression API also allows to compress data following the same API. Data can be compressed using one of the provided algorithms stated in the `CompressionAlgorithm` enumerator.
+The Compression API also allows developers to compress data following the same API. Data can be compressed using one of the provided algorithms stated in the `CompressionAlgorithm` enumerator.
 
 ```csharp
 // sample method that copies the data from the source stream to the destination stream
