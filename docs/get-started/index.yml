@@ -105,7 +105,7 @@ sections:
       image:
         src: https://docs.microsoft.com/media/common/i_account-management.svg
       title: Image
-    - href: /tutorials/grid/
+    - href: tutorials/grid/
       html: <p></p>
       image:
         src: https://docs.microsoft.com/media/common/i_table.svg
