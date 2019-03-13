@@ -29,7 +29,7 @@ the dependencies as well as ensuring that the compresison operations will be sup
 
 As previously mentioned, the Compression Framework has been binded following the stream API. This means that in order to compress data, the developer can use
 the normal patterns used in other IO APIs within .Net. The following sample shows how to decompress data with the Compression Framework which is very similar
-to the API found in the System.IO.Compression.DeflateStream API.
+to the API found in the `System.IO.Compression.DeflateStream` API.
 
 ```csharp
 // sample zlib data 
@@ -44,12 +44,12 @@ using (var reader = new StreamReader (decompressing))
 }
 ```
 
-As with other System.IO.Streams, the CompressionStream implementes the IDisposable interface, and therefore developers should ensure that resources are 
+As with other `System.IO.Streams`, the `CompressionStream` implementes the IDisposable interface, and therefore developers should ensure that resources are 
 freed once they are not longed required.
 
 ## General file compression
 
-The Compression API also allows to compress data following the same API. Data can be compressed using one of the provided algorithms stated in the CompressionAlgorithm enumerator.
+The Compression API also allows to compress data following the same API. Data can be compressed using one of the provided algorithms stated in the `CompressionAlgorithm` enumerator.
 
 ```csharp
 // sample method that copies the data from the source stream to the destination stream
@@ -85,5 +85,5 @@ static void CompressExample ()
 
 ## Async support
 
-The CompressionStream supports all the async operations that are supported by the System.IO.DeflateStream, this means that developers can use
+The `CompressionStream` supports all the async operations that are supported by the `System.IO.DeflateStream`, this means that developers can use
 the async keyword to perform the compress/decompress operations without blocking the UI thread.
