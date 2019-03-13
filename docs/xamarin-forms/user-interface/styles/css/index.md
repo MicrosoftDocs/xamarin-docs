@@ -181,7 +181,7 @@ stacklayout {
 This selector identifies any [`StackLayout`](xref:Xamarin.Forms.StackLayout) elements on pages that consume the style sheet, and sets their margins to a uniform thickness of 20.
 
 > [!NOTE]
-> The `element` selector does not identify sub-classes of the specified type.
+> The `element` selector does not identify subclasses of the specified type.
 
 ### Selecting elements by base class
 
@@ -336,7 +336,7 @@ The following CSS selectors are supported by Xamarin.Forms:
 |`.class`|`.header`|Selects all elements with the `StyleClass` property containing 'header'. Note that this selector is case sensitive.|
 |`#id`|`#email`|Selects all elements with `StyleId` set to `email`. If `StyleId` is not set, fallback to `x:Name`. When using XAML, `x:Name` is preferred over `StyleId`. Note that this selector is case sensitive.|
 |`*`|`*`|Selects all elements.|
-|`element`|`label`|Selects all elements of type `Label`, but not sub-classes. Note that this selector is case insensitive.|
+|`element`|`label`|Selects all elements of type `Label`, but not subclasses. Note that this selector is case insensitive.|
 |`^base`|`^contentpage`|Selects all elements with `ContentPage` as the base class, including `ContentPage` itself. Note that this selector is case insensitive and isn't part of the CSS specification.|
 |`element,element`|`label,button`|Selects all `Button` elements and all `Label` elements. Note that this selector is case insensitive.|
 |`element element`|`stacklayout label`|Selects all `Label` elements inside a `StackLayout`. Note that this selector is case insensitive.|
