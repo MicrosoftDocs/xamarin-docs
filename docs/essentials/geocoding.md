@@ -71,7 +71,9 @@ catch (Exception ex)
 
 The altitude isn't always available. If it is not available, the `Altitude` property might be `null` or the value might be zero. If the altitude is available, the value is in meters above sea level.
 
-Getting [placemarks](xref:Xamarin.Essentials.Placemark) for an existing set of coordinates:
+## Using Reverse Geocoding
+
+Reverse geocoding is the process of getting [placemarks](xref:Xamarin.Essentials.Placemark) for an existing set of coordinates:
 
 ```csharp
 try
