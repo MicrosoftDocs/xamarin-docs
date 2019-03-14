@@ -320,7 +320,7 @@ The page contains a [`Label`](xref:Xamarin.Forms.Label) that displays the fruit 
 
 The page also contains a native picker view for each platform. Each native view displays the collection of fruits by binding its `ItemSource` property to the `SubclassedNativeControlsPageViewModel.Fruits` collection. This allows the user to pick a fruit, as shown in the following screenshots:
 
-![](xaml-images/sub-classed.png "Sub-Classed Native Views")
+![](xaml-images/sub-classed.png "Subclassed Native Views")
 
 On iOS and Android the native pickers use methods to setup the controls. Therefore, these pickers must be subclassed to expose properties to make them XAML-friendly. On the Universal Windows Platform (UWP), the `ComboBox` is already XAML-friendly, and so doesn't require subclassing.
 

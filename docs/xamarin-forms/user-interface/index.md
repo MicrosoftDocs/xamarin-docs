@@ -105,7 +105,7 @@ The `TimePicker` allows a user to select a time. It is implemented using the tim
 
 ## [Visual](visual/index.md)
 
-Xamarin.Forms Visual enables renderers to be selectively applied to `VisualElement` objects, without having to subclass Xamarin.Forms controls.
+Xamarin.Forms Material Visual can be used to create Xamarin.Forms applications that look identical, or largely identical, on iOS and Android.
 
 ## [Visual State Manager](visual-state-manager.md)
 

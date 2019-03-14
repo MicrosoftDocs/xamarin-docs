@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms Visual"
-description: "Xamarin.Forms Visual enables renderers to be selectively applied to VisualElement objects, without having to subclass Xamarin.Forms controls."
+description: "Xamarin.Forms Visual enables renderers to be selectively applied to VisualElement objects, without having to subclass Xamarin.Forms views."
 ms.prod: xamarin
 ms.assetid: 69228A9C-39C4-46AE-A803-C38EED6FB965
 ms.technology: xamarin-forms
@@ -17,4 +17,4 @@ Xamarin.Forms Material Visual can be used to create Xamarin.Forms applications t
 
 ## [Create a Xamarin.Forms Visual Renderer](create.md)
 
-Xamarin.Forms Visual enables renderers to be selectively applied to `VisualElement` objects, without having to subclass Xamarin.Forms controls.
+Xamarin.Forms Visual enables renderers to be selectively applied to [`VisualElement`](xref:Xamarin.Forms.VisualElement) objects, without having to subclass Xamarin.Forms views.

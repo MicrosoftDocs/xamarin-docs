@@ -351,7 +351,7 @@ The `TapCommand` executes the `OpenBrowser` method, passing the [`TapGestureReco
 
 ### Creating a reusable hyperlink class
 
-The previous approach to creating a hyperlink requires writing repetitive code every time you require a hyperlink in your application. However, both the [`Label`](xref:Xamarin.Forms.Label) and [`Span`](xref:Xamarin.Forms.Span) classes can be sub-classed to create `HyperlinkLabel` and `HyperlinkSpan` classes, with the gesture recognizer and text formatting code added there.
+The previous approach to creating a hyperlink requires writing repetitive code every time you require a hyperlink in your application. However, both the [`Label`](xref:Xamarin.Forms.Label) and [`Span`](xref:Xamarin.Forms.Span) classes can be subclassed to create `HyperlinkLabel` and `HyperlinkSpan` classes, with the gesture recognizer and text formatting code added there.
 
 The following code example, taken from the [Hyperlink Demos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) sample, shows a `HyperlinkSpan` class:
 
