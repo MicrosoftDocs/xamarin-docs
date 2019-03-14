@@ -80,19 +80,20 @@ The steps below guide you through removing the Storyboard from an application:
 
 1. Finally, add the following code to your `FinishedLaunching` method in the AppDelegate class:
 
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-        {
-            // create a new window instance based on the screen size
-            window = new UIWindow(UIScreen.MainScreen.Bounds);
+    ```csharp
+    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+    {
+        // create a new window instance based on the screen size
+        window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            // make the window visible
-            window.MakeKeyAndVisible();
+        // make the window visible
+        window.MakeKeyAndVisible();
 
-            return true;
-        }
+        return true;
+    }
+    ```
 
 The code that was added to the `FinishedLaunching` method in step 5 above, is the minimum amount of code required to create a Window for your iOS application.
-
 
 -----
 
