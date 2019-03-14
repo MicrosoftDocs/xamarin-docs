@@ -512,13 +512,13 @@ For any individual child of the `FlexLayout`, this property setting overrides th
 For a `Label` element named `label` (or example), you can set the `AlignSelf` property in code like this:
 
 ```csharp
-FlexAlign.SetAlignSelf(label, FlexAlignSelf.Center);
+FlexLayout.SetAlignSelf(label, FlexAlignSelf.Center);
 ```
 
 Notice that there is no reference to the `FlexLayout` parent of the `Label`. In XAML, you set the property like this:
 
 ```xaml
-<Label ... FlexAlign.AlignSelf="Center" ... />
+<Label ... FlexLayout.AlignSelf="Center" ... />
 ```
 
 ### The Order Property
