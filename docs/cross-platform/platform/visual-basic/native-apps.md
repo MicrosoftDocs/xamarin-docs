@@ -285,18 +285,6 @@ To ensure your version control system can store the PCL assembly output, you can
 
   [![](native-apps-images/image6-vs-sml.png "Build events post build script to copy VB DLL")](native-apps-images/image6-vs.png#lightbox)
 
-#### Visual Studio 2015
-
-1.  Right-click on the project and choose  **Properties > Compile** , then ensure All Configurations is selected in the top-left comb-box. Click the  **Build Events...** button in the bottom right.
-
-    [![](native-apps-images/image6.png "The project properties compile section")](native-apps-images/image6.png#lightbox)
-
-1.  Add a post-build script that copies the output DLL from this project into the project root directory (which is outside of  **/bin/** ). Depending on your version control configuration, the DLL should now be able to be added to source control.
-
-    [![](native-apps-images/image7.png "Build events window")](native-apps-images/image7.png#lightbox)
-
-#### All Versions
-
 Next time you build the project, the Portable Class Library assembly will be copied to the project root, and when you check-in/commit/push your changes the DLL will be stored (so that it can be downloaded onto a Mac with Visual Studio for Mac).
 
   [![](native-apps-images/image8-sml.png "File location of output Visual Basic assembly")](native-apps-images/image8.png#lightbox)

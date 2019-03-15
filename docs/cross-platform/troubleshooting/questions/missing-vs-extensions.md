@@ -12,10 +12,7 @@ ms.date: 03/20/2017
 
 ## Error Message: This project is incompatible with the current edition of Visual Studio
 
-Ensure  a compatible version of Visual Studio is installed:
-
--   Visual Studio 2017 (Community, Professional, or Enterprise)
--   Visual Studio 2015 (Community, Professional, or Enterprise)
+Ensure Visual Studio 2017 (Community, Professional or Enterprise) or newer is installed.
 
 See also the [Windows requirements](~/cross-platform/get-started/requirements.md#windows-requirements).
 

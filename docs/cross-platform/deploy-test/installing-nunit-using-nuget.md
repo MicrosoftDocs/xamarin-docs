@@ -20,7 +20,7 @@ This guide will discuss how to install NUnit 2.6.4 using NuGet for Visual Studio
 
 # [Visual Studio](#tab/windows)
 
-This guide will discuss how to downgrade NUnit 3.0 to NUnit 2.6.4 using NuGet in Visual Studio 2015.
+This guide will discuss how to downgrade NUnit 3.0 to NUnit 2.6.4 using NuGet in Visual Studio 2015 or later.
 
 -----
 
@@ -57,7 +57,7 @@ This guide discussed how to downgrade NUnit 3.0 to NUnit 2.6.4 in Visual Studio 
 
 ## Installing NUnit 2.6.4 in Visual Studio
 
-This section will focus on using the _NuGet Package Manager Console_ in Visual Studio 2015 to uninstall NUnit 3.0 and install NUnit 2.6.4.
+This section will focus on using the _NuGet Package Manager Console_ in Visual Studio 2015 or later to uninstall NUnit 3.0 and install NUnit 2.6.4.
 
 
 1. **Start the NuGet Package Manager Console** - Select **Tools > NuGet Package Manager > Package Manager Console**: 
@@ -99,7 +99,7 @@ If you see NUnit 3.0 or higher, then you must downgrade to NUnit 2.6.4.
 	
 ## Summary
 
-This guide discussed how to downgrade NUnit 3.0 to NUnit 2.6.4 in Visual Studio 2015 using the Package Manager Console.
+This guide discussed how to downgrade NUnit 3.0 to NUnit 2.6.4 in Visual Studio 2015 or later using the Package Manager Console.
 
 -----
 

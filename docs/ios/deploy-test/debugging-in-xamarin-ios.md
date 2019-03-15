@@ -124,7 +124,7 @@ You can then enter the condition under which you want to breakpoint to occur:
 
 # [Visual Studio](#tab/windows)
 
-To set a conditional breakpoint in Visual Studio 2015, first [set a regular breakpoint](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). Right-click on the breakpoint to display its context menu:
+To set a conditional breakpoint in Visual Studio, first [set a regular breakpoint](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). Right-click on the breakpoint to display its context menu:
 
  [![](debugging-in-xamarin-ios-images/image4vs.png "The breakpoint context menu")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
 

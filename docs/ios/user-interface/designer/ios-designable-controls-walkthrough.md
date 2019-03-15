@@ -13,7 +13,7 @@ ms.date: 03/22/2017
 
 ## Requirements
 
-The Xamarin Designer for iOS is available in Visual Studio for Mac and Visual Studio 2015 and 2017 on Windows.
+The Xamarin Designer for iOS is available in Visual Studio for Mac and Visual Studio 2017 and later on Windows.
 
 This guide assumes a familiarity with the contents covered in the [Getting Started guides](~/ios/get-started/index.md).
 

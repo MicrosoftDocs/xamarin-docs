@@ -40,7 +40,7 @@ UIDocument subclasses - and how to use those features in Xamarin.iOS.
 
 - The latest stable version of Xamarin.iOS
 - Xcode 8 or newer
-- Visual Studio for Mac or Visual Studio 2015 and newer.
+- Visual Studio for Mac or Visual Studio 2017 and newer.
 
 ## Preparing for iCloud development
 

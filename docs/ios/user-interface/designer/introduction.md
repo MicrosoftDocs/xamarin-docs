@@ -13,11 +13,11 @@ ms.date: 01/31/2018
 
 _This guide introduces the Xamarin Designer for iOS. It demonstrates how to use the iOS Designer to visually lay out controls, how to access those controls in code, and how to edit properties._
 
-The Xamarin Designer for iOS is a visual interface designer similar to Xcode's Interface Builder and the Android Designer. Some of its many features include seamless integration with Visual Studio for Mac and Visual Studio 2015 and 2017, drag-and-drop editing, an interface for setting up event handlers, and the ability to render custom controls.
+The Xamarin Designer for iOS is a visual interface designer similar to Xcode's Interface Builder and the Android Designer. Some of its many features include seamless integration with Visual Studio for Windows and Mac, drag-and-drop editing, an interface for setting up event handlers, and the ability to render custom controls.
 
 ## Requirements
 
-The iOS Designer is available in Visual Studio for Mac and in Visual Studio 2015 and 2017 on Windows. In Visual Studio 2015 or 2017, the iOS Designer requires a connection to a properly configured Mac build host, though Xcode need not be running.
+The iOS Designer is available in Visual Studio for Mac and Visual Studio 2017 and later on Windows. In Visual Studio for Windows, the iOS Designer requires a connection to a properly configured Mac build host, though Xcode need not be running.
 
 This guide assumes a familiarity with the contents covered in the [Getting Started guides](~/ios/get-started/index.md).
 
@@ -146,7 +146,7 @@ Xamarin.iOS projects created with Visual Studio for Mac include a storyboard. To
 
 # [Visual Studio](#tab/windows)
 
-Most Xamarin.iOS projects created with Visual Studio 2015 or 2017 include a storyboard. To view the contents of a storyboard, double-click the .storyboard file in the **Solution Explorer**:
+Most Xamarin.iOS projects created with Visual Studio include a storyboard. To view the contents of a storyboard, double-click the .storyboard file in the **Solution Explorer**:
 
 [![A storyboard open in the iOS Designer](introduction-images/7-storyboardopen-vs.png "A storyboard open in the iOS Designer")](introduction-images/7-storyboardopen-vs-large.png#lightbox)
 
