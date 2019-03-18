@@ -4,7 +4,7 @@ description: "The Browser class in Xamarin.Essentials enables an application to 
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 03/13/2019
 ---
 
 # Xamarin.Essentials: Browser
@@ -37,6 +37,24 @@ public class BrowserTest
 ```
 
 This method returns after the browser was _launched_ and not necessarily _closed_ by the user.  The `bool` result indicates whether the launching was successful or not.
+
+## Customization
+
+When using the system preferred browser there are several customization options available for iOS and Android. This includes a `TitleMode` (Android only), and preferred color options for the `Toolbar` (iOS and Android) and `Controls` (iOS only) that appear. 
+
+These options are specified using `BrowserLaunchOptions` when calling `OpenAsync`.
+
+```csharp
+await Browser.OpenAsync(uri, new BrowserLaunchOptions
+                {
+                    LaunchMode = BrowserLaunchMode.SystemPreferred,
+                    TitleMode = BrowserTitleMode.Show,
+                    PreferredToolbarColor = Color.AliceBlue,
+                    PreferredControlColor = Color.Violet
+                });
+```
+
+![Browser Options](images/browser-options.png)
 
 ## Platform Implementation Specifics
 
