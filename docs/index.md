@@ -93,7 +93,7 @@ featureFlags:
                                                     <li><a class="barLink" href="~/cross-platform/desktop/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_NET.svg" alt="" />Xamarin for .NET desktop developers</a></li>
                                                     <li><a class="barLink" href="~/android/get-started/java-developers.md"><img  src="https://docs.microsoft.com/media/logos/logo_java.svg" alt="" />Xamarin for Java developers</a></li>
                                                     <li><a class="barLink" href="~/ios/get-started/objective-c-developers/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_xcode.svg" alt=" icon" />Xamarin for Objective-C developers</a></li>
-                                                    <li><a class="barLink" href="~/xamarin-forms/data-cloud/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_azure.svg" alt="" />Microsoft Azure & Xamarin</a></li>
+                                                    <li><a class="barLink" href="~/xamarin-forms/data-cloud/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_azure.svg" alt="" />Microsoft Azure for Xamarin</a></li>
                                                 </ul>
                                             </div>
                                         </div>
