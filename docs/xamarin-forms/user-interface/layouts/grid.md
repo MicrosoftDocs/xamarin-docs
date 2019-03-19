@@ -49,7 +49,7 @@ Row and column information is stored in `Grid`'s `RowDefinitions` & `ColumnDefin
 - **Absolute** &ndash; sizes columns and rows with specific, fixed height and width values. Specified as a value and `GridUnitType.Absolute` in C# and as `#` in XAML, with `#` being your desired value.
 
 > [!NOTE]
-> The width values for columns are set as `*`` by default in Xamarin.Forms, which ensures that the column will fill the available space.
+> The width values for columns are set as `*` by default in Xamarin.Forms, which ensures that the column will fill the available space. The height values for rows are also set as `*` by default. 
 
 Consider an app that needs three rows and two columns. The bottom row needs to be exactly 200px tall and the top row needs to be twice as tall as the middle row. The left column needs to be wide enough to fit the content and the right column needs to fill the remaining space.
 
