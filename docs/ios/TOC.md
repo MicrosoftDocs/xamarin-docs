@@ -408,7 +408,7 @@
 ## [tvOS](tvos/index.md)
 ### [Getting Started](tvos/get-started/index.md)
 #### [Installing tvOS Support](tvos/get-started/installation.md)
-#### [Hello, tvOS Quick Start Guide](tvos/get-started/hello-tvos.md)
+#### [Hello, tvOS Quickstart Guide](tvos/get-started/hello-tvos.md)
 ### [Application Fundamentals](tvos/app-fundamentals/index.md)
 #### [Working with Icons and Images](tvos/app-fundamentals/icons-images.md)
 #### [Working with Navigation and Focus](tvos/app-fundamentals/navigation-focus.md)
