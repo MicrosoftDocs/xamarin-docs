@@ -52,7 +52,7 @@ public class ShareTest
 
 User interface to share to external application that appears when request is made:
 
-![Share](share-images/share.png)
+![Share](images/share.png)
 
 ## Platform Differences
 

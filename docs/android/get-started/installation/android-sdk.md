@@ -41,10 +41,6 @@ To use the Xamarin Android SDK Manager, you will need the following:
 - Visual Studio Tools for Xamarin version 4.10.0 or later
   (installed as part of the **Mobile development with .NET** workload). 
 
-The Xamarin Android SDK Manager is not compatible with Visual 
-Studio 2015. Users of Visual Studio 2015 should use the SDK Manager 
-tools provided by Google in the Android SDK.
-
 The Xamarin Android SDK Manager also requires the Java Development Kit
 (which is automatically installed with Xamarin.Android). There are
 several JDK alternatives to choose from:

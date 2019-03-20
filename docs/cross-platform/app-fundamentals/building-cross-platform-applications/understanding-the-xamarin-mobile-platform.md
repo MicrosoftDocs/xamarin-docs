@@ -129,7 +129,7 @@ building, deployment and testing. Java, Google’s Android SDK and Xamarin’s
 tools can all be installed and run on the following configurations:
 
 -  Mac OS X El Capitan and above (10.11+) with Visual Studio for Mac
--  Windows 7 & above with  Visual Studio 2015 or 2017
+-  Windows 7 & above with  Visual Studio 2017 or later
 
 
 Xamarin provides a unified installer that will configure your system with the

@@ -6,7 +6,7 @@ ms.assetid: 24397498-2688-4575-A572-F1B19B1B4EA5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 09/5/2018
+ms.date: 09/05/2018
 ---
 # Troubleshooting iOS 12 development with Xamarin
 

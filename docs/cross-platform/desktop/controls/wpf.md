@@ -149,7 +149,7 @@ In addition, they are not quite as flexible as their WPF counterpart.
 
 ## ItemsControl
 
-There is no built-in equivelent to an `ItemsControl` in Xamarin.Forms; but there is a [custom one for Xamarin.Forms available here](https://github.com/xamarinhq/xamu-infrastructure/blob/master/src/XamU.Infrastructure/Controls/ItemsControl.cs).
+There is no built-in equivalent to an `ItemsControl` in Xamarin.Forms; but there is a [custom one for Xamarin.Forms available here](https://github.com/xamarinhq/xamu-infrastructure/blob/master/src/XamU.Infrastructure/Controls/ItemsControl.cs).
 
 ## User Controls
 
@@ -168,7 +168,7 @@ On phone devices, different _screens_ are often the solution and so Xamarin.Form
 |Tabs|TabbedPage|
 |Swipe Left/Right|CarouselView|
 
-The `NavigationPage` is the most common approach, and every page has a `Navigation` property which can be used to push or pop pages on and off the navigation stack. This is the closest equivelent to the `NavigationService` found in WPF.
+The `NavigationPage` is the most common approach, and every page has a `Navigation` property which can be used to push or pop pages on and off the navigation stack. This is the closest equivalent to the `NavigationService` found in WPF.
 
 ### URL navigation
 

@@ -202,11 +202,11 @@ void OnTouchEnd(TouchEndEventArgs e)
 
 Depending on the real world lighting conditions, the virtual scene should be lighter or darker to better match its surroundings. ARFrame contains a LightEstimate property that we can use to adjust the Urho ambient light, this is done like this:
 
-
-    var ambientIntensity = (float) frame.LightEstimate.AmbientIntensity / 1000f;
-    var zone = Scene.GetComponent<Zone>();
-    zone.AmbientColor = Color.White * ambientIntensity;
-
+```csharp
+var ambientIntensity = (float) frame.LightEstimate.AmbientIntensity / 1000f;
+var zone = Scene.GetComponent<Zone>();
+zone.AmbientColor = Color.White * ambientIntensity;
+```
 
 ### Beyond iOS - HoloLens
 

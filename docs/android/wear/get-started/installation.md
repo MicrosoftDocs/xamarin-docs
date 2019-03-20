@@ -17,8 +17,7 @@ _This article walks through the installation steps and configuration details req
 
 The following is required to create Xamarin-based Android Wear apps:
 
--   **Visual Studio or Visual Studio for Mac** &ndash; You If you are using
-    Visual Studio, Visual Studio 2015 Professional or later is
+-   **Visual Studio or Visual Studio for Mac** &ndash; Visual Studio 2017 Community or later is
     required.
 
 -   **Xamarin.Android** &ndash; Xamarin.Android 4.17 or later must

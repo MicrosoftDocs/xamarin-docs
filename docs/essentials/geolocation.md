@@ -4,7 +4,7 @@ description: "This document describes the Geolocation class in Xamarin.Essential
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 03/13/2019
 ---
 
 # Xamarin.Essentials: Geolocation
@@ -182,6 +182,22 @@ The following table outlines accuracy per platform:
 | UWP | <= 10 |
 
 <a name="calculate-distance" />
+
+## Detecting Mock Locations
+Some devices may return a mock location from the provider or by an application that provides mock locations. You can detect this by using the `IsFromMockProvider` on any [`Location`](xref:Xamarin.Essentials.Location).
+
+```csharp
+var request = new GeolocationRequest(GeolocationAccuracy.Medium);
+var location = await Geolocation.GetLocationAsync(request);
+
+if (location != null)
+{
+    if(location.IsFromMockProvider)
+    {
+        // location is from a mock provider
+    }
+}
+```
 
 ## Distance between Two Locations
 

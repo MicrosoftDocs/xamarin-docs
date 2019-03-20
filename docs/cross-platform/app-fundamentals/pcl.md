@@ -9,10 +9,11 @@ ms.date: 07/18/2018
 ---
 # Portable Class Libraries (PCL)
 
-> [!WARNING]
+> [!TIP]
 > Portable Class Libraries (PCLs) are considered deprecated in the latest versions of Visual Studio.
 > While you can still open, edit, and compile PCLs, for new projects it is recommended to use
-> [.NET Standard libraries](~/cross-platform/app-fundamentals/net-standard.md).
+> [.NET Standard libraries](~/cross-platform/app-fundamentals/net-standard.md)
+> to access a larger API surface area.
 
 A key component of building cross-platform applications is being able to share code across various
   platform-specific projects. However, this is complicated by the fact that different platforms often use a

@@ -20,10 +20,10 @@ This walkthrough creates an empty project which displays a *cornflower blue* bac
 Developing MonoGame UWP apps requires:
 
 - Windows 10 operating system
-- Any version of Visual Studio 2015
+- Any version of Visual Studio 2017
 - Windows 10 developer tools
 - Setting device to developer mode
-- [MonoGame 3.5 for Visual Studio](http://www.monogame.net/2016/03/17/monogame-3-5/) or newer
+- [MonoGame 3.7.1 for Visual Studio](http://community.monogame.net/t/monogame-3-7-1-release/11173) or newer
 
 For more information, see this [page on setting up for Windows 10 UWP development](https://msdn.microsoft.com/windows/uwp/get-started/get-set-up).
 
