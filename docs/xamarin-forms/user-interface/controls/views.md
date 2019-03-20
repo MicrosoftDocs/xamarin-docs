@@ -6,7 +6,7 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 13/11/2018
+ms.date: 11/13/2018
 ---
 
 # Xamarin.Forms Views

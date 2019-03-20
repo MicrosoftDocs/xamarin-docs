@@ -6,7 +6,7 @@ ms.assetid: EABF5072-B89B-4356-B7B3-1C6B40358926
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 28/04/2018
+ms.date: 04/28/2018
 ---
 
 # Styling Xamarin.Forms Apps
