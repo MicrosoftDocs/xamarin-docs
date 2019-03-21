@@ -34,7 +34,7 @@ The [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) method can also be u
 ```csharp
 async void OnAlertYesNoClicked (object sender, EventArgs e)
 {
-  var answer = await DisplayAlert ("Question?", "Would you like to play a game", "Yes", "No");
+  bool answer = await DisplayAlert ("Question?", "Would you like to play a game", "Yes", "No");
   Debug.WriteLine ("Answer: " + answer);
 }
 ```
@@ -50,7 +50,7 @@ To display an action sheet, `await` [`DisplayActionSheet`](xref:Xamarin.Forms.Pa
 ```csharp
 async void OnActionSheetSimpleClicked (object sender, EventArgs e)
 {
-  var action = await DisplayActionSheet ("ActionSheet: Send to?", "Cancel", null, "Email", "Twitter", "Facebook");
+  string action = await DisplayActionSheet ("ActionSheet: Send to?", "Cancel", null, "Email", "Twitter", "Facebook");
   Debug.WriteLine ("Action: " + action);
 }
 ```
@@ -62,7 +62,7 @@ The `destroy` button is rendered differently than the others, and can be left `n
 ```csharp
 async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 {
-  var action = await DisplayActionSheet ("ActionSheet: SavePhoto?", "Cancel", "Delete", "Photo Roll", "Email");
+  string action = await DisplayActionSheet ("ActionSheet: SavePhoto?", "Cancel", "Delete", "Photo Roll", "Email");
   Debug.WriteLine ("Action: " + action);
 }
 ```
