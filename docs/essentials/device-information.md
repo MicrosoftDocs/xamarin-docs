@@ -48,18 +48,18 @@ var idiom = DeviceInfo.Idiom;
 var deviceType = DeviceInfo.DeviceType;
 ```
 
-## [Platforms](xref:Xamarin.Essentials.DeviceInfo.Platforms)
+## Platforms
 
-`DeviceInfo.Platform` correlates to a constant string that maps to the operating system. The values can be checked with the `DevicePlatform` struct:
+[`DeviceInfo.Platform`](xref:Xamarin.Essentials.DeviceInfo.Platform) correlates to a constant string that maps to the operating system. The values can be checked with the `DevicePlatform` struct:
 
 - **DevicePlatform.iOS** – iOS
 - **DevicePlatform.Android** – Android
 - **DevicePlatform.UWP** – UWP
 - **DevicePlatform.Unknown** – Unknown
 
-## [Idioms](xref:Xamarin.Essentials.DeviceInfo.Idioms)
+## Idioms
 
-`DeviceInfo.Idiom` correlates a constant string that maps to the type of device the application is running on. The values can be checked with the `DeviceIdiom` struct:
+[`DeviceInfo.Idiom`](xref:Xamarin.Essentials.DeviceInfo.Idiom) correlates a constant string that maps to the type of device the application is running on. The values can be checked with the `DeviceIdiom` struct:
 
 - **DeviceIdiom.Phone** – Phone
 - **DeviceIdiom.Tablet** – Tablet
@@ -76,7 +76,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 # [iOS](#tab/ios)
 
-iOS does not expose an API for developers to get the name of the specific iOS device. Instead a hardware identifier is returned such as _iPhone10,6_ which refers to the iPhone X. A mapping of these identifers are not provided by Apple, but can be found on [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (a non-official source source).
+iOS does not expose an API for developers to get the name of the specific iOS device. Instead a hardware identifier is returned such as _iPhone10,6_ which refers to the iPhone X. A mapping of these identifers are not provided by Apple, but can be found on [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (a non-official source).
 
 --------------
 
