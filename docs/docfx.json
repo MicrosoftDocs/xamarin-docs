@@ -71,6 +71,7 @@
       }
     },
     "template": [],
-    "dest": "xamarin-docs"
+    "dest": "xamarin-docs",
+    "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ]
   }
 }
