@@ -6,7 +6,7 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/13/2018
+ms.date: 03/21/2019
 ---
 
 # Xamarin.Forms Views
@@ -165,11 +165,11 @@ These two classes derive from the [`InputView`](xref:Xamarin.Forms.InputView) cl
 
 ## Views that display collections
 
-### Picker
+### CollectionView
 
 |     |     |
 | --- | --- |
-| [`Picker`](xref:Xamarin.Forms.Picker) displays a selected item from a list of text strings, and allows selecting that item when the view is tapped. Set the [`Items`](xref:Xamarin.Forms.Picker.Items) property to a list of strings, or the [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) property to a collection of objects. The [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) event is fired when an item is selected.<br /><br />The `Picker` displays the list of items only when it's selected. Use a [`ListView`](#listView) or [`TableView`](#tableView) for a scrollable list that remains on the page.<br /><br />[API Documentation](xref:Xamarin.Forms.Picker) / [Guide](~/xamarin-forms/user-interface/picker/index.md) / [Sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/) | [![Picker Example](views-images/Picker.png "Picker Example")](views-images/Picker-Large.png#lightbox "Picker Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PickerDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml.cs) |
+| `CollectionView` displays a scrollable list of selectable data items, using different layout specifications. It aims to provide a more flexible, and performant alternative to [`ListView`](xref:Xamarin.Forms.ListView). Set the `ItemsSource` property to a collection of objects, and set the `ItemTemplate` property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) object describing how the items are to be formatted. The `SelectionChanged` event signals that a selection has been made, which is available as the `SelectedItem` property.<br /><br />[Guide](~/xamarin-forms/user-interface/collectionview/index.md) / [Sample](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/) | [![CollectionView Example](views-images/CollectionView.png "CollectionView Example")](views-images/CollectionView-Large.png#lightbox "CollectionView Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CollectionViewDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CollectionViewDemoPage.xaml) |
 |     |     |
 
 <a name="listView" />
@@ -179,6 +179,13 @@ These two classes derive from the [`InputView`](xref:Xamarin.Forms.InputView) cl
 |     |     |
 | --- | --- |
 | [`ListView`](xref:Xamarin.Forms.ListView) derives from [`ItemsView[Cell]`](xref:Xamarin.Forms.ItemsView`1) and displays a scrollable list of selectable data items. Set the [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property to a collection of objects, and set the [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) object describing how the items are to be formatted. The [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) event signals that a selection has been made, which is available as the [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) property.<br /><br />[API Documentation](xref:Xamarin.Forms.ListView) / [Guide](~/xamarin-forms/user-interface/listview/index.md) / [Sample](https://developer.xamarin.com/samples/WorkingWithListview) | [![ListView Example](views-images/ListView.png "ListView Example")](views-images/ListView-Large.png#lightbox "ListView Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
+|     |     |
+
+### Picker
+
+|     |     |
+| --- | --- |
+| [`Picker`](xref:Xamarin.Forms.Picker) displays a selected item from a list of text strings, and allows selecting that item when the view is tapped. Set the [`Items`](xref:Xamarin.Forms.Picker.Items) property to a list of strings, or the [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) property to a collection of objects. The [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) event is fired when an item is selected.<br /><br />The `Picker` displays the list of items only when it's selected. Use a [`ListView`](#listView) or [`TableView`](#tableView) for a scrollable list that remains on the page.<br /><br />[API Documentation](xref:Xamarin.Forms.Picker) / [Guide](~/xamarin-forms/user-interface/picker/index.md) / [Sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/) | [![Picker Example](views-images/Picker.png "Picker Example")](views-images/Picker-Large.png#lightbox "Picker Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PickerDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml.cs) |
 |     |     |
 
 <a name="tableView" />

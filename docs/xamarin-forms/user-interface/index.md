@@ -27,7 +27,7 @@ The `BoxView` is just a simple colored rectangle, but it can be used for decorat
 
 The `Button` responds to a tap or click that directs an application to carry out a particular task.
 
-## [CollectionView](collectionview.md)
+## [CollectionView](collectionview/index.md)
 
 The `CollectionView` is a flexible and performant view for presenting lists of data using different layout specifications.
 
