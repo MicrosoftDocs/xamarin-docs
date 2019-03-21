@@ -17,7 +17,7 @@ Many applications consist of multiple pages among which the user navigates. The 
 
 ## Modal pages and modeless pages
 
-`VisualElement` defines a [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property of type [`INavigation`](xref:Xamarin.Forms.INavigation), which includes the following two methods to navigate to a new page:
+`VisualElement` defines a [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property of type [`INavigation`](xref:Xamarin.Forms.INavigation), which includes the following two methods to navigate to a new page:
 
 - [`PushAsync`](xref:Xamarin.Forms.INavigation.PushAsync(Xamarin.Forms.Page))
 - [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync(Xamarin.Forms.Page))
