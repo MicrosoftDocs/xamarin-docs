@@ -4,7 +4,7 @@ title: "Use C/C++ libraries with Xamarin"
 description: "Visual Studio for Mac can be used to build and integrate cross-platform C/C++ code into mobile apps for Android and iOS, using Xamarin and C#. This article explains how to set up and debug a C++ project in a Xamarin app."
 author: mikeparker104
 ms.author: miparker
-ms.date: 12/17/20178
+ms.date: 12/17/2018
 ---
 # Use C/C++ libraries with Xamarin
 

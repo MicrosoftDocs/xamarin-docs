@@ -23,7 +23,7 @@ To return back to the previous page, the application will pop the current page f
 
 ![](hierarchical-images/popping.png "Popping a Page from the Navigation Stack")
 
-Navigation methods are exposed by the [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property on any [`Page`](xref:Xamarin.Forms.Page) derived types. These methods provide the ability to push pages onto the navigation stack, to pop pages from the navigation stack, and to perform stack manipulation.
+Navigation methods are exposed by the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property on any [`Page`](xref:Xamarin.Forms.Page) derived types. These methods provide the ability to push pages onto the navigation stack, to pop pages from the navigation stack, and to perform stack manipulation.
 
 <a name="Performing_Navigation" />
 
@@ -64,7 +64,7 @@ This causes the `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage) inst
 
 ### Pushing Pages to the Navigation Stack
 
-To navigate to `Page2Xaml`, it is necessary to invoke the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) method on the [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property of the current page, as demonstrated in the following code example:
+To navigate to `Page2Xaml`, it is necessary to invoke the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) method on the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property of the current page, as demonstrated in the following code example:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -109,7 +109,7 @@ This causes the `Page2Xaml` instance to be removed from the navigation stack, wi
 
 However, the precise order in which these events occur is platform dependent. For more information see [Chapter 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) of Charles Petzold's Xamarin.Forms book.
 
-As well as [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) and [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) methods, the [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property of each page also provides a [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync) method, which is shown in the following code example:
+As well as [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) and [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) methods, the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property of each page also provides a [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync) method, which is shown in the following code example:
 
 ```csharp
 async void OnRootPageButtonClicked (object sender, EventArgs e)
@@ -122,7 +122,7 @@ This method pops all but the root [`Page`](xref:Xamarin.Forms.Page) off the navi
 
 ### Animating Page Transitions
 
-The [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property of each page also provides overridden push and pop methods that include a `boolean` parameter that controls whether to display a page animation during navigation, as shown in the following code example:
+The [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property of each page also provides overridden push and pop methods that include a `boolean` parameter that controls whether to display a page animation during navigation, as shown in the following code example:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -271,7 +271,7 @@ For more information about data binding, see [Data Binding Basics](~/xamarin-for
 
 ## Manipulating the Navigation Stack
 
-The [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property exposes a [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack) property from which the pages in the navigation stack can be obtained. While Xamarin.Forms maintains access to the navigation stack, the `Navigation` property provides the [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) and [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) methods for manipulating the stack by inserting pages or removing them.
+The [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property exposes a [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack) property from which the pages in the navigation stack can be obtained. While Xamarin.Forms maintains access to the navigation stack, the `Navigation` property provides the [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) and [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) methods for manipulating the stack by inserting pages or removing them.
 
 The [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) method inserts a specified page in the navigation stack before an existing specified page, as shown in the following diagram:
 

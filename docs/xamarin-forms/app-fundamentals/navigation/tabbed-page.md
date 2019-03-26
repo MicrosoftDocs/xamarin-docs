@@ -111,7 +111,7 @@ For information about the layout of a [`NavigationPage`](xref:Xamarin.Forms.Navi
 
 #### Navigation Inside a Tab
 
-Navigation can be performed from the second tab by invoking the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) method on the [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property of the [`ContentPage`](xref:Xamarin.Forms.ContentPage) instance, as demonstrated in the following code example:
+Navigation can be performed from the second tab by invoking the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) method on the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property of the [`ContentPage`](xref:Xamarin.Forms.ContentPage) instance, as demonstrated in the following code example:
 
 ```csharp
 async void OnUpcomingAppointmentsButtonClicked (object sender, EventArgs e)

@@ -64,6 +64,6 @@ var system2 = platform.ToSystemSize();
 ## API
 
 - [Converters source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/PlatformExtensions)
-- [Point Converters API documentation](xref:Xamarin.Essentials.PointConverters)
-- [Rectangle Converters API documentation](xref:Xamarin.Essentials.RectangleConverters)
-- [Size Converters API documentation](xref:Xamarin.Essentials.SizeConverters)
+- [Point Converters API documentation](xref:Xamarin.Essentials.PointExtensions)
+- [Rectangle Converters API documentation](xref:Xamarin.Essentials.RectangleExtensions)
+- [Size Converters API documentation](xref:Xamarin.Essentials.SizeExtensions)

@@ -15,6 +15,9 @@ ms.date: 12/14/2015
 
 [`ListView`](xref:Xamarin.Forms.ListView) is a view for presenting lists of data, especially long lists that require scrolling.
 
+> [!IMPORTANT]
+> `CollectionView` is a view for presenting lists of data using different layout specifications. It aims to provide a more flexible, and performant alternative to [`ListView`](xref:Xamarin.Forms.ListView). For more information, see [Xamarin.Forms CollectionView](~/xamarin-forms/user-interface/collectionview/index.md).
+
 ## Use Cases
 
 Make sure ListView is the right control for your needs. ListView can be used in any situation where you are displaying scrollable lists of data. ListViews support context actions and data binding.

@@ -348,7 +348,7 @@ public App ()
 }
 ```
 
-All [`ContentPage`](xref:Xamarin.Forms.ContentPage) instances have a [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property that exposes methods to modify the page stack. These methods should only be invoked if the application includes a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). To navigate to the `NoteEntryPage`, it is necessary to invoke the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)) method as demonstrated in the code example below:
+All [`ContentPage`](xref:Xamarin.Forms.ContentPage) instances have a [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property that exposes methods to modify the page stack. These methods should only be invoked if the application includes a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). To navigate to the `NoteEntryPage`, it is necessary to invoke the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)) method as demonstrated in the code example below:
 
 ```csharp
 await Navigation.PushAsync(new NoteEntryPage());
