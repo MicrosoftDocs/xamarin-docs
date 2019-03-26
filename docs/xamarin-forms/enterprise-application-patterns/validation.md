@@ -409,7 +409,7 @@ For more information about Triggers, see [Triggers](~/xamarin-forms/app-fundamen
 The UI displays validation error messages in Label controls below each control whose data failed validation. The following code example shows the [`Label`](xref:Xamarin.Forms.Label) that displays a validation error message if the user has not entered a valid username:
 
 ```xaml
-<Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}"  
+<Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}}"  
        Style="{StaticResource ValidationErrorLabelStyle}" />
 ```
 
