@@ -199,10 +199,11 @@ SQLite to use the **Serialized** threading mode. It's important to set
 this mode early in your application (for example, at the beginning of
 the `OnCreate` method).
 
-To change the threading mode, call `SqliteConnection.SetConfig`. For
-example, this line of code configures SQLite for **Serialized** mode:
+To change the threading mode, call `SqliteConnection.SetConfig` which is in the `Mono.Data.Sqlite` namespace. For example, this line of code configures SQLite for **Serialized** mode:
 
 ```csharp
+using Mono.Data.Sqlite;
+...
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
 
