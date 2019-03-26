@@ -47,7 +47,7 @@ Alternatively, when you run an ASP.NET Core 2.1 project (or above), that uses HT
 > [!NOTE]
 > The ASP.NET Core HTTPS development certificate is self-signed.
 
-For more information about enabling local HTTPS on your machine, see [Enable local HTTPS](/aspnet/core/getting-started.md#enable-local-https).
+For more information about enabling local HTTPS on your machine, see [Enable local HTTPS](/aspnet/core/getting-started#enable-local-https).
 
 ## Configure your project
 
@@ -117,6 +117,6 @@ In this code example, the server certificate validation result is returned when 
 ## Related links
 
 - [TodoREST (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
-- [Enable local HTTPS](/aspnet/core/getting-started.md#enable-local-https)
+- [Enable local HTTPS](/aspnet/core/getting-started#enable-local-https)
 - [HttpClient and SSL/TLS implementation selector for iOS/macOS](~/cross-platform/macios/http-stack.md)
 - [HttpClient Stack and SSL/TLS Implementation selector for Android](~/android/app-fundamentals/http-stack.md)
