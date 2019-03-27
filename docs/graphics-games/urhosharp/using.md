@@ -27,7 +27,7 @@ arbitrary number of components.  Components bring a node to life, they
 can make add a visual representation ([`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)), they can emit
 sound ([`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource)), they can provide a collision boundary and so on.
 
-You can create your scenes and setup nodes using the [Urho Editor](#UrhoEditor), or
+You can create your scenes and setup nodes using the [Urho Editor](#urhoeditor), or
 you can do things from your C# code.  In this document we will explore
 setting things up using code, as they illustrate the elements
 necessary to get things to show up on your screen

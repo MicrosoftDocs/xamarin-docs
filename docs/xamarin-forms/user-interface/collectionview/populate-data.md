@@ -71,7 +71,7 @@ By default, `CollectionView` displays items in a vertical list, as shown in the 
 
 [![Screenshot of CollectionView containing text items, on iOS and Android](populate-data-images/text.png "Text items in a CollectionView")](populate-data-images/text-large.png#lightbox "Text items in a CollectionView")
 
-For information on how to change the `CollectionView` layout, see [Specify a Layout](layout.md). For information on how to define the appearance of each item in the `CollectionView`, see [Define list item appearance](#define-list-item-appearance).
+For information on how to change the `CollectionView` layout, see [Specify a Layout](layout.md). For information on how to define the appearance of each item in the `CollectionView`, see [Define item appearance](#define-item-appearance).
 
 ### Data binding
 

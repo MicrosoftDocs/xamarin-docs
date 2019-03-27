@@ -11,7 +11,7 @@ ms.date: 07/02/2018
 
 # Signing the Android Application Package
 
-In [Preparing an App for Release](~/android/deploy-test/release-prep/index.md) 
+In [Preparing an App for Release](~/android/deploy-test/release-prep/index.md)
 the **Archive Manager** was used to build the app and place it in an archive for
 signing and publishing. This section explains how to create an Android
 signing identity, create a new signing certificate for Android
@@ -51,7 +51,7 @@ publish the .APK,  it must first be signed with a signing key (also
 referred to as a certificate).
 
 An existing certificate can be used by clicking the **Import** button and then proceeding to
-[Sign the APK](#signapkvs). Otherwise, click the click the
+[Sign the APK](#sign-the-apk). Otherwise, click the click the
 **+** button to create a new certificate:
 
 [![Ad Hoc signing identity](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png#lightbox)
@@ -79,7 +79,7 @@ key in the following location:
 > [!NOTE]
 > Be sure to back up the resulting keystore file and password in a
 > safe place &ndash; it is not included in the Solution. If you lose your
-> keystore file (for example, because you moved to another computer or 
+> keystore file (for example, because you moved to another computer or
 > reinstalled Windows), you will be unable to
 > sign your app with the same certificate as previous versions.
 
@@ -88,13 +88,13 @@ For more information about the keystore, see
 
 # [Visual Studio for Mac](#tab/macos)
 
-After clicking **Ad-Hoc**, Visual Studio for Mac opens the **Android Signing 
-Identity** dialog as shown in the next screenshot. To publish the .APK, 
-it must first be signed it with a signing key (also referred to as a 
-certificate). If a certificate already exists, click the **Import an 
-Existing Key** button to import it and then proceed to 
-[Sign the APK](#signapkxs) Otherwise, click the **Create a New 
-Key** button to create a new certificate: 
+After clicking **Ad-Hoc**, Visual Studio for Mac opens the **Android Signing
+Identity** dialog as shown in the next screenshot. To publish the .APK,
+it must first be signed it with a signing key (also referred to as a
+certificate). If a certificate already exists, click the **Import an
+Existing Key** button to import it and then proceed to
+[Sign the APK](#sign-the-apk) Otherwise, click the **Create a New
+Key** button to create a new certificate:
 
 [![Android Signing Identity dialog](images/xs/02-android-signing-identity-sml.png)](images/xs/02-android-signing-identity.png#lightbox)
 
@@ -117,7 +117,7 @@ key in the following location:
 > [!NOTE]
 > Be sure to back up the resulting keystore file and password in a
 > safe place &ndash; it is not included in the Solution. If you lose your
-> keystore file (for example, because you moved to another computer or 
+> keystore file (for example, because you moved to another computer or
 > reinstalled macOS), you will be unable to
 > sign your app with the same certificate as previous versions.
 
@@ -125,8 +125,6 @@ For more information about the keystore, see
 [Finding your Keystore's MD5 or SHA1 Signature](~/android/deploy-test/signing/keystore-signature.md).
 
 -----
-
-<a name="signapkvs" />
 
 ## Sign the APK
 
@@ -190,8 +188,8 @@ The **Output APK file** dialog will save the APK to the path specified. Click **
 
 ![Output APK file dialog](images/xs/06-output-apk-file.png)
 
-Next, enter the password for the certificate (the password that was 
-used in the **Create New Certificate** dialog) and click **OK**: 
+Next, enter the password for the certificate (the password that was
+used in the **Create New Certificate** dialog) and click **OK**:
 
 ![Enter certificate password](images/xs/07-signing-certificate.png)
 

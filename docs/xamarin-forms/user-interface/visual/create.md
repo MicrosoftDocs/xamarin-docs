@@ -20,7 +20,7 @@ Xamarin.Forms Visual enables renderers to be created and selectively applied to 
 
 The process for creating and consuming a Xamarin.Forms Visual renderer is:
 
-1. Create platform renderers for the required view. For more information, see [Create renderers](#create-platfomr-renderers).
+1. Create platform renderers for the required view. For more information, see [Create renderers](#create-platform-renderers).
 1. Create a type that derives from `IVisual`. For more information, see [Create an IVisual type](#create-an-ivisual-type).
 1. Register the `IVisual` type as part of the `ExportRendererAttribute` that decorates the renderers. For more information, see [Register the IVisual type](#register-the-ivisual-type).
 1. Consume the Visual renderer by setting the [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) property on the view to the `IVisual` name. For more information, see [Consume the Visual renderer](#consume-the-visual-renderer).
