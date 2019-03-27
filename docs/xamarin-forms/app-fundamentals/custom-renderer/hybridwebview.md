@@ -25,7 +25,7 @@ The rendering process can be used to implement platform-specific customizations 
 
 1. [Create](#Creating_the_HybridWebView) the `HybridWebView` custom control.
 1. [Consume](#Consuming_the_HybridWebView) the `HybridWebView`from Xamarin.Forms.
-1. [Create](#Creating-the-Custom-Renderer-on-each-Platform) the custom renderer for the `HybridWebView` on each platform.
+1. [Create](#creating-the-custom-renderer-on-each-platform) the custom renderer for the `HybridWebView` on each platform.
 
 Each item will now be discussed in turn to implement a `HybridWebView` renderer that enhances the platform-specific web controls to allow C# code to be invoked from JavaScript. The `HybridWebView` instance will be used to display an HTML page that asks the user to enter their name. Then, when the user clicks an HTML button, a JavaScript function will invoke a C# `Action` that displays a pop-up containing the users name.
 
