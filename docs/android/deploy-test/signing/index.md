@@ -93,7 +93,7 @@ Identity** dialog as shown in the next screenshot. To publish the .APK,
 it must first be signed it with a signing key (also referred to as a
 certificate). If a certificate already exists, click the **Import an
 Existing Key** button to import it and then proceed to
-[Sign the APK](#signapkxs) Otherwise, click the **Create a New
+[Sign the APK](#sign-the-apk) Otherwise, click the **Create a New
 Key** button to create a new certificate:
 
 [![Android Signing Identity dialog](images/xs/02-android-signing-identity-sml.png)](images/xs/02-android-signing-identity.png#lightbox)
