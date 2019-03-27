@@ -107,7 +107,7 @@ Since the touch surface movement is read through the `DPad` property, movement v
 
 ### Apple TV Game Controller
 
-Game controllers for Apple TV behave identically to game controllers for iOS apps. For more information, see the [iOS Game Controller section](#iOS-game-controller). 
+Game controllers for Apple TV behave identically to game controllers for iOS apps. For more information, see the [iOS Game Controller](#ios-game-controller) section. 
 
 ## Xbox One
 
