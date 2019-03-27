@@ -38,10 +38,10 @@ Vendors can create their own platform-specifics with Effects. An Effect provides
 The process for creating a platform-specific is as follows:
 
 1. Implement the specific functionality as an Effect. For more information, see [Creating an Effect](~/xamarin-forms/app-fundamentals/effects/creating.md).
-1. Create a platform-specific class that will expose the Effect. For more information, see [Creating a Platform-Specific Class](#creating).
-1. In the platform-specific class, implement an attached property to allow the platform-specific to be consumed through XAML. For more information, see [Adding an Attached Property](#attached_property).
-1. In the platform-specific class, implement extension methods to allow the platform-specific to be consumed through a fluent code API. For more information, see [Adding Extension Methods](#extension_methods).
-1. Modify the Effect implementation so that the Effect is only applied if the platform-specific has been invoked on the same platform as the Effect. For more information, see [Creating the Effect](#creating_the_effect).
+1. Create a platform-specific class that will expose the Effect. For more information, see [Creating a Platform-Specific Class](#creating-a-platform-specific-class).
+1. In the platform-specific class, implement an attached property to allow the platform-specific to be consumed through XAML. For more information, see [Adding an Attached Property](#adding-an-attached-property).
+1. In the platform-specific class, implement extension methods to allow the platform-specific to be consumed through a fluent code API. For more information, see [Adding Extension Methods](#adding-extension-methods).
+1. Modify the Effect implementation so that the Effect is only applied if the platform-specific has been invoked on the same platform as the Effect. For more information, see [Creating the Effect](#creating-the-effect).
 
 The result of exposing an Effect as a platform-specific is that the Effect can be more easily consumed through XAML and through a fluent code API.
 
