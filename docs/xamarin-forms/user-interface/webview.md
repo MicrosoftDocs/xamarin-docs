@@ -340,7 +340,7 @@ The [`WebNavigatingEventArgs`](xref:Xamarin.Forms.WebNavigatingEventArgs) object
 The [`WebNavigatedEventArgs`](xref:Xamarin.Forms.WebNavigatedEventArgs) object that accompanies the [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) event has four properties:
 
 - `NavigationEvent` – the navigation event that was raised.
-- `Result` – describes the result of the navigation, using the [`WebNavigationResult`](xref:Xamarin.Forms.WebNavigationResult) enumeration. Valid values are `Cancel`, `Failure`, `Success`, and `Timeout`.
+- `Result` – describes the result of the navigation, using a [`WebNavigationResult`](xref:Xamarin.Forms.WebNavigationResult) enumeration member. Valid values are `Cancel`, `Failure`, `Success`, and `Timeout`.
 - `Source` – the element that performed the navigation.
 - `Url` – the navigation destination.
 
