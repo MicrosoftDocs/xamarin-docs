@@ -110,7 +110,7 @@ All of these properties are bindable.
 [`EntryCell`](xref:Xamarin.Forms.EntryCell) is useful when you need to display text data that the user can edit. It defines the following properties:
 
 - `Keyboard` – The keyboard to display while editing. There are options for things like numeric values, email, phone numbers, etc. [See the API docs](xref:Xamarin.Forms.Keyboard).
-- `Label` – The label text to display to the right of the text entry field.
+- `Label` – The label text to display to the left of the text entry field.
 - `LabelColor` – The color of the label text.
 - `Placeholder` – Text to display in the entry field when it is null or empty. This text disappears when text entry begins.
 - `Text` – The text in the entry field.
