@@ -631,7 +631,7 @@ Optionally, the app can calculate and create a smaller subset of samples or one 
 
 ## Workouts and iOS 10
 
-Every watchOS 3 workout app has a parent iOS 10 based workout app and, new to iOS 10, this iOS app can be used to start a workout that will place the Apple Watch in the Workout Mode (without user intervention) and run the watchOS app in the Background Running mode (see [About Background Running](#About-Background-Running) above for more details).
+Every watchOS 3 workout app has a parent iOS 10 based workout app and, new to iOS 10, this iOS app can be used to start a workout that will place the Apple Watch in the Workout Mode (without user intervention) and run the watchOS app in the Background Running mode (see [About Background Running](#about-background-running) above for more details).
 
 While the watchOS app is running, it can use WatchConnectivity for messaging and communication with the parent iOS app.
 
@@ -644,7 +644,7 @@ Take a look at how this process works:
 3. Using the passed in Workout Configuration, the watchOS 3 app starts a new Workout Session (`HKWorkoutSession`).
 
 > [!IMPORTANT]
-> In order for the parent iPhone app to start a workout on the Apple Watch, the watchOS 3 app must have Background Running enabled. Please see [Enabling Background Running](#Enabling-Background-Running) above for more details.
+> In order for the parent iPhone app to start a workout on the Apple Watch, the watchOS 3 app must have Background Running enabled. Please see [Enabling Background Running](#enabling-background-running) above for more details.
 
 This process is very similar to the process of starting a Workout Session in the watchOS 3 app directly. On the iPhone, use the following code:
 

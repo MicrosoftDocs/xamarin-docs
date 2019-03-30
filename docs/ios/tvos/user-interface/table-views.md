@@ -96,7 +96,7 @@ To get started, do the following:
 1. For each **Prototype Cell**, select it and assign a unique **Identifier** in the **Widget** tab of the **Properties Explorer**. This step is _very important_ as you will need this Identifier later when you populate the table. For example `AttrCell`: 
 
 	[![](table-views-images/table12.png "The Widget Tab")](table-views-images/table12.png#lightbox)
-1. You can also select to present the Cell as one of the [Default Table View Cell Types](#Table-View-Cell-Types) via the **Style** dropdown or set it to **Custom** and use the Design Surface to layout the Cell by dragging in other UI widgets from the **Toolbox**: 
+1. You can also select to present the Cell as one of the [Default Table View Cell Types](#table-view-cell-types) via the **Style** dropdown or set it to **Custom** and use the Design Surface to layout the Cell by dragging in other UI widgets from the **Toolbox**: 
 
 	[![](table-views-images/table13.png "The cell layout")](table-views-images/table13.png#lightbox)
 1. Assign a unique **Name** to each UI element in the Prototype Cell design in the **Widget** tab of the **Properties Explorer** so you can access them later in C# code: 
@@ -137,7 +137,7 @@ To get started, do the following:
 1. For each **Prototype Cell**, select it and assign a unique **Identifier** in the **Widget** tab of the **Properties Explorer**. This step is _very important_ as you will need this Identifier later when you populate the table. For example `AttrCell`: 
 
 	[![](table-views-images/table12-vs.png "Assign an Identifier")](table-views-images/table12-vs.png#lightbox)
-1. You can also select to present the Cell as one of the [Default Table View Cell Types](#Table-View-Cell-Types) via the **Style** dropdown or set it to **Custom** and use the Design Surface to layout the Cell by dragging in other UI widgets from the **Toolbox**: 
+1. You can also select to present the Cell as one of the [Default Table View Cell Types](#table-view-cell-types) via the **Style** dropdown or set it to **Custom** and use the Design Surface to layout the Cell by dragging in other UI widgets from the **Toolbox**: 
 
 	[![](table-views-images/table13-vs.png "The Style dropdown")](table-views-images/table13-vs.png#lightbox)
 1. Assign a unique **Name** to each UI element in the Prototype Cell design in the **Widget** tab of the **Properties Explorer** so you can access them later in C# code: 

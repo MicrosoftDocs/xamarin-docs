@@ -12,7 +12,7 @@ ms.date: 03/17/2017
 # Deploying watchOS Apps to the App Store
 
 > [!IMPORTANT]
-> Be sure to review [Apple's Watch Kit Submission Guide](https://developer.apple.com/app-store/watch/), and see the [Troubleshooting](#Troubleshooting) section for any issues you may have.
+> Be sure to review [Apple's Watch Kit Submission Guide](https://developer.apple.com/app-store/watch/), and see the [Troubleshooting](#troubleshooting) section for any issues you may have.
 
 - Ensure you have:
   - [**Distribution Provisioning Profiles**](#provisioning) created
@@ -39,7 +39,7 @@ ms.date: 03/17/2017
   - **Submit...** the archive and follow the steps to
   upload to iTunes Connect for review and approval.
 
-Read specific tips related to these items below. See the [Troubleshooting](#Troubleshooting) section if you have problems.
+Read specific tips related to these items below. See the [Troubleshooting](#troubleshooting) section if you have problems.
 
 <a name="provisioning" />
 

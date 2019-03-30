@@ -72,13 +72,13 @@ For an existing app, Apple suggests you support the `HTTPS` protocol as soon as 
 
 For a new Xamarin.iOS app, you should use `HTTPS` exclusively when communicating with internet resources. Again, there might be situations (like using a 3rd party web service) where this isn't possible and you'll need to opt-out of ATS.
 
-Additionally, ATS enforces high-level API communication to be encrypted using TLS version 1.2 with forward secrecy. See the [ATS Connection Requirements](#ATS-Connection-Requirements) and [ATS Compatible Ciphers](#ATS-Compatible-Ciphers) sections above for more details.
+Additionally, ATS enforces high-level API communication to be encrypted using TLS version 1.2 with forward secrecy. See the [ATS Connection Requirements](#ats-connection-requirements) and [ATS Compatible Ciphers](#ats-compatible-ciphers) sections above for more details.
 
 While you might not be familiar with TLS ([Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)) it is the successor to SSL ([Secure Socket Layer](https://en.wikipedia.org/wiki/Transport_Layer_Security)) and provides a collection of cryptographic protocols to enforce security over network connections.
 
 The TLS level is controlled by the web service that you are consuming and is therefore outside of the app's control. Both the `HttpClient` and the `ModernHttpClient` should automatically use the highest level of TLS encryption supported by the server.
 
-Depending on the server that you are talking to (especially if it is a 3rd party service), you might need to disable forward secrecy or select a lower TLS level. See the [Configuring ATS Options](#Configuring-ATS-Options) section below for more details.
+Depending on the server that you are talking to (especially if it is a 3rd party service), you might need to disable forward secrecy or select a lower TLS level. See the [Configuring ATS Options](#configuring-ats-options) section below for more details.
 
 > [!IMPORTANT]
 > App Transport Security does not apply to Xamarin apps using **Managed HTTPClient implementations**. It applies to connections using CFNetwork **HTTPClient implementations** or **NSURLSession HTTPClient implementations** only.

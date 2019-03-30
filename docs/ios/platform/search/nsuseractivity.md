@@ -33,7 +33,7 @@ The following properties of `NSUserActivity` are used to support App Search:
 
  - `EligibleForHandoff` – If `true`, this activity can be used in a Handoff operation.
  - `EligibleForSearch` – If `true`, this activity will be added to the on-device index and presented in search results.
- - `EligibleForPublicIndexing` – If `true`, this activity will be added to Apple's cloud based index and presented to users (via search) that have not already installed your app on their iOS device. See the [Public Search Indexing](#Public-Search-Indexing) section below for more details.
+ - `EligibleForPublicIndexing` – If `true`, this activity will be added to Apple's cloud based index and presented to users (via search) that have not already installed your app on their iOS device. See the [Public Search Indexing](#public-search-indexing) section below for more details.
  - `Title` – Provides a title for your activity and is displayed in the search results. Users can also search for the text of the title itself.
  - `Keywords` – Is an array of strings used to describe your activity that will be indexed and made searchable by the end user.
  - `ContentAttributeSet` – Is a `CSSearchableItemAttributeSet` used to further describe your activity in detail and provide rich content in the search results.

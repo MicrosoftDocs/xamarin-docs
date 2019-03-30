@@ -79,7 +79,7 @@ When working with `https://` URLs both `NSURLSession` and `NSURLConnection` no l
 - **-1200 [3:-9824]** - Http load failed.
 - **-1200** - `NSURLConnection` finished with error.
 
-As of watchOS 3, SSL/TLS connections security is being strictly enforced by Apple. Affected services and apps should updated web servers to use the latest TLS protocol versions. See [NSURLConnection](#NSURLConnection) above for more information.
+As of watchOS 3, SSL/TLS connections security is being strictly enforced by Apple. Affected services and apps should updated web servers to use the latest TLS protocol versions. See [NSURLConnection](#nsurlconnection) above for more information.
 
 ## Snapshots
 
