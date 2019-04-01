@@ -305,7 +305,7 @@ As stated above, in addition to the standard Siri Remote that ships with the App
 If your app required low-level controller input, you can uses Apple's [Game Controller Framework](https://developer.apple.com/library/prerelease/tvos/documentation/ServicesDiscovery/Conceptual/GameControllerPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013276) which has the following modifications for tvOS:
 
 - The Micro Game Controller profile (`GCMicroGamepad`) has been added to target the Siri Remote.
-- The new `GCEventViewController` class can be used to route game controller events through your app. See the [Determining Game Controller Input](#Determining-Game-Controller-Input) section below for more details.
+- The new `GCEventViewController` class can be used to route game controller events through your app. See the [Determining Game Controller Input](#determining-game-controller-input) section below for more details.
 
 <a name="Game-Controller-Support-Requirements" />
 

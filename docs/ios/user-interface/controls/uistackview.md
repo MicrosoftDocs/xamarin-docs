@@ -233,7 +233,7 @@ There are several properties that control how a Stack View will arrange its coll
 - **Baseline Relative** – If `true`, the vertical spacing of each subview will be derived from it's baseline.
 - **Layout Margins Relative** – Places the subviews relative to the standard layout margins.
 
-Typically you will use a Stack View to arrange a small number of subviews. More complex User Interfaces can be created by nesting one or more Stack Views inside each other (as we did in the [UIStackView Quickstart](#UIStackView-Quickstart) above).
+Typically you will use a Stack View to arrange a small number of subviews. More complex User Interfaces can be created by nesting one or more Stack Views inside each other (as we did in the [UIStackView Quickstart](#uistackview-quickstart) above).
 
 You can further fine-tune the UIs appearance by adding additional constraints to the subviews (for example to control the Height or Width). However, care should be taken not to include conflicting constraints to those introduced by the Stack View itself.
 

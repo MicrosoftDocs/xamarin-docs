@@ -272,7 +272,7 @@ namespace MonkeyCall
 }
 ```
 
-The `CallHandleFromURL` and `CallHandleFromActivity` classes are used in the AppDelegate to get the contact handle of the person being called in an outgoing call. For more information, please see the [Handling Outgoing Calls](#Handling-Outgoing-Calls) section below.
+The `CallHandleFromURL` and `CallHandleFromActivity` classes are used in the AppDelegate to get the contact handle of the person being called in an outgoing call. For more information, please see the [Handling Outgoing Calls](#handling-outgoing-calls) section below.
 
 ### The ActiveCallManager class
 
@@ -386,7 +386,7 @@ namespace MonkeyCall
 }
 ```
 
-Again, since this is a simulation only, the `ActiveCallManager` only maintains a collection of `ActiveCall` objects and has a routine for finding a given call by its `UUID` property. It also includes methods to start, end and change the on-hold state of an outgoing call. For more information, please see the [Handling Outgoing Calls](#Handling-Outgoing-Calls) section below.
+Again, since this is a simulation only, the `ActiveCallManager` only maintains a collection of `ActiveCall` objects and has a routine for finding a given call by its `UUID` property. It also includes methods to start, end and change the on-hold state of an outgoing call. For more information, please see the [Handling Outgoing Calls](#handling-outgoing-calls) section below.
 
 ### The ProviderDelegate class
 
@@ -722,7 +722,7 @@ namespace MonkeyCall
 }
 ```
 
-The `OpenUrl` and `ContinueUserActivity` override methods are used when the app is processing an outgoing call. For more information, please see the [Handling Outgoing Calls](#Handling-Outgoing-Calls) section below.
+The `OpenUrl` and `ContinueUserActivity` override methods are used when the app is processing an outgoing call. For more information, please see the [Handling Outgoing Calls](#handling-outgoing-calls) section below.
 
 ## Handling incoming calls
 
@@ -939,9 +939,9 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 }
 ```
 
-Here the `CallHandleFromActivity` method of the helper class `StartCallRequest` is being used to get the handle to the person being called (see [The StartCallRequest Class](#The-StartCallRequest-Class) above). 
+Here the `CallHandleFromActivity` method of the helper class `StartCallRequest` is being used to get the handle to the person being called (see [The StartCallRequest Class](#the-startcallrequest-class) above).
 
-The `PerformStartCallAction` method of the [ProviderDelegate Class](#The-ProviderDelegate-Class) is used to finally start the actual outgoing call and inform the System of its lifecycle:
+The `PerformStartCallAction` method of the [ProviderDelegate Class](#the-providerdelegate-class) is used to finally start the actual outgoing call and inform the System of its lifecycle:
 
 ```csharp
 public override void PerformStartCallAction (CXProvider provider, CXStartCallAction action)

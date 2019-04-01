@@ -392,7 +392,7 @@ namespace MonkeyNotification
 }
 ```
 
-Looking at this code in detail, it creates and populates an instance of `NSUserActivity` (as shown in the [Creating an Activity](#Creating-an-Activity) section above). Next, it creates an instance of `INSendMessageIntent` (which inherits from `INIntent`) and populates it with the details of the message being sent:
+Looking at this code in detail, it creates and populates an instance of `NSUserActivity` (as shown in the [Creating an Activity](#creating-an-activity) section above). Next, it creates an instance of `INSendMessageIntent` (which inherits from `INIntent`) and populates it with the details of the message being sent:
 
 ```csharp
 var intent = new INSendMessageIntent (to, text, "", "MonkeyChat", from);

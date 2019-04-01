@@ -247,11 +247,11 @@ namespace ThemesDemo.Droid
 
             public override void GetOutline(Android.Views.View view, Outline outline)
             {
-                var pixles =
+                var pixels =
                     (float)ThemeEffects.GetCornerRadius(_element) *
                     view.Resources.DisplayMetrics.Density;
 
-                outline.SetRoundRect(new Rect(0, 0, view.Width, view.Height), (int)pixles);
+                outline.SetRoundRect(new Rect(0, 0, view.Width, view.Height), (int)pixels);
             }
         }
     }

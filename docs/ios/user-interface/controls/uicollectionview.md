@@ -513,7 +513,7 @@ application as well as some of the other changes iOS 9 has made to the collectio
 	- [Simple Reordering Example](#Simple-Reordering-Example)
 	- [Using a Custom Gesture Recognizer](#Using-a-Custom-Gesture-Recognizer)
 	- [Custom Layouts and Reordering](#Custom-Layouts-and-Reording)
-- [Collection View Changes](#Collection-View-Changes)
+- [Collection View Changes](#collection-view-changes)
 
 <a name="Easy-Reordering-of-Items" />
 
