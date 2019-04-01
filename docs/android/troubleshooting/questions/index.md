@@ -65,11 +65,6 @@ This guide covers steps for setting up an Android NUnit test project,
 _not_ a Xamarin.UITest project. Xamarin.UITest guides can be found
 [here](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
 
-### [How do I enable Intellisense in Android .axml files?](enable-axml-intellisense.md)
-
-This guide describes how to activate Visual Studio's Intellisense for
-Android .axml files.
-
 ### [Why can't my Android release build connect to the Internet?](android-internet.md)
 
 The most common cause of this issue is that the **INTERNET** permission

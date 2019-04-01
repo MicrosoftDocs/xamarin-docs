@@ -595,8 +595,6 @@
               href: troubleshooting/questions/connect-android-emulator-mac-windows.md
             - name: How do I automate an Android NUnit Test project?
               href: troubleshooting/questions/automate-android-nunit-test.md
-            - name: How do I enable Intellisense in Android .axml files?
-              href: troubleshooting/questions/enable-axml-intellisense.md
             - name: Why can't my Android release build connect to the Internet?
               href: troubleshooting/questions/android-internet.md
             - name: Smarter Xamarin Android Support v4 / v13 NuGet Packages
