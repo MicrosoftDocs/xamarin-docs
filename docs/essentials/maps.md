@@ -4,7 +4,8 @@ description: "The Map class in Xamarin.Essentials enables an application to open
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 04/02/2019
+ms.custom: video
 ---
 
 # Xamarin.Essentials: Map
@@ -131,3 +132,9 @@ No platform-specific implementation details.
 
 - [Map source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Map)
 - [Map API documentation](xref:Xamarin.Essentials.Map)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Maps-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

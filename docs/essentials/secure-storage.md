@@ -4,7 +4,8 @@ description: "This document describes the SecureStorage class in Xamarin.Essenti
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 04/02/2019
+ms.custom: video
 ---
 
 # Xamarin.Essentials: Secure Storage
@@ -163,3 +164,9 @@ This API is intended to store small amounts of text.  Performance may be slow if
 
 - [SecureStorage source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/SecureStorage)
 - [SecureStorage API documentation](xref:Xamarin.Essentials.SecureStorage)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Secure-Storage-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
