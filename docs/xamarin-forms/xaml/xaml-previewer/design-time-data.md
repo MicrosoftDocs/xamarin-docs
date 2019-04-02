@@ -82,7 +82,7 @@ ListViews are a popular way to display data in a mobile app. However, they're di
 
 This example will show a ListView of three TextCells in the XAML Previewer. You can change `x:String` to an existing data model in your project.
 
-Refer to [James Montemagno's Hanselman.Forms app](https://github.com/jamesmontemagno/Hanselman.Forms/blob/podcast-details/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L36) for a more complex example.
+Refer to [James Montemagno's Hanselman.Forms app](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L36-L57) for a more complex example.
 
 
 ## Alternative: Hardcode a static ViewModel
