@@ -22,12 +22,12 @@ To use free provisioning to deploy an app to a device:
   certificate and private key) and *provisioning profile* (containing an
   explicit App ID and the UDID of a connected iOS device).
 - Use the signing identity and provisioning profile created by Xcode in
-  Visual Studio for Mac or Visual Studio 2017 to deploy your Xamarin.iOS
+  Visual Studio for Mac or Visual Studio 2019 to deploy your Xamarin.iOS
   application.
 
 > [!IMPORTANT]
 > [Automatic provisioning](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md)
-> allows Visual Studio for Mac or Visual Studio 2017 to automatically set
+> allows Visual Studio for Mac or Visual Studio 2019 to automatically set
 > up a device for developer testing. However, automatic provisioning is not
 > compatible with free provisioning. In order to use automatic provisioning,
 > you must have a paid Apple Developer Program account.
@@ -122,9 +122,9 @@ Follow these steps below to test your Xamarin.iOS app with free provisioning.
 
 # [Visual Studio](#tab/windows)
 
-1. Make sure that Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Make sure that Visual Studio 2019 or Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Connect your iOS device to the Mac build host via USB or [wirelessly](~/ios/deploy-test/wireless-deployment.md).
-3. In the Visual Studio 2017 **Solution Explorer**, right-click on your Xamarin.iOS project and select **Properties**.
+3. In the Visual Studio 2019 or Visual Studio 2017 **Solution Explorer**, right-click on your Xamarin.iOS project and select **Properties**.
 4. Navigate to **iOS Bundle Signing**.
 5. For **Configuration**, select **Debug**.
 6. For **Platform**, select **iPhone**.
@@ -137,9 +137,9 @@ Follow these steps below to test your Xamarin.iOS app with free provisioning.
     > [!TIP]
     > Xcode created this signing identity and provisioning profile and
     > stored them on your Mac build host. They are accessible to
-    > Visual Studio 2017 since it has been [paired](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+    > Visual Studio 2019 or Visual Studio 2017 since it has been [paired](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
     > to the Mac build host. If they are not listed, you may need to restart
-    > Visual Studio 2017.
+    > Visual Studio 2019 or Visual Studio 2017.
 
 10. Save and close the project properties.
 11. Select your iOS device and run the app.

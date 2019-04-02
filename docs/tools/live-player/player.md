@@ -12,6 +12,9 @@ ms.date: 08/08/2017
 
 ![Preview feature](~/media/shared/preview.png)
 
+> [!NOTE]
+> Live Player Preview is only available in Visual Studio 2017.
+
 Once you have installed the app on your phone, follow the
 [setup instructions](~/tools/live-player/install.md) to connect to your
 computer. Try one of the [sample apps](~/tools/live-player/samples.md) to get it working.
@@ -90,6 +93,5 @@ If you experience any issues see [limitations and troubleshooting](~/tools/live-
 
 ## Related Links
 
-- [Limitations](~/tools/live-player/limitations.md)
 - [Troubleshooting](~/tools/live-player/troubleshooting.md)
-- [Xamarin Live Player Samples](samples.md)
+- [Samples to use with Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)

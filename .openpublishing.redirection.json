@@ -303,6 +303,18 @@
     {
       "source_path": "docs/cross-platform/data-cloud/web-services/walkthrough-working-with-wcf.md",
       "redirect_url": "/xamarin/xamarin-forms/data-cloud/consuming/wcf"
+    },
+    {
+      "source_path": "docs/tools/live-player/samples.md",
+      "redirect_url": "/xamarin/tools/live-player"
+    },
+    {
+      "source_path": "docs/tools/live-player/live-view.md",
+      "redirect_url": "/xamarin/tools/live-player"
+    },
+    {
+      "source_path": "docs/tools/live-player/limitations.md",
+      "redirect_url": "/xamarin/tools/live-player/troubleshooting"
     }
   ]
 }

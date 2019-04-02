@@ -37,7 +37,7 @@ The [Xamarin.iOS Mac Installation guide](~/ios/get-started/installation/mac.md) 
 
 Xamarin.iOS works with the following setup:
 
-- Latest version of Visual Studio 2017 Community, Professional, or Enterprise on Windows 10, paired with a Mac build host that fits the above specifications.
+- Latest version of Visual Studio 2019 or Visual Studio 2017 Community, Professional, or Enterprise on Windows 10, paired with a Mac build host that fits the above specifications.
 
 The [Xamarin.iOS Windows Installation guide](~/ios/get-started/installation/windows/index.md) is available for step-by-step installation instructions.
 

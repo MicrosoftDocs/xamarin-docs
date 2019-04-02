@@ -62,7 +62,7 @@ public partial class AppDelegate : UIApplicationDelegate
 ```
 
 > [!NOTE]
-> The iOS Unit Test project type is not available in Visual Studio 2017 on Windows.
+> The iOS Unit Test project type is not available in Visual Studio 2019 or Visual Studio 2017 on Windows.
 
 ## Writing Some Tests
 

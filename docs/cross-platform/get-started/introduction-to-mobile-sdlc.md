@@ -1,5 +1,5 @@
 ---
-title: "Introduction to the Mobile Software Development Lifecycle"
+title: "Introduction to the mobile Software Development Lifecycle"
 description: "This document describes the mobile software development lifecycle, taking a look at UX design, UI design, development, stabilization, distribution, and more."
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
@@ -8,7 +8,7 @@ ms.author: amburns
 ms.date: 11/22/2016
 ---
 
-# Introduction to the Mobile Software Development Lifecycle
+# Introduction to the mobile Software Development Lifecycle
 
 Building mobile applications can be as easy as opening up the IDE, throwing
 something together, doing a quick bit of testing, and submitting to an App Store
@@ -88,12 +88,12 @@ business entities and logic will need to be developed.
 Once an appropriate number of use cases and actors has been captured, it’s much easier
 to begin designing an application. Development can then focus on how to create the app, rather than what the app is or should do.
 
-### Designing Mobile Applications
+### Designing mobile applications
 
 Once the features and functionality of the app have been determined, the next step is
 start trying to solve the User Experience or UX.
 
-#### UX Design
+#### UX design
 
 UX is usually done via wireframes or mockups using one of the many [design toolkits](https://docs.microsoft.com/windows/uwp/design/downloads/). UX mockups allow the UX to be designed without having to worry
 about the actual UI design:
@@ -125,7 +125,7 @@ And due to the myriad of form factors out there, there are often mid-size
 form factors (somewhere between a phone and a tablet) that you may also want to
 target.
 
-#### User Interface (UI) Design
+#### User Interface (UI) design
 
 Once the UX is determined, the next step is to
 create the UI design. While UX is typically just black and white mockups, the UI
@@ -226,17 +226,17 @@ many others. A few popular ones are:
 1.  [Handango](http://www.handango.com/)
 1.  [GetJar](http://www.getjar.com/)
 
-#### UWP 
+#### UWP
 
 UWP applications are distributed to users via the Microsoft Store. Developers submit their apps for approval, after which they appear in the Store. For more information on publishing Windows apps, see UWP's [Publish](https://docs.microsoft.com/windows/uwp/publish/) documentation.
 
-## Mobile Development Considerations
+## Mobile development considerations
 
 While developing mobile applications isn’t fundamentally different that
 traditional web/desktop development in terms of process or architecture, there
 are some considerations to be aware of.
 
-### Common Considerations
+### Common considerations
 
 #### Multitasking
 
@@ -250,7 +250,7 @@ tasks can quickly use up battery power.
 Each platform handles multitasking differently, which we’ll explore in a
 bit.
 
-#### Form Factor
+#### Form factor
 
 Mobile devices generally fall into two categories, phones and tablets, with a
 few crossover devices in between. Developing for these form factors is generally
@@ -260,7 +260,7 @@ mobile devices with less screen space than even most laptops. Because of this,
 mobile platform UI controls have been designed specifically to be effective on
 smaller form factors.
 
-#### Device and OS Fragmentation
+#### Device and OS fragmentation
 
 It’s important to take into account different devices throughout the entire
 software development lifecycle:
@@ -270,7 +270,7 @@ software development lifecycle:
 1.   **Development** – When using a feature from code, the presence of that feature should always be tested first. For example, before using a device feature, such as a camera, always query the OS for the presence of that feature first. Then, when initializing the feature/device, make sure to request currently supported from the OS about that device and then use those configuration settings.
 1.   **Testing** – It’s incredibly important to test the application early and often on actual devices. Even devices with the same hardware specs can vary widely in their behavior.
 
-#### Limited Resources
+#### Limited resources
 
 Mobile devices get more and more powerful all the time, but they are still
 mobile devices that have limited capabilities in comparison to desktop or
@@ -287,7 +287,7 @@ Because of considerations like these, it’s important to code smartly and to
 deploy early and often to actual devices to validate
 responsiveness.
 
-### iOS Considerations
+### iOS considerations
 
 #### Multitasking
 
@@ -296,7 +296,7 @@ rules and behaviors that your application must conform to when another
 application comes to the foreground, otherwise your application will be
 terminated by iOS.
 
-#### Device-Specific Resources
+#### Device-specific resources
 
 Within a particular form factor, hardware can vary greatly between different
 models. For instance, some devices have a rear-facing camera, some also have a
@@ -307,7 +307,7 @@ Some older devices (iPhone 3G and older) don’t even allow multitasking.
 Because of these differences between device models, it’s important to check
 for the presence of a feature before attempting to use it.
 
-#### OS Specific Constraints
+#### OS specific constraints
 
 To make sure that applications are responsive and secure, iOS
 enforces a number of rules that applications must abide by. In addition to the
@@ -320,7 +320,7 @@ that enforces security constraints that restrict what your app can access. For
 instance, an app can read from and write to its own directory, but if it
 attempts to write to another app directory, it will be terminated.
 
-### Android Considerations
+### Android considerations
 
 #### Multitasking
 
@@ -337,7 +337,7 @@ are used to execute processes while the application is in the background. For
 more information see the [Creating Services](~/android/app-fundamentals/services/index.md)
 guide.
 
-#### Many Devices and Many Form Factors
+#### Many devices and many form factors
 
 Google doesn’t impose any limits on which devices can run the Android OS. This
 open paradigm results in a product environment populated by a myriad of
@@ -348,7 +348,7 @@ Because of the extreme fragmentation of Android devices, most people choose
 the most popular 5 or 6 devices to design and test for, and prioritize
 those.
 
-#### Security Considerations
+#### Security considerations
 
 Applications in the Android OS all run under a distinct, isolated identity
 with limited permissions. By default, applications can do very little. For
@@ -362,7 +362,7 @@ This is an essential step in the Android distribution model, because of the open
 application store model, since applications are not curated the way they are for
 iOS, for instance. For a list of application permissions, see the [Manifest Permissions](https://developer.android.com/reference/android/Manifest.permission.html) reference article in the Android Documentation.
 
-### Windows Considerations
+### Windows considerations
 
 #### Multitasking
 
@@ -370,12 +370,12 @@ Multitasking in UWP has two parts: the lifecycle for pages and
 applications, and background processes. Each screen in an application is an
 instance of a Page class, which has events associated with being made active or
 inactive (with special rules for handling the inactive state, or being
-“tombstoned”). 
+“tombstoned”).
 
 The second part is providing background agents for processing tasks even when
 the application is not running in the foreground. 
 
-#### Device Capabilities
+#### Device capabilities
 
 Although UWP hardware is fairly homogeneous, there are still components that are optional
 and therefore require special considering while coding. Optional hardware
@@ -383,7 +383,7 @@ capabilities include the camera, compass, and gyroscope. There is also a special
 class of low-memory (256MB) that requires special consideration, or developers
 can opt-out of low-memory support.
 
-#### Security Considerations
+#### Security considerations
 
 For information on important security considerations in UWP, refer to the [Security](https://docs.microsoft.com/windows/uwp/security/) documentation.
 
@@ -394,9 +394,8 @@ development. It introduced general considerations for building mobile
 applications and examined a number of platform-specific considerations including
 design, testing, and deployment.
 
-## Related Links
+## Next steps
 
 - [Introduction to Mobile Development](~/cross-platform/get-started/introduction-to-mobile-development.md)
-- [Hello, iOS](~/ios/get-started/hello-ios/index.md)
-- [Hello, Android](https://developer.xamarin.com/get-started-droid/)
-- [Application Fundamentals](~/cross-platform/app-fundamentals/index.md)
+- [Get started with Xamarin](~/get-started/index.yml)
+- [Sharing code across platforms](~/cross-platform/app-fundamentals/index.md)

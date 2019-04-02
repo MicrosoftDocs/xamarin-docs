@@ -75,7 +75,7 @@ Visual Studio for Mac will create the new Xamarin.Mac app and display the defaul
 
 [![](hello-mac-images/project01-sml.png "The new solution default view")](hello-mac-images/project01.png#lightbox)
 
-Visual Studio for Mac uses the same **Solution** and **Project** structure as Visual Studio 2017. A solution is a container that can hold one or more projects; projects can include applications, supporting libraries, test applications, etc. The **File > New Project** template creates a solution and an application project automatically.
+Visual Studio for Mac uses the same **Solution** and **Project** structure as Visual Studio 2019. A solution is a container that can hold one or more projects; projects can include applications, supporting libraries, test applications, etc. The **File > New Project** template creates a solution and an application project automatically.
 
 ## Anatomy of a Xamarin.Mac Application
 

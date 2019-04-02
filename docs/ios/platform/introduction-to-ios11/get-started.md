@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with iOS 11"
-description: "This document describes steps that must be completed in order to get started developing iOS 11 Apps. It discusses how to download Xcode and update Visual Studio 2017."
+description: "This document describes steps that must be completed in order to get started developing iOS 11 Apps. It discusses how to download Xcode and update Visual Studio 2019."
 ms.prod: xamarin
 ms.assetid: 794EA2C4-884B-42AC-B8C4-8C8E5474B660
 ms.technology: xamarin-ios
@@ -22,7 +22,7 @@ _Download and install Xcode 9_
 
 Follow these steps to ensure you're ready to work with the latest iOS, tvOS, and watchOS features:
 
-1. **Install the latest Xcode** – [Download](https://developer.apple.com/download/) and install the latest version of _Xcode 9_.
+1. **Install the latest Xcode** – [Download](https://developer.apple.com/download/) and install the latest version of _Xcode 10_.
 
 2. **Run Xcode First** – Run Xcode once, before updating and running Visual Studio for Mac, as it installs some tools that Xamarin requires the first time it is run.
 

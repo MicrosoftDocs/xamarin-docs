@@ -30,9 +30,9 @@ XAML allows developers to define user interfaces in Xamarin.Forms applications u
 
 XAML can be optionally compiled directly into intermediate language (IL) with the XAML compiler (XAMLC). This articles describes how to use XAMLC, and its benefits.
 
-## [XAML Previewer](xaml-previewer.md)
+## [XAML Previewer](xaml-previewer/index.md)
 
-The [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer.md) renders a live preview of a page side-by-side with the XAML markup, allowing you to see your user interface rendered as you type.
+The [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer/index.md) renders a live preview of a page side-by-side with the XAML markup, allowing you to see your user interface rendered as you type.
 
 ## [XAML Namespaces](namespaces.md)
 

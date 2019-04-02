@@ -16,7 +16,7 @@ ms.date: 04/05/2018
 
 Xamarin.Forms now has preview support for the Windows Presentation Foundation (WPF). This article demonstrates how to add a WPF project to a Xamarin.Forms solution.
 
-Before you start, create a new Xamarin.Forms solution in Visual Studio 2017, or use an existing Xamarin.Forms solution, for example, [**BoxViewClock**](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/). You can only add WPF apps to a Xamarin.Forms solution in Windows.
+Before you start, create a new Xamarin.Forms solution in Visual Studio 2019, or use an existing Xamarin.Forms solution, for example, [**BoxViewClock**](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/). You can only add WPF apps to a Xamarin.Forms solution in Windows.
 
 ## Add a WPF project to a Xamarin.Forms app with Xamarin.University
 
@@ -28,7 +28,7 @@ Before you start, create a new Xamarin.Forms solution in Visual Studio 2017, or 
 
 Follow these instructions to add a WPF app that will run on the Windows 7, 8, and 10 desktops:
 
-1. In Visual Studio 2017, right-click on the solution name in the **Solution Explorer** and choose **Add > New Project...**.
+1. In Visual Studio 2019, right-click on the solution name in the **Solution Explorer** and choose **Add > New Project...**.
 
 2. In the **New Project** window, at the left select **Visual C#** and **Windows Classic Desktop**. In the list of project types, choose **WPF App (.NET Framework)**. 
 

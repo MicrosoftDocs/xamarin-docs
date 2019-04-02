@@ -75,6 +75,7 @@ The project also consists of a number of files:
 - **Models\Note.cs** – This class defines a `Note` model whose instances store data about each note in the application.
 - **App.xaml** – The XAML markup for the `App` class, which defines a resource dictionary for the application.
 - **App.xaml.cs** – The code-behind for the `App` class, which is responsible for instantiating the first page that will be displayed by the application on each platform, and for handling application lifecycle events.
+- **AssemblyInfo.cs** – This file contains an application attribute about the project, that is applied at the assembly level.
 - **NotesPage.xaml** – The XAML markup for the `NotesPage` class, which defines the UI for the page shown when the application launches.
 - **NotesPage.xaml.cs** – The code-behind for the `NotesPage` class, which contains the business logic that is executed when the user interacts with the page.
 - **NoteEntryPage.xaml** – The XAML markup for the `NoteEntryPage` class, which defines the UI for the page shown when the user enters a note.
@@ -101,9 +102,7 @@ To maximize the reuse of startup code, Xamarin.Forms applications have a single 
 
 ```csharp
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Notes
 {
     public partial class App : Application
@@ -118,7 +117,17 @@ namespace Notes
 }
 ```
 
-This code sets the `MainPage` property of the `App` class to a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance whose content is a `NotesPage` instance. In addition, the [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) attribute turns on the XAML compiler, so that XAML is compiled directly into intermediate language. For more information, see [XAML Compilation](~/xamarin-forms/xaml/xamlc.md).
+This code sets the `MainPage` property of the `App` class to a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance whose content is a `NotesPage` instance.
+
+In addition, the **AssemblyInfo.cs** file contains a single application attribute, that is applied at the assembly level:
+
+```csharp
+using Xamarin.Forms.Xaml;
+
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+```
+
+The [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) attribute turns on the XAML compiler, so that XAML is compiled directly into intermediate language. For more information, see [XAML Compilation](~/xamarin-forms/xaml/xamlc.md).
 
 ## Launching the application on each platform
 

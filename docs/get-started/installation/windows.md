@@ -1,13 +1,13 @@
 ---
-title: "Installing Xamarin in Visual Studio 2017"
-description: "This document describes how to install Xamarin in Visual Studio 2017. It discusses requirements, the installation process, and verifying the installation."
+title: "Installing Xamarin in Visual Studio 2019"
+description: "This document describes how to install Xamarin in Visual Studio 2019. It discusses requirements, the installation process, and verifying the installation."
 ms.prod: xamarin
 ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
 ---
-# Installing Xamarin in Visual Studio 2017
+# Installing Xamarin in Visual Studio 2019
 
 <a name="requirements" />
 
@@ -17,7 +17,7 @@ Check the [system requirements](~/cross-platform/get-started/requirements.md) be
 
 [!include[](~/cross-platform/includes/install-xamarin-windows.md)]
 
-In Visual Studio 2017, verify that Xamarin is installed by
+In Visual Studio 2019, verify that Xamarin is installed by
 clicking the **Help** menu. If Xamarin is installed, you should
 see a **Xamarin** menu item as shown in this screenshot:
 
@@ -26,14 +26,14 @@ see a **Xamarin** menu item as shown in this screenshot:
 You can also click **Help > About Microsoft Visual Studio** and scroll
 through the list of installed products to see if Xamarin is installed:
 
-![Visual Studio 2017 installed products screen](windows-images/13-xamarin-is-installed.png "Visual Studio 2017 installed products screen")
+![Visual Studio 2019 installed products screen](windows-images/13-xamarin-is-installed.png "Visual Studio 2019 installed products screen")
 
 For more information about locating version information, see
 [Where can I find my version information and logs?](~/cross-platform/troubleshooting/questions/version-logs.md)
 
 ## Next steps
 
-Installing Xamarin in Visual Studio 2017 allows you to start writing code
+Installing Xamarin in Visual Studio 2019 allows you to start writing code
 for your apps, but does require additional setup for building and
 deploying your apps to simulator, emulator, and device. Visit the
 following guides to complete your installation and start building cross

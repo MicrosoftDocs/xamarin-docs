@@ -28,7 +28,7 @@ GTK# for macOS and Linux is installed as part of [Mono](https://www.mono-project
 
 Follow these instructions to add a GTK# app that will run on the Windows desktop:
 
-1. In Visual Studio 2017, right-click on the solution name in **Solution Explorer** and choose **Add > New Project...**.
+1. In Visual Studio 2019, right-click on the solution name in **Solution Explorer** and choose **Add > New Project...**.
 
 2. In the **New Project** window, at the left select **Visual C#** and **Windows Classic Desktop**. In the list of project types, choose **Class Library (.NET Framework)**, and ensure that the **Framework** drop-down is set to a minimum of .NET Framework 4.7.
 

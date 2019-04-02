@@ -22,7 +22,7 @@ however they are considered deprecated in favor of .NET Standard.
 .NET Standard is the preferred option for sharing code across platforms. Code is built against a
 specific version (2.0 provides the best API compatibility with existing .NET Framework code)
 and can then be consumed by other projects that support that level or higher. .NET Standard
-projects are supported in both Visual Studio 2017 and Visual Studio for Mac.
+projects are supported in both Visual Studio 2019 and Visual Studio 2019 for Mac.
 
 ## [Shared Projects](~/cross-platform/app-fundamentals/shared-projects.md)
 
