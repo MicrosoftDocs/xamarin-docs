@@ -54,7 +54,7 @@ To find out more about the new multitasking abilities of iOS 9, please see our [
 
 ## New Contacts and Contacts UI Frameworks
 
-With the introduction of iOS 9, Apple has released two new frameworks, [Contacts](https://developer.xamarin.com/api/namespace/Contacts/) and [ContactsUI](https://developer.xamarin.com/api/namespace/ContactsUI/), that replace the existing Address Book and Address Book UI frameworks used by iOS 8 and prior.
+With the introduction of iOS 9, Apple has released two new frameworks, [Contacts](xref:Contacts) and [ContactsUI](xref:ContactsUI), that replace the existing Address Book and Address Book UI frameworks used by iOS 8 and prior.
 
 These new, object-oriented frameworks provide the following:
 
@@ -99,7 +99,7 @@ For more information, please see our [Game Enhancements](~/ios/platform/gaming/i
 
 ## HomeKit Framework Changes
 
-The [HomeKit](https://developer.xamarin.com/api/namespace/HomeKit/) framework, introduced in iOS 8, provides the ability to setup and control various HomeKit enabled accessories (such as automated lights, door locks and garage door openers) from a Xamarin.iOS app. In addition to being easy to setup and configure, HomeKit accessories can be controlled via spoken Siri commands.
+The [HomeKit](xref:HomeKit) framework, introduced in iOS 8, provides the ability to setup and control various HomeKit enabled accessories (such as automated lights, door locks and garage door openers) from a Xamarin.iOS app. In addition to being easy to setup and configure, HomeKit accessories can be controlled via spoken Siri commands.
 
 In iOS 9, Apple has made setup easier, expanded the types of accessories supported and provided more accessory interactions (such as controlling an accessory remotely via iCloud).
 

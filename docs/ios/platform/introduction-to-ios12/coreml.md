@@ -83,7 +83,7 @@ async void RunTest(int num)
 ## for loop
 
 The `for` loop version of the test naively iterates over the specified
-number of inputs, calling [`GetPrediction`](https://developer.xamarin.com/api/member/CoreML.MLModel.GetPrediction/)
+number of inputs, calling [`GetPrediction`](xref:CoreML.MLModel.GetPrediction*)
 for each and discarding the result. The method times how long it takes to
 make the predictions:
 
@@ -108,7 +108,7 @@ async Task FetchNonBatchResults(int num)
 The batch version of the test creates an `MLArrayBatchProvider` object
 from the input array (since this is a required input parameter for the
 `GetPredictions` method), creates an
-[`MLPredictionOptions`](https://developer.xamarin.com/api/type/CoreML.MLPredictionOptions/)
+[`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
 object that prevents prediction computations from being restricted to the
 CPU, and uses the `GetPredictions` API to fetch the predictions, again
 discarding the result:

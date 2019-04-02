@@ -143,16 +143,16 @@ Invoking a selector has three steps:
 ### Selector targets
 
 A selector target is either an object instance or an Objective-C class. If
-the target is an instance and came from a bound Xamarin.iOS type, use the [`ObjCRuntime.INativeObject.Handle`](https://developer.xamarin.com/api/property/ObjCRuntime.INativeObject.Handle/) property.
+the target is an instance and came from a bound Xamarin.iOS type, use the [`ObjCRuntime.INativeObject.Handle`](xref:ObjCRuntime.INativeObject.Handle) property.
 
-If the target is a class, use [`ObjCRuntime.Class`](https://developer.xamarin.com/api/type/ObjCRuntime.Class/) to get a reference to the class
-instance, then use the [`Class.Handle`](https://developer.xamarin.com/api/property/ObjCRuntime.Class.Handle/) property.
+If the target is a class, use [`ObjCRuntime.Class`](xref:ObjCRuntime.Class) to get a reference to the class
+instance, then use the [`Class.Handle`](xref:ObjCRuntime.Class.Handle) property.
 
 ### Selector names
 
 Selector names are listed in Apple's documentation. For example, [`NSString`](https://developer.apple.com/documentation/foundation/nsstring?language=objc) includes [`sizeWithFont:`](https://developer.apple.com/documentation/foundation/nsstring/1619917-sizewithfont?language=objc) and [`sizeWithFont:forWidth:lineBreakMode:`](https://developer.apple.com/documentation/foundation/nsstring/1619914-sizewithfont?language=objc) selectors. The embedded and trailing colons are part of the selector name and cannot be omitted.
 
-Once you have a selector name, you can create a [`ObjCRuntime.Selector`](https://developer.xamarin.com/api/type/ObjCRuntime.Selector/) instance for it.
+Once you have a selector name, you can create a [`ObjCRuntime.Selector`](xref:ObjCRuntime.Selector) instance for it.
 
 ### Calling objc_msgSend
 

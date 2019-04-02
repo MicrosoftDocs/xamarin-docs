@@ -220,7 +220,7 @@ namespace FormsVideoLibrary.iOS
 
 Later on, when the `Source` property is changed, the `OnElementPropertyChanged` method is called with a `PropertyName` property of "Source", and `SetSource` is called again.
 
-To play a video file in iOS, an object of type [`AVAsset`](https://developer.xamarin.com/api/type/AVFoundation.AVAsset/) is first created to encapsulate the video file, and that is used to create an [`AVPlayerItem`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayerItem/), which is then handed off to the `AVPlayer` object. Here's how the `SetSource` method handles the `Source` property when it's of type `UriVideoSource`:
+To play a video file in iOS, an object of type [`AVAsset`](xref:AVFoundation.AVAsset) is first created to encapsulate the video file, and that is used to create an [`AVPlayerItem`](xref:AVFoundation.AVPlayerItem), which is then handed off to the `AVPlayer` object. Here's how the `SetSource` method handles the `Source` property when it's of type `UriVideoSource`:
 
 ```csharp
 namespace FormsVideoLibrary.iOS

@@ -101,7 +101,7 @@ must be decorated with one of the following attributes:
 - [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) 
   (preferred, since it is cross-platform and compatible with .NET Standard 
    1.1+)
-- [MonoNativeFunctionWrapperAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoNativeFunctionWrapperAttribute)
+- [MonoNativeFunctionWrapperAttribute](xref:ObjCRuntime.MonoNativeFunctionWrapperAttribute)
 
 Failing to provide one of these attributes will result in a runtime
 error such as:
@@ -126,9 +126,9 @@ In Mono these bridges are implemented by the Just-in-Time
 	the iPhone there are two important limitations at this
 	point:
 
--  You must flag all of your callback methods with the 
-   [MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoPInvokeCallbackAttribute) 
--  The methods have to be static methods, there is no support for instance methods. 
+-  You must flag all of your callback methods with the
+   [MonoPInvokeCallbackAttribute](xref:ObjCRuntime.MonoPInvokeCallbackAttribute)
+-  The methods have to be static methods, there is no support for instance methods.
  
 <a name="No_Remoting" />
 
