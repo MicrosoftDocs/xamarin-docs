@@ -55,7 +55,7 @@ Java/OS code instead of implementing everything in managed code.
 
 #### Cons
 
-- Requires Android 5.0 or later.
+- Requires Android 4.1 or later.
 - Some HttpClient features/options are not available.
 
 ### Managed (HttpClientHandler)
@@ -82,12 +82,12 @@ depends upon the needs of your application. `AndroidClientHandler` is
 recommended for the most up-to-date security support, eg.
 
 -   You require TLS 1.2+ support.
--   Your app is targeting Android 5.0 (API 21) or later.
+-   Your app is targeting Android 4.1 (API 16) or later.
 -   You need TLS 1.2+ support for `HttpClient`.
 -   You don't need TLS 1.2+ support for `WebClient`.
 
 `HttpClientHandler` is a good choice if you need TLS 1.2+ support but
-must support versions of Android earlier than Android 5.0. It is also a
+must support versions of Android earlier than Android 4.1. It is also a
 good choice if you need TLS 1.2+ support for `WebClient`.
 
 Beginning with Xamarin.Android 8.3, `HttpClientHandler` defaults to
@@ -122,12 +122,12 @@ This code snippet is an example of how to explicitly for a single
 instance of the `HttpClient` class:
 
 ```csharp
-// Android 5.0 or higher, Xamarin.Android 6.1 or higher
+// Android 4.1 or higher, Xamarin.Android 6.1 or higher
 HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler ());
 ```
 
 > [!NOTE]
-> The underlying Android device must support TLS 1.2 (ie. Android 5.0 and later)
+> The underlying Android device must support TLS 1.2 (ie. Android 4.1 and later)
 
 
 ## SSL/TLS implementation build option
