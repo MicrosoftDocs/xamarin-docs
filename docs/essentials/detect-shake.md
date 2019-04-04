@@ -23,14 +23,14 @@ Add a reference to Xamarin.Essentials in your class:
 using Xamarin.Essentials;
 ```
 
-To detect a shake of the device you must use the Accelerometer functionality by calling the `Start` and `Stop` methods to listen for changes to the acceleration and to detect a shake. Any time a shake is detected a `ShakeDetected ` event will fire. Here is sample usage:
+To detect a shake of the device you must use the Accelerometer functionality by calling the `Start` and `Stop` methods to listen for changes to the acceleration and to detect a shake. Any time a shake is detected a `ShakeDetected ` event will fire. It is recommended to use `Game` or faster for the `SensorSpeed`. Here is sample usage:
 
 ```csharp
 
 public class DetectShakeTest
 {
     // Set speed delay for monitoring changes.
-    SensorSpeed speed = SensorSpeed.UI;
+    SensorSpeed speed = SensorSpeed.Game;
 
     public DetectShakeTest()
     {
