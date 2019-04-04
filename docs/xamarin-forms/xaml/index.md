@@ -6,7 +6,7 @@ ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/28/2019
+ms.date: 04/03/2019
 ---
 
 # eXtensible Application Markup Language (XAML)
@@ -19,6 +19,10 @@ _XAML is a declarative markup language that can be used to define user interface
 
 > [!NOTE]
 > Try out the [XAML Standard Preview](standard/index.md)
+
+## [XAML Controls](xaml-controls.md)
+
+All of the views that are defined in Xamarin.Forms can be referenced from XAML files.
 
 <a name="xaml" />
 
