@@ -166,4 +166,4 @@ This article demonstrated using a behavior to add an effect to a control. The `E
 - [Effects](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Effect Behavior (sample)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
 - [Behavior](xref:Xamarin.Forms.Behavior)
-- [Behavior<T>](xref:Xamarin.Forms.Behavior`1)
+- [Behavior&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)
