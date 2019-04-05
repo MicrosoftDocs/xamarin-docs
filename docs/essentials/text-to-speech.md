@@ -97,8 +97,8 @@ public async Task SpeakNow()
 {
     var settings = new SpeechOptions()
         {
-            Volume = .75,
-            Pitch = 1.0
+            Volume = .75f,
+            Pitch = 1.0f
         };
 
     await TextToSpeech.SpeakAsync("Hello World", settings);
@@ -126,8 +126,8 @@ public async Task SpeakNow()
 
     var settings = new SpeechOptions()
         {
-            Volume = .75,
-            Pitch = 1.0,
+            Volume = .75f,
+            Pitch = 1.0f,
             Locale = locale
         };
 
