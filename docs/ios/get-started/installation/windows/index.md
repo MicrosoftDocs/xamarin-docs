@@ -33,6 +33,11 @@ To build Xamarin.iOS apps with Visual Studio 2019 on Windows, you will need:
 
   - [Mac system requirements](~/cross-platform/get-started/requirements.md#macos-requirements)
 
+  > [!TIP]
+  > Don't have access to a Mac?
+  >
+  > If you do not have access to a Mac, you can use [MacinCloud](https://www.macincloud.com/pages/visual-studio-mac.html) or [MacStadium](https://www.macstadium.com/); both services provide cloud-based Mac hardware that you can use to build Xamarin.iOS projects.
+
 ## Setup
 
 To get set up for Xamarin.iOS development in Visual Studio 2019, follow
