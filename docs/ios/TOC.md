@@ -344,6 +344,7 @@
 ### [Xamarin.iOS Analysis Rules](troubleshooting/xamarin-ios-analysis.md)
 ### [Error messages (mtouch)](troubleshooting/mtouch-errors.md)
 ### [Frequently Asked Questions](troubleshooting/questions/index.md)
+#### [Can I use an older version of Xcode?](troubleshooting/questions/old-version-xcode.md)
 #### [Debugging with Xcode](troubleshooting/questions/debugging-with-xcode.md)
 #### [Can I use a Mac VM with Xamarin?](troubleshooting/questions/mac-vm.md)
 #### [Downloading a previous version of Xcode](troubleshooting/questions/previous-xcode.md)
