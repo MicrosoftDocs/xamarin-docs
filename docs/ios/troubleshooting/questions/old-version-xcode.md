@@ -1,5 +1,5 @@
 ---
-title: "Can I Uuse an older version of Xcode or Xamarin.iOS"
+title: "Can I use an older version of Xcode or Xamarin.iOS"
 description: "This guide outlines the issues with using older versions of Xamarin.iOS or Xcode (than the current stable release)."
 ms.prod: xamarin
 ms.assetid: 27CF7EB7-9251-435F-BEA5-F20F8DD7DC17
