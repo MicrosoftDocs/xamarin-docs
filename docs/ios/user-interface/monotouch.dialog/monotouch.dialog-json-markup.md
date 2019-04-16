@@ -11,7 +11,7 @@ ms.author: laobri
 
 # MonoTouch.Dialog Json Markup
 
-This page describes the Json markup accepted by MonoTouch.Dialog's [JsonElement](https://developer.xamarin.com/api/type/MonoTouch.Dialog.JsonElement/)
+This page describes the Json markup accepted by MonoTouch.Dialog's [JsonElement](xref:MonoTouch.Dialog.JsonElement)
 
 Let us start with an example. The following is a complete Json file that can
 be passed into JsonElement.

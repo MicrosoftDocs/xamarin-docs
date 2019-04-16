@@ -16,6 +16,9 @@ The Xamarin Live Player Preview is designed as a getting started sandbox for dev
 
 ![Preview feature](~/media/shared/preview.png)
 
+> [!NOTE]
+> Live Player Preview is only available in Visual Studio 2017.
+
 ## Get started with Xamarin Live Player
 
 [![Xamarin Live Player: Code, Scan, Test](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
@@ -32,14 +35,6 @@ Download the Xamarin Live Player and configure your IDE to use it with Xamarin.F
 ## [Xamarin Live Player App](player.md)
 
 Using the Xamarin Live Player app.
-
-## [Samples to try with Xamarin Live Player](samples.md)
-
-Links to samples to use with the Xamarin Live Player app.
-
-## [Limitations](limitations.md)
-
-Xamarin Live Player has some restrictions on what features it can support.
 
 ## [Troubleshooting](troubleshooting.md)
 

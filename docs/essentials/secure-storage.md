@@ -4,7 +4,8 @@ description: "This document describes the SecureStorage class in Xamarin.Essenti
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 04/02/2019
+ms.custom: video
 ---
 
 # Xamarin.Essentials: Secure Storage
@@ -141,13 +142,13 @@ On older API levels, the Android KeyStore only supports storing **RSA** keys, wh
 
 # [iOS](#tab/ios)
 
-[KeyChain](https://developer.xamarin.com/api/type/Security.SecKeyChain/) is used to store values securely on iOS devices.  The `SecRecord` used to store the value has a `Service` value set to **[YOUR-APP-BUNDLE-ID].xamarinessentials**.
+[KeyChain](xref:Security.SecKeyChain) is used to store values securely on iOS devices.  The `SecRecord` used to store the value has a `Service` value set to **[YOUR-APP-BUNDLE-ID].xamarinessentials**.
 
 In some cases KeyChain data is synchronized with iCloud, and uninstalling the application may not remove the secure values from iCloud and other devices of the user.
 
 # [UWP](#tab/uwp)
 
-[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) is used to encrypted values securely on UWP devices.
+[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) is used to encrypt values securely on UWP devices.
 
 Encrypted values are stored in `ApplicationData.Current.LocalSettings`, inside a container with a name of **[YOUR-APP-ID].xamarinessentials**.
 
@@ -163,3 +164,9 @@ This API is intended to store small amounts of text.  Performance may be slow if
 
 - [SecureStorage source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/SecureStorage)
 - [SecureStorage API documentation](xref:Xamarin.Essentials.SecureStorage)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Secure-Storage-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

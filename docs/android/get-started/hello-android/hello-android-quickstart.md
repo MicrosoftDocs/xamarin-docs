@@ -32,7 +32,7 @@ To follow along with this walkthrough, you will need the following:
 
 - Windows 10.
 
-- Visual Studio 2017 Community, Professional, or Enterprise (version 15.8 or later).
+- Visual Studio 2019 or Visual Studio 2017 (version 15.8 or later): Community, Professional, or Enterprise.
 
 ::: zone-end
 ::: zone pivot="macos"

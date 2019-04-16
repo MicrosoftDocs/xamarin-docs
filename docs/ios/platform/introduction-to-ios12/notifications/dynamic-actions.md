@@ -152,9 +152,9 @@ already-existing action button.
 
 > [!NOTE]
 > A notification content extension can respond to an action button tap in
-> its view controller's [`DidReceiveNotificationResponse`](https://developer.xamarin.com/api/member/UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse/)
+> its view controller's [`DidReceiveNotificationResponse`](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*)
 > method, declared as part of
-> [IUNNotificationContentExtension](https://developer.xamarin.com/api/type/UserNotificationsUI.IUNNotificationContentExtension/).
+> [IUNNotificationContentExtension](xref:UserNotificationsUI.IUNNotificationContentExtension).
 >
 > Though it shares a name with the `DidReceiveNotificationResponse` method
 > [described above](#in-app-handling-of-notification-action-buttons), this
@@ -163,16 +163,16 @@ already-existing action button.
 > After a notification content extension finishes processing a button tap,
 > it can choose whether or not to tell the main application to handle that
 > same button tap. To do this, it must pass an appropriate value of
-> [UNNotificationContentExtensionResponseOption](https://developer.xamarin.com/api/type/UserNotificationsUI.UNNotificationContentExtensionResponseOption/)
+> [UNNotificationContentExtensionResponseOption](xref:UserNotificationsUI.UNNotificationContentExtensionResponseOption)
 > to its completion handler:
 >
-> - [`Dismiss`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.Dismiss/)
+> - `Dismiss`
 > indicates that the notification interface should be dismissed, and that
 > the main app does not need to handle the button tap.
-> - [`DismissAndForwardAction`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.DismissAndForwardAction/)
+> - `DismissAndForwardAction`
 > indicates that the notification interface should be dismissed, and that
 > the main app should also handle the button tap.
-> - [`DoNotDismiss`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.DoNotDismiss/)
+> - `DoNotDismiss`
 > indicates that the notification interface should not be dismissed, and
 > that the main app does not need to handle the button tap.
 

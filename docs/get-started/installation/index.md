@@ -1,18 +1,30 @@
 ---
 title: "Installing Xamarin"
 description: "This section provides an overview of installation and setup practices that can be used to get set up with Xamarin on Visual Studio."
+zone_pivot_groups: platform-dev16
 ms.prod: xamarin
 ms.assetid: 0f813a14-2f0c-415d-8667-4563f3dc06e8
 author: conceptdev
 ms.author: crdun
 ms.custom: video
-ms.date: 08/08/2018
+ms.date: 04/02/2019
 ---
 # Installing Xamarin
 
 _How to set up Visual Studio and Xamarin to start building mobile apps with .NET._
 
-## [Visual Studio](#tab/windows)
+::: zone pivot="windows"
+
+## Installing Xamarin on Windows
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-2017-for-Mobile-Development-with-NET/player]
+
+## Step-by-step instructions
+
+[!include[](~/cross-platform/includes/install-xamarin-windows-2019.md)]
+
+::: zone-end
+::: zone pivot="win-vs2017"
 
 ## Installing Xamarin on Windows
 
@@ -22,7 +34,8 @@ _How to set up Visual Studio and Xamarin to start building mobile apps with .NET
 
 [!include[](~/cross-platform/includes/install-xamarin-windows.md)]
 
-## [Visual Studio for Mac](#tab/macos)
+::: zone-end
+::: zone pivot="macos"
 
 ## Installing Xamarin on macOS
 
@@ -33,7 +46,7 @@ _How to set up Visual Studio and Xamarin to start building mobile apps with .NET
 In addition to this video, there is a [step-by-step installation guide](/visualstudio/mac/installation/)
 that covers Visual Studio for Mac and Xamarin.
 
------
+::: zone-end
 
 ## Related Links
 

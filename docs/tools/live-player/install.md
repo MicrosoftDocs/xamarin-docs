@@ -14,6 +14,9 @@ Xamarin Live Player lets you make live edits to your app and have those changes 
 
 ![Preview feature](~/media/shared/preview.png)
 
+> [!NOTE]
+> Live Player Preview is only available in Visual Studio 2017.
+
 ## 1. Get the Android App
 
 Xamarin Live Player is available for Android by intalling directly from [HockeyApp](https://aka.ms/xlp-hockeyapp).
@@ -110,6 +113,5 @@ If you experience any issues or can not connect, see [limitations and troublesho
 
 ## Related Links
 
-- [Limitations](~/tools/live-player/limitations.md)
+- [Samples to use with Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)
 - [Troubleshooting](~/tools/live-player/troubleshooting.md)
-- [Xamarin Live Player Samples](~/tools/live-player/samples.md)

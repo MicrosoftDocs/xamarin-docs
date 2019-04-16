@@ -8,7 +8,7 @@ ms.assetid: 5BF901BD-FDE8-4B74-B4AB-418E81745A3B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/02/2019
+ms.date: 04/01/2019
 ---
 
 # Store Data in a Local SQLite.NET Database
@@ -147,10 +147,8 @@ You should successfully complete the [previous quickstart](multi-page.md) before
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     using Notes.Data;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -352,10 +350,8 @@ You should successfully complete the [previous quickstart](multi-page.md) before
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     using Notes.Data;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application

@@ -45,7 +45,9 @@ configurations that simulate different physical Android devices.
 
 To use the Android Device Manager, you will need the following items:
 
-- Visual Studio 2017 version 15.8 or later is required. Visual Studio
+- Visual Studio 2019 Community, Professional, or Enterprise.
+
+- OR Visual Studio 2017 version 15.8 or later is required. Visual Studio
   Community, Professional, and Enterprise editions are supported.
 
 - Visual Studio Tools for Xamarin version 4.9 or later.

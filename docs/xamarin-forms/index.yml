@@ -111,7 +111,7 @@ sections:
     className: cardsD
     items:
     - title: API
-      html: <p><a href="https://developer.xamarin.com/api/root/Xamarin.Forms/">Xamarin.Forms API docs</a></p>
+      html: <p><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=xamarin-forms">Xamarin.Forms API docs</a></p>
     - title: Samples
       html: <p><a href="https://developer.xamarin.com/samples/xamarin-forms/all/">Xamarin.Forms Samples</a></p>
     - title: Books

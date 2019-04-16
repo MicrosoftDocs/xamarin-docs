@@ -38,22 +38,23 @@ release notes.
 The following list is required to use Android Pie features in
 Xamarin-based apps:
 
--   **Visual Studio** &ndash; If you are using Windows, update to
-    Visual Studio 2017 version 15.8 or later. If you are using a Mac,
+- **Visual Studio** &ndash; Visual Studio 2019 is recommended.
+    If you are using Visual Studio 2017, on Windows update to
+    Visual Studio 2017 version 15.8 or later. On macOS,
     update to Visual Studio 2017 for Mac version 7.6 or later.
 
--   **Xamarin.Android** &ndash; Xamarin.Android 9.0.0.17 or later must
+- **Xamarin.Android** &ndash; Xamarin.Android 9.0.0.17 or later must
     be installed with Visual Studio (Xamarin.Android is automatically
     installed as part of the **Mobile development with .NET** workload).
 
--   **Java Developer Kit** &ndash; Xamarin Android 9.0 development
+- **Java Developer Kit** &ndash; Xamarin Android 9.0 development
     requires [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
     (or you can try the preview of Microsoft's distribution of the
     [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 is
     automatically installed as part of the **Mobile development with .NET**
     workload.
 
--   **Android SDK** &ndash; Android SDK API 28 or later must be 
+- **Android SDK** &ndash; Android SDK API 28 or later must be 
     installed via the Android SDK Manager.
 
 ## Getting started
@@ -62,8 +63,9 @@ To get started developing Android Pie apps with Xamarin.Android, you
 must download and install the latest tools and SDK packages before you
 can create your first Android Pie project:
 
-1. Update to [Visual Studio 2017 version 15.8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes)
-   or later. If you are using Visual Studio for Mac, update to 
+1. Visual Studio 2019 is recommended. If you are using Visual Studio 2017, 
+   update to [Visual Studio 2017 version 15.8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes)
+   or later. If you are using Visual Studio for Mac, update to
    [Visual Studio 2017 for Mac version 7.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) or later.
 
 2. Install **Android Pie (API 28)** packages and tools
@@ -75,17 +77,14 @@ can create your first Android Pie project:
 
 Each of these steps is explained in the following sections:
 
-
 ### Update Visual Studio
 
-To add Android Pie support to Visual Studio, update to Visual 
-Studio 2017 version 15.8 or later (for instructions, see
-[Update Visual Studio 2017 to the most recent release](https://docs.microsoft.com/visualstudio/install/update-visual-studio)).
+Visual Studio 2019 is recommended for building Android Pie apps using Xamarin.
 
-To add Android Pie support to Visual Studio for Mac, update to Visual
+If you are using Visual Studio 2017, update to Visual Studio 2017 version 15.8 or later (for instructions, see
+[Update Visual Studio 2017 to the most recent release](https://docs.microsoft.com/visualstudio/install/update-visual-studio)). On macOS, update to Visual
 Studio 2017 for Mac 7.6 or later (for instructions, see
 [Setup and Install Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)).
-
 
 ### Install the Android SDK
 
@@ -111,8 +110,6 @@ level 28)** or later.
 4. If you are using an emulator, create a virtual device that supports
    **API Level 28**. For more information about creating virtual devices,
    see [Managing Virtual Devices with the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
-
-
 
 ### Start a Xamarin.Android project
 

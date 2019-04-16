@@ -188,7 +188,7 @@ Note the following in particular:
 - Setting `EligibleForPrediction` to `true` indicates that Siri can
 predict this activity and surface it as a shortcut.
 - The [`ContentAttributeSet`](xref:Foundation.NSUserActivity.ContentAttributeSet)
-array is a standard [`CSSearchableItemAttributeSet`](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/)
+array is a standard [`CSSearchableItemAttributeSet`](xref:CoreSpotlight.CSSearchableItemAttributeSet)
 used to include an `NSUserActivity` in iOS search results.
 - [`SuggestedInvocationPhrase`](xref:Foundation.NSUserActivity.SuggestedInvocationPhrase)
 is a phrase that Siri will suggest to the user as a potential choice when
@@ -456,7 +456,7 @@ learns when to suggest the shortcut in the future.
 
 **SoupChef** uses the `SoupOrderDataManager` class to place donations.
 When called to place a soup order for a user, the `PlaceOrder` method in
-turn calls [`DonateInteraction`](https://developer.xamarin.com/api/member/Intents.INInteraction.DonateInteraction/):
+turn calls [`DonateInteraction`](xref:Intents.INInteraction.DonateInteraction*):
 
 ```csharp
 void DonateInteraction(Order order)
@@ -471,9 +471,9 @@ void DonateInteraction(Order order)
 ```
 
 After fetching an intent, it is wrapped in an
-[`INInteraction`](https://developer.xamarin.com/api/type/Intents.INInteraction/).
+[`INInteraction`](xref:Intents.INInteraction).
 The `INInteraction` is given an
-[`Identifier`](https://developer.xamarin.com/api/property/Intents.INInteraction.Identifier/)
+[`Identifier`](xref:Intents.INInteraction.Identifier*)
 that matches the unique ID of the order (this will be helpful later when
 deleting intent donations that are no longer valid). Then, the interaction
 is donated to Siri.
@@ -632,7 +632,7 @@ in their **Entitlements.plist** files.
 An Intents extension executes the necessary background tasks for a shortcut
 based on a custom intent.
 
-Siri calls the [`GetHandler`](https://developer.xamarin.com/api/member/Intents.INExtension.GetHandler/)
+Siri calls the [`GetHandler`](xref:Intents.INExtension.GetHandler*)
 method of the `IntentHandler` class (defined in **Info.plist** as the
 `NSExtensionPrincipalClass`) to get an instance of a class that extends
 `OrderSoupIntentHandling`, which can be used to handle an `OrderSoupIntent`:
@@ -750,15 +750,15 @@ In this storyboard, there is a single view controller, of type
 > in Xcode's Interface Builder.
 
 `IntentViewController` implements the
-[`IINUIHostedViewControlling`](https://developer.xamarin.com/api/type/IntentsUI.IINUIHostedViewControlling/)
+[`IINUIHostedViewControlling`](xref:IntentsUI.IINUIHostedViewControlling)
 interface, used to provide a custom interface when working with Siri
 Intents. The
-[`ConfigureView`](https://developer.xamarin.com/api/member/IntentsUI.INUIHostedViewControlling_Extensions.ConfigureView/)
+[`ConfigureView`](xref:IntentsUI.INUIHostedViewControlling_Extensions.ConfigureView*)
 method is called to customize the interface, displaying the confirmation or
 the invoice, depending on whether the interaction is being confirmed
-([`INIntentHandlingStatus.Ready`](https://developer.xamarin.com/api/type/Intents.INIntentHandlingStatus/))
+([`INIntentHandlingStatus.Ready`](xref:Intents.INIntentHandlingStatus))
 or has been executed successfully
-([`INIntentHandlingStatus.Success`](https://developer.xamarin.com/api/type/Intents.INIntentHandlingStatus/)):
+([`INIntentHandlingStatus.Success`](xref:Intents.INIntentHandlingStatus)):
 
 ```csharp
 [Export("configureViewForParameters:ofInteraction:interactiveBehavior:context:completion:")]
@@ -832,12 +832,12 @@ public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 
 Based on whether or not an existing voice shortcut exists for the
 currently-displayed order, `RowSelected` presents a view controller of
-type [`INUIEditVoiceShortcutViewController`](https://developer.xamarin.com/api/type/IntentsUI.INUIEditVoiceShortcutViewController/)
-or [`INUIAddVoiceShortcutViewController`](https://developer.xamarin.com/api/type/IntentsUI.INUIAddVoiceShortcutViewController/).
+type [`INUIEditVoiceShortcutViewController`](xref:IntentsUI.INUIEditVoiceShortcutViewController)
+or [`INUIAddVoiceShortcutViewController`](xref:IntentsUI.INUIAddVoiceShortcutViewController).
 In each case, `OrderDetailViewController` sets itself as the view
 controller's `Delegate`, which is why it also implements
-[`IINUIAddVoiceShortcutViewControllerDelegate`](https://developer.xamarin.com/api/type/IntentsUI.IINUIAddVoiceShortcutViewControllerDelegate/)
-and [`IINUIEditVoiceShortcutViewControllerDelegate`](https://developer.xamarin.com/api/type/IntentsUI.IINUIEditVoiceShortcutViewControllerDelegate/).
+[`IINUIAddVoiceShortcutViewControllerDelegate`](xref:IntentsUI.IINUIAddVoiceShortcutViewControllerDelegate)
+and [`IINUIEditVoiceShortcutViewControllerDelegate`](xref:IntentsUI.IINUIEditVoiceShortcutViewControllerDelegate).
 
 ## Testing on device
 

@@ -19,11 +19,9 @@ This article covers the following topics:
 - **Creating a game idea** – This section can help you create a new game idea – the first step in making a new game.
 - **Game development technology** – Here we’ll list some of the cross-platform technologies available that can improve your productivity as a game developer.
 
-
 ## Game vs. Non-Game Programming Concepts
 
 Programmers moving into game development are often confronted with new concepts and development patterns. This section presents a high-level view of some of these concepts.
-
 
 ### The Game Loop
 
@@ -48,7 +46,6 @@ Common types of logic that may be performed every-frame include:
 
 Keep in mind that many of the activities listed above can change the state of the entire application, whereas many non-game apps tend to change state in response to events being raised.
 
-
 ### Content Loading and Unloading
 
 Manually loading and unloading (or disposing) content may be needed depending on which technology you are using in development. Manually loading and unloading of assets may be necessary for a number of reasons:
@@ -58,7 +55,6 @@ Manually loading and unloading (or disposing) content may be needed depending on
  - Games may need to display more assets than can fit in RAM. "Open World" games often include large environments which players can navigate through seamlessly – that is with no loading screens. In this case you may need to create a custom system for streaming content in and managing memory usage.
 
 Custom file formats may need processing at load time, requiring custom loading code.
-
 
 ### Math
 
@@ -72,17 +68,13 @@ If you’re familiar with the Cartesian plane – that is using X and Y coordina
 > Some engines/APIs use a coordinate system where increasing an object’s Y value will move it down, while other systems use a coordinate system where positive Y is up. Keep this in mind if you are moving between systems.
 Trigonometric functions (such as Sine and Cosine) are commonly used in 2D games which implement any form of rotation.
 
-
-
 If you are planning on making a 3D game then you will likely need to be familiar with concepts from Linear Algebra (for rotation and movement in 3D space) as well as some Calculus (for implementing acceleration).
-
 
 ### Content Pipelines
 
 The term *content pipeline* refers to the process that a file takes to get from its format when authored (such as a .png image file) to its final format when used in a game. The ending format depends on which type of content is being used as well as which technology is being used to present the content.
 
 Some content pipelines may be very fast and require no manual effort. For example, most game engines and APIs can load the .png file format in its unprocessed format. On the other hand, more complicated formats (such as 3D models) may need to be processed into a different format before being loaded, and this processing can take some time depending on the asset’s size and complexity.
-
 
 ## Game Development Teams
 
@@ -93,7 +85,6 @@ Game development introduces new roles and titles for individuals involved in the
 - **3D artists** – 3D artists are responsible for creating *3D assets*. These include 3D models for environments, characters, and props (furniture, plants, and other inanimate objects). Some teams differentiate between 3D artists and 3D animators depending on the size of the team. You can find free 3D art for your game at [http://opengameart.org/](http://opengameart.org/) .
 - **Game Designer** – Game designers are responsible for defining how the game is played. This can include high-level decisions such as the setting of the game, the overall goal of the game, and how a player progresses through the game. Game designers can also be involved in very detailed decisions such as mapping input to actions, defining coefficients for movement or level-ups, and designing level layout. Keep in mind that the term *designer* may refer to a game designer or a visual designer depending on the context.
 - **Sound Designer** – Sound designers are responsible for a game’s audio assets. Some teams may differentiate between individuals responsible for creating sound effects and composers, while smaller teams may have a single individual responsible for all audio.
-
 
 ## Creating a Game Idea
 
@@ -109,11 +100,9 @@ Another technique for generating new ideas is to consider a specific genre, such
 
 Remaking existing games is also an educational experience, although this may limit the finished product’s commercial viability. The process of creating a game, even one which is an accurate clone, provides a valuable educational experience.
 
-
 ## Game Development Technology
 
 Developers using Xamarin.Android and Xamarin.iOS have a wide range of technologies available to them to assist in game development. This section will discuss some of the most popular cross-platform solutions.
-
 
 ### CocosSharp
 
@@ -128,7 +117,6 @@ The game Angry Ninjas is created with CocosSharp, and it can be a good starting 
 ![](images/image3.png "The game Angry Ninjas was created with CocosSharp")
 
 You can download it and get more information at the [AngryNinjas Github page](https://github.com/xamarin/AngryNinjas).
-
 
 ### MonoGame
 
@@ -149,7 +137,6 @@ Bastion:
 ![](images/image8.jpg "Bastion")
 
 To start working with MonoGame, head over to our [MonoGame Guides](~/graphics-games/monogame/index.md).
-
 
 ### UrhoSharp
 

@@ -4,7 +4,8 @@ description: "The Browser class in Xamarin.Essentials enables an application to 
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 03/13/2019
+ms.date: 04/02/2019
+ms.custom: video
 ---
 
 # Xamarin.Essentials: Browser
@@ -74,7 +75,7 @@ An `Intent` will be used to request the Uri be opened through the systems normal
 
 ## System Preferred
 
-[SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) is used to load the Uri and keep navigation awareness.
+[SFSafariViewController](xref:SafariServices.SFSafariViewController) is used to load the Uri and keep navigation awareness.
 
 ## External
 
@@ -90,3 +91,10 @@ The user's default browser will always be launched regardless of the `BrowserLau
 
 - [Browser source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Browser)
 - [Browser API documentation](xref:Xamarin.Essentials.Browser)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Open-Browser-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
+

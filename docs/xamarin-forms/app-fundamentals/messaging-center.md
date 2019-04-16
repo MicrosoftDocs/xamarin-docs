@@ -19,7 +19,7 @@ _Xamarin.Forms includes a simple messaging service to send and receive messages.
 
 ## Overview
 
-Xamarin.Forms `MessagingCenter` enables view models and other components to communicate with without having to know anything about each other besides a simple Message contract.
+Xamarin.Forms `MessagingCenter` enables view models and other components to communicate without having to know anything about each other besides a simple Message contract.
 
 <a name="How_the_MessagingCenter_Works" />
 

@@ -51,7 +51,7 @@ paired iPhone).
 [!include[](~/cross-platform/includes/macos-testing.md)]
 
 > [!WARNING]
-> The upcoming Xamarin.Mac 4.8 release will only support macOS 10.9 or higher.
+> Xamarin.Mac 4.8 only supports macOS 10.9 () or higher.
 > Previous versions of Xamarin.Mac supported macOS 10.7 or higher, but
 > these older macOS versions lack sufficient TLS infrastructure to support
 > TLS 1.2. To target macOS 10.7 or macOS 10.8, use Xamarin.Mac 4.6 or
@@ -62,14 +62,14 @@ paired iPhone).
 Using a Windows computer for Xamarin development requires the following software/SDK versions.
 Check your operating system version (and confirm that you are not using an *Express* version of
 Visual Studio - if so, consider updating to a *Community* edition).
-The Visual Studio 2017 installer includes an option to install Xamarin automatically (**Mobile development with .NET**).
+The Visual Studio 2019 and Visual Studio 2017 installer includes an option to install Xamarin automatically (the **Mobile development with .NET** workload).
 
 [!include[](~/cross-platform/includes/windows-requirements.md)]
 
 > [!NOTE]
-> - Xamarin for Visual Studio supports any Visual Studio 2017 (Community, Professional, and Enterprise).
+> - Xamarin for Visual Studio supports Visual Studio 2019 or Visual Studio 2017 (Community, Professional, and Enterprise).
 > - To develop Xamarin.Forms apps for the Universal Windows Platform (UWP) requires
->   Windows 10 with Visual Studio 2017.
+>   Windows 10 with Visual Studio 2017. Visual Studio 2019 is recommended.
 
 ### Testing & debugging on Windows
 
@@ -81,10 +81,8 @@ the Mac computer, not the computer running Visual Studio).
 
 ## Installation instructions
 
-The latest Xamarin release for macOS can be downloaded from
-[xamarin.com/download](http://xamarin.com/download). For Windows,
-follow the [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio)
-installation instructions.
+The latest Xamarin release for macOS can be downloaded with [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation). For Windows,
+follow the [Visual Studio installation instructions](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
 
 A complete list of our current product versions is available on the
 [current releases page](https://developer.xamarin.com/releases/current/). This
@@ -103,4 +101,6 @@ There's also additional information about
 ## Related links
 
 - [Download Xamarin](https://visualstudio.microsoft.com/xamarin/)
-- [Current Releases](https://developer.xamarin.com/releases/current/)
+- [Xamarin.Forms release notes](/xamarin/xamarin-forms/release-notes/)
+- [Xamarin.Android release notes](/xamarin/android/release-notes/)
+- [Xamarin.iOS release notes](/xamarin/ios/release-notes/)

@@ -213,16 +213,16 @@ At this point, Xamarin should be uninstalled from your computer.
 
 Xamarin has been supported on the following:
 
-- [Visual Studio 2017](#uninstallvs2017)
+- [Visual Studio 2019 and Visual Studio 2017](#uninstallvs2017)
 - [Visual Studio 2015](#uninstallvs2015)
 - [Visual Studio 2013](#uninstallvs2015) [**Unsupported**]
 - [Xamarin Studio](#uninstallxamarinstudio) [**Unsupported**]
 
 <a name="uninstallvs2017" />
 
-### Visual Studio 2017
+### Visual Studio 2019 and Visual Studio 2017
 
-Xamarin is uninstalled from Visual Studio 2017 using the installer app:
+Xamarin is uninstalled from Visual Studio 2019 and Visual Studio 2017 using the installer app:
 
 1. Use the **Start menu** to open the **Visual Studio Installer**.
 

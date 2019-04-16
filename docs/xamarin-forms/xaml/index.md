@@ -6,7 +6,7 @@ ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/28/2019
+ms.date: 04/03/2019
 ---
 
 # eXtensible Application Markup Language (XAML)
@@ -20,6 +20,10 @@ _XAML is a declarative markup language that can be used to define user interface
 > [!NOTE]
 > Try out the [XAML Standard Preview](standard/index.md)
 
+## [XAML Controls](xaml-controls.md)
+
+All of the views that are defined in Xamarin.Forms can be referenced from XAML files.
+
 <a name="xaml" />
 
 ## [XAML Basics](xaml-basics/index.md)
@@ -30,9 +34,9 @@ XAML allows developers to define user interfaces in Xamarin.Forms applications u
 
 XAML can be optionally compiled directly into intermediate language (IL) with the XAML compiler (XAMLC). This articles describes how to use XAMLC, and its benefits.
 
-## [XAML Previewer](xaml-previewer.md)
+## [XAML Previewer](xaml-previewer/index.md)
 
-The [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer.md) renders a live preview of a page side-by-side with the XAML markup, allowing you to see your user interface rendered as you type.
+The [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer/index.md) renders a live preview of a page side-by-side with the XAML markup, allowing you to see your user interface rendered as you type.
 
 ## [XAML Namespaces](namespaces.md)
 

@@ -93,7 +93,7 @@ Additionally, the Extension's project has the following requirements:
 
 	![](extensions-images/registerandprincipalclass.png)
 
-Specific types of Extensions may have additional requirements. For instance, a **Today** or **Notification Center** Extension’s principal class must implement [INCWidgetProviding](https://developer.xamarin.com/api/type/NotificationCenter.INCWidgetProviding/).
+Specific types of Extensions may have additional requirements. For instance, a **Today** or **Notification Center** Extension’s principal class must implement [INCWidgetProviding](xref:NotificationCenter.INCWidgetProviding).
 
 > [!IMPORTANT]
 > If you start your project using one the Extensions templates provided by Visual Studio for Mac, most (if not all) these requirements will be provided and met for you automatically by the template.

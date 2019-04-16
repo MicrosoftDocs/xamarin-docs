@@ -12,7 +12,48 @@ ms.date: 08/08/2018
 
 ![Preview feature](~/media/shared/preview.png)
 
-This article explains some common problems and provides steps to correct them.
+> [!NOTE]
+> Live Player Preview is only available in Visual Studio 2017.
+
+This article explains the limitations of Live Player, and some common problems with steps to correct them.
+
+## Limitations of Xamarin Live Player
+
+### IDE requirements
+
+The Live Player Preview is only available in Visual Studio 2017.
+
+### Device requirements
+
+The Xamarin Live Player app supports the following Android devices:
+
+- Android 4.2 or later.
+- ARM-v7a, ARM-v8a, ARM64-v8a, x86, or x86_64 processor.
+
+### iOS limitations
+
+Live Player is not available for iOS.
+
+### Xamarin.Forms limitations
+
+- Custom Renderers are not supported.
+- Effects are not supported.
+- Custom Controls with Custom Bindable Properties are not supported.
+- Embedded resources are not supported (ie. embedding images or other resources in a PCL).
+- Third party MVVM frameworks are not supported (ie. Prism, Mvvm Cross, Mvvm Light, etc.).
+
+### Other project type limitations
+
+- Live Player is not intended for native Android projects (that use Android XML for the user interface).
+
+### Miscellaneous limitations
+
+- Limited support for reflection (currently affects some popular NuGets, like SQLite and Json.NET). Other NuGets may still be supported.
+- Some system classes cannot be overridden (for example, you cannot implement a subclass).
+- Some platform features that require provisioning can't work in the Xamarin Live Player app (however it has been configured for common operations like photo gallery access).
+- Custom targets and build steps are ignored. For example, tools like Fody, Refit, AutoFac, and AutoMapper cannot be incorporated.
+- F# projects are not supported
+- Advanced scenarios with custom generic classes and interfaces may not be supported.
 
 ## Mobile device does not connect after scanning barcode (or entering code)
 
@@ -120,9 +161,7 @@ Xamarin.Forms Android projects must use "Toolbar.axml" and "Tabbar.axml"
 for the names of the relevant layout files. The default template
 uses these names; renaming them will cause rendering issues.
 
-Please report any additional issues on [bugzilla](https://aka.ms/live-player-report-issue).
-
 ## Related Links
 
-- [Limitations](~/tools/live-player/limitations.md)
 - [Setup](~/tools/live-player/install.md)
+- [Samples to use with Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)

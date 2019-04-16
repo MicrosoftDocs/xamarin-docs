@@ -17,7 +17,7 @@ Older Xamarin.Forms solutions (or those created on macOS) will not have Universa
 
 ## Add a Universal Windows Platform app
 
-You should be running **Visual Studio 2017** on **Windows 10** to build
+**Visual Studio 2019** on **Windows 10** is recommended to build
 UWP apps. For more information about the Universal Windows Platform, see [Intro to the Universal Windows Platform](/windows/uwp/get-started/universal-application-platform-guide/).
 
 UWP is available in Xamarin.Forms 2.1 and later, and Xamarin.Forms.Maps is supported in Xamarin.Forms 2.2 and later.

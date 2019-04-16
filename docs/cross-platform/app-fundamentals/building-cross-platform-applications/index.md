@@ -68,6 +68,6 @@ a case study that puts these principles into action.
 - [Sharing Code Options](~/cross-platform/app-fundamentals/code-sharing.md)
 - [Case Study: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 - [Tasky Sample App (github)](https://developer.xamarin.com/samples/mobile/TaskyPortable/)
-- [Xamarin Mobile Application Development: Cross-Platform C# and Xamarin.Forms Fundamentals](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/))
+- [Xamarin Mobile Application Development: Cross-Platform C# and Xamarin.Forms Fundamentals (Amazon)](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
 - [Mobile Development with C# by Greg Shackles (O’Reilly)](http://shop.oreilly.com/product/0636920024002.do)
-- [Professional Cross-Platform Mobile Development in C# by Scott Olson, John Hunter, Ben Horgen, Kenny Goers (Wrox)](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118157702.html)
+- [Professional Cross-Platform Mobile Development in C# by Scott Olson, John Hunter, Ben Horgen, Kenny Goers (Wrox)](http://www.wrox.com/WileyCDA/WroxTitle/Professional-Cross-Platform-Mobile-Development-in-C-.productCd-1118157702.html)

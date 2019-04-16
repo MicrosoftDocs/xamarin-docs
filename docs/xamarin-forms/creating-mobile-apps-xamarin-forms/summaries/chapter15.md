@@ -60,8 +60,8 @@ The [`Slider`](xref:Xamarin.Forms.Slider) is a horizontal bar representing a ran
 
 The bindable properties that back these properties ensure that they are consistent:
 
-- For all three properties, the [`coerceValue`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty+CoerceValueDelegate/) method specified for the bindable property ensures that `Value` is between `Minimum` and `Maximum`.
-- The [`validateValue`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty+ValidateValueDelegate/) method on `MinimumProperty` returns `false` if `Minimum` is being set to a value greater than or equal to `Maximum`, and similar for `MaximumProperty`. Returning `false` from the `validateValue` method causes an `ArgumentException` to be raised.
+- For all three properties, the [`coerceValue`](xref:Xamarin.Forms.BindableProperty.CoerceValueDelegate) method specified for the bindable property ensures that `Value` is between `Minimum` and `Maximum`.
+- The [`validateValue`](xref:Xamarin.Forms.BindableProperty.ValidateValueDelegate) method on `MinimumProperty` returns `false` if `Minimum` is being set to a value greater than or equal to `Maximum`, and similar for `MaximumProperty`. Returning `false` from the `validateValue` method causes an `ArgumentException` to be raised.
 
 `Slider` fires the [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) event with a [`ValueChangedEventArgs`](xref:Xamarin.Forms.ValueChangedEventArgs) argument when the `Value` property changes, either programmatically or when the user manipulates the `Slider`.
 

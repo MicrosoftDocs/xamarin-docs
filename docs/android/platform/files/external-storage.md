@@ -139,7 +139,7 @@ All Android apps must declare one of the two permissions for external storage in
 
 The permissions may also be added using the **Android Manifest** tab of the **solution properties**:
 
-![Solution Explorer - Required Permissions for Visual Studio 2017](./images/required-permissions.w157.png)
+![Solution Explorer - Required Permissions for Visual Studio](./images/required-permissions.w157.png)
 
 # [Visual Studio for Mac](#tab/macos)
 

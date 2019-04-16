@@ -1,20 +1,77 @@
 ---
 title: "Build your first Xamarin.Forms app"
 description: "Video guide showing how to build your first Xamarin.Forms application in Visual Studio."
-zone_pivot_groups: platform
+zone_pivot_groups: platform-dev16
 ms.prod: xamarin
 ms.assetid: 72B6AF82-4D98-47E5-AB54-0A35B3253468
 ms.technology: xamarin-forms
 ms.custom: video
 author: conceptdev
 ms.author: crdun
-ms.date: 02/02/2019
+ms.date: 04/02/2019
 ---
 # Build your first Xamarin.Forms App
 
 _Watch this video and follow along to create your first mobile app with Xamarin.Forms._
 
 ::: zone pivot="windows"
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Building-Your-First-Android--iOS-App-in-Visual-Studio-2017/player]
+
+## Step-by-step instructions for Windows
+
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+
+Follow these steps along with the video above:
+
+1. Choose **File > New > Project...** or press the **Create new project...** button:
+
+    [![Create a new project](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
+
+2. Search for "Xamarin" or choose **Mobile** from the **Project type** menu. Select the **Mobile App (Xamarin.Forms)** project type:
+
+    [![Filter for Xamarin projects](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
+
+3. Choose a project name &ndash; the example uses "AwesomeApp":
+
+    [![Choose a project name](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
+
+4. Click on the **Black** project type and ensure **Android** and **iOS** are selected:
+
+    [![Android and iOS, with .NET Standard](images/win-2019/04-sml.png)](images/win-2019/04.png#lightbox)
+
+5. Wait until the NuGet packages are restored (a "Restore completed" message will appear in the status bar).
+
+6. Launch Android emulator by pressing the debug button (or the **Debug > Start Debugging** menu item).
+
+7. Edit **MainPage.xaml**, adding this XAML before the end of the `</StackLayout>`:
+
+    ```xaml
+    <Button Text="Click Me" Clicked="Button_Clicked" />
+    ```
+
+8. Edit **MainPage.xaml.cs**, adding this code to the end of the class:
+
+    ```csharp
+    int count = 0;
+    void Button_Clicked(object sender, System.EventArgs e)
+    {
+        count++;
+        ((Button)sender).Text = $"You clicked {count} times.";
+    }
+    ```
+
+9. Debug the app on Android:
+
+    ![Android app](images/win/07-sml.png)
+
+    > [!TIP]
+    > It is possible to build and debug the iOS app from Visual Studio with a
+    > networked Mac computer. Refer to the [setup instructions](~/ios/get-started/installation/windows/index.md)
+    > for more information.
+
+::: zone-end
+::: zone pivot="win-vs2017"
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Building-Your-First-Android--iOS-App-in-Visual-Studio-2017/player]
 

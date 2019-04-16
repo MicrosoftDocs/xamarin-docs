@@ -36,7 +36,7 @@ This sample app demonstrates how to use the Natural Language framework to:
 ## Recognizing languages
 
 The **Recognizer** tab of the sample app demonstrates how to use an
-[`NLLanguageRecognizer`](https://developer.xamarin.com/api/type/NaturalLanguage.NLLanguageRecognizer/)
+[`NLLanguageRecognizer`](xref:NaturalLanguage.NLLanguageRecognizer)
 to determine the language for a block of text.
 
 > [!NOTE]
@@ -52,9 +52,9 @@ Tap the **Language** button to identify the dominant language in the user
 input.
 
 The `HandleDetermineLanguageButtonTap` method of the `LanguageRecognizerViewController` uses the
-[`GetDominantLanguage`](https://developer.xamarin.com/api/member/NaturalLanguage.NLLanguageRecognizer.GetDominantLanguage/)
+[`GetDominantLanguage`](xref:NaturalLanguage.NLLanguageRecognizer.GetDominantLanguage*)
 method of an `NLLanguageRecognizer` to fetch the
-[`NLLanguage`](https://developer.xamarin.com/api/type/NaturalLanguage.NLLanguage/)
+[`NLLanguage`](xref:NaturalLanguage.NLLanguage)
 for the primary language found in the text:
 
 ```csharp
@@ -77,9 +77,9 @@ hypotheses for the user input.
 The `HandleLanguageProbabilitiesButtonTap` method of the
 `LanguageRecognizerViewController` class instantiates an
 `NLLanguageRecognizer` and asks it to
-[`Process`](https://developer.xamarin.com/api/member/NaturalLanguage.NLLanguageRecognizer.Process/)
+[`Process`](xref:NaturalLanguage.NLLanguageRecognizer.Process*)
 the user's text. It then calls the language recognizer's
-[`GetNativeLanguageHypotheses`](https://developer.xamarin.com/api/member/NaturalLanguage.NLLanguageRecognizer.GetNativeLanguageHypotheses)
+[`GetNativeLanguageHypotheses`](xref:NaturalLanguage.NLLanguageRecognizer.GetNativeLanguageHypotheses*)
 method, which fetches a dictionary of languages and associated
 probabilities. The `LanguageRecognizerTableViewController` class then
 renders these languages and probabilities.
@@ -159,20 +159,20 @@ Potential `NLLanguage` values include:
 - `Vietnamese`
 
 A full list of supported languages is available as part of the
-[`NLLanguage`](https://developer.xamarin.com/api/type/NaturalLanguage.NLLanguage/)
+[`NLLanguage`](xref:NaturalLanguage.NLLanguage)
 enum API documentation.
 
 ## Tokenizing text into words, sentences, and paragraphs
 
 The **Tokenizer** tab of the sample app demonstrates how to separate
 a block of text into its component words or sentences with an
-[`NLTokenizer`](https://developer.xamarin.com/api/type/NaturalLanguage.NLTokenizer/).
+[`NLTokenizer`](xref:NaturalLanguage.NLTokenizer).
 
 Tap the **Words** or **Sentences** button to fetch a list of tokens. Each
 token is associated with a word or sentence in the original text.
 
 `ShowTokens` splits the user's input into tokens by calling the
-[`GetTokens`](https://developer.xamarin.com/api/member/NaturalLanguage.NLTokenizer.GetTokens/)
+[`GetTokens`](xref:NaturalLanguage.NLTokenizer.GetTokens*)
 method of an `NLTokenizer`. This method returns an array of
 [`NSValue`](xref:Foundation.NSValue)
 objects, each wrapping an `NSRange` value corresponding to a token in
@@ -210,7 +210,7 @@ public override UITableViewCell GetCell(UITableView tableView, NSIndexPath index
 ## Tagging named entities and parts of speech
 
 The **Tagger** tab of the XamarinNL sample app demonstrates how to use the
-[`NLTagger`](https://developer.xamarin.com/api/type/NaturalLanguage.NLTagger/)
+[`NLTagger`](xref:NaturalLanguage.NLTagger)
 class to associate categories with tokens of an input string.
 The Natural Language framework includes built-in support for recognizing
 people, places, organizations, and parts of speech.
@@ -225,19 +225,19 @@ Tap the **Named entities** or **Parts of speech** button to fetch:
 
 - An array of `NSValue` objects, each wrapping an `NSRange` for a token
 in the original text.
-- An array of [`NLTag`](https://developer.xamarin.com/api/type/NaturalLanguage.NLTag/)
+- An array of [`NLTag`](xref:NaturalLanguage.NLTag)
 values – categories for the `NSValue` tokens at the same array index.
 
 In `LanguageTaggerViewController`, `HandlePartsOfSpeechButtonTap` and
 `HandleNamedEntitiesButtonTap` each call `ShowTags`, passing along an
-[`NLTagScheme`](https://developer.xamarin.com/api/type/NaturalLanguage.NLTagScheme/) –
+[`NLTagScheme`](xref:NaturalLanguage.NLTagScheme) –
 either `NLTagScheme.LexicalClass` (for parts of speech) or
 `NLTagScheme.NameType` (for named entities).
 
 `ShowTags` creates an `NLTagger`, instantiating it with an array of
 `NLTagScheme` types for which it will be queried (in this case, only the
 passed-in `NLTagScheme` value). It then uses the
-[`GetTags`](https://developer.xamarin.com/api/member/NaturalLanguage.NLTagger.GetTags/)
+[`GetTags`](xref:NaturalLanguage.NLTagger.GetTags*)
 method on the `NLTagger` to determine the tags relevant to the text in the
 user input.
 
@@ -296,7 +296,7 @@ Potential `NLTag` values include:
 - `WordJoiner`
 
 A full list of supported tags is available as part of the
-[`NLTag`](https://developer.xamarin.com/api/type/NaturalLanguage.NLTag/)
+[`NLTag`](xref:NaturalLanguage.NLTag)
 enum API documentation.
 
 ## Related links

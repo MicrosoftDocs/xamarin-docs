@@ -105,7 +105,7 @@ A camera surface texture is created to turn on or off the `FlashMode` of the cam
 
 ### [iOS](#tab/ios)
 
-[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) is used to turn on and off the Torch and Flash mode of the device.
+[AVCaptureDevice](xref:AVFoundation.AVCaptureDevice) is used to turn on and off the Torch and Flash mode of the device.
 
 ### [UWP](#tab/uwp)
 

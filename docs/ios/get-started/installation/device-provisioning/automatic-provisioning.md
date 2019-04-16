@@ -23,11 +23,12 @@ _Once Xamarin.iOS has been successfully installed, the next step in iOS developm
 
 # [Visual Studio](#tab/windows)
 
-- Visual Studio 2017 Version 15.7 (or greater)
+- Visual Studio 2019
+- OR Visual Studio 2017 Version 15.7 (or greater)
 
 You must also be paired to a Mac build host that has the following:
 
-- Xcode 9 or greater
+- Xcode 10 or greater
 
 -----
 
@@ -69,7 +70,7 @@ To automatically sign your app for deployment on an iOS device, do the following
 
 # [Visual Studio](#tab/windows)
 
-1. Pair Visual Studio 2017 to a Mac as described in the [Pair to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) guide.
+1. Pair Visual Studio 2019 to a Mac as described in the [Pair to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) guide.
 
 2. In the **Solution Explorer**, right-click the project name and select **Properties**. Then, navigate to the **iOS Bundle Signing** tab.
 

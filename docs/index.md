@@ -560,12 +560,12 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="iOS Simulator for Windows" />
+                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Visual Studio 2017</h3>
-                                                    <p>Learn more about developing with Visual Studio 2017.</p>
+                                                    <h3>Visual Studio 2019</h3>
+                                                    <p>Learn more about developing with Visual Studio 2019.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -579,7 +579,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="iOS Simulator for Windows" />
+                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">

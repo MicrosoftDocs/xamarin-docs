@@ -355,7 +355,7 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-Two properties of `AVPlayer` must be accessed: The [`Status`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.Status/) property of type `AVPlayerStatus` and the [`TimeControlStatus`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.TimeControlStatus/) property of type `AVPlayerTimeControlStatus`. Notice that the `Element` property (which is the `VideoPlayer`) must be cast to `IVideoPlayerController` to set the `Status` property.
+Two properties of `AVPlayer` must be accessed: The [`Status`](xref:AVFoundation.AVPlayer.Status*) property of type `AVPlayerStatus` and the [`TimeControlStatus`](xref:AVFoundation.AVPlayer.TimeControlStatus*) property of type `AVPlayerTimeControlStatus`. Notice that the `Element` property (which is the `VideoPlayer`) must be cast to `IVideoPlayerController` to set the `Status` property.
 
 ### The Android status setting
 

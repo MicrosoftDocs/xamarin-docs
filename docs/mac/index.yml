@@ -85,7 +85,7 @@ sections:
     className: cardsD
     items:
     - title: API
-      html: <p><a href="https://developer.xamarin.com/api/root/monomac-lib/">Mac API docs</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0">Base Class Library</a></p>
+      html: <p><a href="https://docs.microsoft.com/dotnet/api/AppKit">Mac API docs</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0">Base Class Library</a></p>
     - title: Samples
       html: <p><a href="https://developer.xamarin.com/samples/mac/all/">Mac Samples</a></p>
 

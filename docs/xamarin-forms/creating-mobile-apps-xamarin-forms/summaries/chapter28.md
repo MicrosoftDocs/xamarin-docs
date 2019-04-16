@@ -57,7 +57,7 @@ The [**Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-bo
 
 #### The iOS location manager
 
-The iOS implementation of `ILocationTracker` is a [`LocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/LocationTracker.cs) class that makes use of the iOS [`CLLocationManager`](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/).
+The iOS implementation of `ILocationTracker` is a [`LocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/LocationTracker.cs) class that makes use of the iOS [`CLLocationManager`](xref:CoreLocation.CLLocationManager).
 
 #### The Android location manager
 

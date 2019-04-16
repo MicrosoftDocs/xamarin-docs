@@ -67,7 +67,7 @@ This walkthrough explains some key backgrounding concepts, including registering
 	}
     ```
 
-    The code above sets a number of properties and permissions on the [CLLocationManager](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/) class:
+    The code above sets a number of properties and permissions on the [CLLocationManager](xref:CoreLocation.CLLocationManager) class:
 
 	- `PausesLocationUpdatesAutomatically` – This is a Boolean that can be set depending on whether the system is allowed to pause location updates. On some device it defaults to `true`, which can cause the device to stop getting background location updates after about 15 minutes.
 	- `RequestAlwaysAuthorization` - You should pass this method to give the app user the option to allow the location to be accessed in the background. `RequestWhenInUseAuthorization` can also be passed if you wish to give the user the option to allow the location to be accessed only when the app is in the foreground.

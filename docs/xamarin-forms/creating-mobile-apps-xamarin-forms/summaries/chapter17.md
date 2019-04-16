@@ -63,11 +63,11 @@ The `RowDefinitions` and `ColumnDefinitions` collections aren't strictly require
 
 ### The Grid in code
 
-The [**GridCodeDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridCodeDemo) sample demonstrates how to create and populate a `Grid` in code. You can set the attached properties for each child directly, or indirectly by calling additional `Add` methods such as [`Add`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) defined by the [Grid.IGridList<T>](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid+IGridList%3CT%3E/) interface.
+The [**GridCodeDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridCodeDemo) sample demonstrates how to create and populate a `Grid` in code. You can set the attached properties for each child directly, or indirectly by calling additional `Add` methods such as [`Add`](xref:Xamarin.Forms.Grid.IGridList`1.Add*) defined by the [Grid.IGridList<T>](xref:Xamarin.Forms.Grid.IGridList`1) interface.
 
 ### The Grid bar chart
 
-The [**GridBarChart**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridBarChart) sample shows how to add multiple `BoxView` elements to a `Grid` using the bulk [`AddHorizontal`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.AddHorizontal/p/System.Collections.Generic.IEnumerable%7BXamarin.Forms.View%7D/) method. By default, these `BoxView` elements have equal width. The height of each `BoxView` can then be controlled to resemble a bar chart.
+The [**GridBarChart**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridBarChart) sample shows how to add multiple `BoxView` elements to a `Grid` using the bulk [`AddHorizontal`](xref:Xamarin.Forms.Grid.IGridList`1.AddHorizontal*) method. By default, these `BoxView` elements have equal width. The height of each `BoxView` can then be controlled to resemble a bar chart.
 
 The `Grid` in the **GridBarChart** sample shares an `AbsoluteLayout` parent with an initially invisible `Frame`. The program also sets a `TapGestureRecognizer` on each `BoxView` to use the `Frame` to display information about the tapped bar.
 

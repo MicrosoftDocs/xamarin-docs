@@ -118,7 +118,7 @@ namespace Example.Binding {
 }
 ```
 
-Third, review the Objective-C documentation and create [ObjCRuntime.Selector](https://developer.xamarin.com/api/type/ObjCRuntime.Selector/) instances for each selector
+Third, review the Objective-C documentation and create [ObjCRuntime.Selector](xref:ObjCRuntime.Selector) instances for each selector
 you wish to use. Place these within the class body:
 
 ```csharp
@@ -152,7 +152,7 @@ public NSEnumerator(IntPtr handle)
 
 Fifth, provide methods for each of the Selectors declared in Step 3. These
 will use `objc_msgSend()` to invoke the selector on the native object. Note the
-use of [Runtime.GetNSObject()](https://developer.xamarin.com/api/member/ObjCRuntime.Runtime.GetNSObject/(System.IntPtr)) to convert an `IntPtr` into an
+use of [Runtime.GetNSObject()](xref:ObjCRuntime.Runtime.GetNSObject*) to convert an `IntPtr` into an
 appropriately typed `NSObject` (sub-)type. If you want the method to be callable
 from Objective-C code, the member *must* be **virtual**.
 
