@@ -167,7 +167,7 @@ ways to do so:
 
 - **WiFi** - It is possible to connect an Android device to a
     computer without using a USB cable, over WiFi. This technique
-    requires a bit more effort but could be useful when device too far
+    requires a bit more effort but could be useful when the device is too far
     from the computer to remain constantly plugged-in via cable. Connecting via
     WiFi will be covered in the next section.
 
