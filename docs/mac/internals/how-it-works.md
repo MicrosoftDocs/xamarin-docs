@@ -115,7 +115,7 @@ There are several different options that can be adjusted when enabling AOT compi
 - `core` - AOT compiles the `Xamarin.Mac`, `System` and `mscorlib` assemblies.
 - `sdk` - AOT compiles the `Xamarin.Mac` and Base Class Libraries (BCL) assemblies.
 - `|hybrid` - Adding this to one of the above options enables hybrid AOT which allows for IL stripping, but will result in longer compile times.
-- `+` - Includes a single for to AOT compilation.
+- `+` - Includes a single file for AOT compilation.
 - `-` - Removes a single file from AOT compilation.
 
 For example, `--aot:all,-MyAssembly.dll` would enable AOT compilation on all of the assemblies in the MonoBundle _except_ `MyAssembly.dll` and `--aot:core|hybrid,+MyOtherAssembly.dll,-mscorlib.dll` would enable hybrid, code AOT include the `MyOtherAssembly.dll` and excluding the `mscorlib.dll`.
