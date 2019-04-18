@@ -36,7 +36,7 @@ Follow these steps along with the video above:
 
     [![Choose a project name](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
 
-4. Click on the **Black** project type and ensure **Android** and **iOS** are selected:
+4. Click on the **Blank** project type and ensure **Android** and **iOS** are selected:
 
     [![Android and iOS, with .NET Standard](images/win-2019/04-sml.png)](images/win-2019/04.png#lightbox)
 
