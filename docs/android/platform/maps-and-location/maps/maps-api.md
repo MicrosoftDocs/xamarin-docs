@@ -45,9 +45,9 @@ Several steps need to be taken before you can use the Maps API, including:
 
 The first step is to get a Google Maps API key (note that you cannot
 reuse an API key from the legacy Google Maps v1 API). For information about
-how to obtain and use the API key with Xamarin.Android, see 
+how to obtain and use the API key with Xamarin.Android, see
 [Obtaining A Google Maps API Key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
- 
+
 
 ### <a name="install-gps-sdk" /> Install the Google Play Services SDK
 
@@ -89,7 +89,7 @@ click **Manage NuGet Packages...**:
 
 This opens the **NuGet Package Manager**. Click **Browse** and enter
 **Xamarin Google Play Services Maps** in the search field. Select
-**Xamarin.GooglePlayServices.Maps** and click **Install**. (If 
+**Xamarin.GooglePlayServices.Maps** and click **Install**. (If
 this package had been installed previously, click **Update**.):
 
 [![NuGet Package Manager with Xamarin.GooglePlayServices.Maps package selected](maps-api-images/image03-sml.png)](maps-api-images/image03.png#lightbox)
@@ -122,8 +122,8 @@ The following permissions and features must be specified in the
    Services. See
    [Obtaining a Google Maps API Key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
    for details about this key.
-   
-- **Request the legacy Apache HTTP client** &ndash; Apps that target Android 9.0 (API level 28) or above must specify that the legacy Apache HTTP client is an optional library to use. 
+
+- **Request the legacy Apache HTTP client** &ndash; Apps that target Android 9.0 (API level 28) or above must specify that the legacy Apache HTTP client is an optional library to use.
 
 -  **Access to the Google Web-based Services** &ndash; The application needs
    permissions to access Google's web services that back the Android
@@ -137,12 +137,19 @@ The following permissions and features must be specified in the
    They will allow the `GoogleMap` class to display the location of the
    device on the map.
 
+In addition, Android 9 has removed the Apache HTTP client library from the bootclasspath, and so it isn't available to applications that target API 28 or higher. The following line must be added to the `application` node of your **AndroidManifest.xml** file to continue using the Apache HTTP client in applications that target API 28 or higher:
+
+```xml
+<application ...>
+   ...
+   <uses-library android:name="org.apache.http.legacy" android:required="false" />    
+</application>
+```
 
 > [!NOTE]
 > Very old versions of the Google Play SDK required an app to request the `WRITE_EXTERNAL_STORAGE` permission. This requirement is no longer necessary with the recent Xamarin bindings for Google Play Services.
 
-The following snippet is an example of the settings that must be added
-to **AndroidManifest.XML**:
+The following snippet is an example of the settings that must be added to **AndroidManifest.XML**:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -151,7 +158,7 @@ to **AndroidManifest.XML**:
 
     <!-- Google Maps for Android v2 requires OpenGL ES v2 -->
     <uses-feature android:glEsVersion="0x00020000" android:required="true" />
-    
+
     <!-- Necessary for apps that target Android 9.0 or higher -->
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
 
@@ -170,6 +177,8 @@ to **AndroidManifest.XML**:
         <!-- Put your Google Maps V2 API Key here. -->
         <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR_API_KEY" />
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <!-- Necessary for apps that target Android 9.0 or higher -->
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
     </application>
 </manifest>
 ```
@@ -244,7 +253,7 @@ Similar to other Fragment classes, there are two ways to add a
     ```
 
 -   **Programmatically** - The `MapFragment` can be programmatically instantiated using the [`MapFragment.NewInstance`](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance()) method and then added to an Activity. This snippet shows the simplest way to instantiate a `MapFragment` object and add to an Activity:
-    
+
     ```csharp
         var mapFrag = MapFragment.NewInstance();
         activity.FragmentManager.BeginTransaction()
@@ -255,7 +264,7 @@ Similar to other Fragment classes, there are two ways to add a
 
     It is possible to configure the `MapFragment` object by passing a [`GoogleMapOptions`](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMapOptions) object to `NewInstance`. This is discussed in the section [GoogleMap properties](#googlemap_object) that appears later on in this guide.
 
-The `MapFragment.GetMapAsync` method is used to initialize the [`GoogleMap`](#googlemap_object) that is hosted by the fragment and obtain a reference to the map object that is hosted by the `MapFragment`. This method takes an object that implements the `IOnMapReadyCallback` interface. 
+The `MapFragment.GetMapAsync` method is used to initialize the [`GoogleMap`](#googlemap_object) that is hosted by the fragment and obtain a reference to the map object that is hosted by the `MapFragment`. This method takes an object that implements the `IOnMapReadyCallback` interface.
 
 This interface has a single method, `IMapReadyCallback.OnMapReady(MapFragment map)` that will be invoked when it is possible for the app to interact with the `GoogleMap` object. The following code snippet shows how an Android Activity can initialize a `MapFragment` and implement the `IOnMapReadyCallback` interface:
 ```csharp
@@ -265,13 +274,13 @@ public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
     {
         base.OnCreate(bundle);
         SetContentView(Resource.Layout.MapLayout);
-    
+
         var mapFragment = (MapFragment) FragmentManager.FindFragmentById(Resource.Id.map);
         mapFragment.GetMapAsync(this);
-    
+
         // remainder of code omitted
     }
-    
+
     public void OnMapReady(GoogleMap map)
     {
         // Do something with the map, i.e. add markers, move to a specific location, etc.
@@ -409,15 +418,15 @@ from a `CameraPosition` and using that to change the camera position on a
 public void OnMapReady(GoogleMap map)
 {
     LatLng location = new LatLng(50.897778, 3.013333);
-    
+
     CameraPosition.Builder builder = CameraPosition.InvokeBuilder();
     builder.Target(location);
     builder.Zoom(18);
     builder.Bearing(155);
     builder.Tilt(65);
-    
+
     CameraPosition cameraPosition = builder.Build();
-    
+
     CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition);
 
     map.MoveCamera(cameraUpdate);
@@ -472,7 +481,7 @@ public void OnMapReady(GoogleMap map)
     MarkerOptions markerOpt1 = new MarkerOptions();
     markerOpt1.SetPosition(new LatLng(50.379444, 2.773611));
     markerOpt1.SetTitle("Vimy Ridge");
-    
+
     map.AddMarker(markerOpt1);
 }
 ```
@@ -519,10 +528,10 @@ public void OnMapReady(GoogleMap map)
     MarkerOptions markerOpt1 = new MarkerOptions();
     markerOpt1.SetPosition(new LatLng(50.379444, 2.773611));
     markerOpt1.SetTitle("Vimy Ridge");
-    
+
     var bmDescriptor = BitmapDescriptorFactory.DefaultMarker (BitmapDescriptorFactory.HueCyan);
     markerOpt1.InvokeIcon(bmDescriptor);
-    
+
     map.AddMarker(markerOpt1);
 }
 ```
@@ -708,7 +717,7 @@ void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs markerClickE
     if (marker.Id.Equals(gotMauiMarkerId))
     {
         LatLng InMaui = new LatLng(20.72110, -156.44776);
-    
+
         // Move the camera to look at Maui.
         PositionPolarBearGroundOverlay(InMaui);
         googleMap.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(InMaui, 13));
@@ -738,13 +747,13 @@ marker will remain in place.
 The following list describes the various events that will be raised
 for a draggable marker:
 
--   `GoogleMap.MarkerDragStart(object sender, GoogleMap.MarkerDragStartEventArgs e)` &ndash; 
+-   `GoogleMap.MarkerDragStart(object sender, GoogleMap.MarkerDragStartEventArgs e)` &ndash;
     This event is raised when the user first drags the marker.
 
--   `GoogleMap.MarkerDrag(object sender, GoogleMap.MarkerDragEventArgs e)` &ndash; 
+-   `GoogleMap.MarkerDrag(object sender, GoogleMap.MarkerDragEventArgs e)` &ndash;
     This event is raised as the marker is being dragged.
 
--   `GoogleMap.MarkerDragEnd(object sender, GoogleMap.MarkerDragEndEventArgs e)` &ndash; 
+-   `GoogleMap.MarkerDragEnd(object sender, GoogleMap.MarkerDragEndEventArgs e)` &ndash;
     This event is raised when the user is finished dragging the marker.
 
 Each of the `EventArgs` contains a single property called `P0` that is a
