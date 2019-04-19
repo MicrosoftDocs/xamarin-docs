@@ -49,13 +49,13 @@ Or right-click on the Android project and open the project's properties. Under *
 
 Your app's **Info.plist** must contain the `NSLocationWhenInUseUsageDescription` key in order to access the device’s location.
 
-Open the plist editor and add the **Privacy - Location When In Use Usage Description** property and fill in a value to display the user.
+Open the plist editor and add the **Privacy - Location When In Use Usage Description** property and fill in a value to display to the user.
 
 Or manually edit the file and add the following:
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
-<string>This app needs access location when open.</string>
+<string>This app needs location access when open.</string>
 ```
 
 # [UWP](#tab/uwp)
