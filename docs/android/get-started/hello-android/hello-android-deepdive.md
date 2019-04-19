@@ -340,8 +340,7 @@ of the designer view, as illustrated by the screenshot below:
 
 ::: zone-end
 
-This XML source code should contain the **Text (Large)**, **Plain
-Text**, and the two **Button** elements. For a more in-depth tour of
+This XML source code should contain four control elements: Two **TextView**s, one **EditText** and one **Button** element. For a more in-depth tour of
 the Android Designer, refer to the Xamarin Android
 [Designer Overview](~/android/user-interface/android-designer/index.md)
 guide.
