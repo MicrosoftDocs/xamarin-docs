@@ -4,7 +4,7 @@ description: "This document links to various guides that describe Xamarin.Essent
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 04/22/2019
 ---
 
 # Xamarin.Essentials
