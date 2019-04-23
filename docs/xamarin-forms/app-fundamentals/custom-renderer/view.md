@@ -56,7 +56,7 @@ The `CameraPreview` custom control is created in the portable class library (PCL
 
 ## Consuming the Custom Control
 
-The `CameraPreview` custom control can be referenced in XAML in the PCL project by declaring a namespace for its location and using the namespace prefix on the custom control element. The following code example shows how the `CameraPreview` custom control can be consumed by a XAML page:
+The `CameraPreview` custom control can be referenced in XAML in the .NET Standard library project by declaring a namespace for its location and using the namespace prefix on the custom control element. The following code example shows how the `CameraPreview` custom control can be consumed by a XAML page:
 
 ```xaml
 <ContentPage ...
