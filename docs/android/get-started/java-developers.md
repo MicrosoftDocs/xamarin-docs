@@ -272,7 +272,7 @@ Both Java and C# use very similar object-oriented programming idioms:
 
 -   All class instances are created on the heap via the `new` operator.
 
--   Because both languages use garbage collection, there is way to
+-   Because both languages use garbage collection, there is no way to
     explicitly release unused objects (i.e., there is not a `delete`
     keyword as there is in C++).
 
