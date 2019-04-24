@@ -48,7 +48,7 @@ It’s generally easier to gradually update and keep up with the small changes. 
 Xamarin.iOS in general supports older Xcode releases whenever reasonably possible. A few potential challenges include:
 
 - The newer Xamarin.iOS may support some features and APIs not present in the selected Xcode. 
-- The **static registrar** requires Xcode headers files to build applications, leading to [`MT0091`](~/ios/troubleshooting/mtouch-errors.md#MT0091) or [`MT4109`](~/ios/troubleshooting/mtouch-errors.md#MT4109)` errors if APIs are missing.
+- The **static registrar** requires Xcode headers files to build applications, leading to [`MT0091`](~/ios/troubleshooting/mtouch-errors.md#MT0091) or [`MT4109`](~/ios/troubleshooting/mtouch-errors.md#MT4109) errors if APIs are missing.
   - In most cases enabling the managed linker will help (by removing the managed bindings for the new API) if unused.
 - Bitcode builds (for tvOS and watchOS) can fail submission to the App Store unless an Xcode 9.0+ toolchain is used.
 
