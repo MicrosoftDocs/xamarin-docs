@@ -375,27 +375,36 @@ Children can then be added to the `WrapLayout` as required. The following code e
 ```csharp
 protected override async void OnAppearing()
 {
-  base.OnAppearing();
+    base.OnAppearing();
 
-  var images = await GetImageListAsync();
-  foreach (var photo in images.Photos)
-  {
-    var image = new Image
+    var images = await GetImageListAsync();
+    if (images != null)
     {
-      Source = ImageSource.FromUri(new Uri(photo + string.Format("?width={0}&height={0}&mode=max", Device.RuntimePlatform == Device.UWP ? 120 : 240)))
-    };
-    wrapLayout.Children.Add(image);
-  }
+        foreach (var photo in images.Photos)
+        {
+            var image = new Image
+            {
+                Source = ImageSource.FromUri(new Uri(photo))
+            };
+            wrapLayout.Children.Add(image);
+        }
+    }
 }
 
 async Task<ImageList> GetImageListAsync()
 {
-  var requestUri = "https://docs.xamarin.com/demo/stock.json";
-  using (var client = new HttpClient())
-  {
-    var result = await client.GetStringAsync(requestUri);
-    return JsonConvert.DeserializeObject<ImageList>(result);
-  }
+    try
+    {
+        string requestUri = "https://raw.githubusercontent.com/xamarin/docs-archive/master/Images/stock/small/stock.json";
+        string result = await _client.GetStringAsync(requestUri);
+        return JsonConvert.DeserializeObject<ImageList>(result);
+    }
+    catch (Exception ex)
+    {
+        Debug.WriteLine($"\tERROR: {ex.Message}");
+    }
+
+    return null;
 }
 ```
 
@@ -410,11 +419,6 @@ The following screenshots show the `WrapLayout` after it's been rotated to lands
 ![](custom-images/landscape-uwp.png "Sample UWP Application Landscape Screenshot")
 
 The number of columns in each row depends on the photo size, the screen width, and the number of pixels per device-independent unit. The [`Image`](xref:Xamarin.Forms.Image) elements asynchronously load the photos, and therefore the `WrapLayout` class will receive frequent calls to its [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) method as each `Image` element receives a new size based on the loaded photo.
-
-## Summary
-
-This article explained how to write a custom layout class, and demonstrated an orientation-sensitive `WrapLayout` class that arranges its children horizontally across the page, and then wraps the display of subsequent children to additional rows.
-
 
 ## Related Links
 
