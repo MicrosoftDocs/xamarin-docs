@@ -20,7 +20,7 @@ ways.
 In this document, we’re going to take a thorough introductory examination
 of building mobile applications, including:
 
-1.   **Process** – The process of software development is called the Software Development Lifecycle (SDLC). We’ll examine all phases of the SDLC with respect to mobile application development, including: Inspiration, Design, Development, Stabilization, Deployment, and Maintenance.
+1.   **Process** – The process of software development is called the Software Development Lifecycle (SDLC). We’ll examine all phases of the SDLC with respect to mobile application development, including: Inception, Design, Development, Stabilization, Deployment, and Maintenance.
 1.   **Considerations** – There are a number of considerations when building mobile applications, especially in contrast to traditional web or desktop applications. We’ll examine these considerations and how they affect mobile development.
 
 This document is intended to answer fundamental questions about mobile app
