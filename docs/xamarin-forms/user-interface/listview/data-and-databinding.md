@@ -53,10 +53,6 @@ listView.ItemsSource = new string[]
   "monomodal",
   "mononucleosis"
 };
-
-//monochrome will not appear in the list because it was added
-//after the list was populated.
-listView.ItemsSource.Add("monochrome");
 ```
 
 ![](data-and-databinding-images/itemssource-simple.png "ListView Displaying List of Strings")
@@ -83,7 +79,7 @@ Data binding works by keeping objects in sync as their bound values change. Inst
 For more information on data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) which is part four of the [Xamarin.Forms XAML Basics article series](~/xamarin-forms/xaml/xaml-basics/index.md).
 
 ### Binding Cells
-Properties of cells (and children of cells) can be bound to properties of objects in the `ItemsSource`. For example, a ListView could be used to present a list of employees.
+Properties of cells (and children of cells) can be bound to properties of objects in the `ItemsSource`. For example, a `ListView` could be used to present a list of employees.
 
 The employee class:
 
@@ -94,10 +90,12 @@ public class Employee
 }
 ```
 
-`ObservableCollection<Employee>` is created and set as the `ListView`'s `ItemsSource`:
+An `ObservableCollection<Employee>` is created and set as the `ListView`'s `ItemsSource`:
 
 ```csharp
 ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
+public ObservableCollection<Employee> Employees { get { return employees; }}
+
 public EmployeeListPage()
 {
   //defined in XAML to follow
@@ -126,11 +124,12 @@ The following snippet demonstrates a `ListView` bound to a list of employees:
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-xmlns:constants="clr-namespace:XamarinFormsSample;assembly=XamarinFormsXamlSample"
-x:Class="XamarinFormsXamlSample.Views.EmployeeListPage"
-Title="Employee List">
-  <ListView x:Name="EmployeeView">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:constants="clr-namespace:XamarinFormsSample;assembly=XamarinFormsXamlSample"
+             x:Class="XamarinFormsXamlSample.Views.EmployeeListPage"
+             Title="Employee List">
+  <ListView x:Name="EmployeeView"
+            ItemsSource="{Binding Employees}">
     <ListView.ItemTemplate>
       <DataTemplate>
         <TextCell Text="{Binding DisplayName}" />
@@ -140,11 +139,7 @@ Title="Employee List">
 </ContentPage>
 ```
 
-Note that the binding was setup in code for simplicity, although it could have been bound in XAML.
-
-The previous bit of XAML defines a `ContentPage` that contains a `ListView`. The data source of the `ListView` is set via the `ItemsSource` attribute. The layout of each row in the `ItemsSource`is defined within the `ListView.ItemTemplate` element.
-
-This is the result:
+This XAML example defines a `ContentPage` that contains a `ListView`. The data source of the `ListView` is set via the `ItemsSource` attribute. The layout of each row in the `ItemsSource` is defined within the `ListView.ItemTemplate` element. This results in the following screenshots:
 
 ![](data-and-databinding-images/bound-data.png "ListView using Data Binding")
 

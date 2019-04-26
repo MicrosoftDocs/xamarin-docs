@@ -104,6 +104,9 @@ browser.Source = htmlSource;
 
 In the above code, `@` is used to mark the HTML as a string literal, meaning all the usual escape characters are ignored.
 
+> [!NOTE]
+> It may be necessary to set the `WidthRequest` and `HeightRequest` properties of the [`WebView`](xref:Xamarin.Forms.WebView) to see the HTML content, depending upon the layout the `WebView` is a child of. For example, this is required in a [`StackLayout`](xref:Xamarin.Forms.StackLayout).
+
 ### Local HTML Content
 
 WebView can display content from HTML, CSS and Javascript embedded within the app. For example:
