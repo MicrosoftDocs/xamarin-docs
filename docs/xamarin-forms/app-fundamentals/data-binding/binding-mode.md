@@ -672,7 +672,7 @@ The iOS screenshot at the left shows the program when it's first run. The constr
 
 [![Sample Settings](binding-mode-images/samplesettings-small.png "Sample Settings")](binding-mode-images/samplesettings-large.png#lightbox "Sample Settings")
 
-The other two screenshots show altered settings. When experimenting with this page, remember to put the program to sleep or to terminate it on the device or emulator that it's running. Terminating the program from the Visual Studio debugger will not cause the `OnSleep` override in the `App` class to be called.
+The other screenshot shows altered settings. When experimenting with this page, remember to put the program to sleep or to terminate it on the device or emulator that it's running. Terminating the program from the Visual Studio debugger will not cause the `OnSleep` override in the `App` class to be called.
 
 In the next article you'll see how to specify [**String Formatting**](string-formatting.md) of data bindings that are set on the `Text` property of `Label`.
 
