@@ -51,18 +51,18 @@ featureFlags:
                 </a>
             </li>
              <li>
-                <a href="https://university.xamarin.com">
+                <a href="~/xamarin-forms/app-fundamentals/shell.md">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style='background-position: 0px 0px; background-image: url("https://docs.microsoft.com/media/common/i_virtual-training.svg"); background-size: cover;'>
-                                        <img style="display: none;" alt="Xamarin University" src="https://docs.microsoft.com/media/common/i_virtual-training.svg" data-linktype="external" data-hoverimage="https://docs.microsoft.com/media/common/i_virtual-training.svg">
+                                    <div class="cardImage" style='background-position: 0px 0px; background-image: url("https://docs.microsoft.com/media/common/i_preview.svg"); background-size: cover;'>
+                                        <img style="display: none;" alt="" src="https://docs.microsoft.com/media/common/i_preview.svg" data-linktype="external" data-hoverimage="https://docs.microsoft.com/media/common/i_preview.svg">
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3 class="x-hidden-focus">Xamarin University</h3>
-                                    <p>Learn for free online with self-guided learning.</p>
+                                    <h3 class="x-hidden-focus">Xamarin.Forms 4.0</h3>
+                                    <p>New Shell feature preview.</p>
                                 </div>
                             </div>
                         </div>
