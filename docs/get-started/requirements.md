@@ -6,7 +6,7 @@ ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2018
+ms.date: 05/01/2019
 ---
 # Xamarin.Forms Requirements
 
@@ -19,10 +19,10 @@ Refer to the [Installation](installation/index.md) article for an overview of in
 Xamarin.Forms applications can be written for the following operating systems:
 
 - iOS 8 or higher
-- Android 4.4 (API 19) or higher ([more details](#android))
+- Android 5.0 (API 21) or higher ([more details](#android))
 - Windows 10 Universal Windows Platform ([more details](#windows10))
 
-It is assumed that developers have familiarity with [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) and [Shared Projects](~/cross-platform/app-fundamentals/shared-projects.md).
+It is assumed that developers have familiarity with [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md).
 
 ### Additional platform support
 
@@ -32,13 +32,6 @@ The status of these platforms is available on the [Xamarin.Forms GitHub](https:/
 - macOS
 - GTK#
 - WPF
-
-### Platforms from earlier versions
-
-These platforms are not supported when using Xamarin.Forms 3.0:
-
-- *Windows 8.1 / Windows Phone 8.1 WinRT*
-- *Windows Phone 8 Silverlight*
 
 ### Android
 
@@ -94,3 +87,10 @@ Developing Xamarin.Forms apps for UWP requires:
 
 You can [add a Universal Windows Platform (UWP) App](~/xamarin-forms/platform/windows/installation/index.md) to an existing
 Xamarin.Forms solution at any time.
+
+## Deprecated platforms
+
+These platforms are not supported when using Xamarin.Forms 3.0 or newer:
+
+- *Windows 8.1 / Windows Phone 8.1 WinRT*
+- *Windows Phone 8 Silverlight*
