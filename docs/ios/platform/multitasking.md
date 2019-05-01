@@ -34,7 +34,7 @@ This article will cover the steps required to ensure that your Xamarin.iOS app r
 
 > [!VIDEO https://youtube.com/embed/GctYAozoLr8]
 
-**Multitasking for iPad, by [Xamarin University](https://university.xamarin.com)**
+**Multitasking for iPad video**
 
 
 <a name="Multitasking-QuickStart" />

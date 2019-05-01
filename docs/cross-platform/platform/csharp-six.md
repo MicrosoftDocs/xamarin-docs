@@ -19,7 +19,7 @@ Xamarin target platforms.
 
 > [!VIDEO https://youtube.com/embed/7UdV7zGPfMU]
 
-**What's new in C# 6, by [Xamarin University](https://university.xamarin.com/)**
+**What's new in C# 6 video**
 
 ## Using C# 6
 

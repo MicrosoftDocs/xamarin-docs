@@ -707,9 +707,8 @@ It may seem as if the code-behind file can handle orientation changes more direc
 
 > [!VIDEO https://youtube.com/embed/qhUHbVP5mIQ]
 
-**Xamarin.Forms 3.0 Visual State Manager, by [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 3.0 Visual State Manager video**
 
 ## Related links
 
 - [VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)
-

@@ -1,6 +1,6 @@
 ---
 title: "Get Started With Xamarin"
-description: "This document links to various guides that describe how to get started with Xamarin development. The linked content discusses how to build a first app, provides a general introduction to mobile development, and takes a look at training with Xamarin University."
+description: "This document links to various guides that describe how to get started with Xamarin development. The linked content discusses how to build a first app, and provides a general introduction to mobile development."
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
@@ -51,11 +51,11 @@ advantages for utility and productivity applications.
 
 Learn more about Visual Studio for Mac, the Integrated Development Environment (IDE) for macOS.
 
-## Get Started with Xamarin University
+## Get started video
 
 > [!VIDEO https://youtube.com/embed/NGvn-pGZFPA]
 
-**Building Your First Xamarin.Forms App with Xamarin for Visual Studio, by [Xamarin University](https://university.xamarin.com)**
+**Building Your First Xamarin.Forms App with Xamarin for Visual Studio**
 
 ## Related Links
 

@@ -99,7 +99,3 @@ The following table lists the renderer and native control classes that implement
 ## Summary
 
 This article has listed the renderer and native control classes that implement each Xamarin.Forms page, layout, view, and cell. Every Xamarin.Forms control has an accompanying renderer for each platform that creates an instance of a native control.
-
-## Related Links
-
-- [Custom Renderers (Xamarin University Video)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)

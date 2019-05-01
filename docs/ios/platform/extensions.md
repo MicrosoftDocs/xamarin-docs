@@ -13,7 +13,7 @@ ms.date: 03/22/2017
 
 > [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
 
-**Creating Extensions in iOS, by [Xamarin University](https://university.xamarin.com/)**
+**Creating Extensions in iOS video**
 
 Extensions, as introduced in iOS 8, are specialized `UIViewControllers` that are presented by iOS inside standard contexts such as within the **Notification Center**, as custom keyboard types requested by the user to perform specialized input or other contexts like editing a photo where the Extension can provide special effect filters.
 

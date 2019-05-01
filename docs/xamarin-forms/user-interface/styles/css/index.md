@@ -478,7 +478,7 @@ The exact meaning of each `namedsize` value is platform-dependent and view-depen
 
 > [!VIDEO https://youtube.com/embed/va-Vb7vtan8]
 
-**Xamarin.Forms 3.0 CSS, by [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 3.0 CSS video**
 
 ## Related Links
 
