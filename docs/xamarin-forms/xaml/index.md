@@ -17,9 +17,6 @@ _XAML is a declarative markup language that can be used to define user interface
 
 **Evolve 2016: Becoming a XAML Master**
 
-> [!NOTE]
-> Try out the [XAML Standard Preview](standard/index.md)
-
 ## [XAML Controls](xaml-controls.md)
 
 All of the views that are defined in Xamarin.Forms can be referenced from XAML files.
