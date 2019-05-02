@@ -6,17 +6,17 @@ ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 04/12/2018
+ms.date: 05/02/2019
 ---
 
 # Remote Notifications With Google Cloud Messaging
 
-_This walkthrough provides a step-by-step explanation of how to use Google Cloud Messaging to implement remote notifications (also called push notifications) in a Xamarin.Android application. It describes the various classes that you must implement to communicate with Google Cloud Messaging (GCM), it explains how to set permissions in the Android Manifest for access to GCM, and it demonstrates end-to-end messaging with a sample test program._
+> [!WARNING]
+> Google deprecated GCM as of April 10, 2018. The following docs and sample projects may no longer be maintained. Google's GCM server and client APIs will be removed as soon as May 29, 2019. Google recommends migrating GCM apps to Firebase Cloud Messaging (FCM). For more information about GCM deprecation and migration, see [Google Cloud Messaging - DEPRECATED](https://developers.google.com/cloud-messaging/).
+>
+> To get started with Remote Notifications using Firebase Cloud Messaging with Xamarin, see [Remote Notifications with FCM](remote-notifications-with-fcm.md).
 
-> [!NOTE]
-> GCM has been superceded by [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) (FCM).
-> GCM server and client APIs [have been deprecated](https://firebase.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html)
-> and will no longer be available as soon as April 11th, 2019.
+_This walkthrough provides a step-by-step explanation of how to use Google Cloud Messaging to implement remote notifications (also called push notifications) in a Xamarin.Android application. It describes the various classes that you must implement to communicate with Google Cloud Messaging (GCM), it explains how to set permissions in the Android Manifest for access to GCM, and it demonstrates end-to-end messaging with a sample test program._
 
 ## GCM Notifications Overview
 
@@ -26,12 +26,6 @@ uses Google Cloud Messaging (GCM) to implement remote notifications
 intent and listener services that use GCM for remote messaging, and 
 we'll test our implementation with a command-line program that 
 simulates an application server. 
-
-Note that Firebase Cloud Messaging (FCM) is the new version of GCM 
-&ndash; Google strongly recommends using FCM rather than GCM. If you 
-are currently using GCM, upgrading to FCM is recommended. For more 
-information about FCM, see 
-[Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md). 
 
 Before you can proceed with this walkthrough, you must acquire 
 the necessary credentials to use Google's GCM servers; this process is explained in 
