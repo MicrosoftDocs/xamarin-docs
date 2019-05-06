@@ -51,7 +51,7 @@ featureFlags:
                 </a>
             </li>
              <li>
-                <a href="~/xamarin-forms/app-fundamentals/shell.md">
+                <a href="~/xamarin-forms/app-fundamentals/shell/index.md">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
