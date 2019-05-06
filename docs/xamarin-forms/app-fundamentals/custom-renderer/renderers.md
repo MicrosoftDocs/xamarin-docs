@@ -26,6 +26,9 @@ The `MapRenderer` class can be found in the following namespaces:
 - **Android** – Xamarin.Forms.Maps.Android
 - **Universal Windows Platform (UWP)** – Xamarin.Forms.Maps.UWP
 
+> [!NOTE]
+> For information about creating custom renderers for Shell applications, see [Xamarin.Forms Shell Custom Renderers](~/xamarin-forms/app-fundamentals/shell/customrenderers.md).
+
 ## Pages
 
 The following table lists the renderer and native control classes that implement each Xamarin.Forms [Page](~/xamarin-forms/user-interface/controls/pages.md) type:

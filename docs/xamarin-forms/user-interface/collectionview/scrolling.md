@@ -1,22 +1,19 @@
 ---
-title: "Scroll an Item into View"
+title: "Xamarin.Forms CollectionView Scrolling"
 description: "When a user swipes to initiate a scroll, the end position of the scroll can be controlled so that items are fully displayed. In addition, CollectionView defines two ScrollTo methods, that programmatically scroll items into view."
 ms.prod: xamarin
 ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/19/2019
+ms.date: 05/06/2019
 ---
 
-# Scroll an Item into View
+# Xamarin.Forms CollectionView Scrolling
 
-![Preview](~/media/shared/preview.png)
+![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> The `CollectionView` is currently a preview, and lacks some of its planned functionality. In addition, the API may change as the implementation is completed.
 
 `CollectionView` defines two `ScrollTo` methods, that scroll items into view. One of the overloads scrolls the item at the specified index into view, while the other scrolls the specified item into view. Both overloads have additional arguments that can be specified to indicate the exact position of the item after the scroll has completed, and whether to animate the scroll.
 

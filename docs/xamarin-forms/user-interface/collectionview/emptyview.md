@@ -1,22 +1,19 @@
 ---
-title: "Display an EmptyView when Data is Unavailable"
+title: "Xamarin.Forms CollectionView EmptyView"
 description: "In CollectionView, an empty view can be specified that provides feedback to the user when no data is available for display. The empty view can be a string, a view, or multiple views."
 ms.prod: xamarin
 ms.assetid: 6CEBCFE6-5577-4F68-9709-431062609153
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/19/2019
+ms.date: 05/06/2019
 ---
 
-# Display an EmptyView when Data is Unavailable
+# Xamarin.Forms CollectionView EmptyView
 
-![Preview](~/media/shared/preview.png)
+![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> The `CollectionView` is currently a preview, and lacks some of its planned functionality. In addition, the API may change as the implementation is completed.
 
 `CollectionView` defines the following properties that can be used to provide user feedback when there's no data to display:
 
@@ -255,8 +252,80 @@ The `ToggleEmptyView` method sets the `EmptyView` property of the `collectionVie
 
 For more information about resource dictionaries, see [Xamarin.Forms Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md).
 
+## Choose an EmptyViewTemplate at runtime
+
+The appearance of the `EmptyView` can be chosen at runtime, based on its value, by setting the `CollectionView.EmptyViewTemplate` property to a [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) object:
+
+```xaml
+<ContentPage ...
+             xmlns:controls="clr-namespace:CollectionViewDemos.Controls">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="AdvancedTemplate">
+            ...
+        </DataTemplate>
+
+        <DataTemplate x:Key="BasicTemplate">
+            ...
+        </DataTemplate>
+
+        <controls:SearchTermDataTemplateSelector x:Key="SearchSelector"
+                                                 DefaultTemplate="{StaticResource AdvancedTemplate}"
+                                                 OtherTemplate="{StaticResource BasicTemplate}" />
+    </ContentPage.Resources>
+
+    <StackLayout Margin="20">
+        <SearchBar x:Name="searchBar"
+                   SearchCommand="{Binding FilterCommand}"
+                   SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
+                   Placeholder="Filter" />
+        <CollectionView ItemsSource="{Binding Monkeys}"
+                        EmptyView="{Binding Source={x:Reference searchBar}, Path=Text}"
+                        EmptyViewTemplate="{StaticResource SearchSelector}" />
+    </StackLayout>
+</ContentPage>
+```
+
+The equivalent C# code is:
+
+```csharp
+SearchBar searchBar = new SearchBar { ... };
+CollectionView collectionView = new CollectionView
+{
+    EmptyView = searchBar.Text,
+    EmptyViewTemplate = new SearchTermDataTemplateSelector { ... }
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+The `EmptyView` property is set to the [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) property, and the `EmptyViewTemplate` property is set to a `SearchTermDataTemplateSelector` object.
+
+When the [`SearchBar`](xref:Xamarin.Forms.SearchBar) executes the `FilterCommand`, the collection displayed by the `CollectionView` is filtered for the search term stored in the [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) property. If the filtering operation yields no data, the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) chosen by the `SearchTermDataTemplateSelector` object is set as the `EmptyViewTemplate` property and displayed.
+
+The following example shows the `SearchTermDataTemplateSelector` class:
+
+```csharp
+public class SearchTermDataTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate DefaultTemplate { get; set; }
+    public DataTemplate OtherTemplate { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        string query = (string)item;
+        return query.ToLower().Equals("xamarin") ? OtherTemplate : DefaultTemplate;
+    }
+}
+```
+
+The `SearchTermTemplateSelector` class defines `DefaultTemplate` and `OtherTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) properties that are set to different data templates. The `OnSelectTemplate` override returns `DefaultTemplate`, which displays a message to the user, when the search query isn't equal to "xamarin". When the search query is equal to "xamarin", the `OnSelectTemplate` override returns `OtherTemplate`, which displays a basic message to the user:
+
+[![Screenshot of a CollectionView runtime empty view template selection, on iOS and Android](emptyview-images/datatemplateselector.png "Runtime empty view template selection in a CollectionView")](emptyview-images/datatemplateselector-large.png#lightbox "Runtime empty view template selection in a CollectionView")
+
+For more information about data template selectors, see [Create a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+
 ## Related links
 
 - [CollectionView (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 - [Xamarin.Forms Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Xamarin.Forms Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Create a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
