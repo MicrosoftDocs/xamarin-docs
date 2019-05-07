@@ -21,7 +21,7 @@ This guide describes how to create an application that translates an alphanumeri
 
 iOS development with Xamarin requires:
 
-- A Mac running macOS HIgh Sierra (10.13) or above.
+- A Mac running macOS High Sierra (10.13) or above.
 - Latest version of Xcode and iOS SDK installed from the [App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) .
 
 ::: zone pivot="macos"

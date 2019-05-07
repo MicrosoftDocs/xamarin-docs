@@ -22,7 +22,7 @@ For more information on tvOS, please see the [Getting Started](~/ios/tvos/get-st
 
 > [!VIDEO https://youtube.com/embed/Q04oIYymfGM]
 
-**tvOS with Xamarin, by [Xamarin University](https://university.xamarin.com/)**
+**tvOS with Xamarin video**
 
 ## Documentation
 

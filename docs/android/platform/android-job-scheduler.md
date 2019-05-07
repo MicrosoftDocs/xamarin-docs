@@ -222,4 +222,4 @@ This guide discussed how to use the Android Job Scheduler to intelligently perfo
 - [JobScheduler API reference](https://developer.android.com/reference/android/app/job/JobScheduler.html)
 - [Scheduling jobs like a pro with JobScheduler](https://medium.com/google-developers/scheduling-jobs-like-a-pro-with-jobscheduler-286ef8510129)
 - [Android Battery and Memory Optimizations - Google I/O 2016 (video)](https://www.youtube.com/watch?v=VC2Hlb22mZM&feature=youtu.be)
-- [Android JobScheduler - René Ruppert - Xamarin University](https://www.youtube.com/watch?v=aSjBBPYjelE)
+- [Android JobScheduler - René Ruppert](https://www.youtube.com/watch?v=aSjBBPYjelE)

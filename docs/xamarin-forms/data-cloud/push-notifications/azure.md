@@ -18,7 +18,7 @@ _Azure Notification Hubs provide a scalable push infrastructure for sending mobi
 
 > [!VIDEO https://youtube.com/embed/le2lDY22xwM]
 
-**Azure Push Notification Hub and Xamarin.Forms, by [Xamarin University](https://university.xamarin.com/)**
+**Azure Push Notification Hub and Xamarin.Forms video**
 
 A push notification is used to deliver information, such as a message, from a backend system to an application on a mobile device to increase application engagement and usage. The notification can be sent at anytime, even when the user is not actively using the targeted application.
 

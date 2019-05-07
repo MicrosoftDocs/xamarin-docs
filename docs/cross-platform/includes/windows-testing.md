@@ -1,3 +1,6 @@
+---
+ms.topic: include
+---
 ||Testing Notes|
 |---|---|
 |**Xamarin.iOS**|<ul><li>The easiest way to get started is using the iPhone, iPad, Apple Watch, and Apple TV simulators that are included with Xcode. The simulators can be accessed on the connected Mac while debugging with Visual Studio.</li> <li>To use a device for testing, follow <a href="~/ios/get-started/installation/device-provisioning/index.md">these instructions</a> (performing most steps on the connected Mac computer).</li></ul>|

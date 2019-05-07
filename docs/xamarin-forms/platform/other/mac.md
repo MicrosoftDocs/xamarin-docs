@@ -18,7 +18,7 @@ Before you start, create (or use an existing) Xamarin.Forms project. You can onl
 
 > [!VIDEO https://youtube.com/embed/mvQ7jzaNseM]
 
-**Adding a macOS project to Xamarin.Forms, by [Xamarin University](https://university.xamarin.com/)**
+**Adding a macOS project to Xamarin.Forms video**
 
 ## Adding a Mac App
 

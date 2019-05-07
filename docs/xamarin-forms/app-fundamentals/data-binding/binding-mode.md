@@ -104,7 +104,7 @@ Target properties with a binding mode of `OneTime` are updated only when the bin
 
 The **Simple Color Selector** page demonstrates the use of a simple ViewModel. Data bindings allow the user to select a color using three `Slider` elements for the hue, saturation, and luminosity.
 
-The ViewModel is the data-binding source. The ViewModel does *not* define bindable properties, but it does implement a notification mechanism that allows the binding infrastructure to be notified when the value of a property changes. This notification mechanism is the [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) interface, which defines a single property named [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). A class that implements this interface generally fires the event when one of its public properties changes value. The event does not need to be fired if the property never changes. (The `INotifyPropertyChanged` interface is also implemented by `BindableObject` and a `PropertyChanged` event is fired whenever a bindable property changes value.)
+The ViewModel is the data-binding source. The ViewModel does *not* define bindable properties, but it does implement a notification mechanism that allows the binding infrastructure to be notified when the value of a property changes. This notification mechanism is the [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) interface, which defines a single event named [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). A class that implements this interface generally fires the event when one of its public properties changes value. The event does not need to be fired if the property never changes. (The `INotifyPropertyChanged` interface is also implemented by `BindableObject` and a `PropertyChanged` event is fired whenever a bindable property changes value.)
 
 The `HslColorViewModel` class defines five properties: The `Hue`, `Saturation`, `Luminosity`, and `Color` properties are interrelated. When any one of the three color components changes value, the `Color` property is recalculated, and `PropertyChanged` events are fired for all four properties:
 
@@ -672,7 +672,7 @@ The iOS screenshot at the left shows the program when it's first run. The constr
 
 [![Sample Settings](binding-mode-images/samplesettings-small.png "Sample Settings")](binding-mode-images/samplesettings-large.png#lightbox "Sample Settings")
 
-The other two screenshots show altered settings. When experimenting with this page, remember to put the program to sleep or to terminate it on the device or emulator that it's running. Terminating the program from the Visual Studio debugger will not cause the `OnSleep` override in the `App` class to be called.
+The other screenshot shows altered settings. When experimenting with this page, remember to put the program to sleep or to terminate it on the device or emulator that it's running. Terminating the program from the Visual Studio debugger will not cause the `OnSleep` override in the `App` class to be called.
 
 In the next article you'll see how to specify [**String Formatting**](string-formatting.md) of data bindings that are set on the `Text` property of `Label`.
 

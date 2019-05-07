@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/13/2018
+ms.date: 04/11/2019
 ---
 # Styling Xamarin.Forms apps using Cascading Style Sheets (CSS)
 
@@ -411,6 +411,19 @@ The following CSS properties are supported by Xamarin.Forms (in the **Values** c
 |`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial `|`visibility: hidden;`|
 |`width`|`VisualElement`|_double_ \| `initial`|`min-width: 320;`|
 
+> [!NOTE]
+> `initial` is a valid value for all properties. It clears the value (resets to default) that was set from another style.
+
+The following properties are currently unsupported:
+
+- `all: initial`.
+- Layout properties (box, or grid).
+- Shorthand properties, such as `font`, and `border`.
+
+In addition, there's no `inherit` value and so inheritance isn't supported. Therefore you can't, for example, set the `font-size` property on a layout and expect all the [`Label`](xref:Xamarin.Forms.Label) instances in the layout to inherit the value. The one exception is the `direction` property, which has a default value of `inherit`.
+
+### Xamarin.Forms specific properties
+
 The following Xamarin.Forms specific CSS properties are also supported (in the **Values** column, types are _italic_, while string literals are `gray`):
 
 |Property|Applies to|Values|Example|
@@ -428,16 +441,23 @@ The following Xamarin.Forms specific CSS properties are also supported (in the *
 |`-xf-thumb-color`|`Slider`|_color_ \| `initial` |`-xf-thumb-color: limegreen;`|
 |`-xf-spacing`|`StackLayout`|_double_ \| `initial` |`-xf-spacing: 8;`|
 
-> [!NOTE]
-> `initial` is a valid value for all properties. It clears the value (resets to default) that was set from another style.
+### Xamarin.Forms Shell specific properties
 
-The following properties are currently unsupported:
+The following Xamarin.Forms Shell specific CSS properties are also supported (in the **Values** column, types are _italic_, while string literals are `gray`):
 
-- `all: initial`.
-- Layout properties (box, or grid).
-- Shorthand properties, such as `font`, and `border`.
-
-In addition, there's no `inherit` value and so inheritance isn't supported. Therefore you can't, for example, set the `font-size` property on a layout and expect all the [`Label`](xref:Xamarin.Forms.Label) instances in the layout to inherit the value. The one exception is the `direction` property, which has a default value of `inherit`.
+|Property|Applies to|Values|Example|
+|---|---|---|---|
+|`-xf-flyout-background`|`Shell`|_color_ \| `initial` |`-xf-flyout-background: red;`|
+|`-xf-shell-background`|`Element`|_color_ \| `initial` |`-xf-shell-background: green;`|
+|`-xf-shell-disabled`|`Element`|_color_ \| `initial` |`-xf-shell-disabled: blue;`|
+|`-xf-shell-foreground`|`Element`|_color_ \| `initial` |`-xf-shell-foreground: yellow;`|
+|`-xf-shell-tabbar-background`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-background: white;`|
+|`-xf-shell-tabbar-disabled`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-disabled: black;`|
+|`-xf-shell-tabbar-foreground`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-foreground: gray;`|
+|`-xf-shell-tabbar-title`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-title: lightgray;`|
+|`-xf-shell-tabbar-unselected`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-unselected: cyan;`|
+|`-xf-shell-title`|`Element`|_color_ \| `initial` |`-xf-shell-title: teal;`|
+|`-xf-shell-unselected`|`Element`|_color_ \| `initial` |`-xf-shell-unselected: limegreen;`|
 
 ### Color
 
@@ -478,7 +498,7 @@ The exact meaning of each `namedsize` value is platform-dependent and view-depen
 
 > [!VIDEO https://youtube.com/embed/va-Vb7vtan8]
 
-**Xamarin.Forms 3.0 CSS, by [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 3.0 CSS video**
 
 ## Related Links
 

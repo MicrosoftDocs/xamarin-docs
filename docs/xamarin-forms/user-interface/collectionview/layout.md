@@ -1,22 +1,19 @@
 ---
-title: "Specify Xamarin.Forms CollectionView Layout"
+title: "Xamarin.Forms CollectionView Layout"
 description: "By default, a CollectionView will display its items in a vertical list. However, vertical and horizontal lists and grids can be specified."
 ms.prod: xamarin
 ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/15/2019
+ms.date: 05/06/2019
 ---
 
-# Specify Xamarin.Forms CollectionView Layout
+# Xamarin.Forms CollectionView Layout
 
-![Preview](~/media/shared/preview.png)
+![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> The `CollectionView` is currently a preview, and lacks some of its planned functionality. In addition, the API may change as the implementation is completed.
 
 `CollectionView` defines the following properties that control layout:
 
@@ -38,7 +35,7 @@ These layouts can be specified by setting the `ItemsLayout` property to class th
 - `SnapPointsAlignment`, of type `SnapPointsAlignment`, specifies how snap points are aligned with items.
 - `SnapPointsType`, of type `SnapPointsType`, specifies the behavior of snap points when scrolling.
 
-These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings. For more information about snap points, see [Snap points](scrolling.md#snap-points) in the [Scroll an Item into View](scrolling.md) guide.
+These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings. For more information about snap points, see [Snap points](scrolling.md#snap-points) in the [Xamarin.Forms CollectionView Scrolling](scrolling.md) guide.
 
 The `ItemsLayoutOrientation` enumeration defines the following members:
 
@@ -339,7 +336,7 @@ By default, each item in a `CollectionView` is individually measured and sized, 
 - `MeasureFirstItem` – only the first item is measured, with all subsequent items being given the same size as the first item.
 
 > [!IMPORTANT]
-> The `MeasureFirstItem` sizing strategy should be used in situations where the item size is intended to be uniform across all items, and will result in increased performance.
+> The `MeasureFirstItem` sizing strategy will result in increased performance when used in situations where the item size is intended to be uniform across all items.
 
 The following code example shows setting the `ItemSizingStrategy` property:
 
@@ -360,8 +357,11 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
+> [!NOTE]
+> The item sizing strategy is currently only implemented on iOS.
+
 ## Related links
 
 - [CollectionView (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 - [Right-to-left localization](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
-- [Scroll an Item into View](scrolling.md)
+- [Xamarin.Forms CollectionView Scrolling](scrolling.md)

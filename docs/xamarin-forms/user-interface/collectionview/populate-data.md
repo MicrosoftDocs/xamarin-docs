@@ -1,22 +1,19 @@
 ---
-title: "Populate Xamarin.Forms CollectionView with Data"
+title: "Xamarin.Forms CollectionView Data"
 description: "A CollectionView is populated with data by setting its ItemsSource property to any collection that implements IEnumerable."
 ms.prod: xamarin
 ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/15/2019
+ms.date: 05/06/2019
 ---
 
-# Populate Xamarin.Forms CollectionView with Data
+# Xamarin.Forms CollectionView Data
 
-![Preview](~/media/shared/preview.png)
+![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> The `CollectionView` is currently a preview, and lacks some of its planned functionality. In addition, the API may change as the implementation is completed.
 
 `CollectionView` defines the following properties that define the data to be displayed, and its appearance:
 
@@ -183,8 +180,66 @@ The following screenshots show the result of templating each item in the list:
 
 For more information about data templates, see [Xamarin.Forms Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
+## Choose item appearance at runtime
+
+The appearance of each item in the `CollectionView` can be chosen at runtime, based on the item value, by setting the `CollectionView.ItemTemplate` property to a [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) object:
+
+```xaml
+<ContentPage ...
+             xmlns:controls="clr-namespace:CollectionViewDemos.Controls">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="AmericanMonkeyTemplate">
+            ...
+        </DataTemplate>
+
+        <DataTemplate x:Key="OtherMonkeyTemplate">
+            ...
+        </DataTemplate>
+
+        <controls:MonkeyDataTemplateSelector x:Key="MonkeySelector"
+                                             AmericanMonkey="{StaticResource AmericanMonkeyTemplate}"
+                                             OtherMonkey="{StaticResource OtherMonkeyTemplate}" />
+    </ContentPage.Resources>
+
+    <CollectionView ItemsSource="{Binding Monkeys}"
+                    ItemTemplate="{StaticResource MonkeySelector}" />
+</ContentPage>
+```
+
+The equivalent C# code is:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    ItemTemplate = new MonkeyDataTemplateSelector { ... }
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+The `ItemTemplate` property is set to a `MonkeyDataTemplateSelector` object. The following example shows the `MonkeyDataTemplateSelector` class:
+
+```csharp
+public class MonkeyDataTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate AmericanMonkey { get; set; }
+    public DataTemplate OtherMonkey { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        return ((Monkey)item).Location.Contains("America") ? AmericanMonkey : OtherMonkey;
+    }
+}
+```
+
+The `MonkeyDataTemplateSelector` class defines `AmericanMonkey` and `OtherMonkey` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) properties that are set to different data templates. The `OnSelectTemplate` override returns the `AmericanMonkey` template, which displays the monkey name and location in teal, when the monkey name contains "America". When the monkey name doesn't contain "America", the `OnSelectTemplate` override returns the `OtherMonkey` template, which displays the monkey name and location in silver:
+
+[![Screenshot of CollectionView runtime item template selection, on iOS and Android](populate-data-images/datatemplateselector.png "Runtime item template selection in a CollectionView")](populate-data-images/datatemplateselector-large.png#lightbox "Runtime item template selection in a CollectionView")
+
+For more information about data template selectors, see [Create a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+
 ## Related links
 
 - [CollectionView (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 - [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Xamarin.Forms Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Create a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

@@ -49,5 +49,4 @@ However, Objective Sharpie is a very advanced tool that requires advanced knowle
 - [Binding Details](~/cross-platform/macios/binding/overview.md)
 - [Binding Types Reference Guide](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin for Objective-C Developers](~/ios/get-started/objective-c-developers/index.md)
-- [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+
