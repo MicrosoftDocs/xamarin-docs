@@ -152,7 +152,7 @@ The `FormattedText` property is of type [`FormattedString`](xref:Xamarin.Forms.F
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – the size of the font for the text in the span.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) – the color for the text in the span. This property is obsolete and has been replaced by the `TextColor` property.
 - [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) - the multiplier to apply to the default line height of the span. For more information, see [Line Height](#line-height).
-- [`Text`](xref:Xamarin.Forms.Span.Text)  – the style to apply to the span.
+- [`Style`](xref:Xamarin.Forms.Span.Style)  – the style to apply to the span.
 - [`Text`](xref:Xamarin.Forms.Span.Text) – the text of the span.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – the color for the text in the span.
 - `TextDecorations` - the decorations to apply to the text in the span. For more information, see [Text Decorations](#text-decorations).
