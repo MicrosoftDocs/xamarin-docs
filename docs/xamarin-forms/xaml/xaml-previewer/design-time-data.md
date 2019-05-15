@@ -28,7 +28,7 @@ After adding the namespaces, you can put `d:` in front of any attribute or contr
 For example, you can add text to a label that usually has data bound to it.
 
 ```xaml
-<Label Text={Binding Name} d:Text="Name!" />
+<Label Text="{Binding Name}" d:Text="Name!" />
 ```
 
 [![Design time data with text in a Label](xaml-previewer-images/designtimedata-label-sm.png "Design time data with text a Label")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
