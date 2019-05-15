@@ -32,8 +32,8 @@ To embed a native view into a Xamarin.Forms XAML file:
 1. Add an `xmlns` namespace declaration in the XAML file for the namespace that contains the native view.
 1. Create an instance of the native view in the XAML file.
 
-> [!NOTE]
-> XAMLC must be turned off for any XAML pages that use native views.
+> [!IMPORTANT]
+> Compiled XAML must be disabled for any XAML pages that use native views. This can be accomplished by decorating the code-behind class for your XAML page with the `[XamlCompilation(XamlCompilationOptions.Skip)]` attribute. For more information about XAML compilation, see [XAML Compilation in Xamarin.Forms](~/xamarin-forms/xaml/xamlc.md).
 
 To reference a native view from a code-behind file, you must use a Shared Asset Project (SAP) and wrap the platform-specific code with conditional compilation directives. For more information see [Referring to Native Views from Code](#native_view_code).
 
