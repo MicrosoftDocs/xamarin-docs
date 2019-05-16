@@ -15,6 +15,9 @@ The **Email** class enables an application to open the default email application
 
 [!include[](~/essentials/includes/get-started.md)]
 
+> [!TIP]
+> To use the Email API on iOS you must run it on a physical device, else an exception will be thrown.
+
 ## Using Email
 
 Add a reference to Xamarin.Essentials in your class:
