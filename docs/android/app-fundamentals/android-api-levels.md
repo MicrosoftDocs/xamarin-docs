@@ -67,7 +67,7 @@ version of Android that you want your app to support. (Note that API
 Level 14 is the minimum API level required for
 [Google Play services and Firebase support](https://android-developers.googleblog.com/2016/11/google-play-services-and-firebase-for-android-will-support-api-level-14-at-minimum.html).)
 The following example configuration supports Android versions from API
-Level 14 thru API level 25:
+Level 14 through API level 25:
 
 [![Compile using API level 25 Nougat, Minimum Android version set to API level 14](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png#lightbox)
 
