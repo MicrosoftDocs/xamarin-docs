@@ -240,7 +240,7 @@ Elements with a specific class attribute can be selected with the case sensitive
 }
 ```
 
-A CSS class can be assigned to a XAML element by setting the [`StyleClass`](xref:Xamarin.Forms.VisualElement.StyleClass) property of the element to the CSS class name. Therefore, in the following XAML example, the styles defined by the `.detailPageTitle` class are assigned to the first [`Label`](xref:Xamarin.Forms.Label), while the styles defined by the `.detailPageSubtitle` class are assigned to the second `Label`.
+A CSS class can be assigned to a XAML element by setting the [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) property of the element to the CSS class name. Therefore, in the following XAML example, the styles defined by the `.detailPageTitle` class are assigned to the first [`Label`](xref:Xamarin.Forms.Label), while the styles defined by the `.detailPageSubtitle` class are assigned to the second `Label`.
 
 ```xaml
 <ContentPage ...>

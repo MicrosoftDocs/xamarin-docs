@@ -11,7 +11,7 @@ ms.date: 10/01/2018
 
 # Platform-Specifics
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 _Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects._
 
@@ -272,7 +272,7 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 
 ## Related links
 
-- [PlatformSpecifics (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [ShadowPlatformSpecific (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/)
 - [iOS Platform-Specifics](~/xamarin-forms/platform/ios/index.md)
 - [Android Platform-Specifics](~/xamarin-forms/platform/android/index.md)

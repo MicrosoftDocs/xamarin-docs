@@ -11,7 +11,7 @@ ms.date: 10/24/2018
 
 # Cell Background Color on iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 This iOS platform-specific sets the default background color of [`Cell`](xref:Xamarin.Forms.Cell) instances. It's consumed in XAML by setting the `Cell.DefaultBackgroundColor` bindable property to a [`Color`](xref:Xamarin.Forms.Color):
 
@@ -55,6 +55,6 @@ The result is that the background color in a [`Cell`](xref:Xamarin.Forms.Cell) c
 
 ## Related links
 
-- [PlatformSpecifics (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Creating Platform-Specifics](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -24,7 +24,7 @@ The *device* styles are:
 - [`SubtitleStyle`](xref:Xamarin.Forms.Device.Styles.SubtitleStyle)
 - [`TitleStyle`](xref:Xamarin.Forms.Device.Styles.TitleStyle)
 
-All six styles can only be applied to [`Label`](xref:Xamarin.Forms.Label) instances. For example, a `Label` that's displaying the body of a paragraph might set its [`Style`](xref:Xamarin.Forms.VisualElement.Style) property to [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle).
+All six styles can only be applied to [`Label`](xref:Xamarin.Forms.Label) instances. For example, a `Label` that's displaying the body of a paragraph might set its [`Style`](xref:Xamarin.Forms.NavigableElement.Style) property to [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle).
 
 The following code example demonstrates using the *device* styles in a XAML page:
 
@@ -104,7 +104,7 @@ public class DeviceStylesPageCS : ContentPage
 }
 ```
 
-The [`Style`](xref:Xamarin.Forms.VisualElement.Style) property of each [`Label`](xref:Xamarin.Forms.Label) instance is set to the appropriate property from the [`Devices.Styles`](xref:Xamarin.Forms.Device.Styles) class.
+The [`Style`](xref:Xamarin.Forms.NavigableElement.Style) property of each [`Label`](xref:Xamarin.Forms.Label) instance is set to the appropriate property from the [`Devices.Styles`](xref:Xamarin.Forms.Device.Styles) class.
 
 ## Accessibility
 

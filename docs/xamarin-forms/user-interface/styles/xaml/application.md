@@ -143,7 +143,7 @@ public class ApplicationStylesPageCS : ContentPage
 }
 ```
 
-The `buttonStyle` is applied to the [`Button`](xref:Xamarin.Forms.Button) instances by setting their [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties, and controls the appearance of the `Button` instances.
+The `buttonStyle` is applied to the [`Button`](xref:Xamarin.Forms.Button) instances by setting their [`Style`](xref:Xamarin.Forms.NavigableElement.Style) properties, and controls the appearance of the `Button` instances.
 
 ## Related links
 

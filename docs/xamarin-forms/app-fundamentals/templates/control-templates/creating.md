@@ -11,7 +11,7 @@ ms.date: 03/08/2016
 
 # Creating a ControlTemplate
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simpletheme/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/)
 
 _Control templates can be defined at the application level or page level. This article demonstrates how to create and consume control templates._
 
@@ -211,7 +211,7 @@ This article demonstrated how to create and consume control templates. Control t
 ## Related Links
 
 - [Styles](~/xamarin-forms/user-interface/styles/index.md)
-- [Simple Theme (sample)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simpletheme/)
+- [Simple Theme (sample)](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/)
 - [ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
 - [ContentPresenter](xref:Xamarin.Forms.ContentPresenter)
 - [ContentView](xref:Xamarin.Forms.ContentView)
