@@ -192,11 +192,13 @@ var scheduleResult = jobScheduler.Schedule(jobInfo);
 
 if (JobScheduler.ResultSuccess == scheduleResult)
 {
-    Snackbar.Make(FindViewById(Android.Resource.Id.Content), Resource.String.jobscheduled_success, Snackbar.LengthShort);
+    var snackBar = Snackbar.Make(FindViewById(Android.Resource.Id.Content), Resource.String.jobscheduled_success, Snackbar.LengthShort);
+    snackBar.Show();
 }
 else
 {
-    Snackbar.Make(FindViewById(Android.Resource.Id.Content), Resource.String.jobscheduled_failure, Snackbar.LengthShort);
+    var snackBar = Snackbar.Make(FindViewById(Android.Resource.Id.Content), Resource.String.jobscheduled_failure, Snackbar.LengthShort);
+    snackBar.Show();
 }
 ```
  
