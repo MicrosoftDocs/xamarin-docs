@@ -293,7 +293,7 @@ You should successfully complete the [previous quickstart](single-page.md) befor
                 FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
                 MainPage = new NavigationPage(new NotesPage());
             }
-            ...
+            // ...
         }
     }
     ```
@@ -576,7 +576,7 @@ You should successfully complete the [previous quickstart](single-page.md) befor
                 FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
                 MainPage = new NavigationPage(new NotesPage());
             }
-            ...
+            // ...
         }
     }
     ```
