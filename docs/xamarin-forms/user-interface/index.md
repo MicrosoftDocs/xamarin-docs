@@ -29,7 +29,7 @@ The `Button` responds to a tap or click that directs an application to carry out
 
 ## [CollectionView](collectionview/index.md)
 
-The `CollectionView` is a flexible and performant view for presenting lists of data using different layout specifications.
+The [`CollectionView`](xref:Xamarin.Forms.CollectionView) is a flexible and performant view for presenting lists of data using different layout specifications.
 
 ## [Colors](colors.md)
 

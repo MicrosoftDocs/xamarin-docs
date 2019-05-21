@@ -13,7 +13,7 @@ ms.date: 10/24/2018
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
-This platform-specific sets the cursor color of an [`Entry`](xref:Xamarin.Forms.Entry) to a specified color. It's consumed in XAML by setting the [`Entry.CursorColor`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.CursorColorProperty) bindable property to a [`Color`](xref:Xamarin.Forms.Color):
+This iOS platform-specific sets the cursor color of an [`Entry`](xref:Xamarin.Forms.Entry) to a specified color. It's consumed in XAML by setting the [`Entry.CursorColor`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.CursorColorProperty) bindable property to a [`Color`](xref:Xamarin.Forms.Color):
 
 ```xaml
 <ContentPage ...

@@ -22,7 +22,7 @@ To declare a [`Style`](xref:Xamarin.Forms.Style) at the page level, a [`Resource
 The following code example shows *explicit* styles declared in XAML in a page's `ResourceDictionary` and applied to the page's [`Label`](xref:Xamarin.Forms.Label) instances:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="labelRedStyle" TargetType="Label">
@@ -70,7 +70,7 @@ In addition, the final [`Label`](xref:Xamarin.Forms.Label) has a [`Style`](xref:
 In addition to creating *explicit* styles at the page level, they can also be created at the control level, as shown in the following code example:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" IconImageSource="xaml.png">
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0">
             <StackLayout.Resources>

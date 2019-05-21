@@ -11,8 +11,6 @@ ms.date: 05/06/2019
 
 # Xamarin.Forms Shell
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
 
 Xamarin.Forms Shell reduces the complexity of mobile application development by providing the fundamental features that most mobile applications require, including:
@@ -26,47 +24,6 @@ In addition, Shell applications benefit from an increased rendering speed, and r
 
 > [!IMPORTANT]
 > Existing iOS and Android applications can adopt Shell and benefit immediately from navigation, performance, and extensibility improvements.
-
-Shell is currently experimental, and can only be used by adding `Forms.SetFlags("Shell_Experimental");` to your platform project, prior to invoking the `Forms.Init` method.
-
-# [Android](#tab/android)
-
-```csharp
-public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-{
-    protected override void OnCreate(Bundle savedInstanceState)
-    {
-        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
-
-        TabLayoutResource = Resource.Layout.Tabbar;
-        ToolbarResource = Resource.Layout.Toolbar;
-
-        base.OnCreate(savedInstanceState);
-
-        global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-        LoadApplication(new App());
-    }
-}
-```
-
-# [iOS](#tab/ios)
-
-```csharp
-public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
-{
-    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-    {
-        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
-
-        global::Xamarin.Forms.Forms.Init();
-        LoadApplication(new App());
-
-        return base.FinishedLaunching(app, options);
-    }
-}
-```
-
-----
 
 ## Shell navigation experience
 
@@ -191,7 +148,6 @@ In addition, these properties can be set using Cascading Style Sheets (CSS). For
 The `Shell` class defines the following properties that affect the layout of Shell application content:
 
 - `NavBarIsVisible`, of type `boolean`, an attached property that defines if the navigation bar should be visible when a page is presented. This property should be set on a page, and its default value is `true`.
-- `SetPaddingInsets`, of type `bool`, an attached property that controls whether page content will flow under any Shell chrome. This property should be set on a page, and its default value is `false`.
 - `TabBarIsVisible`, of type `bool`, an attached property that defines if the tab bar should be visible when a page is presented. This property should be set on a page, and its default value is `true`.
 - `TitleView`, of type `View`, an attached property that defines the `TitleView` for a page. This property should be set on a page.
 

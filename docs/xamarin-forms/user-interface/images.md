@@ -98,13 +98,13 @@ UWP image file names [can be suffixed with `.scale-xxx` before the file extensio
 
 Some controls have properties that display an image, such as:
 
-- [`Page`](xref:Xamarin.Forms.Page) - Any page type that derives from `Page` has [`Icon`](xref:Xamarin.Forms.Page.Icon) and [`BackgroundImage`](xref:Xamarin.Forms.Page.BackgroundImage) properties, which can be assigned a local file reference. Under certain circumstances, such as when a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is displaying a [`ContentPage`](xref:Xamarin.Forms.ContentPage), the icon will be displayed if supported by the platform.
+- [`Page`](xref:Xamarin.Forms.Page) - Any page type that derives from `Page` has [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) and [`BackgroundImageSource`](xref:Xamarin.Forms.Page.BackgroundImageSource) properties, which can be assigned a file, embedded resource, URI, or stream. Under certain circumstances, such as when a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is displaying a [`ContentPage`](xref:Xamarin.Forms.ContentPage), the icon will be displayed if supported by the platform.
 
   > [!IMPORTANT]
-  > On iOS, the [`Page.Icon`](xref:Xamarin.Forms.Page.Icon) property can't be populated from an image in an asset catalog image set. Instead, load icon images for the `Page.Icon` property from the **Resources** folder in the iOS project.
+  > On iOS, the [`Page.IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) property can't be populated from an image in an asset catalog image set. Instead, load icon images for the `Page.IconImageSource` property from a file, embedded resource, URI, or stream.
 
-- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) - Has an [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) property that can be set to a local file reference.
-- [`ImageCell`](xref:Xamarin.Forms.ImageCell) - Has an [`ImageSource`](xref:Xamarin.Forms.ImageCell.ImageSource) property that can be set to an image retrieved from a local file, an embedded resource, or a URI.
+- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) - Has an [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) property that can be set to an image that's loaded from a file, embedded resource, URI, or stream.
+- [`ImageCell`](xref:Xamarin.Forms.ImageCell) - Has an [`ImageSource`](xref:Xamarin.Forms.ImageCell.ImageSource) property that can be set to an image retrieved from a file, embedded resource, URI, or stream.
 
 ## Embedded Images
 

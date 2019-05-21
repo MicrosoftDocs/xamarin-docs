@@ -11,8 +11,6 @@ ms.date: 05/06/2019
 
 # Xamarin.Forms Shell Navigation
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
 
 Xamarin.Forms Shell includes a URI-based navigation experience that uses routes to navigate to any page in the application, without having to follow a set navigation hierarchy. In addition, it also provides the ability to navigate backwards without having to visit all of the pages on the navigation stack.
@@ -269,7 +267,7 @@ async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEvent
 }
 ```
 
-This code example retrieves the currently selected elephant in the `CollectionView`, and navigates to the `elephantdetails` route, passing `elephantName` as a query parameter. Note that query parameters will be URL encoded for navigation, so "Indian Elephant" will become "Indian%20Elephant".
+This code example retrieves the currently selected elephant in the [`CollectionView`](xref:Xamarin.Forms.CollectionView), and navigates to the `elephantdetails` route, passing `elephantName` as a query parameter. Note that query parameters will be URL encoded for navigation, so "Indian Elephant" will become "Indian%20Elephant".
 
 To receive data, the class that represents the page being navigated to, or the class for the page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext), must be decorated with a `QueryPropertyAttribute` for each query parameter:
 

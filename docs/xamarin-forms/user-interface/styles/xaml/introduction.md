@@ -20,7 +20,7 @@ Xamarin.Forms applications often contain multiple controls that have an identica
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Styles.NoStylesPage"
     Title="No Styles"
-    Icon="xaml.png">
+    IconImageSource="xaml.png">
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0">
             <Label Text="These labels"
@@ -48,7 +48,7 @@ public class NoStylesPageCS : ContentPage
     public NoStylesPageCS ()
     {
         Title = "No Styles";
-        Icon = "csharp.png";
+        IconImageSource = "csharp.png";
         Padding = new Thickness (0, 20, 0, 0);
 
         Content = new StackLayout {

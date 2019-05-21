@@ -144,7 +144,7 @@ On Android, to set the text that screen readers will read for the back arrow in 
 
 ### MasterDetailPage
 
-On iOS and the Universal Windows Platform (UWP), to set the text that screen readers will read for the toggle button on a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), either set the `AutomationProperties.Name`, and `AutomationProperties.HelpText` properties on the `MasterDetailPage`, or on the `Icon` property of the `Master` page.
+On iOS and the Universal Windows Platform (UWP), to set the text that screen readers will read for the toggle button on a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), either set the `AutomationProperties.Name`, and `AutomationProperties.HelpText` properties on the `MasterDetailPage`, or on the `IconImageSource` property of the `Master` page.
 
 On Android, to set the text that screen readers will read for the toggle button on a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), add string resources to the Android project:
 
@@ -156,11 +156,11 @@ On Android, to set the text that screen readers will read for the toggle button 
 </resources>
 ```
 
-Then set the `AutomationId` property of the `Icon` property of the `Master` page to the appropriate string:
+Then set the `AutomationId` property of the `IconImageSource` property of the `Master` page to the appropriate string:
 
 ```csharp
 var master = new ContentPage { ... };
-master.Icon.AutomationId = "btnMDPAutomationID";
+master.IconImageSource.AutomationId = "btnMDPAutomationID";
 ```
 
 ### ToolbarItem

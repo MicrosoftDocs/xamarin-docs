@@ -29,7 +29,7 @@ All six styles can only be applied to [`Label`](xref:Xamarin.Forms.Label) instan
 The following code example demonstrates using the *device* styles in a XAML page:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DeviceStylesPage" Title="Device" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DeviceStylesPage" Title="Device" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="myBodyStyle" TargetType="Label"
@@ -84,7 +84,7 @@ public class DeviceStylesPageCS : ContentPage
         };
 
         Title = "Device";
-        Icon = "csharp.png";
+        IconImageSource = "csharp.png";
         Padding = new Thickness (0, 20, 0, 0);
 
         Content = new StackLayout {

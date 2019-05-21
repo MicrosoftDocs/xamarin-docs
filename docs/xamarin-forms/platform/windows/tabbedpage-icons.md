@@ -27,13 +27,13 @@ This Universal Windows Platform platform-specific enables page icons to be displ
             </x:Arguments>
         </Size>
     </windows:TabbedPage.HeaderIconsSize>
-    <ContentPage Title="Todo" Icon="todo.png">
+    <ContentPage Title="Todo" IconImageSource="todo.png">
         ...
     </ContentPage>
-    <ContentPage Title="Reminders" Icon="reminders.png">
+    <ContentPage Title="Reminders" IconImageSource="reminders.png">
         ...
     </ContentPage>
-    <ContentPage Title="Contacts" Icon="contacts.png">
+    <ContentPage Title="Contacts" IconImageSource="contacts.png">
         ...
     </ContentPage>
 </TabbedPage>
@@ -53,9 +53,9 @@ public class WindowsTabbedPageIconsCS : Xamarin.Forms.TabbedPage
     On<Windows>().SetHeaderIconsEnabled(true);
     On<Windows>().SetHeaderIconsSize(new Size(24, 24));
 
-    Children.Add(new ContentPage { Title = "Todo", Icon = "todo.png" });
-    Children.Add(new ContentPage { Title = "Reminders", Icon = "reminders.png" });
-    Children.Add(new ContentPage { Title = "Contacts", Icon = "contacts.png" });
+    Children.Add(new ContentPage { Title = "Todo", IconImageSource = "todo.png" });
+    Children.Add(new ContentPage { Title = "Reminders", IconImageSource = "reminders.png" });
+    Children.Add(new ContentPage { Title = "Contacts", IconImageSource = "contacts.png" });
   }
 }
 ```

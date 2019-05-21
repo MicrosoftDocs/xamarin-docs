@@ -11,8 +11,6 @@ ms.date: 05/06/2019
 
 # Xamarin.Forms Shell
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 ## [Introduction](introduction.md)
 
 Xamarin.Forms Shell reduces the complexity of mobile application development by providing the fundamental features that most mobile applications require. This includes a common navigation user experience, a URI-based navigation scheme, and an integrated search handler.

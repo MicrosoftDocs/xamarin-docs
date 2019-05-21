@@ -11,8 +11,6 @@ ms.date: 05/06/2019
 
 # Xamarin.Forms Shell Flyout
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
 
 The flyout is the root menu for a Shell application, and is accessible through an icon or by swiping from the side of the screen. The flyout consists of an optional header, flyout items, and optional menu items:
@@ -178,8 +176,8 @@ Shell has implicit conversion operators that enable the Shell visual hierarchy t
     <Shell.FlyoutHeader>
         <controls:FlyoutHeader />
     </Shell.FlyoutHeader>
-    <views:CatsPage Icon="cat.png" />
-    <views:DogsPage Icon="dog.png" />
+    <views:CatsPage IconImageSource="cat.png" />
+    <views:DogsPage IconImageSource="dog.png" />
 </Shell>
 ```
 
@@ -363,11 +361,11 @@ The `Shell.MenuItems` collection defines the list of [`MenuItem`](xref:Xamarin.F
     ...            
     <Shell.MenuItems>
         <MenuItem Text="Random"
-                  Icon="random.png"
+                  IconImageSource="random.png"
                   BindingContext="{x:Reference self}"
                   Command="{Binding RandomPageCommand}" />
         <MenuItem Text="Help"
-                  Icon="help.png"
+                  IconImageSource="help.png"
                   BindingContext="{x:Reference self}"
                   Command="{Binding HelpCommand}"
                   CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
@@ -410,7 +408,7 @@ This example displays the title of each `MenuItem` object in italics:
 [![Screenshot of templated MenuItem objects, on iOS and Android](flyout-images/menuitem-templated.png "Shell templated MenuItem objects")](flyout-images/menuitem-templated-large.png#lightbox "Shell templated MenuItem objects")
 
 > [!NOTE]
-> Shell provides the [`Text`](xref:Xamarin.Forms.MenuItem.Text) and [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) properties to the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `MenuItemTemplate`.`
+> Shell provides the [`Text`](xref:Xamarin.Forms.MenuItem.Text) and [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) properties to the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `MenuItemTemplate`.`
 
 ## Related links
 
