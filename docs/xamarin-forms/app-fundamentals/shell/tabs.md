@@ -11,7 +11,7 @@ ms.date: 05/06/2019
 
 # Xamarin.Forms Shell Tabs
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 After a flyout, the next level of navigation in a Shell application is the bottom tab bar. Alternatively, when the flyout is closed the bottom tab bar is considered to be the top level of navigation.
 
@@ -261,11 +261,11 @@ This XAML creates and displays `CatsPage`, because it's the first item of conten
 
 The `Shell` class defines the following properties that control the appearance of tabs:
 
-- `ShellTabBarBackgroundColor`, of type `Color`, an attached property that defines the background color for the tab bar. If the property is unset, the `ShellBackgroundColor` property value is used.
-- `ShellTabBarDisabledColor`, of type `Color`, an attached property that defines the disabled color for the tab bar. If the property is unset, the `ShellDisabledColor` property value is used.
-- `ShellTabBarForegroundColor`, of type `Color`, an attached property that defines the foreground color for the tab bar. If the property is unset, the `ShellForegroundColor` property value is used.
-- `ShellTabBarTitleColor`, of type `Color`, an attached property that defines the title color for the tab bar. If the property is unset, the `ShellTitleColor` property value will be used.
-- `ShellTabBarUnselectedColor`, of type `Color`, an attached property that defines the unselected color for the tab bar. If the property is unset, the `ShellUnselectedColor` property value is used.
+- `TabBarBackgroundColor`, of type `Color`, an attached property that defines the background color for the tab bar. If the property is unset, the `BackgroundColor` property value is used.
+- `TabBarDisabledColor`, of type `Color`, an attached property that defines the disabled color for the tab bar. If the property is unset, the `DisabledColor` property value is used.
+- `TabBarForegroundColor`, of type `Color`, an attached property that defines the foreground color for the tab bar. If the property is unset, the `ForegroundColor` property value is used.
+- `TabBarTitleColor`, of type `Color`, an attached property that defines the title color for the tab bar. If the property is unset, the `TitleColor` property value will be used.
+- `TabBarUnselectedColor`, of type `Color`, an attached property that defines the unselected color for the tab bar. If the property is unset, the `UnselectedColor` property value is used.
 
 All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings.
 
@@ -274,11 +274,11 @@ Therefore, tabs can be styled using XAML styles. The following example shows a X
 ```xaml
 <Style x:Key="BaseStyle"
        TargetType="Element">
-    <Setter Property="Shell.ShellTabBarBackgroundColor"
+    <Setter Property="Shell.TabBarBackgroundColor"
             Value="#3498DB" />
-    <Setter Property="Shell.ShellTabBarTitleColor"
+    <Setter Property="Shell.TabBarTitleColor"
             Value="White" />
-    <Setter Property="Shell.ShellTabBarUnselectedColor"
+    <Setter Property="Shell.TabBarUnselectedColor"
             Value="#B4FFFFFF" />
 </Style>
 ```
@@ -287,6 +287,6 @@ In addition, tabs can also be styled using Cascading Style Sheets (CSS). For mor
 
 ## Related links
 
-- [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Xamarin.Forms Shell Navigation](navigation.md)
 - [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

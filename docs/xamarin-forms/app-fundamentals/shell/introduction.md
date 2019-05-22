@@ -11,7 +11,7 @@ ms.date: 05/06/2019
 
 # Xamarin.Forms Shell
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Xamarin.Forms Shell reduces the complexity of mobile application development by providing the fundamental features that most mobile applications require, including:
 
@@ -23,7 +23,7 @@ Xamarin.Forms Shell reduces the complexity of mobile application development by 
 In addition, Shell applications benefit from an increased rendering speed, and reduced memory consumption.
 
 > [!IMPORTANT]
-> Existing iOS and Android applications can adopt Shell and benefit immediately from navigation, performance, and extensibility improvements.
+> Xamarin.Forms Shell is only available on iOS and Android. Existing iOS and Android applications can adopt Shell and benefit immediately from navigation, performance, and extensibility improvements.
 
 ## Shell navigation experience
 
@@ -155,5 +155,5 @@ All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.Bi
 
 ## Related links
 
-- [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)
