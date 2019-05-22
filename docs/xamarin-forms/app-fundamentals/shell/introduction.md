@@ -133,11 +133,11 @@ In this example, the `AppShell` class is a XAML file that derives from the `Shel
 
 The `Shell` class defines the following properties that control the appearance of a Shell application:
 
-- `ShellBackgroundColor`, of type `Color` an attached property that defines the background color in the Shell chrome. The color will not fill in behind the Shell content.
-- `ShellDisabledColor`, of type `Color`, an attached property that defines the color to shade text and icons that are disabled.
-- `ShellForegroundColor`, of type `Color`, an attached property that defines the color to shade text and icons.
-- `ShellTitleColor`, of type `Color`, an attached property that defines the color used for the title of the current page.
-- `ShellUnselectedColor`, of type `Color`, an attached property that defines the color used for unselected text and icons in the Shell chrome.
+- `BackgroundColor`, of type `Color` an attached property that defines the background color in the Shell chrome. The color will not fill in behind the Shell content.
+- `DisabledColor`, of type `Color`, an attached property that defines the color to shade text and icons that are disabled.
+- `ForegroundColor`, of type `Color`, an attached property that defines the color to shade text and icons.
+- `TitleColor`, of type `Color`, an attached property that defines the color used for the title of the current page.
+- `UnselectedColor`, of type `Color`, an attached property that defines the color used for unselected text and icons in the Shell chrome.
 
 All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings.
 
