@@ -33,7 +33,7 @@ Xamarin.Forms has a modal pop-up, known as an action sheet, that can be used to 
 
     Observe that, after selecting an alternative in the action sheet dialog, the selection is output to the Visual Studio **Output** window.
 
-    For more information about displaying action sheets, see [Guiding users through tasks](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#guiding-users-through-tasks) in the [Displaying Pop-ups](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md) guide.
+    For more information about displaying action sheets, see [Guide users through tasks](~/xamarin-forms/user-interface/pop-ups.md#guiding-users-through-tasks) in the [Display Pop-ups](~/xamarin-forms/user-interface/pop-ups.md) guide.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -67,4 +67,4 @@ Xamarin.Forms has a modal pop-up, known as an action sheet, that can be used to 
 
     Observe that, after selecting an alternative in the action sheet dialog, the selection is output to the Visual Studio for Mac **Application Output** window.
 
-    For more information about displaying action sheets, see [Guiding users through tasks](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#guiding-users-through-tasks) in the [Displaying Pop-ups](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md) guide.
+    For more information about displaying action sheets, see [Guide users through tasks](~/xamarin-forms/user-interface/pop-ups.md#guiding-users-through-tasks) in the [Display Pop-ups](~/xamarin-forms/user-interface/pop-ups.md) guide.
