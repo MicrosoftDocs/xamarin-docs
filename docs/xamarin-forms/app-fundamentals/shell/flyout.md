@@ -6,7 +6,7 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
+ms.date: 05/23/2019
 ---
 
 # Xamarin.Forms Shell Flyout
@@ -128,7 +128,9 @@ The following example shows how to collapse the flyout header as the user scroll
 
 ## Flyout items
 
-Every subclassed `Shell` object must contain one or more `FlyoutItem` objects, with each `FlyoutItem` object representing an item on the flyout. The following example creates a flyout containing a flyout header and two flyout items:
+When the navigation pattern for an application includes a flyout, the subclassed `Shell` object must contain one or more `FlyoutItem` objects, with each `FlyoutItem` object representing an item on the flyout. Each `FlyoutItem` object should be a child of the `Shell` object.
+
+The following example creates a flyout containing a flyout header and two flyout items:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -165,7 +167,7 @@ In this example, each [`ContentPage`](xref:Xamarin.Forms.ContentPage) can only b
 > [!NOTE]
 > When a flyout header isn't present, flyout items appear at the top of the flyout. Otherwise, they appear below the flyout header.
 
-Shell has implicit conversion operators that enable the Shell visual hierarchy to be simplified, without introducing additional views into the visual tree. This is possible because a subclassed `Shell` object can only ever contain `FlyoutItem` objects, which can only ever contain `Tab` objects, which can only ever contain `ShellContent` objects. These implicit conversion operators can be used to remove the `FlyoutItem`, `Tab`, and `ShellContent` objects from the previous example:
+Shell has implicit conversion operators that enable the Shell visual hierarchy to be simplified, without introducing additional views into the visual tree. This is possible because a subclassed `Shell` object can only ever contain `FlyoutItem` objects or a `TabBar` object, which can only ever contain `Tab` objects, which can only ever contain `ShellContent` objects. These implicit conversion operators can be used to remove the `FlyoutItem`, `Tab`, and `ShellContent` objects from the previous example:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -188,11 +190,11 @@ This implicit conversion automatically wraps each [`ContentPage`](xref:Xamarin.F
 
 ### FlyoutItem class
 
-The `FlyoutItem` class includes the following properties that control its appearance and behavior:
+The `FlyoutItem` class includes the following properties that control flyout item appearance and behavior:
 
 - `FlyoutDisplayOptions`, of type `FlyoutDisplayOptions`, defines how the item and its children are displayed in the flyout. The default value is `AsSingleItem`.
 - `CurrentItem`, of type `Tab`, the selected item.
-- `Items`, of type `ShellSectionCollection`, defines all of the tabs within a `FlyoutItem`.
+- `Items`, of type `IList<Tab>`, defines all of the tabs within a `FlyoutItem`.
 - `FlyoutIcon`, of type `ImageSource`, the icon to use for the item. If this property is unset, it will fallback to using the `Icon` property value.
 - `Icon`, of type `ImageSource`, defines the icon to display in parts of the chrome that are not the flyout.
 - `IsChecked`, of type `boolean`, defines if the item is currently highlighted in the flyout.
@@ -263,7 +265,7 @@ By setting the `FlyoutItem.FlyoutDisplayOptions` property to `AsMultipleItems`, 
 </Shell>
 ```
 
-In this example, flyout items are created for the `Tab` object that's a child of the `FlyoutItem` object, and the `Shellontent` objects that are children of the `FlyoutItem` object. This occurs because each `ShellContent` object that's a child of the `FlyoutItem` object is automatically wrapped in a `Tab` object. In addition, a flyout item is created for the final `ShellContent` object, which is wrapped in a `Tab` object, and then in a `FlyoutItem` object.
+In this example, flyout items are created for the `Tab` object that's a child of the `FlyoutItem` object, and the `ShellContent` objects that are children of the `FlyoutItem` object. This occurs because each `ShellContent` object that's a child of the `FlyoutItem` object is automatically wrapped in a `Tab` object. In addition, a flyout item is created for the final `ShellContent` object, which is wrapped in a `Tab` object, and then in a `FlyoutItem` object.
 
 This results in the following flyout items:
 
@@ -271,7 +273,7 @@ This results in the following flyout items:
 
 ## Define FlyoutItem appearance
 
-The appearance of each `FlyoutItem` can be customized by setting the `Shell.ItemTemplate` property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
+The appearance of each `FlyoutItem` can be customized by setting the `Shell.ItemTemplate` attached property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
 ```xaml
 <Shell ...>
@@ -283,7 +285,7 @@ The appearance of each `FlyoutItem` can be customized by setting the `Shell.Item
                     <ColumnDefinition Width="0.2*" />
                     <ColumnDefinition Width="0.8*" />
                 </Grid.ColumnDefinitions>
-                <Image Source="{Binding Icon}"
+                <Image Source="{Binding FlyoutIcon}"
                        Margin="5"
                        HeightRequest="45" />
                 <Label Grid.Column="1"
@@ -301,7 +303,7 @@ This example displays the title of each `FlyoutItem` object in italics:
 [![Screenshot of templated FlyoutItem objects, on iOS and Android](flyout-images/flyoutitem-templated.png "Shell templated FlyoutItem objects")](flyout-images/flyoutitem-templated-large.png#lightbox "Shell templated FlyoutItem objects")
 
 > [!NOTE]
-> Shell provides the `Title` and `Icon` properties to the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `ItemTemplate`.
+> Shell provides the `Title` and `FlyoutIcon` properties to the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `ItemTemplate`.
 
 ## FlyoutItem tab order
 
@@ -348,7 +350,7 @@ Shell.Current.CurrentItem = aboutItem;
 
 ## Menu items
 
-Menu items optionally appear on the flyout, beneath flyout items. Each menu item is represented by a [`MenuItem`](xref:Xamarin.Forms.MenuItem) object.
+Menu items can be optionally added to the flyout, and each menu item is represented by a [`MenuItem`](xref:Xamarin.Forms.MenuItem) object. The position of `MenuItem` objects on the flyout is dependent upon their declaration order in the Shell visual hierarchy. Therefore, any `MenuItem` objects declared before `FlyoutItem` objects will appear at the top of the flyout, and any `MenuItem` objects declared after `FlyoutItem` objects will appear at the bottom of the flyout.
 
 > [!NOTE]
 > The `MenuItem` class has a [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) event, and a [`Command`](xref:Xamarin.Forms.MenuItem.Command) property. Therefore, `MenuItem` objects enable scenarios that execute an action in response to the `MenuItem` being tapped. These scenarios include performing navigation, and opening a web browser on a specific web page.
@@ -368,7 +370,7 @@ Menu items optionally appear on the flyout, beneath flyout items. Each menu item
 </Shell>
 ```
 
-This code adds two [`MenuItem`](xref:Xamarin.Forms.MenuItem) objects to the flyout:
+This code adds two [`MenuItem`](xref:Xamarin.Forms.MenuItem) objects to the flyout, beneath all flyout items:
 
 [![Screenshot of flyout containing MenuItem objects, on iOS and Android](flyout-images/flyout.png "Shell flyout containing MenuItem objects")](flyout-images/flyout-large.png#lightbox "Shell flyout containing MenuItem objects")
 
@@ -379,34 +381,84 @@ The first [`MenuItem`](xref:Xamarin.Forms.MenuItem) object executes an `ICommand
 
 ## Define MenuItem appearance
 
-The appearance of each `MenuItem` can be customized by setting the `Shell.MenuItemTemplate` property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
+The appearance of each `MenuItem` can be customized by setting the `Shell.MenuItemTemplate` attached property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
 ```xaml
-<Shell.MenuItemTemplate>
-    <DataTemplate>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*" />
-                <ColumnDefinition Width="0.8*" />
-            </Grid.ColumnDefinitions>
-            <Image Source="{Binding Icon}"
-                   Margin="5"
-                   HeightRequest="45" />
-            <Label Grid.Column="1"
-                   Text="{Binding Text}"
-                   FontAttributes="Italic"
-                   VerticalTextAlignment="Center" />
-        </Grid>
-    </DataTemplate>
-</Shell.MenuItemTemplate>
+<Shell ...>
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Icon}"
+                       Margin="5"
+                       HeightRequest="45" />
+                <Label Grid.Column="1"
+                       Text="{Binding Text}"
+                       FontAttributes="Italic"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+    ...
+    <MenuItem Text="Random"
+              IconImageSource="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              IconImageSource="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />  
+</Shell>
 ```
 
-This example displays the title of each `MenuItem` object in italics:
+This example attaches the Shell-level `MenuItemTemplate` to each `MenuItem` object, displaying the title of each `MenuItem` object in italics:
 
 [![Screenshot of templated MenuItem objects, on iOS and Android](flyout-images/menuitem-templated.png "Shell templated MenuItem objects")](flyout-images/menuitem-templated-large.png#lightbox "Shell templated MenuItem objects")
 
 > [!NOTE]
 > Shell provides the [`Text`](xref:Xamarin.Forms.MenuItem.Text) and [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) properties to the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `MenuItemTemplate`.`
+
+Because `Shell.MenuItemTemplate` is an attached property, different templates can be attached to specific `MenuItem` objects:
+
+```xaml
+<Shell ...>
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Icon}"
+                       Margin="5"
+                       HeightRequest="45" />
+                <Label Grid.Column="1"
+                       Text="{Binding Text}"
+                       FontAttributes="Italic"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+    ...
+    <MenuItem Text="Random"
+              IconImageSource="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              Icon="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell">
+        <Shell.MenuItemTemplate>
+            <DataTemplate>
+                ...
+            </DataTemplate>
+        </Shell.MenuItemTemplate>
+    </MenuItem>
+</Shell>
+```
+
+This example attaches the Shell-level `MenuItemTemplate` to the first `MenuItem` object, and attaches the inline `MenuItemTemplate` to the second `MenuItem`.
 
 ## Related links
 

@@ -21,7 +21,7 @@ The flyout is the root menu for a Shell application, and is accessible through a
 
 ## [Tabs](tabs.md)
 
-After a flyout, the next level of navigation in a Shell application is the bottom tab bar. When a tab contains more than one page, the pages will be navigable by top tabs.
+After a flyout, the next level of navigation in a Shell application is the bottom tab bar. Alternatively, the navigation pattern for an application can begin with bottom tabs and make no use of a flyout. In both cases, when a bottom tab contains more than one page, the pages will be navigable by top tabs.
 
 ## [Navigation](navigation.md)
 
