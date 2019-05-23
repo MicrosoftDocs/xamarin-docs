@@ -47,6 +47,10 @@ DataPages provide an API to quickly and easily bind a data source to pre-built v
 
 The `DatePicker` allows a user to select a date within a specified range. It is implemented using the date picker supported by the particular platform that the application is run on.
 
+## [Display Pop-Ups](pop-ups.md)
+
+Xamarin.Forms provides two pop-up-like user interface elements: an alert and an action sheet. These interface elements can be used to display dialog boxes that ask users simple questions and guide users through tasks.
+
 ## [Graphics with SkiaSharp](graphics/skiasharp/index.md)
 
 How to incorporate graphics into a Xamarin.Forms application using SkiaSharp.

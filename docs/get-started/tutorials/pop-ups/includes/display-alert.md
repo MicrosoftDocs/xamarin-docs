@@ -59,7 +59,7 @@ Xamarin.Forms has a modal pop-up, known as an alert, to alert the user, or to as
 
     Observe that, after selecting a response to the question, the response is output to the Visual Studio **Output** window.
 
-    For more information about displaying alerts, see [Displaying an alert](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#displaying-an-alert) in the [Displaying Pop-ups](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md) guide.
+    For more information about displaying alerts, see [Display an alert](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) in the [Display Pop-ups](~/xamarin-forms/user-interface/pop-ups.md) guide.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -120,4 +120,4 @@ Xamarin.Forms has a modal pop-up, known as an alert, to alert the user, or to as
 
     Observe that, after selecting a response to the question, the response is output to the Visual Studio for Mac **Application Output** window.
 
-    For more information about displaying alerts, see [Displaying an alert](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#displaying-an-alert) in the [Displaying Pop-ups](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md) guide.
+    For more information about displaying alerts, see [Display an alert](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) in the [Display Pop-ups](~/xamarin-forms/user-interface/pop-ups.md) guide.
