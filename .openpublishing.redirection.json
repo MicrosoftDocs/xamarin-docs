@@ -319,6 +319,10 @@
     {
       "source_path": "docs/ios/get-started/installation/windows/connecting-to-mac/2019-preview.md",
       "redirect_url": "/xamarin/ios/get-started/installation/windows/connecting-to-mac"
+    },
+    {
+        "source_path": "docs/xamarin-forms/app-fundamentals/navigation/pop-ups.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/pop-ups"
     }
   ]
 }
