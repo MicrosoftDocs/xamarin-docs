@@ -106,7 +106,7 @@ The following XAML code example shows the declaration of the `MasterPage` object
              xmlns:local="using:MasterDetailPageNavigation"
              x:Class="MasterDetailPageNavigation.MasterPage"
              Padding="0,40,0,0"
-             Icon="hamburger.png"
+             IconImageSource="hamburger.png"
              Title="Personal Organiser">
     <StackLayout>
         <ListView x:Name="listView" x:FieldModifier="public">
@@ -140,7 +140,7 @@ The page consists of a [`ListView`](xref:Xamarin.Forms.ListView) that's populate
 
 A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) is assigned to the [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) property, to display each `MasterPageItem`. The `DataTemplate` contains a [`ViewCell`](xref:Xamarin.Forms.ViewCell) that consists of an [`Image`](xref:Xamarin.Forms.Image) and a [`Label`](xref:Xamarin.Forms.Label). The [`Image`](xref:Xamarin.Forms.Image) displays the `IconSource` property value, and the [`Label`](xref:Xamarin.Forms.Label) displays the `Title` property value, for each `MasterPageItem`.
 
-The page has its [`Title`](xref:Xamarin.Forms.Page.Title) and [`Icon`](xref:Xamarin.Forms.Page.Icon) properties set. The icon will appear on the detail page, provided that the detail page has a title bar. This must be enabled on iOS by wrapping the detail page instance in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance.
+The page has its [`Title`](xref:Xamarin.Forms.Page.Title) and [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) properties set. The icon will appear on the detail page, provided that the detail page has a title bar. This must be enabled on iOS by wrapping the detail page instance in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance.
 
 > [!NOTE]
 > The [`MasterDetailPage.Master`](xref:Xamarin.Forms.MasterDetailPage.Master) page must have its [`Title`](xref:Xamarin.Forms.Page.Title) property set, or an exception will occur.
@@ -193,7 +193,7 @@ public class MasterPageCS : ContentPage
       SeparatorVisibility = SeparatorVisibility.None
     };
 
-    Icon = "hamburger.png";
+    IconImageSource = "hamburger.png";
     Title = "Personal Organiser";
     Content = new StackLayout
     {
@@ -234,7 +234,7 @@ public partial class MainPage : MasterDetailPage
 
 The `OnItemSelected` method performs the following actions:
 
-- It retrieves the [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) from the [`ListView`](xref:Xamarin.Forms.ListView) instance, and provided that it's not `null`, sets the detail page to a new instance of the page type stored in the `TargetType` property of the `MasterPageItem`. The page type is wrapped in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance to ensure that the icon referenced through the [`Icon`](xref:Xamarin.Forms.Page.Icon) property on the `MasterPage` is shown on the detail page in iOS.
+- It retrieves the [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) from the [`ListView`](xref:Xamarin.Forms.ListView) instance, and provided that it's not `null`, sets the detail page to a new instance of the page type stored in the `TargetType` property of the `MasterPageItem`. The page type is wrapped in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance to ensure that the icon referenced through the [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) property on the `MasterPage` is shown on the detail page in iOS.
 - The selected item in the [`ListView`](xref:Xamarin.Forms.ListView) is set to `null` to ensure that none of the `ListView` items will be selected next time the `MasterPage` is presented.
 - The detail page is presented to the user by setting the [`MasterDetailPage.IsPresented`](xref:Xamarin.Forms.MasterDetailPage.IsPresented) property to `false`. This property controls whether the master or detail page is presented. It should be set to `true` to display the master page, and to `false` to display the detail page.
 

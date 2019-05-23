@@ -24,7 +24,7 @@ Styles that inherit from a base style can include [`Setter`](xref:Xamarin.Forms.
 The following code demonstrates *explicit* style inheritance in a XAML page:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="baseStyle" TargetType="View">
@@ -57,7 +57,7 @@ The following code demonstrates *explicit* style inheritance in a XAML page:
 </ContentPage>
 ```
 
-The `baseStyle` targets [`View`](xref:Xamarin.Forms.View) instances, and sets the [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties. The `baseStyle` is not set directly on any controls. Instead, `labelStyle` and `buttonStyle` inherit from it, setting additional bindable property values. The `labelStyle` and `buttonStyle` are then applied to the [`Label`](xref:Xamarin.Forms.Label) instances and [`Button`](xref:Xamarin.Forms.Button) instance, by setting their [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties. This results in the appearance shown in the following screenshots:
+The `baseStyle` targets [`View`](xref:Xamarin.Forms.View) instances, and sets the [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties. The `baseStyle` is not set directly on any controls. Instead, `labelStyle` and `buttonStyle` inherit from it, setting additional bindable property values. The `labelStyle` and `buttonStyle` are then applied to the [`Label`](xref:Xamarin.Forms.Label) instances and [`Button`](xref:Xamarin.Forms.Button) instance, by setting their [`Style`](xref:Xamarin.Forms.NavigableElement.Style) properties. This results in the appearance shown in the following screenshots:
 
 [![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
 
@@ -75,7 +75,7 @@ A style can only inherit from styles at the same level, or above, in the view hi
 This inheritance chain is demonstrated in the following code example:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="baseStyle" TargetType="View">
@@ -105,7 +105,7 @@ In this example, `labelStyle` and `buttonStyle` are control level resources, whi
 
 ## Style inheritance in C&#35;
 
-The equivalent C# page, where [`Style`](xref:Xamarin.Forms.Style) instances are assigned directly to the [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties of the required controls, is shown in the following code example:
+The equivalent C# page, where [`Style`](xref:Xamarin.Forms.Style) instances are assigned directly to the [`Style`](xref:Xamarin.Forms.NavigableElement.Style) properties of the required controls, is shown in the following code example:
 
 ```csharp
 public class StyleInheritancePageCS : ContentPage
@@ -148,7 +148,7 @@ public class StyleInheritancePageCS : ContentPage
 }
 ```
 
-The `baseStyle` targets [`View`](xref:Xamarin.Forms.View) instances, and sets the [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties. The `baseStyle` is not set directly on any controls. Instead, `labelStyle` and `buttonStyle` inherit from it, setting additional bindable property values. The `labelStyle` and `buttonStyle` are then applied to the [`Label`](xref:Xamarin.Forms.Label) instances and [`Button`](xref:Xamarin.Forms.Button) instance, by setting their [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties.
+The `baseStyle` targets [`View`](xref:Xamarin.Forms.View) instances, and sets the [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties. The `baseStyle` is not set directly on any controls. Instead, `labelStyle` and `buttonStyle` inherit from it, setting additional bindable property values. The `labelStyle` and `buttonStyle` are then applied to the [`Label`](xref:Xamarin.Forms.Label) instances and [`Button`](xref:Xamarin.Forms.Button) instance, by setting their [`Style`](xref:Xamarin.Forms.NavigableElement.Style) properties.
 
 ## Related links
 

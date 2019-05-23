@@ -11,8 +11,6 @@ ms.date: 05/06/2019
 
 # Xamarin.Forms Shell Custom Renderers
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 One of the advantages of Xamarin.Forms Shell applications is that their appearance and behavior is highly customizable through the properties and methods that the various Shell classes expose. However, it's also possible to create a Shell custom renderer when more sophisticated platform-specific customizations are required. As with other custom renderers, a Shell custom renderer can be added to just one platform project to customize appearance and behavior, while allowing the default behavior on the other platform; or a different Shell custom renderer can be added to each platform project to customize appearance and behavior on both iOS and Android.
 
 Shell applications are rendered using the `ShellRenderer` class on iOS and Android. On iOS, the `ShellRenderer` class can be found in the `Xamarin.Forms.Platform.iOS` namespace. On Android, the `ShellRenderer` class can be found in the `Xamarin.Forms.Platform.Android` namespace.

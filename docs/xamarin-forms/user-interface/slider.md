@@ -44,10 +44,10 @@ The `Slider` also defines several properties that affect its appearance:
 - [`MinimumTrackColor`](xref:Xamarin.Forms.Slider.MinimumTrackColorProperty) is the bar color on the left side of the thumb.
 - [`MaximumTrackColor`](xref:Xamarin.Forms.Slider.MaximumTrackColorProperty) is the bar color on the right side of the thumb.
 - [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) is the thumb color.
-- [`ThumbImage`](xref:Xamarin.Forms.Slider.ThumbImageProperty) is the image to use for the thumb, of type [`FileImageSource`](xref:Xamarin.Forms.FileImageSource).
+- [`ThumbImageSource`](xref:Xamarin.Forms.Slider.ThumbImageSourceProperty) is the image to use for the thumb, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource).
 
 > [!NOTE]
-> The `ThumbColor` and `ThumbImage` properties are mutually exclusive. If both properties are set, the `ThumbImage` property will take precedence.
+> The `ThumbColor` and `ThumbImageSource` properties are mutually exclusive. If both properties are set, the `ThumbImageSource` property will take precedence.
 
 ## Basic Slider code and markup
 

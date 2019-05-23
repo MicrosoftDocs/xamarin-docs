@@ -20,7 +20,7 @@ The `DynamicResource` markup extension is similar to the `StaticResource` markup
 The following code example demonstrates *dynamic* styles in a XAML page:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DynamicStylesPage" Title="Dynamic" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DynamicStylesPage" Title="Dynamic" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="baseStyle" TargetType="View">
@@ -48,7 +48,7 @@ The following code example demonstrates *dynamic* styles in a XAML page:
 </ContentPage>
 ```
 
-The [`SearchBar`](xref:Xamarin.Forms.SearchBar) instances use the `DynamicResource` markup extension to reference a [`Style`](xref:Xamarin.Forms.Style) named `searchBarStyle`, which is not defined in the XAML. However, because the [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties of the `SearchBar` instances are set using a `DynamicResource`, the missing dictionary key doesn't result in an exception being thrown.
+The [`SearchBar`](xref:Xamarin.Forms.SearchBar) instances use the `DynamicResource` markup extension to reference a [`Style`](xref:Xamarin.Forms.Style) named `searchBarStyle`, which is not defined in the XAML. However, because the [`Style`](xref:Xamarin.Forms.NavigableElement.Style) properties of the `SearchBar` instances are set using a `DynamicResource`, the missing dictionary key doesn't result in an exception being thrown.
 
 Instead, in the code-behind file, the constructor creates a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) entry with the key `searchBarStyle`, as shown in the following code example:
 
@@ -126,7 +126,7 @@ Deriving a style from a dynamic style can't be achieved using the [`Style.BasedO
 The following code example demonstrates *dynamic* style inheritance in a XAML page:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DynamicStylesInheritancePage" Title="Dynamic Inheritance" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DynamicStylesInheritancePage" Title="Dynamic Inheritance" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="baseStyle" TargetType="View">
@@ -200,7 +200,7 @@ public class DynamicStylesInheritancePageCS : ContentPage
 }
 ```
 
-The `tealSearchBarStyle` is assigned directly to the [`Style`](xref:Xamarin.Forms.VisualElement.Style) property of the [`SearchBar`](xref:Xamarin.Forms.SearchBar) instances. This `Style` sets some additional properties, and uses the [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) property to reference `searchBarStyle`. The [`SetDynamicResource`](xref:Xamarin.Forms.Element.SetDynamicResource*) method isn't required here because `tealSearchBarStyle` will not change, except for the `Style` it derives from. Therefore, `tealSearchBarStyle` maintains a link to `searchBarStyle` and is altered when the base style changes.
+The `tealSearchBarStyle` is assigned directly to the [`Style`](xref:Xamarin.Forms.NavigableElement.Style) property of the [`SearchBar`](xref:Xamarin.Forms.SearchBar) instances. This `Style` sets some additional properties, and uses the [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) property to reference `searchBarStyle`. The [`SetDynamicResource`](xref:Xamarin.Forms.Element.SetDynamicResource*) method isn't required here because `tealSearchBarStyle` will not change, except for the `Style` it derives from. Therefore, `tealSearchBarStyle` maintains a link to `searchBarStyle` and is altered when the base style changes.
 
 ## Related links
 

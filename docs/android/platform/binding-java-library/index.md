@@ -66,7 +66,7 @@ When binding an existing Android library, it is necessary to keep the following 
 
 * **Are there any external dependencies for the library?** &ndash; Any Java dependencies required by the Android library must be included in the Xamarin.Android project as a **ReferenceJar** or as an **EmbeddedReferenceJar**. Any native assemblies must be added to the binding project as an **EmbeddedNativeLibrary**.  
 
-* **What version of the Android API is does the Android library target?** &ndash; It is not possible to "downgrade" the Android API level; ensure that the Xamarin.Android binding project is targeting the same API level (or higher) as the Android library.
+* **What version of the Android API does the Android library target?** &ndash; It is not possible to "downgrade" the Android API level; ensure that the Xamarin.Android binding project is targeting the same API level (or higher) as the Android library.
 
 * **What version of the JDK was used to compile the library?** &ndash; Binding errors may occur if the Android library was built with a different version of JDK than in use by Xamarin.Android. If possible, recompile the Android library using the same version of the JDK that is used by your installation of Xamarin.Android.
 

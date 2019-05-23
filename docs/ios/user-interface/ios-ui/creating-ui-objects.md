@@ -78,7 +78,7 @@ button on the Xcode toolbar button:
 
  [![](creating-ui-objects-images/image6a.png "Assistant Editor button")](creating-ui-objects-images/image6a.png#lightbox)
 
-Click on a user interface object; then **Control Drag** into the .h file. To** Control Drag**, hold down the
+Click on a user interface object; then **Control Drag** into the .h file. To **Control Drag**, hold down the
 control key then click and hold over the user interface object that you are creating the outlet (or action) for. Keep
 holding down the Control key while you drag into the header file. Finish dragging below the `@interface` definition. A
  blue line should appear with a caption Insert Outlet or Outlet Collection, as illustrated in the screenshot below.

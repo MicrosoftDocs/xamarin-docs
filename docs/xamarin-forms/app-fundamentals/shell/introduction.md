@@ -11,9 +11,7 @@ ms.date: 05/06/2019
 
 # Xamarin.Forms Shell
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Xamarin.Forms Shell reduces the complexity of mobile application development by providing the fundamental features that most mobile applications require, including:
 
@@ -25,48 +23,7 @@ Xamarin.Forms Shell reduces the complexity of mobile application development by 
 In addition, Shell applications benefit from an increased rendering speed, and reduced memory consumption.
 
 > [!IMPORTANT]
-> Existing iOS and Android applications can adopt Shell and benefit immediately from navigation, performance, and extensibility improvements.
-
-Shell is currently experimental, and can only be used by adding `Forms.SetFlags("Shell_Experimental");` to your platform project, prior to invoking the `Forms.Init` method.
-
-# [Android](#tab/android)
-
-```csharp
-public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-{
-    protected override void OnCreate(Bundle savedInstanceState)
-    {
-        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
-
-        TabLayoutResource = Resource.Layout.Tabbar;
-        ToolbarResource = Resource.Layout.Toolbar;
-
-        base.OnCreate(savedInstanceState);
-
-        global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-        LoadApplication(new App());
-    }
-}
-```
-
-# [iOS](#tab/ios)
-
-```csharp
-public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
-{
-    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-    {
-        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
-
-        global::Xamarin.Forms.Forms.Init();
-        LoadApplication(new App());
-
-        return base.FinishedLaunching(app, options);
-    }
-}
-```
-
-----
+> Xamarin.Forms Shell is only available on iOS and Android. Existing iOS and Android applications can adopt Shell and benefit immediately from navigation, performance, and extensibility improvements.
 
 ## Shell navigation experience
 
@@ -176,11 +133,11 @@ In this example, the `AppShell` class is a XAML file that derives from the `Shel
 
 The `Shell` class defines the following properties that control the appearance of a Shell application:
 
-- `ShellBackgroundColor`, of type `Color` an attached property that defines the background color in the Shell chrome. The color will not fill in behind the Shell content.
-- `ShellDisabledColor`, of type `Color`, an attached property that defines the color to shade text and icons that are disabled.
-- `ShellForegroundColor`, of type `Color`, an attached property that defines the color to shade text and icons.
-- `ShellTitleColor`, of type `Color`, an attached property that defines the color used for the title of the current page.
-- `ShellUnselectedColor`, of type `Color`, an attached property that defines the color used for unselected text and icons in the Shell chrome.
+- `BackgroundColor`, of type `Color` an attached property that defines the background color in the Shell chrome. The color will not fill in behind the Shell content.
+- `DisabledColor`, of type `Color`, an attached property that defines the color to shade text and icons that are disabled.
+- `ForegroundColor`, of type `Color`, an attached property that defines the color to shade text and icons.
+- `TitleColor`, of type `Color`, an attached property that defines the color used for the title of the current page.
+- `UnselectedColor`, of type `Color`, an attached property that defines the color used for unselected text and icons in the Shell chrome.
 
 All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings.
 
@@ -191,7 +148,6 @@ In addition, these properties can be set using Cascading Style Sheets (CSS). For
 The `Shell` class defines the following properties that affect the layout of Shell application content:
 
 - `NavBarIsVisible`, of type `boolean`, an attached property that defines if the navigation bar should be visible when a page is presented. This property should be set on a page, and its default value is `true`.
-- `SetPaddingInsets`, of type `bool`, an attached property that controls whether page content will flow under any Shell chrome. This property should be set on a page, and its default value is `false`.
 - `TabBarIsVisible`, of type `bool`, an attached property that defines if the tab bar should be visible when a page is presented. This property should be set on a page, and its default value is `true`.
 - `TitleView`, of type `View`, an attached property that defines the `TitleView` for a page. This property should be set on a page.
 
@@ -199,5 +155,5 @@ All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.Bi
 
 ## Related links
 
-- [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)
