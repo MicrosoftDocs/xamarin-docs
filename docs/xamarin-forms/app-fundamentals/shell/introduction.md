@@ -6,7 +6,7 @@ ms.assetid: 4604DCB5-83DA-458A-8B02-6508A740BE0E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2019
+ms.date: 05/24/2019
 ---
 
 # Xamarin.Forms Shell
@@ -46,111 +46,6 @@ Within each tab, additional [`ContentPage`](xref:Xamarin.Forms.ContentPage) obje
 
 [![Screenshot of Shell page navigation, on iOS and Android](introduction-images/cat-details.png "Shell app navigation")](introduction-images/cat-details-large.png#lightbox "Shell app navigation")
 
-## Subclassing the Shell class
-
-A subclassed `Shell` object describes the visual hierarchy of a Shell application, and consists of three main hierarchical objects:
-
-- `FlyoutItem` or `TabBar`. A `FlyoutIcon` represents one or more items in the flyout, and should be used when the navigation pattern for the application includes a flyout. A `TabBar` represents the bottom tab bar, and should be used when the navigation pattern for the application begins with bottom tabs. Every `FlyoutItem` object or `TabBar` object is a child of the `Shell` object.
-- `Tab`, which represents grouped content, navigable by bottom tabs. Every `Tab` object is a child of a `FlyoutItem` object or a `TabBar` object.
-- `ShellContent`, which represents the `ContentPage` objects in your application. Every `ShellContent` object is a child of a `Tab` object. When more than one `ShellContent` object is present in a `Tab`, the objects will be navigable by top tabs.
-
-None of these objects represent any user interface, but rather the organization of the application's visual hierarchy. Shell will take these objects and produce the navigation user interface for the content.
-
-The following XAML shows an example of a subclassed `Shell` object:
-
-```xaml
-<Shell xmlns="http://xamarin.com/schemas/2014/forms"
-       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:views="clr-namespace:Xaminals.Views"
-       x:Class="Xaminals.AppShell">
-    ...
-    <FlyoutItem Title="Animals"
-                FlyoutDisplayOptions="AsMultipleItems">
-        <Tab Title="Domestic"
-             Icon="paw.png">
-            <ShellContent Title="Cats"
-                          Icon="cat.png">
-                <views:CatsPage />
-            </ShellContent>
-            <ShellContent Title="Dogs"
-                          Icon="dog.png">
-                <views:DogsPage />
-            </ShellContent>
-        </Tab>
-        <ShellContent Title="Monkeys"
-                      Icon="monkey.png">
-            <views:MonkeysPage />
-        </ShellContent>
-        <ShellContent Title="Elephants"
-                      Icon="elephant.png">  
-            <views:ElephantsPage />
-        </ShellContent>
-        <ShellContent Title="Bears"
-                      Icon="bear.png">
-            <views:BearsPage />
-        </ShellContent>
-    </FlyoutItem>
-    ...
-</Shell>
-```
-
-When run, this XAML displays the `CatsPage`, because it's the first item of content declared in the subclassed `Shell` object:
-
-[![Screenshot of a Shell app, on iOS and Android](introduction-images/cats.png "Shell app")](introduction-images/cats-large.png#lightbox "Shell app")
-
-Pressing the hamburger icon, or swiping from the left, displays the flyout:
-
-[![Screenshot of a Shell flyout, on iOS and Android](introduction-images/flyout-reduced.png "Shell flyout")](introduction-images/flyout-reduced-large.png#lightbox "Shell flyout")
-
-> [!IMPORTANT]
-> In a Shell application, each [`ContentPage`](xref:Xamarin.Forms.ContentPage) that's a child of a `ShellContent` object is created during application startup. Adding additional `ShellContent` objects using this approach will result in additional pages being created during application startup, which can lead to a poor startup experience. However, Shell is also capable of creating pages on demand, in response to navigation. For more information, see [Efficient page loading](tabs.md#efficient-page-loading) in the [Xamarin.Forms Shell Tabs](tabs.md) guide.
-
-## Bootstrapping a Shell application
-
-A Shell application is bootstrapped by setting the [`MainPage`](xref:Xamarin.Forms.Application.MainPage) property of the `App` class to a subclassed `Shell` object:
-
-```csharp
-namespace Xaminals
-{
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
-            MainPage = new AppShell();
-        }
-        ...
-    }
-}
-```
-
-In this example, the `AppShell` class is a XAML file that derives from the `Shell` class, which describes the visual hierarchy of the application.
-
-## Shell appearance
-
-The `Shell` class defines the following properties that control the appearance of a Shell application:
-
-- `BackgroundColor`, of type `Color` an attached property that defines the background color in the Shell chrome. The color will not fill in behind the Shell content.
-- `DisabledColor`, of type `Color`, an attached property that defines the color to shade text and icons that are disabled.
-- `ForegroundColor`, of type `Color`, an attached property that defines the color to shade text and icons.
-- `TitleColor`, of type `Color`, an attached property that defines the color used for the title of the current page.
-- `UnselectedColor`, of type `Color`, an attached property that defines the color used for unselected text and icons in the Shell chrome.
-
-All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings.
-
-In addition, these properties can be set using Cascading Style Sheets (CSS). For more information, see [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
-
-## Shell content layout
-
-The `Shell` class defines the following properties that affect the layout of Shell application content:
-
-- `NavBarIsVisible`, of type `boolean`, an attached property that defines if the navigation bar should be visible when a page is presented. This property should be set on a page, and its default value is `true`.
-- `TabBarIsVisible`, of type `bool`, an attached property that defines if the tab bar should be visible when a page is presented. This property should be set on a page, and its default value is `true`.
-- `TitleView`, of type `View`, an attached property that defines the `TitleView` for a page. This property should be set on a page.
-
-All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings.
-
 ## Related links
 
 - [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
-- [Xamarin.Forms CSS Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

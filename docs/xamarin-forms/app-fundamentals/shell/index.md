@@ -15,6 +15,10 @@ ms.date: 05/06/2019
 
 Xamarin.Forms Shell reduces the complexity of mobile application development by providing the fundamental features that most mobile applications require. This includes a common navigation user experience, a URI-based navigation scheme, and an integrated search handler.
 
+## [Create a Xamarin.Forms Shell Application](create.md)
+
+The process for creating a Xamarin.Forms Shell application is to create a XAML file that subclasses the `Shell` class, set the `MainPage` property of the application's `App` class to the subclassed `Shell` object, and then describe the visual hierarchy of the application in the subclassed `Shell` class.
+
 ## [Flyout](flyout.md)
 
 The flyout is the root menu for a Shell application, and is accessible through an icon or by swiping from the side of the screen. The flyout consists of an optional header, flyout items, and optional menu items.
