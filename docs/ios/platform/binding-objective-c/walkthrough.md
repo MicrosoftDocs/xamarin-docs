@@ -173,7 +173,7 @@ At this point we're close, but we're not quite done. The static library has been
 
 ### Creating a Fat Binary
 
-All iOS devices have processors powered by ARM architecture that have developed over time. Each new architecture added new instructions and other improvements while still maintaining backwards compatibility. On iOS devices we have armv6, armv7, armv7s, arm64 instruction sets – although [we no longer use armv6](~/ios/deploy-test/compiling-for-different-devices.md). The iOS simulator is not powered by ARM and is istead a x86 and x86_64 powered simulator. We that means for us is that we must provide libraries on each instruction sets.
+All iOS devices have processors powered by ARM architecture that have developed over time. Each new architecture added new instructions and other improvements while still maintaining backwards compatibility. On iOS devices we have armv6, armv7, armv7s, arm64 instruction sets – although [we no longer use armv6](~/ios/deploy-test/compiling-for-different-devices.md). The iOS simulator is not powered by ARM and is instead a x86 and x86_64 powered simulator. We that means for us is that we must provide libraries on each instruction sets.
 
 A Fat library is `.a` file containing all the supported architectures.
 
