@@ -1,6 +1,6 @@
 ---
-title: "Part 3 - Setting Up A Xamarin Cross Platform Solution"
-description: "This document describes how to set up a cross-platform solution in Xamarin. It discuses various code sharing strategies such as shared projects and .NET Standard."
+title: "Part 3 - Setting Up A Xamarin Cross-Platform Solution"
+description: "This document describes how to set up a cross-platform solution in Xamarin. It discusses various code sharing strategies such as shared projects and .NET Standard."
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: asb3993
@@ -8,7 +8,7 @@ ms.author: amburns
 ms.date: 03/27/2017
 ---
 
-# Part 3 - Setting Up A Xamarin Cross Platform Solution
+# Part 3 - Setting Up A Xamarin Cross-Platform Solution
 
 Regardless of what platforms are being used, Xamarin projects all use the
 same solution file format (the Visual Studio **.sln** file format). Solutions
@@ -17,9 +17,9 @@ cannot be loaded (such as a Windows project in Visual Studio for Mac).
 
 
 
-When creating a new cross platform application, the first step is to create a
-blank solution. This section what happens next: setting up the projects for
-building cross platform mobile apps.
+When creating a new cross-platform application, the first step is to create a
+blank solution. This section explains what happens next: setting up the projects for
+building cross-platform mobile apps.
 
  <a name="Sharing_Code" />
 
@@ -34,7 +34,7 @@ code-sharing across platforms.
 
 ### Shared Projects
 
-The simplest approach to sharing code files is use a [Shared Project](~/cross-platform/app-fundamentals/shared-projects.md).
+The simplest approach to sharing code files is using a [Shared Project](~/cross-platform/app-fundamentals/shared-projects.md).
 
 This method allows you to share the same code across different platform projects,
 and use compiler directives to include different, platform-specific code
@@ -124,7 +124,7 @@ The application architecture is illustrated in this diagram:
 
  [ ![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "The application architecture is illustrated in this diagram")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
 
-This screenshot shows a solution setup with the shared Core project, iOS and
+This screenshot shows a solution setup with the shared Core project, iOS, and
 Android application projects. The Shared Project contains code relating to each of the architectural layers (Business, Service, Data and Data Access code):
 
  ![](setting-up-a-xamarin-cross-platform-solution-images/core-solution-example.png "The Shared Project contains code relating to each of the architectural layers (Business, Service, Data and Data Access code)")
