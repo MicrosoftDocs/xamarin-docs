@@ -733,7 +733,7 @@ You've seen that you can set properties directly on the `FlexLayout` and you can
 
 > [!VIDEO https://youtube.com/embed/Ng3sel_5D_0]
 
-**Xamarin.Forms 3.0 Flex Layout, by [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 3.0 Flex Layout video**
 
 ## Related links
 

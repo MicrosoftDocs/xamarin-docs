@@ -17,7 +17,7 @@ Xamarin.Forms applications often contain multiple controls that have an identica
 
 ## [Explicit Styles](explicit.md)
 
-An *explicit* style is one that is selectively applied to controls by setting their [`Style`](xref:Xamarin.Forms.VisualElement.Style) properties.
+An *explicit* style is one that is selectively applied to controls by setting their [`Style`](xref:Xamarin.Forms.NavigableElement.Style) properties.
 
 ## [Implicit Styles](implicit.md)
 

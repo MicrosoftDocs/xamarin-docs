@@ -128,7 +128,7 @@ To creating a Custom Sticker Experience, do the following:
 
 1. Start Visual Studio.
 2. Open the solution to add a Message App Extension.
-3. Select ** iOS Extensions > iMessage Extension (iOS)** and click the **Next** button:
+3. Select **iOS Extensions > iMessage Extension (iOS)** and click the **Next** button:
 
 	[![Select iMessage Extension (iOS)](intro-to-message-app-extensions-images/message01.w157-sml.png)](intro-to-message-app-extensions-images/message01.w157.png#lightbox)
 

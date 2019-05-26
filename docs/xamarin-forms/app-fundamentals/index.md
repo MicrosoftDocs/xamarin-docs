@@ -71,9 +71,9 @@ Xamarin.Forms `MessagingCenter` enables view models and other components to comm
 
 Xamarin.Forms provides a number of different page navigation experiences, depending upon the `Page` type being used.
 
-## [Shell](shell.md)
+## [Shell](shell/index.md)
 
-Xamarin.Forms Shell is a container for applications, that provides fundamental UI features that most applications require, leaving you to focus on the application's core workload.
+Xamarin.Forms Shell reduces the complexity of mobile application development by providing the fundamental features that most mobile applications require. This includes a common navigation user experience, a URI-based navigation scheme, and an integrated search handler.
 
 ## [Templates](templates/index.md)
 

@@ -6,7 +6,7 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/01/2018
+ms.date: 04/10/2019
 ---
 
 # Consuming XAML Markup Extensions
@@ -22,6 +22,7 @@ XAML markup extensions help enhance the power and flexibility of XAML by allowin
 - [`x:Null`](#null) – set an attribute to a `null` value.
 - [`OnPlatform`](#onplatform) – customize UI appearance on a per-platform basis.
 - [`OnIdiom`](#onidiom) – customize UI appearance based on the idiom of the device the application is running on.
+- [`DataTemplate`](#datatemplate-markup-extension) - converts a type into a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate).
 
 Additional XAML markup extensions have historically been supported by other XAML implementations, and are also supported by Xamarin.Forms. These are described more fully in other articles:
 
@@ -498,7 +499,7 @@ Here's the program running:
 
 ## OnIdiom Markup Extension
 
-The `OnIdiom` markup extensions allows you to customize UI appearance based on the idiom of the device the application is running on. It's supported by the [`OnIdiomExtension`](xref:Xamarin.Forms.Xaml.OnIdiomExtension) class, which defines the following properties:
+The `OnIdiom` markup extension allows you to customize UI appearance based on the idiom of the device the application is running on. It's supported by the [`OnIdiomExtension`](xref:Xamarin.Forms.Xaml.OnIdiomExtension) class, which defines the following properties:
 
 - `Default` of type `object`, that you set to a default value to be applied to the properties that represent device idioms.
 - `Phone` of type `object`, that you set to a value to be applied on phones.
@@ -532,6 +533,25 @@ Here's the program running:
 
 [![OnIdiom Demo](consuming-images/onidiomdemo-small.png "OnIdiom Demo")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom Demo")
 
+## DataTemplate Markup Extension
+
+The `DataTemplate` markup extension allows you to convert a type into a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). It's supported by the `DataTemplateExtension` class, which defines a `TypeName` property, of type `string`, that is set to the name of the type to be converted into a `DataTemplate`. The `TypeName` property is the content property of `DataTemplateExtension`. Therefore, for XAML markup expressions expressed with curly braces, you can eliminate the `TypeName=` part of the expression.
+
+> [!NOTE]
+> The XAML parser allows the `DataTemplateExtension` class to be abbreviated as `DataTemplate`.
+
+A typical usage of this markup extension is in a Shell application, as shown in the following example:
+
+```xaml
+<ShellContent Title="Monkeys"
+              Icon="monkey.png"
+              ContentTemplate="{DataTemplate views:MonkeysPage}" />
+```
+
+In this example, `MonkeysPage` is converted from a [`ContentPage`](xref:Xamarin.Forms.ContentPage) to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), which is set as the value of the `ShellContent.ContentTemplate` property. This ensures that `MonkeysPage` is only created when navigation to the page occurs, rather than at application startup.
+
+For more information about Shell applications, see [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
+
 ## Define Your Own Markup Extensions
 
 If you've encountered a need for a XAML markup extension that isn't available in Xamarin.Forms, you can [create your own](creating.md).
@@ -543,3 +563,4 @@ If you've encountered a need for a XAML markup extension that isn't available in
 - [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Dynamic Styles](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).

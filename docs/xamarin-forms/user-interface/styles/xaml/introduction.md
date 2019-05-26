@@ -20,7 +20,7 @@ Xamarin.Forms applications often contain multiple controls that have an identica
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Styles.NoStylesPage"
     Title="No Styles"
-    Icon="xaml.png">
+    IconImageSource="xaml.png">
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0">
             <Label Text="These labels"
@@ -48,7 +48,7 @@ public class NoStylesPageCS : ContentPage
     public NoStylesPageCS ()
     {
         Title = "No Styles";
-        Icon = "csharp.png";
+        IconImageSource = "csharp.png";
         Padding = new Thickness (0, 20, 0, 0);
 
         Content = new StackLayout {
@@ -102,7 +102,7 @@ Each [`Style`](xref:Xamarin.Forms.Style) instance contains a collection of one o
 
 Each [`Style`](xref:Xamarin.Forms.Style) instance can be *explicit*, or *implicit*:
 
-- An *explicit* [`Style`](xref:Xamarin.Forms.Style) instance is defined by specifying a [`TargetType`](xref:Xamarin.Forms.Style.TargetType) and an `x:Key` value, and by setting the target element's [`Style`](xref:Xamarin.Forms.VisualElement.Style) property to the `x:Key` reference. For more information about *explicit* styles, see [Explicit Styles](~/xamarin-forms/user-interface/styles/explicit.md).
+- An *explicit* [`Style`](xref:Xamarin.Forms.Style) instance is defined by specifying a [`TargetType`](xref:Xamarin.Forms.Style.TargetType) and an `x:Key` value, and by setting the target element's [`Style`](xref:Xamarin.Forms.NavigableElement.Style) property to the `x:Key` reference. For more information about *explicit* styles, see [Explicit Styles](~/xamarin-forms/user-interface/styles/explicit.md).
 - An *implicit* [`Style`](xref:Xamarin.Forms.Style) instance is defined by specifying only a [`TargetType`](xref:Xamarin.Forms.Style.TargetType). The `Style` instance will then automatically be applied to all elements of that type. Note that subclasses of the `TargetType` do not automatically have the `Style` applied. For more information about *implicit* styles, see [Implicit Styles](~/xamarin-forms/user-interface/styles/implicit.md).
 
 When creating a [`Style`](xref:Xamarin.Forms.Style), the [`TargetType`](xref:Xamarin.Forms.Style.TargetType) property is always required. The following code example shows an *explicit* style (note the `x:Key`) created in XAML:

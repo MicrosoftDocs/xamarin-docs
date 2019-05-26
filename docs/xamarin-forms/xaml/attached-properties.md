@@ -11,7 +11,7 @@ ms.date: 06/02/2016
 
 # Attached Properties
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
 
 _An attached property is a special type of bindable property, defined in one class but attached to other objects, and recognizable in XAML as an attribute that contains a class and a property name separated by a period. This article provides an introduction to attached properties, and demonstrates how to create and consume them._
 
@@ -121,7 +121,7 @@ Attached properties can also be added to a control by a style. The following XAM
 </Style>
 ```
 
-The [`Style`](xref:Xamarin.Forms.Style) can be applied to a [`Label`](xref:Xamarin.Forms.Label) by setting its [`Style`](xref:Xamarin.Forms.VisualElement.Style) property to the `Style` instance using the `StaticResource` markup extension, as demonstrated in the following code example:
+The [`Style`](xref:Xamarin.Forms.Style) can be applied to a [`Label`](xref:Xamarin.Forms.Label) by setting its [`Style`](xref:Xamarin.Forms.NavigableElement.Style) property to the `Style` instance using the `StaticResource` markup extension, as demonstrated in the following code example:
 
 ```xaml
 <Label Text="Label Shadow Effect" Style="{StaticResource ShadowEffectStyle}" />
@@ -142,6 +142,6 @@ This article provided an introduction to attached properties, and demonstrated h
 
 - [Bindable Properties](~/xamarin-forms/xaml/bindable-properties.md)
 - [XAML Namespaces](~/xamarin-forms/xaml/namespaces.md)
-- [Shadow Effect (sample)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+- [Shadow Effect (sample)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
 - [BindableProperty](xref:Xamarin.Forms.BindableProperty)
 - [BindableObject](xref:Xamarin.Forms.BindableObject)

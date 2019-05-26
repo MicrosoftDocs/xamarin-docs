@@ -42,8 +42,8 @@ developers, focusing primarily on the C# language features that Java
 developers will encounter while learning about Xamarin.Android app
 development.
 
-## Xamarin University Video
+## Video
 
 > [!VIDEO https://youtube.com/embed/rkNikCa5D48]
 
-**Building Your First Android App with Xamarin for Visual Studio, by [Xamarin University](https://university.xamarin.com)**
+**Building Your First Android App with Xamarin for Visual Studio**

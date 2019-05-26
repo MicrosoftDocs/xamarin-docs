@@ -34,7 +34,7 @@ first stack view, and then some more technical details about how it works.
 
 > [!VIDEO https://youtube.com/embed/p3po6507Ip8]
 
-**UIStackView, by [Xamarin University](https://university.xamarin.com/)**
+**UIStackView video**
 
 ## UIStackView Quickstart
 

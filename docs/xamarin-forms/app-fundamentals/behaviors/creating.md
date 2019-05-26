@@ -11,7 +11,7 @@ ms.date: 04/06/2016
 
 # Create Xamarin.Forms behaviors
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehavior/)
 
 _Xamarin.Forms behaviors are created by deriving from the Behavior or Behavior&lt;T&gt; class. This article demonstrates how to create and consume Xamarin.Forms behaviors._
 
@@ -169,7 +169,7 @@ The following code example shows an *explicit* style for the `NumericValidationB
 </Style>
 ```
 
-The [`Style`](xref:Xamarin.Forms.Style) can be applied to an [`Entry`](xref:Xamarin.Forms.Entry) control by setting its [`Style`](xref:Xamarin.Forms.VisualElement.Style) property to the `Style` instance using the `StaticResource` markup extension, as demonstrated in the following code example:
+The [`Style`](xref:Xamarin.Forms.Style) can be applied to an [`Entry`](xref:Xamarin.Forms.Entry) control by setting its [`Style`](xref:Xamarin.Forms.NavigableElement.Style) property to the `Style` instance using the `StaticResource` markup extension, as demonstrated in the following code example:
 
 ```xaml
 <Entry Placeholder="Enter a System.Double" Style="{StaticResource NumericValidationStyle}">
@@ -206,7 +206,7 @@ This article demonstrated how to create and consume Xamarin.Forms behaviors. Xam
 
 ## Related Links
 
-- [Xamarin.Forms Behavior (sample)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
-- [Xamarin.Forms Behavior applied with a Style (sample)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehaviorstyle/)
+- [Xamarin.Forms Behavior (sample)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehavior/)
+- [Xamarin.Forms Behavior applied with a Style (sample)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehaviorStyle/)
 - [Behavior](xref:Xamarin.Forms.Behavior)
 - [Behavior<T>](xref:Xamarin.Forms.Behavior`1)

@@ -11,7 +11,7 @@ ms.date: 11/09/2018
 
 # Reusable EventToCommandBehavior
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
 
 _Behaviors can be used to associate commands with controls that were not designed to interact with commands. This article demonstrates creating and consuming a Xamarin.Forms behavior to invoke a command when an event fires._
 
@@ -30,7 +30,7 @@ The following optional behavior properties can also be set:
 - **Converter** – an [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) implementation that will change the format of the event argument data as it's passed between *source* and *target* by the binding engine.
 
 > [!NOTE]
-> The `EventToCommandBehavior` is a custom class that can be located in the [EventToCommand Behavior sample](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/), and is not part of Xamarin.Forms.
+> The `EventToCommandBehavior` is a custom class that can be located in the [EventToCommand Behavior sample](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/), and is not part of Xamarin.Forms.
 
 ## Creating the Behavior
 
@@ -203,6 +203,6 @@ This article demonstrated using a Xamarin.Forms behavior to invoke a command whe
 
 ## Related Links
 
-- [EventToCommand Behavior (sample)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+- [EventToCommand Behavior (sample)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
 - [Behavior](xref:Xamarin.Forms.Behavior)
 - [Behavior&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

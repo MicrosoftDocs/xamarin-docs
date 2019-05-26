@@ -128,7 +128,7 @@ SecureStorage.RemoveAll();
 
 # [Android](#tab/android)
 
-The [Android KeyStore](https://developer.android.com/training/articles/keystore.html) is used to store the cipher key used to encrypt the value before it is saved into a [Shared Preferences](https://developer.android.com/training/data-storage/shared-preferences.html) with a filename of **[YOUR-APP-PACKAGE-ID].xamarinessentials**.  The key used in the shared preferences file is a _MD5 Hash_ of the key passed into the `SecureStorage` APIs.
+The [Android KeyStore](https://developer.android.com/training/articles/keystore.html) is used to store the cipher key used to encrypt the value before it is saved into a [Shared Preferences](https://developer.android.com/training/data-storage/shared-preferences.html) with a filename of **[YOUR-APP-PACKAGE-ID].xamarinessentials**.  The key (not a cryptographic key, the _key_ to the _value_) used in the shared preferences file is a _MD5 Hash_ of the key passed into the `SecureStorage` APIs.
 
 ## API Level 23 and Higher
 

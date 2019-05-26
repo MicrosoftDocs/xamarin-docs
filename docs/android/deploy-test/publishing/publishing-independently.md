@@ -14,10 +14,9 @@ It is possible to publish an application without using any of the
 existing Android marketplaces. This section will explain these other
 publishing methods and the licensing levels of Xamarin.Android.
 
-
 ## Xamarin Licensing
 
-Four licenses are available for development, deployment, and
+A number of licenses are available for development, deployment, and
 distribution of Xamarin.Android apps:
 
 -   **Visual Studio Community** &ndash; For students, small teams, and
@@ -25,8 +24,7 @@ distribution of Xamarin.Android apps:
 
 -   **Visual Studio Professional** &ndash; For individual developers or
     small teams (Windows only). This license offers a standard or cloud
-    subscription, access to additional Xamarin University content, and
-    no usage restrictions.
+    subscription and no usage restrictions.
 
 -   **Visual Studio Enterprise** &ndash; For teams of any size (Windows
     only). This license includes enterprise capabilities, a standard or

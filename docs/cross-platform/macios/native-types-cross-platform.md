@@ -23,7 +23,7 @@ Xamarin.iOS and Xamarin.Mac Unified APIs still include the `int`, `uint` and `fl
 
 Depending on the nature of the code being shared, there might be times where cross-platform code might need to deal with the `nint`, `nuint` and `nfloat` data types. For example: a library that handles transformations on rectangular data that was previously using `System.Drawing.RectangleF` to share functionality between Xamarin.iOS and Xamarin.Android versions of an app, would need to be updated to handle Native Types on iOS.
 
-How these changes are handled depends on the size and complexity of the application and the form of code sharing that has been used, as we will see in the follow sections.
+How these changes are handled depends on the size and complexity of the application and the form of code sharing that has been used, as we will see in the following sections.
 
 ## Code Sharing Considerations
 
@@ -31,9 +31,9 @@ As stated in the [Sharing Code Options](~/cross-platform/app-fundamentals/code-s
 
 ### Portable Class Library Projects
 
-A Portable Class Library (PCL) allows you to targeting the platforms you wish to support, and use Interfaces to provide platform-specific functionality.
+A Portable Class Library (PCL) allows you to target the platforms you wish to support, and use interfaces to provide platform-specific functionality.
 
-Since the PCL Project type is compiled down to a `.DLL` and it has no sense of the Unified API, you'll be forced to keep using the existing data types (`int`, `uint`, `float`) in the PCL source code and type cast the calls to the PCLs classes and methods in the front-end applications. For Example:
+Since the PCL Project type is compiled down to a `.DLL` and it has no sense of the Unified API, you'll be forced to keep using the existing data types (`int`, `uint`, `float`) in the PCL source code and type cast the calls to the PCL's classes and methods in the front-end applications. For example:
 
 ```csharp
 using NativePCL;
@@ -47,7 +47,7 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 The Shared Asset Project type allows you to organize your source code in a separate project that then gets included and compiled into the individual platform-specific front end apps, and use `#if` compiler directives as required to manage platform-specific requirements.
 
-The size and complexity of the front end mobile applications that are consuming shared code, along with the size and the complexity of the code being shared, needs to be taken into account when choosing the method of support Native data types cross-platform with the Shared Asset Project type.
+The size and complexity of the front end mobile applications that are consuming shared code, along with the size and the complexity of the code being shared, needs to be taken into account when choosing the method of support for Native data types in a cross-platform Shared Asset Project.
 
 Based on these factors, the following types of solutions might be implemented using the `if __UNIFIED__ ... #endif` compiler directives to handle the Unified API specific changes to the code.
 
@@ -98,7 +98,7 @@ In the above code, since the `CalculateArea` routine is very simple, we have use
 
 #### Using Method Overloads
 
-In that case, the solution might be to create an overload version of the methods using 32 bit data types so that they now take `CGRect` as parameter and/or return value, convert that value to a `RectangleF` (knowing that converting from `nfloat` to `float` is a lossy conversion), and call the original version of the routine to do the actual work. For example:
+In that case, the solution might be to create an overload version of the methods using 32-bit data types so that they now take `CGRect` as a parameter and/or a return value, convert that value to a `RectangleF` (knowing that converting from `nfloat` to `float` is a lossy conversion), and call the original version of the routine to do the actual work. For example:
 
 ```csharp
 using System;
@@ -122,8 +122,8 @@ namespace NativeShared
 		#if __UNIFIED__
 			public static nfloat CalculateArea(CGRect rect) {
 
-			// Call original routine to calculate area
-			return (nfloat)CalculateArea((RectangleF)rect);
+				// Call original routine to calculate area
+				return (nfloat)CalculateArea((RectangleF)rect);
 
 			}
 		#endif
@@ -168,12 +168,12 @@ using System;
 using System.Drawing;
 
 #if __UNIFIED__
-	// Mappings Unified CoreGraphic classes to MonoTouch classes
+	// Map Unified CoreGraphic classes to MonoTouch classes
 	using RectangleF = global::CoreGraphics.CGRect;
 	using SizeF = global::CoreGraphics.CGSize;
 	using PointF = global::CoreGraphics.CGPoint;
 #else
-	// Mappings Unified types to MonoTouch types
+	// Map Unified types to MonoTouch types
 	using nfloat = global::System.Single;
 	using nint = global::System.Int32;
 	using nuint = global::System.UInt32;
@@ -202,14 +202,14 @@ namespace NativeShared
 }
 ```
 
-Note that here we have changed the `CalculateArea` method return a `nfloat` instead of the standard `float`. This was done so that we would not get a compile error trying to _implicitly_ convert the `nfloat` result of our calculation (since both values being multiplied are `nfloat`) into a `float` return value.
+Note that here we have changed the `CalculateArea` method to return an `nfloat` instead of the standard `float`. This was done so that we would not get a compile error trying to _implicitly_ convert the `nfloat` result of our calculation (since both values being multiplied are of type `nfloat`) into a `float` return value.
 
 If the code is compiled and run on a non Unified API device, the `using nfloat = global::System.Single;` maps the `nfloat` to a `Single` which will implicitly convert to a `float` allowing the consuming front-end application to call the `CalculateArea` method without modification.
 
 
 #### Using Type Conversions in the Front End App
 
-In the event that your front end applications only make a handful of calls to your shared code library, another solution could be to leave the library unchanged and do type casting in the Xamarin.iOS or Xamarin.Mac application when calling the existing routine. For Example:
+In the event that your front end applications only make a handful of calls to your shared code library, another solution could be to leave the library unchanged and do type casting in the Xamarin.iOS or Xamarin.Mac application when calling the existing routine. For example:
 
 ```csharp
 using NativeShared;
@@ -231,13 +231,13 @@ The following is required to use Xamarin.Forms for cross-platform UIs that will 
 - The entire solution must be using version 1.3.1 (or greater) of the Xamarin.Forms NuGet Package.
 - For any Xamarin.iOS custom renders, use the same types of solutions presented above based on how the UI code has been shared (Shared Project or PCL).
 
-As in a standard cross-platform application, the existing 32 bit data types should be used in any shared, cross-platform code for most all situations. The new Native Data Types should only be used when making a call to a Mac or iOS API where support for architecture-aware types are required.
+As in a standard cross-platform application, the existing 32-bit data types should be used in any shared, cross-platform code for most situations. The new Native Data Types should only be used when making a call to a Mac or iOS API where support for architecture-aware types is required.
 
 For more details, see our [Updating Existing Xamarin.Forms Apps](https://developer.xamarin.com/guides/cross-platform/macios/updating-xamarin-forms-apps/) documentation.
 
 ## Summary
 
-In this article we have see when we should use the Native Data Types in a Unified API application and their implications cross-platform. We have presented several solutions that can be used in situations where the new Native Data Types must be used in cross-platform libraries. And we've seen a quick guide to supporting Unified APIs in Xamarin.Forms cross-platform applications.
+In this article we have seen when to use the Native Data Types in a Unified API application and their implications cross-platform. We have presented several solutions that can be used in situations where the new Native Data Types must be used in cross-platform libraries. Also, we've seen a quick guide to supporting Unified APIs in Xamarin.Forms cross-platform applications.
 
 
 

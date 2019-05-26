@@ -17,7 +17,7 @@ _Some layouts are hard to visualize without data. Use these tips to make the mos
 
 Design time data is fake data you set to make your controls easier to visualize in the XAML Previewer. To get started, add the following lines of code to the header of your XAML page:
 
-```csharp
+```xaml
 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
@@ -27,17 +27,17 @@ After adding the namespaces, you can put `d:` in front of any attribute or contr
 
 For example, you can add text to a label that usually has data bound to it.
 
-```csharp
-<Label Text={Binding Name} d:Text="Name" />
+```xaml
+<Label Text="{Binding Name}" d:Text="Name!" />
 ```
 
 [![Design time data with text in a Label](xaml-previewer-images/designtimedata-label-sm.png "Design time data with text a Label")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
- In this example, without `d:Text`, the XAML Previewer would show nothing for the label. Instead, it shows "Name" where the label will have real data at runtime.
+In this example, without `d:Text`, the XAML Previewer would show nothing for the label. Instead, it shows "Name!" where the label will have real data at runtime.
 
 You can use `d:` with any attribute for a Xamarin.Forms control, like colors, font sizes, and spacing. You can even add it to the control itself:
 
-```csharp
+```xaml
 <d:Button Text="Design Time Button" />
 ```
 
@@ -49,7 +49,7 @@ In this example, the button only appears at design time. Use this method to put 
 
 You can set a design time Source for images that are bound to the page or loaded in dynamically. In your Android project, add the image you want to show in the XAML Previewer to the **Resources > Drawable** folder. In your iOS project, add the image to the **Resources** folder. You can then show that image in the XAML Previewer at design time:
 
-```csharp
+```xaml
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
 [![Design time data with images](xaml-previewer-images/designtimedata-image-sm.png "Design time data with iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
@@ -58,7 +58,7 @@ You can set a design time Source for images that are bound to the page or loaded
 
 ListViews are a popular way to display data in a mobile app. However, they're difficult to visualize without real data. To use design time data with them, you have to create a design time array to use as an ItemsSource. The XAML Previewer displays what is in that array in your ListView at design time.
 
-```csharp
+```xaml
 <StackLayout>
     <ListView ItemsSource="{Binding Items}">
         <d:ListView.ItemsSource>
@@ -82,8 +82,7 @@ ListViews are a popular way to display data in a mobile app. However, they're di
 
 This example will show a ListView of three TextCells in the XAML Previewer. You can change `x:String` to an existing data model in your project.
 
-Refer to [James Montemagno's Hanselman.Forms app](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L36-L57) for a more complex example.
-
+Refer to [James Montemagno's Hanselman.Forms app](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L26-L47) for a more complex example.
 
 ## Alternative: Hardcode a static ViewModel
 

@@ -34,7 +34,3 @@ The Xamarin.Forms [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) is a
 ## [Modal Pages](modal.md)
 
 Xamarin.Forms also provides support for modal pages. A modal page encourages users to complete a self-contained task that cannot be navigated away from until the task is completed or cancelled.
-
-## [Displaying Pop-Ups](pop-ups.md)
-
-Xamarin.Forms provides two pop-up-like user interface elements: an alert and an action sheet. These interface elements can be used to ask users simple questions and to guide users through tasks.

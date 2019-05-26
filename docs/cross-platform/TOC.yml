@@ -75,10 +75,10 @@
               href: platform/fsharp/overview.md
             - name: F# Samples
               href: platform/fsharp/samples.md
-        - name: Visual Basic.NET
+        - name: Visual Basic
           href: platform/visual-basic/index.md
           items:
-            - name: Xamarin iOS and Android
+            - name: Xamarin Android and iOS
               href: platform/visual-basic/native-apps.md
             - name: Xamarin.Forms
               href: platform/visual-basic/xamarin-forms.md

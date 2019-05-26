@@ -18,7 +18,7 @@ _An Azure Cosmos DB document database is a NoSQL database that provides low late
 
 > [!VIDEO https://youtube.com/embed/BoVH12igmbg]
 
-**Microsoft Azure Cosmos DB, by [Xamarin University](https://university.xamarin.com/)**
+**Microsoft Azure Cosmos DB video**
 
 An Azure Cosmos DB document database account can be provisioned using an Azure subscription. Each database account can have zero or more databases. A document database in Azure Cosmos DB is a logical container for document collections and users.
 

@@ -11,7 +11,7 @@ ms.date: 05/21/2018
 
 # Resource Dictionaries
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/xaml/resourcedictionaries/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
 
 _XAML resources are definitions of objects that can be shared and re-used throughout a Xamarin.Forms application._
 
@@ -300,6 +300,6 @@ This article explained how to create and consume a [`ResourceDictionary`](xref:X
 
 ## Related Links
 
-- [Resource Dictionaries (sample)](https://developer.xamarin.com/samples/xamarin-forms/xaml/resourcedictionaries/)
+- [Resource Dictionaries (sample)](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
 - [Styles](~/xamarin-forms/user-interface/styles/index.md)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)

@@ -181,5 +181,5 @@ Building a custom renderer for a [`ListView`](xref:Xamarin.Forms.ListView) or it
 ## Related Links
 
 - [Custom Renderer View (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
-- [Custom Renderer ViewCell (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/viewcell/)
+- [Custom Renderer ViewCell (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ViewCell/)
 - [ListViewCachingStrategy](xref:Xamarin.Forms.ListViewCachingStrategy)

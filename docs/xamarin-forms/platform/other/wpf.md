@@ -22,7 +22,7 @@ Before you start, create a new Xamarin.Forms solution in Visual Studio 2019, or 
 
 > [!VIDEO https://youtube.com/embed/Fy9N6OSxK64]
 
-**Xamarin.Forms 3.0 WPF Support, by [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 3.0 WPF Support video**
 
 ## Adding a WPF App
 
