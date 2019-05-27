@@ -76,7 +76,7 @@ In this example, the `AppShell` class is the XAML file that derives from the `Sh
 
 The final step in creating a Xamarin.Forms Shell application is to describe the visual hierarchy of the application, in the subclassed `Shell` class. A subclassed `Shell` class consists of three main hierarchical objects:
 
-- `FlyoutItem` or `TabBar`. A `FlyoutIcon` represents one or more items in the flyout, and should be used when the navigation pattern for the application includes a flyout. A `TabBar` represents the bottom tab bar, and should be used when the navigation pattern for the application begins with bottom tabs. Every `FlyoutItem` object or `TabBar` object is a child of the `Shell` object.
+- `FlyoutItem` or `TabBar`. A `FlyoutItem` represents one or more items in the flyout, and should be used when the navigation pattern for the application includes a flyout. A `TabBar` represents the bottom tab bar, and should be used when the navigation pattern for the application begins with bottom tabs. Every `FlyoutItem` object or `TabBar` object is a child of the `Shell` object.
 - `Tab`, which represents grouped content, navigable by bottom tabs. Every `Tab` object is a child of a `FlyoutItem` object or a `TabBar` object.
 - `ShellContent`, which represents the `ContentPage` objects in your application. Every `ShellContent` object is a child of a `Tab` object. When more than one `ShellContent` object is present in a `Tab`, the objects will be navigable by top tabs.
 
