@@ -10,7 +10,7 @@ ms.date: 05/10/2018
 ---
 # Implementing a View
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/view/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/View/)
 
 _Xamarin.Forms custom user interface controls should derive from the View class, which is used to place layouts and controls on the screen. This article demonstrates how to create a custom renderer for a Xamarin.Forms custom control that's used to display a preview video stream from the device's camera._
 
@@ -50,13 +50,13 @@ public class CameraPreview : View
 }
 ```
 
-The `CameraPreview` custom control is created in the portable class library (PCL) project and defines the API for the control. The custom control exposes a `Camera` property that's used for controlling whether the video stream should be displayed from the front or rear camera on the device. If a value isn't specified for the `Camera` property when the control is created, it defaults to specifying the rear camera.
+The `CameraPreview` custom control is created in the .NET Standard library project and defines the API for the control. The custom control exposes a `Camera` property that's used for controlling whether the video stream should be displayed from the front or rear camera on the device. If a value isn't specified for the `Camera` property when the control is created, it defaults to specifying the rear camera.
 
 <a name="Consuming_the_Custom_Control" />
 
 ## Consuming the Custom Control
 
-The `CameraPreview` custom control can be referenced in XAML in the PCL project by declaring a namespace for its location and using the namespace prefix on the custom control element. The following code example shows how the `CameraPreview` custom control can be consumed by a XAML page:
+The `CameraPreview` custom control can be referenced in XAML in the .NET Standard library project by declaring a namespace for its location and using the namespace prefix on the custom control element. The following code example shows how the `CameraPreview` custom control can be consumed by a XAML page:
 
 ```xaml
 <ContentPage ...
@@ -328,4 +328,4 @@ This article has demonstrated how to create a custom renderer for a Xamarin.Form
 
 ## Related Links
 
-- [CustomRendererView (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/view/)
+- [CustomRendererView (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/View/)

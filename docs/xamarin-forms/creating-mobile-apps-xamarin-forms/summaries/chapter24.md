@@ -17,7 +17,7 @@ Many applications consist of multiple pages among which the user navigates. The 
 
 ## Modal pages and modeless pages
 
-`VisualElement` defines a [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property of type [`INavigation`](xref:Xamarin.Forms.INavigation), which includes the following two methods to navigate to a new page:
+`VisualElement` defines a [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property of type [`INavigation`](xref:Xamarin.Forms.INavigation), which includes the following two methods to navigate to a new page:
 
 - [`PushAsync`](xref:Xamarin.Forms.INavigation.PushAsync(Xamarin.Forms.Page))
 - [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync(Xamarin.Forms.Page))
@@ -62,7 +62,7 @@ However, the standard page-navigation methods include the animation by default, 
 - [`SetHasBackButton`](xref:Xamarin.Forms.NavigationPage.SetHasBackButton(Xamarin.Forms.Page,System.Boolean)) and [`GetHasBackButton`](xref:Xamarin.Forms.NavigationPage.GetHasBackButton(Xamarin.Forms.Page))
 - [`SetHasNavigationBar`](xref:Xamarin.Forms.NavigationPage.SetHasNavigationBar(Xamarin.Forms.BindableObject,System.Boolean)) and [`GetHasNavigationBar`](xref:Xamarin.Forms.NavigationPage.GetHasNavigationBar(Xamarin.Forms.BindableObject))
 - [`SetBackButtonTitle`](xref:Xamarin.Forms.NavigationPage.SetBackButtonTitle(Xamarin.Forms.BindableObject,System.String)) and [`GetBackButtonTitle`](xref:Xamarin.Forms.NavigationPage.GetBackButtonTitle(Xamarin.Forms.BindableObject)) work on iOS only
-- [`SetTitleIcon`](xref:Xamarin.Forms.NavigationPage.SetTitleIcon(Xamarin.Forms.BindableObject,Xamarin.Forms.FileImageSource)) and [`GetTitleIcon`](xref:Xamarin.Forms.NavigationPage.GetTitleIcon(Xamarin.Forms.BindableObject)) work on iOS and Android only
+- [`SetTitleIcon`](xref:Xamarin.Forms.NavigationPage.SetTitleIcon(Xamarin.Forms.BindableObject,Xamarin.Forms.ImageSource)) and [`GetTitleIcon`](xref:Xamarin.Forms.NavigationPage.GetTitleIcon(Xamarin.Forms.BindableObject)) work on iOS and Android only
 
 ### Exploring the mechanics
 

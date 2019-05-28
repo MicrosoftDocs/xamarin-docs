@@ -424,7 +424,7 @@ The `Button` inherits or defines several properties that affect its appearance:
 > [!NOTE]
 > The `Button` class also has [`Margin`](xref:Xamarin.Forms.View.Margin) and [`Padding`](xref:Xamarin.Forms.Button.Padding) properties that control the layout behavior of the `Button`. For more information, see [Margin and Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
-The effects of six of these properties (excluding `FontFamily` and `FontAttributes`) are demonstrated in the **Button Appearance** page. Another property, [`Image`](xref:Xamarin.Forms.Button.Image), is discussed in the section [**Using bitmaps with button**](#image-button).
+The effects of six of these properties (excluding `FontFamily` and `FontAttributes`) are demonstrated in the **Button Appearance** page. Another property, [`Image`](xref:Xamarin.Forms.Button.ImageSource), is discussed in the section [**Using bitmaps with button**](#image-button).
 
 All of the views and data bindings in the **Button Appearance** page are defined in the XAML file:
 
@@ -744,9 +744,9 @@ Here's the program running on iOS, Android, and the UWP:
 
 ## Using bitmaps with buttons
 
-The `Button` class defines an [`Image`](xref:Xamarin.Forms.Button.Image) property that allows you to display a bitmap image on the `Button`, either alone or in combination with text. You can also specify how the text and image are arranged.
+The `Button` class defines an [`ImageSource`](xref:Xamarin.Forms.Button.Image) property that allows you to display a bitmap image on the `Button`, either alone or in combination with text. You can also specify how the text and image are arranged.
 
-The `Image` property is of type [`FileImageSource`](xref:Xamarin.Forms.FileImageSource), which means that the bitmaps must be stored as resources in the individual platform projects, and not in the .NET Standard library project.
+The `ImageSource` property is of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), which means that the bitmaps can be loaded from a file, embedded resource, URI, or stream.
 
 Each platform supported by Xamarin.Forms allows images to be stored in multiple sizes for different pixel resolutions of the various devices that the application might run on. These multiple bitmaps are named or stored in such a way that the operating system can pick the best match for the device's video display resolution.
 
@@ -777,7 +777,7 @@ In the UWP project, bitmaps can be stored anywhere in the project, but they are 
 
 They were all given a **Build Action** of **Content**.
 
-You can specify how the `Text` and `Image` properties are arranged on the `Button` using the [`ContentLayout`](xref:Xamarin.Forms.Button.ContentLayout) property of `Button`. This property is of type [`ButtonContentLayout`](xref:Xamarin.Forms.Button.ButtonContentLayout), which is an embedded class in `Button`. The [constructor](xref:Xamarin.Forms.Button.ButtonContentLayout.%23ctor(Xamarin.Forms.Button.ButtonContentLayout.ImagePosition,System.Double)) has two arguments:
+You can specify how the `Text` and `ImageSource` properties are arranged on the `Button` using the [`ContentLayout`](xref:Xamarin.Forms.Button.ContentLayout) property of `Button`. This property is of type [`ButtonContentLayout`](xref:Xamarin.Forms.Button.ButtonContentLayout), which is an embedded class in `Button`. The [constructor](xref:Xamarin.Forms.Button.ButtonContentLayout.%23ctor(Xamarin.Forms.Button.ButtonContentLayout.ImagePosition,System.Double)) has two arguments:
 
 - A member of the [`ImagePosition`](xref:Xamarin.Forms.Button.ButtonContentLayout.ImagePosition) enumeration: `Left`, `Top`, `Right`, or `Bottom` indicating how the bitmap appears relative to the text.
 - A `double` value for the spacing between the bitmap and the text.
@@ -790,7 +790,7 @@ In code, you can create a `Button` and set the `ContentLayout` property like thi
 Button button = new Button
 {
     Text = "button text",
-    Image = new FileImageSource
+    ImageSource = new FileImageSource
     {
         File = "image filename"
     },
@@ -802,7 +802,7 @@ In XAML, you need specify only the enumeration member, or the spacing, or both i
 
 ```xaml
 <Button Text="button text"
-        Image="image filename"
+        ImageSource="image filename"
         ContentLayout="Right, 20" />
 ```
 
@@ -812,22 +812,22 @@ The first `Button` on the **Image Button Demo** page sets the `Image` property b
 
 ```xaml
 <Button>
-    <Button.Image>
+    <Button.ImageSource>
         <OnPlatform x:TypeArguments="FileImageSource">
             <On Platform="iOS, Android" Value="MonkeyFace.png" />
             <On Platform="UWP" Value="Assets/MonkeyFace.png" />
         </OnPlatform>
-    </Button.Image>
+    </Button.ImageSource>
 </Button>
 ```
 
 If the UWP bitmaps are stored in the root directory of the project, this markup can be considerably simplified:
 
 ```xaml
-<Button Image="MonkeyFace.png" />
+<Button ImageSource="MonkeyFace.png" />
 ```
 
-To avoid a lot of repetitious markup in the **ImageButtonDemo.xaml** file, an implicit `Style` is also defined to set the `Image` property. This `Style` is automatically applied to five other `Button` elements. Here's the complete XAML file:
+To avoid a lot of repetitious markup in the **ImageButtonDemo.xaml** file, an implicit `Style` is also defined to set the `ImageSource` property. This `Style` is automatically applied to five other `Button` elements. Here's the complete XAML file:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -840,7 +840,7 @@ To avoid a lot of repetitious markup in the **ImageButtonDemo.xaml** file, an im
 
         <FlexLayout.Resources>
             <Style TargetType="Button">
-                <Setter Property="Image">
+                <Setter Property="ImageSource">
                     <OnPlatform x:TypeArguments="FileImageSource">
                         <On Platform="iOS, Android" Value="MonkeyFace.png" />
                         <On Platform="UWP" Value="Assets/MonkeyFace.png" />
@@ -850,12 +850,12 @@ To avoid a lot of repetitious markup in the **ImageButtonDemo.xaml** file, an im
         </FlexLayout.Resources>
 
         <Button>
-            <Button.Image>
+            <Button.ImageSource>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS, Android" Value="MonkeyFace.png" />
                     <On Platform="UWP" Value="Assets/MonkeyFace.png" />
                 </OnPlatform>
-            </Button.Image>
+            </Button.ImageSource>
         </Button>
 
         <Button Text="Default" />

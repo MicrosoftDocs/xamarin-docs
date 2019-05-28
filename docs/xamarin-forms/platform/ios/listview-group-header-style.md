@@ -11,7 +11,7 @@ ms.date: 10/24/2018
 
 # ListView Group Header Style on iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 This iOS platform-specific controls whether [`ListView`](xref:Xamarin.Forms.ListView) header cells float during scrolling. It's consumed in XAML by setting the `ListView.GroupHeaderStyle` bindable property to a value of the `GroupHeaderStyle` enumeration:
 
@@ -49,6 +49,6 @@ The result is that a specified `GroupHeaderStyle` value is applied to the [`List
 
 ## Related links
 
-- [PlatformSpecifics (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Creating Platform-Specifics](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

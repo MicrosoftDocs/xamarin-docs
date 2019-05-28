@@ -4,7 +4,8 @@ description: "The Accelerometer class in Xamarin.Essentials lets you monitor the
 ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 04/02/2019
+ms.custom: video
 ---
 
 # Xamarin.Essentials: Accelerometer
@@ -86,3 +87,10 @@ Examples:
 
 - [Accelerometer source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
 - [Accelerometer API documentation](xref:Xamarin.Essentials.Accelerometer)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Accelerometer-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
+

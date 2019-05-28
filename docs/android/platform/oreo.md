@@ -68,31 +68,25 @@ Android Oreo project:
 
 Each of these steps is explained in the following sections:
 
-
-
 ### Update Visual Studio and Xamarin.Android
 
 To add Android Oreo support to Visual Studio, do the following:
 
 # [Visual Studio](#tab/windows)
 
--   If you are using Visual Studio 2017: 
+- For Visual Studio 2019, use the [SDK Manager](~/android/get-started/installation/android-sdk.md) to install API level 26.0 or later.
 
-    1. Update to Visual Studio 2017 version 15.7 or later (see 
+- If you are using Visual Studio 2017:
+
+    1. Update to Visual Studio 2017 version 15.7 or later (see
        [Update Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/update-visual-studio)).
 
-    2. Use the [SDK Manager](~/android/get-started/installation/android-sdk.md) to install 
+    2. Use the [SDK Manager](~/android/get-started/installation/android-sdk.md) to install
        API level 26.0 or later.
-
--   If you are using Visual Studio 2015, we recommend downgrading
-    SDK Tools to 25 and using the old Google Emulator manager GUI. SDK
-    tools 25 can still be used alongside API 26, 27, and newer, and
-    won't impact development for new platforms. This will give you an
-    interface for managing your Android SDK for older versions of VS.
 
 # [Visual Studio for Mac](#tab/macos)
 
--   Update to the latest stable version of Visual Studio 2017 for Mac as explained in
+- Update to the latest stable version of Visual Studio for Mac as explained in
     [Updating Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/update).
 
 -----

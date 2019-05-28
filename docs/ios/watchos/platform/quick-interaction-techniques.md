@@ -294,7 +294,7 @@ Additionally, both SpriteKit and SceneKit can be mixed with standard WatchKit UI
 
 ## Simple Navigation
 
-watchOS 3 presents several ways that a developer can simplify the navigation within their watchOS apps such as the new [Vertical Paging](#Vertical-Paging), [Gesture Recognizer Support](#Gesture-Recognizer-Support) and [Digital Crown Rotation](#Digital-Crown-Rotation) features presented above.
+watchOS 3 presents several ways that a developer can simplify the navigation within their watchOS apps such as the new [Vertical Paging](#vertical-paging), [Gesture Recognizer Support](#gesture-recognizer-support) and [Digital Crown Rotation](#digital-crown-rotation) features presented above.
 
 The Digital Crown is unique to the Apple Watch and can be used in many different ways to simplify navigation. For example, a timer application can use the Digital Crown to scrub through available timer lengths.
 

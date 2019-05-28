@@ -1,14 +1,14 @@
 ---
 title: "Create a single page Xamarin.Forms application"
 description: "This article explains how to create a single page cross-platform Xamarin.Forms application, which enables you to enter a note and persist it to device storage."
-zone_pivot_groups: platform
+zone_pivot_groups: platform-dev16
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: E8CF05B1-54B9-428B-8518-D068837BD61E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/02/2019
+ms.date: 04/01/2019
 ---
 
 # Create a Single Page Xamarin.Forms Application
@@ -29,15 +29,169 @@ The quickstart walks through how to create a cross-platform Xamarin.Forms applic
 
 ### Prerequisites
 
-- Visual Studio 2017 (latest release), with the **Mobile development with .NET** workload installed.
+- Visual Studio 2019 (latest release), with the **Mobile development with .NET** workload installed.
 - Knowledge of C#.
 - (optional) A paired Mac to build the application on iOS.
 
-For more information about these prerequisites, see [Installing Xamarin](~/get-started/installation/index.md). For information about connecting Visual Studio 2017 to a Mac build host, see [Pair to Mac for Xamarin.iOS development](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+For more information about these prerequisites, see [Installing Xamarin](~/get-started/installation/index.md). For information about connecting Visual Studio 2019 to a Mac build host, see [Pair to Mac for Xamarin.iOS development](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-## Get started with Visual Studio
+## Get started with Visual Studio 2019
 
-1. Launch Visual Studio, and on the start page click **Create new project...** to create a new project:
+1. Launch Visual Studio 2019, and in the start window click **Create a new project** to create a new project:
+
+    ![](single-page-images/vs/new-solution-2019.png "New Project")
+
+2. In the **Create a new project** window, select **Mobile** in the **Project type** drop down, select the **Mobile App (Xamarin.Forms** template), and click the **Next** button:
+
+    ![](single-page-images/vs/new-project-2019.png "Cross-Platform Project Templates")
+
+3. In the **Configure your new project** window, set the **Project name** to **Notes**, choose a suitable location for the project, and click the **Create** button:
+
+    ![](single-page-images/vs/configure-project.png "Configure your Project")
+
+    > [!IMPORTANT]
+    > The C# and XAML snippets in this quickstart requires that the solution is named **Notes**. Using a different name will result in build errors when you copy code from this quickstart into the solution.
+
+4. In the **New Cross Platform App** dialog, click **Blank App**, and click the **OK** button:
+
+    ![](single-page-images/vs/new-app-2019.png "New Cross-Platform App")
+
+    For more information about the .NET Standard library that gets created, see [Anatomy of a Xamarin.Forms application](deepdive.md#anatomy-of-a-xamarinforms-application) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
+
+5. In **Solution Explorer**, in the **Notes** project, double-click **MainPage.xaml** to open it:
+
+    ![](single-page-images/vs/open-mainpage-xaml.png "Open MainPage.xaml")
+
+6. In **MainPage.xaml**, remove all of the template code and replace it with the following code:
+
+    ```xaml
+    <?xml version="1.0" encoding="utf-8"?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="Notes.MainPage">
+        <StackLayout Margin="10,35,10,10">
+            <Label Text="Notes"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold" />
+            <Editor x:Name="editor"
+                    Placeholder="Enter your note"
+                    HeightRequest="100" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Save"
+                        Clicked="OnSaveButtonClicked" />
+                <Button Grid.Column="1"
+                        Text="Delete"
+                        Clicked="OnDeleteButtonClicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage>
+    ```
+
+    This code declaratively defines the user interface for the page, which consists of a [`Label`](xref:Xamarin.Forms.Label) to display text, an [`Editor`](xref:Xamarin.Forms.Editor) for text input, and two [`Button`](xref:Xamarin.Forms.Button) instances that direct the application to save or delete a file. The two `Button` instances are horizontally laid out in a [`Grid`](xref:Xamarin.Forms.Grid), with the `Label`, `Editor`, and `Grid` being vertically laid out in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). For more information about creating the user interface, see [User interface](deepdive.md#user-interface) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
+
+    Save the changes to **MainPage.xaml** by pressing **CTRL+S**, and close the file.
+
+7. In **Solution Explorer**, in the **Notes** project, expand **MainPage.xaml** and double-click **MainPage.xaml.cs** to open it:
+
+    ![](single-page-images/vs/open-mainpage-codebehind.png "Open MainPage.xaml.cs")
+
+8. In **MainPage.xaml.cs**, remove all of the template code and replace it with the following code:
+
+    ```csharp
+    using System;
+    using System.IO;
+    using Xamarin.Forms;
+
+    namespace Notes
+    {
+        public partial class MainPage : ContentPage
+        {
+            string _fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "notes.txt");
+
+            public MainPage()
+            {
+                InitializeComponent();
+
+                if (File.Exists(_fileName))
+                {
+                    editor.Text = File.ReadAllText(_fileName);
+                }
+            }
+
+            void OnSaveButtonClicked(object sender, EventArgs e)
+            {
+                File.WriteAllText(_fileName, editor.Text);
+            }
+
+            void OnDeleteButtonClicked(object sender, EventArgs e)
+            {
+                if (File.Exists(_fileName))
+                {
+                    File.Delete(_fileName);
+                }
+                editor.Text = string.Empty;
+            }
+        }
+    }
+    ```
+
+    This code defines a `_fileName` field, which references a file named `notes.txt` that will store note data in the local application data folder for the application. When the page constructor is executed the file is read, if it exists, and displayed in the [`Editor`](xref:Xamarin.Forms.Editor). When the **Save** [`Button`](xref:Xamarin.Forms.Button) is pressed the `OnSaveButtonClicked` event handler is executed, which saves the content of the `Editor` to the file. When the **Delete** `Button` is pressed the `OnDeleteButtonClicked` event handler is executed, which deletes the file, provided that it exists, and removes any text from the `Editor`. For more information about user interaction, see [Responding to user interaction](deepdive.md#responding-to-user-interaction) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
+
+    Save the changes to **MainPage.xaml.cs** by pressing **CTRL+S**, and close the file.
+
+### Building the quickstart
+
+1. In Visual Studio, select the **Build > Build Solution** menu item (or press F6). The solution will build and a success message will appear in the Visual Studio status bar:
+
+      ![](single-page-images/vs/build-succeeded.png "Build Succeeded")
+
+    If there are errors, repeat the previous steps and correct any mistakes until the solution builds successfully.
+
+2. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application in your chosen Android emulator:
+
+    ![](single-page-images/vs/android-start.png "Visual Studio Android Toolbar")
+
+    [![](single-page-images/vs/notes-android.png "Notes in the Android Emulator")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+
+    Enter a note and press the **Save** button.
+
+    For more information about how the application is launched on each platform, see [Launching the application on each platform](deepdive.md#launching-the-application-on-each-platform) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
+
+    > [!NOTE]
+    > The following steps should only be carried out if you have a [paired Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) that meets the system requirements for Xamarin.Forms development.
+
+3. In the Visual Studio toolbar, right-click on the **Notes.iOS** project, and select **Set as StartUp Project**.
+
+      ![](single-page-images/vs/set-as-startup-project-ios.png "Set iOS as Startup Project")
+
+4. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application in your chosen [iOS remote simulator](~/tools/ios-simulator/index.md):
+
+    ![](single-page-images/vs/ios-start.png "Visual Studio iOS Toolbar")
+
+    [![](single-page-images/vs/notes-ios.png "Notes in the iOS Simulator")](single-page-images/vs/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
+
+    Enter a note and press the **Save** button.
+
+    For more information about how the application is launched on each platform, see [Launching the application on each platform](deepdive.md#launching-the-application-on-each-platform) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
+
+::: zone-end
+::: zone pivot="win-vs2017"
+
+### Prerequisites
+
+- Visual Studio 2017, with the **Mobile development with .NET** workload installed.
+- Knowledge of C#.
+- (optional) A paired Mac to build the application on iOS.
+
+For more information about these prerequisites, see [Installing Xamarin](~/get-started/installation/index.md). For information about connecting Visual Studio 2019 to a Mac build host, see [Pair to Mac for Xamarin.iOS development](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+
+## Get started with Visual Studio 2017
+
+1. Launch Visual Studio 2017, and on the start page click **Create new project...** to create a new project:
 
     ![](single-page-images/vs/new-solution.png "New Project")
 
@@ -187,7 +341,7 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 ## Get started with Visual Studio for Mac
 
-1. Launch Visual Studio for Mac, and on the start page click **New Project...** to create a new project:
+1. Launch Visual Studio for Mac, and in the start window click **New** to create a new project:
 
     ![](single-page-images/vsmac/new-project.png "New Solution")
 

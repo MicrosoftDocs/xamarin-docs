@@ -11,7 +11,7 @@ ms.date: 10/24/2018
 
 # Customizing a Map Pin
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/)
 
 _This article demonstrates how to create a custom renderer for the Map control, which displays a native map with a customized pin and a customized view of the pin data on each platform._
 
@@ -220,9 +220,9 @@ namespace CustomRenderer.iOS
 }
 ```
 
-The `OnElementChanged` method performs the following configuration of the [`MKMapView`](https://developer.xamarin.com/api/type/MapKit.MKMapView/) instance, provided that the custom renderer is attached to a new Xamarin.Forms element:
+The `OnElementChanged` method performs the following configuration of the [`MKMapView`](xref:MapKit.MKMapView) instance, provided that the custom renderer is attached to a new Xamarin.Forms element:
 
-- The [`GetViewForAnnotation`](https://developer.xamarin.com/api/property/MapKit.MKMapView.GetViewForAnnotation/) property is set to the `GetViewForAnnotation` method. This method is called when the [location of the annotation becomes visible on the map](#Displaying_the_Annotation), and is used to customize the annotation prior to display.
+- The [`GetViewForAnnotation`](xref:MapKit.MKMapView.GetViewForAnnotation*) property is set to the `GetViewForAnnotation` method. This method is called when the [location of the annotation becomes visible on the map](#Displaying_the_Annotation), and is used to customize the annotation prior to display.
 - Event handlers for the `CalloutAccessoryControlTapped`, `DidSelectAnnotationView`, and `DidDeselectAnnotationView` events are registered. These events fire when the user [taps the right accessory in the callout](#Tapping_on_the_Right_Callout_Accessory_View), and when the user [selects](#Selecting_the_Annotation) and [deselects](#Deselecting_the_Annotation) the annotation, respectively. The events are unsubscribed from only when the element the renderer is attached to changes.
 
 <a name="Displaying_the_Annotation" />
@@ -268,7 +268,7 @@ protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKA
 This method ensures that the annotation will be displayed as a custom image, rather than as system-defined pin, and that when the annotation is tapped a callout will be displayed that includes additional content to the left and right of the annotation title and address. This is accomplished as follows:
 
 1. The `GetCustomPin` method is called to return the custom pin data for the annotation.
-1. To conserve memory, the annotation's view is pooled for reuse with the call to [`DequeueReusableAnnotation`](https://developer.xamarin.com/api/member/MapKit.MKMapView.DequeueReusableAnnotation/(System.String)/).
+1. To conserve memory, the annotation's view is pooled for reuse with the call to [`DequeueReusableAnnotation`](xref:MapKit.MKMapView.DequeueReusableAnnotation*).
 1. The `CustomMKAnnotationView` class extends the `MKAnnotationView` class with `Id` and `Url` properties that correspond to identical properties in the `CustomPin` instance. A new instance of the `CustomMKAnnotationView` is created, provided that the annotation is `null`:
     - The `CustomMKAnnotationView.Image` property is set to the image that will represent the annotation on the map.
     - The `CustomMKAnnotationView.CalloutOffset` property is set to a `CGPoint` that specifies that the callout will be centered above the annotation.
@@ -276,7 +276,7 @@ This method ensures that the annotation will be displayed as a custom image, rat
     - The `CustomMKAnnotationView.RightCalloutAccessoryView` property is set to an *Information* button that will appear to the right of the annotation title and address.
     - The `CustomMKAnnotationView.Id` property is set to the `CustomPin.Id` property returned by the `GetCustomPin` method. This enables the annotation to be identified so that it's [callout can be further customized](#Selecting_the_Annotation), if desired.
     - The `CustomMKAnnotationView.Url` property is set to the `CustomPin.Url` property returned by the `GetCustomPin` method. The URL will be navigated to when the user [taps the button displayed in the right callout accessory view](#Tapping_on_the_Right_Callout_Accessory_View).
-1. The [`MKAnnotationView.CanShowCallout`](https://developer.xamarin.com/api/property/MapKit.MKAnnotationView.CanShowCallout/) property is set to `true` so that the callout is displayed when the annotation is tapped.
+1. The [`MKAnnotationView.CanShowCallout`](xref:MapKit.MKAnnotationView.CanShowCallout*) property is set to `true` so that the callout is displayed when the annotation is tapped.
 1. The annotation is returned for display on the map.
 
 <a name="Selecting_the_Annotation" />
@@ -658,4 +658,4 @@ This article demonstrated how to create a custom renderer for the `Map` control,
 - [Maps Control](~/xamarin-forms/user-interface/map.md)
 - [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)
 - [Maps API](~/android/platform/maps-and-location/maps/maps-api.md)
-- [Customized Pin (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+- [Customized Pin (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/)

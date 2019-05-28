@@ -17,12 +17,10 @@ This article covers the steps to install and configure the Xamarin.iOS tools on 
 
 Developing for iOS inside Visual Studio provides a number of benefits:
 
--  Creation of cross-platform solutions for iOS, Android and Windows applications.
--  Using your favorite Visual Studio tools (such as **Resharper** and **Team Foundation Server**) for all your
+- Creation of cross-platform solutions for iOS, Android and Windows applications.
+- Using your favorite Visual Studio tools (such as **Resharper** and **Team Foundation Server**) for all your
 cross-platform projects, including iOS source code.
--  Work with a familiar IDE, while taking advantage of Xamarin.iOS bindings of all Apple’s APIs.
-
-<a name="Requirements_and_Installation" />
+- Work with a familiar IDE, while taking advantage of Xamarin.iOS bindings of all Apple’s APIs.
 
 ## Requirements and Installation
 
@@ -30,9 +28,9 @@ There are a few requirements that must be adhered to when developing for iOS in 
 
 There are a number of configuration options available, so you can decide which works best for your development needs. These are listed below:
 
--  Use a Mac as your main development machine and run a Windows virtual machine with Visual Studio installed. We recommend using
+- Use a Mac as your main development machine and run a Windows virtual machine with Visual Studio installed. We recommend using
 VM software such as [Parallels](http://www.parallels.com/products/desktop/) or [VMWare](http://www.vmware.com/products/fusion/) .
--  Use a Mac just as a build host. In this scenario it would be connected to the same network as a Windows machine with
+- Use a Mac just as a build host. In this scenario it would be connected to the same network as a Windows machine with
 the [necessary](~/get-started/installation/windows.md#installation) tools installed.
 
 In either case, you should follow these steps:
@@ -55,11 +53,11 @@ The functions of these toolbars are explained below.
 
 The controls relevant to Xamarin iOS development are circled in red:
 
- [![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "The controls relevant to Xamarin iOS development are circled in red")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "The controls relevant to Xamarin iOS development are circled in red")
+[![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "The controls relevant to Xamarin iOS development are circled in red")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "The controls relevant to Xamarin iOS development are circled in red")
 
--  **Start** - Starts debugging or running the application on the selected platform. There must be a connected Mac (see the status indicator in the iOS toolbar).
--  **Solution Configurations** – Allows you to select the configuration to use (e.g., Debug, Release).
--  **Solution Platforms** - Allows you to select iPhone or iPhoneSimulator for deployment.
+- **Start** - Starts debugging or running the application on the selected platform. There must be a connected Mac (see the status indicator in the iOS toolbar).
+- **Solution Configurations** – Allows you to select the configuration to use (e.g., Debug, Release).
+- **Solution Platforms** - Allows you to select iPhone or iPhoneSimulator for deployment.
 
 ### iOS Toolbar
 
@@ -69,9 +67,9 @@ The iOS Toolbar in Visual Studio looks similar in each version of Visual Studio.
 
 Each item is explained below:
 
--  **Mac Agent/Connection Manager** – Displays the Xamarin Mac Agent dialog box. This icon will appear *orange* when connecting, and *green* when connected.
--  **Show iOS Simulator** – Brings the iOS Simulator window to the front on the Mac.
--  **Show IPA File on Build Server** – Opens Finder on the Mac to the location of the application’s IPA output file.
+- **Mac Agent/Connection Manager** – Displays the Xamarin Mac Agent dialog box. This icon will appear *orange* when connecting, and *green* when connected.
+- **Show iOS Simulator** – Brings the iOS Simulator window to the front on the Mac.
+- **Show IPA File on Build Server** – Opens Finder on the Mac to the location of the application’s IPA output file.
 
 ## iOS Output Options
 
@@ -85,39 +83,39 @@ The screenshot below shows the available output windows, which may differ depend
 
 - **Xamarin** – This contains information relating solely to Xamarin, such as the connection to the Mac and activation status.
 
-	[![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Information relating solely to Xamarin, such as the connection to the Mac and activation status")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Information relating solely to Xamarin, such as the connection to the Mac and activation status")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 - **Xamarin Diagnostics** – This shows more detailed information about your Xamarin project, such as the interaction with and for Android.
 
-	[![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Detailed information about the Xamarin project")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Detailed information about the Xamarin project")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 Other default Visual Studio Output panes like Debug and Build are still available inside the Output view and are used for Debugging Output and MSBuild Output:
 
--  **Debug**
+- **Debug**
 
-	[![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Debugging Output")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Debugging Output")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
 
 - **Build** & **Build Order**
 
-	[![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "MSBuild Output")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "MSBuild Output")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
 ## iOS Project Properties
 
 Visual Studio’s Project Properties can be accessed by right-clicking on the Project name and selecting *Properties* in the context menu. This will let you configure your iOS application, as shown in the screenshot below:
 
- ![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Configuring an iOS application")
+![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Configuring an iOS application")
 
--  *iOS Bundle Signing* – connects to the Mac to populate the code signing identities and provisioning profiles:
+- *iOS Bundle Signing* – connects to the Mac to populate the code signing identities and provisioning profiles:
 
- ![](introduction-to-xamarin-ios-for-visual-studio-images/bundlesigning.png "Populate the code signing identities and provisioning profiles")
+  ![Populate the code signing identities and provisioning profiles](introduction-to-xamarin-ios-for-visual-studio-images/bundlesigning.png)
 
--  *iOS IPA Options* – the IPA file will be saved on the Mac’s file system:
+- *iOS IPA Options* – the IPA file will be saved on the Mac’s file system:
 
- ![](introduction-to-xamarin-ios-for-visual-studio-images/ipaoptions.png "iOS IPA Options")
+  ![iOS IPA Options](introduction-to-xamarin-ios-for-visual-studio-images/ipaoptions.png)
 
--  *iOS Run Options* – Configure additional parameters:
+- *iOS Run Options* – Configure additional parameters:
 
- ![](introduction-to-xamarin-ios-for-visual-studio-images/iosrunoptions.png "iOS Run Options")
+  ![iOS Run Options](introduction-to-xamarin-ios-for-visual-studio-images/iosrunoptions.png)
 
 ## Creating a New Project for iOS Applications
 
@@ -169,13 +167,13 @@ Breakpoints can be set at any point in your application to signal to the debugge
 
 Start debugging, and use the simulator or device to navigate your application to a breakpoint. When a breakpoint is hit, the line will be highlighted and Visual Studio’s normal debugging behavior will be enabled: you can step into, over, or out of the code, examine local variables, or use the Immediate Window.
 
-This screenshot shows the iOS Simulator running next to Visual Studio using Parallels on OS X:
+This screenshot shows the iOS Simulator running next to Visual Studio using Parallels on macOS:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/image19.png "This screenshot shows the iOS Simulator running next to Visual Studio using Parallels on OS X")
+![This screenshot shows the iOS Simulator running next to Visual Studio using Parallels on macOS](introduction-to-xamarin-ios-for-visual-studio-images/image19.png)
 
 ### Examine Local Variables
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/image20.png "Examining Local Variables with debugging")
+![Examining Local Variables with debugging](introduction-to-xamarin-ios-for-visual-studio-images/image20.png)
 
 ## Summary
 

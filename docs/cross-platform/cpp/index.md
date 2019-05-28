@@ -4,7 +4,7 @@ title: "Use C/C++ libraries with Xamarin"
 description: "Visual Studio for Mac can be used to build and integrate cross-platform C/C++ code into mobile apps for Android and iOS, using Xamarin and C#. This article explains how to set up and debug a C++ project in a Xamarin app."
 author: mikeparker104
 ms.author: miparker
-ms.date: 12/17/20178
+ms.date: 12/17/2018
 ---
 # Use C/C++ libraries with Xamarin
 
@@ -12,7 +12,7 @@ ms.date: 12/17/20178
 
 Xamarin enables developers to create cross-platform native mobile apps with Visual Studio. Generally, C# bindings are used to expose existing platform components to developers. However, there are times when Xamarin apps need to work with existing codebases. Sometimes teams simply don't have the time, budget, or resources to port a large, well-tested, and highly optimized codebase to C#.
 
-[Visual C++ for cross-platform mobile development](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) enables the C/C++ and C# code to be built as part of the same solution, offering many advantages including a unified debugging experience. Microsoft has used C/C++ and Xamarin in this way to deliver apps such as [Hyperlapse Mobile](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) and [Pix Camera](https://www.microsoft.com/microsoftpix).
+[Visual C++ for cross-platform mobile development](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) enables the C/C++ and C# code to be built as part of the same solution, offering many advantages including a unified debugging experience. Microsoft has used C/C++ and Xamarin in this way to deliver apps such as [Hyperlapse Mobile](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) and [Pix Camera](https://www.microsoft.com/microsoftpix).
 
 However, in some cases there is a desire (or requirement) to keep existing C/C++ tools and processes in place and to keep the library code decoupled from the application, treating the library as if it were similar to a third-party component. In these situations, the challenge is not only exposing the relevant members to C# but managing the library as a dependency. And, of course, automating as much of this process as possible.  
 
@@ -28,22 +28,20 @@ Ultimately the code must compile and run successfully on all target platforms th
 
 The illustration below represents the four-stage approach used to transform C/C++ source code into a cross-platform Xamarin library that is shared via NuGet and then is consumed in a Xamarin.Forms app.
  
-
 ![High-level approach for using C/C++ with Xamarin](images/cpp-steps.jpg)
 
 The 4 stages are:
 
-1.  Compiling the C/C++ source code into platform-specific native libraries.
-2.  Wrapping the native libraries with a Visual Studio solution.
-3.  Packing and pushing a NuGet package for the .NET wrapper.
-4.  Consuming the NuGet package from a Xamarin app.
+1. Compiling the C/C++ source code into platform-specific native libraries.
+2. Wrapping the native libraries with a Visual Studio solution.
+3. Packing and pushing a NuGet package for the .NET wrapper.
+4. Consuming the NuGet package from a Xamarin app.
 
 ### Stage 1: Compiling the C/C++ source code into platform-specific native libraries
 
 The goal of this stage is to create native libraries that can be called by the C# wrapper. This may or may not be relevant depending on your situation. The many tools and processes that can be brought to bear in this common scenario are beyond the scope of this article. Key considerations are keeping the C/C++ codebase in sync with any native wrapper code, sufficient unit testing, and build automation. 
 
-The libraries in the walk-through were created using Visual Studio Code with an accompanying shell script. An extended version of this walk-through can be found in the [Mobile CAT GitHub repository](https://github.com/xamarin/mobcat/blob/dev/samples/cppwithxamarin/README.md) that discusses this part of the sample in greater depth. The native libraries are being treated as a third-party dependency in this case however this stage is illustrated for context.
-
+The libraries in the walk-through were created using Visual Studio Code with an accompanying shell script. An extended version of this walk-through can be found in the [Mobile CAT GitHub repository](https://github.com/xamarin/mobcat/blob/dev/samples/cpp_with_xamarin/) that discusses this part of the sample in greater depth. The native libraries are being treated as a third-party dependency in this case however this stage is illustrated for context.
 
 For simplicity, the walkthrough targets only a subset of architectures. For iOS, it uses the lipo utility to create a single fat binary from the individual architecture-specific binaries. Android will use dynamic binaries with a .so extension and iOS will use a static fat binary with a .a extension. 
 
@@ -71,28 +69,28 @@ The source code repository contains a [list of further reading](https://github.c
 
 ## Walk-through
 
-The steps provided are specific to **Visual Studio for Mac**, but the structure works in **Visual Studio 2017** as well.
+The steps provided are specific to **Visual Studio for Mac**, but the structure works in **Visual Studio 2017** as well.
 
 ### Prerequisites
 
 In order to follow along, the developer will need:
 
--   [NuGet Command Line (CLI)](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
+- [NuGet Command Line (CLI)](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
 
--   [*Visual Studio* *for Mac*](https://visualstudio.microsoft.com/downloads)
+- [*Visual Studio* *for Mac*](https://visualstudio.microsoft.com/downloads)
 
 > [!NOTE]
-> An active [**Apple Developer Account**](https://developer.apple.com/) is required in order to deploy apps to an iPhone.
+> An active [**Apple Developer Account**](https://developer.apple.com/) is required in order to deploy apps to an iPhone.
 
 ## Creating the native libraries (Stage 1)
 
-The native library functionality is based on the example from [Walkthrough: Creating and Using a Static Library (C++)](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017).
+The native library functionality is based on the example from [Walkthrough: Creating and Using a Static Library (C++)](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017).
 
-This walkthrough skips the first stage, building the native libraries, since the library is provided as a third-party dependency in this scenario. The precompiled native libraries are included alongside the [sample code](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin) or can be [downloaded](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) directly.
+This walkthrough skips the first stage, building the native libraries, since the library is provided as a third-party dependency in this scenario. The precompiled native libraries are included alongside the [sample code](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin) or can be [downloaded](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) directly.
 
 ### Working with the native library
 
-The original *MathFuncsLib* example includes a single class called MyMathFuncs with the following definition: 
+The original *MathFuncsLib* example includes a single class called `MyMathFuncs` with the following definition:
 
 ```cpp
 namespace MathFuncs
@@ -108,7 +106,7 @@ namespace MathFuncs
 }
 ```
 
-An additional class defines wrapper functions that allow a .NET consumer to create, dispose, and interact with the underlying native MyMathFuncs class.
+An additional class defines wrapper functions that allow a .NET consumer to create, dispose, and interact with the underlying native `MyMathFuncs` class.
 
 ```cpp
 #include "MyMathFuncs.h"
@@ -124,11 +122,11 @@ extern "C" {
 }
 ```
 
-It will be these wrapper functions that are used on the [Xamarin](https://visualstudio.microsoft.com/xamarin/) side.
+It will be these wrapper functions that are used on the [Xamarin](https://visualstudio.microsoft.com/xamarin/) side.
 
 ## Wrapping the native library (Stage 2)
 
-This stage requires the [precompiled libraries](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) described in the [previous section](https://docs.microsoft.com/xamarin/cross-platform/cpp/index).
+This stage requires the [precompiled libraries](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) described in the [previous section](##creating-the-native-libraries-stage-1).
 
 ### Creating the Visual Studio solution
 
@@ -153,8 +151,8 @@ This stage requires the [precompiled libraries](https://github.com/xamarin/mobca
 
 11. From **Solution Explorer**, double-click on the **MathFuncs.Standard** project.
 12. Navigate to **Main Settings**, then update **Default Namespace** to **MathFuncs**.
-13. Navigate to the **Output** settings, then update **Assembly name** to **MathFuncs** then click **OK**.
-14. Navigate to the **Compiler** settings, change the **Configuration** to **Release**, setting **Debug information** to **Symbols Only**.
+13. Navigate to the **Output** settings, then update **Assembly name** to **MathFuncs**.
+14. Navigate to the **Compiler** settings, change the **Configuration** to **Release**, setting **Debug information** to **Symbols Only** then click **OK**.
 15. Delete **Class1.cs/Getting Started** from the project (if one of these has been included as part of the template).
 16. **CONTROL + CLICK** on the project **Dependencies/References** folder, then choose **Edit References**.
 17. Select **MathFuncs.Shared** from the **Projects** tab, then click **OK**.
@@ -175,7 +173,7 @@ This stage requires the [precompiled libraries](https://github.com/xamarin/mobca
 
 23. Build the solution in **Release** configuration (**CONTROL + COMMAND + B**) and validate that all three output assemblies (Android, iOS, .NET Standard) (in the respective project bin folders) share the same name **MathFuncs.dll**.
 
-At this stage, the solution should have three targets, one apiece for Android, iOS and .NET Standard, and a shared project that is referenced by each of the three targets. These should be configured to use the same default namespace and output assemblies with the same name. This is necessary for the 'bait and switch' approach mentioned previously.
+At this stage, the solution should have three targets, one apiece for Android, iOS and .NET Standard, and a shared project that is referenced by each of the three targets. These should be configured to use the same default namespace and output assemblies with the same name. This is necessary for the 'bait and switch' approach mentioned previously.
 
 ### Adding the native libraries
 
@@ -185,7 +183,7 @@ The process of adding the native libraries to the wrapper solution varies slight
 
 1. **CONTROL + CLICK** on the **MathFuncs.Android** project, then choose **New Folder** from the **Add** menu naming it **libs**.
 
-2. For each **ABI** (Application Binary Interface), **CONTROL + CLICK** on the **libs** folder, then choose **New Folder** from the **Add** menu, naming it after that respective **ABI**. In this case:
+2. For each **ABI** (Application Binary Interface), **CONTROL + CLICK** on the **libs** folder, then choose **New Folder** from the **Add** menu, naming it after that respective **ABI**. In this case:
 
     - arm64-v8a
     - armeabi-v7a
@@ -193,11 +191,11 @@ The process of adding the native libraries to the wrapper solution varies slight
     - x86_64  
 
     > [!NOTE]
-    > For a more detailed overview, see the [Architectures and CPUs](https://developer.android.com/ndk/guides/arch) topic from the [NDK developer guide](https://developer.android.com/ndk/guides/), specifically the section on addressing [native code in app packages](https://developer.android.com/ndk/guides/abis#native-code-in-app-packages).
+    > For a more detailed overview, see the [Architectures and CPUs](https://developer.android.com/ndk/guides/arch) topic from the [NDK developer guide](https://developer.android.com/ndk/guides/), specifically the section on addressing [native code in app packages](https://developer.android.com/ndk/guides/abis#native-code-in-app-packages).
 
 3. Verify the folder structure:  
 
-    ```
+    ```folders
     - lib
         - arm64-v8a
         - armeabi-v7a
@@ -224,17 +222,17 @@ The process of adding the native libraries to the wrapper solution varies slight
 
 5. For each of the **.so** files, **CONTROL + CLICK** then choose the **EmbeddedNativeLibrary** option from the **Build Action** menu.
 
-Now the **libs** folder should appear as follows:
+Now the **libs** folder should appear as follows:
 
-```bash
+```folders
 - lib
     - arm64-v8a
         - libMathFuncs.so
     - armeabi-v7a
         - libMathFuncs.so
-    - x86 
+    - x86
         - libMathFuncs.so
-    - x86_64 
+    - x86_64
         - libMathFuncs.so
 ```
 
@@ -244,15 +242,15 @@ Now the **libs** folder should appear as follows:
 2. Choose the **libMathFuncs.a** library (from libs/ios under the **PrecompiledLibs** directory) then click **Open** 
 3. **CONTROL + CLICK** on the **libMathFuncs** file (within the **Native References** folder, then choose the **Properties** option from the menu  
 4. Configure the **Native Reference** properties so they are checked (showing a tick icon) in the **Properties** Pad:
-        
+
     - Force Load
     - Is C++
-    - Smart Link 
+    - Smart Link
 
     > [!NOTE]
-    > Using a binding library project type along with a [native reference](https://docs.microsoft.com/xamarin/cross-platform/macios/native-references) embeds the static library and enables it to be automatically linked with the Xamarin.iOS app that references it (even when it is included via a NuGet package). 
+    > Using a binding library project type along with a [native reference](https://docs.microsoft.com/xamarin/cross-platform/macios/native-references) embeds the static library and enables it to be automatically linked with the Xamarin.iOS app that references it (even when it is included via a NuGet package).
 
-5. Open **ApiDefinition.cs**, deleting the templated commented code (leaving only the **MathFuncs** namespace), then perform the same step for **Structs.cs** 
+5. Open **ApiDefinition.cs**, deleting the templated commented code (leaving only the `MathFuncs` namespace), then perform the same step for **Structs.cs** 
 
     > [!NOTE]
     > A Binding library project requires these files (with the *ObjCBindingApiDefinition* and *ObjCBindingCoreSource* build actions) in order to build. However, we will write the code, to call our native library, outside of these files in a way that can be shared between both Android and iOS library targets using standard P/Invoke.
@@ -392,11 +390,14 @@ Now, write the C# code to call the native library. The goal is to hide any under
     ```
 
 #### Completing the MyMathFuncsSafeHandle class
+
 1. Open the **MyMathFuncsSafeHandle** class, navigate to the placeholder **TODO** comment within the **ReleaseHandle** method:
+
     ```csharp
     // TODO: Release the handle here
     ```
-2. Replace the **TODO** line:
+
+1. Replace the **TODO** line:
 
     ```csharp
     MyMathFuncsWrapper.DisposeMyMathFuncs(this);
@@ -404,7 +405,7 @@ Now, write the C# code to call the native library. The goal is to hide any under
 
 #### Writing the MyMathFuncs class
 
-Now that the wrapper is complete, create a MyMathFuncs class that will manage the reference to the unmanaged C++ MyMathFuncs object.  
+Now that the wrapper is complete, create a MyMathFuncs class that will manage the reference to the unmanaged C++ MyMathFuncs object.  
 
 1. **CONTROL + CLICK** on the **MathFuncs.Shared** project, then choose **Add File...** from the **Add** menu. 
 2. Choose **Empty Class** from the **New File** window, name it **MyMathFuncs** and then click **New**
@@ -472,13 +473,12 @@ Now that the wrapper is complete, create a MyMathFuncs class that will manage 
 
 #### Creating the nuspec
 
-In order to have the library packaged and distributed via NuGet, the solution needs a **nuspec** file. This will identify which of the resulting assemblies will be included for each supported platform.
+In order to have the library packaged and distributed via NuGet, the solution needs a **nuspec** file. This will identify which of the resulting assemblies will be included for each supported platform.
 
-1.  **CONTROL + CLICK** on the solution **MathFuncs**, then choose **Add Solution Folder** from the **Add** menu naming it **SolutionItems**.
-2.  **CONTROL + CLICK** on the **SolutionItems** folder, then choose **New File...** from the **Add** menu.
-3.  Choose **Empty XML File** from the **New File** window, name it **MathFuncs.nuspec** and then click **New**.
-4.  Update **MathFuncs.nuspec** with the basic package metadata to be displayed to the **NuGet** consumer. For example:
-
+1. **CONTROL + CLICK** on the solution **MathFuncs**, then choose **Add Solution Folder** from the **Add** menu naming it **SolutionItems**.
+2. **CONTROL + CLICK** on the **SolutionItems** folder, then choose **New File...** from the **Add** menu.
+3. Choose **Empty XML File** from the **New File** window, name it **MathFuncs.nuspec** and then click **New**.
+4. Update **MathFuncs.nuspec** with the basic package metadata to be displayed to the **NuGet** consumer. For example:
 
     ```xml
     <?xml version="1.0"?>
@@ -495,7 +495,7 @@ In order to have the library packaged and distributed via NuGet, the solution ne
     ```
 
     > [!NOTE]
-    >  See the [nuspec reference](https://docs.microsoft.com/nuget/reference/nuspec) document for further detail on the schema used for this manifest.
+    > See the [nuspec reference](https://docs.microsoft.com/nuget/reference/nuspec) document for further detail on the schema used for this manifest.
 
 5. Add a `<files>` element as a child of the `<package>` element (just below `<metadata>`), identifying each file with a separate `<file>` element:
 
@@ -504,7 +504,7 @@ In order to have the library packaged and distributed via NuGet, the solution ne
 
         <!-- Android -->
 
-        <!-- iOS -->        
+        <!-- iOS -->
 
         <!-- netstandard2.0 -->
 
@@ -549,7 +549,7 @@ In order to have the library packaged and distributed via NuGet, the solution ne
         <copyright>Copyright 2018</copyright>
     </metadata>
     <files>
-    
+
         <!-- Android -->
         <file src="MathFuncs.Android/bin/Release/MathFuncs.dll" target="lib/MonoAndroid81/MathFuncs.dll" />
         <file src="MathFuncs.Android/bin/Release/MathFuncs.pdb" target="lib/MonoAndroid81/MathFuncs.pdb" />
@@ -567,9 +567,9 @@ In order to have the library packaged and distributed via NuGet, the solution ne
     ```
 
     > [!NOTE]
-    > This file specifies the assembly output paths from a **Release** build, so be sure to build the solution using that configuration.
+    > This file specifies the assembly output paths from a **Release** build, so be sure to build the solution using that configuration.
 
-At this point, the solution contains 3 .NET assemblies and a supporting **nuspec** manifest.
+At this point, the solution contains 3 .NET assemblies and a supporting **nuspec** manifest.
 
 ## Distributing the .NET wrapper with NuGet
 
@@ -579,33 +579,34 @@ The next step is to package and distribute the NuGet package so it may be easily
 
 The simplest form of NuGet feed is a local directory:
 
-1.  In **Finder**, navigate to a convenient directory. For example, **/Users**.
-2.  Choose **New Folder** from the **File** menu, providing a meaningful name such as **local-nuget-feed**.
+1. In **Finder**, navigate to a convenient directory. For example, **/Users**.
+2. Choose **New Folder** from the **File** menu, providing a meaningful name such as **local-nuget-feed**.
 
 ### Creating the package
 
-1.  Set the **Build Configuration** to **Release**, and execute a build using **COMMAND + B**.
-2.  Open **Terminal** and change directory to the folder containing the **nuspec** file.
-3.  In **Terminal**, execute the **nuget pack** command specifying the **nuspec** file, the **Version** (for example, 1.0.0), and the **OutputDirectory** using the folder created in the [previous step](https://docs.microsoft.com/xamarin/cross-platform/cpp/index#creating-a-local-nuget-feed), that is, **local-nuget-feed**. For example:
+1. Set the **Build Configuration** to **Release**, and execute a build using **COMMAND + B**.
+2. Open **Terminal** and change directory to the folder containing the **nuspec** file.
+3. In **Terminal**, execute the **nuget pack** command specifying the **nuspec** file, the **Version** (for example, 1.0.0), and the **OutputDirectory** using the folder created in the [previous step](https://docs.microsoft.com/xamarin/cross-platform/cpp/index#creating-a-local-nuget-feed), that is, **local-nuget-feed**. For example:
 
     ```bash
     nuget pack MathFuncs.nuspec -Version 1.0.0 -OutputDirectory ~/local-nuget-feed
     ```
 
-4. **Confirm** that **MathFuncs.1.0.0.nupkg** has been created in the **local-nuget-feed** directory.
+4. **Confirm** that **MathFuncs.1.0.0.nupkg** has been created in the **local-nuget-feed** directory.
 
 ### [OPTIONAL] Using a private NuGet feed with Azure DevOps
 
-A more robust technique is described in [Get started with NuGet packages in Azure DevOps](https://docs.microsoft.com/azure/devops/artifacts/get-started-nuget?view=vsts&tabs=new-nav#publish-a-package), which shows how to create a private feed and push the package (generated in the previous step) to that feed.
+A more robust technique is described in [Get started with NuGet packages in Azure DevOps](https://docs.microsoft.com/azure/devops/artifacts/get-started-nuget?view=vsts&tabs=new-nav#publish-a-package), which shows how to create a private feed and push the package (generated in the previous step) to that feed.
 
-It is ideal to have this workflow fully automated, for example using [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index?view=vsts). For more information, see [Get started with Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/index?view=vsts).
+It is ideal to have this workflow fully automated, for example using [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index?view=vsts). For more information, see [Get started with Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/index?view=vsts).
 
 ## Consuming the .NET wrapper from a Xamarin.Forms app
-To complete the walkthrough, create a **Xamarin.Forms** app to consume the package just published to the local **NuGet** feed.
+
+To complete the walkthrough, create a **Xamarin.Forms** app to consume the package just published to the local **NuGet** feed.
 
 ### Creating the **Xamarin.Forms** project
 
-1. Open a new instance of **Visual Studio for Mac**. This can be done from **Terminal**:
+1. Open a new instance of **Visual Studio for Mac**. This can be done from **Terminal**:
 
     ```bash
     open -n -a "Visual Studio"
@@ -643,7 +644,7 @@ To complete the walkthrough, create a **Xamarin.Forms** app to consume the pac
     - **Location:** Specify the **local-nuget-feed** folder created in the [previous step](#preparing-a-local-packages-directory).
 
     > [!NOTE]
-    > In this case there is no need to specify a **Username** and **Password**. 
+    > In this case there is no need to specify a **Username** and **Password**. 
 
 4. Click **OK**.
 
@@ -658,10 +659,10 @@ Repeat the following steps for each project (**MathFuncsApp**, **MathFuncsApp.An
 
 ### Using the library functions
 
-Now, with a reference to the **MathFuncs** package in each of the projects, the functions are available to the C# code.
+Now, with a reference to the **MathFuncs** package in each of the projects, the functions are available to the C# code.
 
-1.  Open **MainPage.xaml.cs** from within the **MathFuncsApp** common **Xamarin.Forms**project (referenced by both **MathFuncsApp.Android** and **MathFuncsApp.iOS**).
-2.  Add **using** statements for **System.Diagnostics** and **MathFuncs** at the top of the file:
+1. Open **MainPage.xaml.cs** from within the **MathFuncsApp** common **Xamarin.Forms**project (referenced by both **MathFuncsApp.Android** and **MathFuncsApp.iOS**).
+2. Add **using** statements for **System.Diagnostics** and **MathFuncs** at the top of the file:
 
     ```csharp
     using System.Diagnostics;

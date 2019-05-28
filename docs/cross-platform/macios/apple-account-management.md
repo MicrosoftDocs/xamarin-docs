@@ -1,6 +1,6 @@
 ---
 title: "Apple Account Management"
-description: "This document describes how to use the Apple account management features in Visual Studio for Mac and Visual Studio 2017."
+description: "This document describes how to use the Apple account management features in Visual Studio for Mac and Visual Studio 2019."
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: asb3993
@@ -31,7 +31,7 @@ You can also use the iOS Automatic Provisioning tools to automatically create an
 
 ## Requirements
 
-Apple account management is available on Visual Studio for Mac and Visual Studio 2017 (Version 15.7 and higher)
+Apple account management is available on Visual Studio for Mac, Visual Studio 2019, and Visual Studio 2017 (Version 15.7 and higher).
 
 You must have an Apple Developer account to use this feature. More information on Apple developer accounts is available in the [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide.
 
@@ -68,7 +68,7 @@ You must have an Apple Developer account to use this feature. More information o
 
 # [Visual Studio](#tab/windows)
 
-1. Before you begin adding your Apple ID to Visual Studio 2017, make sure that your development environment is [Paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Before you begin adding your Apple ID to Visual Studio 2019, make sure that your development environment is [Paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. To open the account management window, go to **Tools > Options > Xamarin > Apple Accounts**:
 

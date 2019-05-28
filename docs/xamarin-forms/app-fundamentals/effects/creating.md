@@ -11,7 +11,7 @@ ms.date: 10/24/2016
 
 # Creating an Effect
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/effects/focuseffect/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Effects/FocusEffect/)
 
 _Effects simplify the customization of a control. This article demonstrates how to create an effect that changes the background color of the Entry control when the control gains focus._
 
@@ -50,7 +50,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly:ResolutionGroupName ("MyCompany")]
-[assembly:ExportEffect (typeof(FocusEffect), nameof(FocusEffect)]
+[assembly:ExportEffect (typeof(FocusEffect), nameof(FocusEffect))]
 namespace EffectsDemo.iOS
 {
     public class FocusEffect : PlatformEffect
@@ -103,7 +103,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly:ResolutionGroupName ("MyCompany")]
-[assembly:ExportEffect (typeof(FocusEffect), nameof(FocusEffect)]
+[assembly:ExportEffect(typeof(FocusEffect), nameof(FocusEffect))]
 namespace EffectsDemo.Droid
 {
     public class FocusEffect : PlatformEffect
@@ -157,7 +157,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
 
 [assembly: ResolutionGroupName("MyCompany")]
-[assembly: ExportEffect(typeof(FocusEffect), nameof(FocusEffect)]
+[assembly: ExportEffect(typeof(FocusEffect), nameof(FocusEffect))]
 namespace EffectsDemo.UWP
 {
     public class FocusEffect : PlatformEffect
@@ -257,4 +257,4 @@ This article demonstrated how to create an effect that changes the background co
 - [Effect](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [Background Color Effect (sample)](https://developer.xamarin.com/samples/xamarin-forms/effects/backgroundcoloreffect/)
-- [Focus Effect (sample)](https://developer.xamarin.com/samples/xamarin-forms/effects/focuseffect/)
+- [Focus Effect (sample)](https://developer.xamarin.com/samples/xamarin-forms/Effects/FocusEffect/)

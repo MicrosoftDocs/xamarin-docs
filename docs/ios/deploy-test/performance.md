@@ -103,14 +103,14 @@ the parent keeps the child alive through the call done to
 This also happens in iOS APIs that use the delegate or data
 source pattern, where a peer class contains the implementation;
 for example, when setting the
-[`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/)
+[`Delegate`](xref:UIKit.UITableView.Delegate*)
 property or the
-[`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/)
+[`DataSource`](xref:UIKit.UITableView.DataSource*)
 in the [`UITableView`](xref:UIKit.UITableView) class.
 
 In the case of classes that are created purely for the sake of
 implementing a protocol, for example the
-[`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/),
+[`IUITableViewDataSource`](xref:UIKit.IUITableViewDataSource),
 what you can do is instead of creating a subclass, you can just
 implement the interface in the class and override the method, and
 assign the `DataSource` property to `this`.
@@ -228,7 +228,7 @@ class MyChild : UIView
 For more information about releasing strong references, see
 [Release IDisposable Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable).
 There's also a good discussion in this blog post:
-[Xamarin.iOS, the garbage collector and me](http://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/).
+[Xamarin.iOS, the garbage collector and me](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me).
 
 ### More information
 
@@ -295,7 +295,7 @@ In particular the simulator does not in any way simulate the memory or CPU restr
 
 Games tend to have tight loops to run the game logic and update the screen. Typical frame rates range from thirty to sixty frames per second. Some developers feel that they should update the screen as many times as possible per second, combining their game simulation with updates to the screen and might be tempted to go beyond sixty frames per second.
 
-However, the display server performs screen updates at an upper limit of sixty times per second. Therefore, attempting to update the screen faster than this limit can lead to screen tearing and micro-stuttering. It's best to structure code so that screen updates are synchronized with the display update. This can be achieved by using the [`CoreAnimation.CADisplayLink`](https://developer.xamarin.com/api/type/CoreAnimation.CADisplayLink/) class, which is a timer suitable for visualization and games that runs at sixty frames per second.
+However, the display server performs screen updates at an upper limit of sixty times per second. Therefore, attempting to update the screen faster than this limit can lead to screen tearing and micro-stuttering. It's best to structure code so that screen updates are synchronized with the display update. This can be achieved by using the [`CoreAnimation.CADisplayLink`](xref:CoreAnimation.CADisplayLink) class, which is a timer suitable for visualization and games that runs at sixty frames per second.
 
 ## Avoid Core Animation transparency
 

@@ -64,10 +64,9 @@ To maximize code sharing, Xamarin.Android apps (or Xamarin.Forms apps targeting 
 | `ApplicationData` | **_INTERNAL\_STORAGE_/.config** |
 | `Desktop` | **_INTERNAL\_STORAGE_/Desktop** |
 | `LocalApplicationData` | **_INTERNAL\_STORAGE_/.local/share** |
-| `MyComputer` | **_INTERNAL\_STORAGE_/.local/share** |
 | `MyDocuments` | **_INTERNAL\_STORAGE_** |
 | `MyMusic` | **_INTERNAL\_STORAGE_/Music** |
-| `MyPictures` | **_INTERNAL\_STORAGE_/Music** |
+| `MyPictures` | **_INTERNAL\_STORAGE_/Pictures** |
 | `MyVideos` | **_INTERNAL\_STORAGE_/Videos** |
 | `Personal` | **_INTERNAL\_STORAGE_** |
 

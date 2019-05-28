@@ -35,9 +35,13 @@ The [App Center Test](https://docs.microsoft.com/appcenter/test-cloud) addresses
 
 [![](intro-to-ci-images/intro02-small.png "Once these tests are uploaded to App Center, the CI server can run them automatically as part of a CI process as shown in this diagram")](intro-to-ci-images/intro02.png#lightbox)
 
-## Version Control
+## Components of Continuous Integration
 
-### Azure DevOps and Team Foundation Server
+There is an extensive ecosystem of commercial and open-source tools designed to support CI. This section explains a few of the most common ones.
+
+### Version Control
+
+#### Azure DevOps and Team Foundation Server
 
 [Azure DevOps](https://azure.microsoft.com/services/devops/) and [Team Foundation Server](https://visualstudio.microsoft.com/tfs/) (TFS) are Microsoft's collaborative tools for continuous integration build services, task tracking, agile planning and reporting tools, and version control. With version control, Azure DevOps and TFS can work with its own system (Team Foundation Version Control or TFVC) or with projects hosted on GitHub.
 
@@ -50,23 +54,23 @@ Both TFS and Azure DevOps are tightly integrated with Visual Studio and allow de
 
 A complete summary of all Application Lifecycle Management (ALM) features of Visual Studio, Azure DevOps, and Team Foundation Server, see [DevOps with Xamarin Apps](https://docs.microsoft.com/visualstudio/cross-platform/application-lifecycle-management-alm-with-xamarin-apps).
 
-### Team Explorer Everywhere
+#### Team Explorer Everywhere
 
 [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) brings the power of Team Foundation Server and Visual Studio Team Services to teams developing outside of Visual Studio. It allows developers to connect to team projects on premises or in the cloud from Eclipse or the cross-platform command line client for OS X and Linux. Team Explorer Everywhere provides full access to version control (including Git), work items, and build capabilities for non-Windows platforms.
 
-### Git
+#### Git
 
 [Git](http://git-scm.com) is a popular open source version control solution that was originally developed to manage the source code for the Linux kernel. It is a very fast, flexible system that is popular with software projects of all sizes. It easily scales from single developers with poor Internet access to large teams that span the globe. Git also makes branching very easy, which in turn can encourage parallel streams of development with minimal risk.
 
 Git can operate entirely through a web browsers, or through [GUI clients](http://git-scm.com/downloads/guis) that run on Linux, Mac OSX, and Windows. It is free for public repositories; private repositories require a [paid plan](https://github.com/pricing).
 
-Visual Studio 2015 and Visual Studio for Mac provide native support for Git; for older versions, Microsoft provides a [downloadable extension for Git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c). As noted above, Visual Studio Team Services and TFS can use Git for version control instead of TFVC.
+Current versions of Visual Studio for Windows and Mac provide native support for Git. Microsoft provides a [downloadable extension for Git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) for older versions of Visual Studio. As noted above, Visual Studio Team Services and TFS can use Git for version control instead of TFVC.
 
-### Subversion
+#### Subversion
 
 [Subversion](http://subversion.apache.org) (SVN) is a popular, open source version control system that has been in use since 2000. SVN runs on all modern versions of OS X, Windows, FreeBSD, Linux, and Unix. Visual Studio for Mac has native support for SVN. There are third party extensions that bring SVN support to Visual Studio.
 
-## Continuous Integration Environments
+### Continuous Integration Environments
 
 Setting up a continuous integration environment means combining a version control system with a build service.  For the latter, the two most common ones are:
 
@@ -75,7 +79,7 @@ Setting up a continuous integration environment means combining a version contro
 
 You can use TFS/Azure DevOps by itself, or you can use Jenkins in combination with TFS/Azure DevOps or Git as described in the following sections.
 
-### Visual Studio Team Services and Team Foundation Server
+#### Visual Studio Team Services and Team Foundation Server
 
 As discussed, Visual Studio Team Services and Team Foundation Server provides both version control and build services. Build services always require a Xamarin Business or Enterprise license for each target platform.
 
@@ -92,13 +96,13 @@ The following diagram illustrates this topography:
 
 It is also possible to link a local TFS server to a Visual Studio Team Services project so that Azure DevOps builds are delegated to the local server. For details, see [Build and release agents](https://docs.microsoft.com/azure/devops/pipelines/agents/agents/).
 
-### Visual Studio Team Services and Jenkins
+#### Visual Studio Team Services and Jenkins
 
 If you use Jenkins to build your apps, you can store your code in Visual Studio Team Services or Team Foundation Server and continue to use Jenkins for your CI builds. You can trigger a Jenkins build when you push code to your team project's Git repository or when you check code in to TFVC. For details, see [Jenkins with Azure DevOps](https://docs.microsoft.com/azure/devops/service-hooks/services/jenkins).
 
 [![](intro-to-ci-images/intro04-small.png "If you use Jenkins to build your apps, you can store your code in Visual Studio Team Services or Team Foundation Server and continue to use Jenkins for your CI builds")](intro-to-ci-images/intro04.png#lightbox)
 
-### Git And Jenkins
+#### Git And Jenkins
 
 Another common CI environment can be entirely OS X based. This scenario involves using Git for source code control and Jenkins for the build server. Both of these are running on a single Mac OS X computer with Visual Studio for Mac installed. This is very similar to the Visual Studio Team Services + Jenkins environment discussed in the previous section:
 

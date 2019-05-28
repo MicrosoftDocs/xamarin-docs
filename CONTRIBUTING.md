@@ -16,7 +16,7 @@ To make corrections and small updates - you can click the **Edit** button on any
 
 2. Create a `branch` for your changes.
 
-3. Write your content. Refer to the [template](../contributing-guidelines/template.md) and [style guide](../contributing-guidelines/voice-tone.md).
+3. Write your content. Refer to the [template](contributing-guidelines/template.md) and [style guide](contributing-guidelines/voice-tone.md).
 
 4. Submit a Pull Request (PR) from your branch to `MicrosoftDocs/xamarin-docs/live`.
 

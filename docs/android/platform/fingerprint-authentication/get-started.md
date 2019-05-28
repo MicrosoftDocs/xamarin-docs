@@ -20,7 +20,7 @@ To get started, let's first cover how to configure a Xamarin.Android project so 
 
 # [Visual Studio](#tab/windows)
 
-An Android application must request the `USE_FINGERPRINT` permission in the manifest. The following screenshot shows how to add this permission to the application in Visual Studio 2015:
+An Android application must request the `USE_FINGERPRINT` permission in the manifest. The following screenshot shows how to add this permission to the application in Visual Studio:
 
 [![Enabling USE\_FINGERPRINT in the Android Manifest screen](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 

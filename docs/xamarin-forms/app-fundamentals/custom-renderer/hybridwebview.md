@@ -11,7 +11,7 @@ ms.date: 03/07/2019
 
 # Implementing a HybridWebView
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/HybridWebView/)
 
 _Xamarin.Forms custom user interface controls should derive from the View class, which is used to place layouts and controls on the screen. This article demonstrates how to create a custom renderer for a HybridWebView custom control, which demonstrates how to enhance the platform-specific web controls to allow C# code to be invoked from JavaScript._
 
@@ -25,7 +25,7 @@ The rendering process can be used to implement platform-specific customizations 
 
 1. [Create](#Creating_the_HybridWebView) the `HybridWebView` custom control.
 1. [Consume](#Consuming_the_HybridWebView) the `HybridWebView`from Xamarin.Forms.
-1. [Create](#Creating_the_Custom_Renderer_on_each_Platform) the custom renderer for the `HybridWebView` on each platform.
+1. [Create](#creating-the-custom-renderer-on-each-platform) the custom renderer for the `HybridWebView` on each platform.
 
 Each item will now be discussed in turn to implement a `HybridWebView` renderer that enhances the platform-specific web controls to allow C# code to be invoked from JavaScript. The `HybridWebView` instance will be used to display an HTML page that asks the user to enter their name. Then, when the user clicks an HTML button, a JavaScript function will invoke a C# `Action` that displays a pop-up containing the users name.
 
@@ -136,8 +136,6 @@ public partial class HybridWebViewPage : ContentPage
 This action calls the [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) method to display a modal pop-up that presents the name entered in the HTML page displayed by the `HybridWebView` instance.
 
 A custom renderer can now be added to each application project to enhance the platform-specific web controls by allowing C# code to be invoked from JavaScript.
-
-<a nane="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## Creating the Custom Renderer on each Platform
 
@@ -506,5 +504,5 @@ This article has demonstrated how to create a custom renderer for a `HybridWebVi
 
 ## Related Links
 
-- [CustomRendererHybridWebView (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
+- [CustomRendererHybridWebView (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/HybridWebView/)
 - [Call C# from JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)

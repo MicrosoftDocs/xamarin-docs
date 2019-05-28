@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/13/2018
+ms.date: 04/11/2019
 ---
 # Styling Xamarin.Forms apps using Cascading Style Sheets (CSS)
 
@@ -181,7 +181,7 @@ stacklayout {
 This selector identifies any [`StackLayout`](xref:Xamarin.Forms.StackLayout) elements on pages that consume the style sheet, and sets their margins to a uniform thickness of 20.
 
 > [!NOTE]
-> The `element` selector does not identify sub-classes of the specified type.
+> The `element` selector does not identify subclasses of the specified type.
 
 ### Selecting elements by base class
 
@@ -240,7 +240,7 @@ Elements with a specific class attribute can be selected with the case sensitive
 }
 ```
 
-A CSS class can be assigned to a XAML element by setting the [`StyleClass`](xref:Xamarin.Forms.VisualElement.StyleClass) property of the element to the CSS class name. Therefore, in the following XAML example, the styles defined by the `.detailPageTitle` class are assigned to the first [`Label`](xref:Xamarin.Forms.Label), while the styles defined by the `.detailPageSubtitle` class are assigned to the second `Label`.
+A CSS class can be assigned to a XAML element by setting the [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) property of the element to the CSS class name. Therefore, in the following XAML example, the styles defined by the `.detailPageTitle` class are assigned to the first [`Label`](xref:Xamarin.Forms.Label), while the styles defined by the `.detailPageSubtitle` class are assigned to the second `Label`.
 
 ```xaml
 <ContentPage ...>
@@ -336,7 +336,7 @@ The following CSS selectors are supported by Xamarin.Forms:
 |`.class`|`.header`|Selects all elements with the `StyleClass` property containing 'header'. Note that this selector is case sensitive.|
 |`#id`|`#email`|Selects all elements with `StyleId` set to `email`. If `StyleId` is not set, fallback to `x:Name`. When using XAML, `x:Name` is preferred over `StyleId`. Note that this selector is case sensitive.|
 |`*`|`*`|Selects all elements.|
-|`element`|`label`|Selects all elements of type `Label`, but not sub-classes. Note that this selector is case insensitive.|
+|`element`|`label`|Selects all elements of type `Label`, but not subclasses. Note that this selector is case insensitive.|
 |`^base`|`^contentpage`|Selects all elements with `ContentPage` as the base class, including `ContentPage` itself. Note that this selector is case insensitive and isn't part of the CSS specification.|
 |`element,element`|`label,button`|Selects all `Button` elements and all `Label` elements. Note that this selector is case insensitive.|
 |`element element`|`stacklayout label`|Selects all `Label` elements inside a `StackLayout`. Note that this selector is case insensitive.|
@@ -411,6 +411,19 @@ The following CSS properties are supported by Xamarin.Forms (in the **Values** c
 |`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial `|`visibility: hidden;`|
 |`width`|`VisualElement`|_double_ \| `initial`|`min-width: 320;`|
 
+> [!NOTE]
+> `initial` is a valid value for all properties. It clears the value (resets to default) that was set from another style.
+
+The following properties are currently unsupported:
+
+- `all: initial`.
+- Layout properties (box, or grid).
+- Shorthand properties, such as `font`, and `border`.
+
+In addition, there's no `inherit` value and so inheritance isn't supported. Therefore you can't, for example, set the `font-size` property on a layout and expect all the [`Label`](xref:Xamarin.Forms.Label) instances in the layout to inherit the value. The one exception is the `direction` property, which has a default value of `inherit`.
+
+### Xamarin.Forms specific properties
+
 The following Xamarin.Forms specific CSS properties are also supported (in the **Values** column, types are _italic_, while string literals are `gray`):
 
 |Property|Applies to|Values|Example|
@@ -428,16 +441,23 @@ The following Xamarin.Forms specific CSS properties are also supported (in the *
 |`-xf-thumb-color`|`Slider`|_color_ \| `initial` |`-xf-thumb-color: limegreen;`|
 |`-xf-spacing`|`StackLayout`|_double_ \| `initial` |`-xf-spacing: 8;`|
 
-> [!NOTE]
-> `initial` is a valid value for all properties. It clears the value (resets to default) that was set from another style.
+### Xamarin.Forms Shell specific properties
 
-The following properties are currently unsupported:
+The following Xamarin.Forms Shell specific CSS properties are also supported (in the **Values** column, types are _italic_, while string literals are `gray`):
 
-- `all: initial`.
-- Layout properties (box, or grid).
-- Shorthand properties, such as `font`, and `border`.
-
-In addition, there's no `inherit` value and so inheritance isn't supported. Therefore you can't, for example, set the `font-size` property on a layout and expect all the [`Label`](xref:Xamarin.Forms.Label) instances in the layout to inherit the value. The one exception is the `direction` property, which has a default value of `inherit`.
+|Property|Applies to|Values|Example|
+|---|---|---|---|
+|`-xf-flyout-background`|`Shell`|_color_ \| `initial` |`-xf-flyout-background: red;`|
+|`-xf-shell-background`|`Element`|_color_ \| `initial` |`-xf-shell-background: green;`|
+|`-xf-shell-disabled`|`Element`|_color_ \| `initial` |`-xf-shell-disabled: blue;`|
+|`-xf-shell-foreground`|`Element`|_color_ \| `initial` |`-xf-shell-foreground: yellow;`|
+|`-xf-shell-tabbar-background`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-background: white;`|
+|`-xf-shell-tabbar-disabled`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-disabled: black;`|
+|`-xf-shell-tabbar-foreground`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-foreground: gray;`|
+|`-xf-shell-tabbar-title`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-title: lightgray;`|
+|`-xf-shell-tabbar-unselected`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-unselected: cyan;`|
+|`-xf-shell-title`|`Element`|_color_ \| `initial` |`-xf-shell-title: teal;`|
+|`-xf-shell-unselected`|`Element`|_color_ \| `initial` |`-xf-shell-unselected: limegreen;`|
 
 ### Color
 
@@ -478,7 +498,7 @@ The exact meaning of each `namedsize` value is platform-dependent and view-depen
 
 > [!VIDEO https://youtube.com/embed/va-Vb7vtan8]
 
-**Xamarin.Forms 3.0 CSS, by [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 3.0 CSS video**
 
 ## Related Links
 

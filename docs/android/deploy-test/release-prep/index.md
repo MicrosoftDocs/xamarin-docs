@@ -62,7 +62,7 @@ application icon for a Xamarin.Android project.
 
 # [Visual Studio](#tab/windows)
 
-In Visual Studio 2015 and later, specify the application icon through
+In Visual Studio 2017 and later, specify the application icon through
 the **Android Manifest** section of project **Properties**, as shown in
 the following screenshot:
 
@@ -320,10 +320,8 @@ be used to obfuscate managed code and inject runtime security state
 detection code into a Xamarin.Android app at build time to detect 
 and respond if the app is running on a rooted device.
 
-Dotfuscator CE is included with Visual Studio,
-however only Visual Studio 2015 Update 3 (and higher) has the correct
-version to work with Xamarin.Android. To use Dotfuscator,
-click **Tools > PreEmptive Protection - Dotfuscator**.
+Dotfuscator CE is included with Visual Studio 2017.
+To use Dotfuscator, click **Tools > PreEmptive Protection - Dotfuscator**.
 
 To configure Dotfuscator CE, please see
 [Using Dotfuscator Community Edition with Xamarin](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator).

@@ -4,7 +4,7 @@ description: "This document links to various guides that describe Xamarin.Essent
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 04/22/2019
 ---
 
 # Xamarin.Essentials
@@ -26,8 +26,10 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 * [Barometer](barometer.md?context=xamarin/xamarin-forms) – Monitor the barometer for pressure changes.
 * [Battery](battery.md?context=xamarin/xamarin-forms) – Easily detect battery level, source, and state.
 * [Clipboard](clipboard.md?context=xamarin/xamarin-forms) – Quickly and easily set or read text on the clipboard.
+* [Color Converters](color-converters.md?context=xamarin/xamarin-forms) – Helper methods for System.Drawing.Color.
 * [Compass](compass.md?context=xamarin/xamarin-forms) – Monitor compass for changes.
 * [Connectivity](connectivity.md?context=xamarin/xamarin-forms) – Check connectivity state and detect changes.
+* [Detect Shake](detect-shake.md?context=xamarin/xamarin-forms) – Detect a shake movement of the device.
 * [Device Display Information](device-display.md?context=xamarin/xamarin-forms) – Get the device's screen metrics and orientation.
 * [Device Information](device-information.md?context=xamarin/xamarin-forms) – Find out about the device with ease.
 * [Email](email.md?context=xamarin/xamarin-forms) – Easily send email messages.
@@ -43,11 +45,13 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 * [Open Browser](open-browser.md?context=xamarin/xamarin-forms) – Quickly and easily open a browser to a specific website.
 * [Orientation Sensor](orientation-sensor.md?context=xamarin/xamarin-forms) – Retrieve the orientation of the device in three dimensional space.
 * [Phone Dialer](phone-dialer.md?context=xamarin/xamarin-forms) – Open the phone dialer.
+* [Platform Extensions](platform-extensions.md?context=xamarin/xamarin-forms) – Helper methods for converting Rect, Size, and Point.
 * [Preferences](preferences.md?context=xamarin/xamarin-forms) – Quickly and easily add persistent preferences.
 * [Secure Storage](secure-storage.md?context=xamarin/xamarin-forms) – Securely store data.
 * [Share](share.md?context=xamarin/xamarin-forms) – Send text and website uris to other apps.
 * [SMS](sms.md?context=xamarin/xamarin-forms) – Create an SMS message for sending.
 * [Text-to-Speech](text-to-speech.md?context=xamarin/xamarin-forms) – Vocalize text on the device.
+* [Unit Converters](unit-converters.md?context=xamarin/xamarin-forms) – Helper methods to convert units.
 * [Version Tracking](version-tracking.md?context=xamarin/xamarin-forms) – Track the applications version and build numbers.
 * [Vibrate](vibrate.md?context=xamarin/xamarin-forms) – Make the device vibrate.
 

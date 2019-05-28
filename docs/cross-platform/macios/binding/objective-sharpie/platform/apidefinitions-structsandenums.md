@@ -36,7 +36,3 @@ description to see how these files fit into the binding process, as shown in the
 Refer to the [binding Types reference](~/cross-platform/macios/binding/binding-types-reference.md)
 for more information on the contents of these files.
 
-## Related Links
-
-- [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -4,7 +4,7 @@ description: "The Email class in Xamarin.Essentials enables an application to op
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 04/02/2019
 ---
 
 # Xamarin.Essentials: Email
@@ -14,6 +14,9 @@ The **Email** class enables an application to open the default email application
 ## Get started
 
 [!include[](~/essentials/includes/get-started.md)]
+
+> [!TIP]
+> To use the Email API on iOS you must run it on a physical device, else an exception will be thrown.
 
 ## Using Email
 
@@ -70,6 +73,36 @@ No platform differences.
 Only supports `PlainText` as the `BodyFormat` attempting to send `Html` will throw a `FeatureNotSupportedException`.
 
 -----
+
+## File Attachments
+
+![Preview feature](~/media/shared/preview.png)
+
+Emailing files is available as an experimental preview in Xamarin.Essentials version 1.1.0. This features enables an app to emails files in email clients on the device. To enable this feature set the following property in your app's startup code:
+
+```csharp
+ExperimentalFeatures.Enable(ExperimentalFeatures.EmailAttachments);
+```
+
+After the feature enabled any file can be emailed. Xamarin.Essentials will automatically detect the file type (MIME) and request the file to be added as an attachment. Every email client is different a may only support specific file extensions or none at all.
+
+Here is a sample of writing text to disk and adding it as an email attachment:
+
+```csharp
+var message = new EmailMessage
+{
+    Subject = "Hello",
+    Body = "World",
+};
+
+var fn = "Attachment.txt";
+var file = Path.Combine(FileSystem.CacheDirectory, fn);
+File.WriteAllText(file, "Hello World");
+
+message.Attachments.Add(new EmailAttachment(file));
+
+await Email.ComposeAsync(message);
+```
 
 ## API
 

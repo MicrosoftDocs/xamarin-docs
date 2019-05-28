@@ -11,9 +11,9 @@ ms.date: 02/12/2018
 
 # Creating the platform video players
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
 
-The [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) solution contains all the code to implement a video player for Xamarin.Forms. It also includes a series of pages that demonstrates how to use the video player within an application. All the `VideoPlayer` code and its platform renderers reside in project folders named `FormsVideoLibrary`, and also use the namespace `FormsVideoLibrary`. This should make it easy to copy the files into your own application and reference the classes.
+The [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/) solution contains all the code to implement a video player for Xamarin.Forms. It also includes a series of pages that demonstrates how to use the video player within an application. All the `VideoPlayer` code and its platform renderers reside in project folders named `FormsVideoLibrary`, and also use the namespace `FormsVideoLibrary`. This should make it easy to copy the files into your own application and reference the classes.
 
 ## The video player
 
@@ -38,7 +38,7 @@ Each of the platforms contains a class named `VideoPlayerRenderer` that contains
 
 ### The iOS player view controller
 
-Several classes are involved when implementing a video player in iOS. The application first creates an [`AVPlayerViewController`](https://developer.xamarin.com/api/type/AVKit.AVPlayerViewController/) and then sets the [`Player`](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.Player/) property to an object of type [`AVPlayer`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayer/). Additional classes are required when the player is assigned a video source.
+Several classes are involved when implementing a video player in iOS. The application first creates an [`AVPlayerViewController`](xref:AVKit.AVPlayerViewController) and then sets the [`Player`](xref:AVKit.AVPlayerViewController.Player*) property to an object of type [`AVPlayer`](xref:AVFoundation.AVPlayer). Additional classes are required when the player is assigned a video source.
 
 Like all renderers, the iOS [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/VideoPlayerRenderer.cs) contains an `ExportRenderer` attribute that identifies the `VideoPlayer` view with the renderer:
 
@@ -313,7 +313,7 @@ The following sections discuss how the `AreTransportControlsEnabled` property is
 
 ### iOS playback controls
 
-The property of the iOS `AVPlayerViewController` that governs the display of transport controls is [`ShowsPlaybackControls`](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.ShowsPlaybackControls/). Here's how that property is set in the iOS `VideoViewRenderer`:
+The property of the iOS `AVPlayerViewController` that governs the display of transport controls is [`ShowsPlaybackControls`](xref:AVKit.AVPlayerViewController.ShowsPlaybackControls*). Here's how that property is set in the iOS `VideoViewRenderer`:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -462,4 +462,4 @@ One more property is necessary to begin playing a video: This is the crucial `So
 
 ## Related Links
 
-- [Video Player Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Video Player Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)

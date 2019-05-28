@@ -88,8 +88,3 @@ line with the Clang toolchain.
 If the library you're interested in is available as a CocoaPod,
 we recommend you start by attempting to bind the CocoaPod with
 Objective Sharpie (versus attempting to bind against the source directly).
-
-## Related Links
-
-- [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

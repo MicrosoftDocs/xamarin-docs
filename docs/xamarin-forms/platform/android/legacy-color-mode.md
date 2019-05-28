@@ -11,7 +11,7 @@ ms.date: 07/10/2018
 
 # VisualElement Legacy Color Mode on Android
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Some of the Xamarin.Forms views feature a legacy color mode. In this mode, when the [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) property of the view is set to `false`, the view will override the colors set by the user with the default native colors for the disabled state. For backwards compatibility, this legacy color mode remains the default behavior for supported views.
 
@@ -52,7 +52,7 @@ The result is that the legacy color mode can be disabled, so that colors set on 
 
 ## Related links
 
-- [PlatformSpecifics (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Creating Platform-Specifics](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

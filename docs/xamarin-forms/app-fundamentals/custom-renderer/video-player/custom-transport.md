@@ -11,7 +11,7 @@ ms.date: 02/12/2018
 
 # Custom video transport controls
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
 
 The transport controls of a video player include the buttons that perform the functions **Play**, **Pause**, and **Stop**. These buttons are generally identified with familiar icons rather than text, and the **Play** and **Pause** functions are generally combined into one button.
 
@@ -355,7 +355,7 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-Two properties of `AVPlayer` must be accessed: The [`Status`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.Status/) property of type `AVPlayerStatus` and the [`TimeControlStatus`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.TimeControlStatus/) property of type `AVPlayerTimeControlStatus`. Notice that the `Element` property (which is the `VideoPlayer`) must be cast to `IVideoPlayerController` to set the `Status` property.
+Two properties of `AVPlayer` must be accessed: The [`Status`](xref:AVFoundation.AVPlayer.Status*) property of type `AVPlayerStatus` and the [`TimeControlStatus`](xref:AVFoundation.AVPlayer.TimeControlStatus*) property of type `AVPlayerTimeControlStatus`. Notice that the `Element` property (which is the `VideoPlayer`) must be cast to `IVideoPlayerController` to set the `Status` property.
 
 ### The Android status setting
 
@@ -655,4 +655,4 @@ In a production application, you'll probably want to use your own bitmap images 
 
 ## Related Links
 
-- [Video Player Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Video Player Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)

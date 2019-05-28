@@ -15,14 +15,13 @@ _Visual Studio includes an Android SDK Manager that you use
 to download Android SDK tools, platforms, and other components that you
 need for developing Xamarin.Android apps._
 
-
 ## Overview
 
 This guide explains how to use the Xamarin Android SDK Manager in
 Visual Studio and Visual Studio for Mac.
 
 > [!NOTE]
-> This guide applies only to Visual Studio 2017 and Visual Studio for Mac.  
+> This guide applies to Visual Studio 2019, Visual Studio 2017, and Visual Studio for Mac.  
 
 The Xamarin Android SDK Manager (installed as part of the **Mobile
 development with .NET** workload) helps you download the latest Android
@@ -35,15 +34,13 @@ replaces Google's standalone SDK Manager, which has been deprecated.
 
 To use the Xamarin Android SDK Manager, you will need the following:
 
-- Visual Studio 2017 (Community, Professional, or Enterprise edition). Visual 
+- Visual Studio 2019 Community, Professional, or Enterprise.
+
+- OR Visual Studio 2017 (Community, Professional, or Enterprise edition). Visual
   Studio 2017 version 15.7 or later is required.
 
 - Visual Studio Tools for Xamarin version 4.10.0 or later
   (installed as part of the **Mobile development with .NET** workload). 
-
-The Xamarin Android SDK Manager is not compatible with Visual 
-Studio 2015. Users of Visual Studio 2015 should use the SDK Manager 
-tools provided by Google in the Android SDK.
 
 The Xamarin Android SDK Manager also requires the Java Development Kit
 (which is automatically installed with Xamarin.Android). There are

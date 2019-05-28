@@ -145,7 +145,7 @@ Xamarin.Forms right-to-left localization currently has a number of limitations:
 
 > [!VIDEO https://youtube.com/embed/f2lQ5yw3iiU]
 
-**Xamarin.Forms 3.0 Right-to-Left Support, by [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 3.0 Right-to-Left Support video**
 
 ## Related links
 

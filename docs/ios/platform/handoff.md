@@ -50,9 +50,9 @@ Only apps that share the same developer Team ID and respond to a given _Activity
 
 The receiving app uses information from the `NSUserActivity`'s `UserInfo` dictionary to configure its user interface and restore the state of the given activity so that the transition appears seamless to the end user.
 
-If the continuation requires more information than can be sent efficiently through a `NSUserActivity`, the resuming app can send a call to the originating app and establish one or more streams to transmit the required data. For example, if the activity was editing a large text document with multiple images, streaming would be required to transfer the information needed to continue the activity on the receiving device. For more information, see the [Supporting Continuation Streams](#Supporting-Continuation-Streams) section below.
+If the continuation requires more information than can be sent efficiently through a `NSUserActivity`, the resuming app can send a call to the originating app and establish one or more streams to transmit the required data. For example, if the activity was editing a large text document with multiple images, streaming would be required to transfer the information needed to continue the activity on the receiving device. For more information, see the [Supporting Continuation Streams](#supporting-continuation-streams) section below.
 
-As stated above, `NSDocument` or `UIDocument` based apps automatically have Handoff support built-in. For more information, see the [Supporting Handoff in Document-Based Apps](#Supporting-Handoff-in-Document-Based-Apps) section below.
+As stated above, `NSDocument` or `UIDocument` based apps automatically have Handoff support built-in. For more information, see the [Supporting Handoff in Document-Based Apps](#supporting-handoff-in-document-based-apps) section below.
 
 ### The NSUserActivity Class
 
@@ -66,7 +66,7 @@ The `NSUserActivityDelegate` is used to keep information in a `NSUserActivity`'s
 
 You will need to implement the `UserActivityWillSave` method and make any changes to the `NSUserActivity` (such as `UserInfo`, `Title`, etc.) to ensure that it still reflects the state of the Current Activity. When the system calls the `UserActivityWillSave` method, the `NeedsSave` flag will be cleared. If you modify any of the data properties of the activity, you'll need to set `NeedsSave` to `true` again.
 
-Instead of using the `UserActivityWillSave` method presented above, you can optionally have `UIKit` or `AppKit` manage the user activity automatically. To do this, set the responder object's `UserActivity` property and implement the `UpdateUserActivityState` method. See the [Supporting Handoff in Responders](#Supporting-Handoff-in-Responders) section below for more information.
+Instead of using the `UserActivityWillSave` method presented above, you can optionally have `UIKit` or `AppKit` manage the user activity automatically. To do this, set the responder object's `UserActivity` property and implement the `UpdateUserActivityState` method. See the [Supporting Handoff in Responders](#supporting-handoff-in-responders) section below for more information.
 
 ### App Framework Support
 
@@ -82,7 +82,7 @@ On OS X, the `NSUserActivity` managed by `AppKit` and associated with responders
 
 `AppKit` will automatically restore any `UserActivity` property created in this way on OS X. This occurs if the `ContinueUserActivity` method returns `false` or if it is unimplemented. In this situation, the document is opened with the `OpenDocument` method of the `NSDocumentController` and it will then receive a `RestoreUserActivityState` method call.
 
-See the [Supporting Handoff in Document-Based Apps](#Supporting-Handoff-in-Document-Based-Apps) section below for more information.
+See the [Supporting Handoff in Document-Based Apps](#supporting-handoff-in-document-based-apps) section below for more information.
 
 #### User Activities and Responders
 
@@ -92,7 +92,7 @@ If multiple responders share a single `NSUserActivity` instance, they receive an
 
 To disassociate itself from an activity, a responder can set its `UserActivity` property to `null`. When an app framework managed `NSUserActivity` instance has no more associated responders or documents, it is automatically invalidated.
 
-See the [Supporting Handoff in Responders](#Supporting-Handoff-in-Responders) section below for more information.
+See the [Supporting Handoff in Responders](#supporting-handoff-in-responders) section below for more information.
 
 #### User Activities and the AppDelegate
 
@@ -100,7 +100,7 @@ Your app's `AppDelegate` is its primary entry point when handling a Handoff cont
 
 The `NSUserActivity` instance is delivered when the `AppDelegate`'s `ContinueUserActivity` method is called. At this point, you should configure the app's user interface and continue the given activity.
 
-See the [Implementing Handoff](#Implementing-Handoff) section below for more information.
+See the [Implementing Handoff](#implementing-handoff) section below for more information.
 
 ## Enabling Handoff in a Xamarin App
 
@@ -199,7 +199,7 @@ namespace MonkeyBrowse
 }
 ```
 
-The `UserActivityReceivedData` method is called when a Continuation Stream has received data from a sending device. For more information, see the [Supporting Continuation Streams](#Supporting-Continuation-Streams) section below.
+The `UserActivityReceivedData` method is called when a Continuation Stream has received data from a sending device. For more information, see the [Supporting Continuation Streams](#supporting-continuation-streams) section below.
 
 The `UserActivityWasContinued` method is called when another device has taken over an activity from the current device. Depending on the type of activity, like adding a new item to a ToDo list, the app might need abort the activity on the sending device.
 
@@ -244,7 +244,7 @@ userInfo.Add (new NSString ("Url"), new NSString (url));
 UserActivity.AddUserInfoEntries (userInfo);
 ```
 
-Apple suggest keeping the information sent to the barest minimum to ensure that the activity is sent in a timely fashion to the receiving device. If larger information is required, like an image attached to a document be edited needs to be sent, the you should use Continuation Streams. See the [Supporting Continuation Streams](#Supporting-Continuation-Streams) section below for more details.
+Apple suggest keeping the information sent to the barest minimum to ensure that the activity is sent in a timely fashion to the receiving device. If larger information is required, like an image attached to a document be edited needs to be sent, the you should use Continuation Streams. See the [Supporting Continuation Streams](#supporting-continuation-streams) section below for more details.
 
 ### Continuing an Activity
 
@@ -419,7 +419,7 @@ public override void RestoreUserActivityState (NSUserActivity activity)
 }
 ```
 
-For document-based apps, if you do not implement the `ContinueUserActivity` method or it returns `false`, `UIKit` or `AppKit` can automatically resume the activity. See the [Supporting Handoff in Document-Based Apps](#Supporting-Handoff-in-Document-Based-Apps) section below for more information.
+For document-based apps, if you do not implement the `ContinueUserActivity` method or it returns `false`, `UIKit` or `AppKit` can automatically resume the activity. See the [Supporting Handoff in Document-Based Apps](#supporting-handoff-in-document-based-apps) section below for more information.
 
 ### Failing Handoff Gracefully
 

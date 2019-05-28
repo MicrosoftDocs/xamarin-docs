@@ -25,8 +25,7 @@ Designer to create your storyboards while using C# to program the navigation.
 
 ## Requirements
 
-Storyboards can be used with the iOS Designer in Visual Studio for Mac or with Visual 
-Studio 2015 and 2017 with the Xamarin workloads installed.
+Storyboards can be used with the iOS Designer in Visual Studio for Mac or with Visual Studio 2017 with the Xamarin workloads installed.
 
 ## What is a Storyboard?
 

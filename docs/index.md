@@ -51,18 +51,18 @@ featureFlags:
                 </a>
             </li>
              <li>
-                <a href="https://university.xamarin.com">
+                <a href="~/xamarin-forms/app-fundamentals/shell/index.md">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style='background-position: 0px 0px; background-image: url("https://docs.microsoft.com/media/common/i_virtual-training.svg"); background-size: cover;'>
-                                        <img style="display: none;" alt="Xamarin University" src="https://docs.microsoft.com/media/common/i_virtual-training.svg" data-linktype="external" data-hoverimage="https://docs.microsoft.com/media/common/i_virtual-training.svg">
+                                    <div class="cardImage" style='background-position: 0px 0px; background-image: url("https://docs.microsoft.com/media/common/i_preview.svg"); background-size: cover;'>
+                                        <img style="display: none;" alt="" src="https://docs.microsoft.com/media/common/i_preview.svg" data-linktype="external" data-hoverimage="https://docs.microsoft.com/media/common/i_preview.svg">
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3 class="x-hidden-focus">Xamarin University</h3>
-                                    <p>Learn for free online with self-guided learning.</p>
+                                    <h3 class="x-hidden-focus">Xamarin.Forms 4.0</h3>
+                                    <p>New Shell feature preview.</p>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +93,7 @@ featureFlags:
                                                     <li><a class="barLink" href="~/cross-platform/desktop/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_NET.svg" alt="" />Xamarin for .NET desktop developers</a></li>
                                                     <li><a class="barLink" href="~/android/get-started/java-developers.md"><img  src="https://docs.microsoft.com/media/logos/logo_java.svg" alt="" />Xamarin for Java developers</a></li>
                                                     <li><a class="barLink" href="~/ios/get-started/objective-c-developers/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_xcode.svg" alt=" icon" />Xamarin for Objective-C developers</a></li>
-                                                    <li><a class="barLink" href="~/xamarin-forms/data-cloud/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_azure.svg" alt="" />Xamarin & Azure</a></li>
+                                                    <li><a class="barLink" href="~/xamarin-forms/data-cloud/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_azure.svg" alt="" />Azure with Xamarin</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -560,12 +560,12 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="iOS Simulator for Windows" />
+                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Visual Studio 2017</h3>
-                                                    <p>Learn more about developing with Visual Studio 2017.</p>
+                                                    <h3>Visual Studio 2019</h3>
+                                                    <p>Learn more about developing with Visual Studio 2019.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -579,7 +579,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="iOS Simulator for Windows" />
+                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">

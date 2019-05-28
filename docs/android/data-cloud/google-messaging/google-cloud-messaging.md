@@ -6,10 +6,15 @@ ms.assetid: DF8EF401-F63D-4BA0-B2C6-B22DF8FD60CB
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 04/12/2018
+ms.date: 05/02/2019
 ---
 
 # Google Cloud Messaging
+
+> [!WARNING]
+> Google deprecated GCM as of April 10, 2018. The following docs and sample projects may no longer be maintained. Google's GCM server and client APIs will be removed as soon as May 29, 2019. Google recommends migrating GCM apps to Firebase Cloud Messaging (FCM). For more information about GCM deprecation and migration, see [Google Deprecated Cloud Messaging](https://developers.google.com/cloud-messaging/).
+>
+> To start using Firebase Cloud Messaging with Xamarin, see [Firebase Cloud Messaging](firebase-cloud-messaging.md).
 
 _Google Cloud Messaging (GCM) is a service that facilitates messaging between mobile apps and server applications. This article provides an overview of how GCM works, and it explains how to configure Google Services so your app can use GCM._
 
@@ -19,11 +24,6 @@ This topic provides a high-level overview of how Google Cloud
 Messaging routes messages between your app and an app server, and it
 provides a step-by-step procedure for acquiring credentials so that
 your app can use GCM services.
-
-> [!NOTE]
-> GCM has been superceded by [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) (FCM).
-> GCM server and client APIs [have been deprecated](https://firebase.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html)
-> and will no longer be available as soon as April 11th, 2019.
 
 ## Overview
 

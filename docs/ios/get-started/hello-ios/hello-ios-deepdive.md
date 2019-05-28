@@ -304,7 +304,7 @@ For more information on working with view controllers, refer to Apple's [view co
 
 The most important role of the view controller is responding to user interaction, such as button presses, navigation, and more. The simplest way to handle user interaction is to wire up a control to listen to user input and attach an event handler to respond to the input. For example, a button could be wired up to respond to a touch event, as demonstrated in the Phoneword app.
 
-Now that there is have a deeper understanding of Views and view controllers, let's explore how this works.
+Let's explore how this works.
 In the `Phoneword_iOS` project, a button was added called `TranslateButton` to the Content View Hierarchy:
 
 [![](hello-ios-deepdive-images/image1.png "A button was added called TranslateButton to the Content View Hierarchy")](hello-ios-deepdive-images/image1.png#lightbox)

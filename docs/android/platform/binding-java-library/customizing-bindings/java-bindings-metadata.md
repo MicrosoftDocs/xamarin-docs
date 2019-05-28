@@ -328,9 +328,10 @@ type of the `append` method is changed from `SpannableStringBuilder` to
 
 Tools that obfuscate Java libraries may interfere with the
 Xamarin.Android Binding Generator and its ability to generate C#
-wrapper classes. Characteristics of obfuscated classes include: * The
-class name includes a **$**, i.e. **a$.class** * The class name is
-entirely compromised of lower case characters, i.e. **a.class**
+wrapper classes. Characteristics of obfuscated classes include: 
+
+* The class name includes a **$**, i.e. **a$.class**
+* The class name is entirely compromised of lower case characters, i.e. **a.class**
 
 This snippet is an example of how to generate an "un-obfuscated" C# type:
 

@@ -6,7 +6,7 @@ ms.assetid: 2F311A60-A6FC-4051-B938-AEF32086642F
 author: conceptdev
 ms.author: crdun
 ms.custom: video
-ms.date: 08/08/2018
+ms.date: 04/02/2019
 ---
 # Get started with Azure Functions
 
@@ -14,13 +14,21 @@ ms.date: 08/08/2018
 
 _Get started building your first Azure Function that interacts with Xamarin.Forms._
 
-## [Visual Studio](#tab/windows)
+## [Visual Studio 2019](#tab/windows)
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-2017/player]
 
 ## Step-by-step instructions
 
-In addition to the video, you can follow these instructions to [build your first Function using Visual Studio 2017](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
+In addition to the video, you can follow these instructions to [build your first Function using Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
+
+## [Visual Studio 2017](#tab/win-vs2017)
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-2017/player]
+
+## Step-by-step instructions
+
+In addition to the video, you can follow these instructions to [build your first Function using Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
 
 ## [Visual Studio for Mac](#tab/macos)
 

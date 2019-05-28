@@ -81,7 +81,7 @@ The easiest way to use Material Theme is to configure your app to use
 a built-in theme without customization. If you don't want to
 explicitly configure a theme, your app will default to `Theme.Material`
 (the dark theme). If your app has only one activity, you can configure
-a theme at the application level. If your app has multiple activities,
+a theme at the activity level. If your app has multiple activities,
 you can configure a theme at the application level so that it uses the
 same theme across all activities, or you can assign different themes to
 different activities. The following sections explain how to configure

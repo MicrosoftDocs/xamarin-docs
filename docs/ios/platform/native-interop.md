@@ -151,11 +151,9 @@ would use in .NET, which is roughly:
 -  Determine which library it lives in
 -  Write the appropriate P/Invoke declaration
 
-
 When you use P/Invoke you need to specify the path of the library that you
 are linking with. When using iOS shared libraries, you can either hardcode the
-path, or you can use the convenience constants that we have defined in our [Constants class](https://developer.xamarin.com/api/type/Constants/), these constants should cover the iOS shared
-libraries.
+path, or you can use the convenience constants that we have defined in our `Constants`, these constants should cover the iOS shared libraries.
 
 For example, if you wanted to invoke the UIRectFrameUsingBlendMode method
 from Apple's UIKit library which has this signature in C:

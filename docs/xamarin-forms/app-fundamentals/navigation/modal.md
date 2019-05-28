@@ -34,9 +34,9 @@ To return to the previous page the application will pop the current page from th
 
 ## Performing Navigation
 
-Modal navigation methods are exposed by the [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property on any [`Page`](xref:Xamarin.Forms.Page) derived types. These methods provide the ability to [push modal pages](#Pushing_Pages_to_the_Modal_Stack) onto the modal stack, and [pop modal pages](#Popping_Pages_from_the_Modal_Stack) from the modal stack.
+Modal navigation methods are exposed by the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property on any [`Page`](xref:Xamarin.Forms.Page) derived types. These methods provide the ability to [push modal pages](#Pushing_Pages_to_the_Modal_Stack) onto the modal stack, and [pop modal pages](#Popping_Pages_from_the_Modal_Stack) from the modal stack.
 
-The [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property also exposes a [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) property from which the modal pages in the modal stack can be obtained. However, there is no concept of performing modal stack manipulation, or popping to the root page in modal navigation. This is because these operations are not universally supported on the underlying platforms.
+The [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property also exposes a [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) property from which the modal pages in the modal stack can be obtained. However, there is no concept of performing modal stack manipulation, or popping to the root page in modal navigation. This is because these operations are not universally supported on the underlying platforms.
 
 > [!NOTE]
 > A [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance is not required for performing modal page navigation.
@@ -45,7 +45,7 @@ The [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property also ex
 
 ### Pushing Pages to the Modal Stack
 
-To navigate to the `ModalPage` it is necessary to invoke the [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) method on the [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property of the current page, as demonstrated in the following code example:
+To navigate to the `ModalPage` it is necessary to invoke the [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) method on the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property of the current page, as demonstrated in the following code example:
 
 ```csharp
 async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
@@ -102,7 +102,7 @@ On Android, the user can always return to the previous page by pressing the stan
 
 ### Animating Page Transitions
 
-The [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) property of each page also provides overridden push and pop methods that include a `boolean` parameter that controls whether to display a page animation during navigation, as shown in the following code example:
+The [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property of each page also provides overridden push and pop methods that include a `boolean` parameter that controls whether to display a page animation during navigation, as shown in the following code example:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)

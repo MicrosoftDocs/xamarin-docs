@@ -8,7 +8,7 @@ ms.author: laobri
 ms.date: 10/23/2018
 ---
 
-# Introduction to Continuous Integration with Xamarin
+# Continuous Integration with Xamarin
 
 > [!Video https://youtube.com/embed/wXgnh2Q7Uv8]
 

@@ -26,6 +26,9 @@ The `MapRenderer` class can be found in the following namespaces:
 - **Android** – Xamarin.Forms.Maps.Android
 - **Universal Windows Platform (UWP)** – Xamarin.Forms.Maps.UWP
 
+> [!NOTE]
+> For information about creating custom renderers for Shell applications, see [Xamarin.Forms Shell Custom Renderers](~/xamarin-forms/app-fundamentals/shell/customrenderers.md).
+
 ## Pages
 
 The following table lists the renderer and native control classes that implement each Xamarin.Forms [Page](~/xamarin-forms/user-interface/controls/pages.md) type:
@@ -65,11 +68,12 @@ The following table lists the renderer and native control classes that implement
 |[`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator)|ActivityIndicatorRenderer|UIActivityIndicator|ProgressBar||ProgressBar|
 |[`BoxView`](xref:Xamarin.Forms.BoxView)|BoxRenderer (iOS and Android), BoxViewRenderer (UWP)|UIView|ViewGroup||Rectangle|
 |[`Button`](xref:Xamarin.Forms.Button)|ButtonRenderer|UIButton|Button|AppCompatButton|Button|
+|[`CollectionView`](xref:Xamarin.Forms.CollectionView)|CollectionViewRenderer|UICollectionView||RecyclerView||
 |[`DatePicker`](xref:Xamarin.Forms.DatePicker)|DatePickerRenderer|UITextField|EditText||DatePicker|
 |[`Editor`](xref:Xamarin.Forms.Editor)|EditorRenderer|UITextView|EditText||TextBox|
 |[`Entry`](xref:Xamarin.Forms.Entry)|[EntryRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/entry.md)|UITextField|EditText||TextBox|
 |[`Image`](xref:Xamarin.Forms.Image)|ImageRenderer|UIImageView|ImageView||Image|
-|`ImageButton`|ImageButtonRenderer|UIButton||AppCompatImageButton|Button|
+|[`ImageButton`](xref:Xamarin.Forms.ImageButton)|ImageButtonRenderer|UIButton||AppCompatImageButton|Button|
 |[`Label`](xref:Xamarin.Forms.Label)|LabelRenderer|UILabel|TextView||TextBlock|
 |[`ListView`](xref:Xamarin.Forms.ListView)|[ListViewRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md)|UITableView|ListView||ListView|
 |[`Map`](xref:Xamarin.Forms.Maps.Map)|[MapRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)|MKMapView|MapView||MapControl|
@@ -98,7 +102,3 @@ The following table lists the renderer and native control classes that implement
 ## Summary
 
 This article has listed the renderer and native control classes that implement each Xamarin.Forms page, layout, view, and cell. Every Xamarin.Forms control has an accompanying renderer for each platform that creates an instance of a native control.
-
-## Related Links
-
-- [Custom Renderers (Xamarin University Video)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)

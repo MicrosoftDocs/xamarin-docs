@@ -372,7 +372,7 @@ To eliminate this effect, edit the `Info.plist` file for the Extension and set t
 
 ### Using media attachments in custom UI
 
-Because Media Attachments (as seen in the [Adding Media Attachments](#Adding-Media-Attachments) section above) are part of the Notification Payload, they can be accessed and displayed in the Notification Content Extension just like they would be in the default Notification UI.
+Because Media Attachments (as seen in the [Adding Media Attachments](#adding-media-attachments) section above) are part of the Notification Payload, they can be accessed and displayed in the Notification Content Extension just like they would be in the default Notification UI.
 
 For example, if the Custom UI above included a `UIImageView` that was exposed to C# code, the following code could be used to populate it from with the Media Attachment:
 

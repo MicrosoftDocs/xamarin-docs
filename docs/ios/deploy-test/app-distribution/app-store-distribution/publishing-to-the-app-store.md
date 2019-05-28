@@ -145,7 +145,7 @@ New Xamarin.iOS projects automatically set up **Debug** and **Release** _build c
 
 # [Visual Studio](#tab/windows)
 
-1. Make sure that Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Make sure that Visual Studio 2019 or Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Right-click on the **Project Name** in the **Solution Explorer**, select **Properties**.
 3. Navigate to the **iOS Build** tab and set **Configuration** to **Release** and **Platform** to **iPhone**.
 4. To build with a specific iOS SDK, select it from the **SDK Version** list. Otherwise, leave this value at **Default**.
@@ -269,7 +269,7 @@ With your build settings properly configured and iTunes Connect awaiting your su
 > Visual Studio 2017 does not currently support the **Archive for
 > Publishing** workflow found in Visual Studio for Mac.
 
-1. Make sure that Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Make sure that Visual Studio 2019 or Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Select **Release** from the Visual Studio 2017 **Solution Configurations** dropdown, and **iPhone** from the **Solution Platforms** dropdown.
 
     ![Build configuration and platform selection](publishing-to-the-app-store-images/chooseConfig-w157.png "Build configuration and platform selection")
@@ -281,8 +281,8 @@ With your build settings properly configured and iTunes Connect awaiting your su
     > section of this doc configured the app's build settings to create an
     > .ipa file for each **Release** build.
 
-4. To find the .ipa file on the Windows machine, right-click on the Xamarin.iOS project name in the Visual Studio 2017 **Solution Explorer** and choose **Open Folder in File Explorer**. Then, in the just-opened Windows **File Explorer**, navigate to the **bin/iPhone/Release** subdirectory. Unless you have [customized the .ipa file output location](#customize-the-ipa-location), it should be in this directory.
-5. To instead view the .ipa file on the Mac build host, right-click the Xamarin.iOS project name in the Visual Studio 2017 **Solution Explorer** (on Windows) and select **Show IPA File on Build Server**. This will open a **Finder** window on the Mac build host with the .ipa file selected.
+4. To find the .ipa file on the Windows machine, right-click on the Xamarin.iOS project name in the Visual Studio 2019 or Visual Studio 2017 **Solution Explorer** and choose **Open Folder in File Explorer**. Then, in the just-opened Windows **File Explorer**, navigate to the **bin/iPhone/Release** subdirectory. Unless you have [customized the .ipa file output location](#customize-the-ipa-location), it should be in this directory.
+5. To instead view the .ipa file on the Mac build host, right-click the Xamarin.iOS project name in the Visual Studio 2019 or Visual Studio 2017 **Solution Explorer** (on Windows) and select **Show IPA File on Build Server**. This will open a **Finder** window on the Mac build host with the .ipa file selected.
 6. On the Mac build host, open **Application Loader**. In Xcode, select **Xcode > Open Developer Tool > Application Loader**.
 
     > [!NOTE]

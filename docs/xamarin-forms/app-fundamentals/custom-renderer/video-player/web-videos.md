@@ -11,7 +11,7 @@ ms.date: 02/12/2018
 
 # Playing a Web video
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
 
 The `VideoPlayer` class defines a `Source` property used to specify the source of the video file, as well as an `AutoPlay` property. `AutoPlay` has a default setting of `true`, which means that the video should begin playing automatically after `Source` has been set:
 
@@ -220,7 +220,7 @@ namespace FormsVideoLibrary.iOS
 
 Later on, when the `Source` property is changed, the `OnElementPropertyChanged` method is called with a `PropertyName` property of "Source", and `SetSource` is called again.
 
-To play a video file in iOS, an object of type [`AVAsset`](https://developer.xamarin.com/api/type/AVFoundation.AVAsset/) is first created to encapsulate the video file, and that is used to create an [`AVPlayerItem`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayerItem/), which is then handed off to the `AVPlayer` object. Here's how the `SetSource` method handles the `Source` property when it's of type `UriVideoSource`:
+To play a video file in iOS, an object of type [`AVAsset`](xref:AVFoundation.AVAsset) is first created to encapsulate the video file, and that is used to create an [`AVPlayerItem`](xref:AVFoundation.AVPlayerItem), which is then handed off to the `AVPlayer` object. Here's how the `SetSource` method handles the `Source` property when it's of type `UriVideoSource`:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -444,7 +444,7 @@ namespace FormsVideoLibrary.UWP
 
 ## Setting a URL source
 
-With the implementation of these properties in the three renderers, it's possible to play a video from a URL source. The **Play Web Video** page in the [**VideoPlayDemos**]( https://developer.xamarin.com/samples/xamarin-forms/customrenderers/videoplayerdemos/index.md) program is defined by the following XAML file:
+With the implementation of these properties in the three renderers, it's possible to play a video from a URL source. The **Play Web Video** page in the [**VideoPlayDemos**]( https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/) program is defined by the following XAML file:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -520,4 +520,4 @@ Alternatively, you can set the `Source` property from a video file in a `ListVie
 
 ## Related Links
 
-- [Video Player Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Video Player Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)

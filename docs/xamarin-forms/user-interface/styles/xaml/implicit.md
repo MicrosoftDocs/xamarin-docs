@@ -22,7 +22,7 @@ To declare a [`Style`](xref:Xamarin.Forms.Style) at the page level, a [`Resource
 The following code example shows an *implicit* style declared in XAML in a page's `ResourceDictionary`, and applied to the page's [`Entry`](xref:Xamarin.Forms.Entry) instances:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Entry">
@@ -57,7 +57,7 @@ In addition, the fourth [`Entry`](xref:Xamarin.Forms.Entry) overrides the [`Back
 In addition to creating *implicit* styles at the page level, they can also be created at the control level, as shown in the following code example:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" IconImageSource="xaml.png">
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0">
             <StackLayout.Resources>

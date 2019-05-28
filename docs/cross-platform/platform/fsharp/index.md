@@ -36,4 +36,3 @@ include:
 - Code navigation
 - Syntax highlighting in F# Interactive
 - F# templates for Xamarin.Forms, iOS, and Android
-- [*and more...*](https://developer.xamarin.com/releases/studio/xamarin.studio_6.0/xamarin.studio_6.0/#F_Enhancements)

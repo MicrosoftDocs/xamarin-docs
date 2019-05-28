@@ -20,7 +20,7 @@ This article covers the concept of [Focus](#Focus-and-Selection) and how it is u
 
 Next, we'll take a look at how Focus can be used with [Parallax](#Focus-and-Parallax) and *Layered Images* to provide visual clues for the current Navigation State to the end user.
 
-Finally, we'll look at working with [Focus](#Working-with-Focus), [Focus Updates](#Working-with-Focus-Updates), [Focus Guides](#Working-with-Focus-Guides), [Focus in Collections](#Working-with-Focus-in-Collections) and [Enabling Parallax](#Enabling-Parallax) on Image Views in your Xamarin.tvOS apps.
+Finally, we'll look at working with [Focus](#Working-with-Focus), [Focus Updates](#Working-with-Focus-Updates), [Focus Guides](#Working-with-Focus-Guides), [Focus in Collections](#Working-with-Focus-in-Collections) and [Enabling Parallax](#enabling-parallax) on Image Views in your Xamarin.tvOS apps.
 
 <a name="Navigation" />
 

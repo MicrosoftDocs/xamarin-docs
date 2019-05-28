@@ -205,10 +205,10 @@ The **Background** color in the Designer has changed to the new color
 selection, but this change has not yet been saved. At this point,
 you can do one of the following:
 
--   Click **Discard Changes** to discard the new color choice (or choices) 
-    and revert the theme to its original state. 
+-   Click **Discard Changes** to discard the new color choice (or choices)
+    and revert the theme to its original state.
 
--   Press <kbd>CTRL+S</kbd> to save your changes to the currently theme. 
+-   Press <kbd>CTRL+S</kbd> to save your changes to the currently theme.
 
 In the following example, <kbd>CTRL+S</kbd> was pressed so that the changes
 were saved to **AppTheme**:
@@ -435,7 +435,7 @@ difficult for the user to distinguish.
 ### Material Palette
 
 The **Material Palette** tab opens the **Material Design Color Palette**
-described [earlier](#material_palette). Choosing a color value from this palette
+described [earlier](#material-design-color-palette). Choosing a color value from this palette
 constrains your color choice so that it is consistent with Material
 Design guidelines.
 
@@ -457,11 +457,11 @@ message, *The current theme has unsaved changes*:
 The color change in the Designer has been made, but this change has not
 yet been saved. At this point, you can do one of the following:
 
--   Click **Discard Changes** to discard the new color choice (or choices) 
-    and revert the theme to its original state. 
+-   Click **Discard Changes** to discard the new color choice (or choices)
+    and revert the theme to its original state.
 
 -   Press **&#8984; + S** to save your changes to a new theme
-    called **Custom**. 
+    called **Custom**.
 
 
 ## Summary

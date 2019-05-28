@@ -11,8 +11,7 @@ ms.date: 02/19/2016
 
 # Xamarin.Forms App Class
 
-The `Application` base class offers the following features, which are exposed
-in your projects default `App` subclass:
+The `Application` base class offers the following features, which are exposed in your projects default `App` subclass:
 
 * A `MainPage` property, which is where to set the initial page for the app.
 * A persistent [`Properties` dictionary](#Properties_Dictionary) to store simple values across lifecycle state changes.
@@ -30,7 +29,9 @@ of two ways:
 To create an **App** class using XAML, the default **App** class must be replaced with a XAML **App** class and associated code-behind, as shown in the following code example:
 
 ```xaml
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Photos.App">
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Photos.App">
 
 </Application>
 ```
@@ -51,7 +52,7 @@ public partial class App : Application
 
 As well as setting the [`MainPage`](xref:Xamarin.Forms.Application.MainPage) property, the code-behind must also call the `InitializeComponent` method to load and parse the associated XAML.
 
-## MainPage Property
+## MainPage property
 
 The `MainPage` property on the `Application` class sets the root page of the application.
 
@@ -71,7 +72,7 @@ public class App : Xamarin.Forms.Application
 
 <a name="Properties_Dictionary" />
 
-## Properties Dictionary
+## Properties dictionary
 
 The `Application` subclass has a static `Properties` dictionary which can be used to store data, in particular for use in the `OnStart`, `OnSleep`, and `OnResume` methods. This can be accessed from anywhere in your Xamarin.Forms code using `Application.Current.Properties`.
 
@@ -125,9 +126,7 @@ You can find references to using the `Properties` dictionary in the
 and in the associated
 [samples](https://github.com/xamarin/xamarin-forms-book-preview-2).
 
-
-
-## The Application Class
+## The Application class
 
 A complete `Application` class implementation is shown below for reference:
 
@@ -157,14 +156,13 @@ public class App : Xamarin.Forms.Application
         Debug.WriteLine ("OnResume");
     }
 }
-
 ```
 
 This class is then instantiated in each platform-specific project and passed to the
 `LoadApplication` method which is where the `MainPage` is loaded and displayed to the user.
 The code for each platform is shown in the following sections. The latest Xamarin.Forms solution templates already contain all this code, preconfigured for your app.
 
-### iOS Project
+### iOS project
 
 The iOS `AppDelegate` class inherits from `FormsApplicationDelegate`. It should:
 
@@ -188,7 +186,7 @@ public partial class AppDelegate :
 }
 ```
 
-### Android Project
+### Android project
 
 The Android `MainActivity` inherits from `FormsAppCompatActivity`. In the `OnCreate` override the `LoadApplication` method is called with an instance of the `App` class.
 
@@ -208,7 +206,7 @@ public class MainActivity : FormsAppCompatActivity
 }
 ```
 
-### Universal Windows Project (UWP) for Windows 10
+### Universal Windows project (UWP) for Windows 10
 
 The main page in the UWP project should inherit from `WindowsPage`:
 

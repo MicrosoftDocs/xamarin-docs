@@ -32,8 +32,8 @@ To embed a native view into a Xamarin.Forms XAML file:
 1. Add an `xmlns` namespace declaration in the XAML file for the namespace that contains the native view.
 1. Create an instance of the native view in the XAML file.
 
-> [!NOTE]
-> XAMLC must be turned off for any XAML pages that use native views.
+> [!IMPORTANT]
+> Compiled XAML must be disabled for any XAML pages that use native views. This can be accomplished by decorating the code-behind class for your XAML page with the `[XamlCompilation(XamlCompilationOptions.Skip)]` attribute. For more information about XAML compilation, see [XAML Compilation in Xamarin.Forms](~/xamarin-forms/xaml/xamlc.md).
 
 To reference a native view from a code-behind file, you must use a Shared Asset Project (SAP) and wrap the platform-specific code with conditional compilation directives. For more information see [Referring to Native Views from Code](#native_view_code).
 
@@ -320,7 +320,7 @@ The page contains a [`Label`](xref:Xamarin.Forms.Label) that displays the fruit 
 
 The page also contains a native picker view for each platform. Each native view displays the collection of fruits by binding its `ItemSource` property to the `SubclassedNativeControlsPageViewModel.Fruits` collection. This allows the user to pick a fruit, as shown in the following screenshots:
 
-![](xaml-images/sub-classed.png "Sub-Classed Native Views")
+![](xaml-images/sub-classed.png "Subclassed Native Views")
 
 On iOS and Android the native pickers use methods to setup the controls. Therefore, these pickers must be subclassed to expose properties to make them XAML-friendly. On the Universal Windows Platform (UWP), the `ComboBox` is already XAML-friendly, and so doesn't require subclassing.
 

@@ -4,7 +4,7 @@ description: "The Share class in Xamarin.Essentials enables an application to sh
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 02/12/2019
+ms.date: 04/02/2019
 ms.custom: video
 ---
 
@@ -52,7 +52,7 @@ public class ShareTest
 
 User interface to share to external application that appears when request is made:
 
-![Share](share-images/share.png)
+![Share](images/share.png)
 
 ## Platform Differences
 
@@ -71,6 +71,32 @@ User interface to share to external application that appears when request is mad
 * `Subject` not used.
 
 -----
+
+## Files
+
+![Preview feature](~/media/shared/preview.png)
+
+Sharing files is available as an experimental preview in Xamarin.Essentials version 1.1.0. This features enables an app to share files to other applications on the device. To enable this feature set the following property in your app's startup code:
+
+```csharp
+ExperimentalFeatures.Enable(ExperimentalFeatures.ShareFileRequest);
+```
+
+After the feature enabled any file can be shared. Xamarin.Essentials will automatically detect the file type (MIME) and request a share. Each platform may only support specific file extensions.
+
+Here is a sample of writing text to disk and sharing it to other apps:
+
+```csharp
+var fn =  "Attachment.txt";
+var file = Path.Combine(FileSystem.CacheDirectory, fn);
+File.WriteAllText(file, "Hello World");
+
+await Share.RequestAsync(new ShareFileRequest
+{
+    Title = Title,
+    File = new ShareFile(file)
+});
+```
 
 ## API
 

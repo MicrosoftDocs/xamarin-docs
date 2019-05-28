@@ -4,7 +4,7 @@ description: "This document describes the Geolocation class in Xamarin.Essential
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 03/13/2019
 ---
 
 # Xamarin.Essentials: Geolocation
@@ -49,13 +49,13 @@ Or right-click on the Android project and open the project's properties. Under *
 
 Your app's **Info.plist** must contain the `NSLocationWhenInUseUsageDescription` key in order to access the device’s location.
 
-Open the plist editor and add the **Privacy - Location When In Use Usage Description** property and fill in a value to display the user.
+Open the plist editor and add the **Privacy - Location When In Use Usage Description** property and fill in a value to display to the user.
 
 Or manually edit the file and add the following:
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
-<string>This app needs access location when open.</string>
+<string>This app needs location access when open.</string>
 ```
 
 # [UWP](#tab/uwp)
@@ -182,6 +182,22 @@ The following table outlines accuracy per platform:
 | UWP | <= 10 |
 
 <a name="calculate-distance" />
+
+## Detecting Mock Locations
+Some devices may return a mock location from the provider or by an application that provides mock locations. You can detect this by using the `IsFromMockProvider` on any [`Location`](xref:Xamarin.Essentials.Location).
+
+```csharp
+var request = new GeolocationRequest(GeolocationAccuracy.Medium);
+var location = await Geolocation.GetLocationAsync(request);
+
+if (location != null)
+{
+    if(location.IsFromMockProvider)
+    {
+        // location is from a mock provider
+    }
+}
+```
 
 ## Distance between Two Locations
 

@@ -131,8 +131,8 @@ When referencing resources programmatically (in code), they can be
 accessed via the Resources class hierarchy which uses the following
 syntax:
 
-```xml
-@[<PackageName>.]Resource.<ResourceType>.<ResourceName>
+```csharp
+[<PackageName>.]Resource.<ResourceType>.<ResourceName>
 ```
 
 -  **PackageName** &ndash; The package which is providing the resource
@@ -152,7 +152,7 @@ syntax:
 Resources in an XML file are accessed by a following a special syntax:
 
 ```xml
-@[<PackageName>:]<ResourceType>/<ResourceName>.
+@[<PackageName>:]<ResourceType>/<ResourceName>
 ```
 
 -  **PackageName** &ndash; the package which is providing the resource
@@ -185,7 +185,7 @@ follows:
 This example has an
 [`ImageView`](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) that requires a
 drawable resource named **flag**. The `ImageView` has its `src`
-attribute set to **@drawable/flag**. When the activity starts, Android
+attribute set to `@drawable/flag`. When the activity starts, Android
 will look inside the directory **Resource/Drawable** for a file named
 **flag.png** (the file extension could be another image format, like
 **flag.jpg**) and load that file and display it in the `ImageView`.
@@ -193,4 +193,3 @@ When this application is run, it would look something like the
 following image:
 
 ![Localized ImageView](android-resource-basics-images/03-localized-screenshot.png)
-

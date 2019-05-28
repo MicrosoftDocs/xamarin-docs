@@ -19,7 +19,7 @@ _Xamarin.Forms includes a simple messaging service to send and receive messages.
 
 ## Overview
 
-Xamarin.Forms `MessagingCenter` enables view models and other components to communicate with without having to know anything about each other besides a simple Message contract.
+Xamarin.Forms `MessagingCenter` enables view models and other components to communicate without having to know anything about each other besides a simple Message contract.
 
 <a name="How_the_MessagingCenter_Works" />
 
@@ -30,7 +30,7 @@ There are two parts to `MessagingCenter`:
 -  **Subscribe** - Listen for messages with a certain signature and perform some action when they are received. Multiple subscribers can be listening for the same message.
 -  **Send** - Publish a message for listeners to act upon. If no listeners have subscribed then the message is ignored.
 
-The `MessagingService` is a static class with `Subscribe` and `Send` methods that are used throughout the solution.
+The `MessagingCenter` is a static class with `Subscribe` and `Send` methods that are used throughout the solution.
 
 Messages have a string `message` parameter that is used as way to *address* messages. The `Subscribe` and `Send` methods use generic parameters to further control how messages are delivered - two messages with the same `message` text but different generic type arguments will not be delivered to the same subscriber.
 

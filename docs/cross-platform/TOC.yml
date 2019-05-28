@@ -75,10 +75,10 @@
               href: platform/fsharp/overview.md
             - name: F# Samples
               href: platform/fsharp/samples.md
-        - name: Visual Basic.NET
+        - name: Visual Basic
           href: platform/visual-basic/index.md
           items:
-            - name: Xamarin iOS and Android
+            - name: Xamarin Android and iOS
               href: platform/visual-basic/native-apps.md
             - name: Xamarin.Forms
               href: platform/visual-basic/xamarin-forms.md
@@ -106,13 +106,14 @@
     - name: Deployment & Debugging
       href: deploy-test/index.md
       items:
+        - name: Connect to Local Web Services
+          href: deploy-test/connect-to-local-web-services.md
         - name: Custom Linker Configuration
           href: deploy-test/linker.md
         - name: Installing NUnit 2.6.4 using NuGet
           href: deploy-test/installing-nunit-using-nuget.md
         - name: Multi Process Debugging
           href: deploy-test/multi-process-debugging.md
-
     - name: Desktop Developers
       displayName: Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP Developers
       href: desktop/index.md

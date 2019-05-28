@@ -4,7 +4,8 @@ description: "The Browser class in Xamarin.Essentials enables an application to 
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 04/02/2019
+ms.custom: video
 ---
 
 # Xamarin.Essentials: Browser
@@ -38,6 +39,24 @@ public class BrowserTest
 
 This method returns after the browser was _launched_ and not necessarily _closed_ by the user.  The `bool` result indicates whether the launching was successful or not.
 
+## Customization
+
+When using the system preferred browser there are several customization options available for iOS and Android. This includes a `TitleMode` (Android only), and preferred color options for the `Toolbar` (iOS and Android) and `Controls` (iOS only) that appear. 
+
+These options are specified using `BrowserLaunchOptions` when calling `OpenAsync`.
+
+```csharp
+await Browser.OpenAsync(uri, new BrowserLaunchOptions
+                {
+                    LaunchMode = BrowserLaunchMode.SystemPreferred,
+                    TitleMode = BrowserTitleMode.Show,
+                    PreferredToolbarColor = Color.AliceBlue,
+                    PreferredControlColor = Color.Violet
+                });
+```
+
+![Browser Options](images/browser-options.png)
+
 ## Platform Implementation Specifics
 
 # [Android](#tab/android)
@@ -56,7 +75,7 @@ An `Intent` will be used to request the Uri be opened through the systems normal
 
 ## System Preferred
 
-[SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) is used to load the Uri and keep navigation awareness.
+[SFSafariViewController](xref:SafariServices.SFSafariViewController) is used to load the Uri and keep navigation awareness.
 
 ## External
 
@@ -72,3 +91,10 @@ The user's default browser will always be launched regardless of the `BrowserLau
 
 - [Browser source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Browser)
 - [Browser API documentation](xref:Xamarin.Essentials.Browser)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Open-Browser-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
+

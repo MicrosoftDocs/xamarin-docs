@@ -117,10 +117,7 @@ Without a valid API key the maps control will display as a gray box on Android.
 > [!NOTE]
 > Note that, in order for your APK to access Google Maps, you must include SHA-1 fingerprints and package names for every keystore (debug and release) that you use to sign your APK. For example, if you use one computer for debug and another computer for generating the release APK, you should include the SHA-1 certificate fingerprint from the debug keystore of the first computer and the SHA-1 certificate fingerprint from the release keystore of the second computer. Also remember to edit the key credentials if the app's **Package Name** changes. See [obtaining a Google Maps API v2 key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
 
-You'll also need to enable appropriate permissions by
-  right-clicking on the Android project and selecting
-  **Options > Build > Android Application** and ticking
-  the following:
+You'll also need to enable appropriate permissions by right-clicking on the Android project and selecting **Options > Build > Android Application** and ticking the following:
 
 * `AccessCoarseLocation`
 * `AccessFineLocation`
@@ -134,10 +131,16 @@ Some of these are shown in the screenshot below:
 
 ![Required permissions for Android](map-images/android-map-permissions.png "Required Permissions for Android")
 
-The last two are required because applications
-  require a network connection to download map data. Read about Android
-  [permissions](https://developer.android.com/reference/android/Manifest.permission.html)
-  to learn more.
+The last two are required because applications require a network connection to download map data. Read about Android [permissions](https://developer.android.com/reference/android/Manifest.permission.html) to learn more.
+
+In addition, Android 9 has removed the Apache HTTP client library from the bootclasspath, and so it isn't available to applications that target API 28 or higher. The following line must be added to the `application` node of your **AndroidManifest.xml** file to continue using the Apache HTTP client in applications that target API 28 or higher:
+
+```xml
+<application ...>
+    ...
+    <uses-library android:name="org.apache.http.legacy" android:required="false" />    
+</application>
+```
 
 ### Universal Windows Platform
 

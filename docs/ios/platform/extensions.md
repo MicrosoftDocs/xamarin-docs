@@ -13,7 +13,7 @@ ms.date: 03/22/2017
 
 > [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
 
-**Creating Extensions in iOS, by [Xamarin University](https://university.xamarin.com/)**
+**Creating Extensions in iOS video**
 
 Extensions, as introduced in iOS 8, are specialized `UIViewControllers` that are presented by iOS inside standard contexts such as within the **Notification Center**, as custom keyboard types requested by the user to perform specialized input or other contexts like editing a photo where the Extension can provide special effect filters.
 
@@ -63,9 +63,9 @@ An Extension can be as simple as a single [UIViewController](xref:UIKit.UIViewCo
 
 If they choose one of your app's Extensions, its `UIViewController` will be instantiated and begin the normal View Controller lifecycle. However, unlike a normal app, which are suspended but not generally terminated when the user finishes interacting with them, Extensions are loaded, executed, and then terminated repeatedly.
 
-Extensions can communicate with their Host apps via an [NSExtensionContext](xref:Foundation.NSExtensionContext) object. Some Extensions have operations that receive asynchronous callbacks with the results. These callbacks will be executed on background threads and the Extension must take this into consideration; for instance, by using [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) if they want to update the user interface. See the [Communicating with the Host App](#Communicating-with-the-Host-App) section below for more details.
+Extensions can communicate with their Host apps via an [NSExtensionContext](xref:Foundation.NSExtensionContext) object. Some Extensions have operations that receive asynchronous callbacks with the results. These callbacks will be executed on background threads and the Extension must take this into consideration; for instance, by using [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) if they want to update the user interface. See the [Communicating with the Host App](#communicating-with-the-host-app) section below for more details.
 
-By default, Extensions and their container apps can not communicate, despite being installed together. In some cases, the Container app is essentially an empty "shipping" container whose purpose is served once the Extension is installed. However, if circumstances dictate, the Container app and the Extension may share resources from a common area. Additionally, a **Today Extension** may request its Container app to open a URL. This behavior is shown in the [Evolve Countdown Widget](https://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
+By default, Extensions and their container apps can not communicate, despite being installed together. In some cases, the Container app is essentially an empty "shipping" container whose purpose is served once the Extension is installed. However, if circumstances dictate, the Container app and the Extension may share resources from a common area. Additionally, a **Today Extension** may request its Container app to open a URL. This behavior is shown in the [Event Countdown Widget](https://github.com/xamarin/ios-samples/tree/master/intro-to-extensions).
 
 ## Creating an extension
 
@@ -93,7 +93,7 @@ Additionally, the Extension's project has the following requirements:
 
 	![](extensions-images/registerandprincipalclass.png)
 
-Specific types of Extensions may have additional requirements. For instance, a **Today** or **Notification Center** Extension’s principal class must implement [INCWidgetProviding](https://developer.xamarin.com/api/type/NotificationCenter.INCWidgetProviding/).
+Specific types of Extensions may have additional requirements. For instance, a **Today** or **Notification Center** Extension’s principal class must implement [INCWidgetProviding](xref:NotificationCenter.INCWidgetProviding).
 
 > [!IMPORTANT]
 > If you start your project using one the Extensions templates provided by Visual Studio for Mac, most (if not all) these requirements will be provided and met for you automatically by the template.

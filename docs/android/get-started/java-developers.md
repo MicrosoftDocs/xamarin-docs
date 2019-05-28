@@ -115,7 +115,7 @@ help you to write better code in less time:
     member variables safely and directly without having to write setter
     and getter methods.
 
--   [Lambda Expressionss](#lambdas) &ndash; In C# you can use anonymous methods (also
+-   [Lambda Expressions](#lambdas) &ndash; In C# you can use anonymous methods (also
     called *lambdas*) to express your functionality more succinctly and
     more efficiently. You can avoid the overhead of having to write
     one-time-use objects, and you can pass local state to a method
@@ -272,7 +272,7 @@ Both Java and C# use very similar object-oriented programming idioms:
 
 -   All class instances are created on the heap via the `new` operator.
 
--   Because both languages use garbage collection, there is way to
+-   Because both languages use garbage collection, there is no way to
     explicitly release unused objects (i.e., there is not a `delete`
     keyword as there is in C++).
 

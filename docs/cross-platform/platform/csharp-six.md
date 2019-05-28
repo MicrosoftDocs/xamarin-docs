@@ -17,44 +17,9 @@ This document introduces the new features of C# 6. It is fully supported by the
 mono compiler and developers can start using the new features across all the
 Xamarin target platforms.
 
-This article includes brief snippets of the C# 6 code that illustrate basic use.
-The sample application is a command-line program that runs across all Xamarin target
-platforms and exercises the various features.
-
-
 > [!VIDEO https://youtube.com/embed/7UdV7zGPfMU]
 
-**What's new in C# 6, by [Xamarin University](https://university.xamarin.com/)**
-
-
-## Development Environment
-
-### Mac
-
-* **Visual Studio for Mac** has support for C# 6: you can build and
-  compile Xamarin apps using C# 6 features.
-  Read more about [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/).
-
-### Windows
-
-* **Visual Studio 2015 and 2017** and above have full support for C# 6. Earlier versions of Visual Studio will not support C# 6.
-
-* **Xamarin Studio for Windows** does not support C# 6 features
-  in the editor.
-
-
-
-## Compiler
-
-The Mono C# 6 compiler is included in Mono 4.0 and later, which is
-[freely available for download](https://www.mono-project.com/download/).
-Visual Studio for Mac automatically updates the Mono installation on your system.
-
-Windows users must have [Visual Studio 2015 or 2017^](https://visualstudio.microsoft.com/) installed
-to compile C# 6 code (even if you choose Xamarin Studio for Windows as your IDE).
-
-^ or *[Microsoft Build Tools 2015](https://www.microsoft.com/download/details.aspx?id=48159)*
-for command line compilation or build servers, for example.
+**What's new in C# 6 video**
 
 ## Using C# 6
 

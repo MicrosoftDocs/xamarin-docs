@@ -294,7 +294,7 @@ ARKit 2 supports "environmental texturing" that uses captured imagery to estimat
 In order to use environmental texturing:
 
 * Your [`SCNMaterial`](xref:SceneKit.SCNMaterial) objects must use [`SCNLightingModel.PhysicallyBased`](xref:SceneKit.SCNLightingModel.PhysicallyBased) and assign a value in the range of 0 to 1 for [`Metalness.Contents`](xref:SceneKit.SCNMaterial.Metalness) and [`Roughness.Contents`](xref:SceneKit.SCNMaterialProperty.Contents) and
-* Your tracking configuration must set [`EnvironmentTexturing`](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing) = [AREnvironmentTexturing.Automatic`](xref:ARKit.AREnvironmentTexturing.Automatic) :
+* Your tracking configuration must set [`EnvironmentTexturing`](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing) = [`AREnvironmentTexturing.Automatic`](xref:ARKit.AREnvironmentTexturing.Automatic) :
 
 ```csharp
 var sphere = SCNSphere.Create(0.33F);
@@ -317,7 +317,7 @@ Although the perfectly reflective texture shown in the preceding code snippet is
 
 ### Shared and persistent AR experiences
 
-Another major addition to ARKit 2 is the [`ARWorldMap`](xref:ARKit.ARWorldMap) class, which allows you to share or store world-tracking data. You get the current world map with [`ARSession.GetCurrentWorldMapAsync`](xref:ARKit.ARSession.GetCurrentWorldMapAsync) or [`GetCurrentWorldMap(Action<ARWorldMap,NSError>`](xref:ARKit.ARSession.GetCurrentWorldMap(System.Action{ARKit.ARWorldMap,Foundation.NSError})) :
+Another major addition to ARKit 2 is the [`ARWorldMap`](xref:ARKit.ARWorldMap) class, which allows you to share or store world-tracking data. You get the current world map with [`ARSession.GetCurrentWorldMapAsync`](xref:ARKit.ARSession.GetCurrentWorldMapAsync) or [`GetCurrentWorldMap(Action<ARWorldMap,NSError>)`](xref:ARKit.ARSession.GetCurrentWorldMap(System.Action{ARKit.ARWorldMap,Foundation.NSError})) :
 
 ```csharp
 // Local storage
@@ -388,7 +388,7 @@ In Xamarin, the common type for manipulating transformation matrices is `NVector
 
 ![row-major vs column-major](images/arkit_row_vs_column.png)
 
-Being consistent with the choice of matrix interpretation is vital to proper behavior. Since 3D transform matrices are 4x4, consistency mistakes will not produce any kind of compile-time or even run-time exception — it's just that operations will act unexpectedly. If your SceneKit / ARKit objects seem to be stuck, fly away, or jitter, an incorrect transform matrix is a good possibility. The solution is simple: [`NMatrix4.Transpose`](https://developer.xamarin.com/api/member/OpenTK.NMatrix4.Transpose) will perform an in-place transposition of elements.
+Being consistent with the choice of matrix interpretation is vital to proper behavior. Since 3D transform matrices are 4x4, consistency mistakes will not produce any kind of compile-time or even run-time exception — it's just that operations will act unexpectedly. If your SceneKit / ARKit objects seem to be stuck, fly away, or jitter, an incorrect transform matrix is a good possibility. The solution is simple: [`NMatrix4.Transpose`](xref:OpenTK.NMatrix4.Transpose*) will perform an in-place transposition of elements.
 
 ## Related links
 

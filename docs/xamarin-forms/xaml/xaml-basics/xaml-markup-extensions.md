@@ -261,7 +261,7 @@ Here’s the final complete XAML file with three buttons accessing six shared va
                 <On Platform="UWP" Value="#80FF80" />
             </OnPlatform>
 
-            <x:String x:Key="fontSize">Large</x:String>
+            <x:Double x:Key="fontSize">24</x:Double>
         </ResourceDictionary>
     </ContentPage.Resources>
 

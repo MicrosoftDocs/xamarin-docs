@@ -49,7 +49,7 @@ If the destination application on this device has never been opened by `OpenAsyn
 
 The Task returned from `CanOpenAsync` completes immediately.
 
-More information about the iOS implementation is available [here](https://developer.xamarin.com/api/member/UIKit.UIApplication.CanOpenUrl/p/Foundation.NSUrl/)
+More information about the iOS implementation is available [here](xref:UIKit.UIApplication.CanOpenUrl*)
 
 # [UWP](#tab/uwp)
 

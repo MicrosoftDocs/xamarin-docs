@@ -238,7 +238,7 @@ That is accomplished with the following XAML:
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="ResponsiveLayout.AbsoluteLayoutPageXaml"
-Title="AbsoluteLayout - XAML" BackgroundImage="deer.jpg">
+Title="AbsoluteLayout - XAML" BackgroundImageSource="deer.jpg">
     <ContentPage.Content>
         <AbsoluteLayout>
             <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
@@ -292,7 +292,7 @@ That is accomplished with the following XAML:
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="ResponsiveLayout.RelativeLayoutPageXaml"
 Title="RelativeLayout - XAML"
-BackgroundImage="deer.jpg">
+BackgroundImageSource="deer.jpg">
     <ContentPage.Content>
         <RelativeLayout x:Name="outerLayout">
             <BoxView BackgroundColor="#AA1A7019"
@@ -451,6 +451,7 @@ protected override void OnSizeAllocated (double width, double height){
             innerGrid.Children.Remove (controlsGrid);
             innerGrid.Children.Add (controlsGrid, 1, 0);
         } else {
+            innerGrid.RowDefinitions.Clear();
             innerGrid.ColumnDefinitions.Clear ();
             innerGrid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (1, GridUnitType.Star) });
             innerGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Auto) });

@@ -1,5 +1,5 @@
 ---
-title: "iOS Platform Features"
+title: "iOS platform features in Xamarin.Forms"
 description: "Adding iOS-specific functionality to Xamarin.Forms applications."
 ms.prod: xamarin
 ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 02/22/2019
 ---
 
-# iOS Platform Features
+# iOS platform features in Xamarin.Forms
 
 Developing Xamarin.Forms applications for iOS requires Visual Studio. The [requirements page](~/get-started/requirements.md) contains more information about the pre-requisites.
 
@@ -40,6 +40,7 @@ The following platform-specific functionality is provided for Xamarin.Forms page
 - Controlling whether the navigation bar is translucent. For more information, see [Navigation Bar Translucency on iOS](navigation-bar-translucent.md).
 - Controlling whether the status bar text color on a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is adjusted to match the luminosity of the navigation bar. For more information, see [NavigationPage Bar Text Color Mode on iOS](status-bar-text-color.md).
 - Controlling whether the page title is displayed as a large title in the page navigation bar. For more information, see [Large Page Titles on iOS](page-large-title.md).
+- Setting the visibility of the home indicator on a [`Page`](xref:Xamarin.Forms.Page). For more information, see [Home Indicator Visibility on iOS](page-home-indicator.md).
 - Setting the status bar visibility on a [`Page`](xref:Xamarin.Forms.Page). For more information, see [Page Status Bar Visibility on iOS](page-status-bar-visibility.md).
 - Ensuring that page content is positioned on an area of the screen that is safe for all iOS devices. For more information, see [Safe Area Layout Guide on iOS](page-safe-area-layout.md).
 - Setting the presentation style of modal pages on an iPad. For more information, see [iPad Modal Page Presentation Style](ipad-page-presentation-style.md).

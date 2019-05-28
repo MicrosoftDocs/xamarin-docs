@@ -375,4 +375,4 @@ If you are troubleshooting a build problem and want to make sure the behavior is
 ## Related Links
 
 - [Pair to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-- [Xamarin Mac Build Agent - Xamarin University Lightning Lecture](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
+- [Xamarin Mac Build Agent video](https://www.youtube.com/watch?v=MBAPBtxkjFQ)

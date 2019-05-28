@@ -8,7 +8,7 @@ ms.assetid: 9DC3B3D6-6CBC-4705-BE80-3D86A9E65F92
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/02/2019
+ms.date: 04/01/2019
 ---
 
 # Perform Navigation in a Multi-Page Xamarin.Forms Application
@@ -34,7 +34,7 @@ You should successfully complete the [previous quickstart](single-page.md) befor
 
 ## Update the app with Visual Studio
 
-1. Launch Visual Studio. On the start page click **Open Project / Solution**, and in the **Open Project** dialog select the solution file for the Notes project:
+1. Launch Visual Studio. In the start window, click the **Notes** solution in the recent projects/solutions list, or click **Open a project or solution**, and in the **Open Project/Solution** dialog select the solution file for the Notes project:
 
     ![](multi-page-images/vs/open-solution.png "Open Project")
 
@@ -280,9 +280,7 @@ You should successfully complete the [previous quickstart](single-page.md) befor
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -295,7 +293,7 @@ You should successfully complete the [previous quickstart](single-page.md) befor
                 FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
                 MainPage = new NavigationPage(new NotesPage());
             }
-            ...
+            // ...
         }
     }
     ```
@@ -319,7 +317,7 @@ You should successfully complete the [previous quickstart](single-page.md) befor
 
 ## Update the app with Visual Studio for Mac
 
-1. Launch Visual Studio for Mac. On the start page click **Open...**, and in the dialog select the solution file for the Notes project:
+1. Launch Visual Studio for Mac. In the start window click **Open**, and in the dialog select the solution file for the Notes project:
 
     ![](multi-page-images/vsmac/open-solution.png "Open Solution")
 
@@ -565,9 +563,7 @@ You should successfully complete the [previous quickstart](single-page.md) befor
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -580,7 +576,7 @@ You should successfully complete the [previous quickstart](single-page.md) befor
                 FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
                 MainPage = new NavigationPage(new NotesPage());
             }
-            ...
+            // ...
         }
     }
     ```

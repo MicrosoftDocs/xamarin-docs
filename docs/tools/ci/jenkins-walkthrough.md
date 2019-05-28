@@ -226,7 +226,7 @@ The first task Jenkins does is retrieve the source code from the source code man
 
 #### Using Git for Source Code Control
 
-If you are using TFS for source code control, [skip](#Using-TFS-for-Source-Code-Management) this section and proceed to the next section using TFS.
+If you are using TFS for source code control, [skip](#using-tfs-for-source-code-management) this section and proceed to the next section using TFS.
 
 Jenkins supports Git out of the box – no extra plugins are necessary. To use Git, click on the **Git** radio button and enter the URL for the Git repository, as shown in the following screenshot:
 

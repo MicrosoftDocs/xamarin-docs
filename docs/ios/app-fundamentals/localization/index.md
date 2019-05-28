@@ -19,7 +19,7 @@ character sets/code pages in applications that must process non-Unicode data.
 ## iOS platform features
 
 This section describes some of the localization features in iOS. Skip to the
-[next section](#Localization-basics-in-iOS) to see specific code and examples.
+[next section](#localization-basics-in-ios) to see specific code and examples.
 
 ### Language
 

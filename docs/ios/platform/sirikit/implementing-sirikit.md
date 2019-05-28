@@ -630,7 +630,7 @@ To add an Intents Extension to the solution, do the following:
 	
 -----
 
-Repeat these steps for the number of Intent Extensions (based on [Architecting the App for Extensions](#Architecting-the-App-for-Extensions) section above) that the app will require.
+Repeat these steps for the number of Intent Extensions (based on [Architecting the App for Extensions](#architecting-the-app-for-extensions) section above) that the app will require.
 
 ### Configuring the Info.plist
 

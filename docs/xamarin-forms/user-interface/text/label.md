@@ -152,7 +152,7 @@ The `FormattedText` property is of type [`FormattedString`](xref:Xamarin.Forms.F
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – the size of the font for the text in the span.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) – the color for the text in the span. This property is obsolete and has been replaced by the `TextColor` property.
 - [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) - the multiplier to apply to the default line height of the span. For more information, see [Line Height](#line-height).
-- [`Text`](xref:Xamarin.Forms.Span.Text)  – the style to apply to the span.
+- [`Style`](xref:Xamarin.Forms.Span.Style)  – the style to apply to the span.
 - [`Text`](xref:Xamarin.Forms.Span.Text) – the text of the span.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – the color for the text in the span.
 - `TextDecorations` - the decorations to apply to the text in the span. For more information, see [Text Decorations](#text-decorations).
@@ -351,7 +351,7 @@ The `TapCommand` executes the `OpenBrowser` method, passing the [`TapGestureReco
 
 ### Creating a reusable hyperlink class
 
-The previous approach to creating a hyperlink requires writing repetitive code every time you require a hyperlink in your application. However, both the [`Label`](xref:Xamarin.Forms.Label) and [`Span`](xref:Xamarin.Forms.Span) classes can be sub-classed to create `HyperlinkLabel` and `HyperlinkSpan` classes, with the gesture recognizer and text formatting code added there.
+The previous approach to creating a hyperlink requires writing repetitive code every time you require a hyperlink in your application. However, both the [`Label`](xref:Xamarin.Forms.Label) and [`Span`](xref:Xamarin.Forms.Span) classes can be subclassed to create `HyperlinkLabel` and `HyperlinkSpan` classes, with the gesture recognizer and text formatting code added there.
 
 The following code example, taken from the [Hyperlink Demos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) sample, shows a `HyperlinkSpan` class:
 

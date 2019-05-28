@@ -17,7 +17,7 @@ In this guide, we introduce constraints and how to work with them in the Xamarin
 
 ## Requirements
 
-The Xamarin Designer for iOS is available in Visual Studio for Mac in Visual Studio 2015 and 2017 on Windows.
+The Xamarin Designer for iOS is available in Visual Studio for Mac in Visual Studio 2017 and later on Windows.
 
 This guide assumes knowledge of the Designer's components from the [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) guide.
 

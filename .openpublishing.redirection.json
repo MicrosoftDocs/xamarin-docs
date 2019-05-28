@@ -301,8 +301,28 @@
       "redirect_url": "/xamarin/get-started/installation/windows"
     },
     {
-      "source_path": "docs/cross-platform/data-cloud/walkthrough-working-with-wcf.md",
+      "source_path": "docs/cross-platform/data-cloud/web-services/walkthrough-working-with-wcf.md",
       "redirect_url": "/xamarin/xamarin-forms/data-cloud/consuming/wcf"
+    },
+    {
+      "source_path": "docs/tools/live-player/samples.md",
+      "redirect_url": "/xamarin/tools/live-player"
+    },
+    {
+      "source_path": "docs/tools/live-player/live-view.md",
+      "redirect_url": "/xamarin/tools/live-player"
+    },
+    {
+      "source_path": "docs/tools/live-player/limitations.md",
+      "redirect_url": "/xamarin/tools/live-player/troubleshooting"
+    },
+    {
+      "source_path": "docs/ios/get-started/installation/windows/connecting-to-mac/2019-preview.md",
+      "redirect_url": "/xamarin/ios/get-started/installation/windows/connecting-to-mac"
+    },
+    {
+        "source_path": "docs/xamarin-forms/app-fundamentals/navigation/pop-ups.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/pop-ups"
     }
   ]
 }

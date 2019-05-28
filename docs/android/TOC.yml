@@ -390,10 +390,14 @@
           href: ~/essentials/battery.md?context=xamarin/android
         - name: Clipboard
           href: ~/essentials/clipboard.md?context=xamarin/android
+        - name: Color Converters
+          href: ~/essentials/color-converters.md?context=xamarin/android
         - name: Compass
           href: ~/essentials/compass.md?context=xamarin/android
         - name: Connectivity
           href: ~/essentials/connectivity.md?context=xamarin/android
+        - name: Detect Shake
+          href: ~/essentials/detect-shake.md?context=xamarin/android
         - name: Device Display Information
           href: ~/essentials/device-display.md?context=xamarin/android
         - name: Device Information
@@ -423,7 +427,9 @@
         - name: Orientation Sensor
           href: ~/essentials/orientation-sensor.md?context=xamarin/android
         - name: Phone Dialer
-          href: ~/essentials/phone-dialer.md?context=xamarin/android
+          href: ~/essentials/phone-dialer.md?context=xamarin/android  
+        - name: Platform Extensions(Size, Rect, Point)
+          href: ~/essentials/platform-extensions.md?context=xamarin/android
         - name: Preferences
           href: ~/essentials/preferences.md?context=xamarin/android
         - name: Secure Storage
@@ -434,6 +440,8 @@
           href: ~/essentials/sms.md?context=xamarin/android
         - name: Text-to-Speech
           href: ~/essentials/text-to-speech.md?context=xamarin/android
+        - name: Unit Converters
+          href: ~/essentials/unit-converters.md?context=xamarin/android
         - name: Version Tracking
           href: ~/essentials/version-tracking.md?context=xamarin/android
         - name: Vibrate
@@ -587,8 +595,6 @@
               href: troubleshooting/questions/connect-android-emulator-mac-windows.md
             - name: How do I automate an Android NUnit Test project?
               href: troubleshooting/questions/automate-android-nunit-test.md
-            - name: How do I enable Intellisense in Android .axml files?
-              href: troubleshooting/questions/enable-axml-intellisense.md
             - name: Why can't my Android release build connect to the Internet?
               href: troubleshooting/questions/android-internet.md
             - name: Smarter Xamarin Android Support v4 / v13 NuGet Packages

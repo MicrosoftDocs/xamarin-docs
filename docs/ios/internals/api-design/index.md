@@ -99,7 +99,7 @@ information.
 
 #### ObjCRuntime
 
-The [ObjCRuntime](https://developer.xamarin.com/api/namespace/ObjCRuntime/)
+The [ObjCRuntime](xref:ObjCRuntime)
 namespace allows developers to bridge the worlds between C# and Objective-C.
 This is a new binding, designed specifically for the iOS, based on the experience from Cocoa# and Gtk#.
 
@@ -269,18 +269,18 @@ C# delegates are provided for common operations. See the [delegates](#Delegates)
 
 #### OpenGLES
 
-For OpenGLES, we distribute a [modified version](https://developer.xamarin.com/api/namespace/OpenTK/)
+For OpenGLES, we distribute a [modified version](xref:OpenTK)
 of the [OpenTK](http://www.opentk.com/) API, an object-oriented
 binding to OpenGL that has been modified to use CoreGraphics data types and
 structures, as well as only exposing the functionality that is available on iOS.
 
-OpenGLES 1.1 functionality is available through the ES11.GL type, documented [here](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES11.GL/)
+OpenGLES 1.1 functionality is available through the ES11.GL type, documented [here](xref:OpenTK.Graphics.ES11.GL)
 type.
 
-OpenGLES 2.0 functionality is available through the ES20.GL type, documented [here](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES20.GL/)
+OpenGLES 2.0 functionality is available through the ES20.GL type, documented [here](xref:OpenTK.Graphics.ES20.GL)
 type.
 
-OpenGLES 3.0 functionality is available through the ES30.GL type, documented [here](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES30.GL/)
+OpenGLES 3.0 functionality is available through the ES30.GL type, documented [here](xref:OpenTK.Graphics.ES30.GL)
 type.
 
 

@@ -26,7 +26,6 @@ The latest version of Xcode can be downloaded from the [iOS Developer Center](ht
 
 For instructions on installing Xamarin.iOS on a Mac, visit the [Mac Installation](https://docs.microsoft.com/visualstudio/mac/installation) guide.
 
-
 ## Windows Installation
 
 For instructions on installing Xamarin.iOS on a Windows machine, visit the [Windows Installation](~/ios/get-started/installation/windows/index.md) guide.

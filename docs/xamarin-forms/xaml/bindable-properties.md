@@ -11,7 +11,7 @@ ms.date: 06/02/2016
 
 # Bindable Properties
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
 
 _In Xamarin.Forms, the functionality of common language runtime (CLR) properties is extended by bindable properties. A bindable property is a special type of property, where the property's value is tracked by the Xamarin.Forms property system. This article provides an introduction to bindable properties, and demonstrates how to create and consume them._
 
@@ -221,7 +221,7 @@ This article provided an introduction to bindable properties, and demonstrated h
 ## Related Links
 
 - [XAML Namespaces](~/xamarin-forms/xaml/namespaces.md)
-- [Event To Command Behavior (sample)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+- [Event To Command Behavior (sample)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
 - [Validation Callback (sample)](https://developer.xamarin.com/samples/xamarin-forms/xaml/validationcallback/)
 - [Coerce Value Callback (sample)](https://developer.xamarin.com/samples/xamarin-forms/xaml/coercevaluecallback/)
 - [BindableProperty](xref:Xamarin.Forms.BindableProperty)

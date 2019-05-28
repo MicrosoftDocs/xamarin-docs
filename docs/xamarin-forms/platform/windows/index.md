@@ -21,21 +21,21 @@ Platform-specifics allow you to consume functionality that's only available on a
 
 The following platform-specific functionality is provided for Xamarin.Forms views, pages, and layouts on the Universal Windows Platform (UWP):
 
-- Setting an access key for a [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [VisualElement Access Keys on Windows](#visualelement-accesskeys).
-- Disabling legacy color mode on a supported [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [VisualElement Legacy Color Mode on Windows](#legacy-color-mode).
+- Setting an access key for a [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [VisualElement Access Keys on Windows](visualelement-access-keys.md).
+- Disabling legacy color mode on a supported [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [VisualElement Legacy Color Mode on Windows](legacy-color-mode.md).
 
 The following platform-specific functionality is provided for Xamarin.Forms views on UWP:
 
-- Detecting reading order from text content in [`Entry`](xref:Xamarin.Forms.Entry), [`Editor`](xref:Xamarin.Forms.Editor), and [`Label`](xref:Xamarin.Forms.Label) instances. For more information, see [InputView Reading Order on Windows](#inputview-readingorder).
-- Enabling tap gesture support in a [`ListView`](xref:Xamarin.Forms.ListView). For more information, see [ListView SelectionMode on Windows](#listview-selectionmode).
-- Enabling a [`SearchBar`](xref:Xamarin.Forms.SearchBar) to interact with the spell check engine. For more information, see [SearchBar Spell Check on Windows](#searchbar-spellcheck).
-- Enabling a [`WebView`](xref:Xamarin.Forms.WebView) to display JavaScript alerts in a UWP message dialog. For more information, see [WebView JavaScript Alerts on Windows](#webview-javascript-alert).
+- Detecting reading order from text content in [`Entry`](xref:Xamarin.Forms.Entry), [`Editor`](xref:Xamarin.Forms.Editor), and [`Label`](xref:Xamarin.Forms.Label) instances. For more information, see [InputView Reading Order on Windows](inputview-reading-order.md).
+- Enabling tap gesture support in a [`ListView`](xref:Xamarin.Forms.ListView). For more information, see [ListView SelectionMode on Windows](listview-selectionmode.md).
+- Enabling a [`SearchBar`](xref:Xamarin.Forms.SearchBar) to interact with the spell check engine. For more information, see [SearchBar Spell Check on Windows](searchbar-spell-check.md).
+- Enabling a [`WebView`](xref:Xamarin.Forms.WebView) to display JavaScript alerts in a UWP message dialog. For more information, see [WebView JavaScript Alerts on Windows](webview-javascript-alert.md).
 
 The following platform-specific functionality is provided for Xamarin.Forms pages on UWP:
 
-- Collapsing the [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) navigation bar. For more information, see [MasterDetailPage Navigation Bar on Windows](#collapsable_navigation_bar).
-- Setting toolbar placement options. For more information, see [Page Toolbar Placement on Windows](#toolbar_placement).
-- Enabling page icons to be displayed on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) toolbar. For more information, see [TabbedPage Icons on Windows](#tabbedpage-icons).
+- Collapsing the [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) navigation bar. For more information, see [MasterDetailPage Navigation Bar on Windows](masterdetailpage-navigation-bar.md).
+- Setting toolbar placement options. For more information, see [Page Toolbar Placement on Windows](page-toolbar-placement.md).
+- Enabling page icons to be displayed on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) toolbar. For more information, see [TabbedPage Icons on Windows](tabbedpage-icons.md).
 
 ## Platform support
 

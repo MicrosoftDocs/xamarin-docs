@@ -18,22 +18,15 @@ develop applications for iOS and Android:
 -   **Compiler** – Depending on the platform, produces a native app (eg. iOS) or an integrated .NET application and runtime (eg. Android). The compiler also performs many optimizations for mobile deployment such as linking away un-used code.
 -   **IDE tools** – The Visual Studio on Mac and Windows allows you to create, build, and deploy Xamarin projects.
 
-
 In addition, because the underlying language is C# with the .NET framework,
 projects can be structured to share code that can also be deployed to Windows
 Phone.
-
- <a name="Under_the_Hood" />
-
 
 ## Under the Hood
 
 Although Xamarin allows you to write apps in C#, and share the same code
 across multiple platforms, the actual implementation on each system is very
 different.
-
- <a name="Compilation" />
-
 
 ## Compilation
 
@@ -55,9 +48,6 @@ Apple’s kernel prevents dynamic code generation on iOS devices, therefore emit
 
 Some reflection features do work (eg. MonoTouch.Dialog uses it for the Reflection API), just not code generation.
 
- <a name="Platform_SDK_Access" />
-
-
 ## Platform SDK Access
 
 Xamarin makes the features provided by the platform-specific SDK easily accessible with familiar C# syntax:
@@ -65,10 +55,6 @@ Xamarin makes the features provided by the platform-specific SDK easily accessib
 -   **iOS** – Xamarin.iOS exposes Apple’s CocoaTouch SDK frameworks as namespaces that you can reference from C#. For example the UIKit framework that contains all the user interface controls can be included with a simple  `using UIKit;` statement.
 -   **Android** – Xamarin.Android exposes Google’s Android SDK as namespaces, so you can reference any part of the supported SDK with a using statement, such as  `using Android.Views;` to access the user interface controls.
 -   **Windows** – Windows apps are built using Visual Studio on Windows. Project types include Windows Forms, WPF, WinRT, and the Universal Windows Platform (UWP).
-
-
- <a name="Seamless_Integration_for_Developers" />
-
 
 ## Seamless Integration for Developers
 
@@ -80,9 +66,6 @@ three platforms.
 Business logic, database usage, network access, and other common functions can
 be written once and re-used on each platform, providing a foundation for
 platform-specific user interfaces that look and perform as  native applications.
-
- <a name="Integrated_Development_Environment_(IDE)_Availability" />
-
 
 ## Integrated Development Environment (IDE) Availability
 
@@ -97,9 +80,6 @@ a Mac and shared code could later be added to a Windows project.
 
 The development requirements for each platform are discussed in more detail
 in the [Requirement](~/cross-platform/get-started/requirements.md) guide.
-
-
-<a name="iOS" />
 
 ### iOS
 
@@ -119,18 +99,16 @@ programmatically or edited with Xamarin's iOS Designer in either IDE.
 Refer to the [Xamarin.iOS Installation Guide](~/ios/get-started/installation/index.md) for
 detailed instructions on getting set up.
 
-<a name="Android" />
-
 ### Android
 
 Android application development requires the Java and Android SDKs to be
 installed. These provide the compiler, emulator and other tools required for
 building, deployment and testing. Java, Google’s Android SDK and Xamarin’s
-tools can all be installed and run on the following configurations:
+tools can all be installed and run on Windows and macOS. The following configurations
+are recommended:
 
--  Mac OS X El Capitan and above (10.11+) with Visual Studio for Mac
--  Windows 7 & above with  Visual Studio 2015 or 2017
-
+- Windows 10 with Visual Studio 2019
+- macOS Mojave (10.11+) with Visual Studio 2019 for Mac
 
 Xamarin provides a unified installer that will configure your system with the
 pre-requisite Java, Android and Xamarin tools (including a visual designer for
@@ -142,17 +120,11 @@ Play, Amazon or Barnes &amp; Noble) a registration fee may be payable to the
 operator. Google Play will publish your app instantly, while the other stores
 have an approval process similar to Apple’s.
 
- <a name="Windows_Phone" />
-
-
 ### Windows
 
 Windows apps (WinForms, WPF, or UWP) are built with Visual Studio. They do not use Xamarin directly. However, C# code can
 be shared across Windows, iOS and Android.
 Visit Microsoft’s [Dev Center](https://developer.microsoft.com/) to learn about the tools required for Windows development.
-
- <a name="Creating_the_User_Interface_(UI)" />
-
 
 ## Creating the User Interface (UI)
 
@@ -165,9 +137,6 @@ When building screens in your app, you can either lay out the controls in
 code or create complete screens using the design tools available for each
 platform.
 
- <a name="Programmatically_Create_Controls" />
-
-
 ### Create Controls Programmatically
 
 Each platform allows user interface controls to be added to a screen using
@@ -179,17 +148,13 @@ Programmatically creating controls does have benefits though, particularly on
 iOS for building views that resize or render differently across the iPhone and
 iPad screen sizes.
 
- <a name="Visual_Designer" />
-
-
 ### Visual Designer
 
 Each platform has a different method for visually laying out screens:
 
--   **iOS** – Xamarin's iOS Designer facilitates building Views using drag-and-drop functionality and property fields. Collectively these Views make up a Storyboard, and can be accessed in the **.Storyboard** file that is included in your project.
--   **Android** – Xamarin provides an Android drag-and-drop UI designer for Visual Studio. Android screen layouts are saved as **.AXML** files when using Xamarin tools.
--   **Windows** – Microsoft provides a drag-and-drop UI designer in Visual Studio and Blend. The screen layouts are stored as .XAML files.
-
+- **iOS** – Xamarin's iOS Designer facilitates building Views using drag-and-drop functionality and property fields. Collectively these Views make up a Storyboard, and can be accessed in the **.Storyboard** file that is included in your project.
+- **Android** – Xamarin provides an Android drag-and-drop UI designer for Visual Studio. Android screen layouts are saved as **.AXML** files when using Xamarin tools.
+- **Windows** – Microsoft provides a drag-and-drop UI designer in Visual Studio and Blend. The screen layouts are stored as .XAML files.
 
 These screenshots show the visual screen designers available on each
 platform:
@@ -198,9 +163,6 @@ platform:
 
 In all cases the elements that you create visually can be referenced in your
 code.
-
- <a name="User_Interface_Considerations" />
-
 
 ### User Interface Considerations
 
@@ -214,29 +176,21 @@ application to ‘feel’ right the UI should take advantage of
 platform-specific user interface elements when appropriate. Examples of
 platform-specific UI metaphors include:
 
--   **iOS** – hierarchical navigation with soft back button, tabs on the bottom of the screen.
--   **Android** – hardware/system-software back button, action menu, tabs on the top of the screen.
--   **Windows** – Windows apps can run on desktops, tablets (such as Microsoft Surface) and phones. Windows 10 devices may have hardware back button and live tiles, for example.
-
+- **iOS** – hierarchical navigation with soft back button, tabs on the bottom of the screen.
+- **Android** – hardware/system-software back button, action menu, tabs on the top of the screen.
+- **Windows** – Windows apps can run on desktops, tablets (such as Microsoft Surface) and phones. Windows 10 devices may have hardware back button and live tiles, for example.
 
 It is recommended that you read the design guidelines relevant to the
 platforms you are targeting:
 
--   **iOS** –  [Apple's Human Interface Guidelines](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html)
--   **Android** –  [Google's User Interface Guidelines](https://developer.android.com/guide/practices/ui_guidelines/index.html)
--   **Windows** –  [User Experience Design Guidelines for Windows](https://developer.microsoft.com/windows/design)
-
-
- <a name="Library_and_Code_Re-use" />
-
+- **iOS** –  [Apple's Human Interface Guidelines](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html)
+- **Android** –  [Google's User Interface Guidelines](https://developer.android.com/guide/practices/ui_guidelines/index.html)
+- **Windows** –  [User Experience Design Guidelines for Windows](https://developer.microsoft.com/windows/design)
 
 ## Library and Code Re-Use
 
 The Xamarin platform allows re-use of existing C# code across all platforms
 as well as the integration of libraries written natively for each platform.
-
- <a name="C#_Source_and_Libraries" />
-
 
 ### C# Source and Libraries
 
@@ -249,9 +203,6 @@ has been used, some tweaks may be required.
 Examples of C# source that can be used in Xamarin.iOS or Xamarin.Android
 include: SQLite-NET, NewtonSoft.JSON and SharpZipLib.
 
- <a name="Objective-C_Bindings_+_Binding_Projects" />
-
-
 ### Objective-C Bindings + Binding Projects
 
 Xamarin provides a tool called *btouch* that helps create bindings
@@ -261,9 +212,6 @@ Examples of Objective-C libraries that can be used in Xamarin.iOS include: RedLa
 barcode scanning, Google Analytics and PayPal integration. Open-source Xamarin.iOS
 bindings are available on [github](https://github.com/mono/monotouch-bindings).
 
- <a name=".jar_Bindings_+_Binding_Projects" />
-
-
 ### .jar Bindings + Binding Projects
 
 Xamarin supports using existing Java libraries in Xamarin.Android. Refer to
@@ -271,9 +219,6 @@ the [Binding a Java Library documentation](~/android/platform/binding-java-libra
 from Xamarin.Android.
 
 Open-source Xamarin.Android bindings are available on [github](https://github.com/mono/monodroid-bindings).
-
- <a name="C_via_PInvoke" />
-
 
 ### C via PInvoke
 
@@ -293,12 +238,8 @@ Developers familiar with an existing C API can construct a set of C# classes to
 map to the native API and utilize the existing platform code. There is
 documentation for [linking native libraries](~/ios/platform/native-interop.md) in Xamarin.iOS, similar principles apply to Xamarin.Android.
 
- <a name="C++_via_Cxxi" />
-
-
 ### C++ via CppSharp
 
 Miguel explains CXXI (now called [CppSharp](https://github.com/mono/CppSharp)) on his [blog](https://tirania.org/blog/archive/2011/Dec-19.html). An
 alternative to binding to a C++ library directly is to create a C wrapper and
 bind to that via P/Invoke.
-

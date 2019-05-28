@@ -1,5 +1,5 @@
 ---
-title: "Frequently Asked Questions"
+title: "Xamarin.Android Frequently Asked Questions"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
@@ -9,7 +9,7 @@ ms.author: crdun
 ms.date: 08/29/2018
 ---
 
-# Frequently Asked Questions
+# Android Frequently Asked Questions
 
 ## Installation & Setup
 
@@ -64,11 +64,6 @@ This guide covers methods when using the Android emulator.
 This guide covers steps for setting up an Android NUnit test project,
 _not_ a Xamarin.UITest project. Xamarin.UITest guides can be found
 [here](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
-
-### [How do I enable Intellisense in Android .axml files?](enable-axml-intellisense.md)
-
-This guide describes how to activate Visual Studio's Intellisense for
-Android .axml files.
 
 ### [Why can't my Android release build connect to the Internet?](android-internet.md)
 

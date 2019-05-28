@@ -138,17 +138,12 @@ public partial class PhotoWrappingPage : ContentPage
 
     async void LoadBitmapCollection()
     {
-        int imageDimension = Device.RuntimePlatform == Device.iOS ||
-                             Device.RuntimePlatform == Device.Android ? 240 : 120;
-
-        string urlSuffix = String.Format("?width={0}&height={0}&mode=max", imageDimension);
-
         using (WebClient webClient = new WebClient())
         {
             try
             {
                 // Download the list of stock photos
-                Uri uri = new Uri("http://docs.xamarin.com/demo/stock.json");
+                Uri uri = new Uri("https://raw.githubusercontent.com/xamarin/docs-archive/master/Images/stock/small/stock.json");
                 byte[] data = await webClient.DownloadDataTaskAsync(uri);
 
                 // Convert to a Stream object
@@ -163,7 +158,7 @@ public partial class PhotoWrappingPage : ContentPage
                     {
                         Image image = new Image
                         {
-                            Source = ImageSource.FromUri(new Uri(filepath + urlSuffix))
+                            Source = ImageSource.FromUri(new Uri(filepath))
                         };
                         flexLayout.Children.Add(image);
                     }
@@ -512,13 +507,13 @@ For any individual child of the `FlexLayout`, this property setting overrides th
 For a `Label` element named `label` (or example), you can set the `AlignSelf` property in code like this:
 
 ```csharp
-FlexAlign.SetAlignSelf(label, FlexAlignSelf.Center);
+FlexLayout.SetAlignSelf(label, FlexAlignSelf.Center);
 ```
 
 Notice that there is no reference to the `FlexLayout` parent of the `Label`. In XAML, you set the property like this:
 
 ```xaml
-<Label ... FlexAlign.AlignSelf="Center" ... />
+<Label ... FlexLayout.AlignSelf="Center" ... />
 ```
 
 ### The Order Property
@@ -738,7 +733,7 @@ You've seen that you can set properties directly on the `FlexLayout` and you can
 
 > [!VIDEO https://youtube.com/embed/Ng3sel_5D_0]
 
-**Xamarin.Forms 3.0 Flex Layout, by [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 3.0 Flex Layout video**
 
 ## Related links
 

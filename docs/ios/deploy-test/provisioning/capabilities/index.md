@@ -39,14 +39,13 @@ These capabilities can be used with Xamarin.iOS projects. The full list of servi
 * Multipath
 * NFC Tag Reading
 
-
-Capabilities can be enabled either through Visual Studio for Mac and Visual Studio 2017, or manually in the Apple Developer Portal. Certain capabilities such as Wallet, Apple Pay, and iCloud require additional configuration of the App IDs.
+Capabilities can be enabled either through Visual Studio for Mac and Visual Studio 2019, or manually in the Apple Developer Portal. Certain capabilities such as Wallet, Apple Pay, and iCloud require additional configuration of the App IDs.
 
 This guide explains how to enable each of these App Services in your application automatically in Visual Studio and manually through the developer center, including any additional setup that may be required. 
 
 ## Adding App Services
 
-To use capabilities, the app must have a valid provisioning profile that contains an App ID with the correct service enabled. Creating this provisioning profile can either be done automatically in Visual Studio for Mac and Visual Studio 2017, or manually in the Apple Developer Center.
+To use capabilities, the app must have a valid provisioning profile that contains an App ID with the correct service enabled. Creating this provisioning profile can either be done automatically in Visual Studio for Mac and Visual Studio 2019, or manually in the Apple Developer Center.
 
 This section explains how to use Visual Studio's automatic provisioning or the Developer Center to enable most capabilities. There are some capabilities such as Wallet, iCloud, Apple Pay, and App Groups that require additional setup. These are explained in detail in the adjoining guides.
 
@@ -90,9 +89,9 @@ Capabilities are added to the **Entitlements.plist** in Visual Studio for Mac. T
 
 # [Visual Studio](#tab/windows)
 
-Capabilities are added to the **Entitlements.plist**. To add capabilities in Visual Studio 2017, use the following steps:
+Capabilities are added to the **Entitlements.plist**. To add capabilities in Visual Studio 2019, use the following steps:
 
-1. Pair Visual Studio 2017 to a Mac as described in the [Pair to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) guide.
+1. Pair Visual Studio 2019 to a Mac as described in the [Pair to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) guide.
 
 2. Open the Provisioning options by selecting **Project > Provisioning Properties…**
 
@@ -201,12 +200,12 @@ Once a Capability has been enabled on the server side, there is still work that 
 
 The list below details some of the most common issues that can create roadblocks when developing an app with an app service enabled.
 
--	Ensure that the correct ID has been properly created and registered in the **Certificates, IDs & Profiles** section of Apple's Developer Portal.
--	Ensure that the Service have been added to the App's (or Extension's) ID and that the service is configured to use the App Group/Merchant ID/Container created above in the **Certificates, IDs & Profiles** of Apple's Developer Portal.
--	Ensure that the Provisioning Profiles and App IDs have been installed and that the App's **Info.plist** (in the Xamarin Project) is using one of the App IDs configured above.
--	Ensure that the App's **Entitlements.plist** file (in the Xamarin Project) has the correct service enabled.
+-	Ensure that the correct ID has been properly created and registered in the **Certificates, IDs & Profiles** section of Apple's Developer Portal.
+-	Ensure that the Service have been added to the App's (or Extension's) ID and that the service is configured to use the App Group/Merchant ID/Container created above in the **Certificates, IDs & Profiles** of Apple's Developer Portal.
+-	Ensure that the Provisioning Profiles and App IDs have been installed and that the App's **Info.plist** (in the Xamarin Project) is using one of the App IDs configured above.
+-	Ensure that the App's **Entitlements.plist** file (in the Xamarin Project) has the correct service enabled.
 -	Ensure that the appropriate privacy-keys are set in info.plist
--	In the App's **iOS Bundle Signing**, ensure that the **Custom Entitlements** is set to **Entitlements.plist**. This is _not_ the default setting for Debug and iOS Simulator builds.
+-	In the App's **iOS Bundle Signing**, ensure that the **Custom Entitlements** is set to **Entitlements.plist**. This is _not_ the default setting for Debug and iOS Simulator builds.
 
 <a name="summary" />
 
