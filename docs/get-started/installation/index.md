@@ -7,7 +7,7 @@ ms.assetid: 0f813a14-2f0c-415d-8667-4563f3dc06e8
 author: conceptdev
 ms.author: crdun
 ms.custom: video
-ms.date: 04/02/2019
+ms.date: 05/23/2019
 ---
 # Installing Xamarin
 
@@ -17,7 +17,7 @@ _How to set up Visual Studio and Xamarin to start building mobile apps with .NET
 
 ## Installing Xamarin on Windows
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-2017-for-Mobile-Development-with-NET/player]
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-2019-for-Mobile-Development-with-NET--Xamarin/player]
 
 ## Step-by-step instructions
 

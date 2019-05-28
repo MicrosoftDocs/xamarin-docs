@@ -8,7 +8,7 @@ ms.technology: xamarin-forms
 ms.custom: video
 author: conceptdev
 ms.author: crdun
-ms.date: 04/02/2019
+ms.date: 05/23/2019
 ---
 # Build your first Xamarin.Forms App
 
@@ -16,7 +16,7 @@ _Watch this video and follow along to create your first mobile app with Xamarin.
 
 ::: zone pivot="windows"
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Building-Your-First-Android--iOS-App-in-Visual-Studio-2017/player]
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Build-Your-First-Android-App-with-Visual-Studio-2019-and-Xamarin/player]
 
 ## Step-by-step instructions for Windows
 
@@ -69,6 +69,12 @@ Follow these steps along with the video above:
     > It is possible to build and debug the iOS app from Visual Studio with a
     > networked Mac computer. Refer to the [setup instructions](~/ios/get-started/installation/windows/index.md)
     > for more information.
+
+## Build an iOS app in Visual Studio 2019
+
+This video covers the process of building and testing an iOS app using Visual Studio 2019 on Windows:
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Build-Your-First-iOS-App-with-Visual-Studio-2019-and-Xamarin/player]
 
 ::: zone-end
 ::: zone pivot="win-vs2017"
