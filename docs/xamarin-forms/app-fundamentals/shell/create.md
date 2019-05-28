@@ -15,7 +15,8 @@ ms.date: 05/24/2019
 
 The process for creating a Xamarin.Forms Shell application is as follows:
 
-1. Create a XAML file that subclasses the `Shell` class. For more information, see [Subclass the Shell class](#subclass-the-shell-class).
+1. Create a new Xamarin.Forms application, or load an existing application that you want to convert to a Shell application.
+1. Add a XAML file to the shared code project, that subclasses the `Shell` class. For more information, see [Subclass the Shell class](#subclass-the-shell-class).
 1. Set the [`MainPage`](xref:Xamarin.Forms.Application.MainPage) property of the application's `App` class to the subclassed `Shell` object. For more information, see [Bootstrap the Shell application](#bootstrap-the-shell-application).
 1. Describe the visual hierarchy of the application in the subclassed `Shell` class. For more information, see [Describe the visual hierarchy of the application](#describe-the-visual-hierarchy-of-the-application).
 
@@ -134,4 +135,3 @@ Pressing the hamburger icon, or swiping from the left, displays the flyout:
 ## Related links
 
 - [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
-- [Xamarin.Forms CSS Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

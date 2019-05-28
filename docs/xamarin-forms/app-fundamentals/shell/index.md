@@ -6,7 +6,7 @@ ms.assetid: 85B322AA-808F-41B6-953A-5877264AE643
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
+ms.date: 05/28/2019
 ---
 
 # Xamarin.Forms Shell
@@ -15,7 +15,7 @@ ms.date: 05/06/2019
 
 Xamarin.Forms Shell reduces the complexity of mobile application development by providing the fundamental features that most mobile applications require. This includes a common navigation user experience, a URI-based navigation scheme, and an integrated search handler.
 
-## [Create a Xamarin.Forms Shell Application](create.md)
+## [Create a Xamarin.Forms Shell application](create.md)
 
 The process for creating a Xamarin.Forms Shell application is to create a XAML file that subclasses the `Shell` class, set the `MainPage` property of the application's `App` class to the subclassed `Shell` object, and then describe the visual hierarchy of the application in the subclassed `Shell` class.
 
@@ -26,6 +26,10 @@ The flyout is the root menu for a Shell application, and is accessible through a
 ## [Tabs](tabs.md)
 
 After a flyout, the next level of navigation in a Shell application is the bottom tab bar. Alternatively, the navigation pattern for an application can begin with bottom tabs and make no use of a flyout. In both cases, when a bottom tab contains more than one page, the pages will be navigable by top tabs.
+
+## [Page configuration](configuration.md)
+
+The `Shell` class defines attached properties that can be used to configure the appearance of pages in Xamarin.Forms Shell applications. This includes setting page colors, disabling the navigation bar, disabling the tab bar, and displaying views in the navigation bar.
 
 ## [Navigation](navigation.md)
 
