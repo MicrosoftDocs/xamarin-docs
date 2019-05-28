@@ -58,9 +58,7 @@ public async Task SpeakNowDefaultSettings()
 public void CancelSpeech()
 {
     if (cts?.IsCancellationRequested ?? false)
-        return;
-
-    cts.Cancel();
+        cts.Cancel();
 }
 ```
 
