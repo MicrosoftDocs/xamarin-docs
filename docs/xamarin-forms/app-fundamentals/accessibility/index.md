@@ -6,7 +6,8 @@ ms.assetid: 99B8A8E8-6F5E-46BC-9639-1C4A6D301049
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/15/2018
+ms.date: 05/28/2019
+ms.custom: video
 ---
 
 # Xamarin.Forms Accessibility
@@ -36,3 +37,9 @@ Xamarin.Forms applications typically target multiple platforms, which means test
 - [Cross-platform Accessibility](~/cross-platform/app-fundamentals/accessibility.md)
 - [Automation Properties](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md)
 - [Keyboard Accessibility](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Making-Mobile-Apps-Accessible/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
