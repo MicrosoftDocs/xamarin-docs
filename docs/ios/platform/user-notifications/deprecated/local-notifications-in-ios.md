@@ -50,7 +50,7 @@ minute in the future, and display an alert with a message:
 
 ```csharp
 UILocalNotification notification = new UILocalNotification();
-NSDate.FromTimeIntervalSinceNow(15);
+notification.FireDate = NSDate.FromTimeIntervalSinceNow(15);
 //notification.AlertTitle = "Alert Title"; // required for Apple Watch notifications
 notification.AlertAction = "View Alert";
 notification.AlertBody = "Your 15 second alert has fired!";
