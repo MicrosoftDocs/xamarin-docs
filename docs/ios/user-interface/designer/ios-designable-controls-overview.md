@@ -161,7 +161,7 @@ public class DesignerAwareLabel : UILabel, IComponent {
 
 	public override void AwakeFromNib ()
 	{
-		if (Site != null &amp;&amp; Site.DesignMode)
+		if (Site != null && Site.DesignMode)
 			Text = "Design Mode";
 		else
 			Text = "Runtime";
