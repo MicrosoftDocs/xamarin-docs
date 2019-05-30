@@ -76,8 +76,8 @@ software helper functions that come from the compiler's `libgcc.a`
 static library. SMP devices are not supported by `armeabi`.
 
 **Note**: Xamarin.Android's `armeabi` code is not thread safe and
-should not be used on multi-CPU `armeabi-v7a`devices (described
-below). Using `aremabi` code on a single-core `armeabi-v7a` device is
+should not be used on multi-CPU `armeabi-v7a` devices (described
+below). Using `armeabi` code on a single-core `armeabi-v7a` device is
 safe.
 
 #### armeabi-v7a
@@ -118,15 +118,6 @@ This is the name of an ABI for CPUs that support the 64-bit x86
 instruction set (also referred to as *x64* or *AMD64*). Xamarin.Android
 5.1 provides experimental support for this architecture (for more
 information, see [Experimental Features](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features)).
-
-#### mips
-
-This is the name of an ABI for MIPS-based CPUs that support at least
-the `MIPS32r1` instruction set. Neither MIPS 16 nor `micromips` are
-supported by Android.
-
-**Note:** MIPS devices are not currently supported by Xamarin.Android,
-but will be in a future release.
 
 #### APK File Format
 
@@ -313,9 +304,12 @@ $APP/lib/libtwo.so # from armeabi-v7a
 
 Xamarin.Android supports the following architectures:
 
-- `armeabi`
+- *`armeabi`
 - `armeabi-v7a`
 - `x86`
+
+> [!NOTE]
+> As of [Xamarin.Android 9.2](https://docs.microsoft.com/en-us/xamarin/android/release-notes/9/9.2#removal-of-support-for-armeabi-cpu-architecture), `armeabi` is no longer supported.
 
 Xamarin.Android provides experimental support for the following architectures:
 
@@ -365,7 +359,6 @@ are intended only for `armeabi`.
 
 ## Related Links
 
-- [MIPS Architecture](http://www.mips.com/products/product-materials/processor/mips-architecture)
 - [ABI for the ARM Architecture (PDF)](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0036b/IHI0036B_bsabi.pdf)
 - [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)
 - [Issue 9089:Nexus One - Won't load ANY native libraries from armeabi if there's at least one library at armeabi-v7a](http://code.google.com/p/android/issues/detail?id=9089)
