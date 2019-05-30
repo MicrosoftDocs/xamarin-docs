@@ -58,7 +58,7 @@ public async Task SpeakNowDefaultSettings()
 // Cancel speech if a cancellation token exists & hasn't been already requested.
 public void CancelSpeech()
 {
-    if (cts == null || !cts.IsCancellationRequested)
+    if (cts?.IsCancellationRequested ?? true)
         return;
 
     cts.Cancel();
