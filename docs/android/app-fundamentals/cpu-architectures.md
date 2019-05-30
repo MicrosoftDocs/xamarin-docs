@@ -6,7 +6,7 @@ ms.assetid: D4BC889D-9164-49BB-9B7B-F6C4E4E109F1
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 03/01/2018
+ms.date: 05/30/2019
 ---
 
 # CPU Architectures
@@ -71,7 +71,7 @@ Xamarin.Android supports the following architectures:
     devices.
 
 > [!NOTE]
-> As of [Xamarin.Android 9.2](https://docs.microsoft.com/en-us/xamarin/android/release-notes/9/9.2#removal-of-support-for-armeabi-cpu-architecture), `armeabi` is no longer supported.
+> As of [Xamarin.Android 9.2](https://docs.microsoft.com/xamarin/android/release-notes/9/9.2#removal-of-support-for-armeabi-cpu-architecture), `armeabi` is no longer supported.
 
 -   **armeabi-v7a** &ndash; ARM-based CPUs with hardware floating-point operations
     and multiple CPU (SMP) devices. Note that `armeabi-v7a` machine code will not
