@@ -26,6 +26,6 @@ This guide is composed of the following articles:
 
 ## Related Links
 
-- [Using DependencyService (sample)](https://developer.xamarin.com/samples/UsingDependencyService)
-- [DependencyService (sample)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample)
+- [Using DependencyService (sample)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
+- [DependencyService (sample)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/)
 - [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples)
