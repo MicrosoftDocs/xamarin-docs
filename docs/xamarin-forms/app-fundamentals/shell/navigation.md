@@ -208,11 +208,11 @@ The `Shell` class defines a `Navigating` event, which is fired when navigation i
 
 | Property | Type | Description |
 |---|---|---|
-| Current | `ShellNavigationState` | The URI of the current page. |
-| Source | `ShellNavigationSource` | The type of navigation that occurred. |
-| Target | `ShellNavigationState`  | The URI representing where the navigation is destined. |
-| CanCancel  | `bool` | A value indicating if it's possible to cancel the navigation. |
-| Cancelled  | `bool` | A value indicating if the navigation was cancelled. |
+| `Current` | `ShellNavigationState` | The URI of the current page. |
+| `Source` | `ShellNavigationSource` | The type of navigation that occurred. |
+| `Target` | `ShellNavigationState`  | The URI representing where the navigation is destined. |
+| `CanCancel`  | `bool` | A value indicating if it's possible to cancel the navigation. |
+| `Cancelled`  | `bool` | A value indicating if the navigation was cancelled. |
 
 In addition, the `ShellNavigatingEventArgs` class provides a `Cancel` method that can be used to cancel navigation.
 
@@ -223,9 +223,9 @@ The `Shell` class also defines a `Navigated` event, which is fired when navigati
 
 | Property | Type | Description |
 |---|---|---|
-| Current | `ShellNavigationState` | The URI of the current page. |
-| Previous| `ShellNavigationState` | The URI of the previous page. |
-| Source  | `ShellNavigationSource` | The type of navigation that occurred. |
+| `Current` | `ShellNavigationState` | The URI of the current page. |
+| `Previous`| `ShellNavigationState` | The URI of the previous page. |
+| `Source`  | `ShellNavigationSource` | The type of navigation that occurred. |
 
 > [!NOTE]
 > The `Navigating` event is fired by the overridable `OnNavigated` method in the `Shell` class.
