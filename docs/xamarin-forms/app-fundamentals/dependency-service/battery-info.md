@@ -11,7 +11,7 @@ ms.date: 08/09/2016
 
 # Checking Battery Status
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/DependencyService)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/)
 
 This article walks through the creation of an application that checks battery status. This article is based on the Battery Plugin by James Montemagno. For more information, see the [GitHub repo](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery).
 
@@ -473,6 +473,6 @@ Running this application on iOS, Android, or UWP and pressing the button will re
 
 ## Related Links
 
-- [DependencyService (sample)](https://developer.xamarin.com/samples/DependencyService)
-- [Using DependencyService (sample)](https://developer.xamarin.com/samples/UsingDependencyService/)
+- [DependencyService (sample)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/)
+- [Using DependencyService (sample)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 - [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples)

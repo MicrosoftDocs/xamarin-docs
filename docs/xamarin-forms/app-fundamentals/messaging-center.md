@@ -11,7 +11,7 @@ ms.date: 07/01/2016
 
 # Xamarin.Forms MessagingCenter
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/UsingMessagingCenter)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UsingMessagingCenter)
 
 _Xamarin.Forms includes a simple messaging service to send and receive messages._
 

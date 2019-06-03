@@ -12,7 +12,7 @@ ms.date: 04/03/2019
 
 # XAML Controls
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/FormsGallery/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 
 Views are user-interface objects such as labels, buttons, and sliders that are commonly known as *controls* or *widgets* in other graphical programming environments. The views supported by Xamarin.Forms all derive from the [`View`](xref:Xamarin.Forms.View) class.
 
@@ -77,6 +77,6 @@ All of the views that are defined in Xamarin.Forms can be referenced from XAML f
 
 ## Related links
 
-- [Xamarin.Forms FormsGallery sample](https://developer.xamarin.com/samples/FormsGallery/)
+- [Xamarin.Forms FormsGallery sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 - [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [Xamarin.Forms API Documentation](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
