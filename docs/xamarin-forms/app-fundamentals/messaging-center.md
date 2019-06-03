@@ -108,6 +108,6 @@ The MessagingCenter is a simple way to reduce coupling, especially between view 
 
 ## Related Links
 
-- [MessagingCenterSample](https://developer.xamarin.com/samples/UsingMessagingCenter)
+- [MessagingCenterSample](https://developer.xamarin.com/samples/xamarin-forms/UsingMessagingCenter)
 - [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples)
 - [Communicating Between Loosely Coupled Components](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)
