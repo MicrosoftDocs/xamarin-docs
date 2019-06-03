@@ -403,5 +403,5 @@ Note: `EnterActions` and `ExitActions` are ignored on
 
 ## Related Links
 
-- [Triggers Sample](https://developer.xamarin.com/samples/WorkingWithTriggers)
+- [Triggers Sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
 - [Xamarin.Forms API Documentation](xref:Xamarin.Forms.TriggerAction`1)
