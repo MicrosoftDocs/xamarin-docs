@@ -813,7 +813,7 @@ The first `Button` on the **Image Button Demo** page sets the `Image` property b
 ```xaml
 <Button>
     <Button.ImageSource>
-        <OnPlatform x:TypeArguments="FileImageSource">
+        <OnPlatform x:TypeArguments="ImageSource">
             <On Platform="iOS, Android" Value="MonkeyFace.png" />
             <On Platform="UWP" Value="Assets/MonkeyFace.png" />
         </OnPlatform>
@@ -841,7 +841,7 @@ To avoid a lot of repetitious markup in the **ImageButtonDemo.xaml** file, an im
         <FlexLayout.Resources>
             <Style TargetType="Button">
                 <Setter Property="ImageSource">
-                    <OnPlatform x:TypeArguments="FileImageSource">
+                    <OnPlatform x:TypeArguments="ImageSource">
                         <On Platform="iOS, Android" Value="MonkeyFace.png" />
                         <On Platform="UWP" Value="Assets/MonkeyFace.png" />
                     </OnPlatform>
@@ -851,7 +851,7 @@ To avoid a lot of repetitious markup in the **ImageButtonDemo.xaml** file, an im
 
         <Button>
             <Button.ImageSource>
-                <OnPlatform x:TypeArguments="FileImageSource">
+                <OnPlatform x:TypeArguments="ImageSource">
                     <On Platform="iOS, Android" Value="MonkeyFace.png" />
                     <On Platform="UWP" Value="Assets/MonkeyFace.png" />
                 </OnPlatform>
