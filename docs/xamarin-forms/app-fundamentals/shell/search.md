@@ -1,15 +1,15 @@
 ---
 title: "Xamarin.Forms Shell Search"
-description: "Xamarin.Forms Shell applications can use integrated search functionality that's provided by a search box that's can be added to the top of each page."
+description: "Xamarin.Forms Shell applications can use integrated search functionality that's provided by a search box that can be added to the top of each page."
 ms.prod: xamarin
 ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
+ms.date: 05/24/2019
 ---
 
-# Xamarin.Forms Shell
+# Xamarin.Forms Shell Search
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
@@ -17,50 +17,11 @@ Xamarin.Forms Shell includes integrated search functionality that's provided by 
 
 [![Screenshot of a Shell SearchHandler, on iOS and Android](search-images/searchhandler.png "Shell SearchHandler")](search-images/searchhandler-large.png#lightbox "Shell SearchHandler")
 
-When a query is entered into the search box, the search suggestions area can be populated with data:
+When a query is entered into the search box, the `Query` property is updated, and on each update the `OnQueryChanged` method is executed. This method can be overridden to populate the search suggestions area with data:
 
 [![Screenshot of a search results in a Shell SearchHandler, on iOS and Android](search-images/search-suggestions.png "Shell SearchHandler search results")](search-images/search-suggestions-large.png#lightbox "Shell SearchHandler search results")
 
-Then, when a search result is selected, the application can respond appropriately, such as by navigating to another page.
-
-## SearchHandler class
-
-The `SearchHandler` class defines the following properties that control its appearance and behavior:
-
-- `ClearIcon`, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), the icon displayed to clear the contents of the search box.
-- `ClearIconHelpText`, of type `string`, the accessible help text for the clear icon.
-- `ClearIconName`, of type `string`, the name of the clear icon for use with screen readers.
-- `ClearPlaceholderCommand`, of type `ICommand`, which is executed when the `ClearPlaceholderIcon` is tapped.
-- `ClearPlaceholderCommandParameter`, of type `object`, which is the parameter that's passed to the `ClearPlaceholderCommand`.
-- `ClearPlaceholderEnabled`, of type `bool`, which determines whether the `ClearPlaceholderCommand` can be executed. The default value is `true`.
-- `ClearPlaceholderHelpText`, of type `string`, the accessible help text for the clear placeholder icon.
-- `ClearPlaceholderIcon`, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), the clear placeholder icon displayed when the search box is empty.
-- `ClearPlaceholderName`, of type `string`, the name of the clear placeholder icon for use with screen readers.
-- `Command`, of type `ICommand`, which is executed when the search query is confirmed.
-- `CommandParameter`, of type `object`, which is the parameter that's passed to the `Command`.
-- `DisplayMemberName`, of type `string`, representing the name or path of the property that's displayed for each item of data in the `ItemsSource` collection.
-- `IsSearchEnabled`, of type `bool`, representing the enabled state of the search box. The default value is `true`.
-- `ItemsSource`, of type `IEnumerable`, specifies the collection of items to be displayed in the suggestion area, and has a default value of `null`.
-- `ItemTemplate`, of type [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), specifies the template to apply to each item in the collection of items to be displayed in the suggestion area.
-- `Placeholder`, of type `string`, the text to display when the search box is empty.
-- `Query`, of type `string`, the user entered text in the search box.
-- `QueryIcon`, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), the icon used to indicate to the user that search is available.
-- `QueryIconHelpText`, of type `string`, the accessible help text for the query icon.
-- `QueryIconName`, of type `string`, the name of the query icon for use with screen readers.
-- `SearchBoxVisibility`, of type `SearchBoxVisibility`, the visibility of the search box. By default, the search box is visible and fully expanded.
-- `SelectedItem`, of type `object`, the selected item in the search results. This property is read only, and has a default value of `null`.
-- `ShowsResults`, of type `bool`, indicates whether search results should be expected in the suggestion area, on text entry. The default value is `false`.
-
-All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings.
-
-In addition, the `SearchHandler` class provides the following overridable methods:
-
-- `OnClearPlaceholderClicked`, that's called whenever the `ClearPlaceholderIcon` is tapped.
-- `OnItemSelected`, that's called whenever a search result is selected by the user.
-- `OnQueryChanged`, that's called when the `Query` property changes.
-- `OnQueryConfirmed`, that's called whenever the user presses enter or confirms their query in the search box.
-
-When a user enters a query into the search box, the `Query` property is updated, and on each update the `OnQueryChanged` method is executed. This method can be used to update the suggestions area that appears below the search box. When a user selects a result from the suggestions area, the `OnItemSelected` method is executed.
+Then, when a result is selected from the search suggestions area, the `OnItemSelected` method is executed. This method can be overridden to respond appropriately, such as by navigating to a detail page.
 
 ## Create a SearchHandler
 
@@ -210,9 +171,9 @@ The following screenshots show the result of templating each item in the suggest
 
 For more information about data templates, see [Xamarin.Forms Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
-## SearchBox visibility
+## Search box visibility
 
-When a search box is added at the top of a page, by default the search box is visible and fully expanded. However, this behavior can be changed by setting the `SearchHandler.SearchBoxVisibility` property to one of the `SearchBoxVisibility` enumeration members:
+When a `SearchHandler` is added at the top of a page, by default the search box is visible and fully expanded. However, this behavior can be changed by setting the `SearchHandler.SearchBoxVisibility` property to one of the `SearchBoxVisibility` enumeration members:
 
 - `Hidden` – the search box is not visible or accessible.
 - `Collapsible` – the search box is hidden until the user performs an action to reveal it.
@@ -230,6 +191,133 @@ The following example shows to how to hide the search box:
     ...
 </ContentPage>
 ```
+
+## Search box focus
+
+Tapping in a search box invokes the onscreen keyboard, with the search box gaining input focus. This can also be achieved programmatically by calling the `Focus` method, which attempts to set input focus on the search box, and returns `true` if successful. When a search box gains focus, the `Focus` event is fired and the overridable `OnFocused` method is called.
+
+When a search box has input focus, tapping elsewhere on the screen dismisses the onscreen keyboard, and the search box loses input focus. This can also be achieved programmatically by calling the `Unfocus` method. When a search box loses focus, the `Unfocused` event is fired and the overridable `OnUnfocus` method is called.
+
+The focus state of a search box can be retrieved through the `IsFocused` property, which returns `true` if a `SearchHandler` currently has input focus.
+
+## SearchHandler appearance
+
+The `SearchHandler` class defines the following properties that affect its appearance:
+
+- `BackgroundColor`, of type `Color`, is the color of the background to the search box text.
+- `CancelButtonColor`, of type `Color`, is the color of the cancel button.
+- `FontAttributes`, of type `FontAttributes`, indicates if the search box text is italic or bold.
+- `FontFamily`, of type `string`, is the font family used for the search box text.
+- `FontSize`, of type `double`, is the size of the search box text.
+- `HorizontalTextAlignment`, of type `TextAlignment`, is the horizontal alignment of the search box text.
+- `PlaceholderColor`, of type `Color`, is the color of the placeholder search box text.
+- `TextColor`, of type `Color`, is the color of the search box text.
+
+## SearchHandler keyboard
+
+The keyboard that's presented when users interact with a `SearchHandler` can be set programmatically via the `Keyboard` property, to one of the following properties from the [`Keyboard`](xref:Xamarin.Forms.Keyboard) class:
+
+- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat) – used for texting and places where emoji are useful.
+- [`Default`](xref:Xamarin.Forms.Keyboard.Default) – the default keyboard.
+- [`Email`](xref:Xamarin.Forms.Keyboard.Email) – used when entering email addresses.
+- [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric) – used when entering numbers.
+- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain) – used when entering text, without any [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) specified.
+- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone) – used when entering telephone numbers.
+- [`Text`](xref:Xamarin.Forms.Keyboard.Text) – used when entering text.
+- [`Url`](xref:Xamarin.Forms.Keyboard.Url) – used for entering file paths & web addresses.
+
+This can be accomplished in XAML as follows:
+
+```xaml
+<SearchHandler Keyboard="Email" />
+```
+
+The equivalent C# code is:
+
+```csharp
+SearchHandler searchHandler = new SearchHandler { Keyboard = Keyboard.Email };
+```
+
+The [`Keyboard`](xref:Xamarin.Forms.Keyboard) class also has a [`Create`](xref:Xamarin.Forms.Keyboard.Create*) factory method that can be used to customize a keyboard by specifying capitalization, spellcheck, and suggestion behavior. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) enumeration values are specified as arguments to the method, with a customized `Keyboard` being returned. The `KeyboardFlags` enumeration contains the following values:
+
+- [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – no features are added to the keyboard.
+- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) – indicates that the first letter of the first word of each entered sentence will be automatically capitalized.
+- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck) – indicates that spellcheck will be performed on entered text.
+- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions) – indicates that word completions will be offered on entered text.
+- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord) – indicates that the first letter of each word will be automatically capitalized.
+- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter) – indicates that every character will be automatically capitalized.
+- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone) – indicates that no automatic capitalization will occur.
+- [`All`](xref:Xamarin.Forms.KeyboardFlags.All) – indicates that spellcheck, word completions, and sentence capitalization will occur on entered text.
+
+The following XAML code example shows how to customize the default [`Keyboard`](xref:Xamarin.Forms.Keyboard) to offer word completions and capitalize every entered character:
+
+```xaml
+<SearchHandler Placeholder="Enter search terms">
+    <SearchHandler.Keyboard>
+        <Keyboard x:FactoryMethod="Create">
+            <x:Arguments>
+                <KeyboardFlags>Suggestions,CapitalizeCharacter</KeyboardFlags>
+            </x:Arguments>
+        </Keyboard>
+    </SearchHandler.Keyboard>
+</SearchHandler>
+```
+
+The equivalent C# code is:
+
+```csharp
+SearchHandler searchHandler = new SearchHandler { Placeholder = "Enter search terms" };
+searchHandler.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
+```
+
+## SearchHandler reference
+
+The `SearchHandler` class defines the following properties that control its appearance and behavior:
+
+- `BackgroundColor`, of type `Color`, is the color of the background to the search box text.
+- `CancelButtonColor`, of type `Color`, is the color of the cancel button.
+- `ClearIcon`, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), the icon displayed to clear the contents of the search box.
+- `ClearIconHelpText`, of type `string`, the accessible help text for the clear icon.
+- `ClearIconName`, of type `string`, the name of the clear icon for use with screen readers.
+- `ClearPlaceholderCommand`, of type `ICommand`, which is executed when the `ClearPlaceholderIcon` is tapped.
+- `ClearPlaceholderCommandParameter`, of type `object`, which is the parameter that's passed to the `ClearPlaceholderCommand`.
+- `ClearPlaceholderEnabled`, of type `bool`, which determines whether the `ClearPlaceholderCommand` can be executed. The default value is `true`.
+- `ClearPlaceholderHelpText`, of type `string`, the accessible help text for the clear placeholder icon.
+- `ClearPlaceholderIcon`, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), the clear placeholder icon displayed when the search box is empty.
+- `ClearPlaceholderName`, of type `string`, the name of the clear placeholder icon for use with screen readers.
+- `Command`, of type `ICommand`, which is executed when the search query is confirmed.
+- `CommandParameter`, of type `object`, which is the parameter that's passed to the `Command`.
+- `DisplayMemberName`, of type `string`, representing the name or path of the property that's displayed for each item of data in the `ItemsSource` collection.
+- `FontAttributes`, of type `FontAttributes`, indicates if the search box text is italic or bold.
+- `FontFamily`, of type `string`, is the font family used for the search box text.
+- `FontSize`, of type `double`, is the size of the search box text.
+- `HorizontalTextAlignment`, of type `TextAlignment`, is the horizontal alignment of the search box text.
+- `IsFocused`, of type `bool`, representing whether a `SearchHandler` currently has input focus.
+- `IsSearchEnabled`, of type `bool`, representing the enabled state of the search box. The default value is `true`.
+- `ItemsSource`, of type `IEnumerable`, specifies the collection of items to be displayed in the suggestion area, and has a default value of `null`.
+- `ItemTemplate`, of type [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), specifies the template to apply to each item in the collection of items to be displayed in the suggestion area.
+- `Keyboard`, of type `Keyboard`, is the keyboard for the `SearchHandler`.
+- `Placeholder`, of type `string`, the text to display when the search box is empty.
+- `PlaceholderColor`, of type `Color`, is the color of the placeholder search box text.
+- `Query`, of type `string`, the user entered text in the search box.
+- `QueryIcon`, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), the icon used to indicate to the user that search is available.
+- `QueryIconHelpText`, of type `string`, the accessible help text for the query icon.
+- `QueryIconName`, of type `string`, the name of the query icon for use with screen readers.
+- `SearchBoxVisibility`, of type `SearchBoxVisibility`, the visibility of the search box. By default, the search box is visible and fully expanded.
+- `SelectedItem`, of type `object`, the selected item in the search results. This property is read only, and has a default value of `null`.
+- `ShowsResults`, of type `bool`, indicates whether search results should be expected in the suggestion area, on text entry. The default value is `false`.
+- `TextColor`, of type `Color`, is the color of the search box text.
+
+All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings.
+
+In addition, the `SearchHandler` class provides the following overridable methods:
+
+- `OnClearPlaceholderClicked`, that's called whenever the `ClearPlaceholderIcon` is tapped.
+- `OnItemSelected`, that's called whenever a search result is selected by the user.
+- `OnFocused`, that's called when a `SearchHandler` acquires input focus.
+- `OnQueryChanged`, that's called when the `Query` property changes.
+- `OnQueryConfirmed`, that's called whenever the user presses enter or confirms their query in the search box.
+- `OnUnfocus`, that's called when a `SearchHandler` loses input focus.
 
 ## Related links
 

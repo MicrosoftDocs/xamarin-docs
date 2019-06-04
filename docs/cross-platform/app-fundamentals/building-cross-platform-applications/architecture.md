@@ -35,7 +35,7 @@ separate projects for very large applications) as well as logically separate
 Throughout this document and the case studies we refer to the following six
 application layers:
 
--   **Data Layer** – Non-volatile data persistence, likely to be a SQLite database but could be implemented with XML files or any other suitable mechanism.
+-   **Data Layer** – Non-volatile data persistence, likely to be an SQLite database but could be implemented with XML files or any other suitable mechanism.
 -   **Data Access Layer** – Wrapper around the Data Layer that provides Create, Read, Update, Delete (CRUD) access to the data without exposing implementation details to the caller. For example, the DAL may contain SQL statements to query or update the data but the referencing code would not need to know this.
 -   **Business Layer** – (sometimes called the Business Logic Layer or BLL) contains business entity definitions (the Model) and business logic. Candidate for Business Façade pattern.
 -   **Service Access Layer** – Used to access services in the cloud: from complex web services (REST, JSON, WCF) to simple retrieval of data and images from remote servers. Encapsulates the networking behavior and provides a simple API to be consumed by the Application and UI layers.

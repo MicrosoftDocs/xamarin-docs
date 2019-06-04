@@ -4,7 +4,8 @@ description: "The Accelerometer class in Xamarin.Essentials enables you to detec
 ms.assetid: 07513D32-120F-4F12-8757-A47802A8027B
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 05/28/2019
+ms.custom: video
 ---
 
 # Xamarin.Essentials: Detect Shake
@@ -74,3 +75,9 @@ The detect shake API uses raw readings from the accelerometer to calculate accel
 
 - [Accelerometer source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
 - [Accelerometer API documentation](xref:Xamarin.Essentials.Accelerometer)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Detect-Shake-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

@@ -20,7 +20,7 @@ This article introduces the various ways the `Color` class can be used in Xamari
 The `Color` class provides a number of methods to build a color instance
 
 -  **Named Colors** - a collection of common named-colors, including `Red`, `Green`, and `Blue`.
--  **FromHex** - string value similar to the syntax used in HTML, eg "00FF00". Alpha is can optionally be specified as the first pair of characters ("CC00FF00").
+-  **FromHex** - string value similar to the syntax used in HTML, for example "00FF00". Alpha can optionally be specified as the first pair of characters ("CC00FF00").
 -  **FromHsla** - Hue, saturation and luminosity  `double` values, with optional alpha value (0.0-1.0).
 -  **FromRgb** - Red, green, and blue `int` values (0-255).
 -  **FromRgba** - Red, green, blue, and alpha  `int` values (0-255).

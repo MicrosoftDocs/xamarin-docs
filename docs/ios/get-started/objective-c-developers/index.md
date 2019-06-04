@@ -33,4 +33,4 @@ Once you have a grasp of how C# compares to Objective-C and have worked through 
 
 ## Cross-Platform Development
 
-Finally, after moving to Xamarin.iOS, you'll want to check out the cross-platform guidance we have, including case studies of reference applications we have devleoped, along with best practices for creating reusable, cross-platform code contained in the [Building Cross Platform Applications section](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md).
+Finally, after moving to Xamarin.iOS, you'll want to check out the cross-platform guidance we have, including case studies of reference applications we have developed, along with best practices for creating reusable, cross-platform code contained in the [Building Cross Platform Applications section](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md).

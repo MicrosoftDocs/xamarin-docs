@@ -6,7 +6,8 @@ ms.assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/17/2016
+ms.date: 05/28/2019
+ms.custom: video
 ---
 
 # Dynamic Styles in Xamarin.Forms
@@ -210,3 +211,9 @@ The `tealSearchBarStyle` is assigned directly to the [`Style`](xref:Xamarin.Form
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Style](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)
+
+## Related video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/XamarinForms-101-Dynamic-Resources/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

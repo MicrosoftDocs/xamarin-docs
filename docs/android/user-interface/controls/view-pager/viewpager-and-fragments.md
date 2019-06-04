@@ -117,7 +117,7 @@ using Android.Support.V4.App;
 ```
 
 Change the `MainActivity` class declaration so that it is derived
-from `AppCompatActivity`:
+from `FragmentActivity`:
 
 ```csharp
 public class MainActivity : FragmentActivity
