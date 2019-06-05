@@ -62,7 +62,7 @@ class SampleTabFragment: Fragment
         ViewGroup container, Bundle savedInstanceState)
     {
         base.OnCreateView (inflater, container, savedInstanceState);
-       
+
         var view = inflater.Inflate (
             Resource.Layout.Tab, container, false);
 
@@ -157,7 +157,7 @@ item and then use the SetShareIntent method to set the
 public override bool OnCreateOptionsMenu (IMenu menu)
 {
     MenuInflater.Inflate (Resource.Menu.ActionBarMenu, menu);       
-           
+
     var shareMenuItem = menu.FindItem (Resource.Id.shareMenuItem);           
     var shareActionProvider =
        (ShareActionProvider)shareMenuItem.ActionProvider;
@@ -194,7 +194,7 @@ article contains the full source of this example, illustrating its use.
 
 ## Related Links
 
-- [Hello Tabs ICS (sample)](https://developer.xamarin.com/samples/HelloTabsICS/)
+- [Hello Tabs ICS (sample)](https://developer.xamarin.com/samples/monodroid/HelloTabsICS/)
 - [ShareActionProvider Demo (sample)](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)
 - [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

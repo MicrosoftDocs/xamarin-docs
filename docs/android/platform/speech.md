@@ -48,7 +48,7 @@ important.
 A simple definition of understanding is that you are able to determine by tone and context the real meaning of what
 is being said. To interpret just means to take the words and output them in another form.
 
-Consider the following simple example that is used in everyday conversation: 
+Consider the following simple example that is used in everyday conversation:
 
 <kbd>Hello, how are you?</kbd>
 
@@ -197,8 +197,8 @@ langAvailable = langAvailable.OrderBy(t => t).Distinct().ToList();
 ```
 
 This code calls
-[TextToSpeech.IsLanguageAvailable](https://developer.xamarin.com/api/member/Android.Speech.Tts.TextToSpeech.IsLanguageAvailable/p/Java.Util.Locale/) 
-to test if the language package for a given locale is already present on the device. 
+[TextToSpeech.IsLanguageAvailable](https://developer.xamarin.com/api/member/Android.Speech.Tts.TextToSpeech.IsLanguageAvailable/p/Java.Util.Locale/)
+to test if the language package for a given locale is already present on the device.
 This method returns a
 [LanguageAvailableResult](https://developer.xamarin.com/api/type/Android.Speech.Tts.LanguageAvailableResult/),
 which indicates whether the language for
@@ -306,7 +306,7 @@ the inclusivity of your apps.
 
 ## Related Links
 
-- [Xamarin.Forms DependencyService](https://developer.xamarin.com/samples/UsingDependencyService/)
+- [Xamarin.Forms DependencyService](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 - [Text to Speech (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TextToSpeech)
 - [Speech to Text (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SpeechToText)
 - [Android.Speech namespace](https://developer.xamarin.com/api/namespace/Android.Speech/)

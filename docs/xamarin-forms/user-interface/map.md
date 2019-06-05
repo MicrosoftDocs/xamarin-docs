@@ -11,7 +11,7 @@ ms.date: 02/27/2018
 
 # Xamarin.Forms Map
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/WorkingWithMaps/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
 
 _Xamarin.Forms uses the native map APIs on each platform._
 
@@ -20,7 +20,7 @@ fast, familiar maps experience for users, but means that some configuration
 steps are needed to adhere to each platforms API requirements.
 Once configured, the `Map` control works just like any other Xamarin.Forms element in common code.
 
-The map control has been used in the [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/) sample, which is shown below.
+The map control has been used in the [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/) sample, which is shown below.
 
  [![Maps in the MobileCRM sample](map-images/maps-zoom-sml.png "Map Control Example")](map-images/maps-zoom.png#lightbox "Map Control Example")
 
@@ -302,6 +302,6 @@ The following screenshots show a [`Map`](xref:Xamarin.Forms.Maps.Map) displaying
 
 ## Related links
 
-- [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/)
+- [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
 - [Map Custom Renderer](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
 - [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/)
