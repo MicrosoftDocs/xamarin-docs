@@ -51,18 +51,18 @@ featureFlags:
                 </a>
             </li>
              <li>
-                <a href="~/xamarin-forms/app-fundamentals/shell/index.md">
+                <a href="~/whats-new/index.yml">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style='background-position: 0px 0px; background-image: url("https://docs.microsoft.com/media/common/i_preview.svg"); background-size: cover;'>
-                                        <img style="display: none;" alt="" src="https://docs.microsoft.com/media/common/i_preview.svg" data-linktype="external" data-hoverimage="https://docs.microsoft.com/media/common/i_preview.svg">
+                                    <div class="cardImage" style='background-position: 0px 0px; background-image: url("https://docs.microsoft.com/media/common/i_whats-new.svg"); background-size: cover;'>
+                                        <img style="display: none;" alt="What's New?" src="https://docs.microsoft.com/media/media/common/i_whats-new.svg" data-linktype="external" data-hoverimage="https://docs.microsoft.com/media/common/i_whats-new.svg">
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3 class="x-hidden-focus">Xamarin.Forms 4.0</h3>
-                                    <p>New Shell feature preview.</p>
+                                    <h3 class="x-hidden-focus">What's New?</h3>
+                                    <p>See what's new in Xamarin Docs.</p>
                                 </div>
                             </div>
                         </div>

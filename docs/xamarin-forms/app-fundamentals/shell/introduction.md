@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 05/24/2019
 ---
 
-# Xamarin.Forms Shell
+# Xamarin.Forms Shell Introduction
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
