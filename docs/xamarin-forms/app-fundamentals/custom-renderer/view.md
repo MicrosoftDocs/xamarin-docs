@@ -125,23 +125,22 @@ The `ViewRenderer` class exposes the `OnElementChanged` method, which is called 
 
 An overridden version of the `OnElementChanged` method, in each platform-specific renderer class, is the place to perform the native control instantiation and customization. The `SetNativeControl` method should be used to instantiate the native control, and this method will also assign the control reference to the `Control` property. In addition, a reference to the Xamarin.Forms control that's being rendered can be obtained through the `Element` property.
 
-In some circumstances, the `OnElementChanged` method can be called multiple times. Therefore, to prevent memory leaks, care must be taken when instantiating a new native control. The approach to use when instantiating a new native control in a custom renderer is shown in the following code example:
+In some circumstances, the `OnElementChanged` method can be called multiple times. Therefore, to prevent memory leaks, care must be taken when instantiating a new native control. `SetNativeControl` should only be created if `e.NewElement` is not `Null`. The approach to use when instantiating a new native control in a custom renderer is shown in the following code example:
 
 ```csharp
 protected override void OnElementChanged (ElementChangedEventArgs<NativeListView> e)
 {
   base.OnElementChanged (e);
 
-  if (Control == null) {
-    // Instantiate the native control and assign it to the Control property with
-    // the SetNativeControl method
-  }
-
   if (e.OldElement != null) {
     // Unsubscribe from event handlers and cleanup any resources
   }
 
   if (e.NewElement != null) {
+    if (Control == null) {
+      // Instantiate the native control and assign it to the Control property with
+      // the SetNativeControl method
+    }
     // Configure the control and subscribe to event handlers
   }
 }
@@ -169,15 +168,15 @@ namespace CustomRenderer.iOS
         {
             base.OnElementChanged (e);
 
-            if (Control == null) {
-                uiCameraPreview = new UICameraPreview (e.NewElement.Camera);
-                SetNativeControl (uiCameraPreview);
-            }
             if (e.OldElement != null) {
                 // Unsubscribe
                 uiCameraPreview.Tapped -= OnCameraPreviewTapped;
             }
             if (e.NewElement != null) {
+                if (Control == null) {
+                  uiCameraPreview = new UICameraPreview (e.NewElement.Camera);
+                  SetNativeControl (uiCameraPreview);
+                }
                 // Subscribe
                 uiCameraPreview.Tapped += OnCameraPreviewTapped;
             }
@@ -220,12 +219,6 @@ namespace CustomRenderer.Droid
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                cameraPreview = new CameraPreview(Context);
-                SetNativeControl(cameraPreview);
-            }
-
             if (e.OldElement != null)
             {
                 // Unsubscribe
@@ -233,6 +226,11 @@ namespace CustomRenderer.Droid
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                  cameraPreview = new CameraPreview(Context);
+                  SetNativeControl(cameraPreview);
+                }
                 Control.Preview = Camera.Open((int)e.NewElement.Camera);
 
                 // Subscribe
@@ -278,15 +276,6 @@ namespace CustomRenderer.UWP
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                ...
-                _captureElement = new CaptureElement();
-                _captureElement.Stretch = Stretch.UniformToFill;
-
-                SetupCamera();
-                SetNativeControl(_captureElement);
-            }
             if (e.OldElement != null)
             {
                 // Unsubscribe
@@ -295,6 +284,15 @@ namespace CustomRenderer.UWP
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                  ...
+                  _captureElement = new CaptureElement();
+                  _captureElement.Stretch = Stretch.UniformToFill;
+
+                  SetupCamera();
+                  SetNativeControl(_captureElement);
+                }
                 // Subscribe
                 Tapped += OnCameraPreviewTapped;
             }
