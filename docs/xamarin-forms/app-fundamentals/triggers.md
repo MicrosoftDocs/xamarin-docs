@@ -11,7 +11,7 @@ ms.date: 07/01/2016
 
 # Xamarin.Forms Triggers
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/WorkingWithTriggers)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
 
 Triggers allow
     you to express actions declaratively in XAML that
@@ -403,5 +403,5 @@ Note: `EnterActions` and `ExitActions` are ignored on
 
 ## Related Links
 
-- [Triggers Sample](https://developer.xamarin.com/samples/WorkingWithTriggers)
+- [Triggers Sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
 - [Xamarin.Forms API Documentation](xref:Xamarin.Forms.TriggerAction`1)

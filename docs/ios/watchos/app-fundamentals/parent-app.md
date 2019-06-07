@@ -37,7 +37,7 @@ The Parent App is also sometimes referred to as the Container App.
 ## Run Code
 
 Communicating between a watch extension and the parent
-	iPhone app is demonstrated in the [GpsWatch sample](https://developer.xamarin.com/samples/GpsWatch).
+	iPhone app is demonstrated in the [GpsWatch sample](https://developer.xamarin.com/samples/monotouch/WatchKit/GpsWatch/).
 	Your watch extension can request the parent iOS app
 	to do some processing on its behalf using the `OpenParentApplication`
 	method.

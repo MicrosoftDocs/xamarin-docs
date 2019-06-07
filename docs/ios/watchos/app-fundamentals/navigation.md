@@ -62,8 +62,8 @@ Presents scenes like a stack that can be
 As with iOS, a left-edge-swipe navigates back to the
   parent controller in a hierarchical navigation stack.
 
-Both the [WatchKitCatalog](https://developer.xamarin.com/samples/WatchKitCatalog) and
-  [WatchTables](https://developer.xamarin.com/samples/WatchTables) samples include hierarchical
+Both the [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) and
+  [WatchTables](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/) samples include hierarchical
   navigation.
 
 ### Pushing and Popping in Code

@@ -11,7 +11,7 @@ ms.date: 12/14/2015
 
 # Xamarin.Forms ListView
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/WorkingWithListview)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListview)
 
 [`ListView`](xref:Xamarin.Forms.ListView) is a view for presenting lists of data, especially long lists that require scrolling.
 
@@ -57,7 +57,7 @@ To learn more about the interactivity features of ListView, see [Actions & Inter
 
 ## Related Links
 
-- [Working With ListView (sample)](https://developer.xamarin.com/samples/WorkingWithListview)
+- [Working With ListView (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListview)
 - [Two Way Binding (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
 - [Built In Cells (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BuiltInCells)
 - [Custom Cells (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)

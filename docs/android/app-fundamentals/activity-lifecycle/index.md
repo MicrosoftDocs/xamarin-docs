@@ -122,7 +122,7 @@ among others.
 Configuration changes still cause the same Activity State changes that
 would occur during stopping and restarting an activity. However, in
 order to make sure that an application feels responsive and performs
-well during configuration changes, it's important that they be
+well during configuration changes, it's important that they are
 handled as quickly as possible. Because of this, Android has a specific
 API that can be used to persist state during configuration changes.
 We'll cover this later in the
@@ -135,7 +135,7 @@ The Android SDK and, by extension, the Xamarin.Android framework
 provide a powerful model for managing the state of activities within an
 application. When an activity's state is changing, the activity is
 notified by the OS, which calls specific methods on that activity. The
-following diagram illustrates these methods in relationship to the
+following diagram illustrates these methods in relation to the
 Activity Lifecycle:
 
 [![Activity Lifecycle flowchart](images/image2-sml.png)](images/image2.png#lightbox)
@@ -208,7 +208,7 @@ The system calls
 when the Activity is ready to start interacting with the user.
 Activities should override this method to perform tasks such as:
 
--  Ramping up frame rates (a common task in game building)
+-  Ramping up frame rates (a common task in game development)
 -  Starting animations
 -  Listening for GPS updates
 -  Display any relevant alerts or dialogs
