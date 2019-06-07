@@ -450,8 +450,8 @@ Services API.
 
 ## Related Links
 
-- [Location (sample)](https://developer.xamarin.com/samples/Location/)
-- [FusedLocationProvider (sample)](https://developer.xamarin.com/samples/FusedLocationProvider/)
+- [Location (sample)](https://developer.xamarin.com/samples/monodroid/Location/)
+- [FusedLocationProvider (sample)](https://developer.xamarin.com/samples/monodroid/FusedLocationProvider/)
 - [Google Play Services](https://developer.android.com/google/play-services/index.html)
 - [Criteria Class](https://developer.xamarin.com/api/type/Android.Locations.Criteria/)
 - [LocationManager Class](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/)

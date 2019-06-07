@@ -252,7 +252,7 @@ of different image filters available in the framework for you to use.
 
 ## Related Links
 
-- [Core Image (sample)](https://developer.xamarin.com/samples/CoreImage/)
+- [Core Image (sample)](https://developer.xamarin.com/samples/monotouch/CoreImage/)
 - [Adjust Contract and Brightness of an Image Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
 - [Using Core Image Filters](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 - [CIFilter Class Reference](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.htm)

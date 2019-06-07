@@ -78,4 +78,4 @@ the image in view when the screen is rotated. Complex layouts typically require 
 
 ## Related Links
 
-- [Controls (sample)](https://developer.xamarin.com/samples/Controls/)
+- [Controls (sample)](https://developer.xamarin.com/samples/monotouch/Controls/)

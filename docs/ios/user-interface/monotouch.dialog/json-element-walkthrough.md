@@ -198,9 +198,7 @@ runtime.
 
 ## Related links
 
-- [MTDJsonDemo (sample)](https://developer.xamarin.com/samples/MTDJsonDemo/)
-- [Screencast - Miguel de Icaza creates an iOS login screen with MonoTouch.Dialog](http://youtu.be/3butqB1EG0c)
-- [Screencast - Easily create iOS user interfaces with MonoTouch.Dialog](http://youtu.be/j7OC5r8ZkYg)
+- [MTDJsonDemo (sample)](https://developer.xamarin.com/samples/monotouch/MTDJsonDemo/)
 - [Introduction to MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/index.md)
 - [Elements API Walkthrough](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
 - [Reflection API Walkthrough](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
