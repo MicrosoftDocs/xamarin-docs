@@ -17,7 +17,7 @@ and which members are actually used. The linker then behaves like a *garbage col
 are referenced until the entire closure of referenced assemblies, types, and
 members is found. Then everything outside of this closure is *discarded*.
 
-For example, the [Hello, Android](https://developer.xamarin.com/samples/HelloM4A/) sample:
+For example, the [Hello, Android](https://developer.xamarin.com/samples/monodroid/HelloM4A/) sample:
 
 |Configuration|1.2.0 Size|4.0.1 Size|
 |---|---|---|

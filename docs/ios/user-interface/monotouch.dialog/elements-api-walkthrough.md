@@ -182,9 +182,7 @@ screens. In addition, it showed how to use MT.D in conjunction with a `UINavigat
 
 ## Related links
 
-- [MTDWalkthrough (sample)](https://developer.xamarin.com/samples/MTDWalkthrough/)
-- [Screencast - Miguel de Icaza creates an iOS login screen with MonoTouch.Dialog](http://youtu.be/3butqB1EG0c)
-- [Screencast - Easily create iOS user interfaces with MonoTouch.Dialog](http://youtu.be/j7OC5r8ZkYg)
+- [MTDWalkthrough (sample)](https://developer.xamarin.com/samples/monotouch/MTDWalkthrough/)
 - [Introduction to MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/index.md)
 - [Reflection API Walkthrough](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [JSON Element Walkthrough](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)

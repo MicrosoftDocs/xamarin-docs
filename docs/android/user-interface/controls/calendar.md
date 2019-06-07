@@ -359,6 +359,6 @@ calendar capabilities.
 
 ## Related Links
 
-- [Calendar Demo (sample)](https://developer.xamarin.com/samples/CalendarDemo/)
+- [Calendar Demo (sample)](https://developer.xamarin.com/samples/monodroid/CalendarDemo/)
 - [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

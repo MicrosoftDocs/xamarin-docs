@@ -743,8 +743,6 @@ allows creating elements dynamically from JSON.
 
 ## Related Links
 
-- [Screencast - Miguel de Icaza creates an iOS login screen with MonoTouch.Dialog](http://youtu.be/3butqB1EG0c)
-- [Screencast - Easily create iOS user interfaces with MonoTouch.Dialog](http://youtu.be/j7OC5r8ZkYg)
 - [Walkthrough: Creating an application using the Elements API](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
 - [Walkthrough: Creating an application using the Reflection API](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [Walkthrough: Using a JSON Element to create a User Interface](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
