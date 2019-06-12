@@ -281,7 +281,7 @@ This walkthrough describes how to create an application called Phoneword that tr
 
     ![](hello-ios-quickstart-images/image001-.png "The Start screen")
 
-    Create a new Xamarin.iOS solution by selecting **File > New > Project... > Visual C# > iPhone & iPad > iOS App (Xamari**:
+    Create a new Xamarin.iOS solution by selecting **File > New > Project... > Visual C# > iPhone & iPad > iOS App (Xamarin)**:
 
     ![Select iOS App (Xamarin) project type](hello-ios-quickstart-images/image002.w157.png "Select iOS App (Xamarin) project type")
 
