@@ -122,7 +122,7 @@ Consider this class definition, which exposes a constructor
 that takes an `IntPtr` (the Xamarin.iOS way of constructing a C#
 object from a native Objective-C instance):
 	
-```
+```csharp
 class Generic<T> : NSObject where T : NSObject
 {
 	public Generic () {}
@@ -141,7 +141,7 @@ to create.
 This problem can be worked around by creating a specialized
 subclass of the generic type.   For example:
 	
-```
+```csharp
 class Generic<T> : NSObject where T : NSObject
 {
 	public Generic () {}
