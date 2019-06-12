@@ -16,58 +16,58 @@ This page describes the Json markup accepted by MonoTouch.Dialog's [JsonElement]
 Let us start with an example. The following is a complete Json file that can
 be passed into JsonElement.
 
-```csharp
+```json
 {     
-  "title": "Json Sample",
-  "sections": [ 
-      {
-          "header": "Booleans",
-          "footer": "Slider or image-based",
-          "id": "first-section",
-          "elements": [
-              { 
-                  "type" : "boolean",
-                  "caption" : "Demo of a Boolean",
-                  "value"   : true
-              }, {
-                  "type": "boolean",
-                  "caption" : "Boolean using images",
-                  "value"   : false,
-                  "on"      : "favorite.png",
-                  "off"     : "~/favorited.png"
-              }, {
-                      "type": "root",
-                      "title": "Tap for nested controller",
-                      "sections": [ {
-                         "header": "Nested view!",
-                         "elements": [
-                           {
-                             "type": "boolean",
-                             "caption": "Just a boolean",
-                             "id": "the-boolean",
-                             "value": false
-                           },
-                           {
-                             "type": "string",
-                             "caption": "Welcome to the nested controller"
-                           }
-                         ]
-                       }
-                     ]
-                   }
-          ]
-      }, {
-          "header": "Entries",
-          "elements" : [
-              {
-                  "type": "entry",
-                  "caption": "Username",
-                  "value": "",
-                  "placeholder": "Your account username"
-              }
-          ]
-      }
-  ]
+    "title": "Json Sample",
+    "sections": [ 
+        {
+            "header": "Booleans",
+            "footer": "Slider or image-based",
+            "id": "first-section",
+            "elements": [
+                { 
+                    "type": "boolean",
+                    "caption": "Demo of a Boolean",
+                    "value": true
+                }, {
+                    "type": "boolean",
+                    "caption": "Boolean using images",
+                    "value": false,
+                    "on": "favorite.png",
+                    "off": "~/favorited.png"
+                }, {
+                    "type": "root",
+                    "title": "Tap for nested controller",
+                    "sections": [
+                        {
+                            "header": "Nested view!",
+                            "elements": [
+                                {
+                                    "type": "boolean",
+                                    "caption": "Just a boolean",
+                                    "id": "the-boolean",
+                                    "value": false
+                                }, {
+                                    "type": "string",
+                                    "caption": "Welcome to the nested controller"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "header": "Entries",
+            "elements" : [
+                {
+                    "type": "entry",
+                    "caption": "Username",
+                    "value": "",
+                    "placeholder": "Your account username"
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -84,7 +84,7 @@ var jsonElement = JsonElement.FromFile ("demo.json");
 
 var firstSection = jsonElement ["first-section"] as Section;
 
-var theBoolean = jsonElement ["the-boolean"] as BooleanElement
+var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 ```
 
  <a name="Root_Element_Syntax" />
@@ -203,10 +203,10 @@ StyledStringElement and they can render information in various ways and it is
 possible to render them in various ways. The simplest elements can be created
 like this:
 
-```csharp
+```json
 {
-        "type": "string",
-        "caption": "Json Serializer",
+    "type": "string",
+    "caption": "Json Serializer"
 }
 ```
 
@@ -215,11 +215,11 @@ text color and decorations. It is possible to hook up actions to these elements
 and make them behave like buttons by setting the `"ontap"` property
 or the `"onaccessorytap"` properties:
 
-```csharp
+```json
 {
-    "type":    "string",
-        "caption": "View Photos",
-        "ontap:    "Acme.PhotoLibrary.ShowPhotos"
+    "type": "string",
+    "caption": "View Photos",
+    "ontap": "Acme.PhotoLibrary.ShowPhotos"
 }
 ```
 
@@ -228,13 +228,13 @@ The above will invoke the "ShowPhotos" method in the class
 only be invoked if the user taps on the accessory instead of tapping on the
 cell. To enable this, you must also set the accessory:
 
-```csharp
+```json
 {
-    "type":     "string",
-        "caption":  "View Photos",
-        "ontap:     "Acme.PhotoLibrary.ShowPhotos",
-        "accessory: "detail-disclosure",
-        "onaccessorytap": "Acme.PhotoLibrary.ShowStats"
+    "type": "string",
+    "caption": "View Photos",
+    "ontap": "Acme.PhotoLibrary.ShowPhotos",
+    "accessory": "detail-disclosure",
+    "onaccessorytap": "Acme.PhotoLibrary.ShowStats"
 }
 ```
 
@@ -251,7 +251,7 @@ hex digit twice. So the "#1bc" constant is intepreted as red=0x11, green=0xbb
 and blue=0xcc. If the alpha value is not present, the color is opaque. Some
 examples:
 
-```csharp
+```json
 "background": "#f00"
 "background": "#fa08f880"
 ```
@@ -416,19 +416,19 @@ bundle-relative files, you can use the `"~"` as a shortcut to
 represent the application bundle directory. For example `"~/favorite.png"` will be the favorite.png that is contained in the
 bundle file. For example:
 
-```csharp
+```json
 { 
-    "type" : "boolean",
-    "caption" : "Demo of a Boolean",
-    "value"   : true
+    "type": "boolean",
+    "caption": "Demo of a Boolean",
+    "value": true
 },
 
 {
     "type": "boolean",
-    "caption" : "Boolean using images",
-    "value"   : false,
-    "on"      : "favorite.png",
-    "off"     : "~/favorited.png"
+    "caption": "Boolean using images",
+    "value": false,
+    "on": "favorite.png",
+    "off": "~/favorited.png"
 }
 ```
 
@@ -455,30 +455,30 @@ elements is either `"entry"` or `"password"`. The `"caption"` property is set to
 the `"value"` is set to the initial value to set the entry to. The `"placeholder"` is used to show a hint to the user for empty entries
 (it is shown greyed out). Here are some examples:
 
-```csharp
+```json
 {
-        "type": "entry",
-        "caption": "Username",
-        "value": "",
-        "placeholder": "Your account username"
+    "type": "entry",
+    "caption": "Username",
+    "value": "",
+    "placeholder": "Your account username"
 }, {
-        "type": "password",
-        "caption": "Password",
-        "value": "",
-        "placeholder": "You password"
+    "type": "password",
+    "caption": "Password",
+    "value": "",
+    "placeholder": "You password"
 }, {
-        "type": "entry",
-        "caption": "Zip Code",
-        "value": "01010",
-        "placeholder": "your zip code",
-        "keyboard": "numbers"
+    "type": "entry",
+    "caption": "Zip Code",
+    "value": "01010",
+    "placeholder": "your zip code",
+    "keyboard": "numbers"
 }, {
-        "type": "entry",
-        "return-key": "route",
-        "caption": "Entry with 'route'",
-        "placeholder": "captialization all + no corrections",
-        "capitalization": "all",
-        "autocorrect": "no"
+    "type": "entry",
+    "return-key": "route",
+    "caption": "Entry with 'route'",
+    "placeholder": "captialization all + no corrections",
+    "capitalization": "all",
+    "autocorrect": "no"
 }
 ```
 
@@ -581,22 +581,22 @@ The element types `"datetime"`, `"date"` and `"time"` are used to render dates w
 elements take as parameters a caption and a value. The value can be written in
 any format supported by the .NET DateTime.Parse function. Example:
 
-```csharp
+```json
 "header": "Dates and Times",
 "elements": [
-        {
-                "type": "datetime",
-                "caption": "Date and Time",
-                "value": "Sat, 01 Nov 2008 19:35:00 GMT"
-        }, {
-                "type": "date",
-                "caption": "Date",
-                "value": "10/10"
-        }, {
-                "type": "time",
-                "caption": "Time",
-                "value": "11:23"
-                }                       
+    {
+        "type": "datetime",
+        "caption": "Date and Time",
+        "value": "Sat, 01 Nov 2008 19:35:00 GMT"
+    }, {
+        "type": "date",
+        "caption": "Date",
+        "value": "10/10"
+    }, {
+        "type": "time",
+        "caption": "Time",
+        "value": "11:23"
+    }                       
 ]
 ```
 
@@ -608,10 +608,10 @@ any format supported by the .NET DateTime.Parse function. Example:
 You can create a cell that when tapped will embed a UIWebView that renders
 the contents of a specified URL, either local or remote using the `"html"` type. The only two properties for this element are `"caption"` and `"url"`:
 
-```csharp
+```json
 {
-        "type": "html",
-        "caption": "Miguel's blog",
-        "url": "https://tirania.org/blog" 
+    "type": "html",
+    "caption": "Miguel's blog",
+    "url": "https://tirania.org/blog" 
 }
 ```

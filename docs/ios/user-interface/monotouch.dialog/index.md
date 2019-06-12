@@ -161,16 +161,16 @@ for the subpage. For example:
 
 ```csharp
 var root = new RootElement ("Meals") {
-    new Section ("Dinner"){
-            new RootElement ("Dessert", new RadioGroup ("dessert", 2)) {
-                new Section () {
-                    new RadioElement ("Ice Cream", "dessert"),
-                    new RadioElement ("Milkshake", "dessert"),
-                    new RadioElement ("Chocolate Cake", "dessert")
-                }
+    new Section ("Dinner") {
+        new RootElement ("Dessert", new RadioGroup ("dessert", 2)) {
+            new Section () {
+                new RadioElement ("Ice Cream", "dessert"),
+                new RadioElement ("Milkshake", "dessert"),
+                new RadioElement ("Chocolate Cake", "dessert")
             }
         }
     }
+};
 ```
 
 In the above example, when the user taps on "Dessert", MonoTouch.Dialog will
@@ -204,14 +204,14 @@ any UIView as the header or the footer. You can either use a string to create
 them like this:
 
 ```csharp
-var section = new Section ("Header", "Footer")
+var section = new Section ("Header", "Footer");
 ```
 
 To use views, just pass the views to the constructor:
 
 ```csharp
 var header = new UIImageView (Image.FromFile ("sample.png"));
-var section = new Section (header)
+var section = new Section (header);
 ```
 
 ### Getting Notified
@@ -225,8 +225,7 @@ shown below:
 
 ```csharp
 new Section () {
-        new StringElement ("Demo Callback", 
-                delegate { Console.WriteLine ("Handled"); })
+    new StringElement ("Demo Callback", delegate { Console.WriteLine ("Handled"); })
 }
 ```
 
@@ -237,18 +236,14 @@ retrieve the value set in other elements. For example, consider the following
 code:
 
 ```csharp
-var element = new EntryElement (task.Name, "Enter task description",
-        task.Description);
+var element = new EntryElement (task.Name, "Enter task description", task.Description);
                 
-var taskElement = new RootElement (task.Name){
-        new Section () { element },
-        new Section () { 
-                new DateElement ("Due Date", task.DueDate)
-        },
-        new Section ("Demo Retrieving Element Value") {
-                new StringElement ("Output Task Description", 
-                        delegate { Console.WriteLine (element.Value); })
-        }
+var taskElement = new RootElement (task.Name) {
+    new Section () { element },
+    new Section () { new DateElement ("Due Date", task.DueDate) },
+    new Section ("Demo Retrieving Element Value") {
+        new StringElement ("Output Task Description", delegate { Console.WriteLine (element.Value); })
+    }
 };
 ```
 
@@ -292,10 +287,9 @@ and the string value on the right side of the cell.
 To use a `StringElement` as a button, provide a delegate.
 
 ```csharp
-new StringElement (
-        "Click me",
-        () => { new UIAlertView("Tapped", "String Element Tapped"
-, null, "ok", null).Show(); })
+new StringElement ("Click me", () => { 
+    new UIAlertView("Tapped", "String Element Tapped", null, "ok", null).Show();
+});
 ```
 
  [![](images/image8.png "To use a StringElement as a button, provide a delegate")](images/image8.png#lightbox)
@@ -359,7 +353,7 @@ A `RadioElement` requires a `RadioGroup` to be
 specified in the `RootElement`.
 
 ```csharp
-mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0))
+mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0));
 ```
 
  [![](images/image14.png "A RadioElement requires a RadioGroup to be specified in the RootElement")](images/image14.png#lightbox)
@@ -371,7 +365,7 @@ is currently selected. To use this, create the `RootElement` with the
 group constructor, like this:
 
 ```csharp
-var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0))
+var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0));
 ```
 
 The name of the group in `RadioGroup` is used to show the selected
@@ -459,16 +453,13 @@ Here's a very simple example of implementing the class:
 
 ```csharp
 public class SampleOwnerDrawnElement : OwnerDrawnElement
- {
+{
     public SampleOwnerDrawnElement (string text) : base(UITableViewCellStyle.Default, "sampleOwnerDrawnElement")
     {
         this.Text = text;
     }
 
-    public string Text
-    {
-        get;set;    
-    }
+    public string Text { get; set; }
 
     public override void Draw (RectangleF bounds, CGContext context, UIView view)
     {
@@ -483,7 +474,7 @@ public class SampleOwnerDrawnElement : OwnerDrawnElement
     {
         return 44.0f;
     }
- }
+}
 ```
 
 ### JSON Element
@@ -576,9 +567,9 @@ For example the following code loads an image from a Url into a `BadgeElement`:
 string uriString = "http://some-server.com/some image url";
 
 var rootElement = new RootElement("Image Loader") {
-        new Section(){
-                new BadgeElement( ImageLoader.DefaultRequestImage( new Uri(uriString), this), "Xamarin")
-        }
+    new Section() {
+        new BadgeElement( ImageLoader.DefaultRequestImage( new Uri(uriString), this), "Xamarin")
+    }
 };
 ```
 
@@ -597,12 +588,11 @@ function that is passed into each `StringElement`:
 
 ```csharp
 var rootElement = new RootElement ("LINQ root element") {
-from x in new string [] { "one", "two", "three" }
-select new Section (x) {
-from y in "Hello:World".Split (':')
-select (Element) new StringElement (y,
-delegate { Debug.WriteLine("cell tapped"); })
-}
+    from x in new string [] { "one", "two", "three" }
+    select new Section (x) {
+        from y in "Hello:World".Split (':')
+        select (Element) new StringElement (y, delegate { Debug.WriteLine("cell tapped"); })
+    }
 };
 ```
 
@@ -621,27 +611,29 @@ methods:
 
 ```csharp
 // To release any heavy resources that you might have
-    void Dispose (bool disposing);
+void Dispose (bool disposing);
 
-    // To retrieve the UITableViewCell for your element
-    // you would need to prepare the cell to be reused, in the
-    // same way that UITableView expects reusable cells to work
-    UITableViewCell GetCell (UITableView tv)
+// To retrieve the UITableViewCell for your element
+// you would need to prepare the cell to be reused, in the
+// same way that UITableView expects reusable cells to work
+UITableViewCell GetCell (UITableView tv);
 
-    // To retrieve a "summary" that can be used with
-    // a root element to render a summary one level up.  
-    string Summary ()
-    // To detect when the user has tapped on the cell
-    void Selected (DialogViewController dvc, UITableView tableView, NSIndexPath path)
-    // If you support search, to probe if the cell matches the user input
-    bool Matches (string text)
+// To retrieve a "summary" that can be used with
+// a root element to render a summary one level up.  
+string Summary ();
+
+// To detect when the user has tapped on the cell
+void Selected (DialogViewController dvc, UITableView tableView, NSIndexPath path);
+
+// If you support search, to probe if the cell matches the user input
+bool Matches (string text);
 ```
 
 If your element can have a variable size, you need to implement the `IElementSizing` interface, which contains one method:
 
 ```csharp
 // Returns the height for the cell at indexPath.Section, indexPath.Row
-    float GetHeight (UITableView tableView, NSIndexPath indexPath);
+float GetHeight (UITableView tableView, NSIndexPath indexPath);
 ```
 
 If you are planning on implementing your `GetCell` method by
@@ -651,11 +643,11 @@ will be unique to your Element, like this:
 
 ```csharp
 static NSString MyKey = new NSString ("MyKey");
-    protected override NSString CellKey {
-        get {
-            return MyKey;
-        }
+protected override NSString CellKey {
+    get {
+        return MyKey;
     }
+}
 ```
 
 This works for most elements, but not for the `StringElement` and `StyledStringElement` as those use their own set of keys for various
@@ -673,9 +665,9 @@ For example, if you wanted to change the list style to be either `Grouped` or `P
 the property when you create the controller, like this:
 
 ```csharp
-var myController = new DialogViewController (root, true){
-        Style = UITableViewStyle.Grouped;
-    }
+var myController = new DialogViewController (root, true) {
+    Style = UITableViewStyle.Grouped;
+}
 ```
 
 For more advanced customizations of the `DialogViewController`,

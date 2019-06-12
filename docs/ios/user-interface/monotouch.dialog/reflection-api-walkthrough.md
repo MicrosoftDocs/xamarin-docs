@@ -48,19 +48,19 @@ from the Elements API. For example, consider the following class definition:
 ```csharp
 public class Expense
 {
-        [Section("Expense Entry")]
+    [Section("Expense Entry")]
 
-        [Entry("Enter expense name")]
-        public string Name;
+    [Entry("Enter expense name")]
+    public string Name;
         
-        [Section("Expense Details")]
+    [Section("Expense Details")]
   
-        [Caption("Description")]
-        [Entry]
-        public string Details;
+    [Caption("Description")]
+    [Entry]
+    public string Details;
         
-        [Checkbox]
-        public bool IsApproved = true;
+    [Checkbox]
+    public bool IsApproved = true;
 }
 ```
 
@@ -97,20 +97,18 @@ as the `RootViewController` of the window, as shown below:
 ```csharp
 UIWindow window;
 
-public override bool FinishedLaunching (UIApplication app, 
-        NSDictionary options)
-{
-   
-        window = new UIWindow (UIScreen.MainScreen.Bounds);
+public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+{   
+    window = new UIWindow (UIScreen.MainScreen.Bounds);
             
-        var expense = new Expense ();
-        var bctx = new BindingContext (null, expense, "Create a task");
-        var dvc = new DialogViewController (bctx.Root);
+    var expense = new Expense ();
+    var bctx = new BindingContext (null, expense, "Create a task");
+    var dvc = new DialogViewController (bctx.Root);
             
-        window.RootViewController = dvc;
-        window.MakeKeyAndVisible ();
+    window.RootViewController = dvc;
+    window.MakeKeyAndVisible ();
             
-        return true;
+    return true;
 }
 ```
 
@@ -141,17 +139,17 @@ demonstrate, modify the `Expense` class to include an `ExpenseCategory` field as
 ```csharp
 public enum Category
 {
-        Travel,
-        Lodging,
-        Books
+    Travel,
+    Lodging,
+    Books
 }
         
 public class Expense
 {
-        …
+    …
 
-        [Caption("Category")]
-        public Category ExpenseCategory;
+    [Caption("Category")]
+    public Category ExpenseCategory;
 }
 ```
 
