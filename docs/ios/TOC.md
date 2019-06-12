@@ -240,7 +240,8 @@
 ### [Vibrate](~/essentials/vibrate.md?context=xamarin/ios)
 ### [Troubleshooting](~/essentials/troubleshooting.md?context=xamarin/ios)
 
-## [Data and Cloud Services](data-cloud/index.md)
+## Data and Cloud Services
+### [Overview](data-cloud/index.md)
 ### [Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/ios)
 #### [Getting Started](~/cross-platform/data-cloud/active-directory/get-started/index.md?context=xamarin/ios)
 ##### [Step 1. Register](~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/ios)
@@ -258,7 +259,8 @@
 ### [CloudKit](data-cloud/intro-to-cloudkit.md)
 
 ### [Introduction to Web Services](~/cross-platform/data-cloud/web-services/index.md?context=xamarin/ios)
-## [Deployment and Testing](deploy-test/index.md)
+## Deployment and Testing
+### [Overview](deploy-test/index.md)
 ### [App Distribution](deploy-test/app-distribution/index.md)
 #### [App Store Distribution](deploy-test/app-distribution/app-store-distribution/index.md)
 ##### [Configuring your App in iTunes Connect](deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
@@ -292,7 +294,8 @@
 ### [Walkthrough: Using Apple's Instrument Tool](deploy-test/walkthrough-apples-instrument.md)
 ### [Performance](deploy-test/performance.md)
 ### [Troubleshooting](deploy-test/troubleshooting.md)
-## [Apple Platform](~/cross-platform/macios/index.md?context=xamarin/ios)
+## Apple Platform
+### [iOS & macOS overview](~/cross-platform/macios/index.md?context=xamarin/ios)
 ### [Apple Account Management](~/cross-platform/macios/apple-account-management.md?context=xamarin/ios)
 ### [Unified API](~/cross-platform/macios/unified/index.md?context=xamarin/ios)
 #### [Overview](~/cross-platform/macios/unified/overview.md?context=xamarin/ios)
@@ -326,7 +329,8 @@
 ### [Working with Native Types in Cross-Platform Apps](~/cross-platform/macios/native-types-cross-platform.md?context=xamarin/ios)
 ### [HttpClient and SSL/TLS Implementation Selector](~/cross-platform/macios/http-stack.md?context=xamarin/ios)
 ### [Build Optimizations](~/cross-platform/macios/optimizations.md?context=xamarin/ios)
-## [Advanced Concepts and Internals](internals/index.md)
+## Advanced Concepts and Internals
+### [Overview](internals/index.md)
 ### [API](internals/api.md)
 ### [API Design](internals/api-design/index.md)
 #### [NSString](internals/api-design/nsstring.md)
@@ -339,8 +343,10 @@
 ### [New refcount](internals/newrefcount.md)
 ### [Objective-C selectors](internals/objective-c-selectors.md)
 ### [Registrar](internals/registrar.md)
-## [Troubleshooting](troubleshooting/index.md)
+## Troubleshooting
+### [Overview](troubleshooting/index.md)
 ### [Troubleshooting Tips](troubleshooting/troubleshooting.md)
+### [Xcode 11 preview](~/ios/platform/ios13/troubleshooting/index.md)
 ### [Xamarin.iOS Analysis Rules](troubleshooting/xamarin-ios-analysis.md)
 ### [Error messages (mtouch)](troubleshooting/mtouch-errors.md)
 ### [Frequently Asked Questions](troubleshooting/questions/index.md)
@@ -368,7 +374,8 @@
 #### [System.Exception AMDeviceNotificationSubscribe returned ...](troubleshooting/questions/exception-amddevicenotificationsubscribe.md)
 #### [MDocArchiveToMsxDocConverter.exe not found rver.BaseCommand.OnRequest](troubleshooting/questions/mdocarchivetomsxdocconverter-not-found.md)
 #### [How do I set Mono Runtime environment variables for iOS projects in Xamarin Studio?](troubleshooting/questions/xs-mono-runtime.md)
-## [watchOS](watchos/index.md)
+## watchOS
+### [Overview](watchos/index.md)
 ### [Getting Started](watchos/get-started/index.md)
 #### [Introduction to watchOS](watchos/get-started/intro-to-watchos.md)
 #### [Setup & Installation](watchos/get-started/installation.md)
@@ -405,7 +412,8 @@
 #### [Apple Watch](watchos/deploy-test/device.md)
 #### [App Store](watchos/deploy-test/appstore.md)
 ### [Troubleshooting](watchos/troubleshooting.md)
-## [tvOS](tvos/index.md)
+## tvOS
+### [Overview](tvos/index.md)
 ### [Getting Started](tvos/get-started/index.md)
 #### [Installing tvOS Support](tvos/get-started/installation.md)
 #### [Hello, tvOS Quickstart Guide](tvos/get-started/hello-tvos.md)
