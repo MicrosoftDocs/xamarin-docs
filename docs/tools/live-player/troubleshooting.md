@@ -5,15 +5,19 @@ ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: lobrien
 ms.author: laobri
-ms.date: 08/08/2018
+ms.date: 06/13/2019
 ---
 
 # Troubleshooting Xamarin Live Player
 
 ![Preview feature](~/media/shared/preview.png)
 
-> [!NOTE]
-> Live Player Preview is only available in Visual Studio 2017.
+> [!WARNING]
+> The Xamarin Live Player Preview has ended. The app is no longer available. The instructions below are provided for customers continuing to use the preview with Visual Studio 2017..
+
+> [!TIP]
+> You can use the [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 or 
+> Visual Studio for Mac to view your screen designs as you edit them.
 
 This article explains the limitations of Live Player, and some common problems with steps to correct them.
 
@@ -164,4 +168,3 @@ uses these names; renaming them will cause rendering issues.
 ## Related Links
 
 - [Setup](~/tools/live-player/install.md)
-- [Samples to use with Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)

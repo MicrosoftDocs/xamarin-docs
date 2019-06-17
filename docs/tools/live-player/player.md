@@ -5,19 +5,19 @@ ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: lobrien
 ms.author: laobri
-ms.date: 08/08/2017
+ms.date: 06/13/2019
 ---
 
 # Xamarin Live Player App
 
 ![Preview feature](~/media/shared/preview.png)
 
-> [!NOTE]
-> Live Player Preview is only available in Visual Studio 2017.
+> [!WARNING]
+> The Xamarin Live Player Preview has ended. The app is no longer available. The instructions below are provided for customers continuing to use the preview with Visual Studio 2017.
 
-Once you have installed the app on your phone, follow the
-[setup instructions](~/tools/live-player/install.md) to connect to your
-computer. Try one of the [sample apps](~/tools/live-player/samples.md) to get it working.
+> [!TIP]
+> You can use the [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 or 
+> Visual Studio for Mac to view your screen designs as you edit them.
 
 On startup, the Xamarin Live Player app looks like this:
 
@@ -55,7 +55,7 @@ View logs to diagnose problems.
 
 To connect a device for the first time, follow the instructions in [Requirements & Setup](~/tools/live-player/install.md). You can pair multiple devices and manage them via the IDE.
 
-# [Visual Studio](#tab/windows)
+# [Visual Studio 2017](#tab/windows)
 
 In Visual Studio, choose **Tools > Xamarin Live Player > Manage Devices...**
 
@@ -94,4 +94,4 @@ If you experience any issues see [limitations and troubleshooting](~/tools/live-
 ## Related Links
 
 - [Troubleshooting](~/tools/live-player/troubleshooting.md)
-- [Samples to use with Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)
+
