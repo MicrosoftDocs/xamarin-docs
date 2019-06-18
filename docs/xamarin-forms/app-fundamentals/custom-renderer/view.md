@@ -125,7 +125,7 @@ The `ViewRenderer` class exposes the `OnElementChanged` method, which is called 
 
 An overridden version of the `OnElementChanged` method, in each platform-specific renderer class, is the place to perform the native control instantiation and customization. The `SetNativeControl` method should be used to instantiate the native control, and this method will also assign the control reference to the `Control` property. In addition, a reference to the Xamarin.Forms control that's being rendered can be obtained through the `Element` property.
 
-In some circumstances, the `OnElementChanged` method can be called multiple times. Therefore, to prevent memory leaks, care must be taken when instantiating a new native control. `SetNativeControl` should only be created if `e.NewElement` is not `Null`. The approach to use when instantiating a new native control in a custom renderer is shown in the following code example:
+In some circumstances, the `OnElementChanged` method can be called multiple times. Therefore, to prevent memory leaks, care must be taken when instantiating a new native control. `SetNativeControl` should only be created if `e.NewElement` is not `null`. The approach to use when instantiating a new native control in a custom renderer is shown in the following code example:
 
 ```csharp
 protected override void OnElementChanged (ElementChangedEventArgs<NativeListView> e)
