@@ -29,7 +29,7 @@ XAML allows developers to define user interfaces in Xamarin.Forms applications u
 
 ## [XAML Compilation](xamlc.md)
 
-XAML can be optionally compiled directly into intermediate language (IL) with the XAML compiler (XAMLC). This articles describes how to use XAMLC, and its benefits.
+XAML can be optionally compiled directly into intermediate language (IL) with the XAML compiler (XAMLC). This article describes how to use XAMLC, and its benefits.
 
 ## [XAML Previewer](xaml-previewer/index.md)
 

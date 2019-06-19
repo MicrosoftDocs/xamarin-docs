@@ -13,10 +13,8 @@ ms.date: 03/21/2017
 
 ## Using generics with NSObjects
 
-Starting with Xamarin.iOS 7.2.1 you can use generics in
-subclasses of `NSObject` (for example [UIView](xref:UIKit.UIView).
-
-You can now create generic classes, like this one:
+It's possible to use generics in
+subclasses of `NSObject`, for example [UIView](xref:UIKit.UIView):
 
 ```csharp
 class Foo<T> : UIView {
@@ -35,8 +33,7 @@ is possible with generic subclasses of `NSObject` types.
 ## Considerations for generic subclasses of NSObject
 
 This document details the limitations in the limited
-support for generic subclasses of `NSObjects` introduced with
-Xamarin.iOS 7.2.1.
+support for generic subclasses of `NSObjects`.
 	
 ### Generic Type Arguments in Member Signatures
 
@@ -116,13 +113,13 @@ type `U` is not part of the signature.
 
 Instantiation of generic types from Objective-C is not
 allowed. This typically occurs when a managed type is used in
-a xib.
+a xib or a storyboard.
 
 Consider this class definition, which exposes a constructor
 that takes an `IntPtr` (the Xamarin.iOS way of constructing a C#
 object from a native Objective-C instance):
 	
-```
+```csharp
 class Generic<T> : NSObject where T : NSObject
 {
 	public Generic () {}
@@ -135,13 +132,13 @@ throw an exception at if Objective-C tries to create an
 instance of it.
 
 This is happens because Objective-C has no concept of
-generic types, and it cannot  specify the exact generic type
+generic types, and it cannot specify the exact generic type
 to create.
 
 This problem can be worked around by creating a specialized
-subclass of the generic type.   For example:
+subclass of the generic type. For example:
 	
-```
+```csharp
 class Generic<T> : NSObject where T : NSObject
 {
 	public Generic () {}
@@ -154,7 +151,7 @@ class GenericUIView : Generic<UIView>
 ```
 
 Now there is no ambiguity anymore, the
-class `GenericUIView` can be used in xibs.
+class `GenericUIView` can be used in xibs or storyboards.
 
 ## No support for generic methods
 
@@ -214,15 +211,15 @@ class Generic<T> : NSObject where T : NSObject
 
 **Reason:** Just like generic methods, the Xamarin.iOS runtime
 needs to be able to know what type to use for the generic type
-argument T.
+argument `T`.
 
 For instance members the instance itself is used (since
-there will never be an instance Generic<T>, it will
-always be Generic<SomeSpecificClass>), but for static
+there will never be an instance `Generic<T>`, it will
+always be `Generic<SomeSpecificClass>`), but for static
 members this information is not present.
 
 Note that this applies even if the member in question does
-not use the type argument T in any way.
+not use the type argument `T` in any way.
 
 The alternative in this case is to create a specialized subclass:
 
@@ -236,7 +233,7 @@ class GenericUIView : Generic<UIView>
 	}
 
 	[Export ("myProperty")]
-	public static UIView MyUIVIewProperty {
+	public static UIView MyUIViewProperty {
 		get { return MyProperty; }
 		set { MyProperty = value; }
 	}
@@ -249,14 +246,6 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-### Requires new Static Registrar
-
-The generics support requires the new [registration system](~/ios/internals/registrar.md).
-
-If you try to use the old legacy registration system will
-show warnings when it encounters generic types (in addition to not
-generate correct code, resulting in undefined behavior).
-	
 ## Performance
 
 The static registrar can't resolve an exported member in a generic

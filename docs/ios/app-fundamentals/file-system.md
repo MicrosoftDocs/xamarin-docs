@@ -10,7 +10,7 @@ ms.date: 11/12/2018
 ---
 # File system access in Xamarin.iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/FileSystemSampleCode/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/monotouch/FileSystemSampleCode/)
 
 You can use Xamarin.iOS and the `System.IO` classes in the *.NET Base Class Library (BCL)* to access the iOS file system. The `File` class lets you create, delete, and read files, and the `Directory` class allows you to create, delete, or enumerate the
 contents of directories. You can also use `Stream` subclasses, which
@@ -448,6 +448,6 @@ application upgrades and backups.
 
 ## Related links
 
-- [FileSystem sample code](https://developer.xamarin.com/samples/FileSystemSampleCode/)
+- [FileSystem sample code](https://developer.xamarin.com/samples/monotouch/FileSystemSampleCode/)
 - [File System Programming Guide](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
 - [Registering the File Types your App Supports](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)

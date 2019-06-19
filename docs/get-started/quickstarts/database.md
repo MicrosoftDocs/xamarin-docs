@@ -172,7 +172,7 @@ You should successfully complete the [previous quickstart](multi-page.md) before
                 InitializeComponent();
                 MainPage = new NavigationPage(new NotesPage());
             }
-            ...
+            //...
         }
     }
     ```

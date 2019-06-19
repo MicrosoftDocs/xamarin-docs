@@ -1023,6 +1023,6 @@ KitKat API changes and additions.
 
 ## Related Links
 
-- [KitKat Sample](https://developer.xamarin.com/samples/KitKat/)
+- [KitKat Sample](https://developer.xamarin.com/samples/monodroid/KitKat/)
 - [Android 4.4 APIs](https://developer.android.com/about/versions/android-4.4.html)
 - [Android KitKat](https://developer.android.com/about/versions/kitkat.html)

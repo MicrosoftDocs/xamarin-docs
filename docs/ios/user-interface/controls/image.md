@@ -78,4 +78,4 @@ Resource file references never need to include the **Resources** folder.
 
 ## Related links
 
-- [Controls (sample)](https://developer.xamarin.com/samples/Controls/)
+- [Controls (sample)](https://developer.xamarin.com/samples/monotouch/Controls/)
