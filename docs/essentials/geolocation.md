@@ -51,11 +51,11 @@ Your app's **Info.plist** must contain the `NSLocationWhenInUseUsageDescription`
 
 Open the plist editor and add the **Privacy - Location When In Use Usage Description** property and fill in a value to display to the user.
 
-Or manually edit the file and add the following:
+Or manually edit the file and add the following and update the rationale:
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
-<string>This app needs location access when open.</string>
+<string>Fill in a reason why your app needs access to location.</string>
 ```
 
 # [UWP](#tab/uwp)
