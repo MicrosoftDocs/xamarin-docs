@@ -295,21 +295,23 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 {
   base.OnElementChanged (e);
 
-  if (Control == null) {
-    // Instantiate the native control
-  }
-
   if (e.OldElement != null) {
     // Unsubscribe from event handlers and cleanup any resources
   }
 
   if (e.NewElement != null) {
+    if (Control == null) {
+      // Instantiate the native control
+    }
     // Configure the control and subscribe to event handlers
   }
 }
 ```
 
-A new native control should only be instantiated once, when the `Control` property is `null`. The control should only be configured and event handlers subscribed to when the custom renderer is attached to a new Xamarin.Forms element. Similarly, any event handlers that were subscribed to should only be unsubscribed from when the element renderer is attached to changes. Adopting this approach will help to create an efficiently performing custom renderer that doesn't suffer from memory leaks.
+A new native control should only be instantiated once, when the `Control` property is `null`. In addition, the control should only be created, configured, and event handlers subscribed to when the custom renderer is attached to a new Xamarin.Forms element. Similarly, any event handlers that were subscribed to should only be unsubscribed from when the element renderer is attached to changes. Adopting this approach will help to create an efficiently performing custom renderer that doesn't suffer from memory leaks.
+
+> [!IMPORTANT]
+> The `SetNativeControl` method should only be called if `e.NewElement` is not `null`.
 
 For more information about custom renderers, see [Customizing Controls on Each Platform](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
