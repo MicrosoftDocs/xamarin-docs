@@ -323,6 +323,10 @@
     {
         "source_path": "docs/xamarin-forms/app-fundamentals/navigation/pop-ups.md",
         "redirect_url": "/xamarin/xamarin-forms/user-interface/pop-ups"
+    },
+    {
+        "source_path": "docs/ios/platform/introduction-to-ios11/get-started.md",
+        "redirect_url": "/xamarin/ios/platform/introduction-to-ios11"
     }
   ]
 }

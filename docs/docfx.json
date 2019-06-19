@@ -57,6 +57,8 @@
     "fileMetadata": {
       "ms.technology": {
         "essentials/**/**.md":"xamarin-essentials",
+        "ios/**/**.md":"xamarin-ios",
+        "ios/**/**.yml":"xamarin-ios",
         "xamarin-forms/user-interface/graphics/skiasharp/**/**.md": "xamarin-skiasharp"
       },
       "feedback_product_url": {
@@ -68,7 +70,12 @@
         "xamarin-forms/creating-mobile-apps-xamarin-forms/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json",
         "xamarin-forms/enterprise-application-patterns/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json",
         "xamarin-forms/user-interface/graphics/skiasharp/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json"
-      }
+      },
+      "searchScope": { 
+        "ios/**/**.md": ["Xamarin","Xamarin.iOS"],
+        "ios/**/**.yml": ["Xamarin","Xamarin.iOS"],
+        "xamarin-forms/user-interface/graphics/skiasharp/**/**.md": ["Xamarin","SkiaSharp"]
+      } 
     },
     "template": [],
     "dest": "xamarin-docs",

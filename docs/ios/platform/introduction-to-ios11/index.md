@@ -11,11 +11,6 @@ ms.date: 09/19/2017
 
 # Introduction to iOS 11
 
-_Try new iOS 11 APIs with Xamarin._
-
-> [!NOTE]
-> Before you begin, review the [getting started](get-started.md) page for instructions on how to install Xcode 9.
-
 ![ARKit Example](images/arkit.png) ![AR Placing Objects](images/arkit2.png) ![CoreML Example](images/coreml.png) ![MapKit Example](images/mapkit.png) ![Vision Rectangles Example](images/vision1.png) ![Vision Faces Example](images/vision2.png) ![Drag and Drop Example](images/drag-drop.png) ![Drag and Drop Example](images/drag-drop2.png) ![SiriKit Example](images/sirikit.png)
 
 iOS 11 includes many brand-new features and enhancements across a variety of frameworks:
@@ -84,12 +79,6 @@ We have a number of C# [samples](https://developer.xamarin.com/samples/ios/iOS11
 * [PDKFit Widgets Sample](https://developer.xamarin.com/samples/monotouch/ios11/PDFAnnotationWidgetsAdvanced)
 * [PDFKit Watermark Sample](https://developer.xamarin.com/samples/monotouch/ios11/PDFDocumentWatermark)
 
-## More Information
-
-For more information on iOS 11, visit Apple's [What’s New in iOS 11](https://developer.apple.com/ios/) documentation.
-
-
 ## Related Links
 
-- [What's New in iOS 11 (Apple)](https://developer.apple.com/ios/)
 - [Xamarin iOS 11 Samples](https://developer.xamarin.com/samples/ios/iOS11/)

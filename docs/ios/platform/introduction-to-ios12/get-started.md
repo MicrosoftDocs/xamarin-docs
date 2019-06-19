@@ -49,4 +49,4 @@ APIs released with Xcode 10, for iOS 12, tvOS 12, and watchOS 5.
 
 ## Related links
 
-- [Download Xcode 10](https://developer.apple.com/download/)
+- [Download Xcode](https://developer.apple.com/download/)
