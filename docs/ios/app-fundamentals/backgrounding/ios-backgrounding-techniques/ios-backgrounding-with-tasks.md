@@ -93,7 +93,7 @@ Task.Factory.StartNew( () => {
     });
     while(myFlag == true)
     {
-        Console.WriteLine(UIApplication.SharedApplication.TimeRemaining);
+        Console.WriteLine(UIApplication.SharedApplication.BackgroundTimeRemaining);
         myFlag = SomeCalculationNeedsMoreTime();
     }
     //Only called if loop terminated due to myFlag and not expiration of time
