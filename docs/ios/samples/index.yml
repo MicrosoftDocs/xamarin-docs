@@ -42,8 +42,8 @@ sections:
        html: "How to use ContactsUI view controllers and properties."
        image:
          src: images/contacts.png
-         href: https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/
-       title: "QuickContacts"
+         href: https://developer.xamarin.com/samples/monotouch/Contacts/
+       title: "Contacts"
 
      - href: https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/
        html: "UI control suite available in watchOS."
