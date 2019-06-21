@@ -249,6 +249,9 @@ To define a template for the items, you’ll want to break out the `ItemTemplate
 </ListView>
 ```
 
+> [!NOTE]
+> The binding source for cells, and children of cells, is the `ListView.ItemsSource` collection.
+
 The `Label` element is set to the `View` property of the `ViewCell`. (The `ViewCell.View` tags are not needed because the `View` property is the content property of `ViewCell`.) This markup displays the `FriendlyName` property of each `NamedColor` object:
 
 [![](data-binding-basics-images/listview2.png "Binding to a Collection with a DataTemplate")](data-binding-basics-images/listview2-large.png#lightbox "Binding to a Collection with a DataTemplate")
