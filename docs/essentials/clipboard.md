@@ -42,6 +42,9 @@ To read text from the **Clipboard**:
 var text = await Clipboard.GetTextAsync();
 ```
 
+> [!TIP]
+> Access to the Clipboard must be done on the main user interface thread. See the [MainThread](~/essentials/main-thread.md) API to see how to invoke methods on the main user interface thread.
+
 ## API
 
 - [Clipboard source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Clipboard)
