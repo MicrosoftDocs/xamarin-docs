@@ -11,7 +11,7 @@ ms.date: 09/20/2016
 
 # Consuming Web Services
 
-_This guide demonstrates how to communicate with different web services to provide create, read, update, and delete (CRUD) functionality to a Xamarin.Forms application. Topics covered include communicating with ASMX services, WCF services, REST services, and Azure Mobile Apps.
+This guide demonstrates how to communicate with different web services to provide create, read, update, and delete (CRUD) functionality to a Xamarin.Forms application. Topics covered include communicating with ASMX services, WCF services, REST services, and Azure Mobile Apps.
 
 ## [Consuming an ASP.NET Web Service (ASMX)](~/xamarin-forms/data-cloud/consuming/asmx.md)
 
