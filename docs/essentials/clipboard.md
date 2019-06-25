@@ -43,7 +43,7 @@ var text = await Clipboard.GetTextAsync();
 ```
 
 > [!TIP]
-> Access to the Clipboard must be done on the main user interface thread. See the [MainThread](~/essentials/main-thread) API to see how to invoke methods on the main user interface thread.
+> Access to the Clipboard must be done on the main user interface thread. See the [MainThread](~/essentials/main-thread.md) API to see how to invoke methods on the main user interface thread.
 
 ## API
 
