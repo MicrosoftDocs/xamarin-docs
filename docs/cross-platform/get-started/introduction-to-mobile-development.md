@@ -47,7 +47,7 @@ platforms and adds a number of powerful features of its own, including:
 1.   **Objective-C, Java, C, and C++ Interop** – Xamarin provides facilities for directly invoking Objective-C, Java, C, and C++ libraries, giving you the power to use a wide array of 3rd party code that has already been created. This lets you take advantage of existing iOS and Android libraries written in Objective-C, Java, or C/C++. Additionally, Xamarin offers binding projects that allow you to easily bind native Objective-C and Java libraries using a declarative syntax.
 1.   **Modern Language Constructs** – Xamarin applications are written in C#, a modern language that includes significant improvements over Objective-C and Java such as  *Dynamic Language Features,  *Functional Constructs* such as  *Lambdas,  *LINQ,  *Parallel Programming* features, sophisticated  *Generics, and more.
 1.   **Amazing Base Class Library (BCL)** – Xamarin applications use the .NET BCL, a large collection of classes that have comprehensive and streamlined features such as powerful XML, Database, Serialization, IO, String, and Networking support, and more. Existing C# code can be compiled for use in an app, which provides access to thousands of libraries that allow you do things that aren’t covered in the BCL.
-1.   **Modern Integrated Development Environment (IDE)** – Xamarin uses Visual Studio for Mac on Mac OS X and Visual Studio on Windows. These are both modern IDEs that include features such as code auto completion, a sophisticated Project and Solution management system, a comprehensive project template library, integrated source control, and many others.
+1.   **Modern Integrated Development Environment (IDE)** – Xamarin uses Visual Studio for Mac on macOS and Visual Studio on Windows. These are both modern IDEs that include features such as code auto completion, a sophisticated Project and Solution management system, a comprehensive project template library, integrated source control, and many others.
 1.   **Mobile Cross Platform Support** – Xamarin offers sophisticated cross-platform support for the three major mobile platforms of iOS, Android, and Windows Phone. Applications can be written to share up to 90% of their code, and our Xamarin.Mobile library offers a unified API to access common resources across all three platforms. This can significantly reduce both development costs and time to market for mobile developers that target the three most popular mobile platforms.
 
 Because of Xamarin’s powerful and comprehensive feature set, it fills a
@@ -63,7 +63,7 @@ Xamarin offers two commercial products: Xamarin.iOS and Xamarin.Android. They’
 top of *Mono*, an open-source version of the .NET Framework based on the
 published .NET ECMA standards. Mono has been around almost as long as the .NET
 framework itself, and runs on nearly every imaginable platform including Linux,
-Unix, FreeBSD, and Mac OS X.
+Unix, FreeBSD, and macOS.
 
 On iOS, Xamarin’s *Ahead-of-Time* ( *AOT*) Compiler compiles
 Xamarin.iOS applications directly to native ARM assembly code. On Android,
@@ -105,3 +105,5 @@ Now you've learned a little about how Xamarin works, the next step is to start b
 - [**Get started with Xamarin.Forms**](~/get-started/index.yml)
 - [**Get started with Xamarin.iOS**](~/ios/get-started/hello-ios/index.md)
 - [**Get started with Xamarin.Android**](~/android/get-started/hello-android/index.md)
+- [**Get started with Xamarin.Mac**](~/mac/get-started/hello-mac.md)
+
