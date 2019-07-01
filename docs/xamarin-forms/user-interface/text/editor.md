@@ -64,7 +64,7 @@ Users can be prevented from modifying the text in an [`Editor`](xref:Xamarin.For
 ```
 
 ```csharp
-var editor= new Editor { Text = "This is a read-only Editor", IsReadOnly = true });
+var editor = new Editor { Text = "This is a read-only Editor", IsReadOnly = true });
 ```
 
 > [!NOTE]
