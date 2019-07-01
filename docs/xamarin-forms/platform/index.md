@@ -19,7 +19,7 @@ This guide describes the Android platform-specifics provided by Xamarin.Forms, a
 
 ## [Device class](device.md)
 
-How to use the `Device` class to create platform-specific behavior in shared code and the user interface (including using XAML). Also covers `BeginInvokeOnMainThread` which is essential when modifying UI controls from background threads.
+This guide discusses how to use the `Device` class to create platform-specific behavior in shared code and the user interface (including using XAML), and how to interact with UI controls from background threads.
 
 ## [iOS](ios/index.md)
 

@@ -6,7 +6,7 @@ ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/04/2019
+ms.date: 06/28/2019
 ---
 
 # Fonts in Xamarin.Forms
@@ -45,18 +45,7 @@ The `FontSize` property can be set to a double value, for instance:
 label.FontSize = 24;
 ```
 
-You can also use the `NamedSize` enumeration which has four built-in options; Xamarin.Forms chooses the best size for each platform.
-
--  **Micro**
--  **Small**
--  **Medium**
--  **Large**
-
-The `NamedSize` enumeration can be used wherever a `FontSize` can be specified using the `Device.GetNamedSize` method to convert the value to a `double`:
-
-```csharp
-label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
-```
+Xamarin.Forms also defines fields in the [`NamedSize`](xref:Xamarin.Forms.NamedSize) enumeration that represent specific font sizes. For more information about named font sizes, see [Named font sizes](#named-font-sizes).
 
 <a name="FontAttributes" />
 
@@ -107,7 +96,7 @@ There is a built-in converter for the `FontSize` property that allows all font s
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-values) can also be used in XAML to render a different font on each platform. The example below uses a custom font face on iOS (<span style="font-family:MarkerFelt-Thin">MarkerFelt-Thin</span>) and specifies only size/attributes on the other platforms:
+[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) can also be used in XAML to render a different font on each platform. The example below uses a custom font face on iOS (<span style="font-family:MarkerFelt-Thin">MarkerFelt-Thin</span>) and specifies only size/attributes on the other platforms:
 
 ```xaml
 <Label Text="Hello Forms with XAML">
@@ -122,6 +111,32 @@ There is a built-in converter for the `FontSize` property that allows all font s
 ```
 
 When specifying a custom font face, it is always a good idea to use `OnPlatform`, as it is difficult to find a font that is available on all platforms.
+
+## Named font sizes
+
+Xamarin.Forms defines fields in the [`NamedSize`](xref:Xamarin.Forms.NamedSize) enumeration that represent specific font sizes. The following table shows the `NamedSize` members, and their default sizes on iOS, Android, and the Universal Windows Platform (UWP):
+
+| Member | iOS | Android | UWP |
+| --- | --- | --- | --- |
+| `Default` | 16 | 14 | 14 |
+| `Micro` | 11 | 10 | 15.667 |
+| `Small` | 13 | 14 | 18.667 |
+| `Medium` | 16 | 17 | 22.667 |
+| `Large` | 20 | 22 | 32 |
+| `Body` | 17 | 16 | 14 |
+| `Header` | 17 | 96 | 46 |
+| `Title` | 28 | 24 | 24 |
+| `Subtitle` | 22 | 16 | 20 |
+| `Caption` | 12 | 12 | 12 |
+
+Named font sizes can be set through both XAML and code. In addition, the `Device.GetNamedSize` method can be called to return a `double` that represents the named font size:
+
+```csharp
+label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
+```
+
+> [!NOTE]
+> On iOS and Android, named font sizes will autoscale based on operating system accessibility options. This behavior can be disabled on iOS with a platform-specific. For more information, see [Accessibility Scaling for Named Font Sizes on iOS](~/xamarin-forms/platform/ios/named-font-size-scaling.md).
 
 <a name="Using_a_Custom_Font" />
 
@@ -182,7 +197,7 @@ The common code for the application is now complete. Platform-specific phone dia
 
 ### XAML
 
-You can also use [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-values) in XAML to render a custom font:
+You can also use [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) in XAML to render a custom font:
 
 ```xaml
 <Label Text="Hello Forms with XAML">

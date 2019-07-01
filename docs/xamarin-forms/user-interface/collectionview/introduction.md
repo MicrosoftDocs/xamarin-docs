@@ -26,7 +26,7 @@ Forms.SetFlags("CollectionView_Experimental");
 ```
 
 > [!IMPORTANT]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView) is only available on iOS and Android.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) is available on iOS and Android, but is only partially available on the Universal Windows Platform.
 
 ## CollectionView and ListView differences
 

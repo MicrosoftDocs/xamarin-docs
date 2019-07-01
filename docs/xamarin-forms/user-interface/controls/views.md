@@ -6,7 +6,7 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/21/2019
+ms.date: 06/11/2019
 ---
 
 # Xamarin.Forms Views
@@ -85,6 +85,13 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 |     |     |
 
 ## Views for setting values
+
+### CheckBox
+
+|     |     |
+| --- | --- |
+| `CheckBox` allows the user to select a Boolean value using a type of button that can either be checked or empty. The `IsChecked` property is the state of the `CheckBox`, and the `CheckedChanged` event is fired when the state changes.<br /><br />API Documentation / [Guide](~/xamarin-forms/user-interface/checkbox.md) / [Sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/CheckBoxDemos) | [![CheckBox Example](views-images/CheckBox.png "CheckBox Example")](views-images/CheckBox-Large.png#lightbox "CheckBox Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxDemoPage.xaml) |
+|     |     |
 
 ### Slider
 
