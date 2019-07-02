@@ -127,7 +127,7 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 ```
 
 > [!NOTE]
-> The underlying Android device must support TLS 1.2 (ie. Android 4.1 and later)
+> The underlying Android device must support TLS 1.2 (ie. Android 4.1 and later). Please note that the official support for TLS 1.2 is in Android 5.0+. However some devices support TLS 1.2 in Android 4.1+.
 
 
 ## SSL/TLS implementation build option
