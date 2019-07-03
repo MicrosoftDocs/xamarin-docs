@@ -168,4 +168,4 @@ The cache about 20 MB in size. It is kept across app restarts,
 ## Related Links
 
 - [WatchKitCatalog (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [Apple's Image doc](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/Images.html)
+- [Apple's Image doc](https://developer.apple.com/documentation/watchkit/wkinterfaceimage)
