@@ -51,6 +51,7 @@ The following platform-specific functionality is provided for Xamarin.Forms layo
 
 The following platform-specific functionality is provided for the Xamarin.Forms [`Application`](xref:Xamarin.Forms.Application) class on iOS:
 
+- Disabling accessibility scaling for named font sizes. For more information, see [Accessibility Scaling for Named Font Sizes on iOS](named-font-size-scaling.md).
 - Enabling control layout and rendering updates to be performed on the main thread. For more information, see [Main Thread Control Updates on iOS](main-thread-updates-ui.md).
 - Enabling a [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) in a scrolling view to capture and share the pan gesture with the scrolling view. For more information, see [Simultaneous Pan Gesture Recognition on iOS](application-pan-gesture.md).
 

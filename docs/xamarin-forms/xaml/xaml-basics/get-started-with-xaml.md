@@ -97,7 +97,7 @@ The **MainPage.xaml** file looks like this (although the formatting might be a l
 </ContentPage>
 ```
 
-The two XML namespace ( `xmlns`) declarations refer to URIs, the first seemingly on Xamarin’s web site and the second on Microsoft’s. Don’t bother checking what those URIs point to. There’s nothing there. They are simply URIs owned by Xamarin and Microsoft, and they basically function as version identifiers.
+The two XML namespace (`xmlns`) declarations refer to URIs, the first seemingly on Xamarin’s web site and the second on Microsoft’s. Don’t bother checking what those URIs point to. There’s nothing there. They are simply URIs owned by Xamarin and Microsoft, and they basically function as version identifiers.
 
 The first XML namespace declaration means that tags defined within the XAML file with no prefix refer to classes in Xamarin.Forms, for example `ContentPage`. The second namespace declaration defines a prefix of `x`. This is used for several elements and attributes that are intrinsic to XAML itself and which are supported by other implementations of XAML. However, these elements and attributes are slightly different depending on the year embedded in the URI. Xamarin.Forms supports the 2009 XAML specification, but not all of it.
 

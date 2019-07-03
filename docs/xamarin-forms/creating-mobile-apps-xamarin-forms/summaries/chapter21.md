@@ -34,7 +34,7 @@ Transforms are supported with eight properties of type `double` defined by the `
 - [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX)
 - [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
-All these properties are backed by bindable properties. They can be targets of data binding and styled. [**Chapter 22. Animation**](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) demonstrates how these properties can be animated, but some samples in this chapter show how you can animate them using the Xamarin.Forms [timer](~/xamarin-forms/platform/device.md#Device_StartTimer).
+All these properties are backed by bindable properties. They can be targets of data binding and styled. [**Chapter 22. Animation**](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) demonstrates how these properties can be animated, but some samples in this chapter show how you can animate them using the Xamarin.Forms [timer](~/xamarin-forms/platform/device.md#devicestarttimer).
 
 Transform properties affect only how the element is rendered, and do *not* affect how the element is perceived in layout.
 

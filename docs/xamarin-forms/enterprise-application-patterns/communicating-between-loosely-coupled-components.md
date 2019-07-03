@@ -38,7 +38,7 @@ The eShopOnContainers mobile app uses the [`MessagingCenter`](xref:Xamarin.Forms
 > [!NOTE]
 > While the [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class permits communication between loosely-coupled classes, it does not offer the only architectural solution to this issue. For example, communication between a view model and a view can also be achieved by the binding engine and through property change notifications. In addition, communication between two view models can also be achieved by passing data during navigation.
 
-In the eShopOnContainers mobile app,[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) is used to update in the UI in response to an action occurring in another class. Therefore, messages are published on the UI thread, with subscribers receiving the message on the same thread.
+In the eShopOnContainers mobile app, [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) is used to update in the UI in response to an action occurring in another class. Therefore, messages are published on the UI thread, with subscribers receiving the message on the same thread.
 
 > [!TIP]
 > Marshal to the UI thread when performing UI updates. If a message that's sent from a background thread is required to update the UI, process the message on the UI thread in the subscriber by invoking the [`Device.BeginInvokeOnMainThread`](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) method.

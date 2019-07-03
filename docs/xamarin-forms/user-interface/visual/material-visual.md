@@ -30,6 +30,7 @@ The process for enabling Xamarin.Forms Material Visual in your application is:
 Material renderers are currently included in the [Xamarin.Forms.Visual.Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) NuGet package for the following views:
 
 - [`Button`](xref:Xamarin.Forms.Button)
+- `CheckBox`
 - [`Entry`](xref:Xamarin.Forms.Entry)
 - [`Frame`](xref:Xamarin.Forms.Frame)
 - [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)
@@ -106,6 +107,7 @@ The main visible differences between the default renderers and material renderer
 Material renderers can optionally be customized, just like the default renderers, through the following base classes:
 
 - `MaterialButtonRenderer`
+- `MaterialCheckBoxRenderer`
 - `MaterialEntryRenderer`
 - `MaterialFrameRenderer`
 - `MaterialProgressBarRenderer`

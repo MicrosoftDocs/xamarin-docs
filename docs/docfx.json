@@ -57,8 +57,18 @@
     "fileMetadata": {
       "ms.technology": {
         "essentials/**/**.md":"xamarin-essentials",
+        "android/**/**.md":"xamarin-android",
+        "android/**/**.yml":"xamarin-android",
         "ios/**/**.md":"xamarin-ios",
         "ios/**/**.yml":"xamarin-ios",
+        "mac/**/**.md":"xamarin-mac",
+        "mac/**/**.yml":"xamarin-mac",
+        "xamarin-forms/**/**.md":"xamarin-forms",
+        "xamarin-forms/**/**.yml":"xamarin-forms",
+        "xamarin-essentials/**/**.md":"xamarin-forms",
+        "xamarin-essentials/**/**.yml":"xamarin-forms",
+        "get-started/quickstarts/**/**.md":"xamarin-forms",
+        "get-started/tutorials/**/**.md":"xamarin-forms",
         "xamarin-forms/user-interface/graphics/skiasharp/**/**.md": "xamarin-skiasharp"
       },
       "feedback_product_url": {
@@ -72,10 +82,24 @@
         "xamarin-forms/user-interface/graphics/skiasharp/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json"
       },
       "searchScope": { 
+        "android/**/**.md": ["Xamarin","Xamarin.Android"],
+        "android/**/**.yml": ["Xamarin","Xamarin.Android"],
         "ios/**/**.md": ["Xamarin","Xamarin.iOS"],
         "ios/**/**.yml": ["Xamarin","Xamarin.iOS"],
+        "mac/**/**.md": ["Xamarin","Xamarin.Mac"],
+        "mac/**/**.yml": ["Xamarin","Xamarin.Mac"],
+        "xamarin-forms/**/**.md": ["Xamarin","Xamarin.Forms"],
+        "xamarin-forms/**/**.yml": ["Xamarin","Xamarin.Forms"],
         "xamarin-forms/user-interface/graphics/skiasharp/**/**.md": ["Xamarin","SkiaSharp"]
-      } 
+      },
+      "hideScope": {
+        "android/**/**.md": "true",
+        "android/**/**.yml": "true",
+        "mac/**/**.md": "true",
+        "mac/**/**.yml": "true",
+        "xamarin-forms/**/**.md": "true",
+        "xamarin-forms/**/**.yml": "true"
+      }
     },
     "template": [],
     "dest": "xamarin-docs",

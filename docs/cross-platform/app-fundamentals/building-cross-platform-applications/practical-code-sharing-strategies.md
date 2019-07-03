@@ -528,7 +528,7 @@ public class DispatchAdapter : IDispatchOnUIThread {
 }
 ```
 
-Xamarin.Forms developers should use [`Device.BeginInvokeOnMainThread`](~/xamarin-forms/platform/device.md#Device_BeginInvokeOnMainThread)
+Xamarin.Forms developers should use [`Device.BeginInvokeOnMainThread`](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads)
 in common code (Shared Projects or PCL).
 
  <a name="Platform_and_Device_Capabilities_and_Degradation" />

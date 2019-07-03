@@ -4,7 +4,7 @@ description: "The PhoneDialer class in Xamarin.Essentials enables an application
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 07/02/2019
 ---
 
 # Xamarin.Essentials: Phone Dialer
@@ -28,7 +28,7 @@ The Phone Dialer functionality works by calling the `Open` method with a phone n
 ```csharp
 public class PhoneDialerTest
 {
-    public async Task PlacePhoneCall(string number)
+    public void PlacePhoneCall(string number)
     {
         try
         {

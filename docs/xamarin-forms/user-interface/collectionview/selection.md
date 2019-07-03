@@ -18,8 +18,8 @@ ms.date: 05/06/2019
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines the following properties that control item selection:
 
 - [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode), of type [`SelectionMode`](xref:Xamarin.Forms.SelectionMode), the selection mode.
-- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem), of type `object`, the selected item in the list. This property has a `null` value when no item is selected.
-- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems), of type `IList<object>`, the selected items in the list. This property is read only, and has a `null` value when no items are selected.
+- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem), of type `object`, the selected item in the list. This property has a default binding mode of `TwoWay`, and has a `null` value when no item is selected.
+- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems), of type `IList<object>`, the selected items in the list. This property has a default binding mode of `OneWay`, and has a `null` value when no items are selected.
 - [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand), of type `ICommand`, which is executed when the selected item changes.
 - [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter), of type `object`, which is the parameter that's passed to the `SelectionChangedCommand`.
 
@@ -129,7 +129,7 @@ When the [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode)
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
                 SelectionMode="Single"
-                SelectedItem="{Binding SelectedMonkey, Mode=TwoWay}">
+                SelectedItem="{Binding SelectedMonkey}">
     ...
 </CollectionView>
 ```
@@ -142,10 +142,13 @@ CollectionView collectionView = new CollectionView
     SelectionMode = SelectionMode.Single
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
-collectionView.SetBinding(SelectableItemsView.SelectedItemProperty, "SelectedMonkey", BindingMode.TwoWay);
+collectionView.SetBinding(SelectableItemsView.SelectedItemProperty, "SelectedMonkey");
 ```
 
-The [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) property data binds to the `SelectedMonkey` property of the connected view model, which is of type `Monkey`. A `TwoWay` binding is used so that if the user changes the selected item, the value of the `SelectedMonkey` property will be set to the selected `Monkey` object. The `SelectedMonkey` property is defined in the `MonkeysViewModel` class, and is set to the fourth item of the `Monkeys` collection:
+> [!NOTE]
+> The [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) property has a default binding mode of `TwoWay`.
+
+The [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) property data binds to the `SelectedMonkey` property of the connected view model, which is of type `Monkey`. By default, a `TwoWay` binding is used so that if the user changes the selected item, the value of the `SelectedMonkey` property will be set to the selected `Monkey` object. The `SelectedMonkey` property is defined in the `MonkeysViewModel` class, and is set to the fourth item of the `Monkeys` collection:
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -189,7 +192,8 @@ When the [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode)
 ```xaml
 <CollectionView x:Name="collectionView"
                 ItemsSource="{Binding Monkeys}"
-                SelectionMode="Multiple">
+                SelectionMode="Multiple"
+                SelectedItems="{Binding SelectedMonkeys}">
     ...
 </CollectionView>
 ```
@@ -202,22 +206,56 @@ CollectionView collectionView = new CollectionView
     SelectionMode = SelectionMode.Multiple
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
-```
-
-Multiple items in the [`CollectionView`](xref:Xamarin.Forms.CollectionView) can be pre-selected by adding them to the [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) property:
-
-```csharp
-collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(1).FirstOrDefault());
-collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(3).FirstOrDefault());
-collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(4).FirstOrDefault());
+collectionView.SetBinding(SelectableItemsView.SelectedItemsProperty, "SelectedMonkeys");
 ```
 
 > [!NOTE]
-> The [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) property is read only, and so it's not possible to use a two way data binding to pre-select items.
+> The [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) property has a default binding mode of `OneWay`.
+
+The [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) property data binds to the `SelectedMonkeys` property of the connected view model, which is of type `ObservableCollection<object>`. The `SelectedMonkeys` property is defined in the `MonkeysViewModel` class, and is set to the second, fourth, and fifth items in the `Monkeys` collection:
+
+```csharp
+namespace CollectionViewDemos.ViewModels
+{
+    public class MonkeysViewModel : INotifyPropertyChanged
+    {
+        ...
+        ObservableCollection<object> selectedMonkeys;
+        public ObservableCollection<object> SelectedMonkeys
+        {
+            get
+            {
+                return selectedMonkeys;
+            }
+            set
+            {
+                if (selectedMonkeys != value)
+                {
+                    selectedMonkeys = value;
+                }
+            }
+        }
+
+        public MonkeysViewModel()
+        {
+            ...
+            SelectedMonkeys = new ObservableCollection<object>()
+            {
+                Monkeys[1], Monkeys[3], Monkeys[4]
+            };
+        }
+        ...
+    }
+}
+```
 
 Therefore, when the [`CollectionView`](xref:Xamarin.Forms.CollectionView) appears, the second, fourth, and fifth items in the list are pre-selected:
 
 [![Screenshot of a CollectionView vertical list with multiple pre-selection, on iOS and Android](selection-images/multiple-pre-selection.png "CollectionView vertical list with multiple pre-selection")](selection-images/multiple-pre-selection-large.png#lightbox "CollectionView vertical list with multiple pre-selection")
+
+## Clearing selections
+
+The [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) and [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) properties can be cleared by setting them, or the objects they bind to, to `null`.
 
 ## Change selected item color
 
