@@ -51,3 +51,7 @@ iOS 13 provides new functionality for signing into apps using Sign In with
 Apple devices, allowing you to have more confidence that their personal
 information is not being stolen or collected in any way by taking advantage
 of 2FA and a restricted set of provided information.
+
+## Related links
+
+- [Xamarin.iOS preview release notes](/xamarin/ios/release-notes/12/12.99)

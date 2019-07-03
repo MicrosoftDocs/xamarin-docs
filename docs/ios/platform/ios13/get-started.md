@@ -1,6 +1,6 @@
 ---
 title: "Get started with iOS 13, iPadOS 13, tvOS 13, and watchOS 6"
-description: "This document describes how to get set up to build iOS 13, iPadOS 13, tvOS 13, and watchOS 6 apps with Xamarin. It discusses how to download Xcode 11 and update Visual Studio for Mac and Visual Studio 2019."
+description: "This document describes how to get set up to build iOS 13, iPadOS 13, tvOS 13, and watchOS 6 apps with Xamarin. It discusses how to download Xcode 11 and update Visual Studio for Mac."
 ms.prod: xamarin
 ms.assetid: 97414545-85D2-433C-9246-63B6763F488A
 ms.technology: xamarin-ios
@@ -32,7 +32,8 @@ APIs released with Xcode 11, for iOS 13. Using the preview requires macOS 10.14.
 
 5. (Optional) If evaluating this preview using _Xcode 11 beta 3_, you must enable linking. Right-click your project, navigate to **Options > iOS Build > Linker behavior** and set the linker behavior value to **Link Framework SDKs Only**. This workaround will not be necessary in a future preview.
 
-6. (Optional) **Install iOS 13 on your iOS devices** – For device testing of apps that use APIs introduced with the Xcode 11,
+6. (Optional) **Install iOS 13 on your iOS devices** – For device testing of apps 
+   that use APIs introduced with the Xcode 11,
    registered Apple developers can [download](https://developer.apple.com/download)
    and install the operating system on their devices. Because iOS is in beta, be careful installing it on your primary device.
 
@@ -52,3 +53,4 @@ APIs released with Xcode 11, for iOS 13. Using the preview requires macOS 10.14.
 ## Related links
 
 - [Download Xcode](https://developer.apple.com/download/)
+- [Xamarin.iOS preview release notes](/xamarin/ios/release-notes/12/12.99)
