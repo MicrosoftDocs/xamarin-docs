@@ -71,3 +71,8 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
     [![Screenshot of child views in a StackLayout, on iOS and Android](../images/create-stacklayout.png "StackLayout containing Label instances")](../images/create-stacklayout-large.png#lightbox "StackLayout containing Label instances")
 
     For more information about the [`StackLayout`](xref:Xamarin.Forms.StackLayout), see [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md).
+
+-----
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/xamarin-docs/issues/new?title=StackLayout+Tutorial+Step+1+Feedback&template=tutorial_template.md)
