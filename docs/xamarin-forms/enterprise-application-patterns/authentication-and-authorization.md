@@ -312,7 +312,7 @@ private async Task NavigateAsync(string url)
 
 This method parses the authentication response that's contained in the return URI, and provided that a valid authorization code is present, it makes a request to IdentityServer's [token endpoint](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html), passing the authorization code, the PKCE secret verifier, and other required parameters. The token endpoint is at `/connect/token` on port 5105 of the base endpoint exposed as a user setting. For more information about user settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
->💡 **Tip**: Validate return URIs. Although the eShopOnContainers mobile app doesn't validate the return URI, the best practice is to validate that the return URI refers to a known location , to prevent open-redirect attacks.
+>💡 **Tip**: Validate return URIs. Although the eShopOnContainers mobile app doesn't validate the return URI, the best practice is to validate that the return URI refers to a known location, to prevent open-redirect attacks.
 
 If the token endpoint receives a valid authorization code and PKCE secret verifier, it responds with an access token, identity token, and refresh token. The access token (which allows access to API resources) and identity token are then stored as application settings, and page navigation is performed. Therefore, the overall effect in the eShopOnContainers mobile app is this: provided that users are able to successfully authenticate with IdentityServer, they are navigated to the `MainView` page, which is a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) that displays the `CatalogView` as its selected tab.
 
