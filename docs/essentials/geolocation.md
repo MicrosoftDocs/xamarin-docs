@@ -74,7 +74,7 @@ using Xamarin.Essentials;
 
 The Geolocation API will also prompt the user for permissions when necessary.
 
-You can get the last known [location](xref:Xamarin.Essentials.Location) of the device by calling the `GetLastKnownLocationAsync` method. This is often faster then doing a full query, but can be less accurate.
+You can get the last known [location](xref:Xamarin.Essentials.Location) of the device by calling the `GetLastKnownLocationAsync` method. This is often faster then doing a full query, but can be less accurate and may return `null` if no cached location exists.
 
 ```csharp
 try
