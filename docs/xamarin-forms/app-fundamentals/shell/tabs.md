@@ -18,7 +18,7 @@ When the navigation pattern for an application includes a flyout, the next level
 Alternatively, the navigation pattern for an application can begin with bottom tabs and make no use of a flyout. In this scenario, the child of the `Shell` object should be a `TabBar` object, which represents the bottom tab bar.
 
 > [!NOTE]
-> The `TabBar` type type disables the flyout.
+> The `TabBar` type disables the flyout.
 
 Each `FlyoutItem` or `TabBar` object can contain one or more `Tab` objects, with each `Tab` object representing a tab on the bottom tab bar. Each `Tab` object can contain one or more `ShellContent` objects, and each `ShellContent` object will display a single [`ContentPage`](xref:Xamarin.Forms.ContentPage) object. When more than one `ShellContent` object is present in a `Tab` object, the `ContentPage` objects will be navigable by top tabs.
 
