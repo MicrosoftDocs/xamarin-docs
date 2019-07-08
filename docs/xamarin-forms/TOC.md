@@ -191,6 +191,7 @@
 ##### [Device Styles](user-interface/styles/xaml/device.md)
 ##### [Style Classes](user-interface/styles/xaml/style-class.md)
 #### [Styling Xamarin.Forms Apps using Cascading Style Sheets (CSS)](user-interface/styles/css/index.md)
+### [Switch](user-interface/switch.md)
 ### [TableView](user-interface/tableview.md)
 ### [Text](user-interface/text/index.md)
 #### [Label](user-interface/text/label.md)
