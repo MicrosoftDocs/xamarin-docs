@@ -259,7 +259,7 @@ Make sure that the background and text colors you choose are usable on each plat
 
 ### Completed
 
-The `Completed` event is used to react to the completion of an interaction with an `Editor`. `Completed` is raised when the user ends input with a field by entering the return key on the keyboard. The handler for the event is a generic event handler, taking the sender and `EventArgs`:
+The `Completed` event is used to react to the completion of an interaction with an `Editor`. `Completed` is raised when the user ends input with a field by entering the return key on the keyboard (or by pressing the Tab key on UWP). The handler for the event is a generic event handler, taking the sender and `EventArgs`:
 
 ```csharp
 void EditorCompleted (object sender, EventArgs e)
