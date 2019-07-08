@@ -151,7 +151,7 @@ multiple threads.
 While iOS and Android both ship with SQLite as part of the operating system,
 Windows Phone does not include a compatible database engine. To share
 code across all three platforms a Windows phone-native version of SQLite is
-required. See [Working with a Local Database](~/xamarin-forms/app-fundamentals/databases.md) for more information about setting up your Windows Phone project for Sqlite.
+required. See [Working with a Local Database](~/xamarin-forms/data-cloud/data/databases.md) for more information about setting up your Windows Phone project for Sqlite.
 
  <a name="Using_an_Interface_to_Generalize_Data_Access" />
 

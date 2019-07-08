@@ -1,5 +1,5 @@
 ---
-title: "Authenticating Users with an Identity Provider"
+title: "AuthenticateUsers with an Identity Provider"
 description: "This article explains how to use Xamarin.Auth to manage the authentication process in a Xamarin.Forms application."
 ms.prod: xamarin
 ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 06/19/2017
 ---
 
-# Authenticating Users with an Identity Provider
+# Authenticate Users with an Identity Provider
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
 

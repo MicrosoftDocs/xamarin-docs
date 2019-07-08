@@ -211,4 +211,4 @@ SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 
 - [DataAccess Basic (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Xamarin.Forms data access](~/xamarin-forms/app-fundamentals/databases.md)
+- [Xamarin.Forms data access](~/xamarin-forms/data-cloud/data/databases.md)

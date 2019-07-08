@@ -14,7 +14,7 @@ _This guide demonstrates how to consume different web service technologies. Topi
 
 To function correctly, many mobile applications are dependent on the cloud, and so integrating web services into mobile applications is a common scenario. The Xamarin platform supports consuming different web service technologies, and includes in-built and third-party support for consuming RESTful, ASMX, and Windows Communication Foundation (WCF) services.
 
-For customers using Xamarin.Forms, there are complete examples using each of these technologies in the [Xamarin.Forms Web Services](~/xamarin-forms/data-cloud/index.md)
+For customers using Xamarin.Forms, there are complete examples using each of these technologies in the [Xamarin.Forms Web Services](~/xamarin-forms/data-cloud/index.yml)
 documentation.
 
 > [!IMPORTANT]
@@ -47,7 +47,7 @@ The simplicity of REST has helped make it the primary method for accessing web s
 
 ## Consuming REST Services
 
-There are a number of libraries and classes that can be used to consume REST services, and the following subsections discuss them. For more information about consuming a REST service, see [Consuming a RESTful Web Service](~/xamarin-forms/data-cloud/consuming/rest.md).
+There are a number of libraries and classes that can be used to consume REST services, and the following subsections discuss them. For more information about consuming a REST service, see [Consume a RESTful Web Service](~/xamarin-forms/data-cloud/web-services/rest.md).
 
 ### HttpClient
 
@@ -55,7 +55,7 @@ The [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.N
 
 The `HttpResponseMessage` class represents an HTTP response message received from the web service after an HTTP request has been made. It contains information about the response, including the status code, headers, and body. The `HttpContent` class represents the HTTP body and content headers, such as `Content-Type` and `Content-Encoding`. The content can be read using any of the `ReadAs` methods, such as `ReadAsStringAsync` and `ReadAsByteArrayAsync`, depending upon the format of the data.
 
-For more information about the `HttpClient` class, see [Creating the HTTPClient Object](~/xamarin-forms/data-cloud/consuming/rest.md).
+For more information about the `HttpClient` class, see [Creating the HTTPClient Object](~/xamarin-forms/data-cloud/web-services/rest.md).
 
 <a name="Using_HTTPWebRequest" />
 
@@ -330,7 +330,7 @@ The Task Parallel Library (TPL) can simplify the process of consuming an APM beg
 
 For more information about APM, see [Asynchronous Programming Model](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) and [TPL and Traditional .NET Framework Asynchronous Programming](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) on MSDN.
 
-For more information about consuming an ASMX service, see [Consuming an ASP.NET Web Service (ASMX)](~/xamarin-forms/data-cloud/consuming/asmx.md).
+For more information about consuming an ASMX service, see [Consume an ASP.NET Web Service (ASMX)](~/xamarin-forms/data-cloud/web-services/asmx.md).
 
 <a name="wcf" />
 
@@ -408,7 +408,7 @@ The Task Parallel Library (TPL) can simplify the process of consuming an APM beg
 
 For more information about APM, see [Asynchronous Programming Model](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) and [TPL and Traditional .NET Framework Asynchronous Programming](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) on MSDN.
 
-For more information about consuming a WCF service, see [Consuming a Windows Communication Foundation (WCF) Web Service](~/xamarin-forms/data-cloud/consuming/wcf.md).
+For more information about consuming a WCF service, see [Consume a Windows Communication Foundation (WCF) Web Service](~/xamarin-forms/data-cloud/web-services/wcf.md).
 
 <a name="Calling_a_WCF_Service_with_Transport_Security" />
 
@@ -447,6 +447,6 @@ For more information about HTTP basic authentication, although in the context of
 
 ## Related Links
 
-- [Web Services in Xamarin.Forms](~/xamarin-forms/data-cloud/index.md)
+- [Web Services in Xamarin.Forms](~/xamarin-forms/data-cloud/index.yml)
 - [ServiceModel Metadata Utility Tool (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
 - [BasicHttpBinding](https://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)
