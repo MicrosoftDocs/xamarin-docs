@@ -36,7 +36,7 @@ A `Switch` can be instantiated in XAML. Its `IsToggled` property can be set to t
 <Switch IsToggled="true"/>
 ```
 
-A `Switch can also be created in code:
+A `Switch` can also be created in code:
 
 ```csharp
 Switch switch = new Switch { IsToggled = true };
