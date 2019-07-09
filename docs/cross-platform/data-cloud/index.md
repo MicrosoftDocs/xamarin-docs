@@ -10,7 +10,7 @@ ms.date: 10/09/2017
 
 # Microsoft Azure and Xamarin
 
-[ ![](images/evolve-mikej-azure-sml.png "Azure App Services features are easy to add to Xamarin apps, including cloud data storage and cross-platform push notifications")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
+[![](images/evolve-mikej-azure-sml.png "Azure App Services features are easy to add to Xamarin apps, including cloud data storage and cross-platform push notifications")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
 [Evolve 2016: Developing Connected Apps Using Azure and Xamarin](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 

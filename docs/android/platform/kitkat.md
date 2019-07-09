@@ -972,7 +972,7 @@ In addition to the changes described above, KitKat allows you to:
 
 -  *Read Dynamically Changing Text* - Denote parts of UI that update
    dynamically with new text as "live regions" with the new
-   [ `accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+   [`accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
    attribute so the new text will be read automatically in
    accessibility mode.
 

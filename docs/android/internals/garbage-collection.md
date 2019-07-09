@@ -570,9 +570,9 @@ Major collections should only be manually invoked, if ever:
 To track when global references are created and destroyed, you can set 
 the [debug.mono.log](~/android/troubleshooting/index.md) 
 system property to contain 
-[ *gref*](~/android/troubleshooting/index.md) 
+[*gref*](~/android/troubleshooting/index.md) 
 and/or 
-[ *gc*](~/android/troubleshooting/index.md). 
+[*gc*](~/android/troubleshooting/index.md). 
 
 
 

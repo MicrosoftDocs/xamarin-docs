@@ -27,7 +27,7 @@ In watchOS 1 apps, the code in the extension runs on the iPhone – the
 Apple Watch is effectively an external display. watchOS 2 and 3 apps run
 entirely on the Apple Watch. This difference is shown in the diagram below:
 
-[ ![](intro-to-watchos-images/arch-sml.png "The difference between watchOS 1 and watchOS 2 (and greater) is shown in this diagram")](intro-to-watchos-images/arch.png#lightbox)
+[![](intro-to-watchos-images/arch-sml.png "The difference between watchOS 1 and watchOS 2 (and greater) is shown in this diagram")](intro-to-watchos-images/arch.png#lightbox)
 
 Regardless of which version of watchOS is targeted, in Visual Studio for Mac’s Solution Pad
 a complete solution will look something like this:

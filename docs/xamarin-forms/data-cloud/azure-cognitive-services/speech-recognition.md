@@ -109,7 +109,7 @@ string GenerateRequestUri(string speechEndpoint)
 }
 ```
 
-The main configuration performed by the `GenerateRequestUri` method is to set the locale of the audio content. For a list of the supported locales, see [Supported languages ](/azure/cognitive-services/speech/api-reference-rest/supportedlanguages/).
+The main configuration performed by the `GenerateRequestUri` method is to set the locale of the audio content. For a list of the supported locales, see [Supported languages](/azure/cognitive-services/speech/api-reference-rest/supportedlanguages/).
 
 ### Sending the Request
 

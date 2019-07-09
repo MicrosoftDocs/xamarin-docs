@@ -23,7 +23,7 @@ Workbooks can be saved and opened again later within the application. You can th
 The code editing window provides code completion, syntax coloring,
 inline live-diagnostics, and multi-line statement support.
 
-[ ![](workbook-images/inspector-0.6.0-repl-small.png "The code editing window provides code completion, syntax coloring, inline live-diagnostics, and multi-line statement support")](workbook-images/inspector-0.6.0-repl.png#lightbox)
+[![](workbook-images/inspector-0.6.0-repl-small.png "The code editing window provides code completion, syntax coloring, inline live-diagnostics, and multi-line statement support")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
 Xamarin Workbooks are saved in a `.workbook` file, which is a CommonMark
 file with some metadata at the top (see [Workbooks File Types](#workbooks-files-types) for more

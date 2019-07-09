@@ -228,7 +228,7 @@ the previous sections:
    and using the **AndroidManifest.XML** that was created in the previous
    step.
 
-1. [Sign the APK ](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66)
+1. [Sign the APK](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66)
    with a production keystore.
 
 1. [Zipalign](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L67)
