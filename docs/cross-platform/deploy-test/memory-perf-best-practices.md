@@ -272,7 +272,7 @@ When SGen starts a garbage collection, it will stop the application’s threads 
 1. **Frequency** – How often garbage collection occurs. The frequency of garbage collections will increase as more memory is allocated between collections.
 1. **Duration** – How long each individual garbage collection will take. This is roughly proportional to the number of live objects that are being collected.
 
-Collectively this mean that if many objects are allocated but do not stay alive, there will be many short garbage collections. Conversely, if new objects are allocated slowly and the objects stay alive, there will be fewer but longer garbage collections.
+Collectively this means that if many objects are allocated but do not stay alive, there will be many short garbage collections. Conversely, if new objects are allocated slowly and the objects stay alive, there will be fewer but longer garbage collections.
 
 To reduce pressure on the garbage collector, follow these guidelines:
 
