@@ -325,7 +325,7 @@ Check out Google's Android Wear documentation:
 
 * [About Android Wear](http://www.android.com/wear/)
 * [Android Wear App Design](https://developer.android.com/design/wear/index.html)
-* [android.support.wearable library ](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
+* [android.support.wearable library](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
 * [Android Wear 2.0](https://developer.android.com/wear/preview/index.html)
 
 

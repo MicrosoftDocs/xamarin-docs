@@ -172,7 +172,7 @@ After it has been installed the Xamarin Profiler application can be found in you
 
 You can load *.mlpd* files into the Profiler by opening the standalone application, selecting **Choose Target** and loading the file.
 
-For more information, see [Generating .mlpd Files ](~/tools/profiler/troubleshooting.md#gen_mlpd).
+For more information, see [Generating .mlpd Files](~/tools/profiler/troubleshooting.md#gen_mlpd).
 
 ## Profiler Features
 

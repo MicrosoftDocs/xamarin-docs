@@ -153,7 +153,7 @@ An example Sales and Trends report is shown below:
 
  [![](subscriptions-and-reporting-images/image42.png "An example Sales and Trends report")](subscriptions-and-reporting-images/image42.png#lightbox)   
    
- There’s also an  [ **ITC Connect Mobile**iOS app (iTunes link)](http://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
+ There’s also an  [**ITC Connect Mobile**iOS app (iTunes link)](http://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
 iPhone screenshots for some of the statistics available are shown here:   
    
  [![](subscriptions-and-reporting-images/image43.png "iPhone screenshots for some of the statistics available")](subscriptions-and-reporting-images/image43.png#lightbox)

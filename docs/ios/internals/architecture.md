@@ -20,7 +20,7 @@ native or managed system.
 
 The diagram below shows a basic overview of this architecture:
 
-[ ![](architecture-images/ios-arch-small.png "This diagram shows a basic overview of the Ahead of Time (AOT) compilation architecture")](architecture-images/ios-arch.png#lightbox)
+[![](architecture-images/ios-arch-small.png "This diagram shows a basic overview of the Ahead of Time (AOT) compilation architecture")](architecture-images/ios-arch.png#lightbox)
 
 ## Native and Managed code: An Explanation
 

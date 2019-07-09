@@ -309,4 +309,4 @@ launch activity.
 
 - [SplashScreen (sample)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
 - [layer-list Drawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
-- [ Material Design Patterns - Launch Screens](https://material.io/design/communication/launch-screen.html#usage)
+- [Material Design Patterns - Launch Screens](https://material.io/design/communication/launch-screen.html#usage)
