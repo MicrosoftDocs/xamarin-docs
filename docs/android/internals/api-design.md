@@ -394,7 +394,7 @@ types are currently not bound due to limitations in our generics
 support; if they were supported, they would be present as the
 *Android.OS.IParcelableClassLoaderCreator* and
 *Android.OS.IParcelableCreator* interfaces. For example, the nested
-[android.os.IBinder.DeathRecpient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html)
+[android.os.IBinder.DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html)
 interface is bound as the
 [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/)
 interface.
