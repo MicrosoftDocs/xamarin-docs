@@ -76,4 +76,4 @@ There are four events on the [`Application`](xref:Xamarin.Forms.Application) cla
 - `ModalPopped` - raised after a page has been popped modally.
 
 > [!NOTE]
-> The `ModalPopping` event event arguments, of type `ModalPoppingEventArgs`, contain a `Cancel` property. When `Cancel` is set to `true` the modal pop is cancelled.
+> The `ModalPopping` event arguments, of type `ModalPoppingEventArgs`, contain a `Cancel` property. When `Cancel` is set to `true` the modal pop is cancelled.
