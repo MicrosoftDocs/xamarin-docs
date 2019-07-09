@@ -159,7 +159,7 @@ The parameter to Dispose is "bool disposing", and if set to true it
 means that your Dispose method is being called because the user
 explicitly called Dispose () on the object. If the value is false,
 this means that your Dispose(bool disposing) method is being called
-from the finalizer on the finalizer thread. []()
+from the finalizer on the finalizer thread.
 
 
 ##### Categories
