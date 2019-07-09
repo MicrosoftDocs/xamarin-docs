@@ -48,7 +48,7 @@ protected override void OnResume()
 ```
 
 > [!IMPORTANT]
-> On Android, the `OnStart` method will be called on rotation as well as when the application first starts, if the the main activity lacks `ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation` in the `[Activity()]` attribute.
+> On Android, the `OnStart` method will be called on rotation as well as when the application first starts, if the main activity lacks `ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation` in the `[Activity()]` attribute.
 
 <a name="page" />
 
