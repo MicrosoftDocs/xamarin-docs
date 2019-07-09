@@ -86,8 +86,7 @@ public partial class App : Application
 
     public static void RegisterTypeWithParameters<T>(Type param1Type, object param1Value, Type param2Type, string param2Name) where T : class
     {
-        builder.RegisterType<T>()
-               .WithParameters(new List<Parameter>()
+        builder.RegisterType<T>().WithParameters(new List<Parameter>()
         {
             new TypedParameter(param1Type, param1Value),
             new ResolvedParameter(
@@ -98,8 +97,7 @@ public partial class App : Application
 
     public static void RegisterTypeWithParameters<TInterface, T>(Type param1Type, object param1Value, Type param2Type, string param2Name) where TInterface : class where T : class, TInterface
     {
-        builder.RegisterType<T>()
-               .WithParameters(new List<Parameter>()
+        builder.RegisterType<T>().WithParameters(new List<Parameter>()
         {
             new TypedParameter(param1Type, param1Value),
             new ResolvedParameter(
