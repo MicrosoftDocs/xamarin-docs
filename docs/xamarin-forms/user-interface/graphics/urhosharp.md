@@ -238,7 +238,7 @@ selectedBarSlider = new Slider(0, 5, 2.5);
 selectedBarSlider.ValueChanged += OnValuesSliderValueChanged;
 ```
 
-The animations at the [top of the page](#) show the sample running.
+The animations at the [top of the page](#what-is-urhosharp) show the sample running.
 
 ## Summary
 
