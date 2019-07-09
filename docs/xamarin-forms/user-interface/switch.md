@@ -22,7 +22,7 @@ The following screenshot shows a `Switch` control in its **on** and **off** togg
 The `Switch` control defines two properties:
 
 * [`OnColor`](xref:Xamarin.Forms.Switch.OnColor) is a `Color` that affects how the `Switch` is rendered in the toggled, or **on**, state.
-* [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) is a `boolean` value that indicates whether the the `Switch` is **on**.
+* [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) is a `boolean` value that indicates whether the `Switch` is **on**.
 
 These properties are backed by a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) object, which means the `Switch` can be styled and be the target of data bindings.
 
