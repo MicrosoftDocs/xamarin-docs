@@ -533,7 +533,7 @@ public static class DispatcherConstants
 }
 ```
 
-You must configure the **DispatcherConstants.cs** to match match your Azure Notification Hub configuration. The value of the `SubscriptionTags` property should match the values used in the client apps. The `NotificationHubName` property is the name of your Azure Notification Hub instance. The `FullAccessConnectionString` property is the access key found in your notification hub **Access Policies**. The following screenshot shows the location of the `NotificationHubName` and `FullAccessConnectionString` properties in the Azure portal:
+You must configure the **DispatcherConstants.cs** to match your Azure Notification Hub configuration. The value of the `SubscriptionTags` property should match the values used in the client apps. The `NotificationHubName` property is the name of your Azure Notification Hub instance. The `FullAccessConnectionString` property is the access key found in your notification hub **Access Policies**. The following screenshot shows the location of the `NotificationHubName` and `FullAccessConnectionString` properties in the Azure portal:
 
 ![Screenshot of the Azure Notification Hub name and FullAccessConnectionString](azure-notification-hub-images/notification-hub-full-access-policy.png "Azure Notification Hub name and FullAccessConnectionString")
 
