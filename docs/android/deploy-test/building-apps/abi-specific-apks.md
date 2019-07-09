@@ -205,7 +205,7 @@ zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 The sample project
 [OneABIPerAPK](https://github.com/xamarin/monodroid-samples/tree/master/OneABIPerAPK)
 is a simple Android project that will demonstrate how to calculate an
-ABI specific version number and build three seperate APK's for each of
+ABI specific version number and build three separate APK's for each of
 the following ABI's:
 
 -  armeabi
