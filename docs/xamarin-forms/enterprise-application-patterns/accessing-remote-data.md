@@ -149,7 +149,7 @@ This method retrieves the catalog data from the SQL database using EntityFramewo
 
 #### Making a POST Request
 
-The `BasketService` class is used to manage the data retrieval and update process with the basket microservice. In the `RegisterDependencies` method in the `ViewModelLocator` class, the `BasketService` class is registered as a type mapping against the `IBasketService` type with the Autofac dependency injection container. Then, when an instance of the `BasketViewModel` class is created, its constructor accepts an `IBasketService` type, which Autofac resolves, returning an instance of the `BasketService `class. For more information about dependency injection, see [Introduction to Dependency Injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
+The `BasketService` class is used to manage the data retrieval and update process with the basket microservice. In the `RegisterDependencies` method in the `ViewModelLocator` class, the `BasketService` class is registered as a type mapping against the `IBasketService` type with the Autofac dependency injection container. Then, when an instance of the `BasketViewModel` class is created, its constructor accepts an `IBasketService` type, which Autofac resolves, returning an instance of the `BasketService` class. For more information about dependency injection, see [Introduction to Dependency Injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
 
 Figure 10-2 shows the interaction of classes that send the basket data displayed by the `BasketView`, to the basket microservice.
 

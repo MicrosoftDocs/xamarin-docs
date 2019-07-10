@@ -1380,6 +1380,6 @@ affects a custom collection view layout.
 
 - [iOS 9 Samples](https://developer.xamarin.com/samples/ios/iOS9/)
 - [Collection View Sample](https://developer.xamarin.com/samples/monotouch/ios9/CollectionView/)
-- [SimpleCollectionView (sample)](https://developer.xamarin.com/samples/SimpleCollectionView/)
+- [SimpleCollectionView (sample)](https://developer.xamarin.com/samples/monotouch/SimpleCollectionView/)
 - [Events, Protocols and Delegates](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [Working with Tables and Cells](~/ios/user-interface/controls/tables/index.md)

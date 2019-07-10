@@ -6,7 +6,7 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/21/2019
+ms.date: 06/11/2019
 ---
 
 # Xamarin.Forms Views
@@ -86,6 +86,13 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 
 ## Views for setting values
 
+### CheckBox
+
+|     |     |
+| --- | --- |
+| `CheckBox` allows the user to select a Boolean value using a type of button that can either be checked or empty. The `IsChecked` property is the state of the `CheckBox`, and the `CheckedChanged` event is fired when the state changes.<br /><br />API Documentation / [Guide](~/xamarin-forms/user-interface/checkbox.md) / [Sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/CheckBoxDemos) | [![CheckBox Example](views-images/CheckBox.png "CheckBox Example")](views-images/CheckBox-Large.png#lightbox "CheckBox Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxDemoPage.xaml) |
+|     |     |
+
 ### Slider
 
 |     |     |
@@ -104,7 +111,7 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 
 |     |     |
 | --- | --- |
-| [`Switch`](xref:Xamarin.Forms.Switch) takes the form of an on/off switch to allow the user to select a Boolean value. The [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) property is the state of the switch, and the [`Toggled`](xref:Xamarin.Forms.Switch.Toggled) event is fired when the state changes.<br /><br />[API Documentation](xref:Xamarin.Forms.Switch) | [![Switch Example](views-images/Switch.png "Switch Example")](views-images/Switch-Large.png#lightbox "Switch Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchDemoPage.xaml) |
+| [`Switch`](xref:Xamarin.Forms.Switch) takes the form of an on/off switch to allow the user to select a Boolean value. The [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) property is the state of the switch, and the [`Toggled`](xref:Xamarin.Forms.Switch.Toggled) event is fired when the state changes.<br /><br />[API Documentation](xref:Xamarin.Forms.Switch) / [Guide](~/xamarin-forms/user-interface/switch.md) / [Sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/SwitchDemos) | [![Switch Example](views-images/Switch.png "Switch Example")](views-images/Switch-Large.png#lightbox "Switch Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchDemoPage.xaml) |
 |     |     |
 
 ### DatePicker
@@ -199,6 +206,6 @@ These two classes derive from the [`InputView`](xref:Xamarin.Forms.InputView) cl
 
 ## Related Links
 
-- [Xamarin.Forms FormsGallery sample](https://developer.xamarin.com/samples/FormsGallery/)
+- [Xamarin.Forms FormsGallery sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 - [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [Xamarin.Forms API Documentation](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

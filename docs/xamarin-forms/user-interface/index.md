@@ -6,7 +6,7 @@ ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/14/2018
+ms.date: 06/11/2019
 ---
 
 # Xamarin.Forms User Interface Views
@@ -26,6 +26,10 @@ The `BoxView` is just a simple colored rectangle, but it can be used for decorat
 ## [Button](button.md)
 
 The `Button` responds to a tap or click that directs an application to carry out a particular task.
+
+## [CheckBox](checkbox.md)
+
+The `CheckBox` is a type of button that can either be checked or empty. When a checkbox is checked, it's considered to be on. When a checkbox is empty, it's considered to be off.
 
 ## [CollectionView](collectionview/index.md)
 
@@ -90,6 +94,10 @@ The `Stepper` allows a user to select a numeric value from a range of values. It
 ## [Styles](styles/index.md)
 
 Font, color, and other attributes can be grouped into styles which can be shared across controls, layouts, or the entire application using ResourceDictionaries.
+
+## [Switch](switch.md)
+
+The `Switch` is a type of button that can be toggled between on and off states.
 
 ## [TableView](tableview.md)
 

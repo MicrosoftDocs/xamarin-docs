@@ -29,7 +29,7 @@ The sample application demonstrates a Todo list application where the data is st
 
 Each `TodoItem` instance created by the user is indexed. Platform-specific search can then be used to locate indexed data from the application. When the user taps on a search result item for the application, the application is launched, the `TodoItemPage` is navigated to, and the `TodoItem` referenced from the deep link is displayed.
 
-For more information about using an SQLite database, see [Xamarin.Forms Local Databases](~/xamarin-forms/app-fundamentals/databases.md).
+For more information about using an SQLite database, see [Xamarin.Forms Local Databases](~/xamarin-forms/data-cloud/data/databases.md).
 
 > [!NOTE]
 > Xamarin.Forms application indexing and deep linking functionality is only available on the iOS and Android platforms, and requires a minimum of iOS 9 and API 23 respectively.

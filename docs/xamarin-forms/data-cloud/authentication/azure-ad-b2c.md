@@ -98,19 +98,26 @@ public static class Constants
 
 ## Use the Microsoft Authentication Library (MSAL) for authentication
 
-The Microsoft Authentication Library (MSAL) NuGet package must be added to the shared, .NET Standard project, and the platform projects in a Xamarin.Forms solution. MSAL provides a `PublicClientApplication` to simplify the process of authenticating with Azure Active Directory B2C. In the sample project, the code behind for **App.xaml** defines static properties for an `AuthenticationClient` and a `UiParent` and instantiates the `AuthenticationClient` in the constructor. The second parameter provided to the `PublicClientApplication` is the default **Authority**, or policy, that will be used to authenticate users. The following example demonstrates how to instantiate the `PublicClientApplication`:
+The Microsoft Authentication Library (MSAL) NuGet package must be added to the shared, .NET Standard project, and the platform projects in a Xamarin.Forms solution. MSAL includes a `PublicClientApplicationBuilder` class that constructs an object adhering to the `IPublicClientApplication` interface. MSAL utilizes `With` clauses to supply additional parameters to the constructor and authentication methods.
+
+In the sample project, the code behind for **App.xaml** defines static properties named `AuthenticationClient` and `UIParent`, and instantiates the `AuthenticationClient` object in the constructor. The `WithIosKeychainSecurityGroup` clause provides a security group name for iOS applications. The `WithB2CAuthority` clause provides the default **Authority**, or policy, that will be used to authenticate users. The following example demonstrates how to instantiate the `PublicClientApplication`:
 
 ```csharp
 public partial class App : Application
 {
-    public static PublicClientApplication AuthenticationClient { get; private set; }
+    public static IPublicClientApplication AuthenticationClient { get; private set; }
 
-    public static UIParent UiParent { get; set; } = null;
+    public static object UIParent { get; set; } = null;
 
     public App()
     {
         InitializeComponent();
-        AuthenticationClient = new PublicClientApplication(Constants.ClientId, Constants.AuthoritySignin);
+
+        AuthenticationClient = PublicClientApplicationBuilder.Create(Constants.ClientId)
+            .WithIosKeychainSecurityGroup(Constants.IosKeychainSecurityGroups)
+            .WithB2CAuthority(Constants.AuthoritySignin)
+            .Build();
+
         MainPage = new NavigationPage(new LoginPage());
     }
 
@@ -128,11 +135,13 @@ public partial class LoginPage : ContentPage
     {
         try
         {
+            // Look for existing account
             IEnumerable<IAccount> accounts = await App.AuthenticationClient.GetAccountsAsync();
 
-            AuthenticationResult result = await App.AuthenticationClient.AcquireTokenSilentAsync(
-                Constants.Scopes,
-                accounts.FirstOrDefault());
+            AuthenticationResult result = await App.AuthenticationClient
+                .AcquireTokenSilent(Constants.Scopes, accounts.FirstOrDefault())
+                .ExecuteAsync();
+
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch
@@ -158,12 +167,12 @@ public partial class LoginPage : ContentPage
         AuthenticationResult result;
         try
         {
-            result = await App.AuthenticationClient.AcquireTokenAsync(
-                Constants.Scopes,
-                string.Empty,
-                UIBehavior.SelectAccount,
-                string.Empty,
-                App.UiParent);
+            result = await App.AuthenticationClient
+                .AcquireTokenInteractive(Constants.Scopes)
+                .WithPrompt(Prompt.SelectAccount)
+                .WithParentActivityOrWindow(App.UIParent)
+                .ExecuteAsync();
+    
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch (MsalException ex)
@@ -194,15 +203,12 @@ public partial class LoginPage : ContentPage
     {
         try
         {
-            return await App.AuthenticationClient.AcquireTokenAsync(
-                Constants.Scopes,
-                string.Empty,
-                UIBehavior.SelectAccount,
-                string.Empty,
-                null,
-                Constants.AuthorityPasswordReset,
-                App.UiParent
-                );
+            return await App.AuthenticationClient
+                .AcquireTokenInteractive(Constants.Scopes)
+                .WithPrompt(Prompt.SelectAccount)
+                .WithParentActivityOrWindow(App.UIParent)
+                .WithB2CAuthority(Constants.AuthorityPasswordReset)
+                .ExecuteAsync();
         }
         catch (MsalException)
         {
@@ -285,7 +291,7 @@ On Android, the custom URL scheme that was registered with Azure Active Director
 </manifest>
 ```
 
-The `MainActivity` class must be modified to provide the `UiParent` to the application during the `OnCreate` call. When Azure Active Directory B2C completes the authorization request, it redirects to the registered URL scheme from the **AndroidManifest.xml**. The registered URI scheme results in Android calling `OnActivityResult` with the URL as a launch parameter, where it's processed by the `SetAuthenticationContinuationEventArgs`.
+The `MainActivity` class must be modified to provide the `UIParent` object to the application during the `OnCreate` call. When Azure Active Directory B2C completes the authorization request, it redirects to the registered URL scheme from the **AndroidManifest.xml**. The registered URI scheme results in Android calling the `OnActivityResult` method with the URL as a launch parameter, where it's processed by the `SetAuthenticationContinuationEventArgs` method.
 
 ```csharp
 public class MainActivity : FormsAppCompatActivity
@@ -299,7 +305,7 @@ public class MainActivity : FormsAppCompatActivity
 
         Forms.Init(this, bundle);
         LoadApplication(new App());
-        App.UiParent = new UIParent(this);
+        App.UIParent = this;
     }
 
     protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

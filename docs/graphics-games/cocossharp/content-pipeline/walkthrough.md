@@ -238,5 +238,5 @@ This walkthrough showed how to use the MonoGame Pipeline Tool to create .xnb fil
 
 - [MonoGame Downloads](http://www.monogame.net/downloads/)
 - [MonoGame Pipeline Documentation](http://www.monogame.net/documentation/?page=Pipeline)
-- [Starting BouncingGame Project for Android (sample)](https://developer.xamarin.com/samples/BouncingGameCompleteAndroid/)
+- [Starting BouncingGame Project for Android (sample)](https://developer.xamarin.com/samples/monodroid/BouncingGameCompleteAndroid/)
 - [ball.png Graphic (sample)](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/ball.png?raw=true)

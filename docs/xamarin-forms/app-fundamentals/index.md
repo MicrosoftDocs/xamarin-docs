@@ -47,10 +47,6 @@ The `DependencyService` provides a simple locator so that you can code to interf
 
 Effects allow the native controls on each platform to be customized, and are typically used for small styling changes.
 
-## [Files](files.md)
-
-File handling with Xamarin.Forms can be achieved using code in a .NET Standard library, or by using embedded resources.
-
 ## [Gestures](gestures/index.md)
 
 The Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) class supports tap, pinch, and pan gestures on user interface controls.
@@ -58,10 +54,6 @@ The Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) cl
 ## [Localization](localization/index.md)
 
 The built-in .NET localization framework can be used to build cross-platform multilingual applications with Xamarin.Forms.
-
-## [Local Databases](databases.md)
-
-Xamarin.Forms supports database-driven applications using the SQLite database engine, which makes it possible to load and save objects in shared code.
 
 ## [Messaging Center](messaging-center.md)
 

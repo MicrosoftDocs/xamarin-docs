@@ -1,36 +1,29 @@
 ---
-title: "Xamarin Live Player Setup"
-description: "This document describes how to set up the Xamarin Live Player and use it to make live edits to a running application."
+title: "Xamarin Live Player Visual Studio configuration"
+description: "This document describes how to use the Xamarin Live Player to make live edits to a running application."
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 author: lobrien
 ms.author: laobri
-ms.date: 08/08/2018
+ms.date: 06/13/2019
 ---
 
-# Xamarin Live Player Setup
-
-Xamarin Live Player lets you make live edits to your app and have those changes reflected live on the device. Your code runs inside the Xamarin Live Player app – no need to set up emulators or to use cables to deploy! This article describes how to set up Xamarin Live Player.
+# Xamarin Live Player Visual Studio configuration
 
 ![Preview feature](~/media/shared/preview.png)
 
-> [!NOTE]
-> Live Player Preview is only available in Visual Studio 2017.
+> [!WARNING]
+> The Xamarin Live Player Preview has ended. The app is no longer available. The instructions below are provided for customers continuing to use the preview with Visual Studio 2017.
 
-## 1. Get the Android App
+> [!TIP]
+> You can use the [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 or 
+> Visual Studio for Mac to view your screen designs as you edit them.
 
-Xamarin Live Player is available for Android by intalling directly from [HockeyApp](https://aka.ms/xlp-hockeyapp).
+# [Visual Studio 2017](#tab/windows)
 
-# [Visual Studio](#tab/windows)
+## Using Xamarin Live Player
 
-## 2. Get Visual Studio 2017
-
-Xamarin Live Player requires:
-
-- Visual Studio 2017 15.4 or newer.
-- A Visual Studio computer and a device on the same WiFi network.
-
-## 3. Using Xamarin Live Player for the first time
+You must already have the Xamarin Live Player app on your device. It is no longer available to download.
 
 1. Open **Visual Studio 2017**.
 2. Go to **Tools > Options...** and select the **Xamarin > Other** tab.
@@ -64,15 +57,9 @@ Xamarin Live Player requires:
 
 # [Visual Studio for Mac](#tab/macos)
 
-## 2. Get Visual Studio for Mac
+## Using Xamarin Live Player
 
-Xamarin Live Player requires:
-
-- OS X 10.11, macOS 10.12, or greater
-- Visual Studio for Mac
-- A Mac and a device on the same WiFi network
-
-## 3. Using Xamarin Live Player for the First Time
+You must already have the Xamarin Live Player app on your device. It is no longer available to download.
 
 1. Open **Visual Studio for Mac**.
 2. Go to **Visual Studio > Preferences...** and select the **Projects > Xamarin Live Player (Preview)** tab.
@@ -113,5 +100,4 @@ If you experience any issues or can not connect, see [limitations and troublesho
 
 ## Related Links
 
-- [Samples to use with Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)
 - [Troubleshooting](~/tools/live-player/troubleshooting.md)

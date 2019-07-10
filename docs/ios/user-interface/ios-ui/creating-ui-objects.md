@@ -182,4 +182,4 @@ When user interface objects are added programmatically to a `View` or `ViewContr
 
 ## Related Links
 
-- [Controls (sample)](https://developer.xamarin.com/samples/Controls/)
+- [Controls (sample)](https://developer.xamarin.com/samples/monotouch/Controls/)

@@ -379,7 +379,7 @@ if (Device.RuntimePlatform == Device.iOS)
 }
 ```
 
-You can also do something similar in XAML using the `OnPlatform` and `On` classes. First include property elements for the `Padding` property near the top of the page:
+You can also do something similar in XAML using the [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) and [`On`](xref:Xamarin.Forms.On) classes. First include property elements for the `Padding` property near the top of the page:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -518,11 +518,12 @@ This is the standard way to set a platform-dependent `Padding` property in XAML.
 </ContentPage>
 ```
 
+> [!NOTE]
+> The `OnPlatform` markup extension can also be used in XAML to customize UI appearance on a per-platform basis. It provides the same functionality as the `OnPlatform` and `On` classes, but with a more concise representation. For more information, see [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
+
 ## Summary
 
 With property elements and attached properties, much of the basic XAML syntax has been established. However, sometimes you need to set properties to objects in an indirect manner, for example, from a resource dictionary. This approach is covered in the next part, Part [3. XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md).
-
-
 
 ## Related Links
 

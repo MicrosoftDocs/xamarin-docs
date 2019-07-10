@@ -27,7 +27,7 @@ For this example assume that the name of the Xamarin.iOS project is `iPhoneApp1`
 
 4.  Open a new `Terminal.app` window.
 
-5.  Type `cd ` into the Terminal.app window, and then drag & drop the `generated session id` folder into the `Terminal.app` window:
+5.  Type `cd` into the Terminal.app window, and then drag & drop the `generated session id` folder into the `Terminal.app` window:
 
     ![](modify-ipa-images/session-id-folder.png "Locating the generated session id folder in Finder")
 
@@ -48,7 +48,7 @@ For this example assume that the name of the Xamarin.iOS project is `iPhoneApp1`
 
 12.  Find the line that includes `tool /usr/bin/codesign execution started with arguments: -v --force --sign`.
 
-13.  Type `/usr/bin/codesign ` into the Terminal.app window from step 8.
+13.  Type `/usr/bin/codesign` into the Terminal.app window from step 8.
 
 14.  Copy all of the arguments starting with `-v` from the line in step 12, and paste them into the Terminal.app window.
 

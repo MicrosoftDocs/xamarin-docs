@@ -1,6 +1,6 @@
 ---
 title: "Building HTML views using Razor Templates"
-description: " Using a full-screen webpage to render HTML can be a simple and effective way to render complex formatting in a cross-platform way, especially if you already have the HTML, Javascript and CSS from a website project."
+description: " Using a full-screen webpage to render HTML can be a simple and effective way to render complex formatting in a cross-platform way, especially if you already have the HTML, JavaScript and CSS from a website project."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 author: asb3993
@@ -12,11 +12,11 @@ ms.date: 07/24/2018
 
 In the mobile development world the term “hybrid app” typically refers to an application that presents some (or all) of its screens as HTML pages inside a hosted web viewer control.
 
-There are some development environments that let you build your mobile app entirely in HTML and Javascript, however those apps can suffer from performance problems when trying to accomplish complex processing or UI effects and are also limited in the platform features they can access.
+There are some development environments that let you build your mobile app entirely in HTML and JavaScript, however those apps can suffer from performance problems when trying to accomplish complex processing or UI effects and are also limited in the platform features they can access.
 
-Xamarin offers the best of both worlds, especially when utilizing the Razor HTML templating engine. With Xamarin you have the flexibility to build cross-platform templated HTML views that use Javascript and CSS, but also have complete access to the underlying platform APIs and fast processing using C#.
+Xamarin offers the best of both worlds, especially when utilizing the Razor HTML templating engine. With Xamarin you have the flexibility to build cross-platform templated HTML views that use JavaScript and CSS, but also have complete access to the underlying platform APIs and fast processing using C#.
 
-This document explains how to use the Razor templating engine build HTML+Javascript+CSS views that can be used across mobile platforms using Xamarin.
+This document explains how to use the Razor templating engine to build HTML+JavaScript+CSS views that can be used across mobile platforms using Xamarin.
 
 ## Using Web Views Programmatically
 
@@ -46,7 +46,7 @@ Displaying HTML in a WebView control using Xamarin.Android is accomplished in ju
 // webView is declared in an AXML layout file
 var webView = FindViewById<WebView> (Resource.Id.webView);
 
-// enable Javascript execution in your html view so you can provide "alerts" and other js
+// enable JavaScript execution in your html view so you can provide "alerts" and other js
 webView.SetWebChromeClient(new WebChromeClient());
 
 var html = "<html><h1>Hello</h1><p>World</p></html>";
@@ -99,7 +99,7 @@ The Build Action for all static content files should be **AndroidAsset**.
 
  ![Android project build action: AndroidAsset](images/image4_250x71.png)
 
-### Calling C# from HTML and Javascript
+### Calling C# from HTML and JavaScript
 
 When an html page is loaded into a web view, it treats the links and forms as it would if the page was loaded from a server. This means that if the user clicks a link or submits a form the web view will attempt to navigate to the specified target.
 
@@ -122,7 +122,7 @@ Form actions follow the same rule.
 <form method="get" action="somepage.html"></form>
 ```
 
-You’re not going to host a web server on the client; however, you can use the same server communication techniques employed in today’s responsive design patterns to call services over HTTP GET, and handle responses asynchronously by emitting Javascript (or calling Javascript already hosted in the web view). This enables you to easily pass data from the HTML back into C# code for processing then display the results back on the HTML page.
+You’re not going to host a web server on the client; however, you can use the same server communication techniques employed in today’s responsive design patterns to call services over HTTP GET, and handle responses asynchronously by emitting JavaScript (or calling JavaScript already hosted in the web view). This enables you to easily pass data from the HTML back into C# code for processing then display the results back on the HTML page.
 
 Both iOS and Android provide a mechanism for application code to intercept these navigation events so that app code can respond (if required). This feature is crucial to building hybrid apps because it lets native code interact with the web view.
 
@@ -162,13 +162,13 @@ and then set the client on the web view:
 webView.SetWebViewClient (new HybridWebViewClient ());
 ```
 
-### Calling Javascript from C#
+### Calling JavaScript from C#
 
-In addition to telling a web view to load a new HTML page, C# code can also run Javascript within the currently displayed page. Entire Javascript code blocks can be created using C# strings and executed, or you can craft method calls to Javascript already available on the page via `script` tags.
+In addition to telling a web view to load a new HTML page, C# code can also run JavaScript within the currently displayed page. Entire JavaScript code blocks can be created using C# strings and executed, or you can craft method calls to JavaScript already available on the page via `script` tags.
 
 #### Android
 
-Create the Javascript code to be executed and then prefix it with “javascript:” and instruct the web view to load that string:
+Create the JavaScript code to be executed and then prefix it with “javascript:” and instruct the web view to load that string:
 
 ```csharp
 var js = "alert('test');";
@@ -177,7 +177,7 @@ webView.LoadUrl ("javascript:" + js);
 
 #### iOS
 
-iOS web views provide a method specifically to call Javascript:
+iOS web views provide a method specifically to call JavaScript:
 
 ```csharp
 var js = "alert('test');";
@@ -189,9 +189,9 @@ webView.EvaluateJavascript (js);
 This section has introduced the features of the web view controls on both Android and iOS that let us build hybrid applications with Xamarin, including:
 
 -  The ability to load HTML from strings generated in code,
--  The ability to reference local files (CSS, Javascript, Images or other HTML files),
+-  The ability to reference local files (CSS, JavaScript, Images or other HTML files),
 -  The ability to intercept navigation requests in C# code,
--  The ability to call Javascript from C# code.
+-  The ability to call JavaScript from C# code.
 
 
 The next section introduces Razor, which makes it easy to create the HTML to use in hybrid apps.
@@ -200,7 +200,7 @@ The next section introduces Razor, which makes it easy to create the HTML to use
 
 Razor is a templating engine that was introduced with ASP.NET MVC, originally to run on the server and generate HTML to be served to web browsers.
 
-The Razor templating engine extends standard HTML syntax with C# so that you can express the layout and incorporate CSS stylesheets and Javascript easily. The template can reference a Model class, which can be any custom type and whose properties can be accessed directly from the template. One of its main advantages is the ability to mix HTML and C# syntax easily.
+The Razor templating engine extends standard HTML syntax with C# so that you can express the layout and incorporate CSS stylesheets and JavaScript easily. The template can reference a Model class, which can be any custom type and whose properties can be accessed directly from the template. One of its main advantages is the ability to mix HTML and C# syntax easily.
 
 Razor templates are not limited to server-side use, they can also be included in Xamarin apps. Using Razor templates along with the ability to work with web views programmatically enables sophisticated cross-platform hybrid applications to be built with Xamarin.
 
@@ -365,7 +365,7 @@ The output of the above template is shown running on the iOS Simulator and Andro
 
  ![Rupert X Monkey](images/image9_520x277.png)
 
-This section has covered the basics of using Razor templates to render simple read-only views. The next section explains how to build more complete apps using Razor that can accept user-input and interoperate between Javascript in the HTML view and C#.
+This section has covered the basics of using Razor templates to render simple read-only views. The next section explains how to build more complete apps using Razor that can accept user-input and interoperate between JavaScript in the HTML view and C#.
 
 ## Using Razor Templates with Xamarin
 
@@ -387,7 +387,7 @@ The default template solution contents for iPhone and Android projects are shown
 
  ![iPhone and Android templates](images/image10_428x310.png)
 
-The templates give you ready-to-go application infrastructure to load a Razor template with a data model object, process user input and communicate back to the user via Javascript.
+The templates give you ready-to-go application infrastructure to load a Razor template with a data model object, process user input and communicate back to the user via JavaScript.
 
 The important parts of the solution are:
 
@@ -401,7 +401,7 @@ The following section explains how the projects work.
 
 ### Static Content
 
-Static content includes CSS stylesheets, images, Javascript files or other content that can be linked from or referenced by an HTML file being displayed in a web view.
+Static content includes CSS stylesheets, images, JavaScript files or other content that can be linked from or referenced by an HTML file being displayed in a web view.
 
 The template projects include a minimal style sheet to demonstrate how to include static content in your hybrid app. The CSS stylesheet is referenced in the template like this:
 
@@ -409,11 +409,11 @@ The template projects include a minimal style sheet to demonstrate how to includ
 <link rel="stylesheet" href="style.css" />
 ```
 
-You can add whatever stylesheet and Javascript files you need, including frameworks like JQuery.
+You can add whatever stylesheet and JavaScript files you need, including frameworks like JQuery.
 
 ### Razor cshtml Templates
 
-The template includes a Razor **.cshtml** file that has pre-written code to help communicate data between the HTML/Javascript and C#. This will let you build sophisticated hybrid apps that don’t just display read-only data from the Model, but also accept user-input in the HTML and pass it back to C# code for processing or storage.
+The template includes a Razor **.cshtml** file that has pre-written code to help communicate data between the HTML/JavaScript and C#. This will let you build sophisticated hybrid apps that don’t just display read-only data from the Model, but also accept user-input in the HTML and pass it back to C# code for processing or storage.
 
 #### Rendering the template
 
@@ -431,7 +431,7 @@ An example can be seen in how RazorView’s button is handled. The button has th
 <input type="button" name="UpdateLabel" value="Click" onclick="InvokeCSharpWithFormValues(this)" />
 ```
 
-The `InvokeCSharpWithFormValues` Javascript function reads all of the values from the HTML Form and sets the `location.href` for the web view:
+The `InvokeCSharpWithFormValues` JavaScript function reads all of the values from the HTML Form and sets the `location.href` for the web view:
 
 ```javascript
 location.href = "hybrid:" + elm.name + "?" + qs;
@@ -463,13 +463,13 @@ After handling the URL, the method aborts the navigation so that the web view do
 
 #### Manipulating the template from C#
 
-Communication to a rendered HTML web view from C# is done by calling Javascript in the web view. On iOS, this is done by calling `EvaluateJavascript` on the UIWebView:
+Communication to a rendered HTML web view from C# is done by calling JavaScript in the web view. On iOS, this is done by calling `EvaluateJavascript` on the UIWebView:
 
 ```csharp
 webView.EvaluateJavascript (js);
 ```
 
-On Android, Javascript can be invoked in the web view by loading the Javascript as a URL using the `"javascript:"` URL scheme:
+On Android, JavaScript can be invoked in the web view by loading the JavaScript as a URL using the `"javascript:"` URL scheme:
 
 ```csharp
 webView.LoadUrl ("javascript:" + js);
@@ -479,7 +479,7 @@ webView.LoadUrl ("javascript:" + js);
 
 These templates do not make use of native controls on each platform – the entire screen is filled with a single web view.
 
-HTML can be great for prototyping, and displaying the kinds of things the web is best at such as rich text and responsive layout. However not all tasks are suited to HTML and Javascript – scrolling through long lists of data, for example, performs better using native UI controls (such as UITableView on iOS or ListView on Android).
+HTML can be great for prototyping, and displaying the kinds of things the web is best at such as rich text and responsive layout. However not all tasks are suited to HTML and JavaScript – scrolling through long lists of data, for example, performs better using native UI controls (such as UITableView on iOS or ListView on Android).
 
 The web views in the template can easily be augmented with platform-specific controls – simply edit the **MainStoryboard.storyboard** in the iOS designer or the **Resources/layout/Main.axml** on Android.
 

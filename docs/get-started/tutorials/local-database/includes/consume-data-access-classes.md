@@ -68,7 +68,7 @@ In this exercise you will create a user interface to consume the previously crea
 
     [![Screenshot of local SQLite.NET database data persistence, on iOS and Android](../images/consume-data-access-classes.png "Local database data persistence")](../images/consume-data-access-classes-large.png#lightbox "Local database data persistence")
 
-    For more information local databases in Xamarin.Forms, see [Xamarin.Forms Local Databases (guide)](~/xamarin-forms/app-fundamentals/databases.md)
+    For more information local databases in Xamarin.Forms, see [Xamarin.Forms Local Databases (guide)](~/xamarin-forms/data-cloud/data/databases.md)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -138,4 +138,4 @@ In this exercise you will create a user interface to consume the previously crea
 
     [![Screenshot of local SQLite.NET database data persistence, on iOS and Android](../images/consume-data-access-classes.png "Local database data persistence")](../images/consume-data-access-classes-large.png#lightbox "Local database data persistence")
 
-    For more information local databases in Xamarin.Forms, see [Xamarin.Forms Local Databases (guide)](~/xamarin-forms/app-fundamentals/databases.md)
+    For more information local databases in Xamarin.Forms, see [Xamarin.Forms Local Databases (guide)](~/xamarin-forms/data-cloud/data/databases.md)

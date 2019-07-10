@@ -245,8 +245,8 @@ pixels.
 
 
 #### Padding
-`
-CardView` offers five padding attributes to position content within the
+
+`CardView` offers five padding attributes to position content within the
 card. You can set them in your layout XML or you can call
 analogous methods in your code:
 

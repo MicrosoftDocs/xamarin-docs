@@ -17,7 +17,7 @@ To start a foreground service, the app must dispatch an Intent that tells Androi
 This C# extension method is an example of how to start a foreground service. On Android 8.0 and higher it will use the `StartForegroundService` method, otherwise the older `StartService` method will be used.  
 
 ```csharp
-public static void StartForegroundServiceComapt<T>(this Context context, Bundle args = null) where T : Service
+public static void StartForegroundServiceCompat<T>(this Context context, Bundle args = null) where T : Service
 {
     var intent = new Intent(context, typeof(T));
     if (args != null) 

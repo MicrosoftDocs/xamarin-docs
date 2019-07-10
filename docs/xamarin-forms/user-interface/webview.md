@@ -138,7 +138,7 @@ body,p,h1 {
 
 Note that the fonts specified in the above CSS will need to be customized for each platform, as not every platform has the same fonts.
 
-To display local content using a `WebView`, you'll need to open the HTML file like any other, then load the contents as a string into the `Html` property of an `HtmlWebViewSource`. For more information on opening files, see [Working with Files](~/xamarin-forms/app-fundamentals/files.md).
+To display local content using a `WebView`, you'll need to open the HTML file like any other, then load the contents as a string into the `Html` property of an `HtmlWebViewSource`. For more information on opening files, see [Working with Files](~/xamarin-forms/data-cloud/data/files.md).
 
 The following screenshots show the result of displaying local content on each platform:
 

@@ -1,29 +1,15 @@
+Before attempting this tutorial, you should have successfully completed the:
+
+- [Build your first Xamarin.Forms app](~/get-started/first-app/index.md) quickstart.
+- [StackLayout](~/get-started/tutorials/stacklayout/index.yml) tutorial.
+- [Entry](~/get-started/tutorials/entry/index.yml) tutorial.
+
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
 > - Respond to an application starting, sleeping, or resuming.
 > - Persist data across lifecycle state changes.
 
-# [Visual Studio](#tab/vswin)
+You will use Visual Studio 2019, or Visual Studio for Mac, to create a simple application that demonstrates how to persist data across lifecycle state changes. The following screenshots show the final application:
 
-### Prerequisites
-
-To complete this tutorial you should have Visual Studio 2017 (latest release), with the **Mobile development with .NET** workload installed. In addition, you will require a paired Mac to build the tutorial application on iOS. For information about installing the Xamarin platform, see [Installing Xamarin](~/get-started/installation/index.md). For information about connecting Visual Studio 2017 to a Mac build host, see [Pair to Mac for Xamarin.iOS development](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-
-Before attempting this tutorial, you should have successfully completed the:
-
-- [Build your first Xamarin.Forms app](~/get-started/first-app/index.md) quickstart.
-- [StackLayout](~/get-started/tutorials/stacklayout/index.yml) tutorial.
-- [Entry](~/get-started/tutorials/entry/index.yml) tutorial.
-
-# [Visual Studio for Mac](#tab/vsmac)
-
-### Prerequisites
-
-To complete this tutorial you should have Visual Studio for Mac (latest release), with iOS and Android platform support installed. In addition, you will also require Xcode (latest release). For more information about installing the Xamarin platform, see [Installing Xamarin](~/get-started/installation/index.md).
-
-Before attempting this tutorial, you should have successfully completed the:
-
-- [Build your first Xamarin.Forms app](~/get-started/first-app/index.md) quickstart.
-- [StackLayout](~/get-started/tutorials/stacklayout/index.yml) tutorial.
-- [Entry](~/get-started/tutorials/entry/index.yml) tutorial.
+[![Screenshot of an Entry whose Text property is persisted across lifecycle state changes, on iOS and Android](../images/persist-data.png "Entry whose Text property persists across lifecycle state changes")](../images/persist-data-large.png#lightbox "Entry whose Text property persists across lifecycle state changes")

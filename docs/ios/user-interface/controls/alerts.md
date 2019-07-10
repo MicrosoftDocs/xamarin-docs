@@ -55,7 +55,7 @@ okayButton.TouchUpInside += (sender, e) => {
 
 Displaying an alert with multiple options, is done in a similar fashion but add two actions. For example, the following screenshot shows an alert with two buttons:
 
- ![ Alert with two Buttons](alerts-images/alert2.png)
+ ![Alert with two Buttons](alerts-images/alert2.png)
 
 ```csharp
 okayCancelButton.TouchUpInside += ((sender, e) => {
@@ -106,5 +106,5 @@ actionSheetButton.TouchUpInside += ((sender, e) => {
 
 ## Related Links
 
-- [Controls (sample)](https://developer.xamarin.com/samples/Controls/)
+- [Controls (sample)](https://developer.xamarin.com/samples/monotouch/Controls/)
 - [Alert Controller](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)

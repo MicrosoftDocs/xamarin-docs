@@ -10,7 +10,7 @@
 
     This code sets the [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) event to an event handler named `OnEntryTextChanged`, and the [`Completed`](xref:Xamarin.Forms.Entry.Completed) event to an event handler named `OnEntryCompleted`. Both event handlers will be created in the next step.
 
-1. In **Solution Explorer**, in the **LabelTutorial** project, expand **MainPage.xaml** and double-click **MainPage.xaml.cs** to open it. Then, in **MainPage.xaml.cs**, add the `OnEntryTextChanged` and `OnEntryCompleted` event handlers to the class:
+1. In **Solution Explorer**, in the **EntryTutorial** project, expand **MainPage.xaml** and double-click **MainPage.xaml.cs** to open it. Then, in **MainPage.xaml.cs**, add the `OnEntryTextChanged` and `OnEntryCompleted` event handlers to the class:
 
     ```csharp
     void OnEntryTextChanged(object sender, TextChangedEventArgs e)
@@ -52,7 +52,7 @@
 
     This code sets the [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) event to an event handler named `OnEntryTextChanged`, and the [`Completed`](xref:Xamarin.Forms.Entry.Completed) event to an event handler named `OnEntryCompleted`. Both event handlers will be created in the next step.
 
-1. In **Solution Pad**, in the **LabelTutorial** project, expand **MainPage.xaml** and double-click **MainPage.xaml.cs** to open it. Then, in **MainPage.xaml.cs**, add the `OnEntryTextChanged` and `OnEntryCompleted` event handlers to the class:
+1. In **Solution Pad**, in the **EntryTutorial** project, expand **MainPage.xaml** and double-click **MainPage.xaml.cs** to open it. Then, in **MainPage.xaml.cs**, add the `OnEntryTextChanged` and `OnEntryCompleted` event handlers to the class:
 
     ```csharp
     void OnEntryTextChanged(object sender, TextChangedEventArgs e)

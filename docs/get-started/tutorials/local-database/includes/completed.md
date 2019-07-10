@@ -15,5 +15,5 @@ To learn more about the basics of creating mobile applications with Xamarin.Form
 ## Related links
 
 - [LocalDatabaseTutorial (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/LocalDatabaseTutorial)
-- [Xamarin.Forms Local Databases (guide)](~/xamarin-forms/app-fundamentals/databases.md)
+- [Xamarin.Forms Local Databases (guide)](~/xamarin-forms/data-cloud/data/databases.md)
 - [SQLite.NET NuGet Package](https://www.nuget.org/packages/sqlite-net-pcl/)

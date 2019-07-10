@@ -252,7 +252,7 @@ Line up with the definition in the `MainWindow.h` file in Xcode:
 @property (nonatomic, retain) IBOutlet NSSplitView *SplitView;
 ```
 
-As you can see, Visual Studio for Mac listens for changes to the `.h` file, and then automatically synchronizes those changes in the respective `.designer.cs` file to expose them to your application. You may also notice that `SplitViewController.designer.cs` is a partial class, so that Visual Studio for Mac doesn't have to modify `SplitViewController.cs ` which would overwrite any changes that we have made to the class.
+As you can see, Visual Studio for Mac listens for changes to the `.h` file, and then automatically synchronizes those changes in the respective `.designer.cs` file to expose them to your application. You may also notice that `SplitViewController.designer.cs` is a partial class, so that Visual Studio for Mac doesn't have to modify `SplitViewController.cs` which would overwrite any changes that we have made to the class.
 
 You normally will never need to open the `SplitViewController.designer.cs` yourself, it was presented here for educational purposes only.
 

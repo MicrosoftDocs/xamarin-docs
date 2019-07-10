@@ -48,7 +48,7 @@ protected override void OnResume()
 ```
 
 > [!IMPORTANT]
-> On Android, the `OnStart` method will be called on rotation as well as when the application first starts, if the the main activity lacks `ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation` in the `[Activity()]` attribute.
+> On Android, the `OnStart` method will be called on rotation as well as when the application first starts, if the main activity lacks `ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation` in the `[Activity()]` attribute.
 
 <a name="page" />
 
@@ -76,4 +76,4 @@ There are four events on the [`Application`](xref:Xamarin.Forms.Application) cla
 - `ModalPopped` - raised after a page has been popped modally.
 
 > [!NOTE]
-> The `ModalPopping` event event arguments, of type `ModalPoppingEventArgs`, contain a `Cancel` property. When `Cancel` is set to `true` the modal pop is cancelled.
+> The `ModalPopping` event arguments, of type `ModalPoppingEventArgs`, contain a `Cancel` property. When `Cancel` is set to `true` the modal pop is cancelled.

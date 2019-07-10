@@ -115,7 +115,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     Save the changes to **NotesPage.xaml** by pressing **CTRL+S**, and close the file.
 
-5. In the **Solution Pad**, in the **Notes** project, double-click **NoteEntryPage.xaml** to open it. Then replace the existing code with the following code:
+5. In **Solution Explorer**, in the **Notes** project, double-click **NoteEntryPage.xaml** to open it. Then replace the existing code with the following code:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -217,7 +217,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     Save the changes to **App.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
 
-3. In **Solution Explorer**, in the **Notes** project, double-click **NotesPage.xaml** to open it. Then replace the existing code with the following code:
+3. In the **Solution Pad**, in the **Notes** project, double-click **NotesPage.xaml** to open it. Then replace the existing code with the following code:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -256,7 +256,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     Save the changes to **NotesPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
 
-5. In **Solution Explorer**, in the **Notes** project, double-click **NoteEntryPage.xaml** to open it. Then replace the existing code with the following code:
+5. In the **Solution Pad**, in the **Notes** project, double-click **NoteEntryPage.xaml** to open it. Then replace the existing code with the following code:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>

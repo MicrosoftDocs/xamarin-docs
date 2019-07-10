@@ -95,7 +95,7 @@ As stated above, a Split View Controller is often used in situations where you a
 
 ### Accessing Master and Detail
 
-If you need to access the Master and Detail View Controllers programmatically, use the `ViewControllers ` property of the Split View Controller. For example:
+If you need to access the Master and Detail View Controllers programmatically, use the `ViewControllers` property of the Split View Controller. For example:
 
 ```csharp
 // Gain access to master and detail view controllers

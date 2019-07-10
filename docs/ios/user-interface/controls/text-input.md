@@ -92,4 +92,4 @@ textview1.DataDetectorTypes = UIDataDetectorType.PhoneNumber | UIDataDetectorTyp
 
 ## Related Links
 
-- [Controls (sample)](https://developer.xamarin.com/samples/Controls/)
+- [Controls (sample)](https://developer.xamarin.com/samples/monotouch/Controls/)

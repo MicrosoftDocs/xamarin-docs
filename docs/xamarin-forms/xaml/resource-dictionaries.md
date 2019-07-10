@@ -6,7 +6,8 @@ ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/21/2018
+ms.date: 05/28/2019
+ms.custom: video
 ---
 
 # Resource Dictionaries
@@ -303,3 +304,10 @@ This article explained how to create and consume a [`ResourceDictionary`](xref:X
 - [Resource Dictionaries (sample)](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
 - [Styles](~/xamarin-forms/user-interface/styles/index.md)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/XamarinForms-101-Application-Resources/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
+

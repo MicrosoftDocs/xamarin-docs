@@ -205,7 +205,7 @@ zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 The sample project
 [OneABIPerAPK](https://github.com/xamarin/monodroid-samples/tree/master/OneABIPerAPK)
 is a simple Android project that will demonstrate how to calculate an
-ABI specific version number and build three seperate APK's for each of
+ABI specific version number and build three separate APK's for each of
 the following ABI's:
 
 -  armeabi
@@ -228,7 +228,7 @@ the previous sections:
    and using the **AndroidManifest.XML** that was created in the previous
    step.
 
-1. [Sign the APK ](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66)
+1. [Sign the APK](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66)
    with a production keystore.
 
 1. [Zipalign](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L67)
@@ -256,7 +256,7 @@ of these folders with their contents:
 > The build process outlined in this guide may be
 implemented in one of many different build systems. Although we don't
 have a pre-written example, it should also be possible with
-[Powershell](http://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) or
+[Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) or
 [Fake](http://fsharp.github.io/FAKE/).
 
 
@@ -272,6 +272,6 @@ that has it's build scripted using Rake.
 
 ## Related Links
 
-- [OneABIPerAPK (sample)](https://developer.xamarin.com/samples/OneABIPerAPK/)
+- [OneABIPerAPK (sample)](https://developer.xamarin.com/samples/monodroid/OneABIPerAPK/)
 - [Publishing an Application](~/android/deploy-test/publishing/index.md)
 - [Multiple APK Support for Google Play](https://developer.android.com/google/play/publishing/multiple-apks.html)

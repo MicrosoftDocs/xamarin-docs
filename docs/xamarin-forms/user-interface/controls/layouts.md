@@ -11,7 +11,7 @@ ms.date: 05/21/2018
 
 # Xamarin.Forms Layouts
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/FormsGallery/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 
 _Xamarin.Forms Layouts are used to compose user-interface controls into visual structures._
 
@@ -111,6 +111,6 @@ These classes derive from [`Layout<View>`](xref:Xamarin.Forms.Layout`1).
 
 ## Related Links
 
-- [Xamarin.Forms FormsGallery sample](https://developer.xamarin.com/samples/FormsGallery/)
+- [Xamarin.Forms FormsGallery sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 - [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [Xamarin.Forms API Documentation](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

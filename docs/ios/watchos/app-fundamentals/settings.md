@@ -42,7 +42,7 @@ In the **iPhone app** in your solution (*not* the watch app or extension):
   **Root.plist** with the value set to the app group you've
   configured, (eg. `group.com.xamarin.WatchSettings` in the sample):
 
-   [ ![](settings-images/settings-appgroup-sml.png "Add a ApplicationGroupContainerIdentifier key to the Root.plist")](settings-images/settings-appgroup.png#lightbox)
+   [![](settings-images/settings-appgroup-sml.png "Add a ApplicationGroupContainerIdentifier key to the Root.plist")](settings-images/settings-appgroup.png#lightbox)
 
 4. Edit the **Settings-Watch.bundle/Root.plist** to contain the
   options you wish to use - the template file contains a group.

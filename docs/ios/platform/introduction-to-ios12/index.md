@@ -53,7 +53,7 @@ The Natural Language framework enables applications to perform various
 types of language analysis. For example, it can identify parts of speech
 and determine the language represented by a block of text.
 
-## Vision framework
+## [Vision framework](~/ios/platform/introduction-to-ios11/vision.md)
 
 The Vision framework includes an improved face detector that can detect
 faces in various orientations. Also, request revisions can select
@@ -113,7 +113,3 @@ With iOS 12, Apple has deprecated:
 to adopt Metal.
 - [`UIWebView`](xref:UIKit.UIWebView),
 [in favor of `WKWebView`](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
-
-## Related links
-
-- [Get Ready for iOS 12 (Apple)](https://developer.apple.com/ios/)

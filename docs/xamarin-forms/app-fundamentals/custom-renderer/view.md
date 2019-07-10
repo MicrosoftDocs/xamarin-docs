@@ -132,22 +132,24 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 {
   base.OnElementChanged (e);
 
-  if (Control == null) {
-    // Instantiate the native control and assign it to the Control property with
-    // the SetNativeControl method
-  }
-
   if (e.OldElement != null) {
     // Unsubscribe from event handlers and cleanup any resources
   }
 
   if (e.NewElement != null) {
+    if (Control == null) {
+      // Instantiate the native control and assign it to the Control property with
+      // the SetNativeControl method
+    }
     // Configure the control and subscribe to event handlers
   }
 }
 ```
 
-A new native control should only be instantiated once, when the `Control` property is `null`. The control should only be configured and event handlers subscribed to when the custom renderer is attached to a new Xamarin.Forms element. Similarly, any event handlers that were subscribed to should only be unsubscribed from when the element that the renderer is attached to changes. Adopting this approach will help to create a performant custom renderer that doesn't suffer from memory leaks.
+A new native control should only be instantiated once, when the `Control` property is `null`. In addition, the control should only be created, configured, and event handlers subscribed to when the custom renderer is attached to a new Xamarin.Forms element. Similarly, any event handlers that were subscribed to should only be unsubscribed from when the element that the renderer is attached to changes. Adopting this approach will help to create a performant custom renderer that doesn't suffer from memory leaks.
+
+> [!IMPORTANT]
+> The `SetNativeControl` method should only be called if `e.NewElement` is not `null`.
 
 Each custom renderer class is decorated with an `ExportRenderer` attribute that registers the renderer with Xamarin.Forms. The attribute takes two parameters – the type name of the Xamarin.Forms custom control being rendered, and the type name of the custom renderer. The `assembly` prefix to the attribute specifies that the attribute applies to the entire assembly.
 
@@ -169,15 +171,15 @@ namespace CustomRenderer.iOS
         {
             base.OnElementChanged (e);
 
-            if (Control == null) {
-                uiCameraPreview = new UICameraPreview (e.NewElement.Camera);
-                SetNativeControl (uiCameraPreview);
-            }
             if (e.OldElement != null) {
                 // Unsubscribe
                 uiCameraPreview.Tapped -= OnCameraPreviewTapped;
             }
             if (e.NewElement != null) {
+                if (Control == null) {
+                  uiCameraPreview = new UICameraPreview (e.NewElement.Camera);
+                  SetNativeControl (uiCameraPreview);
+                }
                 // Subscribe
                 uiCameraPreview.Tapped += OnCameraPreviewTapped;
             }
@@ -220,12 +222,6 @@ namespace CustomRenderer.Droid
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                cameraPreview = new CameraPreview(Context);
-                SetNativeControl(cameraPreview);
-            }
-
             if (e.OldElement != null)
             {
                 // Unsubscribe
@@ -233,6 +229,11 @@ namespace CustomRenderer.Droid
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                  cameraPreview = new CameraPreview(Context);
+                  SetNativeControl(cameraPreview);
+                }
                 Control.Preview = Camera.Open((int)e.NewElement.Camera);
 
                 // Subscribe
@@ -278,15 +279,6 @@ namespace CustomRenderer.UWP
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                ...
-                _captureElement = new CaptureElement();
-                _captureElement.Stretch = Stretch.UniformToFill;
-
-                SetupCamera();
-                SetNativeControl(_captureElement);
-            }
             if (e.OldElement != null)
             {
                 // Unsubscribe
@@ -295,6 +287,15 @@ namespace CustomRenderer.UWP
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                  ...
+                  _captureElement = new CaptureElement();
+                  _captureElement.Stretch = Stretch.UniformToFill;
+
+                  SetupCamera();
+                  SetNativeControl(_captureElement);
+                }
                 // Subscribe
                 Tapped += OnCameraPreviewTapped;
             }
