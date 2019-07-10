@@ -38,7 +38,7 @@ Known Issues:
 
  - Calling `NSObject.ValueForKey` will a `null` key will result in an exception.
  - Referencing a font by name when calling `UIFont.WithName` will cause a crash.
- - Both `NSURLSession` and NSURLConnection` no longer RC4 cipher suites during the TLS handshake for `http://` URLs.
+ - Both `NSURLSession` and `NSURLConnection` no longer RC4 cipher suites during the TLS handshake for `http://` URLs.
  - Apps can hang if they modify a superview's geometry in either the `ViewWillLayoutSubviews` or `LayoutSubviews` methods.
  - For all SSL/TLS connections, the RC4 symmetric cipher is now disabled by default. Additionally, the Secure Transport API no longer supports SSLv3 and it is recommended that the app stop using SHA-1 and 3DES cryptography as soon as possible.
 
