@@ -84,7 +84,9 @@ compressed when added to the zip file.
 When the expansion files are downloaded, Google Play will use the following
 scheme to name the expansion:
 
-    [main|patch].<expansion-version>.<package-name>.obb
+```
+[main|patch].<expansion-version>.<package-name>.obb
+```
 
 The three components of this scheme are:
 

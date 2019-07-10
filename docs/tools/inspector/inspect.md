@@ -35,10 +35,12 @@ can inspect the state of the application live.
 For example, on iOS, we might want to locate our UIApplication delegate class,
 which is our main driver (where we store a lot of the application state):
 
-    var del = (MyApp.AppDelegate) UIApplication.SharedApplication.Delegate
-    del.Database.GetAllCustomers ()
-    ...
-    del.Database.AddCustomer (...)
+```csharp
+var del = (MyApp.AppDelegate) UIApplication.SharedApplication.Delegate
+del.Database.GetAllCustomers ()
+...
+del.Database.AddCustomer (...)
+```
 
 (Note that each submission occurs in a multiline editor. `Shift + Enter` will
 create a new line, and `Cmd + Enter` (`Ctrl + Enter` on Windows) will submit the

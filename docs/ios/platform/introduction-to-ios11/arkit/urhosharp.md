@@ -57,33 +57,33 @@ You then need to subclass the `ArkitApp` class and override the `Start` method. 
 
 The ARKit/UrhoSharp sample loads an animated character with textures and plays the animation, with the following implementation:
 
-    ```csharp
-    public class MutantDemo : ArkitApp
+```csharp
+public class MutantDemo : ArkitApp
+{
+    [Preserve]
+    public MutantDemo(ApplicationOptions opts) : base(opts) { }
+
+    Node mutantNode;
+
+    protected override void Start()
     {
-        [Preserve]
-        public MutantDemo(ApplicationOptions opts) : base(opts) { }
+        base.Start ();
 
-        Node mutantNode;
+        // Mutant
+        mutantNode = Scene.CreateChild();
+        mutantNode.Rotation = new Quaternion(x: 0, y:15, z:0);
+        mutantNode.Position = new Vector3(0, -1f, 2f); /*two meters away*/
+        mutantNode.SetScale(0.5f);
 
-        protected override void Start()
-        {
-            base.Start ();
+        var mutant = mutantNode.CreateComponent<AnimatedModel>();
+        mutant.Model = ResourceCache.GetModel("Models/Mutant.mdl");
+        mutant.Material = ResourceCache.GetMaterial("Materials/mutant_M.xml");
 
-            // Mutant
-            mutantNode = Scene.CreateChild();
-            mutantNode.Rotation = new Quaternion(x: 0, y:15, z:0);
-            mutantNode.Position = new Vector3(0, -1f, 2f); /*two meters away*/
-            mutantNode.SetScale(0.5f);
-
-            var mutant = mutantNode.CreateComponent<AnimatedModel>();
-            mutant.Model = ResourceCache.GetModel("Models/Mutant.mdl");
-            mutant.Material = ResourceCache.GetMaterial("Materials/mutant_M.xml");
-
-            var animation = mutantNode.CreateComponent<AnimationController>();
-            animation.Play("Animations/Mutant_HipHop1.ani", 0, true, 0.2f);
-        }
+        var animation = mutantNode.CreateComponent<AnimationController>();
+        animation.Play("Animations/Mutant_HipHop1.ani", 0, true, 0.2f);
     }
-    ```
+}
+```
 
 And that is really all that you have to do at this point to have your 3D content displayed in augmented reality.
 

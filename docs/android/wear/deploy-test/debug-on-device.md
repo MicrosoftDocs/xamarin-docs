@@ -77,8 +77,10 @@ Use the following steps to connect your Wear device to your Phone:
 3.  Enable **Debugging over Bluetooth**. You should see the following status
     displayed on the screen of the Android Wear app:
 
-        Host: disconnected
-        Target: connected
+    ```
+    Host: disconnected
+    Target: connected
+    ```
 
 4.  Connect the phone to your computer over USB. On your computer, 
     enter the following commands:
@@ -100,15 +102,19 @@ Use the following steps to connect your Wear device to your Phone:
     **ADB Debugging**. In the Android Wear app, you should 
     see the status change to:
 
-        Host: connected
-        Target: connected
+    ```
+    Host: connected
+    Target: connected
+    ```
 
 6.  After you complete the above steps, running `adb devices` shows the
     status of both the phone and the Android Wear device:
 
-        List of devices attached
-        127.0.0.1:4444    device
-        019ad61df0a69399  device
+    ```
+    List of devices attached
+    127.0.0.1:4444    device
+    019ad61df0a69399  device
+    ```
 
 At this point, you can deploy your app to the Wear device.
 

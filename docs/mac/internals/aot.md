@@ -37,22 +37,22 @@ Each option has a number of benefits and tradeoffs:
 
 AOT options will be added to the Mac Build pane in a future update. Until then, enabling AOT requires passing a command line argument via the “Additional mmp arguments” field in Mac Build. The options are as follows:
 
+```
+--aot[=VALUE]          Specify assemblies that should be AOT compiled
+                          - none - No AOT (default)
+                          - all - Every assembly in MonoBundle
+                          - core - Xamarin.Mac, System, mscorlib
+                          - sdk - Xamarin.Mac.dll and BCL assemblies
+                          - |hybrid after option enables hybrid AOT which
+                          allows IL stripping but is slower (only valid
+                          for 'all')
+                          - Individual files can be included for AOT via +
+                          FileName.dll and excluded via -FileName.dll
 
-      --aot[=VALUE]          Specify assemblies that should be AOT compiled
-                               - none - No AOT (default)
-                               - all - Every assembly in MonoBundle
-                               - core - Xamarin.Mac, System, mscorlib
-                               - sdk - Xamarin.Mac.dll and BCL assemblies
-                               - |hybrid after option enables hybrid AOT which
-                               allows IL stripping but is slower (only valid
-                               for 'all')
-                                - Individual files can be included for AOT via +
-                               FileName.dll and excluded via -FileName.dll
-
-                               Examples:
-                                 --aot:all,-MyAssembly.dll
-                                 --aot:core,+MyOtherAssembly.dll,-mscorlib.dll
-
+                          Examples:
+                            --aot:all,-MyAssembly.dll
+                            --aot:core,+MyOtherAssembly.dll,-mscorlib.dll
+```
 
 
 ## Hybrid AOT

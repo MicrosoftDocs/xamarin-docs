@@ -468,7 +468,9 @@ when packaging Release applications.
     One specific case is if you are getting the following error
     during the `dx` compilation.
 
-        com.android.dex.DexException: Too many classes in --main-dex-list, main dex capacity exceeded
+    ```
+    com.android.dex.DexException: Too many classes in --main-dex-list, main dex capacity exceeded
+    ```
 
     If you are getting this error you can add the following to the
     .csproj.

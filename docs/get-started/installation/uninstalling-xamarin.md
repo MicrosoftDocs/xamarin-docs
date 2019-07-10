@@ -196,12 +196,16 @@ To run the script, do the following steps:
 
 2.  Open **Terminal** and change the working directory to where the script was downloaded:
 
-        $ cd /location/of/file
+    ```
+    cd /location/of/file
+    ```
 
 3. Make the script executable and the run it with **sudo**:
 
-        $ chmod +x ./xamarin_uninstall.sh
-        $ sudo ./xamarin_uninstall.sh
+    ```
+    chmod +x ./xamarin_uninstall.sh
+    sudo ./xamarin_uninstall.sh
+    ```
 
 4. Finally, delete the uninstall script.
 

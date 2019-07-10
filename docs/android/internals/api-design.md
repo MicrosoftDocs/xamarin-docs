@@ -484,21 +484,23 @@ For example, a sample Android app that contains a user interface layout
 and some icons ( `drawable-*/icon.png`) would keep its resources in the
 "Resources" directory of the application:
 
-    Resources/
-        drawable-hdpi/
-            icon.png
+```
+Resources/
+    drawable-hdpi/
+        icon.png
 
-        drawable-ldpi/
-            icon.png
+    drawable-ldpi/
+        icon.png
 
-        drawable-mdpi/
-            icon.png
+    drawable-mdpi/
+        icon.png
 
-        layout/
-            main.axml
+    layout/
+        main.axml
 
-        values/
-            strings.xml
+    values/
+        strings.xml
+```
 
 The native Android APIs do not operate directly with filenames, but
 instead operate on resource IDs. When you compile an Android

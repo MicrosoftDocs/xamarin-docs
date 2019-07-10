@@ -3,21 +3,24 @@ The following command line to specify a Release build of the solution **SOLUTION
 
 - On the Mac, using **xbuild**:
 
-        xbuild /p:Configuration="Release" \ 
-           /p:Platform="iPhone" \ 
-           /p:IpaPackageDir="$HOME/Builds" \
-           /t:Build MyProject.sln
+  ```
+  xbuild /p:Configuration="Release" \ 
+         /p:Platform="iPhone" \ 
+         /p:IpaPackageDir="$HOME/Builds" \
+         /t:Build MyProject.sln
+  ```
 
 The **xbuild** command is typically found in the directory **/Library/Frameworks/Mono.framework/Commands**.
 
 - On Windows, using **msbuild**:
 
-        msbuild /p:Configuration="Release" 
-            /p:Platform="iPhone" 
-            /p:IpaPackageDir="%USERPROFILE%\Builds" 
-            /p:ServerAddress="192.168.1.3" /p:ServerUser="macuser"  
-            /t:Build MyProject.sln
-
+  ```
+  msbuild /p:Configuration="Release" 
+          /p:Platform="iPhone" 
+          /p:IpaPackageDir="%USERPROFILE%\Builds" 
+          /p:ServerAddress="192.168.1.3" /p:ServerUser="macuser"  
+          /t:Build MyProject.sln
+  ```
 
 **msbuild** will not automatically expand `$( )` expressions passed in by the command line. For this reason it is recommended to use a full path when setting the `IpaPackageDir` at the command line.
 

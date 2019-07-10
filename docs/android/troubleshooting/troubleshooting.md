@@ -112,7 +112,9 @@ Xamarin.Android supports the following system properties:
 
     - Example:
 
-            adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
+      ```
+      adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
+      ```
 
 -   *debug.mono.log*: A comma-separated ('*,*') list of components that
     should print additional messages to the Android Debug Log. By

@@ -172,12 +172,14 @@ On occasion you may need to add a Storyboard to a previously non-storyboard file
     This does the equivalent of instantiating the Initial View Controller in the `FinishedLaunching` method within the App Delegate. With this option set, the application instantiates a window (See below), loads the main storyboard, and assigns an instance of the storyboard's Initial View Controller (the one beside the sourceless Segue) as the `RootViewController` property of the window and then makes the window visible on the screen.
 
 3. In the `AppDelegate`, override the default `Window` method, with the following code to implement the window property:
-        
-        public override UIWindow Window {
-            get;
-            set;
-            }
-            
+
+    ```csharp
+    public override UIWindow Window {
+        get;
+        set;
+    }
+    ```
+
 # [Visual Studio](#tab/windows)
 
 1. Create a new Storyboard file by right-clicking on the project to **Add > New File > iOS > Empty Storyboard**, as illustrated below: 
@@ -192,11 +194,13 @@ On occasion you may need to add a Storyboard to a previously non-storyboard file
 
 3. In the `AppDelegate`, override the default `Window` method, with the following code to implement the window property:
 
-        public override UIWindow Window {
-            get;
-            set;
-            }
-            
+    ```csharp
+    public override UIWindow Window {
+        get;
+        set;
+    }
+    ```
+
 -----
 
 ## Creating a Storyboard with the iOS Designer
