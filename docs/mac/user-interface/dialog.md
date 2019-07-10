@@ -408,7 +408,7 @@ If we run our application and open the Sheet, it will be attached to the window:
 
 ## Creating a Preferences Dialog
 
-Before we lay out the Preference View in Interface Builder, we'll need to add a custom segue type to handle switching out the preferences. Add a new class to your project and call it `ReplaceViewSeque `. Edit the class and make it look like the following:
+Before we lay out the Preference View in Interface Builder, we'll need to add a custom segue type to handle switching out the preferences. Add a new class to your project and call it `ReplaceViewSeque`. Edit the class and make it look like the following:
 
 ```csharp
 using System;

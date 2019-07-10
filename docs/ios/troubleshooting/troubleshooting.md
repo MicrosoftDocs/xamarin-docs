@@ -121,7 +121,7 @@ To fix this, add the following line of code to the class Foo.Bar:
 ```csharp
 public Bar (IntPtr handle) : base (handle) { }
 ```
-## Type {Foo}  does not contain a definition for `GetNativeField' and no extension method `GetNativeField' of type {Foo} could be found
+## Type {Foo}  does not contain a definition for `GetNativeField` and no extension method `GetNativeField` of type {Foo} could be found
 
 If you get this error in the designer generated files (*.xib.designer.cs), it
 means one of two things:

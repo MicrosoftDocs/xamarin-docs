@@ -410,7 +410,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-We need to use `ViewDidLoad `, instead of another method such as `Initialize`, because `ViewDidLoad ` is called *after* the OS
+We need to use `ViewDidLoad`, instead of another method such as `Initialize`, because `ViewDidLoad` is called *after* the OS
 has loaded and instantiated the User Interface from the `.storyboard` file. If we tried to access the label control before the `.storyboard` file has been fully loaded and instantiated, we’d get a `NullReferenceException` error because the label control would not be created yet.
 
 Next, we need to add the code to respond to the user clicking the button. Add the following to partial class to that we created:

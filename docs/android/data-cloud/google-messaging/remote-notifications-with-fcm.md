@@ -896,6 +896,7 @@ using System.Collections.Generic;
 Add the following method to `MyFirebaseMessagingService`:
 
 <a name="sendnotification-method"></a>
+
 ```csharp
 void SendNotification(string messageBody, IDictionary<string, string> data)
 {
@@ -929,7 +930,7 @@ application icon. Add the file
 [ic\_stat\_ic\_notification.png](remote-notifications-with-fcm-images/ic-stat-ic-notification.png) to
 **Resources/drawable** and include it in the **FCMClient** project.
 
-The `SendNotification` method uses ` NotificationCompat.Builder` to create the
+The `SendNotification` method uses `NotificationCompat.Builder` to create the
 notification, and `NotificationManagerCompat` is used to launch the
 notification. The notification holds a `PendingIntent` that will allow
 the user to open the app and view the contents of the string passed
