@@ -459,7 +459,82 @@
     {
         "source_path": "docs/xamarin-forms/data-cloud/cognitive-services/emotion-recognition.md",
         "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/emotion-recognition"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/bouncing-game.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/bouncing-game.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/ccaction.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccaction.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/ccdrawnode.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccdrawnode.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/ccrendertexture.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccrendertexture.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/ccspritesheet.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccspritesheet.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/cointime.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/cointime.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/content-pipeline/index.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/index.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/content-pipeline/introduction.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/content-pipeline/walkthrough.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/walkthrough.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/entities.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/entities.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/fruity-falls.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/fruity-falls.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/index.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/math.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/math.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/resolutions.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/resolutions.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/texture-cache.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/texture-cache.md"
+    },
+    {
+        "source_path": "docs/graphics-games/cocossharp/tiled.md",
+        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/tiled.md"
     }
   ]
 }
+
+
+
+
+
+
+
+
+
+
+
 

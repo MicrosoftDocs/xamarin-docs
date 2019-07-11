@@ -84,9 +84,9 @@ The MonoGame template for Xbox One considers the safe area and renders it as a w
 
 ## Referencing Content in UWP Projects
 
-Content in MonoGame projects can be referenced directly from file or through the [MonoGame Content Pipeline](~/graphics-games/cocossharp/content-pipeline/index.md). Small game projects may benefit from the simplicity of loading from file. Larger projects will benefit from using the content pipeline to optimize content to reduce size and load times. Unlike XNA on the Xbox 360, the `System.IO.File` class is available on Xbox One UWP apps.
+Content in MonoGame projects can be referenced directly from file or through the [MonoGame Content Pipeline](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md). Small game projects may benefit from the simplicity of loading from file. Larger projects will benefit from using the content pipeline to optimize content to reduce size and load times. Unlike XNA on the Xbox 360, the `System.IO.File` class is available on Xbox One UWP apps.
 
-For more information on loading content using the content pipeline, see the [Content Pipeline Guide](~/graphics-games/cocossharp/content-pipeline/index.md).
+For more information on loading content using the content pipeline, see the [Content Pipeline Guide](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
 
 ### Loading Content From File
 

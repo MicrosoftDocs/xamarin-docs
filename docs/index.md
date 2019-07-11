@@ -714,25 +714,6 @@ featureFlags:
                                 </a>
                             </li>
                             <li>
-                                <a href="~/graphics-games/cocossharp/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-graphics-cocos.svg?branch=master" alt="CocosSharp" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>CocosSharp</h3>
-                                                    <p>Build cross-platform 2D games for mobile devices.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="~/graphics-games/monogame/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
