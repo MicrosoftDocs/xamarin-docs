@@ -75,10 +75,10 @@ Entitlements are added to an app via the Entitlements.plist file. This file is i
 
 To add an Entitlements.plist file to your Xamarin.iOS do the following:
 
-1.	Right-click on the project file and browse to **Add > New File…**:
+1. Right-click on the project file and browse to **Add > New File…**:
 
 	![Add Files context menu](entitlements-images/image1.png)
-2.	In the New File dialog select **iOS > Property List** and name it Entitlements:
+2. In the New File dialog select **iOS > Property List** and name it Entitlements:
 
 	![New File dialog](entitlements-images/image2.png)
 

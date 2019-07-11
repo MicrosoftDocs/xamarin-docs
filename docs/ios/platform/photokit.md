@@ -66,9 +66,9 @@ That’s how to handle querying and reading data. You can also write changes bac
 	
 To actually write changes back from your application, you create a change request. Each of the model classes has an associated change request class. For example, to change a PHAsset, you create a PHAssetChangeRequest. The steps to perform changes that are written back to the photo library and sent to observers like the one above are:
 
--	Perform the editing operation.
--	Save the filtered image data to a PHContentEditingOutput instance.
--	Make a change request to publish the changes form the editing output.
+- Perform the editing operation.
+- Save the filtered image data to a PHContentEditingOutput instance.
+- Make a change request to publish the changes form the editing output.
 
 Here’s an example that writes back a change to an image that applies a Core Image noir filter:
 

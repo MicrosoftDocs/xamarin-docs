@@ -70,7 +70,7 @@ Each of the environments mentioned in the previous section require their own cer
 
 	[![](remote-notifications-in-ios-images/image10new.png "Create the certificate for the app ID")](remote-notifications-in-ios-images/image8.png#lightbox)
 
-4.	Select whether you would like to use a Development or Production certificate:
+4. Select whether you would like to use a Development or Production certificate:
 
 	[![](remote-notifications-in-ios-images/image11new.png "Select a Development or Production certificate")](remote-notifications-in-ios-images/image11new.png#lightbox)
 
