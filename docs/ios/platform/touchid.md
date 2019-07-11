@@ -78,10 +78,10 @@ To use ACL we should be using the `SecAccessControl` policy, and then checking t
 
 There are many things we should keep in mind when using ACL with the keychain and some of these are listed below:
 
--	Only use with Foreground Application – if you call any keychain operation on a background thread the call will fail.
--	Adding and updating keychain items may require authentication.
--	If a request returns multiple matching items in the keychain, authentication may be required.
--	ACL protected items are device-only, and therefore not synchronized or backed up.
+- Only use with Foreground Application – if you call any keychain operation on a background thread the call will fail.
+- Adding and updating keychain items may require authentication.
+- If a request returns multiple matching items in the keychain, authentication may be required.
+- ACL protected items are device-only, and therefore not synchronized or backed up.
 
 ### Using Local Authentication without Keychain Services
 

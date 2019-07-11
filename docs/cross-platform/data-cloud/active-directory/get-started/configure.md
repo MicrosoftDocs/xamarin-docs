@@ -22,7 +22,7 @@ Whenever any resource e.g. web application, web service,
 
   ![](configure-images/2.1-configure.png "On the Configure tab, locate permissions to other applications section")
 
-2.	Click on **Add application** button. On the next
+2. Click on **Add application** button. On the next
   screen pop-up you should see list of all the applications
   which are secured by Azure Active Directory. Select the
   applications that needs to be accessed from the mobile application.
